@@ -33,11 +33,9 @@ The most common issues are caused by SQL Server performance or slow domain contr
 
 ## Troubleshooting process
 
-In general, troubleshooting should be based on the data collected about the issue. If the issue is intermittent and network traces are difficult to capture, try different solutions and observe the results.
+Since the issue is intermittent, we can assume the configuration, such as Kerberos Service Principal Names (SPNs), is correct. To solve this issue, try the following troubleshooting:
 
-Since the issue is intermittent, we can assume the configuration, such as Kerberos Service Principal Names (SPNs), is basically correct.
-
-### Check if multiple domains or data centers are involved
+#### Check if multiple domains or data centers are involved
 
 If yes, check whether the users in the local domain or data center have a good experience while users in other domains or data centers don't. If so, it might indicate a communication latency between data centers or domain controllers. Use the following commands to investigate the issue:
 
@@ -47,7 +45,7 @@ If yes, check whether the users in the local domain or data center have a good e
 
 If the issue persists even after testing with these commands, the issue isn't with SQL Server but with the network infrastructure or domain controller performance.
 
-### SQL Server error log
+#### SQL Server error log
 
 The SQL Server error log may reveal performance issues on SQL Server, such as entries indicating I/O taking longer than 15 seconds. The SQL Performance team has [PSSDIAG](https://support.microsoft.com/topic/pssdiag-data-collection-utility-513a299f-0b45-eb1a-adb4-bc2ad8ecf194) to run and analyze. You may need to do this if the network trace reveals delays in SQL Server responses.
   
@@ -64,7 +62,7 @@ Error 2146893039 (0x80090311): No authority can be contacted for authentication.
 
 Error 2146893052 (0x80090304): The Local Security Authority can't be contacted.
 
-### Client system event log
+#### Client system event log
 
 The system event log has various events, such as Kerberos, Local Security Authority (LSA), and Netlogon events. These events indicate the computer can't connect to the domain controller for some time. To make them easier to find, filter only **Error**, **Warning**, and **Critical** events. The event time needs to be around the time of the outage. If there's a match, it might be an Active Directory issue.
 
@@ -85,21 +83,39 @@ This computer was not able to set up a secure session with a domain controller i
 
 In the security event log, filter *Event ID 4625*. This event shows detailed information about the login failure.
 
-### SQL connectivity ring buffer
+#### SQL connectivity ring buffer
 
-The ring buffer is a historical log of connection events on SQL Server, which means it can be taken after an outage. Many events include login timers that tell you where time is spent. Time spent on the network indicates a possible network or client latency. Time spent on Secure Sockets Layer (SSL) or Security Support Provider Interface (SSPI) APIs indicates potential issues with the Windows security subsystem. Enqueued time indicates a SQL Server performance issue. For more information, see [Collect the Connectivity Ring Buffer](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/Collect-the-Connectivity-Ring-Buffer). 
+The ring buffer is a historical log of connection events on SQL Server, which means it can be taken after an outage. Many events include login timers that tell you where time is spent:
 
-### Connection pooling
+- Time spent on the network indicates a possible network or client latency.
+- Time spent on Secure Sockets Layer (SSL) or Security Support Provider Interface (SSPI) APIs indicates potential issues with the Windows security subsystem.
+- Enqueued time indicates a SQL Server performance issue.
 
-Lack of [connection pooling](/dotnet/framework/data/adonet/sql-server-connection-pooling) can cause intermittent login failures. It can run the client out of outbound ports, overload the server, and cause the server to reject incoming connection requests or flood a poorly performing domain controller. The best thing to do is to have the application developer use connection pooling in their applications. Connection pooling is ON by default in .NET and Internet Information Services (IIS) applications, so it may have been turned off for some reason. If the application uses a custom pooling code, this is highly discouraged, as almost all custom pooling implementations we've encountered have issues. It's better to use the built-in mechanism. The lack of connection pooling will show a large number of `TIME_WAIT` status codes in the `NETSTAT` output compared to `ESTABLISHED` connections.
+For more information, see [Collect the Connectivity Ring Buffer](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/Collect-the-Connectivity-Ring-Buffer).
 
-### Issues related to low kernel memory
+#### Connection pooling
+
+The lack of [connection pooling](/dotnet/framework/data/adonet/sql-server-connection-pooling) can result in intermittent login failures.
+
+> [!NOTE]
+> The lack of connection pooling will show a large number of `TIME_WAIT` status codes in the `NETSTAT` output compared to established connections.
+
+Connection pooling can't only run the client out of outbound ports, but also overload the server, causing the server to reject incoming connection requests or flooding a poorly performing domain controller.
+
+The best thing to do is to have the application developer use connection pooling in their applications. Connection pooling is ON by default in .NET and Internet Information Services (IIS) applications, but it might have been turned off for some reason.
+
+It's highly discouraged if the application uses a custom pooling code, as almost all custom pooling implementations we've encountered have issues. It's better to use the built-in mechanism.
+
+#### Issues related to low kernel memory
 
 Running out of ephemeral ports is a relatively common cause of intermittent connection time-outs.
 
-If you have an issue related to low kernel memory on the SQL Server machine, adjust the **max server memory (MB)** in the **Properties** pane in SQL Server Management Studio.
+**Issue**: Low kernel memory on the SQL Server machine.
 
-The default value is `2147483647 MB`, which means the server can cause the operating system (OS) to run out of memory. It's best to set the **max server memory (MB)** to about 4 GB to 8 GB less than the physical memory on the machine. This value should be smaller if there are multiple instances, IIS, or some other application servers running on the machine.
+**Solution**: Adjust the **max server memory (MB)** in the **Properties** pane in SQL Server Management Studio. It's best to set the **max server memory (MB)** to about 4 GB to 8 GB less than the physical memory on the machine. This value should be smaller if there are multiple instances, IIS, or some other application servers running on the machine.
+
+> [!NOTE]
+> The default value is `2147483647 MB`, which means the server can cause the operating system (OS) to run out of memory.
 
 ## More information
 
