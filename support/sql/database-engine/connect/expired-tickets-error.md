@@ -10,11 +10,11 @@ ms.custom: sap:Connection issues
 
 # Expired tickets error
 
-This article helps you resolve the Expired tickets error. Kerberos tickets usually have a lifetime of about 10 hours and should be automatically renewed. Using stale tokens can cause a connection to fail. For more information, see [Kerberos authentication troubleshooting guidance](../../../windows-server/windows-security/kerberos-authentication-troubleshooting-guidance.md).
+This article helps you resolve the Expired tickets error.
 
 ## Symptoms
 
-To be added
+Kerberos tickets usually have a lifetime of about 10 hours and should be automatically renewed. Using stale tokens can cause a connection to fail. For more information, see [Kerberos authentication troubleshooting guidance](../../../windows-server/windows-security/kerberos-authentication-troubleshooting-guidance.md).
 
 ## Resolution
 

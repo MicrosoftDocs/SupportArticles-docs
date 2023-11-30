@@ -10,11 +10,11 @@ ms.custom: sap:Connection issues
 
 # Disjoint DNS namespace error
 
-This article helps you to resolve the disjoint DNS namespace error. If the organizational hierarchy in Active Directory (AD) and in DNS don't match, the wrong SPN might be generated if you use the NETBIOS name in the connection string. The SPN will not be found and NTLM credentials will be used instead of Kerberos credentials.
+This article helps you to resolve the disjoint DNS namespace error. 
 
 ## Symptoms
 
-To be added
+If the organizational hierarchy in Active Directory (AD) and in DNS don't match, the wrong SPN might be generated if you use the NETBIOS name in the connection string. The SPN will not be found and NTLM credentials will be used instead of Kerberos credentials.
 
 ## Resolution
 
