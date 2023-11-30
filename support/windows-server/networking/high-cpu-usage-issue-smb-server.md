@@ -1,7 +1,7 @@
 ---
 title: High CPU usage issue on the SMB server
 description: Introduces how to troubleshoot the high CPU usage issue on the SMB server.
-ms.date: 10/19/2023
+ms.date: 11/16/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

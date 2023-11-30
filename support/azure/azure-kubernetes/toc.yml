@@ -35,8 +35,6 @@
     href: error-code-reservedresourcename.md
   - name: ServicePrincipalValidationClientError error
     href: error-code-serviceprincipalvalidationclienterror.md
-  - name: SubnetIsFull error
-    href: error-code-subnetisfull.md
   - name: SubscriptionRequestsThrottled error (429)
     href: error-code-subscriptionrequeststhrottled.md
   - name: SubnetWithExternalResourcesCannotBeUsedByOtherResources error
@@ -52,6 +50,8 @@
   items:
   - name: Troubleshoot Azure Kubernetes Service (AKS) upgrade errors
     items:
+    - name: CustomPrivateDNSZoneMissingPermissionError error
+      href: error-code-customprivatednszonemissingpermissionerror.md
     - name: Upgrade fails because of NSG rules
       href: upgrade-fails-because-of-nsg-rules.md
     - name: NodePoolMcVersionIncompatible error
@@ -108,6 +108,8 @@
     href: aks-at-scale-troubleshoot-guide.md
   - name: Failed to fix node group sizes
     href: cluster-autoscaler-fails-to-scale.md
+  - name: SubnetIsFull error
+    href: error-code-subnetisfull.md
 
 - name: Troubleshoot Kubernetes control plane
   items:
@@ -236,7 +238,7 @@
     href: error-from-server-error-dialing-backend-dial-tcp.md
   - name: Errors using features that require virtual machine scale sets
     href: error-using-feature-requiring-virtual-machine-scale-set.md
-  - name: insufficientSubnetSize error
+  - name: InsufficientSubnetSize error
     href: insufficientsubnetsize-error-advanced-networking.md
   - name: Memory saturation occurs in pods after cluster upgrade
     href: aks-memory-saturation-after-upgrade.md
