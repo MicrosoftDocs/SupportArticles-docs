@@ -67,7 +67,7 @@ You can use the [serial console](serial-console-linux.md) to reset either the `a
     passwd <admin_user>
     ```
 
-4. Check whether `SElinux` is in `enforcing` mode in `/etc/sysconfig/selinux`.
+4. Check whether `SElinux` is in `enforcing` mode in `/etc/sysconfig/selinux` by running the following command:
 
     ```bash
     cat /etc/sysconfig/selinux
@@ -128,7 +128,7 @@ You can run the [vm repair](/cli/azure/vm/repair) commands to create a repair VM
     passwd <admin_user>
     ```
 
-5. Check whether `SElinux` is in `enforcing` mode in `/etc/sysconfig/selinux`.
+5. Check whether `SElinux` is in `enforcing` mode in `/etc/sysconfig/selinux` by running the following command:
 
     ```bash
     cat /etc/sysconfig/selinux
