@@ -4,7 +4,7 @@ description: Provides information about the Missing fiscal calendar for general 
 author: jinniew
 ms.author: jiwo
 ms.reviewer: twheeloc 
-ms.date: 11/17/2023
+ms.date: 11/30/2023
 ms.prod: 
 ms.technology:
 ms.custom:
@@ -38,3 +38,7 @@ Follow these steps in Dynamics 365 Finance to add a new fiscal year.
 > You can't add a new year in the past. You can add only future years. If transactions were posted in a year before the calendar's start year, you can't create a new year in the existing fiscal calendar.
 
 After you fix this issue, the transactions will be mapped to the appropriate accounting date key.
+
+## See also
+
+[Business performance analytics self-help](business-performance-analytics-self-help-overview.md)

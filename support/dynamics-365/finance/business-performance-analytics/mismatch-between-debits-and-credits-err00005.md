@@ -4,7 +4,7 @@ description: Provides information about the Mismatch between debits and credits 
 author: jinniew
 ms.author: jiwo
 ms.reviewer: twheeloc 
-ms.date: 11/17/2023
+ms.date: 11/30/2023
 ms.prod: 
 ms.technology:
 ms.custom:
@@ -28,3 +28,7 @@ Error code *ERR00005* is logged in the **Transform Log** table in Microsoft Data
 This warning is for information only. No action is required.
 
 The warning highlights instances where the total values in some columns don't balance to **0** (zero) for specific combinations of a ledger and a journal number. It might not indicate an error that requires immediate attention. Instead, consider this information as part of your overall financial data assessment.
+
+## See also
+
+[Business performance analytics self-help](business-performance-analytics-self-help-overview.md)

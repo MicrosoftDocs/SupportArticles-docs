@@ -4,7 +4,7 @@
 title: Change the accounting or reporting currency 
 description: Explains how to change the accounting or reporting currency, or add a reporting currency to the setup of a ledger in Microsoft Dynamics 365 Finance.
 author: kweekley
-ms.date: 11/21/2023
+ms.date: 11/30/2023
 ms.prod: 
 ms.technology: 
 
@@ -40,9 +40,8 @@ An organization that didn't previously use the Dual currency capability wants to
 
 ## Resolution
 
-The most important consideration is whether any transactions (actual or budget) have been posted in the legal entity for the ledger setup.
-
 > [!NOTE]
+> The most important consideration is whether any transactions (actual or budget) have been posted in the legal entity for the ledger setup.
 > You can't change the accounting or reporting currency, or add a reporting currency, if any transactions (actual or budget) have been posted in the legal entity.
 
 Follow the steps in one of the following sections, depending on whether transactions have been posted.

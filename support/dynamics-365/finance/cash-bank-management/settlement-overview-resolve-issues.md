@@ -4,7 +4,7 @@
 title: Troubleshoot issues with transactions that can't be settled
 description: Describes how to resolve issues with transactions that can't be settled in Microsoft Dynamics 365 Finance.
 author: twheeloc 
-ms.date: 11/21/2023
+ms.date: 11/30/2023
 ms.prod: 
 ms.technology: 
 
@@ -31,6 +31,8 @@ This article provides a resolution for an issue where you can't settle transacti
 ## Symptoms
 
 Sometimes, you can't settle transactions because another activity is currently processing the document. If you try to settle the transactions, an error occurs because those transactions are being used.
+
+## Cause
 
 Transactions are marked for settlement either when vendor invoices are being paid or when customers pay their open invoices. Occasionally, these invoices might already be marked for settlement. Therefore, users can't select them for payment. The invoices might be marked by another customer payment journal, sales order, vendor payment journal, or purchase order in the current legal entity or another legal entity.
 

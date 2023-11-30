@@ -4,7 +4,7 @@ description: Provides information about the Missing budget transaction header er
 author: jinniew
 ms.author: jiwo
 ms.reviewer: twheeloc 
-ms.date: 11/21/2023
+ms.date: 11/30/2023
 ms.prod: 
 ms.technology:
 ms.custom:
@@ -27,3 +27,7 @@ No immediate action is required, because this issue might be caused by data sync
 If the issue persists, confirm that the entries exist in the Budget transaction header table in Dynamics 365 Finance.
 
 If the entries exist, contact Microsoft Support for further assistance.
+
+## See also
+
+[Business performance analytics self-help](business-performance-analytics-self-help-overview.md)

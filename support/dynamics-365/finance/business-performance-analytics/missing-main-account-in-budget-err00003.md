@@ -4,7 +4,7 @@ description: Provides information about the Missing main account in budget error
 author: jinniew
 ms.author: jiwo
 ms.reviewer: twheeloc 
-ms.date: 11/17/2023
+ms.date: 11/30/2023
 ms.prod: 
 ms.technology:
 ms.custom:
@@ -30,3 +30,7 @@ Here's an example of a record:
 
 > [!NOTE]
 > No specific steps are required to address this scenario, and no correction is required.
+
+## See also
+
+[Business performance analytics self-help](business-performance-analytics-self-help-overview.md)

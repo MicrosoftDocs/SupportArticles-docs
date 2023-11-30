@@ -4,7 +4,7 @@
 title: Troubleshoot issues opening Report Designer
 description: Provides a resolution for common issues that can cause problems when you open Report Designer in Microsoft Dynamics 365 Finance.
 author: aprilolson
-ms.date: 11/21/2023
+ms.date: 11/30/2023
 ms.prod: 
 ms.technology: 
 
@@ -55,7 +55,7 @@ To solve this issue, follow these steps:
 - The required permissions are listed in [Granting security access to Financial reporting](/dynamics365/finance/general-ledger/financial-reporting-getting-started#granting-security-access-to-financial-reporting). Security in Financial reporting is based on these privileges. You won't have access unless these privileges (or another security role that includes these privileges) are assigned to you.
 - The **Company Users Provider to Company** integration task (also responsible for and known as user integration) runs on a 5-minute interval. It might take up to 10 minutes for any permission changes to take effect in Financial reporting.
 
-  If another user can open Report Designer, select **Tools** > **Integration Status**. Verify that the integration map, "Company Users Provider to Company," has run successfully because you were assigned permission to use Financial reporting.
+  If another user can open Report Designer, select **Tools** > **Integration Status**. Verify that the **Company Users Provider to Company** integration map has run successfully because you were assigned permission to use Financial reporting.
 
 - It might be possible that another error has prevented **Dynamics user to Financial reporting user integration** from finishing. Or it's possible that a data mart reset has been initiated and not yet completed, or that another system error has occurred. Try running the process again later. If the problem persists, contact your system administrator.
 
@@ -65,3 +65,8 @@ To solve this issue, follow these steps:
 
 - The time set on your local computer when you enter your sign-in credentials must be within five minutes of the time on the Financial reporting server. If there's a difference of more than five minutes, the system won't allow sign-in.
 - If the time on your computer differs from the time on the Financial reporting server, we recommend enabling the Windows option to set your computer's time automatically.
+
+## See also
+
+- [Troubleshoot report designer issues with Event Viewer](troubleshoot-report-designer-with-event-viewer.md)
+- ["Unable to Connect to the Financial reporting server" error when connecting to Financial reporting](unable-to-connect-financial-reporting-server.md)

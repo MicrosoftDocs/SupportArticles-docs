@@ -48,7 +48,7 @@ If this step fails, the opening (and optionally closing) transactions are likely
 
 If the opening (and optionally closing) vouchers are present, you don't need to run the year-end close again. Instead, refer to the next section for information about how to move forward.
 
-## Issue 3 - Rerun the entire year-end close process or not if "Rebuild balances" in the year-end close fails
+## Issue 3 - The "Rebuild balances" in the year-end close fails
 
 ### Resolution
 

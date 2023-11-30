@@ -4,7 +4,7 @@
 title: Troubleshoot report designer issues with Event Viewer
 description: Describes how to use the Event Viewer to analyze some issues that occur when using Financial reporting in Microsoft Dynamics 365 Finance.
 author: aprilolson
-ms.date: 11/21/2023
+ms.date: 11/30/2023
 ms.prod: 
 ms.technology: 
 
@@ -28,7 +28,7 @@ ms.dyn365.ops.version: AX 7.0.0
 
 You can use Event Viewer to analyze connection issues that occur when using Financial reporting in Microsoft Dynamics 365 Finance.
 
-The following steps walk through the process of turning on Event Viewer messages for Financial reporting. If you need to contact Microsoft Support for help with Financial reporting issues, submit copies of the logs that Event Viewer generates as they will help support engineers identify the source of the connection issue quickly. 
+The following steps walk through the process of turning on Event Viewer messages for Financial reporting. If you need to contact Microsoft Support for help with Financial reporting issues, submit copies of the logs that Event Viewer generates as they will help support engineers identify the source of the connection issue quickly.
 
 1. Copy the [RegisterETW.zip](//download.microsoft.com/download/3/0/0/3008047d-ff50-45fa-8427-e4eddc517bd7/RegisterETW-c1a35291-6aa6-4462-a2bc-4ba117fd5f8e%20(3).zip) file to the client workstation (preferably the Desktop) and extract the file.
 2. Make sure Windows Event Viewer is closed.

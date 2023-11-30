@@ -4,7 +4,7 @@ description: Provides information about business performance analytics self-help
 author: jinniew
 ms.author: jiwo
 ms.reviewer: twheeloc 
-ms.date: 11/21/2023
+ms.date: 11/30/2023
 ms.prod: 
 ms.technology:
 ms.custom:
@@ -51,3 +51,8 @@ For information about specific errors or warnings, see the following articles:
 - [Mismatch between debits and credits: Error code: ERR00005 [Type: Warning]](mismatch-between-debits-and-credits-err00005.md)
 - [Missing budget data: Error code: ERR00006 [Type: Warning]](missing-budget-data-err00006.md)
 - [Missing budget transaction header: Error code: ERR00007 [Type: Warning]](missing-budget-transaction-header-err00007.md)
+
+## See also
+
+- [Create and edit business performance analytics reports](/dynamics365/finance/business-performance-analytics/how-to-create-and-edit-reports)
+- [Business performance analytics FAQ](/dynamics365/finance/business-performance-analytics/bpa-faq)

@@ -4,7 +4,7 @@ description: Provides information about the Missing fiscal calendar for budget e
 author: jinniew
 ms.author: jiwo
 ms.reviewer: twheeloc 
-ms.date: 11/17/2023
+ms.date: 11/30/2023
 ms.prod: 
 ms.technology:
 ms.custom:
@@ -49,3 +49,7 @@ There are two options for fixing fiscal calendar issues:
 Keeping the current calendar might lead to a situation where transactions don't match your reporting periods. Therefore, it might cause reporting issues and make historical comparisons difficult. You might have to make adjustments that can complicate audits. When the fix is successfully implemented, transactions that were previously misaligned will be mapped to the appropriate accounting date key, and will therefore ensure accurate financial processing and reporting.
 
 After you complete these steps, a new fiscal year is added to the relevant calendar and fixes issues that are related to misaligned transaction dates.
+
+## See also
+
+[Business performance analytics self-help](business-performance-analytics-self-help-overview.md)

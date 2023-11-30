@@ -4,7 +4,7 @@ description: Provides information about the Missing journal entries error (error
 author: jinniew
 ms.author: jiwo
 ms.reviewer: twheeloc 
-ms.date: 11/21/2023
+ms.date: 11/30/2023
 ms.prod: 
 ms.technology:
 ms.custom:
@@ -29,3 +29,7 @@ If the issue persists, confirm that the entries are in the General journal entry
 Here's an example of a record:
 
 > Can't find GeneralJournalEntry for 4 records in GeneralJournalAccountEntry - [Row(GJAE_RECID=Decimal('5637144581')), Row(GJAE_RECID=Decimal('5637144582')), Row(GJAE_RECID=Decimal('5637144583')), Row(GJAE_RECID=Decimal('5637144584'))]
+
+## See also
+
+[Business performance analytics self-help](business-performance-analytics-self-help-overview.md)

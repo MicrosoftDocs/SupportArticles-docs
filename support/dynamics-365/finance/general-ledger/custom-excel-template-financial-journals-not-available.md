@@ -4,7 +4,7 @@
 title: A custom Excel template for financial journals isn't available on the menu
 description: Describes issues that might occur when you create custom financial journals by using a Microsoft Excel template in Microsoft Dynamics 365 Finance.
 author: kweekley
-ms.date: 11/20/2023
+ms.date: 11/30/2023
 ms.prod: 
 ms.technology: 
 
@@ -24,7 +24,7 @@ ms.dyn365.ops.version: 10.0.14
 ---
 # A custom Excel template for financial journals isn't available on the menu
 
-This article describes issues that might occur when you create custom financial journals by using a Microsoft Excel template in Microsoft Dynamics 365 Finance.
+This article describes issues that might occur when you [create custom financial journals by using a Microsoft Excel template](/dynamics365/finance/general-ledger/open-lines-excel-journals-documents) in Microsoft Dynamics 365 Finance.
 
 ## Symptoms
 
