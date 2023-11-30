@@ -1,6 +1,6 @@
 ---
 title: How to reset local Linux password on Azure VMs
-description: Provides the steps to reset the local Linux password on Azure VM.
+description: Provides the steps to reset the local Linux password on Azure VMs.
 services: virtual-machines
 documentationcenter: ''
 manager: dcscontentpm
@@ -55,9 +55,9 @@ You can use the [serial console](serial-console-linux.md) to reset either the `a
 
     1. Check whether the `PasswordAuthentitcation` value is set to `yes` or `no` in `/etc/ssh/sshd_config` by running the following command:
 
-    ```bash
-    egrep "^PasswordAuthentication" /etc/ssh/sshd_config
-    ```
+        ```bash
+        egrep "^PasswordAuthentication" /etc/ssh/sshd_config
+        ```
 
     1. If the `PasswordAuthentication` value is set to `no`, use a text editor such as `vi` or `nano` to change the value to `yes`.
 
@@ -110,15 +110,15 @@ You can run the [vm repair](/cli/azure/vm/repair) commands to create a repair VM
     az vm repair create -g $AZ_RESOURCE_GROUP -n $AZ_VM_NAME --repair-username $AZ_ADMIN_USER --repair-password "$AZ_MSADMIN_PASS" --verbose
     ```
 
-2. Log in to the repair VM and [troubleshoot the chroot environment](chroot-environment-linux.md)
+2. Log in to the repair VM and [troubleshoot the chroot environment](chroot-environment-linux.md).
 
 3. Make sure that password authentication is enabled on the OpenSSH server if you try to log in to the server by using the SSH and password authentication.
 
     1. Check whether the `PasswordAuthentitcation` value is set to `yes` or `no` in `/etc/ssh/sshd_config` by running the following command:
 
-    ```bash
-    egrep "^PasswordAuthentication" /etc/ssh/sshd_config
-    ```
+        ```bash
+        egrep "^PasswordAuthentication" /etc/ssh/sshd_config
+        ```
 
     1. If the `PasswordAuthentication` value is set to `no`, use a text editor such as `vi` or `nano` to change the value to `yes`.
 
