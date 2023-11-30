@@ -99,7 +99,7 @@ Running out of ephemeral ports is a relatively common cause of intermittent conn
 
 If you have an issue related to low kernel memory on the SQL Server machine, adjust the **max server memory (MB)** in the **Properties** pane in SQL Server Management Studio.
 
-The default value is `2147483647 MB`, which means the server can cause the operating system (OS) to run out of memory. It's best to set the **max server memory (MB)** to about 4 GB to 8 GB less than the physical memory on the machine. This value should be less if there are multiple instances or if IIS or some other application server also runs on the machine.
+The default value is `2147483647 MB`, which means the server can cause the operating system (OS) to run out of memory. It's best to set the **max server memory (MB)** to about 4 GB to 8 GB less than the physical memory on the machine. This value should be smaller if there are multiple instances, IIS, or some other application server running on the machine.
 
 ## More information
 
