@@ -389,8 +389,6 @@
           href: ../mobile-devices/how-to-use-owa-remotely-wipe-mobile-device.md
     - name: Move/Migrate Mailboxes
       items:
-        - name: '"MAPI provider is not supported" error in Exchange Online'
-          href: ../move-or-migrate-mailboxes/new-migrationendpoint-returns-error.md
         - name: A different type of Active Directory object already exists error
           href: ../move-or-migrate-mailboxes/different-type-of-active-directory-object-already-exists-error.md
         - name: Can't migrate Google Workspace mailboxes
@@ -571,6 +569,8 @@
           href: ../public-folders/duplicate-public-folder-mailbox-migration-request.md
         - name: Emails with the "HierarchySync_" subject
           href: ../public-folders/pf-hierarchy-sync-emails.md
+        - name: Error when creating public folder migration endpoint
+          href: ../public-folders/new-migrationendpoint-returns-error.md
         - name: MEPF synchronization issues
           href: ../public-folders/mepf-sync-failures-script.md
         - name: Migration errors due to orphaned objects

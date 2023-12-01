@@ -95,7 +95,7 @@
           href: ../administration/unexpected-debug-programs-user-right.md
         - name: Delete junk email rules by using MFCMAPI
           href: ../administration/delete-junk-email-rules-mfcmapi-exchange.md
-        - name: Determin version/build number, and service pack level
+        - name: Determine version, build, and service pack level
           href: ../administration/exchange-version-build-number-service-pack.md
         - name: Doesn't display all OUs
           href: ../administration/exchange-server-not-display-all-ou.md
