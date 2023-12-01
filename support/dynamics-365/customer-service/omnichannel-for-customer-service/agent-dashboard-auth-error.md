@@ -11,7 +11,7 @@ This article provides a resolution for the issue where the agent dashboard in Om
 
 ## Symptoms
 
-The agent dashboard won't load or shows an authorization error.
+The agent dashboard doesn't load or shows an authorization error.
 
 ## Cause
 
