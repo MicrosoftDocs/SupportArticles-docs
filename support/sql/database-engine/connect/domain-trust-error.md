@@ -10,7 +10,7 @@ ms.custom: sap:Connection issues
 
 # Domain trust error
 
-This article helps you resolve the "Domain trust" error.
+This article helps you resolve the "Domain trust" error. This error might occur if there is an issue with the trust relationship between two domains.
 
 ## Symptoms
 
@@ -18,4 +18,4 @@ The trust level between domains might cause failures in account authentication o
 
 ## Resolution
 
-Use the `SETSPN` and `RUNAS` commands to test this independent of your application.
+Use the `SETSPN` and `RUNAS` commands to test the trust relationship independent of your application.

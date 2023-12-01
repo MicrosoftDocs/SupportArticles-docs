@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting local security subsystem errors
 description: This article provides symptoms and resolution for the local security subsystem issues.
-ms.date: 11/25/2023
+ms.date: 12/02/2023
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
@@ -28,4 +28,4 @@ You might also see Kerberos errors in the System event log on the SQL Server mac
 
 ## Resolution
 
-To be added
+Check whether your Service Principal Name (SPN) is registered correctly on the Domain Controller (DC).

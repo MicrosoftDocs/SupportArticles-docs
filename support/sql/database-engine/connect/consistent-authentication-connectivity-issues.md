@@ -10,7 +10,7 @@ ms.custom: sap:Connection issues
 
 # Troubleshoot consistent authentication issues
 
-_Applies to:_ &nbsp; SQL Server 
+_Applies to:_ &nbsp; SQL Server
 
 > [!NOTE]
 > Before you start troubleshooting, check the [prerequisites](../connect/resolve-connectivity-errors-checklist.md) and go through the checklist.
@@ -26,42 +26,58 @@ It's also important to understand the category of the error because the troubles
 
 ## Directory services specific issues
 
-Refers to the Active Directory errors. If the SQL Server ErrorLog file contains both or either of the following messages, then this is an Active Directory issue. This might happen if the domain controller (DC) can't be contacted by Windows on the SQL Server computer, or the local security service (LSASS) is having a problem.
+Refers to the Active Directory errors. If the SQL Server ErrorLog file contains both or either of the following messages, then this is an Active Directory (AD) issue. This might happen if the domain controller (DC) can't be contacted by Windows on the SQL Server computer or the local security service (LSASS) is having a problem.
 
    `Error -2146893039 (0x80090311): No authority could be contacted for authentication.`
    `Error -2146893052 (0x80090304): The Local Security Authority cannot be contacted.`
 
 ## Login failed error codes
 
- If you are troubleshooting a "Login Failed" error message, the SQL Server ErrorLog file can provide more information in the SQL State value with error 18456 (Login Failed). For more information, see [Login failed error codes](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error?view=sql-server-ver16&preserve-view=true#additional-error-information).
+ If you are troubleshooting a "Login Failed" error message, the SQL Server ErrorLog file can provide more information in the SQL State value with error 18456 (Login Failed). For more information, see [Login failed error codes](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#additional-error-information).
 
 ## Login failed specific issues
 
-Refers to some of the common login failures. For detailed information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error?view=sql-server-ver16&preserve-view=true).
+Refers to some of the common login failures. For detailed information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
 
-  - [Login failed for user '(null)'](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error?view=sql-server-ver16&preserve-view=true#login-failed-for-user-(null))
-  - [Login failed for user ''](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error)
-  - [Login failed for user 'NT AUTHORITY\ANONYMOUS LOGON'](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error)
-  - [Login failed for user 'username'](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error)
-  - [Login failed for user 'DOMAIN\username'](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error)
-  - Login failed. The login is from an untrusted domain and cannot be used with Windows authentication.
-  - [SQL Server does not exist or access denied](network-related-or-instance-specific-error-occurred-while-establishing-connection.md) - This can also be a network error.
-- [SSPI context messages](/troubleshoot/sql/database-engine/connect/cannot-generate-sspi-context-error?branch=main)
+|Error message  |Causes  |
+|---------|---------|
+|[Login failed for user '(null)'](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-(null))     |         |
+| [Login failed for user ''](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error)     |         |
+|[Login failed for user 'NT AUTHORITY\ANONYMOUS LOGON'](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error)     |         |
+|[Login failed for user 'username'](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error)     |         |
+|[Login failed for user 'domain\username'](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error)     |         |
+|Login failed. The login is from an untrusted domain and cannot be used with Windows authentication.     |         |
+|[SQL Server does not exist or access denied](network-related-or-instance-specific-error-occurred-while-establishing-connection.md) - This can also be a network error.     |         |
+|[SSPI context messages](/troubleshoot/sql/database-engine/connect/cannot-generate-sspi-context-error?branch=main)     |         |
 
-The scenarios explained in this article are broadly classified based on the causes and the category.
 
 Before you start with troubleshooting, it is important to understand the nature of an error and the category that it belongs to. This section provides error messages grouped based on a category. Some errors might appear in more than one category. Each of these error scenarios has the symptoms and the solutions as well. Following are the error categories.
 
-## Kerberos issues
+The next few sections list some of the scenarios specific to areas such as Kerberos, Active Directory, Domain Controller, connection strings, NTLM, and so on.
+
+## Active Directory and Domain Controller issues
+
+The following table provides some solutions to the AD and DC issues:
+
+|Possible causes  |Workarounds  |
+|---------|---------|
+|Account disabled     | You might experience this error if the user account has been disabled by an administrator or by a user. In such a case, you can't login with this account or start a service with it. |
+|Account not in group  | You can access the database using groups rather than individually. Check the SQL logins to enumerate allowed groups and make sure the user belongs to one of them.    |
+|Cross-Domain groups    | Users from the remote domain should belong to a group in the SQL Server domain. If the domains lack proper trust, adding the users in a group in the remote domain might prevent the SQL Server from enumerating the group's membership.  |
+|Firewall blocks the DC   | Make sure the DC is accessible from the client or the SQL Server via `nltest /SC_QUERY:CONTOSO`.   |
+|DC Offline   |This error might occur if there are incorrect Domain Naming Service (DNS) records for DC. NLTEST can be used to force the computer to switch to another DC. See Firewall Blocks the DC.   |
+|Selective authentication  | Refers to a feature of domain trusts that allows the domain administrator to limit which users have access to resources in the remote domain. Make sure the user isn't allowed to authenticate in the remote domain.      |
+|Account migration   | If old user accounts can't connect to the SQL Server, but newly created accounts can, this could be due to account migration. This is an Active Directory issue.        |
+
+## Kerberos authentication issues
 
 The following table contains information about issues related to Kerberos authentication:
 
 |Possible causes |More information  |
 |---------|---------|
-|Not trusted for delegation and Not a constrained target |These are Active Directory (AD) issues. If you are an Administrator, enable the Trusted for delegation setting. |
+|Not trusted for delegation and Not a constrained target |These are Active Directory (AD) issues. If you are an Administrator, enable the **Trusted for delegation** setting. |
 |Sensitive account   | Some accounts may be marked as Sensitive in AD. These accounts can't be delegated to another service in a double-hop scenario. |
-|User belongs to many groups  |This can happen when a user is a member of many groups in AD. If you use Kerberos over UDP, the entire security token must fit within a single packet. Users that belong to many groups will have a larger security token than those that belong to fewer groups. If you use Kerberos over TCP, you can increase the `MaxTokenSize` setting. For more information, see 
-[MaxTokenSize and Kerberos Token Bloat](/archive/blogs/shanecothran/maxtokensize-and-kerberos-token-bloat).  |
+|User belongs to many groups  | This can happen when a user is a member of many groups in AD. If you use Kerberos over UDP, the entire security token must fit within a single packet. Users that belong to many groups will have a larger security token than those that belong to fewer groups. If you use Kerberos over TCP, you can increase the [`MaxTokenSize`] setting. For more information, see [MaxTokenSize and Kerberos Token Bloat](/archive/blogs/shanecothran/maxtokensize-and-kerberos-token-bloat).  |
 |Clock skew error   | This error can occur when clocks on more than one device on a network are not synchronized. For Kerberos server to work, the clocks between machines can't be off for more than five minutes.   |
 | NTLM and Constrained Delegation error | If the target is a file share, the delegation type of the mid-tier service account must be **Constrained-Any** and not **Constrained-Kerberos**. See Login failed for user NT AUTHORITY\ANONYMOUS LOGON for more information.     |
 |Per-Service-SID     | Is a security feature of SQL Server that limits local connections to use New Technology LAN Manager (NTLM) and not Kerberos as the authentication method. The service can make a single hop to another server using NTLM credentials, but it can't be delegated further without using the constrained delegation.         |
@@ -71,7 +87,8 @@ The following table contains information about issues related to Kerberos authen
 |SQL alias   | A SQL [Server alias](network-related-or-instance-specific-error-occurred-while-establishing-connection.md) may cause an unexpected SPN to be generated. This will result in NTLM credentials if the SPN isn't found, or an SSPI failure, if it inadvertently matches the SPN of another server.    |
 |Website host header     | If the website has a host header name, the HOSTS SPN can't be used. An explicit HTTP SPN must be used. If the website doesn't have a host header name, NTLM is used and it can't be delegated to a backend SQL Server or other service.         |
 |HOSTS file   | The hosts file overrides DNS lookups and might generate an unexpected SPN name. This will cause NTLM credentials to be used. If an unexpected IP address is in the hosts file, the SPN generated might not match the backend pointed to.        |
-
+|Delegating to a file share   | Make sure to use constrained delegation in this scenario.       |
+|HTTP Ports   | Normally, HTTP SPNs don't use port numbers, example `http/web01.contoso.com`, but you can enable this through the policy on the clients. The SPN would then have to be in the `http/web01.contoso.com:88` format, to enable Kerberos to function correctly. Otherwise, NTLM credentials are used, which aren't recommended because it would be difficult to diagnose the issue and it might be an excessive administrative overhead.       |   
 
 ## Other issues
 
@@ -82,54 +99,3 @@ The following table contains scenarios related to Internet access related issues
 |Integrated authentication is not enabled     | This might be related to the integrated authentication issues. To resolve this type of error, in the **Internet Options**, make sure that the **Integrated Windows Authentication** is enabled.     |
 |Wrong Internet zone     | This might happen if you try to access a website that is not in the correct Internet zone in IE. The credentials will not work if the web site is not in the Local Intranet zone.        |
 |IIS Authentication     | Configure the website to allow Windows Authentication and the *web.config* file needs to have the `<identity impersonate="true"/>` set.         |
-
-- Following are the errors specific to failed login:
-  - [Bad password](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error)
-  - [Invalid username](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error)
-  - [SQL logins are not enabled](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error)
-  - [Named Pipes connections fail because the user doesn't have permission to log into Windows](named-pipes-connection-fail-no-windows-permission.md).
-
-- Following are the errors specific to the different aspects of SQL Server:
-  - [Database offline](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error)
-  - [Database permissions](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error)
-  - [No Login](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error)
-  - [Linked Server Account Mapping](linked-server-account-mapping-error.md)
-  - [Proxy Account](proxy-account-error.md)
-  - [Bad metadata](bad-metadata-error.md)
-
-- Following are the errors specific to Connection String:
-  - [Bad server name in Connection String](bad-server-name-connection-string-error.md)
-  - [Wrong database name in Connection String](wrong-database-name-in-connection-string.md)
-  - [Wrong explicit SPN account](wrong-explicit-spn-account-connection-string.md)
-  - [Explicit SPN is missing](cannot-generate-sspi-context-error.md)
-  - [Explicit Misplaced SPN](cannot-generate-sspi-context-error.md)
-  - [Explicit SPN is duplicated](cannot-generate-sspi-context-error.md)
-
-- Following are the errors specific to the local Windows permissions or Policy settings.
-  - [Access via Group](access-through-group-windows-permissions.md)
-  - [Network login disallowed](network-login-disallowed.md)
-  - [Service account not trusted for delegation](service-account-not-trusted-for-delegation.md)
-  - [Only admins can login](only-admins-can-login.md)
-  - [Local Security Subsystem Issues](local-security-subsystem-issues.md)
-  - [Corrupt user profile](corrupt-user-profile.md)
-  - [Credential Guard is enabled](/windows/security/identity-protection/credential-guard/considerations-known-issues)
-
-- Following are the errors specific to NTLM:
-  - [NTLM Peer Login](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error?view=sql-server-ver16)
-  - [Loopback Protection](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error?view=sql-server-ver16)
-  - [Always-On Listener Loopback Protection](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error?view=sql-server-ver16)
-  - [Double Hop](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error?view=sql-server-ver16)
-  - [LANMAN Compatibility Level](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error?view=sql-server-ver16)
-
-- Issues specific to Active Directory and Domain Controller:
-  - [Account disabled](account-disabled-error.md)
-  - [Cross-domain groups](cross-domain-groups.md)
-  - [Firewall blocks the DC](firewall-blocks-the-dc.md)
-  - [Domain trust](domain-trust-error.md)
-  - [Selective authentication](selective-authentication.md)
-  - [Account migration](account-migration-error.md)
-  - [Directory Services specific error messages](directory-services-specific-error-messages.md)
-
-- Issues specific to Kerberos:
-  - Missing SPN - 
-- Miscellaneous issues - To be added.

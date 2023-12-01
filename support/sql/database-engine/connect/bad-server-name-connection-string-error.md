@@ -10,9 +10,7 @@ ms.custom: sap:Connection issues
 
 # Bad server name in connection string error
 
-This article helps you to resolve the problem related to the bad server name error.
-
-This can be a common issue if you deploy an application that uses a DEV or QA server into production and you fail to update the connection string.
+This article helps you to resolve the problem related to the bad server name error. This can be a common issue if you deploy an application that uses a DEV or QA server into production and you fail to update the connection string.
 
 ## Symptoms
 
@@ -39,10 +37,10 @@ The SQL Server Errorlog will have one of the following messages:
 
 To resolve this issue, follow these steps:
 
-1. Validate that you are connecting to the appropriate server.
+1. Validate that you're connecting to the appropriate server.
 
-1. If the server is not the appropriate one, then the connection string.
+1. If the server isn't the appropriate one, then the connection string.
 
 1. If the connection string is correct, add the login to the database.
 
-1. If it is a Windows login, add it to a local group or domain group that's allowed to connect to the database server.
+1. If it's a Windows login, add it to a local group or domain group that's allowed to connect to the database server.
