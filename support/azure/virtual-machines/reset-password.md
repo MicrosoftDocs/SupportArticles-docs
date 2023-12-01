@@ -13,7 +13,7 @@ ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.topic: how-to
 ms.date: 11/30/2023
-ms.reviewer: v-six
+ms.reviewer: msaenzbo, divargas, v-six
 ---
 
 # How to reset a local Linux password on Azure VMs
