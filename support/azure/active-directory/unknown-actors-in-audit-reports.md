@@ -1,7 +1,7 @@
 ---
 title: Unknown Actors in Audit Reports
 description: Describes common examples of Microsoft first-party service principal actors that may be found in Microsoft Entra audit logs.
-ms.date: 07/20/2023
+ms.date: 11/30/2023
 ms.reviewer: 
 ms.service: active-directory
 ms.subservice: compliance
