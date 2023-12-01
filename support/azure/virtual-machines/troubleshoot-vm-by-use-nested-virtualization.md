@@ -14,7 +14,7 @@ ms.tgt_pltfrm: vm-windows
 ms.topic: article
 ms.date: 11/28/2023
 ms.author: glimoli
-ms.reviewer: v-weizhu, v-six
+ms.reviewer: v-weizhu, v-six, ekpathak, glimoli
 ---
 # Troubleshoot a faulty Azure VM by using nested virtualization in Azure
 
