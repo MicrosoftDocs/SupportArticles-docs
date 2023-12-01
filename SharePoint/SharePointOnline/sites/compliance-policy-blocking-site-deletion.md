@@ -5,7 +5,7 @@ author: helenclu
 ms.author: luche
 manager: dcscontentpm
 localization_priority: Normal
-ms.date: 11/15/2023
+ms.date: 11/30/2023
 audience: Admin
 ms.topic: troubleshooting
 ms.custom: 
@@ -43,7 +43,7 @@ You might experience one of the following scenarios.
 ## Cause
 
 Each of these error messages is generated when you try to delete a SharePoint or OneDrive site in either of the following situations:
-- You exclude or remove the site from a retention policy, but the retention policy is invalid.
+- You exclude or remove the site from a retention policy. However, the retention policy is invalid.
 - The eDiscovery hold is within a 30-day grace period that prevents the site from being deleted. 
 
 ## Resolution
@@ -64,7 +64,7 @@ Verify the validity of the retention policy or determine whether the eDiscovery 
 
 If the test finds an invalid retention policy that might be blocking the deletion, you can choose to remove the policy. 
 
-If the test finds that the eDiscovery hold is within the 30-day grace period, you can choose to delete the site.
+If the test finds that the eDiscovery hold is within the 30-day grace period, you can choose to remove the hold.
 
 ## More information
 
