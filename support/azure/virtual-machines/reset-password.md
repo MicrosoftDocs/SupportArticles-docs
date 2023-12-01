@@ -11,7 +11,7 @@ ms.subservice: vm-cannot-connect
 ms.collection: linux
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
-ms.topic: troubleshooting
+ms.topic: how-to
 ms.date: 11/30/2023
 ms.reviewer: v-six
 ---
@@ -24,7 +24,7 @@ This article provides three methods to reset local Linux Virtual Machine (VM) pa
 
 You can reset the password without attaching the OS disk to another VM. This method requires that the [Azure Linux Agent](/azure/virtual-machines/extensions/agent-linux) be installed on the affected VM.
 
-1. Make sure that the Azure Linux Agent (waagent) service is running on the affected VM and it is in a ready state in the Azure portal.
+1. Make sure that the Azure Linux Agent (waagent) service is running on the affected VM and is in a ready state in the Azure portal.
 
 2. Set up the environment variables, and use the Azure CLI or Azure Cloud Shell to do the password reset:
 
@@ -47,7 +47,7 @@ For more information, see [vmaccess extension for Linux](/azure/virtual-machines
 
 ## Reset the password by using the serial console with single-user mode
 
-You can use the [serial console](serial-console-linux.md) to reset either the `admin user` or `root` account through single-user mode for VM access.
+You can use the [serial console](serial-console-linux.md) to reset the `admin user` or `root` account through single-user mode for VM access.
 
 1. Follow the [single-user mode](serial-console-grub-single-user-mode.md) process to reset or add a password.
 
@@ -73,7 +73,7 @@ You can use the [serial console](serial-console-linux.md) to reset either the `a
     cat /etc/sysconfig/selinux
     ```
 
-5. If `SElinux` is in `enforcing` mode, make sure that `SElinux` allows the file changes made with the `passwd` command. You can run the following command to relabel the file system after the password is changed, facilitating the loading of the alteration.
+5. If `SElinux` is in `enforcing` mode, make sure that `SElinux` allows the file changes made with the `passwd` command. After the password is changed, you can run the following command to relabel the file system to facilitate the loading of the alteration.
 
     ```bash
     touch /.autorelabel
@@ -92,14 +92,14 @@ You can use the [serial console](serial-console-linux.md) to reset either the `a
 This method has been tested by using [the supported Linux distributions and versions](/azure/virtual-machines/linux/endorsed-distros).
 
 > [!NOTE]
-> If you are experiencing problems that affect an Azure network virtual appliance, this method does not apply to your situation. Instead, you must contact the vendor of the network virtual appliance to get instructions about how to do a password reset safely.
+> If you're experiencing problems that affect an Azure network virtual appliance, this method doesn't apply to your situation. Instead, you must contact the vendor of the network virtual appliance to get instructions about how to do a password reset safely.
 
 You can run the [vm repair](/cli/azure/vm/repair) commands to create a repair VM that has a copy of the affected VM's OS disk attached. Then, mount the copy of the OS file systems on the repair VM via the [chroot environment](chroot-environment-linux.md).
 
 > [!NOTE]
 > Alternatively, create a rescue VM manually by using the Azure portal. For more information, see [Troubleshoot a Linux VM by attaching the OS disk to a recovery VM using the Azure portal](troubleshoot-recovery-disks-portal-linux.md).
 
-1. Run the following [az vm repair create](/cli/azure/vm/repair) commands to create a copy of the OS disk. Then, attach the disk to a recovery VM automatically.
+1. Run the following [az vm repair create](/cli/azure/vm/repair) commands to create a copy of the OS disk. Then, the disk is attached to a recovery VM automatically.
 
     ```azurecli
     AZ_RESOURCE_GROUP="YourResourceGroupName"
@@ -134,7 +134,7 @@ You can run the [vm repair](/cli/azure/vm/repair) commands to create a repair VM
     cat /etc/sysconfig/selinux
     ```
 
-6. If `SElinux` is in `enforcing` mode, make sure that `SElinux` allows the file changes made with the `passwd` command. You can run the following command to relabel the file system after the password is changed, facilitating the loading of the alteration.
+6. If `SElinux` is in `enforcing` mode, make sure that `SElinux` allows the file changes made with the `passwd` command. After the password is changed, you can run the following command to relabel the file system to facilitate the loading of the alteration.
 
     ```bash
     touch /.autorelabel
@@ -142,7 +142,7 @@ You can run the [vm repair](/cli/azure/vm/repair) commands to create a repair VM
 
 7. Exit the [chroot environment](chroot-environment-linux.md).
 
-8. Remount the OS disk to the affected VM by swapping the OS disks by running the following command:
+8. Remount the OS disk to the affected VM by swapping the OS disk with the following command:
 
     ```azurecli
     az vm repair restore -g $AZ_RESOURCE_GROUP -n $AZ_VM_NAME --verbose
