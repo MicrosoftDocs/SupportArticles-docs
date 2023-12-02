@@ -2890,8 +2890,6 @@
       href: ./virtualization/starting-or-live-migrating-hyper-v-vms-fails.md
     - name: Troubleshoot live migration issues
       href: ./virtualization/troubleshoot-live-migration-issues.md
-    - name: Windows Server 2019 support for live migration after installing the Hyper-V role
-      href: ./virtualization/windows-server-2019-support-for-live-migration-after-installing-hyper-v-role.md
   - name: Snapshots, checkpoints, and differencing disks
     items:
     - name: Can't delete a recovery checkpoint for a VM in DPM

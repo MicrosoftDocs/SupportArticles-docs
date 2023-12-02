@@ -52,8 +52,6 @@
     items:
     - name: CustomPrivateDNSZoneMissingPermissionError error
       href: error-code-customprivatednszonemissingpermissionerror.md
-    - name: Upgrade fails because of NSG rules
-      href: upgrade-fails-because-of-nsg-rules.md
     - name: NodePoolMcVersionIncompatible error
       href: nodepoolmcversionincompatible-error.md
     - name: Troubleshoot UpgradeFailed errors due to eviction failures caused by PDBs
@@ -74,6 +72,8 @@
     href: upgrades-to-kubernetes-fail-using-node-labels.md  
   - name: Upgrade issues with Gen2 VMs on Windows AKS cluster
     href: nodepools-not-upgraded-to-gen2-during-node-image-upgrade.md
+  - name: Upgrade fails because of NSG rules
+    href: upgrade-fails-because-of-nsg-rules.md
 
 - name: Troubleshoot delete operations
   items:
