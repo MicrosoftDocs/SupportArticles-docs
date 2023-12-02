@@ -89,17 +89,19 @@ This article lists the known issues for the Microsoft Teams Rooms app when it's 
 - Front row requires 1920 × 1080 resolution for a 16:9 display or 2560 × 1080 resolution for a 21:9 display. These displays are set to 100 percent scaling. If the chat panel on your front-of-room display shows unreadable UI, see [Change scale and resolution for front-of-room](/microsoftteams/rooms/rooms-operations#scale-and-resolution) to adjust your display settings.
 - Teams Rooms doesn't support High-Bandwidth Digital Content Protection (HDCP) input. Using HDCP input might cause issues that affect High-Definition Multimedia Interface (HDMI) ingest functionality, such as video and audio. To avoid these issues, make sure that the HDCP options are turned off for switches that are connected to Teams Rooms.
 - Teams Rooms on Android doesn't support the ability to join cross-cloud meetings.
+- When you use the Call app on a Teams Rooms device to dial the toll number or conference ID for a Teams meeting, the conference bridge triggers multiple call flows. Because the Teams Rooms app is designed to support only one active call at a time, the call fails. This behavior occurs in both Teams Rooms on Windows and Teams Rooms on Android.<br/><br/>Instead of using the Call app, join the meeting by using the **Join with an ID** option and entering the meeting ID.
 
 ## Expected behavior
 
 - If your Teams Rooms device loses trust with the domain, you won't be able to authenticate into the device and access its settings. For example, if you remove Teams Rooms from the domain after it gets domain joined, the trust relationship will be lost. In this situation, sign in to the device by using a local administrator account.
-- A consumer TV that's used as the front-of-room display might cause stability issues with Teams Rooms for the following reasons:
+- If you use a consumer TV as the front-of-room display, then you might see stability issues with Teams Rooms for the following reasons:
   - Inconsistent implementation of standby modes
   - Active video source selection
   - Incorrect EDID information that's communicated to the Teams Rooms device
 
-  Known symptoms include a black or gray screen on the front-of-room display, or the Teams Rooms console becomes unresponsive after waking from standby mode. If you experience issues when you use consumer TVs, we recommend that you install a configurable EDID controller or EDID emulator, such as the [HD-RX-4K-201-C-E](https://www.crestron.com/Products/Video/HDMI-Solutions/HDMI-Extenders/HD-RX-4K-210-C-E) from Crestron, or [DR-EDID Emulator](https://fsrinc.com/fsr-products/product/4051-dr-edid2-emulator) from FSR Video Products Group.
-- Teams Admin Center only identifies valid certified firmware. If uncertified firmware is updated on the device by means other than the Teams Admin Center, the Admin Center will provide only the old firmware. This issue may occur with Teams Rooms on Android devices and Teams IP phones.
+  The symptoms include a black or gray screen on the front-of-room display, or the Teams Rooms console becomes unresponsive after waking from standby mode. If you experience issues when you use consumer TVs, we recommend that you install a configurable EDID controller or EDID emulator, such as the [HD-RX-4K-201-C-E](https://www.crestron.com/Products/Video/HDMI-Solutions/HDMI-Extenders/HD-RX-4K-210-C-E) from Crestron, or [DR-EDID Emulator](https://fsrinc.com/fsr-products/product/4051-dr-edid2-emulator) from FSR Video Products Group.
+- The Microsoft Teams admin center only identifies valid, certified firmware. If uncertified firmware is updated on the device by means other than the Microsoft Teams admin center, the admin center will display only the old firmware. This behavior might occur with Teams Rooms on Android devices and Teams IP phones.
+- If you're in a call with another user who is on a Teams Rooms device, you can't transfer the call. This is because the Teams Rooms app can handle only one call at a time. This behavior occurs in both Teams Rooms on Windows and Teams Rooms on Android.
 
 ## Support for third-party Teams devices
 
