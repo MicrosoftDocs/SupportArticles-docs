@@ -1,9 +1,9 @@
 ---
 title: Agent dashboard doesn't load or shows an authorization error
 description: Provides a resolution for the issue where the agent dashboard doesn't load or displays an authorization error in Omnichannel for Customer Service.
-ms.reviewer: nenellim
+ms.reviewer: nenellim, laalexan
 ms.author: vamullap
-ms.date: 05/23/2023
+ms.date: 12/04/2023
 ---
 # Agent dashboard doesn't load or displays an authorization error
 
