@@ -239,4 +239,4 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
 For all other issues, or if your issue persists after following these steps, reach out to <pamobsup@microsoft.com>. You need to provide a repro video, screenshots, or both, and a session ID that can be get in the following ways:
 
 - On the sign-in screen, go to the lower right corner to select the gear icon, and then select **Session Details**.
-- After you open the app, shake your device, and then select **Session Details**.
+- After you open the app, long press on the screen, and then select **Session Details**.
