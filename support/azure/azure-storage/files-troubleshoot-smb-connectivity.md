@@ -4,8 +4,8 @@ description: Troubleshoot problems connecting to and accessing SMB Azure file sh
 services: storage
 ms.service: azure-file-storage
 ms.custom: devx-track-azurepowershell
-ms.date: 07/31/2023
-ms.reviewer: kendownie, jarrettr, v-weizhu
+ms.date: 11/23/2023
+ms.reviewer: kendownie, jarrettr, v-weizhu, v-six, hanagpal
 ---
 # Troubleshoot Azure Files connectivity and access issues (SMB)
 
@@ -378,6 +378,9 @@ Although file handles and leases serve an important purpose, sometimes file hand
 - The specified resource is marked for deletion by an SMB client.
 
 The resolution to this issue depends on whether this is being caused by an orphaned file handle or lease.
+
+> [!NOTE]
+> REST leases are used by applications to prevent files from being deleted or modified. Before breaking any leases, you should identify which application is acquiring them. Otherwise, you might break the application behavior.
 
 #### Cause 1
 
