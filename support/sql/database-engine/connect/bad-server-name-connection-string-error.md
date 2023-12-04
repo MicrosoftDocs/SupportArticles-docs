@@ -39,7 +39,7 @@ To resolve this issue, follow these steps:
 
 1. Validate that you're connecting to the appropriate server.
 
-1. If the server isn't the appropriate one, then the connection string.
+1. If the server isn't the appropriate one, then use the connection string.
 
 1. If the connection string is correct, add the login to the database.
 

@@ -20,7 +20,7 @@ The **CrashOnAuditFail** feature is a security feature used by system administra
 
 To resolve the error, follow these steps:
 
-1. Start the Registry Editor.
+1. Start the Registry editor.
 1. Locate the following key, and then check whether the value of this key is set to *2*:
 
    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa!crashonauditfail`

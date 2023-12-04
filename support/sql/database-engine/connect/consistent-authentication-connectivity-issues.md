@@ -1,7 +1,7 @@
 ---
 title: Introduction to consistent authentication issues
 description: This article introduces to consistent authentication issues, the types of error messages, and workarounds to troubleshoot various problems.
-ms.date: 11/27/2023
+ms.date: 12/04/2023
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
@@ -37,23 +37,26 @@ Refers to the Active Directory errors. If the SQL Server ErrorLog file contains 
 
 ## Login failed specific issues
 
-Refers to some of the common login failures. For detailed information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
+Before you start with troubleshooting issues, it's important to understand the nature of an error and the category that it belongs to. This section provides error messages grouped based on a category. Some errors might appear in more than one category. This section lists the possible error messages and its related to possible causes.
 
-|Error message  |Causes  |
+|Error message  |Possible causes  |
 |---------|---------|
-|[Login failed for user '(null)'](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-(null))     |         |
-| [Login failed for user ''](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error)     |         |
-|[Login failed for user 'NT AUTHORITY\ANONYMOUS LOGON'](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error)     |         |
-|[Login failed for user 'username'](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error)     |         |
-|[Login failed for user 'domain\username'](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error)     |         |
-|Login failed. The login is from an untrusted domain and cannot be used with Windows authentication.     |         |
-|[SQL Server does not exist or access denied](network-related-or-instance-specific-error-occurred-while-establishing-connection.md) - This can also be a network error.     |         |
-|[SSPI context messages](/troubleshoot/sql/database-engine/connect/cannot-generate-sspi-context-error?branch=main)     |         |
+|[Login failed for user '(null)'](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-(null))|The password you provided might be incorrect or the user name might not be valid or it might be a case where SQL logins aren't enabled. For more information, see "You're trying to use SQL Server Authentication, but the SQL Server instance is configured for Windows Authentication mode".|
+|`SQL Server does not exist or access denied.`  | [Named Pipes connections](named-pipes-connection-fail-no-windows-permission.md) fail because the user doesn't have permission to log into Windows.     |
+|`Cannot open database "test" requested by the login. The login failed.`|The database might be offline, or the permissions might not be sufficient. For more information, see [Database offline in MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).|
+|`A transport-level error has occurred when sending the request to the server.`|Check if the [linked server account mapping](linked-server-account-mapping-error.md) is correct. For more information, see [sp_addlinkedsrvlogin](/sql/relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql).|
+|`Login failed for user 'username'.` | This can happen if the [proxy account](../../integration-services/ssis-package-doesnt-run-when-called-job-step.md) isn't properly authenticated.    |
+|`Login failed for user 'NT AUTHORITY\ANONYMOUS LOGON'`   |         |
+|`Login failed for user 'username'.` </br> `Login failed for user 'database\username'`</br>    | Check if there is a [bad server name in connection string](bad-server-name-connection-string-error.md). Also, check if the [user doesn't belong to a local group](access-through-group-windows-permissions.md) that's used to grant access to the server. For more causes, see [NT AUTHORITY\ANONYMOUS LOGON](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).    |
+|`"Cannot open database "northwind" requested by the login. The login failed."`|Check if the database name in the connection string is correct.|
+|SSPI Context errors|The explicit SPN account might be [wrong](wrong-explicit-spn-account-connection-string.md), missing, or misplaced. |
+|`"The user account is not allowed the Network Login type"`|You might not be able to [log in to the network](network-login-disallowed.md).|
+|Service account not trusted for delegation |Check if the service account isn't trusted for delegation. For more information, see [How to Configure the Server to be Trusted for Delegation - Microsoft Desktop Optimization Pack](/microsoft-desktop-optimization-pack/appv-v4/how-to-configure-the-server-to-be-trusted-for-delegation). If a delegation scenario isn't enabled, check the SQL Server *secpol.msc* to see if the SQL Server service account is listed under **Local Policies -> User Rights Assignment -> Impersonate a client after authentication** security policy settings. |
+|`"The login is from an untrusted domain and cannot be used with Windows authentication."`|This error might be related to the [Local Security Subsystem](local-security-subsystem-issues.md) issues.|
 
+For detailed information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
 
-Before you start with troubleshooting, it is important to understand the nature of an error and the category that it belongs to. This section provides error messages grouped based on a category. Some errors might appear in more than one category. Each of these error scenarios has the symptoms and the solutions as well. Following are the error categories.
-
-The next few sections list some of the scenarios specific to areas such as Kerberos, Active Directory, Domain Controller, connection strings, NTLM, and so on.
+The following section provides some scenarios and related solution related to the AD and DC. 
 
 ## Active Directory and Domain Controller issues
 
@@ -61,13 +64,13 @@ The following table provides some solutions to the AD and DC issues:
 
 |Possible causes  |Workarounds  |
 |---------|---------|
-|Account disabled     | You might experience this error if the user account has been disabled by an administrator or by a user. In such a case, you can't login with this account or start a service with it. |
-|Account not in group  | You can access the database using groups rather than individually. Check the SQL logins to enumerate allowed groups and make sure the user belongs to one of them.    |
+|An account is disabled.  | You might experience this error if the user account has been disabled by an administrator or by a user. In such a case, you can't login with this account or start a service with it. |
+|An account is not in the group. | You can access the database using groups rather than individually. Check the SQL logins to enumerate allowed groups and make sure the user belongs to one of them.    |
 |Cross-Domain groups    | Users from the remote domain should belong to a group in the SQL Server domain. If the domains lack proper trust, adding the users in a group in the remote domain might prevent the SQL Server from enumerating the group's membership.  |
 |Firewall blocks the DC   | Make sure the DC is accessible from the client or the SQL Server via `nltest /SC_QUERY:CONTOSO`.   |
-|DC Offline   |This error might occur if there are incorrect Domain Naming Service (DNS) records for DC. NLTEST can be used to force the computer to switch to another DC. See Firewall Blocks the DC.   |
+|Domain Controller is offline   |This error might occur if there are incorrect Domain Naming Service (DNS) records for DC. NLTEST can be used to force the computer to switch to another DC. See Firewall Blocks the DC.   |
 |Selective authentication  | Refers to a feature of domain trusts that allows the domain administrator to limit which users have access to resources in the remote domain. Make sure the user isn't allowed to authenticate in the remote domain.      |
-|Account migration   | If old user accounts can't connect to the SQL Server, but newly created accounts can, this could be due to account migration. This is an Active Directory issue.        |
+|Account migration   | If old user accounts can't connect to the SQL Server, but newly created accounts can, this could be due to account migration. This is an AD issue.        |
 
 ## Kerberos authentication issues
 
@@ -78,21 +81,21 @@ The following table contains information about issues related to Kerberos authen
 |Not trusted for delegation and Not a constrained target |These are Active Directory (AD) issues. If you are an Administrator, enable the **Trusted for delegation** setting. |
 |Sensitive account   | Some accounts may be marked as Sensitive in AD. These accounts can't be delegated to another service in a double-hop scenario. |
 |User belongs to many groups  | This can happen when a user is a member of many groups in AD. If you use Kerberos over UDP, the entire security token must fit within a single packet. Users that belong to many groups will have a larger security token than those that belong to fewer groups. If you use Kerberos over TCP, you can increase the [`MaxTokenSize`] setting. For more information, see [MaxTokenSize and Kerberos Token Bloat](/archive/blogs/shanecothran/maxtokensize-and-kerberos-token-bloat).  |
-|Clock skew error   | This error can occur when clocks on more than one device on a network are not synchronized. For Kerberos server to work, the clocks between machines can't be off for more than five minutes.   |
-| NTLM and Constrained Delegation error | If the target is a file share, the delegation type of the mid-tier service account must be **Constrained-Any** and not **Constrained-Kerberos**. See Login failed for user NT AUTHORITY\ANONYMOUS LOGON for more information.     |
+|Clock skew   | This error can occur when clocks on more than one device on a network aren't synchronized. For Kerberos server to work, the clocks between machines can't be turned off for more than five minutes.   |
+| NTLM and Constrained Delegation | If the target is a file share, the delegation type of the mid-tier service account must be **Constrained-Any** and not **Constrained-Kerberos**. For more information, see [Login failed for user NT AUTHORITY\ANONYMOUS LOGON](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).     |
 |Per-Service-SID     | Is a security feature of SQL Server that limits local connections to use New Technology LAN Manager (NTLM) and not Kerberos as the authentication method. The service can make a single hop to another server using NTLM credentials, but it can't be delegated further without using the constrained delegation.         |
 |Legacy Providers and Named Pipes  | This error might occur when there is a problem with the connection between the client and server. The legacy OLE DB Provider (SQLOLEDB) and ODBC Driver {SQL Server} that come with Windows don't support Kerberos over Named Pipes, only NTLM. Use a TCP connection to allow Kerberos.        |
-|Kernel mode authentication   |This error can occur when you try to open a web site from a remote machine. Normally, the SPN must be on the App Pool account for web servers, but when you use Kernel Mode Authentication, authentication is performed in the kernel and the computer's HOST SPN is used. This setting may be used if the server hosts a number of different web sites using the same host header URL, different App Pool accounts, and [Windows Authentication](/iis/configuration/system.webserver/security/authentication/).     |
-|Delegating Credentials to Access or Excel   | Refers to a process where a user grants permissions to another user. The Joint Engine Technology (JET) and Access Connectivity Engine (ACE) providers are similar to any of the file systems. You must use constrained delegation to allow SQL Server to read files located on another machine. In general, the ACE provider shouldn't be used in a linked server as this is explicitly not supported. The JET provider is deprecated and is available on 32-bit machines only.     |
+|Kernel mode authentication   |This error can occur when you try to open a website from a remote machine. Normally, the SPN must be on the App Pool account for web servers, but when you use Kernel Mode Authentication, authentication is performed in the kernel and the computer's HOST SPN is used. This setting might be used if the server hosts a number of different websites using the same host header URL, different App Pool accounts, and [Windows Authentication](/iis/configuration/system.webserver/security/authentication/).     |
+|Delegating Credentials to Access or Excel   | The Joint Engine Technology (JET) and Access Connectivity Engine (ACE) providers are similar to any of the file systems. You must use constrained delegation to allow SQL Server to read files located on another machine. In general, the ACE provider shouldn't be used in a linked server as this is explicitly not supported. The JET provider is deprecated and is available on 32-bit machines only.     |
 |SQL alias   | A SQL [Server alias](network-related-or-instance-specific-error-occurred-while-establishing-connection.md) may cause an unexpected SPN to be generated. This will result in NTLM credentials if the SPN isn't found, or an SSPI failure, if it inadvertently matches the SPN of another server.    |
 |Website host header     | If the website has a host header name, the HOSTS SPN can't be used. An explicit HTTP SPN must be used. If the website doesn't have a host header name, NTLM is used and it can't be delegated to a backend SQL Server or other service.         |
 |HOSTS file   | The hosts file overrides DNS lookups and might generate an unexpected SPN name. This will cause NTLM credentials to be used. If an unexpected IP address is in the hosts file, the SPN generated might not match the backend pointed to.        |
 |Delegating to a file share   | Make sure to use constrained delegation in this scenario.       |
-|HTTP Ports   | Normally, HTTP SPNs don't use port numbers, example `http/web01.contoso.com`, but you can enable this through the policy on the clients. The SPN would then have to be in the `http/web01.contoso.com:88` format, to enable Kerberos to function correctly. Otherwise, NTLM credentials are used, which aren't recommended because it would be difficult to diagnose the issue and it might be an excessive administrative overhead.       |   
+|HTTP Ports   | Normally, HTTP SPNs don't use port numbers, example `http/web01.contoso.com`, but you can enable this through the policy on the clients. The SPN would then have to be in the `http/web01.contoso.com:88` format, to enable Kerberos to function correctly. Otherwise, NTLM credentials are used, which aren't recommended because it would be difficult to diagnose the issue and it might be an excessive administrative overhead.   | 
 
 ## Other issues
 
-The following table contains scenarios related to Internet access related issues:
+The following table contains the possible cause ad related information about scenarios related to Internet access:
 
 |Possible cause  |More information  |
 |---------|---------|
