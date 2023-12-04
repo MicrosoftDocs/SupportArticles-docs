@@ -143,6 +143,7 @@ If content doesn't exist for the error code, follow the general troubleshooting 
 | 0x8007052e | -2147023570 | ERROR_LOGON_FAILURE | Operation failed due to an authentication failure. | If the error persists for more than a day, create a support request. |
 | 0x8002802b | -2147319765 | TYPE_E_ELEMENTNOTFOUND | An unexpected error occurred. | No action required. This error should automatically resolve. If the error persists for several days, create a support request. |
 | 0x80072f00 | -2147012864 | WININET_E_FORCE_RETRY | A connection with the service could not be established. | No action required. This error should automatically resolve. If the error persists for several days, create a support request. |
+| 0x80C86057 | -2134351785 | ECS_E_STABLEVERSION_SVID_CHECK_FAILED | The file cannot be tiered due to a known issue. | Ignore the error, it will go away after we roll out a fix. |
 
 ## How to troubleshoot files that fail to be recalled
 
@@ -234,6 +235,7 @@ If content doesn't exist for the error code, follow the general troubleshooting 
 | 0x8019012e | -2145844946 | HTTP_E_STATUS_REDIRECT | Azure File Sync does not support HTTP redirection. | Disable HTTP redirect on your proxy server or network device. |
 | 0x800706be | -2147023170 | RPC_S_CALL_FAILED | An unknown error occurred. | If the error persists, use the `Test-StorageSyncNetworkConnectivity` cmdlet to check network connectivity to the service endpoints. [Learn more](/azure/storage/file-sync/file-sync-firewall-and-proxy#test-network-connectivity-to-service-endpoints). |
 | 0x80072747 | -2147014841 | WSAENOBUFS | An internal error occurred. | If the error persists, use the `Test-StorageSyncNetworkConnectivity` cmdlet to check network connectivity to the service endpoints. [Learn more](/azure/storage/file-sync/file-sync-firewall-and-proxy#test-network-connectivity-to-service-endpoints). |
+| 0x80C86057 | -2134351785 | ECS_E_STABLEVERSION_SVID_CHECK_FAILED | The file cannot be recalled due to a known issue. | Copy the file manually from a different endpoint or from the cloud share. If you are not able to copy the file manually create a support ticket. |
 
 ## Tiered files are not accessible on the server after deleting a server endpoint
 
