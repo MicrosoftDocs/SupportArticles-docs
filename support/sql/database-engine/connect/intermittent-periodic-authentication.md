@@ -56,11 +56,11 @@ SSPI handshake failed with error code 0x80090311 while establishing a connection
 SSPI handshake failed with error code 0x80090304 while establishing a connection with integrated security; the connection has been closed.
 ```
 
-These codes translate as follows:
+The following operating system error codes indicate the cause of the failure:
 
-Error 2146893039 (0x80090311): No authority can be contacted for authentication.
+- > Error -2146893039 (0x80090311): No authority could be contacted for authentication.
 
-Error 2146893052 (0x80090304): The Local Security Authority can't be contacted.
+- > Error -2146893052 (0x80090304): The Local Security Authority cannot be contacted.
 
 #### Client system event log
 
@@ -116,7 +116,3 @@ Running out of ephemeral ports is a relatively common cause of intermittent conn
 
 > [!NOTE]
 > The default value is `2147483647 MB`, which means the server can cause the operating system (OS) to run out of memory.
-
-## More information
-
-[Credential Delegation Issue]
