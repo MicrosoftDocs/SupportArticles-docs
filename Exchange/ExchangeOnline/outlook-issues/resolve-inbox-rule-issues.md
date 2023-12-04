@@ -62,7 +62,7 @@ To diagnose and fix the issue, use the following steps. After you complete each 
 
 2. Check whether the number of redirect recipients for the Inbox rule exceeds the Microsoft [Exchange Online limit](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#journal-transport-and-inbox-rule-limits-1) of ten. For information about how to work around the issue, see [Inbox rule to forward messages doesn't work in Microsoft 365](/exchange/troubleshoot/email-delivery/inbox-rule-to-forward-messages-not-work).
 
-3. Check whether the mailbox is in a [remote domain](/exchange/mail-flow-best-practices/remote-domains/remote-domains) and whether automatic forwarding is disabled for the remote domain. Run the following commands:
+3. Check whether the mailbox is in a [remote domain](/exchange/mail-flow-best-practices/remote-domains/remote-domains) and whether automatic forwarding is disabled for the remote domain. Run the following command:
 
    ```PowerShell
    Get-RemoteDomain | Where {$_.AutoForwardEnabled -eq $False}
@@ -72,11 +72,11 @@ To diagnose and fix the issue, use the following steps. After you complete each 
 
 ## Rule to forward email messages doesn't work
 
-Check whether the outbound spam filter disables automatic forwarding to external recipients. If so, rules that forward email messages to external recipients won't work and will trigger non-delivery reports. This behavior is by design. For more information, see [Control automatic external email forwarding in Microsoft 365](/microsoft-365/security/office-365-security/outbound-spam-policies-external-email-forwarding).
+Check whether the outbound spam filter disables automatic forwarding to external recipients. If so, rules that forward email messages to external recipients won't work and trigger non-delivery reports. This behavior is by design. For more information, see [Control automatic external email forwarding in Microsoft 365](/microsoft-365/security/office-365-security/outbound-spam-policies-external-email-forwarding).
 
 ## Rule to forward new or updated meeting requests doesn't work
 
-If an incoming message is a new or updated meeting request, and its sensitivity level is set to `Private`, Inbox rules that forward the message won't work. This behavior is by design.
+If an incoming message is a new or updated meeting request, and its sensitivity level is set to **Private**, Inbox rules that forward the message won't work. This behavior is by design.
 
 ## Rule to forward message disposition notifications or delivery receipts doesn't work
 
