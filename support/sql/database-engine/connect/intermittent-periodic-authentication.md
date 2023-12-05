@@ -45,7 +45,7 @@ If yes, check whether the users in the local domain or data center have a good e
 
 If the issue persists even after testing with these commands, the issue isn't with SQL Server but with the network infrastructure or domain controller performance.
 
-#### SQL Server error log
+#### Look for performance issue in SQL Server error log
 
 The SQL Server error log may reveal performance issues on SQL Server, such as entries indicating I/O taking longer than 15 seconds. The SQL Performance team has [PSSDIAG](https://support.microsoft.com/topic/pssdiag-data-collection-utility-513a299f-0b45-eb1a-adb4-bc2ad8ecf194) to run and analyze. You may need to do this if the network trace reveals delays in SQL Server responses.
   
