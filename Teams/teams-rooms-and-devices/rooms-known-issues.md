@@ -22,7 +22,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 10/30/2023
+ms.date: 12/01/2023
 ---
 # Known issues in Teams Rooms and devices
 
@@ -62,7 +62,7 @@ This article lists the known issues for the Microsoft Teams Rooms app when it's 
 | Issue  |  Description | Workaround |
 | --- | --- | --- |
 |The **Report an issue** option in Teams Rooms on Android devices doesn't work|In Teams Rooms on Android devices, Teams phones, Teams panels and Teams displays, the **Report an issue** option under **Settings** is unavailable.|The option to report issues from Teams Rooms on Android devices is being enhanced. The **Report an issue** option will be unavailable until the updated experience is released.</br></br>If you were using the **Report an issue** option to collect device logs to troubleshoot issues, use the Microsoft Teams admin center instead. See [Collect Android Teams device logs](/microsoftteams/troubleshoot/teams-rooms-and-devices/collect-device-logs) for detailed instructions.|
-|Teams phones and Teams panels sign out automatically, and Teams Rooms on Android devices become unpaired|Some models of Teams phones and Teams panels that are running version 5.0.5882.0 of the Company Portal app sign out automatically.<br/><br/>Also, Teams Rooms on Android devices that are running the Teams Rooms app version 1449/1.0.96.2023090601 and Company portal app version 5.0.5954.0 might sign out automatically and the touch console on the devices becomes unpaired.|Microsoft is investigating this issue. No workaround is available at this time.|
+|Teams phones and Teams panels sign out automatically.<br/><br/> Teams Rooms on Android devices sign out automatically and become unpaired|Some models of Teams phones and Teams panels that are running version 5.0.5882.0 of the Company Portal app sign out automatically.<br/><br/>Also, Teams Rooms on Android devices that are running the Teams Rooms app version 1449/1.0.96.2023090601 and Company portal app version 5.0.5954.0 might sign out automatically and the touch console on the devices becomes unpaired.<br/><br/>These issues occur if the devices run out of memory or Workplace Join experiences errors.|Periodically restart the affected devices through the Microsoft Teams admin center or Pro Management portal. For applicable device models, you can also set a nightly restart option in the firmware.|
 
 ### Issues with meeting room devices
 
@@ -84,22 +84,30 @@ This article lists the known issues for the Microsoft Teams Rooms app when it's 
 |Calls on long hold in GCCH tenants drop intermittently|On GCCH tenants that are running 2022 update #4A (Teams app version 1449/1.0.94.2022110803), when a user puts a call on long hold the call drops in some instances. This issue doesn't occur on other clouds.|No workaround is available at this time.|
 |In Better together mode, the **Mute** setting on Teams phones doesn't seem to work during a screen share with audio|On Teams phones that use the Better together feature, when you share a screen and enable the **Include computer sound** option during a Teams meeting, the audio from the phones that are muted is still heard.<br/><br/>If you toggle the **Unmute** and **Mute** options a few times, the audio output that is coming from both from the desktop client as well as the Teams phones results in howling.|No workaround is available at this time.|
 
+### Issues with Teams panels
+
+| Issue  |  Description | Workaround |
+| --- | --- | --- |
+|Joining a meeting on a Teams Rooms device doesn't check you in for the meeting|You have a panel that shares a resource account with a Teams Room device. If you join a scheduled meeting on the Teams Rooms device, you might not be checked in for your reservation on the panel. This issue occurs intermittently.|If the issue is happening often, turn off the **Release room if no one checks in** setting in the Microsoft Teams admin center.|
+
 ## Limitations
 
 - Front row requires 1920 × 1080 resolution for a 16:9 display or 2560 × 1080 resolution for a 21:9 display. These displays are set to 100 percent scaling. If the chat panel on your front-of-room display shows unreadable UI, see [Change scale and resolution for front-of-room](/microsoftteams/rooms/rooms-operations#scale-and-resolution) to adjust your display settings.
 - Teams Rooms doesn't support High-Bandwidth Digital Content Protection (HDCP) input. Using HDCP input might cause issues that affect High-Definition Multimedia Interface (HDMI) ingest functionality, such as video and audio. To avoid these issues, make sure that the HDCP options are turned off for switches that are connected to Teams Rooms.
 - Teams Rooms on Android doesn't support the ability to join cross-cloud meetings.
+- When you use the Call app on a Teams Rooms device to dial the toll number or conference ID for a Teams meeting, the conference bridge triggers multiple call flows. Because the Teams Rooms app is designed to support only one active call at a time, the call fails. This behavior occurs in both Teams Rooms on Windows and Teams Rooms on Android.<br/><br/>Instead of using the Call app, join the meeting by using the **Join with an ID** option and entering the meeting ID.
 
 ## Expected behavior
 
 - If your Teams Rooms device loses trust with the domain, you won't be able to authenticate into the device and access its settings. For example, if you remove Teams Rooms from the domain after it gets domain joined, the trust relationship will be lost. In this situation, sign in to the device by using a local administrator account.
-- A consumer TV that's used as the front-of-room display might cause stability issues with Teams Rooms for the following reasons:
+- If you use a consumer TV as the front-of-room display, then you might see stability issues with Teams Rooms for the following reasons:
   - Inconsistent implementation of standby modes
   - Active video source selection
   - Incorrect EDID information that's communicated to the Teams Rooms device
 
-  Known symptoms include a black or gray screen on the front-of-room display, or the Teams Rooms console becomes unresponsive after waking from standby mode. If you experience issues when you use consumer TVs, we recommend that you install a configurable EDID controller or EDID emulator, such as the [HD-RX-4K-201-C-E](https://www.crestron.com/Products/Video/HDMI-Solutions/HDMI-Extenders/HD-RX-4K-210-C-E) from Crestron, or [DR-EDID Emulator](https://fsrinc.com/fsr-products/product/4051-dr-edid2-emulator) from FSR Video Products Group.
-- Teams Admin Center only identifies valid certified firmware. If uncertified firmware is updated on the device by means other than the Teams Admin Center, the Admin Center will provide only the old firmware. This issue may occur with Teams Rooms on Android devices and Teams IP phones.
+  The symptoms include a black or gray screen on the front-of-room display, or the Teams Rooms console becomes unresponsive after waking from standby mode. If you experience issues when you use consumer TVs, we recommend that you install a configurable EDID controller or EDID emulator, such as the [HD-RX-4K-201-C-E](https://www.crestron.com/Products/Video/HDMI-Solutions/HDMI-Extenders/HD-RX-4K-210-C-E) from Crestron, or [DR-EDID Emulator](https://fsrinc.com/fsr-products/product/4051-dr-edid2-emulator) from FSR Video Products Group.
+- The Microsoft Teams admin center only identifies valid, certified firmware. If uncertified firmware is updated on the device by means other than the Microsoft Teams admin center, the admin center will display only the old firmware. This behavior might occur with Teams Rooms on Android devices and Teams IP phones.
+- If you're in a call with another user who is on a Teams Rooms device, you can't transfer the call. This is because the Teams Rooms app can handle only one call at a time. This behavior occurs in both Teams Rooms on Windows and Teams Rooms on Android.
 
 ## Support for third-party Teams devices
 

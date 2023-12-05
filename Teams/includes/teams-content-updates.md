@@ -2,6 +2,15 @@
 
 
 
+## Week of November 27, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 11/27/2023 | [Teams defaults to the domain-joined account](/microsoftteams/troubleshoot/authentication/teams-defaults-to-domain-joined-account) | modified |
+| 12/1/2023 | [Known issues in Teams Rooms and devices](/microsoftteams/troubleshoot/teams-rooms-and-devices/rooms-known-issues) | modified |
+
+
 ## Week of November 13, 2023
 
 
