@@ -100,7 +100,7 @@ The lack of [connection pooling](/dotnet/framework/data/adonet/sql-server-connec
 > [!NOTE]
 > The lack of connection pooling will show a large number of `TIME_WAIT` status codes in the `NETSTAT` output compared to established connections.
 
-Connection pooling can't only run the client out of outbound ports, but also overload the server, causing the server to reject incoming connection requests or flooding a poorly performing domain controller.
+If Connection pooling isn't enabled, the client may run out of outbound ports, and also overload the server. This overload can cause the server to reject incoming connection requests or flood a poorly performing domain controller.
 
 The best thing to do is to have the application developer use connection pooling in their applications. Connection pooling is ON by default in .NET and Internet Information Services (IIS) applications, but it might have been turned off for some reason.
 
