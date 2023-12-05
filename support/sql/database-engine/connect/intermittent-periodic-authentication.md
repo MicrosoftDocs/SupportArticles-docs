@@ -33,7 +33,7 @@ The most common issues are caused by SQL Server performance or slow domain contr
 
 ## Troubleshooting process
 
-Since the issue is intermittent, we can assume the configuration, such as Kerberos Service Principal Names (SPNs), is correct. To solve this issue, try the following troubleshooting:
+Since the issue is intermittent, it's likely that the configuration, such as Kerberos Service Principal Names (SPNs), is correct. To solve this issue, try the following troubleshooting steps:
 
 #### Check if multiple domains or data centers are involved
 
