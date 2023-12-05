@@ -18,7 +18,7 @@ audience: Application User
 
 ## Symptoms
 
-Error code *ERR00004* is logged in the **Transform Log** table in Microsoft Dataverse when the `Recid` column of `generaljournalaccountentry.generaljournalentry` in Dynamics 365 Finance isn't found in the `Recid` column of the `generaljournalentry` table. These records are excluded and aren't transferred to fact tables. Some Microsoft reports might show empty or incomplete data. In these cases, you might have to create modified versions of the reports to address the gaps and ensure accurate reporting.
+Error code *ERR00004* is logged in the **Bpa self help logs** table in Microsoft Dataverse when the `Recid` column of `generaljournalaccountentry.generaljournalentry` in Dynamics 365 Finance isn't found in the `Recid` column of the `generaljournalentry` table. These records are excluded and aren't transferred to fact tables. Some Microsoft reports might show empty or incomplete data. In these cases, you might have to create modified versions of the reports to address the gaps and ensure accurate reporting.
 
 ## Resolution
 
