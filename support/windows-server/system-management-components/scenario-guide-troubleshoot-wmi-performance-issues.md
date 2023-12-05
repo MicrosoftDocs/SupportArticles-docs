@@ -118,9 +118,9 @@ For these cases, see "Scenario guide: Troubleshoot WmiPrvse.exe quota exceeding 
 
 ## Data collection
 
-To open a support case for further investigation, you can collect the information by following the steps mentioned in Gather information by using TSS for User Experience issues or by using the WMI-Collect tool on the machine that has recently experienced the issue. Here are the steps:
+To open a support case for further investigation, you can collect the information by following the steps mentioned in [Gather information by using TSS for User Experience issues](../../windows-client/windows-tss/gather-information-using-tss-user-experience.md#wmi) or by using the WMI-Collect tool on the machine that has recently experienced the issue. Here are the steps:
 
-1. Download WMI-Collect.zip and extract it to a folder, such as *C:\\temp*.
+1. Download [WMI-Collect.zip](https://aka.ms/WMI-Collect) and extract it to a folder, such as *C:\\temp*.
 2. From an elevated PowerShell command prompt, run the *WMI-Collect.ps1* script from the folder where the script is saved. For example:
 
     ```powershell
