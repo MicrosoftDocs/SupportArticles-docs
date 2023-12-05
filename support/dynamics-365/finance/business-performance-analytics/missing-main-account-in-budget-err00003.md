@@ -18,7 +18,7 @@ audience: Application User
 
 ## Symptoms
 
-Error code *ERR00003* is logged in the **Transform Log** table in Microsoft Dataverse when budget transaction lines in Dynamics 365 Finance are missing the main account in the ledger dimension column. Transactions in the budget are linked to a `generalledgeraccountkey` value of **-1**.
+Error code *ERR00003* is logged in the **Bpa self help logs** table in Microsoft Dataverse when budget transaction lines in Dynamics 365 Finance are missing the main account in the ledger dimension column. Transactions in the budget are linked to a `generalledgeraccountkey` value of **-1**.
 
 ## Resolution
 
