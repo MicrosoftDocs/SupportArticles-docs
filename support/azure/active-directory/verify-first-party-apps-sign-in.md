@@ -1,8 +1,8 @@
 ---
 title: Verify first-party Microsoft applications in sign-in reports
 description: Describes how to verify first-party Microsoft applications in sign-in reports.
-ms.date: 11/06/2023
-ms.reviewer: bernaw
+ms.date: 12/05/2023
+ms.reviewer: bernaw, domooney, v-six
 ms.service: active-directory
 ms.subservice: compliance
 ms.custom: has-azure-ad-ps-ref
@@ -71,6 +71,7 @@ The following table lists some, but not all, first-party Microsoft applications.
 |Application Name|Application IDs|
 |--|--|
 |ACOM Azure Website|23523755-3a2b-41ca-9315-f81f3f566a95|
+|ADIbizaUX|74658136-14ec-4630-ad9b-26e160ff0fc6|
 |AEM-DualAuth|69893ee3-dd10-4b1c-832d-4870354be3d8|
 |App Service|7ab7862c-4c57-491e-8a45-d52a7e023983|
 |ASM Campaign Servicing|0cb7b9ec-5336-483b-bc31-b15b5788de71|
