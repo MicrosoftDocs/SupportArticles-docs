@@ -17,16 +17,14 @@ appliesto:
   - New Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 11/30/2023
+ms.date: 12/04/2023
 ---
 # Clear the Teams client cache
 
 If you're experiencing issues that affect Microsoft Teams, clearing the cache on your device may help. After you clear the cache, restart Teams.
 
 > [!NOTE]
->
-> - You won't lose any user data by clearing the cache.
-> - Restarting Teams after you clear the cache might take longer than usual because the Teams cache files have to be rebuilt.
+> Restarting Teams after you clear the cache might take longer than usual because the Teams cache files have to be rebuilt.
 
 ## Clear Teams cache in Windows
 
@@ -66,12 +64,27 @@ If you're experiencing issues that affect Microsoft Teams, clearing the cache on
 
 ## Clear Teams cache in macOS
 
+### Classic Teams
+
 1. If Teams is still running, right-click the Teams icon in the dock, and then select **Quit**, or press Command (⌘)-Q.
 1. In the **Finder**, open the /Applications/Utilities folder, and then double-click **Terminal**.
 1. Enter the following command, and then press Return:
 
    ```console
    rm -r ~/Library/Application\ Support/Microsoft/Teams
+   ```
+
+1. Restart Teams.
+
+### New Teams
+
+1. If Teams is still running, right-click the Teams icon in the dock, and then select **Quit**, or press Command (⌘)-Q.
+1. In the **Finder**, open the /Applications/Utilities folder, and then double-click **Terminal**.
+1. Enter the following commands. Press Return after each command.
+
+   ```console
+   rm -rf ~/Library/Group Containers/UBF8T346G9.com.microsoft.teams
+   rm -rf ~/Library/Containers/com.microsoft.teams2
    ```
 
 1. Restart Teams.
