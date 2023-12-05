@@ -2,6 +2,14 @@
 
 
 
+## Week of November 27, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 11/30/2023 | [An invalid policy blocks a SharePoint site deletion](/sharepoint/troubleshoot/sites/compliance-policy-blocking-site-deletion) | modified |
+
+
 ## Week of November 06, 2023
 
 

@@ -481,6 +481,8 @@
           href: ../outlook-issues/outlook-not-responding-when-it-connects-to-exchange-online-mailbox.md
         - name: Outlook connectivity issues when SPI is enabled
           href: ../outlook-issues/outlook-connectivity-issues-when-spi-enabled-on-router.md
+        - name: Resolve Inbox rule issues
+          href: ../outlook-issues/resolve-inbox-rule-issues.md
         - name: Resources to fix connection issues
           href: ../outlook-issues/office-365-troubleshooting-resources.md
         - name: Self-help diagnostics
