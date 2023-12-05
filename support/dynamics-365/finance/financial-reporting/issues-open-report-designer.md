@@ -34,12 +34,12 @@ This article provides a resolution for common issues that can cause problems whe
 
 To solve this issue, follow these steps:
 
-1. In Internet Explorer, select **Settings** > **Internet Options** > **Security** > **Trusted Sites** > **Sites**. In the **Add this website to zone** field, enter `\*\.dynamics.com`, and then select **Add**.
-2. In Internet Explorer, select **Settings** > **Internet Options** > **Security** > **Trusted Sites**. In the area labeled **Security level for this zone**, change the option to **Medium-Low**.
-3. Disable the pop-up blocker in your browser.
-4. Install [Microsoft .NET Framework 4.7.2 or higher](https://dotnet.microsoft.com/download/dotnet-framework/net472) to workstations.
-5. If you're using the Chrome browser, you must install the **ClickOnce** extension to download the Report Designer client. If you're running Chrome in incognito mode, make sure the **ClickOnce** extension is enabled for incognito mode. For more information about the Chrome **ClickOnce** extension, see [System requirements for cloud deployments](/dynamics365/fin-ops-core/fin-ops/get-started/system-requirements).
-6. If you're using Microsoft Edge with the Chrome browser, you don't need to install the **ClickOnce** extension for Microsoft Edge Chromium. However, you must enable the **ClickOnce** option to download the Report Designer client. If you're running incognito mode, make sure the **ClickOnce** extension is enabled for incognito mode.
+ - In Internet Explorer, select **Settings** > **Internet Options** > **Security** > **Trusted Sites** > **Sites**. In the **Add this website to zone** field, enter `\*\.dynamics.com`, and then select **Add**.
+ - In Internet Explorer, select **Settings** > **Internet Options** > **Security** > **Trusted Sites**. In the area labeled **Security level for this zone**, change the option to **Medium-Low**.
+ - Disable the pop-up blocker in your browser.
+ - Install [Microsoft .NET Framework 4.7.2 or higher](https://dotnet.microsoft.com/download/dotnet-framework/net472) to workstations.
+ - If you're using the Chrome browser, you must install the **ClickOnce** extension to download the Report Designer client. If you're running Chrome in incognito mode, make sure the **ClickOnce** extension is enabled for incognito mode. For more information about the Chrome **ClickOnce** extension, see [System requirements for cloud deployments](/dynamics365/fin-ops-core/fin-ops/get-started/system-requirements).
+ - If you're using Microsoft Edge with the Chrome browser, you don't need to install the **ClickOnce** extension for Microsoft Edge Chromium. However, you must enable the **ClickOnce** option to download the Report Designer client. If you're running incognito mode, make sure the **ClickOnce** extension is enabled for incognito mode.
 
     1. Open a new browser in Microsoft Edge.
     2. Enter **edge://flags** and select <kbd>Enter</kbd>.
