@@ -19,16 +19,16 @@ SQLOLEDB and SQLNCLI11 OLE DB providers over TCP or Named Pipes show the followi
 - `Login failed for user 'userx'.`- Message is shown when the providers use an SQL login.
 - `Login failed for user 'CONTOSO\user1'.`- Message is shown the providers use a Windows login.
 
-The SQL Server and ODBC Driver 13 ODBC Drivers show the following error message:
+The SQL Server and ODBC Driver 13 ODBC drivers show the following error message:
 
-`Login failed for user 'CONTOSO\user1'`
+> Login failed for user 'CONTOSO\user1'
 
-The SqlClient .NET Provider displays the following error messages:
+The SqlClient .NET Provider shows the following error messages:
 
 > "Login failed for user ''. -when using TCP and a SQL login or a Windows login"
 > "Login failed for user 'CONTOSO\user1'. - when using Named Pipes and a SQL login or a Windows login"
 
-The SQL Server Errorlog will have one of the following messages:
+The SQL Server error log will have one of the following messages:
 
 > "'Login failed for user'. Reason: Could not find a login matching the name provided."
 > "'Login failed for user 'CONTOSO\USER1'. Reason: Could not find a login matching the name provided."

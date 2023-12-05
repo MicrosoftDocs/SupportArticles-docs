@@ -1,5 +1,5 @@
 ---
-title: Troubleshooting the access via group error 
+title: Troubleshooting the access through group error 
 description: This article provides symptoms and resolution for the access via group error.
 ms.date: 11/27/2023
 author: prmadhes-msft
@@ -10,7 +10,7 @@ ms.custom: sap:Connection issues
 
 # Access via group error
 
-This article helps you to resolve the access via group Windows permission error.
+This article helps you to resolve the access using group Windows permission error.
 
 If the user doesn't belong to a local group used to grant access to the server, the provider should display the "Login failed for user 'database name/username'" error message.
 The DBA can double-check the access by looking at the Security\Logins in SSMS. If it's a contained database, the DBA checks under database name.

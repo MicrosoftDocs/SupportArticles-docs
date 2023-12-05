@@ -18,4 +18,4 @@ If you log in as the affected user, you will get a temporary profile. This is a 
 
 ## Resolution
 
-If you are not a guest user, follow the steps explained in [Fix a corrupted user profile in Windows](https://support.microsoft.com/en-us/windows/fix-a-corrupted-user-profile-in-windows-1cf41c18-7ce3-12f9-8e1d-95896661c5c9) to either (a) repair the profile or (b) delete and recreate the profile.
+If you aren't a guest user, follow the steps explained in [Fix a corrupted user profile in Windows](https://support.microsoft.com/en-us/windows/fix-a-corrupted-user-profile-in-windows-1cf41c18-7ce3-12f9-8e1d-95896661c5c9) to either (a) repair the profile or (b) delete and recreate the profile.
