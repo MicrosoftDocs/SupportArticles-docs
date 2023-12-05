@@ -49,7 +49,7 @@ This issue occurs if the certificate, and other metadata information, in the **M
 
 ## Resolution
 
-To resolve this issue, refresh the metadata by running the following `Get-FederationTrust | Set-FederationTrust -RefreshMetadata` command:
+To resolve this issue, refresh the metadata by running the `Get-FederationTrust | Set-FederationTrust -RefreshMetadata` command.
 
 > [!NOTE]
 > This command updates the information used for the Federation trust. You won't have to re-create organization relationships or sharing policies. The commands must be run in the target environment of the **Free/Busy** request.
