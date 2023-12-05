@@ -62,7 +62,7 @@ The following operating system error codes indicate the cause of the failure:
 
 - > Error -2146893052 (0x80090304): The Local Security Authority cannot be contacted.
 
-#### Client system event log
+#### Review Event logs on client system for network errors
 
 The system event log has various events, such as Kerberos, Local Security Authority (LSA), and Netlogon events. These events indicate the computer can't connect to the domain controller for some time. To make them easier to find, filter only **Error**, **Warning**, and **Critical** events. The event time needs to be around the time of the outage. If there's a match, it might be an Active Directory issue.
 
