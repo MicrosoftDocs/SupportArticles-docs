@@ -2,6 +2,14 @@
 
 
 
+## Week of November 27, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 12/1/2023 | [Database switchover causes an ExAssertException error](/exchange/troubleshoot/administration/database-switchover-causes-exassertexception) | added |
+
+
 ## Week of November 13, 2023
 
 
