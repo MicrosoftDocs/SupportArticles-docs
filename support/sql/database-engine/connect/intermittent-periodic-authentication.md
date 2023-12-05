@@ -104,7 +104,7 @@ If Connection pooling isn't enabled, the client may run out of outbound ports, a
 
 The best thing to do is to have the application developer use connection pooling in their applications. Connection pooling is ON by default in .NET and Internet Information Services (IIS) applications, but it might have been turned off for some reason.
 
-It's highly discouraged if the application uses a custom pooling code, as almost all custom pooling implementations we've encountered have issues. It's better to use the built-in mechanism.
+It's strongly discouraged for applications to use custom pooling code. Almost all custom pooling implementations we've encountered have had issues. It's better to use the built-in connection pooling mechanism.
 
 #### Issues related to low kernel memory
 
