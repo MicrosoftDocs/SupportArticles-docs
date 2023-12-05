@@ -19,7 +19,7 @@ This article helps you resolve some of the common issues that may occur when sta
 
 The following are some common errors that may appear when you start up or sign in to Power Apps.
 
-- You're prompted to sign in every time an app is embedded in another experience such as SharePoint and Microsoft Teams.
+- You're prompted to sign in every time an app is embedded in another client such as SharePoint and Microsoft Teams.
 
   > The Power Apps open experience starts and halts until you sign-in
 
