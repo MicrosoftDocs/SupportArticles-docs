@@ -17,17 +17,13 @@ appliesto:
   - Exchange Server 2016 Standard Edition
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition
-  - Exchange Server 2010 Enterprise
-  - Exchange Server 2010 Standard
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 12/04/2023
 ---
-# Free/busy lookups stop working in a cross-premises environment or in an Exchange Server hybrid deployment
+# Free/busy lookups stop working in a cross-premises environment or an Exchange Server hybrid deployment
 
 > [!NOTE]
 > The Hybrid Configuration wizard included in the Exchange Management Console in Microsoft Exchange Server 2010 is no longer supported. Therefore, you should no longer use the old Hybrid Configuration wizard. Instead, use the Microsoft 365 Hybrid Configuration wizard available at [https://aka.ms/HybridWizard](https://aka.ms/hybridwizard). For more information, see [Microsoft 365 Hybrid Configuration wizard for Exchange 2010](https://techcommunity.microsoft.com/t5/exchange-team-blog/office-365-hybrid-configuration-wizard-for-exchange-2010/ba-p/604541).
-
-_Original KB number:_ &nbsp; 2928514
 
 ## Symptoms
 
@@ -35,9 +31,11 @@ _Original KB number:_ &nbsp; 2928514
 
 If you run the `Test-FederationTrust` cmdlet, you receive an error message that indicates that the Delegation token has validation issues. For example, you receive an error message that resembles the following:
 
-> Id : TokenValidation  
-Type : Error  
+```output
+Id : TokenValidation  
+Type: Error  
 Message : Failed to validate delegation token.
+```
 
 Additionally, you might receive one of the following error messages in the **Exchange Web Services (EWS)** Responses:
 
@@ -51,15 +49,13 @@ This issue occurs if the certificate, and other metadata information, in the **M
 
 ## Resolution
 
-To resolve this issue, refresh the metadata by running the `Get-FederationTrust | Set-FederationTrust -RefreshMetadata` command.
+To resolve this issue, refresh the metadata by running the following `Get-FederationTrust | Set-FederationTrust -RefreshMetadata` command:
 
 > [!NOTE]
 > This command updates the information used for the Federation trust. You won't have to re-create organization relationships or sharing policies. The commands must be run in the target environment of the **Free/Busy** request.
 
-To do this, follow these steps:
-
 1. Open the Exchange Management Shell on the on-premises Exchange server.
-2. Run the following cmdlet:
+1. Run the following cmdlet:
 
     ```powershell
     Get-FederationTrust | Set-FederationTrust -RefreshMetadata
