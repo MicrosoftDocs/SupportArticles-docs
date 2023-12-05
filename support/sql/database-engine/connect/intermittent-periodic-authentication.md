@@ -35,7 +35,7 @@ The most common issues are caused by SQL Server performance or slow domain contr
 
 Since the issue is intermittent, it's likely that the configuration, such as Kerberos Service Principal Names (SPNs), is correct. To solve this issue, try the following troubleshooting steps:
 
-#### Check if multiple domains or data centers are involved
+#### Difference in latency between multiple domains or data centers
 
 If yes, check whether the users in the local domain or data center have a good experience while users in other domains or data centers don't. If so, it might indicate a communication latency between data centers or domain controllers. Use the following commands to investigate the issue:
 
