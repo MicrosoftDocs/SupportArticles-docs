@@ -18,7 +18,7 @@ audience: Application User
 
 ## Symptoms
 
-Error code *ERR00005* is logged in the **Transform Log** table in Microsoft Dataverse when the following conditions are met:
+Error code *ERR00005* is logged in the **Bpa self help logs** table in Microsoft Dataverse when the following conditions are met:
 
 - The total of values in the `accountingcurrencyamount` column of the `generaljournalaccountentry` table isn't 0 (zero) for a specific combination of `ledger.id` and `gje.journalnumber`.
 - The total of values in the `reportingcurrencyamount` column of the `generaljournalaccountentry` table isn't 0 (zero) for the same combination of `ledger.id` and `gje.journalnumber`.
