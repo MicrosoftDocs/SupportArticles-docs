@@ -3,6 +3,10 @@
   items:
     - name: Customer Insights - Data
       items: 
+      - name: Administration
+        items: 
+          - name: Disabled service principal
+            href: data/administration/disabled-service-principal.md
       - name: Data ingestion
         items:
           - name: Power Query data source refresh issues
