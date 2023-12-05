@@ -37,7 +37,7 @@ Since the issue is intermittent, it's likely that the configuration, such as Ker
 
 #### Difference in latency between multiple domains or data centers
 
-If multiple domains or data centers are involved, check whether the users in the local domain or data center have a don't experience the issue while users in other domains or data centers do. If so, it might indicate a communication latency between data centers or domain controllers. Use the following commands to investigate the issue:
+If multiple domains or data centers are involved, check whether the users in the local domain or data center don't experience the issue while users in other domains or data centers do. If so, it might indicate a communication latency between data centers or domain controllers. Use the following commands to investigate the issue:
 
 - To check network latency, use [ping](/windows-server/administration/windows-commands/ping).
 
@@ -112,7 +112,7 @@ Running out of ephemeral ports is a relatively common cause of intermittent conn
 
 **Issue**: Low kernel memory on the SQL Server machine.
 
-**Solution**: Adjust the **max server memory (MB)** in the **Properties** pane in SQL Server Management Studio. It's best to set the **max server memory (MB)** to about 4 GB to 8 GB less than the physical memory on the machine. This value should be smaller if there are multiple instances, IIS, or some other application servers running on the machine. For recommendations on max server memory setting, see [Server memory configuration options](sql/database-engine/configure-windows/server-memory-server-configuration-options?view=sql-server-ver16#recommendations)
+**Solution**: Adjust the **max server memory (MB)** in the **Properties** pane in SQL Server Management Studio. It's best to set the **max server memory (MB)** to about 4 GB to 8 GB less than the physical memory on the machine. This value should be smaller if there are multiple instances, IIS, or some other application servers running on the machine. For recommendations on the **max server memory (MB)** setting, see [Server memory configuration options](sql/database-engine/configure-windows/server-memory-server-configuration-options#recommendations).
 
 > [!NOTE]
 > The default value is `2147483647 MB`, which means the server can cause the operating system (OS) to run out of memory.
