@@ -18,7 +18,7 @@ audience: Application User
 
 ## Symptoms
 
-Error code *ERR00007* is logged in the **Transform Log** table in Microsoft Dataverse when there are budget transaction line entries that don't have corresponding budget transaction headers. These records are excluded and won't be transferred to fact tables. Some Microsoft reports might show either fields that have no data or incomplete records. In these cases, you might have to create modified versions of the reports to address the gaps and ensure accurate reporting.
+Error code *ERR00007* is logged in the **Bpa self help logs** table in Microsoft Dataverse when there are budget transaction line entries that don't have corresponding budget transaction headers. These records are excluded and won't be transferred to fact tables. Some Microsoft reports might show either fields that have no data or incomplete records. In these cases, you might have to create modified versions of the reports to address the gaps and ensure accurate reporting.
 
 ## Resolution
 
