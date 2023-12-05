@@ -37,7 +37,7 @@ Since the issue is intermittent, it's likely that the configuration, such as Ker
 
 #### Difference in latency between multiple domains or data centers
 
-If yes, check whether the users in the local domain or data center have a good experience while users in other domains or data centers don't. If so, it might indicate a communication latency between data centers or domain controllers. Use the following commands to investigate the issue:
+If multiple domains or data centers are involved, check whether the users in the local domain or data center have a don't experience the issue while users in other domains or data centers do. If so, it might indicate a communication latency between data centers or domain controllers. Use the following commands to investigate the issue:
 
 - To check network latency, use [ping](/windows-server/administration/windows-commands/ping).
 
