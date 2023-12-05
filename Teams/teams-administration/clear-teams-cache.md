@@ -26,7 +26,7 @@ If you're experiencing issues that affect Microsoft Teams, clearing the cache on
 > [!NOTE]
 > Restarting Teams after you clear the cache might take longer than usual because the Teams cache files have to be rebuilt.
 
-## Clear Teams cache in Windows
+## Clear the cache in Teams for Windows
 
 ### Classic Teams
 
@@ -46,7 +46,7 @@ If you're experiencing issues that affect Microsoft Teams, clearing the cache on
 #### Method 1: Reset the app
 
 > [!NOTE]
-> The app's data will be deleted by resetting the app.
+> When you reset the Teams app, the app's data, such as any personalization settings you might have configured, will be deleted.
 
 1. Type *settings* in the search box, and then select the **Settings** app from the result.
 1. Select **Apps** > **Installed apps**, and then type *Microsoft Teams* in the search box.
@@ -67,7 +67,7 @@ If you're experiencing issues that affect Microsoft Teams, clearing the cache on
 1. Delete all files and folders in the directory.
 1. Restart Teams.
 
-## Clear Teams cache in macOS
+## Clear the cache in Teams for macOS
 
 ### Classic Teams
 
