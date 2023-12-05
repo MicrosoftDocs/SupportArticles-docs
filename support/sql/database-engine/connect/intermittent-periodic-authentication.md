@@ -83,7 +83,7 @@ This computer was not able to set up a secure session with a domain controller i
 
 In the security event log, filter *Event ID 4625*. This event shows detailed information about the login failure.
 
-#### SQL connectivity ring buffer
+#### Collect and review SQL connectivity ring buffer
 
 The ring buffer is a historical log of connection events on SQL Server, which means it can be taken after an outage. Many events include login timers that tell you where time is spent:
 
