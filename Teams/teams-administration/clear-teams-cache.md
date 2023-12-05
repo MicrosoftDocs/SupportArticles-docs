@@ -30,9 +30,9 @@ If you're experiencing issues that affect Microsoft Teams, clearing the cache on
 
 ### Classic Teams
 
-1. If Teams is still running, right-click the Teams icon in the taskbar, and then select **Quit**.
+1. If Teams is still running, right-click the Teams icon on the taskbar, and then select **Quit**.
 1. Open the **Run** dialog box by pressing the Windows logo key :::image type="icon" source="media\clear-teams-cache\windows-logo-key.png"::: +R.
-1. In the **Run** dialog box, enter the following path, and then select **OK**.
+1. In the **Run** dialog box, enter the following path, and then select **OK**:
 
    ```console
    %appdata%\Microsoft\Teams
@@ -46,17 +46,17 @@ If you're experiencing issues that affect Microsoft Teams, clearing the cache on
 #### Method 1: Reset the app
 
 > [!NOTE]
-> When you reset the Teams app, the app's data, such as any personalization settings you might have configured, will be deleted.
+> When you reset the Teams app, the app data will be deleted. This includes any personalization settings that you might have configured.
 
-1. Type *settings* in the search box, and then select the **Settings** app from the result.
+1. Type *settings* in the search box, and then select the **Settings** app from the results.
 1. Select **Apps** > **Installed apps**, and then type *Microsoft Teams* in the search box.
-1. Locate the New Microsoft Teams app from the result, select the three dots (...), and then select **Advanced options**.
-1. Under the **Reset** section, select **Reset**.
+1. Locate the New Microsoft Teams app from the results, select the **More options** button (...) on the right, and then select **Advanced options**.
+1. In the **Reset** section, select **Reset**.
 1. Restart Teams.
 
 #### Method 2: Delete the files
 
-1. If Teams is still running, right-click the Teams icon in the taskbar, and then select **Quit**.
+1. If Teams is still running, right-click the Teams icon on the taskbar, and then select **Quit**.
 1. Open the **Run** dialog box by pressing the Windows logo key :::image type="icon" source="media\clear-teams-cache\windows-logo-key.png"::: +R.
 1. In the **Run** dialog box, enter the following path, and then select **OK**.
 
@@ -71,7 +71,7 @@ If you're experiencing issues that affect Microsoft Teams, clearing the cache on
 
 ### Classic Teams
 
-1. If Teams is still running, right-click the Teams icon in the dock, and then select **Quit**, or press Command (⌘)-Q.
+1. If Teams is still running, right-click the Teams icon in the dock, and then select **Quit** or press Command (⌘)-Q.
 1. In the **Finder**, open the /Applications/Utilities folder, and then double-click **Terminal**.
 1. Enter the following command, and then press Return:
 
@@ -83,9 +83,9 @@ If you're experiencing issues that affect Microsoft Teams, clearing the cache on
 
 ### New Teams
 
-1. If Teams is still running, right-click the Teams icon in the dock, and then select **Quit**, or press Command (⌘)-Q.
+1. If Teams is still running, right-click the Teams icon in the dock, and then select **Quit** or press Command (⌘)-Q.
 1. In the **Finder**, open the /Applications/Utilities folder, and then double-click **Terminal**.
-1. Enter the following commands. Press Return after each command.
+1. Enter the following commands, and press Return after each command:
 
    ```console
    rm -rf ~/Library/Group Containers/UBF8T346G9.com.microsoft.teams
