@@ -4,7 +4,7 @@ description: Troubleshoot common issues with monitoring sync health and resolvin
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 11/09/2023
+ms.date: 12/05/2023
 ms.author: kendownie
 ms.custom: devx-track-azurepowershell
 ms.reviewer: v-weizhu
@@ -217,20 +217,9 @@ If a file or directory fails to sync due to an error, an event is logged in the 
 
 ### Handling unsupported characters
 
-If the *FileSyncErrorsReport.ps1* PowerShell script shows per-item sync errors due to unsupported characters (error code 0x8007007b, 0x80c80255, or 0x80070459), you should remove or rename the characters at fault from the respective file names. PowerShell will likely print these characters as question marks or empty rectangles since most of these characters have no standard visual encoding.
+Azure File Sync agent v17 supports all characters that are supported by the [NTFS file system](/windows/win32/fileio/naming-a-file) except invalid surrogate pairs. 
 
-> [!Note]  
-> The [Evaluation Tool](/azure/storage/file-sync/file-sync-planning#evaluation-cmdlet) can be used to identify characters that are not supported. If your dataset has several files with invalid characters, use the [ScanUnsupportedChars](https://github.com/Azure-Samples/azure-files-samples/tree/master/ScanUnsupportedChars) script to rename files which contain unsupported characters.
-
-The table below contains all of the unicode characters Azure File Sync doesn't yet support.
-
-| Character set | Character count |
-|---------------|-----------------|
-|0x00000000 - 0x0000001F (control characters) |32 |
-|<ul><li>0x00000022 (quotation mark)</li><li>0x0000002A (asterisk)</li><li>0x0000002F (forward slash)</li><li>0x0000003A (colon)</li><li>0x0000003C (less than)</li><li>0x0000003E (greater than)</li><li>0x0000003F (question mark)</li><li>0x0000005C (backslash)</li><li>0x0000007C (pipe or bar)</li></ul> |9 |
-| <ul><li>0x0000009D (`osc` operating system command)</li><li>0x00000090 (dcs device control string)</li><li>0x0000008F (ss3 single shift three)</li><li>0x00000081 (high octet preset)</li><li>0x0000007F (del delete)</li><li>0x0000008D (ri reverse line feed)</li></ul> | 6 |
-| 0x0000FFFE, 0x0000FFFF (specials) | 2 |
-| Files or directories that end with a period | 1 |
+If the portal or FileSyncErrorsReport.ps1 PowerShell script shows per-item sync errors due to unsupported characters (error code 0x8007007b, 0x80c80255, or 0x80070459), verify Azure File Sync agent v17 is installed on the server. If agent v17 is installed on the server and files are failing to sync due to invalid characters, use the [ScanUnsupportedChars](https://github.com/Azure-Samples/azure-files-samples/tree/master/ScanUnsupportedChars) script to rename files which contain unsupported characters.
 
 ### Common sync errors
 
