@@ -14,7 +14,7 @@ appliesto:
   - Microsoft Purview
   - Exchange Online
 search.appverid: MET150
-ms.date: 05/18/2023
+ms.date: 11/29/2023
 ---
 
 # Resolve search errors in eDiscovery (Standard)
@@ -297,6 +297,20 @@ For the mailboxes and storage locations that you want to search and export, chec
 #### Resolution 4
 
 Reduce the download size by splitting your search into smaller searches. For example, use date ranges or limit the number of search locations to return smaller result sets.
+
+To check whether the Search, Export, or Preview roles are assigned to the designated administrator account, run the following test in the Microsoft 365 admin center. You must have **Global** or **Compliance** administrator permissions to use the following steps.
+
+> [!NOTE]
+> This diagnostic isn't available for the GCC High or DoD environments, or for Microsoft 365 operated by 21Vianet.
+
+1.	In the Microsoft 365 admin center, select the **Run Tests: eDiscovery RBAC check** button to populate the associated test:
+
+    > [!div class="nextstepaction"]
+    > [Run Tests: eDiscovery RBAC Check](https://aka.ms/PillareDisRBACDiag)
+    
+1.	In the **Run diagnostics** section, enter the UPN or email address of the user who is trying to run the Search, Export, or Preview task.
+1.	Select **Run Tests**.
+1.	If the user doesn't have the necessary eDiscovery roles assigned, assign those roles so that the user can run the desired task.
 
 [Back to top](#resolve-search-errors-in-ediscovery-standard)
 
