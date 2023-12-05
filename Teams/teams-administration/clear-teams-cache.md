@@ -32,8 +32,13 @@ If you're experiencing issues that affect Microsoft Teams, clearing the cache on
 
 1. If Teams is still running, right-click the Teams icon in the taskbar, and then select **Quit**.
 1. Open the **Run** dialog box by pressing the Windows logo key :::image type="icon" source="media\clear-teams-cache\windows-logo-key.png"::: +R.
-1. In the **Run** dialog box, enter *%appdata%\Microsoft\Teams*, and then select **OK**.
-1. Delete all files and folders in the %appdata%\Microsoft\Teams directory.
+1. In the **Run** dialog box, enter the following path, and then select **OK**.
+
+   ```console
+   %appdata%\Microsoft\Teams
+   ```
+
+1. Delete all files and folders in the directory.
 1. Restart Teams.
 
 ### New Teams
