@@ -1,0 +1,42 @@
+---
+title: Transfer order shipment confirmation failure with error message "Dimension Location cannot be left blank if dimension Batch/Serial number is set"
+description: Provides a resolution to the error that states "Dimension Location cannot be left blank if dimension Serial number is set".
+author: Mirzaab
+ms.date: 12/05/2023
+ms.topic: troubleshooting
+ms.search.form: WHSShipmentDetails_WHSShipConfirm,WHSShipPlanningListPage_WHSShipConfirm
+audience: Application User
+ms.reviewer: kamaybac
+ms.search.region: Global
+ms.author: ssasi
+ms.search.validFrom: 2023-12-05
+ms.dyn365.ops.version: 10.0.39
+---
+# Transfer order shipment for load could not be confirmed - Dimension Location cannot be left blank if dimension Batch/Serial number is set
+
+Error code: WAX2543, WAX439, SYS18738, SYS25904
+
+## Symptoms
+
+When you try to confirm a Transfer order shipment, the system shows the following error message
+
+> The shipment for load %1 could not be confirmed.
+> Dimension %1 cannot be left blank if dimension %2 is set.
+> Update has been canceled.
+
+Therefore, you can't confirm the shipment for the load.
+
+## Cause
+
+This can happen if the Transit warehouse does not have a Default receipt location.
+
+## Resolution
+
+To configure the Default receipt location for a Transit warehouse, follow these steps.
+
+1. Go to **Warehouse management** > **Setup** > **Warehouse** > **Warehouses**.
+1. Select the Transit warehouse.
+1. Select **OK**.
+1. Select **Yes** to confirm that you want to cancel the work.
+
+For more information, see [Cancel warehouse work for exception handling](/dynamics365/supply-chain/warehousing/cancel-warehouse-work).
