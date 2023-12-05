@@ -217,7 +217,7 @@ If a file or directory fails to sync due to an error, an event is logged in the 
 
 ### Handling unsupported characters
 
-Azure File Sync agent v17 supports all characters that are supported by the [NTFS file system](https://learn.microsoft.com/windows/win32/fileio/naming-a-file) except invalid surrogate pairs. 
+Azure File Sync agent v17 supports all characters that are supported by the [NTFS file system](/windows/win32/fileio/naming-a-file) except invalid surrogate pairs. 
 
 If the portal or FileSyncErrorsReport.ps1 PowerShell script shows per-item sync errors due to unsupported characters (error code 0x8007007b, 0x80c80255, or 0x80070459), verify Azure File Sync agent v17 is installed on the server. If agent v17 is installed on the server and files are failing to sync due to invalid characters, use the [ScanUnsupportedChars](https://github.com/Azure-Samples/azure-files-samples/tree/master/ScanUnsupportedChars) script to rename files which contain unsupported characters.
 
