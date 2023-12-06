@@ -14,7 +14,7 @@ This article provides a resolution to the AADSTS50105 error that occurs during f
 
 ## Symptoms
 
-You receive the following error when trying to sign into an application that has been set up to use Microsoft Entra ID for identity management using SAML-based Single Sign-On (SSO):
+You receive the following error message when you try to sign in to an application that has been set up to use Microsoft Entra ID for identity management using SAML-based Single Sign-On (SSO):
 
 >Error AADSTS50105 - The signed in user is not assigned to a role for the application.
 
