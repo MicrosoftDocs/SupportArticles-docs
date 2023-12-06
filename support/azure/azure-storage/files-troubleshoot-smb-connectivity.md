@@ -14,7 +14,7 @@ This article lists common problems that might occur when you try to connect to a
 [!INCLUDE [Feedback](../../includes/feedback.md)]
 
 > [!IMPORTANT]
-> This article only applies to SMB shares. For details on Network File System (NFS) shares, see [Troubleshoot Azure NFS file shares](/azure/storage/files/files-troubleshoot-linux-nfs).
+> This article applies only to SMB shares. For details about Network File System (NFS) shares, see [Troubleshoot Azure NFS file shares](/azure/storage/files/files-troubleshoot-linux-nfs).
 
 ## Applies to
 
@@ -26,11 +26,11 @@ This article lists common problems that might occur when you try to connect to a
 
 ## Can't connect to or mount an Azure file share
 
-Select the Windows or Linux tab depending on the client operating system you're using to access Azure file shares.
+Select the Windows or Linux tab depending on the client operating system that you're using to access Azure file shares.
 
 ### [Windows](#tab/windows)
 
-When trying to connect to an Azure file share in Windows, you might see the following errors.
+When you try to connect to an Azure file share in Windows, you might receive the following error messages.
 
 ### <a id="error5"></a>Error 5 when you mount an Azure file share
 
@@ -38,9 +38,9 @@ When trying to connect to an Azure file share in Windows, you might see the foll
 
 #### Cause 1: Unencrypted communication channel
 
-For security reasons, connections to Azure file shares are blocked if the communication channel isn't encrypted and the connection attempt isn't made from the same datacenter where the Azure file shares reside. If the [Secure transfer required](/azure/storage/common/storage-require-secure-transfer) setting is enabled on the storage account, unencrypted connections within the same datacenter are also blocked. An encrypted communication channel is only provided if the end-user's client OS supports SMB encryption.
+For security, connections to Azure file shares are blocked if the communication channel isn't encrypted and the connection attempt isn't made from the same datacenter where the Azure file shares reside. If the [Secure transfer required](/azure/storage/common/storage-require-secure-transfer) setting is enabled on the storage account, unencrypted connections within the same datacenter are also blocked. An encrypted communication channel is only provided if the end-user's client OS supports SMB encryption.
 
-Windows 8, Windows Server 2012, and later versions of each system negotiate requests that include SMB 3.x, which supports encryption.
+Windows 8, Windows Server 2012, and later versions of each system negotiate requests that include SMB 3.*x*, which supports encryption.
 
 #### Solution for cause 1
 
@@ -58,7 +58,7 @@ Verify that virtual network and firewall rules are configured properly on the st
 
 #### Cause 3: Share-level permissions are incorrect when using identity-based authentication
 
-If end users are accessing the Azure file share using Active Directory (AD) or Microsoft Entra Domain Services authentication, access to the file share fails with the "Access is denied" error if share-level permissions are incorrect.
+If users are accessing the Azure file share using Active Directory (AD) or Microsoft Entra Domain Services authentication, access to the file share fails with the "Access is denied" error if share-level permissions are incorrect.
 
 #### Solution for cause 3
 
@@ -113,7 +113,7 @@ TcpTestSucceeded : True
 ```
 
 > [!Note]  
-> The above command returns the current IP address of the storage account. This IP address is not guaranteed to remain the same, and may change at any time. Don't hardcode this IP address into any scripts, or into a firewall configuration.
+> This command returns the current IP address of the storage account. This IP address is not guaranteed to remain the same, and may change at any time. Don't hardcode this IP address into any scripts, or into a firewall configuration.
 
 #### Solutions for cause 1
 
