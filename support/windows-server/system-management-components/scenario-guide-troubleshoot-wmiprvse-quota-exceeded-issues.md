@@ -21,36 +21,36 @@ You may experience one or more of the following issues:
 - The *WmiPrvse.exe* process regularly or intermittently reaches a specific memory, handle, or thread, and eventually terminates or exits.
 - The following events are logged in the Application event log regularly or intermittently.
 
-> [!NOTE]
-> Here are two event examples. The description of the event may change depending on the issue faced by the *WmiPrvse.exe* process and the WMI providers involved.
+    > [!NOTE]
+    > Here are two event examples. The description of the event may change depending on the issue faced by the *WmiPrvse.exe* process and the WMI providers involved.
 
-```output
-Log Name:      Application
-Source:        Microsoft-Windows-WMI
-Date:          <DateTime>
-Event ID:      5612
-Task Category: None
-Level:         Warning
-Keywords:
-User:          NETWORK SERVICE
-Computer:      <MachineName>
-Description:
-Windows Management Instrumentation has stopped WMIPRVSE.EXE because a quota reached a warning value. Quota: PrivatePageCount  Value: 538353664 Maximum value: 536870912 WMIPRVSE PID: 18524 Providers hosted in this process: %systemroot%\system32\wbem\ntevt.dll, %SystemRoot%\System32\wbem\cluswmi.dll, %SystemRoot%\System32\wbem\cluswmi.dll, %systemroot%\system32\wbem\cimwin32.dll
-```
+    ```output
+    Log Name:      Application
+    Source:        Microsoft-Windows-WMI
+    Date:          <DateTime>
+    Event ID:      5612
+    Task Category: None
+    Level:         Warning
+    Keywords:
+    User:          NETWORK SERVICE
+    Computer:      <MachineName>
+    Description:
+    Windows Management Instrumentation has stopped WMIPRVSE.EXE because a quota reached a warning value. Quota: PrivatePageCount  Value: 538353664 Maximum value: 536870912 WMIPRVSE PID: 18524 Providers hosted in this process: %systemroot%\system32\wbem\ntevt.dll, %SystemRoot%\System32\wbem\cluswmi.dll, %SystemRoot%\System32\wbem\cluswmi.dll, %systemroot%\system32\wbem\cimwin32.dll
+    ```
 
-```output
-Log Name:      Application
-Source:        Microsoft-Windows-WMI
-Date:          <DateTime>
-Event ID:      5612
-Task Category: None
-Level:         Warning
-Keywords: 
-User:          SYSTEM
-Computer:      <MachineName>
-Description:
-Windows Management Instrumentation has stopped WMIPRVSE.EXE because a quota reached a warning value. Quota: HandleCount Value: 4099 Maximum value: 4096 WMIPRVSE PID: 4468 Providers hosted in this process: C:\Windows\System32\wbem\WmiPerfClass.dll, %systemroot%\system32\wbem\wmiprov.dll
-```
+    ```output
+    Log Name:      Application
+    Source:        Microsoft-Windows-WMI
+    Date:          <DateTime>
+    Event ID:      5612
+    Task Category: None
+    Level:         Warning
+    Keywords: 
+    User:          SYSTEM
+    Computer:      <MachineName>
+    Description:
+    Windows Management Instrumentation has stopped WMIPRVSE.EXE because a quota reached a warning value. Quota: HandleCount Value: 4099 Maximum value: 4096 WMIPRVSE PID: 4468 Providers hosted in this process: C:\Windows\System32\wbem\WmiPerfClass.dll, %systemroot%\system32\wbem\wmiprov.dll
+    ```
 
 When one or more of the above issues (especially Event ID 5612) occur, it means one of the WMI provider processes (*WmiPrvse.exe*) has exceeded its predefined resource value and that the WMI service has explicitly stopped it from running as a process.
 
