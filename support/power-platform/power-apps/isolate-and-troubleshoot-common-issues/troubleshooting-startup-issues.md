@@ -3,15 +3,14 @@ title: Troubleshoot startup or sign-in issues for Power Apps
 description: Provides resolutions for the common configuration issues that prevent Power Apps from starting.
 author: amchern
 ms.author: amchern
-ms.reviewer: tapanm, mkaur
+ms.reviewer: tapanm, mkaur, alaug
 ms.custom: canvas
-ms.date: 03/06/2023
+ms.date: 12/06/2023
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
-
 # Troubleshooting startup or sign-in issues for Power Apps
 
 This article helps you resolve some of the common issues that may occur when starting up or signing in to [Power Apps](https://make.powerapps.com).
@@ -19,6 +18,10 @@ This article helps you resolve some of the common issues that may occur when sta
 ## Common errors
 
 The following are some common errors that may appear when you start up or sign in to Power Apps.
+
+- You're prompted to sign in every time an app is embedded in another client such as SharePoint and Microsoft Teams.
+
+  > The Power Apps open experience starts and halts until you sign-in
 
 - Error message related to cookie settings.
 
@@ -165,6 +168,14 @@ These instructions are shown on the following tabs.
   1. On iOS, select **Settings**.
   1. Scroll down to **Edge**.
   1. Toggle on **Allow Cross-Website Tracking**.
+
+### [Mozilla Firefox](#tab/mozilla-firefox)
+
+To allow apps to use cookies when they're embedded in another client, such as SharePoint, follow these steps:
+
+1. Navigate to **Settings** and select **Privacy & security**.
+2. Look for **Enhanced Tracking Protection** and select **Manage Exceptions**.
+3. Add the URL of the website where the apps are embedded. For example, if the apps are embedded in SharePoint, you need to add the SharePoint URL to the exceptions list. This will allow the embedded apps to use cookies.
 
 ---
 
