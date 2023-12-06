@@ -27,6 +27,23 @@
         - name: Troubleshoot issues with IoT capabilities
           href: iot/troubleshoot-iot-issues-logic-app.md
 
+    - name: Mobile app
+      items: 
+        - name: Booking timestamp created with incorrect time
+          href: mobile-app/bookings-timestamp-incorrect-time.md
+        - name: Camera pictures are blurry or not focused
+          href: mobile-app/camera-picture-not-focused.md
+        - name: Duplicated inspection responses
+          href: mobile-app/duplicate-inspection-responses.md
+        - name: Incorrect or missing data in offline mode
+          href: mobile-app/incorrect-missing-data-offline-mode.md
+        - name: Commands disappear when in offline mode
+          href: mobile-app/missing-commands.md
+        - name: Troubleshoot issues with publishing a mobile offline profile
+          href: mobile-app/publish-mobile-offline-profile.md
+        - name: Validations have been restarted in the background
+          href: mobile-app/validations-restarted-background.md
+
     - name: Resource Scheduling Optimization add-in
       items: 
         - name: Optimization request fails to modify some bookings
@@ -48,3 +65,4 @@
       items: 
         - name: Issue with cascading crew changes when assigning a booking
           href: scheduling/cascade-crew-changes-booking.md
+
