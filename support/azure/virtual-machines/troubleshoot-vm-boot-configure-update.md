@@ -18,13 +18,13 @@ ms.author: genli
 
 # VM startup is stuck on "Getting Windows ready. Don't turn off your computer" in Azure
 
-This article describes the "Getting ready" and "Getting Windows ready" screens that you may encounter when you boot a Windows virtual machine (VM) in Microsoft Azure. It provides steps to help you collect data for a support ticket.
+This article describes the "Getting ready" and "Getting Windows ready" screens that you may encounter when you start a Windows virtual machine (VM) in Microsoft Azure. It provides steps to help you collect data for a support ticket.
 
 [!INCLUDE [Feedback](../../includes/feedback.md)]
 
 ## Symptoms
 
-A Windows VM doesn't boot. When you use **Boot diagnostics** to get the screenshot of the VM, you may see that the VM displays the message "Getting ready" or "Getting Windows ready".
+A Windows VM doesn't start. When you use **Boot diagnostics** to get the screenshot of the VM, you may see that the VM displays the message "Getting ready" or "Getting Windows ready".
 
 :::image type="content" source="media/troubleshoot-vm-boot-configure-update/getting-ready.png" alt-text="Screenshot of the Windows Server 2012 R2 V M, showing the message: Getting ready.":::
 
@@ -32,11 +32,11 @@ A Windows VM doesn't boot. When you use **Boot diagnostics** to get the screensh
 
 ## Cause
 
-Usually this issue occurs when the server is doing the final reboot after the configuration was changed. The configuration change might be initialized by Windows updates or by the changes on the roles/feature of the server. For Windows Update, if the size of the updates was large, the operating system needs more time to reconfigure the changes.
+Usually, this problem occurs when the server does the final restart after the configuration is changed. The configuration change might be initialized by Windows updates or by the changes on the roles or feature of the server. For Windows Update, if the updates were large, the operating system needs more time to reconfigure the changes.
 
 ## Solution 1: Restore the VM from a backup
 
-If you have a recent backup of the VM, you can try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
+If you have a recent backup of the VM, you can try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the startup problem.
 
 ## Solution 2: Collect an OS memory dump file
 
@@ -107,7 +107,7 @@ To enable the dump log and the Serial Console, run the following script:
 
     :::image type="content" source="media/troubleshoot-vm-boot-configure-update/run-nmi.png" alt-text="Screenshot of the Send Non-Maskable Interrupt item.":::
 
-6. Attach the OS disk to a recovery VM again, collect the dump file.
+6. Attach the OS disk to a recovery VM again, and collect the dump file.
 
 After you collect the dump file, contact Microsoft support to analyze the root cause.
 
