@@ -39,15 +39,28 @@ Since the issue is intermittent, it's likely that the configuration, such as Ker
 
 If multiple domains or data centers are involved, check whether the users in the local domain or data center don't experience the issue while users in other domains or data centers do. If so, it might indicate a communication latency between data centers or domain controllers. Use the following commands to investigate the issue:
 
-- To check network latency, use [ping](/windows-server/administration/windows-commands/ping).
+- To check network latency, use [ping](/windows-server/administration/windows-commands/ping). For example:
 
-- To test credential validation latency issues, use [Runas](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc771525(v=ws.11)) with various users.
+  1. Run the command: `ping <DatabaseServer>`.
+  1. Look at the time column and compare that time to that in the other domain or data center:
+
+     ```output
+     Pinging <DatabaseServer> [10.10.10.3] with 32 bytes of data:
+     Reply from 10.10.10.3: bytes=32 time=68ms TTL=116
+     Reply from 10.10.10.3: bytes=32 time=67ms TTL=116
+     Reply from 10.10.10.3: bytes=32 time=67ms TTL=116
+     ```
+
+- To test credential validation latency issues, use [Runas](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc771525(v=ws.11)) with various users. For example:
+
+  1. Run `runas /user:<DomainName>\<UserAccountName> cmd.exe`.
+  1. Enter the password of the user after a command prompt shows up.
 
 If the issue persists even after testing with these commands, the issue isn't with SQL Server but with the network infrastructure or domain controller performance.
 
 #### Look for performance issue in SQL Server error log
 
-The SQL Server error log may reveal performance issues on SQL Server, such as entries indicating I/O taking longer than 15 seconds. The SQL Performance team has [PSSDIAG](https://support.microsoft.com/topic/pssdiag-data-collection-utility-513a299f-0b45-eb1a-adb4-bc2ad8ecf194) to run and analyze. You may need to do this if the network trace reveals delays in SQL Server responses.
+The SQL Server error log may reveal performance issues on SQL Server, such as entries indicating I/O taking longer than 15 seconds. The SQL Performance team has [PSSDIAG](https://support.microsoft.com/topic/pssdiag-data-collection-utility-513a299f-0b45-eb1a-adb4-bc2ad8ecf194) to run and analyze. You may need to do this if a network trace reveals delays in SQL Server responses.
   
 The error log may also include other domain-related errors, such as the following error log that indicates some Active Directory performance issues:
 
