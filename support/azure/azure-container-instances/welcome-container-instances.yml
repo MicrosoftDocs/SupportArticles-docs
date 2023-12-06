@@ -23,7 +23,7 @@ landingContent:
             url: /azure/container-instances/
 
    # Card
-  - title: Troubleshoot Inaccessible Image Error
+  - title: Troubleshoot Container Group Start Up
     linkLists:
       - linkListType: how-to-guide
         links:
