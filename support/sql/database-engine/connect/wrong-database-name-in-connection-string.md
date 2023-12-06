@@ -2,9 +2,9 @@
 title: Troubleshooting wrong database name in connection string 
 description: This article provides symptoms and resolution for troubleshooting the wrong database name in connection string error.
 ms.date: 11/23/2023
-author: prmadhes-msft
-ms.author: prmadhes
-ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
+author: Malcolm-Stewart
+ms.author: mastewa
+ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 

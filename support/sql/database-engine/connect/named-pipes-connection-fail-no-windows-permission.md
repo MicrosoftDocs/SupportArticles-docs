@@ -2,9 +2,9 @@
 title: Troubleshooting the named pipes error 
 description: This article provides symptoms and resolution for troubleshooting the named pipes connections fail error.
 ms.date: 11/27/2023
-author: prmadhes-msft
-ms.author: prmadhes
-ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
+author: Malcolm-Stewart
+ms.author: mastewa
+ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 
@@ -26,3 +26,4 @@ Some other providers might also show "Login timeout expired" as part of the mess
 ## Resolution
 
 Add the user to the Users group on the SQL Server machine. If SQL is mirrored or clustered, do the same on all the machines.
+

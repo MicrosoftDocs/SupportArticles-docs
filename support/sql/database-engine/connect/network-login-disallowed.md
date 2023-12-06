@@ -2,9 +2,9 @@
 title: Troubleshooting the network login disallowed error 
 description: This article provides symptoms and resolution for troubleshooting the network login disallowed error.
 ms.date: 11/24/2023
-author: prmadhes-msft
-ms.author: prmadhes
-ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
+author: Malcolm-Stewart
+ms.author: mastewa
+ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 

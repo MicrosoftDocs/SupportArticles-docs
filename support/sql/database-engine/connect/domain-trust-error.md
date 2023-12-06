@@ -2,9 +2,9 @@
 title: Troubleshooting the domain trust error 
 description: This article provides symptoms and resolution for the domain trust error.
 ms.date: 11/27/2023
-author: prmadhes-msft
-ms.author: prmadhes
-ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
+author: Malcolm-Stewart
+ms.author: mastewa
+ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 

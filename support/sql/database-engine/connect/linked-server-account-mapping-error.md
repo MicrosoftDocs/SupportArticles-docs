@@ -2,15 +2,15 @@
 title: Troubleshooting linked server account mapping error 
 description: This article provides symptoms and resolution for the linked server account mapping error.
 ms.date: 11/27/2023
-author: prmadhes-msft
-ms.author: prmadhes
-ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
+author: Malcolm-Stewart
+ms.author: mastewa
+ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 
 # Linked server account mapping error
 
-This article helps you to resolve the linked server account mapping error. 
+This article helps you to resolve the linked server account mapping error.
 
 ## Symptoms
 

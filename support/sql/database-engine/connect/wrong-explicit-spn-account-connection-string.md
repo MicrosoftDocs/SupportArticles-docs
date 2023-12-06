@@ -2,9 +2,9 @@
 title: Troubleshooting wrong explicit SPN account error 
 description: This article provides symptoms and resolution for troubleshooting the linked server account mapping issue.
 ms.date: 11/23/2023
-author: prmadhes-msft
-ms.author: prmadhes
-ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
+author: Malcolm-Stewart
+ms.author: mastewa
+ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 

@@ -1,10 +1,10 @@
 ---
 title: Introduction to consistent authentication issues
 description: This article introduces to consistent authentication issues, the types of error messages, and workarounds to troubleshoot various issues.
-ms.date: 12/04/2023
-author: prmadhes-msft
-ms.author: prmadhes
-ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
+ms.date: 12/07/2023
+author: Malcolm-Stewart
+ms.author: mastewa
+ms.reviewer: jopilov, haiyingyu, prmadhes v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 
@@ -26,7 +26,7 @@ It's also important to understand the category of the error because the troubles
 
 ## Directory services specific issues
 
-Refers to the Active Directory errors. If the SQL Server ErrorLog file contains both or either of the following messages, then this is an Active Directory (AD) issue. This might happen if the domain controller (DC) can't be contacted by Windows on the SQL Server computer or the local security service (LSASS) is having a problem.
+Refers to the Active Directory errors. If the SQL Server error log file contains both or either of the following messages, then this is an Active Directory (AD) issue. This might happen if the domain controller (DC) can't be contacted by Windows on the SQL Server computer or the local security service (LSASS) is having a problem.
 
    > Error -2146893039 (0x80090311): No authority could be contacted for authentication.
    > Error -2146893052 (0x80090304): The Local Security Authority cannot be contacted.
@@ -41,11 +41,12 @@ This section lists the possible error messages and their possible causes.
 
 |Error message  |Possible causes  |
 |---------|---------|
-|`Login failed for user '(null)'`|The password you provided might be incorrect or the user name might not be valid or it might be a case where SQL logins aren't enabled. For more information, see [You're trying to use SQL Server Authentication, but the SQL Server instance is configured for Windows Authentication mode](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-(null)).|
+|`Login failed for user 'userx'. Reason: Password did not match that for the login provided.`|This error might occur if a bad password is used. For more information, see [Login failed for user '<username>' or login failed for user '<domain>\<username>'](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error)|
+|Invalid username|For more information, see [Login failed for user '<username>' or login failed for user '<domain>\<username>'](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).|
 |`SQL Server does not exist or access denied.`  | [Named Pipes connections](named-pipes-connection-fail-no-windows-permission.md) fail because the user doesn't have permission to log into Windows.     |
 |`Cannot open database "test" requested by the login. The login failed.`|The database might be offline, or the permissions might not be sufficient. For more information, see [Database offline in MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).|
 |`A transport-level error has occurred when sending the request to the server.`|Check if the [linked server account mapping](linked-server-account-mapping-error.md) is correct. For more information, see [sp_addlinkedsrvlogin](/sql/relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql).|
-|`SSPI (Security Support Provider Interface) Context.`|Check if the SPN is on the wrong account.|
+|`SSPI (Security Support Provider Interface) Context.`|Check if the [SPN is on the wrong account](cannot-generate-sspi-context-error.md).|
 |`Login failed for user 'username'.` | This can happen if the [proxy account](../../integration-services/ssis-package-doesnt-run-when-called-job-step.md) isn't properly authenticated.    |
 |`Login Failed for user: 'NT AUTHORITY\ANONYMOUS LOGON'`|This error might occur if the [SPN is missing, SPN is duplicated, or the SPN is on the wrong account](cannot-generate-sspi-context-error.md).|
 |`Login failed for user 'username'.` </br> `Login failed for user 'database\username'`</br>    | Check if there is a [bad server name in connection string](bad-server-name-connection-string-error.md). Also, check if the [user doesn't belong to a local group](access-through-group-windows-permissions.md) that's used to grant access to the server. For more causes, see [NT AUTHORITY\ANONYMOUS LOGON](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).    |
@@ -56,6 +57,47 @@ This section lists the possible error messages and their possible causes.
 |"The login is from an untrusted domain and cannot be used with Windows authentication."|This error might be related to the [Local Security Subsystem](local-security-subsystem-issues.md) issues.|
 
 For detailed information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
+
+## Issues specific to various aspects of SQL Server
+
+The following table lists some scenarios that are related to aspects as database, logon account permissions, and linked servers.
+
+|Possible cause  |More information  |
+|---------|---------|
+|Database is offline   | In many cases, this error is logged right after the server has restarted  or after a cluster has failed over. The error doesn't affect as the server starts accepting logins before all databases are online. If the issue persists, and you can't bring the database online in SQL Server Management Studio, then you can contact the SQL Core team to perform further troubleshooting. For detailed information regarding the error, see [Login failed for user '<username>' or login failed for user '<domain>\<username>'.](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).     |
+|Linked Server Account Mapping|This scenario is related to [linked servers](linked-server-account-mapping-error.md).|
+|Database permissions     | For detailed information regarding the error, see [Login failed for user '<username>' or login failed for user '<domain>\<username>'.](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).    |
+|Proxy account     |  An SSIS job run by SQL Agent might need permissions other than the SQL Agent service account can provide. For more information, see [SSIS package does not run when called from a SQL Server Agent job step.](../../integration-services/ssis-package-doesnt-run-when-called-job-step.md)  |
+|Bad metadata     | A view or stored procedure receives login failures on a linked server whereas a distributed `SELECT` statement copied from them doesn't. This is likely if the View was created and then the linked server was recreated, or a remote table was altered without rebuilding the View.  |
+
+## Issues related to Connection String
+
+The following table lists the possible cause and further information related to connection string issues.
+
+|Possible cause  |More information  |
+|---------|---------|
+|Bad server name in connection string     | This scenario might occur if the specified server name is incorrect or can't be found. For more information, see [bad server name in connection string](bad-server-name-connection-string-error.md).  |
+|Wrong database name in connection string     | This scenario might occur if the [database name is incorrect](wrong-database-name-in-connection-string.md). Check if it spelled correctly.   |
+|[Wrong explicit SPN account](wrong-explicit-spn-account-connection-string.md), explicit SPN is missing        | For more information on these scenarios, see [Cannot generate SSPI context error](cannot-generate-sspi-context-error.md).      |
+|Explicit misplaced SPN     | If the SPN you specify in the connection string exists on a service account that's not used by SQL Server, you will get an SSPI Context error message.        |
+|Explicit SPN is duplicated     | If you recently changed the SQL Server service account from LocalSystem to a domain account, it is easy to forget to remove the SPN from the computer and just create a new SPN on the new service account. This will generate an SSPI Context error. <br/> **Note**: Use `-QF` to search the entire forest.        |
+
+## Windows permissions or Policy settings related issues
+
+The following table provides further information for each of the AD and DC issues:
+
+|Possible cause  |More information  |
+|---------|---------|
+|Access via group     | If the user doesn't belong to a local group used to grant access to the server, the provider should display the "Login failed for user 'database name/username'" error message. The DBA can double-check the access by looking at the Security\Logins in SSMS. If it's a contained database, the DBA checks under database name. <br/>When you run the `xp_logininfo 'contoso/user1'` stored procedure, the following might happen:<br/><ul><li>If you receive an error, SQL can't resolve the username at all. It might be likely that a name isn't present in the AD or there might be issues connecting to the DC. Try with another name to check if the issue is related to a specific account.</li><br/><li>If you are connecting to cross-domain, the group must be in the SQL Server domain, and not the user domain so that its membership can be resolved.</li><br/><li>If no rows are returned, then there's no group that provides access to the server. If one or more rows are returned, then the user belongs to a group that provides access. </li><br/>|
+|Network login disallowed     | This scenario might occur if the Netlogon service is disabled. You can correct this by using the Local security policy manager. For more information, see [Network login disallowed](network-login-disallowed.md).    |
+|Service account not trusted for delegation    | If a delegation scenario isn't enabled, check the SQL Server *secpol.msc* to see if the SQL Server service account is listed under **Local Policies -> User Rights Assignment -> Impersonate a client after authentication** security policy settings.         |
+|Only Admins can log in      |This scenario might occur if you aren't logged in as an Administrator. For more information, see [Only Admins can log in](only-admins-can-login.md).         |
+|Local security subsystem issues     | This scenario is related to Active Directory. For detailed information, see [Local security subsystem issues](local-security-subsystem-issues.md).    |
+|Corrupt user profile     | This scenario is related to a [profile issue](corrupt-user-profile.md).         |
+|Credential guard is enabled     | In Windows 10 Enterprise, there's a new feature called Credential Guard. If the client is Windows 10 Enterprise Edition and the Credential Guard feature is turned ON, then you won't be able to use full delegation (Trust this user for delegation to any service). You can only use constrained delegation.<br/>When the Credentials Guard is enabled, certain authentication features are blocked. Applications will break if they require the following features:<br/><ul><li>Kerberos DES encryption support.<br/></li><li>Kerberos unconstrained delegation.</li><li>Extracting the Kerberos TGT.<li>NTLMv1</li></ul>  |
+
+> [!NOTE]
+> For issues related to NT LAN Manager, see [Login failed for user NT AUTHORITY\ANONYMOUS LOGON.](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error?view=sql-server-ver16)
 
 ## Active Directory and Domain Controller issues
 

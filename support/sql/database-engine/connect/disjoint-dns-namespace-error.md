@@ -2,9 +2,9 @@
 title: Troubleshooting the disjoint DNS namespace error
 description: This article provides symptoms and resolution for the disjoint DNS namespace error.
 ms.date: 12/05/2023
-author: prmadhes-msft
-ms.author: prmadhes
-ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
+author: Malcolm-Stewart
+ms.author: mastewa
+ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 
