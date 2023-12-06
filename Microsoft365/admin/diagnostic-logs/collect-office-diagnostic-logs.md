@@ -12,7 +12,7 @@ ms.custom: CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - Microsoft 365 Apps for enterprise
-ms.date: 12/06/2022
+ms.date: 12/06/2023
 ---
 
 # Increase the size of diagnostic logs for Microsoft 365 Apps for enterprise
