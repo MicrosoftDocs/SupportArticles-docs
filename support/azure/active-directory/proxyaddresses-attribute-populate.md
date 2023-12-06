@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 3190357
 
 [!INCLUDE [Feedback](../../includes/feedback.md)]
 
-The proxyAddresses attribute in Active Directory is a multi-value property that can contain various known address entries. For example, it can contain SMTP addresses, X500 addresses, SIP addresses, and so on. When an object is synchronized to Microsoft Entra ID, the values that are specified in the mail or proxyAddresses attribute in Active Directory are copied to a shadow mail or proxyAddresses attribute in Microsoft Entra ID, and then are used to calculate the final proxyAddresses of the object in Microsoft Entra according to internal Microsoft Entra ID rules. The logic that populates mail, mailNickName and proxyAddresses attributes in Microsoft Entra ID is called proxy calculation and it takes into account many different aspects of the on-premises Active Directory data, such as:
+The proxyAddresses attribute in Active Directory is a multi-value property that can contain various known address entries. For example, it can contain SMTP addresses, X500 addresses, and SIP addresses. When an object is synchronized to Microsoft Entra ID, the values that are specified in the mail or proxyAddresses attribute in Active Directory are copied to a shadow mail or proxyAddresses attribute in Microsoft Entra ID. Then, they are used to calculate the final proxyAddresses of the object in Microsoft Entra according to internal Microsoft Entra ID rules. The logic that populates mail, mailNickName, and proxyAddresses attributes in Microsoft Entra ID is called proxy calculation. It takes into account many different aspects of the on-premises Active Directory data, such as:
 
 - Set or update the Primary SMTP address and additional secondary addresses based on the on-premises ProxyAddresses or UserPrincipalName. 
 - Set or update the Mail attribute based on the calculated Primary SMTP address.
@@ -58,13 +58,13 @@ AAD:mailNickName      : user1upn
 AAD:UserPrincipalName : user1upn@Contoso.com
 ```
 
-Then, it's assigned an Exchange Online license. In this scenario, the following operations are performed due to proxy calculation:
+Then, it's assigned an Exchange Online license. In this scenario, the following operations are performed as a result of proxy calculation:
 
 - Set the primary SMTP address in the proxyAddresses attribute by using the UPN value.
 - Populate the mail attribute by using the primary SMTP address.
 - Add the MOERA as a secondary smtp address in the proxyAddresses attribute, by using the format of mailNickName@initial domain.
 
-The following attributes are set in Microsoft Entra ID on the synchronized user object with Exchange Online license:
+The following attributes are set in Microsoft Entra ID on the synchronized user object that has an Exchange Online license:
 
 ```
 AAD:mail              : user1upn@Contoso.com
@@ -74,13 +74,11 @@ AAD:userPrincipalName : user1upn@Contoso.com
 ```
 
 > [!NOTE]
-> When the user has an Exchange license assigned or the user is an Exchange Online recipient, such as a shared mailbox, the `userPrincipalName` is always added as a proxy address.
-
-
+> If the user has an Exchange license assigned or the user is an Exchange Online recipient, such as a shared mailbox, the `userPrincipalName` is always added as a proxy address.
 
 ## Scenario 2: User doesn't have the mailNickName or proxyAddresses attribute set
 
-You created an on-premises user object that has the following attributes set:
+You create an on-premises user object that has the following attributes set:
 
 ```
 AD:mail              : user2mail@Contoso.com
@@ -89,7 +87,7 @@ AD:proxyAddresses    : {\<not set>}
 AD:userPrincipalName : user2upn@Contoso.com
 ```
 
-Next, it's synchronized to Microsoft Entra ID and the following operations are performed due to proxy calculation:
+Next, it's synchronized to Microsoft Entra ID and the following operations are performed as a result of proxy calculation:
 
 - Set the primary SMTP using the same value of the mail attribute.
 - Populate the mailNickName attribute by using the primary SMTP address prefix.
@@ -120,7 +118,7 @@ AAD:userPrincipalName : user2upn@Contoso.com
 
 ## Scenario 3: You change the proxyAddresses attribute values of the on-premises user
 
-You created an on-premises user object that has the following attributes set:
+You create an on-premises user object that has the following attributes set:
 
 ```
 AD:mail              : \<not set>
@@ -149,7 +147,7 @@ AAD:proxyAddresses    : {smtp:user3upn@Contoso.com; smtp:user3pa1@Contoso.onmicr
 AAD:userPrincipalName : user3upn@Contoso.com
 ```
 
-Then, you change the values of the on-premises proxyAddresses attribute to the following ones:
+Then, you change the values of the on-premises proxyAddresses attribute to the following values:
 
 ```
 AD:mail              : \<not set>
@@ -180,7 +178,7 @@ AAD:userPrincipalName : user3upn@Contoso.com
 
 ## Scenario 4: Exchange Online license is removed
 
-You created an on-premises user object that has the following attributes set:
+You create an on-premises user object that has the following attributes set:
 
 ```
 AD:mail              : \<not set>
@@ -243,7 +241,7 @@ AAD:userPrincipalName : user4upn@Contoso.com
 
 ## Scenario 5: The mailNickName attribute value is changed
 
-You created an on-premises user object that has the following attributes set:
+You create an on-premises user object that has the following attributes set:
 
 ```
 AD:mail              : \<not set>
@@ -294,7 +292,7 @@ AAD:userPrincipalName : user5upn@Contoso.com
 
 ## Scenario 6: Two users have the same mailNickName attribute
 
-You created two on-premises user objects that have the same mailNickName value:
+You create two on-premises user objects that have the same mailNickName value:
 
 ```
 AD:mail              : \<not set>
