@@ -5,7 +5,7 @@
       items: 
       - name: Administration
         items: 
-          - name: Disabled service principal
+          - name: Can't access environment
             href: data/administration/service-principal-disabled.md
       - name: Data ingestion
         items:
