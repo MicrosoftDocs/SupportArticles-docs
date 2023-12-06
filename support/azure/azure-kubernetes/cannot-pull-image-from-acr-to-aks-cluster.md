@@ -13,9 +13,9 @@ ms.custom: devx-track-azurecli
 
 [!INCLUDE [Feedback](../../includes/feedback.md)]
 
-When you're using Microsoft Azure Container Registry with Azure Kubernetes Service (AKS), an authentication mechanism needs to be established. You can set up the AKS to Container Registry integration by using a few simple Azure CLI or Azure PowerShell commands. This integration assigns the [AcrPull role](/azure/role-based-access-control/built-in-roles#acrpull) for the identity associated with the AKS cluster to pull images from a container registry.
+When you're using Microsoft Azure Container Registry together with Azure Kubernetes Service (AKS), an authentication mechanism must be established. You can set up the AKS to Container Registry integration by using a few simple Azure CLI or Azure PowerShell commands. This integration assigns the [AcrPull role](/azure/role-based-access-control/built-in-roles#acrpull) for the identity that's associated with the AKS cluster to pull images from a container registry.
 
-In some cases, pulling images from a container registry to an AKS cluster fails. This article provides guidance for troubleshooting the most common errors that you encounter when you pull images from a container registry to an AKS cluster.
+In some cases, trying to pull images from a container registry to an AKS cluster fails. This article provides guidance for troubleshooting the most common errors that you encounter when you pull images from a container registry to an AKS cluster.
 
 ## Before you begin
 
@@ -25,17 +25,17 @@ This article assumes that you have an existing AKS cluster and an existing conta
 
 - If you need an Azure Container Registry (ACR), create one by using [the Azure CLI](/azure/container-registry/container-registry-get-started-azure-cli) or [the Azure portal](/azure/container-registry/container-registry-get-started-portal).
 
-You also need the Azure CLI version 2.0.59 or later to be installed and configured. Run [az version](/cli/azure/reference-index#az-version) to find the version. If you need to install or upgrade, see [Install Azure CLI](/cli/azure/install-azure-cli).
+You also need Azure CLI version 2.0.59 or a later version to be installed and configured. Run [az version](/cli/azure/reference-index#az-version) to determine the version. If you have to install or upgrade, see [Install Azure CLI](/cli/azure/install-azure-cli).
 
 ## Symptoms and initial troubleshooting
 
-The Kubernetes pod's **STATUS** is **ImagePullBackOff** or **ErrImagePull**. To get detailed errors, run the following command and check **Events** from the output.
+The Kubernetes pod's **STATUS** is **ImagePullBackOff** or **ErrImagePull**. To get detailed error information, run the following command and check **Events** from the output.
 
 ```console
 kubectl describe pod <podname> -n <namespace>
 ```
 
-We recommend that you start troubleshooting by checking the [container registry's health](/azure/container-registry/container-registry-check-health) and validating whether the container registry is accessible from the AKS cluster.
+We recommend that you start troubleshooting by checking the [container registry's health](/azure/container-registry/container-registry-check-health) and checking whether the container registry is accessible from the AKS cluster.
 
 To check the container registry's health, run the following command:
 
@@ -46,7 +46,7 @@ az acr check-health --name <myregistry> --ignore-errors --yes
 If a problem is detected, it provides an error code and description. For more information about the errors and possible solutions, see [Health check error reference](/azure/container-registry/container-registry-health-error-reference).
 
 > [!NOTE]
-> If you get Helm or Notary related errors, it doesn't mean that you have an issue with Container Registry or AKS. It only indicates that Helm or Notary isn't installed, Azure CLI isn't compatible with the current installed version of Helm or Notary, and so on.
+> If you get Helm-related or Notary-related errors, it doesn't mean that you an issue is affecting Container Registry or AKS. It indicates only that Helm or Notary isn't installed, or that Azure CLI isn't compatible with the current installed version of Helm or Notary, and so on.
 
 To validate whether the container registry is accessible from the AKS cluster, run the following [az aks check-acr](/cli/azure/aks#az-aks-check-acr) command:
 
@@ -62,7 +62,7 @@ An AKS cluster requires an identity. This identity can be either a managed ident
 
 > Failed to pull image "\<acrname>.azurecr.io/\<repository\:tag>": [rpc error: code = Unknown desc = failed to pull and unpack image "\<acrname>.azurecr.io/\<repository\:tag>": failed to resolve reference "\<acrname>.azurecr.io/\<repository\:tag>": failed to authorize: failed to fetch oauth token: **unexpected status: 401 Unauthorized**
 
-A number of solutions can help you resolve this error, subject to the following constraints:
+Several solutions can help you resolve this error, subject to the following constraints:
 
 - Solutions [2][cause1-solution2], [3][cause1-solution3], and [4][cause1-solution4] are applicable only to [AKS clusters that use a service principal](/azure/aks/kubernetes-service-principal).
 
@@ -74,7 +74,7 @@ A number of solutions can help you resolve this error, subject to the following 
 
 The integration between AKS and Container Registry creates an AcrPull role assignment at container registry level for the AKS cluster's identity. Ensure that the role assignment is created.
 
-To check if the AcrPull role assignment is created, use one of the following ways:
+To check whether the AcrPull role assignment is created, use one of the following methods:
 
 - Run the following command:
 
@@ -94,7 +94,7 @@ az aks update -n <myAKSCluster> -g <myResourceGroup> --attach-acr <acr-resource-
 
 ### Solution 2: Ensure service principal isn't expired
 
-Ensure that the secret of the service principal that's associated with the AKS cluster isn't expired. To check the expiration date of your service principal, run the following commands:
+Make sure that the secret of the service principal that's associated with the AKS cluster isn't expired. To check the expiration date of your service principal, run the following commands:
 
 ```azurecli
 SP_ID=$(az aks show --resource-group <myResourceGroup> --name <myAKSCluster> \
@@ -109,7 +109,7 @@ If the secret is expired, [update the credentials for the AKS cluster](/azure/ak
 
 ### Solution 3: Ensure AcrPull role is assigned to correct service principal
 
-In some cases, for example, when the service principal of the AKS cluster is replaced with a new one, the container registry role assignment still refers to the old service principal. To ensure that the container registry role assignment refers to the correct service principal, follow the steps:
+In some cases, the container registry role assignment still refers to the old service principal. For example, when the service principal of the AKS cluster is replaced with a new one. To ensure that the container registry role assignment refers to the correct service principal, follow these steps:
 
 1. To check the service principal that's used by the AKS cluster, run the following command:
 
@@ -130,7 +130,7 @@ In some cases, for example, when the service principal of the AKS cluster is rep
 
 ### Solution 4: Ensure service principal is correct and secret is valid
 
-If you pull an image by using an [image pull secret](https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/), and that Kubernetes secret was created with the values of a service principal, make sure that the associated service principal is correct and the secret is still valid. Follow these steps:
+If you pull an image by using an [image pull secret](https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/), and that Kubernetes secret was created by using the values of a service principal, make sure that the associated service principal is correct and the secret is still valid. Follow these steps:
 
 1. Run the following [kubectl get](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#get) and [base64](https://ss64.com/bash/base64.html) command to see the values of the Kubernetes secret:
 
@@ -152,9 +152,9 @@ If you pull an image by using an [image pull secret](https://kubernetes.io/docs/
 
 1. Update or re-create the Kubernetes secret accordingly.
 
-### Solution 5: Ensure the Kubernetes secret has the correct values of the container registry admin account
+### Solution 5: Make sure the Kubernetes secret has the correct values of the container registry admin account
 
-If you pull an image by using an [image pull secret](https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/), and that Kubernetes secret was created with values of [container registry admin account](/azure/container-registry/container-registry-authentication#admin-account), make sure that the values in the Kubernetes secret are the same as the values of the container registry admin account. Follow these steps:
+If you pull an image by using an [image pull secret](https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/), and that Kubernetes secret was created by using values of [container registry admin account](/azure/container-registry/container-registry-authentication#admin-account), make sure that the values in the Kubernetes secret are the same as the values of the container registry admin account. Follow these steps:
 
 1. Run the following [kubectl get](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#get) and [base64](https://ss64.com/bash/base64.html) command to see the values of the Kubernetes secret:
 
@@ -170,10 +170,10 @@ If you pull an image by using an [image pull secret](https://kubernetes.io/docs/
 
 1. In the **Access keys** page for the container registry, compare the container registry values with the values in the Kubernetes secret.
 
-1. If the values don't match, then update or re-create the Kubernetes secret accordingly.
+1. If the values don't match, update or re-create the Kubernetes secret accordingly.
 
 > [!NOTE]
-> If a **Regenerate** password operation happened, an operation that's named "Regenerate Container Registry Login Credentials" will be displayed in the **Activity log** page of the container registry. The **Activity log** has a [90-day retention period](/azure/azure-monitor/essentials/activity-log#retention-period).
+> If a **Regenerate** password operation occurred, an operation that's named "Regenerate Container Registry Login Credentials" will be displayed in the **Activity log** page of the container registry. The **Activity log** has a [90-day retention period](/azure/azure-monitor/essentials/activity-log#retention-period).
 
 ## Cause 2: Image not found error
 
@@ -181,9 +181,9 @@ If you pull an image by using an [image pull secret](https://kubernetes.io/docs/
 
 ### Solution: Ensure image name is correct
 
-If you get this error, ensure that the image name is fully correct. You should check the registry name, registry login server, the repository name, and the tag. A common mistake is that the login server is specified as "azureacr.io" instead of "azurecr.io".
+If you see this error, make nsure that the image name is fully correct. You should check the registry name, registry login server, the repository name, and the tag. A common mistake is that the login server is specified as "azureacr.io" instead of "azurecr.io".
 
-When the image name isn't fully correct, the [401 Unauthorized error](#cause-1-401-unauthorized-error) may also occur because AKS always tries anonymous pull no matter whether the container registry has enabled anonymous pull access.
+If the image name isn't fully correct, the [401 Unauthorized error](#cause-1-401-unauthorized-error) may also occur because AKS always tries anonymous pull regardless of whether the container registry has enabled anonymous pull access.
 
 ## Cause 3: 403 Forbidden error
 
@@ -196,7 +196,7 @@ If the network interface of the container registry's private endpoint and the AK
 - In the Azure portal, select the private DNS zone "privatelink.azurecr.io", select **Virtual network links** > **Add** under the **Settings** panel, and then select a name and the virtual network of the AKS cluster. Select **OK**.
 
   > [!NOTE]
-  > It's optional to check the ["Enable auto registration"](/azure/dns/private-dns-autoregistration) feature.
+  > It's optional to select the ["Enable auto registration"](/azure/dns/private-dns-autoregistration) feature.
 
 - [Create a virtual network link to the specified Private DNS zone by using Azure CLI](/cli/azure/network/private-dns/link/vnet#az-network-private-dns-link-vnet-create).
 
@@ -204,7 +204,7 @@ If the network interface of the container registry's private endpoint and the AK
 
 If the AKS cluster connects publicly to the container registry (NOT through a private link or an endpoint) and the public network access of the container registry is limited to selected networks, add AKS Load Balancer's public IP address to the allowed IP address range of the container registry:
 
-1. Confirm that the public network access is limited to selected networks.
+1. Verify that the public network access is limited to selected networks.
 
     In the Azure portal, navigate to the container registry. Under **Settings**, select **Networking**. On the **Public access** tab, **Public network access** is set to **Selected networks** or **Disabled**.
 
@@ -240,9 +240,9 @@ If the AKS cluster connects publicly to the container registry (NOT through a pr
 > Failed to pull image "\<acrname>.azurecr.io/\<repository\:tag>": rpc error: code = Unknown desc = failed to pull and unpack image "\<acrname>.azurecr.io/\<repository\:tag>": failed to resolve reference "\<acrname>.azurecr.io/<repository\:tag>": failed to do request: Head "https://\<acrname>.azurecr.io/v2/\<repository>/manifests/v1": dial tcp \<acrprivateipaddress>:**443: i/o timeout**
 
 > [!NOTE]
-> The "443 timeout" error only occurs when you [connect privately to a container registry by using Azure Private Link](/azure/container-registry/container-registry-private-link).
+> The "443 timeout" error occurs only when you [connect privately to a container registry by using Azure Private Link](/azure/container-registry/container-registry-private-link).
 
-### Solution 1: Ensure virtual network peering is used
+### Solution 1: Make sure virtual network peering is used
 
 If the network interface of the container registry's private endpoint and the AKS cluster are in different virtual networks, ensure that [virtual network peering](/azure/virtual-network/virtual-network-peering-overview) is used for both virtual networks. You can check virtual network peering by running the Azure CLI command `az network vnet peering list --resource-group <MyResourceGroup> --vnet-name <MyVirtualNetwork> --output table` or in the Azure portal by selecting the **VNETs** > **Peerings** under the **Settings** panel. For more information about listing all peerings of a specified virtual network, see [az network vnet peering list](/cli/azure/network/vnet/peering#az-network-vnet-peering-list).
 
