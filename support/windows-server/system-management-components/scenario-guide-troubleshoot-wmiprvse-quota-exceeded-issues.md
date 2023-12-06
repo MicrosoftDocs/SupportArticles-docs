@@ -39,15 +39,15 @@ Windows Management Instrumentation has stopped WMIPRVSE.EXE because a quota reac
 ```
 
 ```output
-Log Name: Application
-Source: Microsoft-Windows-WMI
-Date: <DateTime>
-Event ID: 5612
+Log Name:      Application
+Source:        Microsoft-Windows-WMI
+Date:          <DateTime>
+Event ID:      5612
 Task Category: None
-Level: Warning
+Level:         Warning
 Keywords: 
-User: SYSTEM
-Computer:  <MachineName>
+User:          SYSTEM
+Computer:      <MachineName>
 Description:
 Windows Management Instrumentation has stopped WMIPRVSE.EXE because a quota reached a warning value. Quota: HandleCount Value: 4099 Maximum value: 4096 WMIPRVSE PID: 4468 Providers hosted in this process: C:\Windows\System32\wbem\WmiPerfClass.dll, %systemroot%\system32\wbem\wmiprov.dll
 ```
@@ -186,7 +186,7 @@ Before opening a support case to further investigate the issue, you can collect 
 
 You can also gather information by using the WMI-Collect tool on the machine that has recently experienced the issue. Here are the steps:
 
-1. Download [WMI-Collect.zip](https://aka.ms/WMI-Collect) and extract it to a folder, such as C:\temp.
+1. Download [WMI-Collect.zip](https://aka.ms/WMI-Collect) and extract it to a folder, such as *C:\\temp*.
 2. From an elevated PowerShell command prompt, run the *WMI-Collect.ps1* script from the folder where the script is saved. For example:
 
     ```cmdlet
