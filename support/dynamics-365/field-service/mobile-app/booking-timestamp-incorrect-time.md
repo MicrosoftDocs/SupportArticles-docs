@@ -17,7 +17,7 @@ On the *Booking* entity, there is a an internal-use-only field called offline ti
 
 ## Resolution
 
-Here are some sways to resolve scenarios that result in incorrect timestamps.
+Here are some ways to resolve scenarios that result in incorrect timestamps.
 
 1. Offline Timestamp field is missing on the Booking for: When the field is missing from the form, it will show a form warning notification in offline mode. Add the field back to the form.
 
