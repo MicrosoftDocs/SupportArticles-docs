@@ -70,9 +70,9 @@ Several solutions can help you resolve this error, subject to the following cons
 
 - Solutions [4][cause1-solution4] and [5][cause1-solution5] are applicable for the Kubernetes method of [pulling a Kubernetes secret](https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/).
 
-### Solution 1: Ensure AcrPull role assignment is created for identity
+### Solution 1: Make sure AcrPull role assignment is created for identity
 
-The integration between AKS and Container Registry creates an AcrPull role assignment at container registry level for the AKS cluster's identity. Ensure that the role assignment is created.
+The integration between AKS and Container Registry creates an AcrPull role assignment at container registry level for the AKS cluster's identity. Make sure that the role assignment is created.
 
 To check whether the AcrPull role assignment is created, use one of the following methods:
 
@@ -92,7 +92,7 @@ If the AcrPull role assignment isn't created, create it by [configuring Containe
 az aks update -n <myAKSCluster> -g <myResourceGroup> --attach-acr <acr-resource-id>
 ```
 
-### Solution 2: Ensure service principal isn't expired
+### Solution 2: Make sure service principal isn't expired
 
 Make sure that the secret of the service principal that's associated with the AKS cluster isn't expired. To check the expiration date of your service principal, run the following commands:
 
@@ -107,9 +107,9 @@ For more information, see [Check the expiration date of your service principal](
 
 If the secret is expired, [update the credentials for the AKS cluster](/azure/aks/update-credentials).
 
-### Solution 3: Ensure AcrPull role is assigned to correct service principal
+### Solution 3: Make sure AcrPull role is assigned to correct service principal
 
-In some cases, the container registry role assignment still refers to the old service principal. For example, when the service principal of the AKS cluster is replaced with a new one. To ensure that the container registry role assignment refers to the correct service principal, follow these steps:
+In some cases, the container registry role assignment still refers to the old service principal. For example, when the service principal of the AKS cluster is replaced with a new one. To make sure that the container registry role assignment refers to the correct service principal, follow these steps:
 
 1. To check the service principal that's used by the AKS cluster, run the following command:
 
@@ -128,7 +128,7 @@ In some cases, the container registry role assignment still refers to the old se
 
 1. Compare the two service principals. If they don't match, integrate the AKS cluster with the container registry again.
 
-### Solution 4: Ensure service principal is correct and secret is valid
+### Solution 4: Make sure service principal is correct and secret is valid
 
 If you pull an image by using an [image pull secret](https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/), and that Kubernetes secret was created by using the values of a service principal, make sure that the associated service principal is correct and the secret is still valid. Follow these steps:
 
@@ -179,7 +179,7 @@ If you pull an image by using an [image pull secret](https://kubernetes.io/docs/
 
 > Failed to pull image "\<acrname>.azurecr.io/\<repository\:tag>": [rpc error: code = NotFound desc = failed to pull and unpack image "\<acrname>.azurecr.io/\<repository\:tag>": failed to resolve reference "\<acrname>.azurecr.io/\<repository\:tag>": **\<acrname>.azurecr.io/\<repository\:tag>: not found**
 
-### Solution: Ensure image name is correct
+### Solution: Make sure image name is correct
 
 If you see this error, make nsure that the image name is fully correct. You should check the registry name, registry login server, the repository name, and the tag. A common mistake is that the login server is specified as "azureacr.io" instead of "azurecr.io".
 
@@ -189,7 +189,7 @@ If the image name isn't fully correct, the [401 Unauthorized error](#cause-1-401
 
 > Failed to pull image "\<acrname>.azurecr.io/\<repository\:tag>": rpc error: code = Unknown desc = failed to pull and unpack image "\<acrname>.azurecr.io/\<repository\:tag>": failed to resolve reference "\<acrname>.azurecr.io/\<repository\:tag>": failed to authorize: failed to fetch anonymous token: **unexpected status: 403 Forbidden**
 
-### Solution 1: Ensure AKS virtual network link is set in the container registry's Private DNS zone
+### Solution 1: Make sure AKS virtual network link is set in the container registry's Private DNS zone
 
 If the network interface of the container registry's private endpoint and the AKS cluster are in different virtual networks, make sure that the [virtual network link](/azure/dns/private-dns-virtual-network-links) for the AKS cluster's virtual network is set in the Private DNS zone of the container registry. (That link is named "privatelink.azurecr.io" by default.) If the virtual network link isn't in the Private DNS zone of the container registry, add it by using one of the following ways:
 
@@ -244,9 +244,9 @@ If the AKS cluster connects publicly to the container registry (NOT through a pr
 
 ### Solution 1: Make sure virtual network peering is used
 
-If the network interface of the container registry's private endpoint and the AKS cluster are in different virtual networks, ensure that [virtual network peering](/azure/virtual-network/virtual-network-peering-overview) is used for both virtual networks. You can check virtual network peering by running the Azure CLI command `az network vnet peering list --resource-group <MyResourceGroup> --vnet-name <MyVirtualNetwork> --output table` or in the Azure portal by selecting the **VNETs** > **Peerings** under the **Settings** panel. For more information about listing all peerings of a specified virtual network, see [az network vnet peering list](/cli/azure/network/vnet/peering#az-network-vnet-peering-list).
+If the network interface of the container registry's private endpoint and the AKS cluster are in different virtual networks, make sure that [virtual network peering](/azure/virtual-network/virtual-network-peering-overview) is used for both virtual networks. You can check virtual network peering by running the Azure CLI command `az network vnet peering list --resource-group <MyResourceGroup> --vnet-name <MyVirtualNetwork> --output table` or in the Azure portal by selecting the **VNETs** > **Peerings** under the **Settings** panel. For more information about listing all peerings of a specified virtual network, see [az network vnet peering list](/cli/azure/network/vnet/peering#az-network-vnet-peering-list).
 
-If the virtual network peering is used for both virtual networks, ensure that the status is "Connected". If the status is [Disconnected](/azure/virtual-network/virtual-network-troubleshoot-peering-issues#the-peering-status-is-disconnected), delete the peering from both virtual networks, and then re-create it. If the status is "Connected", see the troubleshooting guide: [The peering status is "Connected"](/azure/virtual-network/virtual-network-troubleshoot-peering-issues#the-peering-status-is-connected).
+If the virtual network peering is used for both virtual networks, make sure that the status is "Connected". If the status is [Disconnected](/azure/virtual-network/virtual-network-troubleshoot-peering-issues#the-peering-status-is-disconnected), delete the peering from both virtual networks, and then re-create it. If the status is "Connected", see the troubleshooting guide: [The peering status is "Connected"](/azure/virtual-network/virtual-network-troubleshoot-peering-issues#the-peering-status-is-connected).
 
 For further troubleshooting, connect to one of the AKS nodes or [pods](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#exec), and then test the connectivity with the container registry at TCP level by using the Telnet or Netcat utility. Check the IP address with the `nslookup <acrname>.azurecr.io` command, and then run the `telnet <ip-address-of-the-container-registry> 443` command.
 
@@ -310,8 +310,8 @@ If the troubleshooting guidance in this article doesn't help you resolve the iss
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
 
-[cause1-solution1]: #solution-1-ensure-acrpull-role-assignment-is-created-for-identity
-[cause1-solution2]: #solution-2-ensure-service-principal-isnt-expired
-[cause1-solution3]: #solution-3-ensure-acrpull-role-is-assigned-to-correct-service-principal
-[cause1-solution4]: #solution-4-ensure-service-principal-is-correct-and-secret-is-valid
-[cause1-solution5]: #solution-5-ensure-the-kubernetes-secret-has-the-correct-values-of-the-container-registry-admin-account
+[cause1-solution1]: #solution-1-make-sure-acrpull-role-assignment-is-created-for-identity
+[cause1-solution2]: #solution-2-make-sure-service-principal-isnt-expired
+[cause1-solution3]: #solution-3-make-sure-acrpull-role-is-assigned-to-correct-service-principal
+[cause1-solution4]: #solution-4-make-sure-service-principal-is-correct-and-secret-is-valid
+[cause1-solution5]: #solution-5-make-sure-the-kubernetes-secret-has-the-correct-values-of-the-container-registry-admin-account
