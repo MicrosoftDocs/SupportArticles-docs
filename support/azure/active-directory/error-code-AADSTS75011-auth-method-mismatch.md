@@ -8,13 +8,13 @@ ms.subservice: app-mgmt
 ---
 # Error - AADSTS75011 Authentication method by which the user authenticated with the service doesn't match requested authentication method AuthnContextClassRef
 
-This article describes a problem in which you receive the error message "Error - AADSTS75011 Authentication method by which the user authenticated with the service doesn't match requested authentication method AuthnContextClassRef." when trying to sign into a SAML-based single sign-on (SSO) configured app that has been integrated with Microsoft Entra ID.
+This article describes a problem in which you receive the error message, "Error - AADSTS75011 Authentication method by which the user authenticated with the service doesn't match requested authentication method AuthnContextClassRef," when you try to sign in to a SAML-based single sign-on (SSO) configured app that has been integrated with Microsoft Entra ID.
 
 [!INCLUDE [Feedback](../../includes/feedback.md)]
 
 ## Symptoms
 
-You receive error `AADSTS75011` when trying to sign into an application that has been setup to use Microsoft Entra ID for identity management using SAML-based SSO.
+You receive a `AADSTS75011` error message when you try to sign in to an application that has been set up to use Microsoft Entra ID for identity management by using SAML-based SSO.
 
 ## Cause
 
@@ -22,12 +22,12 @@ The `RequestedAuthnContext` is in the SAML request. This means the app is expect
 
 ## Resolution
 
-`RequestedAuthnContext` is an optional value. Then, if possible, ask the application if it could be removed.
+`RequestedAuthnContext` is an optional value. If possible, ask the application if the value could be removed.
 
-Another option is to make sure the `RequestedAuthnContext` will be honored. This will be done by requesting a fresh authentication. By doing this, when the SAML request is processed, a fresh authentication will be done and the `AuthnContext` will be honored. To request a Fresh Authentication the SAML request must contain the value `forceAuthn="true"`.
+Another option is to make sure that the `RequestedAuthnContext` value will be honored. This is done by requesting a fresh authentication. By doing this, when the SAML request is processed, a fresh authentication is done and `AuthnContext` is honored. In order to request a Fresh Authentication, the SAML request must contain the value, `forceAuthn="true"`.
 
-## More Information
+## More information
 
-For a full list of Active Directory Authentication and authorization error codes see [Microsoft Entra authentication and authorization error codes](/azure/active-directory/develop/reference-aadsts-error-codes)
+For a full list of Active Directory Authentication and authorization error codes, see [Microsoft Entra authentication and authorization error codes](/azure/active-directory/develop/reference-aadsts-error-codes)
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
