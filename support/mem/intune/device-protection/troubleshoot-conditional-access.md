@@ -9,7 +9,7 @@ ms.reviewer: kaushika
 
 This article describes what to do when your users fail to get access to resources protected with Conditional Access, or when users can access protected resources but should be blocked.
 
-With Intune and Conditional Access, you can protect access to Microsoft 365 services like Exchange Online and SharePoint Online, and various other services. This capability allows you to make sure that only devices that are enrolled with Intune and compliant with the Conditional Access rules that you set in Intune or Azure Active Directory have access to your company resources.
+With Intune and Conditional Access, you can protect access to Microsoft 365 services like Exchange Online and SharePoint Online, and various other services. This capability allows you to make sure that only devices that are enrolled with Intune and compliant with the Conditional Access rules that you set in Intune or Microsoft Entra ID have access to your company resources.
 
 ## Requirements for Conditional Access
 
@@ -71,7 +71,7 @@ You can view these conditions for each device in the Azure portal and in the dev
 
 ## Devices are noncompliant but users are not blocked
 
-- For Windows PCs, Conditional Access only blocks the native email app, Office 2013 with Modern Authentication, or Office 2016. Blocking earlier versions of Outlook or all mail apps on Windows PCs require Azure AD Device Registration and Active Directory Federation Services (AD FS) configurations as per [How to: Block legacy authentication to Azure AD with Conditional Access](/azure/active-directory/conditional-access/block-legacy-authentication).
+- For Windows PCs, Conditional Access only blocks the native email app, Office 2013 with Modern Authentication, or Office 2016. Blocking earlier versions of Outlook or all mail apps on Windows PCs require Microsoft Entra Device Registration and Active Directory Federation Services (AD FS) configurations as per [How to: Block legacy authentication to Microsoft Entra ID with Conditional Access](/azure/active-directory/conditional-access/block-legacy-authentication).
 
 - If the device is selectively wiped or retired from Intune, it might continue to have access for several hours after retirement. This is because Exchange caches access rights for six hours. Consider other means of protecting data on retired devices in this scenario.
 

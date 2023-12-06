@@ -6,7 +6,7 @@ ms.reviewer: jarrettr, nualex, v-leedennis
 ms.service: active-directory
 ms.subservice: enterprise-users
 keywords:
-#Customer intent: As an Azure Active Directory administrator, I want to provide temporary passwords that meet the local Active Directory password policy so that users can successfully reset or change their password.
+#Customer intent: As a Microsoft Entra administrator, I want to provide temporary passwords that meet the local Active Directory password policy so that users can successfully reset or change their password.
 ---
 # Troubleshoot password resets that are blocked by on-premises policy
 
@@ -16,7 +16,7 @@ This article helps you troubleshoot a scenario in which a user or administrator 
 
 In the [Azure portal](https://portal.azure.com), you take the following steps:
 
-1. Select **Azure Active Directory** > **Users**.
+1. Select **Microsoft Entra ID** > **Users**.
 1. Choose a user from the list.
 1. Select the **Reset password** link.
 1. Enter a temporary password for the user to use.
@@ -153,6 +153,6 @@ Global Group memberships     *Domain Users
 The command completed successfully.
 ```
 
-Is the entered password compliant with the local Active Directory password policy, but the issue persists? If so, check whether you're using [Azure AD Password Protection](/azure/active-directory/authentication/concept-password-ban-bad-on-premises) in your on-premises AD DS environment, or if you have any third-party password filter software installed on your domain controllers.
+Is the entered password compliant with the local Active Directory password policy, but the issue persists? If so, check whether you're using [Microsoft Entra Password Protection](/azure/active-directory/authentication/concept-password-ban-bad-on-premises) in your on-premises AD DS environment, or if you have any third-party password filter software installed on your domain controllers.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

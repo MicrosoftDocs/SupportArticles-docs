@@ -41,7 +41,7 @@ Error 8018000a: "Something went wrong. The device is already enrolled.  You can 
 
 **Cause:** One of the following conditions is true:
 
-- A different user has already enrolled the device in Intune or joined the device to Azure AD. To determine whether this is the case, go to **Settings** > **Accounts** > **Work Access**. Look for a message that's similar to "Another user on the system is already connected to a work or school. Please remove that work or school connection and try again."
+- A different user has already enrolled the device in Intune or joined the device to Microsoft Entra ID. To determine whether this is the case, go to **Settings** > **Accounts** > **Work Access**. Look for a message that's similar to "Another user on the system is already connected to a work or school. Please remove that work or school connection and try again."
 
 **Solution:**
 
@@ -50,7 +50,7 @@ Use these steps to remove the other work or school account.
 1. Sign out of Windows, then sign in by using the other account that has enrolled or joined the device.
 2. Go to **Settings** > **Accounts** > **Work Access**, then remove the work or school account.
 3. Sign out of Windows, then sign in by using your account.
-4. Enroll the device in Intune or join the device to Azure AD.
+4. Enroll the device in Intune or join the device to Microsoft Entra ID.
 
 ## This account is not allowed on this phone.
 
@@ -68,7 +68,7 @@ Error: "This account is not allowed on this phone. Make sure the information you
 
   > Something went wrong.  
   > Looks like we can't connect to the URL for your organization's MDM terms of use. Try again, or contact your system administrator with the problem information from this page.
-- The MDM terms and conditions in Azure AD is blank or doesn't contain the correct URL.
+- The MDM terms and conditions in Microsoft Entra ID is blank or doesn't contain the correct URL.
 
 **Solution:**
 
@@ -80,7 +80,7 @@ Go to the [Microsoft 365 Admin Center](https://admin.microsoft.com), and then as
 
 ### Correct the MDM terms of use URL
 
-  1. Sign in to the [Azure portal](https://portal.azure.com/), and then select **Azure Active Directory**.
+  1. Sign in to the [Azure portal](https://portal.azure.com/), and then select **Microsoft Entra ID**.
   2. Select **Mobility (MDM and MAM)**, and then click **Microsoft Intune**.
   3. Select **Restore default MDM URLs**, verify that the **MDM terms of use URL** is set to **`https://portal.manage.microsoft.com/TermsofUse.aspx`**.
   4. Choose **Save**.
@@ -89,7 +89,7 @@ Go to the [Microsoft 365 Admin Center](https://admin.microsoft.com), and then as
 
 Error 80180026: "Something went wrong. Confirm you are using the correct sign-in information and that your organization uses this feature. You can try to do this again or contact your system administrator with the error code 80180026."
 
-**Cause:** This error can occur when you try to join a Windows 10 computer to Azure AD and both of the following conditions are true:
+**Cause:** This error can occur when you try to join a Windows 10 computer to Microsoft Entra ID and both of the following conditions are true:
 
 - MDM automatic enrollment is enabled in Azure.
 - The Intune PC software client (Intune PC agent) is installed on the Windows 10 computer.
@@ -101,7 +101,7 @@ Use one of the following methods to address this issue:
 ### Disable MDM automatic enrollment in Azure.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
-2. Go to **Azure Active Directory** > **Mobility (MDM and MAM)** > **Microsoft Intune**.
+2. Go to **Microsoft Entra ID** > **Mobility (MDM and MAM)** > **Microsoft Intune**.
 3. Set **MDM User scope** to **None**, and then click **Save**.
 
 ### Uninstall the Intune client
@@ -148,15 +148,15 @@ To fix this issue in a stand-alone Intune environment, follow these steps:
 
 ## A setup failure has occurred during bulk enrollment.
 
-**Cause:** The Azure AD user accounts in the account package (Package_GUID) for the respective provisioning package aren't allowed to join devices to Azure AD. These Azure AD accounts are automatically created when you set up a provisioning package with Windows Configuration Designer (WCD) or the **Set up School PCs** app. And these accounts are then used to join the devices to Azure AD.
+**Cause:** The Microsoft Entra user accounts in the account package (Package_GUID) for the respective provisioning package aren't allowed to join devices to Microsoft Entra ID. These Microsoft Entra accounts are automatically created when you set up a provisioning package with Windows Configuration Designer (WCD) or the **Set up School PCs** app. And these accounts are then used to join the devices to Microsoft Entra ID.
 
 **Solution:**
 
 1. Sign in to the [Azure portal](https://portal.azure.com/) as administrator.
-2. Go to **Azure Active Directory > Devices > Device Settings**.
-3. Set **Users may join devices to Azure AD** to **All** or **Selected**.
+2. Go to **Microsoft Entra ID > Devices > Device Settings**.
+3. Set **Users may join devices to Microsoft Entra ID** to **All** or **Selected**.
 
-   If you choose **Selected**, click **Selected**, and then click **Add Members** to add all users who can join their devices to Azure AD. Make sure that all Azure AD accounts for the provisioning package are added.
+   If you choose **Selected**, click **Selected**, and then click **Add Members** to add all users who can join their devices to Microsoft Entra ID. Make sure that all Microsoft Entra accounts for the provisioning package are added.
 
 For more information about how to create a provisioning package for Windows Configuration Designer, see [Create a provisioning package for Windows 10](/windows/configuration/provisioning-packages/provisioning-create-package).
 
@@ -166,7 +166,7 @@ For more information about the **Set up School PCs** app, see [Use the Set up Sc
 
 When you try to enroll a Windows 10 device automatically by using Group Policy, you experience the following issues:
 
-- In Task Scheduler, under **Microsoft** > **Windows** > **EnterpriseMgmt**, the last run result of the **Schedule created by enrollment client for automatically enrolling in MDM from AAD** task is as follows: **Event 76 Auto MDM Enroll: Failed (Unknown Win32 Error code: 0x8018002b)**
+- In Task Scheduler, under **Microsoft** > **Windows** > **EnterpriseMgmt**, the last run result of the **Schedule created by enrollment client for automatically enrolling in MDM from Microsoft Entra ID** task is as follows: **Event 76 Auto MDM Enroll: Failed (Unknown Win32 Error code: 0x8018002b)**
 - In Event Viewer, the following event is logged under **Applications and Services Logs/Microsoft/Windows/DeviceManagement-Enterprise-Diagnostics-Provider/Admin**:
 
     ```output
@@ -202,7 +202,7 @@ If the UPN contains an unverified or non-routable domain, follow these steps:
 
 If **MDM user scope** is set to **None**, follow these steps:
 
-1. Sign in to the [Azure portal](https://portal.azure.com/), and then select **Azure Active Directory**.
+1. Sign in to the [Azure portal](https://portal.azure.com/), and then select **Microsoft Entra ID**.
 2. Select **Mobility (MDM and MAM)**, and then select **Microsoft Intune**.
 3. Set **MDM user scope** to **All**. Or, set **MDM user scope** to **Some**, and select the Groups that can automatically enroll their Windows 10 devices.
 4. Set **MAM User scope** to **None**.
@@ -260,7 +260,7 @@ Error 800705b4:
 - The device must have a physical TPM 2.0 chip. Devices with virtual TPMs (for example, Hyper-V VMs) or TPM 1.2 chips don't work with self-deploying mode.
 - The device must be running one of the following versions of Windows:
   - Windows 10 build 1709 or a later version.
-  - If Hybrid Azure AD Join is used, Windows 10 build 1809 or a later version.
+  - If Microsoft Entra hybrid join is used, Windows 10 build 1809 or a later version.
 
 **Solution:**
 
@@ -272,9 +272,9 @@ For more information about how to deploy a Windows device in kiosk mode with Aut
 
 Error 0x80070774: Something went wrong. Confirm you are using the correct sign-in information and that your organization uses this feature. You can try to do this again or contact your system administrator with the error code 80070774.
 
-This issue typically occurs before the device is restarted in a Hybrid Azure AD Autopilot scenario, when the device times out during the initial sign-in screen. It means that the domain controller can't be found or successfully reached because of connectivity issues. Or, the device has entered a state that can't join the domain.
+This issue typically occurs before the device is restarted in a Hybrid Microsoft Entra Autopilot scenario, when the device times out during the initial sign-in screen. It means that the domain controller can't be found or successfully reached because of connectivity issues. Or, the device has entered a state that can't join the domain.
 
-**Cause:** The most common cause is that Hybrid Azure AD Join is used, and the Assign user feature is configured in the Autopilot profile. Using the Assign user feature performs an Azure AD join on the device during the initial sign-in screen. It puts the device in a state that can't join your on-premises domain. Therefore, the Assign user feature should only be used in standard Azure AD Join Autopilot scenarios. The feature shouldn't be used in Hybrid Azure AD Join scenarios.
+**Cause:** The most common cause is that Microsoft Entra hybrid join is used, and the Assign user feature is configured in the Autopilot profile. Using the Assign user feature performs a Microsoft Entra join on the device during the initial sign-in screen. It puts the device in a state that can't join your on-premises domain. Therefore, the Assign user feature should only be used in standard Microsoft Entra join Autopilot scenarios. The feature shouldn't be used in Microsoft Entra hybrid join scenarios.
 
 Another possible cause for this error is that the Autopilot object's associated AzureAD device has been deleted. To resolve this issue, delete the Autopilot object and reimport the hash to generate a new one.
 
@@ -283,7 +283,7 @@ Another possible cause for this error is that the Autopilot object's associated 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose >  **Devices** > **Windows** > **Windows devices**.
 2. Select the device which is experiencing the issue, and then click the ellipsis (…) on the rightmost side.
 3. Select **Unassign user** and wait for the process to finish.
-4. Verify that the Hybrid Azure AD Autopilot profile is assigned before reattempting OOBE.
+4. Verify that the Hybrid Microsoft Entra Autopilot profile is assigned before reattempting OOBE.
 
 **Solution 2:**
 
@@ -317,7 +317,7 @@ Description:
 This issue is usually caused by incorrectly delegating permissions to the organizational unit where the Windows Autopilot devices are created. For more information, see [Increase the computer account limit in the Organizational Unit](/mem/autopilot/windows-autopilot-hybrid#increase-the-computer-account-limit-in-the-organizational-unit).
 
 1. Open **Active Directory Users and Computers (DSA.msc)**.
-2. Right-click the organizational unit that you will use to create hybrid Azure AD-joined computers > **Delegate Control**.
+2. Right-click the organizational unit that you will use to create Microsoft Entra hybrid joined computers > **Delegate Control**.
 3. In the **Delegation of Control** wizard, select **Next** > **Add** > **Object Types**.
 4. In the **Object Types** pane, select the **Computers** check box > **OK**.
 5. In the **Select Users**, **Computers**, or **Groups** pane, in the **Enter the object names to select** box, enter the name of the computer where the Connector is installed.
@@ -335,7 +335,7 @@ In this scenario, the Enrollment Status Page (ESP) times out before the sign in 
 **Cause:** This issue can arise if all the following conditions are true:
 
 - You're using the ESP to track Microsoft Store for Business apps.
-- You have an Azure AD Conditional Access policy that uses the **Require device to be marked as compliant** control.
+- You have a Microsoft Entra Conditional Access policy that uses the **Require device to be marked as compliant** control.
 - The policy applies to All Cloud apps and Windows.
 
 **Solution:**

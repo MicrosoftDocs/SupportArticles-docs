@@ -48,14 +48,14 @@ As an Admin, you can also manage flows by running [Power Apps cmdlets for admini
 You'll need the environment name and flow name (a GUID).
 Run the `Get-AdminFlowOwnerRole` cmdlet with environment name and flow name to get the list of users and their roles. Which will enable you to verify the current permissions set for the flow.
 
-To assign a co-owner to a flow, run the `Set-AdminFlowOwnerRole` cmdlet with the AAD principal object ID of the new owner.
+To assign a co-owner to a flow, run the `Set-AdminFlowOwnerRole` cmdlet with the Microsoft Entra principal object ID of the new owner.
 
 ```powershell
 Set-AdminFlowOwnerRole -EnvironmentName <env name> -FlowName <flow name> -PrincipalType User -RoleName CanEdit -PrincipalObjectId <new owner object id>
 ```
 
 > [!NOTE]
-> You can get the AAD principal object id of a user by running the [Get-AzureADUser](/powershell/module/azuread/get-azureaduser) cmdlet (which is from AzureAD module). You need to call the `Connect-AzureAD` cmdlet before running the `Get-AzureADUser` cmdlet.
+> You can get the Microsoft Entra principal object ID of a user by running the [Get-AzureADUser](/powershell/module/azuread/get-azureaduser) cmdlet (which is from AzureAD module). You need to call the `Connect-AzureAD` cmdlet before running the `Get-AzureADUser` cmdlet.
 
 Run the `Get-AdminFlowOwnerRole` cmdlet again to verify the new owner is in the list.
 
@@ -64,12 +64,12 @@ Run the `Get-AdminFlowOwnerRole` cmdlet again to verify the new owner is in the 
 Get a list of flows created by a given user by running the following cmdlet, and then apply the above section to fix every flow on the list.
 
 ```powershell
-Get-AdminFlow -EnvironmentName <env name> -CreatedBy <user AAD object id>
+Get-AdminFlow -EnvironmentName <env name> -CreatedBy <user-object-id>
 ```
 
 ### Listing all orphaned flows in an environment
 
-To get all flows that don't have valid users, loop through all flows in one environment, and verify there's at least one owner or co-owner that exists in AAD. The following script provides an example:
+To get all flows that don't have valid users, loop through all flows in one environment, and verify there's at least one owner or co-owner that exists in Microsoft Entra ID. The following script provides an example:
 
 ```powershell
 Connect-AzureAD

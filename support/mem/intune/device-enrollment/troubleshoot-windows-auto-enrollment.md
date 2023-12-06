@@ -18,7 +18,7 @@ Before you start troubleshooting, it's best to verify that everything is configu
 
   :::image type="content" source="media/troubleshoot-windows-auto-enrollment/intune-license.png" alt-text="Screenshot shows options to verify Intune license." lightbox="media/troubleshoot-windows-auto-enrollment/intune-license.png":::
 
-- Verify that auto-enrollment is enabled for all users who will enroll the devices in Intune. For more information, see [Azure AD and Microsoft Intune: Automatic MDM enrollment in the new Portal](/windows/client-management/mdm/azure-ad-and-microsoft-intune-automatic-mdm-enrollment-in-the-new-portal).
+- Verify that auto-enrollment is enabled for all users who will enroll the devices in Intune. For more information, see [Microsoft Entra ID and Microsoft Intune: Automatic MDM enrollment in the new Portal](/windows/client-management/mdm/azure-ad-and-microsoft-intune-automatic-mdm-enrollment-in-the-new-portal).
 
   :::image type="content" source="media/troubleshoot-windows-auto-enrollment/verify-auto-enrollment.png" alt-text="Screenshot shows options to verify auto-enrollment." lightbox="media/troubleshoot-windows-auto-enrollment/verify-auto-enrollment.png"::::::
 
@@ -28,7 +28,7 @@ Before you start troubleshooting, it's best to verify that everything is configu
 
 - Verify that the device is running Windows 10, version 1709 or a later version.
 
-- Verify that the devices are set to **hybrid Azure AD joined**. This setting means that the devices are both domain-joined and Azure AD-joined.
+- Verify that the devices are set to **Microsoft Entra hybrid joined**. This setting means that the devices are both domain-joined and Microsoft Entra joined.
 
   To verify the settings, run `dsregcmd /status` at the command line. Then, verify the following status values in the output:
 
@@ -45,27 +45,27 @@ Before you start troubleshooting, it's best to verify that everything is configu
      AzureAdPrt: YES
      ```
 
-   You can find this same information in the list of Azure AD-joined devices:
+   You can find this same information in the list of Microsoft Entra joined devices:
 
-     :::image type="content" source="media/troubleshoot-windows-auto-enrollment/ad-joined-devices.png" alt-text="Screenshot shows the list of Azure AD-joined devices.":::
+     :::image type="content" source="media/troubleshoot-windows-auto-enrollment/ad-joined-devices.png" alt-text="Screenshot shows the list of Microsoft Entra joined devices.":::
 
-- Both **Microsoft Intune** and **Microsoft Intune Enrollment** might be listed under **Mobility (MDM and MAM)** in the Azure AD blade. If both are present, make sure that you configure the auto-enrollment settings under **Microsoft Intune**.
+- Both **Microsoft Intune** and **Microsoft Intune Enrollment** might be listed under **Mobility (MDM and MAM)** in the Microsoft Entra blade. If both are present, make sure that you configure the auto-enrollment settings under **Microsoft Intune**.
 
 - Verify that the following Group Policy policy setting is successfully deployed to all devices that should be enrolled in Intune:
 
-   **Computer Configuration** > **Policies** > **Administrative Templates** > **Windows Components** > **MDM** > **Enable automatic MDM enrollment using default Azure AD credentials**
+   **Computer Configuration** > **Policies** > **Administrative Templates** > **Windows Components** > **MDM** > **Enable automatic MDM enrollment using default Microsoft Entra credentials**
 
    You can contact your domain administrators to verify that the Group Policy policy setting is deployed successfully.
 
 - Make sure that the device isn't enrolled in Intune by using the classic PC agent.
-- Verify the following settings in Azure AD and Intune:
+- Verify the following settings in Microsoft Entra ID and Intune:
 
-  **In Azure AD Device settings:**
+  **In Microsoft Entra Device settings:**
 
-   :::image type="content" source="media/troubleshoot-windows-auto-enrollment/device-setting.png" alt-text="Screenshot shows the Azure AD Device settings.":::
+   :::image type="content" source="media/troubleshoot-windows-auto-enrollment/device-setting.png" alt-text="Screenshot shows the Microsoft Entra Device settings.":::
 
-  - The **Users may join devices to Azure AD** setting is set to **All**.
-  - The number of devices that a user has in Azure AD doesn't exceed the **Maximum number of devices per user** quota.
+  - The **Users may join devices to Microsoft Entra ID** setting is set to **All**.
+  - The number of devices that a user has in Microsoft Entra ID doesn't exceed the **Maximum number of devices per user** quota.
   
   **In Intune enrollment restrictions:**
 
@@ -93,13 +93,13 @@ Event ID 75 isn't logged in the following situations:
   
 ## Troubleshoot the auto-enrollment task
 
-The auto-enrollment process is triggered by the following task: **Schedule created by enrollment client for automatically enrolling in MDM from AAD**
+The auto-enrollment process is triggered by the following task: **Schedule created by enrollment client for automatically enrolling in MDM from Microsoft Entra ID**
 
 This task is located under **Microsoft** > **Windows** > **EnterpriseMgmt** in Task Scheduler.
 
   :::image type="content" source="media/troubleshoot-windows-auto-enrollment/trigger.png" alt-text="Screenshot shows the enrollment wasn't triggered." lightbox="media/troubleshoot-windows-auto-enrollment/trigger.png":::
 
-This task is created when the **Enable automatic MDM enrollment using default Azure AD credentials** Group Policy policy setting is successfully deployed to the target device. The task is scheduled to run every 5 minutes during one day.
+This task is created when the **Enable automatic MDM enrollment using default Microsoft Entra credentials** Group Policy policy setting is successfully deployed to the target device. The task is scheduled to run every 5 minutes during one day.
 
 To verify that the task is triggered and completed, check the task scheduler event logs Event Viewer (Applications and Services Logs > Microsoft > Windows > Task Scheduler > Operational): 
 
@@ -109,7 +109,7 @@ To verify that the task is triggered and completed, check the task scheduler eve
    > [!NOTE]
    > You can use the task scheduler log to check whether auto-enrollment is triggered. However, you can't use the log to determine whether auto-enrollment succeeded.
 
-The **Schedule created by enrollment client for automatically enrolling in MDM from AAD** task may not start in the following situations:
+The **Schedule created by enrollment client for automatically enrolling in MDM from Microsoft Entra ID** task may not start in the following situations:
 
 - The device is already enrolled in another MDM solution. In this case, Event ID 7016 together with error code 2149056522 is logged in the **Applications and Services Logs** > **Microsoft** > **Windows** > **Task Scheduler** > **Operational** event log.
 

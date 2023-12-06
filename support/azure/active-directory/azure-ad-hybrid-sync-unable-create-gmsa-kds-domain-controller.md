@@ -1,18 +1,18 @@
 ---
-title: Azure AD Hybrid Sync Agent Installation Issues - Unable to create gMSA because KDS may not be running on domain controller
-description: This troubleshooting guide focuses on when you repeatedly can't install the service account. It unblocks you to install the Azure AD Connect Provisioning Agent.
+title: Microsoft Entra Hybrid Sync Agent Installation Issues - Unable to create gMSA because KDS may not be running on domain controller
+description: This troubleshooting guide focuses on when you repeatedly can't install the service account. It unblocks you to install the Microsoft Entra Connect Provisioning Agent.
 ms.date: 10/13/2021
 ms.service: active-directory
 ms.subservice: hybrid
 ---
 
-# Azure AD Hybrid Sync Agent Installation Issues - Unable to create gMSA because KDS may not be running on domain controller
+# Microsoft Entra Hybrid Sync Agent Installation Issues - Unable to create gMSA because KDS may not be running on domain controller
 
-This troubleshooting guide focuses on when you can't install the service account after many retries. This situation blocks you from installing the Azure AD Connect Provisioning Agent.
+This troubleshooting guide focuses on when you can't install the service account after many retries. This situation blocks you from installing the Microsoft Entra Connect Provisioning Agent.
 
 ## Prerequisites
 
-To install *Cloud Provisioning Agent*, the following prerequisites are required: [Prerequisites for Azure AD Connect cloud sync](/azure/active-directory/cloud-sync/how-to-prerequisites).
+To install *Cloud Provisioning Agent*, the following prerequisites are required: [Prerequisites for Microsoft Entra Connect cloud sync](/azure/active-directory/cloud-sync/how-to-prerequisites).
 
 ## Unable to create gMSA because KDS may not be running on domain controller
 

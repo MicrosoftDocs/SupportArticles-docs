@@ -135,7 +135,7 @@ items:
         tocHref: /troubleshoot/azure/microsoft-entra/
         topicHref: /troubleshoot/azure/microsoft-entra/welcome-microsoft-entra
         items:
-        - name: Azure Active Directory
+        - name: Microsoft Entra ID
           tocHref: /troubleshoot/azure/active-directory/
           topicHref: /troubleshoot/azure/active-directory/welcome-azure-ad
       - name: Site Recovery
@@ -164,12 +164,21 @@ items:
       - name: Dynamics 365 Finance
         tocHref: /troubleshoot/dynamics-365/finance/
         topicHref: /troubleshoot/dynamics-365/finance/welcome-finance
+      - name: Dynamics 365 Field Service
+        tocHref: /troubleshoot/dynamics-365/field-service/
+        topicHref: /troubleshoot/dynamics-365/field-service/welcome-field-service
       - name: Dynamics 365 Sales
         tocHref: /troubleshoot/dynamics-365/sales/
         topicHref: /troubleshoot/dynamics-365/sales/welcome-sales
       - name: Dynamics 365 Supply Chain Management
         tocHref: /troubleshoot/dynamics-365/supply-chain/
         topicHref: /troubleshoot/dynamics-365/supply-chain/welcome-supply-chain
+      - name: Dynamics 365 Guides
+        tocHref: /troubleshoot/dynamics-365/guides/
+        topicHref: /troubleshoot/dynamics-365/guides/welcome-guides
+      - name: Dynamics 365 Remote Assist
+        tocHref: /troubleshoot/dynamics-365/remote-assist/
+        topicHref: /troubleshoot/dynamics-365/remote-assist/welcome-remote-assist
 
     - name: Microsoft Power Platform
       tocHref: /troubleshoot/power-platform/

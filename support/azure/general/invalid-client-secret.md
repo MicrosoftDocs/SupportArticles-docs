@@ -25,7 +25,7 @@ When you validate the credential in the CycleCloud portal, you see the following
 
 To resolve this issue, reset the client secret keys in the Azure portal.
 
-1. Sign in to the Azure portal and navigate to the Azure Active Directory service.
+1. Sign in to the Azure portal and navigate to the Microsoft Entra service.
 2. Select the application name under the **App Registrations**.
 
    :::image type="content" source="media/invalid-client-secret/select-application-name.png" alt-text="Screenshot of an application name." lightbox="media/invalid-client-secret/select-application-name.png":::

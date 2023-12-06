@@ -1,21 +1,21 @@
 ---
-title: Azure Active Directory Connect services don't start
-description: Describes an issue that prevents Azure Active Directory Connect services from starting. Provides a resolution.
+title: Microsoft Entra Connect services don't start
+description: Describes an issue that prevents Microsoft Entra Connect services from starting. Provides a resolution.
 ms.date: 05/26/2022
 ms.reviewer: riantu, nualex, reviei, v-leedennis
 ms.service: active-directory
 ms.subservice: enterprise-users
 ---
-# One or more Azure Active Directory Connect services don't start
+# One or more Microsoft Entra Connect services don't start
 
-This article describes an issue that prevents Microsoft Azure Active Directory (Azure AD) Connect services from starting.
+This article describes an issue that prevents Microsoft Entra Connect services from starting.
 
-_Original product version:_ &nbsp; Azure Active Directory, Office 365 Identity Management  
+_Original product version:_ &nbsp; Microsoft Entra ID, Office 365 Identity Management  
 _Original KB number:_ &nbsp; 2995030
 
 ## Symptoms
 
-You discover that one or more Azure AD Connect services don't start. For example, the Microsoft Azure AD Sync service (ADSync) doesn't start.
+You discover that one or more Microsoft Entra Connect services don't start. For example, the Microsoft Azure AD Sync service (ADSync) doesn't start.
 
 ## Solution 1: Set User Rights Assignment permissions within Group Policy
 

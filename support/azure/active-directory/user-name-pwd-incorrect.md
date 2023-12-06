@@ -8,7 +8,7 @@ ms.subservice: authentication
 ---
 # Error when you run the Azure Active Directory Sync tool Configuration Wizard: The user name or password is incorrect
 
-_Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Azure Active Directory, Microsoft Intune, Office 365 Identity Management  
+_Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Microsoft Entra ID, Microsoft Intune, Office 365 Identity Management  
 _Original KB number:_ &nbsp; 2965539
 
 ## Symptoms

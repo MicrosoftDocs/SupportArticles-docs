@@ -1,7 +1,7 @@
 ---
 title: Can't access shared folders from File Explorer
 description: Provides troubleshooting for the issue that shared folders can't be accessed from File Explorer in Windows 10.
-ms.date: 03/04/2021
+ms.date: 11/23/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -132,3 +132,14 @@ Instead of obtaining an IP address automatically, specify an IP address. Follow 
 6. In the **Alternate DNS server** box, type the IP address of the DNS computer that you want to use if the preferred DNS server becomes unavailable.
 7. Select **OK**. In the **Local Area Connection Properties** dialog box, select **Close**.
 8. In the **Local Area Connection Status** dialog box, select **Close**.
+
+## System error 53 has occurred. The network path was not found
+
+When you try to access Server Message Block (SMB) file shares, you receive the following error message:
+> System error 53 has occurred. The network path was not found.
+
+In network traces, the server doesn't send a connection establishment request (TCP SYN packet). However, you can use [telnet](/windows-server/administration/windows-commands/telnet) to connect to the server via TCP port 445.
+
+This issue occurs if the **TCP/IP NetBIOS Helper** service is stopped or if the service is running as **Local System** but not **Local Service**.
+
+To resolve this issue, make sure that the **TCP/IP NetBIOS Helper** service is running as a **Local Service**.

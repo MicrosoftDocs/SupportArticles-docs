@@ -66,7 +66,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id=13546338>[13546338](#13546338) </a> | [FIX: High CPU usage causes performance issues in SQL Server 2016 and 2017 (KB3195888)](https://support.microsoft.com/help/3195888) | SQL Server Engine | SQL OS | All |
 | <a id=13502382>[13502382](#13502382) </a> | Fixes self-deadlock with database log flush queue spinlock.| SQL Server Engine| SQL OS | Linux |
 | <a id=13563530>[13563530](#13563530) </a> | Executing `sys.fn_xe_file_target_read_file` may cause SQL Server to stop responding. | SQL Server Engine | SQL OS | Windows |
-| <a id=13545675>[13545675](#13545675) </a> | [FIX: Script downgrade may fail when Cumulative Update 20 (CU20) is uninstalled from SQL server 2017 (KB4567837)](https://support.microsoft.com/help/4567837)| SQL Setup | Uninstall | Windows |
+| <a id=13545675>[13545675](#13545675) </a> | [FIX: Script downgrade may fail when Cumulative Update 20 (CU20) is uninstalled from SQL Server 2017 (KB4567837)](https://support.microsoft.com/help/4567837)| SQL Setup | Uninstall | Windows |
 
 ## How to obtain or download this or the latest cumulative update package
 

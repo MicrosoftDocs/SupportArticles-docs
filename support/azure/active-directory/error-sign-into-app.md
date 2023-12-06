@@ -10,7 +10,7 @@ ms.subservice: B2C
 
 This article describes an error that occurs when you try to sign in to an app that's set up for Azure AD B2C.
 
-_Original product version:_ &nbsp; Azure Active Directory  
+_Original product version:_ &nbsp; Microsoft Entra ID  
 _Original KB number:_ &nbsp; 3092587
 
 ## Symptoms

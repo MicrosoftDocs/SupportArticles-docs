@@ -16,6 +16,8 @@ items:
           href: create-and-use-apps/filter-blank-records.md
         - name: Lookup doesn't filter records for particular entity
           href: create-and-use-apps/lookup-does-not-filter-entity-records.md
+        - name: Refresh All doesn't work after exporting app data to a dynamic worksheet
+          href: create-and-use-apps/export-dynamic-worksheet-refresh-all.md
         - name: Ribbons and Command bar
           items:
             - name: Ribbon issues
@@ -42,12 +44,17 @@ items:
               href: create-and-use-apps/no-navigation-when-selecting-button.md
     - name: Dataverse
       items:
+        - name: Bulk operation errors
+          href: dataverse/bulk-operation-errors.md
         - name: Clean up inherited access
           href: dataverse/cleanup-inherited-access.md
+        - name: Dataverse client errors
+          href: dataverse/client-errors.md
         - name: Dataverse plug-ins
           href: dataverse/dataverse-plug-ins-errors.md
         - name: Web API client errors
           href: dataverse/web-api-client-errors.md
+        
     - name: Isolate and troubleshoot common issues
       items:
         - name: Common issues and resolutions
@@ -62,6 +69,10 @@ items:
           href: isolate-and-troubleshoot-common-issues/isolate-canvas-app-issues.md
         - name: Isolate issues in model-driven apps
           href: isolate-and-troubleshoot-common-issues/isolate-model-app-issues.md
+        - name: Troubleshoot date and time issues in canvas apps
+          href: isolate-and-troubleshoot-common-issues/troubleshoot-canvas-app-date-time-issues.md
+        - name: Troubleshoot date and time issues in model-driven apps
+          href: isolate-and-troubleshoot-common-issues/troubleshoot-model-driven-app-date-time-issues.md
         - name: Troubleshoot Power Query
           href: isolate-and-troubleshoot-common-issues/troubleshoot-power-query-issues.md
         - name: Troubleshoot startup issues for Power Apps
@@ -110,7 +121,7 @@ items:
           href: solutions/primaryname-attribute-not-found.md
         - name: Solution import or app installation fails due to missing privileges
           href: solutions/install-failure-priviledge-not-assigned.md
-        - name: Solution checker enforcement in Managed Environments (preview) blocks or warns on import
+        - name: Solution checker enforcement in Managed Environments blocks or warns on import
           href: solutions/solution-checker-enforcement-import-issues.md
         - name: '"Solution cannot be deleted due to dependencies" error'
           href: solutions/solution-cannot-be-deleted-due-to-dependencies.md

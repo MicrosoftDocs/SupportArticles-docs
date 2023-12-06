@@ -10,11 +10,11 @@ ms.subservice: aad-general
 
 This article discusses how to enable and disable a trace for the Microsoft Online Services Sign-in Assistant. The log files that are generated can help troubleshoot issues that may occur when you use the Sign-in Assistant in a Microsoft Office 365 environment.
 
-_Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Azure Active Directory, Microsoft Intune, Azure Backup, Office 365 User and Domain Management  
+_Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Microsoft Entra ID, Microsoft Intune, Azure Backup, Office 365 User and Domain Management  
 _Original KB number:_ &nbsp; 2433327
 
 > [!NOTE]
-> Use this article only with applications that use the Microsoft Online Services Sign-In Assistant to assist in authentication to Azure Active Directory (Azure AD).
+> Use this article only with applications that use the Microsoft Online Services Sign-In Assistant to assist in authentication to Microsoft Entra ID.
 
 > [!IMPORTANT]
 > Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.

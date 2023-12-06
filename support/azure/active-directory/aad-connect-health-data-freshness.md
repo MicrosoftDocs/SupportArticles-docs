@@ -1,34 +1,34 @@
 ---
-title: Troubleshoot data freshness alerts in Azure AD Connect Health
-description: Troubleshoot data freshness alerts in Azure Active Directory (Azure AD) Connect Health. Use agents for Sync, Azure AD Domain Services, and AD Federation Services.
-ms.date: 01/27/2021
+title: Troubleshoot data freshness alerts in Microsoft Entra Connect Health
+description: Troubleshoot data freshness alerts in Microsoft Entra Connect Health. Use agents for Sync, Microsoft Entra Domain Services, and AD Federation Services.
+ms.date: 11/09/2023
 ms.reviewer: brheld, calazlo, v-leedennis
 ms.service: active-directory
 ms.subservice: hybrid
-#Customer intent: As an Azure AD Connect Health Service user, I want to troubleshoot data freshness alerts so that I can fix issues with Active Directory Federation Services (AD FS).
+#Customer intent: As a Microsoft Entra Connect Health Service user, I want to troubleshoot data freshness alerts so that I can fix issues with Active Directory Federation Services (AD FS).
 ---
-# Troubleshoot data freshness alerts in Azure AD Connect Health
+# Troubleshoot data freshness alerts in Microsoft Entra Connect Health
 
-This article offers common diagnostic fixes for the data freshness alert "Health service data is not up to date", which is generated when the Azure Active Directory (Azure AD) Connect Health Service hasn't received data in the last two hours. The alert occurs in the Health Service for the following services:
+This article offers common diagnostic fixes for the data freshness alert "Health service data is not up to date", which is generated when the Microsoft Entra Connect Health Service hasn't received data in the last two hours. The alert occurs in the Health Service for the following services:
 
 - Azure AD Sync service
-- Azure AD Domain Services (Azure AD DS)
+- Microsoft Entra Domain Services
 - Active Directory Federation Services (AD FS)
 
 ## Prerequisites
 
-- [Azure AD Connect](https://www.microsoft.com/download/details.aspx?id=47594).
-- The [Azure AD Connect Health agent for AD DS](https://go.microsoft.com/fwlink/?LinkID=820540).
-- The [Azure AD Connect Health agent for Azure AD FS](https://go.microsoft.com/fwlink/?LinkID=518973).
+- [Microsoft Entra Connect](https://www.microsoft.com/download/details.aspx?id=47594).
+- The [Microsoft Entra Connect Health agent for AD DS](https://go.microsoft.com/fwlink/?LinkID=820540).
+- The [Microsoft Entra Connect Health agent for Active Directory Federation Services](https://go.microsoft.com/fwlink/?LinkID=518973).
 - The [PsExec](/sysinternals/downloads/psexec) tool.
 
 ## Symptoms
 
 To view the data freshness alert, take the following steps:
 
-1. In [the Azure portal](https://portal.azure.com), search for and select **Azure AD Connect Health**.
+1. In [the Azure portal](https://portal.azure.com), search for and select **Microsoft Entra Connect Health**.
 
-1. In the **Azure Active Directory Connect Health | Quick start** menu pane, select **AD DS Services**.
+1. In the **Microsoft Entra Connect Health | Quick start** menu pane, select **AD DS Services**.
 
 1. Select your domain name, and then select **Alerts**.
 
@@ -255,15 +255,15 @@ This section includes troubleshooting steps for fixing data type issues.
 
 | Data type | Troubleshooting steps |
 | --------- | --------------------- |
-| PerfCounter | <ul><li>Make sure that the performance counters exist.</li><li>Make sure that the Azure AD Connect Health Sync Monitoring Service is running.</li></ul> |
-| AadSyncService&#8209;Connectors<br/>AadSyncService&#8209;GlobalConfigurations<br/>AadSyncService&#8209;RunProfileResults<br/>AadSyncService&#8209;ServiceConfigurations<br/>AadSyncService&#8209;ServiceStatus<br/>AadSyncService&#8209;SynchronizationRules | Make sure that the Azure AD Connect Health Sync Insights Service is running. |
+| PerfCounter | <ul><li>Make sure that the performance counters exist.</li><li>Make sure that the Microsoft Entra Connect Health Sync Monitoring Service is running.</li></ul> |
+| AadSyncService&#8209;Connectors<br/>AadSyncService&#8209;GlobalConfigurations<br/>AadSyncService&#8209;RunProfileResults<br/>AadSyncService&#8209;ServiceConfigurations<br/>AadSyncService&#8209;ServiceStatus<br/>AadSyncService&#8209;SynchronizationRules | Make sure that the Microsoft Entra Connect Health Sync Insights Service is running. |
 
 ### [AD DS](#tab/azure-ad-ds)
 
 | Data type | Troubleshooting steps |
 | --------- | --------------------- |
-| PerfCounter | <ul><li>Make sure that the performance counters exist.</li><li>Make sure that the Azure AD Connect Health AD DS Monitoring Service is running.</li></ul> |
-| Adds&#8209;TopologyInfo&#8209;Json<br/>Common&#8209;TestData&#8209;Json | <ul><li>Make sure that the Azure AD Connect Health AD DS Insights Service is running.</li><li>Make sure that the Azure AD Connect Health AD DS Monitoring Service is running.</li></ul> |
+| PerfCounter | <ul><li>Make sure that the performance counters exist.</li><li>Make sure that the Microsoft Entra Connect Health AD DS Monitoring Service is running.</li></ul> |
+| Adds&#8209;TopologyInfo&#8209;Json<br/>Common&#8209;TestData&#8209;Json | <ul><li>Make sure that the Microsoft Entra Connect Health AD DS Insights Service is running.</li><li>Make sure that the Microsoft Entra Connect Health AD DS Monitoring Service is running.</li></ul> |
 
 ### [AD FS](#tab/ad-fs)
 
@@ -271,9 +271,9 @@ Begin by following the instructions in [Connect Health for AD FS data freshness 
 
 | Data type | Troubleshooting steps |
 | --------- | --------------------- |
-| PerfCounter | <ul><li>Make sure that the performance counters exist.</li><li>Make sure that the Azure AD Connect Health AD FS Monitoring Service is running.</li></ul> |
-| TestResult | <ul><li>Make sure that the Azure AD Connect Health AD FS Diagnostics Service is running.</li><li>Make sure that the Azure AD Connect Health AD FS Monitoring Service is running. |
-| Adfs&#8209;UsageMetrics | Make sure that the Azure AD Connect Health AD FS Insights Service is running. |
+| PerfCounter | <ul><li>Make sure that the performance counters exist.</li><li>Make sure that the Microsoft Entra Connect Health AD FS Monitoring Service is running.</li></ul> |
+| TestResult | <ul><li>Make sure that the Microsoft Entra Connect Health AD FS Diagnostics Service is running.</li><li>Make sure that the Microsoft Entra Connect Health AD FS Monitoring Service is running. |
+| Adfs&#8209;UsageMetrics | Make sure that the Microsoft Entra Connect Health AD FS Insights Service is running. |
 
 ---
 
@@ -300,15 +300,15 @@ To collect Monitoring Agent logs, follow these steps:
 
 1. Stop the Monitoring Service for the appropriate service type.
 
-    For example, for AD FS, select **Azure AD Connect Health AD FS Monitoring Service** from the list of services, then select the **Stop Service** icon.
+    For example, for AD FS, select **Microsoft Entra Connect Health AD FS Monitoring Service** from the list of services, then select the **Stop Service** icon.
 
 1. Change the current directory to the appropriate directory according to the service type. Then, open the configuration file of the Monitoring Agent service executable in a text editor (such as Notepad) for editing. The path name and executable file name for each service type is shown in the following table. The configuration file name simply appends the `.config` file name extension to the end of the executable file name.
 
     | Service type | Path                                                                       | Executable                                                      |
     | ------------ | -------------------------------------------------------------------------- | --------------------------------------------------------------- |
     | Sync         | *C:\\Program Files\\Microsoft Azure AD Connect Health Sync Agent\\Monitor* | *Microsoft.Identity.Health.AadSync.MonitoringAgent.Startup.exe* |
-    | AD DS        | *C:\\Program Files\\Azure Ad Connect Health Adds Agent\\Monitor*           | *Microsoft.Identity.Health.Adds.MonitoringAgent.Startup.exe*    |
-    | AD FS        | *C:\\Program Files\\Azure Ad Connect Health Adfs Agent\\Monitor*           | *Microsoft.Identity.Health.Adfs.MonitoringAgent.Startup.exe*    |
+    | AD DS        | *C:\\Program Files\\Azure AD Connect Health Adds Agent\\Monitor*           | *Microsoft.Identity.Health.Adds.MonitoringAgent.Startup.exe*    |
+    | AD FS        | *C:\\Program Files\\Azure AD Connect Health Adfs Agent\\Monitor*           | *Microsoft.Identity.Health.Adfs.MonitoringAgent.Startup.exe*    |
 
     For example, for AD FS, enter the following commands:
 
@@ -343,15 +343,15 @@ To collect Insights Agent logs, follow these steps:
 
 1. Stop the Insights service for the appropriate service type.
 
-    For example, for AD FS, select **Azure AD Connect Health AD FS Insights Service** from the list of services, then select the **Stop Service** icon.
+    For example, for AD FS, select **Microsoft Entra Connect Health AD FS Insights Service** from the list of services, then select the **Stop Service** icon.
 
 1. Change the current directory to the appropriate directory according to the service type. Then, run the Insights Agent service executable by using the `/console` parameter and direct its output to a log file (*insights.log*). The path name and executable file name for each service type is shown in the following table.
 
     | Service type | Path                                                                        | Executable                                              |
     | ------------ | --------------------------------------------------------------------------- | ------------------------------------------------------- |
     | Sync         | *C:\\Program Files\\Microsoft Azure AD Connect Health Sync Agent\\Insights* | *Microsoft.Identity.AadConnect.Health.AadSync.Host.exe* |
-    | AD DS        | *C:\\Program Files\\Azure Ad Connect Health Adds Agent\\Insights*           | *Microsoft.Identity.Health.Adds.InsightsService.exe*    |
-    | AD FS        | *C:\\Program Files\\Azure Ad Connect Health Adfs Agent\\Insights*           | *Microsoft.Identity.Health.Adfs.InsightsService.exe*    |
+    | AD DS        | *C:\\Program Files\\Azure AD Connect Health Adds Agent\\Insights*           | *Microsoft.Identity.Health.Adds.InsightsService.exe*    |
+    | AD FS        | *C:\\Program Files\\Azure AD Connect Health Adfs Agent\\Insights*           | *Microsoft.Identity.Health.Adfs.InsightsService.exe*    |
 
     For example, for AD FS, enter the following commands:
 
@@ -370,7 +370,7 @@ To collect Diagnostics Agent logs for AD FS, follow these steps:
 
 1. Stop the Diagnostics service for the appropriate service type.
 
-    For example, for AD FS, select **Azure AD Connect Health AD FS Diagnostics Service** from the list of services, then select the **Stop Service** icon.
+    For example, for AD FS, select **Microsoft Entra Connect Health AD FS Diagnostics Service** from the list of services, then select the **Stop Service** icon.
 
 1. Change the current directory to the diagnostics directory for AD FS. Then, run the Diagnostics Agent service executable by using the `-Debug` parameter, and direct its output to a log file (*diagnostics.log*).
 

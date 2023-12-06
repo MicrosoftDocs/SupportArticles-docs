@@ -89,7 +89,7 @@ To resolve this issue, install [KB2919355](https://support.microsoft.com/help/29
 
 When registering a server using *ServerRegistration.exe*, subscriptions are missing when you select the **Azure Subscription** drop-down.
 
-This issue occurs because *ServerRegistration.exe* will only retrieve subscriptions from the first five Azure AD tenants.
+This issue occurs because *ServerRegistration.exe* will only retrieve subscriptions from the first five Microsoft Entra tenants.
 
 To increase the Server Registration tenant limit on the server, create a DWORD value called `ServerRegistrationTenantLimit` under `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Azure\StorageSync` with a value greater than 5.
 

@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot the Enrollment Status Page (ESP)
-description: General troubleshooting guide for the Enrollment Status Page (ESP) for Windows Autopilot or OOBE for Azure AD Join.
+description: General troubleshooting guide for the Enrollment Status Page (ESP) for Windows Autopilot or OOBE for Microsoft Entra join.
 author: helenclu
 ms.author: luche
 ms.reviewer: kaushika, ybao
@@ -11,7 +11,7 @@ ms.custom: sap:Windows enrollment
 
 # Troubleshooting the Enrollment Status Page
 
-This article gives guidance for troubleshooting the Enrollment Status Page (ESP). The ESP can be used as part of any Windows Autopilot provisioning scenario. It can also be used separately from Windows Autopilot as part of the default out-of-box experience (OOBE) for Azure Active Directory (Azure AD) Join. For more information about how to configure the ESP, see [Set up the Enrollment Status Page](/mem/intune/enrollment/windows-enrollment-status).
+This article gives guidance for troubleshooting the Enrollment Status Page (ESP). The ESP can be used as part of any Windows Autopilot provisioning scenario. It can also be used separately from Windows Autopilot as part of the default out-of-box experience (OOBE) for Microsoft Entra join. For more information about how to configure the ESP, see [Set up the Enrollment Status Page](/mem/intune/enrollment/windows-enrollment-status).
 
 To troubleshoot ESP issues, it's important to get more information about the ESP settings that are received by the device, and the applications and policies that are tracked at each stage. All ESP settings and tracking information are logged in the device registry. In this article, we'll show you how to collect MDM diagnostic log files and look for information in the registry.
 
@@ -233,7 +233,7 @@ This subkey is created during the account setup phase if the device setup phase 
 
 To guarantee that applications are installed and tracked by using the ESP, make sure that the following conditions are true:
 
-- The apps are assigned to an Azure AD group that contains the device (for device-targeted apps) or the user (for user-targeted apps), by using a **required** assignment. (Device-targeted apps are tracked during the device setup phase, and user-targeted apps are tracked during the user setup phase.)
+- The apps are assigned to a Microsoft Entra group that contains the device (for device-targeted apps) or the user (for user-targeted apps), by using a **required** assignment. (Device-targeted apps are tracked during the device setup phase, and user-targeted apps are tracked during the user setup phase.)
 - You either specify **Block device use until all apps and profiles are installed** or include the app in the **Block device use until these required apps are installed** list.
 - The apps install in device context, and they have no user-context applicability rules.
 
@@ -257,4 +257,3 @@ ESP policy is set on a device at the time of enrollment. To disable the user ESP
   OMA-URI:  ./Vendor/MSFT/DMClient/Provider/MS DM Server/FirstSyncStatus/SkipUserStatusPage  
   Data type:  Boolean  
   Value:  True  
-

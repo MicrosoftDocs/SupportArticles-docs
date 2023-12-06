@@ -43,7 +43,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | Bug reference | Description | Fix area | Component | Platform |
 |---|---|---|---|---|
 | <a id="13410674">[13410674](#13410674)</a> | [FIX: ISDBUpgradeWizard.exe throws error when you try to upgrade SSISDB after restoring from earlier versions in SQL Server 2019 (KB4547890)](https://support.microsoft.com/help/4547890) | Integration Services | DTS | Windows |
-| <a id="13410658">[13410658](#13410658)</a> | Allow DTSWizard to support AAD when the selected driver is MSOLEDBSQL. | Integration Services | Integration Services | Windows |
+| <a id="13410658">[13410658](#13410658)</a> | Allow DTSWizard to support Microsoft Entra ID when the selected driver is MSOLEDBSQL. | Integration Services | Integration Services | Windows |
 | <a id="13405530">[13405530](#13405530)</a> | "The JSON DDL request is missing the database name" error occurs when you delete the database property from the descriptive table under the JSON code in SQL Server 2019. | Openness and Interoperability | Protocols | Windows |
 | <a id="13378659">[13378659](#13378659)</a> | [FIX: sp_execute_external_script doesn't run when you install SQL Server 2019 with Machine Learning Services and a customized Shared feature directory (KB4540121)](https://support.microsoft.com/help/4540121) | SQL Server Engine | Extensibility | Windows |
 | <a id="13404121">[13404121](#13404121)</a> | [FIX: Fail to access openmpi path when running rx jobs in parallel mode with Revo package in Linux SQL Server 2019 (KB4548131)](https://support.microsoft.com/help/4548131) | SQL Server Engine | Extensibility | Linux |

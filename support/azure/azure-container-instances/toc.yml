@@ -1,5 +1,15 @@
+
 items:
 - name: Welcome
   href: welcome-container-instances.yml
 - name: Fails to pull ACR images by using Managed Identity authentication
   href: acr-image-pull-failures-managed-identity.md
+
+- name: Welcome
+  href: welcome-container-instances.yml
+
+- name: Troubleshoot create operations
+  items:
+  - name: DeploymentFailed - InaccessibleImage error code
+    href: inaccessible-image.md
+

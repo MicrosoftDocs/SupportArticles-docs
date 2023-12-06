@@ -6,27 +6,27 @@ ms.reviewer: jarrettr, nualex, v-leedennis
 ms.service: active-directory
 ms.subservice: enterprise-users
 keywords:
-#Customer intent: As an Azure Active Directory (Azure AD) administrator, I want to configure the Azure AD Connect Synchronization Service Manager so that users must have the appropriate encryption level to reset or change a password.
+#Customer intent: As a Microsoft Entra administrator, I want to configure the Microsoft Entra Connect Synchronization Service Manager so that users must have the appropriate encryption level to reset or change a password.
 ---
 # Troubleshoot error code 8023062C: Insecure password reset or change
 
-This article describes how to troubleshoot a password writeback error that occurs when Azure AD Connect tries to make a password change or reset in an insecure configuration. This situation occurs specifically when Azure AD Connect tries to do a password change or reset without having a 128-bit Transport Layer Security (TLS) or Secure Sockets Layer (SSL) connection.
+This article describes how to troubleshoot a password writeback error that occurs when Microsoft Entra Connect tries to make a password change or reset in an insecure configuration. This situation occurs specifically when Microsoft Entra Connect tries to do a password change or reset without having a 128-bit Transport Layer Security (TLS) or Secure Sockets Layer (SSL) connection.
 
 ## Symptoms
 
-When a user or administrator tries to change or reset a password in Azure AD, password writeback to the on-premises directory fails and returns an "8023062C (0x8023062c)" error code and the following error message:
+When a user or administrator tries to change or reset a password in Microsoft Entra ID, password writeback to the on-premises directory fails and returns an "8023062C (0x8023062c)" error code and the following error message:
 
 > The password could not be set because the server is not configured for insecure setting of passwords, or a 128 bit TLS or SSL connection is required.
 
 ## Cause
 
-[Microsoft Azure AD Connect](/azure/active-directory/hybrid/how-to-connect-install-roadmap) has been configured not to require that Lightweight Directory Access Protocol (LDAP) traffic be signed and encrypted.
+[Microsoft Entra Connect](/azure/active-directory/hybrid/how-to-connect-install-roadmap) has been configured not to require that Lightweight Directory Access Protocol (LDAP) traffic be signed and encrypted.
 
 ## Solution
 
 Make sure that the **Sign and Encrypt LDAP Traffic** setting is enabled in three places within Synchronization Service Manager by following these steps:
 
-1. Open the Synchronization Service Manager. To do this, open the **Start** menu, go to the **Azure AD Connect** group, and then select **Synchronization Service**.
+1. Open the Synchronization Service Manager. To do this, open the **Start** menu, go to the **Microsoft Entra Connect** group, and then select **Synchronization Service**.
 
 1. Select the **Connectors** tab, and then select the applicable Active Directory connector. In the **Actions** pane, select **Properties**.
 

@@ -289,7 +289,7 @@ This section describes each of the packages that are listed and their purposes. 
 
   Purpose
 
-  Microsoft® PowerPivot for Microsoft® Excel 2010 is a data analysis tool that delivers unmatched computational power directly within the software users already know and love - Microsoft® Excel. You can transform mass quantities of data with incredible speed into meaningful information to get the answers you need in seconds. You can effortlessly share your findings with others.
+  Microsoft&reg; PowerPivot for Microsoft&reg; Excel 2010 is a data analysis tool that delivers unmatched computational power directly within the software users already know and love - Microsoft&reg; Excel. You can transform mass quantities of data with incredible speed into meaningful information to get the answers you need in seconds. You can effortlessly share your findings with others.
 
 - **Master Data Services**  
 
@@ -346,11 +346,11 @@ This section describes each of the packages that are listed and their purposes. 
 | Fix area| A fix in this area can address issues related to (but not limited to) |
 |---|---|
 |Analysis Services (SSAS)|Issues or errors that are related to any operations or components of Analysis Services (for example, processing a cube, exceptions when you use analysis services components, and so on).|
-|Connectivity|Issues or errors that may occur when a program connects to SQL server that are caused by a bug or a problem with Client provider (such as System.Data, SQL OLE DB, and so on).|
+|Connectivity|Issues or errors that may occur when a program connects to SQL Server that are caused by a bug or a problem with Client provider (such as System.Data, SQL OLE DB, and so on).|
 |Data Quality Services (DQS)|Issues or errors when you use DQS or its components.|
 |High Availability|Always On, Clustering, Log shipping, Database mirroring, and so on|
 |Integration services (SSIS)|Issues or errors together with components that are related to SSIS (such as BI studio, SSIS service, and so on).|
-|Management Tools|Issues or errors when you use various SQL server tools (such as SQL Server management studio, Profiler, Database Engine Tuning Advisor and other SQL client tools).|
+|Management Tools|Issues or errors when you use various SQL Server tools (such as SQL Server management studio, Profiler, Database Engine Tuning Advisor and other SQL client tools).|
 |Master Data Services (MDS)|Issues or errors when you use MDS and its components.|
 |Reporting services (SSRS)|Issues or errors when you use Reporting services components (such as Report server, Report manager, Report designer, and so on).|
 |Setup and Install|Issues or errors for installing SQL Server or any of its components.|

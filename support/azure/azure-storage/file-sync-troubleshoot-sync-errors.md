@@ -4,7 +4,7 @@ description: Troubleshoot common issues with monitoring sync health and resolvin
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 10/13/2023
+ms.date: 12/05/2023
 ms.author: kendownie
 ms.custom: devx-track-azurepowershell
 ms.reviewer: v-weizhu
@@ -217,20 +217,9 @@ If a file or directory fails to sync due to an error, an event is logged in the 
 
 ### Handling unsupported characters
 
-If the *FileSyncErrorsReport.ps1* PowerShell script shows per-item sync errors due to unsupported characters (error code 0x8007007b, 0x80c80255, or 0x80070459), you should remove or rename the characters at fault from the respective file names. PowerShell will likely print these characters as question marks or empty rectangles since most of these characters have no standard visual encoding.
+Azure File Sync agent v17 supports all characters that are supported by the [NTFS file system](/windows/win32/fileio/naming-a-file) except invalid surrogate pairs. 
 
-> [!Note]  
-> The [Evaluation Tool](/azure/storage/file-sync/file-sync-planning#evaluation-cmdlet) can be used to identify characters that are not supported. If your dataset has several files with invalid characters, use the [ScanUnsupportedChars](https://github.com/Azure-Samples/azure-files-samples/tree/master/ScanUnsupportedChars) script to rename files which contain unsupported characters.
-
-The table below contains all of the unicode characters Azure File Sync doesn't yet support.
-
-| Character set | Character count |
-|---------------|-----------------|
-|0x00000000 - 0x0000001F (control characters) |32 |
-|<ul><li>0x00000022 (quotation mark)</li><li>0x0000002A (asterisk)</li><li>0x0000002F (forward slash)</li><li>0x0000003A (colon)</li><li>0x0000003C (less than)</li><li>0x0000003E (greater than)</li><li>0x0000003F (question mark)</li><li>0x0000005C (backslash)</li><li>0x0000007C (pipe or bar)</li></ul> |9 |
-| <ul><li>0x0000009D (`osc` operating system command)</li><li>0x00000090 (dcs device control string)</li><li>0x0000008F (ss3 single shift three)</li><li>0x00000081 (high octet preset)</li><li>0x0000007F (del delete)</li><li>0x0000008D (ri reverse line feed)</li></ul> | 6 |
-| 0x0000FFFE, 0x0000FFFF (specials) | 2 |
-| Files or directories that end with a period | 1 |
+If the portal or FileSyncErrorsReport.ps1 PowerShell script shows per-item sync errors due to unsupported characters (error code 0x8007007b, 0x80c80255, or 0x80070459), verify Azure File Sync agent v17 is installed on the server. If agent v17 is installed on the server and files are failing to sync due to invalid characters, use the [ScanUnsupportedChars](https://github.com/Azure-Samples/azure-files-samples/tree/master/ScanUnsupportedChars) script to rename files which contain unsupported characters.
 
 ### Common sync errors
 
@@ -511,18 +500,16 @@ Sync sessions fail with either of these errors when the Azure file share storage
 
 1. Navigate to the sync group within the Storage Sync Service.
 2. Select the cloud endpoint within the sync group.
-3. Note the Azure file share name in the opened pane.
-4. Select the linked storage account. If this link fails, the referenced storage account has been removed.
+3. Note the Azure file share name in the opened pane. Select the file share name to open the file share settings page in the storage account.
 
-    :::image type="content" source="media/file-sync-troubleshoot-sync-errors/file-share-inaccessible.png" alt-text="Screenshot that shows the cloud endpoint detail pane with a link to the storage account.":::
+    :::image type="content" source="media/file-sync-troubleshoot-sync-errors/cloud-endpoint-detail.png" alt-text="Screenshot showing the cloud endpoint detail pane with a link to the file share.":::
 
-5. Select **Files** to view the list of file shares.
-6. Select the ellipses (...) at the end of the row for the Azure file share referenced by the cloud endpoint.
-7. Verify the **Usage** is the **Quota** below. Note unless an alternate quota has been specified, the quota will match the [maximum size of the Azure file share](/azure/storage/files/storage-files-scale-targets?toc=/azure/storage/filesync/toc.json).
+4. Select the file share to get the details on the **Overview** page.
+5. Select **Edit quota** to verify the file share quota. Unless an alternate quota has been specified, the quota will match the [maximum size of the Azure file share](/azure/storage/files/storage-files-scale-targets?toc=/azure/storage/filesync/toc.json).
 
-    :::image type="content" source="media/file-sync-troubleshoot-sync-errors/file-share-limit-reached.png" alt-text="Screenshot that shows the Azure file share properties.":::
+    :::image type="content" source="media/file-sync-troubleshoot-sync-errors/edit-quota.png" alt-text="Screenshot that shows the Azure file share properties." lightbox="media/file-sync-troubleshoot-sync-errors/edit-quota.png":::
 
-If the share is full and a quota isn't set, one possible way of fixing this issue is to make each subfolder of the current server endpoint into its own server endpoint in their own separate sync groups. This way each subfolder will sync to individual Azure file shares.
+If the file share is full (the used capacity equals the quota), free up space on the file share. One possible way of fixing this issue is to make each subfolder of the current server endpoint into its own server endpoint in their own separate sync groups. This way each subfolder will sync to individual Azure file shares.
 
 <a id="-2134351824"></a>**The Azure file share cannot be found.**  
 
@@ -644,7 +631,7 @@ This error can happen if your organization is using a TLS terminating proxy or i
 
 By setting this registry value, the Azure File Sync agent will accept any locally trusted TLS/SSL certificate when transferring data between the server and the cloud service.
 
-<a id="-2147012721"></a>**Sync failed because the server was unable to decode the response from the Azure File Sync service**  
+<a id="-2147012721"></a>**Sync failed because the server was unable to decode the response from the Azure File Sync service.**  
 
 | Error | Code |
 |-|-|
@@ -653,7 +640,18 @@ By setting this registry value, the Azure File Sync agent will accept any locall
 | **Error string** | WININET_E_DECODING_FAILED |
 | **Remediation required** | Yes |
 
-This error typically occurs if a network proxy is modifying the response from the Azure File Sync service. Please check your proxy configuration.
+This error typically occurs if a firewall, proxy, or gateway blocks access to the PKI URL, or if the PKI server is down.
+
+To resolve this issue, ensure that the server can access the following URLs:
+
+- `https://www.microsoft.com/pki/mscorp/cps`
+- `http://crl.microsoft.com/pki/mscorp/crl/`
+- `http://mscrl.microsoft.com/pki/mscorp/crl/`
+- `http://ocsp.msocsp.com`
+- `http://ocsp.digicert.com/`
+- `http://crl3.digicert.com/`
+
+Once the Azure File Sync agent is installed, the PKI URL is used to download the intermediate certificates required to communicate with the Azure File Sync service and Azure file share. The OCSP URL is used to check the status of a certificate. If the error persists for several days, [create a support request](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview?DMC=troubleshoot).
 
 <a id="-2134375680"></a>**Sync failed due to a problem with authentication.**  
 
@@ -844,7 +842,7 @@ This error occurs because the storage account has failed over to another region.
 
 This error occurs because of an internal problem with the sync database. This error will auto-resolve when sync retries. If this error continues for an extend period of time, create a support request, and we will contact you to help you resolve this issue.
 
-<a id="-2134364024"></a>**Sync failed due to change in Azure Active Directory tenant**  
+<a id="-2134364024"></a>**Sync failed due to change in Microsoft Entra tenant**  
 
 | Error | Code |
 |-|-|
@@ -1375,9 +1373,10 @@ Run the following PowerShell command on the server to reset the certificate:
 1. Navigate to the sync group within the Storage Sync Service.
 2. Select the cloud endpoint within the sync group.
 3. Note the Azure file share name in the opened pane.
-4. Select the linked storage account. If this link fails, the referenced storage account has been removed.
 
-    :::image type="content" source="media/file-sync-troubleshoot-sync-errors/file-share-inaccessible.png" alt-text="Screenshot that shows the cloud endpoint detail pane with a link to the storage account.":::
+   :::image type="content" source="media/file-sync-troubleshoot-sync-errors/cloud-endpoint-detail.png" alt-text="Screenshot showing the cloud endpoint detail pane with a link to the file share.":::
+
+4. Select the file share name to open the file share settings page in the storage account. If this link fails to open, the referenced storage account has been removed.
 
 ## [PowerShell](#tab/azure-powershell)
 

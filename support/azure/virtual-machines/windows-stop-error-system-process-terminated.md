@@ -46,12 +46,12 @@ If you have a recent backup of the VM, you can try [restoring the VM from the ba
 
 If restoring the backup doesn't solve the problem, you have to collect a memory dump file so that the crash can be analyzed. To collect the dump file, see the following sections.
 
-#### Part 1: Attach the OS disk to a new Repair VM
+#### Attach the OS disk to a new Repair VM
 
 1. Use steps 1-3 of the [VM repair process example](./repair-windows-vm-using-azure-virtual-machine-repair-commands.md#repair-process-example) to prepare a Repair VM.
 2. Using **Remote Desktop Connection**, connect to the Repair VM.
 
-#### Part 2: Locate the dump file and submit a support ticket
+#### Locate the dump file and submit a support ticket
 
 1. On the repair VM, go to windows folder in the attached OS disk. If the driver letter that is assigned to the attached OS disk is F, go to F:\Windows.
 2. Locate the memory.dmp file, and then [submit a support ticket](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade) with the memory dump file.

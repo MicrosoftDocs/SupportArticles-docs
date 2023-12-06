@@ -34,7 +34,7 @@ Connectivity issues in Azure Synapse Studio are typically caused by configuratio
 - Confirm Synapse Studio can access all the required endpoints:
 
   - Ensure the firewall on your network and local computer allows outgoing communication on TCP ports 80, 443, and 1443 for Synapse Studio.
-  - Allow outgoing communication on UDP port 53 for Synapse Studio.
+  - Allow outgoing communication on UDP port 53 for the DNS server for name resolution.
   - To connect using tools such as SSMS and Power BI, you must allow outgoing communication on TCP port 1433.
   - If you're using the default Redirect connection policy setting, you may need to allow outgoing communication on more ports.
 

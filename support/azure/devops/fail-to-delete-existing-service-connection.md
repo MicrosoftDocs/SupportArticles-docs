@@ -12,7 +12,7 @@ ms.subservice: ts-pipelines
 
 ## Symptoms
 
-When you try to delete an Azure RM service connection, you might experience one of several issues. For example, you may receive a "Failed to remove Azure permission 'RoldAssignmentId'... Failed to remove the service principal from Azure Active Directory" error message. Or the connection isn't being removed from the list of service connections, although there is no error.
+When you try to delete an Azure RM service connection, you might experience one of several issues. For example, you may receive a "Failed to remove Azure permission 'RoldAssignmentId'... Failed to remove the service principal from Microsoft Entra ID" error message. Or the connection isn't being removed from the list of service connections, although there is no error.
 
 :::image type="content" source="media/fail-to-delete-existing-service-connection/delete-service-connection.png" alt-text="Screenshot that shows an error while deleting an existing service connection.":::
 

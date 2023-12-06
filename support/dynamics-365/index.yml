@@ -5,7 +5,7 @@ summary: Technical content to troubleshoot issues in Microsoft Dynamics 365
 metadata:
   ms.topic: hub-page
   services: service
-  ms.date: 09/20/2023
+  ms.date: 10/28/2023
   ms.service: dynamics-365
 
 additionalContent:
@@ -20,9 +20,18 @@ additionalContent:
         - title: Dynamics 365 Commerce
           summary: Troubleshooting articles for Dynamics 365 Commerce
           url: commerce/welcome-commerce.yml
+        - title: Dynamics 365 Field Service
+          summary: Troubleshooting articles for Dynamics 365 Field Service
+          url: field-service/welcome-field-service.yml
         - title: Dynamics 365 Finance
           summary: Troubleshooting articles for Dynamics 365 Finance
           url: finance/welcome-finance.yml
+        - title: Dynamics 365 Guides
+          summary: Troubleshooting articles for Dynamics 365 Guides
+          url: guides/welcome-guides.yml
+        - title: Dynamics 365 Remote Assist
+          summary: Troubleshooting articles for Dynamics 365 Remote Assist
+          url: remote-assist/welcome-remote-assist.yml
         - title: Dynamics 365 Sales
           summary: Troubleshooting articles for Dynamics 365 Sales
           url: sales/welcome-sales.yml

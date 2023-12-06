@@ -10,7 +10,7 @@ ms.subservice: enterprise-users
 
 This article describes how to increase the Active Directory directory service quota for directory synchronization in an Office 365, Azure, or Microsoft Intune environment.
 
-_Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Azure Active Directory, Microsoft Intune, Azure Backup, Office 365 User and Domain Management  
+_Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Microsoft Entra ID, Microsoft Intune, Azure Backup, Office 365 User and Domain Management  
 _Original KB number:_ &nbsp; 2812409
 
 ## Symptoms
@@ -20,20 +20,20 @@ You receive an email message from `MSOnlineServicesTeam@MicrosoftOnline.com` tha
 > Error 016: Synchronization has been stopped. This company has exceeded the number of objects that can be synchronized. Contact Microsoft Online Services Support.
 
 > [!NOTE]
-> This article can also be used if you just want to request to increase the directory service quota in case you're planning to have more than the allowed number of objects in a Microsoft cloud service such as Office 365, Azure, or Microsoft Intune, and you don't use Active Directory synchronization. The current directory service quota in Azure Active Directory (Azure AD) is 50,000 objects.
+> This article can also be used if you just want to request to increase the directory service quota in case you're planning to have more than the allowed number of objects in a Microsoft cloud service such as Office 365, Azure, or Microsoft Intune, and you don't use Active Directory synchronization. The current directory service quota in Microsoft Entra ID is 50,000 objects.
 
 ## Cause
 
-This issue occurs because the number of objects that you created in your Azure AD exceed your directory service limit. Azure AD limits how many objects can be created by each organization. Groups, contacts, and user objects in your Azure AD organization are counted as part of your organization's directory usage.
+This issue occurs because the number of objects that you created in your Microsoft Entra ID exceed your directory service limit. Microsoft Entra ID limits how many objects can be created by each organization. Groups, contacts, and user objects in your Microsoft Entra organization are counted as part of your organization's directory usage.
 
 Your default directory service quota is calculated according to the following guidelines:
 
-- If you don't have any verified domains, the current directory service quota in Azure AD is 50,000 objects.
+- If you don't have any verified domains, the current directory service quota in Microsoft Entra ID is 50,000 objects.
 
   1. If your organization was created before October 5, 2011, your default directory service quota is 10,000 objects.
   2. If your organization was created after October 5, 2011 and before May 2012, your default directory service quota is 20,000 objects.
   3. If your organization was created after May 2012, your default directory service quota is 50,000 objects.
-- If you have at least one verified domain, the default directory service quota in Azure AD is 300,000 objects.
+- If you have at least one verified domain, the default directory service quota in Microsoft Entra ID is 300,000 objects.
 
 ## Resolution
 

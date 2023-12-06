@@ -241,9 +241,11 @@ You may encounter a specific error message when trying to connect to your VM via
 * [Windows Security error: Your credentials did not work](troubleshoot-specific-rdp-errors.md#wincred).
 * [This computer can't connect to the remote computer](troubleshoot-specific-rdp-errors.md#rdpconnect).
 
-## Troubleshoot sign-in issues when users RDP with Azure AD credentials
+<a name='troubleshoot-sign-in-issues-when-users-rdp-with-azure-ad-credentials'></a>
 
-You may receive the following common errors when you try to RDP with Azure AD credentials: "no Azure roles assigned", "unauthorized client", or "two-factor authentication sign-in method required". Refer to the following articles to fix these issues:
+## Troubleshoot sign-in issues when users RDP with Microsoft Entra credentials
+
+You may receive the following common errors when you try to RDP with Microsoft Entra credentials: "no Azure roles assigned", "unauthorized client", or "two-factor authentication sign-in method required". Refer to the following articles to fix these issues:
 
 * [Your account is configured to prevent you from using this device. For more info, contact your system administrator](https://github.com/MicrosoftDocs/azure-docs/blob/main/articles/active-directory/devices/howto-vm-sign-in-azure-ad-windows.md#troubleshoot-sign-in-issues).
 * [Windows Security error: Your credentials did not work. Unauthorized client](https://github.com/MicrosoftDocs/azure-docs/blob/main/articles/active-directory/devices/howto-vm-sign-in-azure-ad-windows.md#unauthorized-client).

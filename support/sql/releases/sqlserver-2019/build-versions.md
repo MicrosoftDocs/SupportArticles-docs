@@ -13,7 +13,7 @@ This article lists the Microsoft SQL Server 2019 builds that were released after
 
 ## SQL Server 2019 Cumulative Update (CU) builds
 
-| CU Name | SQL Server build version | SQL Server (sqlservr.exe) file version | Analysis Services build version | Analysis Services (msmdsrv.exe) file version | Knowledge Base number | Release date |
+| Cumulative update name | SQL Server build version | SQL Server (sqlservr.exe) file version | Analysis Services build version | Analysis Services (msmdsrv.exe) file version | Knowledge Base number | Release date |
 |---------------|--------------|-------------------|------------|----------------|------------------------------------|--------------------|
 | CU23 (Latest) | 15.0.4335.1  | 2019.150.4335.1   | 15.0.35.41 | 2018.150.35.41 | [KB5030333](cumulativeupdate23.md) | October 12, 2023   |
 | CU22          | 15.0.4322.2  | 2019.150.4322.2   | 15.0.35.41 | 2018.150.35.41 | [KB5027702](cumulativeupdate22.md) | August 14, 2023    |
@@ -42,7 +42,7 @@ This article lists the Microsoft SQL Server 2019 builds that were released after
 
 ## SQL Server 2019 GDR builds
 
-| GDR Name | SQL Server build version | SQL Server (sqlservr.exe) file version | Analysis Services build version | Analysis Services (msmdsrv.exe) file version | Knowledge Base number | Release date|
+| GDR name | SQL Server build version | SQL Server (sqlservr.exe) file version | Analysis Services build version | Analysis Services (msmdsrv.exe) file version | Knowledge Base number | Release date|
 |-------------------------|--------------|------------------|------------|----------------|---------------------------------------------------------|-------------------|
 | CU22 + GDR              | 15.0.4326.1  | 2019.150.4326.1  | 15.0.35.41 | 2018.150.35.41 | [KB5029378](https://support.microsoft.com/help/5029378) | October 10, 2023  |
 | GDR                     | 15.0.2104.1  | 2019.150.2104.1  | 15.0.32.62 | 2018.150.32.62 | [KB5029377](https://support.microsoft.com/help/5029377) | October 10, 2023  |

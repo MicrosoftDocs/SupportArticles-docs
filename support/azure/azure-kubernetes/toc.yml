@@ -35,14 +35,14 @@
     href: error-code-reservedresourcename.md
   - name: ServicePrincipalValidationClientError error
     href: error-code-serviceprincipalvalidationclienterror.md
-  - name: SubnetIsFull error
-    href: error-code-subnetisfull.md
   - name: SubscriptionRequestsThrottled error (429)
     href: error-code-subscriptionrequeststhrottled.md
   - name: SubnetWithExternalResourcesCannotBeUsedByOtherResources error
     href: subnet-with-external-resources-cannot-be-used-by-other-resources.md
   - name: VMExtensionProvisioningTimeout error
     href: error-code-vmextensionprovisioningtimeout.md
+  - name: WINDOWS_CSE_ERROR_CHECK_API_SERVER_CONNECTIVITY error (5)
+    href: windows-cse-error-check-api-server-connectivity.md
   - name: ZonalAllocationFailed, AllocationFailed, or OverconstrainedAllocationRequest error
     href: error-code-zonalallocationfailed-allocationfailed.md
 
@@ -50,16 +50,20 @@
   items:
   - name: Troubleshoot Azure Kubernetes Service (AKS) upgrade errors
     items:
-    - name: Upgrade fails because of NSG rules
-      href: upgrade-fails-because-of-nsg-rules.md
+    - name: CustomPrivateDNSZoneMissingPermissionError error
+      href: error-code-customprivatednszonemissingpermissionerror.md
     - name: NodePoolMcVersionIncompatible error
       href: nodepoolmcversionincompatible-error.md
-    - name: PodDrainFailure error
+    - name: Troubleshoot UpgradeFailed errors due to eviction failures caused by PDBs
       href: error-code-poddrainfailure.md
+    - name: UnsatisfiablePDB error
+      href: error-code-unsatisfiablepdb.md
     - name: PublicIPCountLimitReached error
       href: error-code-publicipcountlimitreached.md
     - name: QuotaExceeded error
       href: error-code-quotaexceeded.md   
+    - name: ServiceCidrOverlapExistingSubnetsCidr error
+      href: error-code-servicecidroverlapexistingsubnetscidr.md
     - name: SubnetIsFull upgrade error
       href: error-code-subnetisfull-upgrade.md   
     - name: Unable to get log analytics workspace info error
@@ -68,6 +72,8 @@
     href: upgrades-to-kubernetes-fail-using-node-labels.md  
   - name: Upgrade issues with Gen2 VMs on Windows AKS cluster
     href: nodepools-not-upgraded-to-gen2-during-node-image-upgrade.md
+  - name: Upgrade fails because of NSG rules
+    href: upgrade-fails-because-of-nsg-rules.md
 
 - name: Troubleshoot delete operations
   items:
@@ -102,6 +108,8 @@
     href: aks-at-scale-troubleshoot-guide.md
   - name: Failed to fix node group sizes
     href: cluster-autoscaler-fails-to-scale.md
+  - name: SubnetIsFull error
+    href: error-code-subnetisfull.md
 
 - name: Troubleshoot Kubernetes control plane
   items:
@@ -214,7 +222,7 @@
     href: 429-too-many-requests-errors.md
   - name: Argument list too long
     href: application-fails-argument-list-too-long.md
-  - name: Azure AD Pod Identity NMI returns 500 Internal Server Error
+  - name: Microsoft Entra Pod Identity NMI returns 500 Internal Server Error
     href: stale-watch-azure-ad-pod-identity-nmi-status-500.md
   - name: Can't access the cluster API server using authorized IP ranges
     href: cannot-access-cluster-api-server-using-authorized-ip-ranges.md
@@ -230,7 +238,7 @@
     href: error-from-server-error-dialing-backend-dial-tcp.md
   - name: Errors using features that require virtual machine scale sets
     href: error-using-feature-requiring-virtual-machine-scale-set.md
-  - name: insufficientSubnetSize error
+  - name: InsufficientSubnetSize error
     href: insufficientsubnetsize-error-advanced-networking.md
   - name: Memory saturation occurs in pods after cluster upgrade
     href: aks-memory-saturation-after-upgrade.md
@@ -260,8 +268,12 @@
 
 - name: Extensions and add-ons
   items:
+  - name: AKS Cost Analysis add-on issues
+    href: aks-cost-analysis-add-on-issues.md
   - name: Troubleshoot Azure Key Vault Provider for Secrets Store CSI Driver
     href: troubleshoot-key-vault-csi-secrets-store-csi-driver.md
+  - name: Troubleshoot cluster extension deployment errors
+    href: cluster-extension-deployment-errors.md
   - name: Troubleshoot Dapr extension installation errors
     href: troubleshoot-dapr-extension-installation-errors.md
   - name: Troubleshoot deployment failures of Azure Marketplace offers

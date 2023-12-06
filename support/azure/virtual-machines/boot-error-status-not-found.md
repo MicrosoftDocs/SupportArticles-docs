@@ -1,310 +1,299 @@
 ---
 title: Troubleshoot Windows Boot Manager error  - 0xC0000225 Status not found
-description: Steps to resolve issues where error code 0xC0000225 occurs in an Azure VM.
+description: Resolve issues in which the 0xC0000225 error code occurs in Windows Boot Manager on an Azure Virtual Machine.
 services: virtual-machines, azure-resource-manager
-documentationcenter: ''
-author: genlin
-manager: dcscontentpm
+author: JarrettRenshaw
+ms.author: jarrettr
 tags: azure-resource-manager
 ms.service: virtual-machines
 ms.subservice: vm-cannot-start-stop
 ms.collection: windows
 ms.workload: na
 ms.tgt_pltfrm: vm-windows
-ms.topic: troubleshooting
-ms.date: 05/11/2020
-ms.author: genli
+ms.date: 11/08/2023
+editor: v-jsitser
+ms.reviewer: azurevmcptcic, v-leedennis
+ms.topic: troubleshooting-general
 ---
 
 # Troubleshoot Windows Boot Manager error  - 0xC0000225 "Status not found"
 
-This article provides steps to resolve issues where error code 0xC0000225 occurs in an Azure VM. This error states that the status or object is not found.
+This article provides steps to resolve startup issues in which a `0xC0000225` error code occurs on Azure Virtual Machines. This error states that the status or object isn't found.
+
+*Original product version:* &nbsp; Virtual Machine running Windows  
+*Original KB number:* &nbsp; 4010138
 
 ## Symptoms
 
-When you use [Boot diagnostics](./boot-diagnostics.md) to view the screenshot of the VM, you will see that the screenshot displays a Windows failed to start error with the Status code *0xc0000225*.
+A Windows virtual machine (VM) doesn't start. When you use [boot diagnostics](./boot-diagnostics.md) to view a screenshot of the VM, you see that the screenshot of the Windows Boot Manager console includes the following text:
 
-The file associated with this error code will inform you which steps to take in order to resolve the issue. Locate the **File:** section's text to determine the appropriate course of action.
+- A "Windows failed to start" error message
+- A `0xc0000225` error code
+- More information about the error
 
-### Drivers, OS Related or Third Party
+The file that's associated with this error code shows which steps to take so that you can resolve the issue. The errors that might be shown in the Windows Boot Manager console are displayed in the following sections.
 
-If the file is present but refers to a driver (as is shown) or is OS related or third party, follow the steps under the section [Repair the System File](#repair-the-system-file).
+### Symptom 1: Error in a system file within the \\Windows\\System32\\drivers directory
 
-In the following image, Windows Boot Manager states "Windows failed to start. A recent hardware or software change might be the cause." The image also shows the Status as "0xc0000225", **File:** as `\windows\System32\drivers\atapi.sys`, and **Info:** as "The operating system couldn't be loaded because a critical system driver is missing or contains errors."
+```console
+████████████████████████████Windows Boot Manager████████████████████████████████
 
-:::image type="content" source="media/boot-error-status-not-found/error-0xc0000225-driver-file.png" alt-text="Screenshot of Windows failed to start error with the Status code 0xc0000225 when the associated file is present but refers to a driver.":::
+Windows failed to start. A recent hardware or software change might be the
+cause. To fix the problem:
 
-### No File
+  1. Insert your Windows installation disc and restart your computer.
+  2. Choose your language settings, and then click "Next."
+  3. Click "Repair your computer."
 
-If presented with the Status code, but no file is shown, follow the steps under the section [Add the OSDEVICE Variable](#add-the-osdevice-variable).
+If you do not have this disc, contact your system administrator or computer
+manufacturer for assistance.
 
-In the following image, Windows Boot Manager states "Windows failed to start. A recent hardware or software change might be the cause." The image also shows the Status as "0xc0000225", and **Info:** as "The boot selection failed because a required device is inaccessible."
+    File: \Windows\System32\drivers\<driver-name>.sys
 
-:::image type="content" source="media/boot-error-status-not-found/error-0xc0000225-no-file.png" alt-text="Screenshot of Windows failed to start error with the Status code 0xc0000225 when no associated file is shown.":::
+    Status: 0xc0000225
 
-### Registry File
+    Info: The operating system couldn't be loaded because a critical system
+          driver is missing or contains errors.
 
-If it refers to any of the registry files, such as \windows\system32\config\system, follow the steps under the section [Create a Support Ticket](#contact-support).
 
-In the following image, Windows Boot Manager states "Windows failed to start. A recent hardware or software change might be the cause." The image also shows the Status as "0xc0000225", the File as `\windows\System32\config\system`, and **Info:** as "The operating system couldn't be loaded because the system registry file is missing or contains errors."
 
-:::image type="content" source="media/boot-error-status-not-found/error-0xc0000225-registry-file.png" alt-text="Screenshot of Windows failed to start error with the Status code 0xc0000225 when it refers to \windows\system32\config\system.":::
+█ENTER=OS Selection███████████████████████████████████████████████ESC=Recovery██
+```
 
-In the following image, the recovery screen states "Your PC/Device needs to be repaired. The operating system couldn't be loaded because the system registry file is missing or contains errors." The image also shows the Error code as "0xc0000225" and the File as `\windows\System32\config\system`.
+### Symptom 2: Error without a displayed file
 
-:::image type="content" source="media/boot-error-status-not-found/error-0xc0000225-registry-file-recovery-screen.png" alt-text="Screenshot of Recovery screen with the error code 0xc0000225 and the File \windows\system32\config\system." border="false":::
+```console
+████████████████████████████Windows Boot Manager████████████████████████████████
 
-## Causes
+Windows failed to start. A recent hardware or software change might be the
+cause. To fix the problem:
 
-### Missing Binary
+  1. Insert your Windows installation disc and restart your computer.
+  2. Choose your language settings, and then click "Next."
+  3. Click "Repair your computer."
 
-You may be encountering missing or corrupted binary on your System **(.sys)** file.
+If you do not have this disc, contact your system administrator or computer
+manufacturer for assistance.
 
-### BCD Corruption or Improper VHD Migration
 
-In this case, either the **Boot Configuration Data (BCD)** is corrupted, or the **virtual hard drive (VHD)** was migrated from on-premises, but wasn't properly prepared. The result is that the **OSDEVICE** variable is missing and will need to be added.
 
-### Registry Hive Corruption
+    Status: 0xc0000225
 
-A registry hive corruption could be due to:
+    Info: The boot selection failed because a required device is
+          inaccessible.
 
-- The Hive fails
-- The Hive mounts, but is empty
-- The Hive was not closed properly
 
-## Solution
 
-### Process Overview
+█ENTER=Continue███████████████████████████████████████████████████████ESC=Exit██
+```
 
-> [!TIP]
-> If you have a recent backup of the VM, you may try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
+> [!NOTE]  
+> In the `Info` field, you might see the following alternative text:
+>
+> > An unexpected error has occurred.
 
-1. Create and access a Repair VM.
-1. Select a Solution:
-   - [Repair the System File](#repair-the-system-file)
-   - [Add the OSDevice Variable](#add-the-osdevice-variable)
-   - [Create a Support Ticket](#contact-support)
-1. Enable serial console and memory dump collection.
-1. Rebuild the VM.
+### Symptom 3: Error in the \\WINDOWS\\system32\\config\\system file
 
-### Create and Access a Repair VM
+```console
+████████████████████████████Windows Boot Manager████████████████████████████████
 
-1. Use steps 1-3 of the [VM Repair Commands](./repair-windows-vm-using-azure-virtual-machine-repair-commands.md) to prepare a Repair VM.
-1. Using Remote Desktop Connection, connect to the Repair VM.
+Windows failed to start. A recent hardware or software change might be the
+cause. To fix the problem:
 
-### Select a Solution
+  1. Insert your Windows installation disc and restart your computer.
+  2. Choose your language settings, and then click "Next."
+  3. Click "Repair your computer."
 
-1. Open an elevated command prompt.
-1. Based on the symptom that you identified earlier, follow the steps in the corresponding solution. You may skip the steps in the other solutions, as they won't apply to your issue:
+If you do not have this disc, contact your system administrator or computer
+manufacturer for assistance.
 
-- [Repair the System File](#repair-the-system-file)
-- [Add the OSDevice Variable](#add-the-osdevice-variable)
-- [Create a Support Ticket](#contact-support)
+    File: \WINDOWS\system32\config\system
 
-### Repair the System File
+    Status: 0xc0000225
 
-1. Using the attached VHD, navigate to the file location of the binary shown in your virtual machine (VM) screenshot.
-1. Right-click the file, select **Properties**, and then select the **Details** tab to see information on the file.
+    Info: The operating system couldn't be loaded because the system
+          registry file is missing or contains errors.
 
-    Note the version of the file, as shown in the image below:
 
-      :::image type="content" source="media/boot-error-status-not-found/file-properties.png" alt-text="Screenshot of the properties window for the cng.sys file, with the file version highlighted.":::
 
-1. Rename the file to **< BINARY.SYS >.old**, replacing **< BINARY.SYS >** with the name of the file.
+█ENTER=OS Selection█████████████████████████████████████████████████████████████
+```
 
-   For the image in the step above, the file **cng.sys** would be renamed to **cng.sys.old**
-
-   > [!NOTE]
-   > If you try to rename the file and receive the message "The file is corrupted and unreadable", [contact support for assistance](https://azure.microsoft.com/support/create-ticket/), as this solution will not work.
-
-1. Now that the corrupt file is renamed, fix the file by restoring it from its internal repository.
-   1. Launch a **CMD** session.
-   1. Navigate to **\windows\winsxs**.
-
-   1. Search for the binary located at the beginning of this section using the following command:
-
-      `dir <BINARY WITH ".SYS" EXTENSION>  /s`
-
-      This command will list all versions of the file that the machine has, giving you the path history of that component.
-
-      For example, **dir cng.sys** would be renamed **dir cng.sys /s**
-
-   1. Choose the latest version of the file on the list (or any that you prefer) and copy the file to the **windows\system32** folder using previous path and the following command:
-
-      `copy <drive>:\Windows\WinSxS\<DIRECTORY WHERE FILE IS>\<BINARY WITH ".SYS" EXTENSION> <DRIVE>:\Windows\System32\Drivers\`
-
-      > [!NOTE]
-      > If the latest binary didn't work, try a version before that one, or any of which you know there is a stable file, such as a version before a patch.
-
-      For example, if the binary you are looking for is **cmimcext.sys**, the faulty drive is drive **F:**, and you just ran a search for the latest version, you would see the following image, where a query in command prompt of `dir cmim* /s` locates the latest version of the cmimcext.sys file.
-
-      :::image type="content" source="media/boot-error-status-not-found/query-cmim.png" alt-text="Screenshot of a query in command prompt of dir cmim* /s to locate the latest version of the cmimcext.sys file.":::
-
-      In the example image above, the query was performed on **C:**, whereas the drive letter should be that of the faulty drive, **F:**, which is the OS disk attached as a data disk on the repair VM.
-
-      The resulting command to copy the file would be: `copy F:\Windows\WinSxS\amd64_xxxxxx\cmimcext.sys F:\Windows\System32\Drivers`.
-
-Once this task is complete, continue to [Enable the Serial Console and memory dump collection](#enable-the-serial-console-and-memory-dump-collection).
-
-### Add the OSDEVICE Variable
-
-Collect the current booting setup information and note the identifier on the active partition. You will then use this information to add the **OSDEVICE** variable, following the directions for the generation of your VM.
-
-If this information collection gives an error where there's no **\boot\bcd** file, then use the instructions in [Repair the System File](#repair-the-system-file) instead.
-
-1. For Generation 1 VMs, open an elevated command prompt as an Administrator and enter the following command:
-
-   `bcdedit /store <LETTER OF BOOT FOLDER>:\boot\bcd /enum`
-
-   This image shows Windows Boot Loader in a Generation 1 VM, with the identifier attribute highlighted. The identifier attribute highlighted shows a unique alphanumeric string.
-
-   :::image type="content" source="media/boot-error-status-not-found/gen-1-vm-boot-loader-identifier.png" alt-text="Screenshot of Windows Boot Loader in a Generation 1 VM, with the identifier attribute highlighted.":::
-
-   Note the identifier of the Windows Boot Loader, whose path is **\windows\system32\winload.exe**.
-
-1. For Generation 2 VMs, verify both that the OS disk is online, and that its partition drive letters have been assigned. When this has been verified, collect the boot setup information.
-   1. In **Windows search**, type **Disk Management** and open the disk management console. Use this console to identify the disk number attached on your repair VM and the Extensible Firmware Interface (EFI) partition which holds the BCD store.
-
-   In the following image, Disk 2 is the disk number attached to the Repair VM. The image also shows the EFI System Partition on Disk 2, which is 100MB in size and doesn't have an assigned letter.
-
-   :::image type="content" source="media/boot-error-status-not-found/disk-management.png" alt-text="Screenshot of the Disk Management window with Disk 2 highlighted.":::
-
-   1. Open an elevated command prompt as an Administrator and enter the following commands:
-      1. Open the **DISKPART TOOL** using the command `diskpart`.
-      1. List all disks, then select the attached disk identified in the previous step:
-
-         ```
-         list disk
-         sel disk <DISK #>
-         ```
-
-         The following image shows the results of listing and selecting a disk. Disk 0 (127 GB / Online), Disk 1 (32 GB / Online), and Disk 2 (127 GB / Online) are listed, with Disk 2 being selected using the command `sel disk 2`.
-
-         :::image type="content" source="media/boot-error-status-not-found/list-select-disk-result.png" alt-text="Screenshot shows the results of listing and selecting a disk.":::
-
-      1. List the partitions and select the EFI system partition identified in the previous step:
-
-         ```
-         list partition
-         sel partition <PARTITION #>
-         ```
-
-         The following image shows the results of listing and selecting a partition. Partition 1 (Reserved / 16MB), Partition 2 (System / 100MB), and Partition 3 (Primary / 126 GB) are listed, with Partition 2 being selected using the command `sel part 2`.
-
-         :::image type="content" source="media/boot-error-status-not-found/list-select-partition-result.png" alt-text="Screenshot shows the results of listing and then selecting a partition.":::
-
-      1. Assign a letter to the EFI partition using the command `assign`.
-
-         In the following image, the `assign` command and the new drive **SYSTEM (F:)** are both viewable in File Explorer.
-
-         :::image type="content" source="media/boot-error-status-not-found/assign-command-and-new-drive.png" alt-text="Screenshot of the assign command output and the new drive SYSTEM (F:) in File Explorer.":::
-
-      1. List the BCD store data using the following command:
-
-         `bcdedit /store <LETTER OF EFI SYSTEM PARTITION>:EFI\Microsoft\boot\bcd /enum`
-
-         In the following image, Windows Boot Loader is in a generation 2 VM with the identifier attribute highlighted. The highlighted identifier attribute has a value of **{default}**.
-
-         :::image type="content" source="media/boot-error-status-not-found/gen-2-vm-boot-loader-identifier.png" alt-text="Screenshot of Windows Boot Loader in a Generation 2 VM, with the identifier attribute {default} highlighted.":::
-
-         Note the identifier of the Windows Boot Loader, whose path is **\windows\system32\winload.efi**.
-
-1. Notice that the OSDEVICE variable on the active partition is missing:
-
-   :::image type="content" source="media/boot-error-status-not-found/osdevice-missing.png" alt-text="Screenshot of Windows Boot Manager and Windows Boot Loader's attributes.":::
-
-   In this image, Windows Boot Manager and Windows Boot Loader's attributes are listed in the command prompt, but the OSDEVICE attribute is missing.
-
-1. Add the OSDEVICE variable based on the following information:
-
-   For single partitions OS disks, add `BOOT`.
-
-   > [!NOTE]
-   > The boot-able folder will be on the same partition as the windows folder **\windows folder**.
+> [!NOTE]  
+> You might see a similar type of error message on a blue screen on the **Recovery** page:
+>
+> > **Recovery**
+> >
+> > **Your PC/Device needs to be repaired**
+> >
+> > The operating system couldn't be loaded because the system registry file is missing or contains errors.
+> >
+> > File: \\Windows\\system32\\config\\system  
+> > Error code: 0xc0000225
+> >
+> > Choose one of the options below to address this problem.
+> >
+> >
+> >
+> > **Press Esc for recovery**  
+> > **Press Enter to try again**  
+> > **Press F8 for Startup Settings**  
+
+## Potential solution: Restore the VM from a backup
+
+If you have a recent backup of the VM, you can try to [restore the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the startup problem. However, if restoring the VM from backup isn't possible, continue to the *Cause* sections.
+
+## Cause 1: Missing or corrupted system binary file
+
+The file that's associated with the error code is a system binary (*.sys*) file that's missing or corrupted.
+
+### Solution 1: Repair the system binary file
+
+Repair the system binary file by following these steps:
+
+1. On the attached disk, browse to the location of the binary file that's displayed in the error message.
+2. Rename the file to *\<BINARY.SYS>.OLD*.
+3. On the attached disk, browse to the *\\Windows\\winsxs* folder. Then, search for the binary file that's displayed in the error message. To do this, run the following command at a command prompt:
+
+   ```cmd
+   dir <binary-name> /s
+   ```
+
+   The command lists all the different versions of the binary file together with the created date. Copy the latest version of the binary file to the *windows\\system32* folder by running the following command:
+
+   ```cmd
+   copy <drive>:\Windows\WinSxS\<directory-where-file-is>\<binary-with-extension> <drive>:\Windows\System32\Drivers\
+   ```
+
+   For example, see the following console output:
+
+   ```console
+   E:\Windows\WinSxS>dir ACPI.sys /s
+    Volume in drive E has no label.
+    Volume Serial Number is A0B1-C2D3
+   
+    Directory of E:\Windows\WinSxS\amd64_acpi.inf_0123456789abcdef_6.3.9600.16384_none_cdef0123456789ab
+   
+   11/21/2014  07:48 PM            94,989 acpi.sys
+                  1 File(s)         94,989 bytes
+   
+    Directory of E:\Windows\WinSxS\amd64_acpi.inf_0123456789abcdef_6.3.9600.16384_none_89abcdef01234567
+   
+   11/21/2014  07:48 PM           119,547 acpi.sys
+                  1 File(s)        119,547 bytes
+   
+    Directory of E:\Windows\WinSxS\amd64_acpi.inf_0123456789abcdef_6.3.9600.16384_none_456789abcdef0123
+   
+   11/21/2014  04:06 PM           533,824 acpi.sys
+                  1 File(s)        533,824 bytes
+   
+        Total Files Listed:
+                  3 File(s)        748,360 bytes
+                  0 Dir(s)  123,967,512,576 bytes free
+
+   E:\Windows\WinSxS>copy E:\Windows\WinSxS\amd64_acpi.inf_0123456789abcdef_6.3.9600.16384_none_cdef0123456789ab\acpi.sys E:\Windows\System32\Drivers\
+           1 file(s) copied.
+
+   E:\Windows\WinSxS>
+   ```
+
+   > [!NOTE]  
+   > - The screenshot shows volume E as an example. The actual letter should reflect the faulty drive (the OS disk attached as a data disk on the troubleshooting VM).
    >
-   > - The bootable folder for Generation 1 VMs is **(\boot\bcd folder)**.
-   > - The bootable folder for Generation 2 VMs is **EFI\Microsoft\boot\bcd**.
-
-   For Generation 1 VMs, enter the following command:
-
-   `bcdedit /store <LETTER OF BOOT FOLDER>:\boot\bcd /set {<IDENTIFIER>} OSDEVICE BOOT`
-
-   For Generation 2 VMs, enter the following command:
-
-   `bcdedit /store <LETTER OF EFI FOLDER>:EFI\Microsoft\boot\bcd /set {<IDENTIFIER>} OSDEVICE BOOT`
-
-   For multiple partition OS disks, add `PARTITION=<LETTER OF WINDOWS FOLDER>:`.
-
-   > [!NOTE]
-   > The boot-able folder will most likely be on a different partition than the windows folder **\windows folder**.
+   > - If the latest binary doesn't work, you can try the previous file version to obtain an earlier system update level on that component.
    >
-   > - The bootable folder for Generation 1 VMs is **(\boot\bcd folder)**.
-   > - The bootable folder for Generation 2 VMs is **EFI\Microsoft\boot\bcd**.
+   > - If the only binary that's returned in this step matches the file that you're trying to replace on the affected VM, and if both files have the same size and time stamp, you can replace the corrupted file by copying it from another working VM that has the same OS and, if possible, the same system update level.
+4. Detach the repaired disk from the troubleshooting VM. Then, create a VM from the OS disk.
 
-   For Generation 1 VMs, enter the following command:
+## Cause 2: Corrupted boot configuration data or incorrectly prepared virtual hard drive
 
-   `bcdedit /store <LETTER OF BOOT FOLDER>:\boot\bcd /set {<IDENTIFIER>} OSDEVICE partition=<LETTER OF WINDOWS FOLDER>:`
+If a file name isn't shown in the error screen, and you see a message that states "The boot selection failed because a required device is inaccessible," then the cause of the problem is one of the following scenarios:
 
-   For Generation 2 VMs, enter the following command:
+- The boot configuration data (BCD) is corrupted.
 
-   `bcdedit /store <LETTER OF EFI FOLDER>:EFI\Microsoft\boot\bcd /set {< IDENTIFIER>} OSDEVICE partition=<LETTER OF WINDOWS FOLDER>:`
+- The virtual hard drive (VHD) is migrated from on-premises, but it's prepared incorrectly.
 
-Once this task is complete, continue to [Enable the Serial Console and memory dump collection](#enable-the-serial-console-and-memory-dump-collection).
+### Solution 2: Repair the boot configuration data
 
-### Contact Support
+Repair the boot configuration data by running [BCDEdit](/windows-server/administration/windows-commands/bcdedit) commands as an administrator. To do this, follow these steps:
 
-The **Registry File** error has a solution, but you will need to [create a support ticket](https://azure.microsoft.com/support/create-ticket/) for further assistance.
+1. Delete the VM.
 
-### Enable the Serial Console and memory dump collection
+   > [!IMPORTANT]  
+   > When you're prompted to confirm the VM deletion, make sure that you clear the **Delete with VM** option that's associated with the OS disk resource type.
 
-**Recommended**: Before you rebuild the VM, enable the Serial Console and memory dump collection by running the following script:
+2. Attach the OS disk as a data disk to another VM (a troubleshooting VM). For more information, see [How to attach a data disk to a Windows VM in the Azure portal](/azure/virtual-machines/windows/attach-managed-disk-portal).
+3. Connect to the troubleshooting VM.
+4. Select **Start**, and then search for and select **Computer management**. In the console tree of the Computer Management app, select **Disk management**. Make sure that the OS disk is online and that its partitions have drive letters assigned.
+5. Identify the Boot partition and the Windows partition. If there's only one partition on the OS disk, this partition is both the Boot partition and the Windows partition.
 
-1. Open an elevated command prompt session as an Administrator.
-1. Run the following commands:
+   If the OS disk contains more than one partition, you can identify them by viewing the folders in the partitions:  
 
-   **Enable the Serial Console**:
+   - The Windows partition contains a folder that's named *Windows*. This partition is larger than the others.  
 
-   ```console
-   bcdedit /store <VOLUME LETTER WHERE THE BCD FOLDER IS>:\boot\bcd /ems {<BOOT LOADER IDENTIFIER>} ON 
-   bcdedit /store <VOLUME LETTER WHERE THE BCD FOLDER IS>:\boot\bcd /emssettings EMSPORT:1 EMSBAUDRATE:115200
+   - The Boot partition contains a folder that's named *Boot*. This folder is hidden by default. To see the folder in File Explorer, open the **Folder Options** dialog box, select to display hidden files and folders, and then clear the **Hide protected operating system files (Recommended)** option. The boot partition is typically 300 MB to 500 MB.  
+
+6. Run the following [BCDEdit /enum](/windows-hardware/drivers/devtest/bcdedit--enum) command as an administrator, and then record the identifier of Windows Boot Loader (not Windows Boot Manager). The identifier is a 32-character code in GUID format (xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx). You have to use this identifier in the next step.
+
+   ```cmd
+   bcdedit /store <Boot partition>:\boot\bcd /enum /v
    ```
 
-1. Verify that the free space on the OS disk is larger than the memory size (RAM) on the VM.
+   > [!NOTE]  
+   > If there isn't a *bcd* store file in the *boot* folder of the Boot partition, restore the file by following the steps in [Solution 1: Repair the system binary file](#solution-1-repair-the-system-binary-file), but for *\\boot\\bcd* file.
 
-   If there's not enough space on the OS disk, change the location where the memory dump file will be created, and refer that location to any data disk attached to the VM that has enough free space. To change the location, replace **%SystemRoot%** with the drive letter of the data disk, such as **F:**, in the following commands.
+7. Repair the Boot Configuration data by running the following [BCDEdit /set](/windows-hardware/drivers/devtest/bcdedit--set) commands. Change the placeholders to the actual values, as described in the following table.
 
-   Suggested configuration to enable OS Dump:
+   | Placeholder              | Value                                                                     |
+   |--------------------------|---------------------------------------------------------------------------|
+   | **\<Windows partition>** | The partition that contains a folder that's named *Windows*               |
+   | **\<Boot partition>**    | The partition that contains a hidden system folder that's named *Boot*    |
+   | **\<Identifier>**        | The identifier of Windows Boot Loader that you found in the previous step |
 
-   **Load Registry Hive from the broken OS Disk:**
-
-   ```console
-   REG LOAD HKLM\BROKENSYSTEM <VOLUME LETTER OF BROKEN OS DISK>:\windows\system32\config\SYSTEM
+   ```cmd
+   bcdedit /store <Boot partition>:\boot\bcd /set {<Identifier>} OSDEVICE BOOT
    ```
 
-   **Enable on ControlSet001:**
-
-   ```console
-   REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\CrashControl" /v CrashDumpEnabled /t REG_DWORD /d 1 /f 
-   REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\CrashControl" /v DumpFile /t REG_EXPAND_SZ /d "%SystemRoot%\MEMORY.DMP" /f 
-   REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\CrashControl" /v NMICrashDump /t REG_DWORD /d 1 /f 
+   ```cmd
+   bcdedit /store <Boot partition>:\boot\bcd /set {<Identifier>} OSDEVICE partition=<Windows partition>:
    ```
 
-   **Enable on ControlSet002:**
+8. Detach the repaired OS disk from the troubleshooting VM. Then, create a VM from the OS disk.
 
-   ```console
-   REG ADD "HKLM\BROKENSYSTEM\ControlSet002\Control\CrashControl" /v CrashDumpEnabled /t REG_DWORD /d 1 /f 
-   REG ADD "HKLM\BROKENSYSTEM\ControlSet002\Control\CrashControl" /v DumpFile /t REG_EXPAND_SZ /d "%SystemRoot%\MEMORY.DMP" /f 
-   REG ADD "HKLM\BROKENSYSTEM\ControlSet002\Control\CrashControl" /v NMICrashDump /t REG_DWORD /d 1 /f 
-   ```
+## Cause 3: Registry hive corruption
 
-   **Unload Broken OS Disk:**
+The file that's associated with the error is a registry file, such as *\\WINDOWS\\system32\\config\\system*.
 
-   ```console
-   REG UNLOAD HKLM\BROKENSYSTEM
-   ```
+These errors occur because the registry hive is corrupted. A registry hive can become corrupted if any of the following scenarios occur:
 
-### Rebuild the VM
+- The hive fails.
+- The hive mounts but is empty.
+- The hive wasn't closed correctly.
 
-Use [step 5 of the VM Repair Commands](./repair-windows-vm-using-azure-virtual-machine-repair-commands.md#repair-process-example) to rebuild the VM.
+### Solution 3: Fix the corrupted hive
+
+[!INCLUDE [Registry important alert](../../includes/registry-important-alert.md)]
+
+Fix the corrupted hive by following these steps:
+
+1. Delete the VM.
+
+   > [!IMPORTANT]  
+   > When you're prompted to confirm the VM deletion, make sure that you clear the **Delete with VM** option that's associated with the OS disk resource type.
+
+2. Attach the OS disk as a data disk to another VM (a troubleshooting VM). For more information, see [How to attach a data disk to a Windows VM in the Azure portal](/azure/virtual-machines/windows/attach-managed-disk-portal).
+3. Connect to the troubleshooting VM.
+4. Select **Start**, and then search for and select **Computer management**. In the console tree of the Computer Management app, select **Disk management**. Make sure that the OS disk is online and that its partitions have drive letters assigned.
+5. On the OS disk that you attached, navigate to the *\\windows\\system32\\config* directory. Copy all the files to a backup folder in case a rollback is required.
+6. Select **Start**, and then search for and select **Registry Editor** (*regedit.exe*).
+7. In the Registry Editor app, select the `HKEY_USERS` subtree, select **File** > **Load Hive** on the menu, and then load the *\\windows\\system32\\config\SYSTEM* file.
+8. If the hive loads without issues, this means that the hive was not closed correctly. In this situation, unload the hive to unlock the file and fix the issue.
+
+   > [!NOTE]  
+   > If you receive the following error message, [contact Azure Support](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade):
+   >
+   > > Cannot load \<drive>:\\Windows\\System32\\config\\SYSTEM: Error while loading hive
+
+9. Detach the repaired OS disk from the troubleshooting VM. Then, create a new VM from the OS disk.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

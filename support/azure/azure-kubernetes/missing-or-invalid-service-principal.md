@@ -17,7 +17,7 @@ This article discusses how to troubleshoot a service principal that isn't found 
 
 ## Cause
 
-If you create an AKS cluster, AKS requires a service principal or managed identity to create resources on your behalf. AKS can automatically create a new service principal during cluster creation, or it can receive an existing service principal. If you choose to automatically create a service principal, Azure Active Directory (Azure AD) has to propagate the service principal to every region to make sure that the cluster is successfully created. If the propagation takes too long, the cluster might fail validation. This is because AKS can't find an available service principal.
+If you create an AKS cluster, AKS requires a service principal or managed identity to create resources on your behalf. AKS can automatically create a new service principal during cluster creation, or it can receive an existing service principal. If you choose to automatically create a service principal, Microsoft Entra ID has to propagate the service principal to every region to make sure that the cluster is successfully created. If the propagation takes too long, the cluster might fail validation. This is because AKS can't find an available service principal.
 
 ## Solution
 

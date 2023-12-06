@@ -3,7 +3,7 @@
 title: Microsoft Entra troubleshooting documentation # < 60 chars
 summary: Welcome to Microsoft Entra troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Microsoft Entra. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
 metadata:
-  title: Troubleshoot Microsoft Entra issues
+  title: Troubleshoot Microsoft Entra ID issues
   description: Documentation for troubleshooting common issues with Microsoft Entra. # Required; article description that is displayed in search results. < 160 chars.
   services: active-directory
   ms.service: active-directory  #Required; service per approved list. service slug assigned to your service by ACOM.
@@ -17,11 +17,11 @@ metadata:
 landingContent:
 
  # Card
-  - title: Azure Active Directory
+  - title: Microsoft Entra ID
     linkLists:
       - linkListType: reference
         links:
-          - text: Azure Active Directory troubleshooting documentation
+          - text: Microsoft Entra troubleshooting documentation
             url: ../active-directory/welcome-azure-ad.yml
 
  # Card

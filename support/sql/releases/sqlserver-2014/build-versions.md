@@ -13,7 +13,7 @@ This article lists the Microsoft SQL Server 2014 builds that were released after
 
 ## SQL Server 2014 Service Pack 3 (SP3) and cumulative update (CU) builds
 
-| Cumulative update name        | Build version | Knowledge Base number                                   | Release day       |
+| Cumulative update name        | Build version | Knowledge Base number                                   | Release date       |
 |-------------------------------|---------------|---------------------------------------------------------|-------------------|
 | SQL Server 2014 SP3 CU4 + GDR | 12.0.6449.1   | [KB5029185](https://support.microsoft.com/help/5029185) | October 10, 2023  |
 | SQL Server 2014 SP3 GDR       | 12.0.6179.1   | [KB5029184](https://support.microsoft.com/help/5029184) | October 10, 2023  |
@@ -26,8 +26,8 @@ This article lists the Microsoft SQL Server 2014 builds that were released after
 | SQL Server 2014 SP3 CU4 + GDR | 12.0.6372.1   | [KB4535288](https://support.microsoft.com/help/4535288) | February 11, 2020 |
 | SQL Server 2014 SP3 GDR       | 12.0.6118.4   | [KB4532095](https://support.microsoft.com/help/4532095) | February 11, 2020 |
 | SQL Server 2014 SP3 CU4       | 12.0.6329.1   | [KB4500181](https://support.microsoft.com/help/4500181) | July 29, 2019     |
-| SQL Server 2014 SP3 CU3 + GDR | 12.0.6293.0   | [KB4505422](https://support.microsoft.com/help/4505422) | July 9, 2019      |
-| SQL Server 2014 SP3 GDR       | 12.0.6108.1   | [KB4505218](https://support.microsoft.com/help/4505218) | July 9, 2019      |
+| SQL Server 2014 SP3 CU3 + GDR | 12.0.6293.0   | [KB4505422](https://support.microsoft.com/help/4505422) | July 09, 2019      |
+| SQL Server 2014 SP3 GDR       | 12.0.6108.1   | [KB4505218](https://support.microsoft.com/help/4505218) | July 09, 2019      |
 | SQL Server 2014 SP3 CU3       | 12.0.6259.0   | [KB4491539](https://support.microsoft.com/help/4491539) | April 16, 2019    |
 | SQL Server 2014 SP3 CU2       | 12.0.6214.1   | [KB4482960](https://support.microsoft.com/help/4482960) | February 19, 2019 |
 | SQL Server 2014 SP3 CU1       | 12.0.6205.1   | [KB4470220](https://support.microsoft.com/help/4470220) | December 12, 2018 |
@@ -35,11 +35,11 @@ This article lists the Microsoft SQL Server 2014 builds that were released after
 
 ## SQL Server 2014 Service Pack 2 (SP2) and cumulative update (CU) builds
 
-| Cumulative update name         | Build version | Knowledge Base number                                   | Release day       |
+| Cumulative update name         | Build version | Knowledge Base number                                   | Release date       |
 |--------------------------------|---------------|---------------------------------------------------------|-------------------|
 | SQL Server 2014 SP2 CU18       | 12.0.5687.1   | [KB4500180](https://support.microsoft.com/help/4500180) | July 29, 2019     |
-| SQL Server 2014 SP2 CU17 + GDR | 12.0.5659.1   | [KB4505419](https://support.microsoft.com/help/4505419) | July 9, 2019      |
-| SQL Server 2014 SP2 GDR        | 12.0.5223.6   | [KB4505217](https://support.microsoft.com/help/4505217) | July 9, 2019      |
+| SQL Server 2014 SP2 CU17 + GDR | 12.0.5659.1   | [KB4505419](https://support.microsoft.com/help/4505419) | July 09, 2019      |
+| SQL Server 2014 SP2 GDR        | 12.0.5223.6   | [KB4505217](https://support.microsoft.com/help/4505217) | July 09, 2019      |
 | SQL Server 2014 SP2 CU17       | 12.0.5632.1   | [KB4491540](https://support.microsoft.com/help/4491540) | April 16, 2019    |
 | SQL Server 2014 SP2 CU16       | 12.0.5626.1   | [KB4482967](https://support.microsoft.com/help/4482967) | February 19, 2019 |
 | SQL Server 2014 SP2 CU15       | 12.0.5605.1   | [KB4469137](https://support.microsoft.com/help/4469137) | December 12, 2018 |
@@ -53,22 +53,22 @@ This article lists the Microsoft SQL Server 2014 builds that were released after
 | SQL Server 2014 SP2 CU8        | 12.0.5557.0   | [KB4037356](https://support.microsoft.com/help/4037356) | October 16, 2017  |
 | SQL Server 2014 SP2 CU7        | 12.0.5556.0   | [KB4032541](https://support.microsoft.com/help/4032541) | August 28, 2017   |
 | SQL Server 2014 SP2 CU6        | 12.0.5552.0   | [KB4019094](https://support.microsoft.com/help/4019094) | July 17, 2017     |
-| SQL Server 2014 SP2 GDR        | 12.0.5207.0   | [KB4019093](https://support.microsoft.com/help/4019093) | August 8, 2017    |
+| SQL Server 2014 SP2 GDR        | 12.0.5207.0   | [KB4019093](https://support.microsoft.com/help/4019093) | August 08, 2017    |
 | SQL Server 2014 SP2 CU5        | 12.0.5546.0   | [KB4013098](https://support.microsoft.com/help/4013098) | April 17, 2017    |
 | SQL Server 2014 SP2 CU4        | 12.0.5540.0   | [KB4010394](https://support.microsoft.com/help/4010394) | February 21, 2017 |
 | SQL Server 2014 SP2 CU3        | 12.0.5538.0   | [KB3204388](https://support.microsoft.com/help/3204388) | December 19, 2016 |
-| SQL Server 2014 SP2 GDR        | 12.0.5532.0   | [KB3194718](https://support.microsoft.com/help/3194718) | November 8, 2016  |
-| SQL Server 2014 SP2 GDR        | 12.0.5203.0   | [KB3194714](https://support.microsoft.com/help/3194714) | November 8, 2016  |
+| SQL Server 2014 SP2 GDR        | 12.0.5532.0   | [KB3194718](https://support.microsoft.com/help/3194718) | November 08, 2016  |
+| SQL Server 2014 SP2 GDR        | 12.0.5203.0   | [KB3194714](https://support.microsoft.com/help/3194714) | November 08, 2016  |
 | SQL Server 2014 SP2 CU2        | 12.0.5522.0   | [KB3188778](https://support.microsoft.com/help/3188778) | October 17, 2016  |
 | SQL Server 2014 SP2 CU1        | 12.0.5511.0   | [KB3178925](https://support.microsoft.com/help/3178925) | August 25, 2016   |
 | SQL Server 2014 SP2            | 12.0.5000.0   | [KB3171021](https://support.microsoft.com/help/3171021) | July 11, 2016     |
 
 ## SQL Server 2014 Service Pack 1 (SP1) and cumulative update (CU) builds
 
-| Cumulative update name               | Build version | Knowledge Base number                                   | Release day       |
+| Cumulative update name               | Build version | Knowledge Base number                                   | Release date       |
 |--------------------------------------|---------------|---------------------------------------------------------|-------------------|
-| SQL Server 2014 SP1 CU13             | 12.0.4520.0   | [KB4019099](https://support.microsoft.com/help/4019099) | August 8, 2017    |
-| SQL Server 2014 SP1 GDR              | 12.0.4237.0   | [KB4019091](https://support.microsoft.com/help/4019091) | August 8, 2017    |
+| SQL Server 2014 SP1 CU13             | 12.0.4520.0   | [KB4019099](https://support.microsoft.com/help/4019099) | August 08, 2017    |
+| SQL Server 2014 SP1 GDR              | 12.0.4237.0   | [KB4019091](https://support.microsoft.com/help/4019091) | August 08, 2017    |
 | SQL Server 2014 SP1 CU12             | 12.0.4511.0   | [KB4017793](https://support.microsoft.com/help/4017793) | April 17, 2017    |
 | SQL Server 2014 SP1 CU11             | 12.0.4502.0   | [KB4010392](https://support.microsoft.com/help/4010392) | February 21, 2017 |
 | SQL Server 2014 SP1 CU10             | 12.0.4491.0   | [KB3204399](https://support.microsoft.com/help/3204399) | December 19, 2016 |
@@ -85,11 +85,11 @@ This article lists the Microsoft SQL Server 2014 builds that were released after
 | SQL Server 2014 SP1 CU2              | 12.0.4422.0   | [KB3075950](https://support.microsoft.com/help/3075950) | August 17, 2015   |
 | SQL Server 2014 SP1 CU1              | 12.0.4416.1   | [KB3067839](https://support.microsoft.com/help/3067839) | June 19, 2015     |
 | MS15-058: GDR Security Update        | 12.0.4213.0   | [KB3070446](https://support.microsoft.com/help/3070446) | July 14, 2015     |
-| SQL Server 2014 SP1                  | 12.0.4100.1   | [KB3058865](https://support.microsoft.com/help/3058865) | May 4, 2015       |
+| SQL Server 2014 SP1                  | 12.0.4100.1   | [KB3058865](https://support.microsoft.com/help/3058865) | May 04, 2015       |
 
 ## SQL Server 2014 cumulative update (CU) builds
 
-| Cumulative update name        | Build version | Knowledge Base number                                   | Release day       |
+| Cumulative update name        | Build version | Knowledge Base number                                   | Release date       |
 |-------------------------------|---------------|---------------------------------------------------------|-------------------|
 | CU14                          | 12.0.2569.0   | [KB3158271](https://support.microsoft.com/help/3158271) | June 20, 2016     |
 | CU13                          | 12.0.2568.0   | [KB3144517](https://support.microsoft.com/help/3144517) | April 18, 2016    |
@@ -109,7 +109,7 @@ This article lists the Microsoft SQL Server 2014 builds that were released after
 | CU1                           | 12.0.2342.0   | [KB2931693](https://support.microsoft.com/help/2931693) | April 21, 2014    |
 | MS15-058: GDR Security Update | 12.0.2269.0   | [KB3045324](https://support.microsoft.com/help/3045324) | July 14, 2015     |
 | MS14-044: GDR Security Update | 12.0.2254.0   | [KB2977315](https://support.microsoft.com/help/2977315) | August 12, 2014   |
-| RTM                           | 12.0.2000.8   | NA                                                      | April 1, 2014     |
+| RTM                           | 12.0.2000.8   | NA                                                      | April 01, 2014     |
 
 ## References
 

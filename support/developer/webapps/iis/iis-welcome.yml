@@ -84,14 +84,16 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Troubleshoot Kerberos failures
-            url: www-authentication-authorization/troubleshoot-kerberos-failures-ie.md
-          - text: Kerberos double-hop authentication with Microsoft Edge (Chromium)
-            url: www-authentication-authorization/kerberos-double-hop-authentication-edge-chromium.md
           - text: Configure Many-to-One client certificate mappings
             url: www-authentication-authorization/configure-many-to-one-client-mappings.md
+          - text: Diagnostic pages for Windows Integrated Authentication troubleshooting
+            url: www-authentication-authorization/diagnostics-pages-windows-integrated-authentication.md
           - text: IIS authenticates browser clients
             url: www-authentication-authorization/iis-authenticates-browser-client.md
+          - text: Kerberos double-hop authentication with Microsoft Edge (Chromium)
+            url: www-authentication-authorization/kerberos-double-hop-authentication-edge-chromium.md
+          - text: Troubleshoot Kerberos failures
+            url: www-authentication-authorization/troubleshoot-kerberos-failures-ie.md
           - text: Troubleshooting SSL related issues (Server Certificate)
             url: www-authentication-authorization/troubleshooting-ssl-related-issues-server-certificate.md
  

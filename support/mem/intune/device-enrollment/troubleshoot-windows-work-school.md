@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot "Set up for work or school" enrollment in Intune
-description: Troubleshoot blocked Microsoft Intune enrollment for Windows devices when the user chooses "Set up for work or school" and signs in with Azure AD. The device is recognized as a personal device and the tenant doesn't allow for this device type.
+description: Troubleshoot blocked Microsoft Intune enrollment for Windows devices when the user chooses "Set up for work or school" and signs in with Microsoft Entra ID. The device is recognized as a personal device and the tenant doesn't allow for this device type.
 ms.date: 01/31/2022
 search.appverid: MET150
 ms.reviewer: kaushika
@@ -10,7 +10,7 @@ ms.reviewer: kaushika
 
 This article helps troubleshoot an enrollment failure during the out-of-box experience (OOBE) when enrolling Windows devices with a work or school account.
 
-This issue can occur during device setup when the user chooses **Set up for work or school** and then signs in with an organization-linked Azure Active Directory (Azure AD) account. The enrollment fails and you might see associated error code 80180014.
+This issue can occur during device setup when the user chooses **Set up for work or school** and then signs in with an organization-linked Microsoft Entra account. The enrollment fails and you might see associated error code 80180014.
 
 :::image type="content" source="media/troubleshoot-windows-work-school/windows-setup.png" alt-text="Windows setup screen showing options for setting up the device":::
 
@@ -34,6 +34,6 @@ Select **Windows restrictions** > **Create restriction** and give the restrictio
 
 Assign the restriction to the group(s) you want to let enroll personal devices.
 
-:::image type="content" source="media/troubleshoot-windows-work-school/select-groups.png" alt-text="Assign the restriction to Azure AD groups.":::
+:::image type="content" source="media/troubleshoot-windows-work-school/select-groups.png" alt-text="Assign the restriction to Microsoft Entra groups.":::
 
 Review and create the restriction.

@@ -2,7 +2,7 @@
 title: Can't sign in or create or edit or save or view desktop flows
 description: Provides a resolution for the error message that occurs when you try to sign in, create, edit, save, or view desktop flows in Power Automate.
 ms.reviewer: pefelesk
-ms.date: 10/16/2023
+ms.date: 10/23/2023
 ms.subservice: power-automate-desktop-flows
 ---
 # Can't sign in, create, edit, save, or view desktop flows
@@ -18,19 +18,19 @@ In Microsoft Power Automate for desktop, you experience the following issues:
 
 - When you sign in to Power Automate for desktop, you receive the following error message:
 
-   > Error during sign in - Sign in failed.
+   > There was an issue during sign in. Try again later or contact an administrator.
 
 - When you create a new desktop flow, you receive the following error message:
 
-   > You aren't permitted to create flows in this environment. Please switch to the default environment, or to one of your own environment(s), where you have maker permissions.
+   > You aren't permitted to view or create flows in this environment. Contact your administrator or switch to the default environment, or an environment where you have sufficient permissions.
 
 - When you edit a desktop flow, you receive the following error message:
 
-   > Flow initialization failed.
+   > Flow initialization failed. Please make sure there is an active internet connection and contact your administrator.
 
 - When you save a desktop flow, you receive the following error message:
 
-   > Error during flow save - Flow failed to save.
+   > An error occurred while saving the flow. Try again and if the issue persists contact your administrator.
 
 - You can't view any desktop flows in the **My flows** list of the Console.
 

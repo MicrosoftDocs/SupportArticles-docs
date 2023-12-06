@@ -241,9 +241,9 @@ If you're running into issues using Power Apps, try these common troubleshooting
 
    When this issue happens, consider using web player on Windows platform.
 
-1. **AAD Conditional access with the policy "Require device to be marked as compliant" does not work in Power Apps for Windows** (July 30, 2020)
+1. **Microsoft Entra Conditional Access with the policy "Require device to be marked as compliant" does not work in Power Apps for Windows** (July 30, 2020)
 
-   When setting the conditional access policy "Require device to be marked as compliant" in Azure Active Directory, users will face login errors with the message "The application contains sensitive information and can only be accessed from devices or client applications that meet your enterprise management compliance policy" and won't be able to access their Power Apps. As a workaround, use your browser.
+   When setting the conditional access policy "Require device to be marked as compliant" in Microsoft Entra ID, users will face login errors with the message "The application contains sensitive information and can only be accessed from devices or client applications that meet your enterprise management compliance policy" and won't be able to access their Power Apps. As a workaround, use your browser.
 
 1. **`Connection.Connected` returns the wrong value during OnStart in Power Apps for Windows** (July 21, 2020)
 

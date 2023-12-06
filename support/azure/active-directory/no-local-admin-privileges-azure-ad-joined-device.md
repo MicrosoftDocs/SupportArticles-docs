@@ -1,6 +1,6 @@
 ---
-title: No local administrator group privileges on Azure AD joined device
-description: Resolve a scenario in which you don't receive local administrator group privileges after you sign in to an Azure AD joined device.
+title: No local administrator group privileges on Microsoft Entra joined device
+description: Resolve a scenario in which you don't receive local administrator group privileges after you sign in to a Microsoft Entra joined device.
 ms.date: 07/25/2023
 author: ilyalushnikov
 ms.author: ilyal
@@ -9,13 +9,13 @@ ms.reviewer: gudlapreethi, jafritts, shhada, v-leedennis
 ms.service: active-directory
 ms.subservice: enterprise-users
 ---
-# No local administrator group privileges on Azure AD joined device
+# No local administrator group privileges on Microsoft Entra joined device
 
-This article discusses how to resolve a scenario in which you assign or activate the Azure AD joined device local administrator role for a user, but the user doesn't receive local administrator group privileges after they sign in to an Azure AD joined device.
+This article discusses how to resolve a scenario in which you assign or activate the Azure AD Joined Device Local Administrator role for a user, but the user doesn't receive local administrator group privileges after they sign in to a Microsoft Entra joined device.
 
-## Cause 1: User was assigned the Azure AD joined device local administrator role while using a cached PRT
+## Cause 1: User was assigned the Azure AD Joined Device Local Administrator role while using a cached PRT
 
-You assigned the Azure AD joined device local administrator role to a user who was still using a cached primary refresh token (PRT) on their local device.
+You assigned the Azure AD Joined Device Local Administrator role to a user who was still using a cached primary refresh token (PRT) on their local device.
 
 #### Check for the presence of a PRT
 
@@ -29,7 +29,7 @@ In the command output, locate the [SSO State](/azure/active-directory/devices/tr
 
 ## Cause 2: Privileged Identity Management (PIM) was activated for a user who has a cached PRT
 
-You used [Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure) (PIM) to activate a user into the Azure AD-joined device local administrator role, but they have a cached PRT on their local device.
+You used [Privileged Identity Management](/azure/active-directory/privileged-identity-management/pim-configure) (PIM) to activate a user into the Microsoft Entra joined device local administrator role, but they have a cached PRT on their local device.
 
 For instructions to determine whether a PRT is active, see [Check for the presence of a PRT](#check-for-the-presence-of-a-prt).
 
@@ -46,13 +46,13 @@ If you want to fix the missing privileges issue immediately so that the user doe
 
 ### Part 1: (PIM users only) Activate PIM and verify that the role activation was completed
 
-Follow the instructions in [Activate an Azure AD role in PIM](/azure/active-directory/privileged-identity-management/pim-how-to-activate-role) to activate the [Azure AD Joined Device Local Administrator](/azure/active-directory/roles/permissions-reference#azure-ad-joined-device-local-administrator) role for the user. Then, follow these steps in the Azure portal to verify that the role activation was completed for that user:
+Follow the instructions in [Activate a Microsoft Entra role in PIM](/azure/active-directory/privileged-identity-management/pim-how-to-activate-role) to activate the [Azure AD Joined Device Local Administrator](/azure/active-directory/roles/permissions-reference#azure-ad-joined-device-local-administrator) role for the user. Then, follow these steps in the Azure portal to verify that the role activation was completed for that user:
 
-1. In the [Azure portal](https://portal.azure.com), search for and select **Azure AD Privileged Identity Management**.
+1. In the [Azure portal](https://portal.azure.com), search for and select **Microsoft Entra Privileged Identity Management**.
 
 1. In the PIM navigation pane, locate the **Tasks** heading, and then select **My roles**.
 
-1. In the **My roles | Azure AD roles** page, select the **Active assignments** tab.
+1. In the **My roles | Microsoft Entra roles** page, select the **Active assignments** tab.
 
 1. In the **Role** column, make sure that the **Azure AD Joined Device Local Administrator** role appears.
 
