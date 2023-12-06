@@ -20,6 +20,8 @@ ms.author: genli
 
 This article describes the "Getting ready" and "Getting Windows ready" screens that you may encounter when you boot a Windows virtual machine (VM) in Microsoft Azure. It provides steps to help you collect data for a support ticket.
 
+[!INCLUDE [Feedback](../../includes/feedback.md)]
+
 ## Symptoms
 
 A Windows VM doesn't boot. When you use **Boot diagnostics** to get the screenshot of the VM, you may see that the VM displays the message "Getting ready" or "Getting Windows ready".

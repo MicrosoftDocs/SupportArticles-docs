@@ -9,6 +9,8 @@ ms.reviewer: hclvteam, v-weizhu
 
 This article provides a solution for a "Client secret key is expired" error that occurs when you deploy or terminate virtual machines (VMs).
 
+[!INCLUDE [Feedback](../../includes/feedback.md)]
+
 ## Symptoms
 
 When deploying or terminating VMs, you may encounter an error like the following:

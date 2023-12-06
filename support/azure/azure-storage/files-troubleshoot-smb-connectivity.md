@@ -11,6 +11,8 @@ ms.reviewer: kendownie, jarrettr, v-weizhu, v-six, hanagpal
 
 This article lists common problems that might occur when you try to connect to and access Server Message Block (SMB) Azure file shares from Windows or Linux clients. It also provides possible causes and resolutions for these problems.
 
+[!INCLUDE [Feedback](../../includes/feedback.md)]
+
 > [!IMPORTANT]
 > This article only applies to SMB shares. For details on Network File System (NFS) shares, see [Troubleshoot Azure NFS file shares](/azure/storage/files/files-troubleshoot-linux-nfs).
 

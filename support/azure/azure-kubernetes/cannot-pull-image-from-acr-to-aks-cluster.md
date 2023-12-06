@@ -11,6 +11,8 @@ ms.custom: devx-track-azurecli
 ---
 # Fail to pull images from Azure Container Registry to Azure Kubernetes Service cluster
 
+[!INCLUDE [Feedback](../../includes/feedback.md)]
+
 When you're using Microsoft Azure Container Registry with Azure Kubernetes Service (AKS), an authentication mechanism needs to be established. You can set up the AKS to Container Registry integration by using a few simple Azure CLI or Azure PowerShell commands. This integration assigns the [AcrPull role](/azure/role-based-access-control/built-in-roles#acrpull) for the identity associated with the AKS cluster to pull images from a container registry.
 
 In some cases, pulling images from a container registry to an AKS cluster fails. This article provides guidance for troubleshooting the most common errors that you encounter when you pull images from a container registry to an AKS cluster.

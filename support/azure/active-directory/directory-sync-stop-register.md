@@ -13,6 +13,8 @@ This article describes a performance problem in Azure Active Directory Sync Tool
 _Original product version:_ &nbsp; Microsoft Entra ID, Microsoft Intune, Azure Backup, Office 365 Identity Management  
 _Original KB number:_ &nbsp; 2882421
 
+[!INCLUDE [Feedback](../../includes/feedback.md)]
+
 ## Symptoms
 
 You experience one of the following symptoms:

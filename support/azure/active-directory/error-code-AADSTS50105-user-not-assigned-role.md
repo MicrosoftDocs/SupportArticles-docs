@@ -10,6 +10,8 @@ ms.subservice: app-mgmt
 
 This article provides a resolution to the AADSTS50105 error that occurs during federated authentication with Microsoft Entra ID.
 
+[!INCLUDE [Feedback](../../includes/feedback.md)]
+
 ## Symptoms
 
 You receive the following error when trying to sign into an application that has been set up to use Microsoft Entra ID for identity management using SAML-based Single Sign-On (SSO):

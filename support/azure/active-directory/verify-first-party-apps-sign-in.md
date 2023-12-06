@@ -9,6 +9,8 @@ ms.custom: has-azure-ad-ps-ref
 ---
 # Verify first-party Microsoft applications in sign-in reports
 
+[!INCLUDE [Feedback](../../includes/feedback.md)]
+
 When you're reviewing your sign-in reports, you might see an application in your sign-in report that you don't own and want to identify the application. You also might wonder how you signed into that app, if you don't remember accessing the app.
 
 Here's an example sign-in report:
