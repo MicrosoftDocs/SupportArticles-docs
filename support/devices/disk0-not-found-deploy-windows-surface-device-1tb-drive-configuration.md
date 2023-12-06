@@ -23,11 +23,11 @@ _Original KB number:_ &nbsp; 4046108
 When you deploy Windows on a Surface device that has 1-TB drive configuration, you may encounter errors or other issues that concern locating the Disk0. For example, if you're using Microsoft Deployment Toolkit (MDT), the following error is logged in the *bdd.log* file:
 
 ```output
-<![LOG[################################################]LOG]!><time="12:54:12.000+000" date="06-09-2017" component="ZTIDiskpart" context="" type="3" thread="" file="ZTIDiskpart">
-<![LOG[## Disk(0) was not found. Unable to continue.]LOG]!><time="12:54:12.000+000" date="06-09-2017" component="ZTIDiskpart" context="" type="3" thread="" file="ZTIDiskpart">
-<![LOG[## Possible Cause: Missing Storage Driver.]LOG]!><time="12:54:12.000+000" date="06-09-2017" component="ZTIDiskpart" context="" type="3" thread="" file="ZTIDiskpart">
-<![LOG[################################################]LOG]!><time="12:54:12.000+000" date="06-09-2017" component="ZTIDiskpart" context="" type="3" thread="" file="ZTIDiskpart">
-<![LOG[FAILURE ( 7711 ): Disk OSDDiskIndex(0) can not be found!]LOG]!><time="12:54:12.000+000" date="06-09-2017" component="ZTIDiskpart" context="" type="3" thread="" file="ZTIDiskpart">
+<[LOG[################################################]LOG]><time="12:54:12.000+000" date="06-09-2017" component="ZTIDiskpart" context="" type="3" thread="" file="ZTIDiskpart">
+<[LOG[## Disk(0) was not found. Unable to continue.]LOG]><time="12:54:12.000+000" date="06-09-2017" component="ZTIDiskpart" context="" type="3" thread="" file="ZTIDiskpart">
+<[LOG[## Possible Cause: Missing Storage Driver.]LOG]><time="12:54:12.000+000" date="06-09-2017" component="ZTIDiskpart" context="" type="3" thread="" file="ZTIDiskpart">
+<[LOG[################################################]LOG]!><time="12:54:12.000+000" date="06-09-2017" component="ZTIDiskpart" context="" type="3" thread="" file="ZTIDiskpart">
+<[LOG[FAILURE ( 7711 ): Disk OSDDiskIndex(0) can not be found!]LOG]!><time="12:54:12.000+000" date="06-09-2017" component="ZTIDiskpart" context="" type="3" thread="" file="ZTIDiskpart">
 ```
 
 Surface devices that are impacted by this issue:
