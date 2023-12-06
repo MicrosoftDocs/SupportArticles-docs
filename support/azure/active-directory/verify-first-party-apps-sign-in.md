@@ -11,13 +11,13 @@ ms.custom: has-azure-ad-ps-ref
 
 [!INCLUDE [Feedback](../../includes/feedback.md)]
 
-When you're reviewing your sign-in reports, you might see an application in your sign-in report that you don't own and want to identify the application. You also might wonder how you signed into that app, if you don't remember accessing the app.
+When you review your sign-in reports, you might see an application in your sign-in report that you don't own and want to identify. You also might wonder how you signed in to that app, if you don't remember accessing the app.
 
 Here's an example sign-in report:
 
 :::image type="content" source="media/verify-first-party-apps-sign-in/sign-in-report.png" alt-text="Screenshot of a sign-in report in Microsoft Entra ID.":::
 
-For example, when you access `learn.microsoft.com`, the application that's shown in the sign-in log may say `dev-rel-auth-prod`, which isn't descriptive of `learn.microsoft.com`.
+For example, when you access `learn.microsoft.com`, the application that's shown in the sign-in log may show `dev-rel-auth-prod`, but this isn't descriptive of `learn.microsoft.com`.
 
 Although the apps that are listed in sign-in reports are owned by Microsoft and aren't suspicious applications, you can determine whether Microsoft owns a Microsoft Entra service principal that's found in your Microsoft Entra logs.
 
