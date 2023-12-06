@@ -9,6 +9,8 @@ ms.subservice: domain-services
 ---
 # Pending devices in Microsoft Entra ID
 
+[!INCLUDE [Feedback](../../includes/feedback.md)]
+
 Pending devices are devices that are synced to Microsoft Entra ID from your on-premises Active Directory, but haven't completed registration with the Microsoft Entra device registration service. When the registered state of a device is pending, the device can't complete any authorization or authentication requests, such as requesting a [Primary Refresh token](/azure/active-directory/devices/concept-primary-refresh-token) for single sign-on, or applying [device-based Conditional Access policies](/mem/intune/protect/create-conditional-access-intune).
 
 > [!NOTE]

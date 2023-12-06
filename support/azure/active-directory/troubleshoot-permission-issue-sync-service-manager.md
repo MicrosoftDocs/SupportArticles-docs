@@ -10,6 +10,8 @@ ms.subservice: enterprise-users
 
 This article discusses how to understand and troubleshoot the "permission-issue [8344]" error, "Insufficient access rights to perform the operation." This Microsoft Entra error occurs on an on-premises Active Directory connector during an export operation in Synchronization Service Manager.
 
+[!INCLUDE [Feedback](../../includes/feedback.md)]
+
 ## Symptoms
 
 On the [**Operations** tab](/azure/active-directory/hybrid/connect/how-to-connect-sync-service-manager-ui-operations) of the [Synchronization Service Manager](/azure/active-directory/hybrid/connect/how-to-connect-sync-service-manager-ui) app, the **Connection Operations** table contains a row that represents an on-premises AD connector in which the **Profile Name** column value is **Export**. However, the corresponding **Status** column value is **completed-export-errors**. When you select this table row, a secondary table displays one or more **permission-issue** export errors.
