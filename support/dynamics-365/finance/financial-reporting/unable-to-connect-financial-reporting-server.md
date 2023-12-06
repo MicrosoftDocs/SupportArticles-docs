@@ -4,7 +4,7 @@
 title: Troubleshoot issues connecting to Financial reporting
 description: Provides a resolution for an issue where you can't connect to Financial reporting in Microsoft Dynamics 365 Finance.
 author: aprilolson
-ms.date: 11/30/2023
+ms.date: 12/06/2023
 ms.prod: 
 ms.technology: 
 
@@ -39,7 +39,7 @@ When you try to connect to [Financial reporting](/dynamics365/finance/general-le
 To solve this issue:
 
 - Check if the issue occurs in Google Chrome and Microsoft Edge browsers.
-- If the issue occurs only in one browser, it might be an issue with the **ClickOnce** extension.
+- If the issue occurs only in one browser, it might be an issue with the **ClickOnce** extension. For more information about the ClickOnce extension, see [Issue 1 - Report Designer doesn't start when you select "New" or "Edit"](issues-open-report-designer.md#issue-1---report-designer-doesnt-start-when-you-select-new-or-edit).
 - When you receive the connection error message, select **Test** to test the connection to see what message appears.
 - The issue might be caused by another user not having access to Financial reporting. If a user doesn't have access, they receive a message stating they don't have permission. To resolve the permission issue, see [Issue 2 - The user isn't assigned the required permissions to use Financial reporting](issues-open-report-designer.md#issue-2---the-user-isnt-assigned-the-required-permissions-to-use-financial-reporting).
 - If the issue occurs in multiple browsers, make sure the time clock on your workstation is set to **Auto**.

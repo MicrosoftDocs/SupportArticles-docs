@@ -4,7 +4,7 @@
 title: Troubleshoot Finance insights setup issues
 description: Provides resolutions for the common issues that can occur when you use Finance insights capabilities in Microsoft Dynamics 365 Finance.
 author: twheeloc 
-ms.date: 11/24/2023
+ms.date: 12/06/2023
 ms.prod: 
 ms.technology: 
 
@@ -126,4 +126,4 @@ The **Budget proposal** feature requires a minimum of three years of budget or a
 
 ### Resolution
 
-The environment has reached the Data Lake Services maximum table limit. For more information about the limit, see [Enable near real-time data changes](/dynamics365/fin-ops-core/dev-itpro/data-entities/Azure-Data-Lake-GA-version-overview#enable-near-real-time-data-changes).
+The environment has reached the Data Lake Services maximum table limit. For more information about the limit, see [Enable near real-time data changes](/dynamics365/fin-ops-core/dev-itpro/data-entities/azure-data-lake-ga-version-overview#what-is-export-to-azure-data-lake).
