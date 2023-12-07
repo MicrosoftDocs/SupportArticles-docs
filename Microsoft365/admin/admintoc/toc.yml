@@ -127,7 +127,7 @@
       href: ../diagnostic-logs/collect-network-monitor-trace.md
     - name: Diagnostic log collection in Support and Recovery Assistant
       href: ../diagnostic-logs/diagnostic-log-collection-in-support-and-recovery-assistant.md
-    - name: Enable O365 ProPlus ULS logging
+    - name: Increase the size of diagnostic logs
       href: ../diagnostic-logs/collect-office-diagnostic-logs.md
     - name: Run SaRA Fiddler Trace
       href: ../diagnostic-logs/run-fiddler-trace.md
