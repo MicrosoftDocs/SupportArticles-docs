@@ -110,7 +110,7 @@ az resource update --ids $NETWORK_PROFILE_ID --set properties.containerNetworkIn
 ```
 3. Delete the network profile and the subnet.
 
-4. ## Next Steps 
+## Next Steps 
 If the previous checks did not resolve the incident, please submit a [support request](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportrequest) 
 Azure Container Registry ResourceURI 
 Container Group ARM template (or other reference used to deetermine the ACI configuration deployed). 
