@@ -17,6 +17,8 @@ ms.author: genli
 ---
 # Troubleshoot Azure Windows virtual machine activation problems
 
+[!INCLUDE [Feedback](../../includes/feedback.md)]
+
 If you have trouble when activating Azure Windows virtual machine (VM) that is created from a custom image, you can use the information provided in this document to troubleshoot the issue.
 
 ## Understanding Azure KMS endpoints for Windows product activation of Azure Virtual Machines
