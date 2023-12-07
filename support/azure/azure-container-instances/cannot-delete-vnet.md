@@ -75,7 +75,7 @@ If the deletion workflow that uses Azure Portal doesn't work and the vnet and/or
 
 After deleting all container groups, run the following commands:
 
-1. Replace <my-resource-group>, <my-vnet-name>, and <my-subnet-name> with the name of your resource group, VNet, and subnet
+1. Replace ``` <my-resource-group>```, ```<my-vnet-name>```, and ```<my-subnet-name>``` with the name of your resource group, VNet, and subnet:
 ```
 RES_GROUP=<my-resource-group>
 VNET_NAME=<my-vnet-name>
