@@ -46,13 +46,15 @@ The network profile created by ACI during container group creation may not be pr
 ### For Cause 1
 Manually delete "Service Association Link"
 1. Navigate to the subnet in Azure Portal and change "Delegation" to "None". Make sure no network profiles are linked to subnet. If so, delete them using command: az network profile delete
-
-2. If the update command in step one errs/fails, there may be a lingering network profile that needs to be removed using the following command: az network profile delete --id resourceIdOfNetworkProfile
-
+2. If the update command in step one errs/fails, there may be a lingering network profile that needs to be removed using the following command: 
+```
+az network profile delete --id resourceIdOfNetworkProfile
+```
 3. If network profiles were blocking the subnet update, attempt to set Delegation to "None" again.
-
-4. If above fails try deleting SAL resource via CLI using especified API version: az resource delete --ids /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/<RG>/providers/Microsoft.Network/virtualNetworks/<VNET>/subnets/<Subnet>/providers/Microsoft.ContainerInstance/serviceAssociationLinks/default --api-version 2018-10-01
-
+4. If above fails try deleting SAL resource via CLI using especified API version:
+```
+az resource delete --ids /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/<RG>/providers/Microsoft.Network/virtualNetworks/<VNET>/subnets/<Subnet>/providers/Microsoft.ContainerInstance/serviceAssociationLinks/default --api-version 2018-10-01
+```
 ### For Cause 2
 #### Workaround 1
 The first potential mitigation is attempting to manually delete "network profile" of the ACI container group.
@@ -79,21 +81,33 @@ RES_GROUP=<my-resource-group>
 VNET_NAME=<my-vnet-name>
 SUBNET_NAME=<my-subnet-name>
 ```
-2. Get network profile ID: NetworkProfile=$(az network vnet subnet show -g $RES_GROUP --vnet-name $VNET_NAME --name $SUBNET_NAME -o tsv --query ipConfigurationProfiles[].id)
-
-3. Delete the network profile: az network profile delete --ids $NetworkProfile --yes
-
-4. Delete the subnet: az network vnet subnet delete --resource-group $RES_GROUP --vnet-name $ VNET_NAME --name $SUBNET_NAME
-
-5. Delete virtual network: az network vnet delete --resource-group $RES_GROUP --name $SUBNET_NAME
-
-####Workaround 3
+2. Get network profile ID:
+```
+NetworkProfile=$(az network vnet subnet show -g $RES_GROUP --vnet-name $VNET_NAME --name $SUBNET_NAME -o tsv --query ipConfigurationProfiles[].id)
+```
+3. Delete the network profile:
+```
+az network profile delete --ids $NetworkProfile --yes
+```
+4. Delete the subnet:
+```
+az network vnet subnet delete --resource-group $RES_GROUP --vnet-name $ VNET_NAME --name $SUBNET_NAME
+```
+6. Delete virtual network:
+```
+az network vnet delete --resource-group $RES_GROUP --name $SUBNET_NAME
+```
+#### Workaround 3
 If deleting the network profile fails through Azure Portal and Azure CLI, you may need to update the containerNetworkInterfaceConfigurations property in the network profile properties to an empty list.
 
-1. Get network profile ID: NETWORK_PROFILE_ID=$(az network profile list --resource-group <resource-group-name> --query [0].id --output tsv)
-
-2. Update the network profile: az resource update --ids $NETWORK_PROFILE_ID --set properties.containerNetworkInterfaceConfigurations=[]
-
+1. Get network profile ID: 
+```
+NETWORK_PROFILE_ID=$(az network profile list --resource-group <resource-group-name> --query [0].id --output tsv)
+```
+2. Update the network profile:
+```
+az resource update --ids $NETWORK_PROFILE_ID --set properties.containerNetworkInterfaceConfigurations=[]
+```
 3. Delete the network profile and the subnet.
 
 4. ## Next Steps 
