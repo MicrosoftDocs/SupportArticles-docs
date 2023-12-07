@@ -18,6 +18,8 @@ ms.author: genli
 ---
 # Reset Remote Desktop Services or its administrator password in a Windows VM
 
+[!INCLUDE [Feedback](../../includes/feedback.md)]
+
 > [!NOTE]
 > The steps in this article don't apply to Windows domain controllers.
 

@@ -11,6 +11,8 @@ ms.collection: windows
 
 This article can help you troubleshoot authentication errors that occur when you use Remote Desktop Protocol (RDP) connection to connect to an Azure virtual machine (VM).
 
+[!INCLUDE [Feedback](../../includes/feedback.md)]
+
 ## Symptoms
 
 You capture a screenshot of an Azure VM that shows the Welcome screen and indicates that the operating system is running. However, when you try to connect to the VM by using Remote Desktop Connection, you receive one of the following error messages:
