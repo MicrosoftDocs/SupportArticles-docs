@@ -3,7 +3,7 @@ title: The Bluetooth disabled status of a Teams Rooms device is Unhealthy
 description: Resolves an issue that causes the Bluetooth disabled signal of a Microsoft Teams Rooms device to appear as Unhealthy.
 ms.reviewer: rebenite
 ms.topic: troubleshooting
-ms.date: 10/31/2023
+ms.date: 10/30/2023
 author: v-lianna
 ms.author: v-lianna
 manager: dcscontentpm

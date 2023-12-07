@@ -3,7 +3,7 @@ title: Fix Windows Update issues on Teams Rooms Pro devices
 description: Fix common Windows Update issues on a Microsoft Teams Rooms Pro device.
 ms.reviewer: joolive
 ms.topic: troubleshooting
-ms.date: 10/31/2023
+ms.date: 10/30/2023
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
