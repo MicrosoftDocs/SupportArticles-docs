@@ -13,6 +13,8 @@ This article helps you troubleshoot common issues that you may encounter when yo
 _Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Microsoft Entra ID, Microsoft Intune, Azure Backup, Office 365 Identity Management  
 _Original KB number:_ &nbsp; 2855271
 
+[!INCLUDE [Feedback](../../includes/feedback.md)]
+
 ## Before you start troubleshooting
 
 Before you perform the troubleshooting steps, make sure that you have the [latest version of Microsoft Entra Connect](/azure/active-directory/hybrid/how-to-connect-install-roadmap#install-azure-ad-connect) installed.
