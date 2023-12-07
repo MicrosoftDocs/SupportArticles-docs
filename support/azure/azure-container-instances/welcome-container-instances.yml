@@ -21,3 +21,12 @@ landingContent:
         links:
           - text: ACI Documentation
             url: /azure/container-instances/
+
+   # Card
+  - title: Troubleshoot Container Group Start Up
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: InaccessibleImage Failure
+            url: inaccessible-image.md
+

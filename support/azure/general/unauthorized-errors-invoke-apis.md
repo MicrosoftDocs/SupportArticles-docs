@@ -14,6 +14,8 @@ Referring to the article on [Azure API Management Troubleshooting Series](apim-t
 _Original product version:_ &nbsp; API Management Service  
 _Original KB number:_ &nbsp; 4464930
 
+[!INCLUDE [Feedback](../../includes/feedback.md)]
+
 ## Symptoms
 
 The **Echo API** suddenly started throwing diverse types of **HTTP 401 - Unauthorized** errors while invoking the operations under it. **Create resource** and **Retrieve resource** operations are showing this error message:
