@@ -1,0 +1,7 @@
+- name: Welcome
+  href: welcome-container-instances.yml
+
+- name: Troubleshoot create operations
+  items:
+  - name: DeploymentFailed - InaccessibleImage error code
+    href: inaccessible-image.md

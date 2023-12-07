@@ -1196,9 +1196,9 @@ If $rp.ResultantPolicy doesn't have the details about the policy, look into the 
 1. Set the Dump Token authentication policy to be the same as the failing relying party.
 2. Have the user open one of the following links depending on the authentication policy you set.
 
-   - WS-Fed: `https://FerderationInstance/adfs/ls?wa=wsignin1.0&wtrealm=urn:dumptoken`
-   - SAML-P: `https://FerderationInstance/adfs/ls/IdpInitiatedSignOn?LoginToRP=urn:dumptoken`
-   - Force multi-factor authentication: `https://FerderationInstance/adfs/ls?wa=wsignin1.0&wtrealm=urn:dumptoken&wauth=http://schemas.microsoft.com/claims/multipleauthn`
+   - WS-Fed: `https://FederationInstance/adfs/ls?wa=wsignin1.0&wtrealm=urn:dumptoken`
+   - SAML-P: `https://FederationInstance/adfs/ls/IdpInitiatedSignOn?LoginToRP=urn:dumptoken`
+   - Force multi-factor authentication: `https://FederationInstance/adfs/ls?wa=wsignin1.0&wtrealm=urn:dumptoken&wauth=http://schemas.microsoft.com/claims/multipleauthn`
 
 3. Log in on the Sign-In page.
 
@@ -1210,9 +1210,9 @@ What you get is the set of claims of the user. See if there is anything in the a
 2. Configure the Dump Token authentication policy to be the same as the failing relying party.
 3. Have the user open one of the following links depending on the authentication policy you set.
 
-   - WS-Fed: `https://FerderationInstance/adfs/ls?wa=wsignin1.0&wtrealm=urn:dumptoken`
-   - SAML-P: `https://FerderationInstance/adfs/ls/IdpInitiatedSignOn?LoginToRP=urn:dumptoken`
-   - Force multi-factor authentication: `https://FerderationInstance/adfs/ls?wa=wsignin1.0&wtrealm=urn:dumptoken&wauth=http://schemas.microsoft.com/claims/multipleauthn`
+   - WS-Fed: `https://FederationInstance/adfs/ls?wa=wsignin1.0&wtrealm=urn:dumptoken`
+   - SAML-P: `https://FederationInstance/adfs/ls/IdpInitiatedSignOn?LoginToRP=urn:dumptoken`
+   - Force multi-factor authentication: `https://FederationInstance/adfs/ls?wa=wsignin1.0&wtrealm=urn:dumptoken&wauth=http://schemas.microsoft.com/claims/multipleauthn`
 
 4. Log in on the Sign-In page.
 
