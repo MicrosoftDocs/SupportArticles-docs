@@ -14,6 +14,8 @@ This article resolves an issue that one or more Active Directory Domain Services
 _Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Microsoft Entra ID, Microsoft Intune, Azure Backup, Office 365 Identity Management  
 _Original KB number:_ &nbsp; 2643629
 
+[!INCLUDE [Feedback](../../includes/feedback.md)]
+
 ## Symptoms
 
 One or more AD DS objects or attributes don't sync to Microsoft Entra ID as expected. When Active Directory synchronization runs, an object doesn't sync, and you experience one of the following symptoms:
