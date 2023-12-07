@@ -22,7 +22,7 @@ A consistent authentication issue in SQL Server typically refers to problems rel
 
 Before you start to troubleshoot errors, it's important to understand what each error means and also what is the type of error. Some errors might appear in more than one category.
 
-It's also important to understand the category of the error because the troubleshooting steps also vary. This section provides various types of consistent authentication errors.
+It's also important to understand the category of the error because the troubleshooting steps also vary. This section provides various categories of consistent authentication errors.
 
 ## Directory services specific issues
 
@@ -41,15 +41,15 @@ This section lists the possible error messages and their possible causes.
 
 |Error message  |Possible causes  |
 |---------|---------|
-|`Login failed for user 'userx'. Reason: Password did not match that for the login provided.`|This error might occur if a bad password is used. For more information, see [Login failed for user '<username>' or login failed for user '<domain>\<username>'](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error)|
-|Invalid username|For more information, see [Login failed for user '<username>' or login failed for user '<domain>\<username>'](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).|
+|`Login failed for user 'userx'. Reason: Password did not match that for the login provided.`|This error might occur if a bad password is used. For more information, see [Login failed for user '\<username\>' or login failed for user '\<domain>\<username>'](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).|
+|Invalid username|For more information, see [Login failed for user '\<username\>' or login failed for user '\<domain>\<username\>'](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).|
 |`SQL Server does not exist or access denied.`  | [Named Pipes connections](named-pipes-connection-fail-no-windows-permission.md) fail because the user doesn't have permission to log into Windows.     |
 |`Cannot open database "test" requested by the login. The login failed.`|The database might be offline, or the permissions might not be sufficient. For more information, see [Database offline in MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).|
 |`A transport-level error has occurred when sending the request to the server.`|Check if the [linked server account mapping](linked-server-account-mapping-error.md) is correct. For more information, see [sp_addlinkedsrvlogin](/sql/relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql).|
 |`SSPI (Security Support Provider Interface) Context.`|Check if the [SPN is on the wrong account](cannot-generate-sspi-context-error.md).|
 |`Login failed for user 'username'.` | This can happen if the [proxy account](../../integration-services/ssis-package-doesnt-run-when-called-job-step.md) isn't properly authenticated.    |
 |`Login Failed for user: 'NT AUTHORITY\ANONYMOUS LOGON'`|This error might occur if the [SPN is missing, SPN is duplicated, or the SPN is on the wrong account](cannot-generate-sspi-context-error.md).|
-|`Login failed for user 'username'.` </br> `Login failed for user 'database\username'`</br>    | Check if there is a [bad server name in connection string](bad-server-name-connection-string-error.md). Also, check if the [user doesn't belong to a local group](access-through-group-windows-permissions.md) that's used to grant access to the server. For more causes, see [NT AUTHORITY\ANONYMOUS LOGON](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).    |
+|`Login failed for user 'username'.` </br> `Login failed for user '\<database\username\>'`</br>    | Check if there is a [bad server name in connection string](bad-server-name-connection-string-error.md). Also, check if the [user doesn't belong to a local group](access-through-group-windows-permissions.md) that's used to grant access to the server. For more causes, see [NT AUTHORITY\ANONYMOUS LOGON](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).    |
 |`"Cannot open database "northwind" requested by the login. The login failed."`|Check if the database name in the connection string is correct.|
 |SSPI Context errors|The explicit SPN account might be [wrong](wrong-explicit-spn-account-connection-string.md), missing, or misplaced. |
 |`"The user account is not allowed the Network Login type"`|You might not be able to [log in to the network](network-login-disallowed.md).|
@@ -64,9 +64,9 @@ The following table lists some scenarios that are related to aspects as database
 
 |Possible cause  |More information  |
 |---------|---------|
-|Database is offline   | In many cases, this error is logged right after the server has restarted  or after a cluster has failed over. The error doesn't affect as the server starts accepting logins before all databases are online. If the issue persists, and you can't bring the database online in SQL Server Management Studio, then you can contact the SQL Core team to perform further troubleshooting. For detailed information regarding the error, see [Login failed for user '<username>' or login failed for user '<domain>\<username>'.](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).     |
+|Database is offline   | In many cases, this error is logged right after the server has restarted  or after a cluster has failed over. The error doesn't affect as the server starts accepting logins before all databases are online. If the issue persists, and you can't bring the database online in SQL Server Management Studio, then you can contact the SQL Core team to perform further troubleshooting. For detailed information regarding the error, see [Login failed for user '\<username\>' or login failed for user '\<domain>\<username>'.](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).     |
 |Linked Server Account Mapping|This scenario is related to [linked servers](linked-server-account-mapping-error.md).|
-|Database permissions     | For detailed information regarding the error, see [Login failed for user '<username>' or login failed for user '<domain>\<username>'.](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).    |
+|Database permissions     | For detailed information regarding the error, see [Login failed for user '\<username\>' or login failed for user '\<domain>\<username\>'.](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).    |
 |Proxy account     |  An SSIS job run by SQL Agent might need permissions other than the SQL Agent service account can provide. For more information, see [SSIS package does not run when called from a SQL Server Agent job step.](../../integration-services/ssis-package-doesnt-run-when-called-job-step.md)  |
 |Bad metadata     | A view or stored procedure receives login failures on a linked server whereas a distributed `SELECT` statement copied from them doesn't. This is likely if the View was created and then the linked server was recreated, or a remote table was altered without rebuilding the View.  |
 
@@ -97,7 +97,7 @@ The following table provides further information for each of the AD and DC issue
 |Credential guard is enabled     | In Windows 10 Enterprise, there's a new feature called Credential Guard. If the client is Windows 10 Enterprise Edition and the Credential Guard feature is turned ON, then you won't be able to use full delegation (Trust this user for delegation to any service). You can only use constrained delegation.<br/>When the Credentials Guard is enabled, certain authentication features are blocked. Applications will break if they require the following features:<br/><ul><li>Kerberos DES encryption support.<br/></li><li>Kerberos unconstrained delegation.</li><li>Extracting the Kerberos TGT.<li>NTLMv1</li></ul>  |
 
 > [!NOTE]
-> For issues related to NT LAN Manager, see [Login failed for user NT AUTHORITY\ANONYMOUS LOGON.](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error?view=sql-server-ver16)
+> For issues related to NT LAN Manager, see [Login failed for user NT AUTHORITY\ANONYMOUS LOGON.](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error)
 
 ## Active Directory and Domain Controller issues
 
