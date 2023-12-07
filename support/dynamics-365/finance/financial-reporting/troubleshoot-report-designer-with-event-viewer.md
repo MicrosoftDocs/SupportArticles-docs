@@ -4,7 +4,7 @@
 title: Troubleshoot report designer issues with Event Viewer
 description: Describes how to use the Event Viewer to analyze some issues that occur when using Financial reporting in Microsoft Dynamics 365 Finance.
 author: aprilolson
-ms.date: 11/30/2023
+ms.date: 12/07/2023
 ms.prod: 
 ms.technology: 
 

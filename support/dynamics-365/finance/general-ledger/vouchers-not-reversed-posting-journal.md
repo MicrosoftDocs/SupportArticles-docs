@@ -4,7 +4,7 @@
 title: Vouchers aren't reversed when posting a journal that has a reversing entry and date 
 description: Provides a resolution for an issue where a reversing entry that was entered on a general journal might not be included on the posted transaction in Microsoft Dynamics 365 Finance. 
 author: kweekley
-ms.date: 11/20/2023
+ms.date: 12/07/2023
 ms.prod: 
 ms.technology: 
 
