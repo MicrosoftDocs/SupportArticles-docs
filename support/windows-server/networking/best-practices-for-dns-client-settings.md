@@ -94,7 +94,7 @@ On Windows Server member servers, Microsoft recommends that you configure the DN
 
 - Configure the primary and secondary DNS client settings to point to local primary and secondary DNS servers (if local DNS servers are available) that host the DNS zone for the computer's Active Directory domain.
 - If there are no local DNS servers available, point to a DNS server for that computer's Active Directory domain that can be reached through a reliable WAN link. Up-time and bandwidth determine reliability.
-- Don't configure the client DNS settings to point to your ISP's DNS servers. If you do so, you may experience issues when you try to join the Windows Server based server to the domain, or when you try to log on to the domain from that computer. Instead, the internal DNS server should configure forwarding to the ISP's DNS servers to resolve external names.
+- Don't configure the client DNS settings to point to your ISP's DNS servers. If you do so, you may experience issues when you try to join the Windows Server-based server to the domain, or when you try to log on to the domain from that computer. Instead, the internal DNS server should configure forwarding to the ISP's DNS servers to resolve external names.
 
 ## Windows Server non-member servers
 
