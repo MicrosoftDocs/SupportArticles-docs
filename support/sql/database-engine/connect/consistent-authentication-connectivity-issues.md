@@ -20,10 +20,15 @@ _Applies to:_ &nbsp; SQL Server
 
 A consistent authentication issue in SQL Server typically refers to problems related to authentication and authorization of users or applications trying to access the SQL Server database. These issues can lead to authentication failures, access denied errors, or other security-related problems.
 
-Before you start to troubleshoot errors, it's important to understand what each error means and also what is the type of error. Some errors might appear in more than one category.
+Before you start to troubleshoot errors, it's important to understand what each error means and also what is the type of error. Some errors might appear in more than one category. The troubelshooting steps vary for each error category.
 
-It's also important to understand the category of the error because the troubleshooting steps also vary. This section provides various categories of consistent authentication errors.
+## Additional pre-requisites
 
+- Make sure to install the NETMON, WIRESHARK and Problem Steps Recorder (PSR.EXE) utilities. For more information, see [Methods of collecting data](/troubleshoot/sql/database-engine/connect/collect-data-to-troubleshoot-sql-connectivity-issues) for troubleshooting various types of errors.
+
+- Collect the SPN information based on the service accounts by using the `SETSPN -L` command.
+
+NETMON, WIRESHARK
 ## Directory services specific issues
 
 Refers to the Active Directory errors. If the SQL Server error log file contains both or either of the following messages, then this is an Active Directory (AD) issue. This might happen if the domain controller (DC) can't be contacted by Windows on the SQL Server computer or the local security service (LSASS) is having a problem.
@@ -111,7 +116,8 @@ The following table provides some solutions to the AD and DC issues:
 |Firewall blocks the DC   | Make sure the DC is accessible from the client or the SQL Server using the `nltest /SC_QUERY:CONTOSO` command.  |
 |Domain Controller is offline   |This error might occur if there are incorrect Domain Naming Service (DNS) records for DC. NLTEST can be used to force the computer to switch to another DC. See [Active Directory replication Event ID 2087: DNS lookup failure caused replication to fail](../../../windows-server/identity/active-directory-replication-event-id-2087.md).   |
 |Selective authentication  | Make sure the user isn't allowed to authenticate in the remote domain.      |
-|Account migration   | If old user accounts can't connect to the SQL Server, but newly created accounts can, this could be due to account migration. This is an AD issue.        |
+|Account migration   | If old user accounts can't connect to the SQL Server, but newly created accounts can, this could be due to account migration. This is an AD issue.    |
+|Domain Trust |The trust level between domains might cause failures in account authentication or the visibility of SPNs. You can use the `SETSPN` and `RUNAS` commands to test this independent of your application.  |
 
 ## Kerberos authentication issues
 
@@ -131,7 +137,10 @@ The following table contains information about issues related to Kerberos authen
 |Web site host header     | If the web site has a host header name, the HOSTS SPN can't be used. An explicit HTTP SPN must be used. If the web site doesn't have a host header name, NTLM is used and it can't be delegated to a backend SQL Server or other service.         |
 |Hosts file   | The Hosts file overrides DNS lookups and might generate an unexpected SPN name. This will cause NTLM credentials to be used. If an unexpected IP address is in the Hosts file, the SPN generated might not match the backend pointed to.        |
 |Delegating to a file share   | Make sure to use constrained delegation in this scenario.       |
-|HTTP Ports   | Normally, HTTP SPNs don't use port numbers, example `http/web01.contoso.com`, but you can enable this through the policy on the clients. The SPN would then have to be in the `http/web01.contoso.com:88` format, to enable Kerberos to function correctly. Otherwise, NTLM credentials are used, which aren't recommended because it would be difficult to diagnose the issue and it might be an excessive administrative overhead.   | 
+|HTTP Ports   | Normally, HTTP SPNs don't use port numbers, example `http/web01.contoso.com`, but you can enable this through the policy on the clients. The SPN would then have to be in the `http/web01.contoso.com:88` format, to enable Kerberos to function correctly. Otherwise, NTLM credentials are used, which aren't recommended because it would be difficult to diagnose the issue and it might be an excessive administrative overhead.   |
+|Expired tickets|Refers to [Kerberos tickets](expired-tickets-error.md).|
+|Disjoint DNS Namespace |Refers to the [DNS namespace](disjoint-dns-namespace-error.md) issue. |
+|SQL Alias|A SQL Server alias may cause an unexpected SPN to be generated. This will result in NTLM credentials if the SPN is not found, or an SSPI failure, if it inadvertently matches the SPN of another server. |
 
 ## Other issues
 
