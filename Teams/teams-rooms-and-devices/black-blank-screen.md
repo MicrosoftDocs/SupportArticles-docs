@@ -3,7 +3,7 @@ title: The Teams Rooms device's displays show a black or blank screen
 description: Resolve the issue that causes one or more of the Teams Rooms device displays to show a black or blank screen, or the system doesn't respond.
 ms.reviewer: joolive
 ms.topic: troubleshooting
-ms.date: 10/31/2023
+ms.date: 10/30/2023
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
