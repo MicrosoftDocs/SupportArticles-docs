@@ -13,7 +13,7 @@ ms.technology: windows-server-system-management-components
 ---
 # Scenario guide: Troubleshoot WMI connectivity and access issues
 
-This article covers how to review the Windows Management Instrumentation (WMI) configuration, diagnose and troubleshoot WMI connectivity or access issues.
+This article covers how to review the Windows Management Instrumentation (WMI) configuration, and how to diagnose and troubleshoot WMI connectivity or access issues.
 
 Here are some examples of WMI configuration or connectivity issues you may experience. The issues are from different products and applications that use or depend on WMI.
 
