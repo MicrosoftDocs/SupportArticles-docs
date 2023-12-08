@@ -3,10 +3,10 @@
   items:
     - name: Customer Insights - Data
       items: 
-      - name: Administration
+      - name: Environment management
         items: 
           - name: Can't access environment
-            href: data/administration/service-principal-disabled.md
+            href: data/environment-management/service-principal-disabled.md
       - name: Data ingestion
         items:
           - name: Power Query data source refresh issues
