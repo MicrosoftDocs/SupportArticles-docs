@@ -189,14 +189,14 @@ When Active Directory Certificate Services is installed on a server, the local g
 1. Under **Access Permissions**, click **Edit Limits...**  
 ![A screenshot highlighting the Edit Limits button for Access Permissions on the COM Security tab of the My Computer Properties dialog.](media/error-0x800706ba-certificate-enrollment/image1.png)
 
-1. Verify that the local "Certificate Service DCOM Access" group appears in the list of principals and that it is granted both **Local Access** and **Remote Access**. If not, add it and grant the appropriate rights. Click OK to close the Access Permission dialog.  
-![A screenshot of the Access Permission dialog showing Certificate Service DCOM Access being granted Local Access and Remote Access rights.](image2.png)
+1. Verify that the local "Certificate Service DCOM Access" group appears in the list of principals and that it's granted both **Local Access** and **Remote Access**. If not, add it and grant the appropriate rights. Click OK to close the Access Permission dialog.  
+![User's image](image5.png)
 
 1. Under **Launch and Activation Permissions**, click **Edit Limits...**  
 ![A screenshot highlighting the Edit Limits button for Launch and Activation Permissions on the COM Security tab of the My Computer Properties dialog.](image3.png)
 
-1. Verify that the local "Certificate Service DCOM Access" group appears in the list of principals and that it is granted both **Local Activation** and **Remote Activation**. If not, add it and grant the appropriate rights. Click OK to close the Launch and Activation Permission dialog.  
-![Screenshot of Launch and Activation Permission dialog showing Certificate Service DCOM Access being granted Local Activation and Remote Activation.](image4.png)
+1. Verify that the local "Certificate Service DCOM Access" group appears in the list of principals and that it's granted both **Local Activation** and **Remote Activation**. If not, add it and grant the appropriate rights. Click OK to close the Launch and Activation Permission dialog.  
+![Screenshot of Launch and Activation Permission dialog showing Certificate Service DCOM Access being granted Local Activation and Remote Activation.](image6.png)
 
 ## Reference
 
