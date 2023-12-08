@@ -19,6 +19,28 @@ This article provides a list of active and retired troubleshooters for Windows 1
 
 _Applies to:_ &nbsp; Windows 10, Windows 11
 
+## ELAN fingerprint driver troubleshooter for devices upgrading from Windows 10 to Windows 11
+
+Text displayed in Settings:  
+The troubleshooter will perform "sfc /scannow" which repairs the corrupted onnxruntime.dll file to match the correct version depending on the build of Windows the device is currently on.
+
+### Description
+
+Some user machines that have upgraded from Windows 10 and are now running Windows 11 version 22000 or higher which have a fingerprint sensor with certain ELAN fingerprint drivers could encounter a failure or crash when using applications which rely on related DLLs.
+
+This troubleshooter runs automatically on devices to meet the following criteria:
+
+-Device family: 
+- Windows Desktop AND
+- Windows build version >= 22000 (Windows 11) AND
+- (onnxruntime.dll version == 0.0.0.0 OR onnxruntime.dll version == blank) AND
+- ELAN Fingerprint Driver Version 3.10.11001.10606 OR 3.10.11001.10502, OR 3.10.11001.10801
+
+|Activation date|Retirement date|More information|
+|---|---|---|
+|3/15/2023||[(https://aka.ms/AAhdpvb)](https://aka.ms/AAhdpvb)|
+
+
 ## Access work or school troubleshooter for restoring access to M365 desktop applications
 
 Text displayed in Settings:  
