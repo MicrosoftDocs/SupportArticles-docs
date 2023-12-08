@@ -5,7 +5,7 @@
       items: 
       - name: Environment management
         items: 
-          - name: Can't access environment
+          - name: '"The service principal for resource is disabled" error when accessing a new environment'
             href: data/environment-management/service-principal-disabled.md
       - name: Data ingestion
         items:

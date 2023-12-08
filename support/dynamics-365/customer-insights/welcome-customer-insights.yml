@@ -19,7 +19,7 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Can't access environment
+          - text: '"The service principal for resource is disabled" error when accessing a new environment'
             url: data/environment-management/service-principal-disabled.md
 
   # Card

@@ -5,6 +5,7 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 ms.date: 12/08/2023
+ms.custom: sap:create-reset-delete-env
 ---
 # Can't access a new Customer Insights - Data environment
 
