@@ -3,7 +3,7 @@ title: Fails to pull ACR images using Managed Identity authentication
 description: Describes how to troubleshoot image pull failures when you deploy to Azure Container Instances (ACI) from Azure Container Registry (ACR) by using a managed identity.
 ms.date: 12/08/2023
 ms.service: container-instances
-ms.reviewer: tysonfreeman, v-weizhu
+ms.reviewer: tysonfreeman, v-weizhu 
 ---
 
 # Fails to pull images from Azure Container Registry by using Managed Identity authentication
