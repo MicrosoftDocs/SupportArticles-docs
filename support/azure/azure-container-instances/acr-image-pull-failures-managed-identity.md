@@ -12,7 +12,7 @@ This article discusses how to troubleshoot image pull failures when you deploy t
 
 ## Symptoms
 
-When you try to deploy a container group and pull images from an Azure container registry that runs behind a private endpoint by using a managed identity, the image pulls fail.
+When you try to deploy a container group and pull images from an Azure container registry that runs behind a private endpoint by using a managed identity, the image pull fails.
 
 ## Cause
 
@@ -33,7 +33,7 @@ Here are some causes of image pull failures:
 
 1. Check if you're using an ACI API version earlier than 2021-07-01.
 
-    If yes, you might see the "InvalidImageRegistryCredentialType" error:
+    If so, you might see the "InvalidImageRegistryCredentialType" error:
 
     ```azurecli
     $ az deployment group create -g <resourcegroupname> --template-file containergroup_trusted.json 
@@ -55,13 +55,13 @@ Here are some causes of image pull failures:
     - Windows Server 2016 container groups.
     - Attempting to resolve ACR's private DNS zone.
 
-    Ensure that you don't violate those limitations.
+    To resolve this issue, ensure that you don't violate those limitations.
   
 3. Check if the container group definition is correctly formed.
 
     If not, you might see the following errors:
 
-    - Error code: "AmbiguousImageResitryCredentialType"
+    - Error code "AmbiguousImageResitryCredentialType":
 
         ```output
         Deployment failed. Correlation ID: <Correlation ID>. { 
@@ -72,7 +72,7 @@ Here are some causes of image pull failures:
         } 
         ```
 
-    - Error code: "InvalidImageRegistryIdentity"
+    - Error code "InvalidImageRegistryIdentity":
 
         ```output
         Deployment failed. Correlation ID: <Correlation ID>. { 
@@ -83,7 +83,7 @@ Here are some causes of image pull failures:
         } 
         ```
 
-    - Error code: "InvalidRequestContent"
+    - Error code "InvalidRequestContent":
 
         ```outout
         Deployment failed. Correlation ID: <Correlation ID>. { 
@@ -101,7 +101,7 @@ Here are some causes of image pull failures:
 
 ## Troubleshooting from the ACR side
 
-1. Check if the managed identity is assigned with the `AcrPull` role.
+1. Check if the managed identity is assigned to the `AcrPull` role.
 
     If not, you might see the "InaccessibleImage" error:
 
@@ -114,7 +114,7 @@ Here are some causes of image pull failures:
     } 
     ```
 
-    To resolve this issue, grant the `AcrPull` role to the managed identity. For more information, refer to step 3 in this [tutorial](/azure/container-registry/container-registry-tasks-authentication-managed-identity#3-grant-the-identity-permissions-to-access-other-azure-resources).
+    To resolve this issue, grant the `AcrPull` role to the managed identity. For more information, see [Grant the identity permissions to access other Azure resources](/azure/container-registry/container-registry-tasks-authentication-managed-identity#3-grant-the-identity-permissions-to-access-other-azure-resources).
 
 2. Check if ACR has [trusted services](/azure/container-registry/allow-access-trusted-services) enabled. If not, enable trusted services.
 
