@@ -179,23 +179,23 @@ To identify the issue, verify that the GPO is applied to the certificate server.
 
 ## Cause 6: Missing "Certificate Service DCOM Access" from COM Security Access Permissions or Launch and Activation Permissions
 
-When Active Directory Certificate Services is installed on a server, the local group "Certificate Service DCOM Access" is automatically granted Local Access and Remote Access rights to Component Services, together with Local Activation and Remote Activation rights on objects. If these default permissions have been removed then you may experience the symptoms described in this article. To verify that the correct permissions are in place, follow these steps.
+When Active Directory Certificate Services is installed on a server, the local group "Certificate Service DCOM Access" is automatically granted rights to Component Services. If these default permissions have been removed, then you may experience the symptoms described in this article. To verify that the correct permissions are in place, follow these steps.
 
-1. Open the Component Services MMC snap-in (found under Windows Administrative Tools).
-1. In the tree view on the left of the snap-in, expand Component Services > Computers.  
+1. Open the **Component Services** MMC snap-in (found under Windows Administrative Tools).
+1. In the tree view on the left of the snap-in, expand **Component Services** > **Computers**.  
 ![A screenshot of the Component Services MMC snap-in.](media/error-0x800706ba-certificate-enrollment/image.png)
 
-1. Right-click "My Computer" and select Properties, then move to the "COM Security" tab.
-1. Under "Access Permissions", click "Edit Limits...".  
-![A screenshot of the COM Security tab of the My Computer Properties dialog in the Component Services MMC snap-in.](media/error-0x800706ba-certificate-enrollment/image1.png)
+1. Right-click **My Computer** and select **Properties**, then move to the **COM Security** tab.
+1. Under **Access Permissions**, click **Edit Limits...**  
+![A screenshot highlighting the Edit Limits button for Access Permissions on the COM Security tab of the My Computer Properties dialog.](media/error-0x800706ba-certificate-enrollment/image1.png)
 
-1. Verify that the local "Certificate Service DCOM Access" group appears in the list of principals and that it is granted both "Local Access" and "Remote Access". If not, add it and grant the appropriate rights. Click OK to close the Access Permission dialog.  
+1. Verify that the local "Certificate Service DCOM Access" group appears in the list of principals and that it is granted both **Local Access** and **Remote Access**. If not, add it and grant the appropriate rights. Click OK to close the Access Permission dialog.  
 ![A screenshot of the Access Permission dialog showing Certificate Service DCOM Access being granted Local Access and Remote Access rights.](image2.png)
 
-1. Under "Launch and Activation Permissions", click "Edit Limits...".  
-![A screenshot of the COM Security tab of the My Computer Properties dialog in the Component Services MMC snap-in.](image3.png)
+1. Under **Launch and Activation Permissions**, click **Edit Limits...**  
+![A screenshot highlighting the Edit Limits button for Launch and Activation Permissions on the COM Security tab of the My Computer Properties dialog.](image3.png)
 
-1. Verify that the local "Certificate Service DCOM Access" group appears in the list of principals and that it is granted both "Local Activation" and "Remote Activation". If not, add it and grant the appropriate rights. Click OK to close the Launch and Activation Permission dialog.  
+1. Verify that the local "Certificate Service DCOM Access" group appears in the list of principals and that it is granted both **Local Activation** and **Remote Activation**. If not, add it and grant the appropriate rights. Click OK to close the Launch and Activation Permission dialog.  
 ![Screenshot of Launch and Activation Permission dialog showing Certificate Service DCOM Access being granted Local Activation and Remote Activation.](image4.png)
 
 ## Reference
