@@ -3,7 +3,7 @@ title: Troubleshoot issues with Solution Health Hub
 description: Provides more information about how to troubleshoot issues using Solution Health Hub in Dynamics 365 Customer Service and Omnichannel for Customer Service.
 ms.reviewer: sdas
 ms.author: shchaur
-ms.date: 05/23/2023
+ms.date: 12/04/2023
 ---
 # Troubleshoot issues in Customer Service and Omnichannel for Customer Service using Solution Health Hub
 
@@ -119,7 +119,7 @@ When you run the analysis job, the following out-of-the-box rules are run. These
 |Line channel configuration should have work stream | Verifies that all LINE channel configurations have an active work stream. For more information, see [Configure a LINE channel](/dynamics365/customer-service/configure-line-channel). |
 | Line settings should have all required fields  | Verifies that the LINE settings webhook URL isn't empty. |
 |Live chat channel configuration should have work stream | Verifies that Live Chat has an active work stream. For more information, see [Configure a chat channel](/dynamics365/customer-service/add-chat-widget). |
-| Omnichannel service endpoint should be configured | Verifies that the underlying services needed for the functioning of Omnichannel for Customer Service are configured correctly. For more information, see [Provisioning Omnichannel for Customer Service](/dynamics365/customer-service/omnichannel-provision-license). |
+| Omnichannel service endpoint should be configured | Verifies that the underlying services needed for the functioning of Omnichannel for Customer Service are configured correctly. For more information, see [Provisioning Omnichannel for Customer Service](/dynamics365/customer-service/implement/omnichannel-provision-license). |
 | Queues should have agents | Verifies that the queues that are assigned to the work streams have agents assigned. For more information, see [Manage queues](/dynamics365/customer-service/queues-omnichannel). |
 | SDK message/plugins should be active | Verifies that the SDK messages or plug-ins are active. For more information, see [Remove deactivated or disabled customizations](/powerapps/developer/model-driven-apps/best-practices/business-logic/remove-deactivated-disabled-configurations). |
 |SMS channel configuration should have work stream | Verifies that the SMS channel has an active work stream. For more information, see [Configure an SMS channel for TeleSign](/dynamics365/customer-service/configure-sms-channel) and [Configure an SMS channel for Twilio](/dynamics365/customer-service/configure-sms-channel-twilio). |
@@ -140,6 +140,6 @@ When you run the analysis job, the following out-of-the-box rules are run. These
 ### See also
 
 - [Troubleshoot issues in Omnichannel for Customer Service](/dynamics365/customer-service/troubleshoot-omnichannel-customer-service)
-- [Frequently asked questions](/dynamics365/customer-service/faqs)  
+- [Frequently asked questions](/dynamics365/customer-service/implement/cs-troubleshooting-faqs)  
 
 [!INCLUDE [footer-include](~/../dynamics-365-customer-engagement-pr/ce/includes/footer-banner.md)]

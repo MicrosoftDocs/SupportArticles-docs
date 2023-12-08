@@ -3,7 +3,7 @@ title: Error occurs when creating a chat widget or social channel
 description: Provides a resolution for an error that occurs when trying to create a chat widget or social channel in Omnichannel for Customer Service.
 ms.reviewer: nenellim
 ms.author: yangao
-ms.date: 05/23/2023
+ms.date: 12/04/2023
 ---
 # "An error occurred in the plug-in" when creating a chat widget or social channel
 
@@ -23,4 +23,4 @@ The solutions for these errors are already installed in your environment, but th
 
 ## Resolution
 
-To resolve this issue, follow the steps provided in [Provision Omnichannel for Customer Service](/dynamics365/customer-service/omnichannel-provision-license).
+To resolve this issue, follow the steps provided in [Provision Omnichannel for Customer Service](/dynamics365/customer-service/implement/omnichannel-provision-license).

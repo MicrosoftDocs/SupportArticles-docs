@@ -1,21 +1,23 @@
 ---
 title: Verify first-party Microsoft applications in sign-in reports
 description: Describes how to verify first-party Microsoft applications in sign-in reports.
-ms.date: 11/06/2023
-ms.reviewer: bernaw
+ms.date: 12/05/2023
+ms.reviewer: bernaw, domooney, v-six
 ms.service: active-directory
 ms.subservice: compliance
 ms.custom: has-azure-ad-ps-ref
 ---
 # Verify first-party Microsoft applications in sign-in reports
 
-When you're reviewing your sign-in reports, you might see an application in your sign-in report that you don't own and want to identify the application. You also might wonder how you signed into that app, if you don't remember accessing the app.
+[!INCLUDE [Feedback](../../includes/feedback.md)]
+
+When you review your sign-in reports, you might see an application in your sign-in report that you don't own and want to identify. You also might wonder how you signed in to that app, if you don't remember accessing the app.
 
 Here's an example sign-in report:
 
 :::image type="content" source="media/verify-first-party-apps-sign-in/sign-in-report.png" alt-text="Screenshot of a sign-in report in Microsoft Entra ID.":::
 
-For example, when you access `learn.microsoft.com`, the application that's shown in the sign-in log may say `dev-rel-auth-prod`, which isn't descriptive of `learn.microsoft.com`.
+For example, when you access `learn.microsoft.com`, the application that's shown in the sign-in log may show `dev-rel-auth-prod`, but this isn't descriptive of `learn.microsoft.com`.
 
 Although the apps that are listed in sign-in reports are owned by Microsoft and aren't suspicious applications, you can determine whether Microsoft owns a Microsoft Entra service principal that's found in your Microsoft Entra logs.
 
@@ -71,6 +73,7 @@ The following table lists some, but not all, first-party Microsoft applications.
 |Application Name|Application IDs|
 |--|--|
 |ACOM Azure Website|23523755-3a2b-41ca-9315-f81f3f566a95|
+|ADIbizaUX|74658136-14ec-4630-ad9b-26e160ff0fc6|
 |AEM-DualAuth|69893ee3-dd10-4b1c-832d-4870354be3d8|
 |App Service|7ab7862c-4c57-491e-8a45-d52a7e023983|
 |ASM Campaign Servicing|0cb7b9ec-5336-483b-bc31-b15b5788de71|
