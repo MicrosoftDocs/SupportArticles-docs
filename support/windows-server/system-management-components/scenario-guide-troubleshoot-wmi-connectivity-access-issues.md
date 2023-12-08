@@ -262,11 +262,13 @@ Apart from the default configuration,  some additional settings may impact the c
 
 - Review the application and system event logs for any errors logged by the client application or from the source (Microsoft-Windows-DistributedCOM), and look for any relevant errors or events that may be logged on the source or target computer depending on the scenario.
 
-- Review event logs of Windows Firewall under *Eventvwr\\Applications and Services Logs\\Microsoft\\Windows\\Windows Firewall With Advanced Security\\Firewall* for any connections from WMI being blocked by the firewall.
+- Review event logs of Windows Firewall under **Event Viewer** > **Applications and Services Logs** > **Microsoft** > **Windows** > **Windows Firewall With Advanced Security** > **Firewall** for any connections from WMI being blocked by the firewall.
 
     Certain Group Policy settings are enabled to modify the default behavior and permissions of RPC and DCOM. For example:
 
-     - This group policy can restrict unauthenticated RPC calls, which may cause the error: The RPC server is unavailable. (Exception from HRESULT: 0x800706BA)
+     - This group policy can restrict unauthenticated RPC calls, which may cause the error:
+
+        > The RPC server is unavailable. (Exception from HRESULT: 0x800706BA)
 
         **Computer Configuration**\\**Administrative Templates**\\**System**\\**Remote Procedure Call**\\**Restrict Unauthenticated RPC clients**
 
@@ -287,7 +289,7 @@ Apart from the default configuration,  some additional settings may impact the c
 
     Compare it with a working machine. If the port range is non-default or restricted to a small range, this may affect the WMI connection. The Service overview and network port requirements for Windows show the default port range needed for RPC.
 
-If the issue is an access issue or a core WMI error, the incoming queries are logged as operational events in the log **Microsoft-Windows-WMI-Activity/Operational** under **Event Viewer** > **Application and Service Logs** > **Microsoft** > **Windows** > **WMI-Activity**.
+If the issue is an access issue or a core WMI error, the incoming queries are logged as operational events in the log **Microsoft-Windows-WMI-Activity/Operational** under **Event Viewer** > **Applications and Services Logs** > **Microsoft** > **Windows** > **WMI-Activity**.
 
 In some scenarios, local WMI connections may fail.
 
