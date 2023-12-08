@@ -1,15 +1,15 @@
 ---
 title: Camera pictures are blurry or not focused
-description: Improve camera quality in the Field Service mobile app on iOS devices by using the native iOS camera app instead.
+description: Improves camera quality in the Dynamics 365 Field Service mobile app on iOS devices by using the native iOS camera app instead.
 ms.author: andreo
 author: Andrea-Orimoto
 ms.reviewer: mhart
-ms.date: 11/20/2023
+ms.date: 12/08/2023
+ms.custom: sap:issue-performance
 ---
-
 # Camera pictures are blurry or not focused
 
-The Field Service mobile app uses a custom camera implementation, which is activated by default. The custom camera implementation was introduced to prevent the app from reloading due to high memory usage.
+The Dynamics 365 Field Service mobile app uses a custom camera implementation, which is activated by default. The custom camera implementation was introduced to prevent the app from reloading due to high memory usage.
 
 ## Symptoms
 
