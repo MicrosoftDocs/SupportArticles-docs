@@ -27,6 +27,6 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: InaccessibleImage Failure
+          - text: Inaccessible Image Failure
             url: inaccessible-image.md
 
