@@ -114,7 +114,7 @@ Here are some causes of image pull failures:
     } 
     ```
 
-    To resolve this issue, grant the `AcrPull` role to the managed identity. For more information, refer to step 3 in this [tutorial](https://learn.microsoft.com/azure/container-registry/container-registry-tasks-authentication-managed-identity#3-grant-the-identity-permissions-to-access-other-azure-resources).
+    To resolve this issue, grant the `AcrPull` role to the managed identity. For more information, refer to step 3 in this [tutorial](/azure/container-registry/container-registry-tasks-authentication-managed-identity#3-grant-the-identity-permissions-to-access-other-azure-resources).
 
 2. Check if ACR has [trusted services](/azure/container-registry/allow-access-trusted-services) enabled. If not, enable trusted services.
 
