@@ -24,11 +24,10 @@ Before you start to troubleshoot errors, it's important to understand what each 
 
 ## Additional pre-requisites
 
-- Make sure to install the NETMON, WIRESHARK and Problem Steps Recorder (PSR.EXE) utilities. For more information, see [Methods of collecting data](/troubleshoot/sql/database-engine/connect/collect-data-to-troubleshoot-sql-connectivity-issues) for troubleshooting various types of errors.
+- Make sure to install the NETMON, WIRESHARK and Problem Steps Recorder (PSR.EXE) utilities. For more information, see Methods of collecting data for troubleshooting various types of errors.
 
 - Collect the SPN information based on the service accounts by using the `SETSPN -L` command.
 
-NETMON, WIRESHARK
 ## Directory services specific issues
 
 Refers to the Active Directory errors. If the SQL Server error log file contains both or either of the following messages, then this is an Active Directory (AD) issue. This might happen if the domain controller (DC) can't be contacted by Windows on the SQL Server computer or the local security service (LSASS) is having a problem.
@@ -93,7 +92,7 @@ The following table provides further information for each of the AD and DC issue
 
 |Possible cause  |More information  |
 |---------|---------|
-|Access via group | If the user doesn't belong to a local group used to grant access to the server, the provider should display the "Login failed for user 'database name/username'" error message. The DBA can double-check the access by looking at the Security\Logins in SSMS. If it's a contained database, the DBA checks under database name. <br/>When you run the `xp_logininfo 'contoso/user1'` stored procedure, the following might happen:<br/><ul><li>If you receive an error, SQL can't resolve the username at all. It might be likely that a name isn't present in the AD or there might be issues connecting to the DC. Try with another name to check if the issue is related to a specific account.</li><br/><li>If you are connecting to cross-domain, the group must be in the SQL Server domain, and not the user domain so that its membership can be resolved.</li><br/><li>If no rows are returned, then there's no group that provides access to the server. If one or more rows are returned, then the user belongs to a group that provides access. </li><br/>|
+|Access via group | If the user doesn't belong to a local group used to grant access to the server, the provider should display the "Login failed for user 'database name/username'" error message. The DBA can double-check the access by looking at the Security\Logins in SSMS. If it's a contained database, the DBA checks under database name. <br/>When you run the `xp_logininfo 'contoso/user1'` stored procedure, the following might happen:<br/><ul><li>If you receive an error, SQL can't resolve the username at all. It might be likely that a name isn't present in the AD or there might be issues connecting to the DC. Try with another name to check if the issue is related to a specific account.</li><br/><li>If you are connecting to cross-domain, the group must be in the SQL Server domain, and not the user domain so that its membership can be resolved.</li><br/><li>If no rows are returned, then there's no group that provides access to the server. If one or more rows are returned, then the user belongs to a group that provides access. </li></ul><br/>|
 |Network login disallowed  | This scenario might occur if the Netlogon service is disabled. You can correct this by using the Local security policy manager. For more information, see [Network login disallowed](network-login-disallowed.md).    |
 |Service account not trusted for delegation    | If a delegation scenario isn't enabled, check the SQL Server *secpol.msc* to see if the SQL Server service account is listed under **Local Policies -> User Rights Assignment -> Impersonate a client after authentication** security policy settings.         |
 |Only Admins can log in  |This scenario might occur if you aren't logged in as an Administrator. For more information, see [Only Admins can log in](only-admins-can-login.md).         |

@@ -22,6 +22,6 @@ If the account name is correct, then the connection will use Kerberos. If the ac
 
 ## Resolution
 
-You can use one of the methods explained in [Determine If I Am Connected to SQL Server using Kerberos Authentication](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/Determine-If-I-Am-Connected-to-SQL-Server-using-Kerberos-Authentication) to test independent of the application.
+You can use one of the methods explained in [Determine If I Am Connected to SQL Server using Kerberos Authentication](determine-the-authentication-type.md) to test independent of the application.
 
 Test the connection from a remote computer. Local connections on Windows 2008 R2 and later, use NTLM to support the per-service SID security feature to prevent one service from spoofing another.
