@@ -101,7 +101,7 @@ Here are some causes of image pull failures:
 
 ## Troubleshooting from the ACR side
 
-1. Check if the managed identity is assigned to the `AcrPull` role.
+1. Check if the managed identity has the `AcrPull` role assigned.
 
     If not, you might see the "InaccessibleImage" error:
 
