@@ -2,6 +2,14 @@
 
 
 
+## Week of December 04, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 12/6/2023 | [Increase the size of diagnostic logs for Microsoft 365 Apps for enterprise](/microsoft-365/troubleshoot/diagnostic-logs/collect-office-diagnostic-logs) | modified |
+
+
 ## Week of November 27, 2023
 
 
