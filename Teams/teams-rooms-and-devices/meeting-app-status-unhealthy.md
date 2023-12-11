@@ -3,7 +3,7 @@ title: The Meeting app status of a Teams Rooms device is Unhealthy
 description: Resolve the issue that causes the Meeting app signal of a Microsoft Teams Rooms device to appear as Unhealthy.
 ms.reviewer: rafilipe
 ms.topic: troubleshooting
-ms.date: 09/26/2022
+ms.date: 12/08/2023
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -14,7 +14,9 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft Teams
-ms.custom: CI167273
+ms.custom:
+  - CI167273
+  - CI185119
 ---
 # The Meeting app status is Unhealthy
 
@@ -73,26 +75,16 @@ To fix this issue, try these options:
 - Restart the device.
 - If the *Admin* user has to run scheduled maintenance tasks within a specific time, [use the Suppress ticket functionality](/microsoftteams/rooms/managed-meeting-rooms-portal#room-detail-status-and-changes) to silence any notification about the **Meeting app** signal.
 
-## The device displays a privacy prompt
-
-The Teams Rooms app isn't started, and users see the following privacy setting prompt:
-
-:::image type="content" source="media/meeting-app-status-unhealthy/privacy-prompt.png" alt-text="Screenshot of the privacy setting prompt shown on the Teams Rooms device console.":::
-
-This is a known issue that occurs after you install the Windows 10 20H2 feature update or a later update on Teams Rooms devices that are running Windows 10, version 1909 or an earlier version.
-
-To fix the issue, select **Accept** to accept the settings.
-
 ## The device displays a black or gray screen
 
 This issue occurs in the following situations:
 
 - The *SkypeRoomSystem.exe* or *DesktopAPIService.exe* process isn't running or crashes.
-- The device isn't running a supported edition of Windows 10. Teams Rooms devices require the Windows 10 IoT Enterprise or Windows 10 Enterprise SKUs under Semi-Annual Channel servicing options. For more information, see [Windows 10 release support](/microsoftteams/rooms/rooms-lifecycle-support#windows-10-release-support).
+- The device isn't running a supported edition of Windows. Microsoft Teams Rooms requires the Windows IoT Enterprise or Windows Enterprise SKUs under the Global Availability Channel servicing option. For more information, see [Windows release support](/microsoftteams/rooms/rooms-lifecycle-support#windows-release-support).
 
 To fix the issue, try these options:
 
-- Make sure that the device is running a supported edition of Windows 10. Otherwise, reimage the device as described in the OEM documentation.
+- Make sure that the device is running a supported edition of Windows. Otherwise, reimage the device as described in the OEM documentation.
 - Restart the device. If the issue persists, reimage the device as described in the OEM documentation.
 
 ## The device displays an app error message, or returns to the logon screen when you try to start the Teams Rooms app
@@ -101,11 +93,11 @@ This issue can occur in the following situations:
 
 - There are multiple versions of Teams Rooms app installed on the device.
 - The Teams Rooms app needs remediation.
-- The device isn't running a supported edition of Windows 10. Microsoft Teams Rooms requires the Windows 10 IoT Enterprise or Windows 10 Enterprise SKUs under Semi-Annual Channel servicing options. For more information, see [Windows 10 release support](/microsoftteams/rooms/rooms-lifecycle-support#windows-10-release-support).
+- The device isn't running a supported edition of Windows. Microsoft Teams Rooms requires the Windows IoT Enterprise or Windows Enterprise SKUs under the Global Availability Channel servicing option. For more information, see [Windows release support](/microsoftteams/rooms/rooms-lifecycle-support#windows-release-support).
 
 To fix the issue, follow these steps:
 
-1. Make sure that the device is running a supported edition of Windows 10. Otherwise, reimage the device as described in the OEM documentation.
+1. Make sure that the device is running a supported edition of Windows. Otherwise, reimage the device as described in the OEM documentation.
 2. Run the following command at an elevated PowerShell prompt:
 
    ```powershell
