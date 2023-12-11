@@ -6696,7 +6696,7 @@
     {
       "source_path": "support/mem/configmgr/client-installation/support-for-mac-linux-and-unix-clients.md",
       "redirect_url": "previous-versions/troubleshoot/configmgr/support-for-mac-linux-and-unix-clients",
-      "redirect_document_id": true
+      "redirect_document_id": false
     }
 ]
 }
