@@ -3,7 +3,7 @@ title: The Monitored or Offline status of a Teams Rooms device is Unhealthy
 description: Resolve the issue that causes the Monitored or Offline signal of a Microsoft Teams Rooms device to appear as Unhealthy.
 ms.reviewer: joolive
 ms.topic: troubleshooting
-ms.date: 10/18/2022
+ms.date: 12/10/2023
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -14,7 +14,9 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft Teams
-ms.custom: CI167992
+ms.custom: 
+  - CI167992
+  - CI185118
 ---
 # The Monitored or Offline status is Unhealthy
 
@@ -137,11 +139,7 @@ If the agent (ServicePortalAgent.exe) is running correctly, check whether Teams 
 The following log files provide additional information about monitoring issues:
 
 - The Windows event log named **Microsoft Managed Rooms**
-- The application runtime log file, *C:\Windows\ServiceProfiles\LocalService\AppData\Local\ServicePortalAgent\app-\<agentversion\>\ServicePortalAgent\ServicePortal_Verbose_LogFile.log*
-
-  > [!NOTE]
-  >
-  > Whenever the agent is updated to a new version, a new *app-\<agentversion\>* folder is created. Therefore, always find the folder that has the latest agent version number, and open the *ServicePortalAgent\ServicePortal_Verbose_LogFile.log* file that's in that folder.
+- The application runtime log file, *C:\Windows\ServiceProfiles\LocalService\AppData\Local\ServicePortalAgent\Logs\ServicePortalAgent*.log*
 
 For additional help, follow these steps:
 
