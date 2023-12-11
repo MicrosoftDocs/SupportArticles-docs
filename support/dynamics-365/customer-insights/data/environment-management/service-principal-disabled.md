@@ -1,6 +1,6 @@
 ---
 title: Can't access a new Customer Insights - Data environment
-description: Provides a resolution for an issue where you can't access a new Dynamics 365 Customer Insights - Data environment due to disabled user sign-in.
+description: Provides a resolution for an issue where you can't access a new Dynamics 365 Customer Insights - Data environment because the user sign-in is disabled.
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
@@ -15,7 +15,7 @@ This article provides a resolution for an issue where you can't access a new Dyn
 
 ## Symptoms
 
-After you sign in to Customer Insights - Data, you receive the following error message:
+When you sign in to Customer Insights - Data, you receive the following error message:
 
 > The service principal for resource \<application ID> is disabled.
 
@@ -28,10 +28,10 @@ This issue occurs most likely because an administrator disabled user sign-in for
 To solve this issue, follow these steps to enable user sign-in for the `<application ID>` enterprise application.
 
 > [!NOTE]
-> To enable user sign-in, you need admin permissions for Microsoft Entra ID.
+> To enable user sign-in, you need admin permissions of Microsoft Entra ID.
 
 1. Sign in to Microsoft Entra ID in the [Azure portal](https://portal.azure.com/).
 1. Go to **Enterprise applications**.
-1. Open the **Properties** setting for the `<application ID>` enterprise application.
+1. Open the **Properties** setting of the `<application ID>` enterprise application.
 1. Set **Enabled for users to sign-in?** to **Yes**.
 1. Select **Save**.
