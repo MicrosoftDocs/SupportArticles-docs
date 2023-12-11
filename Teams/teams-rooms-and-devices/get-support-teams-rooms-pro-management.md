@@ -3,7 +3,7 @@ title: Get support for Microsoft Teams Rooms Pro Management
 description: Describes how to create a support request and collect required information for Microsoft Support to resolve issues in the Teams Rooms Pro Management portal.
 ms.reviewer: aageorge
 ms.topic: troubleshooting
-ms.date: 09/29/2022
+ms.date: 12/11/2023
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -14,7 +14,9 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft Teams
-ms.custom: CI167668
+ms.custom: 
+  - CI167668
+  - CI185120
 ---
 # Get support for Microsoft Teams Rooms Pro Management
 
@@ -55,7 +57,18 @@ To reduce the time needed to gather information when you open a support request 
 
 ## Collect logs
 
-To collect logs in the [Teams Rooms Pro Management portal](https://portal.rooms.microsoft.com/):
+### Collect logs in the Teams Rooms Pro Management portal
+
+#### Windows-based Teams Rooms devices
+
+1. Go to the room pane of the room that you want to collect logs for, and select the **Actions** tab.
+1. Select the **Log collection** action, and then select **Run**.
+1. Select all relevant log categories, enter the reason for collecting the logs, and then select **Run**.
+
+   **Note:** This operation may take several minutes. To monitor progress, select the **Activity** tab.
+1. After the operation is completed, select the *Log Collection*.zip* link to download the logs.
+
+#### Other Teams Rooms devices
 
 1. Go to the room pane of the room that you want to collect logs for, and select **Collect logs**.
 
@@ -75,7 +88,7 @@ To collect logs in the [Teams Rooms Pro Management portal](https://portal.rooms.
 
 1. Select the download icon to download the logs.
 
-To collect logs on the Teams Rooms device:
+### Collect logs on the Teams Rooms device
 
 1. Sign in to the device by using the **Admin** account.
 1. Run the following command in an elevated Command Prompt window:
