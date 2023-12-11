@@ -37,6 +37,22 @@ landingContent:
         links:
           - text: Troubleshoot Power Query data source refresh issues
             url: data/data-ingestion/power-query-data-source-refresh-issues-dataflows.md
+          - text: Fail to convert from Azure Data Lake data source to Delta Lake data source
+            url: data/data-ingestion/revert-delta-back-to-ADLS.md
+
+  # Card
+  - title: Data unification
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Match failed error
+            url: data/profile-unification/match-failed.md
+          - text: Merge failed error
+            url: data/profile-unification/merge-failed.md
+          - text: Can't update a field from matching rules
+            url: data/profile-unification/cant-remove-field-from-match.md
+          - text: Missing business unit
+            url: data/profile-unification/missing-business-unit.md
 
   # Card
   - title: Insights
