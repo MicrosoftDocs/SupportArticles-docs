@@ -18,6 +18,8 @@ This article provides a solution to an issue in which you are not able to connec
 _Original product version:_ &nbsp; Virtual Machine running Windows  
 _Original KB number:_ &nbsp; 4295591
 
+[!INCLUDE [Feedback](../../includes/feedback.md)]
+
 ## Symptoms
 
 Consider the following scenario:
