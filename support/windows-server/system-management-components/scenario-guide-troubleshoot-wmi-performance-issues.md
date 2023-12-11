@@ -90,7 +90,7 @@ If no memory leak occurs, the client process identified is the cause of the issu
 
 ## Repository bloated
 
-Review the size of the WMI repository, which is stored under *C:\\Windows\\System32\\wbem\\Repository*, and consider the following scenario:
+Review the size of the WMI repository, which is stored under *C:\\Windows\\System32\\wbem\\Repository*. Understand or determin the size of the repository:
 
 - The size of the repository depends on multiple factors, such as the resources and load on the machine, the active services and applications installed on the machine, and the environment (for example, whether it belongs to a cluster or SQL server).
 - For a server OS, a healthy repository size may be a few hundred MB to 1.5 GB. For a client OS, the size can be a few hundred MB. The repository doesn't necessarily stay at a specific size, and there's no written limit.
@@ -107,6 +107,8 @@ For RSoP logging issues, see [Unexpectedly slow logon caused by large WMI reposi
 Even after applying the solution, the WMI repository has to be reset to reduce its size. We don't recommend resetting the WMI repository without prior guidance from Microsoft support professionals.
 
 If the above steps can't solve the issue, you need to collect the traces and dumps and send them to Microsoft support professionals for deeper investigation, as mentioned in the [Data collection](#data-collection) section.
+
+## The WmiPrvse.exe process is leaking handles or memory
 
 If the *WmiPrvse.exe* process is leaking handles or memory, it's likely one of the following cases:
 
