@@ -33,12 +33,12 @@
           href: mobile-app/booking-timestamp-incorrect-time.md
         - name: Camera pictures are blurry or not focused
           href: mobile-app/camera-picture-not-focused.md
+        - name: Commands disappear when in offline mode
+          href: mobile-app/missing-commands.md
         - name: Duplicated inspection responses
           href: mobile-app/duplicate-inspection-responses.md
         - name: Incorrect or missing data in offline mode
           href: mobile-app/incorrect-missing-data-offline-mode.md
-        - name: Commands disappear when in offline mode
-          href: mobile-app/missing-commands.md
         - name: Troubleshoot issues with publishing a mobile offline profile
           href: mobile-app/publish-mobile-offline-profile.md
         - name: Validations have been restarted in the background

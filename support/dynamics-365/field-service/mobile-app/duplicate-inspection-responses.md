@@ -1,23 +1,22 @@
 ---
 title: Duplicated inspection responses
-description: Review audit log and offline profile filters to prevent duplicated inspection responses in Field Service.
+description: Reviews audit log and offline profile filters to prevent duplicated inspection responses in Microsoft Dynamics 365 Field Service.
 ms.author: andreo
 author: Andrea-Orimoto
 ms.reviewer: mhart
-ms.date: 11/20/2023
+ms.date: 12/11/2023
 ---
-
 # Duplicated inspection responses
 
-Due to the current design of the inspection feature and offline functionality, some scenarios can create duplicate inspection responses.
+Due to the current design of the inspection feature and offline functionality, some scenarios can create duplicate inspection responses in Microsoft Dynamics 365 Field Service.
 
 ## Symptoms
 
-When a work order service task with an associated inspection is opened the first time, it automatically creates an inspection response record. In some cases, the system might create a duplicate inspection response. Users might report that their answers to inspection questions are being cleared. This is due to the new inspection response replacing the previous one.
+When a work order service task that has an associated inspection is opened the first time, it automatically creates an inspection response record. In some cases, the system might create a duplicate inspection response. Users might report that their answers to inspection questions are being cleared. This is due to the new inspection response replacing the previous one.
 
-## Resolutions
+## Resolution
 
-Admins can review the audit log on the work order service task to check if the associated inspection response was created twice.
+Administrators can review the audit log on the work order service task to check if the associated inspection response is created twice.
 
 ### In offline scenarios
 
@@ -27,7 +26,7 @@ The default offline profile has filter set to download all work order service ta
 
 The predefined security role "Field Service - Resource" has permissions to update inspection responses and work order service tasks.
 
-If admins create custom security roles and don't give users permissions to both record types, they might not be able to read the related inspection response on a work order service task. The system then creates a new inspection response when a user opens the work order service task.
+If administrators create custom security roles and don't give users permissions to both record types, they might not be able to read the related inspection response on a work order service task. The system then creates a new inspection response when a user opens the work order service task.
 
 ### Using multiple devices
 
