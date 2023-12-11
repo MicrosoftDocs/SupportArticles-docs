@@ -5,6 +5,7 @@ ms.author: andreo
 author: Andrea-Orimoto
 ms.reviewer: mhart
 ms.date: 12/11/2023
+ms.custom: sap:issue-completing-inspections
 ---
 # Duplicated inspection responses
 
