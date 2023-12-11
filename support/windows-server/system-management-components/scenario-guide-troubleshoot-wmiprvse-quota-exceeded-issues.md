@@ -17,7 +17,7 @@ This article helps troubleshoot the *WmiPrvse.exe* process quota exceeded issues
 
 You may experience one or more of the following issues:
 
-- One or more applications report error codes or messages related to the Windows Management Instrumentation (WMI) provider failure listed in WMI Error Constants.
+- One or more applications report error codes or messages related to the Windows Management Instrumentation (WMI) provider failure listed in [WMI Error Constants](/windows/win32/wmisdk/wmi-error-constants).
 - The *WmiPrvse.exe* process regularly or intermittently reaches a specific memory, handle, or thread, and eventually terminates or exits.
 - The following events are logged in the Application event log regularly or intermittently.
 
@@ -58,7 +58,7 @@ The query handled by the stopped *WmiPrvse.exe* process and the application that
 
 ## What is WmiPrvse.exe?
 
-*WmiPrvse.exe* is a process in the Windows operating system (OS). It's managed by the WMI service that hosts one or more WMI providers. Each WMI provider primarily contains the WMI provider DLL file and the WMI provider MOF file. The WMI provider is part of the WMI infrastructure, which accepts tasks from the WMI service to address or handle WMI queries initiated by local or remote clients.
+*WmiPrvse.exe* is a process in the Windows operating system (OS) that can hosts one or more WMI providers. It is managed by WMI service. Each WMI provider primarily contains the WMI provider DLL file and the WMI provider MOF file. The WMI provider is part of the WMI infrastructure, which accepts tasks from the WMI service to address or handle WMI queries initiated by local or remote clients.
 
 Each *WmiPrvse.exe* process has a predefined threshold or resource quota that it can use when it's active. For example:
 
