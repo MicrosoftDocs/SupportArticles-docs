@@ -3,7 +3,7 @@ title: The OS Edition status of a Teams Rooms device is Unhealthy
 description: Resolve the issue that causes the OS Edition signal of a Teams Rooms device to appear as Unhealthy.
 ms.reviewer: joolive
 ms.topic: troubleshooting
-ms.date: 10/30/2023
+ms.date: 12/08/2023
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -29,7 +29,7 @@ Users also experience the following issues on the device:
 
 ## Cause
 
-These issues occur when the Teams Rooms Pro agent detects that the device isn't running a supported edition of Windows 10. Teams Rooms devices require the Windows 10 IoT Enterprise or Windows 10 Enterprise SKUs under Semi-Annual Channel servicing options. For more information, see [Windows 10 release support](/microsoftteams/rooms/rooms-lifecycle-support#windows-10-release-support).
+These issues occur when the Teams Rooms Pro agent detects that the device isn't running a supported edition of Windows. Microsoft Teams Rooms requires the Windows IoT Enterprise or Windows Enterprise SKUs under the Global Availability Channel servicing option. For more information, see [Windows release support](/microsoftteams/rooms/rooms-lifecycle-support#windows-release-support).
 
 ## Resolution
 
@@ -38,4 +38,4 @@ These issues occur when the Teams Rooms Pro agent detects that the device isn't 
 
 ## More information
 
-All certified Teams Rooms devices are pre-installed together with an IoT Enterprise or the binary-equivalent Enterprise edition of Windows 10. You can also choose to upgrade an existing IoT Enterprise edition to the full Enterprise edition using Bring Your Own License (BYOL).
+All certified Teams Rooms devices are pre-installed together with an IoT Enterprise or the binary-equivalent Enterprise edition of Windows 10 or Windows 11. You can also choose to upgrade an existing IoT Enterprise edition to the full Enterprise edition using Bring Your Own License (BYOL).
