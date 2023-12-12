@@ -18,4 +18,4 @@ When you use just the NETBIOS name, example SQLPROD01, rather than the fully qua
 
 ## Resolution
 
-Check the network settings for the default suffixes and make sure they are correct or use the FQDN to avoid issues.
+Check the network settings for the default suffixes and make sure they're correct or use the FQDN to avoid issues.

@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting wrong database name in connection string 
 description: This article provides symptoms and resolution for troubleshooting the wrong database name in connection string error.
-ms.date: 11/23/2023
+ms.date: 12/12/2023
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
@@ -20,7 +20,7 @@ The driver might generate the following error message:
 
 Some drivers might also show the "Login failed for user CONTOSO\user1" error message.
 
-The SQL Server Errorlog will have the following message:
+The SQL Server error log will have the following message:
 "Login failed for user 'CONTOSO\User1'. Reason: Failed to open the explicitly specified database 'northwind'."
 
 ## Resolution

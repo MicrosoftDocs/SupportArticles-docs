@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting the disjoint DNS namespace error
 description: This article provides symptoms and resolution for the disjoint DNS namespace error.
-ms.date: 12/05/2023
+ms.date: 12/12/2023
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
@@ -18,4 +18,4 @@ If the organizational hierarchy in Active Directory (AD) and in DNS don't match,
 
 ## Resolution
 
- Use the fully-qualified name of the server or specify the SPN name in the connection string to mitigate problems.
+ Use the fully qualified name of the server or specify the SPN name in the connection string to mitigate problems.

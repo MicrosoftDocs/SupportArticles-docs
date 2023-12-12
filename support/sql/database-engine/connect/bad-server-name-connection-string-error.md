@@ -10,7 +10,7 @@ ms.custom: sap:Connection issues
 
 # Bad server name in connection string error
 
-This article helps you to resolve the problem related to the bad server name error. This can be a common issue if you deploy an application that uses a DEV or QA server into production and you fail to update the connection string.
+This article helps you to resolve the problem related to the bad server name error. This error can be a common issue if you deploy an application that uses a DEV or QA server into production and you fail to update the connection string.
 
 ## Symptoms
 
@@ -28,7 +28,7 @@ The SqlClient .NET Provider shows the following error messages:
 > "Login failed for user ''. -when using TCP and a SQL login or a Windows login"
 > "Login failed for user 'CONTOSO\user1'. - when using Named Pipes and a SQL login or a Windows login"
 
-The SQL Server error log will have one of the following messages:
+Check whether the SQL Server error log has one of the following messages:
 
 > "'Login failed for user'. Reason: Could not find a login matching the name provided."
 > "'Login failed for user 'CONTOSO\USER1'. Reason: Could not find a login matching the name provided."

@@ -18,7 +18,7 @@ All providers will return some variation of the "Login failed for user '\<userna
 
 ## Resolution
 
-This can be resolved in one of the following methods:
+This error can be resolved in one of the following methods:
 
 Check if the SQL error log contains the error message "Login failed for user '\<username\>'. Reason: An attempt to log in using SQL authentication failed. Server is configured for Windows authentication only."
 

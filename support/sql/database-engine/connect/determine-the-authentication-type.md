@@ -8,9 +8,9 @@ ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 
-# Determine if I am connected to SQL Server using Kerberos authentication
+# Determine if I'm connected to SQL Server using Kerberos authentication
 
-This article helps you to determine the type of authentication by running a query. Following is a basic query to determine your authentication type. Make sure to run this on a client machine and not on the SQL Server that you are testing. Otherwise the query returns auth_scheme as NTLM even if Kerberos is properly configured. This is due to per-service SID security hardening feature added in Windows 2008, which makes all local connections use NTLM regardless of whether Kerberos is available.
+This article helps you to determine the type of authentication by running a query. Following is a basic query to determine your authentication type. Make sure to run this on a client machine and not on the SQL Server that you're testing. Otherwise the query returns auth_scheme as NTLM even if Kerberos is properly configured. This is due to per-service SID security hardening feature added in Windows 2008, which makes all local connections use NTLM regardless of whether Kerberos is available.
 
  ```sql
   SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id=@@SPID

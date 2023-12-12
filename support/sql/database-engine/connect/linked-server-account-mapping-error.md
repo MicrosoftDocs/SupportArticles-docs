@@ -25,7 +25,7 @@ When you connect using application developed using .NET, you might see the follo
 
 > "Cannot initialize the data source object of OLE DB provider "MSDASQL" for linked server "SQLPROD02"."
 
-If you also see the following error message, it indicates you are using Named Pipes for the linked server connection and a SQL login, and the mid-tier SQL Server service account or machine account doesn't have login rights to Windows on the backend server:
+If you also see the following error message, it indicates you're using Named Pipes for the linked server connection and a SQL login, and the mid-tier SQL Server service account or machine account doesn't have login rights to Windows on the backend server:
 
 > "OLE DB provider "MSDASQL" for linked server "SQLPROD02" returned message "[Microsoft][SQL Server Native Client 11.0][SQL Server]Login failed for user 'CONTOSO\SQLPROD01$'."
 

@@ -18,10 +18,10 @@ If the application specifies the SQL Server service account in the `ServerSPN` p
 
 `Provider=SQLNCLI11;Data Source=SQLProd01;initial catalog=northwind;integrated security=sspi;server spn=contoso`
 
-If the account name is correct, then the connection will use Kerberos. If the account name isn't found, the connection will use NTLM, and if the account exists but isn't the SQL Server service account, an "SSPI Context" error is generated.
+If the account name is correct, then the connection uses Kerberos. If the account name isn't found, the connection uses NTLM, and if the account exists but isn't the SQL Server service account, an "SSPI Context" error is generated.
 
 ## Resolution
 
-You can use one of the methods explained in [Determine If I Am Connected to SQL Server using Kerberos Authentication](determine-the-authentication-type.md) to test independent of the application.
+You can use one of the methods explained in [Determine If I'm Connected to SQL Server using Kerberos Authentication](determine-the-authentication-type.md) to test independent of the application.
 
 Test the connection from a remote computer. Local connections on Windows 2008 R2 and later, use NTLM to support the per-service SID security feature to prevent one service from spoofing another.

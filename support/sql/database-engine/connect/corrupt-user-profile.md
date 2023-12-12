@@ -14,7 +14,7 @@ This article helps you to resolve the corrupt user profile error.
 
 ## Symptoms
 
-If you log in as the affected user, you will get a temporary profile. This is a good indication that the profile is corrupt or you are a guest user. If you are a guest user, then you must be added to the appropriate groups.
+If you log in as the affected user, you'll get a temporary profile. This is a good indication that the profile is corrupt or you're a guest user. If you're a guest user, then you must be added to the appropriate groups.
 
 ## Resolution
 

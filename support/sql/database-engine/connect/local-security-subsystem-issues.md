@@ -14,7 +14,7 @@ This article helps to resolve the problem related to local security subsystem is
 
 ## Symptoms
 
-The driver shows the "The login is from an untrusted domain and cannot be used with Windows authentication" error message.
+The driver shows the "The login is from an untrusted domain and can't be used with Windows authentication" error message.
 
 Check if the SQL Server error log shows the following messages:
 
