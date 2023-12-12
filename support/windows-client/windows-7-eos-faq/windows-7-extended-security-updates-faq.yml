@@ -194,7 +194,18 @@ sections:
          Is technical support included?
         answer: |
          No. Customers that purchase directly from Microsoft (for example, VL customers or CSP direct Partners) can use an active support contract, such as Software Assurance or Premier or Unified Support, to request assistance with Windows 7. Partners can also use their Partner Support Plans to request assistance for Windows 7.  
+          
+      - question: |
+         What are the limits for ESU technical support issues?
+        answer: |
+         Technical support for ESU is limited to the following issues:
 
+         - Deployment and installation of ESU keys and/or ESU updates.  
+         - Servicing requests for code flaws as the result of the update.  
+
+         > [!NOTE]  
+         > No other support services will be provided.  
+         
       - question: |
          Can customers get technical support on-premises for Windows 7 after the end-of-support date if they do not purchase ESU?
         answer: No. If customers have Windows 7 and don't purchase ESU, they can't log support tickets for Windows 7, even if they have support plans.  
@@ -262,6 +273,7 @@ sections:
          Where can I learn more about the specific security updates that have been issued for Windows 7 ESU?
         answer: |
             A full list of updates to Windows 7 SP1, including ESU updates, is available at [Windows 7 SP1 and Windows Server 2008 R2 SP1 update history](https://support.microsoft.com/help/4009469/windows-7-sp1-windows-server-2008-r2-sp1-update-history).
+
           
   - name: ESU deployment
     questions: 
