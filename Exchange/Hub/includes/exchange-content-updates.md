@@ -2,6 +2,14 @@
 
 
 
+## Week of December 04, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 12/4/2023 | [Resolve issues with Inbox rules in Outlook](/exchange/troubleshoot/outlook-issues/resolve-inbox-rule-issues) | added |
+
+
 ## Week of November 27, 2023
 
 
