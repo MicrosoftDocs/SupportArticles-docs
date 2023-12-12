@@ -73,11 +73,20 @@ To monitor the memory usage or handle count of any process (the WMI service or t
 2. Enter *Perfmon* in the **Run** window to open Performance Monitor.
 3. Select **Performance Monitor** in the left pane, and then select the plus sign (+) in the right pane to open the **Add Counters** window.
 4. Expand **Process** and select **ID Process**. Select all the **WmiPrvse#** and **svchost#** instances, and then select **Add** > **OK**.
+
+    :::image type="content" source="./media/scenario-guide-troubleshoot-wmi-performance-issues/performance-monitor-wmiprvse-svchost.png" alt-text="Screenshot that shows all the WmiPrvse# instances and svchost# instances are selected.":::
+
 5. For each item in the list, you'll see that **Last**, **Average**, and **Minimum** have the same value, which is the PID of that process.
+
+    :::image type="content" source="./media/scenario-guide-troubleshoot-wmi-performance-issues/process-pid.png" alt-text="Screenshot showing that the item having the same Last, Average, and Minimum value is the PID of the process.":::
+
 6. Go through all items in the list, and locate the PID of the Winmgmt service or *WmiPrvse.exe* process that's leaking memory or handles. Then, note the exact **svchost#** or **WmiPrvse#** instance.
 7. Remove all the items from the list.
 8. Select **Add Counters** again, and then under **Process**, select **Handle Count**, **Private Bytes**, **Thread Count**, and **Working Set**.
 9. Select the correct **svchost#** or **WmiPrvse#** instance and select **Add**. This will show a graphical representation of the resources consumed by the selected processes.
+
+    :::image type="content" source="./media/scenario-guide-troubleshoot-wmi-performance-issues/add-counters-wmiprvse-svchost.png" alt-text="Screenshot of the Add Counters window with the WmiPrvse# instance selected.":::
+
 10. Conclude if the memory or handle count increases at specific time intervals or specific times of the day or with any action. Once you understand the leak pattern, [analyze the incoming queries](troubleshoot-wmi-high-cpu-issues.md#analyze-the-incoming-queries) around the time of the increase in memory or handles.
 11. Look for queries that are huge, frequent, or stay too long on the task.
 
