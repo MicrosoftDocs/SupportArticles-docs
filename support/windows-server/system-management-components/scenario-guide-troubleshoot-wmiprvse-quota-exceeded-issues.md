@@ -113,6 +113,8 @@ To diagnose the issue, follow these steps:
         For example, the *WmiPrvse.exe* process ID (PID) 5584 hosts only one WMI provider, CIMWin32, and the DLL path is *%systemroot%\system32\wbem\cimwin32.dll*.
     2. Review the same information for other active *WmiPrvse.exe* processes until you find the PID of the process that's hosting the list of providers listed in Event ID 5612.
 
+        :::image type="content" source="./media/scenario-guide-troubleshoot-wmiprvse-quota-exceeded-issues/wmiprvse-5584-properties.png" alt-text="Screenshot of the WmiPrvse.exe 5584 Properties window showing that PID 5584 is hosting only one WMI provider CIMWin32.":::
+
     Sometimes, if the issue is intermittent or infrequent, the *WmiPrvse.exe* process causing the issue may be terminated over time. When the issue reoccurs, it may be the same provider(s) in a new *WmiPrvse.exe* instance.
 
     In this case, once you have the provider(s) noted, run the following command to show the current PID of the *WmiPrvse.exe* process that contains the provider.
@@ -128,6 +130,8 @@ To diagnose the issue, follow these steps:
     ```
 
     Currently, the *CIMWin32.dll* provider is loaded in two different *WmiPrvse.exe* instances and their PIDs.
+
+    :::image type="content" source="./media/scenario-guide-troubleshoot-wmiprvse-quota-exceeded-issues/wmiprvse-instances-pid.png" alt-text="Screenshot showing that the CIMWin32.dll provider is loaded in two different WmiPrvse.exe instances and their PID.":::
 
     It's important to understand which providers are loaded in the *WmiPrvse.exe* process and note the PID of the *WmiPrvse.exe* process every time.
 
@@ -156,9 +160,18 @@ When a client application performs abnormal, inefficient, or large queries, it c
 
     To increase the quota limit, follow these steps:
 
-    1. Open the Windows Management Instrumentation Tester (WBEMTEST) as an administrator, select **Connect**, and connect to the "Root" namespace.
+    1. Open the Windows Management Instrumentation Tester (WBEMTEST) as an administrator, select **Connect**, and connect to the "root" namespace.
+
+        :::image type="content" source="./media/scenario-guide-troubleshoot-wmiprvse-quota-exceeded-issues/wbemtest-connect.png" alt-text="Screenshot of the Windows Management Instrumentation Tester window showing how to connect to the root namespace.":::
+
     2. Select **Enum Instances**, type *__ProviderHostQuotaConfiguration* in the **Class Info** dialog, and then select **OK**. The **Query Result** window is presented. Then, double-click the first result to edit the objects.
-    3. In the **Properties** section, find the resource-related properties and increase the resources by modifying the values of these properties.
+
+        :::image type="content" source="./media/scenario-guide-troubleshoot-wmiprvse-quota-exceeded-issues/query-result.png" alt-text="Screenshot of the Query Result window with the first result selected.":::
+
+    3. In the **Properties** section, scroll down to the list mentioned below and increase the resources by modifying the values of these properties.
+
+        :::image type="content" source="./media/scenario-guide-troubleshoot-wmiprvse-quota-exceeded-issues/object-editor.png" alt-text="Screenshot of the Object editor window with the properties of the instance selected.":::
+
     4. In the **Object editor** window, select **Save Object**, close the **Query Result** window, and then exit WBEMTEST.
     5. Restart the WMI service (Winmgmt) for the changes to take effect.
 
@@ -172,6 +185,9 @@ If the *WmiPrvse.exe* process doesn't release resources as expected while proces
 
     1. Run Process Explorer as an administrator and locate the *WmiPrvse.exe* process using the technique mentioned in the [Diagnose the issue](#diagnose-the-issue) section.
     2. Go to **Properties** and select the **Threads** tab.
+
+        :::image type="content" source="./media/scenario-guide-troubleshoot-wmiprvse-quota-exceeded-issues/wmiprvse-5180-properties.png" alt-text="Screenshot of the WmiPrvse.exe 5180 Properties window with Thread ID 4016 selected.":::
+
     3. For each thread, you can review the stack and identify if you locate any non-Microsoft binaries or files.
 
 You may notice binaries from software such as antivirus software, monitoring software, and threat protection software. Although these software applications benefit the environment, they may sometimes interrupt and cause such issues. Hence, you can temporarily uninstall them and check for the issue.
