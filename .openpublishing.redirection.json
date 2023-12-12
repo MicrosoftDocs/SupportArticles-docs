@@ -6692,6 +6692,11 @@
       "source_path": "support/azure/virtual-machines/boot-error-0xc0000225.md",
       "redirect_url": "/troubleshoot/azure/virtual-machines/boot-error-status-not-found",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/client-installation/support-for-mac-linux-and-unix-clients.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/support-for-mac-linux-and-unix-clients",
+      "redirect_document_id": false
     }
 ]
 }
