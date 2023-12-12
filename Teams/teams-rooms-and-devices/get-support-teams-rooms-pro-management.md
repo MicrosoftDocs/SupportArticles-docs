@@ -62,11 +62,20 @@ To reduce the time needed to gather information when you open a support request 
 #### Windows-based Teams Rooms devices
 
 1. Go to the room pane of the room that you want to collect logs for, and select the **Actions** tab.
+
+   :::image type="content" source="./media/get-support-teams-rooms-pro-management/select-actions-tab.png" alt-text="Screenshot of the room pane that shows the Actions tab.":::
 1. Select the **Log collection** action, and then select **Run**.
-1. Select all relevant log categories, enter the reason for collecting the logs, and then select **Run**.
+
+   :::image type="content" source="./media/get-support-teams-rooms-pro-management/select-log-collection-action.png" alt-text="Screenshot of the room pane that shows the Log collection action.":::
+1. Select all relevant logs you want to collect, enter the reason for collecting the logs, and then select **Run**.
+
+   :::image type="content" source="./media/get-support-teams-rooms-pro-management/select-logs-to-collect.png" alt-text="Screenshot of the window that shows the log selection box.":::
 
    **Note:** This operation may take several minutes. To monitor progress, select the **Activity** tab.
-1. After the operation is completed, select the *Log Collection*.zip* link to download the logs.
+1. After the operation is completed, you can find the log file on the **Activity** tab.
+
+   :::image type="content" source="./media/get-support-teams-rooms-pro-management/log-collection-completed.png" alt-text="Screenshot of the window that shows the log collection action is completed.":::
+1. Select the download icon to download the *LogCollection\*.zip* file.
 
 #### Other Teams Rooms devices
 
