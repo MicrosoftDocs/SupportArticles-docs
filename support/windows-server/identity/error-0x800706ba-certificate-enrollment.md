@@ -4,13 +4,12 @@ description: Introduces steps to resolve the error 0x800706ba, The RPC Server is
 author: Deland-Han
 ms.author: delhan
 ms.topic: troubleshooting
-ms.date: 05/24/2023
+ms.date: 12/12/2023
 ms.reviewer: kaushika
 ms.prod: windows-server
 ms.technology: windows-server-active-directory
 ms.custom: sap:active-directory-certificate-services, csstroubleshoot, ikb2lmc
 ---
-
 # Error 0x800706ba "The RPC Server is unavailable" when you enroll a certificate
 
 When you try to enroll a certificate on a Windows Server, it fails with the error 0x800706ba, "The RPC Server is unavailable." This article introduces steps to resolve this issue.
@@ -179,24 +178,15 @@ To identify the issue, verify that the GPO is applied to the certificate server.
 
 ## Cause 6: Missing "Certificate Service DCOM Access" from COM Security Access Permissions or Launch and Activation Permissions
 
-When Active Directory Certificate Services is installed on a server, the local group "Certificate Service DCOM Access" is automatically granted rights to Component Services. If these default permissions have been removed, then you may experience the symptoms described in this article. To verify that the correct permissions are in place, follow these steps.
+When the Active Directory Certificate Services role is installed on a server, the local **Certificate Service DCOM Access** group is automatically granted rights to the Component Services administrative tool. If these default permissions have been removed, you may experience the symptoms described in this article. To verify that the correct permissions are in place, follow these steps:
 
-1. Open the **Component Services** MMC snap-in (found under Windows Administrative Tools).
-1. In the tree view on the left of the snap-in, expand **Component Services** > **Computers**.  
-![A screenshot of the Component Services MMC snap-in.](media/error-0x800706ba-certificate-enrollment/image.png)
-
-1. Right-click **My Computer** and select **Properties**, then move to the **COM Security** tab.
-1. Under **Access Permissions**, click **Edit Limits...**  
-![A screenshot highlighting the Edit Limits button for Access Permissions on the COM Security tab of the My Computer Properties dialog.](media/error-0x800706ba-certificate-enrollment/image1.png)
-
-1. Verify that the local "Certificate Service DCOM Access" group appears in the list of principals and that it's granted both **Local Access** and **Remote Access**. If not, add it and grant the appropriate rights. Click OK to close the Access Permission dialog.  
-![User's image](image5.png)
-
-1. Under **Launch and Activation Permissions**, click **Edit Limits...**  
-![A screenshot highlighting the Edit Limits button for Launch and Activation Permissions on the COM Security tab of the My Computer Properties dialog.](image3.png)
-
-1. Verify that the local "Certificate Service DCOM Access" group appears in the list of principals and that it's granted both **Local Activation** and **Remote Activation**. If not, add it and grant the appropriate rights. Click OK to close the Launch and Activation Permission dialog.  
-![Screenshot of Launch and Activation Permission dialog showing Certificate Service DCOM Access being granted Local Activation and Remote Activation.](image6.png)
+1. Open the **Component Services** Microsoft Management Console (MMC) snap-in under **Windows Administrative Tools**.
+2. In the left pane, expand **Component Services** > **Computers**.  
+3. Right-click **My Computer** and select **Properties**, then select the **COM Security** tab.
+4. Under **Access Permissions**, select **Edit Limits...**  
+5. Verify that the local **Certificate Service DCOM Access** group appears in the **Group or user names** list and is granted both **Local Access** and **Remote Access** permissions. If not, add it and grant the appropriate permissions. Select **OK** to close the **Access Permission** dialog.  
+6. Under **Launch and Activation Permissions**, select **Edit Limits...**  
+7. Verify that the local **Certificate Service DCOM Access** group appears in the **Group or user names** list and is granted both **Local Activation** and **Remote Activation** permissions. If not, add it and grant the appropriate permissions. Select **OK** to close the **Launch and Activation Permissions** dialog.  
 
 ## Reference
 
