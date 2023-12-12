@@ -31,6 +31,8 @@ Here are some examples of WMI configuration or connectivity issues you may exper
 
 - The local WMI query fails to use the `Get-WmiObject` PowerShell cmdlet and receives the "Access denied" error.
 
+    :::image type="content" source="./media/scenario-guide-troubleshoot-wmi-connectivity-access-issues/access-denied-error.png" alt-text="Screenshot of the get-wmiobject cmdlet result with the Access denied error.":::
+
 ## Connection flow
 
 There are multiple components and layers involved in a WMI connection. The following components are involved at a high level:
@@ -41,6 +43,8 @@ There are multiple components and layers involved in a WMI connection. The follo
 - The WMI repository and WMI service
 - The WMI provider
 - The managed objects
+
+    :::image type="content" source="./media/scenario-guide-troubleshoot-wmi-connectivity-access-issues/wmi-connection-flow.png" alt-text="Diagram of the WMI connection flow.":::
 
 ## Identify the issue
 
@@ -154,6 +158,8 @@ The following procedure sets **Remote Enable** permissions for a non-administrat
     > [!NOTE]
     > To ensure the same permissions are inherited to the subfolder or subnamespaces, select **Advanced**. Then, select the intended user and make sure that **This namespace and subnamespaces** is selected under the **Applies to** section.
 
+    :::image type="content" source="./media/scenario-guide-troubleshoot-wmi-connectivity-access-issues/permission-entry-cimv2.png" alt-text="Screenshot of the permission entry for CIMV2 with the appropriate permissions selected.":::
+
 To check the connectivity to a specific class in a specific namespace, you can use the Windows Management Instrumentation Tester (WBEMTEST) tool by following the steps:
 
 1. Open WBEMTEST as an administrator and select **Connect**. By default, the console connects to the local WMI's **Root\\cimv2** namespace.  
@@ -164,6 +170,8 @@ If the connection is successful, the WBEMTEST main window is connected to the no
 By default, the WBEMTEST connection uses the logged-in user credentials. If you connect with a different account, the credentials pop up before attempting to connect.
 
 The following example shows an attempt to connect to the namespace **root\\ccm** on "RemoteMachine1" using the credentials of User1.
+
+:::image type="content" source="./media/scenario-guide-troubleshoot-wmi-connectivity-access-issues/root-ccm-remote-machine.png" alt-text="Screenshot of the Connect window showing an attempt to connect to the namespace root\ccm on RemoteMachine1 with the credentials of User1.":::
 
 To set up a WMI connection between a domain-joined machine and a workgroup machine, consider a local user of the target machine.
 
@@ -295,7 +303,19 @@ In some scenarios, local WMI connections may fail.
 
 You can use *WMIMGMT.msc* to check the local WMI connectivity by right-clicking **WMI Control** and selecting **Properties**.
 
-Here are some errors that occur when the local WMI fails.
+Here are some errors that occur when the local WMI fails:
+
+- > Failed to connect to \<local computer\> because "WMI: Not Found"
+
+    :::image type="content" source="./media/scenario-guide-troubleshoot-wmi-connectivity-access-issues/wmi-not-found.png" alt-text="Screenshot of the WMI Control (Local) Properties window showing the WMI Not Found error.":::
+
+- > Failed to connect to \<local computer\> because "Win32: The system cannot find the path specified."
+
+    :::image type="content" source="./media/scenario-guide-troubleshoot-wmi-connectivity-access-issues/system-cannot-find-path-specified.png" alt-text="Screenshot of the WMI Control (Local) Properties window showing the system cannot find the path specified error.":::
+
+- > Failed to connect to \<local computer\> because "WMI: Generic failure"
+
+    :::image type="content" source="./media/scenario-guide-troubleshoot-wmi-connectivity-access-issues/wmi-generic-failure.png" alt-text="Screenshot of the WMI Control (Local) Properties window showing the WMI Generic failure error.":::
 
 These kinds of errors may sometimes be caused if there's any glitch in the WMI repository or if there's any corruption.
 
