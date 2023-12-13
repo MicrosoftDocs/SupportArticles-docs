@@ -10,6 +10,8 @@ ms.reviewer: kendownie, jarrettr, v-weizhu
 
 This article lists common issues related to Azure Files. It also provides possible causes and resolutions for these issues.
 
+[!INCLUDE [Feedback](../../includes/feedback.md)]
+
 If you can't find an answer to your question, you can contact us through the following channels (in escalating order):
 
 - [Microsoft Q&A question page for Azure Files](/answers/products/azure?product=storage).

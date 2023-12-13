@@ -9,6 +9,8 @@ ms.collection: M365-identity-device-management
 ---
 # IPv6 support in Microsoft Entra ID
 
+[!INCLUDE [Feedback](../../includes/feedback.md)]
+
 We're excited to bring IPv6 support to Microsoft Entra ID, to support customers with increased mobility, and help reduce spending on fast-depleting, expensive IPv4 addresses. For more information about how this change might affect Microsoft 365, see [IPv6 support in Microsoft 365 services](/microsoft-365/enterprise/ipv6-support).
 
 If your organization's networks don't support IPv6 today, you can safely ignore this information until such time that they do.

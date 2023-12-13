@@ -19,6 +19,8 @@ ms.author: genli
 
 This article describes an error that you may experience when you try to connect to a virtual machine (VM) in Microsoft Azure.
 
+[!INCLUDE [Feedback](../../includes/feedback.md)]
+
 ## Symptoms
 
 You can't connect to an Azure VM by using the remote desktop protocol (RDP). The connection gets stuck on the **Configuring Remote** section, or you receive the following error message:
