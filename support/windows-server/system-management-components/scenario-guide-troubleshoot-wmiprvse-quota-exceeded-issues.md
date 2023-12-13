@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot WmiPrvse.exe quota exceeded issues
 description: Helps troubleshoot the WmiPrvse.exe process quota exceeded issues, and describes how to gather additional information.
-ms.date: 12/06/2023
+ms.date: 12/13/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -128,8 +128,6 @@ To diagnose the issue, follow these steps:
     ```console
     tasklist /m ntevt.dll
     ```
-
-    Currently, the *CIMWin32.dll* provider is loaded in two different *WmiPrvse.exe* instances and their PIDs.
 
     :::image type="content" source="./media/scenario-guide-troubleshoot-wmiprvse-quota-exceeded-issues/wmiprvse-instances-pid.png" alt-text="Screenshot showing that the CIMWin32.dll provider is loaded in two different WmiPrvse.exe instances and their PID.":::
 
