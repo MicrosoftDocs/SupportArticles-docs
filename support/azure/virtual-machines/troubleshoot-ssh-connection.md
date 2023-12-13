@@ -20,6 +20,8 @@ ms.author: genli
 
 This article helps you find and correct the problems that occur due to Secure Shell (SSH) errors, SSH connection failures, or SSH is refused when you try to connect to a Linux virtual machine (VM). You can use the Azure portal, Azure CLI, or VM Access Extension for Linux to troubleshoot and resolve connection problems.
 
+[!INCLUDE [Feedback](../../includes/feedback.md)]
+
 ## Quick troubleshooting steps
 
 After each troubleshooting step, try reconnecting to the VM.
