@@ -108,7 +108,7 @@ Team Foundation Server 2012 and later versions are supported.
 
 ## Windows Server
 
-Standard editions of Windows Server 2016 and Windows Server 2019 aren't available in Azure Marketplace. To use them, [upload an image](/azure/virtual-machines/windows/prepare-for-upload-vhd-image).
+Standard editions of Windows Server 2016, Windows Server 2019, and Windows Server 2022 aren't available in Azure Marketplace. To use them, [upload an image](/azure/virtual-machines/windows/prepare-for-upload-vhd-image).  Note: With the exception of [Hybrid Benefit](https://learn.microsoft.com/windows-server/get-started/azure-hybrid-benefit) scenarios, the license cost for any Windows VM is the same, so the only reason to opt for Standard Edition over Datacenter Edition would be compatibility requirements.
 
 Windows Server 2003 and later versions are supported for deployment in Microsoft Azure. Click [here](https://support.microsoft.com/help/3206074) to see more information about running Windows Server 2003 on Azure.
 
