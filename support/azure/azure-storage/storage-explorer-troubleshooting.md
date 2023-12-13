@@ -9,6 +9,8 @@ ms.reviewer: azurestocic, jarrettr, v-weizhu
 
 # Azure Storage Explorer troubleshooting guide
 
+[!INCLUDE [Feedback](../../includes/feedback.md)]
+
 Microsoft Azure Storage Explorer is a standalone app that makes it easy to work with Azure Storage data on Windows, macOS, and Linux. The app can connect to storage accounts hosted on Azure, national clouds, and Azure Stack.
 
 This guide summarizes solutions for issues that are commonly seen in Storage Explorer.
