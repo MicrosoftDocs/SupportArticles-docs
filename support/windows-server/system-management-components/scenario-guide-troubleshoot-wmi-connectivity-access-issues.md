@@ -1,7 +1,7 @@
 ---
 title: "Scenario guide: Troubleshoot WMI connectivity and access issues"
 description: Covers how to review the Windows Management Instrumentation (WMI) configuration, diagnose and troubleshoot WMI connectivity or access issues.
-ms.date: 12/08/2023
+ms.date: 12/13/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -368,7 +368,7 @@ The following procedure describes how to recompile the WMI provider MOF files an
     ```
 
 > [!NOTE]
-> There are multiple external blogs and sites to [reset the WMI repository or rebuild the WMI repository](https://techcommunity.microsoft.com/t5/ask-the-performance-team/wmi-rebuilding-the-wmi-repository/ba-p/373846). This sets the WMI repository back to its initial state when the operating system was installed. WMI will lose all the information that was gathered over time about the system itself, applications, services, and other entities around it. Hence, we don't recommend rebuilding the WMI repository unless it's performed by Microsoft support.
+> There are multiple external blogs and sites to reset the WMI repository or rebuild the WMI repository. This sets the WMI repository back to its initial state when the operating system was installed. WMI will lose all the information that was gathered over time about the system itself, applications, services, and other entities around it. Hence, we don't recommend rebuilding the WMI repository unless it's performed by Microsoft support.
 
 ## Connection flow at the network level
 
