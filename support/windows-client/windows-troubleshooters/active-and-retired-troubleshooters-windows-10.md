@@ -26,15 +26,14 @@ The troubleshooter will perform "sfc /scannow" which repairs the corrupted onnxr
 
 ### Description
 
-Some user machines that have upgraded from Windows 10 and are now running Windows 11 version 22000 or higher which have a fingerprint sensor with certain ELAN fingerprint drivers could encounter a failure or crash when using applications which rely on related DLLs.
+Some user machines that have upgraded from Windows 10 and are now running Windows 11, version 21H2 (OS build 22000) or higher which have a fingerprint sensor with certain ELAN fingerprint drivers could encounter a failure or crash when using applications which rely on related DLLs.
 
 This troubleshooter runs automatically on devices to meet the following criteria:
 
--Device family: 
-- Windows Desktop AND
-- Windows build version >= 22000 (Windows 11) AND
-- (onnxruntime.dll version == 0.0.0.0 OR onnxruntime.dll version == blank) AND
-- ELAN Fingerprint Driver Version 3.10.11001.10606 OR 3.10.11001.10502, OR 3.10.11001.10801
+- Runs Windows desktop operating system
+- Runs Windows 11, version 21H2 (OS build 22000) or higher
+- The *onnxruntime.dll* file has either no version number or a version number of 0.0.0.0 
+- The ELAN fingerprint driver version is 3.10.11001.10606, 3.10.11001.10502, or 3.10.11001.10801
 
 |Activation date|Retirement date|More information|
 |---|---|---|
