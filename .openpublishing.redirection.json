@@ -20,6 +20,11 @@
       "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/desktop-flows/double-click-drag-drop-are-not-working",
       "redirect_document_id": false
     },
+    {
+      "source_path": "support/power-platform/power-automate/unable-create-ui-flow.md",
+      "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/cloud-flows/unable-create-ui-flow",
+      "redirect_document_id": false
+    },
  {
       "source_path": "support/power-platform/power-automate/desktop-flows/find-which-machine-is-failing-within-a-cluster.md",
       "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/desktop-flows/find-which-machine-is-failing-within-a-cluster",

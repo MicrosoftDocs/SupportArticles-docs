@@ -499,6 +499,8 @@
   items:
   - name: Troubleshoot Windows activation problems
     href: troubleshoot-activation-problems.md
+  - name: Windows virtual machine activation FAQ
+    href: windows-virtual-machine-activation-faq.yml
   - name: Activation fails in forced tunneling scenario
     href: custom-routes-enable-kms-activation.md
   - name: Windows activation - Two new KMS endpoints
