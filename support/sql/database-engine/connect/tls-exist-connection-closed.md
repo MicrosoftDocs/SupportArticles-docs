@@ -108,10 +108,10 @@ A shortage of IOCP workers and SOS Worker resources allocated to handling authen
 
 If none of the previous scenarios match the error message that you encounter, see the following scenarios:
 
-- Intermittent connection errors occur when a new node is added to the Always On environment.
-- The SSL_PE_NO_CIPHER error occurs on endpoint 5022.
-- SQL Server faces connectivity issue when SSIS packages run by SQL agent fails to execute.
-- Intermittent connection errors with SQLCMD.
+- [Intermittent connection errors occur when a new node is added to the Always On environment](intermittent-connection-errors-when-a-new-node-is-added.md).
+- [The SSL_PE_NO_CIPHER error occurs on endpoint 5022](ssl-pe-no-cipher-error-endpoint-5022.md).
+- [SQL Server faces connectivity issue when SSIS packages run by SQL agent fails to execute.](sql-server-faces-connectivity-issue-ssispack-fail.md)
+- [Intermittent connection errors with SQLCMD](intermittent-connection-errors-sqlcmd.md).
 - There are issues in connection after implementing the Cipher suite policies.
 - Connection to the linked server failed.
 - Unable to start SQL agent.
