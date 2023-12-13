@@ -9,13 +9,13 @@
             href: data/data-ingestion/power-query-data-source-refresh-issues-dataflows.md
       - name: Data unification
         items:
-          - name: Match failed error
-            href: data/profile-unification/match-failed.md
-          - name: Merge failed error
-            href: data/profile-unification/merge-failed.md
-          - name: Can't update a field from matching rules
+          - name: Can't update or remove a field from Matching rules
             href: data/profile-unification/cant-remove-field-from-match.md
-          - name: Missing business unit
+          - name: Match failed error occurs on the Deduplication or Matching rules
+            href: data/profile-unification/match-failed.md
+          - name: Merge failed error occurs on the Unified data view
+            href: data/profile-unification/merge-failed.md
+          - name: Missing business unit values in unification
             href: data/profile-unification/missing-business-unit.md
       - name: Exports
         items:

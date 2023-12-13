@@ -9,7 +9,7 @@ metadata:
   ms.service: customer-insights
   author: m-hartmann
   ms.author: mhart
-  ms.date: 09/25/2023
+  ms.date: 12/13/2023
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -37,8 +37,6 @@ landingContent:
         links:
           - text: Troubleshoot Power Query data source refresh issues
             url: data/data-ingestion/power-query-data-source-refresh-issues-dataflows.md
-          - text: Fail to convert from Azure Data Lake data source to Delta Lake data source
-            url: data/data-ingestion/revert-delta-back-to-ADLS.md
 
   # Card
   - title: Data unification
@@ -49,9 +47,9 @@ landingContent:
             url: data/profile-unification/match-failed.md
           - text: Merge failed error
             url: data/profile-unification/merge-failed.md
-          - text: Can't update a field from matching rules
+          - text: Can't update or remove a field from matching rules
             url: data/profile-unification/cant-remove-field-from-match.md
-          - text: Missing business unit
+          - text: Missing business unit values
             url: data/profile-unification/missing-business-unit.md
 
   # Card
