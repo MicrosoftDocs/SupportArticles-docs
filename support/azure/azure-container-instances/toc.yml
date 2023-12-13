@@ -1,6 +1,9 @@
 - name: Welcome
   href: welcome-container-instances.yml
 
+- name: Can't delete a virtual network or subnet used by ACI
+  href: cannot-delete-vnet-subnet.md
+
 - name: Troubleshoot create operations
   items:
   - name: DeploymentFailed - InaccessibleImage error code
