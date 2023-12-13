@@ -106,6 +106,19 @@ In systems with high workloads on SQL Server 2017 and earlier, you might observe
 
 A shortage of IOCP workers and SOS Worker resources allocated to handling authentication and encryption operations is the main cause of the TCP three-way handshake timeouts and additional login timeouts. SQL Server 2019 includes several performance improvements in this area. One notable enhancement is the implementation of a dedicated login dispatcher pool. This optimizes the allocation of resources for login-related tasks, which reduces the occurrence of timeouts and improves overall system performance.
 
+If none of the previous scenarios match the error message that you encounter, see the following scenarios:
+
+- Intermittent connection errors occur when a new node is added to the Always On environment.
+- The SSL_PE_NO_CIPHER error occurs on endpoint 5022.
+- SQL Server faces connectivity issue when SSIS packages run by SQL agent fails to execute.
+- Intermittent connection errors with SQLCMD.
+- There are issues in connection after implementing the Cipher suite policies.
+- Connection to the linked server failed.
+- Unable to start SQL agent.
+- Client machine cannot connect to SQL Server by SSMS using SQL authentication.
+- A linked server couldn’t be created after moving on-premises server to Azure.
+- Errors are shown after upgrading SQL version.
+
 ## See also
 
 - [Troubleshoot connectivity issues in SQL Server](../connect/resolve-connectivity-errors-overview.md)
