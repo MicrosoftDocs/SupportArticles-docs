@@ -4,7 +4,7 @@ description: Introduces steps to resolve the error 0x800706ba, The RPC Server is
 author: Deland-Han
 ms.author: delhan
 ms.topic: troubleshooting
-ms.date: 12/12/2023
+ms.date: 12/13/2023
 ms.reviewer: kaushika
 ms.prod: windows-server
 ms.technology: windows-server-active-directory
@@ -182,10 +182,10 @@ When the Active Directory Certificate Services role is installed on a server, th
 
 1. Open the **Component Services** Microsoft Management Console (MMC) snap-in under **Windows Administrative Tools**.
 2. In the left pane, expand **Component Services** > **Computers**.  
-3. Right-click **My Computer** and select **Properties**, then select the **COM Security** tab.
-4. Under **Access Permissions**, select **Edit Limits...**  
+3. Right-click **My Computer**, select **Properties**, and then select the **COM Security** tab.
+4. Under **Access Permissions**, select **Edit Limits**.  
 5. Verify that the local **Certificate Service DCOM Access** group appears in the **Group or user names** list and is granted both **Local Access** and **Remote Access** permissions. If not, add it and grant the appropriate permissions. Select **OK** to close the **Access Permission** dialog.  
-6. Under **Launch and Activation Permissions**, select **Edit Limits...**  
+6. Under **Launch and Activation Permissions**, select **Edit Limits**.
 7. Verify that the local **Certificate Service DCOM Access** group appears in the **Group or user names** list and is granted both **Local Activation** and **Remote Activation** permissions. If not, add it and grant the appropriate permissions. Select **OK** to close the **Launch and Activation Permissions** dialog.  
 
 ## Reference
