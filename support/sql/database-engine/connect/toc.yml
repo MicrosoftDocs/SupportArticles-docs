@@ -12,7 +12,7 @@ items:
      href: corrupt-user-profile.md
    - name: Determine if I am connected to SQL Server using Kerberos authentication
      href: determine-the-authentication-type.md
-   - name: Domain trust error
+   - name: Domain trust
      href: domain-trust-error.md
    - name: Disjoint DNS Namespace
      href: disjoint-dns-namespace-error.md
@@ -22,15 +22,15 @@ items:
      href: local-security-subsystem-issues.md
    - name: Named Pipes connections fail
      href: named-pipes-connection-fail-no-windows-permission.md
-   - name: NETBIOS Name error
+   - name: NETBIOS Name
      href: netbios-name-error.md
-   - name: Only admins can login error
+   - name: Only admins can login
      href: only-admins-can-login.md
-   - name: SQL logins are not enabled error
+   - name: SQL logins are not enabled
      href: sql-logins-are-not-enabled.md
    - name: Wrong database name in connection string
      href: wrong-database-name-in-connection-string.md
-   - name: Wrong explicit SPN account error
+   - name: Wrong explicit SPN account
      href: wrong-explicit-spn-account-connection-string.md
 - name: Consistent SQL network connectivity issue
   href: consistent-sql-network-connectivity-issue.md
