@@ -3214,7 +3214,7 @@
   items:
   - name: End of support for Windows Server 2008 and Windows Server 2008 R2
     href: ./windows-server-eos-faq/end-of-support-windows-server-2008-2008r2.yml
-  - name: Error when installing ESU product key for Windows Server 2012 R2 or Windows Server 2012
+  - name: Error when installing ESU product key for Windows Server 2012 R2 or 2012
     href: ./windows-server-eos-faq/error-installing-esu-product-key-windows-server-2012-or-2012-r2.md
 - name: Windows Troubleshooters
   items:
