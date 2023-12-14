@@ -13,7 +13,7 @@ This article provides a resolution for an issue where a booking timestamp is cre
 
 ## Symptoms
 
-On the `Booking` entity, there's an internal-use-only field called **Offline Timestamp** (`msdyn_offlinetimestamp`). This field captures the current time when a booking status is updated in offline mode. When the system sychronizes the booking to the server, it uses the offline timestamp to create the booking timestamp. If this field has no value, the current time is used.
+On the `Booking` entity, there's an internal-use-only field called **Offline Timestamp** (`msdyn_offlinetimestamp`). This field captures the current time when a booking status is updated in offline mode. When the system synchronizes the booking to the server, it uses the offline timestamp to create the booking timestamp. If this field has no value, the current time is used.
 
 ## Resolution
 

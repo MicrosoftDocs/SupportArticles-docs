@@ -29,7 +29,7 @@
 
     - name: Mobile app
       items: 
-        - name: Booking timestamp created with an incorrect time
+        - name: Booking timestamp is created with an incorrect time
           href: mobile-app/booking-timestamp-incorrect-time.md
         - name: Camera pictures are blurry or not focused
           href: mobile-app/camera-picture-not-focused.md
@@ -41,7 +41,7 @@
           href: mobile-app/incorrect-missing-data-offline-mode.md
         - name: Troubleshoot issues with publishing a mobile offline profile
           href: mobile-app/publish-mobile-offline-profile.md
-        - name: Validations have been restarted in the background
+        - name: '"Validations have been restarted in the background" error'
           href: mobile-app/validation-restarted-background.md
 
     - name: Resource Scheduling Optimization add-in
