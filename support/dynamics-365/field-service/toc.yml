@@ -29,7 +29,7 @@
 
     - name: Mobile app
       items: 
-        - name: Booking timestamp created with incorrect time
+        - name: Booking timestamp created with an incorrect time
           href: mobile-app/booking-timestamp-incorrect-time.md
         - name: Camera pictures are blurry or not focused
           href: mobile-app/camera-picture-not-focused.md
