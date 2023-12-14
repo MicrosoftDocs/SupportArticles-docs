@@ -42,7 +42,7 @@ This troubleshooter runs automatically on devices to meet the following criteria
 
 ## Access work or school troubleshooter for restoring access to M365 desktop applications
 
-Text displayed in Settings:  
+Th text displayed in **Settings**:  
 The troubleshooter checks if the `Microsoft.AAD.BrokerPlugin` package is missing. If so, it installs the package.
 
 ### Description
@@ -61,7 +61,7 @@ This troubleshooter runs automatically on devices to meet the following criteria
 
 ## Windows Update troubleshooter for repairing .NET framework components
 
-Text displayed in Settings:  
+The text displayed in **Settings**:  
 Automatically repair system files and settings to fix a problem on your device
 
 ### Description
@@ -79,7 +79,7 @@ This troubleshooter runs automatically on devices that meet the following criter
 
 ## Windows Update troubleshooter for file or metadata corruption
 
-Text displayed in Settings:  
+The text displayed in **Settings**:  
 Automatically targets the device for an In-Place Upgrade due to recurring installation issues
 
 ### Description
@@ -98,7 +98,7 @@ This troubleshooter runs automatically on devices that meet the following criter
 
 ## Windows Update troubleshooter for repairing system files
 
-Text displayed in Settings:  
+The text displayed in **Settings**:  
 Automatically repair system files and settings to improve device security
 
 ### Description
@@ -113,7 +113,7 @@ This troubleshooter runs automatically on devices running Windows 10, version 19
 
 ## Files On-Demand troubleshooter
 
-Text displayed in Settings:  
+The text displayed in **Settings**:  
 You may have lost access to your Files On-Demand. This troubleshooter restores access or prevents the loss of access from happening in the near future. Important: Please reboot your device once the troubleshooter is finished.
 
 ### Description
@@ -128,7 +128,7 @@ Devices that successfully ran the "Hardware and Devices" troubleshooter will be 
 
 ## Hardware and Devices troubleshooter for OneDrive
 
-Text displayed in Settings:  
+The text displayed in **Settings**:  
 Automatically repair system files and settings to fix a problem on your device.
 
 ### Description
@@ -146,7 +146,7 @@ This troubleshooter runs automatically on devices that meet the following criter
 
 ## Storage Spaces cleanup troubleshooter
 
-Text displayed in Settings:  
+The text displayed in **Settings**:  
 Automatically restore your previous settings and environment for Storage Spaces.
 
 ### Description
@@ -163,7 +163,7 @@ Successfully ran the "Hardware and Devices" or "Storage Spaces" troubleshooter
 
 ## Storage space troubleshooter
 
-Text displayed in Settings:  
+The text displayed in **Settings**:  
 Data corruption was detected on your parity storage space. This troubleshooter takes actions to prevent further corruption. It also restores write access if the space was previously marked read-only. For more information and recommended actions, please see the link below.
 
 ### Description
@@ -180,7 +180,7 @@ Successfully ran the "Hardware and Devices" or "Storage Spaces" troubleshooter.
 
 ## Hardware and Devices troubleshooter for Parity Storage Spaces
 
-Text displayed in Settings:  
+The text displayed in **Settings**:  
 Automatically change system settings to fix a problem on your device.
 
 ### Description
@@ -200,7 +200,7 @@ The first time, the troubleshooter runs automatically. The second time, it notif
 
 ## Windows Update troubleshooter for Disk Cleanup
 
-Text displayed in Settings:  
+The text displayed in **Settings**:  
 Automatically change system settings to fix a problem on your device.
 
 ### Description
