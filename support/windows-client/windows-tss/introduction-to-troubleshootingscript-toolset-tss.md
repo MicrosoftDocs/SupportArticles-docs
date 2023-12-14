@@ -1,7 +1,7 @@
 ---
 title: Introduction to TroubleShootingScript toolset (TSS)
 description: Introduces the TroubleShootingScript (TSS) toolset and provides answers to frequently asked questions about the toolset.
-ms.date: 11/29/2023
+ms.date: 12/14/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
