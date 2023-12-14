@@ -2,6 +2,15 @@
 
 
 
+## Week of December 04, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 12/4/2023 | [Clear Teams cache](/microsoftteams/troubleshoot/teams-administration/clear-teams-cache) | modified |
+| 12/6/2023 | [Clear Teams cache](/microsoftteams/troubleshoot/teams-administration/clear-teams-cache) | modified |
+
+
 ## Week of November 27, 2023
 
 
