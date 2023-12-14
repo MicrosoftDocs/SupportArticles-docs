@@ -47,7 +47,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id=2714260>[2714260](#2714260) </a> | Fixes unexpected characters that you encounter in the `name` column of the `sys.availability_groups_cluster` dynamic management view (DMV) when you use the read-scale availability group. | SQL Server Engine| High Availability and Disaster Recovery | All|
 | <a id=2763676>[2763676](#2763676) </a> | Fixes an issue in which running `sys.dm_db_xtp_transactions` might fail with the following error if a large number of transactions are in the In-Memory OLTP database engine: </br></br>Msg 701, Level 17, State 157, Line \<LineNumber> </br>There is insufficient system memory in resource pool 'default' to run this query.| SQL Server Engine| In-Memory OLTP| All|
 | <a id=2672219>[2672219](#2672219) </a> | Fixes an issue in which overriding the `MakeGenerationInterval` parameter that uses a custom value doesn't work properly when you run *replmerg.exe*.| SQL Server Engine| Replication | Windows|
-| <a id=2814458>[2814458](#2814458) </a> | Fixes an issue in which the distribution agent fails when you set up transactional replication with memory-optimized tables at the Subscriber that has the "replication support only" option. Additionally, you receive the following error message: </br></br>MSupd_articlename store procedure fails with error 12302 when the subscription is created with @sync_type = "replication support only".| SQL Server Engine| Replication | Windows|
+| <a id=2814458>[2814458](#2814458) </a> | Fixes an issue in which the distribution agent fails when you set up transactional replication with memory-optimized tables at the Subscriber that has the "replication support only" option. Additionally, you receive the following error message: </br></br>MSupd_articlename stored procedure fails with error 12302 when the subscription is created with @sync_type = "replication support only".| SQL Server Engine| Replication | Windows|
 | <a id=2783439>[2783439](#2783439) </a> | Consider the following scenario: </br></br>- You create a table that has a full-text index. </br>- The full-text index fragment is partitioned because it's too large. </br>- You clone the database and then run `DBCC CHECKDB` to check the clone database. </br></br>In this scenario, the command fails and the following error 2601 occurs: </br></br>Msg 2601, Level 14, State 1, Line \<LineNumber> </br>Cannot insert duplicate key row in object '\<ObjectName>' with unique index '\<IndexName>'. The duplicate key value is \<KeyValue>.| SQL Server Engine| Search| All|
 | <a id=2736124>[2736124](#2736124) </a> | Adds additional telemetry to the security caches to improve the debuggability. | SQL Server Engine| Security Infrastructure | All|
 | <a id=2789529>[2789529](#2789529) </a> | Fixes the following error 9833 that you encounter when running the `sp_helplogins` stored procedure against a database with UTF-8 character encoding: </br></br>Msg 9833, Level 16, State 2, Procedure sp_helplogins, Line \<LineNumber> [Batch State Line 0] </br>Invalid data for UTF8-encoded characters | SQL Server Engine| Security Infrastructure | All|
@@ -339,11 +339,11 @@ SQL Server 2019 sql_dreplay_client
 
 |       File name       |   File version  | File size |     Date    |  Time | Platform |
 |:---------------------:|:---------------:|:---------:|:-----------:|:-----:|:--------:|
-| Dreplayclient.exe     | 2019.150.4345.5 | 137256    | 004-Dec-2023 | 15:17 | x86      |
-| Dreplaycommon.dll     | 2019.150.4345.5 | 667688    | 004-Dec-2023 | 15:17 | x86      |
-| Dreplayutil.dll       | 2019.150.4345.5 | 305192    | 004-Dec-2023 | 15:17 | x86      |
-| Instapi150.dll        | 2019.150.4345.5 | 88104     | 004-Dec-2023 | 15:17 | x64      |
-| Sqlresourceloader.dll | 2019.150.4345.5 | 38952     | 004-Dec-2023 | 15:17 | x86      |
+| Dreplayclient.exe     | 2019.150.4345.5 | 137256    | 04-Dec-2023 | 15:17 | x86      |
+| Dreplaycommon.dll     | 2019.150.4345.5 | 667688    | 04-Dec-2023 | 15:17 | x86      |
+| Dreplayutil.dll       | 2019.150.4345.5 | 305192    | 04-Dec-2023 | 15:17 | x86      |
+| Instapi150.dll        | 2019.150.4345.5 | 88104     | 04-Dec-2023 | 15:17 | x64      |
+| Sqlresourceloader.dll | 2019.150.4345.5 | 38952     | 04-Dec-2023 | 15:17 | x86      |
 
 SQL Server 2019 sql_dreplay_controller
 
