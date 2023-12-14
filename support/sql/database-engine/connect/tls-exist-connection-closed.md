@@ -112,11 +112,11 @@ If none of the previous scenarios match the error message that you encounter, se
 - [The SSL_PE_NO_CIPHER error occurs on endpoint 5022](ssl-pe-no-cipher-error-endpoint-5022.md).
 - [SQL Server faces connectivity issue when SSIS packages run by SQL agent fails to execute.](sql-server-faces-connectivity-issue-ssispack-fail.md)
 - [Intermittent connection errors with SQLCMD](intermittent-connection-errors-sqlcmd.md).
-- There are issues in connection after implementing the Cipher suite policies.
-- Connection to the linked server failed.
-- Unable to start SQL agent.
-- Client machine cannot connect to SQL Server by SSMS using SQL authentication.
-- A linked server couldn’t be created after moving on-premises server to Azure.
+- [There are issues in connection after implementing the Cipher suite policies](issues-connection-after-implementing-cipher-suite-policies.md).
+- [Connection to the linked server failed](connection-to-linked-server-failed.md).
+- [Unable to start SQL agent](unable-to-start-sql-agent.md).
+- [Client machine cannot connect to SQL Server by SSMS using SQL authentication](client-machine-cannot-connect-to-sqlserver.md).
+- [A linked server couldn't be created after moving on-premises server to Azure](linked-server-cannot-be-created.md).
 - Errors are shown after upgrading SQL version.
 
 ## See also
