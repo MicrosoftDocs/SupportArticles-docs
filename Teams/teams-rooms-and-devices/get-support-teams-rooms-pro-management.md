@@ -1,6 +1,6 @@
 ---
 title: Get support for Microsoft Teams Rooms Pro Management
-description: Describes how to create a support request and collect required information for Microsoft Support to resolve issues in the Teams Rooms Pro Management portal.
+description: Discusses how to create a support request and collect required information for Microsoft Support to resolve issues in the Teams Rooms Pro Management portal.
 ms.reviewer: aageorge
 ms.topic: troubleshooting
 ms.date: 12/11/2023
@@ -20,25 +20,25 @@ ms.custom:
 ---
 # Get support for Microsoft Teams Rooms Pro Management
 
-When you experience issues in the [Microsoft Teams Rooms Pro Management portal](https://portal.rooms.microsoft.com/), you can contact Microsoft Support for further assistance. This article describes how to create a support request and collect the required information and logs.
+When you experience issues in the [Microsoft Teams Rooms Pro Management portal](https://portal.rooms.microsoft.com/), you can contact Microsoft Support for assistance. This article describes how to create a support request and collect the required information and logs.
 
 ## Collect required information
 
-To reduce the time needed to gather information when you open a support request for Microsoft or a Microsoft OEM partner, we recommend that you collect the following information.
+To reduce the time that's needed to gather information when you open a support request for Microsoft or a Microsoft OEM partner, we recommend that you collect the following information.
 
 > [!NOTE]
 > This might not be a complete list of the information that will be requested. However, it includes the most common items.
 
-- Specify whether it's a Teams Rooms device (Teams Rooms on Windows or Teams Rooms on Android), or a Teams Rooms Pro Management portal issue.
+- Specify whether the issue affects a Teams Rooms device (Teams Rooms on Windows or Teams Rooms on Android), or the Teams Rooms Pro Management portal.
 - Information required for all issues:
   - Steps to reproduce the issue. If it's a Teams Rooms issue, include a video, if possible.
-  - The time, date, and time zone of the last time the issue occurred.
-  - If the issue recurs, the reoccurrence rate.
+  - The time, date, and time zone of the most recent occurrence of the issue.
+  - If the issue recurs, the recurrence rate.
   - Error messages that are generated when the issue occurs. If possible, include the message text or screenshots of any message windows that are related to the issue.
   - If available, the Teams Rooms Pro Management support case number.
 - Additional information for Teams Rooms issues:
   - Steps already tried from the referenced troubleshooting guide.
-  - Logs that have been collected. You can collect logs in the Teams Rooms Pro Management portal, or [locally by using PowerShell](/MicrosoftTeams/rooms/rooms-operations#collecting-logs-on-microsoft-teams-rooms).
+  - Logs that have been collected. You can collect logs in the Teams Rooms Pro Management portal or [locally by using PowerShell](/MicrosoftTeams/rooms/rooms-operations#collecting-logs-on-microsoft-teams-rooms).
   - Active signals in Teams Rooms Pro Management portal.
   - Whether the issue affects all devices, some devices, or only a single device.
   - The following system information that can be found on the **Settings** tab in the Teams Rooms Pro Management portal:
@@ -64,7 +64,7 @@ To reduce the time needed to gather information when you open a support request 
 1. Go to the room pane of the room that you want to collect logs for, and select the **Actions** tab.
 
    :::image type="content" source="./media/get-support-teams-rooms-pro-management/select-actions-tab.png" alt-text="Screenshot of the room pane that shows the Actions tab.":::
-1. Select the **Log collection** action, and then select **Run**.
+1. Select the **Log Collection** action, and select **Run**.
 
    :::image type="content" source="./media/get-support-teams-rooms-pro-management/select-log-collection-action.png" alt-text="Screenshot of the room pane that shows the Log collection action.":::
 1. Select all relevant logs you want to collect, enter the reason for collecting the logs, and then select **Run**.
@@ -74,14 +74,14 @@ To reduce the time needed to gather information when you open a support request 
    **Note:** This operation may take several minutes. To monitor progress, select the **Activity** tab.
 1. After the operation is completed, you can find the log file on the **Activity** tab.
 
-   :::image type="content" source="./media/get-support-teams-rooms-pro-management/log-collection-completed.png" alt-text="Screenshot of the window that shows the log collection action is completed.":::
+   :::image type="content" source="./media/get-support-teams-rooms-pro-management/log-collection-completed.png" alt-text="Screenshot of the window that shows that the log collection action is completed.":::
 1. Select the download icon to download the *LogCollection\*.zip* file.
 
 #### Other Teams Rooms devices
 
 1. Go to the room pane of the room that you want to collect logs for, and select **Collect logs**.
 
-    :::image type="content" source="./media/get-support-teams-rooms-pro-management/room-pane.png" alt-text="Screenshot of the room pane that shows the collect logs button.":::
+    :::image type="content" source="./media/get-support-teams-rooms-pro-management/room-pane.png" alt-text="Screenshot of the room pane that shows the Collect logs button.":::
 
 1. In the **Collect logs** window, select **Run**.
 
@@ -106,7 +106,7 @@ To reduce the time needed to gather information when you open a support request 
    powershell -ExecutionPolicy unrestricted c:\rigel\x64\scripts\provisioning\ScriptLaunch.ps1 CollectSrsV2Logs.ps1
    ```
 
-1. The logs are saved as a .zip file under _c:\rigel_.
+   **Note:** The logs are saved as a .zip file under _c:\rigel_.
 
 ## Create a support request
 
