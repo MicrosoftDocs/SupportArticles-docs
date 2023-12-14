@@ -22,7 +22,7 @@ _Applies to:_ &nbsp; Windows 10, Windows 11
 ## ELAN fingerprint driver troubleshooter for devices upgrading from Windows 10 to Windows 11
 
 The text displayed in **Settings**:  
-The troubleshooter will perform "sfc /scannow" which repairs the corrupted onnxruntime.dll file to match the correct version depending on the build of Windows the device is currently on.
+The troubleshooter performs the `sfc /scannow` command. This command repairs the corrupted *onnxruntime.dll* file to match the build version of Windows the device runs.
 
 ### Description
 
