@@ -4,7 +4,7 @@ description: Provides a resolution for an issue where you can't access a new Dyn
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
-ms.date: 12/13/2023
+ms.date: 12/14/2023
 ms.custom: sap:environment-licensing
 ---
 # Can't access a new Customer Insights - Data environment
