@@ -1,7 +1,7 @@
 ---
 title: Active and retired troubleshooters for Windows 10 and Windows 11
 description: Introduce active and retired troubleshooters for Windows 10 and Windows 11.
-ms.date: 12/14/2023
+ms.date: 12/15/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -22,7 +22,7 @@ _Applies to:_ &nbsp; Windows 10, Windows 11
 ## ELAN fingerprint driver troubleshooter for devices upgrading from Windows 10 to Windows 11
 
 The text displayed in **Settings**:  
-The troubleshooter performs the `sfc /scannow` command. This command repairs the corrupted *onnxruntime.dll* file to match the build version of Windows the device runs.
+The troubleshooter performs the `sfc /scannow` command. This command repairs the corrupted *onnxruntime.dll* file to match the build version of Windows the device is currently running.
 
 ### Description
 
