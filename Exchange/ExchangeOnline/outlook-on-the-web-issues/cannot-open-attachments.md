@@ -30,7 +30,9 @@ When Microsoft 365 users try to open or view attachments in email messages in Ou
 
 This issue occurs if the attachment is blocked by Outlook Web App. By default, Outlook Web App blocks attachments that have the following file name extensions:
 
-vsmacros, msh2xml, msh1xml, ps2xml, ps1xml, mshxml, gadget, mhtml, psc2, psc1, msh2,msh1, aspx, xml, wsh, wsf, wsc, vsw, vst, vss, vbs, vbe, url, tmp, shs, shb, sct,scr, scf, reg, pst, ps2, ps1, prg, prf, plg, pif, pcd, ops, mst, msp, msi, msh,msc, mht, mdz, mdw, mdt, mde, mdb, mda, maw, mav, mau, mat, mas, mar, maq, mam,mag, maf, mad, lnk, ksh, jse, its, isp, ins, inf, htc, hta, hlp, fxp, exe, der,csh, crt, cpl, com, cmd, chm, cer, bat, bas, asx, asp, app, adp, ade, ws, vb, js
+.settingcontent-ms .printerexport .appcontent-ms .application .appref-ms .vsmacros .website .msh2xml .msh1xml .diagcab .webpnp .ps2xml .ps1xml .mshxml .gadget .theme .psdm1 .mhtml .cdxml .xbap .vhdx.pyzw .pssc .psd1 .psc2 .psc1 .msh2 .msh1
+.jnlp .aspx .appx.xnk .xll .wsh .wsf .wsc .wsb .vsw .vhd .vbs .vbp .vbe .url.udl .tmp .shs .shb .sct .scr .scf .reg .pyz .pyw .pyo .pyc .pst .ps2 .ps1 .prg .prf .plg .pif .pcd .osd .ops .msu .mst .msp .msi .msh .msc .mht .mdz .mdw .mdt .mde .mdb .mda .mcf .maw
+.mav .mau .mat .mas .mar .maq .mam .mag .maf .mad .lnk .ksh .jse .jar .its .isp .iso .ins .inf .img .htc .hta .hpj .hlp .grp .fxp .exe .der .csh .crt .cpl .com .cnt .cmd .chm .cer .cab .bgi .bat .bas .asx .asp .app .apk .adp .ade .ws .vb .py.pl .js
 
 ## Solution
 
