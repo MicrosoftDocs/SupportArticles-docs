@@ -9,9 +9,11 @@ ms.reviewer: hclvteam, v-weizhu
 
 This article provides a solution for a "Client secret key is expired" error that occurs when you deploy or terminate virtual machines (VMs).
 
+[!INCLUDE [Feedback](../../includes/feedback.md)]
+
 ## Symptoms
 
-When deploying or terminating VMs, you may encounter an error like the following:
+When you deploy or terminating VMs, you may encounter an error such as the following:
 
 > Azure.Cell.CreateLoadBalancerCreating load balancer (AADSTS7000222: **The provided client secret keys are expired. Visit the Azure Portal to create new keys for your app, or consider using certificate credentials for added security**: `https://docs.microsoft.com/azure/active-directory/develop/active-directory-certificate-credentials` Trace ID: \<Trace ID> Correlation ID: \<Correlation ID> Timestamp: \<Date Time>
 
@@ -36,7 +38,7 @@ To resolve this issue, reset the client secret keys in the Azure portal.
 
    After a client secret key is added, the new secret key value will be shown under the **Key** column.
 
-4. Go to the CycleCloud portal and select **Configure**. Select the account in **Cloud Provider Accounts**, and then select **Credentials** > **Edit**. In the **Edit Credential** dialog, type the password in **Application Secret** and then select **Validate**. If the validation succeeds, select **Save**.
+4. Go to the CycleCloud portal and select **Configure**. Select the account in **Cloud Provider Accounts**, and then select **Credentials** > **Edit**. In the **Edit Credential** dialog, enter the password in **Application Secret**, and then select **Validate**. If the validation succeeds, select **Save**.
 
 ## More information
 

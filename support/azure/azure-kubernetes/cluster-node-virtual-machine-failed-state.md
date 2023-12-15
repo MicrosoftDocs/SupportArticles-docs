@@ -1,8 +1,8 @@
 ---
 title: Azure Kubernetes Service cluster/node is in a failed state
 description: Troubleshoot an issue where an Azure Kubernetes Service (AKS) cluster/node is in a failed state.
-ms.date: 07/28/2023
-ms.reviewer: chiragpa, nickoman, v-weizhu
+ms.date: 11/28/2023
+ms.reviewer: chiragpa, nickoman, v-weizhu, v-six, aritraghosh
 ms.service: azure-kubernetes-service
 ms.subservice: common-issues
 keywords:
@@ -14,12 +14,33 @@ This article discusses how to troubleshoot a Microsoft Azure Kubernetes Service 
 
 ## Cluster is in a failed state
 
-You may encounter an issue where the provisioning status of your Microsoft Azure Kubernetes Service (AKS) cluster has changed from **Ready** to **Failed**. In this case, if your cluster applications continue to run, AKS may resolve the provisioning status automatically even if you didn't do an operation. Your running applications shouldn't be affected by the provisioning status change.
+To resolve this issue, get the operation that caused the failure and figure out the error. The following are two common operations that can result in a failed cluster.
 
-Alternatively, you can also manually bring back the cluster from a **Failed** to a **Succeeded** state by running the following [az resource update](/cli/azure/resource#az-resource-update) command:
+### Cluster creation failed
+
+If a recently created cluster is in a failed state, examine the [activity logs](troubleshoot-aks-cluster-creation-issues.md#view-error-details-in-the-azure-portal) to identify the root cause of the failure.
+
+### Cluster upgrade failed
+
+The activity logs can be used to identify the cause of the upgrade failure. For more information about the specific errors, see the [basic troubleshooting methods](troubleshoot-aks-cluster-creation-issues.md).
+
+The following list outlines some common errors:
+
+- [OutboundConnFailVMExtensionError](error-code-outboundconnfailvmextensionerror.md)
+- [Drain errors](error-code-poddrainfailure.md)
+- [SubscriptionNotRegistered](/azure/azure-resource-manager/troubleshooting/error-register-resource-provider)
+- [RequestDisallowedByPolicy](error-code-requestdisallowedbypolicy.md)
+- [QuotaExceeded](error-code-quotaexceeded.md)
+- [PublicIPCountLimitReached](error-code-publicipcountlimitreached.md)
+- [OverconstrainedAllocationRequest](error-code-zonalallocationfailed-allocationfailed.md)
+- ReadOnlyDisabledSubscription
+
+  To fix this error, review and adjust the subscription permissions, as the subscription is currently disabled and set to read-only.
+
+Alternatively, try to manually restore the cluster state from **Failed** to **Succeeded** by running the following [az resource update](/cli/azure/resource#az-resource-update) command:
 
 ```azurecli
-az resource update --ids <aks-resource-id>
+az resource update --name <cluster-name> --namespace Microsoft.ContainerService --resource-group <resource-group-name> --resource-type ManagedClusters --subscription <subscription-name>
 ```
 
 ## Node is in a failed state

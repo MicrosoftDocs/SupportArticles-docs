@@ -10,9 +10,11 @@ ms.subservice: app-mgmt
 
 This article provides a resolution to the AADSTS50105 error that occurs during federated authentication with Microsoft Entra ID.
 
+[!INCLUDE [Feedback](../../includes/feedback.md)]
+
 ## Symptoms
 
-You receive the following error when trying to sign into an application that has been set up to use Microsoft Entra ID for identity management using SAML-based Single Sign-On (SSO):
+You receive the following error message when you try to sign in to an application that has been set up to use Microsoft Entra ID for identity management using SAML-based Single Sign-On (SSO):
 
 >Error AADSTS50105 - The signed in user is not assigned to a role for the application.
 
@@ -25,7 +27,7 @@ The user hasn't been granted access to the application in Microsoft Entra ID. Th
 
 ## Resolution
 
- To assign one or more users to an application directly, see [Quickstart: Assign users to an app](/azure/active-directory/manage-apps/add-application-portal-assign-users).
+To assign one or more users to an application directly, see [Quickstart: Assign users to an app](/azure/active-directory/manage-apps/add-application-portal-assign-users).
 
 ## More Information
 
