@@ -273,7 +273,6 @@ sections:
          Where can I learn more about the specific security updates that have been issued for Windows 7 ESU?
         answer: |
             A full list of updates to Windows 7 SP1, including ESU updates, is available at [Windows 7 SP1 and Windows Server 2008 R2 SP1 update history](https://support.microsoft.com/help/4009469/windows-7-sp1-windows-server-2008-r2-sp1-update-history).
-
           
   - name: ESU deployment
     questions: 
