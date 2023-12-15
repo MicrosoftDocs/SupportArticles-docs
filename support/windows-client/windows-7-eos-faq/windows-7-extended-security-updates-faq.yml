@@ -193,7 +193,7 @@ sections:
       - question: |
          Is technical support included?
         answer: |
-         No. Customers that purchase directly from Microsoft (for example, VL customers or CSP direct Partners) can use an active support contract, such as Software Assurance or Premier or Unified Support, to request assistance with Windows 7. Partners can also use their Partner Support Plans to request assistance for Windows 7.  
+         No. Customers that purchase directly from Microsoft (for example, VL customers or CSP direct Partners) can use an active support contract, such as Software Assurance or Premier or Unified Support, to request assistance for Windows 7. Partners can also use their Partner Support Plans to request assistance for Windows 7.  
           
       - question: |
          What are the limits for ESU technical support issues?
