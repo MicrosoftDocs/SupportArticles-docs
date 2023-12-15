@@ -10,7 +10,7 @@ ms.custom: sap:Connection issues
 
 # Expired tickets error
 
-This article helps you resolve the Expired tickets error.
+This article helps you resolve the issue related to the  Expired tickets error.
 
 ## Symptoms
 
@@ -23,5 +23,5 @@ To resolve this error, follow these steps:
 1. Use the `KLIST purge` command to clear user tokens, or log off and back on, or restart the machine.
 
 1. Use the `KLIST` command with the SSPIClient tool to view and manage Kerberos tickets and service principal names (SPNs) as shown in the following command:
-
-    `KLIST GET MSSQLSvc\SQLProd01.contoso.com:1433`
+  
+   `KLIST GET MSSQLSvc\SQLProd01.contoso.com:1433`

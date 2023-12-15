@@ -59,3 +59,7 @@ To resolve this issue, follow these steps:
 1. If the connection string is correct, add the login to the database.
 
 1. If you're using a Windows login, add it to a local group or domain group that's allowed to connect to the database server.
+
+## See also
+
+[Troubleshoot consistent authentication issues](consistent-authentication-connectivity-issues.md)

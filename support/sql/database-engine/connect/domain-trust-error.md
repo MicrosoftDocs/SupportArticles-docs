@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting the domain trust error 
 description: This article provides symptoms and resolution for the domain trust error.
-ms.date: 11/27/2023
+ms.date: 12/15/2023
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
@@ -14,7 +14,7 @@ This article helps you resolve the "Domain trust" error. This error might occur 
 
 ## Symptoms
 
-The trust level between domains might cause failures in account authentication or the visibility of SPNs.
+The trust level between domains might cause failures in account authentication or the visibility of Service Provider Name (SPN)s.
 
 ## Resolution
 

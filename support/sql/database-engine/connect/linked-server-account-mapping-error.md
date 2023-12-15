@@ -16,18 +16,18 @@ This article helps you to resolve the linked server account mapping error.
 
 When you connect to the mid-tier server from the Management Studio, you might see the following error message:
 
-> "Msg 233, Level 20, State 0, Line 0
-> A transport-level error has occurred when sending the request to the server. (provider: Shared Memory Provider, error: 0 - No process is on the other end of the pipe.)"
+> Msg 233, Level 20, State 0, Line 0
+> A transport-level error has occurred when sending the request to the server. (provider: Shared Memory Provider, error: 0 - No process is on the other end of the pipe.)
 
 When you connect using application developed using .NET, you might see the following error messages:
 
-> "The OLE DB provider "MSDASQL" for linked server "SQLPROD02" reported an error. Authentication failed."
+> The OLE DB provider "MSDASQL" for linked server "SQLPROD02" reported an error. Authentication failed.
 
-> "Cannot initialize the data source object of OLE DB provider "MSDASQL" for linked server "SQLPROD02"."
+> Cannot initialize the data source object of OLE DB provider "MSDASQL" for linked server "SQLPROD02".
 
 If you also see the following error message, it indicates you're using Named Pipes for the linked server connection and a SQL login, and the mid-tier SQL Server service account or machine account doesn't have login rights to Windows on the backend server:
 
-> "OLE DB provider "MSDASQL" for linked server "SQLPROD02" returned message "[Microsoft][SQL Server Native Client 11.0][SQL Server]Login failed for user 'CONTOSO\SQLPROD01$'."
+> "OLE DB provider "MSDASQL" for linked server "SQLPROD02" returned message "[Microsoft][SQL Server Native Client 11.0][SQL Server]Login failed for user 'CONTOSO\SQLPROD01$'.
 
 ## Resolution
 
@@ -37,3 +37,7 @@ You can correct this error by forcing TCP/IP or granting the appropriate permiss
 
 > [!NOTE]
 > Using a SQL Server ODBC driver in a linked server isn't a supported scenario. Other ODBC drivers might have limited support from Microsoft and mainly from the vendor.
+
+## See also
+
+[Troubleshoot consistent authentication issues](consistent-authentication-connectivity-issues.md)

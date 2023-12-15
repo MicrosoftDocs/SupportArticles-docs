@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting the disjoint DNS namespace error
 description: This article provides symptoms and resolution for the disjoint DNS namespace error.
-ms.date: 12/12/2023
+ms.date: 12/15/2023
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp

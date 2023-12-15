@@ -17,12 +17,11 @@ _Applies to:_ &nbsp; SQL Server
 
 A consistent authentication issue in SQL Server typically refers to problems related to authentication and authorization of users or applications trying to access the SQL Server database. These issues can lead to authentication failures, access denied errors, or other security-related problems.
 
-> [!NOTE]
-> Before you start troubleshooting, check the [prerequisites](../connect/resolve-connectivity-errors-checklist.md) and go through the checklist.
-
 Before you start to troubleshoot errors, it's important to understand what each error means and also what is the type of error. Some errors might appear in more than one category. You can use the troubleshooting information mentioned in the [Errors](#errors) section to resolve the error. If you still encounter issues, check the possible causes and solutions or workarounds in the other sections such as [Issues specific to various aspects of SQL Server](#issues-specific-to-various-aspects-of-sql-server), [Issues related to Connection String](#issues-related-to-connection-string), [Issues related to Windows permissions or Policy settings](#issues-related-to-active-directory-and-domain-controller), [Issues related to Active Directory and Domain Controller](#issues-related-to-kerberos-authentication), and [Issues related to other aspects](#issues-related-to-other-aspects).
 
-## Other prerequisites
+## Prerequisites
+
+Before you start troubleshooting, check the [prerequisites](../connect/resolve-connectivity-errors-checklist.md) and go through the checklist.
 
 - Make sure to install the WIRESHARK and Problem Steps Recorder (PSR.EXE) utilities. For more information, see *Methods of collecting data for troubleshooting various types of errors*.
 
@@ -34,22 +33,20 @@ This section describes the types of errors and its related information.
 
 ### Directory services specific errors
 
-Refers to the Active Directory errors. If the SQL Server error log file contains both or either of the following messages, then this error is related to Active Directory (AD). This error might occur if the domain controller (DC) can't be contacted by Windows on the SQL Server computer or the local security service (LSASS) is having an issue.
+Refers to the Active Directory (AD) errors. If the SQL Server error log file contains both or either of the following messages, then this error is related to Active Directory (AD). This error might occur if the domain controller (DC) can't be contacted by Windows on the SQL Server computer or the local security service (LSASS) is having an issue.
 
   ```output
    Error -2146893039 (0x80090311): No authority could be contacted for authentication.
    Error -2146893052 (0x80090304): The Local Security Authority cannot be contacted.
   ```
 
-### Login failed error codes
-
- If you're troubleshooting a "Login Failed" error message, the SQL Server error log file can provide more information in the SQL State value with error 18456 (Login Failed). For more information, see [Login failed error codes](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#additional-error-information).
-
 ### Login failed specific errors
+
+When you are troubleshooting "Login Failed" error message, the SQL Server error log file can provide more information in the SQL State value with error 18456 (Login Failed). For more information, see [Login failed error codes](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#additional-error-information).
 
 This section lists the possible error messages and their possible causes.
 
-|Error message/Cause  |More information  |
+|Error message  |More information  |
 |---------|---------|
 |"Login failed for user '\<username\>'. Reason: Password did not match that for the login provided."|This error might occur if a bad password is used. For more information, see [Login failed for user '\<username\>' or login failed for user '\<domain>\<username>'](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).|
 |"SQL Server does not exist or access denied."  | [Named Pipes connections](named-pipes-connection-fail-no-windows-permission.md) fail because the user doesn't have permission to log into Windows.     |
@@ -60,9 +57,8 @@ This section lists the possible error messages and their possible causes.
 |"Login Failed for user: 'NT AUTHORITY\ANONYMOUS LOGON'"|This error might occur if the [SPN is missing, SPN is duplicated, or the SPN is on the wrong account](cannot-generate-sspi-context-error.md).|
 |"Login failed for user 'username'." </br> "Login failed for user '\<database\username\>"</br>    | Check if there's a [bad server name in connection string](bad-server-name-connection-string-error.md). Also, check if the user doesn't belong to a local group used to grant access to the server. For more causes, see [NT AUTHORITY\ANONYMOUS LOGON](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).    |
 |"Cannot open database "\<database name\>" requested by the login. The login failed."|Check if the database name in the connection string is correct.|
-|SSPI Context errors|The explicit SPN account might be [wrong](wrong-explicit-spn-account-connection-string.md), missing, or misplaced. |
+|"Cannot generate SSPI context"|The explicit SPN account might be [wrong](wrong-explicit-spn-account-connection-string.md), [missing](explicit-spn-is-missing.md), or misplaced. |
 |"The user account is not allowed the Network Login type"|You might not be able to [log in to the network](network-login-disallowed.md).|
-|Service account not trusted for delegation |Check if the service account isn't trusted for delegation. For more information, see [How to Configure the Server to be Trusted for Delegation - Microsoft Desktop Optimization Pack](/microsoft-desktop-optimization-pack/appv-v4/how-to-configure-the-server-to-be-trusted-for-delegation). If a delegation scenario isn't enabled, check the SQL Server *secpol.msc* to see if the SQL Server service account is listed under **Local Policies -> User Rights Assignment -> Impersonate a client after authentication** security policy settings. |
 |"The login is from an untrusted domain and cannot be used with Windows authentication."|This error might be related to the [Local Security Subsystem](local-security-subsystem-issues.md) issues.|
 
 For detailed information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
@@ -156,3 +152,4 @@ The following table contains the possible cause and related information about va
 |Integrated authentication isn't enabled     | This might be related to the integrated authentication issues. To resolve this type of error, make sure that the **Integrated Windows Authentication** is enabled in the **Internet Options**.     |
 |Wrong Internet zone   | This might happen if you try to access a web site that isn't in the correct Internet zone in IE. The credentials won't work if the web site is in the Local Intranet zone.      |
 |IIS Authentication     | Configure the web site to allow Windows Authentication and set the `<identity impersonate="true"/>` value in the *web.config* file. needs to have set.         |
+|Service account not trusted for delegation |Check if the service account isn't trusted for delegation. For more information, see [How to Configure the Server to be Trusted for Delegation - Microsoft Desktop Optimization Pack](/microsoft-desktop-optimization-pack/appv-v4/how-to-configure-the-server-to-be-trusted-for-delegation). If a delegation scenario isn't enabled, check the SQL Server *secpol.msc* to see if the SQL Server service account is listed under **Local Policies -> User Rights Assignment -> Impersonate a client after authentication** security policy settings. |

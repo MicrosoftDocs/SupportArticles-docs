@@ -137,3 +137,7 @@ End time: 10/26/2020 18:00:24.753
 Elapsed time was 0 ms.
 Auth scheme for sqlprod01: NTLM
 ```
+
+## See also
+
+[Troubleshoot consistent authentication issues](consistent-authentication-connectivity-issues.md)

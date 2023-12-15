@@ -23,3 +23,7 @@ To resolve this error, follow these steps:
 1. Use `SETSPN -L domain\svcacct` to list SPNs on the SQL Server service account.
 
 1. Use `SETSPN -Q spnName` to find what account the SPN is on. You can move the SPN using `SETSPN -D` and `SETSPN -A` or choose an SPN already in the correct account.
+
+## See also
+
+[Troubleshoot consistent authentication issues](consistent-authentication-connectivity-issues.md)
