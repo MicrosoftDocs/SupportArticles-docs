@@ -1,7 +1,7 @@
 ---
 title: Active and retired troubleshooters for Windows 10 and Windows 11
 description: Introduce active and retired troubleshooters for Windows 10 and Windows 11.
-ms.date: 10/18/2022
+ms.date: 12/15/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
-ms.reviewer: kaushika
+ms.reviewer: kaushika, fangmikko
 ms.custom: sap:windows-troubleshooters, csstroubleshoot
 ms.technology: windows-client-troubleshooter
 ---
@@ -19,9 +19,30 @@ This article provides a list of active and retired troubleshooters for Windows 1
 
 _Applies to:_ &nbsp; Windows 10, Windows 11
 
+## ELAN fingerprint driver troubleshooter for devices upgrading from Windows 10 to Windows 11
+
+The text displayed in **Settings**:  
+The troubleshooter performs the `sfc /scannow` command. This command repairs the corrupted *onnxruntime.dll* file to match the build version of Windows the device is currently running.
+
+### Description
+
+Some user machines that have upgraded from Windows 10 and are now running Windows 11, version 21H2 (OS build 22000) or later, which have a fingerprint sensor with certain ELAN fingerprint drivers, could encounter a failure or crash when using applications that rely on related DLLs.
+
+This troubleshooter runs automatically on devices to meet the following criteria:
+
+- Runs Windows desktop operating system.
+- Runs Windows 11, version 21H2 (OS build 22000) or later.
+- The *onnxruntime.dll* file has either no version number or a version number of 0.0.0.0. 
+- The ELAN fingerprint driver version is 3.10.11001.10606, 3.10.11001.10502, or 3.10.11001.10801.
+
+|Activation date|Retirement date|More information|
+|---|---|---|
+|3/15/2023||[(https://aka.ms/AAhdpvb)](https://aka.ms/AAhdpvb)|
+
+
 ## Access work or school troubleshooter for restoring access to M365 desktop applications
 
-Text displayed in Settings:  
+Th text displayed in **Settings**:  
 The troubleshooter checks if the `Microsoft.AAD.BrokerPlugin` package is missing. If so, it installs the package.
 
 ### Description
@@ -40,7 +61,7 @@ This troubleshooter runs automatically on devices to meet the following criteria
 
 ## Windows Update troubleshooter for repairing .NET framework components
 
-Text displayed in Settings:  
+The text displayed in **Settings**:  
 Automatically repair system files and settings to fix a problem on your device
 
 ### Description
@@ -58,7 +79,7 @@ This troubleshooter runs automatically on devices that meet the following criter
 
 ## Windows Update troubleshooter for file or metadata corruption
 
-Text displayed in Settings:  
+The text displayed in **Settings**:  
 Automatically targets the device for an In-Place Upgrade due to recurring installation issues
 
 ### Description
@@ -77,7 +98,7 @@ This troubleshooter runs automatically on devices that meet the following criter
 
 ## Windows Update troubleshooter for repairing system files
 
-Text displayed in Settings:  
+The text displayed in **Settings**:  
 Automatically repair system files and settings to improve device security
 
 ### Description
@@ -92,7 +113,7 @@ This troubleshooter runs automatically on devices running Windows 10, version 19
 
 ## Files On-Demand troubleshooter
 
-Text displayed in Settings:  
+The text displayed in **Settings**:  
 You may have lost access to your Files On-Demand. This troubleshooter restores access or prevents the loss of access from happening in the near future. Important: Please reboot your device once the troubleshooter is finished.
 
 ### Description
@@ -107,7 +128,7 @@ Devices that successfully ran the "Hardware and Devices" troubleshooter will be 
 
 ## Hardware and Devices troubleshooter for OneDrive
 
-Text displayed in Settings:  
+The text displayed in **Settings**:  
 Automatically repair system files and settings to fix a problem on your device.
 
 ### Description
@@ -125,7 +146,7 @@ This troubleshooter runs automatically on devices that meet the following criter
 
 ## Storage Spaces cleanup troubleshooter
 
-Text displayed in Settings:  
+The text displayed in **Settings**:  
 Automatically restore your previous settings and environment for Storage Spaces.
 
 ### Description
@@ -142,7 +163,7 @@ Successfully ran the "Hardware and Devices" or "Storage Spaces" troubleshooter
 
 ## Storage space troubleshooter
 
-Text displayed in Settings:  
+The text displayed in **Settings**:  
 Data corruption was detected on your parity storage space. This troubleshooter takes actions to prevent further corruption. It also restores write access if the space was previously marked read-only. For more information and recommended actions, please see the link below.
 
 ### Description
@@ -159,7 +180,7 @@ Successfully ran the "Hardware and Devices" or "Storage Spaces" troubleshooter.
 
 ## Hardware and Devices troubleshooter for Parity Storage Spaces
 
-Text displayed in Settings:  
+The text displayed in **Settings**:  
 Automatically change system settings to fix a problem on your device.
 
 ### Description
@@ -179,7 +200,7 @@ The first time, the troubleshooter runs automatically. The second time, it notif
 
 ## Windows Update troubleshooter for Disk Cleanup
 
-Text displayed in Settings:  
+The text displayed in **Settings**:  
 Automatically change system settings to fix a problem on your device.
 
 ### Description
