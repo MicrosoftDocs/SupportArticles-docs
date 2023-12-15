@@ -1,14 +1,14 @@
 ---
-title: Data collection to troubleshoot SQL connectivity issues
-description: This article provides questions based on several components that you can use to effectively troubleshoot connectivity issues.
-ms.date: 11/23/2023
-author: prmadhes-msft
-ms.author: prmadhes
-ms.reviewer: jopilov, mastewa, v-jayaramanp
+title: Data collection to troubleshoot SQL Server connectivity issues
+description: This article provides questions based on several components that you can use to effectively troubleshoot SQL Server connectivity issues.
+ms.date: 12/15/2023
+author: Malcolm-Stewart
+ms.author: mastewa
+ms.reviewer: jopilov, prmadhes, v-jayaramanp, haiyingyu
 ms.custom: sap:Connection issues
 ---
 
-# Collect data to troubleshoot SQL connectivity issues
+# Collect data to troubleshoot SQL Server connectivity issues
 
 This section provides a comprehensive list of questions that are classified by specific categories. Although the ["Recommended prerequisites and checklist for troubleshooting SQL Server connectivity issues"](resolve-connectivity-errors-checklist.md) topic includes the most important items to be collected, the questions in this article can help you troubleshoot more effectively by ruling out many scenarios and narrowing your focus.
 
@@ -28,7 +28,7 @@ To collect data, you can use tools such as Problem Steps Recorder (PSR), Network
 
 Follow these steps simultaneously on both the client and server computers. If the application is a 3-tier or n-tier architecture, run the installation on intermediate servers, also.
 
-1. Install **NETMON** or **WIRESHARK** on all affected computers or use the built-in `NETSH` command (Windows 2008 or later versions). No restart is required.
+1. Install **WIRESHARK** on all affected computers or use the built-in `NETSH` command (Windows 2008 or later versions). No restart is required.
 
 1. Enable NETLOGON debug logging on the client and all servers by running the following command:
 
@@ -152,7 +152,7 @@ If the user is remote to the client application, collect the following details:
 - What is the exact error message in the call stack?
 - Was the log collected from the SQL Server ERRORLOG and ERRORLOG.1 files?
 - Were the application event logs collected from the client and server?
-- Were the client application log files and configuration files collected? For example, web.config, rsreportserver.config, *.config, or *.ini.
+- Were the client application log files and configuration files collected? For example, *web.config, rsreportserver.config*, **.config*, or **.ini*.
 - Is there an available visual representation of the network that shows the computers, routers, and so on?
 
 ## Big picture questions
