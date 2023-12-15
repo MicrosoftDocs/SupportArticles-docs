@@ -54,8 +54,8 @@ To resolve this issue, follow these steps:
 
 1. Validate that you're connecting to the appropriate server.
 
-1. If the server isn't the appropriate one, then use the connection string.
+1. If the server isn't the appropriate one, then update the connection string to point to the correct server
 
 1. If the connection string is correct, add the login to the database.
 
-1. If it's a Windows login, add it to a local group or domain group that's allowed to connect to the database server.
+1. If you're using a Windows login, add it to a local group or domain group that's allowed to connect to the database server.
