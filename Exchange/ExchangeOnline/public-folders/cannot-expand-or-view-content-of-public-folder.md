@@ -132,7 +132,7 @@ To fix the issue, follow these steps:
       New-PublicFolder -Name <public folder name> -Mailbox <public folder mailbox>
       ```
 
-      For example, if the heavily used public folder exists in the public folder mailbox "PFMBX2", and you have less heavily used content in public folder mailboxes "PFMBX3" and "PFMBX4", create the public folders there.
+      For example, if the heavily used public folder exists in the public folder mailbox _PFMBX2_, and you have less heavily used content in public folder mailboxes _PFMBX3_ and _PFMBX4_, create the public folders there.
 
       > [!NOTE]
       > Don't create the public folders in the [primary hierarchy public folder mailbox](/exchange/collaboration-exo/public-folders/public-folders#public-folder-mailboxes).
