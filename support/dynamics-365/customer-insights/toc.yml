@@ -17,6 +17,10 @@
             href: data/profile-unification/cant-remove-field-from-match.md
           - name: Missing business unit
             href: data/profile-unification/missing-business-unit.md
+      - name: Environment management
+        items: 
+          - name: '"The service principal for resource is disabled" error when signing in'
+            href: data/environment-management/service-principal-disabled.md
       - name: Exports
         items:
           - name: Controls from Customer Card Add-in if they don't find data
