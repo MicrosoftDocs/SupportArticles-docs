@@ -14,24 +14,39 @@ This article helps you to resolve the problem related to the bad server name err
 
 ## Symptoms
 
-SQLOLEDB and SQLNCLI11 OLE DB providers over TCP or Named Pipes show the following error messages:
+SQLOLEDB and SQLNCLI11 OLE DB providers over TCP or Named Pipes show the following error messages.
 
-- `Login failed for user 'userx'.`- Message is shown when the providers use an SQL login.
-- `Login failed for user 'CONTOSO\user1'.`- Message is shown the providers use a Windows login.
+The following message is shown when the providers use an SQL login:
+
+  ```output
+  Login failed for user 'userx'.
+  ```
+
+The following message is shown when providers use a Windows login.
+
+  ```output
+  Login failed for user 'CONTOSO\user1'.
+  ```
 
 The SQL Server and ODBC Driver 13 ODBC drivers show the following error message:
 
-> Login failed for user 'CONTOSO\user1'
+  ```output
+  Login failed for user 'CONTOSO\user1'
+  ```
 
 The SqlClient .NET Provider shows the following error messages:
 
-> "Login failed for user ''. -when using TCP and a SQL login or a Windows login"
-> "Login failed for user 'CONTOSO\user1'. - when using Named Pipes and a SQL login or a Windows login"
+  ```output
+  Login failed for user ''. -when using TCP and a SQL login or a Windows login.
+  Login failed for user 'CONTOSO\user1'. - when using Named Pipes and a SQL login or a Windows login.
+  ```
 
 Check whether the SQL Server error log has one of the following messages:
 
-> "'Login failed for user'. Reason: Could not find a login matching the name provided."
-> "'Login failed for user 'CONTOSO\USER1'. Reason: Could not find a login matching the name provided."
+  ```output
+  'Login failed for user'. Reason: Could not find a login matching the name provided.
+  'Login failed for user 'CONTOSO\USER1'. Reason: Could not find a login matching the name provided.
+  ```
 
 ## Resolution
 

@@ -1,7 +1,7 @@
 ---
 title: Introduction to consistent authentication issues
 description: This article introduces to consistent authentication issues, the types of error messages, and workarounds to troubleshoot various issues.
-ms.date: 12/07/2023
+ms.date: 12/15/2023
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes v-jayaramanp
@@ -24,7 +24,7 @@ Before you start to troubleshoot errors, it's important to understand what each 
 
 ## Other prerequisites
 
-- Make sure to install the NETMON, WIRESHARK and Problem Steps Recorder (PSR.EXE) utilities. For more information, see Methods of collecting data for troubleshooting various types of errors.
+- Make sure to install the WIRESHARK and Problem Steps Recorder (PSR.EXE) utilities. For more information, see *Methods of collecting data for troubleshooting various types of errors*.
 
 - Collect the SPN information based on the service accounts by using the `SETSPN -L` command.
 
@@ -36,8 +36,10 @@ This section describes the types of errors and its related information.
 
 Refers to the Active Directory errors. If the SQL Server error log file contains both or either of the following messages, then this error is related to Active Directory (AD). This error might occur if the domain controller (DC) can't be contacted by Windows on the SQL Server computer or the local security service (LSASS) is having an issue.
 
-   > Error -2146893039 (0x80090311): No authority could be contacted for authentication.
-   > Error -2146893052 (0x80090304): The Local Security Authority cannot be contacted.
+  ```output
+   Error -2146893039 (0x80090311): No authority could be contacted for authentication.
+   Error -2146893052 (0x80090304): The Local Security Authority cannot be contacted.
+  ```
 
 ### Login failed error codes
 
