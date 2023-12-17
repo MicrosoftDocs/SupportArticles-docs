@@ -2,6 +2,14 @@
 
 
 
+## Week of December 11, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 12/15/2023 | [Can't expand or view the content of a public folder in Outlook](/exchange/troubleshoot/public-folders/cannot-expand-or-view-content-of-public-folder) | added |
+
+
 ## Week of December 04, 2023
 
 
@@ -24,11 +32,3 @@
 | Published On |Topic title | Change |
 |------|------------|--------|
 | 11/17/2023 | [Search-MailboxAuditLog returns an error message that says the AQS parser has been removed](/exchange/troubleshoot/administration/search-mailboxauditlog-returns-aqs-parser-error) | added |
-
-
-## Week of November 06, 2023
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 11/8/2023 | [NDR 550 5.7.193 when external users send email to Microsoft 365 group](/exchange/troubleshoot/email-delivery/ndr-when-external-users-send-email-to-microsoft-365-group) | added |
