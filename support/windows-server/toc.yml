@@ -938,6 +938,8 @@
       href: ./deployment/0x8007000d-activate-machine.md
     - name: Error 0xC004E002 during activation
       href: ./deployment/error-0xc004e002-during-activation.md
+    - name: Error 0xC004E015 (SL_E_EUL_CONSUMPTION_FAILED)
+      href: ./deployment/error-0xC004E015-sl-e-eul-consumption-failed-activate-windows.md
     - name: Error 0xC004F015 when you activate Windows 10
       href: ./deployment/error-0xc004f015-activate-windows-10.md
     - name: Error 0xC004F074 when you activate Windows
