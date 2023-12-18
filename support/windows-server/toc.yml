@@ -1070,9 +1070,9 @@
       href: ./deployment/why-prompted-restart-computer.md
     - name: Windows Server 2008 Service Pack 2
       href: ./deployment/windows-server-2008-service-pack-2.md
-    - name: 'WUBr: How to troubleshoot diagnostic data transmission'
+    - name: 'WUBr: Troubleshoot diagnostic data transmission'
       href: ./deployment/wubr-troubleshooting-data-transmission.md
-    - name: 'WUBr: How to use the configuration script to troubleshoot device configuration'
+    - name: 'WUBr: Use the configuration script to troubleshoot device configuration'
       href: ./deployment/wubr-troubleshooting-device-config-using-script.md
     - name: WSUS 3.0 installation package is available
       href: ./deployment/wsus-3-installation-package.md

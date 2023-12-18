@@ -1,7 +1,9 @@
 ---
-title: 'WUBr: How to use the configuration script to troubleshoot device configuration'
+title: 'WUBr: Use the configuration script to troubleshoot device configuration'
 description: Describes how to use the WUfBr configuration script to troubleshoot the WUfBr configuration.
 ms.date: 12/19/2023
+author: Deland-Han
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -10,10 +12,10 @@ ms.reviewer: kaushika, v-tappelgate
 ms.prod: windows-server
 ms.custom: sap:servicing, csstroubleshoot
 ms.technology: windows-server-deployment
-keywords: 
+keywords: Windows Update for Business reports, WUBr, diagnostic data, telemetry
 ---
 
-# Windows Update for Business reports: How to use the configuration script to troubleshoot device configuration
+# Windows Update for Business reports: Use the configuration script to troubleshoot device configuration
 
 _Applies to:_ &nbsp; Windows Server, all supported versions
 

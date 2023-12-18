@@ -2,6 +2,8 @@
 title: Guidance for troubleshooting Windows Update for Business reports issues
 description: Introduces general guidance for troubleshooting scenarios related to Windows Update for Business reports
 ms.date: 12/19/2023
+author: Deland-Han
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -10,7 +12,7 @@ ms.reviewer: kaushika, v-tappelgate
 ms.prod: windows-server
 ms.custom: sap:servicing, csstroubleshoot
 ms.technology: windows-server-deployment
-keywords: 
+keywords: Windows Update for Business reports, WUBr, diagnostic data, telemetry
 ---
 
 # Windows Update for Business reports: troubleshooting guidance
