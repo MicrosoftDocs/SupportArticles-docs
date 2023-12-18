@@ -27,15 +27,15 @@ When data is missing from your reports, there are three primary questions that y
 
 ## Verify that Windows Update for Business reports is receiving data
 
-After you enroll a device and configure it to share data, wait for 48 hours for data to start showing up in reports. In some cases, data from devices that aren't active much may take up to 14 days to show up in reports.
+After you enroll a device and configure it to share data, wait for 48 hours for data to start showing up in reports. In some cases, data from devices that aren't active much might take up to 14 days to show up in reports.
 
-To confirm that the reports service is receiving data from a the device, [query](/windows/deployment/update/wufb-reports-use#display-windows-update-for-business-reports-data) the [UCClient table](/windows/deployment/update/wufb-reports-schema-ucclient). For example, the following query shows total enrolled device count per time-generated:  
+To confirm that the reports service is receiving data from the device, [query](/windows/deployment/update/wufb-reports-use#display-windows-update-for-business-reports-data) the [UCClient table](/windows/deployment/update/wufb-reports-schema-ucclient). For example, the following query shows total enrolled device count per time-generated:  
 
 `UCClient | summarize count() by TimeGenerated`
 
 :::image type="content" source="/windows/deployment/update/media/7760853-wufb-reports-time-generated.png" alt-text="Screenshot of using a Kusto (KQL) query for time generated on Windows Update for Business reports data in Log Analytics." lightbox="/windows/deployment/update/media/7760853-wufb-reports-time-generated.png":::
 
-If the table contains data from the device but it's missing from reports, see the following articles for more information about managing the data.
+If the table contains data from the device but it's missing from reports, you may have a problem in the report configuration. For more information, see the following articles for more information:
 
 - [Use Windows Update for Business reports](/windows/deployment/update/wufb-reports-use)
 - [Windows Update for Business reports schema](/windows/deployment/update/wufb-reports-schema)
@@ -80,14 +80,14 @@ If your devices have to use a proxy connection, you can use one of two types:
 
 Microsoft recommends that you configure the proxy servers to allow traffic to the diagnostic data endpoints without requiring proxy authentication. This approach is the most comprehensive solution, and is compatible with all versions of Windows 10 and Windows 11.
 
-On the device, the Windows Universal Telemetry Client (UTC) service is responsible for transmitting diagnostic data. When it starts to transmit, the UTC service first tries to connect directly to the endpoint. If the UTC service can't connect that way, it checks the device for a proxy configuration. The UTC service uses either type of proxy configuration, unless it has been restricted by Group Policy. For more information about using Group Policy to configure the proxy server, see [Configure device proxy and Internet connectivity](/microsoft-365/security/defender-endpoint/configure-proxy-internet#configure-the-proxy-server-manually-using-a-registry-based-static-proxy).
+On the device, the Windows Universal Telemetry Client (UTC) service is responsible for transmitting diagnostic data. When it starts to transmit, the UTC service first tries to connect directly to the endpoint. If the UTC service can't connect that way, it checks the device for a proxy configuration. The UTC service uses either type of proxy configuration, unless Group Policy dictates a specific proxy configuration. For more information about using Group Policy to configure the proxy server, see [Configure device proxy and Internet connectivity](/microsoft-365/security/defender-endpoint/configure-proxy-internet#configure-the-proxy-server-manually-using-a-registry-based-static-proxy).
 
 The following table lists the two types of proxy connections and which scenarios each is suitable for.
 
 | Type          | Scenarios |
 | - | - |
 | User proxy | At least one user account has permissions to access the device console, the proxy server, and the endpoint. |
-| System proxy | The device is headless (No users sign in).<br/><br/>Device users don't have internet permissions.<br/><br/>The proxy servers require authentication, but they don't support Integrated Windows Authentication.<br/><br/>Your infrastructure is integrated with Microsoft Defender for Endpoint. |
+| System proxy | The device is headless (users don't sign in).<br/><br/>Device users don't have internet permissions.<br/><br/>The proxy servers require authentication, but they don't support Integrated Windows Authentication.<br/><br/>Your infrastructure is integrated with Microsoft Defender for Endpoint. |
 
 > [!IMPORTANT]  
 > Before you configure devices to use a proxy server, make sure that the devices have the latest quality updates for a supported version of Windows.
