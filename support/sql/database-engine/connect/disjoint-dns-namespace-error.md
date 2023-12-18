@@ -18,4 +18,4 @@ If the organizational hierarchy in Active Directory (AD) and in DNS don't match,
 
 ## Resolution
 
- Use the fully qualified name of the server or specify the SPN name in the connection string to mitigate problems.
+ Use the fully qualified domain name (FQDN) of the server or specify the SPN name in the connection string to mitigate problems. For information on FQDN, see [Computer Naming](/windows-server/identity/ad-ds/plan/computer-naming)
