@@ -5,7 +5,7 @@ items:
   href: cannot-generate-sspi-context-error.md
 - name: Consistent SQL network connectivity issue
   href: consistent-sql-network-connectivity-issue.md
-- name: Troubleshooting bad server name in connection string issue
+- name: Troubleshooting bad server name in connection string
   href: bad-server-name-connection-string-error.md
 - name: Existing connection forcibly closed
   href: tls-exist-connection-closed.md
