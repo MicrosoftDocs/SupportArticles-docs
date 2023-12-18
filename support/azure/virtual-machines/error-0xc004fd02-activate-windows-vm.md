@@ -1,5 +1,5 @@
 ---
-title: AVMA activation method isn't supported in Azure_Windows VM
+title: AVMA activation method isn't supported in Azure Windows VM
 description: Provides a solution to an error 0xC004FD02 that occurs when you try to activate an Azure Windows virtual machine (VM).
 ms.service: virtual-machines
 ms.subservice: vm-windows-activation
