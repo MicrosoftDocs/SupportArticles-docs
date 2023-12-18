@@ -501,6 +501,8 @@
     href: troubleshoot-activation-problems.md
   - name: Windows virtual machine activation FAQ
     href: windows-virtual-machine-activation-faq.yml
+  - name: Error 0xC004FD02 when activating Windows VM
+    href: error-0xc004fd02-activate-windows-vm.md
   - name: Activation fails in forced tunneling scenario
     href: custom-routes-enable-kms-activation.md
   - name: Windows activation - Two new KMS endpoints
