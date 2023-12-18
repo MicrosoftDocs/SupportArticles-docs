@@ -28,7 +28,7 @@ Here's a list of basic steps to resolve most Windows Update for Business reports
   - Microsoft Entra: An administrative role.  
 
   At a high level, Azure roles control permissions to manage Azure resources, while Microsoft Entra roles control permissions to manage Microsoft Entra ID resources. For more information, see [Windows Update for Business reports prerequisites: Permissions](/windows/deployment/update/wufb-reports-prerequisites#permissions).
-- Verify that at least one device is sending telemetry, especially if you got a successful save message during enrollment but still have not seen any data after 48 hours. If no devices are sending telemetry, run the [configuration script](/windows/deployment/update/wufb-reports-configuration-script) on the clients to ensure that they are active and configured properly.
+- Verify that at least one device is sending telemetry, especially if you got a successful save message during enrollment but still haven't seen any data after 48 hours. If no devices are sending telemetry, run the [configuration script](/windows/deployment/update/wufb-reports-configuration-script) on the clients to ensure that they're active and configured properly.
 - Verify that the devices are [Microsoft Entra joined](/azure/active-directory/devices/concept-azure-ad-join) or [Microsoft Entra hybrid joined](/azure/active-directory/devices/concept-azure-ad-join-hybrid).
 - Verify that the devices are turned on, active, and can scan for Windows updates. To be included in reports, a device has to have been active at least once in the past 28 days.
 - Make sure that each device has the **Allow device name to be sent in Windows diagnostic data** policy enabled.
@@ -51,15 +51,15 @@ This issue has several potential causes. To resolve the issue, check the followi
   - Microsoft Entra: An administrative role.  
 
   At a high level, Azure roles control permissions to manage Azure resources, while Microsoft Entra roles control permissions to manage Microsoft Entra resources. For more information, see [Windows Update for Business reports prerequisites: Permissions](/windows/deployment/update/wufb-reports-prerequisites#permissions).
-- Verify that at least one device is sending telemetry, especially if you got a successful save message during enrollment but still have not seen any data after 48 hours. If no devices are sending telemetry, run the [configuration script](/windows/deployment/update/wufb-reports-configuration-script) on the clients to ensure that they are active and configured properly.
-- If the preceding solutions do not apply or do not resolve the issue, use the Configuration flyout of your administrative console to unenroll and re-enroll again. Wait for 24-48 hours. If the issue persists, contact Microsoft Support.
+- Verify that at least one device is sending telemetry, especially if you got a successful save message during enrollment but still haven't seen any data after 48 hours. If no devices are sending telemetry, run the [configuration script](/windows/deployment/update/wufb-reports-configuration-script) on the clients to ensure that they're active and configured properly.
+- If the preceding solutions don't apply or don't resolve the issue, use the Configuration flyout of your administrative console to unenroll and re-enroll again. Wait for 24-48 hours. If the issue persists, contact Microsoft Support.
 
 ### Devices are missing from reports
 
 This issue has several potential causes. To resolve the issue, check the following:
 
 - Verify that the devices are [Microsoft Entra joined](/azure/active-directory/devices/concept-azure-ad-join) or [Microsoft Entra hybrid joined](/azure/active-directory/devices/concept-azure-ad-join-hybrid).
-- Verify that the devices are sending telemetry. If the missing devices aren't sending telemetry, run the configuration script to ensure that they are active and configured properly.
+- Verify that the devices are sending telemetry. If the missing devices aren't sending telemetry, run the configuration script to ensure that they're active and configured properly.
 - Verify that the devices are turned on, active, and can scan for Windows updates. To be included in reports, a device has to have been active at least once in the past 28 days.
 - Check the size of the report. For performance reasons, the default limit for rows in Azure workbooks is set to 1000. If your report has more than 1000 rows, do one of the following:  
 
