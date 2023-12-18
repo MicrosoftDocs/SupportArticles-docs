@@ -8,7 +8,6 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate
-ms.prod: windows-server
 ms.custom: sap:servicing, csstroubleshoot
 ms.technology: windows-server-deployment
 keywords: 
@@ -45,7 +44,7 @@ If sufficient time has passed since the device was configured and enrolled and t
 ## Check the data transmission prerequisites for devices
 
 > [!NOTE]  
-> This section summarizes the data transmission prerequisites. For a full discussion of these requirements and an up-to-date list of endpoints, see [Enable Windows diagnostic data processor configuration](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enable-windows-diagnostic-data-processor-configuration).
+> This section summarizes the data transmission prerequisites. For a full discussion of these requirements and an up-to-date list of endpoints, see [Enable Windows diagnostic data processor configuration](/privacy/configure-windows-diagnostic-data-in-your-organization#enable-windows-diagnostic-data-processor-configuration).
 
 ### Requirements for devices
 
@@ -61,13 +60,13 @@ If sufficient time has passed since the device was configured and enrolled and t
 
 Devices have to be able to connect to the following endpoints. This list is current at the time of publishing.
 
-- `us-v10c.events.data.microsoft.com` (`eu-v10c.events.data.microsoft.com` for tenants that have billing addresses in the [EU Data Boundary](/windows/privacy/eudb/eu-data-boundary-learn#eu-data-boundary-countries-and-datacenter-locations)).
-- `watsonc.events.data.microsoft.com` (`eu-watsonc.events.data.microsoft.com` for tenants that have billing addresses in the [EU Data Boundary](/windows/privacy/eudb/eu-data-boundary-learn#eu-data-boundary-countries-and-datacenter-locations)).
+- `us-v10c.events.data.microsoft.com` (`eu-v10c.events.data.microsoft.com` for tenants that have billing addresses in the [EU Data Boundary](/privacy/eudb/eu-data-boundary-learn#eu-data-boundary-countries-and-datacenter-locations)).
+- `watsonc.events.data.microsoft.com` (`eu-watsonc.events.data.microsoft.com` for tenants that have billing addresses in the [EU Data Boundary](/privacy/eudb/eu-data-boundary-learn#eu-data-boundary-countries-and-datacenter-locations)).
 - `settings-win.data.microsoft.com`
 - `*.blob.core.windows.net`
 
   > [!NOTE]  
-  > Tenants that have billing addresses in countries or regions in the Middle East and Africa, as well as European countries or regions that aren't in the EU, also use the `eu-v10c.events.data.microsoft.com` and `eu-watsonc.events.data.microsoft.com` endpoints. Their diagnostic data is processed initially in Europe, but those tenants aren't considered part of the [EU Data Boundary](/windows/privacy/eudb/eu-data-boundary-learn).
+  > Tenants that have billing addresses in countries or regions in the Middle East and Africa, as well as European countries or regions that aren't in the EU, also use the `eu-v10c.events.data.microsoft.com` and `eu-watsonc.events.data.microsoft.com` endpoints. Their diagnostic data is processed initially in Europe, but those tenants aren't considered part of the [EU Data Boundary](/privacy/eudb/eu-data-boundary-learn).
 
 Devices can connect directly, or by using a proxy server. If a device has to use a proxy server, the device configuration must meet the requirements that're described in the next section.
 
