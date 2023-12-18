@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting the bad server name in connection string
-description: This article provides cause, symptoms, and workarounds for troubleshooting the bad server name in connection string error.
+description: This article provides symptoms and solution for troubleshooting the bad server name in connection string issue.
 ms.date: 12/18/2023
 author: prmadhes-msft
 ms.author: prmadhes
@@ -14,22 +14,20 @@ This article helps you to resolve the issue related to the bad server name.
 
 ## Symptoms
 
-The SQLOLEDB and SQLNCLI11 OLE DB providers using the TCP or Named Pipes protocols show either of the following error messages:
+The SQLOLEDB and SQLNCLI11 OLE DB providers that use the TCP or Named Pipes protocols show either of the following error messages:
 
-- "Login failed for user 'userx'".- Message is shown when the providers use an SQL login.
-- "Login failed for user 'CONTOSO\user1'".- Message is shown the providers use a Windows login.
+- "Login failed for user 'userx'" - This error message is shown when the providers use an SQL login.
+- "Login failed for user 'CONTOSO\user1'" - This error message is shown when the providers use a Windows login.
 
 The Microsoft ODBC Driver 13 for SQL Server generates the following error message:
 
-"Login failed for user 'CONTOSO\user1'"
+> "Login failed for user 'CONTOSO\user1'"
 
-The SqlClient .NET Provider displays the following error message in either of the following scenarios:
-
-When you use a TCP protocol and a SQL login or a Windows login:
+The SqlClient .NET Provider displays the following error message when you use the TCP protocol and a SQL login or a Windows login:
 
 > Login failed for user ''.
 
-When you use Named Pipes protocol and a SQL login or a Windows login.
+The SqlClient .NET Provider displays the following error message when you use the Named Pipes protocol and a SQL login or a Windows login:
 
 > Login failed for user 'CONTOSO\user1'.
 
@@ -44,7 +42,7 @@ These errors might be generated if you deploy an application that uses a DEV or 
 
 To resolve this issue, follow these steps:
 
-1. Validate that you are connecting to the appropriate server.
+1. Check that you're connecting to the appropriate server.
 
 1. If the server isn't the appropriate one, then the connection string.
 
