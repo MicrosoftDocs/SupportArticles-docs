@@ -14,7 +14,7 @@ This article helps you to resolve the disjoint DNS namespace error.
 
 ## Symptoms
 
-If the organizational hierarchy in Active Directory (AD) and in DNS don't match, the wrong Service Provider Name (SPN) might be generated if you use the NETBIOS name in the connection string. The SPN won't be found and NTLM credentials are used instead of Kerberos credentials.
+If the organizational hierarchy in Active Directory (AD) and in DNS don't match, the wrong Service Provider Name (SPN) might be generated if you use the NETBIOS name in the database application connection string. The SPN won't be found and NTLM credentials are used instead of Kerberos credentials.
 
 ## Resolution
 
