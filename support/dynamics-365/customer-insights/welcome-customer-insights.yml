@@ -9,7 +9,7 @@ metadata:
   ms.service: customer-insights
   author: m-hartmann
   ms.author: mhart
-  ms.date: 12/15/2023
+  ms.date: 12/18/2023
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -61,8 +61,6 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Can't update or remove a field from Matching rules
-            url: data/profile-unification/cant-remove-field-from-match.md
           - text: Match failed error
             url: data/profile-unification/match-failed.md
           - text: Merge failed error

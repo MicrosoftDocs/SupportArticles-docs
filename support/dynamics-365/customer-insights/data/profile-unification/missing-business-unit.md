@@ -3,7 +3,7 @@ title: Missing business unit in unification
 description: Provides a resolution for an issue where the business unit is missing in the unification steps in Microsoft Dynamics 365 Customer Insights - Data.
 author: Scott-Stabbert
 ms.author: sstabbert
-ms.date: 12/15/2023
+ms.date: 12/18/2023
 ms.reviewer: v-wendysmith, mhart
 ms.custom: bap-template
 ---

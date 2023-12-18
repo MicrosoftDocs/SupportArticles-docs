@@ -3,7 +3,7 @@ title: Merge failed error on the Unified data view card
 description: Provides a resolution for an issue where merge failures occur in Microsoft Dynamics 365 Customer Insights - Data.
 author: Scott-Stabbert
 ms.author: sstabbert
-ms.date: 12/15/2023
+ms.date: 12/18/2023
 ms.reviewer: v-wendysmith, mhart
 ms.custom: bap-template
 ---
@@ -23,6 +23,6 @@ The following error message appears on the **Unified data view** card on the **D
 
 1. Verify upstream dependencies.
 
-   Ensure the data sources are refreshed and the *Match* processes are completed successfully without any errors. Check the logs or status reports of these dependencies to ensure they're functioning as expected. Resolve any issues encountered in these upstream processes.
+   Ensure the data sources are refreshed and the *Match* processes are completed successfully without any errors. Check the logs or status reports of these dependencies to ensure they're functioning as expected. Resolve any issues encountered in these upstream processes. For more information, see [Define matching rules for data unification](/dynamics365/customer-insights/data/data-unification-match-tables).
 
 1. Retry the *Merge* process by going to **Data** > **Unify** > **Unify customer profiles**.
