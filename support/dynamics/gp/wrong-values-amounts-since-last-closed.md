@@ -1,9 +1,9 @@
 ---
 title: Wrong values in Amounts Since Last Closed
 description: Provides a solution to an issue where the Amounts Since Last Close view for Customer or Vendor Summary Inquiry show incorrect Year-to-Date or Last Year values.
-ms.reviewer: cwaswick, kenhub 
+ms.reviewer: theley 
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 12/18/2023
 ---
 # Amounts Since Last Closed view in Customer or Vendor Summary reflects incorrect close date in Microsoft Dynamics GP
 
@@ -35,52 +35,36 @@ Make a current backup of your company database, and do these steps in a Test com
 
 PAYABLES MANAGEMENT:
 
-1. Download the PMCALC.zip that contains scripts for Payables Management:
+1. Download the [PMCALC.zip](https://mbs2.microsoft.com/fileexchange/?fileID=9273a3c9-dad4-4128-b4be-d5dbd3413d2f) that contains scripts for Payables Management:
 
 2. Go to the location you saved the zip file and extract the five SQL statements in it.
 
 3. In SQL Server Management Studio, execute these SQL statements (from the PMCALC.zip file) against the company database:
 
-    ```sql
-    create_table_taPMRECALC.SQL  
-    
-    smPM_Summary_stored_procedure_LASTYEAR.SQL  
-    
-    smPM_summary_stored_procedure_THISYEAR.SQL 
-    ```
+4. Open the LAST YEAR PM Recalc.sql script and copy it in to a query window. Edit the dates as needed for Last Year and execute it against the company database. For instance, if your last closed year was 2023 and the dates were 01/01/2023 through 12/31/2023, then edit this script to look as follows:
 
-4. Open the LAST YEAR PM Recalc.sql script and copy it in to a query window. Edit the dates as needed for Last Year and execute it against the company database. For instance, if your last closed year was 2015 and the dates were 01/01/2015 through 12/31/2015, then edit this script to look as follows:
+    `exec smPMSummaryNOINVYTDLYR '01/01/2023', '12/31/2023'`
 
-    `exec smPMSummaryNOINVYTDLYR '01/01/2015', '12/31/2015'`
+5. Open the THIS YEAR PM Recalc.sql script and copy it into a query window. Edit the dates as needed for the current year and execute it against the company database. For instance, if your current open year is 2024 and the dates are 01/01/2024 through 12/31/2024, then edit to this script to look as follows:
 
-5. Open the THIS YEAR PM Recalc.sql script and copy it into a query window. Edit the dates as needed for the current year and execute it against the company database. For instance, if your current open year is 2016 and the dates are 01/01/2016 through 12/31/2016, then edit to this script to look as follows:
-
-    `exec smPMSummaryNOINVYTD '01/01/2016', '12/31/2016'`
+    `exec smPMSummaryNOINVYTD '01/01/2024', '12/31/2024'`
 
 6. Review your YTD and LYR values in your company for accuracy.
 
 RECEIVABLES MANAGEMENT:
 
-1. Download the RMRECALC.zip that contains scripts for Receivables Management:
+1. Download the [RMRECALC.zip](https://mbs2.microsoft.com/fileexchange/?fileID=c9d45418-1de2-4968-a8c5-af6119ed50bf) that contains scripts for Receivables Management:
 
 2. Go to the location you saved the zip file and extract the five SQL statements in it.
 
 3. In SQL Server Management Studio, execute the following statements (from the RMRECALC.zip file) against the company database:
 
-    ```sql
-    create_table_taRMRECALC.SQL  
-    
-    smRM_summary_stored_proc_LASTYEAR.SQL  
-    
-    smRM_summary_stored_Proc_THISYEAR.SQL  
-    ```
+4. Open the LAST YEAR RM Recalc.sql script and copy it in to a query window. Edit the dates as needed for Last Year and execute it against the company database. For instance, if your last closed year was 2023 and the dates were 01/01/2023 through 12/31/2023, then edit this script to look as follows:
 
-4. Open the LAST YEAR RM Recalc.sql script and copy it in to a query window. Edit the dates as needed for Last Year and execute it against the company database. For instance, if your last closed year was 2015 and the dates were 01/01/2015 through 12/31/2015, then edit this script to look as follows:
+    `exec smRMSummaryLYR '01/01/2023', '12/31/2023'`
 
-    `exec smRMSummaryLYR '01/01/2015', '12/31/2015'`
+5. Open the THIS YEAR RM Recalc.sql script and copy it in to a query window. Edit the dates as needed for the current year and execute it against the company database. For instance, if your current open year is 2016 and the dates are 01/01/2024 through 12/31/2024, then edit this script to look as follows:
 
-5. Open the THIS YEAR RM Recalc.sql script and copy it in to a query window. Edit the dates as needed for the current year and execute it against the company database. For instance, if your current open year is 2016 and the dates are 01/01/2016 through 12/31/2016, then edit this script to look as follows:
-
-    `exec smRMSummary '01/01/2016', '12/31/2016'`
+    `exec smRMSummary '01/01/2024', '12/31/2024'`
 
 6. Review your YTD and LYR values in your company for accuracy.
