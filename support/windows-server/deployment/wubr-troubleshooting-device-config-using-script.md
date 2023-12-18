@@ -1,6 +1,6 @@
 ---
 title: How to use the configuration script to troubleshoot device configuration
-description: 
+description: Describes how to use the WUfBr configuration script to troubleshoot the WUfBr configuration.
 ms.date: 12/19/2023
 manager: dcscontentpm
 audience: itpro
@@ -13,7 +13,7 @@ ms.technology: windows-server-deployment
 keywords: 
 ---
 
-# Windows Update for Business reports: : How to use the configuration script to troubleshoot device configuration
+# Windows Update for Business reports: How to use the configuration script to troubleshoot device configuration
 
 _Applies to:_ &nbsp; Windows Server, all supported versions
 
@@ -28,7 +28,7 @@ For more information about the script, including the available parameters, see [
 
 ## Configuring the script
 
-The device must have Windows 10 or a later version, and the latest version of Windows PowerShell. To run the script, you have to use an elevated PowerShell windowon the device (the script itself runs in the System context).  
+The device must have Windows 10 or a later version, and the latest version of Windows PowerShell. To run the script, you have to use an elevated PowerShell window on the device (the script itself runs in the System context).  
 
 > [!IMPORTANT]  
 >  - The script package includes *PSExec.exe*. If you use a mobile device manager such as Microsoft Intune, and you've implemented attack surface reduction (ASR) rules beyond the standard ASR rules, they may block the script. For more information, see [Block process creations originating from PSExec and WMI commands](/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules-reference#block-process-creations-originating-from-psexec-and-wmi-commands).
@@ -61,7 +61,7 @@ To use the script to troubleshoot a client device:
 1. Save the changes to *RunConfig.bat*, and then close the file.
 1. Open an elevated PowerShell window, navigate to the folder that contains the script files, and then run *RunConfig.bat*.
 
-## Reviewing the script ouput
+## Reviewing the script output
 
 The script creates a working folder in the folder that you identified in the `logPath` parameter in *RunConfig.bat*. The default folder name is *UA_yy_MM_dd_HH_mm_ss_GUID*, where *yy_MM_dd_HH_mm_ss* represents the date and time that you ran the script. The script saves all output files and other diagnostic files in this working folder.
 
@@ -117,7 +117,7 @@ These files record information that the script exports from the registry.
 This file records appraiser (sometimes referred to as Device Appraiser or Microsoft Compatibility Appraiser) information. Appraiser is the Windows component that corresponds to the compatibility updates. It assesses the apps and drivers on the device for compatibility with the latest version of Windows. Appraiser depends on the following files:
 
 - *%windir%\System32\appraiser.dll*. The file version must be 10.0.17763 or higher.
-- *%windir%\System32\CompatTelRunner.exe*. If the file does not exist, make sure that all compatibility updates have been installed on the device.
+- *%windir%\System32\CompatTelRunner.exe*. If the file doesn't exist, make sure that all compatibility updates are installed on the device.
 
 #### RegDataCollection.txt
 
