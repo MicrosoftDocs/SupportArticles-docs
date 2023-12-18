@@ -161,7 +161,7 @@ This information is primarily for use regarding Windows 7 devices. If you're wor
 
 #### RegDiagTrack.txt
 
-This file records all the registry settings for the Connected User Experiences and Telemetry (DiagTrack) (UTC) service. The entries that store these settings all reside under the `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\' subkey. The following excerpt shows such a report:
+This file records all the registry settings for the Connected User Experiences and Telemetry (DiagTrack) (UTC) service. The entries that store these settings all reside under the `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\` subkey. The following excerpt shows such a report:
 
 ```output
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack]
@@ -198,7 +198,7 @@ For example, consider the following value from the excerpt:
 hex(b):55,2a,aa,a7,ca,8a,d9,01
 ```
 
-To use DCode to convert this value, in DCode, select **Format** and then select **Hexadecimal (Big Endian). In **Value**, enter the following:
+To use DCode to convert this value, in DCode, select **Format** and then select **Hexadecimal (Big Endian)**. In **Value**, enter the following:
 
 ```console
 01d98acaa7aa2a55

@@ -44,7 +44,7 @@ If sufficient time has passed since the device was configured and enrolled and t
 ## Check the data transmission prerequisites for devices
 
 > [!NOTE]  
-> This section summarizes the data transmission prerequisites. For a full discussion of these requirements and an up-to-date list of endpoints, see [Enable Windows diagnostic data processor configuration](/privacy/configure-windows-diagnostic-data-in-your-organization#enable-windows-diagnostic-data-processor-configuration).
+> This section summarizes the data transmission prerequisites. For a full discussion of these requirements and an up-to-date list of endpoints, see [Enable Windows diagnostic data processor configuration](/windows/configure-windows-diagnostic-data-in-your-organization#enable-windows-diagnostic-data-processor-configuration).
 
 ### Requirements for devices
 
