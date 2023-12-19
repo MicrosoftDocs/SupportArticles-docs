@@ -15,14 +15,6 @@
         tocHref: /windows-server/get-started/
         topicHref: /troubleshoot/azure/virtual-machines/welcome-virtual-machines
 
-    - name: Azure
-      tocHref: /azure/virtual-machines/
-      topicHref: /windows-server/deployment/
-      items:
-      - name: Virtual Machines
-        tocHref: /azure/virtual-machines/
-        topicHref: /troubleshoot/windows-server/deployment/error-0xc004e015-sl-e-eul-consumption-failed-activate-windows
-
   - name: Troubleshoot
     tocHref: /azure/
     topicHref: /troubleshoot/index
@@ -58,4 +50,16 @@
       items:
       - name: Virtual Machines
         tocHref: /azure/virtual-machines/
+        topicHref: /troubleshoot/azure/virtual-machines/welcome-virtual-machines
+
+  - name: Troubleshoot
+    tocHref: /windows-server/
+    topicHref: /troubleshoot/index
+    items:
+    - name: Azure
+      tocHref: /windows-server/deployment/
+      topicHref: /troubleshoot/azure/index
+      items:
+      - name: Virtual Machines
+        tocHref: /windows-server/deployment/
         topicHref: /troubleshoot/azure/virtual-machines/welcome-virtual-machines
