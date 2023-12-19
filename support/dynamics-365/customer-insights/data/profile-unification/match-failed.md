@@ -3,11 +3,11 @@ title: Match failed error in Dynamics 365 Customer Insights - Data
 description: Provides a resolution for an issue where match failures occur in Microsoft Dynamics 365 Customer Insights - Data.
 author: Scott-Stabbert
 ms.author: sstabbert
-ms.date: 12/18/2023
+ms.date: 12/19/2023
 ms.reviewer: v-wendysmith, mhart
 ms.custom: bap-template
 ---
-# "Match failed" error occurs on the "Deduplication rules" or "Matching rules" card 
+# "Match failed" error occurs on the "Deduplication rules" or "Matching rules" page 
 
 [!INCLUDE [consolidated-sku](../../includes/consolidated-sku.md)]
 
@@ -15,7 +15,7 @@ This article provides a resolution for an issue where data unification fails due
 
 ## Symptoms
 
-The following error message appears on the **Deduplication rules** or **Matching rules** card on the **Data unification** page.
+The following error message appears on the **Deduplication rules** or **Matching rules** page.
 
 > Match failed.
 

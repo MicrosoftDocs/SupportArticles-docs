@@ -1,13 +1,13 @@
 ---
-title: Merge failed error on the Unified data view card
+title: Merge failed error on the Unified data view page
 description: Provides a resolution for an issue where merge failures occur in Microsoft Dynamics 365 Customer Insights - Data.
 author: Scott-Stabbert
 ms.author: sstabbert
-ms.date: 12/18/2023
+ms.date: 12/19/2023
 ms.reviewer: v-wendysmith, mhart
 ms.custom: bap-template
 ---
-# "Merge failed" error occurs on the "Unified data view" card in Dynamics 365 Customer Insights - Data
+# "Merge failed" error occurs on the "Unified data view" page in Dynamics 365 Customer Insights - Data
 
 [!INCLUDE [consolidated-sku](../../includes/consolidated-sku.md)]
 
@@ -15,7 +15,7 @@ This article resolves an issue where data unification fails due to a merge error
 
 ## Symptoms
 
-The following error message appears on the **Unified data view** card on the **Data unification** page.
+The following error message appears on the **Unified data view** page.
 
 > Merge failed.
 
