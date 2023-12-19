@@ -61,6 +61,6 @@ To restore the permissions of the SELF account, follow these steps:
 
    - **Local Access**  
    - **Remote Access**  
-   :::image:::
+    :::image type="content" source="media/dcom-access-permissions-for-activation/dcom-access-permissions-for-activation.png" alt-text="Screenshot of the Access Permissions dialog box and its parent My Computer Properties dialog box, from Configuration Manager > Component Services > Computers > My Computer.":::
 1. Select **OK** to close **Access Permission**, and then select **OK** to close **My Computer properties**.
 1. Restart the computer.
