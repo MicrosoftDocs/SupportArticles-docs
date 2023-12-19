@@ -499,6 +499,8 @@
   items:
   - name: Troubleshoot Windows activation problems
     href: troubleshoot-activation-problems.md
+  - name: Error 0x800705B4 when activating Windows VM
+    href: windows-vm-activation-error-0x800705b4.md
   - name: Windows virtual machine activation FAQ
     href: windows-virtual-machine-activation-faq.yml
   - name: Activation fails in forced tunneling scenario
