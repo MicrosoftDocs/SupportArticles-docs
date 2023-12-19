@@ -4,7 +4,7 @@ description: Resolves common issues with publishing a mobile offline profile in 
 ms.author: andreo
 author: Andrea-Orimoto
 ms.reviewer: mhart
-ms.date: 12/14/2023
+ms.date: 12/19/2023
 ms.custom: sap:offline-data-sync-other
 ---
 # Troubleshoot issues with publishing a mobile offline profile
@@ -13,7 +13,13 @@ This article helps you solve issues with publishing a [mobile offline profile](/
 
 ## Symptoms
 
-You might receive error messages when trying to publish a mobile offline profile.
+You might receive one of the following error messages when trying to publish a mobile offline profile.
+
+> The profile \<name-of-offline-profile> could not be published because one or more tables exceed the allowed number of relationships of 10. Please reduce the number of relationships for the following table(s): \<entity-logical-name>.
+
+> The profile \<name-of-offline-profile> could not be published because it contains a circular relationship. Please review and remove one of the following relationships: '\<entity1-logical-name> => \<entity2-logical-name> => \<entity1-logical-name>'.
+
+> The profile \<name-of-offline-profile> could not be published because it is configured to download related records only for table: \<entity-logical-name>, but no relationships are specified. Please review the filter selection of "download related records only" for table \<entity-logical-name> and select at least one relationship or change the filter type for the table \<entity-logical-name>.
 
 ## Resolution
 
