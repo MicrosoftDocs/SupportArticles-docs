@@ -37,7 +37,7 @@ This troubleshooter runs automatically on devices to meet the following criteria
 
 |Activation date|Retirement date|More information|
 |---|---|---|
-|3/15/2023||[(https://aka.ms/AAhdpvb)](https://aka.ms/AAhdpvb)|
+|3/15/2023||[https://aka.ms/AAhdpvb](https://aka.ms/AAhdpvb)|
 
 
 ## Access work or school troubleshooter for restoring access to M365 desktop applications

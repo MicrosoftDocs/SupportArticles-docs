@@ -1,18 +1,16 @@
 ---
 title: You can't add a line to a purchase requisition after you request a change
 description: Provides a resolution for the issue that the system doesn't allow you to add a line to a purchase requisition after you request a change.
-author: GalynaFedorova
+author: Henrikan
 ms.date: 04/11/2021
-ms.topic: troubleshooting
 ms.search.form: PurchReqTable
 audience: Application User
 ms.reviewer: kamaybac
 ms.search.region: Global
-ms.author: gfedorova
+ms.author: henrikan
 ms.search.validFrom: 2021-04-11
 ms.dyn365.ops.version: 10.0.19
 ---
-
 # You can't add a line to a purchase requisition after you request a change
 
 KB number: 4611211
