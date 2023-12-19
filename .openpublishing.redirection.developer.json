@@ -4393,6 +4393,16 @@
       "source_path": "support/azure/virtual-machines/error-code-0xc000000f.md",
       "redirect_url": "/troubleshoot/azure/virtual-machines/boot-error-0xc000000f",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/webapps/iis/www-service-svchost/disable-winhttp-tracing-sdp.md",
+      "redirect_url": "/previous-versions/troubleshoot/iis/disable-winhttp-tracing-sdp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/webapps/iis/general/expression-web-faq.yml",
+      "redirect_url": "/previous-versions/troubleshoot/iis/expression-web-faq",
+      "redirect_document_id": false
     }
   ]
 }
