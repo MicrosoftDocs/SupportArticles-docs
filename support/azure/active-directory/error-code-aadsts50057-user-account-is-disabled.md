@@ -3,13 +3,12 @@
 # For more information, see https://review.learn.microsoft.com/en-us/help/platform/learn-editor-add-metadata?branch=main
 # For valid values of ms.service, ms.prod, and ms.topic, see https://review.learn.microsoft.com/en-us/help/platform/metadata-taxonomies?branch=main
 
-title:       # Add a title for the browser tab
-description: # Add a meaningful description for search results
+title: Error AADSTS50057 - User account is disabled
+description: Describes a problem in which a user receives the error AADSTS50057 when trying to sign-in
 author:      custorod # GitHub alias
-ms.author:    # Microsoft alias
-ms.service:  # Add the ms.service or ms.prod value
-# ms.prod:   # To use ms.prod, uncomment it and delete ms.service
-ms.topic:    # Add the ms.topic value
+ms.author: custorod
+ms.service: identity
+ms.topic: troubleshooting-problem-resolution
 ms.date:     12/19/2023
 ---
 
