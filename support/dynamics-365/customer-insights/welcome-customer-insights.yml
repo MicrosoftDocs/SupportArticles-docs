@@ -22,6 +22,18 @@ landingContent:
         links:
           - text: Troubleshoot Power Query data source refresh issues
             url: data/data-ingestion/power-query-data-source-refresh-issues-dataflows.md
+
+  # Card
+  - title: Data unification
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Match failed error
+            url: data/profile-unification/match-failed.md
+          - text: Merge failed error
+            url: data/profile-unification/merge-failed.md
+          - text: Missing business unit values
+            url: data/profile-unification/missing-business-unit.md
             
   # Card
   - title: Environment management
@@ -47,29 +59,8 @@ landingContent:
           - text: Troubleshoot segment not eligible for export
             url: data/exports/ineligible-segments-b-to-b.md
 
-  # Card
-
-  - title: Data ingestion
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Troubleshoot Power Query data source refresh issues
-            url: data/data-ingestion/power-query-data-source-refresh-issues-dataflows.md
 
   # Card
-  - title: Data unification
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Match failed error
-            url: data/profile-unification/match-failed.md
-          - text: Merge failed error
-            url: data/profile-unification/merge-failed.md
-          - text: Missing business unit values
-            url: data/profile-unification/missing-business-unit.md
-
-  # Card
-
   - title: Insights
     linkLists:
       - linkListType: how-to-guide
