@@ -13,8 +13,8 @@ This article provides a solution to an error 0x800705B4 that occurs when you try
 When you try to activate an Azure Windows VM, you receive the 0x800705B4 error:
 
 > **Windows Activation**  
-> A problem occured when Windows tried to activate. Error Code 0x00705B4.  
-> For a possible resolution, click More Information. 
+> A problem occured when Windows tried to activate. Error Code 0x800705B4.  
+> For a possible resolution, click More Information.  
 > Contact your system administrator or technical support department for assistance.
 
 :::image type="content" source="media/windows-vm-activation-error-0x800705b4/error-0x800705b4.png" alt-text="Screenshot of the error 0x800705B4 and error message." border="false":::
