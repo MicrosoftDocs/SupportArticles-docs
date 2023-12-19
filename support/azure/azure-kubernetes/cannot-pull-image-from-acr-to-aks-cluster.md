@@ -64,11 +64,11 @@ An AKS cluster requires an identity. This identity can be either a managed ident
 
 Several solutions can help you resolve this error, subject to the following constraints:
 
-- Solutions [2][cause1-solution2], [3][cause1-solution3], and [4][cause1-solution4] are applicable only to [AKS clusters that use a service principal](/azure/aks/kubernetes-service-principal).
+- Solutions [2][cause1-solution2], [3][cause1-solution3], and [5][cause1-solution5] are applicable only to [AKS clusters that use a service principal](/azure/aks/kubernetes-service-principal).
 
-- Solutions [1][cause1-solution1], [2][cause1-solution2], and [3][cause1-solution3] are applicable for the Azure method of [creating the role assignment at Container Registry level for AKS's identity](/azure/aks/cluster-container-registry-integration).
+- Solutions [1][cause1-solution1], [2][cause1-solution2], [3][cause1-solution3], and [4][cause1-solution4] are applicable for the Azure method of [creating the role assignment at Container Registry level for AKS's identity](/azure/aks/cluster-container-registry-integration).
 
-- Solutions [4][cause1-solution4] and [5][cause1-solution5] are applicable for the Kubernetes method of [pulling a Kubernetes secret](https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/).
+- Solutions [5][cause1-solution5] and [6][cause1-solution6] are applicable for the Kubernetes method of [pulling a Kubernetes secret](https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/).
 
 ### Solution 1: Make sure AcrPull role assignment is created for identity
 
@@ -128,7 +128,33 @@ In some cases, the container registry role assignment still refers to the old se
 
 1. Compare the two service principals. If they don't match, integrate the AKS cluster with the container registry again.
 
-### Solution 4: Make sure service principal is correct and secret is valid
+### Solution 4: Make sure the kubelet identity is referenced in the AKS VMSS
+
+When a managed identity is used for authenticating with the ACR, that managed identity is known as the kubelet identity. The kubelet identity is by default assigned at AKS VMSS level. If the kubelet identity was removed from the AKS VMSS, it will result in the inability of the AKS nodes to pull from the ACR.
+
+To find which is the kubelet identity of your AKS cluster, run the following command:
+
+   ```azurecli
+   az aks show --resource-group <MyResourceGroup> --name <MyManagedCluster> --query identityProfile.kubeletidentity
+   ```
+
+Then, you can list the identities of the AKS VMSS by opening in the Azure Portal the **VMSS from the node resource group** > **Identity** > **User assigned** or by running the following command:
+
+   ```azurecli
+   az vmss identity show --resource-group <NodeResourceGroup> --name <AksVmssName>
+   ```
+
+If the kubelet identity of your AKS cluster is not assigned to the AKS VMSS, it represents an issue and it needs to be assigned back. 
+
+> [!NOTE]
+> [Modifying the AKS VMSS using the IaaS APIs (or simply modifying it from the Azure Portal) is not supported](/azure/aks/support-policies#user-customization-of-agent-nodes) and no AKS operation will remove the kubelet identity from the AKS VMSS. This means that something unexpected removed it, for example, a manual removal performed by a team member. To prevent this kind of removal or modification, you can consider using the [NRGLockdown Feature](/azure/aks/cluster-configuration#fully-managed-resource-group-preview).
+
+Because modifications for the AKS VMSS are not supported, they do not propagate at AKS level. This means that, to reassign the kubelet identity to the AKS VMSS, a reconcile operation is needed. That can be performed by running the following command:
+
+   ```azurecli
+   az aks update --resource-group <MyResourceGroup> --name <MyManagedCluster>
+   ```
+### Solution 5: Make sure the service principal is correct and secret is valid
 
 If you pull an image by using an [image pull secret](https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/), and that Kubernetes secret was created by using the values of a service principal, make sure that the associated service principal is correct and the secret is still valid. Follow these steps:
 
@@ -152,7 +178,7 @@ If you pull an image by using an [image pull secret](https://kubernetes.io/docs/
 
 1. Update or re-create the Kubernetes secret accordingly.
 
-### Solution 5: Make sure the Kubernetes secret has the correct values of the container registry admin account
+### Solution 6: Make sure the Kubernetes secret has the correct values of the container registry admin account
 
 If you pull an image by using an [image pull secret](https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/), and that Kubernetes secret was created by using values of [container registry admin account](/azure/container-registry/container-registry-authentication#admin-account), make sure that the values in the Kubernetes secret are the same as the values of the container registry admin account. Follow these steps:
 
@@ -313,5 +339,6 @@ If the troubleshooting guidance in this article doesn't help you resolve the iss
 [cause1-solution1]: #solution-1-make-sure-acrpull-role-assignment-is-created-for-identity
 [cause1-solution2]: #solution-2-make-sure-service-principal-isnt-expired
 [cause1-solution3]: #solution-3-make-sure-acrpull-role-is-assigned-to-correct-service-principal
-[cause1-solution4]: #solution-4-make-sure-service-principal-is-correct-and-secret-is-valid
-[cause1-solution5]: #solution-5-make-sure-the-kubernetes-secret-has-the-correct-values-of-the-container-registry-admin-account
+[cause1-solution4]: #solution-4-make-sure-the-kubelet-identity-is-referenced-in-the-aks-vmss
+[cause1-solution5]: #solution-5-make-sure-the-service-principal-is-correct-and-secret-is-valid
+[cause1-solution6]: #solution-6-make-sure-the-kubernetes-secret-has-the-correct-values-of-the-container-registry-admin-account
