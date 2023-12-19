@@ -1,5 +1,5 @@
 ---
-title: AVMA activation method isn't supported in Azure Windows VM
+title: Windows VM activation error - 0xC004FD02
 description: Provides a solution to an error 0xC004FD02 that occurs when you try to activate an Azure Windows virtual machine (VM).
 ms.service: virtual-machines
 ms.subservice: vm-windows-activation
@@ -21,7 +21,7 @@ When you try to activate an Azure Windows VM, you receive an error message that 
 > Description:  
 > Windows isn't activated on the host machine. Please contact your system administrator.
 
-:::image type="content" source="media/error-0xc004fd02-activate-windows-vm/error-0xc004fd02.png" alt-text="Screenshot of the error 0xC004FD02 and error message.":::
+:::image type="content" source="media/windows-vm-activation-error-0xc004fd02/error-0xc004fd02.png" alt-text="Screenshot of the error 0xC004FD02 and error message.":::
 
 ## Cause
 
@@ -35,7 +35,7 @@ This issue can happen in one of the following scenarios:
 
 To confirm the AVMA configuration, open the Command Prompt as an administrator and run the `slmgr /dlv` command. After the command execution, a **Windows Script Host** window appears:
 
-:::image type="content" source="media/error-0xc004fd02-activate-windows-vm/windows-script-host.png" alt-text="Screenshot of the Windows Script Host window.":::
+:::image type="content" source="media/windows-vm-activation-error-0xc004fd02/windows-script-host.png" alt-text="Screenshot of the Windows Script Host window.":::
 
 The "VIRTUAL_MACHINE_ACTIVATION" in the **Description** line means that the AVMA activation method is used.
 
