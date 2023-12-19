@@ -12,18 +12,18 @@ localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate
 ms.custom: sap:activation, csstroubleshoot
 ms.technology: windows-server-deployment
-keywords: Windows Server 2012 R2, Activation, 0x80070005, access denied
+keywords: Windows, Activation, 0x80070005, access denied
 ---
 
-# Error 0x80070005 "Access denied" when you activate Windows Server 2012 R2
+# Error 0x80070005 "Access denied" when you activate Windows
 
 This article describes how to fix Windows activation error 0x80070005 (access denied).
 
-_Applies to:_ &nbsp; Windows Server 2012 R2
+_Applies to:_ &nbsp; Windows Server, all versions, and Windows client, all versions
 
 ## Symptoms
 
-You run the `slmgr /ato` command to activate a domain-joined computer that's running Windows Server 2012 R2. However, Windows doesn't activate and you see the following message:
+You run the `slmgr /ato` command to activate a domain-joined computer that's running Windows. However, Windows doesn't activate and you see the following message:
 
 > Windows Script Host Activating Windows(R), ServerDatacenter edition (00091344-1ea4-4f37-b789-01750ba6988c) ... Error: 0x80070005 Access denied: the requested action requires elevated privileges
 
