@@ -61,6 +61,8 @@
         href: error-code-AADSTS50020-user-account-identity-provider-does-not-exist.md
       - name: Error AADSTS500571 - guest user account is disabled
         href: error-code-aadsts500571-guest-user-account-is-disabled.md
+      - name: Error AADSTS50057 - user account is disabled
+        href: error-code-aadsts50057-user-account-is-disabled.md
       - name: Error AADSTS50105 - user not assigned a role
         href: error-code-AADSTS50105-user-not-assigned-role.md
       - name: Error AADSTS650056 - misconfigured app
