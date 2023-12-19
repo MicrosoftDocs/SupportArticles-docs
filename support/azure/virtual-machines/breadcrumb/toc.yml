@@ -59,6 +59,7 @@
     - name: Azure
       tocHref: /troubleshoot/windows-server/
       topicHref: /troubleshoot/azure/index
+      items:
       - name: Virtual Machines
         tocHref: /troubleshoot/windows-server/deployment/
         topicHref: /troubleshoot/azure/virtual-machines/welcome-virtual-machines
