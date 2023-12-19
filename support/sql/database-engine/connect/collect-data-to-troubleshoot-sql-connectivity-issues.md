@@ -57,7 +57,7 @@ Follow these steps simultaneously on both the client and server computers. If th
 1. Clear tickets on each server by running the `KLIST -li 0x3e7 purge` command.
 
     > [!NOTE]
-    > Type the command. Don't copy and paste into the command line because the dash might get converted to a hyphen and break the command. `KLIST` is case-sensitive.
+    > Type the command. Don't copy and paste into the command line because the hyphen might get converted to a long (em) dash. `KLIST` is case-sensitive.
 
 1. Reproduce the issue.
 
@@ -112,7 +112,7 @@ For a Linked Server, collect server information for both the mid-tier server and
 - What is the name of the SQL Server instance?
 - Which protocols are enabled?
 - Which is the port that the server listens on?
-- What is the name of the server pipe? You can find this information in the (ERRORLOG).
+- What is the name of the server pipe? You can find this information in the error log.
 - Which type of environment is used? Is it physical, virtual, or cloud? For example, IaaS (SQL in an Azure VM) or PaaS (Azure SQL Database, SQL MI).
 - Is the database standalone, clustered, mirrored, or Always On?
 - What is the Failover partner name and IP address?
