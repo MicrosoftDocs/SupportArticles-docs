@@ -44,7 +44,7 @@ To resolve this issue, follow these steps:
 
 1. Check that you're connecting to the correct server.
 
-1. If the server isn't the appropriate one, then the connection string.
+1. If the server isn't the appropriate one, then fix the connection string to point to the correct one.
 
 1. If the connection string is correct, add the login to the database.
 
