@@ -19,7 +19,7 @@ keywords: Windows Update for Business reports, WUBr, diagnostic data, telemetry
 
 _Applies to:_ &nbsp; Windows Server, all supported versions
 
-When you're troubleshooting, you can use the Windows Update for Business reports configuration script to test endpoint connectivity, ensure the right services are running, and check for common issues.  
+When you're troubleshooting, you can use the Windows Update for Business reports configuration script to test endpoint connectivity, make sure that the correct services are running, and check for common issues.  
 
 You can download the script from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=101086).  
 
@@ -30,10 +30,10 @@ For more information about the script, including the available parameters, see [
 
 ## Configuring the script
 
-The device must have Windows 10 or a later version, and the latest version of Windows PowerShell. To run the script, you have to use an elevated PowerShell window on the device (the script itself runs in the System context).  
+The device must have Windows 10 or a later version and the latest version of Windows PowerShell installed. To run the script, you have to use an elevated PowerShell window on the device (the script itself runs in the System context).  
 
 > [!IMPORTANT]  
->  - The script package includes *PSExec.exe*. If you use a mobile device manager such as Microsoft Intune, and you've implemented attack surface reduction (ASR) rules beyond the standard ASR rules, they may block the script. For more information, see [Block process creations originating from PSExec and WMI commands](/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules-reference#block-process-creations-originating-from-psexec-and-wmi-commands).
+>  - The script package includes *PSExec.exe*. If you use a mobile device manager such as Microsoft Intune, and you've implemented attack surface reduction (ASR) rules beyond the standard ASR rules, the rules might block the script. For more information, see [Block process creations originating from PSExec and WMI commands](/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules-reference#block-process-creations-originating-from-psexec-and-wmi-commands).
 > - After you finish troubleshooting the device, remove *PSExec.exe*.
 
 ## Running the script
@@ -46,19 +46,19 @@ To use the script to troubleshoot a client device:
 1. Edit *RunConfig.bat* to set the following required parameters:  
 
     - `runMode=Pilot`
-    - `logPath=<path the folder that you created for log data>`
+    - `logPath=<path of the folder that you created for log data>`
 
-     > [!NOTE]  
-     > - Pilot mode is a verbose mode. The script has another mode, Deployment, that runs silently.
-     > - Don't modify the `Commercial ID` parameters. They're used for the earlier version of Windows Update for Business reports (Update Compliance).  
+   > [!NOTE]  
+   > - Pilot mode is a verbose mode. The script has another mode, Deployment, that runs silently.
+   > - Don't modify the `Commercial ID` parameters. They're used for the earlier version of Windows Update for Business reports (Update Compliance).  
 
-1. If you want to set additional parameters, the following *RunConfig.bat* parameters are optional:
+1. If you want to set additional parameters, the following *RunConfig.bat* parameters are optional.
 
    | Parameter| Allowed values and description | Example |
    | - | - | - |
-   | logMode | **0**: Log only to the console.</br>**1** (default): Log to file and console.</br>**2**: Log only to file. | `logMode=2` |
-   | DeviceNameOptIn | **true** (default): Device name is sent to Microsoft. </br> **false**: Device name isn't sent to Microsoft. | `DeviceNameOptIn=true` |
-   | ClientProxy | **Direct** (default): The device connects directly to the endpoints. </br>**System**: The device connects by using a system proxy, without authentication.</br>**User**: The device connects by using the user account's internet configuration. The connection might or might not require user authentication.</br></br>For more information, see [How the Windows Update client determines which proxy server to use to connect to the Windows Update website](https://support.microsoft.com/topic/how-the-windows-update-client-determines-which-proxy-server-to-use-to-connect-to-the-windows-update-website-08612ae5-3722-886c-f1e1-d012516c22a1) | `ClientProxy=Direct` |  
+   | logMode | **0**: Log only to the console.</br>**1:** (default) Log to file and console.</br>**2**: Log only to file. | `logMode=2` |
+   | DeviceNameOptIn | **true**: (default) Device name is sent to Microsoft. </br> **false**: Device name isn't sent to Microsoft. | `DeviceNameOptIn=true` |
+   | ClientProxy | **Direct**: (default) The device connects directly to the endpoints. </br>**System**: The device connects by using a system proxy, without authentication.</br>**User**: The device connects by using the user account's internet configuration. The connection might not require user authentication.</br></br>For more information, see [How the Windows Update client determines which proxy server to use to connect to the Windows Update website](https://support.microsoft.com/topic/how-the-windows-update-client-determines-which-proxy-server-to-use-to-connect-to-the-windows-update-website-08612ae5-3722-886c-f1e1-d012516c22a1) | `ClientProxy=Direct` |  
 
 1. Save the changes to *RunConfig.bat*, and then close the file.
 1. Open an elevated PowerShell window, navigate to the folder that contains the script files, and then run *RunConfig.bat*.
@@ -69,7 +69,7 @@ The script creates a working folder in the folder that you identified in the `lo
 
 ### Analyzing the script log file and error codes
 
-The script log file, *UA_yy_MM_dd_HH_mm_ss_GUID.txt*, has the same name as the working folder. You should review this file first. You can use the following table to interpret any error codes that're listed in the file.  
+The script log file, *UA_yy_MM_dd_HH_mm_ss_GUID.txt*, has the same name as the working folder. You should review this file first. You can use the following table to interpret any error codes that are listed in the file.  
 
 | Error  | Description|
 | - | - |
@@ -118,12 +118,12 @@ These files record information that the script exports from the registry.
 
 This file records appraiser (sometimes referred to as Device Appraiser or Microsoft Compatibility Appraiser) information. Appraiser is the Windows component that corresponds to the compatibility updates. It assesses the apps and drivers on the device for compatibility with the latest version of Windows. Appraiser depends on the following files:
 
-- *%windir%\System32\appraiser.dll*. The file version must be 10.0.17763 or higher.
+- *%windir%\System32\appraiser.dll*. The file version must be 10.0.17763 or later.
 - *%windir%\System32\CompatTelRunner.exe*. If the file doesn't exist, make sure that all compatibility updates are installed on the device.
 
 #### RegDataCollection.txt
 
-This file records the DataCollection settings. This data represents the current telemetry configuration of the device, as per applied policies.
+This file records the DataCollection settings. This data represents the current telemetry configuration of the device, per applied policies.
 
 You can use this data to verify that the appropriate values are applied to transmit diagnostic data to Microsoft. This data resembles the following excerpt:  
 
@@ -146,7 +146,7 @@ This file records device-level and user-level settings for controlling diagnosti
 
 The `AllowTelemetry` entry controls the type (if any) of diagnostic data to transmit. The entry has the following allowed values:
 
-- **0** &ndash; Security (This value is only supported on Enterprise, Education, and Server editions of Windows.)
+- **0** &ndash; Security (This value is supported on only Enterprise, Education, and Server editions of Windows.)
 - **1** &ndash; Basic (required) telemetry
 - **2** &ndash; Enhanced telemetry
 - **3** &ndash; Full telemetry
@@ -159,11 +159,11 @@ The user-level configuration data resembles the following excerpt:
 
 #### RegSQM.txt
 
-This information is primarily for use regarding Windows 7 devices. If you're working with later Windows versions, you can use this information as a fallback identifier for the device.
+This information is primarily about Windows 7 devices. If you're working in later Windows versions, you can use this information as a fallback identifier for the device.
 
 #### RegDiagTrack.txt
 
-This file records all the registry settings for the Connected User Experiences and Telemetry (DiagTrack) (UTC) service. The entries that store these settings all reside under the `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\` subkey. The following excerpt shows such a report:
+This file records all the registry settings for the Connected User Experiences and Telemetry (DiagTrack) (UTC) service. All the entries that store these settings reside under the `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\` subkey. The following excerpt shows such a report:
 
 ```output
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack]
@@ -191,22 +191,21 @@ This file records all the registry settings for the Connected User Experiences a
 
 ##### Using the DCode tool to convert hexadecimal values to date-time format
 
-As shown by the previous excerpt, many of these entries use big-endian hexadecimal format. To convert them to UTC dates and times, use a tool such as [DCode](https://www.digital-detective.net/dcode/). This tool is available as a free download.
+As shown in the previous excerpt, many of these entries use big-endian hexadecimal format. To convert them to UTC dates and times, use a tool such as [DCode](https://www.digital-detective.net/dcode/). This tool is available as a free download.
 
-The DCode tool uses input values that have a slightly different format than the one that the file uses. You have to reverse the sequence of the segments, and then remove all non-numeric characters.
-For example, consider the following value from the excerpt:
+The DCode tool uses input values that have a slightly different format than the one that the file uses. You have to reverse the sequence of the segments, and then remove all non-numeric characters. For example, consider the following value from the excerpt:
 
 ```console
 hex(b):55,2a,aa,a7,ca,8a,d9,01
 ```
 
-To use DCode to convert this value, in DCode, select **Format** and then select **Hexadecimal (Big Endian)**. In **Value**, enter the following:
+To convert this value, open DCode, select **Format**, and then select **Hexadecimal (Big Endian)**. In **Value**, enter the following:
 
 ```console
 01d98acaa7aa2a55
 ```
 
-Then select **Decode**. The list of results includes a **Windows FileTime (UTC)** entry that has the value **2023-05-20 03:24:58.5114197 Z**.  
+Then, select **Decode**. The list of results includes a **Windows FileTime (UTC)** entry that has the value, **2023-05-20 03:24:58.5114197 Z**.  
 
 > [!NOTE]  
-> By default, all dates and times are Coordinated Universal Time (UTC) values. You can use DCode's **Time Zone** setting to display the time stamp in a different time zone.
+> By default, all dates and times are Coordinated Universal Time (UTC) values. To display the time stamp in a different time zone, use the **Time Zone** setting in DCode.
