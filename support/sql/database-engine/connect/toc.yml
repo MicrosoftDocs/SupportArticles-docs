@@ -16,8 +16,8 @@ items:
      href: domain-trust-error.md
    - name: Disjoint DNS Namespace
      href: disjoint-dns-namespace-error.md
-   - name: Explicit SPN is missing
-     href: explicit-spn-is-missing.md
+   - name: Explicit SPN is misplaced
+     href: explicit-spn-is-misplaced.md
    - name: Local security subsystem issues
      href: local-security-subsystem-issues.md
    - name: Named Pipes connections fail
