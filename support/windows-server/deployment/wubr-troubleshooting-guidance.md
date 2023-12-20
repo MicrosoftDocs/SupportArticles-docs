@@ -35,7 +35,7 @@ Here's a list of the basic steps to resolve most Windows Update for Business rep
 - Verify that the devices are turned on, active, and can scan for Windows updates. To be included in reports, a device must have been active at least one time in the past 28 days.
 - Make sure that each device has the **Allow device name to be sent in Windows diagnostic data** policy enabled.
 - Check the size of the report. For performance, the default limit for rows in Azure workbooks is set to 1,000. If your report has more than 1,000 rows, do one of the following:
-  - Export the report data to Excel to view the whole report
+  - Export the report data to Excel to view the whole report.
   - To view the information in Logs view, select the three-dot icon that's next to the component of interest.
   - Check the policy configuration.
 
