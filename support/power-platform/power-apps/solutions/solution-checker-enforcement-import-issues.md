@@ -18,7 +18,7 @@ _Applies to:_ &nbsp; Power Platform, Solutions
 
 When you try to [import a solution](/powerapps/maker/data-platform/import-update-export-solutions), you receive one of the following error or warning messages:
 
-> Error: Solution is blocked from importing due to critical violations. Fix these violations and run Solution Checker before retrying.
+> Error: Solution is blocked from importing due to critical violations. Fix these violations, then retry the import.
 
 > Warning: There are critical violations in this solution. You can block solutions with critical violations by enabling Solution Checker enforcement in Managed Environments settings page.
 
