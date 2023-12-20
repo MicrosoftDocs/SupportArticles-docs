@@ -7,8 +7,8 @@ items:
   href: consistent-sql-network-connectivity-issue.md
 - name: Existing connection forcibly closed
   href: tls-exist-connection-closed.md
-- name: Explicit SPN is missing issue
-  href: explicit-spn-is-missing.md
+- name: Explicit SPN is misplaced issue
+  href: explicit-spn-is-misplaced.md
 - name: Intermittent or periodic authentication issues
   href: intermittent-periodic-authentication.md
 - name: Login failed for user

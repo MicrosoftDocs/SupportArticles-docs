@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting the explicit misplaced SPN issue 
-description: This article provides symptoms and solution for troubleshooting the explicit SPN is missing issue.
+description: This article provides symptoms and solution for troubleshooting the explicit SPN is misplaced.
 ms.date: 12/20/2023
 author: Malcolm-Stewart
 ms.author: mastewa
