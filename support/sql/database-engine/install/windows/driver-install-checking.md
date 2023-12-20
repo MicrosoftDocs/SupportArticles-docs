@@ -44,8 +44,8 @@ Let's delve into the methods to efficiently check the installation status of the
 When it comes to navigating the vast landscape of drivers and providers, understanding their support structures is crucial for seamless operations and troubleshooting. Here's an overview of the support mechanisms for different third-party drivers and providers:
 
 - 3rd-party drivers and Providers are ultimately supported by the vendor.
-- For drivers and Providers that come preinstalled with Windows: SQL Server, FoxPro, Microsoft ODBC for Oracle, and Access (and its IISAM drivers, Text, Paradox, dBase, Excel, etc.), generally you must repair or reinstall Windows. The [Microsoft Windows support team](/contactus#!) can assist. These drivers shouldn't be used for new application development.
-- For the ACE Provider and the ODBC drivers that derive from it, such as the Excel ODBC driver, the [Access or Office teams](/contactus#!) would support this.
+- For drivers and Providers that come preinstalled with Windows: SQL Server, FoxPro, Microsoft ODBC for Oracle, and Access (and its IISAM drivers, Text, Paradox, dBase, Excel, etc.), generally you must repair or reinstall Windows. The [Microsoft Windows support team](https://support.microsoft.com/en-us/contactus#!) can assist. These drivers shouldn't be used for new application development.
+- For the ACE Provider and the ODBC drivers that derive from it, such as the Excel ODBC driver, the [Access or Office teams](https://support.microsoft.com/en-us/contactus#!) would support this.
 - For the Microsoft DB/2 drivers and Providers, the Host Integration Services team supports this.
 - For the Active Directory Provider, the Active Directory team supports this.
 - For the Exchange Provider, the Exchange team supports this.
