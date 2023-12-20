@@ -4,7 +4,7 @@ description: Troubleshoot problems connecting to and accessing SMB Azure file sh
 services: storage
 ms.service: azure-file-storage
 ms.custom: devx-track-azurepowershell
-ms.date: 11/23/2023
+ms.date: 12/20/2023
 ms.reviewer: kendownie, jarrettr, v-weizhu, v-six, hanagpal
 ---
 # Troubleshoot Azure Files connectivity and access issues (SMB)
