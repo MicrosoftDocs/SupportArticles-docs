@@ -4,7 +4,7 @@ description: Provides a solution to the error 0xC004FD02 that occurs when you tr
 ms.service: virtual-machines
 ms.subservice: vm-windows-activation
 ms.collection: windows
-ms.date: 12/19/2023
+ms.date: 12/20/2023
 ms.reviewer: cwhitley, v-naqviadil, v-weizhu
 ---
 
