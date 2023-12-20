@@ -11,6 +11,8 @@ items:
   href: intermittent-periodic-authentication.md
 - name: Login failed for user
   href: /sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error?context=/troubleshoot/sql/context/context
+- name: Troubleshooting linked server account mapping error
+  href: linked-server-account-mapping-error.md
 - name: Network-related or instance-specific error
   href: network-related-or-instance-specific-error-occurred-while-establishing-connection.md
 - name: Pre-reqs for connectivity troubleshooting
