@@ -1,0 +1,81 @@
+### YamlMime:Landing
+
+title: Microsoft Sales Copilot troubleshooting # < 60 chars
+summary: Welcome to Microsoft Sales Copilot troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Microsoft Sales Copilot. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+metadata:
+  title: Microsoft Sales Copilot troubleshooting
+  description: Landing page for Microsoft Sales Copilot troubleshooting articles. # Required; article description that is displayed in search results. < 160 chars.
+  ms.service: microsoft-sales-copilot  #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.topic: landing-page # Required
+  author:   #Required; your GitHub user alias, with correct capitalization.
+  ms.author:  #Required; microsoft alias of author; optional team alias.
+  ms.date: 12/19/2023
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+ # Card
+  - title: Outlook side panel
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Update add-in error in Sales Copilot for Microsoft Outlook
+            url: tsg-update-add-in-error.md
+          - text: Sign in issue when opening the Sales Copilot pane in Outlook
+            url: tsg-sign-in-error.md
+
+ # Card
+  - title: Setup, installation, and sign-in
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: First Salesforce CRM user unable to access Sales Copilot
+            url: tsg-trial-env.md
+          - text: Error after connecting and signing in to Salesforce CRM
+            url: tsg-api-perm.md
+          - text: Sales Copilot doesn't connect to Dynamics 365 with two-factor authentication enabled
+            url: tsg-two-factor.md
+          - text: Unable to save email to CRM as enhanced email is turned off in Salesforce CRM
+            url: tsg-enhanced-email-sf.md
+          - text: Incorrect custom domain in Salesforce
+            url: tsg-incorrect-cust-domain.md
+
+ # Card
+  - title: Teams collaboration spaces
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Can't create private channels in Microsoft Teams
+            url: tsg-create-private-channel.md
+          - text: Opportunity summary not displayed in deal rooms
+            url: tsg-oppty-summary.md
+
+ # Card
+  - title: CRM permissions and configurations
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Salesforce CRM users unable to see data in Sales Copilot
+            url: tsg-no-column.md
+          - text: Missing privileges in Dynamics 365
+            url: tsg-missing-roles.md
+          - text: Unable to update records because of missing record access in Salesforce CRM
+            url: tsg-record-update-perm.md
+          - text: Unable to update records because of missing object access in Salesforce CRM
+            url: tsg-object-update-perm.md
+          - text: Unable to save email to CRM due to invalid mailbox settings
+            url: tsg-mailbox-settings.md
+
+
+# Card
+  - title: Documentation and training
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Sales Copilot documentation
+            url: /microsoft-sales-copilot/
+          - text: Sales Copilot training
+            url: /training/modules/boost-sales-performance/
+          - text: Dynamics 365 Community
+            url: https://techcommunity.microsoft.com/t5/microsoft-sales-copilot/ct-p/MicrosoftViva

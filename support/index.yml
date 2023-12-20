@@ -61,6 +61,11 @@ productDirectory:
     summary: Troubleshooting articles for Microsoft 365
     url: /office/troubleshoot
 
+  - title: Microsoft Copilot for Sales
+    imageSrc: "media/hub-landing/sales-copilot.svg"
+    summary: Troubleshooting articles for Microsoft Copilot for Sales
+    url: /sales-copilot/welcome-sales-copilot.yml
+
   - title: Microsoft Dynamics
     imageSrc: "media/hub-landing/microsoft.png"
     summary: Troubleshooting articles for Microsoft Dynamics
