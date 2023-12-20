@@ -22,15 +22,8 @@ The following screenshot shows an example of a page that includes the **Pick thi
 
 To solve the issue, follow these steps:
 
-#### Step 1: Enable the BOPIS extension in Commerce site builder
 
-To enable the "buy online, pick up in store (BOPIS)" extension in Commerce site builder, follow these steps:
-
-1. Select your site.
-1. Select **Site settings** > **Extensions**.
-1. Make sure that the **Disable BOPIS** option isn't selected.
-
-#### Step 2: Configure modes of delivery in Commerce headquarters
+#### Step 1: Configure modes of delivery in Commerce headquarters
 
 To configure modes of delivery in Commerce headquarters, follow these steps:
 
@@ -40,7 +33,7 @@ To configure modes of delivery in Commerce headquarters, follow these steps:
 1. In the left navigation, select **Customer orders**.
 1. Make sure that **Pickup mode of delivery** is correctly configured.
 
-#### Step 3: Configure customer orders payments
+#### Step 2: Configure customer orders payments
 
 To configure customer orders payments in Commerce headquarters, follow these steps:
 
