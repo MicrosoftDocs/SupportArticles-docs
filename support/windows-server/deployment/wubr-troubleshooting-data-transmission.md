@@ -19,29 +19,29 @@ keywords: Windows Update for Business reports, WUBr, diagnostic data, telemetry
 
 _Applies to:_ &nbsp; Windows Server, all supported versions
 
-This article is designed to help you troubleshoot when device data is missing from Windows Update for Business reports.
-When data is missing from your reports, there are three primary questions that you have to answer:  
+This article is designed to help you troubleshoot missing device data from Windows Update for Business reports.
+If data is missing from your reports, there are three primary questions that you have to answer:  
 
-- Did Windows Update for Business reports receive the data, and just fail to include it in reports?
-- Are the devices correctly configured to send diagnostic data, and have they attempted to send it?
+- Did Windows Update for Business reports receive the data but not include it in reports?
+- Are the devices correctly configured to send diagnostic data, and have they tried to send it?
 - Are network connections and permissions correctly configured, including any proxy servers?
 
 ## Verify that Windows Update for Business reports is receiving data
 
-After you enroll a device and configure it to share data, wait for 48 hours for data to start showing up in reports. In some cases, data from devices that aren't active much might take up to 14 days to show up in reports.
+After you enroll a device and configure it to share data, wait for 48 hours for data to start appearing in reports. In some cases, data from devices that aren't active much might take up to 14 days to appear in reports.
 
-To confirm that the reports service is receiving data from the device, [query](/windows/deployment/update/wufb-reports-use#display-windows-update-for-business-reports-data) the [UCClient table](/windows/deployment/update/wufb-reports-schema-ucclient). For example, the following query shows total enrolled device count per time-generated:  
+To verify that the reports service is receiving data from the device, [run a query](/windows/deployment/update/wufb-reports-use#display-windows-update-for-business-reports-data) the [UCClient table](/windows/deployment/update/wufb-reports-schema-ucclient). For example, the following query shows the total enrolled device count per time-generated:  
 
 `UCClient | summarize count() by TimeGenerated`
 
-:::image type="content" source="/windows/deployment/update/media/7760853-wufb-reports-time-generated.png" alt-text="Screenshot of using a Kusto (KQL) query for time generated on Windows Update for Business reports data in Log Analytics." lightbox="/windows/deployment/update/media/7760853-wufb-reports-time-generated.png":::
+:::image type="content" source="/windows/deployment/update/media/7760853-wufb-reports-time-generated.png" alt-text="Screenshot of a Kusto (KQL) query for time generated on Windows Update for Business reports data in Log Analytics." lightbox="/windows/deployment/update/media/7760853-wufb-reports-time-generated.png":::
 
-If the table contains data from the device but it's missing from reports, you may have a problem in the report configuration. For more information, see the following articles for more information:
+If the table contains data from the device but the data is missing from reports, a problem might exist in the report configuration. For more information, see the following articles:
 
 - [Use Windows Update for Business reports](/windows/deployment/update/wufb-reports-use)
 - [Windows Update for Business reports schema](/windows/deployment/update/wufb-reports-schema)
 
-If sufficient time has passed since the device was configured and enrolled and there's still no data from that device in the table, proceed to the next section of this article to start troubleshooting the device.
+If sufficient time has passed since the device was configured and enrolled, and the table still contains no device data, go to the next section to start troubleshooting the device.
 
 ## Check the data transmission prerequisites for devices
 
@@ -50,17 +50,17 @@ If sufficient time has passed since the device was configured and enrolled and t
 
 ### Requirements for devices
 
-- Use a supported version of Windows 10 or Windows 11
+- Use a supported version of Windows 11 or Windows 10
 - The following editions are supported:
   - Enterprise
   - Professional
   - Education
-- The device must be Microsoft Entra joined (can be a hybrid Microsoft Entra join).
-- The diagnostic data setting on the device should be set to **Required diagnostic data** or higher.
+- The device must be Microsoft Entra joined (it can be a hybrid Microsoft Entra join).
+- The diagnostic data setting on the device should be set to **Required diagnostic data** or a higher value.
 
 ### Requirements for internet access
 
-Devices have to be able to connect to the following endpoints. This list is current at the time of publishing.
+Devices have to be able to connect to the following endpoints. (This list was current at the time of publication.)
 
 - `us-v10c.events.data.microsoft.com` (`eu-v10c.events.data.microsoft.com` for tenants that have billing addresses in the [EU Data Boundary](/privacy/eudb/eu-data-boundary-learn#eu-data-boundary-countries-and-datacenter-locations)).
 - `watsonc.events.data.microsoft.com` (`eu-watsonc.events.data.microsoft.com` for tenants that have billing addresses in the [EU Data Boundary](/privacy/eudb/eu-data-boundary-learn#eu-data-boundary-countries-and-datacenter-locations)).
@@ -68,9 +68,9 @@ Devices have to be able to connect to the following endpoints. This list is curr
 - `*.blob.core.windows.net`
 
   > [!NOTE]  
-  > Tenants that have billing addresses in countries or regions in the Middle East and Africa, as well as European countries or regions that aren't in the EU, also use the `eu-v10c.events.data.microsoft.com` and `eu-watsonc.events.data.microsoft.com` endpoints. Their diagnostic data is processed initially in Europe, but those tenants aren't considered part of the [EU Data Boundary](/privacy/eudb/eu-data-boundary-learn).
+  > Tenants that have billing addresses in countries or regions in the Middle East or Africa, and European countries or regions that aren't in the EU, also use the `eu-v10c.events.data.microsoft.com` and `eu-watsonc.events.data.microsoft.com` endpoints. Their diagnostic data is processed initially in Europe. However, those tenants aren't considered part of the [EU Data Boundary](/privacy/eudb/eu-data-boundary-learn).
 
-Devices can connect directly, or by using a proxy server. If a device has to use a proxy server, the device configuration must meet the requirements that're described in the next section.
+Devices can connect directly or by using a proxy server. If a device has to use a proxy server, the device configuration must meet the requirements that are described in the next section.
 
 ## Configure devices to use a proxy connection
 
@@ -79,9 +79,9 @@ If your devices have to use a proxy connection, you can use one of two types:
 - A user proxy (WinINET-based)
 - A system proxy (WinHTTP-based)
 
-Microsoft recommends that you configure the proxy servers to allow traffic to the diagnostic data endpoints without requiring proxy authentication. This approach is the most comprehensive solution, and is compatible with all versions of Windows 10 and Windows 11.
+Microsoft recommends that you configure the proxy servers to allow traffic to the diagnostic data endpoints without requiring proxy authentication. This approach is the most comprehensive solution, and it's compatible with all versions of Windows 10 and Windows 11.
 
-On the device, the Windows Universal Telemetry Client (UTC) service is responsible for transmitting diagnostic data. When it starts to transmit, the UTC service first tries to connect directly to the endpoint. If the UTC service can't connect that way, it checks the device for a proxy configuration. The UTC service uses either type of proxy configuration, unless Group Policy dictates a specific proxy configuration. For more information about using Group Policy to configure the proxy server, see [Configure device proxy and Internet connectivity](/microsoft-365/security/defender-endpoint/configure-proxy-internet#configure-the-proxy-server-manually-using-a-registry-based-static-proxy).
+On the device, the Windows Universal Telemetry Client (UTC) service is responsible for transmitting diagnostic data. When the UTC service starts to transmit, it first tries to connect directly to the endpoint. If the UTC service can't connect in that manner, it checks the device for a proxy configuration. The UTC service uses either type of proxy configuration, unless Group Policy dictates a specific proxy configuration. For more information about how yo use Group Policy to configure the proxy server, see [Configure device proxy and Internet connectivity](/microsoft-365/security/defender-endpoint/configure-proxy-internet#configure-the-proxy-server-manually-using-a-registry-based-static-proxy).
 
 The following table lists the two types of proxy connections and which scenarios each is suitable for.
 
@@ -96,6 +96,7 @@ The following table lists the two types of proxy connections and which scenarios
 ### Configuring a user proxy
 
 When you use the user proxy approach, the UTC service uses the context of the signed-in user to connect to the proxy server and the diagnostic data endpoints. Therefore, make sure that the designated user account has the appropriate permissions.
+
 On the device, in **Network and internet** settings, use the **Proxy** tab to configure the user-level (WinINET) proxy.
 
 > [!NOTE]  
@@ -105,8 +106,7 @@ On the device, in **Network and internet** settings, use the **Proxy** tab to co
 
 #### Configuring the local system account
 
-When you use the system proxy approach, the UTC service uses the local system context to connect to the proxy server (through WinHTTP) and the diagnostic data endpoints. Therefore, make sure that the local system account has the appropriate permissions.
-To do this, use one of the following methods:
+When you use the system proxy approach, the UTC service uses the local system context to connect to the proxy server (through WinHTTP) and the diagnostic data endpoints. Therefore, make sure that the local system account has the appropriate permissions. To do this, use one of the following methods:
 
 - In a Command Prompt window on the device, run `netsh winhttp set proxy`.
 - Use the Web Proxy Auto-Discovery (WPAD) protocol.
