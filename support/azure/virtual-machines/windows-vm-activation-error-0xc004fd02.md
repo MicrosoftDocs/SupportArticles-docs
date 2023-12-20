@@ -1,6 +1,6 @@
 ---
 title: Windows VM activation error 0xC004FD02
-description: Provides a solution to an error 0xC004FD02 that occurs when you try to activate an Azure Windows virtual machine (VM).
+description: Provides a solution to the error 0xC004FD02 that occurs when you try to activate an Azure Windows virtual machine (VM).
 ms.service: virtual-machines
 ms.subservice: vm-windows-activation
 ms.collection: windows
@@ -10,7 +10,7 @@ ms.reviewer: cwhitley, v-naqviadil, v-weizhu
 
 # Error 0xC004FD02 when you activate an Azure Windows virtual machine
 
-This article provides a solution to an error 0xC004FD02 that occurs when you try to activate an Azure Windows virtual machine (VM).
+This article provides a solution to the error 0xC004FD02 that occurs when you try to activate an Azure Windows virtual machine (VM).
 
 ## Symptoms
 
@@ -37,20 +37,20 @@ To confirm the AVMA configuration, open the Command Prompt as an administrator a
 
 :::image type="content" source="media/windows-vm-activation-error-0xc004fd02/windows-script-host.png" alt-text="Screenshot of the Windows Script Host window.":::
 
-The "VIRTUAL_MACHINE_ACTIVATION" in the **Description** line means that the AVMA activation method is used.
+The "VIRTUAL_MACHINE_ACTIVATION" text in the **Description** line means that the AVMA activation method is used.
 
 ## Solution
 
-To resolve this issue, change the activation method from AVMA to Key Management Services (KMS) by updating the activation key. KMS is the supported activation method in Azure. To do this, run the following command:
+To resolve this issue, change the activation method from AVMA to Key Management Services (KMS) by updating the activation key. KMS is a supported activation method in Azure. To do this, run the following command:
 
 ```cmd
 slmgr /ipk <product key>
 ```
 
 > [!NOTE]
-> Replace `<product key>` with the 25 letters or numbers that belongs to the product key that will be used. If you use KMS, those keys are listed in [KMS keys](/windows-server/get-started/kms-client-activation-keys).
+> Replace `<product key>` with the 25 letters or numbers that belong to the product key you will use. If you use KMS, those keys are listed in [KMS keys](/windows-server/get-started/kms-client-activation-keys).
 
-Once the key is entered successfully, an "Installation was successful" message is popped. At this point, the activation should happen automatically. You also can trigger the activation manually by running the following commands:
+Once the key is entered successfully, an "Installation was successful" message pops up. At this point, the activation should happen automatically. You can talso rigger the activation manually by running the following commands:
 
 ```cmd
 slmgr /ckms
@@ -58,6 +58,6 @@ slmgr /skms azkms.core.windows.net:1688
 slmgr /ato
 ```
 
-These commands will request the activation to the Azure KMS host.
+These commands will request the activation of the Azure KMS host.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
