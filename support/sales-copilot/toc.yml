@@ -1,5 +1,5 @@
 - name: Microsoft Sales Copilot
-- href: welcome-sales-copilot.yml
+  href: welcome-sales-copilot.yml
 - name: Outlook side panel
   items:
   - name: Update add-in error in Sales Copilot for Microsoft Outlook

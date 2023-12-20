@@ -66,7 +66,7 @@ The first step is to identify if the Sales Copilot Outlook add-in is admin-manag
 
     1. If the **Update** button is available, select it, and follow the prompts to update the add-in.
 
-    1. If the **Update** button isn't available, go to the **Configuration** tab, select **Sales Copilot for Microsoft Outlook**, and then select **Remove**. Once done, reinstall the Sales Copilot add-in for Microsoft Outlook. More information: [Install Sales Copilot](install-viva-sales.md)
+    1. If the **Update** button isn't available, go to the **Configuration** tab, select **Sales Copilot for Microsoft Outlook**, and then select **Remove**. Once done, reinstall the Sales Copilot add-in for Microsoft Outlook. More information: [Install Sales Copilot](/microsoft-sales-copilot/install-viva-sales)
 
 1. If the add-in isn't listed under the **Admin-managed** section, uninstall the add-in from the **My add-ins** section, and reinstall it.
 

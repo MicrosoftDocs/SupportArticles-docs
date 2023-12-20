@@ -43,7 +43,7 @@ The Salesforce session has reached its expiration time or the session has become
 You must perform any one of the following steps to resolve the issue:
 
 - Select **Sign in again** in the error message, and then sign in to Salesforce again.
-- [Sign out from Sales Copilot](sign-out-sales-copilot.md) and then sign in to Salesforce again.
+- [Sign out from Sales Copilot](/microsoft-sales-copilot/sign-out-sales-copilot) and then sign in to Salesforce again.
 
 ## Is your issue still not resolved?
 
