@@ -1,7 +1,7 @@
 ---
 title: Can't create private channels in Microsoft Teams
 description: Troubleshoot and resolve issues when you can't create private channels in Microsoft Teams.
-ms.date: 10/31/2023
+ms.date: 12/20/2023
 ms.topic: troubleshooting-problem-resolution
 ms.service: microsoft-sales-copilot
 author: sbmjais

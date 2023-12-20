@@ -1,7 +1,7 @@
 ---
 title: Connection lost due to an expired or invalid session or a bad OAuth token
 description: Troubleshoot and resolve error messages in Sales Copilot when a user is logged out due to an expired or invalid session or a bad OAuth token.
-ms.date: 09/21/2023
+ms.date: 12/20/2023
 ms.topic: troubleshooting-problem-resolution
 ms.service: microsoft-sales-copilot
 author: sbmjais

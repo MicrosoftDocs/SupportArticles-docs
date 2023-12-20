@@ -1,7 +1,7 @@
 ---
 title: Incorrect custom domain in Salesforce
 description: Troubleshoot and resolve issues when users enter incorrect custom domain while signing in to Salesforce CRM.
-ms.date: 10/31/2023
+ms.date: 12/20/2023
 ms.topic: troubleshooting-problem-resolution
 ms.service: microsoft-sales-copilot
 author: sbmjais

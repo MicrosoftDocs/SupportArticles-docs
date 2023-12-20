@@ -1,7 +1,7 @@
 ---
 title: Sign in issue when app is blocked
 description: Troubleshoot and resolve sign in issues when app is blocked.
-ms.date: 10/31/2023
+ms.date: 12/20/2023
 ms.topic: troubleshooting-problem-resolution
 ms.service: microsoft-sales-copilot
 author: sbmjais

@@ -1,7 +1,7 @@
 ---
 title: Unable to update records because of missing record access in Salesforce CRM
 description: Troubleshoot and resolve error issues when users are unable to update CRM records in Sales Copilot because of missing record access in Salesforce CRM.
-ms.date: 10/31/2023
+ms.date: 12/20/2023
 ms.topic: troubleshooting-problem-resolution
 ms.service: microsoft-sales-copilot
 author: sbmjais
