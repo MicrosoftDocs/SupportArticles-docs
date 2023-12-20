@@ -15,7 +15,7 @@ ms.technology: windows-server-deployment
 keywords: Windows Update for Business reports, WUBr, diagnostic data, telemetry
 ---
 
-# Windows Update for Business reports: troubleshooting guidance
+# Windows Update for Business reports: Troubleshooting guidance
 
 _Applies to:_ &nbsp; Windows Server, all supported versions
 
@@ -65,7 +65,7 @@ This issue has several potential causes. To resolve the issue, check the followi
 - Verify that the devices are turned on, active, and can scan for Windows updates. To be included in reports, a device must have been active at least one time in the past 28 days.
 - Check the size of the report. For performance, the default limit for rows in Azure workbooks is set to 1,000. If your report has more than 1,000 rows, do one of the following:  
 
-  - Export the report data to Excel to view the whole report
+  - Export the report data to Excel to view the whole report.
   - To view the information in Logs view, select the three-dot icon that's next to the component of interest.
 
 For more in-depth troubleshooting of missing diagnostic data, see [Windows Update for Business reports: How to troubleshoot diagnostic data transmission](wubr-troubleshooting-data-transmission.md).
