@@ -8,15 +8,15 @@ ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 
-# Explicit misplaced SPN error
+# Explicit misplaced SPN issue
 
-This article helps you to resolve issues related to the explicit misplaced SPN.
+This article helps you to resolve issues that might arise because of the explicit misplaced SPN.
 
 ## Symptoms
 
 If the SPN you specify in the connection string exists on a service account that's not used by SQL Server, you will receive an SSPI Context error message.
 
-You might see the following error message when the SPN is not registered properly.
+You might see the following error message when the SPN isn't registered properly.
 
 > SQL Server cannot authenticate using Kerberos because the Service Principal Name (SPN) is missing, misplaced, or duplicated.
 
