@@ -505,6 +505,10 @@
     href: custom-routes-enable-kms-activation.md
   - name: Windows activation - Two new KMS endpoints
     href: windows-activation-stopped-working.md
+  - name: Error 0xC004E015 (SL_E_EUL_CONSUMPTION_FAILED)
+    href: ../../windows-server/deployment/error-0xc004e015-sl-e-eul-consumption-failed-activate-windows.md?context=/troubleshoot/azure/virtual-machines/context/context
+  - name: Error 0xC004F06C when you activate Windows
+    href: ../../windows-server/deployment/error-0xc004f06c-activate-windows.md?context=/troubleshoot/azure/virtual-machines/context/context
 
 - name: Azure disk encryption
   items:
