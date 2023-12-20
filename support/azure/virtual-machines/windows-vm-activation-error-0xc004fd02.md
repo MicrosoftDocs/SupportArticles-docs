@@ -50,7 +50,7 @@ slmgr /ipk <product key>
 > [!NOTE]
 > Replace `<product key>` with the 25 letters or numbers that belong to the product key you will use. If you use KMS, those keys are listed in [KMS keys](/windows-server/get-started/kms-client-activation-keys).
 
-Once the key is entered successfully, an "Installation was successful" message pops up. At this point, the activation should happen automatically. You can talso rigger the activation manually by running the following commands:
+Once the key is entered successfully, an "Installation was successful" message pops up. At this point, the activation should happen automatically. You can also trigger the activation manually by running the following commands:
 
 ```cmd
 slmgr /ckms
