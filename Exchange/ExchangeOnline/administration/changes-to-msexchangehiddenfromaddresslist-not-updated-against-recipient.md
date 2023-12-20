@@ -1,6 +1,6 @@
 ---
 title: Changes to msExchangeHiddenFromAddressList not updated
-description: Fixes an issue in which changes made to the msExchangeHiddenFromAddressList attribute are not updated against the recipient object in Exchange Online.
+description: Provides a fix for an issue in which changes made to the msExchangeHiddenFromAddressList attribute are not updated against the recipient object in Exchange Online.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -14,7 +14,7 @@ ms.reviewer: gabesl, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 12/15/2023
 ---
 # Changes to msExchangeHiddenFromAddressList attribute not updated against recipient object in Exchange Online
 
@@ -25,7 +25,7 @@ _Original KB number:_ &nbsp; 4042820
 Consider the following scenario:
 
 - You change the `msExchangeHiddenFromAddressList` attribute in on-premises.
-- The attribute is synced by using Microsoft Entra Connect (Microsoft Entra Connect).
+- The attribute is synced by using Microsoft Entra Connect.
 
 In this scenario, the changes are not updated against the recipient object in Microsoft Exchange Online.
 
@@ -67,5 +67,7 @@ To resolve this issue, follow these steps:
     ```  
 
 ## More information
+
+If the issue still persists, check for and resolve data validation errors in your tenant.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

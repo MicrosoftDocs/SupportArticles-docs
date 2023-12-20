@@ -559,6 +559,8 @@
           href: ../public-folders/cannot-delete-items-public-folder.md
         - name: Can't delete mail-enabled public folder
           href: ../public-folders/cannot-delete-public-folder.md
+        - name: Can't expand or view the content of a public folder
+          href: ../public-folders/cannot-expand-or-view-content-of-public-folder.md
         - name: Can't finalize a public folder batch migration
           href: ../public-folders/cannot-finalize-migration-batch.md
         - name: Can't restore a deleted Outlook form
