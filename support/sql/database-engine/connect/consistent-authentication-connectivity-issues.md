@@ -118,7 +118,7 @@ The following table provides some solutions to the AD and DC issues:
 |Domain Controller is offline   | Use NLTEST to force the computer to switch to another DC. See [Active Directory replication Event ID 2087: DNS lookup failure caused replication to fail](../../../windows-server/identity/active-directory-replication-event-id-2087.md).   |
 |Selective authentication  | Make sure the user isn't allowed to authenticate in the remote domain.      |
 |Account migration   | If old user accounts can't connect to the SQL Server, but newly created accounts can, this could be due to account migration. This issue is related to AD.    |
-|Domain Trust |The trust level between domains might cause failures in account authentication or the visibility of SPNs. You can use the `SETSPN` and `RUNAS` commands to test this independent of your application.  |
+|Domain Trust | This issue is related to the trust level between domains.|
 
 ## Issues related to Kerberos authentication
 
