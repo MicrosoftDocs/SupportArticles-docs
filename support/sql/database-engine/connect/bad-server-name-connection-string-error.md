@@ -42,7 +42,7 @@ These errors might be generated if you deploy an application that uses a DEV or 
 
 To resolve this issue, follow these steps:
 
-1. Check that you're connecting to the appropriate server.
+1. Check that you're connecting to the correct server.
 
 1. If the server isn't the appropriate one, then the connection string.
 
