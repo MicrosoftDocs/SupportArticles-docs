@@ -16,7 +16,7 @@ This article helps you to resolve problems related to the Named Pipes connection
 
 The Named Pipes connections fail because the user doesn't have permission to log into Windows.
 
-The SQLOLEDB provider shows the [SQL Server does not exist or access denied error](../startup-shutdown/event-id-7000-access-denied.md).
+The SQLOLEDB provider shows the [SQL Server does not exist or access denied](../startup-shutdown/event-id-7000-access-denied.md) error.
 
 Some other providers display both messages in a random order, whether you use integrated security or a SQL login:
 
