@@ -942,6 +942,8 @@
       href: ./deployment/error-0xc004e015-sl-e-eul-consumption-failed-activate-windows.md
     - name: Error 0xC004F015 when you activate Windows 10
       href: ./deployment/error-0xc004f015-activate-windows-10.md
+    - name: Error 0xC004F06C when you activate Windows
+      href: ./deployment/error-0xc004f06c-activate-windows.md
     - name: Error 0xC004F074 when you activate Windows
       href: ./deployment/error-0xc004f074-activate-windows.md
     - name: Error when you validate a copy of Windows
@@ -1012,6 +1014,8 @@
       href: ./deployment/troubleshoot-install-features-roles-guidance.md
     - name: 'Troubleshooting guidance: Windows Server update'
       href: ./deployment/troubleshoot-windows-server-update-guidance.md
+    - name: 'Troubleshooting guidance: Windows Update for Business reports'
+      href: ./deployment/wubr-troubleshooting-guidance.md
     - name: '"Failed to be changed to the Absent state. Status: 0x800f0922" error'
       href: ./deployment/failed-changed-absent-state-status-0x800f0922-error.md    
     - name: Can't connect to WSUS Administration Website
@@ -1070,6 +1074,10 @@
       href: ./deployment/why-prompted-restart-computer.md
     - name: Windows Server 2008 Service Pack 2
       href: ./deployment/windows-server-2008-service-pack-2.md
+    - name: 'WUBr: Troubleshoot diagnostic data transmission'
+      href: ./deployment/wubr-troubleshooting-data-transmission.md
+    - name: 'WUBr: Use the configuration script to troubleshoot device configuration'
+      href: ./deployment/wubr-troubleshooting-device-config-using-script.md
     - name: WSUS 3.0 installation package is available
       href: ./deployment/wsus-3-installation-package.md
     - name: WSUS 3.0 SP2 Dynamic Install for Server Manager
