@@ -4,7 +4,7 @@ description: Describes how to resolve errors that you might encounter in Viva In
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
-ms.date: 12/18/2023
+ms.date: 12/20/2023
 ms.service: viva
 ms.subservice: viva-insights
 audience: ITPro

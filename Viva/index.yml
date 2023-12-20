@@ -101,7 +101,7 @@ productDirectory:
         - url: ./connections/viva-connections-welcome.yml
           text: Microsoft Viva Connections
         - url: ./engage/viva-engage-welcome.yml
-          text: Microsoft Viva Engage  
+          text: Microsoft Viva Engage
         - url: ./glint/viva-glint-welcome.yml
           text: Microsoft Viva Glint
         - url: ./insights/viva-insights-welcome.yml
