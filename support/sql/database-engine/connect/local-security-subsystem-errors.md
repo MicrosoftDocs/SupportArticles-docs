@@ -30,4 +30,4 @@ You might also see Kerberos errors in the system event log on the SQL Server mac
 
 ## Resolution
 
-Check whether your Service Principal Name (SPN) is registered correctly on the Domain Controller (DC).
+Check whether your Service Principal Name (SPN) is registered correctly on the Domain Controller (DC). You can use `setspn -Q` or `setspn -L` to query your service principal name and SPNs under your account respectively. 
