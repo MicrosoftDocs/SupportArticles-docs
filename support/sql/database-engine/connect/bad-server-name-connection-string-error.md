@@ -46,6 +46,6 @@ To resolve this issue, follow these steps:
 
 1. If the server isn't the appropriate one, then fix the connection string to point to the correct one.
 
-1. If the connection string is correct, add the login to the database.
+1. If the connection string is correct, then give the login access to the database by creating a user in the database and map to that login.
 
 1. If it's a Windows login, add it to a local group or domain group that's allowed to connect to the database server.
