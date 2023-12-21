@@ -148,6 +148,8 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
+          - text: Capture real-time system insights from cluster
+            url: ./capture-system-insights-from-aks.md
           - text: Capture TCP dump from Linux node
             url: ./capture-tcp-dump-linux-node-aks.md
           - text: Capture TCP dump from Windows node
