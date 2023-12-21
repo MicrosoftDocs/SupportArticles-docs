@@ -133,18 +133,16 @@ If you have any issues, see [Debugging SSL/TLS connections](https://docs.oracle.
 
 ### Python applications
 
-When you connect to the emulator from Python apps, TLS verification is disabled. By default, the Python SDK for Azure Cosmos DB for NoSQL doesn't try to use the TLS/SSL certificate when it connects to the local emulator. For more information, see [Azure Cosmos DB for NoSQL client library for Python](nosql/quickstart-python.md).
+When you connect to the emulator from Python apps, TLS verification is disabled. By default, the Python SDK for Azure Cosmos DB for NoSQL doesn't try to use the TLS/SSL certificate when it connects to the local emulator. For more information, see [Azure Cosmos DB for NoSQL client library for Python](/azure/cosmos-db/nosql/quickstart-python.md).
 
 If you want to use TLS validation, you can follow the examples in [TLS/SSL wrapper for socket objects](https://docs.python.org/3/library/ssl.html).
 
 ### Node.js applications
 
-When you connect to the emulator from Node.js SDKs, TLS verification is disabled. By default, the [Node.js SDK(version 1.10.1 or higher)](nosql/sdk-nodejs.md) for the API for NoSQL doesn't try to use the TLS/SSL certificate when it connects to the local emulator. If you want to use TLS validation, follow the examples in the [Node.js documentation](https://nodejs.org/api/tls.html#tls_tls_connect_options_callback).
+When you connect to the emulator from Node.js SDKs, TLS verification is disabled. By default, the [Node.js SDK(version 1.10.1 or higher)](/azure/cosmos-db/nosql/sdk-nodejs.md) for the API for NoSQL doesn't try to use the TLS/SSL certificate when it connects to the local emulator. If you want to use TLS validation, follow the examples in the [Node.js documentation](https://nodejs.org/api/tls.html#tls_tls_connect_options_callback).
 
 ## Rotate certificates
 
 You can force regenerate the emulator certificates by selecting **Reset Data** from the Azure Cosmos DB Emulator icon in the Windows Tray. This action also wipes out all the data stored locally by the emulator.
-
-:::image type="content" source="./media/local-emulator-export-ssl-certificates/database-local-emulator-reset-data.png" alt-text="Azure Cosmos DB local emulator reset data":::
 
 If you install the certificate into the Java certificate store or used them elsewhere, you need to reimport them using the current certificates. Your application can't connect to the local emulator until you update the certificates.
