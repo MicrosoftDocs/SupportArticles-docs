@@ -179,6 +179,9 @@
 
 - name: Data collection guide
   items:
+  - name: Capture real-time system insights from cluster
+    href: capture-system-insights-from-aks.md
+    displayName: real-time, debugging, observability, inspektor-gadget, ig, ebpf
   - name: Capture TCP dump from Linux node
     href: capture-tcp-dump-linux-node-aks.md
   - name: Capture TCP dump from Windows node
