@@ -100,14 +100,16 @@ productDirectory:
       links:        
         - url: ./connections/viva-connections-welcome.yml
           text: Microsoft Viva Connections
+        - url: ./engage/viva-engage-welcome.yml
+          text: Microsoft Viva Engage
         - url: ./glint/viva-glint-welcome.yml
           text: Microsoft Viva Glint
+        - url: ./insights/viva-insights-welcome.yml
+          text: Microsoft Viva Insights
         - url: ./learning/viva-learning-welcome.yml
           text: Microsoft Viva Learning  
         - url: ./pulse/viva-pulse-welcome.yml
           text: Microsoft Viva Pulse
-        - url: ./viva-suite-administration/viva-suite-administration-welcome.yml
-          text: Microsoft Viva Suite Administration
     # Card
     - title: Endpoint management
       imageSrc: /media/logos/logo-ms-social.png
