@@ -51,8 +51,7 @@ To resolve this issue, use one of the following solutions.
 1. Delete the pods that can't be drained.
    
    > [!NOTE]
-   > If the pods were created by a deployment or StatefulSet, they'll be controlled by a ReplicaSet. If that's the case, you might have to delete the deployment or StatefulSet. Before you do that, we 
-     recommend that you make a backup: `kubectl get <kubernetes-object> <name> -n <namespace> -o yaml > backup.yaml`.
+   > If the pods were created by a deployment or StatefulSet, they'll be controlled by a ReplicaSet. If that's the case, you might have to delete the deployment or StatefulSet. Before you do that, we recommend that you make a backup: `kubectl get <kubernetes-object> <name> -n <namespace> -o yaml > backup.yaml`.
 
 2. Try again to upgrade the AKS cluster to the same version that you tried to upgrade to previously. This process will trigger a reconciliation.
 
