@@ -1,18 +1,18 @@
-- name: Microsoft Sales Copilot
+- name: Microsoft Copilot for Sales
   href: welcome-sales-copilot.yml
 - name: Outlook side panel
   items:
-  - name: Update add-in error in Sales Copilot for Microsoft Outlook
+  - name: Update add-in error in Copilot for Sales add-in for Microsoft Outlook
     href: tsg-update-add-in-error.md  
-  - name: Sign in issue when opening the Sales Copilot pane in Outlook
+  - name: Sign in issue when opening the Copilot for Sales pane in Outlook
     href: tsg-sign-in-error.md
 - name: Setup, installation, and sign-in
   items:
-  - name: First Salesforce CRM user unable to access Sales Copilot
+  - name: First Salesforce CRM user unable to access Copilot for Sales
     href: tsg-trial-env.md
   - name: Error after connecting and signing in to Salesforce CRM
     href: tsg-api-perm.md
-  - name: Sales Copilot doesn't connect to Dynamics 365 with two-factor authentication enabled
+  - name: Copilot for Sales doesn't connect to Dynamics 365 with two-factor authentication enabled
     href: tsg-two-factor.md
   - name: Unable to save email to CRM as enhanced email is turned off in Salesforce CRM
     href: tsg-enhanced-email-sf.md
@@ -44,7 +44,7 @@
     href: tsg-oppty-summary.md
 - name: CRM permissions and configurations
   items:
-  - name: Salesforce CRM users unable to see data in Sales Copilot
+  - name: Salesforce CRM users unable to see data in Copilot for Sales
     href: tsg-no-column.md
   - name: Missing privileges in Dynamics 365
     href: tsg-missing-roles.md

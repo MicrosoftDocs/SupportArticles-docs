@@ -21,40 +21,40 @@ This article helps you troubleshoot and resolve issues when the opportunity summ
 
 | Requirement type |Description  |
 |---------|---------|
-|**Client app**     |  Sales Copilot app in Teams        |
+|**Client app**     |  Copilot for Sales app in Teams        |
 |**Platform**     | Web and desktop clients         |
 |**OS**     | Windows and Mac         |
 |**Deployment**     | User managed and admin managed       |
 |**CRM**     | Dynamics 365 and Salesforce      |
-|**Users**     | Users trying to update a CRM record from Sales Copilot |
+|**Users**     | Users trying to update a CRM record from Copilot for Sales |
 
 ## Symptom
 
-When you create a deal room from Sales Copilot in Outlook, and then open it in the Sales Copilot app in Microsoft Teams, the opportunity summary isn't displayed in the deal room. The following message is displayed instead: `To unlock AI-powered opportunity summaries, install the Sales Copilot Teams app.`
+When you create a deal room from Copilot for Sales in Outlook, and then open it in the Copilot for Sales app in Microsoft Teams, the opportunity summary isn't displayed in the deal room. The following message is displayed instead: `To unlock AI-powered opportunity summaries, install the Copilot for Sales Teams app.`
 
 :::image type="content" source="media/tsg-oppty-summary-error.png" alt-text="Screenshot showing a message instead of opportunity summary.":::
 
 ## Cause
 
-Sales Copilot Teams app isn't installed.
+Copilot for Sales Teams app isn't installed.
 
-When you set up a deal room from Sales Copilot in Outlook, the Sales Copilot Teams app and bot are automatically installed for the selected team, and opportunity summary is displayed in the deal room. If the Sales Copilot Teams app isn't installed for the team, a message is displayed instead of the opportunity summary in the deal room.
+When you set up a deal room from Copilot for Sales in Outlook, the Copilot for Sales Teams app and bot are automatically installed for the selected team, and opportunity summary is displayed in the deal room. If the Copilot for Sales Teams app isn't installed for the team, a message is displayed instead of the opportunity summary in the deal room.
 
 ## Solution
 
-To resolve this issue, you must manually install the Sales Copilot Teams app and bot for the team, and then generate the opportunity summary again.
+To resolve this issue, you must manually install the Copilot for Sales Teams app and bot for the team, and then generate the opportunity summary again.
 
 1. In Microsoft Teams, hover over the team name, and then select **More options (...)** > **Manage team**.
 
 2. Go to the Apps tab, and then select **Get more apps**.
 
-3. Search for **Sales Copilot**, and then select its card.
+3. Search for **Copilot for Sales**, and then select its card.
 
 4. Select the down arrow next to **Open**, and then select **Add to a team**.
 
     :::image type="content" source="media/tsg-oppty-summary-add-team.png" alt-text="Screenshot showing option to add the app to a team.":::
 
-    The **Add Sales Copilot to a team** dialog box is displayed with the team name preselected.
+    The **Add Copilot for Sales to a team** dialog box is displayed with the team name preselected.
 
 5. Select **Set up a bot**.
 
@@ -62,10 +62,10 @@ To resolve this issue, you must manually install the Sales Copilot Teams app and
 
 6. Open the deal room channel, and select **Start a post**.
 
-7. In the message box, type `@Sales Copilot`, select the Sales Copilot app, type `show opportunity summary`, and then select **Post** to generate the opportunity summary.
+7. In the message box, type `@Copilot for Sales`, select the Copilot for Sales app, type `show opportunity summary`, and then select **Post** to generate the opportunity summary.
 
     :::image type="content" source="media/tsg-oppty-summary-generate.png" alt-text="Screenshot showing prompt to generate opportunity summary.":::
 
 ## Is your issue still not resolved?
 
-Visit the [Sales Copilot - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
+Visit the [Copilot for Sales - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.

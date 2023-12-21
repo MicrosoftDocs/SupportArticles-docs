@@ -17,7 +17,7 @@ This article helps you troubleshoot and resolve mailbox errors in Dynamics 365.
 
 | Requirement type |Description  |
 |---------|---------|
-|**Client app**     |  Sales Copilot Outlook add-in        |
+|**Client app**     |  Copilot for Sales Outlook add-in        |
 |**Platform**     | Web and desktop clients         |
 |**OS**     | Windows and Mac         |
 |**Deployment**     | User managed and admin managed       |
@@ -26,7 +26,7 @@ This article helps you troubleshoot and resolve mailbox errors in Dynamics 365.
 
 ## Symptom
 
-When you open Sales Copilot in Outlook, and try to save an email or a meeting to Dynamics 365, you see the following error message: Fix mailbox errors in Dynamics 365:
+When you open Copilot for Sales in Outlook, and try to save an email or a meeting to Dynamics 365, you see the following error message: Fix mailbox errors in Dynamics 365:
 
 :::image type="content" source="media/tsg-mailbox-error.png" alt-text="Fix mailbox errors.":::
 
@@ -34,16 +34,16 @@ When you open Sales Copilot in Outlook, and try to save an email or a meeting to
 
 One or more sync errors have occurred with server-side synchronization.
 
-Sales Copilot requires server-side synchronization to synchronize emails and meetings to Dynamics 365. When server-side synchronization encounters an error while attempting the synchronization, Sales Copilot detects and displays this error message for the user to take action and resolve the error.
+Copilot for Sales requires server-side synchronization to synchronize emails and meetings to Dynamics 365. When server-side synchronization encounters an error while attempting the synchronization, Copilot for Sales detects and displays this error message for the user to take action and resolve the error.
 
 ## Solution
 
 To resolve the error, you must locate the specific error as part of the mailbox alert wall, read the description, and take action. User can also delete the error to suppress it.
 
-1. Open the CRM instance you connected to Sales Copilot.
+1. Open the CRM instance you connected to Copilot for Sales.
 
     > [!NOTE]
-    > To get the CRM instance URL, select **Options** (**…**) in the upper-right corner of the Sales Copilot pane. The URL is displayed under **Signed in to Dynamics 365**.
+    > To get the CRM instance URL, select **Options** (**…**) in the upper-right corner of the Copilot for Sales pane. The URL is displayed under **Signed in to Dynamics 365**.
 
 2. Select **Settings** > **Personalization Settings**.
 
@@ -64,8 +64,8 @@ To resolve the error, you must locate the specific error as part of the mailbox 
     > [!NOTE]
     > Deleting an error resets the mailbox state. The error might reappear during the next synchronization if the underlying issue is not resolved.
 
-5. Resolve and clear errors to restore the save to CRM functionality in Sales Copilot.
+5. Resolve and clear errors to restore the save to CRM functionality in Copilot for Sales.
 
 ## Is your issue still not resolved?
 
-Visit the [Sales Copilot - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
+Visit the [Copilot for Sales - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.

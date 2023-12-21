@@ -17,7 +17,7 @@ This article helps you troubleshoot and resolve issues when you can't create pri
 
 | Requirement type |Description  |
 |---------|---------|
-|**Client app**     |  Sales Copilot Outlook add-in        |
+|**Client app**     |  Copilot for Sales Outlook add-in        |
 |**Platform**     | Web and desktop clients         |
 |**OS**     | Windows and Mac         |
 |**Deployment**     | User managed and admin managed       |
@@ -63,4 +63,4 @@ Ask your administrator to grant you permissions to create private channels in Te
 
 ## Is your issue still not resolved?
 
-Visit the [Sales Copilot - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
+Visit the [Copilot for Sales - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.

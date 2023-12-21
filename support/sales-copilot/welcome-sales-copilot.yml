@@ -1,10 +1,10 @@
 ### YamlMime:Landing
 
-title: Microsoft Sales Copilot troubleshooting # < 60 chars
-summary: Welcome to Microsoft Sales Copilot troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Microsoft Sales Copilot. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+title: Microsoft Copilot for Sales troubleshooting # < 60 chars
+summary: Welcome to Microsoft Copilot for Sales troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Microsoft Copilot for Sales. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
 metadata:
-  title: Microsoft Sales Copilot troubleshooting
-  description: Landing page for Microsoft Sales Copilot troubleshooting articles. # Required; article description that is displayed in search results. < 160 chars.
+  title: Microsoft Copilot for Sales troubleshooting
+  description: Landing page for Microsoft Copilot for Sales troubleshooting articles. # Required; article description that is displayed in search results. < 160 chars.
   ms.service: microsoft-sales-copilot  #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
   author:   sbmjais
@@ -20,9 +20,9 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Update add-in error in Sales Copilot for Microsoft Outlook
+          - text: Update add-in error in Copilot for Sales add-in for Microsoft Outlook
             url: tsg-update-add-in-error.md
-          - text: Sign in issue when opening the Sales Copilot pane in Outlook
+          - text: Sign in issue when opening the Copilot for Sales pane in Outlook
             url: tsg-sign-in-error.md
 
  # Card
@@ -30,11 +30,11 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: First Salesforce CRM user unable to access Sales Copilot
+          - text: First Salesforce CRM user unable to access Copilot for Sales
             url: tsg-trial-env.md
           - text: Error after connecting and signing in to Salesforce CRM
             url: tsg-api-perm.md
-          - text: Sales Copilot doesn't connect to Dynamics 365 with two-factor authentication enabled
+          - text: Copilot for Sales doesn't connect to Dynamics 365 with two-factor authentication enabled
             url: tsg-two-factor.md
           - text: Unable to save email to CRM as enhanced email is turned off in Salesforce CRM
             url: tsg-enhanced-email-sf.md
@@ -56,7 +56,7 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Salesforce CRM users unable to see data in Sales Copilot
+          - text: Salesforce CRM users unable to see data in Copilot for Sales
             url: tsg-no-column.md
           - text: Missing privileges in Dynamics 365
             url: tsg-missing-roles.md
@@ -73,9 +73,9 @@ landingContent:
     linkLists:
       - linkListType: reference
         links:
-          - text: Sales Copilot documentation
+          - text: Copilot for Sales documentation
             url: /microsoft-sales-copilot/
-          - text: Sales Copilot training
+          - text: Copilot for Sales training
             url: /training/modules/boost-sales-performance/
           - text: Dynamics 365 Community
             url: https://techcommunity.microsoft.com/t5/microsoft-sales-copilot/ct-p/MicrosoftViva

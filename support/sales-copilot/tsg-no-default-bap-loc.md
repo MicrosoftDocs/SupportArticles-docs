@@ -1,6 +1,6 @@
 ---
 title: No default BAP location found for this tenant 
-description: Troubleshoot and resolve issues in Sales Copilot when users are unable to use Sales Copilot due to missing default environment
+description: Troubleshoot and resolve issues in Copilot for Sales when users are unable to use Copilot for Sales due to missing default environment
 ms.date: 12/20/2023
 ms.topic: troubleshooting-problem-resolution
 ms.service: microsoft-sales-copilot
@@ -11,7 +11,7 @@ manager: shujoshi
 
 # No default BAP location found for this tenant
 
-This article helps you troubleshoot and resolve issues in Sales Copilot when users are unable to use Sales Copilot due to missing default environment.
+This article helps you troubleshoot and resolve issues in Copilot for Sales when users are unable to use Copilot for Sales due to missing default environment.
 
 ## Who is affected?
 
@@ -27,7 +27,7 @@ This article helps you troubleshoot and resolve issues in Sales Copilot when use
 
 ## Symptom 
 
-When you open the Sales Copilot pane in Microsoft Outlook, the following error message is displayed: `No default BAP location found for this tenant`. 
+When you open the Copilot for Sales pane in Microsoft Outlook, the following error message is displayed: `No default BAP location found for this tenant`. 
 
 :::image type="content" source="media/tsg-bap-location.png" alt-text="Screenshot showing BAP location error.":::
 
@@ -35,7 +35,7 @@ When you open the Sales Copilot pane in Microsoft Outlook, the following error m
 
 Default environment is not created in Power Apps.
 
-Sales Copilot requires a Power Apps environment for every organization. When Sales Copilot is launched for the first time, it calls a Power Platform API to get the region details. If the organization does not have an existing Power Platform environment an error message is displayed when attempting to get region details.
+Copilot for Sales requires a Power Apps environment for every organization. When Copilot for Sales is launched for the first time, it calls a Power Platform API to get the region details. If the organization does not have an existing Power Platform environment an error message is displayed when attempting to get region details.
 
 ## Solution
 
@@ -43,4 +43,4 @@ To resolve the issue, open the [Power Platform admin center](https://admin.power
 
 ## Is your issue still not resolved?
 
-Visit the [Sales Copilot - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
+Visit the [Copilot for Sales - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
