@@ -2,6 +2,14 @@
 
 
 
+## Week of December 11, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 12/14/2023 | [Get support for Microsoft Teams Rooms Pro Management](/microsoftteams/troubleshoot/teams-rooms-and-devices/get-support-teams-rooms-pro-management) | modified |
+
+
 ## Week of December 04, 2023
 
 

@@ -2,6 +2,14 @@
 
 
 
+## Week of December 11, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 12/12/2023 | [Error when editing an equation in Office](/office/troubleshoot/office-suite-issues/issue-when-edit-equation-in-office) | modified |
+
+
 ## Week of November 27, 2023
 
 
