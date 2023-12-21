@@ -4638,6 +4638,11 @@
       "source_path": "support/windows/win32/msi-packages-wmi-queries-cannot-run.md",
       "redirect_url": "/previous-versions/troubleshoot/windows/win32/msi-packages-wmi-queries-cannot-run",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/aac-audio-not-playing-for-mpeg-2-ts-file-windows-8-1.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/aac-audio-not-playing-for-mpeg-2-ts-file-windows-8-1",
+      "redirect_document_id": false
     }
   ]
 }
