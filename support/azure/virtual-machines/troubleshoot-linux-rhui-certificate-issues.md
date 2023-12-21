@@ -178,7 +178,7 @@ All the following commands should be run by using root privileges or by specifyi
    sudo dnf repolist all
    ```
 
-   #### [RHEL 9._x_ - EUS](#tab/rhel9-eus)
+#### [RHEL 9._x_ - EUS](#tab/rhel9-eus)
 
 1. Install the `rhui-azure-rhel9` package by running the [dnf](https://dnf.readthedocs.io/en/latest/command_ref.html) installation command:
 
