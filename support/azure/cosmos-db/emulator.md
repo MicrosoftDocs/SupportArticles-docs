@@ -6,7 +6,7 @@ author: oury-msft
 ms.author: ouryba
 ms.reviewer: v-jayaramanp
 ms.topic: troubleshooting
-ms.date: 10/04/2023
+ms.date: 12/21/2023
 ---
 
 # Troubleshoot the Azure Cosmos DB emulator
@@ -44,9 +44,9 @@ Alternatively, if resetting the data doesn't work, go to the `%LOCALAPPDATA%\Cos
 
 - If you experience a connectivity problem, [collect trace files](#collect-trace-files), compress the files, and then open a support ticket in the [Azure portal](https://portal.azure.com).
 
-- If you receive a "Service Unavailable" message, the emulator might not be initializing the network stack. Check to see whether you have the **Pulse Secure Client** or **Juniper Networks Client** installed because their network filter drivers might be causing the problem. You can also try uninstalling third-party network filter drivers to fix the problem. Alternatively, start the emulator by using `/DisableRIO` to switch the emulator network communication to regular Winsock.
+- If you receive a "Service Unavailable" message, the emulator might not be initializing the network stack. Check to see whether you have the **Pulse Secure Client** or **Juniper Networks Client** installed because their network filter drivers might be causing the problem. You can also try uninstalling other network filter drivers to fix the problem. Alternatively, start the emulator by using `/DisableRIO` to switch the emulator network communication to regular Winsock.
 
-- If you receive a connectivity error message such as "Forbidden","message":"Request is being made with a forbidden encryption in transit protocol or cipher. Check account SSL/TLS minimum allowed protocol setting...", this error message might indicate global changes in the OS (for example Insider Preview Build 20170) or changes in the browser settings that enable TLS 1.3 as the default protocol. A similar error message, such as "Microsoft.Azure.Documents.DocumentClientException: Request is being made with a forbidden encryption in transit protocol or cipher. Check account SSL/TLS minimum allowed protocol setting" might be generated if you use the SDK to run a request against the Azure Cosmos DB emulator. This error might also occur because the Azure Cosmos DB emulator supports only the TLS 1.2 protocol. The recommended workaround is to set TLS 1.2 as the default.
+- If you receive a connectivity error message such as `"Forbidden", "message":"Request is being made with a forbidden encryption in transit protocol or cipher. Check account SSL/TLS minimum allowed protocol setting..."`, this error message might indicate global changes in the OS (for example Insider Preview Build 20170) or changes in the browser settings that enable TLS 1.3 as the default protocol. A similar error message, such as "Microsoft.Azure.Documents.DocumentClientException: Request is being made with a forbidden encryption in transit protocol or cipher. Check account SSL/TLS minimum allowed protocol setting" might be generated if you use the SDK to run a request against the Azure Cosmos DB emulator. This error might also occur because the Azure Cosmos DB emulator supports only the TLS 1.2 protocol. The recommended workaround is to set TLS 1.2 as the default.
 
   For example:
 
@@ -100,3 +100,89 @@ To collect debugging traces, run the following commands as an administrator in a
 1. Navigate to the `%ProgramFiles%\Azure Cosmos DB Emulator` path, and locate the *docdbemulator_000001.etl* file.
 
 1. Open a support ticket in the [Azure portal](https://portal.azure.com), and include the .etl file together with any steps that are required to reproduce the problem.
+
+## Install certificates for client applications
+
+Occasionally, you might need to take the exported emulator certificate and use it with the client application. The exact process varies by SDK.
+
+### Export TLS/SLL certificate
+
+Export the emulator certificate to successfully use the emulator endpoint from languages and runtime environments that don't integrate with the Windows Certificate Store. You can export the certificate using the Windows Certificate Manager or PowerShell after you ran the emulator for the first time.
+
+1. Retrieve the certificate using the friendly name `DocumentDbEmulatorCertificate` and store the certificate in a shell variable named `$cert`.
+
+    ```powershell
+    $cert = Get-ChildItem Cert:\LocalMachine\My | where{$_.FriendlyName -eq 'DocumentDbEmulatorCertificate'}
+    ```
+
+1. Export the certificate to a temporary file in your home folder with [`Export-Certificate`](/powershell/module/pki/export-certificate).
+
+    ```powershell
+    $params = @{
+        Cert = $cert
+        Type = "CERT"
+        FilePath = "$home/tmp-cert.cer"
+        NoClobber = $true
+    }
+    Export-Certificate @params
+    ```
+
+    > [!NOTE]
+    > In Windows, the home folder is typically `C:\Users\[username]\` assuming your home drive is `C:`.
+
+1. Use [`certutil`](/windows-server/administration/windows-commands/certutil) to convert the certificate to a **Base-64 encoded X.509** certificate file.
+
+    ```powershell
+    certutil -encode $home/tmp-cert.cer $home/cosmosdbcert.cer
+    ```
+
+1. Remove the temporary file.
+
+    ```powershell
+    Remove-Item $home/tmp-cert.cer
+    ```
+
+### Import certificate for Java applications
+
+When you run Java applications or MongoDB applications that use a Java based client, it's easier to install the certificate into the Java default certificate store than passing the `-Djavax.net.ssl.trustStore=<keystore> -Djavax.net.ssl.trustStorePassword="<password>"` parameters. For example, the included Java Demo application (`https://localhost:8081/_explorer/index.html`) depends on the default certificate store.
+
+Follow the instructions in the [Creating, Exporting, and Importing TLS/SSL Certificates](https://docs.oracle.com/cd/E54932_01/doc.705/e54936/cssg_create_ssl_cert.htm) to import the X.509 certificate into the default Java certificate store. Keep in mind that you work in the *%JAVA_HOME%* directory when running keytool. After the certificate is imported into the certificate store, clients for SQL and Azure Cosmos DB's API for MongoDB can connect to the Azure Cosmos DB Emulator.
+
+Alternatively, you can run the following bash script to import the certificate:
+
+```bash
+#!/bin/bash
+
+# If emulator was started with /AllowNetworkAccess, replace the below with the actual IP address of it:
+EMULATOR_HOST=localhost
+EMULATOR_PORT=8081
+EMULATOR_CERT_PATH=/tmp/cosmos_emulator.cert
+openssl s_client -connect ${EMULATOR_HOST}:${EMULATOR_PORT} </dev/null | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' > $EMULATOR_CERT_PATH
+# delete the cert if already exists
+sudo $JAVA_HOME/bin/keytool -cacerts -delete -alias cosmos_emulator
+# import the cert
+sudo $JAVA_HOME/bin/keytool -cacerts -importcert -alias cosmos_emulator -file $EMULATOR_CERT_PATH
+```
+
+Once the `CosmosDBEmulatorCertificate` TLS/SSL certificate is installed, your application should be able to connect and use the local Azure Cosmos DB Emulator.
+
+If you have any issues, see [Debugging SSL/TLS connections](https://docs.oracle.com/javase/7/docs/technotes/guides/security/jsse/ReadDebug.html). In most cases, the certificate might not be installed into the *%JAVA_HOME%/jre/lib/security/cacerts* store. For example, if there's more than one installed version of Java, your application might be using a different certificate store than the one you updated.
+
+### Import certificate for Python applications
+
+When you connect to the emulator from Python apps, TLS verification is disabled. By default, the Python SDK for Azure Cosmos DB for NoSQL doesn't try to use the TLS/SSL certificate when it connects to the local emulator. For more information, see [Azure Cosmos DB for NoSQL client library for Python](/azure/cosmos-db/nosql/quickstart-python).
+
+If you want to use TLS validation, you can follow the examples in [TLS/SSL wrapper for socket objects](https://docs.python.org/3/library/ssl.html).
+
+### Import certificate for Node.js applications
+
+When you connect to the emulator from Node.js SDKs, TLS verification is disabled. By default, the [Node.js SDK(version 1.10.1 or higher)](/azure/cosmos-db/nosql/quickstart-nodejs) for the API for NoSQL doesn't try to use the TLS/SSL certificate when it connects to the local emulator. If you want to use TLS validation, follow the examples in the [Node.js documentation](https://nodejs.org/api/tls.html#tls_tls_connect_options_callback).
+
+## Rotate certificates
+
+You can force regenerate the emulator certificates by opening the emulator with the `/ResetDataPath` argument. This action wipes out all the data stored locally by the emulator. For more information about command-line arguments, see [Windows emulator command-line arguments](/azure/cosmos-db/emulator-windows-arguments).
+
+> [!TIP]
+> Alternatively, select **Reset Data** from the Azure Cosmos DB emulator's context menu in the Windows system tray.
+
+If you install the certificate into the Java certificate store or used them elsewhere, you must reimport them using the current certificates. Your application can't connect to the local emulator until you update the certificates.
