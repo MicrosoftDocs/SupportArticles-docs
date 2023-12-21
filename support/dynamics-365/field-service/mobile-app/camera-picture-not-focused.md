@@ -4,7 +4,7 @@ description: Improves camera quality in the Dynamics 365 Field Service mobile ap
 ms.author: andreo
 author: Andrea-Orimoto
 ms.reviewer: mhart
-ms.date: 12/19/2023
+ms.date: 12/21/2023
 ms.custom: sap:issue-performance
 ---
 # Camera pictures are blurry or not focused in the Field Service mobile app
@@ -13,7 +13,7 @@ The Microsoft Dynamics 365 Field Service [mobile app](/dynamics365/field-service
 
 ## Symptoms
 
-When you take a picture with the camera in the Field Service mobile app on iOS devices, you may find the pictures are blurry and don't meet the quality standard.
+When you take a picture with the camera in the Field Service mobile app on iOS devices, you might find the pictures are blurry and don't meet the quality standard.
 
 ## Resolution
 

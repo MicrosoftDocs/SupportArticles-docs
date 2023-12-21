@@ -4,7 +4,7 @@ description: Reviews the audit log and offline profile filters to prevent duplic
 ms.author: andreo
 author: Andrea-Orimoto
 ms.reviewer: mhart
-ms.date: 12/19/2023
+ms.date: 12/21/2023
 ms.custom: sap:issue-completing-inspections
 ---
 # Duplicated inspection responses in Dynamics 365 Field Service

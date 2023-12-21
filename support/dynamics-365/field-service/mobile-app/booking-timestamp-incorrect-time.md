@@ -4,7 +4,7 @@ description: Resolves the incorrect booking timestamp created when the booking s
 ms.author: andreo
 author: Andrea-Orimoto
 ms.reviewer: mhart
-ms.date: 12/19/2023
+ms.date: 12/21/2023
 ms.custom: sap:issue-not-listed
 ---
 # Booking timestamp is created with an incorrect time in the Field Service mobile app
