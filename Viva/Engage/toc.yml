@@ -1,8 +1,11 @@
 - name: Viva Engage troubleshooting
   href: viva-engage-welcome.yml
-- name: Sign-in error when you select the Viva Engage tile in Microsoft 365
-  href: error-select-the-viva-engage-tile-in-microsoft-365.md
-- name: Troubleshoot your Viva Engage network for problems with Native Mode
-  href: troubleshoot-native-mode.md
-- name: Users can't sign in to Viva Engage on Android devices
-  href: help-users-log-in-to-viva-engage-on-android-devices.md
+  items:
+    - name: Error messages
+      items:
+        - name: Sign-in error when you select the Viva Engage tile in Microsoft 365
+          href: error-select-the-viva-engage-tile-in-microsoft-365.md
+        - name: Troubleshoot Viva Engage network for problems with Native Mode
+          href: troubleshoot-native-mode.md
+        - name: Users can't sign in to Viva Engage on Android devices
+          href: help-users-log-in-to-viva-engage-on-android-devices.md
