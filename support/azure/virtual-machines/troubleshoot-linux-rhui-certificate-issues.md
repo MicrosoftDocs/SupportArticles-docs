@@ -236,7 +236,7 @@ All the following commands should be run by using root privileges or by specifyi
 
 #### [RHEL 9._x_ - non-EUS](#tab/rhel9-noneus)
 
-1. Install the `rhui-azure-rhel9` package by running the `yum install` command:
+1. Install the `rhui-azure-rhel9` package by running the `dnf install` command:
 
    ```bash
     sudo dnf --config='https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhel9.config' install rhui-azure-rhel9
