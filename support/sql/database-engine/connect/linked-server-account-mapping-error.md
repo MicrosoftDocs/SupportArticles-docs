@@ -14,7 +14,7 @@ This article helps you to resolve the linked server account mapping error.
 
 ## Symptoms
 
-When you connect to the mid-tier SQL Server account from within the SQL Server Management Studio, you might see the following error message:
+When you connect to the SQL Server account from within the SQL Server Management Studio (SSMS), you might see the following error message:
 
 > Msg 233, Level 20, State 0, Line 0
 > A transport-level error has occurred when sending the request to the server. (provider: Shared Memory Provider, error: 0 - No process is on the other end of the pipe.)
