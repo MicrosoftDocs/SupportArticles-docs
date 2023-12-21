@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot UpgradeFailed errors due to eviction failures caused by PDBs
 description: Learn how to troubleshoot UpgradeFailed errors due to eviction failures caused by Pod Disruption Budgets when you try to upgrade an Azure Kubernetes Service cluster.
-ms.date: 11/06/2023
+ms.date: 12/21/2023
 editor: v-jsitser
 ms.reviewer: chiragpa, v-leedennis, v-weizhu
 ms.service: azure-kubernetes-service
