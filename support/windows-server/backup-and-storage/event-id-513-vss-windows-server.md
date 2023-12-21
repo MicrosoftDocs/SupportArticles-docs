@@ -13,11 +13,12 @@ ms.reviewer: kaushika, v-jesits
 ms.custom: sap:volume-shadow-copy-service-vss, csstroubleshoot
 ms.technology: windows-server-backup-and-storage
 ---
+
 # Event ID 513 when running VSS in Windows Server
 
 This article provides a workaround to Event ID 513 when running VSS in Windows Server.
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server 2022, Windows Server 2019, Windows Server 2016  
 _Original KB number:_ &nbsp; 3209092
 
 ## Symptoms
@@ -68,3 +69,4 @@ To do this, follow these steps:
     ```console
     sc sdset mslldp D:(D;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;BG)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;SY)(A;;CCDCLCSWRPDTLOCRSDRCWDWO;;;BA)(A;;CCLCSWRPWPDTLOCRRC;;;SO)(A;;LCRPWP;;;S-1-5-80-3141615172-2057878085-1754447212-2405740020-3916490453)(A;;CCLCSWLOCRRC;;;SU)
     ```
+
