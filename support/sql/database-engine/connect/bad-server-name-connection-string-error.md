@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting the bad server name in connection string
 description: This article provides symptoms and solution for troubleshooting the bad server name in connection string issue.
-ms.date: 12/18/2023
+ms.date: 12/21/2023
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
@@ -16,12 +16,14 @@ This article helps you to resolve the issue related to the bad server name.
 
 The SQLOLEDB and SQLNCLI11 OLE DB providers that use the TCP or Named Pipes protocols show either of the following error messages:
 
-- "Login failed for user 'userx'" - This error message is shown when the providers use an SQL login.
-- "Login failed for user 'CONTOSO\user1'" - This error message is shown when the providers use a Windows login.
+```output
+Login failed for user 'userx' - This error message is shown when the providers use an SQL login.
+Login failed for user 'CONTOSO\user1' - This error message is shown when the providers use a Windows login.
+```
 
 The Microsoft ODBC Driver 13 for SQL Server generates the following error message:
 
-> "Login failed for user 'CONTOSO\user1'"
+> Login failed for user 'CONTOSO\user1'
 
 The SqlClient .NET Provider displays the following error message when you use the TCP protocol and a SQL login or a Windows login:
 
@@ -33,8 +35,10 @@ The SqlClient .NET Provider displays the following error message when you use th
 
 You might also see either of the following error messages in the SQL Server error log:
 
-> 'Login failed for user'. Reason: Could not find a login matching the name provided.
-> 'Login failed for user 'CONTOSO\USER1'. Reason: Could not find a login matching the name provided.
+```output
+'Login failed for user'. Reason: Could not find a login matching the name provided.
+'Login failed for user 'CONTOSO\USER1'. Reason: Could not find a login matching the name provided.
+```
 
 These errors might be generated if you deploy an application that uses a DEV or QA server into production and you fail to update the connection string.
 
@@ -44,8 +48,8 @@ To resolve this issue, follow these steps:
 
 1. Check that you're connecting to the correct server.
 
-1. If the server isn't the appropriate one, then fix the connection string to point to the correct one.
+1. If the server isn't the appropriate one, then update the connection string to point to the correct server.
 
 1. If the connection string is correct, then give the login access to the database by creating a user in the database and map to that login.
 
-1. If it's a Windows login, add it to a local group or domain group that's allowed to connect to the database server.
+1. If you're using a Windows login, add it to a local group or domain group that's allowed to connect to the database server.
