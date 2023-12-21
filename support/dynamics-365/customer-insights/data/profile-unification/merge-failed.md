@@ -3,7 +3,7 @@ title: Merge failed error on the Unified data view page
 description: Provides a resolution for an issue where merge failures occur in Microsoft Dynamics 365 Customer Insights - Data.
 author: Scott-Stabbert
 ms.author: sstabbert
-ms.date: 12/19/2023
+ms.date: 12/21/2023
 ms.reviewer: v-wendysmith, mhart
 ms.custom: bap-template
 ---
