@@ -26,8 +26,9 @@ Check if the SQL Server error log shows the following messages:
 
 You might also see Kerberos errors in the system event log on the SQL Server machine for the same time range. The following error code has a specific meaning:
 
-> Error -2146893039 (0x80090311): No authority could be contacted for authentication. This is an Active Directory issue.
+> Error - 2146893039 (0x80090311): No authority could be contacted for authentication. This is an Active Directory issue.
 
 ## Resolution
 
-Check whether your Service Principal Name (SPN) is registered correctly on the Domain Controller (DC). You can use `setspn -Q` or `setspn -L` to query your service principal name and SPNs under your account respectively. 
+Check whether your Service Principal Name (SPN) is registered correctly on the Domain Controller (DC). You can use `setspn -Q` or `setspn -L` to query your SPN and SPNs under your account respectively.
+
