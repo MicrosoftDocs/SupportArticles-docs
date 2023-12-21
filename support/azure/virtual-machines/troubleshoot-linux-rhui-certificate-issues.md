@@ -157,40 +157,58 @@ All the following commands should be run by using root privileges or by specifyi
    ```bash
    sudo yum repolist all
    ```
-
+   
 #### [RHEL 8._x_ - EUS](#tab/rhel8-eus)
 
-1. Download the EUS repository configuration file by running the [wget](https://www.gnu.org/software/wget/) command:
+1. Install the `rhui-azure-rhel8-eus` package by running the [dnf](https://dnf.readthedocs.io/en/latest/command_ref.html) installation command:
 
    ```bash
-   sudo wget https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhel8-eus.config
+   sudo dnf --config='https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhel8-eus.config' install rhui-azure-rhel8-eus
    ```
 
-2. Install the `rhui-azure-rhel8-eus` package by running the [dnf](https://dnf.readthedocs.io/en/latest/command_ref.html) installation command:
-
-   ```bash
-   sudo dnf --config=rhui-microsoft-azure-rhel8-eus.config install rhui-azure-rhel8-eus
-   ```
-
-3. Lock the `releasever` variable:
+2. Lock the `releasever` variable:
 
    ```bash
    sudo echo $(. /etc/os-release && echo $VERSION_ID) > /etc/yum/vars/releasever
    ```
 
-4. Verify that the corresponding repositories are available and show no errors by running the `dnf repolist` command:
+3. Verify that the corresponding repositories are available and show no errors by running the `dnf repolist` command:
 
    ```bash
    sudo dnf repolist all
    ```
 
+   #### [RHEL 9._x_ - EUS](#tab/rhel9-eus)
+
+1. Install the `rhui-azure-rhel9` package by running the [dnf](https://dnf.readthedocs.io/en/latest/command_ref.html) installation command:
+
+   ```bash
+   sudo dnf --config='https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhel9-eus.config' install rhui-azure-rhel9-eus
+   ```
+
+2. Lock the `releasever` level, currently it has to be one of 9.0 and 9.2.
+
+   ```bash
+   sudo sh -c 'echo 9.2 > /etc/dnf/vars/releasever'
+   ```
+
+   If there are permission issues to access the `releasever`, you can edit the file using a text editor, add the image version details, and save the file.  
+
+   > [!NOTE]
+   > This instruction locks the RHEL minor release to the current minor release. Enter a specific minor release if you are looking to upgrade and lock to a later minor release that is not the latest. For example, `echo 9.2 > /etc/yum/vars/releasever` locks your RHEL version to RHEL 9.2.
+
+3. Verify that the corresponding repositories are available and show no errors by running the `dnf repolist` command:
+
+   ```bash
+   sudo dnf repolist all
+   ```
 ---
 
 #### Non-EUS RHUI package installation
 
 #### [RHEL 7._x_ - non-EUS](#tab/rhel7-noneus)
 
-1. Run the `yum install` command to install the `rhui-azure` package:
+1. Run the `yum install` command to install the `rhui-azure-rhel7` package:
 
    ```bash
    sudo yum --config='https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhel7.config' install 'rhui-azure-rhel7'
@@ -204,19 +222,13 @@ All the following commands should be run by using root privileges or by specifyi
 
 #### [RHEL 8._x_ - non-EUS](#tab/rhel8-noneus)
 
-1. Download the `EUS` repository configuration file by running the `wget` command:
+1. Install the `rhui-azure-rhel8` package by running the `dnf install` command:
 
    ```bash
-   sudo wget https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhel8.config
+   sudo dnf --config='https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhel8.config' install rhui-azure-rhel8
    ```
 
-2. Install the `rhui-azure-rhel8` package by running the `yum install` command:
-
-   ```bash
-   sudo yum --config=rhui-microsoft-azure-rhel8.config install rhui-azure-rhel8
-   ```
-
-3. Verify that the corresponding repositories are available and show no errors by running the `dnf repolist` command:
+2. Verify that the corresponding repositories are available and show no errors by running the `dnf repolist` command:
 
    ```bash
    sudo dnf repolist all
@@ -224,19 +236,13 @@ All the following commands should be run by using root privileges or by specifyi
 
 #### [RHEL 9._x_ - non-EUS](#tab/rhel9-noneus)
 
-1. Download the `EUS` repository configuration file by running the `wget` command:
+1. Install the `rhui-azure-rhel9` package by running the `yum install` command:
 
    ```bash
-   sudo wget https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhel9.config
+    sudo dnf --config='https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhel9.config' install rhui-azure-rhel9
    ```
 
-2. Install the `rhui-azure-rhel9` package by running the `yum install` command:
-
-   ```bash
-   sudo yum --config=rhui-microsoft-azure-rhel9.config install rhui-azure-rhel9
-   ```
-
-3. Verify that the corresponding repositories are available and show no errors by running the `dnf repolist` command:
+2. Verify that the corresponding repositories are available and show no errors by running the `dnf repolist` command:
 
    ```bash
    sudo dnf repolist all
