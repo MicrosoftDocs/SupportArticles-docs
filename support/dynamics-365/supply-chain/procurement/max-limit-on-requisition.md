@@ -1,18 +1,16 @@
 ---
 title: The purchase agreement maximum limit isn't effective on a purchase requisition
 description: Introduces a by-design behavior where the purchase agreement maximum limit isn't effective on a purchase requisition.
-author: GalynaFedorova
+author: Henrikan
 ms.date: 05/31/2021
-ms.topic: troubleshooting
 ms.search.form: PurchTable, PurchTablePart, PurchRFQTable
 audience: Application User
 ms.reviewer: kamaybac
 ms.search.region: Global
-ms.author: gfedorova
+ms.author: henrikan
 ms.search.validFrom: 2021-05-31
 ms.dyn365.ops.version: 10.0.13
 ---
-
 # The purchase agreement maximum limit isn't effective on a purchase requisition
 
 ## Symptoms

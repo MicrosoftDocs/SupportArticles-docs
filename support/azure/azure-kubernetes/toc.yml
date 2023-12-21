@@ -5,6 +5,8 @@
   items:
   - name: Basic troubleshooting
     href: troubleshoot-aks-cluster-creation-issues.md
+  - name: AADSTS7000222 - BadRequest or InvalidClientSecret error
+    href: error-code-badrequest-or-invalidclientsecret.md
   - name: CniDownloadTimeoutVMExtensionError error (41)
     href: error-code-cnidownloadtimeoutvmextensionerror.md
   - name: ERR_VHD_FILE_NOT_FOUND error (124)
@@ -50,6 +52,8 @@
   items:
   - name: Troubleshoot Azure Kubernetes Service (AKS) upgrade errors
     items:
+    - name: AADSTS7000222 - BadRequest or InvalidClientSecret error
+      href: error-code-badrequest-or-invalidclientsecret.md
     - name: CustomPrivateDNSZoneMissingPermissionError error
       href: error-code-customprivatednszonemissingpermissionerror.md
     - name: NodePoolMcVersionIncompatible error
