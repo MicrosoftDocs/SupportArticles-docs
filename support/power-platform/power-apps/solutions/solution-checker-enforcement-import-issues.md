@@ -2,7 +2,7 @@
 title: Solution checker enforcement in Managed Environments blocks or warns on import
 description: Describes an issue in which importing solutions fails due to solution checker enforcement and provides resolutions and workarounds.
 ms.reviewer: matp
-ms.date: 10/17/2023
+ms.date: 12/21/2023
 author: jeparson
 ms.author: jeparson
 ---
@@ -18,7 +18,7 @@ _Applies to:_ &nbsp; Power Platform, Solutions
 
 When you try to [import a solution](/powerapps/maker/data-platform/import-update-export-solutions), you receive one of the following error or warning messages:
 
-> Error: Solution is blocked from importing due to critical violations. Fix these violations and run Solution Checker before retrying.
+> Error: Solution is blocked from importing due to critical violations. Fix these violations, then retry the import.
 
 > Warning: There are critical violations in this solution. You can block solutions with critical violations by enabling Solution Checker enforcement in Managed Environments settings page.
 
