@@ -3,7 +3,7 @@ title: Wrong values in Amounts Since Last Closed
 description: Provides a solution to an issue where the Amounts Since Last Close view for Customer or Vendor Summary Inquiry show incorrect Year-to-Date or Last Year values.
 ms.reviewer: theley 
 ms.topic: troubleshooting
-ms.date: 12/18/2023
+ms.date: 12/21/2023
 ---
 # Amounts Since Last Closed view in Customer or Vendor Summary reflects incorrect close date in Microsoft Dynamics GP
 
