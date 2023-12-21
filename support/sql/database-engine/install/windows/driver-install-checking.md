@@ -35,17 +35,17 @@ Ensuring the proper installation of drivers is critical for seamless connectivit
 
 Let's delve into the methods to efficiently check the installation status of these drivers to ensure their readiness for data handling and exchange.
 
-- [ODBC driver installation check]()
-- [OLE DB driver installation check]()
-- [.NET driver installation check]()
+- [ODBC driver installation check](odbc-driver-install-checking.md)
+- [OLE DB driver installation check](oledb-driver-install-check.md)
+- [.NET driver installation check](net-driver-install-check.md)
 
 ## Installation support for various drivers and providers
 
 When it comes to navigating the vast landscape of drivers and providers, understanding their support structure is crucial for seamless operations and troubleshooting. Here's an overview of the support mechanisms for different third-party drivers and providers:
 
 - Third-party drivers and providers are ultimately supported by the vendor.
-- For drivers and providers that come preinstalled with Windows, such as SQL Server, FoxPro, Microsoft ODBC for Oracle, and Access (and its IISAM drivers, Text, Paradox, dBase, Excel, and so on), generally, you must repair or reinstall Windows. The [Microsoft Windows support team](https://support.microsoft.com/en-us/contactus#!) can assist. These drivers shouldn't be used for new application development.
-- For the ACE provider and the ODBC drivers that derive from it, such as the Excel ODBC driver, the [Access or Office team](https://support.microsoft.com/en-us/contactus#!) can provide support.
+- For drivers and providers that come preinstalled with Windows, such as SQL Server, FoxPro, Microsoft ODBC for Oracle, and Access (and its IISAM drivers, Text, Paradox, dBase, Excel, and so on), generally, you must repair or reinstall Windows. The [Microsoft Windows support team](https://support.microsoft.com/contactus#!) can assist. These drivers shouldn't be used for new application development.
+- For the ACE provider and the ODBC drivers that derive from it, such as the Excel ODBC driver, the [Access or Office team](https://support.microsoft.com/contactus#!) can provide support.
 - For the Microsoft DB/2 drivers and providers, the Host Integration Services team supports them.
 - For the Active Directory provider, the Active Directory team can provide support.
 - For the Exchange provider, the Exchange team can provide support.
@@ -54,8 +54,8 @@ When it comes to navigating the vast landscape of drivers and providers, underst
 
 ## More information
 
-- [ODBC driver installation check]()
-- [OLE DB driver installation check]()
-- [.NET driver installation check]()
+- [ODBC driver installation check](odbc-driver-install-checking.md)
+- [OLE DB driver installation check](oledb-driver-install-check.md)
+- [.NET driver installation check](net-driver-install-check.md)
 
 [!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]

@@ -1,120 +1,131 @@
 ---
-title: OLE DB Driver Install Checking
-description: 
-ms.date: 12/13/2023
+title: OLE DB driver installation check
+description: Provides insights into the installation, validation, and resolution of issues related to OLE DB drivers.
+ms.date: 12/18/2023
 ms.custom: sap:Installation, Patching and Upgrade
-ms.reviewer:
+ms.reviewer: mastewa, jopilov, prmadhes, v-sidong
 ---
-OLE DB Driver Install Checking
-In this article
-  About UDL Files
-  32-Bit .UDL32 File Extension Mapping
-  Validating an OLE DB Provider
-  Support for 3rd-Party Providers
+# OLE DB driver installation check
 
-OLE DB (Object Linking and Embedding Database) is a Microsoft data access technology used to connect applications to various data sources using OLE DB providers. Troubleshooting OLE DB driver installations and validations can be complex but crucial for seamless database interactions. One of the simplest ways to test an OLE DB provider is via the UDL (Universal Data Link) file. This troubleshooting guide aims to provide insights into the installation, validation, and resolution of issues related to OLE DB drivers.
+Object Linking and Embedding Database (OLE DB) is a Microsoft data access technology used to connect applications to various data sources using OLE DB providers. Troubleshooting OLE DB driver installations and validations can be complex, but is crucial for seamless database interaction. This troubleshooting guide aims to provide insights into the installation, validation, and resolution of issues related to OLE DB drivers.
 
-About UDL Files
-The simplest way to test an OLE DB Provider is via the UDL file. Create any text file in Windows Explorer and rename to have a .UDL file extension. Make sure you have file extensions turned on to make the change.
+## About UDL files
 
-Double-click the file and a dialog will open where you can see the installed Providers and test their connection.
+One of the simplest ways to test an OLE DB provider is via the Universal Data Link (UDL) file. Create any text file in Windows Explorer and rename it to have a *.UDL* file extension. Make sure you have file extensions turned on to make the change.
 
-:::image type="content" source="media/oledb-driver-install-check/Picture1.png" alt-text=".":::
+Double-click the file to open a dialog where you can see the installed providers and test their connections.
 
-Hint: If you click OK on the dialog, you can open the UDL file in Notepad to see a connection string you can use in your application.
+:::image type="content" source="media/oledb-driver-install-check/udl-test-oledb-provider.png" alt-text="Screenshot shows how to use UDL file to test OLE DB provider.":::
 
-[oledb]
-; Everything after this line is an OLE DB initstring
-Provider=SQLNCLI11.1;Integrated Security="";Persist Security Info=False;User ID=sa;Initial Catalog=northwind;Data Source=tcp:SQLProd01.contoso.com,1433;Initial File Name="";Server SPN=""
+> [!NOTE]
+> If you select **OK** in the dialog, you can open the UDL file in Notepad to see the connection string you can use in your application. For example:
+>
+> ```output
+> Provider=SQLNCLI11.1;Integrated Security="";Persist Security Info=False;User ID=sa;Initial Catalog=northwind;Data Source=tcp:SQLProd01.contoso.com,1433;Initial File Name="";Server SPN=""
+> ```
 
-The UDL file UI is provided by OLEDB32.DLL and hosted in RUNDLL32.DLL. The command for this is rather lengthy:
+The UDL file UI is provided by *OLEDB32.DLL* and hosted in *RUNDLL32.DLL*.
 
-Rundll32.exe "C:\Program Files\Common Files\System\OLE DB\oledb32.dll",OpenDSLFile C:\test.udl
-or
-C:\Windows\SysWOW64\Rundll32.exe C:\PROGRA~2\COMMON~1\System\OLEDB~1\oledb32.dll,OpenDSLFile C:\test.udl32
+- For 32-bit systems or 64-bit providers on 64-bit systems, use the following command:
 
-The first command is for 32-bit systems or 64-bit Providers on 64-bit systems.
-The second command is for 32-bit Providers on 64-bit systems.
+  `Rundll32.exe "C:\Program Files\Common Files\System\OLE DB\oledb32.dll",OpenDSLFile C:\test.udl`
 
-The .UDL file extension is mapped to the first command. For the second, you can simplify things by running the 32-bit command prompt and then START C:\TEMP\TEST.UDL to test 32-bit Providers.
-Even simpler is to map the .UDL32 file extension to the 32-bit command.
+- For 32-bit providers on 64-bit systems, use the following command:
 
-32-Bit .UDL32 File Extension Mapping
+  `C:\Windows\SysWOW64\Rundll32.exe C:\PROGRA~2\COMMON~1\System\OLEDB~1\oledb32.dll,OpenDSLFile C:\test.udl32`
 
-If you use 32-bit providers a lot, you can map the file extension .UDL32 to launch the 32-bit UDL dialog.
-Copy the script to Notepad and save as udl32.reg.
+The *.UDL* file extension is mapped to the first command. For the second, you can simplify things by running a 32-bit command prompt and then running `START C:\TEMP\TEST.UDL` to test 32-bit providers. Even simpler is to map the *.UDL32* file extension to the 32-bit command.
 
-Windows Registry Editor Version 5.00
+## 32-bit .udl32 file extension mapping
 
-[HKEY_CLASSES_ROOT\.UDL32]
-@="ft000001"
+If you frequently use 32-bit providers, you can map the file extension *.udl32* to launch the 32-bit UDL dialog. Follow these steps:
 
-[HKEY_CLASSES_ROOT\ft000001]
-@="Microsoft Data Link 32"
-"BrowserFlags"=dword:00000008
-"EditFlags"=dword:00000000
+1. Copy the script to Notepad and save it as *udl32.reg*.
 
-[HKEY_CLASSES_ROOT\ft000001\shell]
-@="open"
+    ```output
+    Windows Registry Editor Version 5.00
+    
+    [HKEY_CLASSES_ROOT\.UDL32]
+    @="ft000001"
+    
+    [HKEY_CLASSES_ROOT\ft000001]
+    @="Microsoft Data Link 32"
+    "BrowserFlags"=dword:00000008
+    "EditFlags"=dword:00000000
+    
+    [HKEY_CLASSES_ROOT\ft000001\shell]
+    @="open"
+    
+    [HKEY_CLASSES_ROOT\ft000001\shell\open]
+    
+    [HKEY_CLASSES_ROOT\ft000001\shell\open\command]
+    @="C:\\Windows\\SysWOW64\\Rundll32.exe C:\\PROGRA~2\\COMMON~1\\System\\OLEDB~1\\oledb32.dll,OpenDSLFile %1"
+     
+    [HKEY_CLASSES_ROOT\ft000001\shell\open\ddeexec]
+    ```
 
-[HKEY_CLASSES_ROOT\ft000001\shell\open]
+1. Double-click the *.reg* file and then you can create a file with a *.udl32* file extension. For example, *test.udl32*. And it will launch the 32-bit UDL dialog. For example:
 
-[HKEY_CLASSES_ROOT\ft000001\shell\open\command]
-@="C:\\Windows\\SysWOW64\\Rundll32.exe C:\\PROGRA~2\\COMMON~1\\System\\OLEDB~1\\oledb32.dll,OpenDSLFile %1"
+   :::image type="content" source="media/oledb-driver-install-check/32-bit-udl-dialog.png" alt-text="Screenshot shows an example of a 32-bit UDL dialog.":::
 
-[HKEY_CLASSES_ROOT\ft000001\shell\open\ddeexec]
+## Validate an OLE DB Provider
 
-Double-click the .REG file and then you can create a file with a .udl32 file extension, e.g. test.udl32, and it will launch the 32-bit UDL dialog.
+The first step for validating a provider is to see whether the name appears in the list of installed providers of a 64-bit or 32-bit UDL dialog, as shown above. If it doesn't, you need to reinstall the provider or consult the vendor.
 
-:::image type="content" source="media/oledb-driver-install-check/Picture2.png" alt-text=".":::
-Validating an OLE DB Provider
+You can also trace the driver location in the registry. The driver name is a COM [ProgID](/windows/win32/com/-progid--key) and you can find it in [HKEY_CLASSES_ROOT](/windows/win32/sysinfo/hkey-classes-root-key).
 
-The first step for validating a Provider is to see whether the name appears in the list of installed Providers of a 64-bit or 32-bit UDL dialog as shown above. If it doesn't, then you need to reinstall the Provider or consult the vendor.
+In the following image, you can see the mapping between the ProgID **SQLNCLI11.1** and the provider name **SQL Server Native Client 11.0**.
 
-You can also trace the driver location in the registry. The driver name is a COM PROGNAME and you look it up in HKEY_CLASSES_ROOT.
+:::image type="content" source="media/oledb-driver-install-check/mapping-progid-provider-name.png" alt-text="Screenshot shows the mapping between the ProgID SQLNCLI11.1 and the Provider name SQL Server Native Client 11.0.":::
 
-In the following image, you can see the mapping between the PROGID SQLNCLI11.1 and the Provider Name SQL Server Native Client 11.0.
+The ProgID of both 32-bit and 64-bit providers appears under this key.
 
-:::image type="content" source="media/oledb-driver-install-check/Picture3.png" alt-text=".":::
+In addition to **SQLNCLI11.1**, there's also a ProgID called **SQLNCLI11**. The reason for this is that a provider developer might allow multiple versions of the same provider to be installed side by side, each with a different numeric suffix. The unnumbered name is the version-independent ProgID. Applications can point to this and be redirected to the latest version of the provider.
 
-The PROGID of both 32-bit and 64-bit Providers appears under this key.
+For all intents and purposes, these two different ProgID names should be equivalent. However, there have been a few cases where they weren't. Applications using the version-independent name can't connect, but they can connect if using the versioned ProgID. The reason is that the two entries point to different [CLSID](/windows/win32/com/clsid-key-hklm) values, which is how to find the provider DLL.
 
-You will also note that in addition to SQLNCLI11.1, there is also a PROGID called SQLNCLI11. The reason for this is that a Provider developer may allow for multiple versions of the same provider to be installed side-by-side, each with a different numeric suffix. The unnumbered name is the version independent PROGID. Applications can point to this and get redirected to the latest version of the provider.
+:::image type="content" source="media/oledb-driver-install-check/find-provider-dll-versioned-progid.png" alt-text="Screenshot shows how to find the provider dll using the versioned ProgId.":::
 
-For all intents and purposes, these two different PROGID names should be equivalent. However, there have been a small number of cases where they were not. Applications using the version-independent name failed to connect, but if using the versioned PROGID were able to connect. The reason is that the two entries pointed to different CLSID values, which is how we find the provider DLL.
+The `CLSID` is the COM GUID. The COM infrastructure locates the GUID from the ProgID. It then looks under the `HKEY_CLASSES_ROOT\CLSID` key for a key whose GUID matches the key name:
 
-:::image type="content" source="media/oledb-driver-install-check/Picture4.png" alt-text=".":::
+:::image type="content" source="media/oledb-driver-install-check/locate-guid-progid.png" alt-text="Screenshot shows how to locate a GUID from ProgId under HKEY_CLASSES_ROOT\CLSID.":::
 
-The CLSID is the COM GUID. The COM infrastructure locates the GUID from the PROGID. It then looks under HKEY_CLASSES_ROOT\CLSID key for a key with the matching GUID for the key name:
+The `InProcServer32` value points to the provider DLL.
 
-:::image type="content" source="media/oledb-driver-install-check/Picture5.png" alt-text=".":::
+For 32-bit providers, COM uses the same GUID but looks for it under `HKEY_CLASSES_ROOT\Wow6432Node\CLSID`.
 
-The InProcServer32 value points to the Provider DLL.
+:::image type="content" source="media/oledb-driver-install-check/provider-folder-syswow64.png" alt-text="Screenshot shows the provider is located in the SysWow64 folder.":::
 
-For 32-bit Providers, COM uses the same GUID, but looks for it under HKEY_CLASSES_ROOT\Wow6432Node\CLSID.
+In this case, the provider is located in the *SysWow64* folder.
 
-:::image type="content" source="media/oledb-driver-install-check/Picture6.png" alt-text=".":::
+> [!NOTE]
+> These examples are from 64-bit machines. On 32-bit machines, there's no `Wow6432Node` in the registry.
 
-In this case the provider is located in the SysWow64 folder.
+These are the paths to **SQL Native Client 11.0** in Registry Editor for 64-bit machines:
 
-Note: These examples are from 64-bit machines. On 32-bit machines, there is no Wow6432Node in the registry.
+- `HKEY_CLASSES_ROOT\SQLNCLI.1\CLSID`
+- `HKEY_CLASSES_ROOT\CLSID\<guid>\InProcServer32`
+- `HKEY_CLASSES_ROOT\Wow6432Node\CLSID\<guid>\InProcServer32`
 
-These are the paths for SQL Native Client 11.0 in REGEDIT for 64-bit machines:
+These are the paths in Registry Editor for 32-bit machines:
 
-HKEY_CLASSES_ROOT\SQLNCLI.1\CLSID
-HKEY_CLASSES_ROOT\CLSID\{guid}\InProcServer32
-HKEY_CLASSES_ROOT\Wow6432Node\CLSID\{guid}\InProcServer32
+- `HKEY_CLASSES_ROOT\SQLNCLI.1\CLSID`
+- `HKEY_CLASSES_ROOT\CLSID\{guid}\InProcServer32`
 
-These are the paths in REGEDIT for 32-bit machines:
+## Support for third-party providers
 
-HKEY_CLASSES_ROOT\SQLNCLI.1\CLSID
-HKEY_CLASSES_ROOT\CLSID\{guid}\InProcServer32
+As with ODBC drivers, support for third-party providers is limited to validating the ProgID points to a valid CLSID and that the `InProcServer32` subkey points to the correct DLL. If the path is incorrect or the registry entry doesn't exist, reinstall the provider or contact the vendor. If the files exist but the registry entries don't, you can manually register the provider using `REGSVR32`. To register a COM DLL, run the following command at an elevated command prompt:
 
-Support for 3rd-Party Providers
-As with ODBC drivers, support for 3rd-party Providers is limited to validating the PROGID points to a valid CLSID and that the InProcServer32 sub key points to the right DLL. If the path is incorrect or the registry entry does not exist, reinstall the Provider or contact the vendor. If the files exist but the registry entries do not, you can manually register the Provider using REGSVR32. To register a COM DLL, type the following command at an Administrator command prompt:
+```cmd
+Regsvr32 sqlncli11
+```
 
-:::image type="content" source="media/oledb-driver-install-check/Picture7.png" alt-text=".":::
+:::image type="content" source="media/oledb-driver-install-check/register-com-dll-command.png" alt-text="Screenshot shows an administrator command to register a COM DLL.":::
 
-If there are both 32-bit and 64-bit versions of the Provider, run the command against both DLLs. Use a 32-bit command prompt to register the 32-bit DLL.
+If there are both 32-bit and 64-bit versions of the provider, run the command against both DLLs. Use a 32-bit command prompt to register the 32-bit DLL.
 
-See also
+## More information
+
+- [ODBC driver installation check](odbc-driver-install-checking.md)
+- [.NET driver installation check](net-driver-install-check.md)
+- [Driver installation check](driver-install-checking.md)
