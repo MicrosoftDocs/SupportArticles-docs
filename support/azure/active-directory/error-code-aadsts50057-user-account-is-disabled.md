@@ -13,7 +13,7 @@ This article discusses how to resolve the "AADSTS50057" error that occurs when a
 
 ## Symptoms
 
-When a user tries to sign in to an application that's integrated into Microsoft Entra ID, they receive an "AADSTS50057" error message ("The user account is disabled.").
+When users try to sign in to an application that's integrated into Microsoft Entra ID, they receive an "AADSTS50057" error message ("The user account is disabled.").
 
 ## Cause
 
