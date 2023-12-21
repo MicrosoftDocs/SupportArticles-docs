@@ -1,20 +1,15 @@
 ---
-# Required metadata
-# For more information, see https://review.learn.microsoft.com/en-us/help/platform/learn-editor-add-metadata?branch=main
-# For valid values of ms.service, ms.prod, and ms.topic, see https://review.learn.microsoft.com/en-us/help/platform/metadata-taxonomies?branch=main
-
 title: Error AADSTS50057 - User account is disabled
-description: Describes a problem in which a user receives the error AADSTS50057 when trying to sign-in
-author:      custorod # GitHub alias
-ms.author: custorod
+description: Provides a solution to an issue where a user experiences the AADSTS500571 error when they try to sign in to an Azure app that can be used with Microsoft Entra ID.
 ms.service: identity
 ms.topic: troubleshooting-problem-resolution
-ms.date:     12/19/2023
+ms.date: 12/21/2023
+ms.reviewer: custorod, joaos, v-weizhu
 ---
 
 # Error AADSTS50057 - User account is disabled
 
-This article discusses how to resolve an `AADSTS50057` error that occurs when a user tries to sign in to an application that can be used together with Microsoft Entra ID.
+This article discusses how to resolve the "AADSTS50057" error that occurs when a user tries to sign in to an application that can be used together with Microsoft Entra ID.
 
 ## Symptoms
 
