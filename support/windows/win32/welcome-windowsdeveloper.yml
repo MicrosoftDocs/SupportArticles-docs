@@ -67,14 +67,10 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: AAC audio isn't playing for MPEG-2 TS file in Windows 8.1
-            url: AAC-audio-not-playing-for-MPEG-2-TS-file-Windows-8-1.md
           - text: Converting PDF to bitmap causes partial data loss in the image
             url: converting-pdf-file-to-bitmap-image.md
           - text: Can't print to XPS Document Writer
             url: print-app-xps-document-writer.md
-          - text: DirectShow doesn't connect to a downstream filter
-            url: directshow-not-connect-downstream-filter.md
           - text: DWM drops frames of Direct3D applications
             url: dwm-drop-direct3d-10-application-frame.md
 

@@ -4450,26 +4450,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "support/windows/win32/getmessage-ignores-posted-messages.md",
-      "redirect_url": "/previous-versions/troubleshoot/windows/win32/getmessage-ignores-posted-messages",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/windows/win32/icon-overlay-handlers-windows-shell.md",
-      "redirect_url": "/previous-versions/troubleshoot/windows/win32/icon-overlay-handlers-windows-shell",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/windows/win32/pathisdirectory-may-blocked.md",
-      "redirect_url": "/previous-versions/troubleshoot/windows/win32/pathisdirectory-may-blocked",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/windows/win32/desktop-bridge-app-fail-start-run-as-administrator.md",
-      "redirect_url": "/previous-versions/troubleshoot/windows/win32/desktop-bridge-app-fail-start-run-as-administrator",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "support/windows/win32/hook-procedure-not-receiving-vk-convert-message.md",
       "redirect_url": "/previous-versions/troubleshoot/windows/win32/hook-procedure-not-receiving-vk-convert-message",
       "redirect_document_id": false
