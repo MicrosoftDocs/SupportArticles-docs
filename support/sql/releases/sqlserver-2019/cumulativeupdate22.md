@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 22 for SQL Server 2019 (KB5027702)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 22 (KB5027702).
-ms.date: 08/14/2023
+ms.date: 12/22/2023
 ms.custom: KB5027702
 ms.reviewer: v-qianli2
 appliesto:
@@ -51,7 +51,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id=2460204>[2460204](#2460204) </a> | Fixes an issue caused by a change introduced in SQL Server 2019 CU20 for the [Managed Instance link](/azure/azure-sql/managed-instance/managed-instance-link-feature-overview) feature. For more information, see [Issue three](cumulativeupdate20.md#issue-three). | SQL Server Engine| High Availability and Disaster Recovery | All|
 | <a id=2504040>[2504040](#2504040) </a> | Fixes a stack overflow in `HaDrUndoMgr::InitSystemPages` that's caused by a loop getting all the Page Free Space (PFS) pages from the primary availability group. | SQL Server Engine| High Availability and Disaster Recovery |All |
 | <a id=2555121>[2555121](#2555121) </a> | Fixes an issue in which a pointer is outside the empty result buffer when the output of `CONCAT_WS` is empty. This fix adds a check for the empty result before doing the pointer arithmetic. | SQL Server Engine| In-Memory OLTP|All |
-| <a id=2355421>[2355421](#2355421) </a> | Fixes an intra-query deadlock and the following error 1205 that you might encounter when the nested loop join (NLJ) has an empty set inside and both a child and an ancestor require all threads to synchronize at the operator before moving forward: </br></br>Msg 1205, Level 13, State 80, Procedure \<ProcedureName>, Line \<LineNumber> [Batch Start Line \<LineNumber>] </br>Transaction (Process ID \<ProcessID>) was deadlocked on \<ResourceType> resources with another process and has been chosen as the deadlock victim. Rerun the transaction. | SQL Server Engine|Query Execution|All |
+| <a id=2355421>[2355421](#2355421) </a> | Fixes an intra-query deadlock that you might encounter when running some query plans that involve nested loop joins in batch mode. | SQL Server Engine|Query Execution|All |
 | <a id=2111946>[2111946](#2111946) </a> | Increases the threshold for the number of `OR` clauses that can be converted to Index Union plans.| SQL Server Engine|Query Optimizer|All |
 | <a id=2472432>[2472432](#2472432) </a> | Enables trace flag 9135 (`TRCFLG_QP_DONT_USE_INDEXED_VIEWS`) in retail builds to allow the `EXPAND VIEWS` behavior without the per-query hint. | SQL Server Engine| Query Optimizer | All|
 | <a id=2434847>[2434847](#2434847) </a> | Fixes an issue in which a thread deadlock between Query Store (QDS) background tasks blocks the database shutdown.| SQL Server Engine| Query Store | All|
