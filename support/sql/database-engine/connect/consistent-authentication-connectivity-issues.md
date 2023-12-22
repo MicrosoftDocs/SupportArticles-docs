@@ -75,8 +75,7 @@ The following table lists some scenarios that are related to aspects such as dat
 |Proxy account     |  An SSIS job run by SQL Agent might need permissions other than the SQL Agent service account can provide. For more information, see [SSIS package does not run when called from a SQL Server Agent job step.](../../integration-services/ssis-package-doesnt-run-when-called-job-step.md)  |
 |Bad metadata     | A view or stored procedure receives login failures on a linked server whereas a distributed `SELECT` statement copied from them doesn't. This situation can happen if the View was created and then the linked server was recreated, or a remote table was modified without rebuilding the View.  |
 
-<details>
-<summary><h2>Issues related to Connection String</h2></summary>
+<details><summary><h2>Issues related to Connection String</h2>
 
 The following sections provides various scenarios related to connection string issues.
 
@@ -103,7 +102,7 @@ If the SPN you specify in the connection string exists on a service account that
 ### Explicit SPN is duplicated
 
 If you recently changed the SQL Server service account from LocalSystem to a domain account, it's easy to forget to remove the SPN from the computer and just create a new SPN on the new service account. This generates an SSPI Context error. <br/> **Note**: Use `-QF` to search the entire forest.
-
+</summary>
 </details>
 
 ## Issues related to Windows permissions or Policy settings
