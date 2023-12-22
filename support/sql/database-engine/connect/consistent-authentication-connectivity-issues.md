@@ -75,34 +75,23 @@ The following table lists some scenarios that are related to aspects such as dat
 |Proxy account     |  An SSIS job run by SQL Agent might need permissions other than the SQL Agent service account can provide. For more information, see [SSIS package does not run when called from a SQL Server Agent job step.](../../integration-services/ssis-package-doesnt-run-when-called-job-step.md)  |
 |Bad metadata     | A view or stored procedure receives login failures on a linked server whereas a distributed `SELECT` statement copied from them doesn't. This situation can happen if the View was created and then the linked server was recreated, or a remote table was modified without rebuilding the View.  |
 
-<details><summary><h2>Issues related to Connection String</h2>
+<details><summary><h2>Issues related to Connection String</h2></summary>
 
 The following sections provides various scenarios related to connection string issues.
 
-### Bad server name in connection string
+  <h4>Bad server name in connection string</h4>
+  <p>This scenario might occur if the specified server name is incorrect or can't be found. For more information, see [bad server name in connection string](bad-server-name-connection-string-error.md).</p>
+  <h4>Invalid username</h4>
+  <p>For more information, see [Login failed for user '\<username\>' or login failed for user '\<domain>\<username\>'](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).</p>
 
-This scenario might occur if the specified server name is incorrect or can't be found. For more information, see [bad server name in connection string](bad-server-name-connection-string-error.md).
-
-### Invalid username
-
-For more information, see [Login failed for user '\<username\>' or login failed for user '\<domain>\<username\>'](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
-
-### Wrong database name in connection string
-
-This scenario might occur if the [database name is incorrect](wrong-database-name-in-connection-string.md). Check if it is spelled correctly.
-
-### Wrong explicit SPN account
-
-For more information on these scenarios, see [Cannot generate SSPI context error](cannot-generate-sspi-context-error.md).
-
-### Explicit misplaced SPN
-
-If the SPN you specify in the connection string exists on a service account that's not used by SQL Server, you'll get an SSPI Context error message.
-
-### Explicit SPN is duplicated
-
-If you recently changed the SQL Server service account from LocalSystem to a domain account, it's easy to forget to remove the SPN from the computer and just create a new SPN on the new service account. This generates an SSPI Context error. <br/> **Note**: Use `-QF` to search the entire forest.
-</summary>
+  <h4>Wrong database name in connection string</h4>
+  <p>This scenario might occur if the [database name is incorrect](wrong-database-name-in-connection-string.md). Check if it is spelled correctly.</p>
+  <h4>Wrong explicit SPN account</h4>
+  <p>For more information on these scenarios, see [Cannot generate SSPI context error](cannot-generate-sspi-context-error.md).</p>
+  <h4>Explicit misplaced SPN</h4>
+  <p>If the SPN you specify in the connection string exists on a service account that's not used by SQL Server, you'll get an SSPI Context error message.</p>
+  <h4>Explicit SPN is duplicated</h4>
+   <p>If you recently changed the SQL Server service account from LocalSystem to a domain account, it's easy to forget to remove the SPN from the computer and just create a new SPN on the new service account. This generates an SSPI Context error. <br/> **Note**: Use `-QF` to search the entire forest.</p>
 </details>
 
 ## Issues related to Windows permissions or Policy settings
