@@ -4643,6 +4643,11 @@
       "source_path": "support/windows/win32/aac-audio-not-playing-for-mpeg-2-ts-file-windows-8-1.md",
       "redirect_url": "/previous-versions/troubleshoot/windows/win32/aac-audio-not-playing-for-mpeg-2-ts-file-windows-8-1",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/directshow-not-connect-downstream-filter.md",
+      "redirect_url": "/troubleshoot/windows/win32/welcome-windowsdeveloper",
+      "redirect_document_id": true
     }
   ]
 }
