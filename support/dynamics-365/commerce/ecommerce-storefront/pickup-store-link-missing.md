@@ -4,7 +4,7 @@ description: Provides a resolution for an issue where the option for in-store pi
 author: josaw1 
 ms.author: josaw
 ms.reviewer: rassadi, brstor
-ms.date: 09/01/2023
+ms.date: 12/22/2023
 ---
 # The "Pick this up" option doesn't appear on cart or product details pages 
 
@@ -21,7 +21,6 @@ The following screenshot shows an example of a page that includes the **Pick thi
 ## Resolution
 
 To solve the issue, follow these steps:
-
 
 #### Step 1: Configure modes of delivery in Commerce headquarters
 
