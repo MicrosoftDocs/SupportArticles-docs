@@ -2,27 +2,20 @@
 
 
 
+## Week of December 18, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 12/20/2023 | [Sign-in error when selecting the Viva Engage tile in Microsoft 365](/viva/troubleshoot/engage/error-select-the-viva-engage-tile-in-microsoft-365) | added |
+| 12/20/2023 | [Users can't sign in to Viva Engage on Android devices](/viva/troubleshoot/engage/help-users-log-in-to-viva-engage-on-android-devices) | added |
+| 12/20/2023 | [Troubleshoot your Viva Engage network for problems with Native Mode](/viva/troubleshoot/engage/troubleshoot-native-mode) | added |
+| 12/20/2023 | [Resolve Viva Insights errors](/viva/troubleshoot/insights/viva-insights-errors) | added |
+
+
 ## Week of November 20, 2023
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
 | 11/21/2023 | [Exception date overlap error during historical imports](/viva/troubleshoot/glint/historical-import/import-error-exception-date-overlap) | added |
-
-
-## Week of November 13, 2023
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 11/16/2023 | [Understand file upload errors and warnings in Viva Glint](/viva/troubleshoot/glint/data-file-upload/file-upload-errors-warnings) | added |
-| 11/17/2023 | [User is not in client error during historical imports](/viva/troubleshoot/glint/historical-import/import-error-user-is-not-in-client) | added |
-
-
-## Week of November 06, 2023
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 11/5/2023 | [Resolve setup errors in Viva Pulse](/viva/troubleshoot/pulse/fix-setup-error-messages) | added |
-| 11/6/2023 | [Self-help diagnostics for Microsoft Viva administrators](/viva/troubleshoot/viva-suite-administration/viva-self-help-diagnostics) | added |
