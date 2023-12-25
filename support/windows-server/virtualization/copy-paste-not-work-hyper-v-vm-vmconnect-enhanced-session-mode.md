@@ -13,6 +13,7 @@ ms.reviewer: kaushika, stevepar, eltons
 ms.custom: sap:configuration-of-virtual-machine-settings, csstroubleshoot
 ms.technology: hyper-v
 ---
+
 # Copy-and-paste operations don't work when you connect to a Hyper-V virtual machine by using VMConnect Enhanced Session Mode
 
 This article provides a solution to an issue where copy-and-paste operations may not work as expected when you connect to a Hyper-V virtual machine by using VMConnect Enhanced Session Mode.
@@ -32,16 +33,15 @@ Enhanced Session Mode enables the transfer of files to and from virtual machines
 
 To successfully copy files to and from Hyper-V virtual machines when you use VMConnect through Enhanced Session Mode, make sure that you don't enable the following policy:
 
-- Policy path: Computer Configuration\\Policies\\Administrative Templates\\Windows Components\\Terminal Services\\Terminal Server\\Device and Resource Redirection
-
+- Policy path: Computer Configuration\\Policies\\Administrative Templates\\Windows Components\\Remote Desktop Services\\Remote Desktop Session Host\\Device and Resource Redirection
     > [!NOTE]
     > If you use the Local Group Policy Editor, the Policies folder is not part of the node path.
 
-- Policy setting: Do not allow drive redirection
-
+- Policy setting: Do not allow Clipboard redirection
     Set this policy to "Disabled" or "Not Configured" to allow file copy redirection in Remote Desktop Services and Hyper-V Enhanced Session Mode sessions.
 
 ## References
 
 - [Use local resources on Hyper-V virtual machine with VMConnect](/windows-server/virtualization/hyper-v/learn-more/use-local-resources-on-hyper-v-virtual-machine-with-vmconnect)
 - [Policy CSP - RemoteDesktopServices](/windows/client-management/mdm/policy-csp-remotedesktopservices#remotedesktopservices-donotallowdriveredirection)
+
