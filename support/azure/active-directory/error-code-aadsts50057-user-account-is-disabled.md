@@ -3,7 +3,7 @@ title: Error AADSTS50057 - User account is disabled
 description: Provides a solution to an issue where a user experiences the AADSTS500571 error when they try to sign in to an Azure app that can be used with Microsoft Entra ID.
 ms.service: identity
 ms.topic: troubleshooting-problem-resolution
-ms.date: 12/21/2023
+ms.date: 12/25/2023
 ms.reviewer: custorod, joaos, v-weizhu
 ---
 
@@ -32,6 +32,6 @@ Engage the resource tenant owners to determine why the user account is disabled.
 
 For a full list of authentication and authorization error codes, see [Microsoft Entra authentication and authorization error codes](/azure/active-directory/develop/reference-error-codes).
 
-To investigate individual errors, go to <https://login.microsoftonline.com/error>.
+To investigate individual errors, go to [https://login.microsoftonline.com/error](https://login.microsoftonline.com/error).
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)] 
