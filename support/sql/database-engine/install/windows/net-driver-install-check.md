@@ -79,9 +79,54 @@ The following table shows the DLL and assembly names of some common providers:
 |Microsoft's Oracle Provider|*System.Data.OracleClient*|*System.Data.OracleClient.DLL*|
 |Oracle's ODP Provider|*Oracle.DataAccess.Client*|*Oracle.DataAccess.DLL*|
 
-When troubleshooting .NET providers, there's no generalized tool, such as the ODBC Administrator or a UDL file, to test the application independently. In this case, you can write one in PowerShell. The following topic contains a PowerShell script that tests the SqlClient provider. It can be easily modified for others:
+When troubleshooting .NET providers, there's no generalized tool, such as the ODBC Administrator or a UDL file, to test the application independently. In this case, you can write one in PowerShell. For example:
 
-[Determine If I Am Connected to SQL Server using Kerberos Authentication]
+```powershell
+#------------------------------- 
+# 
+# get-SqlAuthScheme.ps1 
+# 
+# PowerShell script to test a System.Data.SqlClient database connection
+#
+# USAGE: .\get-SqlAuthScheme tcp:SQLProd01.contoso.com,1433   ' explicitly specify DNS suffix, protocol, and port # ('tcp' must be lower case)
+# USAGE: .\get-SqlAuthScheme SQLProd01                        ' let the driver figure out the DNS suffix, protocol, and port #
+# 
+#------------------------------- 
+param ([string]$server = "localhost")
+Set-ExecutionPolicy Unrestricted -Scope CurrentUser
+$connstr = "Server=$server;Database=master;Integrated Security=SSPI" 
+ 
+[System.Data.SqlClient.SqlConnection] $conn = New-Object System.Data.SqlClient.SqlConnection 
+$conn.ConnectionString = $connstr 
+ 
+[System.DateTime] $start = Get-Date 
+ 
+$conn.Open() 
+ 
+[System.Data.SqlClient.SqlCommand] $cmd = New-Object System.Data.SqlClient.SqlCommand 
+$cmd.CommandText = "select auth_scheme from sys.dm_exec_connections where session_id=@@spid" 
+$cmd.Connection = $conn 
+$dr = $cmd.ExecuteReader() 
+$result = $dr.Read() 
+$auth_scheme = $dr.GetString(0) 
+ 
+$conn.Close() 
+$conn.Dispose() 
+ 
+[System.DateTime] $end = Get-Date 
+[System.Timespan] $span = ($end - $start) 
+ 
+"End time: " + $end.ToString("M/d/yyyy HH:mm:ss.fff")  
+"Elapsed time was " + $span.Milliseconds + " ms." 
+"Auth scheme for " + $server + ": " + $auth_scheme
+```
+
+If your script is located in `C:\temp` and you want to retrieve the authentication scheme for a server named `sqlprod01`, run the following command from a PowerShell command prompt:
+
+```cmd
+.\get-sqlauthscheme.ps1 sqlprod01
+```
+
 
 In general, loading .NET providers won't be an issue if the assembly/DLL exists. The most common problem is authentication issues, which you can test using an equivalent OLE DB provider via a UDL file.
 
