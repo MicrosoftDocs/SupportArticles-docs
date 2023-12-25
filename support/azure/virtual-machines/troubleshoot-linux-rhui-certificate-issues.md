@@ -239,7 +239,7 @@ All the following commands should be run by using root privileges or by specifyi
 1. Install the `rhui-azure-rhel9` package by running the `dnf install` command:
 
    ```bash
-    sudo dnf --config='https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhel9.config' install rhui-azure-rhel9
+   sudo dnf --config='https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhel9.config' install rhui-azure-rhel9
    ```
 
 2. Verify that the corresponding repositories are available and show no errors by running the `dnf repolist` command:
