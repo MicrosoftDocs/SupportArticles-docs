@@ -3,56 +3,56 @@
 - name: Outlook side panel
   items:
   - name: Update add-in error in Copilot for Sales add-in for Microsoft Outlook
-    href: tsg-update-add-in-error.md  
+    href: outlook-side-panel/tsg-update-add-in-error.md  
   - name: Sign in issue when opening the Copilot for Sales pane in Outlook
-    href: tsg-sign-in-error.md
+    href: outlook-side-panel/tsg-sign-in-error.md
 - name: Setup, installation, and sign-in
   items:
   - name: First Salesforce CRM user unable to access Copilot for Sales
-    href: tsg-trial-env.md
+    href: setup-installation-and-sign-in/tsg-trial-env.md
   - name: Error after connecting and signing in to Salesforce CRM
-    href: tsg-api-perm.md
+    href: setup-installation-and-sign-in/tsg-api-perm.md
   - name: Copilot for Sales doesn't connect to Dynamics 365 with two-factor authentication enabled
-    href: tsg-two-factor.md
+    href: setup-installation-and-sign-in/tsg-two-factor.md
   - name: Unable to save email to CRM as enhanced email is turned off in Salesforce CRM
-    href: tsg-enhanced-email-sf.md
+    href: setup-installation-and-sign-in/tsg-enhanced-email-sf.md
   - name: Incorrect custom domain in Salesforce
-    href: tsg-incorrect-cust-domain.md
+    href: setup-installation-and-sign-in/tsg-incorrect-cust-domain.md
   - name: No access to Dynamics 365
-    href: tsg-no-access-crm.md
+    href: setup-installation-and-sign-in/tsg-no-access-crm.md
   - name: Users don't have required privileges to access the organization
-    href: tsg-admin-mode.md
+    href: setup-installation-and-sign-in/tsg-admin-mode.md
   - name: Sign in issue when app is blocked
-    href: tsg-app-blocked.md
+    href: setup-installation-and-sign-in/tsg-app-blocked.md
   - name: Authentication issues when connecting to Salesforce CRM
-    href: tsg-auth-issue.md
+    href: setup-installation-and-sign-in/tsg-auth-issue.md
   - name: Unable to sign in to Dynamics 365
-    href: tsg-disabled-user.md
+    href: setup-installation-and-sign-in/tsg-disabled-user.md
   - name: Unable to sign in to Salesforce due to disabled connections
-    href: tsg-disabled-connections-sf.md
+    href: setup-installation-and-sign-in/tsg-disabled-connections-sf.md
   - name: Unable to sign in to Salesforce due to blocked Salesforce connector
-    href: tsg-blocked-connector-sf.md
+    href: setup-installation-and-sign-in/tsg-blocked-connector-sf.md
   - name: No default BAP location found for this tenant
-    href: tsg-no-default-bap-loc.md
+    href: setup-installation-and-sign-in/tsg-no-default-bap-loc.md
   - name: Connection lost due to an expired or invalid session or a bad OAuth token
-    href: tsg-connection-lost.md
+    href: setup-installation-and-sign-in/tsg-connection-lost.md
 - name: Teams collaboration spaces
   items:
   - name: Can't create private channels in Microsoft Teams
-    href: tsg-create-private-channel.md
+    href: teams-collaboration-spaces/tsg-create-private-channel.md
   - name: Opportunity summary not displayed in deal rooms
-    href: tsg-oppty-summary.md
+    href: teams-collaboration-spaces/tsg-oppty-summary.md
 - name: CRM permissions and configurations
   items:
   - name: Salesforce CRM users unable to see data in Copilot for Sales
-    href: tsg-no-column.md
+    href: crm-permissions-and-configurations/tsg-no-column.md
   - name: Missing privileges in Dynamics 365
-    href: tsg-missing-roles.md
+    href: crm-permissions-and-configurations/tsg-missing-roles.md
   - name: Unable to update records because of missing record access in Salesforce CRM
-    href: tsg-record-update-perm.md
+    href: crm-permissions-and-configurations/tsg-record-update-perm.md
   - name: Unable to update records because of missing object access in Salesforce CRM
-    href: tsg-object-update-perm.md
+    href: crm-permissions-and-configurations/tsg-object-update-perm.md
   - name: Unable to save email to CRM due to invalid mailbox settings
-    href: tsg-mailbox-settings.md
+    href: crm-permissions-and-configurations/tsg-mailbox-settings.md
   - name: Fix mailbox errors in Dynamics 365
-    href: tsg-mailbox-errors.md
+    href: crm-permissions-and-configurations/tsg-mailbox-errors.md
