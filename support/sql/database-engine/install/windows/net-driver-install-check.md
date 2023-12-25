@@ -121,9 +121,9 @@ $conn.Dispose() 
 "Auth scheme for " + $server + ": " + $auth_scheme
 ```
 
-If your script is located in `C:\temp` and you want to retrieve the authentication scheme for a server named `sqlprod01`, run the following command from a PowerShell command prompt:
+If your script is located in `C:\temp` and you want to retrieve the authentication scheme for a server named `sqlprod01`, run the following command from Windows PowerShell as an administrator:
 
-```cmd
+```powershell
 .\get-sqlauthscheme.ps1 sqlprod01
 ```
 
