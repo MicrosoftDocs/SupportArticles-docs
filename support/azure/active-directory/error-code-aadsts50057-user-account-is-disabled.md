@@ -21,12 +21,12 @@ The user object is disabled on the resource tenant.
 
 ## Solution
 
-Engage the resource tenant owners to determine the reason that the user account is disabled. Then, take the corresponding action, as shown in the following table.
+Engage the resource tenant owners to determine why the user account is disabled. Then, take the corresponding action, as shown in the following table.
 
 | Scenario | Action |
 |--|--|
 | The user account is supposed to be disabled. | No actions should be performed. Access is expectedly blocked. |
-| The user account isn't supposed to be disabled, or it was disabled by mistake. | Resource tenant owners should re-enable the account. One of the options to re-enable the account is by using PowerShell to set the `-AccountEnabled` parameter to `$true`, as described in the [Set-AzureADUser](/powershell/module/azuread/set-azureaduser#parameters) cmdlet reference. |
+| The user account isn't supposed to be disabled, or it was disabled by mistake. | Resource tenant owners should re-enable the account. One of the options to re-enable the account is using PowerShell to set the `-AccountEnabled` parameter to `$true`, as described in the [Set-AzureADUser](/powershell/module/azuread/set-azureaduser#parameters) cmdlet reference. |
 
 ## More information
 
