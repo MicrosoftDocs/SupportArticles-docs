@@ -938,8 +938,12 @@
       href: ./deployment/0x8007000d-activate-machine.md
     - name: Error 0xC004E002 during activation
       href: ./deployment/error-0xc004e002-during-activation.md
+    - name: Error 0xC004E015 (SL_E_EUL_CONSUMPTION_FAILED)
+      href: ./deployment/error-0xc004e015-sl-e-eul-consumption-failed-activate-windows.md
     - name: Error 0xC004F015 when you activate Windows 10
       href: ./deployment/error-0xc004f015-activate-windows-10.md
+    - name: Error 0xC004F06C when you activate Windows
+      href: ./deployment/error-0xc004f06c-activate-windows.md
     - name: Error 0xC004F074 when you activate Windows
       href: ./deployment/error-0xc004f074-activate-windows.md
     - name: Error when you validate a copy of Windows
@@ -1010,6 +1014,10 @@
       href: ./deployment/troubleshoot-install-features-roles-guidance.md
     - name: 'Troubleshooting guidance: Windows Server update'
       href: ./deployment/troubleshoot-windows-server-update-guidance.md
+    - name: 'Troubleshooting guidance: Windows Update for Business reports'
+      href: ./deployment/wubr-troubleshooting-guidance.md
+    - name: '"Failed to be changed to the Absent state. Status: 0x800f0922" error'
+      href: ./deployment/failed-changed-absent-state-status-0x800f0922-error.md    
     - name: Can't connect to WSUS Administration Website
       href: ./deployment/cannot-connect-to-wsus-administration-website.md
     - name: Can't install .NET Framework 3.5 on OEM Windows installation
@@ -1024,14 +1032,22 @@
       href: ./deployment/system-file-checker.md
     - name: Description of Windows Server Update Services 3.0
       href: ./deployment/description-of-windows-server-update-services-3.md
+    - name: ERROR_INVALID_DATA error after installing Windows updates
+      href: ./deployment/error-invalid-data-startup-installing-updates.md
+    - name: Error 0x800705aa when Windows Update fails
+      href: ./deployment/error-0x800705aa-windows-update-fails.md
     - name: Error 0x800f0906 when you convert Server Core to GUI
       href: ./deployment/dism-fails-with-error-0x800f0906.md
+    - name: Error 0x800f0922 when installing Windows updates
+      href: ./deployment/error-0x800f0922-installing-windows-updates.md
     - name: Error 0x800f0922 when MPIO feature installation fails
       href: ./deployment/error-0x800f0922-mpio-feature-installation-fails.md
     - name: Error 0x800f0922 when you uninstall roles/features
       href: ./deployment/error-0x800f0922-uninstall-role-feature.md
     - name: Error C0190003 after installing updates
       href: ./deployment/error-c0190003-install-updates-restart-computer.md
+    - name: Error code 2359302 when installing updates in Windows Server 2019
+      href: ./deployment/error-2359302-installing-windows-updates.md
     - name: Fail to install Network Policy Server role
       href: ./deployment/error-0x80004005-network-policy-server-role.md
     - name: Failed to schedule Software Protection service for restart
@@ -1058,6 +1074,10 @@
       href: ./deployment/why-prompted-restart-computer.md
     - name: Windows Server 2008 Service Pack 2
       href: ./deployment/windows-server-2008-service-pack-2.md
+    - name: 'WUBr: Troubleshoot diagnostic data transmission'
+      href: ./deployment/wubr-troubleshooting-data-transmission.md
+    - name: 'WUBr: Use the configuration script to troubleshoot device configuration'
+      href: ./deployment/wubr-troubleshooting-device-config-using-script.md
     - name: WSUS 3.0 installation package is available
       href: ./deployment/wsus-3-installation-package.md
     - name: WSUS 3.0 SP2 Dynamic Install for Server Manager
@@ -1084,6 +1104,8 @@
       href: ./deployment/create-iso-image-for-uefi-platforms.md
     - name: Enable logging and tracing for WDS components
       href: ./deployment/enable-logging-windows-deployment-service.md
+    - name: ERROR_PATH_NOT_FOUND error when performing an in-place upgrade
+      href: ./deployment/error-path-not-found-upgrading-windows-server-2019.md      
     - name: Event ID 307 and 304 logged for deploying Windows
       href: ./deployment/event-307-and-304-logged-for-deploying.md
     - name: Fail to run applications on Windows Server Core
@@ -1216,10 +1238,14 @@
     items:
     - name: 'Troubleshooting guidance: Applying Group Policy'
       href: ./group-policy/applying-group-policy-troubleshooting-guidance.md
+    - name: '"LDAP Bind function call failed" error when updating Group Policy settings'
+      href: ./group-policy/ldap-bind-function-call-failed-error.md      
     - name: '"Namespace is already defined" error when editing a policy'
       href: ./group-policy/microsoft-policies-sensors-windowslocationprovider-defined.md
     - name: '"Set roaming profile path for all users logging onto this computer" setting applies to local accounts'
       href: ./group-policy/set-roaming-profile-path-all-users-applies-all-acccounts.md
+    - name: Group Policy fails to apply
+      href: ./group-policy/specify-startup-policy-processing-wait-time-default-value-not-honored.md      
     - name: A Group Policy setting isn't available in the security policy settings list
       href: ./group-policy/default-owner-objects-created-members-administrators-group-not-available.md
     - name: AuthZ fails with an Access Denied error
@@ -1244,6 +1270,8 @@
       href: ./group-policy/network-disconnection-after-configuring-lltdio-rspndr-gpos.md
     - name: Netlogon event ID 5719 or Group Policy event 1129
       href: ./group-policy/netlogon-event-id-5719-or-group-policy-event-1129.md
+    - name: Old user profiles aren't deleted as expected on system restart
+      href: ./group-policy/old-user-profiles-not-deleted-system-restart.md
     - name: Password policy changes aren't applied
       href: ./group-policy/password-policy-changes-not-applied.md
     - name: Settings are applied from Group Policy
@@ -1254,8 +1282,12 @@
       href: ./group-policy/group-policy-add-maxtokensize-registry-entry.md
     - name: User GPP Scheduled Task item fails to apply
       href: ./group-policy/user-gpp-scheduled-task-item-fails-apply.md
+    - name: User-based GPO settings aren't applied when signing in with shadow principals
+      href: ./group-policy/user-based-gpo-settings-not-work-shadow-principals.md      
     - name: Userenv errors occur and events are logged
       href: ./group-policy/userenv-errors-occur-events-are-logged.md
+    - name: Windows Server stops responding on startup when applying Group Policy
+      href: ./group-policy/windows-server-stops-responding-applying-group-policy.md
     - name: WMI Group Policy filters don't work
       href: ./group-policy/wmi-group-policy-filters-not-working.md
   - name: Security filtering and item-level targeting
@@ -1624,6 +1656,8 @@
       href: ./networking/dns-records-not-present.md
     - name: DNS registers duplicate SRV records for a DC
       href: ./networking/dns-registers-duplicate-srv-records-for-dc.md
+    - name: DNS scavenging setup
+      href: ./networking/dns-scavenging-setup.md
     - name: DNS Servers don't resolve queries for top-level domains
       href: ./networking/dns-server-not-resolve-queries-for-top-level-domain.md
     - name: DNS Server geo-location policy doesn't work as expected
@@ -1638,12 +1672,16 @@
       href: ./networking/dns-zone-transfer-options-reset.md
     - name: DNS Server becomes an island
       href: ./networking/dns-server-becomes-island.md
+    - name: 'DNS zone transfer fails when using "Only to servers listed in the Name servers tab"'
+      href: ./networking/dns-zone-transfer-fails-only-servers-listed-name-servers.md
     - name: Events 407 and 408 when querying DNS server
       href: ./networking/events-407-408-in-dns-server-event-log.md
     - name: Event ID 4000 and 4007 when DNS zones not loaded
       href: ./networking/dns-zones-do-not-load-event-4000-4007.md
     - name: Event ID 4015 is logged and the DNS server encounters a critical error
       href: ./networking/event-4015-dns-server-encounters-critical-error.md
+    - name: Event IDs 4016 and 4004 when DNS updates time out
+      href: ./networking/event-4016-4004-dns-updates-time-out.md      
     - name: Forwarded DNS name resolution fails for dual-stacked queries
       href: ./networking/forwarded-dns-name-resolution-fails-for-dual-stacked-queries.md
     - name: Forwarders and conditional forwarders resolution timeouts
@@ -2150,8 +2188,14 @@
       href: ./performance/desktop-heap-limitation-out-of-memory.md
     - name: Enabling Debug mode causes Windows to hang
       href: ./performance/enable-debug-mode-causes-hang.md
+    - name: System stops responding when using Citrix Virtual Apps and Desktops
+      href: ./performance/system-stops-responding-citrix-virtual-apps-desktops.md  
     - name: The computer stops responding
       href: ./performance/computer-stops-responding.md
+    - name: Windows Server stops responding during the sign-in process of a custom account
+      href: ./performance/windows-server-stops-responding-signing-custom-account.md    
+    - name: Windows Server stops responding when a Trigger Start service crashes
+      href: ./performance/windows-server-stops-responding-trigger-start-service-crashes.md
 - name: Printing
   items:
   - name: Printing
@@ -2668,6 +2712,12 @@
       href: ./system-management-components/rpc-events-event-11-after-reboot.md
     - name: New WMI arbitrator behavior
       href: ./system-management-components/new-wmi-arbitrator-behavior-in-windows-server.md
+    - name: "Scenario guide: Troubleshoot WMI connectivity and access issues"
+      href: ./system-management-components/scenario-guide-troubleshoot-wmi-connectivity-access-issues.md
+    - name: "Scenario guide: Troubleshoot WMI performance issues"
+      href: ./system-management-components/scenario-guide-troubleshoot-wmi-performance-issues.md
+    - name: "Scenario guide: Troubleshoot WmiPrvse.exe quota exceeded issues"
+      href: ./system-management-components/scenario-guide-troubleshoot-wmiprvse-quota-exceeded-issues.md
 - name: UserProfiles and Logon
   items:
   - name: UserProfiles and Logon
@@ -3174,6 +3224,8 @@
   items:
   - name: End of support for Windows Server 2008 and Windows Server 2008 R2
     href: ./windows-server-eos-faq/end-of-support-windows-server-2008-2008r2.yml
+  - name: Error when installing ESU product key for Windows Server 2012 R2 or 2012
+    href: ./windows-server-eos-faq/error-installing-esu-product-key-windows-server-2012-or-2012-r2.md
 - name: Windows Troubleshooters
   items:
   - name: TroubleShootingScript toolset (TSS)

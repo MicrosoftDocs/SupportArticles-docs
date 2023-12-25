@@ -54,8 +54,6 @@ landingContent:
             url: health-diagnostic-performance/troubleshoot-failed-requests-using-tracing-in-iis-85.md
           - text: Troubleshoot PHP errors with Failed Request Tracing
             url: health-diagnostic-performance/troubleshoot-php-with-failed-request-tracing.md
-          - text: WinHTTP SDP package information
-            url: www-service-svchost/disable-winhttp-tracing-sdp.md
           - text: Upload files to a WebDav directory with the WinINet API
             url: development/upload-to-webdav-directory-fails.md
           - text: Using Failed Request Tracing rules to troubleshoot Application Request Routing

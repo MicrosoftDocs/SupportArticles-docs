@@ -5,6 +5,8 @@
   items:
   - name: Basic troubleshooting
     href: troubleshoot-aks-cluster-creation-issues.md
+  - name: AADSTS7000222 - BadRequest or InvalidClientSecret error
+    href: error-code-badrequest-or-invalidclientsecret.md
   - name: CniDownloadTimeoutVMExtensionError error (41)
     href: error-code-cnidownloadtimeoutvmextensionerror.md
   - name: ERR_VHD_FILE_NOT_FOUND error (124)
@@ -50,8 +52,10 @@
   items:
   - name: Troubleshoot Azure Kubernetes Service (AKS) upgrade errors
     items:
-    - name: Upgrade fails because of NSG rules
-      href: upgrade-fails-because-of-nsg-rules.md
+    - name: AADSTS7000222 - BadRequest or InvalidClientSecret error
+      href: error-code-badrequest-or-invalidclientsecret.md
+    - name: CustomPrivateDNSZoneMissingPermissionError error
+      href: error-code-customprivatednszonemissingpermissionerror.md
     - name: NodePoolMcVersionIncompatible error
       href: nodepoolmcversionincompatible-error.md
     - name: Troubleshoot UpgradeFailed errors due to eviction failures caused by PDBs
@@ -72,6 +76,8 @@
     href: upgrades-to-kubernetes-fail-using-node-labels.md  
   - name: Upgrade issues with Gen2 VMs on Windows AKS cluster
     href: nodepools-not-upgraded-to-gen2-during-node-image-upgrade.md
+  - name: Upgrade fails because of NSG rules
+    href: upgrade-fails-because-of-nsg-rules.md
 
 - name: Troubleshoot delete operations
   items:
@@ -173,6 +179,9 @@
 
 - name: Data collection guide
   items:
+  - name: Capture real-time system insights from cluster
+    href: capture-system-insights-from-aks.md
+    displayName: real-time, debugging, observability, inspektor-gadget, ig, ebpf
   - name: Capture TCP dump from Linux node
     href: capture-tcp-dump-linux-node-aks.md
   - name: Capture TCP dump from Windows node
@@ -236,7 +245,7 @@
     href: error-from-server-error-dialing-backend-dial-tcp.md
   - name: Errors using features that require virtual machine scale sets
     href: error-using-feature-requiring-virtual-machine-scale-set.md
-  - name: insufficientSubnetSize error
+  - name: InsufficientSubnetSize error
     href: insufficientsubnetsize-error-advanced-networking.md
   - name: Memory saturation occurs in pods after cluster upgrade
     href: aks-memory-saturation-after-upgrade.md

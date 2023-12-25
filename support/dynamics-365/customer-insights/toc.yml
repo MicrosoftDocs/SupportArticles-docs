@@ -7,6 +7,18 @@
         items:
           - name: Power Query data source refresh issues
             href: data/data-ingestion/power-query-data-source-refresh-issues-dataflows.md
+      - name: Data unification
+        items:
+          - name: Match failed error occurs on the Deduplication or Matching rules
+            href: data/profile-unification/match-failed.md
+          - name: Merge failed error occurs on the Unified data view
+            href: data/profile-unification/merge-failed.md
+          - name: Missing business unit values in unification
+            href: data/profile-unification/missing-business-unit.md
+      - name: Environment management
+        items: 
+          - name: '"The service principal for resource is disabled" error when signing in'
+            href: data/environment-management/service-principal-disabled.md
       - name: Exports
         items:
           - name: Controls from Customer Card Add-in if they don't find data
