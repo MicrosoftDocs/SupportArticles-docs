@@ -5,7 +5,7 @@ author: msaenzbosupport
 ms.author: msaenzbo
 ms.reviewer: divargas-msft
 editor: v-jsitser
-ms.date: 03/15/2023
+ms.date: 12/25/2023
 ms.service: virtual-machines
 ms.subservice: redhat
 ---
@@ -186,7 +186,7 @@ All the following commands should be run by using root privileges or by specifyi
    sudo dnf --config='https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhel9-eus.config' install rhui-azure-rhel9-eus
    ```
 
-2. Lock the `releasever` level, currently it has to be one of 9.0 and 9.2.
+2. Lock the `releasever` level. Currently, it has to be 9.0 or 9.2.
 
    ```bash
    sudo sh -c 'echo 9.2 > /etc/dnf/vars/releasever'
@@ -195,7 +195,7 @@ All the following commands should be run by using root privileges or by specifyi
    If there are permission issues to access the `releasever`, you can edit the file using a text editor, add the image version details, and save the file.  
 
    > [!NOTE]
-   > This instruction locks the RHEL minor release to the current minor release. Enter a specific minor release if you are looking to upgrade and lock to a later minor release that is not the latest. For example, `echo 9.2 > /etc/yum/vars/releasever` locks your RHEL version to RHEL 9.2.
+   > This command locks the RHEL minor release to the current minor release. If you want to upgrade and lock to a later minor release that is not the latest, enter a specific minor release. For example, `echo 9.2 > /etc/yum/vars/releasever` locks your RHEL version to RHEL 9.2.
 
 3. Verify that the corresponding repositories are available and show no errors by running the `dnf repolist` command:
 
