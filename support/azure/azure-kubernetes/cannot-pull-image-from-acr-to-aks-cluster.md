@@ -341,5 +341,5 @@ If the troubleshooting guidance in this article doesn't help you resolve the iss
 [cause1-solution2]: #solution-2-make-sure-service-principal-isnt-expired
 [cause1-solution3]: #solution-3-make-sure-acrpull-role-is-assigned-to-correct-service-principal
 [cause1-solution4]: #solution-4-make-sure-the-kubelet-identity-is-referenced-in-the-aks-vmss
-[cause1-solution5]: #solution-5-make-sure-the-service-principal-is-correct-and-secret-is-valid
+[cause1-solution5]: #solution-5-make-sure-the-service-principal-is-correct-and-the-secret-is-valid
 [cause1-solution6]: #solution-6-make-sure-the-kubernetes-secret-has-the-correct-values-of-the-container-registry-admin-account
