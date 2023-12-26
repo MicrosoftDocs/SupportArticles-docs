@@ -130,7 +130,7 @@ Export the emulator certificate to successfully use the emulator endpoint from l
     > [!NOTE]
     > In Windows, the home folder is typically `C:\Users\[username]\` assuming your home drive is `C:`.
 
-1. Use [`certutil`](/windows-server/administration/windows-commands/certutil) to convert the certificate to a **Base-64 encoded X.509** certificate file.
+1. Use [certutil](/windows-server/administration/windows-commands/certutil) to convert the certificate to a **Base-64 encoded X.509** certificate file.
 
     ```powershell
     certutil -encode $home/tmp-cert.cer $home/cosmosdbcert.cer
@@ -176,7 +176,7 @@ If you want to use TLS validation, you can follow the examples in [TLS/SSL wrapp
 
 ### Import certificate for Node.js applications
 
-When you connect to the emulator from Node.js SDKs, TLS verification is disabled. By default, the [Node.js SDK(version 1.10.1 or higher)](/azure/cosmos-db/nosql/quickstart-nodejs) for the API for NoSQL doesn't try to use the TLS/SSL certificate when it connects to the local emulator. If you want to use TLS validation, follow the examples in the [Node.js documentation](https://nodejs.org/api/tls.html#tls_tls_connect_options_callback).
+When you connect to the emulator from Node.js SDKs, TLS verification is disabled. By default, the [Node.js SDK (version 1.10.1 or higher)](/azure/cosmos-db/nosql/quickstart-nodejs) for the API for NoSQL doesn't try to use the TLS/SSL certificate when it connects to the local emulator. If you want to use TLS validation, follow the examples in the [Node.js documentation](https://nodejs.org/api/tls.html#tls_tls_connect_options_callback).
 
 ## Rotate certificates
 
@@ -185,4 +185,4 @@ You can force regenerate the emulator certificates by opening the emulator with 
 > [!TIP]
 > Alternatively, select **Reset Data** from the Azure Cosmos DB emulator's context menu in the Windows system tray.
 
-If you install the certificate into the Java certificate store or used them elsewhere, you must reimport them using the current certificates. Your application can't connect to the local emulator until you update the certificates.
+If you install the certificate into the Java certificate store or use them elsewhere, you must reimport them using the current certificates. Your application can't connect to the local emulator until you update the certificates.
