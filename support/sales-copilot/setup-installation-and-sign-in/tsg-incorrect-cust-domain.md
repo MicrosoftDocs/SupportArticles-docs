@@ -24,7 +24,7 @@ This article helps you troubleshoot and resolve issues when users enter incorrec
 
 ## Symptoms
 
-After you sign in to Salesforce CRM through [Copilot for Sales add-in for Outlook]((/microsoft-sales-copilot/use-sales-copilot-outlook)), you can't access the Salesforce environment and the following error message is displayed:
+After you sign in to Salesforce CRM through [Copilot for Sales add-in for Outlook](/microsoft-sales-copilot/use-sales-copilot-outlook), you can't access the Salesforce environment and the following error message is displayed:
 
 > OAuth2 authorization flow failed for service 'Salesforce'. OAuth 2 sign in failed to exchange code for access token. Client ID and secret sent in form body.. Response status code-BadRequest. Response body: {"error":"invalid_grant","error_description":"authentication failure"} Client ID and secret sent in Basic authorization header.. Response status code=BadRequest. REsponse body: {"error":"invalid_grant","error_description":"authentication failure"}
 
