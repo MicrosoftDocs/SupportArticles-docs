@@ -511,6 +511,8 @@
     href: windows-virtual-machine-activation-faq.yml
   - name: Activation fails in forced tunneling scenario
     href: custom-routes-enable-kms-activation.md
+  - name: Windows activation - duplicate Client Machine ID
+    href: windows-activation-duplicate-client-machine-id.md
   - name: Windows activation - Two new KMS endpoints
     href: windows-activation-stopped-working.md
   
