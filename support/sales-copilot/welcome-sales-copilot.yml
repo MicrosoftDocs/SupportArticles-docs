@@ -9,37 +9,55 @@ metadata:
   ms.topic: landing-page # Required
   author:   sbmjais
   ms.author:  shjais
-  ms.date: 12/25/2023
+  ms.date: 12/26/2023
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
 landingContent:
 
  # Card
+  - title: CRM permissions and configurations
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Can't update records due to missing record access in Salesforce CRM
+            url: crm-permissions-and-configurations/missing-record-update-edit-access.md
+          - text: Can't update records due to missing object access in Salesforce CRM
+            url: crm-permissions-and-configurations/missing-object-update-edit-access.md
+          - text: Can't save email to CRM due to invalid mailbox settings
+            url: crm-permissions-and-configurations/update-settings-to-save-emails-error.md
+          - text: '"Fix mailbox errors in Dynamics 365" error'
+            url: crm-permissions-and-configurations/fix-mailbox-errors-in-dynamics-365.md
+          - text: Missing privileges error when signing in
+            url: crm-permissions-and-configurations/missing-privileges-sign-in.md
+          - text: Salesforce CRM users can't see data in Copilot for Sales
+            url: crm-permissions-and-configurations/no-column-error.md
+            
+ # Card
   - title: Outlook side panel
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Update add-in error in Copilot for Sales add-in for Microsoft Outlook
-            url: outlook-side-panel/tsg-update-add-in-error.md
           - text: Sign in issue when opening the Copilot for Sales pane in Outlook
-            url: outlook-side-panel/tsg-sign-in-error.md
+            url: outlook-side-panel/problem-starting-copilot-for-sales.md
+          - text: Update add-in error in Copilot for Sales add-in for Microsoft Outlook
+            url: outlook-side-panel/update-add-in-error.md
 
  # Card
   - title: Setup, installation, and sign-in
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: First Salesforce CRM user unable to access Copilot for Sales
-            url: setup-installation-and-sign-in/tsg-trial-env.md
-          - text: Error after connecting and signing in to Salesforce CRM
-            url: setup-installation-and-sign-in/tsg-api-perm.md
-          - text: Copilot for Sales doesn't connect to Dynamics 365 with two-factor authentication enabled
-            url: setup-installation-and-sign-in/tsg-two-factor.md
-          - text: Unable to save email to CRM as enhanced email is turned off in Salesforce CRM
-            url: setup-installation-and-sign-in/tsg-enhanced-email-sf.md
+          - text: Can't connect to Dynamics 365 with two-factor authentication enabled
+            url: setup-installation-and-sign-in/connection-issue-with-two-factor-auth.md
+          - text: Can't save an email to CRM when Enhanced Email isn't enabled in Salesforce CRM
+            url: setup-installation-and-sign-in/update-settings-in-saleforce-error.md
+          - text: First Salesforce CRM user can't access Copilot for Sales
+            url: setup-installation-and-sign-in/first-user-cant-create-trial-environment.md
           - text: Incorrect custom domain in Salesforce
-            url: setup-installation-and-sign-in/tsg-incorrect-cust-domain.md
+            url: setup-installation-and-sign-in/oauth2-authorization-flow-failed-for-service.md
+          - text: '"Request your CRM administrator permissions to access Salesforce using APIs" error'
+            url: setup-installation-and-sign-in/request-your-crm-administrator-permissions-error.md
 
  # Card
   - title: Teams collaboration spaces
@@ -47,26 +65,9 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Can't create private channels in Microsoft Teams
-            url: teams-collaboration-spaces/tsg-create-private-channel.md
+            url: teams-collaboration-spaces/cant-create-private-channel.md
           - text: Opportunity summary not displayed in deal rooms
-            url: teams-collaboration-spaces/tsg-oppty-summary.md
-
- # Card
-  - title: CRM permissions and configurations
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Salesforce CRM users unable to see data in Copilot for Sales
-            url: crm-permissions-and-configurations/tsg-no-column.md
-          - text: Missing privileges in Dynamics 365
-            url: crm-permissions-and-configurations/tsg-missing-roles.md
-          - text: Unable to update records because of missing record access in Salesforce CRM
-            url: crm-permissions-and-configurations/tsg-record-update-perm.md
-          - text: Unable to update records because of missing object access in Salesforce CRM
-            url: crm-permissions-and-configurations/tsg-object-update-perm.md
-          - text: Unable to save email to CRM due to invalid mailbox settings
-            url: crm-permissions-and-configurations/tsg-mailbox-settings.md
-
+            url: teams-collaboration-spaces/opportunity-summary-not-displayed.md
 
 # Card
   - title: Documentation and training
