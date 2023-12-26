@@ -41,7 +41,7 @@ The Data Loss Prevention (DLP) policy is enabled on the default environment in t
 1. Reopen the Copilot for Sales pane and sign in to Salesforce.
 
 > [!NOTE]
-> If the issue isn't resolved, see [Unable to sign in to Salesforce due to blocked Salesforce connector](tsg-blocked-connector-sf.md) to unblock the Salesforce connector in DLP policy.
+> If the issue isn't resolved, see [Can't sign in to Salesforce due to blocked Salesforce connector](sign-in-issue-with-blocked-connector.md) to unblock the Salesforce connector in DLP policy.
 
 ## More information
 

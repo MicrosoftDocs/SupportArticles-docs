@@ -11,7 +11,7 @@
       items:
         - name: Authentication issues when connecting to Salesforce CRM
           href: setup-installation-and-sign-in/failure-passed-to-redirect-url-access-denied.md
-        - name: `"Access needed" error when signing in to Dynamics 365`
+        - name: '"Access needed" error when signing in to Dynamics 365'
           href: setup-installation-and-sign-in/access-needed-error-sign-in.md
         - name: Connection lost due to an expired or invalid session or a bad OAuth token
           href: setup-installation-and-sign-in/connection-lost-error.md
