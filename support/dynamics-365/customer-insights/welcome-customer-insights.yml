@@ -9,7 +9,7 @@ metadata:
   ms.service: customer-insights
   author: m-hartmann
   ms.author: mhart
-  ms.date: 12/25/2023
+  ms.date: 12/26/2023
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -20,7 +20,7 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Common issues for ingestion errors or corrupt data
+          - text: Common issues of ingestion errors or corrupt data
             url: data/data-ingestion/common-data-ingestion-errors.md
           - text: Data refresh fails and dataflow refresh is skipped
             url: data/data-ingestion/data-refresh-failed-skipped.md

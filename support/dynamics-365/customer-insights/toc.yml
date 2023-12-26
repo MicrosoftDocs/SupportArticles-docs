@@ -5,7 +5,7 @@
       items: 
       - name: Data ingestion
         items:
-          - name: Common issues for ingestion errors or corrupt data
+          - name: Common issues of ingestion errors or corrupt data
             href: data/data-ingestion/common-data-ingestion-errors.md
           - name: Data refresh fails and dataflow refresh is skipped
             href: data/data-ingestion/data-refresh-failed-skipped.md

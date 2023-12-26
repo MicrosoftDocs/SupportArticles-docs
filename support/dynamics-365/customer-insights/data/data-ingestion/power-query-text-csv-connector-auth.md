@@ -1,7 +1,7 @@
 ---
 title: Power Query Text/CSV connector authentication fails
-description: Resolves an issue with Power Query connectors if the authentication of the Text/CSV editor fails in Dynamics 365 Customer Insights - Data.
-ms.date: 12/25/2023
+description: Resolves an issue where the Power Query Text/CSV editor authentication fails in Dynamics 365 Customer Insights - Data.
+ms.date: 12/26/2023
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
@@ -10,11 +10,11 @@ ms.reviewer: mhart
 
 [!INCLUDE [consolidated-sku](../../includes/consolidated-sku.md)]
 
-This article resolves the "The credentials provided for the source are invalid" error that occurs during the authentication of the [Text/CSV](/power-query/connectors/text-csv) editor in Microsoft in Dynamics 365 Customer Insights - Data.
+This article resolves the error "The credentials provided for the source are invalid" that occurs during the authentication of the [Text/CSV](/power-query/connectors/text-csv) editor in Microsoft Dynamics 365 Customer Insights - Data.
 
 ## Symptoms
 
-While editing a Power Query data source that uses the Text/CSV connector, if you need to reauthenticate and see the error message "The credentials provided for the source are invalid." The error message persists after you select **Configure connection** and the authentication fails.
+When editing a Power Query data source that uses the Text/CSV connector, if you need to reauthenticate, the error message "The credentials provided for the source are invalid" occurs. After you select **Configure connection**, the error message persists, and the authentication fails.
 
 ## Resolution
 
