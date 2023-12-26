@@ -63,7 +63,7 @@ To identify whether a query is continuously executing or stuck on a bottleneck, 
             FROM sys.dm_exec_sessions AS s
             JOIN sys.dm_exec_requests AS r ON r.session_id = s.session_id 
                     CROSS APPLY sys.Dm_exec_sql_text(r.sql_handle) AS st
-            LEFT JOIN (sys.dm_tran_session_transactions stran 
+            LEFT JOIN (sys.dm_tran_session_transactions AS stran 
                  JOIN sys.dm_tran_active_transactions AS atrn
                     ON stran.transaction_id = atrn.transaction_id)
             ON stran.session_id =s.session_id
