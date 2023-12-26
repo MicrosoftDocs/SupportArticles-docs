@@ -19,7 +19,7 @@ When you use a self-hosted KMS server for activation, and try to activate more t
 
 > The **Duplicate Client Machine ID Report** helps identity machines in the environment which are running images that were not properly generalized by using the Sysprep tool before deployment.  
 > Note:  
-> - Multiple Volume Activation Clients with the same CMID will be counted as a single client by KMS. If this causes the KMS Client Count to fall below the minimum threshold, KMS activation will fail in your environment.
+> \- Multiple Volume Activation Clients with the same CMID will be counted as a single client by KMS. If this causes the KMS Client Count to fall below the minimum threshold, KMS activation will fail in your environment.
 
 ## Cause
 
