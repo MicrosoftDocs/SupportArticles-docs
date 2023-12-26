@@ -1,7 +1,7 @@
 ---
 title: Can't pull images from Azure Container Registry to Kubernetes
 description: This article helps you troubleshoot the most common errors that you may encounter when pulling images from a container registry to an AKS cluster.
-ms.date: 12/21/2023
+ms.date: 12/26/2023
 author: genlin
 ms.author: genli
 ms.reviewer: chiragpa, andbar, v-weizhu
@@ -130,7 +130,7 @@ In some cases, the container registry role assignment still refers to the old se
 
 ### Solution 4: Make sure the kubelet identity is referenced in the AKS VMSS
 
-When a managed identity is used for authenticating with the ACR, the managed identity is known as the kubelet identity. The kubelet identity is by default assigned at AKS VMSS level. If the kubelet identity is removed from the AKS VMSS, the AKS nodes can't pull images from the ACR.
+When a managed identity is used for authentication with the ACR, the managed identity is known as the kubelet identity. By default, the kubelet identity is assigned at the AKS VMSS level. If the kubelet identity is removed from the AKS VMSS, the AKS nodes can't pull images from the ACR.
 
 To find the kubelet identity of your AKS cluster, run the following command:
 
@@ -147,15 +147,15 @@ az vmss identity show --resource-group <NodeResourceGroup> --name <AksVmssName>
 If the kubelet identity of your AKS cluster isn't assigned to the AKS VMSS, assign it back. 
 
 > [!NOTE]
-> [Modifying the AKS VMSS using the IaaS APIs or from the Azure portal isn't supported](/azure/aks/support-policies#user-customization-of-agent-nodes) and no AKS operation can remove the kubelet identity from the AKS VMSS. This means that something unexpected removed it, for example, a manual removal performed by a team member. To prevent this kind of removal or modification, you can consider using the [NRGLockdown Feature](/azure/aks/cluster-configuration#fully-managed-resource-group-preview).
+> [Modifying the AKS VMSS using the IaaS APIs or from the Azure portal isn't supported](/azure/aks/support-policies#user-customization-of-agent-nodes), and no AKS operation can remove the kubelet identity from the AKS VMSS. This means that something unexpected removed it, for example, a manual removal performed by a team member. To prevent such removal or modification, you can consider using the [NRGLockdown feature](/azure/aks/cluster-configuration#fully-managed-resource-group-preview).
 
-Because modifications for the AKS VMSS aren't supported, they don't propagate at AKS level. To reassign the kubelet identity to the AKS VMSS, a reconcile operation is needed. To do this, run the following command:
+Because modifications to the AKS VMSS aren't supported, they don't propagate at the AKS level. To reassign the kubelet identity to the AKS VMSS, a reconciliation operation is needed. To do this, run the following command:
 
 ```azurecli
 az aks update --resource-group <MyResourceGroup> --name <MyManagedCluster>
 ```
 
-### Solution 5: Make sure the service principal is correct and secret is valid
+### Solution 5: Make sure the service principal is correct and the secret is valid
 
 If you pull an image by using an [image pull secret](https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/), and that Kubernetes secret was created by using the values of a service principal, make sure that the associated service principal is correct and the secret is still valid. Follow these steps:
 
