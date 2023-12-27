@@ -56,6 +56,6 @@ When it comes to navigating the vast landscape of drivers and providers, underst
 
 - [ODBC driver installation check](odbc-driver-install-checking.md)
 - [OLE DB driver installation check](oledb-driver-install-check.md)
-- [.NET driver installation check](net-driver-install-check.md)
+- [.NET data provider installation check](net-driver-install-check.md)
 
 [!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]
