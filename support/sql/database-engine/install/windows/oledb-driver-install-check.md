@@ -11,7 +11,7 @@ Object Linking and Embedding Database (OLE DB) is a Microsoft data access techno
 
 ## About UDL files
 
-One of the simplest ways to test an OLE DB provider is via the Universal Data Link (UDL) file. Create any text file in Windows Explorer and rename it to have a *.UDL* file extension. Make sure you have file extensions turned on to make the change. For more information, see [Test OLE DB connectivity to SQL Server by using a UDL file](/sql/database-engine/connect/test-oledb-connectivity-use-udl-file)
+One of the simplest ways to test an OLE DB provider is via the Universal Data Link (UDL) file. Create any text file in Windows Explorer and rename it to have a *.UDL* file extension. Make sure you have file extensions turned on to make the change. For more information, see [Test OLE DB connectivity to SQL Server by using a UDL file](../../connect/test-oledb-connectivity-use-udl-file.md)
 
 Double-click the file to open a dialog where you can see the installed providers and test their connections.
 
