@@ -77,6 +77,6 @@ For third-party ODBC drivers, Microsoft support is limited to:
 
 ## More information
 
-- [.NET driver installation check](net-driver-install-check.md)
+- [.NET data provider installation check](net-driver-install-check.md)
 - [OLE DB driver installation check](oledb-driver-install-check.md)
 - [Driver installation check](driver-install-checking.md)
