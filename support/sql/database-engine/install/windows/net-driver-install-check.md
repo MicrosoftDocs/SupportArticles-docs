@@ -23,18 +23,18 @@ Microsoft .NET includes four providers that are shipped with the .NET Framework:
 
 The first three are contained in *System.Data.DLL* and the last one is contained in *System.Data.OracleClient.DLL*. When building an application, you only need to add a reference to the appropriate DLL (also known as "assembly") to your project, and then you can use the provider.
 
-*System.Data.SqlClient* contains the implementation code similar to SQL Native Client and doesn't rely on OLE DB or ODBC at all.
+*System.Data.SqlClient* contains implementation code similar to SQL Native Client and doesn't rely on [OLE DB](/cpp/data/oledb/ole-db-programming-overview) or [ODBC](/sql/odbc/reference/syntax/odbc-api-reference) APIs at all.
 
 *System.Data.Odbc* and *System.Data.OleDb* don't provide any inherent database functionality. Instead, they load ODBC drivers and OLE DB providers, respectively.
 
 *System.Data.OracleClient* also contains implementation code, but like Oracle ODBC drivers and OLE DB providers, it also relies on the Oracle Client Software or the Oracle Data Access Components (ODAC) software to be installed.
 
 > [!NOTE]
-> In general, we recommend using Oracle drivers rather than Microsoft implementations as these drivers are likely to be more up-to-date. If an issue can be resolved by switching to an Oracle provider from a Microsoft implementation, it's a preferred solution.
+> In general, it's recommended that you use an Oracle-supplied drivers rather than Microsoft implementations as the former drivers are likely to be more up-to-date. If an issue can be resolved by switching to an Oracle provider from a Microsoft driver implementation, it's a preferred solution.
 
 ## Default .NET search path
 
-Unlike loading ODBC drivers and OLE DB providers, when loading .NET providers, the .NET loader doesn't rely on the registry but has a search heuristic that's described as follows:
+Unlike loading ODBC drivers and OLE DB providers, the .NET data providers don’t rely on the registry. Instead, the .NET loader uses a search heuristic that’s described as follows:
 
 1. The `DEVPATH` environment variable is checked for a shared folder. You should only use this when developing shared assemblies. Once the development is completed, the assembly should be installed in the Global Assembly Cache (GAC).
 1. The GAC is checked to see if the assembly is shared between applications. If the assembly isn't in the GAC, it's a private assembly.
@@ -61,9 +61,8 @@ For more complete guidelines, see [How the Runtime Locates Assemblies](/dotnet/f
 
 ## Third-party providers
 
-Many Microsoft-installed providers like Analysis Services don't come with the .NET Framework. In addition, there are many third-party .NET providers, such as Oracle's ODP Provider.
+Many Microsoft-installed providers like Analysis Services don't come with the .NET Framework. In addition, there are third-party .NET providers, such as Oracle's ODP Provider which are installed independently.
 
-For Microsoft providers, engage the appropriate team to validate the provider is installed.
 
 For third-party providers, make sure the assembly is located in one of the folders above and that it's 64-bit or 32-bit depending on the application.
 
@@ -79,7 +78,7 @@ The following table shows the DLL and assembly names of some common providers:
 |Microsoft's Oracle Provider|*System.Data.OracleClient*|*System.Data.OracleClient.DLL*|
 |Oracle's ODP Provider|*Oracle.DataAccess.Client*|*Oracle.DataAccess.DLL*|
 
-When troubleshooting .NET providers, there's no generalized tool, such as the ODBC Administrator or a UDL file, to test the application independently. In this case, you can write one in PowerShell. For example:
+When troubleshooting .NET providers, there's no built-in or generalized tool, like the ODBC Administrator or a UDL file, to test the application independently. In such cases, you can write a quick test application in a language of your choice. Here's a sample application written in PowerShell:
 
 ```powershell
 #------------------------------- 
@@ -128,7 +127,7 @@ If your script is located in `C:\temp` and you want to retrieve the authenticati
 ```
 
 
-In general, loading .NET providers won't be an issue if the assembly/DLL exists. The most common problem is authentication issues, which you can test using an equivalent OLE DB provider via a UDL file.
+In general, loading .NET providers won't be an issue if the assembly/DLL exists. The most common problem is authentication issues, which you can [test using an equivalent OLE DB provider via a UDL file](/sql/database-engine/connect/test-oledb-connectivity-use-udl-file).
 
 For help with connection strings for unfamiliar drivers, see [The Connection Strings Reference](https://www.connectionstrings.com/).
 

@@ -18,7 +18,7 @@ There are two copies of the ODBC Data Source Administrator on 64-bit systems:
 
 - For 32-bit applications, select <kbd>Windows</kbd>+<kbd>R</kbd> and type *C:\WINDOWS\SYSWOW64\ODBCAD32.EXE*.
 
-ODBC connections can use Data Source Names (DSNs) or can be DSN-less, for example:
+Applications that call the ODBC driver can use Data Source Names (DSNs) or DSN-less connection strings. Here are examples:
 
 - `driver={sql server};server=sqlprod01;database=northwind;trusted_connection=yes`
 - `dsn=userdsn1`
@@ -32,7 +32,7 @@ A DSN is a shortcut for applications to load the driver, providing a level of in
 
 ## ODBC Data Source Administrator drivers and registry
 
-The best test is to see if the driver shows up in the ODBC Data Source Administrator. Here are some 64-bit and 32-bit drivers:
+You can use the ODBC Administrator to verify the presence of ODBC drivers and DSNs. Start the ODBC Administrator to see if the driver shows up in the ODBC Data Source Administrator. Here are some 64-bit and 32-bit drivers:
 
 :::image type="content" source="media/odbc-driver-install-checking/64-bit-driver.png" alt-text="Screenshot shows a 64-bit driver.":::
 
