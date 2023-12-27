@@ -37,7 +37,7 @@ Let's delve into the methods to efficiently check the installation status of the
 
 - [ODBC driver installation check](odbc-driver-install-checking.md)
 - [OLE DB driver installation check](oledb-driver-install-check.md)
-- [.NET driver installation check](net-driver-install-check.md)
+- [.NET data provider installation check](net-driver-install-check.md)
 
 ## Installation support for various database drivers and providers
 
