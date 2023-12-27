@@ -1,7 +1,7 @@
 ---
 title: Can't sign in to Salesforce CRM when the Power Platform app is blocked
 description: Resolves the Failure passed to redirect url error that occurs when the Power Platform app is blocked in Microsoft Copilot for Sales.
-ms.date: 12/26/2023
+ms.date: 12/27/2023
 ms.service: microsoft-sales-copilot
 author: sbmjais
 ms.author: shjais
@@ -10,6 +10,9 @@ manager: shujoshi
 # "Failure passed to redirect url" error occurs when signing in to Salesforce CRM
 
 This article helps you troubleshoot and resolve sign in issues when the Microsoft Power Platform app is blocked by an administrator in Microsoft Copilot for Sales.
+
+> [!NOTE]
+> Sales Copilot is rebranded as Copilot for Sales in January 2024. The screenshots in this article will be updated with the new name soon.
 
 ## Who is affected?
 

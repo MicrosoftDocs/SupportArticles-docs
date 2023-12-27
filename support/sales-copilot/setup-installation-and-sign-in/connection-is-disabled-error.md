@@ -1,7 +1,7 @@
 ---
 title: Can't sign in to Salesforce due to disabled connections
 description: Resolves the error message in Microsoft Copilot for Sales when you can't sign in to Salesforce due to disabled connections.
-ms.date: 12/26/2023
+ms.date: 12/27/2023
 ms.service: microsoft-sales-copilot
 author: sbmjais
 ms.author: shjais
@@ -9,6 +9,9 @@ ms.author: shjais
 # Can't sign in to Salesforce due to disabled connections
 
 This article helps you troubleshoot and resolve the error that occurs in Microsoft Copilot for Sales when you can't sign in to Salesforce due to disabled connections.
+
+> [!NOTE]
+> Sales Copilot is rebranded as Copilot for Sales in January 2024. The screenshots in this article will be updated with the new name soon.
 
 ## Who is affected?
 

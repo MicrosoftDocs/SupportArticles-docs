@@ -1,7 +1,7 @@
 ---
 title: Connection lost due to an expired or invalid session or a bad OAuth token
 description: Resolves the Connection lost error in Copilot for Sales when you're logged out due to an expired or invalid session or a bad OAuth token.
-ms.date: 12/26/2023
+ms.date: 12/27/2023
 ms.service: microsoft-sales-copilot
 author: sbmjais
 ms.author: shjais
@@ -10,6 +10,9 @@ manager: shujoshi
 # Connection lost due to an expired or invalid session or a bad OAuth token
 
 This article helps you troubleshoot and resolve the "Connection lost" error when you're logged out of Microsoft Copilot for Sales due to an expired or invalid session or a bad OAuth token.
+
+> [!NOTE]
+> Sales Copilot is rebranded as Copilot for Sales in January 2024. The screenshots in this article will be updated with the new name soon.
 
 ## Who is affected?
 

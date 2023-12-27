@@ -1,7 +1,7 @@
 ---
 title: No access to Dynamics 365 error occurs in Copilot for Sales
 description: Resolves an issue where users don't have access to Dynamics 365 through Copilot for Sales add-in for Outlook.
-ms.date: 12/26/2023
+ms.date: 12/27/2023
 ms.service: microsoft-sales-copilot
 author: sbmjais
 ms.author: shjais
@@ -10,6 +10,9 @@ manager: shujoshi
 # "No access to Dynamics 365" error occurs in Copilot for Sales
 
 This article helps you troubleshoot and resolve issues when users don't have access to Dynamics 365.
+
+> [!NOTE]
+> Sales Copilot is rebranded as Copilot for Sales in January 2024. The screenshots in this article will be updated with the new name soon.
 
 ## Who is affected?
 

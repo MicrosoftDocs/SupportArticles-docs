@@ -1,7 +1,7 @@
 ---
 title: Fix mailbox errors in Dynamics 365
 description: Resolves the fix mailbox errors in Dynamics 365 error that might occur when you try to save an email or a meeting to Dynamics 365 using Microsoft Copilot for Sales in Outlook.
-ms.date: 12/26/2023
+ms.date: 12/27/2023
 ms.service: microsoft-sales-copilot
 author: sbmjais
 ms.author: shjais
@@ -10,6 +10,9 @@ manager: shujoshi
 # "Fix mailbox errors in Dynamics 365" error occurs when saving an email or a meeting
 
 This article helps you troubleshoot and resolve the "Fix mailbox errors in Dynamics 365" error in Microsoft Copilot for Sales in Outlook.
+
+> [!NOTE]
+> Sales Copilot is rebranded as Copilot for Sales in January 2024. The screenshots in this article will be updated with the new name soon.
 
 ## Who is affected?
 

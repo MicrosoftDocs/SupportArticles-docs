@@ -1,7 +1,7 @@
 ---
 title: Error after connecting and signing in to Salesforce CRM
 description: Resolves the error message that occurs after connecting and signing in to Salesforce CRM in Microsoft Copilot for Sales.
-ms.date: 12/26/2023
+ms.date: 12/27/2023
 ms.service: microsoft-sales-copilot
 author: sbmjais
 ms.author: shjais
@@ -10,6 +10,9 @@ manager: shujoshi
 # "Request your CRM administrator permissions to access Salesforce using APIs" error
 
 This article helps you troubleshoot and resolve issues when an error message is displayed after connecting and signing in to Salesforce CRM in Microsoft Copilot for Sales.
+
+> [!NOTE]
+> Sales Copilot is rebranded as Copilot for Sales in January 2024. The screenshots in this article will be updated with the new name soon.
 
 ## Who is affected?
 

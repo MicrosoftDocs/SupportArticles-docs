@@ -1,7 +1,7 @@
 ---
 title: Can't save emails to CRM as Enhanced Email isn't enabled in Salesforce CRM
 description: Resolves the Update settings in Saleforce error when Enhanced Email isn't enabled in Salesforce CRM.
-ms.date: 12/26/2023
+ms.date: 12/27/2023
 ms.service: microsoft-sales-copilot
 author: sbmjais
 ms.author: shjais
@@ -10,6 +10,9 @@ manager: shujoshi
 # Can't save an email to CRM when Enhanced Email isn't enabled in Salesforce CRM
 
 This article helps you troubleshoot and resolve the "Update settings in Saleforce" error that occurs in Copilot for Sales when **Enhanced Email** isn't enabled in Salesforce CRM.
+
+> [!NOTE]
+> Sales Copilot is rebranded as Copilot for Sales in January 2024. The screenshots in this article will be updated with the new name soon.
 
 ## Who is affected?
 
