@@ -36,7 +36,7 @@ The first three are contained in *System.Data.DLL* and the last one is contained
 
 Unlike loading ODBC drivers and OLE DB providers, the .NET data providers don't rely on the registry. Instead, the .NET loader uses a search heuristic that's described as follows:
 
-1. The `DEVPATH` environment variable is checked for a shared folder. You should only use this when developing shared assemblies. Once the development is completed, the assembly should be installed in the Global Assembly Cache (GAC).
+1. The `DEVPATH` environment variable is checked for a shared folder. You should only use this when developing shared assemblies. Once the development is completed, the assembly should be installed in the [Global Assembly Cache (GAC)](/dotnet/framework/app-domains/gac).
 1. The GAC is checked to see if the assembly is shared between applications. If the assembly isn't in the GAC, it's a private assembly.
 1. If the application or web configuration file has an item, the `href` attribute gives the name and absolute path of the file containing the assembly's manifest.
 1. The folder where the application is installed is checked.
@@ -53,9 +53,9 @@ Under these folders, there will be a folder for the various .NET versions. Typic
 - v2.0.50727 (.NET 2.0, 3.0, 3.5)
 - v4.0.30319 (.NET 4.x)
 
-You may notice the .NET 1.0 and 1.1 folders. These are out of support and don't contain any assemblies. You may also notice the .NET 3.0 and 3.5 folders. While these may contain certain files specific to these versions of .NET, they're all extensions to version 2.0, and *System.Data.DLL* is located in the 2.0 folder since it's not an extension DLL. The folders above are the locations of the built-in Framework DLLs. In addition, these DLLs and third-party DLLs appear in the GAC, which is where the search algorithm looks. It's located in this folder: *C:\windows\assembly (.NET 2.0, 3.0, 3.1, 4.x)*.
+You may notice the .NET 1.0 and 1.1 folders. These are out of support and don't contain any assemblies. You may also notice the .NET 3.0 and 3.5 folders. While these may contain certain files specific to these versions of .NET, they're all extensions to version 2.0, and *System.Data.DLL* is located in the 2.0 folder since it's not an extension DLL. The folders mentioned previouldy are the locations of the built-in Framework DLLs.
 
-Some .NET 4.0 assemblies are also located under *C:\windows\microsoft.net\assembly*.
+In addition, these DLLs and third-party DLLs appear in the GAC, which is where the search algorithm looks. Starting with the .NET Framework 4, the default folder for the the GAC is: *C:\windows\microsoft.net\assembly*. In earlier versions of the .NET Framework, the default folder is: *C:\windows\assembly*.
 
 For more complete guidelines, see [How the Runtime Locates Assemblies](/dotnet/framework/deployment/how-the-runtime-locates-assemblies). The use of PROCMON may also reveal the search path.
 
@@ -63,7 +63,10 @@ For more complete guidelines, see [How the Runtime Locates Assemblies](/dotnet/f
 
 Many Microsoft-installed providers like Analysis Services don't come with the .NET Framework. In addition, there are third-party .NET providers, such as Oracle's ODP Provider which are installed independently.
 
-For third-party providers, make sure the assembly is located in one of the folders above and that it's 64-bit or 32-bit depending on the application.
+For third-party providers, make sure the assembly is located in one of the following folders and that it's 64-bit or 32-bit depending on the application:
+
+- *C:\windows\microsoft.net\assembly* (for versions of .NET Framework 4.x)
+- *C:\windows\assembly* (for earlier verions of .NET Framework)
 
 The following table shows the DLL and assembly names of some common providers:
 
