@@ -27,7 +27,7 @@ This URL indicates that your tenant is affected by this issue.
 
 ## Cause
 
-This issue occurs when the last Flow license (or Office license that includes Flow) expires in your tenant. In this situation, the Flow service is disabled in Azure Active Directory (Azure AD).
+This issue occurs when the last Flow license (or Office license that includes Flow) expires in your tenant. In this situation, the Flow service is disabled in Microsoft Entra ID.
 
 Although this behavior is appropriate for most applications, it also blocks access to Flow if a relevant license exists in the tenant, even though Flow can be used for free without a license.
 
@@ -41,9 +41,9 @@ To resolve this problem, follow these steps.
 > These steps can be performed only by the tenant administrator.
 
 1. Open the [Azure portal](https://portal.azure.com)), and sign in.
-2. In the navigation bar, open Azure Active Directory Settings.
+2. In the navigation bar, open Microsoft Entra Settings.
 
-    :::image type="content" source="media/cannot-sign-in-to-microsoft-flow-due-to-authentication-failed/add-settings-icon.png" alt-text="Screenshot of the Azure Active Directory Settings icon in the navigation bar.":::
+    :::image type="content" source="media/cannot-sign-in-to-microsoft-flow-due-to-authentication-failed/add-settings-icon.png" alt-text="Screenshot of the Microsoft Entra Settings icon in the navigation bar.":::
 
 3. Navigate to **Enterprise applications** > **All applications**.
 

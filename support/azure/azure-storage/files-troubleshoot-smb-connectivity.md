@@ -2,18 +2,19 @@
 title: Troubleshoot Azure Files SMB connectivity and access issues
 description: Troubleshoot problems connecting to and accessing SMB Azure file shares from Windows and Linux clients, and see possible resolutions.
 services: storage
-author: AmandaAZ
 ms.service: azure-file-storage
 ms.custom: devx-track-azurepowershell
-ms.date: 07/31/2023
-ms.reviewer: kendownie, jarrettr, v-weizhu
+ms.date: 12/20/2023
+ms.reviewer: kendownie, jarrettr, v-weizhu, v-six, hanagpal
 ---
 # Troubleshoot Azure Files connectivity and access issues (SMB)
 
 This article lists common problems that might occur when you try to connect to and access Server Message Block (SMB) Azure file shares from Windows or Linux clients. It also provides possible causes and resolutions for these problems.
 
+[!INCLUDE [Feedback](../../includes/feedback.md)]
+
 > [!IMPORTANT]
-> This article only applies to SMB shares. For details on Network File System (NFS) shares, see [Troubleshoot Azure NFS file shares](/azure/storage/files/files-troubleshoot-linux-nfs).
+> This article applies only to SMB shares. For details about Network File System (NFS) shares, see [Troubleshoot Azure NFS file shares](/azure/storage/files/files-troubleshoot-linux-nfs).
 
 ## Applies to
 
@@ -25,11 +26,11 @@ This article lists common problems that might occur when you try to connect to a
 
 ## Can't connect to or mount an Azure file share
 
-Select the Windows or Linux tab depending on the client operating system you're using to access Azure file shares.
+Select the Windows or Linux tab depending on the client operating system that you're using to access Azure file shares.
 
 ### [Windows](#tab/windows)
 
-When trying to connect to an Azure file share in Windows, you might see the following errors.
+When you try to connect to an Azure file share in Windows, you might receive the following error messages.
 
 ### <a id="error5"></a>Error 5 when you mount an Azure file share
 
@@ -37,9 +38,9 @@ When trying to connect to an Azure file share in Windows, you might see the foll
 
 #### Cause 1: Unencrypted communication channel
 
-For security reasons, connections to Azure file shares are blocked if the communication channel isn't encrypted and the connection attempt isn't made from the same datacenter where the Azure file shares reside. If the [Secure transfer required](/azure/storage/common/storage-require-secure-transfer) setting is enabled on the storage account, unencrypted connections within the same datacenter are also blocked. An encrypted communication channel is only provided if the end-user's client OS supports SMB encryption.
+For security, connections to Azure file shares are blocked if the communication channel isn't encrypted and the connection attempt isn't made from the same datacenter where the Azure file shares reside. If the [Secure transfer required](/azure/storage/common/storage-require-secure-transfer) setting is enabled on the storage account, unencrypted connections within the same datacenter are also blocked. An encrypted communication channel is only provided if the end-user's client OS supports SMB encryption.
 
-Windows 8, Windows Server 2012, and later versions of each system negotiate requests that include SMB 3.x, which supports encryption.
+Windows 8, Windows Server 2012, and later versions of each system negotiate requests that include SMB 3.*x*, which supports encryption.
 
 #### Solution for cause 1
 
@@ -57,7 +58,7 @@ Verify that virtual network and firewall rules are configured properly on the st
 
 #### Cause 3: Share-level permissions are incorrect when using identity-based authentication
 
-If end users are accessing the Azure file share using Active Directory (AD) or Azure Active Directory Domain Services (Azure AD DS) authentication, access to the file share fails with the "Access is denied" error if share-level permissions are incorrect.
+If users are accessing the Azure file share using Active Directory (AD) or Microsoft Entra Domain Services authentication, access to the file share fails with the "Access is denied" error if share-level permissions are incorrect.
 
 #### Solution for cause 3
 
@@ -65,9 +66,9 @@ Validate that permissions are configured correctly:
 
 - **Active Directory Domain Services (AD DS)** see [Assign share-level permissions](/azure/storage/files/storage-files-identity-ad-ds-assign-permissions).
 
-    Share-level permission assignments are supported for groups and users that have been synced from AD DS to Azure Active Directory (Azure AD) using Azure AD Connect sync or Azure AD Connect cloud sync. Confirm that groups and users being assigned share-level permissions aren't unsupported "cloud-only" groups.
+    Share-level permission assignments are supported for groups and users that have been synced from AD DS to Microsoft Entra ID using Microsoft Entra Connect Sync or Microsoft Entra Connect cloud sync. Confirm that groups and users being assigned share-level permissions aren't unsupported "cloud-only" groups.
 
-- **Azure Active Directory Domain Services (Azure AD DS)** see [Assign share-level permissions](/azure/storage/files/storage-files-identity-auth-active-directory-domain-service-enable?tabs=azure-portal#assign-share-level-permissions).
+- **Microsoft Entra Domain Services** see [Assign share-level permissions](/azure/storage/files/storage-files-identity-auth-active-directory-domain-service-enable?tabs=azure-portal#assign-share-level-permissions).
 
 ### <a id="error53-67-87"></a>Error 53, Error 67, or Error 87 when you mount or unmount an Azure file share
 
@@ -112,7 +113,7 @@ TcpTestSucceeded : True
 ```
 
 > [!Note]  
-> The above command returns the current IP address of the storage account. This IP address is not guaranteed to remain the same, and may change at any time. Don't hardcode this IP address into any scripts, or into a firewall configuration.
+> This command returns the current IP address of the storage account. This IP address is not guaranteed to remain the same, and may change at any time. Don't hardcode this IP address into any scripts, or into a firewall configuration.
 
 #### Solutions for cause 1
 
@@ -379,6 +380,9 @@ Although file handles and leases serve an important purpose, sometimes file hand
 - The specified resource is marked for deletion by an SMB client.
 
 The resolution to this issue depends on whether this is being caused by an orphaned file handle or lease.
+
+> [!NOTE]
+> REST leases are used by applications to prevent files from being deleted or modified. Before breaking any leases, you should identify which application is acquiring them. Otherwise, you might break the application behavior.
 
 #### Cause 1
 

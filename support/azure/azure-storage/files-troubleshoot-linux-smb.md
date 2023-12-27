@@ -1,10 +1,9 @@
 ---
 title: Troubleshoot Azure Files issues in Linux (SMB)
 description: Troubleshooting Azure Files issues in Linux. See general issues related to SMB Azure file shares when you connect from Linux clients and possible resolutions.
-author: khdownie
 ms.service: azure-file-storage
-ms.date: 06/26/2023
-ms.author: kendownie
+ms.date: 09/27/2023
+ms.reviewer: kendownie, v-weizhu
 ---
 
 # Troubleshoot Azure Files issues in Linux (SMB)
@@ -24,7 +23,7 @@ You can use [AzFileDiagnostics](https://github.com/Azure-Samples/azure-files-sam
 | Standard file shares (GPv2), GRS/GZRS | :::image type="icon" source="media/files-troubleshoot-smb-authentication/yes-icon.png" border="false"::: | :::image type="icon" source="media/files-troubleshoot-smb-authentication/no-icon.png" border="false"::: |
 | Premium file shares (FileStorage), LRS/ZRS | :::image type="icon" source="media/files-troubleshoot-smb-authentication/yes-icon.png" border="false"::: | :::image type="icon" source="media/files-troubleshoot-smb-authentication/no-icon.png" border="false"::: |
 
-## <a id="timestampslost"></a>Time stamps were lost in copying files from Windows to Linux
+## <a id="timestampslost"></a>Time stamps were lost when copying files
 
 On Linux/Unix platforms, the `cp -p` command fails if different users own file 1 and file 2.
 
@@ -148,6 +147,61 @@ For a permanent fix, upgrade your client OS to a Linux distro version with accou
 - [cifs: fix memory leak of smb3_fs_context_dup::server_hostname](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=869da64d071142d4ed562a3e909deb18e4e72c4e)
 
 - [dns: Apply a default TTL to records obtained from getaddrinfo()](https://git.kernel.org/pub/scm/linux/kernel/git/dhowells/keyutils.git/commit/?id=75e7568dc516db698093b33ea273e1b4a30b70be)
+
+## Unable to mount SMB file share when FIPS is enabled 
+
+When **Federal Information Processing Standard (FIPS)** is enabled in a Linux VM,  the SMB file share cannot be mounted. The Linux dmesg logs on the client display errors such as:
+
+```output
+kernel: CIFS: VFS: Could not allocate crypto hmac(md5)
+kernel: CIFS: VFS: Error -2 during NTLMSSP authentication
+kernel: CIFS: VFS: \\contoso.file.core.windows.net Send error in SessSetup = -2
+kernel: CIFS: VFS: cifs_mount failed w/return code = -2
+```
+>[!IMPORTANT]
+>FIPS is a set of standards that the U.S. government uses to ensure the security and integrity of computer systems. When a system is in FIPS mode, it adheres to specific cryptographic requirements outlined by these standards.
+
+### Cause
+
+The client of SMB file share uses the NTLMSSP authentication, which requires the MD5 hashing algorithm. However, in FIPS mode, the MD5 algorithm is restricted because it’s not FIPS-compliant. MD5 is a widely used hash function that produces a 128-bit hash value. However, MD5 is considered insecure for cryptographic purposes.
+
+**How to check if FIPS mode is enabled**
+
+To verify if FIPS mode is enabled on the client, run the following command. If the value is set to 1, then FIPS is enabled. 
+
+```bash
+sudo cat /proc/sys/crypto/fips_enabled
+```
+###  Solution
+
+To resolve this issue, enable Kerberos authentication for SMB file share. If FIPS is enabled unintentionally, refer to [option2](#option2) to disable it. 
+
+**Option 1:  Enable Kerberos authentication for SMB file share**
+
+To mount a SMB file share on the Linux VM where FIPS is enabled, use Kerberos/Azure AD authentication. For more information, see [Enable Active Directory authentication over SMB for Linux clients accessing Azure Files](/azure/storage/files/storage-files-identity-auth-linux-kerberos-enable).
+
+**<a name="option2"> </a> Option 2:  Disable FIPS to mount the Samba share**
+
+1. Change the sysctl value of `crypto.fips_enabled` to 0 in `/etc/sysctl.conf`.
+
+2. Modify the `GRUB_CMDLINE_LINUX_DEFAULT` in `/etc/default/grub` file and remove the parameter `fips=1`.
+
+3. Rebuilt the grub2 config file with the following command:
+
+    ```bash
+    sudo grub2-mkconfig -o /boot/grub2/grub.cfg
+    ```
+4. Rebuilt the initramfs image with the following command:
+
+    ```
+    sudo dracut -fv
+    ```
+5. Reboot the VM.
+
+For more information, see to the following documents from Linux distributors:
+
+-	[RedHat: Why would enabling FIPS mode in the kernel break CIFS mounts](https://access.redhat.com/solutions/256053)
+-	[SUSE: CIFS mount fails with error "mount error(2): No such file or directory"](https://www.suse.com/support/kb/doc/?id=000021162)
 
 ## Need help?
 

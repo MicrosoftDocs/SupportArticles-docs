@@ -204,14 +204,13 @@
             href: boot-error-disk-read-error-occurred.md
           - name: BitLocker errors
             href: troubleshoot-bitlocker-boot-error.md
-          - name: Checking file system errors
           - name: Troubleshoot directory service initialization failure
             href: troubleshoot-directory-service-initialization-failure.md
           - name: Critical process disabled
             href: troubleshoot-guide-critical-process-died.md
           - name: Critical service failed
             href: troubleshoot-critical-service-failed-boot-error.md
-          - name: Troubleshoot boot error - Status not found
+          - name: Troubleshoot boot error 0xC0000225 - Status not found
             href: boot-error-status-not-found.md
           - name: Troubleshoot Windows could not finish configuring the system
             href: windows-could-not-configure-system.md
@@ -254,8 +253,6 @@
           - name: Windows stop error - System thread exception not handled
             href: windows-stop-error-system-thread-exception-not-handled.md
           - name: Can't boot with 0xc000000f
-            href: error-code-0xc000000f.md
-          - name: Unable to boot with 0xc000000f
             href: boot-error-0xc000000f.md
           - name: Can't boot with 0xc00000ba
             href: boot-error-0xc00000ba.md
@@ -269,8 +266,6 @@
             href: boot-error-0xc0000098.md
           - name: Can't boot with 0xC0000102
             href: error-code-0xC0000102-status-file-corrupt.md
-          - name: Can't boot with 0xc0000225
-            href: boot-error-0xc0000225.md
           - name: Can't boot with 0xc0000359
             href: boot-error-0xc0000359.md
           - name: Can't boot with 0xc000000e
@@ -347,6 +342,8 @@
       href: understand-vm-reboot.md
     - name: Unexpected reboots of VMs with attached VHDs
       href: unexpected-reboots-attached-vhds.md
+    - name: Root Cause Analysis of unexpected VM reboot
+      href: unexpected-vm-reboot-root-cause-analysis.md
 
 - name: VM deployment failures
   items:
@@ -411,44 +408,69 @@
   - name: VM availability might be inaccurate during restart
     href: inaccurate-vm-availability-during-vm-restart.md
 
-- name: VM agent and extensions
+- name: VM agent
   items:
-  - name: Azure cloud-init support for Linux VMs
-    href: cloud-init-support-linux-vms.md
-  - name: Can't enable Azure Disk Encryption
-    href: extension-version-2.2-not-supported.md
-  - name: Can't process extensions
-    href: linux-agent-cannot-process-extensions.md
-  - name: Extension status isn't reported
-    href: linux-vm-extension-status-not-reported.md
-  - name: Linux VM extensions stop running
-    href: extensions-stop-running.md
   - name: Minimum version support for agents
     href: support-extensions-agent-version.md
-  - name: Multiple certificates on IaaS VM that uses extensions
-    href: multiple-certificates-iaas-vm-extensions.md
-  - name: Previous command is re-run
-    href: customscript-reruns-previous-command.md
-  - name: Supported extensions
-    href: support-agent-extensions.md
+  - name: Windows
+    items:
+    - name: Azure Windows VM Agent overview
+      href: /azure/virtual-machines/extensions/agent-windows?context=/troubleshoot/azure/virtual-machines/context/context
+    - name: Install Windows VM agent offline
+      href: install-vm-agent-offline.md
+    - name: Troubleshoot Windows VM agent
+      href: windows-azure-guest-agent.md
+  - name: Linux
+    items:
+    - name: Azure Linux VM Agent overview
+      href: /azure/virtual-machines/extensions/agent-linux?context=/troubleshoot/azure/virtual-machines/context/context
+    - name: Troubleshoot Linux VM agent
+      href: linux-azure-guest-agent.md
+    - name: Extension status isn't reported
+      href: linux-vm-extension-status-not-reported.md
+    - name: Linux VM extensions stop running
+      href: extensions-stop-running.md
+    - name: The host keys of Linux VM are written to ec2
+      href: cloud-init-writes-vm-host-keys-as-ec2.md
+    - name: Update awareness for Linux Image Provisioning Agent
+      href: linux-image-provisioning-agent-update-awareness.md
+    - name: Can't process extensions
+      href: linux-agent-cannot-process-extensions.md
+  - name: Cloud-init
+    items:
+    - name: Azure cloud-init support for Linux VMs
+      href: cloud-init-support-linux-vms.md
+
+- name: VM extensions
+  items:
   - name: Supported operating systems
     href: extension-supported-os.md
-  - name: The host keys of Linux VM are written to ec2
-    href: cloud-init-writes-vm-host-keys-as-ec2.md
-  - name: Update awareness for Linux Image Provisioning Agent
-    href: linux-image-provisioning-agent-update-awareness.md
-  - name: Azure extension overview
-    href: /azure/virtual-machines/extensions/overview?context=/troubleshoot/azure/virtual-machines/context/context
+  - name: Supported extensions
+    href: support-agent-extensions.md
   - name: Troubleshoot extension issues
     href: /azure/virtual-machines/extensions/troubleshoot?context=/troubleshoot/azure/virtual-machines/context/context
-  - name: Install Windows VM agent offline
-    href: install-vm-agent-offline.md
-  - name: Troubleshoot extension certificate issues on Windows VM
-    href: troubleshoot-extension-certificates-issues-windows-vm.md
-  - name: Troubleshoot Windows VM agent
-    href: windows-azure-guest-agent.md
-  - name: Troubleshoot Linux VM agent
-    href: linux-azure-guest-agent.md
+  - name: General issues
+    items:
+    - name: Issues with Python 3-enabled Linux systems
+      href: /azure/virtual-machines/extensions/issues-using-vm-extensions-python-3?context=/troubleshoot/azure/virtual-machines/context/context
+    - name: Multiple certificates on IaaS VM that uses extensions
+      href: multiple-certificates-iaas-vm-extensions.md
+    - name: Troubleshoot extension certificate issues on Windows VM
+      href: troubleshoot-extension-certificates-issues-windows-vm.md
+  - name: Azure Disk Encryption (ADE)
+    items:
+    - name: Can't enable Azure Disk Encryption
+      href: extension-version-2.2-not-supported.md
+  - name: Azure extension overview
+    href: /azure/virtual-machines/extensions/overview?context=/troubleshoot/azure/virtual-machines/context/context
+  - name: Custom script extenions (CSE)
+    items:
+    - name: Previous command is re-run
+      href: customscript-reruns-previous-command.md
+    - name: Troubleshoot - Linux
+      href: /azure/virtual-machines/extensions/custom-script-linux#troubleshooting?context=/troubleshoot/azure/virtual-machines/context/context
+    - name: Troubleshoot - Windows
+      href: /azure/virtual-machines/extensions/custom-script-windows#troubleshoot-and-support?context=/troubleshoot/azure/virtual-machines/context/context
 
 - name: Disk management
   items:
@@ -477,10 +499,21 @@
   items:
   - name: Troubleshoot Windows activation problems
     href: troubleshoot-activation-problems.md
+  - name: Error 0x800705B4 when activating Windows VM
+    href: windows-vm-activation-error-0x800705b4.md
+  - name: Error 0xC004E015 (SL_E_EUL_CONSUMPTION_FAILED)
+    href: ../../windows-server/deployment/error-0xc004e015-sl-e-eul-consumption-failed-activate-windows.md?context=/troubleshoot/azure/virtual-machines/context/context
+  - name: Error 0xC004FD02 when activating Windows VM
+    href: windows-vm-activation-error-0xc004fd02.md
+  - name: Error 0xC004F06C when you activate Windows
+    href: ../../windows-server/deployment/error-0xc004f06c-activate-windows.md?context=/troubleshoot/azure/virtual-machines/context/context
+  - name: Windows virtual machine activation FAQ
+    href: windows-virtual-machine-activation-faq.yml
   - name: Activation fails in forced tunneling scenario
     href: custom-routes-enable-kms-activation.md
   - name: Windows activation - Two new KMS endpoints
     href: windows-activation-stopped-working.md
+  
 
 - name: Azure disk encryption
   items:

@@ -4,8 +4,9 @@ description: Troubleshoot common issues with cloud tiering in an Azure File Sync
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 06/26/2023
+ms.date: 11/02/2023
 ms.author: kendownie
+ms.reviewer: v-weizhu
 ---
 # Troubleshoot Azure File Sync cloud tiering
 
@@ -37,35 +38,46 @@ The following sections indicate how to troubleshoot cloud tiering issues and det
 
 To monitor tiering activity on a server, use Event ID 9003, 9016, and 9029 in the Telemetry event log (located under `Applications and Services\Microsoft\FileSync\Agent` in Event Viewer).
 
-- Event ID 9003 provides error distribution for a server endpoint. For example, Total Error Count, ErrorCode, etc. Note, one event is logged per error code.
-- Event ID 9016 provides ghosting results for a volume. For example, Free space percent is, Number of files ghosted in session, Number of files failed to ghost, etc.
-- Event ID 9029 provides ghosting session information for a server endpoint. For example, Number of files attempted in the session, Number of files tiered in the session, Number of files already tiered, etc.
+- Event ID 9003 provides error distribution for a server endpoint. For example, Total Error Count and ErrorCode. Note, one event is logged per error code per hour.
+- Event ID 9016 provides ghosting results for a volume. For example, Free space percent is, Number of files ghosted in session, and Number of files failed to ghost.
+- Event ID 9029 provides ghosting session information for a server endpoint. For example, Number of files attempted in the session, Number of files tiered in the session, and Number of files already tiered.
 
 ## How to monitor recall activity on a server
 
 To monitor recall activity on a server, use Event ID 9005, 9006, 9009, and 9059 in the Telemetry event log (located under Applications and Services\Microsoft\FileSync\Agent in Event Viewer).
 
-- Event ID 9005 provides recall reliability for a server endpoint. For example, Total unique files accessed, Total unique files with failed access, etc.
-- Event ID 9006 provides recall error distribution for a server endpoint. For example, Total Failed Requests, ErrorCode, etc. Note, one event is logged per error code.
-- Event ID 9009 provides recall session information for a server endpoint. For example, DurationSeconds, CountFilesRecallSucceeded, CountFilesRecallFailed, etc.
+- Event ID 9005 provides recall reliability for a server endpoint. For example, Total unique files accessed and Total unique files with failed access.
+- Event ID 9006 provides recall error distribution for a server endpoint. For example, Total Failed Requests and ErrorCode. Note, one event is logged per error code per hour.
+- Event ID 9009 provides recall session information for a server endpoint. For example, DurationSeconds, CountFilesRecallSucceeded, and CountFilesRecallFailed.
 - Event ID 9059 provides application recall distribution for a server endpoint. For example, ShareId, Application Name, and TotalEgressNetworkBytes.
 
 ## How to troubleshoot files that fail to tier
 
-If files fail to tier to Azure Files:
+To troubleshoot files that fail to tier, follow the steps:
 
-1. In Event Viewer, review the telemetry, operational and diagnostic event logs, located under Applications and Services\Microsoft\FileSync\Agent. 
-   1. Verify the files exist in the Azure file share.
+1. In Event Viewer, go to the *Microsoft-FileSync-Agent/TieringResults* event log.
+2. There is an event logged for each file that fails to tier. Check the [Tiering errors and remediation](#tiering-errors-and-remediation) section to see if remediation steps are listed for the error code.
 
-      > [!NOTE]
-      > A file must be synced to an Azure file share before it can be tiered.
+    You can also use PowerShell to view the events that are logged to the TieringResults event log:
 
-   2. Verify the server has internet connectivity. 
-   3. Verify the Azure File Sync filter drivers (StorageSync.sys and StorageSyncGuard.sys) are running:
-       - At an elevated command prompt, run `fltmc`. Verify that the StorageSync.sys and StorageSyncGuard.sys file system filter drivers are listed.
+    ```powershell
+    Import-Module "C:\Program Files\Azure\StorageSyncAgent\StorageSync.Management.ServerCmdlets.dll"
+    Get-StorageSyncFileTieringResult
+    ```
+
+If content doesn't exist for the error code, follow the general troubleshooting steps:
+
+1. Verify the file exists in the Azure file share.
+
+    > [!NOTE]
+    > A file must be synced to an Azure file share before it can be tiered.
+
+1. Verify the server has Internet connectivity.
+1. Verify the Azure File Sync filter drivers (*StorageSync.sys* and *StorageSyncGuard.sys*) are running:
+   - At an elevated command prompt, run `fltmc`. Verify that the *StorageSync.sys* and *StorageSyncGuard.sys* file system filter drivers are listed.
 
 > [!NOTE]
-> An Event ID 9003 is logged once an hour in the Telemetry event log if a file fails to tier (one event is logged per error code). Check the [Tiering errors and remediation](#tiering-errors-and-remediation) section to see if remediation steps are listed for the error code.
+> If the server has a lot of tiering activities, some errors may be missing from the TieringResults event log due to wrapping. To prevent this issue, go to Event Viewer and increase the TieringResults event log size.
 
 ## Tiering errors and remediation
 
@@ -84,66 +96,79 @@ If files fail to tier to Azure Files:
 | 0x80c83007 | -2134364153 | ECS_E_STORAGE_ERROR | The file failed to tier due to an Azure storage issue. | If the error persists, open a support request. |
 | 0x800703e3 | -2147023901 | ERROR_OPERATION_ABORTED | The file failed to tier because it was recalled at the same time. | No action required. The file will be tiered when the recall completes and the file is no longer in use. |
 | 0x80c80264 | -2134375836 | ECS_E_GHOSTING_FILE_NOT_SYNCED | The file failed to tier because it hasn't synced to the Azure file share. | No action required. The file will tier once it has synced to the Azure file share. |
-| 0x80070001 | -2147942401 | ERROR_INVALID_FUNCTION | The file failed to tier because the cloud tiering filter driver (*storagesync.sys*) isn't running. | To resolve this issue, open an elevated command prompt and run the following command: `fltmc load storagesync`<br>If the Azure File Sync filter driver fails to load when running the `fltmc` command, uninstall the Azure File Sync agent, restart the server, and reinstall the Azure File Sync agent. |
+| 0x80070001 | -2147942401 | ERROR_INVALID_FUNCTION | The file failed to tier because the cloud tiering filter driver (*storagesync.sys*) isn't running. | To resolve this issue, open an elevated command prompt and run the following command: `fltmc load storagesync`<br/>If the Azure File Sync filter driver fails to load when running the `fltmc` command, uninstall the Azure File Sync agent, restart the server, and reinstall the Azure File Sync agent. |
 | 0x80070070 | -2147024784 | ERROR_DISK_FULL | The file failed to tier due to insufficient disk space on the volume where the server endpoint is located. | To resolve this issue, free at least 100 MiB of disk space on the volume where the server endpoint is located. |
 | 0x80070490 | -2147023728 | ERROR_NOT_FOUND | The file failed to tier because it hasn't synced to the Azure file share. | No action required. The file will tier once it has synced to the Azure file share. |
 | 0x80c80262 | -2134375838 | ECS_E_GHOSTING_UNSUPPORTED_RP | The file failed to tier because it's an unsupported reparse point. | If the file is a Data Deduplication reparse point, follow the steps in the [planning guide](/azure/storage/file-sync/file-sync-planning#data-deduplication) to enable Data Deduplication support. Files with reparse points other than Data Deduplication aren't supported and won't be tiered.  |
-| 0x80c83052 | -2134364078 | ECS_E_CREATE_SV_STREAM_ID_<br>MISMATCH | The file failed to tier because it has been modified. | No action required. The file will tier once the modified file has synced to the Azure file share. |
-| 0x80c80269 | -2134375831 | ECS_E_GHOSTING_REPLICA_NOT_<br>FOUND | The file failed to tier because it hasn't synced to the Azure file share. | No action required. The file will tier once it has synced to the Azure file share. |
+| 0x80c83052 | -2134364078 | ECS_E_CREATE_SV_STREAM_ID_<br/>MISMATCH | The file failed to tier because it has been modified. | No action required. The file will tier once the modified file has synced to the Azure file share. |
+| 0x80c80269 | -2134375831 | ECS_E_GHOSTING_REPLICA_NOT_<br/>FOUND | The file failed to tier because it hasn't synced to the Azure file share. | No action required. The file will tier once it has synced to the Azure file share. |
 | 0x80072ee2 | -2147012894 | WININET_E_TIMEOUT | The file failed to tier due to a network issue. | No action required. If the error persists, check network connectivity to the Azure file share. |
 | 0x80c80017 | -2134376425 | ECS_E_SYNC_OPLOCK_BROKEN | The file failed to tier because it has been modified. | No action required. The file will tier once the modified file has synced to the Azure file share. |
 | 0x800705aa | -2147023446 | ERROR_NO_SYSTEM_RESOURCES | The file failed to tier due to insufficient system resources. | If the error persists, investigate which application or kernel-mode driver is exhausting system resources. |
 | 0x8e5e03fe | -1906441218 | JET_errDiskIO | The file failed to tier due to an I/O error when writing to the cloud tiering database. | If the error persists, run chkdsk on the volume and check the storage hardware. |
 | 0x8e5e0442 | -1906441150 | JET_errInstanceUnavailable | The file failed to tier because the cloud tiering database isn't running. | To resolve this issue, restart the FileSyncSvc service or server. If the error persists, run chkdsk on the volume and check the storage hardware. |
-| 0x80C80285 | -2134375803 | ECS_E_GHOSTING_SKIPPED_BY_<br>CUSTOM_EXCLUSION_LIST | The file can't be tiered because the file type is excluded from tiering. | To tier files with this file type, modify the `GhostingExclusionList` registry setting which is located under `HKEY_LOCAL_MACHINE\SOFTWARE<br>\Microsoft\Azure\StorageSync`. |
-| 0x80C86050 | -2134351792 | ECS_E_REPLICA_NOT_READY_FOR_<br>TIERING | The file failed to tier because the current sync mode is initial upload or reconciliation. | No action required. The file will be tiered once sync completes initial upload or reconciliation. |
-| 0x80c8304e | -2134364082 | ECS_E_WORK_FRAMEWORK_ACTION_<br>RETRY_NOT_SUPPORTED | An unexpected error occurred. | No action required. This error should automatically resolve. If the error persists for several days, create a support request. |
-| 0x80c8309c | -2134364004 | ECS_E_CREATE_SV_BATCHED_CHANGE_<br>DETECTION_FAILED | An unexpected error occurred. | No action required. This error should automatically resolve. If the error persists for several days, create a support request. |
+| 0x80C80285 | -2134375803 | ECS_E_GHOSTING_SKIPPED_BY_<br/>CUSTOM_EXCLUSION_LIST | The file can't be tiered because the file type is excluded from tiering. | To tier files with this file type, modify the `GhostingExclusionList` registry setting in HKEY_LOCAL_MACHINE<br/>\SOFTWARE\Microsoft\Azure\StorageSync |
+| 0x80C86050 | -2134351792 | ECS_E_REPLICA_NOT_READY_FOR_<br/>TIERING | The file failed to tier because the current sync mode is initial upload or reconciliation. | No action required. The file will be tiered once sync completes initial upload or reconciliation. |
+| 0x80c8304e | -2134364082 | ECS_E_WORK_FRAMEWORK_ACTION_<br/>RETRY_NOT_SUPPORTED | An unexpected error occurred. | No action required. This error should automatically resolve. If the error persists for several days, create a support request. |
+| 0x80c8309c | -2134364004 | ECS_E_CREATE_SV_BATCHED_CHANGE_<br/>DETECTION_FAILED | An unexpected error occurred. | No action required. This error should automatically resolve. If the error persists for several days, create a support request. |
 | 0x8000ffff | -2147418113 | E_UNEXPECTED | An unexpected error occurred. | No action required. This error should automatically resolve. If the error persists for several days, create a support request. |
 | 0x80c80220 | -2134375904 | ECS_E_SYNC_METADATA_IO_ERROR | The sync database has encountered an IO error. | No action required. This error should automatically resolve. If the error persists for several days, create a support request. |
-| 0x80c830a7 | -2134363993 | ECS_E_AZURE_FILE_SNAPSHOT_LIMIT_<br>REACHED | The Azure file snapshot limit has been reached. | Upgrade the Azure File Sync agent to the latest version. After upgrading the agent, run the `DeepScrubbingScheduledTask` located under \Microsoft\StorageSync. |
-| 0x80c80367 | -2134375577 | ECS_E_FILE_SNAPSHOT_OPERATION_<br>EXECUTION_MAX_ATTEMPTS_REACHED | An unexpected error occurred. | No action required. This error should automatically resolve. If the error persists for several days, create a support request. |
+| 0x80c830a7 | -2134363993 | ECS_E_AZURE_FILE_SNAPSHOT_LIMIT_<br/>REACHED | The Azure file snapshot limit has been reached. | Upgrade the Azure File Sync agent to the latest version. After upgrading the agent, run the `DeepScrubbingScheduledTask` located under \Microsoft\StorageSync. |
+| 0x80c80367 | -2134375577 | ECS_E_FILE_SNAPSHOT_OPERATION_<br/>EXECUTION_MAX_ATTEMPTS_REACHED | An unexpected error occurred. | No action required. This error should automatically resolve. If the error persists for several days, create a support request. |
 | 0x80c8306f | -2134364049 | ECS_E_ETAG_MISMATCH | An unexpected error occurred. | No action required. This error should automatically resolve. If the error persists for several days, create a support request. |
 | 0x80c8304c | -2134364084 | ECS_E_ASYNC_POLLING_TIMEOUT | Timeout error occurred. | No action required. This error should automatically resolve. If the error persists for several days, create a support request. |
 | 0x80070299 | -2147024231 | ERROR_FILE_SYSTEM_LIMITATION | An unexpected error occurred. | No action required. This error should automatically resolve. If the error persists for several days, create a support request. |
-| 0x80c83054 | -2134364076 | ECS_E_CREATE_SV_UNKNOWN_<br>GLOBAL_ID | An unexpected error occurred. | No action required. This error should automatically resolve. If the error persists for several days, create a support request. |
-| 0x80c8309b | -2134364005 | ECS_E_CREATE_SV_PER_ITEM_CHANGE_<br>DETECTION_FAILED | An unexpected error occurred. | No action required. This error should automatically resolve. If the error persists for several days, create a support request. |
+| 0x80c83054 | -2134364076 | ECS_E_CREATE_SV_UNKNOWN_<br/>GLOBAL_ID | An unexpected error occurred. | No action required. This error should automatically resolve. If the error persists for several days, create a support request. |
+| 0x80c8309b | -2134364005 | ECS_E_CREATE_SV_PER_ITEM_CHANGE_<br/>DETECTION_FAILED | An unexpected error occurred. | No action required. This error should automatically resolve. If the error persists for several days, create a support request. |
 | 0x80c83034 | -2134364108 | ECS_E_FORBIDDEN | Access is denied. | Please check the access policies on the storage account, and also check your proxy settings. [Learn more](/azure/storage/file-sync/file-sync-firewall-and-proxy#test-network-connectivity-to-service-endpoints). |
 | 0x80070034 | -2147024844 | ERROR_DUP_NAME | An unexpected error occurred. | No action required. This error should automatically resolve. If the error persists for several days, create a support request. |
 | 0x80071128 | -2147020504 | ERROR_INVALID_REPARSE_DATA | The data is corrupted and unreadable. | Run `chkdsk` on the volume. [Learn more](/windows-server/administration/windows-commands/chkdsk?tabs=event-viewer). |
 | 0x8e5e0450 | -1906441136 | JET_errInvalidSesid | An unexpected error occurred. | No action required. This error should automatically resolve. If the error persists for several days, create a support request. |
-| 0x80092004 | -2146885628 | CRYPT_E_NOT_FOUND | Certificate required for Azure File Sync authentication is missing. | Run this PowerShell command on the server to reset the certificate `Reset-AzStorageSyncServerCertificate -ResourceGroupName <string> -StorageSyncServiceName <string>`. |
+| 0x80092004 | -2146885628 | CRYPT_E_NOT_FOUND | Certificate required for Azure File Sync authentication is missing. | Run this PowerShell command on the server to reset the certificate:<br/>`Reset-AzStorageSyncServerCertificate -ResourceGroupName <string> -StorageSyncServiceName <string>`. |
 | 0x80c80020 | -2134376416 | ECS_E_CLUSTER_NOT_RUNNING | The Failover Cluster service is not running. | Verify the cluster service (clussvc) is running. [Learn more](../../windows-server/high-availability/troubleshoot-cluster-service-fails-to-start.md). |
 | 0x80c83036 | -2134364106 | ECS_E_NOT_FOUND | An unexpected error occurred. | No action required. This error should automatically resolve. If the error persists for several days, create a support request. |
 | 0x801f0005 | -2145452027 | ERROR_FLT_INVALID_NAME_REQUEST | An unexpected error occurred. | No action required. This error should automatically resolve. If the error persists for several days, create a support request. |
 | 0x80071126 | -2147020506 | ERROR_NOT_A_REPARSE_POINT | An internal error occurred. | No action required. This error should automatically resolve. If the error persists for several days, create a support request. |
 | 0x80070718 | -2147023080 | ERROR_NOT_ENOUGH_QUOTA | Not enough server memory resources available to process this command. | Monitor memory usage on your server. [Learn more](/azure/storage/file-sync/file-sync-planning#recommended-system-resources). |
-| 0x8007046a | -2147023766 | ERROR_NOT_ENOUGH_SERVER_MEMORY | Not enough server memory resources available to process this command. | Monitor memory usage on your server. [Learn more](/azure/storage/file-sync/file-sync-planning#recommended-system-resources). |
+| 0x8007046a | -2147023766 | ERROR_NOT_ENOUGH_SERVER_<br/>MEMORY | Not enough server memory resources available to process this command. | Monitor memory usage on your server. [Learn more](/azure/storage/file-sync/file-sync-planning#recommended-system-resources). |
 | 0x80070026 | -2147024858 | COR_E_ENDOFSTREAM | An external error occurred. | No action required. This error should automatically resolve. If the error persists for several days, create a support request. |
 | 0x80131501 | -2146233087 | COR_E_SYSTEM | An external error occurred. | No action required. This error should automatically resolve. If the error persists for several days, create a support request. |
-| 0x80c86040 | -2134351808 | ECS_E_AZURE_FILE_SHARE_INVALID_<br>HEADER | An unexpected error occurred. | If the error persists for more than a day, create a support request. |
+| 0x80c86040 | -2134351808 | ECS_E_AZURE_FILE_SHARE_INVALID_<br/>HEADER | An unexpected error occurred. | If the error persists for more than a day, create a support request. |
 | 0x80c80339 | -2134375623 | ECS_E_CERT_DATE_INVALID | The server's SSL certificate is expired. | Check with your organization's tech support to get help. If you need further investigation, create a support request. |
 | 0x80c80337 | -2134375625 | ECS_E_INVALID_CA | The server's SSL certificate was issued by a certificate authority that isn't trusted by this PC. | Check with your organization's tech support to get help. If you need further investigation, create a support request. |
-| 0x80c80001 | -2134376447 | ECS_E_SYNC_INVALID_PROTOCOL_FORMAT | A connection with the service could not be established. | Please check and configure the proxy setting correctly or remove the proxy setting. [Learn more](/azure/storage/file-sync/file-sync-firewall-and-proxy#test-network-connectivity-to-service-endpoints). |
+| 0x80c80001 | -2134376447 | ECS_E_SYNC_INVALID_PROTOCOL_<br/>FORMAT | A connection with the service could not be established. | Please check and configure the proxy setting correctly or remove the proxy setting. [Learn more](/azure/storage/file-sync/file-sync-firewall-and-proxy#test-network-connectivity-to-service-endpoints). |
 | 0x800706d9 | -2147023143 | EPT_S_NOT_REGISTERED | An external error occurred. | No action required. This error should automatically resolve. If the error persists for several days, create a support request. |
 | 0x80070035 | -2147024843 | ERROR_BAD_NETPATH | An external error occurred. | No action required. This error should automatically resolve. If the error persists for several days, create a support request. |
 | 0x80070571 | -2147023503 | ERROR_DISK_CORRUPT | The disk structure is corrupted and unreadable. | Run `chkdsk` on the volume. [Learn more](/windows-server/administration/windows-commands/chkdsk?tabs=event-viewer). |
 | 0x8007052e | -2147023570 | ERROR_LOGON_FAILURE | Operation failed due to an authentication failure. | If the error persists for more than a day, create a support request. |
 | 0x8002802b | -2147319765 | TYPE_E_ELEMENTNOTFOUND | An unexpected error occurred. | No action required. This error should automatically resolve. If the error persists for several days, create a support request. |
 | 0x80072f00 | -2147012864 | WININET_E_FORCE_RETRY | A connection with the service could not be established. | No action required. This error should automatically resolve. If the error persists for several days, create a support request. |
+| 0x80C86057 | -2134351785 | ECS_E_STABLEVERSION_SVID_CHECK_FAILED | The file can't be tiered due to a known issue. | No action required. Ignore the error and it will no longer appear once a fix is released. |
 
 ## How to troubleshoot files that fail to be recalled
 
-If files fail to be recalled:
-1. In Event Viewer, review the telemetry, operational and diagnostic event logs, located under Applications and Services\Microsoft\FileSync\Agent.
-    1. Verify the files exist in the Azure file share.
-    2. Verify the server has internet connectivity. 
-    3. Open the Services MMC snap-in and verify the Storage Sync Agent service (FileSyncSvc) is running.
-    4. Verify the Azure File Sync filter drivers (StorageSync.sys and StorageSyncGuard.sys) are running:
-        - At an elevated command prompt, run `fltmc`. Verify that the StorageSync.sys and StorageSyncGuard.sys file system filter drivers are listed.
+To troubleshoot files that fail to recall, follow the steps:
+
+1. In Event Viewer, go to the *Microsoft-FileSync-Agent/RecallResults* event log.
+2. There is an event logged for each file that is recalled. If the `DataTransferHresult` field is 0, the file recall is successful. If the `DataTransferHresult` field has an error code, check the [Recall errors and remediation](#recall-errors-and-remediation) section to see if remediation steps are listed for the error code.
+
+    You can also use PowerShell to view the events that are logged to the RecallResults event log:
+
+    ```powershell
+    Import-Module "C:\Program Files\Azure\StorageSyncAgent\StorageSync.Management.ServerCmdlets.dll"
+    Get-StorageSyncFileRecallResult
+    ```
+
+If content doesn't exist for the error code, follow the general troubleshooting steps:
+
+1. Verify the file exists in the Azure file share.
+2. Verify the server has Internet connectivity.
+3. Open the Services MMC snap-in and verify the Storage Sync Agent service (*FileSyncSvc*) is running.
+4. Verify the Azure File Sync filter drivers (*StorageSync.sys* and *StorageSyncGuard.sys*) are running:
+   - At an elevated command prompt, run `fltmc`. Verify that the *StorageSync.sys* and *StorageSyncGuard.sys* file system filter drivers are listed.
 
 > [!NOTE]
-> An Event ID 9006 is logged once per hour in the Telemetry event log if a file fails to recall (one event is logged per error code). Check the [Recall errors and remediation](#recall-errors-and-remediation) section to see if remediation steps are listed for the error code.
+> If the server has a lot of recall activities, some errors may be missing from the RecallResults event log due to wrapping. To prevent this issue, go to Event Viewer and increase the RecallResults event log size.
 
 ## Recall errors and remediation
 
@@ -154,28 +179,29 @@ If files fail to be recalled:
 | 0x80c80037 | -2134376393 | ECS_E_SYNC_SHARE_NOT_FOUND | The file failed to recall because the server endpoint was deleted. | To resolve this issue, see [Tiered files aren't accessible on the server after deleting a server endpoint](?tabs=portal1%252cazure-portal#tiered-files-are-not-accessible-on-the-server-after-deleting-a-server-endpoint). |
 | 0x80070005 | -2147024891 | ERROR_ACCESS_DENIED | The file failed to recall due to an access denied error. This issue can occur if the firewall and virtual network settings on the storage account are enabled and the server does not have access to the storage account. | To resolve this issue, add the Server IP address or virtual network by following the steps documented in the [Configure firewall and virtual network settings](/azure/storage/file-sync/file-sync-deployment-guide?tabs=azure-portal#optional-configure-firewall-and-virtual-network-settings) section in the deployment guide. |
 | 0x80c86002 | -2134351870 | ECS_E_AZURE_RESOURCE_NOT_FOUND | The file failed to recall because it's not accessible in the Azure file share. | To resolve this issue, verify the file exists in the Azure file share. If the file exists in the Azure file share, upgrade to the latest Azure File Sync [agent version](/azure/storage/file-sync/file-sync-release-notes#supported-versions). |
-| 0x80c8305f | -2134364065 | ECS_E_EXTERNAL_STORAGE_ACCOUNT_<br>AUTHORIZATION_FAILED | The file failed to recall due to authorization failure to the storage account. | To resolve this issue, verify [Azure File Sync has access to the storage account](/azure/storage/file-sync/file-sync-troubleshoot-sync-errors?tabs=portal1,azure-portal#troubleshoot-rbac). |
+| 0x80c8305f | -2134364065 | ECS_E_EXTERNAL_STORAGE_ACCOUNT_<br/>AUTHORIZATION_FAILED | The file failed to recall due to authorization failure to the storage account. | To resolve this issue, verify [Azure File Sync has access to the storage account](/azure/storage/file-sync/file-sync-troubleshoot-sync-errors?tabs=portal1,azure-portal#troubleshoot-rbac). |
 | 0x80c86030 | -2134351824 | ECS_E_AZURE_FILE_SHARE_NOT_FOUND | The file failed to recall because the Azure file share isn't accessible. | Verify the file share exists and is accessible. If the file share was deleted and recreated, perform the steps documented in the [Sync failed because the Azure file share was deleted and recreated](/azure/storage/file-sync/file-sync-troubleshoot-sync-errors?tabs=portal1,azure-portal#-2134375810) section to delete and recreate the sync group. |
 | 0x800705aa | -2147023446 | ERROR_NO_SYSTEM_RESOURCES | The file failed to recall due to insufficient system resources. | If the error persists, investigate which application or kernel-mode driver is exhausting system resources. |
 | 0x8007000e | -2147024882 | ERROR_OUTOFMEMORY | The file failed to recall due to insufficient memory. | If the error persists, investigate which application or kernel-mode driver is causing the low memory condition. |
 | 0x80070070 | -2147024784 | ERROR_DISK_FULL | The file failed to recall due to insufficient disk space. | To resolve this issue, free up space on the volume by moving files to a different volume, increase the size of the volume, or force files to tier by using the `Invoke-StorageSyncCloudTiering` cmdlet. |
 | 0x80072f8f | -2147012721 | WININET_E_DECODING_FAILED | The file failed to recall because the server was unable to decode the response from the Azure File Sync service. | This error typically occurs if a network proxy is modifying the response from the Azure File Sync service. Please check your proxy configuration. |
 | 0x80090352 | -2146892974 | SEC_E_ISSUING_CA_UNTRUSTED | The file failed to recall because your organization is using a TLS terminating proxy or a malicious entity is intercepting the traffic between your server and the Azure File Sync service. | If you're certain this is expected (because your organization is using a TLS terminating proxy), follow the steps documented for error [CERT_E_UNTRUSTEDROOT](/azure/storage/file-sync/file-sync-troubleshoot-sync-errors#-2146762487) to resolve this issue. |
-| 0x80c86047 | -2134351801 | ECS_E_AZURE_SHARE_SNAPSHOT_NOT_FOUND | The file failed to recall because it's referencing a version of the file which no longer exists in the Azure file share. | This issue can occur if the tiered file was restored from a backup of the Windows Server. To resolve this issue, restore the file from a snapshot in the Azure file share. |
+| 0x80c86047 | -2134351801 | ECS_E_AZURE_SHARE_SNAPSHOT_NOT_<br/>FOUND | The file failed to recall because it's referencing a version of the file which no longer exists in the Azure file share. | This issue can occur if the tiered file was restored from a backup of the Windows Server. To resolve this issue, restore the file from a snapshot in the Azure file share. |
 | 0x80070032 | -2147024846 | ERROR_NOT_SUPPORTED | An internal error occurred. | Please upgrade to the latest Azure File Sync agent version. If the error persists after upgrading the agent, create a support request. |
 | 0x80070006 | -2147024890 | ERROR_INVALID_HANDLE | An internal error occurred. | If the error persists for more than a day, create a support request. |
 | 0x80c80310 | -2134375664 | ECS_E_INVALID_DOWNLOAD_RESPONSE | Azure File sync error. | If the error persists for more than a day, create a support request. |
 | 0x8007045d | -2147023779 | ERROR_IO_DEVICE | An internal error occurred. | If the error persists for more than a day, create a support request. |
-| 0x80c8604b | -2134351797 | ECS_E_AZURE_FILE_SHARE_FILE_NOT_FOUND | File not found in the file share. | You have likely performed an unsupported operation. [Learn more](/azure/storage/file-sync/file-sync-disaster-recovery-best-practices). Please find the original copy of the file and overwrite the tiered file in the server endpoint. |
+| 0x80c8604b | -2134351797 | ECS_E_AZURE_FILE_SHARE_FILE_NOT_<br/>FOUND | File not found in the file share. | You have likely performed an unsupported operation. [Learn more](/azure/storage/file-sync/file-sync-disaster-recovery-best-practices). Please find the original copy of the file and overwrite the tiered file in the server endpoint. |
 | 0x80070021 | -2147024863 | ERROR_LOCK_VIOLATION | The process cannot access the file because another process has locked a portion of the file. | No action required. Once the application closes the handle to the file, recall should succeed. |
-| 0x80c8604c | -2134351796 | ECS_E_AZURE_FILE_SNAPSHOT_NOT_FOUND_<br>SYNC_PENDING | An internal error occurred. | No action required. If the error persists for more than a day, create a support request. Recall should succeed after the sync session completes. |
-| 0x80c80312 | -2134375662 | ECS_E_DOWNLOAD_SESSION_STREAM_INTERRUPTED | Couldn't finish downloading files. Sync will try again later. | If the error persists, use the `Test-StorageSyncNetworkConnectivity` cmdlet to check network connectivity to the service endpoints. [Learn more](/azure/storage/file-sync/file-sync-firewall-and-proxy#test-network-connectivity-to-service-endpoints). |
+| 0x80c8604c | -2134351796 | ECS_E_AZURE_FILE_SNAPSHOT_NOT_<br/>FOUND_SYNC_PENDING | An internal error occurred. | No action required. If the error persists for more than a day, create a support request. Recall should succeed after the sync session completes. |
+| 0x80c80312 | -2134375662 | ECS_E_DOWNLOAD_SESSION_STREAM_<br/>INTERRUPTED | Couldn't finish downloading files. Sync will try again later. | If the error persists, use the `Test-StorageSyncNetworkConnectivity` cmdlet to check network connectivity to the service endpoints. [Learn more](/azure/storage/file-sync/file-sync-firewall-and-proxy#test-network-connectivity-to-service-endpoints). |
 | 0x80c8600c | -2134351860 | ECS_E_AZURE_INTERNAL_ERROR | The server encountered an internal error. | No action required. If the error persists for more than a day, create a support request. |
 | 0x80c8600b | -2134351861 | ECS_E_AZURE_INVALID_RANGE | The server encountered an internal error. | No action required. If the error persists for more than a day, create a support request. |
 | 0x8007045b | -2147023781 | ERROR_SHUTDOWN_IN_PROGRESS | A system shutdown is in progress. | No action required. If the error persists for more than a day, create a support request. |
 | 0x80072efd | -2147012867 | WININET_E_CANNOT_CONNECT | A connection with the service could not be established. | Use the `Test-StorageSyncNetworkConnectivity` cmdlet to check network connectivity to the service endpoints. [Learn more](/azure/storage/file-sync/file-sync-firewall-and-proxy#test-network-connectivity-to-service-endpoints). |
+| 0x80072f8f | -2147012721 | WININET_E_DECODING_FAILED | Firewall, proxy or gateway is blocking access to the PKI URLs, or the PKI servers are down. | Ensure the server can access the following URLs:<br/><br/>Public cloud endpoints:<br/><br/>https://www.microsoft.com/pki/mscorp/cps<br/>http://crl.microsoft.com/pki/mscorp/crl/<br/>http://mscrl.microsoft.com/pki/mscorp/crl/<br/>http://ocsp.msocsp.com<br/>http://ocsp.digicert.com/<br/>http://crl3.digicert.com/<br/><br/>Azure Government endpoints:<br/><br/>https://www.microsoft.com/pki/mscorp/cps<br/>http://crl.microsoft.com/pki/mscorp/crl/<br/>http://mscrl.microsoft.com/pki/mscorp/crl/<br/>http://ocsp.msocsp.com<br/>http://ocsp.digicert.com/<br/>http://crl3.digicert.com/<br/><br/>Once the Azure File Sync agent is installed, the PKI URL is used to download intermediate certificates required to communicate with the Azure File Sync service and Azure file share. The OCSP URL is used to check the status of a certificate. If the error persists for several days, create a support request. |
 | 0x800703ee | -2147023890 | ERROR_FILE_INVALID | The volume for a file has been externally altered so that the opened file is no longer valid. | If the error persists for more than a day, create a support request. |
-| 0x80c86048 | -2134351800 | ECS_E_AZURE_FILE_SNAPSHOT_NOT_FOUND | An internal error occurred. | You have likely performed an unsupported operation. [Learn more](/azure/storage/file-sync/file-sync-disaster-recovery-best-practices). Please find the original copy of the file and overwrite the tiered file in the server endpoint. |
+| 0x80c86048 | -2134351800 | ECS_E_AZURE_FILE_SNAPSHOT_NOT_<br/>FOUND | An internal error occurred. | You have likely performed an unsupported operation. [Learn more](/azure/storage/file-sync/file-sync-disaster-recovery-best-practices). Please find the original copy of the file and overwrite the tiered file in the server endpoint. |
 | 0x80072f78 | -2147012744 | WININET_E_INVALID_SERVER_RESPONSE | A connection with the service could not be established. | Use the `Test-StorageSyncNetworkConnectivity` cmdlet to check network connectivity to the service endpoints. [Learn more](/azure/storage/file-sync/file-sync-firewall-and-proxy#test-network-connectivity-to-service-endpoints). |
 | 0x8007139f | -2147019873 | ERROR_INVALID_STATE | An internal error occurred. | No action required. If the error persists for more than a day, create a support request. |
 | 0x80070570 | -2147023504 | ERROR_FILE_CORRUPT | The file or directory is corrupted and unreadable. | Run chkdsk on the volume. [Learn more](/windows-server/administration/windows-commands/chkdsk?tabs=event-viewer). |
@@ -183,10 +209,10 @@ If files fail to be recalled:
 | 0x80070008 | -2147024888 | ERROR_NOT_ENOUGH_MEMORY | Not enough memory resources are available to process this command. | Monitor memory usage on your server. If the error persists for more than a day, create a support request. |
 | 0x80c80072 | -2134376334 | ECS_E_BAD_GATEWAY | A connection with the service could not be established. | Use the `Test-StorageSyncNetworkConnectivity` cmdlet to check network connectivity to the service endpoints. [Learn more](/azure/storage/file-sync/file-sync-firewall-and-proxy#test-network-connectivity-to-service-endpoints). |
 | 0x80190193 | -2145844845 | HTTP_E_STATUS_FORBIDDEN | Forbidden (403) error occurred. | Update Azure file share access policy. [Learn more](/azure/role-based-access-control/built-in-roles). |
-| 0x80c8604e | -2134351794 | ECS_E_AZURE_FILE_SNAPSHOT_NOT_FOUND_ON_<br>CONFLICT_FILE | Unable to recall sync conflict loser file from Azure file share. | If this error is happening for a tiered file that is a sync conflict file, this file might not be needed by end users anymore. If the original file is available and valid, you may remove this file from the server endpoint. |
-| 0x80c80075 | -2134376331 | ECS_E_ACCESS_TOKEN_CATASTROPHIC_FAILURE | An internal error occurred. | No action required. If the error persists for more than a day, create a support request. |
+| 0x80c8604e | -2134351794 | ECS_E_AZURE_FILE_SNAPSHOT_NOT_<br/>FOUND_ON_CONFLICT_FILE | Unable to recall sync conflict loser file from Azure file share. | If this error is happening for a tiered file that is a sync conflict file, this file might not be needed by end users anymore. If the original file is available and valid, you may remove this file from the server endpoint. |
+| 0x80c80075 | -2134376331 | ECS_E_ACCESS_TOKEN_CATASTROPHIC<br/>_FAILURE | An internal error occurred. | No action required. If the error persists for more than a day, create a support request. |
 | 0x80c8005b | -2134376357 | ECS_E_AZURE_FILE_SERVICE_UNAVAILABLE | The Azure File Service is currently unavailable. | If the error persists for more than a day, create a support request. |
-| 0x80c83099 | -2134364007 | ECS_E_PRIVATE_ENDPOINT_ACCESS_BLOCKED | Private endpoint configuration access blocked. | Check the private endpoint configuration and allow access to the Azure File Sync service. [Learn more](/azure/storage/file-sync/file-sync-firewall-and-proxy#test-network-connectivity-to-service-endpoints). |
+| 0x80c83099 | -2134364007 | ECS_E_PRIVATE_ENDPOINT_ACCESS_<br/>BLOCKED | Private endpoint configuration access blocked. | Check the private endpoint configuration and allow access to the Azure File Sync service. [Learn more](/azure/storage/file-sync/file-sync-firewall-and-proxy#test-network-connectivity-to-service-endpoints). |
 | 0x80c86000 | -2134351872 | ECS_E_AZURE_AUTHENTICATION_FAILED | Server failed to authenticate the request. | Check the network configuration and make sure the storage account accepts the server IP address. You can do this by adding the server IP, adding the server's IP subnet, or adding the server vnet to the authorized access control list to access the storage account. [Learn more](/azure/storage/file-sync/file-sync-deployment-guide#optional-configure-firewall-and-virtual-network-settings). |
 | 0x80072ef1 | -2147012879 | ERROR_WINHTTP_OPERATION_CANCELLED | A connection with the service could not be established. | If the error persists, use the `Test-StorageSyncNetworkConnectivity` cmdlet to check network connectivity to the service endpoints. [Learn more](/azure/storage/file-sync/file-sync-firewall-and-proxy#test-network-connectivity-to-service-endpoints). |
 | 0x80c80338 | -2134375624 | ECS_E_CERT_CN_INVALID | The server's SSL certificate contains incorrect hostnames. The certificate can't be used to establish the SSL connection. | Check with your organization's tech support to get help. If you need further investigation, create a support request. |
@@ -197,8 +223,8 @@ If files fail to be recalled:
 | 0x80c8033f | -2134375617 | ECS_E_TOKEN_LIFETIME_IS_TOO_LONG | An internal error occurred. | No action required. If the error persists for more than a day, create a support request. |
 | 0x80190190 | -2145844848 | HTTP_E_STATUS_BAD_REQUEST | A connection with the service could not be established. | No action required. If the error persists for more than a day, create a support request. |
 | 0x80c86036 | -2134351818 | ECS_E_AZURE_FILE_PARENT_NOT_FOUND | The specified parent path for the file does not exist | You have likely performed an unsupported operation. [Learn more](/azure/storage/file-sync/file-sync-disaster-recovery-best-practices). Please find the original copy of the file and overwrite the tiered file in the server endpoint. |
-| 0x80c86049 | -2134351799 | ECS_E_AZURE_SHARE_SNAPSHOT_FILE_NOT_FOUND | File not found in the share snapshot. | You have likely performed an unsupported operation. [Learn more](/azure/storage/file-sync/file-sync-disaster-recovery-best-practices). Please find the original copy of the file and overwrite the tiered file in the server endpoint. |
-| 0x80c80311 | -2134375663 | ECS_E_DOWNLOAD_SESSION_HASH_CONFLICT | An internal error occurred. | If the error persists for more than a day, create a support request. |
+| 0x80c86049 | -2134351799 | ECS_E_AZURE_SHARE_SNAPSHOT_FILE_<br/>NOT_FOUND | File not found in the share snapshot. | You have likely performed an unsupported operation. [Learn more](/azure/storage/file-sync/file-sync-disaster-recovery-best-practices). Please find the original copy of the file and overwrite the tiered file in the server endpoint. |
+| 0x80c80311 | -2134375663 | ECS_E_DOWNLOAD_SESSION_HASH_<br/>CONFLICT | An internal error occurred. | If the error persists for more than a day, create a support request. |
 | 0x800700a4 | -2147024732 | ERROR_MAX_THRDS_REACHED | An internal error occurred. | No action required. If the error persists for more than a day, create a support request. |
 | 0x80070147 | -2147024569 | ERROR_OFFSET_ALIGNMENT_VIOLATION | An internal error occurred. | If the error persists for more than a day, create a support request. |
 | 0x80090321 | -2146893023 | SEC_E_BUFFER_TOO_SMALL | An internal error occurred. | If the error persists for more than a day, create a support request. |
@@ -209,6 +235,7 @@ If files fail to be recalled:
 | 0x8019012e | -2145844946 | HTTP_E_STATUS_REDIRECT | Azure File Sync does not support HTTP redirection. | Disable HTTP redirect on your proxy server or network device. |
 | 0x800706be | -2147023170 | RPC_S_CALL_FAILED | An unknown error occurred. | If the error persists, use the `Test-StorageSyncNetworkConnectivity` cmdlet to check network connectivity to the service endpoints. [Learn more](/azure/storage/file-sync/file-sync-firewall-and-proxy#test-network-connectivity-to-service-endpoints). |
 | 0x80072747 | -2147014841 | WSAENOBUFS | An internal error occurred. | If the error persists, use the `Test-StorageSyncNetworkConnectivity` cmdlet to check network connectivity to the service endpoints. [Learn more](/azure/storage/file-sync/file-sync-firewall-and-proxy#test-network-connectivity-to-service-endpoints). |
+| 0x80C86057 | -2134351785 | ECS_E_STABLEVERSION_SVID_CHECK_FAILED | The file can't be recalled due to a known issue. | Copy the file manually from a different endpoint or the cloud share. If you can't copy the file manually, create a support ticket. |
 
 ## Tiered files are not accessible on the server after deleting a server endpoint
 

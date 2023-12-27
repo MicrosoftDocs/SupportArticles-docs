@@ -58,9 +58,9 @@ To create an Azure RM service connection,
 
 After you save the Azure RM service connection, the connection takes the following actions:
 
-- Connects to the Azure Active Directory (Azure AD) tenant for the selected subscription.
+- Connects to the Microsoft Entra tenant for the selected subscription.
 
-- Creates an application in Azure AD on behalf of the user.
+- Creates an application in Microsoft Entra ID on behalf of the user.
 
 - Creates an Azure RM service connection by using this application's details.
 

@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 22 for SQL Server 2019 (KB5027702)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 22 (KB5027702).
-ms.date: 08/14/2023
+ms.date: 12/22/2023
 ms.custom: KB5027702
 ms.reviewer: v-qianli2
 appliesto:
@@ -51,9 +51,9 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id=2460204>[2460204](#2460204) </a> | Fixes an issue caused by a change introduced in SQL Server 2019 CU20 for the [Managed Instance link](/azure/azure-sql/managed-instance/managed-instance-link-feature-overview) feature. For more information, see [Issue three](cumulativeupdate20.md#issue-three). | SQL Server Engine| High Availability and Disaster Recovery | All|
 | <a id=2504040>[2504040](#2504040) </a> | Fixes a stack overflow in `HaDrUndoMgr::InitSystemPages` that's caused by a loop getting all the Page Free Space (PFS) pages from the primary availability group. | SQL Server Engine| High Availability and Disaster Recovery |All |
 | <a id=2555121>[2555121](#2555121) </a> | Fixes an issue in which a pointer is outside the empty result buffer when the output of `CONCAT_WS` is empty. This fix adds a check for the empty result before doing the pointer arithmetic. | SQL Server Engine| In-Memory OLTP|All |
-| <a id=2355421>[2355421](#2355421) </a> | Fixes an intra-query deadlock and the following error 1205 that you might encounter when the nested loop join (NLJ) has an empty set inside and both a child and an ancestor require all threads to synchronize at the operator before moving forward: </br></br>Msg 1205, Level 13, State 80, Procedure \<ProcedureName>, Line \<LineNumber> [Batch Start Line \<LineNumber>] </br>Transaction (Process ID \<ProcessID>) was deadlocked on \<ResourceType> resources with another process and has been chosen as the deadlock victim. Rerun the transaction. | SQL Server Engine|Query Execution|All |
+| <a id=2355421>[2355421](#2355421) </a> | Fixes an intra-query deadlock that you might encounter when running some query plans that involve nested loop joins in batch mode. | SQL Server Engine|Query Execution|All |
 | <a id=2111946>[2111946](#2111946) </a> | Increases the threshold for the number of `OR` clauses that can be converted to Index Union plans.| SQL Server Engine|Query Optimizer|All |
-| <a id=2472432>[2472432](#2472432) </a> | Enables trace flag 9135 (`TRCFLG_QP_DONT_USE_INDEXED_VIEWS`) in retail build to allow the `EXPAND VIEWS` behavior without the per-query hint. | SQL Server Engine| Query Optimizer | All|
+| <a id=2472432>[2472432](#2472432) </a> | Enables trace flag 9135 (`TRCFLG_QP_DONT_USE_INDEXED_VIEWS`) in retail builds to allow the `EXPAND VIEWS` behavior without the per-query hint. | SQL Server Engine| Query Optimizer | All|
 | <a id=2434847>[2434847](#2434847) </a> | Fixes an issue in which a thread deadlock between Query Store (QDS) background tasks blocks the database shutdown.| SQL Server Engine| Query Store | All|
 | <a id=2506723>[2506723](#2506723) </a> | Improves `sp_addpublication_snapshot` by exposing additional parameters (`@distributor_security_mode`, `@distributor_login`, and `@distributor_password`). With these parameters, you can configure the Snapshot Agent to connect to the Distributor using SQL Server Authentication. Before this fix, the Snapshot Agent connects to the Distributor with Windows Authentication, and you can't configure it to connect to the Distributor using SQL Server Authentication.| SQL Server Engine| Replication | All|
 | <a id=2491017>[2491017](#2491017) </a> | Fixes an issue in which running `sp_change_users_login` reports the following error if the database collation is `Chinese_PRC_CI_AS`: </br></br>Msg 9833, Level 16, State 3, Line \<LineNumber> </br>Invalid data for DBCS-encoded characters.| SQL Server Engine| Security Infrastructure | All|
@@ -1017,7 +1017,7 @@ To uninstall this CU on Linux, you must roll back the package to the previous ve
 
 ## References
 
-- [Announcing updates to the SQL Server Incremental Servicing Model (ISM)](https://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism/)
+- [Announcing updates to the SQL Server Incremental Servicing Model (ISM)](/archive/blogs/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism)
 - [SQL Server Service Packs are no longer supported starting from SQL Server 2017](https://support.microsoft.com/topic/fd405dee-cae7-b40f-db14-01e3e4951169)
 - [Determine which version and edition of SQL Server Database Engine is running](../find-my-sql-version.md)
 - [Servicing models for SQL Server](../../general/servicing-models-sql-server.md)

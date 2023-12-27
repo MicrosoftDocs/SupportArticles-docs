@@ -11,8 +11,9 @@ ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure
-ms.date: 10/15/2018
+ms.date: 10/08/2023
 ms.author: genli
+ms.reviewer: v-weizhu
 ---
 
 # Windows reboot loop on an Azure VM
@@ -31,7 +32,7 @@ The reboot loop occurs because of the following causes:
 
 ### Cause 1
 
-There is a third-party service that is flagged as critical and it cannot be started. This causes the operating system to reboot.
+There is a third-party service that is flagged as critical and it cannot be started. This causes the operating system to reboot. To resolve this issue, see [Solution for cause 1](#solution-for-cause-1).
 
 ### Cause 2
 
@@ -41,9 +42,11 @@ Some changes were made to the operating system. Usually, these are related to an
 - CBS.logWindows
 - Update.log
 
+To resolve this issue, see [Solution for cause 2](#solution-for-cause-2).
+
 ### Cause 3
 
-File system corruption could cause this. However, it is difficult to diagnose and identify the change that causes the corruption of the operating system.
+A registry hive corruption could cause this issue. To resolve this issue, see [Solution for cause 3](#solution-for-cause-3).
 
 ## Solution
 

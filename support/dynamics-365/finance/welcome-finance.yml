@@ -9,7 +9,7 @@ metadata:
   ms.topic: landing-page # Required
   author: #Required; your GitHub user alias, with correct capitalization.
   ms.author: #Required; microsoft alias of author; optional team alias.
-  ms.date: 05/04/2023
+  ms.date: 12/07/2023
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -22,20 +22,42 @@ landingContent:
           - text: Invoice automation exception processing
             url: /dynamics365/finance/accounts-payable/vendor-invoice-automation#exception-processing
 # Card
+  - title: Business intelligence, reporting, analytics
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Business performance analytics self-help overview
+            url: business-performance-analytics/business-performance-analytics-self-help-overview.md
+          - text: Missing fiscal calendar for general ledger 
+            url: business-performance-analytics/missing-fiscal-calendar-for-general-ledger-err00001.md
+          - text: Missing fiscal calendar for budget
+            url: business-performance-analytics/missing-fiscal-calendar-for-budget-err00002.md
+          - text: Missing main account in budget
+            url: business-performance-analytics/missing-main-account-in-budget-err00003.md
+          - text: Missing journal entries
+            url: business-performance-analytics/missing-journal-entries-err00004.md
+          - text: Mismatch between debits and credits
+            url: business-performance-analytics/mismatch-between-debits-and-credits-err00005.md
+          - text: Missing budget data
+            url: business-performance-analytics/missing-budget-data-err00006.md
+          - text: Missing budget transaction header
+            url: business-performance-analytics/missing-budget-transaction-header-err00007.md
+            
+# Card
   - title: Budgeting
     linkLists:
       - linkListType: how-to-guide
         links:
           - text: Position budgeting troubleshooting
-            url: /dynamics365/finance/budgeting/position-budgeting-set-up-issues
+            url: budgeting/position-budgeting-set-up-issues.md
  
 # Card
   - title: Cash and bank management
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Resolve issues with transactions that can't be settled
-            url: /dynamics365/finance/cash-bank-management/settlement-overview#resolve-issues-with-transactions-that-cant-be-settled
+          - text: Troubleshoot issues with transactions that can't be settled
+            url: cash-bank-management/settlement-overview-resolve-issues.md
           - text: Troubleshoot cash flow forecasting setup
             url: /dynamics365/finance/cash-bank-management/cash-flow-forecasting-tsg
 
@@ -45,19 +67,19 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Finance insights troubleshooting FAQ
-            url: /dynamics365/finance/finance-insights/finance-insights-troubleshooting-faq
+            url: finance-insights/finance-insights-troubleshooting-faq.md
 
 # Card
-  - title: Financial reporting
+  - title: Financial reporting and management reporter
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Troubleshooting issues opening Report Designer
-            url: /dynamics365/finance/general-ledger/financial-reporting-getting-started#troubleshooting-issues-opening-report-designer
+          - text: Troubleshoot issues opening Report Designer
+            url: financial-reporting/issues-open-report-designer.md
           - text: Troubleshoot report designer issues with Event viewer
-            url: /dynamics365/finance/general-ledger/financial-reporting-getting-started#troubleshoot-report-designer-issues-with-event-viewer
+            url: financial-reporting/troubleshoot-report-designer-with-event-viewer.md
           - text: Troubleshoot issues connecting to Financial reporting
-            url: /dynamics365/finance/general-ledger/financial-reporting-getting-started#troubleshoot-issues-connecting-to-financial-reporting
+            url: financial-reporting/unable-to-connect-financial-reporting-server.md
           - text: Troubleshoot the Office integration
             url: /dynamics365/fin-ops-core/dev-itpro/office-integration/office-integration-troubleshooting?context=/dynamics365/context/finance
 
@@ -66,24 +88,24 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
+          - text: A custom Excel template for financial journals isn't available on the menu
+            url: general-ledger/custom-excel-template-financial-journals-not-available.md
+          - text: Can't reverse a transaction
+            url: general-ledger/cant-reverse-transactions.md
           - text: Change the accounting or reporting currency 
-            url: /dynamics365/finance/general-ledger/add-change-acctg-rprtg-crrncy
+            url: general-ledger/add-change-accounting-reporting-currency.md
           - text: Default financial dimensions on financial journals
             url: /dynamics365/finance/general-ledger/dimension-default-values
-          - text: How do I set up balancing financial dimensions? 
+          - text: How to set up balancing financial dimensions
             url: /dynamics365/finance/general-ledger/set-up-balance-dimensions
           - text: Journal posting failure due to imbalance
-            url: /dynamics365/finance/general-ledger/posting-fail-imbalance
-          - text: Open financial journal templates in Office 
-            url: /dynamics365/finance/general-ledger/open-fincl-jrnls-in-office
-          - text: Reverse settings on journals and lines 
-            url: /dynamics365/finance/general-ledger/rvrs-settgs-on-jrnls-lines
+            url: general-ledger/posting-fail-imbalance.md
           - text: Troubleshoot issues with the General ledger adjustments page
             url: general-ledger/ledger-adjustments-troubleshoot.md
-          - text: Why can't I reverse this transaction?
-            url: /dynamics365/finance/general-ledger/cant-reverse-transctns
+          - text: Vouchers aren't reversed when posting a journal with reversing entry and date 
+            url: general-ledger/vouchers-not-reversed-posting-journal.md
           - text: Year-end close missing opening balances
-            url: /dynamics365/finance/general-ledger/yec-mssng-open-blnces
+            url: general-ledger/year-end-close-miss-opening-balances.md
 
   # Card
   - title: Tax

@@ -1,6 +1,6 @@
 ---
 title: Size Limit Exceeded - Error Code 0x4 during delta import
-description: Learn how to resolve the Size Limit Exceeded - Error Code 0x4 error during the delta import step for an on-premises connector in Azure Active Directory Connect.
+description: Learn how to resolve the Size Limit Exceeded - Error Code 0x4 error during the delta import step for an on-premises connector in Microsoft Entra Connect.
 ms.date: 05/31/2023
 author: DevOpsStyle
 ms.author: tommasosacco
@@ -9,9 +9,9 @@ ms.reviewer: v-leedennis, nualex
 ms.service: active-directory
 ms.subservice: enterprise-users
 ---
-# "Size Limit Exceeded - Error Code 0x4" error message during delta import in Azure AD Connect
+# "Size Limit Exceeded - Error Code 0x4" error message during delta import in Microsoft Entra Connect
 
-This article discusses how to troubleshoot the "Size Limit Exceeded - Error Code 0x4" error message that occurs during the delta import step from an on-premises Active Directory in Microsoft Azure Active Directory (Azure AD) Connect.
+This article discusses how to troubleshoot the "Size Limit Exceeded - Error Code 0x4" error message that occurs during the delta import step from an on-premises Active Directory in Microsoft Entra Connect.
 
 ## Symptoms
 
@@ -48,7 +48,7 @@ The management agent "Contoso.com" failed on run profile "Delta Import" because 
 
 ## Cause
 
-By default, when you make a Lightweight Directory Access Protocol (LDAP) search or query in Azure AD, the directory can return no more than 1,000 records. By security design, this is the default behavior of Active Directory. The 1,000-record limit is intended to prevent a distributed denial-of-service (DDoS) attack on LDAP queries. This issue can occur if you recently restored a large number of objects simultaneously from the Active Directory Recycle Bin. The restore process can cause the delta import query to exceed the record limit.
+By default, when you make a Lightweight Directory Access Protocol (LDAP) search or query in Microsoft Entra ID, the directory can return no more than 1,000 records. By security design, this is the default behavior of Active Directory. The 1,000-record limit is intended to prevent a distributed denial-of-service (DDoS) attack on LDAP queries. This issue can occur if you recently restored a large number of objects simultaneously from the Active Directory Recycle Bin. The restore process can cause the delta import query to exceed the record limit.
 
 ## Solution 1: Run a full import on the AD DS connector
 
@@ -62,13 +62,13 @@ The easiest resolution to this issue is to manually run a full import (instead o
 
 4. In the **Run Connector** dialog box, select the **Full Import** run profile, and then select **OK**.
 
-After the full import finishes, open a PowerShell console, and run the `Start-ADSyncSyncCycle` cmdlet to start a normal delta synchronization cycle. This process is described in [Azure AD Connect sync: Scheduler][Start-ADSyncSyncCycle].
+After the full import finishes, open a PowerShell console, and run the `Start-ADSyncSyncCycle` cmdlet to start a normal delta synchronization cycle. This process is described in [Microsoft Entra Connect Sync: Scheduler][Start-ADSyncSyncCycle].
 
 ## Solution 2: Temporarily increase the record limit
 
 If you don't want to run a full import on the AD DS connector, you can temporarily change your configuration so that an LDAP search can return a larger number of records during delta synchronization.
 
-To increase the 1,000-record limit, increase the maximum page size (`MaxPageSize`) setting to accommodate the number of objects that the delta import step returns. For example, if you restored an Organization Unit (OU) that has 5,000 users, we recommend that you temporarily increase `MaxPageSize` to a value of 5,000. Then, after the Azure AD Connect issue is resolved, restore `MaxPageSize` to the default value of 1,000.
+To increase the 1,000-record limit, increase the maximum page size (`MaxPageSize`) setting to accommodate the number of objects that the delta import step returns. For example, if you restored an Organization Unit (OU) that has 5,000 users, we recommend that you temporarily increase `MaxPageSize` to a value of 5,000. Then, after the Microsoft Entra Connect issue is resolved, restore `MaxPageSize` to the default value of 1,000.
 
 To change the `MaxPageSize` setting, run the [Ntdsutil](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc753343(v=ws.11)) command, as shown in the following procedure. For more information about `MaxPageSize`, see [LDAP administration limits](../../windows-server/identity/view-set-ldap-policy-using-ntdsutil.md#ldap-administration-limits).
 
@@ -87,7 +87,7 @@ To change the `MaxPageSize` setting, run the [Ntdsutil](/previous-versions/windo
 
 6. To exit the Ntdsutil session, enter `quit` two times.
 
-After you make the configuration change, open a PowerShell console, and then run the `Start-ADSyncSyncCycle` cmdlet to start a normal delta synchronization cycle. This process is described in [Azure AD Connect sync: Scheduler][Start-ADSyncSyncCycle]. Now, Active Directory returns a larger number of records, and it should be able to provide the full delta response to Azure AD Connect.
+After you make the configuration change, open a PowerShell console, and then run the `Start-ADSyncSyncCycle` cmdlet to start a normal delta synchronization cycle. This process is described in [Microsoft Entra Connect Sync: Scheduler][Start-ADSyncSyncCycle]. Now, Active Directory returns a larger number of records, and it should be able to provide the full delta response to Microsoft Entra Connect.
 
 After the delta synchronization finishes successfully, repeat the procedure to restore the `MaxPageSize` setting to its original value (1,000).
 

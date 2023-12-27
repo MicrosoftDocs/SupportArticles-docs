@@ -15,6 +15,8 @@ items:
   href: behavior-compressed-backups.md
 - name: Error 3156 when you restore a database
   href: error-3156-restore-database.md
+- name: Error 3456 when backing up a database using a VDI app with multi-striping
+  href: backup-multistriped-vdi-issue.md
 - name: Error after you perform TDE certificate or key rotation
   href: error-after-perform-tde-certificate-key-rotation.md
 - name: Error when backing up in-memory database

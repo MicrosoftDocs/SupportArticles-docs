@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 3193683
 
 ## Symptoms
 
-You have enabled Enterprise State Roaming (ESR) in the Azure Active Directory portal and on some Windows 10 clients. Any supported settings for sync, such as the desktop background or task bar position, don't sync between devices for the same user. The following events 1098 and 1097 are logged in the Microsoft-Windows-AAD/Operational event log:
+You have enabled Enterprise State Roaming (ESR) in the Microsoft Entra admin center and on some Windows 10 clients. Any supported settings for sync, such as the desktop background or task bar position, don't sync between devices for the same user. The following events 1098 and 1097 are logged in the Microsoft-Windows-AAD/Operational event log:
 
 ```console
 Log Name:      Microsoft-Windows-AAD/Operational
@@ -48,9 +48,9 @@ Multi-factor authentication (MFA) is enabled, and that's why Enterprise State Ro
 
 ## Resolution
 
-If your device is configured to require multi-factor authentication on the Azure Active Directory portal, you may fail to sync settings while you sign in to a Windows 10 device using a password. This type of multi-factor authentication configuration is intended to protect an Azure administrator account. Admin users may still be able to sync by signing in to their Windows 10 devices with their Microsoft Passport for Work PIN or by completing multi-factor authentication while accessing other Azure services, such as Microsoft Office 365.
+If your device is configured to require multi-factor authentication on the Microsoft Entra admin center, you may fail to sync settings while you sign in to a Windows 10 device using a password. This type of multi-factor authentication configuration is intended to protect an Azure administrator account. Admin users may still be able to sync by signing in to their Windows 10 devices with their Microsoft Passport for Work PIN or by completing multi-factor authentication while accessing other Azure services, such as Microsoft Office 365.
 
-Sync can fail if the Azure AD Administrator configures the Active Directory Federation Services multi-factor authentication conditional access policy, and the access token on the device expires. Make sure that you sign in and sign out using the Microsoft Passport for Work PIN, or complete multi-factor authentication when accessing other Azure services like Office 365.
+Sync can fail if the Microsoft Entra Administrator configures the Active Directory Federation Services multi-factor authentication conditional access policy, and the access token on the device expires. Make sure that you sign in and sign out using the Microsoft Passport for Work PIN, or complete multi-factor authentication when accessing other Azure services like Office 365.
 
 ## More Information
 

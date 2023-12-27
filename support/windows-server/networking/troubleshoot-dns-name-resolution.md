@@ -76,7 +76,7 @@ To update root hints on a Windows Server DNS server that is configured as a doma
 >
 > `k.root-servers.net. 193.0.14.129`
 >
-> `l.root-servers.net. 198.32.64.12`
+> `l.root-servers.net. 199.7.83.42`
 >
 > `m.root-servers.net. 202.12.27.33`
 

@@ -7,7 +7,7 @@ ms.reviewer: mcimfl, troymoen, sureshka, ramakoni, Daleche
 ---
 # Application event log error code 1642 even though the SQL Server update was applied successfully
 
-This article provides more information about the 1642 error message that is reported in the application event log though the SQL Server update is applied successfully.
+This article provides more information about the 1642 error message that's reported in the application event log though the SQL Server update is applied successfully.
 
 _Original product version:_ &nbsp; SQL Server 2016, SQL Server 2014, SQL Server 2012 Developer, SQL Server 2012  
 _Original KB number:_ &nbsp; 4230836
@@ -58,7 +58,7 @@ Event Xml:
 
 ## Cause
 
-This issue occurs in several scenarios in which an MSI installer package failure is logged in the Application event log because the setup call to the `MsiGetPatchFileList` API does not get a list of files from the MSP (Windows Installer patch file).
+This issue occurs in several scenarios in which an MSI installer package failure is logged in the Application event log because the setup call to the `MsiGetPatchFileList` API doesn't get a list of files from the MSP (Windows Installer patch file).
 
 ## Resolution
 
@@ -66,6 +66,6 @@ You can safely ignore this message in the Application event log when the followi
 
 - Setup of the SQL Server cumulative update completed successfully.
 
-- No error messages are recorded in the Summary.txt file.
+- No error messages are recorded in the *Summary.txt* file.
 
 For more information, see [View and Read SQL Server Setup Log Files](/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).

@@ -8,7 +8,9 @@ ms.subservice: enterprise-users
 ---
 # Permission-issue error 8344, "Insufficient access rights to perform the operation."
 
-This article discusses how to understand and troubleshoot the "permission-issue [8344]" error, "Insufficient access rights to perform the operation." This Microsoft Azure Active Directory (Azure AD) error occurs on an on-premises Active Directory connector during an export operation in Synchronization Service Manager.
+This article discusses how to understand and troubleshoot the "permission-issue [8344]" error, "Insufficient access rights to perform the operation." This Microsoft Entra error occurs on an on-premises Active Directory connector during an export operation in Synchronization Service Manager.
+
+[!INCLUDE [Feedback](../../includes/feedback.md)]
 
 ## Symptoms
 
@@ -28,25 +30,27 @@ If you select one of the **permission-issue** export errors, the **Connector Spa
 
 ## Cause
 
-The on-premises Active Directory connector account (`MSOL_<hex-digits>`) doesn't have permissions in Active Directory to write back the object's properties that are being synchronized with Azure AD.
+The on-premises Active Directory connector account (`MSOL_<hex-digits>`) doesn't have permissions in Active Directory to write back the object's properties that are being synchronized with Microsoft Entra ID.
 
-## Solution 1: Grant permissions by using the AADConnect Troubleshooting console
+<a name='solution-1-grant-permissions-by-using-the-aadconnect-troubleshooting-console'></a>
+
+## Solution 1: Grant permissions by using the Microsoft Entra Connect Troubleshooting console
 
 > [!NOTE]  
 > This solution is the recommended and preferred method.
 
-In the on-premises Active Directory connector account (`MSOL_<hex-digits>`), locate the attributes that this account doesn't have permissions for. Then, use the Azure AD Connect wizard to grant the permissions in the AADConnect Troubleshooting console, as described in the following sections.
+In the on-premises Active Directory connector account (`MSOL_<hex-digits>`), locate the attributes that this account doesn't have permissions for. Then, use the Microsoft Entra Connect wizard to grant the permissions in the Microsoft Entra Connect Troubleshooting console, as described in the following sections.
 
 ### Part 1: Determine which on-premises Active Directory connector account is in use
 
 To find the on-premises AD connector account, use one of the following tools.
 
 <details>
-<summary>The Azure AD Connect wizard</summary>
+<summary>The Microsoft Entra Connect wizard</summary>
 
-1. On the Windows desktop, double-click the **Azure AD Connect** icon to open the Azure AD Connect wizard.
+1. On the Windows desktop, double-click the **Microsoft Entra Connect** icon to open the Microsoft Entra Connect wizard.
 
-1. In the **Microsoft Azure Active Directory Connect** dialog box, select the **Configure** button.
+1. In the **Microsoft Entra Connect** dialog box, select the **Configure** button.
 
 1. In the **Additional tasks** screen, select the **View or export current configuration** task, and then select the **Next** button.
 
@@ -103,11 +107,11 @@ The output is a table that displays the `Name`, `Forest`, `Domain`, and `Usernam
 
    :::image type="content" source="./media/troubleshoot-permission-issue-sync-service-manager/pending-export-attribute-information.png" alt-text="Screenshot of the Attribute information table, Pending Export tab, Connector Space Object Properties dialog box, Synchronization Service Manager app." lightbox="./media/troubleshoot-permission-issue-sync-service-manager/pending-export-attribute-information.png":::
 
-1. Identify the Azure AD Connect feature that you're using by following one of these methods:
+1. Identify the Microsoft Entra Connect feature that you're using by following one of these methods:
 
    - Review the list of [Exchange hybrid writeback](/azure/active-directory/hybrid/connect/reference-connect-sync-attributes-synchronized#exchange-hybrid-writeback) attributes to synchronize, and then return to the **Attribute information** table UI to find the Exchange hybrid writeback attribute that ADSync was trying to add or modify. For example, the added or modified attribute might be the [msDS-ExternalDirectoryObjectID](/openspecs/windows_protocols/ms-ada2/0abc1d06-ac09-476f-a60b-5deb05b394f7) attribute.
 
-   - Check the Azure AD Connect features by running the `Get-ADSyncGlobalSettings` cmdlet from a PowerShell session, as shown in the following code:
+   - Check the Microsoft Entra Connect features by running the `Get-ADSyncGlobalSettings` cmdlet from a PowerShell session, as shown in the following code:
 
      ```azurepowershell
      (Get-ADSyncGlobalSettings).Parameters | select Name, Value | sort Name
@@ -116,12 +120,12 @@ The output is a table that displays the `Name`, `Forest`, `Domain`, and `Usernam
 ### Part 3: Grant the missing permissions
 
 > [!IMPORTANT]  
-> The account that's used to run the Azure AD Connect tool must be allowed to grant permissions on all domains to Active Directory. Usually, only the Enterprise Administrator has Domain Administrator rights on all domains in the Active Directory forest.
+> The account that's used to run the Microsoft Entra Connect tool must be allowed to grant permissions on all domains to Active Directory. Usually, only the Enterprise Administrator has Domain Administrator rights on all domains in the Active Directory forest.
 
-1. On the Windows Desktop, double-click the **Azure AD Connect** icon.
-1. In the **Microsoft Azure Active Directory Connect** dialog box, select the **Configure** button.
+1. On the Windows Desktop, double-click the **Microsoft Entra Connect** icon.
+1. In the **Microsoft Entra Connect** dialog box, select the **Configure** button.
 1. In the **Additional tasks** pane, select the **Troubleshoot** task, and then select the **Next** button.
-1. On the **Welcome to AADConnect Troubleshooting** page, select the **Launch** button to start the troubleshooting menu in a console.
+1. On the **Welcome to Microsoft Entra Connect Troubleshooting** page, select the **Launch** button to start the troubleshooting menu in a console.
 1. In the `AADConnect Troubleshooting` menu in the console, enter *4* to configure the Active Directory Domain Services (AD DS) connector account permissions.
 
    ```console
@@ -194,7 +198,7 @@ The output is a table that displays the `Name`, `Forest`, `Domain`, and `Usernam
    object. Giving no input will set root permissions for all Domains in the Forest: _
    ```
 
-1. In the `Update AdminSdHolders` screen, when you're prompted whether to "Update [AdminSDHolder](/windows-server/identity/ad-ds/plan/security-best-practices/appendix-c--protected-accounts-and-groups-in-active-directory#adminsdholder) container when updating with these permissions?," enter *Y* for `Yes` only if you're synchronizing [Protected Accounts in Active Directory](/windows-server/identity/ad-ds/plan/security-best-practices/appendix-c--protected-accounts-and-groups-in-active-directory) to Azure AD. Otherwise, enter *N* for `No` (the default response).
+1. In the `Update AdminSdHolders` screen, when you're prompted whether to "Update [AdminSDHolder](/windows-server/identity/ad-ds/plan/security-best-practices/appendix-c--protected-accounts-and-groups-in-active-directory#adminsdholder) container when updating with these permissions?," enter *Y* for `Yes` only if you're synchronizing [Protected Accounts in Active Directory](/windows-server/identity/ad-ds/plan/security-best-practices/appendix-c--protected-accounts-and-groups-in-active-directory) to Microsoft Entra ID. Otherwise, enter *N* for `No` (the default response).
 
    ```console
    Update AdminSdHolders
@@ -203,7 +207,7 @@ The output is a table that displays the `Name`, `Forest`, `Domain`, and `Usernam
    ```
 
    > [!NOTE]  
-   > We recommend that you don't synchronize your on-premises AD administrator accounts to Azure AD. For more information, see the [Administrator password setting](/azure/active-directory/authentication/howto-sspr-deployment#administrator-password-setting) section of [Plan an Azure AD self-service password reset deployment](/azure/active-directory/authentication/howto-sspr-deployment).
+   > We recommend that you don't synchronize your on-premises AD administrator accounts to Microsoft Entra ID. For more information, see the [Administrator password setting](/azure/active-directory/authentication/howto-sspr-deployment#administrator-password-setting) section of [Plan a Microsoft Entra self-service password reset deployment](/azure/active-directory/authentication/howto-sspr-deployment).
 
 1. In the `Confirm` screen, enter *Y* for `Yes` to confirm your choice (the default response):
 
@@ -219,7 +223,7 @@ The output is a table that displays the `Name`, `Forest`, `Domain`, and `Usernam
 > [!NOTE]  
 > This solution is also a recommended method.
 
-For information about this solution, see the ["Using the ADSyncConfig PowerShell module"](/azure/active-directory/hybrid/connect/how-to-connect-configure-ad-ds-connector-account#using-the-adsyncconfig-powershell-module) section of [Azure AD Connect: Configure AD DS connector account permissions](/azure/active-directory/hybrid/connect/how-to-connect-configure-ad-ds-connector-account).
+For information about this solution, see the ["Using the ADSyncConfig PowerShell module"](/azure/active-directory/hybrid/connect/how-to-connect-configure-ad-ds-connector-account#using-the-adsyncconfig-powershell-module) section of [Microsoft Entra Connect: Configure AD DS connector account permissions](/azure/active-directory/hybrid/connect/how-to-connect-configure-ad-ds-connector-account).
 
 ## Solution 3: Grant permissions by using the Active Directory Users and Computers snap-in
 
@@ -240,7 +244,7 @@ For information about this solution, see the ["Using the ADSyncConfig PowerShell
 
    | Setting | Action |
    |--|--|
-   | **Principal** name | Select the **Select a principal** link. Enter the name of the account to apply the permissions to (the account that Azure AD Connect uses), and then select **OK**. |
+   | **Principal** name | Select the **Select a principal** link. Enter the name of the account to apply the permissions to (the account that Microsoft Entra Connect uses), and then select **OK**. |
    | **Type** list | Select **Allow**. |
    | **Applies to** list | Select **Descendant User objects** to show the list of permissions that are allowed for the selected principal. |
    | **Properties** options | Select the check box for each permission property option that you want. Scroll through the list of properties to find the attributes that you need. Property option names can include **Read all properties**, **Write all properties**, **Read msDS-OperationsForAzTaskBL**, **Read msDS-parentdistname**, and so on. |
@@ -260,7 +264,7 @@ To grant permissions to read and write all properties for all objects at the roo
 dsacls.exe "DC=Contoso,DC=com" /G "CONTOSO\ADConnectAccount:RPWP;;" /I:S
 ```
 
-In this command, `DC=Contoso,DC=com` is the distinguished name of your domain, and `CONTOSO\ADConnectAccount` is the domain account that Azure AD Connect uses.
+In this command, `DC=Contoso,DC=com` is the distinguished name of your domain, and `CONTOSO\ADConnectAccount` is the domain account that Microsoft Entra Connect uses.
 
 ## Known issues
 

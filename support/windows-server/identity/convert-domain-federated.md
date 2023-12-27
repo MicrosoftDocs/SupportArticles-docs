@@ -57,4 +57,4 @@ Do one of the following, as appropriate for your situation:
 
 ## More information
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums/home?forum=windowsazuread) website.
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or [Microsoft Entra Forums](https://social.msdn.microsoft.com/Forums/home?forum=windowsazuread) website.

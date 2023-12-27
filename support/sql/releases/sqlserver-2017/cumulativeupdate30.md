@@ -51,7 +51,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 ## How to obtain or download this or the latest cumulative update package
 
 <details>
-<summary><b>How to obtain or download the latest cumulative update package for Windows (recommended)</b></summary>
+<summary><b>How to obtain or download the latest cumulative update package for Windows (recommended)</b></summary>
 
 The following update is available from the Microsoft Download Center:
 
@@ -62,7 +62,7 @@ If the download page doesn't appear, contact [Microsoft Customer Service and Sup
 </details>
 
 <details>
-<summary><b>How to obtain or download this cumulative update package for Windows from Microsoft Update Catalog </b></summary>
+<summary><b>How to obtain or download this cumulative update package for Windows from Microsoft Update Catalog </b></summary>
 
 > [!NOTE]
 >
@@ -88,7 +88,7 @@ For installation instructions and direct links to the CU package downloads, see 
 <details>
 <summary><b>File hash information</b></summary>
 
-You can verify the download by computing the hash of the *SQLServer2017-KB5013756-x64.exe* file through the following command:
+You can verify the download by computing the hash of the *SQLServer2017-KB5013756-x64.exe* file through the following command:
 
 `certutil -hashfile SQLServer2017-KB5013756-x64.exe SHA256`
 
@@ -1078,7 +1078,7 @@ The third-party products that are discussed in this article are manufactured by 
 
 ## References
 
-- [Announcing updates to the SQL Server Incremental Servicing Model (ISM)](https://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism/)
+- [Announcing updates to the SQL Server Incremental Servicing Model (ISM)](/archive/blogs/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism)
 - [SQL Server Service Packs are no longer supported starting from SQL Server 2017](https://support.microsoft.com/topic/fd405dee-cae7-b40f-db14-01e3e4951169)
 - [Determine which version and edition of SQL Server Database Engine is running](../find-my-sql-version.md)
 - [Servicing models for SQL Server](../../general/servicing-models-sql-server.md)

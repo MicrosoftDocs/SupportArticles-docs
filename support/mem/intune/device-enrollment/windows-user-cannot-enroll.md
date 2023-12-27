@@ -12,7 +12,7 @@ This article gives troubleshooting steps to help resolve an issue where a user i
 
 ## Symptom
 
-When a user tries to enroll a Windows device, they see one of the following error messages:
+When a user tries to enroll a Windows device, they encounter one of the following error messages:
 
 > Error 0x801c003: "This user is not authorized to enroll. You can try to do this again or contact your system administrator with the error code (0x801c0003)."
 
@@ -22,10 +22,10 @@ When a user tries to enroll a Windows device, they see one of the following erro
 
 These errors can result from any of the following conditions:
 
-- The user has already enrolled the maximum number of devices allowed in Intune. (See [Solution 1](#solution-1) and [Solution 2](#solution-2).)
-- The device is blocked by the device type restrictions. (See [Solution 3](#solution-3).)
-- The computer is running Windows 10 Home. However, enrolling in Intune or joining Azure Active Directory (Azure AD) is only supported on Windows 10 Pro and higher editions. (See [Solution 4](#solution-4).)
-- The Azure AD setting **Users may join devices to Azure AD** is set to **None**, which prevents new users from joining their devices to Azure AD. Therefore Intune enrollment fails. (See [Solution 5](#solution-5).)
+- The user has already enrolled the maximum number of devices allowed in Intune. (Read [Solution 1](#solution-1) and [Solution 2](#solution-2).)
+- The device is blocked by the device type restrictions. (Read [Solution 3](#solution-3).)
+- The computer is running Windows 10 Home. However, enrolling in Intune or joining Microsoft Entra ID is only supported on Windows 10 Pro and higher editions. (Read [Solution 4](#solution-4).)
+- The Microsoft Entra setting **Users may join devices to Microsoft Entra ID** is set to **None**, which prevents new users from joining their devices to Microsoft Entra ID. Therefore Intune enrollment fails. (Read [Solution 5](#solution-5).)
 
 Try the following solutions, depending on your scenario.
 
@@ -66,9 +66,9 @@ Check if device enrollment is blocked by device type restrictions.
 
 ## Solution 5
 
-Check or update your Azure AD settings to allow users to join devices.
+Check or update your Microsoft Entra settings to allow users to join devices.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/) as an administrator.
-1. Go to **Azure Active Directory** > **Devices** > **Device Settings**.
-1. Set **Users may join devices to Azure AD** to **All**.
+1. Go to **Microsoft Entra ID** > **Devices** > **Device Settings**.
+1. Set **Users may join devices to Microsoft Entra ID** to **All**.
 1. Enroll the device again.

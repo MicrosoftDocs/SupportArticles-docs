@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 3196528
 
 ## Symptoms
 
-After you log on to a Windows 10-based computer, you try to access Microsoft Store for Business. However, Azure Active Directory authentication fails, and some events are logged in the Microsoft-Windows-AAD/Operational log.
+After you log on to a Windows 10-based computer, you try to access Microsoft Store for Business. However, Microsoft Entra authentication fails, and some events are logged in the Microsoft-Windows-AAD/Operational log.
 
 In addition to Microsoft Store for Business, this issue may affect Enterprise State Roaming.
 

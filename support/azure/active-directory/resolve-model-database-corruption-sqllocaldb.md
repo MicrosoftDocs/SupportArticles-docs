@@ -7,11 +7,11 @@ editor: v-jsitser
 ms.service: active-directory
 ms.subservice: enterprise-users
 keywords:
-#Customer intent: As an Azure Active Directory user, I want to resolve Model database corruption in SQLLocalDB so that I can start and run the ADSync service.
+#Customer intent: As a Microsoft Entra user, I want to resolve Model database corruption in SQLLocalDB so that I can start and run the ADSync service.
 ---
 # Resolve Model database corruption in SQLLocalDB
 
-This article describes a known issue in the [SQLLocalDB utility](/sql/tools/sqllocaldb-utility) that can prevent the ADSync service from starting because of a corrupted `Model` database. This issue mainly affects Azure Active Directory (Azure AD) Connect&nbsp;2._x_ servers that run on a Microsoft SQL Server 2019 LocalDB.
+This article describes a known issue in the [SQLLocalDB utility](/sql/tools/sqllocaldb-utility) that can prevent the ADSync service from starting because of a corrupted `Model` database. This issue mainly affects Microsoft Entra Connect&nbsp;2._x_ servers that run on a Microsoft SQL Server 2019 LocalDB.
 
 The issue is caused by a bug in the SQL Server backup logic that creates an inconsistent state in the SQL Server `Model` database start page. After a backup occurs, the `Model` database is set to `FULL` recovery mode (`dbi_status` == 0x40010000), and the `dbi_dbbackupLSN` (the log sequence number (LSN) for the database backup) is set to a value that points to a log file. However, the actual recovery mode that is governed by the `Master` database is `SIMPLE`.
 
@@ -19,7 +19,7 @@ In `SIMPLE` recovery mode, database logs are truncated automatically. In `FULL` 
 
 Review the guidance in the next sections to learn how to do the following tasks:
 
-- Correctly identify whether the Azure AD Connect service (ADSync) doesn't start because of `Model` database corruption.
+- Correctly identify whether the Microsoft Entra Connect service (ADSync) doesn't start because of `Model` database corruption.
 
 - Mitigate the issue by recovering the `Model` database from a corrupted state.
 
@@ -27,7 +27,7 @@ Review the guidance in the next sections to learn how to do the following tasks:
 
 ## Symptoms
 
-You can verify that the issue is based on the following events in the Azure AD Connect server:
+You can verify that the issue is based on the following events in the Microsoft Entra Connect server:
 
 - Event Viewer: Application, EventID 528, Source: SQLLocalDB 15.0
 
@@ -64,9 +64,9 @@ You can verify that the issue is based on the following events in the Azure AD C
 > [!IMPORTANT]
 > Only apply the mitigation steps that are described here if all of these conditions occur:
 >
-> - The version of Azure AD Connect is 2.0.*x.x*.
+> - The version of Microsoft Entra Connect is 2.0.*x.x*.
 >
-> - Azure AD Connect is installed with SQL LocalDB.
+> - Microsoft Entra Connect is installed with SQL LocalDB.
 >
 > - *All* of the conditions that are listed in [Symptoms](#symptoms) are present.
 
@@ -99,8 +99,8 @@ To recover the `Model` database from a corrupted state, follow these steps:
 
 ## Solution
 
-Microsoft has introduced a fix for this issue in Azure AD Connect version 2.1.1.0. If the sync service (ADSync) can't be started, you need to apply the steps in the [Mitigation](#mitigation) section before you can upgrade Azure AD Connect.
+Microsoft has introduced a fix for this issue in Microsoft Entra Connect version 2.1.1.0. If the sync service (ADSync) can't be started, you need to apply the steps in the [Mitigation](#mitigation) section before you can upgrade Microsoft Entra Connect.
 
-To prevent the corruption issues in the SQLLocalDB `Model` database, install the latest Azure AD Connect build, which is available at [Azure AD Connect: Version release history](/azure/active-directory/hybrid/reference-connect-version-history).
+To prevent the corruption issues in the SQLLocalDB `Model` database, install the latest Microsoft Entra Connect build, which is available at [Microsoft Entra Connect: Version release history](/azure/active-directory/hybrid/reference-connect-version-history).
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

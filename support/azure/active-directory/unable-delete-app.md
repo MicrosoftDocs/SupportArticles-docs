@@ -13,7 +13,7 @@ content_well_notification:
 ---
 # Unable to delete an application due to disabled Delete button
 
-When deleting an app in Azure Active Directory, the Delete button may be disabled in certain scenarios. These scenarios include:
+When deleting an app in Microsoft Entra ID, the Delete button may be disabled in certain scenarios. These scenarios include:
 
 - For applications under Enterprise application, the Delete button will be disabled if you don't have one of the following roles: Global Administrator, Cloud Application Administrator, Application Administrator, or owner of the service principal.
 

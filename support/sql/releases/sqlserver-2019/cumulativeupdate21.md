@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 21 for SQL Server 2019 (KB5025808)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 21 (KB5025808).
-ms.date: 09/05/2023
+ms.date: 09/19/2023
 ms.custom: KB5025808
 ms.reviewer: v-qianli2
 appliesto:
@@ -16,7 +16,7 @@ _Version:_ &nbsp; 15.0.4316.3
 
 ## Summary
 
-This article describes Cumulative Update package 21 (CU21) for Microsoft SQL Server 2019. This update contains 28 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2019 Cumulative Update 20, and it updates components in the following builds:
+This article describes Cumulative Update package 21 (CU21) for Microsoft SQL Server 2019. This update contains 29 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2019 Cumulative Update 20, and it updates components in the following builds:
 
 - SQL Server - Product version: **15.0.4316.3**, file version: **2019.150.4316.3**
 - Analysis Services - Product version: **15.0.35.39**, file version: **2018.150.35.39**
@@ -80,7 +80,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id="2405054">[2405054](#2405054)</a> | Updates the version of the Microsoft ODBC driver to 17.10.4.1. For more information, see [Release Notes for Microsoft ODBC Driver for SQL Server on Windows](/sql/connect/odbc/windows/release-notes-odbc-sql-server-windows). | SQL Connectivity | SQL Connectivity | Windows |
 | <a id="2405058">[2405058](#2405058)</a> | Updates the version of the Microsoft OLE DB driver to 18.6.6. For more information, see [Release notes for the Microsoft OLE DB Driver for SQL Server](/sql/connect/oledb/release-notes-for-oledb-driver-for-sql-server). | SQL Connectivity | SQL Connectivity | Windows |
 | <a id="2405087">[2405087](#2405087)</a> | Fixes an issue where applying the option `ONLINE` in the `ALTER INDEX REBUILD` statement is invalid when running the index rebuild task created in an index maintenance plan. | SQL Server Client Tools | Management Services | All |
-| <a id="2399354">[2399354](#2399354)</a> | Consider the following scenario: </br></br>- You have an instance of SQL Server that connects to Azure Active Directory (Azure AD). </br></br>- You enable Transport Layer Security (TLS) encryption on this instance of SQL Server. </br></br>In this scenario, you may receive the following error 39011 if you run the `sp_execute_external_script` query against the instance: </br></br>Msg 39011, Level 16, State 7, Line \<LineNumber> </br>SQL Server was unable to communicate with the LaunchPad service for request id: \<ID>. Please verify the configuration of the service. | SQL Server Engine | Extensibility | Linux |
+| <a id="2399354">[2399354](#2399354)</a> | Consider the following scenario: </br></br>- You have an instance of SQL Server that connects to Microsoft Entra ID. </br></br>- You enable Transport Layer Security (TLS) encryption on this instance of SQL Server. </br></br>In this scenario, you may receive the following error 39011 if you run the `sp_execute_external_script` query against the instance: </br></br>Msg 39011, Level 16, State 7, Line \<LineNumber> </br>SQL Server was unable to communicate with the LaunchPad service for request id: \<ID>. Please verify the configuration of the service. | SQL Server Engine | Extensibility | Linux |
 | <a id="2375469">[2375469](#2375469)</a> | Fixes an issue where the following error occurs when you disable the FILESTREAM feature on a SQL Server failover cluster instance (FCI) by using SQL Server Configuration Manager (SSCM): </br></br>There was an unknown error applying FILESTREAM settings. </br>Check the parameters are valid. (0x800713d6) | SQL Server Engine | FileStream and FileTable | Windows |
 | <a id="2195940">[2195940](#2195940)</a> | Fixes an issue where messages in the `sys.transmission_queue` of the initiator database in a SQL Server Service Broker conversation are missing or stuck after a failover of the target database.| SQL Server Engine | High Availability and Disaster Recovery | All |
 | <a id="2101590">[2101590](#2101590)</a> | Fixes an issue where restoring an In-Memory OLTP database backup that has Transparent data encryption (TDE) enabled fails and returns the following error message: </br></br>Error: 33126, Severity: 16, State: 1. </br>Database encryption key is corrupted and cannot be read. </br></br>**Note**: To apply this fix, you need to enable a trace flag (TF) to relax TDE checks for In-Memory tables and disable the TF after the restoration is completed. For more information, contact [Microsoft Customer Service and Support](https://support.microsoft.com/contactus/?ws=support). | SQL Server Engine | In-Memory OLTP | Windows |
@@ -95,12 +95,13 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id="2313620">[2313620](#2313620)</a> | Fixes the following errors and access violations that are caused by an incorrect plan in the case of multiple occurrences of the same scalar subquery: </br></br>Msg 596, Level 21, State 1, Line \<LineNumber> </br>Cannot continue the execution because the session is in the kill state. </br></br>Msg 0, Level 20, State 0, Line \<LineNumber> </br>A severe error occurred on the current command.&nbsp;&nbsp;The results, if any, should be discarded. | SQL Server Engine | Query Optimizer | All |
 | <a id="2363303">[2363303](#2363303)</a> | Improves the cardinality estimation (CE) for "`AND`" conjunctions that are composed of point predicates when the predicates have a multi-column statistic covering them, and the predicate values are outside the histogram bounds. | SQL Server Engine | Query Optimizer | All |
 | <a id="2391556">[2391556](#2391556)</a> | Fixes inconsistent results that are caused by the parallel spool in the plan for the `INSERT`, `UPDATE`, or `DELETE` query. | SQL Server Engine | Query Optimizer | All |
-| <a id="2266806">[2266806](#2266806)</a> | Adds a new error 673 that helps avoid the assertion failure (Location: IndexRowScanner.cpp:1449; Expression: m_versionStatus.IsVisible ()) that you may encounter when you enable change tracking on a database. </br></br>Error message: </br></br>Failure to access row object in snapshot isolation. | SQL Server Engine | Replication | All |
+| <a id="2266806">[2266806](#2266806)</a> | Adds a new error 673 that helps avoid the assertion failure (Location: IndexRowScanner.cpp:1449; Expression: m_versionStatus.IsVisible ()) that you might encounter when you enable change tracking on a database that has snapshot isolation turned on. </br></br>Error message: </br></br>Failure to access row object in snapshot isolation. </br></br>**Note**: You need to turn on trace flag 8285. | SQL Server Engine | Replication | All |
 | <a id="2320889">[2320889](#2320889)</a> | Fixes an issue where applying an update on a secondary replica or performing an in-place upgrade fails when the distribution database is in an availability group. The following error is returned: </br></br>Error: There was an error executing the Replication upgrade scripts. See the SQL Server error log for details. </br></br>You can see the following error details in the SQL Server error log: </br></br>Executing sp_vupgrade_replication. </br>Could not open distribution database distribution because it is offline or being recovered. Replication settings and system objects could not be upgraded. Be sure this database is available and run sp_vupgrade_replication again. | SQL Server Engine | Replication | Windows |
 | <a id="2421435">[2421435](#2421435)</a>| Fixes a manual cleanup issue where the repeated lock escalations on the tables cause contention and slowness in cleaning up the expired change tracking metadata. </br></br>**Note**: You need to turn on trace flag 8284. | SQL Server Engine | Replication | All |
 | <a id="2397659">[2397659](#2397659)</a> | [FIX: SQL Server Audit Events fail to write to the Security log (KB4052136)](https://support.microsoft.com/help/4052136) | SQL Server Engine | Security Infrastructure | Windows |
 | <a id="2409008">[2409008](#2409008)</a> | Fixes error 207 (Invalid column name '\<ColumnName>') that you encounter when you run a user-defined function (UDF), which references a dropped column that uses dynamic data masking (DDM). | SQL Server Engine | Security Infrastructure | All |
-| <a id="2330957">[2330957](#2330957)</a> | Fixes the following error that you encounter on the target instance when configuring a Service Broker communication with transport security: </br></br>The certificate serial number size is 19, however it must be no greater than 16 bytes in length. This occurred in the message with Conversation ID , Initiator: 1, and Message sequence number: 0. | SQL Server Engine | SQL Server Engine | All |
+| <a id="2410400">[2410400](#2410400)</a> | `SOS_BLOCKALLOCPARTIALLIST` spinlock contention and elevated CPU utilization occur on large-memory machines. </br></br>`DBCC DROPCLEANBUFFERS` provides temporary mitigation for this issue when encountered. </br></br>This occurs when multiple threads concurrently attempt to gain access to a spinlock-protected list used by the SQL operating system for memory management purposes. </br></br>The following trace flags are required to enable the fix: </br></br>- TF 8142 partitions list by count of CPU, up to 64 partitions </br></br>- TF 8145 modifies the partitioning to be count of soft-NUMA nodes </br></br>These trace flags must be applied as startup parameters to take effect. </br></br>If `SOS_BLOCKALLOCPARTIALLIST` spinlock contention is encountered and `DBCC DROPCLEANBUFFERS` provides temporary mitigation, it's recommended to apply this fix first with both trace flags, and remove Trace Flag 8145 only if symptoms persist. | SQL Server Engine | SQL OS | All |
+| <a id="2330957">[2330957](#2330957)</a> | Fixes the following error that you encounter on the target instance when configuring a Service Broker communication with transport security and the certificate serial number length is greater than 16 bytes: </br></br>The certificate serial number size is 19, however it must be no greater than 16 bytes in length. This occurred in the message with Conversation ID, Initiator: 1, and Message sequence number: 0. | SQL Server Engine | SQL Server Engine | All |
 
 ## How to obtain or download this or the latest cumulative update package
 
@@ -988,8 +989,8 @@ Beginning in Microsoft SQL Server 2017, the Analysis Services build version numb
 - Each new CU contains all the fixes that were included with the previous CU for the installed version of SQL Server.
 - SQL Server CUs are certified to the same levels as service packs, and should be installed at the same level of confidence.
 - We recommend ongoing, proactive installation of CUs as they become available according to these guidelines:
-- Historical data shows that a significant number of support cases involve an issue that has already been addressed in a released CU.
-- CUs may contain added value over and above hotfixes. This includes supportability, manageability, and reliability updates.
+  - Historical data shows that a significant number of support cases involve an issue that has already been addressed in a released CU.
+  - CUs may contain added value over and above hotfixes. This includes supportability, manageability, and reliability updates.
 - We recommend that you test SQL Server CUs before you deploy them to production environments.
 
 </details>
@@ -1059,10 +1060,9 @@ To uninstall this CU on Linux, you must roll back the package to the previous ve
 
 ## References
 
-- [Announcing updates to the SQL Server Incremental Servicing Model (ISM)](https://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism/)
+- [Announcing updates to the SQL Server Incremental Servicing Model (ISM)](/archive/blogs/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism)
 - [SQL Server Service Packs are no longer supported starting from SQL Server 2017](https://support.microsoft.com/topic/fd405dee-cae7-b40f-db14-01e3e4951169)
 - [Determine which version and edition of SQL Server Database Engine is running](../find-my-sql-version.md)
 - [Servicing models for SQL Server](../../general/servicing-models-sql-server.md)
 - [Naming schema and Fix area descriptions for SQL Server software update packages](../../database-engine/install/windows/naming-schema-and-fix-area.md)
 - [Description of the standard terminology that is used to describe Microsoft software updates](../../../windows-client/deployment/standard-terminology-software-updates.md)
-

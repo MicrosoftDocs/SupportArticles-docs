@@ -25,7 +25,7 @@ _Original KB number:_ &nbsp; 4016551
 
 ## Symptoms
 
-Assume that you have a Windows 10-based computer that's configured to receive updates from the Microsoft Windows Update server. The computer is not domain-joined or Azure Active Directory Domain-joined or managed by a System Center Configuration Manager (SCCM) client, but the computer is otherwise managed, for example by an IT professional.
+Assume that you have a Windows 10-based computer that's configured to receive updates from the Microsoft Windows Update server. The computer is not domain-joined or Microsoft Entra Domain-joined or managed by a System Center Configuration Manager (SCCM) client, but the computer is otherwise managed, for example by an IT professional.
 
 In this situation, the Upgrade and Privacy Experience (UPX) may be displayed in the user interface (UI) unexpectedly, contrary to the preferences of the IT professional or other person who manages the device.
 

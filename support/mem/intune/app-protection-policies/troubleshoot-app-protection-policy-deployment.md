@@ -47,7 +47,7 @@ The first step in troubleshooting is to check whether all prerequisites are met.
 - The user must belong to a security group that is targeted by an app protection policy. The same app protection policy must target the specific app that's used.
 - For Android devices, the Company Portal app is required to receive app protection policies.
 - If you use [Word, Excel, or PowerPoint](https://products.office.com/business/office) apps, the following additional requirements must be met:
-  - The user must have a license for [Microsoft 365 Apps for business or enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) linked to the user's Azure Active Directory (Azure AD) account. The subscription must include the Office apps on mobile devices and can include a cloud storage account with [OneDrive for Business](https://onedrive.live.com/about/business/). Microsoft 365 licenses can be assigned in the [Microsoft 365 admin center](https://admin.microsoft.com) by following [these instructions](/microsoft-365/admin/add-users/add-users).
+  - The user must have a license for [Microsoft 365 Apps for business or enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) linked to the user's Microsoft Entra account. The subscription must include the Office apps on mobile devices and can include a cloud storage account with [OneDrive for Business](https://onedrive.live.com/about/business/). Microsoft 365 licenses can be assigned in the [Microsoft 365 admin center](https://admin.microsoft.com) by following [these instructions](/microsoft-365/admin/add-users/add-users).
   - The user must have a managed location that's configured by using the granular **Save as** functionality. This command is located under the **Save Copies of Org Data** application protection policy setting. For example, if the managed location is [OneDrive](https://onedrive.live.com/about/), the OneDrive app should be configured in the user's Word, Excel, or PowerPoint app.
   - If the managed location is OneDrive, the app must be targeted by the app protection policy that's deployed to the user.
 
@@ -93,7 +93,7 @@ When you assign the policy to a user group, make sure that the user is in the us
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 1. Select **Groups > All groups**, and then search for and select the group that's used for your app protection policy assignment.
 1. Under the **Manage** section, select **Members**.
-1. If the affected user isn't listed, review [Manage app and resource access using Azure Active Directory groups](/azure/active-directory/fundamentals/active-directory-manage-groups) and your group membership rules. Make sure that the affected user is included in the group.
+1. If the affected user isn't listed, review [Manage app and resource access using Microsoft Entra groups](/azure/active-directory/fundamentals/active-directory-manage-groups) and your group membership rules. Make sure that the affected user is included in the group.
 1. Make sure that the affected user isn't in any of the excluded groups for the policy.
 
 > [!IMPORTANT]
@@ -114,9 +114,9 @@ For iOS, this practice is important because each version contains fixes that aff
 
 Some apps can be used without user sign-in, but to successfully manage an app using Intune APP, your users must sign in to the app using their corporate credentials. Intune app protection policies require that the identity of the user is consistent between the app and [Intune App SDK](/mem/intune/developer/app-sdk-get-started). Make sure that the affected user has successfully signed in to the app with their corporate account.
 
-In most scenarios, users sign in to their accounts with their user principal name (UPN). However, in some environments (such as on-premises scenarios), users might use some other form of sign-in credentials. In these cases, you might find that the UPN that's used in the app doesn't match the UPN object in Azure AD. When this issue occurs, app protection policies aren't applied as expected.
+In most scenarios, users sign in to their accounts with their user principal name (UPN). However, in some environments (such as on-premises scenarios), users might use some other form of sign-in credentials. In these cases, you might find that the UPN that's used in the app doesn't match the UPN object in Microsoft Entra ID. When this issue occurs, app protection policies aren't applied as expected.
 
-Microsoft's recommended best practices are to match the UPN to the primary SMTP address. This practice enables users to log in to managed apps, Intune app protection, and other Azure AD resources by having a consistent identity. For more information, see [Azure AD UserPrincipalName population](/azure/active-directory/hybrid/plan-connect-userprincipalname).
+Microsoft's recommended best practices are to match the UPN to the primary SMTP address. This practice enables users to log in to managed apps, Intune app protection, and other Microsoft Entra resources by having a consistent identity. For more information, see [Microsoft Entra UserPrincipalName population](/azure/active-directory/hybrid/plan-connect-userprincipalname).
 
 The only way to guarantee this consistency is through modern authentication. There are scenarios in which apps may work in an on-premises configuration without modern authentication. However, the outcomes are not consistent or guaranteed.
 

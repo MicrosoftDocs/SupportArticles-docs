@@ -1,34 +1,19 @@
 ### YamlMime:Landing
 
-title: Microsoft Dynamics 365 Customer Insights troubleshooting
-summary: Welcome to Microsoft Dynamics 365 Customer Insights troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Customer Insights. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+title: Microsoft Dynamics 365 Customer Insights - Data troubleshooting
+summary: Welcome to Microsoft Dynamics 365 Customer Insights - Data troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Customer Insights - Data. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
 metadata:
-  title: Microsoft Dynamics 365 Customer Insights troubleshooting
-  description: Landing page for Microsoft Dynamics 365 Customer Insights troubleshooting articles.
+  title: Microsoft Dynamics 365 Customer Insights - Data troubleshooting
+  description: Landing page for Microsoft Dynamics 365 Customer Insights - Data troubleshooting articles.
   ms.topic: landing-page
   ms.service: customer-insights
   author: m-hartmann
   ms.author: mhart
-  ms.date: 03/23/2023
+  ms.date: 12/21/2023
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
 landingContent:
-  # Card
-  - title: Exports
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Customer Insights environment doesn't show in Power BI
-            url: exports/environment-not-showing-in-power-bi.md
-          - text: Errors on date fields when loading Customer Insights entities in Power BI Desktop
-            url: exports/error-date-fields-power-bi-connector.md
-          - text: Exports fail with error stating that the following name already exists
-            url: exports/export-fails-name-already-exists.md
-          - text: Troubleshoot controls from Customer Card Add-in
-            url: exports/controls-customer-card-add-in.md
-          - text: Troubleshoot segment not eligible for export
-            url: exports/ineligible-segments-b-to-b.md
 
   # Card
   - title: Data ingestion
@@ -36,7 +21,44 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Troubleshoot Power Query data source refresh issues
-            url: data-ingestion/power-query-data-source-refresh-issues-dataflows.md
+            url: data/data-ingestion/power-query-data-source-refresh-issues-dataflows.md
+
+  # Card
+  - title: Data unification
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Match failed error
+            url: data/profile-unification/match-failed.md
+          - text: Merge failed error
+            url: data/profile-unification/merge-failed.md
+          - text: Missing business unit values
+            url: data/profile-unification/missing-business-unit.md
+            
+  # Card
+  - title: Environment management
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: '"The service principal for resource is disabled" error when signing in'
+            url: data/environment-management/service-principal-disabled.md
+
+  # Card
+  - title: Exports
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Environment doesn't show in Power BI
+            url: data/exports/environment-not-showing-in-power-bi.md
+          - text: Errors on date fields when loading entities in Power BI Desktop
+            url: data/exports/error-date-fields-power-bi-connector.md
+          - text: Exports fail with error stating that the following name already exists
+            url: data/exports/export-fails-name-already-exists.md
+          - text: Troubleshoot controls from Customer Card Add-in
+            url: data/exports/controls-customer-card-add-in.md
+          - text: Troubleshoot segment not eligible for export
+            url: data/exports/ineligible-segments-b-to-b.md
+
 
   # Card
   - title: Insights
@@ -44,7 +66,8 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Segments return no members
-            url: insights/segment-no-results.md
+            url: data/insights/segment-no-results.md
+  
 
   # Card
   - title: Documentation and training
@@ -61,7 +84,7 @@ landingContent:
     linkLists:
       - linkListType: reference
         links:
-          - text: Customer Insights community
-            url: https://go.microsoft.com/fwlink/?linkid=2073991
+          - text: Customer Insights forum
+            url: https://community.dynamics.com/forums/thread/?partialUrl=aicustomerinsights
           - text: Share your ideas
             url: https://go.microsoft.com/fwlink/?linkid=2074172

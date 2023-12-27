@@ -60,7 +60,7 @@ The agent failed with a 'Retry' status. Try to run the agent at a later time.
 
 ## Troubleshooting
 
-- Error message 1: **18805/18836 LogReader Failed to Construct Replicated Command**
+- Error message 1: "18805/18836 LogReader Failed to Construct Replicated Command"
 
   From this message, you can determine the object and the change that created the transaction in the log. To do this, use the following information:
 
@@ -75,18 +75,19 @@ The agent failed with a 'Retry' status. Try to run the agent at a later time.
     dbcc Log(master, 3, 'lsn', '0x00000208:000000a0:0004', 'numrecs', 1)
     ```
 
-- Error message 2: **18805/18836 LogReader Failed to Construct Replicated Command**
-The main difference between error message 1 and error message 2 is that error 2 does not contain the status message and does not point to the "textinfo" column. This known issue is fixed in [Cumulative update package 11 for Microsoft SQL Server 2008 Service Pack 3 (SP3)](https://support.microsoft.com/help/2834048).
+- Error message 2: "18805/18836 LogReader Failed to Construct Replicated Command"
 
-The issue occurs only on those tables that have binary large object (BLOB) data type columns and for which the article is not using the parameterized commands in order to replicate. To resolve this issue, follow these steps:
+  The main difference between error message 1 and error message 2 is that error 2 doesn't contain the status message and doesn't point to the "textinfo" column. This known issue is fixed in [Cumulative update package 11 for Microsoft SQL Server 2008 Service Pack 3 (SP3)](https://support.microsoft.com/help/2834048).
+
+The issue occurs only on those tables that have binary large object (BLOB) data type columns and for which the article isn't using the parameterized commands in order to replicate. To resolve this issue, follow these steps:
 
   1. Determine whether the article is using parameterized commands. To do this, run the following query:
 
      ```sql
-     select status, name from sysarticles where name =''
+     SELECT STATUS, NAME FROM sysarticles WHERE NAME =''
      ```
 
-  2. Convert the status values into binary format. For example, for a status value of 41, the binary value is 101001, and the fifth bit from the right side, also known as the status bit, is ON. If the status bit is 1, then it is already set. If the status bit is 0, then it is not set. Therefore, you have to run sp_changearticle  to configure the parameterized commands. To change the status bit, run the following command:
+  2. Convert the status values into binary format. For example, for a status value of 41, the binary value is 101001, and the fifth bit from the right side, also known as the status bit, is ON. If the status bit is 1, then it is already set. If the status bit is 0, then it is not set. Therefore, you have to run `sp_changearticle` to configure the parameterized commands. To change the status bit, run the following command:
 
      ```sql
      sp_changearticle 'ConstituentRequest_ETL_Trans', 'CRProfile', 'status', 'parameters'
@@ -101,7 +102,7 @@ The issue occurs only on those tables that have binary large object (BLOB) data 
       > [!NOTE]
       >  By default, the value for this parameter is 1,800 seconds (30 minutes).
 
-  - Set the value for the *QueryTimeout*  parameter to zero (0) in order to disable time-out.
+  - Set the value for the *QueryTimeout*  parameter to zero (0) to disable time-out.
 
   - Reduce the value for the Log Reader Agent's *ReadBatchSize* parameter.
 

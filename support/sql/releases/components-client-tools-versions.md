@@ -37,7 +37,7 @@ The version of SQL Server Reporting Services (SSRS) is displayed on the Reportin
 
 ## SQL Server Integration Services
 
-The version of SQL Server Integration Services aligns with the version of SQL server that you had installed.
+The version of SQL Server Integration Services aligns with the version of SQL Server that you had installed.
 
 ## SQL Server Analysis Services
 

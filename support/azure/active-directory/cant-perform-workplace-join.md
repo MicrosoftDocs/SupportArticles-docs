@@ -10,7 +10,7 @@ ms.subservice: domain-services
 
 This article describes an issue in which a user can't join a device to a Workplace by using Device Registration Services. It provides two resolutions.
 
-_Original product version:_ &nbsp; Windows 8.1 Enterprise, Windows Server 2012 R2 Datacenter, Windows Server 2012 R2 Standard, Azure Active Directory  
+_Original product version:_ &nbsp; Windows 8.1 Enterprise, Windows Server 2012 R2 Datacenter, Windows Server 2012 R2 Standard, Microsoft Entra ID  
 _Original KB number:_ &nbsp; 3045387
 
 ## Symptoms
@@ -70,7 +70,7 @@ Verify the DNS configuration by using `NSlookup`, and verify that the answers ar
 Nslookup enterpriseregistration.domain.com
 ```
 
-- If you use Azure Active Directory Join:
+- If you use Microsoft Entra join:
   - Should return CNAME result of `EnterpriseRegistration.windows.net` as the target.
 - If you use Windows Server Workplace Join:
   - Internal host should return internal ADFS node.
@@ -86,9 +86,9 @@ ipconfig /FlushDNS
 
 ### Verify that Device Registration is enabled
 
-If you try to do Workplace Join to Azure Active Directory:
+If you try to do Workplace Join to Microsoft Entra ID:
 
-1. Sign in to the Azure portal, or start the Azure AD console from Microsoft 365 admin center as a Company Administrator.
+1. Sign in to the Azure portal, or start the Microsoft Entra ID console from Microsoft 365 admin center as a Company Administrator.
 2. Go to the directory where the user is trying to do the join.
 3. Go to **Configure**.
 4. Scroll down to the **Device Registration** section.

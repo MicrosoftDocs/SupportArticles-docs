@@ -1,9 +1,8 @@
 ---
 title: Troubleshooting ribbon issues in Power Apps
-description: Provides a resolution for ribbon issues in Power Apps.
-ms.reviewer: krgoldie, srihas
-ms.topic: troubleshooting
-ms.date: 05/15/2021
+description: Provides a resolution for ribbon issues in Microsoft Power Apps.
+ms.reviewer: krgoldie, srihas, tahoon
+ms.date: 09/25/2023
 ---
 # Troubleshooting ribbon issues in Power Apps
 
@@ -12,20 +11,40 @@ This guide helps you resolve issues that affect a ribbon command bar button in a
 _Applies to:_ &nbsp; Power Apps  
 _Original KB number:_ &nbsp; 4552163
 
-> [!IMPORTANT]
-> This ribbon troubleshooting information is applicable to only [Unified Interface apps](/powerapps/user/unified-interface). It isn't applicable to the legacy web client interface.
+## Use Command checker
 
-## Identify the issue
+Command checker is a tool for examining command (ribbon) definitions and troubleshooting common issues. It's built into every Power Apps model-driven app and Dynamics 365 app.
 
-This is a companion guide for an in-app tool, Command Checker, that lets you inspect the ribbon component definitions to help us determine what might be causing issues.
+> [!NOTE]
+> Command checker only works in a web browser. We're adding support to Android and iOS apps soon. As a workaround, check if the same issue occurs when the app is opened in an Android or iOS browser. If it does, you can use Command checker to investigate.
 
-When you run the tool, you're asked to identify or choose one of the items in the following list of the most common kinds of ribbon command bar issues. Select the appropriate link to learn more about how to troubleshoot that issue:
+Use Command checker to diagnose common issues like:
 
 - [A button on the command bar is hidden when it should be visible](ribbon-issues-button-hidden.md)
-
 - [A button on the command bar is visible when it should be hidden](ribbon-issues-button-visible.md)
-
-- [A button on the command bar is not working correctly](ribbon-issues-button-not-working-correctly.md)
+- [A button on the command bar isn't working correctly](ribbon-issues-button-not-working-correctly.md)
+- [A button on the command bar has wrong labels](ribbon-issues-button-wrong-label.md)
 
 > [!IMPORTANT]
-> These issues are often caused by missing or incorrect ribbon metadata. Typically, this situation can be resolved by regenerating all ribbon metadata. Command Checker has a feature that enables you to [trigger the regeneration of all ribbon metadata](regenerate-ribbon-metadata.md). Only system administrators, system customizers, and makers have the permissions to regenerate metadata.
+> These issues are often caused by missing or incorrect ribbon metadata. Typically, this situation can be resolved by regenerating all ribbon metadata. Command checker has a feature that enables you to [trigger the regeneration of all ribbon metadata](regenerate-ribbon-metadata.md). Only system administrators, system customizers, and makers have the permissions to regenerate metadata.
+
+### Enable Command checker
+
+To enable Command checker, append the `&ribbondebug=true` parameter to the URL of the app. For example: `https://yourorgname.crm.dynamics.com/main.aspx?appid=<ID>&ribbondebug=true`.
+
+:::image type="content" source="media/ribbon-issues/enable-command-checker.png" alt-text="Screenshot shows the parameter is appended to a Dynamics 365 application URL." lightbox="media/ribbon-issues/enable-command-checker.png":::
+
+### Inspect a command
+
+Once Command checker is enabled, you'll find a new button named **Command Checker** :::image type="icon" source="media/ribbon-issues/command-checker-button-icon.png" border="false"::: in [various command bars](/power-apps/maker/model-driven-apps/command-designer-overview#command-bar-locations) (global, main form, main grid, and subgrid). You may have to expand the menu bar to see this button.
+
+> [!NOTE]
+> Command checker isn't available for commands in [Quick actions](/power-apps/maker/model-driven-apps/command-designer-overview#command-bar-locations).
+
+1. Find the command bar that has the command you want to investigate.
+2. Select the **Command Checker** button. The Command checker panel opens.
+3. Select the command you want to examine in the list of commands. Commands that aren't visible are displayed in italics and end with **(hidden)**.
+
+## Reference
+
+[Command checker for model-driven app ribbons](https://powerapps.microsoft.com/blog/introducing-command-checker-for-model-app-ribbons/)

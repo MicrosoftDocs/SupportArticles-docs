@@ -30,7 +30,7 @@ The MARS Agent Offline Backup workflow now supports Azure Resource Manager Stora
 - Central monitoring and management of Azure Import Jobs
     Customers of MARS Agent-based offline backup can now move to the new Azure portal to monitor and track automatically created Azure Resource Manager Import Jobs from a single Import/Export Jobs page in the Azure portal, and update shipping details directly from the portal.
 - More secure access to Azure Resources
-    Azure Backup’s new workflow for Offline Backup eliminates the need for the Classic Azure Publish Settings file, uses secure Azure logon during the workflow, and uses an Azure Active Directory (Azure AD) application to provide secure and scoped access to the Azure Import Service.
+    Azure Backup’s new workflow for Offline Backup eliminates the need for the Classic Azure Publish Settings file, uses secure Azure logon during the workflow, and uses a Microsoft Entra application to provide secure and scoped access to the Azure Import Service.
 
     > [!NOTE]
     > The new workflow described here applies only to the Offline Backup of files and folders directly to Azure through the MARS Agent. Offline Backup workflow that's performed by using System Center Data Protection Manager to Azure or by using Microsoft Azure Backup Server remains unchanged.

@@ -24,7 +24,7 @@ By default, the BitLocker setup wizard prompts users to enable encryption. You c
 Prerequisites for *user-enabled* encryption:
 
 - The hard disk must be partitioned into an operating system drive formatted with NTFS and a system drive of at least 350 MB formatted as FAT32 for UEFI and NTFS for BIOS.
-- Thee must be enrolled in Intune through hybrid Azure Active Directory (Azure AD) join, Azure AD registration, or Azure AD join.
+- Thee must be enrolled in Intune through Microsoft Entra hybrid join, Microsoft Entra registration, or Microsoft Entra join.
 - A Trusted Platform Module (TPM) chip is not required, but *highly recommended* for increased security.
 
 Prerequisites for BitLocker *silent* encryption:
@@ -33,7 +33,7 @@ Prerequisites for BitLocker *silent* encryption:
 - Windows Recovery Environment (WinRE) must be enabled.
 - The hard disk must be partitioned into an operating system drive formatted with NTFS and a system drive of at least 350 MB must be formatted as FAT32 for Unified Extensible Firmware Interface (UEFI) and NTFS for BIOS.
 UEFI BIOS is required for TPM version 2.0 devices. (Secure boot is not required but will provide more security.)
-- The Intune-enrolled device is connected to Microsoft Azure hybrid services or Azure AD.
+- The Intune-enrolled device is connected to Microsoft Azure hybrid services or Microsoft Entra ID.
 
 ## Identifying encryption status and failures
 
@@ -118,7 +118,7 @@ Another reason could be administrative rights. If your BitLocker policy is targe
 
 **Encryption status explained:**
 
-Set **Allow standard users to enable encryption during Autopilot** to **Yes** to resolve this issue for Azure AD joined devices.
+Set **Allow standard users to enable encryption during Autopilot** to **Yes** to resolve this issue for Microsoft Entra joined devices.
 
 ### Scenario 5 – The device is in an error state but encrypted
 

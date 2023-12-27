@@ -18,6 +18,8 @@ ms.author: genli
 ---
 # Troubleshoot Remote Desktop connections to an Azure virtual machine
 
+[!INCLUDE [Feedback](../../includes/feedback.md)]
+
 The Remote Desktop Protocol (RDP) connection to your Windows-based Azure virtual machine (VM) can fail for various reasons, leaving you unable to access your VM. The issue can be with the Remote Desktop service on the VM, the network connection, or the Remote Desktop client on your host computer. This article guides you through some of the most common methods to resolve RDP connection issues.
 
 If you need more help at any point in this article, you can contact the Azure experts on [the MSDN Azure and Stack Overflow forums](https://azure.microsoft.com/support/forums/). Alternatively, you can file an Azure support incident. Go to the [Azure support site](https://azure.microsoft.com/support/options/) and select **Get Support**
@@ -241,9 +243,11 @@ You may encounter a specific error message when trying to connect to your VM via
 * [Windows Security error: Your credentials did not work](troubleshoot-specific-rdp-errors.md#wincred).
 * [This computer can't connect to the remote computer](troubleshoot-specific-rdp-errors.md#rdpconnect).
 
-## Troubleshoot sign-in issues when users RDP with Azure AD credentials
+<a name='troubleshoot-sign-in-issues-when-users-rdp-with-azure-ad-credentials'></a>
 
-You may receive the following common errors when you try to RDP with Azure AD credentials: "no Azure roles assigned", "unauthorized client", or "two-factor authentication sign-in method required". Refer to the following articles to fix these issues:
+## Troubleshoot sign-in issues when users RDP with Microsoft Entra credentials
+
+You may receive the following common errors when you try to RDP with Microsoft Entra credentials: "no Azure roles assigned", "unauthorized client", or "two-factor authentication sign-in method required". Refer to the following articles to fix these issues:
 
 * [Your account is configured to prevent you from using this device. For more info, contact your system administrator](https://github.com/MicrosoftDocs/azure-docs/blob/main/articles/active-directory/devices/howto-vm-sign-in-azure-ad-windows.md#troubleshoot-sign-in-issues).
 * [Windows Security error: Your credentials did not work. Unauthorized client](https://github.com/MicrosoftDocs/azure-docs/blob/main/articles/active-directory/devices/howto-vm-sign-in-azure-ad-windows.md#unauthorized-client).

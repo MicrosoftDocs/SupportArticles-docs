@@ -1,10 +1,9 @@
 ---
 title: Azure Files performance troubleshooting guide
 description: Troubleshoot performance issues with Azure file shares and discover potential causes and associated workarounds for these problems.
-author: khdownie
 ms.service: azure-file-storage
-ms.date: 06/26/2023
-ms.author: kendownie
+ms.date: 09/28/2023
+ms.reviewer: kendownie, v-weizhu
 #Customer intent: As a system admin, I want to troubleshoot performance issues with Azure file shares to improve performance for applications and users.
 ---
 # Troubleshoot Azure Files performance issues
@@ -162,6 +161,29 @@ If you're using SMB MultiChannel and the number of channels you have exceeds fou
 #### Solution
 
 Set the Windows per NIC setting for SMB so that the total channels don't exceed four. For example, if you have two NICs, you can set the maximum per NIC to two using the following PowerShell cmdlet: `Set-SmbClientConfiguration -ConnectionCountPerRssNetworkInterface 2`.
+
+### Cause 5: Read-ahead size is too small (NFS only)
+
+Beginning with Linux kernel version 5.4, the Linux NFS client uses a default `read_ahead_kb` value of 128 kibibytes (KiB). This small value might reduce the amount of read throughput for large files.
+
+#### Solution
+
+We recommend that you increase the `read_ahead_kb` kernel parameter value to 15 mebibytes (MiB). To change this value, set the read-ahead size persistently by adding a rule in udev, a Linux kernel device manager. Follow these steps:
+
+1. In a text editor, create the */etc/udev/rules.d/99-nfs.rules* file by entering and saving the following text:
+
+   ```output
+   SUBSYSTEM=="bdi" \
+   , ACTION=="add" \
+   , PROGRAM="/usr/bin/awk -v bdi=$kernel 'BEGIN{ret=1} {if ($4 == bdi) {ret=0}} END{exit ret}' /proc/fs/nfsfs/volumes" \
+   , ATTR{read_ahead_kb}="15360"
+   ```
+
+1. In a console, apply the udev rule by running the [udevadm](https://www.man7.org/linux/man-pages/man8/udevadm.8.html) command as a superuser and reloading the rules files and other databases. To make udev aware of the new file, you only need to run this command once.
+
+   ```bash
+   sudo udevadm control --reload
+   ```
 
 ## Very high latency for requests
 

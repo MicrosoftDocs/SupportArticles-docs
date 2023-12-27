@@ -1,7 +1,7 @@
 ---
 title: Kerberos double-hop authentication with Microsoft Edge (Chromium)
 description: This article introduces extra steps to set up integrated Windows authentication with Microsoft Edge (Chromium).
-ms.date: 06/30/2021
+ms.date: 11/22/2023
 ms.custom: sap:WWW authentication and authorization
 ms.reviewer: aartigoyle, dili
 author: HaiyingYu
@@ -137,9 +137,9 @@ Use this setting to configure a list of servers for which delegation of Kerberos
 
 :::image type="content" source="./media/kerberos-double-hop-authentication-edge-chromium/credentials-servers.png" alt-text="Screenshot of a list of servers." border="false":::
 
-After the newly editing group policy object is applied to the client computers inside the domain, go to the test authentication page in [Troubleshoot Kerberos failures in Internet Explorer](troubleshoot-kerberos-failures-ie.md) and download from [ASP.NET Authentication test page](/archive/blogs/friis/asp-net-authentication-test-page). It will yield a **ImpersonationLevel** setting of Delegate instead of **Impersonate** signaling that the delegation of credentials is now allowed.
+After the newly editing group policy object is applied to the client computers inside the domain, go to the test authentication page in [Diagnostic pages for Windows Integrated Authentication Troubleshooting](diagnostics-pages-windows-integrated-authentication.md) and download the whoami.aspx page from the [ASP.net Samples Repository](https://github.com/aspnet/samples/tree/main/samples/aspnet/Identity/CurrentUserInfoRetrieval) on GitHub. It will yield a **ImpersonationLevel** setting of Delegate instead of **Impersonate** signaling that the delegation of credentials is now allowed.
 
-:::image type="content" source="./media/kerberos-double-hop-authentication-edge-chromium/impersonation-level-setting-page.png" alt-text="Screenshot of ImpersonationLevel setting page.":::
+:::image type="content" source="./media/kerberos-double-hop-authentication-edge-chromium/authpage-delegation.png" alt-text="Screenshot of ImpersonationLevel setting page.":::
 
 To test if the policy was applied correctly on the client workstation, open a new Microsoft Edge tab and type *edge://policy*.
 
@@ -179,3 +179,7 @@ Once the policy has been configured and deployed, the following steps must be ta
     - `"delegated":false` means that the ticket shouldn't be delegated even if the ticket is marked as `delegatable`.
     - `"mutual":false` means that the client (browser) doesn't require the server to also authenticate to the client and prove its identity. Only the client should authenticate to the server to prove its identity.
     - `HTTP/web-server.odessy.local` is the SPN used by the browser when making the authentication call.
+
+## More information
+
+[Diagnostic pages for Windows Integrated Authentication troubleshooting](diagnostics-pages-windows-integrated-authentication.md)

@@ -3,15 +3,14 @@ title: Troubleshoot startup or sign-in issues for Power Apps
 description: Provides resolutions for the common configuration issues that prevent Power Apps from starting.
 author: amchern
 ms.author: amchern
-ms.reviewer: tapanm, mkaur
+ms.reviewer: tapanm, mkaur, alaug
 ms.custom: canvas
-ms.date: 03/06/2023
+ms.date: 12/06/2023
 search.audienceType: 
   - maker
 search.app: 
   - PowerApps
 ---
-
 # Troubleshooting startup or sign-in issues for Power Apps
 
 This article helps you resolve some of the common issues that may occur when starting up or signing in to [Power Apps](https://make.powerapps.com).
@@ -19,6 +18,10 @@ This article helps you resolve some of the common issues that may occur when sta
 ## Common errors
 
 The following are some common errors that may appear when you start up or sign in to Power Apps.
+
+- You're prompted to sign in every time an app is embedded in another client such as SharePoint and Microsoft Teams.
+
+  > The Power Apps open experience starts and halts until you sign-in
 
 - Error message related to cookie settings.
 
@@ -33,7 +36,7 @@ The following are some common errors that may appear when you start up or sign i
     > Please select sign in to continue.  
     > Session ID: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
     >
-    > AADSTS50058: A silent sign-in request was sent but no user is signed in. The cookies used to represent the user's session were not sent in the request to Azure AD. This can happen if the user is using Internet Explorer or Edge, and the web app sending the silent sign-in request is in different IE security zone than the Azure AD endpoint (login.microsoftonline.com).  
+    > AADSTS50058: A silent sign-in request was sent but no user is signed in. The cookies used to represent the user's session were not sent in the request to Microsoft Entra ID. This can happen if the user is using Internet Explorer or Edge, and the web app sending the silent sign-in request is in different IE security zone than the Microsoft Entra endpoint (login.microsoftonline.com).  
     > Trace ID: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx  
     > Correlation ID: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx  
     > Timestamp: xxxx-xx-xx xx:xx:xxZ
@@ -73,7 +76,7 @@ Try the following steps to resolve the issue:
 2. Cached data can sometimes prevent you from signing in. [Clear your browser's cache](#clear-your-browser-cache) and cookies and try again.
 3. Try signing in with a different browser. For a list of supported browsers, see [system requirements](/power-apps/limits-and-config#supported-browsers-for-running-power-apps).
 4. Check your network connection to make sure it's stable.
-5. If you're getting Azure Active Directory (Azure AD) errors, they're usually related to user authentication and authorization. The error page might contain additional information that can help diagnose and fix the problem. To resolve Azure AD errors, you might need assistance from your IT department.
+5. If you're getting Microsoft Entra errors, they're usually related to user authentication and authorization. The error page might contain additional information that can help diagnose and fix the problem. To resolve Microsoft Entra errors, you might need assistance from your IT department.
 
 ## Enable storage of third-party cookies and local data in your browser or app
 
@@ -165,6 +168,14 @@ These instructions are shown on the following tabs.
   1. On iOS, select **Settings**.
   1. Scroll down to **Edge**.
   1. Toggle on **Allow Cross-Website Tracking**.
+
+### [Mozilla Firefox](#tab/mozilla-firefox)
+
+To allow apps to use cookies when they're embedded in another client, such as SharePoint, follow these steps:
+
+1. Navigate to **Settings** and select **Privacy & security**.
+2. Look for **Enhanced Tracking Protection** and select **Manage Exceptions**.
+3. Add the URL of the website where the apps are embedded. For example, if the apps are embedded in SharePoint, you need to add the SharePoint URL to the exceptions list. This will allow the embedded apps to use cookies.
 
 ---
 

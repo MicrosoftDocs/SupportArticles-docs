@@ -233,14 +233,14 @@ To verify the secure boot state, use the System Information application by follo
 
 Consider the following scenario:
 
-Intune policy is being deployed to encrypt a Windows 10, version 1809 device, and the recovery password is being stored in Azure Active Directory (Azure AD). As part of the policy configuration, the **Allow standard users to enable encryption during Azure AD Join** option has been selected.
+Intune policy is being deployed to encrypt a Windows 10, version 1809 device, and the recovery password is being stored in Microsoft Entra ID. As part of the policy configuration, the **Allow standard users to enable encryption during Microsoft Entra join** option has been selected.
 
 The policy deployment fails and the failure generates the following events in Event Viewer in the **Applications and Services Logs** > **Microsoft** > **Windows** > **BitLocker API** folder:
 
 > Event ID:846
 >
 > Event:
-> Failed to backup BitLocker Drive Encryption recovery information for volume C: to your Azure AD.
+> Failed to backup BitLocker Drive Encryption recovery information for volume C: to your Microsoft Entra ID.
 >
 > TraceId: {cbac2b6f-1434-4faa-a9c3-597b17c1dfa3}
 > Error: Unknown HResult Error code: 0x80072f9a
@@ -284,7 +284,7 @@ For more information about GPOs and BitLocker, see [BitLocker Group Policy Refer
 
 For information about the procedure to use policy together with BitLocker and Intune, see the following resources:
 
-- [BitLocker management for enterprises: Managing devices joined to Azure Active Directory](/windows/security/information-protection/bitlocker/bitlocker-management-for-enterprises#managing-devices-joined-to-azure-active-directory)
+- [BitLocker management for enterprises: Managing devices joined to Microsoft Entra ID](/windows/security/information-protection/bitlocker/bitlocker-management-for-enterprises#managing-devices-joined-to-azure-active-directory)
 - [BitLocker Group Policy Reference](/previous-versions/windows/it-pro/windows-7/ee706521(v=ws.10))
 - [Configuration service provider reference](/windows/client-management/mdm/configuration-service-provider-reference)
 - [Policy CSP &ndash; BitLocker](/windows/client-management/mdm/policy-csp-bitlocker)
@@ -294,11 +294,11 @@ For information about the procedure to use policy together with BitLocker and In
 
 Intune offers the following enforcement types for BitLocker:
 
-- **Automatic** (Enforced when the device joins Azure AD during the provisioning process. This option is available in Windows 10 version 1703 and later.)
+- **Automatic** (Enforced when the device joins Microsoft Entra ID during the provisioning process. This option is available in Windows 10 version 1703 and later.)
 - **Silent** (Endpoint protection policy. This option is available in Windows 10 version 1803 and later.)
 - **Interactive** (Endpoint policy for Windows versions that are older than Windows 10 version 1803.)
 
-If the device runs Windows 10 version 1703 or later, supports Modern Standby (also known as Instant Go) and is HSTI-compliant, joining the device to Azure AD triggers automatic device encryption. A separate endpoint protection policy isn't required to enforce device encryption.
+If the device runs Windows 10 version 1703 or later, supports Modern Standby (also known as Instant Go) and is HSTI-compliant, joining the device to Microsoft Entra ID triggers automatic device encryption. A separate endpoint protection policy isn't required to enforce device encryption.
 
 If the device is HSTI-compliant but doesn't support Modern Standby, an endpoint protection policy has to be configured to enforce silent BitLocker drive encryption. The settings for this policy should be similar to the following settings:
 
@@ -328,7 +328,7 @@ Intune provides settings that can be used to configure automatic device encrypti
 - Support Modern Standby
 - Use Windows 10 version 1803 or later
 
-![Screenshot of the Intune policy setting showing Allow standard users to enable encryption during Azure AD join.](media/enforcing-bitlocker-policies-by-using-intune-known-issues/allow-standard-users-enable-encryption.png)
+![Screenshot of the Intune policy setting showing Allow standard users to enable encryption during Microsoft Entra join.](media/enforcing-bitlocker-policies-by-using-intune-known-issues/allow-standard-users-enable-encryption.png)
 
 The OMA-URI references for these settings are as follows:
 
@@ -353,9 +353,9 @@ During regular operations, BitLocker drive encryption generates events such as E
 
 ![Screenshot of the Event ID 845 with detailed information.](media/enforcing-bitlocker-policies-by-using-intune-known-issues/event-845-bitlocker-drive-encryption.png)
 
-It can also be determined whether the BitLocker recovery password has been uploaded to Azure AD by checking the device details in the Azure AD Devices section.
+It can also be determined whether the BitLocker recovery password has been uploaded to Microsoft Entra ID by checking the device details in the Microsoft Entra Devices section.
 
-![Screenshot of the BitLocker recovery information as viewed in Azure AD.](media/enforcing-bitlocker-policies-by-using-intune-known-issues/bitlocker-recovery-password.png)
+![Screenshot of the BitLocker recovery information as viewed in Microsoft Entra ID.](media/enforcing-bitlocker-policies-by-using-intune-known-issues/bitlocker-recovery-password.png)
 
 On the device, check the Registry Editor to verify the policy settings on the device. Verify the entries under the following subkeys:
 

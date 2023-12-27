@@ -4,7 +4,7 @@ description: Introduces steps to resolve the error 0x800706ba, The RPC Server is
 author: Deland-Han
 ms.author: delhan
 ms.topic: troubleshooting
-ms.date: 05/24/2023
+ms.date: 12/13/2023
 ms.reviewer: kaushika
 ms.prod: windows-server
 ms.technology: windows-server-active-directory
@@ -175,6 +175,18 @@ To identify the issue, verify that the GPO is applied to the certificate server.
 3. Open the .html file, and identify the winning GPO where the **Restrictions for Unauthenticated RPC Client** group policy is configured to **Not Configured**.
 
    The group policy locates at _Administrative Templates \\ System \\ Remote Procedure Call \\ Restrictions for Unauthenticated RPC Client_.
+
+## Cause 6: Missing "Certificate Service DCOM Access" from COM Security Access Permissions or Launch and Activation Permissions
+
+When the Active Directory Certificate Services role is installed on a server, the local **Certificate Service DCOM Access** group is automatically granted rights to the Component Services administrative tool. If these default permissions have been removed, you may experience the symptoms described in this article. To verify that the correct permissions are in place, follow these steps:
+
+1. Open the **Component Services** Microsoft Management Console (MMC) snap-in under **Windows Administrative Tools**.
+2. In the left pane, expand **Component Services** > **Computers**.  
+3. Right-click **My Computer**, select **Properties**, and then select the **COM Security** tab.
+4. Under **Access Permissions**, select **Edit Limits**.  
+5. Verify that the local **Certificate Service DCOM Access** group appears in the **Group or user names** list and is granted both **Local Access** and **Remote Access** permissions. If not, add it and grant the appropriate permissions. Select **OK** to close the **Access Permission** dialog.  
+6. Under **Launch and Activation Permissions**, select **Edit Limits**.
+7. Verify that the local **Certificate Service DCOM Access** group appears in the **Group or user names** list and is granted both **Local Activation** and **Remote Activation** permissions. If not, add it and grant the appropriate permissions. Select **OK** to close the **Launch and Activation Permissions** dialog.  
 
 ## Reference
 

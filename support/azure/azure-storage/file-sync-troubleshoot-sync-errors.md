@@ -4,9 +4,10 @@ description: Troubleshoot common issues with monitoring sync health and resolvin
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 08/08/2023
+ms.date: 12/05/2023
 ms.author: kendownie
 ms.custom: devx-track-azurepowershell
+ms.reviewer: v-weizhu
 ---
 
 # Troubleshoot Azure File Sync sync health and errors
@@ -35,13 +36,27 @@ To check the status of the cloud change enumeration job, go the **Cloud Endpoint
 
 ### [Portal](#tab/portal1)
 
-Within each sync group, you can drill down into its individual server endpoints to see the status of the last completed sync sessions. A green **Health** column and a **Files not syncing** value of 0 indicate that sync is working as expected. If not, see the following screenshot for a list of common sync errors and how to handle files that aren't syncing.
+To view the health of a **server endpoint** in the portal, navigate to the **Sync groups** section of the **Storage Sync Service** and select a **sync group**.
 
-:::image type="content" source="media/file-sync-troubleshoot-sync-errors/portal-sync-health.png" alt-text="Screenshot that shows the Azure portal." lightbox="media/file-sync-troubleshoot-sync-errors/portal-sync-health.png":::
+:::image type="content" source="media/file-sync-troubleshoot-sync-errors/serverendpoint-health.png" alt-text="Screenshot that shows the server endpoint health in the Azure portal." lightbox="media/file-sync-troubleshoot-sync-errors/serverendpoint-health.png" border="false":::
+
+A **Healthy** status and a **Persistent sync errors** count of 0 indicate that sync is working as expected. If **Persistent sync errors** has a count greater than 0, see [How do I see if there are specific files or folders that are not syncing](#how-do-i-see-if-there-are-specific-files-or-folders-that-are-not-syncing) to troubleshoot why files are failing to sync. If the server endpoint has a **Health status** other than **Healthy**, follow the guidance in the table below.  
+
+| Health status | Description | Remediation |
+|---------|-------------------|--------------|
+| Healthy | Sync session completed successfully or the in-progress sync session is making progress (files are applied). | N/A |
+| Pending | The Pending status is expected after creating a server endpoint. Once sync telemetry for the server endpoint is sent to the service, the Health status will update. | If the Health status doesn't change for several hours, see [Server endpoint health is in a pending state for several hours](#serverendpoint-pending). |
+| Error | Sync session failed with an error. | To resolve this issue, select the **Error** status in the portal to get the error code and remediation steps. If the remediation steps aren't listed in the portal or don't resolve the issue, search for the error code in this document for more guidance. |
+| No Activity | The Storage Sync Service has not received sync telemetry from this server endpoint in the past two hours. | To resolve this issue, follow the steps in [Troubleshoot Azure File Sync sync group management](file-sync-troubleshoot-sync-group-management.md#server-endpoint-noactivity). |
+| Low disk mode | The volume where the server endpoint is located is low on disk space. | To resolve this issue, free disk space on the volume. To learn more about low disk space mode, see [Cloud tiering overview](/azure/storage/file-sync/file-sync-cloud-tiering-overview#low-disk-space-mode). |
+| Provisioning canceled | The server endpoint creation failed. Sync isn't operational on this server endpoint.| To resolve this issue, see [Server endpoint creation and deletion errors](file-sync-troubleshoot-sync-group-management.md#server-endpoint-creation-and-deletion-errors). |
+
+> [!Note]  
+> The server endpoint status (health and activity) is refreshed every 15 minutes and is based on the Telemetry events that are sent from the server to the service.
 
 ### [Server](#tab/server)
 
-Go to the server's telemetry logs, which can be found in the Event Viewer at *Applications and Services Logs\Microsoft\FileSync\Agent\Telemetry*. Event 9102 corresponds to a completed sync session; for the latest status of sync, look for the most recent event with ID 9102. `SyncDirection` tells you if this session was an upload or download. If the `HResult` is 0, then the sync session was successful. A non-zero `HResult` means that there was an error during sync; see below for a list of common errors. If the `PerItemErrorCount` is greater than 0, then some files or folders didn't sync properly. It's possible to have an `HResult` of 0 but a `PerItemErrorCount` that is greater than 0.
+Look at the most recent 9102 event in the telemetry log on the server (in the Event Viewer, go to *Applications and Services Logs\Microsoft\FileSync\Agent\Telemetry*). This event is logged once a sync session is completed. `SyncDirection` tells you if this session was an upload or download. If the `HResult` is 0, then the sync session was successful. A non-zero `HResult` means that there was an error during sync; see below for a list of common errors. If the `PerItemErrorCount` is greater than 0, then some files or folders didn't sync properly. It's possible to have an `HResult` of 0 but a `PerItemErrorCount` that is greater than 0.
 
 Here's an example of a successful upload. For the sake of brevity, only some of the values contained in each 9102 event are listed.
 
@@ -75,7 +90,12 @@ Sometimes sync sessions fail overall or have a non-zero `PerItemErrorCount` but 
 
 ### [Portal](#tab/portal1)
 
-Within your sync group, go to the server endpoint in question and look at the Sync Activity section to see the count of files uploaded or downloaded in the current sync session. Keep in mind that this status will be delayed by about five minutes. If your sync session is small enough to be completed within this period, it might not be reported in the portal.
+Within your sync group, go to the server endpoint properties and look at the **Sync status** section to see the count of files uploaded or downloaded in the current sync session. This status will be delayed by about 15 minutes. If your sync session is small enough to be completed within this period, it might not be reported in the portal.
+
+:::image type="content" source="media/file-sync-troubleshoot-sync-errors/serverendpoint-syncstatus.png" alt-text="Screenshot that shows the sync progress in the Azure portal." lightbox="media/file-sync-troubleshoot-sync-errors/serverendpoint-syncstatus.png" border="false":::
+
+> [!Note]  
+> If the **Estimated completion** is blank, this means sync has not finished counting the number of files in the sync session.
 
 ### [Server](#tab/server)
 
@@ -99,10 +119,10 @@ PerItemErrorCount: 1006.
 
 For each server in a given sync group, make sure:
 
-- The timestamps for the **Last Attempted Sync**  for both upload and download are recent.
+- The timestamps for the **Upload to cloud** and **Download to server** are recent.
 - The status is green for both upload and download.
-- The **Sync Activity** field shows very few or no files remaining to sync.
-- The **Files Not Syncing** field is 0 for both upload and download.
+- The **Sync status** section within the server endpoint properties shows very few or no files remaining to sync.
+- The **Persistent sync errors** and **Transient sync errors** fields within the server endpoint properties have a count of 0.
 
 ### [Server](#tab/server)
 
@@ -122,9 +142,19 @@ If you made changes directly in your Azure file share, Azure File Sync won't det
 
 ### How do I see if there are specific files or folders that are not syncing?
 
-If your `PerItemErrorCount` on the server or **Files Not Syncing** count in the portal are greater than 0 for any given sync session, that means some items are failing to sync. Files and folders can have characteristics that prevent them from syncing. These characteristics can be persistent and require explicit action to resume sync, for example removing unsupported characters from the file or folder name. They can also be transient, meaning the file or folder will automatically resume sync; for example, files with open handles will automatically resume sync when the file is closed. When the Azure File Sync engine detects such a problem, an error log is produced that can be parsed to list the items currently not syncing properly.
+If the **Persistent sync errors** and **Transient sync errors** counts in the portal or `PerItemErrorCount` on the server is greater than 0 for any given sync session, that means some items are failing to sync. Files and folders can have characteristics that prevent them from syncing. These characteristics can be persistent and require explicit action to resume sync, for example removing unsupported characters from the file or folder name. They can also be transient, meaning the file or folder will automatically resume sync; for example, files with open handles will automatically resume sync when the file is closed. When the Azure File Sync engine detects such a problem, an error log is produced that can be parsed to list the items currently not syncing properly.
 
-To see these errors, run the *FileSyncErrorsReport.ps1* PowerShell script (located in the agent installation directory of the Azure File Sync agent) to identify files that failed to sync because of open handles, unsupported characters, or other issues. The `ItemPath` field tells you the location of the file in relation to the root sync directory. See the list of common sync errors for remediation steps.
+> [!Note]  
+> Once a sync session is completed, the **Persistent sync errors** and **Transient sync errors** counts in the portal are updated. If a sync session is in progress, wait until the sync session is completed and the **Persistent sync errors** and **Transient sync errors** counts are updated before you investigate the remaining errors.
+
+To see the names of files and directories that are failing to sync, run the *FileSyncErrorsReport.ps1* PowerShell script (located in the agent installation directory of the Azure File Sync agent) or use the `Debug-StorageSyncServer` cmdlet. The `ItemPath` field tells you the location of the file in relation to the root sync directory. See the list of [common per-item errors](#troubleshooting-per-filedirectory-sync-errors) for remediation steps.
+
+To identify files that fail to sync on the server by using the `Debug-StorageSyncServer` cmdlet, run the following PowerShell commands:
+
+```powershell
+Import-Module "C:\Program Files\Azure\StorageSyncAgent\StorageSync.Management.ServerCmdlets.dll"
+Debug-StorageSyncServer -FileSyncErrorsReport
+```
 
 > [!Note]  
 > If the *FileSyncErrorsReport.ps1* script returns "There were no file errors found" or doesn't list per-item errors for the sync group, the cause is either:
@@ -139,7 +169,12 @@ To see these errors, run the *FileSyncErrorsReport.ps1* PowerShell script (locat
 
 ### Troubleshooting per file/directory sync errors
 
-**ItemResults log - per-item sync errors**
+If a file or directory fails to sync due to an error, an event is logged in the *Microsoft-FileSync-Agent/ItemResults* event log. This section covers common error codes and remediation steps for per-item errors.
+
+> [!Note]  
+> If a file or directory fails to sync, it can take up to 30 minutes before Azure File Sync retries syncing that item. If no changes are detected within the server endpoint location, Azure File Sync initiates a sync session every 30 minutes. To force a sync session, restart the Storage Sync Agent (*FileSyncSvc*) service or make a change to a file or directory within the server endpoint location.
+
+**Common per-item sync errors that are logged in the ItemResults event log**
 
 | HRESULT | HRESULT (decimal) | Error string | Issue | Remediation |
 |---------|-------------------|--------------|-------|-------------|
@@ -177,29 +212,20 @@ To see these errors, run the *FileSyncErrorsReport.ps1* PowerShell script (locat
 | 0x80070006 | -2147024890 | ERROR_INVALID_HANDLE | An internal error occurred. | If the error persists for more than a day, create a support request. |
 | 0x8007012f | -2147024593 | ERROR_DELETE_PENDING | The file cannot be opened because it is in the process of being deleted. | No action required. This error should automatically resolve. If the error persists for several days, create a support request. |
 | 0x80041007 | -2147217401 | SYNC_E_ITEM_MUST_EXIST | An internal error occurred. | If the error persists for more than a day, create a support request. |
+| 0X80C80293 | -2134375789 | ECS_E_SYNC_INITIAL_SCAN_COMPLETED | The sync session failed because the initial enumeration was completed. The next session will cover the full namespace. | No action required. This error should automatically resolve. If the error persists for several days, create a support request. |
+| 0X80C80342 | -2134375614 | ECS_E_SYNC_CUSTOM_METADATA_VERSION_NOT_SUPPORTED | The sync database has custom metadata with a version higher than the supported version. | Please upgrade the File Sync agent to the latest version. If the error persists after upgrading the agent, create a support request. |
 
 ### Handling unsupported characters
 
-If the *FileSyncErrorsReport.ps1* PowerShell script shows per-item sync errors due to unsupported characters (error code 0x8007007b, 0x80c80255, or 0x80070459), you should remove or rename the characters at fault from the respective file names. PowerShell will likely print these characters as question marks or empty rectangles since most of these characters have no standard visual encoding.
+[Azure File Sync agent v17](https://support.microsoft.com/help/5023053) supports all characters that are supported by the [NTFS file system](/windows/win32/fileio/naming-a-file) except invalid surrogate pairs.
 
-> [!Note]  
-> The [Evaluation Tool](/azure/storage/file-sync/file-sync-planning#evaluation-cmdlet) can be used to identify characters that are not supported. If your dataset has several files with invalid characters, use the [ScanUnsupportedChars](https://github.com/Azure-Samples/azure-files-samples/tree/master/ScanUnsupportedChars) script to rename files which contain unsupported characters.
-
-The table below contains all of the unicode characters Azure File Sync doesn't yet support.
-
-| Character set | Character count |
-|---------------|-----------------|
-| 0x00000000 - 0x0000001F (control characters) | 32 |
-| 0x0000FDD0 - 0x0000FDDD (arabic presentation forms-a) | 14 |
-| <ul><li>0x00000022 (quotation mark)</li><li>0x0000002A (asterisk)</li><li>0x0000002F (forward slash)</li><li>0x0000003A (colon)</li><li>0x0000003C (less than)</li><li>0x0000003E (greater than)</li><li>0x0000003F (question mark)</li><li>0x0000005C (backslash)</li><li>0x0000007C (pipe or bar)</li></ul> | 9 |
-| <ul><li>0x0004FFFE - 0x0004FFFF = 2 (noncharacter)</li><li>0x0008FFFE - 0x0008FFFF = 2 (noncharacter)</li><li>0x000CFFFE - 0x000CFFFF = 2 (noncharacter)</li><li>0x0010FFFE - 0x0010FFFF = 2 (noncharacter)</li></ul> | 8 |
-| <ul><li>0x0000009D (`osc` operating system command)</li><li>0x00000090 (dcs device control string)</li><li>0x0000008F (ss3 single shift three)</li><li>0x00000081 (high octet preset)</li><li>0x0000007F (del delete)</li><li>0x0000008D (ri reverse line feed)</li></ul> | 6 |
-| 0x0000FFF0, 0x0000FFFD, 0x0000FFFE, 0x0000FFFF (specials) | 4 |
-| Files or directories that end with a period | 1 |
+If the portal or *FileSyncErrorsReport.ps1* PowerShell script shows per-item sync errors (error code 0x8007007b, 0x80c80255, or 0x80070459) due to unsupported characters, check whether Azure File Sync agent v17 is installed on the server. If agent v17 is installed and files still fail to sync due to invalid characters, use the [ScanUnsupportedChars](https://github.com/Azure-Samples/azure-files-samples/tree/master/ScanUnsupportedChars) script to rename files that contain unsupported characters.
 
 ### Common sync errors
 
-<a id="-2147023673"></a>**The sync session was canceled.**  
+This section covers common error codes and remediation steps when a sync session fails with an error.
+
+<a id="-2147023673"></a>**The sync session was canceled.**
 
 | Error | Code |
 |-|-|
@@ -474,18 +500,16 @@ Sync sessions fail with either of these errors when the Azure file share storage
 
 1. Navigate to the sync group within the Storage Sync Service.
 2. Select the cloud endpoint within the sync group.
-3. Note the Azure file share name in the opened pane.
-4. Select the linked storage account. If this link fails, the referenced storage account has been removed.
+3. Note the Azure file share name in the opened pane. Select the file share name to open the file share settings page in the storage account.
 
-    :::image type="content" source="media/file-sync-troubleshoot-sync-errors/file-share-inaccessible.png" alt-text="Screenshot that shows the cloud endpoint detail pane with a link to the storage account.":::
+    :::image type="content" source="media/file-sync-troubleshoot-sync-errors/cloud-endpoint-detail.png" alt-text="Screenshot showing the cloud endpoint detail pane with a link to the file share.":::
 
-5. Select **Files** to view the list of file shares.
-6. Select the ellipses (...) at the end of the row for the Azure file share referenced by the cloud endpoint.
-7. Verify the **Usage** is the **Quota** below. Note unless an alternate quota has been specified, the quota will match the [maximum size of the Azure file share](/azure/storage/files/storage-files-scale-targets?toc=/azure/storage/filesync/toc.json).
+4. Select the file share to get the details on the **Overview** page.
+5. Select **Edit quota** to verify the file share quota. Unless an alternate quota has been specified, the quota will match the [maximum size of the Azure file share](/azure/storage/files/storage-files-scale-targets?toc=/azure/storage/filesync/toc.json).
 
-    :::image type="content" source="media/file-sync-troubleshoot-sync-errors/file-share-limit-reached.png" alt-text="Screenshot that shows the Azure file share properties.":::
+    :::image type="content" source="media/file-sync-troubleshoot-sync-errors/edit-quota.png" alt-text="Screenshot that shows the Azure file share properties." lightbox="media/file-sync-troubleshoot-sync-errors/edit-quota.png":::
 
-If the share is full and a quota isn't set, one possible way of fixing this issue is to make each subfolder of the current server endpoint into its own server endpoint in their own separate sync groups. This way each subfolder will sync to individual Azure file shares.
+If the file share is full (the used capacity equals the quota), free up space on the file share. One possible way of fixing this issue is to make each subfolder of the current server endpoint into its own server endpoint in their own separate sync groups. This way each subfolder will sync to individual Azure file shares.
 
 <a id="-2134351824"></a>**The Azure file share cannot be found.**  
 
@@ -607,7 +631,7 @@ This error can happen if your organization is using a TLS terminating proxy or i
 
 By setting this registry value, the Azure File Sync agent will accept any locally trusted TLS/SSL certificate when transferring data between the server and the cloud service.
 
-<a id="-2147012721"></a>**Sync failed because the server was unable to decode the response from the Azure File Sync service**  
+<a id="-2147012721"></a>**Sync failed because the server was unable to decode the response from the Azure File Sync service.**  
 
 | Error | Code |
 |-|-|
@@ -616,7 +640,18 @@ By setting this registry value, the Azure File Sync agent will accept any locall
 | **Error string** | WININET_E_DECODING_FAILED |
 | **Remediation required** | Yes |
 
-This error typically occurs if a network proxy is modifying the response from the Azure File Sync service. Please check your proxy configuration.
+This error typically occurs if a firewall, proxy, or gateway blocks access to the PKI URL, or if the PKI server is down.
+
+To resolve this issue, ensure that the server can access the following URLs:
+
+- `https://www.microsoft.com/pki/mscorp/cps`
+- `http://crl.microsoft.com/pki/mscorp/crl/`
+- `http://mscrl.microsoft.com/pki/mscorp/crl/`
+- `http://ocsp.msocsp.com`
+- `http://ocsp.digicert.com/`
+- `http://crl3.digicert.com/`
+
+Once the Azure File Sync agent is installed, the PKI URL is used to download the intermediate certificates required to communicate with the Azure File Sync service and Azure file share. The OCSP URL is used to check the status of a certificate. If the error persists for several days, [create a support request](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview?DMC=troubleshoot).
 
 <a id="-2134375680"></a>**Sync failed due to a problem with authentication.**  
 
@@ -807,7 +842,7 @@ This error occurs because the storage account has failed over to another region.
 
 This error occurs because of an internal problem with the sync database. This error will auto-resolve when sync retries. If this error continues for an extend period of time, create a support request, and we will contact you to help you resolve this issue.
 
-<a id="-2134364024"></a>**Sync failed due to change in Azure Active Directory tenant**  
+<a id="-2134364024"></a>**Sync failed due to change in Microsoft Entra tenant**  
 
 | Error | Code |
 |-|-|
@@ -1338,9 +1373,10 @@ Run the following PowerShell command on the server to reset the certificate:
 1. Navigate to the sync group within the Storage Sync Service.
 2. Select the cloud endpoint within the sync group.
 3. Note the Azure file share name in the opened pane.
-4. Select the linked storage account. If this link fails, the referenced storage account has been removed.
 
-    :::image type="content" source="media/file-sync-troubleshoot-sync-errors/file-share-inaccessible.png" alt-text="Screenshot that shows the cloud endpoint detail pane with a link to the storage account.":::
+   :::image type="content" source="media/file-sync-troubleshoot-sync-errors/cloud-endpoint-detail.png" alt-text="Screenshot showing the cloud endpoint detail pane with a link to the file share.":::
+
+4. Select the file share name to open the file share settings page in the storage account. If this link fails to open, the referenced storage account has been removed.
 
 ## [PowerShell](#tab/azure-powershell)
 

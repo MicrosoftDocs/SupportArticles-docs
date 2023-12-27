@@ -8,7 +8,7 @@ ms.subservice: enterprise-users
 ---
 # Error when you try to install the Azure Active Directory Sync Tool: The computer must be joined to a domain
 
-_Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Azure Active Directory, Microsoft Intune, Azure Backup, Office 365 Identity Management  
+_Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Microsoft Entra ID, Microsoft Intune, Azure Backup, Office 365 Identity Management  
 _Original KB number:_ &nbsp; 2419250
 
 ## Symptoms

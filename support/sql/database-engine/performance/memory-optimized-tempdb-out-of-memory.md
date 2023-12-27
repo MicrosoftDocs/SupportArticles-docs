@@ -1,9 +1,9 @@
 ---
 title: Memory-optimized tempdb metadata out of memory errors
 description: Provides resolutions to troubleshoot out of memory issues with memory-optimized tempdb metadata.
-ms.date: 06/01/2023
+ms.date: 10/03/2023
 ms.custom: sap:Database Engine
-ms.reviewer: jopilov, hesha
+ms.reviewer: jopilov, hesha, randolphwest
 author: Hemin-msft
 ms.author: jopilov
 ---
@@ -18,7 +18,7 @@ After you enable the memory-optimized tempdb metadata (HkTempDB) feature, you ma
 
 > Disallowing page allocations for database 'tempdb' due to insufficient memory in the resource pool 'default'. See '`http://go.microsoft.com/fwlink/?LinkId=510837`' for more information.
 
-When running a query on the [DMV](/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views) [dm_os_memory_clerks](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql), you can see that pages memory allocated is high for memory clerk `MEMORYCLERK_XTP`. For example:
+When you run a query on the [DMV](/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views) [dm_os_memory_clerks](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql), you can see that pages memory allocated is high for memory clerk `MEMORYCLERK_XTP`. For example:
 
 ```sql
 SELECT type, memory_node_id, pages_kb 
@@ -79,27 +79,27 @@ By using the DMVs to verify the cause, you may see different scenarios of the is
 
     ```sql
     /* Yes, 2 times for both*/
-    Exec sys.sp_xtp_force_gc 'tempdb'
+    EXEC sys.sp_xtp_force_gc 'tempdb'
     GO
-    Exec sys.sp_xtp_force_gc 'tempdb'
+    EXEC sys.sp_xtp_force_gc 'tempdb'
     GO
-    Exec sys.sp_xtp_force_gc
+    EXEC sys.sp_xtp_force_gc
     GO
-    Exec sys.sp_xtp_force_gc
+    EXEC sys.sp_xtp_force_gc
     ```
 
 - Scenario 2
 
-    The DMV `tempdb.sys.dm_xtp_system_memory_consumers` shows high values for allocated and used bytes for memory consumer types VARHEAP and LOOKASIDE.
+    The DMV `tempdb.sys.dm_xtp_system_memory_consumers` shows high values for allocated and used bytes for memory consumer types `VARHEAP` and `LOOKASIDE`.
 
     **Resolution**: Check for long-running explicit transactions involving DDL statements on temporary tables and resolve from the application side by keeping transactions short.
 
     > [!NOTE]
-    > To reproduce this issue in a test environment, you can create an explicit [transaction](/sql/t-sql/language-elements/begin-transaction-transact-sql) by using Data Definition Language (DDL) statements on temporary table(s) and leave it open for a long time while other activity takes place.
+    > To reproduce this issue in a test environment, you can create an explicit [transaction](/sql/t-sql/language-elements/begin-transaction-transact-sql) by using Data Definition Language (DDL) statements on temporary table(s) and leave it open for a long time when other activity takes place.
 
 - Scenario 3
 
-    The DMV `tempdb.sys.dm_db_xtp_memory_consumers` shows high values for allocated and used bytes in a large object (LOB) allocator or table heap where `Object_ID`, `XTP_Object_ID` and `Index_ID` are `NULL`.
+    The DMV `tempdb.sys.dm_db_xtp_memory_consumers` shows high values for allocated and used bytes in a large object (LOB) allocator or table heap where `Object_ID`, `XTP_Object_ID`, and `Index_ID` are `NULL`.
 
     **Resolution**: Apply [SQL Server 2019 CU16](https://support.microsoft.com/topic/kb5011644-cumulative-update-16-for-sql-server-2019-74377be1-4340-4445-93a7-ff843d346896) for the issue [14535149](https://support.microsoft.com/topic/kb5011644-cumulative-update-16-for-sql-server-2019-74377be1-4340-4445-93a7-ff843d346896?msclkid=f1148209c24811ecbfa6aa36a20ffa89#bkmk_14535149).
 
@@ -135,7 +135,7 @@ By using the DMVs to verify the cause, you may see different scenarios of the is
 
 1. Run `sys.sp_xtp_force_gc` periodically.
 
-1. To protect the server from potential out of memory conditions, you can bind tempdb to a [Resource Governor resource pool](/sql/relational-databases/resource-governor/resource-governor-resource-pool). For example, create a resource pool by using `MAX_MEMORY_PERCENT = 30`. Then use the following [ALTER SERVER CONFIGURATION](/sql/t-sql/statements/alter-server-configuration-transact-sql) command to bind the resource pool to memory-optimized tempdb metadata.
+1. To protect the server from potential out of memory conditions, you can bind tempdb to a [Resource Governor resource pool](/sql/relational-databases/resource-governor/resource-governor-resource-pool). For example, create a resource pool by using `MAX_MEMORY_PERCENT = 30`. Then, use the following [ALTER SERVER CONFIGURATION](/sql/t-sql/statements/alter-server-configuration-transact-sql) command to bind the resource pool to memory-optimized tempdb metadata.
 
    ```sql
    ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON (RESOURCE_POOL = '<PoolName>');
@@ -143,12 +143,12 @@ By using the DMVs to verify the cause, you may see different scenarios of the is
 
    This change requires a restart to take effect, even if memory-optimized tempdb metadata is already enabled. For more information, see:
 
-    - [Configuring memory-optimized tempdb metadata](/sql/relational-databases/databases/tempdb-database#configuring-and-using-memory-optimized-tempdb-metadata)
+    - [Configure and use memory-optimized tempdb metadata](/sql/relational-databases/databases/tempdb-database#configure-and-use-memory-optimized-tempdb-metadata).
 
-    - [Create a Resource Pool](/sql/relational-databases/resource-governor/create-a-resource-pool)
+    - [Create a Resource Pool](/sql/relational-databases/resource-governor/create-a-resource-pool).
 
    > [!WARNING]
-   > After binding HktempDB to a pool, the pool may reach its maximum setting and any queries that use tempdb may fail with out of memory errors. SQL Service will continue functioning but tempdb-heavy workload may be affected. You may see the following error:
+   > After binding HktempDB to a pool, the pool may reach its maximum setting and any queries that use `tempdb` may fail with out of memory errors. The SQL Server service will continue functioning, but any queries that use `tempdb` may fail. You might see the following error:
    >
    > > Disallowing page allocations for database 'tempdb' due to insufficient memory in the resource pool 'HkTempDB'. See '`http://go.microsoft.com/fwlink/?LinkId=510837`' for more information. XTP failed page allocation due to memory pressure: FAIL_PAGE_ALLOCATION 8
 
@@ -160,7 +160,7 @@ These sections provide more details about some of the memory components involved
 
 ### Lookaside memory allocator
 
-Lookaside in In-Memory OLTP is a thread-local memory allocator to help achieve fast transaction processing. Each thread object contains a collection of lookaside memory allocators. Each lookaside associated with each thread has a pre-defined upper limit on how much memory it can allocate. Once the limit is reached, the thread allocates memory from a spill-over shared memory pool (VARHEAP). The DMV `sys.dm_xtp_system_memory_consumers` aggregates data for each lookaside type (`memory_consumer_type_desc = 'LOOKASIDE'`) and the shared memory pool (`memory_consumer_type_desc = 'VARHEAP'` and  `memory_consumer_desc = 'Lookaside heap'`).
+Lookaside in In-Memory OLTP is a thread-local memory allocator to help achieve fast transaction processing. Each thread object contains a collection of lookaside memory allocators. Each lookaside associated with each thread has a pre-defined upper limit on how much memory it can allocate. When the limit is reached, the thread allocates memory from a spill-over shared memory pool (VARHEAP). The DMV `sys.dm_xtp_system_memory_consumers` aggregates data for each lookaside type (`memory_consumer_type_desc = 'LOOKASIDE'`) and the shared memory pool (`memory_consumer_type_desc = 'VARHEAP'` and  `memory_consumer_desc = 'Lookaside heap'`).
 
 ### System-level consumers: tempdb.sys.dm_xtp_system_memory_consumers
 

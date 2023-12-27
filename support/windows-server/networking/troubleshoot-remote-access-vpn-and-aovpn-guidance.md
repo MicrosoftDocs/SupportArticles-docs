@@ -60,7 +60,7 @@ The listed resources in this article can help you resolve issues that you experi
 
 - [Always On VPN client connection issues](/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting#always-on-vpn-client-connection-issues) - A small misconfiguration can cause the client connection to fail. Finding the cause can be challenging. An AOVPN client goes through several steps before it establishes a connection.
 
-- [Unable to delete the certificate from the VPN connectivity blade](/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting#unable-to-delete-the-certificate-from-the-vpn-connectivity-blade) - Certificates on the VPN connectivity blade cannot be deleted. (Azure AD Conditional Access connection issues.)
+- [Unable to delete the certificate from the VPN connectivity blade](/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting#unable-to-delete-the-certificate-from-the-vpn-connectivity-blade) - Certificates on the VPN connectivity blade cannot be deleted. (Microsoft Entra Conditional Access connection issues.)
 
 ## Data collection
 

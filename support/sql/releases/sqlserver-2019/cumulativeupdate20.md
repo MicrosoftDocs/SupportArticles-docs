@@ -101,7 +101,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id="2204764">[2204764](#2204764)</a> | Fixes access violations and `INVALID_POINTER_READ_c0000005_sqlmin.dll!CProfileList::FGetPartitionSummaryXML` exceptions that you may encounter during the execution of `sys.dm_exec_query_plan_stats`. | SQL Server Engine | Query Execution | Windows |
 | <a id="2275387">[2275387](#2275387)</a> | Fixes an assertion failure (Location: bpctxt.cpp:129; Expression: 'm_cCreated < m_cMaxBatches') that you encounter when running window queries that have aggregate functions in batch mode. | SQL Server Engine | Query Execution | All |
 | <a id="2292999">[2292999](#2292999)</a> | Fixes an issue where running the `ALTER ASSEMBLY` command for a complex common language runtime (CLR) assembly can cause some of the other commands that are executed in parallel to time out. | SQL Server Engine | Query Execution | All |
-| <a id="2112485">[2112485](#2112485)</a> | Fixes an issue where the cardinality estimation (CE) uniformly increases after each `LEFT JOIN` or `RIGHT JOIN` combines, which causes overestimation. This fix adds a limitation to the CE when the join predicates are the primary keys of the tables that are involved. | SQL Server Engine | Query Optimizer | Windows |
+| <a id="2112485">[2112485](#2112485)</a> | Fixes an issue where the cardinality estimation (CE) uniformly increases after each `LEFT JOIN` or `RIGHT JOIN` combines, which causes overestimation. This fix adds a limitation to the CE when the join predicates are the primary keys of the tables that are involved. </br></br>**Note**: Trace flag 9440 will turn off the functionality provided by this fix for databases with a compatibility level of 160 and earlier. | SQL Server Engine | Query Optimizer | All |
 | <a id="2161795">[2161795](#2161795)</a> | Fixes an assertion failure (Location: purecall.cpp:51; Expression: !"purecall") that you encounter after you cancel a user-defined stored procedure that is still running. | SQL Server Engine | Query Optimizer | All |
 | <a id="2216357">[2216357](#2216357)</a> | Produces consistent results for statements that perform multiple updates to a variable when the query optimization hotfixes are enabled, such as `SELECT @sum = @sum + c FROM t`. | SQL Server Engine | Query Optimizer | All |
 | <a id="2264977">[2264977](#2264977)</a> | Fixes an issue that's caused by automatic parameterization of queries where interleaved execution of multi-statement table-valued functions (MSTVFs) may return incorrect results or cause a deadlock on the first execution. | SQL Server Engine | Query Optimizer | All |
@@ -996,8 +996,8 @@ Beginning in Microsoft SQL Server 2017, the Analysis Services build version numb
 - Each new CU contains all the fixes that were included with the previous CU for the installed version of SQL Server.
 - SQL Server CUs are certified to the same levels as service packs, and should be installed at the same level of confidence.
 - We recommend ongoing, proactive installation of CUs as they become available according to these guidelines:
-- Historical data shows that a significant number of support cases involve an issue that has already been addressed in a released CU.
-- CUs may contain added value over and above hotfixes. This includes supportability, manageability, and reliability updates.
+  - Historical data shows that a significant number of support cases involve an issue that has already been addressed in a released CU.
+  - CUs may contain added value over and above hotfixes. This includes supportability, manageability, and reliability updates.
 - We recommend that you test SQL Server CUs before you deploy them to production environments.
 
 </details>
@@ -1067,7 +1067,7 @@ To uninstall this CU on Linux, you must roll back the package to the previous ve
 
 ## References
 
-- [Announcing updates to the SQL Server Incremental Servicing Model (ISM)](https://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism/)
+- [Announcing updates to the SQL Server Incremental Servicing Model (ISM)](/archive/blogs/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism)
 - [SQL Server Service Packs are no longer supported starting from SQL Server 2017](https://support.microsoft.com/topic/fd405dee-cae7-b40f-db14-01e3e4951169)
 - [Determine which version and edition of SQL Server Database Engine is running](../find-my-sql-version.md)
 - [Servicing models for SQL Server](../../general/servicing-models-sql-server.md)

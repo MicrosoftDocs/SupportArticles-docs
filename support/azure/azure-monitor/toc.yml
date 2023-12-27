@@ -37,6 +37,8 @@ items:
       href: app-insights/enable-self-diagnostics.md
     - name: Troubleshoot Azure Application Insights in a Java web project
       href: app-insights/java-2x-troubleshoot.md
+    - name: Troubleshoot App Insights monitoring of Node.js apps and services
+      href: app-insights/troubleshoot-app-insights-nodejs.md
     - name: Troubleshoot no data in Azure Application Insights for .NET and .NET Core
       href: app-insights/asp-net-troubleshoot-no-data.md
     - name: Troubleshoot Azure Monitor Application Insights for Java

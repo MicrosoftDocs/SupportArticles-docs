@@ -3,9 +3,10 @@ title: Troubleshoot problems with AzCopy (Azure Storage)
 description: Provides workarounds to common issues with AzCopy v10.
 ms.service: azure-storage
 ms.subservice: storage-common-concepts
-ms.date: 04/12/2023
+ms.date: 10/30/2023
 ms.reviewer: normesta, azurestocic, jarrettr, v-weizhu
 ---
+
 # Troubleshoot problems with AzCopy v10
 
 This article describes common issues you might encounter while using AzCopy, helps you identify the causes of those issues, and then suggests ways to resolve them.
@@ -143,18 +144,10 @@ If you're copying data between accounts by using AzCopy, the quality and reliabi
 
 - Azure Functions has a different endpoint for MSI authentication, which AzCopy doesn't yet support.
 
-## Known temporary issues
-
-There's a service issue impacting AzCopy 10.11 and later versions that are using the [PutBlobFromURL API](/rest/api/storageservices/put-blob-from-url) to copy blobs smaller than the given block size (whose default size is eight mebibytes (MiB)). If the user has any firewall (VNet/IP/PL/SE Policy) on the source account, the `PutBlobFromURL` API might mistakenly return the message "409 Copy source blob has been modified". The workaround is to use AzCopy 10.10:
-
-- [azcopy_darwin_amd64_10.10.0.zip](https://azcopyvnext.azureedge.net/release20210415/azcopy_darwin_amd64_10.10.0.zip)
-- [azcopy_linux_amd64_10.10.0.tar.gz](https://azcopyvnext.azureedge.net/release20210415/azcopy_linux_amd64_10.10.0.tar.gz)
-- [azcopy_windows_386_10.10.0.zip](https://azcopyvnext.azureedge.net/release20210415/azcopy_windows_386_10.10.0.zip)
-- [azcopy_windows_amd64_10.10.0.zip](https://azcopyvnext.azureedge.net/release20210415/azcopy_windows_amd64_10.10.0.zip)
-
 ## See also
 
 - [Get started with AzCopy](/azure/storage/common/storage-use-azcopy-v10)
 - [Find errors and resume jobs by using log and plan files in AzCopy](/azure/storage/common/storage-use-azcopy-configure)
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+

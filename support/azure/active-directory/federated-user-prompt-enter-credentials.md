@@ -10,7 +10,7 @@ ms.subservice: authentication
 
 This article describes a scenario in which a federated user is prompted unexpectedly to enter their work or school account credentials when accessing Office 365, Azure, or Microsoft Intune.
 
-_Original product version:_ &nbsp; Azure Active Directory, Microsoft Intune, Azure Backup, Office 365 Identity Management  
+_Original product version:_ &nbsp; Microsoft Entra ID, Microsoft Intune, Azure Backup, Office 365 Identity Management  
 _Original KB number:_ &nbsp; 2535227
 
 ## Symptoms

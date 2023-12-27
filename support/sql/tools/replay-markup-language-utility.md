@@ -1,7 +1,7 @@
 ---
 title: Replay Markup Language Utilities
 description: This article discusses a group of tools that are used by support professionals to troubleshoot SQL Server.
-ms.date: 01/09/2023
+ms.date: 06/11/2023
 ms.custom: sap:Tools
 ms.reviewer: sureshka, jopilov, toddhayn, troymoen, v-jayaramanp
 ms.topic: article
@@ -81,31 +81,33 @@ For a complete description of every tool and sample usage, see the RML Help file
 
 ### Dependencies for Reporter
 
-You have to make sure that the Report Viewer controls are available either in the same folder as *Reporter.exe* or in the Global Assembly Cache (GAC). The DLLs that *Reporter.exe* requires are:
+1. You have to make sure that the Report Viewer controls are available either in the same folder as *Reporter.exe* or in the Global Assembly Cache (GAC). The DLLs that *Reporter.exe* requires are:
 
-- *Microsoft.ReportViewer.Common.dll*
-- *Microsoft.ReportViewer.DataVisualization.dll*
-- *Microsoft.ReportViewer.ProcessingObjectModel.dll*
-- *Microsoft.ReportViewer.WinForms.dll*
+   - *Microsoft.ReportViewer.Common.dll*
+   - *Microsoft.ReportViewer.DataVisualization.dll*
+   - *Microsoft.ReportViewer.ProcessingObjectModel.dll*
+   - *Microsoft.ReportViewer.WinForms.dll*
 
-You can download these DLLs by using the following PowerShell script:
+   You can download these DLLs by using the following PowerShell script:
 
-```powershell
-Register-PackageSource -Name MyNuGet -Location https://www.nuget.org/api/v2 -ProviderName NuGet
-Get-PackageSource
+   ```powershell
+   Register-PackageSource -Name MyNuGet -Location https://www.nuget.org/api/v2 -ProviderName NuGet
+   Get-PackageSource
 
-Find-Package Microsoft.ReportViewer.Common -AllVersions
-Install-Package Microsoft.ReportViewer.Common -RequiredVersion 10.0.40219.1
+   Find-Package Microsoft.ReportViewer.Common -AllVersions
+   Install-Package Microsoft.ReportViewer.Common -RequiredVersion 10.0.40219.1
 
-Copy-Item -Path "C:\Program Files\PackageManagement\NuGet\Packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.Common.dll" -Destination "C:\Program Files\Microsoft Corporation\RMLUtils"
-Copy-Item -Path "C:\Program Files\PackageManagement\NuGet\Packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.DataVisualization.dll" -Destination "C:\Program Files\Microsoft Corporation\RMLUtils"
-Copy-Item -Path "C:\Program Files\PackageManagement\NuGet\Packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.ProcessingObjectModel.dll" -Destination "C:\Program Files\Microsoft Corporation\RMLUtils"
+   Copy-Item -Path "C:\Program Files\PackageManagement\NuGet\Packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.Common.dll" -Destination "C:\Program Files\Microsoft Corporation\RMLUtils"
+   Copy-Item -Path "C:\Program Files\PackageManagement\NuGet\Packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.DataVisualization.dll" -Destination "C:\Program Files\Microsoft Corporation\RMLUtils"
+   Copy-Item -Path "C:\Program Files\PackageManagement\NuGet\Packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.ProcessingObjectModel.dll" -Destination "C:\Program Files\Microsoft Corporation\RMLUtils"
 
-Find-Package Microsoft.ReportViewer.WinForms -AllVersions
-Install-Package Microsoft.ReportViewer.WinForms -RequiredVersion 10.0.40219.1
+   Find-Package Microsoft.ReportViewer.WinForms -AllVersions
+   Install-Package Microsoft.ReportViewer.WinForms -RequiredVersion 10.0.40219.1
 
-Copy-Item -Path "C:\Program Files\PackageManagement\NuGet\Packages\Microsoft.ReportViewer.WinForms.10.0.40219.1\lib\Microsoft.ReportViewer.WinForms.dll" -Destination "C:\Program Files\Microsoft Corporation\RMLUtils"
-```
+   Copy-Item -Path "C:\Program Files\PackageManagement\NuGet\Packages\Microsoft.ReportViewer.WinForms.10.0.40219.1\lib\Microsoft.ReportViewer.WinForms.dll" -Destination "C:\Program Files\Microsoft Corporation\RMLUtils"
+   ```
+
+1. You must download and install a ReporterViewer fix to allow links within the ReadTrace reports to work properly. To download the ReporterViewer fix, go to [Microsoft Visual Studio 2010 Service Pack 1 Report Viewer (KB2549864)](https://www.microsoft.com/en-us/download/details.aspx?id=27231).
 
 ### Dependencies for Expander
 
@@ -117,7 +119,7 @@ Make sure that the compression and decompression controls are available either i
 
 You can obtain these DLLs from the respective software packages of the vendors:
 
-- <https://www.rarlab.com/rar/UnRARDLL.exe>
+- <https://www.rarlab.com/rar_add.htm> - find the *UnRAR.dll* dynamic library for Windows software developers
 
 - <https://www.7-zip.org/a/7z1900-x64.exe>
 

@@ -25,9 +25,9 @@ If the POS application is configured to use the personal ID and password sign-in
 
 ## Resolution 2
 
-If the POS application is configured to use the Azure Active Directory (Azure AD) sign-in authentication method, follow these steps to solve the issue:
+If the POS application is configured to use the Microsoft Entra sign-in authentication method, follow these steps to solve the issue:
 
 1. In Commerce headquarters, go to **Commerce shared parameters** > Identity Providers**.
-1. For identity provider issuers of the **Azure Active Directory** type, in the **Relying parties** and **Server resource IDs** sections, ensure that the records are correctly configured.
+1. For identity provider issuers of the **Microsoft Entra ID** type, in the **Relying parties** and **Server resource IDs** sections, ensure that the records are correctly configured.
 
 For detailed configuration steps, see [Update identity providers settings in Commerce headquarters](/dynamics365/commerce/cpos-custom-aad#update-identity-providers-settings-in-commerce-headquarters).

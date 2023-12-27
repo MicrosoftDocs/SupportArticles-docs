@@ -5,6 +5,7 @@ ms.date: 07/22/2020
 ms.custom: sap:Replication, change tracking, change data capture
 ms.reviewer: holgerl
 ---
+
 # Error 1205 when you configure transactional replication
 
 This article helps you resolve a problem that occurs when you configure transactional replication in SQL Server.
@@ -43,7 +44,7 @@ This issue occurs if the rowcount estimate for the number `MSreplication_subscri
 
 To resolve this issue, use one of the following methods.
 
-- Method 1: Use the `DBCC UPDATEUSAGE` command
+- Method 1: Use the `DBCC UPDATEUSAGE` command.
 
     To resolve this issue, update the incorrect rowcount value. To do this, run the following command:
 
@@ -52,9 +53,9 @@ To resolve this issue, use one of the following methods.
     ```
 
     > [!NOTE]
-    > The `DBCC UPDATEUSAGE` command determines the correct values for rows, used pages, reserved pages, leaf pages, and data page counts for each partition in a table. If these values are correct, the `DBCC UPDATEUSAGE`  command returns no data. If inaccurate values are found and corrected, `DBCC UPDATEUSAGE` returns the rows and columns that are updated.
+    > The `DBCC UPDATEUSAGE` command determines the correct values for rows, used pages, reserved pages, leaf pages, and data page counts for each partition in a table. If these values are correct, the `DBCC UPDATEUSAGE` command returns no data. If inaccurate values are found and corrected, `DBCC UPDATEUSAGE` returns the rows and columns that are updated.
 
-- Method 2: Use the `ALTER INDEX` statement
+- Method 2: Use the `ALTER INDEX` statement.
 
     To resolve this issue, rebuild the indexes that are associated with the `MSreplication_subscriptions` table. To do this, use the following statement:
 
@@ -64,21 +65,21 @@ To resolve this issue, use one of the following methods.
 
 ## More information
 
-When the issue that is mentioned in the [Symptoms](#symptoms) section occurs, the rowcount estimate for the MSreplication_subscriptions system table can be as high as **4,294,967,296**. To check the rowcount value, use one of the following methods.
+When the issue that's mentioned in the [Symptoms](#symptoms) section occurs, the rowcount estimate for the `MSreplication_subscriptions` system table can be as high as **4,294,967,296**. To check the rowcount value, use one of the following methods.
 
-- Method 1: Use SQL Server Management Studio
+- Method 1: Use SQL Server Management Studio.
 
     To use SQL Server Management Studio to check the rowcount value for the `MSreplication_subscriptions` system table, follow these steps:
 
     1. Start SQL Server Management Studio, and then connect to the subscriber server instance.
-    2. Expand **Databases**, and then expand the subscriber database.
-    3. Expand **Tables**, and then expand **System Tables**.
-    4. Right-click **dbo.MSreplication_subscriptions**, and then select **Properties**.
-    5. Select **Storage**, and then verify the rowcount value in the **Row count** field.
+    1. Expand **Databases**, and then expand the subscriber database.
+    1. Expand **Tables**, and then expand **System Tables**.
+    1. Right-click **dbo.MSreplication_subscriptions**, and then select **Properties**.
+    1. Select **Storage**, and then verify the rowcount value in the **Row count** field.
 
-- Method 2: Use a query statement
+- Method 2: Use a query statement.
 
-    To check the rowcount value for the MSreplication_subscriptions system table, run the following query:
+    To check the rowcount value for the `MSreplication_subscriptions` system table, run the following query:
 
     ```sql
     SELECT rows, * FROM sys.partitions WHERE object_id = object_id('MSreplication_subscriptions')
@@ -86,6 +87,6 @@ When the issue that is mentioned in the [Symptoms](#symptoms) section occurs, th
 
 ## References
 
-- For more information about detecting and ending deadlocks, see: [Detecting and Ending Deadlocks](/previous-versions/sql/sql-server-2008-r2/ms178104(v=sql.105))
-- For more information about the ALTER statement, see: [Transact-SQL statements](/sql/t-sql/statements/statements)
-- For more information about the DBCC UPDATEUSAGE command, see: [DBCC UPDATEUSAGE (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-updateusage-transact-sql)
+- For more information about detecting and ending deadlocks, see [Detecting and Ending Deadlocks](/previous-versions/sql/sql-server-2008-r2/ms178104(v=sql.105))
+- For more information about the `ALTER` statement, see [Transact-SQL statements](/sql/t-sql/statements/statements)
+- For more information about the `DBCC UPDATEUSAGE` command, see [DBCC UPDATEUSAGE (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-updateusage-transact-sql)

@@ -26,7 +26,7 @@ Microsoft has developed a new Windows servicing technology that's named [KIR](ht
 > [!IMPORTANT]  
 > KIRs apply to only nonsecurity updates. This is because rolling back a fix for a nonsecurity update doesn't create a potential security vulnerability.
 
-Microsoft manages the KIR deployment process for non-enterprise devices. For enterprise devices, Microsoft provides KIR policy definition MSI files. Enterprises can then use Group Policy to deploy KIRs in hybrid Azure Active Directory (Azure AD) or Active Directory Domain Services (AD DS) domains.
+Microsoft manages the KIR deployment process for non-enterprise devices. For enterprise devices, Microsoft provides KIR policy definition MSI files. Enterprises can then use Group Policy to deploy KIRs in hybrid Microsoft Entra ID or Active Directory Domain Services (AD DS) domains.
 
 > [!NOTE]  
 > You have to restart the affected computers in order to apply this Group Policy change.
@@ -63,9 +63,11 @@ To use Group Policy to apply a KIR to a single device, follow these steps:
 
 For more information about how to use the Local Group Policy Editor, see [Working with the Administrative Template policy settings using the Local Group Policy Editor](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn789184(v=ws.11)).
 
-## Apply a KIR to devices in a hybrid Azure AD or AD DS domain using Group Policy
+<a name='apply-a-kir-to-devices-in-a-hybrid-azure-ad-or-ad-ds-domain-using-group-policy'></a>
 
-To apply a KIR policy definition to devices that belong to a hybrid Azure AD or AD DS domain, follow these steps:
+## Apply a KIR to devices in a hybrid Microsoft Entra ID or AD DS domain using Group Policy
+
+To apply a KIR policy definition to devices that belong to a hybrid Microsoft Entra ID or AD DS domain, follow these steps:
 
 1. [Download and install the KIR MSI files](#install)
 1. [Create a Group Policy Object (GPO)](#gpo).
@@ -329,5 +331,5 @@ For more information, see [Monitor device configuration profiles in Microsoft In
 - [GPMC How To](/previous-versions/windows/it-pro/windows-server-2003/cc783034(v=ws.10))
 - [Create WMI Filters for the GPO (Windows 10) - Windows security](/windows/security/threat-protection/windows-firewall/create-wmi-filters-for-the-gpo)
 - [Edit a Group Policy object from GPMC](/previous-versions/windows/it-pro/windows-server-2003/cc759123(v=ws.10))
-- [Create and manage group policy in Azure AD Domain Services](/azure/active-directory-domain-services/manage-group-policy)
+- [Create and manage group policy in Microsoft Entra Domain Services](/azure/active-directory-domain-services/manage-group-policy)
 - [Use Windows 10/11 templates to configure group policy settings in Microsoft Intune](/mem/intune/configuration/administrative-templates-windows)
