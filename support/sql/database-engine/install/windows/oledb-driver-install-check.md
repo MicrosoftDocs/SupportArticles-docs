@@ -127,5 +127,5 @@ If there are both 32-bit and 64-bit versions of the provider, run the command ag
 ## More information
 
 - [ODBC driver installation check](odbc-driver-install-checking.md)
-- [.NET driver installation check](net-driver-install-check.md)
+- [.NET data provider installation check](net-driver-install-check.md)
 - [Driver installation check](driver-install-checking.md)
