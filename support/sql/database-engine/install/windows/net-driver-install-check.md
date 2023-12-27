@@ -34,7 +34,7 @@ The first three are contained in *System.Data.DLL* and the last one is contained
 
 ## Default .NET search path
 
-Unlike loading ODBC drivers and OLE DB providers, the .NET data providers don’t rely on the registry. Instead, the .NET loader uses a search heuristic that’s described as follows:
+Unlike loading ODBC drivers and OLE DB providers, the .NET data providers don’t rely on the registry. Instead, the .NET loader uses a search heuristic that's described as follows:
 
 1. The `DEVPATH` environment variable is checked for a shared folder. You should only use this when developing shared assemblies. Once the development is completed, the assembly should be installed in the Global Assembly Cache (GAC).
 1. The GAC is checked to see if the assembly is shared between applications. If the assembly isn't in the GAC, it's a private assembly.
