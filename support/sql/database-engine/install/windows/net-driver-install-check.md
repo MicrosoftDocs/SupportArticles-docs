@@ -125,7 +125,7 @@ If your script is located in `C:\temp` and you want to retrieve the authenticati
 .\get-sqlauthscheme.ps1 sqlprod01
 ```
 
-In general, loading .NET providers won't be an issue if the assembly/DLL exists. The most common problem is authentication issues, which you can [test using an equivalent OLE DB provider via a UDL file](../connect/test-oledb-connectivity-use-udl-file.md).
+In general, loading .NET providers won't be an issue if the assembly/DLL exists. The most common problem is authentication issues, which you can [test using an equivalent OLE DB provider via a UDL file](../../connect/test-oledb-connectivity-use-udl-file.md).
 
 For help with connection strings for unfamiliar drivers, see [The Connection Strings Reference](https://www.connectionstrings.com/).
 
