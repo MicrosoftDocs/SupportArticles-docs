@@ -12,7 +12,7 @@ manager: shujoshi
 This article helps you troubleshoot and resolve th error message that repeatedly prompts user to update Copilot for Sales add-in for Outlook.
 
 > [!NOTE]
-> Sales Copilot is rebranded as Copilot for Sales in January 2024. The screenshots in this article will be updated with the new name soon.
+> Microsoft Sales Copilot is rebranded as Microsoft Copilot for Sales in January 2024. The screenshots in this article will be updated with the new name soon.
 
 ## Who is affected?
 
@@ -43,7 +43,7 @@ If you're using the Outlook desktop app, a subsequent error message is displayed
 
 ## Cause
 
-Permission changes in the new Copilot for Sales add-in for Outlook.
+Permission changes occurred in the new Copilot for Sales add-in for Outlook.
 
 Certain permission changes require explicit administrator consent or reinstallation of the Copilot for Sales Outlook add-in. These permission changes are always tied to a recent update to the Copilot for Sales Outlook add-in. You can check when the latest update has been applied to the add-in on the corresponding [App Source Details page](https://appsource.microsoft.com/en-US/product/office/WA200003979?tab=DetailsAndSupport). If you see a recent update to the Copilot for Sales Outlook add-in, it's likely that the error is tied to corresponding permission changes due to the update.
 

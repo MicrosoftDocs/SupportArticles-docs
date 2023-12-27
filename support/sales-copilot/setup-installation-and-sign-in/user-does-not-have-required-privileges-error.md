@@ -12,7 +12,7 @@ manager: shujoshi
 This article provides a resolution for the error message that occurs in Microsoft Copilot for Sales when the organization is in [Administration mode](/power-platform/admin/admin-mode).
 
 > [!NOTE]
-> Sales Copilot is rebranded as Copilot for Sales in January 2024. The screenshots in this article will be updated with the new name soon.
+> Microsoft Sales Copilot is rebranded as Microsoft Copilot for Sales in January 2024. The screenshots in this article will be updated with the new name soon.
 
 ## Who is affected?
 
@@ -37,7 +37,7 @@ The error might be displayed before or after you sign in to an environment from 
 
 The **Administration mode** is enabled for the environment and the affected users aren't administrators.
 
-When an administrator enables the **Administration mode** for an environment, regular users, regardless of their role assignment, won't be able to access the environment. The user who is already signed in or tries to sign in to the environment, won't be able to access data from the environment and will see the error message.
+When an administrator enables the **Administration mode** for an environment, regular users, regardless of their role assignment, can't access the environment. The user who is already signed in or tries to sign in to the environment can't access data from the environment and will see the error message.
 
 :::image type="content" source="media/user-does-not-have-required-privileges-error/enabled-administration-mode.png" alt-text="Screenshot that shows the Administration mode is enabled for the environment.":::
 

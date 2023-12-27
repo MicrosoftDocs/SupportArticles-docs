@@ -11,7 +11,7 @@ ms.author: shjais
 This article helps you troubleshoot and resolve the "Access needed" error in Microsoft Copilot for Sales when a user is either disabled or not a member of any business unit in Microsoft Dynamics 365.
 
 > [!NOTE]
-> Sales Copilot is rebranded as Copilot for Sales in January 2024. The screenshots in this article will be updated with the new name soon.
+> Microsoft Sales Copilot is rebranded as Microsoft Copilot for Sales in January 2024. The screenshots in this article will be updated with the new name soon.
 
 ## Who is affected?
 
@@ -26,7 +26,7 @@ This article helps you troubleshoot and resolve the "Access needed" error in Mic
 
 ## Symptoms
 
-When a Dynamics 365 user tries to sign in to Copilot for Sales, the following error message is displayed:
+When a Microsoft Dynamics 365 user tries to sign in to Copilot for Sales, the following error message is displayed:
 
 > Access needed
 
@@ -36,7 +36,7 @@ When a Dynamics 365 user tries to sign in to Copilot for Sales, the following er
 
 The **Access needed** error message is displayed because of one of the following reasons:
 
-- The user is either disabled or not a member of any business unit in Dynamics 365.
+- The user is either disabled or not a member of any business unit in Microsoft Dynamics 365.
 - The user isn't a member of Microsoft Entra ID security group.
 
 ## Resolution 1: Enable the user in Dynamics 365

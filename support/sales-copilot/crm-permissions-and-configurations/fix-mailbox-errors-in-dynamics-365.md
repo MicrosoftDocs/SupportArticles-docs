@@ -1,6 +1,6 @@
 ---
 title: Fix mailbox errors in Dynamics 365
-description: Resolves the fix mailbox errors in Dynamics 365 error that might occur when you try to save an email or a meeting to Dynamics 365 using Microsoft Copilot for Sales in Outlook.
+description: Resolves the error that might occur when you try to save an email or a meeting to Dynamics 365 using Microsoft Copilot for Sales in Outlook.
 ms.date: 12/27/2023
 ms.service: microsoft-sales-copilot
 author: sbmjais
@@ -12,7 +12,7 @@ manager: shujoshi
 This article helps you troubleshoot and resolve the "Fix mailbox errors in Dynamics 365" error in Microsoft Copilot for Sales in Outlook.
 
 > [!NOTE]
-> Sales Copilot is rebranded as Copilot for Sales in January 2024. The screenshots in this article will be updated with the new name soon.
+> Microsoft Sales Copilot is rebranded as Microsoft Copilot for Sales in January 2024. The screenshots in this article will be updated with the new name soon.
 
 ## Who is affected?
 
@@ -27,7 +27,7 @@ This article helps you troubleshoot and resolve the "Fix mailbox errors in Dynam
 
 ## Symptoms
 
-When you open Copilot for Sales in Outlook, and try to save an email or a meeting to Dynamics 365, you see the following error message:
+When you open Copilot for Sales in Outlook, and try to save an email or a meeting to Microsoft Dynamics 365, you see the following error message:
 
 > Fix mailbox errors in Dynamics 365
 
@@ -35,13 +35,13 @@ When you open Copilot for Sales in Outlook, and try to save an email or a meetin
 
 ## Cause
 
-One or more sync errors have occurred with server-side synchronization.
+This issue occurs because one or more sync errors occur with the server-side synchronization.
 
-Copilot for Sales requires server-side synchronization to synchronize emails and meetings to Dynamics 365. When the server-side synchronization encounters an error while attempting the synchronization, Copilot for Sales detects and displays this error message for the user to take action and resolve the error.
+Copilot for Sales requires the server-side synchronization to synchronize emails and meetings to Microsoft Dynamics 365. When the server-side synchronization encounters an error while attempting the synchronization, Copilot for Sales detects and displays this error message for you to take action and resolve the error.
 
 ## Resolution
 
-To resolve the error, you must locate the specific error as part of the mailbox alert wall, read the description, and take action. The user can also delete the error to suppress it.
+To resolve the error, you must locate the specific error as part of the mailbox alert wall, read the description, and take action. You can also delete the error to suppress it.
 
 1. Open the CRM instance you connected to Copilot for Sales.
 

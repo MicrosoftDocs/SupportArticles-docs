@@ -11,7 +11,7 @@ ms.author: shjais
 This article helps you troubleshoot and resolve the error that occurs in Microsoft Copilot for Sales when you can't sign in to Salesforce due to a blocked Salesforce connector.
 
 > [!NOTE]
-> Sales Copilot is rebranded as Copilot for Sales in January 2024. The screenshots in this article will be updated with the new name soon.
+> Microsoft Sales Copilot is rebranded as Microsoft Copilot for Sales in January 2024. The screenshots in this article will be updated with the new name soon.
 
 ## Who is affected?
 
@@ -26,7 +26,7 @@ This article helps you troubleshoot and resolve the error that occurs in Microso
 
 ## Symptoms
 
-When you try to sign in to Salesforce from Microsoft Copilot for Sales, the following error message is displayed with the error code as `ConnectionApiPolicyViolation`:
+When you try to sign in to Salesforce from Microsoft Copilot for Sales, the following error message is displayed with the error code `ConnectionApiPolicyViolation`:
 
 > Something went wrong
 
@@ -51,3 +51,5 @@ You must unblock the Salesforce connector in the DLP policy to resolve this issu
 ## More information
 
 If your issue is still not resolved, go to the [Copilot for Sales - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
+
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]

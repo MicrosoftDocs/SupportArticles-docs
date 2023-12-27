@@ -12,7 +12,7 @@ manager: shujoshi
 This article helps you troubleshoot and resolve the error message that occurs in Microsoft Copilot for Sales due to a disabled mailbox in Microsoft Dynamics 365.
 
 > [!NOTE]
-> Sales Copilot is rebranded as Copilot for Sales in January 2024. The screenshots in this article will be updated with the new name soon.
+> Microsoft Sales Copilot is rebranded as Microsoft Copilot for Sales in January 2024. The screenshots in this article will be updated with the new name soon.
 
 ## Who is affected?
 
@@ -61,7 +61,7 @@ This error occurs when the user's mailbox is disabled or the mailbox is missing 
     :::image type="content" source="media/update-settings-to-save-emails-error/activate-mailbox.png" alt-text="Screenshot that shows how to activate a mailbox.":::
 
     > [!NOTE]
-    > To see any errors or warnings related to server-side synchronization, select **Alerts** in the left pane. Each alert has a link to more information about the issue and how to resolve it.
+    > To see any errors or warnings related to the server-side synchronization, select **Alerts** in the left pane. Each alert has a link to more information about the issue and how to resolve it.
 
 6. Select **Save & Close**.
 

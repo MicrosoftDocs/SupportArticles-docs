@@ -12,7 +12,7 @@ manager: shujoshi
 This article helps you troubleshoot and resolve sign in issues when the Microsoft Power Platform app is blocked by an administrator in Microsoft Copilot for Sales.
 
 > [!NOTE]
-> Sales Copilot is rebranded as Copilot for Sales in January 2024. The screenshots in this article will be updated with the new name soon.
+> Microsoft Sales Copilot is rebranded as Microsoft Copilot for Sales in January 2024. The screenshots in this article will be updated with the new name soon.
 
 ## Who is affected?
 
@@ -33,7 +33,7 @@ When you try to sign in to Salesforce CRM from the [Copilot for Sales add-in for
 
 :::image type="content" source="media/failure-passed-to-redirect-url-blocked-app/tsg-app-block-error.png" alt-text="Screenshot that shows the Failure passed to redirect url error.":::
 
-In Salesforce CRM, Microsoft Power Platform is shown as blocked on the **Connected Apps OAuth Usage** page.
+In Salesforce CRM, the Microsoft Power Platform app is shown as blocked on the **Connected Apps OAuth Usage** page.
 
 :::image type="content" source="media/failure-passed-to-redirect-url-blocked-app/power-platform-blocked.png" alt-text="Screenshot that shows Microsoft Power Platform is blocked in Salesforce CRM.":::
 
@@ -41,11 +41,11 @@ In Salesforce CRM, Microsoft Power Platform is shown as blocked on the **Connect
 
 The Microsoft Power Platform app in Salesforce CRM is blocked by an administrator.
 
-Copilot for Sales connects to Salesforce CRM through the **Microsoft Power Platform** connected app. When the **Microsoft Power Platform** app is blocked by an administrator, the Salesforce authentication process fails with the error message.
+Copilot for Sales connects to Salesforce CRM through the Microsoft Power Platform connected app. When the Microsoft Power Platform app is blocked by an administrator, the Salesforce authentication process fails with the error message.
 
 ## Resolution
 
-Copilot for Sales uses the **Microsoft Power Platform** connected app to connect to Salesforce CRM. Ensure that the connected app isn't blocked in Salesforce CRM.
+Copilot for Sales uses theMicrosoft Power Platform connected app to connect to Salesforce CRM. Ensure that the connected app isn't blocked in Salesforce CRM.
 
 1. Sign in to Salesforce CRM as an administrator.
 1. Go to **Setup** > **Platform Tools** > **Apps** > **Connected Apps** > **Connected Apps OAuth Usage**.
@@ -58,3 +58,5 @@ Copilot for Sales uses the **Microsoft Power Platform** connected app to connect
 ## More information
 
 If your issue is still not resolved, go to the [Copilot for Sales - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
+
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]

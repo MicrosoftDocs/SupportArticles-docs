@@ -12,7 +12,7 @@ manager: shujoshi
 This article helps you troubleshoot and resolve authentication issues when connecting to Salesforce CRM from [Microsoft Copilot for Sales add-in for Outlook](/microsoft-sales-copilot/use-sales-copilot-outlook).
 
 > [!NOTE]
-> Sales Copilot is rebranded as Copilot for Sales in January 2024. The screenshots in this article will be updated with the new name soon.
+> Microsoft Sales Copilot is rebranded as Microsoft Copilot for Sales in January 2024. The screenshots in this article will be updated with the new name soon.
 
 ## Who is affected?
 
@@ -35,13 +35,13 @@ When you try to sign in to Salesforce CRM from Copilot for Sales add-in for Outl
 
 ## Cause
 
-Policies of the Microsoft Power Platform connected app blocks users from connecting to Salesforce CRM.
+Policies of the Microsoft Power Platform connected app block users from connecting to Salesforce CRM.
 
 Copilot for Sales connects to Salesforce CRM through the **Microsoft Power Platform** connected app. To sign in to Salesforce CRM from Copilot for Sales, users must provide their consent to the **Microsoft Power Platform** app to contact Salesforce CRM on their behalf. When consent can't be provided, the sign-in process fails.
 
 ## Resolution
 
-Copilot for Sales uses the **Microsoft Power Platform** connected app to connect to Salesforce CRM. Ensure that the policies of the **Microsoft Power Platform** app are configured to allow users to connect to Salesforce CRM.
+Copilot for Sales uses the Microsoft Power Platform connected app to connect to Salesforce CRM. Ensure that the policies of the **Microsoft Power Platform** app are configured to allow users to connect to Salesforce CRM.
 
 1. Sign in to Salesforce CRM as an administrator.
 
@@ -68,3 +68,5 @@ Copilot for Sales uses the **Microsoft Power Platform** connected app to connect
 ## More information
 
 If your issue is still not resolved, go to the [Copilot for Sales - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
+
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]

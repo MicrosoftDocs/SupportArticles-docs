@@ -9,10 +9,10 @@ manager: shujoshi
 ---
 # "No access to Dynamics 365" error occurs in Copilot for Sales
 
-This article helps you troubleshoot and resolve issues when users don't have access to Dynamics 365.
+This article helps you troubleshoot and resolve issues when users don't have access to Dynamics 365 through [Copilot for Sales add-in for Outlook](/microsoft-sales-copilot/use-sales-copilot-outlook).
 
 > [!NOTE]
-> Sales Copilot is rebranded as Copilot for Sales in January 2024. The screenshots in this article will be updated with the new name soon.
+> Microsoft Sales Copilot is rebranded as Microsoft Copilot for Sales in January 2024. The screenshots in this article will be updated with the new name soon.
 
 ## Who is affected?
 
@@ -27,11 +27,11 @@ This article helps you troubleshoot and resolve issues when users don't have acc
 
 ## Symptoms
 
-After a user signs in to Dynamics 365 through [Copilot for Sales add-in for Outlook](/microsoft-sales-copilot/use-sales-copilot-outlook), the following error message is displayed:
+After a user signs in to Dynamics 365 through Copilot for Sales add-in for Outlook, the following error message is displayed:
 
 > You don't seem to have access to Dynamics 365. Please contact your admin, or sign in with a different Microsoft account.
 
-:::image type="content" source="media/no-access-to-dynamics-365-error/no-access-d365.png" alt-text="Screenshot that shows the error that occurs when the user try to sign in.":::
+:::image type="content" source="media/no-access-to-dynamics-365-error/no-access-d365.png" alt-text="Screenshot that shows the error that occurs when the user tries to sign in.":::
 
 ## Cause
 

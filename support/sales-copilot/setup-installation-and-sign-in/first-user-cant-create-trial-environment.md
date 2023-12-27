@@ -9,10 +9,10 @@ manager: shujoshi
 ---
 # First Salesforce CRM user can't access Copilot for Sales
 
-This article helps you troubleshoot and resolve the error messages that occurs in Microsoft Copilot for Sales related to signing in to Salesforce.
+This article helps you troubleshoot and resolve the error message that occurs in Microsoft Copilot for Sales related to signing in to Salesforce.
 
 > [!NOTE]
-> Sales Copilot is rebranded as Copilot for Sales in January 2024. The screenshots in this article will be updated with the new name soon.
+> Microsoft Sales Copilot is rebranded as Microsoft Copilot for Sales in January 2024. The screenshots in this article will be updated with the new name soon.
 
 ## Who is affected?
 
@@ -38,9 +38,9 @@ When the first user in an organization tries to sign-in to Salesforce CRM from C
 
 Tenant's administrators have disabled trial environment creation for non-administrator users.
 
-## Resoluton
+## Resolution
 
-As a tenant administrator, followg these steps to allow users to create trial environments:
+As a tenant administrator, follow these steps to allow users to create trial environments:
 
 1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/) with your administrator credentials.
 2. In the left navigation pane, select **Settings**.
@@ -54,3 +54,5 @@ As a tenant administrator, followg these steps to allow users to create trial en
 ## More information
 
 If your issue is still not resolved, go to the [Copilot for Sales - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
+
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]

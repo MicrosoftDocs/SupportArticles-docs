@@ -12,7 +12,7 @@ manager: shujoshi
 This article helps you troubleshoot and resolve an issue where users can't see data in Microsoft Copilot for Sales.
 
 > [!NOTE]
-> Sales Copilot is rebranded as Copilot for Sales in January 2024. The screenshots in this article will be updated with the new name soon.
+> Microsoft Sales Copilot is rebranded as Microsoft Copilot for Sales in January 2024. The screenshots in this article will be updated with the new name soon.
 
 ## Who is affected?
 
@@ -31,13 +31,11 @@ When a user opens Copilot for Sales in Outlook, the following error message is d
 
 > Something went wrong
 
-:::image type="content" source="media/no-column-error/no-such-column-error.png" alt-text="Screenshot that shows the details of the Smething went wrong error.":::
+:::image type="content" source="media/no-column-error/no-such-column-error.png" alt-text="Screenshot that shows the details of the Something went wrong error.":::
 
 ## Cause
 
-The field-level security on field has been set to invisible in Salesforce CRM.
-
-When the field-level security is set to invisible, Copilot for Sales can't reference that field as expected in configuration.
+The field-level security on field is set to invisible in Salesforce CRM. As a result, Copilot for Sales can't reference that field as expected in configuration.
 
 ## Resolution 1: Fix field-level security in Salesforce CRM
 
@@ -86,3 +84,5 @@ Change the admin settings from the Copilot for Sales admin settings in Microsoft
 ## More information
 
 If your issue is still not resolved, go to the [Copilot for Sales - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
+
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]

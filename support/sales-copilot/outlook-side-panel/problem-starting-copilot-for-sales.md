@@ -12,7 +12,7 @@ manager: shujoshi
 This article helps you troubleshoot and resolve the error message that occurs in Microsoft Copilot for Sales when users can't open the Copilot for Sales pane in Outlook.
 
 > [!NOTE]
-> Sales Copilot is rebranded as Copilot for Sales in January 2024. The screenshots in this article will be updated with the new name soon.
+> Microsoft Sales Copilot is rebranded as Microsoft Copilot for Sales in January 2024. The screenshots in this article will be updated with the new name soon.
 
 ## Who is affected?
 
@@ -93,7 +93,7 @@ If the notification doesn't appear in the address bar, follow these steps:
 
     :::image type="content" source="media/problem-starting-copilot-for-sales/prevent-cross-site-tracking.png" alt-text="Screenshot that shows the Prevent cross-site tracking option in Safari.":::
 
-1. Refresh the page, and then open the Copilot for Sales add-in. When asked to allow pop-ups, allow pop-ups from the Office 365 website.
+1. Refresh the page, and then open the Copilot for Sales add-in. When you're asked to allow pop-ups, allow pop-ups from the Office 365 website.
 
     If you allowed pop-ups, refresh the page, and then open the Copilot for Sales add-in.
 

@@ -9,7 +9,7 @@ manager: shujoshi
 ---
 # Copilot for Sales doesn't connect to Dynamics 365 with two-factor authentication enabled
 
-This article helps you troubleshoot and resolve an issue where the Copilot for Sales app for Microsoft Teams doesn't connect to Dynamics 365 when two-factor authentication is enabled.
+This article helps you troubleshoot and resolve an issue where the Copilot for Sales app for Microsoft Teams doesn't connect to Microsoft Dynamics 365 when the [two-factor authentication (2FA)](https://www.microsoft.com/security/business/security-101/what-is-two-factor-authentication-2fa) is enabled.
 
 ## Who is affected?
 
@@ -28,9 +28,9 @@ The Copilot for Sales app can't communicate with Dynamics 365, but a user can ac
 
 ## Cause
 
-Two-factor authentication is enabled in Dynamics 365, but not in Microsoft Teams.
+The two-factor authentication is enabled in Dynamics 365, but not in Microsoft Teams.
 
-If the Dynamics 365 organization has two-factor authentication enabled, but Microsoft Teams doesn't, the Copilot for Sales app for Teams can't communicate with Dynamics 365. This is intended to prevent security incidents. When Dynamics 365 has two-factor authentication enabled, any communication from users that logged into an app without two-factor authentication is considered as untrusted.
+If the Dynamics 365 organization has two-factor authentication enabled, but Microsoft Teams doesn't, the Copilot for Sales app for Microsoft Teams can't communicate with Dynamics 365. This is intended to prevent security incidents. When Dynamics 365 has two-factor authentication enabled, any communication from users that logged into an app without two-factor authentication is considered as untrusted.
 
 ## Resolution
 
