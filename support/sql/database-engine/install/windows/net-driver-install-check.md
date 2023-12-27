@@ -1,11 +1,11 @@
 ---
-title: .NET driver installation check
+title: .NET data provider installation check
 description: This article provides an overview of the essential aspects of .NET providers, their default search paths, and troubleshooting guidelines.
 ms.date: 12/15/2023
 ms.custom: sap:Installation, Patching and Upgrade
 ms.reviewer: mastewa, jopilov , prmadhes, v-sidong
 ---
-# .NET driver installation check
+# .NET data provider installation check
 
 When using .NET providers in Microsoft .NET, it's crucial to understand the various components and their dependencies for seamless integration into your applications. This article outlines the essential aspects of .NET providers, their default search paths, and troubleshooting guidelines.
 
@@ -43,7 +43,7 @@ Unlike loading ODBC drivers and OLE DB providers, the .NET data providers don't 
 1. A subfolder in the application folder with the same name as the file containing the assembly's manifest is checked.
 1. If the configuration file has an item, the `privatePath` attribute gives the name of one or more subfolders to be searched under the application folder.
 
-The above is a general DLL load algorithm. Using built-in .NET providers, the DLL is almost always in one of the following folders:
+The search heuristic is a general DLL load algorithm. Using built-in .NET providers, the DLL is almost always in one of the following folders:
 
 - *C:\windows\microsoft.net\Framework (32-bit assemblies)*
 - *C:\windows\microsoft.net\Framework64 (64-bit assemblies)*
@@ -62,7 +62,6 @@ For more complete guidelines, see [How the Runtime Locates Assemblies](/dotnet/f
 ## Third-party providers
 
 Many Microsoft-installed providers like Analysis Services don't come with the .NET Framework. In addition, there are third-party .NET providers, such as Oracle's ODP Provider which are installed independently.
-
 
 For third-party providers, make sure the assembly is located in one of the folders above and that it's 64-bit or 32-bit depending on the application.
 
