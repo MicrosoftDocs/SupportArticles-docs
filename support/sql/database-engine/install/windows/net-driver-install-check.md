@@ -14,7 +14,7 @@ When using .NET providers in Microsoft .NET, it's crucial to understand the vari
 
 ## Microsoft .NET providers
 
-Microsoft .NET includes four providers that are shipped with the .NET Framework:
+Microsoft .NET includes four data providers that are shipped with the .NET Framework:
 
 - *System.Data.SqlClient*
 - *System.Data.Odbc*
@@ -70,7 +70,7 @@ The following table shows the DLL and assembly names of some common providers:
 
 |Friendly name|Assembly name|DLL|
 |-|-|-|
-|SQL Provider|*System.Data.SqlClient*|*System.Data.DLL*|
+|.NET Data Provider for SQL Server|*System.Data.SqlClient*|*System.Data.DLL*|
 |OLE DB Provider|*System.Data.OleDb*|*System.Data.DLL*|
 |ODBC Provider|*System.Data.Odbc*|*System.Data.DLL*|
 |Analysis Services Provider|*Analysis Services Provider*|*Microsoft.AnalysisServices.AdomdClient*	*Microsoft.AnalysisServices.AdomdClient.DLL*|

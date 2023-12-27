@@ -114,7 +114,7 @@ These are the paths in Registry Editor for 32-bit machines:
 
 ## Support for third-party providers
 
-As with ODBC drivers, support for third-party providers is limited to validating the ProgID points to a valid CLSID and that the `InProcServer32` subkey points to the correct DLL. If the path is incorrect or the registry entry doesn't exist, reinstall the provider or contact the vendor. If the files exist but the registry entries don't, you can manually register the provider using `REGSVR32`. To register a COM DLL, run the following command at an elevated command prompt:
+Support for third-party OLE DB providers is limited to validating the ProgID points to a valid CLSID and that the `InProcServer32` subkey points to the correct DLL. If the path is incorrect or the registry entry doesn't exist, reinstall the provider or contact the vendor. If the files exist but the registry entries don't, you can manually register the provider using `REGSVR32`. To register a COM DLL, run the following command at an elevated command prompt:
 
 ```cmd
 Regsvr32 sqlncli11
