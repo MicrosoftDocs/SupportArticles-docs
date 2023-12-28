@@ -12,4 +12,6 @@ items:
     href: inaccessible-image.md
   - name: Error - Web socket is closed or could not be opened
     href: web-socket-is-closed-or-could-not-be-opened.md
+  - name: Image pull takes a long time to run
+    href: long-image-pulls.md
 
