@@ -33,42 +33,40 @@ Consider a scenario where you encounter the following issues after you upgrade t
 
   If you have a network capture, it may look like this, where the server responds to the Client Hello packet by closing the connection:
 
-  (Add screenshot)
+  :::image type="content" source="media/ssl-errors-after-tls-1-2/ss-errors-after-upgrade-netwk-capture.png" alt-text="network capture that shows how the server responds to the Client Hello packet.":::
 
 ## Resolution
   
 To resolve these errors, follow these steps:
 
   1. In the SQL Server Configuration Manager, right-click on **Protocols for InstanceName**, and select **Properties**.
+   
+    :::image type="content" source="media/ssl-errors-after-tls-1-2/mmc-cert-properties.png" alt-text="alt text":::
 
   1. Select the **Certificate** tab and check which certificate is being used:
 
-    (Add screenshot)
+     :::image type="content" source="media/ssl-errors-after-tls-1-2/protocols-for-server-cert-tab.png" alt-text="Check which certificate is used.":::
 
-  1. If a certificate is present, select the **View** button to examine it and then select **Clear**. Skip to step 4.
-  1. If the certificate isn't present (as shown in the previous screenshot), look in the SQL Server error log file and get the hash code. You might see one of the following two entries:
+     1. If a certificate is present, select **View** to examine it and then select **Clear**. Skip to step 6.
+     1. If the certificate isn't present (as shown in the previous screenshot), look in the SQL Server error log file and get the hash code. You might see one of the following two entries:
 
-    `2023-05-30 14:59:30.89 spid15s The certificate [Cert Hash(sha1) "B3029394BB92AA8EDA0B8E37BAD09345B4992E3D"] was successfully loaded for encryption.`
+      `2023-05-30 14:59:30.89 spid15s The certificate [Cert Hash(sha1) "B3029394BB92AA8EDA0B8E37BAD09345B4992E3D"] was successfully loaded for encryption.`
+      or
+      `2023-05-19 04:58:56.42 spid11s A self-generated certificate was successfully loaded for encryption.`
 
-    or
+      If the certificate is self-generated, skip to step b.
 
-    `2023-05-19 04:58:56.42 spid11s A self-generated certificate was successfully loaded for encryption.`
-
-  If the certificate is self-generated, skip to step b.
-
-  1. Open the **Computer Certificate Store** in MMC.
+  1. Open the **Computer Certificate Store** in the Microsoft Management Console (MMC).
   1. Navigate to **Personal Certificates**.
   1. Expand the **Intended Purposes** column and double-click certificates that're enabled for server authentication.
   1. Check if the thumbprint matches the thumbprint in the error log file. If not, try another certificate.
   1. Check the **Signature hash algorithm**. If it's one of MD5, SHA224, or SHA512, then it won't support TLS 1.2.
-  1. If it's one of the weak algorithms, then disable the **Server Authentication** function of the certificate so that SQL Server can't use it.
+  1. If it's one of the weak algorithms, then disable **Server Authentication** so that SQL Server can't use it.
   1. If the certificate is explicitly specified in SQL Server Configuration Manager, select **Clear** to remove it.
   1. Locate the certificate in MMC.
-  1. In MMC, right-click the certificate and select **Properties**.
-
-     (Add screenshot)
-
-  1. Either disable the certificate completely, or you can selectively disable the **Server Authentication** function of the certificate.
+  1. In MMC, right-click the certificate, and select **Properties**.
+  1. In the **General** tab, either disable the certificate completely, or you can selectively disable **Server Authentication**.
+      :::image type="content" source="media/ssl-errors-after-tls-1-2/add-security-snapins.png" alt-text="alt text":::
   1. Save the changes.
   1. Restart SQL Server.
 
@@ -76,7 +74,7 @@ To resolve these errors, follow these steps:
 
 ### Check Enabled and Disabled TLS Protocols
 
-Check the Background and Basic Upgrade Workflow if not already done. Both the client and server need to be upgraded to enforce TLS 1.2. It may be okay to upgrade the server but leave TLS 1.0 enabled so non-upgraded clients can connect.
+Check the Background and Basic Upgrade Workflow if not already done. Both the client and server need to be upgraded to enforce TLS 1.2. It might be okay to upgrade the server but leave TLS 1.0 enabled so non-upgraded clients can connect.
 
 Check the SSL or TLS registry using REGEDIT.
 
@@ -84,7 +82,7 @@ You can find the enabled and disabled SSL or TLS versions under the following re
 
 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols`
 
-There is a client and server sub-key for each version of SSL or TLS, with Enabled and Disabled values.
+There is a client and server sub-key for each version of SSL or TLS, with **Enabled** and **Disabled** values.
 
 `[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2]`
 
@@ -93,7 +91,7 @@ There is a client and server sub-key for each version of SSL or TLS, with Enable
 `[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Server] "DisabledByDefault"=dword:00000000 "Enabled"=dword:00000001`
 
 > [!NOTE]
-> Please note that any non-zero value is take for TRUE. However, 1 is generally preferred over FFFFFFFF (or -1).
+> Please note that any non-zero value is treated as TRUE. However, *1* is generally preferred over FFFFFFFF (or *-1*).
 
 Make sure that there're no incompatible settings. For instance, TLS 1.0 is disabled and TLS 1.2 is enabled on the server. This might not be the case on the client or the client driver might not be updated.
 
