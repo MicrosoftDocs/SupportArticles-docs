@@ -1,16 +1,16 @@
 ---
 title: Troubleshoot the K8SAPIServerConnFailVMExtensionError error code
-description: Learn how to troubleshoot the K8SAPIServerConnFailVMExtensionError error (51) when you try to create and deploy an Azure Kubernetes Service (AKS) cluster.
-ms.date: 03/22/2022
-editor: v-jsitser
-ms.reviewer: rissing, chiragpa, erbookbi, v-leedennis
+description: Learn how to troubleshoot the K8SAPIServerConnFailVMExtensionError error (51) when you try to start or create and deploy an Azure Kubernetes Service (AKS) cluster.
+ms.date: 12/28/2023
+editor: jovieir
+ms.reviewer: rissing, chiragpa, erbookbi, v-leedennis, jovieir
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-create-operations
-#Customer intent: As an Azure Kubernetes user, I want to troubleshoot the K8SAPIServerConnFailVMExtensionError error code (or error code ERR_K8S_API_SERVER_CONN_FAIL, error number 51) so that I can successfully create and deploy an Azure Kubernetes Service (AKS) cluster.
+#Customer intent: As an Azure Kubernetes user, I want to troubleshoot the K8SAPIServerConnFailVMExtensionError error code (or error code ERR_K8S_API_SERVER_CONN_FAIL, error number 51) so that I can successfully start or create and deploy an Azure Kubernetes Service (AKS) cluster.
 ---
 # Troubleshoot the K8SAPIServerConnFailVMExtensionError error code (51)
 
-This article discusses how to identify and resolve the `K8SAPIServerConnFailVMExtensionError` error (also known as error code ERR_K8S_API_SERVER_CONN_FAIL, error number 51) that occurs when you try to create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
+This article discusses how to identify and resolve the `K8SAPIServerConnFailVMExtensionError` error (also known as error code ERR_K8S_API_SERVER_CONN_FAIL, error number 51) that occurs when you try to start or create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
 
 ## Prerequisites
 
@@ -18,7 +18,7 @@ This article discusses how to identify and resolve the `K8SAPIServerConnFailVMEx
 
 ## Symptoms
 
-When you try to create an AKS cluster, you receive the following error message:
+When you try to start or create an AKS cluster, you receive the following error message:
 
 > Unable to establish connection from agents to Kubernetes API server, please see <https://aka.ms/aks-required-ports-and-addresses> for more information.
 >

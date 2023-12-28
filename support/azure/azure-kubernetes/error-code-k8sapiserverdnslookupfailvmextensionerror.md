@@ -1,16 +1,16 @@
 ---
 title: Troubleshoot the K8SAPIServerDNSLookupFailVMExtensionError error code (52)
-description: Learn how to troubleshoot the K8SAPIServerDNSLookupFailVMExtensionError error (52) when you try to create and deploy an Azure Kubernetes Service (AKS) cluster.
-ms.date: 09/21/2022
-editor: v-jsitser
-ms.reviewer: rissing, chiragpa, erbookbi, v-leedennis
+description: Learn how to troubleshoot the K8SAPIServerDNSLookupFailVMExtensionError error (52) when you try to start or create and deploy an Azure Kubernetes Service (AKS) cluster.
+ms.date: 12/28/2023
+editor: jovieir
+ms.reviewer: rissing, chiragpa, erbookbi, v-leedennis, jovieir
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-create-operations
-#Customer intent: As an Azure Kubernetes user, I want to troubleshoot the K8SAPIServerDNSLookupFailVMExtensionError error code (or error code ERR_K8S_API_SERVER_DNS_LOOKUP_FAIL, error number 52) so that I can successfully create and deploy an Azure Kubernetes Service (AKS) cluster.
+#Customer intent: As an Azure Kubernetes user, I want to troubleshoot the K8SAPIServerDNSLookupFailVMExtensionError error code (or error code ERR_K8S_API_SERVER_DNS_LOOKUP_FAIL, error number 52) so that I can start or successfully create and deploy an Azure Kubernetes Service (AKS) cluster.
 ---
 # Troubleshoot the K8SAPIServerDNSLookupFailVMExtensionError error code (52)
 
-This article discusses how to identify and resolve the `K8SAPIServerDNSLookupFailVMExtensionError` error (also known as error code ERR_K8S_API_SERVER_DNS_LOOKUP_FAIL, error number 52) that occurs when you try to create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
+This article discusses how to identify and resolve the `K8SAPIServerDNSLookupFailVMExtensionError` error (also known as error code ERR_K8S_API_SERVER_DNS_LOOKUP_FAIL, error number 52) that occurs when you try to start or create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
 
 ## Prerequisites
 
@@ -20,7 +20,7 @@ This article discusses how to identify and resolve the `K8SAPIServerDNSLookupFai
 
 ## Symptoms
 
-When you try to create an AKS cluster, you receive the following error message:
+When you try to start or create an AKS cluster, you receive the following error message:
 
 > Agents are unable to resolve Kubernetes API server name. It's likely custom DNS server is not correctly configured, please see <https://aka.ms/aks/private-cluster#hub-and-spoke-with-custom-dns> for more information.
 >
