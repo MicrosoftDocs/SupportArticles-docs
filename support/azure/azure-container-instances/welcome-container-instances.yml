@@ -9,7 +9,7 @@ metadata:
   ms.topic: landing-page # Required
   author: genlin  #Required; your GitHub user alias, with correct capitalization.
   ms.author: genli #Required; microsoft alias of author; optional team alias.
-  ms.date: 10/12/2023
+  ms.date: 12/13/2023
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -23,10 +23,11 @@ landingContent:
             url: /azure/container-instances/
 
    # Card
-  - title: Troubleshoot Container Group Start Up
+  - title: Troubleshoot container group startup
     linkLists:
       - linkListType: how-to-guide
         links:
           - text: Inaccessible Image Failure
             url: inaccessible-image.md
-
+          - text: Error - Web socket is closed or could not be opened
+            url: web-socket-is-closed-or-could-not-be-opened.md
