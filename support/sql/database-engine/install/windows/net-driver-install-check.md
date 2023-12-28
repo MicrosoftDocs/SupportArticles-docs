@@ -53,7 +53,7 @@ Under these folders, there will be a folder for the various .NET versions. Typic
 - v2.0.50727 (.NET 2.0, 3.0, 3.5)
 - v4.0.30319 (.NET 4.x)
 
-You may notice the .NET 1.0 and 1.1 folders. These are out of support and don't contain any assemblies. You may also notice the .NET 3.0 and 3.5 folders. While these may contain certain files specific to these versions of .NET, they're all extensions to version 2.0, and *System.Data.DLL* is located in the 2.0 folder since it's not an extension DLL. The folders mentioned previouldy are the locations of the built-in Framework DLLs.
+You may notice the .NET 1.0 and 1.1 folders. These are out of support and don't contain any assemblies. You may also notice the .NET 3.0 and 3.5 folders. While these may contain certain files specific to these versions of .NET, they're all extensions to version 2.0, and *System.Data.DLL* is located in the 2.0 folder since it's not an extension DLL. The folders mentioned previously are the locations of the built-in Framework DLLs.
 
 In addition, these DLLs and third-party DLLs appear in the GAC, which is where the search algorithm looks. Starting with the .NET Framework 4, the default folder for the the GAC is: *C:\windows\microsoft.net\assembly*. In earlier versions of the .NET Framework, the default folder is: *C:\windows\assembly*.
 
