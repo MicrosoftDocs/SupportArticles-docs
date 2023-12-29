@@ -146,6 +146,8 @@
     href: ./framework/general/far-eastern-fonts-text-lost-on-images-xps.md
   - name: Time-out occurs when an application calls the Poll method
     href: ./framework/general/timeout-when-application-calls-poll-method.md
+  - name: Use AssemblyVersion and AssemblyFileVersion
+    href: ./framework/general/assembly-version-assembly-file-version.md
   - name: Warning when service references are added
     href: ./framework/general/warning-add-service-reference-silverlight.md
   - name: Windows Forms applications don't release memory
