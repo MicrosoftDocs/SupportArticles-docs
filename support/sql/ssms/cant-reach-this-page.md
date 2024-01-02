@@ -2,7 +2,7 @@
 title: Can't reach this page error message
 description: "On SQL Server Management Studio 19, you get an Internet Explorer message 'Can't reach this page' when trying to sign in using Microsoft Entra authentication."
 ms.reviewer: maghan, randolphwest
-ms.date: 02/01/2024
+ms.date: 01/02/2024
 ms.custom:
   - "sap:Management Studio"
 ---
