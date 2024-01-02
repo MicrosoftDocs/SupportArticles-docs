@@ -20,7 +20,7 @@ During data ingestion, some of the most common reasons a record might be conside
 - The number of columns in the source file doesn't match the schema.
 - Fields contain characters that cause the columns to skew compared to the expected schema. For example, incorrectly formatted quotes, unescaped quotes, newline characters, or tabbed characters.
 - [Partition files are missing](#partition-files-are-missing).
-- [If there are `datetime`, `date`, or `datetimeoffset` columns, their format must be specified in the schema if it doesn't follow the standard format](#datetime-fields-are-in-the-wrong-format).
+- [`datetime`, `date`, or `datetimeoffset` fields don't follow the standard format](#datetime-fields-are-in-the-wrong-format).
 
 ### Schema or data type mismatch
 
