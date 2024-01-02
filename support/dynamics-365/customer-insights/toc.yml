@@ -5,8 +5,6 @@
       items: 
       - name: Data ingestion
         items:
-          - name: Common issues of ingestion errors or corrupt data
-            href: data/data-ingestion/common-data-ingestion-errors.md
           - name: Data refresh fails and dataflow refresh is skipped
             href: data/data-ingestion/data-refresh-failed-skipped.md
           - name: '"Data source credentials are missing or invalid" error'
@@ -15,6 +13,8 @@
             href: data/data-ingestion/power-query-text-csv-connector-auth.md
           - name: Power Query data source refresh issues
             href: data/data-ingestion/power-query-data-source-refresh-issues-dataflows.md
+          - name: Troubleshoot ingestion errors or corrupt data
+            href: data/data-ingestion/common-data-ingestion-errors.md
       - name: Data unification
         items:
           - name: Match failed error occurs on the Deduplication or Matching rules

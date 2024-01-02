@@ -1,26 +1,26 @@
 ---
-title: Common issues of data ingestion errors or corrupt data
-description: Introduces some common issues of data ingestion errors or corrupt data when using Azure Data Lake Storage or Power Query in Dynamics 365 Customer Insights - Data.
-ms.date: 12/26/2023
+title: Troubleshoot ingestion errors or corrupt data
+description: Introduces common reasons of data ingestion errors or corrupt data when using Azure Data Lake Storage or Power Query in Dynamics 365 Customer Insights - Data.
+ms.date: 01/02/2024
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 ---
-# Common issues of ingestion errors or corrupt data
+# Troubleshoot ingestion errors or corrupt data
 
 [!INCLUDE [consolidated-sku](../../includes/consolidated-sku.md)]
 
-This article introduces several common issues that can cause data ingestion errors in Microsoft Dynamics 365 Customer Insights - Data.
+This article introduces common reasons of data ingestion errors or corrupt data when using Azure Data Lake Storage or Power Query in Microsoft Dynamics 365 Customer Insights - Data.
 
-## Common issues of ingestion errors or corrupt data with Azure Data Lake Storage
+## Ingestion errors or corrupt data with Azure Data Lake Storage
 
-During data ingestion, some of the most common issues a record might be considered corrupt include:
+During data ingestion, some of the most common reasons a record might be considered corrupt include:
 
-- The data types and field values don't match between the source file and the schema.
+- [The data types and field values don't match between the source file and the schema](#schema-or-data-type-mismatch).
 - The number of columns in the source file doesn't match the schema.
 - Fields contain characters that cause the columns to skew compared to the expected schema. For example, incorrectly formatted quotes, unescaped quotes, newline characters, or tabbed characters.
-- Partition files are missing.
-- If there are `datetime`, `date`, or `datetimeoffset` columns, their format must be specified in the schema if it doesn't follow the standard format.
+- [Partition files are missing](#partition-files-are-missing).
+- [If there are `datetime`, `date`, or `datetimeoffset` columns, their format must be specified in the schema if it doesn't follow the standard format](#datetime-fields-are-in-the-wrong-format).
 
 ### Schema or data type mismatch
 
@@ -110,13 +110,13 @@ In a *manifest.json* file, the `datetime` format can be specified at the table l
     }
 ```
 
-## Common issues of ingestion errors or corrupt data with Power Query
+## Ingestion errors or corrupt data with Power Query
 
 ### Data type doesn't match the data
 
 The most common data type mismatch occurs when a date field isn't set to the correct date format.
 
-The data can be fixed at the source and re-ingested. Or fix the transformation within Customer Insights - Data. To fix the transformation:
+To solve the issue, fix the data at the source and re-ingest. Or fix the transformation within Customer Insights - Data. To fix the transformation:
 
 1. Go to **Data** > **Data sources**.
 1. Next to the data source with the corrupted data, select **Edit**.
@@ -124,3 +124,9 @@ The data can be fixed at the source and re-ingested. Or fix the transformation w
 1. Select each of the queries and look for the incorrect transformations applied inside the **Applied steps**, or the `date` columns that haven't been transformed with a date format.
 1. Change the data type to correctly match the data.
 1. Select **Save**. That data source is refreshed.
+
+## More information
+
+- [Connect to data in Azure Data Lake Storage](/dynamics365/customer-insights/data/connect-common-data-model)
+- [Connect to a Power Query data source](/dynamics365/customer-insights/data/connect-power-query)
+- [Manage data sources](/dynamics365/customer-insights/data/data-sources-manage)

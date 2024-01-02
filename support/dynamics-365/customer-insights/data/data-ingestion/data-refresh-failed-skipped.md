@@ -4,7 +4,7 @@ description: Solves an issue with the data refresh schedule for Power Query-base
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
-ms.date: 12/26/2023
+ms.date: 01/02/2024
 ---
 # Data refresh fails and dataflow refresh is skipped
 
@@ -20,7 +20,7 @@ The Power Query data source processing status is **Completed with errors**, and 
 
 ## Cause
 
-Dynamics 365 Customer Insights - Data has two refresh options: system refresh and data source refresh. Power Query-based refresh is set by the owner of each data source. System refresh is set by the administrator and controls the rest of the data sources and downstream processes.
+Dynamics 365 Customer Insights - Data has two refresh options: [system refresh](/dynamics365/customer-insights/data/schedule-refresh) and [data source refresh](/dynamics365/customer-insights/data/data-sources-manage#refresh-data-sources). Power Query-based refresh is set by the owner of each data source. System refresh is set by the administrator and controls the rest of the data sources and downstream processes.
 
 The error message means that the system refresh in Customer Insights doesn't refresh Power Query data source, but only copies the previous state of the data source.
 

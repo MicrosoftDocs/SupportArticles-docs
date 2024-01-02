@@ -1,7 +1,7 @@
 ---
 title: Power Query Text/CSV connector authentication fails
 description: Resolves an issue where the Power Query Text/CSV editor authentication fails in Dynamics 365 Customer Insights - Data.
-ms.date: 12/26/2023
+ms.date: 01/02/2024
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
@@ -18,10 +18,13 @@ When editing a Power Query data source that uses the Text/CSV connector, if you 
 
 ## Resolution
 
-To solve this issue, refresh the connections on the Power Query transformations page.
+> [!NOTE]
+> To perform the following steps, you should be the owner of the connection or have administrator permissions to access all existing connections.
+
+To solve this issue, refresh the connections on the [Power Query transformations page](/power-query/manage-connections).
 
 1. Open the Power Query connection.
 1. On the transformations page, select **Manage connections**.
-1. Refresh all listed connections.
+1. Refresh all listed connections. You can find the refresh icon next to the connection name by [editing a connection](/power-query/manage-connections#edit-a-connection).
 1. Refresh the browser page.
 1. Save the data source.
