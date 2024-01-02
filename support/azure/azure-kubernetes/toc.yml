@@ -289,7 +289,7 @@
   - name: Troubleshoot the KEDA add-on
     href: troubleshoot-kubernetes-event-driven-autoscaling-add-on.md
     displayName: Kubernetes Event-driven Autoscaling
-  - name: Troubleshoot the Open Source Mesh add-on
+  - name: Troubleshoot the Open Service Mesh add-on
     href: troubleshoot-open-service-mesh.md
     displayName: OSM, SMI
 
