@@ -3,6 +3,7 @@ title: Use AssemblyVersion and AssemblyFileVersion
 description: This article describes how to use AssemblyVersion and AssemblyFileVersion attributes in the AssemblyInfo.cs file.
 ms.date: 04/14/2020
 ms.topic: how-to
+ms.technology: dotnet-general
 ---
 # Use AssemblyVersion and AssemblyFileVersion attributes
 
