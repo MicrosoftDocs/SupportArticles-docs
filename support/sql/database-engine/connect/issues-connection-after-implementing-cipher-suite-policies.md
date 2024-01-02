@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot connection issues after implementing cipher suite policies
 description: This article provides symptoms and resolution for troubleshooting issues in connection that occur when implementing cipher suite policies.
-ms.date: 12/14/2023
+ms.date: 02/01/2024
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
@@ -14,25 +14,34 @@ This article helps you resolve the issues that might occur after you implement t
 
 ## Symptoms
 
-> "An existing connection was forcibly closed by the remote host. [SQLSTATE 42000] (Error 10054) OLE DB provider "" for linked server "DB name" returned message "Client unable to establish connection"."
+> An existing connection was forcibly closed by the remote host. [SQLSTATE 42000] (Error 10054) OLE DB provider "" for linked server "DB name" returned message "Client unable to establish connection".
 
-If a cipher suite doesn't include RC4, any attempt to use RC4 for encryption will fail. Similarly, if a cipher suite includes RC4 but one of the parties involved doesn't support RC4, the handshake will fail, and the connection won't be established.
+There are many causes for the error message.
 
-## Resolution
+## Cause 1
+
+If a cipher suite doesn't include RC4, any attempt to use RC4 for encryption will fail. Similarly, if a cipher suite includes RC4 but one of the parties involved doesn't, the handshake will fail, and the connection won't be established.
+
+## Solution 1
 
 To resolve this issue, follow these steps:
 
-1. Check whether the `msds-supportedEncryptionType` property is set.
-   When the property isn't set, it enables only RC4.
+1. Check whether the `msds-supportedEncryptionType` property is set. When the property isn't set, it enables only RC4.
 1. Set the value as *28* to enable RC4, AES128, and AES256.
 
-There are some more causes for the error message in the Symptoms section.
+## Cause 2
 
-**TLS_DHE Ciphers Enabled**- This issue also occurs when the client or server is hosted on Windows 2012, 2016, and higher versions. Despite both OS versions possessing the same cipher (TLS_DHE*), Windows 2012 and 2016+ handle cryptography keys within the TLS differently. This can result in communication errors.
+**TLS_DHE Ciphers Enabled** - This issue also occurs when the client or server is hosted on Windows 2012, 2016, and higher versions. Despite both OS versions possessing the same cipher (TLS_DHE*), Windows 2012 and 2016+ handle cryptography keys within the TLS differently. This can result in communication errors.
+
+## Solution 2
 
 To resolve this issue, remove all ciphers starting with "TLS_DHE*" from the local policy. For more information about errors that occur when applications try to connect to SQL Server in Windows, see [Applications experience forcibly closed TLS connection errors when connecting SQL Servers in Windows](../../../windows-server/identity/apps-forcibly-closed-tls-connection-errors.md).
 
-**Mismatch in TLS version** - This issue might also occur when the client initiates the connection using TLS 1.0. Modern cipher suites often don't support TLS 1.0, preferring more secure versions like TLS 1.2.
+## Cause 3
+
+**Mismatch in TLS version** - This issue might occur when the client initiates the connection using TLS 1.0. Modern cipher suites often don't support TLS 1.0, preferring more secure versions like TLS 1.2.
+
+## Solution 3
 
 To fix this problem, follow these steps:
 

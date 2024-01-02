@@ -8,7 +8,7 @@ ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 
-# SSIS packages run by SQL agent fails to execute
+# SSIS packages run by SQL agent fail to execute
 
 When you run an SSIS package through SQL Server Agent, the package might fail to execute. This might lead to connectivity issues.
 
