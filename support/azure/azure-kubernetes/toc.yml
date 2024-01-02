@@ -5,6 +5,8 @@
   items:
   - name: Basic troubleshooting
     href: troubleshoot-aks-cluster-creation-issues.md
+  - name: AADSTS7000222 - BadRequest or InvalidClientSecret error
+    href: error-code-badrequest-or-invalidclientsecret.md
   - name: CniDownloadTimeoutVMExtensionError error (41)
     href: error-code-cnidownloadtimeoutvmextensionerror.md
   - name: ERR_VHD_FILE_NOT_FOUND error (124)
@@ -50,6 +52,8 @@
   items:
   - name: Troubleshoot Azure Kubernetes Service (AKS) upgrade errors
     items:
+    - name: AADSTS7000222 - BadRequest or InvalidClientSecret error
+      href: error-code-badrequest-or-invalidclientsecret.md
     - name: CustomPrivateDNSZoneMissingPermissionError error
       href: error-code-customprivatednszonemissingpermissionerror.md
     - name: NodePoolMcVersionIncompatible error
@@ -175,6 +179,9 @@
 
 - name: Data collection guide
   items:
+  - name: Capture real-time system insights from cluster
+    href: capture-system-insights-from-aks.md
+    displayName: real-time, debugging, observability, inspektor-gadget, ig, ebpf
   - name: Capture TCP dump from Linux node
     href: capture-tcp-dump-linux-node-aks.md
   - name: Capture TCP dump from Windows node
@@ -276,10 +283,15 @@
     href: cluster-extension-deployment-errors.md
   - name: Troubleshoot Dapr extension installation errors
     href: troubleshoot-dapr-extension-installation-errors.md
+    displayName: Distributed Application Runtime
   - name: Troubleshoot deployment failures of Azure Marketplace offers
     href: troubleshoot-failed-kubernetes-deployment-offer.md
   - name: Troubleshoot the KEDA add-on
     href: troubleshoot-kubernetes-event-driven-autoscaling-add-on.md
+    displayName: Kubernetes Event-driven Autoscaling
+  - name: Troubleshoot the Open Service Mesh add-on
+    href: troubleshoot-open-service-mesh.md
+    displayName: OSM, SMI
 
 - name: Can't pull images from container registry to cluster
   href: cannot-pull-image-from-acr-to-aks-cluster.md

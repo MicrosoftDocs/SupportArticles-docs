@@ -11,7 +11,7 @@ ms.collection: windows
 ms.topic: troubleshooting-problem-resolution
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure
-ms.date: 11/14/2023
+ms.date: 12/18/2023
 ms.author: genli
 ---
 
@@ -42,31 +42,26 @@ There might be many reasons why you experience a stop error. The most common cau
 
 To resolve this problem, you first have to gather a dump file for the crash before you contact support. To collect the dump file, follow these steps:
 
-### Part 1: Attach the OS disk to a recovery VM
+### Step 1: Locate the dump file and submit a support ticket
 
-1. Take a snapshot of the OS disk of the affected VM as a backup. For more information, see [Snapshot a disk](/azure/virtual-machines/windows/snapshot-copy-managed-disk).
-2. [Attach the OS disk to a recovery VM](./troubleshoot-recovery-disks-portal-windows.md).
-3. Remote desktop to the recovery VM.
+[!INCLUDE [Collect OS Memory Dump File](../../includes/azure/collect-os-memory-dump-file.md)]
 
-### Part 2: Locate the dump file and submit a support ticket
+If you can't find the dump file, go to the next steps to enable the dump log and the serial console, and then reproduce the issue.
 
-1. On the recovery VM, go to the *Windows* folder on the attached OS disk. If the drive letter assigned to the attached OS disk is `F`, you need to go to *F:\\Windows*.
-2. Locate the *memory.dmp* file, and then [submit a support ticket](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade) that contains the dump file.
-
-If you can't find the dump file, move to the next part to enable a dump log and a serial console.
-
-### Part 3: Enable a dump log and the serial console
+### Step 2: Enable the dump log and the serial console
 
 [!INCLUDE [Registry important alert](../../includes/registry-important-alert.md)]
 
-To enable a dump log and the serial console, follow these steps:
+To enable the dump log and the serial console, follow these steps:
 
 [!INCLUDE [Enable Serial Console and Memory Dump Collection](../../includes/enable-serial-console-memory-dump-collection.md)]
 
-### Collect the dump file
+### Step 3: Reproduce the issue
 
 1. [Detach the OS disk, and then reattach the OS disk to the affected VM](./troubleshoot-recovery-disks-portal-windows.md).
+
 1. Start the VM to reproduce the issue so that a dump file is generated.
-1. Attach the OS disk to a recovery VM, collect the dump file, and then [submit a support ticket](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade) that contains the dump file.
+
+1. Repeat the instructions in the [Step 1: Locate the dump file and submit a support ticket](#step-1-locate-the-dump-file-and-submit-a-support-ticket) section.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
