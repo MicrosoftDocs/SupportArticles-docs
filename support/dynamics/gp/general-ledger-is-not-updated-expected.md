@@ -3,7 +3,7 @@ title: General Ledger isn't updated as expected
 description: Describes a problem in which the General Ledger isn't updated as expected when you post a pay run in Microsoft Dynamics GP. Provides a resolution.
 ms.reviewer: lmuelle
 ms.topic: troubleshooting
-ms.date: 12/28/2023
+ms.date: 01/03/2024
 ---
 # The General Ledger isn't updated as expected when you post a pay run in Microsoft Dynamics GP
 
@@ -27,8 +27,7 @@ This problem occurs for one of the following reasons:
 ## Resolution
 
 > [!NOTE]
->
-Before you follow the instructions in this article, make sure that you have a complete backup copy of the database that you can restore if a problem occurs.  
+> Before you follow the instructions in this article, make sure that you have a complete backup copy of the database that you can restore if a problem occurs.  
 
 ### Resolution 1
 
@@ -39,8 +38,9 @@ To resolve this problem, restore the database from a backup before the pay run i
 
 ### Resolution 2
 
-Review this blog [Recovering from failed Payroll processing activity in Dynamics GP](https://community.dynamics.com/blogs/post/?postid=bf5f2537-6323-42e7-a7f7-d6bed4f447a5)
-Where you can remove the payroll that was posted from the payroll tables only and then re-run the payroll process.
+To solve this problem, remove the payroll that was posted from the payroll tables only and then rerun the payroll process.
+
+For more information, see [Recovering from failed Payroll processing activity in Dynamics GP](https://community.dynamics.com/blogs/post/?postid=bf5f2537-6323-42e7-a7f7-d6bed4f447a5).
 
 ### Resolution 3
 
