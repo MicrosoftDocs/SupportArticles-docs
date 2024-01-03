@@ -57,7 +57,7 @@ This section lists the possible error messages and their possible causes.
 |"Login Failed for user: 'NT AUTHORITY\ANONYMOUS LOGON'"|This error might occur if the [SPN is missing, SPN is duplicated, or the SPN is on the wrong account](cannot-generate-sspi-context-error.md).|
 |"Login failed for user 'username'." </br> "Login failed for user '\<database\username\>"</br>    | Check if there's a [bad server name in connection string](bad-server-name-connection-string-error.md). Also, check if the user doesn't belong to a local group used to grant access to the server. For more causes, see [NT AUTHORITY\ANONYMOUS LOGON](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).    |
 |"Cannot open database "\<database name\>" requested by the login. The login failed."|Check if the database name in the connection string is correct.|
-|"Cannot generate SSPI context"|The explicit SPN account might be [wrong](wrong-explicit-spn-account-connection-string.md), [missing](explicit-spn-is-missing.md), or misplaced. |
+|"Cannot generate SSPI context"|The explicit SPN account might be [wrong](wrong-explicit-spn-account-connection-string.md), missing, or misplaced. |
 |"The user account is not allowed the Network Login type"|You might not be able to [log in to the network](network-login-disallowed.md).|
 |"The login is from an untrusted domain and cannot be used with Windows authentication."|This error might be related to the [Local Security Subsystem](local-security-subsystem-issues.md) issues.|
 
@@ -75,7 +75,7 @@ The following table lists some scenarios that are related to aspects such as dat
 |Proxy account     |  An SSIS job run by SQL Agent might need permissions other than the SQL Agent service account can provide. For more information, see [SSIS package does not run when called from a SQL Server Agent job step.](../../integration-services/ssis-package-doesnt-run-when-called-job-step.md)  |
 |Bad metadata     | A view or stored procedure receives login failures on a linked server whereas a distributed `SELECT` statement copied from them doesn't. This situation can happen if the View was created and then the linked server was recreated, or a remote table was modified without rebuilding the View.  |
 
-## Connection string related scenarios
+## Issues related to connection string
 
 The following sections provides various scenarios related to connection string issues.
 
