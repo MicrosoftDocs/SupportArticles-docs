@@ -120,7 +120,7 @@ To fix the issue, follow these steps:
       2       PFMBX4  { PF6, PF7 }
       ```
 
-      Note: To get a list of public folder mailboxes in only your organization, run the following PowerShell cmdlet:
+      Note: To only get a list of public folder mailboxes, run the following PowerShell cmdlet:
 
       ```PowerShell
       Get-Mailbox -PublicFolder
