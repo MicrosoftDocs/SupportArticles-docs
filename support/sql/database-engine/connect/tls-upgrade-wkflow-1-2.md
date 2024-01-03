@@ -24,7 +24,7 @@ To implement TLS 1.2, follow these steps:
 
 1. Make sure TLS 1.2 isn't disabled and it's enabled by default. If you aren't sure if it's enabled, run **[SQLCHECK](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SQLCHECK)**.
 
-1. Identify client machines and applications that connect to SQL Server and apply patches on them. For client driver updates, see [Client component downloads](/../../connect/tls-1-2-support-microsoft-sql-server?branch=pr-en-us-5412#client-component-downloads).
+1. Identify client machines and applications that connect to SQL Server and apply patches on them. For client driver updates, see [Client component downloads](tls-1-2-support-microsoft-sql-server.md#client-component-downloads).
 
 1. [Disable TLS 1.0](/answers/questions/1093730/how-to-disable-in-os-and-iis-from-tls-and-ssl-1-0) on client machines.
 
