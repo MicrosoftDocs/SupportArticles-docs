@@ -1,7 +1,7 @@
 ---
-title: Troubleshooting bad server name in connection string issue
+title: Troubleshooting the SSL_PE_NO_CIPHER error
 description: This article provides symptoms and resolution for troubleshooting the bad server name in connection string error.
-ms.date: 11/27/2023
+ms.date: 01/03/2024
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
@@ -10,11 +10,11 @@ ms.custom: sap:Connection issues
 
 # The SSL_PE_NO_CIPHER error occurs on endpoint 5022
 
-This article helps you resolve the error related to the SSL_PE_NO_CIPHER. It also provides scripts for enforcing Transport Layer Security (TLS) on different versions of .NET Framework. 
+This article helps you resolve the error related to the SSL_PE_NO_CIPHER. It also provides scripts for enforcing Transport Layer Security (TLS) on different versions of .NET Framework.
 
 ## Symptoms
 
-The SSL "SSL_PE_NO_CIPHER" error occurs on endpoint port 5022, and there is a time delay longer than 15 seconds, potentially leading to timeouts. It occurs when the Security Socket Layer (SSL) handshake fails due to a lack of compatible cipher suites between the client and server. This can happen if outdated or weak encryption algorithms are used.
+The Security Socket Layer (SSL) "SSL_PE_NO_CIPHER" error occurs on endpoint port 5022, and there is a time delay longer than 15 seconds, potentially leading to timeouts. It occurs when the SSL handshake fails due to a lack of compatible cipher suites between the client and server. This can happen if outdated or weak encryption algorithms are used.
 
 ## Resolution
 
@@ -111,4 +111,4 @@ To resolve this error, follow these steps:
 
 1. Reboot the servers after running the script.
 
-After completing these steps, the SSL_PE_NO_CIPHER error should be resolved.
+After completing these steps, the "SSL_PE_NO_CIPHER" error should be resolved.

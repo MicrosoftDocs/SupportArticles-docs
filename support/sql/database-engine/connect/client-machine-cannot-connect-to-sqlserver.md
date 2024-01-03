@@ -1,7 +1,7 @@
 ---
-title: Client machine can't connect to SQL Server using SQL authentication
+title: Client machine can't access SQL Server
 description: This article provides a resolution when the client machine cannot connect SQL Server by SSMS that uses the SQL authentication.
-ms.date: 12/14/2023
+ms.date: 01/03/2024
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
@@ -16,7 +16,7 @@ This article helps you to resolve a scenario where a client machine is unable to
 
 You see the following error message:
 
-> "An existing connection was forcibly closed by the remote host (OS error 10054)".
+> An existing connection was forcibly closed by the remote host (OS error 10054).
 
 ## Cause
 
@@ -33,9 +33,8 @@ To resolve this error, on the SQL Server, modify the following Registry key valu
 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\KeyExchangeAlgorithms\PKCS] "Enabled"=dword:0xffffffff`
 
 > [!NOTE]
-> You must  reboot the server for the change to take effect.
+> You must reboot the server for the change to take effect.
 
 Enabling RSA on the SQL Server means that the server supports RSA encryption, and generally this will not cause any risk to your environment.
 
 For more details about the TLS and RSA configuration, see [Restrict cryptographic algorithms and protocols](../../../windows-server/windows-security/restrict-cryptographic-algorithms-protocols-schannel.md).
-

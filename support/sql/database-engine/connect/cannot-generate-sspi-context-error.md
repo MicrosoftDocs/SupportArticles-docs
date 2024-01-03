@@ -6,6 +6,7 @@ ms.custom: sap:Connection issues
 author: HaiyingYu
 ms.author: haiyingyu
 ---
+
 # "Cannot generate SSPI context" error when using Windows authentication to connect SQL Server
 
 _Applies to:_ &nbsp; SQL Server  

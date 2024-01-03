@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot connection issues after implementing cipher suite policies
 description: This article provides symptoms and resolution for troubleshooting issues in connection that occur when implementing cipher suite policies.
-ms.date: 02/01/2024
+ms.date: 01/04/2024
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp

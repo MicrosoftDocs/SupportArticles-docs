@@ -1,12 +1,13 @@
 ---
 title: An existing connection was forcibly closed (OS error 10054)
 description: Describes scenarios in which an existing connection was forcibly closed by the remote host and provides resolutions.
-ms.date: 08/31/2023
+ms.date: 01/03/2024
 ms.custom: sap:Connection issues
 author: HaiyingYu
 ms.author: haiyingyu
 ms.reviewer: jopilov, v-jayaramanp
 ---
+
 # An existing connection was forcibly closed by the remote host (OS error 10054)
 
 _Applies to:_ &nbsp; SQL Server
@@ -117,7 +118,7 @@ If none of the previous scenarios match the error message that you encounter, se
 - [Unable to start SQL agent](unable-to-start-sql-agent.md).
 - [Client machine cannot connect to SQL Server by SSMS using SQL authentication](client-machine-cannot-connect-to-sqlserver.md).
 - [A linked server couldn't be created after moving on-premises server to Azure](linked-server-cannot-be-created.md).
-- Errors are shown after upgrading SQL version.
+- [Errors are shown after upgrading SQL version](error-message-when-you-connect.md).
 
 ## See also
 
