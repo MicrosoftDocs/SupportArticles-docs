@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot ingestion errors or corrupt data
 description: Introduces common reasons of data ingestion errors or corrupt data when using Azure Data Lake Storage or Power Query in Dynamics 365 Customer Insights - Data.
-ms.date: 01/02/2024
+ms.date: 01/03/2024
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart

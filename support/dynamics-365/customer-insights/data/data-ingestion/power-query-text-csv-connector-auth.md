@@ -1,7 +1,7 @@
 ---
 title: Power Query Text/CSV connector authentication fails
 description: Resolves an issue where the Power Query Text/CSV editor authentication fails in Dynamics 365 Customer Insights - Data.
-ms.date: 01/02/2024
+ms.date: 01/03/2024
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart

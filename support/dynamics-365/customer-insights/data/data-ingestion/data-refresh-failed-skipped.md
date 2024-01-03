@@ -4,7 +4,7 @@ description: Solves an issue with the data refresh schedule for Power Query-base
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
-ms.date: 01/02/2024
+ms.date: 01/03/2024
 ---
 # Data refresh fails and dataflow refresh is skipped
 

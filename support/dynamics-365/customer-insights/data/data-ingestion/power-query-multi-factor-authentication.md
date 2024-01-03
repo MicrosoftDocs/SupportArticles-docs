@@ -1,7 +1,7 @@
 ---
 title: Data source credentials are missing or invalid error
 description: Resolves an issue with missing or invalid credentials for Power Query connectors in Dynamics 365 Customer Insights - Data.
-ms.date: 01/02/2024
+ms.date: 01/03/2024
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
