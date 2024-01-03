@@ -95,7 +95,9 @@ You have to install the following .NET hotfix rollups to enable SQL Server featu
 
     Windows Server 2008 R2 and later versions support TLS 1.2.
 
-    What's the correct registry setting to enable TLS 1.2 for SQL Server communication? The correct registry settings are as follows:
+- **What's the correct registry setting to enable TLS 1.2 for SQL Server communication?**
+
+  The correct registry settings are as follows:
 
     - `[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2]`
     - `[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Client] "DisabledByDefault"=dword:00000000 "Enabled"=dword:00000001`
