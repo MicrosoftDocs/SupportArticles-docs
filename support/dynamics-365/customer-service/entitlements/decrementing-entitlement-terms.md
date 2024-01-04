@@ -58,13 +58,13 @@ Entitlement remaining terms are not decreasing
 
 Entitlement remaining terms decrement does not work as expected. 
 
-### Resolution: 1
+## Resolution: 1
 
 After selecting **Do Not Decrement Entitlement terms** on case form, Remaining terms will not decrease on entitlement even after Case creation/resolution. 
 
 :::image type="content" source="media\decrementing-entitlement-terms\do-not-decrement-entitlement-terms-option-on-case-form.jpg" alt-text="Screenshot that shows Do Not Decrement Entitlement terms option on case form.":::
 
-### Resolution: 2
+## Resolution: 2
 
 1. Go to Customizations and disable all custom plugins, workflows, custom .js code on entitlement and case entity. 
 2. Remove custom active layer for case & entitlement entities. 
