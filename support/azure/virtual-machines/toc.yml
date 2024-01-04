@@ -497,6 +497,8 @@
 
 - name: Windows activation
   items:
+  - name: Activation fails in forced tunneling scenario
+    href: custom-routes-enable-kms-activation.md
   - name: Troubleshoot Windows activation problems
     href: troubleshoot-activation-problems.md
   - name: Error 0x800705B4 when activating Windows VM
@@ -507,12 +509,12 @@
     href: windows-vm-activation-error-0xc004fd02.md
   - name: Error 0xC004F06C when you activate Windows
     href: ../../windows-server/deployment/error-0xc004f06c-activate-windows.md?context=/troubleshoot/azure/virtual-machines/context/context
-  - name: Windows virtual machine activation FAQ
-    href: windows-virtual-machine-activation-faq.yml
-  - name: Activation fails in forced tunneling scenario
-    href: custom-routes-enable-kms-activation.md
+  - name: Windows activation - duplicate Client Machine ID
+    href: windows-activation-duplicate-client-machine-id.md
   - name: Windows activation - Two new KMS endpoints
     href: windows-activation-stopped-working.md
+  - name: Windows virtual machine activation FAQ
+    href: windows-virtual-machine-activation-faq.yml
   
 
 - name: Azure disk encryption
