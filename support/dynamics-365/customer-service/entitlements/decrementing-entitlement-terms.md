@@ -14,33 +14,33 @@ In Dynamics, we have two scenarios of decrementing entitlement terms.
 
 ## Scenario:  1 
 
-	-- Choosing **Allocation Type** as **Number of cases** and under **Decrease Remaining On** has two options **Case Resolution** and **Case Creation**. 
+	- Choosing **Allocation Type** as **Number of cases** and under **Decrease Remaining On** has two options **Case Resolution** and **Case Creation**. 
 
-		-- Choosing **Case Resolution** on **Decrease Remaining On** will decrease the **Total Terms** after the Case was resolved. 
+		- Choosing **Case Resolution** on **Decrease Remaining On** will decrease the **Total Terms** after the Case was resolved. 
 
-		-- Choosing **Case Creation** on **Decrease Remaining On** will decrease the **Total Terms** after the Case was Created. 
+		- Choosing **Case Creation** on **Decrease Remaining On** will decrease the **Total Terms** after the Case was Created. 
 
 	**For example:**
 
-	-- **Decreasing Remaining** On was opted to **Case Resolution** and **Total Terms** was given as 10. 
+	- **Decreasing Remaining** On was opted to **Case Resolution** and **Total Terms** was given as 10. 
 
-		-- Now create a new case by adding entitlement and resolve it. 
+		- Now create a new case by adding entitlement and resolve it. 
 
-		-- Now after resolving the case, it will deduct 1 term and balance 9 will be displayed on **Remaining Terms**. 
+		- Now after resolving the case, it will deduct 1 term and balance 9 will be displayed on **Remaining Terms**. 
 
-	-- **Decrease Remaining On** was opted to **Case Creation** and **Total Terms** was given as 10. 
+	- **Decrease Remaining On** was opted to **Case Creation** and **Total Terms** was given as 10. 
 
-		-- Now create a new case with adding entitlement. 
+		- Now create a new case with adding entitlement. 
 
-		-- Upon creating a new case itself, it will deduct 1 term and balance 9 will be displayed on **Remaining Terms**.  
+		- Upon creating a new case itself, it will deduct 1 term and balance 9 will be displayed on **Remaining Terms**.  
 
 ## Scenario: 2 
 
-	-- Choosing **Allocation Type** as **Number of hours** and under **Decrease Remaining On** was locked with option **Case Resolution**. 
+	- Choosing **Allocation Type** as **Number of hours** and under **Decrease Remaining On** was locked with option **Case Resolution**. 
 
-	-- In this scenario, we need to create an activity in case form, for example we have given 30 minutes in duration field and that activity should be completed before resolving the case. 
+	- In this scenario, we need to create an activity in case form, for example we have given 30 minutes in duration field and that activity should be completed before resolving the case. 
 
-	-- Now after resolving the case, it will deduct 0.5 term and balance 9.5 will be displayed on **Remaining Terms**. 
+	- Now after resolving the case, it will deduct 0.5 term and balance 9.5 will be displayed on **Remaining Terms**. 
 
 	Here the Decrease Remaining calculation works as 
 
