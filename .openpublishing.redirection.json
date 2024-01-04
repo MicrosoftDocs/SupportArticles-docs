@@ -1,6 +1,16 @@
 {
   "redirections": [
     {
+      "source_path": "support/windows-server/virtualization/windows-server-2019-support-for-live-migration-after-installing-hyper-v-role.md",
+      "redirect_url": "/troubleshoot/windows-server/virtualization/troubleshoot-live-migration-guidance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics-365/customer-service/omnichannel-for-customer-service/provision-fails-expired-license.md",
+      "redirect_url": "/troubleshoot/dynamics-365/customer-service/welcome-customer-service",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/power-platform/power-automate/desktop-flows/cannot-access-gateway-run-queue.md",
       "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/desktop-flows/cannot-access-gateway-run-queue",
       "redirect_document_id": false
@@ -8,6 +18,11 @@
  {
       "source_path": "support/power-platform/power-automate/desktop-flows/double-click-drag-drop-are-not-working.md",
       "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/desktop-flows/double-click-drag-drop-are-not-working",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-automate/unable-create-ui-flow.md",
+      "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/cloud-flows/unable-create-ui-flow",
       "redirect_document_id": false
     },
  {
@@ -6682,6 +6697,11 @@
       "source_path": "support/azure/virtual-machines/boot-error-0xc0000225.md",
       "redirect_url": "/troubleshoot/azure/virtual-machines/boot-error-status-not-found",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/configmgr/client-installation/support-for-mac-linux-and-unix-clients.md",
+      "redirect_url": "/previous-versions/troubleshoot/configmgr/support-for-mac-linux-and-unix-clients",
+      "redirect_document_id": false
     }
 ]
 }

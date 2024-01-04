@@ -21,8 +21,6 @@
       items:
         - name: Authentication failed when signing in to Microsoft Flow
           href: cannot-sign-in-to-microsoft-flow-due-to-authentication-failed.md
-        - name: Can't create UI Flow
-          href: unable-create-ui-flow.md
         - name: Can't find Excel Online table in Microsoft Flow
           href: unable-to-find-excel-online-table-in-microsoft-flow.md
         - name: Can't send SMTP Email

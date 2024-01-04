@@ -1,17 +1,17 @@
 ---
 title: Troubleshooting Azure VM allocation failures
-description: Troubleshoot allocation failures when you create or resize a VM in Azure
+description: Troubleshoot allocation failures when you create or resize a VM in Azure.
 services: virtual-machines
 documentationcenter: ''
 author: genlin
 manager: dcscontentpm
 tags: top-support-issue,azure-resource-manager,azure-service-management
-
 ms.service: virtual-machines 
 ms.subservice: vm-cannot-start-stop
 ms.topic: troubleshooting
-ms.date: 12/16/2021
+ms.date: 12/15/2023
 ms.author: genli
+ms.reviewer: clmendes
 
 ---
 # Troubleshoot allocation failures when you create or resize VMs in Azure
@@ -25,7 +25,7 @@ When you create a virtual machine (VM), start stopped (deallocated) VMs, or resi
 > [!NOTE]
 > If you are troubleshooting a virtual machine scale set (VMSS), the process is the same as a standard VM. To resolve the issue, you should follow the directions in this article.
 >
->**Error message**: "Allocation failed. If you are trying to add a new VM to a Virtual Machine Scale Set with a single placement group or update/resize an existing VM in a Virtual Machine Scale Set with a single placement group, please note that such allocation is scoped to a single cluster, and it is possible that the cluster is out of capacity. Please read more about improving likelihood of allocation success at http:\//aka.ms/allocation-guidance."
+>**Error message**: "Allocation failed. If you are trying to add a new VM to a Virtual Machine Scale Set with a single placement group or update/resize an existing VM in a Virtual Machine Scale Set with a single placement group, please note that such allocation might be scoped to a single cluster, and it is possible that the cluster is out of capacity. Please read more about improving likelihood of allocation success at http:\//aka.ms/allocation-guidance."
 
 This article explains the causes of some of the common allocation failures and suggests possible remedies.
 
