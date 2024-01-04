@@ -43,7 +43,7 @@ You might encounter some challenges when you implement TLS 1.2:
 
 - You can't disable TLS 1.0 for a specific client or target server if the application can't be rewritten for some reason. For example, this might occur if the source code is lost or if it's a third-party application and the vendor is now out of business.
 
-- If you turn off TLS 1.0 on the server, this action might reveal some non-compliant clients in the environment. DBAs have to work with the various application development teams to determine which drivers the applications use, upgrade, and test.
+- If you turn off TLS 1.0 on the server, this action might reveal some non-compliant clients in the environment. Database administrators have to work with the various application development teams to determine which drivers the applications use, upgrade, and test.
 
 - If you turn off TLS 1.0 on a client that otherwise can't connect to a server that's running TLS 1.2 and has TLS 1.0 disabled, the client application might be able to connect. However, this action typically isn't acceptable according to the requirements of most enterprises. Therefore, you should avoid doing it. Otherwise, instead of trying to negotiate a Secure Sockets Layer (SSL) hash for the conversation, the client connects by using an unencrypted Login7 packet. This method could reveal user credentials to any listener on the connection. You can easily observe this scenario in a network trace if the client is installed on a different computer.
 
