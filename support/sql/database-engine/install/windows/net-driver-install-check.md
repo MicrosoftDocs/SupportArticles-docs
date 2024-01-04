@@ -55,7 +55,13 @@ Under these folders, there will be a folder for the various .NET versions. Typic
 
 You may notice the .NET 1.0 and 1.1 folders. These are out of support and don't contain any assemblies. You may also notice the .NET 3.0 and 3.5 folders. While these may contain certain files specific to these versions of .NET, they're all extensions to version 2.0, and *System.Data.DLL* is located in the 2.0 folder since it's not an extension DLL. The folders mentioned previously are the locations of the built-in Framework DLLs.
 
-In addition, these DLLs and third-party DLLs appear in the GAC, which is where the search algorithm looks. Starting with the .NET Framework 4, the default folder for the the GAC is: *C:\windows\microsoft.net\assembly*. In earlier versions of the .NET Framework, the default folder is: *C:\windows\assembly*.
+In addition, these DLLs and third-party DLLs appear in the GAC, which is where the search algorithm looks. The GAC is in:
+
+- *C:\windows\assembly* (for .NET Framework 2.0, 3.0, 3.1, 4.x).
+
+Some .NET 4.0 assemblies are also located under:
+
+- *C:\windows\microsoft.net\assembly*.
 
 For more complete guidelines, see [How the Runtime Locates Assemblies](/dotnet/framework/deployment/how-the-runtime-locates-assemblies). The use of PROCMON may also reveal the search path.
 
@@ -66,7 +72,7 @@ Many Microsoft-installed providers like Analysis Services don't come with the .N
 For third-party providers, make sure the assembly is located in one of the following folders and that it's 64-bit or 32-bit depending on the application:
 
 - *C:\windows\microsoft.net\assembly* (for versions of .NET Framework 4.x)
-- *C:\windows\assembly* (for earlier verions of .NET Framework)
+- *C:\windows\assembly* (for .NET Framework 2.0, 3.0, 3.1, 4.x)
 
 The following table shows the DLL and assembly names of some common providers:
 
@@ -83,42 +89,42 @@ The following table shows the DLL and assembly names of some common providers:
 When troubleshooting .NET providers, there's no built-in or generalized tool, like the ODBC Administrator or a UDL file, to test the application independently. In such cases, you can write a quick test application in a language of your choice. Here's a sample application written in PowerShell:
 
 ```powershell
-#------------------------------- 
-# 
-# get-SqlAuthScheme.ps1 
-# 
+#-------------------------------
+#
+# get-SqlAuthScheme.ps1
+#
 # PowerShell script to test a System.Data.SqlClient database connection
 #
 # USAGE: .\get-SqlAuthScheme tcp:SQLProd01.contoso.com,1433   ' explicitly specify DNS suffix, protocol, and port # ('tcp' must be lower case)
 # USAGE: .\get-SqlAuthScheme SQLProd01                        ' let the driver figure out the DNS suffix, protocol, and port #
-# 
-#------------------------------- 
+#
+#-------------------------------
 param ([string]$server = "localhost")
-Set-ExecutionPolicy Unrestricted -Scope CurrentUser
-$connstr = "Server=$server;Database=master;Integrated Security=SSPI" 
- 
-[System.Data.SqlClient.SqlConnection] $conn = New-Object System.Data.SqlClient.SqlConnection 
-$conn.ConnectionString = $connstr 
- 
-[System.DateTime] $start = Get-Date 
- 
-$conn.Open() 
- 
-[System.Data.SqlClient.SqlCommand] $cmd = New-Object System.Data.SqlClient.SqlCommand 
-$cmd.CommandText = "select auth_scheme from sys.dm_exec_connections where session_id=@@spid" 
-$cmd.Connection = $conn 
-$dr = $cmd.ExecuteReader() 
-$result = $dr.Read() 
-$auth_scheme = $dr.GetString(0) 
- 
-$conn.Close() 
-$conn.Dispose() 
- 
-[System.DateTime] $end = Get-Date 
-[System.Timespan] $span = ($end - $start) 
- 
-"End time: " + $end.ToString("M/d/yyyy HH:mm:ss.fff")  
-"Elapsed time was " + $span.Milliseconds + " ms." 
+Set-ExecutionPolicy Unrestricted -Scope CurrentUser
+$connstr = "Server=$server;Database=master;Integrated Security=SSPI"
+
+[System.Data.SqlClient.SqlConnection] $conn = New-Object System.Data.SqlClient.SqlConnection
+$conn.ConnectionString = $connstr
+
+[System.DateTime] $start = Get-Date
+
+$conn.Open()
+
+[System.Data.SqlClient.SqlCommand] $cmd = New-Object System.Data.SqlClient.SqlCommand
+$cmd.CommandText = "select auth_scheme from sys.dm_exec_connections where session_id=@@spid"
+$cmd.Connection = $conn
+$dr = $cmd.ExecuteReader()
+$result = $dr.Read()
+$auth_scheme = $dr.GetString(0)
+
+$conn.Close()
+$conn.Dispose()
+
+[System.DateTime] $end = Get-Date
+[System.Timespan] $span = ($end - $start)
+
+"End time: " + $end.ToString("M/d/yyyy HH:mm:ss.fff")
+"Elapsed time was " + $span.Milliseconds + " ms."
 "Auth scheme for " + $server + ": " + $auth_scheme
 ```
 
