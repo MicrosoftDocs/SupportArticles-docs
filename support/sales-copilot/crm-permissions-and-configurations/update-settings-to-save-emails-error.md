@@ -1,15 +1,15 @@
 ---
 title: Can't save email to CRM due to invalid mailbox settings
-description: Resolves the error that occurs in Microsoft Copilot for Sales due to invalid mailbox settings in Microsoft Dynamics 365.
-ms.date: 12/27/2023
+description: Resolves an error that occurs in Microsoft Copilot for Sales due to invalid mailbox settings in Microsoft Dynamics 365.
+ms.date: 01/04/2024
 ms.service: microsoft-sales-copilot
 author: sbmjais
 ms.author: shjais
 manager: shujoshi
 ---
-# Can't save email to CRM due to invalid mailbox settings
+# Can't save an email to CRM due to invalid mailbox settings
 
-This article helps you troubleshoot and resolve the error message that occurs in Microsoft Copilot for Sales due to a disabled mailbox in Microsoft Dynamics 365.
+This article helps you troubleshoot and resolve an error message that occurs in Microsoft Copilot for Sales due to a disabled mailbox in Microsoft Dynamics 365.
 
 > [!NOTE]
 > Microsoft Sales Copilot is rebranded as Microsoft Copilot for Sales in January 2024. The screenshots in this article will be updated with the new name soon.
@@ -27,7 +27,7 @@ This article helps you troubleshoot and resolve the error message that occurs in
 
 ## Symptoms
 
-When you open Copilot for Sales in Outlook, and try to save an email or a meeting to CRM, you see the following error message:
+When you open Copilot for Sales in Outlook and try to save an email or a meeting to CRM, you see the following error message:
 
 > Update settings to save emails
 
@@ -50,13 +50,13 @@ This error occurs when the user's mailbox is disabled or the mailbox is missing 
 
 3. Select the **Email** tab, and then select **View your Mailbox**.
 
-    :::image type="content" source="media/update-settings-to-save-emails-error/view-your-mailbox.png" alt-text="Screenshot that shows the View your Mailbox option under the Email tab.":::
+    :::image type="content" source="media/update-settings-to-save-emails-error/view-your-mailbox.png" alt-text="Screenshot that shows the View your Mailbox option under the Email tab." lightbox="media/update-settings-to-save-emails-error/view-your-mailbox.png":::
 
-4. Under **Synchronization method**, ensure a value is selected for **Server Profile**. If not, select **Microsoft Exchange Online**.
+4. Under **Synchronization Method**, ensure a value is selected for **Server Profile**. If not, select **Microsoft Exchange Online**.
 
     :::image type="content" source="media/update-settings-to-save-emails-error/server-profile-value.png" alt-text="Screenshot that shows the value selected for a server profile.":::
 
-5. In the ribbon, if **Activate** is available, select it.
+5. In the ribbon, select **Activate** if it's available.
 
     :::image type="content" source="media/update-settings-to-save-emails-error/activate-mailbox.png" alt-text="Screenshot that shows how to activate a mailbox.":::
 
@@ -67,4 +67,4 @@ This error occurs when the user's mailbox is disabled or the mailbox is missing 
 
 ## More information
 
-If your issue is still not resolved, go to the [Copilot for Sales - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
+If your issue is still unresolved, go to the [Copilot for Sales - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.

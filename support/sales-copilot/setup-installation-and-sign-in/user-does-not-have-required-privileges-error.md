@@ -1,18 +1,18 @@
 ---
-title: User does not have required privileges to access the org in Admin Only mode error
-description: Resolves the error message that states the user doesn't have required privileges to access the organization when the Administration mode is enabled in Copilot for Sales.
-ms.date: 12/27/2023
+title: User does not have required privileges to access the org error
+description: Resolves an error message that states the user doesn't have required privileges to access the organization when the Administration mode is enabled in Copilot for Sales.
+ms.date: 01/04/2024
 ms.service: microsoft-sales-copilot
 author: sbmjais
 ms.author: shjais
 manager: shujoshi
 ---
-# "User does not have required privileges to access the org" error
+# "User does not have required privileges to access the org in Admin Only mode" error
 
-This article provides a resolution for the error message that occurs in Microsoft Copilot for Sales when the organization is in [Administration mode](/power-platform/admin/admin-mode).
+This article provides a resolution for an error message that occurs in Microsoft Copilot for Sales when the organization is in [Administration mode](/power-platform/admin/admin-mode).
 
 > [!NOTE]
-> Microsoft Sales Copilot is rebranded as Microsoft Copilot for Sales in January 2024. The screenshots in this article will be updated with the new name soon.
+> Microsoft Sales Copilot is rebranded as Microsoft Copilot for Sales in January 2024. The screenshot in this article will be updated with the new name soon.
 
 ## Who is affected?
 
@@ -23,7 +23,7 @@ This article provides a resolution for the error message that occurs in Microsof
 |**OS**     | Windows and Mac         |
 |**Deployment**     | User managed and admin managed       |
 |**CRM**     | Dynamics 365      |
-|**Users**     | Users trying to use Copilot for Sales when Administration mode is enabled |
+|**Users**     | Users trying to use Copilot for Sales when **Administration mode** is enabled. |
 
 ## Symptoms
 
@@ -35,7 +35,7 @@ The error might be displayed before or after you sign in to an environment from 
 
 ## Cause
 
-The **Administration mode** is enabled for the environment and the affected users aren't administrators.
+The **Administration mode** is enabled for the environment, and the affected users aren't administrators.
 
 When an administrator enables the **Administration mode** for an environment, regular users, regardless of their role assignment, can't access the environment. The user who is already signed in or tries to sign in to the environment can't access data from the environment and will see the error message.
 
@@ -47,4 +47,4 @@ To resolve this issue, the administrator must disable the **Administration mode*
 
 ## More information
 
-If your issue is still not resolved, go to the [Copilot for Sales - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
+If your issue is still unresolved, go to the [Copilot for Sales - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.

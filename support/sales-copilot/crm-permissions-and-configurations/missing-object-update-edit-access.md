@@ -1,7 +1,7 @@
 ---
 title: Can't update records due to missing object access in Salesforce CRM
-description: Resolves the error that occurs when users can't update CRM records in Microsoft Copilot for Sales because of missing object access in Salesforce CRM.
-ms.date: 12/27/2023
+description: Resolves an error that occurs when users can't update CRM records in Microsoft Copilot for Sales because of missing object access in Salesforce CRM.
+ms.date: 01/04/2024
 ms.service: microsoft-sales-copilot
 author: sbmjais
 ms.author: shjais
@@ -12,7 +12,7 @@ manager: shujoshi
 This article helps you troubleshoot and resolve issues when users can't update CRM records in Microsoft Copilot for Sales because of missing object access in Salesforce CRM.
 
 > [!NOTE]
-> Microsoft Sales Copilot is rebranded as Microsoft Copilot for Sales in January 2024. The screenshots in this article will be updated with the new name soon.
+> Microsoft Sales Copilot is rebranded as Microsoft Copilot for Sales in January 2024. The screenshot in this article will be updated with the new name soon.
 
 ## Who is affected?
 
@@ -39,11 +39,11 @@ The user doesn't have edit access to an object in Salesforce.
 
 When a user tries to edit an object, Copilot for Sales checks if the user has **Write** access to the object in Salesforce. If the user doesn't have **Write** access to the object, the error message is displayed.
 
-You can confirm if the user not having **Write** access to the entity is the root cause of issue if you see the following error in the logs:
+You can confirm if the user not having **Write** access to the entity is the root cause of the issue if you see the following error in the logs:
 
 ```output
 Exception thrown in VivaSalesContacts/UpdateContact -  
-Microsoft.SalesProductivity.Common.Base.SPServiceException: Salesforce failed to complete task: Message: entity is deleted clientRequestId: 01665660-aeb5-45fe-83d3-59bf69f1e85e-self --->  
+Microsoft.SalesProductivity.Common.Base.SPServiceException: Salesforce failed to complete task: Message: entity is deleted clientRequestId:<CLIENT REQUEST ID>-self --->  
 System.Exception: {  
     "status": 400,  
     "message": "Object type contact is not supported. If you are attempting to use a custom object, be sure to append the '__c' after the entity name.  
@@ -54,19 +54,21 @@ System.Exception: {
 } 
 ```
 
-In the above error message, the `Object type contact is not supported` indicates that the user doesn't have **Write** access to the `Contact` object.
+In the above error message, `Object type contact is not supported` indicates that the user doesn't have **Write** access to the `Contact` object.
 
 ## Resolution
 
 To resolve the issue, ensure that the user has:
 
 - Read or write level permissions to the object that the user is trying to edit in Salesforce.
-- Read or write permissions on all of the fields configured for editing.
+- Read or write permissions to all the fields configured for editing.
 
-For information about the object-level security, field-level security, and record-level security in Salesforce, see [Control Who Sees What](https://help.salesforce.com/s/articleView?id=sf.security_data_access.htm&type=5). You can also contact your Salesforce administrator for help with [setting object permissions in profiles](https://help.salesforce.com/s/articleView?id=sf.perm_sets_object_perms_edit.htm&type=5).
+For information about object-level security, field-level security, and record-level security in Salesforce, see [Control Who Sees What](https://help.salesforce.com/s/articleView?id=sf.security_data_access.htm&type=5). You can also contact your Salesforce administrator for help with [setting object permissions in profiles](https://help.salesforce.com/s/articleView?id=sf.perm_sets_object_perms_edit.htm&type=5).
 
 ## More information
 
-If your issue is still not resolved, go to the [Copilot for Sales - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
+If your issue is still unresolved, go to the [Copilot for Sales - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
+
+[!INCLUDE [Third-party contact disclaimer](../../includes/third-party-contact-disclaimer.md)]

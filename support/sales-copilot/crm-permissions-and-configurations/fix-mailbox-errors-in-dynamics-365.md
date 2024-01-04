@@ -1,7 +1,7 @@
 ---
 title: Fix mailbox errors in Dynamics 365
-description: Resolves the error that might occur when you try to save an email or a meeting to Dynamics 365 using Microsoft Copilot for Sales in Outlook.
-ms.date: 12/27/2023
+description: Resolves an error that might occur when you try to save an email or a meeting to Dynamics 365 using the Microsoft Copilot for Sales for Outlook add-in.
+ms.date: 01/04/2024
 ms.service: microsoft-sales-copilot
 author: sbmjais
 ms.author: shjais
@@ -9,7 +9,7 @@ manager: shujoshi
 ---
 # "Fix mailbox errors in Dynamics 365" error occurs when saving an email or a meeting
 
-This article helps you troubleshoot and resolve the "Fix mailbox errors in Dynamics 365" error in Microsoft Copilot for Sales in Outlook.
+This article helps you troubleshoot and resolve the "Fix mailbox errors in Dynamics 365" error when you use Microsoft Copilot for Sales in Outlook.
 
 > [!NOTE]
 > Microsoft Sales Copilot is rebranded as Microsoft Copilot for Sales in January 2024. The screenshots in this article will be updated with the new name soon.
@@ -27,17 +27,17 @@ This article helps you troubleshoot and resolve the "Fix mailbox errors in Dynam
 
 ## Symptoms
 
-When you open Copilot for Sales in Outlook, and try to save an email or a meeting to Microsoft Dynamics 365, you see the following error message:
+When you open Copilot for Sales in Outlook and try to save an email or a meeting to Microsoft Dynamics 365, you see the following error message:
 
 > Fix mailbox errors in Dynamics 365
 
-:::image type="content" source="media/fix-mailbox-errors-in-dynamics-365/fixed-mailbox-errors.png" alt-text="Screenshot that shows the Fix mailbox errors in Dynamics 365 error that occurs during a server-side synchronization.":::
+:::image type="content" source="media/fix-mailbox-errors-in-dynamics-365/fixed-mailbox-errors.png" alt-text="Screenshot that shows the Fix mailbox errors in Dynamics 365 error that occurs during server-side synchronization.":::
 
 ## Cause
 
-This issue occurs because one or more sync errors occur with the server-side synchronization.
+This issue occurs because one or more sync errors occur in server-side synchronization.
 
-Copilot for Sales requires the server-side synchronization to synchronize emails and meetings to Microsoft Dynamics 365. When the server-side synchronization encounters an error while attempting the synchronization, Copilot for Sales detects and displays this error message for you to take action and resolve the error.
+Copilot for Sales requires server-side synchronization to synchronize emails and meetings to Dynamics 365. When server-side synchronization encounters an error while attempting the synchronization, Copilot for Sales detects and displays this error message for you to take action and resolve the error.
 
 ## Resolution
 
@@ -54,13 +54,13 @@ To resolve the error, you must locate the specific error as part of the mailbox 
 
 3. Select the **Email** tab, and then select **View your Mailbox**.
 
-    :::image type="content" source="media/fix-mailbox-errors-in-dynamics-365/view-your-mailbox-under-email.png" alt-text="Screenshot that shows the View your Mailbox option under the Email tab.":::
+    :::image type ="content" source="media/fix-mailbox-errors-in-dynamics-365/view-your-mailbox-under-email.png" alt-text="Screenshot that shows the View your Mailbox option under the Email tab." lightbox="media/fix-mailbox-errors-in-dynamics-365/view-your-mailbox-under-email.png":::
 
 4. Select **Alerts** in the left pane, and then select **Errors** to see errors related to the mailbox.
 
-    :::image type="content" source="media/fix-mailbox-errors-in-dynamics-365/errors-in-alerts.png" alt-text="Screenshot that shows the errors related to the mailbox.":::
+    :::image type="content" source="media/fix-mailbox-errors-in-dynamics-365/errors-in-alerts.png" alt-text="Screenshot that shows the errors related to the mailbox."  lightbox="media/fix-mailbox-errors-in-dynamics-365/errors-in-alerts.png":::
 
-    Each error has a description and a link to the article that helps you resolve the error. You can also delete the error to suppress it.
+    Each error has a description and a link to an article that helps you resolve the error. You can also delete the error to suppress it.
 
     :::image type="content" source="media/fix-mailbox-errors-in-dynamics-365/error-details-delete.png" alt-text="Screenshot that shows the details of an error and how to delete an error from the Alerts tab.":::
 
@@ -71,4 +71,4 @@ To resolve the error, you must locate the specific error as part of the mailbox 
 
 ## More information
 
-If your issue is still not resolved, go to the [Copilot for Sales - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
+If your issue is still unresolved, go to the [Copilot for Sales - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.

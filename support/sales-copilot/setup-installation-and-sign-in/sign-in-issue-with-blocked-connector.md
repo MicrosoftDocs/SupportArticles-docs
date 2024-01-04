@@ -1,17 +1,17 @@
 ---
 title: Can't sign in to Salesforce due to blocked Salesforce connector
-description: Resolves the error message that occurs in Copilot for Sales when you can't sign in to Salesforce due to a blocked Salesforce connector.
-ms.date: 12/27/2023
+description: Resolves an error message that occurs in Copilot for Sales when you can't sign in to Salesforce due to a blocked Salesforce connector.
+ms.date: 01/04/2024
 ms.service: microsoft-sales-copilot
 author: sbmjais
 ms.author: shjais
 ---
 # Can't sign in to Salesforce due to blocked Salesforce connector
 
-This article helps you troubleshoot and resolve the error that occurs in Microsoft Copilot for Sales when you can't sign in to Salesforce due to a blocked Salesforce connector.
+This article helps you troubleshoot and resolve an error that occurs in Microsoft Copilot for Sales when you can't sign in to Salesforce due to a blocked Salesforce connector.
 
 > [!NOTE]
-> Microsoft Sales Copilot is rebranded as Microsoft Copilot for Sales in January 2024. The screenshots in this article will be updated with the new name soon.
+> Microsoft Sales Copilot is rebranded as Microsoft Copilot for Sales in January 2024. The screenshot in this article will be updated with the new name soon.
 
 ## Who is affected?
 
@@ -26,7 +26,7 @@ This article helps you troubleshoot and resolve the error that occurs in Microso
 
 ## Symptoms
 
-When you try to sign in to Salesforce from Microsoft Copilot for Sales, the following error message is displayed with the error code `ConnectionApiPolicyViolation`:
+When you try to sign in to Salesforce from Copilot for Sales, the following error message is displayed with the error code `ConnectionApiPolicyViolation`:
 
 > Something went wrong
 
@@ -34,22 +34,22 @@ When you try to sign in to Salesforce from Microsoft Copilot for Sales, the foll
 
 ## Cause
 
-The Salesforce connector is blocked on the default environment.
+The Salesforce connector is blocked in the default environment.
 
-The Data Loss Prevention (DLP) policy is enabled on the default environment in the tenant thereby blocking the Salesforce connector.
+The Data Loss Prevention (DLP) policy is enabled in the tenant's default environment, thereby blocking the Salesforce connector.
 
 ## Resolution
 
-You must unblock the Salesforce connector in the DLP policy to resolve this issue.
+To resolve this issue, you must unblock the Salesforce connector in the DLP policy.
 
 1. Sign in to the Power Platform admin center with admin credentials.
 1. In the left navigation pane, select **Policies** > **Data policies**.
 1. Select the data policy that blocks the Salesforce connector, and then select **Edit Policy**.
-1. On the **Prebuilt connectors** step, move the **Salesforce** connector to either **Business** or **Non-business**.
-1. Go through rest of the steps, and then select **Update policy**.
+1. In the **Prebuilt connectors** step, move the **Salesforce** connector to either **Business** or **Non-business**.
+1. Go through the rest of the steps, and then select **Update policy**.
 
 ## More information
 
-If your issue is still not resolved, go to the [Copilot for Sales - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
+If your issue is still unresolved, go to the [Copilot for Sales - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]

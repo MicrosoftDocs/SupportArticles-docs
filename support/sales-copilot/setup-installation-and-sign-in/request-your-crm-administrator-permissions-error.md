@@ -1,7 +1,7 @@
 ---
 title: Error after connecting and signing in to Salesforce CRM
-description: Resolves the error message that occurs after connecting and signing in to Salesforce CRM in Microsoft Copilot for Sales.
-ms.date: 12/27/2023
+description: Resolves an error message that occurs after connecting and signing in to Salesforce CRM in Microsoft Copilot for Sales.
+ms.date: 01/04/2024
 ms.service: microsoft-sales-copilot
 author: sbmjais
 ms.author: shjais
@@ -58,18 +58,18 @@ System.Exception: {
 
 ## Resolution
 
-You must grant the **API Enabled** permission to the user or user profile for the affected user.
+You must grant the **API Enabled** permission to the user or the affected user's profile.
 
 1. Sign in to Salesforce as an administrator.
 1. In the search box, enter **User**.
-1. In the left navigation pane, select **Profiles**, and then select the profile for the affected user.
+1. In the left navigation pane, select **Profiles**, and then select the affected user's profile.
 1. In the **Administrative Permissions** section, select **API Enabled**.
 1. Select **Save**.
 
-    :::image type="content" source="media/request-your-crm-administrator-permissions-error/api-enabled-option.png" alt-text="Screenshot that shows the API Enabled option on the Profiles page.":::
+    :::image type="content" source="media/request-your-crm-administrator-permissions-error/api-enabled-option.png" alt-text="Screenshot that shows the API Enabled option on the Profiles page." lightbox="media/request-your-crm-administrator-permissions-error/api-enabled-option.png":::
 
 ## More information
 
-If your issue is still not resolved, go to the [Copilot for Sales - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
+If your issue is still unresolved, go to the [Copilot for Sales - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]

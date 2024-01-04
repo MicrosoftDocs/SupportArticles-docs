@@ -1,7 +1,7 @@
 ---
 title: First Salesforce CRM user can't access Copilot for Sales
-description: Resolves the error message that occurs in Microsoft Copilot for Sales related to signing in to Salesforce.
-ms.date: 12/27/2023
+description: Resolves an error message that occurs in Microsoft Copilot for Sales related to signing in to Salesforce.
+ms.date: 01/04/2024
 ms.service: microsoft-sales-copilot
 author: sbmjais
 ms.author: shjais
@@ -9,7 +9,7 @@ manager: shujoshi
 ---
 # First Salesforce CRM user can't access Copilot for Sales
 
-This article helps you troubleshoot and resolve the error message that occurs in Microsoft Copilot for Sales related to signing in to Salesforce.
+This article helps you troubleshoot and resolve an error message that occurs in Microsoft Copilot for Sales related to signing in to Salesforce.
 
 > [!NOTE]
 > Microsoft Sales Copilot is rebranded as Microsoft Copilot for Sales in January 2024. The screenshots in this article will be updated with the new name soon.
@@ -23,11 +23,11 @@ This article helps you troubleshoot and resolve the error message that occurs in
 |**OS**     | Windows and Mac         |
 |**Deployment**     | User managed and admin managed       |
 |**CRM**     | Salesforce        |
-|**Users**     | First user who tries to sign-in to Salesforce CRM from Copilot for Sales   |
+|**Users**     | The first user who tries to sign in to Salesforce CRM from Copilot for Sales.   |
 
 ## Symptoms
 
-When the first user in an organization tries to sign-in to Salesforce CRM from Copilot for Sales, a trial environment needs to be created. When the user doesn't have permission to create a trial environment, the following error message is displayed:
+When the first user in an organization tries to sign in to Salesforce CRM from Copilot for Sales, a trial environment needs to be created. When the user doesn't have permission to create a trial environment, the following error message is displayed:
 
 > Updated setting required  
 > To use this app, ask your Power Platform admin to let you use Copilot for Sales, and include the error details in your request.
@@ -47,12 +47,12 @@ As a tenant administrator, follow these steps to allow users to create trial env
 3. On the **Tenant settings** page, select **Trial environment assignments**.
 4. In the **Trial environment assignments** panel, select **Everyone**.
 
-    :::image type="content" source="media/first-user-cant-create-trial-environment/erveryone-option-in-tenant-settings.png" alt-text="Screenshot that shows how to update trial environment assignments.":::
+    :::image type="content" source="media/first-user-cant-create-trial-environment/erveryone-option-in-tenant-settings.png" alt-text="Screenshot that shows how to update trial environment assignments." lightbox="media/first-user-cant-create-trial-environment/erveryone-option-in-tenant-settings.png":::
 
 5. Select **Save**.
 
 ## More information
 
-If your issue is still not resolved, go to the [Copilot for Sales - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
+If your issue is still unresolved, go to the [Copilot for Sales - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
