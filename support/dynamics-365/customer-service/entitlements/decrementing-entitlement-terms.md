@@ -16,9 +16,9 @@ In Dynamics, we have two scenarios of decrementing entitlement terms.
 
 - Choosing **Allocation Type** as **Number of cases** and under **Decrease Remaining On** has two options **Case Resolution** and **Case Creation**. 
 
-- Choosing **Case Resolution** on **Decrease Remaining On** will decrease the **Total Terms** after the Case was resolved. 
+	- Choosing **Case Resolution** on **Decrease Remaining On** will decrease the **Total Terms** after the Case was resolved. 
 
-- Choosing **Case Creation** on **Decrease Remaining On** will decrease the **Total Terms** after the Case was Created. 
+	- Choosing **Case Creation** on **Decrease Remaining On** will decrease the **Total Terms** after the Case was Created. 
 
 **For example:**
 
