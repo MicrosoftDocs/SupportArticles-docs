@@ -54,7 +54,7 @@ If you can't find the dump file, go to the next steps to enable the dump log and
 
 To enable the dump log and the serial console, run the following script:
 
-[!INCLUDE [Enable Serial Console and Memory Dump Collection](../../includes/enable-serial-console-memory-dump-collection.md)]
+[!INCLUDE [Enable Serial Console and Memory Dump Collection](../../includes/azure/enable-serial-console-memory-dump-collection.md)]
 
 Make sure that there's enough space on the disk to allocate as much memory as the RAM, which depends on the size that you're selecting for this VM. If there isn't enough space or this is a large size VM (G, GS or E series), you can change the location in which this file is created and refer that to any other data disk that's attached to the VM. To do this, you have to modify registry keys, as shown in the following code:
 
