@@ -1,7 +1,7 @@
 ---
 title: SSL errors after upgrading to TLS 1.2
 description: This article provides information about the SSL errors that you might see after you  upgrade to TLS 1.2.
-ms.date: 12/28/2023
+ms.date: 01/04/2024
 ms.custom: sap:Connection issues
 author: Malcolm-Stewart
 ms.author: mastewa
@@ -100,6 +100,8 @@ Restart SQL Server to check whether the issue is related to TLS 1.2 or a general
 ### No matching cipher suites
 
 The client and server TLS versions and cipher suites may be readily examined in the `Client Hello` and `Server Hello` packets. The `Client Hello` packet advertises all the client cipher suites, while the `Server Hello` packet will specify one of them. If there're no matching suites, the server closes the connection instead of responding with the `Server Hello` packet.
+
+:::image type="content" source="media/ssl-errors-after-tls-1-2/cipher-suites.png" alt-text="Examine the cipher suites and check if they match.":::
 
 If a network trace isn't available, you can check the function's value under the following registry key:
 
