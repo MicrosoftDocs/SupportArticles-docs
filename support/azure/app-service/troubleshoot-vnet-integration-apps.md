@@ -163,6 +163,9 @@ You can also use the Network troubleshooter to troubleshoot the connection issue
 
 Collecting network traces can be helpful in analyzing issues. In Azure App Services, network traces are taken from the application process. To obtain accurate information, reproduce the issue while starting the network trace collection.
 
+> [!NOTE]
+> * The Virtual network traffic isn't captured in network traces.
+
 ### Windows App Services
 
 To collect network traces for Windows App Services, follow these steps:
