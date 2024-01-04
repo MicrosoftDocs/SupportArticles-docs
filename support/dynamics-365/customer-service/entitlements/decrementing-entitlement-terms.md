@@ -1,14 +1,14 @@
 ---
-title: Entitlement remaining terms don’t decrement as expected.
-description: Provides a resolution for the issue where Entitlement remaining terms don’t decrement as expected in Dynamics 365 Customer Service.
+title: Entitlement remaining terms doesn't decrement as expected.
+description: Provides a resolution for the issue where Entitlement remaining terms donâ€™t decrement as expected in Dynamics 365 Customer Service.
 ms.reviewer: sdas, ankugupta
 ms.author: sdas
 ms.date: 01/03/2024
 ---
 
-# Entitlement remaining terms don’t decrement as expected.
+# Entitlement remaining terms doesnâ€™t decrement as expected.
 
-This article provides a resolution for the issue where Entitlement remaining terms don’t decrement as expected in Dynamics 365 Customer Service.
+This article provides a resolution for the issue where Entitlement remaining terms donâ€™t decrement as expected in Dynamics 365 Customer Service.
 
 In Dynamics, we have two scenarios of decrementing entitlement terms. 
 
