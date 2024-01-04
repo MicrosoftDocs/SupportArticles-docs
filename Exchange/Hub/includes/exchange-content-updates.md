@@ -2,6 +2,14 @@
 
 
 
+## Week of December 18, 2023
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 12/19/2023 | [Microsoft 365 users can't open or view attachments in Outlook on the web](/exchange/troubleshoot/outlook-on-the-web-issues/cannot-open-attachments) | modified |
+
+
 ## Week of December 11, 2023
 
 
@@ -24,11 +32,3 @@
 | Published On |Topic title | Change |
 |------|------------|--------|
 | 12/1/2023 | [Database switchover causes an ExAssertException error](/exchange/troubleshoot/administration/database-switchover-causes-exassertexception) | added |
-
-
-## Week of November 13, 2023
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 11/17/2023 | [Search-MailboxAuditLog returns an error message that says the AQS parser has been removed](/exchange/troubleshoot/administration/search-mailboxauditlog-returns-aqs-parser-error) | added |
