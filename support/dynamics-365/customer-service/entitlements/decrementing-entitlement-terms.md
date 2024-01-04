@@ -8,7 +8,7 @@ ms.date: 01/03/2024
 
 # Entitlement remaining terms don’t decrement as expected.
 
-	This article provides a resolution for the issue where Entitlement remaining terms don’t decrement as expected in Dynamics 365 Customer Service.
+This article provides a resolution for the issue where Entitlement remaining terms don’t decrement as expected in Dynamics 365 Customer Service.
 
 In Dynamics, we have two scenarios of decrementing entitlement terms. 
 
@@ -24,15 +24,15 @@ In Dynamics, we have two scenarios of decrementing entitlement terms.
 
 - **Decreasing Remaining** On was opted to **Case Resolution** and **Total Terms** was given as 10. 
 
-		- Now create a new case by adding entitlement and resolve it. 
+	- Now create a new case by adding entitlement and resolve it. 
 
-		- Now after resolving the case, it will deduct 1 term and balance 9 will be displayed on **Remaining Terms**. 
+	- Now after resolving the case, it will deduct 1 term and balance 9 will be displayed on **Remaining Terms**. 
 
-	- **Decrease Remaining On** was opted to **Case Creation** and **Total Terms** was given as 10. 
+- **Decrease Remaining On** was opted to **Case Creation** and **Total Terms** was given as 10. 
 
-		- Now create a new case with adding entitlement. 
+	- Now create a new case with adding entitlement. 
 
-		- Upon creating a new case itself, it will deduct 1 term and balance 9 will be displayed on **Remaining Terms**.  
+	- Upon creating a new case itself, it will deduct 1 term and balance 9 will be displayed on **Remaining Terms**.  
 
 ## Scenario: 2 
 
