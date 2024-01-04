@@ -32,9 +32,9 @@ After installing the patches, there was a change in ciphers for client and SQL S
 
 1. Open PowerShell with administrative privileges and run the following command on both servers that's your client and main server.
 
- ```powershell
- Get-ItemPropertyValue  -Path HKLM:\System\CurrentControlSet\Control\Cryptography\Configuration\Local\SSL\00010002\ -Name Functions
- ```
+   ```powershell
+   Get-ItemPropertyValue  -Path HKLM:\System\CurrentControlSet\Control\Cryptography\Configuration\Local\SSL\00010002\ -Name Functions
+   ```
 
 1. Check and compare these two values from both machines. If they are different, then it means the ciphers are different for both servers.
 

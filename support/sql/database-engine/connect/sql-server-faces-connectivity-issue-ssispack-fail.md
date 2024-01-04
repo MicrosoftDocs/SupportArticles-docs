@@ -10,7 +10,7 @@ ms.custom: sap:Connection issues
 
 # SSIS packages run by SQL agent fail to execute
 
-When you run an SSIS package through SQL Server Agent, the package might fail to execute. This might lead to connectivity issues.
+When you run an SQL Server Integration Services (SSIS) package through SQL Server Agent, the package might fail to execute. This might lead to connectivity issues.
 
 ## Symptoms
 
@@ -24,4 +24,4 @@ The following error messages are generated:
 
 ## Resolution
 
-Change the **RetainSameConnection** property from **False** to **True**. You can do this both in the SSIS package under connection manager properties and in the job step properties (**Configuration > Connection Managers**).
+Change the **RetainSameConnection** property from **False** to **True**. You can do this both in the SSIS package under connection manager properties and in the **Job Step Properties** (**Configuration > Connection Managers**).

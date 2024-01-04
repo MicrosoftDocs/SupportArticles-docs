@@ -50,6 +50,6 @@ To resolve this issue, follow these steps:
 1. It's recommended that you upgrade the application driver to a supported driver.
 1. Use MSOLEDBSQL v18/ODBC v17 if you aren't using encryption for connection, but if you're using encryption for connection on the application server, use MSOLEDBSQL v19/ODBC v18 as these drivers come with encryption by default. For more information, see the following articles:
 
-  - [Release notes for OLE DB Driver - OLE DB Driver for SQL Server](/sql/connect/oledb/release-notes-for-oledb-driver-for-sql-server?view=sql-server-ver16&preserve-view=true)
+   - [Release notes for OLE DB Driver - OLE DB Driver for SQL Server](/sql/connect/oledb/release-notes-for-oledb-driver-for-sql-server?view=sql-server-ver16&preserve-view=true)
 
-  - [Release Notes for ODBC Driver for SQL Server on Windows - ODBC Driver for SQL Server](/sql/connect/odbc/windows/release-notes-odbc-sql-server-windows)
+   - [Release Notes for ODBC Driver for SQL Server on Windows - ODBC Driver for SQL Server](/sql/connect/odbc/windows/release-notes-odbc-sql-server-windows)

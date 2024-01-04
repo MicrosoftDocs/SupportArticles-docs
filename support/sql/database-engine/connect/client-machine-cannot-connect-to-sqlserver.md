@@ -1,6 +1,6 @@
 ---
 title: Client machine can't access SQL Server
-description: This article provides a resolution when the client machine cannot connect SQL Server by SSMS that uses the SQL authentication.
+description: This article provides a resolution when the client machine can't connect SQL Server by SSMS that uses the SQL authentication.
 ms.date: 01/03/2024
 author: prmadhes-msft
 ms.author: prmadhes
@@ -22,9 +22,9 @@ You see the following error message:
 
 The error message might be shown in either of the following situations:
 
-- If SQL Server certificate uses RSA to encrypt public key, cipher suites should be matched for client and server. In case it's not matched, the communication between client and server might not be secure.
+- If SQL Server certificate uses RSA to encrypt public key, cipher suites should match between client and server. In case, the cipher suites don't match, the communication between client and server might not be secure.
 
-- If RSA is disabled on the server, the server won't be able to use RSA cipher suites for encryption.
+- If RSA is disabled on the server, the server can't use RSA cipher suites for encryption.
 
 ## Resolution
 
@@ -35,6 +35,6 @@ To resolve this error, on the SQL Server, modify the following Registry key valu
 > [!NOTE]
 > You must reboot the server for the change to take effect.
 
-Enabling RSA on the SQL Server means that the server supports RSA encryption, and generally this will not cause any risk to your environment.
+Enabling RSA on the SQL Server means that the server supports RSA encryption, and generally won't cause any risk to your environment.
 
-For more details about the TLS and RSA configuration, see [Restrict cryptographic algorithms and protocols](../../../windows-server/windows-security/restrict-cryptographic-algorithms-protocols-schannel.md).
+For more information about the TLS and RSA configuration, see [Restrict cryptographic algorithms and protocols](../../../windows-server/windows-security/restrict-cryptographic-algorithms-protocols-schannel.md).
