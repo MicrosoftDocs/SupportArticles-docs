@@ -1,7 +1,6 @@
 ---
 title: General Ledger isn't updated as expected
 description: Describes a problem in which the General Ledger isn't updated as expected when you post a pay run in Microsoft Dynamics GP. Provides a resolution.
-ms.reviewer: lmuelle
 ms.topic: troubleshooting
 ms.date: 01/03/2024
 ---
