@@ -52,7 +52,7 @@ Agents were not able to create cases with entitlement when Remaining Terms is le
 
 ## Symptoms
 
-Entitlement remaining terms were not decresing
+Entitlement remaining terms are not decreasing
 
 ## Cause
 
