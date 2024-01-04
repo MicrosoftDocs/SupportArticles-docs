@@ -10,11 +10,11 @@ ms.date: 01/03/2024
 
 	This article provides a resolution for the issue where Entitlement remaining terms don’t decrement as expected in Dynamics 365 Customer Service.
 
-	In Dynamics, we have two scenarios of decrementing entitlement terms. 
+In Dynamics, we have two scenarios of decrementing entitlement terms. 
 
-	## Scenario:  1 
+## Scenario:  1 
 
-	- Choosing **Allocation Type** as **Number of cases** and under **Decrease Remaining On** has two options **Case Resolution** and **Case Creation**. 
+- Choosing **Allocation Type** as **Number of cases** and under **Decrease Remaining On** has two options **Case Resolution** and **Case Creation**. 
 
 		- Choosing **Case Resolution** on **Decrease Remaining On** will decrease the **Total Terms** after the Case was resolved. 
 
@@ -34,21 +34,21 @@ ms.date: 01/03/2024
 
 		- Upon creating a new case itself, it will deduct 1 term and balance 9 will be displayed on **Remaining Terms**.  
 
-	## Scenario: 2 
+## Scenario: 2 
 
-	- Choosing **Allocation Type** as **Number of hours** and under **Decrease Remaining On** was locked with option **Case Resolution**. 
+- Choosing **Allocation Type** as **Number of hours** and under **Decrease Remaining On** was locked with option **Case Resolution**. 
 
-	- In this scenario, we need to create an activity in case form, for example we have given 30 minutes in duration field and that activity should be completed before resolving the case. 
+- In this scenario, we need to create an activity in case form, for example we have given 30 minutes in duration field and that activity should be completed before resolving the case. 
 
-	- Now after resolving the case, it will deduct 0.5 term and balance 9.5 will be displayed on **Remaining Terms**. 
+- Now after resolving the case, it will deduct 0.5 term and balance 9.5 will be displayed on **Remaining Terms**. 
 
-	Here the Decrease Remaining calculation works as 
+Here the Decrease Remaining calculation works as 
 
-		1hour (60mins) = 1 term 
+	1hour (60mins) = 1 term 
 
-		30mins = 0.5 term  
+	30mins = 0.5 term  
 
-	Agents were not able to create cases with entitlement when Remaining Terms is less than zero or when the term remaining for a channel is less than zero, when **restrict based on entitlement terms** was selected to Yes. 
+Agents were not able to create cases with entitlement when Remaining Terms is less than zero or when the term remaining for a channel is less than zero, when **restrict based on entitlement terms** was selected to Yes. 
 
 ## Symptoms
 
