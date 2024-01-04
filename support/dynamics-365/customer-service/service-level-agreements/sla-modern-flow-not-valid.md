@@ -45,7 +45,7 @@ Here are the steps to turn off or turn on a flow:
 
 6. To get the affceted flow name we can do a odata call with the affected flow id from the error.
    
-   find flow name : (<orgurl>)/api/data/v9.1/workflows(<modern_flow_id_visible_in_error>)
+   find flow name : (<org_url>)/api/data/v9.1/workflows(<modern_flow_id_visible_in_error>)
  
    Search with that name on power automate.
 
