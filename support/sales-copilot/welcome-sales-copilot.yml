@@ -9,7 +9,7 @@ metadata:
   ms.topic: landing-page # Required
   author:   sbmjais
   ms.author:  shjais
-  ms.date: 12/26/2023
+  ms.date: 01/04/2024
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -38,7 +38,7 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Sign in issue when opening the Copilot for Sales pane in Outlook
+          - text: Sign-in issue when opening the Copilot for Sales pane in Outlook
             url: outlook-side-panel/problem-starting-copilot-for-sales.md
           - text: Update add-in error in Copilot for Sales add-in for Microsoft Outlook
             url: outlook-side-panel/update-add-in-error.md
