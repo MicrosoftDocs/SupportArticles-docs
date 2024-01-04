@@ -48,9 +48,9 @@ To resolve these errors, follow these steps:
   1. If a certificate is present, select **View** to examine it and then select **Clear**. Skip to step 6.
   1. If the certificate isn't present (as shown in the previous screenshot), look in the SQL Server error log file and get the hash code. You might see one of the following two entries:
 
-    `2023-05-30 14:59:30.89 spid15s The certificate [Cert Hash(sha1) "B3029394BB92AA8EDA0B8E37BAD09345B4992E3D"] was successfully loaded for encryption.`
-     or
-    `2023-05-19 04:58:56.42 spid11s A self-generated certificate was successfully loaded for encryption.`
+     `2023-05-30 14:59:30.89 spid15s The certificate [Cert Hash(sha1) "B3029394BB92AA8EDA0B8E37BAD09345B4992E3D"] was successfully loaded for encryption.`
+      or
+     `2023-05-19 04:58:56.42 spid11s A self-generated certificate was successfully loaded for encryption.`
     If the certificate is self-generated, skip to step b.
 
   1. Open the **Computer Certificate Store** in the Microsoft Management Console (MMC).
