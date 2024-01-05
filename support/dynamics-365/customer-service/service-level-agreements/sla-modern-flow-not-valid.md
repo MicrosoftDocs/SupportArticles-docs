@@ -25,7 +25,7 @@ To solve this issue, turn off and then turn on the SLA modern flow.
 
 Here are the steps to turn off or turn on a flow:
 
-1. Sign in to [Power Automate](https://make.powerautomate.com/) with a user who has the permissions to edit a flow.
+1. Sign in to [Power Automate](https://make.powerautomate.com/) as an user who has the permissions to edit a flow.
 
 2. Select the right environment from **Environments** in the upper-right corner.
 
@@ -43,11 +43,11 @@ Here are the steps to turn off or turn on a flow:
 
     :::image type="content" source="media/sla-modern-flow-not-valid/cloud-flows.png" alt-text="Screenshot shows the Cloud flows option in the left menu." border="false":::
 
-6. To get the affceted flow name we can do a odata call with the affected flow id from the error.
+6. To get the affected flow name, do an odata call with the affected flow id from the error.
    
    find flow name : (<org_url>)/api/data/v9.1/workflows(<modern_flow_id_visible_in_error>)
  
-   Search with that name on power automate.
+   Search with the name on Power Automate.
 
 7. Select the respective flow, and then select **Turn off** and then **Turn on** from the top menu.
 
