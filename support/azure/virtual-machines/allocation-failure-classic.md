@@ -15,7 +15,7 @@ ms.author: genli
 ---
 # Troubleshooting steps specific to allocation failure scenarios in the classic deployment model
 
-[!INCLUDE [classic-vm-deprecation](../../includes/classic-vm-deprecation.md)]
+[!INCLUDE [classic-vm-deprecation](../../includes/azure/classic-vm-deprecation.md)]
 
 The following are common allocation scenarios that cause an allocation request to be pinned. We'll dive into each scenario later in this article.
 
@@ -26,7 +26,7 @@ The following are common allocation scenarios that cause an allocation request t
 - Affinity group (VM or service proximity)
 - Affinity–group-based virtual network
 
-When you receive an allocation error, check whether any of the listed scenarios apply to your error. Use the allocation error that’s returned by the Azure platform to identify the corresponding scenario. If your request is pinned, remove some of the pinning constraints to open your request to more clusters, thereby increasing the chance of allocation success.
+When you receive an allocation error, check whether any of the listed scenarios apply to your error. Use the allocation error that's returned by the Azure platform to identify the corresponding scenario. If your request is pinned, remove some of the pinning constraints to open your request to more clusters, thereby increasing the chance of allocation success.
 In general, if the error does not state that "the requested VM size is not supported," you can always retry at a later time. This is because enough resources may have been freed in the cluster to accommodate your request. If the problem is that the requested VM size is not supported, try a different VM size. Otherwise, the only option is to remove the pinning constraint.
 
 Two common failure scenarios are related to affinity groups. In the past, an affinity group was used to provide close proximity to VMs and service instances, or it was used to enable the creation of a virtual network. With the introduction of regional virtual networks, affinity groups are no longer required to create a virtual network. With the reduction of network latency in Azure infrastructure, the recommendation to use affinity groups for VMs or service proximity has changed.
