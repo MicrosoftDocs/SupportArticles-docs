@@ -1,7 +1,7 @@
 ---
 title: Can't delete a virtual network or subnet used by ACI
 description: Discusses how to troubleshoot failures when you delete a virtual network or subnet used by Azure Container Instances (ACI).
-ms.date: 12/13/2023
+ms.date: 01/05/2024
 ms.service: container-instances
 ms.reviewer: tysonfreeman, v-weizhu
 ---
