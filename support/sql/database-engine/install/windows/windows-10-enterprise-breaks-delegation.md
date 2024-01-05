@@ -9,7 +9,7 @@ ms.reviewer: mastewa, jopilov, prmadhes, v-sidong
 
 ## Symptoms
 
-You can't use linked servers or web sites that delegate credentials to SQL Server in Windows 10. Windows 7 and Windows 8 work.
+You can't use linked servers or web sites that delegate credentials to SQL Server in Windows 10. Windows 7 and Windows 8 users don't have the issue.
 
 ## Cause
 
@@ -18,6 +18,12 @@ Windows 10 Enterprise edition has a feature called [Credential Guard](/windows/s
 ## Workaround
 
 To resolve this issue, use constrained delegation instead. If full delegation is required, disable [Credential Guard](/windows/security/identity-protection/credential-guard/) in group policy.
+
+## Implications
+
+Any network where you have even one Windows 10 Enterprise user with [Credential Guard](/windows/security/identity-protection/credential-guard/) enabled must switch all the servers from full delegation to constrained delegation.
+
+Executing SSIS packages in SSISDB from a remote system (for example, a client machine via SQL Server Management Studio) will fail. SSIS's architecture prevents it from being used with constrained delegation. Launching the jobs from a local SQL Agent should be fine as long as the back-end databases don't use [linked servers](/sql/relational-databases/linked-servers/linked-servers-database-engine).
 
 ## More information
 
@@ -29,9 +35,3 @@ Applications break if they require:
 - Kerberos unconstrained/full delegation
 - Extracting the Kerberos TGT
 - NTLMv1
-
-## Implications
-
-Any network where you have even one Windows 10 Enterprise user with [Credential Guard](/windows/security/identity-protection/credential-guard/) enabled will have to switch all the servers from full delegation to constrained delegation.
-
-Executing SSIS packages in SSIDB from a remote system (for example, a client machine via SQL Server Management Studio) will fail. SSIS's architecture prevents it from being used with constrained delegation. Launching the jobs from (a local) SQL Agent should be fine as long as the back-end databases don't themselves use [linked servers](/sql/relational-databases/linked-servers/linked-servers-database-engine).
