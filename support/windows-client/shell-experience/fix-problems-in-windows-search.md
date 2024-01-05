@@ -143,6 +143,24 @@ If Windows 11, Windows 10 May 2019 Update, or a later update is installed, use W
 > [!IMPORTANT]
 > If your organization has disabled the ability to run scripts, contact your administrator for help.
 
+## Solution 5: Regenerate Microsoft.Windows.Search package AppData
+
+ 1. Verify that the search works for a newly created Windows account. The rest of this method assumes it does.
+
+ 2. Delete `%USERPROFILE%\AppData\Local\Packages\Microsoft.Windows.Search_cw5n1h2txyewy`.
+    * backup it first
+    * Use Windows Recovery environment or simply log off and log in to another user account.
+    * For older Windows versions, `Microsoft.Windows.Search_cw5n1h2txyewy` should be replaced with `Microsoft.Windows.Cortana_cw5n1h2txyewy`.
+      
+ 4. Delete `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Search`.
+    * backup it first
+    * Do this from the affected account.
+
+ 6. In Powershell (admin) run:  `Add-AppxPackage -Path "C:\Windows\SystemApps\Microsoft.Windows.Search_cw5n1h2txyewy\Appxmanifest.xml" -DisableDevelopmentMode -Register`
+
+ 7. Reboot. Try to search something and give your PC a minute to initialize indexing. The registry key and the AppData folder should be regenerated.
+
+
 ## Help us improve Search in Windows
 
 If the previous suggestions don't fix the problem, let us know by sending feedback in the Feedback Hub. Provide details, such as a description of the problem, screenshots, log files, and any other information that might be helpful. In the Feedback Hub, select the appropriate category and subcategory. In this case, submit your feedback in the **Cortana and Search** category.
