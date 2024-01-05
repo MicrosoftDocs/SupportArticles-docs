@@ -40,7 +40,7 @@ The Data Loss Prevention (DLP) policy is enabled in the tenant's default environ
 
 ## Resolution
 
-1. Sign out of Copilot for Sales and close the Copilot for Sales pane.
+1. [Sign out of Copilot for Sales](/microsoft-sales-copilot/sign-out-sales-copilot) and close the Copilot for Sales pane.
 1. Reopen the Copilot for Sales pane and sign in to Salesforce.
 
 > [!NOTE]
