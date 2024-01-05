@@ -66,7 +66,9 @@ After selecting **Do Not Decrement Entitlement terms** on case form, Remaining t
 
 ## Resolution 2:
 
-1. Go to **Customizations** and disable all custom plugins, workflows, custom .js code on entitlement and case entity. 
-2. Remove custom active layer for case and entitlement entities. 
-3. Remove custom active layer from **decremententitlementterm** field on case entity. 
+1. Sign in to your Dynamics 365 Customer Engagement (on-premises) instance.
+1. Go to **Settings** > **Advanced Settings** > **Customizations** > **Customize the System** to open the default solution.
+1. Disable all custom plugins, workflows, custom .js code on entitlement and case entity. 
+1. Remove custom active layer for case and entitlement entities. 
+1. Remove custom active layer from **decremententitlementterm** field on case entity. 
 
