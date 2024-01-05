@@ -10,7 +10,7 @@ ms.custom: sap:Connection issues
 
 # Errors are seen after upgrading the version of SQL Server
 
-You experience an error message after you upgrade the SQL Server version from Microsoft SQL Server 2016 Standard Edition (STD) to SQL Server 2019 STD. You might still continue to see the error even after using the local system account for the SQL Agent service.
+You experience an error message after you upgrade the SQL Server version from Microsoft SQL Server 2016 Standard Edition (STD) to SQL Server 2019 STD. You might still continue to see the error even after using the local system account for the SQL Server Agent service.
 
 ## Symptoms
 
