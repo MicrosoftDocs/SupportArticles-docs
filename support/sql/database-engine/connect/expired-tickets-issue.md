@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting the expired tickets issue 
 description: This article provides symptoms and resolution for the expired tickets issue.
-ms.date: 12/19/2023
+ms.date: 01/04/2024
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
