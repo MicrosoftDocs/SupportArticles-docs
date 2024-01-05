@@ -79,3 +79,5 @@ items:
     href: sql-server-upgrade-failed-error-17182.md
   - name: SQL Server upgrade fails when principals own user objects
     href: sql-server-upgrade-failed-error-cert-principals-own-object.md
+- name: Windows 10 Enterprise breaks delegation
+  href: windows-10-enterprise-breaks-delegation.md
