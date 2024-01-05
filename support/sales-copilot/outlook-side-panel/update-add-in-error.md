@@ -27,7 +27,7 @@ This article helps you troubleshoot and resolve an error message that repeatedly
 
 ## Symptoms
 
-When you open the Copilot for Sales pane in Microsoft Outlook, the following error message is displayed:
+When you open the [Copilot for Sales pane in Microsoft Outlook](microsoft-sales-copilot/use-sales-copilot-outlook#open-sales-copilot), the following error message is displayed:
 
 > **Add-in error:** An update to this add-in is available that requires your review and confirmation to install.
 
