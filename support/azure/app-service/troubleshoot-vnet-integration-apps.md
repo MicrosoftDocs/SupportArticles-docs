@@ -68,7 +68,7 @@ nameresolver.exe hostname [optional:DNS Server]
 You can use **nameresolver** to check the hostnames that your app depends on. This way, you can test if you have anything misconfigured with your DNS or perhaps don't have access to your DNS server. You can see the DNS server that your app uses in the console by looking at the environmental variables WEBSITE_DNS_SERVER and WEBSITE_DNS_ALT_SERVER.
 
 > [!NOTE]
-> * The nameresolver.exe tool currently doesn’t work in custom Windows containers.
+> The nameresolver.exe tool currently doesn’t work in custom Windows containers.
 
 
 To test TCP connectivity to a host and port combination, you can use **tcpping**. The syntax is.
@@ -164,7 +164,7 @@ You can also use the Network troubleshooter to troubleshoot the connection issue
 Collecting network traces can be helpful in analyzing issues. In Azure App Services, network traces are taken from the application process. To obtain accurate information, reproduce the issue while starting the network trace collection.
 
 > [!NOTE]
-> * The Virtual network traffic isn't captured in network traces.
+> The Virtual network traffic isn't captured in network traces.
 
 ### Windows App Services
 
