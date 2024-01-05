@@ -27,7 +27,7 @@ If you try to run SQL Server Integration Services (SSIS) packages in SSISDB from
 
 ## More information
 
-If the client edition is Windows 10 Enterprise and the [Credential Guard](/windows/security/identity-protection/credential-guard/) feature is enabled, you can't use full delegation (trust this user for delegation to any service). You can only use constrained delegation. A common symptom is that you can delegate in Windows 7 and 8 , but not in Windows 10.
+If the client edition is Windows 10 Enterprise and the [Credential Guard](/windows/security/identity-protection/credential-guard/) feature is enabled, you can't use full delegation (trust this user for delegation to any service). You can only use constrained delegation. A common symptom is that you can delegate in Windows 7 and 8, but not in Windows 10.
 
 Applications break if they require:
 
