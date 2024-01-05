@@ -43,13 +43,11 @@ Here are the steps to turn off or turn on a flow:
 
     :::image type="content" source="media/sla-modern-flow-not-valid/cloud-flows.png" alt-text="Screenshot shows the Cloud flows option in the left menu." border="false":::
 
-6. To get the affected flow name, do an odata call with the affected flow id from the error.
+6. To get the affected flow name, do an odata call with the affected flow id from the error, and then search with the name on Power Automate.
    
    find flow name : (<org_url>)/api/data/v9.1/workflows(<modern_flow_id_visible_in_error>)
  
-   Search with the name on Power Automate.
-
-7. Select the respective flow, and then select **Turn off** and then **Turn on** from the top menu.
+  7. Select the respective flow, and then select **Turn off** and then **Turn on** from the top menu.
 
     If you aren't sure about the flow name, select any one of the listed flows, replace the flow ID (you can get it from the error message) in the URL from the browser's address bar, and press <kbd>Enter</kbd>. Then, select **Turn off** and then **Turn on** from the top menu.
 
