@@ -18,7 +18,7 @@ You have administrator permissions in Dynamics 365 Field Service.
 
 When a dispatcher tries to create work orders, they get the following error:
 
-`An error occurred: Caller user with ID {ID number} does not have Create permissions for the msdyn_timefrompromised attribute in the msdyn_workorder entity. Count secured attributes in entity 11. user has 0 secured attribute privileges.`
+> An error occurred: Caller user with ID {ID number} does not have Create permissions for the msdyn_timefrompromised attribute in the msdyn_workorder entity. Count secured attributes in entity 11. user has 0 secured attribute privileges.
 
 ## Resolution
 

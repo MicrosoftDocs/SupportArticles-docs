@@ -1,12 +1,12 @@
 ---
-title: A user in a Field Service error message can't be identified 
+title: A user in a Dynamics 365 Field Service error message can't be identified 
 description: Resolves issues trying to identify the user in an error message in Dynamics 365 Field Service.
 author: jasonxian-msft
 ms.author: jasonxian
 ms.reviewer: v-wendysmith
 ms.date: 01/04/2024
 ---
-# A user in a Field Service error message can't be identified
+# A user in a Dynamics 365 Field Service error message can't be identified
 
 This article helps administrators resolve issues identifying a user in a Field Service error message that contains a user ID.
 
