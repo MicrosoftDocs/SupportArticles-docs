@@ -23,7 +23,7 @@ To resolve this issue, use constrained delegation instead. If full delegation is
 
 Any network where you have even one Windows 10 Enterprise user with [Credential Guard](/windows/security/identity-protection/credential-guard/) enabled must switch all the servers from full delegation to constrained delegation.
 
-Executing SSIS packages in SSISDB from a remote system (for example, a client machine via SQL Server Management Studio) will fail. SSIS's architecture prevents it from being used with constrained delegation. Launching the jobs from a local SQL Agent should be fine as long as the back-end databases don't use [linked servers](/sql/relational-databases/linked-servers/linked-servers-database-engine).
+If you try to execute SSIS packages in SSISDB from a remote system, such as a client machine via SQL Server Management Studio, the execution fails. SSIS's architecture prevents it from being used with constrained delegation. Launching the jobs from a local SQL Agent should be fine as long as the back-end databases don't use [linked servers](/sql/relational-databases/linked-servers/linked-servers-database-engine).
 
 ## More information
 
@@ -32,6 +32,6 @@ If the client is Windows 10 Enterprise edition and the [Credential Guard](/windo
 Applications break if they require:
 
 - Kerberos DES Encryption Support
-- Kerberos unconstrained/full delegation
+- Kerberos unconstrained or full delegation
 - Extracting the Kerberos TGT
 - NTLMv1
