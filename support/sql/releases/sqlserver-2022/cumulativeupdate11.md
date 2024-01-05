@@ -73,7 +73,7 @@ The following update is available from the Microsoft Download Center:
 
 The following update is available from the Microsoft Update Catalog:
 
-- :::image type="icon" source="../media/download-icon.png" border="false"::: [Download the cumulative update package for SQL Server 2022 CU10 now](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5032679)
+- :::image type="icon" source="../media/download-icon.png" border="false"::: [Download the cumulative update package for SQL Server 2022 CU11 now](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5032679)
 
 > [!NOTE]
 >
