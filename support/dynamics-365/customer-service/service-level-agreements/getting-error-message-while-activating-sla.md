@@ -11,7 +11,7 @@ This article provides a resolution for the issue that occurs while activating se
 
 ## Symptoms
 
-Error message "String or binary data would be truncated in table '{0}', column '{1}'. Truncated value: {2}" appears while trying to activate an SLA.
+Error message "String or binary data would be truncated in table '{0}', column '{1}'. Truncated value: {2}" appears while activating an SLA.
 
 ## Cause
 
