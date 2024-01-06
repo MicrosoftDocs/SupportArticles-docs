@@ -1,7 +1,7 @@
 ---
 title: Add-in update error in Copilot for Sales for Outlook
 description: Resolves an error message that repeatedly prompts users to update Microsoft Copilot for Sales add-in for Microsoft Outlook.
-ms.date: 01/04/2024
+ms.date: 01/06/2024
 ms.service: microsoft-sales-copilot
 author: sbmjais
 ms.author: shjais
@@ -27,7 +27,7 @@ This article helps you troubleshoot and resolve an error message that repeatedly
 
 ## Symptoms
 
-When you open the [Copilot for Sales pane in Microsoft Outlook](microsoft-sales-copilot/use-sales-copilot-outlook#open-sales-copilot), the following error message is displayed:
+When you open the [Copilot for Sales pane in Microsoft Outlook](/microsoft-sales-copilot/use-sales-copilot-outlook#open-sales-copilot), the following error message is displayed:
 
 > **Add-in error:** An update to this add-in is available that requires your review and confirmation to install.
 
