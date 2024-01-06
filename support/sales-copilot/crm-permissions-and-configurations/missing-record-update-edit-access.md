@@ -1,7 +1,7 @@
 ---
 title: Can't update records because of missing record access in Salesforce CRM
 description: Resolves an error that occurs when users can't update CRM records in Microsoft Copilot for Sales because of missing record access in Salesforce CRM.
-ms.date: 01/04/2024
+ms.date: 01/06/2024
 ms.service: microsoft-sales-copilot
 author: sbmjais
 ms.author: shjais
@@ -41,7 +41,7 @@ When a user tries to edit a record, Copilot for Sales checks if the user has edi
 
 ## Resolution
 
-As a Salesforce administrator, you must provide edit access to the record in Salesforce by [manually sharing the record with the user](https://help.salesforce.com/s/articleView?id=sf.granting_access_to_records.htm&type=5).
+A Salesforce administrator must provide edit access to the record in Salesforce by [manually sharing the record with the user](https://help.salesforce.com/s/articleView?id=sf.granting_access_to_records.htm&type=5).
 
 ## More information
 

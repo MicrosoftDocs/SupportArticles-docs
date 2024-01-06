@@ -1,7 +1,7 @@
 ---
 title: Can't sign in to Salesforce due to blocked Salesforce connector
 description: Resolves an error message that occurs in Copilot for Sales when you can't sign in to Salesforce due to a blocked Salesforce connector.
-ms.date: 01/04/2024
+ms.date: 01/06/2024
 ms.service: microsoft-sales-copilot
 author: sbmjais
 ms.author: shjais
@@ -42,7 +42,7 @@ The Data Loss Prevention (DLP) policy is enabled in the tenant's default environ
 
 To resolve this issue, you must unblock the Salesforce connector in the DLP policy.
 
-1. Sign in to the Power Platform admin center with admin credentials.
+1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/) with admin credentials.
 1. In the left navigation pane, select **Policies** > **Data policies**.
 1. Select the data policy that blocks the Salesforce connector, and then select **Edit Policy**.
 1. In the **Prebuilt connectors** step, move the **Salesforce** connector to either **Business** or **Non-business**.

@@ -1,7 +1,7 @@
 ---
 title: Can't save emails to CRM as Enhanced Email isn't enabled in Salesforce CRM
 description: Resolves the Update settings in Salesforce error when Enhanced Email isn't enabled in Salesforce CRM.
-ms.date: 01/04/2024
+ms.date: 01/06/2024
 ms.service: microsoft-sales-copilot
 author: sbmjais
 ms.author: shjais
@@ -42,12 +42,10 @@ When you try to save an email to Salesforce, you receive the following error mes
 To resolve this issue, perform one of the following actions:
 
 - [Enable Enhanced Email in Salesforce](https://help.salesforce.com/s/articleView?id=sf.enable_enhanced_email.htm&type=5).
-- Contact Microsoft Support to allow emails to be saved to Salesforce without enabling **Enhanced Email** in Salesforce.
+- Ask your administrator to contact Microsoft support to allow emails to be saved to Salesforce without enabling **Enhanced Email** in Salesforce.
 
 ## More information
 
 If your issue is still unresolved, go to the [Copilot for Sales - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
-
-[!INCLUDE [Third-party contact disclaimer](../../includes/third-party-contact-disclaimer.md)]

@@ -1,7 +1,7 @@
 ---
 title: User does not have required privileges to access the org error
 description: Resolves an error message that states the user doesn't have required privileges to access the organization when the Administration mode is enabled in Copilot for Sales.
-ms.date: 01/04/2024
+ms.date: 01/06/2024
 ms.service: microsoft-sales-copilot
 author: sbmjais
 ms.author: shjais
@@ -35,7 +35,7 @@ The error might be displayed before or after you sign in to an environment from 
 
 ## Cause
 
-The **Administration mode** is enabled for the environment, and the affected users aren't administrators.
+The [Administration mode](/power-platform/admin/admin-mode) is enabled for the environment, and the affected users aren't administrators.
 
 When an administrator enables the **Administration mode** for an environment, regular users, regardless of their role assignment, can't access the environment. The user who is already signed in or tries to sign in to the environment can't access data from the environment and will see the error message.
 

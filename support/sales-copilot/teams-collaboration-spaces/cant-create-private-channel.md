@@ -1,7 +1,7 @@
 ---
 title: Can't create a private channel in Microsoft Teams
 description: Resolves an issue where you can't create a private channel in Microsoft Teams.
-ms.date: 01/04/2024
+ms.date: 01/06/2024
 ms.service: microsoft-sales-copilot
 author: sbmjais
 ms.author: shjais
@@ -27,7 +27,7 @@ This article helps you troubleshoot and resolve issues when you can't create a p
 
 ## Symptoms
 
-When you try to create a collaboration space in Outlook using an existing team with a private channel, the following error message is displayed:
+When you try to create a collaboration space in Microsoft Teams using an existing team with a private channel, the following error message is displayed:
 
 > Couldn't add channel.
 

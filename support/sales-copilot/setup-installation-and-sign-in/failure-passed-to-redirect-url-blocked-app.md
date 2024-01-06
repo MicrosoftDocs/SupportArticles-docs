@@ -1,7 +1,7 @@
 ---
 title: Can't sign in to Salesforce CRM when the Power Platform app is blocked
 description: Resolves the Failure passed to redirect url error that occurs when the Power Platform app is blocked in Microsoft Copilot for Sales.
-ms.date: 01/04/2024
+ms.date: 01/06/2024
 ms.service: microsoft-sales-copilot
 author: sbmjais
 ms.author: shjais
@@ -45,7 +45,7 @@ Copilot for Sales connects to Salesforce CRM through the Microsoft Power Platfor
 
 ## Resolution
 
-Copilot for Sales uses the Microsoft Power Platform connected app to connect to Salesforce CRM. Ensure that the connected app isn't blocked in Salesforce CRM.
+Ensure that the Microsoft Power Platform connected app isn't blocked in Salesforce CRM.
 
 1. Sign in to Salesforce CRM as an administrator.
 1. Go to **Setup** > **Platform Tools** > **Apps** > **Connected Apps** > **Connected Apps OAuth Usage**.

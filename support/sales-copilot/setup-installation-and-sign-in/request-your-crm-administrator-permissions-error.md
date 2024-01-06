@@ -1,7 +1,7 @@
 ---
 title: Error after connecting and signing in to Salesforce CRM
 description: Resolves an error message that occurs after connecting and signing in to Salesforce CRM in Microsoft Copilot for Sales.
-ms.date: 01/04/2024
+ms.date: 01/06/2024
 ms.service: microsoft-sales-copilot
 author: sbmjais
 ms.author: shjais
@@ -58,7 +58,7 @@ System.Exception: {
 
 ## Resolution
 
-You must grant the **API Enabled** permission to the user or the affected user's profile.
+An admininstrator can grant the **API Enabled** permission to the user or the affected user's profile by following these steps:
 
 1. Sign in to Salesforce as an administrator.
 1. In the search box, enter **User**.
