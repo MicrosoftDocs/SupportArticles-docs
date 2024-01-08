@@ -5,8 +5,24 @@
       items: 
       - name: Data ingestion
         items:
+          - name: Data refresh fails and dataflow refresh is skipped
+            href: data/data-ingestion/data-refresh-failed-skipped.md
+          - name: '"Data source credentials are missing or invalid" error'
+            href: data/data-ingestion/power-query-multi-factor-authentication.md
+          - name: Power Query Text/CSV connector authentication fails
+            href: data/data-ingestion/power-query-text-csv-connector-auth.md
           - name: Power Query data source refresh issues
             href: data/data-ingestion/power-query-data-source-refresh-issues-dataflows.md
+          - name: Troubleshoot ingestion errors or corrupt data
+            href: data/data-ingestion/common-data-ingestion-errors.md
+      - name: Data unification
+        items:
+          - name: Match failed error occurs on the Deduplication or Matching rules
+            href: data/profile-unification/match-failed.md
+          - name: Merge failed error occurs on the Unified data view
+            href: data/profile-unification/merge-failed.md
+          - name: Missing business unit values in unification
+            href: data/profile-unification/missing-business-unit.md
       - name: Environment management
         items: 
           - name: '"The service principal for resource is disabled" error when signing in'

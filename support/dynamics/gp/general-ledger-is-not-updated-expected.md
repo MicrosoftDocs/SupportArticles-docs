@@ -1,9 +1,8 @@
 ---
 title: General Ledger isn't updated as expected
 description: Describes a problem in which the General Ledger isn't updated as expected when you post a pay run in Microsoft Dynamics GP. Provides a resolution.
-ms.reviewer: lmuelle
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 01/03/2024
 ---
 # The General Ledger isn't updated as expected when you post a pay run in Microsoft Dynamics GP
 
@@ -27,8 +26,7 @@ This problem occurs for one of the following reasons:
 ## Resolution
 
 > [!NOTE]
->
-Before you follow the instructions in this article, make sure that you have a complete backup copy of the database that you can restore if a problem occurs.  
+> Before you follow the instructions in this article, make sure that you have a complete backup copy of the database that you can restore if a problem occurs.  
 
 ### Resolution 1
 
@@ -38,6 +36,12 @@ To resolve this problem, restore the database from a backup before the pay run i
 > This resolution might be the most desirable because the pay run can be reposted. After you restore the database, you don't have to run manual updates or void checks.
 
 ### Resolution 2
+
+To solve this problem, remove the payroll that was posted from the payroll tables only and then rerun the payroll process.
+
+For more information, see [Recovering from failed Payroll processing activity in Dynamics GP](https://community.dynamics.com/blogs/post/?postid=bf5f2537-6323-42e7-a7f7-d6bed4f447a5).
+
+### Resolution 3
 
 To resolve this problem, void the checks, and then repost the pay run.
 
@@ -76,7 +80,7 @@ Because the original checks weren't posted to the General Ledger, the voided che
 
     If checks have already been printed to the check stock, the checks from the reprinting can be printed to screen.
 
-### Resolution 3
+### Resolution 4
 
 To resolve this problem, manually update the General Ledger by printing the "Distribution Breakdown History" report in Payroll. Then, manually post the journal entries to the General Ledger. To do it, follow these steps.
 
