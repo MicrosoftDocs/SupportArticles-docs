@@ -115,6 +115,17 @@
   - name: SubnetIsFull error
     href: error-code-subnetisfull.md
 
+- name: Troubleshoot start operations
+  items:
+  - name: Basic troubleshooting
+    href: ./troubleshoot-aks-cluster-start-issues.md
+  - name: OutboundConnFailVMExtensionError error (50)
+    href: ./error-code-outboundconnfailvmextensionerror.md
+  - name: K8SAPIServerConnFailVMExtensionError error (51)
+    href: ./error-code-k8sapiserverconnfailvmextensionerror.md
+  - name: K8SAPIServerDNSLookupFailVMExtensionError error (52)
+    href: ./error-code-k8sapiserverdnslookupfailvmextensionerror.md
+
 - name: Troubleshoot Kubernetes control plane
   items:
   - name: Troubleshoot API server and etcd
