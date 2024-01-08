@@ -30,7 +30,7 @@ When you try to create an AKS cluster, you receive the following error message:
 
 A mismatch exists between resources in different regions. In the example in the "Symptoms" section, the virtual network and the virtual machine scale set aren't in the same region. Because the resources are in different regions, it's impossible to create the scale set instance.
 
-Another possible cause is if the resource has been manually modified/deleted. In that case, it might be difficult to fix the issue as it's unsupported to manually modify the underlying IaaS resources in the MC_ resource group. You might try recreating the deleted resource and reassociate it with the VMSS, then trigger an update on the AKS cluster. Given this is an unsupported scenario, there is no guarantee this operation works.
+Another possible cause is if the resource has been manually modified/deleted. In that case, it might be difficult to fix the issue as it's unsupported to manually modify the underlying IaaS resources in the MC_ resource group. You might try recreating the deleted resource and reassociate it with the VMSS, then trigger an update on the AKS cluster. Given this is an unsupported scenario, there's no guarantee this operation works.
 
 ## Solution 1
 
