@@ -1,7 +1,7 @@
 ---
 title: Azure App Service virtual network integration troubleshooting guide
 description: How to troubleshoot virtual network integration on Windows and Linux apps.
-ms.date: 06/16/2023
+ms.date: 01/08/2024
 ms.service: app-service
 author: hepiet
 ms.author: hepiet
@@ -68,7 +68,7 @@ nameresolver.exe hostname [optional:DNS Server]
 You can use **nameresolver** to check the hostnames that your app depends on. This way, you can test if you have anything misconfigured with your DNS or perhaps don't have access to your DNS server. You can see the DNS server that your app uses in the console by looking at the environmental variables WEBSITE_DNS_SERVER and WEBSITE_DNS_ALT_SERVER.
 
 > [!NOTE]
-> The nameresolver.exe tool currently doesn’t work in custom Windows containers.
+> The nameresolver.exe tool currently doesn't work in custom Windows containers.
 
 
 To test TCP connectivity to a host and port combination, you can use **tcpping**. The syntax is.
