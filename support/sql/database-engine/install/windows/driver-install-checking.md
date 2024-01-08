@@ -45,12 +45,14 @@ When it comes to navigating the vast landscape of drivers and providers, underst
 
 - Non-Microsoft drivers and providers are ultimately supported by the software vendor who developed them.
 - For drivers and providers that come preinstalled with Windows, such as SQL Server, Microsoft ODBC for Oracle, and Access (and its IISAM drivers, Text, Paradox, dBase, Excel, and so on), generally, you must repair or reinstall Windows. These drivers shouldn't be used for new application development.
-- For the ACE provider and the ODBC drivers that derive from it, such as the Excel ODBC driver, the [Access or Office team](https://support.microsoft.com/contactus#!) can provide support.
+- For the ACE provider and the ODBC drivers that derive from it, such as the Excel ODBC driver, the Access or Office team can provide support.
 - For the Microsoft DB/2 drivers and providers, the Host Integration Services team supports them.
 - For the Active Directory provider, the Active Directory team can provide support.
 - For the Exchange provider, the Exchange team can provide support.
 - For the installable Microsoft SQL Server drivers and providers, the SQL Networking team supports them.
 - For sample connection strings for testing, see [The Connection Strings Reference](https://www.connectionstrings.com/). (This is a non-Microsoft site.)
+
+To get further help and support, see [Contact us](https://support.microsoft.com/contactus).
 
 ## More information
 
