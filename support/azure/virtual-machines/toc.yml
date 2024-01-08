@@ -502,7 +502,7 @@
   - name: Frequently asked questions (FAQ)
     href: windows-virtual-machine-activation-faq.yml
   - name: Understanding Generic Volume License Key (GVLK)
-    href: ../../windows-server/get-started/kms-client-activation-keys.md?context=/troubleshoot/azure/virtual-machines/context/context
+    href: /windows-server/get-started/kms-client-activation-keys?context=/troubleshoot/azure/virtual-machines/context/context
   - name: Known errors and issues
     items:
     - name: Activation fails in forced tunneling scenario
