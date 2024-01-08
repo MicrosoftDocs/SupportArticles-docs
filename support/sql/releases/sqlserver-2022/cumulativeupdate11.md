@@ -19,7 +19,7 @@ _Version:_ &nbsp; 16.0.4105.2
 This article describes Cumulative Update package 11 (CU11) for Microsoft SQL Server 2022. This update contains 16 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 10, and it updates components in the following builds:
 
 - SQL Server - Product version: **16.0.4105.2**, file version: **2022.160.4105.2**
-- Analysis Services - Product version: , file version:
+- Analysis Services - Product version: **16.0.43.222**, file version: **2022.160.43.222**
 ## Known issues in this update
 
 There are no known issues in this cumulative update.
@@ -103,7 +103,7 @@ You can verify the download by computing the hash of the *SQLServer2022-KB503267
 
 |File name|SHA256 hash|
 |---------|---------|
-|SQLServer2022-KB5032679-x64.exe| |
+|SQLServer2022-KB5032679-x64.exe| A7C447E35606C4B64817CD1C4CB6FB18DAAECC13D5998C052E81BC2AC574CB5D |
 
 </details>
 
@@ -116,23 +116,503 @@ x64-based versions
 
 SQL Server 2022 Analysis Services
 
+|                     File   name                     |   File version  | File size |    Date   |  Time | Platform |
+|:---------------------------------------------------:|:---------------:|:---------:|:---------:|:-----:|:--------:|
+| Asplatformhost.dll                                  | 2022.160.43.222 | 336944    | 14-Nov-2023 | 19:01 | x64      |
+| Microsoft.analysisservices.server.core.dll          | 16.0.43.222     | 2903608   | 14-Nov-2023 | 19:01 | x86      |
+| Microsoft.data.mashup.sqlclient.dll                 | 2.108.3243.0    | 24480     | 14-Nov-2023 | 19:03 | x86      |
+| Microsoft.data.sqlclient.dll                        | 1.14.21068.1    | 1920960   | 14-Nov-2023 | 19:03 | x86      |
+| Microsoft.identity.client.dll                       | 4.14.0.0        | 1350048   | 14-Nov-2023 | 19:03 | x86      |
+| Microsoft.identitymodel.jsonwebtokens.dll           | 5.6.0.61018     | 65952     | 14-Nov-2023 | 19:03 | x86      |
+| Microsoft.identitymodel.logging.dll                 | 5.6.0.61018     | 26528     | 14-Nov-2023 | 19:03 | x86      |
+| Microsoft.identitymodel.protocols.dll               | 5.6.0.61018     | 32192     | 14-Nov-2023 | 19:03 | x86      |
+| Microsoft.identitymodel.protocols.openidconnect.dll | 5.6.0.61018     | 103328    | 14-Nov-2023 | 19:03 | x86      |
+| Microsoft.identitymodel.tokens.dll                  | 5.6.0.61018     | 162720    | 14-Nov-2023 | 19:03 | x86      |
+| Msmdctr.dll                                         | 2022.160.43.222 | 38960     | 14-Nov-2023 | 19:01 | x64      |
+| Msmdlocal.dll                                       | 2022.160.43.222 | 53974984  | 14-Nov-2023 | 19:01 | x86      |
+| Msmdlocal.dll                                       | 2022.160.43.222 | 71833648  | 14-Nov-2023 | 19:01 | x64      |
+| Msmdpump.dll                                        | 2022.160.43.222 | 10335296  | 14-Nov-2023 | 19:01 | x64      |
+| Msmdredir.dll                                       | 2022.160.43.222 | 8132032   | 14-Nov-2023 | 19:01 | x86      |
+| Msmdsrv.exe                                         | 2022.160.43.222 | 71384624  | 14-Nov-2023 | 19:01 | x64      |
+| Msmdsrv.rll                                         | 2022.160.43.222 | 956976    | 14-Nov-2023 | 19:01 | x64      |
+| Msmdsrv.rll                                         | 2022.160.43.222 | 1884736   | 14-Nov-2023 | 19:01 | x64      |
+| Msmdsrv.rll                                         | 2022.160.43.222 | 1671728   | 14-Nov-2023 | 19:01 | x64      |
+| Msmdsrv.rll                                         | 2022.160.43.222 | 1881136   | 14-Nov-2023 | 19:01 | x64      |
+| Msmdsrv.rll                                         | 2022.160.43.222 | 1848256   | 14-Nov-2023 | 19:01 | x64      |
+| Msmdsrv.rll                                         | 2022.160.43.222 | 1147440   | 14-Nov-2023 | 19:01 | x64      |
+| Msmdsrv.rll                                         | 2022.160.43.222 | 1140288   | 14-Nov-2023 | 19:01 | x64      |
+| Msmdsrv.rll                                         | 2022.160.43.222 | 1769408   | 14-Nov-2023 | 19:01 | x64      |
+| Msmdsrv.rll                                         | 2022.160.43.222 | 1748936   | 14-Nov-2023 | 19:01 | x64      |
+| Msmdsrv.rll                                         | 2022.160.43.222 | 932800    | 14-Nov-2023 | 19:01 | x64      |
+| Msmdsrv.rll                                         | 2022.160.43.222 | 1837616   | 14-Nov-2023 | 19:01 | x64      |
+| Msmdsrvi.rll                                        | 2022.160.43.222 | 955440    | 14-Nov-2023 | 19:01 | x64      |
+| Msmdsrvi.rll                                        | 2022.160.43.222 | 1882560   | 14-Nov-2023 | 19:01 | x64      |
+| Msmdsrvi.rll                                        | 2022.160.43.222 | 1668656   | 14-Nov-2023 | 19:01 | x64      |
+| Msmdsrvi.rll                                        | 2022.160.43.222 | 1876528   | 14-Nov-2023 | 19:01 | x64      |
+| Msmdsrvi.rll                                        | 2022.160.43.222 | 1844800   | 14-Nov-2023 | 19:01 | x64      |
+| Msmdsrvi.rll                                        | 2022.160.43.222 | 1145288   | 14-Nov-2023 | 19:01 | x64      |
+| Msmdsrvi.rll                                        | 2022.160.43.222 | 1138736   | 14-Nov-2023 | 19:01 | x64      |
+| Msmdsrvi.rll                                        | 2022.160.43.222 | 1765424   | 14-Nov-2023 | 19:01 | x64      |
+| Msmdsrvi.rll                                        | 2022.160.43.222 | 1745472   | 14-Nov-2023 | 19:01 | x64      |
+| Msmdsrvi.rll                                        | 2022.160.43.222 | 933424    | 14-Nov-2023 | 19:01 | x64      |
+| Msmdsrvi.rll                                        | 2022.160.43.222 | 1833008   | 14-Nov-2023 | 19:01 | x64      |
+| Msmgdsrv.dll                                        | 2022.160.43.222 | 10083888  | 14-Nov-2023 | 19:01 | x64      |
+| Msmgdsrv.dll                                        | 2022.160.43.222 | 8265680   | 14-Nov-2023 | 19:01 | x86      |
+| Msolap.dll                                          | 2022.160.43.222 | 10970568  | 14-Nov-2023 | 19:01 | x64      |
+| Msolap.dll                                          | 2022.160.43.222 | 8745008   | 14-Nov-2023 | 19:01 | x86      |
+| Msolui.dll                                          | 2022.160.43.222 | 289736    | 14-Nov-2023 | 19:01 | x86      |
+| Msolui.dll                                          | 2022.160.43.222 | 308272    | 14-Nov-2023 | 19:01 | x64      |
+| Newtonsoft.json.dll                                 | 13.0.1.25517    | 704448    | 14-Nov-2023 | 19:03 | x86      |
+| Sni.dll                                             | 1.1.1.0         | 555424    | 14-Nov-2023 | 19:03 | x64      |
+| Sql_as_keyfile.dll                                  | 2022.160.4105.2 | 137152    | 14-Nov-2023 | 19:00 | x64      |
+| Sqlceip.exe                                         | 16.0.4105.2     | 300992    | 14-Nov-2023 | 19:03 | x86      |
+| Sqldumper.exe                                       | 2022.160.4105.2 | 370728    | 14-Nov-2023 | 19:03 | x86      |
+| Sqldumper.exe                                       | 2022.160.4105.2 | 436280    | 14-Nov-2023 | 19:03 | x64      |
+| System.identitymodel.tokens.jwt.dll                 | 5.6.0.61018     | 83872     | 14-Nov-2023 | 19:03 | x86      |
+| Tmapi.dll                                           | 2022.160.43.222 | 5884480   | 14-Nov-2023 | 19:01 | x64      |
+| Tmcachemgr.dll                                      | 2022.160.43.222 | 5575104   | 14-Nov-2023 | 19:01 | x64      |
+| Tmpersistence.dll                                   | 2022.160.43.222 | 1481264   | 14-Nov-2023 | 19:01 | x64      |
+| Tmtransactions.dll                                  | 2022.160.43.222 | 7198256   | 14-Nov-2023 | 19:01 | x64      |
+| Xmsrv.dll                                           | 2022.160.43.222 | 26593856  | 14-Nov-2023 | 19:01 | x64      |
+| Xmsrv.dll                                           | 2022.160.43.222 | 35896256  | 14-Nov-2023 | 19:01 | x86      |
+
 SQL Server 2022 Database Services Common Core
+
+|                 File   name                |   File version  | File size |    Date   |  Time | Platform |
+|:------------------------------------------:|:---------------:|:---------:|:---------:|:-----:|:--------:|
+| Instapi150.dll                             | 2022.160.4105.2 | 104488    | 14-Nov-2023 | 19:03 | x64      |
+| Instapi150.dll                             | 2022.160.4105.2 | 79912     | 14-Nov-2023 | 19:03 | x86      |
+| Microsoft.analysisservices.adomdclient.dll | 16.0.43.222     | 2633776   | 14-Nov-2023 | 19:00 | x86      |
+| Microsoft.analysisservices.adomdclient.dll | 16.0.43.222     | 2633776   | 14-Nov-2023 | 19:00 | x86      |
+| Microsoft.analysisservices.core.dll        | 16.0.43.222     | 2933296   | 14-Nov-2023 | 19:00 | x86      |
+| Microsoft.analysisservices.xmla.dll        | 16.0.43.222     | 2323504   | 14-Nov-2023 | 19:00 | x86      |
+| Microsoft.analysisservices.xmla.dll        | 16.0.43.222     | 2323512   | 14-Nov-2023 | 19:00 | x86      |
+| Microsoft.sqlserver.mgdsqldumper.dll       | 2022.160.4105.2 | 104392    | 14-Nov-2023 | 19:03 | x64      |
+| Microsoft.sqlserver.mgdsqldumper.dll       | 2022.160.4105.2 | 92112     | 14-Nov-2023 | 19:03 | x86      |
+| Microsoft.sqlserver.rmo.dll                | 16.0.4105.2     | 554952    | 14-Nov-2023 | 19:03 | x86      |
+| Microsoft.sqlserver.rmo.dll                | 16.0.4105.2     | 555048    | 14-Nov-2023 | 19:03 | x86      |
+| Msasxpress.dll                             | 2022.160.43.222 | 27696     | 14-Nov-2023 | 19:00 | x86      |
+| Msasxpress.dll                             | 2022.160.43.222 | 32720     | 14-Nov-2023 | 19:00 | x64      |
+| Sql_common_core_keyfile.dll                | 2022.160.4105.2 | 137152    | 14-Nov-2023 | 19:00 | x64      |
+| Sqldumper.exe                              | 2022.160.4105.2 | 370728    | 14-Nov-2023 | 19:03 | x86      |
+| Sqldumper.exe                              | 2022.160.4105.2 | 436280    | 14-Nov-2023 | 19:03 | x64      |
+| Sqlmgmprovider.dll                         | 2022.160.4105.2 | 395304    | 14-Nov-2023 | 19:03 | x86      |
+| Sqlmgmprovider.dll                         | 2022.160.4105.2 | 456640    | 14-Nov-2023 | 19:03 | x64      |
 
 SQL Server 2022 Data Quality Client
 
+|            File   name           |   File version  | File size |    Date   |  Time | Platform |
+|:--------------------------------:|:---------------:|:---------:|:---------:|:-----:|:--------:|
+| Microsoft.ssdqs.studio.infra.dll | 16.0.4105.2     | 309200    | 14-Nov-2023 | 19:03 | x86      |
+| Microsoft.ssdqs.studio.views.dll | 16.0.4105.2     | 2070568   | 14-Nov-2023 | 19:03 | x86      |
+| Sql_dqc_keyfile.dll              | 2022.160.4105.2 | 137152    | 14-Nov-2023 | 19:03 | x64      |
+
 SQL Server 2022 Data Quality
+
+|         File name         | File version | File size |     Date    |  Time | Platform |
+|:-------------------------:|:------------:|:---------:|:-----------:|:-----:|:--------:|
+| Microsoft.ssdqs.core.dll  | 16.0.4105.2  | 600008    | 14-Nov-2023 | 19:03 | x86      |
+| Microsoft.ssdqs.core.dll  | 16.0.4105.2  | 600120    | 14-Nov-2023 | 19:03 | x86      |
+| Microsoft.ssdqs.dll       | 16.0.4105.2  | 174120    | 14-Nov-2023 | 19:03 | x86      |
+| Microsoft.ssdqs.infra.dll | 16.0.4105.2  | 1857576   | 14-Nov-2023 | 19:03 | x86      |
+| Microsoft.ssdqs.infra.dll | 16.0.4105.2  | 1857592   | 14-Nov-2023 | 19:03 | x86      |
+| Microsoft.ssdqs.proxy.dll | 16.0.4105.2  | 370624    | 14-Nov-2023 | 19:03 | x86      |
+| Microsoft.ssdqs.proxy.dll | 16.0.4105.2  | 370744    | 14-Nov-2023 | 19:03 | x86      |
 
 SQL Server 2022 Database Services Core Instance
 
+|                  File   name                 |   File version  | File size |    Date   |  Time | Platform |
+|:--------------------------------------------:|:---------------:|:---------:|:---------:|:-----:|:--------:|
+| Adal.dll                                     | 3.6.1.64359     | 1618832   | 14-Nov-2023 | 20:12 | x64      |
+| Adalsqlrda.dll                               | 3.6.1.64359     | 1618832   | 14-Nov-2023 | 20:12 | x64      |
+| Aetm-enclave-simulator.dll                   | 2022.160.4105.2 | 4719144   | 14-Nov-2023 | 19:48 | x64      |
+| Aetm-enclave.dll                             | 2022.160.4105.2 | 4673600   | 14-Nov-2023 | 19:48 | x64      |
+| Aetm-sgx-enclave-simulator.dll               | 2022.160.4105.2 | 4909128   | 14-Nov-2023 | 19:48 | x64      |
+| Aetm-sgx-enclave.dll                         | 2022.160.4105.2 | 4874616   | 14-Nov-2023 | 19:48 | x64      |
+| Dcexec.exe                                   | 2022.160.4105.2 | 96312     | 14-Nov-2023 | 20:12 | x64      |
+| Fssres.dll                                   | 2022.160.4105.2 | 100288    | 14-Nov-2023 | 20:12 | x64      |
+| Hadrres.dll                                  | 2022.160.4105.2 | 227264    | 14-Nov-2023 | 20:12 | x64      |
+| Hkcompile.dll                                | 2022.160.4105.2 | 1411024   | 14-Nov-2023 | 20:12 | x64      |
+| Hkengine.dll                                 | 2022.160.4105.2 | 5769256   | 14-Nov-2023 | 20:12 | x64      |
+| Hkruntime.dll                                | 2022.160.4105.2 | 190520    | 14-Nov-2023 | 20:12 | x64      |
+| Hktempdb.dll                                 | 2022.160.4105.2 | 71616     | 14-Nov-2023 | 20:12 | x64      |
+| Microsoft.analysisservices.applocal.xmla.dll | 16.0.43.222     | 2322368   | 14-Nov-2023 | 20:12 | x86      |
+| Microsoft.sqlserver.xevent.linq.dll          | 2022.160.4105.2 | 333864    | 14-Nov-2023 | 20:12 | x64      |
+| Microsoft.sqlserver.xevent.targets.dll       | 2022.160.4105.2 | 96192     | 14-Nov-2023 | 20:12 | x64      |
+| Odsole70.rll                                 | 16.0.4105.2     | 30760     | 14-Nov-2023 | 20:12 | x64      |
+| Odsole70.rll                                 | 16.0.4105.2     | 38952     | 14-Nov-2023 | 20:12 | x64      |
+| Odsole70.rll                                 | 16.0.4105.2     | 34872     | 14-Nov-2023 | 20:12 | x64      |
+| Odsole70.rll                                 | 16.0.4105.2     | 38968     | 14-Nov-2023 | 20:12 | x64      |
+| Odsole70.rll                                 | 16.0.4105.2     | 38968     | 14-Nov-2023 | 20:12 | x64      |
+| Odsole70.rll                                 | 16.0.4105.2     | 30760     | 14-Nov-2023 | 20:12 | x64      |
+| Odsole70.rll                                 | 16.0.4105.2     | 30760     | 14-Nov-2023 | 20:12 | x64      |
+| Odsole70.rll                                 | 16.0.4105.2     | 34872     | 14-Nov-2023 | 20:12 | x64      |
+| Odsole70.rll                                 | 16.0.4105.2     | 38848     | 14-Nov-2023 | 20:12 | x64      |
+| Odsole70.rll                                 | 16.0.4105.2     | 30760     | 14-Nov-2023 | 20:12 | x64      |
+| Odsole70.rll                                 | 16.0.4105.2     | 38968     | 14-Nov-2023 | 20:12 | x64      |
+| Qds.dll                                      | 2022.160.4105.2 | 1800232   | 14-Nov-2023 | 20:12 | x64      |
+| Rsfxft.dll                                   | 2022.160.4105.2 | 55336     | 14-Nov-2023 | 20:12 | x64      |
+| Secforwarder.dll                             | 2022.160.4105.2 | 84008     | 14-Nov-2023 | 20:12 | x64      |
+| Sql_engine_core_inst_keyfile.dll             | 2022.160.4105.2 | 137152    | 14-Nov-2023 | 20:12 | x64      |
+| Sqlaccess.dll                                | 2022.160.4105.2 | 444352    | 14-Nov-2023 | 20:12 | x64      |
+| Sqlagent.exe                                 | 2022.160.4105.2 | 714688    | 14-Nov-2023 | 20:12 | x64      |
+| Sqlceip.exe                                  | 16.0.4105.2     | 300992    | 14-Nov-2023 | 20:12 | x86      |
+| Sqlctr160.dll                                | 2022.160.4105.2 | 129064    | 14-Nov-2023 | 20:12 | x86      |
+| Sqlctr160.dll                                | 2022.160.4105.2 | 157648    | 14-Nov-2023 | 20:12 | x64      |
+| Sqldk.dll                                    | 2022.160.4105.2 | 4011968   | 14-Nov-2023 | 20:12 | x64      |
+| Sqlevn70.rll                                 | 2022.160.4105.2 | 1755176   | 14-Nov-2023 | 19:48 | x64      |
+| Sqlevn70.rll                                 | 2022.160.4105.2 | 3852240   | 14-Nov-2023 | 19:48 | x64      |
+| Sqlevn70.rll                                 | 2022.160.4105.2 | 4069416   | 14-Nov-2023 | 19:48 | x64      |
+| Sqlevn70.rll                                 | 2022.160.4105.2 | 4581416   | 14-Nov-2023 | 19:48 | x64      |
+| Sqlevn70.rll                                 | 2022.160.4105.2 | 4712504   | 14-Nov-2023 | 19:48 | x64      |
+| Sqlevn70.rll                                 | 2022.160.4105.2 | 3754024   | 14-Nov-2023 | 19:48 | x64      |
+| Sqlevn70.rll                                 | 2022.160.4105.2 | 3942440   | 14-Nov-2023 | 19:48 | x64      |
+| Sqlevn70.rll                                 | 2022.160.4105.2 | 4581416   | 14-Nov-2023 | 19:48 | x64      |
+| Sqlevn70.rll                                 | 2022.160.4105.2 | 4409384   | 14-Nov-2023 | 19:48 | x64      |
+| Sqlevn70.rll                                 | 2022.160.4105.2 | 4483008   | 14-Nov-2023 | 19:48 | x64      |
+| Sqlevn70.rll                                 | 2022.160.4105.2 | 2447416   | 14-Nov-2023 | 19:48 | x64      |
+| Sqlevn70.rll                                 | 2022.160.4105.2 | 2390072   | 14-Nov-2023 | 19:48 | x64      |
+| Sqlevn70.rll                                 | 2022.160.4105.2 | 4266024   | 14-Nov-2023 | 19:48 | x64      |
+| Sqlevn70.rll                                 | 2022.160.4105.2 | 3901496   | 14-Nov-2023 | 19:48 | x64      |
+| Sqlevn70.rll                                 | 2022.160.4105.2 | 4417592   | 14-Nov-2023 | 19:48 | x64      |
+| Sqlevn70.rll                                 | 2022.160.4105.2 | 4212776   | 14-Nov-2023 | 19:48 | x64      |
+| Sqlevn70.rll                                 | 2022.160.4105.2 | 4196392   | 14-Nov-2023 | 19:48 | x64      |
+| Sqlevn70.rll                                 | 2022.160.4105.2 | 3979304   | 14-Nov-2023 | 19:48 | x64      |
+| Sqlevn70.rll                                 | 2022.160.4105.2 | 3856320   | 14-Nov-2023 | 19:48 | x64      |
+| Sqlevn70.rll                                 | 2022.160.4105.2 | 1689656   | 14-Nov-2023 | 19:48 | x64      |
+| Sqlevn70.rll                                 | 2022.160.4105.2 | 4302888   | 14-Nov-2023 | 19:48 | x64      |
+| Sqlevn70.rll                                 | 2022.160.4105.2 | 4446248   | 14-Nov-2023 | 19:48 | x64      |
+| Sqliosim.com                                 | 2022.160.4105.2 | 387008    | 14-Nov-2023 | 20:12 | x64      |
+| Sqliosim.exe                                 | 2022.160.4105.2 | 3057704   | 14-Nov-2023 | 20:12 | x64      |
+| Sqllang.dll                                  | 2022.160.4105.2 | 48699328  | 14-Nov-2023 | 20:12 | x64      |
+| Sqlmin.dll                                   | 2022.160.4105.2 | 51193912  | 14-Nov-2023 | 20:12 | x64      |
+| Sqlos.dll                                    | 2022.160.4105.2 | 51144     | 14-Nov-2023 | 20:12 | x64      |
+| Sqlrepss.dll                                 | 2022.160.4105.2 | 137152    | 14-Nov-2023 | 20:12 | x64      |
+| Sqlscriptdowngrade.dll                       | 2022.160.4105.2 | 51240     | 14-Nov-2023 | 20:12 | x64      |
+| Sqlscriptupgrade.dll                         | 2022.160.4105.2 | 5830696   | 14-Nov-2023 | 20:12 | x64      |
+| Sqlservr.exe                                 | 2022.160.4105.2 | 882624    | 14-Nov-2023 | 20:12 | x64      |
+| Sqltses.dll                                  | 2022.160.4105.2 | 9386040   | 14-Nov-2023 | 20:12 | x64      |
+| Sqsrvres.dll                                 | 2022.160.4105.2 | 305104    | 14-Nov-2023 | 20:12 | x64      |
+| Svl.dll                                      | 2022.160.4105.2 | 247848    | 14-Nov-2023 | 20:12 | x64      |
+| Xe.dll                                       | 2022.160.4105.2 | 718904    | 14-Nov-2023 | 20:12 | x64      |
+| Xpqueue.dll                                  | 2022.160.4105.2 | 100288    | 14-Nov-2023 | 20:12 | x64      |
+| Xpstar.dll                                   | 2022.160.4105.2 | 534584    | 14-Nov-2023 | 20:12 | x64      |
+
 SQL Server 2022 Database Services Core Shared
+
+|                      File   name                     |   File version  | File size |    Date   |  Time | Platform |
+|:----------------------------------------------------:|:---------------:|:---------:|:---------:|:-----:|:--------:|
+| Commanddest.dll                                      | 2022.160.4105.2 | 272336    | 14-Nov-2023 | 19:03 | x64      |
+| Datacollectortasks.dll                               | 2022.160.4105.2 | 227272    | 14-Nov-2023 | 19:04 | x64      |
+| Distrib.exe                                          | 2022.160.4105.2 | 260032    | 14-Nov-2023 | 19:03 | x64      |
+| Dteparse.dll                                         | 2022.160.4105.2 | 133056    | 14-Nov-2023 | 19:03 | x64      |
+| Dteparsemgd.dll                                      | 2022.160.4105.2 | 178232    | 14-Nov-2023 | 19:03 | x64      |
+| Dtepkg.dll                                           | 2022.160.4105.2 | 153552    | 14-Nov-2023 | 19:03 | x64      |
+| Dtexec.exe                                           | 2022.160.4105.2 | 76736     | 14-Nov-2023 | 19:03 | x64      |
+| Dts.dll                                              | 2022.160.4105.2 | 3266512   | 14-Nov-2023 | 19:04 | x64      |
+| Dtscomexpreval.dll                                   | 2022.160.4105.2 | 493608    | 14-Nov-2023 | 19:03 | x64      |
+| Dtsconn.dll                                          | 2022.160.4105.2 | 550848    | 14-Nov-2023 | 19:04 | x64      |
+| Dtshost.exe                                          | 2022.160.4105.2 | 120256    | 14-Nov-2023 | 19:03 | x64      |
+| Dtspipeline.dll                                      | 2022.160.4105.2 | 1337280   | 14-Nov-2023 | 19:03 | x64      |
+| Dtuparse.dll                                         | 2022.160.4105.2 | 104488    | 14-Nov-2023 | 19:03 | x64      |
+| Dtutil.exe                                           | 2022.160.4105.2 | 166336    | 14-Nov-2023 | 19:03 | x64      |
+| Exceldest.dll                                        | 2022.160.4105.2 | 284624    | 14-Nov-2023 | 19:03 | x64      |
+| Excelsrc.dll                                         | 2022.160.4105.2 | 305088    | 14-Nov-2023 | 19:03 | x64      |
+| Execpackagetask.dll                                  | 2022.160.4105.2 | 182312    | 14-Nov-2023 | 19:03 | x64      |
+| Flatfiledest.dll                                     | 2022.160.4105.2 | 423992    | 14-Nov-2023 | 19:03 | x64      |
+| Flatfilesrc.dll                                      | 2022.160.4105.2 | 440360    | 14-Nov-2023 | 19:03 | x64      |
+| Logread.exe                                          | 2022.160.4105.2 | 788432    | 14-Nov-2023 | 19:03 | x64      |
+| Microsoft.analysisservices.applocal.core.dll         | 16.0.43.222     | 2933816   | 14-Nov-2023 | 19:03 | x86      |
+| Microsoft.data.sqlclient.dll                         | 3.15.23292.1    | 2047112   | 14-Nov-2023 | 19:03 | x86      |
+| Microsoft.data.sqlclient.sni.dll                     | 3.0.1.0         | 470928    | 14-Nov-2023 | 19:03 | x64      |
+| Microsoft.datatransformationservices.scalehelper.dll | 16.0.4105.2     | 30760     | 14-Nov-2023 | 19:03 | x86      |
+| Microsoft.identity.client.dll                        | 4.36.1.0        | 1503672   | 14-Nov-2023 | 19:03 | x86      |
+| Microsoft.identitymodel.jsonwebtokens.dll            | 5.5.0.60624     | 66096     | 14-Nov-2023 | 19:03 | x86      |
+| Microsoft.identitymodel.logging.dll                  | 5.5.0.60624     | 32296     | 14-Nov-2023 | 19:03 | x86      |
+| Microsoft.identitymodel.protocols.dll                | 5.5.0.60624     | 37416     | 14-Nov-2023 | 19:03 | x86      |
+| Microsoft.identitymodel.protocols.openidconnect.dll  | 5.5.0.60624     | 109096    | 14-Nov-2023 | 19:03 | x86      |
+| Microsoft.identitymodel.tokens.dll                   | 5.5.0.60624     | 167672    | 14-Nov-2023 | 19:03 | x86      |
+| Microsoft.sqlserver.maintenanceplantasks.dll         | 16.0.4105.2     | 391224    | 14-Nov-2023 | 19:03 | x86      |
+| Microsoft.sqlserver.replication.dll                  | 2022.160.4105.2 | 1705920   | 14-Nov-2023 | 19:03 | x64      |
+| Microsoft.sqlserver.rmo.dll                          | 16.0.4105.2     | 555048    | 14-Nov-2023 | 19:03 | x86      |
+| Msdtssrvrutil.dll                                    | 2022.160.4105.2 | 124984    | 14-Nov-2023 | 19:03 | x64      |
+| Msgprox.dll                                          | 2022.160.4105.2 | 313280    | 14-Nov-2023 | 19:03 | x64      |
+| Msoledbsql.dll                                       | 2018.186.7.0    | 2729960   | 14-Nov-2023 | 19:04 | x64      |
+| Msoledbsql.dll                                       | 2018.186.7.0    | 153560    | 14-Nov-2023 | 19:03 | x64      |
+| Newtonsoft.json.dll                                  | 13.0.1.25517    | 704408    | 14-Nov-2023 | 19:04 | x86      |
+| Oledbdest.dll                                        | 2022.160.4105.2 | 288704    | 14-Nov-2023 | 19:03 | x64      |
+| Oledbsrc.dll                                         | 2022.160.4105.2 | 313384    | 14-Nov-2023 | 19:03 | x64      |
+| Qrdrsvc.exe                                          | 2022.160.4105.2 | 522280    | 14-Nov-2023 | 19:03 | x64      |
+| Rawdest.dll                                          | 2022.160.4105.2 | 227368    | 14-Nov-2023 | 19:03 | x64      |
+| Rawsource.dll                                        | 2022.160.4105.2 | 214992    | 14-Nov-2023 | 19:03 | x64      |
+| Rdistcom.dll                                         | 2022.160.4105.2 | 940072    | 14-Nov-2023 | 19:03 | x64      |
+| Recordsetdest.dll                                    | 2022.160.4105.2 | 206888    | 14-Nov-2023 | 19:03 | x64      |
+| Repldp.dll                                           | 2022.160.4105.2 | 337856    | 14-Nov-2023 | 19:03 | x64      |
+| Replerrx.dll                                         | 2022.160.4105.2 | 198600    | 14-Nov-2023 | 19:03 | x64      |
+| Replisapi.dll                                        | 2022.160.4105.2 | 419776    | 14-Nov-2023 | 19:03 | x64      |
+| Replmerg.exe                                         | 2022.160.4105.2 | 596008    | 14-Nov-2023 | 19:03 | x64      |
+| Replprov.dll                                         | 2022.160.4105.2 | 890936    | 14-Nov-2023 | 19:03 | x64      |
+| Replrec.dll                                          | 2022.160.4105.2 | 1058856   | 14-Nov-2023 | 19:03 | x64      |
+| Replsub.dll                                          | 2022.160.4105.2 | 501696    | 14-Nov-2023 | 19:03 | x64      |
+| Spresolv.dll                                         | 2022.160.4105.2 | 300992    | 14-Nov-2023 | 19:03 | x64      |
+| Sql_engine_core_shared_keyfile.dll                   | 2022.160.4105.2 | 137152    | 14-Nov-2023 | 19:03 | x64      |
+| Sqlcmd.exe                                           | 2022.160.4105.2 | 276416    | 14-Nov-2023 | 19:03 | x64      |
+| Sqldistx.dll                                         | 2022.160.4105.2 | 268224    | 14-Nov-2023 | 19:03 | x64      |
+| Sqlmergx.dll                                         | 2022.160.4105.2 | 423976    | 14-Nov-2023 | 19:03 | x64      |
+| Sqltaskconnections.dll                               | 2022.160.4105.2 | 210880    | 14-Nov-2023 | 19:04 | x64      |
+| Ssradd.dll                                           | 2022.160.4105.2 | 100288    | 14-Nov-2023 | 19:03 | x64      |
+| Ssravg.dll                                           | 2022.160.4105.2 | 100288    | 14-Nov-2023 | 19:04 | x64      |
+| Ssrmax.dll                                           | 2022.160.4105.2 | 100304    | 14-Nov-2023 | 19:03 | x64      |
+| Ssrmin.dll                                           | 2022.160.4105.2 | 100288    | 14-Nov-2023 | 19:03 | x64      |
+| Txagg.dll                                            | 2022.160.4105.2 | 395304    | 14-Nov-2023 | 19:03 | x64      |
+| Txbdd.dll                                            | 2022.160.4105.2 | 190504    | 14-Nov-2023 | 19:04 | x64      |
+| Txdatacollector.dll                                  | 2022.160.4105.2 | 468928    | 14-Nov-2023 | 19:04 | x64      |
+| Txdataconvert.dll                                    | 2022.160.4105.2 | 333864    | 14-Nov-2023 | 19:04 | x64      |
+| Txderived.dll                                        | 2022.160.4105.2 | 632872    | 14-Nov-2023 | 19:03 | x64      |
+| Txlookup.dll                                         | 2022.160.4105.2 | 608312    | 14-Nov-2023 | 19:03 | x64      |
+| Txmerge.dll                                          | 2022.160.4105.2 | 243752    | 14-Nov-2023 | 19:03 | x64      |
+| Txmergejoin.dll                                      | 2022.160.4105.2 | 301008    | 14-Nov-2023 | 19:03 | x64      |
+| Txmulticast.dll                                      | 2022.160.4105.2 | 145464    | 14-Nov-2023 | 19:03 | x64      |
+| Txrowcount.dll                                       | 2022.160.4105.2 | 145352    | 14-Nov-2023 | 19:03 | x64      |
+| Txsort.dll                                           | 2022.160.4105.2 | 276432    | 14-Nov-2023 | 19:03 | x64      |
+| Txsplit.dll                                          | 2022.160.4105.2 | 620584    | 14-Nov-2023 | 19:03 | x64      |
+| Txunionall.dll                                       | 2022.160.4105.2 | 194512    | 14-Nov-2023 | 19:03 | x64      |
+| Xe.dll                                               | 2022.160.4105.2 | 718904    | 14-Nov-2023 | 19:04 | x64      |
 
 SQL Server 2022 sql_extensibility
 
+|          File   name          |   File version  | File size |    Date   |  Time | Platform |
+|:-----------------------------:|:---------------:|:---------:|:---------:|:-----:|:--------:|
+| Commonlauncher.dll            | 2022.160.4105.2 | 100392    | 14-Nov-2023 | 19:03 | x64      |
+| Exthost.exe                   | 2022.160.4105.2 | 247864    | 14-Nov-2023 | 19:03 | x64      |
+| Launchpad.exe                 | 2022.160.4105.2 | 1447872   | 14-Nov-2023 | 19:03 | x64      |
+| Sql_extensibility_keyfile.dll | 2022.160.4105.2 | 137152    | 14-Nov-2023 | 19:00 | x64      |
+| Sqlsatellite.dll              | 2022.160.4105.2 | 1255480   | 14-Nov-2023 | 19:03 | x64      |
+
 SQL Server 2022 Full-Text Engine
+
+|        File   name       |   File version  | File size |    Date   |  Time | Platform |
+|:------------------------:|:---------------:|:---------:|:---------:|:-----:|:--------:|
+| Fd.dll                   | 2022.160.4105.2 | 710592    | 14-Nov-2023 | 19:03 | x64      |
+| Fdhost.exe               | 2022.160.4105.2 | 153640    | 14-Nov-2023 | 19:03 | x64      |
+| Fdlauncher.exe           | 2022.160.4105.2 | 100288    | 14-Nov-2023 | 19:03 | x64      |
+| Sql_fulltext_keyfile.dll | 2022.160.4105.2 | 137152    | 14-Nov-2023 | 19:00 | x64      |
 
 SQL Server 2022 Integration Services
 
+|                          File   name                          |   File version  | File size |    Date   |  Time | Platform |
+|:-------------------------------------------------------------:|:---------------:|:---------:|:---------:|:-----:|:--------:|
+| Attunity.sqlserver.cdccontroltask.dll                         | 7.0.0.133       | 78272     | 14-Nov-2023 | 19:09 | x86      |
+| Attunity.sqlserver.cdccontroltask.dll                         | 7.0.0.133       | 78272     | 14-Nov-2023 | 19:10 | x86      |
+| Attunity.sqlserver.cdcsplit.dll                               | 7.0.0.133       | 39320     | 14-Nov-2023 | 19:09 | x86      |
+| Attunity.sqlserver.cdcsplit.dll                               | 7.0.0.133       | 39320     | 14-Nov-2023 | 19:10 | x86      |
+| Attunity.sqlserver.cdcsrc.dll                                 | 7.0.0.133       | 79808     | 14-Nov-2023 | 19:09 | x86      |
+| Attunity.sqlserver.cdcsrc.dll                                 | 7.0.0.133       | 79808     | 14-Nov-2023 | 19:10 | x86      |
+| Commanddest.dll                                               | 2022.160.4105.2 | 231464    | 14-Nov-2023 | 19:09 | x86      |
+| Commanddest.dll                                               | 2022.160.4105.2 | 272336    | 14-Nov-2023 | 19:09 | x64      |
+| Dteparse.dll                                                  | 2022.160.4105.2 | 116672    | 14-Nov-2023 | 19:09 | x86      |
+| Dteparse.dll                                                  | 2022.160.4105.2 | 133056    | 14-Nov-2023 | 19:09 | x64      |
+| Dteparsemgd.dll                                               | 2022.160.4105.2 | 165928    | 14-Nov-2023 | 19:09 | x86      |
+| Dteparsemgd.dll                                               | 2022.160.4105.2 | 178232    | 14-Nov-2023 | 19:09 | x64      |
+| Dtepkg.dll                                                    | 2022.160.4105.2 | 129064    | 14-Nov-2023 | 19:09 | x86      |
+| Dtepkg.dll                                                    | 2022.160.4105.2 | 153552    | 14-Nov-2023 | 19:09 | x64      |
+| Dtexec.exe                                                    | 2022.160.4105.2 | 64960     | 14-Nov-2023 | 19:09 | x86      |
+| Dtexec.exe                                                    | 2022.160.4105.2 | 76736     | 14-Nov-2023 | 19:09 | x64      |
+| Dts.dll                                                       | 2022.160.4105.2 | 2861096   | 14-Nov-2023 | 19:09 | x86      |
+| Dts.dll                                                       | 2022.160.4105.2 | 3266512   | 14-Nov-2023 | 19:10 | x64      |
+| Dtscomexpreval.dll                                            | 2022.160.4105.2 | 444368    | 14-Nov-2023 | 19:09 | x86      |
+| Dtscomexpreval.dll                                            | 2022.160.4105.2 | 493608    | 14-Nov-2023 | 19:09 | x64      |
+| Dtsconn.dll                                                   | 2022.160.4105.2 | 464952    | 14-Nov-2023 | 19:09 | x86      |
+| Dtsconn.dll                                                   | 2022.160.4105.2 | 550848    | 14-Nov-2023 | 19:10 | x64      |
+| Dtsdebughost.exe                                              | 2022.160.4105.2 | 114624    | 14-Nov-2023 | 19:09 | x64      |
+| Dtsdebughost.exe                                              | 2022.160.4105.2 | 94760     | 14-Nov-2023 | 19:09 | x86      |
+| Dtshost.exe                                                   | 2022.160.4105.2 | 98256     | 14-Nov-2023 | 19:09 | x86      |
+| Dtshost.exe                                                   | 2022.160.4105.2 | 120256    | 14-Nov-2023 | 19:09 | x64      |
+| Dtspipeline.dll                                               | 2022.160.4105.2 | 1144768   | 14-Nov-2023 | 19:09 | x86      |
+| Dtspipeline.dll                                               | 2022.160.4105.2 | 1337280   | 14-Nov-2023 | 19:10 | x64      |
+| Dtuparse.dll                                                  | 2022.160.4105.2 | 88016     | 14-Nov-2023 | 19:09 | x86      |
+| Dtuparse.dll                                                  | 2022.160.4105.2 | 104488    | 14-Nov-2023 | 19:09 | x64      |
+| Dtutil.exe                                                    | 2022.160.4105.2 | 142392    | 14-Nov-2023 | 19:09 | x86      |
+| Dtutil.exe                                                    | 2022.160.4105.2 | 166336    | 14-Nov-2023 | 19:09 | x64      |
+| Exceldest.dll                                                 | 2022.160.4105.2 | 247848    | 14-Nov-2023 | 19:09 | x86      |
+| Exceldest.dll                                                 | 2022.160.4105.2 | 284624    | 14-Nov-2023 | 19:09 | x64      |
+| Excelsrc.dll                                                  | 2022.160.4105.2 | 264232    | 14-Nov-2023 | 19:09 | x86      |
+| Excelsrc.dll                                                  | 2022.160.4105.2 | 305088    | 14-Nov-2023 | 19:09 | x64      |
+| Execpackagetask.dll                                           | 2022.160.4105.2 | 149544    | 14-Nov-2023 | 19:09 | x86      |
+| Execpackagetask.dll                                           | 2022.160.4105.2 | 182312    | 14-Nov-2023 | 19:09 | x64      |
+| Flatfiledest.dll                                              | 2022.160.4105.2 | 374720    | 14-Nov-2023 | 19:09 | x86      |
+| Flatfiledest.dll                                              | 2022.160.4105.2 | 423992    | 14-Nov-2023 | 19:09 | x64      |
+| Flatfilesrc.dll                                               | 2022.160.4105.2 | 391104    | 14-Nov-2023 | 19:09 | x86      |
+| Flatfilesrc.dll                                               | 2022.160.4105.2 | 440360    | 14-Nov-2023 | 19:09 | x64      |
+| Isdbupgradewizard.exe                                         | 16.0.4105.2     | 120776    | 14-Nov-2023 | 19:09 | x86      |
+| Isdbupgradewizard.exe                                         | 16.0.4105.2     | 120872    | 14-Nov-2023 | 19:09 | x86      |
+| Microsoft.analysisservices.applocal.core.dll                  | 16.0.43.222     | 2933816   | 14-Nov-2023 | 19:01 | x86      |
+| Microsoft.analysisservices.applocal.core.dll                  | 16.0.43.222     | 2933824   | 14-Nov-2023 | 19:01 | x86      |
+| Microsoft.sqlserver.integrationservices.isserverdbupgrade.dll | 16.0.4105.2     | 509888    | 14-Nov-2023 | 19:09 | x86      |
+| Microsoft.sqlserver.integrationservices.isserverdbupgrade.dll | 16.0.4105.2     | 510008    | 14-Nov-2023 | 19:09 | x86      |
+| Microsoft.sqlserver.maintenanceplantasks.dll                  | 16.0.4105.2     | 391224    | 14-Nov-2023 | 19:09 | x86      |
+| Msdtssrvr.exe                                                 | 16.0.4105.2     | 219176    | 14-Nov-2023 | 19:09 | x64      |
+| Msdtssrvrutil.dll                                             | 2022.160.4105.2 | 100288    | 14-Nov-2023 | 19:09 | x86      |
+| Msdtssrvrutil.dll                                             | 2022.160.4105.2 | 124984    | 14-Nov-2023 | 19:09 | x64      |
+| Msmdpp.dll                                                    | 2022.160.43.222 | 10165808  | 14-Nov-2023 | 19:01 | x64      |
+| Newtonsoft.json.dll                                           | 13.0.1.25517    | 704408    | 14-Nov-2023 | 19:09 | x86      |
+| Newtonsoft.json.dll                                           | 13.0.1.25517    | 704408    | 14-Nov-2023 | 19:09 | x86      |
+| Newtonsoft.json.dll                                           | 13.0.1.25517    | 704408    | 14-Nov-2023 | 19:10 | x86      |
+| Odbcdest.dll                                                  | 2022.160.4105.2 | 342056    | 14-Nov-2023 | 19:09 | x86      |
+| Odbcdest.dll                                                  | 2022.160.4105.2 | 383016    | 14-Nov-2023 | 19:09 | x64      |
+| Odbcsrc.dll                                                   | 2022.160.4105.2 | 350248    | 14-Nov-2023 | 19:09 | x86      |
+| Odbcsrc.dll                                                   | 2022.160.4105.2 | 399400    | 14-Nov-2023 | 19:09 | x64      |
+| Oledbdest.dll                                                 | 2022.160.4105.2 | 247848    | 14-Nov-2023 | 19:09 | x86      |
+| Oledbdest.dll                                                 | 2022.160.4105.2 | 288704    | 14-Nov-2023 | 19:09 | x64      |
+| Oledbsrc.dll                                                  | 2022.160.4105.2 | 268328    | 14-Nov-2023 | 19:09 | x86      |
+| Oledbsrc.dll                                                  | 2022.160.4105.2 | 313384    | 14-Nov-2023 | 19:09 | x64      |
+| Rawdest.dll                                                   | 2022.160.4105.2 | 190520    | 14-Nov-2023 | 19:09 | x86      |
+| Rawdest.dll                                                   | 2022.160.4105.2 | 227368    | 14-Nov-2023 | 19:09 | x64      |
+| Rawsource.dll                                                 | 2022.160.4105.2 | 186424    | 14-Nov-2023 | 19:09 | x86      |
+| Rawsource.dll                                                 | 2022.160.4105.2 | 214992    | 14-Nov-2023 | 19:09 | x64      |
+| Recordsetdest.dll                                             | 2022.160.4105.2 | 174120    | 14-Nov-2023 | 19:09 | x86      |
+| Recordsetdest.dll                                             | 2022.160.4105.2 | 206888    | 14-Nov-2023 | 19:09 | x64      |
+| Sql_is_keyfile.dll                                            | 2022.160.4105.2 | 137152    | 14-Nov-2023 | 19:01 | x64      |
+| Sqlceip.exe                                                   | 16.0.4105.2     | 300992    | 14-Nov-2023 | 19:10 | x86      |
+| Sqldest.dll                                                   | 2022.160.4105.2 | 256040    | 14-Nov-2023 | 19:09 | x86      |
+| Sqldest.dll                                                   | 2022.160.4105.2 | 288704    | 14-Nov-2023 | 19:10 | x64      |
+| Sqltaskconnections.dll                                        | 2022.160.4105.2 | 174032    | 14-Nov-2023 | 19:09 | x86      |
+| Sqltaskconnections.dll                                        | 2022.160.4105.2 | 210880    | 14-Nov-2023 | 19:10 | x64      |
+| Txagg.dll                                                     | 2022.160.4105.2 | 346152    | 14-Nov-2023 | 19:09 | x86      |
+| Txagg.dll                                                     | 2022.160.4105.2 | 395304    | 14-Nov-2023 | 19:10 | x64      |
+| Txbdd.dll                                                     | 2022.160.4105.2 | 149560    | 14-Nov-2023 | 19:09 | x86      |
+| Txbdd.dll                                                     | 2022.160.4105.2 | 190504    | 14-Nov-2023 | 19:10 | x64      |
+| Txbestmatch.dll                                               | 2022.160.4105.2 | 567336    | 14-Nov-2023 | 19:09 | x86      |
+| Txbestmatch.dll                                               | 2022.160.4105.2 | 661440    | 14-Nov-2023 | 19:10 | x64      |
+| Txcache.dll                                                   | 2022.160.4105.2 | 169920    | 14-Nov-2023 | 19:09 | x86      |
+| Txcache.dll                                                   | 2022.160.4105.2 | 202688    | 14-Nov-2023 | 19:10 | x64      |
+| Txcharmap.dll                                                 | 2022.160.4105.2 | 280512    | 14-Nov-2023 | 19:09 | x86      |
+| Txcharmap.dll                                                 | 2022.160.4105.2 | 325672    | 14-Nov-2023 | 19:10 | x64      |
+| Txcopymap.dll                                                 | 2022.160.4105.2 | 165824    | 14-Nov-2023 | 19:09 | x86      |
+| Txcopymap.dll                                                 | 2022.160.4105.2 | 202688    | 14-Nov-2023 | 19:10 | x64      |
+| Txdataconvert.dll                                             | 2022.160.4105.2 | 288824    | 14-Nov-2023 | 19:09 | x86      |
+| Txdataconvert.dll                                             | 2022.160.4105.2 | 333864    | 14-Nov-2023 | 19:10 | x64      |
+| Txderived.dll                                                 | 2022.160.4105.2 | 559144    | 14-Nov-2023 | 19:09 | x86      |
+| Txderived.dll                                                 | 2022.160.4105.2 | 632872    | 14-Nov-2023 | 19:10 | x64      |
+| Txfileextractor.dll                                           | 2022.160.4105.2 | 186408    | 14-Nov-2023 | 19:09 | x86      |
+| Txfileextractor.dll                                           | 2022.160.4105.2 | 219176    | 14-Nov-2023 | 19:10 | x64      |
+| Txfileinserter.dll                                            | 2022.160.4105.2 | 186424    | 14-Nov-2023 | 19:09 | x86      |
+| Txfileinserter.dll                                            | 2022.160.4105.2 | 219176    | 14-Nov-2023 | 19:10 | x64      |
+| Txgroupdups.dll                                               | 2022.160.4105.2 | 354344    | 14-Nov-2023 | 19:09 | x86      |
+| Txgroupdups.dll                                               | 2022.160.4105.2 | 403496    | 14-Nov-2023 | 19:10 | x64      |
+| Txlineage.dll                                                 | 2022.160.4105.2 | 128960    | 14-Nov-2023 | 19:09 | x86      |
+| Txlineage.dll                                                 | 2022.160.4105.2 | 157632    | 14-Nov-2023 | 19:10 | x64      |
+| Txlookup.dll                                                  | 2022.160.4105.2 | 522296    | 14-Nov-2023 | 19:09 | x86      |
+| Txlookup.dll                                                  | 2022.160.4105.2 | 608312    | 14-Nov-2023 | 19:10 | x64      |
+| Txmerge.dll                                                   | 2022.160.4105.2 | 194600    | 14-Nov-2023 | 19:09 | x86      |
+| Txmerge.dll                                                   | 2022.160.4105.2 | 243752    | 14-Nov-2023 | 19:10 | x64      |
+| Txmergejoin.dll                                               | 2022.160.4105.2 | 256040    | 14-Nov-2023 | 19:09 | x86      |
+| Txmergejoin.dll                                               | 2022.160.4105.2 | 301008    | 14-Nov-2023 | 19:10 | x64      |
+| Txmulticast.dll                                               | 2022.160.4105.2 | 116680    | 14-Nov-2023 | 19:09 | x86      |
+| Txmulticast.dll                                               | 2022.160.4105.2 | 145464    | 14-Nov-2023 | 19:10 | x64      |
+| Txpivot.dll                                                   | 2022.160.4105.2 | 198696    | 14-Nov-2023 | 19:09 | x86      |
+| Txpivot.dll                                                   | 2022.160.4105.2 | 239656    | 14-Nov-2023 | 19:10 | x64      |
+| Txrowcount.dll                                                | 2022.160.4105.2 | 116672    | 14-Nov-2023 | 19:09 | x86      |
+| Txrowcount.dll                                                | 2022.160.4105.2 | 145352    | 14-Nov-2023 | 19:10 | x64      |
+| Txsampling.dll                                                | 2022.160.4105.2 | 153536    | 14-Nov-2023 | 19:09 | x86      |
+| Txsampling.dll                                                | 2022.160.4105.2 | 186408    | 14-Nov-2023 | 19:10 | x64      |
+| Txscd.dll                                                     | 2022.160.4105.2 | 198696    | 14-Nov-2023 | 19:09 | x86      |
+| Txscd.dll                                                     | 2022.160.4105.2 | 235560    | 14-Nov-2023 | 19:10 | x64      |
+| Txsort.dll                                                    | 2022.160.4105.2 | 231360    | 14-Nov-2023 | 19:09 | x86      |
+| Txsort.dll                                                    | 2022.160.4105.2 | 276432    | 14-Nov-2023 | 19:10 | x64      |
+| Txsplit.dll                                                   | 2022.160.4105.2 | 550952    | 14-Nov-2023 | 19:09 | x86      |
+| Txsplit.dll                                                   | 2022.160.4105.2 | 620584    | 14-Nov-2023 | 19:10 | x64      |
+| Txtermextraction.dll                                          | 2022.160.4105.2 | 8648744   | 14-Nov-2023 | 19:09 | x86      |
+| Txtermextraction.dll                                          | 2022.160.4105.2 | 8702008   | 14-Nov-2023 | 19:10 | x64      |
+| Txtermlookup.dll                                              | 2022.160.4105.2 | 4138944   | 14-Nov-2023 | 19:09 | x86      |
+| Txtermlookup.dll                                              | 2022.160.4105.2 | 4184120   | 14-Nov-2023 | 19:10 | x64      |
+| Txunionall.dll                                                | 2022.160.4105.2 | 153640    | 14-Nov-2023 | 19:09 | x86      |
+| Txunionall.dll                                                | 2022.160.4105.2 | 194512    | 14-Nov-2023 | 19:10 | x64      |
+| Txunpivot.dll                                                 | 2022.160.4105.2 | 178216    | 14-Nov-2023 | 19:09 | x86      |
+| Txunpivot.dll                                                 | 2022.160.4105.2 | 214992    | 14-Nov-2023 | 19:10 | x64      |
+| Xe.dll                                                        | 2022.160.4105.2 | 640960    | 14-Nov-2023 | 19:09 | x86      |
+| Xe.dll                                                        | 2022.160.4105.2 | 718904    | 14-Nov-2023 | 19:10 | x64      |
+
 SQL Server 2022 sql_polybase_core_inst
+
+|                              File   name                             |   File version  | File size |    Date   |  Time | Platform |
+|:--------------------------------------------------------------------:|:---------------:|:---------:|:---------:|:-----:|:--------:|
+| Dms.dll                                                              | 16.0.1032.0     | 559672    | 14-Nov-2023 | 20:13 | x86      |
+| Dmsnative.dll                                                        | 2022.160.1032.0 | 152632    | 14-Nov-2023 | 20:13 | x64      |
+| Dwengineservice.dll                                                  | 16.0.1032.0     | 45120     | 14-Nov-2023 | 20:13 | x86      |
+| Instapi150.dll                                                       | 2022.160.4105.2 | 104488    | 14-Nov-2023 | 20:13 | x64      |
+| Microsoft.sqlserver.datawarehouse.backup.backupmetadata.dll          | 16.0.1032.0     | 67640     | 14-Nov-2023 | 20:13 | x86      |
+| Microsoft.sqlserver.datawarehouse.catalog.dll                        | 16.0.1032.0     | 293432    | 14-Nov-2023 | 20:13 | x86      |
+| Microsoft.sqlserver.datawarehouse.common.dll                         | 16.0.1032.0     | 1958464   | 14-Nov-2023 | 20:13 | x86      |
+| Microsoft.sqlserver.datawarehouse.configuration.dll                  | 16.0.1032.0     | 169528    | 14-Nov-2023 | 20:13 | x86      |
+| Microsoft.sqlserver.datawarehouse.datamovement.common.dll            | 16.0.1032.0     | 647232    | 14-Nov-2023 | 20:13 | x86      |
+| Microsoft.sqlserver.datawarehouse.datamovement.manager.dll           | 16.0.1032.0     | 246328    | 14-Nov-2023 | 20:13 | x86      |
+| Microsoft.sqlserver.datawarehouse.datamovement.messagetypes.dll      | 16.0.1032.0     | 139320    | 14-Nov-2023 | 20:13 | x86      |
+| Microsoft.sqlserver.datawarehouse.datamovement.messagingprotocol.dll | 16.0.1032.0     | 79928     | 14-Nov-2023 | 20:13 | x86      |
+| Microsoft.sqlserver.datawarehouse.diagnostics.dll                    | 16.0.1032.0     | 51256     | 14-Nov-2023 | 20:13 | x86      |
+| Microsoft.sqlserver.datawarehouse.distributor.dll                    | 16.0.1032.0     | 88624     | 14-Nov-2023 | 20:13 | x86      |
+| Microsoft.sqlserver.datawarehouse.engine.dll                         | 16.0.1032.0     | 1129528   | 14-Nov-2023 | 20:13 | x86      |
+| Microsoft.sqlserver.datawarehouse.engine.statsstream.dll             | 16.0.1032.0     | 80952     | 14-Nov-2023 | 20:13 | x86      |
+| Microsoft.sqlserver.datawarehouse.eventing.dll                       | 16.0.1032.0     | 70712     | 14-Nov-2023 | 20:13 | x86      |
+| Microsoft.sqlserver.datawarehouse.fabric.appliance.dll               | 16.0.1032.0     | 35384     | 14-Nov-2023 | 20:13 | x86      |
+| Microsoft.sqlserver.datawarehouse.fabric.interface.dll               | 16.0.1032.0     | 30784     | 14-Nov-2023 | 20:13 | x86      |
+| Microsoft.sqlserver.datawarehouse.fabric.polybase.dll                | 16.0.1032.0     | 46648     | 14-Nov-2023 | 20:13 | x86      |
+| Microsoft.sqlserver.datawarehouse.fabric.xdbinterface.dll            | 16.0.1032.0     | 21552     | 14-Nov-2023 | 20:13 | x86      |
+| Microsoft.sqlserver.datawarehouse.failover.dll                       | 16.0.1032.0     | 26680     | 14-Nov-2023 | 20:13 | x86      |
+| Microsoft.sqlserver.datawarehouse.hadoop.hadoopbridge.dll            | 16.0.1032.0     | 131648    | 14-Nov-2023 | 20:13 | x86      |
+| Microsoft.sqlserver.datawarehouse.loadercommon.dll                   | 16.0.1032.0     | 86584     | 14-Nov-2023 | 20:13 | x86      |
+| Microsoft.sqlserver.datawarehouse.loadmanager.dll                    | 16.0.1032.0     | 100928    | 14-Nov-2023 | 20:13 | x86      |
+| Microsoft.sqlserver.datawarehouse.localization.dll                   | 16.0.1032.0     | 293432    | 14-Nov-2023 | 20:13 | x86      |
+| Microsoft.sqlserver.datawarehouse.localization.resources.dll         | 16.0.1032.0     | 120384    | 14-Nov-2023 | 20:13 | x86      |
+| Microsoft.sqlserver.datawarehouse.localization.resources.dll         | 16.0.1032.0     | 138304    | 14-Nov-2023 | 20:13 | x86      |
+| Microsoft.sqlserver.datawarehouse.localization.resources.dll         | 16.0.1032.0     | 141368    | 14-Nov-2023 | 20:13 | x86      |
+| Microsoft.sqlserver.datawarehouse.localization.resources.dll         | 16.0.1032.0     | 137792    | 14-Nov-2023 | 20:13 | x86      |
+| Microsoft.sqlserver.datawarehouse.localization.resources.dll         | 16.0.1032.0     | 150584    | 14-Nov-2023 | 20:13 | x86      |
+| Microsoft.sqlserver.datawarehouse.localization.resources.dll         | 16.0.1032.0     | 139840    | 14-Nov-2023 | 20:13 | x86      |
+| Microsoft.sqlserver.datawarehouse.localization.resources.dll         | 16.0.1032.0     | 134712    | 14-Nov-2023 | 20:13 | x86      |
+| Microsoft.sqlserver.datawarehouse.localization.resources.dll         | 16.0.1032.0     | 176696    | 14-Nov-2023 | 20:13 | x86      |
+| Microsoft.sqlserver.datawarehouse.localization.resources.dll         | 16.0.1032.0     | 117824    | 14-Nov-2023 | 20:13 | x86      |
+| Microsoft.sqlserver.datawarehouse.localization.resources.dll         | 16.0.1032.0     | 136760    | 14-Nov-2023 | 20:13 | x86      |
+| Microsoft.sqlserver.datawarehouse.nodes.dll                          | 16.0.1032.0     | 72760     | 14-Nov-2023 | 20:13 | x86      |
+| Microsoft.sqlserver.datawarehouse.nulltransaction.dll                | 16.0.1032.0     | 22072     | 14-Nov-2023 | 20:13 | x86      |
+| Microsoft.sqlserver.datawarehouse.parallelizer.dll                   | 16.0.1032.0     | 37432     | 14-Nov-2023 | 20:13 | x86      |
+| Microsoft.sqlserver.datawarehouse.resourcemanagement.dll             | 16.0.1032.0     | 129088    | 14-Nov-2023 | 20:13 | x86      |
+| Microsoft.sqlserver.datawarehouse.sql.dll                            | 16.0.1032.0     | 3064896   | 14-Nov-2023 | 20:13 | x86      |
+| Microsoft.sqlserver.datawarehouse.sql.parser.dll                     | 16.0.1032.0     | 3955768   | 14-Nov-2023 | 20:13 | x86      |
+| Microsoft.sqlserver.datawarehouse.sql.parser.resources.dll           | 16.0.1032.0     | 118336    | 14-Nov-2023 | 20:13 | x86      |
+| Microsoft.sqlserver.datawarehouse.sql.parser.resources.dll           | 16.0.1032.0     | 133176    | 14-Nov-2023 | 20:13 | x86      |
+| Microsoft.sqlserver.datawarehouse.sql.parser.resources.dll           | 16.0.1032.0     | 137784    | 14-Nov-2023 | 20:13 | x86      |
+| Microsoft.sqlserver.datawarehouse.sql.parser.resources.dll           | 16.0.1032.0     | 133688    | 14-Nov-2023 | 20:13 | x86      |
+| Microsoft.sqlserver.datawarehouse.sql.parser.resources.dll           | 16.0.1032.0     | 148544    | 14-Nov-2023 | 20:13 | x86      |
+| Microsoft.sqlserver.datawarehouse.sql.parser.resources.dll           | 16.0.1032.0     | 134200    | 14-Nov-2023 | 20:13 | x86      |
+| Microsoft.sqlserver.datawarehouse.sql.parser.resources.dll           | 16.0.1032.0     | 130616    | 14-Nov-2023 | 20:13 | x86      |
+| Microsoft.sqlserver.datawarehouse.sql.parser.resources.dll           | 16.0.1032.0     | 171064    | 14-Nov-2023 | 20:13 | x86      |
+| Microsoft.sqlserver.datawarehouse.sql.parser.resources.dll           | 16.0.1032.0     | 115256    | 14-Nov-2023 | 20:13 | x86      |
+| Microsoft.sqlserver.datawarehouse.sql.parser.resources.dll           | 16.0.1032.0     | 132160    | 14-Nov-2023 | 20:13 | x86      |
+| Microsoft.sqlserver.datawarehouse.sqldistributor.dll                 | 16.0.1032.0     | 67640     | 14-Nov-2023 | 20:13 | x86      |
+| Microsoft.sqlserver.datawarehouse.transactsql.scriptdom.dll          | 16.0.1032.0     | 2682936   | 14-Nov-2023 | 20:13 | x86      |
+| Microsoft.sqlserver.datawarehouse.utilities.dll                      | 16.0.1032.0     | 2436664   | 14-Nov-2023 | 20:13 | x86      |
+| Mpdwinterop.dll                                                      | 2022.160.4105.2 | 296896    | 14-Nov-2023 | 20:13 | x64      |
+| Mpdwsvc.exe                                                          | 2022.160.4105.2 | 7796688   | 14-Nov-2023 | 20:13 | x64      |
+| Secforwarder.dll                                                     | 2022.160.4105.2 | 84008     | 14-Nov-2023 | 20:13 | x64      |
+| Sharedmemory.dll                                                     | 2022.160.1032.0 | 61488     | 14-Nov-2023 | 20:13 | x64      |
+| Sqldk.dll                                                            | 2022.160.4105.2 | 4011968   | 14-Nov-2023 | 20:13 | x64      |
+| Sqldumper.exe                                                        | 2022.160.4105.2 | 436280    | 14-Nov-2023 | 20:13 | x64      |
+| Sqlevn70.rll                                                         | 2022.160.4105.2 | 1755176   | 14-Nov-2023 | 20:13 | x64      |
+| Sqlevn70.rll                                                         | 2022.160.4105.2 | 4581416   | 14-Nov-2023 | 20:13 | x64      |
+| Sqlevn70.rll                                                         | 2022.160.4105.2 | 3754024   | 14-Nov-2023 | 20:13 | x64      |
+| Sqlevn70.rll                                                         | 2022.160.4105.2 | 4581416   | 14-Nov-2023 | 20:13 | x64      |
+| Sqlevn70.rll                                                         | 2022.160.4105.2 | 4483008   | 14-Nov-2023 | 20:13 | x64      |
+| Sqlevn70.rll                                                         | 2022.160.4105.2 | 2447416   | 14-Nov-2023 | 20:13 | x64      |
+| Sqlevn70.rll                                                         | 2022.160.4105.2 | 2390072   | 14-Nov-2023 | 20:13 | x64      |
+| Sqlevn70.rll                                                         | 2022.160.4105.2 | 4212776   | 14-Nov-2023 | 20:13 | x64      |
+| Sqlevn70.rll                                                         | 2022.160.4105.2 | 4196392   | 14-Nov-2023 | 20:13 | x64      |
+| Sqlevn70.rll                                                         | 2022.160.4105.2 | 1689656   | 14-Nov-2023 | 20:13 | x64      |
+| Sqlevn70.rll                                                         | 2022.160.4105.2 | 4446248   | 14-Nov-2023 | 20:13 | x64      |
+| Sqlncli17e.dll                                                       | 2017.1710.5.1   | 1902528   | 14-Nov-2023 | 20:13 | x64      |
+| Sqlos.dll                                                            | 2022.160.4105.2 | 51144     | 14-Nov-2023 | 20:13 | x64      |
+| Sqlsortpdw.dll                                                       | 2022.160.1032.0 | 4841536   | 14-Nov-2023 | 20:13 | x64      |
+| Sqltses.dll                                                          | 2022.160.4105.2 | 9386040   | 14-Nov-2023 | 20:13 | x64      |
 
 </details>
 
