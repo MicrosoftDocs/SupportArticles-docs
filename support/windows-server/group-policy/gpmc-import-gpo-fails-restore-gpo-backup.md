@@ -17,7 +17,13 @@ ms.technology: windows-server-group-policy
 
 This article helps fix an issue in which you fail to restore a Group Policy Object (GPO) from the backup by using the Group Policy Management Console (GPMC) or the `Import-GPO` cmdlet.
 
-When you use the wizard by selecting **Restore from Backup** in GPMC or the [Import-GPO](/powershell/module/grouppolicy/import-gpo) cmdlet to restore a GPO from the backup, you receive the following error message:
+When you try to import or restore a GPO with one of the following options:
+
+- The wizard by selecting **Restore from Backup** in GPMC
+- The wizard by selecting **Import Settings** in GPMC
+- The [Import-GPO](/powershell/module/grouppolicy/import-gpo) cmdlet from the backup
+
+You may receive the following error message:
 
 > The process cannot access the file because it is being used by another process.
 
