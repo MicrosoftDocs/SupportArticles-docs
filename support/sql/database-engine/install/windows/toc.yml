@@ -5,6 +5,8 @@ items:
   href: error-set-up-update-instances.md
 - name: Cannot install on Windows case-sensitive servers
   href: sql-server-not-supported-in-windows-os-where-case-sensitivity-enabled.md
+- name: Can't use Kerberos unconstrained delegation in Windows
+  href: windows-prevents-unconstrained-delegation.md
 - name: Description of the Update Cache folder
   href: description-update-cache-folder.md
 - name: Different errors when installing SQL Server 2008 R2
@@ -79,5 +81,3 @@ items:
     href: sql-server-upgrade-failed-error-17182.md
   - name: SQL Server upgrade fails when principals own user objects
     href: sql-server-upgrade-failed-error-cert-principals-own-object.md
-- name: Windows 10 Enterprise breaks delegation
-  href: windows-10-enterprise-breaks-delegation.md
