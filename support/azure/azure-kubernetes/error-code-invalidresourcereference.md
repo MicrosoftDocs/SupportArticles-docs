@@ -26,17 +26,17 @@ When you try to create an AKS cluster, you receive the following error message:
 >
 > Details=[]
 
-## Causes
+## Causes 1
 
 A mismatch exists between resources in different regions. In the example in the "Symptoms" section, the virtual network and the virtual machine scale set aren't in the same region. Because the resources are in different regions, it's impossible to create the scale set instance.
 
 Another possible cause is if the resource has been manually modified/deleted. In that case, it might be difficult to fix the issue as it's unsupported to manually modify the underlying IaaS resources in the MC_ resource group. You might try to recreate the deleted resource and reassociate it with the VMSS, then trigger an update on the AKS cluster, but there is no guarantee this will work.
 
-## Solution
+## Solution 1
 
 Review the resources to make sure that they're in the same region. In this example, either modify the region that the AKS cluster is being built in, or create a new virtual network in the same region.
 
-## More information
+## More information 1
 
 - [General troubleshooting of AKS cluster creation issues](troubleshoot-aks-cluster-creation-issues.md)
 
@@ -52,15 +52,15 @@ When you try to update an AKS cluster, you receive the following error message:
 >
 > Details=[]
 
-## Cause
+## Cause 2 
 
 This might occur if the default aksOutboundRule on the load balancer has been manually modified. This most commonly happens when that outbound IP was updated without using the --load-balancer-outbound-ips flag when updating the cluster.
 
-## Solution
+## Solution 2 
 
 Re-run the failed command with the --load-balancer-outbound-ips flag, passing in the resource ID of the public IP as a value.
 
-## More information
+## More information 2
 
 - [Update the cluster with your own outbound public IP](https://learn.microsoft.com/azure/aks/load-balancer-standard#update-the-cluster-with-your-own-outbound-public-ip)
 
