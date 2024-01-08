@@ -58,7 +58,7 @@ This might occur if the default aksOutboundRule on the load balancer was manuall
 
 ## Solution 2 
 
-Re-run the failed command with the --load-balancer-outbound-ips flag, passing in the resource ID of the public IP as a value.
+Re-run the failed command with the "--load-balancer-outbound-ips" flag, passing in the resource ID of the public IP as a value.
 
 ## More information 2
 
