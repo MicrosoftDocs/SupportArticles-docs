@@ -60,7 +60,7 @@ Re-run the failed command with the --load-balancer-outbound-ips flag, passing in
 
 ## More information
 
-- [Update the cluster with your own outbound public IP](../azure/aks/load-balancer-standard#update-the-cluster-with-your-own-outbound-public-ip)
+- [Update the cluster with your own outbound public IP](https://learn.microsoft.com/azure/aks/load-balancer-standard#update-the-cluster-with-your-own-outbound-public-ip)
 
 
 
