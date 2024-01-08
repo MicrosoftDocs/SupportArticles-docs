@@ -34,7 +34,7 @@ A mismatch exists between resources in different regions. In the example in the 
 
 Review the resources to make sure that they're in the same region. In this example, either modify the region that the AKS cluster is being built in, or create a new virtual network in the same region.
 
-## More information
+## More information 1
 
 - [General troubleshooting of AKS cluster creation issues](troubleshoot-aks-cluster-creation-issues.md)
 
@@ -56,13 +56,12 @@ This might occur if the default aksOutboundRule on the load balancer has been ma
 
 ## Solution 2
 
-Review the resources to make sure that they're in the same region. In this example, either modify the region that the AKS cluster is being built in, or create a new virtual network in the same region.
+Re-run the failed command with the --load-balancer-outbound-ips flag, passing in the resource ID of the public IP as a value.
 
-## More information
+## More information 2
 
 - [Update the cluster with your own outbound public IP](../azure/aks/load-balancer-standard#update-the-cluster-with-your-own-outbound-public-ip)
 
-https://learn.microsoft.com/en-us/azure/aks/load-balancer-standard#update-the-cluster-with-your-own-outbound-public-ip
 
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
