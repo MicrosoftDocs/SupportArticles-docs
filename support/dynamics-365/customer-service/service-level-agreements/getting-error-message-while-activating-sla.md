@@ -21,4 +21,4 @@ The attribute "changedAttributeList" of an SLA entity reaches the limit of field
 
 Simplify your existing SLA structure. Here's an example:
 
-SLA 1 includes 10 SLA items. Create a new SLA 2. From SLA 1, transfer 5 SLA items to the new SLA 2. This means that SLA 2 now has 5 items, and the remaining 5 items stay within the SLA 1. You now have two SLAs, each containing 5 SLA items. This approach helps streamline and manage SLAs more effectively based on specific requirements.
+SLA 1 includes 10 SLA items. Create a new SLA 2. From SLA 1, transfer 5 SLA items to the new SLA 2. You now have two SLAs, each containing 5 SLA items. This approach helps streamline and manage SLAs more effectively based on specific requirements.
