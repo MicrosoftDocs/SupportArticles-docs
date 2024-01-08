@@ -5,7 +5,6 @@ ms.date: 01/08/2024
 editor: v-jovieir
 ms.reviewer: rissing, chiragpa, erbookbi, v-leedennis, jovieir
 ms.service: azure-kubernetes-service
-ms.subservice: troubleshoot-start-operations
 ms.custom: devx-track-azurecli
 #Customer intent: As an Azure Kubernetes user, I want to take basic troubleshooting measures to resolve issues that occur when I try to start an Azure Kubernetes Service (AKS) cluster.
 ---
