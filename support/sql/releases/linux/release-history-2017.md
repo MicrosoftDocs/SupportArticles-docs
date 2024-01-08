@@ -332,9 +332,9 @@ This is the Cumulative Update 20 (CU 20) release of [!INCLUDE [sql-server-2017](
 > [!NOTE]  
 > **Ubuntu 18.04** and **RHEL 8** are now supported on [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)] starting with CU 20.
 >
-> The offline package installation links for Ubuntu are pointing to Ubuntu 18.04 packages, except for the SSIS package (which isn't available for Ubuntu 18.04). If you are looking for Ubuntu 16.04 packages, refer to the download path <https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/>.
+> The offline package installation links for Ubuntu are pointing to Ubuntu 18.04 packages, except for the SSIS package (which isn't available for Ubuntu 18.04). If you're looking for Ubuntu 16.04 packages, refer to the download path <https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/>.
 >
-> The offline package installation links for Red Hat are pointing to RHEL 8 packages, except for the SSIS package (which isn't available for RHEL 8). If you are looking for RHEL 7 packages, refer to the download path <https://packages.microsoft.com/rhel/7/mssql-server-2017/>.
+> The offline package installation links for Red Hat are pointing to RHEL 8 packages, except for the SSIS package (which isn't available for RHEL 8). If you're looking for RHEL 7 packages, refer to the download path <https://packages.microsoft.com/rhel/7/mssql-server-2017/>.
 
 ### Package details
 
@@ -696,7 +696,7 @@ Go back to the [release history](#release-history).
 This is the Cumulative Update 4 (CU 4) release of [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 14.0.3022.28. For information about the fixes and improvements in this release, see [KB 4056498](https://support.microsoft.com/help/4056498).
 
 > [!NOTE]  
-> As of CU 4, [!INCLUDE [sql-server-no-version](../../includes/versions/sql-server-no-version.md)] Agent is no longer installed as a separate package. It is installed with the Database Engine package and must be enabled to use.
+> As of CU 4, [!INCLUDE [sql-server-no-version](../../includes/versions/sql-server-no-version.md)] Agent is no longer installed as a separate package. It's installed with the Database Engine package and must be enabled to use.
 
 ### Package details
 
@@ -785,9 +785,9 @@ This is the General Availability (GA) release of [!INCLUDE [sql-server-2017](../
 Package details and download locations for the RPM and Debian packages are listed in the following table. You don't need to download these packages directly if you use the steps in the following installation guides:
 
 - [Install SQL Server package](/sql/linux/sql-server-linux-setup)
-- [Install Full-Text Search package](/sql/linux/sql-server-linux-setup-full-text-search)
+- [Install SQL Server Full-Text Search on Linux](/sql/linux/sql-server-linux-setup-full-text-search)
 - [Install SQL Server Agent package](/sql/linux/sql-server-linux-setup-sql-agent)
-- [Install SQL Server Integration Services](/sql/linux/sql-server-linux-setup-ssis)
+- [Install SQL Server Integration Services (SSIS) on Linux](/sql/linux/sql-server-linux-setup-ssis)
 
 | Distribution | Package version | Downloads |
 | --- | --- | --- |
@@ -802,9 +802,9 @@ Go back to the [release history](#release-history).
 ## Related content
 
 - [SQL Server on Linux FAQ](/sql/linux/sql-server-linux-faq)
-- [Install on Red Hat Enterprise Linux](/sql/linux/quickstart-install-connect-red-hat)
-- [Install on SUSE Linux Enterprise Server](/sql/linux/quickstart-install-connect-suse)
-- [Install on Ubuntu](/sql/linux/quickstart-install-connect-ubuntu)
-- [Run on Docker](/sql/linux/quickstart-install-connect-docker)
+- [Quickstart: Install SQL Server and create a database on Red Hat](/sql/linux/quickstart-install-connect-red-hat)
+- [Quickstart: Install SQL Server and create a database on SUSE Linux Enterprise Server](/sql/linux/quickstart-install-connect-suse)
+- [Quickstart: Install SQL Server and create a database on Ubuntu](/sql/linux/quickstart-install-connect-ubuntu)
+- [Quickstart: Run SQL Server Linux container images with Docker](/sql/linux/quickstart-install-connect-docker)
 - [Create a SQL VM in Azure](/azure/azure-sql/virtual-machines/linux/sql-vm-create-portal-quickstart)
-- [Run & Connect - Cloud](/sql/linux/quickstart-install-connect-clouds)
+- [Quickstart: Run SQL Server in the cloud](/sql/linux/quickstart-install-connect-clouds)
