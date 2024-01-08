@@ -45,7 +45,7 @@ When you try to update an AKS cluster, you receive the following error message:
 
 > Code="InvalidResourceReference"
 > Message="Resource
-> /subscriptions/*\<subscription-id-guid>*/resourceGroups/MC_MyResourceGroup/providers/Microsoft.Network/loadBalancers/kubernetes/frontendIPConfigurations/a050f0cc3817a457c9538fe3df7acdb0 referenced by resource /subscriptions/*\<subscription-id-guid>*/resourceGroups/MC_MyResourceGroup/providers/Microsoft.Network/loadBalancers/kubernetes/**loadBalancingRules/a050f0cc3817a457c9538fe3df7acdb0-TCP-80 was not found.** Please make sure that the referenced resource exists, and that both resources are in the same region."
+> /subscriptions/*\<subscription-id-guid>*/resourceGroups/MC_MyResourceGroup/providers/Microsoft.Network/loadBalancers/kubernetes/frontendIPConfigurations/<frontendIP_ID> referenced by resource /subscriptions/*\<subscription-id-guid>*/resourceGroups/MC_MyResourceGroup/providers/Microsoft.Network/loadBalancers/kubernetes/**loadBalancingRules/<frontend_IP_rule> was not found.** Please make sure that the referenced resource exists, and that both resources are in the same region."
 > Message="Resource  
 >
 > Details=[]
