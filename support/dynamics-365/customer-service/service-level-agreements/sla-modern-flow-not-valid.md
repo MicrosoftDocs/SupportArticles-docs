@@ -45,7 +45,7 @@ Here are the steps to turn off or turn on a flow:
 
 6. To get the affected flow name, initiate an Open Data Protocol (OData) call using the affected flow ID from the error, and then search the flow name in Power Automate. For example:
 
-   (<organization_uri>)/api/data/v9.1/workflows(<modern_flow_id_visible_in_error>)
+   (<organization_url>)/api/data/v9.1/workflows(<modern_flow_id_visible_in_error>)
 
 7. Select the respective flow, and then select **Turn off** and then **Turn on** from the top menu.
 
