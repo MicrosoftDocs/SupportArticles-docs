@@ -2,12 +2,11 @@
 title: Year-end closing procedures
 description: Describes how to perform the year-end closing procedure for Microsoft Dynamics GP Payroll. This article also lists preparation steps and troubleshooting information for the year-end closing procedure.
 ms.reviewer: theley
-ms.date: 1/8/2024
+ms.date: 01/08/2024
 ---
-
 # Year-end closing procedures for Microsoft Dynamics GP Payroll
 
-This article provides steps to perform the year-end closing procedure and the related troubleshooting information for Microsoft Dynamics GP Payroll.
+This article provides steps to perform the year-end closing procedures and the related troubleshooting information for Microsoft Dynamics GP Payroll.
 
 _Applies to:_ &nbsp; Microsoft Dynamics GP  
 _Original KB number:_ &nbsp; 850663  
@@ -24,11 +23,11 @@ This document outlines the recommended year-end closing procedures for Microsoft
 
 ## Introduction
 
-Detailed information about each step in the payroll year-end closing routine is included in the Payroll Manual. Before you follow the steps in this article, look for updated year-end information.
+Detailed information about each step in the payroll year-end closing routine is included in the Payroll Manual. Before you follow the steps in this article, look for the following updated year-end information.
 
 - [U.S. Year-End Update for Microsoft Dynamics GP](/dynamics/s-e/gp/usgpye2018_396)
 - [U.S. Payroll Tax Update for Microsoft Dynamics GP](/dynamics/s-e/gp/tugp2018_391)
-- [U.S. Payroll Year-end documentation](https://learn.microsoft.com/en-us/dynamics-gp/payroll/us-year-end)
+- [U.S. Payroll Year-end documentation](/dynamics-gp/payroll/us-year-end)
 
 ## More information
 
@@ -92,13 +91,14 @@ To create a backup in Microsoft Dynamics GP, follow these steps:
 
 1. In Microsoft Dynamics GP, select **Microsoft Dynamics GP** > **Maintenance** > **Backup**.
 
-    > [!NOTE]
-    > The **Back Up Company** window opens.
+   > [!NOTE]
+   > The **Back Up Company** window opens.
+
 1. In the **Company Name** list, select your company name.
 1. Change the path of the backup file if it's required, and then select **OK**.
 
-   > [!NOTE]
-   > We recommend that you name this backup **Pre Year-End Update** to differentiate it from your other backups.
+> [!NOTE]
+> We recommend that you name this backup **Pre Year-End Update** to differentiate it from your other backups.
 
 #### Step 5: Install the year-end update
 
@@ -109,9 +109,7 @@ To install the payroll year-end update, you must follow the steps in the Microso
 
 #### Step 6: Create the year-end file
 
-To create the year-end file, follow these steps:
-
-In Microsoft Dynamics GP, select **Microsoft Dynamic GP** > **Tools** > **Routines** > **Payroll** > **Year-End Closing**.
+To create the year-end file in Microsoft Dynamics GP, select **Microsoft Dynamic GP** > **Tools** > **Routines** > **Payroll** > **Year-End Closing**.
 
 #### Step 7: Make a backup of the new file
 
@@ -153,7 +151,6 @@ To print the W-3 Transmittal Form, follow these steps:
    - **Print**: W-3 Transmittal Form
 1. Select **Print**.
 
- 
 #### Step 10: Print the 1099-R forms and the 1096 Transmittal form and ACA forms
 
 To print the 1099 forms, follow these steps:
@@ -161,8 +158,8 @@ To print the 1099 forms, follow these steps:
 1. In Microsoft Dynamics GP, select **Microsoft Dynamics GP** > **Tools** > **Routines** > **Payroll** > **Print 1099-Rs**.
 1. In the **Print 1099-R Forms** window, select **1099-R Forms**, and then select **Print**.
 
-    > [!NOTE]
-    > You can print employee1099-R forms as many times as you have to.
+   > [!NOTE]
+   > You can print employee1099-R forms as many times as you have to.
 
 To print the 1096 Transmittal form, follow these steps:
 
@@ -194,14 +191,12 @@ To create a W-2 Electronic File, follow these steps:
 
 To archive inactive employee Human Resources information, select **Microsoft Dynamics GP** > **Tools** > **Utilities** > **Human Resources** > **Archive Employee**.
 
-#### Step 13: Set up fiscal periods for 2023
+#### Step 13: Set up fiscal periods
 
-To set up fiscal periods for the next year, follow these steps:
+To set up fiscal periods for the next year in Microsoft Dynamics GP, select **Microsoft Dynamics GP** > **Tools** > **Setup** > **Company** > **Fiscal Periods**.
 
-1. In Microsoft Dynamics GP, select **Microsoft Dynamics GP** > **Tools** > **Setup** > **Company** > **Fiscal Periods**.
-
-    > [!NOTE]
-    > You may want to close all periods except period 1 to prevent users from posting to future periods. This is a "soft-close" and just prevents users from posting transactions to these dates or periods.
+> [!NOTE]
+> You may want to close all periods except period 1 to prevent users from posting to future periods. This is a "soft-close" and just prevents users from posting transactions to these dates or periods.
 
 #### Step 14: (Optional) Close fiscal periods for the payroll series
 
@@ -223,4 +218,3 @@ To install the payroll tax update for the new year, follow these steps:
 1. In the **Tax Update Method** window, select **Automatic**, and then select **Next**.
 1. In the **Authorization Number** field, type your authorization number, and then select **Log in**.
 1. Select **Finish**.
-
