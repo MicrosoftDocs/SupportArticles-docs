@@ -22,14 +22,14 @@ ms.date: 01/09/2024
 
 ## Symptoms
 
-Both the organizer and attendee of a meeting work in the same time zone. However, the organizer sees the following message when scheduling the meeting in Outlook on the web or the new Microsoft Outlook for Windows:
+Both the organizer and attendee of a meeting [work](https://support.microsoft.com/office/learn-more-about-work-hours-in-outlook-af2fddf9-249e-4710-9c95-5911edfd76f6) in the same time zone. However, the organizer sees the following message when scheduling the meeting in Outlook on the web or the new Microsoft Outlook for Windows:
 
 > \<Attendee\> is in a different time zone. Use the Scheduling Assistant to select times across time zones.
 
 In the Scheduling Assistant, the organizer sees an incorrect time zone for the attendee.
 
 > [!NOTE]
-> As an admin, you can verify that the mailbox settings for both the organizer and attendee show the same time zone. Run the following cmdlet in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) to get the time zone for a user's [work hours](https://support.microsoft.com/office/learn-more-about-work-hours-in-outlook-af2fddf9-249e-4710-9c95-5911edfd76f6):
+> As an admin, you can verify that the mailbox settings for both the organizer and attendee show the same time zone by running the following cmdlet in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell):
 >
 > ```PowerShell
 > Get-MailboxCalendarConfiguration -Identity <user> | FL WorkingHoursTimeZone
