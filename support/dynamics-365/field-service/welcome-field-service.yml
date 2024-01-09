@@ -9,7 +9,7 @@ metadata:
   ms.service: dynamics-365-field-service
   author: m-hartmann
   ms.author: mhart
-  ms.date: 12/21/2023
+  ms.date: 01/09/2024
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -19,12 +19,18 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
+          - text: Can't find a user when setting up frontline workers
+            url: administration/cant-find-user.md
+          - text: Can't identify the user in an error message
+            url: administration/cant-identify-user.md
           - text: Date Window Start/End fields don't exist
             url: administration/date-window-fields-missing.md
           - text: Error with AttributeMap when upgrading
             url: administration/attibutemap-error-upgrade.md
           - text: Entity record texts have duplicated numbers
             url: administration/entity-names-duplicated-numbers.md
+          - text: Incorrect user privileges error
+            url: administration/user-has-no-roles.md
   
   # Card
   - title: Customization
@@ -89,6 +95,16 @@ landingContent:
         links:
           - text: Issue with cascading crew changes when assigning a booking
             url: scheduling/cascade-crew-changes-booking.md
+
+  # Card
+  - title: Integrations
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Create permissions error occurs in Microsoft Outlook or Teams
+            url: integrations/create-permissions-error.md
+          - text: Viva Connections dashboard doesn't have the correct tiles
+            url: integrations/viva-incorrect-tiles.md
 
   # Card
   - title: Documentation and training

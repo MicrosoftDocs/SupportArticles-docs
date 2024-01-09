@@ -1,12 +1,12 @@
 ---
-title: A user in a Dynamics 365 Field Service error message can't be identified 
+title: Can't identify the user in a Dynamics 365 Field Service error message 
 description: Resolves issues trying to identify the user in an error message in Dynamics 365 Field Service.
 author: jasonxian-msft
 ms.author: jasonxian
 ms.reviewer: v-wendysmith
-ms.date: 01/04/2024
+ms.date: 01/09/2024
 ---
-# A user in a Dynamics 365 Field Service error message can't be identified
+# Can't identify the user in a Dynamics 365 Field Service error message
 
 This article helps administrators resolve issues identifying a user in a Field Service error message that contains a user ID.
 
@@ -16,7 +16,7 @@ You have administrator permissions in Dynamics 365 Field Service.
 
 ## Symptoms
 
-A user ID is listed in an error message from Dataverse and I can't identify the user.
+A user ID is listed in an error message from Dataverse and you can't identify the user.
 
 ## Resolution
 

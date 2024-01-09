@@ -4,7 +4,7 @@ description: Resolves issues when trying to create Dynamics 365 Field Service wo
 author: jasonxian-msft
 ms.author: jasonxian
 ms.reviewer: v-wendysmith
-ms.date: 01/04/2024
+ms.date: 01/09/2024
 ---
 # Create permissions error occurs when trying to create work orders in Microsoft Outlook or Teams
 
