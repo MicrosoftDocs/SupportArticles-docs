@@ -17,7 +17,7 @@ When you activate an SLA, you receive the following error message:
 
 ## Cause
 
-Based on the number or name of the field configured in the SLA conditions, the [changedAttributeList](/power-apps/developer/data-platform/reference/entities/slaitem#BKMK_ChangedAttributeList) attribute of an SLA entity reaches the limit of the `MaxLength` property. The value of the `MaxLength` property of the `changedAttributeList` is **4000**.
+Based on the number or name of the field configured in the SLA conditions, the [ChangedAttributeList](/power-apps/developer/data-platform/reference/entities/slaitem#BKMK_ChangedAttributeList) attribute of an SLA entity reaches the limit of the `MaxLength` property. The value of the `MaxLength` property of the `ChangedAttributeList` is **4000**.
 
 ## Resolution
 
