@@ -1,2 +1,2 @@
 > [!IMPORTANT]
-> Although the MFCMAPI editor is supported, you should use caution when you use this tool to change mailboxes. Using the MFCMAPI editor incorrectly can cause permanent damage to a mailbox.
+> Although the MFCMAPI editor is supported, be careful when you use it to change mailbox settings. Using the MFCMAPI editor incorrectly can permanently damage a mailbox.
