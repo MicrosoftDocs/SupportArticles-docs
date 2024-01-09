@@ -46,10 +46,8 @@ The following table describes the sign-in fields required for Android users:
 
 If automatic discovery for mobile clients hasn't been configured, users have to enter the following internal and external discovery addresses in addition to the fields that are listed in the table:
 
-- Internal discovery address*:
-[https://webdir.online.lync.com/Autodiscover/autodiscoverservice.svc/Root](https://webdir.online.lync.com/autodiscover/autodiscoverservice.svc/root)
-- External discovery address*:
-[https://webdir.online.lync.com/Autodiscover/autodiscoverservice.svc/Root](https://webdir.online.lync.com/autodiscover/autodiscoverservice.svc/root)   
+- Internal discovery address*: `https://webdir.online.lync.com/Autodiscover/autodiscoverservice.svc/root`
+- External discovery address*: `https://webdir.online.lync.com/Autodiscover/autodiscoverservice.svc/root`
 
 *These addresses are valid only for Microsoft 365 users and will be different for On-premises Skype for Business Server deployments.
 
