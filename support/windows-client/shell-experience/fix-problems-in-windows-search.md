@@ -150,10 +150,10 @@ If Windows 11, Windows 10 May 2019 Update, or a later update is installed, use W
 1. Make sure that Windows Search works for a newly created Windows account.
 2. Delete *%USERPROFILE%\\AppData\\Local\\Packages\\Microsoft.Windows.Search_cw5n1h2txyewy*.
 
- > [!NOTE]
+	> [!NOTE]
 	> 
 	> - Use Windows Recovery Environment, or sign off and sign in to another user account.
- > - For an earlier version of Windows, `Microsoft.Windows.Search_cw5n1h2txyewy` should be replaced with `Microsoft.Windows.Cortana_cw5n1h2txyewy`.
+	> - For an earlier version of Windows, `Microsoft.Windows.Search_cw5n1h2txyewy` should be replaced with `Microsoft.Windows.Cortana_cw5n1h2txyewy`.
 
 3. Delete the `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Search` registry key from the affected account.
 4. Run the following cmdlet from an elevated PowerShell command prompt:
