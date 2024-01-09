@@ -67,6 +67,14 @@ To check the issue, follow these steps:
 
 For more information, see [TLS 1.2 Upgrade Workflow](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/0700-TLS-1.2-Upgrade-Workflow) and [Transport Layer Security (TLS) connections might fail or timeout when connecting or attempting a resumption](https://support.microsoft.com/topic/transport-layer-security-tls-connections-might-fail-or-timeout-when-connecting-or-attempting-a-resumption-326bd5b1-52a1-b367-8179-b154e5c01e90).
 
+## Scenario 3: The TLS_DHE Ciphers might be enabled.
+
+This issue occurs when the client or server is hosted on Windows 2012, 2016, and higher versions. Despite both OS versions possessing the same cipher (TLS_DHE*), Windows 2012 and 2016+ handle cryptography keys within the TLS differently. This can result in communication errors.
+
+### Resolution
+
+To resolve this issue, remove all ciphers starting with "TLS_DHE*" from the local policy. For more information about errors that occur when applications try to connect to SQL Server in Windows, see Applications experience forcibly closed TLS connection errors when connecting SQL Servers in Windows.
+
 ## Scenario 3: SQL Server uses a certificate signed by a weak-hash algorithm, such as MD5, SHA224, or SHA512
 
 SQL Server always encrypts network packets that are related to sign in. For this purpose, it uses a manually provisioned certificate or a [self-signed certificate](/dotnet/core/additional-tools/self-signed-certificates-guide). If SQL Server finds a certificate that supports the server authentication function in the certificate store, it uses the certificate. SQL Server uses this certificate even if it hasn't been manually provisioned. If these certificates use a weak-hash algorithm (thumbprint algorithm) such as [MD5](/dotnet/api/system.security.cryptography.md5), SHA224, or SHA512, they will not work with TLS 1.2 and cause the previously mentioned error.
