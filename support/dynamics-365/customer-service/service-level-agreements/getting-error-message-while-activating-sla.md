@@ -17,10 +17,10 @@ When you activate an SLA, you receive the following error message:
 
 ## Cause
 
-Based on the number or name of the field configured in the SLA conditions, the [ChangedAttributeList](/power-apps/developer/data-platform/reference/entities/slaitem#BKMK_ChangedAttributeList) attribute of an SLA entity reaches the limit of the `MaxLength` property. The value of the `MaxLength` property of the `ChangedAttributeList` is **4000**.
+The `MaxLength` property of the [ChangedAttributeList](/power-apps/developer/data-platform/reference/entities/slaitem#BKMK_ChangedAttributeList) attribute of an SLA entity has reached its limit of 4000. This may occur based on the number or name of the fields configured in the SLA conditions.
 
 ## Resolution
 
 To solve this issue, simplify your existing SLA structure. Here's an example:
 
-SLA 1 includes 10 SLA items. Create a new SLA 2. From SLA 1, and transfer five SLA items to the new SLA 2. You now have two SLAs, each containing five SLA items. This approach helps streamline and manage SLAs more effectively based on specific requirements.
+SLA 1 includes 10 SLA items. Create a new SLA 2. Transfer five SLA items from SLA 1 to the new SLA 2. You now have two SLAs, each containing five SLA items. This approach helps streamline and manage SLAs more effectively based on specific requirements.
