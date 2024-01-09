@@ -1,7 +1,7 @@
 ---
 title: GPMC or Import-GPO cmdlet fails to restore a GPO from backup
 description: Helps fix an issue where you can't restore a Group Policy Object (GPO) from the backup using the Group Policy Management Console (GPMC) or the Import-GPO cmdlet.
-ms.date: 01/05/2024
+ms.date: 01/09/2024
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
