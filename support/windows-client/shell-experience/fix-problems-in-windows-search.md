@@ -162,7 +162,7 @@ If Windows 11, Windows 10 May 2019 Update, or a later update is installed, use W
     Add-AppxPackage -Path "C:\Windows\SystemApps\Microsoft.Windows.Search_cw5n1h2txyewy\Appxmanifest.xml" -DisableDevelopmentMode -Register
     ```
 
-5. Restart the system and search something for the system to initialize the indexing. The registry key and the *AppData* folder should be regenerated.
+5. Restart the system and search for something for the system to initialize the indexing. The registry key and the *AppData* folder should be regenerated.
 
 ## Help us improve Search in Windows
 
