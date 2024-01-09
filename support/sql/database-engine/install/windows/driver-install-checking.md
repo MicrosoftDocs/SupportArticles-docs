@@ -1,7 +1,7 @@
 ---
 title: Database driver installation check
 description: This article provides steps users can take to troubleshoot common driver installation issues on Windows.
-ms.date: 12/20/2023
+ms.date: 01/09/2024
 ms.custom: sap:Installation, Patching and Upgrade
 ms.reviewer: mastewa, jopilov, prmadhes, v-sidong
 ---

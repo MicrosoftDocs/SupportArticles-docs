@@ -1,7 +1,7 @@
 ---
 title: ODBC driver installation check
 description: Helps you verify the successful installation of your ODBC drivers and ensure they're correctly configured to facilitate smooth data access and management.
-ms.date: 12/19/2023
+ms.date: 01/09/2024
 ms.custom: sap:Installation, Patching and Upgrade
 ms.reviewer: mastewa, jopilov, prmadhes, v-sidong
 ---

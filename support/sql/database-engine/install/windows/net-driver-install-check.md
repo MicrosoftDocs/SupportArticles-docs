@@ -1,7 +1,7 @@
 ---
 title: .NET data provider installation check
 description: This article provides an overview of the essential aspects of .NET providers, their default search paths, and troubleshooting guidelines.
-ms.date: 12/15/2023
+ms.date: 01/09/2024
 ms.custom: sap:Installation, Patching and Upgrade
 ms.reviewer: mastewa, jopilov , prmadhes, v-sidong
 ---
