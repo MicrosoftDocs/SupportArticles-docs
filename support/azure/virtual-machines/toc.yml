@@ -499,21 +499,27 @@
   items:
   - name: Troubleshoot Windows activation problems
     href: troubleshoot-activation-problems.md
-  - name: Error 0x800705B4 when activating Windows VM
-    href: windows-vm-activation-error-0x800705b4.md
-  - name: Error 0xC004E015 (SL_E_EUL_CONSUMPTION_FAILED)
-    href: ../../windows-server/deployment/error-0xc004e015-sl-e-eul-consumption-failed-activate-windows.md?context=/troubleshoot/azure/virtual-machines/context/context
-  - name: Error 0xC004FD02 when activating Windows VM
-    href: windows-vm-activation-error-0xc004fd02.md
-  - name: Error 0xC004F06C when you activate Windows
-    href: ../../windows-server/deployment/error-0xc004f06c-activate-windows.md?context=/troubleshoot/azure/virtual-machines/context/context
-  - name: Windows virtual machine activation FAQ
+  - name: Frequently asked questions (FAQ)
     href: windows-virtual-machine-activation-faq.yml
-  - name: Activation fails in forced tunneling scenario
-    href: custom-routes-enable-kms-activation.md
-  - name: Windows activation - Two new KMS endpoints
+  - name: Understanding Generic Volume License Key (GVLK)
+    href: /windows-server/get-started/kms-client-activation-keys?context=/troubleshoot/azure/virtual-machines/context/context
+  - name: Known errors and issues
+    items:
+    - name: Activation fails in forced tunneling scenario
+      href: custom-routes-enable-kms-activation.md
+    - name: Duplicate Client Machine ID
+      href: windows-activation-duplicate-client-machine-id.md
+    - name: Error 0x800705B4
+      href: windows-vm-activation-error-0x800705b4.md
+    - name: Error 0xC004E015 (SL_E_EUL_CONSUMPTION_FAILED)
+      href: ../../windows-server/deployment/error-0xc004e015-sl-e-eul-consumption-failed-activate-windows.md?context=/troubleshoot/azure/virtual-machines/context/context
+    - name: Error 0xC004FD02
+      href: windows-vm-activation-error-0xc004fd02.md
+    - name: Error 0xC004F06C
+      href: ../../windows-server/deployment/error-0xc004f06c-activate-windows.md?context=/troubleshoot/azure/virtual-machines/context/context
+  - name: KMS endpoints - new endpoints
     href: windows-activation-stopped-working.md
-  
+
 
 - name: Azure disk encryption
   items:
