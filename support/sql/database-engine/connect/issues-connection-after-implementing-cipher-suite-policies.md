@@ -31,17 +31,9 @@ To resolve this issue, follow these steps:
 
 ## Cause 2
 
-The TLS_DHE Ciphers might be enabled. This issue occurs when the client or server is hosted on Windows 2012, 2016, and higher versions. Despite both OS versions possessing the same cipher (TLS_DHE*), Windows 2012 and 2016+ handle cryptography keys within the TLS differently. This can result in communication errors.
-
-## Solution 2
-
-To resolve this issue, remove all ciphers starting with "TLS_DHE*" from the local policy. For more information about errors that occur when applications try to connect to SQL Server in Windows, see [Applications experience forcibly closed TLS connection errors when connecting SQL Servers in Windows](../../../windows-server/identity/apps-forcibly-closed-tls-connection-errors.md).
-
-## Cause 3
-
 There might be a mismatch in TLS version. This issue might occur when the client initiates the connection using TLS 1.0. Modern cipher suites often don't support TLS 1.0, preferring more secure versions like TLS 1.2.
 
-## Solution 3
+## Solution 2
 
 To fix this problem, follow these steps:
 
