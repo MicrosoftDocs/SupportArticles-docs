@@ -8,6 +8,7 @@ ms.reviewer: mastewa, jopilov, prmadhes, v-sidong
 # You can't use Kerberos unconstrained delegation in certain versions of Windows
 
 > [!NOTE]
+>
 > - This article applies to Windows 10, Windows 11, Windows Server 2016, Windows Server 2019, and Windows Server 2022.
 > - Full delegation is also known as "Kerberos unconstrained delegation".
 
