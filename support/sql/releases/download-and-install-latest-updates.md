@@ -1,7 +1,7 @@
 ---
 title: Latest updates and version history for SQL Server
 description: This article lists various builds or updates that are available for different versions of SQL Server.
-ms.date: 1/11/2024
+ms.date: 01/11/2024
 ms.custom: sap:Installation, Patching and Upgrade
 ms.topic: how-to
 ms.reviewer: v-six
