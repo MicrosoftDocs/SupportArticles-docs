@@ -1,8 +1,9 @@
 ---
 title: String or binary data would be truncated error when activating SLA
 description: Resolves an error message that occurs when you activate an SLA in Microsoft Dynamics 365 Customer Service.
-ms.reviewer: sdas, ankugupta, mpanduranga
-ms.author: sdas
+ms.reviewer: sdas, v-psuraty, v-zolu
+ms.author: mpanduranga
+author: mpanduranga
 ms.date: 01/10/2024
 ---
 # "String or binary data would be truncated" error when activating an SLA
