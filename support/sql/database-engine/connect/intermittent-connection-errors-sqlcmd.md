@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting intermittent connection errors with SQLCMD
 description: This article provides symptoms and resolution for troubleshooting intermittent connection errors with SQLCMD.
-ms.date: 01/03/2024
+ms.date: 01/10/2024
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
@@ -32,11 +32,11 @@ Consider the following questions and check if any of them match your results:
 
   :::image type="content" source="media/intermittent-connection-errors-with-sqlcmd/intermittent-connection-sqlcmd-errors.png" alt-text="TLS versions 1.0, 1.1, and 1.2 are enabled on the application server.":::
 
-- Did you run the test "UDL Opens in new window or tab" on the Application server using Microsoft OLE DB Provider for SQL Server and SNAC 11 and the connection failed. The driver "Microsoft OLE DB Provider for SQL Server" is deprecated and doesn't support TLS 1.2.
+- Did you run the test [UDL Opens in new window or tab](test-oledb-connectivity-use-udl-file.md) on the Application server using Microsoft OLE DB Provider for SQL Server and SNAC 11 and the connection failed. The driver "Microsoft OLE DB Provider for SQL Server" is deprecated and doesn't support TLS 1.2.
 
-- Did you perform an ODBC data source test on the Application Server as well using SQL Server Native Client 10.0? Is the following error message "The connection failed with SQL State: '08001' SQL Server Error: 10054 [Microsoft][SQL Server Native Client 10.0]TCP Provider: An existing connection was forcibly closed by remote host. [Microsoft][SQL Server Native Client 10.0]Client unable to establish connection." shown?
+- Has SQL Server Native Client 10.0 been used for the Application Server's ODBC data source test? Do you see "The connection failed with SQL State: '08001' SQL Server Error: 10054 [Microsoft][SQL Server Native Client 10.0]TCP Provider: An existing connection was forcibly closed by remote host. [Microsoft][SQL Server Native Client 10.0]Client unable to establish connection." error message?
 
-- Was an ODBC data source test using SQL Server Native Client 11 successful on the Application Server? This indicates that driver SQL Server Native Client 10.0 isn't supported. Therefore, Application Server uses the older version of Diffie-Hellman algorithm v1 while SQL Server uses the new version of Diffie-Hellman algorithm v2. So it's expected that you will face intermittent TLS failures if the algorithm version is different from the client SQL Server.
+- Was the Application Server's SQL Server Native Client 11 ODBC data source test successful? This indicates that driver SQL Server Native Client 10.0 isn't supported. Therefore, Application Server uses the older version of Diffie-Hellman algorithm v1 while SQL Server uses the new version of Diffie-Hellman algorithm v2. So it's expected that you will face intermittent TLS failures if the algorithm version is different from the client SQL Server.
 
 ## Resolution
 
