@@ -565,14 +565,20 @@ The following steps apply if the OS version is *earlier than the latest version 
    gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-microsoft-azure-release 
    sslverify=1 
    ```
-
+   
 3. Install the `rhui-azure-rhel8-ha` package by running the `dnf install` command:
 
    ```bash
    sudo dnf --config /root/repo.config install rhui-azure-rhel8-ha
    ```
 
-4. Verify that the corresponding repositories are available and show no errors by running the `dnf repolist` command:
+4. Lock the `releasever` variable by running the following command:
+
+   ```bash
+   sudo echo $(. /etc/os-release && echo $VERSION_ID) > /etc/yum/vars/releasever
+   ```
+   
+5. Verify that the corresponding repositories are available and show no errors by running the `dnf repolist` command:
 
    ```bash
    sudo dnf repolist all
