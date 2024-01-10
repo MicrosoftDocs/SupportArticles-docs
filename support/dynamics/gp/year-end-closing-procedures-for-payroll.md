@@ -2,7 +2,7 @@
 title: Year-end closing procedures
 description: Describes how to perform the year-end closing procedure for Microsoft Dynamics GP Payroll. This article also lists preparation steps and troubleshooting information for the year-end closing procedure.
 ms.reviewer: theley
-ms.date: 01/08/2024
+ms.date: 01/10/2024
 ---
 # Year-end closing procedures for Microsoft Dynamics GP Payroll
 
@@ -39,12 +39,12 @@ To perform the year-end closing procedures, follow these steps:
 1. [Complete all pay runs for the current year](#step-2-complete-all-pay-runs-for-the-current-year).
 1. [Complete all month-end, period-end, or quarter-end procedures for the current year](#step-3-optional-complete-all-monthly-and-quarterly-payroll-month-end-period-end-or-quarter-end-procedures-for-the-current-year).
 1. [Make a backup of the original file](#step-4-make-a-backup-of-the-original-file).
-1. [Install the Year-End Update](#step-5-install-the-year-end-update).
-1. [Create the Year-End file](#step-6-create-the-year-end-file).
+1. [Install the year-end update](#step-5-install-the-year-end-update).
+1. [Create the year-end file](#step-6-create-the-year-end-file).
 1. [Make a backup of the new file](#step-7-make-a-backup-of-the-new-file).
 1. [Verify W-2 and 1099-R statement information](#step-8-verify-w-2-and-1099-r-statement-information).
 1. [Print the W-2 statements and the W-3 Transmittal form](#step-9-print-the-w-2-statements-and-the-w-3-transmittal-form).
-1. [Print the 1099-R forms and the 1096 Transmittal form and ACA forms](#step-10-print-the-1099-r-forms-and-the-1096-transmittal-form-and-aca-forms).
+1. [Print the 1099-R forms and the 1096 Transmittal form and ACA forms](#step-10-print-the-1099-r-forms-the-1096-transmittal-form-and-the-aca-forms).
 1. [(Optional) Create a W-2 Electronic file](#step-11-optional-create-a-w-2-electronic-file).
 1. [(Optional) Archive inactive employee Human Resources information](#step-12-optional-archive-inactive-employee-human-resources-information).
 1. [Set up fiscal periods](#step-13-set-up-fiscal-periods).
@@ -53,13 +53,13 @@ To perform the year-end closing procedures, follow these steps:
 
 ### Alternative payroll year-end checklist
 
-If you must process payroll for the new year before you complete the prior year-end closing procedures, follow the steps in this alternative checklist:
+If you must process payroll for the new year before you complete the year-end closing procedures for the prior year, follow the steps in this alternative checklist:
 
 1. [Verify that you've installed the latest payroll tax update](#step-1-verify-that-you-have-installed-the-latest-payroll-tax-update).
 1. [Complete all pay runs for the current year](#step-2-complete-all-pay-runs-for-the-current-year).
 1. [(Optional) Complete all month-end, period-end, or quarter-end procedures for the current year](#step-3-optional-complete-all-monthly-and-quarterly-payroll-month-end-period-end-or-quarter-end-procedures-for-the-current-year).
 1. [Make a backup of the original file](#step-4-make-a-backup-of-the-original-file).
-1. [Install the Year-End Update](#step-5-install-the-year-end-update).
+1. [Install the year-end update](#step-5-install-the-year-end-update).
 1. [Create the year-end file](#step-6-create-the-year-end-file).
 1. [Make a backup of the new file](#step-7-make-a-backup-of-the-new-file).
 1. [Verify W-2 and 1099-R statement information](#step-8-verify-w-2-and-1099-r-statement-information).
@@ -102,10 +102,10 @@ To create a backup in Microsoft Dynamics GP, follow these steps:
 
 #### Step 5: Install the year-end update
 
-To install the payroll year-end update, you must follow the steps in the Microsoft Dynamics GP U.S. Year-end document. The installation must be performed on each computer that has Microsoft Dynamics GP installed. When the update is released, install the update and download the Year End document from [U.S. Year-End Update for Microsoft Dynamics GP](/dynamics/s-e/gp/usgpye2018_396).
+To install the payroll year-end update, you must follow the steps in the [Microsoft Dynamics GP U.S. Year-end document](/dynamics-gp/payroll/us-year-end). The installation must be performed on each computer that has Microsoft Dynamics GP installed. When the update is released, install the update and download the [U.S. Year-End Update for Microsoft Dynamics GP](/dynamics/s-e/gp/usgpye2018_396).
 
 > [!NOTE]
-> Review the [USYE](/dynamics-gp/payroll/us-year-end) and [W-2 DataSource](/dynamics-gp/payroll/w-2-statement) documents for details of what is included in the Year End Update, checklists to follow, FAQ, year-end procedures, electronic W2s, and reporting.
+> Review the [USYE](/dynamics-gp/payroll/us-year-end) and [W-2 DataSource](/dynamics-gp/payroll/w-2-statement) documents for details on what is included in the Year-End Update, checklists to follow, FAQs, year-end procedures, electronic W2s, and reporting.
 
 #### Step 6: Create the year-end file
 
@@ -122,7 +122,7 @@ To create a backup in Microsoft Dynamics GP, follow these steps:
 1. Change the path of the backup file if it's required, and then select **OK**.
 
 > [!NOTE]
-> We recommend that you name this backup Post Year-End File to differentiate it from your other backups.
+> We recommend that you name this backup **Post Year-End File** to differentiate it from your other backups.
 
 #### Step 8: Verify W-2 and 1099-R statement information
 
@@ -151,9 +151,9 @@ To print the W-3 Transmittal Form, follow these steps:
    - **Print**: W-3 Transmittal Form
 1. Select **Print**.
 
-#### Step 10: Print the 1099-R forms and the 1096 Transmittal form and ACA forms
+#### Step 10: Print the 1099-R forms, the 1096 Transmittal form, and the ACA forms
 
-To print the 1099 forms, follow these steps:
+To print the 1099-R forms, follow these steps:
 
 1. In Microsoft Dynamics GP, select **Microsoft Dynamics GP** > **Tools** > **Routines** > **Payroll** > **Print 1099-Rs**.
 1. In the **Print 1099-R Forms** window, select **1099-R Forms**, and then select **Print**.
