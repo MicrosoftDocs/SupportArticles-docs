@@ -11,7 +11,7 @@ Drivers play a crucial role in facilitating communication between hardware and s
 
 ## Driver installation verification
 
-Database drivers are physically represented as [DLLs](/troubleshoot/windows-client/deployment/dynamic-link-library) files in Windows. Applications need to know how to find the appropriate DLL and load it into the process space. Both [ODBC](/sql/odbc/reference/odbc-overview) and [OLE DB](/cpp/data/oledb/ole-db-programming-overview) use the Windows registry to locate the driver or provider to load into memory. The process of loading drivers into memory varies depending on the type of drivers and the operating system being used.
+Database drivers are physically represented as [DLLs](../../../../windows-client/deployment/dynamic-link-library.md) files in Windows. Applications need to know how to find the appropriate DLL and load it into the process space. Both [ODBC](/sql/odbc/reference/odbc-overview) and [OLE DB](/cpp/data/oledb/ole-db-programming-overview) use the Windows registry to locate the driver or provider to load into memory. The process of loading drivers into memory varies depending on the type of drivers and the operating system being used.
 
 - In Windows, drivers are loaded into memory via the [Load Library Win32 API](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya). Once the driver has loaded into memory, the ODBC Driver Manager proxies the calls between the application and the driver. This proxy functionality allows the tracing functionality. However, for performance and other reasons, this trace isn't recommended.
 
