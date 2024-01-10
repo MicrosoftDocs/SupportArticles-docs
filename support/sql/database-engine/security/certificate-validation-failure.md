@@ -146,7 +146,7 @@ Long-term mitigation: Purchase or generate a certificate for the server.
 
 ## More information
 
-- [A network-related or instance-specific error occurred while establishing a connection to SQL Server](network-related-or-instance-specific-error-occurred-while-establishing-connection.md)
+- [A network-related or instance-specific error occurred while establishing a connection to SQL Server](../connect/network-related-or-instance-specific-error-occurred-while-establishing-connection.md)
 - [Configure SQL Server Database Engine for encryption](/sql/database-engine/configure-windows/configure-sql-server-encryption)
 - [Certificate requirements for SQL Server](/sql/database-engine/configure-windows/certificate-requirements)
 - [Connect to an availability group listener](/sql/database-engine/availability-groups/windows/listeners-client-connectivity-application-failover)
