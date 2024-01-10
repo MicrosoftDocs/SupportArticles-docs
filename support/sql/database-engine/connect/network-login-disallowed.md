@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting the network login disallowed error 
 description: This article provides symptoms and resolution for troubleshooting the network login disallowed error.
-ms.date: 12/21/2023
+ms.date: 01/10/2024
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
@@ -14,7 +14,7 @@ This article helps you to resolve the issue related to network login disallowed 
 
 ## Symptoms
 
-The following error message might be shown in an event on the SQL Server where the user doesn't have the allowed login type.
+You might observe the following error message on SQL Server. This might be shown in an event on the SQL Server in a scenario where the user doesn't have the allowed login type.
 
 > The user account is not allowed the Network Login type.
 
