@@ -1,6 +1,8 @@
 items: 
 - name: Block remote use of local accounts in Windows
   href: block-remote-use-local-accounts.md
+- name: Certificate validation failure
+  href: certificate-validation-failure.md
 - name: Configure antivirus software to work with SQL Server
   href: antivirus-and-sql-server.md
 - name: Create database permission is logged
