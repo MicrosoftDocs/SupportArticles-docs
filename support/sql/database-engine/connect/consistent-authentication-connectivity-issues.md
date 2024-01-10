@@ -94,13 +94,9 @@ The following table provides further information for each of the AD and DC issue
 
 |Possible cause  |More information  |
 |---------|---------|
-|Access via group | If the user doesn't belong to a local group used to grant access to the server, the provider should display the "Login failed for user 'database name/username'" error message. The DBA can double-check the access by looking at the Security\Logins in SSMS. If it's a contained database, the DBA checks under database name. <br/>When you run the `xp_logininfo 'contoso/user1'` stored procedure, the following might happen:<br/><ul><li>If you receive an error, SQL can't resolve the username at all. It might be likely that a name isn't present in the AD or there might be issues connecting to the DC. Try with another name to check if the issue is related to a specific account.</li><br/><li>If you're connecting to cross-domain, the group must be in the SQL Server domain, and not the user domain so that its membership can be resolved.</li><br/><li>If no rows are returned, then there's no group that provides access to the server. If one or more rows are returned, then the user belongs to a group that provides access. </li></ul><br/>|
-|Network login disallowed  | This scenario might occur if the Netlogon service is disabled. You can correct this error by using the Local security policy manager. For more information, see [Network login disallowed](network-login-disallowed.md).    |
+
 |Service account not trusted for delegation    | If a delegation scenario isn't enabled, check the SQL Server *secpol.msc* to see if the SQL Server service account is listed under **Local Policies -> User Rights Assignment -> Impersonate a client after authentication** security policy settings.         |
-|Only Admins can log in  |This scenario might occur if you aren't logged in as an Administrator. For more information, see [Only Admins can log in](only-admins-can-login.md).         |
-|Local security subsystem issues     | This scenario is related to Active Directory. For detailed information, see [Local security subsystem issues](local-security-subsystem-issues.md).    |
-|Corrupt user profile  | This scenario is related to a [profile issue](corrupt-user-profile.md).         |
-|Credential guard is enabled | In Windows 10 Enterprise, there's a new feature called Credential Guard. If the client is Windows 10 Enterprise Edition and the Credential Guard feature is turned ON, then you can't use full delegation (Trust this user for delegation to any service). You can only use constrained delegation.<br/>When the Credentials Guard is enabled, certain authentication features are blocked. Applications break if they require the following features:<br/><ul><li>Kerberos DES encryption support<br/></li><li>Kerberos unconstrained delegation</li><li>Extracting the Kerberos TGT</li><li>NTLMv1</li></ul>  |
+
 
 > [!NOTE]
 > For issues related to NT LAN Manager, see [Login failed for user NT AUTHORITY\ANONYMOUS LOGON.](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error)
@@ -127,6 +123,7 @@ The following table contains information about causes related to Kerberos authen
 |Possible causes |More information  |
 |---------|---------|
 |Not trusted for delegation and Not a constrained target |These issues are related to AD. If you're an administrator, enable the **Trusted for delegation** setting. |
+|NetBIOS name | When you use just the NetBIOS name, example SQLPROD01, rather than the fully qualified domain (FQDN) name, example SQLPROD01.CONTOSO.COM, the wrong DNS suffix might be appended. Check the network settings for the default suffixes and make sure they're correct or use the FQDN to avoid issues.|
 |Sensitive account   | Some accounts may be marked as Sensitive in AD. These accounts can't be delegated to another service in a double-hop scenario. |
 |User belongs to many groups  | This can happen when a user is a member of many groups in AD. If you use Kerberos over UDP, the entire security token must fit within a single packet. Users that belong to many groups have a larger security token than users who belong to fewer groups. If you use Kerberos over TCP, you can increase the [`MaxTokenSize`] setting. For more information, see [MaxTokenSize and Kerberos Token Bloat](/archive/blogs/shanecothran/maxtokensize-and-kerberos-token-bloat).  |
 |Clock skew   | This error can occur when clocks on more than one device on a network aren't synchronized. For Kerberos server to work, the clocks between machines can't be turned off for more than five minutes.   |
