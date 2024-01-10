@@ -590,7 +590,7 @@ The following steps apply if the OS version is *earlier than the latest version 
 
 Select the tab of an SAP image type to see the corresponding instructions.
 
-#### [RHEL 9.0 - RHEL-SAP-APPS](#tab/rhel9-rhel-sap-apps)
+#### [RHEL 9.0 - 9.2 RHEL-SAP-APPS](#tab/rhel9-rhel-sap-apps)
 
 The following steps apply if the OS version is *earlier than the latest version that's available* that's supported by SAP for `RHEL 9.0`, and if the VM was created by using the `RHEL-SAP-APPS` offer image.
 
@@ -600,10 +600,10 @@ The following steps apply if the OS version is *earlier than the latest version 
    sudo dnf --config='https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhel9-sapapps.config' install rhui-azure-rhel9-sapapps
    ```
 
-2. Lock the `releasever` variable by running the following command:
+2. Lock the `releasever` level. Currently, it has to be 9.0 or 9.2.
 
    ```bash
-   sudo echo $(. /etc/os-release && echo $VERSION_ID) > /etc/yum/vars/releasever
+   sudo sh -c 'echo 9.2 > /etc/dnf/vars/releasever'
    ```
 
 3. Verify that the corresponding repositories are available and show no errors. To do this, run the `dnf repolist` command:
@@ -612,7 +612,7 @@ The following steps apply if the OS version is *earlier than the latest version 
    sudo dnf repolist all
    ```
 
-#### [RHEL 9.0 - RHEL-SAP-HA (E4S)](#tab/rhel9-rhel-sap-ha-e4s)
+#### [RHEL 9.0 - 9.2  RHEL-SAP-HA (E4S)](#tab/rhel9-rhel-sap-ha-e4s)
 
 The following steps apply if the OS version is *earlier than the latest version available* that's supported by SAP for `RHEL 9.0`, and if the VM was created by using the `RHEL-SAP-HA` offer image.
 
@@ -622,10 +622,10 @@ The following steps apply if the OS version is *earlier than the latest version 
    sudo dnf --config='https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhel9-sap-ha.config' install rhui-azure-rhel9-sap-ha
    ```
 
-2. Lock the `releasever` variable by running the following command:
+2. Lock the `releasever` level. Currently, it has to be 9.0 or 9.2.
 
    ```bash
-   sudo echo $(. /etc/os-release && echo $VERSION_ID) > /etc/yum/vars/releasever
+   sudo sh -c 'echo 9.2 > /etc/dnf/vars/releasever'
    ```
 
 3. Verify that the corresponding repositories are available and show no errors. To do this, run the `dnf repolist` command:
