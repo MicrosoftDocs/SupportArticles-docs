@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot the InvalidResourceReference error code
-description: Learn how to troubleshoot the InvalidResourceReference error when you try to create and deploy an Azure Kubernetes Service (AKS) cluster.
-ms.date: 10/07/2023
+description: Learn how to troubleshoot the InvalidResourceReference errors when you try to create and deploy an Azure Kubernetes Service (AKS) cluster, or when you update it.
+ms.date: 01/10/2024
 editor: v-jsitser
 ms.reviewer: rissing, chiragpa, erbookbi, v-leedennis, v-weizhu
 ms.service: azure-kubernetes-service
@@ -28,42 +28,41 @@ When you try to create an AKS cluster, you receive the following error message:
 
 ## Causes 1
 
-A mismatch exists between resources in different regions. In the example in the "Symptoms" section, the virtual network and the virtual machine scale set aren't in the same region. Because the resources are in different regions, it's impossible to create the scale set instance.
+Here are possible causes of this issue:
 
-Another possible cause is if the resource has been manually modified/deleted. In that case, it might be difficult to fix the issue as it's unsupported to manually modify the underlying IaaS resources in the MC_ resource group. You might try recreating the deleted resource and reassociate it with the VMSS, then trigger an update on the AKS cluster. Given this is an unsupported scenario, there's no guarantee this operation works.
+- A mismatch exists between resources in different regions.
+
+    In the example in the [Symptom 1](#symptom-1) section, the virtual network and the virtual machine scale set aren't in the same region. Because the resources are in different regions, it's impossible to create the scale set instance.
+
+- The referenced resource has been manually modified/deleted.
 
 ## Solution 1
 
-Review the resources to make sure that they're in the same region. In this example, either modify the region that the AKS cluster is being built in, or create a new virtual network in the same region.
+If a mismatch exists between resources in different regions, review the resources to make sure that they're in the same region. In this example, either modify the region that the AKS cluster is being built in, or create a new virtual network in the same region.
 
-## More information 1
-
-- [General troubleshooting of AKS cluster creation issues](troubleshoot-aks-cluster-creation-issues.md)
-
+If the referenced resource has been manually modified/deleted, in this case, because it's unsupported to manually modify the underlying IaaS resources in the *MC_* resource group, it might be difficult to resolve this issue. A possible solution might be to recreate the deleted resource, reassociate it with the VMSS, and then trigger an update on the AKS cluster. Howerver, as this is an unsupported scenario, the success of this solution can't be guaranteed.
 
 ## Symptom 2
 
 When you try to update an AKS cluster, you receive the following error message:
 
-> Code="InvalidResourceReference"
-> Message="Resource
-> /subscriptions/*\<subscription-id-guid>*/resourceGroups/MC_MyResourceGroup/providers/Microsoft.Network/loadBalancers/kubernetes/frontendIPConfigurations/<frontendIP_ID> referenced by resource /subscriptions/*\<subscription-id-guid>*/resourceGroups/MC_MyResourceGroup/providers/Microsoft.Network/loadBalancers/kubernetes/**loadBalancingRules/<frontend_IP_rule> was not found.** Please make sure that the referenced resource exists, and that both resources are in the same region."
+> Code="InvalidResourceReference"  
+> Message="Resource  
+> /subscriptions/*\<subscription-id-guid>*/resourceGroups/MC_MyResourceGroup/providers/Microsoft.Network/loadBalancers/kubernetes/frontendIPConfigurations/<frontendIP_ID> referenced by resource /subscriptions/*\<subscription-id-guid>*/resourceGroups/MC_MyResourceGroup/providers/Microsoft.Network/loadBalancers/kubernetes/**loadBalancingRules/<frontend_IP_rule> was not found.** Please make sure that the referenced resource exists, and that both resources are in the same region."  
 > Message="Resource  
 >
 > Details=[]
 
 ## Cause 2 
 
-This might occur if the default aksOutboundRule on the load balancer was manually modified. This most commonly happens when that outbound IP was updated without using the --load-balancer-outbound-ips flag when updating the cluster.
+This issue might occur if the default outbound rule "aksOutboundRule" on the load balancer is manually modified. This unexpected modification typically occur when the outbound IP is updated when you update the cluster without the `load-balancer-outbound-ips` parameter. 
 
-## Solution 2 
+## Solution 2
 
-Rerun the failed command with the "--load-balancer-outbound-ips" flag, passing in the resource ID of the public IP as a value.
+Rerun the `az aks update` command with the `load-balancer-outbound-ips` parameter to update your cluster. Use the resource ID of the public IP as the parameter value. For more information, see [Update the cluster with your own outbound public IP](/azure/aks/load-balancer-standard#update-the-cluster-with-your-own-outbound-public-ip)
 
-## More information 2
+## More information
 
-- [Update the cluster with your own outbound public IP](https://learn.microsoft.com/azure/aks/load-balancer-standard#update-the-cluster-with-your-own-outbound-public-ip)
-
-
+- [General troubleshooting of AKS cluster creation issues](troubleshoot-aks-cluster-creation-issues.md)
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
