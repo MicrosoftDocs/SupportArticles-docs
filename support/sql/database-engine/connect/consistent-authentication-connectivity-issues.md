@@ -112,9 +112,9 @@ The following table provides some solutions to the AD and DC issues:
 |Cross-Domain groups    | Users from the [remote domain should belong to a group](../../../windows-server/windows-security/trust-between-windows-ad-domain-not-work-correctly.md) in the SQL Server domain. If the domains lack proper trust, adding the users in a group in the remote domain might prevent the SQL Server from enumerating the group's membership.  |
 |Firewall blocks the DC   | Make sure the DC is accessible from the client or the SQL Server using the `nltest /SC_QUERY:CONTOSO` command.  |
 |Domain Controller is offline   | Use NLTEST to force the computer to switch to another DC. See [Active Directory replication Event ID 2087: DNS lookup failure caused replication to fail](../../../windows-server/identity/active-directory-replication-event-id-2087.md).   |
-|Selective authentication  | Make sure the user isn't allowed to authenticate in the remote domain.      |
-|Account migration   | If old user accounts can't connect to the SQL Server, but newly created accounts can, this could be due to account migration. This issue is related to AD.    |
-|Domain Trust | This issue is related to the trust level between domains.|
+|Selective authentication issue | Is a feature of domain trusts that allows the domain administrator to limit which users have access to resources in the remote domain. If Selective authentication isn't enabled, all users in the trusted domain can get access to the remote domain. To resolve this issue, make sure the users aren't allowed to authenticate in the remote domain by enabling Selective Authentication.  |
+|Account migration issue  | If old user accounts can't connect to the SQL Server, but newly created accounts can, this could happen if account migration isn't correct. This issue is related to AD.  For more information, see [Transfer logins and passwords between instances of SQL Server](../security/transfer-logins-passwords-between-instances.md). |
+|Domain Trust issue | This issue is related to the trust level between domains.|
 
 ## Issues related to Kerberos authentication
 
