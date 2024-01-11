@@ -83,7 +83,7 @@ When you create a volume mount point on a Windows Server failover cluster, you m
       4. Select the disk that hosts both the mount point and the volume for the mount point, and then click **OK**. Both disks now appear in the **Available Storage** area of the storage pane.
       5. Right-click the disk resource that hosts the mount point, and then click **Properties**.
 
-      6. In the **Dependencies** tab, click the **Resource** column.
+      6. On the **Dependencies** tab, click the **Resource** column.
       7. Click the root disk, click **Apply**, and then click **OK**. This dependency will cause the resource to come online after the disk resource that hosts the mount point is successfully brought online.
 
 6. Right-click the newly added disk resources, and then click **More actions**.
