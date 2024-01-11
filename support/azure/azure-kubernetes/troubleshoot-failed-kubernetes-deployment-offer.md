@@ -135,7 +135,7 @@ To accept the legal terms through PowerShell, run the cmdlets that are described
 You can choose to deploy through the [Azure portal](https://portal.azure.com). The Azure portal provides a UI experience for reading and accepting the legal terms. 
 ## Next Steps
 
-For Marketplace Applications and Extensions help please refer [here](/troubleshoot/azure/azure-kubernetes/cluster-extension-deployment-errors).
+For help regarding Marketplace Applications and Extensions please refer [here](/troubleshoot/azure/azure-kubernetes/cluster-extension-deployment-errors).
 
 
 ---
