@@ -93,6 +93,8 @@
               href: service-level-agreements/slakpi-instance-not-existed-error.md
             - name: First Response By and Resolve By aren't getting populated
               href: service-level-agreements/sla-firstresponseby-resolveby-not-populating-uci.md
+            - name: '"String or binary data would be truncated" error when activating an SLA'
+              href: service-level-agreements/getting-error-message-while-activating-sla.md
             - name: SLA KPI instance status shows as canceled
               href: service-level-agreements/sla-kpi-instance-shows-canceled.md
             - name: Success, warning, and failure actions run many times in web client
