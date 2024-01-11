@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting local security subsystem errors
-description: This article provides symptoms and resolution for the local security subsystem related errors.
-ms.date: 12/20/2023
+description: This article provides symptoms and resolution for the local security subsystem related consistent authentication issues.
+ms.date: 01/11/2024
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
@@ -10,11 +10,14 @@ ms.custom: sap:Connection issues
 
 # Local security subsystem errors
 
-This article helps to resolve the problem related to local security subsystem errors. The 
+This article helps to resolve the issue that might arise because of local security subsystem errors.
 
 ## Symptoms
 
-The local security subsystem errors occur when the local security authority subsystem service (LSASS) stops responding.
+You may experience consistent authentication issues and also receive local security subsystem errors. 
+These errors occur when the local security authority subsystem service (LSASS) stops responding.
+
+## Cause
 
 The driver shows the "The login is from an untrusted domain and can't be used with Windows authentication" error message.
 
@@ -26,9 +29,12 @@ Check if the SQL Server error log shows the following messages:
 
 You might also see Kerberos errors in the system event log on the SQL Server machine for the same time range. The following error code has a specific meaning:
 
-> Error - 2146893039 (0x80090311): No authority could be contacted for authentication. This is an Active Directory issue.
+> Error - 2146893039 (0x80090311): No authority could be contacted for authentication.
 
 ## Resolution
 
-Check whether your Service Principal Name (SPN) is registered correctly on the Domain Controller (DC). You can use `setspn -Q` or `setspn -L` to query your SPN and SPNs under your account respectively.
+To resolve these error messages, follow these steps:
 
+1. Check whether your Service Principal Name (SPN) is registered correctly on the Domain Controller (DC).
+
+1. Use the `setspn -Q` or `setspn -L` commands to query your SPN and SPNs under your account respectively.
