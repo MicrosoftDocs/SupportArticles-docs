@@ -100,11 +100,11 @@ productDirectory:
       links:
         - url: /viva/troubleshoot/connections/viva-connections-welcome
           text: Microsoft Viva Connections
-        - url: /viva/troubleshoot/engage/viva-engage-welcome.yml
+        - url: /viva/troubleshoot/engage/viva-engage-welcome
           text: Microsoft Viva Engage
         - url: /viva/troubleshoot/glint/viva-glint-welcome
           text: Microsoft Viva Glint
-        - url: /viva/troubleshoot/insights/viva-insights-welcome.yml
+        - url: /viva/troubleshoot/insights/viva-insights-welcome
           text: Microsoft Viva Insights
         - url: /viva/troubleshoot/learning/viva-learning-welcome
           text: Microsoft Viva Learning
