@@ -1,0 +1,82 @@
+### YamlMime:Landing
+
+title: Microsoft Copilot for Sales troubleshooting # < 60 chars
+summary: Welcome to Microsoft Copilot for Sales troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Microsoft Copilot for Sales. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+metadata:
+  title: Microsoft Copilot for Sales troubleshooting
+  description: Landing page for Microsoft Copilot for Sales troubleshooting articles. # Required; article description that is displayed in search results. < 160 chars.
+  ms.service: microsoft-sales-copilot  #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.topic: landing-page # Required
+  author:   sbmjais
+  ms.author:  shjais
+  ms.date: 01/10/2024
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+ # Card
+  - title: CRM permissions and configurations
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Can't update records due to missing record access in Salesforce CRM
+            url: crm-permissions-and-configurations/missing-record-update-edit-access.md
+          - text: Can't update records due to missing object access in Salesforce CRM
+            url: crm-permissions-and-configurations/missing-object-update-edit-access.md
+          - text: Can't save email to CRM due to invalid mailbox settings
+            url: crm-permissions-and-configurations/update-settings-to-save-emails-error.md
+          - text: '"Fix mailbox errors in Dynamics 365" error'
+            url: crm-permissions-and-configurations/fix-mailbox-errors-in-dynamics-365.md
+          - text: Missing privileges error when signing in
+            url: crm-permissions-and-configurations/missing-privileges-sign-in.md
+          - text: Salesforce CRM users can't see data in Copilot for Sales
+            url: crm-permissions-and-configurations/no-column-error.md
+            
+ # Card
+  - title: Outlook side panel
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Sign-in issue when opening the Copilot for Sales pane in Outlook
+            url: outlook-side-panel/problem-starting-copilot-for-sales.md
+          - text: Update add-in error in Copilot for Sales add-in for Microsoft Outlook
+            url: outlook-side-panel/update-add-in-error.md
+
+ # Card
+  - title: Setup, installation, and sign-in
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Can't connect to Dynamics 365 with two-factor authentication enabled
+            url: setup-installation-and-sign-in/connection-issue-with-two-factor-auth.md
+          - text: Can't save an email to CRM when Enhanced Email isn't enabled in Salesforce CRM
+            url: setup-installation-and-sign-in/update-settings-in-saleforce-error.md
+          - text: First Salesforce CRM user can't access Copilot for Sales
+            url: setup-installation-and-sign-in/first-user-cant-create-trial-environment.md
+          - text: Incorrect custom domain in Salesforce
+            url: setup-installation-and-sign-in/oauth2-authorization-flow-failed-for-service.md
+          - text: '"Request your CRM administrator permissions to access Salesforce using APIs" error'
+            url: setup-installation-and-sign-in/request-your-crm-administrator-permissions-error.md
+
+ # Card
+  - title: Teams collaboration spaces
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Can't create private channels in Microsoft Teams
+            url: teams-collaboration-spaces/cant-create-private-channel.md
+          - text: Opportunity summary not displayed in deal rooms
+            url: teams-collaboration-spaces/opportunity-summary-not-displayed.md
+
+# Card
+  - title: Documentation and training
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Copilot for Sales documentation
+            url: /microsoft-sales-copilot/
+          - text: Copilot for Sales training
+            url: /training/modules/boost-sales-performance/
+          - text: Dynamics 365 Community
+            url: https://techcommunity.microsoft.com/t5/microsoft-sales-copilot/ct-p/MicrosoftViva
