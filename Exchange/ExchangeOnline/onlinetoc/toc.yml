@@ -521,6 +521,8 @@
           href: ../outlook-on-the-web-issues/cannot-save-template-in-owa.md
         - name: Incorrect time zone in read receipt
           href: ../outlook-on-the-web-issues/read-receipt-incorrect-timezone.md
+        - name: Meeting attendee has an incorrect time zone
+          href: ../outlook-on-the-web-issues/meeting-attendee-has-an-incorrect-time-zone.md
         - name: Missing search results items
           href: ../outlook-on-the-web-issues/items-missing-search-results.md
         - name: OWA unexpectedly opens in the light version
