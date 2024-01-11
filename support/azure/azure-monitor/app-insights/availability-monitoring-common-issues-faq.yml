@@ -4,7 +4,7 @@ metadata:
   description: Review a list of frequently asked questions (FAQ) about common issues that occur when you use Application Insights availability monitoring.
   ms.topic: faq
   ms.date: 01/11/2024
-  ms.reviewer: v-leedennis, toddfous
+  ms.reviewer: v-leedennis, toddfous, v-weizhu
   ms.service: azure-monitor
   ms.subservice: application-insights
 
