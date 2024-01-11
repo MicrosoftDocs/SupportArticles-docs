@@ -75,13 +75,17 @@ rs.close
 cn.close
 ```
 
-Now, run the following *getAuthScheme.vbs* script from the command prompt:
+Now, run the following *getAuthScheme.vbs* PowerShell script from the command prompt:
 
-```vbs
+```powershell
 C:\Temp>cscript getAuthScheme.vbs SQLProd01
+```
+
+You can observe the following results:
+
+```output
 Microsoft (R) Windows Script Host Version 5.812
 Copyright (C) Microsoft Corporation. All rights reserved.
-
 Auth scheme: NTLM
 ```
 
