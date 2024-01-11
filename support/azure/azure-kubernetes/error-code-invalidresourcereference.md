@@ -40,7 +40,7 @@ Here are the possible causes of this issue:
 
 If a mismatch exists between resources in different regions, review the resources to make sure that they're in the same region. In this example, either modify the region where the AKS cluster is being built, or create a new virtual network in the same region.
 
-If the referenced resource has been manually modified or deleted, in this case, it might be difficult to resolve this issue because it's unsupported to manually modify the underlying IaaS resources in the *MC_* resource group. A possible solution might be to recreate the deleted resource, reassociate it with the VMSS, and then trigger an update on the AKS cluster. However, as this is an unsupported scenario, the success of this solution can't be guaranteed.
+If the referenced resource has been manually modified or deleted, it might be difficult to resolve this issue because it's unsupported to manually modify the underlying IaaS resources in the *MC_* resource group. A possible solution might be to recreate the deleted resource, reassociate it with the VMSS, and then trigger an update on the AKS cluster. However, as this is an unsupported scenario, the success of this solution can't be guaranteed.
 
 ## Symptom 2
 
