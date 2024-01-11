@@ -53,7 +53,6 @@ The following sections discuss the cause and solution for some common failure sc
 If the Kubernetes application didn't install on the selected Azure Kubernetes Service (AKS) cluster, you receive an error message that resembles the following text:
 
 > Request failed to https\://management.azure.com/subscriptions/\<subscription-guid>/resourceGroups/resourceGroup/providers/Microsoft.ContainerService/managedclusters/aks-cluster/extensionaddons/default?api-version=2021-03-01. Error code: Forbidden. Reason: Forbidden.  
->
 > ```json
 > {  
 >   "error": {  
@@ -134,6 +133,10 @@ To accept the legal terms through PowerShell, run the cmdlets that are described
 #### [Portal](#tab/azure-portal)
 
 You can choose to deploy through the [Azure portal](https://portal.azure.com). The Azure portal provides a UI experience for reading and accepting the legal terms. 
+## Next Steps
+
+For Marketplace Applications and Extensions help please refer [here](/troubleshoot/azure/azure-kubernetes/cluster-extension-deployment-errors).
+
 
 ---
 
@@ -142,8 +145,14 @@ You can choose to deploy through the [Azure portal](https://portal.azure.com). T
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
 
 [azure-portal]: https://portal.azure.com
+
 [deployment-operations]: /azure/azure-resource-manager/templates/deployment-history#deployment-operations-and-error-message
+
 [register-resource-providers]: /azure/aks/deploy-marketplace#register-resource-providers
+
 [aks-cluster-health]: /azure/architecture/operator-guides/aks/aks-triage-cluster-health
+
 [azure-monitor-activity-log]: /azure/azure-monitor/essentials/activity-log
+
 [purchase-validation-checks]: /marketplace/azure-purchasing-invoicing#purchase-validation-checks
+
