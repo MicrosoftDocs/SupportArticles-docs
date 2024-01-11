@@ -1,10 +1,11 @@
 ---
 title: Troubleshoot dynamic groups
 description: Diagnose and resolve issues with dynamic groups.
-ms.date: 12/10/2020
+ms.date: 01/11/2024
 ms.service: active-directory
 ms.subservice: domain-services
 ms.custom: has-azure-ad-ps-ref
+ms.reviewer: mimart, v-weizhu
 ---
 # Troubleshoot dynamic groups
 
@@ -225,7 +226,7 @@ Membership evaluation is done periodically in a background process. How long the
 
 ### Force the group to be processed now<a id="18"></a>
 
-Reset processing for a dynamic group. In the Azure portal, manually trigger the re-processing by updating the membership rule to add a whitespace at the end.
+Reset processing for a dynamic group. In the Azure portal, manually trigger the re-processing by updating the membership rule to add a whitespace in the middle of the rule.
 
 ### Fix a rule processing error<a id="19"></a>
 
