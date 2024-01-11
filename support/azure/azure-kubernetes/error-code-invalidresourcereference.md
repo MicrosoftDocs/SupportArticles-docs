@@ -55,7 +55,7 @@ When you try to update an AKS cluster, you receive the following error message:
 
 ### Cause 2 
 
-This issue might occur if the default outbound rule "aksOutboundRule" on the load balancer is manually modified. This unexpected modification typically occurs when the outbound IP is updated without updating the cluster using the `load-balancer-outbound-ips` parameter. 
+This issue might occur if the default outbound rule "aksOutboundRule" on the load balancer is manually modified. This unexpected modification typically occurs when the outbound IP is updated if you update the cluster without the `load-balancer-outbound-ips` parameter.
 
 ### Solution 2
 
