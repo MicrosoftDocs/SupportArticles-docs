@@ -1,6 +1,20 @@
 - name: Microsoft Copilot for Sales
   href: welcome-sales-copilot.yml
   items:
+    - name: CRM permissions and configurations
+      items:
+        - name: Can't update records due to missing record access in Salesforce CRM
+          href: crm-permissions-and-configurations/missing-record-update-edit-access.md
+        - name: Can't update records due to missing object access in Salesforce CRM
+          href: crm-permissions-and-configurations/missing-object-update-edit-access.md
+        - name: Can't save email to CRM due to invalid mailbox settings
+          href: crm-permissions-and-configurations/update-settings-to-save-emails-error.md
+        - name: '"Fix mailbox errors in Dynamics 365" error'
+          href: crm-permissions-and-configurations/fix-mailbox-errors-in-dynamics-365.md
+        - name: Missing privileges error when signing in
+          href: crm-permissions-and-configurations/missing-privileges-sign-in.md
+        - name: Salesforce CRM users can't see data in Copilot for Sales
+          href: crm-permissions-and-configurations/no-column-error.md
     - name: Outlook side panel
       items:
         - name: Sign-in issue when opening the Copilot for Sales pane in Outlook
@@ -43,17 +57,3 @@
           href: teams-collaboration-spaces/cant-create-private-channel.md
         - name: Opportunity summary not displayed in deal rooms
           href: teams-collaboration-spaces/opportunity-summary-not-displayed.md
-    - name: CRM permissions and configurations
-      items:
-        - name: Can't update records due to missing record access in Salesforce CRM
-          href: crm-permissions-and-configurations/missing-record-update-edit-access.md
-        - name: Can't update records due to missing object access in Salesforce CRM
-          href: crm-permissions-and-configurations/missing-object-update-edit-access.md
-        - name: Can't save email to CRM due to invalid mailbox settings
-          href: crm-permissions-and-configurations/update-settings-to-save-emails-error.md
-        - name: '"Fix mailbox errors in Dynamics 365" error'
-          href: crm-permissions-and-configurations/fix-mailbox-errors-in-dynamics-365.md
-        - name: Missing privileges error when signing in
-          href: crm-permissions-and-configurations/missing-privileges-sign-in.md
-        - name: Salesforce CRM users can't see data in Copilot for Sales
-          href: crm-permissions-and-configurations/no-column-error.md

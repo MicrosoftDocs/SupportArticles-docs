@@ -1,7 +1,7 @@
 ---
 title: Opportunity summary not displayed in deal rooms
 description: Resolves an issue where the opportunity summary isn't displayed in deal rooms.
-ms.date: 01/06/2024
+ms.date: 01/10/2024
 ms.topic: troubleshooting-problem-resolution
 ms.service: microsoft-sales-copilot
 author: sbmjais
