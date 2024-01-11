@@ -1,6 +1,6 @@
 ---
-title: Can't reach this page error message
-description: "On SQL Server Management Studio 19, you get an Internet Explorer message 'Can't reach this page' when trying to sign in using Microsoft Entra authentication."
+title: Can't reach this page and unsupported browser error messages in SMSS 19.
+description: Discusses how to resolve problems that occur in SSMS 19 when you try to sign in by using Microsoft Entra authentication in Internet Explorer.
 ms.reviewer: maghan, randolphwest
 ms.date: 01/02/2024
 ms.custom:
@@ -9,22 +9,18 @@ ms.custom:
 
 # Browser authentication issues in SQL Server Management Studio 19.1 and later versions
 
-This article helps you resolve the problem of difficulties logging in with Microsoft Entra authentication in SQL Server Management Studio (SSMS) 19.1 and later versions, specifically if you receive the "Can't reach this page" error in Internet Explorer. This problem often arises in tightly secured environments with restricted Internet access.
+This article helps you resolve problems that occur when you try to log in to SQL Server Management Studio (SSMS) 19.1 and later versions by using Microsoft Entra authentication in Internet Explorer. The problems often occur in tightly secured environments that have restricted internet access.
 
 > [!NOTE]
 > Microsoft Entra ID is the [new name for Azure Active Directory (Azure AD)](/entra/fundamentals/new-name).
 
 ## Symptoms
 
-Depending on the version of SSMS you installed, you experience two possible symptoms.
+Depending on the version of SSMS that you have installed, you experience either of the following possible symptoms.
 
 ### Can't reach this page (SSMS 19.1 and later versions)
 
-When you try to sign in to Azure using Microsoft Entra authentication in SSMS 19.1 and later versions, you receive the following error message, "Can't reach this page":
-
-:::image type="content" source="media/cant-reach-this-page/internet-explorer-error.png" alt-text="Screenshot showing the 'Can't reach this page' error message.":::
-
-The text from the screenshot shows an error similar to the following example:
+When you try to sign in to Azure using Microsoft Entra authentication in SSMS 19.1 and later versions, you receive the following error message:
 
 > **Can't reach this page**
 >
@@ -39,11 +35,7 @@ The text from the screenshot shows an error similar to the following example:
 
 ### Unsupported browser (SSMS 19.0.2 and earlier versions)
 
-When you try to sign in to Azure using Microsoft Entra authentication in SSMS 19.0.2 and earlier versions, you receive the following error message, "Unsupported browser":
-
-:::image type="content" source="media/cant-reach-this-page/unsupported-browser-message.png" alt-text="Screenshot showing the unsupported browser error message.":::
-
-The text from the screenshot shows an error similar to the following example:
+When you try to sign in to Azure by using Microsoft Entra authentication in SSMS 19.0.2 and earlier versions, you receive the following "Unsupported browser" message:
 
 > **Keep your account secure**
 >
@@ -55,36 +47,38 @@ The text from the screenshot shows an error similar to the following example:
 >
 > You could also try to access `https://aka.ms/mysecurityinfo` from another device.
 
+:::image type="content" source="media/cant-reach-this-page/unsupported-browser-message.png" alt-text="Screenshot showing the unsupported browser error message.":::
+
 ## Cause
 
-The default value for the **Use system default web browser** setting in SSMS 19.1 and later versions is set to `True`.
+The default value for the **Use system default web browser** setting in SSMS 19.1 and later versions is `True`.
 
-This change was implemented due to customer feedback about the retirement of Internet Explorer in June 2022. Users of SSMS 18 builds, and the first SSMS 19.0 release, reported receiving an "Unsupported browser" message when trying to sign in to Microsoft Entra, prompting this adjustment.
+This change was implemented because of customer feedback about the retirement of Internet Explorer in June 2022. Users of SSMS 18.*x* builds and the first SSMS 19.0 release reported that they received an "Unsupported browser" message when they tried to sign in to Microsoft Entra.
 
 ## Resolution
 
-Use one of the following options to resolve the error.
+To resolve the error, use the following methods, as appropriate.
 
-### Set default browser
+### Method 1: Configure browser settings
 
 If your environment has limited or no direct Internet access:
 
 1. Navigate to **Tools > Options > Azure Services**.
 1. Within **Miscellaneous**, change **Use system default web browser** to **False**.
 
-### Configure browser settings
+### Method 2: Set the browser default  
 
-Alternatively, set your preferred browser as the default. In Microsoft Edge, access **Settings**, navigate to the **Default browser** page, and specify Microsoft Edge as the default browser.
+Set your preferred browser as the default. In Microsoft Edge, access **Settings**, navigate to the **Default browser** page, and specify Microsoft Edge as the default browser.
 
-### For users of SSMS 19.0.2 and earlier versions
+### Method 3: For users of SSMS 19.0.2 and earlier versions
 
-If you see the **Unsupported browser** dialog, follow these steps:
+If you see the **Unsupported browser** message window, follow these steps:
 
 1. Navigate to **Tools > Options > Azure Services**.
 1. Within **Miscellaneous**, change **Use system default web browser** to **True**.
 
 ## More information
 
-This setting is per SSMS and user installation, lacking a global option for all SSMS users.
+This setting is per SSMS guidelines and user installation specifics because there is no global option for all SSMS users.
 
-Administrators can use PowerShell to set the default browser on a broader scale, ensuring compatibility with Microsoft Edge or another preferred browser. For more information, see [Set Microsoft Edge as the default browser](/deployedge/edge-default-browser).
+Administrators can use PowerShell to set the default browser on a broader scale to ensure compatibility with Microsoft Edge or another preferred browser. For more information, see [Set Microsoft Edge as the default browser](/deployedge/edge-default-browser).
