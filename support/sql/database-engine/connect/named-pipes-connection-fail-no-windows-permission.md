@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting the named pipes error 
-description: This article provides symptoms and resolution for troubleshooting the named pipes connections fail error.
-ms.date: 12/21/2023
+description: This article provides symptoms and resolution for troubleshooting the named pipes connections fail consistent authentication error.
+ms.date: 01/12/2024
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
@@ -10,13 +10,11 @@ ms.custom: sap:Connection issues
 
 # Named Pipes connections fail error
 
-This article helps you to resolve problems related to the Named Pipes connections fail error.
+This article helps you to resolve consistent authentication problem related to the Named Pipes connections fail error.
 
 ## Symptoms
 
-The Named Pipes connections fail because the user doesn't have permission to log into Windows.
-
-The SQLOLEDB provider shows the [SQL Server does not exist or access denied](../startup-shutdown/event-id-7000-access-denied.md) error.
+The SQLOLEDB provider shows the ["SQL Server does not exist or access denied"](../startup-shutdown/event-id-7000-access-denied.md) error.
 
 Some other providers display both messages in a random order, whether you use integrated security or a SQL login:
 
@@ -25,7 +23,10 @@ Some other providers display both messages in a random order, whether you use in
 
 Some other providers might also show "Login timeout expired" as part of the message.
 
+## Cause
+
+The Named Pipes connections fail because the user doesn't have permission to log into Windows.
+
 ## Resolution
 
-Add the user to the Users group on the SQL Server machine. If SQL is mirrored or clustered, do the same on all the machines.
-
+Add the user to the Users group on the SQL Server computer. If SQL Server is mirrored or clustered, do the same on all the machines.
