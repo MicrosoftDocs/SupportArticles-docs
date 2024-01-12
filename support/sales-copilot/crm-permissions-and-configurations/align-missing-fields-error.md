@@ -47,7 +47,7 @@ A field in a record exists in Copilot for Sales but not in CRM. The field is rem
 
 ## Resolution
 
-Check with the record owner to see if the field is removed by mistake. If the field is removed by mistake, ask the record owner to add the field back to the record in CRM. If the field is removed intentionally, [remove the field from the record in Copilot for Sales](customize-forms-and-fields.md#remove-fields).
+Check with the record owner to see if the field is removed by mistake. If the field is removed by mistake, ask the record owner to add the field back to the record in CRM. If the field is removed intentionally, [remove the field from the record in Copilot for Sales](/microsoft-sales-copilot/customize-forms-and-fields#remove-fields).
 
 ## More information
 
