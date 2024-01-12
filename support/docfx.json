@@ -74,6 +74,7 @@
         "power-platform/**.*": "MSDocsHeader-PowerPlatform",
         "power-platform/power-apps/**.*": "MSDocsHeader-MSPowerApps",
         "power-platform/power-automate/**.*": "MSDocsHeader-MSPowerAutomate",
+        "sales-copilot/**.*": "MSDocsHeader-MicrosoftSalesCopilot",
         "sql/**.*": "MSDocsHeader-DocsSQL",
         "system-center/**.*": "MSDocsHeader-SystemCenter",
         "windows/**.*": "MSDocsHeader-Windows",
