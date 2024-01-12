@@ -1,14 +1,14 @@
 ---
 title: Certificate validation failure
-description: Troubleshoots certificate validation failure.
-ms.date: 12/05/2023
+description: Troubleshoots certificate validation failures and provides mitigations.
+ms.date: 01/12/2024
 ms.reviewer: prmadhes, jopilov, v-sidong
 ms.custom: sap:Connection issues
 ---
 # Certificate validation failure
 
 > [!NOTE]
-> This article is intended for someone familiar with taking and reading network traces.
+> This article is intended for people who are familiar with taking and reading network traces.
 
 ## Symptoms
 
@@ -101,7 +101,7 @@ For data encryption, the client tries to validate the certificate after receivin
       HandShakeType: Server Hello Done(0x0E)
       Length: 0 (0x0)
 
-The certificate is a SSL_Self_Signed_Fallback certificate, which means that it cannot be validated.
+The certificate is an SSL_Self_Signed_Fallback certificate, which means that it cannot be validated.
 The client terminates the connection.
 
 686    8:34:51 AM 3/9/2022  10.10.10.10  10.10.10.20  TCP:Flags=...A...F, SrcPort=56277, DstPort=1433, PayloadLen=0,
@@ -111,36 +111,36 @@ The client terminates the connection.
 ```
 
 > [!NOTE]
-> This example shows SQL Server using a self-generated certificate, but any certificate could be in the Server Hello packet if it's not trusted on the client for some reason.
+> This example shows SQL Server using a self-generated certificate, but any certificate could be in the Server Hello packet if it's not trusted by the client for some reason.
 
 ## Explanation
 
 Check the network trace to understand the communication flow between the client and server.
 
-- **Frame 590 - 599**: TCP handshake and PreLogin packet indicating data encryption is required.
-- **Frame 605 - 617**: TLS handshake with Server Hello sending the server certificate.
-- **Frame 686 - 719**: Termination of the connection due to certificate validation failure.
+- **Frames 590 - 599**: TCP handshake and PreLogin packet indicating data encryption is required.
+- **Frames 605 - 617**: TLS handshake with Server Hello sending the server certificate.
+- **Frames 686 - 719**: Termination of the connection due to certificate validation failure.
 
 The client requests data encryption, which triggers the validation of the server certificate. However, the server responds by sending a self-signed certificate (`SSL_Self_Signed_Fallback`), which causes the validation to fail.
 
 When the client requests data encryption (`Encrypt=yes` or `Use Encryption for Data=True`) or the server requires data encryption (`Force Encryption=Yes` for newer drivers only), the client driver tries to validate the server certificate.
 
 > [!NOTE]
-> If encryption isn't requested, the Login packet is still encrypted but the certificate isn't validated.
+> If encryption isn't requested, the PreLogin packet is still encrypted, but the certificate isn't validated.
 
-In order to validate the server certificate, the client's computer certificate store must contain a copy of the server certificate, a trusted root certificate, or a trusted intermediate certificate.
+To validate the server certificate, the client's computer certificate store must contain a copy of the server certificate, a trusted root certificate, or a trusted intermediate certificate.
 
-When you buy a certificate from a 3rd-party certificate authority (CA), Windows usually comes preinstalled with the root certificate and you don't have to do anything.
+When you buy a certificate from a third-party certificate authority (CA), Windows usually comes preinstalled with the root certificate and you don't need to do anything.
 
-If your company has a CA, you need to push out the root or intermediate certificates via a Group Policy or add them manually.
+If your company has a CA, you need to push out the root or intermediate certificates via Group Policy or add them manually.
 
-If you have a self-signed certificate, you generally need to add it manually if the number of clients needing it are small. However, if the number of clients is large, you can use a Group Policy to distribute the certificate. Export it from the SQL Server without the Private Key for security.
+If you have a self-signed certificate and the number of clients needing it is small, you generally need to add it manually. However, if the number of clients is large, you can use Group Policy to distribute the certificate. Export it from SQL Server without the Private Key for security.
 
-If SQL Server isn't using a certificate, it generates one for itself.
+If SQL Server doesn't use a certificate, it generates one for itself.
 
 ## Mitigation
 
-Short-term mitigation: set `TrustServerCertificate=Yes` in the applications' connection string.
+Short-term mitigation: set `TrustServerCertificate=Yes` in the application's connection string.
 
 Long-term mitigation: Purchase or generate a certificate for the server.
 
@@ -150,3 +150,4 @@ Long-term mitigation: Purchase or generate a certificate for the server.
 - [Configure SQL Server Database Engine for encryption](/sql/database-engine/configure-windows/configure-sql-server-encryption)
 - [Certificate requirements for SQL Server](/sql/database-engine/configure-windows/certificate-requirements)
 - [Connect to an availability group listener](/sql/database-engine/availability-groups/windows/listeners-client-connectivity-application-failover)
+  
