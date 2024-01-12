@@ -1,11 +1,10 @@
 ---
 title: Troubleshoot Dataverse plug-ins
 description: Contains information about errors that can occur during plug-in execution, or Dataverse errors that are related to plug-ins, and how to avoid or fix them.
-ms.date: 08/18/2023
-author: JimDaly
-ms.author: jdaly
-ms.reviewer: jdaly
-manager: kvivek
+ms.date: 01/11/2024
+author: divkamath
+ms.author: dikamath
+ms.reviewer: pehecke
 search.audienceType: 
   - developer
 search.app: 
@@ -15,6 +14,7 @@ contributors:
   - JimDaly
   - phecke
 ---
+
 # Troubleshoot Dataverse plug-ins
 
 This article contains information about errors that can occur during plug-in execution, or Dataverse errors that are related to plug-ins, and how to avoid or fix them.
@@ -252,7 +252,24 @@ Exception rethrown at [0]:
 
 ### Using threads to queue work with no try/catch in thread delegate
 
-You shouldn't use parallel execution patterns in plug-ins. This anti-pattern is called out in the best practice article: [Don't use parallel execution within plug-ins and workflow activities](/power-apps/developer/data-platform/best-practices/business-logic/do-not-use-parallel-execution-in-plug-ins). Using these patterns can cause issues managing the transaction in a synchronous plug-in. However, another reason not to use these patterns is that any work done outside of a `try`/`catch` block in a thread delegate can crash the worker process.
+You shouldn't use parallel execution patterns in plug-ins. This anti-pattern is called out in the best practice article: [Don't use parallel execution within plug-ins and workflow activities](/power-apps/developer/data-platform/best-practices/business-logic/do-not-use-parallel-execution-in-plug-ins). Using these patterns can cause issues managing the transaction in a synchronous plug-in. However, another reason not to use these patterns is that any work done outside of a `try`/`catch` block in a thread delegate can crash the worker process. This results in an error such as:
+
+`The plug-in execution failed because the Sandbox Worker process crashed. This is typically due to an error in the plug-in code.`
+
+> [!IMPORTANT]
+> When the worker process crashes, your plug-in's execution, and any other plug-ins currently executing in that process, will terminate. This includes plug-ins that you have not written or own.
+
+#### Application Insights to the rescue
+
+In the past there was no way to obtain the stack trace or other execution information for the unhandled plug-in exception from the crashed worker process. Dataverse now supports logging of the execution failure to Application Insights. To enable this capability, simply set up an Application Insights environment. Afterwards, plug-in crash logging will happen automatically.
+
+More information: [Export data to Application Insights](/power-platform/admin/set-up-export-application-insights)
+
+Once an Application Insights environment has been set up, a worker process crash results in the following data being made available for troubleshooting the problem.
+
+:::image type="content" source="media/dataverse-appinsights-crash-report.png" alt-text="Example App Insights plug-in crash erport":::
+
+Expanding the crash details reveals the stack trace.
 
 ### Worker process reaches the memory limit
 
