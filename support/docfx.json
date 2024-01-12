@@ -203,7 +203,6 @@
         "developer/visualstudio/visual-basic/ide/*.md": "visual-basic-6",
         "windows/win32/**/*.md": "windows-dev-apps",
         "windows-hardware/drivers/**/*.md": "windows-hardware",
-        "mem/configmgr/**/*.md": "configuration-manager",
         "system-center/**/*.md": "system-center",
         "microsoft-identity-manager/*.md": "microsoft-identity-manager",
         "developer/browsers/**/*.md": "internet-explorer",
@@ -326,7 +325,8 @@
         "sql/**/*.md": "sql",
         "sql/analysis-services/**/*.md": "analysis-services",
         "sql/azure-sql/**/*.md": "virtual-machines-sql",
-        "sql/reporting-services/**/*.md": "reporting-services"
+        "sql/reporting-services/**/*.md": "reporting-services",
+        "mem/configmgr/**/*.md": "configuration-manager"
       },
       "ms.subservice": {
         "dynamics-365/field-service/administration/**.*": "d365-fs-admin-settings",
