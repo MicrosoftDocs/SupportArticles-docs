@@ -257,7 +257,7 @@ You shouldn't use parallel execution patterns in plug-ins. This anti-pattern is 
 `The plug-in execution failed because the Sandbox Worker process crashed. This is typically due to an error in the plug-in code.`
 
 > [!IMPORTANT]
-> When the worker process crashes, your plug-in's execution, and any other plug-ins currently executing in that process, will terminate. This includes plug-ins that you have not written or own.
+> When the worker process crashes, your plug-in's execution, and any other plug-ins currently executing in that process, will terminate. This includes plug-ins that you do not own or maintain.
 
 #### Application Insights to the rescue
 
