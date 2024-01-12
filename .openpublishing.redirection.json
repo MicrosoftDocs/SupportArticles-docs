@@ -6714,10 +6714,9 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "support/sales-copilot/setup-installation-and-sign-in/missing-privileges-sign-in.md.md",
-      "redirect_url": "/troubleshoot/sales-copilot/crm-permissions-and-configurations/missing-privileges-sign-in",
+      "source_path": "support/sales-copilot/setup-installation-and-sign-in/no-access-to-dynamics-365-error.md",
+      "redirect_url": "/troubleshoot/sales-copilot/crm-permissions-and-configurations/no-access-to-dynamics-365-error",
       "redirect_document_id": false
     }
 ]
 }
-
