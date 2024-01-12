@@ -3,6 +3,8 @@
   items:
     - name: CRM permissions and configurations
       items:
+        - name: '"Align missing fields" error'
+          href: crm-permissions-and-configurations/align-missing-fields-error.md
         - name: Can't update records due to missing record access in Salesforce CRM
           href: crm-permissions-and-configurations/missing-record-update-edit-access.md
         - name: Can't update records due to missing object access in Salesforce CRM
