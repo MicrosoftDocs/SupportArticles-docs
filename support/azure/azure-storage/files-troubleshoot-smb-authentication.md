@@ -18,7 +18,7 @@ This article lists common problems when using SMB Azure file shares with identit
 | Standard file shares (GPv2), GRS/GZRS | :::image type="icon" source="media/files-troubleshoot-smb-authentication/yes-icon.png" border="false":::  | :::image type="icon" source="media/files-troubleshoot-smb-authentication/no-icon.png" border="false"::: |
 | Premium file shares (FileStorage), LRS/ZRS | :::image type="icon" source="media/files-troubleshoot-smb-authentication/yes-icon.png" border="false":::  | :::image type="icon" source="media/files-troubleshoot-smb-authentication/no-icon.png" border="false"::: |
 
-## Errors when running AzFilesHybrid module : Privilege issue
+## Errors when running AzFilesHybrid module: Privilege issue
 When you try run the AzFilesHybird module, you might receive the following error:
 
 -  A required privilege is not held by the client
