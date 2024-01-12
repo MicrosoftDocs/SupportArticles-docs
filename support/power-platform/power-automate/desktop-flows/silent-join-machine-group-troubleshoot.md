@@ -10,7 +10,7 @@ ms.subservice: power-automate-desktop-flows
 
 
 ## Prerequires
-Ensure you have the latest Power Automate version installed and have followed the guidelines outlined in the following documentation [Silent registration for machines](https://learn.microsoft.com/power-automate/desktop-flows/machines-silent-registration#silently-join-a-machine-group).
+Ensure you have the latest Power Automate version installed and have followed the guidelines outlined in the following documentation [Silent registration for machines](/machines-silent-registration#silently-join-a-machine-group).
 
 
 ## Symptoms
@@ -27,19 +27,19 @@ Follow these steps to resolve the issue:
 
    Ensure that the machine group exists in the same environment as your machine. During machine registration, you can specify the environment by using the -environmentId optional command argument.
 
-   Refer to the [Silent registration for machines](https://learn.microsoft.com/power-automate/desktop-flows/machines-silent-registration#silently-join-a-machine-group) documentation for guidance.
+   Refer to the [Silent registration for machines](/machines-silent-registration#silently-join-a-machine-group) documentation for guidance.
 
 2. **Check Machine Group Sharing**
    
    Confirm that the machine group is shared with the user who owns the machine.
    
-   Refer to the [Manage machine groups - Share a machine group](https://learn.microsoft.com/power-automate/desktop-flows/manage-machine-groups#share-a-machine-group) documentation for instructions on managing group sharing.
+   Refer to the [Manage machine groups - Share a machine group](/manage-machine-groups#share-a-machine-group) documentation for instructions on managing group sharing.
 
 3. **Check Permissions**
 
    Ensure that the user attempting to join the machine group has the necessary permissions.
   
-   You can update user permissions through the [Manage machine groups - Update permissions](https://learn.microsoft.com/power-automate/desktop-flows/manage-machine-groups#update-permissions-based-on-security-role) documentation.
+   You can update user permissions through the [Manage machine groups - Update permissions](/manage-machine-groups#update-permissions-based-on-security-role) documentation.
 
 > [!NOTE]
 > Make sure the user listed as the "Owner" of the machine in the portal and the user performing the join operation have appropriate permissions to the machine group
