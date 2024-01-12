@@ -29,7 +29,7 @@ _Original KB number:_ &nbsp; 4555406
 |LocalPlaybackOrRecordingOngoing|429|All|Check that there's no recording nor test playback ongoing on the machine for the same user session.|
 |UnattendedUnsupportedWithOldConnection|403|Unattended|You need to create a new connection on the portal.|
 |RDPIsNotEnabled|400|Unattended|You need to enable Remote Desktop on the machine.|
-|UIFlowAlreadyRunning|429|Attended</br>Unattended|A desktop flow is already running on the machine. You need to wait for its completion. For more information about this error code, see [UIFlowAlreadyRunning](/troubleshoot/power-platform/power-automate/desktop-flows/troubleshoot-desktop-flow-run-queue-errors#uiflowalreadyrunning).|
+|UIFlowAlreadyRunning|429|Attended</br>Unattended|A desktop flow is already running on the machine. You need to wait for its completion. For more information about this error code, see [UIFlowAlreadyRunning](troubleshoot-desktop-flow-run-queue-errors.md#uiflowalreadyrunning).|
 |AadLogonFailure|400|Unattended|You need to disable Network Level Authentication (NLA) on the machine if you want to use Microsoft Entra credentials.|
 |Win10AlreadyHasActiveSession|400|Unattended|Windows 10 only. You need to sign out from the active session on the machine.|
 |UIFlowAgentNotAvailable|400|Attended</br>Unattended|You need to confirm that the service uiflowservice is up and running on your machine. If you have the following error when trying to start uiflowservice, see [Desktop flows failure](https://support.microsoft.com/help/4564550/):</br>**Windows could not start the UIFlowService service on Local Computer. Error 1069: The service did not start due to a logon failure**|

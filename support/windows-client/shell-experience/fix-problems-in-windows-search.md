@@ -1,7 +1,7 @@
 ---
 title: Fix problems in Windows Search
 description: Provides troubleshooting options for problems that affect the search results for the Windows Search feature in Windows 11 and Windows 10.
-ms.date: 05/10/2023
+ms.date: 01/12/2024
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -142,6 +142,27 @@ If Windows 11, Windows 10 May 2019 Update, or a later update is installed, use W
 
 > [!IMPORTANT]
 > If your organization has disabled the ability to run scripts, contact your administrator for help.
+
+## Solution 5: Regenerate the Microsoft.Windows.Search package AppData folder
+
+[!INCLUDE [Registry warning](../../includes/registry-important-alert.md)]
+
+1. Make sure that Windows Search works for a newly created Windows account.
+2. Delete the *%USERPROFILE%\\AppData\\Local\\Packages\\Microsoft.Windows.Search_cw5n1h2txyewy* folder.
+
+     > [!NOTE]
+     >
+     > - Use the Windows Recovery Environment, or sign out and sign in to another user account.
+     > - For an earlier version of Windows, *Microsoft.Windows.Search_cw5n1h2txyewy* should be replaced with *Microsoft.Windows.Cortana_cw5n1h2txyewy*.
+
+3. Delete the `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Search` registry key from the affected account.
+4. Run the following cmdlet from an elevated PowerShell command prompt:
+
+    ```PowerShell
+    Add-AppxPackage -Path "C:\Windows\SystemApps\Microsoft.Windows.Search_cw5n1h2txyewy\Appxmanifest.xml" -DisableDevelopmentMode -Register
+    ```
+
+5. Restart the system and search for something for the system to initialize the indexing. The registry key and the *AppData* folder should be regenerated.
 
 ## Help us improve Search in Windows
 
