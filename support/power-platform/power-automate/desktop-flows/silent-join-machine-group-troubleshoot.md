@@ -29,7 +29,7 @@ Follow these steps to resolve the issue:
 
    Refer to the [Silent registration for machines](/machines-silent-registration#silently-join-a-machine-group) documentation for guidance.
 
-2. **Check Machine Group Sharing**
+2. **Check Machine Group Permissions**
    
    Confirm that the machine group is shared with the user who owns the machine.
    
