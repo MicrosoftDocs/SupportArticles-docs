@@ -117,9 +117,9 @@ The client terminates the connection.
 
 Check the network trace to understand the communication flow between the client and server.
 
-- **Frames 590 - 599**: TCP handshake and PreLogin packet indicating data encryption is required.
-- **Frames 605 - 617**: TLS handshake with Server Hello sending the server certificate.
-- **Frames 686 - 719**: Termination of the connection due to certificate validation failure.
+- **Frame 590 - 599**: TCP handshake and PreLogin packet indicating data encryption is required.
+- **Frame 605 - 617**: TLS handshake with Server Hello sending the server certificate.
+- **Frame 686 - 719**: Termination of the connection due to certificate validation failure.
 
 The client requests data encryption, which triggers the validation of the server certificate. However, the server responds by sending a self-signed certificate (`SSL_Self_Signed_Fallback`), which causes the validation to fail.
 
