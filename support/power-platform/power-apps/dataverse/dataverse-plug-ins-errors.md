@@ -138,9 +138,7 @@ namespace ErrorRepro
 
 ### Using threads to queue work with no try/catch in thread delegate
 
-You shouldn't use parallel execution patterns in plug-ins. This anti-pattern is called out in the best practice article: [Don't use parallel execution within plug-ins and workflow activities](/power-apps/developer/data-platform/best-practices/business-logic/do-not-use-parallel-execution-in-plug-ins). Using these patterns can cause issues managing the transaction in a synchronous plug-in. However, another reason not to use these patterns is that any work done outside of a `try`/`catch` block in a thread delegate can crash the worker process. This results in an error such as:
-
-`The plug-in execution failed because the Sandbox Worker process crashed. This is typically due to an error in the plug-in code.`
+You shouldn't use parallel execution patterns in plug-ins. This anti-pattern is called out in the best practice article: [Don't use parallel execution within plug-ins and workflow activities](/power-apps/developer/data-platform/best-practices/business-logic/do-not-use-parallel-execution-in-plug-ins). Using these patterns can cause issues managing the transaction in a synchronous plug-in. However, another reason not to use these patterns is that any work done outside of a `try`/`catch` block in a thread delegate can crash the worker process.
 
 > [!IMPORTANT]
 > When the worker process crashes, your plug-in's execution, and any other plug-ins currently executing in that process, will terminate. This includes plug-ins that you do not own or maintain.
