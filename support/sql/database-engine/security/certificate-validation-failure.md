@@ -130,7 +130,7 @@ When the client requests data encryption (`Encrypt=yes` or `Use Encryption for D
 
 To validate the server certificate, the client's computer certificate store must contain a copy of the server certificate, a trusted root certificate, or a trusted intermediate certificate.
 
-When you buy a certificate from a third-party certificate authority (CA), Windows usually comes preinstalled with the root certificate and you don't need to do anything.
+When you buy a certificate from a third-party certificate authority (CA), Windows usually comes preinstalled with the root certificate, and you don't need to do anything.
 
 If your company has a CA, you need to push out the root or intermediate certificates via Group Policy or add them manually.
 
