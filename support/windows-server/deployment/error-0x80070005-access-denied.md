@@ -15,7 +15,7 @@ ms.technology: windows-server-deployment
 keywords: Windows, Activation, 0x80070005, access denied
 ---
 
-# Error 0x80070005 "Access denied" when you activate Windows
+# Error 0x80070005 (Access denied) when you activate Windows
 
 This article discusses how to fix Windows activation error 0x80070005 (access denied).
 
