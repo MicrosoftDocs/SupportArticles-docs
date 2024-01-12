@@ -3,9 +3,9 @@ title: Troubleshoot common certificate issues in RHUI
 description: Troubleshoot common Red Hat Update Infrastructure certificate issues in Azure that are caused by expired or missing TLS or SSL certificates.
 author: msaenzbosupport
 ms.author: msaenzbo
-ms.reviewer: divargas-msft
+ms.reviewer: divargas-msft, v-weizhu
 editor: v-jsitser
-ms.date: 12/25/2023
+ms.date: 01/12/2024
 ms.service: virtual-machines
 ms.subservice: redhat
 ---
