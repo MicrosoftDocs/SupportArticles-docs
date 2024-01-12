@@ -40,18 +40,16 @@ landingContent:
         links:
           - text: Sign-in issue when opening the Copilot for Sales pane in Outlook
             url: outlook-side-panel/problem-starting-copilot-for-sales.md
-          - text: Update add-in error in Copilot for Sales add-in for Microsoft Outlook
-            url: outlook-side-panel/update-add-in-error.md
 
  # Card
   - title: Setup, installation, and sign-in
     linkLists:
       - linkListType: how-to-guide
         links:
+          - text: Authentication issues when connecting to Salesforce CRM
+            url: setup-installation-and-sign-in/failure-passed-to-redirect-url-access-denied.md
           - text: Can't connect to Dynamics 365 with two-factor authentication enabled
             url: setup-installation-and-sign-in/connection-issue-with-two-factor-auth.md
-          - text: Can't save an email to CRM when Enhanced Email isn't enabled in Salesforce CRM
-            url: setup-installation-and-sign-in/update-settings-in-saleforce-error.md
           - text: First Salesforce CRM user can't access Copilot for Sales
             url: setup-installation-and-sign-in/first-user-cant-create-trial-environment.md
           - text: Incorrect custom domain in Salesforce

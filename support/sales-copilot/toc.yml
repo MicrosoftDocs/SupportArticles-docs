@@ -9,6 +9,8 @@
           href: crm-permissions-and-configurations/missing-object-update-edit-access.md
         - name: Can't save email to CRM due to invalid mailbox settings
           href: crm-permissions-and-configurations/update-settings-to-save-emails-error.md
+        - name: Can't save email to CRM if enhanced email isn't enabled in Salesforce CRM
+          href: crm-permissions-and-configurations/update-settings-in-saleforce-error.md
         - name: '"Fix mailbox errors in Dynamics 365" error'
           href: crm-permissions-and-configurations/fix-mailbox-errors-in-dynamics-365.md
         - name: Missing privileges error when signing in
@@ -19,14 +21,14 @@
       items:
         - name: Sign-in issue when opening the Copilot for Sales pane in Outlook
           href: outlook-side-panel/problem-starting-copilot-for-sales.md
-        - name: Update add-in error in Copilot for Sales add-in for Microsoft Outlook
-          href: outlook-side-panel/update-add-in-error.md  
     - name: Setup, installation, and sign-in
       items:
         - name: Authentication issues when connecting to Salesforce CRM
           href: setup-installation-and-sign-in/failure-passed-to-redirect-url-access-denied.md
         - name: '"Access needed" error when signing in to Dynamics 365'
           href: setup-installation-and-sign-in/access-needed-error-sign-in.md
+        - name: Update add-in error in Copilot for Sales add-in for Microsoft Outlook
+          href: setup-installation-and-sign-in/update-add-in-error.md  
         - name: Connection lost due to an expired or invalid session or a bad OAuth token
           href: setup-installation-and-sign-in/connection-lost-error.md
         - name: Can't sign in to Salesforce due to disabled connections
@@ -35,8 +37,6 @@
           href: setup-installation-and-sign-in/sign-in-issue-with-blocked-connector.md
         - name: Can't connect to Dynamics 365 with two-factor authentication enabled
           href: setup-installation-and-sign-in/connection-issue-with-two-factor-auth.md
-        - name: Can't save email to CRM if enhanced email isn't enabled in Salesforce CRM
-          href: setup-installation-and-sign-in/update-settings-in-saleforce-error.md
         - name: '"Failure passed to redirect url" error when signing in'
           href: setup-installation-and-sign-in/failure-passed-to-redirect-url-blocked-app.md
         - name: First Salesforce CRM user can't access Copilot for Sales
