@@ -35,7 +35,7 @@ Follow these steps to resolve the issue:
    
    Refer to the [Manage machine groups - Share a machine group](/manage-machine-groups#share-a-machine-group) documentation for instructions on managing group sharing.
 
-3. **Check Permissions**
+3. **Check User Permissions**
 
    Ensure that the user attempting to join the machine group has the necessary permissions.
   
