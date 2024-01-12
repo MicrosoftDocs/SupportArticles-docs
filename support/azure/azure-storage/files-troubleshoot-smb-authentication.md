@@ -27,7 +27,7 @@ When you try to run the AzFilesHybrid module, you might receive the following er
 This is due to insufficient AD privileges needed to execute the AzFilesHybrid module. 
 
 ### Solution
-Please refer to the Active Directory privileges for more information or reach out to your active directory admin to provide the required privileges
+Refer to the Active Directory privileges for more information or reach out to your AD admin to provide the required privileges.
 
 ## Error 5 when mounting an Azure file share
 
