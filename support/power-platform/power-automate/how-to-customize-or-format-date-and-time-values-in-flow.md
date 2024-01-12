@@ -25,7 +25,7 @@ A [standard format string](/dotnet/standard/base-types/standard-date-and-time-fo
 
 For example, the format string `g` corresponds to the General date/time pattern (short time):
 
-- `formatDateTime('2009-06-15T13:45:30', 'g')  // Returns the format6/15/2009 1:45 PM`
+- `formatDateTime('2009-06-15T13:45:30', 'g')  // Returns the format 6/15/2009 1:45 PM`
 
 A [custom format string](/dotnet/standard/base-types/custom-date-and-time-format-strings) is any string with more than one character (for example, `M/dd/yyyy h:mm tt`) that can control the visibility, positioning, precision of the month, day, hour, second and so on of the `DateTime` value.
 

@@ -192,7 +192,7 @@ If you are still encountering RDP issues, you can [open a support request](https
 
 ## Troubleshoot VMs created using the Classic deployment model
 
-[!INCLUDE [classic-vm-deprecation](../../includes/classic-vm-deprecation.md)]
+[!INCLUDE [classic-vm-deprecation](../../includes/azure/classic-vm-deprecation.md)]
 
 After each troubleshooting step, try reconnecting to the VM.
 

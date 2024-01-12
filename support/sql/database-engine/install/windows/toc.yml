@@ -9,6 +9,16 @@ items:
   href: description-update-cache-folder.md
 - name: Different errors when installing SQL Server 2008 R2
   href: error-install-sql-server-2008-r2.md
+- name: Driver installation check
+  items:
+  - name: Driver installation check
+    href: driver-install-checking.md
+  - name: .NET driver installation check
+    href: net-driver-install-check.md
+  - name: ODBC driver installation check
+    href: odbc-driver-install-checking.md
+  - name: OLE DB driver installation check
+    href: oledb-driver-install-check.md
 - name: Error code 1642 though update is applied
   href: error-code-1642-update-applied.md
 - name: Error if you change shared component directory
