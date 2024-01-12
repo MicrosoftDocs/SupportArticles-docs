@@ -14,7 +14,7 @@ Ensure you have the latest Power Automate version installed and have followed th
 
 
 ## Symptoms
-If you encounter the error **NotFound** while attempting to join a machine group using silent mode with the following details:
+You encounter the error **NotFound** while attempting to join a machine group using silent mode with the following details:
 > Error code:0x80040217.Http status code: NotFound. Request ids:REQ_ID:{guid}.
 > Correlation id: {guid}
 
