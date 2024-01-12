@@ -9,7 +9,7 @@ ms.subservice: power-automate-desktop-flows
 # Can't silently join machine group
 
 
-## Prerequires
+## Prerequisites
 Ensure you have the latest Power Automate version installed and have followed the guidelines outlined in the following documentation [Silent registration for machines](/machines-silent-registration#silently-join-a-machine-group).
 
 
