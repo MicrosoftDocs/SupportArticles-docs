@@ -17,6 +17,8 @@
           href: crm-permissions-and-configurations/fix-mailbox-errors-in-dynamics-365.md
         - name: Missing privileges error when signing in
           href: crm-permissions-and-configurations/missing-privileges-sign-in.md
+        - name: '"No access to Dynamics 365" error'
+          href: crm-permissions-and-configurations/no-access-to-dynamics-365-error.md
         - name: Salesforce CRM users can't see data in Copilot for Sales
           href: crm-permissions-and-configurations/no-column-error.md
     - name: Outlook side panel
@@ -47,8 +49,6 @@
           href: setup-installation-and-sign-in/oauth2-authorization-flow-failed-for-service.md
         - name: '"No default BAP location found for this tenant" error'
           href: setup-installation-and-sign-in/no-default-bap-location-found-error.md
-        - name: '"No access to Dynamics 365" error'
-          href: setup-installation-and-sign-in/no-access-to-dynamics-365-error.md
         - name: '"Request administrator permissions to access Salesforce using APIs" error'
           href: setup-installation-and-sign-in/request-your-crm-administrator-permissions-error.md
         - name: '"User does not have required privileges to access the org" error'
