@@ -62,6 +62,10 @@ items:
       tocHref: /troubleshoot/sql/
       topicHref: /troubleshoot/sql/welcome-sql-server
 
+    - name: Microsoft Copilot for Sales
+      tocHref: /troubleshoot/sales-copilot/
+      topicHref: /troubleshoot/sales-copilot/welcome-sales-copilot
+
     - name: Microsoft Identity Manager
       tocHref: /troubleshoot/microsoft-identity-manager/
       topicHref: /troubleshoot/microsoft-identity-manager/welcome-identity-manager

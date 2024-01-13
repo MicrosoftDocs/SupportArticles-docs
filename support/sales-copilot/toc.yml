@@ -31,8 +31,6 @@
           href: setup-installation-and-sign-in/failure-passed-to-redirect-url-access-denied.md
         - name: '"Access needed" error when signing in to Dynamics 365'
           href: setup-installation-and-sign-in/access-needed-error-sign-in.md
-        - name: Update add-in error in Copilot for Sales add-in for Microsoft Outlook
-          href: setup-installation-and-sign-in/update-add-in-error.md  
         - name: Connection lost due to an expired or invalid session or a bad OAuth token
           href: setup-installation-and-sign-in/connection-lost-error.md
         - name: Can't sign in to Salesforce due to disabled connections
@@ -51,6 +49,8 @@
           href: setup-installation-and-sign-in/no-default-bap-location-found-error.md
         - name: '"Request administrator permissions to access Salesforce using APIs" error'
           href: setup-installation-and-sign-in/request-your-crm-administrator-permissions-error.md
+        - name: Update add-in error in Copilot for Sales add-in for Microsoft Outlook
+          href: setup-installation-and-sign-in/update-add-in-error.md  
         - name: '"User does not have required privileges to access the org" error'
           href: setup-installation-and-sign-in/user-does-not-have-required-privileges-error.md
     - name: Teams collaboration spaces
