@@ -4,7 +4,7 @@ description: Resolves Indian Goods and Services Tax (GST) integration issues in 
 author: jialinhuang
 ms.author: jialinhuang
 ms.reviewer: josaw, brstor
-ms.date: 12/28/2023
+ms.date: 01/15/2024
 ---
 
 # Troubleshoot issues with Goods and Services Tax (GST) integration for India
