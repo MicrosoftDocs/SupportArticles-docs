@@ -5,8 +5,8 @@ metadata:
   ms.date: 07/14/2020  
   ms.reviewer: ramakoni
   ms.topic: faq
-  ms.technology: internet-explorer-security-privacy
-  ms.prod: internet-explorer
+  ms.subservice: security-privacy
+  ms.service: internet-explorer
 title: FAQ about Internet Explorer Enhanced Security Configuration (ESC)
 summary: |
   [!INCLUDE [](../../../includes/browsers-important.md)]
