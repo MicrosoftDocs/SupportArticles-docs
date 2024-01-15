@@ -14,7 +14,7 @@ ms.reviewer: mastewa, jopilov, prmadhes, v-sidong
 
 ## Symptoms
 
-You can't use linked servers or websites that delegate credentials to SQL Server in Windows 10, Windows Server 2016, and later versions.
+You can't use linked servers or websites that delegate credentials to SQL Server in Windows 10, Windows Server 2016, and later versions. When testing connection to a linked server, you see an error like [Login failed for user NT AUTHORITY\ANONYMOUS LOGON](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
 
 ## Implications
 
@@ -40,3 +40,5 @@ Applications break if they require:
 - Kerberos unconstrained or full delegation
 - Extracting the Kerberos TGT
 - NTLMv1
+
+For more information about the considerations and known issues when using [Credential Guard](/windows/security/identity-protection/credential-guard/), see [known issues](/windows/security/identity-protection/credential-guard/considerations-known-issues).
