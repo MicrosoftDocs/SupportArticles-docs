@@ -3,7 +3,6 @@ title: Troubleshooting network retrieval of CRLs
 description: This KB article describes the proxy detection mechanism that the Cryptography (Crypto) API uses to download a CRL from a CRL distribution point. It discusses the locations of the registry where proxy information is found.
 ms.date: 06/03/2020
 ms.reviewer: pphadke, macox
-ms.technology: internet-explorer-security-privacy
 ---
 # Description of the Cryptography API proxy detection mechanism when downloading a Certificate Revocation List (CRL) from a CRL distribution point
 
