@@ -3,13 +3,13 @@ title: Troubleshoot issues with Goods and Services Tax (GST) integration for Ind
 description: Resolves Indian Goods and Services Tax (GST) integration issues in Microsoft Dynamics 365 Commerce.
 author: jialinhuang
 ms.author: jialinhuang
-ms.reviewer: josaw
+ms.reviewer: josaw, brstor
 ms.date: 12/28/2023
 ---
 
 # Troubleshoot issues with Goods and Services Tax (GST) integration for India
 
-This article describes common issues about Goods and Services Tax (GST) integration for India in Microsoft Dynamics 365 Commerce, and provides guidance and troubleshooting steps to help system users and partners mitigate the issues.
+This article provides a solution for the common issues about Goods and Services Tax (GST) integration for India in Microsoft Dynamics 365 Commerce.
 
 ## Symptoms
 
