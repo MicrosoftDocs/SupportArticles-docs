@@ -4,7 +4,7 @@ description: Troubleshoot problems connecting to and accessing SMB Azure file sh
 services: storage
 ms.service: azure-file-storage
 ms.custom: devx-track-azurepowershell
-ms.date: 12/20/2023
+ms.date: 01/12/2024
 ms.reviewer: kendownie, jarrettr, v-weizhu, v-six, hanagpal
 ---
 # Troubleshoot Azure Files connectivity and access issues (SMB)
@@ -538,6 +538,8 @@ There are also edge cases in which the client handle becomes disconnected from t
 #### Solution
 
 Don't keep a large number of handles cached. Close handles, and then retry. Use `Get-AzStorageFileHandle` and `Close-AzStorageFileHandle` PowerShell cmdlets to view/close open handles.
+
+If you're using Azure file shares to store profile containers or disk images for a large-scale virtual desktop deployment or other workload that opens handles on files, directories, and/or the root directory, you might reach the upper [scale limits](/azure/storage/files/storage-files-scale-targets) for concurrent open handles. In this case, use an additional Azure file share and distribute the containers or images between the shares.
 
 ## [Linux](#tab/linux)
 
