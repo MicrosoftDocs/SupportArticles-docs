@@ -1,5 +1,5 @@
 ---
-title: Digital certificates issues for fiscal integration in Dynamics 365 Commerce
+title: Troubleshoot issues with digital certificates for fiscal integration
 description: Resolves digital certificates issues for fiscal integration in Microsoft Dynamics 365 Commerce.
 author: jialinhuang
 ms.author: jialinhuang
