@@ -45,6 +45,6 @@ $certBytes = $collection.Export($pkcs12ContentType)
 
 [Maintaining the Azure Key Vault storage](https://support.microsoft.com/topic/maintaining-azure-key-vault-storage-ebd478ba-446e-61cc-4a17-39c1a64cc2d6)
 
-[Set up Azure Key Vault client](https://learn.microsoft.com/dynamics365/finance/localizations/global/setting-up-azure-key-vault-client)
+[Set up Azure Key Vault client](/dynamics365/finance/localizations/global/setting-up-azure-key-vault-client)
 
-[Configure certificate profiles](https://learn.microsoft.com/dynamics365/commerce/localizations/global/certificate-profiles-for-retail-stores)
+[Configure certificate profiles](/dynamics365/commerce/localizations/global/certificate-profiles-for-retail-stores)
