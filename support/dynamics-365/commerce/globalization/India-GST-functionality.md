@@ -29,13 +29,13 @@ To resolve this issue, please confirm that India specific functionality has been
 - (India) Enable Tax engine for Commerce for India
 - (India) Enable customer tax registration information in Retail POS
 
-For more information, see [India GST functionality prerequisites](https://learn.microsoft.com/dynamics365/commerce/localizations/india/apac-ind-cash-registers#prerequisites).
+For more information, see [India GST functionality prerequisites](/dynamics365/commerce/localizations/india/apac-ind-cash-registers#prerequisites).
 
 ## More information
 
-[Goods and Services Tax (GST) integration for cash registers for India](https://learn.microsoft.com/dynamics365/commerce/localizations/india/apac-ind-cash-registers)
+[Goods and Services Tax (GST) integration for cash registers for India](/dynamics365/commerce/localizations/india/apac-ind-cash-registers)
 
-[Goods and Services Tax (GST) integration for e-commerce sites for India](https://learn.microsoft.com/dynamics365/commerce/localizations/india/apac-ind-e-commerce#configure-gst-for-e-commerce)
+[Goods and Services Tax (GST) integration for e-commerce sites for India](/dynamics365/commerce/localizations/india/apac-ind-e-commerce#configure-gst-for-e-commerce)
 
 [India Goods and Services Tax (GST) overview](https://learn.microsoft.com/dynamics365/finance/localizations/india/apac-ind-gst)
 
