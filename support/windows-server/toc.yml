@@ -934,12 +934,18 @@
       href: ./deployment/0xc004f063-when-activating-oem-version.md
     - name: Application Event Log Warning ID 1058
       href: ./deployment/application-event-log-warning-id-1058.md
+    - name: 'Error 0x80070005 "Access denied" when you activate Windows'
+      href: ./deployment/error-0x80070005-access-denied.md
     - name: Error 0x8007000D when you activate a machine
       href: ./deployment/0x8007000d-activate-machine.md
     - name: Error 0xC004E002 during activation
       href: ./deployment/error-0xc004e002-during-activation.md
+    - name: Error 0xC004E015 (SL_E_EUL_CONSUMPTION_FAILED)
+      href: ./deployment/error-0xc004e015-sl-e-eul-consumption-failed-activate-windows.md
     - name: Error 0xC004F015 when you activate Windows 10
       href: ./deployment/error-0xc004f015-activate-windows-10.md
+    - name: Error 0xC004F06C when you activate Windows
+      href: ./deployment/error-0xc004f06c-activate-windows.md
     - name: Error 0xC004F074 when you activate Windows
       href: ./deployment/error-0xc004f074-activate-windows.md
     - name: Error when you validate a copy of Windows
@@ -1010,6 +1016,8 @@
       href: ./deployment/troubleshoot-install-features-roles-guidance.md
     - name: 'Troubleshooting guidance: Windows Server update'
       href: ./deployment/troubleshoot-windows-server-update-guidance.md
+    - name: 'Troubleshooting guidance: Windows Update for Business reports'
+      href: ./deployment/wubr-troubleshooting-guidance.md
     - name: '"Failed to be changed to the Absent state. Status: 0x800f0922" error'
       href: ./deployment/failed-changed-absent-state-status-0x800f0922-error.md    
     - name: Can't connect to WSUS Administration Website
@@ -1068,6 +1076,10 @@
       href: ./deployment/why-prompted-restart-computer.md
     - name: Windows Server 2008 Service Pack 2
       href: ./deployment/windows-server-2008-service-pack-2.md
+    - name: 'WUBr: Troubleshoot diagnostic data transmission'
+      href: ./deployment/wubr-troubleshooting-data-transmission.md
+    - name: 'WUBr: Use the configuration script to troubleshoot device configuration'
+      href: ./deployment/wubr-troubleshooting-device-config-using-script.md
     - name: WSUS 3.0 installation package is available
       href: ./deployment/wsus-3-installation-package.md
     - name: WSUS 3.0 SP2 Dynamic Install for Server Manager
@@ -1178,6 +1190,8 @@
       href: ./group-policy/dcgpofix-not-restore-default-domain-controller-policy-security-settings.md
     - name: Description of group policy restricted groups
       href: ./group-policy/description-of-group-policy-restricted-groups.md
+    - name: GPMC or Import-GPO cmdlet fails to restore a GPO from backup
+      href: ./group-policy/gpmc-import-gpo-fails-restore-gpo-backup.md
     - name: How to enable the Group Policy loopback feature
       href: ./group-policy/loopback-processing-of-group-policy.md
     - name: How to set event log security locally or via Group Policy
@@ -2702,6 +2716,12 @@
       href: ./system-management-components/rpc-events-event-11-after-reboot.md
     - name: New WMI arbitrator behavior
       href: ./system-management-components/new-wmi-arbitrator-behavior-in-windows-server.md
+    - name: "Scenario guide: Troubleshoot WMI connectivity and access issues"
+      href: ./system-management-components/scenario-guide-troubleshoot-wmi-connectivity-access-issues.md
+    - name: "Scenario guide: Troubleshoot WMI performance issues"
+      href: ./system-management-components/scenario-guide-troubleshoot-wmi-performance-issues.md
+    - name: "Scenario guide: Troubleshoot WmiPrvse.exe quota exceeded issues"
+      href: ./system-management-components/scenario-guide-troubleshoot-wmiprvse-quota-exceeded-issues.md
 - name: UserProfiles and Logon
   items:
   - name: UserProfiles and Logon
@@ -3208,7 +3228,7 @@
   items:
   - name: End of support for Windows Server 2008 and Windows Server 2008 R2
     href: ./windows-server-eos-faq/end-of-support-windows-server-2008-2008r2.yml
-  - name: Error when installing ESU product key for Windows Server 2012 R2 or Windows Server 2012
+  - name: Error when installing ESU product key for Windows Server 2012 R2 or 2012
     href: ./windows-server-eos-faq/error-installing-esu-product-key-windows-server-2012-or-2012-r2.md
 - name: Windows Troubleshooters
   items:

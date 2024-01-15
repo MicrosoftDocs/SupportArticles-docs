@@ -2,7 +2,6 @@
 title: VM startup is stuck on "Getting Windows ready. Don't turn off your computer" in Azure
 description: Introduce the steps to troubleshoot the issue in which VM startup is stuck on "Getting Windows ready. Don't turn off your computer."
 services: virtual-machines
-documentationcenter: ''
 author: genlin
 manager: dcscontentpm
 tags: azure-resource-manager
@@ -11,8 +10,9 @@ ms.subservice: vm-cannot-start-stop
 ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
+ms.topic: troubleshooting-problem-resolution
 ms.reviewer: jarrettr, v-leedennis
-ms.date: 10/10/2023
+ms.date: 12/18/2023
 ms.author: genli
 ---
 
@@ -40,75 +40,41 @@ If you have a recent backup of the VM, you can try [restoring the VM from the ba
 
 ## Solution 2: Collect an OS memory dump file
 
-If restoring the VM from backup isn't possible or doesn't resolve the problem, you have to collect a memory dump file so that the crash can be analyzed. To collect the dump file, see the following sections.
+If restoring the VM from backup isn't possible or doesn't resolve the problem, you have to collect a memory dump file so that the crash can be analyzed.
 
-### Part 1: Attach the OS disk to a recovery VM
+### Step 1: Collect the dump file directly
 
-1. Take a snapshot of the OS disk of the affected VM as a backup. For more information, see [Snapshot a disk](/azure/virtual-machines/windows/snapshot-copy-managed-disk).
-2. [Attach the OS disk to a recovery VM](./troubleshoot-recovery-disks-portal-windows.md).
-3. Remote desktop to the recovery VM.
-4. If the OS disk is encrypted, you must turn off the encryption before you move to the next step. For more information, see [Decrypt the encrypted OS disk in the VM that cannot boot](./troubleshoot-bitlocker-boot-error.md#decrypt-the-encrypted-os-disk).
+[!INCLUDE [Collect OS Memory Dump File](../../includes/azure/collect-os-memory-dump-file.md)]
 
-### Part 2: Locate dump file and submit a support ticket
+If you can't find the dump file, go to the next steps to enable the dump log and the serial console, and then trigger the memory dump process.
 
-1. On the recovery VM, go to the Windows folder in the attached OS disk. If the drive letter that's assigned to the attached OS disk is F, you need to go to F:\Windows.
-2. Locate the memory.dmp file, and then [submit a support ticket](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade) with the dump file.
+### Step 2: Enable the dump log and the serial console
 
-If you can't find the dump file, go to the next section to enable the dump log and the Serial Console.
+[!INCLUDE [Registry important alert](../../includes/registry-important-alert.md)]
 
-#### Enable dump log and Serial Console
+To enable the dump log and the serial console, run the following script:
 
-To enable the dump log and the Serial Console, run the following script:
+[!INCLUDE [Enable Serial Console and Memory Dump Collection](../../includes/azure/enable-serial-console-memory-dump-collection.md)]
 
-1. Open an administrative Command Prompt session.
-2. Run the following script:
+Make sure that there's enough space on the disk to allocate as much memory as the RAM, which depends on the size that you're selecting for this VM. If there isn't enough space or this is a large size VM (G, GS or E series), you can change the location in which this file is created and refer that to any other data disk that's attached to the VM. To do this, you have to modify registry keys, as shown in the following code:
 
-   > [!NOTE]  
-   > In this script, we assume that the drive letter that is assigned to the attached OS disk is F. Replace it with the appropriate value in your VM.
+```cmd
+reg load HKLM\BROKENSYSTEM F:\windows\system32\config\SYSTEM
 
-    ```powershell
-    reg load HKLM\BROKENSYSTEM F:\windows\system32\config\SYSTEM
+REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\CrashControl" /v DumpFile /t REG_EXPAND_SZ /d "<DRIVE LETTER OF YOUR DATA DISK>:\MEMORY.DMP" /f
+REG ADD "HKLM\BROKENSYSTEM\ControlSet002\Control\CrashControl" /v DumpFile /t REG_EXPAND_SZ /d "<DRIVE LETTER OF YOUR DATA DISK>:\MEMORY.DMP" /f
 
-    #Enable Serial Console
-    bcdedit /store F:\boot\bcd /set {bootmgr} displaybootmenu yes
-    bcdedit /store F:\boot\bcd /set {bootmgr} timeout 5
-    bcdedit /store F:\boot\bcd /set {bootmgr} bootems yes
-    bcdedit /store F:\boot\bcd /ems {default} ON
-    bcdedit /store F:\boot\bcd /emssettings EMSPORT:1 EMSBAUDRATE:115200
-    
-    #Enable OS Dump
+reg unload HKLM\BROKENSYSTEM
+```
 
-    REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\CrashControl" /v CrashDumpEnabled /t REG_DWORD /d 1 /f
-    REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\CrashControl" /v DumpFile /t REG_EXPAND_SZ /d "%SystemRoot%\MEMORY.DMP" /f
-    REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\CrashControl" /v NMICrashDump /t REG_DWORD /d 1 /f
-    
-    REG ADD "HKLM\BROKENSYSTEM\ControlSet002\Control\CrashControl" /v CrashDumpEnabled /t REG_DWORD /d 1 /f
-    REG ADD "HKLM\BROKENSYSTEM\ControlSet002\Control\CrashControl" /v DumpFile /t REG_EXPAND_SZ /d "%SystemRoot%\MEMORY.DMP" /f
-    REG ADD "HKLM\BROKENSYSTEM\ControlSet002\Control\CrashControl" /v NMICrashDump /t REG_DWORD /d 1 /f
-    
-    reg unload HKLM\BROKENSYSTEM
-    ```
+### Step 3: Trigger the memory dump process
 
-    1. Make sure that there's enough space on the disk to allocate as much memory as the RAM, which depends on the size that you're selecting for this VM.
-    2. If there isn't enough space or this is a large size VM (G, GS or E series), you could then change the location where this file is created and refer that to any other data disk that's attached to the VM. To do this, you have to modify registry keys, as shown in the following code:
-
-        ```cmd
-        reg load HKLM\BROKENSYSTEM F:\windows\system32\config\SYSTEM
-
-        REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\CrashControl" /v DumpFile /t REG_EXPAND_SZ /d "<DRIVE LETTER OF YOUR DATA DISK>:\MEMORY.DMP" /f
-        REG ADD "HKLM\BROKENSYSTEM\ControlSet002\Control\CrashControl" /v DumpFile /t REG_EXPAND_SZ /d "<DRIVE LETTER OF YOUR DATA DISK>:\MEMORY.DMP" /f
-
-        reg unload HKLM\BROKENSYSTEM
-        ```
-
-3. [Detach the OS disk and then Re-attach the OS disk to the affected VM](./troubleshoot-recovery-disks-portal-windows.md).
-4. Start the VM and access the Serial Console.
-5. Select **Send Non-Maskable Interrupt(NMI)** to trigger the memory dump.
+1. [Detach the OS disk and then Re-attach the OS disk to the affected VM](./troubleshoot-recovery-disks-portal-windows.md).
+2. Start the VM and access the serial console.
+3. Select **Send Non-Maskable Interrupt(NMI)** to trigger the memory dump.
 
     :::image type="content" source="media/troubleshoot-vm-boot-configure-update/run-nmi.png" alt-text="Screenshot of the Send Non-Maskable Interrupt item.":::
 
-6. Attach the OS disk to a recovery VM again, and collect the dump file.
-
-After you collect the dump file, contact Microsoft support to analyze the root cause.
+4. Follow the instructions in [Step 1: Collect the dump file directly](#step-1-collect-the-dump-file-directly) again.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
