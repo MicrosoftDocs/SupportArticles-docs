@@ -590,7 +590,7 @@ The following steps apply if the OS version is *earlier than the latest version 
 
 Select the tab of an SAP image type to see the corresponding instructions.
 
-#### [RHEL 9._x_ RHEL-SAP-APPS](#tab/rhel9-rhel-sap-apps)
+#### [RHEL 9._x_ - RHEL-SAP-APPS](#tab/rhel9-rhel-sap-apps)
 
 The following steps apply if the OS version is *earlier than the latest version that's available* that's supported by SAP for `RHEL 9.0`, and if the VM was created by using the `RHEL-SAP-APPS` offer image.
 
@@ -612,7 +612,7 @@ The following steps apply if the OS version is *earlier than the latest version 
    sudo dnf repolist all
    ```
 
-#### [RHEL 9._x_ RHEL-SAP-HA (E4S)](#tab/rhel9-rhel-sap-ha-e4s)
+#### [RHEL 9._x_ - RHEL-SAP-HA (E4S)](#tab/rhel9-rhel-sap-ha-e4s)
 
 The following steps apply if the OS version is *earlier than the latest version available* that's supported by SAP for `RHEL 9.0`, and if the VM was created by using the `RHEL-SAP-HA` offer image.
 
