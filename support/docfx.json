@@ -206,7 +206,6 @@
         "mem/configmgr/**/*.md": "configuration-manager",
         "system-center/**/*.md": "system-center",
         "microsoft-identity-manager/*.md": "microsoft-identity-manager",
-        "developer/browsers/**/*.md": "internet-explorer",
         "dynamics/gp/*.md": "dynamics-gp"
       },
       "ms.technology": {
@@ -318,7 +317,8 @@
         "sql/**/*.md": "sql",
         "sql/analysis-services/**/*.md": "analysis-services",
         "sql/azure-sql/**/*.md": "virtual-machines-sql",
-        "sql/reporting-services/**/*.md": "reporting-services"
+        "sql/reporting-services/**/*.md": "reporting-services",
+        "developer/browsers/**/*.md": "internet-explorer"
       },
       "ms.subservice": {
         "dynamics-365/field-service/administration/**.*": "d365-fs-admin-settings",
