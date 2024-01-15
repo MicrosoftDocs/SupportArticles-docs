@@ -77,6 +77,16 @@ landingContent:
             url: financial-statements/inventory-errors-posting.md
 
   # Card
+  - title: Globalization
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot issues with Goods and Services Tax (GST) integration for India
+            url: globalization/India-GST-functionality.md
+          - text: Troubleshoot issues with digital certificates for fiscal integration
+            url: globalization/fiscal-integration-certificate.md
+
+  # Card
   - title: Order management
     linkLists:
       - linkListType: how-to-guide
