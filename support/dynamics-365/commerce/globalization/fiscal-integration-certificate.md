@@ -4,7 +4,7 @@ description: Resolves digital certificates issues for fiscal integration in Micr
 author: jialinhuang
 ms.author: jialinhuang
 ms.reviewer: josaw, brstor
-ms.date: 12/28/2023
+ms.date: 01/15/2024
 ---
 
 # Troubleshoot issues with digital certificates for fiscal integration
