@@ -37,6 +37,6 @@ For more information, see [India GST functionality prerequisites](/dynamics365/c
 
 [Goods and Services Tax (GST) integration for e-commerce sites for India](/dynamics365/commerce/localizations/india/apac-ind-e-commerce#configure-gst-for-e-commerce)
 
-[India Goods and Services Tax (GST) overview](https://learn.microsoft.com/dynamics365/finance/localizations/india/apac-ind-gst)
+[India Goods and Services Tax (GST) overview](/dynamics365/finance/localizations/india/apac-ind-gst)
 
-[Deployment guidelines for cash registers for India](https://learn.microsoft.com/dynamics365/commerce/localizations/india/apac-ind-loc-deployment-guidelines)
+[Deployment guidelines for cash registers for India](/dynamics365/commerce/localizations/india/apac-ind-loc-deployment-guidelines)
