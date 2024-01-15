@@ -545,6 +545,8 @@
           href: ../public-folders/authrequired-ndr.md
         - name: '"550 5.7.13" error when sending emails to MEPF'
           href: ../public-folders/cannot-send-emails-to-mail-enabled-public-folder.md
+        - name: Auto-replies are sent from an incorrect email address
+          href: ../public-folders/public-folder-auto-replies-incorrect-email-address.md
         - name: Can't access contact list from public folder
           href: ../public-folders/cannot-access-contact-list.md
         - name: Can't add or expand public folders
