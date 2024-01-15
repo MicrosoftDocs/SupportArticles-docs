@@ -192,7 +192,6 @@
       "ms.prod": {
         "developer/biztalk/**/*.md": "biztalk-server",
         "developer/dotnet/**/*.md": ".net",
-        "developer/webapps/aspnet/**/*.md": "asp.net",
         "developer/webapps/aspnetcore/**/*.md": "aspnet-core",
         "developer/webapps/iis/**/*.md": "iis",
         "developer/host-integration-server/**/*.md": "host-integration-server",
@@ -319,7 +318,8 @@
         "sql/**/*.md": "sql",
         "sql/analysis-services/**/*.md": "analysis-services",
         "sql/azure-sql/**/*.md": "virtual-machines-sql",
-        "sql/reporting-services/**/*.md": "reporting-services"
+        "sql/reporting-services/**/*.md": "reporting-services",
+        "developer/webapps/aspnet/**/*.md": "aspnet"
       },
       "ms.subservice": {
         "dynamics-365/field-service/administration/**.*": "d365-fs-admin-settings",
