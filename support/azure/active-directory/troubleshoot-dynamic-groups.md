@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot dynamic groups
 description: Diagnose and resolve issues with dynamic groups.
-ms.date: 01/11/2024
+ms.date: 01/15/2024
 ms.service: active-directory
 ms.subservice: domain-services
 ms.custom: has-azure-ad-ps-ref
