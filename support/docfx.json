@@ -205,8 +205,7 @@
         "windows-hardware/drivers/**/*.md": "windows-hardware",
         "system-center/**/*.md": "system-center",
         "microsoft-identity-manager/*.md": "microsoft-identity-manager",
-        "developer/browsers/**/*.md": "internet-explorer",
-        "dynamics/gp/*.md": "dynamics-gp"
+        "developer/browsers/**/*.md": "internet-explorer"
       },
       "ms.technology": {
         "developer/dotnet/wcf/**/*.md": "dotnet-wcf",
@@ -326,6 +325,7 @@
         "sql/analysis-services/**/*.md": "analysis-services",
         "sql/azure-sql/**/*.md": "virtual-machines-sql",
         "sql/reporting-services/**/*.md": "reporting-services",
+        "dynamics/gp/*.md": "dynamics-gp",
         "mem/configmgr/**/*.md": "configuration-manager"
       },
       "ms.subservice": {
