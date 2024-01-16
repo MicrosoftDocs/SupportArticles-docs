@@ -10,17 +10,17 @@ metadata:
   ms.collection: windows
   ms.workload: na
   ms.tgt_pltfrm: vm-windows
-  ms.date: 12/08/2023
+  ms.date: 01/16/2024
   ms.author: genli
-  ms.reviewer: cwhitley, jusilver, v-naqviadil, v-leedennis
+  ms.reviewer: cwhitley, jusilver, v-naqviadil, v-leedennis, v-weizhu
     
 title: Azure Windows virtual machine activation FAQ
-summary: This article answers frequently asked questions (FAQ) about activating a Windows virtual machine in Azure.
+summary: This article answers frequently asked questions (FAQ) about activating a Microsoft Windows virtual machine (VM) in Azure.
 sections:
   - name: General
     questions:
       - question: |
-          I created a Windows Server virtual machine (VM) from Azure Marketplace. Do I need to configure a KMS key for activating the system?
+          Do I need to configure a KMS key for activating a Windows VM deployed from Azure Marketplace?
         answer: |
           No. The image in Azure Marketplace has the appropriate KMS client setup key already configured.
 
@@ -38,5 +38,6 @@ additionalContent: |
   ## More information
 
   - [Troubleshoot Windows virtual machine activation problems in Azure](./troubleshoot-activation-problems.md)
+  - [Advanced Troubleshooting - Microsoft Windows activation error codes](././windows-server/deployment/troubleshoot-activation-error-codes)
   
   [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
