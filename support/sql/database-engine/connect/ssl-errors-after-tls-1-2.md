@@ -14,7 +14,7 @@ This article provides information about the Secure Sockets Layer (SSL) errors th
 
 ## Symptoms
 
-Consider the following scenario in which you upgrade the TLS protocol to TLS 1.2::
+Consider the following scenario where you might see the following issues after you upgrade the TLS protocol to TLS 1.2.
 
 - Microsoft SQL Server uses a certificate that's signed by a weak hash algorithm. Such certificates include MD5, SHA224, and SHA512.
 
@@ -23,6 +23,8 @@ Consider the following scenario in which you upgrade the TLS protocol to TLS 1.2
 - TLS 1.0 is disabled.
 
 - There are no matching cryptographic algorithms between the client and the server.
+
+In the error certificate, you might observe the following points:
 
 In this scenario, you encounter the following issues after the upgrade is finished:
 
@@ -79,34 +81,40 @@ To resolve these errors, follow these steps:
 
    The error log should now indicate that a self-generated certificate is used. If the problem is resolved, SQL Server can run successfully by using the self-signed certificate. If you want a Verisign or other certificate, then you must ask the certificate provider to make sure that a strong hash is used that's appropriate for TLS 1.2. If the problem isn't resolved, return to step 2.
 
-### Check enabled and disabled TLS protocols
+## Check enabled and disabled TLS protocols
 
-Check the Background and Basic Upgrade Workflow if you didn't already do this. Both the client and server must be upgraded to enforce TLS 1.2. If it's necessary, you can upgrade the server but leave TLS 1.0 enabled so that non-upgraded clients can connect.
+To check the enabled and disabled TLS protocols, follow these steps:
 
-Check the SSL or TLS registry by using REGEDIT.
+1. Check the Background and Basic Upgrade Workflow if you didn't already do this.
 
-You can find the enabled and disabled SSL or TLS versions under the following registry subkey:
+   Both the client and server must be upgraded to enforce TLS 1.2. If it's necessary, you can upgrade the server but leave TLS 1.0 enabled so that non-upgraded clients can connect.
 
-`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols`
+1. Check the SSL or TLS registry by using REGEDIT.
 
-There are client and server subkeys for each version of SSL or TLS, and both have **Enabled** and **Disabled** values:
+   You can find the enabled and disabled SSL or TLS versions under the following registry subkey:
 
-`[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2]`
+   `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols`
 
-`[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Client] "DisabledByDefault"=dword:00000000 "Enabled"=dword:00000001`
+   There are client and server subkeys for each version of SSL or TLS, and both have **Enabled** and **Disabled** values:
 
-`[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Server] "DisabledByDefault"=dword:00000000 "Enabled"=dword:00000001`
+   `[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2]`
+
+   `[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Client] "DisabledByDefault"=dword:00000000 "Enabled"=dword:00000001`
+
+   `[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Server] "DisabledByDefault"=dword:00000000 "Enabled"=dword:00000001`
 
 > [!NOTE]
 > Any non-zero value is treated as TRUE. However, **1** is generally preferred instead of **FFFFFFFF** (or **-1**).
 
-Make sure that there are no incompatible settings. For instance, TLS 1.0 is disabled and TLS 1.2 is enabled on the server. This is because these settings might not match the settings on the client or the client driver might not be updated.
+1. Make sure that there are no incompatible settings.
 
-You can test this situation by setting `Enabled=0` for TLS 1.2 (and also re-enable TLS 1.0 if it's disabled).
+   For instance, TLS 1.0 is disabled and TLS 1.2 is enabled on the server. This is because these settings might not match the settings on the client or the client driver might not be updated.
 
-Restart SQL Server to check whether the issue is related to TLS 1.2 or it's a general issue.
+   You can test this situation by setting `Enabled=0` for TLS 1.2 (and also re-enable TLS 1.0 if it's disabled).
 
-### No matching cipher suites
+1. Restart SQL Server to check whether the issue is related to TLS 1.2 or it's a general issue.
+
+## No matching cipher suites
 
 You can examine the client and server TLS versions and cipher suites in the `Client Hello` and `Server Hello` packets. The `Client Hello` packet advertises all the client cipher suites, and the `Server Hello` packet specifies one cipher suite. If there are no matching suites, the server closes the connection instead of responding by sending the `Server Hello` packet.
 
