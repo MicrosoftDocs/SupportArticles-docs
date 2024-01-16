@@ -73,8 +73,6 @@
           href: ../calendaring/operation-cannot-be-performed-error.md
         - name: Delegate gets multiple or duplicate meeting requests
           href: ../calendaring/delegate-receives-multiple-or-duplicate-meeting-requests.md
-        - name: Deleting a meeting request doesn't remove it from Calendar
-          href: ../calendaring/deleting-meeting-request-not-remove-it-from-calendar.md
         - name: Error occurs when sending sharing invitation
           href: ../calendaring/error-occurs-when-sending-sharing-invitation.md
         - name: Expiration date and time for the message have passed error
@@ -125,6 +123,8 @@
           href: ../calendaring/no-meeting-reminder-for-google-calendar-invites.md
         - name: Outlook or OWA doesn't show full details of private appointments
           href: ../calendaring/outlook-or-owa-not-shows-full-details-of-private-appointments.md
+        - name: Remove a tentative meeting from your calendar
+          href: ../calendaring/deleting-meeting-request-not-remove-it-from-calendar.md
         - name: Resolve Teams Meeting add-in issues
           href: /microsoftteams/troubleshoot/meetings/resolve-teams-meeting-add-in-issues
         - name: Room Finder isn't available on shared calendars
