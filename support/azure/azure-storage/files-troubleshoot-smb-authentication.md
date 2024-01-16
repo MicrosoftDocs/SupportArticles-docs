@@ -18,7 +18,7 @@ This article lists common problems when using SMB Azure file shares with identit
 | Standard file shares (GPv2), GRS/GZRS | :::image type="icon" source="media/files-troubleshoot-smb-authentication/yes-icon.png" border="false":::  | :::image type="icon" source="media/files-troubleshoot-smb-authentication/no-icon.png" border="false"::: |
 | Premium file shares (FileStorage), LRS/ZRS | :::image type="icon" source="media/files-troubleshoot-smb-authentication/yes-icon.png" border="false":::  | :::image type="icon" source="media/files-troubleshoot-smb-authentication/no-icon.png" border="false"::: |
 
-## Error when running AzFilesHybrid module
+## Error when running the AzFilesHybrid module
 
 When you try to run the AzFilesHybrid module, you might receive the following error:
 
@@ -26,11 +26,11 @@ When you try to run the AzFilesHybrid module, you might receive the following er
 
 ### Cause: AD permissions are insufficient
 
-This issue occurs because you don't have required AD permissions to run the module.
+This issue occurs because you don't have the required Active Directory (AD) permissions to run the module.
 
 ### Solution
 
-Refer to the Active Directory privileges or contact your AD admin to provide the required privileges.
+Refer to the AD privileges or contact your AD admin to provide the required privileges.
 
 ## Error 5 when mounting an Azure file share
 
