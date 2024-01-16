@@ -1,5 +1,5 @@
 ---
-title: Can't reach this page and unsupported browser error messages in SMSS 19.
+title: Can't reach this page and unsupported browser error messages in SMSS 19
 description: Discusses how to resolve problems that occur in SSMS 19 when you try to sign in by using Microsoft Entra authentication in Internet Explorer.
 ms.reviewer: maghan, randolphwest
 ms.date: 01/02/2024
@@ -9,7 +9,7 @@ ms.custom:
 
 # Browser authentication issues in SQL Server Management Studio 19.1 and later versions
 
-This article helps you resolve problems that occur when you try to log in to SQL Server Management Studio (SSMS) 19.1 and later versions by using Microsoft Entra authentication in Internet Explorer. The problems often occur in tightly secured environments that have restricted internet access.
+This article helps you resolve problems that occur when you try to log in to SQL Server Management Studio (SSMS) 19.1 and later versions by using Microsoft Entra authentication in Internet Explorer. The problems often occur in tightly secured environments that have restricted Internet access.
 
 > [!NOTE]
 > Microsoft Entra ID is the [new name for Azure Active Directory (Azure AD)](/entra/fundamentals/new-name).
@@ -79,6 +79,6 @@ If you see the **Unsupported browser** message window, follow these steps:
 
 ## More information
 
-This setting is per SSMS guidelines and user installation specifics because there is no global option for all SSMS users.
+These settings are per SSMS guidelines and user installation specifics because there is no global option for all SSMS users.
 
 Administrators can use PowerShell to set the default browser on a broader scale to ensure compatibility with Microsoft Edge or another preferred browser. For more information, see [Set Microsoft Edge as the default browser](/deployedge/edge-default-browser).
