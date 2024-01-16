@@ -1,7 +1,7 @@
 ---
 title: Align missing fields error in Copilot for Sales
 description: Resolves an error that occurs due to field mismatching between Microsoft Dynamics 365 and Copilot for Sales.
-ms.date: 01/13/2024
+ms.date: 01/16/2024
 ms.service: microsoft-sales-copilot
 author: sbmjais
 ms.author: shjais
@@ -31,7 +31,7 @@ This article helps you troubleshoot and resolve the "Align missing fields" error
 
 ## Symptoms
 
-When a user tries to use Microsoft Copilot for Sales, the following error message occurs. It indicates that there’s a field mismatch between CRM and Copilot for Sales.
+When a user tries to use Copilot for Sales, the following error message occurs. It indicates a field mismatch between CRM and Copilot for Sales.
 
 > Align missing fields
 
@@ -39,7 +39,7 @@ When a user tries to use Microsoft Copilot for Sales, the following error messag
 
 ## Cause
 
-A field of a record exists in Copilot for Sales but not in CRM. The field is removed from CRM after an administrator has configured fields of the record from [administrator settings in Copilot for Sales](/microsoft-sales-copilot/administrator-settings-for-viva-sales).
+A field of a record exists in Copilot for Sales but not in CRM. The field is removed from the CRM after an administrator has configured fields of the record from the [Copilot for Sales administrator settings](/microsoft-sales-copilot/administrator-settings-for-viva-sales).
 
 ## Resolution
 
