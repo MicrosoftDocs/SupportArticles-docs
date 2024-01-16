@@ -39,7 +39,7 @@ When a user tries to use Copilot for Sales, the following error message occurs. 
 
 ## Cause
 
-A field of a record exists in Copilot for Sales but not in CRM. The field is removed from the CRM after an administrator has configured fields of the record from the [Copilot for Sales administrator settings](/microsoft-sales-copilot/administrator-settings-for-viva-sales).
+A field of a record exists in Copilot for Sales but not in CRM. The field is removed from the CRM after an administrator has configured fields of the record from the [Copilot for Sales administrator settings](/microsoft-sales-copilot/customize-forms-and-fields).
 
 ## Resolution
 
