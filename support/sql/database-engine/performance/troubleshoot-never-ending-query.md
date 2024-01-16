@@ -77,7 +77,7 @@ To identify whether a query is continuously executing or stuck on a bottleneck, 
 
 1. Check the sample output.
 
-    - If you observe an output similar to the following one where the CPU is increasing proportionately with the elapsed time, and there aren't any waits, the troubleshooting steps in this article apply. Keep in mind that what happens to logical_reads is not relevant in this case as some CPU-bound queries may not do any logical reads at all (for example an endless while loop).
+    - If you observe an output similar to the following one where the CPU is increasing proportionately with the elapsed time, and there aren't significant waits, the troubleshooting steps in this article apply. Keep in mind that changes in logical_reads aren't relevant in this case as some CPU-bound T-SQL requests may not do any logical reads at all (for example performing computations or a while loop ).
 
         session_id|status| cpu_time | logical_reads |wait_time|wait_type|
         |--|--|--|--|--|--|
