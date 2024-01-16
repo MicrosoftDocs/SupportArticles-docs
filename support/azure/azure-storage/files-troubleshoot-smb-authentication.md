@@ -3,7 +3,7 @@ title: Troubleshoot Azure Files identity-based authentication and authorization 
 description: Troubleshoot problems using identity-based authentication to connect to SMB Azure file shares and see possible resolutions.
 ms.service: azure-file-storage
 ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
-ms.date: 12/15/2023
+ms.date: 01/16/2024
 ms.reviewer: kendownie, v-weizhu
 ---
 # Troubleshoot Azure Files identity-based authentication and authorization issues (SMB)
@@ -18,22 +18,25 @@ This article lists common problems when using SMB Azure file shares with identit
 | Standard file shares (GPv2), GRS/GZRS | :::image type="icon" source="media/files-troubleshoot-smb-authentication/yes-icon.png" border="false":::  | :::image type="icon" source="media/files-troubleshoot-smb-authentication/no-icon.png" border="false"::: |
 | Premium file shares (FileStorage), LRS/ZRS | :::image type="icon" source="media/files-troubleshoot-smb-authentication/yes-icon.png" border="false":::  | :::image type="icon" source="media/files-troubleshoot-smb-authentication/no-icon.png" border="false"::: |
 
-## Errors when running AzFilesHybrid module: Privilege issue
+## Error when running AzFilesHybrid module
+
 When you try to run the AzFilesHybrid module, you might receive the following error:
 
--  A required privilege is not held by the client
+> A required privilege is not held by the client.
 
-### Cause: User does not have required AD permissions to run the module.
-This is due to insufficient AD privileges needed to execute the AzFilesHybrid module. 
+### Cause: AD permissions are insufficient
+
+This issue occurs because you don't have required AD permissions to run the module.
 
 ### Solution
-Refer to the Active Directory privileges for more information or reach out to your AD admin to provide the required privileges.
+
+Refer to the Active Directory privileges or contact your AD admin to provide the required privileges.
 
 ## Error 5 when mounting an Azure file share
 
 When you try to mount a file share, you might receive the following error:
 
-- System error 5 has occurred. Access is denied.
+> System error 5 has occurred. Access is denied.
 
 ### Cause: Share-level permissions are incorrect
 
