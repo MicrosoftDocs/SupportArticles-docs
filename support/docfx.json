@@ -326,7 +326,7 @@
         "sql/reporting-services/**/*.md": "reporting-services",
         "microsoft-identity-manager/*.md": "microsoft-identity-manager",
         "dynamics/gp/*.md": "dynamics-gp",
-        "mem/configmgr/**/*.md": "configuration-manager"
+        "mem/configmgr/**/*.md": "configuration-manager "
       },
       "ms.subservice": {
         "dynamics-365/field-service/administration/**.*": "d365-fs-admin-settings",
