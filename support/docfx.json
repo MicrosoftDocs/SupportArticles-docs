@@ -204,9 +204,7 @@
         "windows/win32/**/*.md": "windows-dev-apps",
         "windows-hardware/drivers/**/*.md": "windows-hardware",
         "system-center/**/*.md": "system-center",
-        "developer/browsers/**/*.md": "internet-explorer",
-        "dynamics/gp/*.md": "dynamics-gp",
-        "microsoft-identity-manager/*.md": "microsoft-identity-manager"
+        "developer/browsers/**/*.md": "internet-explorer"
       },
       "ms.technology": {
         "developer/dotnet/wcf/**/*.md": "dotnet-wcf",
