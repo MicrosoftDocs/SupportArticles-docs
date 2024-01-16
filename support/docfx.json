@@ -325,7 +325,7 @@
         "sql/analysis-services/**/*.md": "analysis-services",
         "sql/azure-sql/**/*.md": "virtual-machines-sql",
         "sql/reporting-services/**/*.md": "reporting-services",
-        "dynamics/gp/*.md": "dynamics-gp"
+        "dynamics/gp/*.md": "dynamics-gp",
         "mem/configmgr/**/*.md": "configuration-manager"
       },
       "ms.subservice": {
