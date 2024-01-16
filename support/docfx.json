@@ -203,10 +203,10 @@
         "developer/visualstudio/visual-basic/ide/*.md": "visual-basic-6",
         "windows/win32/**/*.md": "windows-dev-apps",
         "windows-hardware/drivers/**/*.md": "windows-hardware",
-        "mem/configmgr/**/*.md": "configuration-manager",
         "system-center/**/*.md": "system-center",
         "developer/browsers/**/*.md": "internet-explorer",
-        "dynamics/gp/*.md": "dynamics-gp"
+        "dynamics/gp/*.md": "dynamics-gp",
+        "microsoft-identity-manager/*.md": "microsoft-identity-manager"
       },
       "ms.technology": {
         "developer/dotnet/wcf/**/*.md": "dotnet-wcf",
@@ -326,7 +326,9 @@
         "sql/analysis-services/**/*.md": "analysis-services",
         "sql/azure-sql/**/*.md": "virtual-machines-sql",
         "sql/reporting-services/**/*.md": "reporting-services",
-        "microsoft-identity-manager/*.md": "microsoft-identity-manager"
+        "microsoft-identity-manager/*.md": "microsoft-identity-manager",
+        "dynamics/gp/*.md": "dynamics-gp",
+        "mem/configmgr/**/*.md": "configuration-manager"
       },
       "ms.subservice": {
         "dynamics-365/field-service/administration/**.*": "d365-fs-admin-settings",
