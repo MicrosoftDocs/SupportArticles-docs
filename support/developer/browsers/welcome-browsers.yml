@@ -5,7 +5,7 @@ summary: Welcome to Microsoft Edge and Internet Explorer troubleshooting. These 
 metadata:
   title: Microsoft Edge and Internet Explorer troubleshooting document
   description: This article lists Knowledge Base (KB) and other Support articles for Microsoft Edge and Internet Explorer. # Required; article description that is displayed in search results. < 160 chars.
-  ms.prod: internet-explorer
+  ms.service: internet-explorer
   ms.topic: landing-page # Required
   author: HaiyingYu  #Required; your GitHub user alias, with correct capitalization.
   ms.author: HaiyingYu #Required; microsoft alias of author; optional team alias.

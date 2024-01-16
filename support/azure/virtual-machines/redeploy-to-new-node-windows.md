@@ -47,7 +47,7 @@ The following example deploys the VM named `myVM` in the resource group named `m
 Set-AzVM -Redeploy -ResourceGroupName "myResourceGroup" -Name "myVM"
 ```
 
-[!INCLUDE [virtual-machines-common-redeploy-to-new-node](../../includes/virtual-machines-common-redeploy-to-new-node.md)]
+[!INCLUDE [virtual-machines-common-redeploy-to-new-node](../../includes/azure/virtual-machines-common-redeploy-to-new-node.md)]
 
 ## Next steps
 
