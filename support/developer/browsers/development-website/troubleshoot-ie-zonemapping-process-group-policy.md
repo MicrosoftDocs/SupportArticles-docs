@@ -2,7 +2,6 @@
 title: Troubleshoot Internet Explorer Zonemapping failures when processing Group Policy
 description: Provides a resolution for Internet Explorer Zonemapping failures when you process Group Policy.
 ms.date: 08/21/2023
-ms.technology: internet-explorer-development-website
 ms.reviewer: axelr, davean, v-sidong
 ms.author: heikom
 ---
