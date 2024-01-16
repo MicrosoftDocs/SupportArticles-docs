@@ -3,7 +3,6 @@ title: 32-bit browser applications not working as expected
 description: Describes an issue in which some Internet Explorer 10 or 11 applications do not work as expected when the TabProcGrowth registry entry is set to 0 in 64-bit versions of Windows 8. Provides a workaround.
 ms.date: 10/13/2020
 ms.reviewer: ramakoni
-ms.technology: internet-explorer-administration
 ---
 # 32-bit browser applications may not work as expected in Internet Explorer
 

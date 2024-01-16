@@ -3,7 +3,6 @@ title: An empty policy as winning in Internet Explorer
 description: Due to a problem with Internet Explorer policy management extensions, the resetting of IEM content in a group policy object does not prevent tools such as RSOP from identifying it as the winning IEM policy.
 ms.date: 06/09/2020
 ms.reviewer: joelba
-ms.technology: internet-explorer-administration
 ---
 # Policy reporting tools indicate empty Internet Explorer Maintenance policy as winning
 
