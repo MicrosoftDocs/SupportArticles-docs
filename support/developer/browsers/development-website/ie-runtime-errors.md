@@ -3,7 +3,6 @@ title: Runtime errors in Internet Explorer
 description: This article provides the solution to solve the runtime errors that occur in Internet Explorer.
 ms.date: 03/08/2020
 ms.reviewer: v-jomcc, ericlaw
-ms.technology: internet-explorer-development-website
 ---
 # How to fix runtime errors in Internet Explorer
 
