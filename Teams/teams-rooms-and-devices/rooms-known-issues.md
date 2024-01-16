@@ -22,7 +22,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 12/18/2023
+ms.date: 01/16/2024
 ---
 # Known issues in Teams Rooms and devices
 
@@ -72,6 +72,7 @@ This article lists the known issues for the Microsoft Teams Rooms app when it's 
 | Laser pointer and drawing tools in PowerPoint Live don't display for in-room participants | In-room meeting participants in a Teams meeting who are using Teams Rooms on Android devices aren't able to see the following features during a PowerPoint Live presentation: Laser pointer, pen, highlighter, and eraser. | Join the meeting on your personal device to see the laser pointer and drawing tools in PowerPoint Live. |
 | Teams Admin Settings unavailable on Teams Rooms on Android devices with Teams Rooms Basic license. | The **Teams Admin Settings** option under **Device Settings** is unavailable on devices that have the Teams Rooms Basic license for Teams Rooms on Android CY22 U3 app (version 1449/1.0.96.2022120503). | Admins can either assign a Teams Rooms Pro license to the same device or downgrade the device to use Teams Rooms on Android CCY22 U2B app (version: 1449/1.0.96.2022090606) instead. |
 |Video issues in some Logitech devices during Cisco Webex meetings|On some Logitech devices that run Teams Rooms on Android, the participant's video might either freeze or not display during Cisco Webex meetings.<br/><br/>When you join a third-party online meeting by using a Teams Rooms device, the meeting experience is controlled by the third-party online meeting provider. In the meetings where this issue occurs, Cisco Webex controls the video display. The issue with the participant video isn't caused by Teams Rooms on Android.|
+|Rotate 180 option doesn't work for all meeting participants|You've selected the **Rotate 180** option for a Content camera in your Teams Rooms on Android device. However, the rotation is applied only to the video feed for in-room participants. Remote participants still see an inverted video display.|If possible, mount the Content camera right side up instead of upside down.|
 
 ### Issues with Teams phones
 
