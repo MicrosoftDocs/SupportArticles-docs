@@ -192,7 +192,6 @@
       "ms.prod": {
         "developer/biztalk/**/*.md": "biztalk-server",
         "developer/dotnet/**/*.md": ".net",
-        "developer/webapps/aspnet/**/*.md": "asp.net",
         "developer/webapps/aspnetcore/**/*.md": "aspnet-core",
         "developer/webapps/iis/**/*.md": "iis",
         "developer/host-integration-server/**/*.md": "host-integration-server",
@@ -203,10 +202,10 @@
         "developer/visualstudio/visual-basic/ide/*.md": "visual-basic-6",
         "windows/win32/**/*.md": "windows-dev-apps",
         "windows-hardware/drivers/**/*.md": "windows-hardware",
-        "mem/configmgr/**/*.md": "configuration-manager",
         "system-center/**/*.md": "system-center",
         "microsoft-identity-manager/*.md": "microsoft-identity-manager",
-        "dynamics/gp/*.md": "dynamics-gp"
+        "dynamics/gp/*.md": "dynamics-gp",
+        "developer/browsers/**/*.md": "internet-explorer"
       },
       "ms.technology": {
         "developer/dotnet/wcf/**/*.md": "dotnet-wcf",
@@ -214,14 +213,7 @@
         "developer/dotnet/framework/installation/**/*.md": "dotnet-installation",
         "developer/dotnet/framework/language-compilers/**/*.md": "dotnet-language-compilers",
         "developer/webapps/**/*.md": "",
-        "developer/webapps/aspnet/active-server-pages/**/*.md": "aspnet-active-server-pages",
-        "developer/webapps/aspnet/development/**/*.md": "aspnet-development",
         "developer/webapps/aspnet/ftp-authentication-authorization/**/*.md": "aspnet-ftp-authentication-authorization",
-        "developer/webapps/aspnet/health-diagnostic-performance/**/*.md": "aspnet-health-diagnostic-performance",
-        "developer/webapps/aspnet/iisadmin-service-process/**/*.md": "aspnet-iisadmin-service-process",
-        "developer/webapps/aspnet/site-behavior-performance/**/*.md": "aspnet-site-behavior-performance",
-        "developer/webapps/aspnet/www-administration-management/**/*.md": "aspnet-www-administration-management",
-        "developer/webapps/aspnet/www-authentication-authorization/**/*.md": "aspnet-www-authentication-authorization",
         "developer/webapps/aspnetcore/practice-troubleshoot-linux/**/*.md": "aspnetcore-practice-troubleshoot-linux",
         "developer/webapps/iis/active-server-pages/**/*.md": "iis-active-server-pages",
         "developer/webapps/iis/application-request-routing/**/*.md": "iis-application-request-routing",
@@ -318,7 +310,11 @@
         "sql/analysis-services/**/*.md": "analysis-services",
         "sql/azure-sql/**/*.md": "virtual-machines-sql",
         "sql/reporting-services/**/*.md": "reporting-services",
-        "developer/browsers/**/*.md": "internet-explorer"
+        "developer/browsers/**/*.md": "internet-explorer",
+        "developer/webapps/aspnet/**/*.md": "aspnet",
+        "microsoft-identity-manager/*.md": "microsoft-identity-manager",
+        "dynamics/gp/*.md": "dynamics-gp",
+        "mem/configmgr/**/*.md": "configuration-manager "
       },
       "ms.subservice": {
         "dynamics-365/field-service/administration/**.*": "d365-fs-admin-settings",
@@ -417,6 +413,13 @@
         "developer/browsers/installation/**/*.md": "installation",
         "developer/browsers/development-website/**/*.md": "development-website",
         "developer/browsers/core-features/**/*.md": "core-features"
+        "developer/webapps/aspnet/development/**/*.md": "development",
+        "developer/webapps/aspnet/www-administration-management/**/*.md": "www-admin-mgt",
+        "developer/webapps/aspnet/site-behavior-performance/**/*.md": "site-behavior-performance",
+        "developer/webapps/aspnet/active-server-pages/**/*.md": "active-server-pages",
+        "developer/webapps/aspnet/iisadmin-service-process/**/*.md": "iisadmin-service-process",
+        "developer/webapps/aspnet/www-authentication-authorization/**/*.md": "www-authentication-authorization",
+        "developer/webapps/aspnet/health-diagnostic-performance/**/*.md": "health-diagnostic-performance"
       },
       "titleSuffix": {
         "developer/biztalk/**/*.md": "BizTalk Server",
