@@ -30,7 +30,8 @@ Source: "Outlook"
 Event ID: "64"
 Level: "Information"
 Description: "A meeting request has been deleted but the meeting will remain tentative on the calendar 
-until the user either chooses a response or deletes the item directly from the calendar folder. Subject: <meeting title> ..."
+until the user either chooses a response or deletes the item directly from the calendar folder. Subject:
+<meeting title> ..."
 ```
 
 If you want to remove the tentative meeting from your calendar, or from the calendar of a mailbox for which you have delegate permissions, follow these steps:
