@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 11 for SQL Server 2022 (KB5032679)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2022 cumulative update 11 (KB5032679).
-ms.date: 01/11/2024
+ms.date: 01/16/2024
 ms.custom: KB5032679
 ms.reviewer: v-qianli2
 appliesto:
