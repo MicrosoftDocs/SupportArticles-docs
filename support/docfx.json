@@ -202,10 +202,7 @@
         "developer/visualstudio/visual-basic/ide/*.md": "visual-basic-6",
         "windows/win32/**/*.md": "windows-dev-apps",
         "windows-hardware/drivers/**/*.md": "windows-hardware",
-        "system-center/**/*.md": "system-center",
-        "microsoft-identity-manager/*.md": "microsoft-identity-manager",
-        "dynamics/gp/*.md": "dynamics-gp",
-        "developer/browsers/**/*.md": "internet-explorer"
+        "system-center/**/*.md": "system-center"
       },
       "ms.technology": {
         "developer/dotnet/wcf/**/*.md": "dotnet-wcf",
