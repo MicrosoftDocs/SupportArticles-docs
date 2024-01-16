@@ -1,7 +1,7 @@
 ---
 title: SSL errors after upgrading to TLS 1.2
 description: This article provides information about the SSL errors that you might encounter after you upgrade to TLS 1.2.
-ms.date: 01/04/2024
+ms.date: 01/16/2024
 ms.custom: sap:Connection issues
 author: Malcolm-Stewart
 ms.author: mastewa
@@ -14,7 +14,7 @@ This article provides information about the Secure Sockets Layer (SSL) errors th
 
 ## Symptoms
 
-Consider the following scenario in which you upgrade the TLS protocol to TLS 1.2:
+Consider the following scenario in which you upgrade the TLS protocol to TLS 1.2::
 
 - Microsoft SQL Server uses a certificate that's signed by a weak hash algorithm. Such certificates include MD5, SHA224, and SHA512.
 
@@ -24,15 +24,17 @@ Consider the following scenario in which you upgrade the TLS protocol to TLS 1.2
 
 - There are no matching cryptographic algorithms between the client and the server.
 
-## Cause
+In this scenario, you encounter the following issues after the upgrade is finished:
 
-Problems that affect the server certificate also affect local connections and connections from client computers. For more information, see Encrypting Connections to SQL Server.
+- Problems that affect the server certificate also affect local connections and connections from client computers. For more information, see [Encrypting Connections to SQL Server](/previous-versions/sql/sql-server-2008-r2/ms189067(v=sql.105)?redirectedfrom=MSDN).
 
-The application might generate one of the following error messages:
+- The application might generate one of the following error messages:
 
-- Named Pipes - A connection was successfully established with the server, but then an error occurred during the login process. (provider: SSL Provider, error: 0 - No process on the other end of the pipe) Microsoft SQL Server, Error: 233.
- 
-- TCP - A connection was successfully established with the server, but then an error occurred during the login process. (provider: SSL Provider, error: 0 - The connection was forcibly closed by remote host 10054) Microsoft SQL Server, Error: 233.
+   **Named Pipes**
+   > A connection was successfully established with the server, but then an error occurred during the login process. (provider: SSL Provider, error: 0 - No process on the other end of the pipe) Microsoft SQL Server, Error: 233.
+
+  **TCP**
+  > A connection was successfully established with the server, but then an error occurred during the login process. (provider: SSL Provider, error: 0 - The connection was forcibly closed by remote host 10054) Microsoft SQL Server, Error: 233.
 
 If you have a network capture, it might resemble the following screenshot that shows that the server responds to the Client Hello packet by closing the connection.
 
@@ -57,7 +59,7 @@ To resolve these errors, follow these steps:
      `2023-05-19 04:58:56.42 spid11s A self-generated certificate was successfully loaded for encryption.`
     If the certificate is self-generated, skip to step b.
 
-1. Open the **Computer Certificate Store** in the Microsoft Management Console (MMC).<br/>
+1. Open the **Computer Certificate Store** in the Microsoft Management Console (MMC).
 
    :::image type="content" source="media/ssl-errors-after-tls-1-2/mmc-cert-properties.png" alt-text="Select Properties from SQL Server Configuration Manager.":::
 
@@ -75,11 +77,11 @@ To resolve these errors, follow these steps:
 1. Save the changes.
 1. Restart SQL Server.
 
-The error log should now indicate that a self-generated certificate is used. If the problem is resolved, SQL Server can run successfully by using the self-signed certificate. If you want a Verisign or other certificate, then you must ask the certificate provider to make sure that a strong hash is used that's appropriate for TLS 1.2. If the problem isn't resolved, go to step 2.
+   The error log should now indicate that a self-generated certificate is used. If the problem is resolved, SQL Server can run successfully by using the self-signed certificate. If you want a Verisign or other certificate, then you must ask the certificate provider to make sure that a strong hash is used that's appropriate for TLS 1.2. If the problem isn't resolved, return to step 2.
 
 ### Check enabled and disabled TLS protocols
 
-Check the Background and Basic Upgrade Workflow if you did not already do this. Both the client and server must be upgraded to enforce TLS 1.2. If it's necessary, you can upgrade the server but leave TLS 1.0 enabled so that non-upgraded clients can connect.
+Check the Background and Basic Upgrade Workflow if you didn't already do this. Both the client and server must be upgraded to enforce TLS 1.2. If it's necessary, you can upgrade the server but leave TLS 1.0 enabled so that non-upgraded clients can connect.
 
 Check the SSL or TLS registry by using REGEDIT.
 
