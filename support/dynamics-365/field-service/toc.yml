@@ -3,19 +3,30 @@
   items:
     - name: Administration and settings
       items:
+        - name: Can't find a user when setting up frontline workers
+          href: administration/cant-find-user.md
+        - name: Can't identify the user in an error message
+          href: administration/cant-identify-user.md
         - name: Date Window Start/End fields don't exist
           href: administration/date-window-fields-missing.md
         - name: Error with AttributeMap when upgrading
           href: administration/attibutemap-error-upgrade.md
         - name: Entity record names have duplicated numbers
           href: administration/entity-names-duplicated-numbers.md
+        - name: Incorrect user privileges error
+          href: administration/user-has-no-roles.md
     - name: Customization
       items:
         - name: Can't delete record due to a restrict-delete association
           href: customization/restrict-delete-relationships.md
         - name: Forms show an error about being read-only
           href: customization/forms-record-read-only-error.md
-
+    - name: Integrations
+      items:
+        - name: Create permissions error occurs in Microsoft Outlook or Teams
+          href: integrations/create-permissions-error.md
+        - name: Viva Connections dashboard doesn't have the correct tiles
+          href: integrations/viva-incorrect-tiles.md
     - name: IoT and Connected Field Service
       items:
         - name: Can't change Time Series Insights instance
