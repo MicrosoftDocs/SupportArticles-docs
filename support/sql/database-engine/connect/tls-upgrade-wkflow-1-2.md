@@ -1,7 +1,7 @@
 ---
 title: TLS 1.2 upgrade workflow
-description: This article discusses the steps to upgrade to the TLS 1.2 protocol for SQL Server.
-ms.date: 01/02/2024
+description: This article discusses the procedure about how to upgrade SQL Server client and servers to the TLS 1.2 protocol for SQL Server.
+ms.date: 01/16/2024
 ms.custom: sap:Connection issues
 author: Malcolm-Stewart 
 ms.author: mastewa
@@ -47,12 +47,7 @@ You might encounter some challenges when you implement TLS 1.2:
 
 - If you turn off TLS 1.0 on a client that otherwise can't connect to a server that's running TLS 1.2 and has TLS 1.0 disabled, the client application might be able to connect. However, this action typically isn't acceptable according to the requirements of most enterprises. Therefore, you should avoid doing it. Otherwise, instead of trying to negotiate a Secure Sockets Layer (SSL) hash for the conversation, the client connects by using an unencrypted Login7 packet. This method could reveal user credentials to any listener on the connection. You can easily observe this scenario in a network trace if the client is installed on a different computer.
 
-- You can use the IISCrypto tool to determine which TLS and SSL client and server protocols are enabled and how to modify them. This tool also lets you enable or disable various cipher suites. However, doing this incorrectly can break existing applications in the environment. We recommend that you don't modify anything without having the guidance of Microsoft Support. For more information about how to verify and configure changes, see [Restrict the use of certain cryptographic algorithms and protocols in Schannel.dll](../../../windows-server/windows-security/restrict-cryptographic-algorithms-protocols-schannel.md) and [IIS Crypto](https://www.nartac.com/Products/IISCrypto/).
-  
-  > [!WARNING]
-  > IISCrypto is a non-Microsoft tool. Use it carefully because any modifications to the TLS settings can make the system or service unusable. 
+- You can use the IISCrypto tool to determine which TLS and SSL client and server protocols are enabled and how to modify them. This tool also lets you enable or disable various cipher suites. However, doing this incorrectly can break existing applications in the environment. We recommend that you don't modify anything without having the guidance of Microsoft Support. For more information about how to verify and configure changes, see [Restrict the use of certain cryptographic algorithms and protocols in Schannel.dll](../../../windows-server/windows-security/restrict-cryptographic-algorithms-protocols-schannel.md). See [XEvent](https://www.sqltact.com/2018/01/sql-server-on-tls-12-xevent-session-to.html) to find the TLS version during the SSL Handshake event.
 
   > [!NOTE]
   > Use *Regedit.exe* to export the registry branch and back up the original settings.
-
-[!INCLUDE [third-party-disclaimer](../../../includes/third-party-disclaimer.md)]
