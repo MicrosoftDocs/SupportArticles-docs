@@ -5,11 +5,11 @@ ms.date: 05/12/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: surface
+ms.service: surface
 localization_priority: medium
 ms.reviewer: delhan, v-lianna
 ms.custom: csstroubleshoot
-ms.technology: windows
+ms.subservice: windows
 ---
 # Disk0 not found when you deploy Windows on a Surface device that has 1-TB drive configuration
 
