@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot dynamic groups
-description: Diagnose and resolve issues with dynamic groups.
-ms.date: 01/15/2024
+description: This article helps you diagnose and resolve issues with dynamic groups.
+ms.date: 01/16/2024
 ms.service: active-directory
 ms.subservice: domain-services
 ms.custom: has-azure-ad-ps-ref
@@ -15,7 +15,7 @@ This troubleshooting guide helps you diagnose and solve issues with dynamic grou
 
 To verify whether your group is a dynamic group, see [Evaluate whether a group is a dynamic group](#1).
 
-- **Yes**: proceed to the next section.
+- **Yes**: Proceed to the next section.
 
 - **No**: [Create a basic group and add members using Microsoft Entra ID](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal) or other applicable groups.
 
