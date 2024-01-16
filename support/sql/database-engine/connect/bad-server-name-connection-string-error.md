@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting the bad server name in connection string
-description: This article provides symptoms and solution for troubleshooting the bad server name in connection string issue.
-ms.date: 12/21/2023
+description: This article provides a workaround for the consistent authentication issue when there is a bad server name in connection string.
+ms.date: 01/12/2024
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
@@ -10,7 +10,7 @@ ms.custom: sap:Connection issues
 
 # Bad server name in connection string
 
-This article helps you to resolve the issue related to the bad server name.
+This article helps you to resolve the issues that might arise from the consistent authentication issue related to bad server name in a connection string.
 
 ## Symptoms
 
@@ -40,16 +40,18 @@ You might also see either of the following error messages in the SQL Server erro
 'Login failed for user 'CONTOSO\USER1'. Reason: Could not find a login matching the name provided.
 ```
 
-These errors might be generated if you deploy an application that uses a DEV or QA server into production and you fail to update the connection string.
+## Cause
+
+You will experience these errors if you deploy an application that uses a DEV or QA server into production and you don't update the connection string.
 
 ## Solution
 
-To resolve this issue, follow these steps:
+To resolve these error messages, follow these steps:
 
 1. Check that you're connecting to the correct server.
 
 1. If the server isn't the appropriate one, then update the connection string to point to the correct server.
 
-1. If the connection string is correct, then give the login access to the database by creating a user in the database and map to that login.
+1. If the connection string is correct, then provide the login access to the database by creating a user in the database and map to that login.
 
 1. If you're using a Windows login, add it to a local group or domain group that's allowed to connect to the database server.
