@@ -3,7 +3,6 @@ title: Open in new tab or window not working
 description: Provides the workaround to solve the issue that you cannot open a hyperlink in a new tab or in a new window in Internet Explorer 8 and later versions.
 ms.date: 03/23/2020
 ms.reviewer: JoelBa
-ms.technology: internet-explorer-development-website
 ---
 # Open in new tab or Open in new window do not work in Internet Explorer 8 and later versions
 
