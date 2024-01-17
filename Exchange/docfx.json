@@ -106,15 +106,6 @@
         "ExchangeServer/**/*.md": "exchange-server-it-pro"     
       },
       "ms.technology": {
-        "ExchangeServer/administration/**/*.md": "administration",
-        "ExchangeServer/client-connectivity/**/*.md": "client-connectivity",
-        "ExchangeServer/compliance/**/*.md": "compliance",
-        "ExchangeServer/development/**/*.md": "development",
-        "ExchangeServer/distribution-list/**/*.md": "distribution-list",
-        "ExchangeServer/mailflow/**/*.md": "mailflow",
-        "ExchangeServer/migration/**/*.md": "migration",
-        "ExchangeServer/public-folders/**/*.md": "public-folders",
-        "ExchangeServer/setup/**/*.md": "setup"
       },
       "ms.service": {
         "ExchangeOnline/**/*.md": "exchange-online",
@@ -143,7 +134,16 @@
         "ExchangeOnline/outlook-on-the-web-issues/**/*.md": "outlook-on-the-web-issues",
         "ExchangeOnline/send-emails/**/*.md": "send-emails",
         "ExchangeOnline/public-folders/**/*.md": "public-folders",
-        "ExchangeOnline/user-and-shared-mailboxes/**/*.md": "user-and-shared-mailboxes"
+        "ExchangeOnline/user-and-shared-mailboxes/**/*.md": "user-and-shared-mailboxes",
+        "ExchangeServer/compliance/**/*.md": "compliance",
+        "ExchangeServer/mailflow/**/*.md": "mailflow",
+        "ExchangeServer/distribution-list/**/*.md": "distribution-list",
+        "ExchangeServer/client-connectivity/**/*.md": "client-connectivity",
+        "ExchangeServer/development/**/*.md": "development",
+        "ExchangeServer/administration/**/*.md": "administration",
+        "ExchangeServer/migration/**/*.md": "migration",
+        "ExchangeServer/setup/**/*.md": "setup",
+        "ExchangeServer/public-folders/**/*.md": "public-folders"
       },
       "author": {
         "**/*.md": "cloud-writer"
