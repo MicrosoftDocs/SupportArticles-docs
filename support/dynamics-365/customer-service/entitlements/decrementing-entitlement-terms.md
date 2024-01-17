@@ -4,7 +4,7 @@ description: Provides a resolution for an issue where the remaining terms of ent
 ms.reviewer: sdas, ankugupta
 ms.author: v-psuraty
 author: v-psuraty
-ms.date: 01/15/2024
+ms.date: 01/17/2024
 ---
 # Remaining terms of entitlements don't decrement as expected
 
