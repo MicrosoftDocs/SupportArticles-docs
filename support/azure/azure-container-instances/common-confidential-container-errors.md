@@ -72,9 +72,9 @@ This solution may work if the policy is enforcing a framework.
 ### Solution 3 - Clear cache and regenerate CCE policy
 This solution may work if the device hash is not found or there is an issue with an image.
 
-- Clean cache command: docker rmi "<image_name>:<tag>"
+- Clean cache command: `docker rmi <image_name>:<tag>`
 - Clean all images in cache: docker rmi $(docker images -a -q)
-- Inspect missing hash: docker inspect <image_name>:<tag>
+- Inspect missing hash: `docker inspect <image_name>:<tag>`
 
 ## Next Steps
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
