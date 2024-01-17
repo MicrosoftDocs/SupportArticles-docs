@@ -3,7 +3,6 @@ title: Zoom level reduces rendering performance
 description: This article describes the Quirks mode is incompatible with the zoom function of the webpage, you can use the latest Internet Explorer standard mode to avoid this problem.
 ms.date: 06/09/2020
 ms.reviewer: jeanr
-ms.technology: internet-explorer-stability-performance
 ---
 # Decreased rendering performance in Internet Explorer when adjusting zoom level in Quirks mode
 

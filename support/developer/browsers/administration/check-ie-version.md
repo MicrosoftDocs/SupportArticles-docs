@@ -2,7 +2,6 @@
 title: How to check Internet Explorer version on computers
 description: This article provides you the ways to check the Internet Explorer version on a local computer or a remote computer.
 ms.date: 03/05/2020
-ms.technology: internet-explorer-administration
 ---
 # How to check Internet Explorer version on local and remote computer
 
