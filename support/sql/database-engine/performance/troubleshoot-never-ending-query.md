@@ -77,7 +77,7 @@ To identify whether a query is continuously executing or stuck on a bottleneck, 
 
 1. Check the sample output.
 
-    - If you observe an output similar to the following one where the CPU is increasing proportionately with the elapsed time, and there aren't significant waits, the troubleshooting steps in this article apply. Keep in mind that changes in logical_reads aren't relevant in this case as some CPU-bound T-SQL requests may not do any logical reads at all (for example performing computations or a while loop ).
+    - The troubleshooting steps in this article apply if you observe an output similar to the following one where the CPU is increasing proportionately with the elapsed time, and there aren't significant waits. Keep in mind that changes in `logical_reads` aren't relevant in this case as some CPU-bound T-SQL requests might not do any logical reads at all (for example performing computations or a `WHILE` loop).
 
         session_id|status| cpu_time | logical_reads |wait_time|wait_type|
         |--|--|--|--|--|--|
@@ -85,7 +85,7 @@ To identify whether a query is continuously executing or stuck on a bottleneck, 
         |56 |runnable  | 12040 |301000 |0 |NULL|
         |56 |running | 17020 |523000|0 |NULL|
 
-    - If you observe a wait scenario like the following one where the CPU doesn't change or changes very slightly, and the session is waiting on a resource, this article isn't applicable.
+    - This article isn't applicable if you observe a wait scenario similar to the following one where the CPU doesn't change or changes very slightly, and the session is waiting on a resource.
 
         session_id|status| cpu_time | logical_reads |wait_time|wait_type|
         |--|--|--|--|--|--|
@@ -97,7 +97,7 @@ To identify whether a query is continuously executing or stuck on a bottleneck, 
 
 ### Long compilation time
 
-On rare occasions, you may observe that the CPU is increasing continuously over time but that's not driven by query execution. Instead, it could be driven by an excessively long compilation (the parsing and compiling of a query). In those cases, check the **transaction_name** output column and look for a value of `sqlsource_transform`. This transaction name indicates a compilation.
+On rare occasions, you might observe that the CPU is increasing continuously over time but that's not driven by query execution. Instead, it could be driven by an excessively long compilation (the parsing and compiling of a query). In those cases, check the **transaction_name** output column and look for a value of `sqlsource_transform`. This transaction name indicates a compilation.
 
 ## Collect diagnostic data
 
@@ -109,11 +109,11 @@ To collect diagnostic data by using [SQL Server Management Studio](/sql/ssms/sql
 
 1. Review the query plan to see if there are any obvious indications of where the slowness can come from. Typical examples include:
 
-    - Table/index scans (look at estimated rows)
-    - Nested loops driven by a huge outer table data set
-    - Nested loops with a large branch in the inner side of the loop
-    - Table spools
-    - Functions in the SELECT list that take a long time to process each row
+    - Table or index scans (look at estimated rows).
+    - Nested loops driven by a huge outer table data set.
+    - Nested loops with a large branch in the inner side of the loop.
+    - Table spools.
+    - Functions in the `SELECT` list that take a long time to process each row.
 
 1. If the query runs fast at any time, you can capture the "fast" executions [Actual XML Execution Plan](/sql/relational-databases/performance/display-an-actual-execution-plan) to compare.
 
@@ -146,7 +146,7 @@ To identify the slow steps in the query by using [Lightweight query execution st
 
 1. Start the affected never-ending query from application.
 
-1. Run the following commands multiple times to check the run-time execution statistics for the query plan operators:
+1. Run the following commands frequently to check the run-time execution statistics for the query plan operators:
 
     ```sql
     SELECT CONVERT (varchar(30), getdate(), 126) as runtime,
@@ -286,7 +286,7 @@ To identify the slow steps in the query, follow these steps:
     SELECT * FROM sys.dm_exec_query_statistics_xml (<session_id>)
     ```
 
-1. Specifically, select the XML link under the **query_plan** column. Once the graphical query plan opens in a new window, right-click on it and select **Save Execution Plan As...**. Repeat the steps to capture three or four snapshots spaced one minute apart to give you sufficient data for analysis. Specifically, you can compare the row count (Actual Number of Rows) for each operator over time and see which of the operators is showing a significant increase in row count (million or more).
+1. Specifically, select the XML link under the **query_plan** column. Once the graphical query plan opens in a new window, right-click on it and select **Save Execution Plan As...**. Repeat the steps to capture three or four snapshots spaced one minute apart to give you sufficient data for analysis. Specifically, you can compare the row count (actual number of rows) for each operator over time and see which of the operators is showing a significant increase in row count (million or more).
 
     > [!NOTE]
     > If you aren't getting any output from `sys.dm_exec_query_statistics_xml`, you can check whether the database option `LAST_QUERY_PLAN_STATS` has been disabled by running the following command:
