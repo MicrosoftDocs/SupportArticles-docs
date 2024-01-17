@@ -256,7 +256,6 @@
         "developer/visualstudio/tools-utilities/**/*.md": "vs-tools-utilities",
         "developer/visualstudio/silverlight/**/*.md": "vs-silverlight",
         "developer/visualstudio/subscriptions/**/*.md": "vs-subscriptions",
-        "developer/visualstudio/visual-basic/ide/**/*.md": "visual-basic-ide",
         "developer/visualstudio/visual-basic/language-compilers/**/*.md": "visual-basic-language-compilers",
         "windows/win32/**/*.md": "",
         "windows-hardware/drivers/**/*.md": "",
@@ -313,7 +312,7 @@
         "developer/webapps/aspnet/**/*.md": "aspnet",
         "microsoft-identity-manager/*.md": "microsoft-identity-manager",
         "dynamics/gp/*.md": "dynamics-gp",
-        "mem/configmgr/**/*.md": "configuration-manager "
+        "mem/configmgr/**/*.md": "configuration-manager"
       },
       "ms.subservice": {
         "dynamics-365/field-service/administration/**.*": "d365-fs-admin-settings",
