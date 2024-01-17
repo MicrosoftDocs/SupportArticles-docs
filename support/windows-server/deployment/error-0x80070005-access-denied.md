@@ -15,7 +15,7 @@ ms.technology: windows-server-deployment
 keywords: Windows, Activation, 0x80070005, access denied
 ---
 
-# Error 0x80070005 (Access denied) when you activate Windows
+# Error 0x80070005 "Access denied" when you activate Windows
 
 This article discusses how to fix Windows activation error 0x80070005 (access denied).
 
@@ -61,6 +61,6 @@ To restore the permissions of the SELF account, follow these steps:
    - **Local Access**  
    - **Remote Access**  
 
-   :::image type="content" source="media/error-0x80070005-access-denied/dcom-access-permissions-for-activation.png" alt-text="Screenshot of the Access Permission dialog box and its parent My Computer Properties dialog box":::
+   :::image type="content" source="media/error-0x80070005-access-denied/dcom-access-permissions-for-activation.png" alt-text="Screenshot of the Access Permission dialog box and its parent My Computer Properties dialog box.":::
 1. Select **OK** to close **Access Permission**, and then select **OK** to close **My Computer Properties**.
 1. Restart the computer.

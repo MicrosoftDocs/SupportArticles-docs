@@ -934,7 +934,7 @@
       href: ./deployment/0xc004f063-when-activating-oem-version.md
     - name: Application Event Log Warning ID 1058
       href: ./deployment/application-event-log-warning-id-1058.md
-    - name: 'Error 0x80070005 (Access denied) when you activate Windows'
+    - name: 'Error 0x80070005 "Access denied" when you activate Windows'
       href: ./deployment/error-0x80070005-access-denied.md
     - name: Error 0x8007000D when you activate a machine
       href: ./deployment/0x8007000d-activate-machine.md
