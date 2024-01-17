@@ -4,7 +4,6 @@ description: This article describes a problem that prevents you from saving a fi
 ms.date: 04/27/2020
 ms.custom: sap:Project/Build System
 ms.reviewer: eddo, yaarai
-ms.technology: visual-cpp-project-build
 ---
 # Can't save a file setting in a Visual C++ 2013 project
 
