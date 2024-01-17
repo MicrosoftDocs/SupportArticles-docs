@@ -4,7 +4,7 @@ description: Troubleshoot a failed Linux compute node agent extension installati
 ms.date: 10/05/2022
 editor: v-jsitser
 ms.reviewer: cargonz, v-leedennis
-ms.prod: hpcpack
+ms.service: hpcpack
 keywords: Linux compute node agent extension, high-performance computing, HPC Pack, HPC Pack Linux node agent extension, LinuxNodeAgent2016U1, compute node, extension log, Linux node agent
 #Customer intent: As a Microsoft HPC Pack user, I want to troubleshoot a failed Linux compute node agent extension installation so that I can successfully connect to a Linux compute node from a head node on a high-performance computing (HPC) cluster.
 ---
