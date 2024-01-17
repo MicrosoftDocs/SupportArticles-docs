@@ -3,7 +3,6 @@ title: Online games error in Internet Explorer
 description: Troubleshoot online game by updating your add-ons in Internet Explorer. Some sites that may be affected are Yahoo games, Facebook games, MSN games, and online games with other sites.
 ms.date: 03/31/2023
 ms.reviewer: 
-ms.technology: internet-explorer-development-website
 ---
 # Troubleshoot problems playing online games using Internet Explorer
 
