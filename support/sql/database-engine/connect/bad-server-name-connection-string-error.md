@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting the bad server name in connection string
 description: This article provides a workaround for the consistent authentication issue when there is a bad server name in connection string.
-ms.date: 01/17/2024
+ms.date: 01/12/2024
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
@@ -42,7 +42,7 @@ You might also see either of the following error messages in the SQL Server erro
 
 ## Cause
 
-You might experience these errors if you deploy an application that uses a DEV or QA server into production and also if you don't update the connection string.
+You will experience these errors if you deploy an application that uses a DEV or QA server into production and you don't update the connection string.
 
 ## Solution
 
