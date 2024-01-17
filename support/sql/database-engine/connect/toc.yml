@@ -5,6 +5,8 @@ items:
   href: cannot-generate-sspi-context-error.md
 - name: Can't use Kerberos unconstrained delegation in Windows
   href: windows-prevents-unconstrained-delegation.md
+- name: Certificate validation failure
+  href: certificate-validation-failure.md
 - name: Consistent SQL network connectivity issue
   href: consistent-sql-network-connectivity-issue.md
 - name: Existing connection forcibly closed
