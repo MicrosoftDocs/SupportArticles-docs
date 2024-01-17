@@ -74,6 +74,7 @@
         "power-platform/**.*": "MSDocsHeader-PowerPlatform",
         "power-platform/power-apps/**.*": "MSDocsHeader-MSPowerApps",
         "power-platform/power-automate/**.*": "MSDocsHeader-MSPowerAutomate",
+        "sales-copilot/**.*": "MSDocsHeader-MicrosoftSalesCopilot",
         "sql/**.*": "MSDocsHeader-DocsSQL",
         "system-center/**.*": "MSDocsHeader-SystemCenter",
         "windows/**.*": "MSDocsHeader-Windows",
@@ -302,6 +303,7 @@
         "dynamics-365/remote-assist/**/**.*": "dynamics-365-remote-assist",
         "dynamics-365/field-service/**/**.*": "dynamics-365-field-service",
         "mem/intune/**/*.md": "microsoft-intune",
+        "sales-copilot/**/*.md": "microsoft-sales-copilot",
         "power-platform/ai-builder/*.md": "aibuilder",
         "sql/**/*.md": "sql",
         "sql/analysis-services/**/*.md": "analysis-services",
@@ -467,6 +469,7 @@
         "power-platform/power-automate/*.md": "Power Automate",
         "power-platform/power-automate/**/*.md": "Power Automate",
         "power-platform/ai-builder/*.md": "AI Builder",
+        "sales-copilot/**/*.md": "Copilot for Sales",
         "dynamics/gp/*.md": "Dynamics GP"
       },
       "searchScope": {
@@ -536,6 +539,10 @@
         "mem/intune/**/*.md": [
           "Troubleshoot",
           "Intune"
+        ],
+        "sales-copilot/**/*.md": [
+          "Troubleshoot",
+          "Copilot for Sales"
         ],
         "mem/configmgr/**/*.md": [
           "Troubleshoot",
