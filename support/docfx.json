@@ -411,6 +411,7 @@
         "developer/browsers/installation/**/*.md": "installation",
         "developer/browsers/development-website/**/*.md": "development-website",
         "developer/browsers/core-features/**/*.md": "core-features",
+        "developer/visualstudio/visual-basic/ide/*.md": "ide",
         "developer/webapps/aspnet/development/**/*.md": "development",
         "developer/webapps/aspnet/www-administration-management/**/*.md": "www-admin-mgt",
         "developer/webapps/aspnet/site-behavior-performance/**/*.md": "site-behavior-performance",
