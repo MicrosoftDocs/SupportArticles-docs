@@ -3,7 +3,6 @@ title: Enhanced Protected Mode add-on compatibility
 description: Describes Enhanced Protected Mode for Windows 8.1 Preview, and explains how to disable the feature when it is necessary.
 ms.date: 10/13/2020
 ms.reviewer: fhigman, ramakoni
-ms.technology: internet-explorer-administration
 ---
 # Enhanced Protected Mode add-on compatibility
 
