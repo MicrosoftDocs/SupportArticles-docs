@@ -18,7 +18,7 @@ This article lists debug tools for ACI
 - [Log Analytics](https://docs.microsoft.com/azure/container-instances/container-instances-log-analytics)
 - [Application Insights](https://docs.microsoft.com/azure/azure-monitor/app/api-custom-events-metrics)
 - [Ping/Keep Alive Command](https://docs.microsoft.com/azure/container-instances/container-instances-troubleshooting#container-continually-exits-and-restarts-no-long-running-process)
-- [Update a Container Group](https://docs.microsoft.com/en-us/azure/container-instances/container-instances-update)
+- [Update a Container Group](https://docs.microsoft.com/azure/container-instances/container-instances-update)
   
 ## Next Steps
 
