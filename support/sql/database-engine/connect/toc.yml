@@ -3,6 +3,8 @@ items:
   href: resolve-connectivity-errors-overview.md
 - name: Cannot generate SSPI context
   href: cannot-generate-sspi-context-error.md
+- name: Can't use Kerberos unconstrained delegation in Windows
+  href: windows-prevents-unconstrained-delegation.md
 - name: Consistent SQL network connectivity issue
   href: consistent-sql-network-connectivity-issue.md
 - name: Existing connection forcibly closed
