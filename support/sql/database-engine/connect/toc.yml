@@ -5,7 +5,7 @@ items:
   href: cannot-generate-sspi-context-error.md
 - name: Consistent SQL network connectivity issue
   href: consistent-sql-network-connectivity-issue.md
-- name: Determine if I'm connected to SQL Server using Kerberos authentication
+- name: Determine if you are connected to SQL Server using Kerberos authentication
   href: determine-the-authentication-type.md
 - name: Existing connection forcibly closed
   href: tls-exist-connection-closed.md
