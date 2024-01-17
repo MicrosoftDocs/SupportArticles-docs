@@ -1,3 +1,11 @@
+---
+author: genlin
+ms.author: genli
+ms.service: virtual-machines
+ms.topic: include
+ms.date: 01/16/2024
+ms.reviewer: jarrettr
+---
 1. Open an elevated command prompt session as an administrator.
 1. Run the following [BCDEdit](/windows-server/administration/windows-commands/bcdedit) commands using the [/ems](/windows-hardware/drivers/devtest/bcdedit--ems) and [/emssettings](/windows-hardware/drivers/devtest/bcdedit--emssettings) options:
 
