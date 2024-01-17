@@ -146,7 +146,7 @@ To identify the slow steps in the query by using [Lightweight query execution st
 
 1. Start the affected never-ending query from application.
 
-1. Run the following commands frequently to check the run-time execution statistics for the query plan operators:
+1. Run the following command multiple times a minute or so apart to check the run-time execution statistics for the query plan operators:
 
     ```sql
     SELECT CONVERT (varchar(30), getdate(), 126) as runtime,
