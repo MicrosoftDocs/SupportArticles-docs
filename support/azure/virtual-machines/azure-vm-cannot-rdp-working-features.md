@@ -37,7 +37,7 @@ Refresh the screenshot in boot diagnostics a few times to monitor if there's any
 
 ### Create and Access a Repair VM<a id="1"></a>
 
-1. Use [steps 1-3 of the VM Repair Commands](/azure/virtual-machines/troubleshooting/repair-windows-vm-using-azure-virtual-machine-repair-commands#repair-process-example) to prepare a Repair VM.
+1. Use [steps 1-3 of the VM Repair Commands](https://docs.microsoft.com/azure/virtual-machines/troubleshooting/repair-windows-vm-using-azure-virtual-machine-repair-commands#repair-process-example) to prepare a Repair VM.
 2. Use Remote Desktop Connection connect to the Repair VM.
 
 ### Use DISM to roll back the change<a id="2"></a>
