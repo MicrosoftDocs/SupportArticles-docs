@@ -29,7 +29,7 @@ landingContent:
             url: administration/attibutemap-error-upgrade.md
           - text: Entity record texts have duplicated numbers
             url: administration/entity-names-duplicated-numbers.md
-          - text: '"The user hasn't been assigned any roles" error'
+          - text: '"The user has not been assigned any roles" error'
             url: administration/user-has-no-roles.md
   
   # Card

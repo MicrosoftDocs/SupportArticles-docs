@@ -21,7 +21,7 @@ When a user tries to access work orders, the following error message appears, in
 > [!NOTE]
 > You need administrator permissions in Dynamics 365 Field Service to perform the following action.
 
-To solve this issue, [assign the correct security role and field security profile](dynamics365/field-service/flw-admin?tabs=viva#assign-security-roles-and-field-security-profiles) to the user.
+To solve this issue, [assign the correct security role and field security profile](/dynamics365/field-service/flw-admin?tabs=viva#assign-security-roles-and-field-security-profiles) to the user.
 
 ## More information
 

@@ -13,7 +13,7 @@
           href: administration/attibutemap-error-upgrade.md
         - name: Entity record names have duplicated numbers
           href: administration/entity-names-duplicated-numbers.md
-        - name: '"The user hasn't been assigned any roles" error'
+        - name: '"The user has not been assigned any roles" error'
           href: administration/user-has-no-roles.md
     - name: Customization
       items:
