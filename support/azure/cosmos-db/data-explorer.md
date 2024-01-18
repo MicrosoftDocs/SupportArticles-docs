@@ -1,6 +1,6 @@
 ---
 title: Azure Cosmos DB Data Explorer fails to connect
-description: Troubleshoot scenarios when the Azure Cosmos DB data explorer cannot connect to an account and perform specific data-plane or control-plane operations.
+description: Troubleshoot scenarios when the Azure Cosmos DB data explorer can't connect to an account and perform specific data-plane or control-plane operations.
 author: seesharprun
 editor: v-jsitser
 ms.author: sidandrews
@@ -12,7 +12,7 @@ ms.date: 01/18/2024
 
 # Azure Cosmos DB Data Explorer fails to connect
 
-There are occasional situations where the Azure Cosmos DB Data Explorer cannot connect to your account or perform operations against resources or items. This article reviews potential causes and solutions for this issue.
+There are occasional situations where the Azure Cosmos DB Data Explorer can't connect to your account or perform operations against resources or items. This article reviews potential causes and solutions for this issue.
 
 > [!IMPORTANT]
 > The Azure Cosmos DB Data Explorer is not available for the API for PostgreSQL or the API for MongoDB vCore.
