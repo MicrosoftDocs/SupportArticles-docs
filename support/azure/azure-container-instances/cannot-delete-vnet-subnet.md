@@ -1,7 +1,7 @@
 ---
 title: Can't delete a virtual network or subnet used by ACI
 description: Discusses how to troubleshoot failures when you delete a virtual network or subnet used by Azure Container Instances (ACI).
-ms.date: 01/05/2024
+ms.date: 01/18/2024
 ms.service: container-instances
 ms.reviewer: tysonfreeman, v-weizhu
 ---
@@ -44,7 +44,7 @@ Error: 'Subnet /subscriptions/<subscription-id>/resourceGroups/<resource-group-n
 
 The subnet delegation required by ACI must reference a residual Service Association Link, which prevents the deletion of the VNet or subnet used by ACI.
 
-## Workaround for cause 1: Delete the Service Association Link
+## Workaround 1 for cause 1: Delete the Service Association Link
 
 1. Navigate to the subnet in the Azure portal.
 2. Change the subnet delegation to **None**.
@@ -116,9 +116,12 @@ If deleting the network profile fails through the Azure portal and Azure CLI, up
     ```
 3. Delete the network profile and the subnet.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+## References
 
-## Next Steps 
-If the previous checks did not resolve the incident, please submit a [support request](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportrequest) 
-Azure Container Registry ResourceURI 
-Container Group ARM template (or other reference used to deetermine the ACI configuration deployed). 
+- [Managed identities in Azure Container Apps](/azure/container-apps/managed-identity)
+
+- [Azure Container Apps image pull with managed identity](/azure/container-apps/managed-identity-image-pull)
+
+- [Tutorial: Deploy a multi-container group using a Resource Manager template](/azure/container-instances/container-instances-multi-container-group)
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
