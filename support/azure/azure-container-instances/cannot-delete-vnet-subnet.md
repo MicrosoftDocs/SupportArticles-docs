@@ -28,7 +28,7 @@ In order to delete the subnet, delete all the resources within the subnet. See a
 
 ```output
 Failed to delete subnet '<subnet-name>'. 
-Error: Subnet <subnet-name> is in use by /subscriptions/<subscription-id>/resourceGroups/<resource-group-name>/providers/Microsoft.Network/networkProfiles/aci-network-profile-<network-profile-name>/containerNetworkInterfaceConfigurations/eth0/ipConfigurations/ipconfigprofile'>aci-network-profile-<network-profile-name>/eth0/ipconfigprofile and cannot be deleted. 
+Error: Subnet <subnet-name> is in use by /subscriptions/<subscription-id>/resourceGroups/<resource-group-name>/providers/Microsoft.Network/networkProfiles/aci-network-profile-<network-profile-name>/containerNetworkInterfaceConfigurations/eth0/ipConfigurations/ipconfigprofile/aci-network-profile-<network-profile-name>/eth0/ipconfigprofile and cannot be deleted. 
 In order to delete the subnet, delete all the resources within the subnet. See aka.ms/deletesubnet.
 ```
 
