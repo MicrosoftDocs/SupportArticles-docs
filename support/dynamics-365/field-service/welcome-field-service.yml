@@ -9,7 +9,7 @@ metadata:
   ms.service: dynamics-365-field-service
   author: m-hartmann
   ms.author: mhart
-  ms.date: 01/09/2024
+  ms.date: 01/18/2024
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -20,7 +20,7 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Can't find a user when setting up frontline workers
-            url: administration/cant-find-user.md
+            url: administration/cannot-find-user-set-up-frontline-workers.md
           - text: Can't identify the user in an error message
             url: administration/cant-identify-user.md
           - text: Date Window Start/End fields don't exist
@@ -29,7 +29,7 @@ landingContent:
             url: administration/attibutemap-error-upgrade.md
           - text: Entity record texts have duplicated numbers
             url: administration/entity-names-duplicated-numbers.md
-          - text: Incorrect user privileges error
+          - text: '"The user hasn't been assigned any roles" error'
             url: administration/user-has-no-roles.md
   
   # Card

@@ -4,7 +4,7 @@
     - name: Administration and settings
       items:
         - name: Can't find a user when setting up frontline workers
-          href: administration/cant-find-user.md
+          href: administration/cannot-find-user-set-up-frontline-workers.md
         - name: Can't identify the user in an error message
           href: administration/cant-identify-user.md
         - name: Date Window Start/End fields don't exist
@@ -13,7 +13,7 @@
           href: administration/attibutemap-error-upgrade.md
         - name: Entity record names have duplicated numbers
           href: administration/entity-names-duplicated-numbers.md
-        - name: Incorrect user privileges error
+        - name: '"The user hasn't been assigned any roles" error'
           href: administration/user-has-no-roles.md
     - name: Customization
       items:
@@ -23,9 +23,9 @@
           href: customization/forms-record-read-only-error.md
     - name: Integrations
       items:
-        - name: Create permissions error occurs in Microsoft Outlook or Teams
+        - name: Create permissions error in Microsoft Outlook or Teams
           href: integrations/create-permissions-error.md
-        - name: Viva Connections dashboard doesn't have the correct tiles
+        - name: Viva Connections dashboard doesn't show the correct tiles
           href: integrations/viva-incorrect-tiles.md
     - name: IoT and Connected Field Service
       items:
