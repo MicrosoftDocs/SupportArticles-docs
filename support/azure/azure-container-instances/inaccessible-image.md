@@ -1,11 +1,11 @@
 ---
 title: DeploymentFailed - InaccessibleImage error code
 description: Learn how to resolve the "InaccessibleImage" error during a deployment failure on Azure Container Instances.
-ms.date: 01/15/2024
+ms.date: 01/18/2024
 author: tysonfms
 ms.author: tysonfreeman
 editor: v-jsitser
-ms.reviewer: v-leedennis
+ms.reviewer: v-leedennis, v-weizhu
 ms.service: container-instances
 ms.topic: troubleshooting-problem-resolution
 #Customer intent: As an Azure administrator, I want to learn how to resolve the "InaccessibleImage" error so that I can successfully deploy an image onto a container instance.
