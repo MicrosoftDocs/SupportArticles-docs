@@ -145,15 +145,25 @@ You shouldn't use parallel execution patterns in plug-ins. This anti-pattern is 
 
 #### Application Insights to the rescue
 
-In the past there was no way to obtain the stack trace or other execution information for the unhandled plug-in exception from the crashed worker process. Dataverse now supports logging of the execution failure to Application Insights. To enable this capability, simply set up an Application Insights environment. Afterwards, plug-in crash logging will happen automatically.
+In the past there was no way to obtain the stack trace or other execution information for the unhandled plug-in exception from the crashed worker process. Dataverse now supports logging of the execution failure to Application Insights. To enable this capability, simply link Application Insights to the environment where your plug-in is registered. Afterwards, plug-in crash logging will happen automatically.
 
 More information: [Export data to Application Insights](/power-platform/admin/set-up-export-application-insights)
 
-Once an Application Insights environment has been set up, a worker process crash results in the following data being made available for troubleshooting the problem.
+Once an Application Insights environment has been linked, a worker process crash results in the following data being made available for troubleshooting the problem.
 
-:::image type="content" source="media/dataverse-appinsights-crash-report.png" alt-text="Example App Insights plug-in crash erport":::
+:::image type="content" source="media/dataverse-appinsights-crash-report.png" alt-text="Example App Insights plug-in crash report":::
 
-Expanding the crash details reveals the stack trace.
+To navigate to the crash report in App Insights, follow these steps.
+
+1. Link App Insights to your environment as described above.
+1. Wait until a plug-in exception results in the worker process error described above.
+1. Navigate to App Insights in the Power Platform admin center.
+1. On the App Insights page, choose **Failures** in the left panel.
+1. On the **Failures** page, choose **Exceptions**.
+1. Below **Exception Problem ID** in the **Overall** list, choose Microsoft.PowerPlatform.Dataverse.Plugin.PluginWorkerCrashException.
+1. On the right side of the page under **Overall**, choose PluginWorkerCrashException. You will see the details for all recorded crash exceptions.
+1. Search for and choose the desired exception in the left panel and the exception details report will be displayed on the right side of the page (as shown in the previous image).
+1. You can now expand **Custom Properties** > **CrashDetails** in the report to access the stack trace.
 
 ### Stack overflow error in the plug-in
 
