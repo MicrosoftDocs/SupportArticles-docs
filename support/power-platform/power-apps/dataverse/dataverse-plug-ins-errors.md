@@ -155,8 +155,8 @@ Once an Application Insights environment has been linked, a worker process crash
 
 To navigate to the crash report in App Insights, follow these steps.
 
-1. Link App Insights to your environment as described above.
-1. Wait until a plug-in exception results in the worker process error described above.
+1. Link App Insights to your environment as described in the linked article above.
+1. Wait until a plug-in exception results in the worker process error.
 1. Navigate to App Insights in the Power Platform admin center.
 1. On the App Insights page, choose **Failures** in the left panel.
 1. On the **Failures** page, choose **Exceptions**.
