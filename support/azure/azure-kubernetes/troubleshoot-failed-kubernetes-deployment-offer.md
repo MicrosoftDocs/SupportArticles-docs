@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot the failed deployment of a Kubernetes application offer
 description: Troubleshoot the failed deployment of a Kubernetes application offer that was made on the Azure Marketplace.
-ms.date: 04/19/2023
+ms.date: 01/18/2024
 ms.reviewer: chiragpa, atchub, v-leedennis
 editor: v-jsitser
 ms.service: azure-kubernetes-service
@@ -122,6 +122,10 @@ Before the subscription can be used, you need to accept the legal terms of the i
 
 #### Solution 6: Accept the legal terms
 
+#### [Portal](#tab/azure-portal)
+
+You can deploy through the [Azure portal](https://portal.azure.com). The Azure portal provides a UI experience for reading and accepting the legal terms.
+
 #### [CLI](#tab/CLI)
 
 You can use the Azure CLI commands that are described in the [Azure CLI legal terms](/cli/azure/vm/image/terms). Although the commands are for VMs, the commands also work for containers.
@@ -130,15 +134,11 @@ You can use the Azure CLI commands that are described in the [Azure CLI legal te
 
 To accept the legal terms through PowerShell, run the cmdlets that are described in the [PowerShell legal terms](/powershell/module/azurerm.marketplaceordering).
 
-#### [Portal](#tab/azure-portal)
-
-You can choose to deploy through the [Azure portal](https://portal.azure.com). The Azure portal provides a UI experience for reading and accepting the legal terms. 
-## Next Steps
-
-For help regarding Marketplace Applications and Extensions please refer [here](/troubleshoot/azure/azure-kubernetes/cluster-extension-deployment-errors).
-
-
 ---
+
+## Next steps
+
+[Troubleshoot errors when deploying AKS cluster extensions](cluster-extension-deployment-errors.md)
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
 
