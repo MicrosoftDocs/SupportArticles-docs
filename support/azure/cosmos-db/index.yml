@@ -21,3 +21,5 @@ landingContent:
             url: ./emulator.md
           - text: Failed private endpoints deployment
             url: ./private-endpoints.md
+          - text: Firewall
+            url: ./firewall.md
