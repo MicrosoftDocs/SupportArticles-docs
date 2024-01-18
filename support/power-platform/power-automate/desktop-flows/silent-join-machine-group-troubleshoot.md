@@ -45,4 +45,4 @@ Follow these steps to resolve the issue:
    You can update user permissions through the [Manage machine groups - Update permissions](/manage-machine-groups#update-permissions-based-on-security-role) documentation.
 
 > [!NOTE]
-> Make sure the user listed as the "Owner" of the machine in the [Power Automate portal](make.powerautomate.com) and the user performing the join operation have appropriate permissions to the machine group.
+> Make sure the user listed as the "Owner" of the machine in the [Power Automate portal](https://make.powerautomate.com) and the user performing the join operation have appropriate permissions to the machine group.
