@@ -5,7 +5,7 @@ summary: This library of articles provides guidance to troubleshoot and fix erro
 metadata:
   title: Exchange Server troubleshooting
   description: Documentation for troubleshooting common issues with Exchange Server.
-  ms.prod: exchange-server-it-pro
+  ms.service: exchange-server-it-pro
   ms.topic: landing-page
   author: cloud-writer
   ms.author: meerak
