@@ -4,7 +4,7 @@
     - name: Administration and settings
       items:
         - name: Can't find a user when setting up frontline workers
-          href: administration/cant-find-user.md
+          href: administration/cannot-find-user-set-up-frontline-workers.md
         - name: Can't identify the user in an error message
           href: administration/cant-identify-user.md
         - name: Date Window Start/End fields don't exist

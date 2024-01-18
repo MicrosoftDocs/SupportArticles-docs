@@ -20,7 +20,7 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Can't find a user when setting up frontline workers
-            url: administration/cant-find-user.md
+            url: administration/cannot-find-user-set-up-frontline-workers.md
           - text: Can't identify the user in an error message
             url: administration/cant-identify-user.md
           - text: Date Window Start/End fields don't exist
