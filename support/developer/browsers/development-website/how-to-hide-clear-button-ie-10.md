@@ -3,7 +3,6 @@ title: Hide the Clear button in Internet Explorer
 description: This article describes that when the Internet Explorer text input control has the focus and isn't empty, the clear button will be displayed in all rendering modes. After you press, the input field will be cleared.
 ms.date: 06/09/2020
 ms.reviewer: jeanr
-ms.technology: internet-explorer-development-website
 ---
 # How to hide the Clear button in Internet Explorer 10
 

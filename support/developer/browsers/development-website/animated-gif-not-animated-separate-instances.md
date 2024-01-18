@@ -4,7 +4,6 @@ description: This article provides a workaround for the problem where an animate
 ms.date: 01/04/2021
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.technology: internet-explorer-development-website
 ---
 # Animated GIF is not animated in all instances of the WebBrowser control in the same process
 
