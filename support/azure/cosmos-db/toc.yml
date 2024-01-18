@@ -4,5 +4,5 @@
   href: emulator.md
 - name: Failed private endpoints deployment
   href: private-endpoints.md
-- name: Firewall
-  href: firewall.md
+- name: Data Explorer fails to connect
+  href: data-explorer.md
