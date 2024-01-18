@@ -102,13 +102,9 @@
       "feedback_product_url": {
         "ExchangeOnline/**/*.md": "https://admin.exchange.microsoft.com"
       },
-      "ms.prod": {
-      },
-      "ms.technology": {
-      },
       "ms.service": {
         "ExchangeOnline/**/*.md": "exchange-online",
-        "ExchangeHybrid/**/*.md": "exchange-online"        ,
+        "ExchangeHybrid/**/*.md": "exchange-online",
         "ExchangeServer/**/*.md": "exchange-server-it-pro"
       },
       "ms.subservice": {
