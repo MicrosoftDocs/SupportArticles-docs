@@ -25,3 +25,5 @@ The `MaxLength` property of the [ChangedAttributeList](/power-apps/developer/dat
 To solve this issue, simplify your existing SLA structure. Here's an example:
 
 SLA 1 includes 10 SLA items. Create a new SLA named SLA 2. Transfer five SLA items from SLA 1 to SLA 2. You now have two SLAs, each containing five SLA items. This approach helps streamline and manage SLAs more effectively based on specific requirements.
+
+Users are required to develop custom logic, workflows/flows, or plugins to establish the application of SLA 2 for newly created cases.
