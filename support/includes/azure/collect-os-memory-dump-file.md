@@ -1,9 +1,10 @@
 ---
-author: JarrettRenshaw
+author: genlin
+ms.author: genli
 ms.service: virtual-machines
 ms.topic: include
 ms.date: 12/18/2023
-ms.author: jarrettr
+ms.reviewer: jarrettr
 ---
 ##### Part 1: Attach the OS disk to a recovery VM
 
