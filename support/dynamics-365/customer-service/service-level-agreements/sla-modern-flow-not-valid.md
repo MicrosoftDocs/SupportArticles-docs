@@ -43,9 +43,15 @@ Here are the steps to turn off or turn on a flow:
 
     :::image type="content" source="media/sla-modern-flow-not-valid/cloud-flows.png" alt-text="Screenshot shows the Cloud flows option in the left menu." border="false":::
 
-6. To get the affected flow name, initiate an Open Data Protocol (OData) call using the affected flow ID from the error, and then search the flow name in Power Automate. For example:
+6. To get the affected flow name, initiate an Open Data Protocol (OData) call using the affected flow ID from the error, and then search the flow name in Power Automate. 
 
    (<organization_url>)/api/data/v9.1/workflows(<modern_flow_id_visible_in_error>)
+
+    For example:
+
+   "name": "Set defaullt CDS entity workstream rule",
+
+   :::image type="content" source="media/sla-modern-flow-not-valid/screenshot-of-flow-name.png" alt-text="Screenshot shows how to identify flow name through OData call." border="false":::
 
 7. Select the respective flow, and then select **Turn off** and then **Turn on** from the top menu.
 
