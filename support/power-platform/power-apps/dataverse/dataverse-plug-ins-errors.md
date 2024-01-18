@@ -156,14 +156,14 @@ Once an Application Insights environment has been linked, a worker process crash
 To navigate to the crash report in App Insights, follow these steps.
 
 1. Link App Insights to your environment as described in the linked article above.
-1. Wait until a plug-in exception results in the worker process error.
+1. Wait until a plug-in exception results in the worker process crash error.
 1. Navigate to App Insights in the Power Platform admin center.
 1. On the App Insights page, choose **Failures** in the left panel.
 1. On the **Failures** page, choose **Exceptions**.
 1. Below **Exception Problem ID** in the **Overall** list, choose Microsoft.PowerPlatform.Dataverse.Plugin.PluginWorkerCrashException.
-1. On the right side of the page under **Overall**, choose PluginWorkerCrashException. You will see the details for all recorded crash exceptions.
+1. On the right side of the page under **Overall**, choose PluginWorkerCrashException. You will now see the details for all recorded worker process crash exceptions.
 1. Search for and choose the desired exception in the left panel and the exception details report will be displayed on the right side of the page (as shown in the previous image).
-1. You can now expand **Custom Properties** > **CrashDetails** in the report to access the stack trace.
+1. You can now expand **CrashDetails** in the report to access the stack trace.
 
 ### Stack overflow error in the plug-in
 
