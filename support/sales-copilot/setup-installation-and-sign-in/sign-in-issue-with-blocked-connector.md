@@ -1,7 +1,7 @@
 ---
 title: Can't sign in to Salesforce due to blocked Salesforce connector
 description: Resolves an error message that occurs in Copilot for Sales when you can't sign in to Salesforce due to a blocked Salesforce connector.
-ms.date: 01/10/2024
+ms.date: 01/22/2024
 ms.service: microsoft-sales-copilot
 author: sbmjais
 ms.author: shjais
@@ -34,9 +34,9 @@ When you try to sign in to Salesforce from Copilot for Sales, the following erro
 
 ## Cause
 
-The Salesforce connector is blocked in the default environment.
+The Salesforce connector is blocked in the msdyn_viva environment.
 
-The Data Loss Prevention (DLP) policy is enabled in the tenant's default environment, thereby blocking the Salesforce connector.
+The Data Loss Prevention (DLP) policy is enabled in the tenant's msdyn_viva environment, thereby blocking the Salesforce connector.
 
 ## Resolution
 
