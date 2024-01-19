@@ -4,7 +4,7 @@ description: Resolves an error message that occurs when you activate an SLA in M
 ms.reviewer: sdas, v-zolu, mpanduranga
 ms.author: v-psuraty
 author: v-psuraty
-ms.date: 01/10/2024
+ms.date: 01/19/2024
 ---
 # "String or binary data would be truncated" error when activating an SLA
 
@@ -26,4 +26,4 @@ To solve this issue, simplify your existing SLA structure. Here's an example:
 
 SLA 1 includes 10 SLA items. Create a new SLA named SLA 2. Transfer five SLA items from SLA 1 to SLA 2. You now have two SLAs, each containing five SLA items. This approach helps streamline and manage SLAs more effectively based on specific requirements.
 
-Users are required to develop custom logic, workflows/flows, or plugins to establish the application of SLA 2 for newly created cases.
+To establish the application of SLA 2 for newly created cases, you need to develop custom logic, workflows/flows, or plugins.
