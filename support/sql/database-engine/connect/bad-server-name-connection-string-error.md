@@ -1,16 +1,16 @@
 ---
-title: Troubleshooting the bad server name in connection string
+title: Troubleshooting incorrect server name in connection string
 description: This article provides a workaround for the consistent authentication issue when there is a bad server name in connection string.
-ms.date: 01/12/2024
+ms.date: 01/19/2024
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 
-# Bad server name in connection string
+# Login failed due to incorrect server name in connection string
 
-This article helps you to resolve the issues that might arise from the consistent authentication issue related to bad server name in a connection string.
+This article helps you to resolve an consistent authentication issue that might arise when the specified server name isn't correct.
 
 ## Symptoms
 
@@ -42,7 +42,7 @@ You might also see either of the following error messages in the SQL Server erro
 
 ## Cause
 
-You will experience these errors if you deploy an application that uses a DEV or QA server into production and you don't update the connection string.
+There mght You will experience these errors if you deploy an application that uses a DEV or QA server into production and you don't update the connection string.
 
 ## Solution
 
