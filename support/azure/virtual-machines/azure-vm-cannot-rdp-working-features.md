@@ -1,8 +1,8 @@
 ---
 title: Azure VM cannot RDP - working on features
 description: Troubleshoot Azure VM cannot RDP - working on features.
-ms.date: 12/16/2020
-ms.reviewer: 
+ms.date: 01/19/2024
+ms.reviewer: trmaier, v-weizhu
 ms.service: virtual-machines
 ms.subservice: vm-cannot-start-stop
 ms.collection: windows
@@ -28,17 +28,17 @@ A role or feature was added or removed from Windows.
 
 Refresh the screenshot in boot diagnostics a few times to monitor if there's any progress or if the VM is stuck. Only intercede if the machine is indeed stuck otherwise, you could break the role/feature further.
 
-### Process Overview
+### Process overview
 
-1. [Create and Access a Repair VM](#1)
+1. [Create and Access a repair VM](#1)
 2. [Use DISM to rollback the change](#2)
 3. [Enable Serial Console and Memory Dump Collection](#3)
 4. [Rebuild the VM](#4)
 
-### Create and Access a Repair VM<a id="1"></a>
+### Create and access a repair VM<a id="1"></a>
 
-1. Use [steps 1-3 of the VM Repair Commands](https://docs.microsoft.com/azure/virtual-machines/troubleshooting/repair-windows-vm-using-azure-virtual-machine-repair-commands#repair-process-example) to prepare a Repair VM.
-2. Use Remote Desktop Connection connect to the Repair VM.
+1. Use [steps 1-3 of the VM repair commands](repair-windows-vm-using-azure-virtual-machine-repair-commands.md#repair-process-example) to prepare a repair VM.
+2. Use Remote Desktop Connection connect to the repair VM.
 
 ### Use DISM to roll back the change<a id="2"></a>
 
@@ -71,7 +71,7 @@ Refresh the screenshot in boot diagnostics a few times to monitor if there's any
 
 **Recommended**: Before you rebuild the VM, enable the Serial Console and memory dump collection by running the following script:
 
-1. Open an elevated command prompt session as an Administrator.
+1. Open an elevated command prompt session as an administrator.
 1. Run the following commands:
 
    **Enable the Serial Console**:
@@ -117,6 +117,6 @@ Refresh the screenshot in boot diagnostics a few times to monitor if there's any
 
 ### Rebuild the VM<a id="4"></a>
 
-Use [step 5 of the VM Repair Commands](/azure/virtual-machines/troubleshooting/repair-windows-vm-using-azure-virtual-machine-repair-commands#repair-process-example) to reassemble the VM.
+Use [step 5 of the VM repair commands](repair-windows-vm-using-azure-virtual-machine-repair-commands.md#repair-process-example) to reassemble the VM.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
