@@ -1,10 +1,10 @@
 ---
 title: Troubleshoot queries that seem to never complete in SQL Server
 description: Provides steps to help you identify and resolve issues where a query runs for a long time in SQL Server.
-ms.date: 05/15/2023
+ms.date: 01/19/2024
 ms.custom: sap:Performance
 ms.topic: troubleshooting
-ms.reviewer: shaunbe
+ms.reviewer: shaunbe, v-jayaramanp
 author: pijocoder
 ms.author: jopilov
 ---
@@ -77,7 +77,7 @@ To identify whether a query is continuously executing or stuck on a bottleneck, 
 
 1. Check the sample output.
 
-    - The troubleshooting steps in this article apply if you observe an output similar to the following one where the CPU is increasing proportionately with the elapsed time, and there aren't significant waits. Keep in mind that changes in `logical_reads` aren't relevant in this case as some CPU-bound T-SQL requests might not do any logical reads at all (for example performing computations or a `WHILE` loop).
+    - The troubleshooting steps in this article are specifically applicable when you notice an output similar to the following one where the CPU is increasing proportionately with the elapsed time, without significant wait times. It's important to note that changes in `logical_reads` aren't relevant in this case as some CPU-bound T-SQL requests might not do any logical reads at all (for example performing computations or a `WHILE` loop).
 
         session_id|status| cpu_time | logical_reads |wait_time|wait_type|
         |--|--|--|--|--|--|
