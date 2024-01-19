@@ -362,14 +362,7 @@ When a plug-in executes in the context of a disabled user, the following error i
 
 > Error Message: System.ServiceModel.FaultException`1[Microsoft.Xrm.Sdk.OrganizationServiceFault]: The user with **SystemUserId=\<User-ID\>** in OrganizationContext=\<Context\> is disabled. Disabled users cannot access the system. Consider enabling this user. Also, users are disabled if they don't have a license assigned to them.
 
-To troubleshoot this error, you can execute a query to find the offending step of registering the plug-in.
-
-```http
-https://<env-url>/api/data/v9.2/sdkmessageprocessingsteps
-?$filter=_impersonatinguserid_value eq '<disabled-userId-from-error>'
-```
-
-Then, you can query to identify plug-in details related to the offending step.
+To troubleshoot this error, you can execute a query to find the steps registered to the disabled user as well as the associated plug-in and `sdkmessage` details.
 
 ```http
 https://<env-url>/api/data/v9.2/sdkmessageprocessingsteps
