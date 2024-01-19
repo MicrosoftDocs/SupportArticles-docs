@@ -21,7 +21,7 @@ Login failed for user 'userx' - This error message is shown when the providers u
 Login failed for user 'CONTOSO\user1' - This error message is shown when the providers use a Windows login.
 ```
 
-The Microsoft ODBC Driver 13 for SQL Server generates the following error message:
+The Microsoft ODBC Driver 13 for SQL Server shows the following error message:
 
 > Login failed for user 'CONTOSO\user1'
 
@@ -42,7 +42,7 @@ You might also see either of the following error messages in the SQL Server erro
 
 ## Cause
 
-There mght You will experience these errors if you deploy an application that uses a DEV or QA server into production and you don't update the connection string.
+You will experience these errors if you deploy an application that uses a DEV or QA server into production and you don't update the connection string.
 
 ## Solution
 
