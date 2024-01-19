@@ -1,11 +1,11 @@
 ---
 title: DeploymentFailed - InaccessibleImage error code
-description: Learn how to resolve the InaccessibleImage error during a deployment failure on Azure Container Instances.
-ms.date: 11/22/2023
+description: Learn how to resolve the "InaccessibleImage" error during a deployment failure on Azure Container Instances.
+ms.date: 01/18/2024
 author: tysonfms
 ms.author: tysonfreeman
 editor: v-jsitser
-ms.reviewer: v-leedennis
+ms.reviewer: v-leedennis, v-weizhu
 ms.service: container-instances
 ms.topic: troubleshooting-problem-resolution
 #Customer intent: As an Azure administrator, I want to learn how to resolve the "InaccessibleImage" error so that I can successfully deploy an image onto a container instance.
@@ -47,7 +47,7 @@ You're trying to use a service principal to access the Azure container registry.
 
 You must use a managed identity to allow the Container Instances trusted service to access the container registry. For more information, see [Allow trusted services to securely access a network-restricted container registry](/azure/container-registry/allow-access-trusted-services#about-trusted-services). You can also learn more at [Deploy to Azure Container Instances from Azure Container Registry using a managed identity](/azure/container-instances/using-azure-container-registry-mi).
 
-## More information
+## References
 
 - [Managed identities in Azure Container Apps](/azure/container-apps/managed-identity)
 
