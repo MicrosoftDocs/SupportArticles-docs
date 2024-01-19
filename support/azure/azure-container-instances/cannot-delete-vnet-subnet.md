@@ -1,7 +1,7 @@
 ---
 title: Can't delete a virtual network or subnet used by ACI
 description: Discusses how to troubleshoot failures when you delete a virtual network or subnet used by Azure Container Instances (ACI).
-ms.date: 01/18/2024
+ms.date: 01/19/2024
 ms.service: container-instances
 ms.reviewer: tysonfreeman, v-weizhu
 ---
@@ -44,7 +44,7 @@ This article discusses errors that occur when you delete a virtual network (VNet
 
 The subnet delegation required by ACI must reference a residual Service Association Link, which prevents the deletion of the VNet or subnet used by ACI.
 
-### Workaround for cause 1: Delete the Service Association Link
+### Workaround: Delete the Service Association Link
 
 1. Navigate to the subnet in the Azure portal.
 2. Change the subnet delegation to **None**.
@@ -65,7 +65,7 @@ The subnet delegation required by ACI must reference a residual Service Associat
 
 When you remove the container group, the network profile created by ACI during the container group creation might not be properly deleted. This results in something remaining within the VNet or subnet, which blocks certain delete operations.
 
-### Workaround 1 for cause 2: Delete the network profile of the container group from the Azure portal
+### Workaround 1: Delete the network profile of the container group from the Azure portal
 
 After deleting all ACI container groups, follow these steps:
 
@@ -75,7 +75,7 @@ After deleting all ACI container groups, follow these steps:
 4. Select **Delete**.
 5. Delete the VNet or subnet.
 
-### Workaround 2 for cause 2: Delete the network profile of the container group via Azure CLI
+### Workaround 2: Delete the network profile of the container group via Azure CLI
 
 After deleting all ACI container groups, follow these steps:
 
@@ -100,7 +100,7 @@ After deleting all ACI container groups, follow these steps:
     az network vnet delete --resource-group $RES_GROUP --name $SUBNET_NAME
     ```
 
-### Workaround 3 for cause 2: Update the containerNetworkInterfaceConfigurations property via Azure CLI
+### Workaround 3: Update the containerNetworkInterfaceConfigurations property via Azure CLI
 
 If deleting the network profile through the Azure portal and Azure CLI fails, update the network profile property `containerNetworkInterfaceConfigurations` to an empty list:
 
