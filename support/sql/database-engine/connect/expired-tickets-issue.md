@@ -1,26 +1,30 @@
 ---
-title: Troubleshooting the expired tickets issue 
-description: This article provides symptoms and resolution for the expired tickets issue.
-ms.date: 01/04/2024
+title: Troubleshooting Kerberos tickets issue 
+description: This article provides symptoms and resolution for the consistent authentication specific issue related to Kerberos tickets.
+ms.date: 01/19/2024
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 
-# Expired tickets issue
+# Troubleshooting issues in Kerberos tickets
 
-This article helps you resolve the issue related to the Expired tickets.
+This article helps you resolve consistent authentication issues that might arise because of Kerberos tickets.
+
+Kerberos is a protocol that uses secret key for providing secure authentication for client or server applications. A ticket is issued to a user for successful authentication. Kerberos tickets usually have a lifetime of about 10 hours and should be automatically renewed.
 
 ## Symptoms
 
-The "Expired tickets" issue might occur in Kerberos authentication, which indicates that a service has failed.
+Consider the following scenario when the user presents expired tokens. The Key Distribution Center (KDC) shows the `KRB_AP_ERR_TKT_EXPIRED` error, which indicates that a service has failed.
 
-Kerberos tickets usually have a lifetime of about 10 hours and should be automatically renewed. Using stale tokens can cause a connection to fail. For more information, see [Kerberos authentication troubleshooting guidance](../../../windows-server/windows-security/kerberos-authentication-troubleshooting-guidance.md).
+## Cause
+
+When a user tries to use an expired ticket for authentication, the Kerberos connection will fail. For more information, see [Kerberos authentication troubleshooting guidance](../../../windows-server/windows-security/kerberos-authentication-troubleshooting-guidance.md).
 
 ## Resolution
 
-To resolve this issue, follow these steps:
+To resolve this error, follow these steps:
 
 1. Use the `KLIST purge` command to clear user tokens, or log off and back on, or restart the machine.
 
