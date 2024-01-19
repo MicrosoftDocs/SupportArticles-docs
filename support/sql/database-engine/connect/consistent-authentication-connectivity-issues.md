@@ -1,7 +1,7 @@
 ---
 title: Introduction to consistent authentication issues
 description: This article introduces to consistent authentication issues, the types of error messages, and workarounds to troubleshoot various issues.
-ms.date: 12/15/2023
+ms.date: 01/19/2024
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes v-jayaramanp
@@ -25,7 +25,7 @@ Before you start troubleshooting, check the [prerequisites](../connect/resolve-c
 
 - Make sure to install the WIRESHARK and Problem Steps Recorder (PSR.EXE) utilities. For more information, see *Methods of collecting data for troubleshooting various types of errors*.
 
-- Collect the SPN information based on the service accounts by using the `SETSPN -L` command.
+- Collect the Service Provider Name (SPN) information based on the service accounts by using the `SETSPN -L` command.
 
 ## Errors
 
@@ -42,7 +42,7 @@ Refers to the Active Directory (AD) errors. If the SQL Server error log file con
 
 ### Login failed specific errors
 
-When you are troubleshooting "Login Failed" error message, the SQL Server error log file can provide more information in the SQL State value with error 18456 (Login Failed). For more information, see [Login failed error codes](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#additional-error-information).
+When you are troubleshooting the "Login Failed" error message, the SQL Server error log file can provide more information in the SQL state value with error 18456 (Login Failed). For more information, see [Login failed error codes](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#additional-error-information).
 
 This section lists the possible error messages and their possible causes.
 
@@ -77,7 +77,7 @@ The following table lists some scenarios that are related to aspects such as dat
 
 ## Issues related to connection string
 
-The following sections provide various scenarios related to connection string issues.
+The following sections provide various issues related to connection string.
 
 |Possible cause  |More information  |
 |---------|---------|
