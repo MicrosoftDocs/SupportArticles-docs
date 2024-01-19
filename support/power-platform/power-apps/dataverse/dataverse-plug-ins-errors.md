@@ -355,6 +355,29 @@ You can register the plug-in to run in the context of a user known to have the c
 - [Register a plug-in](/power-apps/developer/data-platform/register-plug-in)
 - [Impersonate a user](/power-apps/developer/data-platform/impersonate-a-user)
 
+## Error when executing in the context of a disabled user
+
+When a plug-in executes in the context of a disabled user, the following error is returned.
+
+*System.ServiceModel.FaultException`1[Microsoft.Xrm.Sdk.OrganizationServiceFault]: The user with **SystemUserId=03f95650-910f-e911-a94f-000d3a34e525** in OrganizationContext=981838f7-b1c6-4818-b660-f1f7823cae7f is disabled. Disabled users cannot access the system. Consider enabling this user. Also, users are disabled if they dont have a license assigned to them.*
+
+To troubleshoot, you can execute a query to find the offending registered plug-in step.
+
+```http
+https://<env-url>/api/data/v9.2/sdkmessageprocessingsteps
+?$filter=_impersonatinguserid_value eq '<disabled-userId-from-error>'
+```
+
+Next, you can query to identify plug-in details related to the offending step.
+
+```http
+https://<env-url>/api/data/v9.2/sdkmessageprocessingsteps
+?$filter=_impersonatinguserid_value eq '<disabled-userId-from-error>'&
+$expand=plugintypeid($select=name,friendlyname,assemblyname;
+$expand=pluginassemblyid($select=solutionid,name,isolationmode)),sdkmessageid($select=solutionid,name)&
+$select=solutionid,name,stage,_impersonatinguserid_value,mode
+```
+
 ## Error "Message size exceeded when sending context to Sandbox"
 
 > Error Code: -2147220970  
