@@ -57,7 +57,7 @@ E: Couldn't find any package by regex 'dotnet-sdk-2.1.200'
 
 This behavior occurs because the script in different environments (Windows or Linux) is created in different formats. To determine the format, run the **file** command in the Linux bash shell. UNIX systems use a single character, the linefeed character, and Windows systems use both a carriage return and a linefeed (often referred to as CRLF) to terminate lines in text files.
 
-For more information about line terminators, see the [Windows vs. UNIX: Those pesky line terminators topic](https://www.networkworld.com/article/954320/linux/windows-vs-unix-those-pesky-line-terminators.html) on the Network World website.
+For more information about line terminators, see the [Windows vs. UNIX: Those pesky line terminators topic](https://www.networkworld.com/article/954320/windows-vs-unix-those-pesky-line-terminators.html) on the Network World website.
 
 Script examples
 
