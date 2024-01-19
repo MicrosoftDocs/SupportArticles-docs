@@ -359,7 +359,7 @@ You can register the plug-in to run in the context of a user known to have the c
 
 When a plug-in executes in the context of a disabled user, the following error is returned.
 
-*System.ServiceModel.FaultException`1[Microsoft.Xrm.Sdk.OrganizationServiceFault]: The user with **SystemUserId=03f95650-910f-e911-a94f-000d3a34e525** in OrganizationContext=981838f7-b1c6-4818-b660-f1f7823cae7f is disabled. Disabled users cannot access the system. Consider enabling this user. Also, users are disabled if they dont have a license assigned to them.*
+> Error Message: System.ServiceModel.FaultException`1[Microsoft.Xrm.Sdk.OrganizationServiceFault]: The user with **SystemUserId=03f95650-910f-e911-a94f-000d3a34e525** in OrganizationContext=981838f7-b1c6-4818-b660-f1f7823cae7f is disabled. Disabled users cannot access the system. Consider enabling this user. Also, users are disabled if they don't have a license assigned to them.
 
 To troubleshoot, you can execute a query to find the offending registered plug-in step.
 
