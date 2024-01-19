@@ -141,28 +141,28 @@ namespace ErrorRepro
 You shouldn't use parallel execution patterns in plug-ins. This anti-pattern is called out in the best practice article: [Don't use parallel execution within plug-ins and workflow activities](/power-apps/developer/data-platform/best-practices/business-logic/do-not-use-parallel-execution-in-plug-ins). Using these patterns can cause issues managing the transaction in a synchronous plug-in. However, another reason not to use these patterns is that any work done outside of a `try`/`catch` block in a thread delegate can crash the worker process.
 
 > [!IMPORTANT]
-> When the worker process crashes, your plug-in's execution, and any other plug-ins currently executing in that process, will terminate. This includes plug-ins that you do not own or maintain.
+> When the worker process crashes, the execution of your plug-in and other plug-ins currently running in that process will terminate. This inlcudes plug-ins that you do not own or maintain.
 
 #### Application Insights to the rescue
 
-In the past there was no way to obtain the stack trace or other execution information for the unhandled plug-in exception from the crashed worker process. Dataverse now supports logging of the execution failure to Application Insights. To enable this capability, simply link Application Insights to the environment where your plug-in is registered. Afterwards, plug-in crash logging will happen automatically.
+In the past, obtaining the stack trace or other execution information for unhandled plug-in exceptions from the crashed worker process was not possible. However, Dataverse now offers support for logging execution failures to Application Insights. To enable this function, you can link Application Insights to the environment where your plug-in is registered. Once linked, the logging of plug-in crashes will occur automatically.
 
-More information: [Export data to Application Insights](/power-platform/admin/set-up-export-application-insights)
+For more information, see [Export data to Application Insights](/power-platform/admin/set-up-export-application-insights).
 
-Once an Application Insights environment has been linked, a worker process crash results in the following data being made available for troubleshooting the problem.
+After an Application Insights environment has been linked, the following data of a work process crash will be available for troubleshooting the problem.
 
-:::image type="content" source="media/dataverse-appinsights-crash-report.png" alt-text="Example App Insights plug-in crash report":::
+:::image type="content" source="media/dataverse-appinsights-crash-report.png" alt-text="An example of an Application Insights plug-in crash report.":::
 
-To navigate to the crash report in App Insights, follow these steps.
+To navigate to the crash report in Application Insights, follow these steps:
 
-1. Link App Insights to your environment as described in the linked article above.
-1. Wait until a plug-in exception results in the worker process crash error.
-1. Navigate to App Insights in the Power Platform admin center.
-1. On the App Insights page, choose **Failures** in the left panel.
-1. On the **Failures** page, choose **Exceptions**.
-1. Below **Exception Problem ID** in the **Overall** list, choose Microsoft.PowerPlatform.Dataverse.Plugin.PluginWorkerCrashException.
-1. On the right side of the page under **Overall**, choose PluginWorkerCrashException. You will now see the details for all recorded worker process crash exceptions.
-1. Search for and choose the desired exception in the left panel and the exception details report will be displayed on the right side of the page (as shown in the previous image).
+1. [Link Application Insights to your environment](/azure/azure-monitor/app/create-workspace-resource).
+1. Wait until a plug-in exception results in the crash error of the worker process.
+1. In the [Power Platform admin center](https://admin.powerplatform.microsoft.com/), navigate to Application Insights.
+1. On the Application Insights page, select **Failures** in the left panel.
+1. On the **Failures** page, select **Exceptions**.
+1. Under **Exception Problem ID**, in the **Overall** list, select **Microsoft.PowerPlatform.Dataverse.Plugin.PluginWorkerCrashException**.
+1. On the right side of the page, under **Overall**, select **PluginWorkerCrashException**. You will now see the details for all recorded worker process crash exceptions.
+1. Search for and select the desired exception in the left panel, and the exception details report will be displayed on the right side of the page (see the above screenshot for an example).
 1. You can now expand **CrashDetails** in the report to access the stack trace.
 
 ### Stack overflow error in the plug-in
@@ -278,6 +278,7 @@ Exception rethrown at [0]:
   <TraceText i:nil="true" />
 </OrganizationServiceFault>
 ```
+
 ### Worker process reaches the memory limit
 
 Each worker process has a finite amount of memory. There are conditions where multiple concurrent operations that include large amounts of data could exceed the available memory and cause the process worker to crash.
@@ -359,16 +360,16 @@ You can register the plug-in to run in the context of a user known to have the c
 
 When a plug-in executes in the context of a disabled user, the following error is returned.
 
-> Error Message: System.ServiceModel.FaultException`1[Microsoft.Xrm.Sdk.OrganizationServiceFault]: The user with **SystemUserId=03f95650-910f-e911-a94f-000d3a34e525** in OrganizationContext=981838f7-b1c6-4818-b660-f1f7823cae7f is disabled. Disabled users cannot access the system. Consider enabling this user. Also, users are disabled if they don't have a license assigned to them.
+> Error Message: System.ServiceModel.FaultException`1[Microsoft.Xrm.Sdk.OrganizationServiceFault]: The user with **SystemUserId=\<User-ID\>** in OrganizationContext=\<Context\> is disabled. Disabled users cannot access the system. Consider enabling this user. Also, users are disabled if they don't have a license assigned to them.
 
-To troubleshoot, you can execute a query to find the offending registered plug-in step.
+To troubleshoot this error, you can execute a query to find the offending registered plug-in step.
 
 ```http
 https://<env-url>/api/data/v9.2/sdkmessageprocessingsteps
 ?$filter=_impersonatinguserid_value eq '<disabled-userId-from-error>'
 ```
 
-Next, you can query to identify plug-in details related to the offending step.
+Then, you can query to identify plug-in details related to the offending step.
 
 ```http
 https://<env-url>/api/data/v9.2/sdkmessageprocessingsteps
