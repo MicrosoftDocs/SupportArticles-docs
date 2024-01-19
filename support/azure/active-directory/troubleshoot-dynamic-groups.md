@@ -1,10 +1,11 @@
 ---
 title: Troubleshoot dynamic groups
-description: Diagnose and resolve issues with dynamic groups.
-ms.date: 12/10/2020
+description: This article helps you diagnose and resolve issues with dynamic groups.
+ms.date: 01/16/2024
 ms.service: active-directory
 ms.subservice: domain-services
 ms.custom: has-azure-ad-ps-ref
+ms.reviewer: mimart, v-weizhu
 ---
 # Troubleshoot dynamic groups
 
@@ -14,7 +15,7 @@ This troubleshooting guide helps you diagnose and solve issues with dynamic grou
 
 To verify whether your group is a dynamic group, see [Evaluate whether a group is a dynamic group](#1).
 
-- **Yes**: proceed to the next section.
+- **Yes**: Proceed to the next section.
 
 - **No**: [Create a basic group and add members using Microsoft Entra ID](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal) or other applicable groups.
 
@@ -25,17 +26,17 @@ To verify whether your group is a dynamic group, see [Evaluate whether a group i
 Recommended articles for group creation:
 
 - [Create a new group and add members in Azure portal](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal)
-- [Create groups in Powershell MSOnline](/azure/active-directory/users-groups-roles/groups-settings-v2-cmdlets#create-groups)
-- [Disable groups creation in Powershell](/azure/active-directory/users-groups-roles/groups-settings-v2-cmdlets#disable-group-creation-by-your-users)
+- [Create groups in PowerShell MSOnline](/azure/active-directory/users-groups-roles/groups-settings-v2-cmdlets#create-groups)
+- [Disable groups creation in PowerShell](/azure/active-directory/users-groups-roles/groups-settings-v2-cmdlets#disable-group-creation-by-your-users)
 - [Microsoft Entra administrative roles](/azure/active-directory/users-groups-roles/directory-assign-admin-roles)
 
 Common issues in creating a dynamic group or rule:
 
-- You're unable to create a dynamic group in the Azure Portal, or you receive an error when creating a dynamic group in PowerShell. See [Cannot create a dynamic group](#4).
+- You're unable to create a dynamic group in the Azure portal, or you receive an error when creating a dynamic group in PowerShell. See [Cannot create a dynamic group](#4).
 
 - You can't find the attribute to create a rule. See [Create a dynamic membership rule](#7).
 
-- You receive a **"max groups allowed"** error when trying to create a Dynamic Group in PowerShell: You have reached 5,000 groups, the maximum limit for Dynamic groups in your tenant. To create new Dynamic groups, first delete existing Dynamic groups. Note that there's no way to increase the maximum limit.
+- You receive a **"max groups allowed"** error when trying to create a Dynamic Group in PowerShell: You have reached 5,000 groups, the maximum limit for Dynamic groups in your tenant. To create new Dynamic groups, first delete existing Dynamic groups. There's no way to increase the maximum limit.
 
 ### Dynamic membership update issues
 
@@ -67,7 +68,7 @@ You receive an error when deleting a group.
 
 - Before you attempt to delete a group in Microsoft Entra ID, ensure that you have [deleted all assigned licenses](/azure/active-directory/users-groups-roles/licensing-group-advanced#deleting-a-group-with-an-assigned-license). For more information about group deletion in general, see [Delete a group](#21).
 
-You restored a deleted group but did not see any update.
+You restored a deleted group but didn't see any update.
 
 - When a dynamic group is deleted and restored, it's seen as a new group and re-populated according to the rule. This process might take up to 24 hours.
 
@@ -111,7 +112,7 @@ You don't see option to create a dynamic group in the Azure portal, or there was
 
    - Global administrators can restrict group creation to select a group of users if you have a Microsoft Entra ID P1 Premium license. You should verify that you have the appropriate permissions.
 
-### You get a max groups allowed error when creating a Dynamic group in Powershell<a id="8"></a>
+### You get a max groups allowed error when creating a Dynamic group in PowerShell<a id="8"></a>
 
 This error means you have reached the max limit for Dynamic groups in your tenant. Check the number of groups in the tenant. The max number of Dynamic groups per tenant is 5,000.
 
@@ -193,7 +194,7 @@ To evaluate whether a user or device satisfies the rule to be part of a group, u
 
 #### Manual validation
 
-Validate the values for user or device attributes (In[Azure Portal](/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal#to-add-or-change-profile-information), or using [PowerShell](/powershell/module/azuread/get-azureaduser) in the rule.
+Validate the values for user or device attributes (In [Azure portal](/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal#to-add-or-change-profile-information), or using [PowerShell](/powershell/module/azuread/get-azureaduser) in the rule.
 
 - Ensure that there are users that satisfy the rule.
 - For devices, check the device properties to ensure that synchronized attributes contain the expected values.
@@ -225,7 +226,7 @@ Membership evaluation is done periodically in a background process. How long the
 
 ### Force the group to be processed now<a id="18"></a>
 
-Reset processing for a dynamic group. In the Azure portal, manually trigger the re-processing by updating the membership rule to add a whitespace at the end.
+Reset processing for a dynamic group. In the Azure portal, manually trigger the re-processing by updating the membership rule to add a whitespace in the middle of the rule.
 
 ### Fix a rule processing error<a id="19"></a>
 
