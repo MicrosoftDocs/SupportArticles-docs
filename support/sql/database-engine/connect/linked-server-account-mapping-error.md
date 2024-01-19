@@ -36,4 +36,4 @@ In the **Linked Server security** dialog, when you select the **Be made without 
 You can correct this error by forcing TCP/IP or granting the appropriate permissions. In addition to the settings in the **Linked Server security** dialog, you can modify the individual account mappings in the upper portion of the dialog, which overrides the main mapping settings.
 
 > [!NOTE]
-> Using a SQL Server ODBC driver in a linked server isn't a supported scenario. Other ODBC drivers might have limited support from Microsoft and mainly from the vendor.
+> Using a [SQL Server ODBC driver ](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/0650-SQL-Server-Linked-Server-Delegation-Issues)in a linked server isn't a supported scenario. Other ODBC drivers might have limited support from Microsoft and mainly from the vendor.
