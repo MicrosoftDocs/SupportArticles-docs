@@ -2,7 +2,7 @@
 title: Install .NET Core on Linux by using an Azure Batch start task
 description: Describes how to install .NET Core in Linux by using an Azure Batch start task.
 ms.date: 01/19/2024
-ms.reviewer: 
+ms.reviewer: v-weizhu
 author: genlin
 ms.author: genli
 ms.service: cloud-services
