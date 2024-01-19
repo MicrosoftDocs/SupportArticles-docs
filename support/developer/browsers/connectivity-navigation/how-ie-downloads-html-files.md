@@ -3,7 +3,6 @@ title: Via download manager to download HTML files
 description: When downloading an HTM-file via Download Manager, the Open-command is not displayed, but only Save/Save As and Cancel.
 ms.date: 06/09/2020
 ms.reviewer: 
-ms.technology: internet-explorer-connectivity-navigation
 ---
 # How Internet Explorer downloads HTML-files through Download Manager
 

@@ -25,28 +25,18 @@ landingContent:
           - text: CoInitializeEx fails after calling HtmlHelp on the same thread
             url: coinitializeex-fails-after-calling-htmlhelp-same-thread.md
           - text: COM+ supports automatic collection of process dump file
-            url: com-supports-collect-dump-file.md 
-          - text: Descriptions and workings of OLE threading models
-            url: descriptions-workings-ole-threading-models.md
-          - text: Two DLL hosts start when a COM+ object is enabled
-            url: two-dll-hosts-start-com-plus-enabled.md
-          - text: VarI8FromCy produces incorrect value
-            url: vari8fromcy-produces-incorrect-value.md
+            url: com-supports-collect-dump-file.md
 
   - title: Desktop app UI development
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Hook procedure doesn't receive the VK_CONVERT message
-            url: hook-procedure-not-receiving-vk-convert-message.md
           - text: Apps using message filters may not respond in Windows 10
             url: application-using-message-filters-unresponsive-win10.md
           - text: Three- or four-finger touch interactions doesn't work in Windows 11
             url: finger3or4-touch-interaction-no-longer-works.md
           - text: Call Shell APIs from a multithreaded apartment
             url: shell-functions-multithreaded-apartment.md
-          - text: Desktop Bridge app fails to start when running as administrator
-            url: desktop-bridge-app-fail-start-run-as-administrator.md
 
   - title: Distributed transactions
     linkLists:
@@ -56,8 +46,6 @@ landingContent:
             url: cannot-start-transaction-ms-dtc.md
           - text: Enable diagnostic tracing
             url: enable-diagnostic-tracing-ms-dtc.md
-          - text: KTMRM services fail with event ID 4448
-            url: ktmrm-service-event-id-0x80070005.md
           - text: MSDTC Service must run under NetworkService account
             url: msdtc-service-run-under-networkservice-account.md
           - text: New functionality in the MSDTC service
@@ -67,41 +55,14 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: AAC audio isn't playing for MPEG-2 TS file in Windows 8.1
-            url: AAC-audio-not-playing-for-MPEG-2-TS-file-Windows-8-1.md
           - text: Converting PDF to bitmap causes partial data loss in the image
             url: converting-pdf-file-to-bitmap-image.md
           - text: Can't print to XPS Document Writer
             url: print-app-xps-document-writer.md
-          - text: DirectShow doesn't connect to a downstream filter
-            url: directshow-not-connect-downstream-filter.md
-          - text: DWM drops frames of Direct3D applications
-            url: dwm-drop-direct3d-10-application-frame.md
-
-  - title: Networking development
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: An API causes an I/O not work correctly
-            url: setfilecompletionnotificationmodes-causes-io-completion.md
-          - text: The BeginRead method causes exceptions
-            url: beginread-causes-invalidoperationexception.md
-          - text: Header and library requirement at the IPPROTO_IP level
-            url: header-library-requirement-socket-ipproto-ip.md
-          - text: Memory leaks when you close a non-blocking socket
-            url: close-non-blocked-socket-memory-leak.md
-          - text: Send small data packets over TCP by using Winsock
-            url: data-segment-tcp-winsock.md
 
   - title: Security development
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Changing krbtgt password fails
-            url: change-krbtgt-password-may-fail.md
-          - text: Get information from Authenticode Signed Executables
-            url: get-information-authenticode-signed-executables.md
-          - text: Limitation of 10 smart card readers in Windows
-            url: limitation-10-smart-card-readers.md
           - text: SignTool may corrupt PowerShell script file
             url: signtool-corrupts-powershell-script.md
