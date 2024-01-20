@@ -32,7 +32,7 @@ This issue might occur in either of the following situations:
 
 ## Workaround
 
-To work around the issue, select **Open in browser** in the following banner to open the site in a new browser tab outside of Teams.
+To work around the issue, select **Open in browser** in the following banner to open the site in a new browser tab outside Teams.
 
 :::image type="content" source="media/websites-not-loaded-new-teams/open-in-browser.png" alt-text="Screenshot of the banner that shows the Open in browser button.":::
 
