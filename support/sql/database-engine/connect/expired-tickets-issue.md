@@ -12,7 +12,7 @@ ms.custom: sap:Connection issues
 
 This article helps you resolve consistent authentication issues that might arise because of Kerberos tickets.
 
-Kerberos is a protocol that uses secret key for providing secure authentication for client or server applications. A ticket is issued to a user for successful authentication. Kerberos tickets usually have a lifetime of about 10 hours and should be automatically renewed.
+Kerberos is a protocol that uses secret keys for providing secure authentication for client or server applications. A ticket is issued to a user for successful authentication. Kerberos tickets usually have a lifetime of about 10 hours and should be automatically renewed.
 
 ## Symptoms
 
