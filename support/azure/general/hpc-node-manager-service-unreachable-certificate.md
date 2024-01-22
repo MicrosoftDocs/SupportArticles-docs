@@ -2,7 +2,7 @@
 title: HPC Node Manager Service Unreachable error
 description: Provides a solution for an issue where HPC Management console shows the HPC Node Manager Service Unreachable error.
 ms.date: 09/19/2022
-ms.prod: hpcpack
+ms.service: hpcpack
 ms.author: genli
 author: genlin
 ms.reviewer: hclvteam

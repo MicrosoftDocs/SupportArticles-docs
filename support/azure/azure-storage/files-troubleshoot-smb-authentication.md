@@ -3,7 +3,7 @@ title: Troubleshoot Azure Files identity-based authentication and authorization 
 description: Troubleshoot problems using identity-based authentication to connect to SMB Azure file shares and see possible resolutions.
 ms.service: azure-file-storage
 ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
-ms.date: 12/15/2023
+ms.date: 01/17/2024
 ms.reviewer: kendownie, v-weizhu
 ---
 # Troubleshoot Azure Files identity-based authentication and authorization issues (SMB)
@@ -17,6 +17,17 @@ This article lists common problems when using SMB Azure file shares with identit
 | Standard file shares (GPv2), LRS/ZRS | :::image type="icon" source="media/files-troubleshoot-smb-authentication/yes-icon.png" border="false":::  | :::image type="icon" source="media/files-troubleshoot-smb-authentication/no-icon.png" border="false"::: |
 | Standard file shares (GPv2), GRS/GZRS | :::image type="icon" source="media/files-troubleshoot-smb-authentication/yes-icon.png" border="false":::  | :::image type="icon" source="media/files-troubleshoot-smb-authentication/no-icon.png" border="false"::: |
 | Premium file shares (FileStorage), LRS/ZRS | :::image type="icon" source="media/files-troubleshoot-smb-authentication/yes-icon.png" border="false":::  | :::image type="icon" source="media/files-troubleshoot-smb-authentication/no-icon.png" border="false"::: |
+
+## Errors when running AzFilesHybrid module: Privilege issue
+When you try to run the AzFilesHybrid module, you might receive the following error:
+
+-  A required privilege is not held by the client
+
+### Cause: User does not have required AD permissions to run the module.
+This is due to insufficient AD privileges needed to execute the AzFilesHybrid module. 
+
+### Solution
+Refer to the Active Directory privileges for more information or reach out to your AD admin to provide the required privileges.
 
 ## Error 5 when mounting an Azure file share
 
@@ -82,6 +93,7 @@ The cmdlet performs these checks in sequence and provides guidance for failures:
 8. `CheckStorageAccountDomainJoined`: Check if the AD authentication has been enabled and the account's AD properties are populated. If not, [enable AD DS authentication on Azure Files](/azure/storage/files/storage-files-identity-ad-ds-enable).
 9. `CheckUserRbacAssignment`: Check if the AD identity has the proper RBAC role assignment to provide share-level permissions to access Azure Files. If not, [configure the share-level permission](/azure/storage/files/storage-files-identity-ad-ds-assign-permissions). (Supported on AzFilesHybrid v0.2.3+ version)
 10. `CheckUserFileAccess`: Check if the AD identity has the proper directory/file permission (Windows ACLs) to access Azure Files. If not, [configure the directory/file level permission](/azure/storage/files/storage-files-identity-ad-ds-configure-permissions). (Supported on AzFilesHybrid v0.2.3+ version)
+11. `CheckAadKerberosRegistryKeyIsOff`: Check if the Microsoft Entra Kerberos registry key is off. If the key is on, run `reg add HKLM\SYSTEM\CurrentControlSet\Control\Lsa\Kerberos\Parameters /v CloudKerberosTicketRetrievalEnabled /t REG_DWORD /d 0` from an elevated command prompt to turn it off, and then reboot your machine. (Supported on AzFilesHybrid v0.2.9+ version)
 
 ## Unable to configure directory/file level permissions (Windows ACLs) with Windows File Explorer
 
