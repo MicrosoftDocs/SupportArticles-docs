@@ -8,7 +8,7 @@ ms.date: 01/18/2024
 ---
 # Can't find a user when setting up frontline workers in Dynamics 365 Field Service
 
-This article helps resolve an issue where you can't find a user when setting up frontline workers in the Microsoft Dynamics 365 Field Service web app.
+This article helps resolve an issue where you can't find a user when [setting up frontline workers](/dynamics365/field-service/frontline-worker-set-up) in the Microsoft Dynamics 365 Field Service web app.
 
 ## Symptoms
 

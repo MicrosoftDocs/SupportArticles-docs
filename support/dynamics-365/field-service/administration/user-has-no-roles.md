@@ -1,20 +1,26 @@
 ---
-title: Incorrect user privileges error in Dynamics 365 Field Service
-description: Resolves an error that occurs when a user tries to access work orders in Microsoft Dynamics 365 Field Service.
+title: Incorrect user privileges errors in Dynamics 365 Field Service
+description: Resolves privileges errors that occur when a user tries to access work orders in Microsoft Dynamics 365 Field Service.
 author: jasonxian-msft
 ms.author: jasonxian
 ms.reviewer: v-wendysmith
 ms.date: 01/18/2024
 ---
-# Incorrect user privileges error in Dynamics 365 Field Service
+# Incorrect user privileges errors in Dynamics 365 Field Service
 
-This article helps frontline managers or administrators resolve the "user hasn't been assigned any roles" error that occurs when a user tries to access [work orders](/dynamics365/field-service/field-service-architecture) in Microsoft Dynamics 365 Field Service.
+This article helps frontline managers or administrators resolve privileges errors that occur when a user tries to access [work orders](/dynamics365/field-service/field-service-architecture) in Microsoft Dynamics 365 Field Service.
 
 ## Symptoms
 
-When a user tries to access work orders, the following error message appears, indicating that the user doesn't have the correct privileges.
+When a user tries to access work orders, the following error messages appear, indicating that the user doesn't have the correct privileges.
 
-> The user hasn't been assigned any roles
+- If the user has no privileges within the environment, the following error message appears:
+
+    > An error has occurred. Please contact your administrator.
+
+- If the user has some privileges but not all the required ones to complete the user action, an error message like the following appears:
+
+    > You do not have prvCreatemsdyn_workorder permission to access msdyn_workorder records. Contact your Microsoft Dynamics 365 administrator for help.
 
 ## Resolution
 

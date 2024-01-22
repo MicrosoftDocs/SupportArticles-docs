@@ -12,8 +12,8 @@ This article helps frontline managers or workers resolve an issue where incorrec
 
 ## Symptoms
 
-When you open Microsoft Viva Connections, the Dynamics 365 Field Service tiles don't show as expected. This issue might occur when you sign in to Microsoft Teams with one account and then switch to another account.
+When you open Microsoft Viva Connections, the Dynamics 365 Field Service tiles don't show as expected. This issue might occur when you sign in to Microsoft Teams with one account and then switch to a second account.
 
 ## Resolution
 
-To solve this issue, sign out of both accounts and close the Microsoft Teams desktop app or browser completely. Then, open Microsoft Teams and sign in with the other account.
+To solve this issue, sign out of both accounts and close the Microsoft Teams desktop app or browser completely. Then, open Microsoft Teams and sign in with the second account.
