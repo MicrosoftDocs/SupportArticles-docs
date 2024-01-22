@@ -1,7 +1,7 @@
 ---
 title: Introduction to consistent authentication issues
 description: This article introduces to consistent authentication issues, the types of error messages, and workarounds to troubleshoot various issues.
-ms.date: 01/19/2024
+ms.date: 01/22/2024
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes v-jayaramanp
@@ -125,7 +125,8 @@ The following table contains information about causes related to Kerberos authen
 |An incorrect DNS suffix is appended to the NetBIOS name | This can happen when you just use the NetBIOS name, example SQLPROD01, rather than the fully qualified domain (FQDN) name, example SQLPROD01.CONTOSO.COM, the wrong DNS suffix might be appended. Check the network settings for the default suffixes and make sure they're correct or use the FQDN to avoid issues.|
 |Sensitive account issue  | Some accounts may be marked as sensitive in AD. These accounts can't be delegated to another service in a double-hop scenario. |
 |User belongs to many groups  | If you use Kerberos over UDP, the entire security token must fit within a single packet. Users that belong to many groups have a larger security token than users who belong to fewer groups. If you use Kerberos over TCP, you can increase the [`MaxTokenSize`] setting. For more information, see [MaxTokenSize and Kerberos Token Bloat](/archive/blogs/shanecothran/maxtokensize-and-kerberos-token-bloat).  |
-|Clock skew   | This scenario can occur when clocks on more than one device on a network aren't synchronized. For Kerberos server to work, the clocks between machines can't be turned off for more than five minutes.   |
+|Clock skew   | Refers to a consistent authentication issue when clocks on more than one device on a network aren't synchronized. For Kerberos server to work, the clocks between machines can't be turned off for more than five minutes.   |
+|Disjoint DNS Namespace| Refers to a consistent authentication issue that might arise when the DNS suffix doesn't match between the domain member and DNS. You might experience authentication issues if you use a disjoint namespace. If the organizational hierarchy in Active Directory (AD) and in DNS don't match, the wrong Service Provider Name (SPN) might be generated if you use the NETBIOS name in the database application connection string. The SPN won't be found and NTLM credentials are used instead of Kerberos credentials. Use the fully qualified domain name (FQDN) of the server or specify the SPN name in the connection string to mitigate problems. For information on FQDN, see [Computer Naming](/windows-server/identity/ad-ds/plan/computer-naming).|
 | NTLM and Constrained Delegation | If the target is a file share, the delegation type of the mid-tier service account must be **Constrained-Any** and not **Constrained-Kerberos**. For more information, see [Login failed for user NT AUTHORITY\ANONYMOUS LOGON](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).     |
 |Per-Service-SID     | Refers to a security feature of SQL Server that limits local connections to use New Technology LAN Manager (NTLM) and not Kerberos as the authentication method. The service can make a single hop to another server using NTLM credentials, but it can't be delegated further without using the constrained delegation.         |
 |Legacy Providers and Named Pipes  | The legacy OLE DB Provider (SQLOLEDB) and ODBC Driver {SQL Server} that come with Windows don't support Kerberos over Named Pipes, only NTLM. Use a TCP connection to allow Kerberos.        |
