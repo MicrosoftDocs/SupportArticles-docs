@@ -1,11 +1,11 @@
 ---
-title: Use proxy servers with Internet Explorer
+title: Use Proxy Servers with Internet Explorer
 description: This article describes how to use the Internet Explorer in proxy environments.
 ms.date: 07/14/2020
 ms.reviewer: heikom, axelr
 ---
 
-# Using proxy servers together with Internet Explorer
+# Using Proxy Servers together with Internet Explorer
 
 [!INCLUDE [](../../../includes/browsers-important.md)]
 
@@ -41,11 +41,11 @@ If you're configuring proxy settings on a user's computer after the deployment, 
 
 For more information, see [Internet Explorer uses Proxy Server for Local IP address even if the "Bypass Proxy Server for Local Addresses" option is turned on](https://support.microsoft.com/help/262981).
 
-### Use the proxy setting in the Internet Explorer customization wizard
+### Use the Proxy setting in the Internet Explorer Customization Wizard
 
 For more information about this method, see [Use the Proxy Settings page in the IEAK 11 Wizard](/internet-explorer/ie11-ieak/proxy-settings-ieak11-wizard).
 
-### Use group policy
+### Use Group Policy
 
 In earlier versions of the Windows operating system, Internet Explorer Maintenance (IEM) is used to configure Internet Explorer settings by using Group Policy. In Windows 8, the IEM settings have been deprecated in favor of Group Policy Preferences, Administrative Templates (.admx), and the Internet Explorer Administration Kit 10 (IEAK 10).
 
