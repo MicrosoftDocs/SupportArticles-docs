@@ -510,7 +510,7 @@
     - name: Duplicate Client Machine ID
       href: windows-activation-duplicate-client-machine-id.md
     - name: Error 0x80070005
-      href: ../../windows-server/deployment/0x80070005-access-denied.md?context=/troubleshoot/azure/virtual-machines/context/context
+      href: ../../windows-server/deployment/error-0x80070005-access-denied.md?context=/troubleshoot/azure/virtual-machines/context/context
     - name: Error 0x800705B4
       href: windows-vm-activation-error-0x800705b4.md
     - name: Error 0xC004E015 (SL_E_EUL_CONSUMPTION_FAILED)
