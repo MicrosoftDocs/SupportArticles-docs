@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting local security subsystem errors
 description: This article provides symptoms and resolution for the local security subsystem related consistent authentication issues.
-ms.date: 01/11/2024
+ms.date: 01/22/2024
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
@@ -10,14 +10,9 @@ ms.custom: sap:Connection issues
 
 # Local security subsystem errors
 
-This article helps to resolve the issue that might arise because of local security subsystem errors.
+This article helps to resolve the issue that might arise due to a consistent authentication issue related to the LSASS not responding to  of  local security subsystem errors.
 
 ## Symptoms
-
-You may experience consistent authentication issues and also receive local security subsystem errors. 
-These errors occur when the local security authority subsystem service (LSASS) stops responding.
-
-## Cause
 
 The driver shows the "The login is from an untrusted domain and can't be used with Windows authentication" error message.
 
@@ -30,6 +25,10 @@ Check if the SQL Server error log shows the following messages:
 You might also see Kerberos errors in the system event log on the SQL Server machine for the same time range. The following error code has a specific meaning:
 
 > Error - 2146893039 (0x80090311): No authority could be contacted for authentication.
+
+## Cause
+
+These errors occur when the local security authority subsystem service (LSASS) stops responding.
 
 ## Resolution
 
