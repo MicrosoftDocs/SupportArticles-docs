@@ -3,7 +3,6 @@ title: Content of iframe on top of the scrollbar
 description: This article explains that when Internet Explorer uses quirks mode as the document mode, the content of the iframe will be displayed on the top of the scrollbar.
 ms.date: 06/09/2020
 ms.reviewer: jeanr
-ms.technology: internet-explorer-development-website
 ---
 # Content of an iFrame is rendered on top of a scrollbar in Internet Explorer
 

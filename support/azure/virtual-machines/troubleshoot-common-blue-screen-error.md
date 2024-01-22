@@ -54,7 +54,7 @@ If you can't find the dump file, go to the next steps to enable the dump log and
 
 To enable the dump log and the serial console, follow these steps:
 
-[!INCLUDE [Enable Serial Console and Memory Dump Collection](../../includes/enable-serial-console-memory-dump-collection.md)]
+[!INCLUDE [Enable Serial Console and Memory Dump Collection](../../includes/azure/enable-serial-console-memory-dump-collection.md)]
 
 ### Step 3: Reproduce the issue
 
