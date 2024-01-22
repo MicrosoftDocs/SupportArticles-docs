@@ -33,25 +33,25 @@ The SqlClient .NET Provider displays the following error message when you use th
 
 > Login failed for user 'CONTOSO\user1'.
 
-You might also see either of the following error messages in the SQL Server error log:
+You should also see either of the following error messages in the SQL Server error log:
 
 ```output
 'Login failed for user'. Reason: Could not find a login matching the name provided.
 'Login failed for user 'CONTOSO\USER1'. Reason: Could not find a login matching the name provided.
 ```
 
+You will experience these errors if you deploy an application that uses a DEV or QA server into production and you don't update the connection string.
+
 ## Cause
 
-You will experience these errors if you deploy an application that uses a DEV or QA server into production and you don't update the connection string.
+You will experience these errors if the server name is not correctly specified in the connction string.
 
 ## Solution
 
-To resolve these error messages, follow these steps:
+To resolve these error messages, follow one of these methods:
 
-1. Check that you're connecting to the correct server.
+- If the server isn't the appropriate one, then update the connection string to point to the correct server.
 
-1. If the server isn't the appropriate one, then update the connection string to point to the correct server.
+- If the connection string is correct, then provide the login access to the database by creating a user in the database and map to that login.
 
-1. If the connection string is correct, then provide the login access to the database by creating a user in the database and map to that login.
-
-1. If you're using a Windows login, add it to a local group or domain group that's allowed to connect to the database server.
+- If you're using a Windows login, add it to a local group or domain group that's allowed to connect to the database server.
