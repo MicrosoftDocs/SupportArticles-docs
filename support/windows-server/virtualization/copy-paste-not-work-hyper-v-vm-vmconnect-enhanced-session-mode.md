@@ -35,7 +35,7 @@ To successfully copy files to and from Hyper-V virtual machines when you use VMC
 - Policy path: *Computer Configuration\\Policies\\Administrative Templates\\Windows Components\\Remote Desktop Services\\Remote Desktop Session Host\\Device and Resource Redirection*
 
     > [!NOTE]
-    > If you use the Local Group Policy Editor, the *Policies* folder is not part of the node path.
+    > If you use the Local Group Policy Editor, the *Policies* folder isn't part of the node path.
 
 - Policy setting: **Do not allow Clipboard redirection**
 
