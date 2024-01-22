@@ -229,6 +229,8 @@
       href: ./tabs/tabs-dont-work-after-enabling-conditional-access.md
     - name: Task buckets don't appear in Teams Planner online
       href: ./tabs/task-buckets-do-not-appear-in-planner.md
+    - name: Websites don't load in the new Teams desktop client
+      href: ./tabs/websites-not-loaded-new-teams.md
   - name: Teams Rooms and devices
     items:
     - name: Collect Android Teams device logs
