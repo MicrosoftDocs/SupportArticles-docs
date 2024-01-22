@@ -3,6 +3,12 @@ items:
 - name: Welcome
   href: welcome-container-instances.yml
 
+- name: Container instance continues to run after the stop or delete command
+  href: container-instance-still-running-after-stop-delete-command.md
+
+- name: ACI debug tools
+  href: aci-debug-tools.md
+
 - name: Fails to pull ACR images by using Managed Identity authentication
   href: acr-image-pull-failures-managed-identity.md
 

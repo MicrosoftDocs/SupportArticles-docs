@@ -1,25 +1,21 @@
 ---
-title: ACI Debug Tools
-description: Learn about debug tools on ACI
-ms.date: 01/15/2024
-author: tysonfms
-ms.author: tysonfreeman
-editor: v-jsitser
-ms.reviewer: v-leedennis
+title: Azure Container Instances debug tools
+description: Learn about debug tools on Azure Container Instances.
+ms.date: 01/22/2024
+ms.reviewer: tysonfms, v-weizhu
 ms.service: container-instances
-ms.topic: troubleshooting-problem-resolution
 ---
-# ACI Debug Tools
+# Azure Container Instances debug tools
 
-This article lists debug tools for ACI
+This article lists debug tools for Azure Container Instances (ACI).
 
-## List of Debog Tools
-- [Liveness Probe](https://docs.microsoft.com/azure/container-instances/container-instances-liveness-probe)
-- [Log Analytics](https://docs.microsoft.com/azure/container-instances/container-instances-log-analytics)
-- [Application Insights](https://docs.microsoft.com/azure/azure-monitor/app/api-custom-events-metrics)
-- [Ping/Keep Alive Command](https://docs.microsoft.com/azure/container-instances/container-instances-troubleshooting#container-continually-exits-and-restarts-no-long-running-process)
-- [Update a Container Group](https://docs.microsoft.com/azure/container-instances/container-instances-update)
-  
-## Next Steps
+## List of debog tools
+
+- [Liveness probe](/azure/container-instances/container-instances-liveness-probe)
+- [Log Analytics](/azure/container-instances/container-instances-log-analytics)
+- [Application Insights](/azure/azure-monitor/app/api-custom-events-metrics)
+- [The "ping -t" or "tail -f /dev/null" command](/azure/container-instances/container-instances-troubleshooting#container-continually-exits-and-restarts-no-long-running-process)
+- [Update a container group](/azure/container-instances/container-instances-update)
+
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
