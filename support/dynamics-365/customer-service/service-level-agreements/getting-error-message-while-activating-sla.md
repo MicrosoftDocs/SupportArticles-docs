@@ -4,7 +4,7 @@ description: Resolves an error message that occurs when you activate an SLA in M
 ms.reviewer: sdas, v-zolu, mpanduranga
 ms.author: v-psuraty
 author: v-psuraty
-ms.date: 01/19/2024
+ms.date: 01/22/2024
 ---
 # "String or binary data would be truncated" error when activating an SLA
 
