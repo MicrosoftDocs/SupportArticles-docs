@@ -1,8 +1,9 @@
 ---
 title: Save legacy calendars in UCI
 description: Provides a resolution for an issue where a Service-Level Agreement (SLA) regarding fails with dates corrupted error.
-ms.reviewer: sdas, ankugupta
-ms.author: sdas
+ms.reviewer: sdas, ankugupta, mpanduranga
+ms.author: v-psuraty
+author: v-psuraty
 ms.date: 01/09/2024
 ---
 # Save legacy calendar in UCI
