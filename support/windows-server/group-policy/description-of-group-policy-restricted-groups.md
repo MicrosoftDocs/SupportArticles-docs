@@ -20,8 +20,6 @@ This article provides a description of group policy restricted groups in Windows
 _Applies to:_ &nbsp; Windows Server 2016, Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 279301
 
-## More information
-
 Restricted groups allow an administrator to define the following two properties for security-sensitive (restricted) groups:
 
 - Members
