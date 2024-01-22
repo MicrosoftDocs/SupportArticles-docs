@@ -37,9 +37,14 @@ To view the details about errors in the [Azure portal](https://portal.azure.com)
 
 The list of logs on the **Activity log** page contains a line entry in which the **Operation name** column value is named **Start Managed Cluster**. The corresponding **Event initiated by** column value is set to the name of your work or school account. If the operation is successful, the **Status** column value shows **Accepted**. 
 
+:::image type="content" source="./media/troubleshoot-start-operations/Activity-log-errors.png" alt-text="Screenshot of an AKS cluster Activity Log blade displaying a start operation that has failed." lightbox="./media/troubleshoot-start-operations/Activity-log-errors.png" border="false":::
+
 What if an error occurred instead? In that case, the **Start Managed Cluster** operation **Status** field shows **Failed**. Unlike in the operations to create cluster components, here you must expand the failed operation entry to review the suboperation entries. Typical suboperation names are policy actions, such as **'audit' Policy action** and **'auditIfNotExists' Policy action.** Some of the suboperations will continue to show that they succeeded.
 
 To further investigate, you can select one of the failed suboperations. A side pane opens so that you can review more information about the suboperation. You can troubleshoot values for fields such as **Summary**, **JSON**, and **Change History**. The **JSON** field contains the output text for the error in JSON format, and it usually provides the most helpful information.
+
+:::image type="content" source="./media/troubleshoot-start-operations/Activity-log-error-detailed.png" alt-text="Screenshot of an AKS cluster Activity Log suboperation side pane displaying a start operation failure cause." lightbox="./media/troubleshoot-start-operations/Activity-log-error-detailed.png" border="false":::
+
 
 ## View cluster insights
 
