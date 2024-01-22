@@ -1,7 +1,7 @@
 ---
 title: A website doesn't load in the new Teams desktop client
 description: Provides a workaround for an issue in which a site doesn't load when you select the Website tab in a Teams chat, channel, or meeting.
-ms.date: 01/19/2024
+ms.date: 01/22/2024
 audience: ITPro
 ms.topic: troubleshooting
 manager: dcscontentpm
