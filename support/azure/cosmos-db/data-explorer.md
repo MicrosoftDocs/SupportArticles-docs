@@ -3,7 +3,7 @@ title: Azure Cosmos DB Data Explorer fails to connect
 description: Troubleshoot scenarios when the Azure Cosmos DB data explorer can't connect to an account and perform specific data-plane or control-plane operations.
 ms.reviewer: randolphwest, sidandrews, v-sidong
 ms.service: cosmos-db
-ms.date: 01/18/2024
+ms.date: 01/22/2024
 ---
 
 # Azure Cosmos DB Data Explorer fails to connect
