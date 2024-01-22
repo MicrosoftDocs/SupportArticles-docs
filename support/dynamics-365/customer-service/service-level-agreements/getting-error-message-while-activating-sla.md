@@ -26,4 +26,4 @@ To solve this issue, simplify your existing SLA structure. Here's an example:
 
 SLA 1 includes 10 SLA items. Create a new SLA named SLA 2. Transfer five SLA items from SLA 1 to SLA 2. You now have two SLAs, each containing five SLA items. This approach helps streamline and manage SLAs more effectively based on specific requirements.
 
-To establish the application of SLA 2 for newly created cases, you need to develop custom logic, workflows/flows, or plug-ins.
+To apply SLA 2 to newly created cases, you need to develop the necessary custom logic, workflows/flows, or plug-ins.
