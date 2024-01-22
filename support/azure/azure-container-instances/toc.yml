@@ -4,7 +4,7 @@ items:
   href: welcome-container-instances.yml
 
 - name: Container instance continues to run after the stop or delete command
-  href: container-instance-still-running-after-stop-delete-command.md
+  href: aci-still-running-after-stop-delete-command.md
 
 - name: ACI debug tools
   href: aci-debug-tools.md
