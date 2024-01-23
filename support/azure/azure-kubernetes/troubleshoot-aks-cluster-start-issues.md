@@ -22,11 +22,10 @@ This article outlines the basic troubleshooting methods to use if you can't star
 
 When you start clusters by using Azure CLI, errors are recorded as output if the operation fails. Here's how a command, user input, and operation output might appear in a Bash console:
 
-> `$ az aks start --resource-group myResourceGroup \` \
-> `> --name MyManagedCluster \` \
+> $ az aks start --resource-group myResourceGroup --name MyManagedCluster
 > 
-> `(VMExtensionProvisioningError) Unable to establish outbound connection from agents, please see https://learn.microsoft.com/en-us/troubleshoot/` > `azure/azure-kubernetes/error-code-outboundconnfailvmextensionerror and https://aka.ms/aks-required-ports-and-addresses for more information.` \
-> `Details: instance 3 has extension error details : {vmssCSE error messages : {vmssCSE exit status=50, output=AGE_SHA=sha-16fd35`
+> (VMExtensionProvisioningError) Unable to establish outbound connection from agents, please see https://learn.microsoft.com/en-us/troubleshoot/azure/azure-kubernetes/error-code-outboundconnfailvmextensionerror and https://aka.ms/aks-required-ports-and-addresses for more information.  
+> Details: instance 3 has extension error details : {vmssCSE error messages : {vmssCSE exit status=50, output=AGE_SHA=sha-16fd35
 
 These errors often contain detailed descriptions of what went wrong in the cluster start operation, and they provide links to articles that contain more details. Additionally, you can use our troubleshooting articles as a reference based on the error that an Azure CLI operation produces.
 
@@ -36,13 +35,13 @@ To view the details about errors in the [Azure portal](https://portal.azure.com)
 
 The list of logs on the **Activity log** page contains a line entry in which the **Operation name** column value is named **Start Managed Cluster**. The corresponding **Event initiated by** column value is set to the name of your work or school account. If the operation is successful, the **Status** column value shows **Accepted**. 
 
-:::image type="content" source="media/troubleshoot-aks-cluster-start-issues/activity-log-errors.png" alt-text="Screenshot of an AKS cluster Activity Log blade displaying a start operation that has failed." lightbox="media/troubleshoot-aks-cluster-start-issues/activity-log-errors.png" border="false":::
+:::image type="content" source="media/troubleshoot-aks-cluster-start-issues/activity-log-errors.png" alt-text="Screenshot of an AKS cluster Activity Log blade displaying a start operation that has failed." border="false":::
 
 What if an error occurred instead? In that case, the **Start Managed Cluster** operation **Status** field shows **Failed**. Unlike in the operations to create cluster components, here you must expand the failed operation entry to review the suboperation entries. Typical suboperation names are policy actions, such as **'audit' Policy action** and **'auditIfNotExists' Policy action.** Some of the suboperations will continue to show that they succeeded.
 
 To further investigate, you can select one of the failed suboperations. A side pane opens so that you can review more information about the suboperation. You can troubleshoot values for fields such as **Summary**, **JSON**, and **Change History**. The **JSON** field contains the output text for the error in JSON format, and it usually provides the most helpful information.
 
-:::image type="content" source="media/troubleshoot-aks-cluster-start-issues/activity-log-error-details.png" alt-text="Screenshot of an AKS cluster Activity Log suboperation side pane displaying a start operation failure cause." lightbox="media/troubleshoot-aks-cluster-start-issues/activity-log-error-details.png" border="false":::
+:::image type="content" source="media/troubleshoot-aks-cluster-start-issues/activity-log-error-details.png" alt-text="Screenshot of an AKS cluster Activity Log suboperation side pane displaying a start operation failure cause." border="false":::
 
 ## View cluster insights
 
