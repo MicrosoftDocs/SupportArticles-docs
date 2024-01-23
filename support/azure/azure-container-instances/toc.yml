@@ -3,6 +3,9 @@ items:
 - name: Welcome
   href: welcome-container-instances.yml
 
+- name: Common confidential containers issues
+  href: common-confidential-container-errors.md
+
 - name: Fails to pull ACR images by using Managed Identity authentication
   href: acr-image-pull-failures-managed-identity.md
 
