@@ -118,13 +118,13 @@
 - name: Troubleshoot start operations
   items:
   - name: Basic troubleshooting
-    href: ./troubleshoot-aks-cluster-start-issues.md
+    href: troubleshoot-aks-cluster-start-issues.md
   - name: K8SAPIServerConnFailVMExtensionError error (51)
-    href: ./error-code-k8sapiserverconnfailvmextensionerror.md
+    href: error-code-k8sapiserverconnfailvmextensionerror.md
   - name: K8SAPIServerDNSLookupFailVMExtensionError error (52)
-    href: ./error-code-k8sapiserverdnslookupfailvmextensionerror.md
+    href: error-code-k8sapiserverdnslookupfailvmextensionerror.md
   - name: OutboundConnFailVMExtensionError error (50)
-    href: ./error-code-outboundconnfailvmextensionerror.md
+    href: error-code-outboundconnfailvmextensionerror.md
 
 - name: Troubleshoot Kubernetes control plane
   items:
