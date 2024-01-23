@@ -4,7 +4,7 @@ description: Resolves an issue where incorrect Dynamics 365 Field Service tiles 
 author: jasonxian-msft
 ms.author: jasonxian
 ms.reviewer: v-wendysmith
-ms.date: 01/18/2024
+ms.date: 01/23/2024
 ---
 # Viva Connections dashboard doesn't show the correct Dynamics 365 Field Service tiles
 

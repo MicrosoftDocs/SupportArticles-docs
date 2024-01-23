@@ -4,7 +4,7 @@ description: Resolves an error that occurs when a dispatcher tries to create Dyn
 author: jasonxian-msft
 ms.author: jasonxian
 ms.reviewer: v-wendysmith
-ms.date: 01/18/2024
+ms.date: 01/23/2024
 ---
 # "Caller user does not have Create permissions" error when trying to create work orders in Microsoft Outlook or Teams
 

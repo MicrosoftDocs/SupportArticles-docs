@@ -4,7 +4,7 @@ description: Resolves an issue where you can't identify the user shown in an err
 author: jasonxian-msft
 ms.author: jasonxian
 ms.reviewer: v-wendysmith
-ms.date: 01/18/2024
+ms.date: 01/23/2024
 ---
 # Can't identify the user shown in an error message in Dynamics 365 Field Service
 
