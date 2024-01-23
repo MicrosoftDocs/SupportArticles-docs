@@ -42,7 +42,7 @@ What if an error occurred instead? In that case, the **Start Managed Cluster** o
 
 To further investigate, you can select one of the failed suboperations. A side pane opens so that you can review more information about the suboperation. You can troubleshoot values for fields such as **Summary**, **JSON**, and **Change History**. The **JSON** field contains the output text for the error in JSON format, and it usually provides the most helpful information.
 
-:::image type="content" source="media/troubleshoot-aks-cluster-start-issues/activity-log-error-detailed.png" alt-text="Screenshot of an AKS cluster Activity Log suboperation side pane displaying a start operation failure cause." lightbox="media/troubleshoot-aks-cluster-start-issues/activity-log-error-detailed.png" border="false":::
+:::image type="content" source="media/troubleshoot-aks-cluster-start-issues/activity-log-error-details.png" alt-text="Screenshot of an AKS cluster Activity Log suboperation side pane displaying a start operation failure cause." lightbox="media/troubleshoot-aks-cluster-start-issues/activity-log-error-details.png" border="false":::
 
 ## View cluster insights
 
