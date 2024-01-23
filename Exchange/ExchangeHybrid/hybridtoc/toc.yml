@@ -47,7 +47,7 @@
           href: ../calendars/550-5111-ndr-delegate-sends-update-meeting.md
         - name: Can't access free/busy of non-Internet-facing AD site
           href: ../calendars/cannot-access-freebusy-info-of-non-internet-facing-ad-site.md
-        - name: Can't add conference rooms to meeting requests in OWA
+        - name: Can't add rooms to meeting requests in Outlook on the web
           href: ../calendars/cannot-add-conference-rooms-to-meeting-in-owa.md
         - name: Can't dismiss calendar reminders
           href: ../calendars/cannot-dismiss-outlook-calendar-reminders.md
@@ -97,7 +97,7 @@
           href: ../email-delivery/on-premises-users-not-getting-emails-from-microsoft-365.md
     - name: Groups and Distribution Lists
       items:
-        - name: Can't access Microsoft 365 groups in Outlook
+        - name: Can't access Microsoft 365 Groups in Outlook
           href: ../groups-and-distribution-lists/cannot-access-office-365-groups-in-outlook.md
         - name: Can't manage groups that's synced to Microsoft 365
           href: ../groups-and-distribution-lists/cannot-manage-group-synced-from-on-premises.md
@@ -115,6 +115,8 @@
           href: ../hybrid-configuration-wizard-errors/1007-accessdenied-or-ensure-your-system-time-is-correct-error.md
         - name: 550 5.7.64 Relay Access Denied ATTR36
           href: ../hybrid-configuration-wizard-errors/relay-access-denied-attr36-ndr.md
+        - name: Accepted domain errors in Hybrid Configuration Wizard
+          href: ../hybrid-configuration-wizard-errors/hcw-erros-about-accepted-domains.md
         - name: ADSTS50011 error when running the Hybrid Configuration Wizard
           href: ../hybrid-configuration-wizard-errors/error-hybrid-config-wizard.md
         - name: Active Directory operation failed on DomainController error
@@ -149,8 +151,6 @@
           href: ../hybrid-configuration-wizard-errors/term-get-hybridmailflowdatacenterips-is-not-recognized-error.md
         - name: Get-WebServicesVirtualDirectory cmdlet error
           href: ../hybrid-configuration-wizard-errors/get-webservicesvirtualdirectory-cmdlet-execution-error.md
-        - name: HCW errors about accepted domain
-          href: ../hybrid-configuration-wizard-errors/hcw-erros-about-accepted-domains.md
         - name: HCW8019, HCW8021, HCW8022, or HCW8023 error
           href: ../hybrid-configuration-wizard-errors/hcw-errors-about-hybrid-configuration.md
         - name: HCW8034 or HCW8057 when running Hybrid Configuration wizard
@@ -231,7 +231,7 @@
           href: ../move-mailboxes/user-is-already-being-moved-error.md
         - name: Can't register a Hybrid Agent in Exchange Server
           href: ../move-mailboxes/cannot-register-hybrid-agent.md
-        - name: Can't use OWA move items in a hybrid deployment
+        - name: Can't move items in Outlook on the web
           href: ../move-mailboxes/cannot-move-items-using-owa.md
         - name: Error when moving only a primary mailbox to or from Exchange Online
           href: ../move-mailboxes/you-must-specify-the-primaryonly-parameter-error.md          
@@ -261,9 +261,9 @@
       items:
         - name: Can't access legacy on-premises public folders
           href: ../public-folders/cannot-access-legacy-on-premises-public-folders.md
-        - name: Can't access on-premises PFs from Outlook for Mac
+        - name: Can't access on-premises public folders in Outlook for Mac
           href: ../public-folders/outlook-for-mac-unable-access-public-folders.md
-        - name: Credential prompt when accessing on-premises PFs
+        - name: Credential prompts when accessing on-premises public folders
           href: ../public-folders/credential-prompt-access-on-premises-public-folders.md
         - name: It is not possible to expand the folder error
           href: ../public-folders/it-is-not-possible-to-expand-the-folder-error.md
@@ -299,7 +299,7 @@
           href: ../user-and-shared-mailboxes/mailbox-exists-exo-onpremises.md
         - name: Name error when adding a Room or Resource mailbox
           href: ../user-and-shared-mailboxes/cannot-add-room-or-resource-mailbox.md
-        - name: Shared mailboxes are unexpectedly converted to user mailboxes
+        - name: Exchange Online unexpectedly disconnects a shared mailbox
           href: ../user-and-shared-mailboxes/shared-mailboxes-unexpectedly-converted-to-user-mailboxes.md
         - name: Still can access a moved mailbox
           href: ../user-and-shared-mailboxes/still-can-access-mailbox-after-moved.md
