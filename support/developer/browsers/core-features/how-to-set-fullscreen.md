@@ -3,7 +3,6 @@ title: How to set full-screen in Internet Explorer
 description: This article describes how to set Internet Explorer so that it always starts in full-screen mode or so that it never starts in full-screen mode.
 ms.date: 03/08/2020
 ms.custom: sap:Internet Explorer
-ms.technology: internet-explorer-core-features
 ---
 # How to set Internet Explorer to always start in full-screen mode or to never start in full-screen mode
 

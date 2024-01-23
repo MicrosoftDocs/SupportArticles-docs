@@ -3,7 +3,6 @@ title: Change home page and search provider in Internet Explorer
 description: Describes how to change the home page in Internet Explore and how to change the search provider in Internet Explore.
 ms.date: 06/09/2020
 ms.reviewer: 
-ms.technology: internet-explorer-administration
 ---
 # How to change the home page and the search provider in Internet Explorer
 

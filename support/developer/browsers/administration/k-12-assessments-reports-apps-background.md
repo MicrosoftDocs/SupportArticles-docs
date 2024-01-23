@@ -5,7 +5,6 @@ ms.date: 01/21/2021
 ms.custom: sap:Administration
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.technology: internet-explorer-administration
 ---
 # K-12 assessment unexpectedly reports apps running in the background in Windows 10
 
