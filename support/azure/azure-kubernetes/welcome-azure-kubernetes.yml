@@ -101,13 +101,13 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Basic troubleshooting
-            url: ./troubleshoot-aks-cluster-start-issues.md
-          - text: OutboundConnFailVMExtensionError error (50)
-            url: ./error-code-outboundconnfailvmextensionerror.md
+            url: troubleshoot-aks-cluster-start-issues.md
           - text: K8SAPIServerConnFailVMExtensionError error (51)
-            url: ./error-code-k8sapiserverconnfailvmextensionerror.md
+            url: error-code-k8sapiserverconnfailvmextensionerror.md
           - text: K8SAPIServerDNSLookupFailVMExtensionError error (52)
-            url: ./error-code-k8sapiserverdnslookupfailvmextensionerror.md
+            url: error-code-k8sapiserverdnslookupfailvmextensionerror.md
+          - text: OutboundConnFailVMExtensionError error (50)
+            url: error-code-outboundconnfailvmextensionerror.md
 
 # Card
   - title: Troubleshoot node not ready
