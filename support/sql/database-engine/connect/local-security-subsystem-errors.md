@@ -1,6 +1,6 @@
 ---
-title: Troubleshooting local security subsystem errors
-description: This article provides symptoms and resolution for the local security subsystem related consistent authentication issues.
+title: Troubleshooting LSASS errors
+description: This article provides symptoms and resolution for the consistent authentication errors related to local security subsystem related.
 ms.date: 01/22/2024
 author: Malcolm-Stewart
 ms.author: mastewa
@@ -10,7 +10,7 @@ ms.custom: sap:Connection issues
 
 # Local security subsystem errors
 
-This article helps to resolve the issue that might arise due to a consistent authentication issue related to the LSASS not responding to  of  local security subsystem errors.
+This article helps to resolve the issue that might arise due to a consistent authentication issue related to the unresponsive LSASS.
 
 ## Symptoms
 
