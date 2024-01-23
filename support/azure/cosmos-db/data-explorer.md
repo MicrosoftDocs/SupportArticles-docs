@@ -31,7 +31,7 @@ Even after you configure the correct role-based access control and portal permis
 
 ## Solution for the API for NoSQL, Apache Gremlin, or Table
 
-Database, container, graph, or table (control plane) operations are executed via calls to the Azure Resource Manager control plane using the Azure Cosmos DB resource provider. Your network configuration doesn't affect these operations.
+Database, container, graph, and table (control plane) operations are executed via calls to the Azure Resource Manager control plane using the Azure Cosmos DB resource provider. Your network configuration doesn't affect these operations.
 
 Item (data plane) operations are executed using the JavaScript SDK within the context of your browser. The device you're currently using must have direct network access to the account.
 
@@ -53,7 +53,7 @@ Item (data plane) operations are executed using the JavaScript SDK within the co
 
 Review the control plane and data plane solutions, respectively.
 
-Database, keyspace, or collection (control plane) operations are executed via calls to the Azure Resource Manager control plane using the Azure Cosmos DB resource provider. Your network configuration doesn't affect these operations.
+Database, keyspace, and collection (control plane) operations are executed via calls to the Azure Resource Manager control plane using the Azure Cosmos DB resource provider. Your network configuration doesn't affect these operations.
 
 Item (data plane) operations are executed using a proxy service in the API's middleware. This service facilitates the use of the service-native (MongoDB, Cassandra) protocol in item operations and queries. The proxy service requires direct network access to the account.
 
