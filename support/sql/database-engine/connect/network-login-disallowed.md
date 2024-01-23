@@ -1,26 +1,26 @@
 ---
-title: Troubleshooting the network login disallowed error 
-description: This article provides symptoms and resolution for troubleshooting the consistent authentication issue related to the network login disallowed issue.
-ms.date: 01/10/2024
+title: Troubleshooting the network login issues 
+description: This article provides symptoms and resolution for troubleshooting the consistent authentication issue related to the network login issue.
+ms.date: 01/23/2024
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 
-# Network login disallowed issue
+# User can't access the remote network
 
-This article helps you to resolve the consistent authentication issue related to network login disallowed.
+This article helps you to resolve a consistent authentication issue that might arise when the user doesn't have the permission to in to a remote network.
 
 ## Symptoms
 
-You might observe the following error message in the Windows event security log on the SQL Server in a scenario where the user doesn't have the allowed login type.
+You might observe the following error message in the Windows event security log on the SQL Server:
 
 > The user account is not allowed the Network Login type.
 
 ## Cause
 
-The network login disallowed occurs if there is any problem with the Windows permissions or policy settings.
+This error occurs if there is any problem with the Windows permissions or policy settings.
 
 ## Resolution
 
