@@ -116,12 +116,6 @@ If deleting the network profile through the Azure portal and Azure CLI fails, up
     ```
 3. Delete the network profile and the subnet.
 
-## References
-
-- [Managed identities in Azure Container Apps](/azure/container-apps/managed-identity)
-
-- [Azure Container Apps image pull with managed identity](/azure/container-apps/managed-identity-image-pull)
-
-- [Tutorial: Deploy a multi-container group using a Resource Manager template](/azure/container-instances/container-instances-multi-container-group)
+## Next Steps
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
