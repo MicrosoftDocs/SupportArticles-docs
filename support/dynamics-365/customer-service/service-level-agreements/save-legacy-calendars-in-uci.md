@@ -1,26 +1,26 @@
 ---
-title: Save legacy calendars in UCI
-description: Provides a resolution for an issue where a Service-Level Agreement (SLA) regarding fails with dates corrupted error.
+title: "Calendar dates are corrupted" error while migrating legacy calendar to Unified Interface
+description: Provides a resolution for the "Calendar dates are corrupted" error message that occurs when you migrate a legacy calendar to Unified Interface.
 ms.reviewer: sdas, ankugupta, mpanduranga
 ms.author: v-psuraty
 author: v-psuraty
-ms.date: 01/09/2024
+ms.date: 01/23/2024
 ---
-# Save legacy calendar in UCI
+# "Calendar dates are corrupted" error while migrating legacy calendar to Unified Interface
 
-This article provides a resolution for an issue where a Service-Level Agreement (SLA) regarding fails with dates corrupted error.
+This article provides a resolution for the "Calendar dates are corrupted" error message that occurs when you migrate a legacy calendar to Unified Interface.
 
 ## Symptoms
 
-You receive the following error message
+The following error message appears:
 
-`Error Code:0x10000003 Calendar 649bf685-aa40-e911-a95c-000d3ab3f13b dates are corrputed. Try to create a new Calendar.`
+"Error Code:0x10000003 Calendar 649bf685-aa40-e911-a95c-000d3ab3f13b dates are corrputed. Try to create a new Calendar."
 
 ## Cause
 
-This issue occurs because the legacy calendar was not configured properly to UCI after migration.
+This issue occurs because the legacy calendar isn't configured to Unified Interface after migration.
 
 ## Resolution
 
-Ask user to either create the calendar in UCI and change that in SLA Item. Or user can open the same legacy calendar in UCI interface and "Save and Close".
+Create a new calendar and replace it with the existing one in the SLA Item. Or, open the legacy calendar in Unified interface and save it.
 
