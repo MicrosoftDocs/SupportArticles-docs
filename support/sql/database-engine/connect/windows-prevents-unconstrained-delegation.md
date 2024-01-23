@@ -14,7 +14,8 @@ ms.reviewer: mastewa, jopilov, prmadhes, v-sidong
 
 ## Symptoms
 
-You can't use linked servers or websites that delegate credentials to SQL Server in Windows 10, Windows Server 2016, and later versions. When testing connection to a linked server, you see an error like [Login failed for user NT AUTHORITY\ANONYMOUS LOGON](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
+You can't use linked servers or websites that delegate credentials to SQL Server in Windows 10, Windows Server 2016, and later versions. When testing connection to a linked server, you see an error like [Login failed for user NT AUTHORITY\ANONYMOUS LOGON](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-nt-authorityanonymous-logon).
+
 
 ## Implications
 
