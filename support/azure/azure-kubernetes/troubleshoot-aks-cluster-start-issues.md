@@ -22,9 +22,9 @@ This article outlines the basic troubleshooting methods to use if you can't star
 
 When you start clusters by using Azure CLI, errors are recorded as output if the operation fails. Here's how a command, user input, and operation output might appear in a Bash console:
 
-> $ az aks start --resource-group myResourceGroup --name MyManagedCluster
+> `$ az aks start --resource-group myResourceGroup --name MyManagedCluster`
 > 
-> (VMExtensionProvisioningError) Unable to establish outbound connection from agents, please see https://learn.microsoft.com/en-us/troubleshoot/azure/azure-kubernetes/error-code-outboundconnfailvmextensionerror and https://aka.ms/aks-required-ports-and-addresses for more information.  
+> (VMExtensionProvisioningError) Unable to establish outbound connection from agents, please see `https://learn.microsoft.com/en-us/troubleshoot/azure/azure-kubernetes/error-code-outboundconnfailvmextensionerror` and `https://aka.ms/aks-required-ports-and-addresses` for more information.  
 > Details: instance 3 has extension error details : {vmssCSE error messages : {vmssCSE exit status=50, output=AGE_SHA=sha-16fd35
 
 These errors often contain detailed descriptions of what went wrong in the cluster start operation, and they provide links to articles that contain more details. Additionally, you can use our troubleshooting articles as a reference based on the error that an Azure CLI operation produces.
