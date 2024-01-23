@@ -176,16 +176,28 @@ ON evt.event_name = xemap.xe_event_name
 GO
 ```
 
-## Step 8: Fix SOS_CACHESTORE spinlock contention
+## Step 8: Fix high CPU usage with spinlock contention
 
-If your SQL Server instance experiences heavy `SOS_CACHESTORE` spinlock contention or you notice that your query plans are often removed on unplanned query workloads, review the following article and enable trace flag `T174` by using the `DBCC TRACEON (174, -1)` command:
+To solve common high CPU usage with spinlock contention, see the following sections.
+
+> [!NOTE]
+> High CPU may result from spinlock contention on many other spinlock types. For more information on spinlocks, see [Diagnose and resolve spinlock contention on SQL Server](/sql/relational-databases/diagnose-resolve-spinlock-contention).
+
+### SOS_CACHESTORE spinlock contention
+
+If your SQL Server instance experiences heavy `SOS_CACHESTORE` spinlock contention or you notice that your query plans are often removed on unplanned query workloads, see the following article and enable trace flag `T174` by using the `DBCC TRACEON (174, -1)` command:
 
 [FIX: SOS_CACHESTORE spinlock contention on ad hoc SQL Server plan cache causes high CPU usage in SQL Server](https://support.microsoft.com/topic/kb3026083-fix-sos-cachestore-spinlock-contention-on-ad-hoc-sql-server-plan-cache-causes-high-cpu-usage-in-sql-server-798ca4a5-3813-a3d2-f9c4-89eb1128fe68).
 
 If the high-CPU condition is resolved by using `T174`, enable it as a [startup parameter](/sql/tools/configuration-manager/sql-server-properties-startup-parameters-tab) by using SQL Server Configuration Manager.
 
-> [!NOTE]
-> High CPU may result from spinlock contention on many other spinlock types, but `SOS_CACHESTORE` is a commonly-reported one. For more information on spinlocks, see [Diagnose and resolve spinlock contention on SQL Server](/sql/relational-databases/diagnose-resolve-spinlock-contention)
+### Random high CPU due to SOS_BLOCKALLOCPARTIALLIST spinlock contention on large-memory machine
+
+If your SQL Server instance experiences random high CPU due to `SOS_BLOCKALLOCPARTIALLIST` spinlock contention, we recommend that you apply [Cumulative Update 21 for SQL Server 2019](/troubleshoot/sql/releases/sqlserver-2019/cumulativeupdate21). For more information on how to solve the issue, see bug reference [2410400](../../releases/sqlserver-2019/cumulativeupdate21.md#2410400) and [DBCC DROPCLEANBUFFERS](/sql/t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql) which provides temporary mitigation.
+
+### Higher CPU with spinlock contention on XVB_list for a high end machine
+
+If your SQL Server instance experiences higher CPU with spinlock contention on `XVB_list` for a high config (CPU and Memory) machine, enable the trace flag TF8102 on startup, in addition to [TF8101](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf8101).
 
 ## Step 9: Configure your virtual machine
 
