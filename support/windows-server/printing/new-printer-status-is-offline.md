@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, AndrewYa
 ms.custom: sap:errors-and-troubleshooting-general-issues, csstroubleshoot
-ms.technology: windows-server-printing
+ms.subservice: printing
 ---
 # The new printer status is Offline after you delete a print queue and then restart a Windows-based computer
 

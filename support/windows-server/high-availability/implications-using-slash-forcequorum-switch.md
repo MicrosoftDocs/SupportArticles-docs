@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, ctimon
 ms.custom: sap:initial-cluster-creation-or-adding-node, csstroubleshoot
-ms.technology: windows-server-high-availability
+ms.subservice: high-availability
 ---
 # The implications of using the /forcequorum switch to start the Cluster service in Windows Server 2008
 

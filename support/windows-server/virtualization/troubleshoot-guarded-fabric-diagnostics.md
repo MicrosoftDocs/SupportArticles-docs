@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, dongill, inhenkel, v-lianna
 ms.custom: sap:shielded-virtual-machines, csstroubleshoot
-ms.technology: hyper-v
+ms.subservice: hyper-v
 ms.assetid: 07691d5b-046c-45ea-8570-a0a85c3f2d22
 ---
 # Troubleshoot using the Guarded Fabric Diagnostic Tool

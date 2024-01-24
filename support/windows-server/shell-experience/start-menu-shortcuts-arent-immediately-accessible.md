@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-jesits, v-six, robsim, cpuckett
 ms.custom: sap:start-menu, csstroubleshoot
-ms.technology: windows-server-shell-experience
+ms.subservice: shell-experience
 ---
 # Start menu shortcuts aren't immediately accessible in Windows Server 2016 and Windows Server 2019
 

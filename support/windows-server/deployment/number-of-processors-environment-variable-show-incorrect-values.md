@@ -5,11 +5,11 @@ ms.date: 08/01/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, stevepar, praveenr, v-lianna
 ms.custom: sap:devices-and-drivers, csstroubleshoot
-ms.technology: windows-server-deployment
+ms.subservice: deployment
 ---
 # The %NUMBER_OF_PROCESSORS% environment variable may show incorrect values
 

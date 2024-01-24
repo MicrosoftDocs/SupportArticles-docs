@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jarrettr
 ms.custom: sap:microsoft-management-console-mmc, csstroubleshoot
-ms.technology: windows-server-system-management-components
+ms.subservice: system-mgmt-components
 ---
 # How to troubleshoot SMS Administrator console connectivity
 
