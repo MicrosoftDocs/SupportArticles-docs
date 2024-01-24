@@ -6,9 +6,7 @@
     - name: '"FAILED_TO_AUTO_DISCOVER_DOMAIN" error in admin center'
       href: ./teams-administration/failed-to-auto-discover-domain-error-teams-admin-center.md
     - name: "\"We couldn't add member\" error when adding users"
-      href: ./teams-administration/couldnt-add-member-error.md
-    - name:  Can't send messages to a group chat
-      href: ./teams-administration/unable-send-message-group-chat.md
+      href: ./teams-administration/couldnt-add-member-error.md 
     - name: Clear the Teams client cache
       href: ./teams-administration/clear-teams-cache.md  
     - name: Error switching a tenant to Teams Only mode
