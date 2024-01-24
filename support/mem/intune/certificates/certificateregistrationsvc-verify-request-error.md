@@ -44,6 +44,8 @@ This issue can occur if the **Write** permission is missing for the account that
 
 ## Resolution
 
+Note: This issue may appear only when using the legacy Certificate Intune connector, and cannot reproduce with the new connector as the verify requests are sent to the Intune Cloud service to be processed. 
+
 To fix this issue, add the Network Service account that has the **Write** permission to the `C:\Windows\Temp` folder.
 
 Additionally, make sure that there are no other policies that will remove the **Write** permission after it's added. Otherwise, the problem will recur.
