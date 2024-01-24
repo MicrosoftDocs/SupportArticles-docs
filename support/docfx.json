@@ -191,14 +191,10 @@
         "**/*.md": "troubleshooting"
       },
       "ms.prod": {
-        "developer/dotnet/**/*.md": ".net",
         "developer/webapps/iis/**/*.md": "iis",
         "windows-hardware/drivers/**/*.md": "windows-hardware"
       },
       "ms.technology": {
-        "developer/dotnet/wcf/**/*.md": "dotnet-wcf",
-        "developer/dotnet/framework/general/**/*.md": "dotnet-general",
-        "developer/dotnet/framework/installation/**/*.md": "dotnet-installation",
         "developer/dotnet/framework/language-compilers/**/*.md": "dotnet-language-compilers",
         "developer/webapps/**/*.md": "",
         "developer/webapps/iis/active-server-pages/**/*.md": "iis-active-server-pages",
@@ -244,6 +240,7 @@
         "sql/analysis-services/**/*.md": "analysis-services",
         "sql/azure-sql/**/*.md": "virtual-machines-sql",
         "sql/reporting-services/**/*.md": "reporting-services",
+        "developer/dotnet/**/*.md": ".net",
         "developer/visualstudio/**/*.md": "visual-studio-family",
         "developer/visualstudio/cpp/**/*.md": "visual-cpp",
         "developer/visualstudio/csharp/**/*.md": "dotnet",
@@ -419,6 +416,9 @@
         "developer/host-integration-server/data-integration/**/*.md": "data-integration",
         "developer/host-integration-server/setup-configuration/**/*.md": "setup-configuration",
         "windows/win32/**/*.md": ""
+        "developer/dotnet/wcf/**/*.md": "wcf",
+        "developer/dotnet/framework/general/**/*.md": "general",
+        "developer/dotnet/framework/installation/**/*.md": "installation"
       },
       "titleSuffix": {
         "developer/biztalk/**/*.md": "BizTalk Server",
