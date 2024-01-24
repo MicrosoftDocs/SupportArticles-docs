@@ -201,19 +201,19 @@
           href: ../hybrid-configuration-wizard-errors/user-not-assigned-to-any-management-roles.md
         - name: '"The pipeline has been stopped" error when running Hybrid Configuration Wizard'
           href: ../hybrid-configuration-wizard-errors/system-management-automation-pipelinestoppedexception.md
-        - name: '"The term Get-OrganizationConfig isn't recognized" error'
+        - name: '"The term Get-OrganizationConfig is not recognized" error'
           href: ../hybrid-configuration-wizard-errors/term-get-organizationconfig-is-not-recognized-error.md
         - name: '"The underlying connection was closed" error'
           href: ../hybrid-configuration-wizard-errors/the-underlying-connection-was-closed-error.md
-        - name: '"The WSMan client can't process the request" error'
+        - name: '"The WSMan client cannot process the request" error'
           href: ../hybrid-configuration-wizard-errors/the-wsman-client-cannot-process-the-request-error.md
         - name: Unable to determine routing domain for cloud organization
           href: ../hybrid-configuration-wizard-errors/unable-to-determine-the-routing-domain-for-the-cloud-org.md
         - name: Warning occurs when running Hybrid Configuration Wizard
           href: ../hybrid-configuration-wizard-errors/hcw-has-completed-but-was-not-able-to-perform-oauth.md
-        - name: '"Web Services External Url isn't set on the on-premises server" error'
+        - name: '"Web Services External Url is not set on the on-premises server" error'
           href: ../hybrid-configuration-wizard-errors/web-services-external-url-is-not-set-on-the-on-premises-server-error.md
-        - name: '"WinRM client can't complete operation within time specified" error'
+        - name: '"WinRM client cannot complete operation within time specified" error'
           href: ../hybrid-configuration-wizard-errors/winrm-client-cannot-complete-operation-with-time-specified-error.md
     - name: Move Mailboxes
       items:
@@ -221,7 +221,7 @@
           href: ../move-mailboxes/remote-server-returned-error-403-forbidden.md
         - name: '"Access is denied" error when moving mailboxes'
           href: ../move-mailboxes/access-is-denied-error-when-moving-mailboxes.md
-        - name: '"Can't find a recipient that has mailbox GUID" error'
+        - name: '"Cannot find a recipient that has mailbox GUID" error'
           href: ../move-mailboxes/migrationpermanentexception-when-moving-mailboxes.md             
         - name: Can't migrate on-premises primary mailbox with cloud-based archive
           href: ../move-mailboxes/cannot-migrate-on-premises-primary-mailbox.md
