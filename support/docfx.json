@@ -235,12 +235,7 @@
         "developer/biztalk/management-operations/*.md": "biztalk-server-management-operations",
         "developer/biztalk/performance/*.md": "biztalk-server-performance",
         "windows/win32/**/*.md": "",
-        "windows-hardware/drivers/**/*.md": "",
-        "system-center/dpm/**/*.md": "data-protection-manager",
-        "system-center/scom/**/*.md": "operations-manager",
-        "system-center/orchestrator/**/*.md": "orchestrator",
-        "system-center/scsm/**/*.md": "service-manager",
-        "system-center/vmm/**/*.md": "virtual-machine-manager"
+        "windows-hardware/drivers/**/*.md": ""
       },
       "ms.service": {
         "azure/active-directory/*.md": "active-directory",
@@ -417,6 +412,11 @@
         "developer/webapps/aspnet/iisadmin-service-process/**/*.md": "iisadmin-service-process",
         "developer/webapps/aspnet/www-authentication-authorization/**/*.md": "www-authentication-authorization",
         "developer/webapps/aspnet/health-diagnostic-performance/**/*.md": "health-diagnostic-performance",
+        "system-center/orchestrator/**/*.md": "orchestrator",
+        "system-center/vmm/**/*.md": "virtual-machine-manager",
+        "system-center/dpm/**/*.md": "data-protection-manager",
+        "system-center/scsm/**/*.md": "service-manager",
+        "system-center/scom/**/*.md": "operations-manager",
         "developer/webapps/aspnetcore/practice-troubleshoot-linux/**/*.md": "practice-troubleshoot-linux",
         "developer/biztalk/setup-config/*.md": "setup-config",
         "developer/biztalk/adapter/*.md": "biztalk-server-adapter",
