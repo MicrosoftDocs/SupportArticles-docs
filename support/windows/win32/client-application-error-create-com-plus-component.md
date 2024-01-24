@@ -4,7 +4,7 @@ description: This article describes a problem that might occur when a client app
 ms.date: 05/12/2020
 ms.custom: sap:Component development
 ms.reviewer: wmascia
-ms.technology: windows-dev-apps-component-dev
+ms.subservice: component-dev
 ---
 # A client application may intermittently receive an error message when it tries to create a COM+ component
 
