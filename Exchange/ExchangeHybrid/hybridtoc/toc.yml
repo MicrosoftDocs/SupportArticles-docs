@@ -185,7 +185,7 @@
           href: ../hybrid-configuration-wizard-errors/running-hybrid-configuration-wizard-fails.md
         - name: Same URI can't be attached to different AppId on a single day
           href: ../hybrid-configuration-wizard-errors/same-uri-not-attached-to-different-appid-on-single-day.md
-        - name: '"Secure Mail Certificate on server isn't bound to the SMTP Service" error'
+        - name: '"Secure Mail Certificate on server is not bound to the SMTP Service" error'
           href: ../hybrid-configuration-wizard-errors/secure-mail-certificate-on-server-is-not-bound-to-smtp-service-error.md
         - name: '"Sending mailbox server" error when running HCW'
           href: ../hybrid-configuration-wizard-errors/sending-mailbox-server-error-running-hcw.md
