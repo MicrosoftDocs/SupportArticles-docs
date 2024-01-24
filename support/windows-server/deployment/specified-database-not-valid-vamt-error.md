@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, scottmca, luche
 ms.custom: sap:activation, csstroubleshoot
-ms.technology: windows-server-deployment
+ms.subservice: deployment
 ---
 # The specified database is not a valid VAMT database error message when you try to create a database by using VAMT 3.0 on a Windows 8 or Windows Server 2012-based computer
 
