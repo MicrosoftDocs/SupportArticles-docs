@@ -5,9 +5,9 @@ author: Deland-Han
 ms.author: delhan
 ms.topic: troubleshooting
 ms.date: 05/20/2023
-ms.prod: windows-server
+ms.service: windows-server
 ms.reviewer: kaushika, cdascoli, bechinch, khoffman
-ms.technology: windows-server-backup-and-storage
+ms.subservice: backup-and-storage
 ms.custom: sap:volume-shadow-copy-service-vss, csstroubleshoot
 ---
 # Event ID 32 occurs, and shadow copies are unexpectedly deleted

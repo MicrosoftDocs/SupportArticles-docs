@@ -4,7 +4,7 @@ description: This article describes an issue in which the GetICMProfile function
 ms.date: 08/23/2022
 ms.reviewer: mihayash, davean, v-jayaramanp
 ms.custom: sap:graphics and multimedia development
-ms.technology: windows-dev-apps-graphics-multimedia-dev
+ms.subservice: graphics-multimedia-dev
 ---
 # GetICMProfile function leaks one or more handles in Windows 10
 
