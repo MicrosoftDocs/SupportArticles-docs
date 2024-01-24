@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:windows-firewall-with-advanced-security-wfas, csstroubleshoot
-ms.technology: networking
+ms.subservice: networking
 ---
 # Error 0x000006D9 when you try to share a printer on a computer that is running Windows 7 or Windows Server 2008 R2
 
