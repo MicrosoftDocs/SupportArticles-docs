@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, JAMIRC
 ms.custom: sap:lock-screen-or-screensaver, csstroubleshoot
-ms.technology: windows-server-shell-experience
+ms.subservice: shell-experience
 ---
 # How to prevent the name of the last logged-on user from being displayed in the Log On to Windows dialog box in Windows Server 2003  
 

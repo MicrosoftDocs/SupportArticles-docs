@@ -5,11 +5,11 @@ ms.date: 12/09/2021
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate
 ms.custom: sap:node-removed-from-the-cluster, csstroubleshoot
-ms.technology: windows-server-high-availability
+ms.subservice: high-availability
 keywords: multi-site,multisite,cluster,disconnect,cross-subnet,stretched,vlan
 ---
 # Cluster IP address resources fail on both nodes of a two-node, two-site cluster when one node disconnects from the public VLAN

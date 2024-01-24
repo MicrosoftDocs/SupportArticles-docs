@@ -4,7 +4,7 @@ description: This article introduces the new functionalities of Microsoft COM+, 
 ms.date: 06/25/2021
 ms.custom: sap:Component development
 ms.reviewer: dave.anderson
-ms.technology: windows-dev-apps-component-dev
+ms.subservice: component-dev
 ---
 # COM+ supports automatic collection of process dump file and process termination in Windows Server
 

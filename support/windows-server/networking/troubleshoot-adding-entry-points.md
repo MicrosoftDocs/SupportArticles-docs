@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, brianlic, jgerend, v-lianna
 ms.custom: sap:remote-access-multisite, csstroubleshoot
-ms.technology: networking
+ms.subservice: networking
 ms.assetid: dcc1037f-1a65-4497-99e6-0df9aef748a8
 ---
 # Troubleshoot adding entry points

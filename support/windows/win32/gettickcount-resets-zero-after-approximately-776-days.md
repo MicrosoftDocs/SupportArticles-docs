@@ -5,7 +5,7 @@ author: cts-davean
 ms.author: davean
 ms.reviewer: v-sidong
 ms.custom: sap:System Services Development
-ms.technology: windows-dev-apps-system-services-dev
+ms.subservice: system-services-dev
 ms.date: 09/04/2023
 ---
 # GetTickCount resets to zero after approximately 776 days
