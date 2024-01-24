@@ -197,7 +197,7 @@ If your SQL Server instance experiences random high CPU usage due to `SOS_BLOCKA
 
 ### High CPU usage due to spinlock contention on XVB_list on high-end machines
 
-If your SQL Server instance experiences a high CPU scenario caused by spinlock contention on the `XVB_list` spinlock on high configuration machines (high-end systems with a large number of newer generation processors (CPUs)), enable the trace flag [TF8102](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf8102) together with [TF8101](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf8101).
+If your SQL Server instance experiences a high CPU scenario caused by spinlock contention on the `XVB_LIST` spinlock on high configuration machines (high-end systems with a large number of newer generation processors (CPUs)), enable the trace flag [TF8102](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf8102) together with [TF8101](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf8101).
 
 ## Step 9: Configure your virtual machine
 
