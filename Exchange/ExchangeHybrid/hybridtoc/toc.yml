@@ -187,9 +187,10 @@
           href: ../hybrid-configuration-wizard-errors/same-uri-not-attached-to-different-appid-on-single-day.md
         - name: '"Secure Mail Certificate on server is not bound to the SMTP Service" error'
           href: ../hybrid-configuration-wizard-errors/secure-mail-certificate-on-server-is-not-bound-to-smtp-service-error.md
-        - name: '"Sending mailbox server" error when running HCW'
+        - name: '"Sending mailbox server" error when running Hybrid Configuration Wizard'
           href: ../hybrid-configuration-wizard-errors/sending-mailbox-server-error-running-hcw.md
-        - name: State of runspace isn't valid for this operation error
+        - name: '"Sending mailbox server" error when running Hybrid Configuration Wizard'
+        - name: '"State of runspace is not valid for this operation" error'
           href: ../hybrid-configuration-wizard-errors/state-of-runspace-is-not-valid-for-this-operation-error.md
         - name: Subtask Configure execution failed
           href: ../hybrid-configuration-wizard-errors/hcw-subtask-configure-execution-failed.md
