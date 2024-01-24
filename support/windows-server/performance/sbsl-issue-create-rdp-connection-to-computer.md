@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, pranayav, amanjain, vineelko
 ms.custom: sap:boot-is-slow, csstroubleshoot
-ms.technology: windows-server-performance
+ms.subservice: performance
 ---
 # Server freezes or user logon is slow when connecting to Windows Server 2012 R2 by using RDP
 
