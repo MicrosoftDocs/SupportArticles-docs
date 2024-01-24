@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot Azure Kubernetes Service cluster start issues
+title: Troubleshoot Azure Kubernetes Service cluster startup issues
 description: Learn about basic troubleshooting methods to use when you can't start an Azure Kubernetes Service (AKS) cluster.
 ms.date: 01/23/2024
 editor: v-jovieir
@@ -8,7 +8,7 @@ ms.service: azure-kubernetes-service
 ms.custom: devx-track-azurecli
 #Customer intent: As an Azure Kubernetes user, I want to take basic troubleshooting measures to resolve issues that occur when I try to start an Azure Kubernetes Service (AKS) cluster.
 ---
-# Basic troubleshooting of AKS cluster start issues
+# Basic troubleshooting of AKS cluster startup issues
 
 This article outlines the basic troubleshooting methods to use if you can't start a Microsoft Azure Kubernetes Service (AKS) cluster successfully.
 
@@ -20,7 +20,7 @@ This article outlines the basic troubleshooting methods to use if you can't star
 
 ## View errors from Azure CLI
 
-When you start clusters by using Azure CLI, errors are recorded as output if the operation fails. Here's how a command, user input, and operation output might appear in a Bash console:
+When you start clusters by using Azure CLI, errors are recorded as output if the operation fails. Here's how a command, user input, and operation output might appear in a `Bash` console:
 
 ```console
 $ az aks start --resource-group myResourceGroup --name MyManagedCluster
@@ -37,17 +37,17 @@ To view the details about errors in the [Azure portal](https://portal.azure.com)
 
 The list of logs on the **Activity log** page contains a line entry in which the **Operation name** column value is named **Start Managed Cluster**. The corresponding **Event initiated by** column value is set to the name of your work or school account. If the operation is successful, the **Status** column value shows **Accepted**. 
 
-:::image type="content" source="media/troubleshoot-aks-cluster-start-issues/activity-log-errors.png" alt-text="Screenshot of an AKS cluster Activity Log blade displaying a start operation that has failed." border="false":::
+:::image type="content" source="media/troubleshoot-aks-cluster-start-issues/activity-log-errors.png" alt-text="Screenshot of an AKS cluster activity log blade showing a failed start operation.":::
 
-What if an error occurred instead? In that case, the **Start Managed Cluster** operation **Status** field shows **Failed**. Unlike in the operations to create cluster components, here you must expand the failed operation entry to review the suboperation entries. Typical suboperation names are policy actions, such as **'audit' Policy action** and **'auditIfNotExists' Policy action.** Some of the suboperations will continue to show that they succeeded.
+What if an error occurred instead? In that case, the **Start Managed Cluster** operation **Status** field shows **Failed**. Unlike in the operations to create cluster components, here you must expand the failed operation entry to review the suboperation entries. Typical suboperation names are policy actions, such as **'audit' Policy action** and **'auditIfNotExists' Policy action.** Some suboperations will continue to show that they succeeded.
 
-To further investigate, you can select one of the failed suboperations. A side pane opens so that you can review more information about the suboperation. You can troubleshoot values for fields such as **Summary**, **JSON**, and **Change History**. The **JSON** field contains the output text for the error in JSON format, and it usually provides the most helpful information.
+To further investigate, you can select one of the failed suboperations. A side pane opens so that you can review more information about the suboperation. You can troubleshoot values for fields such as **Summary**, **JSON**, and **Change history**. The **JSON** field contains the output text for the error in JSON format, and it usually provides the most helpful information.
 
-:::image type="content" source="media/troubleshoot-aks-cluster-start-issues/activity-log-error-details.png" alt-text="Screenshot of an AKS cluster Activity Log suboperation side pane displaying a start operation failure cause." border="false":::
+:::image type="content" source="media/troubleshoot-aks-cluster-start-issues/activity-log-error-details.png" alt-text="Screenshot of a suboperation side pane of an AKS cluster activity log showing why a start operation failed.":::
 
 ## View cluster insights
 
-You may also generate cluster insights that will help you troubleshoot via the **Diagnose and solve problems** blade on the Azure portal. To access this feature, follow these steps:
+You can also generate cluster insights to help you troubleshoot via the **Diagnose and solve problems** blade in the Azure portal. To access this feature, follow these steps:
 
 1. In [the Azure portal](https://portal.azure.com), search for and select **Kubernetes services**.
 
@@ -55,21 +55,22 @@ You may also generate cluster insights that will help you troubleshoot via the *
 
 1. In the navigation pane of the AKS cluster page, select **Diagnose and solve problems**.
 
-1. In the **Diagnose and solve problems** page, select the **Cluster insights** link. The cluster insights tool analyzes your cluster, and then provides a list of its findings in the **Observations and Solutions** section of the **Cluster Insights** page.
+1. On the **Diagnose and solve problems** page, select the **Cluster insights** link. The cluster insights tool analyzes your cluster, and then provides a list of its findings in the **Observations and Solutions** section of the **Cluster Insights** page.
 
 1. Select one of the findings to view more information about a problem and its possible solutions.
 
 ## View resources in the Azure portal
 
-In the Azure portal, you might want to view the resources that were created when the cluster was built. Typically, these resources are in a resource group that begins in *MC_*. The managed cluster resource group might have a name such as **MC_MyResourceGroup_MyManagedCluster_\<location-code>**. However, the name may be different if you built the cluster by using a custom-managed cluster resource group.
+In the Azure portal, you might want to view the resources that were created when the cluster was built. Typically, these resources are in a resource group that begins with *MC_*. The managed cluster resource group might have a name such as **MC_MyResourceGroup_MyManagedCluster_\<location-code>**. However, the name may be different if you built the cluster by using a custom-managed cluster resource group.
 
-To find the resource group, search for and select **Resource groups** in the Azure portal, and then select the resource group in which the cluster was created. The resource list is shown in the **Overview** page of the resource group.
+To find the resource group, search for and select **Resource groups** in the Azure portal, and then select the resource group in which the cluster was created. The resource list is shown on the **Overview** page of the resource group.
 
 > [!WARNING]
 > We recommend that you don't modify resources in the *MC_* resource group. This action might cause unwanted effects on your AKS cluster.
-To review the status of a virtual machine scale set, you can select the scale set name within the list of resources for the resource group. It might have a **Name** similar to **aks-nodepool1-12345678-vmss**, and it would have a **Type** value of **Virtual machine scale set**. The status of the scale set appears at the top of the node pool's **Overview** page, and more details are shown in the **Essentials** heading. If deployment was unsuccessful, the displayed status is **Failed**.
 
-For all resources, you can review details to gain a better understanding about why the deployment failed. For a scale set, you can select the **Failed** status text to view details about the failure. The details are in a row that contains **Status**, **Level**, and **Code** columns. The following example shows a row of column values.
+To review the status of a virtual machine scale set, you can select the scale set name within the list of resources for the resource group. It might have a **Name** similar to **aks-nodepool1-12345678-vmss** and a **Type** value of **Virtual machine scale set**. The status of the scale set appears at the top of the node pool's **Overview** page, and more details are shown in the **Essentials** heading. If the deployment was unsuccessful, the displayed status is **Failed**.
+
+For all resources, you can review details to better understand why the deployment failed. For a scale set, you can select the **Failed** status text to view details about the failure. The details are in a row that contains the **Status**, **Level**, and **Code** columns. The following example shows a row of column values.
 
 | Column | Example value |
 | ------ | ------------- |
@@ -77,7 +78,7 @@ For all resources, you can review details to gain a better understanding about w
 | Level | **Error** |
 | Code | **ProvisioningState/failed/VMExtensionProvisioningError** |
 
-Select the row to see the **Message** field. This contains even more information about that failure. For example, the **Message** field for the example row begins in the following text:
+Select the row to see the **Message** field. This contains even more information about that failure. For example, the **Message** field for the example row begins with the following text:
 
 > VM has reported a failure when processing extension 'vmssCSE'. Error message: "Enable failed: failed to execute command: command terminated with exit status=50 [stdout] [stderr] 0 0 0 --:
 Armed with this information, you can conclude that the VMs in the scale set failed and generated exit status 50.
@@ -139,6 +140,6 @@ Events:
   Warning  FailedScheduling  29m (x57 over 84m)  default-scheduler  no nodes available to schedule pods
 ```
 
-In the command output, you can see that the pod can't deploy to a node because no nodes are available.
+In the command output, you can see that the pod can't be deployed to a node because no nodes are available.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
