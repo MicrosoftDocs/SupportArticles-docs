@@ -1,7 +1,7 @@
 ---
 title: Can't delete a virtual network or subnet used by ACI
 description: Discusses how to troubleshoot failures when you delete a virtual network or subnet used by Azure Container Instances (ACI).
-ms.date: 01/19/2024
+ms.date: 01/24/2024
 ms.service: container-instances
 ms.reviewer: tysonfreeman, v-weizhu
 ---
@@ -115,7 +115,5 @@ If deleting the network profile through the Azure portal and Azure CLI fails, up
     az resource update --ids $NETWORK_PROFILE_ID --set properties.containerNetworkInterfaceConfigurations=[]
     ```
 3. Delete the network profile and the subnet.
-
-## Next Steps
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
