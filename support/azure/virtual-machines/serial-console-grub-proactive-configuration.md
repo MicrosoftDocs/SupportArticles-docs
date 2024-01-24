@@ -9,7 +9,6 @@ tags: azure-resource-manager
 ms.service: virtual-machines
 ms.subservice: vm-troubleshooting-tools
 ms.collection: linux
-ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: vm-linux
 ms.workload: infrastructure-services
