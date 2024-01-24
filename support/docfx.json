@@ -270,7 +270,7 @@
         "microsoft-identity-manager/*.md": "microsoft-identity-manager",
         "dynamics/gp/*.md": "dynamics-gp",
         "mem/configmgr/**/*.md": "configuration-manager",
-        "developer/host-integration-server/**/*.md": "host-integration-server"
+        "developer/host-integration-server/**/*.md": "host-integration-server",
         "developer/biztalk/**/*.md": "biztalk-server",
         "windows/win32/**/*.md": "windows-dev-apps"
       },
