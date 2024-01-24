@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot high-CPU-usage issues in SQL Server
 description: This article provides a procedure to help you fix high-CPU-usage issues on a server that is running SQL Server.
-ms.date: 03/02/2022
+ms.date: 01/24/2024
 ms.custom: sap:Performance
 ms.topic: troubleshooting
 ms.reviewer: jopilov, v-jayaramanp
@@ -176,12 +176,12 @@ ON evt.event_name = xemap.xe_event_name
 GO
 ```
 
-## Step 8: Fix high CPU usage with spinlock contention
+## Step 8: Fix high CPU usage caused by spinlock contention
 
-To solve common high CPU usage with spinlock contention, see the following sections.
+To solve common high CPU usage caused by spinlock contention, see the following sections.
 
 > [!NOTE]
-> High CPU may result from spinlock contention on many other spinlock types. For more information on spinlocks, see [Diagnose and resolve spinlock contention on SQL Server](/sql/relational-databases/diagnose-resolve-spinlock-contention).
+> High CPU usage may result from spinlock contention on many other spinlock types. For more information on spinlocks, see [Diagnose and resolve spinlock contention on SQL Server](/sql/relational-databases/diagnose-resolve-spinlock-contention).
 
 ### SOS_CACHESTORE spinlock contention
 
@@ -191,13 +191,13 @@ If your SQL Server instance experiences heavy `SOS_CACHESTORE` spinlock contenti
 
 If the high-CPU condition is resolved by using `T174`, enable it as a [startup parameter](/sql/tools/configuration-manager/sql-server-properties-startup-parameters-tab) by using SQL Server Configuration Manager.
 
-### Random high CPU due to SOS_BLOCKALLOCPARTIALLIST spinlock contention on large-memory machine
+### Random high CPU usage due to SOS_BLOCKALLOCPARTIALLIST spinlock contention on large-memory machines
 
-If your SQL Server instance experiences random high CPU due to `SOS_BLOCKALLOCPARTIALLIST` spinlock contention, we recommend that you apply [Cumulative Update 21 for SQL Server 2019](/troubleshoot/sql/releases/sqlserver-2019/cumulativeupdate21). For more information on how to solve the issue, see bug reference [2410400](../../releases/sqlserver-2019/cumulativeupdate21.md#2410400) and [DBCC DROPCLEANBUFFERS](/sql/t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql) which provides temporary mitigation.
+If your SQL Server instance experiences random high CPU usage due to `SOS_BLOCKALLOCPARTIALLIST` spinlock contention, we recommend that you apply [Cumulative Update 21 for SQL Server 2019](/troubleshoot/sql/releases/sqlserver-2019/cumulativeupdate21). For more information on how to solve the issue, see bug reference [2410400](../../releases/sqlserver-2019/cumulativeupdate21.md#2410400) and [DBCC DROPCLEANBUFFERS](/sql/t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql) that provides temporary mitigation.
 
-### Higher CPU with spinlock contention on XVB_list for a high end machine
+### High CPU usage due to spinlock contention on XVB_list on high-end machines
 
-If your SQL Server instance experiences a high CPU scenario caused by spinlock contention on the `XVB_list` spinlock for a high config machine (high-end systems with a large number of newer generation processors (CPUs)), enable the trace flag [TF8102](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf8102) together with [TF8101](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf8101).
+If your SQL Server instance experiences a high CPU scenario caused by spinlock contention on the `XVB_list` spinlock on high configuration machines (high-end systems with a large number of newer generation processors (CPUs)), enable the trace flag [TF8102](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf8102) together with [TF8101](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf8101).
 
 ## Step 9: Configure your virtual machine
 
