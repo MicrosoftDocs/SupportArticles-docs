@@ -1,15 +1,15 @@
 ---
-title: Azure Container Instances debug tools
-description: Learn about debug tools on Azure Container Instances.
-ms.date: 01/22/2024
+title: Azure Container Instances debugging tools
+description: Learn about debugging tools on Azure Container Instances.
+ms.date: 01/24/2024
 ms.reviewer: tysonfms, v-weizhu
 ms.service: container-instances
 ---
-# Azure Container Instances debug tools
+# Azure Container Instances debugging tools
 
-This article lists debug tools for Azure Container Instances (ACI).
+This article lists debugging tools for Azure Container Instances (ACI).
 
-## List of debog tools
+## List of debugging tools
 
 - [Liveness probe](/azure/container-instances/container-instances-liveness-probe)
 - [Log Analytics](/azure/container-instances/container-instances-log-analytics)
