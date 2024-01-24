@@ -5,9 +5,9 @@ author: Deland-Han
 ms.author: delhan
 ms.topic: troubleshooting
 ms.date: 05/05/2023
-ms.prod: windows-server
+ms.service: windows-server
 ms.reviewer: kaushika
-ms.technology: windows-server-user-profiles
+ms.subservice: user-profiles
 ms.custom: sap:user-logon-fails, csstroubleshoot, ikb2lmc
 ---
 # "Your credentials could not be verified" error when logging on to Windows with Windows Hello for Business
