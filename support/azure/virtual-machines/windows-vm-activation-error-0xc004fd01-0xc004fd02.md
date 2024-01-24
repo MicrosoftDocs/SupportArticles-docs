@@ -4,7 +4,7 @@ description: Provides a solution to the error 0xC004FD01 or 0xC004FD02 that occu
 ms.service: virtual-machines
 ms.subservice: vm-windows-activation
 ms.collection: windows
-ms.date: 01/19/2024
+ms.date: 01/24/2024
 ms.reviewer: cwhitley, v-naqviadil, v-weizhu
 ---
 
@@ -38,7 +38,7 @@ This issue can happen in one of the following scenarios:
 
 To confirm the AVMA configuration, open the Command Prompt as an administrator and run the `slmgr /dlv` command. After the command execution, a **Windows Script Host** window appears:
 
-:::image type="content" source="media/windows-vm-activation-error-0xc004fd02/windows-script-host.png" alt-text="Screenshot of the Windows Script Host window.":::
+:::image type="content" source="media/windows-vm-activation-error-0xc004fd01-0xc004fd02/windows-script-host.png" alt-text="Screenshot of the Windows Script Host window.":::
 
 The "VIRTUAL_MACHINE_ACTIVATION" text in the **Description** line means that the AVMA activation method is used.
 
