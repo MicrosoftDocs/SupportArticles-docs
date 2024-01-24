@@ -180,8 +180,6 @@ GO
 
 To solve common high CPU usage caused by spinlock contention, see the following sections.
 
-> [!NOTE]
-> High CPU usage may result from spinlock contention on many other spinlock types. For more information on spinlocks, see [Diagnose and resolve spinlock contention on SQL Server](/sql/relational-databases/diagnose-resolve-spinlock-contention).
 
 ### SOS_CACHESTORE spinlock contention
 
@@ -199,6 +197,8 @@ If your SQL Server instance experiences random high CPU usage due to `SOS_BLOCKA
 
 If your SQL Server instance experiences a high CPU scenario caused by spinlock contention on the `XVB_LIST` spinlock on high configuration machines (high-end systems with a large number of newer generation processors (CPUs)), enable the trace flag [TF8102](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf8102) together with [TF8101](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf8101).
 
+> [!NOTE]
+> High CPU usage may result from spinlock contention on many other spinlock types. For more information on spinlocks, see [Diagnose and resolve spinlock contention on SQL Server](/sql/relational-databases/diagnose-resolve-spinlock-contention).
 ## Step 9: Configure your virtual machine
 
 If you're using a virtual machine, ensure that you aren't overprovisioning CPUs and that they're configured correctly. For more information, see [Troubleshooting ESX/ESXi virtual machine performance issues (2001003)](https://kb.vmware.com/s/article/2001003#CPU%20constraints).
