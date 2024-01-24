@@ -258,8 +258,6 @@
         "dynamics/gp/*.md": "dynamics-gp",
         "mem/configmgr/**/*.md": "configuration-manager",
         "system-center/**/*.md": "system-center",
-        "developer/host-integration-server/**/*.md": "host-integration-server",
-        "developer/biztalk/**/*.md": "biztalk-server",
         "windows/win32/**/*.md": "windows-dev-apps"
       },
       "ms.subservice": {
