@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, arrenc
 ms.custom: sap:dcpromo-and-the-installation-of-domain-controllers, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # Deployment and operation of Active Directory domains that are configured by using single-label DNS names
 
