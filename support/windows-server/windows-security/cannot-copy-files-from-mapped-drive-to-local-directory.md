@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jkuehler, pleblanc, arrenc
 ms.custom: sap:permissions-access-control-and-auditing, csstroubleshoot
-ms.technology: windows-server-security
+ms.subservice: windows-security
 ---
 # Copying files from a mapped drive to a local directory fails with error (Location is not available) if UAC is enabled
 

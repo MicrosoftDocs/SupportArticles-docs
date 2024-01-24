@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:domain-controller-scalability-or-performance-including-ldap, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # How to troubleshoot high Lsass.exe CPU utilization on Active Directory Domain Controllers
 

@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, santoshc
 ms.custom: sap:remote-access, csstroubleshoot
-ms.technology: networking
+ms.subservice: networking
 ---
 # "Error 633 - the modem (or other connecting device) is already in use" error message when you try to establish a VPN connection
 

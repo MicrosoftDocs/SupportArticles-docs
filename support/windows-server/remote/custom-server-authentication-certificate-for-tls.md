@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, mjacquet
 ms.custom: sap:certificate-management, csstroubleshoot
-ms.technology: windows-server-rds
+ms.subservice: rds
 ---
 # Force Remote Desktop Services in Windows 7 to use a custom server authentication certificate for TLS
 

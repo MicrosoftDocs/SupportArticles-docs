@@ -3,6 +3,8 @@ items:
 - name: Welcome
   href: welcome-container-instances.yml
 
+- name: Can't delete a virtual network or subnet used by ACI
+  href: cannot-delete-vnet-subnet.md
 - name: Fails to pull ACR images by using Managed Identity authentication
   href: acr-image-pull-failures-managed-identity.md
 

@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, herbertm, clfish, tcolla
 ms.custom: sap:domain-controller-scalability-or-performance-including-ldap, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # Issues when AD replication and Netlogon RPCs request backlog values are exceeded
 

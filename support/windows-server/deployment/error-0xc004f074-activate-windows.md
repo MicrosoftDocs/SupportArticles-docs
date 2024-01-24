@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:activation, csstroubleshoot
-ms.technology: windows-server-deployment
+ms.subservice: deployment
 ---
 # Error 0xC004F074 when you try to activate Windows
 

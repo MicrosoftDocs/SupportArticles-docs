@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jiesun, janotay, v-jesits
 ms.custom: sap:windows-nic-teaming-load-balance-failover, csstroubleshoot
-ms.technology: networking
+ms.subservice: networking
 ---
 # Services do not automatically start after reboot of a computer that uses NIC teaming
 
