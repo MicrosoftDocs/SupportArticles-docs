@@ -4,7 +4,7 @@ description: Explains how to add a custom HTTP response header to a Web site tha
 ms.date: 03/27/2020
 ms.custom: sap:Development
 ms.topic: how-to
-ms.technology: iis-development
+ms.technology: development
 ---
 # Add a custom HTTP response header to a web site that is hosted by IIS
 

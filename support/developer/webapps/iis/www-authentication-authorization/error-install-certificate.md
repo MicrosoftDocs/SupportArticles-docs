@@ -3,7 +3,7 @@ title: Errors occur when you install a certificate
 description: This article describes the problem where you receive an error message when you try to install a certificate by using IIS Manager, and provides a resolution.
 ms.date: 03/31/2020
 ms.custom: sap:WWW authentication and authorization
-ms.technology: iis-www-authentication-authorization
+ms.technology: www-authentication-authorization
 ---
 # Errors when you try to install a certificate by using IIS 7.0 Manager
 

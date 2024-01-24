@@ -4,7 +4,7 @@ description: This article provides resolutions for the problem where Internet Pr
 ms.date: 03/19/2020
 ms.custom: sap:Site behavior and performance
 ms.reviewer: mlaing
-ms.technology: iis-site-behavior-performance
+ms.technology: site-behavior-performance
 ---
 # Internet Printing fails if the document to be printed is larger than 29 MB
 

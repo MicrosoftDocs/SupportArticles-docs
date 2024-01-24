@@ -5,7 +5,7 @@ ms.date: 04/01/2020
 ms.custom: sap:WWW authentication and authorization
 ms.reviewer: mlaing
 ms.topic: article
-ms.technology: iis-www-authentication-authorization
+ms.technology: www-authentication-authorization
 ---
 # Default permissions and user rights for IIS 7.0 and later
 

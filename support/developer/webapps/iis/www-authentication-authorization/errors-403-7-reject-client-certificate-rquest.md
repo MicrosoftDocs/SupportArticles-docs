@@ -4,7 +4,7 @@ description: This article provides resolutions for the problem where IIS 8 may r
 ms.date: 12/11/2020
 ms.custom: sap:WWW Authentication and Authorization
 ms.reviewer: emmanubo
-ms.technology: iis-www-authentication-authorization
+ms.technology: www-authentication-authorization
 ---
 # IIS may reject client certificate requests with HTTP 403.7 or 403.16 errors
 

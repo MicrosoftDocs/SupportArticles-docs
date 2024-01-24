@@ -4,7 +4,7 @@ description: This article provides workarounds for the Event ID 115 error that o
 ms.date: 03/23/2020
 ms.custom: sap:Site behavior and performance
 ms.reviewer: lauras, martinsm
-ms.technology: iis-site-behavior-performance
+ms.technology: site-behavior-performance
 ---
 # Event ID 115 occurs when you try to connect to a HTTPS Website
 

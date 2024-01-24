@@ -3,7 +3,7 @@ title: Authorization fails for requests to the default document
 description: This article provides resolutions for the problem where authorization fails for requests to the default document even though the default document is allowed in the authorization tag.
 ms.date: 04/17/2020
 ms.custom: sap:Site behavior and performance
-ms.technology: iis-site-behavior-performance
+ms.technology: site-behavior-performance
 ---
 # Authorization fails for requests to the default document in IIS 7.0 and later versions
 

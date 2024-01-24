@@ -3,7 +3,7 @@ title: Troubleshoot Web Deploy problems with Visual Studio
 description: The article helps you troubleshoot a series of errors when trying to publish from Visual Studio to a server that hasn't been correctly configured via Web Deploy.
 ms.date: 04/09/2012
 ms.custom: sap:Deployment and migration
-ms.technology: iis-deployment-migration
+ms.technology: deployment-migration
 ms.reviewer: johnhart, hulopesv, v-sidong
 ---
 # Troubleshoot Web Deploy problems with Visual Studio

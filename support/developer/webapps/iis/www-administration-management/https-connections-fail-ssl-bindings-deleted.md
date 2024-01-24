@@ -3,7 +3,7 @@ title: HTTPS connections fail and SSL bindings are deleted
 description: This article provides resolutions for the problem where HTTPS connections fail and SSL bindings are deleted for a website in IIS 7.0 and 7.5.
 ms.date: 12/11/2020
 ms.custom: sap:WWW Administration and Management
-ms.technology: iis-www-administration-management
+ms.technology: www-administration-management
 ---
 # HTTPS connections fail and SSL bindings are deleted for a website in IIS 7.0 and 7.5
 

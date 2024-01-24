@@ -4,7 +4,7 @@ description: This article provides resolutions for the System.Web.HttpException 
 ms.date: 03/23/2020
 ms.custom: sap:Site behavior and performance
 ms.reviewer: rakkim, mlaing
-ms.technology: iis-site-behavior-performance
+ms.technology: site-behavior-performance
 ---
 # System.Web.HttpException in Internet Information Services
 

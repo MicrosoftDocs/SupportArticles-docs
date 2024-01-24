@@ -5,7 +5,7 @@ ms.date: 03/23/2020
 ms.custom: sap:FTP authentication and authorization
 ms.reviewer: kevinz
 ms.topic: how-to
-ms.technology: iis-ftp-authentication-authorization
+ms.technology: ftp-authentication-authorization
 ---
 # Use the FTP Utility in a typical session
 

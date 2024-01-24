@@ -4,7 +4,7 @@ description: This article talks about setting multiple site bindings and SSL in 
 ms.date: 04/16/2020
 ms.custom: sap:IISAdmin service and Inetinfo process operation
 ms.topic: how-to
-ms.technology: iis-iisadmin-service-inetinfo
+ms.technology: iisadmin-service-inetinfo
 ---
 # Set up SSL on multiple web sites in IIS with shared configuration
 

@@ -3,7 +3,7 @@ title: Error page can't be displayed
 description: This article describes an error (Page cannot be displayed) that occurs when you try to access an IIS site by using HTTPS after an exported certificate is installed on a Web site.
 ms.date: 05/28/2020
 ms.custom: sap:Health, diagnostic, and performance features
-ms.technology: iis-health-diagnostic-performance
+ms.technology: health-diagnostic-performance
 ---
 # Error when you try to access a site by using HTTPS: Page cannot be displayed
 

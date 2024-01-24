@@ -3,7 +3,7 @@ title: HTTP error 404 file not found on a server
 description: This article provides resolutions for the problem where HTTP error 404 file not found on a server that is running IIS.
 ms.date: 12/29/2020
 ms.custom: sap:Health, Diagnostic, and Performance Features
-ms.technology: iis-health-diagnostic-performance
+ms.technology: health-diagnostic-performance
 ---
 # How system administrators can troubleshoot an HTTP error 404 - File not found error message on a server that is running IIS
 

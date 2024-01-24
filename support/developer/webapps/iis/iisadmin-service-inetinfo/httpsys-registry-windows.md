@@ -4,7 +4,7 @@ description: Registry values can be added to control Http.sys behavior.
 ms.date: 04/16/2020
 ms.custom: sap:IISAdmin service and Inetinfo process operation
 ms.topic: article
-ms.technology: iis-iisadmin-service-inetinfo
+ms.technology: iisadmin-service-inetinfo
 ---
 # Http.sys registry settings for Windows
 

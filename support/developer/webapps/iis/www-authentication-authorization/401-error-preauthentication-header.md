@@ -4,7 +4,7 @@ description: An unexpected 401.1 status is returned when you use Pre-Authenticat
 ms.date: 04/03/2020
 ms.custom: sap:WWW authentication and authorization
 ms.reviewer: bretb, mlaing
-ms.technology: iis-www-authentication-authorization
+ms.technology: www-authentication-authorization
 ---
 # An unexpected 401.1 status is returned when you use Pre-Authentication headers with Internet Explorer and IIS
 
