@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jeffpatt
 ms.custom: sap:configuration-of-virtual-machine-settings, csstroubleshoot
-ms.technology: hyper-v
+ms.subservice: hyper-v
 ---
 # Hyper-V virtual machines exhibit slow startup and shutdown
 
