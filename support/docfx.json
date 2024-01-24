@@ -416,7 +416,7 @@
         "system-center/vmm/**/*.md": "virtual-machine-manager",
         "system-center/dpm/**/*.md": "data-protection-manager",
         "system-center/scsm/**/*.md": "service-manager",
-        "system-center/scom/**/*.md": "operations-manager"
+        "system-center/scom/**/*.md": "operations-manager",
         "developer/webapps/aspnetcore/practice-troubleshoot-linux/**/*.md": "practice-troubleshoot-linux",
         "developer/biztalk/setup-config/*.md": "setup-config",
         "developer/biztalk/adapter/*.md": "biztalk-server-adapter",
