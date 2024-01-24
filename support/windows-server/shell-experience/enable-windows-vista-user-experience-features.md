@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:windows-media-player, csstroubleshoot
-ms.technology: windows-server-shell-experience
+ms.subservice: shell-experience
 ---
 # How to enable Windows Vista user experience features on a computer that is running Windows Server 2008
 
