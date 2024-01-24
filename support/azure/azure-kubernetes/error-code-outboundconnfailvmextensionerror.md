@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot the OutboundConnFailVMExtensionError error code (50)
 description: Learn how to troubleshoot the OutboundConnFailVMExtensionError error (50) when you try to start or create and deploy an Azure Kubernetes Service (AKS) cluster.
-ms.date: 01/08/2024
+ms.date: 01/24/2024
 ms.reviewer: rissing, chiragpa, v-leedennis, jovieir
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-create-operations
