@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: henrche, kaushika
 ms.custom: sap:devices-and-drivers, csstroubleshoot
-ms.technology: windows-server-deployment
+ms.subservice: deployment
 ---
 # VMware driver installation fails in Windows Server 2008 R2 SP1
 
