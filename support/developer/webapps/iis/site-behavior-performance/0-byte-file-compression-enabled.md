@@ -3,7 +3,7 @@ title: 0-byte file is returned
 description: This article provides a resolution for the problem where A 0-byte file might be returned when compression is enabled on a server that is running IIS.
 ms.date: 03/30/2020
 ms.custom: sap:Site behavior and performance
-ms.technology: site-behavior-performance
+ms.subservice: site-behavior-performance
 ---
 # A 0-byte file might be returned when compression is enabled on a server that is running IIS
 

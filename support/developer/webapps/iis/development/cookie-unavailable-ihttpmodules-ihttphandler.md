@@ -3,7 +3,7 @@ title: Cookies added by HttpModule are unusable
 description: This article provides resolutions for the problem where cookie doesn't display in the native IHttpRequest object When you use the Cookies collection from either the managed HttpRequest or HttpResponse objects to add a cookie.
 ms.date: 03/26/2020
 ms.custom: sap:Development
-ms.technology: development
+ms.subservice: development
 ---
 # Cookies added by a managed HttpModule aren't available to native IHttpModules or IHttpHandlers
 

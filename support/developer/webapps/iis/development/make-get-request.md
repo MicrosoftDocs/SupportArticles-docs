@@ -4,7 +4,7 @@ description: This article describes how to make a GET request to retrieve a web 
 ms.date: 07/17/2020
 ms.custom: sap:Development
 ms.reviewer: duncanma
-ms.technology: development
+ms.subservice: development
 ---
 # Using Visual C# to make a GET request
 

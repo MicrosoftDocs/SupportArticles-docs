@@ -4,7 +4,7 @@ description: This article describes the information that may be collected from a
 ms.date: 04/07/2020
 ms.custom: sap:Health, diagnostic, and performance features
 ms.topic: article
-ms.technology: health-diagnostic-performance
+ms.subservice: health-diagnostic-performance
 ---
 # IIS ETW logs diagnostic
 

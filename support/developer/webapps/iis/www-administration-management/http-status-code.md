@@ -4,7 +4,7 @@ description: This article provides a list of the HTTP status codes in IIS 7.0 an
 ms.date: 02/16/2023
 ms.custom: sap:WWW Administration and Management
 ms.reviewer: v-jayc
-ms.technology: www-administration-management
+ms.subservice: www-administration-management
 ---
 
 # HTTP status codes in IIS

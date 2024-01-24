@@ -4,7 +4,7 @@ description: Describes a problem that occurs because a client request uses an HT
 ms.date: 04/16/2020
 ms.custom: sap:Health, diagnostic, and performance features
 ms.reviewer: mlaing
-ms.technology: health-diagnostic-performance
+ms.subservice: health-diagnostic-performance
 ---
 # HTTP Error 405.0 when you visit a website that is hosted on a server that is running IIS
 

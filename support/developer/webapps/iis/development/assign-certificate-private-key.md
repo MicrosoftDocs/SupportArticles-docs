@@ -4,7 +4,7 @@ description: Describes how to recover a private key after you use the Certificat
 ms.date: 03/23/2020
 ms.custom: sap:Development
 ms.topic: how-to
-ms.technology: development
+ms.subservice: development
 ---
 # Assign a private key to a new certificate after deleting the original certificate in IIS
 

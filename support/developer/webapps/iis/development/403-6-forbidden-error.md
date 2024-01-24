@@ -4,7 +4,7 @@ description: This article helps to fix the HTTP error 403.6 when you visit a web
 ms.date: 07/17/2020
 ms.custom: sap:Development
 ms.reviewer: clinth
-ms.technology: development
+ms.subservice: development
 ---
 # HTTP error 403.6 when you open an IIS Webpage
 

@@ -4,7 +4,7 @@ description: This article provides resolutions for the problem where page can't 
 ms.date: 12/11/2020
 ms.custom: sap:Site Behavior and Performance
 ms.reviewer: MAJEDA
-ms.technology: site-behavior-performance
+ms.subservice: site-behavior-performance
 ---
 # Page can't be displayed when you connect through SSL
 

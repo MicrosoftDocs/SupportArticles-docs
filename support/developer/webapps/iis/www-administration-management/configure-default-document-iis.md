@@ -4,7 +4,7 @@ description: This article describes how to configure the default document in Int
 ms.date: 01/29/2021
 ms.custom: sap:WWW Administration and Management
 ms.topic: how-to
-ms.technology: www-administration-management
+ms.subservice: www-administration-management
 ---
 # Configure the default document in Internet Information Services
 

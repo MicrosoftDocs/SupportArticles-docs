@@ -6,7 +6,7 @@ ms.custom: sap:WWW authentication and authorization
 ms.reviewer: aartigoyle, dili
 author: HaiyingYu
 ms.author: haiyingyu
-ms.technology: www-authentication-authorization
+ms.subservice: www-authentication-authorization
 ---
 # Kerberos unconstrained double-hop authentication with Microsoft Edge (Chromium)
 

@@ -4,7 +4,7 @@ description: This article provides resolutions for the problem where ASP_PERFMON
 ms.date: 12/11/2020
 ms.custom: sap:Site Behavior and Performance
 ms.reviewer: nmallick, bariscag
-ms.technology: site-behavior-performance
+ms.subservice: site-behavior-performance
 ---
 # ASP_PERFMON_- [XX] event handles may leak when you query performance counter objects on a local computer
 

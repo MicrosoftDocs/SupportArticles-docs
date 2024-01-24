@@ -3,7 +3,7 @@ title: Configuration files can't be exported
 description: This article provides resolutions for the problem where configuration files cannot be exported to a DFS share through the internet services manager.
 ms.date: 04/07/2020
 ms.custom: sap:WWW authentication and authorization
-ms.technology: www-authentication-authorization
+ms.subservice: www-authentication-authorization
 ---
 # Configuration files can't be exported to a DFS share through the Internet Services Manager in IIS 7.0 and 7.5
 

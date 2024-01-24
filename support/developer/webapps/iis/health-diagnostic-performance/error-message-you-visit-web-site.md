@@ -2,7 +2,7 @@
 title: HTTP error 404.17 when you visit a Web site
 description: This article provides resolutions for the HTTP Error 404.17 - Not Found error when you visit a Web site that is hosted on IIS 7.0 or later versions.
 ms.date: 12/11/2020
-ms.technology: health-diagnostic-performance
+ms.subservice: health-diagnostic-performance
 ---
 # Error message when you visit a Web site that is hosted on IIS 7.0 or later versions: HTTP Error 404.17 - Not Found
 
