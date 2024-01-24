@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:iscsi, csstroubleshoot
-ms.technology: windows-server-backup-and-storage
+ms.subservice: backup-and-storage
 ---
 # Supported and tested Microsoft iSCSI Software Target 3.3 limits
 
