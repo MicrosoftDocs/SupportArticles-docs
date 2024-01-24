@@ -253,7 +253,6 @@
         "microsoft-identity-manager/*.md": "microsoft-identity-manager",
         "dynamics/gp/*.md": "dynamics-gp",
         "mem/configmgr/**/*.md": "configuration-manager",
-        "developer/dotnet/**/*.md": "dotnet",
         "system-center/**/*.md": "system-center",
         "windows/win32/**/*.md": "windows-dev-apps"
       },
