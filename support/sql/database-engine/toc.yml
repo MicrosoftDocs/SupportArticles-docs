@@ -125,7 +125,9 @@ items:
   - name: Decreased query performance after upgrade
     href: performance/decreased-query-perf-after-upgrade.md
   - name: High CPU or high memory grants with queries that use optimized nested loops
-    href: performance/decreased-perf-high-cpu-optimized-nested-loop.md   
+    href: performance/decreased-perf-high-cpu-optimized-nested-loop.md
+  - name: Performance degradation when migrating SQL Server
+    href: performance-degradation-ccc.md  
   - name: Performance degradation with new CE join containment assumption
     href: performance/cardinality-estimator-degrades-query-performance.md
   - name: Resolve last-page insert PAGELATCH_EX contention
