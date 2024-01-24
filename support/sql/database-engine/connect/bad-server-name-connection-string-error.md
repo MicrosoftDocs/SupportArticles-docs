@@ -40,11 +40,9 @@ You should also see either of the following error messages in the SQL Server err
 'Login failed for user 'CONTOSO\USER1'. Reason: Could not find a login matching the name provided.
 ```
 
-You will experience these errors if you deploy an application that uses a DEV or QA server into production and you don't update the connection string.
-
 ## Cause
 
-You will experience these errors if the server name is not correctly specified in the connction string.
+You will experience these errors if you deploy an application that uses a DEV or QA server into production and you don't update the connection string. 
 
 ## Solution
 
