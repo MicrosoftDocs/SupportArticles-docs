@@ -223,10 +223,6 @@
         "developer/webapps/iis/www-authentication-authorization/**/*.md": "iis-www-authentication-authorization",
         "developer/webapps/iis/www-modules-features/**/*.md": "iis-www-modules-features",
         "developer/webapps/iis/www-service-svchost/**/*.md": "iis-www-service-svchost",
-        "developer/host-integration-server/app-integration/**/*.md": "his-app-integration",
-        "developer/host-integration-server/data-integration/**/*.md": "his-data-integration",
-        "developer/host-integration-server/setup-configuration/**/*.md": "his-setup-configuration",
-        "developer/host-integration-server/network-integration/**/*.md": "his-network-integration",
         "developer/biztalk/accelerators/*.md": "biztalk-server-accelerators",
         "developer/biztalk/adapter/*.md": "biztalk-server-adapter",
         "developer/biztalk/setup-config/*.md": "biztalk-server-setup-config",
@@ -417,7 +413,11 @@
         "developer/webapps/aspnet/active-server-pages/**/*.md": "active-server-pages",
         "developer/webapps/aspnet/iisadmin-service-process/**/*.md": "iisadmin-service-process",
         "developer/webapps/aspnet/www-authentication-authorization/**/*.md": "www-authentication-authorization",
-        "developer/webapps/aspnet/health-diagnostic-performance/**/*.md": "health-diagnostic-performance"
+        "developer/webapps/aspnet/health-diagnostic-performance/**/*.md": "health-diagnostic-performance",
+        "developer/host-integration-server/network-integration/**/*.md": "network-integration",
+        "developer/host-integration-server/app-integration/**/*.md": "app-integration",
+        "developer/host-integration-server/data-integration/**/*.md": "data-integration",
+        "developer/host-integration-server/setup-configuration/**/*.md": "setup-configuration"
       },
       "titleSuffix": {
         "developer/biztalk/**/*.md": "BizTalk Server",
