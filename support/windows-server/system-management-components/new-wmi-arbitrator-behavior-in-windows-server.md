@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, gbrag, lindakup, stevepar, arrenc, v-jeffbo
 ms.custom: sap:wmi, csstroubleshoot
-ms.technology: windows-server-system-management-components
+ms.subservice: system-mgmt-components
 ---
 # New WMI arbitrator behavior in Windows Server 2012 R2, Windows Server 2016, and Windows Server 2019
 

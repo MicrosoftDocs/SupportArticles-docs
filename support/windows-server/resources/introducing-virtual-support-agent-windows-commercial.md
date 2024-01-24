@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:virtual-agent, csstroubleshoot
-ms.technology: windows-server-resources
+ms.subservice: resources
 ---
 # Introducing Virtual Support Agent for Windows Commercial
 

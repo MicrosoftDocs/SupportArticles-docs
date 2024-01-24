@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, ajayps, tode, gsilva
 ms.custom: sap:hyper-v-network-virtualization-hnv, csstroubleshoot
-ms.technology: hyper-v
+ms.subservice: hyper-v
 ---
 # Event ID 106 when a Hyper-V virtual switch is bound to an LBFO team
 
