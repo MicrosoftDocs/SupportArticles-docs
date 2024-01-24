@@ -8,16 +8,14 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-  - Outlook for Windows
-  - CSSTroubleshoot
+- Outlook for Windows
+- CSSTroubleshoot
 ms.reviewer: gregmans
-appliesto: 
-  - Outlook LTSC 2021
-  - Outlook 2019
-  - Outlook 2016
-  - Outlook 2013
-  - Microsoft Outlook 2010
-  - Outlook for Microsoft 365
+appliesto:
+- Outlook LTSC 2021
+- Outlook 2019
+- Outlook 2016
+- Outlook for Microsoft 365
 search.appverid: MET150
 ms.date: 03/31/2022
 ---
