@@ -111,6 +111,9 @@ items:
       - name: Azure Cosmos DB
         tocHref: /troubleshoot/azure/cosmos-db/
         topicHref: /troubleshoot/azure/cosmos-db/
+      - name: Azure Container Instances
+        tocHref: /troubleshoot/azure/azure-container-instances/
+        topicHref: /troubleshoot/azure/azure-container-instances/
       - name: Azure Functions
         tocHref: /troubleshoot/azure/azure-functions
         topicHref: /troubleshoot/azure/azure-functions/welcome-azure-functions
