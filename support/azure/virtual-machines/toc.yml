@@ -515,8 +515,8 @@
       href: windows-vm-activation-error-0x800705b4.md
     - name: Error 0xC004E015 (SL_E_EUL_CONSUMPTION_FAILED)
       href: ../../windows-server/deployment/error-0xc004e015-sl-e-eul-consumption-failed-activate-windows.md?context=/troubleshoot/azure/virtual-machines/context/context
-    - name: Error 0xC004FD02
-      href: windows-vm-activation-error-0xc004fd02.md
+    - name: Error 0xC004FD01 or 0xC004FD02
+      href: windows-vm-activation-error-0xc004fd01-0xc004fd02.md
     - name: Error 0xC004F06C
       href: ../../windows-server/deployment/error-0xc004f06c-activate-windows.md?context=/troubleshoot/azure/virtual-machines/context/context
   - name: KMS endpoints - new endpoints
