@@ -43,6 +43,8 @@
           href: ../calendars/cannot-open-another-calendar-with-freebusy-permission.md
     - name: Connectivity
       items:
+        - name: Add Exchange Server mailboxes in the new Outlook for Mac
+          href: ../connectivity/add-exchange-server-mailboxes-in-outlook.md
         - name: How to suppress Microsoft 365 AutoDiscover redirect warning
           href: ../connectivity/how-to-suppress-microsoft-365-autodiscover-redirect-warning.md
         - name: Outlook 2016 for Mac crashes when a Proxy Auto Configuration file is used
