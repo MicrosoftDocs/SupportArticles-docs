@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting incorrect server name in connection string
-description: This article provides a workaround for the consistent authentication issue when there is a bad server name in connection string.
-ms.date: 01/19/2024
+description: This article provides a workaround for the consistent authentication issue when a matching name is not provided during login.
+ms.date: 01/24/2024
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
@@ -10,7 +10,7 @@ ms.custom: sap:Connection issues
 
 # Login failed due to incorrect server name in connection string
 
-This article helps you to resolve an consistent authentication issue that might arise when the specified server name isn't correct.
+This article helps you to resolve an consistent authentication issue that might arise when the specified login name is not provided while logging in to a SQL Server instance.
 
 ## Symptoms
 
