@@ -207,7 +207,6 @@
         "developer/dotnet/framework/language-compilers/**/*.md": "dotnet-language-compilers",
         "developer/webapps/**/*.md": "",
         "developer/webapps/aspnet/ftp-authentication-authorization/**/*.md": "aspnet-ftp-authentication-authorization",
-        "developer/webapps/aspnetcore/practice-troubleshoot-linux/**/*.md": "aspnetcore-practice-troubleshoot-linux",
         "developer/webapps/iis/active-server-pages/**/*.md": "iis-active-server-pages",
         "developer/webapps/iis/application-request-routing/**/*.md": "iis-application-request-routing",
         "developer/webapps/iis/development/**/*.md": "iis-development",
@@ -417,7 +416,8 @@
         "developer/webapps/aspnet/active-server-pages/**/*.md": "active-server-pages",
         "developer/webapps/aspnet/iisadmin-service-process/**/*.md": "iisadmin-service-process",
         "developer/webapps/aspnet/www-authentication-authorization/**/*.md": "www-authentication-authorization",
-        "developer/webapps/aspnet/health-diagnostic-performance/**/*.md": "health-diagnostic-performance"
+        "developer/webapps/aspnet/health-diagnostic-performance/**/*.md": "health-diagnostic-performance",
+        "developer/webapps/aspnetcore/practice-troubleshoot-linux/**/*.md": "practice-troubleshoot-linux"
       },
       "titleSuffix": {
         "developer/biztalk/**/*.md": "BizTalk Server",
