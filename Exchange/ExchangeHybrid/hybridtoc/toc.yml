@@ -67,7 +67,7 @@
           href: ../calendars/only-can-see-availability-info-of-resource-when-scheduling-meeting.md
         - name: Policy doesn't allow granting permissions
           href: ../calendars/policy-permissions-issue.md
-        - name: "Troubleshoot free/busy issues"
+        - name: Troubleshoot free/busy issues
           href: ../calendars/troubleshoot-freebusy-issues-in-exchange-hybrid.md
     - name: Email Delivery
       items:
@@ -111,7 +111,7 @@
           href: ../groups-and-distribution-lists/cannot-manage-dg.md
     - name: Hybrid Configuration Wizard Errors
       items:
-        - name: "1007 AccessDenied" or "Ensure your system time is correct" error
+        - name: '"1007 AccessDenied" or "Ensure your system time is correct" error'
           href: ../hybrid-configuration-wizard-errors/1007-accessdenied-or-ensure-your-system-time-is-correct-error.md
         - name: "550 5.7.64 Relay Access Denied ATTR36" NDR
           href: ../hybrid-configuration-wizard-errors/relay-access-denied-attr36-ndr.md
