@@ -9,7 +9,6 @@ ms.subservice: vm-cannot-start-stop
 ms.collection: linux
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
-ms.devlang: na
 ms.topic: troubleshooting
 ms.date: 11/27/2023
 ms.author: divargas
