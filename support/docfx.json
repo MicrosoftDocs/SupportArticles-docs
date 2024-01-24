@@ -227,6 +227,14 @@
         "developer/host-integration-server/data-integration/**/*.md": "his-data-integration",
         "developer/host-integration-server/setup-configuration/**/*.md": "his-setup-configuration",
         "developer/host-integration-server/network-integration/**/*.md": "his-network-integration",
+        "developer/biztalk/accelerators/*.md": "biztalk-server-accelerators",
+        "developer/biztalk/adapter/*.md": "biztalk-server-adapter",
+        "developer/biztalk/setup-config/*.md": "biztalk-server-setup-config",
+        "developer/biztalk/dev-deploy/*.md": "biztalk-server-dev-deploy",
+        "developer/biztalk/entsso/*.md": "biztalk-server-entsso",
+        "developer/biztalk/esb-toolkit/*.md": "biztalk-server-esb-toolkit",
+        "developer/biztalk/management-operations/*.md": "biztalk-server-management-operations",
+        "developer/biztalk/performance/*.md": "biztalk-server-performance",
         "windows/win32/**/*.md": "",
         "windows-hardware/drivers/**/*.md": "",
         "system-center/dpm/**/*.md": "data-protection-manager",
@@ -417,7 +425,11 @@
         "developer/biztalk/accelerators/*.md": "biztalk-accelerators",
         "developer/biztalk/entsso/*.md": "entsso",
         "developer/biztalk/management-operations/*.md": "management-operations",
-        "developer/biztalk/performance/*.md": "performance"
+        "developer/biztalk/performance/*.md": "performance",
+        "developer/host-integration-server/network-integration/**/*.md": "network-integration",
+        "developer/host-integration-server/app-integration/**/*.md": "app-integration",
+        "developer/host-integration-server/data-integration/**/*.md": "data-integration",
+        "developer/host-integration-server/setup-configuration/**/*.md": "setup-configuration"
       },
       "titleSuffix": {
         "developer/biztalk/**/*.md": "BizTalk Server",
