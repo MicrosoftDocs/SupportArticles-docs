@@ -7,11 +7,11 @@ manager: dcscontentpm
 audience: itpro
 ms.date: 11/23/2023
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, dennhu, pkalamkar, v-lianna
 ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot, ikb2lmc
-ms.technology: windows-server-group-policy
+ms.subservice: group-policy
 ---
 # "LDAP Bind function call failed" error when updating Group Policy settings
 
