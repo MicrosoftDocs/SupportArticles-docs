@@ -193,7 +193,6 @@
       "ms.prod": {
         "developer/dotnet/**/*.md": ".net",
         "developer/webapps/iis/**/*.md": "iis",
-        "windows/win32/**/*.md": "windows-dev-apps",
         "windows-hardware/drivers/**/*.md": "windows-hardware"
       },
       "ms.technology": {
@@ -217,7 +216,6 @@
         "developer/webapps/iis/www-authentication-authorization/**/*.md": "iis-www-authentication-authorization",
         "developer/webapps/iis/www-modules-features/**/*.md": "iis-www-modules-features",
         "developer/webapps/iis/www-service-svchost/**/*.md": "iis-www-service-svchost",
-        "windows/win32/**/*.md": "",
         "windows-hardware/drivers/**/*.md": ""
       },
       "ms.service": {
@@ -259,7 +257,8 @@
         "microsoft-identity-manager/*.md": "microsoft-identity-manager",
         "dynamics/gp/*.md": "dynamics-gp",
         "mem/configmgr/**/*.md": "configuration-manager",
-        "system-center/**/*.md": "system-center"
+        "system-center/**/*.md": "system-center",
+        "windows/win32/**/*.md": "windows-dev-apps"
       },
       "ms.subservice": {
         "dynamics-365/field-service/administration/**.*": "d365-fs-admin-settings",
@@ -416,7 +415,8 @@
         "developer/host-integration-server/network-integration/**/*.md": "network-integration",
         "developer/host-integration-server/app-integration/**/*.md": "app-integration",
         "developer/host-integration-server/data-integration/**/*.md": "data-integration",
-        "developer/host-integration-server/setup-configuration/**/*.md": "setup-configuration"
+        "developer/host-integration-server/setup-configuration/**/*.md": "setup-configuration",
+        "windows/win32/**/*.md": ""
       },
       "titleSuffix": {
         "developer/biztalk/**/*.md": "BizTalk Server",
