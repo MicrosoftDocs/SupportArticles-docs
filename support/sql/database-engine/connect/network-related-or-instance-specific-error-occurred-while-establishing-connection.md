@@ -391,6 +391,10 @@ Once you can connect by using TCP on the same computer, it's time to try to conn
     1. On the right-pane, make sure that **TCP/IP** is enabled. If **TCP/IP** is disabled, right-click **TCP/IP** and select **Enable**.
     1. Make sure that the protocol order for TCP/IP is a smaller number than the named pipes (or VIA on older versions) protocols. Generally, you should leave shared memory as order 1 and TCP/IP as order 2. Shared memory is only used when the client and SQL Server are running on the same computer. All enabled protocols are tried in order until one succeeds, but shared memory is skipped when the connection isn't on the same computer.
 
+## Step 10: Check user permissions
+
+If you are using Named Pipes to connect, check if a user has permissions to log into Windows. For more information, see [Troubleshooting the Named Pipes connections issue](named-pipes-connection-fail-no-windows-permission.md).
+
 ## See also
 
 - [Network Protocols and Network Libraries](/sql/sql-server/install/network-protocols-and-network-libraries)

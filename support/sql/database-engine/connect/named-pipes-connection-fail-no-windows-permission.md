@@ -1,14 +1,14 @@
 ---
-title: Troubleshooting the named pipes error 
+title: Named pipes connections fail issue 
 description: This article provides symptoms and resolution for troubleshooting the named pipes connections fail consistent authentication error.
-ms.date: 01/12/2024
+ms.date: 01/24/2024
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 
-# Named Pipes connections fail error
+# Troubleshooting the Named Pipes connections issue
 
 This article helps you to resolve consistent authentication problem related to the Named Pipes connections fail error.
 
