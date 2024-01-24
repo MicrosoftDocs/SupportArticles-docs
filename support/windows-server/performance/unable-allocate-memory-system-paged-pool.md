@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, mohak, weiwan
 ms.custom: sap:performance-monitoring-tools, csstroubleshoot
-ms.technology: windows-server-performance
+ms.subservice: performance
 ---
 # Unable to allocate memory from the system paged pool
 

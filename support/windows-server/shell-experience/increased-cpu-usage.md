@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, stevepar
 ms.custom: sap:file-explorer/windows-explorer, csstroubleshoot
-ms.technology: windows-server-shell-experience
+ms.subservice: shell-experience
 ---
 # Increased CPU usage when you access a SQL Server FileTable share from Windows Explorer
 

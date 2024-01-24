@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:active-directory-certificate-services, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # How to Set an Enterprise Subordinate CA to Have a Different Certificate Validity Period than the Parent CA
 

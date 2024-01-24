@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:domain-controller-scalability-or-performance-including-ldap, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # LDAP and Kerberos Server may not respond to UDP requests or reset TCP sessions immediately after creation
 

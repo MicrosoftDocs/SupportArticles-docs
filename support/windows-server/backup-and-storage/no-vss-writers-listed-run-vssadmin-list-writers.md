@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: jeffpatt, kaushika
 ms.custom: sap:configuring-and-using-backup-software, csstroubleshoot
-ms.technology: windows-server-backup-and-storage
+ms.subservice: backup-and-storage
 ---
 # No VSS writers are listed when you run the vssadmin list writers command in Windows Server
 

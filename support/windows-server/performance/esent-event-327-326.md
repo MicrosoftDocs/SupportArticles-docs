@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:applications, csstroubleshoot
-ms.technology: windows-server-performance
+ms.subservice: performance
 ---
 # ESENT Event ID 327 and 326 fill up the Application log
 

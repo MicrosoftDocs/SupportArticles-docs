@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, grcusanz, anpaul, v-lianna
 ms.custom: sap:sdn, csstroubleshoot
-ms.technology: windows-server-sdn
+ms.subservice: sdn
 ms.assetid: 427048db-bab6-49b1-9611-099bb547ec0e
 ---
 # Troubleshoot Software Defined Networking (SDN)

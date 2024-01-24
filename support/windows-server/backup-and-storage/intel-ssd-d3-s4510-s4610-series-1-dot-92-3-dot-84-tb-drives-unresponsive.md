@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-jesits
 ms.custom: sap:partition-and-volume-management, csstroubleshoot
-ms.technology: windows-server-backup-and-storage
+ms.subservice: backup-and-storage
 ---
 # Intel SSD D3-S4510 and Intel SSD D3-S4610 series 1.92 TB and 3.84 TB drives unresponsive after 1,700 cumulative idle power-on hours
 

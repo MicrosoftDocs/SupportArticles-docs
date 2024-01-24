@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:administration, csstroubleshoot
-ms.technology: windows-server-rds
+ms.subservice: rds
 ---
 # You notice that the check box "Deny this user permissions to logon to a Remote Desktop Session Host Server" behaves differently in Windows Server 2003 and Windows Server 2008
 

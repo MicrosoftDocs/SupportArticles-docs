@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:active-directory-database-issues-and-domain-controller-boot-failures, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # How to complete a semantic database analysis for the Active Directory database by using Ntdsutil.exe
 
