@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, mingchen, nasira, jseifert, deverett, justintu, arrenc, christys
 ms.custom: sap:domain-controller-scalability-or-performance-including-ldap, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # Use Event1644Reader.ps1 to analyze LDAP query performance in Windows Server
 
