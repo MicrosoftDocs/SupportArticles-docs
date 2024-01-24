@@ -201,9 +201,6 @@
         "system-center/**/*.md": "system-center"
       },
       "ms.technology": {
-        "developer/dotnet/wcf/**/*.md": "dotnet-wcf",
-        "developer/dotnet/framework/general/**/*.md": "dotnet-general",
-        "developer/dotnet/framework/installation/**/*.md": "dotnet-installation",
         "developer/dotnet/framework/language-compilers/**/*.md": "dotnet-language-compilers",
         "developer/webapps/**/*.md": "",
         "developer/webapps/aspnet/ftp-authentication-authorization/**/*.md": "aspnet-ftp-authentication-authorization",
@@ -429,7 +426,10 @@
         "developer/host-integration-server/network-integration/**/*.md": "network-integration",
         "developer/host-integration-server/app-integration/**/*.md": "app-integration",
         "developer/host-integration-server/data-integration/**/*.md": "data-integration",
-        "developer/host-integration-server/setup-configuration/**/*.md": "setup-configuration"
+        "developer/host-integration-server/setup-configuration/**/*.md": "setup-configuration",
+        "developer/dotnet/wcf/**/*.md": "wcf",
+        "developer/dotnet/framework/general/**/*.md": "general",
+        "developer/dotnet/framework/installation/**/*.md": "installation"
       },
       "titleSuffix": {
         "developer/biztalk/**/*.md": "BizTalk Server",
