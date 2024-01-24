@@ -3,7 +3,6 @@ title: Fail to install Windows Identity Foundation
 description: This article provides resolutions for an issue that prevents you from installing Windows Identity Foundation in Windows Core.
 ms.date: 08/24/2020
 ms.reviewer: rviana, brandwe
-ms.technology: dotnet-wcf
 ---
 # You can't install Windows Identity Foundation in Windows Core
 
