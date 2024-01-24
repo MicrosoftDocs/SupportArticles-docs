@@ -5,7 +5,7 @@ summary: Welcome to Virtual Machine Manager troubleshooting. These articles expl
 metadata:
   title: System Center Virtual Machine Manager troubleshooting
   description: Landing page for System Center Virtual Machine Manager troubleshooting articles.
-  ms.prod: system-center
+  ms.service: system-center
   ms.topic: landing-page
   author: helenclu
   ms.author: luche

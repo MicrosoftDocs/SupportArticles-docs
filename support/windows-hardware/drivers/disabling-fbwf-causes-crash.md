@@ -2,7 +2,7 @@
 title: Disabling File Based Write Filter causes a crash
 description: This article provides resolutions for the problem that occurs when you disable File Based Write Filter.
 ms.date: 09/02/2020
-ms.technology: windows-hardware-general
+ms.subservice: general
 ---
 # Disabling File Based Write Filter causes a crash
 

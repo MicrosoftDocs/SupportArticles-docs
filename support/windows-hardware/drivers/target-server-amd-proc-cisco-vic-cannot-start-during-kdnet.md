@@ -5,12 +5,12 @@ ms.date: 10/27/2020
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-hardware
+ms.service: windows-hardware-driver-quality
 localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate
 keywords: amd processor, cisco VIC
 ms.custom: sap:Kerberos authentication
-ms.technology: windows-hardware-general
+ms.subservice: general
 ---
 # Target server that has AMD processor and CISCO VIC cannot start if KDNET debugging is enabled
 
