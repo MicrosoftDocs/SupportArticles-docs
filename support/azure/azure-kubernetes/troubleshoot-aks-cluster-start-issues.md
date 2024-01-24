@@ -68,7 +68,7 @@ To find the resource group, search for and select **Resource groups** in the Azu
 > [!WARNING]
 > We recommend that you don't modify resources in the *MC_* resource group. This action might cause unwanted effects on your AKS cluster.
 
-To review the status of a virtual machine scale set, you can select the scale set name within the list of resources for the resource group. It might have a **Name** similar to **aks-nodepool1-12345678-vmss** and a **Type** value of **Virtual machine scale set**. The status of the scale set appears at the top of the node pool's **Overview** page, and more details are shown in the **Essentials** heading. If the deployment was unsuccessful, the displayed status is **Failed**.
+To review the status of a virtual machine scale set, you can select the scale set name within the resource list of the resource group. It might have a **Name** similar to **aks-nodepool1-12345678-vmss** and a **Type** value of **Virtual machine scale set**. The status of the scale set appears at the top of the node pool's **Overview** page, and more details are shown in the **Essentials** heading. If the deployment was unsuccessful, the displayed status is **Failed**.
 
 For all resources, you can review details to better understand why the deployment failed. For a scale set, you can select the **Failed** status text to view details about the failure. The details are in a row that contains the **Status**, **Level**, and **Code** columns. The following example shows a row of column values.
 
