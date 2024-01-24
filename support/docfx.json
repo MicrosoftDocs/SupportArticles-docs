@@ -194,7 +194,6 @@
         "developer/dotnet/**/*.md": ".net",
         "developer/webapps/aspnetcore/**/*.md": "aspnet-core",
         "developer/webapps/iis/**/*.md": "iis",
-        "developer/host-integration-server/**/*.md": "host-integration-server",
         "windows-hardware/drivers/**/*.md": "windows-hardware",
         "system-center/**/*.md": "system-center"
       },
@@ -271,6 +270,7 @@
         "microsoft-identity-manager/*.md": "microsoft-identity-manager",
         "dynamics/gp/*.md": "dynamics-gp",
         "mem/configmgr/**/*.md": "configuration-manager",
+        "developer/host-integration-server/**/*.md": "host-integration-server",
         "developer/biztalk/**/*.md": "biztalk-server",
         "windows/win32/**/*.md": "windows-dev-apps"
       },
