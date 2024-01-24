@@ -6,7 +6,7 @@ items:
 - name: Container instance continues to run after the stop or delete command
   href: aci-still-running-after-stop-delete-command.md
 
-- name: ACI debug tools
+- name: ACI debugging tools
   href: aci-debug-tools.md
 
 - name: Fails to pull ACR images by using Managed Identity authentication
