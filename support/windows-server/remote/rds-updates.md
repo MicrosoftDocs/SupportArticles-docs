@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, darank
 ms.custom: sap:administration, csstroubleshoot
-ms.technology: windows-server-rds
+ms.subservice: rds
 ---
 # Recommended hotfixes and updates for Remote Desktop Services in Windows Server 2012 R2
 

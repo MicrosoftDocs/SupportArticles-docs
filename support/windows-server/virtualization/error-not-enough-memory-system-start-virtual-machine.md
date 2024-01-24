@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:virtual-machine-will-not-boot, csstroubleshoot
-ms.technology: hyper-v
+ms.subservice: hyper-v
 ---
 # Virtual machine that's running on Windows Server 2012 R2 doesn't start
 

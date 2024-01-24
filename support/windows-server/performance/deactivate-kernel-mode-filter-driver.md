@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, WalterE
 ms.custom: sap:servicing, csstroubleshoot
-ms.technology: windows-server-deployment
+ms.subservice: deployment
 ---
 # How to temporarily deactivate the kernel mode filter driver in Windows
 

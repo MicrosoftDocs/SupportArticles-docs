@@ -5,11 +5,11 @@ ms.date: 03/04/2022
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, winciccore, v-tappelgate
 ms.custom: sap:system-hang, csstroubleshoot
-ms.technology: windows-server-performance
+ms.subservice: performance
 ---
 
 # Cannot restart a Windows Server computer that uses Credential Guard, Hyper-V, and at least 20 TB RAM

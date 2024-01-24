@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, ANRATH, tfairman, v-lianna
 ms.custom: sap:dns, csstroubleshoot, ikb2lmc
-ms.technology: networking
+ms.subservice: networking
 ---
 # Event IDs 4016 and 4004 when DNS updates time out
 

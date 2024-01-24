@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jaml
 ms.custom: sap:active-directory-topology-sites-subnets-and-connection-objects, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # Kerberos Forest Search Order may not work in an external trust and event ID 17 is returned
 

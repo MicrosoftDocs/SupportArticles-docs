@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:active-directory-federation-services-ad-fs, csstroubleshoot, has-azure-ad-ps-ref
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # Troubleshoot SSO issues with Active Directory Federation Services (AD FS)
 

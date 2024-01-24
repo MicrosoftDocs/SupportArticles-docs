@@ -5,11 +5,11 @@ ms.date: 09/19/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate, herbertm, juriviere
 ms.custom: sap:domain-and-forest-trusts, csstroubleshoot
-ms.technology: windows-server-security
+ms.subservice: windows-security
 keywords: gMSA, golden gMSA, kds root key object
 ---
 

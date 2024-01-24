@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: sureshka, arrenc, juburke, stacygr, jburchel, diassis, stefze, mastewa, ardenw, kaushika
 ms.custom: sap:transport-layer-security-tls, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # Applications experience forcibly closed TLS connection errors when connecting SQL Servers in Windows
 

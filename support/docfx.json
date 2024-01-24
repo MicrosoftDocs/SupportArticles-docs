@@ -191,11 +191,9 @@
         "**/*.md": "troubleshooting"
       },
       "ms.prod": {
-        "developer/biztalk/**/*.md": "biztalk-server",
         "developer/dotnet/**/*.md": ".net",
         "developer/webapps/aspnetcore/**/*.md": "aspnet-core",
         "developer/webapps/iis/**/*.md": "iis",
-        "windows/win32/**/*.md": "windows-dev-apps",
         "windows-hardware/drivers/**/*.md": "windows-hardware",
         "system-center/**/*.md": "system-center"
       },
@@ -206,7 +204,6 @@
         "developer/dotnet/framework/language-compilers/**/*.md": "dotnet-language-compilers",
         "developer/webapps/**/*.md": "",
         "developer/webapps/aspnet/ftp-authentication-authorization/**/*.md": "aspnet-ftp-authentication-authorization",
-        "developer/webapps/aspnetcore/practice-troubleshoot-linux/**/*.md": "aspnetcore-practice-troubleshoot-linux",
         "developer/webapps/iis/active-server-pages/**/*.md": "iis-active-server-pages",
         "developer/webapps/iis/application-request-routing/**/*.md": "iis-application-request-routing",
         "developer/webapps/iis/development/**/*.md": "iis-development",
@@ -222,6 +219,10 @@
         "developer/webapps/iis/www-authentication-authorization/**/*.md": "iis-www-authentication-authorization",
         "developer/webapps/iis/www-modules-features/**/*.md": "iis-www-modules-features",
         "developer/webapps/iis/www-service-svchost/**/*.md": "iis-www-service-svchost",
+        "developer/host-integration-server/app-integration/**/*.md": "his-app-integration",
+        "developer/host-integration-server/data-integration/**/*.md": "his-data-integration",
+        "developer/host-integration-server/setup-configuration/**/*.md": "his-setup-configuration",
+        "developer/host-integration-server/network-integration/**/*.md": "his-network-integration",
         "developer/biztalk/accelerators/*.md": "biztalk-server-accelerators",
         "developer/biztalk/adapter/*.md": "biztalk-server-adapter",
         "developer/biztalk/setup-config/*.md": "biztalk-server-setup-config",
@@ -231,12 +232,7 @@
         "developer/biztalk/management-operations/*.md": "biztalk-server-management-operations",
         "developer/biztalk/performance/*.md": "biztalk-server-performance",
         "windows/win32/**/*.md": "",
-        "windows-hardware/drivers/**/*.md": "",
-        "system-center/dpm/**/*.md": "data-protection-manager",
-        "system-center/scom/**/*.md": "operations-manager",
-        "system-center/orchestrator/**/*.md": "orchestrator",
-        "system-center/scsm/**/*.md": "service-manager",
-        "system-center/vmm/**/*.md": "virtual-machine-manager"
+        "windows-hardware/drivers/**/*.md": ""
       },
       "ms.service": {
         "azure/active-directory/*.md": "active-directory",
@@ -275,6 +271,8 @@
         "dynamics/gp/*.md": "dynamics-gp",
         "mem/configmgr/**/*.md": "configuration-manager",
         "developer/host-integration-server/**/*.md": "host-integration-server"
+        "developer/biztalk/**/*.md": "biztalk-server",
+        "windows/win32/**/*.md": "windows-dev-apps"
       },
       "ms.subservice": {
         "dynamics-365/field-service/administration/**.*": "d365-fs-admin-settings",
@@ -414,6 +412,20 @@
         "developer/webapps/aspnet/iisadmin-service-process/**/*.md": "iisadmin-service-process",
         "developer/webapps/aspnet/www-authentication-authorization/**/*.md": "www-authentication-authorization",
         "developer/webapps/aspnet/health-diagnostic-performance/**/*.md": "health-diagnostic-performance",
+        "system-center/orchestrator/**/*.md": "orchestrator",
+        "system-center/vmm/**/*.md": "virtual-machine-manager",
+        "system-center/dpm/**/*.md": "data-protection-manager",
+        "system-center/scsm/**/*.md": "service-manager",
+        "system-center/scom/**/*.md": "operations-manager",
+        "developer/webapps/aspnetcore/practice-troubleshoot-linux/**/*.md": "practice-troubleshoot-linux",
+        "developer/biztalk/setup-config/*.md": "setup-config",
+        "developer/biztalk/adapter/*.md": "biztalk-server-adapter",
+        "developer/biztalk/dev-deploy/*.md": "dev-deploy",
+        "developer/biztalk/esb-toolkit/*.md": "esb-toolkit",
+        "developer/biztalk/accelerators/*.md": "biztalk-accelerators",
+        "developer/biztalk/entsso/*.md": "entsso",
+        "developer/biztalk/management-operations/*.md": "management-operations",
+        "developer/biztalk/performance/*.md": "performance",
         "developer/host-integration-server/network-integration/**/*.md": "network-integration",
         "developer/host-integration-server/app-integration/**/*.md": "app-integration",
         "developer/host-integration-server/data-integration/**/*.md": "data-integration",

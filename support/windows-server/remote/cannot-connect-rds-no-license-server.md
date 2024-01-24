@@ -5,11 +5,11 @@ ms.date: 12/09/2021
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate
 ms.custom: sap:remote-desktop-services-terminal-services-licensing, csstroubleshoot
-ms.technology: windows-server-rds
+ms.subservice: rds
 keywords: RD Licensing server, RD CAL
 ---
 # Cannot connect to RDS because no RD Licensing servers are available

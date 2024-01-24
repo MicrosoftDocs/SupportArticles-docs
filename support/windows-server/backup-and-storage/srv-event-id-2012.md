@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, WalterE
 ms.custom: sap:configuring-and-using-backup-software, csstroubleshoot
-ms.technology: windows-server-backup-and-storage
+ms.subservice: backup-and-storage
 ---
 # Reason for System Event Log srv Event ID: 2012 - While transmitting or receiving data, the server encountered a network error
 
