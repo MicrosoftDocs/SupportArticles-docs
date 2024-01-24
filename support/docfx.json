@@ -388,7 +388,7 @@
         "developer/webapps/iis/www-administration-management/**/*.md": "www-administration-management",
         "developer/webapps/iis/www-authentication-authorization/**/*.md": "www-authentication-authorization",
         "developer/webapps/iis/www-modules-features/**/*.md": "www-modules-features",
-        "developer/webapps/iis/www-service-svchost/**/*.md": "www-service-svchost"
+        "developer/webapps/iis/www-service-svchost/**/*.md": "www-service-svchost",
         "system-center/orchestrator/**/*.md": "orchestrator",
         "system-center/vmm/**/*.md": "virtual-machine-manager",
         "system-center/dpm/**/*.md": "data-protection-manager",
