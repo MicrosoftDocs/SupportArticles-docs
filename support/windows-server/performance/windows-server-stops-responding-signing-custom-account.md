@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jasone, v-lianna
 ms.custom: sap:system-hang, csstroubleshoot, ikb2lmc
-ms.technology: windows-server-performance
+ms.subservice: performance
 ---
 # Windows Server stops responding during the sign-in process of a custom account
 
