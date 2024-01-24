@@ -239,7 +239,7 @@
         "sql/analysis-services/**/*.md": "analysis-services",
         "sql/azure-sql/**/*.md": "virtual-machines-sql",
         "sql/reporting-services/**/*.md": "reporting-services",
-        "developer/dotnet/**/*.md": ".net",
+        "developer/dotnet/**/*.md": "dotnet",
         "developer/visualstudio/**/*.md": "visual-studio-family",
         "developer/visualstudio/cpp/**/*.md": "visual-cpp",
         "developer/visualstudio/csharp/**/*.md": "dotnet",
