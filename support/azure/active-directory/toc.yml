@@ -77,6 +77,8 @@
         href: error-code-AADSTS750054-saml-request-not-present.md
       - name: Error AADSTS7000110 - request is ambiguous, multiple application identifiers found
         href: error-code-aadsts7000110-request-is-ambiguous.md
+      - name: Error AADSTS7000112 - application is disabled
+        href: error-code-aadsts7000112-application-is-disabled.md
       - name: Troubleshoot signing in to SAML-based single sign-on configured apps
         href: troubleshoot-sign-in-saml-based-apps.md
       - name: User redirected to incorrect reply URL or localhost
