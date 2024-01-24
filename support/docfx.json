@@ -191,9 +191,7 @@
         "**/*.md": "troubleshooting"
       },
       "ms.prod": {
-        "developer/biztalk/**/*.md": "biztalk-server",
         "developer/dotnet/**/*.md": ".net",
-        "developer/webapps/aspnetcore/**/*.md": "aspnet-core",
         "developer/webapps/iis/**/*.md": "iis",
         "windows/win32/**/*.md": "windows-dev-apps",
         "windows-hardware/drivers/**/*.md": "windows-hardware"
@@ -219,14 +217,6 @@
         "developer/webapps/iis/www-authentication-authorization/**/*.md": "iis-www-authentication-authorization",
         "developer/webapps/iis/www-modules-features/**/*.md": "iis-www-modules-features",
         "developer/webapps/iis/www-service-svchost/**/*.md": "iis-www-service-svchost",
-        "developer/biztalk/accelerators/*.md": "biztalk-server-accelerators",
-        "developer/biztalk/adapter/*.md": "biztalk-server-adapter",
-        "developer/biztalk/setup-config/*.md": "biztalk-server-setup-config",
-        "developer/biztalk/dev-deploy/*.md": "biztalk-server-dev-deploy",
-        "developer/biztalk/entsso/*.md": "biztalk-server-entsso",
-        "developer/biztalk/esb-toolkit/*.md": "biztalk-server-esb-toolkit",
-        "developer/biztalk/management-operations/*.md": "biztalk-server-management-operations",
-        "developer/biztalk/performance/*.md": "biztalk-server-performance",
         "windows/win32/**/*.md": "",
         "windows-hardware/drivers/**/*.md": ""
       },
@@ -262,8 +252,10 @@
         "developer/visualstudio/visual-basic/**/*.md": "dotnet",
         "developer/visualstudio/visual-basic/ide/*.md": "visual-basic-6",
         "developer/browsers/**/*.md": "internet-explorer",
+        "developer/biztalk/**/*.md": "biztalk-server",
         "developer/host-integration-server/**/*.md": "host-integration-server",
         "developer/webapps/aspnet/**/*.md": "aspnet",
+        "developer/webapps/aspnetcore/**/*.md": "aspnet-core",
         "microsoft-identity-manager/*.md": "microsoft-identity-manager",
         "dynamics/gp/*.md": "dynamics-gp",
         "mem/configmgr/**/*.md": "configuration-manager",
