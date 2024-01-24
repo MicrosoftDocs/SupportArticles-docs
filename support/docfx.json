@@ -195,7 +195,6 @@
         "windows-hardware/drivers/**/*.md": "windows-hardware"
       },
       "ms.technology": {
-        "developer/dotnet/framework/language-compilers/**/*.md": "dotnet-language-compilers",
         "developer/webapps/**/*.md": "",
         "developer/webapps/iis/active-server-pages/**/*.md": "iis-active-server-pages",
         "developer/webapps/iis/application-request-routing/**/*.md": "iis-application-request-routing",
@@ -255,8 +254,6 @@
         "dynamics/gp/*.md": "dynamics-gp",
         "mem/configmgr/**/*.md": "configuration-manager",
         "system-center/**/*.md": "system-center",
-        "developer/host-integration-server/**/*.md": "host-integration-server",
-        "developer/biztalk/**/*.md": "biztalk-server",
         "windows/win32/**/*.md": "windows-dev-apps"
       },
       "ms.subservice": {
@@ -415,7 +412,7 @@
         "developer/host-integration-server/app-integration/**/*.md": "app-integration",
         "developer/host-integration-server/data-integration/**/*.md": "data-integration",
         "developer/host-integration-server/setup-configuration/**/*.md": "setup-configuration",
-        "windows/win32/**/*.md": ""
+        "windows/win32/**/*.md": "",
         "developer/dotnet/wcf/**/*.md": "wcf",
         "developer/dotnet/framework/general/**/*.md": "general",
         "developer/dotnet/framework/installation/**/*.md": "installation"
