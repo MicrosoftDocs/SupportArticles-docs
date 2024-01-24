@@ -2,9 +2,9 @@
 title: Use WSL to open core dumps on another machine
 description: This article describes how to use Windows Subsystem for Linux to open a core dump file on another machine.
 ms.date: 06/18/2021
-ms.prod: aspnet-core
+ms.service: aspnet-core
 ms.reviewer: ramakoni, ahmetmb
-ms.technology: aspnetcore-practice-troubleshoot-linux
+ms.subservice: practice-troubleshoot-linux
 author: ahmetmithat
 ---
 # Lab 4.2 Analyze core dump files on another machine - Using WSL to open core dump files
