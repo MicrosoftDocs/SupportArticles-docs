@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: ctimon, sdwyer, kaushika
 ms.custom: sap:setup-and-configuration-of-clustered-services-and-applications, csstroubleshoot
-ms.technology: windows-server-high-availability
+ms.subservice: high-availability
 ---
 # Unexpected warning and error messages in a virtualized Windows Server failover cluster
 

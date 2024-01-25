@@ -4,12 +4,11 @@ description: This article contains the release history for SQL Server 2022 runni
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, vanto
-ms.date: 11/16/2023
+ms.date: 01/11/2024
+appliesto: SQL Server 2022
 ms.custom: linux-related-content
 ---
 # <a id="release-history"></a> Release history for SQL Server 2022 on Linux
-
-[!INCLUDE [sql-server-2022-linux](../../includes/applies-to/sql-server-2022-linux.md)]
 
 The following table lists the release history for [!INCLUDE [sql-server-2022](../../includes/versions/sql-server-2022.md)]. For release history on other editions, see the following articles:
 
@@ -18,6 +17,8 @@ The following table lists the release history for [!INCLUDE [sql-server-2022](..
 
 | Release                    | Version       | Release date |
 | -------------------------- | ------------- | ------------ |
+| [CU 11](#CU11)             | 16.0.4105.2   | 2024-01-11   |
+| [CU 10 GDR](#CU10-GDR)     | 16.0.4100.1   | 2024-01-09   |
 | [CU 10](#CU10)             | 16.0.4095.4   | 2023-11-16   |
 | [CU 9](#CU9)               | 16.0.4085.2   | 2023-10-12   |
 | [CU 8 GDR](#CU8-GDR)       | 16.0.4080.1   | 2023-10-10   |
@@ -31,6 +32,41 @@ The following table lists the release history for [!INCLUDE [sql-server-2022](..
 | [CU 1](#CU1)               | 16.0.4003.1   | 2023-02-16   |
 | [GDR 1](#GDR1)             | 16.0.1050.5   | 2023-02-14   |
 | [GA](#GA)                  | 16.0.1000.6   | 2022-11-16   |
+
+## <a id="CU11"></a> CU 11 (January 2024)
+
+This is the Cumulative Update 11 (CU 11) release of [!INCLUDE [sql-server-2022](../../includes/versions/sql-server-2022.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 16.0.4105.2. For information about the fixes and improvements in this release, see the [Support article](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate11).
+
+### Package details
+
+For manual or offline package installations, you can download the RPM and Debian packages with the information in the following table:
+
+| Distribution | Package version | Downloads |
+| --- | --- | --- |
+| **RHEL 9.x RPM packages**<br /><br />(Get [RHEL 8.x RPM packages](https://packages.microsoft.com/rhel/8/mssql-server-2022/Packages/m/)) | 16.0.4105.2-2 | [Database Engine RPM package](https://packages.microsoft.com/rhel/9.0/mssql-server-2022/Packages/m/mssql-server-16.0.4105.2-2.x86_64.rpm)<br />[Extensibility RPM package](https://packages.microsoft.com/rhel/9.0/mssql-server-2022/Packages/m/mssql-server-extensibility-16.0.4105.2-2.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/9.0/mssql-server-2022/Packages/m/mssql-server-fts-16.0.4105.2-2.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/9.0/mssql-server-2022/Packages/m/mssql-server-ha-16.0.4105.2-2.x86_64.rpm)<br />[PolyBase RPM package](https://packages.microsoft.com/rhel/9.0/mssql-server-2022/Packages/m/mssql-server-polybase-16.0.4105.2-2.x86_64.rpm) |
+| **SLES 15 RPM packages** | 16.0.4105.2-2 | [Database Engine RPM package](https://packages.microsoft.com/sles/15/mssql-server-2022/Packages/m/mssql-server-16.0.4105.2-2.x86_64.rpm)<br />[Extensibility RPM package](https://packages.microsoft.com/sles/15/mssql-server-2022/Packages/m/mssql-server-extensibility-16.0.4105.2-2.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/sles/15/mssql-server-2022/Packages/m/mssql-server-fts-16.0.4105.2-2.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/sles/15/mssql-server-2022/Packages/m/mssql-server-ha-16.0.4105.2-2.x86_64.rpm)<br />[PolyBase RPM package](https://packages.microsoft.com/sles/15/mssql-server-2022/Packages/m/mssql-server-polybase-16.0.4105.2-2.x86_64.rpm) |
+| **Ubuntu 22.04 Debian packages**<br /><br />(Get [Ubuntu 20.04 Debian packages](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2022/pool/main/m/mssql-server/)) | 16.0.4105.2-2 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/22.04/mssql-server-2022/pool/main/m/mssql-server/mssql-server_16.0.4105.2-2_amd64.deb)<br />[Extensibility Debian package](https://packages.microsoft.com/ubuntu/22.04/mssql-server-2022/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_16.0.4105.2-2_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/22.04/mssql-server-2022/pool/main/m/mssql-server-fts/mssql-server-fts_16.0.4105.2-2_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/22.04/mssql-server-2022/pool/main/m/mssql-server-ha/mssql-server-ha_16.0.4105.2-2_amd64.deb)<br />[PolyBase Debian package](https://packages.microsoft.com/ubuntu/22.04/mssql-server-2022/pool/main/m/mssql-server-polybase/mssql-server-polybase_16.0.4105.2-2_amd64.deb) |
+
+Go back to the [release history](#release-history).
+
+## <a id="CU10-GDR"></a> CU 10 GDR (January 2024)
+
+This is the Cumulative Update 10-GDR (CU 10 GDR) release of [!INCLUDE [sql-server-2022](../../includes/versions/sql-server-2022.md)]. This is a security update that also includes the previously released CU (CU 10). The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 16.0.4100.1. For information about the fixes and improvements in this release, see [KB 5033592](https://support.microsoft.com/help/5033592).
+
+> [!NOTE]  
+> **Red Hat 9** and **Ubuntu 22.04** are now supported on [!INCLUDE [sql-server-2022](../../includes/versions/sql-server-2022.md)] starting with CU 10.
+
+### Package details
+
+For manual or offline package installations, you can download the RPM and Debian packages with the information in the following table:
+
+| Distribution | Package version | Downloads |
+| --- | --- | --- |
+| **RHEL 9.x RPM packages**<br /><br />(Get [RHEL 8.x RPM packages](https://packages.microsoft.com/rhel/8/mssql-server-2022/Packages/m/)) | 16.0.4100.1-1 | [Database Engine RPM package](https://packages.microsoft.com/rhel/9.0/mssql-server-2022/Packages/m/mssql-server-16.0.4100.1-1.x86_64.rpm)<br />[Extensibility RPM package](https://packages.microsoft.com/rhel/9.0/mssql-server-2022/Packages/m/mssql-server-extensibility-16.0.4100.1-1.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/rhel/9.0/mssql-server-2022/Packages/m/mssql-server-fts-16.0.4100.1-1.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/rhel/9.0/mssql-server-2022/Packages/m/mssql-server-ha-16.0.4100.1-1.x86_64.rpm)<br />[PolyBase RPM package](https://packages.microsoft.com/rhel/9.0/mssql-server-2022/Packages/m/mssql-server-polybase-16.0.4100.1-1.x86_64.rpm) |
+| **SLES 15 RPM packages** | 16.0.4100.1-1 | [Database Engine RPM package](https://packages.microsoft.com/sles/15/mssql-server-2022/Packages/m/mssql-server-16.0.4100.1-1.x86_64.rpm)<br />[Extensibility RPM package](https://packages.microsoft.com/sles/15/mssql-server-2022/Packages/m/mssql-server-extensibility-16.0.4100.1-1.x86_64.rpm)<br />[Full-Text Search RPM package](https://packages.microsoft.com/sles/15/mssql-server-2022/Packages/m/mssql-server-fts-16.0.4100.1-1.x86_64.rpm)<br />[High Availability RPM package](https://packages.microsoft.com/sles/15/mssql-server-2022/Packages/m/mssql-server-ha-16.0.4100.1-1.x86_64.rpm)<br />[PolyBase RPM package](https://packages.microsoft.com/sles/15/mssql-server-2022/Packages/m/mssql-server-polybase-16.0.4100.1-1.x86_64.rpm) |
+| **Ubuntu 22.04 Debian packages**<br /><br />(Get [Ubuntu 20.04 Debian packages](https://packages.microsoft.com/ubuntu/20.04/mssql-server-2022/pool/main/m/mssql-server/)) | 16.0.4100.1-1 | [Database Engine Debian package](https://packages.microsoft.com/ubuntu/22.04/mssql-server-2022/pool/main/m/mssql-server/mssql-server_16.0.4100.1-1_amd64.deb)<br />[Extensibility Debian package](https://packages.microsoft.com/ubuntu/22.04/mssql-server-2022/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_16.0.4100.1-1_amd64.deb)<br />[Full-Text Search Debian package](https://packages.microsoft.com/ubuntu/22.04/mssql-server-2022/pool/main/m/mssql-server-fts/mssql-server-fts_16.0.4100.1-1_amd64.deb)<br />[High Availability Debian package](https://packages.microsoft.com/ubuntu/22.04/mssql-server-2022/pool/main/m/mssql-server-ha/mssql-server-ha_16.0.4100.1-1_amd64.deb)<br />[PolyBase Debian package](https://packages.microsoft.com/ubuntu/22.04/mssql-server-2022/pool/main/m/mssql-server-polybase/mssql-server-polybase_16.0.4100.1-1_amd64.deb) |
+
+Go back to the [release history](#release-history).
 
 ## <a id="CU10"></a> CU 10 (November 2023)
 

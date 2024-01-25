@@ -5,7 +5,7 @@ author: cts-davean
 ms.author: davean
 ms.reviewer: mihayash, v-sidong
 ms.custom: sap:Desktop app UI development
-ms.technology: windows-dev-apps-desktop-app-ui-dev
+ms.subservice: desktop-app-ui-dev
 ms.date: 08/26/2023
 ---
 

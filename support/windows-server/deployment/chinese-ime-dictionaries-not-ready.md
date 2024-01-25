@@ -5,11 +5,11 @@ ms.date: 04/28/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: yyan, v-sidong
 ms.custom: sap:setup, csstroubleshoot
-ms.technology: windows-server-deployment
+ms.subservice: deployment
 ---
 
 # Chinese IME dictionaries shows "not ready yet" in Windows Server 2022

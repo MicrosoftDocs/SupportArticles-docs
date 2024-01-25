@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:performance-audio-and-video-and-remotefx, csstroubleshoot
-ms.technology: windows-server-rds
+ms.subservice: rds
 ---
 # Remote Desktop cannot connect to the VDI-based remote computer after enabling Microsoft RemoteFX 3D Video Adapter
 

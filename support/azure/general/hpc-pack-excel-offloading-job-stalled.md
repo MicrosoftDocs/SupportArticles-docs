@@ -4,7 +4,7 @@ description: HPC Pack Excel offloading job is stalled when you run the Convertib
 ms.date: 10/18/2022
 editor: v-jsitser
 ms.reviewer: cargonz, dandchen, v-leedennis
-ms.prod: hpcpack
+ms.service: hpcpack
 #Customer intent: As a Microsoft HPC Pack user, I want to resolve a stalled Excel offloading job so that I can successfully use an Excel workbook to run a job in an Azure cluster.
 ---
 # HPC Pack Excel offloading job is stalled

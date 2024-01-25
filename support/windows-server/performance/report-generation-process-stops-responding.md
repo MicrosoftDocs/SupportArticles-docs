@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, gregue
 ms.custom: sap:performance-monitoring-tools, csstroubleshoot
-ms.technology: windows-server-performance
+ms.subservice: performance
 ---
 # The report generation process may stop responding when you run Perfmon.exe with the Active Directory Diagnostics template to generate a report on a domain controller
 

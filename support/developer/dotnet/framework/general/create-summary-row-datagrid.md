@@ -4,7 +4,6 @@ description: This article provides code samples to describe how to create a summ
 ms.date: 05/06/2020
 ms.reviewer: EARLB
 ms.topic: how-to
-ms.technology: dotnet-general
 ---
 # How to create a summary row for a DataGrid in ASP.NET by using Visual Basic .NET  
 

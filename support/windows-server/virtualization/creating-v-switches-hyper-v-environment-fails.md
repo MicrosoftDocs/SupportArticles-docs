@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:virtual-switch-manager-vmswitch, csstroubleshoot
-ms.technology: hyper-v
+ms.subservice: hyper-v
 ---
 # Creating V-switches within the hyper-V environment fails
 

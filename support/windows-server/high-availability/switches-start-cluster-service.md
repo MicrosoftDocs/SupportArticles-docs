@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: eldenc, kaushika
 ms.custom: sap:cluster-service-fails-to-start, csstroubleshoot
-ms.technology: windows-server-high-availability
+ms.subservice: high-availability
 ---
 # Cluster service startup options
 

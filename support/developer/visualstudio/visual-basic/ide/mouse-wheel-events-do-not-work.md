@@ -3,7 +3,6 @@ title: Mouse wheel events don't work in Visual Basic 6.0 IDE
 description: This article provides workarounds for the problem where you cannot use the mouse wheel to scroll in Visual Basic 6.0 IDE.
 ms.date: 12/10/2020
 ms.custom: sap:Visual Basic
-ms.prod: visual-basic-6
 ---
 # Mouse wheel events do not work in the Visual Basic 6.0 IDE
 
