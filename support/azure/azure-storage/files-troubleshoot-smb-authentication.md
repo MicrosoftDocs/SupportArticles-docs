@@ -3,7 +3,7 @@ title: Troubleshoot Azure Files identity-based authentication and authorization 
 description: Troubleshoot problems using identity-based authentication to connect to SMB Azure file shares and see possible resolutions.
 ms.service: azure-file-storage
 ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
-ms.date: 01/17/2024
+ms.date: 01/25/2024
 ms.reviewer: kendownie, v-weizhu
 ---
 # Troubleshoot Azure Files identity-based authentication and authorization issues (SMB)
@@ -98,7 +98,7 @@ The cmdlet performs these checks in sequence and provides guidance for failures:
 10. `CheckUserFileAccess`: Check if the AD identity has the proper directory/file permission (Windows ACLs) to access Azure Files. If not, [configure the directory/file level permission](/azure/storage/files/storage-files-identity-ad-ds-configure-permissions). To run this check, you must provide the `-FilePath` parameter, with the path of the mounted file that you want to debug the access to. (Supported on AzFilesHybrid v0.2.3+ version)
 11. `CheckAadKerberosRegistryKeyIsOff`: Check if the Microsoft Entra Kerberos registry key is off. If the key is on, run `reg add HKLM\SYSTEM\CurrentControlSet\Control\Lsa\Kerberos\Parameters /v CloudKerberosTicketRetrievalEnabled /t REG_DWORD /d 0` from an elevated command prompt to turn it off, and then reboot your machine. (Supported on AzFilesHybrid v0.2.9+ version)
 
-If you just want to run a subselection of the above checks, you can use the `-Filter` parameter, with a comma-separated list of checks to run. For instance, to run all checks related to share-level permissions (RBAC):
+If you just want to run a subselection of the previous checks, you can use the `-Filter` parameter, with a comma-separated list of checks to run. For example, to run all checks related to share-level permissions (RBAC), use the following PowerShell cmdlets:
 
 ```PowerShell
 $ResourceGroupName = "<resource-group-name-here>"
@@ -111,7 +111,7 @@ Debug-AzStorageAccountAuth `
     -Verbose
 ```
 
-As another example, if you have the file share mounted on `X:`, and if you only want to run the check related to file-level permissions (Windows ACLs), you can run:
+If you have the file share mounted on `X:`, and if you only want to run the check related to file-level permissions (Windows ACLs), you can run the following PowerShell cmdlets:
 
 ```PowerShell
 $ResourceGroupName = "<resource-group-name-here>"
