@@ -1,7 +1,7 @@
 ---
 title: Can't sign in to Salesforce due to disabled connections
 description: Resolves an error message in Microsoft Copilot for Sales when you can't sign in to Salesforce due to disabled connections.
-ms.date: 01/22/2024
+ms.date: 01/25/2024
 ms.service: microsoft-sales-copilot
 author: sbmjais
 ms.author: shjais
@@ -34,7 +34,7 @@ When you try to sign in to Salesforce from Copilot for Sales, the following erro
 
 ## Cause
 
-The Salesforce connection is disabled in the msdyn_viva environment.
+The Salesforce connection is disabled in the [msdyn_viva environment](/microsoft-sales-copilot/data-handling#copilot-for-sales-dataverse-and-your-crm).
 
 The Data Loss Prevention (DLP) policy is enabled in the tenant's msdyn_viva environment, thereby blocking the Salesforce connector. Therefore, existing connections to Salesforce have been disabled.
 
