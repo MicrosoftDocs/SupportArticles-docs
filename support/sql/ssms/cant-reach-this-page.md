@@ -14,7 +14,7 @@ This article helps you resolve problems that occur when you try to log in to SQL
 > [!NOTE]
 > Microsoft Entra ID is the [new name for Azure Active Directory (Azure AD)](/entra/fundamentals/new-name).
 
-## Symptoms
+**Symptoms**
 
 Depending on the version of SSMS that you have installed, you experience either of the following possible symptoms.
 
