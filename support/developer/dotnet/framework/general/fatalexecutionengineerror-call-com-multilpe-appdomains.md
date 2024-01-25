@@ -3,7 +3,6 @@ title: FatalExecutionEngineError when you call COM
 description: This article describes a problem in which an ASP.NET application crashes and the FatalExecutionEngineError error occurs when you do COM calls together with multiple AppDomains.
 ms.date: 05/11/2020
 ms.reviewer: leecow
-ms.technology: dotnet-general
 ---
 # FatalExecutionEngineError occurs when you do COM calls together with multiple AppDomains
 

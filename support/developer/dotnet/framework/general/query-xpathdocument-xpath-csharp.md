@@ -4,7 +4,6 @@ description: Demonstrates how to query an XPathDocument object with an XML Path 
 ms.date: 05/06/2020
 ms.reviewer: JAYAPST
 ms.topic: how-to
-ms.technology: dotnet-general
 ---
 # Use Visual C# to query XML with an XPath expression
 

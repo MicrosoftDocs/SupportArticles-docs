@@ -7,8 +7,8 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-ms.technology: windows-server-eos
+ms.service: windows-server
+ms.subservice: windows-eos
 ms.custom: sap:troubleshoot-issues-in-esu, csstroubleshoot
 localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate

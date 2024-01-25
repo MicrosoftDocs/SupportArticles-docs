@@ -7,10 +7,10 @@ author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 ms.reviewer: hasokol,georgeri,gbock,jtierney,arrenc,roberg,kaushika
 ms.custom: sap:certificates-and-public-key-infrastructure-pki, csstroubleshoot
-ms.technology: windows-server-security
+ms.subservice: windows-security
 ms.date: 09/28/2023
 ---
 # Removal of the U.S. Federal Common Policy CA certificate from the Microsoft trusted root
