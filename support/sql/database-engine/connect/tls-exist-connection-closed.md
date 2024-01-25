@@ -115,6 +115,8 @@ In systems with high workloads on SQL Server 2017 and earlier, you might observe
 
 A shortage of IOCP workers and SOS Worker resources allocated to handling authentication and encryption operations is the main cause of the TCP three-way handshake timeouts and additional login timeouts. SQL Server 2019 includes several performance improvements in this area. One notable enhancement is the implementation of a dedicated login dispatcher pool. This optimizes the allocation of resources for login-related tasks, which reduces the occurrence of timeouts and improves overall system performance.
 
+## Other TLS connection failed scenarios
+
 If none of the previous scenarios match the error message that you encounter, see the following scenarios:
 
 - [Intermittent connection errors occur when a new node is added to the Always On environment](intermittent-connection-errors-when-a-new-node-is-added.md).
