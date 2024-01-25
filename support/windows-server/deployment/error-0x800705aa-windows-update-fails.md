@@ -7,11 +7,11 @@ manager: dcscontentpm
 audience: itpro
 ms.date: 11/23/2023
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, maeltedebay, v-lianna
 ms.custom: sap:servicing, csstroubleshoot, ikb2lmc
-ms.technology: windows-server-deployment
+ms.subservice: deployment
 ---
 # Error 0x800705aa when Windows Update fails
 

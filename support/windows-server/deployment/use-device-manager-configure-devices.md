@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, V-LANAC
 ms.custom: sap:devices-and-drivers, csstroubleshoot
-ms.technology: windows-server-deployment
+ms.subservice: deployment
 ---
 # How to use Device Manager to configure devices in Windows Server 2003  
 

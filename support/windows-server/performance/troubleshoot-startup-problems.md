@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:boot-is-slow, csstroubleshoot
-ms.technology: windows-server-performance
+ms.subservice: performance
 ---
 # How to troubleshoot startup problems in Windows Server 2003
 

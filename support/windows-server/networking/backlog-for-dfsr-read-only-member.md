@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, rolandw, wincicadsec
 ms.custom: sap:dfsr, csstroubleshoot
-ms.technology: networking
+ms.subservice: networking
 ---
 # A backlog is reported for a DFSR Read-Only member after you remove a replication file filter
 

@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, briansi
 ms.custom: sap:remote-desktop-services-terminal-services-licensing, csstroubleshoot
-ms.technology: windows-server-rds
+ms.subservice: rds
 ---
 # Event ID 4105: The Terminal Services license server cannot update the license attributes for user \<UserName> in Active Directory Domain \<DomainName>
 

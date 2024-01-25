@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:integration-components, csstroubleshoot
-ms.technology: hyper-v
+ms.subservice: hyper-v
 ---
 # The uptime value of the Hyper-V Management console changes to the resume time of the last pause
 

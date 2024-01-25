@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jaysenb
 ms.custom: sap:desktop-shell, csstroubleshoot
-ms.technology: windows-server-shell-experience
+ms.subservice: shell-experience
 ---
 # Windows Server 2019 task manager may display incorrect value for L2/L3 cache
 

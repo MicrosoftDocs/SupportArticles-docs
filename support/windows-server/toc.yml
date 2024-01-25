@@ -1190,6 +1190,8 @@
       href: ./group-policy/dcgpofix-not-restore-default-domain-controller-policy-security-settings.md
     - name: Description of group policy restricted groups
       href: ./group-policy/description-of-group-policy-restricted-groups.md
+    - name: GPMC or Import-GPO cmdlet fails to restore a GPO from backup
+      href: ./group-policy/gpmc-import-gpo-fails-restore-gpo-backup.md
     - name: How to enable the Group Policy loopback feature
       href: ./group-policy/loopback-processing-of-group-policy.md
     - name: How to set event log security locally or via Group Policy

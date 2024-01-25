@@ -2,7 +2,7 @@
 title: Device can't be removed in Device Manager
 description: This article provides a resolution for the problem where the hot-pluggable PCI Express or ExpressCard device may still appear in Device Manager after you remove the device.
 ms.date: 09/02/2020
-ms.technology: windows-hardware-network-driver
+ms.subservice: network-driver
 ---
 # PCI Express or ExpressCard device appears connected after being hot-unplugged
 
