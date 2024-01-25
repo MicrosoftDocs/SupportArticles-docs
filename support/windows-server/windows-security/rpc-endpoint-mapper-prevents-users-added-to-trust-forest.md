@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:domain-and-forest-trusts, csstroubleshoot
-ms.technology: windows-server-security
+ms.subservice: windows-security
 ---
 # RPC Endpoint Mapper client authentication prevents users and groups from being added to trusting forest
 

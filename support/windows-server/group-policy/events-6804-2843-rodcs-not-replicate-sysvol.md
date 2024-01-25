@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-jesits
 ms.custom: sap:sysvol-access-or-replication-issues, csstroubleshoot
-ms.technology: windows-server-group-policy
+ms.subservice: group-policy
 ---
 # Events 6804 and 2843 are logged and RODCs do not replicate SYSVOL
 

@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, danma
 ms.custom: sap:ip-address-management-ipam, csstroubleshoot
-ms.technology: networking
+ms.subservice: networking
 ---
 # An incorrect IP address is returned when you ping a server by using its NetBIOS name  
 

@@ -8,7 +8,6 @@ manager: dcscontentpm
 tags: azure-resource-manager
 ms.service: virtual-machines
 ms.subservice: vm-troubleshooting-tools
-ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: vm
 ms.workload: infrastructure-services
@@ -36,7 +35,9 @@ Serial Console is available in the following regions:
 - Canada East
 - Central India
 - Central US
-- Central US EUAP 
+- Central US EUAP
+- China East 3
+- China North 3
 - East Asia
 - East US 2 EUAP
 - East US 2
@@ -44,6 +45,7 @@ Serial Console is available in the following regions:
 - France South
 - Germany North
 - Germany West Central
+- Italy North
 - Japan East
 - Japan West
 - Korea Central
@@ -51,6 +53,7 @@ Serial Console is available in the following regions:
 - North Europe
 - Norway East
 - Norway West
+- Poland Central
 - Qatar Central
 - South Africa North
 - South Africa West

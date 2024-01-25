@@ -7,11 +7,11 @@ ms.date: 11/23/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, ANRATH, brianoakes, v-lianna
 ms.custom: sap:dns, csstroubleshoot, ikb2lmc
-ms.technology: networking
+ms.subservice: networking
 ---
 # DNS zone transfer fails when using the "Only to servers listed in the Name servers tab" setting
 

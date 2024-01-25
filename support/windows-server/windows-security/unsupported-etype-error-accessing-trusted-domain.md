@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, Arrenc, justintu, lindakup, herbertm, waynmc
 ms.custom: sap:kerberos-authentication, csstroubleshoot
-ms.technology: windows-server-security
+ms.subservice: windows-security
 ---
 # "Unsupported etype" error when accessing a resource in a trusted domain
 

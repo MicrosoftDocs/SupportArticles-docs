@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, prasadk
 ms.custom: sap:dynamic-host-configuration-protocol-dhcp, csstroubleshoot
-ms.technology: networking
+ms.subservice: networking
 ---
 # DHCP Server with Deactivated Scope sends a DHCPNAK to clients
 

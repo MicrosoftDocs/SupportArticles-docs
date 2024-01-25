@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot the failed deployment of a Kubernetes application offer
 description: Troubleshoot the failed deployment of a Kubernetes application offer that was made on the Azure Marketplace.
-ms.date: 04/19/2023
+ms.date: 01/24/2024
 ms.reviewer: chiragpa, atchub, v-leedennis
 editor: v-jsitser
 ms.service: azure-kubernetes-service
@@ -53,7 +53,6 @@ The following sections discuss the cause and solution for some common failure sc
 If the Kubernetes application didn't install on the selected Azure Kubernetes Service (AKS) cluster, you receive an error message that resembles the following text:
 
 > Request failed to https\://management.azure.com/subscriptions/\<subscription-guid>/resourceGroups/resourceGroup/providers/Microsoft.ContainerService/managedclusters/aks-cluster/extensionaddons/default?api-version=2021-03-01. Error code: Forbidden. Reason: Forbidden.  
->
 > ```json
 > {  
 >   "error": {  
@@ -123,6 +122,10 @@ Before the subscription can be used, you need to accept the legal terms of the i
 
 #### Solution 6: Accept the legal terms
 
+#### [Portal](#tab/azure-portal)
+
+You can deploy through the [Azure portal](https://portal.azure.com). The Azure portal provides a UI experience for reading and accepting the legal terms.
+
 #### [CLI](#tab/CLI)
 
 You can use the Azure CLI commands that are described in the [Azure CLI legal terms](/cli/azure/vm/image/terms). Although the commands are for VMs, the commands also work for containers.
@@ -131,19 +134,25 @@ You can use the Azure CLI commands that are described in the [Azure CLI legal te
 
 To accept the legal terms through PowerShell, run the cmdlets that are described in the [PowerShell legal terms](/powershell/module/azurerm.marketplaceordering).
 
-#### [Portal](#tab/azure-portal)
-
-You can choose to deploy through the [Azure portal](https://portal.azure.com). The Azure portal provides a UI experience for reading and accepting the legal terms. 
-
 ---
+
+## Next steps
+
+[Troubleshoot errors when deploying AKS cluster extensions](cluster-extension-deployment-errors.md)
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
 
 [azure-portal]: https://portal.azure.com
+
 [deployment-operations]: /azure/azure-resource-manager/templates/deployment-history#deployment-operations-and-error-message
+
 [register-resource-providers]: /azure/aks/deploy-marketplace#register-resource-providers
+
 [aks-cluster-health]: /azure/architecture/operator-guides/aks/aks-triage-cluster-health
+
 [azure-monitor-activity-log]: /azure/azure-monitor/essentials/activity-log
+
 [purchase-validation-checks]: /marketplace/azure-purchasing-invoicing#purchase-validation-checks
+

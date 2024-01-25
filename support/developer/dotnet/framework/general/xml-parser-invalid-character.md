@@ -2,7 +2,6 @@
 title: Invalid character was found in text content
 description: An error may be thrown when you parse XML that contains special characters by using the Microsoft XML parser. This article provides resolutions.
 ms.date: 05/06/2020
-ms.technology: dotnet-general
 ---
 # XML parser: Invalid character was found in text content
 

@@ -4,7 +4,7 @@ description: Provides a resolution for an issue where a Teams dialer call from a
 ms.date: 10/23/2023
 ms.reviewer: asaftzuk, ilanak
 author: t-ronioded
-ms.author: t-ronioded
+ms.author: ronihemed
 ---
 # A Teams dialer call from a contact, account, or lead record fails
 

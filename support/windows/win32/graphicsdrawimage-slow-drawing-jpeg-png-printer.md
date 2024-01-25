@@ -3,7 +3,7 @@ title: Graphics::DrawImage appears slow when drawing a JPEG or PNG image to a pr
 description: Provides a resolution for an issue where Graphics::DrawImage appears slow when you call it to draw a JPEG or PNG image to a printer. 
 ms.reviewer: ishimada, davean, aartigoyle, v-sidong
 ms.date: 10/12/2023
-ms.technology: windows-dev-apps-graphics-multimedia-dev
+ms.subservice: graphics-multimedia-dev
 ms.custom: sap:Graphics and multimedia development
 ---
 # Graphics::DrawImage with ImageAttributes is slow when drawing a PNG or JPEG image to a printer

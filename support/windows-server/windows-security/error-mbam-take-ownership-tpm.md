@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: manojse, yitzhaks, avicar, kaushika
 ms.custom: sap:bitlocker, csstroubleshoot
-ms.technology: windows-server-security
+ms.subservice: windows-security
 ---
 # MBAM fails to take ownership of TPM
 

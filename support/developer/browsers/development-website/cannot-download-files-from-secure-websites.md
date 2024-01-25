@@ -2,7 +2,6 @@
 title: Cannot download files from secure websites
 description: Resolve issues with error message Internet Explorer Cannot Download or Filename couldn't be downloaded when using Internet Explorer 9 and later versions. This can happen on bank websites when downloading .PDF and other forms of tax files.
 ms.date: 04/21/2020
-ms.technology: internet-explorer-development-website
 ---
 # "Couldn't be downloaded" error when downloading files from secure websites in Internet Explorer 9 and later versions
 
