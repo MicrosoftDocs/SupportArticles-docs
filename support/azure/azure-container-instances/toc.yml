@@ -2,9 +2,13 @@
 items:
 - name: Welcome
   href: welcome-container-instances.yml
-
+  
+- name: ACI debugging tools
+  href: aci-debug-tools.md
 - name: Can't delete a virtual network or subnet used by ACI
   href: cannot-delete-vnet-subnet.md
+- name: Container instance continues to run after the stop or delete command
+  href: aci-still-running-after-stop-delete-command.md
 - name: Fails to pull ACR images by using Managed Identity authentication
   href: acr-image-pull-failures-managed-identity.md
 
