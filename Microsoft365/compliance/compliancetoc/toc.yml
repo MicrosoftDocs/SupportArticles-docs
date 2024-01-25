@@ -49,6 +49,8 @@
       href: ../audit-logs/useragent-property.md
   - name: Data Loss Prevention (DLP)
     items:
+    - name: Collect compliance diagnostics
+      href: ../data-loss-prevention/collect-compliance-diagnostics.md
     - name: Common scenarios for tips
       href: ../data-loss-prevention/data-loss-prevention-policy-tips.md
     - name: Data loss prevention not working
