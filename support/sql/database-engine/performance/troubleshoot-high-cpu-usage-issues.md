@@ -1,10 +1,10 @@
 ---
 title: Troubleshoot high-CPU-usage issues in SQL Server
 description: This article provides a procedure to help you fix high-CPU-usage issues on a server that is running SQL Server.
-ms.date: 01/24/2024
+ms.date: 01/25/2024
 ms.custom: sap:Performance
 ms.topic: troubleshooting
-ms.reviewer: jopilov, v-jayaramanp
+ms.reviewer: jopilov, v-jayaramanp, v-sidong
 author: prmadhes-msft
 ms.author: prmadhes
 ---
@@ -180,7 +180,6 @@ GO
 
 To solve common high CPU usage caused by spinlock contention, see the following sections.
 
-
 ### SOS_CACHESTORE spinlock contention
 
 If your SQL Server instance experiences heavy `SOS_CACHESTORE` spinlock contention or you notice that your query plans are often removed on unplanned query workloads, see the following article and enable trace flag `T174` by using the `DBCC TRACEON (174, -1)` command:
@@ -199,6 +198,7 @@ If your SQL Server instance experiences a high CPU scenario caused by spinlock c
 
 > [!NOTE]
 > High CPU usage may result from spinlock contention on many other spinlock types. For more information on spinlocks, see [Diagnose and resolve spinlock contention on SQL Server](/sql/relational-databases/diagnose-resolve-spinlock-contention).
+
 ## Step 9: Configure your virtual machine
 
 If you're using a virtual machine, ensure that you aren't overprovisioning CPUs and that they're configured correctly. For more information, see [Troubleshooting ESX/ESXi virtual machine performance issues (2001003)](https://kb.vmware.com/s/article/2001003#CPU%20constraints).
