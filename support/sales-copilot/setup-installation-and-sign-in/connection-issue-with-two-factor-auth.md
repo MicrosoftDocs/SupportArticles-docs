@@ -9,7 +9,7 @@ manager: shujoshi
 ---
 # Copilot for Sales doesn't connect to Dynamics 365 with multifactor authentication enabled
 
-This article helps you troubleshoot and resolve an issue where the Microsoft Copilot for Sales app for Microsoft Teams doesn't connect to Microsoft Dynamics 365 when the [multifactor authentication (MFA)](/microsoft-365/admin/security-and-compliance/multi-factor-authentication-microsoft-365?view=o365-worldwide) is enabled.
+This article helps you troubleshoot and resolve an issue where the Microsoft Copilot for Sales app for Microsoft Teams doesn't connect to Microsoft Dynamics 365 when the [multifactor authentication (MFA)](/microsoft-365/admin/security-and-compliance/multi-factor-authentication-microsoft-365) is enabled.
 
 ## Who is affected?
 
