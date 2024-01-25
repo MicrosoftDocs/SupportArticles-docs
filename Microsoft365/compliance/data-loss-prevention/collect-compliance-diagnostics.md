@@ -135,7 +135,7 @@ Follow these steps:
 
    For example, to collect support data for an issue in which a sensitive information type (SIT) is incorrectly detected in a document, select the **Data Classification** \> **Classification** template.
 
-2. Use the template fields to provide information about your issue. For example, you might add a sample file, a trace file, and an email alert message, as shown in the following screenshot.
+2. Use the template fields to provide information about your issue. For example, you could add a sample file, a trace file, and an email alert message, as shown in the following screenshot.
 
    :::image type="content" source="media/collect-compliance-diagnostics/tool-template.png" border="true" alt-text="Screenshot of the classification support data template in the tool UI." :::
 
