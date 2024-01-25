@@ -24,7 +24,7 @@ ms.date: 01/25/2024
 
 If you open a Microsoft Support case for an issue in Microsoft Purview Information Protection (MIP) or Microsoft Purview Data Loss Prevention (DLP), you might be asked to provide diagnostic data. We recommend that you use the Microsoft [ComplianceDiagnostics](https://www.powershellgallery.com/packages/ComplianceDiagnostics) tool to simplify, standardize, and streamline data collection.
 
-The ComplianceDiagnostics tool is a PowerShell module that's hosted in the PowerShell Gallery. You can select one of the several data collection templates that are available in the tool. Your selection determines what diagnostic data is gathered. Typically, a Microsoft Support engineer requests diagnostic data and tells you which data collection template to use.
+The ComplianceDiagnostics tool is a PowerShell module that's hosted in the PowerShell Gallery. You can select any of the several data collection templates that are available in the tool. Your selection determines what diagnostic data is gathered. Typically, a Microsoft Support engineer requests diagnostic data and tells you which data collection template to use.
 
 > [!NOTE]
 > The ComplianceDiagnostics tool doesn't modify, delete, or transmit diagnostic data. The tool processes diagnostic files and saves the collected data to a local .zip file. You can review the contents of the .zip file before you share it with a Microsoft Support engineer.
