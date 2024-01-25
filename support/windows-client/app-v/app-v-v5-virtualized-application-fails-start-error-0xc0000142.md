@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, gautama
 ms.custom: sap:application-does-not-load-or-run, csstroubleshoot
-ms.technology: windows-client-application-virtualization-app-v
+ms.subservice: application-virtualization-app-v
 ---
 # An App-V v5 virtualized application fails to start with error 0xc0000142
 

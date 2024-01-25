@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:com-and-com+-performance-and-stability, csstroubleshoot
-ms.technology: windows-client-application-compatibility
+ms.subservice: application-compatibility
 ---
 # Com port settings reset to default after making changes in Device Manager
 

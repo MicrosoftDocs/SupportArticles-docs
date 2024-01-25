@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:ip-address-management-ipam, csstroubleshoot
-ms.technology: windows-client-networking
+ms.subservice: networking
 ---
 # Intranet site is identified as an Internet site when you use an FQDN or an IP address
 

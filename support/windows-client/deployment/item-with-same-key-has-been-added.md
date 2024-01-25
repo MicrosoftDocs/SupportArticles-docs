@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:activation, csstroubleshoot
-ms.technology: windows-client-deployment
+ms.subservice: deployment
 ---
 # "An item with the same key has already been added" error when you open a list in VAMT 2.0 on a Windows 7-based computer
 

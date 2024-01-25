@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, scottmca
 ms.custom: sap:no-boot-not-bugchecks, csstroubleshoot
-ms.technology: windows-client-performance
+ms.subservice: performance
 ---
 # Invalid Boot File Received Error Message When PXE booting from WDS
 

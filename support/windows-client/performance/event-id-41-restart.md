@@ -2,12 +2,12 @@
 title: Event ID 41 The system has rebooted without cleanly shutting down first
 description: Describes the circumstances that cause a computer to generate Event ID 41, and provides guidance for troubleshooting the issue.
 ms.date: 07/24/2023
-ms.prod: windows-client
+ms.service: windows-client
 ms.topic: troubleshooting
 author: Teresa-Motiv
 ms.author: dougeby
 manager: dcscontentpm
-ms.technology: windows-client-performance
+ms.subservice: performance
 ms.custom: 
 - CI 111437
 - csstroubleshooting
