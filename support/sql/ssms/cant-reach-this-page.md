@@ -14,8 +14,6 @@ This article helps you resolve problems that occur when you try to log in to SQL
 > [!NOTE]
 > Microsoft Entra ID is the [new name for Azure Active Directory (Azure AD)](/entra/fundamentals/new-name).
 
-**Symptoms**
-
 Depending on the version of SSMS that you have installed, you experience either of the following possible symptoms.
 
 ## Can't reach this page (SSMS 19.1 and later versions)
@@ -35,13 +33,13 @@ When you try to sign in to Azure using Microsoft Entra authentication in SSMS 19
 
 :::image type="content" source="media/cant-reach-this-page/internet-explorer-error.png" alt-text="Screenshot showing the 'Can't reach this page' error message.":::
 
-**Cause**
+### Cause
 
 The default value for the **Use system default web browser** setting in SSMS 19.1 and later versions is `True`.
 
 This change was implemented because of customer feedback and the retirement of Internet Explorer in June 2022. Users of SSMS 18.*x* builds and the first SSMS 19.0 releases reported that they received an "Unsupported browser" message when they tried to sign in to Microsoft Entra.
 
-**Resolution**
+### Resolution for "Can't reach this page"
 
 To resolve the error, use the following methods, as appropriate.
 
@@ -72,7 +70,7 @@ When you try to sign in to Azure using Microsoft Entra authentication in SSMS 19
 
 :::image type="content" source="media/cant-reach-this-page/unsupported-browser-message.png" alt-text="Screenshot showing the unsupported browser error message.":::
 
-**Resolution**
+### Resolution for "Unsupported browser"
 
 To resolve the error, use the following methods, as appropriate.
 
