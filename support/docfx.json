@@ -190,29 +190,6 @@
       "ms.topic": {
         "**/*.md": "troubleshooting"
       },
-      "ms.prod": {
-        "developer/webapps/iis/**/*.md": "iis",
-        "windows-hardware/drivers/**/*.md": "windows-hardware"
-      },
-      "ms.technology": {
-        "developer/webapps/**/*.md": "",
-        "developer/webapps/iis/active-server-pages/**/*.md": "iis-active-server-pages",
-        "developer/webapps/iis/application-request-routing/**/*.md": "iis-application-request-routing",
-        "developer/webapps/iis/development/**/*.md": "iis-development",
-        "developer/webapps/iis/deployment-migration/**/*.md": "iis-deployment-migration",
-        "developer/webapps/iis/ftp-authentication-authorization/**/*.md": "iis-ftp-authentication-authorization",
-        "developer/webapps/iis/ftp-service-svchost-inetinfo/**/*.md": "iis-ftp-service-svchost-inetinfo",
-        "developer/webapps/iis/general/**/*.md": "iis-general",
-        "developer/webapps/iis/health-diagnostic-performance/**/*.md": "iis-health-diagnostic-performance",
-        "developer/webapps/iis/iisadmin-service-inetinfo/**/*.md": "iis-iisadmin-service-inetinfo",
-        "developer/webapps/iis/extensions-tools/**/*.md": "iis-iis-extensions-tools",
-        "developer/webapps/iis/site-behavior-performance/**/*.md": "iis-site-behavior-performance",
-        "developer/webapps/iis/www-administration-management/**/*.md": "iis-www-administration-management",
-        "developer/webapps/iis/www-authentication-authorization/**/*.md": "iis-www-authentication-authorization",
-        "developer/webapps/iis/www-modules-features/**/*.md": "iis-www-modules-features",
-        "developer/webapps/iis/www-service-svchost/**/*.md": "iis-www-service-svchost",
-        "windows-hardware/drivers/**/*.md": ""
-      },
       "ms.service": {
         "azure/active-directory/*.md": "active-directory",
         "azure/virtual-machines/*.md": "virtual-machines",
@@ -250,11 +227,13 @@
         "developer/host-integration-server/**/*.md": "host-integration-server",
         "developer/webapps/aspnet/**/*.md": "aspnet",
         "developer/webapps/aspnetcore/**/*.md": "aspnet-core",
+        "developer/webapps/iis/**/*.md": "iis",
         "microsoft-identity-manager/*.md": "microsoft-identity-manager",
         "dynamics/gp/*.md": "dynamics-gp",
         "mem/configmgr/**/*.md": "configuration-manager",
         "system-center/**/*.md": "system-center",
-        "windows/win32/**/*.md": "windows-dev-apps"
+        "windows/win32/**/*.md": "windows-dev-apps",
+        "windows-hardware/drivers/**/*.md": "windows-hardware-driver-quality"
       },
       "ms.subservice": {
         "dynamics-365/field-service/administration/**.*": "d365-fs-admin-settings",
@@ -394,6 +373,22 @@
         "developer/webapps/aspnet/iisadmin-service-process/**/*.md": "iisadmin-service-process",
         "developer/webapps/aspnet/www-authentication-authorization/**/*.md": "www-authentication-authorization",
         "developer/webapps/aspnet/health-diagnostic-performance/**/*.md": "health-diagnostic-performance",
+        "developer/webapps/**/*.md": "",
+        "developer/webapps/iis/active-server-pages/**/*.md": "active-server-pages",
+        "developer/webapps/iis/application-request-routing/**/*.md": "application-request-routing",
+        "developer/webapps/iis/development/**/*.md": "development",
+        "developer/webapps/iis/deployment-migration/**/*.md": "deployment-migration",
+        "developer/webapps/iis/ftp-authentication-authorization/**/*.md": "ftp-authentication-authorization",
+        "developer/webapps/iis/ftp-service-svchost-inetinfo/**/*.md": "ftp-service-svchost-inetinfo",
+        "developer/webapps/iis/general/**/*.md": "general",
+        "developer/webapps/iis/health-diagnostic-performance/**/*.md": "health-diagnostic-performance",
+        "developer/webapps/iis/iisadmin-service-inetinfo/**/*.md": "iisadmin-service-inetinfo",
+        "developer/webapps/iis/extensions-tools/**/*.md": "extensions",
+        "developer/webapps/iis/site-behavior-performance/**/*.md": "site-behavior-performance",
+        "developer/webapps/iis/www-administration-management/**/*.md": "www-administration-management",
+        "developer/webapps/iis/www-authentication-authorization/**/*.md": "www-authentication-authorization",
+        "developer/webapps/iis/www-modules-features/**/*.md": "www-modules-features",
+        "developer/webapps/iis/www-service-svchost/**/*.md": "www-service-svchost",
         "system-center/orchestrator/**/*.md": "orchestrator",
         "system-center/vmm/**/*.md": "virtual-machine-manager",
         "system-center/dpm/**/*.md": "data-protection-manager",
@@ -415,7 +410,8 @@
         "windows/win32/**/*.md": "",
         "developer/dotnet/wcf/**/*.md": "wcf",
         "developer/dotnet/framework/general/**/*.md": "general",
-        "developer/dotnet/framework/installation/**/*.md": "installation"
+        "developer/dotnet/framework/installation/**/*.md": "installation",
+        "windows-hardware/drivers/**/*.md": ""
       },
       "titleSuffix": {
         "developer/biztalk/**/*.md": "BizTalk Server",

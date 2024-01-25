@@ -5,11 +5,11 @@ ms.date: 12/13/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, krpg, warrenw, anleito, mistoyan, v-lianna
 ms.custom: sap:wmi, csstroubleshoot
-ms.technology: windows-client-system-management-components
+ms.subservice: system-mgmgt-components
 ---
 # Troubleshoot WMI high CPU usage issues
 
