@@ -1,7 +1,7 @@
 ---
 title: Can't reach this page and unsupported browser error messages in SMSS 19
 description: Discusses how to resolve problems that occur in SSMS 19 when you try to sign in by using Microsoft Entra authentication in Internet Explorer.
-ms.reviewer: maghan, randolphwest
+ms.reviewer: maghan, randolphwest, v-jayaramanp
 ms.date: 01/24/2024
 ms.custom:
   - "sap:Management Studio"
@@ -18,7 +18,7 @@ This article helps you resolve problems that occur when you try to log in to SQL
 
 Depending on the version of SSMS that you have installed, you experience either of the following possible symptoms.
 
-### Can't reach this page (SSMS 19.1 and later versions)
+## Can't reach this page (SSMS 19.1 and later versions)
 
 When you try to sign in to Azure using Microsoft Entra authentication in SSMS 19.1 and later versions, you receive the following error message:
 
@@ -32,6 +32,8 @@ When you try to sign in to Azure using Microsoft Entra authentication in SSMS 19
 >
 > There was a temporary DNS error. Try refreshing the page.  
 > Error Code: `INET_E_RESOURCE_NOT_FOUND`.
+
+:::image type="content" source="media/cant-reach-this-page/internet-explorer-error.png" alt-text="Screenshot showing the 'Can't reach this page' error message.":::
 
 **Cause**
 
@@ -53,7 +55,8 @@ If your environment has limited or no direct Internet access:
 **Method 2: Set the browser default**  
 
 Set your preferred browser as the default. In Microsoft Edge, access **Settings**, navigate to the **Default browser** page, and specify Microsoft Edge as the default browser.
-### Unsupported browser (SSMS 19.0.2 and earlier versions)
+
+## Unsupported browser (SSMS 19.0.2 and earlier versions)
 
 When you try to sign in to Azure using Microsoft Entra authentication in SSMS 19.0.2 and earlier versions, you receive the following "Unsupported browser" message:
 
@@ -73,16 +76,16 @@ When you try to sign in to Azure using Microsoft Entra authentication in SSMS 19
 
 To resolve the error, use the following methods, as appropriate.
 
-**Method 1: Set the browser default**
-
-Set your preferred browser as the default. In Microsoft Edge, access **Settings**, navigate to the **Default browser** page, and specify Microsoft Edge as the default browser.
-
-**Method 2: For users of SSMS 19.0.2 and earlier versions**
+**Method 1: For users of SSMS 19.0.2 and earlier versions**
 
 If you see the **Unsupported browser** message window, follow these steps:
 
 1. Navigate to **Tools > Options > Azure Services**.
 1. Within **Miscellaneous**, change **Use system default web browser** to **True**.
+
+**Method 2: Set the browser default**
+
+Set your preferred browser as the default. In Microsoft Edge, access **Settings**, navigate to the **Default browser** page, and specify Microsoft Edge as the default browser.
 
 ## More information
 
