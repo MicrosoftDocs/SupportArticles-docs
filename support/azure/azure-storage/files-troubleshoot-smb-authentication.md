@@ -108,7 +108,6 @@ Debug-AzStorageAccountAuth `
     -Filter CheckSidHasAadUser,CheckUserRbacAssignment `
     -StorageAccountName $StorageAccountName `
     -ResourceGroupName $ResourceGroupName `
-    -FilePath $FilePath `
     -Verbose
 ```
 
