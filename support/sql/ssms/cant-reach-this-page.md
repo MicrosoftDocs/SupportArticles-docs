@@ -9,7 +9,7 @@ ms.custom:
 
 # Browser authentication issues in SQL Server Management Studio 19.1 and later versions
 
-This article helps you resolve problems that occur when you try to log in to SQL Server Management Studio (SSMS) 19.1 and later versions by using Microsoft Entra authentication in Internet Explorer. The problems often occur in tightly secured environments that have restricted Internet access.
+This article helps you resolve problems that occur when you try to log in to SQL Server Management Studio (SSMS) using Microsoft Entra authentication. The problems often occur in tightly secured environments that have restricted Internet access.
 
 > [!NOTE]
 > Microsoft Entra ID is the [new name for Azure Active Directory (Azure AD)](/entra/fundamentals/new-name).
@@ -37,7 +37,7 @@ When you try to sign in to Azure using Microsoft Entra authentication in SSMS 19
 
 The default value for the **Use system default web browser** setting in SSMS 19.1 and later versions is `True`.
 
-This change was implemented because of customer feedback about the retirement of Internet Explorer in June 2022. Users of SSMS 18.*x* builds and the first SSMS 19.0 release reported that they received an "Unsupported browser" message when they tried to sign in to Microsoft Entra.
+This change was implemented because of customer feedback and the retirement of Internet Explorer in June 2022. Users of SSMS 18.*x* builds and the first SSMS 19.0 releases reported that they received an "Unsupported browser" message when they tried to sign in to Microsoft Entra.
 
 **Resolution**
 
@@ -53,10 +53,9 @@ If your environment has limited or no direct Internet access:
 **Method 2: Set the browser default**  
 
 Set your preferred browser as the default. In Microsoft Edge, access **Settings**, navigate to the **Default browser** page, and specify Microsoft Edge as the default browser.
-0
 ### Unsupported browser (SSMS 19.0.2 and earlier versions)
 
-When you try to sign in to Azure by using Microsoft Entra authentication in SSMS 19.0.2 and earlier versions, you receive the following "Unsupported browser" message:
+When you try to sign in to Azure using Microsoft Entra authentication in SSMS 19.0.2 and earlier versions, you receive the following "Unsupported browser" message:
 
 > **Keep your account secure**
 >
@@ -87,6 +86,6 @@ If you see the **Unsupported browser** message window, follow these steps:
 
 ## More information
 
-These settings are per SSMS guidelines and user installation specifics because there is no global option for all SSMS users.
+These settings are configured per SSMS installation and there is no global option that can be set for all SSMS users.
 
 Administrators can use PowerShell to set the default browser on a broader scale to ensure compatibility with Microsoft Edge or another preferred browser. For more information, see [Set Microsoft Edge as the default browser](/deployedge/edge-default-browser).
