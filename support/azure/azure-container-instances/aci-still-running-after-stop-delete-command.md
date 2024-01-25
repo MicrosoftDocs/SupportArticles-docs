@@ -1,7 +1,7 @@
 ---
 title: Container instance continues to run after the stop or delete command
 description: Provides a solution to an issue where an Azure container instance continues to run even after being stopped or deleted.
-ms.date: 01/22/2024
+ms.date: 01/25/2024
 ms.reviewer: tysonfreeman, v-weizhu
 ms.service: container-instances
 ---

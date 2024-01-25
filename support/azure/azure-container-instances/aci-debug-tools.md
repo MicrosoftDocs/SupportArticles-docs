@@ -1,7 +1,7 @@
 ---
 title: Azure Container Instances debugging tools
 description: Learn about debugging tools on Azure Container Instances.
-ms.date: 01/24/2024
+ms.date: 01/25/2024
 ms.reviewer: tysonfms, v-weizhu
 ms.service: container-instances
 ---
