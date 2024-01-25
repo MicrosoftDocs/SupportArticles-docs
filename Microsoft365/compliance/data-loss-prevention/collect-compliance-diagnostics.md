@@ -137,7 +137,7 @@ Follow these steps:
 
 2. Use the template fields to provide information about your issue. For example, you could add a sample file, a trace file, and an email alert message, as shown in the following screenshot.
 
-   :::image type="content" source="media/collect-compliance-diagnostics/tool-template.png" border="true" alt-text="Screenshot of the classification support data template in the tool UI." :::
+   :::image type="content" source="media/collect-compliance-diagnostics/tool-template.png" border="true" alt-text="Screenshot of the classification support data template in the tool UI." lightbox="./media/collect-compliance-diagnostics/tool-template.png":::
 
 3. Select **Export Support Data**.
 
@@ -164,7 +164,7 @@ Follow these steps:
 
    For example, you might see the following data objects in the command output.
 
-   :::image type="content" source="media/collect-compliance-diagnostics/data-objects-example.png" border="false" alt-text="Screenshot of an example data objects list." :::
+   :::image type="content" source="media/collect-compliance-diagnostics/data-objects-example.png" border="false" alt-text="Screenshot of an example data objects list." lightbox="./media/collect-compliance-diagnostics/data-objects-example.png":::
 
 3. Get detailed diagnostic information by querying the data objects. For example, to list the publishers of the [DLP SIT rule packages](/powershell/module/exchange/get-dlpsensitiveinformationtyperulepackage), run the following command:
 
@@ -174,6 +174,6 @@ Follow these steps:
 
    You might see the following rule package publishers in the command output.
 
-   :::image type="content" source="media/collect-compliance-diagnostics/data-object-detail-example.png" border="false" alt-text="Screenshot of example data object details." :::
+   :::image type="content" source="media/collect-compliance-diagnostics/data-object-detail-example.png" border="false" alt-text="Screenshot of example data object details." lightbox="./media/collect-compliance-diagnostics/data-object-detail-example.png":::
 
 After you finish the diagnostic data review, send the .zip file to Microsoft Support to investigate your issue.
