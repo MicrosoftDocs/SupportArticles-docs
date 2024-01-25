@@ -1,6 +1,6 @@
 ---
 title: Collect Microsoft Purview compliance diagnostics
-description: Discusses how to collect diagnostic data for issues in Microsoft Purview Information Protection and Microsoft Purview Data Loss Prevention by using the ComplianceDiagnostics tool.
+description: Discusses how to collect diagnostic data for issues in MIP and DLP by using the ComplianceDiagnostics tool.
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
