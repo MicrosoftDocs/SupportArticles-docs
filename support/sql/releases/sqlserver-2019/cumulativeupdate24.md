@@ -24,6 +24,7 @@ This article describes Cumulative Update package 24 (CU24) for Microsoft SQL Ser
 ## Known issues in this update
 
 ### Access violation when session is reset
+
 SQL Server 2019 CU14 introduced a [fix to address wrong results in parallel plans returned by the built-in SESSION_CONTEXT](https://support.microsoft.com/help/5008114). However, this fix might create access violation dump files when the SESSION is reset for reuse. To mitigate this issue and avoid incorrect results, you can disable the original fix, and also disable the parallelism for the built-in `SESSION_CONTEXT`. To do this, use the following trace flags:
 
 - 11042 - This trace flag disables the parallelism for the built-in `SESSION_CONTEXT`.
@@ -33,7 +34,8 @@ SQL Server 2019 CU14 introduced a [fix to address wrong results in parallel plan
 Microsoft is working on a fix for this issue and it will be available in a future CU.
 
 ### Read-scale availability group not displayed in dm_hadr_database_replica_cluster_states
-SQL Server 2019 CU24 introduced fix 2714260 which causes an issue with sys.dm_hadr_database_replica_cluster_states for read-scale availability groups that results in the Availability Databases Folder in SQL Server Management Studio (SSMS) to not show the databases in the AG. To mitigate this issue, roll back the patch to CU23.
+
+SQL Server 2019 CU24 introduced [fix 2714260](#2714260), which causes an issue with `sys.dm_hadr_database_replica_cluster_states` for read-scale availability groups that results in the **Availability Databases** folder in SQL Server Management Studio (SSMS) not showing the databases in the AG. To mitigate this issue, roll back the patch to CU23.
 
 Microsoft is working on a fix for this issue and it will be available in a future CU.
 
