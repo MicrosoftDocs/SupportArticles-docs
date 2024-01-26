@@ -41,7 +41,7 @@ ALTER EVENT SESSION [CreateDumpOnLCKMSCHM] ON SERVER
 STATE = STOP
 ```
 
-When you enable common criteria compliance, Residual Information Protection (RIP) is enabled. RIP is an additional security measure for memory. It requires a memory allocation to be overwritten with a known pattern of bits before memory is reallocated to a new resource. So, with lots of logins and logouts, there's a performance degradation in memory because overwriting the memory allocation has to be done.
+When you enable common criteria compliance, a security measure called Residual Information Protection (RIP) is also enabled. RIP requires a memory allocation to be overwritten with a known pattern of bits before memory is reallocated to a new resource. So, with lots of logins and logouts, there's a performance degradation in memory because overwriting the memory allocation has to be done.
 
 ## Workaround
 
