@@ -48,6 +48,8 @@ To resolve this issue, you must unblock the Salesforce connector in the DLP poli
 1. In the **Prebuilt connectors** step, move the **Salesforce** connector to either **Business** or **Non-business**.
 1. Go through the rest of the steps, and then select **Update policy**.
 
+For more information, see [Manage data loss prevention (DLP) policies](/power-platform/admin/prevent-data-loss).
+
 ## More information
 
 If your issue is still unresolved, go to the [Copilot for Sales - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
