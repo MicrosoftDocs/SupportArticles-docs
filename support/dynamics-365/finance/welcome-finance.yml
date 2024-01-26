@@ -32,16 +32,12 @@ landingContent:
             url: business-performance-analytics/decimal-auto-rounding-err00012.md
           - text: Decimal limit exceeded error  
             url: business-performance-analytics/decimal-limit-exceed-err00011.md
-          - text: Entity dataframe counts differ between prejoin and postjoin 
-            url: business-performance-analytics/entity-dataframe-counts-err00009.md
           - text: Missing fiscal calendar for general ledger 
             url: business-performance-analytics/missing-fiscal-calendar-for-general-ledger-err00001.md
           - text: Missing fiscal calendar for budget
             url: business-performance-analytics/missing-fiscal-calendar-for-budget-err00002.md
           - text: Missing main account in budget
             url: business-performance-analytics/missing-main-account-in-budget-err00003.md
-          - text: Missing main account in general ledger 
-            url: business-performance-analytics/missing-main-account-in-gl-err00010.md
           - text: Missing journal entries
             url: business-performance-analytics/missing-journal-entries-err00004.md
           - text: Mismatch between debits and credits
@@ -50,8 +46,6 @@ landingContent:
             url: business-performance-analytics/missing-budget-data-err00006.md
           - text: Missing budget transaction header
             url: business-performance-analytics/missing-budget-transaction-header-err00007.md
-          - text: Missing foreign key reference 
-            url: business-performance-analytics/missing-foreign-key-err0008.md
             
 # Card
   - title: Budgeting

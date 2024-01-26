@@ -15,7 +15,7 @@ audience: Application User
 
 ## Symptoms
 
-Error code *ERR00011* is logged in the **Bpa self help logs** table in Microsoft Dataverse. This issue occurs when the entries in certain decimal data type columns in dimensional model are outside the maximum (922337203685477.5807) and minimum (-922337203685477.5807) value supported by decimal(19, 4). This is the decimal precision, scale required by Power BI. For more information, see [Data types used in tabular models](/analysis-services/tabular-models/data-types-supported-ssas-tabular?view=asallproducts-allversions#bkmk_data_types).
+Error code *ERR00011* is logged in the **Bpa self help logs** table in Microsoft Dataverse. This issue occurs when the entries in certain decimal data type columns in dimensional model are outside the maximum (922337203685477.5807) and minimum (-922337203685477.5807) value supported by decimal(19, 4). This is the decimal precision, scale required by Power BI. For more information, see [Data types used in tabular models](/analysis-services/tabular-models/data-types-supported-ssas-tabular).
 
 ## Resolution
 
