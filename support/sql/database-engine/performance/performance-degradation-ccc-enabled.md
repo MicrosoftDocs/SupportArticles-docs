@@ -3,13 +3,13 @@ title: Performance degradation with common criteria compliance enabled
 description: Works around an issue where a performance degradation occurs when common criteria compliance is enabled in SQL Server.
 ms.date: 01/24/2024
 ms.custom: sap:Performance
-ms.reviewer: prmadhes, v-sidong
+ms.reviewer: prmadhes, jopilov, v-sidong
 ---
 # Performance degradation in SQL Server with common criteria compliance enabled
 
 ## Symptoms
 
-When you have the common criteria compliance configuration option enabled on SQL Server, you might notice a degradation in SQL Server performance.
+When you have the common criteria compliance configuration option enabled in SQL Server, you might notice a degradation in SQL Server performance.
 
 ## Common criteria compliance
 
