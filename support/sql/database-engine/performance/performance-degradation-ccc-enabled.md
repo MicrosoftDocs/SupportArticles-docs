@@ -1,17 +1,15 @@
 ---
-title: Performance degradation when migrating SQL Server
-description: Works around an issue when you migrate from SQL Server 2016 on Windows Server 2016 to SQL Server 2022 on Windows Server 2022 with common criteria compliance enabled.
+title: Performance degradation with common criteria compliance enabled
+description: Works around an issue where a performance degradation occurs when common criteria compliance is enabled in SQL Server.
 ms.date: 01/24/2024
 ms.custom: sap:Performance
 ms.reviewer: prmadhes, v-sidong
 ---
-# Performance degradation when migrating SQL Server
+# Performance degradation in SQL Server with common criteria compliance enabled
 
-When migrating from SQL Server 2016 on Windows Server 2016 to SQL Server 2022 on Windows Server 2022, you notice a degradation in SQL Server performance.
+## Symptoms
 
-## Cause
-
-If all configurations match the previous version of SQL Server, one possible reason for this issue is a common criteria compliance audit.
+When you have the common criteria compliance configuration option enabled on SQL Server, you might notice a degradation in SQL Server performance.
 
 ## Common criteria compliance
 
@@ -44,9 +42,6 @@ STATE = STOP
 ```
 
 When you enable common criteria compliance, Residual Information Protection (RIP) is enabled. RIP is an additional security measure for memory. It requires a memory allocation to be overwritten with a known pattern of bits before memory is reallocated to a new resource. So, with lots of logins and logouts, there's a performance degradation in memory because overwriting the memory allocation has to be done.
-
-> [!NOTE]
-> Keep in mind if you enable common criteria compliance, you can run into slowdowns from locking and memory. Make sure that your server can handle this well and that applications are designed to minimize the impact of high logins and logouts.
 
 ## Workaround
 
