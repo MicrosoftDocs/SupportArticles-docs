@@ -33,7 +33,7 @@ SQL Server 2019 CU14 introduced a [fix to address wrong results in parallel plan
 Microsoft is working on a fix for this issue and it will be available in a future CU.
 
 ### Read-scale availability group not displayed in dm_hadr_database_replica_cluster_states
-SQL Server 2019 CU24 introduced fix <a id=2714260>[2714260](#2714260) which causes an issue with sys.dm_hadr_database_replica_cluster_states for read-scale availability groups that results in the Availability Databases Folder in SQL Server Management Studio (SSMS) to not show the databases in the AG. To mitigate this issue, roll back the patch to CU23.
+SQL Server 2019 CU24 introduced fix 2714260 which causes an issue with sys.dm_hadr_database_replica_cluster_states for read-scale availability groups that results in the Availability Databases Folder in SQL Server Management Studio (SSMS) to not show the databases in the AG. To mitigate this issue, roll back the patch to CU23.
 
 Microsoft is working on a fix for this issue and it will be available in a future CU.
 
