@@ -9,7 +9,7 @@ metadata:
   ms.topic: landing-page # Required
   author: genlin  #Required; your GitHub user alias, with correct capitalization.
   ms.author: genli #Required; microsoft alias of author; optional team alias.
-  ms.date: 12/28/2023
+  ms.date: 01/26/2024
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -27,6 +27,8 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
+          - text: Container group deployment remains in Waiting state
+            url: container-group-deployment-waiting-state.md
           - text: Inaccessible image failure
             url: inaccessible-image.md
           - text: Error - Web socket is closed or could not be opened
