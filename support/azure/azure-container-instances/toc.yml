@@ -11,6 +11,8 @@ items:
   href: aci-still-running-after-stop-delete-command.md
 - name: Fails to pull ACR images by using Managed Identity authentication
   href: acr-image-pull-failures-managed-identity.md
+- name: Can't do operations or the container group is in a bad state
+  href: cannot-do-container-group-operations.md
 
 - name: Troubleshoot create operations
   items:
