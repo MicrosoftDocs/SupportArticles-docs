@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, ptomas, jsimmons, lindakup, arrenc, rizhang, clfish, herbertm, ruudv
 ms.custom: sap:legacy-authentication-ntlm, csstroubleshoot
-ms.technology: windows-server-security
+ms.subservice: windows-security
 ---
 # Windows updates add new NTLM pass-through authentication protections for CVE-2022-21857
 

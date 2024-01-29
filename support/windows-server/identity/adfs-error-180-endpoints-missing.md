@@ -6,11 +6,11 @@ author: Deland-Han
 ms.author: delhan
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: Brad.Held
 ms.custom: sap:active-directory-federation-services-ad-fs, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # Event ID 180 is logged and AD FS endpoints are missing in Windows Server 2016
 

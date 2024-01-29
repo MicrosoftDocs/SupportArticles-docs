@@ -3,8 +3,8 @@ title: Read and display binary data by using ServerXMLHTTP
 description: This article describes how to read and display binary data in ASP using ServerXMLHTTP.
 ms.date: 09/24/2020
 ms.custom: sap:Active Server Pages
-ms.prod: iis
-ms.technology: iis-active-server-pages
+ms.service: iis
+ms.subservice: active-server-pages
 ---
 # Read and display binary data in ASP using ServerXMLHTTP
 

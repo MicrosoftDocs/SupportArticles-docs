@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, grcusanz, anpaul, v-lianna
 ms.custom: sap:sdn, csstroubleshoot
-ms.technology: windows-server-sdn
+ms.subservice: sdn
 ms.assetid: 9be83ed2-9e62-49e8-88e7-f52d3449aac5
 ---
 # Troubleshoot the Windows Server software defined networking stack
