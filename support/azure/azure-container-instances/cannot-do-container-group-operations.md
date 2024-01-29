@@ -20,7 +20,7 @@ You encounter one or more of the following problems:
 
 - You tried to delete a container group, but it resulted in an internal server error.
 
-- You tried to run the [az container show](/cli/azure/container#az-container-show) command in [Azure CLI](/cli/azure/install-azure-cli), but it failed because of an internal server error.
+- You tried to run the [az container show](/cli/azure/container#az-container-show) command in [Azure CLI](/cli/azure/install-azure-cli), but the command failed because of an internal server error.
 
 - In the [Azure portal](https://portal.azure.com), you can view the container group resource, but you're unable to do any operations on it.
 
@@ -28,9 +28,9 @@ You encounter one or more of the following problems:
 
 ## Cause
 
-The managed identity of the container group was deleted before an attempt to delete the associated container group. This scenario can occur if you tried to do this order of deletions manually. It can also occur if you have a regularly scheduled script (such as a nightly script run) that deletes all the resources within their development resource groups that include all managed identities and container groups. The script didn't delete the resource in the correct order, so it deleted the managed identity needed to authenticate the container group before it tried to delete the container group itself.
+The managed identity of the container group was deleted before an attempt to delete the associated container group. This scenario can occur if you tried to do this order of deletions manually. It can also occur if you have a regularly scheduled script (such as a nightly script run) that deletes all the resources within a development resource group, including all managed identities and container groups. The script didn't delete the resource in the correct order, as it deleted the managed identity needed to authenticate the container group before it tried to delete the container group itself.
 
-## Solution 1: Delete the container group before deleting the managed identity
+## Solution 1: Delete the container group before you delete the managed identity
 
 Make sure that you delete the container group first, and wait for the deletion operation to finish before you delete the managed identity.
 
