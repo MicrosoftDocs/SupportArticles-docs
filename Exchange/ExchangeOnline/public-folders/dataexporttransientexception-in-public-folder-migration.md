@@ -115,7 +115,7 @@ To fix the issue, follow these steps:
 6. Complete the batch migration. Run the following cmdlet in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
    > [!NOTE]
-   > Make sure that the migration batch status displays as **Synced** before you complete the batch migration.
+   > Make sure that the batch migration status displays as **Synced** before you complete the batch migration.
 
    ```powershell
    Complete-MigrationBatch -Identity <batch name>
