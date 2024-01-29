@@ -119,5 +119,5 @@ Restart the Android device remotely from the Microsoft Teams admin center and th
 If you still can't sign in to the device, reset the device to its factory settings.
 
 1. Perform a factory reset from the OEM device settings or by using the key combination that's specific to the OEM model.
-2. After factory resetting the device, delete the device object in Azure AD, Intune and Teams Admin Center.  This will allow fresh objects to be created when you signin.
+2. Delete the device object in Microsoft Entra ID, Microsoft Intune and the Microsoft Teams admin center. This will enable fresh objects to be created when you sign in.
 3. Use option 1, 2 or 3 to sign in to the device.
