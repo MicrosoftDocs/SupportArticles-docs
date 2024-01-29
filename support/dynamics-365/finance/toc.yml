@@ -9,9 +9,9 @@
       items:
         - name: Business performance analytics self-help
           href: business-performance-analytics/business-performance-analytics-self-help-overview.md
-        - name: Decimal auto rounding error ERR00012
+        - name: Decimal auto rounding ERR00012
           href: business-performance-analytics/decimal-auto-rounding-err00012.md
-        - name: Decimal limit exceeded error ERR00011 
+        - name: Decimal limit exceeded ERR00011 
           href: business-performance-analytics/decimal-limit-exceed-err00011.md
         - name: Entity dataframe counts differ between prejoin and postjoin ERR00009
           href: business-performance-analytics/entity-dataframe-counts-err00009.md

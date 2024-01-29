@@ -4,18 +4,18 @@ description: Provides information about the Decimal limit exceeded error (error 
 author: jinniew
 ms.author: jiwo
 ms.reviewer: twheeloc 
-ms.date: 01/26/2024
+ms.date: 01/29/2024
 ms.search.form: business-performance-analytics
 audience: Application User
 ---
-# Decimal limit exceeded error: Error code: ERR00011 [Type: Warning]
+# Decimal limit exceeded: Error code: ERR00011 [Type: Warning]
 
 > [!NOTE]
 > The functionality that's described in this article is available as part of a preview release. The functionality and the content of this article are subject to change. For more information about how to participate in the public preview for [business performance analytics](/dynamics365/finance/business-performance-analytics/business-performance-analytics-home-page), contact <bpaquestions@service.microsoft.com>.
 
 ## Symptoms
 
-Error code *ERR00011* is logged in the **Bpa self help logs** table in Microsoft Dataverse. This issue occurs when the entries in certain decimal data type columns in dimensional model are outside the maximum (922337203685477.5807) and minimum (-922337203685477.5807) value supported by decimal(19, 4). This is the decimal precision, scale required by Power BI. For more information, see [Data types used in tabular models](/analysis-services/tabular-models/data-types-supported-ssas-tabular).
+Error code *ERR00011* is logged in the **Bpa self help logs** table in Microsoft Dataverse. This issue occurs when the entries in certain decimal data type columns in the dimensional model exceed the maximum (922337203685477.5807) and minimum (-922337203685477.5807) values supported by decimal (19, 4). This is the decimal precision and scale required by Power BI. For more information, see [Data types used in tabular models](/analysis-services/tabular-models/data-types-supported-ssas-tabular).
 
 ## Resolution
 

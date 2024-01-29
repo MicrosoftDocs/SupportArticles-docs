@@ -4,7 +4,7 @@ description: Provides information about business performance analytics self-help
 author: jinniew
 ms.author: jiwo
 ms.reviewer: twheeloc 
-ms.date: 12/07/2023
+ms.date: 01/29/2024
 ms.custom:
 ms.search.form: business-performance-analytics
 audience: Application User
@@ -49,6 +49,11 @@ For information about specific errors or warnings, see the following articles:
 - [Mismatch between debits and credits: Error code: ERR00005 [Type: Warning]](mismatch-between-debits-and-credits-err00005.md)
 - [Missing budget data: Error code: ERR00006 [Type: Warning]](missing-budget-data-err00006.md)
 - [Missing budget transaction header: Error code: ERR00007 [Type: Warning]](missing-budget-transaction-header-err00007.md)
+- [Missing foreign key reference: Error code: ERR00008 [Type: Warning]](missing-foreign-key-err0008.md)
+- [Entity dataframe counts differ between prejoin and postjoin: Error code: ERR00009 [Type: Warning]](entity-dataframe-counts-err00009.md)
+- [Missing main account in general ledger: Error code: ERR00010 [Type: Warning]](missing-main-account-in-gl-err00010.md)
+- [Decimal limit exceeded: Error code: ERR00011 [Type: Warning]](decimal-limit-exceed-err00011.md)
+- [Decimal auto rounding: Error code: ERR00012 [Type: Warning]](decimal-auto-rounding-err00012.md)
 
 ## See also
 
