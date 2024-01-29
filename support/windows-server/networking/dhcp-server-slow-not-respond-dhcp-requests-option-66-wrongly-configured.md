@@ -5,11 +5,11 @@ ms.date: 02/01/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, rnitsch, markusr, v-lianna
 ms.custom: sap:dynamic-host-configuration-protocol-dhcp, csstroubleshoot
-ms.technology: networking
+ms.subservice: networking
 ---
 # DHCP Server is slow or fails to respond to DHCP requests if option 66 Bootp Server Host Name is wrongly configured
 

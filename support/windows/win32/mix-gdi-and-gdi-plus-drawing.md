@@ -5,7 +5,7 @@ ms.date: 03/10/2020
 ms.custom: sap:Graphics and multimedia development
 ms.reviewer: V-JEFFBO, jhornick
 ms.topic: article
-ms.technology: windows-dev-apps-graphics-multimedia-dev
+ms.subservice: graphics-multimedia-dev
 ---
 # Interoperability between GDI and GDI+
 

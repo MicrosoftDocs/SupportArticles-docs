@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, willfid, AAdcontent, rkiran
 ms.custom: sap:active-directory-federation-services-ad-fs, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # "Workplace Join discovery failed" error with exit code 0x80072EE7
 

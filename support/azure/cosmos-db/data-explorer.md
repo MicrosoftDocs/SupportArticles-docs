@@ -1,25 +1,21 @@
 ---
 title: Azure Cosmos DB Data Explorer fails to connect
-description: Troubleshoot scenarios when the Azure Cosmos DB data explorer can't connect to an account and perform specific data-plane or control-plane operations.
-author: seesharprun
-editor: v-jsitser
-ms.author: sidandrews
-ms.reviewer: ouryba, v-jayaramanp
+description: Troubleshoots scenarios when the Azure Cosmos DB Data Explorer can't connect to an account and perform specific data plane or control plane operations.
+ms.reviewer: randolphwest, sidandrews, v-sidong
 ms.service: cosmos-db
-ms.topic: troubleshooting-problem-resolution
-ms.date: 01/18/2024
+ms.date: 01/23/2024
 ---
 
 # Azure Cosmos DB Data Explorer fails to connect
 
-There are occasional situations where the Azure Cosmos DB Data Explorer can't connect to your account or perform operations against resources or items. This article reviews potential causes and solutions for this issue.
+Occasionally, the Azure Cosmos DB Data Explorer can't connect to your account or perform operations against resources or items. This article reviews potential causes and solutions to this issue.
 
 > [!IMPORTANT]
-> The Azure Cosmos DB Data Explorer is not available for the API for PostgreSQL or the API for  vCore.
+> The Azure Cosmos DB Data Explorer isn't available for the API for PostgreSQL or the API for vCore.
 
 ## Prerequisites
 
-- An existing Azure Cosmos DB for NoSQL, MongoDB, Apache Cassandra, Apache Gremlin, or Table account.
+An existing Azure Cosmos DB for NoSQL, MongoDB, Apache Cassandra, Apache Gremlin, or Table account
 
 ## Symptoms
 
@@ -27,45 +23,45 @@ You're unable to connect to the Data Explorer even after enabling the **Allow ac
 
 ## Cause
 
-Even after you configure the right role-based access control and portal permissions, there's extra network access requirements that must be configured based on your selected API.
+Even after you configure the correct role-based access control and portal permissions, there are extra network access requirements that must be configured based on your selected API.
 
-- Some services, such as the **API for NoSQL**, **API for Apache Gremlin**, and **API for Table** use a client-side JavaScript SDK to perform operations and requires one set of solutions.
+- Some services, such as the API for NoSQL, API for Apache Gremlin, and API for Table, use a client-side JavaScript SDK to perform operations and require one set of solutions.
 
-- Other services, such as the **API for MongoDB** and **API for Apache Cassandra** use protocol-specific middleware and require an alternative solution.
+- Other services, such as the API for MongoDB and API for Apache Cassandra, use protocol-specific middleware and require an alternative solution.
 
 ## Solution for the API for NoSQL, Apache Gremlin, or Table
 
-Database and container/graph/table (control plane) operations are executed via calls to the Azure Resource Manager control plane using the Azure Cosmos DB resource provider. Your network configuration doesn't have an effect on these operations.
+Database, container, graph, and table (control plane) operations are executed via calls to the Azure Resource Manager control plane using the Azure Cosmos DB resource provider. Your network configuration doesn't affect these operations.
 
-Item (data plane) operations are executed using the JavaScript SDK within the context of your browser. The device you're currently using is required to have direct network access to the account.
+Item (data plane) operations are executed using the JavaScript SDK within the context of your browser. The device you're currently using must have direct network access to the account.
 
 - For accounts configured with **public access (all networks)**, data plane operations shouldn't have any network-related connectivity issues.
 
-- For accounts configured with **public access (selected networks)**, you must create a firewall rule to allow access from your current device to the account. The **Networking** feature in the service's page on the Azure portal has an **Add my current IP (...)** hyperlink that can automatically add your IP address.
+- For accounts configured with **public access (selected networks)**, you must create a firewall rule to allow access to the account from your current device. The **Networking** feature in the service's page in the Azure portal has an **Add my current IP (...)** hyperlink that can automatically add your IP address.
 
-- If the account doesn't have a firewall rule, then the Data Explorer throws an error that can be observed in the notifications for Data Explorer. This error message contains text similar to these examples:
+- If the account doesn't have a firewall rule, the Data Explorer throws an error that can be observed in the notifications for Data Explorer. This error message contains text similar to the following examples:
 
     | API | Error |
     | --- | --- |
-    | **NoSQL** | `Request originated from IP XXX.XXX.XXX.XXX thorugh public internet. This is blocked by your Cosmos DB account firewall settings.` |
-    | **Apache Gremlin** | `Failure in submitting query: g.V(): Request originated from IP XXX.XXX.XXX.XXX thorugh public internet. This is blocked by your Cosmos DB account firewall settings.` |
-    | **Table** | `Error while refreshing databases: Request originated from IP XXX.XXX.XXX.XXX thorugh public internet. This is blocked by your Cosmos DB account firewall settings.` |
+    | **NoSQL** | `Request originated from IP XXX.XXX.XXX.XXX through public internet. This is blocked by your Cosmos DB account firewall settings.` |
+    | **Apache Gremlin** | `Failure in submitting query: g.V(): Request originated from IP XXX.XXX.XXX.XXX through public internet. This is blocked by your Cosmos DB account firewall settings.` |
+    | **Table** | `Error while refreshing databases: Request originated from IP XXX.XXX.XXX.XXX through public internet. This is blocked by your Cosmos DB account firewall settings.` |
 
 - For accounts configured with **public access disabled**, your device must be connected to a virtual network with connectivity to the account for data plane operations to function.
 
 ## Solution for the API for MongoDB or Apache Cassandra
 
-Review solutions for the **control** and **data plane** respectively.
+Review the control plane and data plane solutions, respectively.
 
-Database/keyspace/collection (control plane) operations are executed via calls to the Azure Resource Manager control plane using the Azure Cosmos DB resource provider. Your network configuration doesn't have an effect on these operations.
+Database, keyspace, and collection (control plane) operations are executed via calls to the Azure Resource Manager control plane using the Azure Cosmos DB resource provider. Your network configuration doesn't affect these operations.
 
-Item (data plane) operations are executed using a proxy service in the API's middleware. This service facilitates the use of the service-native (MongoDB, Cassandra) protocol in item operations and queries. The proxy service is required to have direct network access to the account.
+Item (data plane) operations are executed using a proxy service in the API's middleware. This service facilitates the use of the service-native (MongoDB, Cassandra) protocol in item operations and queries. The proxy service requires direct network access to the account.
 
 - For accounts configured with **public access (all networks)**, data plane operations shouldn't have any network-related connectivity issues.
 
-- For accounts configured with **public access (selected networks)**, you must select **Allow Access from Azure Portal** in the **Networking** feature of the service's page in the Azure portal. This option adds a range of IP addresses that includes the middleware services. You do **NOT** have to add the IP address of your current device.
+- For accounts configured with **public access (selected networks)**, you must select **Allow Access from Azure Portal** in the **Networking** feature of the service's page in the Azure portal. This option adds a range of IP addresses that include the middleware service. You *don't* have to add the IP address of your current device.
 
-- If the account doesn't have a firewall rule, then the Data Explorer throws an error that can be observed in the browser development tools. This error message contains a generic `Error querying documents` or `Failed to establish conenction with cassandra node` message generated by the middleware service. The expanded error message is included in the Compute gateway logs as is similar to this example:
+- If the account doesn't have a firewall rule, the Data Explorer throws an error that can be observed in the browser developer tools. This error message contains a generic `Error querying documents` or `Failed to establish connection with cassandra node` message generated by the middleware service. The expanded error message is included in the Compute gateway logs, similar to the following example:
 
     ```output
     Request originated from IP XXX.XXX.XXX.XXX through public internet. This is blocked by your Cosmos DB account firewall settings. 

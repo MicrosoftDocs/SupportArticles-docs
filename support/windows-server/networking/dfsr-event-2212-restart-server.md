@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:dfsr, csstroubleshoot
-ms.technology: networking
+ms.subservice: networking
 ---
 # You receive DFSR event ID 2212 after you restart the DFSR service in Windows Server 2008
 
