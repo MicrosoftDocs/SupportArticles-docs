@@ -1,5 +1,5 @@
 ---
-title: Troubleshooting the corrupt user profile 
+title: Troubleshooting the Windows user profile issue 
 description: This article provides symptoms, cause, and resolution for the Windows user profile being corrupted.
 ms.date: 01/29/2024
 author: Malcolm-Stewart
