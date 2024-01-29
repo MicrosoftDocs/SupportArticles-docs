@@ -66,6 +66,17 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "support/power-platform/power-automate/cannot-sign-in-to-onedrive-connector-when-using-office-365-account-during-flow-creation.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/authentication-or-sign-in/cannot-sign-in-to-onedrive-connector-when-using-office-365-account-during-flow-creation",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/troubleshoot-ui-flow-invalid-credentials-error-using-aad-account.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/authentication-or-sign-in/troubleshoot-ui-flow-invalid-credentials-error-using-aad-account",
+      "redirect_document_id": true
+    },
+
+    {
       "source_path": "support/power-platform/power-automate/check-if-gateway-is-the-right-region.md",
       "redirect_url": "/troubleshoot/power-platform/power-automate/connections/check-if-gateway-is-the-right-region",
       "redirect_document_id": true
@@ -86,13 +97,13 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "support/power-platform/power-automate/power-automate/unable-send-smtp-email.md",
-      "redirect_url": "/troubleshoot/power-platform/power-automate/connections/power-automate/unable-send-smtp-email",
+      "source_path": "support/power-platform/power-automate/unable-send-smtp-email.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/connections/unable-send-smtp-email",
       "redirect_document_id": true
     },
     {
-      "source_path": "support/power-platform/power-automate/power-automate/user-does-not-have-a-service-plan-error.md",
-      "redirect_url": "/troubleshoot/power-platform/power-automate/connections/power-automate/user-does-not-have-a-service-plan-error",
+      "source_path": "support/power-platform/power-automate/user-does-not-have-a-service-plan-error.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/connections/user-does-not-have-a-service-plan-error",
       "redirect_document_id": true
     },
     {
