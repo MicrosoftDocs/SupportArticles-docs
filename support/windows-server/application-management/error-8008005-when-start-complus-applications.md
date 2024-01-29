@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:com+-administration-configuration-and-security, csstroubleshoot
-ms.technology: windows-server-application-compatibility
+ms.subservice: application-compatibility
 ---
 # Error when you start many COM+ applications: Error code 80080005 -- server execution failed
 

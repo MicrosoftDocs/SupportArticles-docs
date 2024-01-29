@@ -1,17 +1,17 @@
 ---
 title: Copy-and-paste operations don't work when you connect to a Hyper-V virtual machine by using VMConnect Enhanced Session Mode
 description: Describes an issue in which clipboard file copy redirection may not work as expected when you connect to a Hyper-V virtual machine by using VMConnect Enhanced Session Mode. Provides a resolution.
-ms.date: 09/24/2021
+ms.date: 01/23/2024
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
-ms.reviewer: kaushika, stevepar, eltons
+ms.reviewer: kaushika, stevepar, eltons, raviks
 ms.custom: sap:configuration-of-virtual-machine-settings, csstroubleshoot
-ms.technology: hyper-v
+ms.subservice: hyper-v
 ---
 # Copy-and-paste operations don't work when you connect to a Hyper-V virtual machine by using VMConnect Enhanced Session Mode
 
@@ -32,14 +32,14 @@ Enhanced Session Mode enables the transfer of files to and from virtual machines
 
 To successfully copy files to and from Hyper-V virtual machines when you use VMConnect through Enhanced Session Mode, make sure that you don't enable the following policy:
 
-- Policy path: Computer Configuration\\Policies\\Administrative Templates\\Windows Components\\Terminal Services\\Terminal Server\\Device and Resource Redirection
+- Policy path: *Computer Configuration\\Policies\\Administrative Templates\\Windows Components\\Remote Desktop Services\\Remote Desktop Session Host\\Device and Resource Redirection*
 
     > [!NOTE]
-    > If you use the Local Group Policy Editor, the Policies folder is not part of the node path.
+    > If you use the Local Group Policy Editor, the *Policies* folder isn't part of the node path.
 
-- Policy setting: Do not allow drive redirection
+- Policy setting: **Do not allow Clipboard redirection**
 
-    Set this policy to "Disabled" or "Not Configured" to allow file copy redirection in Remote Desktop Services and Hyper-V Enhanced Session Mode sessions.
+    Set this policy to **Disabled** or **Not configured** to allow file copy redirection in Remote Desktop Services and Hyper-V Enhanced Session Mode sessions.
 
 ## References
 

@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:virtual-switch-manager-vmswitch, csstroubleshoot
-ms.technology: hyper-v
+ms.subservice: hyper-v
 ---
 # You receive "Error applying virtual switch properties changes" error on a Windows Server 2019 (Build 17763)-based Hyper-V server
 

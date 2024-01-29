@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:configuration-of-virtual-machine-settings, csstroubleshoot
-ms.technology: hyper-v
+ms.subservice: hyper-v
 ---
 # "A connection will not be made because credentials may not be sent to the remote computer" when I use the Virtual Machine Connection tool to connect to a virtual machine on a Windows Server 2008 Hyper-V-based computer
 

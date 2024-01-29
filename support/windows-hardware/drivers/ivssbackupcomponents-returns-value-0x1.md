@@ -4,7 +4,7 @@ description: "This article describes an issue where the IVssBackupComponents::Qu
 ms.date: 01/04/2021
 ms.reviewer: chrit
 ms.topic: article
-ms.technology: windows-hardware-general
+ms.subservice: general
 ---
 # IVssBackupComponents::Query returns a value of 0x1 or S_FALSE
 

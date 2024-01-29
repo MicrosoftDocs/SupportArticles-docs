@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:management-and-configuration:-general-issues, csstroubleshoot
-ms.technology: windows-server-printing
+ms.subservice: printing
 ---
 # Consolidate print servers by using DNS alias (CNAME) records
 

@@ -3,7 +3,6 @@ title: WCF Service does not start automatically
 description: This article provides resolutions for the problem that occurs when the WCF service does not automatically start because of pending messages in the MSMQ queue.
 ms.date: 08/24/2020
 ms.reviewer: amymcel, davidqiu
-ms.technology: dotnet-wcf
 ---
 # WCF Service does not start automatically when messages are available through MSMQ
 

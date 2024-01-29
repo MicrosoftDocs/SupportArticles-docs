@@ -4,7 +4,7 @@ description: Provides a resolution for an issue where duplicate phone calls are 
 ms.date: 08/22/2023
 ms.reviewer: asaftzuk, ilanak
 author: t-ronioded
-ms.author: t-ronioded
+ms.author: ronihemed
 ---
 # Duplicate phone calls are created when you use Sales accelerator
 

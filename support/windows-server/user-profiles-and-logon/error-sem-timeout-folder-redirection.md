@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, tonnyp
 ms.custom: sap:folder-redirection, csstroubleshoot
-ms.technology: windows-server-user-profiles
+ms.subservice: user-profiles
 ---
 # Folder Redirection fails with the error ERROR_SEM_TIMEOUT or the semaphore timeout period has expired
 

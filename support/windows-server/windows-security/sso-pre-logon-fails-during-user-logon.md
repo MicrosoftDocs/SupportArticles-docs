@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, waynmc, tfairman
 ms.custom: sap:kerberos-authentication, csstroubleshoot
-ms.technology: windows-server-security
+ms.subservice: windows-security
 ---
 # SSO with pre-logon fails during user logon after a restart
 
