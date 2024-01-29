@@ -1,20 +1,24 @@
 ---
-title: Troubleshooting the corrupt user profile issue 
-description: This article provides symptoms and solution for the corrupt user profile issue.
-ms.date: 12/18/2023
+title: Troubleshooting the corrupt user profile 
+description: This article provides symptoms, cause, and resolution for the Windows user profile being corrupted.
+ms.date: 01/29/2024
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 
-# Corrupt user file error
+# Windows user profile can't be loaded
 
-This article helps you to resolve the corrupt user profile issue.
+This article helps you to resolve issues that might arise because of the Windows user profile being corrupted.
 
 ## Symptoms
 
-You might see the "Corrupt user profile" error message when the Windows user profile is corrupted.
+You might see the following error message:
+
+> The User Profile Service service failed the sign-in. User profile cannot be loaded.
+
+## Cause
 
 If you log in as the affected user, you'll get a [temporary profile](/windows/win32/shell/temporary-user-profiles). This is a good indication that the profile is corrupt or you're a guest user. If you're a guest user, then you must be added to the appropriate groups.
 
