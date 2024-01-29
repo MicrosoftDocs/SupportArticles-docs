@@ -23,7 +23,7 @@ This article describes Cumulative Update package 20 (CU20) for Microsoft SQL Ser
 
 ## Known issues in this update
 
-### Issue one: Access violation when session is reset
+### Issue one:
 
 SQL Server 2019 CU14 introduced a [fix to address wrong results in parallel plans returned by the built-in SESSION_CONTEXT](https://support.microsoft.com/help/5008114). However, this fix might create access violation dump files when the `SESSION` is reset for reuse. To mitigate this issue and avoid incorrect results, you can disable the original fix, and also disable the parallelism for the built-in `SESSION_CONTEXT`. To do this, use the following trace flags:
 
