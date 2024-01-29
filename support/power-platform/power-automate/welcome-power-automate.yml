@@ -9,7 +9,7 @@ metadata:
   ms.topic: landing-page # Required
   author: #Required; your GitHub user alias, with correct capitalization.
   ms.author: #Required; microsoft alias of author; optional team alias.
-  ms.date: 08/22/2023
+  ms.date: 01/29/2024
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -19,22 +19,18 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Customize or format Date and Time values in a flow
-            url: how-to-customize-or-format-date-and-time-values-in-flow.md
-          - text: Convert time zone in a flow
-            url: converting-time-zone-power-automate.md
+          - text: Microsoft Flow Extension Package shows Installation failed
+            url: administration/flow-extension-package-shows-installation-failed.md
+          - text: Recommendations for conditional access and multi-factor authentication
+            url: administration/conditional-access-and-multi-factor-authentication-in-flow.md
 
   # Card
-  - title: Cloud flows
+  - title: Flow run issues
     linkLists:
       - linkListType: how-to-guide
         links:
           - text: InvalidTemplate error due to null fields
-            url: getting-errors-null-fields.md
-          - text: Manage orphaned flows without valid owner
-            url: manage-orphan-flow-when-owner-leaves-org.md
-          - text: Troubleshoot common errors with creating and assigning flow approvals
-            url: common-errors-creating-and-assigning-flow-approvals.md
+            url: flow-run-issues/getting-errors-null-fields.md
             
   # Card
   - title: Documentation and training
