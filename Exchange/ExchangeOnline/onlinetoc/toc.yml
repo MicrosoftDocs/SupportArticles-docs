@@ -573,6 +573,8 @@
           href: ../public-folders/cannot-send-email-to-contact-list-public-folder.md
         - name: Can't send emails to mail-enabled public folder
           href: ../public-folders/send-emails-to-mail-enabled-public-folder-error.md
+        - name: DataExportTransientException migration error
+          href: ../public-folders/dataexporttransientexception-in-public-folder-migration.md
         - name: Duplicate PF mailbox migration requests
           href: ../public-folders/duplicate-public-folder-mailbox-migration-request.md
         - name: Emails with the "HierarchySync_" subject
