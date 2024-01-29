@@ -36,7 +36,7 @@ This error occurs if the input value(s) to the Assigned To field of the approval
 
 > The provided record id '...' is null or invalid
 
-The record identifier passed to "Wait for an approval" is null, empty, or not a guid (in the format xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx). This value should be populated with the approval id from **Create an Approval**.
+The record identifier passed to "Wait for an approval" is null, empty, or not a guid (in the format xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx). This value should be populated with the approval ID from **Create an Approval**.
 
 ### GraphUserDetailByEmailMultipleFound
 

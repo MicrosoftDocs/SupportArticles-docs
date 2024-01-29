@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 4527579
 
 ## Symptoms
 
-When you try to create a flow and add a trigger/action from the Outlook 365 connector, you may receive the following error message:
+When you try to create a flow and add a trigger/action from the Outlook 365 connector, you might receive the following error message:
 
 > "Failed to fetch"
 
@@ -23,7 +23,7 @@ When you try to create a flow and add a trigger/action from the Outlook 365 conn
 This error can be reached because:
 
 - Your environment hasn't been given permission to use the Outlook 365 connector.
-- IT may have blocked the connector on your network
+- IT might have blocked the connector on your network
 
 ## Resolution
 

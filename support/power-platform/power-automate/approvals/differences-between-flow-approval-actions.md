@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 4513676
 The primary difference s between using Start and Wait for an Approval and Create an Approval with the Wait for an approval action are:
 
 - Start and Wait for an Approval automates the full lifecycle of the Approval. It creates the records in CDS, send notifications, and then blocks the flow run until the Approval criteria is met or the action times out. The outputs of the action include the approvers, responses, comments, and so on. because the approval is guaranteed to be complete at the time that the next step runs in the Flow.
-- Create an Approval will create the records in CDS and send notifications, but will not block execution of the Flow. Responses, approvers, comments, and so on, are not available as outputs for use in other steps, because the approval is not guaranteed to be complete. Flow authors will need to use the Wait for an approval step to gather the responses, approvers, comments, and any other data gathered as part of the approval being approved or rejected.
+- Create an Approval will create the records in CDS and send notifications, but won't block execution of the Flow. Responses, approvers, comments, and so on, aren't available as outputs for use in other steps, because the approval isn't guaranteed to be complete. Flow authors will need to use the Wait for an approval step to gather the responses, approvers, comments, and any other data gathered as part of the approval being approved or rejected.
 
 | Description| Start and Wait for an approval | Create an Approval|
 |---|---|---|

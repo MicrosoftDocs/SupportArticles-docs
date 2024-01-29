@@ -1,6 +1,6 @@
 ---
 title: Issues triggering emails with attachments from shared mailbox
-description: Provides a resolution to solve the issues that may occur when a flow has When a new email arrives in a shared mailbox (V2) trigger.
+description: Provides a resolution to solve the issues that might occur when a flow has When a new email arrives in a shared mailbox (V2) trigger.
 ms.reviewer: jewelden
 ms.date: 03/31/2021
 ms.subservice: power-automate-flow-run
@@ -16,8 +16,8 @@ _Original KB number:_ &nbsp; 4563989
 
 In PowerAutomate, when a flow has **When a new email arrives in a shared mailbox (V2)** trigger, for example, you notice any of the following:
 
-- The flow is not triggering for all the emails that come into the mailbox.
-- The flow is not triggering for emails with attachments.
+- The flow isn't triggering for all the emails that come into the mailbox.
+- The flow isn't triggering for emails with attachments.
 - You get a 400 Bad Request or similar error in actions that use the trigger output attachment content bytes.
 
 ## Cause

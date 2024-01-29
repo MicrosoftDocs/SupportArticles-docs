@@ -13,7 +13,7 @@ This article helps fix common configuration problems that prevent Power Automate
 
 ## Symptoms
 
-When you access embedded instances of Power Automate, like within SharePoint, Power Apps, or through custom SDK integrations, you may receive a blank screen or have a screen that stays on the spinner.
+When you access embedded instances of Power Automate, like within SharePoint, Power Apps, or through custom SDK integrations, you might receive a blank screen or have a screen that stays on the spinner.
 
 ## Cause
 
@@ -21,7 +21,7 @@ These issues occur because third-party cookies are blocked in the web browser.
 
 ## Resolution
 
-Power Automate stores some data, such as user identity and preferences locally, leveraging your browser's capabilities. Problems occur if the browser blocks the storage of such local data or third-party cookies set by Power Automate.
+Power Automate stores some data, such as user identity and preferences locally, using your browser's capabilities. Problems occur if the browser blocks the storage of such local data or third-party cookies set by Power Automate.
 
 To solve the issues, go to the settings of the browser you're using, enable the third-party cookies, and make sure that the related sites aren't blocked for cookies.
 

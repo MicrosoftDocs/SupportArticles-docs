@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 4557620
 
 ## Symptoms
 
-When creating or saving flows or connections, or when navigating pages within the Power Automate product, you may see one of the following messages:
+When creating or saving flows or connections, or when navigating pages within the Power Automate product, you might see one of the following messages:
 
 - > "Failed to Fetch"
 - > "Client Request Aborted"
@@ -24,7 +24,7 @@ When creating or saving flows or connections, or when navigating pages within th
 
 ## Cause
 
-Companies may set firewalls or block their users from unknown domains or IP addresses.
+Companies might set firewalls or block their users from unknown domains or IP addresses.
 
 ## Resolution
 

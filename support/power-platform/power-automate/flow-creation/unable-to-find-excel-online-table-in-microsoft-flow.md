@@ -1,5 +1,5 @@
 ---
-title: Cannot find Excel Online table in Microsoft Flow
+title: Can't find Excel Online table in Microsoft Flow
 description: Provides a resolution for finding the Excel Online table in Microsoft Flow.
 ms.reviewer: mehgupta
 ms.date: 03/31/2021
@@ -14,17 +14,17 @@ _Original KB number:_ &nbsp; 4527553
 
 ## Symptoms
 
-When trying to access information in an Excel spreadsheet that is not formatted as a table, you may not be able to see a table present in the drop-down menu.
+When trying to access information in an Excel spreadsheet that isn't formatted as a table, you might not be able to see a table present in the drop-down menu.
 
 :::image type="content" source="media/unable-to-find-excel-online-table-in-microsoft-flow/no-table-in-dropdown.png" alt-text="Screenshot shows that the Excel table drop-down menu has no table." border="false":::
 
-Entering a custom value that does not exist or leaving the table input blank will produce an error that begins with **Error executing the api**.
+Entering a custom value that doesn't exist or leaving the table input blank will produce an error that begins with **Error executing the api**.
 
 ## Cause
 
-This error occurs because the data in the Excel spreadsheet is not formatted as a table.
+This error occurs because the data in the Excel spreadsheet isn't formatted as a table.
 
-:::image type="content" source="media/unable-to-find-excel-online-table-in-microsoft-flow/data-not-formatted-as-table.png" alt-text="Screenshot shows that the Excel data is not formatted as a table.":::
+:::image type="content" source="media/unable-to-find-excel-online-table-in-microsoft-flow/data-not-formatted-as-table.png" alt-text="Screenshot shows that the Excel data isn't formatted as a table.":::
 
 ## Resolution
 
@@ -41,7 +41,7 @@ To convert existing data into a table, follow these steps:
 2. Select **Home** > **Format as Table**.
 3. Select the type of table you want and select **Ok**.
 
-Headers will automatically be included in the table, which will default to Column1, Column2, and so on. They can be renamed by double-clicking and typing a new header name.
+Headers will automatically be included in the table, which will default to Column 1, Column 2, and so on. They can be renamed by double-clicking and typing a new header name.
 
 :::image type="content" source="media/unable-to-find-excel-online-table-in-microsoft-flow/data-formatted-as-table.png" alt-text="Screenshot shows the Excel data is formatted as a table.":::
 

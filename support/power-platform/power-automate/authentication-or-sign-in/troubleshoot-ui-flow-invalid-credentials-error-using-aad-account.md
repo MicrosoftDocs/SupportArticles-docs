@@ -2,7 +2,6 @@
 title: Troubleshoot UI flow invalid credentials error using Microsoft Entra account
 description: How to troubleshoot the errors of InvalidConnectionCredentials or WindowsIdentityIncorrect when running your UI flow.
 ms.reviewer: 
-ms.topic: troubleshooting
 ms.date: 03/31/2021
 ms.subservice: power-automate-authentication
 ---
@@ -23,11 +22,11 @@ A flow that ran using a Microsoft Entra account fails with the **InvalidConnecti
 
 ## Cause
 
-There are many reasons you may get this error when using a Microsoft Entra account:
+There are many reasons you might get this error when using a Microsoft Entra account:
 
-- The account credentials entered into the connection may not match those on the machine.
-- The device may not be Microsoft Entra joined (or Microsoft Entra hybrid joined) to support Microsoft Entra authentication.
-- The Microsoft Entra account may not be synchronized to the machine.
+- The account credentials entered into the connection might not match those on the machine.
+- The device might not be Microsoft Entra joined (or Microsoft Entra hybrid joined) to support Microsoft Entra authentication.
+- The Microsoft Entra account might not be synchronized to the machine.
 
 ## Resolution
 
@@ -41,7 +40,7 @@ First, ensure that the device is Microsoft Entra joined or domain-joined:
 
 Make sure that one of the `DomainJoined` or `AzureAdJoined` values is **YES**.
 
-If it is not the case, a Microsoft Entra account can't be used unless the device is joined, see the Microsoft documentation on [How to join a device](/azure/active-directory/user-help/user-help-join-device-on-network#to-join-an-already-configured-windows-10-device).
+If it isn't the case, a Microsoft Entra account can't be used unless the device is joined, see the Microsoft documentation on [How to join a device](/azure/active-directory/user-help/user-help-join-device-on-network#to-join-an-already-configured-windows-10-device).
 
 Second, identify the Microsoft Entra account to use in the machine configuration:
 

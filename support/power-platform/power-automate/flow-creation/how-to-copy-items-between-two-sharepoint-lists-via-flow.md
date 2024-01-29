@@ -1,6 +1,6 @@
 ---
 title: How to copy items between two SharePoint lists via Flow
-description: Describes the procedure to copy all the items of a SharePoint list in one site to to a second SharePoint site by building a flow.
+description: Describes the procedure to copy all the items of a SharePoint list in one site to a second SharePoint site by building a flow.
 ms.reviewer: 
 ms.topic: how-to
 ms.date: 03/31/2021
@@ -32,9 +32,9 @@ The first step is to set up your trigger on the source SharePoint list. Because 
 
 ### Find the item in the destination
 
-Search for the item in the destination list to get its ID and update it. Although Flow has a **Filter** action, you should not use that action in this scenario because that action downloads all list items from SharePoint. The process will be slow, will use up your quota, and will not work if the list has more than 256 items.
+Search for the item in the destination list to get its ID and update it. Although Flow has a **Filter** action, you shouldn't use that action in this scenario because that action downloads all list items from SharePoint. The process will be slow, will use up your quota, and won't work if the list has more than 256 items.
 
-Instead, you should use the **Filter Query** field on the **Get items** step in SharePoint. Add the **Get items** action, and then select **Show advanced options** to show all the fields. If you are matching the titles of the rows of the source list, type the following in the **Filter Query** field (make sure that you include the single quotation marks):
+Instead, you should use the **Filter Query** field on the **Get items** step in SharePoint. Add the **Get items** action, and then select **Show advanced options** to show all the fields. If you're matching the titles of the rows of the source list, type the following in the **Filter Query** field (make sure that you include the single quotation marks):
 
 Title eq '[*select the title from dynamic content*]'
 
@@ -69,13 +69,13 @@ Use a condition to determine the actual situation. To do this, follow these step
 
 ### Create the item
 
-In the **IF YES**  branch, you will add a SharePoint **Create item** step.
+In the **IF YES**  branch, you'll add a SharePoint **Create item** step.
 
-Select the site and list that you used in the *Get items* steps. In **Create item**, you should populate each column by using fields from the trigger only. You should not use any data from the *Get items* steps because that would be coming from the destination list, not the source list. *Get items* will appear above the trigger. Make sure that you scroll to the bottom to find it.
+Select the site and list that you used in the *Get items* steps. In **Create item**, you should populate each column by using fields from the trigger only. You shouldn't use any data from the *Get items* steps because that would be coming from the destination list, not the source list. *Get items* will appear above the trigger. Make sure that you scroll to the bottom to find it.
 
 ### Update the item
 
-In the **IF NO** branch, you will add a SharePoint **Update item** step.
+In the **IF NO** branch, you'll add a SharePoint **Update item** step.
 
 Select the site and list. Then, select the ID that's returned from the **Get items** steps.
 
@@ -91,6 +91,6 @@ The flow process enables changes that are made in the first list to be reflected
 
 The following limitations apply to the process:
 
-- If items are deleted from the first list, the items will not be deleted from the second list. This is because there is no trigger for **When an item is deleted**. In this case, there is no way for a flow to be notified when a deletion occurs. Instead, we recommend that you add a column to indicate that the item is no longer needed or relevant instead of deleting items from SharePoint lists (or SQL tables, or other data source). That column will sync between the two lists.
-- If changes are made to the field that you are using to keep items in sync between the two lists, a new item is created in the destination list. For example, if you use a person's **Name** column to copy between the two lists, and that person's **Name** column changes, the flow considers that change to be a new item, not an update to an existing item. If you can guarantee that the **Name** column will never change, you won't be affected by this limitation. However, if the **Name** column does change, you have to add to the destination list a column that stores the ID of the item in the first list. In this case, instead of using **Name** to find items, you can use **ID**. (The ID is guaranteed to always be unique).
-- This process is not a two-way sync. That means that if items are updated in the destination list, the changes will not be reflected in the source list. You should not try to set up two-way sync in the flow because that will create an infinite loop without additional modifications. For example, list A will update list B, list B will update list A, list A will update list B again, and so on.
+- If items are deleted from the first list, the items will not be deleted from the second list. This is because there's no trigger for **When an item is deleted**. In this case, there's no way for a flow to be notified when a deletion occurs. Instead, we recommend that you add a column to indicate that the item is no longer needed or relevant instead of deleting items from SharePoint lists (or SQL tables, or other data source). That column will sync between the two lists.
+- If changes are made to the field that you're using to keep items in sync between the two lists, a new item is created in the destination list. For example, if you use a person's **Name** column to copy between the two lists, and that person's **Name** column changes, the flow considers that change to be a new item, not an update to an existing item. If you can guarantee that the **Name** column will never change, you won't be affected by this limitation. However, if the **Name** column does change, you have to add to the destination list a column that stores the ID of the item in the first list. In this case, instead of using **Name** to find items, you can use **ID**. (The ID is guaranteed to always be unique).
+- This process isn't a two-way sync. That means that if items are updated in the destination list, the changes won't be reflected in the source list. You shouldn't try to set up two-way sync in the flow because that will create an infinite loop without additional modifications. For example, list A will update list B, list B will update list A, list A will update list B again, and so on.

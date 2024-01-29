@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 4552636
 
 ## Symptoms
 
-You may receive this error when doing any of these actions on a flow that uses **premium** connectors:
+You might receive this error when doing any of these actions on a flow that uses **premium** connectors:
 
 - Importing the flow
 - Enabling/disabling the flow

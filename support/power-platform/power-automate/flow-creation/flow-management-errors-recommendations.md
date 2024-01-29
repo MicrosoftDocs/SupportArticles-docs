@@ -29,4 +29,4 @@ If you can't edit your Flow, be sure your company IT policies don't block servic
 Some customers have complained that attempts to use Forms Pro result in an Error Message:  
 > "Your IT Department has turned off signup for Microsoft Forms Pro. Contact them to complete signup".
 
-The user may need to sign up for the Microsoft Pro Forms free subscription.
+The user might need to sign up for the Microsoft Pro Forms free subscription.

@@ -16,8 +16,8 @@ _Original KB number:_ &nbsp; 4535432
 
 In Microsoft Power Automate, when you create a flow, here's what could happen with null field that cause trouble:
 
-1. You may be expecting wrong behavior when doing an action with null field.
-2. If you aren't handling null fields correctly, you may be expecting runtime errors like:
+1. You might be expecting wrong behavior when doing an action with null field.
+2. If you aren't handling null fields correctly, you might be expecting runtime errors like:
 
    - > **InvalidTemplate**. Unable to process template language expressions. The provided value is of type 'Null'.
 

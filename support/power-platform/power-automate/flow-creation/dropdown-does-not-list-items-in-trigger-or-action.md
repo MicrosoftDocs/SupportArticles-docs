@@ -1,11 +1,11 @@
 ---
-title: Dropdown list does not load items in triggers or actions in Microsoft Flow
+title: Dropdown list doesn't load items in triggers or actions in Microsoft Flow
 description: Provides steps to solve the issue where dropdown doesn't load items in triggers or actions in Microsoft Flow.
 ms.reviewer: evsung
 ms.date: 03/31/2021
 ms.subservice: power-automate-flow-creation
 ---
-# Dropdown list does not load items in a trigger or an action in Microsoft Flow
+# Dropdown list doesn't load items in a trigger or an action in Microsoft Flow
 
 This article provides a resolution for the issue that dropdown doesn't load items.
 
@@ -14,11 +14,11 @@ _Original KB number:_ &nbsp; 4527556
 
 ## Symptoms
 
-In Microsoft Flow, you can select a SharePoint site, OneDrive path, and a SQL Server or Dataverse table in certain triggers or actions from the dropdown list. However, when you open the dropdown list, you may not be able to find a specific item, for example, a SharePoint site, a SQL Server table and so on.
+In Microsoft Flow, you can select a SharePoint site, OneDrive path, and a SQL Server or Dataverse table in certain triggers or actions from the dropdown list. However, when you open the dropdown list, you might not be able to find a specific item, for example, a SharePoint site, a SQL Server table and so on.
 
 ## Cause
 
-You may not be able to see items listed in the dropdown list in Flow. Sometimes, when you have too many SharePoint items on a SharePoint site or too many files in a OneDrive folder path, the dropdown will time out after 35 seconds when trying to fetch all the items and won't load any items for you to select one from.
+You might not be able to see items listed in the dropdown list in Flow. Sometimes, when you have too many SharePoint items on a SharePoint site or too many files in a OneDrive folder path, the dropdown will time out after 35 seconds when trying to fetch all the items and won't load any items for you to select one from.
 
 ## Resolution
 

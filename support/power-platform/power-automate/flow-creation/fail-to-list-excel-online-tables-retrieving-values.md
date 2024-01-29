@@ -1,6 +1,6 @@
 ---
 title: Fail to list Excel Online tables retrieving values
-description: Creating an Excel-triggered flow and unable to list tables in the excel file with could not retrieve values, error executing the API error.
+description: Creating an Excel-triggered flow and unable to list tables in the Excel file with could not retrieve values, error executing the API error.
 ms.reviewer: jewelden
 ms.date: 03/31/2021
 ms.subservice: power-automate-flow-creation
@@ -14,11 +14,11 @@ _Original KB number:_ &nbsp; 4534996
 
 ## Symptoms
 
-Creating an Excel trigger flow using, for example, the ["request approval for a selected row" template](https://preview.flow.microsoft.com/galleries/public/templates/4c8abe0d62ab4333860da9ad218cc8f7/request-approval-for-a-selected-row/), browsing to the workbook in OneDrive works but the template does not list the tables in the excel file, but gives an API error **could not retrieve values, error executing the API**.
+Creating an Excel trigger flow using, for example, the ["request approval for a selected row" template](https://preview.flow.microsoft.com/galleries/public/templates/4c8abe0d62ab4333860da9ad218cc8f7/request-approval-for-a-selected-row/), browsing to the workbook in OneDrive works but the template doesn't list the tables in the excel file, but gives an API error **could not retrieve values, error executing the API**.
 
 ## Cause
 
-This error may occur due to OneDrive IP permissions.
+This error might occur due to OneDrive IP permissions.
 
 ## Resolution
 

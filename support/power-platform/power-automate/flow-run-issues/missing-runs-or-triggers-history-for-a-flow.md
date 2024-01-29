@@ -12,4 +12,4 @@ For a flow, sometimes users can't find trigger or run history in flow runs page 
 _Applies to:_ &nbsp; Power Automate  
 _Original KB number:_ &nbsp; 4538672
 
-Flow run or trigger history is retained for 28 days after the start of the flow. So, if it is past 28 days, the history is deleted and the data you're looking for won't be there.
+Flow run or trigger history is retained for 28 days after the start of the flow. So, if it's past 28 days, the history is deleted and the data you're looking for won't be there.

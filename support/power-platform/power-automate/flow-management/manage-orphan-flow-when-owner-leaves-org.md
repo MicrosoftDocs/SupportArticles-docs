@@ -4,7 +4,7 @@ description: Describes how to manage orphan flows when the owner leaves the orga
 ms.reviewer: tomche
 ms.topic: how-to
 ms.date: 09/25/2023
-ms.subservice: power-automate-flow management
+ms.subservice: power-automate-flow-management
 ms.custom: has-azure-ad-ps-ref
 ---
 # How to manage orphan flows when the owner leaves the organization
@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 4556130
 
 ## What are orphaned flows?
 
-A flow turns into an orphaned flow when it doesn't have a valid owner anymore. It often happens when the creator or owner of the flow has left the organization and there's no co-owner. If the flow uses connections that require authentication, then it may start failing because the user identity isn't valid anymore.
+A flow turns into an orphaned flow when it doesn't have a valid owner anymore. It often happens when the creator or owner of the flow has left the organization and there's no co-owner. If the flow uses connections that require authentication, then it might start failing because the user identity isn't valid anymore.
 
 Admins can maintain continuity on the business process automated by the flow by adding one or more co-owners to it. Co-owners basically have full control over the flow just like the original owner, and can fix authentication for connections if any and enable the flow if it has been disabled.
 

@@ -7,7 +7,7 @@ ms.subservice: power-automate-connections
 ---
 # Troubleshooting Flow Custom Connectors
 
-This article provides some troubleshooting steps and possible solutions to errors you may see while creating custom connectors in Flow or Power Apps.
+This article provides some troubleshooting steps and possible solutions to errors you might see while creating custom connectors in Flow or Power Apps.
 
 _Applies to:_ &nbsp; Power Automate  
 _Original KB number:_ &nbsp; 4526409
