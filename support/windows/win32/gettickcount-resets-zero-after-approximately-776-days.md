@@ -6,7 +6,7 @@ ms.author: davean
 ms.reviewer: v-sidong
 ms.custom: sap:System Services Development
 ms.subservice: system-services-dev
-ms.date: 09/04/2023
+ms.date: 01/30/2024
 ---
 # GetTickCount resets to zero after approximately 776 days
 
