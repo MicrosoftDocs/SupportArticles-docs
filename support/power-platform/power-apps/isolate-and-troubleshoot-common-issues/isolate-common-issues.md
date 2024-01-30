@@ -58,7 +58,7 @@ For an overview of how to create a performant canvas app, see [Overview of creat
 For more information and guidance on creating performant apps, see:
 
 - [Small data payloads](/power-apps/maker/canvas-apps/small-data-payloads)
-- [Optimized data query patterns](/power-apps/maker/optimized-query-data-patterns)
+- [Optimized data query patterns](/power-apps/maker/canvas-apps/optimized-query-data-patterns)
 - [Speed up app or page load](/power-apps/maker/canvas-apps/fast-app-page-load)
 - [Fast calculations](/power-apps/maker/canvas-apps/efficient-calculations)
 
