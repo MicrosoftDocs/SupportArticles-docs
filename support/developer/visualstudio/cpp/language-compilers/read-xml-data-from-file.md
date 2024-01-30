@@ -5,7 +5,6 @@ ms.date: 09/24/2020
 ms.custom: sap:Language or Compilers
 ms.reviewer: willchen
 ms.topic: how-to
-ms.prod: visual-cpp
 ---
 # Read the XML data from a file by using Visual C++
 

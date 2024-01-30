@@ -2,9 +2,9 @@
 title: Capture .NET Core dumps with ProcDump
 description: This article describes the installation of ProcDump tool and how to capture .NET Core memory dump files by using ProcDump in Linux.
 ms.date: 04/15/2021
-ms.prod: aspnet-core
+ms.service: aspnet-core
 ms.reviewer: ramakoni, ahmetmb
-ms.technology: aspnetcore-practice-troubleshoot-linux
+ms.subservice: practice-troubleshoot-linux
 author: ahmetmithat
 ---
 # Lab 2.2 Capture dump files with ProcDump in Linux

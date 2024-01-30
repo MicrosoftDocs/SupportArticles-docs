@@ -657,6 +657,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/power-platform/power-automate/how-to-customize-or-format-date-and-time-values-in-flow.md",
+      "redirect_url": "/power-automate/date-time-values",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/dynamics-365/fraud-protection/welcome-fraud-protection.yml",
       "redirect_url": "/troubleshoot/dynamics-365/",
       "redirect_document_id": false
@@ -673,6 +678,11 @@
     },
     {
       "source_path": "support/dynamics/gp/a-report-displays-an-incorrect-eeo-class.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/steps-that-tdbx-update-diagnostic-perform.md",
       "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
       "redirect_document_id": false
     },
@@ -6702,6 +6712,26 @@
       "source_path": "support/mem/configmgr/client-installation/support-for-mac-linux-and-unix-clients.md",
       "redirect_url": "/previous-versions/troubleshoot/configmgr/support-for-mac-linux-and-unix-clients",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sales-copilot/outlook-side-panel/update-add-in-error.md",
+      "redirect_url": "/troubleshoot/sales-copilot/setup-installation-and-sign-in/update-add-in-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sales-copilot/setup-installation-and-sign-in/update-settings-in-saleforce-error.md",
+      "redirect_url": "/troubleshoot/sales-copilot/crm-permissions-and-configurations/update-settings-in-saleforce-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sales-copilot/setup-installation-and-sign-in/no-access-to-dynamics-365-error.md",
+      "redirect_url": "/troubleshoot/sales-copilot/crm-permissions-and-configurations/no-access-to-dynamics-365-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/virtual-machines/windows-vm-activation-error-0xc004fd02.md",
+      "redirect_url": "/troubleshoot/azure/virtual-machines/windows-vm-activation-error-0xc004fd01-0xc004fd02",
+      "redirect_document_id": true
     }
 ]
 }

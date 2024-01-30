@@ -5,7 +5,7 @@ summary: This library provides solutions enabling IT Pros to troubleshoot and su
 metadata:
   title: Windows Server troubleshooting documentation
   description: Documentation for troubleshooting common issues with Windows Server. # Required; article description that is displayed in search results. < 160 chars.
-  ms.prod: windows-server
+  ms.service: windows-server
   ms.topic: landing-page # Required
   author: Deland-Han  #Required; your GitHub user alias, with correct capitalization.
   ms.author: delhan #Required; microsoft alias of author; optional team alias.

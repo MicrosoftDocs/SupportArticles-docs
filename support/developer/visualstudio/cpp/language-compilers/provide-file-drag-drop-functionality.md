@@ -4,7 +4,6 @@ description: This article describes how to provide file drag-and-drop functional
 ms.date: 09/24/2020
 ms.custom: sap:Language or Compilers
 ms.topic: how-to
-ms.prod: visual-cpp
 ---
 # Provide file drag-and-drop functionality in a Visual C# application
 

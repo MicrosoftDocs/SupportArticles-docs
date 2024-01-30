@@ -7,8 +7,8 @@ ms.author: kaushika
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-ms.technology: windows-server-group-policy
+ms.service: windows-server
+ms.subservice: group-policy
 ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
 localization_priority: medium
 ms.reviewer: kaushika

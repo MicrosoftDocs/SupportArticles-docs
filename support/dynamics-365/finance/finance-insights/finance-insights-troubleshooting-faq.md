@@ -5,8 +5,6 @@ title: Troubleshoot Finance insights setup issues
 description: Provides resolutions for the common issues that can occur when you use Finance insights capabilities in Microsoft Dynamics 365 Finance.
 author: twheeloc 
 ms.date: 12/07/2023
-ms.prod: 
-ms.technology: 
 
 # optional metadata
 
@@ -120,7 +118,7 @@ The **Cash flow forecast** model training requires data that contains 100 or mor
 
 The **Customer payment predictions** feature requires more than 100 transactions in the previous six to nine months. The transactions can include free text invoices, sales orders, and customer payments. This data must be spread across the **On-time**, **Late**, and **Very late** settings defined on the **Configuration** page.
 
-The **Budget proposal** feature requires a minimum of three years of budget or actual data. This solution uses three to ten years of data in the projections. More than three years will provide better results. The data works best when there's variation in the values. If the data contains all constant data, such as a lease expense, the training might fail because the lack of variation doesn’t require AI to project the amounts.
+The **Budget proposal** feature requires a minimum of three years of budget or actual data. This solution uses three to ten years of data in the projections. More than three years will provide better results. The data works best when there's variation in the values. If the data contains all constant data, such as a lease expense, the training might fail because the lack of variation doesn't require AI to project the amounts.
 
 ## Issue 9: "Table with name, 'msdyn_paypredpredictionresultentities' does not exist. The remote server returned an error: (404) Not Found..." error
 

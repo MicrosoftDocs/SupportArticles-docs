@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kimnich, kaushika
 ms.custom: sap:multipath-i/o-mpio-and-storport, csstroubleshoot
-ms.technology: windows-server-backup-and-storage
+ms.subservice: backup-and-storage
 ---
 # Windows Setup in a boot from SAN configuration reports: Setup was unable to create a new system partition or locate an existing system partition
 

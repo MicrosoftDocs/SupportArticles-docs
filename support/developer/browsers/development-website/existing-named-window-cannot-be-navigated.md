@@ -3,7 +3,6 @@ title: Existing named window can't be navigated
 description: This article discusses issues related to named windows in Internet Explorer. This happens when the target url of the new navigation and the URL of the existing target window require processes with different integrity levels.
 ms.date: 06/08/2020
 ms.reviewer: bachoang
-ms.technology: internet-explorer-development-website
 ---
 # Named window navigation might fail to navigate the existing named window
 

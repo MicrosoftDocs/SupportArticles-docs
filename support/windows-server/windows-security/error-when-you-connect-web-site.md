@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-jomcc, jobarner
 ms.custom: sap:legacy-authentication-ntlm, csstroubleshoot
-ms.technology: windows-server-security
+ms.subservice: windows-security
 ---
 # Error code 403 or 500 when you connect to a Web site that is published by using ISA Server 2004 Service Pack 2
 

@@ -5,8 +5,6 @@ title: Troubleshoot issues opening Report Designer
 description: Provides a resolution for common issues that can cause problems when you open Report Designer in Microsoft Dynamics 365 Finance.
 author: aprilolson
 ms.date: 12/07/2023
-ms.prod: 
-ms.technology: 
 
 # optional metadata
 

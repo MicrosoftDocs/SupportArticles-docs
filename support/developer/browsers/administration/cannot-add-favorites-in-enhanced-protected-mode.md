@@ -3,7 +3,6 @@ title: Failed to add favorites and protected mode
 description: This article describes a situation where enabling enhanced protection mode in Internet Explorer 10 and redirecting the Favorites folder to another location causes the failure that tries to add a website with CTRL+D or the user interface to your favorites collection.
 ms.date: 06/09/2020
 ms.reviewer: jeanr
-ms.technology: internet-explorer-administration
 ---
 # You cannot add favorites with redirected favorites folder and enhanced protected mode in Internet Explorer 10
 

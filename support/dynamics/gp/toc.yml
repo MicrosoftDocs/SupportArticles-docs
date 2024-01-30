@@ -1001,8 +1001,6 @@
         href: management-reporter-2012-process-service-stops-and-restarts-continually.md
       - name: Management Reporter 2012 Process Service stops unexpectedly
         href: management-reporter-2012-process-service-stops-unexpectedly.md
-      - name: Management Reporter 2012 TDBX Update Diagnostic
-        href: steps-that-tdbx-update-diagnostic-perform.md
       - name: Management Reporter for Dynamics ERP Report Queue Status window stays stuck at Queued
         href: management-reporter-for-dynamics-erp-report-queue-status-stays-stuck-at-queued.md
       - name: Management Reporter Report Viewer stops working if there is an image in header
