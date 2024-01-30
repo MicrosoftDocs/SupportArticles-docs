@@ -23,6 +23,8 @@
           href: approvals/guest-approval-email-error.md
     - name: Authentication or Sign-in
       items:
+        - name: Add images to email messages
+          href: /power-automate/desktop-flows/how-to/add-images-email-messages?context=/troubleshoot/power-platform/power-automate/context/context
         - name: Authentication failed when signing in to Microsoft Flow
           href: authentication-or-sign-in/cannot-sign-in-to-microsoft-flow-due-to-authentication-failed.md
         - name: Can't sign into OneDrive connector
@@ -154,7 +156,7 @@
         - name: Converting time zone
           href: flow-creation/converting-time-zone-power-automate.md
         - name: Customize or format Date and Time values in a flow
-          href: how-to-customize-or-format-date-and-time-values-in-flow.md
+          href: /power-automate/date-time-values?context=/troubleshoot/power-platform/power-automate/context/context
         - name: Dropdown list doesn't load items in triggers or actions
           href: flow-creation/dropdown-does-not-list-items-in-trigger-or-action.md
         - name: Dynamic content picker missing dynamic content from previous steps
