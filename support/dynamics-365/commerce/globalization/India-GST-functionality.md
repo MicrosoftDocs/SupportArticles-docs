@@ -1,18 +1,18 @@
 ---
-title: Troubleshoot errors with Goods and Services Tax integration for India
-description: Resolves an error that occurs when you calculate India Goods and Services Tax (GST) in Microsoft Dynamics 365 Commerce.
+title: GST is not calculated for India-specific stores
+description: Resolves an issue where Goods and Services Tax (GST) isn't calculated for India-specific stores in Microsoft Dynamics 365 Commerce.
 author: JialinHuang803
 ms.author: jialinhuang
 ms.reviewer: josaw, brstor
 ms.date: 01/30/2024
 ---
-# Troubleshoot errors with Goods and Services Tax (GST) integration for India
+# GST isn't calculated for India-specific stores
 
-This article provides a solution for an error that occurs when you work with Goods and Services Tax (GST) integration for India in Microsoft Dynamics 365 Commerce.
+This article provides a solution for an issue where [Goods and Services Tax (GST)](/dynamics365/finance/localizations/india/apac-ind-gst) isn't calculated for India-specific stores in Microsoft Dynamics 365 Commerce.
 
 ## Symptoms
 
-GST is not calculated for India-specific stores.
+GST isn't calculated for India-specific stores.
 
 ## Resolution
 
