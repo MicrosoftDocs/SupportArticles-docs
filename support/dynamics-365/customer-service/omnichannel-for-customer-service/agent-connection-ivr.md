@@ -28,7 +28,7 @@ There are a couple of workarounds that can help resolve this issue.
 To introduce a Copilot Studio bot to greet customers, complete the following steps:
 
 1. Add a bot and connect it to your workstream. More information: [Manage your bots](/dynamics365/customer-service/administer/manage-your-bots#add-a-bot)
-1. Ensure that your bot is connected to Omnichannel for Customer Service. More inforamtion: [Configure Copilot Studio bots for voice](/dynamics365/customer-service/administer/voice-channel-pva-bots#configure-handoff-from-copilot-studio-to-omnichannel-for-customer-service)
+1. Ensure that your bot is connected to Omnichannel for Customer Service. More information: [Configure Copilot Studio bots for voice](/dynamics365/customer-service/administer/voice-channel-pva-bots#configure-handoff-from-copilot-studio-to-omnichannel-for-customer-service)
 1. In the Copilot Studio app, open your copilot and go to the **Topics & Plugins** page.
 1. Under **System**, select the **Escalate** topic.
 1. Create a legal message to be played before a call transfers (or escalates) to an agent. For more information about creating and editing topics, see [Use topics to design a copilot conversation](/microsoft-copilot-studio/authoring-create-edit-topics).
