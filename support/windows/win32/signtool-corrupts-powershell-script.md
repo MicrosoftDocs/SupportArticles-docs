@@ -6,7 +6,7 @@ ms.custom: Fix
 ms.reviewer: mstanley
 author: HaiyingYu
 ms.author: haiyingyu
-ms.technology: windows-dev-apps-security-dev
+ms.subservice: security-dev
 ---
 
 # PowerShell script files re-signed with SignTool may be corrupted

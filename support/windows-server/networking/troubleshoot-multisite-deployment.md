@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, brianlic, jgerend, v-lianna
 ms.custom: sap:remote-access-multisite, csstroubleshoot
-ms.technology: networking
+ms.subservice: networking
 ms.assetid: f92b1335-ac4a-4501-a5ec-d1851e6f0fc7
 ---
 # Troubleshoot a multisite deployment
