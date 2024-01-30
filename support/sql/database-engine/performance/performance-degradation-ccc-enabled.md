@@ -1,7 +1,7 @@
 ---
 title: Performance degradation with common criteria compliance enabled
 description: Works around an issue where a performance degradation occurs when common criteria compliance is enabled in SQL Server.
-ms.date: 01/24/2024
+ms.date: 01/30/2024
 ms.custom: sap:Performance
 ms.reviewer: prmadhes, jopilov, v-sidong
 ---
