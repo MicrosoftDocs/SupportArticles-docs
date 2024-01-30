@@ -5,11 +5,11 @@ ms.date: 12/13/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, krpg, v-lianna
 ms.custom: sap:wmi, csstroubleshoot
-ms.technology: windows-server-system-management-components
+ms.subservice: system-mgmt-components
 ---
 # Scenario guide: Troubleshoot WMI performance issues
 

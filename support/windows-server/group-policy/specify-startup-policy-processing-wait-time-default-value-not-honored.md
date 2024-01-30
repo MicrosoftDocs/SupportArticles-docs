@@ -7,11 +7,11 @@ ms.date: 11/23/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, teterenc, dennhu, v-lianna
 ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot, ikb2lmc
-ms.technology: windows-server-group-policy
+ms.subservice: group-policy
 ---
 # Group Policy fails to apply if default value of "Specify startup policy processing wait time" isn't honored
 

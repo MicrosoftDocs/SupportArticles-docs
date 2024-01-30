@@ -3,7 +3,6 @@ title: Install an assembly in global assembly cache
 description: Describes how to install an assembly .dll file in the Microsoft .NET Framework global assembly cache.
 ms.date: 05/06/2020
 ms.topic: how-to
-ms.technology: dotnet-general
 ---
 # Install an assembly in the .NET Framework global assembly cache
 
