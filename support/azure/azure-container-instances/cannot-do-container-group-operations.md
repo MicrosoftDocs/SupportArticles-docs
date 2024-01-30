@@ -28,11 +28,11 @@ You encounter one or more of the following problems:
 
 ## Cause
 
-The managed identity of the container group was deleted before an attempt to delete the associated container group. This scenario can occur if you tried to do this order of deletions manually. It can also occur if you have a regularly scheduled script (such as a nightly script run) that deletes all the resources within a development resource group, including all managed identities and container groups. The script didn't delete the resource in the correct order, as it deleted the managed identity needed to authenticate the container group before it tried to delete the container group itself.
+The managed identity of the container group was deleted before an attempt to delete the associated container group. This scenario can occur if you tried to do this order of deletions manually. It can also occur if you have a regularly scheduled script (such as a nightly script run) that deletes all the resources within a development resource group, including all managed identities and container groups. The script didn't delete the resource in the correct order, because it deleted the managed identity needed to authenticate the container group before it tried to delete the container group itself.
 
 ## Solution 1: Delete the container group before you delete the managed identity
 
-Make sure that you delete the container group first, and wait for the deletion operation to finish before you delete the managed identity.
+Delete the container group first, wait for the deletion operation to finish, and then delete the managed identity.
 
 ## Solution 2: Open a support ticket to get the container groups out of bad states
 
@@ -41,5 +41,7 @@ If you have any container groups that remain in a bad state because you first de
 ## More information
 
 - [Azure Container Instances states](/azure/container-instances/container-state)
+
+- [Deploy to Azure Container Instances from Azure Container Registry using a managed identity](/azure/container-instances/using-azure-container-registry-mi)
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
