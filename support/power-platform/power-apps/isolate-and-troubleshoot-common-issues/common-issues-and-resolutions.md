@@ -14,76 +14,40 @@ contributors:
   - tapanm-msft
   - mduelae
 ---
-
 # Common issues and resolutions for Power Apps
 
-There are different approaches to troubleshooting depending on the type of issue you're facing.  This top level guide gets you started in the right direction.
+This article lists common issues you might encounter while using Power Apps. Issues are grouped by area and summary level workarounds are provided where applicable, with pointers to primary documentation locations where you may find more details.
 
-## Functionality troubleshooting
+Refer to the introductory article [Power Apps troubleshooting strategies](isolate-common-issues.md) for guidance on narrowing down the source of your issue. That article outlines key principles in debugging both functional and performance issues.
 
-For issues with **functionality** - where Power Apps features aren't behaving as expected - you should first isolate the problem using the one of the articles listed as a guide.  Being able to reliably reproduce (a "repro") the issue with as few steps as possible is a critical first step in figuring out the issue.
+## Common issue areas
 
-* [General issue isolation approach](isolate-common-issues.md)
+  - [Connectors and delegation](#connectors-and-delegation)
+  - [Controls](#controls)
+  - [Integration](#integration)
+  - [Power Fx](#power-fx)
+  - [Region](#region)
+  - [Studio and Forms](#studio-and-forms)
+  - [Browser](#browser)
+  - [Power Apps for Windows](#power-apps-for-windows)
+  - [Next steps](#next-steps)
+  
+## Connectors and delegation
 
-Then, specifically for Canvas apps, use these articles.
+- See [Connections](/power-apps/maker/canvas-apps/connections-list) for an overview of how Tabular and Action connectors work. 
+- See [Understanding delegation in a canvas app](/power-apps/maker/canvas-apps/delegation-overview) for details about delegation. 
+- See [Debugging canvas apps with Monitor](/power-apps/maker/monitor-canvasapps) for a description on how to monitor the data being sent and returned.
 
-* [Isolating Canvas App issues](isolate-canvas-app-issues.md)
-* [Minimal Canvas App repro](minimal-canvas-app-repro.md)
-
-And for Model driven apps, use these articles.
-
-* [Isolate Model App issues](isolate-model-app-issues.md)
-* [Minimal Model App issues](vanilla-model-driven-app-repro.md)
-
-When you have the specific issue then the following sections in this article (and associated links) may help.
-    - [Connectors and delegation](#connectors-and-delegation)
-    - [Controls](#controls)
-    - [Integration](#integration)
-    - [Power Fx](#power-fx)
-    - [Region](#region)
-    - [Studio and Forms](#studio-and-forms)
-    - [Browser](#browser)
-    - [Power Apps for Windows](#power-apps-for-windows)
-
-See [Next steps](#next-steps) later in this article if your issue isn't listed.
-
-## Performance troubleshooting
-
-For an overview of how to create a performant canvas app, read this article:
-
-* [Overview of creating performant apps](/power-apps/maker/canvas-apps/create-performant-apps-overview) section.
-
-Then, these specific articles help guide you to a more performant app.
-
-* [Small data payloads](/power-apps/maker/canvas-apps/small-data-payloads)
-* [Optimized data query patterns](/power-apps/maker/optimized-query-data-patterns)
-* [Speed up app or page load](/power-apps/maker/canvas-apps/fast-app-page-load)
-* [Fast calculations](/power-apps/maker/canvas-apps/efficient-calculations)
-
-### Specific common issues
-
-**Explicit column selection and columns that disappear.**
-
-Some customers may find issues with Explicit column selection (ECS) turned on - columns may not be retrieved from the data source if the data is first retrieved into a collection. See * [Speed up app or page load](/power-apps/maker/canvas-apps/fast-app-page-load) for a discussion on how to make this feature work.
-
-## Specific functionality areas
-
-Below common issues are arranged by several of the key areas of Power Apps along with links to the general documentation that may  be helpful.  Many of issues called out here are also listed in the general documentation but are highlighted here for easy reference.
-
-### Connectors and delegation
-
-See [Connections](/power-apps/maker/canvas-apps/connections-list) for an overview of Tabular and Action connectors work.  See [Understanding delegation in a canvas app](/power-apps/maker/canvas-apps/delegation-overview) for details about delegation. See [Debugging canvas apps with Monitor](/power-apps/maker/monitor-canvasapps) for a description on how to monitor the data being sent and returned.
-
-#### Common issues
+### Common issues
 
 1. **Automatic Next links for galleries and grids do not work for action-based connectors.**
 
     Next links (the property on a query result that enables a gallery or grid to automatically page in the next set of results of a query) aren't supported for action-based connectors. See the [Overview of connectors for canvas apps](/power-apps/maker/canvas-apps/connections-list) for a discussion on this topic.
 
-1. **Sharing a Canvas apps using SharePoint connector** (February 23, 2022)
+1. **Sharing a Canvas apps using SharePoint connector** 
     See [Connect to SharePoint from a canvas app](/power-apps/maker/canvas-apps/connections/connection-sharepoint-online) for details on how to share an app for SharePoint.
 
-1. **SQL data sources no longer add a "[dbo]" prefix to the data source name** (April 27, 2021)
+1. **SQL data sources no longer add a "[dbo]" prefix to the data source name** 
 
     See [Connect to SQL Server from Power Apps](/power-apps/maker/canvas-apps/connections/connection-azure-sqldatabase) for details on this change.
 
@@ -117,31 +81,27 @@ See [Connections](/power-apps/maker/canvas-apps/connections-list) for an overvie
 
 1. **Office 365 Video connector isn't supported**.
 
-### Controls
+## Controls
 
-#### Common issues
+### Common issues
 
-1. **Unable to copy paste forms into data cards** (March 2022)
+1. **Unable to copy paste forms into data cards** 
 
     You can't copy and paste forms into data cards. This is to prevent certain combinations of controls from being created that risk the stability and the performance of the app. To learn about how to configure forms that allow scrolling, see [scrolling screen for forms](/power-apps/maker/canvas-apps/add-scrolling-screen#scrolling-screen-for-forms).
 
-1. **Camera images when imported via Microsoft Edge are flipped** (January 20, 2020)
-
-    When using the camera and the legacy Microsoft Edge browser, the image may be flipped. This is due to legacy Microsoft Edge browser defect. To mitigate this issue, use the new Microsoft Edge or a different browser.
-
-1. **Camera images do not contain meta-data information** (January 20, 2020)
+1. **Camera images do not contain meta-data information**
 
     When using the camera control, the image does not contain meta-data information. This is due to a limitation of how we take images with the camera. To mitigate this issue, use the [Add picture control](/power-apps/maker/canvas-apps/controls/control-add-picture).
 
-1. **Images added from iOS do not contain meta-data information** (January 20, 2020)
+1. **Images added from iOS do not contain meta-data information**
 
     When using the Add Picture control on iOS, images imported by using the camera or gallery do not contain meta-data.
 
-1. **Scrolling in flexible-height galleries** (Nov. 27, 2018)
+1. **Scrolling in flexible-height galleries**
 
     If you run into a limitation when you scroll with your finger, lift it and start to scroll again.
 
-1. **Combo box controls in galleries** (May 3, 2018)
+1. **Combo box controls in galleries**
 
     When you use a **Combo box** control inside a gallery, its selections are not maintained when the user scrolls the gallery. This is not an issue if you use a **Combo box** control inside a gallery that doesn't scroll. A workaround is not currently available.
 
@@ -161,18 +121,18 @@ See [Connections](/power-apps/maker/canvas-apps/connections-list) for an overvie
 
      If your mobile device is low on memory, the camera is temporarily disabled to avoid crashing the device.
 
-1. **Camera issue on Android mobile devices** (January 1, 2019)
+1. **Camera issue on Android mobile devices** 
 
     If the camera control stops working on an Android device, republish your app, and reopen it on the device. The camera control was updated in response to a change in the Android operating system, and your app will benefit from the update when you republish.
 
-1. **Multiple media controls in Power Apps Mobile** (August 2, 2018)
+1. **Multiple media controls in Power Apps Mobile** 
 
     Power Apps Mobile runs on various types of devices, and some of them have limitations that are specific to that platform:
 
     * You can play videos in multiple **Video** controls at the same time on all platforms except for iPhone devices.
     * You can record audio with multiple **Microphone** controls at the same time on all platforms except for the web player.
 
-1. **Drawing with mouse or touch input is not smooth in Power Apps for Windows** (September 24, 2018)
+1. **Drawing with mouse or touch input is not smooth in Power Apps for Windows** 
 
     The pen control only has partial support for drawing using mouse or touch input in the Windows app. Strokes might be intermittent. For smooth drawing, use a pen or run the app in a browser.
 
@@ -184,48 +144,40 @@ See [Connections](/power-apps/maker/canvas-apps/connections-list) for an overvie
 
     An app that contains a camera control might crash if you open the app on a Windows Phone that's running build 10.0.10586.107. To avoid this problem, upgrade to the most recent build (for example, by running the [Upgrade Advisor](https://www.microsoft.com/store/p/upgrade-advisor/9nblggh0f5g4).
 
-### Integration
+## Integration
 
-1. **Power Apps Studio is not accessible from Power BI Desktop versions 2.102.845.0 and earlier** (April 11, 2022)
+## Power Fx
 
-    Power Apps Studio will not load from Power BI Desktop on versions 2.102.845.0 and earlier anymore. Update your Power BI Desktop to version 2.103.881.0 or later, or access Power App Studio in Power BI from a browser instead.
-
-### Power Fx
-
-1. **`Connection.Connected` returns the wrong value during OnStart in Power Apps for Windows** (July 21, 2020)
+1. **`Connection.Connected` returns the wrong value during OnStart in Power Apps for Windows**
 
    While offline, formula `Connection.Connected` may wrongly return **true** immediately after starting an app in the Windows app. As a workaround, delay when the logic depending on it is executed by using a **Timer** control.
 
 1. **Issues with Date-time**
 
-    See the [Trouble shooting Canvas app date time issues](troubleshoot-canvas-app-date-time-issues.md) article for details on Power Fx and date/time.  Similarly see [Trouble shooting Model driven app date time issues](troubleshoot-model-driven-app-date-time-issues.md)
+    See the [Troubleshooting Canvas app date time issues](troubleshoot-canvas-app-date-time-issues.md) article for details on Power Fx and date/time.  Similarly see [Troubleshooting Model driven app date time issues](troubleshoot-model-driven-app-date-time-issues.md)
 
-### Region
+## Region
 
-1. **Performance degradation when opening Power Apps Studio in China** (March 25, 2022)
+1. **Performance degradation when opening Power Apps Studio in China**
 
     Power Apps Studio may take more than 30 seconds when loading in China. This issue does not impact tenants hosted locally by 21Vianet.
 
-### Studio and Forms
+## Studio and Forms
 
 The Power Apps Studio is home to the app editing and publishing experience.  
 
 1. **Problems with startup**
     If you're having trouble accessing or starting Power Apps, see [troubleshooting startup issues](troubleshooting-startup-issues.md).
 
-1. **Problems with canvas app screen sizes** (April 27, 2021)
+1. **Problems changing dimensions/orientation of SharePoint forms**
 
-   Starting with Power Apps 3.21032, screens in some apps may be displaying unexpected dimensions or are not visible entirely. Check the affected screens' Height and Width properties and make sure they are set to an appropriate value, such as the default (`Max(App.Height, App.MinScreenHeight)` for Height, `Max(App.Width, App.MinScreenWidth)` for Width). A fix has already been deployed for screens that have a blank Height or Width. If you're still experiencing issues with the size of screens or the controls on them, the app may have been saved or auto-saved into the error state. Such apps can be restored to an earlier version via the portal, and the deployed fix will be applied the next time the app is opened for editing.
+   If you are having issues with the "Screen size + orientation" settings for custom SharePoint forms, you can use the "Custom" size to work around the issue. First, reset the setting by selecting "Small" size, then toggle Orientation to Portrait and then back to Landscape. Then select "Custom" and enter a desired screen size. For reference, the preset values are Width: 270, Height: 480 for the Small Portrait size, and Width: 720, Height: 480 for Small Landscape size.
 
-1. **Problems changing dimensions/orientation of SharePoint forms** (April 27, 2021)
-
-   We are aware of issues affecting the "Screen size + orientation" settings for custom SharePoint forms. If you're having trouble with these settings, you can use the "Custom" size to work around the issue. First, reset the setting by selecting "Small" size, then toggle Orientation to Portrait and then back to Landscape. Then select "Custom" and enter a desired screen size. For reference, the preset values are Width: 270, Height: 480 for the Small Portrait size, and Width: 720, Height: 480 for Small Landscape size.
-
-1. **Copying and pasting screens across apps** (April 4, 2018)
+1. **Copying and pasting screens across apps**
 
     Copying and pasting screens across apps is not currently supported. To work around this issue, add a new screen to your target app, copy the controls from the screen in your source app, and then paste them into the screen of your target app.
 
-1. **Changing the layout of SharePoint forms** (March 7, 2018)
+1. **Changing the layout of SharePoint forms**
 
     While customizing a SharePoint forms in certain languages, if you try to change the layout from portrait (default) to landscape, the app may show multiple errors (yellow triangles in controls). To resolve these errors and retain the landscape layout, select **Undo**.
 
@@ -257,23 +209,15 @@ The Power Apps Studio is home to the app editing and publishing experience.
 
      Existing apps that use this feature will continue to run for the time being, but you can't add a card gallery. Replace card galleries with the new **[Edit form](/power-apps/maker/canvas-apps/controls/control-form-detail)** and **[Display form](/power-apps/maker/canvas-apps/controls/control-form-detail)** controls.
 
-### Browser
+## Browser
 
-1. **Black box covering part of embedded canvas app** (June 11, 2020)
+2. **Browser running out of memory**
 
-   When you use embedded canvas apps such as SharePoint forms, SharePoint web parts, or model driven forms, your users may see a black box when scrolling covering part of the app. This issue happens with chromium-based browsers starting with version 83. There isn't a workaround at this time. The team is actively investigating to find a fix and workaround. **A workaround in Power Apps was deployed in the week of 6/21/2020. In addition, the issue is fixed for Microsoft Edge based on Chromium version 85.**
+    If you're using the 32-bit version of Google Chrome or Microsoft Edge and run out of memory while using Power Apps, consider using the 64-bit version.
 
-2. **Browser running out of memory** (July 23, 2018)
+## Power Apps for Windows
 
-    If you run out of memory while using Power Apps, consider downloading a 64-bit version of Google Chrome or Microsoft Edge.
-
-3. **Running an app on Windows 8.1**
-
-    If you install [this update for Windows 8.1](/security-updates/SecurityBulletins/2016/ms16-118), you can't run apps that you open in Power Apps Studio on that operating system. However, you can still run apps that you open in [powerapps.com](https://make.powerapps.com?utm_source=padocs&utm_medium=linkinadoc&utm_campaign=referralsfromdoc) or using Power Apps Mobile.
-
-### Power Apps for Windows
-
-1. **Power Apps mobile app for Windows platform doesn't support Dropbox connector.** (December 15, 2020)
+1. **Power Apps mobile app for Windows platform doesn't support Dropbox connector.**
 
    A pop-up dialog shows the following message in this situation:
 
@@ -281,9 +225,9 @@ The Power Apps Studio is home to the app editing and publishing experience.
 
    When this issue happens, consider using web player on Windows platform.
 
-1. **Microsoft Entra Conditional Access with the policy "Require device to be marked as compliant" does not work in Power Apps for Windows** (July 30, 2020)
+1. **Microsoft Entra Conditional Access with the policy "Require device to be marked as compliant" does not work in Power Apps for Windows**
 
-   When setting the conditional access policy "Require device to be marked as compliant" in Microsoft Entra ID, users will face login errors.  They will seethe message "The application contains sensitive information and can only be accessed from devices or client applications that meet your enterprise management compliance policy." Consequently, they won't be able to access their Power Apps. As a workaround, use your browser.
+   When setting the conditional access policy "Require device to be marked as compliant" in Microsoft Entra ID, users will face login errors.  They will see the message "The application contains sensitive information and can only be accessed from devices or client applications that meet your enterprise management compliance policy." Consequently, they won't be able to access their Power Apps. To work around the issue, they can use a browser.
 
 ## Next steps
 
