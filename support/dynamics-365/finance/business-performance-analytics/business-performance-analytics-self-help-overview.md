@@ -16,7 +16,7 @@ audience: Application User
 
 To maintain the accuracy of report data, business performance analytics assesses the quality of the source data. If the assessments don't meet defined rules, business performance analytics logs information in the **Bpa self help logs** table in Microsoft Dataverse. This table provides insights into issues and helps you take appropriate action.
 
-## Access the business performanc analytics self help logs table
+## Access the business performance analytics self help logs table
 
 To access the **Bpa self help logs** table, follow these steps.
 
