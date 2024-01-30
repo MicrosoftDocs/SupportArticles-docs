@@ -677,6 +677,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/dynamics/gp/steps-that-tdbx-update-diagnostic-perform.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/dynamics-365/commerce/commerce-headquarters-operations/summary-taxes-custom-modules-10.0.27.md",
       "redirect_url": "/troubleshoot/dynamics-365/commerce/commerce-headquarters-operations/summary-taxes-custom-modules-10-0-27",
       "redirect_document_id": true
