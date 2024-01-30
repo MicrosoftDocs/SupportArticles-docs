@@ -17,7 +17,7 @@ To troubleshoot, follow these steps:
 
   1. Collect Company Portal logs.
   2. Note apps that appear in the work profile unexpectedly.
-  3. Un-enroll the device from Intune and uninstall Company Portal.
+  3. Unenroll the device from Intune and uninstall Company Portal.
   4. Install the [Test DPC](https://play.google.com/store/apps/details?id=com.afwsamples.testdpc) app, which allows creation of a work profile without an EMM for testing.
   5. Follow the instructions in [Test DPC](https://play.google.com/store/apps/details?id=com.afwsamples.testdpc) to create a work profile on the device.
   6. Review apps that appear in the work profile.
@@ -34,3 +34,7 @@ This is expected behavior. Only system apps installed in the Work Profile are in
 ## I need to customize how apps are updated for Android Enterprise
 
 See the blog post [Best practices for updating your Android Enterprise apps](https://techcommunity.microsoft.com/t5/intune-customer-success/best-practices-for-updating-your-android-enterprise-apps/ba-p/3038520) to learn about best practices and options for configuring app updates for your corporate-owned devices. This includes using network preferences, maintenance windows, and high-priority update mode Which bypasses all regular constraints so you can apply and update as fast as possible.
+
+### I want to stay updated on any Google service issue that may cause impact
+
+Google releases [service announcements](https://www.androidenterprise.community/t5/service-announcements/tkb-p/Announcements) containing details about issues that may impact its service. Follow the [instructions to subscribe](https://www.androidenterprise.community/t5/news-info/new-community-board-subscribe-to-the-new-service-announcements/ba-p/1044) and receive notifications for new posts.
