@@ -37,7 +37,7 @@
           href: setup-installation-and-sign-in/connection-is-disabled-error.md
         - name: Can't sign in to Salesforce due to blocked Salesforce connector
           href: setup-installation-and-sign-in/sign-in-issue-with-blocked-connector.md
-        - name: Can't connect to Dynamics 365 with two-factor authentication enabled
+        - name: Can't connect to Dynamics 365 with multifactor authentication enabled
           href: setup-installation-and-sign-in/connection-issue-with-two-factor-auth.md
         - name: '"Failure passed to redirect url" error when signing in'
           href: setup-installation-and-sign-in/failure-passed-to-redirect-url-blocked-app.md
