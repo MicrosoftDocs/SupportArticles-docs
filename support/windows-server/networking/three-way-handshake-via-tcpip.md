@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: ralphc, kaushika
 ms.custom: sap:tcp/ip-communications, csstroubleshoot
-ms.technology: networking
+ms.subservice: networking
 ---
 # Explanation of the three-way handshake via TCP/IP
 

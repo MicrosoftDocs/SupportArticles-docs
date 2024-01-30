@@ -5,11 +5,11 @@ ms.date: 12/09/2021
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, rabhardw, anupamk, v-lianna
 ms.custom: sap:tcp/ip-communications, csstroubleshoot
-ms.technology: networking
+ms.subservice: networking
 ---
 # Overview of TCP/IP performance
 

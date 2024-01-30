@@ -5,11 +5,11 @@ ms.date: 04/09/2022
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate
 ms.custom: sap:setup-and-configuration-of-clustered-services-and-applications, csstroubleshoot
-ms.technology: windows-server-high-availability
+ms.subservice: high-availability
 keywords: cluster validation, user account
 ---
 

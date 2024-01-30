@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: cpuckett, waltere, kaushika
 ms.custom: sap:file-server-resource-manager-fsrm, csstroubleshoot
-ms.technology: windows-server-backup-and-storage
+ms.subservice: backup-and-storage
 ---
 # List of currently available hotfixes for the File Services technologies in Windows Server 2008 and in Windows Server 2008 R2
 

@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, slight
 ms.custom: sap:group-policy-management-gpmc-or-agpm, csstroubleshoot
-ms.technology: windows-server-group-policy
+ms.subservice: group-policy
 ---
 # Loopback processing of Group Policy
 

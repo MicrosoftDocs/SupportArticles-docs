@@ -3,7 +3,6 @@ title: Can't run .NET Framework based applications
 description: This article provides a workaround for the problem where you cannot run .NET Framework 4.5.1-based applications after you install the .NET Framework 4.5.1 on Windows 8 or Windows Server 2012.
 ms.date: 10/27/2020
 ms.custom: sap:installation
-ms.technology: dotnet-installation
 ---
 # Can't run .NET Framework 4.5.1-based applications after you install the .NET Framework 4.5.1 on Windows 8 or Windows Server 2012
 

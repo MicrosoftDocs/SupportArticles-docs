@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, BOBQIN
 ms.custom: sap:windows-script-host-cscript-or-wscript, csstroubleshoot
-ms.technology: windows-server-application-compatibility
+ms.subservice: application-compatibility
 ---
 # How to run a logon script one time when a new user logs on in Windows Server 2003
 

@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, sagiv, wincicadsec
 ms.custom: sap:active-directory-lightweight-directory-services-ad-lds-and-active-directory-application-mode-adam, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # LDS service startup fails after you manually change msDS-Behavior-Version in Windows Server 2019 and 2016
 

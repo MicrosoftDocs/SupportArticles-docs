@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 11 for SQL Server 2022 (KB5032679)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2022 cumulative update 11 (KB5032679).
-ms.date: 01/11/2024
+ms.date: 01/29/2024
 ms.custom: KB5032679
 ms.reviewer: v-qianli2
 appliesto:
@@ -22,7 +22,11 @@ This article describes Cumulative Update package 11 (CU11) for Microsoft SQL Ser
 - Analysis Services - Product version: **16.0.43.222**, file version: **2022.160.43.222**
 ## Known issues in this update
 
-There are no known issues in this cumulative update.
+### Read-scale availability group not displayed in dm_hadr_database_replica_cluster_states
+
+SQL Server 2022 CU10 introduced [fix 2714261](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate10#2714261), which causes an issue with `sys.dm_hadr_database_replica_cluster_states` for read-scale availability groups that results in the **Availability Databases** folder in SQL Server Management Studio (SSMS) not showing the databases in the availability group (AG). To mitigate this issue, roll back the patch to CU9.
+
+Microsoft is working on a fix for this issue and it will be available in a future CU.
 
 ## Improvements and fixes included in this update
 
@@ -48,7 +52,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id=1982808>[1982808](#1982808) </a> | Fixes an issue in which the distribution agent fails when you set up transactional replication with memory-optimized tables at the Subscriber that has the "replication support only" option. Additionally, you receive the following error message: </br></br>MSupd_articlename stored procedure fails with error 12302 when the subscription is created with @sync_type = "replication support only". | SQL Server Engine| Replication | Windows|
 | <a id=2782283>[2782283](#2782283) </a> | Consider the following scenario: </br></br>- You create a table that has a full-text index. </br>- The full-text index fragment is partitioned because it's too large. </br>- You clone the database and then run `DBCC CHECKDB` to check the clone database. </br></br>In this scenario, the command fails and the following error 2601 occurs: </br></br>Msg 2601, Level 14, State 1, Line \<LineNumber> </br>Cannot insert duplicate key row in object '\<ObjectName>' with unique index '\<IndexName>'. The duplicate key value is \<KeyValue>. | SQL Server Engine| Search| All|
 | <a id=2789527>[2789527](#2789527) </a> | Fixes the following error 9833 that you encounter when running the `sp_helplogins` stored procedure against a database with UTF-8 character encoding: </br></br>Msg 9833, Level 16, State 2, Procedure sp_helplogins, Line \<LineNumber> [Batch State Line 0] </br>Invalid data for UTF8-encoded characters| SQL Server Engine|Security Infrastructure| All|
-| <a id=2744933>[2744933](#2744933) </a> | Fixes a non-yielding scheduler dump issue with `sqldk!SOS_Node::SpreadMultipleTasksAcrossNodes` that you encounter when running an instance on hardware that has more than 64 logical processors per NUMA node. After applying the fix, SQL Server detects servers that have more than 64 logical processors per NUMA node at startup.| SQL Server Engine| SQL OS| All|
+| <a id=2744933>[2744933](#2744933) </a> | Fixes a non-yielding scheduler dump issue with `sqldk!SOS_Node::SpreadMultipleTasksAcrossNodes` that you encounter when running an instance on hardware that has more than 64 logical processors per NUMA node. After applying the fix, SQL Server detects machines that have more than 64 logical processors per NUMA node at startup and shuts the SQL Server service down. For more information, see the note in [Compute capacity limits by edition of SQL Server](/sql/sql-server/compute-capacity-limits-by-edition-of-sql-server).| SQL Server Engine| SQL OS| All|
 | <a id=2782340>[2782340](#2782340) </a> | Fixes a "Stalled Resource Monitor" dump issue that you might encounter after out-of-memory (OOM) exceptions are raised, such as error 701.| SQL Server Engine| SQL OS| All|
 | <a id=2724957>[2724957](#2724957) </a> | Fixes an issue in which the setup might fail to add the `SQL_SNAC_SDK` feature when you install SQL Server if the machine has a later version of the `SQL_SNAC_CORE` feature in *msoledbsql.msi* installed than that of the SQL Server installation media. After applying the fix, SQL Server Setup detects this condition, and it will block a new installation and prevent a failure during the installation. </br></br>**Note**: To work around this issue and unblock SQL Server Setup, go to **Uninstall or change a program** in the Control Panel, select **Microsoft OLE DB Driver for SQL Server**, and then select **Change** to install all features in **Microsoft OLE DB Driver for SQL Server Setup**. Rerun SQL Server Setup when it's finished. | SQL Setup| Deployment Platform | Windows|
 

@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:integration-components, csstroubleshoot
-ms.technology: hyper-v
+ms.subservice: hyper-v
 ---
 # Hyper-V Time Synchronization doesn't correct the system clock in the virtual machine if it's more than five seconds ahead of the host clock
 

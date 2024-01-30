@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, rolandw, herbertm
 ms.custom: sap:active-directory-replication, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # Description of NTDS replication warning IDs 1083 and 1061, and SAM error ID 12294 because of an Active Directory collision
 

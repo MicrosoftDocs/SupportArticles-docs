@@ -5,8 +5,8 @@ author: Deland-Han
 ms.author: delhan
 ms.topic: troubleshooting
 ms.date: 07/30/2023
-ms.prod: windows-server
-ms.technology: windows-server-deployment
+ms.service: windows-server
+ms.subservice: deployment
 ms.custom: sap:setup, csstroubleshoot
 ROBOTS: NOINDEX
 ---

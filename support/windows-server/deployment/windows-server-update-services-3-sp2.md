@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:servicing, csstroubleshoot
-ms.technology: windows-server-deployment
+ms.subservice: deployment
 ---
 # Windows Server Update Services 3.0 SP2 Dynamic Installer for Server Manager
 

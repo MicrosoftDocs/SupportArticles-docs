@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, johnmar
 ms.custom: sap:internal-dns-server-for-sdn, csstroubleshoot
-ms.technology: windows-server-sdn
+ms.subservice: sdn
 ---
 # Software Defined Data Center and Software Defined Networking in Windows Server
 

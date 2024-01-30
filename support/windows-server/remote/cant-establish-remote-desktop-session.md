@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, MVP
 ms.custom: sap:remote-desktop-sessions, csstroubleshoot
-ms.technology: windows-server-rds
+ms.subservice: rds
 ---
 # You can't establish a Remote Desktop session to a computer running one of the affected products
 

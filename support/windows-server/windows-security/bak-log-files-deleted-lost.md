@@ -5,11 +5,11 @@ ms.date: 09/24/2021
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, herbertm, v-lianna
 ms.custom: sap:permissions-access-control-and-auditing, csstroubleshoot
-ms.technology: windows-server-security
+ms.subservice: windows-security
 ---
 # .bak log files are deleted and lost
 
