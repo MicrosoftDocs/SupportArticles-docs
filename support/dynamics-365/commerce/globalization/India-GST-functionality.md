@@ -12,7 +12,7 @@ This article provides a solution for an error that occurs when you work with Goo
 
 ## Symptoms
 
-You might receive an error when trying to calculate GST.
+GST is not calculated for India-specific stores.
 
 ## Resolution
 
