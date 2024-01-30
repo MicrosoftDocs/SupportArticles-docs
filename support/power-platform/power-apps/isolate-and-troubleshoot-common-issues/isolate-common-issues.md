@@ -2,8 +2,8 @@
 title: General Power Apps troubleshooting strategies
 description: Learn about general strategies to narrow down the cause of app errors.
 author: tahoon
-ms.reviewer: tapanm
-ms.date: 07/12/2023
+ms.reviewer: tapanm, lanced
+ms.date: 01/30/2024
 ms.author: tahoon
 search.audienceType: 
   - maker
@@ -14,37 +14,36 @@ contributors:
 ---
 # Power Apps troubleshooting strategies
 
-There are different approaches to troubleshooting Power Apps depending on the type of issue you're facing. The troubleshooting strategies in this article will help you narrow down the cause of the issue and point you in the right direction to work around or fix the issue.
+There are different approaches to troubleshoot Power Apps depending on the type of issue you're facing. The troubleshooting strategies in this article help you narrow down the cause of the issue and point you in the right direction to work around or fix the issue.
 
 ## Functionality troubleshooting
 
-For issues with **functionality** where Power Apps features aren't behaving as expected, try to isolate the problem using the steps and links listed below as a guide.  A critical step in figuring out the issue is being able to reliably reproduce the issue with as few steps as possible.
+For issues with **functionality** where Power Apps features aren't behaving as expected, try to isolate the problem using the steps and links listed below as a guide. A critical step in figuring out the issue is being able to reliably reproduce the issue with as few steps as possible.
 
 As a first step, follow the [General troubleshooting strategies](#general-troubleshooting-strategies).
 
-Then, use the articles below to isolate the issue and create a minimal repro app, where practical. 
+Then, use the articles below to isolate the issue and create a minimal repro app, where practical.
 
 For Canvas apps:
-* [Isolate Canvas App issues](isolate-canvas-app-issues.md)
-* [Minimal Canvas App repro](minimal-canvas-app-repro.md)
+
+- [Isolate Canvas App issues](isolate-canvas-app-issues.md)
+- [Minimal Canvas App repro](minimal-canvas-app-repro.md)
 
 For Model-driven apps:
 
-* [Isolate Model App issues](isolate-model-app-issues.md)
-* [Minimal Model App repro](vanilla-model-driven-app-repro.md)
+- [Isolate Model App issues](isolate-model-app-issues.md)
+- [Minimal Model App repro](vanilla-model-driven-app-repro.md)
 
-When you have isolated the issue to a specific functionality area, use the following sections to help you workaround or address the issue.
+When you have isolated the issue to a specific functionality area, use the following sections to help you work around or address the issue.
 
-<!-- These links should be updated so they link to the separate common-issues-and-resolutions article -->
-
-- [Connectors and delegation](#connectors-and-delegation)
-- [Controls](#controls)
-- [Integration](#integration)
-- [Power Fx](#power-fx)
-- [Region](#region)
-- [Studio and Forms](#studio-and-forms)
-- [Browser](#browser)
-- [Power Apps for Windows](#power-apps-for-windows)
+- [Connectors and delegation](common-issues-and-resolutions.md#connectors-and-delegation)
+- [Controls](common-issues-and-resolutions.md#controls)
+- [Integration](common-issues-and-resolutions.md#integration)
+- [Power Fx](common-issues-and-resolutions.md#power-fx)
+- [Region](common-issues-and-resolutions.md#region)
+- [Studio and Forms](common-issues-and-resolutions.md#studio-and-forms)
+- [Browser](common-issues-and-resolutions.md#browser)
+- [Power Apps for Windows](common-issues-and-resolutions.md#power-apps-for-windows)
 
 See [Next steps](#next-steps) later in this article if your issue isn't listed.
 
@@ -54,23 +53,21 @@ For issues with **performance**, you can use profiling tools like [Monitor](/pow
 
 ### Canvas apps
 
-For an overview of how to create a performant canvas app, see this article:
-
-* [Overview of creating performant apps](/power-apps/maker/canvas-apps/create-performant-apps-overview) section.
+For an overview of how to create a performant canvas app, see [Overview of creating performant apps](/power-apps/maker/canvas-apps/create-performant-apps-overview).
 
 For more information and guidance on creating performant apps, see:
 
-* [Small data payloads](/power-apps/maker/canvas-apps/small-data-payloads)
-* [Optimized data query patterns](/power-apps/maker/optimized-query-data-patterns)
-* [Speed up app or page load](/power-apps/maker/canvas-apps/fast-app-page-load)
-* [Fast calculations](/power-apps/maker/canvas-apps/efficient-calculations)
+- [Small data payloads](/power-apps/maker/canvas-apps/small-data-payloads)
+- [Optimized data query patterns](/power-apps/maker/optimized-query-data-patterns)
+- [Speed up app or page load](/power-apps/maker/canvas-apps/fast-app-page-load)
+- [Fast calculations](/power-apps/maker/canvas-apps/efficient-calculations)
 
 For information on debugging canvas apps and performance issues, see:
 
-* [Understand canvas app execution phases and performance monitoring](/power-apps/maker/canvas-apps/execution-phases-data-flow)
-* [Creating performant apps](/power-apps/maker/canvas-apps/create-performant-apps-overview)
-* [Common canvas app performance issues and resolutions](/power-apps/maker/canvas-apps/common-performance-issue-resolutions)
-* [Debugging canvas apps with Monitor](/power-apps/maker/monitor-canvasapps)
+- [Understand canvas app execution phases and performance monitoring](/power-apps/maker/canvas-apps/execution-phases-data-flow)
+- [Creating performant apps](/power-apps/maker/canvas-apps/create-performant-apps-overview)
+- [Common canvas app performance issues and resolutions](/power-apps/maker/canvas-apps/common-performance-issue-resolutions)
+- [Debugging canvas apps with Monitor](/power-apps/maker/monitor-canvasapps)
 
 ### Model-driven apps
 
@@ -82,33 +79,33 @@ For more information on debugging model-driven apps and performance issues, see 
 
 ### Isolate changes
 
-When you make multiple changes at the same time, it's not obvious which ones contribute to a problem. Try reverting to the last known working state and make a single change. If it works fine, revert the change and make another one until the issue happens. For example, you can [restore a canvas app to a previous version](/power-apps/maker/canvas-apps/restore-an-app) and apply changes progressively.
+When you make multiple changes at the same time, it's not obvious which one contributes to a problem. Try reverting to the last known working state and make a single change. If it works fine, revert the change and make another one until the issue occurs. For example, you can [restore a canvas app to a previous version](/power-apps/maker/canvas-apps/restore-an-app) and apply changes progressively.
 
 <!-- ## Try something related -->
 
-If you're unable to revert an app to a working state, it's also helpful to make one change differently while keeping everything else the same.
+If you can't revert an app to a working state, it's also helpful to make one change differently while keeping everything else the same.
 
 Here are a few examples:
 
 - If searching for a long piece of text doesn't return correct results, try a shorter piece of text.
 - View the same app on the same device, but with a different browser.
-- If data isn't displaying correctly in a control, try displaying it in a different type of control.
-- If data isn't displaying correctly on a page, try a different page or app with the same data.
-- If one data connection isn't working, try another.
+- If data isn't displayed correctly in a control, try displaying it in a different type of control.
+- If data isn't displayed correctly on a page, try a different page or app with the same data.
+- If one data connection doesn't work, try another data connection.
 
 Knowing what works as expected is as important as knowing what doesn't. For example, if you can connect to one Microsoft Dataverse table but not another, the table could be misconfigured. On the other hand, if you can't connect to any tables at all, it could be a larger problem caused by an outage, a network failure, or a bug. These possibilities suggest other avenues for investigation and help you get closer to the source of the error.
 
 ### Simplify
 
-A complex app has many components that might go wrong. Remove unnecessary details so there are fewer variables. 
+A complex app has many components that might go wrong. Remove unnecessary details so there are fewer variables.
 
-If there are [client scripts in model-driven apps](/power-apps/developer/model-driven-apps/client-scripting), try disabling them. Even if the problem still persists, at least you'd eliminate those scripts as the cause of the problem.
+If there are [client scripts in model-driven apps](/power-apps/developer/model-driven-apps/client-scripting), try disabling them. If the problem persists, at least you have eliminated those scripts as the potential cause.
 
 ### Start from scratch
 
-Consider creating a new app or configuration. This process can be broken into multiple simplified steps and checkpoints, especially when the original version is too complex to re-create. Consider the essence of the app and experiment with what works and what doesn't. For example, if a table in a model-driven app doesn't show the right records, try [re-creating the view](/power-apps/developer/model-driven-apps/customize-entity-views).
+Consider creating a new app or configuration. This process can be broken into multiple simplified steps and checkpoints, especially when the original version is too complex to recreate. Consider the essence of the app and experiment with what works and what doesn't. For example, if a table in a model-driven app doesn't show the right records, try [re-creating the view](/power-apps/developer/model-driven-apps/customize-entity-views).
 
-If the new app works, compare it with the original to find the difference. If there's no difference, the problem might be fixed with the latest version. Or, the original app may have configuration problems. Even if you're unable to upgrade your app, knowing if and how the problem was fixed will guide the next steps.
+If the new app works, compare it with the original to find the difference. If there's no difference, the problem might be fixed with the latest version. Or, the original app might have configuration problems. Even if you can't upgrade your app, knowing if and how the problem was fixed will guide the next steps.
 
 ### Find out which layer has data issues
 
@@ -117,7 +114,7 @@ Power Apps is based on web technologies. Different layers are involved when work
 - **Server** - stores data and controls who can access it.
 - **Network** - transports data between the server and the app.
 - **App** - requests data from the server, processes it, and displays it in the app.
-- **App host** - where the app is running. The host provides infrastructure to use an app. For Power Apps, the app host could be a browser, [Power Apps Mobile](/power-apps/mobile/run-powerapps-on-mobile), or another website that Power Apps is embedded in.
+- **App host** - where the app is running. The host provides infrastructure to use an app. For Power Apps, the app host could be a browser, [Power Apps mobile](/power-apps/mobile/run-powerapps-on-mobile), or another website that Power Apps is embedded in.
 
 Together, these layers form a general technical stack for Power Apps. Isolating the layer where a problem occurs can uncover more ideas for solutions and workarounds.
 
@@ -128,9 +125,9 @@ These are some examples of isolating the layer:
   - Check if a different user experiences the same problem. Comparing the experience with an admin user might uncover permission issues.
 - **Network** - there won't be internet access when network isn't available. Though unusual, check the following:
   - [Try a different network](#try-a-different-network)
-  - Try to run the app in a different geographical region, which may have different network conditions or restrictions.
+  - Try to run the app in a different geographical region, which might have different network conditions or restrictions.
 - **App** - use [Monitor](/power-apps/maker/monitor-overview) to examine the network requests made by the app. If the correct data is returned by the server, then it's a problem with the app. If the data returned is wrong, it could be a server error or the app didn't request for data correctly.
-- **App host** - try a different host. For example, if you're using the Power Apps Mobile app for Android, try the mobile app for iOS or use a desktop browser.
+- **App host** - try a different host. For example, if you're using the Power Apps mobile app for Android, try the mobile app for iOS or use a desktop browser.
 
 ### Reproduce intermittent issues reliably
 
@@ -146,7 +143,7 @@ Intermittent issues can be difficult to solve. The key is to create the conditio
 
 #### Try a different network
 
-Slow loading of data might result in different behavior. If you're using a mobile data connection, try wireless or a wired connection. If you're using a VPN, try disabling them. You can also simulate slow networks on desktop browsers with browser developer tools.
+Slow loading of data might result in different behavior. If you're using a mobile data connection, try wireless or a wired connection. If you're using a virtual private network (VPN), try disabling it. You can also simulate slow networks on desktop browsers with browser developer tools.
 
 #### Try a different device
 
