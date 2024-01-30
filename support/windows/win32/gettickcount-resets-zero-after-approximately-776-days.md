@@ -20,7 +20,7 @@ This problem occurs in 32-bit applications running on Windows 10 and later.
 
 ## Status
 
-Microsoft has confirmed this is a problem in Windows 10 and later.
+Microsoft has confirmed this is a problem in Windows 7, Windows Server 2008, and later.
 
 ## Workaround
 
