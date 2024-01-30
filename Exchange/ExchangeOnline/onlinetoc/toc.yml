@@ -391,7 +391,7 @@
       items:
         - name: A different type of Active Directory object already exists error
           href: ../move-or-migrate-mailboxes/different-type-of-active-directory-object-already-exists-error.md
-        - name: GooglePermanentWebException error in Google Workspace migration
+        - name: GooglePermanentWebException error in a Google Workspace migration
           href: ../move-or-migrate-mailboxes/googlepermanentwebexception-in-google-workspace-migration.md
         - name: Can't migrate Google Workspace mailboxes
           href: ../move-or-migrate-mailboxes/google-workspace-mailbox-migration-fail.md
