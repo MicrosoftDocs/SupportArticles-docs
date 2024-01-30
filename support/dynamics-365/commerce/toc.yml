@@ -44,7 +44,7 @@
     - name: Globalization
       items:
         - name: Troubleshoot issues with Goods and Services Tax (GST) integration for India
-          href: globalization/India-GST-functionality.md
+          href: globalization/india-gst-functionality.md
         - name: Troubleshoot issues with digital certificates for fiscal integration
           href: globalization/fiscal-integration-certificate.md
     - name: Order management

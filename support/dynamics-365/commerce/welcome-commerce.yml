@@ -72,7 +72,7 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Troubleshoot issues with Goods and Services Tax (GST) integration for India
-            url: globalization/India-GST-functionality.md
+            url: globalization/india-gst-functionality.md
           - text: Troubleshoot issues with digital certificates for fiscal integration
             url: globalization/fiscal-integration-certificate.md
 
