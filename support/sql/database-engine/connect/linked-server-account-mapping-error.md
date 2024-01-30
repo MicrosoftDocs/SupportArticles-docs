@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot linked server connectivity errors
 description: This article provides a resolution for consistent authentication errors that are related to linked server connectivity.
-ms.date: 01/23/2024
+ms.date: 01/30/2024
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
@@ -48,4 +48,4 @@ In the **Linked Server security** dialog box, when you select the **Be made with
 In addition to the main mapping settings in the **Linked Server security** dialog box, you can modify the individual account mappings in the upper portion of the box. These override the main mapping settings.
 
 > [!NOTE]
-> Using a [SQL Server ODBC driver](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/0650-SQL-Server-Linked-Server-Delegation-Issues) in a linked server isn't a supported scenario. Other ODBC drivers might have primary support from the vendor and only limited support from Microsoft.
+> Using a SQL Server ODBC driver in a linked server isn't a supported scenario. Other ODBC drivers might have primary support from the vendor and only limited support from Microsoft. For more information, see [SQL Server Linked Server Delegation Issues](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/0650-SQL-Server-Linked-Server-Delegation-Issues).
