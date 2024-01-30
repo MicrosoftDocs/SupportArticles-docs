@@ -38,3 +38,5 @@ See the blog post [Best practices for updating your Android Enterprise apps](htt
 ### I want to stay updated on any Google service issue that may cause impact
 
 Google releases [service announcements](https://www.androidenterprise.community/t5/service-announcements/tkb-p/Announcements) containing details about issues that may impact its service. Follow the [instructions to subscribe](https://www.androidenterprise.community/t5/news-info/new-community-board-subscribe-to-the-new-service-announcements/ba-p/1044) and receive notifications for new posts.
+
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-contact-disclaimer.md)]
