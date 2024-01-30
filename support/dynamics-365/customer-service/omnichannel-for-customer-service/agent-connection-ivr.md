@@ -2,21 +2,21 @@
 title: Voice call greeting messages delay connection between agents and customers
 description: Provides a resolution for when voice call greeting messages delay an agent's ability to connect with a customer in Omnichannel for Customer Service voice.
 ms.reviewer: laalexan
-ms.author: srubenstein
+ms.author: srubinstein
 ms.date: 01/30/2024
 ---
 
 # Incoming voice calls with long greeting messages cause connection delays
 
-This article provides a solution for when Omnichannel for Customer Service voice calls that are configured with a greeting message cause delays in connecting an agent with the customer.
+This article provides a solution for when Omnichannel for Customer Service voice calls that are configured with a greeting message cause a connection delay for the agent and customer.
 
 ## Symptoms
 
-As an agent or supervisor, you notice that incoming voice calls that are confifigured to have a greeting message are causing delays before the calls are connected between the agent and the customer.
+As an agent or supervisor, you notice that incoming voice calls that are configured with a greeting message experience delays before agents are able to connect with their customers.
 
 ## Cause
 
-After setting up a greeting message for a channel, the call is intended to transfer to an agent once a greeting message concludes for the customer. However, in certain cases, the call gets transferred to the agent while the greeting message is still playing. This results in the agent having to wait until the greeting message is completed before they are correctly connected to the customer.
+After setting up a greeting message for a channel, the call is intended to transfer to an agent once a greeting message concludes for the customer. However, in certain cases, the call is transferred to the agent while the greeting message is still playing. This results in the agent having to wait until the greeting message completes before they're correctly connected to the customer.
 
 ## Resolution
 
