@@ -340,6 +340,16 @@ Check the available memory on the destination host.
 
 **Description**
 
+Live migration of "Virtual Machine vm1" failed.
+
+Windows Server 2019 may correctly display SSBDHardwarePresent True with the PowerShell Command PS C:\> Get-SpeculationControlSettings. Once the Hyper-V Role is installed SSBDHardwarePresent False will be reported when CPU Extension Features are set on certain processors. Since the features are different between servers live migration may be blocked. 
+
+**Action**
+
+This is a known issue and is resolved in Windows Server 2022. The workaround is to upgrade to Windows Server 2022.
+
+**Description**
+
 Virtual machine migration operation failed at migration Source. Failed to establish a connection with host computer name: No credentials are available in the security package 0x8009030E.
 
 **Action**
