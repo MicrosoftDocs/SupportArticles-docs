@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting intermittent connection errors with SQLCMD
 description: This article provides symptoms and resolution for troubleshooting intermittent connection errors with SQLCMD.
-ms.date: 01/10/2024
+ms.date: 01/31/2024
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
@@ -10,7 +10,7 @@ ms.custom: sap:Connection issues
 
 # Intermittent connection errors with SQLCMD
 
-This article helps you to resolve the intermittent connection errors using the command line utility **SQLCMD**.
+This article helps you to resolve the intermittent connection "OS error 10054" using the command line utility **SQLCMD**.
 
 ## Symptoms
 
@@ -22,7 +22,7 @@ You see the following warning and error messages:
 
 > SQLCMD.EXE : Sqlcmd: Error: Microsoft SQL Server Native Client 10.0 : Client unable to establish connection
 
-One of the possible causes of these errors is unsupported driver.
+One of the possible causes of these errors is an unsupported driver.
 
 ## Questions to consider
 
@@ -40,7 +40,7 @@ Consider the following questions and check if any of them match your results:
 
 ## Resolution
 
-To resolve this issue, follow these steps:
+To resolve the error messages, follow these steps:
 
 1. Specify SQL Server Native Client 11 in the connection string.
 
@@ -48,7 +48,7 @@ To resolve this issue, follow these steps:
    > Microsoft no longer supports SNAC 11. If you find any issues using SNAC 11, you must upgrade to a supported version of Microsoft driver before technical support can be provided.
 
 1. It's recommended that you upgrade the application driver to a supported driver.
-1. Use MSOLEDBSQL v18/ODBC v17 if you aren't using encryption for connection, but if you're using encryption for connection on the application server, use MSOLEDBSQL v19/ODBC v18 as these drivers come with encryption by default. For more information, see the following articles:
+1. Use MSOLEDBSQL v18 or ODBC v17 if you aren't using encryption for connection, but if you're using encryption for connection on the application server, use MSOLEDBSQL v19 or ODBC v18 as these drivers come with encryption by default. For more information, see the following articles:
 
    - [Release notes for OLE DB Driver - OLE DB Driver for SQL Server](/sql/connect/oledb/release-notes-for-oledb-driver-for-sql-server?view=sql-server-ver16&preserve-view=true)
 
