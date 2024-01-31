@@ -7,10 +7,10 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.technology: windows-client-group-policy
+ms.subservice: windows-group-policy
 ---
 # Group Policy troubleshooting documentation for Windows clients
 
