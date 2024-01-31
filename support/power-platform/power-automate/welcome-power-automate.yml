@@ -9,7 +9,7 @@ metadata:
   ms.topic: landing-page # Required
   author: #Required; your GitHub user alias, with correct capitalization.
   ms.author: #Required; microsoft alias of author; optional team alias.
-  ms.date: 01/29/2024
+  ms.date: 01/31/2024
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -25,12 +25,52 @@ landingContent:
             url: administration/conditional-access-and-multi-factor-authentication-in-flow.md
 
   # Card
+  - title: Approvals
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Common errors creating and assigning flow approvals
+            url: approvals/common-errors-creating-and-assigning-flow-approvals.md          
+
+  # Card
+  - title: Authentication or Sign-in
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Can't sign in to Microsoft Flow with "Authentication failed" error
+            url: authentication-or-sign-in/cannot-sign-in-to-microsoft-flow-due-to-authentication-failed.md                    
+
+  # Card
+  - title: Connections
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Check if the gateway is in the right region
+            url: connections/check-if-gateway-is-the-right-region.md
+          - text: Client Request Aborted or Failed to fetch error
+            url: connections/client-request-aborted-failed-fetch.md        
+
+  # Card
+  - title: Desktop flows
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Error code when running an attended or unattended desktop flow
+            url: desktop-flows/troubleshoot-errors-running-attended-or-unattended-desktop-flows.md  
+          - text: '"Power Automate needs an update" message when opening Power Automate for desktop'
+            url: desktop-flows/cannot-update-power-automate-for-desktop.md     
+          - text: UI automation action fails with "Failed to get UI element" or "Failed to get window" error
+            url: desktop-flows/ui-automation-action-fails-errors.md 
+
+  # Card
   - title: Flow run issues
     linkLists:
       - linkListType: how-to-guide
         links:
           - text: InvalidTemplate error due to null fields
             url: flow-run-issues/getting-errors-null-fields.md
+          - text: Troubleshoot slow running flows
+            url: flow-run-issues/troubleshoot-slow-running-flows.md
             
   # Card
   - title: Documentation and training
