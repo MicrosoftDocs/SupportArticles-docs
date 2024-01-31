@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, v-dehaas, waltere, lseri
 ms.custom: sap:folder-redirection-and-offline-files-and-folders-csc, csstroubleshoot
-ms.technology: windows-client-networking
+ms.subservice: networking
 ---
 # How to change the location of the CSC folder by configuring the CacheLocation registry value in Windows
 

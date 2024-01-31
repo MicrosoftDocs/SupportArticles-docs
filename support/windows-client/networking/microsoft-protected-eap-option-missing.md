@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, prachank
 ms.custom: sap:wireless-networking-and-802.1x-authentication, csstroubleshoot
-ms.technology: windows-client-networking
+ms.subservice: networking
 ---
 # Microsoft: Protected EAP (PEAP) option is missing while creating the Wireless Profile
 
