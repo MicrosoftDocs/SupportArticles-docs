@@ -1,7 +1,7 @@
 ---
 title: Common issues with confidential containers
 description: Provides a solution to common issues with confidential containers.
-ms.date: 01/23/2024
+ms.date: 01/30/2024
 ms.reviewer: tysonfreeman, v-weizhu
 ms.service: container-instances
 ---
@@ -46,7 +46,7 @@ You might experience the following issues and errors when you deploy confidentia
     Failed to create containerd task: failed to create shim task: failed to mount container storage: guest modify: guest RPC failure: overlay creation denied by policy: mount_overlay not allowed by policy. Errors: [framework_svn is ahead of the current svn: 1.1.0 > 0.1.0].
     ```
 
-- Invalid base64 confidential computing enforcement (CCE) policy (both base 64 validation and invalid syntax):
+- Invalid base64 confidential computing enforcement (CCE) policy:
 
     ```output
     The CCE Policy is not valid Base64.
@@ -74,8 +74,8 @@ You might experience the following issues and errors when you deploy confidentia
   - Logs aren't showing up.
   - The exec functionality isn't working.
   - Subscription deployment times out after 30 minutes.
-  - Liveness probe with disallow policy
-  - Exit code 139
+  - Liveness probe with disallowed policy.
+  - Exit code 139.
 
 ## Cause
 
