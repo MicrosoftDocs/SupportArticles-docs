@@ -2,13 +2,13 @@
 title: Generate a kernel or complete crash dump
 description: Learn how to generate a kernel or complete crash dump, and then use the output to troubleshoot several issues.
 ms.date: 08/23/2022
-ms.prod: windows-client
+ms.service: windows-client
 ms.topic: troubleshooting
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 ms.collection: highpri
-ms.technology: windows-client-performance
+ms.subservice: performance
 ms.custom: sap:blue-screen/bugcheck, csstroubleshoot
 ms.reviewer: willchen
 audience: itpro

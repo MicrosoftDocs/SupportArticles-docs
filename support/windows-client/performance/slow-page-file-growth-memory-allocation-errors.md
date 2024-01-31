@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, davean, eddo, delhan
 ms.custom: sap:applications, csstroubleshoot
-ms.technology: windows-client-performance
+ms.subservice: performance
 ---
 # Memory allocation errors can be caused by slow page file growth
 

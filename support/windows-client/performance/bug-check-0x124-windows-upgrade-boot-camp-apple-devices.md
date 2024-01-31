@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, jasone, clfish, v-lianna
 ms.custom: sap:blue-screen/bugcheck, csstroubleshoot, ikb2lmc
-ms.technology: windows-client-performance
+ms.subservice: performance
 ---
 # Bug check 0x124 after an in-place upgrade of Windows 10 by using Boot Camp on Apple devices
 
