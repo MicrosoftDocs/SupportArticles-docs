@@ -2,14 +2,14 @@
 title: Event ID 300 - Windows Hello successfully created in Windows 10
 description: This event is created when a Windows Hello for Business is successfully created and registered with Microsoft Entra ID.
 ms.date: 08/25/2022
-ms.prod: windows-client
+ms.service: windows-client
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 ms.reviewer: prsriva, aaroncz
 ms.collection: M365-identity-device-management
 ms.topic: troubleshooting
-ms.technology: windows-client-user-profiles
+ms.subservice: user-profiles
 ms.custom: sap:hello-for-business, csstroubleshoot
 audience: itpro
 localization_priority: medium

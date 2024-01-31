@@ -11,14 +11,200 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/power-platform/power-automate/conditional-access-and-multi-factor-authentication-in-flow.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/administration/conditional-access-and-multi-factor-authentication-in-flow",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/flow-extension-package-shows-installation-failed.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/administration/flow-extension-package-shows-installation-failed",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "support/power-platform/power-automate/desktop-flows/cannot-access-gateway-run-queue.md",
       "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/desktop-flows/cannot-access-gateway-run-queue",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-automate/common-errors-creating-and-assigning-flow-approvals.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/approvals/common-errors-creating-and-assigning-flow-approvals",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/differences-between-flow-approval-actions.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/approvals/differences-between-flow-approval-actions",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/flow-approval-cds-provisioning-errors.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/approvals/flow-approval-cds-provisioning-errors",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/guest-approval-email-error.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/approvals/guest-approval-email-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/issues-with-flow-approval-emails-in-outlook.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/approvals/issues-with-flow-approval-emails-in-outlook",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/power-automate-approval-email-information.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/approvals/power-automate-approval-email-information",
+      "redirect_document_id": true
     },
  {
       "source_path": "support/power-platform/power-automate/desktop-flows/double-click-drag-drop-are-not-working.md",
       "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/desktop-flows/double-click-drag-drop-are-not-working",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-automate/cannot-sign-in-to-microsoft-flow-due-to-authentication-failed.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/authentication-or-sign-in/cannot-sign-in-to-microsoft-flow-due-to-authentication-failed",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/cannot-sign-in-to-onedrive-connector-when-using-office-365-account-during-flow-creation.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/authentication-or-sign-in/cannot-sign-in-to-onedrive-connector-when-using-office-365-account-during-flow-creation",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/troubleshoot-ui-flow-invalid-credentials-error-using-aad-account.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/authentication-or-sign-in/troubleshoot-ui-flow-invalid-credentials-error-using-aad-account",
+      "redirect_document_id": true
+    },
+
+    {
+      "source_path": "support/power-platform/power-automate/check-if-gateway-is-the-right-region.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/connections/check-if-gateway-is-the-right-region",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/client-request-aborted-failed-fetch.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/connections/client-request-aborted-failed-fetch",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/troubleshooting-flow-connections.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/connections/troubleshooting-flow-connections",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/troubleshooting-flow-custom-connectors.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/connections/troubleshooting-flow-custom-connectors",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/unable-send-smtp-email.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/connections/unable-send-smtp-email",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/user-does-not-have-a-service-plan-error.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/connections/user-does-not-have-a-service-plan-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/cds-user-cannot-access-power-automate-business-process-flows-on-demand-workflows.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/dataverse-cds/cds-user-cannot-access-power-automate-business-process-flows-on-demand-workflows",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/converting-time-zone-power-automate.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/flow-creation/converting-time-zone-power-automate",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/dropdown-does-not-list-items-in-trigger-or-action.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/flow-creation/dropdown-does-not-list-items-in-trigger-or-action",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/dynamic-content-picker-missing-dynamic-content-from-previous-steps.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/flow-creation/dynamic-content-picker-missing-dynamic-content-from-previous-steps",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/failed-fetch-error-when-creating-flow.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/flow-creation/failed-fetch-error-when-creating-flow",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/fail-to-list-excel-online-tables-retrieving-values.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/flow-creation/fail-to-list-excel-online-tables-retrieving-values",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/flow-editor-issues-recommendations.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/flow-creation/flow-editor-issues-recommendations",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/flow-embed-sdk.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/flow-creation/flow-embed-sdk",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/flow-management-errors-recommendations.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/flow-creation/flow-management-errors-recommendations",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/how-to-copy-items-between-two-sharepoint-lists-via-flow.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/flow-creation/how-to-copy-items-between-two-sharepoint-lists-via-flow",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/known-issues-power-apps-v2-trigger.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/flow-creation/known-issues-power-apps-v2-trigger",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/unable-to-find-excel-online-table-in-microsoft-flow.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/flow-creation/unable-to-find-excel-online-table-in-microsoft-flow",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/widget-cookies-pop-up-error.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/flow-creation/widget-cookies-pop-up-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/manage-orphan-flow-when-owner-leaves-org.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/flow-management/manage-orphan-flow-when-owner-leaves-org",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/flow-runtime-errors-recommendations.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/flow-run-issues/flow-runtime-errors-recommendations",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/getting-errors-null-fields.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/flow-run-issues/getting-errors-null-fields",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/issues-triggering-emails-with-attachments-from-shared-mailbox.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/flow-run-issues/issues-triggering-emails-with-attachments-from-shared-mailbox",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/missing-runs-or-triggers-history-for-a-flow.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/flow-run-issues/missing-runs-or-triggers-history-for-a-flow",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/there-is-a-problem-with-the-flows-trigger.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/flow-run-issues/there-is-a-problem-with-the-flows-trigger",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/troubleshoot-slow-running-flows.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/flow-run-issues/troubleshoot-slow-running-flows",
+      "redirect_document_id": true
     },
     {
       "source_path": "support/power-platform/power-automate/unable-create-ui-flow.md",

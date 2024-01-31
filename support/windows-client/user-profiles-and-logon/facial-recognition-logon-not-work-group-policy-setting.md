@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, justintu
 ms.custom: sap:user-logon-fails, csstroubleshoot
-ms.technology: windows-client-user-profiles
+ms.subservice: user-profiles
 ---
 # Facial recognition logon doesn't work after you apply a Group Policy setting in Windows 10
 

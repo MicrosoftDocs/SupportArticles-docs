@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, takondo, mitsuchi, jamesxia
 ms.custom: sap:smart-card-logon, csstroubleshoot
-ms.technology: windows-client-user-profiles
+ms.subservice: user-profiles
 ---
 # Integrated Unblock screen not displayed when smart card PIN is blocked
 
