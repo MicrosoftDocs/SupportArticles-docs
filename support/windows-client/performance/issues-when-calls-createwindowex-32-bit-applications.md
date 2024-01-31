@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, memarti, chmorri, v-jesits
 ms.custom: sap:applications, csstroubleshoot
-ms.technology: windows-client-performance
+ms.subservice: performance
 ---
 # Windows 10 causes issues when it calls CreateWindowEx in some 32-bit applications
 

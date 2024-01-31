@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: rnitsch, kaushika
 ms.custom: sap:remote-access, csstroubleshoot
-ms.technology: windows-client-networking
+ms.subservice: networking
 ---
 # Modern Apps can't connect when you use a Check Point VPN connection
 

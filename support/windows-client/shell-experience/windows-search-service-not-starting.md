@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:cortana-and-search, csstroubleshoot
-ms.technology: windows-client-shell-experience
+ms.subservice: shell-experience
 ---
 # Windows Search service not starting with Windows Search service on local computer started and then stopped error
 

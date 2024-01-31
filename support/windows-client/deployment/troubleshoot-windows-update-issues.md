@@ -5,11 +5,11 @@ ms.date: 04/28/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate
 ms.custom: csstroubleshoot
-ms.technology: windows-client-deployment
+ms.subservice: deployment
 ---
 
 # Windows Update troubleshooting guidance

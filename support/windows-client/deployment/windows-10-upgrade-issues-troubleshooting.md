@@ -4,10 +4,10 @@ description: Understanding the Windows 10 upgrade process can help you troublesh
 ms.date: 04/28/2023
 manager: dcscontentpm
 ms.author: aaroncz
-ms.prod: windows-client
+ms.service: windows-client
 author: aczechowski
 ms.topic: troubleshooting
-ms.technology: windows-client-deployment
+ms.subservice: deployment
 ms.custom: sap:setup, csstroubleshoot
 ms.reviewer: dougeby
 audience: itpro
