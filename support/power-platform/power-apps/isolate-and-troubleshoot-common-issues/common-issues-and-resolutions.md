@@ -4,7 +4,7 @@ description: A list of common issues and resolutions within Power Apps.
 author: KumarVivek
 ms.custom: canvas
 ms.reviewer: tapanm, lanced, tahoon 
-ms.date: 01/30/2024
+ms.date: 01/31/2024
 ms.author: kvivek
 search.audienceType: 
   - maker
@@ -16,9 +16,9 @@ contributors:
 ---
 # Common issues and resolutions for Power Apps
 
-This article lists common issues you might encounter while using Power Apps. Issues are grouped by area and summary-level workarounds are provided where applicable, with pointers to primary documentation locations where you might find more details.
+This article lists common issues you might encounter while using Power Apps. Issues are grouped by area, and summary-level workarounds are provided where applicable, with pointers to primary documentation locations where you might find more details.
 
-Refer to the introductory article [Power Apps troubleshooting strategies](isolate-common-issues.md) for guidance on narrowing down the source of your issue. That article outlines key principles in debugging both functional and performance issues.
+Refer to the introductory article [Power Apps troubleshooting strategies](isolate-common-issues.md) for guidance on narrowing down the source of your issue. That article outlines key principles for debugging both functional and performance issues.
 
 ## Common issue areas
 
@@ -36,29 +36,29 @@ Refer to the introductory article [Power Apps troubleshooting strategies](isolat
 
 - See [Connections](/power-apps/maker/canvas-apps/connections-list) for an overview of how tabular and action connectors work.
 - See [Understanding delegation in a canvas app](/power-apps/maker/canvas-apps/delegation-overview) for details about delegation.
-- See [Debugging canvas apps with Monitor](/power-apps/maker/monitor-canvasapps) for a description on how to monitor the data being sent and returned.
+- See [Debugging canvas apps with Monitor](/power-apps/maker/monitor-canvasapps) for a description of how to monitor the data being sent and returned.
 
 ### Common issues
 
 1. **Automatic Next links for galleries and grids don't work for action-based connectors.**
 
-    Next links (the property on a query result that enables a gallery or grid to automatically page in the next set of results of a query) aren't supported for action-based connectors. See the [Overview of connectors for canvas apps](/power-apps/maker/canvas-apps/connections-list#actions) for a discussion on this topic.
+    Next links (the property on a query result that enables a gallery or grid to automatically page in the next set of results of a query) aren't supported for action-based connectors. For a discussion of this topic, see the [Overview of connectors for canvas apps](/power-apps/maker/canvas-apps/connections-list#actions).
 
-1. **Sharing a Canvas apps using SharePoint connector**
+1. **Sharing a Canvas app using SharePoint connector**
 
-    See [Connect to SharePoint from a canvas app](/power-apps/maker/canvas-apps/connections/connection-sharepoint-online) for details on how to share an app for SharePoint.
+    For more information about how to share an app for SharePoint, see [Connect to SharePoint from a canvas app](/power-apps/maker/canvas-apps/connections/connection-sharepoint-online).
 
 1. **SQL data sources no longer add a "[dbo]" prefix to the data source name.**
 
-    See [Connect to SQL Server from Power Apps](/power-apps/maker/canvas-apps/connections/connection-azure-sqldatabase) for details on this change.
+    For more information about this change, see [Connect to SQL Server from Power Apps](/power-apps/maker/canvas-apps/connections/connection-azure-sqldatabase).
 
 1. **Custom connectors and Microsoft Dataverse**
 
-    If an app created using Power Apps build 2.0.540 or earlier relies on a database in the Dataverse and at least one custom connector in a different environment, you'll need to deploy the connector to the same environment as the database and update the app to use the new connector. Otherwise, a dialog box will notify users that the API wasn't found. For more information, see [Environments overview](/power-platform/admin/environments-overview).
+    If an app created using Power Apps build 2.0.540 or earlier relies on a database in the Dataverse and at least one custom connector in a different environment, you'll need to deploy the connector to the same environment as the database and update the app to use the new connector. Otherwise, a dialog will notify users that the API wasn't found. For more information, see [Environments overview](/power-platform/admin/environments-overview).
 
 1. **Column names with spaces**
 
-    If you're using a list created using Microsoft Lists, or a SharePoint library, or an Excel table in which a column name contains a space, Power Apps will replace it with **"\_x0020\_"**. For example, **"Column Name"** in SharePoint or Excel will appear as **"Column_x0020_Name"** in Power Apps when displayed in the data layout or used in a formula.
+    If you're using a list created using Microsoft Lists, a SharePoint library, or an Excel table in which a column name contains a space, Power Apps will replace it with **"\_x0020\_"**. For example, **"Column Name"** in SharePoint or Excel will appear as **"Column_x0020_Name"** in Power Apps when displayed in the data layout or used in a formula.
 
 1. **Apps that connect to on-premises SharePoint**
 
@@ -76,9 +76,9 @@ Refer to the introductory article [Power Apps troubleshooting strategies](isolat
 
     For more information, see [SharePoint Online](/power-apps/maker/canvas-apps/connections/connection-sharepoint-online#known-issues).
 
-1. **Sign-in issue on certain Android mobile devices when using authenticator** (August 21, 2019)
+1. **Sign-in issues on certain Android mobile devices when using authenticator** (August 21, 2019)
 
-    In certain devices and scenarios, you might experience sign-in failures when using authenticator. This is due to the OEM limiting this functionality. For more information, see [ADALError: BROKER_AUTHENTICATOR_NOT_RESPONDING](https://github.com/AzureAD/azure-activedirectory-library-for-android/wiki/ADALError:-BROKER_AUTHENTICATOR_NOT_RESPONDING).
+    In certain devices and scenarios, you might experience sign-in failures when using an authenticator. This is due to the OEM limiting this functionality. For more information, see [ADALError: BROKER_AUTHENTICATOR_NOT_RESPONDING](https://github.com/AzureAD/azure-activedirectory-library-for-android/wiki/ADALError:-BROKER_AUTHENTICATOR_NOT_RESPONDING).
 
 1. **Office 365 Video connector isn't supported.**
 
@@ -86,9 +86,9 @@ Refer to the introductory article [Power Apps troubleshooting strategies](isolat
 
 ### Common issues
 
-1. **Can't copy and paste forms into data cards**
+1. **Can't copy and paste forms into data cards.**
 
-    You can't copy and paste forms into data cards. This is to prevent certain combinations of controls from being created that risk the stability and the performance of the app. To learn about how to configure forms that allow scrolling, see [scrolling screen for forms](/power-apps/maker/canvas-apps/add-scrolling-screen#scrolling-screen-for-forms).
+    You can't copy and paste forms into data cards. This is to prevent certain combinations of controls from being created that risk the stability and performance of the app. To learn how to configure forms that allow scrolling, see [scrolling screen for forms](/power-apps/maker/canvas-apps/add-scrolling-screen#scrolling-screen-for-forms).
 
 1. **Camera images don't contain meta-data information.**
 
@@ -106,13 +106,13 @@ Refer to the introductory article [Power Apps troubleshooting strategies](isolat
 
     When you use a **Combo box** control inside a gallery, its selections aren't maintained when the user scrolls the gallery. This isn't an issue if you use a **Combo box** control inside a gallery that doesn't scroll. A workaround isn't currently available.
 
-1. **Data Table control**
+1. **"Data Table" control**
 
-    If you copy and paste a **Data Table** control for which the **Items** property is set to a formula that contains a **Filter** function, the formula for the **Items** property on the new **Data Table** control ends up with field names that contain a **_1** suffix. This makes the field names invalid and results in no data showing up in the data table. To work around this issue, before you copy the control, confirm that the **Filter** function doesn't reference any field in the data source that has the same name as a column in the **Data Table** control. If it does, rename the column in the **Data Table** control. Alternatively, remove the **_1** suffix from the invalid field names so they match the names in the table.
+    If you copy and paste a **Data Table** control for which the **Items** property is set to a formula that contains a **Filter** function, the formula for the **Items** property on the new **Data Table** control ends up with field names that contain a **_1** suffix. This makes the field names invalid and results in no data showing up in the data table. To work around this issue, before you copy the control, confirm that the **Filter** function doesn't reference any field in the data source that has the same name as a column in the **Data Table** control. If it does, rename the column in the **Data Table** control. Alternatively, remove the **_1** suffix from the invalid field names so that they match the names in the table.
 
 1. **"Empty" gallery when opening an app**
 
-    If you generate an app automatically from data, save the app, and then reopen it, the browse gallery might not immediately show any data. To resolve this issue, type at least one character in the search box, and then delete the text that you typed. The gallery will then show data as expected.
+    If you generate an app automatically from data, save the app, and then reopen it, the browse gallery might not immediately show any data. To resolve this issue, type at least one character in the search box, and then delete the text that you typed. The gallery will then show the data as expected.
 
 1. **Scanning a barcode**
 
@@ -122,7 +122,7 @@ Refer to the introductory article [Power Apps troubleshooting strategies](isolat
 
     If your mobile device is low on memory, the camera is temporarily disabled to avoid crashing the device.
 
-1. **Camera issue on Android mobile devices**
+1. **Camera issues on Android mobile devices**
 
     If the camera control stops working on an Android device, republish your app, and reopen it on the device. The camera control was updated in response to a change in the Android operating system, and your app will benefit from the update when you republish.
 
@@ -130,16 +130,16 @@ Refer to the introductory article [Power Apps troubleshooting strategies](isolat
 
     Power Apps Mobile runs on various types of devices, and some of them have limitations that are specific to that platform:
 
-    - You can play videos in multiple **Video** controls at the same time on all platforms except for iPhone devices.
-    - You can record audio with multiple **Microphone** controls at the same time on all platforms except for the web player.
+    - You can play videos in multiple **Video** controls at the same time on all platforms except iPhone devices.
+    - You can record audio with multiple **Microphone** controls at the same time on all platforms except the web player.
 
 1. **Drawing with mouse or touch input isn't smooth in Power Apps for Windows.**
 
-    The pen control only has partial support for drawing using mouse or touch input in the Windows app. Strokes might be intermittent. For smooth drawing, use a pen or run the app in a browser.
+    The pen control only has partial support for drawing using a mouse or touch input in the Windows app. Strokes might be intermittent. For smooth drawing, use a pen or run the app in a browser.
 
-1. **Camera controls in Power Apps for Windows app**
+1. **Camera controls in Power Apps for Windows**
 
-   Power Apps for Windows app might crash if you open an app that uses a camera control. To avoid this problem, use the web player on the Windows platform. Also, multiple cameras aren't supported.
+   Power Apps for Windows might crash if you open an app that uses a camera control. To avoid this problem, use the web player on the Windows platform. Also, multiple cameras aren't supported.
 
    1. **Camera control on a Windows phone**
 
@@ -151,7 +151,7 @@ Refer to the introductory article [Power Apps troubleshooting strategies](isolat
 
 1. **`Connection.Connected` returns the wrong value during OnStart in Power Apps for Windows.**
 
-   While offline, the `Connection.Connected` formula might wrongly return **true** immediately after starting an app in the Windows app. As a workaround, delay when the logic depending on it is executed by using a **Timer** control.
+   While offline, the `Connection.Connected` formula might wrongly return **true** immediately after starting an app in the Windows app. As a workaround, use a **Timer** control to delay the execution of the logic depending on it.
 
 1. **Issues with Date-time**
 
@@ -159,9 +159,9 @@ Refer to the introductory article [Power Apps troubleshooting strategies](isolat
 
 ## Region
 
-1. **Performance degradation when opening Power Apps Studio in China**
+**Performance degradation when opening Power Apps Studio in China**
 
-    [Power Apps Studio](/power-apps/maker/canvas-apps/power-apps-studio) might take more than 30 seconds when loading in China. This issue doesn't impact tenants hosted locally by 21Vianet.
+[Power Apps Studio](/power-apps/maker/canvas-apps/power-apps-studio) might take more than 30 seconds when loading in China. This issue doesn't impact tenants hosted locally by 21Vianet.
 
 ## Studio and Forms
 
@@ -173,7 +173,7 @@ The [Power Apps Studio](/power-apps/maker/canvas-apps/power-apps-studio) is home
 
 1. **Problems changing dimensions or orientation of SharePoint forms**
 
-   If you have issues with the **Screen size + orientation** settings for custom SharePoint forms, you can use the **Custom** size to work around the issue. First, reset the setting by selecting **Small** size, then toggle **Orientation** to **Portrait** and then back to **Landscape**. Then, select **Custom** and enter a desired screen size. For reference, the preset values are "Width: 270, Height: 480" for the Small Portrait size, and "Width: 720, Height: 480" for Small Landscape size.
+   If you have issues with the **Screen size + orientation** settings for custom SharePoint forms, you can use the **Custom** size to work around the issue. First, reset the setting by selecting the **Small** size, then toggle **Orientation** to **Portrait** and then back to **Landscape**. Then, select **Custom** and enter a desired screen size. For reference, the preset values are "Width: 270, Height: 480" for the Small Portrait size, and "Width: 720, Height: 480" for the Small Landscape size.
 
 1. **Copying and pasting screens across apps**
 
@@ -181,19 +181,19 @@ The [Power Apps Studio](/power-apps/maker/canvas-apps/power-apps-studio) is home
 
 1. **Changing the layout of SharePoint forms**
 
-    While customizing a SharePoint forms in certain languages, if you try to change the layout from **Portrait** (default) to **Landscape**, the app might show multiple errors (yellow triangles in controls). To resolve these errors and retain the landscape layout, select **Undo**.
+    While customizing SharePoint forms in certain languages, if you try to change the layout from **Portrait** (default) to **Landscape**, the app might show multiple errors (yellow triangles in controls). To resolve these errors and retain the landscape layout, select **Undo**.
 
 1. **Changing a flow in a shared app**
 
-    If you add a flow to an app, share it, and then add a service or change a connection in the flow, you must remove the flow from the shared app, readd the flow, and reshare the app. Otherwise, users who trigger the flow receive an authentication failure.
+    If you add a flow to an app, share it, and then add a service or change a connection in the flow, you must remove the flow from the shared app, re-add the flow, and then reshare the app. Otherwise, users who trigger the flow receive an authentication failure.
 
-1. **Changing a Title field in a table**
+1. **Changing a "Title" field in a table**
 
-    If you change the **Title** field for a table that other tables reference through one or more lookups, an error occurs when you try to save the change. To work around this issue, remove any lookups to the table for which you want to change the **Title** field, make the change, and then recreate the lookups. For more information about lookups, see [Create a relationship between tables](/power-apps/maker/data-platform/data-platform-entity-lookup).
+    If you change the **Title** field for a table that other tables reference through one or more lookups, an error occurs when you try to save the change. To work around this issue, remove any lookups to the table for which you want to change the **Title** field, make the change, and then re-create the lookups. For more information about lookups, see [Create a relationship between tables](/power-apps/maker/data-platform/data-platform-entity-lookup).
 
 1. **When Power Apps generates an app from data, the field used for sorting and searching isn't automatically configured.**
 
-   To configure this field, edit the **[Items](/power-apps/maker/canvas-apps/controls/properties-core)** formula for the gallery, as the sections for filtering and sorting in [Add a gallery](/power-apps/maker/canvas-apps/add-gallery) describe.
+   To configure this field, edit the "[Items](/power-apps/maker/canvas-apps/controls/properties-core)" formula for the gallery, as the sections for filtering and sorting in [Add a gallery](/power-apps/maker/canvas-apps/add-gallery) describe.
 
 1. **It can sometimes take a moment before a newly shared app can be used.**
 
@@ -203,27 +203,27 @@ The [Power Apps Studio](/power-apps/maker/canvas-apps/power-apps-studio) is home
 
     The stock custom card is missing the **[Update](/power-apps/maker/canvas-apps/controls/control-card)** property, which is required to write back changes. To work around this issue:
 
-    - Select the Form control, and insert a card by using the right-hand pane based on the field that you want the card to show.
+    - Select the **Form** control, and insert a card by using the right-hand pane based on the field that you want the card to show.
     - Unlock the card, as described in [Understanding data cards](/power-apps/maker/canvas-apps/working-with-cards#unlock-a-card).
     - Remove or rearrange controls within the card as you see fit, just as you would with the custom card.
 
 1. **Card gallery is deprecated.**
 
-    Existing apps that use this feature continues to run for the time being, but you can't add a card gallery. Replace card galleries with the new **[Edit form](/power-apps/maker/canvas-apps/controls/control-form-detail)** and **[Display form](/power-apps/maker/canvas-apps/controls/control-form-detail)** controls.
+    Existing apps that use this feature continue to run for now, but you can't add a card gallery. Replace card galleries with the new **[Edit form](/power-apps/maker/canvas-apps/controls/control-form-detail)** and **[Display form](/power-apps/maker/canvas-apps/controls/control-form-detail)** controls.
 
 ## Browser
 
-1. **Browser running out of memory**
+**Browser running out of memory**
 
-    If you're using the 32-bit version of Google Chrome or Microsoft Edge and run out of memory while using Power Apps, consider using the 64-bit version.
+If you're using the 32-bit version of Google Chrome or Microsoft Edge and run out of memory while using Power Apps, consider using the 64-bit version.
 
 ## Power Apps for Windows
 
-1. **Power Apps mobile app for Windows platform doesn't support Dropbox connector.**
+1. **Power Apps mobile app for the Windows platform doesn't support the Dropbox connector.**
 
    A pop-up dialog shows the following message in this situation:
 
-   > We can't connect to the service you need right now. Check your network connection or try again later
+   > We can't connect to the service you need right now. Check your network connection or try again later.
 
    When this issue occurs, consider using a web player on the Windows platform.
 
@@ -235,4 +235,4 @@ The [Power Apps Studio](/power-apps/maker/canvas-apps/power-apps-studio) is home
 
 ## Next steps
 
-If your issue isn't listed in this article, you can [search for more support resources](https://powerapps.microsoft.com/support), or contact [Microsoft support](https://admin.powerplatform.microsoft.com/support). For more information, [Get Help + Support](/power-platform/admin/get-help-support).
+If your issue isn't listed in this article, you can [search for more support resources](https://powerapps.microsoft.com/support), or contact [Microsoft support](https://admin.powerplatform.microsoft.com/support). For more information, see [Get Help + Support](/power-platform/admin/get-help-support).
