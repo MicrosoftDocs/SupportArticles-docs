@@ -95,7 +95,6 @@
         "dynamics-365/remote-assist/**/*.md": "https://experience.dynamics.com/ideas/categories/?forum=4323c621-52bc-e811-a975-000d3a1bec70&forumName=Dynamics%20365%20Remote%20Assist",
         "dynamics-365/supply-chain/**/*.md": "https://experience.dynamics.com/ideas/categories/?forum=515617a5-dedb-e911-a814-000d3a4f1244&forumName=Dynamics%20365%20Supply%20Chain%20Management",
         "power-platform/power-apps/**/*.md": "https://ideas.powerapps.com/d365community/forum/f1458c72-ae29-ed11-9db2-000d3a8c451e",
-        "power-platform/power-automate/*.md": "https://ideas.powerautomate.com/d365community/forum/086dd68e-597f-ec11-8d21-0022482e8f9f",
         "power-platform/power-automate/**/*.md": "https://ideas.powerautomate.com/d365community/forum/086dd68e-597f-ec11-8d21-0022482e8f9f",
         "power-platform/ai-builder/*.md": "https://powerusers.microsoft.com/t5/AI-Builder/bd-p/AIBuilder1",
         "windows-server/**/*.md": "https://techcommunity.microsoft.com/t5/windows-server-for-it-pro/bd-p/WindowsServer",
@@ -198,7 +197,6 @@
         "azure/synapse-analytics/**/*.md": "synapse-analytics",
         "azure/cosmos-db/**/*.md": "cosmos-db",
         "power-platform/power-apps/**/**.*": "powerapps",
-        "power-platform/power-automate/*.md": "power-automate",
         "power-platform/power-automate/**/*.md": "power-automate",
         "dynamics-365/customer-insights/**/**.*": "customer-insights",
         "dynamics-365/customer-service/**/**.*": "dynamics-365-customerservice",
@@ -459,7 +457,6 @@
         "dynamics-365/commerce/**/*.md": "Dynamics 365 Commerce",
         "dynamics-365/supply-chain/**/*.md": "Dynamics 365 Supply Chain Management",
         "power-platform/power-apps/**/*.md": "Power Apps",
-        "power-platform/power-automate/*.md": "Power Automate",
         "power-platform/power-automate/**/*.md": "Power Automate",
         "power-platform/ai-builder/*.md": "AI Builder",
         "sales-copilot/**/*.md": "Copilot for Sales",
@@ -606,11 +603,6 @@
           "Power Platform",
           "Power Automate"
         ],
-        "power-platform/power-automate/*.md": [
-          "Troubleshoot",
-          "Power Platform",
-          "Power Automate"
-        ],
         "power-platform/ai-builder/*.md": [
           "Troubleshoot",
           "Power Platform",
@@ -626,10 +618,6 @@
           "PowerApps",
           "powerapps-docs",
           "dataverse-docs"
-        ],
-        "power-platform/power-automate/*.md": [
-          "Flow",
-          "powerautomate-docs"
         ],
         "power-platform/power-automate/**/*.md": [
           "Flow",
