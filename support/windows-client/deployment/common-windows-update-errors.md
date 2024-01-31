@@ -2,14 +2,14 @@
 title: Common Windows Update errors
 description: Describes some common issues you might experience with Windows Update and steps to resolve them.
 ms.date: 05/31/2023
-ms.prod: windows-client
+ms.service: windows-client
 author: aczechowski
 ms.author: aaroncz
 manager: dcscontentpm
 ms.reviewer: kaushika, dougeby
 ms.topic: troubleshooting
 ms.collection: highpri
-ms.technology: windows-client-deployment
+ms.subservice: deployment
 ms.custom: sap:servicing, csstroubleshoot
 audience: itpro
 localization_priority: medium

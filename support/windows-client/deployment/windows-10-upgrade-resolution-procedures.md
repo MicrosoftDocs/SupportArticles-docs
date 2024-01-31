@@ -4,11 +4,11 @@ description: Discover general troubleshooting procedures for dealing with 0xC190
 ms.date: 04/28/2023
 manager: dcscontentpm
 ms.author: aaroncz
-ms.prod: windows-client
+ms.service: windows-client
 author: aczechowski
 ms.topic: troubleshooting
 ms.collection: highpri
-ms.technology: windows-client-deployment
+ms.subservice: deployment
 ms.custom: sap:setup, csstroubleshoot
 ms.reviewer: dougeby
 audience: itpro
