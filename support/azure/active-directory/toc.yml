@@ -15,10 +15,6 @@
     href: understand-ad-fs-sign-in-events-azure-ad-connect-health.md
   - name: Understand Microsoft Entra Connect 1.4 and device disappearance
     href: reference-connect-device-disappearance.md
-  - name: Sign-in and Multi-factor Authentication
-    items:
-    - name: Authentication fails with error 'The requested federation realm object '<Object ID>' does not exist'
-      href: authentication-fails-with-error.md
 
   - name: Microsoft Entra Hybrid Sync Agent Installation Issues
 
@@ -141,6 +137,8 @@
   items:
   - name: An unknown error occurred
     href: unknown-error-occurred-sign-in-assistant.md
+  - name: Authentication fails with error 'The requested federation realm object '<Object ID>' does not exist'
+    href: authentication-fails-with-error.md
   - name: Authorization_RequestDenied error when changing password
     href: authorization-request-denied-graph-api.md
   - name: Can't authenticate using ADAL
