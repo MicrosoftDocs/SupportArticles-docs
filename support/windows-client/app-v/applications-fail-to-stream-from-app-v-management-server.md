@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, jeffpatt
 ms.custom: sap:management-server-issues, csstroubleshoot
-ms.technology: windows-client-application-virtualization-app-v
+ms.subservice: application-virtualization-app-v
 ---
 # How to troubleshoot applications failing to stream from an App-V management server
 
