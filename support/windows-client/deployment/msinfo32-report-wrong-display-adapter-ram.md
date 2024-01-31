@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:devices-and-drivers, csstroubleshoot
-ms.technology: windows-client-deployment
+ms.subservice: deployment
 ---
 # Msinfo32.exe reports an unexpected value for the Display Adapter RAM when the graphics adapter has 2 GB or more of dedicated video memory
 
