@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, naokioh, juesaigo
 ms.custom: sap:errors-and-troubleshooting:-print-output-or-print-failures, csstroubleshoot
-ms.technology: windows-client-printing
+ms.subservice: printing
 ---
 # Two-sided (duplex) printing options cannot be set for applications in Windows 8.1 and Windows 8
 
