@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, bchee
 ms.custom: sap:windows-media-player, csstroubleshoot
-ms.technology: windows-client-shell-experience
+ms.subservice: shell-experience
 ---
 # You receive a codec error message, or audio plays but video doesn't play when you play media files in Windows Media Player 11
 

@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:windows-media-player, csstroubleshoot
-ms.technology: windows-client-shell-experience
+ms.subservice: shell-experience
 ---
 # Description of the Windows Media Feature Pack for Windows 7 N and for Windows 7 KN
 
