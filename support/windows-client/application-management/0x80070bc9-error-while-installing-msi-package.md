@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:msi, csstroubleshoot
-ms.technology: windows-client-application-compatibility
+ms.subservice: application-compatibility
 ---
 # "HRESULT: 0x80070BC9" error message while you're installing an MSI package during Windows setup or hotfix installation
 
