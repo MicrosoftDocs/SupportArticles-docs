@@ -8,11 +8,11 @@ metadata:
   manager: dcscontentpm
   audience: itpro
   ms.topic: faq
-  ms.prod: windows-server
+  ms.service: windows-server
   localization_priority: medium
   ms.reviewer: kaushika, MBIAS
   ms.custom: sap:partition-and-volume-management, csstroubleshoot
-  ms.technology: windows-server-backup-and-storage
+  ms.subservice: backup-and-storage
 title: Frequently asked questions about the GUID Partitioning Table disk architecture
 summary: |
   This article provides a list of frequently asked questions about the GUID Partition Table disk architecture.

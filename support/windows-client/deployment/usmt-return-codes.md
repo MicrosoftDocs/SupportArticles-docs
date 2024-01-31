@@ -4,11 +4,11 @@ description: Learn about User State Migration Tool (USMT) 10.0 return codes and 
 ms.reviewer: frankroj
 manager: dcscontentpm
 ms.author: delhan
-ms.prod: windows-client
+ms.service: windows-client
 author: Deland-Han
 ms.date: 04/28/2023
 ms.topic: troubleshooting
-ms.technology: windows-client-deployment
+ms.subservice: deployment
 ms.custom: sap:usmt, csstroubleshoot
 audience: itpro
 localization_priority: medium

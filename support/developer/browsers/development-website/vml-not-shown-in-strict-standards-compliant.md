@@ -3,7 +3,6 @@ title: VML element not shown in strict standards-compliant
 description: A VML element isn't shown in strict standards-compliant mode when the HTML page uses !DOCTYPE element in Internet Explorer 9.
 ms.date: 03/26/2020
 ms.reviewer: emmanubo
-ms.technology: internet-explorer-development-website
 ---
 # VML element isn't displayed in strict standards-compliant mode in Internet Explorer 9
 

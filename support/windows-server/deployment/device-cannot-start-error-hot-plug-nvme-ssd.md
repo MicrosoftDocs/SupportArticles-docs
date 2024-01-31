@@ -5,11 +5,11 @@ ms.date: 04/28/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-pekuo, shthomps, v-lianna
 ms.custom: sap:devices-and-drivers, csstroubleshoot
-ms.technology: windows-server-deployment
+ms.subservice: deployment
 ---
 # "This device cannot start" error when deploying a hot plug NVMe SSD
 

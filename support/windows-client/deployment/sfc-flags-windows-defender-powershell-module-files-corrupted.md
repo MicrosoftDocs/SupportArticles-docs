@@ -5,11 +5,11 @@ ms.date: 04/28/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, v-six
 ms.custom: Fix, csstroubleshoot
-ms.technology: windows-client-deployment
+ms.subservice: deployment
 ---
 # System File Checker (SFC) incorrectly flags Windows Defender PowerShell module files as corrupted
 

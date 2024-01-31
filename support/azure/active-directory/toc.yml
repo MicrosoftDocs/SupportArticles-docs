@@ -15,10 +15,6 @@
     href: understand-ad-fs-sign-in-events-azure-ad-connect-health.md
   - name: Understand Microsoft Entra Connect 1.4 and device disappearance
     href: reference-connect-device-disappearance.md
-  - name: Sign-in and Multi-factor Authentication
-    items:
-    - name: Authentication fails with error 'The requested federation realm object '<Object ID>' does not exist'
-      href: authentication-fails-with-error.md
 
   - name: Microsoft Entra Hybrid Sync Agent Installation Issues
 
@@ -75,6 +71,10 @@
         href: error-code-AADSTS75005-not-a-valid-saml-request.md
       - name: Error AADSTS750054 - SAML request or response not present
         href: error-code-AADSTS750054-saml-request-not-present.md
+      - name: Error AADSTS7000110 - request is ambiguous, multiple application identifiers found
+        href: error-code-aadsts7000110-request-is-ambiguous.md
+      - name: Error AADSTS7000112 - application is disabled
+        href: error-code-aadsts7000112-application-is-disabled.md
       - name: Troubleshoot signing in to SAML-based single sign-on configured apps
         href: troubleshoot-sign-in-saml-based-apps.md
       - name: User redirected to incorrect reply URL or localhost
@@ -137,6 +137,8 @@
   items:
   - name: An unknown error occurred
     href: unknown-error-occurred-sign-in-assistant.md
+  - name: Authentication fails with error 'The requested federation realm object '<Object ID>' does not exist'
+    href: authentication-fails-with-error.md
   - name: Authorization_RequestDenied error when changing password
     href: authorization-request-denied-graph-api.md
   - name: Can't authenticate using ADAL
@@ -155,8 +157,6 @@
     href: cannot-connect-cloud-services-powershell.md
   - name: ESR settings don't sync
     href: esr-settings-not-sync-mfa-enabled.md
-  - name: Enable support for TLS 1.2 in your environment
-    href: enable-support-tls-environment.md
   - name: Federated user is forced to sign in
     href: federated-users-forced-sign-in.md
   - name: Federated user is prompted to enter credentials
@@ -244,8 +244,6 @@
     href: email-addresses-not-sync.md
   - name: Enable password hash sync
     href: pwd-hash-sync-auto-enable.md
-  - name: Enable support for TLS 1.2 in your environment
-    href: enable-support-tls-environment.md
   - name: Error code 1603 in Microsoft Entra Connect
     href: upgrade-fails-error-code-1603.md
   - name: Error 80070005 in Azure AD Sync Services config wizard
@@ -334,6 +332,8 @@
 
 - name: Reference
   items:
+  - name: Enable support for TLS 1.2 in your environment
+    href: enable-support-tls-environment.md
   - name: Enable trace for Online Services Sign-in Assistant
     href: enable-disable-trace-online-services.md
   - name: IdFix.exe is not a valid Win32 application
@@ -346,3 +346,4 @@
     href: send-microsoft-authenticator-logs.md  
   - name: Support data collection
     href: support-data-collection-diagnostic-logs.md
+    

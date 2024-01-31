@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:winrm, csstroubleshoot
-ms.technology: windows-client-system-management-components
+ms.subservice: system-mgmgt-components
 ---
 # Errors when you run WinRM commands to check local functionality in a Windows Server 2008 environment
 

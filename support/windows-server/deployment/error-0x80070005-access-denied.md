@@ -1,5 +1,5 @@
 ---
-title: 'Error 0x80070005 "Access denied" when you activate Windows Server 2012 R2'
+title: 'Error 0x80070005 (Access denied) when you activate Windows'
 description: Describes how to fix Windows activation error 0x80070005 (access denied).
 ms.date: 12/28/2023
 author: Deland-Han
@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate
 ms.custom: sap:activation, csstroubleshoot
-ms.technology: windows-server-deployment
+ms.subservice: deployment
 keywords: Windows, Activation, 0x80070005, access denied
 ---
 
@@ -49,18 +49,18 @@ Path:C:\Windows\System32\SLUI.exe
 
 The SELF account doesn't have the correct DCOM permissions.
 
-## Solution
+## Solution: Restore SELF account permissions
 
 To restore the permissions of the SELF account, follow these steps:
 
-1. In the **Search** box, type **dcomcnfg**, and then select **Component Services**.
+1. In the **Search** box, type *dcomcnfg*, and then select **Component Services** (depending on your version of Windows, you might have to select **dcomcnfg Run command** instead).
 1. In the left pane of the **Component Services** snap-in, select **Component Services** > **Computers**, right-click **My Computer**, and then select **Properties**.
 1. In the **My Computer Properties** dialog box, select the **COM Security** tab, and then select **Edit Default** in the **Access Permissions** area.
-1. In the **Access Permission** dialog box, if **SELF** doesn't appear in the **Group or user names** area, select **Add**. In the **Enter the object names to select** text box, type **SELF**, select **Check Names**, and then select **OK**.
+1. In the **Access Permission** dialog box, if **SELF** doesn't appear in the **Group or user names** area, select **Add**. In the **Enter the object names to select** text box, type *SELF*, select **Check Names**, and then select **OK**.
 1. In the **Group or user names** area, select **SELF**, and then select the following checkboxes in the **Allow** column:
    - **Local Access**  
    - **Remote Access**  
 
-   :::image type="content" source="media/error-0x80070005-access-denied/dcom-access-permissions-for-activation.png" alt-text="Screenshot of the Access Permission dialog box and its parent My Computer Properties dialog box, from Configuration Manager > Component Services > Computers > My Computer.":::
+   :::image type="content" source="media/error-0x80070005-access-denied/dcom-access-permissions-for-activation.png" alt-text="Screenshot of the Access Permission dialog box and its parent My Computer Properties dialog box.":::
 1. Select **OK** to close **Access Permission**, and then select **OK** to close **My Computer Properties**.
 1. Restart the computer.

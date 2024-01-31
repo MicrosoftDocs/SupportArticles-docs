@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:activation, csstroubleshoot
-ms.technology: windows-client-deployment
+ms.subservice: deployment
 ---
 # You receive an error message when you try to activate Windows Vista or Windows 7 on a computer that was obtained from an OEM
 

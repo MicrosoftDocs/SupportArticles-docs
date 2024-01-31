@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, Warrenw, ajayps
 ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
-ms.technology: windows-client-group-policy
+ms.subservice: windows-group-policy
 ---
 # Error when you open gpedit.msc: Resource $(string id="Win7Only)' referenced in attribute displayName could not be found
 

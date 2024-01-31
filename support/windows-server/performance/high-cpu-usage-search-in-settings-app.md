@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-jesits, ryhayash
 ms.custom: sap:slow-performance, csstroubleshoot
-ms.technology: windows-server-performance
+ms.subservice: performance
 ---
 # High CPU usage when you search in the Settings app in Windows Server 2016
 

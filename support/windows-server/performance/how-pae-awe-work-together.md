@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:slow-performance, csstroubleshoot
-ms.technology: windows-server-performance
+ms.subservice: performance
 ---
 # Large memory support is available in Windows Server 2003 and in Windows 2000
 

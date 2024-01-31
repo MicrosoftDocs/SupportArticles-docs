@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:management-and-configuration:-general-issues, csstroubleshoot
-ms.technology: windows-client-printing
+ms.subservice: printing
 ---
 # Error 0x00000709 when you use a CNAME record for a print server in Windows Server 2008 R2: Operation could not be completed
 
