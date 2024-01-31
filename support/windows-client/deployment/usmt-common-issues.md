@@ -4,11 +4,11 @@ description: Describes the resolutions for the common issues that you might see 
 ms.reviewer: frankroj
 manager: dcscontentpm
 ms.author: delhan
-ms.prod: windows-client
+ms.service: windows-client
 ms.date: 04/28/2023
 author: Deland-Han
 ms.topic: troubleshooting
-ms.technology: windows-client-deployment
+ms.subservice: deployment
 ms.custom: sap:usmt, csstroubleshoot
 audience: itpro
 localization_priority: medium
