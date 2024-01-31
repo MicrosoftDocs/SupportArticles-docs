@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, shfuruka, v-jesits
 ms.custom: sap:multilingual-user-interface-mui-and-input-method-editor-ime, csstroubleshoot
-ms.technology: windows-client-application-compatibility
+ms.subservice: application-compatibility
 ---
 # You cannot link TextService in Eudcedit.exe
 
