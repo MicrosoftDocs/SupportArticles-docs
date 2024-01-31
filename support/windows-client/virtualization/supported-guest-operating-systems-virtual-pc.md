@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, benarm, kledman
 ms.custom: sap:virtual-machine-creation, csstroubleshoot
-ms.technology: windows-client-hyper-v
+ms.subservice: hyper-v
 ---
 # Supported Guest Operating Systems in Virtual PC
 

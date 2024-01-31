@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: abgupta, kaushika
 ms.custom: sap:installation-and-configuration-of-hyper-v, csstroubleshoot
-ms.technology: windows-client-hyper-v
+ms.subservice: hyper-v
 ---
 # Can't use kdump or kexec for Linux virtual machines on Hyper-V
 
