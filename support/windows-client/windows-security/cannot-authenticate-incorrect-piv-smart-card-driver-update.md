@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: ccraig, wincicadsec, kaushika
 ms.custom: sap:smart-card-logon, csstroubleshoot
-ms.technology: windows-client-security
+ms.subservice: windows-security
 ---
 # Can't authenticate because of an incorrect PIV smart card driver update
 
