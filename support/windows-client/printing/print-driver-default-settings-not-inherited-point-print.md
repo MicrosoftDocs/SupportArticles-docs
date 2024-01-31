@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, v-jesits
 ms.custom: sap:management-and-configuration-installing-print-drivers, csstroubleshoot
-ms.technology: windows-client-printing
+ms.subservice: printing
 ---
 # Print driver default settings are not inherited through "Point and Print" in Windows 10 Version 1709
 
