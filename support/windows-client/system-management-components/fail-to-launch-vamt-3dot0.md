@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, zhchia, squin
 ms.custom: sap:microsoft-management-console-mmc, csstroubleshoot
-ms.technology: windows-client-system-management-components
+ms.subservice: system-mgmgt-components
 ---
 # Error (MMC has detected an error in a snap-in and will unload it) when you try to launch VAMT 3.0 on a Windows 7 or Windows Server 2008 R2-based computer
 
