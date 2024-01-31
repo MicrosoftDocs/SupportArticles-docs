@@ -78,7 +78,7 @@ To confirm whether your share or storage account is being throttled, you can acc
 
 1. In the Azure portal, go to your storage account.
 
-1. On the left pane, under **Monitoring**, select **Metrics**.
+1. On the left pane, under **Monitor**, select **Metrics**.
 
 1. Select **File** as the metric namespace for your storage account scope.
 
@@ -355,7 +355,7 @@ High number file change notification on file shares can result in high latencies
 To confirm, you can use Azure Metrics in the portal.
 
 1. In the Azure portal, go to your storage account.
-1. In the left menu, under **Monitoring**, select **Metrics**.
+1. In the left menu, under **Monitor**, select **Metrics**.
 1. Select **File** as the metric namespace for your storage account scope.
 1. Select **Transactions** as the metric.
 1. Add a filter for **ResponseType** and check to see if any requests have a response code of `SuccessWithThrottling` (for SMB or NFS) or `ClientThrottlingError` (for REST).
