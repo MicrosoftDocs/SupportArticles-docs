@@ -35,8 +35,8 @@ This is expected behavior. Only system apps installed in the Work Profile are in
 
 See the blog post [Best practices for updating your Android Enterprise apps](https://techcommunity.microsoft.com/t5/intune-customer-success/best-practices-for-updating-your-android-enterprise-apps/ba-p/3038520) to learn about best practices and options for configuring app updates for your corporate-owned devices. This includes using network preferences, maintenance windows, and high-priority update mode Which bypasses all regular constraints so you can apply and update as fast as possible.
 
-### I want to stay updated on any Google service issue that may cause impact
+### I want to stay updated on any Google service issues that may cause impact
 
-Google releases [service announcements](https://www.androidenterprise.community/t5/service-announcements/tkb-p/Announcements) containing details about issues that may impact its service. Follow the [instructions to subscribe](https://www.androidenterprise.community/t5/news-info/new-community-board-subscribe-to-the-new-service-announcements/ba-p/1044) and receive notifications for new posts.
+Google releases [service announcements](https://www.androidenterprise.community/t5/service-announcements/tkb-p/Announcements) containing details about issues that may impact Android Enterprise management. Follow the [instructions to subscribe](https://www.androidenterprise.community/t5/news-info/new-community-board-subscribe-to-the-new-service-announcements/ba-p/1044) and receive notifications for new posts.
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-contact-disclaimer.md)]
