@@ -1,7 +1,7 @@
 ---
 title: Common issues with confidential containers
 description: Provides solutions to common issues with confidential containers.
-ms.date: 01/31/2024
+ms.date: 02/01/2024
 ms.reviewer: tysonfreeman, v-weizhu
 ms.service: container-instances
 ---
@@ -16,13 +16,15 @@ You might experience the following issues and errors when you deploy confidentia
 - Policy failures:
 
     ```output
-    Deployment Failed. ErrorMessage=failed to create containerd task: failed to create shim task:
+    Deployment Failed.
+    ErrorMessage=failed to create containerd task: failed to create shim task:
     uvm::Policy: failed to modify utility VM configuration: guest modify: guest RPC failure:
     error creating Rego policy: rego compilation failed: rego compilation failed: 4 errors occurred:
     ```
 
     ```output
-    Deployment Failed. ErrorMessage=failed to create containerd task: failed to create shim task:
+    Deployment Failed.
+    ErrorMessage=failed to create containerd task: failed to create shim task:
     uvm::Policy: failed to modify utility VM configuration: guest modify:guest RPC failure:
     error creating Rego policy: rego compilation failed: rego compilation failed: 1 error occurred:
     policy.rego:48 rego_parse_error: non-terminated string;
@@ -89,7 +91,7 @@ You might experience the following issues and errors when you deploy confidentia
     ```
 - Other issues:
   - Logs don't show up.
-  - The `exec` functionality doesn't work.
+  - The exec functionality doesn't work.
   - Subscription deployment times out after 30 minutes.
   - Liveness probe with disallowed policy.
   - Exit code 139.
@@ -102,7 +104,7 @@ In most cases, these issues occur due to the CCE policy.
 
 - If you experience any policy failures, regenerate the CCE policy and retry the deployment.
 
-- If the CCE policy enforces a framework, revert to an older framework SVN.
+- If the CCE policy enforces a framework, revert to an older framework svn.
 
 - If the device hash isn't found or there's an issue with an image, clear the cache and regenerate the CCE policy.
 
