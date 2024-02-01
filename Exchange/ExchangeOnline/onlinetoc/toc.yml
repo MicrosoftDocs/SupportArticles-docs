@@ -391,6 +391,8 @@
       items:
         - name: A different type of Active Directory object already exists error
           href: ../move-or-migrate-mailboxes/different-type-of-active-directory-object-already-exists-error.md
+        - name: GooglePermanentWebException error in a Google Workspace migration
+          href: ../move-or-migrate-mailboxes/googlepermanentwebexception-in-google-workspace-migration.md
         - name: Can't migrate Google Workspace mailboxes
           href: ../move-or-migrate-mailboxes/google-workspace-mailbox-migration-fail.md
         - name: Can't migrate IMAP mailboxes
@@ -587,6 +589,8 @@
           href: ../public-folders/public-folder-migration-errors.md
         - name: Migration fails with mailbox GUID
           href: ../public-folders/pf-migration-fails-sourcepfprimarymailboxguid.md
+        - name: '"Number of public folder mailboxes cannot exceed more than 100" error'
+          href: ../public-folders/migration-batch-error-too-many-public-folders.md
         - name: Permissions and settings don't propagate in EAC
           href: ../public-folders/permissions-settings-not-propagate-eac.md
         - name: Public folder couldn't be mail-enabled
