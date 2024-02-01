@@ -4,7 +4,7 @@ description: A list of common issues and resolutions within Power Apps.
 author: KumarVivek
 ms.custom: canvas
 ms.reviewer: tapanm, lanced, tahoon 
-ms.date: 01/31/2024
+ms.date: 02/01/2024
 ms.author: kvivek
 search.audienceType: 
   - maker
@@ -58,7 +58,7 @@ Refer to the introductory article [Power Apps troubleshooting strategies](isolat
 
 1. **Column names with spaces**
 
-    If you're using a list created using Microsoft Lists, a SharePoint library, or an Excel table in which a column name contains a space, Power Apps will replace it with **"\_x0020\_"**. For example, **"Column Name"** in SharePoint or Excel will appear as **"Column_x0020_Name"** in Power Apps when displayed in the data layout or used in a formula.
+    If you're using a list created using Microsoft Lists, a SharePoint library, or an Excel table in which a column name contains a space, the column name with a space can be used with single quotes, like this `someList.'Color Tag'`.
 
 1. **Apps that connect to on-premises SharePoint**
 
@@ -76,7 +76,7 @@ Refer to the introductory article [Power Apps troubleshooting strategies](isolat
 
     For more information, see [SharePoint Online](/power-apps/maker/canvas-apps/connections/connection-sharepoint-online#known-issues).
 
-1. **Sign-in issues on certain Android mobile devices when using authenticator** (August 21, 2019)
+1. **Sign-in issues on certain Android mobile devices when using authenticator**
 
     In certain devices and scenarios, you might experience sign-in failures when using an authenticator. This is due to the OEM limiting this functionality. For more information, see [ADALError: BROKER_AUTHENTICATOR_NOT_RESPONDING](https://github.com/AzureAD/azure-activedirectory-library-for-android/wiki/ADALError:-BROKER_AUTHENTICATOR_NOT_RESPONDING).
 
@@ -98,10 +98,6 @@ Refer to the introductory article [Power Apps troubleshooting strategies](isolat
 
     When using the **Add Picture** control on iOS, images imported by using the camera or gallery don't contain meta-data.
 
-1. **Scrolling in flexible-height galleries**
-
-    If you run into a limitation when you scroll with your finger, lift it and start to scroll again.
-
 1. **Combo box controls in galleries**
 
     When you use a **Combo box** control inside a gallery, its selections aren't maintained when the user scrolls the gallery. This isn't an issue if you use a **Combo box** control inside a gallery that doesn't scroll. A workaround isn't currently available.
@@ -122,10 +118,6 @@ Refer to the introductory article [Power Apps troubleshooting strategies](isolat
 
     If your mobile device is low on memory, the camera is temporarily disabled to avoid crashing the device.
 
-1. **Camera issues on Android mobile devices**
-
-    If the camera control stops working on an Android device, republish your app, and reopen it on the device. The camera control was updated in response to a change in the Android operating system, and your app will benefit from the update when you republish.
-
 1. **Multiple media controls in Power Apps Mobile**
 
     Power Apps Mobile runs on various types of devices, and some of them have limitations that are specific to that platform:
@@ -140,10 +132,6 @@ Refer to the introductory article [Power Apps troubleshooting strategies](isolat
 1. **Camera controls in Power Apps for Windows**
 
    Power Apps for Windows might crash if you open an app that uses a camera control. To avoid this problem, use the web player on the Windows platform. Also, multiple cameras aren't supported.
-
-   1. **Camera control on a Windows phone**
-
-    An app that contains a camera control might crash if you open the app on a Windows phone that's running build 10.0.10586.107. To avoid this problem, upgrade to the most recent build, for example, by running the [Upgrade Advisor](https://www.microsoft.com/store/p/upgrade-advisor/9nblggh0f5g4).
 
 ## Integration
 
@@ -193,7 +181,7 @@ The [Power Apps Studio](/power-apps/maker/canvas-apps/power-apps-studio) is home
 
 1. **When Power Apps generates an app from data, the field used for sorting and searching isn't automatically configured.**
 
-   To configure this field, edit the "[Items](/power-apps/maker/canvas-apps/controls/properties-core)" formula for the gallery, as the sections for filtering and sorting in [Add a gallery](/power-apps/maker/canvas-apps/add-gallery) describe.
+   To configure the field as described in [Filter and sort a gallery](/power-apps/maker/canvas-apps/add-gallery#filter-and-sort-a-gallery), edit the [Items](/power-apps/maker/canvas-apps/controls/properties-core) formula for the gallery.
 
 1. **It can sometimes take a moment before a newly shared app can be used.**
 
@@ -229,7 +217,9 @@ If you're using the 32-bit version of Google Chrome or Microsoft Edge and run ou
 
 1. **Microsoft Entra Conditional Access with the policy "Require device to be marked as compliant" doesn't work in Power Apps for Windows.**
 
-   When setting the Conditional access policy "Require device to be marked as compliant" in Microsoft Entra ID, users receive sign-in errors. They see the following message. So, they won't be able to access their Power Apps. To work around the issue, they can use a browser.
+   When the Conditional Access policy is set to "Require device to be marked as compliant" in Microsoft Entra ID, users receive the following sign-in error and can't access their Power Apps.
+
+   To work around the issue, they can use a browser.
 
    > The application contains sensitive information and can only be accessed from devices or client applications that meet your enterprise management compliance policy.
 
