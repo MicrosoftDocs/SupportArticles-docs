@@ -1,5 +1,5 @@
 ---
-title: '"Number of public folder mailboxes cannot exceed more than 100" error when creating a migration batch'
+title: Number of public folder mailboxes cannot exceed more than 100 error when creating a migration batch
 description: Provides a solution for an issue in which you try to create a public folder migration batch but receive an error message that says the number of public folder mailboxes can't exceed 100.
 author: cloud-writer
 ms.author: meerak
