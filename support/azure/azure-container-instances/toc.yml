@@ -7,6 +7,8 @@ items:
   href: aci-debug-tools.md
 - name: Can't delete a virtual network or subnet used by ACI
   href: cannot-delete-vnet-subnet.md
+- name: Common confidential containers issues
+  href: common-confidential-container-errors.md
 - name: Container instance continues to run after the stop or delete command
   href: aci-still-running-after-stop-delete-command.md
 - name: Fails to pull ACR images by using Managed Identity authentication
