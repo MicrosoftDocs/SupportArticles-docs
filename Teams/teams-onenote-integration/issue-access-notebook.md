@@ -46,7 +46,8 @@ To determine the item count, use one of the following methods:
 
     Here is an output example:
 
-    ```AsciiDoc
+    ```
+    AsciiDoc
     Items Count:14744
     Notebooks Count:0
     Folders Count:4607
