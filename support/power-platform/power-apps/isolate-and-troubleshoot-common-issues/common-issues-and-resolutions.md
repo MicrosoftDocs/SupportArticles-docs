@@ -181,7 +181,7 @@ The [Power Apps Studio](/power-apps/maker/canvas-apps/power-apps-studio) is home
 
 1. **When Power Apps generates an app from data, the field used for sorting and searching isn't automatically configured.**
 
-   To configure the field as described in [Filter and sort a gallery](/power-apps/maker/canvas-apps/add-gallery#filter-and-sort-a-gallery), edit the [Items](/power-apps/maker/canvas-apps/controls/properties-core) formula for the gallery.
+   To configure the field, edit the [Items](/power-apps/maker/canvas-apps/controls/properties-core) formula for the gallery, as described in [Filter and sort a gallery](/power-apps/maker/canvas-apps/add-gallery#filter-and-sort-a-gallery).
 
 1. **It can sometimes take a moment before a newly shared app can be used.**
 
