@@ -1,6 +1,6 @@
 ---
-title: Issue when you access a notebook for Microsoft Teams.
-description: One or more of the document libraries on the user or group's OneDrive contains more than 5,000 OneNote items when you access a notebook for Microsoft Teams.
+title: Issue when you access a OneNote notebook from Teams
+description: Provides a workaround for when you're unable to access a OneNote notebook from Teams.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
@@ -12,44 +12,40 @@ ms.custom: CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - Microsoft Teams
-ms.date: 10/30/2023
+ms.date: 01/02/2024
 ---
 
-# "One or more of the document libraries on the user or group's OneDrive contains more than 5,000 OneNote items" error when you access a notebook for Microsoft Teams
+# Issue when you access a OneNote notebook from Teams
 
 ## Symptoms
 
-You can't access a notebook for Microsoft Teams in Microsoft OneNote. Additionally, you receive the following error message:
+You can't access a Microsoft OneNote notebook from Microsoft Teams. Additionally, you receive the following error message:
 
-**One or more of the document libraries on the user or group's OneDrive contains more than 5,000 OneNote items (notebooks, sections, section groups) and cannot be queried using the API. Please make sure that none of the user or group's document libraries contains more than 5,000 OneNote items. Please follow the link below for instructions on how to remedy this situation.** 
+> One or more of the document libraries on the user or group's OneDrive contains more than 5,000 OneNote items (notebooks, sections, section groups) and cannot be queried using the API. Please make sure that none of the user or group's document libraries contains more than 5,000 OneNote items. Please follow the link below for instructions on how to remedy this situation.  
 
 ## Cause
 
-This issue occurs if the document libraries contain more than 5,000 OneNote items. This is a known OneNote limitation in Microsoft Teams.
-
-## Status
-
-Microsoft is researching this problem, and will post more information in this article when more information becomes available.
+This issue occurs if the document libraries contain more than 5,000 OneNote items. This is a known limitation with OneNote items when accessing them from Teams.
 
 ## Workaround
 
-To work around this issue, reduce the number of items in OneNote.
+To work around this issue, reduce the number of OneNote items in the document libraries.
 
 ## More Information
 
-We recommend that you access OneNote through OneNote online or the OneNote application and remove items that aren't needed.
+We recommend that you access OneNote through OneNote Online or the OneNote application and remove items that aren't needed.
 
 To determine the item count, use one of the following methods:
 
-- Use the OneNote API Diagnostic to count the number of items in a certain document library: 
+- Use the OneNote API diagnostic to count the number of items in a certain document library:
 
     [https://github.com/OneNoteDev/OneNoteAPIDiagnostics/blob/master/Tool/OneNoteAPIDiagnostics_1.0.0.0.zip](https://github.com/OneNoteDev/OneNoteAPIDiagnostics/blob/master/Tool/OneNoteAPIDiagnostics_1.0.0.0.zip)
-- Run Microsoft.Office.OneNote.OneNoteAPIDiagnostics.exe, and then enter the URL, user and password: 
+- Run Microsoft.Office.OneNote.OneNoteAPIDiagnostics.exe, and then enter the URL, user and password:
 
     **https://\<domain>.sharepoint.com/sites/\<site>/**
 
     Here is an output example:
-    
+
     ```AsciiDoc
     Items Count:14744
     Notebooks Count:0
