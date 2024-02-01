@@ -22,7 +22,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 01/16/2024
+ms.date: 02/01/2024
 ---
 # Known issues in Teams Rooms and devices
 
@@ -54,6 +54,12 @@ This article lists the known issues for the Microsoft Teams Rooms app when it's 
 | --- | --- | --- |
 |During a Coordinated meeting, when the meeting volume is changed by using a room remote, the speaker on a Surface Hub or Teams Rooms device turns on.|For a trusted device such as a Surface Hub or Teams Rooms device that is set up to automatically join a Coordinated meeting when the primary device joins, the speaker turns on when a room remote is used to change the meeting volume. This issue occurs even though the audio settings on the device are turned off, and whether they're enabled or disabled.|Turn off proximity join and room remote capabilities on the trusted devices that automatically join a Coordinated meeting.|
 
+### Issues with Direct Guest Join
+
+| Issue  |  Description | Workaround |
+| --- | --- | --- |
+|Black screen during a Zoom meeting on a Crestron device|You use a Crestron device that's running Teams Rooms on Windows to join a Zoom meeting. When another user in the meeting shares their screen, the screen on your device turns black. The issue is intermittent. If you leave and rejoin the meeting, the issue might occur again.<br/><br/>**Only Crestron devices are experiencing this issue.**|When you join a third-party online meeting by using a Teams Rooms device, the meeting experience is controlled by the third-party online meeting provider. In the meetings where this issue occurs, Zoom controls the meeting display. <br/><br/>The black screen during the Zoom meeting isn't caused by Teams Rooms on Windows. The issue is being investigated by Zoom.|
+
 ## Teams Rooms and devices on Android
 
 ### Issues affecting multiple devices
@@ -70,8 +76,13 @@ This article lists the known issues for the Microsoft Teams Rooms app when it's 
 | --- | --- | --- |
 | Laser pointer and drawing tools in PowerPoint Live don't display for in-room participants | In-room meeting participants in a Teams meeting who are using Teams Rooms on Android devices aren't able to see the following features during a PowerPoint Live presentation: Laser pointer, pen, highlighter, and eraser. | Join the meeting on your personal device to see the laser pointer and drawing tools in PowerPoint Live. |
 | Teams Admin Settings unavailable on Teams Rooms on Android devices with Teams Rooms Basic license. | The **Teams Admin Settings** option under **Device Settings** is unavailable on devices that have the Teams Rooms Basic license for Teams Rooms on Android CY22 U3 app (version 1449/1.0.96.2022120503). | Admins can either assign a Teams Rooms Pro license to the same device or downgrade the device to use Teams Rooms on Android CCY22 U2B app (version: 1449/1.0.96.2022090606) instead. |
-|Video issues in some Logitech devices during Cisco Webex meetings|On some Logitech devices that run Teams Rooms on Android, the participant's video might either freeze or not display during Cisco Webex meetings.<br/><br/>When you join a third-party online meeting by using a Teams Rooms device, the meeting experience is controlled by the third-party online meeting provider. In the meetings where this issue occurs, Cisco Webex controls the video display. The issue with the participant video isn't caused by Teams Rooms on Android.|
 |Rotate 180 option doesn't work for all meeting participants|You've selected the **Rotate 180** option for a Content camera in your Teams Rooms on Android device. However, the rotation is applied only to the video feed for in-room participants. Remote participants still see an inverted video display.|If possible, mount the Content camera right side up instead of upside down.|
+
+### Issues with Direct Guest Join
+
+| Issue  |  Description | Workaround |
+| --- | --- | --- |
+|Video issues in some Logitech devices during Cisco Webex meetings|On some Logitech devices that run Teams Rooms on Android, the participant's video might either freeze or not display during Cisco Webex meetings.|When you join a third-party online meeting by using a Teams Rooms device, the meeting experience is controlled by the third-party online meeting provider. In the meetings where this issue occurs, Cisco Webex controls the video display. The issue with the participant video isn't caused by Teams Rooms on Android.|
 
 ### Issues with Teams phones
 

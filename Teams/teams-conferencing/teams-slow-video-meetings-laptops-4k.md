@@ -1,6 +1,6 @@
 ---
-title: Teams is slow during video meetings on laptops docked to 4K/UHD monitors
-description: This article provides resolutions when Microsoft Teams is slow during video meetings on laptops docked to 4K/UHD monitors.
+title: Teams is slow during video sharing on laptops docked to 4K/UHD monitors
+description: This article provides workarounds you can use to improve Teams' performance when video is shared during meetings.
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -13,18 +13,16 @@ ms.custom:
 ms.reviewer: SfB_Triage
 appliesto: 
   - Microsoft Teams
-ms.date: 03/31/2022
+ms.date: 02/01/2024
 ---
 
-# Teams is slow during video meetings on laptops docked to 4K/UHD monitors
+# Teams is slow during video sharing on laptops docked to 4K/UHD monitors
 
-## Summary
+The overall performance of Microsoft Teams on laptops may be affected during meetings that use video. This issue can occur if a laptop is docked to an external 4K or ultra-high-definition (also known as ultra HD or UHD) display.
 
-Overall Microsoft Teams performance on laptops may be affected during meetings that use video. This issue can occur if a laptop is docked to an external 4K or ultra-high-definition (also known as ultra HD or UHD) display.
+## Workarounds
 
-## Workaround
-
-Reduce the resource requirements for your laptop to improve the Teams experience during the meeting and try:
+Reduce the resource requirements for your laptop to improve the Teams experience during the meeting by using the following workarounds:
 
 - Close any applications or browser tabs that you aren't using.
 - Turn off video in the meeting:
@@ -36,8 +34,4 @@ Reduce the resource requirements for your laptop to improve the Teams experience
 - Change the resolution of your 4K or UHD monitor to 1920 x 1080. For more information, see [Change desktop icon size or screen resolution](https://support.microsoft.com/help/4026956).
 - Use DVI or HDMI instead USB-C to connect your monitor, if possible.
 - Disable full screen mode in the meeting by selecting **More actions** > **Full screen**.
-- [Update Teams](https://support.microsoft.com/office/535a8e4b-45f0-4f6c-8b3d-91bca7a51db1) and [make sure that the latest update is installed](/microsoftteams/troubleshoot-installation#check-whether-teams-is-updated-successfully). The latest performance fixes were released in June 2021, which are available in version 1.4.00.16575 or later.
-
-## Status
-
-Microsoft is continuing to improve meeting experience by optimizing Audio, Video, and Screen sharing when using a 4K monitor. These updates will become available in upcoming client releases.
+- [Update Teams](https://support.microsoft.com/office/535a8e4b-45f0-4f6c-8b3d-91bca7a51db1) and [make sure that the latest update is installed](/microsoftteams/troubleshoot-installation#check-whether-teams-is-updated-successfully).
