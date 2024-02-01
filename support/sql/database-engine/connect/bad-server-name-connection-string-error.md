@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting incorrect server name in connection string
-description: This article provides a workaround for the consistent authentication issue when a matching name is not provided during login.
+description: This article provides a workaround for the consistent authentication issue that occurs if a matching name is not provided during login.
 ms.date: 01/24/2024
 author: prmadhes-msft
 ms.author: prmadhes
@@ -8,9 +8,9 @@ ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 
-# Login failed due to incorrect server name in connection string
+# Login fails because of incorrect server name in connection string
 
-This article helps you to resolve an consistent authentication issue that might arise when the specified login name is not provided while logging in to a SQL Server instance.
+This article helps you to resolve an authentication issue that occurs if the specified login name is not provided when you log in to a Microsoft SQL Server instance.
 
 ## Symptoms
 
@@ -25,15 +25,15 @@ The Microsoft ODBC Driver 13 for SQL Server shows the following error message:
 
 > Login failed for user 'CONTOSO\user1'
 
-The SqlClient .NET Provider displays the following error message when you use the TCP protocol and a SQL login or a Windows login:
+The SqlClient .NET provider displays the following error message when you use the TCP protocol and a SQL Server login or a Windows login:
 
 > Login failed for user ''.
 
-The SqlClient .NET Provider displays the following error message when you use the Named Pipes protocol and a SQL login or a Windows login:
+The SqlClient .NET provider displays the following error message when you use the Named Pipes protocol and a SQL Server login or a Windows login:
 
 > Login failed for user 'CONTOSO\user1'.
 
-You should also see either of the following error messages in the SQL Server error log:
+You will likely also see either of the following error messages in the SQL Server error log:
 
 ```output
 'Login failed for user'. Reason: Could not find a login matching the name provided.
@@ -42,14 +42,14 @@ You should also see either of the following error messages in the SQL Server err
 
 ## Cause
 
-You will experience these errors if you deploy an application that uses a DEV or QA server into production and you don't update the connection string. 
+You experience these errors if you deploy an application that uses a DEV or QA server in production and you don't update the connection string. 
 
 ## Solution
 
-To resolve these error messages, follow one of these methods:
+To resolve these errors, use one of the following methods:
 
-- If the server isn't the appropriate one, then update the connection string to point to the correct server.
+- If the targeted server isn't correct, update the connection string to point to the correct server.
 
-- If the connection string is correct, then provide the login access to the database by creating a user in the database and map to that login.
+- If the connection string is correct, provide the login access to the database. To do this, create a user in the database, and then map to that login.
 
 - If you're using a Windows login, add it to a local group or domain group that's allowed to connect to the database server.
