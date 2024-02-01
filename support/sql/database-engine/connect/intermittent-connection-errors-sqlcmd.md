@@ -32,7 +32,7 @@ Consider the following questions and check if any of them match your results:
 
   :::image type="content" source="media/intermittent-connection-errors-with-sqlcmd/intermittent-connection-sqlcmd-errors.png" alt-text="TLS versions 1.0, 1.1, and 1.2 are enabled on the application server.":::
 
-- Did you run the test [UDL Opens in new window or tab](test-oledb-connectivity-use-udl-file.md) on the Application server using Microsoft OLE DB Provider for SQL Server and SNAC 11 and the connection failed. The driver "Microsoft OLE DB Provider for SQL Server" is deprecated and doesn't support TLS 1.2.
+- Did you run a [UDL test](test-oledb-connectivity-use-udl-file.md) on the application server using both the Microsoft OLE DB Provider for SQL Server and the SNAC 11 provider and the connection failed? The driver "Microsoft OLE DB Provider for SQL Server" is deprecated and doesn't support TLS 1.2.
 
 - Has SQL Server Native Client 10.0 been used for the Application Server's ODBC data source test? Do you see "The connection failed with SQL State: '08001' SQL Server Error: 10054 [Microsoft][SQL Server Native Client 10.0]TCP Provider: An existing connection was forcibly closed by remote host. [Microsoft][SQL Server Native Client 10.0]Client unable to establish connection." error message?
 
