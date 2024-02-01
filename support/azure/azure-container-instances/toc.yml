@@ -18,6 +18,8 @@ items:
     href: container-group-deployment-waiting-state.md
   - name: DeploymentFailed - InaccessibleImage error code
     href: inaccessible-image.md
+  - name: Error codes for Spot container creation
+    href: error-codes-spot-container-creation.md
   - name: Error - Web socket is closed or could not be opened
     href: web-socket-is-closed-or-could-not-be-opened.md
   - name: Image pull takes a long time to run
