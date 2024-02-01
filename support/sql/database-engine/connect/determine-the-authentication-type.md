@@ -1,6 +1,6 @@
 ---
 title: Determine the authentication type
-description: This article explains about how to determine the type of authentication. 
+description: This article explains about how to determine the type of authentication that's used when you connect to SQL Server. 
 ms.date: 12/18/2023
 author: Malcolm-Stewart
 ms.author: mastewa
@@ -8,17 +8,17 @@ ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 
-# How to determine if you're connected to SQL Server using Kerberos authentication
+# How to use Kerberos authentication to verify your connection to SQL Server 
 
-This article helps you to determine the type of authentication by running a query. Following is a basic query to determine your authentication type. Make sure to run this on a client machine and not on the SQL Server that you're testing. Otherwise the query returns `auth_scheme` as NTLM even if Kerberos is properly configured. This is due to per-service SID security hardening feature added in Windows 2008, which makes all local connections use NTLM regardless of whether Kerberos is available.
+This article provides a query to help you determine the type of authentication that's used when you connect to Microsoft SQL Server. Make sure that you run the query on a client computer, not on the SQL server that you're testing. Otherwise the query returns `auth_scheme` as **NTLM** even if Kerberos is configured correctly. This occurs because of a per-service SID security hardening feature that was added in Windows 2008. This feature forces all local connections to use NTLM regardless of whether Kerberos is available.
 
  ```sql
   SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id=@@SPID
  ```
 
-## Using SQL Server Management Studio
+## Use SQL Server Management Studio
 
-You can run the following query from the SSMS.
+Run the following query in SQL Server Management Studio:
 
 ```sql
 SELECT c.session_id, c.net_transport, c.encrypt_option,
@@ -31,9 +31,9 @@ JOIN sys.dm_exec_sessions AS s ON c.session_id = s.session_id
 WHERE c.session_id=@@SPID
 ```
 
-## Using command line
+## Use the command line
 
-Run the following query using the command line.
+Run the following query at a command prompt:
 
 ```sql
 C:\Temp>sqlcmd -S SQLProd01 -E -Q "select auth_scheme from sys.dm_exec_connections where session_id=@@SPID"
@@ -44,7 +44,11 @@ NTLM
 (1 rows affected)
 ```
 
-If either of the previous two options aren't available, consider copying the following script into a Notepad and saving it as *getAuthScheme.vbs*.
+## Alternative method
+
+If either of the previous options aren't available, consider using the following alternative procedure: 
+
+1. Copy the following script into a text editor, such as Notepad, and save it as *getAuthScheme.vbs*:
 
 ```vbs
 ' Auth scheme VB script.
@@ -75,13 +79,13 @@ rs.close
 cn.close
 ```
 
-Now, run the following *getAuthScheme.vbs* PowerShell script from the command prompt:
+1. Run the *getAuthScheme.vbs* PowerShell script at a command prompt:
 
 ```powershell
 C:\Temp>cscript getAuthScheme.vbs SQLProd01
 ```
 
-You can observe the following results:
+You should see the following output:
 
 ```output
 Microsoft (R) Windows Script Host Version 5.812
@@ -89,9 +93,9 @@ Copyright (C) Microsoft Corporation. All rights reserved.
 Auth scheme: NTLM
 ```
 
-## Using PowerShell to run the query
+## Use PowerShell
 
-You can also use a PowerShell script to test the SqlClient .NET Provider and try to isolate the issue from your application.
+You can use PowerShell to test the SqlClient .NET provider to try to isolate the issue from your application:
 
 ```powershell
 #-------------------------------
@@ -126,7 +130,7 @@ $conn.Dispose()
 "Auth scheme for " + $server + ": " + $auth_scheme
 ```
 
-Now, run the PowerShell script from the command prompt:
+Run the following script at a command prompt:
 
 ```powershell
 C:\temp> .\get-sqlauthscheme sqlprod01
