@@ -22,7 +22,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 01/16/2024
+ms.date: 02/01/2024
 ---
 # Known issues in Teams Rooms and devices
 
@@ -47,13 +47,18 @@ This article lists the known issues for the Microsoft Teams Rooms app when it's 
 |Video of remote participants has low resolution in SIP and H.323 calls|On a Teams Rooms device that is running either version 4.18.35 or 4.18.43 of the Teams Rooms app, the remote participant's video is set to a default resolution of 360p when using either SIP or H.323 dialing for Teams calls.|To fix the issue, upgrade the Teams Rooms app to version 4.19.57.0.|
 |Mismatch between time and calendar display on Teams Rooms device and Front of Room display|If a Teams Rooms device on Windows is idle for more than 2 hours, the time and calendar display on the device freezes. As a result, there's a mismatch between the time and calendar information in the Front of Room display and on the console. This issue occurs intermittently.|To fix the issue, upgrade the Teams Rooms app to version 4.19.57.0.|
 |Teams Rooms app freezes or crashes|After you update the Intel UHD graphics driver on a Teams Rooms device that's running version 4.18.35.0 of the Teams Rooms app, the device either freezes or crashes. This issue occurs both when a user has joined a Teams meeting on the device and when the device is free.|Roll back the Intel UHD graphics driver on the device from version 31.0.101.4502 to 31.0.101.4274. Then restart the Teams Rooms device.|
-|Teams Rooms app freezes on HP POLY MTR G9 ELITE MINI and HP Presence|When you use the GC8 controller on an HP POLY MTR G9 ELITE MINI or an HP Presence device, the touch controls stop processing inputs. As a result the Teams Rooms app appears to be frozen.|See [HP Poly MTR G9 Elite Mini  Teams App Freezing while using GC8 Controller.](https://support.poly.com/support/s/article/HP-Poly-MTR-G9-Elite-Mini-Teams-App-Freezing-while-using-GC8-Controller).|
 
 ### Hardware issues
 
 | Issue  |  Description | Workaround |
 | --- | --- | --- |
 |During a Coordinated meeting, when the meeting volume is changed by using a room remote, the speaker on a Surface Hub or Teams Rooms device turns on.|For a trusted device such as a Surface Hub or Teams Rooms device that is set up to automatically join a Coordinated meeting when the primary device joins, the speaker turns on when a room remote is used to change the meeting volume. This issue occurs even though the audio settings on the device are turned off, and whether they're enabled or disabled.|Turn off proximity join and room remote capabilities on the trusted devices that automatically join a Coordinated meeting.|
+
+### Issues with Direct Guest Join
+
+| Issue  |  Description | Workaround |
+| --- | --- | --- |
+|Black screen during a Zoom meeting on a Crestron device|You use a Crestron device that's running Teams Rooms on Windows to join a Zoom meeting. When another user in the meeting shares their screen, the screen on your device turns black. The issue is intermittent. If you leave and rejoin the meeting, the issue might occur again.<br/><br/>**Only Crestron devices are experiencing this issue.**|When you join a third-party online meeting by using a Teams Rooms device, the meeting experience is controlled by the third-party online meeting provider. In the meetings where this issue occurs, Zoom controls the meeting display. <br/><br/>The black screen during the Zoom meeting isn't caused by Teams Rooms on Windows. The issue is being investigated by Zoom.|
 
 ## Teams Rooms and devices on Android
 
@@ -71,8 +76,13 @@ This article lists the known issues for the Microsoft Teams Rooms app when it's 
 | --- | --- | --- |
 | Laser pointer and drawing tools in PowerPoint Live don't display for in-room participants | In-room meeting participants in a Teams meeting who are using Teams Rooms on Android devices aren't able to see the following features during a PowerPoint Live presentation: Laser pointer, pen, highlighter, and eraser. | Join the meeting on your personal device to see the laser pointer and drawing tools in PowerPoint Live. |
 | Teams Admin Settings unavailable on Teams Rooms on Android devices with Teams Rooms Basic license. | The **Teams Admin Settings** option under **Device Settings** is unavailable on devices that have the Teams Rooms Basic license for Teams Rooms on Android CY22 U3 app (version 1449/1.0.96.2022120503). | Admins can either assign a Teams Rooms Pro license to the same device or downgrade the device to use Teams Rooms on Android CCY22 U2B app (version: 1449/1.0.96.2022090606) instead. |
-|Video issues in some Logitech devices during Cisco Webex meetings|On some Logitech devices that run Teams Rooms on Android, the participant's video might either freeze or not display during Cisco Webex meetings.<br/><br/>When you join a third-party online meeting by using a Teams Rooms device, the meeting experience is controlled by the third-party online meeting provider. In the meetings where this issue occurs, Cisco Webex controls the video display. The issue with the participant video isn't caused by Teams Rooms on Android.|
 |Rotate 180 option doesn't work for all meeting participants|You've selected the **Rotate 180** option for a Content camera in your Teams Rooms on Android device. However, the rotation is applied only to the video feed for in-room participants. Remote participants still see an inverted video display.|If possible, mount the Content camera right side up instead of upside down.|
+
+### Issues with Direct Guest Join
+
+| Issue  |  Description | Workaround |
+| --- | --- | --- |
+|Video issues in some Logitech devices during Cisco Webex meetings|On some Logitech devices that run Teams Rooms on Android, the participant's video might either freeze or not display during Cisco Webex meetings.|When you join a third-party online meeting by using a Teams Rooms device, the meeting experience is controlled by the third-party online meeting provider. In the meetings where this issue occurs, Cisco Webex controls the video display. The issue with the participant video isn't caused by Teams Rooms on Android.|
 
 ### Issues with Teams phones
 
@@ -80,7 +90,6 @@ This article lists the known issues for the Microsoft Teams Rooms app when it's 
 | --- | --- | --- |
 |Sign in loops or fails for Teams on Android phones |You can't sign in or the sign-in continually loops when both the MFA and the Terms of Use (ToU) Conditional Access (CA) policies are used. |The combination of MFA CA and ToU CA isn't supported. You should exclude it from being used. <br><br> To avoid the sign-in error, ensure that only the MFA CA or only the MDM CA is used. When only the MFA CA is used, make sure that it's enabled in Device Registration Services (DRS). For more information, see [Conditional Access: Cloud apps, actions, and authentication context](/azure/active-directory/conditional-access/concept-conditional-access-cloud-apps#user-actions).|
 |Can't add, delete, or edit contacts on Android phones|You can't perform the add, delete, and edit operations on contacts from Teams on Android phones.|Use either the Teams desktop or the Teams web client to perform these actions.|
-|Users can't configure the Busy on Busy feature on the phone device.|The Busy on Busy feature that's configured in the Microsoft Teams admin center is honored on the phone device. However, a user controlled option for the Busy on Busy feature isn't supported.|No workaround is available at this time.|
 | Signed out of Teams on Android devices | Teams Rooms on Android, Teams phone devices, Teams panels, and Teams displays are signed out of Teams automatically. | Follow the instructions provided in [Signed out of Teams on Android devices](./signed-out-of-teams-android-devices.md).|
 | Can't resume a call after using **Consult first** option on Teams phones | After using the **Consult first** option in the **Transfer** menu when you select the **Resume** option to resume the call, the call fails. | End the call made by using the **Consult first** option and then resume the original call.|
 |Calls on long hold in GCCH tenants drop intermittently|On GCCH tenants that are running 2022 update #4A (Teams app version 1449/1.0.94.2022110803), when a user puts a call on long hold the call drops in some instances. This issue doesn't occur on other clouds.|No workaround is available at this time.|
@@ -118,6 +127,5 @@ For issues with Teams devices offered by third-party providers, contact their in
 - Logitech: [Logitech Support](https://support.logi.com/hc/)
 - Crestron: [Crestron Support](https://support.crestron.com/)
 - Poly: [Poly Support](https://www.poly.com/us/en/support)
-- Yealink: [Yealink Support](https://support.yealink.com/portal/home)
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-contact-disclaimer.md)]
