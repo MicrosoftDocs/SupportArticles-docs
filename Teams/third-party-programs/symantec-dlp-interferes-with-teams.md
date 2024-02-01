@@ -31,7 +31,7 @@ Symantec DLP Endpoint agents can interfere with Teams processes, which can then 
 
 ## Resolution
 
-Exclude Teams.exe from the Symantec DLP's Endpoint agents using the information in this [Symantec support article](https://knowledge.broadcom.com/external/article/160078/how-to-whitelist-or-exclude-an-applicati.html).
+Exclude Teams.exe from the Symantec DLP's Endpoint agents using the information provided on Symantec's website.
 
 ## More information
 
