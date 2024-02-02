@@ -2,9 +2,7 @@
 title: Azure Batch node gets stuck in the Unusable state due to configuration issues
 description: Provides solutions to issues that cause unusable Azure Batch nodes.
 ms.date: 02/14/2023
-author: AmandaAZ
-ms.author: v-weizhu
-ms.reviewer: biny
+ms.reviewer: biny, v-weizhu
 ms.service: batch
 ---
 # Azure Batch node gets stuck in the Unusable state due to configuration issues
@@ -77,6 +75,52 @@ To do this, follow these steps:
     :::image type="content" source="media/azure-batch-node-unusable-state/add-route-table.png" alt-text="Screenshot that shows how to add a UDR.":::
 
 1. Reboot the node to be back to the normal state.
+
+### Cause 3: Bad DNS configuration causing node unable to communicate with node management endpoint
+
+This scenario is for the pool in batch account **with nodeManagement private endpoint enabled**. (Usually these pools are with simplified node communication and without public IP.) If the DNS is not well configured, that will also cause the nodes unable to communicate with the Batch service endpoint, then further cause the Batch nodes in unusable status.
+
+### Solution 3: Verify the DNS resolution and modify it if it's not well configured
+
+To verify if the custom DNS is working as expected, follow these steps:
+1. Navigate to the **Batch Account** from the Azure portal.
+1. Note down the **Node management endpoint URL** from **Batch Account Overview** page, **Essentials** part. It usullay seems like **\<GUID>.\<region>.service.batch.azure.com**
+
+    :::image type="content" source="media/azure-batch-node-unusable-state/nodemanagementendpoint.png" alt-text="Screenshot of the node management endpoint URL." lightbox="media/azure-batch-node-unusable-state/nodemanagementendpoint.png":::
+
+1. Navigate to the **Node management private endpoint** in the Azure Portal, click on **DNS configuration** page and note down the **private IP address** of the node management private endpoint.
+
+    :::image type="content" source="media/azure-batch-node-unusable-state/node-management-endpoint-PE-ip.png" alt-text="Screenshot of the node management private endpoint IP." lightbox="media/azure-batch-node-unusable-state/node-management-endpoint-PE-ip.png":::
+
+1. Create a Batch node or a Virtual Machine inside **same Vnet with which the pool is created**, connect into the node and open a PowerShell window (windows) or Shell window (Linux).
+
+1. Test the DNS resolution by command **nslookup \<nodeMmanagementEndpointURL>**. (nslookup is default installed in Windows. For Linux, please install this at first or use other tools) The expected result is the same as the private IP address of node management private endpoint.
+```
+PS C:\Users\xxx> nslookup <nodeMmanagementEndpointURL>
+Server:  UnKnown
+Address:  x.x.x.x
+
+Name:    <nodeMmanagementEndpointURL>
+Address:  <private-ipnode-management-endpoint-private-ip>
+Aliases:  <nodeMmanagementEndpointURL>
+```
+
+1. Test the connectivity by command **Test-NetConnection -ComputerName \<nodeMmanagementEndpointURL> -Port 443**. (For Linux, please use nc -v \<nodeMmanagementEndpointURL> 443) The expected result is being able to connect.
+```
+PS C:\Users\xxx> Test-NetConnection -ComputerName <nodeMmanagementEndpointURL> -Port 443
+
+ComputerName     : <nodeMmanagementEndpointURL>
+RemoteAddress    : <private-ipnode-management-endpoint-private-ip>
+RemotePort       : 443
+InterfaceAlias   : Ethernet
+SourceAddress    : <vm-private-ip>
+TcpTestSucceeded : True
+```
+
+If the result of nslookup command is not expected, please check the custom DNS setting of the VNet of the pool, including **Private DNS zone with name privatelink.batch.azure.com**, **custom DNS server** and any other services/components which may impact the DNS resolution.
+
+If the result of nslookup command is expected, but the result of Test-NetConnection or nc command is not expected, please confirm if there is any service such as Network Security Group and Firewall which can block the outgoing connectivity from the VNet.
+
 
 ## Disk full issue
 
