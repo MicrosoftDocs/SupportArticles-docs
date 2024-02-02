@@ -52,7 +52,7 @@ If the SQL Server error log file contains both or either of the following messag
 
 ### Login failed specific errors
 
-When you are troubleshooting the "Login Failed" error message, the SQL Server error log file can provide more information in the SQL state value with error 18456 (Login Failed). For more information, see [Login failed error codes](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#additional-error-information).
+When you are troubleshooting the "Login Failed" error message, the SQL Server error log file can provide more information in the [SQL state value](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#additional-error-information) with error 18456 (Login Failed). You can try to fix the issue according to the description of the state value.
 
 This section lists the possible error messages and their possible causes.
 
