@@ -50,7 +50,7 @@ If the SQL Server error log file contains both or either of the following messag
    Error -2146893052 (0x80090304): The Local Security Authority cannot be contacted.
   ```
 
-### Login failed specific errors
+### Login failed errors
 
 When you are troubleshooting the "Login Failed" error message, the SQL Server error log file can provide more information in the [SQL state value](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#additional-error-information) with error 18456 (Login Failed). You can try to fix the issue according to the description of the state value.
 
