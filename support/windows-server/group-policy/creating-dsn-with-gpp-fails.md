@@ -1,17 +1,17 @@
 ---
 title: Error 0x80004005 when you create DSN with GPP
 description: Provides help to fix the error 0x80004005 that occurs when you configure a Data Source Name (DSN) using Group Policy Preferences (GPP).
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, sajijohn, markgray
 ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
-ms.technology: windows-server-group-policy
+ms.subservice: group-policy
 ---
 # Unable to create DSN using Group Policy Preferences, unspecified error 0x80004005
 
@@ -65,3 +65,7 @@ For more information about the valid SQL Server-specific keyword/value pairs for
 
 When configuring SQL connections, the only way to make the connection transparent for the user is to set **Trusted_Connection** to **Yes**. Otherwise, the user will be prompted for credentials when trying to connect.
 You must also ensure that attributes not listed in the above MSDN link, including username and password, are left blank (not configured) within the policy when configuring SQL connections.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Group Policy issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-group-policy.md).

@@ -1,26 +1,29 @@
 ---
 title: The difference must be zero before you can reconcile this checkbook error
-description: Fixes a problem that occurs when you reconcile the checkbook in Select Bank Transactions in Microsoft Dynamics GP, and you receive an error message that states the difference must be zero before you can reconcile this checkbook. Provides a resolution
-ms.reviewer: 
+description: Fixes a problem that occurs when you reconcile the checkbook in Select Bank Transactions in Microsoft Dynamics GP, and you receive an error message that states the difference must be zero before you can reconcile this checkbook. Provides a resolution.
+ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 07/27/2023
 ---
 # "The difference must be zero before you can reconcile this checkbook" error when reconciling the checkbook in Select Bank Transactions
 
-This article provides a resolution for the issue that the difference is shown as zero when you reconcile the checkbook in Select Bank Transactions in Microsoft Dynamics GP.
+This article provides a resolution for the issue that the difference is shown as zero when you reconcile the checkbook in **Select Bank Transactions** in Microsoft Dynamics GP.
 
 _Applies to:_ &nbsp; Microsoft Dynamics GP, Microsoft Dynamics SL Bank Reconciliation  
 _Original KB number:_ &nbsp; 851301
 
 ## Symptoms
 
-When you reconcile the checkbook in Select Bank Transactions in Microsoft Dynamics GP, the difference is displayed as zero, but you receive the following error message:
+When you reconcile the checkbook in **Select Bank Transactions** in Microsoft Dynamics GP, the difference is displayed as zero, but you receive the following error message:
 
 > The difference must be zero before you can reconcile this checkbook.
 
 ## Cause
 
-This is caused by a fractional difference. The Select Bank Transactions window will only display as many decimal places as are set up for the currency ID assigned to respective checkbook. So for example, if your checkbook is assigned a currency ID with two decimal places, then only two decimal places show in the Select Bank Transactions window. However, the records in the SQL Table store up to five decimal places for an amount field, so this issue may happen if you have amounts in the remaining decimal places for any record in the SQL tables, and may result in a fractional difference. This typically happens if the records were imported in to Microsoft Dynamics GP with amounts that are more decimal places than the currency ID is set up for.
+This is caused by a fractional difference. The **Select Bank Transactions** window will only display as many decimal places as are set up for the currency ID assigned to the respective checkbook. So, for example, if your checkbook is assigned a currency ID with two decimal places, then only two decimal places show in the **Select Bank Transactions** window. However, the records in the SQL Table store up to five decimal places for an amount field, so this issue may happen if you have amounts in the remaining decimal places for any record in the SQL tables, and may result in a fractional difference. This typically happens if the records were imported into Microsoft Dynamics GP with amounts that have more decimal places than the currency ID is set up for.
+
+> [!IMPORTANT]
+> Importing data in this manner isn't supported. This article serves as a guide to help you fix the data, as we can't provide data fixing for unsupported conditions within a support case.
 
 ## Resolution
 
@@ -33,16 +36,15 @@ Use the steps below to check for records with fractional decimal places and use 
     > If your currency for the checkbook has 2 decimals, the '3' in the script below on each line will check the 3rd position for a fraction. So if your currency has 3 decimal places, adjust the script to '4', and so on.
 
     ```sql
-    select * from CM20200 where right(ClrdAmt,3)<>0
+    select 'CM20200' AS 'TABLE',DEX_ROW_ID,ClrdAmt,TRXAMNT,ORIGAMT,Checkbook_Amount,* from CM20200 where right(ClrdAmt,3)<>0
     or right(TRXAMNT,3)<>0
     or right(ORIGAMT,3)<>0
     or right(Checkbook_Amount,3)<>0
-    select * from CM20400 where right(DEBITAMT,3)<>0
+    select 'CM20400' AS 'TABLE',DEX_ROW_ID,DEBITAMT,CRDTAMNT,* from CM20400 where right(DEBITAMT,3)<>0
     or right(CRDTAMNT,3)<>0
-    select * from CM20500 where right(StmntBal,3)<>0
+    select 'CM20500' AS 'TABLE',DEX_ROW_ID,StmntBal,CUTOFFBAL,ClrePayAmt,ClrdDepAmt,Cleared_Difference,OUTPAYTOT,OUTDEPTOT,IINADJTOT,DECADJTOT,ASOFBAL, * from CM20500 where right(StmntBal,3)<>0
     or right(CUTOFFBAL,3)<>0
     or right(ClrePayAmt,3)<>0
-    or right(ClrdDepAmt,3)<>0
     or right(ClrdDepAmt,3)<>0
     or right(Cleared_Difference,3)<>0
     or right(OUTPAYTOT,3)<>0
@@ -50,8 +52,8 @@ Use the steps below to check for records with fractional decimal places and use 
     or right(IINADJTOT,3)<>0
     or right(DECADJTOT,3)<>0
     or right(ASOFBAL,3)<>0
-    select * from CM20501 where right(TRXAMNT,3)<>0
-    select * from CM20201 where right(ORCHKTTL,3)<>0
+    select 'CM20501' AS 'TABLE', DEX_ROW_ID,TRXAMNT,* from CM20501 where right(TRXAMNT,3)<>0
+    select 'CM20201' AS 'TABLE', DEX_ROW_ID, Orig_Credit_Card_Total,Originating_Cash_Total,Originating_Deposit_Amou,Originating_Checkbook_Am,* from CM20201 where right(ORCHKTTL,3)<>0
     or right(Orig_Credit_Card_Total,3)<>0
     or right(Originating_Cash_Total,3)<>0
     or right(Originating_Deposit_Amou,3)<>0

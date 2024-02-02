@@ -1,17 +1,17 @@
 ---
 title: Active Directory replication error 1256
 description: Describes how to Active Directory replication error 1256.
-ms.date: 3/24/2022
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, justintu
 ms.custom: sap:active-directory-replication, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # Active Directory replication error 1256: The remote system is not available
 
@@ -82,7 +82,7 @@ In summary: 1256 is logged as the replication status per partition as a result o
 
 The win32 error 1256 should not be the focus of troubleshooting efforts, instead find the replication status that led to the RPC bind failure and then follow the corresponding _Troubleshooting Active Directory operations that fail with error..._ article.
 
-[Diagnose Active Directory replication failures](/troubleshoot/windows-server/identity/diagnose-replication-failures).
+[Diagnose Active Directory replication failures](diagnose-replication-failures.md).
 
 In order to determine the actual win32 error to troubleshoot,  use one of the following methods:
 
@@ -132,17 +132,21 @@ In order to determine the actual win32 error to troubleshoot,  use one of the fo
     | London| LONCONTOSODC| DC=EMEA,DC=Contoso,DC=com| London| LONEMEADC| 11| 6/10/2010 17:35| 6/10/2010 14:54| 1256 |
     | London| LONCONTOSODC| DC=apac,DC=Contoso,DC=com| London| LONEMEADC| 11| 6/10/2010 17:35| 6/10/2010 14:50| 1256 |
 
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Active Directory replication issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication.md).
+
 ## More information
 
 The following articles contain the troubleshooting procedures for errors typically logged with win32 error 1256:
 
 |Win32 error|Article|
 |---|---|
-| -2146893022| [Active Directory replication error -2146893022: The target principal name is incorrect](/troubleshoot/windows-server/identity/replication-error-2146893022)|
-| 5| [Active Directory replication error 5 - Access is denied](/troubleshoot/windows-server/identity/replication-error-5)|
-| 1722| [Active Directory replication error 1722: The RPC server is unavailable](/troubleshoot/windows-server/identity/replication-error-1722-rpc-server-unavailable)|
-| 1727| [Troubleshoot domain controller replication error 1727-The remote procedure call failed and did not execute](/troubleshoot/windows-server/identity/remote-procedure-call-failed-and-did-not-execute-error) |
-| 1753| [Active Directory Replication Error 1753: There are no more endpoints available from the endpoint mapper](/troubleshoot/windows-server/identity/replication-error-1753)|
+| -2146893022| [Active Directory replication error -2146893022: The target principal name is incorrect](replication-error-2146893022.md)|
+| 5| [Active Directory replication error 5 - Access is denied](replication-error-5.md)|
+| 1722| [Active Directory replication error 1722: The RPC server is unavailable](replication-error-1722-rpc-server-unavailable.md)|
+| 1727| [Troubleshoot domain controller replication error 1727-The remote procedure call failed and did not execute](remote-procedure-call-failed-and-did-not-execute-error.md) |
+| 1753| [Active Directory Replication Error 1753: There are no more endpoints available from the endpoint mapper](replication-error-1753.md)|
 | 1908| [Troubleshooting Active Directory operations that fail with error 1908: Could not find the domain controller for this domain](https://support.microsoft.com/help/2712026)|
-| 8524| [Active Directory Replication Error 8524: The DSA operation is unable to proceed because of a DNS lookup failure](/troubleshoot/windows-server/identity/replication-error-8524)|
-| 8453| [Active Directory replication error 8453: Replication access was denied](/troubleshoot/windows-server/identity/replication-error-8453)|
+| 8524| [Active Directory Replication Error 8524: The DSA operation is unable to proceed because of a DNS lookup failure](replication-error-8524.md)|
+| 8453| [Active Directory replication error 8453: Replication access was denied](replication-error-8453.md)|

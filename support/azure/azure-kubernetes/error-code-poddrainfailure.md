@@ -1,19 +1,17 @@
 ---
-title: Troubleshoot PodDrainFailure error code
-description: Learn how to troubleshoot the PodDrainFailure error when you try to upgrade an Azure Kubernetes Service cluster.
-ms.date: 7/28/2022
-author: DennisLee-DennisLee
-ms.author: v-dele
+title: Troubleshoot UpgradeFailed errors due to eviction failures caused by PDBs
+description: Learn how to troubleshoot UpgradeFailed errors due to eviction failures caused by Pod Disruption Budgets when you try to upgrade an Azure Kubernetes Service cluster.
+ms.date: 12/21/2023
 editor: v-jsitser
-ms.reviewer: chiragpa
+ms.reviewer: chiragpa, v-leedennis, v-weizhu
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-upgrade-operations
-#Customer intent: As an Azure Kubernetes Services (AKS) user, I want to troubleshoot an Azure Kubernetes Service cluster upgrade that failed because of a PodDrainFailure error so that I can upgrade the cluster successfully.
+#Customer intent: As an Azure Kubernetes Services (AKS) user, I want to troubleshoot an Azure Kubernetes Service cluster upgrade that failed because of eviction failures caused by Pod Disruption Budgets so that I can upgrade the cluster successfully.
 ---
 
-# Troubleshoot the "PodDrainFailure" error code
+# Troubleshoot UpgradeFailed errors due to eviction failures caused by PDBs
 
-This article discusses how to identify and resolve the "PodDrainFailure" error that occurs when you try to upgrade an Azure Kubernetes Service (AKS) cluster.
+This article discusses how to identify and resolve UpgradeFailed errors due to eviction failures caused by Pod Disruption Budgets (PDBs) that occur when you try to upgrade an Azure Kubernetes Service (AKS) cluster.
 
 ## Prerequisites
 
@@ -23,7 +21,10 @@ For more detailed information about the upgrade process, see the "Upgrade an AKS
 
 ## Symptoms
 
-An AKS cluster upgrade fails, and you receive a "PodDrainFailure" error message.
+An AKS cluster upgrade operation fails with the following error message:
+
+> Code: UpgradeFailed  
+> Message: Drain node \<node-name> failed when evicting pod \<pod-name>. Eviction failed with Too many Requests error. This is often caused by a restrictive Pod Disruption Budget (PDB) policy. See `http://aka.ms/aks/debugdrainfailures`. Original error: API call to Kubernetes API Server failed.
 
 ## Cause
 
@@ -43,11 +44,14 @@ To resolve this issue, use one of the following solutions.
 ## Solution 2: Back up, delete, and redeploy the PDB
 
 1. Take a backup of the PDB `kubectl get pdb <pdb-name> -n <pdb-namespace> -o yaml > pdb_backup.yaml`, and then delete the PDB `kubectl delete pdb <pdb-name> -n /<pdb-namespace>`. After the upgrade is finished, you can redeploy the PDB `kubectl apply -f pdb_backup.yaml`.
-1. Try again to upgrade the AKS cluster to the same version that you tried to upgrade to previously. This process will trigger a reconciliation.
+2. Try again to upgrade the AKS cluster to the same version that you tried to upgrade to previously. This process will trigger a reconciliation.
 
 ## Solution 3: Delete the pods that can't be drained
 
-1. Delete the pods that can't be drained. **Note**: If the pods were created by a deployment or StatefulSet, they'll be controlled by a ReplicaSet. If that's the case, you might have to delete the deployment or StatefulSet. Before you do that, we recommend that you make a backup: `kubectl get <kubernetes-object> <name> -n <namespace> -o yaml > backup.yaml`.
+1. Delete the pods that can't be drained.
+   
+   > [!NOTE]
+   > If the pods were created by a deployment or StatefulSet, they'll be controlled by a ReplicaSet. If that's the case, you might have to delete the deployment or StatefulSet. Before you do that, we recommend that you make a backup: `kubectl get <kubernetes-object> <name> -n <namespace> -o yaml > backup.yaml`.
 
 2. Try again to upgrade the AKS cluster to the same version that you tried to upgrade to previously. This process will trigger a reconciliation.
 

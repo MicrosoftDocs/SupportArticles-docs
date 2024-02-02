@@ -1,16 +1,16 @@
 ---
 title: Backup and Storage overview
 description: Overview of Backup and Storage troubleshooting articles for Windows Server.
-ms.date: 6/17/2021
+ms.date: 06/17/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.technology: windows-server-backup-and-storage
+ms.subservice: backup-and-storage
 ---
 # Backup and Storage troubleshooting documentation for Windows Server
 

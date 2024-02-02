@@ -1,17 +1,17 @@
 ---
 title: Windows setup log file locations
 description: Describes the setup log file locations for each setup phase of Windows Vista, Windows 7, Windows Server 2008 R2, Windows 8.1, and Windows 10 Version 1607.
-ms.date: 10/15/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, kimnle
 ms.custom: sap:setup, csstroubleshoot
-ms.technology: windows-client-deployment
+ms.subservice: deployment
 ---
 # Windows Vista, Windows 7, Windows Server 2008 R2, Windows 8.1, and Windows 10 setup log file locations
 
@@ -108,3 +108,6 @@ If a Windows upgrade installation fails, and you've successfully rolled back the
 |C:\$WINDOWS.~BT\Sources\Panther\PreGatherPnPList.log|Contains information about the initial capture of devices that are on the system during the downlevel phase.|
 |C:\$WINDOWS.~BT\Sources\Panther\PostGatherPnPList.log|Contains information about the capture of devices that are on the system after the online configuration phase.|
   
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

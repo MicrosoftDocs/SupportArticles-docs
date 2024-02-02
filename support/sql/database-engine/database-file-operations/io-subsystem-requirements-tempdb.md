@@ -5,7 +5,6 @@ ms.date: 09/25/2020
 ms.custom: sap:Administration and Management
 ms.reviewer: rdorr
 ms.topic: article
-ms.prod: sql
 ---
 # Microsoft SQL Server I/O subsystem requirements for the tempdb database
 
@@ -59,23 +58,23 @@ The storage location for the tempdb database must act in strict accordance with 
 
 Transactional sector rewrite operations are pertinent to all SQL Server databases that include the tempdb database. A growing variety of extended storage technologies use devices and utilities that can rewrite data that SQL Server considers secure. For example, some of the emerging technologies perform in-memory caching or data compression. In order to avoid severe database damage, any sector rewrite must have full transactional support in such a way that if a failure occurs, the data is rolled back to the previous sector images. This guarantees that SQL Server is never exposed to an unexpected interruption or data damage condition.
 
-You may be able to put the tempdb database on specialty subsystems, such as RAM disks, solid state, or other high-speed implementations that cannot be used for other databases. However, the key factors presented in the "More Information" section must be considered when you evaluate these options.
+You may be able to put the tempdb database on specialty subsystems, such as RAM disks, solid state, or other high-speed implementations that cannot be used for other databases. However, the key factors presented in the [More Information](#more-information) section must be considered when you evaluate these options.
 
 > [!NOTE]
-> The local disks in Failover Clustered environments are only supported with solid state or high speed implementations. This is because the RAM disk can only be created over an iSCSI target. Additionally, the iSCSI target and Failover Cluster features cannot be used on the same host.
+> The local disks in Failover Clustered environments are only supported with solid state or high speed implementations. This is because the RAM disk can only be created over an iSCSI target. Additionally, the iSCSI target and Failover Cluster features can't be used on the same host.
 
 ## More information
 
-Several factors should be carefully studied when you evaluate the storage location of the tempdb database. For example, the tempdb database usage involves, but is not limited to, memory footprint, query plan, and I/O decisions. The appropriate tuning and implementation of the tempdb database can improve the scalability and responsiveness of a system. This section discusses the key factors in determining the storage needs for the tempdb database.
+Several factors should be carefully studied when you evaluate the storage location of the tempdb database. For example, the tempdb database usage involves, but isn't limited to, memory footprint, query plan, and I/O decisions. The appropriate tuning and implementation of the tempdb database can improve the scalability and responsiveness of a system. This section discusses the key factors in determining the storage needs for the tempdb database.
 
 ### High-speed subsystems
 
-There are various high-speed subsystem implementations available on the market that provides SQL Server I/O subsystem protocol requirements but that do not provide durability of the media.
+There are various high-speed subsystem implementations available on the market that provides SQL Server I/O subsystem protocol requirements but that don't provide durability of the media.
 
 > [!IMPORTANT]
 > Always confirm with the product vendor to guarantee full compliance with SQL Server I/O needs.
 
-A RAM disk is one common example of such an implementation. RAM disks install the necessary drivers and enable part of the main RAM disk to appear as and function like any disk drive that is attached to the system. All I/O subsystems should provide full compliance with the SQL Server I/O requirements. However, it is obvious that a RAM disk is not durable media. Therefore, an implementation such as a RAM disk may only be used as the location of the tempdb database and cannot be used for any other database.
+A RAM disk is one common example of such an implementation. RAM disks install the necessary drivers and enable part of the main RAM disk to appear as and function like any disk drive that is attached to the system. All I/O subsystems should provide full compliance with the SQL Server I/O requirements. However, it's obvious that a RAM disk is not durable media. Therefore, an implementation such as a RAM disk may only be used as the location of the tempdb database and can't be used for any other database.
 
 ### Keys to consider before implementation and deployment
 
@@ -83,7 +82,7 @@ There are various points to consider before deployment of the tempdb database on
 
 #### I/O safety
 
-Compliance of read after write and transactional sector writes is a must. Never deploy SQL Server on any system that does not fully support the SQL Server I/O requirements, or you risk damage and loss of your data.
+Compliance of read after write and transactional sector writes is a must. Never deploy SQL Server on any system that doesn't fully support the SQL Server I/O requirements, or you risk damage and loss of your data.
 
 #### Pages already cached (Double RAM cache)
 
@@ -127,45 +126,41 @@ The following example elaborates the data security that is required by SQL Serve
 
 Assume a RAM disk vendor uses an in-memory compression implementation. The implementation must be correctly encapsulated by providing the physical appearance of the file stream as if the sector was aligned and sized so SQL Server is unaware and correctly secured from the underlying implementation. Look at the compression example closer.
 
-| Action |
-|---|
-|Sector 1 is written to the device and is compressed to save space.|
-|Sector 2 is written to the device and is compressed with sector 1 to save space.|
-||
+- Sector 1 is written to the device and is compressed to save space.
+- Sector 2 is written to the device and is compressed with sector 1 to save space.
 
 The device may perform the following actions to help secure sector 1's data when it is combined with sector 2's data.
 
-| Action |
-|---|
-|Block all writes to sectors 1 and 2.|
-|Uncompress sector 1 into a scratch area, leaving current sector 1 storage as the active data to be retrieved.|
-|Compress sectors 1 and 2 into a new storage format.|
-|Block all reads and writes of sectors 1 and 2.|
-|Exchange old storage for sectors 1 and 2 with new storage.|
-|If the exchange attempt fails (rollback):<br/>  Restore the original storage for sectors 1 and 2.<br/> Remove the sectors 1 and 2 combined data from the scratch area.<br/> Fail the sector 2 write operation.|
-|Unblock reads and writes for sectors 1 and 2.|
-||
+- Block all writes to sectors 1 and 2.
+- Uncompress sector 1 into a scratch area, leaving current sector 1 storage as the active data to be retrieved.
+- Compress sectors 1 and 2 into a new storage format.
+- Block all reads and writes of sectors 1 and 2.
+- Exchange old storage for sectors 1 and 2 with new storage. If the exchange attempt fails (rollback):
+  - Restore the original storage for sectors 1 and 2.
+  - Remove the sectors 1 and 2 combined data from the scratch area.
+  - Fail the sector 2 write operation.
+- Unblock reads and writes for sectors 1 and 2.
 
 The ability to provide locking mechanisms around the sector modifications and roll back the changes when the sector exchange attempt fails is considered transitionally compliant. For implementations that use physical storage for extended backing, it would include the appropriate transaction log aspects to help secure and rollback changes that were applied to the on-disk structures to maintain the integrity of the SQL Server database files.
 
-Any device that enables the rewrite of sectors must support the rewrites in a transactional way so that SQL Server is not exposed to data loss.
+Any device that enables the rewrite of sectors must support the rewrites in a transactional way so that SQL Server isn't exposed to data loss.
 
 > [!NOTE]
 > The instance of SQL Server is restarted when online I/O and rollback failures occur in the tempdb database.
 
 #### Be careful when you move the tempdb database
 
-Be careful when you move the tempdb database because if the tempdb database cannot be created, SQL Server will not start. If the tempdb database cannot be created, start SQL Server by using the (-f) startup parameter and move the tempdb database to a valid location.
+Be careful when you move the tempdb database because if the tempdb database can't be created, SQL Server won't start. If the tempdb database can't be created, start SQL Server by using the (-f) startup parameter and move the tempdb database to a valid location.
 
 To change the physical location of the tempdb database, follow these steps:
 
-1. Use the `ALTER DATABASE` statement and the MODIFY FILE clause to change the physical file names of each file in the tempdb database to refer to the new physical location, such as the new disk.
+1. Use the `ALTER DATABASE` statement and the `MODIFY FILE` clause to change the physical file names of each file in the tempdb database to refer to the new physical location, such as the new disk.
 
     ```sql
-    Alter database tempdb modify file 
+    ALTER DATABASE tempdb MODIFY FILE 
     (name = tempdev, filename = 'C:\MyPath\tempdb.mdf')
 
-    Alter database tempdb modify file 
+    ALTER DATABASE tempdb MODIFY FILE 
     (name = templog, filename = 'C:\MyPath\templog.ldf')
     ```
 
@@ -173,7 +168,7 @@ To change the physical location of the tempdb database, follow these steps:
 
 #### Partner product certifications are not a guaranty of compatibility or safety
 
-A third-party product or a particular vendor can receive a Microsoft logo certification. However, partner certification or a specific Microsoft logo does not certify compatibility or fitness for a particular purpose in SQL Server.
+A third-party product or a particular vendor can receive a Microsoft logo certification. However, partner certification or a specific Microsoft logo doesn't certify compatibility or fitness for a particular purpose in SQL Server.
 
 #### Support
 
@@ -181,11 +176,11 @@ If you use a subsystem with SQL Server that supports the I/O guarantees for tran
 
 For tempdb database-related issues, Microsoft Support Services will ask you to relocate the tempdb database. Contact your device vendor to verify that you have correctly deployed and configured the device for transactional database use.
 
-Microsoft does not certify or validate that third-party products work correctly with SQL Server. Additionally, Microsoft does not provide any warranty, guaranty, or statement of any third-party product's fitness for use with SQL Server.
+Microsoft doesn't certify or validate that third-party products work correctly with SQL Server. Additionally, Microsoft doesn't provide any warranty, guaranty, or statement of any third-party product's fitness for use with SQL Server.
 
 ## References
 
-For more information, click the following article numbers to view the articles in the Microsoft Knowledge Base:
+For more information, see the following Microsoft Knowledge Base articles:
 
 - [Additional SQL Server diagnostics added to detect unreported I/O problems](https://support.microsoft.com/help/826433)
 
@@ -202,17 +197,3 @@ For more information, click the following article numbers to view the articles i
 - [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](/previous-versions/dn673537(v=msdn.10))
 
 - [Query Performance](/previous-versions/sql/sql-server-2008-r2/ms190610(v=sql.105))
-
-The information contained in this document represents the current view of Microsoft Corporation on the issues discussed as of the date of publication. Because Microsoft must respond to changing market conditions, it should not be interpreted to be a commitment on the part of Microsoft, and Microsoft cannot guarantee the accuracy of any information presented after the date of publication.
-
-This white paper is for informational purposes only. MICROSOFT MAKES NO WARRANTIES, EXPRESS, IMPLIED, OR STATUTORY, AS TO THE INFORMATION IN THIS DOCUMENT.
-
-Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
-
-Microsoft may have patents, patent applications, trademarks, copyrights, or other intellectual property rights covering subject matter in this document. Except as expressly provided in any written license agreement from Microsoft, the furnishing of this document does not give you any license to these patents, trademarks, copyrights, or other intellectual property.
-
-© 2006 Microsoft Corporation. All rights reserved.
-
-Microsoft, Windows, Windows Server, and SQL Server are either registered trademarks or trademarks of Microsoft Corporation in the United States and/or other countries.
-
-SQL Server requires systems to support 'guaranteed delivery to stable media' as outlined under the [SQL Server I/O Reliability Program Requirements](https://download.microsoft.com/download/f/1/e/f1ecc20c-85ee-4d73-baba-f87200e8dbc2/sql_server_io_reliability_program_review_requirements.pdf). For more information about the input and output requirements for the SQL Server database engine, see [Microsoft SQL Server Database Engine Input/Output Requirements](https://support.microsoft.com/help/967576).

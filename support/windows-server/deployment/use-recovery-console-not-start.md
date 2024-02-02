@@ -1,17 +1,17 @@
 ---
 title: How To Use the Recovery Console
 description: Describes how to use the Recovery Console on a computer that does not start.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:servicing, csstroubleshoot
-ms.technology: windows-server-deployment
+ms.subservice: deployment
 ---
 # How To Use the Recovery Console on a Computer That Does Not Start
 
@@ -161,3 +161,7 @@ To remove the Recovery Console, follow these steps:
 
     4. On the File menu, click Save, and then click Exit to quit Notepad.
 7. Change the attribute for the Boot.ini file back to Read-only. To do so, right-click Boot.ini, and then click Properties. Click to select the **Read-only** check box, and then click OK.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

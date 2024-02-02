@@ -1,17 +1,17 @@
 ---
 title: Can't request certificate from web enrollment pages
 description: Provides help to solve an error that occurs when you request certificates from CA Web enrollment pages.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, shawnrab, spat
 ms.custom: sap:certificates-and-public-key-infrastructure-pki, csstroubleshoot
-ms.technology: windows-server-security
+ms.subservice: windows-security
 ---
 # Error when a user requests certificate from CA web enrollment pages: No certificate templates could be found
 

@@ -4,7 +4,6 @@ description: This article provides a workaround for the problem that occurs when
 ms.date: 11/03/2020
 ms.custom: sap:Administration and Management
 ms.reviewer: sureshka, ryanston, sunila, davco
-ms.prod: sql
 ---
 # Error message when you run the DBCC CHECKDB command on a computer that contains a SQL Server database
 

@@ -29,6 +29,7 @@ To fix the issue, perform the following configurations and verifications, and th
 1. [Verify the HTTP SPNs.](#verify-the-http-spns)
 1. [Configure constraint delegations.](#configure-constraint-delegations)
 1. [Verify "Account is sensitive and cannot be delegated" isn't set.](#verify-account-is-sensitive-and-cannot-be-delegated-isnt-set)
+1. [Disable Kernel-mode authentication in IIS.](#disable-kernel-mode-authentication-in-iis)
 
 > [!NOTE]
 > The following sample names are used in the configuration and verification steps. You have to replace them with the names in your environment.
@@ -150,20 +151,28 @@ To configure constraint delegations, follow these steps:
         Right-click the user that's configured on the custom identity (Lab\SCOMAppPool) and select **Properties**.
 
 4. In the details pane, select **Delegation**.
-5. On the **Delegation** tab, select **Trust this computer for delegation to specified services only** > **Use Kerberos only**.
-6. Select **Add**.
-7. In the **Add Services** dialog box, select **Users or Computers**.
-8. In the **Select Users or Computers** dialogue box, specify the account according to different scenarios:
+5. On the **Delegation** tab, select **Trust this computer for delegation to specified services only**, and then select one of the following options accordingly:
+
+    - Kernel-mode authentication is enabled: **Use any authentication protocol**
+
+    - Kernel-mode authentication is disabled: **Use Kerberos only**
+
+      For more information, see [Disable Kernel-mode authentication in IIS](#disable-kernel-mode-authentication-in-iis).
+  
+7. Select **Add**.
+8. In the **Add Services** dialog box, select **Users or Computers**.
+9. In the **Select Users or Computers** dialogue box, specify the account according to different scenarios:
 
     - Scenario 1: The SDK service runs under a LocalSystem account
 
          Select the computer account of the SCOM management server (SCOMMS) and select **OK**.
+
     - Scenario 2: The SDK service runs under a domain account (SDKSvc)
 
          Select the domain account that the SDK service runs under and select **OK**.
 
-9. In the **Add Services** dialog, select the service type **MSOMSdkSvc** and select **OK**.
-10. Select **OK** to close the **Properties** dialog box.
+10. In the **Add Services** dialog box, select the service type **MSOMSdkSvc** and then select **OK**.
+11. Select **OK** to close the **Properties** dialog box.
 
 ### Verify "Account is sensitive and cannot be delegated" isn't set
 
@@ -173,3 +182,14 @@ To verify that the user logging into the Web console doesn't have **Account is s
 2. Right-click the user account that's used to connect to the Web console, and then select **Properties**.
 3. Select **Account**.
 4. In the **Account options** dialogue box, confirm that the **Account is sensitive and cannot be delegated** checkbox isn't selected.
+
+### Disable Kernel-mode authentication in IIS
+
+To disable **Kernel-mode authentication** for both `MonitoringView` and `OperationsManager` in IIS, follow these steps:
+
+1. In IIS Manager, navigate to *Default Web Site\MonitoringView*.
+2. Double-click **Authentication**.
+3. Select **Windows Authentication**.
+4. In the **Actions** pane on the right, select **Advanced Settings**.
+5. Clear the **Enable Kernel-mode authentication** checkbox.
+6. Navigate to *Default Web Site\OperationsManager*, and repeat steps 2 through 5.

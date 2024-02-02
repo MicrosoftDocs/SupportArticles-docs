@@ -1,17 +1,17 @@
 ---
 title: Profile loading fails
 description: Describes an issue in which profile loading fails when the ntuser.dat or usrclass.dat file is defined as read-only, or the profile user lacks the appropriate permissions for these two .dat files.
-ms.date: 3/24/2022
+ms.date: 03/24/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, arrenc
 ms.custom: sap:user-profiles, csstroubleshoot
-ms.technology: windows-server-user-profiles
+ms.subservice: user-profiles
 ---
 # Error occurs during desktop setup and desktop location is unavailable when you log on to Windows for the first time
 

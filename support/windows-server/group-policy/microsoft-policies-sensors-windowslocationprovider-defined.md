@@ -1,17 +1,17 @@
 ---
 title: Fail to edit a group policy
 description: Fixes an issue that triggers an error when the central store contains the .admx files from Windows 10.
-ms.date: 12/9/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
-ms.technology: windows-server-group-policy
+ms.subservice: group-policy
 ---
 # Error when you edit a policy in Windows: Microsoft.Policies.Sensors.WindowsLocationProvided is already defined
 
@@ -27,7 +27,7 @@ Consider the following scenarios.
 Scenario 1:
 
 - You have a domain controller that's running Windows Server.
-- You create a central store for Group Policy Administrative Template files (.admx files) on the computer. For more information, see [How to create the Central Store for Group Policy Administrative Template files in Windows Vista](/troubleshoot/windows-server/group-policy/create-central-store-domain-controller).
+- You create a central store for Group Policy Administrative Template files (.admx files) on the computer. For more information, see [How to create the Central Store for Group Policy Administrative Template files in Windows Vista](create-central-store-domain-controller.md).
 - You join a Windows 10-based computer to the domain.
 - On the Windows 10-based computer, you copy the files under the %systemroot%\PolicyDefinitions directory, paste them to the ADMX central store, and overwrite all existing *.admx and *.adml files. Then, you open the Group Policy Management Console (GPMC) to edit a policy.
 - You click the **Policies**  node under **Computer Configuration** or **User Configuration**.
@@ -117,3 +117,7 @@ In the Windows 10 LocationProviderADM.admx, the \<supportedOn> line appears as f
 ```
 
 This error occurs when you click the **Policy**  node under **Computer Configuration** or **User Configuration**.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Group Policy issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-group-policy.md).

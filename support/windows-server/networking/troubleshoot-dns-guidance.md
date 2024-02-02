@@ -1,17 +1,17 @@
 ---
 title: Guidance for troubleshooting DNS
 description: Introduces general guidance for troubleshooting scenarios related to DNS.
-ms.date: 10/28/2022
+ms.date: 07/13/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:dns, csstroubleshoot
-ms.technology: networking
+ms.subservice: networking
 ---
 # DNS troubleshooting guidance
 
@@ -90,7 +90,7 @@ A DNS query request may time out if the DNS server forwards the query to unreach
 Event message:  
 > DNS server was unable to open Active Directory. This DNS server is configured to use directory service information and cannot operate without access to the directory. The DNS server will wait for the directory to start. If the DNS server is started but the appropriate event has not been logged, then the DNS server is still waiting for the directory to start.
 
-To troubleshoot this issue, see [Troubleshoot AD DS and restart the DNS Server service](/troubleshoot/windows-server/networking/troubleshoot-dns-event-id-4013#resolution).
+To troubleshoot this issue, see [Troubleshoot AD DS and restart the DNS Server service](troubleshoot-dns-event-id-4013.md#resolution).
 
 ### DNS Server geo-location policy doesn't work as expected
 
@@ -141,32 +141,32 @@ Before contacting Microsoft support, you can gather information about your issue
 
 ### Prerequisites
 
-- TSSv2 must be run by accounts that have administrator privileges on the local system, and the EULA must be accepted. (After the EULA is accepted, TSSv2 won't prompt again.)
+- TSS must be run by accounts that have administrator privileges on the local system, and the EULA must be accepted. (After the EULA is accepted, TSS won't prompt again.)
 - We recommend the LocalMachine `RemoteSigned` PowerShell execution policy.
 
 > [!NOTE]
-> If the current PowerShell execution policy doesn't allow running TSSv2, take the following actions:
+> If the current PowerShell execution policy doesn't allow running TSS, take the following actions:
 >
 > - Set the `RemoteSigned` execution policy for the process level by running the cmdlet, `PS C:\> Set-ExecutionPolicy -scope Process -ExecutionPolicy RemoteSigned`.
 > - To verify that the change takes effect, run the cmdlet, `PS C:\> Get-ExecutionPolicy -List`.
-> - Because the process level permissions apply to only the current PowerShell session, after the given PowerShell window in which TSSv2 runs is closed, the assigned permission for the process level also reverts to the previously configured state.
+> - Because the process level permissions apply to only the current PowerShell session, after the given PowerShell window in which TSS runs is closed, the assigned permission for the process level also reverts to the previously configured state.
 
 ### Gather key information before contacting Microsoft support
 
-1. Download [TSSv2](https://aka.ms/getTSSv2) on all nodes and unzip it in the *C:\\tss_tool* folder.
-2. Open the *C:\\tss_tool* folder at an elevated PowerShell command prompt.
+1. Download [TSS](https://aka.ms/getTSS) on all nodes and unzip it in the *C:\\tss* folder.
+2. Open the *C:\\tss* folder at an elevated PowerShell command prompt.
 3. Start the traces on the client and the server by using the following cmdlets:
 
     - Client:  
 
         ```powershell
-        TSSv2.ps1 -Start -Scenario NET_DNScli
+        TSS.ps1 -Scenario NET_DNScli
         ```
 
     - Server:  
 
         ```powershell
-        TSSv2.ps1 -Start -Scenario NET_DNSsrv
+        TSS.ps1 -Scenario NET_DNSsrv
         ```
 
 4. Accept the EULA if the traces are run for the first time on the server or the client.
@@ -178,7 +178,7 @@ Before contacting Microsoft support, you can gather information about your issue
 
 7. Enter *Y* to finish the log collection after the issue is reproduced.
 
-The traces are stored in a compressed file in the *C:\\MSDATA* folder. This can be uploaded to the workspace for analysis.
+The traces are stored in a compressed file in the *C:\\MS_DATA* folder. This can be uploaded to the workspace for analysis.
 
 ## References
 
@@ -190,6 +190,6 @@ The traces are stored in a compressed file in the *C:\\MSDATA* folder. This can 
 - [DNS Policies overview](/windows-server/networking/dns/deploy/dns-policies-overview)
 - [DNS Active Directory-Integrated Zones](/windows-server/identity/ad-ds/plan/active-directory-integrated-dns-zones)
 - [DNS zone replication in Active Directory](/previous-versions/windows/it-pro/windows-server-2003/cc779655%28v%3dws.10%29)
-- [Verify that SRV DNS records have been created](/troubleshoot/windows-server/networking/verify-srv-dns-records-have-been-created)
-- [Configure DNS dynamic updates](/troubleshoot/windows-server/networking/configure-dns-dynamic-updates-windows-server-2003)
+- [Verify that SRV DNS records have been created](verify-srv-dns-records-have-been-created.md)
+- [Configure DNS dynamic updates](configure-dns-dynamic-updates-windows-server-2003.md)
 - [Reviewing DNS concepts](/windows-server/identity/ad-ds/plan/reviewing-dns-concepts)

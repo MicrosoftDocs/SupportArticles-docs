@@ -3,7 +3,7 @@ title: Too many requests error in Power Automate
 description: Provides a resolution for the 429-TooManyRequests error.
 ms.reviewer: angieandrews
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice:
 ms.author: angieandrews
 author: v-aangie

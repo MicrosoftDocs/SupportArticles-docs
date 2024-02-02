@@ -1,17 +1,17 @@
 ---
 title: Enabling smart card logon
 description: Provides some guidelines for enabling smart card logon with third-party certification authorities.
-ms.date: 9/24/2021
+ms.date: 08/21/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, slight
 ms.custom: sap:smart-card-logon, csstroubleshoot
-ms.technology: windows-server-security
+ms.subservice: windows-security
 ---
 # Guidelines for enabling smart card logon with third-party certification authorities
 
@@ -94,10 +94,12 @@ As with any PKI implementation, all parties must trust the Root CA to which the 
    The smart card certificate has specific format requirements:
    - The CRL Distribution Point (CDP) location (where CRL is the Certification Revocation List) must be populated, online, and available. For example:
   
-   > [1]CRL Distribution Point  
-    Distribution Point Name:  
-    Full Name:  
-    URL=`https://server1.name.com/CertEnroll/caname.crl`
+       ```output
+       [1]CRL Distribution Point  
+       Distribution Point Name:  
+       Full Name:  
+       URL=http://server1.name.com/CertEnroll/caname.crl
+       ```
 
    - Key Usage = Digital Signature
    - Basic Constraints [Subject Type=End Entity, Path Length Constraint=None] (Optional)

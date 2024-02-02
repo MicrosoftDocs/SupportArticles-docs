@@ -1,17 +1,17 @@
 ---
 title: How to convert date/time attributes in Active Directory to standard time format
 description: Describes how attributes that contain a date/time value can be converted to standard meaningful date/time formats.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:windows-time-service, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # How to convert date/time attributes in Active Directory to standard time format
 

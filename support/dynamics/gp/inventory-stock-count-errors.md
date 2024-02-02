@@ -93,4 +93,4 @@ First - make a backup and restore into test to run through the steps. At a minim
 
 The information above was taken from this blog article:
 
-[Stock count errors in Microsoft Dynamics GP](https://community.dynamics.com/gp/b/dynamicsgp/posts/stock-count-errors-in-microsoft-dynamics-gp)
+[Stock count errors in Microsoft Dynamics GP](https://community.dynamics.com/blogs/post/?postid=a428f39b-c2d9-44ac-8b80-168ab59b8516)

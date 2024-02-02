@@ -1,17 +1,17 @@
 ---
 title: (Schema mismatch) error message occurs when you try to run the Active Directory Installation Wizard (Dcpromo.exe)
 description: Explains how to fix (Schema mismatch) error message when try to run the Active Directory Installation Wizard (Dcpromo.exe)
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: arrenc, kaushika
 ms.custom: sap:dcpromo-and-the-installation-of-domain-controllers, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # "Schema mismatch" error message occurs when you try to run the Active Directory Installation Wizard (Dcpromo.exe)
 

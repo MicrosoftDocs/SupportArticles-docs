@@ -1,17 +1,17 @@
 ---
 title: Can't access an EFI system partition
 description: Provides a solution to an issue that you can't gain access to the EFI system partition by using the mountvol /s command when you  use the Mountvol utility (Mountvol.exe) in a WinPE Environment.
-ms.date: 10/19/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, chadbee, davidwin
 ms.custom: sap:setup, csstroubleshoot
-ms.technology: windows-client-deployment
+ms.subservice: deployment
 ---
 # You can't access an EFI system partition with the Mountvol utility in a WinPE Environment
 
@@ -45,3 +45,7 @@ After you follow these steps, you can access an EFI system partition by using th
 ## Status
 
 This behavior is by design.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

@@ -1,17 +1,17 @@
 ---
 title: Can't install .NET Framework 3.5 on OEM Windows installation
 description: Works around an issue in which you cannot install the .NET Framework 3.5 on an OEM Windows installation. This issue occurs when you cannot access the public Internet.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, match, chadbee, v-miand3
 ms.custom: sap:servicing, csstroubleshoot
-ms.technology: windows-server-deployment
+ms.subservice: deployment
 ---
 # Can't install the .NET Framework 3.5 without a public Internet environment on an OEM Windows installation
 
@@ -61,3 +61,7 @@ If you were successful in building an alternative installation source by using a
 > Some hotfixes can only be obtained by contacting Microsoft directly. These hotfixes should also be considered when you build the installation source if this route is selected. 
 
 Our recommendation regarding the building of installation media (as mentioned in the "Workaround" section) is to build an alternative-source media and test it, as this process has proven expensive considering the time that must be spent. This is compared to creating installation media by using known file versions.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

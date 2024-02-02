@@ -1,17 +1,17 @@
 ---
 title: All members of a group may not be returned
 description: Describes a problem that may occur where the Active Directory Service Interfaces WinNT provider does not return all members of a group. This problem occurs when you try to enumerate a local group or a domain local group.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:user-computer-group-and-object-management, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # All members of a group may not be returned when you enumerate members of a group by using the Active Directory Service Interfaces WinNT provider
 
@@ -66,7 +66,7 @@ Next
 > [!IMPORTANT]
 > We do not recommend that you pass credentials in Active Directory Service Interfaces by using the Active Directory Service Interfaces WinNT provider.
 
-For more information, see [User authentication issues with the Active Directory Service Interfaces WinNT provider](/troubleshoot/windows-client/admin-development/adsi-winnt-provider-user-authentication-issues).
+For more information, see [User authentication issues with the Active Directory Service Interfaces WinNT provider](../../windows-client/admin-development/adsi-winnt-provider-user-authentication-issues.md).
 
 ## References
  

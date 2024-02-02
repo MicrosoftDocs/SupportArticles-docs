@@ -1,17 +1,17 @@
 ---
 title: Active Directory replication Event ID 2087 (DNS lookup failure caused replication to fail)
 description: Helps you diagnose and solve Active Directory replication Event ID 2087.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:active-directory-replication, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # Active Directory replication Event ID 2087: DNS lookup failure caused replication to fail
 
@@ -388,3 +388,7 @@ Requirements:
     1. Note the primary DNS servers that each domain controller identifies in the TCP/IP properties in their Network Settings. All the DNS servers that are listed in the respective TCP/IP properties should be able to indirectly or directly resolve this alias (CNAME) resource record.
     2. From the servers that are listed, identify the authoritative name server or servers for this domain zone by looking at the server names that are listed for the name server (NS) resource records at the root of the zone. (In the DNS snap-in, select the forward lookup zone for the root domain, and then view the name server (NS) records in the details pane.)
     3. On the name server or servers obtained in step b, open the DNS snap-in, and double-click the forward lookup zone for the forest root domain name. Double-click the _msdcs folder, and note the alias (CNAME) resource records that exist for your server name.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Active Directory replication issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication.md).

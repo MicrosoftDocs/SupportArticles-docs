@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, MASOUDH
 ms.custom: sap:internet-protocol-security-ipsec, csstroubleshoot
-ms.technology: windows-client-security
+ms.subservice: windows-security
 ---
 # Default encryption settings for the Microsoft L2TP/IPSec VPN Client
 
@@ -72,4 +72,4 @@ There are two modes of operation for IPSec:
 
 ## References
 
-[How to troubleshoot a Microsoft L2TP/IPSec virtual private network client connection](/troubleshoot/windows-client/networking/l2tp-ipsec-vpn-client-connection-issue)
+[How to troubleshoot a Microsoft L2TP/IPSec virtual private network client connection](../networking/l2tp-ipsec-vpn-client-connection-issue.md)

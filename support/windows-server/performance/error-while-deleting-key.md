@@ -1,17 +1,17 @@
 ---
 title: Error while deleting key
 description: When you try to remove a registry key, you receive the Error while deleting key error message. Provides a resolution.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-parapa
 ms.custom: sap:slow-performance, csstroubleshoot
-ms.technology: windows-server-performance
+ms.subservice: performance
 ---
 # Can't delete certain registry keys and Error while deleting key occurs
 

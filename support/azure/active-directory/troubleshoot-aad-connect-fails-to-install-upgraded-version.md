@@ -1,29 +1,29 @@
 ---
-title: Troubleshoot Azure AD Connect upgrade issues
-description: Troubleshoot why you can't upgrade to the latest version of Azure AD Connect on a server that has previous installations of Connect, AD Sync, or DirSync.
+title: Troubleshoot Microsoft Entra Connect upgrade issues
+description: Troubleshoot why you can't upgrade to the latest version of Microsoft Entra Connect on a server that has previous installations of Connect, AD Sync, or DirSync.
 ms.date: 12/15/2021
 author: nualex
 ms.author: nualex
 ms.reviewer: DennisLee-DennisLee
 ms.service: active-directory
 ms.subservice: hybrid
-#Customer intent: As an Azure Active Directory administrator, I want to successfully upgrade to the latest version of Azure AD Connect so that each Active Directory user can use a single identity in hybrid environments.
+#Customer intent: As a Microsoft Entra administrator, I want to successfully upgrade to the latest version of Microsoft Entra Connect so that each Active Directory user can use a single identity in hybrid environments.
 ---
-# Troubleshoot Azure AD Connect upgrade issues
+# Troubleshoot Microsoft Entra Connect upgrade issues
 
-This article describes how to troubleshoot problems that can occur when you upgrade to the latest version of Azure Active Directory Connect from previous installations of Azure AD Connect, Azure AD Sync, or DirSync.
+This article describes how to troubleshoot problems that can occur when you upgrade to the latest version of Microsoft Entra Connect from previous installations of Microsoft Entra Connect, Azure AD Sync, or DirSync.
 
 > [!WARNING]
-> You might find some online documentation that includes steps to directly edit the Windows registry. However, editing the registry can cause serious problems if you modify the registry incorrectly. The Microsoft Azure Active Directory Connect product team **doesn't support** editing the Windows registry.
+> You might find some online documentation that includes steps to directly edit the Windows registry. However, editing the registry can cause serious problems if you modify the registry incorrectly. The Microsoft Entra Connect product team **doesn't support** editing the Windows registry.
 
-*Original product version:* Azure Active Directory  
+*Original product version:* Microsoft Entra ID  
 *Original KB number:* 4051210  
 
 ## Symptoms
 
-Every time that you start the Azure AD Connect setup wizard, the program evaluates all the related products and Windows Installer packages (.msi) that are currently installed. To trace this activity, follow these steps:
+Every time that you start the Microsoft Entra Connect setup wizard, the program evaluates all the related products and Windows Installer packages (.msi) that are currently installed. To trace this activity, follow these steps:
 
-1. Start the Azure AD Connect wizard, and wait for the first page to open.
+1. Start the Microsoft Entra Connect wizard, and wait for the first page to open.
 
 2. Open the `%ProgramData%\AADConnect\` folder, and analyze the latest installation trace log.
 
@@ -80,7 +80,7 @@ A stale product code that you find in Windows Installer packages can also cause 
 [15:29:07.059] [ 1] [INFO ] Product Azure AD Sync Engine is not installed.
 ```
 
-Azure AD Connect Setup wizard can't detect that an Azure AD Sync Engine is installed. Setup fails and returns the following error message:
+Microsoft Entra Connect Setup wizard can't detect that an Azure AD Sync Engine is installed. Setup fails and returns the following error message:
 
 ```output
 [15:52:17.674] [ 13] [ERROR] PerformConfigurationPageViewModel: Caught exception while installing synchronization service.
@@ -156,7 +156,7 @@ To uninstall the product code for the Azure AD Sync Engine, run the Windows Inst
     & MSIEXEC /x %productcode% /qn /norestart /l*v "%ProgramData%\AADConnect\AADConnect_Uninstall-ForcedUninstall_%counter%.log" EXECUTE_UNINSTALL="1"
     ```
 
-1. Start the Azure AD Connect wizard, and wait for the first page to open.
+1. Start the Microsoft Entra Connect wizard, and wait for the first page to open.
 
 1. Open the `%ProgramData%\AADConnect\` folder, and analyze the latest installation trace log.
 
@@ -173,7 +173,7 @@ The Program Install and Uninstall troubleshooter helps you automatically repair 
 
 After you run the tool, restart the server, and then follow these steps:
 
-1. Start the Azure AD Connect wizard, and wait for the first page to open.
+1. Start the Microsoft Entra Connect wizard, and wait for the first page to open.
 
 1. Open the `%ProgramData%\AADConnect\` folder, and analyze the latest installation trace log.
 

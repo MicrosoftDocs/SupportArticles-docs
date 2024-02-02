@@ -1,17 +1,17 @@
 ---
 title: Windows Activation fails with error 0x8007267C
 description: Provides solutions to an issue where Windows Activation fails with the error code 0x8007267C.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, deepaksr, kledman
 ms.custom: sap:activation, csstroubleshoot
-ms.technology: windows-server-deployment
+ms.subservice: deployment
 ---
 # Windows Activation fails with error code: 0x8007267C
 
@@ -61,3 +61,7 @@ Use the following command to change the product key to the MAK product key:
 `slmgr -ipk xxxxx-xxxxx-xxxxx-xxxxx-xxxxx-xxxxx`
 
 Then, launch the phone activation wizard to complete the activation of the machine *slui 04*.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

@@ -2,7 +2,7 @@
 title: Quantity that you're trying to update exceeds the received/delivered quantity.
 description: Solves the issue that you can't create a packing slip if the outbound load has a quantity that exceeds the work quantity that was picked and reserved for the sales order.
 author: Mirzaab
-ms.date: 5/31/2021
+ms.date: 05/31/2021
 ms.topic: troubleshooting
 ms.search.form: WHSLoadTable_WHSSalesPackingSlipPost,WHSLoadPlanningListPage_WHSSalesPackingSlipPost,WHSLoadPlanningWorkbench_WHSSalesPackingSlipPost
 audience: Application User

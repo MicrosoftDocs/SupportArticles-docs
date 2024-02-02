@@ -1,17 +1,17 @@
 ---
 title: Folder redirection settings are applied from Group Policy
 description: This article describes a problem that you experience when you turn on loopback processing in Group Policy and notice that the folder redirection settings are being applied from the Group Policy settings that are deployed to the user's computer.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
-ms.technology: windows-server-group-policy
+ms.subservice: group-policy
 ---
 # Folder redirection settings are still applied from Group Policy settings even though you turn on loopback processing in Group Policy
 
@@ -49,3 +49,7 @@ This points the My Documents folder to the user local profile My Documents folde
 ## More information
 
 Organizations that use software distribution and folder redirection Group Policy settings may not want to use those settings for users who have slow Internet connections. Such organizations can turn on loopback processing so that users have two different Group Policy settings applied, based on the computer that they use to log on to the network.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Group Policy issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-group-policy.md).

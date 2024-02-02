@@ -1,17 +1,17 @@
 ---
 title: AD replication error 5
 description: This article describes various reasons of Active Directory replication error 5.
-ms.date: 3/24/2022
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, arrenc, Justintu
 ms.custom: sap:active-directory-replication, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # Active Directory replication error 5 - Access is denied
 
@@ -392,3 +392,7 @@ The generic DCDIAG runs multiple tests.
     - Select **Advanced** tab.
     - Disable **IPv4 Large Send Offload**.
     - Reboot.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Active Directory replication issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication.md).

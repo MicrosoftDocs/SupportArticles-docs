@@ -1,14 +1,14 @@
 ---
 title: Windows 10 upgrade quick fixes
 description: Learn how to quickly resolve many problems, which may come up during a Windows 10 upgrade.
-ms.date: 03/13/2023
+ms.date: 04/28/2023
 manager: dcscontentpm
 ms.author: aaroncz
 ms.custom: sap:setup, csstroubleshoot
-ms.prod: windows-client
+ms.service: windows-client
 author: aczechowski
 ms.topic: troubleshooting
-ms.technology: windows-client-deployment
+ms.subservice: deployment
 ms.reviewer: dougeby
 audience: itpro
 localization_priority: medium
@@ -111,7 +111,7 @@ If any errors are displayed in the Windows Update Troubleshooter, use the Micros
 
 ### Repair system files
 
-This fix is also described in detail at [answers.microsoft.com](https://answers.microsoft.com/EN-US/windows/forum/windows_10-update/system-file-check-sfc-scan-and-repair-system-files/bc609315-da1f-4775-812c-695b60477a93).
+This fix is also described in detail at [answers.microsoft.com](https://answers.microsoft.com/EN-US/windows/forum/all/sfc-scannow/bc609315-da1f-4775-812c-695b60477a93).
 
 To check and repair system files:
 
@@ -230,7 +230,11 @@ Another option is to use File Explorer to create a new folder under C: with a sh
 
 If you downloaded the *SetupDiag.exe* program to your computer, then copied it to the folder *C:\new*, and you opened an elevated command prompt then typed `cd c:\new` to change to this directory, you can just type `setupdiag` and press Enter to run the program. This program will analyze the files on your computer to see why a Windows Upgrade failed and if the reason was a common one, it will report this reason. It will not fix the problem for you but knowing why the upgrade failed enables you to take steps to fix the problem.
 
-## More information
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).
+
+## Reference
 
 - [Windows 10 FAQ for IT professionals](/windows/deployment/planning/windows-10-enterprise-faq-itpro)
 - [Windows 10 Enterprise system requirements](https://technet.microsoft.com/windows/dn798752.aspx)

@@ -1,17 +1,17 @@
 ---
 title: VM Integration Services status reports protocol version mismatch on pre-Windows 10, Windows Server 2016, or Windows Server 2019 VM guests
 description: Discusses an issue in which VM Integration Services status reports protocol version mismatch on pre-Windows 10, Windows Server 2016, or Windows Server 2019 VM guests.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-jesits, arrenc, ajayps, sarathm
 ms.custom: sap:integration-components, csstroubleshoot
-ms.technology: hyper-v
+ms.subservice: hyper-v
 ---
 # VM Integration Services status reports protocol version mismatch on pre-Windows 10, Windows Server 2016, or Windows Server 2019 VM guests
 

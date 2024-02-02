@@ -1,18 +1,14 @@
 ---
 title: Troubleshoot the OutboundConnFailVMExtensionError error code (50)
-description: Learn how to troubleshoot the OutboundConnFailVMExtensionError error (50) when you try to create and deploy an Azure Kubernetes Service (AKS) cluster.
-ms.date: 3/22/2022
-author: DennisLee-DennisLee
-ms.author: v-dele
-editor: v-jsitser
-ms.reviewer: rissing, chiragpa, erbookbi
+description: Learn how to troubleshoot the OutboundConnFailVMExtensionError error (50) when you try to start or create and deploy an Azure Kubernetes Service (AKS) cluster.
+ms.date: 01/24/2024
+ms.reviewer: rissing, chiragpa, v-leedennis, jovieir
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-create-operations
-#Customer intent: As an Azure Kubernetes user, I want to troubleshoot the OutboundConnFailVMExtensionError error code (or error code ERR_OUTBOUND_CONN_FAIL, error number 50) so that I can successfully create and deploy an Azure Kubernetes Service (AKS) cluster.
 ---
 # Troubleshoot the OutboundConnFailVMExtensionError error code (50)
 
-This article describes how to identify and resolve the `OutboundConnFailVMExtensionError` error (also known as error code `ERR_OUTBOUND_CONN_FAIL`, error number 50) that might occur if you try to create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
+This article describes how to identify and resolve the `OutboundConnFailVMExtensionError` error (also known as error code `ERR_OUTBOUND_CONN_FAIL`, error number 50) that might occur if you try to start or create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
 
 ## Prerequisites
 
@@ -20,9 +16,11 @@ This article describes how to identify and resolve the `OutboundConnFailVMExtens
 
 - The [dig](https://linux.die.net/man/1/dig) command-line tool
 
+- The Client URL ([cURL](https://curl.se/download.html)) tool
+
 ## Symptoms
 
-When you try to create an AKS cluster, you receive the following error message:
+When you try to start or create an AKS cluster, you receive the following error message:
 
 > Unable to establish outbound connection from agents, please see <https://aka.ms/aks-required-ports-and-addresses> for more information.
 >
@@ -31,17 +29,89 @@ When you try to create an AKS cluster, you receive the following error message:
 > Message="VM has reported a failure when processing extension 'vmssCSE'.
 >
 > Error message: "**Enable failed: failed to execute command: command terminated with exit status=50**\n[stdout]\n\n[stderr]\nnc: connect to mcr.microsoft.com port 443 (tcp) failed: Connection timed out\nCommand exited with non-zero status
+>
+> Error details : "vmssCSE error messages : {**vmssCSE exit status=50, output=pt/apt.conf.d/95proxy**...}
 
 ## Cause
 
-The custom script extension that downloads the necessary components to provision the nodes couldn't establish the necessary outbound connectivity to obtain packages. For public clusters, the nodes try to communicate with the Microsoft Container Registry (MCR) endpoint (`mcr.microsoft.com`) on port 443. There are many reasons why the traffic might be blocked. In any of these situations, the best way to test connectivity is to use the Secure Shell protocol (SSH) to connect to the node. To make the connection, follow the instructions in [Connect to Azure Kubernetes Service (AKS) cluster nodes for maintenance or troubleshooting](/azure/aks/node-access).
+The custom script extension that downloads the necessary components to provision the nodes couldn't establish the necessary outbound connectivity to obtain packages. For public clusters, the nodes try to communicate with the Microsoft Container Registry (MCR) endpoint (`mcr.microsoft.com`) on port 443.
 
-After you connect to the node, run the `nc` and `dig` commands to test the connectivity on the cluster:
+There are many reasons why the traffic might be blocked. In any of these situations, the best way to test connectivity is to use the Secure Shell protocol (SSH) to connect to the node. To make the connection, follow the instructions in [Connect to Azure Kubernetes Service (AKS) cluster nodes for maintenance or troubleshooting](/azure/aks/node-access). Then, test the connectivity on the cluster by following these steps:
 
-```shell
-nc -vz mcr.microsoft.com 443 
-dig mcr.microsoft.com 443
-```
+1. After you connect to the node, run the `nc` and `dig` commands:
+
+   ```bash
+   nc -vz mcr.microsoft.com 443 
+   dig mcr.microsoft.com 443
+   ```
+
+   > [!NOTE]  
+   > If you can't access the node through SSH, you can test the outbound connectivity by running the [az vmss run-command invoke](/cli/azure/vmss/run-command#az-vmss-run-command-invoke) command against the Virtual Machine Scale Set instance:
+   >
+   > ```azurecli
+   > # Get the VMSS instance IDs.
+   > az vmss list-instances --resource-group <mc-resource-group-name> \
+   >     --name <vmss-name> \
+   >     --output table
+   > 
+   > # Use an instance ID to test outbound connectivity.
+   > az vmss run-command invoke --resource-group <mc-resource-group-name> \
+   >     --name <vmss-name> \
+   >     --command-id RunShellScript \
+   >     --instance-id <vmss-instance-id> \
+   >     --output json \
+   >     --scripts "nc -vz mcr.microsoft.com 443"
+   > ```
+
+1. If you try to create an AKS cluster by using an HTTP proxy, run the `nc`, `curl`, and `dig` commands after you connect to the node:
+
+   ```bash
+   # Test connectivity to the HTTP proxy server from the AKS node.
+   nc -vz <http-s-proxy-address> <port>
+   
+   # Test traffic from the HTTP proxy server to HTTPS.
+   curl --proxy http://<http-proxy-address>:<port>/ --head https://mcr.microsoft.com
+   
+   # Test traffic from the HTTPS proxy server to HTTPS.
+   curl --proxy https://<https-proxy-address>:<port>/ --head https://mcr.microsoft.com
+   
+   # Test DNS functionality.
+   dig mcr.microsoft.com 443
+   ```
+
+   > [!NOTE]  
+   > If you can't access the node through SSH, you can test the outbound connectivity by running the `az vmss run-command invoke` command against the Virtual Machine Scale Set instance:
+   >
+   > ```azurecli
+   > # Get the VMSS instance IDs.
+   > az vmss list-instances --resource-group <mc-resource-group-name> \
+   >     --name <vmss-name> \
+   >     --output table
+   > 
+   > # Use an instance ID to test connectivity from the HTTP proxy server to HTTPS.
+   > az vmss run-command invoke --resource-group <mc-resource-group-name> \
+   >     --name <vmss-name> \
+   >     --command-id RunShellScript \
+   >     --instance-id <vmss-instance-id> \
+   >     --output json \
+   >     --scripts "curl --proxy http://<http-proxy-address>:<port>/ --head https://mcr.microsoft.com"
+   > 
+   > # Use an instance ID to test connectivity from the HTTPS proxy server to HTTPS.
+   > az vmss run-command invoke --resource-group <mc-resource-group-name> \
+   >     --name <vmss-name> \
+   >     --command-id RunShellScript \
+   >     --instance-id <vmss-instance-id> \
+   >     --output json \
+   >     --scripts "curl --proxy https://<https-proxy-address>:<port>/ --head https://mcr.microsoft.com"
+   > 
+   > # Use an instance ID to test DNS functionality.
+   > az vmss run-command invoke --resource-group <mc-resource-group-name> \
+   >     --name <vmss-name> \
+   >     --command-id RunShellScript \
+   >     --instance-id <vmss-instance-id> \
+   >     --output json \
+   >     --scripts "dig mcr.microsoft.com 443"
+   > ```
 
 ## Solution
 
@@ -49,15 +119,15 @@ The following table lists specific reasons why traffic might be blocked, and the
 
 | Issue | Solution |
 | ----- | -------- |
-| Traffic is blocked by firewall rules | In this scenario, a firewall does egress filtering. To verify that all required domains and ports are allowed, see [Control egress traffic for cluster nodes in Azure Kubernetes Service (AKS)](/azure/aks/limit-egress-traffic). |
+| Traffic is blocked by firewall rules or a proxy server | In this scenario, a firewall or a proxy server does egress filtering. To verify that all required domains and ports are allowed, see [Control egress traffic for cluster nodes in Azure Kubernetes Service (AKS)](/azure/aks/limit-egress-traffic). |
 | Traffic is blocked by a cluster network security group (NSG) | On any NSGs that are attached to your cluster, verify that there's no blocking on port 443, port 53, or any other port that might have to be used to connect to the endpoint. For more information, see [Control egress traffic for cluster nodes in Azure Kubernetes Service (AKS)](/azure/aks/limit-egress-traffic). |
-| The AAAA (IPv6) record is blocked on the firewall | On your firewall, verify that there's nothing that would block the endpoint from resolving in Azure DNS. |
-| Private cluster can't resolve internal Azure resources | In private clusters, the Azure DNS IP address (`168.63.129.16`) must be added as an upstream DNS server if custom DNS is being used. Verify that the address is set on your DNS servers. For more information, see [Create a private AKS cluster](/azure/aks/private-clusters) and [What is IP address 168.63.129.16?](/azure/virtual-network/what-is-ip-address-168-63-129-16) |
+| The AAAA (IPv6) record is blocked on the firewall | On your firewall, verify that nothing exists that would block the endpoint from resolving in Azure DNS. |
+| Private cluster can't resolve internal Azure resources | In private clusters, the Azure DNS IP address (`168.63.129.16`) must be added as an upstream DNS server if custom DNS is used. Verify that the address is set on your DNS servers. For more information, see [Create a private AKS cluster](/azure/aks/private-clusters) and [What is IP address 168.63.129.16?](/azure/virtual-network/what-is-ip-address-168-63-129-16) |
 
 ## More information
 
 - [General troubleshooting of AKS cluster creation issues](troubleshoot-aks-cluster-creation-issues.md)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
-
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-contact-disclaimer.md)]
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

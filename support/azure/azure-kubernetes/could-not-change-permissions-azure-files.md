@@ -1,10 +1,8 @@
 ---
 title: Could not change permissions using Azure Files
 description: Troubleshoot an error in which you could not change permissions when you use Azure Files in Azure Kubernetes Service (AKS).
-ms.date: 5/25/2022
-author: DennisLee-DennisLee
-ms.author: v-dele
-ms.reviewer: chiragpa, nickoman
+ms.date: 05/25/2022
+ms.reviewer: chiragpa, nickoman, v-leedennis
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-azure-storage-issues
 keywords:

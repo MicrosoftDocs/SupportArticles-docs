@@ -1,17 +1,17 @@
 ---
 title: Troubleshoot AD replication error 1396
 description: Provides help to troubleshoot Active Directory replication error 1396.
-ms.date: 3/24/2022
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, Justinha
 ms.custom: sap:active-directory-replication, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # Active Directory replication error 1396: Logon Failure: The target account name is incorrect
 
@@ -206,3 +206,7 @@ Other causes include:
 4. The DC is a virtual machine that was set to sync time with the VMware host, caused events 1925, 1645.
 
 5. For the RODC specific scenario where the KRBTGT account is deleted: authoritatively restore the KRBTGT_##### account using NTDSUTIL and then import the LDIFDE file to correct backlinks.  At minimum, the msDS-KrbTgtLink attribute on the RODC's computer object will need to be updated to point to the DN of the restored account.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Active Directory replication issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication.md).

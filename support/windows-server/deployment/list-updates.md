@@ -1,17 +1,17 @@
 ---
 title: List of updates
 description: Lists the Microsoft Knowledge Base articles that describe the fixes and updates that are included in Windows Server 2003 Service Pack 2.
-ms.date: 3/24/2022
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, trined
 ms.custom: sap:servicing, csstroubleshoot
-ms.technology: windows-server-deployment
+ms.subservice: deployment
 ---
 # List of updates in Windows Server 2003 Service Pack 2
 
@@ -65,3 +65,7 @@ For more information about the updates that are included in Microsoft Windows Se
 |[902346](https://support.microsoft.com/help/902346)|FIX: Error messages when you use a Windows Management Instrumentation (WMI) query to register WMI events on a computer that is running Windows Server 2003 or Windows XP: "0x80041032" and "0x80041003"|WMI|
   
 This service pack also includes the fixes and the updates that are contained in Windows Server 2003 Service Pack 1 (SP1).
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

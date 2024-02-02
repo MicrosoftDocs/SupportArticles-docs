@@ -1,17 +1,17 @@
 ---
 title: Configure W32Time against huge time offset
 description: Discusses how to configure W32Time to help prevent large time offsets in the domain.
-ms.date: 3/24/2022
+ms.date: 03/24/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, yizhao
 ms.custom: sap:windows-time-service, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # How to configure the Windows Time service against a large time offset
 

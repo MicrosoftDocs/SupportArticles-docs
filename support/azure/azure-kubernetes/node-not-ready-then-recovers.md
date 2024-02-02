@@ -1,10 +1,8 @@
 ---
 title: Node not ready but then recovers
 description: Troubleshoot scenarios in the status of an Azure Kubernetes Service (AKS) cluster node is Node Not Ready, but then the node recovers.
-ms.date: 4/15/2022
-author: DennisLee-DennisLee
-ms.author: v-dele
-ms.reviewer: rissing, chiragpa, momajed
+ms.date: 04/15/2022
+ms.reviewer: rissing, chiragpa, momajed, v-leedennis
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-node-not-ready
 #Customer intent: As an Azure Kubernetes user, I want to prevent the Node Not Ready status for nodes that later recover so that I can avoid future errors within an Azure Kubernetes Service (AKS) cluster.

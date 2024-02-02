@@ -1,17 +1,17 @@
 ---
 title: Fail to add additional disk to a scheduled backup
 description: Provides a solution to an issue where you receive an error message when you try to add an additional disk to a scheduled backup.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:configuring-and-using-backup-software, csstroubleshoot
-ms.technology: windows-server-backup-and-storage
+ms.subservice: backup-and-storage
 ---
 # Error message when you try to add an additional disk to a scheduled backup: The filename, directory name, or volume label syntax is incorrect
 

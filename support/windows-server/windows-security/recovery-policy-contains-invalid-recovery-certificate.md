@@ -1,17 +1,17 @@
 ---
 title: Client computers can't encrypt files in a domain
 description: Describes a problem in which client computers receive an error message when the clients try to encrypt a file on a remote computer. This problem occurs if a valid recovery agent certificate is not available on the client computer.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, Rajsin
 ms.custom: sap:certificates-and-public-key-infrastructure-pki, csstroubleshoot
-ms.technology: windows-server-security
+ms.subservice: windows-security
 ---
 # Error when client computers encrypt a file in a Windows Server 2003 domain: Recovery policy configured for this system contains invalid recovery certificate
 

@@ -1,8 +1,8 @@
 ---
 title: Windows stop error 0xC0000102 Status File Corrupt
-description: Fixes error 0xC0000102 (Status File Corrupt) that occurs on an Azure virtual machine (VM).
-ms.date: 12/8/2020
-ms.reviewer: jarrettr
+description: Understand how to fix error 0xC0000102 (Status File Corrupt) that occurs on an Azure virtual machine (VM).
+ms.date: 10/09/2023
+ms.reviewer: jarrettr, v-leedennis
 ms.service: virtual-machines
 ms.subservice: vm-cannot-start-stop
 ms.collection: windows
@@ -29,10 +29,9 @@ Error 0xC0000102 is a STATUS_FILE_CORRUPT_ERROR, which means a corrupted file is
 
 ## Solution
 
-> [!TIP]
-> If you have a recent backup of the VM, you may try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
+### Try restoring the VM from a backup
 
-To resolve this issue, follow these steps:
+If you have a recent backup of the VM, you may try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the start problem. If restoring the VM from backup isn't possible, follow these steps:
 
 1. Create and Access a Repair VM
 2. Repair or replace the corrupt file
@@ -44,7 +43,7 @@ To resolve this issue, follow these steps:
 
 ### Step 1: Create and access a repair VM
 
-1. Follow steps 1-3 of the VM [Repair process overview](/azure/virtual-machines/troubleshooting/repair-windows-vm-using-azure-virtual-machine-repair-commands#repair-process-overview) to prepare a Repair VM.
+1. Follow steps 1-3 of the VM [repair process example](/azure/virtual-machines/troubleshooting/repair-windows-vm-using-azure-virtual-machine-repair-commands#repair-process-example) to prepare a Repair VM.
 2. Use Remote Desktop Connection connect to the Repair VM.
 
 ### Step 2: Repair or replace the corrupt file

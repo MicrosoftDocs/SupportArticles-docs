@@ -1,17 +1,17 @@
 ---
 title: A CA can't use a certificate template
 description: Provides a solution to an issue where a certificate template is unable to load and certificate requests are unsuccessful using the same template.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, slight
 ms.custom: sap:active-directory-certificate-services, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # A Certification Authority can't use a certificate template
 

@@ -1,17 +1,17 @@
 ---
 title: Computer Management console shows clients sessions slow
 description: Provides a solution to an issue where information on shared folder sessions is populated slow in Computer Management console.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, DanMa
 ms.custom: sap:access-to-remote-file-shares-smb-or-dfs-namespace, csstroubleshoot
-ms.technology: networking
+ms.subservice: networking
 ---
 # You may have to wait for a long time to populate the information on shared folder sessions in Computer Management console
 

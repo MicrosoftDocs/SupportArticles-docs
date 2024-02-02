@@ -1,11 +1,9 @@
 ---
 title: Troubleshoot availability issues in Azure Storage accounts
 description: Identifies and troubleshoots availability issues in Azure Storage accounts.
-author: AmandaAZ
-ms.author: v-weizhu
 ms.date: 04/12/2023
-ms.reviewer: normesta, azurestocic, jarrettr
-ms.service: storage
+ms.reviewer: normesta, azurestocic, jarrettr, v-weizhu
+ms.service: azure-storage
 ---
 
 # Troubleshoot availability issues in Azure storage accounts

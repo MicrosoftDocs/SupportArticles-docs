@@ -4,7 +4,6 @@ description: This article provides resolution for the problem where the Object E
 ms.date: 09/10/2020
 ms.custom: sap:Tools
 ms.reviewer: cbenkler, daleche
-ms.prod: sql
 ---
 # Object Explorer intermittently hangs when you use SSMS 2012 or later
 

@@ -1,17 +1,17 @@
 ---
 title: Spooler.xml file growth and high CPU in spoolsv.exe process on print server
 description: Resolves an issue where you experience higher CPU utilization in the spoolsv.exe process and the spooler.xml file grows in size.
-ms.date: 4/20/2022
+ms.date: 05/16/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:errors-and-troubleshooting-general-issues, csstroubleshoot
-ms.technology: windows-server-printing
+ms.subservice: printing
 ---
 # Spooler.xml file growth and high CPU in spoolsv.exe process on print server
 
@@ -47,3 +47,7 @@ You can work around this problem by disabling Windows Error Reporting for the pr
 Microsoft and/or its suppliers make no representations or warranties about the suitability, reliability, or accuracy of the information contained in the documents and related graphics published on this website (the "materials") for any purpose. The materials may include technical inaccuracies or typographical errors and may be revised at any time without notice.
 
 To the maximum extent permitted by applicable law, Microsoft and/or its suppliers disclaim and exclude all representations, warranties, and conditions whether express, implied, or statutory, including but not limited to representations, warranties, or conditions of title, non-infringement, satisfactory condition or quality, merchantability and fitness for a particular purpose, with respect to the materials.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for User Experience issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-user-experience.md#printing).

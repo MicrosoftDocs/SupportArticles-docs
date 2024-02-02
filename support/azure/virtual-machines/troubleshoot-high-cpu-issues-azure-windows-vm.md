@@ -13,7 +13,7 @@ ms.collection: windows
 ms.workload: na
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
-ms.date: 9/24/2020
+ms.date: 09/24/2020
 ms.author: mnanda
 ---
 

@@ -7,10 +7,10 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.technology: windows-client-networking
+ms.subservice: networking
 ---
 # Windows clients networking troubleshooting documentation
 

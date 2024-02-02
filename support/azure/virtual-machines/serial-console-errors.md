@@ -8,11 +8,10 @@ manager: dcscontentpm
 tags: azure-resource-manager
 ms.service: virtual-machines
 ms.subservice: vm-troubleshooting-tools
-ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: vm
 ms.workload: infrastructure-services
-ms.date: 7/26/2022
+ms.date: 07/26/2022
 ms.author: genli
 ---
 
@@ -42,7 +41,7 @@ Provisioning for this VM has not yet succeeded. Please ensure the VM is fully de
 Web socket is closed or could not be opened. | You may need to add firewall access to `*.serialconsole.azure.com`. A more detailed but longer approach is to allow firewall access to the [Microsoft Azure Datacenter IP ranges](https://www.microsoft.com/download/details.aspx?id=41653), which change fairly regularly.
 Serial console does not work with a storage account using Azure Data Lake Storage Gen2 with hierarchical namespaces. | This is a known issue with hierarchical namespaces. To mitigate, ensure that your VM's boot diagnostics storage account is not created using Azure Data Lake Storage Gen2. This option can only be set upon storage account creation. You may have to create a separate boot diagnostics storage account without Azure Data Lake Storage Gen2 enabled to mitigate this issue.
 The serial console connection to the VM encountered an error: 'Forbidden'(SubscriptionNotEnabled) - Subscription name undefined, id \<subscription id> is in non-Enabled state undefined | This issue may occur if the subscription that a user has created their Cloud Shell storage account in has been disabled. To mitigate, launch Cloud Shell and [perform the steps necessary](/azure/cloud-shell/persisting-shell-storage#unmount-clouddrive-1) to reprovision a backing storage account for Cloud Shell in the current subscription.
-Azure Serial Console requests result in the error “Sorry, the serial console was unable to connect to the VM because the service did not respond in a timely manner.” | In rare circumstances, communication failure may prevent the Azure node from properly applying boot diagnostics configuration. [Reapplying the virtual machine state](vm-stuck-in-failed-state.md#resolution) in the Azure portal may resolve this issue.
+Azure Serial Console requests result in the error "Sorry, the serial console was unable to connect to the VM because the service did not respond in a timely manner." | In rare circumstances, communication failure may prevent the Azure node from properly applying boot diagnostics configuration. [Reapplying the virtual machine state](vm-stuck-in-failed-state.md#resolution) in the Azure portal may resolve this issue.
 
 ## Next steps
 

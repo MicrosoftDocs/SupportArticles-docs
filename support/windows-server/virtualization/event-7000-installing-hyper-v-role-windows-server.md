@@ -1,17 +1,17 @@
 ---
 title: Event 7000 after installing the Hyper-V role in Windows Server
 description: This article describes Event 7000 that is logged by the VMSP service after you install the Hyper-V role in Windows Server.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:installation-and-configuration-of-hyper-v, csstroubleshoot
-ms.technology: hyper-v
+ms.subservice: hyper-v
 ---
 # Event 7000 after installing the Hyper-V role in Windows Server
 

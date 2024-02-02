@@ -1,17 +1,17 @@
 ---
 title: Incorrect TLS is displayed
 description: Describes an issue in which SSL (TLS 1.0) is displayed as the Security Layer protocol instead of the actual TLS 1.2 protocol. A resolution is provided.
-ms.date: 12/9/2021
+ms.date: 12/09/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:administration, csstroubleshoot
-ms.technology: windows-server-rds
+ms.subservice: rds
 ---
 # Incorrect TLS is displayed when you use RDP with SSL encryption
 

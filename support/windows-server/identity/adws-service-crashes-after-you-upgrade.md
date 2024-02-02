@@ -1,17 +1,17 @@
 ---
 title: ADWS service crashes after upgrade
 description: Describes an issue in which the Active Directory Web Services service crashes upon start. This issue occurs after you perform an in-place upgrade.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, lindakup, jCaudill
 ms.custom: sap:active-directory-database-issues-and-domain-controller-boot-failures, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # ADWS service crashes after you upgrade
 

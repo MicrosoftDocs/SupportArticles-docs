@@ -1,17 +1,17 @@
 ---
 title: Microsoft Exchange compatibility with Single Label Domains, Disjointed Namespaces, and Discontiguous Namespaces
 description: Describes compatibility of Microsoft products with Single Label Domains, Disjoint Namespaces, and Discontiguous Namespaces.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: jarrettr, kaushika
 ms.custom: sap:dns, csstroubleshoot
-ms.technology: networking
+ms.subservice: networking
 ---
 # Microsoft Exchange compatibility with Single Label Domains, Disjointed Namespaces, and Discontiguous Namespaces
 
@@ -22,15 +22,15 @@ _Original KB number:_ &nbsp; 2269838
 
 ## Single Label Domains
 
-For a description of Single Label Domains, see the Single Label Domains topic in the [Microsoft DNS Namespace Planning Solution Center.](/troubleshoot/windows-server/networking/dns-namespace-design)
+For a description of Single Label Domains, see the Single Label Domains topic in the [Microsoft DNS Namespace Planning Solution Center.](dns-namespace-design.md)
 
 ## Disjoint Namespaces
 
-For a description of Disjoint Namespaces, see the Disjoint Namespaces topic in the [Microsoft DNS Namespace Planning Solution Center.](/troubleshoot/windows-server/networking/dns-namespace-design)
+For a description of Disjoint Namespaces, see the Disjoint Namespaces topic in the [Microsoft DNS Namespace Planning Solution Center.](dns-namespace-design.md)
 
 ## Discontiguous Namespaces
 
-For a description of Discontiguous Namespaces, also known as a non-contiguous namespaces, see the Discontiguous Namespaces topic in the [Microsoft DNS Namespace Planning Solution Center.](/troubleshoot/windows-server/networking/dns-namespace-design)
+For a description of Discontiguous Namespaces, also known as a non-contiguous namespaces, see the Discontiguous Namespaces topic in the [Microsoft DNS Namespace Planning Solution Center.](dns-namespace-design.md)
 
 ## Exchange Server
 
@@ -84,4 +84,4 @@ For information about how to configure this, see [Understanding DNS Client Setti
 
 ## References
 
-[Product Compatibility page on the DNS Namespace Planning Solution Center](/troubleshoot/windows-server/networking/dns-namespace-design)
+[Product Compatibility page on the DNS Namespace Planning Solution Center](dns-namespace-design.md)

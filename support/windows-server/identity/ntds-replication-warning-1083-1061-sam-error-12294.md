@@ -1,17 +1,17 @@
 ---
 title: NTDS replication warning IDs 1083 and 1061
 description: Describes an issue that occurs if a change that is made on the local domain controller is also made on the domain controller that holds the PDC operations master role. In this scenario, the domain controllers may replicate the changes at the same time.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, rolandw, herbertm
 ms.custom: sap:active-directory-replication, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # Description of NTDS replication warning IDs 1083 and 1061, and SAM error ID 12294 because of an Active Directory collision
 
@@ -102,3 +102,7 @@ Because of the short replication notification intervals that you can have in Mic
 [214678](https://support.microsoft.com/help/214678) How to modify the default intra-site domain controller replication interval
 
 To help reduce the generation of replication collision events, configure the PDC in a site that does not have other domain controllers or client computers. In this scenario, the PDC does not urgently replicate updates that it receives. Therefore, you may reduce the risk of replication collisions. In a large domain, you can use this method to help reduce the load on the PDC.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Active Directory replication issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication.md).

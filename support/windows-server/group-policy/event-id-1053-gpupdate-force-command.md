@@ -1,17 +1,17 @@
 ---
 title: Event ID 1053 is logged when you use the gpupdate command
 description: Provides a resolution for the issue that Event ID 1053 is logged when you use the Gpupdate /force command, or you restart a domain controller
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, Rajsin
 ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
-ms.technology: windows-server-group-policy
+ms.subservice: group-policy
 ---
 # Event ID 1053 is logged when you use the Gpupdate /force command, or you restart a domain controller
 
@@ -68,3 +68,7 @@ To resolve this problem, add the MaxTokenSize registry entry and the MaxUserPort
     > The default value for the MaxUserPort registry entry is 5000.
 10. Exit Registry Editor.
 11. Restart the computer.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Group Policy issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-group-policy.md).

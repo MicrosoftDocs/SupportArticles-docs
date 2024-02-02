@@ -1,17 +1,17 @@
 ---
 title: Troubleshoot replication error 8606
 description: Provides a resolution to an issue where Active Directory replication fails with error 8606.
-ms.date: 11/18/2021
+ms.date: 08/03/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:active-directory-replication, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # Active Directory Replication Error 8606: Insufficient attributes were given to create an object
 
@@ -54,7 +54,7 @@ Dialog message text: The following error occurred during the attempt to synchron
 
 ### Symptom 3
 
-Various REPADMIN.EXE commands fail with error 8606. These commands include but are not limited to the following:  
+Various *repadmin.exe* commands fail with error 8606. These commands include but are not limited to the following:  
 
 `repadmin /add`  `repadmin /replsum`  
 `repadmin /showrepl` `repadmin /showrepl`  
@@ -90,7 +90,7 @@ Object GUID:
 Error 8606 is logged when the following conditions are true:  
 
 - A source domain controller sends an update to an object (instead of an originating object create) that has already been created, deleted, and then reclaimed by garbage collection from a destination domain controller's copy of Active Directory.  
-- he destination domain controller was configured to run in [strict replication consistency.](https://technet.microsoft.com/library/cc816938%28ws.10%29.aspx)  
+- The destination domain controller was configured to run in [strict replication consistency.](https://technet.microsoft.com/library/cc816938%28ws.10%29.aspx)  
 
 If the destination domain controller was configured to use loose replication consistency, the object would have been "reanimated" on the destination domain controller's copy of the directory. Specific variations that can cause error are 8606 documented in the "More Information" section. However, the error is caused by one of the following:  
 
@@ -118,7 +118,7 @@ When you troubleshoot 8606 errors, think about the following points:
 1. Identify the current value for the forest-wide **TombStoneLifeTime** setting.
 
     ```console
-     c:\>repadmin /showattr. "CN=Directory Service,CN=Windows NT,CN=Services,CN=Configuration,DC=forest root domain,DC=TLD> /atts:tombstonelifetime  
+    repadmin /showattr "CN=Directory Service,CN=Windows NT,CN=Services,CN=Configuration,DC=forest root domain,DC=TLD" /atts:tombstonelifetime  
     ```
 
     See the "Tombstone lifetime and replication of deletions" section in the following article in the Microsoft Knowledge Base:  
@@ -142,7 +142,7 @@ When you troubleshoot 8606 errors, think about the following points:
     The date stamps for LastKnownParent and IsDeleted columns can be determined by running `repadmin /showobjmeta` and referencing the objectguid of the object that is cited in the NTDS replication 1988 event. To do this, use the following syntax:
 
     ```console  
-    c:\>repadmin /showobjmeta <fqdn of source DC from 1988 event> "<GUID=GUID of object cited in the 1988 event>"
+    repadmin /showobjmeta <fqdn of source DC from 1988 event> "<GUID=GUID of object cited in the 1988 event>"
     ```
 
     The date stamp for LastKnownParent identifies the date on which the object was deleted. The date stamp for IsDeleted tells you when the object was last deleted or reanimated. The version number tells you whether the last modification deleted or reanimated the object. An IsDeleteted value of 1 represents an initial delete. Odd-numbered values greater than 1 indicate a reanimation following at least one deletion. For example, an **isDeleted** value of 2 represents an object that was deleted (version 1) and then later undeleted or reanimated (version 2). Later even-numbered values for IsDeleted represent later reanimations or undeletes of the object.
@@ -163,7 +163,7 @@ When you troubleshoot 8606 errors, think about the following points:
 
 ### How to remove lingering objects
 
-While many methods exist to remove lingering objects, there are three primary tools commonly used: repadmin.exe, Lingering Object Liquidator (LoL) and repldiag.  
+While many methods exist to remove lingering objects, there are three primary tools commonly used: *repadmin.exe*, Lingering Object Liquidator (LoL) and repldiag.  
 
 #### Lingering Object Liquidator (LoL)  
 
@@ -171,15 +171,15 @@ The easiest method to clean up Lingering Objects is to use the LoL. The LoL tool
 
 #### Repadmin  
 
-The following two commands in REPADMIN.EXE can remove lingering objects from directory partitions:
+The following two commands in *repadmin.exe* can remove lingering objects from directory partitions:
 
-- `REPADMIN /REMOVELINGERINGOBJECTS`
-- `REPADMIN /REHOST`
+- `repadmin /removelingeringobjects`
+- `repadmin /rehost`
 
-`REPADMIN /REMOVELINGERINGOBJCTS` can be used to remove lingering objects from writable and read-only directory partitions on source domain controllers. The syntax is as follows:
+The `repadmin /removelingeringobjects` command can be used to remove lingering objects from writable and read-only directory partitions on source domain controllers. The syntax is as follows:
 
 ```console  
-c:\>repadmin /removelingeringobjects <Dest_DSA_LIST> <Source DSA GUID> <NC> [/ADVISORY_MODE]
+repadmin /removelingeringobjects <Dest_DSA_LIST> <Source DSA GUID> <NC> [/ADVISORY_MODE]
 ```
 
 Where:  
@@ -189,10 +189,10 @@ Where:
 
 \<NC> is the DN path of the directory partition that is suspected of containing lingering objects, such as the partition that is specified in a 1988 event.
 
-`REPADMIN /REHOST` can be used to remove lingering-objects domain controllers that host a *read-only* copy of a domain directory partition from domain controllers. The syntax is as follows:
+The `repadmin /rehost` command can be used to remove lingering-objects domain controllers that host a *read-only* copy of a domain directory partition from domain controllers. The syntax is as follows:
 
 ```console  
- c:\>repadmin /rehost DSA <Naming Context> <Good Source DSA Address>
+repadmin /rehost DSA <Naming Context> <Good Source DSA Address>
 ```
 
 Where:  
@@ -213,7 +213,7 @@ Launch the following TechNet on-demand lab for guided troubleshooting practice o
 
 In the lab, you use both repadmin and *repldiag.exe* to remove lingering objects  
 Troubleshooting Active Directory Replication Errors  
-In this lab, you'll walk through the troubleshooting, analysis and implementation phases of commonly encountered Active Directory replication errors. You'll use a combination of ADREPLSTATUS, repadmin.exe, and other tools to troubleshoot a five DC, three-domain environment.  AD replication errors encountered in the lab include -2146893022, 1256, 1908, 8453 and 8606."
+In this lab, you'll walk through the troubleshooting, analysis and implementation phases of commonly encountered Active Directory replication errors. You'll use a combination of ADREPLSTATUS, *repadmin.exe*, and other tools to troubleshoot a five DC, three-domain environment.  AD replication errors encountered in the lab include -2146893022, 1256, 1908, 8453 and 8606."
 
 ### Monitoring Active Directory replication health daily
 
@@ -287,7 +287,7 @@ If the object should exist on all replicas, the options are as follows:
 Launch the following TechNet on-demand lab for guided troubleshooting practice of this and other AD replication errors:
 
 > Troubleshooting Active Directory Replication Errors  
- In this lab, you will walk through the troubleshooting, analysis, and implementation phases of commonly encountered Active Directory replication errors. You will use a combination of ADREPLSTATUS, repadmin.exe, and other tools to troubleshoot a five DC, three-domain environment. AD replication errors encountered in the lab include -2146893022, 1256, 1908, 8453 and 8606."
+ In this lab, you will walk through the troubleshooting, analysis, and implementation phases of commonly encountered Active Directory replication errors. You will use a combination of ADREPLSTATUS, *repadmin.exe*, and other tools to troubleshoot a five DC, three-domain environment. AD replication errors encountered in the lab include -2146893022, 1256, 1908, 8453 and 8606."
 
 ### Causes of lingering objects
 
@@ -318,3 +318,7 @@ Say that you create an object in a USN bubble in such a way that it does not out
 Active Directory domain controllers support multi-master replication where any domain controller (that holds a writable partition) can originate a create, change, or delete of an object or attribute (value). Knowledge of object / attribute deletes are persisted by the originating domain controller and any domain controller that has incoming replicated knowledge of an originating delete for TSL number of days. (See Microsoft Knowledge Base articles [216996](https://support.microsoft.com/help/216993) and [910205](https://support.microsoft.com/help/910205))
 
 Active Directory requires end-to-end replication from all partition holders to transitively replicate all originating deletes for all directory partitions to all partition holders. Failure to inbound-replicate a directory partition in a rolling TSL number of days results in lingering objects. A lingering object is an object that was intentionally deleted by at least one domain controller but that incorrectly exists on destination domain controllers that did not inbound-replicate the transient knowledge of all unique deletions.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Active Directory replication issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication.md).

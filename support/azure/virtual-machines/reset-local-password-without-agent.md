@@ -99,7 +99,7 @@ Always try to reset a password using the [Azure portal or Azure PowerShell](rese
 
 ## Detailed steps for Classic VM
 
-[!INCLUDE [classic-vm-deprecation](../../includes/classic-vm-deprecation.md)]
+[!INCLUDE [classic-vm-deprecation](../../includes/azure/classic-vm-deprecation.md)]
 
 > [!NOTE]
 > The steps do not apply to Windows domain controllers. It only works on standalone server or a server that is a member of a domain.

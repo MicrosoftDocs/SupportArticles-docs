@@ -1,17 +1,17 @@
 ---
 title: Netlogon doesn't keep settings
 description: Describes an issue that prevents the Netlogon service on domain controllers from starting automatically after you upgrade to Windows Server 2016 or Windows Server 2019. Provides a resolution.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:domain-join-issues, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # Netlogon service doesn't keep settings after an in-place upgrade to Windows Server 2016 or Windows Server 2019
 
@@ -64,4 +64,4 @@ Although this action doesn't require a restart, we recommend that you restart th
 
 ## References
 
-[Windows Time Service settings aren't preserved during an in-place upgrade to Windows Server 2016 or Windows 10 Version 1607](/troubleshoot/windows-server/identity/windows-time-service-values-reverted)
+[Windows Time Service settings aren't preserved during an in-place upgrade to Windows Server 2016 or Windows 10 Version 1607](windows-time-service-values-reverted.md)

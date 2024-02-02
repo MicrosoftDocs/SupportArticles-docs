@@ -3,7 +3,7 @@ title: The solution file is invalid
 description: Provides a solution to the 80048060 error that occurs when you try to import a solution in Microsoft Dynamics 365.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: d365-sales-custom-solutions
 ---
 # The solution file is invalid error occurs in Microsoft Dynamics 365

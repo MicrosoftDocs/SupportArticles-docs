@@ -1,17 +1,17 @@
 ---
 title: Can't promote a DC to global catalog server
 description: Describes a problem where you can't promote a Windows Server-based domain controller to be a global catalog server.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:active-directory-topology-sites-subnets-and-connection-objects, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # You cannot promote a Windows Server domain controller to be a global catalog server
 

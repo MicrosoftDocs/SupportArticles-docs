@@ -1,17 +1,17 @@
 ---
 title: CBS.log file contains entries that some files aren't repaired after you successfully run the SFC utility
 description: Describes the issue in which the CBS.log file records entries when a static file changes. Because the static file isn't protected by the Windows Resource Protection feature, the feature reports the change in the CBS.log file.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kmcniel, kaushika
 ms.custom: sap:servicing, csstroubleshoot
-ms.technology: windows-server-deployment
+ms.subservice: deployment
 ---
 # The CBS.log file contains entries that some files aren't repaired even after you successfully run the SFC utility on a Windows Server based computer
 
@@ -61,3 +61,7 @@ You can search for [SR] tags to help locate SFC.exe program entries. To search f
     > [!NOTE]
     > The Sfcdetails.txt file includes the entries that are logged every time that the SFC.exe program runs on the computer.
 3. Type *exit*, and then press ENTER to close the Command Prompt window.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

@@ -1,17 +1,17 @@
 ---
 title: New registry entry for controlling TCP ACK
 description: Introduces the TcpAckFrequency, a new registry entry that determines the number of TCP acknowledgments (ACKs).
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: mkoduri, kaushika
 ms.custom: sap:tcp/ip-communications, csstroubleshoot
-ms.technology: networking
+ms.subservice: networking
 ---
 # New registry entry for controlling the TCP Acknowledgment (ACK) behavior in Windows
 

@@ -4,7 +4,6 @@ description: This article provides resolution for the problem where you notice s
 ms.date: 09/25/2020
 ms.custom: sap:Performance
 ms.reviewer: SureshKa
-ms.prod: sql
 ---
 # Recommendations to reduce allocation contention in SQL Server tempdb database
 

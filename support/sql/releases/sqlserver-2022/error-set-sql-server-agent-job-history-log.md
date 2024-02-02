@@ -3,9 +3,7 @@ title: Error may occur when setting the SQL Server Agent job history log
 description: Fixes an error that occurs when setting or changing the maximum number of job history log rows and job history rows per job.
 ms.date: 04/13/2023
 ms.custom: KB5024352
-author: Elena068
-ms.author: v-qianli2
-ms.reviewer: derekw, pcaronauger
+ms.reviewer: derekw, pcaronauger, v-qianli2
 appliesto:
 - SQL Server 2022 on Linux
 - SQL Server 2019 on Linux
@@ -30,7 +28,7 @@ Example: </br>`sudo /opt/mssql/bin/mssql-conf set sqlagent.jobhistorymaxrows 100
 This problem is fixed in the following cumulative updates for SQL Server:
 
 - [Cumulative Update 2 for SQL Server 2022](cumulativeupdate2.md)
-- [Cumulative Update 20 for SQL Server 2019](https://support.microsoft.com/help/5024276)
+- [Cumulative Update 20 for SQL Server 2019](../sqlserver-2019/cumulativeupdate20.md)
 
 ## About cumulative updates for SQL Server
 

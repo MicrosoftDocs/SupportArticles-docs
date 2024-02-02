@@ -3,7 +3,7 @@ title: Microsoft Outlook has not been configured with an account yet error when 
 description: When you configure Microsoft Dynamics CRM for Outlook, you receive the Microsoft Outlook has not been configured with an account yet error. Provides a resolution.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: d365-sales-email-office-integration
 ---
 # Microsoft Outlook has not been configured with an account yet error when configuring Microsoft Dynamics CRM for Outlook

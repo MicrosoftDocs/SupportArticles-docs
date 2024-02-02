@@ -1,17 +1,17 @@
 ---
 title: Print Spooler errors
 description: Provides a solution to fix Print Spooler errors that occurs after you install or upgrade a Third-Party print driver.
-ms.date: 9/24/2021
+ms.date: 05/16/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jdickson
 ms.custom: sap:management-and-configuration-installing-print-drivers, csstroubleshoot
-ms.technology: windows-server-printing
+ms.subservice: printing
 ---
 # You experience Print Spooler error messages after you install or upgrade a Third-Party print driver
 
@@ -57,3 +57,7 @@ To clear and reset the print spooler, follow these steps:
 5. In the search box on the taskbar, search for services, and then select **Services** in the list of results.
 6. Select the **Standards** tab, and the double-click **Print Spooler** in the list of services.
 7. Select **Start**, select **Automatic** in the **Startup Type** box, and then select **OK**.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for User Experience issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-user-experience.md#printing).

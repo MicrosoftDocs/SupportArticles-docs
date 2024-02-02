@@ -77,6 +77,6 @@ Use these steps to resynchronize the Audit Trail Codes with the Primary code fol
 
 ## Resources
 
-- [Multilingual installs in Microsoft Dynamics PG - what you need to know!!](https://community.dynamics.com/gp/b/dynamicsgp/posts/what-you-should-know-about-multilingual-environments-in-microsoft-dynamics-gp)
+- [Multilingual installs in Microsoft Dynamics PG - what you need to know!!](https://community.dynamics.com/blogs/post/?postid=a3fe78ae-d265-4672-8282-a10600329784)
 
 - [KB 887108 - Answers to frequently asked questions about international installations of Microsoft Dynamics GP](https://support.microsoft.com/help/887108) (see Q7 & Q8)

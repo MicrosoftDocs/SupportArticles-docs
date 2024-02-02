@@ -1,17 +1,17 @@
 ---
 title: Troubleshoot replication error 8461
 description: This article describes the symptoms, cause, and resolution steps for cases when Active Directory replication fails with error 8461.
-ms.date: 3/24/2022
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, justintu, v-jesits
 ms.custom: sap:active-directory-replication, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # Troubleshooting AD Replication error 8461
 
@@ -637,3 +637,7 @@ Repadmin /queue output should show that the request to add the partition has bee
 2. Wait for event ID 1660
 3. Disable KCC connection translation
 4. `Repadmin /addIf` the process is preempted before /add is complete, you can disable inbound replication and use `repadmin /replicate` and the `/readonly` and `/force` options to get the partition re-hosted before you re-enable inbound replication.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Active Directory replication issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication.md).

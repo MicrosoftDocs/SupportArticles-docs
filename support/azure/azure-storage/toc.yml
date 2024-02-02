@@ -1,6 +1,39 @@
 - name: Welcome
   href: welcome-azure-storage.yml
 
+- name: Azure Files
+  items:
+  - name: Create file share throttling alerts
+    href: files-troubleshoot-create-alerts.md
+  - name: Troubleshoot Azure Files
+    href: files-troubleshoot.md
+  - name: Troubleshoot Azure Files connectivity (SMB)
+    href: files-troubleshoot-smb-connectivity.md
+  - name: Troubleshoot Azure Files identity-based authentication (SMB)
+    href: files-troubleshoot-smb-authentication.md
+  - name: Troubleshoot Azure Files performance issues
+    href: files-troubleshoot-performance.md
+  - name: Troubleshoot backing up file shares
+    href: troubleshoot-azure-files.md
+  - name: Troubleshoot general SMB issues on Linux
+    href: files-troubleshoot-linux-smb.md
+  - name: Troubleshoot general NFS issues on Linux
+    href: files-troubleshoot-linux-nfs.md
+  - name: Troubleshoot ClientOtherErrors (SMB)
+    href: files-client-other-errors.md
+- name: Azure File Sync
+  items:
+  - name: Troubleshoot Azure File Sync
+    href: file-sync-troubleshoot.md
+  - name: Troubleshoot agent installation and server registration
+    href: file-sync-troubleshoot-installation.md
+  - name: Troubleshoot cloud tiering issues
+    href: file-sync-troubleshoot-cloud-tiering.md
+  - name: Troubleshoot sync group management
+    href: file-sync-troubleshoot-sync-group-management.md
+  - name: Troubleshoot sync issues
+    href: file-sync-troubleshoot-sync-errors.md
+
 - name: Blob Storage and Azure Data Lake Store Gen2
   items:
   - name: Azure Storage data protection, backup, and recovery

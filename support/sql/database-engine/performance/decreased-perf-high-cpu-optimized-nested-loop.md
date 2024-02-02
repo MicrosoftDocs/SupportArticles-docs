@@ -3,7 +3,6 @@ title: High CPU or memory grants when using optimized nested loop or batch sort
 description: Provides a resolution for high CPU and memory usage when you run queries with optimized nested loop or batch sort operators.
 ms.date: 12/23/2021
 ms.custom: sap:Performance
-ms.prod: sql
 ---
 # High CPU or memory grants may occur with queries that use optimized nested loop or batch sort
 

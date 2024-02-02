@@ -2,15 +2,13 @@
 title: RPC error troubleshooting guidance
 description: Learn how to troubleshoot Remote Procedure Call (RPC) errors that occur during computer-to-computer communication. Such communication can involve Windows Management Instrumentation (WMI), SQL Server, Active Directory operations, or remote connections.
 ms.date: 03/10/2023
-ms.prod: windows-client
+ms.service: windows-client
 ms.topic: troubleshooting
-author: v-tappelgate
-ms.author: v-tappelgate
 manager: dcscontentpm
 ms.collection: highpri
-ms.technology: windows-client-networking
+ms.subservice: networking
 ms.custom: sap:tcp/ip-communications, csstroubleshoot
-ms.reviewer: kaushika
+ms.reviewer: kaushika, v-tappelgate
 audience: itpro
 localization_priority: medium
 ---
@@ -51,7 +49,7 @@ By default, EPM allocates dynamic ports randomly from the range that's configure
 
 Many Windows server applications that rely on RPC provide options (such as registry keys) to customize the allowed ports. Windows services use the **HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Microsoft\\Rpc\\Internet** subkey for this task.
 
-When you specify a port or port range, use ports that are outside the range of commonly used ports. You can find a comprehensive list of server ports that are used in Windows and major Microsoft products in [Service overview and network port requirements for Windows](/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements). The article also lists RPC server applications, and mentions which RPC server applications can be configured to use custom server ports beyond the capabilities of the RPC runtime.
+When you specify a port or port range, use ports that are outside the range of commonly used ports. You can find a comprehensive list of server ports that are used in Windows and major Microsoft products in [Service overview and network port requirements for Windows](../../windows-server/networking/service-overview-and-network-port-requirements.md). The article also lists RPC server applications, and mentions which RPC server applications can be configured to use custom server ports beyond the capabilities of the RPC runtime.
 
 [!INCLUDE [Registry warning](../../includes/registry-important-alert.md)]
 
@@ -150,7 +148,7 @@ By examining this output, you can determine the following information:
 
 If any of these steps fail, you can usually start collecting simultaneous network traces, as described in the next section.
 
-For more information about PortQry, see [Using the PortQry command-line tool](/troubleshoot/windows-server/networking/portqry-command-line-port-scanner-v2).
+For more information about PortQry, see [Using the PortQry command-line tool](../../windows-server/networking/portqry-command-line-port-scanner-v2.md).
 
 ### Netsh
 
@@ -176,7 +174,7 @@ Now, try to reproduce your issue on the client computer. Then, run the following
 Netsh trace stop
 ```
 
-Open the trace files in [Microsoft Network Monitor 3.4](/troubleshoot/windows-client/networking/collect-data-using-network-monitor) or Message Analyzer, and filter the trace data for the IP address of the server or client computers and TCP port 135. For example, use filter strings such as the following:
+Open the trace files in [Microsoft Network Monitor 3.4](collect-data-using-network-monitor.md) or Message Analyzer, and filter the trace data for the IP address of the server or client computers and TCP port 135. For example, use filter strings such as the following:
 
 - **Ipv4.address==\<_client-ip_> and ipv4.address==\<_server-ip_> and tcp.port==135**  
   
@@ -214,7 +212,7 @@ Before you contact Microsoft support, we recommend that you gather information a
 
 ### Prerequisites
 
-These procedures use the [TroubleShootingScript Version 2 (TSSv2)](../windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tssv2.md) toolset. To use this toolset, you should be aware of the following prerequisites:
+These procedures use the [TroubleShootingScript (TSS)](../windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tss.md) toolset. To use this toolset, you should be aware of the following prerequisites:
 
 - You must have Administrator-level permission on the local computer.
 - The first time that you run the toolset, you have to accept a EULA.
@@ -233,12 +231,12 @@ These procedures use the [TroubleShootingScript Version 2 (TSSv2)](../windows-tr
 
 ### Gather key information before contacting Microsoft support
 
-1. Download [TSSv2](https://aka.ms/getTSSv2) on all nodes, and expand it to the _C:\\tss\_tool_ folder.
-1. Open the _C:\\tss\_tool_ folder in an elevated PowerShell Command Prompt window.
+1. Download [TSS](https://aka.ms/getTSS) on all nodes, and expand it to the _C:\\tss_ folder.
+1. Open the _C:\\tss_ folder in an elevated PowerShell Command Prompt window.
 1. Start traces on the problem computer by running the following cmdlet:
 
     ```powershell
-    TSSv2.ps1 -Start -Scenario NET_RPC
+    TSS.ps1 -Scenario NET_RPC
     ```
 
 1. Respond to the EULA prompt.

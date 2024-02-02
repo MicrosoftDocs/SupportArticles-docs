@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:no-boot-not-bugchecks, csstroubleshoot
-ms.technology: windows-client-performance
+ms.subservice: performance
 ---
 # Windows devices may fail to boot after installing October 10 version of KB4041676 or KB4041691 that contained a publishing issue
 

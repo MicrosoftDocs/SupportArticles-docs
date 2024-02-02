@@ -4,7 +4,6 @@ description: This article provides a resolution for the problem that occurs when
 ms.date: 11/04/2020
 ms.custom: sap:Installation, Patching and Upgrade
 ms.reviewer: mide
-ms.prod: sql
 ---
 # Permission error occurs when you use a volume mount point in SQL Server Setup
 

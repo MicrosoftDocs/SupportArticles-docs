@@ -1,17 +1,17 @@
 ---
 title: Overview of the compatibility considerations for 32-bit programs on 64-bit versions of Windows
 description: Discusses the compatibility considerations and limitations for 32-bit programs that are running on 64-bit versions of Windows .
-ms.date: 4/12/2022
+ms.date: 04/12/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:applications, csstroubleshoot
-ms.technology: windows-server-performance
+ms.subservice: performance
 ---
 # Overview of the compatibility considerations for 32-bit programs on 64-bit versions of Windows
 

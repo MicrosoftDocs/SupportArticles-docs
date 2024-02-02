@@ -1,17 +1,17 @@
 ---
 title: DFSR Health Report shows Event ID 4302
 description: Describes a problem that occurs when you run the DFSR Diagnostics Report (DFSR Health Report). Many entries of Event ID 4302 are reported even though the files have already been replicated.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, rolandw, clandis
 ms.custom: sap:dfsr, csstroubleshoot
-ms.technology: networking
+ms.subservice: networking
 ---
 # DFSR Diagnostics Report shows sharing violations events in Windows Server even though the files have already been replicated
 

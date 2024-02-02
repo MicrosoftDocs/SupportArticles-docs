@@ -5,7 +5,7 @@ author: adelgadohell
 ms.author: adelgadohell
 ms.reviewer: divargas
 ms.topic: troubleshooting
-ms.date: 10/13/2022
+ms.date: 01/31/2024
 ms.service: virtual-machines
 ms.subservice: vm-cannot-connect
 ms.collection: linux
@@ -22,7 +22,7 @@ Different distributions include SELinux out of the box or provide a straightforw
 
 * [Red Hat](https://www.redhat.com/en/topics/linux/what-is-selinux)
 * SUSE
-  * [SUSE Linux Enterprise Server 12](https://documentation.suse.com/sles/12-SP4/html/SLES-all/cha-selinux.html)
+  * [SUSE Linux Enterprise Server 12](https://documentation.suse.com/sles/12-SP5/html/SLES-all/cha-selinux.html)
   * [SUSE Linux Enterprise Server 15](https://documentation.suse.com/sles/15-SP4/html/SLES-all/cha-selinux.html)
 * [Debian](https://wiki.debian.org/SELinux)
 * [CentOS](https://wiki.centos.org/HowTos/SELinux)
@@ -70,7 +70,7 @@ The SELinux configuration is managed by the system administrator. The system adm
 1. In case the [Azure serial console](serial-console-linux.md) doesn't work in the specific VM or isn't an option in your subscription, troubleshoot this issue by using a rescue/repair VM. Use [vm repair commands](repair-linux-vm-using-azure-virtual-machine-repair-commands.md) to create a repair VM that has a copy of the affected VM's OS disk attached. Mount the copy of the OS file systems in the repair VM by using [chroot](chroot-environment-linux.md).
 
     > [!NOTE]
-    > Alternatively, you can create a rescue VM manually by using the Azure portal. For more information, see [Troubleshoot a Linux VM by attaching the OS disk to a recovery VM using the Azure portal](/troubleshoot/azure/virtual-machines/troubleshoot-recovery-disks-portal-linux).
+    > Alternatively, you can create a rescue VM manually by using the Azure portal. For more information, see [Troubleshoot a Linux VM by attaching the OS disk to a recovery VM using the Azure portal](troubleshoot-recovery-disks-portal-linux.md).
 
 2. Validate and correct the SELinux configuration in `/etc/selinux/config`. To do this, follow step 5 in [Solution 1: Start VM with SELinux turned off from serial console](#solution1).
 

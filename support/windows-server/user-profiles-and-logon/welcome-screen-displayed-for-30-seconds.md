@@ -1,17 +1,17 @@
 ---
 title: Welcome screen is displayed for 30 seconds
 description: Describes an issue that occurs because the logon process runs in session 0. However, the logon script process runs in a different session. Provides a resolution.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:user-profiles, csstroubleshoot
-ms.technology: windows-server-user-profiles
+ms.subservice: user-profiles
 ---
 # The Welcome screen may be displayed for 30 seconds, and the logon script interacts with me when I try to log on to a computer that is running Windows Vista or Windows Server 2008
 

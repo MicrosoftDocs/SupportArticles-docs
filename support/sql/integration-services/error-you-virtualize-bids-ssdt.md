@@ -4,7 +4,6 @@ description: This article explains the support policy regarding sequencing  SQL 
 ms.date: 09/17/2020
 ms.custom: sap:Integration Services
 ms.topic: article
-ms.prod: sql
 ---
 # Message (Invalid license data) Sequencing SQL Server Business Intelligence Development Studio (BIDS) with App-V
 

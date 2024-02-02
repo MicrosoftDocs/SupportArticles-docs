@@ -1,10 +1,9 @@
 ---
 title: Support policy for hardware virtualization product
 description: This article describes the support policy for SQL Server products that are running in a hardware virtualization environment.
-ms.date: 11/09/2020
+ms.date: 07/24/2023
 ms.custom: sap:General
-ms.reviewer: bobward
-ms.prod: sql
+ms.reviewer: sureshka, jopilov
 ---
 # Support policy for Microsoft SQL Server products that are running in a hardware virtualization environment
 
@@ -13,48 +12,49 @@ This article describes the support policy for SQL Server products that are runni
 _Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 956893
 
-## INTRODUCTION
+## Introduction
 
 This article describes the support policy for Microsoft SQL Server products that are running in a hardware virtualization environment.
 
 ## More information
 
-Microsoft provides technical support for SQL Server 2008 and later versions for the following supported hardware virtualization environments:
+Microsoft provides technical support for SQL Server for the following supported hardware virtualization environments:
 
-- Windows Server 2008 and later versions with Hyper-V
-- Microsoft Hyper-V Server 2008 and later versions
+- Windows Server versions (currently in support lifecycle) with Hyper-V
+- Microsoft Hyper-V Server
 - Configurations that are validated through the Server Virtualization Validation Program (SVVP).
 
   For more information about certified vendors and about configurations for SVVP, see [http://windowsservercatalog.com/svvp.aspx?svvppage=svvp.htm](http://windowsservercatalog.com/svvp.aspx?svvppage=svvp.htm).
 
   > [!NOTE]
-  > The SVVP solution must be running on hardware that is certified for Windows Server 2008 R2 or a later version to be considered a valid SVVP configuration.
+  > The SVVP solution must be running on hardware that is certified for Windows Server version (currently in support lifecycle) to be considered a valid SVVP configuration.
 
-Microsoft provides technical support for SQL Server 2008 and later versions for the following supported hardware virtualization environments:
+Microsoft provides technical support for SQL Server versions for the following supported hardware virtualization environments:
 
-- Azure Infrastructure Services that includes Azure Virtual Machines and Azure Virtual Network (See the Frequently Asked Questions section for more details)
+- Azure Infrastructure Services that includes Azure Virtual Machines, Azure Virtual Network, and Azure VMware Solution (See the [Frequently asked questions](#frequently-asked-questions) section for more details).
+- The SQL Server version is currently a supported version according to the [lifecycle policy](/sql/sql-server/end-of-support/sql-server-end-of-support-overview#lifecycle-dates).
 
 Microsoft may provide limited or no technical support for the following environments:
 
-- Any version of SQL Server earlier than SQL Server 2008 (such as SQL Server 2005) that's running on any virtualization vendor or configuration.
-- Any non-Microsoft virtualization software that is not a configuration that is validated through the SVVP program
+- Any version of SQL Server that is outside the [lifecycle policy](/sql/sql-server/end-of-support/sql-server-end-of-support-overview#lifecycle-dates) and running on any virtualization vendor or configuration.
+- Any non-Microsoft virtualization software that isn't a configuration that is validated through the SVVP program.
 
 This policy of limited support is based on the following Microsoft Knowledge Base article:
 
-[Support policy for Microsoft software that runs on non-Microsoft hardware virtualization software](/troubleshoot/windows-server/virtualization/software-runs-on-non-microsoft-virtualization-software)
+[Support policy for Microsoft software that runs on non-Microsoft hardware virtualization software](../../windows-server/virtualization/software-runs-on-non-microsoft-virtualization-software.md)
 
-## Restrictions and Limitations
+## Restrictions and limitations
 
 The following restrictions and limitations may affect the support policy of the above supported configurations:
 
-- Guest Failover Clustering is supported for SQL Server 2008 and later versions in a virtual machine for the supported hardware virtualization environments listed in this article provided all the following requirements are met:
+- Guest Failover Clustering is supported for SQL Server in a virtual machine for the supported hardware virtualization environments listed in this article provided all the following requirements are met:
 
-  - The Operating System running in the virtual machine (the "Guest Operating System") is Windows Server 2008 or a later version.
-  - The virtualization environment meets the requirements of Windows 2008 or Windows 2012 Failover Clustering, as documented in the following articles in the Microsoft Knowledge Base:
+  - The Operating System running in the virtual machine (the "Guest Operating System") is a Windows Server version currently in support lifecycle.
+  - The virtualization environment meets the requirements of Windows Server or Windows Server Failover Clustering, as documented in the following articles in the Microsoft Knowledge Base:
   
     - [The Microsoft Support Policy for Windows Server 2008 or Windows Server 2008 R2 Failover Clusters](https://support.microsoft.com/help/943984)
 
-    - [Microsoft support policy for Windows server failover clusters](/troubleshoot/windows-server/high-availability/microsoft-support-policy-failover-clusters)
+    - [Microsoft support policy for Windows server failover clusters](../../windows-server/high-availability/microsoft-support-policy-failover-clusters.md)
 
 - The SQL Server product must be a supported version under its current Microsoft Support Lifecycle policy. For more information about Microsoft Support Lifecycle policies, see [Search Product and Services Lifecycle Information](/lifecycle/products/).
 
@@ -95,7 +95,7 @@ The following restrictions and limitations may affect the support policy of the 
 
   A2: Microsoft CSS will follow the support policies that are documented in Knowledge Base article 897615. For more information, click the following article number to view the article in the Microsoft Knowledge Base:
 
-  [Support policy for Microsoft software that runs on non-Microsoft hardware virtualization software](/troubleshoot/windows-server/virtualization/software-runs-on-non-microsoft-virtualization-software)
+  [Support policy for Microsoft software that runs on non-Microsoft hardware virtualization software](../../windows-server/virtualization/software-runs-on-non-microsoft-virtualization-software.md)
 
   If Microsoft CSS determines that the problem may be related to the vendor virtualization software, Microsoft CSS may require the customer to reproduce the problem outside the virtualization environment.
 
@@ -119,10 +119,6 @@ The following restrictions and limitations may affect the support policy of the 
 
   - [Hardware and Software Requirements for Installing SQL Server 2012](/previous-versions/sql/sql-server-2012/ms143506(v=sql.110))
 
-  - [Hardware and Software Requirements for Installing SQL Server 2008 R2](/previous-versions/sql/sql-server-2008-r2/ms143506%28v%3dsql.105%29)
-
-  - [Hardware and Software Requirements for Installing SQL Server 2008](/previous-versions/sql/sql-server-2008/ms143506%28v%3dsql.100%29)
-
 - **Q4: Are SQL Server features such as database mirroring supported to run in a virtualization environment?**
 
   A4: The only restrictions to install and use SQL Server in a virtualization environment are documented in this article or in the SQL Server product documentation. Any feature or usage that is not stated in this article or in the SQL Server product documentation is assumed to be supported in a virtualization environment by using the same restrictions and support as a bare metal hardware environment. For more information about the features that are supported by different editions of SQL Server, visit following TechNet website:
@@ -131,9 +127,9 @@ The following restrictions and limitations may affect the support policy of the 
 
   These same requirements apply to SQL Server 2008 and later versions that are running in a virtualization environment.
 
-- **Q5: Is Quick and Live Migration with Windows Server 2012 or Windows Server 2008 R2 Hyper-V supported with SQL Server?**
+- **Q5: Is Quick and Live Migration with Windows Server supported with SQL Server?**
 
-  A5: Yes, Live Migration is supported for SQL Server 2008 and later versions when used with Windows Server 2008 R2 or later versions with Hyper-V and with Hyper-V server 2008 R2 or later versions. Quick Migration, which was introduced with Windows Server 2008 with Hyper-V and Hyper-V Server 2008, is also supported for SQL Server (All versions from SQL Server 2008 and later) in Windows Server 2008 (or later versions) with Hyper-V and Hyper-V Server 2008  (or later versions).
+  A5: Yes, Live Migration is supported for SQL Server when used with Windows Server with Hyper-V and with Hyper-V server. Quick Migration is also supported for SQL Server in Windows Server with Hyper-V and Hyper-V Server.
 
 - **Q6: What is the support policy for SQL Server when using an SVVP vendor virtualization feature such as snapshots or migration?**
 
@@ -143,7 +139,7 @@ The following restrictions and limitations may affect the support policy of the 
 
 - **Q7: Is Hyper-V Dynamic Memory supported for SQL Server?**
 
-  A7: Hyper-V Dynamic Memory is fully supported with SQL Server. Only SQL Server versions and editions that support Hot Add Memory (Enterprise and Datacenter) can see memory that is added by using Hyper-V Dynamic Memory. SQL Server 2012 and later versions of standard editionS also recognize Hot Add memory when running in a virtual environment. SQL Server versions that do not support Hot Add Memory are still supported. But these versions will detect only the memory that is present in the operating system when SQL Server starts. Before you deploy Hyper-V Dynamic Memory, please read the following resources when you use Hyper-V Dynamic Memory with SQL Server:
+  A7: Hyper-V Dynamic Memory is fully supported with SQL Server. Only SQL Server versions and editions that support Hot Add Memory (Enterprise and Datacenter) can see memory that is added by using Hyper-V Dynamic Memory. SQL Server 2012 and later versions of standard edition also recognize Hot Add memory when running in a virtual environment. SQL Server versions that do not support Hot Add Memory are still supported. But these versions will detect only the memory that is present in the operating system when SQL Server starts. Before you deploy Hyper-V Dynamic Memory, please read the following resources when you use Hyper-V Dynamic Memory with SQL Server:
 
   - [Hyper-V Dynamic Memory Evaluation Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff817651(v=ws.10))
 
@@ -153,7 +149,7 @@ The following restrictions and limitations may affect the support policy of the 
 
 - **Q8: Do you support SQL Server running in Microsoft Azure Virtual Machine?**
 
-  A8: Yes. Microsoft supports SQL Server 2008 and later versions in Microsoft Azure Infrastructure Services that includes Microsoft Azure Virtual Machines and Microsoft Azure Virtual Network. Consider the following when you deploy SQL Server 2008 and later versions in Microsoft Azure Virtual Machine:
+  A8: Yes, Microsoft supports SQL Server in Microsoft Azure Infrastructure Services that includes Microsoft Azure Virtual Machines and Microsoft Azure Virtual Network. Consider the following when you deploy SQL Server in Microsoft Azure Virtual Machine:
 
   - Microsoft Azure Storages Geo-Replication is not supported if the data and log files of a database are stored in more than one disk.
 
@@ -173,49 +169,24 @@ The following restrictions and limitations may affect the support policy of the 
 
     - SQL Server FCI n Windows Server 2016 and later versions with Azure shared disks. For more information review [Create an FCI with Azure shared disks (SQL Server on Azure VMs)](/azure/azure-sql/virtual-machines/windows/failover-cluster-instance-azure-shared-disks-manually-configure).
 
-- **Q9: Can customers run SQL Server in the Microsoft Azure VM role?**
+- **Q9: Does Microsoft support SQL Server running in Microsoft Azure VMware Solution?**
 
-  A9:  Microsoft Azure VM role is a non-persistent role and not the same as Microsoft Azure Virtual Machine. It is not supported for SQL Server production use. Customers who want to deploy data platform capabilities today in the Microsoft Azure platform should use Microsoft Azure Virtual Machine or Microsoft Azure SQL Database.
+  A9: Yes, Microsoft supports SQL Server in Microsoft Azure Infrastructure Services, which includes Microsoft Azure VMware Solution. When you deploy SQL Server in Microsoft Azure VMware Solution, consider the following resources:
+  
+    - For more information on how to best deploy SQL Server using VMware vSphere, including right-sizing your SQL Server VMs and managing your VMware vCenter Server configuration, see [Architecting Microsoft SQL Server on VMware vSphere](https://core.vmware.com/resource/architecting-microsoft-sql-server-vmware-vsphere#introduction).
+      
+    - For more information on getting started with Azure VMware Solution, see [Azure VMware Solution](https://azure.microsoft.com/products/azure-vmware#overview).
 
-- **Q10: Are there any recommended configuration or best practices to consider while deploying SQL Server in virtualized environments?**
+- **Q10: Can customers run SQL Server in the Microsoft Azure VM role?**
 
-  A10: Yes, you should consult with the following recommendations from the respective hypervisor:
+  A10:  Microsoft Azure VM role is a non-persistent role and not the same as Microsoft Azure Virtual Machine. It's not supported for SQL Server production use. Customers who want to deploy data platform capabilities today in the Microsoft Azure platform should use Microsoft Azure Virtual Machine or Microsoft Azure SQL Database.
+
+- **Q11 Are there any recommended configuration or best practices to consider while deploying SQL Server in virtualized environments?**
+
+  A11: Yes, you should consult with the following recommendations from the respective hypervisor:
 
   - [Best Practices for Virtualizing and Managing SQL Server](https://download.microsoft.com/download/6/1/D/61DDE9B6-AB46-48CA-8380-D7714C9CB1AB/Best_Practices_for_Virtualizing_and_Managing_SQL_Server_2012.pdf)
 
   - [ARCHITECTING MICROSOFT SQL SERVER ON VMWARE VSPHERE](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/solutions/sql-server-on-vmware-best-practices-guide.pdf)
 
-## Applies to
 
-- SQL Server 2008 Standard
-- SQL Server 2008 Standard Edition for Small Business
-- SQL Server 2008 Enterprise
-- SQL Server 2008 Developer
-- SQL Server 2008 Workgroup
-- SQL Server 2008 Web
-- SQL Server 2008 Express
-- SQL Server 2008 R2 Datacenter
-- SQL Server 2008 R2 Developer
-- SQL Server 2008 R2 Enterprise
-- SQL Server 2008 R2 Express
-- SQL Server 2008 R2 Express with Advanced Services
-- SQL Server 2008 R2 PowerPivot for Excel 2010
-- SQL Server 2008 R2 Standard
-- SQL Server 2008 R2 Standard Edition for Small Business
-- SQL Server 2008 R2 Web
-- SQL Server 2008 R2 Workgroup
-- SQL Server 2012 Developer
-- SQL Server 2012 Enterprise
-- SQL Server 2012 Express
-- SQL Server 2012 Standard
-- SQL Server 2012 Web
-- SQL Server 2012 Enterprise Core
-- SQL Server 2014 Standard
-- SQL Server 2014 Developer
-- SQL Server 2014 Web
-- SQL Server 2014 Enterprise
-- SQL Server 2016 Standard
-- SQL Server 2016 Developer
-- SQL Server 2016 Enterprise
-- SQL Server 2016 Web
-- SQL Server 2017 on Windows (all editions)

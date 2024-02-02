@@ -5,7 +5,7 @@ summary: Welcome to Internet Information Services troubleshooting. These article
 metadata:
   title: Internet Information Services troubleshooting
   description: Landing page for Internet Information Services troubleshooting articles. # Required; article description that is displayed in search results. < 160 chars.
-  ms.prod: iis  #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.service: iis  #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
   author: padmajayaraman  
   ms.author:  v-jayaramanp
@@ -46,10 +46,18 @@ landingContent:
         links:
           - text: IIS ETW logs diagnostic
             url: health-diagnostic-performance/etw-log-diagnostic.md
-          - text: WinHTTP SDP package information
-            url: www-service-svchost/disable-winhttp-tracing-sdp.md
+          - text: Troubleshooting High CPU in an IIS application pool
+            url: health-diagnostic-performance/troubleshoot-high-cpu-in-iis-app-pool.md
+          - text: Troubleshoot native memory leak in an IIS 7.x application pool
+            url: health-diagnostic-performance/troubleshoot-native-memory-leak-iis-7x-application-pool.md
+          - text: Troubleshoot failed requests using tracing in IIS 8.5
+            url: health-diagnostic-performance/troubleshoot-failed-requests-using-tracing-in-iis-85.md
+          - text: Troubleshoot PHP errors with Failed Request Tracing
+            url: health-diagnostic-performance/troubleshoot-php-with-failed-request-tracing.md
           - text: Upload files to a WebDav directory with the WinINet API
             url: development/upload-to-webdav-directory-fails.md
+          - text: Using Failed Request Tracing rules to troubleshoot Application Request Routing
+            url: health-diagnostic-performance/troubleshoot-arr-using-frt-rules.md
 
   - title: Status/Error Codes
     linkLists:
@@ -74,14 +82,18 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Troubleshoot Kerberos failures
-            url: www-authentication-authorization/troubleshoot-kerberos-failures-ie.md
-          - text: Kerberos double-hop authentication with Microsoft Edge (Chromium)
-            url: www-authentication-authorization/kerberos-double-hop-authentication-edge-chromium.md
           - text: Configure Many-to-One client certificate mappings
             url: www-authentication-authorization/configure-many-to-one-client-mappings.md
+          - text: Diagnostic pages for Windows Integrated Authentication troubleshooting
+            url: www-authentication-authorization/diagnostics-pages-windows-integrated-authentication.md
           - text: IIS authenticates browser clients
             url: www-authentication-authorization/iis-authenticates-browser-client.md
+          - text: Kerberos double-hop authentication with Microsoft Edge (Chromium)
+            url: www-authentication-authorization/kerberos-double-hop-authentication-edge-chromium.md
+          - text: Troubleshoot Kerberos failures
+            url: www-authentication-authorization/troubleshoot-kerberos-failures-ie.md
+          - text: Troubleshooting SSL related issues (Server Certificate)
+            url: www-authentication-authorization/troubleshooting-ssl-related-issues-server-certificate.md
  
   - title: FTP Service
     linkLists:

@@ -1,17 +1,17 @@
 ---
 title: Limit connections on a terminal server
 description: Describes how to make sure that only one user at a time can connect to a Windows Server 2003 terminal server in Remote Administration Mode remotely or at the console.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:administration, csstroubleshoot
-ms.technology: windows-server-rds
+ms.subservice: rds
 ---
 # How to limit the number of connections on a terminal server
 

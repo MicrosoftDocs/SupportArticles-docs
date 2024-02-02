@@ -1,17 +1,17 @@
 ---
 title: Fail to access shared folder from applications
 description: When a shared folder on a Windows Server 2008 R2-based server is accessed from an application in Windows Server 2012, errors other than ERROR_ACCESS_DENIED are returned.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:blue-screen/bugcheck, csstroubleshoot
-ms.technology: windows-server-performance
+ms.subservice: performance
 ---
 # Unexpected errors are returned when a shared folder is accessed from an application
 

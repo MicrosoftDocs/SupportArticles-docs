@@ -1,17 +1,17 @@
 ---
 title: Host AD DCs in virtual hosting environments
 description: Discusses the issues that affect a DC that runs as a guest operating system (OS) in virtual hosting environments in Windows Server.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:virtualized-domain-controller-errors-and-questions, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # Things to consider when you host Active Directory domain controllers in virtual hosting environments
 

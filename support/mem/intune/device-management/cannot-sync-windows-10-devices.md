@@ -12,7 +12,7 @@ This article describes an issue in which a Windows 10 device can't sync with Mic
 
 ## Symptoms
 
-After a Windows 10 device is enrolled in Intune for some time (randomly from two minutes to two days), the device can no longer sync with Intune. When you start a manual sync on the device or in the Microsoft Endpoint Manager admin center, synchronization isn't started and the last sync time isn't updated. When this issue occurs, no errors are logged in the event logs.
+After a Windows 10 device is enrolled in Intune for some time (randomly from two minutes to two days), the device can no longer sync with Intune. When you start a manual sync on the device or in the Microsoft Intune admin center, synchronization isn't started and the last sync time isn't updated. When this issue occurs, no errors are logged in the event logs.
 
 > [!NOTE]
 > In this scenario, the Intune management extension still works and you can still deploy PowerShell scripts to the device.

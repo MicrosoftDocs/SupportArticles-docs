@@ -1,19 +1,19 @@
 ---
 title: Windows failed to apply the MDM Policy settings error
-description: Information about the error message "Windows failed to apply the MDM Policy settings" when you force a Group Policy update on Intune-enrolled hybrid Azure AD-joined devices.
+description: Information about the error message "Windows failed to apply the MDM Policy settings" when you force a Group Policy update on Intune-enrolled Microsoft Entra hybrid joined devices.
 ms.date: 10/06/2021
 search.appverid: MET150
 ms.custom: sap:Windows enrollment
 ms.reviewer: kaushika
 ---
 
-# Windows failed to apply the MDM Policy settings on hybrid Azure AD-joined devices
+# Windows failed to apply the MDM Policy settings on Microsoft Entra hybrid joined devices
 
 This article discusses the **Windows failed to apply the MDM Policy settings** error message that occurs when you run the `gpupdate /force` command on an enrolled Windows device in Microsoft Intune.
 
 ## Symptoms
 
-When you run the `gpupdate /force` command on a hybrid Azure Active Directory (Azure AD)-joined Windows device that's enrolled in Intune, you receive the following warning message:
+When you run the `gpupdate /force` command on a Microsoft Entra hybrid joined Windows device that's enrolled in Intune, you receive the following warning message:
 
 > Updating policy...
 >
@@ -28,7 +28,7 @@ When you run the `gpupdate /force` command on a hybrid Azure Active Directory (A
 
 ## Cause
 
-This issue occurs if the **Auto MDM Enrollment with AAD Token** Group Policy Object (GPO) is applied to the Windows device. In this case, it tries to enroll the device in MDM when you run the `gpupdate /force` command. Because the device was already enrolled, you receive the warning message.
+This issue occurs if the **Auto MDM Enrollment with Microsoft Entra Token** Group Policy Object (GPO) is applied to the Windows device. In this case, it tries to enroll the device in MDM when you run the `gpupdate /force` command. Because the device was already enrolled, you receive the warning message.
 
 This behavior is expected. You can safely ignore the warning message.
 

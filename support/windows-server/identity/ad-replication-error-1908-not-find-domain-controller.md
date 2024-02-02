@@ -1,17 +1,17 @@
 ---
 title: AD Replication error 1908
 description: Provides a resolution for troubleshooting AD Replication error 1908, which is Could not find the domain controller for this domain.
-ms.date: 3/24/2022
+ms.date: 09/01/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:domain-join-issues, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # Troubleshooting AD Replication error 1908: Could not find the domain controller for this domain
 
@@ -122,7 +122,7 @@ c. An entirely different DC (not the source or destination DC).
 
 1. Verify the Key Distribution Service is running on the Target Domain Controller  
 
-    Discover the Kerberos Key Distribution Center you are contacting. It can be discovered by using a packet capture program like Network Monitor 3.4 (Available [here.](https://www.microsoft.com/download/details.aspx?displaylang=en&id=4865))
+    Discover the Kerberos Key Distribution Center you are contacting. It can be discovered by using a packet capture program like [Network Monitor 3.4](https://www.microsoft.com/download/details.aspx?id=4865).
 
     1. Use Network Monitor to capture the reproduced error message. (You may need to stop the DNS client service first so that you see the DNS query traffic)
 

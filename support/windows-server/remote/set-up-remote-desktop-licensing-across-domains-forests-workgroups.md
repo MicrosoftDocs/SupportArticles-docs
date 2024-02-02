@@ -1,17 +1,17 @@
 ---
 title: Set up RD licensing across domains forests or workgroups
 description: This article talks about the questions around the supportability (or recommended approach) of setting up Remote Desktop (RD) licensing across domain, forest, or work groups.
-ms.date: 9/24/2021
+ms.date: 05/16/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, akhleshs, sabinn
 ms.custom: sap:remote-desktop-services-terminal-services-licensing, csstroubleshoot
-ms.technology: windows-server-rds
+ms.subservice: rds
 ---
 # Best practices for setting up RDS licensing across Active Directory domains/forests or work groups
 
@@ -80,3 +80,7 @@ Here is more information on these scenarios:
   - Configure RDS licensing server on all RDS Host Servers in each domain/forest. You can do it through RDS host configuration snap-in or through a group policy.
 
   - Add administrators group of each domain/forest in the local administrators of RDS licensing server. This way, you'll not get a prompt to enter your credentials when you'll open RDS host configuration snap-ins in trusted domains/forests.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for User Experience issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-user-experience.md#terminal-server-licensing).

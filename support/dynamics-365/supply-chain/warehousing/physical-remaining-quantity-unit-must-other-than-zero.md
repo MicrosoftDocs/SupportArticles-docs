@@ -2,7 +2,7 @@
 title: Physical remaining quantity in the unit must not be zero
 description: Provides a resolution for the issue that the data that is supplied to the new packing slip has a non-zero inventory quantity but a zero sales quantity.
 author: Mirzaab
-ms.date: 5/31/2021
+ms.date: 05/31/2021
 ms.topic: troubleshooting
 ms.search.form: WHSLoadPlanningListPage_WHSSalesPackingSlipPost, WHSLoadTable_WHSSalesPackingSlipPost
 audience: Application User

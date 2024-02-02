@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:errors-and-troubleshooting:-print-spooler, csstroubleshoot
-ms.technology: windows-client-printing
+ms.subservice: printing
 ---
 # Print directly to the printer setting doesn't work with XPS-based print drivers
 

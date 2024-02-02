@@ -16,11 +16,11 @@ ms.custom:
 
 This article describes the significance of Windows Configuration Service Providers (CSPs), Open Mobile Alliance – Uniform Resources (OMA-URIs), and how custom policies are delivered to a Windows 10-based device with Microsoft Intune.
 
-Intune provides a convenient and easy-to-use interface to configure these policies. However, not all settings are necessarily available within the Microsoft Endpoint Manager admin center. Although  many settings can be potentially configured on a Windows device, it's not feasible to have all of them in the admin center. Also, as advancements are made, it's not unusual to have a certain degree of lag before a new setting gets added. In these scenarios, deploying a custom OMA-URI profile that uses a Windows Configuration Service Provider (CSP) is the answer.
+Intune provides a convenient and easy-to-use interface to configure these policies. However, not all settings are necessarily available within the Microsoft Intune admin center. Although  many settings can be potentially configured on a Windows device, it's not feasible to have all of them in the admin center. Also, as advancements are made, it's not unusual to have a certain degree of lag before a new setting gets added. In these scenarios, deploying a custom OMA-URI profile that uses a Windows Configuration Service Provider (CSP) is the answer.
 
 ## CSP scope
 
-CSPs are an interface that is used by mobile device management (MDM) providers to read, set, modify, and delete configuration settings on the device. Typically, it is done through keys and values in the Windows Registry. CSP policies have a scope that defines the level at which a policy can be configured. It is similar to the policies that are available in the Microsoft Endpoint Manager admin center. Some policies can be configured only at the device level. These policies apply regardless of who is logged in to the device. Other policies can be configured at the user level. These policies apply to only that user. The configuration level is dictated by the platform, not by the MDM provider. When you deploy a custom policy, [you can look here](/windows/client-management/mdm/policy-configuration-service-provider) to find the scope of the CSP that you want to use.
+CSPs are an interface that is used by mobile device management (MDM) providers to read, set, modify, and delete configuration settings on the device. Typically, it is done through keys and values in the Windows Registry. CSP policies have a scope that defines the level at which a policy can be configured. It is similar to the policies that are available in the Microsoft Intune admin center. Some policies can be configured only at the device level. These policies apply regardless of who is logged in to the device. Other policies can be configured at the user level. These policies apply to only that user. The configuration level is dictated by the platform, not by the MDM provider. When you deploy a custom policy, [you can look here](/windows/client-management/mdm/policy-configuration-service-provider) to find the scope of the CSP that you want to use.
 
 The scope of the CSP is important because it will dictate the syntax of the OMA-URI string that you should use. For example:
 
@@ -54,7 +54,7 @@ This is the same process that's used by Intune to deliver the standard device co
 
 To demonstrate this process, you can use a built-in policy to set the lock screen image on a device. You can also deploy an OMA-URI and target the relevant CSP. Both methods achieve the same result.
 
-### OMA-URIs from the Microsoft Endpoint Manager admin center
+### OMA-URIs from the Microsoft Intune admin center
 
 :::image type="content" source="media/deploy-oma-uris-to-target-csp-via-intune/device-restrictions.png" alt-text="Screenshot shows the device restrictions.":::
 
@@ -74,7 +74,7 @@ No matter which method you use, the end result is identical.
 
 Here's another example that uses BitLocker.
 
-### Use a custom policy from the Microsoft Endpoint Manager admin center
+### Use a custom policy from the Microsoft Intune admin center
 
 :::image type="content" source="media/deploy-oma-uris-to-target-csp-via-intune/endpoint-protection.png" alt-text="Screenshot of the Endpoint protection screen." border="false":::
 

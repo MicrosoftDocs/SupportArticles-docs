@@ -1,17 +1,17 @@
 ---
 title: How to replace a driver by using Recovery Console
 description: Describes how to use Recovery Console to replace a driver on a Windows Server 2003-based computer that you can't start.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:devices-and-drivers, csstroubleshoot
-ms.technology: windows-server-deployment
+ms.subservice: deployment
 ---
 # How to replace a driver by using Recovery Console
 
@@ -102,3 +102,7 @@ If the driver files that you want aren't located in a cabinet (.cab) file, you c
 You can add Recovery Console to an existing installation of Windows Server 2003 by using the winnt32.exe /cmdcons command. Recovery Console requires approximately 7 megabytes (MB) of free disk space in the system partition on the hard disk.
 
 [back to the top](#requirements)
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

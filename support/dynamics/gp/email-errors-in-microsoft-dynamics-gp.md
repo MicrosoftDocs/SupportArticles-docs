@@ -9,7 +9,7 @@ ms.date: 03/31/2021
 
 This article provides a resolution for the e-mail errors that may occur in Microsoft Dynamics GP.
 
-You can see [E-mail error in Microsoft Dynamics GP 2013: "Either there is no default mail client or the current mail client cannot fulfill the message request. Please run Microsoft Outlook and set it as the default mail client."](https://community.dynamics.com/gp/b/dynamicsgp/posts/e-mail-error-in-microsoft-dynamics-gp-2013) with screen prints.
+You can see [E-mail error in Microsoft Dynamics GP 2013: "Either there is no default mail client or the current mail client cannot fulfill the message request. Please run Microsoft Outlook and set it as the default mail client."](https://community.dynamics.com/blogs/post/?postid=91c1c786-9d4f-4603-af71-cc8ba032de3e) with screen prints.
 
 _Applies to:_ &nbsp; Microsoft Dynamics GP  
 _Original KB number:_ &nbsp; 4052892

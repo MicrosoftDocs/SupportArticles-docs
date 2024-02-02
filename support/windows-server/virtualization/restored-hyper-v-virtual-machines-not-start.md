@@ -1,17 +1,17 @@
 ---
 title: Restored Hyper-V virtual machines won't start
 description: Provides a solution to an issue where Hyper-V virtual machines that are restored to a new Hyper-V Host machine won't start.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, chrit
 ms.custom: sap:virtual-machine-will-not-boot, csstroubleshoot
-ms.technology: hyper-v
+ms.subservice: hyper-v
 ---
 # Restored Hyper-V virtual machines won't start
 

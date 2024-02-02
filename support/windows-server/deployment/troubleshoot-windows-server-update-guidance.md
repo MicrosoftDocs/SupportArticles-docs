@@ -1,17 +1,17 @@
 ---
 title: Guidance for troubleshooting Windows Server update
 description: Introduces general guidance for troubleshooting scenarios related to Windows Server update.
-ms.date: 04/24/2023
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:servicing, csstroubleshoot
-ms.technology: windows-server-deployment
+ms.subservice: deployment
 ---
 # Windows Server update troubleshooting guidance
 
@@ -91,7 +91,7 @@ To troubleshoot this issue, follow these steps:
 2. Feature updates only: The device might have a safeguard hold applied for the given feature update version. For more information about safeguard holds, see [Safeguard holds](/windows/deployment/update/safeguard-holds) and [Opt out of safeguard holds](/windows/deployment/update/safeguard-opt-out).
 3. Check that the deployment to which the device is assigned has the state **offering**. Deployments that have the states **paused** or **scheduled** won't deploy content to devices.
 4. Check that the device has scanned for updates and is scanning the Windows Update service. To learn more about scanning for updates, see [Scanning updates](/windows/deployment/update/how-windows-update-works#scanning-updates).
-5. Feature updates only: Verify that the device is successfully enrolled in feature update management by the deployment service. A device that is successfully enrolled is represented by an Azure AD device resource with an update management enrollment for feature updates and has no Azure AD device registration errors.
+5. Feature updates only: Verify that the device is successfully enrolled in feature update management by the deployment service. A device that is successfully enrolled is represented by a Microsoft Entra device resource with an update management enrollment for feature updates and has no Microsoft Entra device registration errors.
 6. Expedited quality updates only: Check that the device has the Update Health Tools installed (available for Windows 10 version 1809 or later in the update described in [KB 4023057 - Update for Windows 10 Update Service components](https://support.microsoft.com/topic/kb4023057-update-for-windows-10-update-service-components-fccad0ca-dc10-2e46-9ed1-7e392450fb3a), or a more recent quality update). The Update Health Tools are required for a device to receive an expedited quality update. The program’s location on the device is *C:\\Program Files\\Microsoft Update Health Tools*.  
    To verify its presence, view the installed programs list or use this PowerShell script:
 
@@ -104,7 +104,7 @@ To troubleshoot this issue, follow these steps:
 To troubleshoot this issue, follow these steps:
 
 1. Check that the device is scanning the Windows Update service and not a different endpoint. If the device is scanning for updates from a WSUS endpoint, for example, it might receive different updates. To learn more about scanning for updates, see [Scanning updates](/windows/deployment/update/how-windows-update-works#scanning-updates).
-2. Feature updates only: Check that the device is successfully enrolled in feature update management by the deployment service. A device that isn't successfully enrolled might receive different updates according to its feature update deferral period. A device that is successfully enrolled is represented by an Azure AD device resource with an update management enrollment for feature updates and has no Azure AD device registration errors.
+2. Feature updates only: Check that the device is successfully enrolled in feature update management by the deployment service. A device that isn't successfully enrolled might receive different updates according to its feature update deferral period. A device that is successfully enrolled is represented by a Microsoft Entra device resource with an update management enrollment for feature updates and has no Microsoft Entra device registration errors.
 
 ## WSUS troubleshooting  
 
@@ -163,34 +163,7 @@ To fix the issue, follow these steps on the WSUS server:
 
 ## Data collection
 
-Before contacting Microsoft support, you can gather information about your issue.
-
-### Prerequisites
-
-1. TSSv2 must be run by accounts with administrator privileges on the local system, and EULA must be accepted (once EULA is accepted, TSSv2 won't prompt again).
-2. We recommend the local machine `RemoteSigned` PowerShell execution policy.
-
-> [!NOTE]
-> If the current PowerShell execution policy doesn't allow running TSSv2, take the following actions:
->
-> - Set the `RemoteSigned` execution policy for the process level by running the cmdlet `PS C:\> Set-ExecutionPolicy -scope Process -ExecutionPolicy RemoteSigned`.
-> - To verify if the change takes effect, run the cmdlet `PS C:\> Get-ExecutionPolicy -List`.
-> - Because the process level permissions only apply to the current PowerShell session, once the given PowerShell window in which TSSv2 runs is closed, the assigned permission for the process level will also go back to the previously configured state.
-
-### Gather key information before contacting Microsoft support
-
-1. Download [TSSv2](https://aka.ms/getTSSv2) on all nodes and unzip it in the *C:\\tss_tool* folder.
-2. Open the *C:\\tss_tool* folder from an elevated PowerShell command prompt.
-3. Start the traces on the problem computer by using the following cmdlet:
-
-    ```powershell
-    TSSv2.ps1 -CollectLog DND_SetupReport
-    ```
-
-4. Respond to the EULA prompt.
-5. Wait until the automated scripts finish collecting the required data.
-
-The traces will be stored in a zip file in the *C:\\MS_DATA\\* folder, which can be uploaded to the workspace for analysis.
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).
 
 ## Reference
 

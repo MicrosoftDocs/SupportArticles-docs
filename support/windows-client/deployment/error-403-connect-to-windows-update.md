@@ -1,17 +1,17 @@
 ---
 title: Error 403 when you access Windows Update
 description: Provides a solution to an error 403 that occurs when you access Windows Update.
-ms.date: 09/22/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:servicing, csstroubleshoot
-ms.technology: windows-client-deployment
+ms.subservice: deployment
 ---
 # Error 403 (Access Denied/Forbidden) occurs when you connect to Windows Update
 
@@ -75,3 +75,7 @@ For information about how to reset the Hosts file to the default Hosts file, see
 
 > [!NOTE]
 > Some Internet accelerators change the Hosts file. To resolve this issue, rename the file.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

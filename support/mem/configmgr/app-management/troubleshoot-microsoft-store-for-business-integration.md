@@ -74,20 +74,20 @@ Then look at one of the following sections for common issues:
 
 #### Cause
 
-This issue can occur if the configured Azure Active Directory (Azure AD) application doesn't have permissions to manage the Microsoft Store for Business and Education for this tenant.
+This issue can occur if the configured Microsoft Entra application doesn't have permissions to manage the Microsoft Store for Business and Education for this tenant.
 
 #### Workaround
 
 1. Sign in as an administrator to the Microsoft Store for Business or Education portal.
 1. Go to **Settings**, and select **Management tools**.
-1. If the application isn't listed, select **Add a management tool**. Then search by name and select the Azure AD application associated with the same ClientID as Configuration Manager.
+1. If the application isn't listed, select **Add a management tool**. Then search by name and select the Microsoft Entra application associated with the same ClientID as Configuration Manager.
 1. If the status doesn't show **Active**, then select **Activate** in the **Action** section.
 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Microsoft Store for Business** node. Synchronize with the store, or wait for the next sync interval to occur.
 
 > [!Tip]
 > To find the ClientID in Configuration Manager:
 >
-> 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Azure Active Directory Tennts** node.
+> 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Microsoft Entra Tennts** node.
 > 1. Select the tenant that you use for the Microsoft Store for Business and Education integration.
 > 1. In the results pane, find the matching application, and look at the **Client ID** column.
 
@@ -95,17 +95,17 @@ This issue can occur if the configured Azure Active Directory (Azure AD) applica
 
 #### Cause
 
-This issue can occur if the secret key has expired on the Azure AD app for the Microsoft Store for Business and Education configuration.
+This issue can occur if the secret key has expired on the Microsoft Entra app for the Microsoft Store for Business and Education configuration.
 
 #### Resolution
 
-Renew the secret key for the Azure AD application. For more information, see [Renew secret key](/mem/configmgr/core/servers/deploy/configure/azure-services-wizard#bkmk_renew).
+Renew the secret key for the Microsoft Entra application. For more information, see [Renew secret key](/mem/configmgr/core/servers/deploy/configure/azure-services-wizard#bkmk_renew).
 
 ### <a name="bkmk_fail-symptom3"></a> Error getting application token
 
 #### Cause
 
-This issue can occur if the connected app no longer exists in Azure AD.
+This issue can occur if the connected app no longer exists in Microsoft Entra ID.
 
 #### Resolution
 

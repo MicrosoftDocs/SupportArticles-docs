@@ -4,9 +4,7 @@ description: This article describes the procedures to determine the version and 
 ms.date: 10/15/2022
 ms.custom: sap:Installation, Patching and Upgrade
 ms.topic: how-to
-ms.prod: sql
-author: simonxjx
-ms.author: v-six
+ms.reviewer: v-six
 ---
 
 <!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "christys" for triage before making the further changes to the screenshots.

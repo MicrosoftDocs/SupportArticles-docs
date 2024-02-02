@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: arrenc, toddmax, manojse, kaushika
 ms.custom: sap:bitlocker, csstroubleshoot
-ms.technology: windows-client-security
+ms.subservice: windows-security
 ---
 # How to enable BitLocker device encryption on Windows 8 RT
 

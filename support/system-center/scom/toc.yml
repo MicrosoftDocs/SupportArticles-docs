@@ -214,3 +214,5 @@
     href: troubleshoot-oms-onboarding-issues.md
   - name: Unable to register to Advisor Service
     href: error-3000-unable-to-register-to-advisor-service.md
+  - name: Use CA certificate on SCX agent
+    href: use-ca-certificate-on-scx-agent.md

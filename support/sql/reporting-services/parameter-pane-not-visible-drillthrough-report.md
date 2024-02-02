@@ -4,7 +4,6 @@ description: This article helps you workaround the problem in which the paramete
 ms.date: 07/22/2020
 ms.custom: sap:Reporting Services
 ms.reviewer: selvar, Matt Jones
-ms.prod: sql
 ---
 # Parameter pane is not visible in drillThrough report in SharePoint integrated mode in SSRS
 

@@ -2,10 +2,8 @@
 title: Use managed identities in an Azure Batch account or pool
 description: Use managed identities in an Azure Batch account or pool. Download application packages or retrieve blobs from a batch pool.
 ms.date: 11/15/2022
-author: DennisLee-DennisLee
-ms.author: v-dele
 editor: v-jsitser
-ms.reviewer: biny
+ms.reviewer: biny, v-leedennis
 ms.service: batch
 ms.topic: how-to
 #Customer intent: As an Azure Batch user, I want to learn how to use managed identities so that I can understand the differences in managed identity usage between a Batch account and a Batch pool.
@@ -140,7 +138,7 @@ For information about how to use a managed identity to access an Azure Key Vault
 
 If you want to allow Azure Batch nodes to access other Azure resources, use a managed identity that's configured in the Azure Batch pool.
 
-If the authentication mode of the autostorage account is set to **Batch Account Managed Identity**, the Azure Batch nodes receive the managed identity tokens. The nodes use the managed identity tokens to authenticate through Azure Active Directory (Azure AD) authentication by using the Azure Instance Metadata Service (IMDS).
+If the authentication mode of the autostorage account is set to **Batch Account Managed Identity**, the Azure Batch nodes receive the managed identity tokens. The nodes use the managed identity tokens to authenticate through Microsoft Entra authentication by using the Azure Instance Metadata Service (IMDS).
 
 The Azure batch pool supports only the user-assigned version of managed identity. Therefore, you'll have to [create a user-assigned managed identity][manage-user-assigned-managed-identities] in the same tenant as your Azure Batch account. Also, you'll have to grant permission in the [storage data plane](/azure/azure-resource-manager/management/control-plane-and-data-plane#data-plane) (for example, through the [Storage Blob Data Owner](/azure/role-based-access-control/built-in-roles#storage-blob-data-owner)) to the user-assigned managed identity.
 

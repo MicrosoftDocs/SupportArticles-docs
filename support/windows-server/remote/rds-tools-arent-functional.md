@@ -1,17 +1,17 @@
 ---
 title: RDS tools aren't functional
 description: Provides a solution to an issue where Remote Desktop Services (RDS) tools aren't functional after you remove a server from Server Manager.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, raackley
 ms.custom: sap:administration, csstroubleshoot
-ms.technology: windows-server-rds
+ms.subservice: rds
 ---
 # Remote Desktop Services tools aren't functional after you remove a server from Server Manager
 

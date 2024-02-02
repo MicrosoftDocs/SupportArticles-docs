@@ -1,10 +1,9 @@
 ---
 title: Cumulative update 1 for SQL Server 2022 (KB5022375)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2022 cumulative update 1 (KB5022375).
-ms.date: 2/16/2023
+ms.date: 02/16/2023
 ms.custom: KB5022375
-author: Elena068
-ms.author: v-qianli2
+ms.reviewer: v-qianli2
 appliesto:
 - SQL Server 2022 on Windows
 - SQL Server 2022 on Linux
@@ -90,13 +89,13 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id="2118499">[2118499](#2118499)</a> | [FIX: Database accessibility issues with high-volume customer workloads that use EKM for encryption and key generation (KB5023236)](database-accessibility-issues-high-volume-customer-workloads.md) | SQL Server Engine | Security Infrastructure | Windows |
 | <a id="2058060">[2058060](#2058060)</a> | After you apply this update, you can audit events (`EXTERNAL GOVERNANCE TURNED ON` and `EXTERNAL GOVERNANCE TURNED OFF`) that correspond to external governance enable/disable actions (Microsoft Purview access policies). The correctness of audit records is ensured when evaluating data reader and writer permissions. This update introduces trace flag (TF) 12481 to disable logging auditing information for external permissions in the `external_policy_permission_checked` field of audit records. | SQL Server Engine | Security Infrastructure | All |
 | <a id="2088539">[2088539](#2088539)</a> | Adds the queries and category of the Microsoft Customer Experience Improvement Program (CEIP) telemetry to SQL Server 2022. | SQL Server Engine | Security Infrastructure | All |
-| <a id="2100518">[2100518](#2100518)</a> | Fixes an issue where the Azure Active Directory (Azure AD) administrator isn't added to the sysadmin group after you configure Azure AD for SQL Server 2022. | SQL Server Engine | Security Infrastructure | All |
+| <a id="2100518">[2100518](#2100518)</a> | Fixes an issue where the Microsoft Entra administrator isn't added to the sysadmin group after you configure Microsoft Entra ID for SQL Server 2022. | SQL Server Engine | Security Infrastructure | All |
 | <a id="2101033">[2101033](#2101033)</a> | Updates the error message 37517 used for the Microsoft Purview access policies in SQL Server to the following one: </br></br>Internal error occurred while obtaining ARC resource information from IMDS endpoint. Substate: '\%ls', status: 0x\%08x. | SQL Server Engine | Security Infrastructure | All |
-| <a id="2101035">[2101035](#2101035)</a> | Fixes an exception that generates a dump file when using Microsoft Purview access policies for SQL Server 2022 and running the `sp_external_policy_refresh` stored procedure as a non-admin Azure Active Directory (Azure AD) user. | SQL Server Engine | Security Infrastructure | All |
+| <a id="2101035">[2101035](#2101035)</a> | Fixes an exception that generates a dump file when using Microsoft Purview access policies for SQL Server 2022 and running the `sp_external_policy_refresh` stored procedure as a non-admin Microsoft Entra user. | SQL Server Engine | Security Infrastructure | All |
 | <a id="2117119">[2117119](#2117119)</a> | Removes a case of multiple inheritance in the RSA encryption code in SQL Server 2022. | SQL Server Engine | Security Infrastructure | All |
 | <a id="2117122">[2117122](#2117122)</a> | Fixes a spelling issue in error 33025 (Invalid cryptographic provider property: %S_MSG) when you use the Extensible Key Management (EKM) feature. | SQL Server Engine | Security Infrastructure | All |
 | <a id="2117214">[2117214](#2117214)</a> | Fixes the following error that can occur when you load audit logs from SQL Server Management Studio (SSMS): </br></br>Item has already been added. Key in dictionary: 'MNDO' Key being added: 'MNDO' | SQL Server Engine | Security Infrastructure | All |
-| <a id="2125981">[2125981](#2125981)</a> | Adds a new `sys.dm_external_provider_certificate_info` dynamic management view (DMV), which returns information about the Azure cloud certificates used in SQL Server to set up and maintain an Azure Active Directory (Azure AD) administrator for Azure AD authentication. For more information, see [sys.dm_external_provider_certificate_info (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-external-provider-certificate-info-transact-sql). | SQL Server Engine | Security Infrastructure | All |
+| <a id="2125981">[2125981](#2125981)</a> | Adds a new `sys.dm_external_provider_certificate_info` dynamic management view (DMV), which returns information about the Azure cloud certificates used in SQL Server to set up and maintain a Microsoft Entra administrator for Microsoft Entra authentication. For more information, see [sys.dm_external_provider_certificate_info (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-external-provider-certificate-info-transact-sql). | SQL Server Engine | Security Infrastructure | All |
 | <a id="2131225">[2131225](#2131225)</a> | Fixes the following issues with attribute-based policies of Purview - Azure Attribute-based access control (Azure ABAC): </br></br>- Attributes don't synchronize correctly. </br>- The synchronization process can't move past the table that didn't have attribute synchronization. </br>- On retry, the synchronization process encounters exceptions because it expected the database state to be planning not synchronization. | SQL Server Engine | Security Infrastructure | Windows |
 | <a id="2021487">[2021487](#2021487)</a> | Fixes spelling issues in Database Engine error messages in SQL Server 2022. | SQL Server Engine | SQL Server Engine | All |
 | <a id="1862944">[1862944](#1862944)</a> | This update removes the requirement for the trace flag (TF) 809 for the hybrid buffer pool with direct write feature. After you apply this update, this feature is enabled by default in SQL Server 2022. This update introduces TF 898 to disable the `Direct Write` behavior of the [hybrid buffer pool](/sql/database-engine/configure-windows/hybrid-buffer-pool) for troubleshooting or debugging purposes. | SQL Server Engine | SQL OS | All |
@@ -457,7 +456,7 @@ To use one of the hotfixes in this package, you don't have to make any changes t
 <details>
 <summary><b>Important notices</b></summary>
 
-This article also provides the following important information:
+This article also provides the following important information.
 
 ### Analysis Services CU build version
 
@@ -516,7 +515,7 @@ One CU package includes all available updates for all SQL Server 2022 components
 <details>
 <summary><b>Support for this update</b></summary>
 
-If additional issues occur, or if any troubleshooting is required, you might have to create a service request. The usual support costs will apply to additional support questions and to issues that don't qualify for this specific cumulative update package. For a complete list of Microsoft Customer Service and Support telephone numbers, or to create a separate service request, go to the [Microsoft support website](https://support.microsoft.com/contactus/?ws=support).
+If other issues occur, or if any troubleshooting is required, you might have to create a service request. The usual support costs will apply to additional support questions and to issues that don't qualify for this specific cumulative update package. For a complete list of Microsoft Customer Service and Support telephone numbers, or to create a separate service request, go to the [Microsoft support website](https://support.microsoft.com/contactus/?ws=support).
 </details>
 
 ## How to uninstall this update
@@ -539,7 +538,7 @@ To uninstall this CU on Linux, you must roll back the package to the previous ve
 
 ## References
 
-- [Announcing updates to the SQL Server Incremental Servicing Model (ISM)](https://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism/)
+- [Announcing updates to the SQL Server Incremental Servicing Model (ISM)](/archive/blogs/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism)
 - [SQL Server Service Packs are no longer supported starting from SQL Server 2017](https://support.microsoft.com/topic/fd405dee-cae7-b40f-db14-01e3e4951169)
 - [Determine which version and edition of SQL Server Database Engine is running](../find-my-sql-version.md)
 - [Servicing models for SQL Server](../../general/servicing-models-sql-server.md)

@@ -1,17 +1,17 @@
 ---
 title: Display issues occur when you deploy applications through RemoteApp Hi-Def mode
 description: Discusses that you experience display issues when you deploy applications through RemoteApp Hi-Def mode. Provides a workaround.
-ms.date: 12/1/2021
+ms.date: 12/01/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-jesits
 ms.custom: sap:remoteapp-applications, csstroubleshoot
-ms.technology: windows-server-rds
+ms.subservice: rds
 ---
 # Display issues occur when you deploy applications through RemoteApp Hi-Def mode
 

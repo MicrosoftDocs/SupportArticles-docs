@@ -1,17 +1,17 @@
 ---
 title: SYSPREP and CAPTURE task sequence fails with error 0x80070070
 description: Helps fix a 0x80070070 error that occurs when Deployment Toolkit fails to complete sysprep and capture task sequence.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, vineetm
 ms.custom: sap:setup, csstroubleshoot
-ms.technology: windows-server-deployment
+ms.subservice: deployment
 ---
 # SYSPREP and CAPTURE task sequence fails with error 0x80070070
 
@@ -59,3 +59,7 @@ By default Windows 7 is installed from a media or WDS, you will have first parti
 
 How to capture the image using MDT:
 [How to run a Sysprep and Capture Task Sequence From MDT 2010](/archive/blogs/askcore/how-to-run-a-sysprep-and-capture-task-sequence-from-mdt-2010)
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

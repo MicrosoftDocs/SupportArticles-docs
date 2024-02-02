@@ -1,17 +1,17 @@
 ---
 title: Microsoft Deployment Toolkit support life cycle
 description: Discusses the support life cycle for Microsoft Deployment Toolkits.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, scottmca, aaroncz, v-jesits
 ms.custom: sap:setup, csstroubleshoot
-ms.technology: windows-server-deployment
+ms.subservice: deployment
 ---
 # Microsoft Deployment Toolkit support life cycle
 
@@ -58,3 +58,7 @@ Microsoft Deployment
 Business Desktop Deployment 2007 Update 1
 Business Desktop Deployment 2007
 Business Desktop Deployment 2.5
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

@@ -1,17 +1,17 @@
 ---
 title: DCPROMO answer file syntax for unattended promotion and demotion of domain controllers
 description: Describes the parameters and options that are used in the answer file to install and remove AD DS on domain controllers.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: justinha, kaushika
 ms.custom: sap:dcpromo-and-the-installation-of-domain-controllers, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 
 # DCPROMO answer file syntax for unattended promotion and demotion of domain controllers

@@ -3,7 +3,7 @@ title: Business Process Flow deletion fails
 description: Provides a solution to an issue where Business Process Flow deletion fails because of dependency.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: d365-sales-other-functionality
 ---
 # Business Process Flow deletion fails because of an unknown dependency

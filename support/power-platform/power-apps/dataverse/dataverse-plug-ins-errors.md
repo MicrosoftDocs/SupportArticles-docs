@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Dataverse plug-ins
 description: Contains information about errors that can occur during plug-in execution, or Dataverse errors that are related to plug-ins, and how to avoid or fix them.
-ms.date: 03/16/2023
+ms.date: 08/18/2023
 author: JimDaly
 ms.author: jdaly
 ms.reviewer: jdaly
@@ -13,10 +13,22 @@ search.app:
   - D365CE
 contributors: 
   - JimDaly
+  - phecke
 ---
 # Troubleshoot Dataverse plug-ins
 
 This article contains information about errors that can occur during plug-in execution, or Dataverse errors that are related to plug-ins, and how to avoid or fix them.
+
+## Error "Time conversion could not be completed"
+
+> Error Code: -2147220956  
+> Error Message: The conversion could not be completed because the supplied DataTime did not have the Kind property set correctly. For example, when the Kind property is DateTimeKind.Local, the source time zone must be TimeZoneInfo.Local.
+
+This error can occur during a <xref:System.TimeZoneInfo.ConvertTimeToUtc(System.DateTime,System.TimeZoneInfo)?displayProperty=nameWithType> call in the plug-in code to convert a `DateTime` value in the Santiago or Volgograd time zone to Coordinated Universal Time (UTC).
+
+This is a known product limitation, and there's presently no workaround.
+
+For more information, see [Specify time zone settings for a user](/power-apps/developer/data-platform/specify-time-zone-settings-user).
 
 ## Error "Sandbox Worker process crashed"
 

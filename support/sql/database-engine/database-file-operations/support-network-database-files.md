@@ -1,10 +1,9 @@
 ---
 title: Support for network database files
 description: This article describes support for network database files in SQL Server and how to configure SQL Server to store a database on a networked server or on an NAS storage server.
-ms.date: 09/25/2020
+ms.date: 09/04/2023
 ms.custom: sap:Administration and Management
 ms.reviewer: SANJAYAN
-ms.prod: sql
 ---
 # Description of support for network database files in SQL Server
 
@@ -23,7 +22,7 @@ The following conditions describe the use of network database files that are sto
 
 - This use is enabled by default in Microsoft SQL Server 2008 R2 and later versions.
 
-- This use requires the **-T1807** startup trace flag to work in Microsoft SQL Server 2008 and earlier versions. For more information about how to enable startup trace flags, review [Database Engine Service Startup Options](/sql/database-engine/configure-windows/database-engine-service-startup-options).
+- This use requires the **-T1807** startup trace flag to work in Microsoft SQL Server 2008 and earlier versions. Starting with SQL Server 2012, the trace flag is no longer required. For more information about how to enable startup trace flags, see [Database Engine Service Startup Options](/sql/database-engine/configure-windows/database-engine-service-startup-options).
 
 ## Windows Hardware Quality Lab (WHQL)-qualified devices
 
@@ -108,3 +107,5 @@ Incorrect use of database software with a NAS product, or database use with an i
 - [SQL Server I/O Reliability Program Requirements.](https://download.microsoft.com/download/f/1/e/f1ecc20c-85ee-4d73-baba-f87200e8dbc2/sql_server_io_reliability_program_review_requirements.pdf)
 
 - [SQL Server Database Engine Input/Output requirements](/troubleshoot/sql/admin/database-engine-input-output-requirements)
+
+

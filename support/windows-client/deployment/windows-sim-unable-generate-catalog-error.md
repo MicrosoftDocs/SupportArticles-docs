@@ -1,17 +1,17 @@
 ---
 title: Windows SIM was unable to generate a catalog or Parameter count mismatch error
 description: fixes errors that occur when generating a catalog (.clg) in Windows System Image Manager (WSIM).
-ms.date: 09/07/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: scottmca, kaushika
 ms.custom: sap:setup, csstroubleshoot
-ms.technology: windows-client-deployment
+ms.subservice: deployment
 ---
 # Error message: Windows SIM was unable to generate a catalog or Parameter count mismatch
 
@@ -60,3 +60,7 @@ Generate the catalog file on a supported platform. For Microsoft Deployment Tool
 ## More information
 
 This is by design. For more information, see [Understanding Windows Image Files and Catalog Files](https://technet.microsoft.com/library/dd744249%28ws.10%29.aspx)
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

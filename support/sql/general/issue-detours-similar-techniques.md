@@ -5,7 +5,6 @@ ms.date: 09/03/2020
 ms.custom: sap:General Troubleshooting Information
 ms.reviewer: rdorr
 ms.topic: article
-ms.prod: sql
 ---
 # Detours or similar techniques may cause unexpected behaviors with SQL Server
 

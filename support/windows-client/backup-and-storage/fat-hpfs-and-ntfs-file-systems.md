@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, markm
 ms.custom: sap:partition-and-volume-management, csstroubleshoot
-ms.technology: windows-client-backup-and-storage
+ms.subservice: backup-and-storage
 ---
 # Overview of FAT, HPFS, and NTFS File Systems
 

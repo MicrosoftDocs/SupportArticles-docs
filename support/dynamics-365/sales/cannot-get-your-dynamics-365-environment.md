@@ -3,7 +3,7 @@ title: Can't get to your Dynamics 365 environment
 description: Provides a solution to an error that occurs when you access your Common Data Service environment for the first time.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: d365-sales-access
 ---
 # You cannot get to your Dynamics 365 environment using the above URL. Error message displays when you access your Common Data Service environment for the first time
@@ -17,7 +17,7 @@ _Original KB number:_ &nbsp; 4541747
 
 To provide better service and availability, we're upgrading our authentication protocol by replacing the URL redirector service.  The replaced URL redirector service will be removed on **March 31, 2020**.
 
-When you access your Common Data Service environment for the first time or every time after you've signed out from a prior session, you're directed to Azure AD for sign-in. In the Sign-in page URL, it contains a set of internal values/codes that include a link to the URL redirector service. Upon successful sign-in, the URL Redirector service directs you to your Common Data Service environment.
+When you access your Common Data Service environment for the first time or every time after you've signed out from a prior session, you're directed to Microsoft Entra ID for sign-in. In the Sign-in page URL, it contains a set of internal values/codes that include a link to the URL redirector service. Upon successful sign-in, the URL Redirector service directs you to your Common Data Service environment.
 
 The URL redirector service was replaced in September 2019. This change would impact you if you've created a bookmark of the sign-in page before September 2019 that contained the link of the replaced URL redirector service.
 
@@ -54,7 +54,7 @@ The deprecated redirector service is called <cloudredirector.crm.dynamics.com>.
 And it's replaced by something like `bn1 -- namcrlivesg614.crm.dynamics.com`.
 
 > [!NOTE]
-> It's just an example and this URL is different based on the region your tenant resides.
+> It's just an example and this URL is different based on where your tenant resides.
 
 Example (new):
 
@@ -79,7 +79,7 @@ The notification page will be rolled out starting the week of **February 17, 202
 
 2. For company portal or Single-SignOn (SSO) scenario:  
 
-    It usually applies to customers who are using their own Secure Token Service (STS) that federates with Azure AD to provide an SSO experience for their users.
+    It usually applies to customers who are using their own Secure Token Service (STS) that federates with Microsoft Entra ID to provide an SSO experience for their users.
 
     To provide an SSO experience, you might have an SSO link that looks something like this:
 
@@ -89,7 +89,7 @@ The notification page will be rolled out starting the week of **February 17, 202
 
     While we understand that this method allows you to mitigate certain STS SSO limitation, it's officially not supported as it uses the encoded payload captured at that time. There's some data that is short-lived in the encoded payload and once it expires, you'll need to recapture a new payload. The captured encoded payload can also easily be invalidated with changes in our backend service. It isn't recommended as it causes interruption to your user sign-in experience.
 
-    A better approach is to pass your domain name such as `?whr=contoso.com` in your Dynamics 365 org url (see below). Which tells Azure AD to skip the home realm discovery phase and goes directly to your STS service. It may achieve SSO depending on your STS configuration.
+    A better approach is to pass your domain name such as `?whr=contoso.com` in your Dynamics 365 org url (see below). Which tells Microsoft Entra ID to skip the home realm discovery phase and goes directly to your STS service. It may achieve SSO depending on your STS configuration.
 
     Example: `https://contoso.crm.dynamics.com/?whr=contoso.com`  
     (replace org URL and `contoso.com` with your domain name)

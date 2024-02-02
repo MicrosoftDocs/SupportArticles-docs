@@ -1,17 +1,17 @@
 ---
 title: A description of the driver
 description: Describes the device driver requirements for x64-based versions of Windows.
-ms.date: 04/07/2023
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, joeswart
 ms.custom: sap:devices-and-drivers, csstroubleshoot
-ms.technology: windows-client-deployment
+ms.subservice: deployment
 ---
 # A description of the driver
 
@@ -49,3 +49,7 @@ If you experience problems when you try to install a 64-bit driver that isn't in
 ### Technical support for Windows x64 editions
 
 Your hardware manufacturer provides technical support and assistance for Microsoft Windows x64 editions. Your hardware manufacturer provides support because a Windows x64 edition was included with your hardware. Your hardware manufacturer might have customized the Windows x64 edition installation with unique components. Unique components might include specific device drivers or might include optional settings to maximize the performance of the hardware. Microsoft will provide reasonable-effort assistance if you need technical help with your Windows x64 edition. However, you might have to contact your manufacturer directly. Your manufacturer is best qualified to support the software that your manufacturer installed on the hardware.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

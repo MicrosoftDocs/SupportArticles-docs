@@ -1,17 +1,17 @@
 ---
 title: Post-Deployment Configuration task fails
 description: Helps fix an issue where the Post-Deployment Configuration task fails after you install the Windows Server Essentials Experience role.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:setup, csstroubleshoot
-ms.technology: windows-server-deployment
+ms.subservice: deployment
 ---
 # The Post-Deployment Configuration task may fail after you install the Windows Server Essentials Experience role
 
@@ -100,3 +100,7 @@ To resolve this issue, follow these steps to add the service accounts that are m
 7. After you have the account name entered, click **OK** in the **Add User or Group** dialog box, and then click **OK** in the **Allow log on locally Properties** dialog box.
 8. To update the modified Group Policy manually, at command prompt, type **gpupdate**, and then press Enter.
 9. Rerun the Post-Deployment Configuration task.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

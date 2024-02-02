@@ -3,7 +3,7 @@ title: Integrated Authentication fails for Outlook client
 description: This article provides a resolution for the problem that occurs when the WindowsTransport endpoint is not enabled on the AD FS Server.
 ms.reviewer: edwinsol
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: d365-sales-email-office-integration
 ---
 # Integrated Authentication fails with the Microsoft Dynamics CRM 2015 for Outlook client

@@ -1,17 +1,17 @@
 ---
 title: Maximum number of access control entries in the access control list
 description: Describes an issue that occurs when you reach the maximum size of the access control list.
-ms.date: 4/24/2022
+ms.date: 04/24/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: jlambert, kaushika
 ms.custom: sap:permissions-access-control-and-auditing, csstroubleshoot
-ms.technology: windows-server-security
+ms.subservice: windows-security
 ---
 # Maximum number of access control entries in the access control list
 

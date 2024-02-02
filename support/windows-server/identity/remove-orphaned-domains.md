@@ -1,17 +1,17 @@
 ---
 title: How to remove orphaned domains from Active Directory
 description: How to remove domain metadata from Active Directory when domain controllers are removed.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:active-directory-backup-restore-or-disaster-recovery, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # How to remove orphaned domains from Active Directory  
 

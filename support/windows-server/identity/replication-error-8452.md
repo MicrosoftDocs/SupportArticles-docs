@@ -1,17 +1,17 @@
 ---
 title: Active Directory replication error 8452
 description: Active Directory Replications test has failed with error status code (8452). Provides a resolution.
-ms.date: 3/24/2022
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:active-directory-replication, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # The naming context is in the process of being removed or is not replicated from the specified server
 
@@ -200,7 +200,11 @@ NTDS replication event 1586 is generated in a mixed domain environment that cont
 
 There's another scenario that **DRAERR_NoReplica** error will be returned. When we demote a DC, it will use DC locator to find a DC to replicate local changes to. If the found DC doesn't replicate directly with the being-deleted DC, **DRAERR_NoReplica** will be returned and DC locator will be called to find a destination DC. In this scenario, the error isn't logged so it isn't observed.
 
-### Related Links
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Active Directory replication issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication.md).
+
+## Related Links
 
 - [How the Active Directory Replication Model Works](/previous-versions/windows/it-pro/windows-server-2003/cc772726(v=ws.10))
 - [RepsFrom](/openspecs/windows_protocols/ms-drsr/3ef27d3c-b9c9-4404-8e53-ebf3a64a9a10)

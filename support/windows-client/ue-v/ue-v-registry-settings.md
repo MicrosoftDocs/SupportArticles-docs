@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, jeffpatt
 ms.custom: sap:user-experience-virtualization-ue-v, csstroubleshoot
-ms.technology: windows-client-user-experience-virtualization-ue-v
+ms.subservice: user-experience-virtualization-ue-v
 ---
 # User Experience Virtualization (UE-V) registry settings
 

@@ -1,17 +1,17 @@
 ---
 title: Can't share files that have multiple EFS certificates
 description: Describes an issue that occurs when you enable users to share files that are encrypted by using multiple EFS certificates.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, lindakup
 ms.custom: sap:active-directory-certificate-services, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # You can't share files that have multiple EFS certificates
 

@@ -1,17 +1,17 @@
 ---
 title: Increase the number of IP addresses on a subnet
 description: Describes three methods you can use to change the number of IP hosts on any given subnet.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, drewba
 ms.custom: sap:dynamic-host-configuration-protocol-dhcp, csstroubleshoot
-ms.technology: networking
+ms.subservice: networking
 ---
 # Increase the number of IP addresses on a subnet in a DHCP server
 

@@ -8,7 +8,6 @@ tags: Linux chroot LVM
 ms.service: virtual-machines
 ms.subservice: vm-cannot-start-stop
 ms.collection: linux
-ms.devlang: na
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-linux
 ms.workload: infrastructure-services

@@ -3,7 +3,6 @@ title: Error when you try to run an SSIS package
 description: This article provides resolutions for the problem that occurs when you try to run an SSIS package on systems where User Account Control (UAC) is enabled.
 ms.date: 09/15/2020
 ms.custom: sap:Integration Services
-ms.prod: sql
 ---
 # Unable to prepare the SSIS bulk insert for data insertion on UAC enabled systems
 

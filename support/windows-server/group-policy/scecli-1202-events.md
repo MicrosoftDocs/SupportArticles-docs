@@ -1,17 +1,17 @@
 ---
 title: Troubleshoot SCECLI 1202 events
 description: Describes ways to troubleshoot and to resolve SCECLI 1202 events.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:group-policy-management-gpmc-or-agpm, csstroubleshoot
-ms.technology: windows-server-group-policy
+ms.subservice: group-policy
 ---
 # Troubleshoot SCECLI 1202 events
 
@@ -311,3 +311,7 @@ The 0x4b8 error is generic and can be caused by many different problems. To trou
     This command creates a file that is named Winlogon.log in the `%SYSTEMROOT%\Security\Logs` folder.
 
 3. See [ESENT event IDs 1000, 1202, 412, and 454 are logged repeatedly in the Application log](https://support.microsoft.com/help/278316). This article describes known issues that cause the 0x4b8 error.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Group Policy issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-group-policy.md).

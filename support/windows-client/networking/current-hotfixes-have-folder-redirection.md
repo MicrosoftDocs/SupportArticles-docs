@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, rnitsch
 ms.custom: sap:folder-redirection-and-offline-files-and-folders-csc, csstroubleshoot
-ms.technology: windows-client-networking
+ms.subservice: networking
 ---
 # Current hotfixes for Windows 7 SP1 enterprise clients that have folder redirection enabled
 
@@ -32,9 +32,9 @@ In specific, the components of relevance here are:
 
 For other components (client and server) like Srv.sys, mrxsmb.sys, rdbss.sys, ntfs.sys, dfssvc.exe, see the following up-to-date articles:
 
-- [List of currently available hotfixes for the File Services technologies in Windows Server 2008 and in Windows Server 2008 R2](/troubleshoot/windows-server/backup-and-storage/file-services-hotfixes-in-windows-server-2008)
+- [List of currently available hotfixes for the File Services technologies in Windows Server 2008 and in Windows Server 2008 R2](../../windows-server/backup-and-storage/file-services-hotfixes-in-windows-server-2008.md)
 
-- [List of currently available hotfixes for the File Services technologies](/troubleshoot/windows-server/networking/hotfixes-for-file-services-technologies)
+- [List of currently available hotfixes for the File Services technologies](../../windows-server/networking/hotfixes-for-file-services-technologies.md)
 
 - [List of currently available hotfixes for Distributed File System (DFS) technologies in Windows Server 2008 and in Windows Server 2008 R2](https://support.microsoft.com/help/968429)
 

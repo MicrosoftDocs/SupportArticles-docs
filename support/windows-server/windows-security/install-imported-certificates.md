@@ -1,29 +1,30 @@
 ---
 title: Install imported certificates
 description: Describes how to import a Web site certificate into the certificate store of the local computer and assign the certificate to the Web site.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:certificates-and-public-key-infrastructure-pki, csstroubleshoot
-ms.technology: windows-server-security
+ms.subservice: windows-security
 ---
-# How to install imported certificates on a Web server in Windows Server 2003
+# How to install imported certificates on a Windows-based Web server
 
 This article describes how to import a Web site certificate into the certificate store of the local computer and assign the certificate to the Web site.
 
-_Applies to:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Supported versions of Windows Server  
 _Original KB number:_ &nbsp; 816794
 
 ## Install the Certificates
 
-The Windows 2003 Internet Information Server (IIS) 6.0 supports Secure Sockets Layer (SSL) communications. A whole Web site, a folder on the Web site, or a particular file that is located in a folder on the site can require a secure SSL connection. However, before the Web server can support SSL sessions, a Web site certificate must be installed.  
-You can use one of the following methods to install a certificate in IIS 6.0:
+The Windows Internet Information Server (IIS)supports Secure Sockets Layer (SSL) communications. A whole Web site, a folder on the Web site, or a particular file that is located in a folder on the site can require a secure SSL connection. However, before the Web server can support SSL sessions, a Web site certificate must be installed.
+
+You can use one of the following methods to install a certificate in IIS:
 
 - Make an online request by using the IIS Web Server Certificate Wizard and install the certificate at the time of the request.
 - Make an offline request by using the IIS Web Server Certificate Wizard and obtain and install the certificate later.
@@ -41,7 +42,7 @@ To install the Web site certificate, you must complete the following tasks:
 
 To import the certificate into the local computer store, follow these steps:
 
-1. On the IIS 6.0 Web server, select **Start**, and then select **Run**.
+1. On the Web server, select **Start**, and then select **Run**.
 2. In the **Open** box, type mmc, and then select **OK**.
 3. On the **File** menu, select **Add/Remove snap-in**.
 4. In the **Add/Remove Snap-in** dialog box, select **Add**.

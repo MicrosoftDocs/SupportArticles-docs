@@ -8,7 +8,7 @@ ms.subservice: B2C
 ---
 # An exception occurs when you sign in to an app that's set up for Azure B2C
 
-_Original product version:_ &nbsp; Azure Active Directory  
+_Original product version:_ &nbsp; Microsoft Entra ID  
 _Original KB number:_ &nbsp; 3092592
 
 ## Symptoms

@@ -1,17 +1,17 @@
 ---
 title: NFS Server and File Permissions
 description: Provides some information about NFS Server and File Permissions.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:access-to-remote-file-shares-smb-or-dfs-namespace, csstroubleshoot
-ms.technology: networking
+ms.subservice: networking
 ---
 # NFS Server and File Permissions
 

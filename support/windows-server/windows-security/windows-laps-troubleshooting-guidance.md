@@ -2,22 +2,20 @@
 title: Windows LAPS troubleshooting guidance
 description: Provides troubleshooting guidance for Windows LAPS using Windows events.
 ms.date: 04/21/2023
-author: v-lianna
-ms.author: v-lianna
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
-ms.reviewer: kaushika, jsimmons, sandeo, mimanans, sdabbiru, deverett, raviks
+ms.reviewer: kaushika, jsimmons, sandeo, mimanans, sdabbiru, deverett, raviks, v-lianna
 ms.custom: sap:windows-laps, csstroubleshoot
-ms.technology: windows-server-security
+ms.subservice: windows-security
 ---
 # Windows LAPS troubleshooting guidance
 
 This guide provides the fundamental concepts to use when troubleshooting Windows Local Administrator Password Solution (Windows LAPS) issues.
 
-Windows LAPS is a Windows feature that automatically manages and backs up the password of a local administrator account on your Azure Active Directory-joined or Windows Server Active Directory-joined devices. You also can use Windows LAPS to automatically manage and back up the Directory Services Repair Mode (DSRM) account password on your Windows Server Active Directory domain controllers. An authorized administrator can retrieve the DSRM password and use it. For more information, see [What is Windows LAPS?](/windows-server/identity/laps/laps-overview)
+Windows LAPS is a Windows feature that automatically manages and backs up the password of a local administrator account on your Microsoft Entra joined or Windows Server Active Directory-joined devices. You also can use Windows LAPS to automatically manage and back up the Directory Services Repair Mode (DSRM) account password on your Windows Server Active Directory domain controllers. An authorized administrator can retrieve the DSRM password and use it. For more information, see [What is Windows LAPS?](/windows-server/identity/laps/laps-overview)
 
 > [!NOTE]
 >
@@ -39,9 +37,9 @@ Windows LAPS has two scenarios:
 - Windows LAPS Active Directory
 
     Client machines are configured to store the password in Active Directory.
-- Windows LAPS Azure  Active Directory (Azure AD)
+- Windows LAPS Azure  Microsoft Entra ID
 
-    Client machines are configured to store the password in Azure AD.
+    Client machines are configured to store the password in Microsoft Entra ID.
 
 The following table lists the event IDs that are logged in different scenarios:
 
@@ -50,21 +48,21 @@ The following table lists the event IDs that are logged in different scenarios:
 |10006     |Windows LAPS Active Directory         |
 |10011     |Windows LAPS Active Directory         |
 |10012     |Windows LAPS Active Directory         |
-|10013     |Windows LAPS Active Directory and Azure AD         |
+|10013     |Windows LAPS Active Directory and Microsoft Entra ID         |
 |10017     |Windows LAPS Active Directory         |
-|10019     |Windows LAPS Active Directory and Azure AD         |
-|10025     |Windows LAPS Azure AD         |
-|10026     |Windows LAPS Azure AD         |
-|10027     |Windows LAPS Active Directory and Azure AD         |
-|10028     |Windows LAPS Azure AD         |
-|10032     |Windows LAPS Azure AD         |
+|10019     |Windows LAPS Active Directory and Microsoft Entra ID         |
+|10025     |Windows LAPS Microsoft Entra ID         |
+|10026     |Windows LAPS Microsoft Entra ID         |
+|10027     |Windows LAPS Active Directory and Microsoft Entra ID         |
+|10028     |Windows LAPS Microsoft Entra ID         |
+|10032     |Windows LAPS Microsoft Entra ID         |
 |10034     |Windows LAPS Active Directory        |
 |10035     |Windows LAPS Active Directory         |
-|10048     |Windows LAPS Active Directory and Azure AD         |
-|10049     |Windows LAPS Active Directory and Azure AD         |
+|10048     |Windows LAPS Active Directory and Microsoft Entra ID         |
+|10049     |Windows LAPS Active Directory and Microsoft Entra ID         |
 |10056     |Windows LAPS Active Directory         |
 |10057     |Windows LAPS Active Directory         |
-|10059     |Windows LAPS Azure AD         |
+|10059     |Windows LAPS Microsoft Entra ID         |
 |10065     |Windows LAPS Active Directory         |
 
 ## Event ID 10006
@@ -192,7 +190,7 @@ Windows LAPS can't update the password of the locally managed user account on th
 Azure discovery failed
 ```
 
-The device (Azure AD joined or hybrid joined) that's configured with Windows LAPS to store passwords in Azure AD should discover the Enterprise Registration Endpoint.
+The device (Microsoft Entra joined or hybrid joined) that's configured with Windows LAPS to store passwords in Microsoft Entra ID should discover the Enterprise Registration Endpoint.
 
 ### Resolution
 
@@ -216,9 +214,9 @@ This issue occurs if there's an issue with the device's Primary Refresh Token (P
     - `SSO data`
     - `Diagnostic data`
 4. Verify the error message by using [the dsregcmd command](/azure/active-directory/devices/troubleshoot-device-dsregcmd) and troubleshoot the issue.
-5. Troubleshoot hybrid Azure AD-joined devices by using [Troubleshoot hybrid Azure AD-joined devices](/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current).
+5. Troubleshoot Microsoft Entra hybrid joined devices by using [Troubleshoot Microsoft Entra hybrid joined devices](/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current).
 6. Use the [Device Registration Troubleshooter Tool](/samples/azure-samples/dsregtool/dsregtool/) to identify and fix any device registration issues.
-7. If you receive an error message, see [Azure AD Authentication and authorization error codes](/azure/active-directory/develop/reference-aadsts-error-codes) for the description of the error and further troubleshooting.  
+7. If you receive an error message, see [Microsoft Entra authentication and authorization error codes](/azure/active-directory/develop/reference-aadsts-error-codes) for the description of the error and further troubleshooting.  
 
 ## Event ID 10027
 
@@ -249,9 +247,11 @@ Windows LAPS can't update the password of the locally managed user account on th
 
     Review the DLL list to identify if the name of the third-party DLL (module) has some keywords like "security," "password," or "policies." Uninstall or stop the application or service that might be using this DLL.
 
-### Machine joined to Azure AD
+<a name='machine-joined-to-azure-ad'></a>
 
-Azure AD or hybrid joined devices can be managed by using mobile device management (MDM) (Intune), local GPOs, or any similar third-party software.
+### Machine joined to Microsoft Entra ID
+
+Microsoft Entra ID or hybrid joined devices can be managed by using mobile device management (MDM) (Intune), local GPOs, or any similar third-party software.
 
 1. Check the password policy on the machine by running the `net accounts` command in a command prompt. Validate any of the password policies if they don't meet the criteria of Windows LAPS configured password policy, like the password complexity, password length, or password age.
 2. Identify if the conflicting policy is applied via Intune, local GPO, or a similar third-party software like Intune to manage the password policies on the machine.
@@ -262,7 +262,7 @@ Azure AD or hybrid joined devices can be managed by using mobile device manageme
 LAPS failed to update Azure Active Directory with the new password
 ```
 
-The Windows LAPS client machine periodically updates passwords. This event appears if the client machine configured with Windows LAPS can't update the password to Azure AD.
+The Windows LAPS client machine periodically updates passwords. This event appears if the client machine configured with Windows LAPS can't update the password to Microsoft Entra ID.
 
 ### Resolution
 
@@ -273,9 +273,9 @@ The Windows LAPS client machine periodically updates passwords. This event appea
     - `SSO data`
     - `Diagnostic data`
 4. Verify the error message by using [the dsregcmd command](/azure/active-directory/devices/troubleshoot-device-dsregcmd) and troubleshoot the issue.
-5. Use [Troubleshoot hybrid Azure AD-joined devices](/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current) to troubleshoot hybrid Azure AD-joined devices.
+5. Use [Troubleshoot Microsoft Entra hybrid joined devices](/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current) to troubleshoot Microsoft Entra hybrid joined devices.
 6. Use the [Device Registration Troubleshooter Tool](/samples/azure-samples/dsregtool/dsregtool/) to identify and fix any device registration issues.
-7. If you receive an error message, see [Azure AD Authentication and authorization error codes](/azure/active-directory/develop/reference-aadsts-error-codes) for the description of the error and further troubleshooting.
+7. If you receive an error message, see [Microsoft Entra authentication and authorization error codes](/azure/active-directory/develop/reference-aadsts-error-codes) for the description of the error and further troubleshooting.
 
 ## Event ID 10032
 
@@ -283,7 +283,7 @@ The Windows LAPS client machine periodically updates passwords. This event appea
 LAPS was unable to authenticate to Azure using the device identity
 ```
 
-There might be issues related to Azure AD authentication when using device PRT.
+There might be issues related to Microsoft Entra authentication when using device PRT.
 
 ### Resolution
 
@@ -294,9 +294,9 @@ There might be issues related to Azure AD authentication when using device PRT.
     - `SSO data`
     - `Diagnostic data`
 4. Verify the error message by using [the dsregcmd command](/azure/active-directory/devices/troubleshoot-device-dsregcmd) and troubleshoot the issue.
-5. Use [Troubleshoot hybrid Azure AD-joined devices](/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current ) to troubleshoot hybrid Azure AD-joined devices.
+5. Use [Troubleshoot Microsoft Entra hybrid joined devices](/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current ) to troubleshoot Microsoft Entra hybrid joined devices.
 6. Use the [Device Registration Troubleshooter Tool](/samples/azure-samples/dsregtool/dsregtool/) to identify and fix any device registration issues.
-7. If you receive an error message, see [Azure AD Authentication and authorization error codes](/azure/active-directory/develop/reference-aadsts-error-codes) for the description of the error and further troubleshooting.
+7. If you receive an error message, see [Microsoft Entra authentication and authorization error codes](/azure/active-directory/develop/reference-aadsts-error-codes) for the description of the error and further troubleshooting.
 
 ## Event ID 10034
 
@@ -340,11 +340,11 @@ The encryption principal is configured via the **Configure authorized password d
 The currently pending post-authentication reset timer has been retried the maximum allowed number attempts and will no longer be scheduled
 ```
 
-The post-authentication retry is the number of retry operations tried reset the password with the appropriate directory (Azure AD or Active Directory). If this number exceeds the maximum of 100 on a boot, this event is triggered.
+The post-authentication retry is the number of retry operations tried reset the password with the appropriate directory (Microsoft Entra ID or Active Directory). If this number exceeds the maximum of 100 on a boot, this event is triggered.
 
 ### Resolution
 
-1. Identity if there's a problem connecting to the appropriate directory, such as Active Directory or Azure AD.
+1. Identity if there's a problem connecting to the appropriate directory, such as Active Directory or Microsoft Entra ID.
 2. Troubleshoot any other errors during the processing of Windows LAPS events.
 
 ## Event ID 10049
@@ -407,11 +407,11 @@ During a scheduled background processing, Windows LAPS needs to connect to a dom
 Azure returned a failure code
 ```
 
-The event also contains an HTTP error. The error occurs when connecting, authenticating, or updating the password to Azure AD.
+The event also contains an HTTP error. The error occurs when connecting, authenticating, or updating the password to Microsoft Entra ID.
 
 ### Resolution
 
-1. Verify that you can successfully connect to the Azure AD registration endpoint (`https://enterpriseregistration.windows.net`).
+1. Verify that you can successfully connect to the Microsoft Entra registration endpoint (`https://enterpriseregistration.windows.net`).
 2. Verify that you have enabled the Windows LAPS feature in your Azure tenant.
 3. Verify that the machine isn't deleted or disabled in your Azure tenant.
 4. Open a command prompt and run the `dsregcmd /status` command to check the following sections for any errors:
@@ -419,9 +419,9 @@ The event also contains an HTTP error. The error occurs when connecting, authent
     - `SSO data`
     - `Diagnostic data`
 5. Verify the error message by using [the dsregcmd command](/azure/active-directory/devices/troubleshoot-device-dsregcmd) and troubleshoot the issue.
-6. Use [Troubleshoot hybrid Azure AD-joined devices](/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current) to troubleshoot hybrid Azure AD-joined devices.
+6. Use [Troubleshoot Microsoft Entra hybrid joined devices](/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current) to troubleshoot Microsoft Entra hybrid joined devices.
 7. Use the [Device Registration Troubleshooter Tool](/samples/azure-samples/dsregtool/dsregtool/) to identify and fix any device registration issues.
-8. If you receive an error message, see [Azure AD Authentication and authorization error codes](/azure/active-directory/develop/reference-aadsts-error-codes) for the description of the error and further troubleshooting.  
+8. If you receive an error message, see [Microsoft Entra authentication and authorization error codes](/azure/active-directory/develop/reference-aadsts-error-codes) for the description of the error and further troubleshooting.  
 
 ## Event ID 10065
 
@@ -438,7 +438,7 @@ This issue can also occur if you move the machine to a different organizational 
 1. If you haven't run the Windows LAPS PowerShell cmdlet to assign the Self Permission to the computer account, run the following cmdlet:
 
     ```PowerShell
-    Set-LapsADComputerSelfPermissions -identity <OU Name>
+    Set-LapsADComputerSelfPermission -identity <OU Name>
     ```
 
     For example:

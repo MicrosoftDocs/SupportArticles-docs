@@ -4,8 +4,6 @@ description: This article provides instruction on first understanding what block
 ms.date: 04/14/2021
 ms.custom: sap:Performance
 ms.reviewer: ramakoni
-ms.prod: sql
-ms.technology: performance 
 ---
 # Understand and resolve SQL Server blocking problems
 
@@ -339,7 +337,7 @@ In this scenario, an actively running query has acquired locks, and the locks ar
 
 **Resolution**:
 
-The solution to this blocking problem is to look for ways to optimize the query. This class of blocking problem may be a performance problem and requires you to treat it as such. For information on troubleshooting a specific slow-running query, see [How to troubleshoot slow-running queries on SQL Server](/troubleshoot/sql/database-engine/performance/troubleshoot-slow-running-queries). For more information, see [Monitor and Tune for Performance](/sql/relational-databases/performance/monitor-and-tune-for-performance).
+The solution to this blocking problem is to look for ways to optimize the query. This class of blocking problem may be a performance problem and requires you to treat it as such. For information on troubleshooting a specific slow-running query, see [How to troubleshoot slow-running queries on SQL Server](troubleshoot-slow-running-queries.md). For more information, see [Monitor and Tune for Performance](/sql/relational-databases/performance/monitor-and-tune-for-performance).
 
 Reports built-in to SSMS from the [Query Store](/sql/relational-databases/performance/best-practice-with-the-query-store) (introduced in SQL Server 2016) are also a highly recommended and valuable tool for identifying the most costly queries and suboptimal execution plans.
 

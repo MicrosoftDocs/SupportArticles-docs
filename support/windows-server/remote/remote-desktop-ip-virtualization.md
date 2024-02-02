@@ -1,42 +1,42 @@
 ---
-title: Remote Desktop IP Virtualization in Windows Server 2019
-description: Remote Desktop IP Virtualization in Windows Server 2019.
-ms.date: 11/17/2021
+title: Remote Desktop IP Virtualization in Windows Server
+description: Introduce the Remote Desktop IP Virtualization feature in Windows Server.
+ms.date: 09/21/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-jesits
 ms.custom: sap:remote-desktop-sessions, csstroubleshoot
-ms.technology: windows-server-rds
+ms.subservice: rds
 ---
-# Remote Desktop IP Virtualization in Windows Server 2019
+# Remote Desktop IP Virtualization in Windows Server 2019 and Windows Server 2022
 
-This article discusses about Remote Desktop IP Virtualization in Windows Server 2019.
+This article discusses about Remote Desktop IP Virtualization in Windows Server.
 
 > [!NOTE]
-> Remote Desktop IP Virtualization on Windows Server 2019 is only supported on-premise.
+> Remote Desktop IP Virtualization on Windows Server is only supported in on-premises environments.
 
-_Applies to:_ &nbsp; Windows Server 2019  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2022  
 _Original KB number:_ &nbsp; 4501072
 
-## How to use IP virtualization on Windows Server 2019
+## How to use IP virtualization
 
-If you want to use IP virtualization on Windows Server 2019, please follow these steps:
+To use IP virtualization, follow these steps:
 
-1. Start an elevated PowerShell window, and run the following command to rename the registry key:
+1. Start an elevated PowerShell window, and run the following cmdlet to rename the registry key:
 
    ```powershell
-   Rename-Item HKLM:\SYSTEM\ControlSet001\Services\WinSock2\Parameters\AppId_Catalog\2C69D9F1 Backup_2C69D9F1
+   Rename-Item HKLM:\SYSTEM\CurrentControlSet\Services\WinSock2\Parameters\AppId_Catalog\2C69D9F1 Backup_2C69D9F1
    ```
 
    > [!NOTE]
    > Deleting the key has the same effects, but the rename provides a way to revert back more easily if desired. The following is the default values:
    >
-   > `HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\WinSock2\Parameters\AppId_Catalog\2C69D9F1\`
+   > `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WinSock2\Parameters\AppId_Catalog\2C69D9F1\`
    > **AppFullPath**: C:\Windows\System32\svchost.exe\
    > **PermittedLspCategories**: 0x40000000
 
@@ -50,6 +50,3 @@ If you want to use IP virtualization on Windows Server 2019, please follow these
 Remote Desktop IP Virtualization was introduced in Windows Server 2008 R2. In Windows Server 2008, Terminal Server had a single IP address that was shared among all remote desktop users. This made the remote desktop experience different from that of regular desktops, and it introduced some application compatibility problems.
 
 In Windows Server 2008 R2, Remote Desktop Session Host server, formerly known as Terminal Server, supported per-session and per-program Remote Desktop IP Virtualization for Winsock applications. This support was provided by assigning individual IP addresses to user sessions to avoid application incompatibility issues by simulating a single user desktop. This method continues to be used in the current version of Windows Server.
-
-> [!NOTE]
-> Currently Remote Desktop IP Virtualization is not supported on Windows Server 2022. We recommend continuing to use IP Virtualization on Windows Server 2019 until support for Windows Server 2022 is released.

@@ -1,17 +1,17 @@
 ---
 title: ADFS SSO troubleshooting
 description: Introduce how to troubleshoot ADFS SSO issues.
-ms.date: 7/22/2022
+ms.date: 07/22/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:active-directory-federation-services-ad-fs, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.custom: sap:active-directory-federation-services-ad-fs, csstroubleshoot, has-azure-ad-ps-ref
+ms.subservice: active-directory
 ---
 # Troubleshoot SSO issues with Active Directory Federation Services (AD FS)
 
@@ -53,7 +53,7 @@ If you use Firefox, Chrome or Safari, make sure the equivalent settings in these
 
 3. Examine the value of the **WindowsIntegratedFallbackEnabled** attribute.
 
-If the value is **True**, forms-based authentication is expected. This means that the authentication request comes from a browser that doesn’t support Windows Integrated Authentication. See the next section about how to get your browser supported.
+If the value is **True**, forms-based authentication is expected. This means that the authentication request comes from a browser that doesn't support Windows Integrated Authentication. See the next section about how to get your browser supported.
 
 If the value is **False**, Windows Integrated Authentication should be expected.
 
@@ -107,7 +107,7 @@ For more information, see [Overview of authentication handlers of AD FS sign-in 
 
 If the application that you want to access is not Microsoft Online Services, what you experience is expected and controlled by the incoming authentication request. Work with the application owner to change the behavior.
 
-If the application is Microsoft Online Services, what you experience may be controlled by the **PromptLoginBehavior** setting from the trusted realm object. This setting controls whether Azure AD tenants send prompt=login to AD FS. To set the **PromptLoginBehavior** setting, follow these steps:
+If the application is Microsoft Online Services, what you experience may be controlled by the **PromptLoginBehavior** setting from the trusted realm object. This setting controls whether Microsoft Entra tenants send prompt=login to AD FS. To set the **PromptLoginBehavior** setting, follow these steps:
 
 1. Open Windows PowerShell with the "Run as administrator" option.
 2. Get the existing domain federation setting by running the following command:
@@ -124,23 +124,27 @@ If the application is Microsoft Online Services, what you experience may be cont
 
    The values for the PromptLoginBehavior parameter are:
 
-   1. **TranslateToFreshPasswordAuth**: Azure AD sends wauth and wfresh to AD FS instead of prompt=login. This leads to an authentication request to use forms-based authentication.
+   1. **TranslateToFreshPasswordAuth**: Microsoft Entra ID sends wauth and wfresh to AD FS instead of prompt=login. This leads to an authentication request to use forms-based authentication.
    2. **NativeSupport**: The prompt=login parameter is sent as is to AD FS.
    3. **Disabled**: Nothing is sent to AD FS.
 
 To learn more about the Set-MSOLDomainFederationSettings command, see [Active Directory Federation Services prompt=login parameter support](/windows-server/identity/ad-fs/operations/ad-fs-prompt-login).
 
-### Azure Active Directory (Azure AD) scenario
+<a name='azure-active-directory-azure-ad-scenario'></a>
 
-If the authentication request sent to Azure AD include [the prompt=login parameter](/windows-server/identity/ad-fs/operations/ad-fs-prompt-login), disable the prompt=login capability by running the following command:
+### Microsoft Entra scenario
+
+If the authentication request sent to Microsoft Entra ID include [the prompt=login parameter](/windows-server/identity/ad-fs/operations/ad-fs-prompt-login), disable the prompt=login capability by running the following command:
 
 ```powershell
 Set-MsolDomainFederationSettings –DomainName DomainName -PromptLoginBehavior Disabled
 ```
 
-After you run this command, Office 365 applications won’t include the prompt=login parameter in each authentication request.
+After you run this command, Office 365 applications won't include the prompt=login parameter in each authentication request.
 
-### Non Azure AD scenario
+<a name='non-azure-ad-scenario'></a>
+
+### Non Microsoft Entra scenario
 
 Request parameters like **WAUTH** and **RequestedAuthNContext** in authentication requests can have authentication methods specified. Check if other request parameters enforcing the unexpected authentication prompt. If so, modify the request parameter to use the expected authentication method.
 
@@ -152,7 +156,7 @@ If SSO is disabled, enable it and test if the issue is resolved.
 
 To troubleshoot this issue, check if the claim rules in the relying party are correctly set for multi-factor authentication.
 
-Multi-factor authentication can be enabled at an AD FS server, at a relying party, or specified in an authentication request parameter. Check the configurations to see if they are correctly set. If multi-factor authentication is expected but you’re repeatedly prompted for it, check the relying party issuance rules to see if multi-factor authentication claims are passed through to the application.
+Multi-factor authentication can be enabled at an AD FS server, at a relying party, or specified in an authentication request parameter. Check the configurations to see if they are correctly set. If multi-factor authentication is expected but you're repeatedly prompted for it, check the relying party issuance rules to see if multi-factor authentication claims are passed through to the application.
 
 For more information about multi-factor authentication in AD FS, see the following articles:
 
@@ -208,7 +212,7 @@ If the user repeatedly receives multi-factor authentication prompts after they p
 2. Observe the rule set defined in the IssuanceAuthorizationRules or IssuanceAuthorizationRulesFile attributes.
 
 The rule set should include the following issuance rule to pass through the multi-factor authentication claims:  
-`C:[Type==http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod, Value==” http://schemas.microsoft.com/claims/multipleauthn”]=>issue(claim = c)`
+`C:[Type==http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod, Value==" http://schemas.microsoft.com/claims/multipleauthn"]=>issue(claim = c)`
 
 ### Check the authentication request parameter
 
@@ -311,11 +315,11 @@ Check if the endpoints are enabled. AD FS provides various endpoints for differe
 
    :::image type="content" source="media/troubleshoot-adfs-sso-issue/adfs-endpoints-enabled.png" alt-text="Double check the status of all the A D F S endpoints are enabled.":::
 
-Then, check if Azure AD Connect is installed. We recommend that you use Azure AD Connect which makes SSL certificate management easier.
+Then, check if Microsoft Entra Connect is installed. We recommend that you use Microsoft Entra Connect which makes SSL certificate management easier.
 
-If Azure AD Connect is installed, ensure that you [use it to manage and update SSL certificates](/azure/active-directory/connect/active-directory-aadconnectfed-ssl-update).
+If Microsoft Entra Connect is installed, ensure that you [use it to manage and update SSL certificates](/azure/active-directory/connect/active-directory-aadconnectfed-ssl-update).
 
-If Azure AD Connect is not installed, check if the SSL certificate meets the following AD FS requirements:
+If Microsoft Entra Connect is not installed, check if the SSL certificate meets the following AD FS requirements:
 
 - The certificate is from a trusted root certification authority.
 
@@ -326,9 +330,9 @@ If Azure AD Connect is not installed, check if the SSL certificate meets the fol
   `Get-AdfsProperties | select hostname`
 - The certificate is not revoked.
 
-  Check for certificate revocation. If the certificate is revoked, SSL connection can’t be trusted and will be blocked by clients.
+  Check for certificate revocation. If the certificate is revoked, SSL connection can't be trusted and will be blocked by clients.
 
-If the SSL certificate does not meet these requirements, try to get a qualified certificate for SSL communication. We recommend that you use Azure AD Connect which makes SSL certificate management easier. See [Update the TLS/SSL certificate for an Active Directory Federation Services (AD FS) farm](/azure/active-directory/connect/active-directory-aadconnectfed-ssl-update).
+If the SSL certificate does not meet these requirements, try to get a qualified certificate for SSL communication. We recommend that you use Microsoft Entra Connect which makes SSL certificate management easier. See [Update the TLS/SSL certificate for an Active Directory Federation Services (AD FS) farm](/azure/active-directory/connect/active-directory-aadconnectfed-ssl-update).
 
 If the SSL certificate meets these requirements, check the following configurations of the SSL certificate.
 
@@ -385,7 +389,7 @@ If the wrong certificate is listed, set the correct certificate, and then grant 
 
 ###### Check if Device Registration Service (DRS) is configured in AD FS
 
-If you’ve configured AD FS with DRS, make sure that the SSL certificate is also properly configured for RDS. For example, if there are two UPN suffixes `contoso.com` and `fabrikam.com`, the certificate must have `enterpriseregistration.contoso.com` and `enterpriseregistration.fabrikma.com` as the Subject Alternative Names (SANs).
+If you've configured AD FS with DRS, make sure that the SSL certificate is also properly configured for RDS. For example, if there are two UPN suffixes `contoso.com` and `fabrikam.com`, the certificate must have `enterpriseregistration.contoso.com` and `enterpriseregistration.fabrikma.com` as the Subject Alternative Names (SANs).
 
 To check if the SSL certificate has the correct SANs, follow these steps:
 
@@ -613,26 +617,28 @@ If these steps did not help you solve the issue, continue the troubleshooting wi
 
 #### Not all users are impacted by the issue, and the user can access some of the relying parties
 
-In this scenario, check if this issue occurs in an Azure AD scenario. If so, do these checks to troubleshoot this issue. If not, see [Use the Dump Token app](#use-the-dump-token-app) to troubleshoot this issue.
+In this scenario, check if this issue occurs in a Microsoft Entra scenario. If so, do these checks to troubleshoot this issue. If not, see [Use the Dump Token app](#use-the-dump-token-app) to troubleshoot this issue.
 
-##### Check if the user is synced to Azure AD
+<a name='check-if-the-user-is-synced-to-azure-ad'></a>
 
-If a user is trying to log in to Azure AD, they will be redirected to AD FS for authentication for a federated domain. One of the possible reasons for a failed login is that the user is not yet synced to Azure AD. You might see a loop from Azure AD to AD FS after the first authentication attempt at AD FS. To determine whether the user is synced to Azure AD, follow these steps:
+##### Check if the user is synced to Microsoft Entra ID
+
+If a user is trying to log in to Microsoft Entra ID, they will be redirected to AD FS for authentication for a federated domain. One of the possible reasons for a failed login is that the user is not yet synced to Microsoft Entra ID. You might see a loop from Microsoft Entra ID to Active Directory FS after the first authentication attempt at AD FS. To determine whether the user is synced to Microsoft Entra ID, follow these steps:
 
 1. [Download](https://connect.microsoft.com/site1164/Downloads/DownloadDetails.aspx?DownloadID=59185) and install the Azure AD PowerShell module for Windows PowerShell.
 1. Open Windows PowerShell with the "Run as administrator" option.
-1. Initiate a connection to Azure AD by running the following command:  
+1. Initiate a connection to Microsoft Entra ID by running the following command:  
 `Connect-MsolService`
 1. Provide the global administrator credential for the connection.
-1. Get the list of users in the Azure AD by running the following command:  
+1. Get the list of users in the Microsoft Entra ID by running the following command:  
 `Get-MsolUser`
 1. Verify if the user is in the list.
 
-If the user is not in the list, sync the user to Azure AD.
+If the user is not in the list, sync the user to Microsoft Entra ID.
 
 ##### Check immutableID and UPN in issuance claim rule
 
-Azure AD requires immutableID and the user’s UPN to authenticate the user.
+Microsoft Entra ID requires immutableID and the user's UPN to authenticate the user.
 
 > [!NOTE]
 > immutableID is also called sourceAnchor in the following tools:
@@ -640,35 +646,35 @@ Azure AD requires immutableID and the user’s UPN to authenticate the user.
 > - Azure AD Sync
 > - Azure Active Directory Sync (DirSync)
 
-Administrators can use Azure AD Connect for automatic management of AD FS trust with Azure AD. If you are not managing the trust via Azure AD Connect, we recommend that you do so by [downloading Azure AD Connect](https://go.microsoft.com/fwlink/?LinkId=615771) Azure AD Connect enables automatic claim rules management based on sync settings.
+Administrators can use Microsoft Entra Connect for automatic management of AD FS trust with Microsoft Entra ID. If you are not managing the trust via Microsoft Entra Connect, we recommend that you do so by [downloading Microsoft Entra Connect](https://go.microsoft.com/fwlink/?LinkId=615771) Microsoft Entra Connect enables automatic claim rules management based on sync settings.
 
-To check if the claim rules for immutableID and UPN in AD FS matches what Azure AD uses, follow these steps:
+To check if the claim rules for immutableID and UPN in AD FS matches what Microsoft Entra ID uses, follow these steps:
 
-1. Get sourceAnchor and UPN in Azure AD Connect.
+1. Get sourceAnchor and UPN in Microsoft Entra Connect.
 
-   1. Open Azure AD Connect.
+   1. Open Microsoft Entra Connect.
    2. Click **View current configuration**.
 
-      :::image type="content" source="media/troubleshoot-adfs-sso-issue/microsoft-azure-active-directory-connect.png"  alt-text="Select the View current configuration in the Azure A D Connect additional tasks page." border="false":::
+      :::image type="content" source="media/troubleshoot-adfs-sso-issue/microsoft-azure-active-directory-connect.png"  alt-text="Select the View current configuration in the Microsoft Entra Connect additional tasks page." border="false":::
 
    3. On the **Review Your Solution** page, make a note of the values of **SOURCE ANCHOR** and **USER PRINCIPAL NAME**.
 
-      :::image type="content" source="media/troubleshoot-adfs-sso-issue/azure-active-directory-connect.png"  alt-text="Get the values of SOURCE ANCHOR and USER PRINCIPAL NAME in the Azure A D Connect page.":::
+      :::image type="content" source="media/troubleshoot-adfs-sso-issue/azure-active-directory-connect.png"  alt-text="Get the values of SOURCE ANCHOR and USER PRINCIPAL NAME in the Microsoft Entra Connect page.":::
 
 2. Verify the values of immutableID (sourceAnchor) and UPN in the corresponding claim rule configured in the AD FS server.
 
    1. On the AD FS server, open the AD FS management console.
    2. Click **Relying Party Trusts**.
-   3. Right-click the relying party trust with Azure AD, and then click **Edit Claim Issuance Policy**.
+   3. Right-click the relying party trust with Microsoft Entra ID, and then click **Edit Claim Issuance Policy**.
    4. Open the claim rule for immutable ID and UPN.
-   5. Verify if the variables queried for values of immutableID and UPN are the same as those appear in Azure AD Connect.
+   5. Verify if the variables queried for values of immutableID and UPN are the same as those appear in Microsoft Entra Connect.
 
       :::image type="content" source="media/troubleshoot-adfs-sso-issue/edit-rule-issue-upn-and-immutableid.png" alt-text="Verify the values of immutableID and UPN in the corresponding claim rule configured in the A D F S server.":::
 
 3. If there is a difference, use one of the methods below:
 
-   - If AD FS is managed by Azure AD Connect, reset the relying party trust by using Azure AD Connect.
-   - If AD FS is not managed by Azure AD Connect, correct the claims with the right attributes.
+   - If AD FS is managed by Microsoft Entra Connect, reset the relying party trust by using Microsoft Entra Connect.
+   - If AD FS is not managed by Microsoft Entra Connect, correct the claims with the right attributes.
 
 If these checks did not help you solve the issue, see [Use the Dump Token app](#use-the-dump-token-app) to troubleshoot this issue.
 
@@ -705,7 +711,7 @@ If there are certificate mismatches, ensure that the partners are using the new 
 
   If the partners can access the federation metadata, ask the partners to use the new certificates.
 
-- The partners can’t access the federation metadata
+- The partners can't access the federation metadata
 
   In this case, you must manually send the partners the public keys of the new certificates. To do this, follow these steps:
   1. Export the public keys as .cert files, or as .p7b files to include the entire certificate chains.
@@ -735,7 +741,7 @@ If the two algorithms match, check if the Name ID format matches what the applic
    (Get-AdfsRelyingPartyTrust -Name RPName).IssuanceTransformRules
    ```
 
-2. Locate the rule that issues the NameIdentifier claim. If such a rule doesn’t exist, skip this step.  
+2. Locate the rule that issues the NameIdentifier claim. If such a rule doesn't exist, skip this step.  
 
    Here is an example of the rule:
 
@@ -754,7 +760,7 @@ If the two algorithms match, check if the Name ID format matches what the applic
 
 3. Ask the application owner for the NameIdentifier format required by the application.
 4. Verify if the two NameIdentifier formats match.
-5. If the formats don’t match, configure the NameIdentifier claim to use the format that the application requires. To do this, follow these steps:
+5. If the formats don't match, configure the NameIdentifier claim to use the format that the application requires. To do this, follow these steps:
 
    1. Open the AD FS management console.
    2. Click **Relying Party Trusts**, select the appropriate federation partner, and then click **Edit Claims Issuance Policy** in the **Actions** pane.
@@ -774,7 +780,7 @@ If the two algorithms mismatch, update the signing algorithm used by the relying
 
 If the token signing certificate or token decrypting certificate are self-signed, AutoCertificateRollover is enabled by default on these certificates and AD FS manages the auto renewal of the certificates when they are close to expiration.
 
-To determine if you’re using self-signed certificates, follow these steps:
+To determine if you're using self-signed certificates, follow these steps:
 
 1. Run the following command:
 
@@ -1045,14 +1051,14 @@ The IP:port binding takes the highest precedence. If an IP:port binding is in th
 
 3. Set AdfsTrustedDevices as the CTL Store for the IP:port binding
 
-   This is the last resort if you can’t use the methods above. But it is better to understand the following conditions before you change the default CTL store to AdfsTrustedDevices:
+   This is the last resort if you can't use the methods above. But it is better to understand the following conditions before you change the default CTL store to AdfsTrustedDevices:
 
    - Why the IP:port binding is there.
    - If the binding relies on the default CTL store for client certificate authentication.
 
-### Problem 2: The AD FS certificate binding doesn’t have CTL Store Name set to AdfsTrustedDevices
+### Problem 2: The AD FS certificate binding doesn't have CTL Store Name set to AdfsTrustedDevices
 
-If Azure AD Connect is installed, use AAD Connect to set CTL Store Name to AdfsTrustedDevices for the SSL certificate bindings on all AD FS servers. If Azure AD Connect is not installed, regenerate the AD FS certificate bindings by running the following command on all AD FS servers.
+If Microsoft Entra Connect is installed, use Microsoft Entra Connect to set CTL Store Name to AdfsTrustedDevices for the SSL certificate bindings on all AD FS servers. If Microsoft Entra Connect is not installed, regenerate the AD FS certificate bindings by running the following command on all AD FS servers.
 
 ```powershell
 Set-AdfsSslCertificate -Thumbprint Thumbprint
@@ -1071,7 +1077,7 @@ Therefore, delete any CA issued certificate from the AdfsTrustedDevices certific
 
 ### Problem 4: Install KB2964735 or re-run the script with -syncproxytrustcerts
 
-When a proxy trust relationship is established with an AD FS server, the client certificate is written to the AD FS configuration database and added to the AdfsTrustedDevices certificate store on the AD FS server. For an AD FS farm deployment, the client certificate is expected to be synced to the other AD FS servers. If the sync doesn’t happen for some reason, a proxy trust relationship will only work against the AD FS server the trust was established with, but not against the other AD FS servers.
+When a proxy trust relationship is established with an AD FS server, the client certificate is written to the AD FS configuration database and added to the AdfsTrustedDevices certificate store on the AD FS server. For an AD FS farm deployment, the client certificate is expected to be synced to the other AD FS servers. If the sync doesn't happen for some reason, a proxy trust relationship will only work against the AD FS server the trust was established with, but not against the other AD FS servers.
 
 To solve this problem, use one of the following methods.
 
@@ -1088,7 +1094,7 @@ Run the script with the – syncproxytrustcerts switch to manually sync the clie
 
 ### Problem 5: All checks are passed. But the problem persists
 
-Check if there is a time or time zone mismatch. If time matches but the time zone doesn’t, proxy trust relationship will also fail to be established.
+Check if there is a time or time zone mismatch. If time matches but the time zone doesn't, proxy trust relationship will also fail to be established.
 
 Check if there is SSL termination between the AD FS server and the WAP server
 
@@ -1177,7 +1183,7 @@ $rp.IssuanceAuthorizationRules shows the authorization rules of the relying part
 
 In Windows Server 2016 and later versions, you can use $rp. AccessControlPolicyName to configure authentication and authorization policy. If $rp. AccessControlPolicyName has value, an access control policy is in place which governs the authorization policy. In that case, $rp.IssuanceAuthorizationRules is empty. Use $rp.ResultantPolicy to find out details about the access control policy.
 
-If $rp.ResultantPolicy doesn’t have the details about the policy, look into the actual claim rules. To get the claim rules, follow these steps:
+If $rp.ResultantPolicy doesn't have the details about the policy, look into the actual claim rules. To get the claim rules, follow these steps:
 
 1. Set the access control policy to $null by running the following command:  
    `Set-AdfsRelyingPartyTrust -TargetRelyingParty $rp -AccessControlPolicyName $null`
@@ -1190,9 +1196,9 @@ If $rp.ResultantPolicy doesn’t have the details about the policy, look into th
 1. Set the Dump Token authentication policy to be the same as the failing relying party.
 2. Have the user open one of the following links depending on the authentication policy you set.
 
-   - WS-Fed: `https://FerderationInstance/adfs/ls?wa=wsignin1.0&wtrealm=urn:dumptoken`
-   - SAML-P: `https://FerderationInstance/adfs/ls/IdpInitiatedSignOn?LoginToRP=urn:dumptoken`
-   - Force multi-factor authentication: `https://FerderationInstance/adfs/ls?wa=wsignin1.0&wtrealm=urn:dumptoken&wauth=http://schemas.microsoft.com/claims/multipleauthn`
+   - WS-Fed: `https://FederationInstance/adfs/ls?wa=wsignin1.0&wtrealm=urn:dumptoken`
+   - SAML-P: `https://FederationInstance/adfs/ls/IdpInitiatedSignOn?LoginToRP=urn:dumptoken`
+   - Force multi-factor authentication: `https://FederationInstance/adfs/ls?wa=wsignin1.0&wtrealm=urn:dumptoken&wauth=http://schemas.microsoft.com/claims/multipleauthn`
 
 3. Log in on the Sign-In page.
 
@@ -1204,9 +1210,9 @@ What you get is the set of claims of the user. See if there is anything in the a
 2. Configure the Dump Token authentication policy to be the same as the failing relying party.
 3. Have the user open one of the following links depending on the authentication policy you set.
 
-   - WS-Fed: `https://FerderationInstance/adfs/ls?wa=wsignin1.0&wtrealm=urn:dumptoken`
-   - SAML-P: `https://FerderationInstance/adfs/ls/IdpInitiatedSignOn?LoginToRP=urn:dumptoken`
-   - Force multi-factor authentication: `https://FerderationInstance/adfs/ls?wa=wsignin1.0&wtrealm=urn:dumptoken&wauth=http://schemas.microsoft.com/claims/multipleauthn`
+   - WS-Fed: `https://FederationInstance/adfs/ls?wa=wsignin1.0&wtrealm=urn:dumptoken`
+   - SAML-P: `https://FederationInstance/adfs/ls/IdpInitiatedSignOn?LoginToRP=urn:dumptoken`
+   - Force multi-factor authentication: `https://FederationInstance/adfs/ls?wa=wsignin1.0&wtrealm=urn:dumptoken&wauth=http://schemas.microsoft.com/claims/multipleauthn`
 
 4. Log in on the Sign-In page.
 

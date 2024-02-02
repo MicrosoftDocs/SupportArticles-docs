@@ -72,6 +72,6 @@ We have ways to help test a network disconnect, but it would be up to you to res
 
 9. Disable TCP Chimney on server and workstations. Refer to these articles for more information:
 
-    - [Information about the TCP Chimney Offload, Receive Side Scaling, and Network Direct Memory Access features in Windows Server 2008](/troubleshoot/windows-server/networking/information-about-tcp-chimney-offload-rss-netdma-feature)
+    - [Information about the TCP Chimney Offload, Receive Side Scaling, and Network Direct Memory Access features in Windows Server 2008](../../windows-server/networking/information-about-tcp-chimney-offload-rss-netdma-feature.md)
 
     - [Solving Connectivity errors to SQL Server](https://support.microsoft.com/sbs/topic/solving-connectivity-errors-to-sql-server-ae23c94b-b64b-5056-8b62-22e1694bb889)

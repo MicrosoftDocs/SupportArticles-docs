@@ -1,11 +1,9 @@
 ---
 title: Troubleshoot client application errors in Azure Storage accounts
 description: Identifies and troubleshoots errors with client applications that connect to Azure Storage accounts.
-author: AmandaAZ
-ms.author: v-weizhu
-ms.reviewer: normesta, azurestocic, jarrettr
+ms.reviewer: normesta, azurestocic, jarrettr, v-weizhu
 ms.date: 04/12/2023
-ms.service: storage
+ms.service: azure-storage
 ---
 
 # Troubleshoot client application errors in Azure storage accounts

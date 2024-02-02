@@ -5,7 +5,6 @@ ms.date: 10/30/2020
 ms.custom: sap:Security Issues
 ms.reviewer: chrissk, delhan
 ms.topic: how-to
-ms.prod: sql
 ---
 # Block the remote use of local accounts in Windows
 

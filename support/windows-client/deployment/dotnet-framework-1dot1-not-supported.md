@@ -1,17 +1,17 @@
 ---
 title: .NET Framework 1.1 isn't supported
 description: Microsoft .NET Framework version 1.1 is not supported on any version of Windows 7 or Windows Server 2008 R2 and higher Operating Systems.
-ms.date: 08/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:servicing, csstroubleshoot
-ms.technology: windows-client-deployment
+ms.subservice: deployment
 ---
 # .NET Framework 1.1 is not supported on Windows 7 nor Windows Server 2008 R2 and higher Operating Systems
 
@@ -31,3 +31,7 @@ The Microsoft .NET Framework 1.1 is supported on operating systems up to and inc
 More detailed information about newer .NET Framework Versions and OS Dependencies is available at the following web site:
 
 [.NET Framework versions and dependencies](/dotnet/framework/migration-guide/versions-and-dependencies)
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

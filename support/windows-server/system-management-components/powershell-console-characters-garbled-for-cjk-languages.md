@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: slee, kryalava
-ms.custom: Fix, csstroubleshoot, devx-track-azurepowershell
-ms.technology: windows-server-system-management-components
+ms.custom: Fix, csstroubleshoot
+ms.subservice: system-mgmt-components
 ---
 # PowerShell console characters are garbled for Chinese, Japanese, and Korean languages on Windows Server 2022
 

@@ -1,17 +1,17 @@
 ---
 title: The processor is not supported together with the Windows version error
 description: Discusses issues in which you receive the processor is not supported together with the Windows version that you are currently using error or the 80240037 error code when you scan or download Windows updates.
-ms.date: 12/26/2022
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, v-jesits
 ms.custom: sap:servicing, csstroubleshoot
-ms.technology: windows-client-deployment
+ms.subservice: deployment
 adobe-target: true
 ---
 
@@ -51,7 +51,11 @@ Since these errors occur when Windows detects an incompatible processor, ensure 
 ## Additional resources
 
 - [Windows Processor Requirements](/windows-hardware/design/minimum/windows-processor-requirements)
-- [Windows Server support and installation instructions for the AMD EPYC 7000 Series server processors](/troubleshoot/windows-server/deployment/windows-server-support-installation-for-amd-role-family-processor)
+- [Windows Server support and installation instructions for the AMD EPYC 7000 Series server processors](../../windows-server/deployment/windows-server-support-installation-for-amd-role-family-processor.md)
 - [Lifecycle support policy FAQ -Windows products](/lifecycle/faq/windows#%2Fhelp%2F18581%2Flifecycle-support-policy-faq-windows-products%23b4)
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]

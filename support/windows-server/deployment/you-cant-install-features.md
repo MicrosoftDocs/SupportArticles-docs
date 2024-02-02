@@ -1,17 +1,17 @@
 ---
 title: You can't install features
 description: Resolves an issue that prevents you from adding features to a Windows Server 2012 R2-based computer that's running the Server Core installation option. This problem occurs if the server doesn't have Internet access or access to Windows Update.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, wesk
 ms.custom: sap:servicing, csstroubleshoot
-ms.technology: windows-server-deployment
+ms.subservice: deployment
 ---
 # You can't install features in Windows Server 2012 R2
 
@@ -106,3 +106,7 @@ The Windows Server 2012 R2 Volume Licensing media was designed to require access
 ## Status
 
 Microsoft has confirmed it to be a problem in the packaging of volume licensed media for Windows Server 2012 R2. This behavior isn't by design and has been corrected in the Volume Licensing build that was released on December 11, 2013. Use the new media for any Windows Server 2012 R2 installations. See the [Resolution](#resolution) section to resolve this problem on servers on which you can't install features.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

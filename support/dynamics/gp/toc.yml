@@ -1001,8 +1001,6 @@
         href: management-reporter-2012-process-service-stops-and-restarts-continually.md
       - name: Management Reporter 2012 Process Service stops unexpectedly
         href: management-reporter-2012-process-service-stops-unexpectedly.md
-      - name: Management Reporter 2012 TDBX Update Diagnostic
-        href: steps-that-tdbx-update-diagnostic-perform.md
       - name: Management Reporter for Dynamics ERP Report Queue Status window stays stuck at Queued
         href: management-reporter-for-dynamics-erp-report-queue-status-stays-stuck-at-queued.md
       - name: Management Reporter Report Viewer stops working if there is an image in header
@@ -1447,8 +1445,6 @@
         href: aca-blog-links-dynamics-gp.md
       - name: Accrual Checkboxes in Accrual Period Setup not automatically checked off
         href: accrual-checkboxes-in-accrual-period-setup-not-automatically-mark-off.md
-      - name: An Equal Employment Opportunity report displays an incorrect EEO class
-        href: a-report-displays-an-incorrect-eeo-class.md
       - name: An attendance transaction doesn't exist in Human Resources warning
         href: an-attendance-transaction-does-not-exist-in-human-resources-warning.md
       - name: Benefits that are set up based on a deduction calculate incorrectly

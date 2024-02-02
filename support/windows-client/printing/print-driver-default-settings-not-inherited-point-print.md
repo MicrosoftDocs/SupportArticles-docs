@@ -1,17 +1,17 @@
 ---
 title: Print driver default settings are not inherited through
 description: Address an issue in which default settings are not inherited from a down-level print server to a Windows 10 Version 1709-based client in Point and Print.
-ms.date: 12/04/2020
+ms.date: 05/16/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, v-jesits
 ms.custom: sap:management-and-configuration-installing-print-drivers, csstroubleshoot
-ms.technology: windows-client-printing
+ms.subservice: printing
 ---
 # Print driver default settings are not inherited through "Point and Print" in Windows 10 Version 1709
 
@@ -53,3 +53,7 @@ To fix this issue, set the printer settings manually on the client following the
 Microsoft has confirmed that this is an issue in the Microsoft products that are listed in the "Applies to" section.
 
 This issue has been fixed in Windows 10, version 1803 and Windows Server, version 1803.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for User Experience issues](../windows-troubleshooters/gather-information-using-tss-user-experience.md#printing).

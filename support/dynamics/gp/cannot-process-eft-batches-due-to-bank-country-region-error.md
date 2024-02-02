@@ -26,4 +26,4 @@ Verify that the following three banking information fields match between the Che
 
 - Currency ID
 - Bank Country/Region
-- Country code
+- Country/Region code

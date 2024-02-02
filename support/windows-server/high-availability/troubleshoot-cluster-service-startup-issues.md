@@ -1,17 +1,17 @@
 ---
 title: How to troubleshoot Cluster service startup issues
 description: Describes the basic troubleshooting steps you can use to diagnose Cluster service startup issues with Windows Server 2003.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:cluster-service-fails-to-start, csstroubleshoot
-ms.technology: windows-server-high-availability
+ms.subservice: high-availability
 ---
 # How to troubleshoot Cluster service startup issues in Windows Server 2003
 

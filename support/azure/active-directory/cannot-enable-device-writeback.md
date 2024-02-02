@@ -1,25 +1,25 @@
 ---
-title: Can't enable the Device writeback option in Azure AD Connect
-description: Describes an issue in which you can't enable the Device writeback option in Azure AD Connect. Provides a resolution.
+title: Can't enable the Device writeback option in Microsoft Entra Connect
+description: Describes an issue in which you can't enable the Device writeback option in Microsoft Entra Connect. Provides a resolution.
 ms.date: 07/06/2020
 ms.reviewer: willfid
 ms.service: active-directory
 ms.subservice: enterprise-users
 ---
-# Can't enable the Device writeback option in Azure AD Connect
+# Can't enable the Device writeback option in Microsoft Entra Connect
 
-_Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Azure Active Directory, Office 365 Identity Management, Microsoft Intune  
+_Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Microsoft Entra ID, Office 365 Identity Management, Microsoft Intune  
 _Original KB number:_ &nbsp; 3085068
 
 ## Symptoms
 
-When you run the Azure Active Directory (Azure AD) Connect configuration wizard, you can't enable the **Device writeback**  option on the **Customize synchronization options** page.
+When you run the Microsoft Entra Connect configuration wizard, you can't enable the **Device writeback**  option on the **Customize synchronization options** page.
 
 ## Cause
 
 This issue can occur if one of the following conditions is true:
 
-- Your Azure AD organization isn't enabled for device writeback.
+- Your Microsoft Entra organization isn't enabled for device writeback.
 - One or more of the domain controllers that hold an operations master role (also known as a flexible single master operations or FSMO role) in your environment aren't replicating.
 
 ## Resolution
@@ -50,7 +50,7 @@ This issue can occur if one of the following conditions is true:
 
 ### Step 2: Enable the organization for device writeback
 
-Follow these steps on the server on which Azure AD Connect is installed:
+Follow these steps on the server on which Microsoft Entra Connect is installed:
 
 1. Make sure that the Remote Server Administration Tools Pack is installed. For more information, see [Installing or Removing the Remote Server Administration Tools Pack](https://technet.microsoft.com/library/cc730825.aspx).
 2. Open Active Directory Module for Windows PowerShell as an administrator. For more information, see [Active Directory Administration with Windows PowerShell](https://technet.microsoft.com/library/dd378937%28v=ws.10%29.aspx).
@@ -68,11 +68,11 @@ Follow these steps on the server on which Azure AD Connect is installed:
 
     You may have to run this command for each domain in your Active Directory environment.
 4. When you're prompted, enter the enterprise administrator user name.
-5. Open the Azure AD Connect configuration wizard. You should now be able to enable device writeback.
+5. Open the Microsoft Entra Connect configuration wizard. You should now be able to enable device writeback.
 
 ## More information
 
-On the server on which Azure AD Connect is installed, review the logs in the following location:
+On the server on which Microsoft Entra Connect is installed, review the logs in the following location:
 
 `C:\Users\<UserAccount which AAD Connect was installed>\AppData\Local\AADConnect\trace-<DateTime>.log`
 

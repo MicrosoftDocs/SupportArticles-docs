@@ -1,17 +1,17 @@
 ---
 title: Create an ISO image for UEFI platforms
 description: Describes how to create an UEFI bootable Windows PE RAM Disk on a CD-ROM.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:setup, csstroubleshoot
-ms.technology: windows-server-deployment
+ms.subservice: deployment
 ---
 # Create an ISO image for UEFI platforms for a Windows PE CD-ROM
 
@@ -90,3 +90,7 @@ Functions as the separator between the first and second boot entries.
 Sets the platform ID to "EF," as defined by the UEFI specification.
 - `bc:\winpe_x64\efisys.bin`  
 Puts the specified file (Efisys.bin) in the boot sector of the disk. Efisys.bin is the binary floppy disk layout of the EFI boot code. This disk image contains the files that are used to start from the EFI firmware in the Efi\boot\x64boot.efi folder.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

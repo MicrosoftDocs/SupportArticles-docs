@@ -4,7 +4,6 @@ description: This article provides resolutions for the error that occurs when yo
 ms.date: 08/05/2020
 ms.custom: sap:Parallel Data Warehouse (APS)
 ms.reviewer: daleche, christys
-ms.prod: sql
 ---
 # Error 105005 when you do CETAS operation to Azure blob storage
 

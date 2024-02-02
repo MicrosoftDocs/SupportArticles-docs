@@ -1,10 +1,8 @@
 ---
 title: Take basic troubleshooting steps to avoid Node Not Ready issues
 description: Learn about basic troubleshooting steps to avoid Node Not Ready issues in Azure Kubernetes Service (AKS) cluster nodes.
-ms.date: 4/15/2022
-author: DennisLee-DennisLee
-ms.author: v-dele
-ms.reviewer: rissing, chiragpa, momajed
+ms.date: 04/15/2022
+ms.reviewer: rissing, chiragpa, momajed, v-leedennis
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-node-not-ready
 #Customer intent: As an Azure Kubernetes user, I want to take basic troubleshooting steps so that I can avoid Node Not Ready issues in Azure Kubernetes Service (AKS) cluster nodes.

@@ -1,17 +1,17 @@
 ---
 title: Remote Desktop server certificates are renewed two times daily
 description: Solves an issue where the Remote Desktop server certificates are renewed two times a day despite being valid for one year.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:certificates-and-public-key-infrastructure-pki, csstroubleshoot
-ms.technology: windows-server-security
+ms.subservice: windows-security
 ---
 # Remote Desktop server certificates are renewed two times a day despite being valid for one year
 

@@ -12,7 +12,7 @@ ms.collection: windows
 ms.workload: na
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
-ms.date: 08/25/2022
+ms.date: 08/01/2023
 ms.author: genli
 ---
 
@@ -36,15 +36,13 @@ The first DNS name of the KMS server for the Azure Global cloud is `azkms.core.w
 
 |Platform| KMS DNS|KMS IP|
 |------|-------|-------|
-|Azure Global |azkms.core.windows.net<sup>*</sup><br>kms.core.windows.net|20.118.99.224, 40.83.235.53 <br> 23.102.135.246|
+|Azure Global |azkms.core.windows.net<br>kms.core.windows.net|20.118.99.224, 40.83.235.53 <br> 23.102.135.246|
 |Azure Germany|kms.core.cloudapi.de|51.4.143.248|
 |Azure US Government|kms.core.usgovcloudapi.net<br>azkms.core.usgovcloudapi.net|23.97.0.13<br>52.126.105.2|
 |Azure China 21Vianet|azkms.core.chinacloudapi.cn<br>kms.core.chinacloudapi.cn|159.27.28.100, 163.228.64.161<br>42.159.7.249|
 
 > [!NOTE] 
 > All the three IP addresses for the Azure Global cloud and Azure China, as well as the two IP addresses for Azure US Government should be added to the custom route.
-> 
-> <sup>*</sup> To mitigate an issue related to Network Security Group, **azkms.core.windows.net** points to **kms.core.windows.net** for now. After the issue is resolved (planned for October 3rd, 2022) **azkms.core.windows.net** will point to two new IP addresses: **20.118.99.224** and **40.83.235.53**.
 
 To add the custom route, follow these steps:
 
@@ -87,7 +85,7 @@ To add the custom route, follow these steps:
 
 ### For Classic VMs
 
-[!INCLUDE [classic-vm-deprecation](../../includes/classic-vm-deprecation.md)]
+[!INCLUDE [classic-vm-deprecation](../../includes/azure/classic-vm-deprecation.md)]
 
 1. Open Azure PowerShell, and then [sign in to your Azure subscription](/powershell/azure/authenticate-azureps).
 2. Run the following commands:

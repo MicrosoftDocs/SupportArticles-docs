@@ -5,7 +5,6 @@ ms.date: 09/21/2020
 ms.custom: sap:Replication
 ms.reviewer: RAJUGIRD
 ms.topic: reference-architecture
-ms.prod: sql
 ---
 # UPDATE statements may be replicated as DELETE/INSERT pairs
 

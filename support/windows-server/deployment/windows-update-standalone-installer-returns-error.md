@@ -1,17 +1,17 @@
 ---
 title: Windows Update Standalone Installer (WUSA) returns 0x5 ERROR_ACCESS_DENIED
 description: Works around an issue that occurs when you deploy Windows Update .msu files through Windows Remote Management 2.0 and Windows Remote Shell.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:servicing, csstroubleshoot
-ms.technology: windows-server-deployment
+ms.subservice: deployment
 ---
 # Windows Update Standalone Installer (WUSA) returns 0x5 ERROR_ACCESS_DENIED when deploying .msu files through WinRM and Windows Remote Shell
 
@@ -54,3 +54,7 @@ The Windows Update Standalone Installer uses the Windows Update Agent API to ins
 The security restrictions on remote use of the WUA APIs are documented here:
 
 [Using WUA From a Remote Computer](https://msdn.microsoft.com/library/windows/desktop/aa387288%28v=vs.85%29.aspx)
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

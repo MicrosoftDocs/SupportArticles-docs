@@ -1,17 +1,17 @@
 ---
 title: Crypt32 event 8 is continuously reported
 description: On those products referenced in the Applies To section of this article, Crypt32 event ID 8 may be continuously recorded in the Application event log. This occurs because Windows is attempting to verify the digital signature of third-party security software that has been designed to meet the requirements for integrating with the Windows Security app introduced in Windows Vista. This behavior is expected, and can be ignored.
-ms.date: 4/8/2022
+ms.date: 04/08/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:certificates-and-public-key-infrastructure-pki, csstroubleshoot
-ms.technology: windows-server-security
+ms.subservice: windows-security
 ---
 # Crypt32 8 events continuously reported in Windows
 

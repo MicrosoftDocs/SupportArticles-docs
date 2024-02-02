@@ -3,7 +3,7 @@ title: Import Generic Error occurs
 description: Provides a solution to an error that occurs when importing a solution in Dynamics 365.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: d365-sales-custom-solutions
 ---
 # Import Generic Error (8004801e) occurs when attempting to import a Microsoft Dynamics 365 solution
@@ -23,4 +23,5 @@ Error code 8004801e indicates a generic error occurred during import of the solu
 
 ## Resolution
 
-Select the **Download Log File** button to find more details about the error. If the error persists and you aren't able to resolve the issue using the details in the log file, contact Microsoft Support for assistance. You can also use the information in the log file to search for potential solutions in the [Dynamics 365 Communities](https://community.dynamics.com/f).
+Select the **Download Log File** button to find more details about the error. If the error persists and you aren't able to resolve the issue using the details in the log file, contact Microsoft Support for assistance. You can also use the information in the log file to search for potential solutions in the [Dynamics 365 Communities](https://community.dynamics.com/forums/thread/).
+

@@ -1,13 +1,13 @@
 ---
 title: Windows 10 upgrade issues troubleshooting
 description: Understanding the Windows 10 upgrade process can help you troubleshoot errors when something goes wrong. Find out more with this guide.
-ms.date: 03/13/2023
+ms.date: 04/28/2023
 manager: dcscontentpm
 ms.author: aaroncz
-ms.prod: windows-client
+ms.service: windows-client
 author: aczechowski
 ms.topic: troubleshooting
-ms.technology: windows-client-deployment
+ms.subservice: deployment
 ms.custom: sap:setup, csstroubleshoot
 ms.reviewer: dougeby
 audience: itpro
@@ -93,6 +93,10 @@ When performing an operating system upgrade, Windows Setup uses phases described
     DU = Driver/device updates.  
     OOBE = Out of box experience.  
     WIM = Windows image (Microsoft)
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).
 
 ## More information
 

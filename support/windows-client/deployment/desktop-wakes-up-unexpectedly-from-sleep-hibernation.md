@@ -1,17 +1,17 @@
 ---
 title: Desktop wakes up unexpectedly from sleep or hibernation
 description: Document findings based on OEM support case, where customer observed unexpected wake behavior. Provide information on how to track down the source of wake events, and related information.
-ms.date: 09/14/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, steved
 ms.custom: sap:power-management, csstroubleshoot
-ms.technology: windows-client-deployment
+ms.subservice: deployment
 ---
 # Desktop wakes up unexpectedly from sleep or hibernation
 
@@ -22,13 +22,13 @@ _Original KB number:_ &nbsp; 2799178
 
 ## Symptoms
 
-A Windows 8 Desktop computer is automatically waking from sleep or hibernation at a certain time even if there is no "ACPI Wake Alarm" system device found by the operating system.
+A Windows 8 Desktop computer is automatically waking from sleep or hibernation at a certain time even if there's no "ACPI Wake Alarm" system device found by the operating system.
 
 ## Cause
 
 For Windows 8 desktops or All-in-one computers, under **Action Center** > **Automatic Maintenance**, the **Allow scheduled maintenance to wake up my computer at the scheduled time** checkbox is automatically enabled. Also, the power policy/Advanced settings/Sleep/Allow wake timers will default to Enabled for AC power.
 
-If the desktop machine does not have an "ACPI Wake Alarm" device (or if it is disabled in the BIOS), Windows 8 still uses the Real Time Clock (RTC) to program wake events, assuming the power policy/Advanced settings/Sleep/Allow wake timers is Enabled for AC power.
+If the desktop machine doesn't have an "ACPI Wake Alarm" device (or if it's disabled in the BIOS), Windows 8 still uses the Real Time Clock (RTC) to program wake events, assuming the power policy/Advanced settings/Sleep/Allow wake timers is Enabled for AC power.
 
 Windows 8 automatically configures a "Regular Maintenance" event in TaskScheduler to run at 3:00 AM every day. After initial installation of Window 8, Windows Update is preconfigured to initiate the regular maintenance task and wake event to ensure that it is run.
 
@@ -43,7 +43,7 @@ To prevent the Regular Maintenance task from waking the machine at 3:00am, go to
 
 When an application schedules a maintenance trigger (such as Windows Update, if it has downloaded a qualified update to be installed under maintenance), the following actions will take place:
 
-1. From an Administrator command prompt, `Powercfg /waketimers` will indicate that the Regular Maintenance task is scheduled to run at 3:00 AM. For example:
+1. From an Administrator command prompt, `Powercfg /waketimers` indicates that the Regular Maintenance task is scheduled to run at 3:00 AM. For example:
 
     ```console
     C:\\> powercfg /waketimers
@@ -66,3 +66,7 @@ Any application can schedule a regular maintenance task to run automatically, as
 - [MaintenanceTrigger Class](/uwp/api/Windows.ApplicationModel.Background.MaintenanceTrigger)  
 
 The first application to make use of the Regular Maintenance task scheduling feature is Windows Update. The .NET Framework NGEN v4.0 utility has also been observed to cause the regular maintenance event to be scheduled.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

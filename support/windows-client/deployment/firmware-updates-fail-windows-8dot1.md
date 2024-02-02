@@ -1,17 +1,17 @@
 ---
 title: Firmware update failures in Windows 8.1
 description: Describes how and why firmware updates occasionally fail in a Windows 8.1 environment.
-ms.date: 04/15/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:devices-and-drivers, csstroubleshoot
-ms.technology: windows-client-deployment
+ms.subservice: deployment
 ---
 # Firmware update failures in Windows 8.1
 
@@ -119,3 +119,7 @@ Contact your PC manufacturer for support with failed firmware updates.
 |Error: Authentication Error|STATUS_ACCESS_DENIED|0xC0000022|3|Windows Update shows "updates available." Later installation attempts through Windows Update or automatic maintenance will retry the firmware installation.|Pending restart during the first 3 attempts, then "Failed" with the associated failure code.|
 |Error: Power Event, AC Not Connected|STATUS_POWER_STATE_INVALID|0xC00002D3|No Limit|Windows Update shows "updates available." 15-minute restart timer will also start immediately after battery is recharged to >= 40%.|Pending restart|
 |Error: Power Event, Insufficient Battery|STATUS_INSUFFICIENT_POWER|0xC00002DE|No Limit|
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

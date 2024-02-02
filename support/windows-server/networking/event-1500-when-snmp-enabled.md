@@ -1,17 +1,17 @@
 ---
 title: Event 1500 when SNMP is enabled
 description: Works around an issue where event ID 1500 is logged when SNMP is enabled.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:tcp/ip-communications, csstroubleshoot
-ms.technology: networking
+ms.subservice: networking
 ---
 # Event 1500 logged when SNMP is enabled on Windows Server
 

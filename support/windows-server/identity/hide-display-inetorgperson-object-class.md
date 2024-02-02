@@ -1,17 +1,17 @@
 ---
 title: Hide or display InetOrgPerson object class
 description: Describes how to Hide or Display the InetOrgPerson object class in Active Directory Users and Computers.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, TIMTHO
 ms.custom: sap:active-directory-lightweight-directory-services-ad-lds-and-active-directory-application-mode-adam, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # Hide or Display the InetOrgPerson Object Class in Active Directory Users and Computers
 

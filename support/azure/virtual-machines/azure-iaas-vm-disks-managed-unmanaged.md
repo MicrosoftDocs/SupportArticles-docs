@@ -453,7 +453,7 @@ To request features, submit your requests and ideas to the [Azure Storage feedba
 - [Share an Azure managed disk across VMs](/azure/virtual-machines/disks-shared)
 - [Convert a Windows virtual machine from unmanaged disks to managed disks](/azure/virtual-machines/windows/convert-unmanaged-to-managed-disks)
 - [Change your performance tier using the Azure portal](/azure/virtual-machines/disks-performance-tiers-portal)
-- [Convert managed disks storage between different disk types by using Azure CLI](/azure/virtual-machines/linux/convert-disk-storage)
+- [Change the disk type of an Azure managed disk](/azure/virtual-machines/disks-convert-types)
 - [Enable shared disks for Azure managed disks](/azure/virtual-machines/disks-shared-enable)
 - [Use Azure Storage Explorer to manage Azure managed disks](/azure/virtual-machines/disks-use-storage-explorer-managed-disks)
 - [Attach a managed data disk to a Windows VM](/azure/virtual-machines/windows/attach-managed-disk-portal)

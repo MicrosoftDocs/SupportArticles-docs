@@ -1,17 +1,17 @@
 ---
 title: Set Partmgr Attributes registry with PowerShell
 description: Describes how to set the Partmgr Attributes registry value by using PowerShell.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: Fix, csstroubleshoot, devx-track-azurepowershell
-ms.technology: windows-server-backup-and-storage
+ms.custom: Fix, csstroubleshoot
+ms.subservice: backup-and-storage
 ---
 # How to set the Partmgr Attributes registry value by using PowerShell
 

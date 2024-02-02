@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 915463
 ## Symptoms
 
 > [!IMPORTANT]
-> This article contains information about how to modify the registry. Make sure to back up the registry before you modify it. Make sure that you know how to restore the registry if a problem occurs. For more information about how to back up, restore, and modify the registry, see [Windows registry information for advanced users](/troubleshoot/windows-server/performance/windows-registry-advanced-users)
+> This article contains information about how to modify the registry. Make sure to back up the registry before you modify it. Make sure that you know how to restore the registry if a problem occurs. For more information about how to back up, restore, and modify the registry, see [Windows registry information for advanced users](../../windows-server/performance/windows-registry-advanced-users.md)
 
 After you install Integration Manager for Microsoft Dynamics GP or Integration Manager for Microsoft Business Solutions - Great Plains, Automation errors are returned as follows.
 

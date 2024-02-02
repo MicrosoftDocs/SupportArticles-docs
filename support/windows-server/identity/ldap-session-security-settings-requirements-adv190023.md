@@ -1,17 +1,17 @@
 ---
 title: LDAP session security settings and requirements after ADV190023
 description: Discusses LDAP session security settings and requirements after security advisory ADV190023 is installed.
-ms.date: 9/24/2021
+ms.date: 07/07/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: herbertm, wincicadsec, kaushika
 ms.custom: sap:ldap-configuration-and-interoperability, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # LDAP session security settings and requirements after ADV190023 is installed
 
@@ -86,6 +86,6 @@ The following policy guidelines apply:
 
 For more information, see the following articles:
 
-[Extended Protection for Authentication](https://msrc.microsoft.com/blog/2009/12/extended-protection-for-authentication/)  
-
-[Control Extended Protection for Authentication using Security Policy](/archive/blogs/askds/control-extended-protection-for-authentication-using-security-policy)
+- [Extended Protection for Authentication](https://msrc.microsoft.com/blog/2009/12/extended-protection-for-authentication/)  
+- [Control Extended Protection for Authentication using Security Policy](/archive/blogs/askds/control-extended-protection-for-authentication-using-security-policy)
+- [Supporting Extended Protection for Authentication (EPA) in a service](/windows/win32/secauthn/epa-support-in-service)

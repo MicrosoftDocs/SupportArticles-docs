@@ -1,3 +1,4 @@
+items:
 - name: Windows Client
   href: welcome-windows-client.yml
 - name: Active Directory
@@ -376,6 +377,8 @@
       href: ./deployment/customize-default-local-user-profile.md
     - name: Download and burn an ISO file from VLSC
       href: ./deployment/iso-file-on-vlsc.md
+    - name: Error "certificate in the connection information has expired"
+      href: ./deployment/error-certificate-connection-information-expired.md    
     - name: Error 0x80042468 when creating a single partition
       href: ./deployment/error-when-creating-single-partition.md
     - name: Event ID 10 is logged in Application log
@@ -474,6 +477,10 @@
       href: ./group-policy/point-print-restrictions-policies-ignored.md
     - name: Save documents to OneDrive by default
       href: ./group-policy/save-documents-to-onedrive-by-default.md
+    - name: "Scenario guide: Wallpaper GPO doesn't apply on some client computers"
+      href: ./group-policy/scenario-guide-wallpaper-gpo-does-not-apply-on-some-client-computers.md
+    - name: "Scenario guide: GPO to map network drives doesn't apply as expected"
+      href: ./group-policy/scenario-guide-gpo-to-map-network-drive-doesn-t-apply-as-expected.md
     - name: Use Group Policy to deploy a Known Issue Rollback
       href: ./group-policy/use-group-policy-to-deploy-known-issue-rollback.md
 - name: High Availability
@@ -534,8 +541,6 @@
       href: ./networking/redirect-users-documents-folder-to-their-home-directory-fail.md
     - name: Change the location of CSC folder
       href: ./networking/change-csc-folder-location-with-cachelocation-registry.md
-    - name: CSCCMD tool Version 1.1. functions and features
-      href: ./networking/client-side-caching-command-line-options-v1dot1.md
     - name: Current hotfixes have folder redirection enabled
       href: ./networking/current-hotfixes-have-folder-redirection.md
     - name: Errors when having a large "Folder Redirection" policy settings file
@@ -712,6 +717,8 @@
       href: ./performance/issues-when-calls-createwindowex-32-bit-applications.md
   - name: Blue Screen/Bugcheck
     items:
+    - name: Bug check 0x124 after a Windows in-place upgrade on Apple devices
+      href: ./performance/bug-check-0x124-windows-upgrade-boot-camp-apple-devices.md
     - name: Event ID 41 "The system has rebooted without cleanly shutting down first"
       href: ./performance/event-id-41-restart.md
     - name: Stop error 7B or Inaccessible_Boot_Device troubleshooting
@@ -878,10 +885,6 @@
       href: ./remote/invalid-client-ip-address-port-number-event-4624.md
     - name: Troubleshoot RDP Client connection problems
       href: ./remote/terminal-server-client-connection-failures.md
-  - name: Virtual Desktop Infrastructure (VDI)
-    items:
-    - name: Support policy for Azure Virtual Desktop and Windows 10 Enterprise multi-session
-      href: ./remote/support-policy-windows-virtual-desktop-windows-10-enterprise-multi-session.md
 - name: Shell Experience
   items:
   - name: Shell Experience
@@ -910,10 +913,10 @@
       href: ./shell-experience/standard-user-cannot-run-commnad-via-runonce.md
     - name: Fail to register a DLL by using Regsvr32.exe
       href: ./shell-experience/dllregisterserver-error.md
-    - name: HotStart buttons doesn't work
-      href: ./shell-experience/disabling-autoplay-cause-hotstart-buttons-not-working.md
     - name: How to modify the command line string limitation
       href: ./shell-experience/command-line-string-limitation.md
+    - name: Issues after Autoplay is disabled in Group Policy
+      href: ./shell-experience/issues-autoplay-disabled-group-policy.md
     - name: UPX is displayed in the UI on managed device
       href: ./shell-experience/upx-displayed-in-UI-on-managed-device.md
   - name: DPI and Display Issues
@@ -980,6 +983,10 @@
       href: ./shell-experience/monitor-powers-off-when-pc-locked.md
   - name: Modern, Inbox and Microsoft Store Apps
     items:
+    - name: Troubleshoot Apps failing to start using Process Monitor
+      href: ./shell-experience/troubleshoot-apps-start-failure-use-process-monitor.md
+    - name: Troubleshoot Apps failing to start using Windows Package Manager
+      href: ./shell-experience/troubleshoot-apps-start-failure-use-windows-package-manager.md
     - name: Can't open Microsoft Store when making a VPN connection
       href: ./shell-experience/microsoft-store-not-open-domain-joine-computer-vpn.md
     - name: Can't play audio in a system with DisplayPort
@@ -1055,7 +1062,7 @@
     - name: Task scheduler runs tasks as background processes
       href: ./system-management-components/task-scheduler-task-only-runs-in-background.md
     - name: Use the at command to schedule tasks
-      href: ./system-management-components/use-at-command-to-schedule-tasks.md
+      href: ./system-management-components/use-at-command-to-schedule-tasks.md 
   - name: WER
     items:
     - name: Windows Error Reporting and Windows diagnostics enablement guidance
@@ -1063,7 +1070,7 @@
   - name: WinRM
     items:
     - name: Can't establish a PowerShell remote session using WinRM
-      href: ./system-management-components/can-not-establish-ps-remote-session-winrm-aad-only-joined-machines.md    
+      href: ./system-management-components/can-not-establish-ps-remote-session-winrm-aad-only-joined-machines.md
     - name: Errors when you run WinRM commands
       href: ./system-management-components/errors-when-you-run-winrm-commands.md
     - name: How to configure WINRM for HTTPS
@@ -1098,6 +1105,28 @@
       href: ./ue-v/ue-v-replication-issues.md
     - name: UE-V Registry Settings
       href: ./ue-v/ue-v-registry-settings.md
+- name: TroubleShootingScript toolset (TSS)
+  items:
+  - name: Introduction to TroubleShootingScript toolset (TSS)
+    href: ./windows-tss/introduction-to-troubleshootingscript-toolset-tss.md
+  - name: Use the xray feature of TSS
+    href: ./windows-tss/use-the-xray-feature-of-tss-to-identify-known-issues.md
+  - name: Identity
+    items:
+    - name: Gather information for Active Directory replication issues
+      href: ./windows-tss/gather-information-using-tss-ad-replication.md
+    - name: Gather information for Group Policy issues
+      href: ./windows-tss/gather-information-using-tss-group-policy.md
+  - name: Deployment (DnD)
+    items:
+    - name: Gather information for deployment-related issues
+      href: ./windows-tss/gather-information-using-tss-deployment.md
+    - name: Gather information for Windows Update for Business reports-related issues
+      href: ./windows-tss/gather-information-using-tss-wufb-reports.md
+  - name: User Experience (UEX)
+    items:
+    - name: Gather information for user experience-related issues
+      href: ./windows-tss/gather-information-using-tss-user-experience.md 
 - name: UserProfiles and Logon
   items:
   - name: UserProfiles and Logon
@@ -1140,7 +1169,7 @@
       href: ./user-profiles-and-logon/roaming-profile-was-not-completely-synchronized-error.md
     - name: Renaming user account doesn't change profile path
       href: ./user-profiles-and-logon/renaming-user-account-not-change-profile-path.md
-  - name: HELLO-FOR-BUSINESS
+  - name: Windows Hello for Business
     items:
     - name: Event ID 300 - Windows Hello successfully created in Windows 10
       href: ./user-profiles-and-logon/event-id-300-windows-hello-successfully-created-in-windows-10.md
@@ -1294,13 +1323,3 @@
     href: ./windows-troubleshooters/windows-troubleshooters-overview.md
   - name: Active and retired Windows 10 troubleshooters
     href: ./windows-troubleshooters/active-and-retired-troubleshooters-windows-10.md
-  - name: TroubleShootingScript toolset (TSSv2)
-    items:
-    - name: Introduction to TroubleShootingScript toolset (TSSv2)
-      href: ./windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tssv2.md
-    - name: Gather information for Active Directory replication issues
-      href: ./windows-troubleshooters/gather-information-using-tssv2-ad-replication.md
-    - name: Gather information for deployment-related issues
-      href: ./windows-troubleshooters/gather-information-using-tssv2-deployment.md
-    - name: Gather information for Group Policy issues
-      href: ./windows-troubleshooters/gather-information-using-tssv2-group-policy.md

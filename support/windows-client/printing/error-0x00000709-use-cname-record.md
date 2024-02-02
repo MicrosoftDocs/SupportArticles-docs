@@ -1,17 +1,17 @@
 ---
 title: Error 0x00000709 when you use CNAME record
 description: An issue occurs when clients try to connect to printers by using a CNAME record in the UNC path.
-ms.date: 09/08/2020
+ms.date: 05/16/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:management-and-configuration:-general-issues, csstroubleshoot
-ms.technology: windows-client-printing
+ms.subservice: printing
 ---
 # Error 0x00000709 when you use a CNAME record for a print server in Windows Server 2008 R2: Operation could not be completed
 
@@ -64,3 +64,7 @@ Don't use FQDN: 192.168.0.10 `CNAME.CONTOSO.COM`
 ## More information
 
 The issue that is described in the [Symptoms](#symptoms) section may occur if the non-Microsoft DNS solution provides `QRecord` responses of type ALL.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for User Experience issues](../windows-troubleshooters/gather-information-using-tss-user-experience.md#printing).

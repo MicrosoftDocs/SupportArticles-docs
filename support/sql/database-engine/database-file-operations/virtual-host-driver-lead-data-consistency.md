@@ -4,7 +4,6 @@ description: This article provides resolutions for the problem where using virtu
 ms.date: 09/25/2020
 ms.custom: sap:Administration and Management
 ms.reviewer: sureshka
-ms.prod: sql
 ---
 # Use of virtual host drivers can lead to SQL Server Database Engine data consistency problems
 

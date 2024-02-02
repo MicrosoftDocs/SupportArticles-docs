@@ -1,17 +1,17 @@
 ---
 title: Computer record is rejected in MBAM
 description: Describe how to resolve the warning message "Computer Record is Rejected" in MBAM.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: manojse, kaushika
 ms.custom: sap:bitlocker, csstroubleshoot
-ms.technology: windows-server-security
+ms.subservice: windows-security
 ---
 # Computer record is rejected in MBAM
 
@@ -109,7 +109,7 @@ This is a known issue with the product specified.
 Follow steps below to create a new registry key on MBAM Server where you have MBAM Administration and Monitoring Server role installed.  
 
 > [!NOTE]
-> If you use Registry Editor incorrectly, you may cause serious problems that may require you to reinstall your operating system. Microsoft cannot guarantee that you can solve problems that result from using Registry Editor incorrectly. Use Registry Editor at your own risk. For information about how to back up, restore, and edit the registry, see [Windows registry information for advanced users](/troubleshoot/windows-server/performance/windows-registry-advanced-users).
+> If you use Registry Editor incorrectly, you may cause serious problems that may require you to reinstall your operating system. Microsoft cannot guarantee that you can solve problems that result from using Registry Editor incorrectly. Use Registry Editor at your own risk. For information about how to back up, restore, and edit the registry, see [Windows registry information for advanced users](../performance/windows-registry-advanced-users.md).
 
 1. Start Registry Editor.
 2. Navigate to the registry key: `HKEY_LOCAL_MACHINE\Software\Microsoft`.

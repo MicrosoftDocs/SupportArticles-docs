@@ -1,17 +1,17 @@
 ---
 title: Understanding Remote Desktop Protocol (RDP)
 description: This article introduces the Remote Desktop Protocol (RDP).
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, willgloy
 ms.custom: sap:administration, csstroubleshoot
-ms.technology: windows-server-rds
+ms.subservice: rds
 ---
 # Understanding the Remote Desktop Protocol (RDP)
 

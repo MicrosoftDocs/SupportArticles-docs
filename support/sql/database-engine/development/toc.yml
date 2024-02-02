@@ -1,0 +1,27 @@
+items:
+- name: Activation tasks run over limit
+  href: activation-runs-over-limit.md
+- name: Assembly cannot be migrated to SQL Server 2017 error
+  href: assembly-name-cannot-migrated-error.md
+- name: Can't make a remote connection from a CLR trigger
+  href: cannot-make-remote-connection-clr-trigger.md
+- name: Character data is incorrect when the code page differs
+  href: character-data-incorrect-code-page-client-compute-differs-database.md
+- name: Error when you run CLR object or create assembly
+  href: error-run-clr-object-create-assembly.md
+- name: Execution of CLR fails with TypeInitializationException
+  href: execution-clr-fails-typeInitializationexception.md
+- name: Iterate through result set using T-SQL
+  href: iterate-through-result-set.md
+- name: Query returns incorrect results
+  href: query-typecasts-a-unicode-column.md
+- name: Run a DLL-based COM object
+  href: run-dll-based-com-object.md
+- name: Remove duplicate rows from table
+  href: remove-duplicate-rows-sql-server-tab.md
+- name: Rotate a table
+  href: rotate-table.md
+- name: Timeout issues when you deploy SQL CLR objects
+  href: timeout-issues-deploy-clr-objects.md
+- name: Use extended or SP_OA stored procedure to load CLR
+  href: use-extended-sp-oa-stored-procedure.md

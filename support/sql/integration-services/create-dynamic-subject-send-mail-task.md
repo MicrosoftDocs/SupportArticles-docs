@@ -4,7 +4,6 @@ description: This article discusses how to update the property of an SSIS object
 ms.date: 09/02/2020
 ms.custom: sap:Integration Services
 ms.reviewer: Craigg, willchen
-ms.prod: sql
 ---
 # Create a dynamic subject or message for the Send Mail task in SQL Server Integration Services
 

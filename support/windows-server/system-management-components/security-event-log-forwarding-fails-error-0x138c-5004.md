@@ -1,23 +1,23 @@
 ---
 title: Security event log forwarding fails with Error 0x138C and 5004 in Windows Server
 description: Fixes a problem in which security event logs can't be forwarded in Windows Server 2012, Windows Server 2008 R2, and Windows Server 2008.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, nitkum, v-jesits
 ms.custom: sap:event-viewer, csstroubleshoot
-ms.technology: windows-server-system-management-components
+ms.subservice: system-mgmt-components
 ---
 # Security event log forwarding fails with Error 0x138C and 5004 in Windows Server
 
 This article provides a solution to an issue where security event log forwarding fails with Error 0x138C and 5004 in Windows Server.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; All supported versions of Windows Server  
 _Original KB number:_ &nbsp; 4047777
 
 ## Symptoms

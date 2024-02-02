@@ -1,17 +1,17 @@
 ---
 title: Numerous "Event ID 1216"
 description: Provides a resolution for the issue that numerous "Event ID 1216" Events occur in Directory Services Event Log.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:active-directory-lightweight-directory-services-ad-lds-and-active-directory-application-mode-adam, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # Numerous "Event ID 1216" Events in Directory Services Event Log
 

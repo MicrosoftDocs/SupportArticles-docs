@@ -16,7 +16,7 @@ This article gives troubleshooting guidance for when app installations fail for 
 
 Intune provides app troubleshooting details based on the apps installed on a specific user's device.
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Troubleshoot + support**.
 3. Click **Select user** to go to the **Select users** pane.
 4. Type the name or email address of the user you want to troubleshoot, and then click **Select** at the bottom of the pane. The troubleshooting information for the user is displayed in the **Troubleshoot** pane.
@@ -47,10 +47,10 @@ If you have app installation problems, consider the following actions:
 
 - If the app does not display in the Company Portal, ensure the app is deployed with **Available** intent and that the user is accessing the Company Portal with the device type supported by the app.
 - For Windows BYOD devices, the user needs to add a Work account to the device.
-- Check if the user is over the Azure Active Directory (Azure AD) device limit:
-  1. Navigate to [Azure Active Directory Device Settings](https://portal.azure.com/#pane/Microsoft_AAD_IAM/DevicesMenupane/DeviceSettings/menuId).
+- Check if the user is over the Microsoft Entra device limit:
+  1. Navigate to [Microsoft Entra Device Settings](https://portal.azure.com/#pane/Microsoft_AAD_IAM/DevicesMenupane/DeviceSettings/menuId).
   2. Make note of the value set for **Maximum devices per user**.
-  3. Navigate to [Azure Active Directory Users](https://portal.azure.com/#pane/Microsoft_AAD_IAM/UsersManagementMenupane/AllUsers).
+  3. Navigate to [Microsoft Entra users](https://portal.azure.com/#pane/Microsoft_AAD_IAM/UsersManagementMenupane/AllUsers).
   4. Select the affected user and click **Devices**.
   5. If user is over the set limit then delete any stale records that are no longer needed.
 - For iOS/iPadOS ADE devices, ensure that the user is listed as **Enrolled by User** in the Intune devices **Overview** pane. If it shows NA, then deploy a config policy for the Intune Company Portal. For more information, see [Configure the Company Portal app](/mem/intune/apps/app-configuration-policies-use-ios#configure-the-company-portal-app-to-support-ios-and-ipados-dep-devices).

@@ -1,17 +1,17 @@
 ---
 title: Change the Volume Licensing product key
 description: Describes how to change the product key for a Volume Licensing installation of Windows XP.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:activation, csstroubleshoot
-ms.technology: windows-server-deployment
+ms.subservice: deployment
 ---
 # How to change the Volume Licensing product key
 
@@ -174,3 +174,7 @@ The following example shows how to use the ChangeVLKeySP1.vbs script from a comm
 1. Click **Start**, and then click **Run**.
 2. In the **Open** box, type the following command, where **AB123-123AB-AB123-123AB-AB123** is the new product key that you want to use, and then click **OK**:  
     c:\changevlkeysp1.vbs **ab123-123ab-ab123-123ab-ab123**  
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

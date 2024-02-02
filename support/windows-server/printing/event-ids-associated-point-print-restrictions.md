@@ -1,17 +1,17 @@
 ---
 title: Event ID's with point and print restrictions
 description: Provides a resolution for Event ID's commonly associated with point and print restrictions.
-ms.date: 9/24/2021
+ms.date: 05/16/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:errors-and-troubleshooting-general-issues, csstroubleshoot
-ms.technology: windows-server-printing
+ms.subservice: printing
 ---
 # Event ID's commonly associated with point and print restrictions
 
@@ -96,3 +96,7 @@ Configure the Point and Print Restrictions policy to Disabled.
 
 2307161 The Point and Print User configuration policy is ignored by Windows 7, Windows Server 2008 R2, and Service Pack 2 release of Windows Vista, Windows Server 2008.  
 [https://support.microsoft.com/help/2307161](https://support.microsoft.com/help/2307161)  
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for User Experience issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-user-experience.md#printing).

@@ -12,7 +12,7 @@ ms.workload: infrastructure-services
 ms.subservice: vm-performance
 ms.tgt_pltfrm: vm-linux
 ms.topic: troubleshooting
-ms.date: 4/15/2022
+ms.date: 08/07/2023
 ms.author: genli
 
 ---
@@ -187,16 +187,19 @@ The following categories of rules are currently supported:
 
 - The following distributions are currently supported:
 
+  > [!NOTE]  
+  > Microsoft has only tested the versions that are listed in the table. If a version isn't listed in the table, then it isn't explicitly tested by Microsoft, but the version might still work.
+
     | Distribution               | Version                                         |
     |----------------------------|-------------------------------------------------|
     | Oracle Linux Server        | 6.10 [`*`], 7.3, 7.5, 7.6, 7.7, 7.8, 7.9 |
     | CentOS                     | 6.5 [`*`], 7.6, 7.7, 7.8, 7.9                                    |
-    | RHEL                       | 7.2, 7.5, 8.0 [`*`], 8.1, 8.2, 8.6                               |
-    | Ubuntu                     | 14.04, 16.04, 18.04, 20.04                               |
+    | RHEL                       | 7.2, 7.5, 8.0 [`*`], 8.1, 8.2, 8.6, 8.8                               |
+    | Ubuntu                     | 14.04, 16.04, 18.04, 20.04, 22.04                               |
     | Debian                     | 8, 9, 10, 11 [`*`]                                    |
     | SLES                       | 12 SP4 [`*`], 12 SP5 [`*`], 15 [`*`], 15 SP1 [`*`], 15 SP2 [`*`], 15 SP4 [`*`]                                      |
     | AlmaLinux                  | 8.4, 8.5                                               |
-    | CBL-Mariner                | 2.0                                                   |
+    | Azure Linux               | 2.0                                                   |
 
 >[!Note]
 >[`*`] Please refer to [Known issues](#known-issues) section

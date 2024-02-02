@@ -28,9 +28,11 @@ Microsoft does not support an in-place upgrade of certain versions of the operat
 
 Microsoft supports the following Microsoft server software that's running in the Azure virtual machine environment:
 
-### Azure AD Connect
+<a name='azure-ad-connect'></a>
 
-Azure AD Connect is supported. For more information, see [Prerequisites for Azure AD Connect](/azure/active-directory/hybrid/how-to-connect-install-prerequisites).
+### Microsoft Entra Connect
+
+Microsoft Entra Connect is supported. For more information, see [Prerequisites for Microsoft Entra Connect](/azure/active-directory/hybrid/how-to-connect-install-prerequisites).
 
 ### Microsoft BizTalk Server
 

@@ -1,24 +1,24 @@
 ---
 title: How to set up certificate-based authentication across forests without trust for a web server
 description: Describes how to configure a web server and Active Directory to use certificate authentication across forests without using forest trusts.
-ms.date: 12/9/2021
+ms.date: 12/09/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, wincicadsec, jitha
 ms.custom: sap:active-directory-certificate-services, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # How to set up certificate-based authentication across forests without trust for a web server
 
 This article describes how to set up a web server to use smart cards for cross-forest certificate-based authentication when the user forests and the resource forest do not trust one another.
 
 _Applies to:_ &nbsp; Windows Server 2016  
-_Original KB number:_ &nbsp; 4509680
+_Original KB number:_ &nbsp; 4509680  
 
 ## Environment configuration
 
@@ -85,7 +85,7 @@ To configure the IIS Web server in the resource forest, follow these steps:
 
 ## More information
 
-If you want to set up delegation on this resource web server to query a backend server, such as a database server or a CA, you may also configure constrained delegation by using a custom service account. Additionally, you must set up the web server for constrained delegation (S4U2Self) or protocol transition. For more information, see [How to configure Kerberos Constrained Delegation for Web Enrollment proxy pages](/troubleshoot/windows-server/identity/configure-kerberos-constrained-delegation).
+If you want to set up delegation on this resource web server to query a backend server, such as a database server or a CA, you may also configure constrained delegation by using a custom service account. Additionally, you must set up the web server for constrained delegation (S4U2Self) or protocol transition. For more information, see [How to configure Kerberos Constrained Delegation for Web Enrollment proxy pages](configure-kerberos-constrained-delegation.md).
 
 If you want to skip the UPN in the SAN attribute of the user smart card certificate, you have to either explicitly map by using [AltSecID attributes](/previous-versions/dotnet/articles/bb905527%28v=msdn.10%29#BKMK_ClientCertificate.), or use [name hints](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff404287%28v=ws.10%29).
 
@@ -104,7 +104,7 @@ Certutil -viewstore -enterprise NTAUTH
 
 - [Prepare a non-routable domain for directory synchronization](/microsoft-365/enterprise/prepare-a-non-routable-domain-for-directory-synchronization)
 
-- [How to import Third Party CA Certificates](/troubleshoot/windows-server/windows-security/import-third-party-ca-to-enterprise-ntauth-store)
+- [How to import Third Party CA Certificates](../windows-security/import-third-party-ca-to-enterprise-ntauth-store.md)
 
 - [Complete list of changes to make to activate Client Certificate Mapping on IIS using Active Directory](/archive/blogs/friis/the-complete-list-of-changes-to-make-to-activate-client-certificate-mapping-on-iis-using-active-directory)
 

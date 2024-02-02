@@ -1,17 +1,17 @@
 ---
 title: Updates for HNV environment
 description: Documents recommended hotfixes, product updates, and known solutions that are currently available for Windows Server 2012 R2 Hyper-V Network Virtualization environments.
-ms.date: 3/24/2022
+ms.date: 03/24/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, AJAYPS
 ms.custom: sap:installation-and-configuration-of-hyper-v, csstroubleshoot
-ms.technology: hyper-v
+ms.subservice: hyper-v
 ---
 # Recommended hotfixes, updates, and known solutions for Windows Server 2012 R2 Hyper-V Network Virtualization (HNV) environments
 

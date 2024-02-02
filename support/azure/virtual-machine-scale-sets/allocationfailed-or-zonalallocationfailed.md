@@ -2,9 +2,7 @@
 title: "Troubleshoot allocation failures on virtual machine scale sets."
 description: Troubleshoot an AllocationFailed or ZonalAllocationFailed error message when you create, restart, or resize Virtual Machine Scale Sets in Azure.
 ms.date: 12/06/2021
-author: DennisLee-DennisLee
-ms.author: v-dele
-ms.reviewer: "saraic,nameier,shache,emanders"
+ms.reviewer: saraic, nameier, shache, emanders, v-leedennis
 ms.service: virtual-machine-scale-sets
 #Customer intent: As an Azure Virtual Machine Scale Set user, I want to troubleshoot an AllocationFailed or ZonalAllocationFailed error so that I can successfully create, restart, or resize a scale set instance.
 ---

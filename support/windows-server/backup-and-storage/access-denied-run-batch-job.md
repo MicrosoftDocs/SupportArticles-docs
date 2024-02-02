@@ -1,17 +1,17 @@
 ---
 title: Access Denied when you run batch job
 description: Describes an issue where you cannot run a batch job that runs as a regular user account on a Windows Server 2003-based member server. Includes detailed methods to resolve the issue.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, rmartin
 ms.custom: sap:configuring-and-using-backup-software, csstroubleshoot
-ms.technology: windows-server-backup-and-storage
+ms.subservice: backup-and-storage
 ---
 # Access is denied when you run a batch job on a Windows Server 2003-based computer
 

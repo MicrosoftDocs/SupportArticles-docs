@@ -1,17 +1,17 @@
 ---
 title: Use Ntdsutil to find and clean up
 description: Discusses how to use Ntdsutil to find and clean up duplicate security identifiers.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:active-directory-replication, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # Use Ntdsutil to find and clean up duplicate security identifiers
 
@@ -57,3 +57,7 @@ To look for a duplicate SID, follow these steps:
     > Ntdsutil confirms the removal of the duplicate.
 4. At the SAM command prompt, type **q**, and then press Enter.
 5. After finished using Ntdsutil, type **q**, and then press Enter.  
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Active Directory replication issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication.md).

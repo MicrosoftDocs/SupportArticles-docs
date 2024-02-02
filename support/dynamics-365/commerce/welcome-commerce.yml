@@ -1,0 +1,133 @@
+### YamlMime:Landing
+
+title: Microsoft Dynamics 365 Commerce troubleshooting
+summary: Welcome to Microsoft Dynamics 365 Commerce troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Microsoft Dynamics 365 Commerce. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+metadata:
+  title: Microsoft Dynamics 365 Commerce troubleshooting
+  description: Landing page for Microsoft Dynamics 365 Commerce troubleshooting articles.
+  ms.topic: landing-page
+  ms.service: dynamics-365-commerce
+  author: bstorie
+  ms.author: brstor
+  ms.date: 02/01/2024
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+  # Card
+  - title: Customer accounts and loyalty
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Welcome email isn't sent when new customers are created
+            url: customer-accounts-loyalty/email-not-sent-when-new-customer-created.md
+
+  # Card
+  - title: Data synchronization
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: CDX download jobs can't be downloaded in a sandbox UAT
+            url: data-synchronization/uat-cdx-broke-after-debug-aos.md            
+
+  # Card
+  - title: Development and SDKs
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Set up an e-commerce development environment to debug against a Tier 1 Retail Server virtual machine
+            url: development-sdks/set-up-dev-environment-debugging.md
+
+  # Card
+  - title: E-commerce storefront
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Items without inventory can be checked out
+            url: ecommerce-storefront/items-without-inventory-checked-out.md
+          - text: Pick this up option doesn't appear on cart or product details pages
+            url: ecommerce-storefront/pickup-store-link-missing.md
+          - text: Retail store doesn't appear in the list of stores to pick up from
+            url: ecommerce-storefront/pickup-store-missing.md
+          - text: Restrict access to a storefront during testing or development
+            url: ecommerce-storefront/restrict-access-storefront.md
+          - text: Sign-in link redirects back to an e-commerce site
+            url: ecommerce-storefront/sign-in-redirects-back.md
+
+ # Card
+  - title: Financial statements
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Fix common statement posting issues by editing transactions
+            url: financial-statements/fix-common-posting-issues.md
+          - text: Issues with the data reconciliation of a Z report
+            url: financial-statements/z-report-issues.md
+          - text: Statement posting errors due to unavailable inventory or update conflicts
+            url: financial-statements/inventory-errors-posting.md
+
+  # Card
+  - title: Globalization
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot issues with digital certificates for fiscal integration
+            url: globalization/fiscal-integration-certificate.md
+
+  # Card
+  - title: Order management
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Asynchronous order synchronization issues
+            url: order-management/synchronization-error.md
+          - text: Payment type must be credit card error on the sales order page
+            url: order-management/payment-type-credit-card-error.md 
+          - text: Taxes on online orders are incorrectly calculated
+            url: order-management/tax-miscalculated-online-order.md 
+          - text: Troubleshoot issues with the online store transaction creation process
+            url: order-management/online-order-transaction-creation-failures.md
+
+  # Card
+  - title: Payments
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: A card payment fails due to an unsupported card type
+            url: payments/card-payments-fail-with-unsupported-card-type.md
+          - text: Credit card entry page shows an error at checkout
+            url: payments/credit-card-entry-form-error.md
+          - text: Payments are automatically settled before orders are invoiced or shipped
+            url: payments/payments-auto-settled.md 
+          - text: Refund on a return order is declined
+            url: payments/refund-declined.md                   
+          - text: Refundable charges are miscalculated based on returned quantity
+            url: payments/refund-miscalculated-partial-return.md
+          - text: Save for my next payment option doesn't appear
+            url: payments/next-payment-link-not-appearing.md                   
+          - text: Troubleshoot Dynamics 365 Payment Connector for Adyen issues
+            url: payments/adyen-support.md
+            
+  # Card
+  - title: Point of sale (POS)
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Store Commerce app (POS) is suddenly deactivated
+            url: point-of-sale/store-commerce-app-pos-deactivated.md
+          - text: Troubleshoot Store Commerce extension issues
+            url: point-of-sale/store-commerce-extensions.md
+          - text: Troubleshoot Store Commerce performance issues
+            url: point-of-sale/store-commerce-performance.md
+          - text: Troubleshoot Store Commerce setup and installation issues
+            url: point-of-sale/store-commerce-setup-installation.md
+          - text: Troubleshoot Store Commerce sign-in issues
+            url: point-of-sale/store-commerce-sign-in.md
+
+ # Card
+  - title: Pricing, discounts, and taxes
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Price change tracking issues
+            url: pricing-discounts-taxes/price-track-issues.md

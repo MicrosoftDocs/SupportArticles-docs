@@ -4,7 +4,6 @@ description: This article provides more information on why a `CREATE DATABASE` e
 ms.date: 09/09/2020
 ms.custom: sap:Administration and Management
 ms.reviewer: nathansc
-ms.prod: sql
 ---
 # Create database permission is logged to the Audit log when you run RESTORE VERIFYONLY
 

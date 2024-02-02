@@ -1,7 +1,7 @@
 ---
 title: Access is denied error and SQL Server doesn't start
 description: Provides resolutions for the problem where SQL Server fails to start  with Access is denied error.
-ms.date: 1/28/2020
+ms.date: 01/28/2020
 author: HaiyingYu
 ms.author: haiyingyu
 ms.reviewer: ramakoni

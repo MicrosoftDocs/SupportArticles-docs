@@ -1,23 +1,19 @@
 ---
 title: Using the PortQry command-line tool
 description: Discusses the features and functionality available in PortQry Command Line Port Scanner version 2.0.
-ms.date: 06/10/2022
+ms.date: 08/01/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:tcp/ip-communications, csstroubleshoot
-ms.technology: networking
+ms.subservice: networking
 ---
-# Using the PortQry command-line tool  
-
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows 8.1, Windows 8, Windows 7, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2008 R2, Windows Server 2008, Windows Server 2003
-
-## Summary
+# Using the PortQry command-line tool
 
 PortQry is a command-line tool that you can use to help troubleshoot TCP/IP connectivity issues. This tool reports the status of target TCP and User Datagram Protocol (UDP) ports on a local computer or on a remote computer. It also provides detailed information about the local computer's port usage.
 
@@ -31,6 +27,8 @@ You can use PortQry from a command prompt in one of several modes:
 
 > [!NOTE]  
 > You can download a separate tool, called PortQryUI, that includes a graphical UI for PortQry. PortQryUI has several features that can make using PortQry easier. To get the PortQryUI tool, see [PortQryUI - User Interface for the PortQry Command Line Port Scanner](https://download.microsoft.com/download/3/f/4/3f4c6a54-65f0-4164-bdec-a3411ba24d3a/portqryui.exe).
+
+_Applies to:_ &nbsp; Supported versions of Windows
 
 ## PortQry tests and results
 
@@ -102,8 +100,8 @@ The following parameters are available in regular command-line mode:
 |`-y` |Overwrite previous log file |<ul><li>When you use `-y` together with `-l`, PortQry overwrites the existing log file without prompting you to confirm the action.</li><li>If the PortQry command string does not include `-l`, PortQry ignores `-y`.</li></ul> |
 |`-sl` |Wait extra time for response (also known as slow link delay) |Use this parameter to double the time that PortQry waits for a response from a UDP port before PortQry determines that the port is NOT LISTENING or that it's FILTERED. When you query over slow or unreliable network links, the normal wait time may be too short to receive a response. |
 |`-nr` |Skip reverse name lookup |<ul><li>By default, when you use `-n` to specify an IP address for the target computer, PortQry does a reverse name lookup to resolve the IP address to a name. This process may be time-consuming, especially if PortQry can't resolve the IP address. Use `-nr` to skip this step of the query.</li><li>If you use `-n` to specify a computer or domain name, PortQry ignores `-nr`. |
-|`-sp <port_number>` |Query from a specific source port |<ul><li>The \<*port_number*> value represents the port that PortQry uses to send the query.</li><li>PortQry can't use a port that another process is already using. If the port that you specify is already in use, PortQry returns the following error message:<blockquote>Cannot use specified source port.<br/>Port is already in use.<br/>Specify a port that is not in use and run the command again.</blockquote></li><li>In the following cases, PortQry uses the specified port for the first test of the query, but not the second test: <ul><li>RPC (TCP and UDP ports 135)</li><li>LDAP (UDP port 389)</li><li>NetBIOS Adapter status query (UDP port 137)</li></ul>In these cases, PortQry uses an ephemeral port for the second test. When this occurs, PortQry records "Using ephemeral source port" in its output.</li><li>If the computer where PortQry is installed also runs the IPSec policy agent, UDP port 500 may not be available to use as a source port. To temporarily turn off the IPSec policy agent so that you can use port 500, run `net stop PolicyAgent`. When you have finished testing, run `net start PolicyAgent`.</li></ul> |
-|`-cn !<community_name>!` |Query an SMTP community |<ul><li>The \<*community_name*> value represents the name of the SNMP community to query. You must delimit this value by using exclamation points, as shown in the left column.</li><li>If the SNMP service is not listening on the target port, PortQry ignores `-cn`.</li><li>The default community name is `public`.</li></ul>  |
+|`-sp <port_number>` |Query from a specific source port |<ul><li>The \<*port_number*> value represents the port that PortQry uses to send the query.</li><li>PortQry can't use a port that another process is already using. If the port that you specify is already in use, PortQry returns the following error message:<br/>Cannot use specified source port.<br/>Port is already in use.<br/>Specify a port that is not in use and run the command again.</li><li>In the following cases, PortQry uses the specified port for the first test of the query, but not the second test: <ul><li>RPC (TCP and UDP ports 135)</li><li>LDAP (UDP port 389)</li><li>NetBIOS Adapter status query (UDP port 137)</li></ul>In these cases, PortQry uses an ephemeral port for the second test. When this occurs, PortQry records "Using ephemeral source port" in its output.</li><li>If the computer where PortQry is installed also runs the IPSec policy agent, UDP port 500 may not be available to use as a source port. To temporarily turn off the IPSec policy agent so that you can use port 500, run `net stop PolicyAgent`. When you have finished testing, run `net start PolicyAgent`.</li></ul> |
+|`-cn !<community_name>!` |Query an SNMP community |<ul><li>The \<*community_name*> value represents the name of the SNMP community to query. You must delimit this value by using exclamation points, as shown in the left column.</li><li>If the SNMP service is not listening on the target port, PortQry ignores `-cn`.</li><li>The default community name is `public`.</li></ul>  |
 |`-q` |Run PortQry in quiet mode |<ul><li>When you use `-q`, PortQry suppresses all screen output except for error messages.</li><li>To see output other than error messages, use `-q` together with `-l`. PortQry records the normal output in the log file.</li><li>If a log file already exists and you use `-q` together with `-l`, PortQry overwrites the existing log file without prompting you.</li><li>You cannot use `-q` together with `-o`, `-r`, or `-p both`.</li><li>This parameter is especially helpful when you use a batch file to run a PortQry command string.</li></ul> |
 
 ### Remarks for parameters in command-line mode
@@ -231,7 +229,7 @@ set <option>=<value>
 |`set port=<port_number>`<br />`set e=<port_number>` |Specify the target port |The \<*port_number*> value represents the port to query on the destination computer. |
 |`set sport=<port_number>`<br />`set sp=<port_number>` |Specify the source port |<ul><li>The \<*port_number*> value represents the port that PortQry uses to send the query.</li><li>PortQry can't use a port that another process is already using.</li><li>If you specify a port number of zero, PortQry uses an ephemeral port.</li></ul> |
 |`set protocol=<protocol>`<br />`set p=<protocol>` |Specify the protocol to use |The \<*protocol*> value represents the type of port to query (`tcp`, `udp`, or `both`). |
-|`set cn=<community_name>` |Specify an SMTP community |<ul><li>The \<*community_name*> value represents the name of the SNMP community to query.</li><li>If the SNMP service is not listening on the target port, PortQry ignores `-cn`.</li><li>The default community name is `public`.</li></ul> |
+|`set cn=<community_name>` |Specify an SNMP community |<ul><li>The \<*community_name*> value represents the name of the SNMP community to query.</li><li>If the SNMP service is not listening on the target port, PortQry ignores `-cn`.</li><li>The default community name is `public`.</li></ul> |
 |`set nr` |Turn reverse name lookup off or on |<ul><li>By default, if you have set an IP address as the query destination, PortQry resolves the IP address to a name. If you change this option, PortQry skips the name resolution step.</li><li>To turn reverse name lookup on again, run `set nr` a second time.</li></ul> |
 |`set sl` |Turn slow link delay on or off |<ul><li>If you change this option, PortQry doubles the length of time that it waits for a response from a UDP port before PortQry determines that the port is NOT LISTENING or that it's FILTERED. When you query over slow or unreliable network links, the normal wait time may be too short to receive a response.</li><li>To turn slow link delay off again, run `set sl` a second time.</li></ul> |
 

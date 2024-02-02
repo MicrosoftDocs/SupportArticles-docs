@@ -1,17 +1,17 @@
 ---
 title: How to manually turn disk write caching on or off
 description: Describes the steps to manually turn on or off disk write caching.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:storage-hardware, csstroubleshoot
-ms.technology: windows-server-backup-and-storage
+ms.subservice: backup-and-storage
 ---
 # How to manually turn disk write caching on or off
 

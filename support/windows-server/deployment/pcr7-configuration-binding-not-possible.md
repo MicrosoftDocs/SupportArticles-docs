@@ -1,17 +1,17 @@
 ---
 title: Windows Server shows PCR7 configuration as "Binding not possible"
 description: Introduces the PCR7 configuration "Binding not possible" issue and its cause.
-ms.date: 2/24/2022
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:setup, csstroubleshoot
-ms.technology: windows-server-deployment
+ms.subservice: deployment
 ---
 # Windows Server shows PCR7 configuration as "Binding not possible"
 
@@ -74,3 +74,7 @@ To check whether your device meets the requirements:
         7, 11
         (Uses Secure Boot for integrity validation)
     ```
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

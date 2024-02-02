@@ -1,17 +1,17 @@
 ---
 title: Power/shutdown button is missing from start screen
 description: The power/shutdown button's presence on the Windows 8.1 start screen depends on the kind of hardware that you have.
-ms.date: 09/15/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, scottmca
 ms.custom: sap:power-management, csstroubleshoot
-ms.technology: windows-client-deployment
+ms.subservice: deployment
 ---
 # Power/shutdown button may be missing from the Windows 8.1 start screen
 
@@ -50,3 +50,7 @@ Example of Microsoft Surface behavior for new installations is as follows:
 > The images that ship with the Surface 3 and Surface Pro 3 are configured to show the power button. This is a customization that is included with the image.
 
 To change the default behavior when Windows images are being deployed, IT professionals should set the Microsoft-Windows-Shell-Setup [ShowPowerButtonOnStartScreen](/windows-hardware/customize/desktop/unattend/microsoft-windows-shell-setup-showpowerbuttononstartscreen) setting for new installations.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

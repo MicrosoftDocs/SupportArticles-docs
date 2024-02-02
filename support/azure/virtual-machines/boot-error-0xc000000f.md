@@ -1,8 +1,8 @@
 ---
 title: Boot error code 0xC000000F in an Azure VM
 description: Fixes a Boot error code 0xc000000f that occurs on an Azure virtual machine (VM).
-ms.date: 07/21/2020
-ms.reviewer: jarrettr
+ms.date: 10/09/2023
+ms.reviewer: jarrettr, v-leedennis
 ms.service: virtual-machines
 ms.subservice: vm-cannot-start-stop
 ms.collection: windows
@@ -48,10 +48,9 @@ This issue occurs when one of following conditions is true:
 
 ## Resolution
 
-> [!TIP]
-> If you have a recent backup of the VM, you may try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
+### Try restoring the VM from a backup
 
-To fix the issue, try the one of following resolutions:
+ If you have a recent backup of the VM, you may try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem. If restoring the VM from backup isn't possible, follow the steps in [Resolution for error 1 and error 2](#resolution-for-error-1-and-error-2).
 
 ### Resolution for error 1 and error 2
 

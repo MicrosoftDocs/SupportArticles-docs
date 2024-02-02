@@ -1,17 +1,17 @@
 ---
 title: Registry entries about Kerberos protocol and Key Distribution Center (KDC)
 description: Lists the registry entries in Windows Server that can be used for Kerberos protocol testing and troubleshooting Kerberos authentication issues.
-ms.date: 03/24/2023
+ms.date: 08/29/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:kerberos-authentication, csstroubleshoot
-ms.technology: windows-server-security
+ms.subservice: windows-security
 ---
 # Kerberos protocol registry entries and KDC configuration keys in Windows
 
@@ -183,7 +183,7 @@ The registry entries that are listed in this section must be added to the follow
 
     This value indicates whether there are more options that must be sent as KDC options in Ticket Granting Service requests (TGS_REQ).
 
-- Entry: ClientIpAddress
+- Entry: ClientIpAddresses
 
   - Type: REG_DWORD
   - Default value: 0 (This setting is 0 because of Dynamic Host Configuration Protocol and network address translation issues.)

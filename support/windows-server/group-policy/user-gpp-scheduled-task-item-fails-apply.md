@@ -1,17 +1,17 @@
 ---
 title: User GPP Scheduled Task item fails to apply
 description: Provides a solution to an issue where User GPP Scheduled Task item fails to apply.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, akhleshs
 ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
-ms.technology: windows-server-group-policy
+ms.subservice: group-policy
 ---
 # User GPP Scheduled Task item fails to apply and logs event ID: 4098 with 0x80070005 Access is denied
 
@@ -65,3 +65,7 @@ Security Options -> "When running the task, use the following user account:"
 By default, it's set to: `%LogonDomain%\%LogonUser%`
 
 It's where the security context under which the scheduled task will run should be configured.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Group Policy issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-group-policy.md).

@@ -5,7 +5,6 @@ ms.date: 10/30/2020
 ms.custom: sap:Failover Clusters
 ms.reviewer: MICHWE
 ms.topic: how-to
-ms.prod: sql
 ---
 # Create databases or change disk file locations on a shared cluster drive on which SQL Server was not originally installed
 

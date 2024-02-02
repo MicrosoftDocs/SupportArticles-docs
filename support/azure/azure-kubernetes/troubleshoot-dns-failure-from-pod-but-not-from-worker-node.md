@@ -1,10 +1,8 @@
 ---
 title: Troubleshoot DNS resolution failures from inside the pod
 description: Troubleshoot DNS resolution failures from inside the pod but not from the worker node within an Azure Kubernetes Service (AKS) cluster.
-ms.date: 11/4/2022
-author: DennisLee-DennisLee
-ms.author: v-dele
-ms.reviewer: chiragpa, rissing
+ms.date: 11/04/2022
+ms.reviewer: chiragpa, rissing, v-leedennis
 editor: v-jsitser
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-outbound-connections
@@ -255,7 +253,7 @@ If the DNS requests from pods are working when you specify the upstream DNS serv
 
 ## Cause: Multiple destinations for DNS requests
 
-If two custom DNS servers are specified, and the third DNS server is specified as Azure DNS (168.63.129.16), the node will send requests to the first custom DNS server if it's running and reachable. In this setup, the node can resolve the custom domain. However, some of the DNS requests from the pod might be directed to Azure DNS. This is because CoreDNS can select the upstream server at random. In this scenario, the custom domain can’t be resolved. Therefore, the DNS request fails.
+If two custom DNS servers are specified, and the third DNS server is specified as Azure DNS (168.63.129.16), the node will send requests to the first custom DNS server if it's running and reachable. In this setup, the node can resolve the custom domain. However, some of the DNS requests from the pod might be directed to Azure DNS. This is because CoreDNS can select the upstream server at random. In this scenario, the custom domain can't be resolved. Therefore, the DNS request fails.
 
 ## Solution: Remove Azure DNS from virtual network settings
 

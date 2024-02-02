@@ -1,17 +1,17 @@
 ---
 title: Running TPM Management console fails
 description: Provides solutions to fix an error that occurs when you try to run the TPM Management console in Windows 10.
-ms.date: 09/08/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:devices-and-drivers, csstroubleshoot
-ms.technology: windows-client-deployment
+ms.subservice: deployment
 ---
 # "Cannot load management console" error when you try to run the TPM Management console
 
@@ -52,3 +52,7 @@ Microsoft is researching this problem and will post more information in this art
 
 For more information, see the following Windows Dev Center article:
 [SetPhysicalPresenceRequest method of the Win32_Tpm class](https://msdn.microsoft.com/library/windows/desktop/aa376478%28v=vs.85%29.aspx)
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

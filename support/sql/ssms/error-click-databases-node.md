@@ -3,7 +3,6 @@ title: Error when you click the Databases node
 description: This article describes an error message that typically occurs in SSMS when there is a problem retrieving information about one or more databases of a SQL Server instance.
 ms.date: 11/19/2020
 ms.custom: sap:Management Studio
-ms.prod: sql
 ---
 # Error message when you click the Databases node in SQL Server Management Studio in SQL Server
 

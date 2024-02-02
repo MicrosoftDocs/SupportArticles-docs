@@ -1,0 +1,43 @@
+### YamlMime:FAQ
+metadata:
+  title: Azure Windows virtual machine activation FAQ
+  description: Find answers to the frequently asked questions (FAQ) about activating a Windows virtual machine in Azure.
+  author: genlin
+  ms.topic: faq
+  tags: top-support-issue, azure-resource-manager
+  ms.service: virtual-machines
+  ms.subservice: vm-windows-activation
+  ms.collection: windows
+  ms.workload: na
+  ms.tgt_pltfrm: vm-windows
+  ms.date: 01/19/2024
+  ms.author: genli
+  ms.reviewer: cwhitley, jusilver, v-naqviadil, v-leedennis, v-weizhu
+    
+title: Azure Windows virtual machine activation FAQ
+summary: This article answers frequently asked questions (FAQ) about activating a Microsoft Windows virtual machine (VM) in Azure.
+sections:
+  - name: General
+    questions:
+      - question: |
+          Do I need to configure a KMS key for activating a Windows VM deployed from Azure Marketplace?
+        answer: |
+          No. The image in Azure Marketplace has the appropriate KMS client setup key already configured.
+
+      - question: |
+          Does Windows activation work the same way regardless of whether the VM is using Azure Hybrid Use Benefit (HUB)?
+        answer: |
+          Yes.
+
+      - question: |
+          What happens if the Windows activation period expires?
+        answer: |
+          When the grace period expires and Windows is still not activated, Windows Server 2008 R2 and later versions of Windows show more notifications about activating. The desktop wallpaper remains black, and Windows Update installs security and critical updates only, but it doesn't install optional updates. See the *Notifications* section at the bottom of the [Licensing Conditions](/previous-versions/tn-archive/ff793403(v=technet.10)) page.
+
+additionalContent: |
+  ## More information
+
+  - [Troubleshoot Windows virtual machine activation problems in Azure](./troubleshoot-activation-problems.md)
+  - [Advanced troubleshooting - Microsoft Windows activation error codes](../../windows-server/deployment/troubleshoot-activation-error-codes.md)
+  
+  [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

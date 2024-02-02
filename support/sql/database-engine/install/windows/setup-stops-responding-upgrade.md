@@ -3,7 +3,6 @@ title: Setup stops responding when you upgrade
 description: This article provides a resolution for the problem that occurs when you upgrade a SQL instance from one major version to another.
 ms.date: 09/25/2020
 ms.custom: sap:Installation, Patching and Upgrade
-ms.prod: sql
 ---
 # Setup stops responding when you try to upgrade SQL Server to a different version
 

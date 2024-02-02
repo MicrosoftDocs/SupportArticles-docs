@@ -4,7 +4,6 @@ description: This article provides a workaround for the problem where the SQL Ag
 ms.date: 09/19/2022
 ms.custom: sap:Administration and Management
 ms.reviewer: vencher, vasilp
-ms.prod: sql
 ---
 # SQL Agent job that executes a distributed query may fail with 65535, 782, or 7437 error messages
 

@@ -100,4 +100,4 @@ After you save the report, you will have to assign security permissions to the m
 
 The information above is published in this blog:
 
-[How to add the Inventory account or Purchases account to the "POP Purchase Order" Forms in Microsoft Dynamics GP](https://community.dynamics.com/gp/b/dynamicsgp/archive/2016/09/16/how-to-add-the-purchases-or-the-inventory-account-to-the-quot-pop-purchase-order-blank-form-quot-in-microsoft-dynamics-gp)
+[How to add the Inventory account or Purchases account to the "POP Purchase Order" Forms in Microsoft Dynamics GP](https://community.dynamics.com/blogs/post/?postid=4ce4562a-48ad-4d51-89c7-ae6846a0ad24)

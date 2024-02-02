@@ -1,17 +1,17 @@
 ---
 title: Change in the behavior of the format command in Windows Vista and later versions
 description: Discusses a change in the behavior of the format command in Windows Vista and later Windows versions.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:data-corruption-and-disk-errors, csstroubleshoot
-ms.technology: windows-server-backup-and-storage
+ms.subservice: backup-and-storage
 ---
 # Change in the behavior of the format command in Windows Vista and later versions
 

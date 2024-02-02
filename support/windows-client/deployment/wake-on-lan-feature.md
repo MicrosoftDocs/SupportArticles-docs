@@ -1,17 +1,17 @@
 ---
 title: Wake on LAN behavior
 description: Describes the different behaviors of the Wake on LAN (WOL) technology in Windows 7 and Windows 10.
-ms.date: 09/08/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:power-management, csstroubleshoot
-ms.technology: windows-client-deployment
+ms.subservice: deployment
 ---
 # Wake on LAN (WOL) behavior in Windows 10
 
@@ -48,6 +48,10 @@ To disable the S4 state in Windows 10, follow these steps.
 2. Select the **Choose what the power buttons do** link.
 3. Clear the **Turn on fast startup (recommended)** check box.
 4. Select **Save Settings**.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).
 
 ## References
 

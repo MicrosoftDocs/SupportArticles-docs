@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 4567109
 
 ## Issue
 
-The blog article can be found [here](https://community.dynamics.com/gp/b/dynamicsgp/posts/error-you-can-t-transfer-encumbrances-for-xxxx-when-there-are-outstanding-encumbrance-amounts-for-a-prior-fiscal-year).
+The blog article can be found [here](https://community.dynamics.com/blogs/post/?postid=a59bf1e9-7e94-4fbe-8b96-4e4508fcc715).
 
 The Year End Encumbrance Transfer window is used to transfer encumbrance balances on open Purchase orders (POs) from the current year to the next year. The transfer process automatically liquidates encumbered amounts in the current year and updates open purchase orders with the remaining amounts that will be delivered in the next year.
 

@@ -1,17 +1,17 @@
 ---
 title: How to customize the default local user profile when you prepare an image of Windows
 description: Describes how to customize the default local user profile when you prepare an image of Windows XP or Windows Server 2003.
-ms.date: 09/14/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: pleblanc, scottmca, toshikas, clandis, kaushika
 ms.custom: sap:setup, csstroubleshoot
-ms.technology: windows-client-deployment
+ms.subservice: deployment
 ---
 # How to customize the default local user profile when you prepare an image of Windows
 
@@ -32,7 +32,7 @@ After you deploy the image, these settings are applied to all new users who log 
 > [!NOTE]
 > This article supersedes all previously published procedures for customizing default local user profiles when you prepare images.
 
-For more information about the steps to customize the default local user profile for Windows Vista or later operating systems, see [How to customize default user profiles in Windows Vista, Windows Server 2008, Windows 7, and in Windows Server 2008 R2](/troubleshoot/windows-client/deployment/customize-default-local-user-profile).
+For more information about the steps to customize the default local user profile for Windows Vista or later operating systems, see [How to customize default user profiles in Windows Vista, Windows Server 2008, Windows 7, and in Windows Server 2008 R2](customize-default-local-user-profile.md).
 
 ## How to customize the default local user profile in Windows XP or in Windows Server 2003
 
@@ -93,3 +93,7 @@ Implement the required new or changed settings as a logon script and configure i
 You can automate the procedure in Knowledge Base article 284193 by using the Reg.exe command. For an alternative solution, see the "Targeted changes to the Default User Registry hive and profile folders" section on the following Microsoft website:
 
 [Configuring Default User Settings – Full Update for Windows 7 and Windows Server 2008 R2](/archive/blogs/deploymentguys/configuring-default-user-settings-full-update-for-windows-7-and-windows-server-2008-r2)
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

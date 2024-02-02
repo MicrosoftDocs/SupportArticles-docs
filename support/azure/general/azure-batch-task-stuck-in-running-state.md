@@ -2,9 +2,7 @@
 title: Azure Batch task is stuck in the Running state
 description: Provides the cause and some suggestions for an issue where an Azure Batch task is stuck in the Running state without any errors.
 ms.date: 04/19/2023
-author: AmandaAZ
-ms.author: v-weizhu
-ms.reviewer: biny
+ms.reviewer: biny, v-weizhu
 ms.service: batch
 ---
 # Azure Batch task is stuck in the Running state

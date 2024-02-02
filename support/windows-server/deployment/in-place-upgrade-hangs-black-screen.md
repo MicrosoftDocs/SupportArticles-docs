@@ -1,17 +1,17 @@
 ---
 title: Domain Controllers in-place upgrade hangs at black screen
 description: This article describes a problem where domain controllers in-place upgraded hangs at a solid black screen.
-ms.date: 3/24/2022
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: arrenc, herbertm, warrenw, kaushika, joscon
 ms.custom: sap:setup, csstroubleshoot
-ms.technology: windows-server-deployment
+ms.subservice: deployment
 ---
 # Domain Controllers in-place upgrade hangs at black screen
 
@@ -103,3 +103,7 @@ You might run into a problem with Internet Explorer after the rewind:
 > The specified module could not be found.
 
 :::image type="content" source="media/in-place-upgrade-hangs-black-screen/ie-error-at-startup.png" alt-text="There was a problem starting iernonce.dll error occurs after the rewind." border="false":::
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

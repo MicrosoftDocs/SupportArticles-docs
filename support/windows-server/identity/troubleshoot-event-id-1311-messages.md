@@ -1,17 +1,17 @@
 ---
 title: Troubleshoot Event ID 1311 messages
 description: Describes how to troubleshoot event ID 1311 messages in the Directory Service event.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, arrenc, LARRYGA
 ms.custom: sap:active-directory-replication, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # How to troubleshoot Event ID 1311 messages on a Windows domain
 
@@ -371,3 +371,7 @@ In the following example, the `repadmin /showism` output stops in the middle of 
 > -1:0:0, -1:0:0, -1:0:0, -1:0:0, -1:0:0, 100:0:0, 150:0:0, 150:0:0, 100:0:0,
 
 To resolve this truncation problem, obtain an updated version of the Repadmin.exe file from Microsoft Product Support Services (PSS).
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Active Directory replication issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication.md).

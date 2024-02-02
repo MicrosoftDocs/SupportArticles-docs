@@ -1,23 +1,23 @@
 ---
 title: Disk duplication of Windows installations
 description: Describes the SID and supported methods for cloning or duplicating a Windows installation.
-ms.date: 4/12/2022
+ms.date: 07/14/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, scottmca
 ms.custom: sap:deduplication, csstroubleshoot
-ms.technology: windows-server-backup-and-storage
+ms.subservice: backup-and-storage
 ---
 # The Microsoft policy for disk duplication of Windows installations
 
 This article describes the SID and supported methods for cloning or duplicating a Windows installation.
 
-_Applies to:_ &nbsp; Windows 10, version 2004, Windows 10, version 1909, Windows 10, version 1903, Windows 10, version 1809, Windows 7 Service Pack 1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Supported versions of Windows Server and Windows Client  
 _Original KB number:_ &nbsp; 314828
 
 ## Summary
@@ -74,6 +74,7 @@ We support the following operating systems that are prepared by using the Syspre
 - All versions of Windows Server 2019
 - All versions of Windows Server 1903
 - All versions of Windows Server, version 1909
+- All versions of Windows 11
 
 We do not provide support for computers that are set up by using SID-duplicating tools other than the System Preparation tool. For example, this includes the following:
 

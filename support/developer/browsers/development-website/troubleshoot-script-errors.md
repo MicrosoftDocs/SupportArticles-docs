@@ -3,7 +3,6 @@ title: Script errors in Internet Explorer
 description: A script error occurs in Internet Explorer, the webpage cannot be displayed correctly and you receive an error message.
 ms.date: 06/09/2020
 ms.reviewer: 
-ms.technology: internet-explorer-development-website
 ---
 # How to troubleshoot script errors in Internet Explorer
 
@@ -43,7 +42,7 @@ The following warning message may also appear in the Internet Explorer Status ba
 This problem occurs because the HTML source code for the webpage doesn't work correctly with client-side script, such as Microsoft JScript or Microsoft Visual Basic script. This problem may occur for one or more of the following reasons:
 
 - A problem exists in the HTML source code of the webpage.
-- The web page is using newer technologies that are [not supported](https://developer.microsoft.com/microsoft-edge/status/) by Internet Explorer.
+- The web page is using newer technologies that aren't supported by Internet Explorer. For more information on moving from Internet Explorer to Microsoft Edge, see [Internet Explorer 11 has retired and is officially out of support-what you need to know](https://blogs.windows.com/windowsexperience/2022/06/15/internet-explorer-11-has-retired-and-is-officially-out-of-support-what-you-need-to-know/).
 - The web page is using client-side visual basic script - that is deprecated.
 - Active scripting, ActiveX controls, or Java programs are blocked on your computer or on the network. Internet Explorer or another program, such as antivirus programs or firewalls, can be configured to block Active scripting, ActiveX controls, or Java programs.
 - Antivirus software is configured to scan your **Temporary Internet Files** or **Downloaded Program Files** folders.

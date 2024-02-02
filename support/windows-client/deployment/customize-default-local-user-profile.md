@@ -1,17 +1,17 @@
 ---
 title: Customize default local user profile
 description: Describes how to customize a default user profile or a mandatory user profile in Windows 7.
-ms.date: 09/08/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:setup, csstroubleshoot
-ms.technology: windows-client-deployment
+ms.subservice: deployment
 ---
 # Customize the default local user profile when you prepare an image of Windows
 
@@ -176,7 +176,7 @@ You can configure the default local user profile to become a mandatory profile. 
 
 ## Still need help
 
-If this article does not answer your question, [ask a question](https://answers.microsoft.com/windows/forum) and pose it to other community members at Microsoft Community.
+If this article does not answer your question, [ask a question](https://answers.microsoft.com) and pose it to other community members at Microsoft Community.
 
 ## Resources
 
@@ -185,3 +185,7 @@ If you are having issues logging on to a user profile, see the website:
 - [Fix a corrupted user profile](https://support.microsoft.com/help/14039/windows-fix-corrupted-user-profile)
 
 - [Create a user account](https://support.microsoft.com/help/13951/windows-create-user-account)
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

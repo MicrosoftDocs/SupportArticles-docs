@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, markstan
 ms.custom: sap:installation-and-configuration, csstroubleshoot
-ms.technology: windows-client-application-virtualization-app-v
+ms.subservice: application-virtualization-app-v
 ---
 # Current list of App-V 5.x file versions
 

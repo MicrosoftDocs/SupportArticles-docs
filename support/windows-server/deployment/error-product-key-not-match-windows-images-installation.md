@@ -1,17 +1,17 @@
 ---
 title: Error The product key entered does not match any of the Windows images during Windows installation
 description: Describes an issue where you receive an error message during the installation of Windows.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:activation, csstroubleshoot
-ms.technology: windows-server-deployment
+ms.subservice: deployment
 ---
 # Windows installation fails with error: The product key entered does not match any of the Windows images available for installation. Enter a different product key
 
@@ -53,3 +53,7 @@ If a key is supplied, the key is attempted to be use with the image that is avai
 > - Volume License media supplies a product key with the media so it succeeds with step 1 logic.
 > - You should not see this issue with Volume License media unless you are using an Unattend file or have modified files on the media to change or replace the EI.cfg or PID.txt.
 > - How to drop a PID.txt with the product key specified: [Windows Setup Edition Configuration and Product ID Files (EI.cfg and PID.txt)](https://technet.microsoft.com/library/hh824952.aspx)
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

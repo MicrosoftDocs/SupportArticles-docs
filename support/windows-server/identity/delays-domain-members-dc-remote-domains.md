@@ -1,17 +1,17 @@
 ---
 title: Delays when domain members are required to communicate to DCs on remote domains
 description: Discusses a problem that causes delays when domain members try to access domain controllers in other domains.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:schema-update-failure-or-conflict, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # Delays when domain members are required to communicate to DCs on remote domains
 
@@ -58,11 +58,11 @@ Microsoft does not have documentation about how to determine which DCs of any do
 
 You must expect any domain member to reach out to all DCs of all forests. If you want to restrict the domain members, you have to use a trial and error approach. If you find that delays occur because additional DCs are contacted, you have to adopt firewall rules that allow access to those DCs.  
 
-If you are not sure which ports are available or blocked by the firewall, use the PortQry tool to test the settings. For more information, see [New features and functionality in PortQry version 2.0](/troubleshoot/windows-server/networking/portqry-command-line-port-scanner-v2).
+If you are not sure which ports are available or blocked by the firewall, use the PortQry tool to test the settings. For more information, see [New features and functionality in PortQry version 2.0](../networking/portqry-command-line-port-scanner-v2.md).
 
 ## References
 
 - [ADConnection Overview](/openspecs/windows_protocols/ms-adts/f460470c-8923-4836-95e3-cc09ef00a1a4)  
 - [LDAP Referrals](/openspecs/windows_protocols/ms-adts/5cf1457f-b812-4e8c-afb4-e48505e19ca2)  
 - [Handling and following referrals](/openspecs/windows_protocols/ms-adts/b2edefdd-16f9-413d-88c5-a2f5c137bafe)  
-- [Service overview and network port requirements for Windows](/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements)
+- [Service overview and network port requirements for Windows](../networking/service-overview-and-network-port-requirements.md)

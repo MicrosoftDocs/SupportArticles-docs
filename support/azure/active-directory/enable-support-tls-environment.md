@@ -1,16 +1,16 @@
 ---
-title: Enable TLS 1.2 support as Azure AD TLS 1.0/1.1 is deprecated
-description: This article describes how to enable support for TLS 1.2 in your environment, in preparation for upcoming Azure AD TLS 1.0/1.1 deprecation.
-ms.date: 10/3/2022
-author: DennisLee-DennisLee
-ms.author: v-dele
-ms.reviewer: dahans, abizerh
+
+title: Enable TLS 1.2 support as Microsoft Entra TLS 1.0/1.1 is deprecated
+description: This article describes how to enable support for TLS 1.2 in your environment, in preparation for upcoming Microsoft Entra TLS 1.0/1.1 deprecation.
+ms.date: 11/08/2023
+ms.reviewer: dahans, abizerh, v-leedennis, v-weizhu
 ms.service: active-directory
 ms.subservice: authentication
+ms.custom: has-azure-ad-ps-ref
 ---
-# Enable support for TLS 1.2 in your environment for Azure AD TLS 1.1 and 1.0 deprecation
+# Enable support for TLS 1.2 in your environment for Microsoft Entra TLS 1.1 and 1.0 deprecation
 
-To improve the security posture of your tenant, and to remain in compliance with industry standards, Microsoft Azure Active Directory (Azure AD) will soon stop supporting the following Transport Layer Security (TLS) protocols and ciphers:
+To improve the security posture of your tenant, and to remain in compliance with industry standards, Microsoft Entra ID will soon stop supporting the following Transport Layer Security (TLS) protocols and ciphers:
 
 - TLS 1.1
 - TLS 1.0
@@ -18,14 +18,14 @@ To improve the security posture of your tenant, and to remain in compliance with
 
 ## How this change might affect your organization
 
-Do your applications communicate with or authenticate against Azure Active Directory? Then those applications might not work as expected if they can't use TLS 1.2 to communicate. This situation includes:
+Do your applications communicate with or authenticate against Microsoft Entra ID? Then those applications might not work as expected if they can't use TLS 1.2 to communicate. This situation includes:
 
-- Azure AD Connect
-- Azure AD PowerShell
-- Azure AD Application Proxy connectors
+- Microsoft Entra Connect
+- Microsoft Graph PowerShell
+- Microsoft Entra application proxy connectors
 - PTA agents
 - Legacy browsers
-- Applications that are integrated with Azure AD
+- Applications that are integrated with Microsoft Entra ID
 
 ## Why this change is being made
 
@@ -34,39 +34,39 @@ These protocols and ciphers are being deprecated for the following reasons:
 - To follow the latest compliance standards for the [Federal Risk and Authorization Management Program (FedRAMP)](https://www.fedramp.gov/).
 - To improve security when users interact with our cloud services.
 
-The services are being deprecated on the following dates:
+The **TLS 1.0**, **TLS 1.1**, and **3DES Cipher suite** services are being deprecated on the following schedule.
 
-- **TLS 1.0**, **1.1** and **3DES Cipher suite** in U.S. government instances starting on **March 31, 2021**.
-- **TLS 1.0**, **1.1** and **3DES Cipher suite** in public instances starting **January 31, 2022**. (This date has been postponed from **June 30th, 2021** to **January 31st, 2022**, to give administrators more time to remove the dependency on legacy TLS protocols and ciphers (TLS 1.0,1.1 and 3DES).)
+| Instance type                                    | Deprecation date | Status        |
+|--------------------------------------------------|------------------|---------------|
+| U.S. government instances                        | March 31, 2021   | **COMPLETED** |
+| Public instances                                 | January 31, 2022 | **COMPLETED** |
+| Microsoft Entra instances operated by 21Vianet in China | June 2023        | **ONGOING**   |
 
 ## Enable support for TLS 1.2 in your environment
 
-How do you maintain a secure connection to Azure Active Directory (Azure AD) and Microsoft 365 services? You enable your client apps and client and server operating system (OS) for TLS 1.2 and modern cipher suites.
+To ensure a secure connection to Microsoft Entra ID and Microsoft 365 services, configure your client apps and both the client and server operating systems (OS) to support TLS 1.2 and contemporary cipher suites.
 
 ### Guidelines for enabling TLS 1.2 on clients
 
 - Update Windows and the default TLS that you use for "WinHTTP".
 - Identify and reduce you dependency on the client apps and operating systems that don't support TLS 1.2.
-- Enable TLS 1.2 for applications and services that communicate with Azure AD.
+- Enable TLS 1.2 for applications and services that communicate with Microsoft Entra ID.
 - Update and configure your .NET Framework installation to support TLS 1.2.
-- Make sure that applications and PowerShell (that use [Microsoft Graph](https://graph.microsoft.com)) and Azure AD PowerShell scripts are hosted and run on a platform that supports TLS 1.2.
+- Make sure that applications and PowerShell (that use [Microsoft Graph](https://graph.microsoft.com) and [Microsoft Graph PowerShell](/powershell/microsoftgraph/overview)) scripts are hosted and run on a platform that supports TLS 1.2.
 - Make sure that your web browser has the latest updates. We recommend that you use the new Microsoft Edge browser (based on Chromium). For more information, see the [Microsoft Edge release notes for Stable Channel](/deployedge/microsoft-edge-relnote-stable-channel).
 - Make sure that your web proxy supports TLS 1.2. For more information about how to update a web proxy, check with the vendor of your web proxy solution.
 
 For more information, see the following articles:
 
 - [How to enable TLS 1.2 on clients](/mem/configmgr/core/plan-design/security/enable-tls-1-2-client)
-- [Preparing for TLS 1.2 in Office 365 and Office 365 GCC - Microsoft 365 Compliance](/microsoft-365/compliance/prepare-tls-1.2-in-office-365)
+- [Preparing for TLS 1.2 in Office 365 and Office 365 GCC - Microsoft 365 Compliance](/purview/prepare-tls-1.2-in-office-365)
 
 ### Update the Windows OS and the default TLS that you use for WinHTTP
 
 These operating systems natively support TLS 1.2 for client-server communications over WinHTTP:
 
-- Windows 10
-- Windows 8.1
-- Windows Server 2016
-- Windows Server 2012 R2
-- Later versions of Windows and Windows Server
+- Windows 8.1, Windows 10, and later versions
+- Windows Server 2012 R2, Windows Server 2016, and later versions
 
 Verify that you haven't explicitly disabled TLS 1.2 on these platforms.
 
@@ -80,9 +80,9 @@ You can configure those values to add TLS 1.2 and TLS 1.1 to the default secure 
 For more information, see [How to enable TLS 1.2 on clients](/mem/configmgr/core/plan-design/security/enable-tls-1-2-client).
 
 > [!NOTE]
-> By default, an OS that supports TLS 1.2 (for example, Windows 10) also supports legacy versions of the TLS protocol. When a connection is made by using TLS 1.2 and it doesn’t get a timely response, or when the connection is reset, the OS might try to connect to the target web service by using an older TLS protocol (such as TLS 1.0 or 1.1). This usually occurs if the network is busy, or if a packet drops in the network. After the temporary fallback to the legacy TLS, the OS will try again to make a TLS 1.2 connection.
+> By default, an OS that supports TLS 1.2 (for example, Windows 10) also supports legacy versions of the TLS protocol. When a connection is made by using TLS 1.2 and it doesn't get a timely response, or when the connection is reset, the OS might try to connect to the target web service by using an older TLS protocol (such as TLS 1.0 or 1.1). This usually occurs if the network is busy, or if a packet drops in the network. After the temporary fallback to the legacy TLS, the OS will try again to make a TLS 1.2 connection.
 >
-> What will be the status of such fallback traffic after Microsoft stops supporting the legacy TLS? The OS might still try to make a TLS connection by using the legacy TLS protocol. But if the Microsoft service is no longer supporting the older TLS protocol, the legacy TLS-based connection won’t succeed. This will force the OS to try the connection again by using TLS 1.2 instead.
+> What will be the status of such fallback traffic after Microsoft stops supporting the legacy TLS? The OS might still try to make a TLS connection by using the legacy TLS protocol. But if the Microsoft service is no longer supporting the older TLS protocol, the legacy TLS-based connection won't succeed. This will force the OS to try the connection again by using TLS 1.2 instead.
 
 ### Identify and reduce dependency on clients that don't support TLS 1.2
 
@@ -96,53 +96,70 @@ Update the following clients to provide uninterrupted access:
 
 For more information, see [Handshake Simulation for various clients connecting to www.microsoft.com, courtesy SSLLabs.com](/security/engineering/solving-tls1-problem#appendix-a-handshake-simulation).
 
-### Enable TLS 1.2 on common server roles that communicate with Azure AD
+<a name='enable-tls-12-on-common-server-roles-that-communicate-with-azure-ad'></a>
 
-- Azure AD Connect (install the latest version)
+### Enable TLS 1.2 on common server roles that communicate with Microsoft Entra ID
+
+- Microsoft Entra Connect (install the latest version)
   - Do you also want to enable TLS 1.2 between the sync engine server and a remote SQL Server? Then make sure you have the required versions installed for [TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/topic/kb3135244-tls-1-2-support-for-microsoft-sql-server-e4472ef8-90a9-13c1-e4d8-44aad198cdbe).
-- Azure AD Connect Authentication Agent (pass-through authentication) (version 1.5.643.0 and later versions)
+- Microsoft Entra Connect Authentication Agent (pass-through authentication) (version 1.5.643.0 and later versions)
 - Azure Application Proxy (version 1.5.1526.0 and later versions enforce TLS 1.2)
-- Active Directory Federation Services (AD FS) for servers that are configured to use Azure Multi-Factor Authentication (Azure MFA)
-- NPS servers that are configured to use the NPS extension for Azure AD MFA
+- Active Directory Federation Services (AD FS) for servers that are configured to use Azure multifactor authentication (Azure MFA)
+- NPS servers that are configured to use the NPS extension for Microsoft Entra multifactor authentication
 - MFA Server version 8.0._x_ or later versions
-- Azure AD Password Protection proxy service
+- Microsoft Entra Password Protection proxy service
 
   **Action required**
 
   1. We highly recommend that you run the latest version of the agent, service, or connector.
   2. By default, TLS 1.2 is enabled on Windows Server 2012 R2 and later versions. In rare instances, the default OS configuration might have been modified to disable TLS 1.
 
-      To make sure that TLS 1.2 is enabled, we recommend that you explicitly add the registry values from the [Enable TLS 1.2 on client or server operating systems](#enable-tls-12-on-client-or-server-operating-systems-) section on servers that are running Windows Server and that communicate with Azure AD.
+      To make sure that TLS 1.2 is enabled, we recommend that you explicitly add the registry values from the [Enable TLS 1.2 on client or server operating systems](#enable-tls-12-on-client-or-server-operating-systems-) section on servers that are running Windows Server and that communicate with Microsoft Entra ID.
 
   3. Most of the previously listed services are dependent on .NET Framework. Make sure it's updated as described in the [Update and configure .NET Framework to support TLS 1.2](#update-and-configure-net-framework-to-support-tls-12-) section.
 
   For more information, see the following articles:
-  - [TLS 1.2 enforcement - Enforce TLS 1.2 for the Azure AD Registration Service](/azure/active-directory/devices/reference-device-registration-tls-1-2)
-  - [Azure AD Connect: TLS 1.2 enforcement for Azure Active Directory Connect](/azure/active-directory/hybrid/reference-connect-tls-enforcement)
-  - [Understand Azure AD Application Proxy connectors](/azure/active-directory/manage-apps/application-proxy-connectors#requirements-and-deployment)
+  - [TLS 1.2 enforcement - Enforce TLS 1.2 for the Microsoft Entra Registration Service](/azure/active-directory/devices/reference-device-registration-tls-1-2)
+  - [Microsoft Entra Connect: TLS 1.2 enforcement for Microsoft Entra Connect](/azure/active-directory/hybrid/reference-connect-tls-enforcement)
+  - [Understand Microsoft Entra application proxy connectors](/azure/active-directory/manage-apps/application-proxy-connectors#requirements-and-deployment)
 
 ## Enable TLS 1.2 on client or server operating systems <a name="enable-tls-12"></a>
 
 ### Registry strings
 
-To manually configure and enable TLS 1.2 at the operating system level, you can add the following DWORD values.
+For Windows 2012 R2, Windows 8.1, and later operating systems, TLS 1.2 is enabled by default. Thus, the following registry values aren't displayed unless they were set with different values.
 
-For Windows 2012 R2, Windows 8.1, and later OS, TLS 1.2 is enabled by default. Thus, the following registry values aren't required unless they were set with different values.
+To manually configure and enable TLS 1.2 at the operating system level, you can add the following DWORD values:
 
 - **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Client**
-  - "DisabledByDefault": **00000000**
-  - "Enabled": **00000001**
+  - `DisabledByDefault`: **00000000**
+  - `Enabled`: **00000001**
 - **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Server**
-  - "DisabledByDefault": **00000000**
-  - "Enabled": **00000001**
+  - `DisabledByDefault`: **00000000**
+  - `Enabled`: **00000001**
 - **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft&#92;.NETFramework\v4.0.30319**
-  - "SchUseStrongCrypto": **00000001**
+  - `SchUseStrongCrypto`: **00000001**
 
-To enable TLS 1.2 by using a PowerShell script, see [TLS 1.2 enforcement for Azure AD Connect](/azure/active-directory/hybrid/reference-connect-tls-enforcement).
+To enable TLS 1.2 by using a PowerShell script, see [TLS 1.2 enforcement for Microsoft Entra Connect](/azure/active-directory/hybrid/reference-connect-tls-enforcement).
+
+## How to check which TLS protocol is being used
+
+Here are two ways to check which TLS is being used:
+
+- Browser security settings
+- Internet Properties in Windows
+
+To check which TLS protocol is being used by using Internet Properties, follow these steps:
+
+1. Press <kbd>Windows</kbd>+<kbd>R</kbd> to open the **Run** box.
+2. Type *inetcpl.cpl* and then select **OK**. Then, the **Internet Properties** window is opened.
+3. In the **Internet Properties** window, select the **Advanced** tab and scroll down to check the settings related to TLS.
+
+    :::image type="content" source="media/enable-support-tls-environment/used-tls-protocol.png" alt-text="Screenshot that shows TLS-related settings in Internet Properties.":::
 
 ## Update and configure .NET Framework to support TLS 1.2 <a name="update-configure-tls-12"></a>
 
-Managed Azure AD-integrated applications and Windows PowerShell scripts (using Azure AD PowerShell V1 (Microsoft MSOnline), V2 (AzureAD), [Microsoft Graph](https://graph.microsoft.com)) may use .NET Framework.
+Managed Microsoft Entra integrated applications and Windows PowerShell scripts (using [Microsoft Graph PowerShell](/powershell/microsoftgraph/overview) and [Microsoft Graph](https://graph.microsoft.com)) may use .NET Framework.
 
 ### Install .NET updates to enable strong cryptography
 
@@ -172,19 +189,19 @@ For any computer that communicates across the network and runs a TLS 1.2-enabled
 - For 32-bit applications that are running on a 32-bit OS and 64-bit applications that are running on a 64-bit OS, update the following subkey values:
 
   - **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft&#92;.NETFramework\v2.0.50727**
-    - "SystemDefaultTlsVersions": **00000001**
-    - "SchUseStrongCrypto": **00000001**
+    - `SystemDefaultTlsVersions`: **00000001**
+    - `SchUseStrongCrypto`: **00000001**
   
   - **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft&#92;.NETFramework\v4.0.30319**
-    - "SystemDefaultTlsVersions": **00000001**
-    - "SchUseStrongCrypto": **00000001**
+    - `SystemDefaultTlsVersions`: **00000001**
+    - `SchUseStrongCrypto`: **00000001**
 - For 32-bit applications that are running on 64-bit OSs, update the following subkey values:
   - **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft&#92;.NETFramework\v2.0.50727**
-    - "SystemDefaultTlsVersions": **dword:00000001**
-    - "SchUseStrongCrypto": **dword:00000001**
+    - `SystemDefaultTlsVersions`: **dword:00000001**
+    - `SchUseStrongCrypto`: **dword:00000001**
   - **HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft&#92;.NETFramework\v4.0.30319**
-    - "SystemDefaultTlsVersions": **dword:00000001**
-    - "SchUseStrongCrypto": **dword:00000001**
+    - `SystemDefaultTlsVersions`: **dword:00000001**
+    - `SchUseStrongCrypto`: **dword:00000001**
 
 For example, set these values on:
 
@@ -194,14 +211,14 @@ For example, set these values on:
 
 For more information, see the following articles:
 
-- [TLS Cipher Suites supported by Azure AD](/azure/active-directory-b2c/https-cipher-tls-requirements#cipher-suites)
+- [TLS Cipher Suites supported by Microsoft Entra ID](/azure/active-directory-b2c/https-cipher-tls-requirements#cipher-suites)
 - [How to enable TLS 1.2 on clients](/mem/configmgr/core/plan-design/security/enable-tls-1-2-client)
 - [Transport Layer Security (TLS) best practices with the .NET Framework](/dotnet/framework/network-programming/tls#configuring-schannel-protocols-in-the-windows-registry)
 - [Solving the TLS 1.0 Problem - Security documentation](/security/engineering/solving-tls1-problem)
 
 ## Overview of new telemetry in the sign-in logs
 
-To help you identify any clients or apps that still use legacy TLS in your environment, view the Azure AD sign-in logs. For clients or apps that sign in over legacy TLS, Azure AD marks the **Legacy TLS** field in **Additional Details** with **True**. The Legacy TLS field only appears if the sign-in occurred over legacy TLS. If you don’t see any legacy TLS in your logs, you're ready to switch to TLS 1.2.
+To help you identify any clients or apps that still use legacy TLS in your environment, view the Microsoft Entra sign-in logs. For clients or apps that sign in over legacy TLS, Microsoft Entra ID marks the **Legacy TLS** field in **Additional Details** with **True**. The Legacy TLS field only appears if the sign-in occurred over legacy TLS. If you don't see any legacy TLS in your logs, you're ready to switch to TLS 1.2.
 
 To find the sign-in attempts that used legacy TLS protocols, an administrator can review the logs by:
 
@@ -215,16 +232,16 @@ These methods are described below.
 
 You can query the sign-in logs using Azure Monitor. Azure Monitor is a powerful log analysis, monitoring, and alerting tool. Use Azure Monitor for:
 
-- Azure AD logs
+- Microsoft Entra logs
 - Azure resources logs
 - Logs from independent software tools
 
 > [!NOTE]
-> You need an Azure AD Premium license to export reporting data to Azure Monitor.
+> You need a Microsoft Entra ID P1 or P2 license to export reporting data to Azure Monitor.
 
 To query for legacy TLS entries using Azure Monitor:
 
-1. In [Integrate Azure AD logs with Azure Monitor logs](/azure/active-directory/reports-monitoring/howto-integrate-activity-logs-with-log-analytics), follow the instructions for how to access the Azure AD sign-in logs in Azure Monitor.
+1. In [Integrate Microsoft Entra logs with Azure Monitor logs](/azure/active-directory/reports-monitoring/howto-integrate-activity-logs-with-log-analytics), follow the instructions for how to access the Microsoft Entra sign-in logs in Azure Monitor.
 
 1. In the query definition area, paste the following Kusto Query Language query:
 
@@ -286,7 +303,7 @@ To see the Legacy TLS flag, you may download the last seven days of sign-in logs
 
 To download sign-in logs as JSON:
 
-1. In the [Azure portal](https://portal.azure.com), search for and select **Azure Active Directory**.
+1. In the [Azure portal](https://portal.azure.com), search for and select **Microsoft Entra ID**.
 
 1. In the **Overview** page menu, select **Sign-in logs**.
 
@@ -325,7 +342,7 @@ To review the JSON logs:
 Use PowerShell to filter and export sign-in log entries where legacy TLS is used.
 
 > [!NOTE]
-> You need an Azure AD Premium license to call the [Microsoft Graph API](/graph/use-the-api) through PowerShell.
+> You need a Microsoft Entra ID P1 or P2 license to call the [Microsoft Graph API](/graph/use-the-api) through PowerShell.
 
 To filter and export the sign-in log entries:
 
@@ -405,9 +422,9 @@ To filter and export the sign-in log entries:
     } | Export-Csv -Path ($pathForExport + "WorkloadIdentities_lowTls_$tId.csv") -NoTypeInformation
     ```
 
-1. In the [Azure portal](https://portal.azure.com), search for and select **Azure Active Directory**.
+1. In the [Azure portal](https://portal.azure.com), search for and select **Microsoft Entra ID**.
 
-1. Copy the **Tenant ID** value from the Azure Active Directory page into the first statement of the PowerShell script, assigning it to the `$tId` variable.
+1. Copy the **Tenant ID** value from the Microsoft Entra ID page into the first statement of the PowerShell script, assigning it to the `$tId` variable.
 
 1. Save and run the script. If you're prompted when the script is running, sign in as a global administrator. Then give your consent to let Microsoft Graph read the audit log information.
 
@@ -418,11 +435,13 @@ To filter and export the sign-in log entries:
     - **UserAgent**
 ---
 
-### View details about log entries in the Azure AD portal
+<a name='view-details-about-log-entries-in-the-azure-ad-portal'></a>
 
-After you obtain the logs, you can get more details about legacy TLS-based sign-in log entries in the Azure AD portal. Follow these steps:
+### View details about log entries in the Microsoft Entra admin center
 
-1. In the [Azure portal](https://portal.azure.com), search for and select **Azure Active Directory**.
+After you obtain the logs, you can get more details about legacy TLS-based sign-in log entries in the Microsoft Entra admin center. Follow these steps:
+
+1. In the [Azure portal](https://portal.azure.com), search for and select **Microsoft Entra ID**.
 
 1. In the **Overview** page menu, select **Sign-in logs**.
 
@@ -432,6 +451,6 @@ After you obtain the logs, you can get more details about legacy TLS-based sign-
 
 1. Check for a **Legacy TLS (TLS 1.0, 1.1, or 3DES)** value that's set to **True**. If you see that particular field and value, the sign-in attempt was made using legacy TLS. If the sign-in attempt was made using TLS 1.2, that field doesn't appear.
 
-For more information, see [Sign-in logs in Azure Active Directory](/azure/active-directory/reports-monitoring/concept-sign-ins).
+For more information, see [Sign-in logs in Microsoft Entra ID](/azure/active-directory/reports-monitoring/concept-sign-ins).
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

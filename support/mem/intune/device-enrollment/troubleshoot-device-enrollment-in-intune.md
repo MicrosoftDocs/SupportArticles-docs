@@ -57,8 +57,8 @@ A user receives an error during enrollment, such as "DeviceCapReached" or a gene
 
 **Solution:** Check and adjust number of devices enrolled and allowed. Use these steps to make sure the user isn't assigned more than the maximum number of devices.
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Enrollment restrictions** > **Device limit restrictions**. Note the value in the **Device limit** column.
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Users** > **All users** > select the user > **Devices**. Note the number of devices the user has enrolled.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Enrollment restrictions** > **Device limit restrictions**. Note the value in the **Device limit** column.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Users** > **All users** > select the user > **Devices**. Note the number of devices the user has enrolled.
 1. If the user's number of enrolled devices already equals their device limit restriction, they can't enroll anymore until:
     - [Existing devices are removed](/mem/intune/remote-actions/devices-wipe), or
     - You increase the device limit by [setting device restrictions](/mem/intune/enrollment/enrollment-restrictions-set).
@@ -82,7 +82,7 @@ Users receive a **Company Portal Temporarily Unavailable** error on their device
 1. Remove the Intune Company Portal app from the device.
 1. On the device, open the browser, browse to [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com), and try a user login.
 1. If the user fails to sign in, they should try another network.
-1. If that fails, validate that the user's credentials have synced correctly with Azure Active Directory.
+1. If that fails, validate that the user's credentials have synced correctly with Microsoft Entra ID.
 1. If the user successfully logs in, an iOS/iPadOS device will prompt you to install the Intune Company Portal app and enroll. On an Android device, you'll need to manually install the Intune Company Portal app, after which you can retry enrolling.
 
 > [!NOTE]
@@ -97,7 +97,7 @@ A user receives an "MDM authority not defined" error.
 **Solution:**
 
 1. Verify that the MDM Authority has been [set appropriately](/mem/intune/fundamentals/mdm-authority-set).
-1. Verify that the user's credentials have synced correctly with Azure Active Directory. You can verify that the user's UPN matches the Active Directory information in the Microsoft 365 admin center.
+1. Verify that the user's credentials have synced correctly with Microsoft Entra ID. You can verify that the user's UPN matches the Active Directory information in the Microsoft 365 admin center.
     If the UPN doesn't match the Active Directory information:
 
     1. Turn off DirSync on the local server.
@@ -168,7 +168,7 @@ Users see the message "Looks like your IT admin hasn't set an MDM authority. Get
 |0x80043007, 0x80CF3007|Couldn't find the certificate file in the same folder as the installer program.|Extract all files before you start the installation. Do not rename or move any of the extracted files: all files must exist in the same folder or the installation will fail.|
 |0x8024D015, 0x00240005, 0x80070BC2, 0x80070BC9, 0x80CFD015|The software can't be installed because a restart of the client computer is pending.|Restart the computer and then retry the client software installation.|
 |0x80070032|One or more prerequisites for installing the client software weren't found on the client computer.|Make sure that all required updates are installed on the client computer and then retry the client software installation.|
-|0x80043008, 0x80CF3008|Failed to start the Microsoft Online Management Updates service.|Contact Microsoft Support as described in [How to get support in Microsoft Endpoint Manager](/mem/get-support).|
+|0x80043008, 0x80CF3008|Failed to start the Microsoft Online Management Updates service.|Contact Microsoft Support as described in [How to get support in Microsoft Intune](/mem/get-support).|
 |0x80043009, 0x80CF3009|The client computer is already enrolled into the service.|You must retire the client computer before you can re-enroll it in the service.|
 |0x8004300B, 0x80CF300B|The client software installation package can't run because the version of Windows that is running on the client isn't supported.|Intune doesn't support the version of Windows that is running on the client computer.|
 |0xAB2|The Windows Installer couldn't access VBScript run time for a custom action.|This error is caused by a custom action that is based on Dynamic-Link Libraries (DLLs).|

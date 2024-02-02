@@ -1,17 +1,17 @@
 ---
 title: Fail to convert Windows Server Core to GUI
 description: Describes an issue where converting Windows Server 2012 R2 Core to Server with a GUI by using a DISM or PowerShell command fails with error 0x800f0906.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:servicing, csstroubleshoot
-ms.technology: windows-server-deployment
+ms.subservice: deployment
 ---
 # DISM fails with 0x800f0906 or runs continuously when you convert Windows Server 2012 R2 Core to Server with a GUI
 
@@ -102,3 +102,7 @@ Local testing shows that presence of the following updates on the Core server wi
 ## Cause of Error 2 in CBS logs
 
 The cause is the entry \<Map Package="package_for_kb2959977~31bf3856ad364e35~amd64~~6.3.1.1"/> is missed under updateID 8452bac0-bf53-4fbd-915d-499de08c338b, inside the file %windir%\servicing\packages\wuindex.xml.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

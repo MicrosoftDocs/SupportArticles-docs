@@ -2,10 +2,9 @@
 title: The sticky bit causes a 403 Access Denied authorization error
 description: Helps you understand the sticky bit and describes how to check this setting when you configure it in Azure Data Lake Storage (ADLS) Gen2 and get the 403 Access Denied authorization error.
 ms.date: 04/17/2023
-ms.service: storage
-ms.author: v-weizhu
-author: AmandaAZ
-ms.reviewer: jiajwu, zhangjerry, azurestocic
+ms.service: azure-storage
+ms.custom: devx-track-azurecli
+ms.reviewer: jiajwu, zhangjerry, azurestocic, v-weizhu
 ---
 # 403 Access Denied authorization error when the sticky bit is enabled in ADLS Gen2
 
@@ -101,9 +100,9 @@ There are many possible ways to modify the sticky bit setting. Here are the supp
 |SDK| Supported version | More information|
 |---|---|---|
 | REST API| 2019-12-12 and later API versions|[Path](/rest/api/storageservices/datalakestoragegen2/path/update)|
-| Az PowerShell module|  Not supported yet|[Use PowerShell to manage ACLs in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-acl-powershell#set-an-acl)|
+| Az PowerShell module| 5.6.0 and later versions|[Use PowerShell to manage ACLs in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-acl-powershell#set-an-acl)|
 |Azure CLI| 2.38.0 and later versions|[Use Azure CLI to manage ACLs in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-acl-cli#update-an-acl)|
-| .NET SDK| Not supported yet|[Use .NET to manage ACLs in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-acl-dotnet)|
+| .NET SDK| 12.14.0 and later versions|[Use .NET to manage ACLs in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-acl-dotnet)|
 | Java SDK| 12.11.0 and later versions|[Use Java to manage ACLs in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-acl-java)|
 | Python SDK| 12.8.0 and later versions|[Use Python to manage ACLs in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-acl-python)|
 | JavaScript SDK| 12.11.0-beta.1 and later versions|[Use JavaScript SDK in Node.js to manage ACLs in Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-acl-javascript)|

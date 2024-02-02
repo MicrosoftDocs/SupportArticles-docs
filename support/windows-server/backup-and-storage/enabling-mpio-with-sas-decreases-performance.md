@@ -1,17 +1,17 @@
 ---
 title: Enabling MPIO with SAS disks decreases performance
 description: After enabling MPIO when using Storage Spaces and SAS storage, storage performance degrades significantly. This article provides workarounds for this issue.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:multipath-i/o-mpio-and-storport, csstroubleshoot
-ms.technology: windows-server-backup-and-storage
+ms.subservice: backup-and-storage
 ---
 # Enabling MPIO with SAS Storage decreases performance
 

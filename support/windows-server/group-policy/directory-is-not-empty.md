@@ -1,17 +1,17 @@
 ---
 title: Importing a GPO using GPMC fails with an error (The Directory is not empty)
 description: Provides solutions to an issue when you import a saved GPO using GPMC.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, nedpyle, oweindl
 ms.custom: sap:group-policy-management-gpmc-or-agpm, csstroubleshoot
-ms.technology: windows-server-group-policy
+ms.subservice: group-policy
 ---
 # Importing a GPO using GPMC fails with "The Directory is not empty"
 
@@ -105,3 +105,7 @@ Append the five directories to the end of the already existing exclusions, it sh
 DO_NOT_REMOVE_NtFrs_PreInstall_Directory,NtFrs_PreExisting___See_EventLog,MachineOld,UserOld,MachineStaging,UserStaging,AdmOld
 
 To make DFSR read the new settings from AD, run `dfsrdiag PollAD`.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Group Policy issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-group-policy.md).

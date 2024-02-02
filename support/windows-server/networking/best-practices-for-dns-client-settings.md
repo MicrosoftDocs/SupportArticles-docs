@@ -1,23 +1,22 @@
 ---
 title: Recommendations for Domain Name System (DNS) client settings
 description: Describes recommendations for configuring DNS client settings.
-ms.date: 9/24/2021
+ms.date: 12/11/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:dns, csstroubleshoot
-ms.technology: networking
+ms.subservice: networking
 ---
-# Best practices for DNS client settings in Windows 2000 Server and in Windows Server 2003
+# Best practices for DNS client settings in Windows Server
 
-This article describes best practices for the configuration of Domain Name System (DNS) client settings. The recommendations in this article are for the installation of Windows 2000 Server or Windows Server 2003 environments where there is no previously defined DNS infrastructure.
+This article describes best practices for the configuration of Domain Name System (DNS) client settings. The recommendations in this article are for the installation of supported Windows Server environments where there is no previously defined DNS infrastructure.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 825036
 
 ## Domain controller with DNS installed
@@ -89,15 +88,15 @@ If you do not use Active Directory-integrated DNS, and you have domain controlle
 - If there's no local DNS server available, point to a DNS server that's reachable by a reliable WAN link. Up-time and bandwidth determine reliability.
 - Don't configure the DNS client settings on the domain controllers to point to your ISP's DNS servers. Instead, the internal DNS server should forward to the ISP's DNS servers to resolve external names.
 
-## Windows 2000 Server and Windows Server 2003 member servers
+## Windows Server member servers
 
-On Windows 2000 Server and Windows Server 2003 member servers, Microsoft recommends that you configure the DNS client settings according to these specifications:  
+On Windows Server member servers, Microsoft recommends that you configure the DNS client settings according to these specifications:  
 
 - Configure the primary and secondary DNS client settings to point to local primary and secondary DNS servers (if local DNS servers are available) that host the DNS zone for the computer's Active Directory domain.
 - If there are no local DNS servers available, point to a DNS server for that computer's Active Directory domain that can be reached through a reliable WAN link. Up-time and bandwidth determine reliability.
-- Don't configure the client DNS settings to point to your ISP's DNS servers. If you do so, you may experience issues when you try to join the Windows 2000-based or Windows Server 2003-based server to the domain, or when you try to log on to the domain from that computer. Instead, the internal DNS server should forward to the ISP's DNS servers to resolve external names.
+- Don't configure the client DNS settings to point to your ISP's DNS servers. If you do so, you may experience issues when you try to join the Windows Server-based server to the domain, or when you try to log on to the domain from that computer. Instead, the internal DNS server should configure forwarding to the ISP's DNS servers to resolve external names.
 
-## Windows 2000 Server and Windows Server 2003 non-member servers
+## Windows Server non-member servers
 
 - If you have servers that aren't configured to be part of the domain, you can still configure them to use Active Directory-integrated DNS servers as their primary and secondary DNS servers. If you have non-member servers in your environment that use Active Directory-integrated DNS, they don't dynamically register their DNS records to a zone that's configured to accept only secure updates.
 - If you don't use Active Directory-integrated DNS, and you want to configure the non-member servers for both internal and external DNS resolution, configure the DNS client settings to point to an internal DNS server that forwards to the Internet.

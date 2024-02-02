@@ -1,17 +1,17 @@
 ---
 title: ADMT 3.2 installation is incomplete
 description: Fixes an error (Cannot open database "ADMT" requested by the login. The logon failed) that occurs when you run Active Directory Migration Tool (ADMT) console.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, nedpyle
 ms.custom: sap:active-directory-migration-tool-admt, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # ADMT 3.2 installation incomplete, MMC console error "cannot open database 'ADMT' requested by the login"
 

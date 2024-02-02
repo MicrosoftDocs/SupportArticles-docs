@@ -2,7 +2,7 @@
 title: FAQ about the integration of SSRS
 description: Contains answers to frequently asked questions about the integration of SQL Server Reporting Services (SSRS) with Microsoft Dynamics GP 10.0 and Microsoft Dynamics GP 2010.
 ms.reviewer: lmiller, kyouells
-ms.date: 03/31/2021
+ms.date: 09/01/2023
 ---
 # Frequently asked questions about the integration of SQL Server Reporting Services (SSRS) with Microsoft Dynamics GP 10.0 and Microsoft Dynamics GP 2010
 
@@ -19,7 +19,7 @@ A1: To download the SQL Server Reporting Services Administration Guide.
 
 Q2: Where can I find documentation about SQL Server Reporting Services for Microsoft Dynamics 2010?  
 
-A2: To download the SQL Server Reporting Services Guide (SQLServerReportingServicesGuide.pdf), visit [Microsoft Dynamics GP 2010 Guides: Analytics and Reporting](https://www.microsoft.com/download/details.aspx?displaylang=en&id=18981).
+A2: To download the SQL Server Reporting Services Guide (SQLServerReportingServicesGuide.pdf), visit [Microsoft Dynamics GP 2010 Guides: Analytics and Reporting](https://www.microsoft.com/download/details.aspx?id=18981).
 
 Q3: Where can I obtain the SQL Server Reporting Services Wizard and Report Models?  
 

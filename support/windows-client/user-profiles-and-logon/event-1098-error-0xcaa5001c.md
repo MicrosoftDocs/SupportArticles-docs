@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:user-logon-fails, csstroubleshoot
-ms.technology: windows-client-user-profiles
+ms.subservice: user-profiles
 ---
 # Event 1098: Error: 0xCAA5001C Token broker operation failed in Windows 10
 
@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 3196528
 
 ## Symptoms
 
-After you log on to a Windows 10-based computer, you try to access Microsoft Store for Business. However, Azure Active Directory authentication fails, and some events are logged in the Microsoft-Windows-AAD/Operational log.
+After you log on to a Windows 10-based computer, you try to access Microsoft Store for Business. However, Microsoft Entra authentication fails, and some events are logged in the Microsoft-Windows-AAD/Operational log.
 
 In addition to Microsoft Store for Business, this issue may affect Enterprise State Roaming.
 

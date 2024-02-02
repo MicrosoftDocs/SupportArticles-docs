@@ -1,17 +1,17 @@
 ---
 title: '"USB Device not recognized" error'
 description: Helps resolve the "USB Device not recognized error" that occurs when trying to access a USB external hard drive.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:storage-hardware, csstroubleshoot
-ms.technology: windows-server-backup-and-storage
+ms.subservice: backup-and-storage
 adobe-target: true
 ---
 # "USB Device not recognized" error when you try to access a USB external hard drive

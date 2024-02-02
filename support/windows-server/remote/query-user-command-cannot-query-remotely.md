@@ -1,17 +1,17 @@
 ---
 title: Query User command can't query from remote server
 description: Fixes an issue where the QUERY USER command doesn't query information from a remote server.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:remote-desktop-sessions, csstroubleshoot
-ms.technology: windows-server-rds
+ms.subservice: rds
 ---
 # Query user command does not query information from remote server
 

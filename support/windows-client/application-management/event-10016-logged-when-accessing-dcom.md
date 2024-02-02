@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: high
 ms.reviewer: kaushika, hikono
 ms.custom: sap:dcom-service-startup-and-permissions, csstroubleshoot
-ms.technology: windows-client-application-compatibility
+ms.subservice: application-compatibility
 adobe-target: true
 ---
 # DCOM event ID 10016 is logged in Windows

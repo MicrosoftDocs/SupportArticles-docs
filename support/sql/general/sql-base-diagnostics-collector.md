@@ -4,7 +4,6 @@ description: This article describes the information that may be collected from a
 ms.date: 11/11/2020
 ms.custom: sap:General
 ms.reviewer: ramakoni, dansha
-ms.prod: sql
 ---
 # SQL Base Diagnostics Collector for Windows Server
 

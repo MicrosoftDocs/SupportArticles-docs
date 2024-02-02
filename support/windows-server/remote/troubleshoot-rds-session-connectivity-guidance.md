@@ -1,17 +1,17 @@
 ---
 title: Guidance for troubleshooting RDS session connectivity
 description: Introduces general guidance for troubleshooting scenarios related to RDS session connectivity.
-ms.date: 9/28/2022
+ms.date: 11/16/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:remote-desktop-sessions, csstroubleshoot
-ms.technology: windows-server-rds
+ms.subservice: rds
 ---
 # RDS session connectivity troubleshooting guidance
 
@@ -73,24 +73,24 @@ For a full description of how to configure wireless network settings by using GP
 
 ## Data collection
 
-Before contacting Microsoft support, you can gather information about your issue.
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for User Experience issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-user-experience.md#remote-desktop-session-connectivity).
 
 ### Prerequisites
 
-1. TSSv2 must be run by accounts with administrator privileges on the local system, and EULA must be accepted (once EULA is accepted, TSSv2 won't prompt again).
+1. TSS must be run by accounts with administrator privileges on the local system, and EULA must be accepted (once EULA is accepted, TSS won't prompt again).
 2. We recommend the local machine `RemoteSigned` PowerShell execution policy.
 
 > [!NOTE]
-> If the current PowerShell execution policy doesn't allow running TSSv2, take the following actions:
+> If the current PowerShell execution policy doesn't allow running TSS, take the following actions:
 >
 > - Set the `RemoteSigned` execution policy for the process level by running the cmdlet `PS C:\> Set-ExecutionPolicy -scope Process -ExecutionPolicy RemoteSigned`.
 > - To verify if the change takes effect, run the cmdlet `PS C:\> Get-ExecutionPolicy -List`.
-> - Because the process level permissions only apply to the current PowerShell session, once the given PowerShell window in which TSSv2 runs is closed, the assigned permission for the process level will also go back to the previously configured state.
+> - Because the process level permissions only apply to the current PowerShell session, once the given PowerShell window in which TSS runs is closed, the assigned permission for the process level will also go back to the previously configured state.
 
 ### Gather key information before contacting Microsoft support
 
-1. Download [TSSv2](https://aka.ms/getTSSv2) on all nodes and unzip it in the *C:\\tss_tool* folder.
-2. Open the *C:\\tss_tool* folder from an elevated PowerShell command prompt.
+1. Download [TSS](https://aka.ms/getTSS) on all nodes and unzip it in the *C:\\tss* folder.
+2. Open the *C:\\tss* folder from an elevated PowerShell command prompt.
 3. Start the traces on the client and the server by using the following cmdlets:
     > [!NOTE]
     > Run these traces simultaneously on the client, Session Host server(s) and licensing server(s).
@@ -98,13 +98,13 @@ Before contacting Microsoft support, you can gather information about your issue
     - Client:  
 
         ```powershell
-        TSSv2.ps1 -scenario Net_RDScli
+        TSS.ps1 -scenario Net_RDScli
         ```
 
     - Server(s):  
 
         ```powershell
-        TSSv2.ps1 -scenario Net_RDSsrv
+        TSS.ps1 -scenario Net_RDSsrv
         ```
 
     If you get many security warnings related to the execution policy while running the script, run the `Set-ExecutionPolicy -ExecutionPolicy Bypass -force -Scope Process` cmdlet to bypass those warnings.
@@ -113,12 +113,12 @@ Before contacting Microsoft support, you can gather information about your issue
 6. When the script displays `Reproduce the issue and enter 'Y' key AFTER finishing the repro` on both the client and the server(s), start reproducing the issue.
 7. Enter *Y* to finish the log collection after the issue is reproduced.
 
-The traces will be stored in a zip file in the *C:\\MSDATA* folder, which can be uploaded to the Microsoft workspace for analysis.
+The traces will be stored in a zip file in the *C:\\MS_DATA* folder, which can be uploaded to the Microsoft workspace for analysis.
 
 ## Reference
 
 - [Clients can't connect and see "No licenses available" error](cannot-connect-rds-no-license-server.md)
 - ["Remote Desktop Service is currently busy" error when connecting](/windows-server/remote/remote-desktop-services/troubleshoot/remote-desktop-service-currently-busy)
 - [Remote Desktop client disconnects and can't reconnect to the same session](/windows-server/remote/remote-desktop-services/troubleshoot/rdp-client-disconnects-cannot-reconnect-same-session)
-- [Poor performance or application problems during remote desktop connection](/windows-server/remote/remote-desktop-services/troubleshoot/poor-performance-or-application-problems)
-- [User can't authenticate or must authenticate twice](/windows-server/remote/remote-desktop-services/troubleshoot/cannot-authenticate-or-must-authenticate-twice)
+- [Poor performance or application problems during remote desktop connection](poor-performance-application-problems-rdc.md)
+- [User can't authenticate or must authenticate twice](cannot-authenticate-must-authenticate-twice.md)

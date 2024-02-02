@@ -1,17 +1,17 @@
 ---
 title: How to create and apply a custom application directory partition on an Active Directory integrated DNS zone
 description: Describes how to create a custom application directory partition by using the DnsCmd.exe command.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: rolandw, v-jomcc, kaushika
 ms.custom: sap:dns, csstroubleshoot
-ms.technology: networking
+ms.subservice: networking
 ---
 # How to create and apply a custom application directory partition on an Active Directory integrated DNS zone
 

@@ -4,9 +4,8 @@ description: This article provides resolutions for the problem that occurs when 
 ms.date: 06/20/2022
 ms.custom: sap:Connection issues
 ms.reviewer: kayokon, masank
-ms.technology: sql-engine-connectionissues
 ---
-# The certificate received from the remote server was issued by an untrusted certificate authority error when you connect to SQL Server
+# "The certificate received from the remote server was issued by an untrusted certificate authority" error when you connect to SQL Server
 
 This article helps you resolve the problem that occurs when you try to make an encrypted connection to SQL Server.
 
@@ -41,18 +40,18 @@ This error occurs when you try to make an encrypted connection to SQL Server usi
 
 |Scenario|Server-side encryption|Client-side encryption  |Certificate type |Certificate issuing authority present in Trusted Root Certification Authorities store |
 |---|---|---|---|---|
-|1|Yes|No|You provision a certificate from a non-trusted source (the certificate issuing authority is not listed as a trusted authority in Trusted Root Certification Authorities on the client machine) |No|
-|2|Off|Yes|SQL Server self-generated certificate |Self-signed certificates do not show up in this store. |
+|1|Yes|No|You provision a certificate from a non-trusted source (the certificate issuing authority isn't listed as a trusted authority in Trusted Root Certification Authorities on the client machine) |No|
+|2|Off|Yes|SQL Server self-generated certificate |Self-signed certificates don't show up in this store. |
   
-When establishing encrypted connections to SQL Server, Secure Channel (Schannel) creates the list of trusted certificate authorities by searching the Trusted Root Certification Authorities store on the local computer. During the TLS handshake, the server sends its public key certificate to the client. The issuer of a public key certificate is known as a Certificate Authority (CA). The client has to ensure that the certificate authority is one that the client trusts. This is achieved by knowing the public key of trusted CAs in advance. When Schannel detects a certificate that was issued by an untrusted certification authority, such as in the above two cases, you get the error message listed in the [Symptoms](#symptoms) section.
+When establishing encrypted connections to SQL Server, Secure Channel (Schannel) creates the list of trusted certificate authorities by searching the Trusted Root Certification Authorities store on the local computer. During the TLS handshake, the server sends its public key certificate to the client. The issuer of a public key certificate is known as a Certificate Authority (CA). The client has to ensure that the certificate authority is one that the client trusts. This is achieved by knowing the public key of trusted CAs in advance. When Schannel detects a certificate that was issued by an untrusted certification authority, such as in the previous two cases, you get the error message listed in the [Symptoms](#symptoms) section.
 
 ## Resolution
 
 If you intentionally use either a certificate from a non-trusted authority or a self-signed certificate to encrypt connections to SQL Server, you can use one of the following options:
 
-For Scenario 1: Add the certificate authority to the Trusted Root Certification Authorities store on the client computer initiating encrypted connection. To do this, complete the [Export the server certificate](#export-the-server-certificate) and [Install the root certificate authority (CA) on the client machine](#install-the-root-certificate-authority-ca-on-the-client-machine) procedures listed below in that sequence.
+For scenario 1, add the certificate authority to the Trusted Root Certification Authorities store on the client computer initiating encrypted connection. To do this, complete the [Export the server certificate](#export-the-server-certificate) and [Install the root certificate authority (CA) on the client machine](#install-the-root-certificate-authority-ca-on-the-client-machine) procedures listed in the next few sections in that sequence.
 
-#### Export the server certificate
+### Export the server certificate
 
 The example uses a file named _caCert.cer_ as a certificate file. You must obtain this certificate file from the server. The following steps explain how to export the server certificate to a file:
 
@@ -66,7 +65,7 @@ The example uses a file named _caCert.cer_ as a certificate file. You must obtai
 
 1. Click **Next** to move past the **welcome dialog** box of the **Certificate Export** Wizard.
 
-1. Confirm that **No, do not export the private key** is selected, and then click **Next**.
+1. Confirm that **No, do not export the private key** is selected, and then select **Next**.
 
 1. Make sure that either **DER encoded binary X.509 (.CER)** or **Base-64 encoded X.509 (.CER)** is selected, and then click **Next**.
 
@@ -78,31 +77,31 @@ The example uses a file named _caCert.cer_ as a certificate file. You must obtai
 
 1. Start the Certificates snap-in for MMC on the client computer and then add the Certificates snap-in.
 
-1. In the **Certificates snap-in** dialog box, choose **Computer** account, and then choose **Next**.
+1. In the **Certificates snap-in** dialog box, select **Computer** account, and then select **Next**.
 
-1. In the **Select Computer** pane, choose **Local computer: (the computer this console is running on)**, and then choose **Finish**.
+1. In the **Select Computer** pane, select **Local computer: (the computer this console is running on)**, and then select **Finish**.
 
-1. Choose **OK** to close the **Add or Remove Snap-ins** dialog box.
+1. Choose **OK** to close the **Add or Remove Snap-ins** dialog box.
 
-1. In the left pane of MMC, expand the **Certificates (Local Computer)** node.
+1. In the left pane of MMC, expand the **Certificates (Local Computer)** node.
 
-1. Expand the **Trusted Root Certification Authorities** node, right-click the **Certificates** subfolder, select **All Tasks**, and then choose **Import**.
+1. Expand the **Trusted Root Certification Authorities** node, right-click the **Certificates** subfolder, select **All Tasks**, and then select **Import**.
 
-1. In the **Certificate Import Wizard**, on the **Welcome page**, choose **Next**.
+1. In the **Certificate Import Wizard**, on the **Welcome page**, select **Next**.
 
-1. On the **File to Import** page, choose **Browse**.
+1. On the **File to Import** page, select **Browse**.
 
-1. Browse to the location of the *caCert.cer* certificate file, select the file, and then choose **Open**.
+1. Browse to the location of the *caCert.cer* certificate file, select the file, and then select **Open**.
 
-1. On the **File to Import** page, choose **Next**.
+1. On the **File to Import** page, select **Next**.
 
-1. On the **Certificate Store** page, accept the default selection, and then choose **Next**.
+1. On the **Certificate Store** page, accept the default selection, and then select **Next**.
 
-1. On the Completing the **Certificate Import Wizard** page, choose **Finish**.
+1. On the **Completing the Certificate Import Wizard** page, select **Finish**.
 
-For scenarios 1 and 2: Set **Trust Server Certificate** setting to _true_ in your client application.
+For scenarios 1 and 2, set **Trust Server Certificate** setting to _true_ in your client application.
 
-For more information on how to do this, review the following topics:
+For more information on how to do this, see the following topics:
 
 - [Using Encryption Without Validation in SQL Server Native Client](/sql/relational-databases/native-client/features/using-encryption-without-validation)
 
@@ -111,16 +110,16 @@ For more information on how to do this, review the following topics:
 - [Using Encryption with Sqlclient](/sql/connect/ado-net/sql/sqlclient-support-always-encrypted)
 
 > [!NOTE]
-> If you are using SQL Server Management Studio, you can click on the **Options** tab, and check the box **Trust Server certificate** option in the **Connection Properties** tab.
+> If you are using SQL Server Management Studio, select the **Options** tab, and select the **Trust Server certificate** option in the **Connection Properties** tab.
 
-**Caution:** SSL connections that are encrypted by using a self-signed certificate do not provide strong security. They are susceptible to `man-in-the-middle` attacks. You shouldn't rely on SSL using self-signed certificates in a production environment or on servers that are connected to the Internet.
+**Caution:** SSL connections that are encrypted by using a self-signed certificate don't provide strong security. They are susceptible to `man-in-the-middle` attacks. You shouldn't rely on SSL using self-signed certificates in a production environment or on servers that are connected to the Internet.
 
 If the configuration discussed in the previous sections of this article is unintended, you can use one of the following options to resolve this problem:
 
 - Configure database engine to use encryption as per the procedure in Enable encrypted connections to the Database Engine.
 
-- If encryption is not required:
+- If encryption isn't required:
 
   - Disable encryption settings (if any) in your client application.
 
-  - Disable server-side encryption using SQL Server Configuration manager. For more information on how to do this, review [Configure Server](/sql/relational-databases/sql-server-configuration-manager#manage-server--client-network-protocols).
+  - Disable server-side encryption using SQL Server Configuration manager. For more information on how to do this, see [Configure Server](/sql/relational-databases/sql-server-configuration-manager#manage-server--client-network-protocols).

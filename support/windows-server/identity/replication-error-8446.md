@@ -1,17 +1,17 @@
 ---
 title: Troubleshoot AD replication error 8446
 description: Describes the symptoms, cause, and resolution steps for issues when Active Directory replication fails with error 8446.
-ms.date: 3/24/2022
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, raviks, justintu
 ms.custom: sap:active-directory-replication, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # Troubleshooting AD Replication error 8446: The replication operation failed to allocate memory
 
@@ -172,3 +172,7 @@ You can use the "EDB max buffers" registry value for limiting ESE cache allocati
 You may apply the following values as start for an optimization, depending is the /3GB boot.ini switch is use or not:
 >
 > Without /3GB switch: "EDB max buffers", Reg_DWord: 157286 (1.2 GB); expected LSASS consumption ~1.5 GB With /3GB switch: "EDB max buffers", Reg_DWord: 235929 (1.8 GB); expected LSASS consumption ~2.1 GB
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Active Directory replication issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication.md).

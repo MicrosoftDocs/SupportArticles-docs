@@ -1,17 +1,17 @@
 ---
 title: Support for the leap second
 description: Summarizes Microsoft support for the leap second.
-ms.date: 1/19/2022
+ms.date: 01/19/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:windows-time-service, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # Support for the leap second
 

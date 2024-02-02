@@ -1,17 +1,17 @@
 ---
 title: Reduced performance after SMB Encryption or SMB Signing is enabled
 description: Describes an issue in which networking performance is reduced after you enable SMB Encryption or SMB Signing in Windows Server 2016 and Windows Server 2019. Provides a solution to this issue.
-ms.date: 10/9/2021
+ms.date: 10/09/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:access-to-remote-file-shares-smb-or-dfs-namespace, csstroubleshoot
-ms.technology: networking
+ms.subservice: networking
 ---
 # Reduced networking performance after you enable SMB Encryption or SMB Signing in Windows Server 2016 and Windows Server 2019
 

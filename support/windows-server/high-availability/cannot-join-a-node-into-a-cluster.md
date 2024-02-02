@@ -1,17 +1,17 @@
 ---
 title: Unable to join a node into a cluster
 description: Resolves an issue where users are unable to join a node into a cluster if UDP port 3343 is blocked.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-yuluo
 ms.custom: sap:initial-cluster-creation-or-adding-node, csstroubleshoot
-ms.technology: windows-server-high-availability
+ms.subservice: high-availability
 ---
 # You are unable to join a node into a cluster if UDP port 3343 is blocked
 

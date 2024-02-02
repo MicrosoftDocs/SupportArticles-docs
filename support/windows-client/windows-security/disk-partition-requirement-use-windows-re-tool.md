@@ -1,17 +1,17 @@
 ---
 title: Disk partition requirement for using Windows RE tools on a UEFI-based computer
 description: Introduces the disk partition requirement for using Windows RE tools on a UEFI-based computer.
-ms.date: 09/14/2020
+ms.date: 08/31/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:bitlocker, csstroubleshoot
-ms.technology: windows-client-security
+ms.subservice: windows-security
 ---
 # Disk partition requirement for using Windows RE tools on a UEFI-based computer
 
@@ -22,17 +22,20 @@ _Original KB number:_ &nbsp; 3135522
 
 ## More information
 
-The disk partition for Windows RE tools must be at least 300 MB. Typically, between 250-300 MB is allocated for the Windows RE tools image (Winre.wim), depending on base language and added customizations.
+The disk partition for Windows RE tools must be at least 300 megabytes (MB). Typically, between 500-700 MB is allocated for the Windows RE tools image (Winre.wim), depending on base language and added customizations.
 
 The allocation for Windows RE must also include sufficient free space for backup utilities to capture the partition. Follow these guidelines to create the partition:
 
-- If the partition is smaller than 500 MB, it must have at least 50 MB of free space.
-- If the partition is 500 MB or larger, it must have at least 320 MB of free space.
-- If the partition is larger than 1 GB, it must have at least 1 GB free of free space.
-- This partition must use the following Type ID:
+- For Windows operating systems prior to Windows 10, version 2004 or Windows Server 2022:
 
-    DE94BBA4-06D1-4D40-A16A-BFD50179D6AC
+   - If the partition is smaller than 500 MB, it must have at least 50 MB of free space.
+   - If the partition is 500 MB or larger, it must have at least 320 MB of free space.
+   - If the partition is larger than 1 gigabyte (GB), it must have at least 1 GB of free space.
 
+- For Windows operating systems later than Windows 10, version 2004 or Windows Server 2022, the partition must have at least 200 MB of free space.
+- The partition must use the following Type ID:
+
+  DE94BBA4-06D1-4D40-A16A-BFD50179D6AC
 - The Windows RE tools should be in a partition that's separate from the Windows partition. This separation supports automatic failover and the startup of partitions that are encrypted by using Windows BitLocker Drive Encryption.
 
 > [!IMPORTANT]

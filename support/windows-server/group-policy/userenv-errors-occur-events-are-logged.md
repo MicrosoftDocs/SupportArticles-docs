@@ -1,17 +1,17 @@
 ---
 title: Userenv errors occur and events are logged
 description: Describes how to troubleshoot issues where computers on your network can't connect to the Group Policy objects in the Sysvol folders on your network domain controllers.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, msadoff
 ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
-ms.technology: windows-server-group-policy
+ms.subservice: group-policy
 ---
 # Userenv errors occur and events are logged after you apply Group Policy to computers that are running Windows Server 2003, Windows XP, or Windows 2000
 
@@ -257,9 +257,9 @@ For example, SMB signing may be required by the domain controllers, but SMB sign
 Sometimes, the SMB signing settings for the Server service and the Workstation service on a domain controller may conflict with each other.
 
 For example, SMB signing may be disabled for the domain controller's Workstation service, but SMB signing is required for the domain controller's Server service. In this scenario, you can't open one or more of the domain controller's local file shares if you're logged on to the server. Additionally, you can't open Group Policy snap-ins if you're logged on to the server.  
-For more information about how to troubleshoot this problem on a domain controller, see [You cannot open file shares or Group Policy snap-ins on a domain controller](/troubleshoot/windows-server/networking/cannot-open-file-shares-group-policy-snap-ins).
+For more information about how to troubleshoot this problem on a domain controller, see [You cannot open file shares or Group Policy snap-ins on a domain controller](../networking/cannot-open-file-shares-group-policy-snap-ins.md).
 
-If Group Policy errors only occur on client computers and member servers, or if you determine that [You cannot open file shares or Group Policy snap-ins on a domain controller](/troubleshoot/windows-server/networking/cannot-open-file-shares-group-policy-snap-ins) doesn't apply to your situation, continue to troubleshoot the issue.
+If Group Policy errors only occur on client computers and member servers, or if you determine that [You cannot open file shares or Group Policy snap-ins on a domain controller](../networking/cannot-open-file-shares-group-policy-snap-ins.md) doesn't apply to your situation, continue to troubleshoot the issue.
 
 By default, SMB signing is enabled but isn't required for client communication on client computers and member servers that are running Windows XP, Windows 2000, or Windows Server 2003. We recommend that you use the default configuration because the client computers can use SMB signing when it's possible, but will still communicate with servers that have SMB signing disabled.
 
@@ -526,7 +526,7 @@ To verify that the Bypass traverse checking right has been granted on a Windows 
 ### Step 7: Make sure that the domain controllers aren't in a journal wrap state
 
 To see if a domain controller is in a journal wrap state, view the File Replication service log in Event Viewer, and search for NTFRS event ID 13568. Event ID 13568 is similar to the following Event ID:  
-If NTFRS event ID 13568 is logged on a domain controller, for more information about how to troubleshoot journal wrap errors, see [How to troubleshoot journal_wrap errors on Sysvol and DFS replica sets](/troubleshoot/windows-server/networking/how-frs-uses-usn-change-journal-ntfs-file-system).
+If NTFRS event ID 13568 is logged on a domain controller, for more information about how to troubleshoot journal wrap errors, see [How to troubleshoot journal_wrap errors on Sysvol and DFS replica sets](../networking/how-frs-uses-usn-change-journal-ntfs-file-system.md).
 
 ### Step 8: Run the Dfsutil /PurgeMupCache command
 

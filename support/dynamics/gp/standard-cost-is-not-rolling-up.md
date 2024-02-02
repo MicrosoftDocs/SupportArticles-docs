@@ -112,4 +112,4 @@ A recursive BOM is a component of itself. It can be assigned directly as a compo
 
 ## More information
 
-To see the above information with screen prints, see [Standard Costing Rollup/Revalue issues](https://community.dynamics.com/gp/b/dynamicsgp/posts/standard-costing-rollup-revalue-issues).
+To see the above information with screen prints, see [Standard Costing Rollup/Revalue issues](https://community.dynamics.com/blogs/post/?postid=3004d6a9-014d-4c64-a93c-1747bebdb7fa).

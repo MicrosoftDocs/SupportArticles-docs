@@ -5,7 +5,6 @@ ms.date: 11/05/2022
 ms.custom: sap:Database Engine
 ms.reviewer: SureshKa
 ms.topic: how-to
-ms.prod: sql
 ---
 # Manage the SQL Server error log
 

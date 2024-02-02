@@ -1,17 +1,17 @@
 ---
 title: How to create an Active Directory server in Windows Server 2003
 description: Describes how to install and configure a new Active Directory installation in a laboratory environment that includes Windows Server 2003 and Active Directory.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, JOHNF
 ms.custom: sap:dcpromo-and-the-installation-of-domain-controllers, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # How to create an Active Directory server in Windows Server 2003  
 

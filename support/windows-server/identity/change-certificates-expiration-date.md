@@ -1,17 +1,17 @@
 ---
 title: Change expiration date of certificates
 description: Describes how to change the validity period of a certificate that is issued by Certificate Authority (CA).
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:active-directory-certificate-services, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # Change the expiration date of certificates that are issued by Certificate Authority
 

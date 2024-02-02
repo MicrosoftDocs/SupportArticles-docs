@@ -1,16 +1,16 @@
 ---
 title: Printing overview
 description: Overview of Printing troubleshooting articles for Windows Server.
-ms.date: 6/17/2021
+ms.date: 06/17/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.technology: windows-server-printing
+ms.subservice: printing
 ---
 # Printing troubleshooting documentation for Windows Server
 

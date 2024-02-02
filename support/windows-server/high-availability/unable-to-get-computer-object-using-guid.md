@@ -1,17 +1,17 @@
 ---
 title: CAP in failover cluster doesn't come online
 description: Fixes an issue where a Client Access Point (CAP) in a failover cluster does not come online as expected.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, dewitth, ctimon, eldenc
 ms.custom: sap:errors-when-running-the-validation-wizard, csstroubleshoot
-ms.technology: windows-server-high-availability
+ms.subservice: high-availability
 ---
 # "Unable to get Computer Object using GUID" error message when a network name request fails in a Windows Server failover cluster
 

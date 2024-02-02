@@ -1,17 +1,17 @@
 ---
 title: Guidance for troubleshooting SMB
 description: Introduces general guidance for troubleshooting scenarios related to SMB.
-ms.date: 10/28/2022
+ms.date: 11/16/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:smb, csstroubleshoot
-ms.technology: networking
+ms.subservice: networking
 ---
 # SMB troubleshooting guidance
 
@@ -82,7 +82,7 @@ To troubleshoot this issue, you should disable the RSS capability on the physica
 
 This issue occurs because RDMA-capable network adapters that have older drivers or firmware may not correctly identify themselves as being RDMA-capable.
 
-To troubleshoot this issue, update the network adapter firmware and driver from the manufacturer’s website.
+To troubleshoot this issue, update the network adapter firmware and driver from the manufacturer's website.
 
 ### The required amount of network traffic before SMB Multichannel starts
 
@@ -94,7 +94,7 @@ On server operating systems, SMB Multichannel starts quickly only one time per s
 
 An RSS-capable 10 GbE network adapter is sometimes identified as non-RSS-capable. When this occurs, SMB uses only one TCP connection. When using both RSS-capable and non-RSS network adapters, SMB Multichannel should use only the RSS-capable network adapters.
 
-Server-class network adapters should appear as RSS-capable. If they don't, you should update the network adapter driver from the manufacturer’s website, and then recheck the RSS settings.  
+Server-class network adapters should appear as RSS-capable. If they don't, you should update the network adapter driver from the manufacturer's website, and then recheck the RSS settings.  
 
 You may have to disable RSS on both network adapters to aggregate throughput. For more information, see the following blog article: [Windows Server 2012 File Server Tip: Make sure your network interfaces are RSS-capable](https://blogs.technet.com/b/josebda/archive/2012/11/10/windows-server-2012-file-server-tip-make-sure-your-network-interfaces-are-rss-capable.aspx).
 
@@ -107,11 +107,11 @@ To troubleshoot this issue, use multiple virtual network adapters to make sure t
 ## SMB known issues
 
 - [TCP three-way handshake failure](/windows-server/storage/file-server/troubleshoot/tcp-three-way-handshake-fails)
-- [Slow files transfer speed](/windows-server/storage/file-server/troubleshoot/slow-file-transfer)
+- [Slow files transfer speed](slow-smb-file-transfer.md)
 - [Negotiate, Session Setup, and Tree Connect Failures](/windows-server/storage/file-server/troubleshoot/negotiate-session-setup-tree-connect-fails)
-- [TCP connection is aborted during Validate Negotiate](/windows-server/storage/file-server/troubleshoot/abort-during-validate-negotiate)
+- [TCP connection is aborted during Validate Negotiate](tcp-connection-abort-validate-negotiate.md)
 - [SMB Multichannel troubleshooting](/windows-server/storage/file-server/troubleshoot/smb-multichannel-troubleshooting)
-- [High CPU usage issue on the SMB server](/windows-server/storage/file-server/troubleshoot/high-cpu-usage-issue-on-smb-server)
+- [High CPU usage issue on the SMB server](high-cpu-usage-issue-smb-server.md)
 - [Troubleshoot the Event ID 50 Error Message](/windows-server/storage/file-server/troubleshoot/troubleshoot-event-id-50-error)
 - [SMBv1 is not installed by default](/windows-server/storage/file-server/troubleshoot/smbv1-not-installed-by-default-in-windows)
 - [Access Denied when you access an SMB file share](../../windows-client/networking/access-denied-access-smb-file-share.md)
@@ -122,32 +122,32 @@ Before contacting Microsoft support, you can gather information about your issue
 
 ### Prerequisites
 
-1. TSSv2 must be run by accounts with administrator privileges on the local system, and EULA must be accepted (once EULA is accepted, TSSv2 won't prompt again).
+1. TSS must be run by accounts with administrator privileges on the local system, and EULA must be accepted (once EULA is accepted, TSS won't prompt again).
 2. We recommend the local machine `RemoteSigned` PowerShell execution policy.
 
 > [!NOTE]
-> If the current PowerShell execution policy doesn't allow running TSSv2, take the following actions:
+> If the current PowerShell execution policy doesn't allow running TSS, take the following actions:
 >
 > - Set the `RemoteSigned` execution policy for the process level by running the cmdlet `PS C:\> Set-ExecutionPolicy -scope Process -ExecutionPolicy RemoteSigned`.
 > - To verify if the change takes effect, run the cmdlet `PS C:\> Get-ExecutionPolicy -List`.
-> - Because the process level permissions only apply to the current PowerShell session, once the given PowerShell window in which TSSv2 runs is closed, the assigned permission for the process level will also go back to the previously configured state.
+> - Because the process level permissions only apply to the current PowerShell session, once the given PowerShell window in which TSS runs is closed, the assigned permission for the process level will also go back to the previously configured state.
 
 ### Gather key information before contacting Microsoft support
 
-1. Download [TSSv2](https://aka.ms/getTSSv2) on all nodes and unzip it in the *C:\\tss_tool* folder.
-2. Open the *C:\\tss_tool* folder from an elevated PowerShell command prompt.
+1. Download [TSS](https://aka.ms/getTSS) on all nodes and unzip it in the *C:\\tss* folder.
+2. Open the *C:\\tss* folder from an elevated PowerShell command prompt.
 3. Start the traces on the client and the server by using the following cmdlets:
 
     - Client:  
 
         ```powershell
-        TSSv2.ps1 -Start -Scenario NET_SMBcli
+        TSS.ps1 -Scenario NET_SMBcli
         ```
 
     - Server:  
 
         ```powershell
-        TSSv2.ps1 -Start -Scenario NET_SMBsrv
+        TSS.ps1 -Scenario NET_SMBsrv
         ```
 
 4. Accept the EULA if the traces are run for the first time on the server or the client.
@@ -159,7 +159,7 @@ Before contacting Microsoft support, you can gather information about your issue
 
 7. Enter *Y* to finish the log collection after the issue is reproduced.
 
-The traces will be stored in a zip file in the *C:\\MSDATA* folder, which can be uploaded to the workspace for analysis.
+The traces will be stored in a zip file in the *C:\\MS_DATA* folder, which can be uploaded to the workspace for analysis.
 
 ## Reference
 

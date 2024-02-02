@@ -1,17 +1,17 @@
 ---
 title: View registry keys with 64-bit versions of Windows
 description: Describes how to view the Windows registry by using 64-bit versions of Windows.
-ms.date: 09/24/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, MBIAS
 ms.custom: sap:servicing, csstroubleshoot
-ms.technology: windows-client-deployment
+ms.subservice: deployment
 ---
 # View the system registry by using 64-bit versions of Windows
 
@@ -49,3 +49,7 @@ The WOW64 Registry reflector may modify the contents of keys and values during t
 - `HKEY_LOCAL_MACHINE\Software\Ole` 
 - `HKEY_LOCAL_MACHINE\Software\EventSystem` 
 - `HKEY_LOCAL_MACHINE\Software\RPC` 
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

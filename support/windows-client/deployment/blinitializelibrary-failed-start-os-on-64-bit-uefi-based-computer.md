@@ -1,17 +1,17 @@
 ---
 title: Error (BlInitializeLibrary failed XXX) when you install or start an operating system on a 64-bit UEFI-based computer
 description: Works around a problem that occurs when you install or start an operating system on a 64-bit UEFI-based computer.
-ms.date: 12/03/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:setup, csstroubleshoot
-ms.technology: windows-client-deployment
+ms.subservice: deployment
 ---
 # Error (BlInitializeLibrary failed XXX) when you install or start an operating system on a 64-bit UEFI-based computer
 
@@ -46,3 +46,7 @@ At the pre-boot stage, Windows Boot Manager sets the maximum number of global me
 
 > [!NOTE]
 > This design applies only to the current operating system releases, including Windows 10, Windows Server 2016, and Windows Server 2012 R2. We do not guarantee that this design will apply to future versions.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

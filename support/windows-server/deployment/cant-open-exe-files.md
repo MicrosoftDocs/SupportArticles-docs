@@ -1,17 +1,17 @@
 ---
 title: Cannot open EXE files
 description: Provides a resolution for the issue that you cannot open exe files.
-ms.date: 3/12/2022
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:setup, csstroubleshoot
-ms.technology: windows-server-deployment
+ms.subservice: deployment
 ---
 # Can't open EXE files
 
@@ -66,5 +66,9 @@ Corrupt registry settings or some third-party product (or virus) can change the 
 
    > [!Note]
    > If you are using Windows XP and you enable "System Restore" , you need to disable "System Restore" in "Safe Mode" before using the instructions above.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).
 
 [!INCLUDE [Community Solutions Content Disclaimer](../../includes/community-solutions-content-disclaimer.md)]

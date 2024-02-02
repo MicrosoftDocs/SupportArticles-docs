@@ -10,7 +10,7 @@ ms.subservice: enterprise-users
 
 This article describes how to troubleshoot Azure Active Directory Sync tool installation and Directory Sync tool Configuration Wizard issues.
 
-_Original product version:_ &nbsp; Azure Active Directory, Microsoft Intune, Azure Backup, Office 365 Identity Management  
+_Original product version:_ &nbsp; Microsoft Entra ID, Microsoft Intune, Azure Backup, Office 365 Identity Management  
 _Original KB number:_ &nbsp; 2684395
 
 ## Introduction
@@ -28,7 +28,7 @@ The Azure Active Directory Sync tool can be installed on a computer if all the f
   - Windows Server 2003 x64 with Service Pack 2 (SP2) or a later version
   - An x64-based version of Windows Server 2008
 - The computer isn't a domain controller.
-- The computer is joined to an Active Directory domain. And it's located in the forest that you want to sync with Azure Active Directory (Azure AD).
+- The computer is joined to an Active Directory domain. And it's located in the forest that you want to sync with Microsoft Entra ID.
 - The Microsoft .NET Framework 3.5 or a later version is installed on the computer.
 
 ## Check permissions
@@ -140,7 +140,7 @@ All directory synchronization logging is viewable in Event Viewer. To view all e
 |ErrorNoStartConnection|Synchronization failed to start because of connection issues or domain controllers could not be contacted by the server. Verify that you are connected to the server and all the configured domain controllers are connected to the network. If you have recently deleted domain or naming context, please rerun the Configuration Wizard.|Event Viewer|Confirm that the local Active Directory domain controllers can be accessed from the server running the Directory Sync tool.|
 |ErrorNoStartCredentials|Synchronization failed to start because of credential problems. Rerun Configuration Wizard to update credentials for Synchronization.|Event Viewer|Run the Directory Sync tool Configuration Wizard, and reenter credentials. Also, confirm that the credentials have Administrator access to the portal.|
 |ErrorNoStartNoDomainController|Synchronization failed to start because the domain controller could not be contacted by the server. Verify that the domain controller is connected to the network.|Event Viewer|Confirm that the local Active Directory domain controllers can be accessed from the server running the Directory Sync tool.|
-|ErrorStoppedConnectivity|Synchronization stopped because of connectivity loss. Restore connectivity to the server.||Confirm that the local computer can access the Internet. Have the user try to ping `provisioning.microsoftonline.com` to verify that the computer can reach the Azure Active Directory authentication system.|
+|ErrorStoppedConnectivity|Synchronization stopped because of connectivity loss. Restore connectivity to the server.||Confirm that the local computer can access the Internet. Have the user try to ping `provisioning.microsoftonline.com` to verify that the computer can reach the Microsoft Entra authentication system.|
 |ErrorStoppedDatabaseDiskFull|Synchronization stopped because the SQL Server database used by the Synchronization server is full. Create some space in the SQL Server database.|Event Viewer|Free up space on the storage used to hold the directory synchronization SQL database. If the issue isn't resolved, the Directory Sync tool will be unable to run successfully, and the SQL database may be permanently damaged.|
 |InstallNotAllowedOnDomainController|Microsoft Online Services Coexistence cannot be installed on a domain controller.|Event Viewer|The Directory Sync tool can be installed only on domain-joined computers that aren't domain controllers.|
 |InstallPathLengthTooLong|The installation path is too long. Provide a path of 116 characters or fewer and then try again.|Event Viewer|If you use a custom path for the installation of the Directory Sync tool, the total path must contain fewer than 116 characters.|

@@ -5,23 +5,24 @@ ms.date: 06/22/2020
 ms.reviewer: 
 ms.service: active-directory
 ms.subservice: authentication
+ms.custom: has-azure-ad-ps-ref
 ---
 # Error when you try to set up another federated domain in Office 365, Azure, or Intune: Federation service identifier specified in the AD FS 2.0 server is already in use
 
-This article provides information about resolving an issue in which you receive an error message when running the `New-MSOLFederatedDomain` command or the `Convert-MSOLDomainToFederated` command using Azure Active Directory Module for Windows PowerShell.
+This article provides information about resolving an issue in which you receive an error message when running the `New-MSOLFederatedDomain` command or the `Convert-MSOLDomainToFederated` command using Azure Active Directory module for Windows PowerShell.
 
-_Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Azure Active Directory, Microsoft Intune, Azure Backup, Office 365 Identity Management  
+_Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Microsoft Entra ID, Microsoft Intune, Azure Backup, Office 365 Identity Management  
 _Original KB number:_ &nbsp; 2618887
 
 ## Symptoms
 
-In a Microsoft cloud service such as Office 365, Microsoft Azure, or Microsoft Intune, you can't set up a second federated domain on an Active Directory Federation Services (AD FS) server. When you use the Azure Active Directory Module for Windows PowerShell to run the `New-MSOLFederatedDomain` command or the `Convert-MSOLDomainToFederated` command, you receive the following error message:
+In a Microsoft cloud service such as Office 365, Microsoft Azure, or Microsoft Intune, you can't set up a second federated domain on an Active Directory Federation Services (AD FS) server. When you use the Azure Active Directory module for Windows PowerShell to run the `New-MSOLFederatedDomain` command or the `Convert-MSOLDomainToFederated` command, you receive the following error message:
 
 > The federation service identifier specified in the Active Directory Federation Services 2.0 server is already in use. Please correct this value in the AD FS 2.0 Management console and run the command again.
 
 ## Cause
 
-The Azure Active Directory (Azure AD) authentication system requires a unique federation brand uniform resource identifier (URI) for each federated domain. By default, AD FS uses a global value for all federated trusts. When you try to federate a second domain in a scenario where a federated trust already exists, the request fails because the URI is already being used.
+The Microsoft Entra authentication system requires a unique federation brand uniform resource identifier (URI) for each federated domain. By default, AD FS uses a global value for all federated trusts. When you try to federate a second domain in a scenario where a federated trust already exists, the request fails because the URI is already being used.
 
 ## Resolution
 
@@ -36,7 +37,7 @@ On each node of the AD FS 2.0 Federation Service farm, download and install Upda
 
 ### Step 2: Check that the `Update-MSOLFederatedDomain` command can be run successfully against the AD FS environment
 
-1. Select **Start** > **All Programs** > **Windows Azure Active Directory**, right-click **Windows Azure Active Directory Module for Windows PowerShell** and select **Run As Administrator**.
+1. Select **Start** > **All Programs** > **Windows Azure Active Directory**, right-click **Windows Azure Active Directory module for Windows PowerShell** and select **Run As Administrator**.
 2. At the command prompt, run the following commands in the order in which they are presented. Press **Enter** after each command.
 
     ```powershell
@@ -58,7 +59,7 @@ On each node of the AD FS 2.0 Federation Service farm, download and install Upda
     ```
 
     > [!NOTE]
-    > In this command, \<Federated Domain Name> is the name of the domain that's already federated with Azure AD for single sign-On (SSO).
+    > In this command, \<Federated Domain Name> is the name of the domain that's already federated with Microsoft Entra ID for single sign-On (SSO).
 
 3. If the `Update-MSOLFederatedDomain` command is successful and you do not receive error messages, go to step 3 to remove the federated trust from the AD FS server.
 

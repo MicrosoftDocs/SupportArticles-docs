@@ -2,11 +2,9 @@
 title: 'BitLocker and TPM: other known issues'
 description: Describes common issues that relate directly to the TPM, and provides guidance for resolving those issues.
 ms.date: 11/21/2022
-ms.reviewer: kaushika
-ms.technology: windows-client-security
-ms.prod: windows-client
-author: Teresa-Motiv
-ms.author: v-tappelgate
+ms.reviewer: kaushika, v-tappelgate
+ms.subservice: windows-security
+ms.service: windows-client
 manager: dcscontentpm
 ms.collection: Windows Security Technologies\BitLocker
 ms.topic: troubleshooting
@@ -18,11 +16,13 @@ localization_priority: medium
 
 This article describes common issues that relate directly to the trusted platform module (TPM), and provides guidance to address these issues.
 
-## Azure AD: Windows Hello for Business and single sign-on don't work
+<a name='azure-ad-windows-hello-for-business-and-single-sign-on-dont-work'></a>
+
+## Microsoft Entra ID: Windows Hello for Business and single sign-on don't work
 
 Consider the following scenario:
 
-An Azure Active Directory (Azure AD)-joined client computer can't authenticate correctly. The computer is experiencing one or more of the following symptoms:
+A Microsoft Entra joined client computer can't authenticate correctly. The computer is experiencing one or more of the following symptoms:
 
 - Windows Hello for Business doesn't work
 - Conditional access fails
@@ -44,13 +44,17 @@ Additionally, in Event Viewer, the computer logs the following Event ID 1026 eve
 > Error: The TPM is defending against dictionary attacks and is in a time-out period.  
 > Additional Information: 0x840000  
 
-### Cause of Azure AD: Windows Hello for Business and single sign-on don't work
+<a name='cause-of-azure-ad-windows-hello-for-business-and-single-sign-on-dont-work'></a>
+
+### Cause of Microsoft Entra ID: Windows Hello for Business and single sign-on don't work
 
 This event indicates that the TPM isn't ready or has some setting that prevents access to the TPM keys.  
 
 Additionally, the behavior indicates that the client computer can't obtain a [Primary Refresh Token (PRT)](/azure/active-directory/devices/concept-primary-refresh-token).  
 
-### Resolution for Azure AD: Windows Hello for Business and single sign-on don't work
+<a name='resolution-for-azure-ad-windows-hello-for-business-and-single-sign-on-dont-work'></a>
+
+### Resolution for Microsoft Entra ID: Windows Hello for Business and single sign-on don't work
 
 To verify the status of the PRT, use the [dsregcmd.exe /status](/azure/active-directory/devices/troubleshoot-device-dsregcmd) command to collect information. In the tool output, verify that either **User state** or **SSO state** contains the **AzureAdPrt** attribute. If the value of this attribute is **No**, the PRT wasn't issued. If the value of the attribute is **No**, it may indicate that the computer couldn't present its certificate for authentication.
 
@@ -97,9 +101,11 @@ To resolve the issue:
    > [!WARNING]
    > Replacing the motherboard will cause data in the TPM to be lost.  
 
-## Devices don't join hybrid Azure AD because of a TPM issue
+<a name='devices-dont-join-hybrid-azure-ad-because-of-a-tpm-issue'></a>
 
-When trying to join a device to a hybrid Azure AD, the join operation appears to fail.
+## Devices don't join hybrid Microsoft Entra ID because of a TPM issue
+
+When trying to join a device to a hybrid Microsoft Entra ID, the join operation appears to fail.
 
 To verify that the join succeeded, use the [dsregcmd /status command](/azure/active-directory/devices/troubleshoot-device-dsregcmd). In the tool output, the following attributes indicate that the join succeeded:
 
@@ -108,19 +114,21 @@ To verify that the join succeeded, use the [dsregcmd /status command](/azure/act
 
 If the value of **AzureADJoined** is **No**, the join operation failed.  
 
-### Causes and resolutions for devices don't join hybrid Azure AD because of a TPM issue
+<a name='causes-and-resolutions-for-devices-dont-join-hybrid-azure-ad-because-of-a-tpm-issue'></a>
+
+### Causes and resolutions for devices don't join hybrid Microsoft Entra ID because of a TPM issue
 
 This issue may occur when the Windows operating system isn't the owner of the TPM. The specific fix for this issue depends on which errors or events are displayed, as shown in the following table:
 
 |Message |Reason | Resolution|
 | - | - | - |
-|**NTE\_BAD\_KEYSET (0x80090016/-2146893802)** |TPM operation failed or was invalid |This issue was probably caused by a corrupted sysprep image. When creating a sysprep image, make sure to use a computer that isn't joined to or registered in Azure AD or hybrid Azure AD. |
-|**TPM\_E\_PCP\_INTERNAL\_ERROR (0x80290407/-2144795641)** |Generic TPM error. |If the device returns this error, disable its TPM. Windows 10, version 1809 and later versions, automatically detect TPM failures and finish the hybrid Azure AD join without using the TPM. |
-|**TPM\_E\_NOTFIPS (0x80280036/-2144862154)** |The FIPS mode of the TPM is currently not supported. |If the device gives this error, disable its TPM. Windows 10, version 1809 and later versions, automatically detect TPM failures and finish the hybrid Azure AD join without using the TPM. |
+|**NTE\_BAD\_KEYSET (0x80090016/-2146893802)** |TPM operation failed or was invalid |This issue was probably caused by a corrupted sysprep image. When creating a sysprep image, make sure to use a computer that isn't joined to or registered in Microsoft Entra ID or hybrid Microsoft Entra ID. |
+|**TPM\_E\_PCP\_INTERNAL\_ERROR (0x80290407/-2144795641)** |Generic TPM error. |If the device returns this error, disable its TPM. Windows 10, version 1809 and later versions, automatically detect TPM failures and finish the Microsoft Entra hybrid join without using the TPM. |
+|**TPM\_E\_NOTFIPS (0x80280036/-2144862154)** |The FIPS mode of the TPM is currently not supported. |If the device gives this error, disable its TPM. Windows 10, version 1809 and later versions, automatically detect TPM failures and finish the Microsoft Entra hybrid join without using the TPM. |
 |**NTE\_AUTHENTICATION\_IGNORED (0x80090031/-2146893775)** |The TPM is locked out. |This error is transient. Wait for the cooldown period, and then retry the join operation. |
 
 For more information about TPM issues, see the following articles:
 
 - [TPM fundamentals: Anti-hammering](/windows/security/information-protection/tpm/tpm-fundamentals#anti-hammering)
-- [Troubleshooting hybrid Azure Active Directory-joined devices](/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current)
+- [Troubleshooting Microsoft Entra hybrid joined devices](/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current)
 - [Troubleshoot the TPM](/windows/security/information-protection/tpm/initialize-and-configure-ownership-of-the-tpm)

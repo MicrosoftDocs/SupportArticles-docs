@@ -11,7 +11,7 @@ metadata:
   ms.topic: landing-page # Required
   author: genlin  #Required; your GitHub user alias, with correct capitalization.
   ms.author: genli #Required; microsoft alias of author; optional team alias.
-  ms.date: 1/24/2022
+  ms.date: 09/08/2023
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -96,6 +96,20 @@ landingContent:
             url: ./cluster-autoscaler-fails-to-scale.md
 
 # Card
+  - title: Troubleshoot start operations
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Basic troubleshooting
+            url: troubleshoot-aks-cluster-start-issues.md
+          - text: K8SAPIServerConnFailVMExtensionError error (51)
+            url: error-code-k8sapiserverconnfailvmextensionerror.md
+          - text: K8SAPIServerDNSLookupFailVMExtensionError error (52)
+            url: error-code-k8sapiserverdnslookupfailvmextensionerror.md
+          - text: OutboundConnFailVMExtensionError error (50)
+            url: error-code-outboundconnfailvmextensionerror.md
+
+# Card
   - title: Troubleshoot node not ready
     linkLists:
       - linkListType: how-to-guide
@@ -148,6 +162,8 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
+          - text: Capture real-time system insights from cluster
+            url: ./capture-system-insights-from-aks.md
           - text: Capture TCP dump from Linux node
             url: ./capture-tcp-dump-linux-node-aks.md
           - text: Capture TCP dump from Windows node
@@ -164,7 +180,11 @@ landingContent:
             url: ./identify-high-cpu-consuming-containers-aks.md
           - text: Identify memory saturation in AKS clusters
             url: ./identify-memory-saturation-aks.md
-     
 
-
-
+ # Card 
+  - title: Troubleshoot Azure Linux container host issues
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot common issues with Azure Linux container hosts on AKS
+            url: ./troubleshoot-common-azure-linux-aks.md

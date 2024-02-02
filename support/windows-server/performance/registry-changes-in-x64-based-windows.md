@@ -1,17 +1,17 @@
 ---
 title: Registry changes in x64-based versions of Windows
 description: Describes some of the important registry changes that have been made in the x64 Edition version of the Windows operating system.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, joeswart
 ms.custom: sap:applications, csstroubleshoot
-ms.technology: windows-server-performance
+ms.subservice: performance
 ---
 # Registry changes in x64-based versions of Windows
 

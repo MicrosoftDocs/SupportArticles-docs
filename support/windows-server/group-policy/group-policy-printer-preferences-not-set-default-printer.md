@@ -1,17 +1,17 @@
 ---
 title: Printer Preferences can't set default printer
 description: Works around an issue where Group Policy Printer Preferences fails to set the default printer.
-ms.date: 9/24/2021
+ms.date: 05/16/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:managing-printers-through-group-policy, csstroubleshoot
-ms.technology: windows-server-group-policy
+ms.subservice: group-policy
 ---
 # Group Policy Printer Preferences fails to set the default printer when new user profile is created
 
@@ -52,3 +52,7 @@ There is currently no hotfix available for this issue. Possible work-arounds inc
 2. Restart the Print Spooler (spooler) service after user logon
 3. Use a Scheduled Task to run a script after logon to define the default printer
 4. Use Registry Preferences to configure the default printer
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for User Experience issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-user-experience.md#printing).

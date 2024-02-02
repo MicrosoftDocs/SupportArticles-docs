@@ -1,17 +1,17 @@
 ---
 title: Verify that SRV Domain Name System (DNS) records have been created
 description: Describes how to verify Service Location (SRV) locator resource records for a domain controller after you install the Active Directory directory service.
-ms.date: 1/4/2022
+ms.date: 01/04/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:dns, csstroubleshoot
-ms.technology: networking
+ms.subservice: networking
 ---
 # How to verify that SRV DNS records have been created for a domain controller
 

@@ -4,7 +4,6 @@ description: This article  helps you understand the warning messages that occur 
 ms.date: 07/22/2020
 ms.custom: sap:Reporting Services
 ms.reviewer: ralfks
-ms.prod: sql
 ---
 # You receive a warning message when you add a Reporting Services assembly as references to a custom report item project in SQL Server 2012 Reporting Services
 

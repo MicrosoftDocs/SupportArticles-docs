@@ -4,7 +4,6 @@ description: This article describes how to uninstall the Microsoft SQL Server Ma
 ms.date: 11/19/2020
 ms.custom: sap:Management Studio
 ms.topic: how-to
-ms.prod: sql
 ---
 # Uninstall SQL Server Management Studio
 

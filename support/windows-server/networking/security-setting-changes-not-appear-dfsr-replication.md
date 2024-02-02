@@ -1,17 +1,17 @@
 ---
 title: Security setting changes on folders don't appear immediately on replication partners
 description: Describes the delays on DFSR replication partners after security setting changes on folders.
-ms.date: 6/27/2022
+ms.date: 06/27/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:dfsr, csstroubleshoot
-ms.technology: networking
+ms.subservice: networking
 ---
 # Security setting changes on folders don't appear immediately on DFSR replication partners
 

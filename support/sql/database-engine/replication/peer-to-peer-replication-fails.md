@@ -4,7 +4,6 @@ description: This article helps you resolve the problem that occurs when you cre
 ms.date: 03/16/2020
 ms.custom: sap:Replication, change tracking, change data capture
 ms.reviewer: daleche, chrissk
-ms.prod: sql
 ---
 # 102 and incorrect syntax near sp_MS errors when you create peer-to-peer replication in SQL Server
 

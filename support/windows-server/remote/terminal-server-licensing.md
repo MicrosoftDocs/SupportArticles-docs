@@ -1,17 +1,17 @@
 ---
 title: Terminal Server licensing
 description: Describes Terminal Server licensing.
-ms.date: 9/24/2021
+ms.date: 05/16/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, willgloy
 ms.custom: sap:remote-desktop-services-terminal-services-licensing, csstroubleshoot
-ms.technology: windows-server-rds
+ms.subservice: rds
 ---
 # Terminal Server licensing
 
@@ -54,3 +54,7 @@ It is possible to have more than seven JETx.TMP files. If the server is powered 
 If JETx.TMP files numbered 1-7 exist, the server will create new files numbered 8-14. If you deleted files 1-7 (which could be done since they would not be open) and shutdown the system through the RDP client again, the new files created at startup would again be numbered 1-7. So, the highest numbered files are not necessarily the files that are in use.
 
 If left over JETx.TMP files are an issue, delete JET*.TMP files. Only the closed, unused files will be deleted. You cannot delete open files, or delete files in use.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for User Experience issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-user-experience.md#terminal-server-licensing).

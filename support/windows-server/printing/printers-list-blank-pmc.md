@@ -1,17 +1,17 @@
 ---
 title: Printers list blank in PMC
 description: Provides a solution to an issue that the list of printers will be blank when you view the printers on a remote server through the Print Mangagement Console (PMC).
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, raackley
 ms.custom: sap:errors-and-troubleshooting:-print-spooler, csstroubleshoot
-ms.technology: windows-server-printing
+ms.subservice: printing
 ---
 # Printers list blank in Print Management Console
 

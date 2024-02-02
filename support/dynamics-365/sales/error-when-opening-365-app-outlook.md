@@ -3,7 +3,7 @@ title: Error when opening 365 App for Outlook
 description: Provides a solution to an error that occurs when you try to open the App for Outlook.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: d365-sales-email-office-integration
 ---
 # We can't load this app because your email account isn't configured with Dynamics 365 server-side sync for appointments, contacts, and tasks error occurs in Microsoft Dynamics 365 App for Outlook

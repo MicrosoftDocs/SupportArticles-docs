@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:management-and-configuration-installing-print-drivers, csstroubleshoot
-ms.technology: windows-client-printing
+ms.subservice: printing
 ---
 # Not all printer drivers downloaded from Windows Update are listed in Add Printer wizard
 

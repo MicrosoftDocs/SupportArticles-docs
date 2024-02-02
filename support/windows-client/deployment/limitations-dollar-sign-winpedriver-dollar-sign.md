@@ -1,17 +1,17 @@
 ---
 title: Limitations of $WinPeDriver$
 description: Describes limitations of $WinPeDriver$.
-ms.date: 09/15/2020
+ms.date: 09/01/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:devices-and-drivers, csstroubleshoot
-ms.technology: windows-client-deployment
+ms.subservice: deployment
 ---
 # Limitations of $WinPeDriver$ when used in conjunction with other driver injection methods
 
@@ -317,6 +317,10 @@ WinRE is typically going to be static on the hard drive, either auto-installed d
 
 If your requirement is to create a WinPE environment that loads out of box drivers prior to running setup.exe, follow the guidelines described in this document in order to end up with the driver you want in the resulting installed operating system. Writing scripts which leverage Drvload.exe launched by startnet.cmd to load specific drivers located in the \$WinPeDriver$ folder on a USB flash drive is the most flexible method available. This method allows you to load a driver during the WinPE phase that carries over into the installed operating system. In addition, it allows for maintaining of a central repository for drivers that will allow for flexibility to update these drivers (so as to maintain the latest drivers in your driver store).
 
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).
+
 ## References and Links
 
 - [Add Device Drivers during Windows Setup](/previous-versions/windows/it-pro/windows-vista/cc766485(v=ws.10))
@@ -347,7 +351,7 @@ If your requirement is to create a WinPE environment that loads out of box drive
 
 - [Copype.cmd](/previous-versions/windows/embedded/ff794790(v=winembedded.60))
 
-- [Windows Automated Installation Kit (AIK) for Win7/2008r2](https://www.microsoft.com/download/en/details.aspx?displaylang=en&id=5753)
+- [Windows Automated Installation Kit (AIK) for Win7/2008r2](https://www.microsoft.com/download/en/details.aspx?id=5753)
 
 - [Windows OEM Preinstallation Kit (OPK)](https://www.microsoft.com/oem/en/downloads/pages/technical-downloads.aspx)
 

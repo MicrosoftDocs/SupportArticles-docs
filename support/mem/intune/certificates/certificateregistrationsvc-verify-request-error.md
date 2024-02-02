@@ -1,10 +1,10 @@
 ---
 title: Troubleshoot HTTP 500 error on SCEP requests in Intune
 description: Fixes an issue in which the certificate registration point (CRP) application pool returns HTTP 500 error messages and the request can't be verified.
-ms.date: 09/09/2021
+ms.date: 01/31/2024
 search.appverid: MET150
 ms.custom: sap:Device protection
-ms.reviewer: kaushika, joelste, intunecic, alra
+ms.reviewer: kaushika, joelste, intunecic, alra, aendrawos
 ---
 # HTTP 500 errors on CertificateRegistrationSvc verify request in Intune
 
@@ -15,7 +15,7 @@ This article fixes errors when you configure and assign a Simple Certificate Enr
 After you configure and assign a SCEP certificate profile in Intune, you experience the following problems:
 
 - Targeted devices do not receive a certificate.
-- The certificate profile shows a status of **Failed** in the Microsoft Endpoint Manager admin center.
+- The certificate profile shows a status of **Failed** in the Microsoft Intune admin center.
 - Incoming SCEP requests generate **HTTP 500** error entries in the IIS logs on the computer that's running the Microsoft Intune NDES Connector. These entries resemble the following:
 
     > *DateTime* *IPAddress* GET /certsrv/mscep/mscep.dll operation=GetCACert&message=SCEP%20Authority 443 -IPAddress profiled/1.0+CFNetwork/975.0.3+Darwin/18.2.0 - 200 0 0 0  
@@ -39,6 +39,9 @@ After you configure and assign a SCEP certificate profile in Intune, you experie
 ## Cause
 
 This issue can occur if the **Write** permission is missing for the account that's used to run the `CertificateRegistrationSvc` application pool (for example, the Network Service account) in the `C:\Windows\Temp` folder.
+
+> [!NOTE]
+> Because the verification requests are processed by the Intune cloud service, this issue may only occur when using the legacy certificate connector instead of the new connector.
 
 :::image type="content" source="media/certificateregistrationsvc-verify-request-error/event-1310.png" alt-text="Screenshot of Event ID 1310 warning in Application Event Log.":::
 

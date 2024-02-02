@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, shijoy
 ms.custom: sap:user-profiles, csstroubleshoot
-ms.technology: windows-client-user-profiles
+ms.subservice: user-profiles
 ---
 # Error "Invalid store path" during the LoadState process when you use the User State Migration Tool
 

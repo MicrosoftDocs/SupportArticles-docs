@@ -2,7 +2,7 @@
 title: Cascading settings revert to the value in solution
 description: This article describes a problem for the regarding field on activity entities in Dynamics CRM that is experienced after you import solutions, install update rollups, or apply CRM Online updates.
 ms.reviewer: clintwa
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: d365-sales-custom-solutions
 ---
 # Relationship for activity about fields is reset after you import a solution to Microsoft Dynamics CRM

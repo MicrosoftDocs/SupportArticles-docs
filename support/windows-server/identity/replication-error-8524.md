@@ -1,17 +1,17 @@
 ---
 title: Active Directory Replication fails with Win32 error 8524
 description: Describes an issue that Active Directory Replications fail with Win32 error 8524 (The DSA operation is unable to proceed because of a DNS lookup failure).
-ms.date: 3/24/2022
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:active-directory-replication, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # Active Directory Replication Error 8524: The DSA operation is unable to proceed because of a DNS lookup failure
 
@@ -518,3 +518,7 @@ The error message text in DS RPC Client event 2087 documents a user action for r
 
     - Invalid delegations on the DNS that owns the parent zone that is delegating to the subordinate zone.
     - Invalid forwarder IP addresses on the DNS server trying to resolve the superior DNS zone (example: a DC in child.contoso.com trying to resolve host records in conto.com zone staying on DNS Servers in the root domain).
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Active Directory replication issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication.md).

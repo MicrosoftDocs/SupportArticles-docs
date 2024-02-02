@@ -1,17 +1,17 @@
 ---
 title: Third-party backup warnings after you install a servicing update in Windows Server 2016
 description: You receive a warning when using a third-party backup application after you install a Windows Servicing Stack Update.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-jeffbo
 ms.custom: sap:volume-shadow-copy-service-vss, csstroubleshoot
-ms.technology: windows-server-backup-and-storage
+ms.subservice: backup-and-storage
 ---
 # Third-party backup warnings after you install a servicing update in Windows Server 2016
 

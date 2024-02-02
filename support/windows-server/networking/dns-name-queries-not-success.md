@@ -1,17 +1,17 @@
 ---
 title: Some DNS name queries are unsuccessful
 description: Describes an issue that occurs because of the Extension Mechanisms for DNS (EDNS0) functionality that is supported in Windows Server DNS. Provides a resolution and workaround.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:dns, csstroubleshoot
-ms.technology: networking
+ms.subservice: networking
 ---
 # Some DNS name queries are unsuccessful after you deploy a Windows-based DNS server
 

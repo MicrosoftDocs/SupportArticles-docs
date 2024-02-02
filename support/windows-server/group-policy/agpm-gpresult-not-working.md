@@ -1,17 +1,17 @@
 ---
 title: AGPM and GPRESULT are not working
 description: Describes scenarios in which AGPM and GPRESULT do not work on a Windows Server Core installation.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:group-policy-management-gpmc-or-agpm, csstroubleshoot
-ms.technology: windows-server-group-policy
+ms.subservice: group-policy
 ---
 # AGPM and GPRESULT not working in Windows Server Core
 

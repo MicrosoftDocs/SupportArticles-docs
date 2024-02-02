@@ -1,17 +1,17 @@
 ---
 title: Error occurs when adding an IPP printer
 description: Provides a solution to an error that occurs when you try to add an IPP printer over HTTPS.
-ms.date: 09/10/2020
+ms.date: 05/16/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, mattburr
 ms.custom: sap:errors-and-troubleshooting:-general-issues, csstroubleshoot
-ms.technology: windows-client-printing
+ms.subservice: printing
 ---
 # When attempting to add an IPP printer over HTTPS, you receive an error
 
@@ -60,3 +60,7 @@ If your print server is using self-signed certificates, the following steps can 
 11. A security warning will appear that you are adding a certificate from a source that cannot be validated.  Click **Yes** to trust this SSL certificate.
 12. Close Internet Explorer.
 13. The printer can now be installed.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for User Experience issues](../windows-troubleshooters/gather-information-using-tss-user-experience.md#printing).

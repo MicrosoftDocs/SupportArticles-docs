@@ -1,17 +1,17 @@
 ---
 title: Fail to start selected virtual machine
 description: Provides a solution to an error that occurs while you try to  start the selected virtual machine.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:virtual-machine-will-not-boot, csstroubleshoot
-ms.technology: hyper-v
+ms.subservice: hyper-v
 ---
 # An error occurred while attempting to start the selected virtual machine
 

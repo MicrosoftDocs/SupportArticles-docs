@@ -1,17 +1,17 @@
 ---
 title: Skype for Microsoft Update
 description: Describes how to keep Skype updated through Microsoft Update and through the Upgrade function in Skype.
-ms.date: 10/27/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:servicing, csstroubleshoot
-ms.technology: windows-client-deployment
+ms.subservice: deployment
 ---
 # Skype for Microsoft Update
 
@@ -68,3 +68,7 @@ To install Skype for Windows, follow these steps:
 2. Select **Run** to run Skype directly from your browser.
 3. Follow the steps in the setup wizard to complete the installation.
 4. Start Skype, and then sign in by entering a [Microsoft Account](https://support.skype.com/en/faq/fa12059/what-is-a-microsoft-account?frompage=search&q=microsoft+account&fromsearchfirstpage=false) user name and password.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).
