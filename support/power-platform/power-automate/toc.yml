@@ -156,7 +156,7 @@
         - name: Can't find Excel Online table in Microsoft Flow
           href: flow-creation/unable-to-find-excel-online-table-in-microsoft-flow.md
         - name: Converting time zone
-          href: flow-creation/converting-time-zone-power-automate.md
+          href: /power-automate/convert-time-zone?context=/troubleshoot/power-platform/power-automate/context/context
         - name: Customize or format Date and Time values in a flow
           href: /power-automate/date-time-values?context=/troubleshoot/power-platform/power-automate/context/context
         - name: Dropdown list doesn't load items in triggers or actions
