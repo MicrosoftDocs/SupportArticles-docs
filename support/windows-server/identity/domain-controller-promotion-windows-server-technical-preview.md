@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, warrenw, arrenc
 ms.custom: sap:active-directory-domain-or-forest-functional-level-updates, csstroubleshoot
-ms.subservice: active-directory
 ---
 # Domain controller promotion process shows the Windows Server Technical Preview option in the Domain and Forest functional level list
 

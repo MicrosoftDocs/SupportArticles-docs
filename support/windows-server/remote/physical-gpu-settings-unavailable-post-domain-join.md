@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:performance-audio-and-video-and-remotefx, csstroubleshoot
-ms.subservice: rds
 ---
 # Physical GPU settings is unavailable post domain join
 

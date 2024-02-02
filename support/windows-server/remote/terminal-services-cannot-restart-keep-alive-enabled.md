@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: sashalon, kaushika
 ms.custom: sap:administration, csstroubleshoot
-ms.subservice: rds
 ---
 # Remote Desktop Service can't be restarted if Keep-Alive feature is enabled
 

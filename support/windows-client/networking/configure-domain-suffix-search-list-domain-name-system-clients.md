@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, drewba
 ms.custom: sap:dns, csstroubleshoot
-ms.technology: windows-client-networking
 ---
 # How to configure a domain suffix search list on the Domain Name System clients
 

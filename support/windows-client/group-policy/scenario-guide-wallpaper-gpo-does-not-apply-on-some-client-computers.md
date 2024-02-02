@@ -5,8 +5,6 @@ author: Deland-Han
 ms.author: delhan
 ms.topic: troubleshooting
 ms.date: 10/10/2023
-ms.prod: windows-client
-ms.technology: windows-client-group-policy
 ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
 ---
 # Scenario guide: Wallpaper GPO doesn't apply on some client computers

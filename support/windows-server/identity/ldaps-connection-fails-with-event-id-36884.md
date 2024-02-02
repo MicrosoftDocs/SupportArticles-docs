@@ -5,9 +5,7 @@ author: Deland-Han
 ms.author: delhan
 ms.topic: troubleshooting
 ms.date: 12/12/2022
-ms.service: windows-server
 ms.reviewer: garymu
-ms.subservice: active-directory
 ms.custom: sap:ldap-configuration-and-interoperability, csstroubleshoot
 ---
 # Event ID 36884 when you try to connect to an LDAPS server

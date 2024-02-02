@@ -5,11 +5,9 @@ ms.date: 04/28/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, arrenc, johnbay, herbertm, joflore, v-lianna
 ms.custom: sap:active-directory-replication, csstroubleshoot
-ms.subservice: active-directory
 ---
 # Active Directory replication error 8304: "The maximum size on an object has been exceeded"
 

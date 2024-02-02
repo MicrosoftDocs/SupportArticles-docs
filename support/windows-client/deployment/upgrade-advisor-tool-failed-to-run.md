@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:setup, csstroubleshoot
-ms.technology: windows-client-deployment
 ---
 # Windows 7 Upgrade Advisor tool failed to run with error message "Windows 7 Upgrade Advisor was unable to reach the Microsoft server for compatibility information. Check your internet connection and try again later."
 

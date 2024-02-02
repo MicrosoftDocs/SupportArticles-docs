@@ -8,11 +8,11 @@ metadata:
   manager: dcscontentpm
   audience: itpro
   ms.topic: faq
-  ms.prod: windows-client
+  ms.service: windows-client
   localization_priority: medium
   ms.reviewer: v-elj, chawong, winciccore, kaushika
   ms.custom: sap:e5-esu-offers, csstroubleshoot
-  ms.technology: windows-client-eos
+  ms.subservice: windows-eos
 title: FAQ about Windows 7 ESU offers for E5 customers
 summary: |
   This article describes the frequently asked questions about the Extended Security Updates offers for E5 customers for Windows 7.

@@ -5,8 +5,6 @@ author: Deland-Han
 ms.author: delhan
 ms.topic: troubleshooting
 ms.date: 02/02/2023
-ms.service: windows-server
-ms.subservice: hyper-v
 ms.custom: sap:installation-and-configuration-of-hyper-v, csstroubleshoot
 ---
 # Windows Server support and installation instructions for the AMD EPYC 9004 Series server processors

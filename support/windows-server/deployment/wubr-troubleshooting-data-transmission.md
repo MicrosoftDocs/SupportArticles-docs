@@ -7,11 +7,9 @@ author: Deland-Han
 ms.author: delhan
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate
 ms.custom: sap:servicing, csstroubleshoot
-ms.subservice: deployment
 keywords: Windows Update for Business reports, WUBr, diagnostic data, telemetry
 ---
 

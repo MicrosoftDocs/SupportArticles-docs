@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:virtualized-domain-controller-errors-and-questions, csstroubleshoot
-ms.subservice: active-directory
 ---
 # Things to consider when you host Active Directory domain controllers in virtual hosting environments
 

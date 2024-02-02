@@ -7,11 +7,9 @@ ms.author: kaushika
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:errors-and-troubleshooting-print-output-or-print-failures, csstroubleshoot
-ms.subservice: printing
 ---
 # Troubleshooting scenarios for printing
 

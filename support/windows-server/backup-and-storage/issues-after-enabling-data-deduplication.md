@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, vimalsh
 ms.custom: sap:deduplication, csstroubleshoot
-ms.subservice: backup-and-storage
 ---
 # Known issues after you enable data deduplication on CSV
 

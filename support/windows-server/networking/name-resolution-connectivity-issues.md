@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, JOELSCH
 ms.custom: sap:dns, csstroubleshoot
-ms.subservice: networking
 ---
 # Name resolution and connectivity issues on a Routing and Remote Access Server that also runs DNS or WINS
 
