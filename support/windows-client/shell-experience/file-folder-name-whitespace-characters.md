@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, arichard, kimnich
 ms.custom: sap:file-explorer/windows-explorer, csstroubleshoot
-ms.subservice: shell-experience
 ---
 # Support for Whitespace characters in File and Folder names for Windows
 

@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika,  johnfern
 ms.custom: sap:configuration-of-virtual-machine-settings, csstroubleshoot
-ms.subservice: hyper-v
 ---
 # Ghost NIC seen on Windows 7/Windows 2008 R2 machines built from VMware Templates when the Template uses a Synthetic NIC (VMXNET3)
 

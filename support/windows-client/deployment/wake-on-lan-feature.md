@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:power-management, csstroubleshoot
-ms.subservice: deployment
 ---
 # Wake on LAN (WOL) behavior in Windows 10
 

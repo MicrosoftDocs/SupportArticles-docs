@@ -6,8 +6,6 @@ ms.author: delhan
 ms.reviewer: visohra, kaushika
 manager: dcscontentpm
 audience: itpro
-ms.service: windows-client
-ms.subservice: performance
 ms.custom: sap:no-boot-not-bugchecks, csstroubleshoot
 ms.topic: troubleshooting
 ms.date: 10/30/2021

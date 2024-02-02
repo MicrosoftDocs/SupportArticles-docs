@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, xiangwu
 ms.custom: sap:modern-inbox-and-microsoft-store-apps, csstroubleshoot
-ms.subservice: shell-experience
 ---
 # Windows Store apps may not open and Event ID 5973 is logged in the Application log
 

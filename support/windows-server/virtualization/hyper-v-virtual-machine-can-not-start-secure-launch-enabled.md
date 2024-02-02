@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, marcush
 ms.custom: sap:virtual-machine-will-not-boot, csstroubleshoot
-ms.subservice: hyper-v
 ---
 # Hyper-V virtual machine can't start when System Guard Secure Launch is enabled
 

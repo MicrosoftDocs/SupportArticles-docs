@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, steved, cmyu, ssutari
 ms.custom: sap:wmi, csstroubleshoot
-ms.subservice: system-mgmgt-components
 ---
 # WMI-Activity Event 5858 logged frequently with ResultCode 0x80041032
 

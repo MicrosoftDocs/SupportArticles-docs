@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, aanandr
 ms.custom: sap:remote-access, csstroubleshoot
-ms.subservice: networking
 ---
 # The Routing and Remote Access service doesn't start when there's no network connectivity
 

@@ -5,8 +5,6 @@ ms.date: 02/16/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-client
-ms.subservice: system-mgmgt-components
 ms.custom: sap:wer, csstroubleshoot
 localization_priority: medium
 ms.reviewer: kaushika, sangar, plingadevaru, v-lianna

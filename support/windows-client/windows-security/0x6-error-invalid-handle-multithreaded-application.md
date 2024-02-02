@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, milanmil, herbertm
 ms.custom: sap:smart-card-logon, csstroubleshoot
-ms.subservice: windows-security
 ---
 # (0x6 ERROR_INVALID_HANDLE) error when a multithreaded application accesses a smart card
 

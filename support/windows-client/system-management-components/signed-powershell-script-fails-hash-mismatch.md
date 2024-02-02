@@ -5,8 +5,6 @@ ms.date: 05/16/2023
 ms.reviewer: v-sidong
 ms.author: milanmil
 author: mrmilanmm
-ms.service: windows-client
-ms.subservice: system-mgmgt-components
 ms.custom: Fix, csstroubleshoot
 audience: itpro
 localization_priority: medium

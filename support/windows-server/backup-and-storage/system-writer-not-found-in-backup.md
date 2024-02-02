@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-nirmsh
 ms.custom: sap:volume-shadow-copy-service-vss, csstroubleshoot
-ms.subservice: backup-and-storage
 ---
 # System state backup by using Windows Server Backup fails with error: System writer is not found in the backup
 

@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, meerak
 ms.custom: sap:slow-performance, csstroubleshoot
-ms.subservice: performance
 ---
 # Speed up a Windows 8.1 computer
 

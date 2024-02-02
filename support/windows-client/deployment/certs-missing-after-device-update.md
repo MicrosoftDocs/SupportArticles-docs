@@ -5,11 +5,9 @@ ms.date: 04/28/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate
 ms.custom: sap:deployment, csstroubleshoot
-ms.subservice: deployment
 keywords: managed devices, certificates, WSUS, MECM, Windows Update
 ---
 

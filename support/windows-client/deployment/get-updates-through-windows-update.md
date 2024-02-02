@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, cpuckett, delhan
 ms.custom: sap:servicing, csstroubleshoot
-ms.subservice: deployment
 adobe-target: true
 ---
 # How to get an update through Windows Update

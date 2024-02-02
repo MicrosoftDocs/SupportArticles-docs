@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:shutdown-is-slow-or-hangs, csstroubleshoot
-ms.subservice: performance
 ---
 # Windows shuts down slowly when it is set to clear the virtual memory pagefile on shutdown
 

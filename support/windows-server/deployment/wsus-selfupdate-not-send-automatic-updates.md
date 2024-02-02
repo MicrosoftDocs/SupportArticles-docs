@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, cclay
 ms.custom: sap:servicing, csstroubleshoot
-ms.subservice: deployment
 ---
 # WSUS SelfUpdate service doesn't send automatic updates
 

@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, v-jeffbo
 ms.custom: sap:remote-access, csstroubleshoot
-ms.subservice: networking
 ---
 # CMAK-based VPN client doesn't work after an in-place upgrade to Windows 10
 

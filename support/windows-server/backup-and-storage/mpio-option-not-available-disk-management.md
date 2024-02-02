@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:multipath-i/o-mpio-and-storport, csstroubleshoot
-ms.subservice: backup-and-storage
 ---
 # MPIO option not in Disk Management in Windows Server 2019
 

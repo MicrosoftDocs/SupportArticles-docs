@@ -5,11 +5,9 @@ ms.date: 05/16/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, gbrag, v-lianna
 ms.custom: sap:winrm, csstroubleshoot
-ms.subservice: system-mgmgt-components
 ---
 # Can't establish a PowerShell remote session using WinRM between Microsoft Entra-only joined machines
 

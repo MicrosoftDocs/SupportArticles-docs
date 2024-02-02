@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:msi, csstroubleshoot
-ms.subservice: application-compatibility
 ---
 # Error when trying to uninstall an application: Error opening installation log file. Verify that the specified location exists and is writable
 

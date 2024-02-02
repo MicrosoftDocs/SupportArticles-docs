@@ -5,8 +5,6 @@ ms.date: 03/31/2021
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-client
-ms.subservice: windows-group-policy
 ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
 ms.reviewer: kaushika, v-tappelgate
 localization_priority: medium

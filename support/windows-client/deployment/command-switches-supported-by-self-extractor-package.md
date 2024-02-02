@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:servicing, csstroubleshoot
-ms.subservice: deployment
 ---
 # Command-line switches supported by a software installation package, an update package, or a hotfix package created with Microsoft Self-Extractor
 

@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, match, jaysenb
 ms.custom: sap:setup, csstroubleshoot
-ms.subservice: deployment
 ---
 # Can't enter UEFI firmware setup when in native UEFI mode in Windows 7 and Windows 8
 

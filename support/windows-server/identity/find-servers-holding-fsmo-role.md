@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, MHUNTER, dhook
 ms.custom: sap:active-directory-fsmo, csstroubleshoot
-ms.subservice: active-directory
 ---
 # How To Find Servers That Hold Flexible Single Master Operations Roles
 

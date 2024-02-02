@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, joscon
 ms.custom: sap:activation, csstroubleshoot
-ms.subservice: deployment
 ---
 # Event ID 12321 Warning Token Based Activation failed
 

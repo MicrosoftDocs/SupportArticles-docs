@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, nedpyle, qianyu
 ms.custom: sap:administration, csstroubleshoot
-ms.subservice: rds
 ---
 # Description of Remote Server Administration Tools
 
