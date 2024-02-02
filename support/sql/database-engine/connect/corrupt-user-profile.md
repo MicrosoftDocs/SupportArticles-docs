@@ -20,7 +20,7 @@ You receive the following error message:
 
 ## Cause
 
-If you log in as the affected user, you'll get a [temporary profile](/windows/win32/shell/temporary-user-profiles). This is a good indication that the user profile is corrupted or that you're a guest user. 
+If you log in as the affected user, you'll get a [temporary profile](/windows/win32/shell/temporary-user-profiles). This is a good indication that the user profile is corrupted or that you're a guest user.
 
 ## Resolution
 
