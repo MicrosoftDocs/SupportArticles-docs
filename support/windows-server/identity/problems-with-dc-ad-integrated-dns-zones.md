@@ -5,11 +5,9 @@ ms.date: 09/24/2021
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, herbertm, v-lianna
 ms.custom: sap:active-directory-lightweight-directory-services-ad-lds-and-active-directory-application-mode-adam, csstroubleshoot
-ms.subservice: active-directory
 ---
 # Problems that can occur with many Domain Controllers in Active Directory integrated DNS zones
 

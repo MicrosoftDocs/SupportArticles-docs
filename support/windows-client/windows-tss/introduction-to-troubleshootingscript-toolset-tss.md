@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, muratka, waltere
 ms.custom: sap:windows-tss, csstroubleshoot
-ms.subservice: windows-troubleshooter
 ---
 # Introduction to TroubleShootingScript toolset (TSS)
 

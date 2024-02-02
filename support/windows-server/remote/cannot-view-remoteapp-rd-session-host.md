@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, nedpyle
 ms.custom: sap:rdweb, csstroubleshoot
-ms.subservice: rds
 ---
 # You cannot view "RemoteApp" programs on an RD Session Host server by using RD Web Access
 

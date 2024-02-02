@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, ajayps, arrenc, v-phoebh
 ms.custom: sap:devices-and-drivers, csstroubleshoot
-ms.subservice: deployment
 ---
 # Devices are not working before you log on a computer that's running Windows 10
 

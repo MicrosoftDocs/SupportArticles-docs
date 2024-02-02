@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, tonyga, ajayps, v-jeffbo
 ms.custom: sap:dns, csstroubleshoot
-ms.subservice: networking
 ---
 # URI-encoding in UNC paths interpreted literally in Windows 10, version 1803 and later
 

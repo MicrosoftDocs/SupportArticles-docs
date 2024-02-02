@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:active-directory-services-interface-adsi, csstroubleshoot
-ms.subservice: admin-mgmt-development
 ---
 # User authentication issues with the Active Directory Service Interfaces WinNT provider
 

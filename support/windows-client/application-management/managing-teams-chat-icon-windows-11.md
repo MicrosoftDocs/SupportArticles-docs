@@ -6,9 +6,7 @@ author: kaushika-msft
 ms.author: kaushika
 ms.topic: troubleshooting
 ms.reviewer: warren-msft, kimberj, v-jayaramanp
-ms.service: windows-client
 ms.custom: sap:windows-script-host-cscript-or-wscript, csstroubleshoot
-ms.subservice: application-compatibility
 audience: itpro
 localization_priority: medium
 ---

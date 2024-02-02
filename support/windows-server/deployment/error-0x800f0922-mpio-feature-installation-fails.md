@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, sugan, vineetm
 ms.custom: sap:servicing, csstroubleshoot
-ms.subservice: deployment
 ---
 # Error 0x800f0922 when the MPIO feature installation fails
 

@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, austinm
 ms.custom: sap:servicing, csstroubleshoot
-ms.subservice: deployment
 ---
 # Switches that you can use with xcopy and xcopy32 commands
 

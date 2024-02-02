@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:cannot-bring-a-resource-online, csstroubleshoot
-ms.subservice: high-availability
 ---
 # Cluster fileshare resource fails on a failover cluster node and the cluster log contains "status 5. Tolerating..."
 

@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, kakojima, kmasudo, kewaka, slight
 ms.custom: sap:active-directory-rights-management-services, csstroubleshoot
-ms.subservice: active-directory
 ---
 # Event ID 84 occurs in Active Directory Rights Management Services (AD RMS) in Windows Server
 

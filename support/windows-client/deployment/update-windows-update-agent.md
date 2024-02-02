@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, brentdav
 ms.custom: sap:servicing, csstroubleshoot
-ms.subservice: deployment
 adobe-target: true
 ---
 # Update the Windows Update Agent to the latest version

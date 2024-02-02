@@ -5,11 +5,9 @@ ms.date: 02/08/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate
 ms.custom: sap:dns, csstroubleshoot
-ms.subservice: networking
 keywords: DNS, listen, IP address, restart, ListenAddresses
 ---
 

@@ -7,10 +7,8 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.subservice: windows-security
 ---
 # Windows Security troubleshooting documentation for Windows Server
 

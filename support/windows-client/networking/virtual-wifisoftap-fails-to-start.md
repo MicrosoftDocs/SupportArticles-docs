@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, nbassett
 ms.custom: sap:wireless-networking-and-802.1x-authentication, csstroubleshoot
-ms.subservice: networking
 ---
 # Virtual WiFi/SoftAP fails to start with error: The hosted network couldn't be started
 

@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, mniehaus, aaroncz
 ms.custom: sap:setup, csstroubleshoot
-ms.subservice: deployment
 ---
 # MDT Media Deployment USB drive not bootable on x86 UEFI system
 

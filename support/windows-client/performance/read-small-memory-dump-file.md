@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:blue-screen/bugcheck, csstroubleshoot
-ms.subservice: performance
 adobe-target: true
 ---
 
@@ -23,6 +21,7 @@ adobe-target: true
 This article describes how to examine a small memory dump file. A small memory dump file can help you determine why your computer failed.
 
 _Applies to_ &nbsp; All supported versions of Windows Client and Windows Server  
+
 _Original KB number:_ &nbsp; 315263
 
 > [!NOTE]

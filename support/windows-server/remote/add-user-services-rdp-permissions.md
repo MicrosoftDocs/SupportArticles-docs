@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, SPAT, slight
 ms.custom: sap:administration, csstroubleshoot
-ms.subservice: rds
 ---
 # How to add a user to RDP permissions by using WMI
 

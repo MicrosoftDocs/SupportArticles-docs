@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, willgloy
 ms.custom: sap:administration, csstroubleshoot
-ms.subservice: rds
 ---
 # How to temporarily disable Terminal Server Client Logons
 

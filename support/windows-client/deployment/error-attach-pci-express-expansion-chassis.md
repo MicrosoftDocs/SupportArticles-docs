@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, v-sanair
 ms.custom: sap:devices-and-drivers, csstroubleshoot
-ms.subservice: deployment
 ---
 # Error message when you attach a PCI Express expansion chassis to a Windows-based computer: "Code 12" or "Code 31"
 

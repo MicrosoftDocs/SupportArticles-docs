@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, clintk
 ms.custom: sap:setup, csstroubleshoot
-ms.subservice: deployment
 ---
 # How to avoid duplicate GUIDs when you image System Management Server 2003 client computers
 

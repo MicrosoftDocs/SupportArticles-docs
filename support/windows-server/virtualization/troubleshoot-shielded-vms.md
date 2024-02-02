@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, dongill, inhenkel, v-lianna
 ms.custom: sap:shielded-virtual-machines, csstroubleshoot
-ms.subservice: hyper-v
 ---
 # Troubleshoot shielded VMs
 

@@ -5,11 +5,9 @@ ms.date: 01/22/2022
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-lianna
 ms.custom: sap:user-computer-group-and-object-management, csstroubleshoot
-ms.subservice: active-directory
 ---
 # Linux accounts can't get AES-encrypted tickets in AD DS
 

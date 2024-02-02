@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:backup-and-restore-of-virtual-machines, csstroubleshoot
-ms.subservice: hyper-v
 ---
 # Error 0x80070005 when you export Hyper-V VMs over the Network
 

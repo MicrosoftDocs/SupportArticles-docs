@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, bhogen
 ms.custom: sap:applications, csstroubleshoot
-ms.subservice: performance
 ---
 # Some Windows procedures don't work if the Remote Procedure Call service is disabled
 

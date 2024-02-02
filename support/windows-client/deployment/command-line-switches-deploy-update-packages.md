@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: eriprice, kaushika
 ms.custom: sap:servicing, csstroubleshoot
-ms.subservice: deployment
 ---
 # Command-line switches for Microsoft software update packages
 

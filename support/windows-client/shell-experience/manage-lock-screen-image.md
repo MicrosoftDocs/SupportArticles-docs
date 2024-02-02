@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, warrenw, justintu
 ms.custom: sap:lock-screen-or-screensaver, csstroubleshoot
-ms.subservice: shell-experience
 ---
 # How to Manage the Lock Screen Image on Windows 8 and Windows Server 2012
 

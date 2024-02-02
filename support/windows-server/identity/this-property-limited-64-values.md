@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: v-jomcc, kaushika
 ms.custom: sap:user-computer-group-and-object-management, csstroubleshoot
-ms.subservice: active-directory
 ---
 # Error message when you try to add more than 64 logon workstations: "This property is limited to 64 values"
 

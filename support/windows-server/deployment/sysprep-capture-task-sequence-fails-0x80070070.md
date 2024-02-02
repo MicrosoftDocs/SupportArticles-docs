@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, vineetm
 ms.custom: sap:setup, csstroubleshoot
-ms.subservice: deployment
 ---
 # SYSPREP and CAPTURE task sequence fails with error 0x80070070
 

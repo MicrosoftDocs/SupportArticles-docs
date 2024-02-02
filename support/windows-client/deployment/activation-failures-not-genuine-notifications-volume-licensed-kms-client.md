@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, arrenc, chriti, demartin, mgorti, rpowell, shibird, sirkad, tichotej, wesk, wiaftrin
 ms.custom: sap:activation, csstroubleshoot
-ms.subservice: deployment
 ---
 # Activation failures and (not genuine) notifications around January 8, 2019, on volume-licensed Windows 7 Service Pack 1 KMS clients
 

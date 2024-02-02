@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, kimberj
 ms.custom: sap:modern-inbox-and-microsoft-store-apps, csstroubleshoot
-ms.subservice: application-compatibility
 ---
 # Modern apps or application packages are reported as vulnerable
 

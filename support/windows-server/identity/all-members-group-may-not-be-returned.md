@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:user-computer-group-and-object-management, csstroubleshoot
-ms.subservice: active-directory
 ---
 # All members of a group may not be returned when you enumerate members of a group by using the Active Directory Service Interfaces WinNT provider
 

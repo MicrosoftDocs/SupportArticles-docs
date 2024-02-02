@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:management-server-issues, csstroubleshoot
-ms.subservice: application-virtualization-app-v
 ---
 # HTTP Error 500.19 - Internal Server Error when launching the App-V Management console
 

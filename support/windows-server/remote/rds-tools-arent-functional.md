@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, raackley
 ms.custom: sap:administration, csstroubleshoot
-ms.subservice: rds
 ---
 # Remote Desktop Services tools aren't functional after you remove a server from Server Manager
 

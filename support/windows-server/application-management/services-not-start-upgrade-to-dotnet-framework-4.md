@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:.net-framework-installation, csstroubleshoot
-ms.subservice: application-compatibility
 ---
 # Services that depend on the ASP.NET State Service do not start after you upgrade to the .NET Framework 4.0
 
