@@ -207,6 +207,7 @@
         "dynamics-365/guides/**/**.*": "dynamics-365-guides",
         "dynamics-365/remote-assist/**/**.*": "dynamics-365-remote-assist",
         "dynamics-365/field-service/**/**.*": "dynamics-365-field-service",
+        "devices/**.*": "surface",
         "mem/intune/**/*.md": "microsoft-intune",
         "sales-copilot/**/*.md": "microsoft-sales-copilot",
         "power-platform/ai-builder/*.md": "aibuilder",
