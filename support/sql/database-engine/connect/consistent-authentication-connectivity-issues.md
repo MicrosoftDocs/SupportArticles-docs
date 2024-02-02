@@ -82,7 +82,7 @@ The following table lists some scenarios that are related to aspects such as dat
 |Linked Server Account Mapping | For more information, see [linked servers](linked-server-account-mapping-error.md).|
 |Proxy account doesn't have permissions    |  An SSIS job run by SQL Agent might need permissions other than the SQL Agent service account can provide. For more information, see [SSIS package does not run when called from a SQL Server Agent job step.](../../integration-services/ssis-package-doesnt-run-when-called-job-step.md)  |
 |No Login| For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).|
-|Inconsistent metadata     | Refers to a scenario where metadata of the linked server is inconsistent or doesn't match the expected metadata. A view or stored procedure receives login failures on a linked server whereas a distributed `SELECT` statement copied from them doesn't. This situation can happen if the View was created and then the linked server was recreated, or a remote table was modified without rebuilding the View. To resolve this issue, you can refresh the metadata of the linked server by running the `sp_refreshview` stored procedure. |
+|Inconsistent metadata     | Refers to a scenario where metadata of the linked server is inconsistent or doesn't match the expected metadata. You may receive login failures when you execute a view or a stored procedure against a linked server on a SQL Server instance remotely. While you can successfully execute the distributed `SELECT` statements copied from the view or stored procedure on the server directly. This situation can happen if the view was created and then the linked server was recreated, or a remote table was modified without rebuilding the view. To resolve this issue, you can refresh the metadata of the linked server by running the `sp_refreshview` stored procedure. |
 
 ## Issues related to connection string
 
@@ -90,7 +90,7 @@ The following sections provide various issues related to connection string.
 
 |Possible cause  |More information  |
 |---------|---------|
-|Bad server name in connection string     |This scenario might occur if the specified server name is incorrect or can't be found. For more information, see [bad server name in connection string](bad-server-name-connection-string-error.md).         |
+|Bad server name in connection string     |Login may fail if the specified server name is incorrect or can't be found. For more information, see [bad server name in connection string](bad-server-name-connection-string-error.md).         |
 |Invalid username     |For more information, see [Login failed for user '\<username\>' or login failed for user '\<domain>\<username\>'](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).         |
 |Wrong database name in connection string     | This scenario might occur if the [database name is incorrect](wrong-database-name-in-connection-string.md). Check if the name is spelled correctly.        |
 |Wrong explicit SPN account     |For more information on these scenarios, see [Cannot generate SSPI context error](cannot-generate-sspi-context-error.md).         |
