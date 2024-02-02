@@ -432,6 +432,7 @@
         "windows-client/windows-security/**/**.*": "windows-security",
         "windows-client/windows-troubleshooters/**/**.*": "windows-troubleshooter",
         "windows-client/windows-tss/**/**.*": "windows-troubleshooter",
+        "windows-client/windows-7-eos-faq/**/**.*": "windows-eos",
         "windows-server/admin-development/**/**.*": "admin-mgmt-development",
         "windows-server/application-management/**/**.*": "application-compatibility",
         "windows-server/backup-and-storage/**/**.*": "backup-and-storage",
