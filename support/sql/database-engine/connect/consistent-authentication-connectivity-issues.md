@@ -17,7 +17,17 @@ _Applies to:_ &nbsp; SQL Server
 
 A consistent authentication issue in SQL Server typically refers to problems related to authentication and authorization of users or applications trying to access the SQL Server database. These issues can lead to authentication failures, access denied errors, or other security-related problems.
 
-Before you start to troubleshoot errors, it's important to understand what each error means and also what is the type of error. Some errors might appear in more than one category. You can use the troubleshooting information mentioned in the [Errors](#errors) section to resolve the error. If you still encounter issues, check the possible causes and solutions or workarounds in the other sections such as [Issues specific to various aspects of SQL Server](#issues-specific-to-various-aspects-of-sql-server), [Issues related to Connection String](#issues-related-to-connection-string), [Issues related to Windows permissions or Policy settings](#issues-related-to-active-directory-and-domain-controller), [Issues related to Active Directory and Domain Controller](#issues-related-to-kerberos-authentication), and [Issues related to other aspects](#issues-related-to-other-aspects).
+Before you start to troubleshoot errors, it's important to understand what each error means and also what is the type of error. Some errors might appear in more than one category. You can use the troubleshooting information mentioned in the [Errors](#errors) section to resolve the error. If you still encounter issues, check the possible causes and solutions or workarounds in the other sections such as:
+
+- [Issues specific to various aspects of SQL Server]#issues-specific-to-various-aspects-of-sql-server)
+
+- [Issues related to Connection String](#issues-related-to-connection-string)
+
+- [Issues related to Windows permissions or Policy settings](#issues-related-to-active-directory-and-domain-controller)
+
+- [Issues related to Active Directory and Domain Controller](#issues-related-to-kerberos-authentication)
+
+- [Issues related to other aspects](#issues-related-to-other-aspects)
 
 ## Prerequisites
 
@@ -33,7 +43,7 @@ This section describes the types of errors and its related information.
 
 ### Directory services specific errors
 
-Refers to the Active Directory (AD) errors. If the SQL Server error log file contains both or either of the following messages, then this error is related to Active Directory (AD). This error might occur if the domain controller (DC) can't be contacted by Windows on the SQL Server computer or the local security service (LSASS) is having an issue.
+If the SQL Server error log file contains both or either of the following messages, then this error is related to Active Directory (AD). This error might occur if the domain controller (DC) can't be contacted by Windows on the SQL Server computer or the local security service (LSASS) is having an issue.
 
   ```output
    Error -2146893039 (0x80090311): No authority could be contacted for authentication.
