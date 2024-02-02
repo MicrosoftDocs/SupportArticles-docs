@@ -4,8 +4,6 @@ description: This article describes how to run SQL Server stored procedures and 
 ms.date: 09/24/2020
 ms.custom: sap:Active Server Pages
 ms.reviewer: JAYAPST
-ms.service: iis
-ms.subservice: active-server-pages
 ---
 # Run SQL Server stored procedures from an ASP Page
 

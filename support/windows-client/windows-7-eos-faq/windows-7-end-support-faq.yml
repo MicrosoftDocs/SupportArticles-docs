@@ -7,12 +7,10 @@ metadata:
   ms.author: delhan
   manager: dcscontentpm
   audience: itpro
-  ms.topic: faq
-  ms.service: windows-client
+  ms.topic: faq  
   localization_priority: medium
   ms.reviewer: v-elj, chawong, winciccore, kaushika
-  ms.custom: main-page, csstroubleshoot
-  ms.subservice: windows-eos
+  ms.custom: main-page, csstroubleshoot  
 title: Windows 7 EoS FAQ documentation
 summary: |
   This article summarizes the frequently asked questions about the end of support for Windows 7.

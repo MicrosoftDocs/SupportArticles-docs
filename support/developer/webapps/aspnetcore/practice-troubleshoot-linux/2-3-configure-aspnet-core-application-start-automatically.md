@@ -2,9 +2,7 @@
 title: Configure the ASP.NET Core application to start automatically
 description: This article describes how to configure the ASP.NET Core application to ensure that the application starts automatically after the server restart.
 ms.date: 03/18/2021
-ms.service: aspnet-core
 ms.reviewer: ramakoni, ahmetmb
-ms.subservice: practice-troubleshoot-linux
 author: ahmetmithat
 ---
 # Part 2.3 - Configure the ASP.NET Core application to start automatically
