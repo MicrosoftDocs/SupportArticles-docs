@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, kimnich
 ms.custom: sap:dpi-and-display-issues, csstroubleshoot
-ms.subservice: shell-experience
 ---
 # Windows 8: List All Modes in Advanced Display Settings in Control Panel displays incomplete list of modes when in Duplicate mode
 

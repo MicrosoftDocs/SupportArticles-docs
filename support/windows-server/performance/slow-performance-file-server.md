@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, waltere
 ms.custom: sap:slow-performance, csstroubleshoot
-ms.subservice: performance
 ---
 # System stops responding, slow file server performance, or delays occur when you work with files that are located on a file server
 

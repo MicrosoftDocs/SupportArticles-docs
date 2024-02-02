@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, ryhayash
 ms.custom: sap:administration, csstroubleshoot
-ms.subservice: rds
 ---
 # You cannot create a session collection and an error occurs in Windows Server 2012
 

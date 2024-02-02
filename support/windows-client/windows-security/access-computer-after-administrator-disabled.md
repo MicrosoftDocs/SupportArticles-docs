@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:account-lockouts, csstroubleshoot
-ms.subservice: windows-security
 ---
 # How to access the computer after you disable the administrator account
 

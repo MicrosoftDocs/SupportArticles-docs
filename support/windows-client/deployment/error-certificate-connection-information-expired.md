@@ -7,11 +7,9 @@ manager: dcscontentpm
 ms.date: 11/23/2023
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, v-nehaborkar, jasone, v-lianna
 ms.custom: sap:setup, csstroubleshoot, ikb2lmc
-ms.subservice: deployment
 ---
 # Error "certificate in the connection information has expired" when accessing an AVD VM
 

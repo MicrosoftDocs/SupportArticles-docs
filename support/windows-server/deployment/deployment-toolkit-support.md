@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, scottmca, aaroncz, v-jesits
 ms.custom: sap:setup, csstroubleshoot
-ms.subservice: deployment
 ---
 # Microsoft Deployment Toolkit support life cycle
 

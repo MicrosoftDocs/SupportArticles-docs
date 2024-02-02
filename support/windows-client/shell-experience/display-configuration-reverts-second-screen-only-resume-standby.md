@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, chadbee, philipd, kimnich
 ms.custom: sap:dpi-and-display-issues, csstroubleshoot
-ms.subservice: shell-experience
 ---
 # Display configuration reverts to "Second screen only" after you resume from standby
 

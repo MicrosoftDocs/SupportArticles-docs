@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, rolandw, clandis
 ms.custom: sap:dfsr, csstroubleshoot
-ms.subservice: networking
 ---
 # DFSR Diagnostics Report shows sharing violations events in Windows Server even though the files have already been replicated
 

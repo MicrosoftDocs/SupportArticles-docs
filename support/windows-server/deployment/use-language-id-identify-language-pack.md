@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, BOBQIN, herbertm
 ms.custom: sap:setup, csstroubleshoot
-ms.subservice: deployment
 ---
 # Using language IDs to identify language packs for AD DS and AD LDS domain controllers
 

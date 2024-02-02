@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, arrenc
 ms.custom: sap:user-profiles, csstroubleshoot
-ms.subservice: user-profiles
 ---
 # Error occurs during desktop setup and desktop location is unavailable when you log on to Windows for the first time
 

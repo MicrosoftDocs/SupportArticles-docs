@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, v-jesits
 ms.custom: sap:errors-and-troubleshooting:-print-output-or-print-failures, csstroubleshoot
-ms.subservice: printing
 ---
 # PNG images don't print correctly in Word 2010 after the system display scaling setting is changed in Windows 7
 

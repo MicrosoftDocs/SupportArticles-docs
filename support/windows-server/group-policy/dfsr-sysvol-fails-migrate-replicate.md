@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:sysvol-access-or-replication-issues, csstroubleshoot
-ms.subservice: group-policy
 ---
 # DFSR SYSVOL fails to migrate or replicate, SYSVOL not shared, Event IDs 8028 or 6016
 

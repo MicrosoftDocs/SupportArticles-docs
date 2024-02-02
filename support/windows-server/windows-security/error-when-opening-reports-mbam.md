@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika,  yitzhaks, manojse
 ms.custom: sap:bitlocker, csstroubleshoot
-ms.subservice: windows-security
 ---
 # Error when you open Enterprise or Computer Compliance Reports in MBAM
 

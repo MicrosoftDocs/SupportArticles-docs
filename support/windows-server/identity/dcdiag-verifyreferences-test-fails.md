@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, harsur, rolandw, justintu, arrenc
 ms.custom: sap:active-directory-replication, csstroubleshoot
-ms.subservice: active-directory
 ---
 # DCDiag VerifyReferences test fails when you use DFSR to replicate SYSVOL
 

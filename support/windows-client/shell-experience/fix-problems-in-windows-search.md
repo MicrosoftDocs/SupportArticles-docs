@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: high
 ms.reviewer: kaushika
 ms.custom: sap:cortana-and-search, csstroubleshoot
-ms.subservice: shell-experience
 ---
 # Fix problems in Windows Search
 

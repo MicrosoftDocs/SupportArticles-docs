@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, philipd, match
 ms.custom: sap:issues-with-scanning, csstroubleshoot
-ms.subservice: printing
 ---
 # "Server Busy" error message when you try to scan a document  
 

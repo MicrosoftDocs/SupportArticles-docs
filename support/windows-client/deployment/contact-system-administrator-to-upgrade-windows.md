@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, scottmca
 ms.custom: sap:setup, csstroubleshoot
-ms.subservice: deployment
 ---
 # Error during Windows 10 upgrade: Contact your system administrator to upgrade Windows Server or Enterprise Editions
 

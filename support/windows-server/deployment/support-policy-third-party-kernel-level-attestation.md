@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, sandyar, cpuckett
 ms.custom: sap:devices-and-drivers, csstroubleshoot, Evergreen
-ms.subservice: deployment
 ---
 # Support policy for third-party, kernel-level software that is signed using the attestation process in Windows
 

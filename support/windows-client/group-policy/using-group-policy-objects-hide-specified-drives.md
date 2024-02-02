@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, davidg
 ms.custom: sap:managing-removable-devices-through-group-policy, csstroubleshoot
-ms.subservice: windows-group-policy
 ---
 # Using Group Policy Objects to hide specified drives
 

@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, rblume
 ms.custom: sap:bitlocker, csstroubleshoot
-ms.subservice: windows-security
 ---
 # Windows 10 BitLocker Recovery auto-shutdown in UEFI mode
 

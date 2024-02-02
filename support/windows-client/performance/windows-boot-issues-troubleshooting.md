@@ -2,8 +2,6 @@
 title: Windows boot issues troubleshooting
 description: Learn to troubleshoot when Windows can't boot. This article includes advanced troubleshooting techniques intended for use by support agents and IT professionals.
 ms.date: 02/08/2023
-ms.service: windows-client
-ms.subservice: performance
 author: aczechowski
 ms.author: aaroncz
 manager: dcscontentpm

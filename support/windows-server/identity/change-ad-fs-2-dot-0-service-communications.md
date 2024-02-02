@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, roberg, willfid
 ms.custom: sap:active-directory-federation-services-ad-fs, csstroubleshoot
-ms.subservice: active-directory
 ---
 # How to change the AD FS 2.0 service communications certificate after it expires
 

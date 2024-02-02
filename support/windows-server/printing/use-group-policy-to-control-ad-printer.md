@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:management-and-configuration:-printers-via-group-policy, csstroubleshoot
-ms.subservice: printing
 ---
 # Use Group Policy settings to control printers in Active Directory
 

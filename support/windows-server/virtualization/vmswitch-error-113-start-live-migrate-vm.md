@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: Tode, kaushika
 ms.custom: sap:virtual-switch-manager-vmswitch, csstroubleshoot
-ms.subservice: hyper-v
 ---
 # VmSwitch Error 113 event is logged when you start or live migrate virtual machines
 

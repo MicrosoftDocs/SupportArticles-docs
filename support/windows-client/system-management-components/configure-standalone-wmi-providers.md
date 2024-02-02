@@ -5,10 +5,8 @@ ms.date: 05/16/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate
-ms.subservice: system-mgmgt-components
 keywords: WMI standalone, quota overflow, wmiprvse.exe
 ms.custom: sap:wmi, csstroubleshoot
 ---

@@ -7,17 +7,15 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, wesk
 ms.custom: sap:modern-inbox-and-microsoft-store-apps, csstroubleshoot
-ms.subservice: shell-experience
 ---
 # Removing, uninstalling, or reinstalling Microsoft Store app isn't supported
 
 In Windows, we don't recommend removing or uninstalling the Microsoft Store app.
 
-_Applies to:_ &nbsp; All supported versions of Windows Client
+_Applies to:_ &nbsp; All supported versions of Windows Client  
 _Original KB number:_ &nbsp; 4339074
 
 ## More information

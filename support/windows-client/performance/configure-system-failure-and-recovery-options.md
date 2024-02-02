@@ -2,12 +2,10 @@
 title: Configure system failure and recovery options
 description: Learn how to configure the actions that Windows takes when a system error occurs and what the recovery options are.
 ms.date: 08/23/2022
-ms.service: windows-client
 ms.topic: troubleshooting
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
-ms.subservice: performance
 ms.custom: sap:blue-screen/bugcheck, csstroubleshoot
 ms.reviewer: dansimp
 audience: itpro

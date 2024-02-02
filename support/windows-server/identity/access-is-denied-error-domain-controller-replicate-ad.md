@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:active-directory-database-issues-and-domain-controller-boot-failures, csstroubleshoot
-ms.subservice: active-directory
 ---
 # You receive an "access is denied" error message on a domain controller when you try to replicate the Active Directory directory service
 

@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, steved
 ms.custom: sap:windows-nic-teaming-load-balance-failover, csstroubleshoot
-ms.subservice: networking
 ---
 # Kernel event ID 2 is logged when the MSFT_NetLbfoTeamNic class is called in Windows Server 2012 R2
 

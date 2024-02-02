@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, arrenc, justintu
 ms.custom: sap:active-directory-replication, csstroubleshoot
-ms.subservice: active-directory
 ---
 # Troubleshoot common Active Directory replication errors
 

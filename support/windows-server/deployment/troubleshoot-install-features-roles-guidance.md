@@ -7,11 +7,9 @@ ms.author: kaushika
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:servicing, csstroubleshoot
-ms.subservice: deployment
 ---
 # Installing Windows features and roles troubleshooting guidance
 

@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, payalr, jerrycif
 ms.custom: sap:dpi-and-display-issues, csstroubleshoot
-ms.subservice: shell-experience
 ---
 # Windows 10 Technical Preview adds a feature that blocks untrusted fonts
 

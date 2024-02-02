@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, v-jesits
 ms.custom: sap:setup, csstroubleshoot
-ms.subservice: deployment
 ---
 # Network provider settings are removed during an in-place upgrade to Windows 10
 

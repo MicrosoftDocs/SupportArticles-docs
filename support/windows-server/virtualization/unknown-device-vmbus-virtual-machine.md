@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:integration-components, csstroubleshoot
-ms.subservice: hyper-v
 ---
 # Unknown Device (VMBUS) appears in Device manager in Virtual Machine
 
