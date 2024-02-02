@@ -7,18 +7,16 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, wincicadsec, jitha
 ms.custom: sap:active-directory-certificate-services, csstroubleshoot
-ms.technology: windows-server-active-directory
 ---
 # How to set up certificate-based authentication across forests without trust for a web server
 
 This article describes how to set up a web server to use smart cards for cross-forest certificate-based authentication when the user forests and the resource forest do not trust one another.
 
 _Applies to:_ &nbsp; Windows Server 2016  
-_Original KB number:_ &nbsp; 4509680  
+_Original KB number:_ &nbsp; 4509680
 
 ## Environment configuration
 

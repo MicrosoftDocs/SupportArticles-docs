@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:domain-join-issues, csstroubleshoot
-ms.technology: windows-server-active-directory
 ---
 # Unable to Join Windows Server 2008 R2 or Windows 7 Computer to Active Directory Domain
 

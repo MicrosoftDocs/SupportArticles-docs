@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: stevenek, kaushika
 ms.custom: sap:initial-cluster-creation-or-adding-node, csstroubleshoot
-ms.technology: windows-server-high-availability
 ---
 # Guest Cluster nodes in Hyper-V may not be able to create or join
 

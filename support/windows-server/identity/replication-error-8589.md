@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, apurvash, justinha, justintu
 ms.custom: sap:user-computer-group-and-object-management, csstroubleshoot
-ms.technology: windows-server-active-directory
 ---
 # Troubleshooting AD Replication error 8589: The DS cannot derive a service principal name (SPN)
 

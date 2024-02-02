@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, patste, v-jomcc
 ms.custom: sap:power-management, csstroubleshoot
-ms.technology: windows-client-deployment
 adobe-target: true
 ---
 # How to disable and re-enable hibernation on a computer that is running Windows

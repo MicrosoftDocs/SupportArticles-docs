@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, robertvi
 ms.custom: sap:load-balancing-and-connection-broker, csstroubleshoot
-ms.technology: windows-server-rds
 ---
 # Communication issues occur when Remote Desktop Connection Broker connects to SQL Server in Windows Server 2012 R2
 

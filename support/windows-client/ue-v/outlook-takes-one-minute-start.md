@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: narafa, winciccore, kaushika
 ms.custom: sap:uev-2.1, csstroubleshoot
-ms.technology: windows-client-user-experience-virtualization-ue-v
 ---
 # Unexpected one-minute startup of Outlook if UE-V is enabled
 

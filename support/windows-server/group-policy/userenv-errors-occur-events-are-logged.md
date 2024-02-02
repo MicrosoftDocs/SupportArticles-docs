@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, msadoff
 ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
-ms.technology: windows-server-group-policy
 ---
 # Userenv errors occur and events are logged after you apply Group Policy to computers that are running Windows Server 2003, Windows XP, or Windows 2000
 

@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, ctimon
 ms.custom: sap:configuration-of-virtual-machine-settings, csstroubleshoot
-ms.technology: hyper-v
 ---
 # Dynamic Memory allocation in a virtual machine does not change although there is available memory on the host
 

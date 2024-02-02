@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:replacing-hardware-and-updating-the-operating-system, csstroubleshoot
-ms.technology: windows-server-high-availability
 ---
 # How to update Windows Server failover clusters
 

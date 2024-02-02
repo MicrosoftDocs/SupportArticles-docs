@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: danesc, kaushika
 ms.custom: sap:1st-party-applications, csstroubleshoot
-ms.technology: windows-server-shell-experience
 ---
 # Error when you create an AppLocker hash rule for a file in Windows: 0x800700C1: not a valid Win32 application
 

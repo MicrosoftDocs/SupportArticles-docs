@@ -9,9 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate
-ms.prod: windows-server
 ms.custom: sap:servicing, csstroubleshoot
-ms.technology: windows-server-deployment
 keywords: Windows Update for Business reports, WUBr, diagnostic data, telemetry
 ---
 

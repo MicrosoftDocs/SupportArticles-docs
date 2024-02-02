@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:directaccess, csstroubleshoot
-ms.technology: networking
 ---
 # DirectAccess troubleshooting guidance
 

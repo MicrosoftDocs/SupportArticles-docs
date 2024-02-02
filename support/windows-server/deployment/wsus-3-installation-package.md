@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, kimmar
 ms.custom: sap:servicing, csstroubleshoot
-ms.technology: windows-server-deployment
 ---
 # The Windows Server Update Services 3.0 installation package is available
 

@@ -5,7 +5,7 @@ summary: This library provides solutions enabling IT Pros to troubleshoot and su
 metadata:
   title: Windows client troubleshooting documentation
   description: Documentation for troubleshooting common issues with Windows clients. # Required; article description that is displayed in search results. < 160 chars.
-  ms.prod: windows-client
+  ms.service: windows-client
   ms.topic: landing-page # Required
   author: Deland-Han  #Required; your GitHub user alias, with correct capitalization.
   ms.author: delhan #Required; microsoft alias of author; optional team alias.

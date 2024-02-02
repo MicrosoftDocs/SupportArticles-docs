@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:servicing, csstroubleshoot
-ms.technology: windows-server-deployment
 ---
 # DISM fails with 0x800f0906 or runs continuously when you convert Windows Server 2012 R2 Core to Server with a GUI
 

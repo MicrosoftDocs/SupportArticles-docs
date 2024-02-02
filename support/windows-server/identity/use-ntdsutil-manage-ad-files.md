@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:active-directory-database-issues-and-domain-controller-boot-failures, csstroubleshoot
-ms.technology: windows-server-active-directory
 ---
 # How to use Ntdsutil to manage Active Directory files from the command line in Windows Server 2003
 

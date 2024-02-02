@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:active-directory-backup-restore-or-disaster-recovery, csstroubleshoot
-ms.technology: windows-server-active-directory
 ---
 # Syskey.exe utility is no longer supported in Windows 10, Windows Server 2016, and later versions
 

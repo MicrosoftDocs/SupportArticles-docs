@@ -3,7 +3,6 @@ title: Kerberos not used when you call a WCF service
 description: This article provides resolutions for the issue where you are authenticated through NTLM instead of Kerberos and cannot delegate when you call a WCF service that uses net.tcp binding with transport security, windows transport credentials, and has protection level set to none.
 ms.date: 08/24/2020
 ms.reviewer: rviana, jasonpa
-ms.technology: dotnet-wcf
 ---
 # Kerberos not used when you call a WCF service
 

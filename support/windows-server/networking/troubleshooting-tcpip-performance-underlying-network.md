@@ -5,11 +5,9 @@ ms.date: 09/24/2021
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, anupamk, rabhardw, v-lianna
 ms.custom: sap:tcp/ip-communications, csstroubleshoot
-ms.technology: networking
 ---
 # Troubleshooting TCP/IP performance issues about underlying network
 

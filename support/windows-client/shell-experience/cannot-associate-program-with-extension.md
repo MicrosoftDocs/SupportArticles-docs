@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, danma
 ms.custom: sap:file-associations, csstroubleshoot
-ms.technology: windows-client-shell-experience
 ---
 # Sometimes you cannot associate a program with an extension in Windows 7
 

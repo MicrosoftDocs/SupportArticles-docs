@@ -1109,6 +1109,8 @@ items:
   items:
   - name: Introduction to TroubleShootingScript toolset (TSS)
     href: ./windows-tss/introduction-to-troubleshootingscript-toolset-tss.md
+  - name: Use the xray feature of TSS
+    href: ./windows-tss/use-the-xray-feature-of-tss-to-identify-known-issues.md
   - name: Identity
     items:
     - name: Gather information for Active Directory replication issues

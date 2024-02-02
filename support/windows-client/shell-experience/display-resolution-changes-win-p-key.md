@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:dpi-and-display-issues, csstroubleshoot
-ms.technology: windows-client-shell-experience
 ---
 # Display changes resolution in Windows 7 while pressing Win+P hot key and select duplicate when only one monitor is connected
 

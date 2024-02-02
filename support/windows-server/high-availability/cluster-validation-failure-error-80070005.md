@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, eldenc
 ms.custom: sap:initial-cluster-creation-or-adding-node, csstroubleshoot
-ms.technology: windows-server-high-availability
 ---
 # Cluster Validation fails "Validate Cluster Network Configuration" Test with Error 80070005
 

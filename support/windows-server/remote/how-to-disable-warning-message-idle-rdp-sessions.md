@@ -5,11 +5,9 @@ ms.date: 09/24/2021
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, ishimada, v-lianna
 ms.custom: sap:remote-desktop-sessions, csstroubleshoot
-ms.technology: windows-server-rds
 ---
 # How to disable warning message for idle remote desktop sessions
 

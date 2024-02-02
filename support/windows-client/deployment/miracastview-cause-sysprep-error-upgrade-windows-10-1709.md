@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, zhiwwan, arrenc, warrenw, wesk, v-jeffbo
 ms.custom: sap:setup, csstroubleshoot
-ms.technology: windows-client-deployment
 ---
 # MiracastView package cause sysprep error after you upgrade a computer to Windows 10 Version 1709
 

@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:errors-and-troubleshooting:-print-spooler, csstroubleshoot
-ms.technology: windows-server-printing
 ---
 # Printer spooler may crash randomly on a Windows Server computer that has an HP printer installed
 

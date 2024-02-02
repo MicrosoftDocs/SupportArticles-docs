@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, dongill, inhenkel, v-lianna
 ms.custom: sap:shielded-virtual-machines, csstroubleshoot
-ms.technology: hyper-v
 ms.assetid: 55e954ec-6a5f-4b42-b6a7-1006f3e24556
 ---
 # Troubleshoot a guarded fabric

@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jeffwoo
 ms.custom: sap:virtual-machine-creation, csstroubleshoot
-ms.technology: hyper-v
 ---
 # Support partners for non-Microsoft hardware virtualization software
 
