@@ -32,7 +32,7 @@ If certificates from Azure Key Vault are used for digital signing, the certifica
 
 If you export the certificate using Certificate Export Wizard, a [personal information exchange (PFX) certificate](/mem/configmgr/mdm/deploy-use/create-pfx-certificate-profiles) format should be selected and you'll be prompted to enter a password. However, certificates with passwords aren't supported for digital signing in Microsoft Dynamics 365 Commerce. Run the following script to remove the password from a PFX certificate:
 
-```pwsh
+```powershell
 $pfxFilePath = '<Localpath of the pfx certificate>'
 $pwd = '<Password of the pfx certificate>'
 $collection = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2Collection
