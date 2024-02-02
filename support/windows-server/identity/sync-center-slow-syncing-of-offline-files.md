@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, bburgin, garymu
 ms.custom: sap:domain-join-issues, csstroubleshoot
-ms.subservice: active-directory
 ---
 # Sync Center: Slow syncing of offline files on some file servers
 

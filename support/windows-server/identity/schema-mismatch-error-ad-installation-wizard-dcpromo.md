@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: arrenc, kaushika
 ms.custom: sap:dcpromo-and-the-installation-of-domain-controllers, csstroubleshoot
-ms.subservice: active-directory
 ---
 # "Schema mismatch" error message occurs when you try to run the Active Directory Installation Wizard (Dcpromo.exe)
 

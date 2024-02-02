@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, AshishSu, luche, LavinK, v-jesits
 ms.custom: sap:active-directory-certificate-services, csstroubleshoot
-ms.subservice: active-directory
 ---
 # Reinstall the CA role in Windows Server 2012 Essentials
 

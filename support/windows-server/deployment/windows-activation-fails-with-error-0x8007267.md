@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, deepaksr, kledman
 ms.custom: sap:activation, csstroubleshoot
-ms.subservice: deployment
 ---
 # Windows Activation fails with error code: 0x8007267C
 

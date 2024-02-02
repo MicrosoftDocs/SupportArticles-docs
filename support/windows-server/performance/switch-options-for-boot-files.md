@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:no-boot-not-bugchecks, csstroubleshoot
-ms.subservice: performance
 ---
 # Available switch options for the Windows XP and the Windows Server 2003 Boot.ini files
 

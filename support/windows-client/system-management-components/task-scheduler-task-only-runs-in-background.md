@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:task-scheduler, csstroubleshoot
-ms.technology: windows-client-system-management-components
 ---
 # Task scheduler task only runs in the background after you use sysprep to create master image
 

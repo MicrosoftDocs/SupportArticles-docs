@@ -5,11 +5,9 @@ ms.date: 06/16/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, garymu, v-lianna
 ms.custom: sap:rdweb, csstroubleshoot
-ms.subservice: rds
 ---
 # Can't sign in to a published application with SSO through RD Web
 

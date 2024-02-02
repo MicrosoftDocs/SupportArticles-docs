@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, JAMIRC
 ms.custom: sap:setup, csstroubleshoot
-ms.subservice: deployment
 ---
 # Manually edit the Boot.ini file in a Windows Server 2003 environment
 

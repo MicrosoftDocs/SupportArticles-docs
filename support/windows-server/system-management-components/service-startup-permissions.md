@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, BOBQIN
 ms.custom: sap:microsoft-management-console-mmc, csstroubleshoot
-ms.subservice: system-mgmt-components
 ---
 # Troubleshoot service startup permissions in Windows Server 2003  
 

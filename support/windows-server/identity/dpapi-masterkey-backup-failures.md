@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:active-directory-certificate-services, csstroubleshoot
-ms.subservice: active-directory
 ---
 # DPAPI MasterKey backup failures when RWDC isn't available
 

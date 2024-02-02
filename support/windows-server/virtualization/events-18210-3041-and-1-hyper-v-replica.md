@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:hyper-v-replica, csstroubleshoot
-ms.subservice: hyper-v
 ---
 # Events 18210, 3041, and 1 are logged when Hyper-V Replica is configured
 

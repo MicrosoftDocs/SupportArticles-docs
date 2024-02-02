@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:boot-is-slow, csstroubleshoot
-ms.subservice: performance
 ---
 # Service configured to use gMSA account on a Windows Server 2012 R2-based DC doesn't start
 

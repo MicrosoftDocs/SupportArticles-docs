@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: waltere, kaushika,v-jesits
 ms.custom: sap:webclient-and-webdav, csstroubleshoot
-ms.technology: windows-client-networking
 ---
 # Windows 7 can't automatically reconnect a DAV share when Basic Authentication is used
 

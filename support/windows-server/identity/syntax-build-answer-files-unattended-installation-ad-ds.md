@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: justinha, kaushika
 ms.custom: sap:dcpromo-and-the-installation-of-domain-controllers, csstroubleshoot
-ms.subservice: active-directory
 ---
 
 # DCPROMO answer file syntax for unattended promotion and demotion of domain controllers

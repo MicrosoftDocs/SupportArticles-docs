@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, raackley
 ms.custom: sap:applications, csstroubleshoot
-ms.subservice: performance
 ---
 # Copying .EXE files may result in a sharing violation error - Folder In Use
 

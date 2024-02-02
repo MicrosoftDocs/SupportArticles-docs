@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:installation-and-configuration-of-hyper-v, csstroubleshoot
-ms.subservice: hyper-v
 ---
 # Recommended antivirus exclusions for Hyper-V hosts
 

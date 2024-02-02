@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, dsmith
 ms.custom: sap:dns, csstroubleshoot
-ms.subservice: networking
 ---
 # DNS Server becomes an island when a domain controller points to itself for the _msdcs.ForestDnsName domain
 

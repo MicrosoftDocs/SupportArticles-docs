@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:active-directory-replication, csstroubleshoot
-ms.subservice: active-directory
 ---
 # Active Directory replication Event ID 2042: It has been too long since this machine replicated
 

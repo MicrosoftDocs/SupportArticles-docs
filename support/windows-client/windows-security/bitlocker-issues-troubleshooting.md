@@ -2,8 +2,6 @@
 title: BitLocker issues troubleshooting
 description: Describes approaches for investigating BitLocker issues, including how to gather diagnostic information.
 ms.date: 11/21/2022
-ms.technology: windows-client-security
-ms.prod: windows-client
 manager: dcscontentpm
 ms.collection: Windows Security Technologies\BitLocker
 ms.topic: troubleshooting

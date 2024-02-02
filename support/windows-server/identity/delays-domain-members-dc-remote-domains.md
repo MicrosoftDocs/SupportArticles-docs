@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:schema-update-failure-or-conflict, csstroubleshoot
-ms.subservice: active-directory
 ---
 # Delays when domain members are required to communicate to DCs on remote domains
 

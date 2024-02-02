@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, MBIAS
 ms.custom: sap:servicing, csstroubleshoot
-ms.technology: windows-client-deployment
 ---
 # View the system registry by using 64-bit versions of Windows
 

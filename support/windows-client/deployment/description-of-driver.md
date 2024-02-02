@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, joeswart
 ms.custom: sap:devices-and-drivers, csstroubleshoot
-ms.technology: windows-client-deployment
 ---
 # A description of the driver
 

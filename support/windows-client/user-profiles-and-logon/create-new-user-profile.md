@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:user-profiles, csstroubleshoot
-ms.technology: windows-client-user-profiles
 ---
 # Identify a damaged user profile and create a new profile in Windows Server 2003
 

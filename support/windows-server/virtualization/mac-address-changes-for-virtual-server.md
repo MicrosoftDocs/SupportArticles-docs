@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, stevemat, davidg, johnmar
 ms.custom: sap:high-availability-virtual-machines, csstroubleshoot
-ms.subservice: hyper-v
 ---
 # MAC address changes for virtual server during a failover with clustering
 

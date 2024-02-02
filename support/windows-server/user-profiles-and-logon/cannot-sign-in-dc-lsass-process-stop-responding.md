@@ -5,11 +5,9 @@ ms.date: 05/09/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, herbertm, v-lianna
 ms.custom: sap:user-logon-fails, csstroubleshoot, ikb2lmc
-ms.subservice: user-profiles
 ---
 # Can't sign in to a domain controller, and the LSASS process stops responding
 

@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, joramos
 ms.custom: sap:account-lockouts, csstroubleshoot
-ms.subservice: windows-security
 ---
 # Administrator account password expiration behavior
 

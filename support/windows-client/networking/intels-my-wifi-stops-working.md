@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:wireless-networking-and-802.1x-authentication, csstroubleshoot
-ms.technology: windows-client-networking
 ---
 # Intel's My WiFi Technology stops working after resuming from sleep or hibernate in Windows 7
 

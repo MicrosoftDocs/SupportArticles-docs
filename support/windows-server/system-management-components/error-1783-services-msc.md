@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:microsoft-management-console-mmc, csstroubleshoot
-ms.subservice: system-mgmt-components
 ---
 # Error 1783: The stub received bad data
 

@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:volume-shadow-copy-service-vss, csstroubleshoot
-ms.subservice: backup-and-storage
 ---
 # Shadow copies are deleted on Windows Server when you try to run an FCI classification job
 

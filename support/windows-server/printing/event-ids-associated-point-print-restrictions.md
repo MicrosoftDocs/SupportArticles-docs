@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:errors-and-troubleshooting-general-issues, csstroubleshoot
-ms.subservice: printing
 ---
 # Event ID's commonly associated with point and print restrictions
 

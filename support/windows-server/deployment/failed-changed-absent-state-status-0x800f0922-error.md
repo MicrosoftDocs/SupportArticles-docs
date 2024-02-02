@@ -7,11 +7,9 @@ ms.date: 11/23/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, luioan, v-lianna
 ms.custom: sap:servicing, csstroubleshoot, ikb2lmc
-ms.subservice: deployment
 ---
 # "Failed to be changed to the Absent state. Status: 0x800f0922" when installing updates in Windows Server 2019 
 

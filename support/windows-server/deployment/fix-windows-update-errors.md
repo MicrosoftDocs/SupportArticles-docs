@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: high
 ms.reviewer: kaushika, chkeen, cgibson, jesko
 ms.custom: sap:servicing, csstroubleshoot
-ms.subservice: deployment
 adobe-target: true
 ---
 

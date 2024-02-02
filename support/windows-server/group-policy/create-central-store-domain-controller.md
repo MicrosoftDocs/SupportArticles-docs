@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, timtho
 ms.custom: sap:group-policy-management-gpmc-or-agpm, csstroubleshoot
-ms.subservice: group-policy
 ---
 # How to create the Central Store for Group Policy Administrative Template files in Windows Vista
 

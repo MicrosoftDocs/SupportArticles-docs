@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:blue-screen/bugcheck, csstroubleshoot
-ms.subservice: performance
 ---
 # Stop 7F, 0x00000008 (double-fault) error occurs because of a single-bit error in the ESP register
 

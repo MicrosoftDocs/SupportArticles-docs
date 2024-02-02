@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, ryhayash, v-jesits
 ms.custom: sap:integration-components, csstroubleshoot
-ms.subservice: hyper-v
 ---
 # Event ID 4096 (Microsoft-Windows-Hyper-V-Integration-KvpExchange) is logged
 
