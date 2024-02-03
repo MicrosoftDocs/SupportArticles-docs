@@ -12,6 +12,8 @@ ms.custom:
   - CSSTroubleshoot
 ms.reviewer: sercast
 appliesto: 
+  - Outlook for Microsoft 365
+  - Outlook 2016
   - Outlook 2013
   - Microsoft Outlook 2010
   - Microsoft Office Outlook 2007
@@ -28,7 +30,7 @@ _Original KB number:_ &nbsp; 276597
 
 ## Summary
 
-When you send a secure message in Microsoft Outlook 2013, Microsoft Outlook 2010, Microsoft Office Outlook 2007, Microsoft Office Outlook 2003, Microsoft Outlook 2002, or in Microsoft Outlook 2000, you may need to use a certificate that does not match your e-mail address. This article describes how to turn off e-mail matching for certificates.
+When you send a secure message in Microsoft Outlook for Microsoft 365, Microsoft Outlook 2016, Microsoft Outlook 2013, Microsoft Outlook 2010, Microsoft Office Outlook 2007, Microsoft Office Outlook 2003, Microsoft Outlook 2002, or in Microsoft Outlook 2000, you may need to use a certificate that does not match your e-mail address. This article describes how to turn off e-mail matching for certificates.
 
 ## Resolution
 
@@ -36,6 +38,21 @@ You can turn off e-mail address matching for certificates by editing your regist
 
 > [!WARNING]
 > Serious problems might occur if you modify the registry incorrectly by using Registry Editor or by using another method. These problems might require that you reinstall the operating system. Microsoft cannot guarantee that these problems can be solved. Modify the registry at your own risk.
+
+### Outlook for Microsoft 365 and Outlook 2016
+
+1. Select **Start**, select **Run**, type *regedit* in the **Open** box, and then select **OK**.
+2. Locate the registry key: `HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Outlook\Security`.
+3. If a Security registry key does not exist, create a new key. To do this, follow these steps:
+    1. Select the registry key: `HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Outlook`.
+    2. On the **Edit** menu, point to **New**, and then select **Key**.
+    3. Type *Security*, and then press Enter.
+
+4. Right-click the **Security** key, select **New**, and then select **DWORD Value**.
+5. Type *SupressNameChecks*, and then press Enter.
+6. On the **Edit** menu, select **Modify**.
+7. Type *1*, and then select **OK**.
+8. On the **Registry** menu, select **Exit**.
 
 ### Outlook 2013
 
@@ -141,4 +158,4 @@ When you send an encrypted email message to a recipient, Outlook uses the recipi
 >
 > Send UnencryptedContinueCancel
 
-To prevent Outlook from displaying this warning message, apply the registry change described in the Resolution section of this article.
+To prevent Outlook from displaying this warning message, apply the registry change described in the Resolution section of this article and restart Outlook.
