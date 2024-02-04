@@ -35,18 +35,12 @@
     items:
     - name: A channel can't be recreated after deletion
       href: ./channels/channel-cannot-be-recreated-after-deletion.md
-    - name: Channel notifications settings don't update
-      href: ./channels/notifications-cannot-manage.md    
     - name: Logon re-enabled user doesn't see previous joined teams
       href: ./channels/logon-reenabled-user-not-see-previous-joined-teams.md
   - name: Conferencing
     items:
     - name: '"You need a phone system license" error when assigning a toll service number from the admin center'
       href: ./teams-conferencing/need-a-license-error-when-assigning-a-number.md
-    - name: A phone number is blocked
-      href: ./teams-conferencing/phone-number-blocked-in-teams.md
-    - name: Attendee maximum for meetings capped at 250
-      href: ./teams-conferencing/teams-meetings-capped-at-250.md
     - name: CVI information doesn't autopopulate in a Meet Now instance 
       href: ./teams-conferencing/cvi-info-does-not-populate-in-meet-now.md
     - name: Dialing out requires five or more digits 
@@ -99,8 +93,6 @@
       href: ./teams-im-presence/contact-presence-status-unknown.md
     - name: Actual presence status isn't displayed
       href: ./teams-im-presence/presence-not-show-actual-status.md
-    - name: Can't save profile picture
-      href: ./teams-im-presence/cant-save-profile-picture.md
     - name: Can't send message to Skype for Business
       href: ./teams-im-presence/teams-user-not-send-message-in-sfb.md
     - name: Deleted messages with an @ mention send notifications with a channel link
@@ -137,8 +129,6 @@
       href: ./mobile/settings-teams-calls-carplay.md
   - name: OneNote Integration
     items:
-    - name: Can't upload or download OneNote file
-      href: ./teams-onenote-integration/cant-upload-download-onenote-file.md
     - name: Issue with accessing notebooks
       href: ./teams-onenote-integration/issue-access-notebook.md
     - name: Temporary change to file size download limit in OneNote
@@ -221,12 +211,8 @@
     items:
     - name: Owner can't create Planner tab
       href: ./tabs/teams-owner-cannot-create-planner-tab.md
-    - name: Removed user appears as "Unknown user"
-      href: ./tabs/removed-user-appears-as-unknown.md
     - name: Tabs not working after enabling Conditional Access
       href: ./tabs/tabs-dont-work-after-enabling-conditional-access.md
-    - name: Task buckets don't appear in Teams Planner online
-      href: ./tabs/task-buckets-do-not-appear-in-planner.md
     - name: Websites don't load in the new Teams desktop client
       href: ./tabs/websites-not-loaded-new-teams.md
   - name: Teams Rooms and devices
