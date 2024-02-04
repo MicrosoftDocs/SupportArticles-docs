@@ -2,6 +2,17 @@
 
 
 
+## Week of January 29, 2024
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 1/29/2024 | [Signed out of Teams on Android devices](/microsoftteams/troubleshoot/teams-rooms-and-devices/signed-out-of-teams-android-devices) | modified |
+| 2/1/2024 | [Teams is slow during video sharing on laptops docked to 4K/UHD monitors](/microsoftteams/troubleshoot/teams-conferencing/teams-slow-video-meetings-laptops-4k) | modified |
+| 2/1/2024 | [Issue when you access a OneNote notebook from Teams](/microsoftteams/troubleshoot/teams-onenote-integration/issue-access-notebook) | modified |
+| 2/1/2024 | [Known issues in Teams Rooms and devices](/microsoftteams/troubleshoot/teams-rooms-and-devices/rooms-known-issues) | modified |
+
+
 ## Week of January 22, 2024
 
 
