@@ -4,23 +4,23 @@ items:
 - name: Active Directory
   items:
   - name: Active Directory
-    href: ./identity/active-directory-overview.md
+    href: ./active-directory/active-directory-overview.md
   - name: Schema update - known issues, best practices, workflow review
     items:
     - name: Error when checking domain object property
-      href: ./identity/error-when-checking-domain-object-property.md
+      href: ./active-directory/error-when-checking-domain-object-property.md
   - name: User, computer, group, and object management
     items:
     - name: Known issues for managing Group Policy clients
-      href: ./identity/known-issues-for-group-policy-clients.md
+      href: ./active-directory/known-issues-for-group-policy-clients.md
     - name: The LsaLookupSids function returns the old user name
-      href: ./identity/lsalookupsids-function-not-return-new-user-name.md
+      href: ./active-directory/lsalookupsids-function-not-return-new-user-name.md
     - name: UAC blocks elevation of executable applications
-      href: ./identity/uac-blocks-elevation-executable-apps.md
+      href: ./active-directory/uac-blocks-elevation-executable-apps.md
   - name: Windows Time Service
     items:
     - name: W32Time doesn't start automatically
-      href: ./identity/w32time-not-start-on-workgroup.md
+      href: ./active-directory/w32time-not-start-on-workgroup.md
 - name: Admin Development
   items:
   - name: Admin Development
