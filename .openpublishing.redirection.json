@@ -55,7 +55,7 @@
       "redirect_url": "/troubleshoot/power-platform/power-automate/approvals/power-automate-approval-email-information",
       "redirect_document_id": true
     },
- {
+    {
       "source_path": "support/power-platform/power-automate/desktop-flows/double-click-drag-drop-are-not-working.md",
       "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/desktop-flows/double-click-drag-drop-are-not-working",
       "redirect_document_id": false
@@ -75,7 +75,6 @@
       "redirect_url": "/troubleshoot/power-platform/power-automate/authentication-or-sign-in/troubleshoot-ui-flow-invalid-credentials-error-using-aad-account",
       "redirect_document_id": true
     },
-
     {
       "source_path": "support/power-platform/power-automate/check-if-gateway-is-the-right-region.md",
       "redirect_url": "/troubleshoot/power-platform/power-automate/connections/check-if-gateway-is-the-right-region",
@@ -211,13 +210,12 @@
       "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/cloud-flows/unable-create-ui-flow",
       "redirect_document_id": false
     },
- {
+    {
       "source_path": "support/power-platform/power-automate/desktop-flows/find-which-machine-is-failing-within-a-cluster.md",
       "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/desktop-flows/find-which-machine-is-failing-within-a-cluster",
       "redirect_document_id": false
     },
-
- {
+    {
       "source_path": "support/power-platform/power-automate/desktop-flows/issue-with-ui-flows-error-uiaelementnotfound.md",
       "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/desktop-flows/issue-with-ui-flows-error-uiaelementnotfound",
       "redirect_document_id": false
@@ -5402,12 +5400,12 @@
       "redirect_url": "/troubleshoot/sql/database-engine/log-shipping/logshipping-monitor-14420-error",
       "redirect_document_id": true
     },
-    { 
+    {
       "source_path": "support/sql/admin/sql-server-startup-errors.md",
       "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/sql-server-startup-errors",
       "redirect_document_id": true
     },
-    { 
+    {
       "source_path": "support/sql/admin/event-id-7000-access-denied.md",
       "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/event-id-7000-access-denied",
       "redirect_document_id": true
@@ -5467,7 +5465,7 @@
       "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/fails-start-error-17182",
       "redirect_document_id": true
     },
-     {
+    {
       "source_path": "support/sql/admin/sql-cannot-start-with-domain-account.md",
       "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/sql-cannot-start-with-domain-account",
       "redirect_document_id": true
@@ -5712,7 +5710,6 @@
       "redirect_url": "/troubleshoot/sql/database-engine/availability-groups/listener-connection-times-out",
       "redirect_document_id": true
     },
-
     {
       "source_path": "support/sql/admin/assertion-execute-bulk-insert-bcp.md",
       "redirect_url": "/troubleshoot/sql/database-engine/database-mirroring/assertion-execute-bulk-insert-bcp",
@@ -5752,22 +5749,22 @@
       "source_path": "support/sql/admin/access-violations-memory-dump-files.md",
       "redirect_url": "/troubleshoot/sql/database-engine/backup-restore/access-violations-memory-dump-files",
       "redirect_document_id": true
-    },   
+    },
     {
       "source_path": "support/sql/admin/asr-agent-vss-backup-fails.md",
       "redirect_url": "/troubleshoot/sql/database-engine/backup-restore/asr-agent-vss-backup-fails",
       "redirect_document_id": true
-    }, 
+    },
     {
       "source_path": "support/sql/admin/revocery-jobs-fail-servers.md",
       "redirect_url": "/troubleshoot/sql/database-engine/backup-restore/revocery-jobs-fail-servers",
       "redirect_document_id": true
-    }, 
+    },
     {
       "source_path": "support/sql/admin/backup-database-using-vss-backup-application.md",
       "redirect_url": "/troubleshoot/sql/database-engine/backup-restore/backup-database-using-vss-backup-application",
       "redirect_document_id": true
-    }, 
+    },
     {
       "source_path": "support/sql/admin/backup-operation-backup-history-table.md",
       "redirect_url": "/troubleshoot/sql/database-engine/backup-restore/backup-operation-backup-history-table",
@@ -5822,17 +5819,17 @@
       "source_path": "support/sql/connect/resolve-connectivity-errors-overview.md",
       "redirect_url": "/troubleshoot/sql/database-engine/connect/resolve-connectivity-errors-overview",
       "redirect_document_id": true
-    },   
+    },
     {
       "source_path": "support/sql/connect/certificate-chain-not-trusted.md",
       "redirect_url": "/troubleshoot/sql/database-engine/connect/certificate-chain-not-trusted",
       "redirect_document_id": true
-    }, 
+    },
     {
       "source_path": "support/sql/connect/resolve-connectivity-errors-checklist.md",
       "redirect_url": "/troubleshoot/sql/database-engine/connect/resolve-connectivity-errors-checklist",
       "redirect_document_id": true
-    }, 
+    },
     {
       "source_path": "support/sql/connect/cannot-generate-sspi-context-error.md",
       "redirect_url": "/troubleshoot/sql/database-engine/connect/cannot-generate-sspi-context-error",
@@ -5842,7 +5839,7 @@
       "source_path": "support/sql/connect/tls-exist-connection-closed.md",
       "redirect_url": "/troubleshoot/sql/database-engine/connect/tls-exist-connection-closed",
       "redirect_document_id": true
-    }, 
+    },
     {
       "source_path": "support/sql/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection.md",
       "redirect_url": "/troubleshoot/sql/database-engine/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection",
@@ -6373,7 +6370,6 @@
       "redirect_url": "/troubleshoot/sql/database-engine/replication/update-statements-replicated-as-delete-insert",
       "redirect_document_id": true
     },
-
     {
       "source_path": "support/sql/install/understanding-dotnet-framework-requirements.md",
       "redirect_url": "/troubleshoot/sql/database-engine/install/windows/understanding-dotnet-framework-requirements",
@@ -6528,12 +6524,12 @@
       "source_path": "support/windows-server/identity/restoring-domain-controller-cause-inconsistencies.md",
       "redirect_url": "/troubleshoot/windows-server/identity/active-directory-overview",
       "redirect_document_id": false
-    }, 
+    },
     {
       "source_path": "support/sql/replication/configure-troubleshoot-subscriptionstreamsof-distribution-agent.md",
       "redirect_url": "/troubleshoot/sql/database-engine/performance/configure-troubleshoot-subscriptionstreamsof-distribution-agent",
       "redirect_document_id": true
-    }, 
+    },
     {
       "source_path": "support/sql/database-engine/install/windows/error-install-sql-server-2005-sp4.md",
       "redirect_url": "/troubleshoot/sql/database-engine/install/windows/user-data-log-directory-invalid",
@@ -6568,7 +6564,7 @@
       "source_path": "support/windows-server/identity/transfer-or-seize-fsmo-roles-in-ad-ds.md",
       "redirect_url": "/troubleshoot/windows-server/identity/transfer-or-seize-operation-master-roles-in-ad-ds",
       "redirect_document_id": true
-    }, 
+    },
     {
       "source_path": "support/windows-server/identity/password-change-conflict-resolution-function.md",
       "redirect_url": "/troubleshoot/windows-server/identity/password-change-processing-conflict-resolution-function",
@@ -6578,7 +6574,7 @@
       "source_path": "support/windows-server/system-management-components/high-cpu-usage-wmiprvse-process-regular-intervals.md",
       "redirect_url": "/troubleshoot/windows-server/system-management-components/troubleshoot-wmi-high-cpu-issues",
       "redirect_document_id": true
-    }, 
+    },
     {
       "source_path": "support/sql/general/servicing-models-sql-server.md",
       "redirect_url": "/troubleshoot/sql/releases/servicing-models-sql-server",
@@ -6588,22 +6584,22 @@
       "source_path": "support/azure/azure-kubernetes/troubleshoot-common-mariner-aks.md",
       "redirect_url": "/troubleshoot/azure/azure-kubernetes/troubleshoot-common-azure-linux-aks",
       "redirect_document_id": true
-    }, 
+    },
     {
       "source_path": "support/azure/virtual-machines/connect-linux-vm-sshconnection.md",
       "redirect_url": "/troubleshoot/azure/virtual-machines/linux-vm-sshconnectionissue-perms",
       "redirect_document_id": true
-    }, 
+    },
     {
       "source_path": "support/azure/app-service/web-apps-configuration-and-management-faqs.md",
       "redirect_url": "/troubleshoot/azure/app-service/create-delete-resources-faq",
       "redirect_document_id": true
-    }, 
+    },
     {
       "source_path": "support/sql/linux/release-history-2017.md",
       "redirect_url": "/troubleshoot/sql/releases/linux/release-history-2017",
       "redirect_document_id": true
-    }, 
+    },
     {
       "source_path": "support/sql/linux/release-history-2019.md",
       "redirect_url": "/troubleshoot/sql/releases/linux/release-history-2019",
@@ -6923,6 +6919,256 @@
       "source_path": "support/azure/virtual-machines/windows-vm-activation-error-0xc004fd02.md",
       "redirect_url": "/troubleshoot/azure/virtual-machines/windows-vm-activation-error-0xc004fd01-0xc004fd02",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/identity/admin-development.md",
+      "redirect_url": "/troubleshoot/windows-client/active-directory/admin-development",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/identity/app-v.md",
+      "redirect_url": "/troubleshoot/windows-client/active-directory/app-v",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/identity/application-management.md",
+      "redirect_url": "/troubleshoot/windows-client/active-directory/application-management",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/identity/backup-and-storage.md",
+      "redirect_url": "/troubleshoot/windows-client/active-directory/backup-and-storage",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/identity/breadcrumb.md",
+      "redirect_url": "/troubleshoot/windows-client/active-directory/breadcrumb",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/identity/context.md",
+      "redirect_url": "/troubleshoot/windows-client/active-directory/context",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/identity/deployment.md",
+      "redirect_url": "/troubleshoot/windows-client/active-directory/deployment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/identity/group-policy.md",
+      "redirect_url": "/troubleshoot/windows-client/active-directory/group-policy",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/identity/high-availability.md",
+      "redirect_url": "/troubleshoot/windows-client/active-directory/high-availability",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/identity/identity.md",
+      "redirect_url": "/troubleshoot/windows-client/active-directory/identity",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/identity/networking.md",
+      "redirect_url": "/troubleshoot/windows-client/active-directory/networking",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/identity/performance.md",
+      "redirect_url": "/troubleshoot/windows-client/active-directory/performance",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/identity/printing.md",
+      "redirect_url": "/troubleshoot/windows-client/active-directory/printing",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/identity/remote.md",
+      "redirect_url": "/troubleshoot/windows-client/active-directory/remote",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/identity/shell-experience.md",
+      "redirect_url": "/troubleshoot/windows-client/active-directory/shell-experience",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/identity/system-management-components.md",
+      "redirect_url": "/troubleshoot/windows-client/active-directory/system-management-components",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/identity/toc.md",
+      "redirect_url": "/troubleshoot/windows-client/active-directory/toc",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/identity/ue-v.md",
+      "redirect_url": "/troubleshoot/windows-client/active-directory/ue-v",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/identity/user-profiles-and-logon.md",
+      "redirect_url": "/troubleshoot/windows-client/active-directory/user-profiles-and-logon",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/identity/virtualization.md",
+      "redirect_url": "/troubleshoot/windows-client/active-directory/virtualization",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/identity/welcome-windows-client.md",
+      "redirect_url": "/troubleshoot/windows-client/active-directory/welcome-windows-client",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/identity/windows-7-eos-faq.md",
+      "redirect_url": "/troubleshoot/windows-client/active-directory/windows-7-eos-faq",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/identity/windows-security.md",
+      "redirect_url": "/troubleshoot/windows-client/active-directory/windows-security",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/identity/windows-troubleshooters.md",
+      "redirect_url": "/troubleshoot/windows-client/active-directory/windows-troubleshooters",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/identity/windows-tss.md",
+      "redirect_url": "/troubleshoot/windows-client/active-directory/windows-tss",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/admin-development.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/admin-development",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/application-management.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/application-management",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/backup-and-storage.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/backup-and-storage",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/breadcrumb.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/breadcrumb",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/containers.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/containers",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/context.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/context",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/deployment.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/deployment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/group-policy.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/group-policy",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/high-availability.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/high-availability",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/identity.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/identity",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/networking.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/networking",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/performance.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/performance",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/printing.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/printing",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/remote.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/remote",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/resources.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/resources",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/security-and-malware.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/security-and-malware",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/shell-experience.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/shell-experience",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/software-defined-networking.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/software-defined-networking",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/system-management-components.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/system-management-components",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/toc.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/toc",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/user-profiles-and-logon.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/user-profiles-and-logon",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/virtualization.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/virtualization",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/welcome-windows-server.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/welcome-windows-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/windows-security.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/windows-security",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/windows-server-eos-faq.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/windows-server-eos-faq",
+      "redirect_document_id": true
     }
-]
+  ]
 }
