@@ -82,7 +82,7 @@ The [AlwaysOn_health](/sql/database-engine/availability-groups/windows/always-on
 Connect to the secondary replica using SQL Server Management Studio (SSMS) Object Explorer and drill into **Management**, **Extended Events**, and then **Sessions**. Right-click the **AlwaysOn_health** event and select **Watch Live Data**. You should get a new tabbed window reporting the current state of reverting operation. The state is reported every five minutes via the `hadr_trace_message` event, and the completed percentage of reverting operation is reported.
 
 > [!NOTE]
-> The extended event `hadr_trace_message` was added to the latest cumulative updates in SQL Server. You must be running the latest cumulative updates to observe this extended event in the `AlwaysOn_health` extended event session.
+> The extended event `hadr_trace_message` was added to the latest cumulative updates in SQL Server 2019 and later. You must be running the latest cumulative updates to observe this extended event in the `AlwaysOn_health` extended event session.
 
 :::image type="content" source="media/troubleshoot-availability-group-database-reverting-state/alwayson-health-extended-event-diagnostic-log.png" alt-text="Screenshot of the AlwaysOn_health extended event diagnostic log." lightbox="media/troubleshoot-availability-group-database-reverting-state/alwayson-health-extended-event-diagnostic-log.png":::
 
