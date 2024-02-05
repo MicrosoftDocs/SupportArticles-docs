@@ -4,7 +4,7 @@ description: Learn how to quickly resolve many problems, which may come up durin
 ms.date: 04/28/2023
 manager: dcscontentpm
 ms.author: aaroncz
-ms.custom: sap:setup, csstroubleshoot
+ms.custom: sap:installing-or-upgrading-windows, csstroubleshoot
 author: aczechowski
 ms.topic: troubleshooting
 ms.reviewer: dougeby

@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:devices-and-drivers, csstroubleshoot
+ms.custom: sap:driver-installation-or-driver-update, csstroubleshoot
 ---
 # Bluetooth speakers don't work after update 4505903 is installed in Windows 10, version 1903
 

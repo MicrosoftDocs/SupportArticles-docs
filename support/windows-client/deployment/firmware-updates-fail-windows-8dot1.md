@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:devices-and-drivers, csstroubleshoot
+ms.custom: sap:driver-installation-or-driver-update, csstroubleshoot
 ---
 # Firmware update failures in Windows 8.1
 

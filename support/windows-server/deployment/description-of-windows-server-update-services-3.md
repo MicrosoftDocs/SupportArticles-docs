@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, edwardr, danalb, mandarg, oscarlee, davidhen, sudheer, sivsha, bmoore, cecils
-ms.custom: sap:servicing, csstroubleshoot
+ms.custom: sap:failure-to-install-windows-updates, csstroubleshoot
 ---
 # Description of the Windows Server Update Services 3.0 Service Pack 1 package
 

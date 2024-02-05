@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, mniehaus, aaroncz
-ms.custom: sap:setup, csstroubleshoot
+ms.custom: sap:installing-or-upgrading-windows, csstroubleshoot
 ---
 # MDT Media Deployment USB drive not bootable on x86 UEFI system
 

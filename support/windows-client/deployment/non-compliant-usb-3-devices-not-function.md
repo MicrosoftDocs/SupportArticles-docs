@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:devices-and-drivers, csstroubleshoot
+ms.custom: sap:driver-installation-or-driver-update, csstroubleshoot
 ---
 # Some non-compliant USB 3.0 devices may not function when connected to USB 3.0 ports in Windows 8
 

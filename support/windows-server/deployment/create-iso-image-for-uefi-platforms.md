@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:setup, csstroubleshoot
+ms.custom: sap:installing-or-upgrading-windows, csstroubleshoot
 ---
 # Create an ISO image for UEFI platforms for a Windows PE CD-ROM
 

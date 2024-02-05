@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, hirotoh
-ms.custom: sap:devices-and-drivers, csstroubleshoot
+ms.custom: sap:driver-installation-or-driver-update, csstroubleshoot
 ---
 # LoadLibrary function returns STATUS_DLL_NOT_FOUND error on impersonate thread in Windows
 

@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, scottmca, ctimon
-ms.custom: sap:setup, csstroubleshoot
+ms.custom: sap:installing-or-upgrading-windows, csstroubleshoot
 ---
 # Error HAL_INITIALIZATION_FAILED when you install Windows 8 or Windows Server 2012 on VMware VM
 

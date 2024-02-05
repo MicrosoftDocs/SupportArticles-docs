@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, paudina, mingcheh, caroul, v-jesits, v-tea, tlavoy
-ms.custom: sap:servicing, csstroubleshoot
+ms.custom: sap:failure-to-install-windows-updates, csstroubleshoot
 ---
 # Cannot install the May 2019 update of Windows 10 on computers that run certain versions of AMD RAID drivers
 

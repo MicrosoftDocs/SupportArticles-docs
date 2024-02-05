@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, cclay
-ms.custom: sap:servicing, csstroubleshoot
+ms.custom: sap:failure-to-install-windows-updates, csstroubleshoot
 ---
 # WSUS SelfUpdate service doesn't send automatic updates
 

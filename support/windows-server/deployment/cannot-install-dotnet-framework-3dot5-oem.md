@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, match, chadbee, v-miand3
-ms.custom: sap:servicing, csstroubleshoot
+ms.custom: sap:failure-to-install-windows-updates, csstroubleshoot
 ---
 # Can't install the .NET Framework 3.5 without a public Internet environment on an OEM Windows installation
 

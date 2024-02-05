@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, jburrage
-ms.custom: sap:devices-and-drivers, csstroubleshoot
+ms.custom: sap:driver-installation-or-driver-update, csstroubleshoot
 ---
 # "The operation timed out" error when creating a partition using Disk Management console or DiskPart.exe
 

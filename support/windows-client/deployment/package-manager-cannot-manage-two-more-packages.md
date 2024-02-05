@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: tarekr, cochen, kaushika
-ms.custom: sap:servicing, csstroubleshoot
+ms.custom: sap:failure-to-install-windows-updates, csstroubleshoot
 ---
 # Package Manager can install only the first package when you extract two or more packages to the same folder in Windows Vista
 

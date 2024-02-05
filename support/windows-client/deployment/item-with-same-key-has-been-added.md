@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:activation, csstroubleshoot
+ms.custom: sap:windows-volume-activation, csstroubleshoot
 ---
 # "An item with the same key has already been added" error when you open a list in VAMT 2.0 on a Windows 7-based computer
 

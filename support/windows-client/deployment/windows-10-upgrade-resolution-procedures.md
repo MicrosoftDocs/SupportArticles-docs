@@ -7,7 +7,7 @@ ms.author: aaroncz
 author: aczechowski
 ms.topic: troubleshooting
 ms.collection: highpri
-ms.custom: sap:setup, csstroubleshoot
+ms.custom: sap:installing-or-upgrading-windows, csstroubleshoot
 ms.reviewer: dougeby
 audience: itpro
 localization_priority: medium

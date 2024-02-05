@@ -9,7 +9,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: high
 ms.reviewer: kaushika, chkeen, cgibson, jesko
-ms.custom: sap:servicing, csstroubleshoot
+ms.custom: sap:failure-to-install-windows-updates, csstroubleshoot
 adobe-target: true
 ---
 

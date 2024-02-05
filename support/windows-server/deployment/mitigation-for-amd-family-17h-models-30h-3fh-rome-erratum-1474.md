@@ -5,7 +5,7 @@ author: Deland-Han
 ms.author: delhan
 ms.topic: troubleshooting
 ms.date: 07/30/2023
-ms.custom: sap:setup, csstroubleshoot
+ms.custom: sap:installing-or-upgrading-windows, csstroubleshoot
 ROBOTS: NOINDEX
 ---
 # Mitigation for AMD Family 17h Models 30h-3Fh/Rome Erratum 1474: A CPU core may hang after about 1044 days

@@ -7,7 +7,7 @@ ms.author: delhan
 ms.date: 04/28/2023
 author: Deland-Han
 ms.topic: troubleshooting
-ms.custom: sap:usmt, csstroubleshoot
+ms.custom: sap:sap-user-state-migration-tool, csstroubleshoot
 audience: itpro
 localization_priority: medium
 ---

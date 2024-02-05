@@ -8,7 +8,7 @@ manager: dcscontentpm
 ms.reviewer: kaushika, dougeby
 ms.topic: troubleshooting
 ms.collection: highpri
-ms.custom: sap:servicing, csstroubleshoot
+ms.custom: sap:failure-to-install-windows-updates, csstroubleshoot
 audience: itpro
 localization_priority: medium
 ---

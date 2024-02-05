@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate
-ms.custom: sap:deployment, csstroubleshoot
+ms.custom: sap:certificate-chaining-and-revocation, csstroubleshoot
 keywords: managed devices, certificates, WSUS, MECM, Windows Update
 ---
 

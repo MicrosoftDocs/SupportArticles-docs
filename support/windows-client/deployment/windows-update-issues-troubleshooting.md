@@ -6,7 +6,7 @@ author: aczechowski
 ms.author: aaroncz
 manager: dcscontentpm
 ms.topic: troubleshooting
-ms.custom: sap:servicing, csstroubleshoot
+ms.custom: sap:failure-to-install-windows-updates, csstroubleshoot
 ms.collection: highpri
 ms.reviewer: dougeby
 audience: itpro

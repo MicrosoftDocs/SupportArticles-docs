@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, sandyar, cpuckett
-ms.custom: sap:devices-and-drivers, csstroubleshoot, Evergreen
+ms.custom: sap:driver-installation-or-driver-update, csstroubleshoot
 ---
 # Support policy for third-party, kernel-level software that is signed using the attestation process in Windows
 

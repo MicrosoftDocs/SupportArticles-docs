@@ -7,7 +7,7 @@ ms.topic: troubleshooting
 ms.author: aaroncz
 author: aczechowski
 ms.collection: highpri
-ms.custom: sap:servicing, csstroubleshoot
+ms.custom: sap:failure-to-install-windows-updates, csstroubleshoot
 ms.reviewer: dougeby
 audience: itpro
 localization_priority: medium

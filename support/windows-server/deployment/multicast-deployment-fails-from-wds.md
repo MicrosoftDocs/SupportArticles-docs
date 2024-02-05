@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, scottmca
-ms.custom: sap:mdm, csstroubleshoot
+ms.custom: sap:windows-adk-installation, csstroubleshoot
 ---
 # Multicast Deployment Fails from Windows Deployment Services
 
