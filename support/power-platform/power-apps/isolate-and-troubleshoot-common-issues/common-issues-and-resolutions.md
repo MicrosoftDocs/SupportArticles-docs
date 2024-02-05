@@ -96,7 +96,7 @@ Refer to the introductory article [Power Apps troubleshooting strategies](isolat
 
 1. **Images added from iOS don't contain meta-data information.**
 
-    When using the **Add Picture** control on iOS, images imported by using the camera or gallery don't contain meta-data.
+    When using the **Add Picture** control on iOS, images imported by using the camera or gallery don't contain meta-data like orientation, location information, or camera settings.
 
 1. **Combo box controls in galleries**
 
