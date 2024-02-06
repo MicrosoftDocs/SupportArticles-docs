@@ -4,7 +4,7 @@ description: A list of common issues and resolutions within Power Apps.
 author: KumarVivek
 ms.custom: canvas
 ms.reviewer: tapanm, lanced, tahoon 
-ms.date: 02/01/2024
+ms.date: 02/06/2024
 ms.author: kvivek
 search.audienceType: 
   - maker

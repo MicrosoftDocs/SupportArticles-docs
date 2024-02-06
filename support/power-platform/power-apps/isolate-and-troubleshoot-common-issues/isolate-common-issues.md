@@ -3,7 +3,7 @@ title: General Power Apps troubleshooting strategies
 description: Learn about general strategies to narrow down the cause of app errors.
 author: tahoon
 ms.reviewer: tapanm, lanced
-ms.date: 01/31/2024
+ms.date: 02/06/2024
 ms.author: tahoon
 search.audienceType: 
   - maker
