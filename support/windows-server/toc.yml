@@ -3014,7 +3014,7 @@ items:
 - name: Installing Windows Updates, features, or roles
   items:
   - name: Installing Windows Updates, features, or roles
-    href: ./licensing-and-activation/installing-updates-features-roles-overview.md
+    href: ./installing-updates-features-roles/installing-updates-features-roles-overview.md
   - name: Failure to install Windows Updates
     items:
     - name: How to use the Recovery Console

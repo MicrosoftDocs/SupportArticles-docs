@@ -90,10 +90,9 @@ Check whether all AD FS certificates (Service communications, token-decrypting, 
 
 ### Step 2: Make sure that the certificates are not using a Cryptographic Next Generation (CNG) private key  
 
-Certificates that use the CNG private key are not supported for Token Signing and Token Decryption. If AD FS generated the self-signed certificate, that certificate does not use CNG. For a certificate that is issued by a CA, make sure that the certificate is not CNG-based. To do it, follow these steps:
-If the CA template is using any of the listed cryptographic service providers, the certificate that is issued by this CA is not supported by the AD FS server.
+Certificates that use the CNG private key are not supported for Token Signing and Token Decryption. If AD FS generated the self-signed certificate, that certificate does not use CNG. For a certificate that is issued by a CA, make sure that the certificate is not CNG-based.
 
-For more information, see [How to Determine if a Certificate is Using a CAPI1 or CNG key](https://social.technet.microsoft.com/wiki/contents/articles/962.how-to-determine-if-a-certificate-is-using-a-capi1-or-cng-key.aspx).
+If the CA template is using any of the listed cryptographic service providers, the certificate that is issued by this CA is not supported by the AD FS server.
 
 ### Step 3: Check whether SSL binding of the Service communication certificates in IIS is bound to port 443
 

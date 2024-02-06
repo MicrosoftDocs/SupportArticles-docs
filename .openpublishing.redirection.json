@@ -8016,7 +8016,7 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "support/windows-server/active-directory/fail-to-configure-server-using-server-manager.md",
+      "source_path": "support/windows-server/identity/fail-to-configure-server-using-server-manager.md",
       "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/fail-to-configure-server-using-server-manager",
       "redirect_document_id": true
     },
@@ -9518,6 +9518,16 @@
     {
       "source_path": "support/windows-server/identity/workplace-join-fail-error-0x80072ee7.md",
       "redirect_url": "/troubleshoot/windows-server/active-directory/workplace-join-fail-error-0x80072ee7",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/deployment-overview.md",
+      "redirect_url": "/troubleshoot/windows-client/welcome-windows-client",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/deployment-overview.md",
+      "redirect_url": "/troubleshoot/windows-server/welcome-windows-server",
       "redirect_document_id": true
     }
   ]
