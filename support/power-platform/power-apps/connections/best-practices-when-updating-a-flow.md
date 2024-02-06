@@ -9,7 +9,7 @@ ms.date: 03/31/2021
 
 This article describes best practices around updating Microsoft Flows used by Power Apps.
 
-_Applies to:_ &nbsp; Power Apps  
+_Applies to:_ &nbsp;  Power Apps
 _Original KB number:_ &nbsp; 4477072
 
 ## Symptoms
