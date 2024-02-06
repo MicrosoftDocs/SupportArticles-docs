@@ -30,12 +30,14 @@ To resolve this issue, you will need to delete the inaccurate dated hierarchy by
 3.	Click on View
 4.	On the right side of the screen click on Related Information fly-out
 5.	Under Future Changes – Click on More  
-<img width="162" alt="image" src="https://github.com/MicrosoftDocs/SupportArticles-docs-pr/assets/55284555/cc70547f-e71a-49b6-a81a-0a9a160ce36b">
+<img width="162" alt="image" src="https://github.com/MicrosoftDocs/SupportArticles-docs-pr/assets/55284555/cc70547f-e71a-49b6-a81a-0a9a160ce36b"> 
+   [hiearchyrelatedinformation image]
 
-6.	On the Publication date column – Click the Filter icon  
+7.	On the Publication date column – Click the Filter icon  
  <img width="131" alt="image" src="https://github.com/MicrosoftDocs/SupportArticles-docs-pr/assets/55284555/4c4fbd38-17be-46a9-8d16-8849e66eceeb">
+ [hiearchyPublishedDatefilter image]
 
-7.	Click on Clear to remove the filtered value
-8.	In the list select the hierarchy with the future publish date
-9.	Click on delete
-10. Finally recreate your changes to the hiearchy and ensure you publish to the desired date. 
+8.	Click on Clear to remove the filtered value
+9.	In the list select the hierarchy with the future publish date
+10.	Click on delete
+11. Finally recreate your changes to the hiearchy and ensure you publish to the desired date. 
