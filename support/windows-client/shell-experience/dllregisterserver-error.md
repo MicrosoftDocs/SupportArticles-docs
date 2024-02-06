@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, aanders
 ms.custom: sap:desktop-shell, csstroubleshoot
-ms.technology: windows-client-shell-experience
 ---
 # You receive 0x80070005 error when you try to register a DLL by using Regsvr32.exe
 

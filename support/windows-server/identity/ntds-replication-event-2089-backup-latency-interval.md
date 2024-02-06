@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:active-directory-backup-restore-or-disaster-recovery, csstroubleshoot
-ms.subservice: active-directory
 ---
 # NTDS Replication Event 2089 is logged if Windows Server 2003 SP1 and later domain controllers aren't backed up in a given time period
 

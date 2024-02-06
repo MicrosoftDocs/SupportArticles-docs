@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, Nedpyle
 ms.custom: sap:frs, csstroubleshoot
-ms.subservice: networking
 ---
 # FRS event log error codes
 

@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-jesits
 ms.custom: sap:management-and-configuration-installing-print-drivers, csstroubleshoot
-ms.subservice: printing
 ---
 # A printer driver cannot be installed through Windows Update in Windows Server 2016 and Windows Server 2019
 

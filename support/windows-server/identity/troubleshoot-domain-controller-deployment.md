@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, iainfoulds, daveba, v-lianna
 ms.custom: sap:active-directory-domain-or-forest-functional-level-updates, csstroubleshoot
-ms.subservice: active-directory
 ms.assetid: 5ab76733-804d-4f30-bee6-cb672ad5075a
 ---
 # Troubleshoot domain controller deployment

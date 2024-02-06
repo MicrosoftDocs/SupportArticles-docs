@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, arrenc, dpracht
 ms.custom: sap:dns, csstroubleshoot
-ms.subservice: networking
 ---
 # NET: DNS: DNS client resolution timeouts
 

@@ -4,8 +4,6 @@ description: This article provides background information about identities in In
 ms.date: 10/09/2020
 ms.custom: sap:WWW Authentication and Authorization
 ms.reviewer: prchanda, jarrettr
-ms.service: iis
-ms.subservice: www-authentication-authorization
 ---
 # Understanding identities in IIS
 

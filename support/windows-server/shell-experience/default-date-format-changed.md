@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, cenki, v-jesits
 ms.custom: sap:dst-and-timezones, csstroubleshoot
-ms.subservice: shell-experience
 ---
 # The default date format is changed in Windows 8 and Windows Server 2012
 

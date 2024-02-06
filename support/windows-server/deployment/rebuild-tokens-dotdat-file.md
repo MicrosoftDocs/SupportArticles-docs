@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, scottmca
 ms.custom: sap:activation, csstroubleshoot
-ms.subservice: deployment
 ---
 # How to rebuild the Tokens.dat file when you troubleshoot Windows activation issues
 

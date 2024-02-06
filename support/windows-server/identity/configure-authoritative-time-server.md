@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:windows-time-service, csstroubleshoot
-ms.subservice: active-directory
 adobe-target: true
 ---
 # How to configure an authoritative time server in Windows Server

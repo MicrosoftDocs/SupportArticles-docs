@@ -848,6 +848,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/power-platform/power-automate/flow-creation/converting-time-zone-power-automate.md",
+      "redirect_url": "/power-automate/convert-time-zone",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/dynamics-365/fraud-protection/welcome-fraud-protection.yml",
       "redirect_url": "/troubleshoot/dynamics-365/",
       "redirect_document_id": false

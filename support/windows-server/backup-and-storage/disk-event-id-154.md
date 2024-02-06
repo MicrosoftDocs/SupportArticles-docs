@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: nbassett, kaushika
 ms.custom: sap:data-corruption-and-disk-errors, csstroubleshoot
-ms.subservice: backup-and-storage
 ---
 # Disk Event ID 154: The IO Operation failed due to a hardware error
 

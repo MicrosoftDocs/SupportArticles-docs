@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:windows-remote-management-winrm, csstroubleshoot
-ms.subservice: admin-mgmt-development
 ---
 # Events are not forwarded if the collector is running Windows Server
 

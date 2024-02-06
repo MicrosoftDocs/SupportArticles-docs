@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:management-and-configuration:-installing-print-drivers, csstroubleshoot
-ms.subservice: printing
 ---
 # How to install and configure a file and print server
 

@@ -5,11 +5,9 @@ ms.date: 12/09/2021
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jarrettr, wincicadsec, jitha, v-tappelgate
 ms.custom: sap:active-directory-domain-or-forest-functional-level-updates, csstroubleshoot
-ms.subservice: active-directory
 keywords: KCD, Kerberos constrained delegation, s4u2proxy, s4u2self, service account, computer account, machine account
 ---
 # How to configure Kerberos Constrained Delegation for Web Enrollment proxy pages
