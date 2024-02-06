@@ -83,8 +83,6 @@ items:
       href: ./active-directory/adws-service-crashes-after-you-upgrade.md
     - name: Database garbage collection process
       href: ./active-directory/database-garbage-collection-caculation-of-allowed-intervals.md
-    - name: Error when you configure a server with Server Manager
-      href: ./active-directory/fail-to-configure-server-using-server-manager.md
     - name: ESENT event IDs 1000, 1202, 412, and 454
       href: ./active-directory/esent-events-1000-1202-412-454.md
     - name: Event IDs 5788 and 5789 occur
@@ -108,7 +106,7 @@ items:
     - name: Raise Active Directory domain and forest functional levels
       href: ./active-directory/raise-active-directory-domain-forest-functional-levels.md
     - name: Troubleshoot domain controller deployment
-      href: ./active-directory/troubleshoot-domain-controller-deployment.md  
+      href: ./active-directory/troubleshoot-domain-controller-deployment.md
   - name: Active Directory Federation Services (AD FS)
     items:
     - name: Troubleshoot ADFS SSO issues
@@ -782,7 +780,7 @@ items:
     - name: Not enough storage to process this command
       href: ./backup-and-storage/not-enough-storage-process-this-command.md
     - name: Troubleshoot File Server Resource Manager
-      href: ./backup-and-storage/troubleshoot-file-server-resource-manager.md      
+      href: ./backup-and-storage/troubleshoot-file-server-resource-manager.md
   - name: iSCSI
     items:
     - name: File shares on iSCSI devices aren't re-created
@@ -856,7 +854,7 @@ items:
     - name: Simple volumes may become inaccessible
       href: ./backup-and-storage/simple-volumes-inaccessible-power-loss.md
     - name: Troubleshoot Disk Management
-      href: ./backup-and-storage/troubleshoot-disk-management.md     
+      href: ./backup-and-storage/troubleshoot-disk-management.md
     - name: Usability limit for Volume Shadow Copy Service (VSS)
       href: ./backup-and-storage/usability-limit-volume-shadow-copy-service.md
     - name: Use the Disk Management Snap-in
@@ -928,233 +926,15 @@ items:
   - name: Deployment
     href: ./deployment/deployment-overview.md
   - name: Activation
-    items:
-    - name: '"Windows is not genuine" error'
-      href: ./deployment/windows-not-genuine-error.md
-    - name: 0xc004f063 when activating an OEM version
-      href: ./deployment/0xc004f063-when-activating-oem-version.md
-    - name: Application Event Log Warning ID 1058
-      href: ./deployment/application-event-log-warning-id-1058.md
-    - name: 'Error 0x80070005 "Access denied" when you activate Windows'
-      href: ./deployment/error-0x80070005-access-denied.md
-    - name: Error 0x8007000D when you activate a machine
-      href: ./deployment/0x8007000d-activate-machine.md
-    - name: Error 0xC004E002 during activation
-      href: ./deployment/error-0xc004e002-during-activation.md
-    - name: Error 0xC004E015 (SL_E_EUL_CONSUMPTION_FAILED)
-      href: ./deployment/error-0xc004e015-sl-e-eul-consumption-failed-activate-windows.md
-    - name: Error 0xC004F015 when you activate Windows 10
-      href: ./deployment/error-0xc004f015-activate-windows-10.md
-    - name: Error 0xC004F06C when you activate Windows
-      href: ./deployment/error-0xc004f06c-activate-windows.md
-    - name: Error 0xC004F074 when you activate Windows
-      href: ./deployment/error-0xc004f074-activate-windows.md
-    - name: Error when you validate a copy of Windows
-      href: ./deployment/error-when-you-validate-copy-windows.md
-    - name: Event 12293 when registering a KMS host record
-      href: ./deployment/event-12293-error-0x800723-set-kms-host.md
-    - name: Event ID 12321 Warning Token Based Activation failed
-      href: ./deployment/event-id-12321-warning-token-based-activation-failed.md
-    - name: Event ID 8208, 8200, or 900 is logged
-      href: ./deployment/event-id-8208-8200-900.md
-    - name: Fail to activate Windows Server over the Internet
-      href: ./deployment/message-number-32777.md
-    - name: How to change the Volume Licensing product key
-      href: ./deployment/change-volume-licensing-product-key.md
-    - name: How to rebuild the Tokens.dat file
-      href: ./deployment/rebuild-tokens-dotdat-file.md
-    - name: Specified database is not a valid VAMT database error
-      href: ./deployment/specified-database-not-valid-vamt-error.md
-    - name: Troubleshoot ADBA clients that don't activate
-      href: ./deployment/troubleshoot-adba-clients-not-activate.md
-    - name: Troubleshoot Windows activation error codes
-      href: ./deployment/troubleshoot-activation-error-codes.md
-    - name: Windows Activation fails with error 0x8007267C
-      href: ./deployment/windows-activation-fails-with-error-0x8007267.md
-    - name: Windows installation fails with error
-      href: ./deployment/error-product-key-not-match-windows-images-installation.md
+    items: []
   - name: Devices and Drivers
-    items:
-    - name: '"Stop 0x0000007B" error'
-      href: ./deployment/stop-0x0000007b-error-group-policy-setting.md
-    - name: '"This device cannot start" error when deploying a hot plug NVMe SSD'
-      href: ./deployment/device-cannot-start-error-hot-plug-nvme-ssd.md
-    - name: '%NUMBER_OF_PROCESSORS% environment variable shows incorrect values'
-      href: ./deployment/number-of-processors-environment-variable-show-incorrect-values.md
-    - name: Can't find the Microsoft Loopback Adapter
-      href: ./deployment/microsoft-loopback-adapter-rename.md
-    - name: Can't install a VMWare driver on Windows Server 2008 R2
-      href: ./deployment/error-install-vmware-driver.md
-    - name: Changes of the default behavior for Core Parking
-      href: ./deployment/default-core-parking-behavior-changes.md
-    - name: Enable Plug and Play feature for parallel port devices
-      href: ./deployment/enable-plug-play-for-parallel-port-devices.md
-    - name: Event ID 37 after you change power policy
-      href: ./deployment/event-id-37-windows-kernel-processor-power.md
-    - name: Event ID 56 is logged
-      href: ./deployment/event-id-56-logged.md
-    - name: Fail to insert a smart card in a reader
-      href: ./deployment/cannot-insert-smart-card-in-reader.md
-    - name: How to determine the type of processor
-      href: ./deployment/determine-the-type-of-processor.md
-    - name: How to replace a driver by using Recovery Console
-      href: ./deployment/use-recovery-console-replace-driver.md
-    - name: How to use Device Manager to configure devices
-      href: ./deployment/use-device-manager-configure-devices.md
-    - name: Support policy for third-party, kernel-level software
-      href: ./deployment/support-policy-third-party-kernel-level-attestation.md
-    - name: VMware driver installation fails in Windows Server 2008 R2 SP1
-      href: ./deployment/virtual-machines-vmware-not-install-update.md
-    - name: Windows Deployment Services (WDS) support for UEFI
-      href: ./deployment/deploy-uefi-based-systems-wds.md
+    items: []
   - name: MDM
-    items:
-    - name: Multicast deployment fails from WDS
-      href: ./deployment/multicast-deployment-fails-from-wds.md
+    items: []
   - name: Servicing
-    items:
-    - name: 'Troubleshooting guidance: Installing Windows features or roles'
-      href: ./deployment/troubleshoot-install-features-roles-guidance.md
-    - name: 'Troubleshooting guidance: Windows Server update'
-      href: ./deployment/troubleshoot-windows-server-update-guidance.md
-    - name: 'Troubleshooting guidance: Windows Update for Business reports'
-      href: ./deployment/wubr-troubleshooting-guidance.md
-    - name: '"Failed to be changed to the Absent state. Status: 0x800f0922" error'
-      href: ./deployment/failed-changed-absent-state-status-0x800f0922-error.md    
-    - name: Can't connect to WSUS Administration Website
-      href: ./deployment/cannot-connect-to-wsus-administration-website.md
-    - name: Can't install .NET Framework 3.5 on OEM Windows installation
-      href: ./deployment/cannot-install-dotnet-framework-3dot5-oem.md
-    - name: Can't install updates or programs
-      href: ./deployment/cannot-install-updates-programs.md
-    - name: Can't install Windows Server 2019 on servers with a high processor count
-      href: ./deployment/cannot-install-windows-server-2019-high-processor-count.md
-    - name: CBS.log file contains entries that some files aren't repaired
-      href: ./deployment/cbs-log-file-record-entries-not-repaired-run-sfc.md
-    - name: Description of System File Checker (Sfc.exe)
-      href: ./deployment/system-file-checker.md
-    - name: Description of Windows Server Update Services 3.0
-      href: ./deployment/description-of-windows-server-update-services-3.md
-    - name: ERROR_INVALID_DATA error after installing Windows updates
-      href: ./deployment/error-invalid-data-startup-installing-updates.md
-    - name: Error 0x800705aa when Windows Update fails
-      href: ./deployment/error-0x800705aa-windows-update-fails.md
-    - name: Error 0x800f0906 when you convert Server Core to GUI
-      href: ./deployment/dism-fails-with-error-0x800f0906.md
-    - name: Error 0x800f0922 when installing Windows updates
-      href: ./deployment/error-0x800f0922-installing-windows-updates.md
-    - name: Error 0x800f0922 when MPIO feature installation fails
-      href: ./deployment/error-0x800f0922-mpio-feature-installation-fails.md
-    - name: Error 0x800f0922 when you uninstall roles/features
-      href: ./deployment/error-0x800f0922-uninstall-role-feature.md
-    - name: Error C0190003 after installing updates
-      href: ./deployment/error-c0190003-install-updates-restart-computer.md
-    - name: Error code 2359302 when installing updates in Windows Server 2019
-      href: ./deployment/error-2359302-installing-windows-updates.md
-    - name: Fail to install Network Policy Server role
-      href: ./deployment/error-0x80004005-network-policy-server-role.md
-    - name: Failed to schedule Software Protection service for restart
-      href: ./deployment/failed-schedule-software-protection.md
-    - name: Fix Windows Update errors
-      href: ./deployment/fix-windows-update-errors.md
-    - name: How to block user access to Windows Update
-      href: ./deployment/block-user-access-windows-update.md
-    - name: How to use the Recovery Console
-      href: ./deployment/use-recovery-console-not-start.md
-    - name: Install Microsoft Product Support Reporting Tool
-      href: ./deployment/microsoft-product-support-reporting-tool-v5220030.md
-    - name: List of updates
-      href: ./deployment/list-updates.md
-    - name: Re-register Windows client/server in WSUS
-      href: ./deployment/re-register-windows-clientserver-in-wsus.md
-    - name: System Partition goes offline after installing some 3rd Party Disk
-      href: ./deployment/system-partition-offline-install-3rd-party-disk.md
-    - name: SystemInfo.exe doesn't display all installed updates
-      href: ./deployment/systeminfo-not-display-all-updates.md
-    - name: Temporarily deactivate the kernel mode filter driver
-      href: ./performance/deactivate-kernel-mode-filter-driver.md
-    - name: Why you may be prompted to restart your computer
-      href: ./deployment/why-prompted-restart-computer.md
-    - name: Windows Server 2008 Service Pack 2
-      href: ./deployment/windows-server-2008-service-pack-2.md
-    - name: 'WUBr: Troubleshoot diagnostic data transmission'
-      href: ./deployment/wubr-troubleshooting-data-transmission.md
-    - name: 'WUBr: Use the configuration script to troubleshoot device configuration'
-      href: ./deployment/wubr-troubleshooting-device-config-using-script.md
-    - name: WSUS 3.0 installation package is available
-      href: ./deployment/wsus-3-installation-package.md
-    - name: WSUS 3.0 SP2 Dynamic Install for Server Manager
-      href: ./deployment/windows-server-update-services-3-sp2.md
-    - name: WSUS SelfUpdate doesn't send automatic updates
-      href: ./deployment/wsus-selfupdate-not-send-automatic-updates.md
-    - name: WUSA returns 0x5 ERROR_ACCESS_DENIED
-      href: ./deployment/windows-update-standalone-installer-returns-error.md
-    - name: You can't install features in Windows Server 2012 R2
-      href: ./deployment/you-cant-install-features.md
+    items: []
   - name: Setup
-    items:
-    - name: Add OEM PnP drivers to Windows installations
-      href: ./deployment/add-oem-plug-play-drivers.md
-    - name: Avoid duplicate GUIDs when you image SMS clients
-      href: ./deployment/avoid-duplicate-guids-deploy-sms.md
-    - name: Can't open EXE files
-      href: ./deployment/cant-open-exe-files.md
-    - name: Chinese IME dictionaries are not ready yet
-      href: ./deployment/chinese-ime-dictionaries-not-ready.md
-    - name: Chinese (Simplified) input method doesn't work
-      href: ./deployment/chinese-simplified-input-method-not-working.md
-    - name: Create an ISO image for UEFI platforms
-      href: ./deployment/create-iso-image-for-uefi-platforms.md
-    - name: Enable logging and tracing for WDS components
-      href: ./deployment/enable-logging-windows-deployment-service.md
-    - name: ERROR_PATH_NOT_FOUND error when performing an in-place upgrade
-      href: ./deployment/error-path-not-found-upgrading-windows-server-2019.md      
-    - name: Event ID 307 and 304 logged for deploying Windows
-      href: ./deployment/event-307-and-304-logged-for-deploying.md
-    - name: Fail to run applications on Windows Server Core
-      href: ./deployment/subsystem-needed-support-image-type-not-present.md
-    - name: How to perform an in-place/repair upgrade
-      href: ./deployment/repair-or-in-place-upgrade.md
-    - name: In-place upgrade hangs at black screen
-      href: ./deployment/in-place-upgrade-hangs-black-screen.md
-    - name: Integrate Windows Server Update Services (WSUS) 3.0 into Server Manager
-      href: ./deployment/update-available-integrates-wsus-into-server-manager.md
-    - name: Known issues that affect AppX cleanup maintenance task
-      href: ./deployment/issues-appx-cleanup-maintenance-task.md
-    - name: Long paths with spaces require quotation marks
-      href: ./deployment/filenames-with-spaces-require-quotation-mark.md
-    - name: Manually edit Boot.ini file
-      href: ./deployment/manually-edit-boot-file.md
-    - name: MDT Media Deployment USB isn't bootable
-      href: ./deployment/mdt-media-deployment-isnt-bootable.md
-    - name: Microsoft Deployment Toolkit support life cycle
-      href: ./deployment/deployment-toolkit-support.md
-    - name: Mitigation for AMD Family 17h Models 30h-3Fh/Rome Erratum 1474
-      href: ./deployment/mitigation-for-amd-family-17h-models-30h-3fh-rome-erratum-1474.md
-    - name: Post-Deployment Configuration task fails
-      href: ./deployment/post-deployment-configuration-task-fail.md
-    - name: Setup fails on a VM with error 0xE0000100
-      href: ./deployment/setup-fail-on-vm-error-0xe0000100.md
-    - name: SYSPREP and CAPTURE task sequence fails
-      href: ./deployment/sysprep-capture-task-sequence-fails-0x80070070.md
-    - name: The WDS server may not start
-      href: ./deployment/wds-server-may-not-start.md
-    - name: Unattended Setup does not Use Computer Name Specified by User during OOBE
-      href: ./deployment/unattended-setup-not-use-computer-name-specified-oobe.md
-    - name: Upgrade fails with error 0x000000C4
-      href: ./deployment/upgrade-fail-with-error-0x000000c4.md
-    - name: Using language IDs to identify language packs
-      href: ./deployment/use-language-id-identify-language-pack.md
-    - name: Windows Deployment Service fails to start
-      href: ./deployment/windows-deployment-service-not-start.md
-    - name: Windows Internal Database (WID) installation fails
-      href: ./deployment/error-install-windows-internal-database.md
-    - name: PCR7 configuration "Binding not possible" error
-      href: ./deployment/pcr7-configuration-binding-not-possible.md
-    - name: Windows Server support and installation instructions for the AMD Rome family of processors
-      href: ./deployment/windows-server-support-installation-for-amd-role-family-processor.md
-    - name: WSUS clients can't install updates
-      href: ./deployment/wsus-clients-cant-install-updates.md
+    items: []
 - name: Group Policy
   items:
   - name: Group Policy
@@ -1244,13 +1024,13 @@ items:
     - name: 'Troubleshooting guidance: Applying Group Policy'
       href: ./group-policy/applying-group-policy-troubleshooting-guidance.md
     - name: '"LDAP Bind function call failed" error when updating Group Policy settings'
-      href: ./group-policy/ldap-bind-function-call-failed-error.md      
+      href: ./group-policy/ldap-bind-function-call-failed-error.md
     - name: '"Namespace is already defined" error when editing a policy'
       href: ./group-policy/microsoft-policies-sensors-windowslocationprovider-defined.md
     - name: '"Set roaming profile path for all users logging onto this computer" setting applies to local accounts'
       href: ./group-policy/set-roaming-profile-path-all-users-applies-all-acccounts.md
     - name: Group Policy fails to apply
-      href: ./group-policy/specify-startup-policy-processing-wait-time-default-value-not-honored.md      
+      href: ./group-policy/specify-startup-policy-processing-wait-time-default-value-not-honored.md
     - name: A Group Policy setting isn't available in the security policy settings list
       href: ./group-policy/default-owner-objects-created-members-administrators-group-not-available.md
     - name: AuthZ fails with an Access Denied error
@@ -1288,7 +1068,7 @@ items:
     - name: User GPP Scheduled Task item fails to apply
       href: ./group-policy/user-gpp-scheduled-task-item-fails-apply.md
     - name: User-based GPO settings aren't applied when signing in with shadow principals
-      href: ./group-policy/user-based-gpo-settings-not-work-shadow-principals.md      
+      href: ./group-policy/user-based-gpo-settings-not-work-shadow-principals.md
     - name: Userenv errors occur and events are logged
       href: ./group-policy/userenv-errors-occur-events-are-logged.md
     - name: Windows Server stops responding on startup when applying Group Policy
@@ -1542,7 +1322,7 @@ items:
     - name: Guest access in SMB2 is disabled by default
       href: ./networking/guest-access-in-smb2-is-disabled-by-default.md
     - name: High CPU usage issue on the SMB server
-      href: ./networking/high-cpu-usage-issue-smb-server.md      
+      href: ./networking/high-cpu-usage-issue-smb-server.md
     - name: Hotfixes for File Services technologies
       href: ./networking/hotfixes-for-file-services-technologies.md
     - name: How to allow remote users to access your network
@@ -1578,7 +1358,7 @@ items:
     - name: Slow SMB files transfer speed
       href: ./networking/slow-smb-file-transfer.md
     - name: SMB Multichannel troubleshooting
-      href: ./networking/smb-multichannel-troubleshooting.md 
+      href: ./networking/smb-multichannel-troubleshooting.md
     - name: System error 1331 when you connect to a share
       href: ./networking/account-currently-disabled-system-error-1331.md
     - name: System error 67 has occurred. The network name cannot be found
@@ -1586,13 +1366,13 @@ items:
     - name: TCP connection is aborted during Validate Negotiate
       href: ./networking/tcp-connection-abort-validate-negotiate.md
     - name: TCP three-way handshake failure during SMB connection
-      href: ./networking/tcp-three-way-handshake-fails.md     
+      href: ./networking/tcp-three-way-handshake-fails.md
     - name: Troubleshoot DFSN access failures
       href: ./networking/dfsn-access-failures.md
     - name: Troubleshoot event ID 1020 on a file server
       href: ./networking/troubleshoot-event-id-1020-warnings-file-server.md
     - name: Troubleshoot the Event ID 50 error message
-      href: ./networking/troubleshoot-event-id-50-error.md    
+      href: ./networking/troubleshoot-event-id-50-error.md
   - name: Background Intelligent Transfer Service (BITS)
     items:
     - name: '"Content file download failed" error when downloading a file by BITS'
@@ -1677,7 +1457,7 @@ items:
       href: ./networking/dns-zone-transfer-options-reset.md
     - name: DNS Server becomes an island
       href: ./networking/dns-server-becomes-island.md
-    - name: 'DNS zone transfer fails when using "Only to servers listed in the Name servers tab"'
+    - name: DNS zone transfer fails when using "Only to servers listed in the Name servers tab"
       href: ./networking/dns-zone-transfer-fails-only-servers-listed-name-servers.md
     - name: Events 407 and 408 when querying DNS server
       href: ./networking/events-407-408-in-dns-server-event-log.md
@@ -1686,7 +1466,7 @@ items:
     - name: Event ID 4015 is logged and the DNS server encounters a critical error
       href: ./networking/event-4015-dns-server-encounters-critical-error.md
     - name: Event IDs 4016 and 4004 when DNS updates time out
-      href: ./networking/event-4016-4004-dns-updates-time-out.md      
+      href: ./networking/event-4016-4004-dns-updates-time-out.md
     - name: Forwarded DNS name resolution fails for dual-stacked queries
       href: ./networking/forwarded-dns-name-resolution-fails-for-dual-stacked-queries.md
     - name: Forwarders and conditional forwarders resolution timeouts
@@ -2194,11 +1974,11 @@ items:
     - name: Enabling Debug mode causes Windows to hang
       href: ./performance/enable-debug-mode-causes-hang.md
     - name: System stops responding when using Citrix Virtual Apps and Desktops
-      href: ./performance/system-stops-responding-citrix-virtual-apps-desktops.md  
+      href: ./performance/system-stops-responding-citrix-virtual-apps-desktops.md
     - name: The computer stops responding
       href: ./performance/computer-stops-responding.md
     - name: Windows Server stops responding during the sign-in process of a custom account
-      href: ./performance/windows-server-stops-responding-signing-custom-account.md    
+      href: ./performance/windows-server-stops-responding-signing-custom-account.md
     - name: Windows Server stops responding when a Trigger Start service crashes
       href: ./performance/windows-server-stops-responding-trigger-start-service-crashes.md
 - name: Printing
@@ -2484,7 +2264,7 @@ items:
     - name: 'Troubleshooting guidance: RDS session connectivity'
       href: ./remote/troubleshoot-rds-session-connectivity-guidance.md
     - name: '"Out of memory" error when connecting to Azure Virtual Desktop'
-      href: ./remote/out-of-memory-error-avd.md     
+      href: ./remote/out-of-memory-error-avd.md
     - name: '"System error 67 has occurred" when using FQDN to connect a remote computer'
       href: ./remote/network-name-cannot-found-fqdn-remote-computer.md
     - name: Applications crash if another user logs off
@@ -2510,19 +2290,19 @@ items:
     - name: How to disable warning message for idle remote desktop sessions
       href: ./remote/how-to-disable-warning-message-idle-rdp-sessions.md
     - name: Input method editor issue in RemoteApp scenarios
-      href: ./remote/input-method-editor-issue-remoteapp.md 
+      href: ./remote/input-method-editor-issue-remoteapp.md
     - name: Local drive redirection isn't working in RDP Session
       href: ./remote/local-drive-redirection-isnt-working.md
     - name: Log Off all Terminal Server Session Users
       href: ./remote/log-off-terminal-server-session-users-command-prompt.md
     - name: Poor performance or application problems during remote desktop connection
-      href: ./remote/poor-performance-application-problems-rdc.md 
+      href: ./remote/poor-performance-application-problems-rdc.md
     - name: QUERY USER command can't query from remote server
       href: ./remote/query-user-command-cannot-query-remotely.md
     - name: RDS client can't connect to RD Session Host server
       href: ./remote/rds-client-not-connect-to-rd-session-host-server.md
     - name: Remote Desktop client disconnects and can't reconnect to the same session
-      href: ./remote/rdp-client-disconnects-cannot-reconnect-same-session.md 
+      href: ./remote/rdp-client-disconnects-cannot-reconnect-same-session.md
     - name: Remote Desktop Connection 6.0 prompts for credentials
       href: ./remote/remote-desktop-connection-6-prompts-credentials.md
     - name: Remote Desktop IP Virtualization
@@ -2717,11 +2497,11 @@ items:
       href: ./system-management-components/rpc-events-event-11-after-reboot.md
     - name: New WMI arbitrator behavior
       href: ./system-management-components/new-wmi-arbitrator-behavior-in-windows-server.md
-    - name: "Scenario guide: Troubleshoot WMI connectivity and access issues"
+    - name: 'Scenario guide: Troubleshoot WMI connectivity and access issues'
       href: ./system-management-components/scenario-guide-troubleshoot-wmi-connectivity-access-issues.md
-    - name: "Scenario guide: Troubleshoot WMI performance issues"
+    - name: 'Scenario guide: Troubleshoot WMI performance issues'
       href: ./system-management-components/scenario-guide-troubleshoot-wmi-performance-issues.md
-    - name: "Scenario guide: Troubleshoot WmiPrvse.exe quota exceeded issues"
+    - name: 'Scenario guide: Troubleshoot WmiPrvse.exe quota exceeded issues'
       href: ./system-management-components/scenario-guide-troubleshoot-wmiprvse-quota-exceeded-issues.md
 - name: UserProfiles and Logon
   items:
@@ -2778,7 +2558,7 @@ items:
     - name: Roaming user profiles versioning
       href: ./user-profiles-and-logon/roaming-user-profiles-versioning.md
     - name: Troubleshoot user profiles with events
-      href: ./user-profiles-and-logon/troubleshoot-user-profiles-events.md  
+      href: ./user-profiles-and-logon/troubleshoot-user-profiles-events.md
     - name: User may not be able to Change Their Password
       href: ./user-profiles-and-logon/user-must-change-password-at-next-logon-setting.md
 - name: Virtualization
@@ -3245,3 +3025,243 @@ items:
       href: ../windows-client/windows-troubleshooters/gather-information-using-tss-group-policy.md?context=/troubleshoot/windows-server/context/context
     - name: Gather information for user experience-related issues
       href: ../windows-client/windows-troubleshooters/gather-information-using-tss-user-experience.md?context=/troubleshoot/windows-server/context/context
+- name: installing-updates-features-roles
+  items:
+  - name: sap:failure-to-install-windows-updates, csstroubleshoot
+    items:
+    - name: How to use the Recovery Console
+      href: support\windows-server\installing-updates-features-roles\use-recovery-console-not-start.md
+    - name: Fail to install Network Policy Server role
+      href: support\windows-server\installing-updates-features-roles\error-0x80004005-network-policy-server-role.md
+    - name: WSUS 3.0 installation package is available
+      href: support\windows-server\installing-updates-features-roles\wsus-3-installation-package.md
+    - name: Fix Windows Update errors
+      href: support\windows-server\installing-updates-features-roles\fix-windows-update-errors.md
+    - name: WUSA returns 0x5 ERROR_ACCESS_DENIED
+      href: support\windows-server\installing-updates-features-roles\windows-update-standalone-installer-returns-error.md
+    - name: You can't install features in Windows Server 2012 R2
+      href: support\windows-server\installing-updates-features-roles\you-cant-install-features.md
+    - name: Error 0x800f0906 when you convert Server Core to GUI
+      href: support\windows-server\installing-updates-features-roles\dism-fails-with-error-0x800f0906.md
+    - name: SystemInfo.exe doesn't display all installed updates
+      href: support\windows-server\installing-updates-features-roles\systeminfo-not-display-all-updates.md
+    - name: Description of Windows Server Update Services 3.0
+      href: support\windows-server\installing-updates-features-roles\description-of-windows-server-update-services-3.md
+    - name: CBS.log file contains entries that some files aren't repaired
+      href: support\windows-server\installing-updates-features-roles\cbs-log-file-record-entries-not-repaired-run-sfc.md
+    - name: Error 0x800f0922 when you uninstall roles/features
+      href: support\windows-server\installing-updates-features-roles\error-0x800f0922-uninstall-role-feature.md
+    - name: System Partition goes offline after installing some 3rd Party Disk
+      href: support\windows-server\installing-updates-features-roles\system-partition-offline-install-3rd-party-disk.md
+    - name: 'Troubleshooting guidance: Windows Server update'
+      href: support\windows-server\installing-updates-features-roles\troubleshoot-windows-server-update-guidance.md
+    - name: Error C0190003 after installing updates
+      href: support\windows-server\installing-updates-features-roles\error-c0190003-install-updates-restart-computer.md
+    - name: How to block user access to Windows Update
+      href: support\windows-server\installing-updates-features-roles\block-user-access-windows-update.md
+    - name: Can't connect to WSUS Administration Website
+      href: support\windows-server\installing-updates-features-roles\cannot-connect-to-wsus-administration-website.md
+    - name: Install Microsoft Product Support Reporting Tool
+      href: support\windows-server\installing-updates-features-roles\microsoft-product-support-reporting-tool-v5220030.md
+    - name: Error 0x800f0922 when MPIO feature installation fails
+      href: support\windows-server\installing-updates-features-roles\error-0x800f0922-mpio-feature-installation-fails.md
+    - name: Description of System File Checker (Sfc.exe)
+      href: support\windows-server\installing-updates-features-roles\system-file-checker.md
+    - name: List of updates
+      href: support\windows-server\installing-updates-features-roles\list-updates.md
+    - name: Windows Server 2008 Service Pack 2
+      href: support\windows-server\installing-updates-features-roles\windows-server-2008-service-pack-2.md
+    - name: Re-register Windows client/server in WSUS
+      href: support\windows-server\installing-updates-features-roles\re-register-windows-clientserver-in-wsus.md
+    - name: WSUS 3.0 SP2 Dynamic Install for Server Manager
+      href: support\windows-server\installing-updates-features-roles\windows-server-update-services-3-sp2.md
+    - name: Why you may be prompted to restart your computer
+      href: support\windows-server\installing-updates-features-roles\why-prompted-restart-computer.md
+    - name: Temporarily deactivate the kernel mode filter driver
+      href: support\windows-server\installing-updates-features-roles\deactivate-kernel-mode-filter-driver.md
+    - name: Can't install updates or programs
+      href: support\windows-server\installing-updates-features-roles\cannot-install-updates-programs.md
+    - name: WSUS SelfUpdate doesn't send automatic updates
+      href: support\windows-server\installing-updates-features-roles\wsus-selfupdate-not-send-automatic-updates.md
+    - name: Failed to schedule Software Protection service for restart
+      href: support\windows-server\installing-updates-features-roles\failed-schedule-software-protection.md
+    - name: 'Troubleshooting guidance: Installing Windows features or roles'
+      href: support\windows-server\installing-updates-features-roles\troubleshoot-install-features-roles-guidance.md
+    - name: Can't install Windows Server 2019 on servers with a high processor count
+      href: support\windows-server\installing-updates-features-roles\cannot-install-windows-server-2019-high-processor-count.md
+    - name: Can't install .NET Framework 3.5 on OEM Windows installation
+      href: support\windows-server\installing-updates-features-roles\cannot-install-dotnet-framework-3dot5-oem.md
+    - name: WSUS clients can't install updates
+      href: support\windows-server\installing-updates-features-roles\wsus-clients-cant-install-updates.md
+    - name: Error 0x80070005 "Access denied" when you activate Windows
+      href: support\windows-server\installing-updates-features-roles\error-0x80070005-access-denied.md
+    - name: Error 0xC004E015 (SL_E_EUL_CONSUMPTION_FAILED)
+      href: support\windows-server\installing-updates-features-roles\error-0xc004e015-sl-e-eul-consumption-failed-activate-windows.md
+    - name: 'WUBr: Troubleshoot diagnostic data transmission'
+      href: support\windows-server\installing-updates-features-roles\wubr-troubleshooting-data-transmission.md
+    - name: 'WUBr: Use the configuration script to troubleshoot device configuration'
+      href: support\windows-server\installing-updates-features-roles\wubr-troubleshooting-device-config-using-script.md
+    - name: 'Troubleshooting guidance: Windows Update for Business reports'
+      href: support\windows-server\installing-updates-features-roles\wubr-troubleshooting-guidance.md
+  - name: sap:failure-to-install-windows-updates, csstroubleshoot, ikb2lmc
+    items:
+    - name: Error 0x800705aa when Windows Update fails
+      href: support\windows-server\installing-updates-features-roles\error-0x800705aa-windows-update-fails.md
+    - name: Error 0x800f0922 when installing Windows updates
+      href: support\windows-server\installing-updates-features-roles\error-0x800f0922-installing-windows-updates.md
+    - name: Error code 2359302 when installing updates in Windows Server 2019
+      href: support\windows-server\installing-updates-features-roles\error-2359302-installing-windows-updates.md
+    - name: ERROR_INVALID_DATA error after installing Windows updates
+      href: support\windows-server\installing-updates-features-roles\error-invalid-data-startup-installing-updates.md
+    - name: '"Failed to be changed to the Absent state. Status: 0x800f0922" error'
+      href: support\windows-server\installing-updates-features-roles\failed-changed-absent-state-status-0x800f0922-error.md
+- name: licensing-and-activation
+  items:
+  - name: sap:windows-volume-activation, csstroubleshoot
+    items:
+    - name: Fail to activate Windows Server over the Internet
+      href: support\windows-server\licensing-and-activation\message-number-32777.md
+    - name: '"Windows is not genuine" error'
+      href: support\windows-server\licensing-and-activation\windows-not-genuine-error.md
+    - name: Error 0xC004F074 when you activate Windows
+      href: support\windows-server\licensing-and-activation\error-0xc004f074-activate-windows.md
+    - name: Error 0xC004F015 when you activate Windows 10
+      href: support\windows-server\licensing-and-activation\error-0xc004f015-activate-windows-10.md
+    - name: Error 0xC004E002 during activation
+      href: support\windows-server\licensing-and-activation\error-0xc004e002-during-activation.md
+    - name: Application Event Log Warning ID 1058
+      href: support\windows-server\licensing-and-activation\application-event-log-warning-id-1058.md
+    - name: Error 0x8007000D when you activate a machine
+      href: support\windows-server\licensing-and-activation\0x8007000d-activate-machine.md
+    - name: Event ID 12321 Warning Token Based Activation failed
+      href: support\windows-server\licensing-and-activation\event-id-12321-warning-token-based-activation-failed.md
+    - name: How to rebuild the Tokens.dat file
+      href: support\windows-server\licensing-and-activation\rebuild-tokens-dotdat-file.md
+    - name: 0xc004f063 when activating an OEM version
+      href: support\windows-server\licensing-and-activation\0xc004f063-when-activating-oem-version.md
+    - name: Error when you validate a copy of Windows
+      href: support\windows-server\licensing-and-activation\error-when-you-validate-copy-windows.md
+    - name: Windows installation fails with error
+      href: support\windows-server\licensing-and-activation\error-product-key-not-match-windows-images-installation.md
+    - name: Event ID 8208, 8200, or 900 is logged
+      href: support\windows-server\licensing-and-activation\event-id-8208-8200-900.md
+    - name: Event 12293 when registering a KMS host record
+      href: support\windows-server\licensing-and-activation\event-12293-error-0x800723-set-kms-host.md
+    - name: Windows Activation fails with error 0x8007267C
+      href: support\windows-server\licensing-and-activation\windows-activation-fails-with-error-0x8007267.md
+    - name: How to change the Volume Licensing product key
+      href: support\windows-server\licensing-and-activation\change-volume-licensing-product-key.md
+    - name: Specified database is not a valid VAMT database error
+      href: support\windows-server\licensing-and-activation\specified-database-not-valid-vamt-error.md
+    - name: Error 0xC004F06C when you activate Windows
+      href: support\windows-server\licensing-and-activation\error-0xc004f06c-activate-windows.md
+    - name: Troubleshoot Windows activation error codes
+      href: support\windows-server\licensing-and-activation\troubleshoot-activation-error-codes.md
+    - name: Troubleshoot ADBA clients that don't activate
+      href: support\windows-server\licensing-and-activation\troubleshoot-adba-clients-not-activate.md
+- name: setup-upgrade-and-drivers
+  items:
+  - name: sap:driver-installation-or-driver-update, csstroubleshoot
+    items:
+    - name: Can't find the Microsoft Loopback Adapter
+      href: support\windows-server\setup-upgrade-and-drivers\microsoft-loopback-adapter-rename.md
+    - name: '"Stop 0x0000007B" error'
+      href: support\windows-server\setup-upgrade-and-drivers\stop-0x0000007b-error-group-policy-setting.md
+    - name: VMware driver installation fails in Windows Server 2008 R2 SP1
+      href: support\windows-server\setup-upgrade-and-drivers\virtual-machines-vmware-not-install-update.md
+    - name: How to use Device Manager to configure devices
+      href: support\windows-server\setup-upgrade-and-drivers\use-device-manager-configure-devices.md
+    - name: Can't install a VMWare driver on Windows Server 2008 R2
+      href: support\windows-server\setup-upgrade-and-drivers\error-install-vmware-driver.md
+    - name: Event ID 56 is logged
+      href: support\windows-server\setup-upgrade-and-drivers\event-id-56-logged.md
+    - name: Event ID 37 after you change power policy
+      href: support\windows-server\setup-upgrade-and-drivers\event-id-37-windows-kernel-processor-power.md
+    - name: How to determine the type of processor
+      href: support\windows-server\setup-upgrade-and-drivers\determine-the-type-of-processor.md
+    - name: How to replace a driver by using Recovery Console
+      href: support\windows-server\setup-upgrade-and-drivers\use-recovery-console-replace-driver.md
+    - name: '"This device cannot start" error when deploying a hot plug NVMe SSD'
+      href: support\windows-server\setup-upgrade-and-drivers\device-cannot-start-error-hot-plug-nvme-ssd.md
+    - name: Support policy for third-party, kernel-level software
+      href: support\windows-server\setup-upgrade-and-drivers\support-policy-third-party-kernel-level-attestation.md
+    - name: Fail to insert a smart card in a reader
+      href: support\windows-server\setup-upgrade-and-drivers\cannot-insert-smart-card-in-reader.md
+    - name: Windows Deployment Services (WDS) support for UEFI
+      href: support\windows-server\setup-upgrade-and-drivers\deploy-uefi-based-systems-wds.md
+    - name: Changes of the default behavior for Core Parking
+      href: support\windows-server\setup-upgrade-and-drivers\default-core-parking-behavior-changes.md
+    - name: Enable Plug and Play feature for parallel port devices
+      href: support\windows-server\setup-upgrade-and-drivers\enable-plug-play-for-parallel-port-devices.md
+    - name: '%NUMBER_OF_PROCESSORS% environment variable shows incorrect values'
+      href: support\windows-server\setup-upgrade-and-drivers\number-of-processors-environment-variable-show-incorrect-values.md
+  - name: sap:windows-adk-installation, csstroubleshoot
+    items:
+    - name: Multicast deployment fails from WDS
+      href: support\windows-server\setup-upgrade-and-drivers\multicast-deployment-fails-from-wds.md
+  - name: sap:installing-or-upgrading-windows, csstroubleshoot
+    items:
+    - name: Windows Internal Database (WID) installation fails
+      href: support\windows-server\setup-upgrade-and-drivers\error-install-windows-internal-database.md
+    - name: Microsoft Deployment Toolkit support life cycle
+      href: support\windows-server\setup-upgrade-and-drivers\deployment-toolkit-support.md
+    - name: Create an ISO image for UEFI platforms
+      href: support\windows-server\setup-upgrade-and-drivers\create-iso-image-for-uefi-platforms.md
+    - name: SYSPREP and CAPTURE task sequence fails
+      href: support\windows-server\setup-upgrade-and-drivers\sysprep-capture-task-sequence-fails-0x80070070.md
+    - name: In-place upgrade hangs at black screen
+      href: support\windows-server\setup-upgrade-and-drivers\in-place-upgrade-hangs-black-screen.md
+    - name: Using language IDs to identify language packs
+      href: support\windows-server\setup-upgrade-and-drivers\use-language-id-identify-language-pack.md
+    - name: Setup fails on a VM with error 0xE0000100
+      href: support\windows-server\setup-upgrade-and-drivers\setup-fail-on-vm-error-0xe0000100.md
+    - name: Event ID 307 and 304 logged for deploying Windows
+      href: support\windows-server\setup-upgrade-and-drivers\event-307-and-304-logged-for-deploying.md
+    - name: Add OEM PnP drivers to Windows installations
+      href: support\windows-server\setup-upgrade-and-drivers\add-oem-plug-play-drivers.md
+    - name: Enable logging and tracing for WDS components
+      href: support\windows-server\setup-upgrade-and-drivers\enable-logging-windows-deployment-service.md
+    - name: Unattended Setup does not Use Computer Name Specified by User during OOBE
+      href: support\windows-server\setup-upgrade-and-drivers\unattended-setup-not-use-computer-name-specified-oobe.md
+    - name: MDT Media Deployment USB isn't bootable
+      href: support\windows-server\setup-upgrade-and-drivers\mdt-media-deployment-isnt-bootable.md
+    - name: The WDS server may not start
+      href: support\windows-server\setup-upgrade-and-drivers\wds-server-may-not-start.md
+    - name: Known issues that affect AppX cleanup maintenance task
+      href: support\windows-server\setup-upgrade-and-drivers\issues-appx-cleanup-maintenance-task.md
+    - name: Avoid duplicate GUIDs when you image SMS clients
+      href: support\windows-server\setup-upgrade-and-drivers\avoid-duplicate-guids-deploy-sms.md
+    - name: How to perform an in-place/repair upgrade
+      href: support\windows-server\setup-upgrade-and-drivers\repair-or-in-place-upgrade.md
+    - name: Chinese IME dictionaries are not ready yet
+      href: support\windows-server\setup-upgrade-and-drivers\chinese-ime-dictionaries-not-ready.md
+    - name: Chinese (Simplified) input method doesn't work
+      href: support\windows-server\setup-upgrade-and-drivers\chinese-simplified-input-method-not-working.md
+    - name: Windows Deployment Service fails to start
+      href: support\windows-server\setup-upgrade-and-drivers\windows-deployment-service-not-start.md
+    - name: Windows Server support and installation instructions for the AMD Rome family of processors
+      href: support\windows-server\setup-upgrade-and-drivers\windows-server-support-installation-for-amd-role-family-processor.md
+    - name: Manually edit Boot.ini file
+      href: support\windows-server\setup-upgrade-and-drivers\manually-edit-boot-file.md
+    - name: Can't open EXE files
+      href: support\windows-server\setup-upgrade-and-drivers\cant-open-exe-files.md
+    - name: Long paths with spaces require quotation marks
+      href: support\windows-server\setup-upgrade-and-drivers\filenames-with-spaces-require-quotation-mark.md
+    - name: Fail to run applications on Windows Server Core
+      href: support\windows-server\setup-upgrade-and-drivers\subsystem-needed-support-image-type-not-present.md
+    - name: Integrate Windows Server Update Services (WSUS) 3.0 into Server Manager
+      href: support\windows-server\setup-upgrade-and-drivers\update-available-integrates-wsus-into-server-manager.md
+    - name: Upgrade fails with error 0x000000C4
+      href: support\windows-server\setup-upgrade-and-drivers\upgrade-fail-with-error-0x000000c4.md
+    - name: Post-Deployment Configuration task fails
+      href: support\windows-server\setup-upgrade-and-drivers\post-deployment-configuration-task-fail.md
+    - name: PCR7 configuration "Binding not possible" error
+      href: support\windows-server\setup-upgrade-and-drivers\pcr7-configuration-binding-not-possible.md
+    - name: Error when you configure a server with Server Manager
+      href: support\windows-server\setup-upgrade-and-drivers\fail-to-configure-server-using-server-manager.md
+    - name: Mitigation for AMD Family 17h Models 30h-3Fh/Rome Erratum 1474
+      href: support\windows-server\setup-upgrade-and-drivers\mitigation-for-amd-family-17h-models-30h-3fh-rome-erratum-1474.md
+  - name: sap:installing-or-upgrading-windows, csstroubleshoot, ikb2lmc
+    items:
+    - name: ERROR_PATH_NOT_FOUND error when performing an in-place upgrade
+      href: support\windows-server\setup-upgrade-and-drivers\error-path-not-found-upgrading-windows-server-2019.md
