@@ -172,11 +172,7 @@ If the CA template is using any of the listed cryptographic service providers, t
 
 For more information about the AD FS AutoCertificateRollover feature, see the following TechNet topics:
 
-[AD FS 2.0: Understanding AutoCertificateRollover Threshold Properties](https://social.technet.microsoft.com/wiki/contents/articles/16156.ad-fs-2-0-understanding-autocertificaterollover-threshold-properties.aspx )  
-
-[AD FS 2.0: How to Enable and Immediately Use AutoCertificateRollover](https://social.technet.microsoft.com/wiki/contents/articles/1424.ad-fs-2-0-how-to-enable-and-immediately-use-autocertificaterollover.aspx )  
-
-[AD FS 2.0: How to Replace the SSL, Service Communications, Token-Signing, and Token-Decrypting Certificates](https://social.technet.microsoft.com/wiki/contents/articles/2554.ad-fs-2-0-how-to-replace-the-ssl-service-communications-token-signing-and-token-decrypting-certificates.aspx)  
+[AD FS 2.0: How to Enable and Immediately Use AutoCertificateRollover](/archive/technet-wiki/1424.ad-fs-2-0-how-to-enable-and-immediately-use-autocertificaterollover)  
 
 ### Step 7: Add the federation service name in the certificate SAN  
 
