@@ -167,22 +167,6 @@ items:
       href: ./backup-and-storage/e2e-event-ids-volsnap.md
     - name: Most recent previous versions are missing for a share
       href: ./backup-and-storage/most-recent-previous-versions-missing-for-share.md
-- name: Deployment
-  items:
-  - name: Deployment
-    href: ./deployment/deployment-overview.md
-  - name: Activation
-    items: []
-  - name: Devices and Drivers
-    items: []
-  - name: Power Management
-    items: []
-  - name: Servicing
-    items: []
-  - name: Setup
-    items: []
-  - name: USMT
-    items: []
 - name: Group Policy
   items:
   - name: Group Policy
@@ -1071,279 +1055,283 @@ items:
     href: ./windows-troubleshooters/windows-troubleshooters-overview.md
   - name: Active and retired Windows 10 troubleshooters
     href: ./windows-troubleshooters/active-and-retired-troubleshooters-windows-10.md
-- name: certificates-and-public-key-infrastructure-pki
+- name: Certificates and public key infrastructure
   items:
-  - name: sap:certificate-chaining-and-revocation, csstroubleshoot
+  - name: Certificate chaining and revocation
     items:
     - name: Certificates are missing after you update a device
-      href: support\windows-client\certificates-and-public-key-infrastructure-pki\certs-missing-after-device-update.md
-- name: installing-updates-features-roles
+      href: ./certificates-and-public-key-infrastructure-pki/certs-missing-after-device-update.md
+- name: Installing Windows Updates, features, or roles
   items:
-  - name: sap:failure-to-install-windows-updates, csstroubleshoot
+  - name: Installing Windows Updates, features, or roles
+    href: ./installing-updates-features-roles/installing-updates-features-roles-overview.md
+  - name: Failure to install Windows Updates
     items:
     - name: 'Troubleshooting guidance: Windows Update'
-      href: support\windows-client\installing-updates-features-roles\troubleshoot-windows-update-issues.md
+      href: ./installing-updates-features-roles/troubleshoot-windows-update-issues.md
     - name: SFC flags Windows Defender files as corrupted
-      href: support\windows-client\installing-updates-features-roles\sfc-flags-windows-defender-powershell-module-files-corrupted.md
+      href: ./installing-updates-features-roles/sfc-flags-windows-defender-powershell-module-files-corrupted.md
     - name: Update Windows Update Agent to latest version
-      href: support\windows-client\installing-updates-features-roles\update-windows-update-agent.md
+      href: ./installing-updates-features-roles/update-windows-update-agent.md
     - name: Windows Update common errors and mitigation
-      href: support\windows-client\installing-updates-features-roles\common-windows-update-errors.md
+      href: ./installing-updates-features-roles/common-windows-update-errors.md
     - name: Switches with Xcopy and Xcopy32 commands
-      href: support\windows-client\installing-updates-features-roles\switches-with-xcopy-and-xcopy32-command.md
+      href: ./installing-updates-features-roles/switches-with-xcopy-and-xcopy32-command.md
     - name: Analyze log file entries that SFC.exe generates
-      href: support\windows-client\installing-updates-features-roles\analyze-sfc-program-log-file-entries.md
+      href: ./installing-updates-features-roles/analyze-sfc-program-log-file-entries.md
     - name: How to solve disk space issues caused by WinSxS directory
-      href: support\windows-client\installing-updates-features-roles\address-disk-space-issues-caused-by-winsxs.md
+      href: ./installing-updates-features-roles/address-disk-space-issues-caused-by-winsxs.md
     - name: Automatic Updates can't download updates
-      href: support\windows-client\installing-updates-features-roles\automatic-updates-cannot-download-updates-event-16.md
+      href: ./installing-updates-features-roles/automatic-updates-cannot-download-updates-event-16.md
     - name: DISM /Apply-Image command fails with error code 5
-      href: support\windows-client\installing-updates-features-roles\dism-apply-image-command-fails-error-code-5.md
+      href: ./installing-updates-features-roles/dism-apply-image-command-fails-error-code-5.md
     - name: How to keep Windows up to date
-      href: support\windows-client\installing-updates-features-roles\keep-windows-up-to-date.md
+      href: ./installing-updates-features-roles/keep-windows-up-to-date.md
     - name: Command-line switches supported by Self-Extractor packages
-      href: support\windows-client\installing-updates-features-roles\command-switches-supported-by-self-extractor-package.md
+      href: ./installing-updates-features-roles/command-switches-supported-by-self-extractor-package.md
     - name: Fix errors found in CheckSUR.log
-      href: support\windows-client\installing-updates-features-roles\errors-in-checksur-log.md
+      href: ./installing-updates-features-roles/errors-in-checksur-log.md
     - name: Error message when installing RSAT
-      href: support\windows-client\installing-updates-features-roles\error-message-when-installing-rsat.md
+      href: ./installing-updates-features-roles/error-message-when-installing-rsat.md
     - name: How to get updates via Windows Update
-      href: support\windows-client\installing-updates-features-roles\get-updates-through-windows-update.md
+      href: ./installing-updates-features-roles/get-updates-through-windows-update.md
     - name: System registry is no longer backed up to the RegBack folder
-      href: support\windows-client\installing-updates-features-roles\system-registry-no-backed-up-regback-folder.md
+      href: ./installing-updates-features-roles/system-registry-no-backed-up-regback-folder.md
     - name: Install Service Packs and Hotfixes
-      href: support\windows-client\installing-updates-features-roles\install-service-packs-hotfixes.md
+      href: ./installing-updates-features-roles/install-service-packs-hotfixes.md
     - name: Download updates from Windows Update Catalog
-      href: support\windows-client\installing-updates-features-roles\download-updates-drivers-hotfixes-windows-update-catalog.md
+      href: ./installing-updates-features-roles/download-updates-drivers-hotfixes-windows-update-catalog.md
     - name: SFC detects Opencl.dll as corrupted
-      href: support\windows-client\installing-updates-features-roles\sfc-detects-opencl-dot-dll-corrupted.md
+      href: ./installing-updates-features-roles/sfc-detects-opencl-dot-dll-corrupted.md
     - name: Restore missing Windows Installer cache files
-      href: support\windows-client\installing-updates-features-roles\missing-windows-installer-cache.md
+      href: ./installing-updates-features-roles/missing-windows-installer-cache.md
     - name: Previously released updates are reoffered
-      href: support\windows-client\installing-updates-features-roles\previously-released-updates-reoffered.md
+      href: ./installing-updates-features-roles/previously-released-updates-reoffered.md
     - name: .NET Framework 1.1 isn't supported
-      href: support\windows-client\installing-updates-features-roles\dotnet-framework-1dot1-not-supported.md
+      href: ./installing-updates-features-roles/dotnet-framework-1dot1-not-supported.md
     - name: In-place upgrade to Windows 10 problem
-      href: support\windows-client\installing-updates-features-roles\in-place-upgrade-to-windows-10-problems.md
+      href: ./installing-updates-features-roles/in-place-upgrade-to-windows-10-problems.md
     - name: Get the latest Skype version by Microsoft Update
-      href: support\windows-client\installing-updates-features-roles\skype-for-microsoft-update.md
+      href: ./installing-updates-features-roles/skype-for-microsoft-update.md
     - name: Windows Update automatically downloads and installs updates
-      href: support\windows-client\installing-updates-features-roles\updates-automatically-downloaded.md
+      href: ./installing-updates-features-roles/updates-automatically-downloaded.md
     - name: Error 403 when you access Windows Update
-      href: support\windows-client\installing-updates-features-roles\error-403-connect-to-windows-update.md
+      href: ./installing-updates-features-roles/error-403-connect-to-windows-update.md
     - name: Sysprep fails after you remove or update Microsoft Store apps
-      href: support\windows-client\installing-updates-features-roles\sysprep-fails-remove-or-update-store-apps.md
+      href: ./installing-updates-features-roles/sysprep-fails-remove-or-update-store-apps.md
     - name: 80072EE6 error when downloading an update from WSUS
-      href: support\windows-client\installing-updates-features-roles\error-80072ee6-downlaod-wsus-update.md
+      href: ./installing-updates-features-roles/error-80072ee6-downlaod-wsus-update.md
     - name: Standard terminology that defines software updates
-      href: support\windows-client\installing-updates-features-roles\standard-terminology-software-updates.md
+      href: ./installing-updates-features-roles/standard-terminology-software-updates.md
     - name: Additional resources for Windows Update
-      href: support\windows-client\installing-updates-features-roles\additional-resources-for-windows-update.md
+      href: ./installing-updates-features-roles/additional-resources-for-windows-update.md
     - name: The same update is offered repeately
-      href: support\windows-client\installing-updates-features-roles\repeatedly-offer-the-same-update.md
+      href: ./installing-updates-features-roles/repeatedly-offer-the-same-update.md
     - name: How to downgrade from Windows 8
-      href: support\windows-client\installing-updates-features-roles\downgrade-from-windows-8.md
+      href: ./installing-updates-features-roles/downgrade-from-windows-8.md
     - name: Package Manager can install only the first package
-      href: support\windows-client\installing-updates-features-roles\package-manager-cannot-manage-two-more-packages.md
+      href: ./installing-updates-features-roles/package-manager-cannot-manage-two-more-packages.md
     - name: Error messages when you scan for updates
-      href: support\windows-client\installing-updates-features-roles\error-messages-when-you-scan-updates.md
+      href: ./installing-updates-features-roles/error-messages-when-you-scan-updates.md
     - name: Cannot use the ImageX.exe tool for backup
-      href: support\windows-client\installing-updates-features-roles\cannot-use-imagex-tool-backup.md
+      href: ./installing-updates-features-roles/cannot-use-imagex-tool-backup.md
     - name: Cannot install May 2019 update of Windows 10 on computers running AMD RAID drivers
-      href: support\windows-client\installing-updates-features-roles\cannot-install-may-2019-update-windows-10-amd-raid-drivers.md
+      href: ./installing-updates-features-roles/cannot-install-may-2019-update-windows-10-amd-raid-drivers.md
     - name: How to schedule automatic updates
-      href: support\windows-client\installing-updates-features-roles\how-to-use-automatic-updates-feature.md
+      href: ./installing-updates-features-roles/how-to-use-automatic-updates-feature.md
     - name: System Error 126 when you start TrustedInstaller
-      href: support\windows-client\installing-updates-features-roles\system-error-126-start-windows-modules-installer.md
+      href: ./installing-updates-features-roles/system-error-126-start-windows-modules-installer.md
     - name: The processor not supported with Windows version
-      href: support\windows-client\installing-updates-features-roles\processor-not-supported-together-with-windows-version.md
+      href: ./installing-updates-features-roles/processor-not-supported-together-with-windows-version.md
     - name: Windows Update hangs
-      href: support\windows-client\installing-updates-features-roles\windows-update-hangs-updates-uninstalled.md
+      href: ./installing-updates-features-roles/windows-update-hangs-updates-uninstalled.md
     - name: Windows Update issues troubleshooting
-      href: support\windows-client\installing-updates-features-roles\windows-update-issues-troubleshooting.md
+      href: ./installing-updates-features-roles/windows-update-issues-troubleshooting.md
     - name: Error 87 when a Windows 10 image is applied
-      href: support\windows-client\installing-updates-features-roles\dism-error-87-apply-windows-10-image.md
+      href: ./installing-updates-features-roles/dism-error-87-apply-windows-10-image.md
     - name: view system registry with 64-bit versions of Windows
-      href: support\windows-client\installing-updates-features-roles\view-system-registry-with-64-bit-windows.md
+      href: ./installing-updates-features-roles/view-system-registry-with-64-bit-windows.md
     - name: Windows Update blocked because of drive reassignment
-      href: support\windows-client\installing-updates-features-roles\drive-reassignment-block-update.md
+      href: ./installing-updates-features-roles/drive-reassignment-block-update.md
     - name: Command-line switches for software update packages
-      href: support\windows-client\installing-updates-features-roles\command-line-switches-deploy-update-packages.md
-- name: licensing-and-activation
+      href: ./installing-updates-features-roles/command-line-switches-deploy-update-packages.md
+- name: Licensing and activation
   items:
-  - name: sap:windows-volume-activation, csstroubleshoot
+  - name: Licensing and activation
+    href: ./licensing-and-activation/licensing-and-activation-overview.md
+  - name: Windows volume activation
     items:
     - name: How to validate the OEM activation key
-      href: support\windows-client\licensing-and-activation\validate-oem-activation-key.md
+      href: ./licensing-and-activation/validate-oem-activation-key.md
     - name: KMS current count doesn't increase
-      href: support\windows-client\licensing-and-activation\kms-current-count-not-increase.md
+      href: ./licensing-and-activation/kms-current-count-not-increase.md
     - name: Fail to open a list in VAMT 2.0
-      href: support\windows-client\licensing-and-activation\item-with-same-key-has-been-added.md
+      href: ./licensing-and-activation/item-with-same-key-has-been-added.md
     - name: Can't activate Windows 7 with KMS
-      href: support\windows-client\licensing-and-activation\cannot-activate-windows-from-oem.md
+      href: ./licensing-and-activation/cannot-activate-windows-from-oem.md
     - name: Activation failures on volume-licensed KMS clients
-      href: support\windows-client\licensing-and-activation\activation-failures-not-genuine-notifications-volume-licensed-kms-client.md
-  - name: sap:windows-volume-activation, csstroubleshoot, ikb2lmc
-    items:
+      href: ./licensing-and-activation/activation-failures-not-genuine-notifications-volume-licensed-kms-client.md
     - name: Error "certificate in the connection information has expired"
-      href: support\windows-client\licensing-and-activation\error-certificate-connection-information-expired.md
-- name: setup-upgrade-and-drivers
+      href: ./licensing-and-activation/error-certificate-connection-information-expired.md
+- name: Setup upgrade and drivers
   items:
-  - name: sap:driver-installation-or-driver-update, csstroubleshoot
+  - name: Setup upgrade and drivers
+    href: ./setup-upgrade-and-drivers/setup-upgrade-and-drivers-overview.md
+  - name: Driver installation or driver update
     items:
     - name: Limitations of $WinPeDriver$
-      href: support\windows-client\setup-upgrade-and-drivers\limitations-dollar-sign-winpedriver-dollar-sign.md
+      href: ./setup-upgrade-and-drivers/limitations-dollar-sign-winpedriver-dollar-sign.md
     - name: Desktop icon isn't visible in Extended mode
-      href: support\windows-client\setup-upgrade-and-drivers\desktop-icon-not-visible-disconnect-hdmi-display.md
+      href: ./setup-upgrade-and-drivers/desktop-icon-not-visible-disconnect-hdmi-display.md
     - name: LoadLibrary function returns STATUS_DLL_NOT_FOUND error on impersonate thread
-      href: support\windows-client\setup-upgrade-and-drivers\loadlibrary-function-returns-status-dll-not-found-error-impersonate-thread.md
+      href: ./setup-upgrade-and-drivers/loadlibrary-function-returns-status-dll-not-found-error-impersonate-thread.md
     - name: Msinfo32.exe reports wrong values for Adapter RAM
-      href: support\windows-client\setup-upgrade-and-drivers\msinfo32-report-wrong-display-adapter-ram.md
+      href: ./setup-upgrade-and-drivers/msinfo32-report-wrong-display-adapter-ram.md
     - name: Power Management tab isn't visible
-      href: support\windows-client\setup-upgrade-and-drivers\power-management-not-visible-in-aoac-platform.md
+      href: ./setup-upgrade-and-drivers/power-management-not-visible-in-aoac-platform.md
     - name: USB device drivers are removed unexpectedly after Windows 10 is updated
-      href: support\windows-client\setup-upgrade-and-drivers\usb-device-drivers-removed-unexpectedly-after-windows-10-update.md
+      href: ./setup-upgrade-and-drivers/usb-device-drivers-removed-unexpectedly-after-windows-10-update.md
     - name: Error when you access a USB storage device
-      href: support\windows-client\setup-upgrade-and-drivers\error-when-you-access-usb-storage-device.md
+      href: ./setup-upgrade-and-drivers/error-when-you-access-usb-storage-device.md
     - name: Devices not working before you log on a computer
-      href: support\windows-client\setup-upgrade-and-drivers\devices-not-working-before-log-on-computer.md
+      href: ./setup-upgrade-and-drivers/devices-not-working-before-log-on-computer.md
     - name: Media device isn't available
-      href: support\windows-client\setup-upgrade-and-drivers\media-device-isnt-available.md
+      href: ./setup-upgrade-and-drivers/media-device-isnt-available.md
     - name: Running TPM Management console fails
-      href: support\windows-client\setup-upgrade-and-drivers\cannot-load-tpm-management-console.md
+      href: ./setup-upgrade-and-drivers/cannot-load-tpm-management-console.md
     - name: A description of the driver support
-      href: support\windows-client\setup-upgrade-and-drivers\description-of-driver.md
+      href: ./setup-upgrade-and-drivers/description-of-driver.md
     - name: Event ID 219 when a device is plugged into a Windows system
-      href: support\windows-client\setup-upgrade-and-drivers\event-id-219-when-device-plugged-in-windows-system.md
+      href: ./setup-upgrade-and-drivers/event-id-219-when-device-plugged-in-windows-system.md
     - name: Fail to attach PCI Express expansion chassis
-      href: support\windows-client\setup-upgrade-and-drivers\error-attach-pci-express-expansion-chassis.md
+      href: ./setup-upgrade-and-drivers/error-attach-pci-express-expansion-chassis.md
     - name: Firmware update failures in Windows 8.1
-      href: support\windows-client\setup-upgrade-and-drivers\firmware-updates-fail-windows-8dot1.md
+      href: ./setup-upgrade-and-drivers/firmware-updates-fail-windows-8dot1.md
     - name: A high pitched noise is heard when using Bluetooth headphones
-      href: support\windows-client\setup-upgrade-and-drivers\high-pitched-noise-is-heard.md
+      href: ./setup-upgrade-and-drivers/high-pitched-noise-is-heard.md
     - name: '"The operation timed out" error'
-      href: support\windows-client\setup-upgrade-and-drivers\operation-timed-out-error-disk-management-console.md
+      href: ./setup-upgrade-and-drivers/operation-timed-out-error-disk-management-console.md
     - name: Bluetooth speakers don't work after KB 4505903 is applied
-      href: support\windows-client\setup-upgrade-and-drivers\bluetooth-speakers-not-work-after-kb4505903-installed.md
+      href: ./setup-upgrade-and-drivers/bluetooth-speakers-not-work-after-kb4505903-installed.md
     - name: Create a user-defined service
-      href: support\windows-client\setup-upgrade-and-drivers\create-user-defined-service.md
+      href: ./setup-upgrade-and-drivers/create-user-defined-service.md
     - name: Hide Devices in Devices and Printers
-      href: support\windows-client\setup-upgrade-and-drivers\disable-devices-in-devices-and-printers.md
+      href: ./setup-upgrade-and-drivers/disable-devices-in-devices-and-printers.md
     - name: Dynamic link library (DLL)
-      href: support\windows-client\setup-upgrade-and-drivers\dynamic-link-library.md
+      href: ./setup-upgrade-and-drivers/dynamic-link-library.md
     - name: Loss of functionality for Intel SMBus Controller devices
-      href: support\windows-client\setup-upgrade-and-drivers\functionality-loss-for-intel-smbus-controller-device.md
+      href: ./setup-upgrade-and-drivers/functionality-loss-for-intel-smbus-controller-device.md
     - name: Uninstalling driver doesn't remove associated files
-      href: support\windows-client\setup-upgrade-and-drivers\uninstalling-driver-not-remove-associated-files.md
+      href: ./setup-upgrade-and-drivers/uninstalling-driver-not-remove-associated-files.md
     - name: WSD devices icons show incorrectly
-      href: support\windows-client\setup-upgrade-and-drivers\icons-wsd-devices-incorrectly-devices-printers.md
+      href: ./setup-upgrade-and-drivers/icons-wsd-devices-incorrectly-devices-printers.md
     - name: Non-compliant USB 3.0 devices doesn't function
-      href: support\windows-client\setup-upgrade-and-drivers\non-compliant-usb-3-devices-not-function.md
+      href: ./setup-upgrade-and-drivers/non-compliant-usb-3-devices-not-function.md
     - name: How to use or to reference the Usbser.sys driver
-      href: support\windows-client\setup-upgrade-and-drivers\how-to-use-reference-usbser-driver-universal-serial-bus.md
+      href: ./setup-upgrade-and-drivers/how-to-use-reference-usbser-driver-universal-serial-bus.md
     - name: Windows 10 doesn't install specific drivers for USB audio device
-      href: support\windows-client\setup-upgrade-and-drivers\windows-10-not-install-specific-drivers-usb-audio-devices.md
+      href: ./setup-upgrade-and-drivers/windows-10-not-install-specific-drivers-usb-audio-devices.md
     - name: Event ID 7000 or 7026 after starting a computer
-      href: support\windows-client\setup-upgrade-and-drivers\system-log-event-id-7000-7026.md
-  - name: sap:power-management, csstroubleshoot
+      href: ./setup-upgrade-and-drivers/system-log-event-id-7000-7026.md
+  - name: Power management
     items:
     - name: Hard disk usage reaches 100 percent
-      href: support\windows-client\setup-upgrade-and-drivers\hard-disk-usage-reaches-100-percent.md
+      href: ./setup-upgrade-and-drivers/hard-disk-usage-reaches-100-percent.md
     - name: Devices attached to Thunderbolt Dock stop working
-      href: support\windows-client\setup-upgrade-and-drivers\devices-connected-via-thunderbolt-dock-not-work.md
+      href: ./setup-upgrade-and-drivers/devices-connected-via-thunderbolt-dock-not-work.md
     - name: The Power Management option isn't selected
-      href: support\windows-client\setup-upgrade-and-drivers\power-management-option-isnt-selected.md
+      href: ./setup-upgrade-and-drivers/power-management-option-isnt-selected.md
     - name: Desktop wakes up unexpectedly from sleep or hibernation
-      href: support\windows-client\setup-upgrade-and-drivers\desktop-wakes-up-unexpectedly-from-sleep-hibernation.md
+      href: ./setup-upgrade-and-drivers/desktop-wakes-up-unexpectedly-from-sleep-hibernation.md
     - name: How to enable Wake on LAN
-      href: support\windows-client\setup-upgrade-and-drivers\wake-on-lan-feature.md
+      href: ./setup-upgrade-and-drivers/wake-on-lan-feature.md
     - name: How to disable and re-enable hibernation
-      href: support\windows-client\setup-upgrade-and-drivers\disable-and-re-enable-hibernation.md
+      href: ./setup-upgrade-and-drivers/disable-and-re-enable-hibernation.md
     - name: Power/shutdown button is missing from start screen
-      href: support\windows-client\setup-upgrade-and-drivers\power-shutdown-button-missing.md
+      href: ./setup-upgrade-and-drivers/power-shutdown-button-missing.md
     - name: Updates may not install with Fast Startup
-      href: support\windows-client\setup-upgrade-and-drivers\updates-not-install-with-fast-startup.md
+      href: ./setup-upgrade-and-drivers/updates-not-install-with-fast-startup.md
     - name: Fast startup causes system shutdown
-      href: support\windows-client\setup-upgrade-and-drivers\fast-startup-causes-system-hibernation-shutdown-fail.md
-  - name: sap:installing-or-upgrading-windows, csstroubleshoot
+      href: ./setup-upgrade-and-drivers/fast-startup-causes-system-hibernation-shutdown-fail.md
+  - name: Installing or upgrading Windows
     items:
     - name: Windows 10 upgrade issues troubleshooting
-      href: support\windows-client\setup-upgrade-and-drivers\windows-10-upgrade-issues-troubleshooting.md
+      href: ./setup-upgrade-and-drivers/windows-10-upgrade-issues-troubleshooting.md
     - name: .NET Framework 4.5.1 (web installer)
-      href: support\windows-client\setup-upgrade-and-drivers\dotnet-framework-4dot5dot1-web-installer.md
+      href: ./setup-upgrade-and-drivers/dotnet-framework-4dot5dot1-web-installer.md
     - name: Fail to perform an in-place upgrade
-      href: support\windows-client\setup-upgrade-and-drivers\windows-not-parse-process-unattend-answer-file.md
+      href: ./setup-upgrade-and-drivers/windows-not-parse-process-unattend-answer-file.md
     - name: Windows SIM can't generate a catalog
-      href: support\windows-client\setup-upgrade-and-drivers\windows-sim-unable-generate-catalog-error.md
+      href: ./setup-upgrade-and-drivers/windows-sim-unable-generate-catalog-error.md
     - name: Running Sysprep /generalize returns error
-      href: support\windows-client\setup-upgrade-and-drivers\error-occurs-when-running-sysprep-generalize.md
+      href: ./setup-upgrade-and-drivers/error-occurs-when-running-sysprep-generalize.md
     - name: Language features aren't displayed in Windows 10
-      href: support\windows-client\setup-upgrade-and-drivers\language-features-not-displayed.md
+      href: ./setup-upgrade-and-drivers/language-features-not-displayed.md
     - name: An upgrade to Windows Server 2016 fails
-      href: support\windows-client\setup-upgrade-and-drivers\windows-cannot-verify-the-digital-signature-for-this-file.md
+      href: ./setup-upgrade-and-drivers/windows-cannot-verify-the-digital-signature-for-this-file.md
     - name: WinRE can't be built after deploying an image
-      href: support\windows-client\setup-upgrade-and-drivers\winre-cannot-built-deploy-image-captured-non-uefi-computer.md
+      href: ./setup-upgrade-and-drivers/winre-cannot-built-deploy-image-captured-non-uefi-computer.md
     - name: Fail to start an operating system on a 64-bit UEFI-based computer
-      href: support\windows-client\setup-upgrade-and-drivers\blinitializelibrary-failed-start-os-on-64-bit-uefi-based-computer.md
+      href: ./setup-upgrade-and-drivers/blinitializelibrary-failed-start-os-on-64-bit-uefi-based-computer.md
     - name: Event ID 10 is logged in Application log
-      href: support\windows-client\setup-upgrade-and-drivers\event-10-is-logged-in-application-log.md
+      href: ./setup-upgrade-and-drivers/event-10-is-logged-in-application-log.md
     - name: Download and burn an ISO file from VLSC
-      href: support\windows-client\setup-upgrade-and-drivers\iso-file-on-vlsc.md
+      href: ./setup-upgrade-and-drivers/iso-file-on-vlsc.md
     - name: Sysprep and capture task sequence fails
-      href: support\windows-client\setup-upgrade-and-drivers\sysprep-capture-task-sequence-fails.md
+      href: ./setup-upgrade-and-drivers/sysprep-capture-task-sequence-fails.md
     - name: Fail to upgrade Windows 10 Enterprise edition
-      href: support\windows-client\setup-upgrade-and-drivers\contact-system-administrator-to-upgrade-windows.md
+      href: ./setup-upgrade-and-drivers/contact-system-administrator-to-upgrade-windows.md
     - name: Installation File Location not behave on the Explain tab
-      href: support\windows-client\setup-upgrade-and-drivers\installation-file-location-service-pack-not-behave.md
+      href: ./setup-upgrade-and-drivers/installation-file-location-service-pack-not-behave.md
     - name: Windows setup log file locations
-      href: support\windows-client\setup-upgrade-and-drivers\windows-setup-log-file-locations.md
+      href: ./setup-upgrade-and-drivers/windows-setup-log-file-locations.md
     - name: F5 doesn't refresh Explorer
-      href: support\windows-client\setup-upgrade-and-drivers\f5-not-refresh-explorer-windows-pe-windows-10.md
+      href: ./setup-upgrade-and-drivers/f5-not-refresh-explorer-windows-pe-windows-10.md
     - name: Customize default local user profile
-      href: support\windows-client\setup-upgrade-and-drivers\customize-default-local-user-profile.md
+      href: ./setup-upgrade-and-drivers/customize-default-local-user-profile.md
     - name: How to customize the default local user profile when creating an image
-      href: support\windows-client\setup-upgrade-and-drivers\customize-default-local-user-profile-prepare-image.md
+      href: ./setup-upgrade-and-drivers/customize-default-local-user-profile-prepare-image.md
     - name: Windows 10 upgrade resolution procedures
-      href: support\windows-client\setup-upgrade-and-drivers\windows-10-upgrade-resolution-procedures.md
+      href: ./setup-upgrade-and-drivers/windows-10-upgrade-resolution-procedures.md
     - name: Error 0x80042468 when creating a single partition
-      href: support\windows-client\setup-upgrade-and-drivers\error-when-creating-single-partition.md
+      href: ./setup-upgrade-and-drivers/error-when-creating-single-partition.md
     - name: Can't enter UEFI firmware setup
-      href: support\windows-client\setup-upgrade-and-drivers\cant-enter-uefi-firmware-setup.md
+      href: ./setup-upgrade-and-drivers/cant-enter-uefi-firmware-setup.md
     - name: HAL_INITIALIZATION_FAILED error on VMWare VM
-      href: support\windows-client\setup-upgrade-and-drivers\installation-error-hal-initialization-failed.md
+      href: ./setup-upgrade-and-drivers/installation-error-hal-initialization-failed.md
     - name: Automate regional and language settings
-      href: support\windows-client\setup-upgrade-and-drivers\automate-regional-language-settings.md
+      href: ./setup-upgrade-and-drivers/automate-regional-language-settings.md
     - name: Can't turn off a computer from Audit mode
-      href: support\windows-client\setup-upgrade-and-drivers\fail-to-turn-off-computer-from-audit-mode.md
+      href: ./setup-upgrade-and-drivers/fail-to-turn-off-computer-from-audit-mode.md
     - name: MiracastView package cause sysprep error after upgrading a computer
-      href: support\windows-client\setup-upgrade-and-drivers\miracastview-cause-sysprep-error-upgrade-windows-10-1709.md
+      href: ./setup-upgrade-and-drivers/miracastview-cause-sysprep-error-upgrade-windows-10-1709.md
     - name: Operations fail if Windows 8 is improperly identified as a WTG installation
-      href: support\windows-client\setup-upgrade-and-drivers\windows-8-incorrectly-reported-as-wtg-installation.md
+      href: ./setup-upgrade-and-drivers/windows-8-incorrectly-reported-as-wtg-installation.md
     - name: Windows 10 upgrade quick fixes
-      href: support\windows-client\setup-upgrade-and-drivers\windows-10-upgrade-quick-fixes.md
+      href: ./setup-upgrade-and-drivers/windows-10-upgrade-quick-fixes.md
     - name: Network provider settings are removed during an in-place upgrade
-      href: support\windows-client\setup-upgrade-and-drivers\network-provider-settings-removed-in-place-upgrade.md
+      href: ./setup-upgrade-and-drivers/network-provider-settings-removed-in-place-upgrade.md
     - name: Windows optional component setup tool
-      href: support\windows-client\setup-upgrade-and-drivers\use-ocsetup-to-install-remove-components.md
+      href: ./setup-upgrade-and-drivers/use-ocsetup-to-install-remove-components.md
     - name: Computer screen goes black during setup
-      href: support\windows-client\setup-upgrade-and-drivers\computer-screen-black-during-installation.md
+      href: ./setup-upgrade-and-drivers/computer-screen-black-during-installation.md
     - name: Windows 7 Upgrade Advisor tool failed to run
-      href: support\windows-client\setup-upgrade-and-drivers\upgrade-advisor-tool-failed-to-run.md
+      href: ./setup-upgrade-and-drivers/upgrade-advisor-tool-failed-to-run.md
     - name: Windows 10 upgrade error codes
-      href: support\windows-client\setup-upgrade-and-drivers\windows-10-upgrade-error-codes.md
+      href: ./setup-upgrade-and-drivers/windows-10-upgrade-error-codes.md
     - name: System restore points are disabled after upgrade
-      href: support\windows-client\setup-upgrade-and-drivers\system-restore-points-disabled.md
+      href: ./setup-upgrade-and-drivers/system-restore-points-disabled.md
     - name: You can't access an EFI system partition
-      href: support\windows-client\setup-upgrade-and-drivers\cant-access-efi-system-partition.md
+      href: ./setup-upgrade-and-drivers/cant-access-efi-system-partition.md
     - name: Remote Server Admin Tools uninstalled during in-place upgrade
-      href: support\windows-client\setup-upgrade-and-drivers\remote-server-admin-tools-uninstalled-in-place-upgrade.md
+      href: ./setup-upgrade-and-drivers/remote-server-admin-tools-uninstalled-in-place-upgrade.md
     - name: Language packs no longer available
-      href: support\windows-client\setup-upgrade-and-drivers\language-packs-no-longer-available-after-upgrade.md
+      href: ./setup-upgrade-and-drivers/language-packs-no-longer-available-after-upgrade.md
     - name: How to edit the Boot.ini file in Windows 2000
-      href: support\windows-client\setup-upgrade-and-drivers\edit-boot-ini-file-windows-2000.md
-  - name: sap:sap-user-state-migration-tool, csstroubleshoot
+      href: ./setup-upgrade-and-drivers/edit-boot-ini-file-windows-2000.md
+  - name: User state migration tool
     items:
     - name: USMT return codes
-      href: support\windows-client\setup-upgrade-and-drivers\usmt-return-codes.md
+      href: ./setup-upgrade-and-drivers/usmt-return-codes.md
     - name: USMT common issues
-      href: support\windows-client\setup-upgrade-and-drivers\usmt-common-issues.md
+      href: ./setup-upgrade-and-drivers/usmt-common-issues.md
