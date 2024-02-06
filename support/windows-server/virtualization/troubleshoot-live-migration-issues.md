@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: adjudele, cpuckett, kaushika
 ms.custom: sap:live-migration, csstroubleshoot
-ms.subservice: hyper-v
 ---
 # Troubleshoot live migration issues
 

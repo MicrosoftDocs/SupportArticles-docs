@@ -5,11 +5,9 @@ ms.date: 05/09/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, nitilton, brianoakes, v-lianna
 ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot, ikb2lmc
-ms.subservice: group-policy
 ---
 # Network disconnection after configuring the LLTDIO and RSPNDR group policy objects
 

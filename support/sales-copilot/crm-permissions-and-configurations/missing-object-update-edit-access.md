@@ -2,7 +2,6 @@
 title: Can't update records due to missing object access in Salesforce CRM
 description: Resolves an error that occurs when users can't update CRM records in Microsoft Copilot for Sales because of missing object access in Salesforce CRM.
 ms.date: 01/10/2024
-ms.service: microsoft-sales-copilot
 author: sbmjais
 ms.author: shjais
 manager: shujoshi

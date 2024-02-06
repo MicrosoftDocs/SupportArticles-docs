@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:frs, csstroubleshoot
-ms.subservice: networking
 ---
 # How to reset the File Replication service staging folder to a different logical drive
 

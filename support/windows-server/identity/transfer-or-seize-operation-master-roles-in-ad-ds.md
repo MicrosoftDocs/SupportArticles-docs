@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, herbertm
 ms.custom: sap:active-directory-fsmo, csstroubleshoot
-ms.subservice: active-directory
 ---
 # Transfer or seize Operation Master roles in Active Directory Domain Services
 

@@ -82,7 +82,7 @@
         "windows-client/**.*": "MSDocsHeader-Windows",
         "windows-hardware/**.*": "MSDocsHeader-WinHW",
         "windows-server/**.*": "MSDocsHeader-WindowsServer"
-    },
+      },
       "feedback_product_url": {
         "dynamics/gp/*.md": "https://experience.dynamics.com/ideas/categories/?forum=771cc5ac-c117-e811-8105-3863bb2e0320&forumName=Dynamics%20GP",
         "dynamics-365/customer-insights/**/*.md": "https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights",
@@ -95,7 +95,6 @@
         "dynamics-365/remote-assist/**/*.md": "https://experience.dynamics.com/ideas/categories/?forum=4323c621-52bc-e811-a975-000d3a1bec70&forumName=Dynamics%20365%20Remote%20Assist",
         "dynamics-365/supply-chain/**/*.md": "https://experience.dynamics.com/ideas/categories/?forum=515617a5-dedb-e911-a814-000d3a4f1244&forumName=Dynamics%20365%20Supply%20Chain%20Management",
         "power-platform/power-apps/**/*.md": "https://ideas.powerapps.com/d365community/forum/f1458c72-ae29-ed11-9db2-000d3a8c451e",
-        "power-platform/power-automate/*.md": "https://ideas.powerautomate.com/d365community/forum/086dd68e-597f-ec11-8d21-0022482e8f9f",
         "power-platform/power-automate/**/*.md": "https://ideas.powerautomate.com/d365community/forum/086dd68e-597f-ec11-8d21-0022482e8f9f",
         "power-platform/ai-builder/*.md": "https://powerusers.microsoft.com/t5/AI-Builder/bd-p/AIBuilder1",
         "windows-server/**/*.md": "https://techcommunity.microsoft.com/t5/windows-server-for-it-pro/bd-p/WindowsServer",
@@ -198,7 +197,6 @@
         "azure/synapse-analytics/**/*.md": "synapse-analytics",
         "azure/cosmos-db/**/*.md": "cosmos-db",
         "power-platform/power-apps/**/**.*": "powerapps",
-        "power-platform/power-automate/*.md": "power-automate",
         "power-platform/power-automate/**/*.md": "power-automate",
         "dynamics-365/customer-insights/**/**.*": "customer-insights",
         "dynamics-365/customer-service/**/**.*": "dynamics-365-customerservice",
@@ -209,6 +207,7 @@
         "dynamics-365/guides/**/**.*": "dynamics-365-guides",
         "dynamics-365/remote-assist/**/**.*": "dynamics-365-remote-assist",
         "dynamics-365/field-service/**/**.*": "dynamics-365-field-service",
+        "devices/**.*": "surface",
         "mem/intune/**/*.md": "microsoft-intune",
         "sales-copilot/**/*.md": "microsoft-sales-copilot",
         "power-platform/ai-builder/*.md": "aibuilder",
@@ -233,7 +232,9 @@
         "mem/configmgr/**/*.md": "configuration-manager",
         "system-center/**/*.md": "system-center",
         "windows/win32/**/*.md": "windows-dev-apps",
-        "windows-hardware/drivers/**/*.md": "windows-hardware-driver-quality"
+        "windows-hardware/drivers/**/*.md": "windows-hardware-driver-quality",
+        "windows-client/**/**.*": "windows-client",
+        "windows-server/**/**.*": "windows-server"
       },
       "ms.subservice": {
         "dynamics-365/field-service/administration/**.*": "d365-fs-admin-settings",
@@ -411,7 +412,49 @@
         "developer/dotnet/wcf/**/*.md": "wcf",
         "developer/dotnet/framework/general/**/*.md": "general",
         "developer/dotnet/framework/installation/**/*.md": "installation",
-        "windows-hardware/drivers/**/*.md": ""
+        "windows-hardware/drivers/**/*.md": "",
+        "windows-client/admin-development/**/**.*": "admin-mgmt-development",
+        "windows-client/application-management/**/**.*": "application-compatibility",
+        "windows-client/app-v/**/**.*": "application-virtualization-app-v",
+        "windows-client/backup-and-storage/**/**.*": "backup-and-storage",
+        "windows-client/deployment/**/**.*": "deployment",
+        "windows-client/group-policy/**/**.*": "windows-group-policy",
+        "windows-client/high-availability/**/**.*": "high-availability",
+        "windows-client/identity/**/**.*": "active-directory",
+        "windows-client/networking/**/**.*": "networking",
+        "windows-client/performance/**/**.*": "performance",
+        "windows-client/printing/**/**.*": "printing",
+        "windows-client/remote/**/**.*": "rds",
+        "windows-client/shell-experience/**/**.*": "shell-experience",
+        "windows-client/system-management-components/**/**.*": "system-mgmgt-components",
+        "windows-client/ue-v/**/**.*": "user-experience-virtualization-ue-v",
+        "windows-client/user-profiles-and-logon/**/**.*": "user-profiles",
+        "windows-client/virtualization/**/**.*": "hyper-v",
+        "windows-client/windows-security/**/**.*": "windows-security",
+        "windows-client/windows-troubleshooters/**/**.*": "windows-troubleshooter",
+        "windows-client/windows-tss/**/**.*": "windows-troubleshooter",
+        "windows-client/windows-7-eos-faq/**/**.*": "windows-eos",
+        "windows-server/admin-development/**/**.*": "admin-mgmt-development",
+        "windows-server/application-management/**/**.*": "application-compatibility",
+        "windows-server/backup-and-storage/**/**.*": "backup-and-storage",
+        "windows-server/containers/**/**.*": "containers",
+        "windows-server/deployment/**/**.*": "deployment",
+        "windows-server/group-policy/**/**.*": "group-policy",        
+        "windows-server/high-availability/**/**.*": "high-availability",
+        "windows-server/identity/**/**.*": "active-directory",        
+        "windows-server/networking/**/**.*": "networking",
+        "windows-server/performance/**/**.*": "performance",        
+        "windows-server/printing/**/**.*": "printing",
+        "windows-server/remote/**/**.*": "rds",
+        "windows-server/resources/**/**.*": "resources",
+        "windows-server/security-and-malware/**/**.*": "security-and-malware",
+        "windows-server/shell-experience/**/**.*": "shell-experience",
+        "windows-server/software-defined-networking/**/**.*": "sdn",
+        "windows-server/system-management-components/**/**.*": "system-mgmt-components",        
+        "windows-server/user-profiles-and-logon/**/**.*": "user-profiles",
+        "windows-server/virtualization/**/**.*": "hyper-v",
+        "windows-server/windows-security/**/**.*": "windows-security",
+        "windows-server/windows-server-eos-faq/**/**.*": "windows-eos"
       },
       "titleSuffix": {
         "developer/biztalk/**/*.md": "BizTalk Server",
@@ -459,7 +502,6 @@
         "dynamics-365/commerce/**/*.md": "Dynamics 365 Commerce",
         "dynamics-365/supply-chain/**/*.md": "Dynamics 365 Supply Chain Management",
         "power-platform/power-apps/**/*.md": "Power Apps",
-        "power-platform/power-automate/*.md": "Power Automate",
         "power-platform/power-automate/**/*.md": "Power Automate",
         "power-platform/ai-builder/*.md": "AI Builder",
         "sales-copilot/**/*.md": "Copilot for Sales",
@@ -606,11 +648,6 @@
           "Power Platform",
           "Power Automate"
         ],
-        "power-platform/power-automate/*.md": [
-          "Troubleshoot",
-          "Power Platform",
-          "Power Automate"
-        ],
         "power-platform/ai-builder/*.md": [
           "Troubleshoot",
           "Power Platform",
@@ -626,10 +663,6 @@
           "PowerApps",
           "powerapps-docs",
           "dataverse-docs"
-        ],
-        "power-platform/power-automate/*.md": [
-          "Flow",
-          "powerautomate-docs"
         ],
         "power-platform/power-automate/**/*.md": [
           "Flow",

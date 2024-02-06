@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:replacing-hardware-and-updating-the-operating-system, csstroubleshoot
-ms.subservice: high-availability
 ---
 # Recommended hotfixes and updates for Windows Server 2008 R2-based server clusters
 

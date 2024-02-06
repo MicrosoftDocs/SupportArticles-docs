@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, abizerh, maweeras, fszita, timccu
 ms.custom: sap:active-directory-federation-services-ad-fs, csstroubleshoot
-ms.subservice: active-directory
 ---
 # AD FS 2.0 service fails to start
 

@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:storage-configuration, csstroubleshoot
-ms.subservice: hyper-v
 ---
 # FCoE IO failures on Hyper-V guests for Windows Server 2016
 

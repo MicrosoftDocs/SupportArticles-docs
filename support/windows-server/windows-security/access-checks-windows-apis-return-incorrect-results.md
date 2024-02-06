@@ -5,11 +5,9 @@ ms.date: 05/24/2022
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, herbertm, v-tappelgate
 ms.custom: sap:permissions-access-control-and-auditing, csstroubleshoot
-ms.subservice: windows-security
 ---
 
 # How to evaluate effective permissions for resources on remote computers

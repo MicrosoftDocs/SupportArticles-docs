@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:cortana-and-search, csstroubleshoot
-ms.technology: windows-client-shell-experience
 ---
 # Windows.edb is larger than expected when a PST file is indexed
 

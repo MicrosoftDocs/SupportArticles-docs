@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:domain-and-forest-trusts, csstroubleshoot
-ms.subservice: windows-security
 ---
 # Error when you try to add a trusted domain user to a trusting domain in Windows Server 2003 or in Windows 2000: The server is not operational
 

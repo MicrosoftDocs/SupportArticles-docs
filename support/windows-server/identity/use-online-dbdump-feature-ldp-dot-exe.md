@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, ROLANDW, oweindl
 ms.custom: sap:ldap-configuration-and-interoperability, csstroubleshoot
-ms.subservice: active-directory
 ---
 # How to use the online dbdump feature of Active Directory
 

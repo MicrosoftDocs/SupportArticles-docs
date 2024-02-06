@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, randt
 ms.custom: sap:active-directory-topology-sites-subnets-and-connection-objects, csstroubleshoot
-ms.subservice: active-directory
 ---
 # Error when you attempt to create a DFS namespace: The namespace cannot be queried. The RPC server is unavailable
 

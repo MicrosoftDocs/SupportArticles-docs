@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jmeier, niklase, shaheera, jpierauc
 ms.custom: sap:dtc-startup-configuration-connectivity-and-cluster, csstroubleshoot
-ms.subservice: application-compatibility
 ---
 # Configure Microsoft Distributed Transaction Coordinator (DTC) to work through a firewall
 

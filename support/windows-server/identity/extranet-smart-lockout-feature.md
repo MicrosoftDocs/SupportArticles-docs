@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, tquerec, dougking, v-jeffbo
 ms.custom: sap:active-directory-federation-services-ad-fs, csstroubleshoot
-ms.subservice: active-directory
 ---
 # Description of the Extranet Smart Lockout feature in Windows Server 2016
 

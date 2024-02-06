@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: joscon, kaushika
 ms.custom: sap:slow-performance, csstroubleshoot
-ms.subservice: performance
 ---
 # How to add processors to a computer
 

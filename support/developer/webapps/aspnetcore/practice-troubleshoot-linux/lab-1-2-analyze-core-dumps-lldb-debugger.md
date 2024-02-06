@@ -2,9 +2,7 @@
 title: Open and analyze system-generated core dump files
 description: This article describes how to install and configure the lldb debugger in Linux, and then open and analyze system-generated .NET Core dump files in lldb debugger.
 ms.date: 04/07/2021
-ms.service: aspnet-core
 ms.reviewer: ramakoni, ahmetmb
-ms.subservice: practice-troubleshoot-linux
 author: ahmetmithat
 ---
 # Lab 1.2 Troubleshooting crashes - analyze system-generated core dump files in lldb debugger

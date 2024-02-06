@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, adityah
 ms.custom: sap:servicing, csstroubleshoot
-ms.subservice: deployment
 ---
 # System Partition goes offline after installing some third-party disk or Storage Management Software
 

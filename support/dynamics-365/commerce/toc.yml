@@ -41,6 +41,10 @@
           href: financial-statements/z-report-issues.md
         - name: Statement posting errors due to unavailable inventory or update conflicts
           href: financial-statements/inventory-errors-posting.md
+    - name: Globalization
+      items:
+        - name: Troubleshoot issues with digital certificates for fiscal integration
+          href: globalization/fiscal-integration-certificate.md
     - name: Order management
       items:
         - name: Asynchronous order synchronization issues

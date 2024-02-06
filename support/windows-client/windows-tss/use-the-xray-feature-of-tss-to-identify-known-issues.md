@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: tdimli, ronsto, ravikiran.s, gipauli, warrenw
 ms.custom: sap:windows-tss, csstroubleshoot
-ms.technology: windows-client-troubleshooter
 ---
 # Identify known issues by using the xray feature of TSS
 
