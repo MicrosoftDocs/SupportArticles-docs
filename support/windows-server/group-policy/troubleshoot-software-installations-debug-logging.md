@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, davidg
 ms.custom: sap:deploying-software-through-group-policy, csstroubleshoot
-ms.technology: windows-server-group-policy
 ---
 # How to troubleshoot software installations by using Windows application management debug logging
 

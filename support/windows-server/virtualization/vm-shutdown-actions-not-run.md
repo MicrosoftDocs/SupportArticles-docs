@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, raackley
 ms.custom: sap:virtual-machine-state, csstroubleshoot
-ms.technology: hyper-v
 ---
 # VM shutdown actions don't run when a host shuts down because of a low battery
 

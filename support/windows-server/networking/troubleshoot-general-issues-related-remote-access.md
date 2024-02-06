@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, brianlic, jgerend, v-lianna
 ms.custom: sap:remote-access-multisite, csstroubleshoot
-ms.technology: networking
 ms.assetid: 354ae5e3-bae1-44f9-afd7-7eaba70f2346
 ---
 # Troubleshoot general issues related to Remote Access

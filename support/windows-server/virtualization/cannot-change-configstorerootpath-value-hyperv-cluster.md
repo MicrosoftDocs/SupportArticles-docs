@@ -5,11 +5,9 @@ ms.date: 09/24/2021
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, akshittu, maperric, v-lianna
 ms.custom: sap:high-availability-virtual-machines, csstroubleshoot
-ms.technology: hyper-v
 ---
 # Can't change the ConfigStoreRootPath value of a Hyper-V cluster in Windows Server
 

@@ -59,7 +59,9 @@ LEFT JOIN (
     INNER JOIN sys.dm_pdw_nodes_db_partition_stats rg ON rg.object_id = nt.object_id
         AND rg.pdw_node_id = nt.pdw_node_id
         AND rg.distribution_id = nt.distribution_id
-    --WHERE rg.index_id = 1 --this woudl only include CCI tables
+    INNER JOIN sys.indexes ind on tb.object_id = ind.object_id
+    WHERE rg.index_id < 2 -- In case this condition removed the number of rows will gets duplicated based on the number of index.
+	AND ind.type_desc IN ('CLUSTERED COLUMNSTORE', 'HEAP') -- Switch between the CCI (Column store) and HEAP, You should at least keep one value or else the total number of rows will gets duplicated based on the number of indexes.
     GROUP BY sm.name
         ,tb.name
         ,tb.object_id

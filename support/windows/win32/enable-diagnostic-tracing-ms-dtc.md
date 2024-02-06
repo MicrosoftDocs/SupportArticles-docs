@@ -5,7 +5,7 @@ ms.date: 03/13/2020
 ms.reviewer: johngil
 ms.custom: sap:Distributed transactions
 ms.topic: how-to
-ms.technology: windows-dev-apps-distributed-transactions
+ms.subservice: distributed-transactions
 ---
 # Enable diagnostic tracing for MS DTC on a Windows 10 computer
 

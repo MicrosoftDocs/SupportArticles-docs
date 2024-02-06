@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jdickson
 ms.custom: sap:system-hang, csstroubleshoot
-ms.technology: windows-server-performance
 ---
 # Enabling Debug mode causes Windows to hang if no Debugger is connected
 

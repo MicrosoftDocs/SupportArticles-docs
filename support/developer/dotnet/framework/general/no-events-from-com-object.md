@@ -2,7 +2,6 @@
 title: No events received from COM when .NET app loses focus
 description: When the .NET Compact Framework application loses focus, no further events are received from the COM object, even after the application receives focus once again. Provides workarounds.
 ms.date: 05/12/2020
-ms.technology: dotnet-general
 ---
 # .NET CF application calls Unadvise on COM connection point when form loses focus
 

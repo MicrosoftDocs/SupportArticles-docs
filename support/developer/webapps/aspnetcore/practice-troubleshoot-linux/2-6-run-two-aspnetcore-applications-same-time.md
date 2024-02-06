@@ -2,9 +2,7 @@
 title: Run two ASP.NET Core applications at the same time
 description: This article describes how to run two ASP.NET Core applications at the same time.
 ms.date: 09/01/2021
-ms.prod: aspnet-core
 ms.reviewer: ramakoni, ahmetmb
-ms.technology: aspnetcore-practice-troubleshoot-linux
 author: ahmetmithat
 ---
 # Part 2.6 - Run two ASP.NET Core applications at the same time

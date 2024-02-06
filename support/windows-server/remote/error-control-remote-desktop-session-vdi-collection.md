@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: rkiran, jerrycif, kaushika
 ms.custom: sap:virtual-desktop-infrastructure-vdi, csstroubleshoot
-ms.technology: windows-server-rds
 ---
 # Error message when you try to shadow a remote session in Windows Server 2012 R2: This computer name is invalid
 

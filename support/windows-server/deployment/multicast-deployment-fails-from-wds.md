@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, scottmca
 ms.custom: sap:mdm, csstroubleshoot
-ms.technology: windows-server-deployment
 ---
 # Multicast Deployment Fails from Windows Deployment Services
 

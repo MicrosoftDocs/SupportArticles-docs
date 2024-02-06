@@ -3,7 +3,6 @@ title: Initialize WinForm controls before accessing LocalDataStore
 description: Windows Forms controls must be initialized before attempting to access Thread LocalDataStore.
 ms.date: 05/09/2020
 ms.reviewer: bpipal
-ms.technology: dotnet-general
 ---
 # Windows Forms controls must be initialized before attempting to access Thread LocalDataStore
 

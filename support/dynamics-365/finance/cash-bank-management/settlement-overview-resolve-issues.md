@@ -5,8 +5,6 @@ title: Troubleshoot issues with transactions that can't be settled
 description: Describes how to resolve issues with transactions that can't be settled in Microsoft Dynamics 365 Finance.
 author: twheeloc 
 ms.date: 12/07/2023
-ms.prod: 
-ms.technology: 
 
 # optional metadata
 

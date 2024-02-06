@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, mikeres
 ms.custom: sap:authentication, csstroubleshoot
-ms.technology: windows-server-rds
 ---
 # Because of a security error, the client could not connect to the Terminal server
 

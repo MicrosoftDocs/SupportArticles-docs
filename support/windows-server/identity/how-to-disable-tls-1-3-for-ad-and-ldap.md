@@ -5,8 +5,6 @@ author: Deland-Han
 ms.author: delhan
 ms.topic: troubleshooting
 ms.date: 06/22/2022
-ms.prod: windows-server
-ms.technology: windows-server-active-directory
 ms.custom: sap:ldap-configuration-and-interoperability, csstroubleshoot
 ---
 # How to disable TLS 1.3 for AD and LDAP

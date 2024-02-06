@@ -3,7 +3,6 @@ title: Issues when you run applications after an upgrade
 description: When upgrading .NET Framework 4.5.2 to .NET Framework 4.6 or 4.6.1, you may experience issues when you run .NET Framework applications. This article provides resolutions for this problem.
 ms.date: 05/06/2020
 ms.reviewer: Brettl
-ms.technology: dotnet-general
 ---
 # Known issues when you upgrade .NET Framework from version 4.5.2 to 4.6 or 4.6.1 on Windows Server 2012
 

@@ -7,8 +7,6 @@ ms.author: kaushika
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-ms.technology: windows-server-high-availability
 ms.custom: sap:csv, csstroubleshoot
 localization_priority: medium
 ms.reviewer: kaushika
