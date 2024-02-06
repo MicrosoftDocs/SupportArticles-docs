@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, shahke, v-lianna
-ms.custom: sap:servicing, csstroubleshoot, ikb2lmc
+ms.custom: sap:failure-to-install-windows-updates, csstroubleshoot, ikb2lmc
 ---
 # Error code 2359302 when installing updates in Windows Server 2019
 

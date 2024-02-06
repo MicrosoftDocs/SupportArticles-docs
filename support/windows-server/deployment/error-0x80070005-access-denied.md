@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate
-ms.custom: sap:activation, csstroubleshoot
+ms.custom: sap:failure-to-install-windows-updates, csstroubleshoot
 keywords: Windows, Activation, 0x80070005, access denied
 ---
 

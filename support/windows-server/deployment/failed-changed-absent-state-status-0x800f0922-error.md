@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, luioan, v-lianna
-ms.custom: sap:servicing, csstroubleshoot, ikb2lmc
+ms.custom: sap:failure-to-install-windows-updates, csstroubleshoot, ikb2lmc
 ---
 # "Failed to be changed to the Absent state. Status: 0x800f0922" when installing updates in Windows Server 2019 
 

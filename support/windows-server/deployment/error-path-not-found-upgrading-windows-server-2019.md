@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, hamansoor, v-lianna
-ms.custom: sap:setup, csstroubleshoot, ikb2lmc
+ms.custom: sap:installing-or-upgrading-windows, csstroubleshoot, ikb2lmc
 ---
 # ERROR_PATH_NOT_FOUND error when performing an in-place upgrade to Windows Server 2019
 

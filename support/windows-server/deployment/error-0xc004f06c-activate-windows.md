@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, v-naqviadil, v-lianna
-ms.custom: sap:activation, csstroubleshoot
+ms.custom: sap:windows-volume-activation, csstroubleshoot
 ---
 # Error 0xC004F06C when you activate Windows
 

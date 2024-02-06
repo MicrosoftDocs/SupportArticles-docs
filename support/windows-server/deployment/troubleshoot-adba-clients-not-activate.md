@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate, v-lianna
-ms.custom: sap:activation, csstroubleshoot
+ms.custom: sap:windows-volume-activation, csstroubleshoot
 ---
 # Troubleshoot Active Directory Based Activation (ADBA) clients that don't activate
 

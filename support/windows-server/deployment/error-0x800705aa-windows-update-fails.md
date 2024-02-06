@@ -9,7 +9,7 @@ ms.date: 11/23/2023
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, maeltedebay, v-lianna
-ms.custom: sap:servicing, csstroubleshoot, ikb2lmc
+ms.custom: sap:failure-to-install-windows-updates, csstroubleshoot, ikb2lmc
 ---
 # Error 0x800705aa when Windows Update fails
 
