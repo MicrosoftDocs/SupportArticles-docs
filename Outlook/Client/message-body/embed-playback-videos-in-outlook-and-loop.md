@@ -28,7 +28,6 @@ Enterprise users can now [embed videos](https://support.microsoft.com/office/how
 > [!NOTE]
 >
 > - [Loop components](/microsoft-365/loop/loop-components-teams) are used by the desktop versions of Outlook and Outlook on the web to embed videos in email messages.
->
 > - This feature is being rolled out gradually and might not yet be available in your organization.
 
 ## Who can use the new feature
@@ -76,7 +75,7 @@ If a user tries to send an email message that has an embedded video to a recipie
 
 When a user creates a video link in Stream, OneDrive for work or school, or SharePoint, and then adds the link to an email message or Loop page, the link share settings determine who can watch the video.
 
-If the owner of an embedded video file subsequently moves, deletes, or stops sharing the source video file, users who previously had access are informed that the item is no longer available.
+If the owner of an embedded video file later moves, deletes, or stops sharing the source video file, users who previously had access are informed that the item is no longer available.
 
 ## Embedded video appearance
 
