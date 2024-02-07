@@ -23,7 +23,7 @@ You're using the new Microsoft Teams desktop app on a computer that also has the
 
 - Video content is presented during the meeting.
 - You join a meeting without having video enabled, and then you enable video while you're in the meeting.
-- Before you join a meeting, you verify that the **Camera** video preview screen in the meeting join window works correctly.
+- Before you join a meeting, you check the video preview screen in the meeting join window to verify that the video works correctly.
 
 ## Cause
 
