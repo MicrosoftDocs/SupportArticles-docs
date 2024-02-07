@@ -70,6 +70,7 @@ Complete the following steps if the component is declared for a specific entity:
 1. Click Publish All Customizations. 
 
 **The Ribbon component is in the Application Ribbon (applies to "All entities")** 
+
 If the component is not entity-specific, rather it is applicable to "All Entities" declared in the Application Ribbon, then the steps will be slightly different as follows: 
 
 1. Open Advanced Settings.
@@ -121,7 +122,7 @@ If the component is not entity-specific, rather it is applicable to "All Entitie
 
 **Removing all unmanaged ribbon customizations** 
 
- `To remove all unmanaged ribbon customizations, for either a specific entity or application ribbon, follow the steps above and replace the ``<RibbonDiffXml>`` in the solution customizations.xml with the following default empty XML declaration:
+To remove all unmanaged ribbon customizations, for either a specific entity or application ribbon, follow the steps above and replace the ``<RibbonDiffXml>`` in the solution customizations.xml with the following default empty XML declaration:
 
 ``<RibbonDiffXml>   
   <CustomActions />   
@@ -135,4 +136,4 @@ If the component is not entity-specific, rather it is applicable to "All Entitie
     <EnableRules />   
   </RuleDefinitions>   
   <LocLabels />   
-</RibbonDiffXml>`` `
+</RibbonDiffXml>``
