@@ -27,14 +27,14 @@ You're using the new Microsoft Teams desktop app on a computer that also has the
 
 ## Cause
 
-This issue is caused by a conflict that exists between the new Teams client and the Nahimic audio driver.
+This issue is caused by a conflict that exists between the new Teams app and the Nahimic audio driver.
 
 ## Workaround
 
 To work around the issue, follow these steps:
 
 1. Exit the Teams desktop app.
-1. Locate the file that's named *BlackApps.dat*. This is the exclusion list that's used by Nahimic. The default location for this file is `C:\ProgramData\A-Volute\A-Volute.Nahimic\Modules\Scheduled\Configurator\BlackApps.dat`.
+1. Locate the file that's named *BlackApps.dat*. This is the exclusion list that's used by the Nahimic app. The default location for this file is `C:\ProgramData\A-Volute\A-Volute.Nahimic\Modules\Scheduled\Configurator\BlackApps.dat`.
 
    **Note:** The file location might vary depending on the version of Windows that's running on the device.
 1. Open the BlackApps.dat file by using a text editor, such as Notepad.
