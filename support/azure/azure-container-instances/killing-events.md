@@ -1,7 +1,7 @@
 ---
 title: Container killing event interruptions cause unexpected stops
-description: Provides a solution to an issue where an Azure container instance continues to run even after being stopped or deleted.
-ms.date: 01/25/2024
+description: Provides a solution to aContainer killing event interruptions cause unexpected stops
+ms.date: 02/07/2024
 ms.reviewer: tysonfreeman, v-weizhu
 ms.service: container-instances
 ---
