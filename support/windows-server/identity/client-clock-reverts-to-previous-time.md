@@ -1,7 +1,7 @@
 ---
-title: Client computer reverts to a previous date and time
+title: Computer clock reverts to a previous date and time
 description: Describes workarounds for an issue where the computer clock resets to a past date and time.
-ms.date: 2/7/2024
+ms.date: 02/07/2024
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -13,7 +13,7 @@ ms.custom: sap:windows-time-service, csstroubleshoot
 keywords: 
 ---
 
-# Computer that is running Windows 10 or Windows 11 reverts to a previous date and time
+# Computer that is running Windows 10 or a later version reverts to a previous date and time
 
 This article provides workarounds for an issue where the computer clock resets incorrectly if you restart the computer while it doesn't have an internet connection.
 
