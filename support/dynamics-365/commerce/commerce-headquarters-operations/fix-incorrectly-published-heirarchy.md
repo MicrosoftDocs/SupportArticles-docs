@@ -1,13 +1,13 @@
 ---
-title: Heirarchy is incorrectly published to a future date
-description: Provides a resolution for an issue where a heirarchy is incorrectly published to a future date in Microsoft Dynamics 365 Commerce.
+title: Hierarchy is incorrectly published to a future date
+description: Provides a resolution for an issue where a hierarchy is incorrectly published to a future date in Microsoft Dynamics 365 Commerce.
 author: bstorie
 ms.author: brstor
 ms.date: 02/07/2024
 ---
-# A hiearchy is incorrectly published to a future date
+# A hierarchy is incorrectly published to a future date
 
-This article resolves an issue where a heirarchy change is incorrectly published to a future date in Microsoft Dynamics 365 Commerce.
+This article resolves an issue where a hierarchy change is incorrectly published to a future date in Microsoft Dynamics 365 Commerce.
 
 ## Symptoms
 
