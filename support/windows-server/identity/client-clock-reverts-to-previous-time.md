@@ -1,5 +1,5 @@
 ---
-title: A computer reverts to a previous date and time
+title: Client computer reverts to a previous date and time
 description: 
 ms.date: 2/7/2024
 author: Deland-Han
@@ -13,7 +13,7 @@ ms.custom: sap:windows-time-service, csstroubleshoot
 keywords: 
 ---
 
-# A computer that is running Windows 10 or Windows 11 reverts to a previous date and time
+# Computer that is running Windows 10 or Windows 11 reverts to a previous date and time
 
 This article 
 
