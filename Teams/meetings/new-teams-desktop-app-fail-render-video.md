@@ -15,15 +15,15 @@ search.appverid:
   - MET150
 ms.date: 02/07/2024
 ---
-# New Teams desktop app fails to render video
+# New Teams desktop app does not render video
 
 ## Symptoms
 
-You're using the new Teams desktop app on a computer that also has the Nahimic audio driver installed. During Teams meetings, the meeting video fails to render video in one of the following scenarios:
+You're using the new Microsoft Teams desktop app on a computer that also has the Nahimic audio driver installed. During a Teams meeting, the app does not render video in any of the following scenarios:
 
-- When you verify the preview of the video in **Camera** works correctly before joining a meeting.
-- When you join a meeting without video and enbale it after you're in the meeting.
-- When video content is presented during the meeting.
+- Video content is presented during the meeting.
+- You join a meeting without having video enabled, and then you enable video while you're in the meeting.
+- Before you join a meeting, you open the **Device settings** dialog box and verify that the video preview window in the **Camera** video setting works correctly.
 
 ## Cause
 
@@ -34,26 +34,24 @@ This issue is caused by conflicts between the new Teams client and the Nahimic a
 To work around the issue, follow these steps:
 
 1. Exit the Teams desktop app.
-1. Locate the file named *BlackApps.dat*, which is the exclusion list used by Nahimic. The default location for this file is `C:\ProgramData\A-Volute\A-Volute.Nahimic\Modules\Scheduled\Configurator\BlackApps.dat`.
+1. Locate the file that's named *BlackApps.dat*. This is the exclusion list that's used by Nahimic. The default location for this file is `C:\ProgramData\A-Volute\A-Volute.Nahimic\Modules\Scheduled\Configurator\BlackApps.dat`.
 
-   **Note:** The file location may vary depending on the version of Windows on the device.
+   **Note:** The file location might vary depending on the version of Windows that's running on the device.
 1. Open the BlackApps.dat file by using a text editor, such as Notepad.
 
-   **Note:** If you can't access the file, follow these steps to change permissions on the file:
+   **Note:** If you can't open the file, follow these steps to change permissions on the file:
 
    1. Right-click the file, and then select **Properties**.
    1. Select the **Security** tab, and then select the **Edit** button.
-   1. In the **Permissions** dialog box, select the group or user that you want to change permissions.
-   1. In the permissions list for this group or user, select **Allow** for the **Full control** permission.
-   1. Select **Apply**, and then select **OK** to close the **Permissions** dialog box.
+   1. On the **Permissions** screen, in the **Group or user names** box, select the appropriate group to which you belong.
+   1. In the list in the **Permissions** box, select **Allow** for the **Full control** permission.
+   1. Select **Apply**, and then select **OK** to close the **Permissions** screen.
    1. Close the **Properties** dialog box.
-1. Add the following executable files to the BlackApps.dat file:
+1. In the BlackApps.dat file, add the following executable files:
 
    - `ms-teams.exe`
    - `msedgewebview2.exe`
-1. Save the file and exit Notepad.
+1. Save the file, and then exit the text editor.
 1. Restart the Teams desktop app.
 
-## Status
-
-[!INCLUDE [Status disclaimer](../../includes/status.md)]
+[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
