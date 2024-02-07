@@ -20,6 +20,9 @@ items:
           href: create-and-use-apps/export-dynamic-worksheet-refresh-all.md
         - name: Ribbons and Command bar
           items:
+            - name: Remove an active unmanaged layer for Ribbon
+              href: ./create-and-use-apps/remove-an-unmanaged-layer-for-ribbon.md
+              displayName: unmanagedlayer,ribbon
             - name: Ribbon issues
               href: create-and-use-apps/ribbon-issues.md
             - name: Button is hidden
