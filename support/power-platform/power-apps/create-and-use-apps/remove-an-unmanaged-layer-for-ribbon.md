@@ -19,10 +19,10 @@ Unmanaged customizations reside at the top layer for a component and subsequentl
 1. Open the Command Checker tool to delete unmanaged customization for ribbon components. To open Command Checker, append the &ribbondebug=true parameter to your Dynamics 365 application URL. Please follow [Troubleshooting ribbon issues in Power Apps - Power Apps | Microsoft Learn](/troubleshoot/power-platform/power-apps/create-and-use-apps/ribbon-issues) to understand how to use command checker. 
  
 1. After the **Command Checker** dialog box opens, select the button/command/enable rule/display rule and click on “**View solution layers**” for which there is an unmanaged customization. 
-As an example New Button below has an unmanaged customization! Once you select it, please click on “View button solution layer”   
+As an example "New" Button below has an unmanaged customization! Once you select it, please click on “View button solution layers”   
 :::image type="content" source="media/ribbon-issues/unmanaged-button-location.png" alt-text="Screenshot shows button location in commandchecker." lightbox="media/ribbon-issues/unmanaged-button-location.png":::
 
-1. Once you click on Solution Layer, you will see Remove customization link next to unmanaged layer. 
+1. Once you click on Solution Layer, you will see "Remove active customization" link next to unmanaged layer. 
 
    1. :::image type="content" source="media/ribbon-issues/unmanaged-button-solutionlayer.png" alt-text="Screenshot shows solution layers for ribbon in commandchecker." lightbox="media/ribbon-issues/unmanaged-button-solutionlayer.png":::
  
@@ -124,7 +124,7 @@ If the component is not entity-specific, rather it is applicable to "All Entitie
 
 To remove all unmanaged ribbon customizations, for either a specific entity or application ribbon, follow the steps above and replace the ``<RibbonDiffXml>`` in the solution customizations.xml with the following default empty XML declaration:
 
-``<RibbonDiffXml>
+```<RibbonDiffXml>
    <CustomActions />
    <Templates>
       <RibbonTemplates Id="Mscrm.Templates"></RibbonTemplates>
@@ -136,4 +136,4 @@ To remove all unmanaged ribbon customizations, for either a specific entity or a
       <EnableRules />
    </RuleDefinitions>
    <LocLabels />
-   </RibbonDiffXml>``
+   </RibbonDiffXml>```
