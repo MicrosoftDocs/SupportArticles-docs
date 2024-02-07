@@ -54,4 +54,5 @@ To work around the issue, follow these steps:
 1. Save the file, and then exit the text editor.
 1. Restart the Teams desktop app.
 
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../includes/third-party-information-disclaimer.md)]
+
