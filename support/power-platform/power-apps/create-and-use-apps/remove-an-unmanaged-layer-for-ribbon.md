@@ -16,10 +16,10 @@ ms.date:     02/06/2024
 
 Unmanaged customizations reside at the top layer for a component and subsequently define the runtime behavior of the component. In most situations you don't want unmanaged customizations determining the behavior of your components. To remove the unmanaged layer for a component, follow these steps: 
 
-1.Open the Command Checker tool to delete unmanaged customization for ribbon components. To open Command Checker, append the &ribbondebug=true parameter to your Dynamics 365 application URL. Please follow [Troubleshooting ribbon issues in Power Apps - Power Apps | Microsoft Learn](/troubleshoot/power-platform/power-apps/create-and-use-apps/ribbon-issues) to understand how to use command checker. 
+1. Open the Command Checker tool to delete unmanaged customization for ribbon components. To open Command Checker, append the &ribbondebug=true parameter to your Dynamics 365 application URL. Please follow [Troubleshooting ribbon issues in Power Apps - Power Apps | Microsoft Learn](/troubleshoot/power-platform/power-apps/create-and-use-apps/ribbon-issues) to understand how to use command checker. 
 
  
-1.After the **Command Checker** dialog box opens, select the button/command/enable rule/display rule and click on “**View solution layers**” for which there is an unmanaged customization. 
+1. After the **Command Checker** dialog box opens, select the button/command/enable rule/display rule and click on “**View solution layers**” for which there is an unmanaged customization. 
    As an example New Button below has an unmanaged customization! Once you select it, please click on “View button solution layer”   
 :::image type="content" source="media/ribbon-issues/unmanaged-button-location.png" alt-text="Screenshot shows button location in commandchecker." lightbox="media/ribbon-issues/unmanaged-button-location.png":::
 
@@ -27,7 +27,7 @@ Unmanaged customizations reside at the top layer for a component and subsequentl
 
 :::image type="content" source="media/ribbon-issues/unmanaged-button-solutionlayer.png" alt-text="Screenshot shows solution layers for ribbon in commandchecker." lightbox="media/ribbon-issues/unmanaged-button-solutionlayer.png"::: 
 
-1.Please regenerate metadata once you delete the unmanaged layer.  
+1. Please regenerate metadata once you delete the unmanaged layer.  
 
 :::image type="content" source="media/ribbon-issues/unmanaged-button-rcm.png" alt-text="Screenshot shows solution layers for ribbon in commandchecker." lightbox="media/ribbon-issues/unmanaged-button-rcm.png":::
 
