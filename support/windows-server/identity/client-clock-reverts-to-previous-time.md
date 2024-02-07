@@ -1,6 +1,6 @@
 ---
 title: Client computer reverts to a previous date and time
-description: 
+description: Describes workarounds for an issue where the computer clock resets to a past date and time.
 ms.date: 2/7/2024
 author: Deland-Han
 ms.author: delhan
@@ -15,7 +15,7 @@ keywords:
 
 # Computer that is running Windows 10 or Windows 11 reverts to a previous date and time
 
-This article 
+This article provides workarounds for an issue where the computer clock resets incorrectly if you restart the computer while it doesn't have an internet connection.
 
 _Applies to:_ &nbsp; Windows 10 and later versions
 
@@ -77,6 +77,9 @@ To disable the Secure Time Seeding feature, follow these steps:
    reg add HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\W32Time\Config /v UtilizeSslTimeData /t REG_DWORD /d 0 /f
    ```
    
+   > [!NOTE]  
+   > This command sets the value of 'UtilizeSslTimeData' (DWORD) to **0**.
+   
 1. Restart the computer.
 1. At an administrative command prompt, run the following commands:
    
@@ -86,16 +89,6 @@ To disable the Secure Time Seeding feature, follow these steps:
    ```
 
    These commands force the system to resynchronize the date and time. Because Secure Time Seeding is disabled, Windows Time uses NTP to resynchronize.
-
-
-set the UtilizeSslTimeData DWORD value to 0 (zero):
-
-Registry subkey: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\w32time\Config`
-
-Value name: UtilizeSslTimeData
-Value data: 0
-Value type: DWORD
-
 
 > [!NOTE]  
 > To re-enable the Secure Time Seeding feature, change the `UtilizeSslTimeData` value data to **1**. To do this, run the following command at an administrative command prompt, and then restart the computer:
