@@ -8,7 +8,7 @@ localization_priority: Normal
 ms.custom: 
 - CI 186626
 - CSSTroubleshoot
-ms.reviewer: revaldiv,scapero
+ms.reviewer: revaldiv,corbinm,scapero
 appliesto: 
   - New Microsoft Teams
 search.appverid: 
@@ -21,7 +21,8 @@ ms.date: 02/07/2024
 
 You're using the new Teams desktop app on a computer that also has the Nahimic audio driver installed. During Teams meetings, the meeting video fails to render video in one of the following scenarios:
 
-- When you join a meeting after checking the preview of the video in **Camera**.
+- When you verify the preview of the video in **Camera** works correctly before joining a meeting.
+- When you join a meeting without video and enbale it after you're in the meeting.
 - When video content is presented during the meeting.
 
 ## Cause
