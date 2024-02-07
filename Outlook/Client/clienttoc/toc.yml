@@ -407,6 +407,8 @@
           href: ../message-body/attachment-does-not-appear-in-plain-text-message.md
         - name: Attachment size exceeds the allowable limit error
           href: ../message-body/attachment-size-exceeds-the-allowable-limit-error.md
+        - name: Embed and play back videos in Outlook and Loop
+          href: ../message-body/embed-playback-videos-in-outlook-and-loop.md
         - name: HTTPS linked images in HTML emails display the red X
           href: ../message-body/https-linked-images-in-html-emails-show-red-x.md
         - name: Issues with attachments
