@@ -94,9 +94,9 @@ If the component is not entity-specific, rather it is applicable to "All Entitie
 1.Click Publish All Customizations. 
  
 **Removing all unmanaged ribbon customizations** 
-To remove all unmanaged ribbon customizations, for either a specific entity or application ribbon, follow the steps above and replace the <RibbonDiffXml> in the solution customizations.xml with the following default empty XML declaration:
+To remove all unmanaged ribbon customizations, for either a specific entity or application ribbon, follow the steps above and replace the '<RibbonDiffXml>' in the solution customizations.xml with the following default empty XML declaration:
 
-"<RibbonDiffXml>   
+'<RibbonDiffXml>   
   <CustomActions />   
   <Templates>   
     <RibbonTemplates Id="Mscrm.Templates"></RibbonTemplates>   
@@ -108,4 +108,4 @@ To remove all unmanaged ribbon customizations, for either a specific entity or a
     <EnableRules />   
   </RuleDefinitions>   
   <LocLabels />   
-</RibbonDiffXml>"
+</RibbonDiffXml>'
