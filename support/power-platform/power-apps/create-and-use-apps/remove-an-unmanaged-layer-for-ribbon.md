@@ -12,7 +12,7 @@ ms.service:  # Add the ms.service or ms.prod value
 ms.topic:    # Add the ms.topic value
 ms.date:     02/06/2024
 ---
-# Remove an unmanaged layer for Ribbon
+# Remove an active unmanaged layer for Ribbon
 
 Unmanaged customizations reside at the top layer for a component and subsequently define the runtime behavior of the component. In most situations you don't want unmanaged customizations determining the behavior of your components. To remove the unmanaged layer for a component, follow these steps: 
 
