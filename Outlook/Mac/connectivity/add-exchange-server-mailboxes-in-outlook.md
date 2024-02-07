@@ -18,7 +18,7 @@ appliesto:
   - Outlook for Microsoft 365 for Mac
   - Outlook 2021 for Mac
   - Outlook 2019 for Mac
-ms.date: 01/23/2024
+ms.date: 02/07/2024
 ---
 
 # Add Exchange Server mailboxes in the new Outlook for Mac
@@ -29,7 +29,7 @@ In the new Outlook for Mac, you can add email accounts for Microsoft Exchange Se
 
 - Communication between the new Outlook for Mac client and Exchange Server must use either [NTLM](/exchange/client-developer/exchange-web-services/authentication-and-ews-in-exchange#ntlm-authentication) or [Basic](/exchange/client-developer/exchange-web-services/authentication-and-ews-in-exchange#basic-authentication) authentication.
 
-  > Note: The new Outlook for Mac doesn't support Kerberos or Certificate authentication. For more information about currently supported Exchange Server features in the new Outlook for Mac, see [What's new in Outlook for Mac](https://support.microsoft.com/office/the-new-outlook-for-mac-6283be54-e74d-434e-babb-b70cefc77439#ID0EDL).
+  > Note: The new Outlook for Mac doesn't support Kerberos or Certificate authentication. For more information about currently supported Exchange Server features in the new Outlook for Mac, see [Supported features for Exchange on-premises](https://support.microsoft.com/en-us/office/the-new-outlook-for-mac-6283be54-e74d-434e-babb-b70cefc77439#bkmk_exchangeonprem).
 
 - Outlook or Office must be licensed through a volume license, or an enterprise or business Microsoft 365 subscription plan.
 
