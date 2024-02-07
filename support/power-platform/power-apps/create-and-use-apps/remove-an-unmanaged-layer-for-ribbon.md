@@ -102,13 +102,13 @@ If the component is not entity-specific, rather it is applicable to "All Entitie
 
    1.  `To remove a command, you must locate the ``<CommandDefinition>`` node with the Id of the command you wish to delete ` 
    
-   1.  `To delete a HideCustomAction, you must locate the '<HideCustomAction>' node containing the Id of the item you wish to remove. ` 
+   1.  `To delete a HideCustomAction, you must locate the ``<HideCustomAction>`` node containing the Id of the item you wish to remove. ` 
    
    1.  `To delete an Enable Rule or Display Rule, you must locate the ``<RuleDefinitions>`` node and then locate the child ``<EnableRule>`` or ``<DisplayRule>`` node having the Id of the item you wish to delete. ` 
    
-   1.  `To remove a button, you must locate the '<CustomAction>' node with the Id of the CustomAction you wish to delete or locate and delete the CustomAction that contains the <button>, '<splitbutton>', ``<flyoutanchor>`` or ``<group>`` node having the Id of the control you wish to delete. ` 
+   1.  `To remove a button, you must locate the ``<CustomAction>`` node with the Id of the CustomAction you wish to delete or locate and delete the CustomAction that contains the <button>, '<splitbutton>', ``<flyoutanchor>`` or ``<group>`` node having the Id of the control you wish to delete. ` 
    
-   1.  `To remove a 'LocLabel', you must locate the '<LocLabel>' node with the Id of the LocLabel you wish to delete. ` 
+   1.  `To remove a LocLabel, you must locate the ``<LocLabel>`` node with the Id of the LocLabel you wish to delete. ` 
    
    1.  `To remove all ribbon customizations for the application ribbon, replace the ``<RibbonDiffXml>`` with the default empty XMl as shown below under [Removing all unmanaged ribbon customizations](https://eng.ms/docs/cloud-ai-platform/business-applications-and-platform/bap-power-apps/papps-scale/commanding-ribbon-alm/remove-unmanaged-solution-layer#removing-all-unmanaged-ribbon-customizations) ` 
    
