@@ -1,43 +1,34 @@
 ---
-title: "Accidently Published heirarchy to future date"
-description: "This article provides steps to resolve the situation where a heirarchy is accidently published to a future date."
+title: Heirarchy is incorrectly published to a future date
+description: Provides a resolution for an issue where a heirarchy is incorrectly published to a future date in Microsoft Dynamics 365 Commerce.
 author: bstorie
 ms.author: brstor
-ms.topic: troubleshooting-problem-resolution #Don't change.
-ms.date: 02/05/2024
-
-#customer intent: As a <role>, I want <what> so that <why>.
-
+ms.date: 02/07/2024
 ---
+# A hiearchy is incorrectly published to a future date
 
-# How to address the situation where a hiearchy was published to a future date.
+This article resolves an issue where a heirarchy change is incorrectly published to a future date in Microsoft Dynamics 365 Commerce.
 
-This article will help you to resolve the situation where a heirarchy change was incorrectly published to a future date preventing the system from replicating data to the channel database. 
+## Symptoms
 
+A user makes changes to an [organization's hierarchy](/dynamics365/fin-ops-core/fin-ops/organization-administration/organizations-organizational-hierarchies?context=%2Fdynamics365%2Fcontext%2Fcommerce), and then publishes the hierarchy. However, the **date** field is incorrectly set to a future date. This issue prevents the system from replicating data to the channel database. As a result, the products, pricing, and other items don't appear in a [channel](/dynamics365/commerce/channels-overview).
 
-## Symptom
+## Resolution
 
-After making changes to an organization’s hierarchy the user selected to publish the hierarchy. However, the date field was incorrectly set to a future date.  Because of these products, pricing and other items are not appearing in the Channel. 
+To resolve this issue, follow these steps to delete the incorrect dated hierarchy. Once the incorrect hierarchy is deleted, recreate your changes to the hierarchy and ensure you publish it to the correct date.
 
+1. In the navigation pane, go to **Modules** > **Organization administration** > **Organizations** > **Organization hierarchies**.
+2. Select the hierarchy that you want to delete.
+3. Select **View**.
+4. On the right side of the screen, select the **Related information** flyout.
+5. Under **Future changes**, select **More**.
 
+   :::image type="content" source="media/fix-incorrectly-published-heirarchy/hiearchy-related-information.png" alt-text="Screenshot that shows the More option under the Future changes on the Related information flyout.":::
 
-## Solution
+6. On the **Publication date** column, select the "Filter" icon.
 
-To resolve this issue, you will need to delete the inaccurate dated hierarchy by following these steps. Once the inaccurate hierarchy is deleted you will then need to recreate your desire hierarchy changes and publish with the correct date. 
+   :::image type="content" source="media/fix-incorrectly-published-heirarchy/hiearchy-publication-date-filter.png" alt-text="Screenshot that shows the filter icon on the Publication date column.":::
 
-1.	Go to Organization Administration >  Organizations > Organization hierarchies
-2.	Select the hierarchy with the problem
-3.	Click on View
-4.	On the right side of the screen click on Related Information fly-out
-5.	Under Future Changes – Click on More  
-<img width="162" alt="image" src="https://github.com/MicrosoftDocs/SupportArticles-docs-pr/assets/55284555/cc70547f-e71a-49b6-a81a-0a9a160ce36b"> 
-   [hiearchyrelatedinformation image]
-
-7.	On the Publication date column – Click the Filter icon  
- <img width="131" alt="image" src="https://github.com/MicrosoftDocs/SupportArticles-docs-pr/assets/55284555/4c4fbd38-17be-46a9-8d16-8849e66eceeb">
- [hiearchyPublishedDatefilter image]
-
-8.	Click on Clear to remove the filtered value
-9.	In the list select the hierarchy with the future publish date
-10.	Click on delete
-11. Finally recreate your changes to the hiearchy and ensure you publish to the desired date. 
+7. Select **Clear** to remove the filtered value.
+8. In the list, select the hierarchy with the future publish date.
+9. Select **delete**.
