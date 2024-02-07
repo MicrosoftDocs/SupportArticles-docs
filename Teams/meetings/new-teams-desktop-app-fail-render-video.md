@@ -23,11 +23,11 @@ You're using the new Microsoft Teams desktop app on a computer that also has the
 
 - Video content is presented during the meeting.
 - You join a meeting without having video enabled, and then you enable video while you're in the meeting.
-- Before you join a meeting, you open the **Device settings** dialog box and verify that the video preview window in the **Camera** video setting works correctly.
+- Before you join a meeting, you verify that the **Camera** video preview screen in the meeting join window works correctly.
 
 ## Cause
 
-This issue is caused by conflicts between the new Teams client and the Nahimic audio driver.
+This issue is caused by a conflict that exists between the new Teams client and the Nahimic audio driver.
 
 ## Workaround
 
