@@ -3,7 +3,7 @@ title: Hierarchy is incorrectly published to a future date
 description: Provides a resolution for an issue where a hierarchy is incorrectly published to a future date in Microsoft Dynamics 365 Commerce.
 author: bstorie
 ms.author: brstor
-ms.date: 02/08/2024
+ms.date: 02/07/2024
 ---
 # A hierarchy is incorrectly published to a future date
 
@@ -11,7 +11,7 @@ This article resolves an issue where a hierarchy change is incorrectly published
 
 ## Symptoms
 
-After a user makes changes to an [organization's hierarchy](/dynamics365/commerce/channels-org-hierarchies) and publishes the hierarchy, the **date** field is incorrectly set to a future date. This issue prevents the system from replicating data to the channel database. As a result, the products, pricing, and other items don't appear in the [channel](/dynamics365/commerce/channels-overview).
+After a user makes changes to an [organization's hierarchy](/dynamics365/fin-ops-core/fin-ops/organization-administration/organizations-organizational-hierarchies) and publishes the hierarchy, the **date** field is incorrectly set to a future date. This issue prevents the system from replicating data to the channel database. As a result, the products, pricing, and other items don't appear in the [channel](/dynamics365/commerce/channels-overview).
 
 ## Resolution
 
@@ -32,8 +32,3 @@ To resolve this issue, follow these steps to delete the incorrectly dated hierar
 7. Select **Clear** to remove the filtered value.
 8. In the list, select the hierarchy with the future publish date.
 9. Select **delete**.
-
-## More information
-
-- [Organizations and organizational hierarchies overview](/dynamics365/fin-ops-core/fin-ops/organization-administration/organizations-organizational-hierarchies)
-- [Plan your organizational hierarchy](/dynamics365/fin-ops-core/fin-ops/organization-administration/plan-organizational-hierarchy)

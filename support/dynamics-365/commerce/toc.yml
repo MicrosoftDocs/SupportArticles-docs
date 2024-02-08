@@ -1,10 +1,12 @@
 - name: Dynamics 365 Commerce
   href: welcome-commerce.yml
   items:
+    - name: Channel management
+      items:
+        - name: A hierarchy is incorrectly published to a future date
+          href: commerce-headquarters-operations/fix-incorrectly-published-heirarchy.md  
     - name: Commerce headquarters operations
       items:
-        - name: A hiearchy is incorrectly published to a future date
-          href: commerce-headquarters-operations/fix-incorrectly-published-heirarchy.md
         - name: Customer records don't appear in Commerce headquarters
           href: commerce-headquarters-operations/customer-record-not-appearing.md
         - name: Order summary subtotal doesn't include taxes on charges with customized order summary modules
