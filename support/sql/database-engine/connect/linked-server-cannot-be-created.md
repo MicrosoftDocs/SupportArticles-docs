@@ -1,7 +1,7 @@
 ---
-title: Issues related to linked server after migrating on-premises server
+title: Troubleshooting scenarios related to linked server after migrating on-premises server
 description: This article provides a resolution to the problem where the linked server can't be created after migrating on-premises server to Azure.
-ms.date: 01/03/2024
+ms.date: 01/08/2024
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
@@ -12,7 +12,9 @@ ms.custom: sap:Connection issues
 
 This article helps you resolve an issue when you can't create a linked server after you move the on-premises server to Azure.
 
-Consider the following output:
+## Symptoms
+
+You might see the following output when you connect from your SQL Server 2022 source environment to the SQL Server 2012 destination environment.
 
 ```output
 Environment
@@ -34,19 +36,15 @@ Replication:      N/A
 Virtual Server:   Yes
 ```
 
-Based on the output, the destination of linked server is on-premises. The source server is SQL Server 2022 and Windows Server 2022. The destination SQL Server is SQL Server 2012 and Windows Server 2012 R2.
+In the output, the destination of linked server is on-premises. The source server is SQL Server 2022 and Windows Server 2022. The destination SQL Server is SQL Server 2012 and Windows Server 2012 R2.
 
-## Symptoms
-
-You see the following error pop-up when you try to create linked server between these servers.
+You might also see the following error pop-up when you try to create linked server between these servers.
 
 :::image type="content" source="media/linked-server-cannot-be-created/on-premises-error.png" alt-text="Error message pops up when you try to create linked server.":::
 
 ## Cause
 
-TLS 1.2 is a possible cause of the problem in connecting to the SQL Server 2012 with the new Azure machines.
-
-To check the connectivity using UDL, see [Universal Data Link (UDL) configuration](/sql/connect/oledb/help-topics/data-link-pages).
+TLS 1.2 support is a possible cause of the problem in connecting to the SQL Server 2012 with the new Azure machines.
 
 You might reproduce the same error:
 
@@ -54,15 +52,15 @@ You might reproduce the same error:
 
 > [Microsoft OLE DB Driver for SQL Server]: TCP Provider: An existing connection has been forced to be interrupted by the remote host.
 
-Here, the remote server receives TLS issues when attempting to connect to SQL Server.
+Here, the remote server receives the following TLS messages when attempting to connect to SQL Server:
 
-An unrecoverable alert was generated and sent to the remote end. This might result in the connection being terminated. The defined unrecoverable error code of the TLS protocol is 40. The status of the Windows Schannel error is 1205.
+"An unrecoverable alert was generated and sent to the remote end." - You might see this message when the connection is being terminated. The defined unrecoverable error code of the TLS protocol is 40. The status of the Windows SChannel error is 1205.
 
-An unrecoverable alert was generated and sent to the remote end. This might cause the connection to terminate. The TLS protocol defined fatal error code is 40. The Windows Schannel error status is 1205.
+"An unrecoverable alert was generated and sent to the remote end." - This might cause the connection to terminate. The TLS protocol defined fatal error code is 40. The Windows SChannel error status is 1205.
 
 ## Workaround
 
-To correct the issue, add the following required registry keys, and update SQL Server to 2012 SP4 so that SQL Server 2022 can connect.
+To resolve the issue, add the following required registry keys, and update SQL Server to 2012 SP4 so that SQL Server 2022 can connect.
 
 `[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2]`
 
@@ -80,7 +78,7 @@ To resolve this error, follow these steps:
 
 1. Run `Get-WinUserLanguageList` to get the current language list.
 
-1. To set the language as English (United States), run `Set-WinUserLanguageList -LanguageList en-US.
+1. To set the language as English (United States), run `Set-WinUserLanguageList -LanguageList en-US`.
 
 1. Restart the server.
 
@@ -90,3 +88,5 @@ To resolve this error, follow these steps:
 
 > [!NOTE]
 > Make sure that you have the English (United States) language pack is installed before you run the previous commands.
+
+To check the connectivity using UDL, see [Universal Data Link (UDL) configuration](/sql/connect/oledb/help-topics/data-link-pages).
