@@ -171,5 +171,7 @@
               href: omnichannel-for-customer-service/social-data-sync.md
         - name: Voice channel
           items:
+            - name: Incoming voice calls with long greeting messages cause connection delays
+              href: omnichannel-for-customer-service/greeting-message-delay-agent-connection.md 
             - name: Use diagnostic messages to troubleshoot call issues
               href: omnichannel-for-customer-service/use-diagnostic-messages-in-call-issues.md 
