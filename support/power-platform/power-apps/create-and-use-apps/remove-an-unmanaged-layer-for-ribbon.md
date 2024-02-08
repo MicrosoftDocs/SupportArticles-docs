@@ -12,7 +12,7 @@ ms.service:  # Add the ms.service or ms.prod value
 ms.topic:    # Add the ms.topic value
 ms.date:     02/06/2024
 ---
-# Remove an active unmanaged layer for Ribbon
+# Remove an active unmanaged layer for ribbon
 
 Unmanaged customizations reside at the top layer for a component and subsequently define the runtime behavior of the component. In most situations you don't want unmanaged customizations determining the behavior of your components. To remove the unmanaged layer for a component, follow these steps: 
 
@@ -30,12 +30,12 @@ As an example "New" Button below has an unmanaged customization! Once you select
 
 :::image type="content" source="media/ribbon-issues/unmanaged-button-rcm.png" alt-text="Screenshot shows solution rcm ribbon in commandchecker." lightbox="media/ribbon-issues/unmanaged-button-rcm.png":::
 
-**Remove an unmanaged layer for Ribbon (manual procedure)** 
+**Remove an unmanaged layer for ribbon (manual procedure)** 
 
 This manual procedure can be done if the unmanaged ribbon customization you wish to remove is not visible in the Command Checker.  
 This process will require you to export an unmanaged solution containing the entity or Application Ribbon and edit the '<RibbonDiffXml>' in the customizations.xml file, and then import a new version of this solution where this component has been removed to delete the component. See [Export, prepare to edit, and import the ribbon](/powerapps/developer/model-driven-apps/export-prepare-edit-import-ribbon). 
 
-**The Ribbon component is entity-specific**
+**The ribbon component is entity-specific**
 
 Complete the following steps if the component is declared for a specific entity: 
 1. Open Advanced Settings. 
@@ -69,9 +69,9 @@ Complete the following steps if the component is declared for a specific entity:
 1. Import the solution file. 
 1. Click Publish All Customizations. 
 
-**The Ribbon component is in the Application Ribbon (applies to "All entities")** 
+**The ribbon component is in the application ribbon (applies to "All entities")** 
 
-If the component is not entity-specific, rather it is applicable to "All Entities" declared in the Application Ribbon, then the steps will be slightly different as follows: 
+If the component is not entity-specific, rather it is applicable to "All Entities" declared in the application ribbon, then the steps will be slightly different as follows: 
 
 1. Open Advanced Settings.
 
