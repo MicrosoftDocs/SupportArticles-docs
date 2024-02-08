@@ -18,9 +18,9 @@ The following error messages are generated:
 
 > An OLE DB record is available. Source "Microsoft OLE DB Driver for SQL Server" Hresult. 0x80004005 Description "Protocol error in TDS stream".
 
-> An OLE DB record is available. Source “Microsoft OLE DB Driver for SQL Server" Hresult. 0x80004005 Description "Communication link failure".
+> An OLE DB record is available. Source "Microsoft OLE DB Driver for SQL Server" Hresult. 0x80004005 Description "Communication link failure".
 
-> An OLE DB record is available. Source “Microsoft OLE DB Driver for SQL Server" Hresult. 0x80004005 Description "TCP Provider: An existing connection was forcibly closed by the remote host".
+> An OLE DB record is available. Source "Microsoft OLE DB Driver for SQL Server" Hresult. 0x80004005 Description "TCP Provider: An existing connection was forcibly closed by the remote host".
 
 ## Resolution
 
