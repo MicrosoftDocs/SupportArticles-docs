@@ -35,6 +35,6 @@ To introduce a Copilot Studio bot to greet customers, complete the following ste
 1. Add a new node: Select the plus icon, and then select **Topic management** > **Transfer conversation**. This action transfers the conversation to the agent.
 1. Enter the message you want the agent to hear. For more information about creating and editing topics, see [Use topics to design a copilot conversation](/microsoft-copilot-studio/authoring-create-edit-topics).
 
-    :::image type="content" source="media/configure-voice-message.png" alt-text="Screenshot that shows how to configure a voice bot in Copilot Studio.":::
+    :::image type="content" source="media/greeting-message-delay-agent-connection/configure-voice-message.png" alt-text="Screenshot that shows how to configure a voice bot in Copilot Studio.":::
    
 1. Test your copilot to make sure the message works as expected, and then publish the change.
