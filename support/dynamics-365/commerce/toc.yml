@@ -4,7 +4,7 @@
     - name: Channel management
       items:
         - name: A hierarchy is incorrectly published to a future date
-          href: commerce-headquarters-operations/fix-incorrectly-published-hierarchy.md  
+          href: channel-management/fix-incorrectly-published-hierarchy.md  
     - name: Commerce headquarters operations
       items:
         - name: Customer records don't appear in Commerce headquarters
