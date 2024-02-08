@@ -34,7 +34,7 @@ This issue occurs because of a conflict that exists between the new Teams app an
 To work around the issue, follow these steps:
 
 1. Exit the Teams desktop app.
-1. Search for the file named *BlackApps.dat* in Windows Explorer. This file is the exclusion list used by the Nahimic app.
+1. Search in File Explorer for a file named *BlackApps.dat* in the %PROGRAMDATA% folder. This file is the exclusion list used by the Nahimic app.
 1. Open the BlackApps.dat file by using a text editor, such as Notepad.
 
    **Note:** If you can't open the file, follow these steps to change permissions on the file:
