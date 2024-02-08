@@ -1,17 +1,17 @@
 ---
 title: Fail to open a list in VAMT 2.0
 description: Fixes an error (An item with the same key has already been added) that occurs when you open a list in Volume Activation Management Tool (VAMT) 2.0
-ms.date: 09/08/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:activation, csstroubleshoot
-ms.technology: windows-client-deployment
+ms.subservice: deployment
 ---
 # "An item with the same key has already been added" error when you open a list in VAMT 2.0 on a Windows 7-based computer
 
@@ -166,3 +166,7 @@ Then, follow these steps on a Windows 7 computer:
     set-executionpolicy unrestricted
     .\ScrubCil.ps1 saved.cil
     ```
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

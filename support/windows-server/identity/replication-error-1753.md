@@ -1,17 +1,17 @@
 ---
 title: Active Directory Replication fails with Win32 error 1753
 description: Describes an issue where AD operations fail with Win32 error 1753 (There are no more endpoints available from the endpoint mapper).
-ms.date: 3/24/2022
+ms.date: 05/10/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:active-directory-replication, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # Active Directory Replication Error 1753: There are no more endpoints available from the endpoint mapper
 
@@ -240,7 +240,7 @@ Active Directory and other applications also register services that receive dyna
 
 Verify that the RPC Server application of interest has registered itself with the RPC endpoint mapper on the RPC Server (the source DC in the case of AD replication).
 
-There are many ways to accomplish this task. One is to install and run [PORTQRY](https://www.microsoft.com/download/details.aspx?familyid=89811747-C74B-4638-A2D5-AC828BDC6983&displaylang=en) from an admin privileged command prompt on the console of the source DC:
+There are many ways to accomplish this task. One is to install and run [PORTQRY](https://www.microsoft.com/download/details.aspx?id=17148) from an admin privileged command prompt on the console of the source DC:
 
 ```console
 c:\>portquery -n \<source DC> -e 135 >file.txt
@@ -330,6 +330,10 @@ Summary:
 
 - Example 1 failed because of an invalid host to IP mapping (in the HOST file in this case). It caused the destination DC to resolve to a "source" DC that didn't have the AD service running (or even installed for that matter). So the replication SPN wasn't yet registered, and the source DC returned error 1753.
 - In the second case, an invalid host to IP mapping (again in the HOST file) caused the destination DC to connect to a DC that had registered the {E351...} replication SPN. But that source had a different hostname and security identity than the intended source DC, so the attempts failed with error **-2146893022: The target principal name is incorrect**.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Active Directory replication issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication.md).
 
 ### Related Content
 

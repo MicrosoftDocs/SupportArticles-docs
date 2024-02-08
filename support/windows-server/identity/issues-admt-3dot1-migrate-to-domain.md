@@ -1,17 +1,17 @@
 ---
 title: Issues when you migrate to domain with ADMT 3.1
 description: Describes issues that you may experience when you use Active Directory Migration Tool 3.1 to migrate Active Directory data to a Windows Server 2008 R2 domain.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, scheung
 ms.custom: sap:active-directory-migration-tool-admt, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # Known issues that may occur when you use ADMT 3.1 to migrate to a domain that contains Windows Server 2008 R2 domain controllers
 

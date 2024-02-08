@@ -1,17 +1,17 @@
 ---
 title: Available updates for RDS in Windows Server 2012 R2
 description: Describes available hotfixes and updates for issues that can occur in Remote Desktop Services for Microsoft Windows Server 2012 R2 environments.
-ms.date: 9/24/2021
+ms.date: 11/01/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, darank
 ms.custom: sap:administration, csstroubleshoot
-ms.technology: windows-server-rds
+ms.subservice: rds
 ---
 # Available updates for Remote Desktop Services in Windows Server 2012 R2
 
@@ -126,7 +126,7 @@ The hotfixes and updates are arranged by component areas within Remote Desktop S
 
 - [2964833](https://support.microsoft.com/help/2964833) Windows 8.1 or Windows 7 cannot connect over DirectAccess to a Remote Desktop Session Host server farm
 
-- [2964832](https://support2.microsoft.com/help/2964832) RemoteApp program pop-up window is hidden in Windows
+- [2964832](https://support.microsoft.com/help/2964832) RemoteApp program pop-up window is hidden in Windows
 
 - [2925429](https://support.microsoft.com/help/2925429) Print jobs are lost or an application crashes in Microsoft Enterprise Desktop Virtualization 2.0 in Windows
 
@@ -138,7 +138,7 @@ The hotfixes and updates are arranged by component areas within Remote Desktop S
 
 - [3091411](https://support.microsoft.com/help/3091411)  User connection fails when many connections are made to Windows Server 2012 R2-based RD Connection Broker
 
-- [Communication issues occur when Remote Desktop Connection Broker connects to SQL Server in Windows Server 2012 R2](/troubleshoot/windows-server/remote/communication-issues)
+- [Communication issues occur when Remote Desktop Connection Broker connects to SQL Server in Windows Server 2012 R2](communication-issues.md)
 
 ## Remote Desktop Gateway
 

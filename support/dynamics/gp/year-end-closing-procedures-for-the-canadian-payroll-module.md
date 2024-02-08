@@ -2,7 +2,7 @@
 title: Year-end closing procedures for the Canadian Payroll module
 description: Describes how to perform the year-end closing routine for Canadian Payroll in Microsoft Dynamics GP. This article also lists preparation steps and troubleshooting information for the year-end closing routine.
 ms.reviewer: theley
-ms.date: 02/15/2023
+ms.date: 01/08/2024
 ---
 # Year-end closing procedures for the Canadian Payroll module in Microsoft Dynamics GP
 
@@ -27,7 +27,7 @@ This article discusses the payroll year-end update and the payroll tax update. W
 ## Payroll year-end checklist
 
 1. [Complete all the pay runs for the current year.](#complete-all-the-pay-runs-for-the-current-year)
-2. [Complete any necessary 2023 payroll reports.](#complete-any-necessary-2023-payroll-reports)
+2. [Complete any necessary payroll reports.](#complete-any-necessary-payroll-reports)
 3. [Make a backup of the data.](#make-a-backup-of-the-data)
 4. [Install the Canadian year-end update.](#install-the-canadian-year-end-update)
 5. [Complete the Year End File Reset process.](#complete-the-year-end-file-reset-process)
@@ -36,16 +36,14 @@ This article discusses the payroll year-end update and the payroll tax update. W
 8. [Edit the T4, T4A, and RL-1 records as necessary.](#edit-the-t4-t4a-and-rl-1-records-as-necessary)
 9. [Create T4, T4A, and RL-1 Summary records.](#create-t4-t4a-and-rl-1-summary-records)
 10. [Print the T4, T4A, RL-1 reports and create T4, T4A and RL-1 XML files, if appropriate.](#print-the-t4-t4a-rl-1-reports-and-create-t4-t4a-and-rl-1-xml-files-if-appropriate)
-11. [Verify that pay periods for 2024 are set correctly.](#verify-that-the-pay-periods-are-set-correctly-for-2024)
+11. [Verify that pay periods are set correctly.](#verify-that-the-pay-periods-are-set-correctly)
 
 ### Complete all the pay runs for the current year
 
 > [!NOTE]
-> Any batch that has a value of **2024** in the **Cheque Date** field should be processed after you perform the year-end reset. If the cheque date of your final pay period for 2023 is in the year 2023, the 2023 tax tables must be used per the statement in the Canada Customs and Revenue Agency document T4001.
+> Any batch that has a value of the new payroll year in the **Cheque Date** field should be processed after you perform the year-end reset.
 
-For example, a weekly payroll at the end of December with a cutoff date of January 1, 2024, is processed using the 2024 tax calculations. This payroll will be included in the 2024 history.
-
-### Complete any necessary 2023 payroll reports
+### Complete any necessary payroll reports
 
 ### Make a backup of the data
 
@@ -202,28 +200,24 @@ To do this, follow these steps:
 6. To print the reports, select **T4A Segment** and **T4A Summary**.
 7. To generate the electronic T4A's, select **Electronic T4A's**. Complete the **Payroll Electronic Transfer T4A** window and then select either **Verify Only** or **Verify and Generate**.
 
-### Verify that the pay periods are set correctly for 2024
+### Verify that the pay periods are set correctly
 
 To verify that the pay periods are set correctly for the upcoming new year, in Microsoft Dynamics GP, point to **Tools** on the Microsoft Dynamics GP menu, then point to **Setup** > **Payroll - Canada** > **Control**, and then select **Frequency**.
 
 ## FAQ
 
-**Q1: Are there any new features/changes that I should be aware of for Year-End?**
+**Q1: When should I install the Year-End Update?**
 
-A1: Refer to the Year-End [Microsoft Dynamics GP Year-End Update: Canadian Payroll](https://community.dynamics.com/gp/b/dynamicsgp/posts/microsoft-dynamics-gp-year-end-update-canadian-payroll) article for the most up-to-date information.
+A1: Basically, you should finish all your pay runs for the current year and install the Year-End Update (and complete through the Year-End File Reset or step 5 in the checklist above so Basic Personal Amounts are updated) before you do any pay runs for the next new year. The Year-End update will include the new tax code needed for the pay runs in the next new year. Follow the steps noted in the checklist above.
 
-**Q2: When should I install the Year-End Update?**
+**Q2: What should I do if the Year-End Reset was done AFTER a pay run was made in the new year?**
 
-A2: Basically, you should finish all your pay runs for the current year and install the Year-End Update (and complete through the Year-End File Reset or step 5 in the checklist above so Basic Personal Amounts are updated) before you do any pay runs for the next new year. The Year-End update will include the new tax code needed for the pay runs in the next new year. Follow the steps noted in the checklist above.
+A2: You'll need to restore to a backup from BEFORE the Year-End Reset was done. Void the pay run for the new year. Then do the Year-End Reset (to move all the current year data to history, and Reset Master to index all the Employee's Basic Personal Amounts). Then you can redo the pay run for the new year now that the updated tax amounts are in place for each employee. Keep in mind that the new pay run may produce different amounts, as they may have maxed out on some amounts using last year's amounts, and taxes may have changed for the new year.
 
-**Q3: What should I do if the Year-End Reset was done AFTER a pay run was made in the new year?**
+**Q3: Why do I have to key in the RL-1 Auth Number?**
 
-A3: You'll need to restore to a backup from BEFORE the Year-End Reset was done. Void the pay run for the new year. Then do the Year-End Reset (to move all the current year data to history, and Reset Master to index all the Employee's Basic Personal Amounts). Then you can redo the pay run for the new year now that the updated tax amounts are in place for each employee. Keep in mind that the new pay run may produce different amounts, as they may have maxed out on some amounts using last year's amounts, and taxes may have changed for the new year.
+A3: To make year-end more seamless, the **RL-1 Auth Number** field was added as an editable field to the **Payroll T4/R1 Print- Canada** window. The user will now be required to key in the RL-1 Slip number in this field. This authorization number is used by Revenue Quebec to identify that the forms came from Microsoft Dynamics GP. This authorization number will be stored in a SQL table [CPY20100], per year, so it's available for reprints. If the user updates the **RL-1 Auth Number** field, the **Last Updated Date** will be changed to the current System Date. The RL-1 Report (P_CPY_SETP_R1_Laser) was also changed to read this new authorization number field.
 
-**Q4: Why do I have to key in the RL-1 Auth Number?**
+**Q4: Why do the taxes calculated in Dynamics GP differ from the CRA online calculator? How are Income Taxes calculated in Canadian Payroll?**
 
-A4: To make year-end more seamless, the **RL-1 Auth Number** field was added as an editable field to the **Payroll T4/R1 Print- Canada** window. The user will now be required to key in the RL-1 Slip number in this field. This authorization number is used by Revenue Quebec to identify that the forms came from Microsoft Dynamics GP. This authorization number will be stored in a SQL table [CPY20100], per year, so it's available for reprints. If the user updates the **RL-1 Auth Number** field, the **Last Updated Date** will be changed to the current System Date. The RL-1 Report (P_CPY_SETP_R1_Laser) was also changed to read this new authorization number field.
-
-**Q5: Why do the taxes calculated in Dynamics GP differ from the CRA online calculator? How are Income Taxes calculated in Canadian Payroll?**
-
-A5: Tax rates are included in the GP code and not stored in SQL tables for Canadian Payroll. Microsoft Dynamics GP uses an Averaging Convention formula to calculate taxes that are within the acceptable tax ranges published by the Canada Revenue Agency (CRA). See [Income Tax calculations or discrepancies with the CRA in Canadian Payroll for Microsoft Dynamics GP](income-tax-calculations-discrepancies-with-cra.md) for more information on how taxes are calculated.
+A4: Tax rates are included in the GP code and not stored in SQL tables for Canadian Payroll. Microsoft Dynamics GP uses an Averaging Convention formula to calculate taxes that are within the acceptable tax ranges published by the Canada Revenue Agency (CRA). See [Income Tax calculations or discrepancies with the CRA in Canadian Payroll for Microsoft Dynamics GP](income-tax-calculations-discrepancies-with-cra.md) for more information on how taxes are calculated.

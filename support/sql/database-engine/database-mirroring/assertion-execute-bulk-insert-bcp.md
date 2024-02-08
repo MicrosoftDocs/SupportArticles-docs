@@ -4,7 +4,6 @@ description: This article provides a workaround for the problem that occurs when
 ms.date: 09/23/2022
 ms.custom: sap:Administration and Management
 ms.reviewer: nathansc
-ms.prod: sql
 ---
 # SQL Server assertion error when you try to execute a Bulk Insert or BCP statement
 

@@ -1,17 +1,17 @@
 ---
 title: Guidance for troubleshooting MBAM
 description: Introduces general guidance for troubleshooting scenarios related to MBAM.
-ms.date: 5/10/2022
+ms.date: 05/10/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:bitlocker, csstroubleshoot
-ms.technology: windows-server-security
+ms.subservice: windows-security
 ---
 # MBAM troubleshooting guidance
 

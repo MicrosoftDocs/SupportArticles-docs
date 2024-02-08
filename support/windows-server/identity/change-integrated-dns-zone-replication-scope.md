@@ -1,17 +1,17 @@
 ---
 title: Can't change replication scope of AD-integrated zone
 description: Describes an issue where you receive an error message when you try to change the replication scope of an Active Directory-integrated DNS zone. Resolution involves the assignment of permissions to the built-in administrator account.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, roblane
 ms.custom: sap:active-directory-replication, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # You cannot change the replication scope of an Active Directory integrated DNS zone in Windows Server 2003
 
@@ -50,3 +50,7 @@ To add the built-in administrators group account to the manage auditing and secu
 11. Click **OK**.
 12. Quit the Active Directory Users and Computers snap-in.
 13. Change the replication scope of the Active Directory integrated DNS zone.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Active Directory replication issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication.md).

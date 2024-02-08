@@ -4358,6 +4358,306 @@
       "source_path": "support/power-platform/power-apps/dataverse-web-api/web-api-client-errors.md",
       "redirect_url": "/troubleshoot/power-platform/power-apps/dataverse/web-api-client-errors",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/networking/rodc-logs-event-4015-error-00002095.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/event-4015-dns-server-encounters-critical-error",
+      "redirect_document_id": true
+    },    
+    {
+      "source_path": "support/developer/webapps/welcome-webapps.yml",
+      "redirect_url": "/troubleshoot",
+      "redirect_document_id": false
+    },    
+    {
+      "source_path": "support/developer/visualstudio/cpp/libraries/minimum-service-pack-levels.md",
+      "redirect_url": "/cpp/windows/latest-supported-vc-redist",
+      "redirect_document_id": false
+    },    
+    {
+      "source_path": "support/developer/webapps/iis/iis-extensions-tools-addons/troubleshooting-problems-with-microsoft-web-platform-installer.md",
+      "redirect_url": "/previous-versions/troubleshoot/iis/troubleshoot-problems-microsoft-web-platform-installer",
+      "redirect_document_id": false
+    },  
+    {
+      "source_path": "support/dynamics-365/field-service/index.md",
+      "redirect_url": "/troubleshoot/dynamics-365/field-service/welcome-field-service",
+      "redirect_document_id": false
+    },  
+    {
+      "source_path": "support/azure/microsoft-entra/index.yml",
+      "redirect_url": "/troubleshoot/azure/microsoft-entra/welcome-microsoft-entra",
+      "redirect_document_id": true
+    },  
+    {
+      "source_path": "support/azure/virtual-machines/error-code-0xc000000f.md",
+      "redirect_url": "/troubleshoot/azure/virtual-machines/boot-error-0xc000000f",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/webapps/iis/www-service-svchost/disable-winhttp-tracing-sdp.md",
+      "redirect_url": "/previous-versions/troubleshoot/iis/disable-winhttp-tracing-sdp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/webapps/iis/general/expression-web-faq.yml",
+      "redirect_url": "/previous-versions/troubleshoot/iis/expression-web-faq",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/description-of-windows-mobile-device-center.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/description-of-windows-mobile-device-center",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/vari8fromcy-produces-incorrect-value.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/vari8fromcy-produces-incorrect-value",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/two-dll-hosts-start-com-plus-enabled.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/two-dll-hosts-start-com-plus-enabled",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/descriptions-workings-ole-threading-models.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/descriptions-workings-ole-threading-models",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/calling-systemparametersinfo-work-incorrectly.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/calling-systemparametersinfo-work-incorrectly",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/getmessage-ignores-posted-messages.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/getmessage-ignores-posted-messages",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/icon-overlay-handlers-windows-shell.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/icon-overlay-handlers-windows-shell",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/pathisdirectory-may-blocked.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/pathisdirectory-may-blocked",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/desktop-bridge-app-fail-start-run-as-administrator.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/desktop-bridge-app-fail-start-run-as-administrator",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/hook-procedure-not-receiving-vk-convert-message.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/hook-procedure-not-receiving-vk-convert-message",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/hard-error-popup-mode.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/hard-error-popup-mode",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/warning-1946-when-you-install-installer-package.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/warning-1946-when-you-install-installer-package",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/screen-saver-command-line.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/screen-saver-command-line",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/ktmrm-service-event-id-0x80070005.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/ktmrm-service-event-id-0x80070005",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/midi-device-app-hangs.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/midi-device-app-hangs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/wia-2-not-support-duplex.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/wia-2-not-support-duplex",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/win32-raw-data-to-printer.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/win32-raw-data-to-printer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/modify-printer-settings-setprinter-api.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/modify-printer-settings-setprinter-api",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/s1023-error-when-you-install-directx-sdk.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/s1023-error-when-you-install-directx-sdk",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/v4-print-driver-raw-mode-pcl-postscript.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/v4-print-driver-raw-mode-pcl-postscript",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/dwm-drop-direct3d-10-application-frame.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/dwm-drop-direct3d-10-application-frame",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/dxgi-cannot-draw-cursor.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/dxgi-cannot-draw-cursor",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/printer-device-fonts.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/printer-device-fonts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/printer-print-job-status.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/printer-print-job-status",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/writeprinter-raw-data-not-print.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/writeprinter-raw-data-not-print",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/close-non-blocked-socket-memory-leak.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/close-non-blocked-socket-memory-leak",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/setfilecompletionnotificationmodes-causes-io-completion.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/setfilecompletionnotificationmodes-causes-io-completion",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/beginread-causes-invalidoperationexception.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/beginread-causes-invalidoperationexception",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/header-library-requirement-socket-ipproto-ip.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/header-library-requirement-socket-ipproto-ip",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/data-segment-tcp-winsock.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/data-segment-tcp-winsock",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/use-dnsquery-resolve-host-names.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/use-dnsquery-resolve-host-names",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/get-information-authenticode-signed-executables.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/get-information-authenticode-signed-executables",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/change-krbtgt-password-may-fail.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/change-krbtgt-password-may-fail",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/limitation-10-smart-card-readers.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/limitation-10-smart-card-readers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/asynchronous-disk-io-synchronous.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/asynchronous-disk-io-synchronous",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/msxml-not-support-dotnet-application.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/msxml-not-support-dotnet-application",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/custom-virtual-channel-not-supported.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/custom-virtual-channel-not-supported",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/evtformatmessage-formatted-string-event.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/evtformatmessage-formatted-string-event",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/createprocess-cannot-eliminate-duplicate-variables.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/createprocess-cannot-eliminate-duplicate-variables",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/setsystemtimeadjustment-less-than-16.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/setsystemtimeadjustment-less-than-16",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/troubleshoot-event-message-not-found.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/troubleshoot-event-message-not-found",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/file-copy-operation-deletes-content.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/file-copy-operation-deletes-content",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/handle-dates-and-times-dst.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/handle-dates-and-times-dst",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/heap-manager-may-not-decommit-memory.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/heap-manager-may-not-decommit-memory",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/access-violation-bex-appcrash.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/access-violation-bex-appcrash",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/receive-cd-rom-notification.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/receive-cd-rom-notification",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/msi-packages-wmi-queries-cannot-run.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/msi-packages-wmi-queries-cannot-run",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/aac-audio-not-playing-for-mpeg-2-ts-file-windows-8-1.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows/win32/aac-audio-not-playing-for-mpeg-2-ts-file-windows-8-1",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows/win32/directshow-not-connect-downstream-filter.md",
+      "redirect_url": "/troubleshoot/windows/win32/welcome-windowsdeveloper",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/assembly-version-assembly-file-version.md",
+      "redirect_url": "/troubleshoot/developer/dotnet/framework/general/assembly-version-assembly-file-version",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/database-engine/security/windows-prevents-unconstrained-delegation.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/connect/windows-prevents-unconstrained-delegation",
+      "redirect_document_id": true
     }
   ]
 }

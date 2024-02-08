@@ -1,17 +1,17 @@
 ---
 title: Name computers, domains, sites, and OUs
 description: Describes how to name computers, domains, sites, and organizational units in Active Directory.
-ms.date: 2/27/2023
+ms.date: 11/30/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:user-computer-group-and-object-management, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # Naming conventions in Active Directory for computers, domains, sites, and OUs
 
@@ -156,6 +156,8 @@ The following sections describe NetBIOS domain names and DNS domain names.
 
   > [!NOTE]  
   > Microsoft Windows NT allows non-DNS names to have period. Periods shouldn't be used in Active Directory NetBIOS domain names. If you're upgrading a computer whose NetBIOS name contains a period, change the name by migrating the domain to a new domain structure. Don't use periods in new NetBIOS domain names.
+  >
+  > The ampersand (&) character in NetBIOS domain names was allowed previously and is supported for historical purposes only. Don't create new Active Directory domains whose NetBIOS domain names contain ampersand (&) characters.
 
 - **Disallowed characters:** The DNS host name checking function verifies NetBIOS domain names. These names can't contain the following characters:
 
@@ -168,7 +170,6 @@ The following sections describe NetBIOS domain names and DNS domain names.
   - dollar sign ($)
   - percent (%)
   - caret (^)
-  - ampersand (&)
   - apostrophe (')
   - period (.)
   - parentheses (())

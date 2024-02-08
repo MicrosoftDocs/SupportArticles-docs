@@ -3,7 +3,7 @@ title: Error code ExchangeSyncSchedulingConflictsError
 description: This article provides a resolution for the problem that occurs when you save appointment [appointment subject] from Exchange to Microsoft Dynamics 365.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: d365-sales-email-office-integration
 ---
 # A scheduling conflict was found when saving appointment [appointment subject] from Exchange to Microsoft Dynamics 365

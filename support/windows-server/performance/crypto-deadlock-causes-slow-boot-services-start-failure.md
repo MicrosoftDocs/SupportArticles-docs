@@ -1,17 +1,17 @@
 ---
 title: Slow boot and services start failure
 description: provides a workaround for an issue that causes slow boot and services fail to start.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, tode
 ms.custom: sap:boot-is-slow, csstroubleshoot
-ms.technology: windows-server-performance
+ms.subservice: performance
 ---
 # Http <-> Crypto deadlock causes slow boot and service start failure on SSL-enabled
 

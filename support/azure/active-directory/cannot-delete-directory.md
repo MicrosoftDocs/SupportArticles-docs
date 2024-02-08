@@ -1,21 +1,21 @@
 ---
-title: Can't delete a B2C directory in Azure AD
-description: Describes an issue in which an error occurs when you try to delete a B2C directory in Azure AD. Provides a solution. 
+title: Can't delete a B2C directory in Microsoft Entra ID
+description: Describes an issue in which an error occurs when you try to delete a B2C directory in Microsoft Entra ID. Provides a solution. 
 ms.date: 05/28/2020
 ms.reviewer: willfid, chricas
 ms.service: active-directory
 ms.subservice: B2C
 ---
-# Error when you try to delete a B2C directory in Azure AD: Cannot delete '\<contoso>'
+# Error when you try to delete a B2C directory in Microsoft Entra ID: Cannot delete '\<contoso>'
 
-This article describes an issue in which an error occurs when you try to delete a B2C directory in Azure Active Directory.
+This article describes an issue in which an error occurs when you try to delete a B2C directory in Microsoft Entra ID.
 
-_Original product version:_ &nbsp; Azure Active Directory  
+_Original product version:_ &nbsp; Microsoft Entra ID  
 _Original KB number:_ &nbsp; 3112170
 
 ## Symptoms
 
-In a Microsoft Azure Active Directory environment, you set up a B2C directory, and then you try to delete it. However, you receive the following error message:
+In a Microsoft Entra environment, you set up a B2C directory, and then you try to delete it. However, you receive the following error message:
 
 > Cannot delete '\<contoso>'  
 The following issue(s) prevent deletion of the directory:  
@@ -53,7 +53,7 @@ To do this, follow these steps:
 
 To do this, follow these steps:
 
-1. In the Azure AD B2C directory, locate and select the **Azure Active Directory** blade in the Azure portal.
+1. In the Azure AD B2C directory, locate and select the **Microsoft Entra ID** blade in the Azure portal.
 2. On the **Overview** menu, select **Delete Directory**.
 
     :::image type="content" source="media/cannot-delete-directory/overview.png" alt-text="Screenshot shows the Delete Directory option on the Overview menu." border="false":::

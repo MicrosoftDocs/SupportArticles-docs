@@ -1,17 +1,17 @@
 ---
 title: No logon servers are available
 description: Occurs when cloning failed, and the server starts in Directory Services Repair Mode (DSRM). There's no visual indication that the domain controller has started in DSRM.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, nedpyle
 ms.custom: sap:active-directory-backup-restore-or-disaster-recovery, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # No logon servers are available error after cloning domain controller
 

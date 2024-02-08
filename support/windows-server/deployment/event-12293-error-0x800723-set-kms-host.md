@@ -1,17 +1,17 @@
 ---
 title: DNS Event Security Event 12293 with error 0x80072338 registering KMS host record
 description: Provides a resolution to fix the event ID 12293 that occurs when setting up a KMS host.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:activation, csstroubleshoot
-ms.technology: windows-server-deployment
+ms.subservice: deployment
 ---
 # Security Event 12293 with error 0x80072338 registering KMS host record
 
@@ -56,3 +56,7 @@ SRV records in DNS use the record name as the ID for all records of that type. T
 The _VLMCS SRV record can be thought as an array with single name. In a default DDNS configuration, any machine can create a unique SRV record. Once a \_VLMCS record exists, no other computer has the rights to change that record. The second and later KMS hosts create the SRV records with the same name. The SRV record design allows a DNS admin to explicitly and control which machines are allowed to advertise services in the DNS zone.
 
 When publishing to DNS is successful, the KMS host will log an Event ID 12294 in the application event log.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

@@ -1,17 +1,17 @@
 ---
 title: MDT Media Deployment USB isn't bootable
 description: Provides a solution to an error that occurs when you try to boot a Microsoft Deployment Toolkit 2012 Update 1 media deployment USB drive on a x86 UEFI-based system.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, mniehaus, aaroncz
 ms.custom: sap:setup, csstroubleshoot
-ms.technology: windows-server-deployment
+ms.subservice: deployment
 ---
 # MDT Media Deployment USB drive not bootable on x86 UEFI system
 
@@ -48,3 +48,7 @@ UEFI systems can only boot operating systems and Windows PE boot images that mat
 Due to limitations in the UEFI boot process, it isn't possible to create media that works with both x86 and x64 UEFI systems. So for MDT media that specifies both x86 and x64 architecture support, MDT can only support one architecture for UEFI booting. (Both x86 and x64 work fine for non-UEFI systems.) Rather than generating an error, MDT logs a message indicating that the resulting media will only support x64 UEFI systems.
 
 To support UEFI x86 systems, you need to have separate media that selects only the x86 architecture.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

@@ -1,17 +1,17 @@
 ---
 title: Microsoft Product Support Reporting Tool for Microsoft Software Update Services v 5.2.2003.0
 description: Provides some steps for installing the Microsoft Product Support Reporting Tool for Microsoft Software Update Services
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-dgit
 ms.custom: sap:servicing, csstroubleshoot
-ms.technology: windows-server-deployment
+ms.subservice: deployment
 ---
 # Microsoft Product Support Reporting Tool for Microsoft Software Update Services v 5.2.2003.0  
 
@@ -44,3 +44,7 @@ To use the Microsoft Product Support Reporting Tool for Software Update Services
     > [!NOTE]
     > The **System_root** folder is the folder where you installed the operating system. Typically, this folder is the C:\\Winnt folder or the C:\\Windows folder.
 4. Send the .cab file or compressed (zipped) file to your Microsoft Support Professional using the e-mail address the Microsoft Support Professional provides.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

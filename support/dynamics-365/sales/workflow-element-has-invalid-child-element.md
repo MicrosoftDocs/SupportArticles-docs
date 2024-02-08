@@ -3,7 +3,7 @@ title: Workflow element has invalid child element
 description: Provides a solution to the 8004801a error that occurs when you try to import a solution in Microsoft Dynamics 365.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: d365-sales-custom-solutions
 ---
 # The element Workflow has invalid child element ProcessTriggers error occurs when importing a Microsoft Dynamics 365 solution

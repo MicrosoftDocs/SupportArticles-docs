@@ -2,9 +2,7 @@
 title: New CMG creation fails after entering sign-in credentials in Configuration Manager
 description: Helps to resolve the issue in which a new Cloud Management Gateway (CMG) creation fails after entering sign-in credentials in Configuration Manager version 2207 or earlier versions.
 ms.date: 02/22/2023
-ms.reviewer: kaushika, disattana, umaikhan
-author: v-lianna
-ms.author: v-lianna
+ms.reviewer: kaushika, disattana, umaikhan, v-lianna
 ---
 
 # New CMG creation fails after entering sign-in credentials in Configuration Manager

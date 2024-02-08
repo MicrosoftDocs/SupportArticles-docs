@@ -4,7 +4,6 @@ description: This article describes a "by design" behavior that occurs when you 
 ms.date: 09/25/2020
 ms.custom: sap:Administration and Management
 ms.reviewer: kfarlee
-ms.prod: sql
 ---
 # SQL Server records a backup operation in the backupset history table when you use VSS to back up files on a volume
 

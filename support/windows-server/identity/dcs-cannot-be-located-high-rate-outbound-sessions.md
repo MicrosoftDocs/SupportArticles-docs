@@ -1,17 +1,17 @@
 ---
 title: DCs can't be located and high-rate outbound sessions
 description: Provides some resolutions for the issue in which a machine creates outbound sessions at a high rate. When this issue occurs, the Netlogon service can't locate DCs and many UDP ports are used by the LSASS process.
-ms.date: 1/25/2022
+ms.date: 01/25/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, herbertm
 ms.custom: sap:ldap-configuration-and-interoperability, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # Domain controllers can't be located and high-rate outbound sessions
 

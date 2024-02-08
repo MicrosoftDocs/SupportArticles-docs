@@ -1,17 +1,17 @@
 ---
 title: Disable and replace TLS 1.0 in ADFS
 description: Provides guidance and considerations for disabling and replacing TLS 1.0 in ADFS.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:active-directory-federation-services-ad-fs, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # Considerations for disabling and replacing TLS 1.0 in AD FS
 

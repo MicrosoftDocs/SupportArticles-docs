@@ -1,10 +1,8 @@
 ---
 title: Debug PowerShell scripts run by Custom Script Extension or Run Command
 description: Troubleshoot PowerShell script failures when you run them remotely on a virtual machine by using the Custom Script Extension or Run Command feature.
-ms.date: 3/15/2022
-author: DennisLee-DennisLee
-ms.author: v-dele
-ms.reviewer: clandis 
+ms.date: 03/15/2022
+ms.reviewer: clandis, v-leedennis
 editor: v-jsitser
 ms.service: virtual-machines
 ms.subservice: vm-troubleshooting-tools
@@ -31,8 +29,8 @@ The `StdOut` and `StdErr` substatuses are in the certificate registration point 
 | Interface | How to view the substatus |
 | --------- | ------------------------- |
 | [Azure portal](https://portal.azure.com) | <ol><li>Search for and select **Virtual machines**. </li><li>Select your VM from the list. </li><li>On the VM overview page, select **Extensions + applications** > **Extensions**. </li><li>Select the extension that was used to run the command. (It will be named either **CustomScriptExtension** or **RunCommand**.) </li><li>Select **View detailed status**. </li></ol> |
-| Azure PowerShell | <p>Enter the [Get-AzVM](/powershell/module/az.compute/get-azvm) cmdlet to get the properties of an Azure VM, as follows:</p><blockquote>`Get-AzVM -ResourceGroupName <resource-group-name> -Name <vm-name> -Status`</blockquote> |
-| Azure CLI | <p>Enter the [az vm get-instance-view](/cli/azure/vm#az-vm-get-instance-view) command to get instance information about an Azure VM, as follows:</p><blockquote>`az vm get-instance-view --resource-group <resource-group-name> --name <vm-name> --query instanceView.extensions`</blockquote> |
+| Azure PowerShell | Enter the [Get-AzVM](/powershell/module/az.compute/get-azvm) cmdlet to get the properties of an Azure VM, as follows:<br> `Get-AzVM -ResourceGroupName <resource-group-name> -Name <vm-name> -Status`</br> |
+| Azure CLI | Enter the [az vm get-instance-view](/cli/azure/vm#az-vm-get-instance-view) command to get instance information about an Azure VM, as follows:<br> `az vm get-instance-view --resource-group <resource-group-name> --name <vm-name> --query instanceView.extensions`</br> |
 
 The error that usually causes the script to fail appears in the `StdErr` substatus. However, scripts can also fail without logging a fatal error entry in that substatus.
 
@@ -66,7 +64,7 @@ If the `StdErr` substatus doesn't show the cause of the problem, you can turn on
 To turn on different types of logging, follow the steps in the next several sections.
 
 > [!WARNING]
-> Some of the instructions involve changing the Windows registry. Serious problems might occur if you modify the registry incorrectly by using Registry Editor or by using another method. These problems might require that you reinstall the operating system. Microsoft can't guarantee that these problems can be solved. [Back up your existing registry entries](/troubleshoot/windows-server/performance/windows-registry-advanced-users#back-up-the-registry) first, and then modify the registry at your own risk.
+> Some of the instructions involve changing the Windows registry. Serious problems might occur if you modify the registry incorrectly by using Registry Editor or by using another method. These problems might require that you reinstall the operating system. Microsoft can't guarantee that these problems can be solved. [Back up your existing registry entries](../../windows-server/performance/windows-registry-advanced-users.md#back-up-the-registry) first, and then modify the registry at your own risk.
 
 ### Increase the maximum size of the event logs
 

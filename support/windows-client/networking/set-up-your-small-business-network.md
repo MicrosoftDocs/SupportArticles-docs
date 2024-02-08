@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:tcp/ip-communications, csstroubleshoot
-ms.technology: windows-client-networking
+ms.subservice: networking
 ---
 # Set up your small business network
 
@@ -1134,7 +1134,7 @@ If you have a combined modem and router, follow these instructions:
 
 #### Complete the modem and router setup
 
-To complete the modem and router setup， follow the instructions:
+To complete the modem and router setup,  follow the instructions:
 
 1. Click **Start**.
 2. Click **Control Panel**.

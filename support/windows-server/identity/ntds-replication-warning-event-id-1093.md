@@ -1,17 +1,17 @@
 ---
 title: NTDS replication warning Event ID 1093
 description: Provides a solution to an NTDS warning event ID 1093.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, bobbiez, tonnyp
 ms.custom: sap:active-directory-replication, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # NTDS replication warning with Event ID 1093
 
@@ -151,3 +151,7 @@ You may use this method to export the user data of the user object who reach the
     > It may take some time as there are lots of certificates need to be dumped.
 
 5. You can identify the certificates with their text or UI format and decide with certificates can be removed from this user object.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Active Directory replication issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication.md).

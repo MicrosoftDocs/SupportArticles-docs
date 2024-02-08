@@ -95,7 +95,7 @@ Microsoft has confirmed that this is a problem in the Microsoft products that ar
 
 - Federation between AdminSite and WindowsAuthSite (default configuration).
 - Federation between TenantSite and AuthSite (default configuration).
-- Federation between TenantSite and Azure Active Directory Federation Services (AD FS) by using AuthSite as Identity Store.For information about AD FS for Windows Azure Pack, see [Configure Active Directory Federation Services for Windows Azure Pack](https://technet.microsoft.com/library/dn296436.aspx).
+- Federation between TenantSite and Active Directory Federation Services (AD FS) by using AuthSite as Identity Store.For information about AD FS for Windows Azure Pack, see [Configure Active Directory Federation Services for Windows Azure Pack](https://technet.microsoft.com/library/dn296436.aspx).
 
 After you run the script file that is mentioned in the "Workaround" section to create new certificates, you must reestablish trust between the portal and the authentication sites and then update AD FS metadata for AuthSite.
 

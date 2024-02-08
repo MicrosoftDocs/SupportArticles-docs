@@ -1,16 +1,17 @@
 ---
-title: Troubleshoot Azure AD Connect objects and attributes
-description: Describes how to determine why an object is not syncing in Azure AD.
-ms.date: 2/3/2021
+title: Troubleshoot Microsoft Entra Connect objects and attributes
+description: Describes how to determine why an object is not syncing in Microsoft Entra ID.
+ms.date: 02/03/2021
 ms.reviewer: nualex
 editor: v-jesits
 ms.service: active-directory
 ms.subservice: enterprise-users
+ms.custom: has-azure-ad-ps-ref
 ---
 
-# End-to-end troubleshooting of Azure AD Connect objects and attributes
+# End-to-end troubleshooting of Microsoft Entra Connect objects and attributes
 
-This article is intended to establish a common practice for how to troubleshoot synchronization issues in Azure Active Directory (Azure AD). This method applies to situations in which an object or attribute doesn't synchronize to Azure Active AD and doesn't display any errors on the sync engine, in the Application viewer logs, or in the Azure AD logs. It's easy to get lost in the details if there's no obvious error. However, by using best practices, you can isolate the issue and provide insights for Microsoft Support engineers.
+This article is intended to establish a common practice for how to troubleshoot synchronization issues in Microsoft Entra ID. This method applies to situations in which an object or attribute doesn't synchronize to Azure Active AD and doesn't display any errors on the sync engine, in the Application viewer logs, or in the Microsoft Entra logs. It's easy to get lost in the details if there's no obvious error. However, by using best practices, you can isolate the issue and provide insights for Microsoft Support engineers.
 
 As you apply this troubleshooting method to your environment, over time, you'll be able to do the following steps:
 
@@ -20,33 +21,33 @@ As you apply this troubleshooting method to your environment, over time, you'll 
 - Identify the starting point for reviewing data.
 - Determine the optimal resolution.
 
-:::image type="content" source="media/troubleshoot-aad-connect-objects-attributes/aad-connect-flow-chart.png" alt-text="Screenshot of the Azure A D Connect flow chart.":::
+:::image type="content" source="media/troubleshoot-aad-connect-objects-attributes/aad-connect-flow-chart.png" alt-text="Screenshot of the Microsoft Entra Connect flow chart.":::
 
-The steps that are provided here start at the local Active Directory level and progress toward Azure AD. These steps are the most common direction of synchronization. However, the same principles apply to the inverse direction (for example, for attribute writeback).
+The steps that are provided here start at the local Active Directory level and progress toward Microsoft Entra ID. These steps are the most common direction of synchronization. However, the same principles apply to the inverse direction (for example, for attribute writeback).
 
 ## Prerequisites
 
 For a better understanding of this article, first read the following prerequisite articles for a better understanding of how to search for an object in different sources (AD, AD CS, MV, and so on), and to understand how to check the connectors and lineage of an object.
 
-- [Azure AD Connect: Accounts and permissions](/azure/active-directory/hybrid/reference-connect-accounts-permissions)
-- [Troubleshoot an object that is not synchronizing with Azure Active Directory](/azure/active-directory/hybrid/tshoot-connect-object-not-syncing)
-- [Troubleshoot object synchronization with Azure AD Connect sync](/azure/active-directory/hybrid/tshoot-connect-objectsync)
+- [Microsoft Entra Connect: Accounts and permissions](/azure/active-directory/hybrid/reference-connect-accounts-permissions)
+- [Troubleshoot an object that is not synchronizing with Microsoft Entra ID](/azure/active-directory/hybrid/tshoot-connect-object-not-syncing)
+- [Troubleshoot object synchronization with Microsoft Entra Connect Sync](/azure/active-directory/hybrid/tshoot-connect-objectsync)
 
 ## Bad troubleshooting practices
 
-The DirSyncEnabled flag in Azure AD controls whether the tenant is prepared to accept synchronization of objects from on-premises AD.
+The DirSyncEnabled flag in Microsoft Entra ID controls whether the tenant is prepared to accept synchronization of objects from on-premises AD.
 We've seen many customers fall into the habit of disabling DirSync on the tenant while troubleshooting object or attribute synchronization issues. It's easy to turn off directory synchronization by running the following PowerShell cmdlet:
 
 ``` PowerShell
 Set-MsolDirSyncEnabled -EnableDirSync $false "Please DON'T and keep reading!"
 ```
 
-However, this can be catastrophic because it triggers a complex and lengthy back-end operation to transfer SoA from local AD to Azure AD/Exchange Online for all the synced objects on the tenant. This operation is necessary to convert each object from DirSyncEnabled to cloud-only, and clean up all the shadow properties that are synced from on-premises AD (for example, ShadowUserPrincipalName and ShadowProxyAddresses). Depending on the size of the tenant, this operation can take more than 72 hours. Also, it's not possible to predict when the operation will finish. Never use this method to troubleshoot a sync issue because this will cause additional harm and won't fix the issue. You'll be blocked from enabling DirSync again until this disabling operation is complete. Also, after you re-enable DirSync, AADC must again match all the on-premises objects with existent Azure AD objects. This process can be disruptive.
+However, this can be catastrophic because it triggers a complex and lengthy back-end operation to transfer SoA from local Active Directory to Microsoft Entra ID / Exchange Online for all the synced objects on the tenant. This operation is necessary to convert each object from DirSyncEnabled to cloud-only, and clean up all the shadow properties that are synced from on-premises AD (for example, ShadowUserPrincipalName and ShadowProxyAddresses). Depending on the size of the tenant, this operation can take more than 72 hours. Also, it's not possible to predict when the operation will finish. Never use this method to troubleshoot a sync issue because this will cause additional harm and won't fix the issue. You'll be blocked from enabling DirSync again until this disabling operation is complete. Also, after you re-enable DirSync, AADC must again match all the on-premises objects with existent Microsoft Entra objects. This process can be disruptive.
 
 The only scenarios in which this command is supported to disable DirSync are as follows:
 
 - You are decommissioning your on-premises synchronization server, and you want to continue managing your identities entirely from the cloud instead of from hybrid identities.
-- You have some synced objects in the tenant that you want to keep as cloud-only in Azure AD and remove from on-premises AD permanently.
+- You have some synced objects in the tenant that you want to keep as cloud-only in Microsoft Entra ID and remove from on-premises AD permanently.
 - You are currently using a custom attribute as the SourceAnchor in AADC (for example, employeeId), and you are re-installing AADC to start using **ms-Ds-Consistency-Guid/ObjectGuid** as the new SourceAnchor attribute (or vice versa).
 - You have some scenarios that involve risky mailbox and tenant migration strategies.
 
@@ -66,10 +67,10 @@ Start-ADSyncSyncCycle
 
 |Acronym/abbreviation|Name/description|
 |---|---|
-|AADC|Azure AD Connect|
-|AADCA|AAD Connector Account|
-|AADCS|Azure AD Connector Space|
-|AADCS:AttributeA |Attribute 'A' in Azure AD Connector Space|
+|AADC|Microsoft Entra Connect|
+|AADCA|Microsoft Entra Connector Account|
+|AADCS|Microsoft Entra Connector Space|
+|AADCS:AttributeA |Attribute 'A' in Microsoft Entra Connector Space|
 |ACLs|Access Control Lists (also known as ADDS permissions)|
 |ADCA|AD Connector Account|
 |ADCS|Active Directory Connector Space|
@@ -110,7 +111,7 @@ In the Synchronization Service Manager, the "Import from AD" step shows which do
 
 :::image type="content" source="media/troubleshoot-aad-connect-objects-attributes/import-from-ad-connection-status.png" alt-text="Screenshot shows the Connection Status area in the Import from A D step.":::
 
-If you have to further troubleshoot connectivity for AD, especially if no errors surfaced in AADConnect server or if you are still in the process of installing the product, start by using the [ADConnectivityTool](/azure/active-directory/hybrid/how-to-connect-adconnectivitytools#adconnectivitytool-during-installation).
+If you have to further troubleshoot connectivity for AD, especially if no errors surfaced in Microsoft Entra Connect server or if you are still in the process of installing the product, start by using the [ADConnectivityTool](/azure/active-directory/hybrid/how-to-connect-adconnectivitytools#adconnectivitytool-during-installation).
 
 Connection issues to ADDS have the following causes:
 
@@ -132,7 +133,7 @@ Troubleshooting summary
 
 After you troubleshoot AD connectivity, run the [Troubleshoot Object Synchronization](/azure/active-directory/hybrid/tshoot-connect-objectsync) tool because this alone can detect the most obvious reasons for an object or attribute not to synchronize.
 
-:::image type="content" source="media/troubleshoot-aad-connect-objects-attributes/aadconnect-troubleshooting.png" alt-text="Screenshot of the AADConnect Troubleshooting screen.":::
+:::image type="content" source="media/troubleshoot-aad-connect-objects-attributes/aadconnect-troubleshooting.png" alt-text="Screenshot of the Microsoft Entra Connect Troubleshooting screen.":::
 
 ### AD Permissions
 
@@ -195,7 +196,7 @@ Troubleshooting summary
 
 #### AD replications
 
-This issue is less likely to affect AADConnect because it causes greater problems. However, when AADConnect is importing data from a domain controller by using delayed replication, it will not import the latest information from AD, which causes sync issues in which an object or attribute that was recently created or changed in AD does not sync to AAD because it was not replicated to the domain controller that AADConnect is contacting. To verify that this is the issue, check the domain controller that AADC uses for import (see "Connectivity to AD"), and use the **AD Users and Computers** console to directly connect to this server (see **Change Domain Controller** in the next image). Then, verify that the data on this server corresponds to the latest data, and whether it is consistent with the respective ADCS data. At this stage, AADC will generate a greater load on the domain controller and networking layer.
+This issue is less likely to affect Microsoft Entra Connect because it causes greater problems. However, when Microsoft Entra Connect is importing data from a domain controller by using delayed replication, it will not import the latest information from AD, which causes sync issues in which an object or attribute that was recently created or changed in AD does not sync to Microsoft Entra ID because it was not replicated to the domain controller that Microsoft Entra Connect is contacting. To verify that this is the issue, check the domain controller that AADC uses for import (see "Connectivity to AD"), and use the **AD Users and Computers** console to directly connect to this server (see **Change Domain Controller** in the next image). Then, verify that the data on this server corresponds to the latest data, and whether it is consistent with the respective ADCS data. At this stage, AADC will generate a greater load on the domain controller and networking layer.
 
 :::image type="content" source="media/troubleshoot-aad-connect-objects-attributes/change-domain-controller.png" alt-text="Screenshot of the Change Domain Controller option of Active Directory.":::
 
@@ -232,9 +233,9 @@ Troubleshooting summary
 
   Keep in mind that even if the domain or OU filtering is confirmed, any changes to domain or OU filtering take effect only after running a full import step.
 
-- **Attribute filtering with Azure AD app and attribute filtering**
+- **Attribute filtering with Microsoft Entra app and attribute filtering**
 
-  An easy-to-miss scenario for attributes not synchronizing is when Azure AD Connect is configured with the [Azure AD app and attribute filtering](/azure/active-directory/hybrid/how-to-connect-install-custom#azure-ad-app-and-attribute-filtering) feature. To check whether the feature is enabled, and for which attributes, take a **General Diagnostics Report**.
+  An easy-to-miss scenario for attributes not synchronizing is when Microsoft Entra Connect is configured with the [Microsoft Entra app and attribute filtering](/azure/active-directory/hybrid/how-to-connect-install-custom#azure-ad-app-and-attribute-filtering) feature. To check whether the feature is enabled, and for which attributes, take a **General Diagnostics Report**.
 
 - **Object type excluded in ADDS Connector configuration**
 
@@ -266,7 +267,7 @@ Troubleshooting summary
 
 Troubleshooting summary
 
-- Check the [Azure AD app and attribute filtering](/azure/active-directory/hybrid/how-to-connect-install-custom#azure-ad-app-and-attribute-filtering) feature
+- Check the [Microsoft Entra app and attribute filtering](/azure/active-directory/hybrid/how-to-connect-install-custom#azure-ad-app-and-attribute-filtering) feature
 - Verify that the object type is included in ADCS.
 - Verify that the attribute is included in ADCS.
 - Run a full import.
@@ -365,7 +366,7 @@ The synchronization between ADCS and MV occurs on the delta/full synchronization
 
    If a sync rule is enabled but not present in the object's lineage, the object should be filtered out by the sync rule's scoping filter. By checking the sync rule's scoping filters, the data on the ADCS object, and whether the sync rule is enabled or disabled, you should be able to determine why that sync rule was not applied to the ADCS object.
 
-   Here is an example of a common troublesome scoping filter from a sync rule responsible for synchronizing Exchange properties. If the object has a null value for **mailNickName**, then none of the Exchange attributes in the transformation rules will flow to Azure AD.
+   Here is an example of a common troublesome scoping filter from a sync rule responsible for synchronizing Exchange properties. If the object has a null value for **mailNickName**, then none of the Exchange attributes in the transformation rules will flow to Microsoft Entra ID.
 
    :::image type="content" source="media/troubleshoot-aad-connect-objects-attributes/inbound-sync-rules.png" alt-text="Screenshot of the View inbound synchronization rule screen.":::
 
@@ -412,7 +413,7 @@ The synchronization between MV and AADCS occurs in the delta/full synchronizatio
 
 1. **Check the outbound sync rules for provisioning**
 
-   An object that is present in MV but missing in AADCS indicates that there were no scoping filters on any of the provisioning sync rules that applied to that object. For example, see the "Out to AAD" sync rules shown in the next image. Therefore, the object was not provisioned in AADCS. This error can occur if there are disabled or customized sync rules.
+   An object that is present in MV but missing in AADCS indicates that there were no scoping filters on any of the provisioning sync rules that applied to that object. For example, see the "Out to Microsoft Entra ID" sync rules shown in the next image. Therefore, the object was not provisioned in AADCS. This error can occur if there are disabled or customized sync rules.
 
    To get a list of inbound provisioning sync rules, run the following command:
 
@@ -444,7 +445,7 @@ The synchronization between MV and AADCS occurs in the delta/full synchronizatio
 
 #### Troubleshooting summary for objects
 
-- Check the scoping filters on the "Out to AAD" outbound provisioning rules.
+- Check the scoping filters on the "Out to Microsoft Entra ID" outbound provisioning rules.
 - Create a preview of the object.
 - Run a full sync cycle.
 - Export the object data by using the **Export-ADSyncObject** script.
@@ -498,56 +499,56 @@ If you have to further debug the ADSync engine (also known as the MiiServer) in 
 
 ## Step 4: Synchronization between AADCS and AzureAD
 
-:::image type="content" source="media/troubleshoot-aad-connect-objects-attributes/sync-aadcs-azuread.png" alt-text="Screenshot of the Sync flow chart between A A D C S and Azure A D.":::
+:::image type="content" source="media/troubleshoot-aad-connect-objects-attributes/sync-aadcs-azuread.png" alt-text="Screenshot of the Sync flow chart between A A D C S and Microsoft Entra ID.":::
 
 ### Objective for Step 4
 
-This stage compares the AADCS object with the respective object that's provisioned in Azure AD.
+This stage compares the AADCS object with the respective object that's provisioned in Microsoft Entra ID.
 
 ### Description for Step 4
 
-Multiple components and processes that are involved in importing and exporting data to and from Azure AD can cause the following issues:
+Multiple components and processes that are involved in importing and exporting data to and from Microsoft Entra ID can cause the following issues:
 
 - Connectivity to the internet
 - Internal firewalls and ISP connectivity (for example, blocked network traffic)
-- The Azure AD Gateway in front of DirSync Webservice (also known as the AdminWebService endpoint)
+- The Microsoft Entra Gateway in front of DirSync Webservice (also known as the AdminWebService endpoint)
 - The DirSync Webservice API
-- The Azure AD Core directory service
+- The Microsoft Entra Core directory service
 
 Fortunately, the issues that affect these components usually generate an error in event logs that can be traced by Microsoft Support. Therefore, these issues are out of scope for this article. Nevertheless, there are still some "silent" issues that can be examined.
 
 ### Troubleshooting AADCS
 
-- **Multiple Active AADC servers exporting to AAD**
+- **Multiple Active AADC servers exporting to Microsoft Entra ID**
 
-  In a common scenario in which objects in Azure AD flip attribute values back and forth, there are more than one active AADConnect servers, and one of these servers loses contact with the local AD but is still connected to the internet and able to export data to Azure AD. Therefore, every time that this "stale" server imports a change from AAD on a synchronized object that's made by the other active server, the sync engine reverts that change based on the stale AD data that's in the ADCS. A typical symptom in this scenario is that you make a change in AD that's synced to Azure AD, but the change reverts to the original value a few minutes later (up to 30 minutes). To quickly mitigate this issue, return to any old servers or virtual machines that have been decommissioned, and check whether the ADSync service is still running.
+  In a common scenario in which objects in Microsoft Entra ID flip attribute values back and forth, there are more than one active Microsoft Entra Connect servers, and one of these servers loses contact with the local AD but is still connected to the internet and able to export data to Microsoft Entra ID. Therefore, every time that this "stale" server imports a change from Microsoft Entra ID on a synchronized object that's made by the other active server, the sync engine reverts that change based on the stale AD data that's in the ADCS. A typical symptom in this scenario is that you make a change in AD that's synced to Microsoft Entra ID, but the change reverts to the original value a few minutes later (up to 30 minutes). To quickly mitigate this issue, return to any old servers or virtual machines that have been decommissioned, and check whether the ADSync service is still running.
 
 - **Mobile attribute with DirSyncOverrides**
 
   When the Admin uses MSOnline or AzureAD PowerShell module, or if the user goes to the Office Portal and updates the **Mobile** attribute, the updated phone number will be overwritten in AzureAD despite the object being synced from on-premises AD (also known as **DirSyncEnabled**).
 
-  Together with this update, Azure AD also sets a **DirSyncOverrides** on the object to flag that this user has the mobile phone number "overwritten" in Azure AD. From this point on, any update to the mobile attribute that originates from on-premises will be ignored because this attribute will no longer be managed by on-premises AD.
+  Together with this update, Microsoft Entra ID also sets a **DirSyncOverrides** on the object to flag that this user has the mobile phone number "overwritten" in Microsoft Entra ID. From this point on, any update to the mobile attribute that originates from on-premises will be ignored because this attribute will no longer be managed by on-premises AD.
 
-  For more information about the BypassDirSyncOverrides feature and how to restore synchronization of Mobile and otherMobile attributes from Azure AD to on-premises Active Directory, see [How to use the BypassDirSyncOverrides feature of an Azure AD tenant](/azure/active-directory/hybrid/how-to-bypassdirsyncoverrides).
+  For more information about the BypassDirSyncOverrides feature and how to restore synchronization of Mobile and otherMobile attributes from Microsoft Entra ID to on-premises Active Directory, see [How to use the BypassDirSyncOverrides feature of a Microsoft Entra tenant](/azure/active-directory/hybrid/how-to-bypassdirsyncoverrides).
 
-- **UserPrincipalName changes do not update in Azure AD**
+- **UserPrincipalName changes do not update in Microsoft Entra ID**
 
-   If the **UserPrincipalName** attribute is not updated in Azure AD, while other attributes sync as expected, it's possible that a feature that's named [SynchronizeUpnForManagedUsers](/azure/active-directory/hybrid/how-to-connect-syncservice-features#synchronize-userprincipalname-updates) is not enabled on the tenant. This scenario occurs frequently.
+   If the **UserPrincipalName** attribute is not updated in Microsoft Entra ID, while other attributes sync as expected, it's possible that a feature that's named [SynchronizeUpnForManagedUsers](/azure/active-directory/hybrid/how-to-connect-syncservice-features#synchronize-userprincipalname-updates) is not enabled on the tenant. This scenario occurs frequently.
 
-   Before this feature was added, any updates to the UPN that came from on-premises after the user was provisioned in Azure AD and assigned a license were "silently" ignored. An admin would have to use MSOnline or Azure AD PowerShell to update the UPN directly in Azure AD. After this feature is updated, any updates to UPN will flow to Azure AD regardless of whether the user is licensed (managed).
+   Before this feature was added, any updates to the UPN that came from on-premises after the user was provisioned in Microsoft Entra ID and assigned a license were "silently" ignored. An admin would have to use MSOnline or Azure AD PowerShell to update the UPN directly in Microsoft Entra ID. After this feature is updated, any updates to UPN will flow to Microsoft Entra regardless of whether the user is licensed (managed).
 
    > [!NOTE]
    > After it's enabled, this feature cannot be disabled.
 
-   **UserPrincipalName** updates will work if the user is NOT licensed. However, without the [SynchronizeUpnForManagedUsers](/azure/active-directory/hybrid/how-to-connect-syncservice-features#synchronize-userprincipalname-updates) feature, **UserPrincipalName** changes after the user is provisioned and is assigned a licensed that will NOT be updated in AAD. Notice that Microsoft does not disable this feature on behalf of the customer.
+   **UserPrincipalName** updates will work if the user is NOT licensed. However, without the [SynchronizeUpnForManagedUsers](/azure/active-directory/hybrid/how-to-connect-syncservice-features#synchronize-userprincipalname-updates) feature, **UserPrincipalName** changes after the user is provisioned and is assigned a licensed that will NOT be updated in Microsoft Entra ID. Notice that Microsoft does not disable this feature on behalf of the customer.
 
 - **Invalid characters and ProxyCalc internals**
 
    Issues that involve invalid characters that don't produce any sync error are more troublesome in **UserPrincipalName** and **ProxyAddresses** attributes because of the cascading effect in ProxyCalc processing that will **silently** discard the value synchronized from on-premises AD. This situation occurs as follows:
 
-   1. The resulting **UserPrincipalName** in Azure AD will be the **MailNickName** or **CommonName** @ (at) initial domain. For example, instead of John.Smith@Contoso.com, the **UserPrincipalName** in AAD might become smithj@Contoso.onmicrosoft.com because there's an invisible character in the UPN value from on-premises AD.
+   1. The resulting **UserPrincipalName** in Microsoft Entra ID will be the **MailNickName** or **CommonName** @ (at) initial domain. For example, instead of John.Smith@Contoso.com, the **UserPrincipalName** in Microsoft Entra ID might become smithj@Contoso.onmicrosoft.com because there's an invisible character in the UPN value from on-premises AD.
 
-   2. If a **ProxyAddress** contains a space character, **ProxyCalc** will discard it and autogenerate an email address based on **MailNickName** at Initial Domain. For example, "SMTP: John.Smith@Contoso.com" will not appear in AAD because it contains a space character after the colon.
+   2. If a **ProxyAddress** contains a space character, **ProxyCalc** will discard it and autogenerate an email address based on **MailNickName** at Initial Domain. For example, "SMTP: John.Smith@Contoso.com" will not appear in Microsoft Entra ID because it contains a space character after the colon.
 
    3. Either a **UserPrincipalName** that includes a space character or a **ProxyAddress** that includes an invisible character will cause the same issue.
 
@@ -559,24 +560,24 @@ Fortunately, the issues that affect these components usually generate an error i
 
     There is a general misconception that after you sync **ThumbnailPhoto** from AD for the first time, you can no longer update it, which is only partly true.
 
-    Usually, the **ThumbnailPhoto** in Azure AD is continually updated. However, an issue occurs if the updated picture is no longer retrieved from Azure AD by the respective workload or partner (for example, EXO or SfBO). This issue causes the false impression that the picture was not synced from on-premises AD to Azure AD.
+    Usually, the **ThumbnailPhoto** in Microsoft Entra ID is continually updated. However, an issue occurs if the updated picture is no longer retrieved from Microsoft Entra ID by the respective workload or partner (for example, EXO or SfBO). This issue causes the false impression that the picture was not synced from on-premises AD to Microsoft Entra ID.
 
     Basic steps to troubleshoot ThumbnailPhoto
 
    1. Make sure that the image is correctly stored in AD and doesn't exceed the size limit of 100 KB.
 
-   2. Check the image in the Accounts Portal or use **Get-AzureADUserThumbnailPhoto** because these methods read the **ThumbnailPhoto** directly from Azure AD.
+   2. Check the image in the Accounts Portal or use **Get-AzureADUserThumbnailPhoto** because these methods read the **ThumbnailPhoto** directly from Microsoft Entra ID.
 
    3. If the AD (or AzureAD) **thumbnailPhoto** has the correct image but is not correct on other online services, the following conditions might apply:
 
-  - The user's mailbox contains an HD image and is not accepting low-resolution images from Azure AD thumbnailPhoto. The solution is to directly update the user's mailbox image.
+  - The user's mailbox contains an HD image and is not accepting low-resolution images from Microsoft Entra thumbnailPhoto. The solution is to directly update the user's mailbox image.
   - The user's mailbox image was updated correctly, but you're still seeing the original image. The solution is to wait at least six hours to see the updated image in the Office 365 User Portal or the Azure portal.
 
 ## Additional resources
 
 - [Troubleshooting Errors during synchronization](/azure/active-directory/hybrid/tshoot-connect-sync-errors)
-- [Troubleshoot object synchronization with Azure AD Connect sync](/azure/active-directory/hybrid/tshoot-connect-objectsync)
-- [Troubleshoot an object that is not synchronizing with Azure Active Directory](/azure/active-directory/hybrid/tshoot-connect-object-not-syncing)
-- [Azure AD Connect Single Object Sync](/azure/active-directory/hybrid/how-to-connect-single-object-sync)
+- [Troubleshoot object synchronization with Microsoft Entra Connect Sync](/azure/active-directory/hybrid/tshoot-connect-objectsync)
+- [Troubleshoot an object that is not synchronizing with Microsoft Entra ID](/azure/active-directory/hybrid/tshoot-connect-object-not-syncing)
+- [Microsoft Entra Connect Single Object Sync](/azure/active-directory/hybrid/how-to-connect-single-object-sync)
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

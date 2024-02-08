@@ -1,14 +1,14 @@
 ---
 title: Event ID 5120 Cluster Shared Volume troubleshooting guidance
 description: Provides guidance for finding the root cause of Event 5120 Cluster Shared Volume.
-ms.date: 9/28/2022
+ms.date: 09/28/2022
 author: kaushika-msft
 ms.author: kaushika
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
-ms.technology: windows-server-high-availability
+ms.service: windows-server
+ms.subservice: high-availability
 ms.custom: sap:csv, csstroubleshoot
 localization_priority: medium
 ms.reviewer: kaushika
@@ -199,7 +199,7 @@ In particular, make sure that [October 18, 2018—KB4462928 (OS Build 14393.2580
 
 Before contacting Microsoft Support, you can gather information about your issue.
 
-Refer the [prerequisites](../../windows-client/windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tssv2.md#prerequisites) for the toolset to run properly.
+Refer the [prerequisites](../../windows-client/windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tss.md#prerequisites) for the toolset to run properly.
 
 ### Gather key information before you contact Microsoft Support
 
@@ -207,13 +207,13 @@ Use the Windows live dump feature to save a snapshot of kernel memory on the aff
 
 1. Check the live dump folder (*C:\\Windows\\LiveKernelReports\\*) for previous live dump files.
 2. Make sure that the live dump feature has been enabled. For more information on enabling the feature, see [Troubleshooting Hangs Using Live Dump](https://techcommunity.microsoft.com/t5/failover-clustering/troubleshooting-hangs-using-live-dump/ba-p/372080).
-3. Download [TSSv2](https://aka.ms/getTSSv2) and unzip it in the *C:\\tss_tool* folder.
-4. Open an elevated version of PowerShell and change the directory to the *C:\\tss_tool* folder.
+3. Download [TSS](https://aka.ms/getTSS) and unzip it in the *C:\\tss* folder.
+4. Open an elevated version of PowerShell and change the directory to the *C:\\tss* folder.
 5. Run the SDP tool to collect the logs from the source and destination nodes.
 6. Unzip the file and run the following cmdlet on both nodes:
 
     ```powershell
-    TSSv2.ps1 -SDP Cluster -SkipSDPList skipHang,skipBPA,skipSDDC
+    TSS.ps1 -SDP Cluster -SkipSDPList skipHang,skipBPA,skipSDDC
     ```
 7. Collect all logs. Zip and attach the live dump files to your support request.
 

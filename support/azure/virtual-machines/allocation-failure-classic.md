@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting Azure VM allocation failures in classic deployment model
-description: Troubleshoot allocation failures when you create, restart, or resize a classic VM in Azure
+description: Troubleshoot allocation failures when you create, restart, or resize a classic VM in Azure.
 services: azure-service-management
 documentationcenter: ''
 author: genlin
@@ -9,13 +9,13 @@ tags: top-support-issue,azure-resource-manager,azure-service-management
 ms.service: virtual-machines
 ms.subservice: vm-cannot-start-stop
 ms.topic: troubleshooting
-ms.date: 11/01/2018
+ms.date: 08/28/2023
 ms.author: genli
 
 ---
 # Troubleshooting steps specific to allocation failure scenarios in the classic deployment model
 
-[!INCLUDE [classic-vm-deprecation](../../includes/classic-vm-deprecation.md)]
+[!INCLUDE [classic-vm-deprecation](../../includes/azure/classic-vm-deprecation.md)]
 
 The following are common allocation scenarios that cause an allocation request to be pinned. We'll dive into each scenario later in this article.
 
@@ -26,7 +26,7 @@ The following are common allocation scenarios that cause an allocation request t
 - Affinity group (VM or service proximity)
 - Affinity–group-based virtual network
 
-When you receive an allocation error, check whether any of the listed scenarios apply to your error. Use the allocation error that’s returned by the Azure platform to identify the corresponding scenario. If your request is pinned, remove some of the pinning constraints to open your request to more clusters, thereby increasing the chance of allocation success.
+When you receive an allocation error, check whether any of the listed scenarios apply to your error. Use the allocation error that's returned by the Azure platform to identify the corresponding scenario. If your request is pinned, remove some of the pinning constraints to open your request to more clusters, thereby increasing the chance of allocation success.
 In general, if the error does not state that "the requested VM size is not supported," you can always retry at a later time. This is because enough resources may have been freed in the cluster to accommodate your request. If the problem is that the requested VM size is not supported, try a different VM size. Otherwise, the only option is to remove the pinning constraint.
 
 Two common failure scenarios are related to affinity groups. In the past, an affinity group was used to provide close proximity to VMs and service instances, or it was used to enable the creation of a virtual network. With the introduction of regional virtual networks, affinity groups are no longer required to create a virtual network. With the reduction of network latency in Azure infrastructure, the recommendation to use affinity groups for VMs or service proximity has changed.
@@ -47,7 +47,7 @@ A request to resize a VM or add a VM or a role instance to an existing cloud ser
 
 **Workaround**
 
-If the error is Upgrade_VMSizeNotSupported*, try a different VM size. If using a different VM size is not an option, but if it's acceptable to use a different virtual IP address (VIP), create a new cloud service to host the new VM and add the new cloud service to the regional virtual network where the existing VMs are running. If your existing cloud service does not use a regional virtual network, you can still create a new virtual network for the new cloud service, and then connect your [existing virtual network to the new virtual network](https://azure.microsoft.com/blog/vnet-to-vnet-connecting-virtual-networks-in-azure-across-different-regions/). See more about [regional virtual networks](https://azure.microsoft.com/blog/2014/05/14/regional-virtual-networks/).
+If the error is Upgrade_VMSizeNotSupported*, try a different VM size. If using a different VM size is not an option, but if it's acceptable to use a different virtual IP address (VIP), create a new cloud service to host the new VM and add the new cloud service to the regional virtual network where the existing VMs are running. If your existing cloud service does not use a regional virtual network, you can still create a new virtual network for the new cloud service, and then connect your [existing virtual network to the new virtual network](https://azure.microsoft.com/blog/vnet-to-vnet-connecting-virtual-networks-in-azure-across-different-regions/).
 
 If the error is GeneralError*, it's likely that the type of resource (such as a particular VM size) is supported by the cluster, but the cluster does not have free resources at the moment. Similar to the above scenario, add the desired compute resource through creating a new cloud service (note that the new cloud service has to use a different VIP) and use a regional virtual network to connect your cloud services.
 
@@ -66,7 +66,7 @@ Partial deallocation means that you stopped (deallocated) one or more, but not a
 If it's acceptable to use a different VIP, delete the stopped (deallocated) VMs (but keep the associated disks) and add the VMs back through a different cloud service. Use a regional virtual network to connect your cloud services:
 
 - If your existing cloud service uses a regional virtual network, simply add the new cloud service to the same virtual network.
-- If your existing cloud service does not use a regional virtual network, create a new virtual network for the new cloud service, and then [connect your existing virtual network to the new virtual network](https://azure.microsoft.com/blog/vnet-to-vnet-connecting-virtual-networks-in-azure-across-different-regions/). See more about [regional virtual networks](https://azure.microsoft.com/blog/2014/05/14/regional-virtual-networks/).
+- If your existing cloud service does not use a regional virtual network, create a new virtual network for the new cloud service, and then [connect your existing virtual network to the new virtual network](https://azure.microsoft.com/blog/vnet-to-vnet-connecting-virtual-networks-in-azure-across-different-regions/).
 
 ## Restart fully stopped (deallocated) VMs
 
@@ -122,8 +122,8 @@ Before regional virtual networks were introduced, you were required to associate
 
 **Workaround**
 
-If you do not need an affinity group, create a new regional virtual network for the new resources you're adding, and then [connect your existing virtual network to the new virtual network](https://azure.microsoft.com/blog/vnet-to-vnet-connecting-virtual-networks-in-azure-across-different-regions/). See more about [regional virtual networks](https://azure.microsoft.com/blog/2014/05/14/regional-virtual-networks/).
+If you do not need an affinity group, create a new regional virtual network for the new resources you're adding, and then [connect your existing virtual network to the new virtual network](https://azure.microsoft.com/blog/vnet-to-vnet-connecting-virtual-networks-in-azure-across-different-regions/).
 
-Alternatively, you can [migrate your affinity-group-based virtual network to a regional virtual network](https://azure.microsoft.com/blog/2014/11/26/migrating-existing-services-to-regional-scope/), and then add the desired resources again.
+Alternatively, you can [Migrate a virtual network (classic) from an affinity group to a region](/previous-versions/azure/virtual-network/virtual-networks-migrate-to-regional-vnet), and then add the desired resources again.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

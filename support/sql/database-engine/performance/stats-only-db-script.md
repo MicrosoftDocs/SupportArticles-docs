@@ -4,9 +4,7 @@ description: Learn how to generate a statistic script using metadata to create a
 ms.date: 08/18/2022
 ms.custom: sap:Administration and Management
 ms.topic: how-to
-author: ramakoni1
-ms.prod: sql
-ms.author: v-jayaramanp
+ms.reviewer: ramakoni, v-jayaramanp
 ---
 
 # How to generate a statistics script to create a statistics-only database in SQL Server
@@ -33,7 +31,7 @@ Typically, you must simulate all these same types of information to reproduce th
 Microsoft Customer Support Services might ask you to generate a script of the database metadata to investigate a query optimizer issue. This article describes the steps to generate the statistics script and also describes how the query optimizer uses the information.
 
 > [!NOTE]
-> The keys saved within this data might contain PII information. For example, if your table contains a **Phone number** column with a statistic on it, each step’s high key value will be in the generated statistics script.
+> The keys saved within this data might contain PII information. For example, if your table contains a **Phone number** column with a statistic on it, each step's high key value will be in the generated statistics script.
 
 ## Script the whole database
 
@@ -65,7 +63,7 @@ To script each database that is referenced by your query, follow these steps:
     |Script Collation     | True  |
     |Script Logins     | True  |
     |Script Object Level Permissions      | True |
-    |Script Statistics      | True |
+    |Script Statistics      |Script statistics and histograms|
     |Script Indexes     | True |
     |Script Triggers     | True |
 
@@ -119,7 +117,7 @@ Therefore, it isn't recommended that you script individual objects unless the da
     |Script Collation      |  True       |
     |Script Logins     |  True       |
     |Script Object Level Permissions |  True       |
-    |Script Statistics     | True        |
+    |Script Statistics     | Script statistics and histograms|
     |Script USE DATABASE     | True        |
     |Script Indexes     | True         |
     |Script Triggers      | True        |
@@ -172,3 +170,4 @@ The following tables help explain how the query optimizer uses this information 
 - [Data-tier Applications](/sql/relational-databases/data-tier-applications/data-tier-applications?view=sql-server-ver15&preserve-view=true)
 
 - [Use PowerShell to Script SQL Database Objects](https://devblogs.microsoft.com/scripting/use-powershell-to-script-sql-database-objects/)
+

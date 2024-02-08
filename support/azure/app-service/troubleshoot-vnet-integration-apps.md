@@ -1,7 +1,7 @@
 ---
 title: Azure App Service virtual network integration troubleshooting guide
 description: How to troubleshoot virtual network integration on Windows and Linux apps.
-ms.date: 10/21/2022
+ms.date: 01/08/2024
 ms.service: app-service
 author: hepiet
 ms.author: hepiet
@@ -68,7 +68,7 @@ nameresolver.exe hostname [optional:DNS Server]
 You can use **nameresolver** to check the hostnames that your app depends on. This way, you can test if you have anything misconfigured with your DNS or perhaps don't have access to your DNS server. You can see the DNS server that your app uses in the console by looking at the environmental variables WEBSITE_DNS_SERVER and WEBSITE_DNS_ALT_SERVER.
 
 > [!NOTE]
-> * The nameresolver.exe tool currently doesn’t work in custom Windows containers.
+> The nameresolver.exe tool currently doesn't work in custom Windows containers.
 
 
 To test TCP connectivity to a host and port combination, you can use **tcpping**. The syntax is.
@@ -106,7 +106,7 @@ curl hostname:[port]
 A number of factors can prevent your app from reaching a specific host and port. Most of the time, it's one of the following:
 
 * **A firewall is in the way.** If you have a firewall in the way, you hit the TCP timeout. The TCP timeout is 21 seconds in this case. Use the **tcpping** tool to test connectivity. TCP timeouts can be caused by many things beyond firewalls, but start there.
-* **DNS isn't accessible.** The DNS timeout is 3 seconds per DNS server. If you have two DNS servers, the timeout is 6 seconds. Use nameresolver to see if DNS is working. You can't use nslookup, because that doesn't use the DNS your virtual network is configured with. If inaccessible, you could have a firewall or NSG blocking access to DNS or it could be down.
+* **DNS isn't accessible.** The DNS timeout is three seconds per DNS server. If you have two DNS servers, the timeout is six seconds. Use nameresolver to see if the DNS is working. You can't use nslookup because that doesn't use the DNS your virtual network is configured with. If inaccessible, you could have a firewall or NSG blocking access to DNS, or it could be down. Some DNS architectures that use custom DNS servers can be complex and may occasionally experience timeouts. To determine if this is the case, the environment variable `WEBSITE_DNS_ATTEMPTS` can be set. For more information about DNS in App Services, see [Name resolution (DNS) in App Service](/azure/app-service/overview-name-resolution).
 
 If those items don't answer your problems, look first for things like:
 
@@ -158,5 +158,63 @@ You can also use the Network troubleshooter to troubleshoot the connection issue
 **Subnet/VNet deletion issue** - This troubleshooter will check if your subnet has any locks and if it has any unused Service Association Links that might be blocking the deletion of the VNet/subnet.
 
 :::image type="content" source="./media/troubleshoot-vnet-integration-apps/deletion-issue.png" alt-text="Screenshot that shows how to run troubleshooter for subnet or virtual network deletion issues.":::
+
+## Collect network traces
+
+Collecting network traces can be helpful in analyzing issues. In Azure App Services, network traces are taken from the application process. To obtain accurate information, reproduce the issue while starting the network trace collection.
+
+> [!NOTE]
+> The virtual network traffic isn't captured in network traces.
+
+### Windows App Services
+
+To collect network traces for Windows App Services, follow these steps:
+
+1. In the Azure portal, navigate to your Web App.
+1. In the left navigation, select **Diagnose and Solve Problems**.
+1. In the search box, type *Collect Network Trace* and select **Collect Network Trace** to start the network trace collection.
+
+:::image type="content" source="media/troubleshoot-vnet-integration-apps/collect-network-trace-windows.png" alt-text="Screenshot that shows how to capture a network trace." lightbox="media/troubleshoot-vnet-integration-apps/collect-network-trace-windows.png":::
+
+To get the trace file for each instance serving a Web App, on your browser, go to the Kudu console for the Web App (`https://<sitename>.scm.azurewebsites.net`). Download the trace file from the *C:\home\LogFiles\networktrace* or *D:\home\LogFiles\networktrace* folder.
+
+### Linux App Services
+
+To collect network traces for Linux App Services that don't use a custom container, follow these steps:
+
+1. Install the `tcpdump` command line utility by running the following commands:
+
+   ```bash
+   apt-get update
+   apt install tcpdump
+   ```
+1. Connect to the container via the Secure Shell Protocol (SSH).
+
+1. Identify the interface that's up and running by running the following command (for example, `eth0`):
+
+   ```bash
+   root@<hostname>:/home# tcpdump -D
+   
+   1.eth0 [Up, Running, Connected]
+   2.any (Pseudo-device that captures on all interfaces) [Up, Running]
+   3.lo [Up, Running, Loopback]
+   4.bluetooth-monitor (Bluetooth Linux Monitor) [Wireless]
+   5.nflog (Linux netfilter log (NFLOG) interface) [none]
+   6.nfqueue (Linux netfilter queue (NFQUEUE) interface) [none]
+   7.dbus-system (D-Bus system bus) [none]
+   8.dbus-session (D-Bus session bus) [none]
+   ```
+1. Start the network trace collection by running the following command:
+
+   ```bash
+   root@<hostname>:/home# tcpdump -i eth0 -w networktrace.pcap
+   ```
+   Replace `eth0` with the name of the actual interface.
+   
+To download the trace file, connect to the Web App via methods such as Kudu, FTP, or a Kudu API request. Here's a request example for triggering the file download:
+
+`https://<sitename>.scm.azurewebsites.net/api/vfs/<path to the trace file in the /home directory>/filename`
+
+[!INCLUDE [Third-party information disclaimer](../../includes/third-party-disclaimer.md)]
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

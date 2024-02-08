@@ -1,17 +1,17 @@
 ---
 title: How to get Windows updates in Windows 7, Windows 8.1 and Windows Server 2012 R2
 description: Describes how to obtain updates in Windows 7, Windows 8.1 and Windows Server 2012 R2.
-ms.date: 05/25/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, cpuckett, delhan
 ms.custom: sap:servicing, csstroubleshoot
-ms.technology: windows-client-deployment
+ms.subservice: deployment
 adobe-target: true
 ---
 # How to get an update through Windows Update
@@ -46,3 +46,7 @@ _Original KB number:_ &nbsp; 3067639
 ## Reference
 
 See the [frequently asked questions for Windows Update](https://support.microsoft.com/windows/windows-update-faq-8a903416-6f45-0718-f5c7-375e92dddeb2).
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

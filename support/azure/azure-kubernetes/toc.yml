@@ -5,10 +5,18 @@
   items:
   - name: Basic troubleshooting
     href: troubleshoot-aks-cluster-creation-issues.md
+  - name: AADSTS7000222 - BadRequest or InvalidClientSecret error
+    href: error-code-badrequest-or-invalidclientsecret.md
+  - name: CniDownloadTimeoutVMExtensionError error (41)
+    href: error-code-cnidownloadtimeoutvmextensionerror.md
+  - name: ERR_VHD_FILE_NOT_FOUND error (124)
+    href: error-code-vhdfilenotfound.md
   - name: InvalidParameter error
     href: error-code-invalidparameter.md
   - name: InvalidResourceReference error
     href: error-code-invalidresourcereference.md
+  - name: Known issues - Custom kubelet configuration on Windows
+    href: known-issues-custom-kubelet-configuration.md
   - name: K8SAPIServerConnFailVMExtensionError error (51)
     href: error-code-k8sapiserverconnfailvmextensionerror.md
   - name: K8SAPIServerDNSLookupFailVMExtensionError error (52)
@@ -29,29 +37,37 @@
     href: error-code-reservedresourcename.md
   - name: ServicePrincipalValidationClientError error
     href: error-code-serviceprincipalvalidationclienterror.md
-  - name: SubnetIsFull error
-    href: error-code-subnetisfull.md
   - name: SubscriptionRequestsThrottled error (429)
     href: error-code-subscriptionrequeststhrottled.md
+  - name: SubnetWithExternalResourcesCannotBeUsedByOtherResources error
+    href: subnet-with-external-resources-cannot-be-used-by-other-resources.md
   - name: VMExtensionProvisioningTimeout error
     href: error-code-vmextensionprovisioningtimeout.md
-  - name: ZonalAllocationFailed or AllocationFailed error
+  - name: WINDOWS_CSE_ERROR_CHECK_API_SERVER_CONNECTIVITY error (5)
+    href: windows-cse-error-check-api-server-connectivity.md
+  - name: ZonalAllocationFailed, AllocationFailed, or OverconstrainedAllocationRequest error
     href: error-code-zonalallocationfailed-allocationfailed.md
 
 - name: Troubleshoot upgrade operations
   items:
   - name: Troubleshoot Azure Kubernetes Service (AKS) upgrade errors
     items:
-    - name: Upgrade fails because of NSG rules
-      href: upgrade-fails-because-of-nsg-rules.md
+    - name: AADSTS7000222 - BadRequest or InvalidClientSecret error
+      href: error-code-badrequest-or-invalidclientsecret.md
+    - name: CustomPrivateDNSZoneMissingPermissionError error
+      href: error-code-customprivatednszonemissingpermissionerror.md
     - name: NodePoolMcVersionIncompatible error
       href: nodepoolmcversionincompatible-error.md
-    - name: PodDrainFailure error
+    - name: Troubleshoot UpgradeFailed errors due to eviction failures caused by PDBs
       href: error-code-poddrainfailure.md
+    - name: UnsatisfiablePDB error
+      href: error-code-unsatisfiablepdb.md
     - name: PublicIPCountLimitReached error
       href: error-code-publicipcountlimitreached.md
     - name: QuotaExceeded error
       href: error-code-quotaexceeded.md   
+    - name: ServiceCidrOverlapExistingSubnetsCidr error
+      href: error-code-servicecidroverlapexistingsubnetscidr.md
     - name: SubnetIsFull upgrade error
       href: error-code-subnetisfull-upgrade.md   
     - name: Unable to get log analytics workspace info error
@@ -60,6 +76,8 @@
     href: upgrades-to-kubernetes-fail-using-node-labels.md  
   - name: Upgrade issues with Gen2 VMs on Windows AKS cluster
     href: nodepools-not-upgraded-to-gen2-during-node-image-upgrade.md
+  - name: Upgrade fails because of NSG rules
+    href: upgrade-fails-because-of-nsg-rules.md
 
 - name: Troubleshoot delete operations
   items:
@@ -88,10 +106,30 @@
 
 - name: Troubleshoot scale operations
   items:
+  - name: Cannot scale cluster autoscaler enabled node pool
+    href: cannot-scale-cluster-autoscaler-enabled-node-pool.md
   - name: Common issues with running or scaling large AKS clusters
     href: aks-at-scale-troubleshoot-guide.md
   - name: Failed to fix node group sizes
     href: cluster-autoscaler-fails-to-scale.md
+  - name: SubnetIsFull error
+    href: error-code-subnetisfull.md
+
+- name: Troubleshoot start operations
+  items:
+  - name: Basic troubleshooting
+    href: troubleshoot-aks-cluster-start-issues.md
+  - name: K8SAPIServerConnFailVMExtensionError error (51)
+    href: error-code-k8sapiserverconnfailvmextensionerror.md
+  - name: K8SAPIServerDNSLookupFailVMExtensionError error (52)
+    href: error-code-k8sapiserverdnslookupfailvmextensionerror.md
+  - name: OutboundConnFailVMExtensionError error (50)
+    href: error-code-outboundconnfailvmextensionerror.md
+
+- name: Troubleshoot Kubernetes control plane
+  items:
+  - name: Troubleshoot API server and etcd
+    href: troubleshoot-apiserver-etcd.md
 
 - name: Troubleshoot node not ready
   items:
@@ -152,6 +190,9 @@
 
 - name: Data collection guide
   items:
+  - name: Capture real-time system insights from cluster
+    href: capture-system-insights-from-aks.md
+    displayName: real-time, debugging, observability, inspektor-gadget, ig, ebpf
   - name: Capture TCP dump from Linux node
     href: capture-tcp-dump-linux-node-aks.md
   - name: Capture TCP dump from Windows node
@@ -161,6 +202,8 @@
 
 - name: Troubleshoot AKS cluster performance issues
   items:
+  - name: AKS cluster/node is in failed state
+    href: cluster-node-virtual-machine-failed-state.md
   - name: Identify nodes and containers consuming high CPU
     href: identify-high-cpu-consuming-containers-aks.md
   - name: Identify memory saturation in AKS clusters
@@ -186,6 +229,8 @@
     href: mountoptions-settings-azure-files.md
   - name: Slow attach and detach operations for an Azure Disk
     href: slow-attach-detach-operations-azure-disk.md
+  - name: Troubleshoot common Bring Your Own Key (BYOK) issues
+    href: troubleshoot-common-bring-your-own-key-issues.md
 
 - name: AKS common issues
   items:
@@ -195,7 +240,7 @@
     href: 429-too-many-requests-errors.md
   - name: Argument list too long
     href: application-fails-argument-list-too-long.md
-  - name: Azure AD Pod Identity NMI returns 500 Internal Server Error
+  - name: Microsoft Entra Pod Identity NMI returns 500 Internal Server Error
     href: stale-watch-azure-ad-pod-identity-nmi-status-500.md
   - name: Can't access the cluster API server using authorized IP ranges
     href: cannot-access-cluster-api-server-using-authorized-ip-ranges.md
@@ -203,24 +248,26 @@
     href: cannot-view-resources-kubernetes-resource-viewer-portal.md
   - name: "Changing property 'imageReference' is not allowed"
     href: changing-property-imagereference-not-allowed.md
-  - name: Cluster provisioning status changed from Ready to Failed
-    href: cluster-provisioning-status-changed-ready-failed.md
   - name: Cluster upgrading and scaling errors
     href: upgrading-or-scaling-does-not-succeed.md
+  - name: OperationIsNotAllowed errors
+    href: operationisnotallowed.md
   - name: '"Error from server: error dialing backend: dial tcp" messages'
     href: error-from-server-error-dialing-backend-dial-tcp.md
   - name: Errors using features that require virtual machine scale sets
     href: error-using-feature-requiring-virtual-machine-scale-set.md
-  - name: insufficientSubnetSize error
+  - name: InsufficientSubnetSize error
     href: insufficientsubnetsize-error-advanced-networking.md
+  - name: Memory saturation occurs in pods after cluster upgrade
+    href: aks-memory-saturation-after-upgrade.md
+  - name: Increased memory usage reported in Kubernetes 1.25 or later versions
+    href: aks-increased-memory-usage-cgroup-v2.md
   - name: Missing or invalid service principal
     href: missing-or-invalid-service-principal.md
   - name: Network watch is stale after egress traffic restriction
     href: stale-watch-azure-ad-pod-identity-nmi-status-500.md
   - name: Node count isn't in autoscaler min and max range
     href: node-count-is-not-in-autoscaler-min-max-range.md
-  - name: Node VM is in failed state
-    href: cluster-node-virtual-machine-failed-state.md
   - name: Pod is stuck in CrashLoopBackOff mode
     href: pod-stuck-crashloopbackoff-mode.md
   - name: '"Quota exceeded" error during creation or upgrade'
@@ -233,13 +280,18 @@
     href: tcp-timeouts-kubetctl-third-party-tools-connect-api-server.md
   - name: '"tls: client offered only unsupported versions" messages'
     href: tls-client-offered-unsupported-versions.md
-  - name: Troubleshoot common Mariner AKS Container Host (MACH) issues
-    href: troubleshoot-common-mariner-aks.md
+  - name: Troubleshoot common Azure Linux container host for AKS issues
+    displayName: Mariner, MACH
+    href: troubleshoot-common-azure-linux-aks.md
 
 - name: Extensions and add-ons
   items:
+  - name: AKS Cost Analysis add-on issues
+    href: aks-cost-analysis-add-on-issues.md
   - name: Troubleshoot Azure Key Vault Provider for Secrets Store CSI Driver
     href: troubleshoot-key-vault-csi-secrets-store-csi-driver.md
+  - name: Troubleshoot cluster extension deployment errors
+    href: cluster-extension-deployment-errors.md
   - name: Troubleshoot Dapr extension installation errors
     href: troubleshoot-dapr-extension-installation-errors.md
   - name: Troubleshoot deployment failures of Azure Marketplace offers

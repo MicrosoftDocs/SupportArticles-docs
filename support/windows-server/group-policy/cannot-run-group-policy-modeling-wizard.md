@@ -1,17 +1,17 @@
 ---
 title: The given Key was not present in the dictionary
 description: Describes an issue that occurs when you run the Group Policy Modeling Wizard against a new Group Policy setting.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
-ms.technology: windows-server-group-policy
+ms.subservice: group-policy
 ---
 # Group Policy error: "The given Key was not present in the dictionary"
 
@@ -37,3 +37,7 @@ There is a faulty registry item in the XML file that is associated with the Grou
 ## Resolution
 
 To fix this issue, re-create the Group Policy and registry settings. However, while you are using the registry browser to select values in a registry key, do not select the parent key together with the values in it. The parent key is autoselected. This is, when you select a value in a key, a red tick appears automatically on the parent key folder. It is not necessary also to select the parent key.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Group Policy issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-group-policy.md).

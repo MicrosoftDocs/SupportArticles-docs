@@ -1,11 +1,6 @@
 - name: Welcome
   href: welcome-windowsdeveloper.yml
 
-- name: General
-  items:
-  - name: Description of Windows Mobile Device Center
-    href: description-of-windows-mobile-device-center.md
-
 - name: Windows SDK
   items:
   - name: Component development
@@ -16,44 +11,22 @@
       href: coinitializeex-fails-after-calling-htmlhelp-same-thread.md
     - name: COM+ supports automatic collection of process dump file
       href: com-supports-collect-dump-file.md 
-    - name: Descriptions and workings of OLE threading models
-      href: descriptions-workings-ole-threading-models.md
-    - name: Two DLL hosts start when a COM+ object is enabled
-      href: two-dll-hosts-start-com-plus-enabled.md
-    - name: VarI8FromCy produces incorrect value
-      href: vari8fromcy-produces-incorrect-value.md
   - name: Desktop app UI development
     items:
-    - name: Hook procedure doesn't receive the VK_CONVERT message
-      href: hook-procedure-not-receiving-vk-convert-message.md
+    - name: CreateProcessWithLogonW fails when called on a Microsoft Entra account
+      href: createprocesswithlogonw-fails-microsoft-entra-id-account.md
     - name: Apps using message filters may not respond in Windows 10
       href: application-using-message-filters-unresponsive-win10.md
     - name: Three- or four-finger touch interactions doesn't work in Windows 11
       href: finger3or4-touch-interaction-no-longer-works.md
     - name: Call Shell APIs from a multithreaded apartment
       href: shell-functions-multithreaded-apartment.md
-    - name: Desktop Bridge app fails to start when running as administrator
-      href: desktop-bridge-app-fail-start-run-as-administrator.md
     - name: East Asian first character isn't recognized
       href: east-asian-first-character-not-recognized.md
     - name: Half-width and full-width Japanese characters are treated as different characters
       href: half-width-full-width-katakana-hiragana-characters.md
-    - name: GetMessage ignores messages
-      href: getmessage-ignores-posted-messages.md
-    - name: SystemParametersInfo works incorrectly
-      href: calling-systemparametersinfo-work-incorrectly.md
-    - name: Change hard error popup handling
-      href: hard-error-popup-mode.md
-    - name: Icon overlay handlers aren't displayed
-      href: icon-overlay-handlers-windows-shell.md
     - name: IME crashes with cross-thread sent messages
       href: ime-crash-processing-cross-thread-sent-message.md
-    - name: PathIsDirectory may be blocked when called by a UNC server
-      href: pathisdirectory-may-blocked.md
-    - name: Screen Saver command-line arguments
-      href: screen-saver-command-line.md
-    - name: Warning 1946 when you install an Installer package
-      href: warning-1946-when-you-install-installer-package.md
     - name: Owner window gets activated when taskbar buttons are created
       href: owner-window-activated-taskbar-buttons-created-both-windows.md
   - name: Distributed transactions
@@ -62,8 +35,6 @@
       href: cannot-start-transaction-ms-dtc.md
     - name: Enable diagnostic tracing
       href: enable-diagnostic-tracing-ms-dtc.md
-    - name: KTMRM services fail with event ID 4448
-      href: ktmrm-service-event-id-0x80070005.md
     - name: MSDTC Service must run under NetworkService account
       href: msdtc-service-run-under-networkservice-account.md
     - name: New functionality in the MSDTC service
@@ -72,101 +43,33 @@
       href: xa-transaction-require-registry-entry.md
   - name: Graphics and multimedia development
     items:
-    - name: AAC audio isn't playing for MPEG-2 TS file in Windows 8.1
-      href: AAC-audio-not-playing-for-MPEG-2-TS-file-Windows-8-1.md
     - name: Converting PDF to bitmap causes partial data loss in the image
       href: converting-pdf-file-to-bitmap-image.md
     - name: Can't print to XPS Document Writer
       href: print-app-xps-document-writer.md
-    - name: DirectShow doesn't connect to a downstream filter
-      href: directshow-not-connect-downstream-filter.md
-    - name: DWM drops frames of Direct3D applications
-      href: dwm-drop-direct3d-10-application-frame.md
-    - name: DXGI 1.2 API can't draw cursor to desktop images
-      href: dxgi-cannot-draw-cursor.md
-    - name: Former MIDI API causes applications to hang
-      href: midi-device-app-hangs.md
     - name: GDI APIs may fail when large pages are used
       href: gdi-apis-may-fail-when-large-pages-used.md
-    - name: Get status of printer and print job
-      href: printer-print-job-status.md
     - name: GetICMProfile might leak one or more handles on Windows 10
-      href: geticmprofile-might-leak-one-or-more-handles-on-windows10.md      
+      href: geticmprofile-might-leak-one-or-more-handles-on-windows10.md
+    - name: Graphics::DrawImage is slow when drawing JPEG or PNG images to a printer
+      href: graphicsdrawimage-slow-drawing-jpeg-png-printer.md
     - name: Interoperability between GDI and GDI+
       href: mix-gdi-and-gdi-plus-drawing.md
-    - name: Modify printer settings by using SetPrinter
-      href: modify-printer-settings-setprinter-api.md
     - name: Modify printer settings with DocumentProperties
-      href: modify-printer-settings-documentproperties.md  
-    - name: Printer device fonts
-      href: printer-device-fonts.md
-    - name: RAW data can't print
-      href: writeprinter-raw-data-not-print.md
-    - name: S1023 error when you install the DirectX SDK
-      href: s1023-error-when-you-install-directx-sdk.md
-    - name: Send raw data to printers
-      href: win32-raw-data-to-printer.md
-    - name: XPSDrv isn't compatible with RAW databases
-      href: v4-print-driver-raw-mode-pcl-postscript.md
-    - name: WIA 2.0 doesn't support duplex scan
-      href: wia-2-not-support-duplex.md
+      href: modify-printer-settings-documentproperties.md
   - name: Networking development
     items:
-    - name: An API causes an I/O not work correctly
-      href: setfilecompletionnotificationmodes-causes-io-completion.md
-    - name: The BeginRead method causes exceptions
-      href: beginread-causes-invalidoperationexception.md
-    - name: Header and library requirement at the IPPROTO_IP level
-      href: header-library-requirement-socket-ipproto-ip.md
-    - name: Memory leaks when you close a non-blocking socket
-      href: close-non-blocked-socket-memory-leak.md
-    - name: Send small data packets over TCP by using Winsock
-      href: data-segment-tcp-winsock.md
-    - name: Use the DnsQuery to resolve host names
-      href: use-dnsquery-resolve-host-names.md
     - name: Win32_NetworkAdapterConfiguration class is unable to retrieve information
       href: win32-networkadapterconfiguration-unable-retrieve-information.md
   - name: Security development
     items:
-    - name: Changing krbtgt password fails
-      href: change-krbtgt-password-may-fail.md
-    - name: Get information from Authenticode Signed Executables
-      href: get-information-authenticode-signed-executables.md
-    - name: Limitation of 10 smart card readers in Windows
-      href: limitation-10-smart-card-readers.md
     - name: SignTool may corrupt PowerShell script file
       href: signtool-corrupts-powershell-script.md
   - name: System services development
     items:
-    - name: Access Violation of BEX or APPCRASH occurs
-      href: access-violation-bex-appcrash.md
-    - name: Asynchronous disk I/O appears synchronous
-      href: asynchronous-disk-io-synchronous.md
     - name: Add-in component guidelines for core OS processes
       href: addin-components-core-os-processes.md
-    - name: CD-ROM notifications
-      href: receive-cd-rom-notification.md
-    - name: CreateProcess can't eliminate duplicated variables
-      href: createprocess-cannot-eliminate-duplicate-variables.md
-    - name: Custom virtual channel isn't supported
-      href: custom-virtual-channel-not-supported.md
-    - name: File copy operation deletes content
-      href: file-copy-operation-deletes-content.md
-    - name: Heap manager may not decommit memory
-      href: heap-manager-may-not-decommit-memory.md
-    - name: Get formatted strings for an event
-      href: evtformatmessage-formatted-string-event.md
-    - name: Guidelines for dates and times handling
-      href: handle-dates-and-times-dst.md
-    - name: MSXML isn't supported in .NET applications
-      href: msxml-not-support-dotnet-application.md
-    - name: SetSystemTimeAdjustment loses adjustments
-      href: setsystemtimeadjustment-less-than-16.md
-    - name: Troubleshoot errors in Event Viewer
-      href: troubleshoot-event-message-not-found.md
+    - name: GetTickCount resets to zero after approximately 776 days
+      href: gettickcount-resets-zero-after-approximately-776-days.md
     - name: User32.dll or Kernel32.dll doesn't initialize
       href: user32-kernel32-not-initialize.md
-  - name: Windows administration and management development
-    items:
-    - name: MSI packages fail to run
-      href: msi-packages-wmi-queries-cannot-run.md

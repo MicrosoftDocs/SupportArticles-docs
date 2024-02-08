@@ -11,7 +11,7 @@ ms.custom: devx-track-azurepowershell
 
 This article discusses an issue in which you receive an error message "Method invocation failed because [System.Object[]] doesn't contain a method named 'RemoveAll'." when you run Azure PowerShell cmdlets.
 
-_Original product version:_ &nbsp; Azure Active Directory, Cloud Services (Web roles/Worker roles)  
+_Original product version:_ &nbsp; Microsoft Entra ID, Cloud Services (Web roles/Worker roles)  
 _Original KB number:_ &nbsp; 3072418
 
 ## Symptoms

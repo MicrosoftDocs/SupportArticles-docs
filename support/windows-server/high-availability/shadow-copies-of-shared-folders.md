@@ -1,17 +1,17 @@
 ---
 title: Configure Shadow Copies of Shared Folders feature
 description: Describes how to configure a shadow copy of a clustered share in Windows Server 2003.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:setup-and-configuration-of-clustered-services-and-applications, csstroubleshoot
-ms.technology: windows-server-high-availability
+ms.subservice: high-availability
 ---
 # Configure the Shadow Copies of Shared Folders feature on a Windows Server 2003-based server cluster file share
 

@@ -60,13 +60,12 @@ The causes and resolutions for each wait type vary. There's no one general metho
 - [Understand and resolve blocking issues (LCK_M_*)](../../performance/understand-resolve-blocking.md)
 - [Understand and resolve Azure SQL Database blocking problems](/azure/azure-sql/database/understand-resolve-blocking)
 - [Troubleshoot slow SQL Server performance caused by I/O issues (PAGEIOLATCH_*, WRITELOG, IO_COMPLETION, BACKUPIO)](../../performance/troubleshoot-sql-io-performance.md)
-- [WRITELOG waits and common causes](../../performance/troubleshoot-sql-io-performance.md#writelog)
 - [Resolve last-page insert PAGELATCH_EX contention in SQL Server](../../performance/resolve-pagelatch-ex-contention.md)
-- [Memory grants explanations and solutions (RESOURCE_SEMAPHORE)](https://techcommunity.microsoft.com/t5/sql-server-support-blog/memory-grants-the-mysterious-sql-server-memory-consumer-with/ba-p/333994)
+- [Memory grants explanations and solutions (RESOURCE_SEMAPHORE)](../../database-engine/performance/troubleshoot-memory-grant-issues.md)
 - [Troubleshoot slow queries that result from ASYNC_NETWORK_IO wait type](../../performance/troubleshoot-query-async-network-io.md)
 - [Troubleshooting High HADR_SYNC_COMMIT wait type with Always On Availability Groups](https://techcommunity.microsoft.com/t5/sql-server-blog/troubleshooting-high-hadr-sync-commit-wait-type-with-always-on/ba-p/385369)
 - [How It Works: CMEMTHREAD and Debugging Them](https://techcommunity.microsoft.com/t5/sql-server-support-blog/how-it-works-cmemthread-and-debugging-them/ba-p/317488)
-- [Making parallelism waits actionable](https://techcommunity.microsoft.com/t5/sql-server-blog/making-parallelism-waits-actionable/ba-p/385691)
+- [Making parallelism waits actionable (CXPACKET and CXCONSUMER)](https://techcommunity.microsoft.com/t5/sql-server-blog/making-parallelism-waits-actionable/ba-p/385691)
 - [THREADPOOL wait](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql#threadpool)
 
 For descriptions of many Wait types and what they indicate, see the table in [Types of Waits](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql#WaitTypes).

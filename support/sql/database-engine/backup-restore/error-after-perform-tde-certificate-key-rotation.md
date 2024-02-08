@@ -3,8 +3,7 @@ title: Error after you perform TDE certificate or key rotation
 description: This article provides a resolution for the problem that occurs after you perform a Transparent Data Encryption (TDE) certificate or key rotation, drop the original certification, and then conduct a log backup using COMPRESSION+MAXTRANSFERSIZE.
 ms.date: 01/15/2021
 ms.custom: sap:Administration and Management
-ms.reviewer: liweiyin, ramand
-ms.prod: sql 
+ms.reviewer: liweiyin, ramand 
 ---
 # Msg 33111 error after SQL Server TDE certificate or key rotation
 
@@ -45,4 +44,4 @@ Microsoft is researching this problem and will post more information in this art
 
 ## References
 
-Learn about the [Description of the standard terminology that is used to describe Microsoft software updates](/troubleshoot/windows-client/deployment/standard-terminology-software-updates) that Microsoft uses to describe software updates.
+Learn about the [Description of the standard terminology that is used to describe Microsoft software updates](../../../windows-client/deployment/standard-terminology-software-updates.md) that Microsoft uses to describe software updates.

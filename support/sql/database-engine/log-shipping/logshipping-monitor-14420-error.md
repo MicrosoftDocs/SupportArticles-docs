@@ -4,7 +4,6 @@ description: This article provides resolutions for the problem that Logshipping 
 ms.date: 07/22/2020
 ms.custom: sap:High Availability and Disaster Recovery features
 ms.reviewer: raffaeca
-ms.prod: sql
 ---
 # Logshipping monitor incorrectly raises error number 14420 instead of 14421 when the secondary database is out of sync
 

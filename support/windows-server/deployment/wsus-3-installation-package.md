@@ -1,17 +1,17 @@
 ---
 title: WSUS 3.0 installation package
 description: Describes how to obtain the WSUS 3.0 installation package.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, kimmar
 ms.custom: sap:servicing, csstroubleshoot
-ms.technology: windows-server-deployment
+ms.subservice: deployment
 ---
 # The Windows Server Update Services 3.0 installation package is available
 
@@ -81,3 +81,7 @@ If you use a proxy server that requires authentication, you must overwrite the p
 For more information about Windows Server Update Services, visit the following Microsoft Web site:  
 WSUS TechNet Center  
 [https://technet.microsoft.com/wsus/default.aspx](https://technet.microsoft.com/wsus/default.aspx)
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

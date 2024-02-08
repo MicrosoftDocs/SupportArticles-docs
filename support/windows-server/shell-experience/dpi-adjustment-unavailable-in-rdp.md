@@ -1,17 +1,17 @@
 ---
 title: DPI adjustment is unavailable in Remote Session
 description: This article describes a technique to make user-interface and font-size adjustments available to users that connect remotely to a Remote Desktop server.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, sashalon
 ms.custom: sap:dpi-and-display-issues, csstroubleshoot
-ms.technology: windows-server-shell-experience
+ms.subservice: shell-experience
 ---
 # The DPI adjustment isn't available in a Remote Session (RDP)
 

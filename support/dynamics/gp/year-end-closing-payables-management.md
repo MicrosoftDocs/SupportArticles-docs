@@ -186,7 +186,7 @@ To print the 1099 edit list, follow these steps:
 
 3. Select the printer icon in the upper right corner to print the 1099 Edit List. Review for accuracy.
 
-4. If you need to edit any 1099 information, use one of the following methods (Method 1 and 2 is recommended for Microsoft Dynamics GP 2013 and higher versions and also illustrated in [Editing made EASY for 1099s in Microsoft Dynamics GP](https://community.dynamics.com/gp/b/dynamicsgp/posts/1099-editing-made-easy-in-microsoft-dynamics-gp)
+4. If you need to edit any 1099 information, use one of the following methods (Method 1 and 2 is recommended for Microsoft Dynamics GP 2013 and higher versions and also illustrated in [Editing made EASY for 1099s in Microsoft Dynamics GP](https://community.dynamics.com/blogs/post/?postid=487c4288-7473-47de-a4e7-221c26a2adc6)
 
 **Method 1:** (RECOMMENDED) Edit 1099 Transaction details (Applies to Microsoft Dynamics GP 2013 and higher versions)
 

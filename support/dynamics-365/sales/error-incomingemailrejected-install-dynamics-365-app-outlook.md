@@ -3,7 +3,7 @@ title: IncomingEmailRejected when you install Dynamics 365 App for Outlook
 description: This article provides a resolution for the problem that occurs when you attempt to install Dynamics 365 App for Outlook.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: d365-sales-email-office-integration
 ---
 # IncomingEmailRejected error when attempting to install Dynamics 365 App for Outlook

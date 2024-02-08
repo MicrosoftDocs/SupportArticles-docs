@@ -1,17 +1,17 @@
 ---
 title: Shelf life of a system-state backup of AD
 description: Describes the useful shelf life of a system-state backup of Active Directory (AD).
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, arrenc
 ms.custom: sap:active-directory-backup-and-restore-or-disaster-recovery, csstroubleshoot
-ms.technology: windows-server-backup-and-storage
+ms.subservice: backup-and-storage
 ---
 # Useful shelf life of a system-state backup of Active Directory
 
@@ -41,7 +41,7 @@ Use the Active Directory editing tool of your choice so that the "tombstoneLifet
 > [!NOTE]
 > This information assumes that the backup is not older than the default "tombstoneLifetime" setting. Otherwise, the objects have already been deleted from the database. In this case, an authoritative restore may be the better alternative if there are multiple domain controllers.
 
-The "tombstoneLifetime" attribute represents the number of days a backup of Active Directory can be used in addition to the frequency with which Garbage Collection routines (removing items previously marked for deletion) are run. For more information about Garbage Collection, see [The Active Directory database Garbage Collection process and calculation of allowed intervals](/troubleshoot/windows-server/identity/database-garbage-collection-caculation-of-allowed-intervals).
+The "tombstoneLifetime" attribute represents the number of days a backup of Active Directory can be used in addition to the frequency with which Garbage Collection routines (removing items previously marked for deletion) are run. For more information about Garbage Collection, see [The Active Directory database Garbage Collection process and calculation of allowed intervals](../identity/database-garbage-collection-caculation-of-allowed-intervals.md).
 
 ## Changes to the tombstone lifetime attribute in Windows Server 2003 Service Pack 1
 

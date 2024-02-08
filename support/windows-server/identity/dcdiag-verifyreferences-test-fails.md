@@ -1,17 +1,17 @@
 ---
 title: DCDiag VerifyReferences test fails
 description: Provides a solution to an error that occurs when you use the DFSR service to replicate the sysvol folder.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, harsur, rolandw, justintu, arrenc
 ms.custom: sap:active-directory-replication, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # DCDiag VerifyReferences test fails when you use DFSR to replicate SYSVOL
 
@@ -65,3 +65,7 @@ Even if you use the latest DCDiag releases, the error that is mentioned in the [
 - Eliminated phase: msDFSR-Flags on CN=dfsr-LocalSettings is 0x30 (48 dez)
 
 In this case, DCDiag assumes falsely that the File Replication Service (FRS) is still configured for SYSVOL, and it tries to verify FRS objects and attributes in an Active Directory database that doesn't exist. So you can expect the verification to fail.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Active Directory replication issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication.md).

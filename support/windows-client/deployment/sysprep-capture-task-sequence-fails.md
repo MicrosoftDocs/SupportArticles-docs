@@ -1,17 +1,17 @@
 ---
 title: Sysprep and capture task sequence fails
 description: Provides a workaround for an issue where the Sysprep and Capture task sequence fails when it tries to capture Windows images.
-ms.date: 09/08/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:setup, csstroubleshoot
-ms.technology: windows-client-deployment
+ms.subservice: deployment
 ---
 # Sysprep and Capture task sequence fails when it tries to capture Windows images
 
@@ -88,3 +88,7 @@ End if
 This issue doesn't occur if you capture a Windows image that was originally deployed by using MDT 2012 Update 1. This is because when Windows is deployed by using MDT, a System Reserved partition is created that has a size of 499 megabytes (MB). There is enough free space in the System Reserved partition to apply the WinPE image that is required for the capture.
 
 If the Windows image that you are trying to capture with the Sysprep and Capture task sequence was originally deployed from a Windows media, the System Reserved partition that is created has a size of 350 MB. And because it already contains the WinRE image, it does not have enough free space for MDT to apply the WinPE image. In this case, the LTIApply script automatically selects the System Partition to apply the WinPE image. As part of this process, the LTIApply script changes ownership on the bootmgr file and the boot folder on the System Partition. The problem occurs because the LTIApply script doesn't check for the existence of the boot folder on the System Partition before it runs the `takeown.exe` command to change ownership.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

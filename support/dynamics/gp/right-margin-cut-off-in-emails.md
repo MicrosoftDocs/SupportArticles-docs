@@ -25,7 +25,7 @@ It occurs with our standard Word Template, and Modified Word Templates that were
 
 ## Resolution
 
-This issue (TFS #86927) is fixed in Dynamics GP 2016. For more information, see [Microsoft Dynamics GP 2016 new feature blog series schedule](https://community.dynamics.com/gp/b/dynamicsgp/posts/microsoft-dynamics-gp-2016-new-features-blog-series-schedule).
+This issue (TFS #86927) is fixed in Dynamics GP 2016. For more information, see [Microsoft Dynamics GP 2016 new feature blog series schedule](https://community.dynamics.com/blogs/post/?postid=d4e7672c-b837-454e-a098-8ca0c6fb4805).
 
 ## Workaround
 
@@ -47,4 +47,4 @@ Option 2: Send the document in .docx instead
 
 ## More Information
 
-This issue has also been documented in the [Word Template RM Statements Formatting when Emailing as PDF](https://community.dynamics.com/gp/b/dynamicsgp/posts/word-template-rm-statements-formatting-when-emailing-as-pdf) and includes screen prints.
+This issue has also been documented in the [Word Template RM Statements Formatting when Emailing as PDF](https://community.dynamics.com/blogs/post/?postid=c3286958-c19b-49ff-be97-0954d4be122c) and includes screen prints.

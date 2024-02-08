@@ -35,7 +35,7 @@ To fix the issue, do the following:
 - If you use a custom application, follow these steps:
 
   1. Sign in to the [Azure portal](https://portal.azure.com/).
-  2. Select **Azure Active Directory** > **App registrations**.
+  2. Select **Microsoft Entra ID** > **App registrations**.
   3. In the search box, enter the application ID in the error message to find the app.
   4. Select the app, and then select **Authentication** under **Manage**.
   5. Under **Redirect URIs**, add the following URI:

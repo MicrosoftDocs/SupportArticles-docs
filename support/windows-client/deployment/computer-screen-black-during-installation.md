@@ -1,17 +1,17 @@
 ---
 title: Computer screen goes black during setup
 description: Fixes an issue where a black screen is displayed during Windows 7 setup on systems with embedded DisplayPort from AMD/ATI.
-ms.date: 10/19/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:setup, csstroubleshoot
-ms.technology: windows-client-deployment
+ms.subservice: deployment
 ---
 # Computer screen goes black during the Windows 7 installation process
 
@@ -148,3 +148,7 @@ To create an Autounattend.xml file yourself, follow these steps:
 ## References
 
 For more information about unattended installations, see [Windows Automated Installation Kit for Windows 7](/previous-versions/windows/server/dd349343(v=ws.10)).
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

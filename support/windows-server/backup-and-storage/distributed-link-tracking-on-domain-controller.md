@@ -1,17 +1,17 @@
 ---
 title: Distributed Link Tracking on domain controllers
 description: Describes how you can use the Distributed Link Tracking services on Windows-based domain controllers.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:partition-and-volume-management, csstroubleshoot
-ms.technology: windows-server-backup-and-storage
+ms.subservice: backup-and-storage
 ---
 # Distributed Link Tracking on Windows-based domain controllers
 
@@ -168,7 +168,7 @@ To use this script:
 
 1. Copy all of the text between the \<Start Copy Here\> tag and the \<End Copy Here\> tag in this article, and then paste the text to a ASCII text editor file (for example, a Microsoft Notepad file).
 2. Save the file as "Dltpurge.vbs".
-3 Complete the procedure that is described in [How to delete Distributed Link Tracking objects](/troubleshoot/windows-server/backup-and-storage/distributed-link-tracking-on-domain-controller#how-to-delete-distributed-link-tracking-objects)
+3 Complete the procedure that is described in [How to delete Distributed Link Tracking objects](distributed-link-tracking-on-domain-controller.md#how-to-delete-distributed-link-tracking-objects)
 
 
 ```vbscript

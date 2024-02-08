@@ -1,17 +1,17 @@
 ---
 title: Log files are deleted when you use Performance Monitor in Windows Server
 description: Discusses that log data is lost when you run Performance Monitor in Windows Server.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:performance-monitoring-tools, csstroubleshoot
-ms.technology: windows-server-performance
+ms.subservice: performance
 ---
 # Log files are deleted when you use Performance Monitor in Windows Server
 

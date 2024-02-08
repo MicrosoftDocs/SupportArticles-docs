@@ -7,11 +7,11 @@ ms.author: kaushika
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:cannot-bring-a-resource-online, csstroubleshoot
-ms.technology: windows-server-high-availability
+ms.subservice: high-availability
 ---
 # Can't bring a clustered resource online troubleshooting guidance
 
@@ -69,12 +69,12 @@ Before contacting Microsoft Support, you can gather information about the issue.
 
 ### Prerequisites
 
-1. [TSSv2](https://aka.ms/getTSSv2) must be executed in the context of an account with admin rights on the local system, and EULA must be accepted (once EULA is accepted, TSSv2 won't prompt it again).
+1. [TSS](https://aka.ms/getTSS) must be executed in the context of an account with admin rights on the local system, and EULA must be accepted (once EULA is accepted, TSS won't prompt it again).
 
 2. We recommend that the local machine uses the **RemoteSigned** PowerShell execution policy.
 
 > [!NOTE]
-> In case the current PowerShell execution policy doesn't allow running TSSv2, the following actions could be taken:
+> In case the current PowerShell execution policy doesn't allow running TSS, the following actions could be taken:
 >
 > - Set **RemoteSigned** for the **Process** level and run the following cmdlet:
 >
@@ -84,11 +84,11 @@ Before contacting Microsoft Support, you can gather information about the issue.
 >
 >   `PS C:\> Get-ExecutionPolicy -List`
 >
-> Since the **Process** level permissions only apply to the current PowerShell session, once the given PowerShell window in which TSSv2 runs is closed, the assigned permission for the **Process** level will also go back to the previously configured state.
+> Since the **Process** level permissions only apply to the current PowerShell session, once the given PowerShell window in which TSS runs is closed, the assigned permission for the **Process** level will also go back to the previously configured state.
 
 ### Gather key information before you contact Microsoft Support
 
-1. Download [TSSv2](https://aka.ms/getTSSv2) and unzip it to the *C:\tss_tool* folder.
+1. Download [TSS](https://aka.ms/getTSS) and unzip it to the *C:\tss_tool* folder.
 
 2. Open an elevated PowerShell prompt and change the directory to the *C:\tss_tool* folder.
 

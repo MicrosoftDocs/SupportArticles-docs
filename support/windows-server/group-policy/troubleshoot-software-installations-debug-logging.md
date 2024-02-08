@@ -1,17 +1,17 @@
 ---
 title: How to troubleshoot software installations by using Windows application management debug logging
 description: Describes how you can troubleshoot software installations by using Windows application management debug logging.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, davidg
 ms.custom: sap:deploying-software-through-group-policy, csstroubleshoot
-ms.technology: windows-server-group-policy
+ms.subservice: group-policy
 ---
 # How to troubleshoot software installations by using Windows application management debug logging
 

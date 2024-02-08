@@ -3,8 +3,7 @@ title: Inconsistent results in MKL computations
 description: This article provides a resolution for the problem where you get inconsistent results because of a missing environment variable.
 ms.date: 01/14/2021
 ms.custom: sap:Machine Learning Services (in database)
-ms.topic: troubleshooting
-ms.prod: sql 
+ms.topic: troubleshooting 
 ---
 # Inconsistent results in MKL computations because of a missing environment variable in Microsoft R Server or Machine Learning Server
 

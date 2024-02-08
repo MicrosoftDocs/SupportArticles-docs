@@ -4,7 +4,6 @@ description: This article provides resolutions for the deadlocks that occur when
 ms.date: 07/22/2020
 ms.custom: sap:Reporting Services
 ms.reviewer: calton
-ms.prod: sql
 ---
 # Database deadlocks occur when you try to view an SSRS report in the SharePoint integrated mode after you update a data source
 

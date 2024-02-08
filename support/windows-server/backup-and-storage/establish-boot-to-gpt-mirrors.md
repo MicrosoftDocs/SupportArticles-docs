@@ -1,17 +1,17 @@
 ---
 title: Establish and boot to GPT mirrors in 64-bit Windows
 description: Describes how to successfully set up dynamic boot partition mirroring on GUID Partition Table (GPT) disks
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, mjacquet
 ms.custom: sap:partition-and-volume-management, csstroubleshoot
-ms.technology: windows-server-backup-and-storage
+ms.subservice: backup-and-storage
 ---
 # Establish and boot to GPT mirrors in 64-bit Windows
 
@@ -740,4 +740,4 @@ While booted into the shadow drive (disk-1), you must "remove" the broken mirror
 
 If you are using Windows Server 2008, visit the following article to set up a GPT mirror:
 
-[How to set up dynamic boot partition mirroring on GUID partition table (GPT) disks in Windows Server 2008](/troubleshoot/windows-server/backup-and-storage/set-up-dynamic-boot-partition-mirroring)
+[How to set up dynamic boot partition mirroring on GUID partition table (GPT) disks in Windows Server 2008](set-up-dynamic-boot-partition-mirroring.md)

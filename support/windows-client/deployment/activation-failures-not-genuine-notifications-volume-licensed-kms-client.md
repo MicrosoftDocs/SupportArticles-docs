@@ -1,17 +1,17 @@
 ---
 title: Activation failures around January 8, 2019, on volume-licensed Windows 7 Service Pack 1 KMS clients
 description: Provides a solution to an issue where users may receive the Windows Activation or (Windows is not genuine) notifications starting at or after 10:00 UTC, January 8, 2019.
-ms.date: 12/07/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, arrenc, chriti, demartin, mgorti, rpowell, shibird, sirkad, tichotej, wesk, wiaftrin
 ms.custom: sap:activation, csstroubleshoot
-ms.technology: windows-client-deployment
+ms.subservice: deployment
 ---
 # Activation failures and (not genuine) notifications around January 8, 2019, on volume-licensed Windows 7 Service Pack 1 KMS clients
 
@@ -155,3 +155,7 @@ The following table lists the KMS client keys for each edition of Windows 7.
 >
 > - Scripts that contain the KMS client setup key must target the corresponding operating system edition.
 > - For services that do not have [KB 971033](https://support.microsoft.com/help/971033) installed but experience the issue that is mentioned in the [Symptoms](#symptoms) section, you can also rebuild activation-related files and reactivate the system by using the script that is mentioned in the list of reactivation commands.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

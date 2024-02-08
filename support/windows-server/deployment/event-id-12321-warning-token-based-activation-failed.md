@@ -1,17 +1,17 @@
 ---
 title: Event ID 12321 Warning Token Based Activation failed
 description: Provides a resolution for Event ID 12321 Warning Token Based Activation failed
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, joscon
 ms.custom: sap:activation, csstroubleshoot
-ms.technology: windows-server-deployment
+ms.subservice: deployment
 ---
 # Event ID 12321 Warning Token Based Activation failed
 
@@ -47,3 +47,7 @@ SLMGR /ILC \<token-based-license-filename>
 ## More information
 
 Token-Based activation functionality was enabled in Service Pack 2 for Windows Vista and Windows Server 2008.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

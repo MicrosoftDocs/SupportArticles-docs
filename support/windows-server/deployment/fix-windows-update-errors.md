@@ -1,17 +1,17 @@
 ---
 title: Fix Windows Update errors via DISM or System Update Readiness tool
 description: Use the System Update Readiness Tool or the DISM tool to fix problems that prevent Windows Update from installing successfully.
-ms.date: 12/30/2022
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: high
 ms.reviewer: kaushika, chkeen, cgibson, jesko
 ms.custom: sap:servicing, csstroubleshoot
-ms.technology: windows-server-deployment
+ms.subservice: deployment
 adobe-target: true
 ---
 
@@ -55,7 +55,7 @@ Windows updates may fail to install if there are corruption errors. The followin
 
 For example, an update might not install if a system file is damaged. The DISM or [System Update Readiness tool](#what-does-the-system-update-readiness-tool-do) may help you fix some Windows corruption errors.
 
-Check this page for [Windows Update troubleshooting scenarios](/troubleshoot/windows-client/deployment/troubleshoot-windows-update-issues).
+Check this page for [Windows Update troubleshooting scenarios](../../windows-client/deployment/troubleshoot-windows-update-issues.md).
 
 ## Solution 1: Use DISM
 
@@ -196,35 +196,8 @@ To manually fix corruption errors that the System Update Readiness tool detects 
 4. Copy the package (.msu) to the `%SYSTEMROOT%\CheckSUR\packages` directory. By default, this directory doesn't exist, and you need to create it.
 5. Rerun the System Update Readiness tool.
 
-If you're a technical professional, see [How to fix errors found in the CheckSUR.log](/troubleshoot/windows-client/deployment/errors-in-checksur-log) for another option on fixing errors in the _CheckSUR.log_.
+If you're a technical professional, see [How to fix errors found in the CheckSUR.log](../../windows-client/deployment/errors-in-checksur-log.md) for another option on fixing errors in the _CheckSUR.log_.
 
 ## Data collection
 
-Before contacting Microsoft support, you can gather information about your issue.
-
-### Prerequisites
-
-Refer [Introduction to TroubleShootingScript toolset (TSSv2)](../../windows-client/windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tssv2.md#prerequisites) for prerequisites for the toolset to run properly.
-
-### Gather key information before contacting Microsoft support
-
-1. Download [TSSv2](https://aka.ms/getTSSv2) and extract it in the *C:\\tss_tool* folder.
-2. Open the *C:\\tss_tool* folder from an elevated PowerShell command prompt.  
-    > [!NOTE]
-    > Don't use the Windows PowerShell Integrated Scripting Environment (ISE).
-3.  Run the following cmdlets:
-
-    ```powershell
-    Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-    ```  
-    ```powershell
-    .\TSSv2.ps1 -Collectlog DND_SetupReport
-    ```
-
-4. Enter *A* for "Yes to All" for the execution policy change.
-
-> [!NOTE]
->
-> - The traces are stored in a compressed file in the *C:\\MSDATA* folder. After a support case is created, this file can be uploaded to the secure workspace for analysis.
-> - If you've downloaded this tool previously, we recommend to download the latest version. It doesn't update automatically when running.
-
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

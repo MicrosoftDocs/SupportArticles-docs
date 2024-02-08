@@ -4,8 +4,7 @@ description: Describes an issue that triggers a "Request body is too large" erro
 ms.date: 08/14/2020
 author: genlin
 ms.author: genli
-ms.service: storage
-ms.subservice: files
+ms.service: azure-file-storage
 ms.reviewer: 
 ---
 # Error when you write more than 4 MB of data to Azure Storage: Request body is too large

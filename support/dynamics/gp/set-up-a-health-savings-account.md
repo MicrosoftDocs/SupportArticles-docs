@@ -14,4 +14,5 @@ _Original KB number:_ &nbsp; 4316766
 
 ## Information
 
-- [How to set up an HSA (Health Savings Account) in Microsoft Dynamics GP](https://community.dynamics.com/gp/b/dynamicsgp/archive/2018/05/14/how-to-setup-up-an-hsa-health-savings-account-in-microsoft-dynamics-gp)
+- [How to set up an HSA (Health Savings Account) in Microsoft Dynamics GP](https://community.dynamics.com/blogs/post/?postid=5e6a13dd-f348-4836-b9f7-4741a020cf6c)
+

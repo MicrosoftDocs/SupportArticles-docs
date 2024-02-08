@@ -8,11 +8,10 @@ manager: dcscontentpm
 tags: azure-resource-manager
 ms.service: virtual-machines
 ms.subservice: vm-troubleshooting-tools
-ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: vm
 ms.workload: infrastructure-services
-ms.date: 8/20/2019
+ms.date: 08/20/2019
 ms.author: genli
 ---
 

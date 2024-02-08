@@ -3,7 +3,7 @@ title: AI Builder processes and plug-in steps are turned off in default solution
 description: Provides a resolution for the issue that AI Builder processes and plug-in steps are turned off in default solution.
 ms.reviewer: angieandrews
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: 
 ms.author: angieandrews
 author: v-aangie

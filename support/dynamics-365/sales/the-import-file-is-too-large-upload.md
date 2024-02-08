@@ -3,7 +3,7 @@ title: The import file is too large to upload
 description: Provides a solution to the 80040375 error that occurs when you try to import a solution in Microsoft Dynamics 365.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: d365-sales-custom-solutions
 ---
 # The import file is too large to upload error occurs when importing a solution in Microsoft Dynamics 365
@@ -34,4 +34,4 @@ The example message above is a SQL error that can occur if you try to import a f
 
 Example: If you had created a custom field in the organization with a schema name called new_field1 on the Account entity. Now you're trying to import a solution that contains a field with that same schema name on the Account entity. SQL doesn't allow multiple columns with the same name in the same table so it will cause the import to fail. You may find that in the target environment, you already had a field with the same schema name but different casing such as new_Field1 and the field in the solution you're importing is new_field1. If the field with the same name isn't needed in the target environment, delete it and then try the import again.
 
-If the error persists and you aren't able to resolve the issue using the details in the log file, contact Microsoft Support for assistance. You can also use the information in the log file to search for potential solutions in the [Dynamics 365 Communities](https://community.dynamics.com/f).
+If the error persists and you aren't able to resolve the issue using the details in the log file, contact Microsoft Support for assistance. You can also use the information in the log file to search for potential solutions in the [Dynamics 365 Communities](https://community.dynamics.com/forums/thread/).

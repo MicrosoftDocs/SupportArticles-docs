@@ -12,7 +12,7 @@ ms.collection: windows
 ms.workload: na
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
-ms.date: 06/22/2020
+ms.date: 10/10/2023
 ---
 
 # OS start-up – Computer restarted unexpectedly or encountered an unexpected error
@@ -35,7 +35,7 @@ The machine is attempting to do an initial boot of a [generalized image](/window
 
 The answer file is a special XML file that contains setting definitions and values for the configuration settings you want to automate during the installation of a Windows Server operating system installation. The configuration options include instructions on how to partition disks, where to find the Windows image to be installed, product keys to apply, and other commands you would like to run.
 
-Again, custom answer files are not supported in Azure. Thus, this situation occurs when an image was prepared for use in Azure, but you specified a custom Unattend.xml file by using **SYSPREP** with a flag similar to the following command:
+Again, custom answer files aren't supported in Azure. Therefore, this situation occurs if an image was prepared for use in Azure, but you specified a custom Unattend.xml file by using **SYSPREP** with a flag, similar to the following command:
 
 `sysprep /oobe /generalize /unattend:<your file's name> /shutdown`
 
@@ -45,18 +45,19 @@ This issue is most often created while you are using sysprep with an on-premises
 
 ## Solution
 
+### Try restoring the VM from a backup
+
+If you have a recent backup of the VM, you may try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem. If restoring the VM from backup isn't possible, follow the steps in the [Do not use Unattend.xml](#do-not-use-unattendxml) section.
+
 ### Do not use Unattend.xml
 
-> [!TIP]
-> If you have a recent backup of the VM, you may try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
-
-To fix this issue, follow [the Azure guidance on preparing/capturing an image](/azure/virtual-machines/windows/upload-generalized-managed) and prepare a new generalized image. During sysprep, **do not use `/unattend:<your file's name>` flag**. Instead, use only the flags below:
+To fix this issue, follow [the Azure guidance on preparing/capturing an image](/azure/virtual-machines/windows/upload-generalized-managed) and prepare a new generalized image. During sysprep, **do not use `/unattend:<your file's name>` flag**. Instead, use only the following flags:
 
 `sysprep /oobe /generalize /shutdown`
 
 - Out-of-box-experience (OOBE) is the supported setting for Azure VMs.
 
-You may also use the **System Preparation tool GUI** to accomplish the same task as the command above by selecting the options shown below:
+You may also use the **System Preparation tool GUI** to accomplish the same task as the previous command by selecting the following options:
 
 - Enter Out-of-Box-Experience
 - Generalize

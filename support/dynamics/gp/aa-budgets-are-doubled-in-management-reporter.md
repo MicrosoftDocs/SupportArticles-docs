@@ -16,4 +16,5 @@ _Original KB number:_ &nbsp; 4013058
 
 If one dimension is owned by another dimension, then both dimensions need to be added. If you add only one dimension, then you will only see that one. If you do not add any, then the amounts may be doubled. If one dimension is owned by another, you should add both to the account to have the amounts show correctly on the MR report. See the example in the below blow article:
 
-[Reporting on AA budgets in MR](https://community.dynamics.com/gp/b/dynamicsgp/posts/reporting-on-aa-budgets-in-mr)
+[Reporting on AA budgets in MR](https://community.dynamics.com/blogs/post/?postid=6a43acd4-e5e9-4383-a9b7-d81fa862518a)
+

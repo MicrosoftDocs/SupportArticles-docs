@@ -1,17 +1,17 @@
 ---
 title: Network access validation algorithms and examples for Windows
 description: Describes network access validation algorithms and examples.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: tinab, kaushika
 ms.custom: sap:legacy-authentication-ntlm, csstroubleshoot
-ms.technology: windows-server-security
+ms.subservice: windows-security
 ---
 # Network access validation algorithms and examples for Windows Server 2003, Windows XP, and Windows 2000
 
@@ -267,7 +267,7 @@ If the domain that is specified in the SMB is NULL, that is, no domain is specif
 
     - Guest accounts on trusted domains will never be available.
     - The actual, internal process is more complex than the algorithms that are described here.
-    - These algorithms do not discuss the actual mechanics of pass-through authentication. For more information, see [NTLM user authentication in Windows](/troubleshoot/windows-server/windows-security/ntlm-user-authentication)
+    - These algorithms do not discuss the actual mechanics of pass-through authentication. For more information, see [NTLM user authentication in Windows](ntlm-user-authentication.md)
 
     - These algorithms do not discuss the password encryption process that is used in Windows Server 2003, Windows XP, and Windows 2000. A binary large object (BLOB) derived from a one-way password hash is sent as part of the authentication request. The content of this BLOB will depend on the authentication protocol chosen for the logon.
     - This article does not discuss the internal workings of the Microsoft Authentication Module.

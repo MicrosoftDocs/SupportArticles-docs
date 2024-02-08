@@ -3,9 +3,8 @@ metadata:
   title: Azure Application Insights availability monitoring common issues FAQ
   description: Review a list of frequently asked questions (FAQ) about common issues that occur when you use Application Insights availability monitoring.
   ms.topic: faq
-  ms.date: 8/15/2022
-  author: DennisLee-DennisLee
-  ms.author: v-dele
+  ms.date: 01/11/2024
+  ms.reviewer: v-leedennis, toddfous, v-weizhu
   ms.service: azure-monitor
   ms.subservice: application-insights
 
@@ -17,13 +16,15 @@ sections:
       - question: |
           My site looks OK, but I experience test failures. Why is Application Insights alerting me?
         answer: |
+          - Starting from December 2023, the Availability Test web requests use TLS 1.3, the latest and fastest version of the encryption protocol, to match the latest security standards. If the tests against your site fail, check if your web server can accept inbound TLS 1.3 client connections. For more information, see [Application Insights Availability Tests TLS 1.3 Enablement](https://azure.microsoft.com/updates/in-development-application-insights-availability-tests-tls-13-enablement-2/).
+          
           - Does your test have the **Parse dependent requests** option enabled? That forces a strict check on resources such as scripts and images. These kinds of failures might not be noticeable in a browser. Check all images, scripts, style sheets, and any other files that are loaded by the page. If any of them fails, the test is reported as failed, even if the main HTML page loads without issues. To filter the test for such resource failures, clear the **Parse dependent requests** check box in the test configuration.
 
           - To reduce the odds of noise from transient network blips and other distractions, make sure that **Enable retries for test failures configuration** is selected. You can also test from other locations and manage the alert rule threshold for those locations to prevent location-specific issues that cause undue alerts.
 
           - To see details about why the failure was reported, select any of the red dots from the availability scatter plot experience, or any availability failure from the search results. The test results, together with the correlating server-side telemetry (if enabled), should help you understand why the test failed. Common causes of transient issues are the network status and connectivity.
 
-          - Did the test time out? We abort tests after two minutes. If your ping or multi-step test takes longer than two minutes, we'll report it as a failure. Consider breaking the test into multiple tests that can finish more quickly.
+          - Did the test time out? We abort tests after two minutes. If your ping or multi-step test takes longer than two minutes, we report it as a failure. Consider breaking the test into multiple tests that can finish more quickly.
 
           - Did all locations report failure, or only some of them? If only some locations reported failures, this situation might occur because of network or content delivery network (CDN) issues. Again, select any of the red dots from the availability scatter plot experience to better understand why the location reported failures.
 
@@ -45,7 +46,7 @@ sections:
       - question: |
           Why do I see "Other values" in my web test telemetry?
         answer: |
-          Application Insights [limits availability tests](/azure/azure-resource-manager/management/azure-subscription-service-limits#application-insights) to 100 per Application Insights resource. If you create custom web test results by calling the `TrackAvailability()` API, you could attempt to exceed that limit. For any availability test name, location, or other field values where the cardinality exceeds 100, its value will be replaced with "Other values". If you need more than 100 different web test names or locations, you can use a second Application Insights component. 
+          Application Insights [limits availability tests](/azure/azure-resource-manager/management/azure-subscription-service-limits#application-insights) to 100 per Application Insights resource. If you create custom web test results by calling the `TrackAvailability()` API, you could attempt to exceed that limit. For any availability test name, location, or other field values where the cardinality exceeds 100, its value is replaced with "Other values". If you need more than 100 different web test names or locations, you can use a second Application Insights component. 
  
       - question: |
           Why don't I see any related server-side telemetry to diagnose test failures?

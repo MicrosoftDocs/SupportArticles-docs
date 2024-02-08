@@ -22,7 +22,7 @@ Therefore, you cannot delete the SOP batch. However, you can delete the SOP batc
 
 This problem occurs if the following conditions are true:
 
-- The country code that you use is **GB**.
+- The country/region code that you use is **GB**.
 - You use the reverse charge tax.
 
 ## Cause

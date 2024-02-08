@@ -10,7 +10,7 @@ ms.service: virtual-machines
 ms.subservice: vm-common-errors-issues
 ms.topic: troubleshooting
 ms.workload: infrastructure
-ms.date: 5/22/2017
+ms.date: 05/22/2017
 ms.author: xujing
 
 ---
@@ -118,10 +118,10 @@ This section lists the common error messages you may encounter when managing VMs
 |  InvalidParameter  |  The requested VM size {0} is not available in the current region. Find out more on the available VM sizes in each region at <https://aka.ms/azure-regions>.  |
 |  InvalidParameter  |  Windows admin user name cannot be more than {0} characters long, end with a period(.), or contain the following characters: {1}.  |
 |  InvalidParameter  |  Windows computer name cannot be more than {0} characters long, be entirely numeric, or contain the following characters: {1}.  |
-|  MissingMoveDependentResources  |  The move resources request does not contain all the dependent resources. Please check error details for missing resource ids.  |
-|  MoveResourcesHaveInvalidState  |  The Move Resources request contains VMs which are associated with invalid storage accounts. Please check details for these resource ids and referenced storage account names.  |
-|  MoveResourcesHavePendingOperations  |  The move resources request contains resources for which an operation is pending. Please check details for these resource ids. Retry your operation once the pending operations complete.  |
-|  MoveResourcesNotFound  |  The move resources request contains resources that cannot be found. Please check details for these resource ids.  |
+|  MissingMoveDependentResources  |  The move resources request does not contain all the dependent resources. Please check error details for missing resource IDs.  |
+|  MoveResourcesHaveInvalidState  |  The Move Resources request contains VMs which are associated with invalid storage accounts. Please check details for these resource IDs and referenced storage account names.  |
+|  MoveResourcesHavePendingOperations  |  The move resources request contains resources for which an operation is pending. Please check details for these resource IDs. Retry your operation once the pending operations complete.  |
+|  MoveResourcesNotFound  |  The move resources request contains resources that cannot be found. Please check details for these resource IDs.  |
 |  NetworkingInternalOperationError  |  Unknown network allocation error.  |
 |  NetworkingInternalOperationError  |  Unknown network allocation error  |
 |  NetworkingInternalOperationError  |  An internal error occurred in processing network profile of the VM.  |

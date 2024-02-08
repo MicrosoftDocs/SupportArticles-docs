@@ -1,17 +1,17 @@
 ---
 title: The new printer status is Offline
 description: Provides a solution to an issue where the new printer status is Offline after you delete a print queue and then restart a Windows-based computer.
-ms.date: 4/20/2022
+ms.date: 05/16/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, AndrewYa
 ms.custom: sap:errors-and-troubleshooting-general-issues, csstroubleshoot
-ms.technology: windows-server-printing
+ms.subservice: printing
 ---
 # The new printer status is Offline after you delete a print queue and then restart a Windows-based computer
 
@@ -48,3 +48,7 @@ To resolve this issue, right-click the new print queue in the Printers and Faxes
 
 - Check whether the problem is fixed. If the problem is fixed, you're finished with this section. If the problem isn't fixed, you can [contact support](https://support.microsoft.com/contactus/).
 - We would appreciate your feedback. To provide feedback or to report any issues with this solution, leave a comment by sending us an [email](mailto:fixit4me@microsoft.com?subject=kb) message.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for User Experience issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-user-experience.md#printing).

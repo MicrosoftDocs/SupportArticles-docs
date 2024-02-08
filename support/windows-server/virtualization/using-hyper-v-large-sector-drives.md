@@ -1,17 +1,17 @@
 ---
 title: Using Hyper-V with large-sector drives
 description: Describes the issues and guidance that are associated with running Hyper-V in Windows Server 2008 and Windows Server 2008 R2.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, senthilr
 ms.custom: sap:configuration-of-virtual-machine-settings, csstroubleshoot
-ms.technology: hyper-v
+ms.subservice: hyper-v
 ---
 # Using Hyper-V with large-sector drives in Windows Server 2008 and Windows Server 2008 R2
 

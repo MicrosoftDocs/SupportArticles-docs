@@ -1,17 +1,17 @@
 ---
 title: Suggested hotfixes for WMI issues
 description: Provides suggested hotfixes for Windows Management Intrumentation (WMI) related issue on Windows platforms.
-ms.date: 9/24/2021
+ms.date: 05/16/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:windows-management-instrumentation-wmi, csstroubleshoot
-ms.technology: windows-server-administration-management-development
+ms.subservice: admin-mgmt-development
 ---
 # Suggested hotfixes for WMI related issue on Windows platforms
 
@@ -59,3 +59,7 @@ Due to the volume of support incidents handled by Microsoft Support Services for
   - [982293](https://support.microsoft.com/help/982293)  The Svchost.exe process that has the WMI service crashes in Windows Server 2008 R2 or in Windows 7 Note: MSKB 982293 is applicable to the computers running Windows 7 or Windows Server 2008 R2 without Service Pack 1 (SP1)
 
   - [974930](https://support.microsoft.com/help/974930)  An application or service that queries information about a failover cluster by using the WMI provider may experience low performance or a time-out exception
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for User Experience issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-user-experience.md#wmi).

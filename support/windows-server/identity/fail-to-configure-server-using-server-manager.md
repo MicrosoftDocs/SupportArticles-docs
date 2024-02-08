@@ -1,17 +1,17 @@
 ---
 title: Domain controller configuration error (The server is not operational) when you configure a server by using Server Manager
 description: Describes an issue that occurs when you configure a server that is running Windows Server 2012 from a workgroup as a domain controller.
-ms.date: 3/4/2022
+ms.date: 03/04/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, nedpyle
 ms.custom: sap:setup, csstroubleshoot
-ms.technology: windows-server-deployment
+ms.subservice: deployment
 ---
 # Domain controller configuration error (The server is not operational) when you configure a server by using Server Manager
 

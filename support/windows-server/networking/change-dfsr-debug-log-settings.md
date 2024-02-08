@@ -1,17 +1,17 @@
 ---
 title: How to configure DFSR logging
 description: Describes the way to change these DFSR debug log settings via the WMI Command-line interface WMIC.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:dfsr, csstroubleshoot
-ms.technology: networking
+ms.subservice: networking
 ---
 # How to configure DFSR logging
 

@@ -1,17 +1,15 @@
 ---
 title: Cluster validation account causes events or messages
 description: Describes the temporary user account that the cluster validation process creates, uses, and deletes.
-ms.date: 4/9/2022
-author: v-tappelgate
-ms.author: v-tappelgate
+ms.date: 04/09/2022
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
-ms.reviewer: kaushika
+ms.reviewer: kaushika, v-tappelgate
 ms.custom: sap:setup-and-configuration-of-clustered-services-and-applications, csstroubleshoot
-ms.technology: windows-server-high-availability
+ms.subservice: high-availability
 keywords: cluster validation, user account
 ---
 

@@ -4,7 +4,6 @@ description: This article describes the information that may be collected from a
 ms.date: 08/19/2020
 ms.reviewer: amitban, dansha, shonh
 ms.topic: article
-ms.prod: sql
 ---
 # SQL Server Setup data-collection diagnostic tool
 

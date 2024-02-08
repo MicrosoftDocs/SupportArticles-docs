@@ -35,7 +35,7 @@ To work around this problem, use one of the following methods.
 
 To work around this problem, follow these steps:
 
-1. Download the [SkipDotNetCheckDexterity.mst](https://community.dynamics.com/gp/f/microsoft-dynamics-gp-forum/275325/microsoft-dynamics-gp-10-0-skipdotnetcheckdexterity-mst) file. The following file is available for download from the Microsoft Dynamics File Exchange Server:
+1. Download the [SkipDotNetCheckDexterity.mst](https://community.dynamics.com/forums/thread/details/?threadid=cf46f462-dcba-4df5-9913-dae7092d2712) file. The following file is available for download from the Microsoft Dynamics File Exchange Server:
 
     Microsoft scanned this file for viruses. Microsoft used the most current virus-detection software that was available on the date that the file was posted. The file is stored on security-enhanced servers that help prevent any unauthorized changes to the file.  
 
@@ -93,3 +93,4 @@ Microsoft has confirmed that it's a problem in the Microsoft products that are l
 
 When you use the methods in the [Workaround](#workaround) section, make sure that you type the commands correctly. If you add a space or if you omit a space, you may receive the following error message:
 > This installation does not have a native user interface.
+

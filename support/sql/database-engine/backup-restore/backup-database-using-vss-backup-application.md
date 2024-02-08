@@ -3,7 +3,6 @@ title: Back up a database using a VSS backup application
 description: This article provides a resolution for the problem that occurs when you use Volume Shadow Copy Services (VSS) based applications to back up your SQL Server databases.
 ms.date: 09/19/2022
 ms.custom: sap:Database Engine
-ms.prod: sql
 ---
 # Backing up a SQL Server database using a VSS backup application may fail for some databases
 

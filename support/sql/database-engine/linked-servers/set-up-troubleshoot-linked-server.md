@@ -1,9 +1,8 @@
 ---
 title: Set up and troubleshoot a linked server to an Oracle database
 description: This article describes how to set up a linked server from a computer that is running Microsoft SQL Server to an Oracle database and provides basic troubleshooting steps for common errors you may experience when you set up a linked server to an Oracle database.
-ms.date: 12/02/2020
+ms.date: 07/11/2023
 ms.custom: sap:Database Engine
-ms.prod: sql
 ---
 # Set up and troubleshoot a linked server to an Oracle database in SQL Server
 
@@ -16,7 +15,7 @@ _Original KB number:_ &nbsp; 280106
 
 This article describes how to set up a linked server from a computer that is running Microsoft SQL Server to an Oracle database and provides basic troubleshooting steps for common errors you may experience when you set up a linked server to Oracle. Most of the information in this article is applicable to environments that are configured to use Microsoft OLEDB Provider for Oracle (MSDAORA). Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Instead, use Oracle's OLE DB provider.
 
-For more information on configuring a linked server using Oracle’s OLEDB provider review [How to get up and running with Oracle and Linked Servers](https://techcommunity.microsoft.com/t5/sql-server-support/how-to-get-up-and-running-with-oracle-and-linked-servers/ba-p/318636).
+For more information on configuring a linked server using Oracle's OLEDB provider, review [How to get up and running with Oracle and Linked Servers](https://techcommunity.microsoft.com/t5/sql-server-support/how-to-get-up-and-running-with-oracle-and-linked-servers/ba-p/318636).
 
 > [!IMPORTANT]
 > The current version of the Microsoft ODBC Driver for Oracle complies with the ODBC 2.5 specification, while the OLE DB Provider for Oracle is a native Oracle 7 OCI API provider. Both the driver and provider use the SQL*Net Client (or Net8 client for Oracle 8x) and the Oracle Call Interface (OCI) library, and other Oracle client components, to connect to Oracle databases and retrieve data. The Oracle client components are important, and must be configured correctly to successfully connect to Oracle databases using both the driver and the provider.
@@ -160,13 +159,17 @@ For performance-related issues, search SQL Server Books Online for the **Optimiz
   Make sure that the MSDAORA.dll file is registered correctly. (The MSDAORA.dll file is the Microsoft OLE DB provider for Oracle file.) Use RegSvr32.exe to register Microsoft OLE DB Provider for Oracle.
 
   > [!NOTE]
-  > If you use a third-party Oracle provider, and your Oracle provider cannot run outside a SQL Server process, enable it to run in-process by changing the provider options. To change the provider options, use one of the following methods.
+  > If you use a third-party Oracle provider, and your Oracle provider cannot run outside a SQL Server process, enable it to run in-process by changing the provider options. To change the provider options, use one of the following methods:
   >
   > - Method 1
   > Locate the following registry key. Then, change the value of the AllowInProcess (DWORD) entry to 1. This registry key is located under the corresponding provider name: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Providers\ProviderName`.
   >
   > - Method 2
-  > Set the Allow InProcess option directly through SQL Server Enterprise Manager when you add a new linked server. Click Provider Options , and then click to select the Allow InProcess check box.
+  > Follow these steps to set the **Allow inprocess** option for providers using SQL Server Management Studio (SSMS).
+  > 1. Open SSMS and connect to your SQL Server instance.
+  > 1. In **Object Explorer**, navigate to **Server Objects** > **Linked Servers** > **Providers**.
+  > 1. Right-click the provider you want to configure and select **Properties**.
+  > 1. In the **Provider Options** window, check the **Enable** box for the **Allow inprocess** option.
 
 - Message 4
 
@@ -207,7 +210,7 @@ For performance-related issues, search SQL Server Books Online for the **Optimiz
   Verify that the OCI versions are registered correctly as described earlier in this article.
 
     > [!NOTE]
-    > If the registry entries are all correct, the MtxOCI.dll file is loaded. If the MtxOCI.dll file is not loaded, you cannot perform distributed transactions against Oracle by using Microsoft OLE DB Provider for Oracle or by using Microsoft ODBC Driver for Oracle. If you are using a third-party provider and you receive Error 7391, verify that the OLE DB provider that you are using supports distributed transactions. If the OLE DB provider does support distributed transactions, verify that the Microsoft Distributed Transaction Coordinator (MSDTC) is running and has [network access enabled](/troubleshoot/windows-server/application-management/enable-network-dtc-access).
+    > If the registry entries are all correct, the MtxOCI.dll file is loaded. If the MtxOCI.dll file is not loaded, you cannot perform distributed transactions against Oracle by using Microsoft OLE DB Provider for Oracle or by using Microsoft ODBC Driver for Oracle. If you are using a third-party provider and you receive Error 7391, verify that the OLE DB provider that you are using supports distributed transactions. If the OLE DB provider does support distributed transactions, verify that the Microsoft Distributed Transaction Coordinator (MSDTC) is running and has [network access enabled](../../../windows-server/application-management/enable-network-dtc-access.md).
 
 - Message 8
 

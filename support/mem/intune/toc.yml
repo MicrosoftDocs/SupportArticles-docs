@@ -43,6 +43,10 @@ items:
       href: app-management/error-0x87d13ba2-deploy-macos-lob-app.md
     - name: Can't install apps and run shell scripts in macOS
       href: app-management/cannot-install-macos-apps-and-run-shell-scripts.md
+    - name: Microsoft 365 apps for macOS close and reinstall without notification
+      href: app-management/no-notification-microsoft365-apps-macos-reinstall.md
+    - name: No notification when Microsoft 365 apps deployed with Intune are updated
+      href: app-management/no-notification-microsoft365-apps-macos-update.md
   - name: Android apps
     items:
     - name: Can't wrap Android LOB app with Intune App Wrapping Tool
@@ -235,7 +239,7 @@ items:
       items:
       - name: Troubleshoot the Enrollment Status Page
         href: device-enrollment/understand-troubleshoot-esp.md
-      - name: Troubleshoot Azure AD device registration and Windows Autopilot
+      - name: Troubleshoot Microsoft Entra device registration and Windows Autopilot
         href: device-enrollment/azure-ad-device-registration-autopilot.md
       - name: Error importing Windows Autopilot CSV files
         href: device-enrollment/import-windows-autopilot-device-csv-files-errors.md
@@ -265,7 +269,7 @@ items:
     href: device-management/troubleshoot-device-actions.md
   - name: Remove duplicate mobile device management objects
     href: device-management/remove-duplicate-mobile-device-management.md
-  - name: Remove disabled Azure AD user's device from Intune
+  - name: Remove disabled Microsoft Entra user's device from Intune
     href: device-management/orphaned-device-upn-shown-as-none.md
   - name: Help desk operators can't perform remote tasks
     href: device-management/help-desk-operator-fails-remote-tasks.md
@@ -295,6 +299,8 @@ items:
     href: device-protection/troubleshoot-bitlocker-policies.md
   - name: Troubleshoot encryption in Intune
     href: device-protection/troubleshoot-bitlocker-admin-center.md
+  - name: Troubleshoot Update rings policy
+    href: device-protection/troubleshoot-update-rings.md
   - name: BitLocker-encrypted device shows as Not compliant
     href: device-protection/bitlocker-encrypted-device-not-compliant.md
   - name: Secure boot enabled device shows as Not Compliant
@@ -327,7 +333,7 @@ items:
   items:
   - name: Things to try before calling Intune support
     href: get-support/before-you-call-intune-support.md
-  - name: Get support in Endpoint Manager
+  - name: Get support in Intune
     href: /mem/get-support
   - name: Help and support blade doesn't load
     href: get-support/cannot-load-help-and-support-blade.md

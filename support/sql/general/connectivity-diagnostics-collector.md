@@ -3,7 +3,6 @@ title: Connectivity Diagnostics Collector
 description: This article describes the information that is collected by the SQL Server Connectivity Diagnostics Collector.
 ms.date: 08/19/2020
 ms.topic: article
-ms.prod: sql
 ---
 # Information is collected by the SQL Server Connectivity Diagnostics Collector
 

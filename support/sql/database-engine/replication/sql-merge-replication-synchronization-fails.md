@@ -4,7 +4,6 @@ description: This article provides resolutions for the problem where synchroniza
 ms.date: 03/16/2020
 ms.custom: sap:Replication, change tracking, change data capture
 ms.reviewer: holgerl, sqlblt
-ms.prod: sql
 ---
 # Synchronization for SQL Server merge replication fails when an article uses a stored procedure custom conflict resolver
 

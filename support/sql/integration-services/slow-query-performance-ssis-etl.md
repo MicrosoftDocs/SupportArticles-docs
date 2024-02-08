@@ -4,9 +4,9 @@ description: This article helps resolve issues that occur because of Slow query 
 ms.date: 05/10/2022
 ms.custom: sap:Performance
 ms.topic: troubleshooting
-ms.prod: sql
-author: yuej
-ms.author: v-jayaramanp
+author: Yue0119
+ms.author: yuej
+ms.reviewer: v-jayaramanp
 ---
 
 # Troubleshoot slow query performance in SSIS or ETL jobs
@@ -41,7 +41,7 @@ The SSIS job might contain many data flow tasks, and it might try to download so
    ```sql
    SELECT text,* FROM sys.dm_exec_requests
    CROSS APPLY sys.dm_exec_sql_text(sql_handle)
-   WHERE session_id>50 and text like '%Employees%’
+   WHERE session_id>50 and text like '%Employees%'
    ```
 
 1. If you didn't find the queries using step 1, use the Process Monitor tool to identify if any operations are blocked on the Files layer, as the SSIS package can load data from flat files. If the process is SSIS, you can use *DTExec.exe* to filter the process name.
@@ -60,7 +60,7 @@ If you complete the query, collect the actual execution plan, and treat it as a 
     SET STATISTICS XML OFF
     ```
 
-1. Run the following statement to collect the lightweight query plan; replace the `spid` (Server process ID) with your executing query window’s `spid`:
+1. Run the following statement to collect the lightweight query plan; replace the `spid` (Server process ID) with your executing query window's `spid`:
 
     ```sql
     SELECT * FROM sys.dm_exec_query_statistics_xml(spid)

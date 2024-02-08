@@ -1,17 +1,17 @@
 ---
 title: Guidance for troubleshooting TCP/IP performance
 description: Introduces general guidance for troubleshooting scenarios related to TCP/IP performance.
-ms.date: 5/10/2022
+ms.date: 07/13/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:tcpip-performance, csstroubleshoot
-ms.technology: networking
+ms.subservice: networking
 ---
 # TCP/IP performance troubleshooting guidance
 
@@ -30,13 +30,13 @@ Tips to enhance the throughput:
 - Select security features based on the actual organizations' requirements.
 - Create a baseline.
 
-For more information, see [Bottlenecks for TCP throughput](/troubleshoot/windows-server/networking/overview-of-tcpip-performance#bottlenecks-for-tcp-throughput).
+For more information, see [Bottlenecks for TCP throughput](overview-of-tcpip-performance.md#bottlenecks-for-tcp-throughput).
 
-For more information on how to create a baseline, see [How to create a baseline](/troubleshoot/windows-server/networking/overview-of-tcpip-performance#how-to-create-a-baseline).
+For more information on how to create a baseline, see [How to create a baseline](overview-of-tcpip-performance.md#how-to-create-a-baseline).
 
-When the throughput falls below a given baseline, use a packet capturing tool to take a network trace and detect network issues. [Use the ctsTraffic tool to analyze the network trace](/troubleshoot/windows-server/networking/troubleshooting-tcpip-performance-underlying-network#use-the-ctstraffic-tool-to-analyze-the-network-trace)
+When the throughput falls below a given baseline, use a packet capturing tool to take a network trace and detect network issues. [Use the ctsTraffic tool to analyze the network trace](troubleshooting-tcpip-performance-underlying-network.md#use-the-ctstraffic-tool-to-analyze-the-network-trace)
 
-[Check Performance Monitor logs](/troubleshoot/windows-server/networking/troubleshooting-tcpip-performance-underlying-network#check-performance-monitor-logs)
+[Check Performance Monitor logs](troubleshooting-tcpip-performance-underlying-network.md#check-performance-monitor-logs)
 
 ## Common issues and solutions
 
@@ -51,30 +51,30 @@ Before contacting Microsoft support, you can gather information about your issue
 
 ### Prerequisites
 
-1. TSSv2 must be run by accounts with administrator privileges on the local system, and EULA must be accepted (once EULA is accepted, TSSv2 won't prompt again).
+1. TSS must be run by accounts with administrator privileges on the local system, and EULA must be accepted (once EULA is accepted, TSS won't prompt again).
 2. We recommend the local machine `RemoteSigned` PowerShell execution policy.
 
 > [!NOTE]
-> If the current PowerShell execution policy doesn't allow running TSSv2, take the following actions:
+> If the current PowerShell execution policy doesn't allow running TSS, take the following actions:
 >
 > - Set the `RemoteSigned` execution policy for the process level by running the cmdlet `PS C:\> Set-ExecutionPolicy -scope Process -ExecutionPolicy RemoteSigned`.
 > - To verify if the change takes effect, run the cmdlet `PS C:\> Get-ExecutionPolicy -List`.
-> - Because the process level permissions only apply to the current PowerShell session, once the given PowerShell window in which TSSv2 runs is closed, the assigned permission for the process level will also go back to the previously configured state.
+> - Because the process level permissions only apply to the current PowerShell session, once the given PowerShell window in which TSS runs is closed, the assigned permission for the process level will also go back to the previously configured state.
 
 ### Gather key information before contacting Microsoft support
 
-1. Download [TSSv2](https://aka.ms/getTSSv2) on all nodes and unzip it in the *C:\\tss_tool* folder.
-2. Open the *C:\\tss_tool* folder from an elevated PowerShell command prompt.
+1. Download [TSS](https://aka.ms/getTSS) on all nodes and unzip it in the *C:\\tss* folder.
+2. Open the *C:\\tss* folder from an elevated PowerShell command prompt.
 3. Start the traces by using the following cmdlets:
 
     ```powershell
-    TSSv2.ps1 -Start -Scenario NET_Winsock
+    TSS.ps1 -Scenario NET_Winsock
     ```
 
     For NCSI related issues:  
 
     ```powershell
-    TSSv2.ps1 -Start -Scenario NET_NCSI
+    TSS.ps1 -Scenario NET_NCSI
     ```
 
 4. Accept the EULA if the traces are run for the first time on the computer.
@@ -86,7 +86,7 @@ Before contacting Microsoft support, you can gather information about your issue
 
 7. Enter *Y* to finish the log collection after the issue is reproduced.
 
-The traces will be stored in a zip file in the *C:\\MSDATA* folder, which can be uploaded to the workspace for analysis.
+The traces will be stored in a zip file in the *C:\\MS_DATA* folder, which can be uploaded to the workspace for analysis.
 
 ## Reference
 

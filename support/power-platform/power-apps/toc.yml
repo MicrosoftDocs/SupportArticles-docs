@@ -1,3 +1,4 @@
+items:
 - name: Power Apps Troubleshooting
   href: welcome-power-apps.yml
   items:
@@ -15,6 +16,8 @@
           href: create-and-use-apps/filter-blank-records.md
         - name: Lookup doesn't filter records for particular entity
           href: create-and-use-apps/lookup-does-not-filter-entity-records.md
+        - name: Refresh All doesn't work after exporting app data to a dynamic worksheet
+          href: create-and-use-apps/export-dynamic-worksheet-refresh-all.md
         - name: Ribbons and Command bar
           items:
             - name: Ribbon issues
@@ -25,6 +28,8 @@
               href: create-and-use-apps/ribbon-issues-button-visible.md
             - name: Button isn't working correctly
               href: create-and-use-apps/ribbon-issues-button-not-working-correctly.md
+            - name: Button has the wrong label
+              href: create-and-use-apps/ribbon-issues-button-wrong-label.md
             - name: Non-customizable buttons in ribbon
               href: create-and-use-apps/ribbon-non-customizable-buttons.md
             - name: Regenerate ribbon metadata
@@ -39,36 +44,91 @@
               href: create-and-use-apps/no-navigation-when-selecting-button.md
     - name: Dataverse
       items:
+        - name: Bulk operation errors
+          href: dataverse/bulk-operation-errors.md
+        - name: Clean up inherited access
+          href: dataverse/cleanup-inherited-access.md
+        - name: Dataverse client errors
+          href: dataverse/client-errors.md
         - name: Dataverse plug-ins
           href: dataverse/dataverse-plug-ins-errors.md
         - name: Web API client errors
           href: dataverse/web-api-client-errors.md
+        
     - name: Isolate and troubleshoot common issues
       items:
         - name: Common issues and resolutions
           href: isolate-and-troubleshoot-common-issues/common-issues-and-resolutions.md
-        - name: Create a minimal repro canvas app
-          href: isolate-and-troubleshoot-common-issues/minimal-canvas-app-repro.md
         - name: General Power Apps debugging strategies
           href: isolate-and-troubleshoot-common-issues/isolate-common-issues.md
+        - name: How to create a minimal repro canvas app
+          href: isolate-and-troubleshoot-common-issues/minimal-canvas-app-repro.md
+        - name: How to create a vanilla repro model-driven app
+          href: isolate-and-troubleshoot-common-issues/vanilla-model-driven-app-repro.md
         - name: Isolate issues in canvas apps
           href: isolate-and-troubleshoot-common-issues/isolate-canvas-app-issues.md
         - name: Isolate issues in model-driven apps
           href: isolate-and-troubleshoot-common-issues/isolate-model-app-issues.md
+        - name: Troubleshoot date and time issues in canvas apps
+          href: isolate-and-troubleshoot-common-issues/troubleshoot-canvas-app-date-time-issues.md
+        - name: Troubleshoot date and time issues in model-driven apps
+          href: isolate-and-troubleshoot-common-issues/troubleshoot-model-driven-app-date-time-issues.md
         - name: Troubleshoot Power Query
           href: isolate-and-troubleshoot-common-issues/troubleshoot-power-query-issues.md
         - name: Troubleshoot startup issues for Power Apps
           href: isolate-and-troubleshoot-common-issues/troubleshooting-startup-issues.md
-    - name: Manage apps and solutions
+    - name: Manage apps
       items:
-        - name: Can't import solutions or publish changes
-          href: manage-apps-and-solutions/cannot-import-solutions-publish-changes.md
-        - name: Data source references not updated after solution import
-          href: manage-apps-and-solutions/dataverse-environment-variables.md
         - name: Required fields are missing in Dataverse records
-          href: manage-apps-and-solutions/dataverse-records-missing-required-fields.md
+          href: manage-apps/dataverse-records-missing-required-fields.md
         - name: Troubleshoot wrap issues
-          href: manage-apps-and-solutions/wrap-issues.md
+          href: manage-apps/wrap-issues.md
+    - name: Solutions
+      items:
+        - name: Active unmanaged layer after importing a managed solution
+          href: solutions/unmanaged-active-layer-created-after-solution-import.md
+        - name: '"An entitykey with the selected attributes already exists" error'
+          href: solutions/entitykey-selected-attributes-already-exists.md
+        - name: Can't import solutions or publish changes
+          href: solutions/cannot-import-solutions-publish-changes.md
+        - name: Can't install managed solution previously deployed as unmanaged
+          href: solutions/failure-converting-to-managed-solution.md          
+        - name: Changes not effective after solution import
+          href: solutions/changes-not-effective-solution-import.md
+        - name: Concurrent solution operation failures
+          href: solutions/concurrent-solution-operation-failures.md
+        - name: Duplicate security roles after solution import
+          href: solutions/duplicate-security-roles.md
+        - name: Data source references not updated after solution import
+          href: solutions/dataverse-environment-variables.md
+        - name: '"Failed deleting solution" error due to circular dependencies between solutions'
+          href: solutions/circular-dependencies-between-solutions.md
+        - name: Form doesn't appear in target environment after import
+          href: solutions/form-not-appear-after-import.md
+        - name: '"Full formXml is expected to create a form" error'
+          href: solutions/full-formxml-expected-to-create-form-error.md
+        - name: Failure when multiple publishers have shared components
+          href: solutions/multiple-publisher-shared-component-failure.md
+        - name: Label text doesn't display in other languages
+          href: solutions/label-text-not-displayed.md
+        - name: Maximum row size exceeds the allowed maximum
+          href: solutions/maximum-row-size-exceeds.md
+        - name: Missing dependencies during solution import
+          href: solutions/missing-dependency-on-solution-import.md
+        - name: Newly added components don't appear in the app
+          href: solutions/newly-added-components-dont-appear.md
+        - name: '"PrimaryName attribute not found for entity" error'
+          href: solutions/primaryname-attribute-not-found.md
+        - name: Solution import or app installation fails due to missing privileges
+          href: solutions/install-failure-priviledge-not-assigned.md
+        - name: Solution checker enforcement in Managed Environments blocks or warns on import
+          href: solutions/solution-checker-enforcement-import-issues.md
+        - name: '"Solution cannot be deleted due to dependencies" error'
+          href: solutions/solution-cannot-be-deleted-due-to-dependencies.md
+        - name: Solution upgrade fails due to a pending upgrade
+          href: solutions/upgrade-fails-pending-upgrade.md
+        - name: '"You cannot delete this form because it is the only fallback form" error'
+          href: solutions/you-cannot-delete-this-form-only-fallback.md
     - name: Support resources
       items:
         - name: Power Apps support

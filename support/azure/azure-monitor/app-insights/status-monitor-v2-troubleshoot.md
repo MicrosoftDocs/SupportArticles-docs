@@ -2,11 +2,9 @@
 title: Azure Application Insights Agent troubleshooting and known issues
 description: Review Application Insights Agent known issues and troubleshooting examples. Works with ASP.NET web apps hosted on-premises, in virtual machines, or on Azure.
 ms.topic: conceptual
-ms.date: 6/21/2022
-ms.author: v-dele
-author: DennisLee-DennisLee
+ms.date: 06/21/2022
 editor: v-jsitser
-ms.reviewer: aaronmax
+ms.reviewer: aaronmax, v-leedennis
 ms.service: azure-monitor
 ms.subservice: application-insights
 #Customer intent: As an Application Insights user I want to understand known issues for the Application Insights Agent and how to troubleshoot common issues so I can use Application Insights and the Agent effectively.
@@ -157,22 +155,17 @@ Review the [Get-ApplicationInsightsMonitoringStatus reference](/azure/azure-moni
 
 #### Setup
 
-1. Download *PerfView.exe* and *PerfView64.exe* from [GitHub](https://github.com/Microsoft/perfview/releases).
-2. Run *PerfView64.exe*.
-3. Expand **Advanced Options**.
-4. Clear these check boxes:
+1. Download *PerfView.exe* from [GitHub](https://github.com/Microsoft/perfview/releases).
+1. Run *PerfView.exe*.
+1. On the menu bar, select **Collect** > **Collect**.
+1. Expand **Advanced Options**.
+1. Clear these check boxes:
     - **Zip**
     - **Merge**
     - **.NET Symbol Collection**
-5. Set these **Additional Providers**:
+1. Set these **Additional Providers**:
 
-    - `61f6ca3b-4b5f-5602-fa60-759a2a2d1fbd`
-    - `323adc25-e39b-5c87-8658-2c1af1a92dc5`
-    - `925fa42b-9ef6-5fa7-10b8-56449d7a2040`
-    - `f7d60e07-e910-5aca-bdd2-9de45b46c560`
-    - `7c739bb9-7861-412e-ba50-bf30d95eae36`
-    - `252e28f4-43f9-5771-197a-e8c7e750a984`
-    - `f9c04365-1d1f-5177-1cdc-a0b0554b6903`
+   `*Microsoft-ApplicationInsights-AspNetCore,*Microsoft-ApplicationInsights-AspNetCore-AiHostingStartup,*Microsoft-ApplicationInsights-AspNetCore-StartupBootstrapper,*Microsoft-ApplicationInsights-AspNetCore-StartupHook,*Microsoft-ApplicationInsights-Core,*Microsoft-ApplicationInsights-Data,*Microsoft-ApplicationInsights-Extensibility-AppMapCorrelation-Dependency,*Microsoft-ApplicationInsights-Extensibility-AppMapCorrelation-Web,*Microsoft-ApplicationInsights-Extensibility-DependencyCollector,*Microsoft-ApplicationInsights-Extensibility-EventCounterCollector,*Microsoft-ApplicationInsights-Extensibility-EventSourceListener,*Microsoft-ApplicationInsights-Extensibility-HostingStartup,*Microsoft-ApplicationInsights-Extensibility-PerformanceCollector,*Microsoft-ApplicationInsights-Extensibility-PerformanceCollector-QuickPulse,*Microsoft-ApplicationInsights-Extensibility-Web,*Microsoft-ApplicationInsights-Extensibility-WindowsServer,*Microsoft-ApplicationInsights-FrameworkLightup,*Microsoft-ApplicationInsights-IIS-ManagedHttpModuleHelper,*Microsoft-ApplicationInsights-Java-IPA,*Microsoft-ApplicationInsights-LoggerProvider,*Microsoft-ApplicationInsights-Nodejs-IPA,*Microsoft-ApplicationInsights-RedfieldIISModule,*Microsoft-ApplicationInsights-SnapshotCollectorLightup,*Microsoft-ApplicationInsights-WindowsServer-Core,*Microsoft-ApplicationInsights-WindowsServer-TelemetryChannel,*Redfield-Microsoft-ApplicationInsights-AspNetCore,*Redfield-Microsoft-ApplicationInsights-Core,*Redfield-Microsoft-ApplicationInsights-Data,*Redfield-Microsoft-ApplicationInsights-Extensibility-AppMapCorrelation-Dependency,*Redfield-Microsoft-ApplicationInsights-Extensibility-AppMapCorrelation-Web,*Redfield-Microsoft-ApplicationInsights-Extensibility-DependencyCollector,*Redfield-Microsoft-ApplicationInsights-Extensibility-EventCounterCollector,*Redfield-Microsoft-ApplicationInsights-Extensibility-EventSourceListener,*Redfield-Microsoft-ApplicationInsights-Extensibility-PerformanceCollector,*Redfield-Microsoft-ApplicationInsights-Extensibility-PerformanceCollector-QuickPulse,*Redfield-Microsoft-ApplicationInsights-Extensibility-Web,*Redfield-Microsoft-ApplicationInsights-Extensibility-WindowsServer,*Redfield-Microsoft-ApplicationInsights-LoggerProvider,*Redfield-Microsoft-ApplicationInsights-WindowsServer-TelemetryChannel`
 
 #### Collect logs
 

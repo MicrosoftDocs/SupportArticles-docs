@@ -1,17 +1,17 @@
 ---
 title: Define Security Templates By Using the Security Templates Snap-In
 description: Provides some steps to define Security Templates by using the Security Templates Snap-In
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-lanac
 ms.custom: sap:user-computer-group-and-object-management, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # Define Security Templates By Using the Security Templates Snap-In
 

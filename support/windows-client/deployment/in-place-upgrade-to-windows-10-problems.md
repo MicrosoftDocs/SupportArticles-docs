@@ -1,17 +1,17 @@
 ---
 title: In-place upgrade to Windows 10 problem
 description: Describes an issue where the upgrade hangs when you try to run an in-place upgrade to Windows 10 version 1607. This issue is resolved by installing a compatibility update.
-ms.date: 10/22/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, frankroj
 ms.custom: sap:servicing, csstroubleshoot
-ms.technology: windows-client-deployment
+ms.subservice: deployment
 ---
 # Updates fix in-place upgrade to Windows 10 problem
 
@@ -45,3 +45,7 @@ Package installation of compatibility updates differs from installation of other
 4. After you determine the source directory, copy the contents of the extracted .cab files into the Source folder of the Windows 10 version 1607 installation files. Click **Yes** to overwrite any existing files.
 5. Update the Distribution Points for the Upgrade Operating System Package.
 6. Retry the deployments and see whether the issue is corrected.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

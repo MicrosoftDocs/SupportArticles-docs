@@ -1,17 +1,17 @@
 ---
 title: Devices not working  before you log on a computer that is running Windows 10
 description: Addresses an issue in which a device isn't working before a logon in Windows 10. For example, wireless doesn't connect until a user logon.
-ms.date: 12/04/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, ajayps, arrenc, v-phoebh
 ms.custom: sap:devices-and-drivers, csstroubleshoot
-ms.technology: windows-client-deployment
+ms.subservice: deployment
 ---
 # Devices are not working before you log on a computer that's running Windows 10
 
@@ -85,3 +85,7 @@ To fix this issue, install [April 23, 2018-KB4093105](https://support.microsoft.
 ## Workaround
 
 To work around this problem, configure the **Disable new DMA devices when this computer is locked** to **Not Configured** to disable it on affected system models before you update drivers and firmware.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

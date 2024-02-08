@@ -3,6 +3,7 @@ title: Can't see list of users/groups to add permissions in IAM in Azure portal
 description: Resolves an issue in which you can't see list of users or groups when adding permissions in Access Control (IAM) in the Azure portal.
 ms.date: 08/14/2020
 ms.service: azure-common-issues-support
+ms.custom: has-azure-ad-ps-ref
 ms.author: genli
 author: genlin
 ms.reviewer: 
@@ -16,11 +17,11 @@ _Original KB number:_ &nbsp; 4229970
 
 ## Symptoms
 
-When you try to add permissions in IAM in the [Azure portal](https://portal.azure.com), you cannot see the list of users or groups.
+When you try to add permissions in IAM in the [Azure portal](https://portal.azure.com), you cannot see the list of users or groups.
 
 ## Cause
 
-This issue occurs because the account that you used to sign in to Azure portal does not have enumeration permission. This account might be a guest user who has been invited to the directory that you are trying to give access to other Azure resources. Even if this guest user is a global administrator, they still will not have enumeration permission.
+This issue occurs because the account that you used to sign in to Azure portal does not have enumeration permission. This account might be a guest user who has been invited to the directory that you are trying to give access to other Azure resources. Even if this guest user is a global administrator, they still will not have enumeration permission.
 
 ## Resolution
 
@@ -30,9 +31,9 @@ To resolve this issue, use one of the following methods:
 
 1. Sign in to the Azure portal by using Global Administrator.
 2. If applicable, switch to the directory where the guest user was added.
-3. Go to **Azure Active Directory**.
+3. Go to **Microsoft Entra ID**.
 4. Go to **User Settings**.
-5. Change the **Guest users permissions are limited**  setting to **No**, and then select **Save**.
+5. Change the **Guest users permissions are limited**  setting to **No**, and then select **Save**.
 
 ### Method 2: To allow only the one guest user or configure on a per user basis
 
@@ -43,7 +44,7 @@ To resolve this issue, use one of the following methods:
     Import-Module AzureAd
     ```
 
-     Make sure that the Azure AD for Graph is installed. For more information, see [Azure Active Directory PowerShell for Graph](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0&preserve-view=true).
+     Make sure that the Azure Active Directory PowerShell for Graph is installed. For more information, see [Azure Active Directory PowerShell for Graph](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0&preserve-view=true).
 
 3. As a global administrator of the directory where the guest user was added, connect to Azure AD PowerShell and the directory:
 
@@ -51,7 +52,7 @@ To resolve this issue, use one of the following methods:
     Connect-AzureAD -TenantId 'Tenant_Directory_Id'
     ```
 
-    You can get the Directory ID by looking at your Azure Active Directory Properties in the Azure portal.
+    You can get the Tennat ID by looking at your Microsoft Entra ID Properties in the Azure portal.
 
 4. Run the following cmdlet:
 

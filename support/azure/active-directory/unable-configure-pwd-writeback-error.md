@@ -1,21 +1,21 @@
 ---
-title: Error (Unable to configure password writeback) when you run the Azure AD Connect wizard
-description: Describes an issue that triggers an error when you run the Azure AD Connect wizard to set up password writeback. Provides a solution.
+title: Error (Unable to configure password writeback) when you run the Microsoft Entra Connect wizard
+description: Describes an issue that triggers an error when you run the Microsoft Entra Connect wizard to set up password writeback. Provides a solution.
 ms.date: 05/22/2020
 ms.reviewer: vimals, willfid
 ms.service: active-directory
 ms.subservice: enterprise-users
 ---
-# Error when you run the Azure AD Connect wizard: Unable to configure password writeback
+# Error when you run the Microsoft Entra Connect wizard: Unable to configure password writeback
 
-This article describes an issue in which an error message appears when you run the Azure AD Connect wizard to set up password writeback.
+This article describes an issue in which an error message appears when you run the Microsoft Entra Connect wizard to set up password writeback.
 
-_Original product version:_ &nbsp; Azure Active Directory  
+_Original product version:_ &nbsp; Microsoft Entra ID  
 _Original KB number:_ &nbsp; 3185990
 
 ## Symptoms
 
-When you run the Azure AD Connect wizard, you receive the following error message during configuration of password writeback:
+When you run the Microsoft Entra Connect wizard, you receive the following error message during configuration of password writeback:
 
 > Unable to configure password writeback. Ensure you have the required license.
 
@@ -23,8 +23,8 @@ When you run the Azure AD Connect wizard, you receive the following error messag
 
 This issue occurs if one of the following conditions are true:
 
-- The administrator account that's used to set up Azure AD Connect does not have the appropriate license.
-- The time on the server on which Azure AD Connect is installed is out of sync.
+- The administrator account that's used to set up Microsoft Entra Connect does not have the appropriate license.
+- The time on the server on which Microsoft Entra Connect is installed is out of sync.
 - The TLS setting is configured correctly.
 
 ## Resolution
@@ -32,16 +32,16 @@ This issue occurs if one of the following conditions are true:
 To reoslve this problem, follow these steps:
 
 1. [Enable TLS 1.2](/azure/active-directory/hybrid/reference-connect-tls-enforcement).
-2. Make sure that the administrator account that you use to enable password writeback is a cloud administrator account (created in Azure AD) and not a federated account (created in the on-premises Active Directory and synchronized to Azure AD). Also, make sure that the account has the appropriate Azure AD subscription license.
+2. Make sure that the administrator account that you use to enable password writeback is a cloud administrator account (created in Microsoft Entra ID) and not a federated account (created in the on-premises Active Directory and synchronized to Microsoft Entra ID). Also, make sure that the account has the appropriate Microsoft Entra subscription license.
 3. Make sure that the time isn't skewed. On the authoritative time server, perform the steps in the **Configuring the Windows Time service to use an external time source** section of [How to configure an authoritative time server in Windows Server](https://support.microsoft.com/help/816042)
 
-Make sure that the time on the server on which Azure AD Connect is installed matches the time on the authoritative time server.
+Make sure that the time on the server on which Microsoft Entra Connect is installed matches the time on the authoritative time server.
 
 ## More information
 
 If the issue you're experiencing is a scenario in which there's a large time difference between your local environment and Microsoft cloud services,
 
-you may see the following entries in the Azure AD Connect sync logs. The logs are located in the `%appdata%\Local\AADConnect` folder.
+you may see the following entries in the Microsoft Entra Connect Sync logs. The logs are located in the `%appdata%\Local\AADConnect` folder.
 
 ```console
 Error <Date> <Time> ADSync 6306 Server "The server encountered an unexpected error while performing an operation for the client.

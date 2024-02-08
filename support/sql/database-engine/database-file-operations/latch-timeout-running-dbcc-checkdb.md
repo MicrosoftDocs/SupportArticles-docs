@@ -4,7 +4,6 @@ description: This article describes a problem where you receive an error message
 ms.date: 10/11/2022
 ms.custom: sap:Administration and Management
 ms.reviewer: keithelm
-ms.prod: sql
 ---
 # "Timeout occurred while waiting for latch" error when running `DBCC CHECKDB` statement on a database
 

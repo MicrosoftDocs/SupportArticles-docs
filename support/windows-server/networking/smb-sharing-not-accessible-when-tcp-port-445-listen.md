@@ -1,17 +1,17 @@
 ---
 title: SMB sharing not accessible when TCP port 445 listening in Windows Server
 description: Provides a solution to an issue where Server Message Block (SMB) sharing is not accessible when TCP port 445 is listening in Windows Server.
-ms.date: 3/24/2022
+ms.date: 03/24/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, dantes
 ms.custom: sap:tcp/ip-communications, csstroubleshoot
-ms.technology: networking
+ms.subservice: networking
 ---
 # SMB sharing is not accessible when TCP port 445 is listening in Windows Server
 

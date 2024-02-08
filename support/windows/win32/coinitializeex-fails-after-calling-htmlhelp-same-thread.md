@@ -2,11 +2,11 @@
 title: CoInitializeEx fails after calling HtmlHelp on the same thread
 description: Provides a workaround for an issue where the CoInitializeEx function fails after calling the HtmlHelp function on the same thread.
 ms.date: 04/20/2023
-ms.reviewer: hihayak
+ms.reviewer: v-sidong
 author: hihayak
-ms.author: v-sidong
+ms.author: hihayak
 ms.custom: sap:Component development
-ms.technology: windows-dev-apps-component-dev
+ms.subservice: component-dev
 ---
 # CoInitializeEx function fails after calling the HtmlHelp function on the same thread
 

@@ -1,17 +1,17 @@
 ---
 title: How to detect and recover from a USN rollback in a Windows Server-based domain controller
 description: Explains how to recover if a domain controller is incorrectly rolled back by using an image-based installation of the operating system.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, arrenc
 ms.custom: sap:active-directory-backup-restore-or-disaster-recovery, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # A Windows Server domain controller logs Directory Services event 2095 when it encounters a USN rollback
 
@@ -105,7 +105,7 @@ When the following environments, programs, or subsystems are used, administrator
 
 - Examples of virtualized hosting environments that cause this scenario include Microsoft Virtual PC 2004, Microsoft Virtual Server 2005, and EMC VMWARE. Other virtualized hosting environments can also cause this scenario.
 
-- For more information about the support conditions for domain controllers in virtual hosting environments, see [Things to consider when you host Active Directory domain controllers in virtual hosting environments](/troubleshoot/windows-server/identity/ad-dc-in-virtual-hosting-environment).
+- For more information about the support conditions for domain controllers in virtual hosting environments, see [Things to consider when you host Active Directory domain controllers in virtual hosting environments](ad-dc-in-virtual-hosting-environment.md).
 
 - Starting an Active Directory domain controller that is located on a volume where the disk subsystem loads by using previously saved images of the operating system without requiring a system state restoration of Active Directory.
 
@@ -212,7 +212,7 @@ There are three approaches to recover from a USN rollback.
 
 - Remove the Domain Controller from the domain. To do this, follow these steps:
 
-    1. Remove Active Directory from the domain controller to force it to be a standalone server. For more information, see [Domain controllers do not demote gracefully when you use the Active Directory Installation Wizard to force demotion](/troubleshoot/windows-server/identity/domain-controllers-not-demote).
+    1. Remove Active Directory from the domain controller to force it to be a standalone server. For more information, see [Domain controllers do not demote gracefully when you use the Active Directory Installation Wizard to force demotion](domain-controllers-not-demote.md).
 
     2. Shut down the demoted server.
 
@@ -236,6 +236,6 @@ There are three approaches to recover from a USN rollback.
 
 ## References
 
-- [Things to consider when you host Active Directory domain controllers in virtual hosting environments](/troubleshoot/windows-server/identity/ad-dc-in-virtual-hosting-environment)
+- [Things to consider when you host Active Directory domain controllers in virtual hosting environments](ad-dc-in-virtual-hosting-environment.md)
 
 - [Virtualized domain controller Architecture](/windows-server/identity/ad-ds/get-started/virtual-dc/virtualized-domain-controller-architecture)

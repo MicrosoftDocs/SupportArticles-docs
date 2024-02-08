@@ -1,17 +1,17 @@
 ---
 title: Switches with Xcopy and Xcopy32 commands
 description: Describes syntax and switches that you can use with xcopy and xcopy32 commands.
-ms.date: 09/23/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, austinm
 ms.custom: sap:servicing, csstroubleshoot
-ms.technology: windows-client-deployment
+ms.subservice: deployment
 ---
 # Switches that you can use with xcopy and xcopy32 commands
 
@@ -93,3 +93,6 @@ The following table describes the optional switches you can use with `xcopy` and
 | /-y|Prompts you before overwriting existing files.|
 | /n|Copies using the generated short names.|
   
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

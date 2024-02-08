@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, waltere
 ms.custom: sap:slow-performance, csstroubleshoot
-ms.technology: windows-server-performance
+ms.subservice: performance
 ---
 # System stops responding, slow file server performance, or delays occur when you work with files that are located on a file server
 
@@ -120,14 +120,14 @@ To troubleshoot this issue, use any of the following methods:
 
 - Edit the registry to temporarily deactivate the filter driver.
 
-    For more information about how to temporarily deactivate the kernel-mode filter driver, see [How to temporarily deactivate the kernel mode filter driver in Windows](/troubleshoot/windows-server/performance/deactivate-kernel-mode-filter-driver).
+    For more information about how to temporarily deactivate the kernel-mode filter driver, see [How to temporarily deactivate the kernel mode filter driver in Windows](deactivate-kernel-mode-filter-driver.md).
 
     The registry key that stores information for the Ofant.sys driver is **Ofadriver**.
 
 ## References
 
-- [Slow network performance when you open a file that is located in a shared folder on a remote network computer](/troubleshoot/windows-client/networking/slow-network-performance-remote-computer)
+- [Slow network performance when you open a file that is located in a shared folder on a remote network computer](../../windows-client/networking/slow-network-performance-remote-computer.md)
 
-- [How to temporarily deactivate the kernel mode filter driver in Windows](/troubleshoot/windows-server/performance/deactivate-kernel-mode-filter-driver)
+- [How to temporarily deactivate the kernel mode filter driver in Windows](deactivate-kernel-mode-filter-driver.md)
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]

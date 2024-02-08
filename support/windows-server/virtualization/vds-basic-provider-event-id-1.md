@@ -1,17 +1,17 @@
 ---
 title: VDS Basic Provider event ID 1
 description: Describes an issue in a Hyper-V guest operating system of Windows Server 2008 R2 or of Windows 7 in which the VDS Basic Provider event ID 1 is logged.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, tyagi, adityah
 ms.custom: sap:configuration-of-virtual-machine-settings, csstroubleshoot
-ms.technology: hyper-v
+ms.subservice: hyper-v
 ---
 # VDS Basic Provider event ID 1 is logged in a Hyper-V guest operating system
 

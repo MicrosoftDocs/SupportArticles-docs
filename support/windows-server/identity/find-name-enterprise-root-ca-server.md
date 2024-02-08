@@ -1,17 +1,17 @@
 ---
 title: Find the name of Enterprise Root CA server
 description: Helps you to find name of the Enterprise Root Certificate Authority (CA) server.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:active-directory-certificate-services, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # How to find the name of the Enterprise Root Certificate Authority server
 

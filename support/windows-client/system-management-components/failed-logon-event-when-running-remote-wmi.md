@@ -1,17 +1,17 @@
 ---
 title: Failed logon event when running remote WMI
 description: Describes an issue where a failed logon event is generated when you run remote WMI command.
-ms.date: 09/16/2020
+ms.date: 05/16/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:wmi, csstroubleshoot
-ms.technology: windows-client-system-management-components
+ms.subservice: system-mgmgt-components
 ---
 # Failed logon event generated when running remote WMI command
 
@@ -37,3 +37,7 @@ The pass-through authentication is always attempted first, even if specific cred
 ## Resolution
 
 You can safely ignore the error message.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for User Experience issues](../windows-troubleshooters/gather-information-using-tss-user-experience.md#wmi).

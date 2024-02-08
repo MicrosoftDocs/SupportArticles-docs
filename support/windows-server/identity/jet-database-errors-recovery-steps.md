@@ -1,17 +1,17 @@
 ---
 title: Jet database errors and recovery steps
 description: Introduces Jet database error messages and troubleshooting steps.
-ms.date: 3/24/2022
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-jeffbo
 ms.custom: sap:active-directory-replication, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # Troubleshoot Jet database errors and recovery steps
 
@@ -51,7 +51,7 @@ A log write failure occurred. This issue can be caused by any of the following:
 2. For an issue that is due to software, stop services that create locks on the files in the file system. For example, determine whether antivirus software is causing locks on Active Directory log files. Make sure that the proper files have been added to the antivirus exclusion list. Windows Server 2016 automatically excludes certain files and folders from antivirus scanning, see [List of automatic exclusions](/windows/threat-protection/windows-defender-antivirus/configure-server-exclusions-windows-defender-antivirus#list-of-automatic-exclusions). For Windows Server 2012 R2, see:
 
     - [Virus scanning recommendations for Enterprise computers that are running currently supported versions of Windows](https://support.microsoft.com/help/822158/virus-scanning-recommendations-for-enterprise-computers)
-    - [Event ID 2108 and Event ID 1084 occur during inbound replication of Active Directory in Windows 2000 Server and in Windows Server 2003](/troubleshoot/windows-server/identity/replication-event-id-2108-1084)
+    - [Event ID 2108 and Event ID 1084 occur during inbound replication of Active Directory in Windows 2000 Server and in Windows Server 2003](replication-event-id-2108-1084.md)
     - [Recommended file and folder exclusions for Microsoft Forefront Client Security, Forefront Endpoint Protection 2010, and Microsoft System Center 2012 Endpoint Protection](https://support.microsoft.com/help/943556/recommended-file-and-folder-exclusions-for-microsoft-forefront-client)
 
 If steps 1 and 2 don't fix the issue, determine whether a non-Microsoft application or service is causing the issue by disabling these. To do this, follow these steps:
@@ -282,8 +282,12 @@ You can use these methods to troubleshoot Jet database errors:
 
 For more information, see the following Microsoft article:
 
-[Domain controller does not start, c00002e2 error occurs, or "Choose an option" is displayed](/troubleshoot/windows-server/identity/domain-controller-not-start-c00002e2-error)
+[Domain controller does not start, c00002e2 error occurs, or "Choose an option" is displayed](domain-controller-not-start-c00002e2-error.md)
 
 ### What is a lost IO / Lost Flush
 
 When an application writes data to a disk, the disk indicates the written operation success. However, when the application tries to read the data that it just wrote, the data does not exist. This issue is called as lost I/O, or lost flush.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Active Directory replication issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication.md).

@@ -8,21 +8,70 @@ manager: dcscontentpm
 tags: azure-resource-manager
 ms.service: virtual-machines
 ms.subservice: vm-troubleshooting-tools
-ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: vm
 ms.workload: infrastructure-services
-ms.date: 05/09/2022
+ms.date: 08/04/2023
 ms.author: genli
 ---
 
 # Azure Serial Console
 
+[!INCLUDE [Feedback](../../includes/feedback.md)]
+
 Serial Console in the Azure portal provides access to a text-based console for virtual machines (VMs) and virtual machine scale set instances running either Linux or Windows. Serial Console connects to the ttyS0 or COM1 serial port of the VM or virtual machine scale set instance, providing access independent of the network or operating system state. The serial console can be accessed by using the Azure portal or [Azure CLI](/cli/azure/serial-console) and is allowed only for those users who have an access role of Contributor or higher to the VM or virtual machine scale set.
 
 Serial Console works in the same manner for VMs and virtual machine scale set instances. In this doc, all mentions to VMs will implicitly include virtual machine scale set instances unless otherwise stated.
 
-Serial Console is generally available in global Azure regions and in public preview in Azure Government. It is not yet available in the Azure China cloud.
+## Regions
+
+Serial Console is available in the following regions:
+
+- Australia Central
+- Australia East
+- Brazil South
+- Brazil Southeast
+- Canada Central
+- Canada East
+- Central India
+- Central US
+- Central US EUAP
+- China East 3
+- China North 3
+- East Asia
+- East US 2 EUAP
+- East US 2
+- France Central
+- France South
+- Germany North
+- Germany West Central
+- Italy North
+- Japan East
+- Japan West
+- Korea Central
+- Korea South
+- North Europe
+- Norway East
+- Norway West
+- Poland Central
+- Qatar Central
+- South Africa North
+- South Africa West
+- Southeast Asia
+- South India
+- Sweden Central
+- Sweden South
+- Switzerland North
+- Switzerland West
+- UAE Central
+- UAE North
+- UK South
+- UK West
+- West Central US
+- West Europe
+- West US 2
+- US Gov Arizona
+- US Gov Virginia
 
 ## Prerequisites to access the Azure Serial Console
 

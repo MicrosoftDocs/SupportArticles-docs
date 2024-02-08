@@ -1,17 +1,17 @@
 ---
 title: EMF spool file size grows big when you print a document that contains lots of raster data
 description: Describes a problem where the size of the Enhanced Metafile (EMF) spool file may grow very big when you print a document that contains many groups of raster data. A resolution is provided.
-ms.date: 9/24/2021
+ms.date: 05/16/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:errors-and-troubleshooting:-print-spooler, csstroubleshoot
-ms.technology: windows-server-printing
+ms.subservice: printing
 ---
 # The size of the EMF spool file may become very large when you print a document that contains lots of raster data
 
@@ -63,3 +63,7 @@ Microsoft has confirmed that this is a problem in the Microsoft products that ar
 4. Click to select the **Keep printed documents** check box.
 5. Print an Adobe .pdf document that contains many groups of raster data.
 6. Check the size of the EMF spool file.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for User Experience issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-user-experience.md#printing).

@@ -4,7 +4,7 @@ description: Provides troubleshooting steps to identify and reduce memory grant 
 author: pijocoder
 ms.author: jopilov
 ms.reviewer: pijocoder
-ms.date: 04/14/2023
+ms.date: 05/05/2023
 ms.custom: sap:Performance
 ---
 
@@ -19,7 +19,7 @@ Memory grants, also referred to as Query Execution (QE) Reservations, Query Exec
 - Bulk copy operations (not a common issue)
 - Index creation, including inserting into COLUMNSTORE indexes because hash dictionaries/tables are used at runtime for index building (not a common issue)
 
-To provide some context, during its lifetime, a query may request memory from different memory allocators or clerks depending on what it needs to do. For example, when a query is parsed and compiled initially, it consumes compilation memory. Once the query is compiled, that memory is released, and the resulting query plan is stored in the plan cache memory. Once a plan is cached, the query is ready for execution. If the query does any sort operations, hash match operations (JOIN or aggregates), or insertions into a COLUMNSTORE indexes, it uses memory from query execution allocator. Initially, the query asks for that execution memory, and later if this memory is granted, the query uses all or part of the memory for sort results or hash buckets. This memory allocated during query execution is what is referred to as memory grants. As you can imagine, once the query execution operation completes, the memory grant is released back to SQL Server to use for other work. Therefore, memory grant allocations are temporary in nature but can still last a long time. For example, if a query execution performs a sort operation on a very large rowset in memory, the sort may take many seconds or minutes, and the granted memory is used for the lifetime of that sort.
+To provide some context, during its lifetime, a query may request memory from different memory allocators or clerks depending on what it needs to do. For example, when a query is parsed and compiled initially, it consumes compilation memory. Once the query is compiled, that memory is released, and the resulting query plan is stored in the plan cache memory. Once a plan is cached, the query is ready for execution. If the query does any sort operations, hash match operations (JOIN or aggregates), or insertions into a COLUMNSTORE indexes, it uses memory from query execution allocator. Initially, the query asks for that execution memory, and later if this memory is granted, the query uses all or part of the memory for sort results or hash buckets. This memory allocated during query execution is what is referred to as memory grants. As you can imagine, once the query execution operation completes, the memory grant is released back to SQL Server to use for other work. Therefore, memory grant allocations are temporary in nature but can still last a long time. For example, if a query execution performs a sort operation on a very large rowset in memory, the sort may take many seconds or minutes, and the granted memory is used for the lifetime of the query.
 
 ### Example of a query with a memory grant
 
@@ -205,7 +205,7 @@ There are multiple extended events that provide memory grant information and ena
 
 ##### Memory grant feedback extended events
 
-For information on query processing feedback features, see [Memory grant feedback](/sql/relational-databases/performance/intelligent-query-processing-feedback#memory-grant-feedback).
+For information on query processing memory grant feedback features, see [Memory grant feedback](/sql/relational-databases/performance/intelligent-query-processing-feedback#memory-grant-feedback).
 
 - **sqlserver.memory_grant_feedback_loop_disabled**: Occurs when memory grant feedback loop is disabled.
 - **sqlserver.memory_grant_updated_by_feedback**: Occurs when memory grant is updated by feedback.

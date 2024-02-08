@@ -1,3 +1,4 @@
+items:
 - name: Internet Information Services
   href: iis-welcome.yml
 - name: Active Server Pages
@@ -23,6 +24,10 @@
   items:
   - name: SSL Common Names aren't enforced
     href: application-request-routing/affinity-not-honored-ssl-common-names-arr.md
+  - name: Troubleshooting cache items in ARR version 2.0 or later
+    href: application-request-routing/troubleshooting-cache-items-arr-v2-or-later.md
+  - name: Troubleshooting 502 errors in ARR
+    href: application-request-routing/troubleshooting-502-errors-in-arr.md
 
 - name: Development
   items:
@@ -47,6 +52,12 @@
     href: deployment-migration/cannot-use-web-deploy.md
   - name: Can't use Web Deployment as a non-admin user
     href: deployment-migration/web-deploy-error-non-admin-user.md
+  - name: Troubleshoot common problems related to Web Deploy
+    href: deployment-migration/troubleshoot-common-problems-with-web-deploy.md
+  - name: Troubleshooting Web Deploy problems with Visual Studio
+    href: deployment-migration/troubleshoot-web-deploy-problems-with-visual-studio.md
+  - name: Web Deploy error codes
+    href: deployment-migration/web-deploy-error-codes.md  
 
 - name: FTP authentication and authorization
   items:
@@ -76,8 +87,6 @@
     href: general/use-registry-keys.md
   - name: Design customization IIS log file field names
     href: general/customize-iis-log-file-field-names.md
-  - name: Expression Web 4.0 FAQs
-    href: general/expression-web-faq.yml
   - name: IIS Express isn't supported in production environment
     href: general/express-not-supported-production-environment.md
   - name: Instances where HTTP.sys doesn't cache
@@ -86,43 +95,7 @@
     href: general/users-cannot-access-web-sites-when-log-full.md
 
 - name: Health, diagnostic, and performance features
-  items:
-  - name: An application pool exceeds time limits
-    href: health-diagnostic-performance/application-pool-exceed-time-limits.md
-  - name: Data collection strategies of Web Server issues
-    href: health-diagnostic-performance/data-collection-strategies.md
-  - name: Enable Schannel event logging in Windows
-    href: health-diagnostic-performance/enable-schannel-event-logging.md
-  - name: ETW logs diagnostic
-    href: health-diagnostic-performance/etw-log-diagnostic.md
-  - name: Hidden static files return HTTP 404 error
-    href: health-diagnostic-performance/hidden-static-files-http-404-access-denied.md
-  - name: HTTP error 400 in the CLM portal
-    href: health-diagnostic-performance/clm-http-bad-request.md
-  - name: HTTP error 403.14
-    href: health-diagnostic-performance/http-403-14-forbidden-webpage.md
-  - name: HTTP error 403.16
-    href: health-diagnostic-performance/http-403-forbidden-access-website.md
-  - name: HTTP error 403.7
-    href: health-diagnostic-performance/http-error-403-7-forbidden-web-app.md
-  - name: HTTP error 404 file not found on a server
-    href: health-diagnostic-performance/troubleshoot-404-file-not-found-error.md
-  - name: HTTP error 404.13
-    href: health-diagnostic-performance/http-404-13-website.md
-  - name: HTTP error 404.17 when you visit a Web site
-    href: health-diagnostic-performance/error-message-you-visit-web-site.md
-  - name: HTTP error 405.0
-    href: health-diagnostic-performance/http-error-405-website.md
-  - name: HTTP error 500.19
-    href: health-diagnostic-performance/http-error-500-19-webpage.md
-  - name: HTTP error 501 - Not Implemented
-    href: health-diagnostic-performance/http-error-501-not-implemented.md
-  - name: Logs contain dots instead of logging field value
-    href: health-diagnostic-performance/iis-logs-contain-dots.md
-  - name: Pages can't be displayed
-    href: health-diagnostic-performance/cannot-access-site-using-https.md
-  - name: Time-taken field in IIS HTTP logging
-    href: health-diagnostic-performance/time-taken-field-http-log.md
+  href: health-diagnostic-performance/toc.yml
 
 - name: IISAdmin service and Inetinfo process operation
   items:
@@ -178,6 +151,8 @@
     href: www-administration-management/configure-default-document-iis.md
   - name: Content types for HTTP compression
     href: www-administration-management/content-types-http-compression.md
+  - name: Diagnosing failures with remote administration
+    href: www-administration-management/diagnosing-failures-with-remote-administration.md
   - name: Enable SSL for all customers
     href: www-administration-management/enable-ssl-all-customers.md
   - name: Error when you configure 32-bit managed handlers
@@ -192,6 +167,8 @@
     href: www-administration-management/https-connections-fail-ssl-bindings-deleted.md
   - name: IIS events are not displayed remotely
     href: www-administration-management/iis-events-not-display-remotely.md
+  - name: Troubleshooting IIS 7.x installation problems
+    href: www-administration-management/troubleshooting-iis-7x-installation-issues.md
 
 - name: WWW authentication and authorization
   items:
@@ -211,6 +188,8 @@
     href: www-authentication-authorization/configure-many-to-one-client-mappings.md
   - name: Default permissions and user rights
     href: www-authentication-authorization/default-permissions-user-rights.md
+  - name: Diagnostic pages for Windows Integrated Authentication
+    href: www-authentication-authorization/diagnostics-pages-windows-integrated-authentication.md
   - name: Digest authentication fails
     href: www-authentication-authorization/digest-authentication.md
   - name: Errors when you install certificates
@@ -239,6 +218,10 @@
     href: www-authentication-authorization/shutdowntimelimit-not-apply-to-wcf.md
   - name: Troubleshoot Kerberos failures
     href: www-authentication-authorization/troubleshoot-kerberos-failures-ie.md
+  - name: Troubleshooting Forms Authentication
+    href: www-authentication-authorization/troubleshooting-forms-authentication.md
+  - name: Troubleshooting SSL related issues (Server Certificate)
+    href: www-authentication-authorization/troubleshooting-ssl-related-issues-server-certificate.md
   - name: Understanding identities
     href: www-authentication-authorization/understanding-identities.md
 
@@ -248,10 +231,7 @@
     href: www-modules-features/add-remove-global-modules.md
   - name: Request Restrictions can't set for a wildcard ISAPI
     href: www-modules-features/request-restrictions-not-set-isapi.md
+  - name: Troubleshooting IIS Compression issues in IIS 6 or IIS 7.x
+    href: www-modules-features/troubleshooting-iis-compression-issues-in-iis6-iis7x.md
   - name: WebSocketModule is not loaded
     href: www-modules-features/websocketmodule-is-not-loaded.md
-
-- name: WWW service and Svchost operation
-  items:
-  - name: WinHTTP SDP package information
-    href: www-service-svchost/disable-winhttp-tracing-sdp.md

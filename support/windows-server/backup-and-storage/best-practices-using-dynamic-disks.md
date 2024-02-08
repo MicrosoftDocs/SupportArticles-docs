@@ -1,17 +1,17 @@
 ---
 title: Best practices for using dynamic disks
 description: Describes the best practices for using dynamic disks on Windows Server 2003-based computers.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, mjacquet
 ms.custom: sap:partition-and-volume-management, csstroubleshoot
-ms.technology: windows-server-backup-and-storage
+ms.subservice: backup-and-storage
 ---
 # Best practices for using dynamic disks on Windows Server 2003-based computers
 
@@ -41,7 +41,7 @@ Before you use dynamic disks, consider the following recommended best practices 
 Before you convert basic disks to dynamic disks, determine whether you require features provided by dynamic disks. If you don't require spanned volumes, striped volumes, mirrored volumes, or RAID-5 sets, it may be best to use basic disks.
 
 > [!NOTE]
-> If you want to increase the size of a hardware RAID-5 disk LUN but don't have to span the NTFS file system volume across different physical disks (or LUNs), continue to use basic disks. You can use the DiskPart.exe utility to extend the NTFS volume after you add new storage capacity to the RAID volume. DiskPart.exe is a text-mode command interpreter that you can use to manage objects (disks, partitions or volumes) by using scripts or direct input from a command prompt. For more information, see [Extend a data volume in Windows](/troubleshoot/windows-server/backup-and-storage/extend-data-volume)
+> If you want to increase the size of a hardware RAID-5 disk LUN but don't have to span the NTFS file system volume across different physical disks (or LUNs), continue to use basic disks. You can use the DiskPart.exe utility to extend the NTFS volume after you add new storage capacity to the RAID volume. DiskPart.exe is a text-mode command interpreter that you can use to manage objects (disks, partitions or volumes) by using scripts or direct input from a command prompt. For more information, see [Extend a data volume in Windows](extend-data-volume.md)
 
 ## Storage devices
 

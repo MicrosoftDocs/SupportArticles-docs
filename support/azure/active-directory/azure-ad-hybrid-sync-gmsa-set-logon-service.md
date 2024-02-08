@@ -1,18 +1,18 @@
 ---
-title: Azure AD Hybrid Sync Agent Installation Issues - The gMSA is set to log on as Service
-description: This troubleshooting guide focuses on when the gMSA is set to log on as a service. It helps unblock you to install the Azure AD Connect Provisioning Agent.
+title: Microsoft Entra Hybrid Sync Agent Installation Issues - The gMSA is set to log on as Service
+description: This troubleshooting guide focuses on when the gMSA is set to log on as a service. It helps unblock you to install the Microsoft Entra Connect Provisioning Agent.
 ms.date: 10/13/2021
 ms.service: active-directory
 ms.subservice: hybrid
 ---
 
-# Azure AD Hybrid Sync Agent Installation Issues - The gMSA is set to log on as Service
+# Microsoft Entra Hybrid Sync Agent Installation Issues - The gMSA is set to log on as Service
 
-This troubleshooting guide focuses on when the gMSA is set to log on as a service. This situation may block you from successfully installing the Azure AD Connect Provisioning Agent.
+This troubleshooting guide focuses on when the gMSA is set to log on as a service. This situation may block you from successfully installing the Microsoft Entra Connect Provisioning Agent.
 
 ## Prerequisites
 
-To install *Cloud Provisioning Agent*, the following prerequisites are required: [Prerequisites for Azure AD Connect cloud sync](/azure/active-directory/cloud-sync/how-to-prerequisites).
+To install *Cloud Provisioning Agent*, the following prerequisites are required: [Prerequisites for Microsoft Entra Connect cloud sync](/azure/active-directory/cloud-sync/how-to-prerequisites).
 
 ## The gMSA is set to log on as Service
 
@@ -24,9 +24,9 @@ To resolve this issue, check the System event logs for **EventID 7038**. The fol
 
 > The user name or password is incorrect.
 
-:::image type="content" source="media/azure-ad-hybrid-sync-gmsa-set-logon-service/1-user-name-password-incorrect.png" alt-text="Screenshot of error when attempting to install the Microsoft Azure A D Connect Provisioning Agent. It says the user name or password is incorrect." border="true" lightbox="media/azure-ad-hybrid-sync-gmsa-set-logon-service/1-user-name-password-incorrect.png":::
+:::image type="content" source="media/azure-ad-hybrid-sync-gmsa-set-logon-service/1-user-name-password-incorrect.png" alt-text="Screenshot of error when attempting to install the Microsoft Entra Connect Provisioning Agent. It says the user name or password is incorrect." border="true" lightbox="media/azure-ad-hybrid-sync-gmsa-set-logon-service/1-user-name-password-incorrect.png":::
 
-Open the **Microsoft Azure AD Connect Provisioning Agent** properties and select the **Log On** tab. You'll find the settings aren’t grayed out, as is expected for a managed account service.
+Open the **Microsoft Entra Connect Provisioning Agent** properties and select the **Log On** tab. You'll find the settings aren’t grayed out, as is expected for a managed account service.
 
 :::image type="content" source="media/azure-ad-hybrid-sync-gmsa-set-logon-service/2-provisioning-agent-properties.png" alt-text="Screenshot of the 'Log On' tab of the Microsoft Azure A D Connect Provisioning Agent window, including the account and password entries." border="true":::
 

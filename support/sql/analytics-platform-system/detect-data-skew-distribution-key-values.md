@@ -4,7 +4,6 @@ description: This article describes how to detect skew on the distribution key o
 ms.date: 07/22/2020
 ms.custom: sap:Parallel Data Warehouse (APS)
 ms.topic: how-to
-ms.prod: sql
 ---
 # Detect data skew on the distribution key values
 

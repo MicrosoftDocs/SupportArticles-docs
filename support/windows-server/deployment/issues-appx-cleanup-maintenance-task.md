@@ -1,17 +1,17 @@
 ---
 title: Issues with AppX cleanup maintenance task
 description: Provides workarounds for known issues that involve the AppX cleanup maintenance task in Windows 8.1 and Windows Server 2012 R2.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:setup, csstroubleshoot
-ms.technology: windows-server-deployment
+ms.subservice: deployment
 ---
 # Known issues that affect the AppX cleanup maintenance task in Windows 8.1 and Windows Server 2012 R2
 
@@ -89,3 +89,7 @@ This behavior is by design.
 ## More information
 
 If you delete the maintenance task, the resources are not deleted and the task is never run. Because the maintenance task is not available after the installation, the resources always use disk space on the computer.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

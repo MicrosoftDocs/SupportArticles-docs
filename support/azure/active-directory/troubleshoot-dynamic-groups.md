@@ -1,21 +1,23 @@
 ---
 title: Troubleshoot dynamic groups
-description: Diagnose and resolve issues with dynamic groups.
-ms.date: 12/10/2020
+description: This article helps you diagnose and resolve issues with dynamic groups.
+ms.date: 01/16/2024
 ms.service: active-directory
 ms.subservice: domain-services
+ms.custom: has-azure-ad-ps-ref
+ms.reviewer: mimart, v-weizhu
 ---
 # Troubleshoot dynamic groups
 
-This troubleshooting guide helps you diagnose and solve issues with dynamic groups in Azure Active Directory.
+This troubleshooting guide helps you diagnose and solve issues with dynamic groups in Microsoft Entra ID.
 
 ## Dynamic groups identification and management
 
 To verify whether your group is a dynamic group, see [Evaluate whether a group is a dynamic group](#1).
 
-- **Yes**: proceed to the next section.
+- **Yes**: Proceed to the next section.
 
-- **No**: [Create a basic group and add members using Azure Active Directory](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal) or other applicable groups.
+- **No**: [Create a basic group and add members using Microsoft Entra ID](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal) or other applicable groups.
 
 ### Dynamic group creation issues
 
@@ -24,17 +26,17 @@ To verify whether your group is a dynamic group, see [Evaluate whether a group i
 Recommended articles for group creation:
 
 - [Create a new group and add members in Azure portal](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal)
-- [Create groups in Powershell MSOnline](/azure/active-directory/users-groups-roles/groups-settings-v2-cmdlets#create-groups)
-- [Disable groups creation in Powershell](/azure/active-directory/users-groups-roles/groups-settings-v2-cmdlets#disable-group-creation-by-your-users)
-- [Azure AD administrative roles](/azure/active-directory/users-groups-roles/directory-assign-admin-roles)
+- [Create groups in PowerShell MSOnline](/azure/active-directory/users-groups-roles/groups-settings-v2-cmdlets#create-groups)
+- [Disable groups creation in PowerShell](/azure/active-directory/users-groups-roles/groups-settings-v2-cmdlets#disable-group-creation-by-your-users)
+- [Microsoft Entra administrative roles](/azure/active-directory/users-groups-roles/directory-assign-admin-roles)
 
 Common issues in creating a dynamic group or rule:
 
-- You're unable to create a dynamic group in the Azure Portal, or you receive an error when creating a dynamic group in PowerShell. See [Cannot create a dynamic group](#4).
+- You're unable to create a dynamic group in the Azure portal, or you receive an error when creating a dynamic group in PowerShell. See [Cannot create a dynamic group](#4).
 
 - You can't find the attribute to create a rule. See [Create a dynamic membership rule](#7).
 
-- You receive a **"max groups allowed"** error when trying to create a Dynamic Group in PowerShell: You have reached 5,000 groups, the maximum limit for Dynamic groups in your tenant. To create new Dynamic groups, first delete existing Dynamic groups. Note that there's no way to increase the maximum limit.
+- You receive a **"max groups allowed"** error when trying to create a Dynamic Group in PowerShell: You have reached 5,000 groups, the maximum limit for Dynamic groups in your tenant. To create new Dynamic groups, first delete existing Dynamic groups. There's no way to increase the maximum limit.
 
 ### Dynamic membership update issues
 
@@ -64,9 +66,9 @@ You receive a rule processing error.
 
 You receive an error when deleting a group.
 
-- Before you attempt to delete a group in Azure Active Directory, ensure that you have [deleted all assigned licenses](/azure/active-directory/users-groups-roles/licensing-group-advanced#deleting-a-group-with-an-assigned-license). For more information about group deletion in general, see [Delete a group](#21).
+- Before you attempt to delete a group in Microsoft Entra ID, ensure that you have [deleted all assigned licenses](/azure/active-directory/users-groups-roles/licensing-group-advanced#deleting-a-group-with-an-assigned-license). For more information about group deletion in general, see [Delete a group](#21).
 
-You restored a deleted group but did not see any update.
+You restored a deleted group but didn't see any update.
 
 - When a dynamic group is deleted and restored, it's seen as a new group and re-populated according to the rule. This process might take up to 24 hours.
 
@@ -80,11 +82,11 @@ To determine whether a group is dynamic group:
 
 ## Validate dynamic group membership rules<a id="2"></a>
 
-Azure Active Directory (Azure AD) provides the means to validate dynamic group rules. On the **Validate rules** tab, you can validate your dynamic rule against sample group members to confirm that the rule is working as expected.
+Microsoft Entra ID provides the means to validate dynamic group rules. On the **Validate rules** tab, you can validate your dynamic rule against sample group members to confirm that the rule is working as expected.
 
 When creating or updating dynamic group rules, you can use this information to help determine whether a user or device meets the rule criteria for becoming a member of a group. This can also aid you in troubleshooting when membership isn't expected.
 
-For more information, see [Validate a dynamic group membership rule (preview) in Azure Active Directory](/azure/active-directory/users-groups-roles/groups-dynamic-rule-validation)
+For more information, see [Validate a dynamic group membership rule (preview) in Microsoft Entra ID](/azure/active-directory/users-groups-roles/groups-dynamic-rule-validation)
 
 ## Troubleshoot dynamic group creation issues<a id="3"></a>
 
@@ -96,7 +98,7 @@ You don't see option to create a dynamic group in the Azure portal, or there was
 
 1. Ensure that your tenant has the appropriate license.
 
-   - Dynamic groups require the tenant to have an Azure Active Directory **P1/P2 Premium license**. For more information, check [Azure Active Directory license plans](https://www.microsoft.com/cloud-platform/azure-active-directory-pricing)
+   - Dynamic groups require the tenant to have a Microsoft Entra ID **P1 or P2 Premium license**. For more information, check [Microsoft Entra ID license plans](https://www.microsoft.com/cloud-platform/azure-active-directory-pricing)
 
 2. Ensure that the user creating the group has the appropriate administrator permissions:
 
@@ -108,9 +110,9 @@ You don't see option to create a dynamic group in the Azure portal, or there was
 
 4. Check that the specific user is in the list of users that can create a group.
 
-   - Global administrators can restrict group creation to select a group of users if you have an Azure Active Directory P1 Premium license. You should verify that you have the appropriate permissions.
+   - Global administrators can restrict group creation to select a group of users if you have a Microsoft Entra ID P1 Premium license. You should verify that you have the appropriate permissions.
 
-### You get a max groups allowed error when creating a Dynamic group in Powershell<a id="8"></a>
+### You get a max groups allowed error when creating a Dynamic group in PowerShell<a id="8"></a>
 
 This error means you have reached the max limit for Dynamic groups in your tenant. Check the number of groups in the tenant. The max number of Dynamic groups per tenant is 5,000.
 
@@ -121,13 +123,13 @@ To create any new Dynamic groups, you'll first need to delete some existing Dyna
 ### Cannot find the attribute to create a rule<a id="6"></a>
 
    1. Ensure that the user attributes are in the [list of supported properties](/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#supported-properties). If they're not in the list, they're not currently supported.
-   2. Ensure that the device attributes are in the [list of device attributes](/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#using-attributes-to-create-rules-for-device-objects). If they're not in the list, they're not currently supported. For more information, visit [Dynamic membership rules for groups in Azure Active Directory](/azure/active-directory/enterprise-users/groups-dynamic-membership).
+   2. Ensure that the device attributes are in the [list of device attributes](/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#using-attributes-to-create-rules-for-device-objects). If they're not in the list, they're not currently supported. For more information, visit [Dynamic membership rules for groups in Microsoft Entra ID](/azure/active-directory/enterprise-users/groups-dynamic-membership).
 
 ### Cannot create a dynamic membership rule<a id="7"></a>
 
-1. Ensure that your tenant has the appropriate license. Dynamic groups require the tenant to have an Azure Active Directory P1 Premium license.
+1. Ensure that your tenant has the appropriate license. Dynamic groups require the tenant to have a Microsoft Entra ID P1 Premium license.
 
-   - The list of Azure Active Directory **license plans** can be accessed at [Azure Active Directory pricing](https://www.microsoft.com/cloud-platform/azure-active-directory-pricing).
+   - The list of Microsoft Entra ID **license plans** can be accessed at [Microsoft Entra pricing](https://www.microsoft.com/cloud-platform/azure-active-directory-pricing).
 
    - Enterprise Mobility + Security licensing plans can be accessed at [Enterprise Mobility+Security pricing options](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-pricing).
 
@@ -192,7 +194,7 @@ To evaluate whether a user or device satisfies the rule to be part of a group, u
 
 #### Manual validation
 
-Validate the values for user or device attributes (In[Azure Portal](/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal#to-add-or-change-profile-information), or using [PowerShell](/powershell/module/azuread/get-azureaduser) in the rule.
+Validate the values for user or device attributes (In [Azure portal](/azure/active-directory/fundamentals/active-directory-users-profile-azure-portal#to-add-or-change-profile-information), or using [PowerShell](/powershell/module/azuread/get-azureaduser) in the rule.
 
 - Ensure that there are users that satisfy the rule.
 - For devices, check the device properties to ensure that synchronized attributes contain the expected values.
@@ -224,7 +226,7 @@ Membership evaluation is done periodically in a background process. How long the
 
 ### Force the group to be processed now<a id="18"></a>
 
-Reset processing for a dynamic group. In the Azure portal, manually trigger the re-processing by updating the membership rule to add a whitespace at the end.
+Reset processing for a dynamic group. In the Azure portal, manually trigger the re-processing by updating the membership rule to add a whitespace in the middle of the rule.
 
 ### Fix a rule processing error<a id="19"></a>
 
@@ -236,18 +238,18 @@ Reset processing for a dynamic group. In the Azure portal, manually trigger the 
 
 ## Troubleshoot dynamic groups deletion or restoration<a id="20"></a>
 
-Before attempting to delete a group in Azure Active Directory, ensure you have [deleted all assigned licenses](/azure/active-directory/users-groups-roles/licensing-group-advanced#deleting-a-group-with-an-assigned-license) to avoid errors.
+Before attempting to delete a group in Microsoft Entra ID, ensure you have [deleted all assigned licenses](/azure/active-directory/users-groups-roles/licensing-group-advanced#deleting-a-group-with-an-assigned-license) to avoid errors.
 
 (For more information about group deletion in general, see [Delete a group](#21).
 
 ### Delete a group<a id="21"></a>
 
 1. Groups can be deleted from the directory [using the Remove-AzureADGroup cmdlet in the Azure AD PowerShell module](/azure/active-directory/users-groups-roles/groups-settings-v2-cmdlets#delete-groups).
-2. Before attempting to delete a group in Azure Active Directory, ensure you have [deleted all assigned licenses  to avoid errors](/azure/active-directory/users-groups-roles/licensing-group-advanced#deleting-a-group-with-an-assigned-license).
+2. Before attempting to delete a group in Microsoft Entra ID, ensure you have [deleted all assigned licenses  to avoid errors](/azure/active-directory/users-groups-roles/licensing-group-advanced#deleting-a-group-with-an-assigned-license).
 
 ### Restore a deleted group<a id="22"></a>
 
-- If an Office 365 group is deleted, it can only be restored up to 30 days before permanent deletion occurs. Once permanently deleted, the group can no longer be restored. To learn more about restoring groups, see [Restore a deleted Microsoft 365 group in Azure Active Directory](/azure/active-directory/fundamentals/active-directory-groups-restore-azure-portal).
+- If an Office 365 group is deleted, it can only be restored up to 30 days before permanent deletion occurs. Once permanently deleted, the group can no longer be restored. To learn more about restoring groups, see [Restore a deleted Microsoft 365 group in Microsoft Entra ID](/azure/active-directory/fundamentals/active-directory-groups-restore-azure-portal).
 - This functionality isn't supported for security groups and distribution groups.
 - Verify that you're authorized to restore an Office 365 group. Only Global administrators, User account administrators, Intune service administrators, , or the owner of the group can restore a group.
 

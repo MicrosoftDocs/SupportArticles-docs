@@ -3,10 +3,7 @@ title: Troubleshooting intermittent connection time-outs between availability gr
 description: This article helps you diagnose intermittent connection time-outs that are reported between availability group replicas. 
 ms.date: 04/04/2023
 ms.custom: sap:Availability Groups
-ms.prod: sql
-author: padmajayaraman
-ms.author: v-jayaramanp
-ms.reviewer: ramakoni, cmathews
+ms.reviewer: ramakoni, cmathews, v-jayaramanp
 ---
 
 # Troubleshooting intermittent connection time-outs between availability group replicas

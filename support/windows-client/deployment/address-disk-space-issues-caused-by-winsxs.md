@@ -1,17 +1,17 @@
 ---
 title: Large WinSxS directory causes disk space issues
 description: Discusses how to address disk space issues that are caused by a large Windows component store (WinSxS) directory.
-ms.date: 09/08/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, scottmca, joscon, jcollins
 ms.custom: sap:servicing, csstroubleshoot
-ms.technology: windows-client-deployment
+ms.subservice: deployment
 ---
 # How to address disk space issues that are caused by a large Windows component store (WinSxS) directory
 
@@ -84,3 +84,7 @@ For more information about the system requirements for disks, see:
 >      1. At an elevated command prompt, run the `Net Stop WUAUSERV` command.
 >      2. Delete the contents of the *%windir%\softwaredistribution\downloads* folder.
 >      3. At an elevated command prompt, run the `Net Start WUAUSERV` command:
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

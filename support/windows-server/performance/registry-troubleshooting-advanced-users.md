@@ -1,17 +1,17 @@
 ---
 title: Registry troubleshooting for advanced users
 description: Describes how to troubleshoot registry corruption issues.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:no-boot-not-bugchecks, csstroubleshoot
-ms.technology: windows-server-performance
+ms.subservice: performance
 ---
 # Registry troubleshooting steps for advanced users
 

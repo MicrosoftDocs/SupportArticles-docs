@@ -4,7 +4,6 @@ description: This article introduces that how to install SQL Server 2008 X64 and
 ms.date: 07/22/2020
 ms.custom: sap:Installation, Patching and Upgrade
 ms.topic: how-to
-ms.prod: sql
 ---
 # Install SQL Server 2008 X64 and SQL Server 2008 Reporting services X86 side by side on Windows 2008 X64
 

@@ -2,6 +2,8 @@
   items:
   - name: Troubleshoot Azure App Service
     href: ./welcome-app-service.yml
+  - name: Capture memory dumps in Azure App Service
+    href: ./capture-memory-dumps-app-service.md
   - name: Create or delete web apps FAQs
     href: ./create-delete-resources-faq.yml
   - name: Availability, performance, and application FAQs
@@ -12,8 +14,6 @@
     href: backing-up-restoring-and-cloning-microsoft-azure-app-services.md
   - name: Built-in Linux containers FAQs
     href: faqs-app-service-linux.yml
-  - name: Configuration and management FAQs for Web Apps
-    href: web-apps-configuration-and-management-faqs.md
   - name: Deployment FAQs for Web Apps
     href: web-apps-deployment-faqs.md
   - name: FAQs about scaling web apps

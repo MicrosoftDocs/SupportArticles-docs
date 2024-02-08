@@ -1,17 +1,17 @@
 ---
 title: How to reset the Directory Services Restore Mode administrator account password
 description: Describes how to reset the DSRM administrator password for any server in your domain without restarting the server.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: jamirc, kaushika
 ms.custom: sap:user-computer-group-and-object-management, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # How to reset the Directory Services Restore Mode administrator account password in Windows Server
 

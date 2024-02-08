@@ -11,7 +11,7 @@ This article provides the answer for the question that what do the Reverse and C
 _Applies to:_ &nbsp; Microsoft Dynamics GP  
 _Original KB number:_ &nbsp; 4020444
 
-A general description for each button is below: (and/or review [blog](https://community.dynamics.com/gp/b/dynamicsgp/posts/what-do-the-reverse-and-correct-buttons-do-in-the-select-timesheets-for-adjustment-window-for-project-accounting-in-microsoft-dynamics-gp) article to see example).
+A general description for each button is below: (and/or review [blog](https://community.dynamics.com/blogs/post/?postid=3abaf0bb-06ca-4ebf-add5-63c45a9520b4) article to see example).
 
 ## What do the Reverse button do
 

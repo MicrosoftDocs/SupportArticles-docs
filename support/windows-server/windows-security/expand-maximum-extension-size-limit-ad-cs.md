@@ -1,17 +1,17 @@
 ---
 title: How to expand the maximum extension size limit at AD CS
 description: Helps to resolve the issue in which Active Directory Certificate Services (AD CS) gives an error when attempting to issue certificates with more than 4 kilobytes (KB) size extensions.
-ms.date: 9/15/2022
+ms.date: 09/15/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, pgandhi, thirunr, clfish
 ms.custom: sap:certificates-and-public-key-infrastructure-pki, csstroubleshoot
-ms.technology: windows-server-security
+ms.subservice: windows-security
 ---
 # How to expand the maximum extension size limit at AD CS
 

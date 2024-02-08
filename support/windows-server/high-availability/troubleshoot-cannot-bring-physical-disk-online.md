@@ -1,17 +1,17 @@
 ---
 title: Can't bring a physical disk online in a cluster
 description: Provides guidance for when a physical disk fails to come online in a Windows-based failover cluster
-ms.date: 4/21/2022
+ms.date: 04/21/2022
 author: kaushika-msft
 ms.author: kaushika
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:cannot-bring-a-resource-online, csstroubleshoot
-ms.technology: windows-server-high-availability
+ms.subservice: high-availability
 ---
 # Can't bring a physical disk online in a failover cluster
 

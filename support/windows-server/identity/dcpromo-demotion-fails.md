@@ -1,17 +1,17 @@
 ---
 title: DCPROMO demotion fails
 description: Solves an issue where the demotion of a Windows Server computer hosting the Active Directory Domain Services (AD DS) or domain controller server role fails.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:dcpromo-and-the-installation-of-domain-controllers, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # DCPROMO demotion fails if it's unable to contact the DNS infrastructure master
 

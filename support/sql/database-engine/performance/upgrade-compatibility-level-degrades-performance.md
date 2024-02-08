@@ -3,7 +3,6 @@ title: Upgrade compatibility level degrades performance
 description: This article provides resolutions for the problem that occurs when you upgrade database compatibility level from 120 to 130.
 ms.date: 09/11/2020
 ms.custom: sap:Performance
-ms.prod: sql
 ---
 # Performance degradation when you upgrade database compatibility level from 120 to 130
 

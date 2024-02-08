@@ -1,7 +1,7 @@
 ---
 title: Error CredSSP encryption oracle remediation when you try to RDP to a Windows VM in Azure
 description: Fixes an issue that you receive a CredSSP encryption oracle remediation error when you try to RDP to a Windows VM in Azure.
-ms.date: 03/29/2023
+ms.date: 08/25/2023
 ms.reviewer: 
 ms.service: virtual-machines
 ms.subservice: vm-cannot-connect
@@ -18,6 +18,8 @@ This article provides a solution to an issue in which you are not able to connec
 _Original product version:_ &nbsp; Virtual Machine running Windows  
 _Original KB number:_ &nbsp; 4295591
 
+[!INCLUDE [Feedback](../../includes/feedback.md)]
+
 ## Symptoms
 
 Consider the following scenario:
@@ -31,7 +33,7 @@ In this scenario, you receive the following error message:
 
 ### How to verify that the CredSSP update is installed
 
-Check the **update history** for the following updates, or check the version of TSpkg.dll.
+Check the **update history** for the following updates, or check the version of TSpkg.dll that is located at `%systemroot%\system32`.
 
 |Operating system|TSpkg.dll version with CredSSP update|CredSSP update|
 |---|---|---|
@@ -75,7 +77,7 @@ To resolve the issue, install CredSSP updates for both client and server so that
   
 3. Type `cmd` to start a channel that has a CMD instance.
 
-4. Type `ch-si 1` to switch to the channel that is running the CMD instance. You receive the following output:
+4. Type `ch -si 1` to switch to the channel that is running the CMD instance. You receive the following output:
 
     :::image type="content" source="media/credssp-encryption-oracle-remediation/launch-cmd.svg" alt-text="Screenshot of launching CMD in SAC." border="false":::
 

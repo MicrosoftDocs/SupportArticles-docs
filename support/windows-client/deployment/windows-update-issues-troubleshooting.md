@@ -1,15 +1,15 @@
 ---
 title: Windows Update issues troubleshooting
 description: Learn about troubleshooting Windows Update, issues related to HTTP/Proxy, and why some features are offered and others aren't.
-ms.date: 03/14/2023
-ms.prod: windows-client
+ms.date: 04/28/2023
+ms.service: windows-client
 author: aczechowski
 ms.author: aaroncz
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.custom: sap:servicing, csstroubleshoot
 ms.collection: highpri
-ms.technology: windows-client-deployment
+ms.subservice: deployment
 ms.reviewer: dougeby
 audience: itpro
 localization_priority: medium
@@ -196,13 +196,13 @@ Windows client devices can receive updates from various sources, including Windo
 
     ```powershell
     
-    \$MUSM = New-Object -ComObject "Microsoft.Update.ServiceManager"
+    $MUSM = New-Object -ComObject "Microsoft.Update.ServiceManager"
     ```
 
 3. Run the cmdlet:
 
     ```powershell
-    \$MUSM.Services
+    $MUSM.Services
     ```
 
 Check the output for the Name and OffersWindowsUPdates parameters, which you can interpret according to this table.
@@ -282,3 +282,7 @@ Users might receive the following errors from Windows Update. These errors are t
 |WU_E_PT_LOAD_SHEDDING | 0x8024402d | The server is shedding load. |
 
 In these cases, users that programmatically call into the Windows Update Agent API to [retrieve the result](/windows/win32/api/wuapi/nf-wuapi-isearchresult-get_resultcode) of a search operation would get [orcFailed](/windows/win32/api/wuapi/ne-wuapi-operationresultcode) or [orcSucceededWithErrors](/windows/win32/api/wuapi/ne-wuapi-operationresultcode). Retrying the operation later is expected to succeed.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

@@ -1,0 +1,29 @@
+
+items:
+- name: Welcome
+  href: welcome-container-instances.yml
+  
+- name: ACI debugging tools
+  href: aci-debug-tools.md
+- name: Can't delete a virtual network or subnet used by ACI
+  href: cannot-delete-vnet-subnet.md
+- name: Common confidential containers issues
+  href: common-confidential-container-errors.md
+- name: Container instance continues to run after the stop or delete command
+  href: aci-still-running-after-stop-delete-command.md
+- name: Fails to pull ACR images by using Managed Identity authentication
+  href: acr-image-pull-failures-managed-identity.md
+
+- name: Troubleshoot create operations
+  items:
+  - name: Container group deployment remains in Waiting state
+    href: container-group-deployment-waiting-state.md
+  - name: DeploymentFailed - InaccessibleImage error code
+    href: inaccessible-image.md
+  - name: Error codes for Spot container creation
+    href: error-codes-spot-container-creation.md
+  - name: Error - Web socket is closed or could not be opened
+    href: web-socket-is-closed-or-could-not-be-opened.md
+  - name: Image pull takes a long time to run
+    href: long-image-pulls.md
+

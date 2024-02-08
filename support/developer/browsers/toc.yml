@@ -60,6 +60,9 @@
     - name: 32-bit browser applications don't work as expected
       href: administration/32-bit-browser-applications-not-working-as-expected.md
 
+    - name: Troubleshoot Internet Explorer Zonemapping failures
+      href: development-website/troubleshoot-ie-zonemapping-process-group-policy.md
+
 - name: Connectivity and Navigation
   items:
     - name: Can't access some websites

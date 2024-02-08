@@ -1,17 +1,17 @@
 ---
 title: Command-line switches for Microsoft software update packages
 description: Describes the consistent set of command-line switches that Microsoft is adopting for deploying packages that contain software updates.
-ms.date: 04/11/2022
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: eriprice, kaushika
 ms.custom: sap:servicing, csstroubleshoot
-ms.technology: windows-client-deployment
+ms.subservice: deployment
 ---
 # Command-line switches for Microsoft software update packages
 
@@ -50,3 +50,7 @@ Microsoft is adopting the following command-line switches for software update pa
 - /uninstall - Removes the package.
 - /log - Enables the user to define the path for the local log file. This switch invokes the default logging behavior.
 - /extract - Enables you to extract the installation files to a specified folder.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

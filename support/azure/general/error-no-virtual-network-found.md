@@ -2,10 +2,8 @@
 title: No virtual network found error when configuring Azure deployment settings in HPC Pack Cluster Manager
 description: This article describes how to resolve a no virtual network found error. This error occurs when you configure Azure deployment settings in HPC Pack Cluster Manager.  
 ms.date: 11/18/2022
-author: DennisLee-DennisLee
-ms.author: v-dele
 editor: v-jsitser
-ms.reviewer: arrhpcglobal
+ms.reviewer: arrhpcglobal, v-leedennis
 ms.service: azure-common-issues-support
 #Customer intent: As an Azure HPC Pack user, I want to resolve the no virtual network found error that occurs when I configure Azure deployment settings in HPC Pack Cluster Manager.
 ---

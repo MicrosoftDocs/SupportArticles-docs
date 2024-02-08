@@ -1,17 +1,17 @@
 ---
 title: SSL/TLS communication problems after you install KB 931125
 description: Provides a solution to SSL/TLS communication problems that occur after you install KB 931125.
-ms.date: 3/24/2022
+ms.date: 03/24/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, tode, arrenc
 ms.custom: sap:secure-channel-issues, csstroubleshoot
-ms.technology: windows-server-security
+ms.subservice: windows-security
 ---
 # SSL/TLS communication problems after you install KB 931125
 

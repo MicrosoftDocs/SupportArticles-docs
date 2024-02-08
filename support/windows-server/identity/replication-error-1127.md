@@ -1,17 +1,17 @@
 ---
 title: Active Directory Replication Error 1127
 description: Describes an issue where AD operations fail with Win32 error 1127 (While accessing the hard disk, a disk operation failed even after retries).
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:active-directory-replication, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # Active Directory Replication Error 1127: While accessing the hard disk, a disk operation failed even after retries
 
@@ -151,3 +151,7 @@ Active Directory is unable to write to the Active Directory database or log file
     | **(1.) Physical consistency**| no equivalent| ESENTUTL /K |
     | **(2.) ESE Logical consistency**| NTDSUTIL FILES INTEGRITY| ESENTUTL /G |
     | **(3.) Application logical consistency**| NTDSUTIL ->Semantic database analysis<br/><br/>+<br/><br/>NTDSUTIL -> Offline Defrag| no equivalent for SDA<br/><br/><br/>+<br/><br/>ESENTUTL / D |
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Active Directory replication issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication.md).

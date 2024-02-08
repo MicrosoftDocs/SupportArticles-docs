@@ -25,7 +25,7 @@ Confirm that you've met the prerequisites for using app protection policies. The
 
 The scope of Intune app protection policies (APP) covers corporate accounts and data only. You cannot use APP to protect personal accounts or manage the transfer of personal data. To apply APP correctly, you need to ensure the account you're using to sign into the managed app is a corporate account and the data you're trying to share is corporate data. Review the following:
 
-- **Corporate accounts:** User accounts belong to your company's Azure Active Directory (Azure AD) tenant and are considered corporate accounts. These accounts can be synced with on-premises Active Directory using Azure AD Connect. You must assign Intune licenses to your users to use APP.
+- **Corporate accounts:** User accounts belong to your company's Microsoft Entra tenant and are considered corporate accounts. These accounts can be synced with on-premises Active Directory using Microsoft Entra Connect. You must assign Intune licenses to your users to use APP.
 
 - **Corporate data:** The data stored in managed locations, such as OneDrive for Business or SharePoint Online, are considered corporate data. Data stored in personal, local storage locations are not treated as corporate data. Files created with managed Microsoft Office apps (such as Word or Excel), are considered corporate data only when saved to a managed location (OneDrive for Business and SharePoint Online). If you save Office files to OneDrive for Business, they'll be treated as corporate data. Files saved to local storage or in other non-managed locations are treated as personal data and not protected by APP. Draft, sent, and received emails in the Microsoft Outlook app are treated as corporate data if they were created while signed in with a corporate account.
 
@@ -43,11 +43,11 @@ For more information on Android work profile, see [Introduction to Android work 
 
 ## Confirm the expected APP settings are applied to the apps
 
-Check app protection policy settings in both Intune and on those configured on the device side. The table in the Review APP settings in Endpoint Manager section of this document provides general guidelines to confirm that you've correctly configured settings in the admin center.  Once confirmed, verify that the same settings are applied to apps on the devices.
+Check app protection policy settings in both Intune and on those configured on the device side. The table in the Review APP settings in Intune section of this document provides general guidelines to confirm that you've correctly configured settings in the admin center.  Once confirmed, verify that the same settings are applied to apps on the devices.
 
-### Review APP settings in Endpoint Manager
+### Review APP settings in Intune
 
-In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can create and manage your app protection policies under **Apps** > **App protection policies**. The **Data protection** section includes important settings for data-transfer scenarios, which you should review if you're seeing unexpected behavior. The following table lists common APP settings for data protection and their use cases.
+In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can create and manage your app protection policies under **Apps** > **App protection policies**. The **Data protection** section includes important settings for data-transfer scenarios, which you should review if you're seeing unexpected behavior. The following table lists common APP settings for data protection and their use cases.
 
 |Setting name   |OS   |Setting value   |Use case   |
 |------------|-----|------|-----------------|
@@ -79,7 +79,7 @@ Run Intune diagnostics in Microsoft Edge to check the APP setting applied to eac
 
 1. Tap **View Intune App Status** (iOS/iPadOS) or **VIEW APP INFO** (Android) to see APP settings applied to each app on the device.
 
-1. Compare setting values in this view with those configured in Endpoint Manager.
+1. Compare setting values in this view with those configured in Intune.
 
     For an explanation of these settings' values, see [Review client app protection logs](/mem/intune/apps/app-protection-policy-settings-log).
 

@@ -26,6 +26,6 @@ For example, you assign the policy to devices that are enrolled on January 1, an
 
 ## More information
 
-To find the latest password expiration date, go to the Microsoft Endpoint Manager admin console, and then check the last modified date of the policy.
+To find the latest password expiration date, go to the Microsoft Intune admin console, and then check the last modified date of the policy.
 
 In the example scenario in the **Symptoms** section, assume that the policy is assigned to devices during enrollment. If a device is enrolled *before* the last modified date of the policy, its password expires 180 days after the last modified date. If the device is enrolled *after* the last modified date, its password expires 180 days after enrollment.

@@ -1,17 +1,17 @@
 ---
 title: Cluster validation fails with error 80070005
 description: Provides a solution to the error 80070005 that occurs when failover cluster validate fails.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, eldenc
 ms.custom: sap:initial-cluster-creation-or-adding-node, csstroubleshoot
-ms.technology: windows-server-high-availability
+ms.subservice: high-availability
 ---
 # Cluster Validation fails "Validate Cluster Network Configuration" Test with Error 80070005
 

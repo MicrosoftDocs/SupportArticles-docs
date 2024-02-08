@@ -1,16 +1,16 @@
 ---
 title: Group Policy overview
 description: Overview of Group Policy troubleshooting articles for Windows Server.
-ms.date: 6/17/2021
+ms.date: 06/17/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.technology: windows-server-group-policy
+ms.subservice: group-policy
 ---
 # Group Policy troubleshooting documentation for Windows Server
 

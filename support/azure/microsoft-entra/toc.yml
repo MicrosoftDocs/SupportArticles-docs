@@ -1,0 +1,7 @@
+- name: Welcome
+  href: welcome-microsoft-entra.yml
+
+- name: Global Secure Access
+  items:
+  - name: Troubleshoot Global Secure Access client for Windows issues
+    href: troubleshoot-global-secure-access-client-windows-issues.md

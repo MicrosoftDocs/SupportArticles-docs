@@ -5,10 +5,11 @@ ms.date: 06/08/2020
 ms.reviewer: willfid
 ms.service: active-directory
 ms.subservice: domain-services
+ms.custom: has-azure-ad-ps-ref
 ---
 # Error when you try to remove a user from the recycle bin: Remove-MsolUser User Not Found
 
-_Original product version:_ &nbsp; Office 365 Identity Management, Azure Active Directory, Cloud Services (Web roles/Worker roles), Microsoft Intune, Azure Backup  
+_Original product version:_ &nbsp; Office 365 Identity Management, Microsoft Entra ID, Cloud Services (Web roles/Worker roles), Microsoft Intune, Azure Backup  
 _Original KB number:_ &nbsp; 3019157
 
 ## Symptoms

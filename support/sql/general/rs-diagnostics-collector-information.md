@@ -4,7 +4,6 @@ description: This article describes the information that may be collected from a
 ms.date: 08/19/2020
 ms.reviewer: ramakoni
 ms.topic: article
-ms.prod: sql
 ---
 # Information that is collected by SQL RS Diagnostics Collector
 

@@ -3,7 +3,7 @@ title: You don't have required role or privilege
 description: Provides a solution to a privilege issue that occurs when you try to use the Dynamics 365 App for Outlook.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: d365-sales-email-office-integration
 ---
 # You don't have required role or privilege to complete this action error occurs in Microsoft Dynamics 365 App for Outlook

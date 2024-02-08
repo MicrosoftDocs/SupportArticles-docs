@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot a faulty Azure VM by using nested virtualization in Azure
-description: How to troubleshoot a problem Azure VM by using nested virtualization in Azure
+description: How to troubleshoot a faulty Azure VM by using nested virtualization in Azure.
 services: virtual-machines
 documentationcenter: ''
 author: genlin
@@ -11,10 +11,10 @@ ms.subservice: vm-backup-restore
 ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
-
 ms.topic: article
-ms.date: 10/11/2020
+ms.date: 11/28/2023
 ms.author: glimoli
+ms.reviewer: v-weizhu, v-six, ekpathak, glimoli
 ---
 # Troubleshoot a faulty Azure VM by using nested virtualization in Azure
 
@@ -28,13 +28,74 @@ In order to mount the faulty VM, the Rescue VM must use the same type of Storage
 
 1. Create a new Rescue VM:
 
-    - Operating system: Windows Server 2016 Datacenter or newer versions of Windows Server Datacenter
+    - Operating system: Windows Server 2016 Datacenter or newer versions of Windows Server Datacenter.
 
     - Size: Select a series that supports nested virtualization. For example: [Dv3](/azure/virtual-machines/dv3-dsv3-series) or [Dv4](/azure/virtual-machines/dv4-dsv4-series).
 
     - Same location, Storage Account, and Resource Group as the faulty VM.
 
     - Select the same storage type as the faulty VM (Standard or Premium).
+
+    - Image: Choose either a Generation 2 image or a Generation 1 image.
+
+    - Security type: Change the security type to **Standard**. By default, the security type is **Trusted launch virtual machines** that doesn't support nested virtualization. If you set the security type to **Trusted launch virtual machines**, and attempt to add server roles on the Rescue VM, you'll encounter the following error message:
+
+        > Hyper-V cannot be installed because virtualization support is not enabled in the BIOS.
+
+        :::image type="content" source="media/troubleshoot-vm-by-use-nested-virtualization/hyper-v-cannot-be-installed-error.png" alt-text="Screenshot that shows the 'Hyper-V cannot be installed' error message. "lightbox="media/troubleshoot-vm-by-use-nested-virtualization/hyper-v-cannot-be-installed-error.png":::
+
+        > [!NOTE]
+        > This error occurs because the hypervisor isn't enabled in the BCDEdit configuration of the VM. To fix this error, set the option before installing the Hyper-V role.
+
+        To check the `hypervisorlaunchtype` option on the VM, run the following cmdlet from an elevated PowerShell command prompt:
+
+        ```powershell
+        bcdedit /enum
+        ```
+
+        Here's an output example. In this example, the hypervisor parameter isn't included, indicating that the hypervisor isn't enabled.
+
+        ```output
+        Windows Boot Manager
+        --------------------
+        identifier              {bootmgr}
+        device                  partition=\Device\HarddiskVolume3
+        path                    \EFI\Microsoft\Boot\bootmgfw.efi
+        description             Windows Boot Manager
+        locale                  en-US
+        inherit                 {globalsettings}
+        bootshutdowndisabled    Yes
+        default                 {current}
+        resumeobject            {24089230-1111-2222-3333-6045bd34a71d}
+        displayorder            {current}
+        toolsdisplayorder       {memdiag}
+        timeout                 30
+         
+        Windows Boot Loader
+        -------------------
+        identifier              {current}
+        device                  partition=C:
+        path                    \Windows\system32\winload.efi
+        description             Windows Server
+        locale                  en-US
+        inherit                 {bootloadersettings}
+        recoveryenabled         No
+        isolatedcontext         Yes
+        allowedinmemorysettings 0x15000075
+        osdevice                partition=C:
+        systemroot              \Windows
+        resumeobject            {24089230-1111-2222-3333-6045bd34a71d}
+        nx                      OptOut
+        bootstatuspolicy        IgnoreAllFailures
+        ems                     Yes
+        ```
+
+        To set the `hypervisorlaunchtype` option to `auto` and restart the VM, run the following cmdlet:
+
+        ```powershell
+        bcdedit /set hypervisorlaunchtype auto
+        Restart-Computer -Force
+        ```
 
 2. After the Rescue VM is created, remote desktop to the Rescue VM.
 

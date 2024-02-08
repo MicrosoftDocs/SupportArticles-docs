@@ -4,8 +4,8 @@ description: Provides a resolution for the problem that occurs when you install 
 ms.date: 11/04/2020
 ms.custom: sap:Installation, Patching and Upgrade (Failover Cluster)
 ms.reviewer: russg
-ms.prod: sql
 ---
+
 # Warning about the network binding order on the Setup Support Rules page
 
 This article helps you resolve the problem that occurs when you install SQL Server 2008 in a failover cluster.
@@ -20,9 +20,9 @@ When you install Microsoft SQL Server 2008 in a failover cluster, you receive a 
 > [!NOTE]
 > The warning is displayed even though the binding order is correct: `IsDomainNetworkTopOfBindings`.
 
-Checks to see if the computer domain server is on the network that is bound to the top of the network order.
+Check to see if the computer domain server is on the network that's bound to the top of the network order.
 
-The domain network is not the first bound network. This will cause domain operations to run slowly and can cause timeouts that result in failures. Use the Windows network advanced configuration to change the binding order.
+The domain network isn't the first bound network. This will cause domain operations to run slowly and can cause timeouts that result in failures. Use the Windows network advanced configuration to change the binding order.
 
 ## Cause
 
@@ -46,12 +46,12 @@ To resolve this issue, remove disabled or ghosted network adapters. To do this, 
     > [!NOTE]
     > Make sure that you press ENTER after each line.
 
-2. In Device Manager, expand Network adapters.
-3. Compare the list of network adapters in Device Manager to the list of network adapters that are displayed in Network Connections. Network adapters that are present in Device Manager but not in Network Connections are ghosted network adapters.
-4. If there are any disabled network adapters, enable these adapters in Device Manager or in Network Connections.
-5. If there are any ghosted network adapters, remove them in Device Manager.
-6. Start SQL Server setup.
-7. After setup is complete, open Network Connections, and then disable any network adapters that you do not want.
+2. In **Device Manager**, expand **Network adapters**.
+3. Compare the list of network adapters in **Device Manager** to the list of network adapters that are displayed in **Network Connections**. Network adapters that are present in **Device Manager** but not in **Network Connections** are ghosted network adapters.
+4. If there are any disabled network adapters, enable these adapters in **Device Manager** or in **Network Connections**.
+5. If there are any ghosted network adapters, remove them in **Device Manager**.
+6. Start the SQL Server setup.
+7. After setup is complete, open **Network Connections**, and then disable any network adapters that you don't want.
 
 ## References
 

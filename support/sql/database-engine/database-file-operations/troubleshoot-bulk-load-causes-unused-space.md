@@ -3,10 +3,7 @@ title: Bulk load operations can leave large amounts of unused space
 description: Learn how to resolve the issue of excessive unused space in bulk load operations that have a small batch size.
 ms.date: 03/03/2023
 ms.custom: sap:Administration and Management
-ms.reviewer: jopilov
-author: padmajayaraman
-ms.author: v-jayaramanp
-ms.prod: sql
+ms.reviewer: jopilov, v-jayaramanp
 ---
 
 # Excessive unused space after running bulk load operations

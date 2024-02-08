@@ -1,0 +1,91 @@
+items:
+- name: .Net Framework requirements for SQL Server
+  href: understanding-dotnet-framework-requirements.md
+- name: Attempted to perform an unauthorized operation error
+  href: error-set-up-update-instances.md
+- name: Cannot install on Windows case-sensitive servers
+  href: sql-server-not-supported-in-windows-os-where-case-sensitivity-enabled.md
+- name: Description of the Update Cache folder
+  href: description-update-cache-folder.md
+- name: Different errors when installing SQL Server 2008 R2
+  href: error-install-sql-server-2008-r2.md
+- name: Driver installation check
+  items:
+  - name: Driver installation check
+    href: driver-install-checking.md
+  - name: .NET driver installation check
+    href: net-driver-install-check.md
+  - name: ODBC driver installation check
+    href: odbc-driver-install-checking.md
+  - name: OLE DB driver installation check
+    href: oledb-driver-install-check.md
+- name: Error code 1642 though update is applied
+  href: error-code-1642-update-applied.md
+- name: Error if you change shared component directory
+  href: error-change-path-shared-component-directory.md
+- name: Evaluation period has expired when you use SSMS
+  href: evaluation-period-has-expired.md
+- name: Fusion ATL rule check fails
+  href: fusion-atl-rule-check-fails.md
+- name: Inapplicable CUs listed in WSUS, MU or SCM
+  href: cu-apply-installation.md
+- name: Installation fails when you remove user rights
+  href: installation-fails-if-remove-user-right.md
+- name: Invalid User Directory message when installing CU or SP
+  href: user-data-log-directory-invalid.md
+- name: Permission error when you use a volume mount point
+  href: permission-error-use-volume-mount-point.md
+- name: Remove a partial installation of SQL Server
+  href: remove-partial-installation.md
+- name: Restore the missing Windows Installer cache files
+  href: restore-missing-windows-installer-cache-files.md
+- name: Service may not start after patch installed
+  href: service-not-start-after-patch-installed.md
+- name: Setup stops responding when you upgrade
+  href: setup-stops-responding-upgrade.md
+- name: SQL on Windows 7 or Windows Server 2008 R2
+  href: issues-install-sql-server.md
+- name: SQL Server 2008 R2 and SQL Server 2008 Setup issues 
+  href: sql-server-2008-setup-issues.md
+- name: SQL Server 2012 Setup issues
+  href: sql-server-2012-setup-issues.md
+- name: SQL Server setup fails in DMZ
+  href: cannot-install-sql-when-only-rodc-available.md
+- name: SxS install of X64 and X86 version of SSRS 2008
+  href: install-reporting-service.md
+- name: Troubleshoot common SQL Server Cumulative Update installation issues
+  href: sqlserver-patching-issues.md
+- name: Update or Slipstream installation for SQL Server 2008
+  href: update-or-slipstream-installation.md
+- name: Upgrade failures on Windows Server 2012
+  href: error-upgrade-cluster-node.md
+- name: Visual C++ Redistributable installed with SQL Server alerts end of life or obsolete
+  href: visual-c-redistributable-installed-sql-server-flagged-end-of-life-obsolete.md
+- name: Wait on the Database Engine recovery handle failed
+  items:
+  - name: Troubleshoot upgrade script failures when applying an update
+    href: troubleshoot-upgrade-script-failures-apply-update.md
+  - name: MSSQLSERVER_912
+    href: /sql/relational-databases/errors-events/mssqlserver-912-database-engine-error?context=/troubleshoot/sql/context/context
+  - name: SQL Server upgrade fails with error 574
+    href: sql-server-upgrade-failed-error-574.md
+  - name: SQL Server upgrade fails with error 945
+    href: sql-server-upgrade-failed-error-945.md
+  - name: SQL Server upgrade fails with error 1712
+    href: sql-server-upgrade-failed-error-1712.md
+  - name: SQL Server upgrade fails with error 2714
+    href: sql-server-upgrade-failed-error-2714.md
+  - name: SQL Server upgrade fails with error 4860
+    href: sql-server-upgrade-failed-error-4860.md
+  - name: SQL Server upgrade fails with error 5133
+    href: sql-server-upgrade-failed-error-5133.md
+  - name: SQL Server upgrade fails with error 6528
+    href: sql-server-upgrade-failed-error-6528.md
+  - name: SQL Server upgrade fails with error 15151
+    href: sql-server-upgrade-failed-error-15151.md  
+  - name: SQL Server upgrade fails with error 15173
+    href: sql-server-upgrade-failed-error-15173.md
+  - name: SQL Server upgrade fails with error 17182
+    href: sql-server-upgrade-failed-error-17182.md
+  - name: SQL Server upgrade fails when principals own user objects
+    href: sql-server-upgrade-failed-error-cert-principals-own-object.md

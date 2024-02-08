@@ -1,17 +1,17 @@
 ---
 title: Orphaned child domain controller isn't replicated
 description: Describes an issue in which an orphaned child domain controller can't replicate information to other domain controllers in a domain, and provides a resolution.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, johnbay
 ms.custom: sap:active-directory-replication, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # Orphaned child domain controller information is not replicated to other domain controllers
 
@@ -82,3 +82,7 @@ To resolve this issue, you must create a replication link and then enable one-wa
 6. Allow replication to occur throughout the forest. Then, run the `repadmin /showreps` command on the root domain controller and on the child domain controllers. This step makes sure that Active Directory Directory Service (AD DS) replication is successful.
 
 The **Replication Allow SPN Fallback** registry entry enables the domain controller to use one-way authentication if two-way authentication cannot be performed because of a failure to resolve a Service Principal Name (SPN) to a computer account.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Active Directory replication issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication.md).

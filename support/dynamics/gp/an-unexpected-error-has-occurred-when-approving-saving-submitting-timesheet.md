@@ -83,7 +83,7 @@ Steps: The *temporary workaround* is to uninstall these security updates for .NE
 
 > [!NOTE]
 > This article will be updated as more developments with this issue are found, or you can follow the blog article below on this issue:  
-> [UPDATE: An unexpected error has occurred. Please contact your system Administrator](https://community.dynamics.com/gp/b/dynamicsgp/posts/an-unexpected-error-has-occurred-please-contact-your-system-administrator)
+> [UPDATE: An unexpected error has occurred. Please contact your system Administrator](https://community.dynamics.com/blogs/post/?postid=f93a79d0-4d48-4792-bebe-ddf112dccdec)
 
 ## More information
 
@@ -93,4 +93,5 @@ Also refer to the below article for other possible reasons for this type of mess
 
 The above article was also published externally in this blog:
 
-[An unexpected error has occurred when approving, saving, or submitting a Timesheet in Business Portal](https://community.dynamics.com/gp/b/dynamicsgp/posts/an-unexpected-error-has-occurred-when-approving-saving-or-submitting-a-timesheet-in-business-portal)
+[An unexpected error has occurred when approving, saving, or submitting a Timesheet in Business Portal](https://community.dynamics.com/blogs/post/?postid=55f74235-199a-413f-9476-265627ab563e)
+

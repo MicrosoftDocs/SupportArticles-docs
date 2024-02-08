@@ -26,7 +26,7 @@ When you generate the Payables Management EFT file, you receive the following er
 
 ## Cause
 
-This message is caused by having the **Add Pad Blocks** check box marked in the **EFT File Format Maintenance** window but one of the supporting lines for Number of Pad Chars or Pad Lines in Multiple Of  has a value of '0'. The system is unable to calculate how to pad the rows in the file because of the 0 value.
+This message is caused by having the **Add Pad Blocks** check box marked in the **EFT File Format Maintenance** window but one of the supporting lines for Number of Pad Chars or Pad Lines in Multiple Of has a value of '0'. The system is unable to calculate how to pad the rows in the file because of the 0 value.
 
 ## Resolution
 

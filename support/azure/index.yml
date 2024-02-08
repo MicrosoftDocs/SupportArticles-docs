@@ -7,35 +7,80 @@ metadata:
    services: service
    ms.service: azure-common-issues-support
    ms.author: genlin
-   ms.date: 07/20/2020
+   ms.date: 09/20/2023
 
 productDirectory:
   items:
-  - title:  Azure Active Directory
-    imageSrc: "https://static.docs.com/ui/media/product/azure/active-directory.svg"
-    links:
-    - url: active-directory/welcome-azure-ad.yml
-      text: Troubleshooting articles for Azure Active Directory
   - title:  Azure App Service
     imageSrc: "https://static.docs.com/ui/media/product/azure/app-service.svg"
     links:
     - url: app-service/welcome-app-service.yml
       text: Troubleshooting articles for Azure App Service
-  - title: Cloud Services
-    imageSrc: "https://static.docs.com/ui/media/product/azure/cloud-services.svg"
+  - title: Azure Blob Storage
+    imageSrc: "https://static.docs.com/ui/media/product/azure/storage-accounts.svg"
     links:
-    - url: cloud-services/welcome-cloud-services.yml
-      text: Troubleshooting articles for Cloud Services
+    - url: azure-storage/welcome-azure-storage.yml
+      text: Troubleshooting articles for Azure Blob Storage
+  - title: Azure Cosmos DB
+    imageSrc: "https://static.docs.com/ui/media/product/azure/cosmos-db.svg"
+    links:
+    - url: cosmos-db/index.yml
+      text: Troubleshooting articles for Azure Cosmos DB
+  - title: Azure Container Instances
+    imageSrc: "https://static.docs.com/ui/media/product/azure/container-instances.svg"
+    links:
+    - url: azure-container-instances/welcome-container-instances.yml
+      text: Troubleshooting articles for Azure Container Instances
   - title: Azure DevOps
     imageSrc: "/azure/devops/media/index/devopsiconboards96.svg"
     links:
     - url: devops/welcome-azure-devops.yml
       text: Troubleshooting articles for Azure DevOps
+  - title: Azure File Sync
+    imageSrc: https://static.docs.com/ui/media/product/azure/storage-sync-services.svg
+    links:
+    - url: azure-storage/file-sync-troubleshoot.md
+      text: Troubleshooting articles for Azure File Sync
+  - title: Azure Files
+    imageSrc: "https://static.docs.com/ui/media/product/azure/storage-azure-files.svg"
+    links:
+    - url: azure-storage/files-troubleshoot.md
+      text: Troubleshooting articles for Azure Files
+  - title: Azure Functions
+    imageSrc: "https://static.docs.com/ui/media/product/azure/functions.svg"
+    links:
+    - url: azure-functions/welcome-azure-functions.yml
+      text: Troubleshooting articles for Azure Functions
+  - title: Azure Kubernetes
+    imageSrc: "/training/achievements/develop-and-deploy-applications-on-kubernetes.svg"
+    links:
+    - url: azure-kubernetes/welcome-azure-kubernetes.yml
+      text: Troubleshooting articles for Azure Kubernetes
   - title: Azure Monitor
     imageSrc: "https://static.docs.com/ui/media/product/azure/monitor.svg"
     links:
     - url: azure-monitor/welcome-azure-monitor.yml
       text: Troubleshooting articles for Azure Monitor
+  - title: Azure Synapse Analytics
+    imageSrc: "https://static.docs.com/ui/media/product/azure/synapse.svg"
+    links:
+    - url: synapse-analytics/welcome-synapse-analytics.yml
+      text: Troubleshooting articles for Azure Synapse Analytics
+  - title: Cloud Services
+    imageSrc: "https://static.docs.com/ui/media/product/azure/cloud-services.svg"
+    links:
+    - url: cloud-services/welcome-cloud-services.yml
+      text: Troubleshooting articles for Cloud Services
+  - title: Microsoft Entra
+    imageSrc: "./microsoft-entra/media/microsoft-entra.svg"
+    links:
+    - url: microsoft-entra/welcome-microsoft-entra.yml
+      text: Troubleshooting articles for Microsoft Entra
+  - title: Site Recovery
+    imageSrc: "https://static.docs.com/ui/media/product/azure/recovery-services-vaults.svg"
+    links:
+    - url: site-recovery/welcome-site-recovery.yml
+      text: Troubleshooting articles for Site Recovery
   - title: Virtual Machines
     imageSrc: "https://static.docs.com/ui/media/product/azure/virtual-machine.svg"
     links:
@@ -46,26 +91,6 @@ productDirectory:
     links:
     - url: virtual-machine-scale-sets/welcome-virtual-machine-scale-sets.yml
       text: Troubleshooting articles for Virtual Machine Scale Sets
-  - title: Azure Kubernetes
-    imageSrc: "/training/achievements/develop-and-deploy-applications-on-kubernetes.svg"
-    links:
-    - url: azure-kubernetes/welcome-azure-kubernetes.yml
-      text: Troubleshooting articles for Azure Kubernetes
-  - title: Site Recovery
-    imageSrc: "https://static.docs.com/ui/media/product/azure/recovery-services-vaults.svg"
-    links:
-    - url: site-recovery/welcome-site-recovery.yml
-      text: Troubleshooting articles for Site Recovery
-  - title: Azure Synapse Analytics
-    imageSrc: "https://static.docs.com/ui/media/product/azure/synapse.svg"
-    links:
-    - url: synapse-analytics/welcome-synapse-analytics.yml
-      text: Troubleshooting articles for Azure Synapse Analytics
-  - title: Azure Storage
-    imageSrc: "https://static.docs.com/ui/media/product/azure/storage-accounts.svg"
-    links:
-    - url: azure-storage/welcome-azure-storage.yml
-      text: Troubleshooting articles for Azure Storage
   - title: Other Azure Services
     imageSrc: "https://static.docs.com/ui/media/product/azure/azure.svg"
     links:

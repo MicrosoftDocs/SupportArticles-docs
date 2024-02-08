@@ -4,7 +4,7 @@ description: This article provides resolutions for the problem where a prompt at
 ms.date: 09/01/2020
 ms.custom: sap:Windows Embedded POSReady 7
 ms.reviewer: jtanner
-ms.technology: windows-hardware-general
+ms.subservice: general
 ---
 # Perpetual Boot failure with 'Boot Windows Normally' prompt
 

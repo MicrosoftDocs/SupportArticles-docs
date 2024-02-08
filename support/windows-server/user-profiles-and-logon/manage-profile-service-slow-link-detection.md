@@ -1,17 +1,15 @@
 ---
 title: Managing Profile Service Slow Link Detection
 description: Describes how to optimize slow link detection in Windows and Windows Server.
-ms.date: 5/20/2022
-author: v-tappelgate
-ms.author: v-tappelgate
+ms.date: 05/20/2022
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
-ms.reviewer: kaushika
+ms.reviewer: kaushika, v-tappelgate
 ms.custom: sap:user-profiles, csstroubleshoot
-ms.technology: windows-server-user-profiles
+ms.subservice: user-profiles
 keywords: ProfSvc
 ---
 

@@ -2,17 +2,17 @@
 metadata:
   title: FAQ about the end of support for Windows 7
   description: After January 14, 2020, Microsoft no longer provides security updates or support for computers that run Windows 7 for home users.
-  ms.date: 06/10/2022
+  ms.date: 07/07/2023
   author: Deland-Han
   ms.author: delhan
   manager: dcscontentpm
   audience: itpro
   ms.topic: faq
-  ms.prod: windows-client
+  ms.service: windows-client
   localization_priority: medium
   ms.reviewer: v-elj, chawong, winciccore, kaushika
   ms.custom: sap:general-information, csstroubleshoot
-  ms.technology: windows-client-eos
+  ms.subservice: windows-eos
 title: Frequently asked questions about the Windows 7 end of support
 summary: |
   This article describes the frequently asked questions about the end of support for Windows 7.
@@ -40,19 +40,6 @@ sections:
         answer: |
           **Recommended path:** Enroll in Microsoft 365 or upgrade directly to the latest version of Windows 10. If you experience any application compatibility issues after you update to Windows 10, go to [Desktop App Assure](https://aka.ms/DesktopAppAssureRequest) for assistance.
 
-          **Fallback path:** Enroll in Azure Virtual Desktop in Azure. After you enroll, you can get free Extended Security Updates to protect on-premises servers and desktops for three more years.
-
-          **Last resort path:** Buy Extended Security Updates to protect on-premises servers and desktops for three more years.
-
-      - question: If an organization can't transition from Windows 7 before the end of support deadline, what are its options
-        answer: |
-          To help organizations protect data and applications during the end of support transition, especially those that can't complete the transition before the end-of-support date, we offer the following options:
-          
-          - **Azure Virtual Desktop**. An appropriate option for organizations that can use a virtualization solution. Azure Virtual Desktop is the only cloud-based service that delivers a multi-user Windows 10 experience and is optimized for Microsoft 365 Apps for enterprise. This option includes free Windows 7 ESU.  
-          - **Windows 7 Extended Security Updates (ESU)**. A last-resort option. Organizations can purchase Windows 7 ESU for their devices. ESU are also available for Windows Server 2008, Windows Server 2008 R2, SQL Server 2008, and SQL Server 2008 R2. For more information about Windows Server ESU offerings, see [Extended Security Updates frequently asked questions](https://www.microsoft.com/cloud-platform/extended-security-updates).  
-          
-          ESU aren't available for Office 2010.
-
       - question: What assistance is available for organizations that are affected by the end of support for Windows 7
         answer: |
           To help reduce security risks and continue to get regular security updates, we recommend that you upgrade to the latest versions of our software in the cloud.
@@ -61,21 +48,15 @@ sections:
           
           - If your organization doesn't have access to programs such as SA, talk to your account manager or Microsoft Partner about finding licensing offers that meet your needs.
 
-      - question: What is Azure Virtual Desktop
-        answer: |
-          Azure Virtual Desktop is a cloud-based service that is delivered on Azure. It's the best virtualized Windows and Office experience. It delivers a multi-user Windows 10 experience that is optimized for Microsoft 365 Apps for enterprise. For customers who are upgrading from Windows 7, Azure Virtual Desktop includes free Windows 7 ESU through 2023. You can use Azure Virtual Desktop to deploy and scale Windows and Office on Azure in minutes, including appropriate security and compliance measures.
-
-      - question: When is Azure Virtual Desktop an appropriate solution
-        answer: |
-          Azure Virtual Desktop is an appropriate option for organizations that can use a virtualization solution. Azure Virtual Desktop delivers a multi-user Windows 10 experience that is optimized for Microsoft 365 Apps for enterprise. For customers who are upgrading from Windows 7, Azure Virtual Desktop includes free Windows 7 ESU through 2023.
-  
       - question: Where can I find information about the end of support for Windows Server 2008 or Windows 2008 R2
         answer: |
           Support for Windows Server 2008 and Windows Server 2008 R2 ended on January 14, 2020. [Learn more here](/azure/azure-sql/virtual-machines/windows/sql-server-extend-end-of-support).
 
       - question: What happens to Windows 7 virtual machines (VMs) that are hosted on Azure after January 2023? Will Microsoft remove them
         answer: |
-          Organizations that have Windows 7 VMs in Azure will continue to have access to those VMs after January 2023. Microsoft won't delete those VMs or block access to them. However, Microsoft will stop maintaining those VMs through updates. Therefore, the affected VMs will quickly fall out of compliance.
+          Organizations that have Windows 7 VMs in Azure will continue to have access to those VMs after January 2023.
+          
+          Starting January 2024, any connections to Windows 7 Azure Virtual Desktop session host VMs will be blocked to maintain the security of our service. These VMs will still not be deleted, but they can only be accessed by Administrators.
 
       - question: If an organization experiences an issue that requires a new feature, what support can the organization expect
         answer: |

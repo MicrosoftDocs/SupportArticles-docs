@@ -47,7 +47,7 @@ If you can't use that "work or school, or personal Microsoft account" to sign in
 #### Authentication (Have you signed in using a "work or school, or personal Microsoft account")
 
 - A [personal Microsoft account](https://account.microsoft.com/account), is the combination of an email address and a password that you can use to sign in to all consumer-oriented Microsoft products and cloud services. For example, Outlook (Hotmail), Messenger, OneDrive, MSN, Windows Phone, or Xbox Live. If you use an email address and password to sign in to these or other services, you'll have a Microsoft account. You can also sign up for a new one at any time. Here are some examples of personal Microsoft accounts: username@yahoo.com, username@hotmail.com.
-- A work or school Microsoft account is an account created by an organization's administrator. It enables you, as a member of your organization, access to all Microsoft cloud services, such as Microsoft Azure, Microsoft Intune, or Office 365. A work account can take the form of your work email address when an organization federates or synchronizes its Active Directory accounts with Azure AD. For example, **username@contoso.com**.
+- A work or school Microsoft account is an account created by an organization's administrator. It enables you, as a member of your organization, access to all Microsoft cloud services, such as Microsoft Azure, Microsoft Intune, or Office 365. A work account can take the form of your work email address when an organization federates or synchronizes its Active Directory accounts with Microsoft Entra ID. For example, **username@contoso.com**.
 
     > [!NOTE]
     > A "work or school Microsoft account" can't also be a "personal Microsoft account" and vice versa.

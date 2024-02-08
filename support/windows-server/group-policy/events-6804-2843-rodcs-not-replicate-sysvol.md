@@ -1,17 +1,17 @@
 ---
 title: RODCs don't replicate SYSVOL shared directory
 description: Discusses an issue in which Events 6804 and 2843 are logged and RODCs do not replicate SYSVOL when DFSR is used. Provides a resolution.
-ms.date: 12/9/2021
+ms.date: 12/09/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-jesits
 ms.custom: sap:sysvol-access-or-replication-issues, csstroubleshoot
-ms.technology: windows-server-group-policy
+ms.subservice: group-policy
 ---
 # Events 6804 and 2843 are logged and RODCs do not replicate SYSVOL
 

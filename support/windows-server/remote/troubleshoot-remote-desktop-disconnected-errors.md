@@ -1,17 +1,17 @@
 ---
 title: Troubleshoot Remote desktop disconnected errors
 description: Provides troubleshooting information for Remote desktop disconnected errors.
-ms.date: 3/24/2022
+ms.date: 05/16/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:connecting-to-a-session-or-desktop, csstroubleshoot
-ms.technology: windows-server-rds
+ms.subservice: rds
 adobe-target: true
 ---
 
@@ -431,3 +431,7 @@ For more information about Remote Desktop Gateway, see the following articles:
 - [Troubleshooting General Remote Desktop Error Messages](/previous-versions/windows/it-pro/windows-server-2003/cc780927(v=ws.10))
 
 If this article does not help you resolve the problem, or if you experience symptoms that differ from those that are described in this article, visit the [Microsoft Support](https://support.microsoft.com/) for more information. To search your issue, in the **Search support for help** box, type the text of the error message that you received, or type a description of the problem.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for User Experience issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-user-experience.md#remote-desktop-disconnection).

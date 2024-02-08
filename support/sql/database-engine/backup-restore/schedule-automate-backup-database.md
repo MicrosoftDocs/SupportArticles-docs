@@ -3,7 +3,6 @@ title: Schedule and automate backups of databases
 description: This article describes how to use a Transact-SQL script and Windows Task Scheduler to automate backups of SQL Server Express databases on a scheduled basis.
 ms.date: 09/25/2020
 ms.custom: sap:Administration and Management
-ms.prod: sql
 ms.topic: how-to
 ---
 # Schedule and automate backups of SQL Server databases in SQL Server Express

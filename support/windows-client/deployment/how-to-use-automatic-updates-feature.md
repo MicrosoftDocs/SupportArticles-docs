@@ -1,17 +1,17 @@
 ---
 title: How to schedule automatic updates in Windows
 description: Explains how to use the Automatic Updates feature in Windows Server 2003, in Windows XP, and in Windows 2000.
-ms.date: 09/14/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:servicing, csstroubleshoot
-ms.technology: windows-client-deployment
+ms.subservice: deployment
 ---
 # How to schedule automatic updates in Windows
 
@@ -88,6 +88,10 @@ If you're logged on as an administrator, when you receive this message, you can 
 
 > [!IMPORTANT]
 > You may have to restart your computer to complete the update installation.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).
 
 ## References
 

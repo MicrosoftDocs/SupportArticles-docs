@@ -80,4 +80,4 @@ DB triggers
 
 ## References
 
-For more information about the Microsoft Support Diagnostic Tool (MSDT), see [Frequently asked questions about the Microsoft Support Diagnostic Tool](/troubleshoot/sql/general/answers-questions-msdt).
+For more information about the Microsoft Support Diagnostic Tool (MSDT), see [Frequently asked questions about the Microsoft Support Diagnostic Tool](../../sql/general/answers-questions-msdt.md).

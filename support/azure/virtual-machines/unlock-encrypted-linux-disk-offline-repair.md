@@ -138,7 +138,7 @@ To unlock and mount the encrypted disk manually, follow these steps:
 
 ### Unmount any mounted partitions on the encrypted disk
 
-1. After the repair VM is created, SSH to your repair VM, log in by using the appropriate credentials，and then elevate the account to root:
+1. After the repair VM is created, SSH to your repair VM, log in by using the appropriate credentials, and then elevate the account to root:
 
    ```bash
    sudo -s 

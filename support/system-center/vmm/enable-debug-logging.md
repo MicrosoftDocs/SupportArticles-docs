@@ -2,10 +2,8 @@
 title: Enable debug logging in Virtual Machine Manager
 description: Describes how to enable debug logging in Microsoft System Center Virtual Machine Manager.
 ms.date: 12/09/2022
-author: AmandaAZ
-ms.author: v-weizhu
 ms.topic: how-to
-ms.reviewer: bicheria, jarrettr
+ms.reviewer: bicheria, jarrettr, v-weizhu
 ---
 # How to enable debug logging in Virtual Machine Manager
 

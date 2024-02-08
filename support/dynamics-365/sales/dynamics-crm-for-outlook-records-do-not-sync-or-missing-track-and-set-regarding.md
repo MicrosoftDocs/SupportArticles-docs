@@ -3,7 +3,7 @@ title: Dynamics CRM for Outlook records do not synchronize or are missing Track 
 description: Microsoft Dynamics CRM for Outlook records do not synchronize or are missing Track and Set Regarding buttons with User Filters disabled. Provides a resolution.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: d365-sales-email-office-integration
 ---
 # Microsoft Dynamics CRM for Outlook records do not synchronize or are missing Track and Set Regarding buttons with User Filters disabled

@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, herbertm
 ms.custom: sap:active-directory-fsmo, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # Transfer or seize Operation Master roles in Active Directory Domain Services
 
@@ -224,7 +224,7 @@ The Schema master, the Domain naming master, and the RID master can create objec
 
 For more information, see:
 
-- [Active Directory FSMO roles in Windows](/troubleshoot/windows-server/identity/fsmo-roles)
+- [Active Directory FSMO roles in Windows](fsmo-roles.md)
 - [FSMO placement and optimization on Active Directory domain controllers](https://support.microsoft.com/help/223346)
 - [Flexible Single Master Operation Transfer and Seizure Process](https://support.microsoft.com/help/223787)
 - [HOW TO: Use Ntdsutil to find and clean up duplicate security identifiers in Windows Server](https://support.microsoft.com/help/816099)

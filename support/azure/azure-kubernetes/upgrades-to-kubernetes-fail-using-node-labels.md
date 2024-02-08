@@ -1,11 +1,9 @@
 ---
 title: Upgrades to Kubernetes 1.16 fail when using node labels with a kubernetes.io prefix
 description: Learn how to troubleshoot when you can't upgrade to Kubernetes 1.16 when you're using node labels with a kubernetes.io prefix.
-ms.date: 5/18/2022
-author: DennisLee-DennisLee
-ms.author: v-dele
+ms.date: 05/18/2022
 editor: v-jsitser
-ms.reviewer: chiragpa, nickoman
+ms.reviewer: chiragpa, nickoman, v-leedennis
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-upgrade-operations
 #Customer intent: As an Azure Kubernetes Services (AKS) user, I want to troubleshoot the failed Kubernetes 1.16 upgrade when I'm using node labels with a kubernetes.io prefix so I can successfully upgrade to Kubernetes 1.16.

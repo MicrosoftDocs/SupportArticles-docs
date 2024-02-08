@@ -4,7 +4,6 @@ description: This article provides a workaround for the subscription does not ex
 ms.date: 07/22/2020
 ms.custom: sap:Replication, change tracking, change data capture
 ms.reviewer: akbarf, liweiyin
-ms.prod: sql
 ---
 # The subscription does not exist when a distributor primary replica fails over to a replica that does not use the same agent profile
 

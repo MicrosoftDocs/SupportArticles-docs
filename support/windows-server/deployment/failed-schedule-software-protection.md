@@ -1,17 +1,17 @@
 ---
 title: Failed to schedule Software Protection
 description: Describes an issue that triggers event 16385 in a Windows Server 2012 environment. Occurs when the Network Service account doesn't have permissions to the SoftwareProtectionPlatform folder.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:servicing, csstroubleshoot
-ms.technology: windows-server-deployment
+ms.subservice: deployment
 ---
 # Failed to schedule Software Protection service for restart error in Windows Server 2012
 
@@ -42,3 +42,7 @@ To resolve this issue, follow these steps:
 3. On the **General** tab of **SoftwareProtectionPlatform**, select the security options, and then verify that the Software Protection Platform service is set to use the NETWORK SERVICE account.
 4. In Windows Explorer, browse to the `C:\Windows\System32\Tasks\Microsoft\Windows\SoftwareProtectionPlatform` folder, and then verify that the NETWORK SERVICE account has Read permissions for that folder.
 5. Restart the Software Protection service if it's running.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

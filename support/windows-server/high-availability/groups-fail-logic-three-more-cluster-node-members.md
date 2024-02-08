@@ -1,17 +1,17 @@
 ---
 title: Failover behavior on clusters of three or more nodes
 description: Describes the logic by which groups fail from one node to another when there are three or more cluster node members.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: stevemat, jeffwade, kaushika
 ms.custom: sap:root-cause-of-an-unexpected-failover, csstroubleshoot
-ms.technology: windows-server-high-availability
+ms.subservice: high-availability
 ---
 # Failover behavior on clusters of three or more nodes
 

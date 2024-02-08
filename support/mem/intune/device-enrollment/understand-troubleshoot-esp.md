@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot the Enrollment Status Page (ESP)
-description: General troubleshooting guide for the Enrollment Status Page (ESP) for Windows Autopilot or OOBE for Azure AD Join.
+description: General troubleshooting guide for the Enrollment Status Page (ESP) for Windows Autopilot or OOBE for Microsoft Entra join.
 author: helenclu
 ms.author: luche
 ms.reviewer: kaushika, ybao
@@ -8,9 +8,10 @@ ms.date: 12/23/2021
 search.appverid: MET150
 ms.custom: sap:Windows enrollment
 ---
+
 # Troubleshooting the Enrollment Status Page
 
-This article gives guidance for troubleshooting the Enrollment Status Page (ESP). The ESP can be used as part of any Windows Autopilot provisioning scenario. It can also be used separately from Windows Autopilot as part of the default out-of-box experience (OOBE) for Azure Active Directory (Azure AD) Join. For more information about how to configure the ESP, see [Set up the Enrollment Status Page](/mem/intune/enrollment/windows-enrollment-status).
+This article gives guidance for troubleshooting the Enrollment Status Page (ESP). The ESP can be used as part of any Windows Autopilot provisioning scenario. It can also be used separately from Windows Autopilot as part of the default out-of-box experience (OOBE) for Microsoft Entra join. For more information about how to configure the ESP, see [Set up the Enrollment Status Page](/mem/intune/enrollment/windows-enrollment-status).
 
 To troubleshoot ESP issues, it's important to get more information about the ESP settings that are received by the device, and the applications and policies that are tracked at each stage. All ESP settings and tracking information are logged in the device registry. In this article, we'll show you how to collect MDM diagnostic log files and look for information in the registry.
 
@@ -111,6 +112,8 @@ value="2800"
 The following sample event indicates which URI triggers a coalesced reboot:
 
 `"[ETW [2022-08-02T13:28:10.3350735Z] [Microsoft-Windows-DeviceManagement-Enterprise-Diagnostics-Provider] [Informational] - The following URI has triggered a reboot: (./Device/Vendor/MSFT/Policy/Config/Update/ManagePreviewBuilds)"`
+
+For more information about how to identify unexpected reboots during the OOBE flow, see [Troubleshooting unexpected reboots](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-troubleshooting-unexpected-reboots-during-new-pc/ba-p/3896960).
 
 ## Check the registry for app deployment failures during ESP
 
@@ -230,7 +233,7 @@ This subkey is created during the account setup phase if the device setup phase 
 
 To guarantee that applications are installed and tracked by using the ESP, make sure that the following conditions are true:
 
-- The apps are assigned to an Azure AD group that contains the device (for device-targeted apps) or the user (for user-targeted apps), by using a **required** assignment. (Device-targeted apps are tracked during the device setup phase, and user-targeted apps are tracked during the user setup phase.)
+- The apps are assigned to a Microsoft Entra group that contains the device (for device-targeted apps) or the user (for user-targeted apps), by using a **required** assignment. (Device-targeted apps are tracked during the device setup phase, and user-targeted apps are tracked during the user setup phase.)
 - You either specify **Block device use until all apps and profiles are installed** or include the app in the **Block device use until these required apps are installed** list.
 - The apps install in device context, and they have no user-context applicability rules.
 
@@ -243,9 +246,9 @@ The ESP lists the installation status for all enrollment methods, including:
 - when any new user logs into the device that has ESP policy applied for the first time
 - when the **Only show page to devices provisioned by out-of-box experience (OOBE)** setting is on and the policy is set, only the first user who signs into the device gets the ESP
 
-### How can I disable the ESP if it has been configured on the device?
+### How can I disable the user ESP portion of the Enrollment Status Page (ESP) if an ESP has been configured on the device?
 
-ESP policy is set on a device at the time of enrollment. To disable the ESP, you must disable the user Enrollment Status Page section. To disable the section, create custom OMA-URI settings by using the following configurations:
+ESP policy is set on a device at the time of enrollment. To disable the user ESP portion of the Enrollment Status Page (ESP), create a custom OMA-URI setting by using the following configuration:
 
 - Disable user Enrollment Status Page:
 

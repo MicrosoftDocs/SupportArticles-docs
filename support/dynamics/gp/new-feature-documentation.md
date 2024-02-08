@@ -24,7 +24,7 @@ N/A
 
 Visit the landing page below for the blog series link:
 
-- [Microsoft Dynamics GP 2016 New Feature Blog Series Schedule!!](https://community.dynamics.com/gp/b/dynamicsgp/posts/microsoft-dynamics-gp-2016-new-features-blog-series-schedule)  (16.00.0357)
+- [Microsoft Dynamics GP 2016 New Feature Blog Series Schedule!!](https://community.dynamics.com/blogs/post/?postid=d4e7672c-b837-454e-a098-8ca0c6fb4805)  (16.00.0357)
 
 ## MORE INFORMATION
 

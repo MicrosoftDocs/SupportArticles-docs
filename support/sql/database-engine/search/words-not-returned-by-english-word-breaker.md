@@ -1,20 +1,19 @@
 ---
 title: Words are not returned by an English word breaker
-description: This article provides workarounds for the problem where a search by using an English word breaker does not return words that have leading decimal points in SQL Server 2017 on Windows, SQL Server 2016, 2014, and 2012.
+description: This article provides workarounds for the problem where a search by using an English word breaker doesn't return words that have leading decimal points in SQL Server 2017 on Windows, SQL Server 2016, 2014, and 2012.
 ms.date: 09/09/2020
 ms.custom: sap:Administration and Management
-ms.prod: sql
 ---
-# Words that have leading decimal points are not returned by an English word breaker in SQL Server
+# Words that have leading decimal points aren't returned by an English word breaker in SQL Server
 
-This article helps you resolve the problem where a search by using an English word breaker does not return words that have leading decimal points in SQL Server 2017 on Windows, SQL Server 2016, 2014, and 2012.
+This article helps you resolve the problem where a search by using an English word breaker doesn't return words that have leading decimal points in SQL Server 2017 on Windows, SQL Server 2016, 2014, and 2012.
 
 _Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 3191316
 
 ## Symptoms
 
-In an English language word breaker, you use a full-text index to index content that contains words that have leading decimal points, such as `.325`, `.434`, `.646`. When you try to locate rows in the index by searching on the decimal value (for example, `.325`), no rows are returned.
+In an English language word breaker, you use a full-text index to index content that contains words that have leading decimal points, such as `.325`, `.434`, and `.646`. When you try to locate rows in the index by searching on the decimal value (for example, `.325`), no rows are returned.
 
 ## Workaround
 
@@ -30,7 +29,7 @@ To work around this problem, use one of the following methods:
 2. Use the following full-text query to search on these values by using an English word breaker whose LCID is 1033:
 
     ```sql
-    Select * from sys.dm_fts_parser('"Ring, .325 x .434 .646 Platinum"', 1033, 0,0)
+    SELECT * FROM sys.dm_fts_parser('"Ring, .325 x .434 .646 Platinum"', 1033, 0,0)
     ```
 
     Results
@@ -50,11 +49,11 @@ To work around this problem, use one of the following methods:
 3. Try to search on `.325` (including the decimal point):
 
     ```sql
-    Select * from sys.dm_fts_parser('.325', 1033, 0,0) Using English word breaker to specify the ".325" search term.
+    SELECT * FROM sys.dm_fts_parser('.325', 1033, 0,0) -- Using English word breaker to specify the ".325" search term.
     ```
 
     > [!NOTE]
-    > We do not get a match.
+    > We don't get a match.
 
     Results
 
@@ -70,7 +69,7 @@ To work around this problem, use one of the following methods:
 4. Run the following query by using the neutral word breaker:
 
     ```sql
-    Select * from sys.dm_fts_parser('"Ring, .325 x .434 .646 Platinum"', 0, 0,0)
+    SELECT * FROM sys.dm_fts_parser('"Ring, .325 x .434 .646 Platinum"', 0, 0,0)
     ```
 
     Results
@@ -90,7 +89,7 @@ To work around this problem, use one of the following methods:
     Now, searching on `.325` works as expected.
 
     ```sql
-    Select * from sys.dm_fts_parser('.325', 0, 0,0) Specifying Neutral word breaker.
+    SELECT * FROM sys.dm_fts_parser('.325', 0, 0,0) -- Specifying Neutral word breaker.
     ```
 
     Results

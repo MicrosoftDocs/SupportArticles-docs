@@ -7,11 +7,11 @@ author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 ms.reviewer: hasokol,georgeri,gbock,jtierney,arrenc,roberg,kaushika
 ms.custom: sap:certificates-and-public-key-infrastructure-pki, csstroubleshoot
-ms.technology: windows-server-security
-ms.date: 10/15/2022
+ms.subservice: windows-security
+ms.date: 09/28/2023
 ---
 # Removal of the U.S. Federal Common Policy CA certificate from the Microsoft trusted root
 
@@ -64,7 +64,6 @@ The following error messages may be displayed in pop-up windows and dialog boxes
 
 1. Verify changes in the [Test configuration setup](#test-configuration-setup) section to test what occurs with the removal of the "G1" from the CTL before the release date of the update.
 2. After you use the [test configuration setup](#test-configuration-setup) section to verify that all relevant scenarios work, follow the steps in the "[Production configuration setup](#production-configuration-setup)" section in your production configuration.
-3. If you experience outages that are caused by the removal of the "G1" root certificates, manually download the "G2" root certificate by using the steps in [Migrate to the Federal Common Policy CA G2](https://playbooks.idmanagement.gov/fpki/common/migrate/).
 
 > [!NOTE]
 > Application-as-service scenarios such as Azure SQL or Azure App Service that chain to the "G1" root certificate will fail after the "G1" root certificate is removed.
@@ -118,11 +117,11 @@ The following steps directly configure the Windows registry to use the productio
 
 Administrators should configure the "G2" root certificate per the following instructions before the "G1" root certificate is removed by the out-of-band (OOB) root certificate update.
 
-1. Follow the guidance in [Obtain and verify a copy of the Federal Common Policy CA G2 certificate](https://playbooks.idmanagement.gov/fpki/common/obtain-and-verify) to download and install the "G2" root certificate on all Windows workgroup, member, and domain controller computers.
-2. There are multiple ways to deploy the root store to enterprise devices. See the "Microsoft Solutions" section in [Distribute the certificate to operating systems](https://playbooks.idmanagement.gov/fpki/common/distribute-os/).
+1. Follow the guidance in [Obtain and verify the FCPCA root certificate](https://www.idmanagement.gov/implement/trust-fcpca/#step-1---obtain-and-verify-the-fcpca-root-certificate) to download and install the "G2" root certificate on all Windows workgroup, member, and domain controller computers.
+2. There are multiple ways to deploy the root store to enterprise devices. See the "Microsoft Solutions" section in [Distribute to operating systems](https://www.idmanagement.gov/implement/trust-fcpca/#step-2---distribute-to-operating-systems).
 
 > [!NOTE]
-> In enterprises that have cross-certification dependencies for smart card logons or other scenarios on Windows devices but do not have internet access, see the "Do I Need to Distribute the Intermediate CA Certificates?" and "Certificates Issued by the Federal Common Policy CA G2" sections of [Distribute the CA certificates issued by the Federal Common Policy CA G2](https://playbooks.idmanagement.gov/fpki/common/certificates/).
+> In enterprises that have cross-certification dependencies for smart card logons or other scenarios on Windows devices but do not have internet access, see the "Do I Need to Distribute the Intermediate CA Certificates?" and "Certificates Issued by the Federal Common Policy CA G2" sections of [Distribute intermediate certificates](https://www.idmanagement.gov/implement/trust-fcpca/#step-5---distribute-intermediate-certificates).
 >
 > Many federal enterprises must have either the U.S. Treasury CA certificates or the Entrust Managed Services CA certificates. Both CA certificates are documented in the "Distribute the CA certificates" article, as follows:
 >
@@ -140,9 +139,7 @@ For disconnected environments in which Windows devices are not allowed to access
    2. Run `certutil -verifyctl -v c:\roots\disallowedstl.cab c:\roots\disallowedcert.sst`.
    3. When you select disallowedcert.sst, this should open the Certificate Manager snap-in to display all roots in the Disallowed list.
 3. To evaluate settings that are not shown in the UI, convert the SST file to a text file. To do this, run `certutil -dump -gmt -v c:\roots\trustedcerts.sst > c:\roots\trustedcerts.txt`.
-4. Download and add the "G2" root certificate to your personal CTL.
-   - Download the "G2" root certificate from [Obtain and verify a copy of the Federal Common Policy CA G2 certificate](https://playbooks.idmanagement.gov/fpki/common/obtain-and-verify/#download-a-copy-of-fcpca-g2).
-   - Follow the guidance in FICAM Playbooks: [Migrate to the Federal Common Policy CA G2](https://playbooks.idmanagement.gov/fpki/common/migrate/) for each operating system that's deployed in your enterprise.
+4. Download the "G2" root certificate from [Obtain and verify the FCPCA root certificate](https://www.idmanagement.gov/implement/trust-fcpca/#download-a-copy-of-the-fcpca-root-certificate) and add it to your personal CTL.
 
 ## Troubleshoot and analyze root chaining issues
 

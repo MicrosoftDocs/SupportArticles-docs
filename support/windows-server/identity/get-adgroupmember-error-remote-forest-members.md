@@ -1,17 +1,17 @@
 ---
 title: Fail to run Get-ADGroupMember for domain local group
 description: Describes a problem that occurs when you run the Get-ADGroupMember cmdlet in a scenario where a group has a member from a remote forest. A resolution is provided.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:user-computer-group-and-object-management, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # Get-ADGroupMember returns error for domain local group to members from remote forests
 

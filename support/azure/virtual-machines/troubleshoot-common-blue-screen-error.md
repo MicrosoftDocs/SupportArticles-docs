@@ -5,105 +5,63 @@ description: Learn how to troubleshoot the issue that the blue screen error is r
 services: virtual-machines
 documentationCenter: ''
 author: genlin
-manager: dcscontentpm
 ms.service: virtual-machines
 ms.subservice: vm-cannot-start-stop
 ms.collection: windows
-ms.topic: troubleshooting
+ms.topic: troubleshooting-problem-resolution
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure
-ms.date: 09/28/2018
+ms.date: 12/18/2023
 ms.author: genli
 ---
 
 # Windows shows blue screen error when booting an Azure VM
 
-This article describes blue screen errors that you may encounter when you boot a Windows Virtual Machine (VM) in Microsoft Azure. It provides steps to help you collect data for a support ticket.
+This article describes blue screen errors that you might encounter when you boot a Windows Virtual Machine (VM) in Microsoft Azure. It provides steps to help you collect data for a support ticket.
 
-## Symptom
+## Symptoms
 
-A Windows VM doesn't start. When you check the boot screenshots in [Boot diagnostics](./boot-diagnostics.md), you see one of the following error messages in a blue screen:
+A Windows VM doesn't start. When you check the boot screenshots within [Boot diagnostics](./boot-diagnostics.md), you see one of the following error messages in a blue screen:
 
-- our PC ran into a problem and needs to restart. We're just collecting some error info, and then you can restart.
-- Your PC ran into a problem and needs to restart.
+> Your PC ran into a problem and needs to restart. We're just collecting some error info, and then you can restart.
 
-This section lists the common error messages you may encounter when managing VMs:
+> Your PC ran into a problem and needs to restart.
 
 ## Cause
 
-There could be multiple reasons as why you would get a stop error. The most common causes are:
+There might be many reasons why you experience a stop error. The most common causes are the following issues:
 
-- Problem with a driver
+- Problem within a driver
 - Corrupted system file or memory
-- An application accesses to a forbidden sector of the memory
+- An application accessing a forbidden sector of the memory
 
-## Collect memory dump file
+## Solution
 
 > [!TIP]
 > If you have a recent backup of the VM, you may try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
 
-To resolve this problem, you would need first to gather dump file for the crash and contact support with the dump file. To collect the Dump file, follow these steps:
+To resolve this problem, you first have to gather a dump file for the crash before you contact support. To collect the dump file, follow these steps:
 
-### Attach the OS disk to a recovery VM
+### Step 1: Locate the dump file and submit a support ticket
 
-1. Take a snapshot of the OS disk of the affected VM as a backup. For more information, see [Snapshot a disk](/azure/virtual-machines/windows/snapshot-copy-managed-disk).
-2. [Attach the OS disk to a recovery VM](./troubleshoot-recovery-disks-portal-windows.md).
-3. Remote desktop to the recovery VM.
+[!INCLUDE [Collect OS Memory Dump File](../../includes/azure/collect-os-memory-dump-file.md)]
 
-### Locate dump file and submit a support ticket
+If you can't find the dump file, go to the next steps to enable the dump log and the serial console, and then reproduce the issue.
 
-1. On the recovery VM, go to windows folder in the attached OS disk. If the driver letter that is assigned to the attached OS disk is F, you need to go to F:\Windows.
-2. Locate the memory.dmp file, and then [submit a support ticket](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade) with the dump file.
+### Step 2: Enable the dump log and the serial console
 
-If you cannot find the dump file, move the next step to enable dump log and Serial Console.
+[!INCLUDE [Registry important alert](../../includes/registry-important-alert.md)]
 
-### Enable dump log and Serial Console
+To enable the dump log and the serial console, follow these steps:
 
-To enable dump log and Serial Console, run the following script.
+[!INCLUDE [Enable Serial Console and Memory Dump Collection](../../includes/azure/enable-serial-console-memory-dump-collection.md)]
 
-1. Open elevated command Prompt session (Run as administrator).
-2. Run the following script:
+### Step 3: Reproduce the issue
 
-    In this script, we assume that the drive letter that is assigned to the attached OS disk is F.  Replace it with the appropriate value in your VM.
+1. [Detach the OS disk, and then reattach the OS disk to the affected VM](./troubleshoot-recovery-disks-portal-windows.md).
 
-    ```powershell
-    reg load HKLM\BROKENSYSTEM F:\windows\system32\config\SYSTEM
+1. Start the VM to reproduce the issue so that a dump file is generated.
 
-    REM Enable Serial Console
-    bcdedit /store F:\boot\bcd /set {bootmgr} displaybootmenu yes
-    bcdedit /store F:\boot\bcd /set {bootmgr} timeout 5
-    bcdedit /store F:\boot\bcd /set {bootmgr} bootems yes
-    bcdedit /store F:\boot\bcd /ems {<BOOT LOADER IDENTIFIER>} ON
-    bcdedit /store F:\boot\bcd /emssettings EMSPORT:1 EMSBAUDRATE:115200
-
-    REM Suggested configuration to enable OS Dump
-    REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\CrashControl" /v CrashDumpEnabled /t REG_DWORD /d 1 /f
-    REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\CrashControl" /v DumpFile /t REG_EXPAND_SZ /d "%SystemRoot%\MEMORY.DMP" /f
-    REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\CrashControl" /v NMICrashDump /t REG_DWORD /d 1 /f
-
-    REG ADD "HKLM\BROKENSYSTEM\ControlSet002\Control\CrashControl" /v CrashDumpEnabled /t REG_DWORD /d 1 /f
-    REG ADD "HKLM\BROKENSYSTEM\ControlSet002\Control\CrashControl" /v DumpFile /t REG_EXPAND_SZ /d "%SystemRoot%\MEMORY.DMP" /f
-    REG ADD "HKLM\BROKENSYSTEM\ControlSet002\Control\CrashControl" /v NMICrashDump /t REG_DWORD /d 1 /f
-
-    reg unload HKLM\BROKENSYSTEM
-    ```
-
-    1. Make sure that there's enough space on the disk to allocate as much memory as the RAM, which depends on the size that you are selecting for this VM.
-    2. If there's not enough space or this is a large size VM (G, GS or E series), you could then change the location where this file will be created and refer that to any other data disk which is attached to the VM. To do this, you will need to change the following key:
-
-    ```config-reg
-    reg load HKLM\BROKENSYSTEM F:\windows\system32\config\SYSTEM
-
-    REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\CrashControl" /v DumpFile /t REG_EXPAND_SZ /d "<DRIVE LETTER OF YOUR DATA DISK>:\MEMORY.DMP" /f
-    REG ADD "HKLM\BROKENSYSTEM\ControlSet002\Control\CrashControl" /v DumpFile /t REG_EXPAND_SZ /d "<DRIVE LETTER OF YOUR DATA DISK>:\MEMORY.DMP" /f
-
-    reg unload HKLM\BROKENSYSTEM
-    ```
-     > [!NOTE]
-     > If the rescue VM is created manually without the `az repair` commands, you can use [sac-os-dump-enabler.ps1]((https://github.com/Azure/repair-script-library/blob/master/src/windows/sac-os-dump-enabler.ps1) to collect dump files. If the OS disk of the faulty VM is attached to the rescue VM as a data disk and is online, run this script by using the **Run command** option in the rescue VM.
-
-3. [Detach the OS disk and then Re-attach the OS disk to the affected VM](./troubleshoot-recovery-disks-portal-windows.md).
-4. Start the VM to reproduce the issue, then a dump file will be generated.
-5. Attach the OS disk to a recovery VM, collect dump file, and then [submit a support ticket](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade) with the dump file.
+1. Repeat the instructions in the [Step 1: Locate the dump file and submit a support ticket](#step-1-locate-the-dump-file-and-submit-a-support-ticket) section.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

@@ -1,17 +1,17 @@
 ---
 title: Prevent Windows from storing a LAN Manager (LM) hash of the password in AD and local SAM databases
 description: Provides three methods to prevent Windows from storing a LAN manager hash of your password.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:legacy-authentication-ntlm, csstroubleshoot
-ms.technology: windows-server-security
+ms.subservice: windows-security
 ---
 # How to prevent Windows from storing a LAN manager hash of your password in Active Directory and local SAM databases
 

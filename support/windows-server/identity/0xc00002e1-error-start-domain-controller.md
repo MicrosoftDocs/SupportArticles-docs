@@ -1,17 +1,17 @@
 ---
 title: 0xc00002e1 error when you start your Windows-based domain controller
 description: Explains how to recover from a corrupted Active Directory database or from a similar problem that prevents your computer from starting in normal mode.
-ms.date: 3/24/2022
+ms.date: 03/24/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: duanecr, kaushika
 ms.custom: sap:active-directory-database-issues-and-domain-controller-boot-failures, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # Error when you start your Windows-based domain controller: Directory Services cannot start
 

@@ -1,17 +1,17 @@
 ---
 title: Manually edit Boot.ini file
 description: Describes how to manually edit the Boot.ini file in a Windows Server 2003 environment.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, JAMIRC
 ms.custom: sap:setup, csstroubleshoot
-ms.technology: windows-server-deployment
+ms.subservice: deployment
 ---
 # Manually edit the Boot.ini file in a Windows Server 2003 environment
 
@@ -126,3 +126,7 @@ To modify the time-out value, follow these steps:
 ## Troubleshooting
 
 If there is a problem with the Boot.ini file that you modified, copy the original Boot.ini file (the one that you backed up earlier) to the system partition.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

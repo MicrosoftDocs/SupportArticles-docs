@@ -5,9 +5,7 @@ ms.date: 10/07/2022
 f1_keywords:
 - vs.FrameworkTargetingErrors
 - MSBuild.ResolveAssemblyReference.FailedToResolveReferenceBecausePrimaryAssemblyInExclusionList
-author: padmajayaraman
-ms.author: v-jayaramanp
-ms.reviewer: ghogen
+ms.reviewer: ghogen, v-jayaramanp
 ---
 
 # Troubleshoot .NET Framework targeting errors

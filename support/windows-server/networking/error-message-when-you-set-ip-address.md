@@ -1,17 +1,17 @@
 ---
 title: Error message when you set an IP address
 description: Provides a solution to an error that occurs when you try to set an IP address on a network adapter.
-ms.date: 1/18/2022
+ms.date: 01/18/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, scottmca, TERRYBA
 ms.custom: sap:tcp/ip-communications, csstroubleshoot
-ms.technology: networking
+ms.subservice: networking
 ---
 # Error message when you try to set an IP address on a network adapter
 

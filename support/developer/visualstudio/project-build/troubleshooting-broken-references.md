@@ -2,9 +2,7 @@
 title: Troubleshoot broken references
 description: Learn how to troubleshoot broken references that might be caused by something other than your application's inability to find the referred component.
 ms.date: 07/01/2022
-author: padmajayaraman
-ms.author: v-jayaramanp
-ms.reviewer: tglee
+ms.reviewer: tglee, v-jayaramanp
 ---
 # Troubleshoot broken references
 

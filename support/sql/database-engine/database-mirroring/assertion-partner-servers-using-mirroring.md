@@ -3,10 +3,7 @@ title: An assertion failure occurs on a SQL Server mirror server
 description: This article provides a workaround for the assertion failure that can occur on a partner server when using SQL Server mirroring architecture.
 ms.date: 11/14/2022
 ms.custom: sap:Administration and Management
-author: padmajayaraman
-ms.author: v-jayaramanp
-ms.reviewer: ramakoni1
-ms.prod: sql
+ms.reviewer: ramakoni1, v-jayaramanp
 ---
 
 # Assertion failure on a mirror server when using SQL Server mirroring architecture

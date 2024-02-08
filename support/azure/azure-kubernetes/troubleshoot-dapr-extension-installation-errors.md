@@ -1,13 +1,11 @@
 ---
 title: Troubleshoot Dapr extension installation errors 
 description: Troubleshoot errors that occur while installing the Distributed Application Runtime (Dapr) extension for Azure Kubernetes Service (AKS) or Arc for Kubernetes.
-author: DennisLee-DennisLee
-ms.author: v-dele
 editor: v-jsitser
-ms.reviewer: nigreenf
+ms.reviewer: nigreenf, v-leedennis
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-extensions-add-ons
-ms.date: 11/4/2022
+ms.date: 06/16/2023
 ---
 
 # Troubleshoot Dapr extension installation errors
@@ -100,6 +98,53 @@ You try to install the Dapr extension for AKS or Arc for Kubernetes, but you rec
 
 Uninstall the Dapr OSS before you install the Dapr extension. For more information, see [Migrate from Dapr OSS to the Dapr extension for AKS](/azure/aks/dapr-migration).
 
+## Scenario 5: The placement server pod is in a bad state
+
+You encounter the following error:
+
+> 0/4 nodes are available: 1 node(s) were unschedulable, 3 node(s) had volume node affinity conflict. preemption: 0/4 nodes are available: 4 Preemption is not helpful for scheduling.
+
+This issue might happen when the placement server pod tries to use the persistent volume that's created in a different zone from the placement server pod itself.
+
+### Solution 5: Install Dapr in multiple availability zones or limit the placement service to a particular availability zone
+
+To resolve this issue, use one of the following methods:
+
+- Follow the recommended approach in [Install Dapr in multiple availability zones while in HA mode](/azure/aks/dapr-settings#install-dapr-in-multiple-availability-zones-while-in-ha-mode).
+
+- Limit the placement service to a particular availability zone by creating a custom storage class and using it for the placement service, and then run the following command:
+
+   ```azurecli
+   az k8s-extension create --cluster-type managedClusters
+   --cluster-name <clustername>
+   --resource-group <resourcegroup>
+   --name <name>
+   --extension-type Microsoft.Dapr
+   --auto-upgrade-minor-version <minorversion>
+   --version <version>
+   --configuration-settings "dapr_placement.volumeclaims.storageClassName=zone-restricted"
+   ```
+
+    Here's an example of creating a custom storage class:
+    
+    ```yaml
+    kind: StorageClass
+    apiVersion: storage.k8s.io/v1
+    metadata:
+     name: zone-restricted
+    provisioner: disk.csi.azure.com
+    reclaimPolicy: Delete
+    allowVolumeExpansion: true
+    volumeBindingMode: WaitForFirstConsumer
+    allowedTopologies:
+    - matchLabelExpressions:
+     - key: topology.kubernetes.io/zone
+       values:
+       - centralus-1
+    parameters:
+     storageaccounttype: StandardSSD_LRS
+    ```
+   
 ## Next steps
 
 If you're still experiencing installation issues, explore the [AKS troubleshooting guide](/azure/aks/troubleshooting) and the [Dapr OSS troubleshooting guide](https://docs.dapr.io/operations/troubleshooting/common_issues/).

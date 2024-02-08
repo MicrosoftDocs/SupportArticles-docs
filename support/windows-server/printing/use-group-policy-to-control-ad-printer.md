@@ -1,17 +1,17 @@
 ---
 title: Use Group Policy settings to control printers
 description: Describes the policies specific to managing printers and how to enable or disable printer management by using the Local Group Policy Editor.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:management-and-configuration:-printers-via-group-policy, csstroubleshoot
-ms.technology: windows-server-printing
+ms.subservice: printing
 ---
 # Use Group Policy settings to control printers in Active Directory
 

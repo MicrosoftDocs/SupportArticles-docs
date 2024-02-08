@@ -1,17 +1,17 @@
 ---
 title: Back up virtual machines from parent partition
 description: Describes how to back up Hyper-V virtual machines by using Windows Server Backup on a Windows Server computer. Step-by-step instructions are provided.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jeffpatt
 ms.custom: sap:backup-and-restore-of-virtual-machines, csstroubleshoot
-ms.technology: hyper-v
+ms.subservice: hyper-v
 ---
 # How to back up Hyper-V virtual machines from the parent partition on a Windows Server computer by using Windows Server Backup
 

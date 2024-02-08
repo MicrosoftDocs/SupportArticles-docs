@@ -1,17 +1,17 @@
 ---
 title: Clustering information on IP address failover
 description: Describes the clustering information on IP address failover.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, gregorh
 ms.custom: sap:cannot-bring-a-resource-online, csstroubleshoot
-ms.technology: windows-server-high-availability
+ms.subservice: high-availability
 ---
 # Clustering Information on IP Address Failover
 
@@ -47,4 +47,4 @@ When the driver sends these requests, Windows NT specifies the IP address being 
 
 For additional information about related information, click the article number below to view the article in the Microsoft Knowledge Base:
 
-[MAC Address Changes for Virtual Server During a Failover with Clustering](/troubleshoot/windows-server/virtualization/mac-address-changes-for-virtual-server)
+[MAC Address Changes for Virtual Server During a Failover with Clustering](../virtualization/mac-address-changes-for-virtual-server.md)

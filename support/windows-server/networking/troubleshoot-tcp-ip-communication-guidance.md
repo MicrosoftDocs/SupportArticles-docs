@@ -1,17 +1,17 @@
 ---
 title: Guidance for troubleshooting TCP/IP communication
 description: Introduces general guidance for troubleshooting scenarios related to TCP/IP communication.
-ms.date: 5/10/2022
+ms.date: 07/13/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:tcpip-communication, csstroubleshoot
-ms.technology: networking
+ms.subservice: networking
 ---
 # TCP/IP communication troubleshooting guidance
 
@@ -49,7 +49,7 @@ Networking traces are useful to see what's occurring at the network level when t
 
 Try to ping the computer's local IP address.
 
-If the node can’t ping its local IP, the local stack isn't working. Note any error messages that are displayed.
+If the node can't ping its local IP, the local stack isn't working. Note any error messages that are displayed.
 
 If you receive a **General Failure** error, this error means that there are no valid interfaces to process the request. This issue could be caused by a hardware issue or a stack issue.
 
@@ -90,7 +90,7 @@ If the NSCI fails its probe check (yellow exclamation mark), this doesn't necess
 
 If the node can ping or telnet to nodes on the same subnet or network segment, this would confirm that external connectivity is working. Further testing is still required to understand whether a basic connectivity issue exists.
 
-If the node can’t ping/telnet to nodes on the same subnet/network segment. Note any error messages that are displayed.
+If the node can't ping/telnet to nodes on the same subnet/network segment. Note any error messages that are displayed.
 
 1. **Destination host unreachable** error means that the ARP requests that are sent by the node aren't getting a response.
 2. Gather a two-sided trace from the nodes that you're testing between. Make sure that the ARP request that's sent by the source node reaches the destination node and that the destination node replies accordingly. This reply should be seen back in the source trace. If this process fails, the issue is likely a misconfiguration or other issues that affect the infrastructure.
@@ -107,7 +107,7 @@ If the node can’t ping/telnet to nodes on the same subnet/network segment. Not
 
 ### Step 5: Ping or Telnet to the default gateway
 
-When the node can ping its default gateway, then external connectivity (such as off-box connectivity) is possible from the source node. Further testing would still be required to understand whether a basic connectivity issue exists. If the node can’t ping or Telnet to its default gateway, this means that the ICMP replies are disabled on the router.
+When the node can ping its default gateway, then external connectivity (such as off-box connectivity) is possible from the source node. Further testing would still be required to understand whether a basic connectivity issue exists. If the node can't ping or Telnet to its default gateway, this means that the ICMP replies are disabled on the router.
 
 ### Step 6: Check issues that affects the specific destination node
 
@@ -129,7 +129,7 @@ If the source node can ping, Telnet, or PsPing to other nodes on the destination
    4. Try Safe Mode with Networking.  
       If this succeeds, isolate the cause by running a "clean boot" of the node by using *MSConfig*, and then enabling third-party applications and services one by one until the issue reoccurs.
    5. When you reproduce the connection attempt, you should run a netsh netconnection scenario trace from the source to the affected destination node. A Networking SDP would also be beneficial.
-3. If the node can’t ping, Telnet, or PsPing to other nodes on the destination subnet, the issue could likely be infrastructure-related. Again, ICMP could be blocked within the environment. Therefore, verify connectivity by using Telnet or PsPing to connect to known-listening ports. At this point, a two-sided network trace is necessary to show where the packet loss is occurring on the network. Make sure that both traces are running before you try the connectivity test so that the issue is captured.
+3. If the node can't ping, Telnet, or PsPing to other nodes on the destination subnet, the issue could likely be infrastructure-related. Again, ICMP could be blocked within the environment. Therefore, verify connectivity by using Telnet or PsPing to connect to known-listening ports. At this point, a two-sided network trace is necessary to show where the packet loss is occurring on the network. Make sure that both traces are running before you try the connectivity test so that the issue is captured.
 
 ## Common issues and solutions
 
@@ -173,24 +173,24 @@ Before contacting Microsoft support, you can gather information about your issue
 
 ### Prerequisites
 
-1. TSSv2 must be run by accounts with administrator privileges on the local system, and EULA must be accepted (once EULA is accepted, TSSv2 won't prompt again).
+1. TSS must be run by accounts with administrator privileges on the local system, and EULA must be accepted (once EULA is accepted, TSS won't prompt again).
 2. We recommend the local machine `RemoteSigned` PowerShell execution policy.
 
 > [!NOTE]
-> If the current PowerShell execution policy doesn't allow running TSSv2, take the following actions:
+> If the current PowerShell execution policy doesn't allow running TSS, take the following actions:
 >
 > - Set the `RemoteSigned` execution policy for the process level by running the cmdlet `PS C:\> Set-ExecutionPolicy -scope Process -ExecutionPolicy RemoteSigned`.
 > - To verify if the change takes effect, run the cmdlet `PS C:\> Get-ExecutionPolicy -List`.
-> - Because the process level permissions only apply to the current PowerShell session, once the given PowerShell window in which TSSv2 runs is closed, the assigned permission for the process level will also go back to the previously configured state.
+> - Because the process level permissions only apply to the current PowerShell session, once the given PowerShell window in which TSS runs is closed, the assigned permission for the process level will also go back to the previously configured state.
 
 ### Gather key information before contacting Microsoft support
 
-1. Download [TSSv2](https://aka.ms/getTSSv2) on all nodes and unzip it in the *C:\\tss_tool* folder.
-2. Open the *C:\\tss_tool* folder from an elevated PowerShell command prompt.
+1. Download [TSS](https://aka.ms/getTSS) on all nodes and unzip it in the *C:\\tss* folder.
+2. Open the *C:\\tss* folder from an elevated PowerShell command prompt.
 3. Start the traces on the source and destination server by using the following cmdlet:
 
     ```PowerShell
-    TSSv2.ps1 -Start -Scenario NET_General
+    TSS.ps1 -Scenario NET_General
     ```
 
 4. Accept the EULA if the traces are run for the first time on the source or the destination server.
@@ -202,7 +202,7 @@ Before contacting Microsoft support, you can gather information about your issue
 
 7. Enter *Y* to finish the log collection after the issue is reproduced.
 
-The traces will be stored in a zip file in the *C:\\MSDATA* folder, which can be uploaded to the workspace for analysis.
+The traces will be stored in a zip file in the *C:\\MS_DATA* folder, which can be uploaded to the workspace for analysis.
 
 ## Reference
 

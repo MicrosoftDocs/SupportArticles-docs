@@ -2,15 +2,13 @@
 title: Group membership changes do not update over some VPN connections
 description: Describes a situation in which VPN users might experience resource access or configuration problems after their group membership changes.
 ms.date: 03/31/2021
-author: v-tappelgate
-ms.author: v-tappelgate
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
-ms.technology: windows-client-group-policy
+ms.service: windows-client
+ms.subservice: windows-group-policy
 ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
-ms.reviewer: kaushika
+ms.reviewer: kaushika, v-tappelgate
 localization_priority: medium
 keywords: group policy, group membership
 ---
@@ -111,7 +109,7 @@ You can use the [klist command](/windows-server/administration/windows-commands/
 The Group Policy service is optimized to speed up the application of group policy and to reduce adverse effects on client performance. For more information, see [Understand the Effect of Fast Logon Optimization and Fast Startup on Group Policy](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj573586(v=ws.11)). This article provides an in-depth explanation of how Group Policy interacts with start-up and sign-in processes. The Group Policy service can run in the foreground (at startup or sign-in) or in the background (during the user session). The service processes Group Policy in the following manner:
 
 - *Asynchronous processing* refers to processes that do not depend on the outcome of other processes.
-- *Synchronous processing* refers to processes that depend on each other’s outcome. Therefore, synchronous processes must wait for the previous process to finish before the next process can start.
+- *Synchronous processing* refers to processes that depend on each other's outcome. Therefore, synchronous processes must wait for the previous process to finish before the next process can start.
 
 The following table summarizes the events that trigger foreground or background processing, and whether the processing is synchronous or asynchronous.
 

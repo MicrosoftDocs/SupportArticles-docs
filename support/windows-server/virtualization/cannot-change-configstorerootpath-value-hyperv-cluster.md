@@ -1,17 +1,15 @@
 ---
 title: Can't change the ConfigStoreRootPath value of a Hyper-V cluster
 description: Provides the information that no value is set for the ConfigStoreRootPath attribute in the default configuration of a cluster resource. If a value is set, it cannot be changed afterwards.
-ms.date: 9/24/2021
-author: v-lianna
-ms.author: delhan
+ms.date: 09/24/2021
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
-ms.reviewer: kaushika, akshittu, maperric
+ms.reviewer: kaushika, akshittu, maperric, v-lianna
 ms.custom: sap:high-availability-virtual-machines, csstroubleshoot
-ms.technology: hyper-v
+ms.subservice: hyper-v
 ---
 # Can't change the ConfigStoreRootPath value of a Hyper-V cluster in Windows Server
 

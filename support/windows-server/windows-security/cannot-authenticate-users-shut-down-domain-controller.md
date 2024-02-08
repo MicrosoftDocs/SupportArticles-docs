@@ -1,17 +1,17 @@
 ---
 title: Domain members fail authentication when DC is shut down
 description: This article fixes an issue where the application can't authenticate users when you shut down a Domain Controller.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:legacy-authentication-ntlm, csstroubleshoot
-ms.technology: windows-server-security
+ms.subservice: windows-security
 ---
 # Domain members fail authentication when domain controller is shut down
 

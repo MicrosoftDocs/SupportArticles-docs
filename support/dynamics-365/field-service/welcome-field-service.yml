@@ -1,0 +1,127 @@
+### YamlMime:Landing
+
+title: Microsoft Dynamics 365 Field Service troubleshooting
+summary: Welcome to Microsoft Dynamics 365 Field Service troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Field Service, Universal Resource Scheduling, or the Resource Scheduling Optimization add-in. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+metadata:
+  title: Microsoft Dynamics 365 Field Service troubleshooting
+  description: Landing page for Microsoft Dynamics 365 Field Service troubleshooting articles.
+  ms.topic: landing-page
+  ms.service: dynamics-365-field-service
+  author: m-hartmann
+  ms.author: mhart
+  ms.date: 01/23/2024
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+  # Card
+  - title: Administration
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Can't find a user when setting up frontline workers
+            url: administration/cannot-find-user-set-up-frontline-workers.md
+          - text: Can't identify the user in an error message
+            url: administration/cant-identify-user.md
+          - text: Date Window Start/End fields don't exist
+            url: administration/date-window-fields-missing.md
+          - text: Error with AttributeMap when upgrading
+            url: administration/attibutemap-error-upgrade.md
+          - text: Entity record texts have duplicated numbers
+            url: administration/entity-names-duplicated-numbers.md
+          - text: '"The user has not been assigned any roles" error'
+            url: administration/user-has-no-roles.md
+  
+  # Card
+  - title: Customization
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Can't delete record because of a restrict-delete relationships
+            url: customization/restrict-delete-relationships.md
+          - text: Forms show an error about being read-only
+            url: customization/forms-record-read-only-error.md
+
+  # Card
+  - title: Connected Field Service
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Can't change Time Series Insights instance
+            url: iot/change-time-series-insights-instance.md
+          - text: IoT Edge modules data is aggregated in charts
+            url: iot/edge-module-data-aggregated.md
+          - text: No records after pulling IoT device data
+            url: iot/no-device-history-properties.md
+          - text: Troubleshoot issues with IoT capabilities
+            url: iot/troubleshoot-iot-issues-logic-app.md
+
+  # Card
+  - title: Mobile app
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Booking timestamp is created with an incorrect time
+            url: mobile-app/booking-timestamp-incorrect-time.md
+          - text: Camera pictures are blurry or not focused
+            url: mobile-app/camera-picture-not-focused.md
+          - text: Duplicated inspection responses
+            url: mobile-app/duplicate-inspection-responses.md
+          - text: Incorrect or missing data in offline mode
+            url: mobile-app/incorrect-missing-data-offline-mode.md
+          - text: Troubleshoot issues with publishing a mobile offline profile
+            url: mobile-app/publish-mobile-offline-profile.md
+          - text: '"Validations have been restarted in the background" error'
+            url: mobile-app/validation-restarted-background.md
+
+  # Card
+  - title: Resource Scheduling Optimization Add-in for Field Service
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Optimization request fails to modify some bookings
+            url: rso/system-failed-modify-bookings-error.md
+          - text: Requirements not scheduled
+            url: rso/requirement-not-scheduled-in-rso.md
+          - text: Troubleshoot issues with bookings
+            url: rso/troubleshoot-bookings-in-rso.md
+          - text: '"User lacks privileges" error'
+            url: rso/user-lacks-privileges-error.md
+
+  # Card
+  - title: Scheduling
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Issue with cascading crew changes when assigning a booking
+            url: scheduling/cascade-crew-changes-booking.md
+
+  # Card
+  - title: Integrations
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Create permissions error occurs in Microsoft Outlook or Teams
+            url: integrations/create-permissions-error.md
+          - text: Viva Connections dashboard doesn't have the correct tiles
+            url: integrations/viva-incorrect-tiles.md
+
+  # Card
+  - title: Documentation and training
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Field Service documentation
+            url: /dynamics365/field-service/
+          - text: Field Service training
+            url: /training/dynamics365/
+
+  # Card
+  - title: Support Resources
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Field Service community
+            url: https://community.dynamics.com/forums/thread/?groupid=74407f3d-21f7-403c-a59d-456e2a7dd7f9
+          - text: Share your ideas
+            url: https://experience.dynamics.com/ideas/categories/?forum=bee3d862-df65-e811-a95d-000d3a1be7ad&forumName=Dynamics%20365%20for%20Field%20Service

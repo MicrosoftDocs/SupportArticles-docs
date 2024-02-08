@@ -19,7 +19,7 @@ ms.author: srijangupta
 ---
 # Troubleshoot Resource Manager deployment issues with creating a new Linux virtual machine in Azure
 
-[!INCLUDE [virtual-machines-troubleshoot-deployment-new-vm-opening](../../includes/virtual-machines-troubleshoot-deployment-new-vm-opening-include.md)]
+[!INCLUDE [virtual-machines-troubleshoot-deployment-new-vm-opening](../../includes/azure/virtual-machines-troubleshoot-deployment-new-vm-opening-include.md)]
 
 [!INCLUDE [support-disclaimer](../../includes/support-disclaimer.md)]
 
@@ -255,9 +255,9 @@ To start troubleshooting, collect the activity logs to identify the error associ
 
 [View activity logs to manage Azure resources](/azure/azure-resource-manager/management/view-activity-logs)
 
-[!INCLUDE [virtual-machines-troubleshoot-deployment-new-vm-issue1](../../includes/virtual-machines-troubleshoot-deployment-new-vm-issue1-include.md)]
+[!INCLUDE [virtual-machines-troubleshoot-deployment-new-vm-issue1](../../includes/azure/virtual-machines-troubleshoot-deployment-new-vm-issue1-include.md)]
 
-[!INCLUDE [virtual-machines-linux-troubleshoot-deployment-new-vm-table](../../includes/virtual-machines-linux-troubleshoot-deployment-new-vm-table.md)]
+[!INCLUDE [virtual-machines-linux-troubleshoot-deployment-new-vm-table](../../includes/azure/virtual-machines-linux-troubleshoot-deployment-new-vm-table.md)]
 
 **Y:** If the OS is Linux generalized, and it is uploaded and/or captured with the generalized setting, then there won't be any errors. Similarly, if the OS is Linux specialized, and it is uploaded and/or captured with the specialized setting, then there won't be any errors.
 
@@ -313,7 +313,7 @@ The cluster does not have free resources.
 
 ## Top issues
 
-[!INCLUDE [support-disclaimer](../../includes/virtual-machines-linux-troubleshoot-deploy-vm-top.md)]
+[!INCLUDE [support-disclaimer](../../includes/azure/virtual-machines-linux-troubleshoot-deploy-vm-top.md)]
 
 ### The cluster cannot support the requested VM size
 
@@ -372,11 +372,11 @@ You can find the list at Linux on [Azure-Endorsed Distributions](/azure/virtual-
 
 Yes. You can add an existing classic VM to a new or existing Availability Set. For more information see [Add an existing virtual machine to an availability set](/previous-versions/azure/virtual-machines/windows/classic/configure-availability-classic#addmachine).
 
-[!INCLUDE [classic-vm-deprecation](../../includes/classic-vm-deprecation.md)]
+[!INCLUDE [classic-vm-deprecation](../../includes/azure/classic-vm-deprecation.md)]
 
 ## Next steps
 
-- [Supportability of adding Azure VMs to an existing availability set](/troubleshoot/azure/virtual-machines/virtual-machines-availability-set-supportability)
-- [Redeploy Linux virtual machine to new Azure node](/troubleshoot/azure/virtual-machines/redeploy-to-new-node-linux)
+- [Supportability of adding Azure VMs to an existing availability set](virtual-machines-availability-set-supportability.md)
+- [Redeploy Linux virtual machine to new Azure node](redeploy-to-new-node-linux.md)
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

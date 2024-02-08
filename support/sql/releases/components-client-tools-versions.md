@@ -4,9 +4,7 @@ description: This article describe the procedures to determine the version infor
 ms.date: 10/15/2022
 ms.custom: sap:Installation, Patching and Upgrade
 ms.topic: how-to
-ms.prod: sql
-author: simonxjx
-ms.author: v-six
+ms.reviewer: v-six
 ---
 
 <!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "christys" for triage before making the further changes to the screenshots.
@@ -39,7 +37,7 @@ The version of SQL Server Reporting Services (SSRS) is displayed on the Reportin
 
 ## SQL Server Integration Services
 
-The version of SQL Server Integration Services aligns with the version of SQL server that you had installed.
+The version of SQL Server Integration Services aligns with the version of SQL Server that you had installed.
 
 ## SQL Server Analysis Services
 

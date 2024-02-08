@@ -13,22 +13,22 @@ ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
-ms.date: 12/07/2021
+ms.date: 06/08/2023
 ms.author: genli
 ---
 # Reset Remote Desktop Services or its administrator password in a Windows VM
 
+[!INCLUDE [Feedback](../../includes/feedback.md)]
+
 > [!NOTE]
 > The steps in this article don't apply to Windows domain controllers.
 
-If you can't connect to a Windows virtual machine (VM), you can reset your local administrator password or reset the Remote Desktop Services configuration. To reset the password, use either the Azure portal or the VM Access extension in Azure PowerShell. After you've signed in to the VM, reset the password for that local administrator.  
-If you're using PowerShell, make sure that you have the [latest PowerShell module installed and configured](/powershell/azure/) and are signed in to your Azure subscription. You can also [perform these steps for VMs created with the classic deployment model](/previous-versions/azure/virtual-machines/windows/classic/reset-rdp).
-
-You can reset Remote Desktop Services and credentials in the following ways:
+If you can't connect to a Windows virtual machine (VM), you can reset Remote Desktop Services and credentials by using the VMAccess extension. Here are the available methods to do this:
 
 - [Reset by using the Azure portal](#reset-by-using-the-azure-portal)
+- [Reset by using the Azure PowerShell](#reset-by-using-the-azure-powershell)
 
-- [Reset by using the VM Access extension and PowerShell](#reset-by-using-the-vmaccess-extension-and-powershell)
+If you're using PowerShell, make sure that you have the [latest PowerShell module installed and configured](/powershell/azure/) and are signed in to your Azure subscription. You can also [perform these steps for VMs created with the classic deployment model](/previous-versions/azure/virtual-machines/windows/classic/reset-rdp).
 
 ## Reset by using the Azure portal
 
@@ -39,7 +39,8 @@ First, sign in to the [Azure portal](https://portal.azure.com) and then select *
 1. Select your Windows VM and then select **Reset password** under **Help**. The **Reset password** window is displayed.
 
 2. Select **Reset password**, enter a username and a password, and then select **Update**.
-
+    > [!TIP]
+    > If you enter a different name than the current local administrator account on your VM, the VMAccess extension will add a local administrator account with that name, and assign your specified password to that account. If the local administrator account on your VM exists, the VMAccess extension will reset the password. If the account is disabled, the VMAccess extension will enable it.
 3. Try connecting to your VM again.
 
 ### **Reset the Remote Desktop Services configuration**
@@ -52,7 +53,7 @@ This process will enable Remote Desktop service in the VM, and create a firewall
 
 3. Try connecting to your VM again.
 
-## Reset by using the VMAccess extension and PowerShell
+## Reset by using the Azure PowerShell
 
 First, make sure that you have  the [latest PowerShell module installed and configured](/powershell/azure/) and are signed in to your Azure subscription by using the [Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount) cmdlet.
 
@@ -70,10 +71,6 @@ First, make sure that you have  the [latest PowerShell module installed and conf
     Select-AzSubscription -SubscriptionId $SubID 
     Set-AzVMAccessExtension -ResourceGroupName $RgName -Location $Location -VMName $VmName -Credential (get-credential) -typeHandlerVersion "2.0" -Name VMAccessAgent 
     ```
-
-    > [!NOTE]
-    > If you enter a different name than the current local administrator account on your VM, the VMAccess extension will add a local administrator account with that name, and assign your specified password to that account. If the local administrator account on your VM exists, the VMAccess extension will reset the password. If the account is disabled, the VMAccess extension will enable it.
-
 ### **Reset the Remote Desktop Services configuration**
 
 1. Reset remote access to your VM with the [Set-AzVMAccessExtension](/powershell/module/az.compute/set-azvmaccessextension) PowerShell cmdlet. The following example resets the access extension named `myVMAccess` on the VM named `myVM` in the `myResourceGroup` resource group:

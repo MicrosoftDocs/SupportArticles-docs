@@ -1,17 +1,17 @@
 ---
 title: Event 142 time service stopped advertising
 description: Provides a resolution for event 142 that the time service has stopped advertising as a time source.
-ms.date: 3/24/2022
+ms.date: 11/21/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:windows-time-service, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # Event 142: The time service has stopped advertising as a time source
 
@@ -306,4 +306,4 @@ Recommendations from the Microsoft Windows time team to correct this environment
  [Configuring the Windows time service on the PDC emulator in the Forest root domain](https://technet.microsoft.com/library/upgrade-domain-controllers-to-windows-server-2008-r2%28WS.10%29.aspx#BKMK_VM)  
  [Configuring the Windows Time service for Windows Server 2008 and Windows Server 2008 R2](https://technet.microsoft.com/library/upgrade-domain-controllers-to-windows-server-2008-r2%28WS.10%29.aspx#BKMK_VM)  
  [Running Domain Controllers in Hyper-V](https://go.microsoft.com/fwlink/?LinkID=139651)  
- [Configuring the Windows time service for Windows Server](https://blogs.msmvps.com/acefekay/2009/09/18/configuring-the-windows-time-service-for-windows-server/) - Ace Fekay's blog post  
+ [Configuring the Windows Time Service in an Active Directory Forest - A Step by Step with a Contingency Plan](https://social.technet.microsoft.com/wiki/contents/articles/27659.configuring-the-windows-time-service-in-an-active-directory-forest-a-step-by-step-with-a-contingency-plan.aspx) 

@@ -2,7 +2,6 @@
 title: How to check Internet Explorer version on computers
 description: This article provides you the ways to check the Internet Explorer version on a local computer or a remote computer.
 ms.date: 03/05/2020
-ms.technology: internet-explorer-administration
 ---
 # How to check Internet Explorer version on local and remote computer
 
@@ -23,7 +22,7 @@ You can use the following methods:
 The first method is easy but includes many efforts. You can navigate to the following location in the registry after connecting to the remote registry:  
 `HKLM\Software\Microsoft\Internet Explorer`
 
-The above registry includes the values in right pane， which resembles the following:  
+The above registry includes the values in right pane,  which resembles the following:  
 svcVersion &nbsp; &nbsp; REG_SZ &nbsp; &nbsp;11.778.18362.0
 
 ## Check settings on remote computer

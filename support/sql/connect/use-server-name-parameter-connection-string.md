@@ -4,7 +4,6 @@ description: This article describes how to programmatically specify the client n
 ms.date: 09/25/2020
 ms.custom: sap:MDAC and ADO
 ms.reviewer: VIKRAMV
-ms.prod: sql
 ms.topic: how-to
 ---
 # Use the server name parameter in a connection string to specify the client network library

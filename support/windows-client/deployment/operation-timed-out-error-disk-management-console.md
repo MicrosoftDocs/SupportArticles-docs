@@ -1,17 +1,17 @@
 ---
 title: The operation timed out error
 description: Helps to fix the error The operation timed out when creating a partition using Disk Management console or DiskPart.exe.
-ms.date: 10/19/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, jburrage
 ms.custom: sap:devices-and-drivers, csstroubleshoot
-ms.technology: windows-client-deployment
+ms.subservice: deployment
 ---
 # "The operation timed out" error when creating a partition using Disk Management console or DiskPart.exe
 
@@ -57,3 +57,7 @@ To resolve the problem, do the following steps:
 
 4. Open Windows Explorer and then navigate to `%Systemroot%\inf` folder
 5. Verify if *volume.inf* file has been replaced. If the file is not replaced, then you need to copy volume.inf from another computer running the same version of Windows, same version of Service Pack, and same CPU architecture.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

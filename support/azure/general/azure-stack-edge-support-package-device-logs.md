@@ -1,9 +1,9 @@
 ---
 title: Azure Stack Edge support package and device logs
 description: Provides guidance for capturing diagnostic information from Azure Stack Edge.
-ms.date: 04/02/2021
+ms.date: 05/30/2023
 ms.service: azure-stack
-ms.author: chawon
+ms.author: genli
 author: genlin
 ms.reviewer: Andrew.Brenner
 ---

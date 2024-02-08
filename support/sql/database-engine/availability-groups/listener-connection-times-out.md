@@ -4,7 +4,6 @@ description: This article provides resolutions for the timeout error that occurs
 ms.date: 08/04/2020
 ms.custom: sap:High Availability and Disaster Recovery features
 ms.reviewer: ramakoni
-ms.prod: sql
 ---
 
 # Timeout occurs when you connect to an Always On listener in multi-subnet environment
@@ -23,18 +22,18 @@ For example, when you try to connect to a listener of SQL Server by using `SQLCM
 > Sqlcmd: Error: Microsoft SQL Native Client: Login timeout expired.
 
 > [!NOTE]
-> These symptoms are usually intermittent, or relate to failover of the availability group resource.
+> These symptoms are usually intermittent, or related to failover of the availability group resource.
 
 The following screenshot shows an example of what occurs when you try to ping the listener for the availability of `aglisten`. The screenshot also shows a successful connection to SQL Server by using the `SQLCMD` command when you include the multi-subnet failover parameter `-M`.
 
 :::image type="content" source="media/listener-connection-times-out/ping-aglisten.png" alt-text="Screenshot of the Command Prompt window when you ping the listener for the availability of aglisten.":::
 
 > [!NOTE]
-> You can use the `SQLCMD` command together with the `-M` parameter as shown in the screen shot to connect to the listener.
+> You can use the `SQLCMD` command together with the `-M` parameter as shown in the screenshot to connect to the listener.
 
 ## Cause
 
-This issue occurs because your application either uses a legacy data provider that does not support the new `MultiSubnetFailover` parameter, or is not configured to use this parameter.
+This issue occurs because your application either uses a legacy data provider that does not support the new `MultiSubnetFailover` parameter, or isn't configured to use this parameter.
 
 This parameter is supported in newer versions of the SQLClient driver that is included with the .NET Framework 4 and with later versions of the .NET Framework, and is back ported to the .NET Framework 3.5.
 

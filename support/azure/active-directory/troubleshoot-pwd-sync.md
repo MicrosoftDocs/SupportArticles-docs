@@ -1,5 +1,5 @@
 ---
-title: How to troubleshoot password synchronization when using an Azure AD sync appliance
+title: How to troubleshoot password synchronization when using an Azure AD Sync appliance
 description: Troubleshoots common issues when you're using an Azure Active Directory (Azure AD) sync appliance together with password synchronization.
 ms.date: 06/22/2020
 ms.reviewer: willfid
@@ -8,16 +8,18 @@ ms.subservice: enterprise-users
 ---
 # How to troubleshoot password synchronization when using an Azure AD sync appliance
 
-This article helps you troubleshoot common issues that you may encounter when you synchronize passwords from the on-premises environment to Azure Active Directory (Azure AD) by using [Azure AD Connect](/azure/active-directory/hybrid/whatis-azure-ad-connect).
+This article helps you troubleshoot common issues that you may encounter when you synchronize passwords from the on-premises environment to Microsoft Entra ID by using [Microsoft Entra Connect](/azure/active-directory/hybrid/whatis-azure-ad-connect).
 
-_Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Azure Active Directory, Microsoft Intune, Azure Backup, Office 365 Identity Management  
+_Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Microsoft Entra ID, Microsoft Intune, Azure Backup, Office 365 Identity Management  
 _Original KB number:_ &nbsp; 2855271
+
+[!INCLUDE [Feedback](../../includes/feedback.md)]
 
 ## Before you start troubleshooting
 
-Before you perform the troubleshooting steps, make sure that you have the [latest version of Azure AD Connect](/azure/active-directory/hybrid/how-to-connect-install-roadmap#install-azure-ad-connect) installed.
+Before you perform the troubleshooting steps, make sure that you have the [latest version of Microsoft Entra Connect](/azure/active-directory/hybrid/how-to-connect-install-roadmap#install-azure-ad-connect) installed.
 
-Additionally, make sure that directory synchronization is in a healthy state. For more information, see [Troubleshoot object synchronization with Azure AD Connect sync](/azure/active-directory/hybrid/tshoot-connect-objectsync).
+Additionally, make sure that directory synchronization is in a healthy state. For more information, see [Troubleshoot object synchronization with Microsoft Entra Connect Sync](/azure/active-directory/hybrid/tshoot-connect-objectsync).
 
 ## Some users can't sign in to Office 365, Azure, or Microsoft Intune
 
@@ -30,17 +32,19 @@ To resolve this issue, follow these steps:
 1. Take one of the following actions:
    - In the user account properties in Active Directory Users and Computers, clear the **User must change password at next logon** check box.
    - Have the user change their on-premises user account password.
-   - Enable the [ForcePasswordChangeOnLogOn](/azure/active-directory/hybrid/how-to-connect-password-hash-synchronization#synchronizing-temporary-passwords-and-force-password-change-on-next-logon) feature on the Azure AD Connect server.
-2. Wait a few minutes for the change to sync between the on-premises Active Directory Domain Services (AD DS) and Azure AD.
+   - Enable the [ForcePasswordChangeOnLogOn](/azure/active-directory/hybrid/how-to-connect-password-hash-synchronization#synchronizing-temporary-passwords-and-force-password-change-on-next-logon) feature on the Microsoft Entra Connect server.
+2. Wait a few minutes for the change to sync between the on-premises Active Directory Domain Services (AD DS) and Microsoft Entra ID.
 
 ### Scenario 2: The user changed their password in the cloud service portal
 
 To resolve this issue, follow these steps:
 
 1. Have the user change their on-premises user account password.
-2. Wait a few minutes for the change to sync between the on-premises AD DS and Azure AD.
+2. Wait a few minutes for the change to sync between the on-premises AD DS and Microsoft Entra ID.
 
-### Scenario 3: Some users don't appear to be syncing to Azure AD
+<a name='scenario-3-some-users-dont-appear-to-be-syncing-to-azure-ad'></a>
+
+### Scenario 3: Some users don't appear to be syncing to Microsoft Entra ID
 
 Possible causes are duplicate user names or email addresses.
 
@@ -79,11 +83,11 @@ To resolve this issue, first make sure that you enable password synchronization.
 
 After password synchronization is enabled, you must do a full password sync. See How to perform a full password sync section.
 
-For more information, see [Troubleshoot password hash synchronization with Azure AD Connect sync](/azure/active-directory/hybrid/tshoot-connect-password-hash-synchronization#one-object-is-not-synchronizing-passwords-troubleshoot-by-using-the-troubleshooting-task).
+For more information, see [Troubleshoot password hash synchronization with Microsoft Entra Connect Sync](/azure/active-directory/hybrid/tshoot-connect-password-hash-synchronization#one-object-is-not-synchronizing-passwords-troubleshoot-by-using-the-troubleshooting-task).
 
 ## Troubleshoot one user whose password isn't synced
 
-To troubleshoot this issue, see [Troubleshoot password hash synchronization with Azure AD Connect sync](/azure/active-directory/hybrid/tshoot-connect-password-hash-synchronization#one-object-is-not-synchronizing-passwords-troubleshoot-by-using-the-troubleshooting-task)
+To troubleshoot this issue, see [Troubleshoot password hash synchronization with Microsoft Entra Connect Sync](/azure/active-directory/hybrid/tshoot-connect-password-hash-synchronization#one-object-is-not-synchronizing-passwords-troubleshoot-by-using-the-troubleshooting-task)
 
 ## You're changing from a single-sign on (SSO) solution to password synchronization
 
@@ -101,9 +105,9 @@ The following tables list event ID messages in the Application log that are rela
 | 623|Full password hash synchronization completed for forest: contoso.local|Full password synchronization cycle finishes retrieving the recent passwords from the on-premises AD DS forest.|
 | 650|Provision credentials batch start. Count: 1|Password synchronization starts retrieving updated passwords from the on-premises AD DS.|
 | 651|Provision credentials batch end. Count: 1|Password synchronization finishes retrieving updated passwords from the on-premises AD DS.|
-| 653|Provision credentials ping start.|Password synchronization starts informing Azure AD that there are no passwords to be synced. It occurs every 30 minutes if no passwords have been updated in the on-premises AD DS.|
-| 654|Provision credentials ping end.|Password synchronization finishes informing Azure AD that there are no passwords to be synced. It occurs every 30 minutes if no passwords were updated in the on-premises AD DS.|
-| 656|Password Change Request - Anchor : H552hI9GwEykZwosf74JeOQ==, Dn : CN=Viola Hanson,OU=Cloud Objects,DC=contoso,DC=local, Change Date : 05/01/2013 16:34:08|Password synchronization indicates that a password change was detected and tries to sync it to Azure AD. It identifies the user or users whose password changed and will be synced. Each batch contains at least one user and at most 50 users.|
+| 653|Provision credentials ping start.|Password synchronization starts informing Microsoft Entra ID that there are no passwords to be synced. It occurs every 30 minutes if no passwords have been updated in the on-premises AD DS.|
+| 654|Provision credentials ping end.|Password synchronization finishes informing Microsoft Entra ID that there are no passwords to be synced. It occurs every 30 minutes if no passwords were updated in the on-premises AD DS.|
+| 656|Password Change Request - Anchor : H552hI9GwEykZwosf74JeOQ==, Dn : CN=Viola Hanson,OU=Cloud Objects,DC=contoso,DC=local, Change Date : 05/01/2013 16:34:08|Password synchronization indicates that a password change was detected and tries to sync it to Microsoft Entra ID. It identifies the user or users whose password changed and will be synced. Each batch contains at least one user and at most 50 users.|
 | 657|Password Change Result - Anchor : eX5b50Rf+UizRIMe2CA/tg==, Dn : CN=Viola Hanson,OU=Cloud Objects,DC=contoso,DC=local, Result : Success.|Users whose password successfully synced.|
 | 657|Password Change Result - Anchor : eX5b50Rf+UizRIMe2CA/tg==, Dn : CN=Viola Hanson,OU=Cloud Objects,DC=contoso,DC=local, Result : Failed.|Users whose password didn't sync.|
   
@@ -112,30 +116,30 @@ The following tables list event ID messages in the Application log that are rela
 |Event ID|Description|Cause|More information|
 |---|---|---|---|
 | 0|The following password changes failed to synchronized and have scheduled for retry.<br/><br/>DN = CN=Eli McLean,OU=Cloud Objects,DC=contoso,DC=local|User or users whose password wasn't synced|[Configure directory synchronization](/azure/active-directory/hybrid/whatis-hybrid-identity#bkmk_configuretool) <br/><br/>[One or more objects don't sync when using the Azure Active Directory Sync tool](objects-dont-sync-ad-sync-tool.md)|
-| 115|Access to Windows Azure Active Directory has been denied. Contact Technical Support.|Azure AD credentials were updated through Forefront Identity Manager (FIM).|Run the Azure AD Configuration Wizard again. See [Password hash synchronization stops working after you update Azure Active Directory credentials in FIM](pwd-hash-sync-stop-work-fim.md)|
+| 115|Access to Windows Azure Active Directory has been denied. Contact Technical Support.|Microsoft Entra credentials were updated through Forefront Identity Manager (FIM).|Run the Microsoft Entra Configuration Wizard again. See [Password hash synchronization stops working after you update Microsoft Entra credentials in FIM](pwd-hash-sync-stop-work-fim.md)|
 | 657|Password Change Result - Anchor : B0H+OD3LM0GEnYODwdPhpg==, Result : failed, Extended Error :|User or users whose password wasn't synced|[Configure directory synchronization](/azure/active-directory/hybrid/whatis-hybrid-identity#bkmk_configuretool) <br/><br/>[One or more objects don't sync when using the Azure Active Directory Sync tool](objects-dont-sync-ad-sync-tool.md) |
   
 ### Error (action required)
 
 |Event ID|Description|Cause|More information|
 |---------|---------|---------|---------|
-|0|The user name or password is incorrect. Verify your user name, and then type your password again.|Azure AD credentials were updated through Forefront Identity Manager (FIM).|Run the Azure AD Configuration Wizard again. See [Password hash synchronization stops working after you update Azure Active Directory credentials in FIM](pwd-hash-sync-stop-work-fim.md)|
-|611|Password synchronization failed for domain: `Contoso.com`.<br/><br/>Microsoft.Online.PasswordSynchronization.SynchronizationManagerException: Recovery task failed. ---> Microsoft.Online.PasswordSynchronization.DirectoryReplicationServices.DrsException: RPC Error 8439 : The distinguished name specified for this replication operation is invalid. There was an error calling _IDL_DRSGetNCChanges.|Windows Server 2003 domain controllers handle certain scenarios unexpectedly.| [Password hash synchronization for Azure AD stops working and Event ID 611 is logged](pwd-hash-sync-stops-work.md)|
+|0|The user name or password is incorrect. Verify your user name, and then type your password again.|Microsoft Entra credentials were updated through Forefront Identity Manager (FIM).|Run the Microsoft Entra Configuration Wizard again. See [Password hash synchronization stops working after you update Microsoft Entra credentials in FIM](pwd-hash-sync-stop-work-fim.md)|
+|611|Password synchronization failed for domain: `Contoso.com`.<br/><br/>Microsoft.Online.PasswordSynchronization.SynchronizationManagerException: Recovery task failed. ---> Microsoft.Online.PasswordSynchronization.DirectoryReplicationServices.DrsException: RPC Error 8439 : The distinguished name specified for this replication operation is invalid. There was an error calling _IDL_DRSGetNCChanges.|Windows Server 2003 domain controllers handle certain scenarios unexpectedly.| [Password hash synchronization for Microsoft Entra ID stops working and Event ID 611 is logged](pwd-hash-sync-stops-work.md)|
 |611|Password synchronization failed for domain: `Contoso.com`.<br/><br/>Microsoft.Online.PasswordSynchronization.DirectoryReplicationServices.DrsException: RPC Error 8593 : The directory service cannot perform the requested operation because the servers involved are of different replication epochs (which is usually related to a domain rename that is in progress).|It was a known issue that was fixed in Azure Active Directory Sync tool build 1.0.6455.0807.|To resolve this issue, update to latest version of the Azure Active Directory Sync tool.|
 |611|Password synchronization failed for domain: `Contoso.com`<br/><br/>System.ArgumentOutOfRangeException: Not a valid Win32|It was a known issue that was fixed in Azure Active Directory Sync tool build 1.0.6455.0807.|To resolve this issue, update to latest version of the Azure Active Directory Sync tool.|
 |611|Password synchronization failed for domain: `Contoso.com`.<br/><br/>System.ArgumentException: An item with the same key has already been added.|It was a known issue that was fixed in Azure Active Directory Sync tool build 1.0.6455.0807.|To resolve this issue, update to latest version of the Azure Active Directory Sync tool.|
 |652|Failed credential provisioning batch. Error: Microsoft.Online.Coexistence.ProvisionException: An error occurred. Error Code: 90. Error Description: Password Synchronization has not been activated for this company. Tracking ID: 07e93e8a-cf2d-4f67-9e95-53169c4875e0 Server Name: BL2GR1BBA003. ---> System.ServiceModel.FaultException1[Microsoft.Online.Coexistence.Schema.AdminWebServiceFault]: Password Synchronization has not been activated for this company. (Fault Detail is equal to Microsoft.Online.Coexistence.Schema.AdminWebServiceFault).|Password synchronization failed when retrieving updated passwords from the on-premises AD DS.|[Configure directory synchronization](/azure/active-directory/hybrid/whatis-hybrid-identity#bkmk_configuretool) <br/><br/>[One or more objects don't sync when using the Azure Active Directory Sync tool](objects-dont-sync-ad-sync-tool.md)|
 |652|Failed credential provisioning batch. Error: Microsoft.Online.Coexistence. ProvisionRetryException : An error occurred. Error Code: 81. Error Description: Windows Azure Active Directory is currently busy. This operation will be retried automatically.|It was a known issue that was fixed in Azure Active Directory Sync tool build 1.0.6455.0807|To resolve this issue, update to latest version of the Azure Active Directory Sync tool.|
-|655|Failed credential provisioning ping. Error: Microsoft.Online.Coexistence.ProvisionException: An error occurred. Error Code: 90. Error Description: Password Synchronization has not been activated for this company. Tracking ID: 0744fa31-1d9b-453a-83d8-c2555d843802 Server Name: BL2GR1BBA005. ---> System.ServiceModel.FaultException1[Microsoft.Online.Coexistence.Schema.AdminWebServiceFault]: Password Synchronization has not been activated for this company. (Fault Detail is equal to Microsoft.Online.Coexistence.Schema.AdminWebServiceFault).|Password synchronization failed to inform Azure AD that there are no passwords to be synced. It occurs every 30 minutes.|[Configure directory synchronization](/azure/active-directory/hybrid/whatis-hybrid-identity#bkmk_configuretool) <br/><br/>[One or more objects don't sync when using Azure Active Directory Sync tool](objects-dont-sync-ad-sync-tool.md)|
-|655|The user name or password is incorrect. Verify your user name, and then type your password again.|Azure AD credentials were updated through FIM.|Run the Azure AD Configuration Wizard again. See the following Microsoft Knowledge Base article: [Password hash synchronization stops working after updating Azure Active Directory credentials in FIM](pwd-hash-sync-stop-work-fim.md)|
-|6900|The server encountered an unexpected error while processing a password change notification:<br/><br/>"The user name or password is incorrect. Verify your user name, and then type your password again.|Azure AD credentials were updated through FIM.|Run the Azure AD Configuration Wizard again. See the following Microsoft Knowledge Base article: [Password hash synchronization stops working after updating Azure Active Directory credentials in FIM](pwd-hash-sync-stop-work-fim.md)|
+|655|Failed credential provisioning ping. Error: Microsoft.Online.Coexistence.ProvisionException: An error occurred. Error Code: 90. Error Description: Password Synchronization has not been activated for this company. Tracking ID: 0744fa31-1d9b-453a-83d8-c2555d843802 Server Name: BL2GR1BBA005. ---> System.ServiceModel.FaultException1[Microsoft.Online.Coexistence.Schema.AdminWebServiceFault]: Password Synchronization has not been activated for this company. (Fault Detail is equal to Microsoft.Online.Coexistence.Schema.AdminWebServiceFault).|Password synchronization failed to inform Microsoft Entra ID that there are no passwords to be synced. It occurs every 30 minutes.|[Configure directory synchronization](/azure/active-directory/hybrid/whatis-hybrid-identity#bkmk_configuretool) <br/><br/>[One or more objects don't sync when using Azure Active Directory Sync tool](objects-dont-sync-ad-sync-tool.md)|
+|655|The user name or password is incorrect. Verify your user name, and then type your password again.|Microsoft Entra credentials were updated through FIM.|Run the Microsoft Entra Configuration Wizard again. See the following Microsoft Knowledge Base article: [Password hash synchronization stops working after updating Microsoft Entra credentials in FIM](pwd-hash-sync-stop-work-fim.md)|
+|6900|The server encountered an unexpected error while processing a password change notification:<br/><br/>"The user name or password is incorrect. Verify your user name, and then type your password again.|Microsoft Entra credentials were updated through FIM.|Run the Microsoft Entra Configuration Wizard again. See the following Microsoft Knowledge Base article: [Password hash synchronization stops working after updating Microsoft Entra credentials in FIM](pwd-hash-sync-stop-work-fim.md)|
 |6900|The server encountered an unexpected error while processing a password change notification:<br/><br/>"An error occurred. Error Code: 90. Error Description: Password Synchronization has not been activated for this company|Password sync isn't enabled for the organization.|See the following Microsoft Knowledge Base article: [User passwords aren't synced, and "Password Synchronization has not been activated for this company" error is logged in Event Viewer](/office365/troubleshoot/active-directory/password-synchronization-not-activated)|
   
 ## More information
 
 ### How to perform a full password sync
 
-To do a full password sync, follow these steps, as appropriate for the Azure AD sync appliance that you're using.
+To do a full password sync, follow these steps, as appropriate for the Azure AD Sync appliance that you're using.
 
 1. If you're using the Azure Active Directory Sync tool:
 
@@ -155,6 +159,6 @@ To do a full password sync, follow these steps, as appropriate for the Azure AD 
       Restart-Service FIMSynchronizationService -Force
       ```
 
-2. If you're using the Azure AD Sync Service or Azure AD Connect, run the script that's on this page: [Azure AD Sync: How to Use PowerShell to Trigger a Full Password Sync](https://social.technet.microsoft.com/wiki/contents/articles/28433.how-to-use-powershell-to-trigger-a-full-password-sync-in-azure-ad-sync.aspx)
+2. If you're using the Azure AD Sync Service or Microsoft Entra Connect, run the script that's on this page: [Azure AD Sync: How to Use PowerShell to Trigger a Full Password Sync](https://social.technet.microsoft.com/wiki/contents/articles/28433.how-to-use-powershell-to-trigger-a-full-password-sync-in-azure-ad-sync.aspx)
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

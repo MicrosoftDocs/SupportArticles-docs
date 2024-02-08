@@ -1,17 +1,17 @@
 ---
 title: How to deploy custom cipher suite ordering in Windows Server 2016
 description: Describes how to deploy custom cipher suite ordering in Windows Server 2016.
-ms.date: 3/4/2022
+ms.date: 03/04/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:secure-channel-issues, csstroubleshoot
-ms.technology: windows-server-security
+ms.subservice: windows-security
 ---
 # How to deploy custom cipher suite ordering in Windows Server 2016
 
@@ -34,7 +34,7 @@ Cipher block chaining (CBC) mode cipher suites:
 Non-PFS (perfect forward secrecy) cipher suites:
 
 - TLS_RSA_WITH_AES_256_GCM_SHA384
-- TLS_RSA _WITH_AES_128_GCM_SHA256
+- TLS_RSA_WITH_AES_128_GCM_SHA256
 
 If the cipher suites that are on the block list are listed toward the top of your list, HTTP/2 clients and browsers may be unable to negotiate any HTTP/2-compatible cipher suite. This results in a failure to use the protocol.
 

@@ -1,23 +1,21 @@
 ---
 title: Can't establish a PowerShell remote session using WinRM
-description: Helps to resolve the issue in which a PowerShell remote session using Windows Remote Management (WinRM) can't be established between machines that are joined to Azure Active Directory (Azure AD) only.
-ms.date: 03/09/2023
-author: v-lianna
-ms.author: v-lianna
+description: Helps to resolve the issue in which a PowerShell remote session using Windows Remote Management (WinRM) can't be established between machines that are joined to Microsoft Entra-only.
+ms.date: 05/16/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
-ms.reviewer: kaushika, gbrag
+ms.reviewer: kaushika, gbrag, v-lianna
 ms.custom: sap:winrm, csstroubleshoot
-ms.technology: windows-client-system-management-components
+ms.subservice: system-mgmgt-components
 ---
-# Can't establish a PowerShell remote session using WinRM between Azure AD-only joined machines
+# Can't establish a PowerShell remote session using WinRM between Microsoft Entra-only joined machines
 
-This article helps to resolve the issue in which a PowerShell remote session using Windows Remote Management (WinRM) can't be established between machines that are joined to Azure Active Directory (Azure AD) only.
+This article helps to resolve the issue in which a PowerShell remote session using Windows Remote Management (WinRM) can't be established between machines that are only joined to Microsoft Entra ID.
 
-You have two machines on the same network. They aren't joined to a local domain and only joined to Azure AD with no on-premises synchronization.
+You have two machines on the same network. They aren't joined to a local domain and only joined to Microsoft Entra ID with no on-premises synchronization.
 
 When you try to establish a PowerShell remote session using WinRM between the two machines, you receive the following error messages:
 
@@ -39,8 +37,8 @@ When you try to establish a PowerShell remote session using WinRM between the tw
 
 This issue occurs because of one of the following reasons:
 
-- WinRM considers the Azure AD-only joined machines as workgroup machines. Therefore, implicit credentials can't be used.
-- The WinRM default Service Principal Name (SPN) prefix HTTP prevents Azure AD authentication.
+- WinRM considers the Microsoft Entra-only joined machines as workgroup machines. Therefore, implicit credentials can't be used.
+- The WinRM default Service Principal Name (SPN) prefix HTTP prevents Microsoft Entra authentication.
 
 ## Implicit credentials can't be used
 
@@ -71,10 +69,16 @@ For example, you can use one of the following ways to set the `TrustedHosts` val
     reg add HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WSMAN\Client /v trusted_hosts /t REG_SZ /d "*.contoso.com" /f
     ```
 
-## Default SPN prefix HTTP prevents Azure AD authentication
+<a name='default-spn-prefix-http-prevents-azure-ad-authentication'></a>
+
+## Default SPN prefix HTTP prevents Microsoft Entra authentication
 
 To resolve this issue, set the default SPN prefix to `HOST` by running the following command:
 
 ```console
 reg add HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WSMAN\Client /v spn_prefix /t REG_SZ /d "HOST" /f
 ```
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for User Experience issues](../windows-troubleshooters/gather-information-using-tss-user-experience.md#powershell).

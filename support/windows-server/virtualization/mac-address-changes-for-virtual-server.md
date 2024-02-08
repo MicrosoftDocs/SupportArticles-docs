@@ -1,17 +1,17 @@
 ---
 title: Fails to connect to virtual server after failover
 description: Helps solve an issue where users in a different subnet are unable to connect to the virtual server after a failover from one cluster node to another.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, stevemat, davidg, johnmar
 ms.custom: sap:high-availability-virtual-machines, csstroubleshoot
-ms.technology: hyper-v
+ms.subservice: hyper-v
 ---
 # MAC address changes for virtual server during a failover with clustering
 

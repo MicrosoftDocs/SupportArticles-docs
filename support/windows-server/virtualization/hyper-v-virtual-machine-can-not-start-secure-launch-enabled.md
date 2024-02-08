@@ -1,17 +1,17 @@
 ---
 title: Hyper-V virtual machine can't start when System Guard Secure Launch is enabled
 description: Discusses the issue in which a Hyper-V virtual machine can't start in Windows Server 2019, or Windows 10, version 1809 and earlier versions, and provides the resolution and the workaround.
-ms.date: 4/20/2022
+ms.date: 04/20/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, marcush
 ms.custom: sap:virtual-machine-will-not-boot, csstroubleshoot
-ms.technology: hyper-v
+ms.subservice: hyper-v
 ---
 # Hyper-V virtual machine can't start when System Guard Secure Launch is enabled
 

@@ -3,10 +3,7 @@ title: Troubleshooting long send queueing in an Always On availability group
 description: This article troubleshoots problems related to log send queueing in an Always On availability group. 
 ms.date: 02/20/2023
 ms.custom: sap:Availability Groups
-ms.prod: sql
-author: padmajayaraman
-ms.author: v-jayaramanp
-ms.reviewer: ramakoni
+ms.reviewer: ramakoni, v-jayaramanp
 ---
 
 # Troubleshooting log send queueing in an Always On availability group

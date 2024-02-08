@@ -1,19 +1,18 @@
 ---
 title: Error AADSTS50020 - User account from identity provider does not exist in tenant
 description: Troubleshoot scenarios in which a guest user unsuccessfully tries to sign in to the resource tenant and error code AADSTS50020 is returned.
-ms.date: 03/28/2023
-author: DennisLee-DennisLee
-ms.author: v-dele
+ms.date: 11/23/2023
 ms.editor: v-jsitser
-ms.reviewer: "rrajan,haelshab,sungow"
+ms.reviewer: rrajan, haelshab, sungow, v-leedennis
 ms.service: active-directory
 ms.subservice: app-mgmt
+ms.custom: has-azure-ad-ps-ref
 keywords:
-#Customer intent: As an Azure Active Directory administrator, I want to figure out why error code AADSTS50020 occurs so that I can make sure that my guest users from an identity provider can sign in to a resource tenant.
+#Customer intent: As a Microsoft Entra administrator, I want to figure out why error code AADSTS50020 occurs so that I can make sure that my guest users from an identity provider can sign in to a resource tenant.
 ---
 # Error AADSTS50020 - User account from identity provider does not exist in tenant
 
-This article helps you troubleshoot error code `AADSTS50020` that's returned if a guest user from an identity provider (IdP) can't sign in to a resource tenant in Azure Active Directory (Azure AD).
+This article helps you troubleshoot error code `AADSTS50020` that's returned if a guest user from an identity provider (IdP) can't sign in to a resource tenant in Microsoft Entra ID.
 
 ## Symptoms
 
@@ -23,9 +22,23 @@ When a guest user tries to access an application or resource in the resource ten
 
 When an administrator reviews the sign-in logs on the home tenant, a "90072" error code entry indicates a sign-in failure. The error message states:
 
-> User account {email} from identity provider {idp} does not exist in tenant {tenant} and cannot access the application {appId}({appName}) in that tenant. The account needs to be added as an external user in the tenant first. Sign out and sign in again with a different Azure Active Directory user account.
+> User account {email} from identity provider {idp} does not exist in tenant {tenant} and cannot access the application {appId}({appName}) in that tenant. The account needs to be added as an external user in the tenant first. Sign out and sign in again with a different Microsoft Entra user account.
 
-## Cause 1: Used unsupported account type (multitenant and personal accounts)
+### Cause 1： Users log in to Microsoft Entra admin center by using personal Microsoft Accounts
+
+When you try to log in to Microsoft Entra admin center by using your personal Microsoft Accounts (Outlook, Hotmail or OneDrive), you are connected to the Microsoft Services tenant by default. Within the default tenant, there is no linked directory for performing any actions. This behavior is expected. 
+
+In the prior experience, a directory (for example: UserNamehotmail735.onmicrosoft.com) is created and linked to the personal account, and you can perform actions such as creating user accounts in the directory. The behavior has now been changed. 
+
+### Solution: Create an Azure account with a new tenant
+
+If you aim to have a directory, you must create an Azure account and a new tenant: 
+
+1.	Browse to [https://azure.microsoft.com/en-us/free/](https://azure.microsoft.com/free/), and then select **Start free** .
+2.	Follow the instructions to create an Azure account.
+3.	A tenant will be generated alongside the Azure account, and you will be automatically designated as the Global Administrator. This grants you full access to all options within this tenant.
+
+## Cause 2: Used unsupported account type (multitenant and personal accounts)
 
 If your app registration is set to a single-tenant account type, users from other directories or identity providers can't sign in to that application.
 
@@ -46,13 +59,13 @@ To make sure that your app registration isn't a single-tenant account type, perf
 
 For more information about how to register applications, see [Quickstart: Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app).
 
-## Cause 2: Used the wrong endpoint (personal and organization accounts)
+## Cause 3: Used the wrong endpoint (personal and organization accounts)
 
 Your authentication call must target a URL that matches your selection if your app registration's supported account type was set to one of the following values:
 
-- **Accounts in any organizational directory (Any Azure AD directory - Multitenant)**
+- **Accounts in any organizational directory (Any Microsoft Entra directory - Multitenant)**
 
-- **Accounts in any organizational directory (Any Azure AD directory - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)**
+- **Accounts in any organizational directory (Any Microsoft Entra directory - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)**
 
 - **Personal Microsoft accounts only**
 
@@ -70,7 +83,7 @@ Use the corresponding sign-in URL for the specific application type, as listed i
 
 In your application code, apply this URL value in the `Authority` setting. For more information about `Authority`, see [Microsoft identity platform application configuration options](/azure/active-directory/develop/msal-client-application-configuration#authority).
 
-## Cause 3: Signed in to the wrong tenant
+## Cause 4: Signed in to the wrong tenant
 
 When users try to access your application, either they're sent a direct link to the application, or they try to gain access through <https://myapps.microsoft.com>. In either situation, users are redirected to sign in to the application. In some cases, the user might already have an active session that uses a different personal account than the one that's intended to be used. Or they have a session that uses their organization account although they intended to use a personal guest account (or vice versa).
 
@@ -80,7 +93,7 @@ To make sure that this scenario is the issue, look for the `User account` and `I
 
 Instruct the user to open a new in-private browser session or have the user try to access from a different browser. In this case, users must sign out from their active session, and then try to sign in again.
 
-## Cause 4: Guest user wasn't invited
+## Cause 5: Guest user wasn't invited
 
 The guest user who tried to sign in was not invited to the tenant.
 
@@ -88,7 +101,7 @@ The guest user who tried to sign in was not invited to the tenant.
 
 Make sure that you follow the steps in [Quickstart: Add guest users to your directory in the Azure portal](/azure/active-directory/external-identities/b2b-quickstart-add-guest-users-portal) to invite the guest user.
 
-## Cause 5: App requires user assignment
+## Cause 6: App requires user assignment
 
 If your application is an enterprise application that requires user assignment, error `AADSTS50020` occurs if the user isn't on the list of allowed users who are assigned access to the application. To check whether your enterprise application requires user assignment:
 
@@ -108,15 +121,15 @@ Use one of the following options to assign access to users:
 
 - To assign users if they're a member of an assigned group or a dynamic group, see [Manage access to an application](/azure/active-directory/manage-apps/what-is-access-management).
 
-## Cause 6: Tried to use a resource owner password credentials flow for personal accounts
+## Cause 7: Tried to use a resource owner password credentials flow for personal accounts
 
-If a user tries to use the resource owner password credentials (ROPC) flow for personal accounts, error `AADSTS50020` occurs. The Microsoft identity platform supports ROPC only within Azure AD tenants, not personal accounts.
+If a user tries to use the resource owner password credentials (ROPC) flow for personal accounts, error `AADSTS50020` occurs. The Microsoft identity platform supports ROPC only within Microsoft Entra tenants, not personal accounts.
 
 ### Solution: Use an endpoint that's specific to the tenant or organization
 
-Use a tenant-specific endpoint (`https://login.microsoftonline.com/<TenantIDOrName>`) or the organization's endpoint. Personal accounts that are invited to an Azure AD tenant can't use ROPC. For more information, see [Microsoft identity platform and OAuth 2.0 Resource Owner Password Credentials](/azure/active-directory/develop/v2-oauth-ropc).
+Use a tenant-specific endpoint (`https://login.microsoftonline.com/<TenantIDOrName>`) or the organization's endpoint. Personal accounts that are invited to a Microsoft Entra tenant can't use ROPC. For more information, see [Microsoft identity platform and OAuth 2.0 Resource Owner Password Credentials](/azure/active-directory/develop/v2-oauth-ropc).
 
-## Cause 7: A previously deleted user name was re-created by the home tenant administrator
+## Cause 8: A previously deleted user name was re-created by the home tenant administrator
 
 Error `AADSTS50020` might occur if the name of a guest user who was deleted in a resource tenant is re-created by the administrator of the home tenant. To verify that the guest user account in the resource tenant isn't associated with a user account in the home tenant, use one of the following options:
 

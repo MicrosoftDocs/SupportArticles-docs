@@ -3,7 +3,7 @@ title: MSDTC Service must run under NetworkService account
 description: This article discusses the Windows account that Microsoft Distributed Transaction Coordinator must run in Windows.
 ms.date: 08/27/2020
 ms.custom: sap:Distributed transactions
-ms.technology: windows-dev-apps-distributed-transactions
+ms.subservice: distributed-transactions
 ---
 # The Microsoft Distributed Transaction Coordinator service must run under the NT AUTHORITY\NetworkService Windows account
 
@@ -94,7 +94,7 @@ After you have made the registry changes, you must restart the MSDTC service. To
 
 ## References
 
-- [New functionality in the Distributed Transaction Coordinator service in Windows](/troubleshoot/windows/win32/new-functionality-in-msdtc-service)
+- [New functionality in the Distributed Transaction Coordinator service in Windows](new-functionality-in-msdtc-service.md)
 - [Managing Accounts and Privileges](/previous-versions/windows/desktop/ms682801(v=vs.85))
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]

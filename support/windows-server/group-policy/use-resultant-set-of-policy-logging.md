@@ -1,17 +1,17 @@
 ---
 title: Use Rsop.msc to gather computer policy
 description: Describes how to use the Resultant Set of Policy utility to gather only computer-specific policy information.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, TIMTHO
 ms.custom: sap:group-policy-management-gpmc-or-agpm, csstroubleshoot
-ms.technology: windows-server-group-policy
+ms.subservice: group-policy
 ---
 # Use Resultant Set of Policy logging to gather computer policy information
 
@@ -33,3 +33,7 @@ When using the Resultant Set of Policy utility, you can gather only computer-spe
 7. Click either **This Computer** or **Another Computer**, and then type the computer name.
 8. Click **Select a specific user**, and then click the blank space that is below the listed users. This has the same effect as clicking **Do not display user policy settings in the results**.
 9. Click **Next**, and then click **Next**. Only computer-specific settings are displayed.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Group Policy issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-group-policy.md).

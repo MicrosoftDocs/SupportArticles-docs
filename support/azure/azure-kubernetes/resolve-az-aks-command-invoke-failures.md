@@ -2,9 +2,7 @@
 title: Resolve az aks command invoke failures
 description: Resolve az aks command invoke failures in Azure CLI when you try to access a private Azure Kubernetes Service (AKS) cluster.
 ms.date: 10/25/2022
-author: DennisLee-DennisLee
-ms.author: v-dele
-ms.reviewer: chiragpa, andbar, haitch
+ms.reviewer: chiragpa, andbar, haitch, v-leedennis
 ms.service: azure-kubernetes-service
 ms.subservice: common-issues
 ms.custom: devx-track-azurecli
@@ -39,7 +37,7 @@ The following table lists common `az aks command invoke` error messages. Each er
 | Error message | Link |
 |--|--|
 | Operation returned an invalid status 'Not Found' | [Cause 1: The pod can't be created because of node or resource constraints](#cause-1-the-pod-cant-be-created-because-of-node-or-resource-constraints) |
-| Failed to run command in managed cluster due to kubernetes failure. details: admission webhook "validation.gatekeeper.sh" denied the request: \<policy-specific-message> | [Cause 2: Azure Policy doesn’t allow the pod creation](#cause-2-azure-policy-doesnt-allow-the-pod-creation) |
+| Failed to run command in managed cluster due to kubernetes failure. details: admission webhook "validation.gatekeeper.sh" denied the request: \<policy-specific-message> | [Cause 2: Azure Policy doesn't allow the pod creation](#cause-2-azure-policy-doesnt-allow-the-pod-creation) |
 | Error from server (Forbidden): namespaces is forbidden: User "\<ID>" cannot list resource "\<resource>" in API group "" at the cluster scope | [Cause 3: Required roles aren't granted](#cause-3-required-roles-arent-granted) |
 | Failed to connect to MSI. Please make sure MSI is configured correctly.<br/><br/>Get Token request returned: Response [400]; | [Cause 4: There's a Cloud Shell issue](#cause-4-theres-a-cloud-shell-issue) |
 
@@ -56,7 +54,7 @@ The operation returns a `Not Found` status because the `command-<ID>` pod can't 
 
 Make sure that the `command-<ID>` pod can be scheduled and run.
 
-## Cause 2: Azure Policy doesn’t allow the pod creation
+## Cause 2: Azure Policy doesn't allow the pod creation
 
 If you have specific Azure policies, the `az aks command invoke` command can fail because of a disallowed configuration in the `command-<ID>` pod. For example, you might have an Azure policy that requires a read-only root file system or other specific configuration.
 

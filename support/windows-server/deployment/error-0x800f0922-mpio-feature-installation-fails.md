@@ -1,17 +1,17 @@
 ---
 title: Error 0x800f0922 when the Multipath I/O (MPIO) feature installation fails
 description: Resolves an issue in which the Multipath I/O (MPIO) feature installation fails.
-ms.date: 3/24/2022
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, sugan, vineetm
 ms.custom: sap:servicing, csstroubleshoot
-ms.technology: windows-server-deployment
+ms.subservice: deployment
 ---
 # Error 0x800f0922 when the MPIO feature installation fails
 
@@ -103,3 +103,7 @@ Microsoft has confirmed that this is a problem in the Microsoft products listed 
 |0x800f0207|SPAPI_E_DEVINST_ALREADY_EXISTS|winerror.h|The device instance cannot be created because it already exists.|
 |0x80070002|ERROR_FILE_NOT_FOUND|winerror.h|The system cannot find the file specified.|
 |0x00000207|SE_AUDITID_LPC_INVALID_USE|msaudite.h|Invalid use of LPC port.|
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

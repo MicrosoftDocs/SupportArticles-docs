@@ -2,11 +2,9 @@
 title: 'BitLocker recovery: known issues'
 description: Describes common issues that can occur that prevent BitLocker from behaving as expected when recovering a drive, or may cause BitLocker to start recovery unexpectedly. The article provides guidance for addressing those issues.
 ms.date: 11/21/2022
-ms.reviewer: kaushika
-ms.technology: windows-client-security
-ms.prod: windows-client
-author: Teresa-Motiv
-ms.author: v-tappelgate
+ms.reviewer: kaushika, v-tappelgate
+ms.subservice: windows-security
+ms.service: windows-client
 manager: dcscontentpm
 ms.collection:
 - Windows Security Technologies\BitLocker
@@ -21,7 +19,7 @@ localization_priority: medium
 This article describes common issues that may prevent BitLocker from behaving as expected when a drive is recovered, or that may cause BitLocker to start recovery unexpectedly. The article also provides guidance to address these issues.
 
 > [!NOTE]
-> In this article, "recovery password" refers to the 48-digit recovery password and "recovery key" refers to 32-digit recovery key. For more information, see [BitLocker key protectors](/windows/security/information-protection/bitlocker/prepare-your-organization-for-bitlocker-planning-and-policies#bitlocker-key-protectors).
+> In this article, "recovery password" refers to the 48-digit recovery password and "recovery key" refers to 32-digit recovery key. For more information, see [BitLocker key protectors](/windows/security/operating-system-security/data-protection/bitlocker/planning-guide#bitlocker-key-protectors).
 
 ## Windows prompts for a non-existing BitLocker recovery password
 

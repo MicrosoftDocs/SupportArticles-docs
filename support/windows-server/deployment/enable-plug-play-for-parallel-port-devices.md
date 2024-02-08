@@ -1,17 +1,17 @@
 ---
 title: Enable Plug and Play for parallel port devices
 description: Describes how to enable the Plug and Play feature on devices that use a parallel port device.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, IMRANU
 ms.custom: sap:devices-and-drivers, csstroubleshoot
-ms.technology: windows-server-deployment
+ms.subservice: deployment
 ---
 # Enable Plug and Play detection for parallel port devices
 
@@ -45,3 +45,7 @@ The third-party products that are discussed in this article are manufactured by 
 
 > [!NOTE]
 > When Service Pack 2 for Windows Server 2003 is released, some more Parallel Port devices will require that you enable of Plug and Play detection before you can install them successfully. Specifically, you will have to enable Plug and Play detection before you install any Iomega Zip drives.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

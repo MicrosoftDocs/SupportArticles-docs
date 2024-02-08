@@ -2,14 +2,14 @@
 title: Azure Storage Explorer troubleshooting guide
 description: Provides debugging techniques for Azure Storage Explorer.
 services: storage
-author: AmandaAZ
-ms.service: storage
-ms.date: 04/12/2023
-ms.author: v-weizhu
-ms.reviewer: azurestocic, jarrettr
+ms.service: azure-storage
+ms.date: 08/08/2023
+ms.reviewer: azurestocic, jarrettr, v-weizhu
 ---
 
 # Azure Storage Explorer troubleshooting guide
+
+[!INCLUDE [Feedback](../../includes/feedback.md)]
 
 Microsoft Azure Storage Explorer is a standalone app that makes it easy to work with Azure Storage data on Windows, macOS, and Linux. The app can connect to storage accounts hosted on Azure, national clouds, and Azure Stack.
 
@@ -56,7 +56,7 @@ If you want to access blob containers, Azure Data Lake Storage Gen2 containers o
 
 1. Open the **Connect** dialog box.
 1. Select the resource type you want to connect to.
-1. Select **Sign in using Azure Active Directory (Azure AD)** > **Next**.
+1. Select **Sign in using Microsoft Entra ID** > **Next**.
 1. Select the user account and tenant associated with the resource you're attaching to, and then select **Next**.
 1. Type the URL to the resource and then type a unique display name for the connection. Select **Next** > **Connect**.
 
@@ -145,13 +145,13 @@ Make sure you've read the [Sign in to Storage Explorer](/azure/storage/common/st
 
 ### Frequently having to reenter credentials
 
-Having to reenter credentials is most likely the result of Conditional Access policies set by your Azure Active Directory (Azure AD) admin. When Storage Explorer asks you to reenter credentials from the account panel, you should see an **Error details** link. Select it to see why Storage Explorer is asking you to reenter credentials. Conditional Access policy errors that require reentering of credentials might look something like these:
+Having to reenter credentials is most likely the result of Conditional Access policies set by your Microsoft Entra admin. When Storage Explorer asks you to reenter credentials from the account panel, you should see an **Error details** link. Select it to see why Storage Explorer is asking you to reenter credentials. Conditional Access policy errors that require reentering of credentials might look something like these:
 
 - The refresh token has expired.
 - You must use multifactor authentication to access.
 - Your admin made a configuration change.
 
-To reduce the frequency of having to reenter credentials because of errors like the preceding ones, talk to your Azure AD admin.
+To reduce the frequency of having to reenter credentials because of errors like the preceding ones, talk to your Microsoft Entra admin.
 
 ### Conditional access policies
 
@@ -220,6 +220,30 @@ macOS Keychain can sometimes enter a state that causes issues for the Storage Ex
 1. Open Storage Explorer.
 1. You're prompted with a message like "Service hub wants to access the Keychain." Type your Mac admin account password and select **Always Allow**. Or select **Allow** if **Always Allow** isn't available.
 1. Try to sign in.
+
+### Linux: No application window or password manager errors at startup
+
+If you start Storage Explorer on a Linux system, you may encounter one of the following issues:
+
+- No application window appears.
+- Errors about the system's password manager occur.
+
+Storage Explorer uses the system's credential manager to protect your data, including sign-in credentials and SAS connections. If no compatible credential manager application is detected, Storage Explorer won't start. If your system doesn't have a local credential management tool installed, install a third-party tool compatible with `libsecret`. For example, on Linux systems that use the GNOME desktop environment, you can install [Seahorse](https://wiki.gnome.org/Apps/Seahorse/).
+
+Storage Explorer usually creates a default keyring if it doesn't exist at startup. However, in some cases, this might not occur, resulting in no application window or password manager service errors. To resolve the issues, manually set a default keyring.
+
+If you're using Seahorse and there are no existing keyrings, or you want to create a new one, follow these steps to create a default keyring:
+
+1. Start the "Passwords and Keys" application.
+2. Select the "+" button, and then select **Password keyring**.
+3. Set a name and a password for the new keyring.
+4. Right-click the new keyring and select **Set as default**.
+
+If you use the Storage Explorer snap, you must also make sure Storage Explorer is connected to your system's password manager. To do this, run the following command:
+
+```bash
+snap connect storage-explorer:password-manager-service :password-manager-service
+```
 
 ### Default browser doesn't open
 
@@ -521,7 +545,7 @@ Many libraries needed by Storage Explorer may be missing in RHEL environments. I
 ## [SUSE Linux Enterprise Server](#tab/linux-sles)
 
 > [!NOTE]
-> Storage Explorer hasn't been tested for SLES. You may try using Storage Explorer on your system, but we can’t guarantee that Storage Explorer will work as expected.
+> Storage Explorer hasn't been tested for SLES. You may try using Storage Explorer on your system, but we can't guarantee that Storage Explorer will work as expected.
 
 ### Snap
 
@@ -674,4 +698,3 @@ If none of these solutions work for you, use one of the following methods:
 [!INCLUDE [Third-party information disclaimer](../../includes/third-party-disclaimer.md)]
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
-

@@ -4,8 +4,7 @@ description: This article describes the considerations that apply when you use t
 ms.date: 01/15/2021
 ms.custom: sap:Administration and Management
 ms.reviewer: kayokon
-ms.topic: article
-ms.prod: sql 
+ms.topic: article 
 ---
 # Considerations when you use the SQL Server Full-Text search engine for the Japanese language
 

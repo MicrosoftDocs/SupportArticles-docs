@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting BitLocker with the Intune encryption report
-description: How to troubleshoot encryption failures using the Intune encryption report from the Microsoft Endpoint Manager admin center.
+description: How to troubleshoot encryption failures using the Intune encryption report from the Microsoft Intune admin center.
 ms.reviewer: kaushika, luker
 ms.date: 12/01/2021
 search.appverid: MET150
@@ -24,7 +24,7 @@ By default, the BitLocker setup wizard prompts users to enable encryption. You c
 Prerequisites for *user-enabled* encryption:
 
 - The hard disk must be partitioned into an operating system drive formatted with NTFS and a system drive of at least 350 MB formatted as FAT32 for UEFI and NTFS for BIOS.
-- Thee must be enrolled in Intune through hybrid Azure Active Directory (Azure AD) join, Azure AD registration, or Azure AD join.
+- Thee must be enrolled in Intune through Microsoft Entra hybrid join, Microsoft Entra registration, or Microsoft Entra join.
 - A Trusted Platform Module (TPM) chip is not required, but *highly recommended* for increased security.
 
 Prerequisites for BitLocker *silent* encryption:
@@ -33,7 +33,7 @@ Prerequisites for BitLocker *silent* encryption:
 - Windows Recovery Environment (WinRE) must be enabled.
 - The hard disk must be partitioned into an operating system drive formatted with NTFS and a system drive of at least 350 MB must be formatted as FAT32 for Unified Extensible Firmware Interface (UEFI) and NTFS for BIOS.
 UEFI BIOS is required for TPM version 2.0 devices. (Secure boot is not required but will provide more security.)
-- The Intune-enrolled device is connected to Microsoft Azure hybrid services or Azure AD.
+- The Intune-enrolled device is connected to Microsoft Azure hybrid services or Microsoft Entra ID.
 
 ## Identifying encryption status and failures
 
@@ -43,7 +43,7 @@ BitLocker encryption failures on Intune enrolled Windows 10 devices can fall int
 - The Intune BitLocker policy is misconfigured, causing Group Policy Object (GPO) conflicts.
 - The device is already encrypted, and the encryption method doesn't match policy settings.
 
-To identify the category of a device encryption failure, sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices** > **Monitor** > **Encryption report**. The report will show a list of enrolled devices and show if a device is encrypted or ready to be encrypted, and if it has a TPM chip.
+To identify the category of a device encryption failure, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices** > **Monitor** > **Encryption report**. The report will show a list of enrolled devices and show if a device is encrypted or ready to be encrypted, and if it has a TPM chip.
 
 :::image type="content" source="media\troubleshoot-bitlocker-admin-center\encryption-report.png" alt-text="Intune encryption report example.":::
 
@@ -100,7 +100,7 @@ There are several reasons that a device targeted with silent encryption is ready
 
 **Encryption status explained:**
 
-One explanation is that WinRE is not enabled on the device, which is a prerequisite. You can validate the status of WinRE on the device using the reagentc.exe/info command as an administrator. 
+One explanation is that WinRE is not enabled on the device, which is a prerequisite. You can validate the status of WinRE on the device using the reagentc.exe/info command as an administrator.
 
 :::image type="content" source="media\troubleshoot-bitlocker-admin-center\reagentc-output.png" alt-text="Command Prompt output of reagentc.exe/info.":::
 
@@ -118,7 +118,7 @@ Another reason could be administrative rights. If your BitLocker policy is targe
 
 **Encryption status explained:**
 
-Set **Allow standard users to enable encryption during Autopilot** to **Yes** to resolve this issue for Azure AD joined devices.
+Set **Allow standard users to enable encryption during Autopilot** to **Yes** to resolve this issue for Microsoft Entra joined devices.
 
 ### Scenario 5 – The device is in an error state but encrypted
 
@@ -128,7 +128,7 @@ In this common scenario, if the Intune policy is configured for XTS-AES 128-bit 
 
 **Encryption status explained:**
 
-This happens when a device that has already been encrypted using another method&mdash;either manually by the user, with Microsoft BitLocker Administration and Monitoring (MBAM), or by the Microsoft Endpoint Configuration Manager before enrollment.
+This happens when a device that has already been encrypted using another method&mdash;either manually by the user, with Microsoft BitLocker Administration and Monitoring (MBAM), or by the Microsoft Configuration Manager before enrollment.
 
 To correct this, decrypt the device manually or with Windows PowerShell. Then let the Intune BitLocker policy encrypt the device again the next time the policy reaches it.
 

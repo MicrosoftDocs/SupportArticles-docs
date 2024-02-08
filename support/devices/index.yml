@@ -1,0 +1,36 @@
+### YamlMime:Landing
+
+title: Surface troubleshooting
+summary: This library provides solutions enabling IT Pros to troubleshoot and support Surface-Hub Surface devices in a commercial environment.
+metadata:
+  title: Surface troubleshooting document
+  description: Documentation for troubleshooting common issues with Surface.
+  ms.service: surface
+  ms.topic: landing-page # Required
+  author: Deland-Han  #Required; your GitHub user alias, with correct capitalization.
+  ms.author: delhan #Required; microsoft alias of author; optional team alias.
+  ms.date: 05/12/2023
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+ # Card
+  - title: Surface devices
+    linkLists:      
+      - linkListType: how-to-guide
+        links:
+          - text: Surface Device with a 1-TB drive configuration shows two drives
+            url: surface-device-1tb-drive-configuration-shows-two-drives.md
+          - text: PXE boot fails on a Surface Laptop
+            url: pxe-boot-fails-on-surface-laptop.md
+  - title: Surface Hub
+    linkLists:      
+      - linkListType: how-to-guide
+        links:
+          - text: Surface Hub update history
+            url: /surface-hub/surface-hub-update-history?context=/troubleshoot/devices/context/context
+          - text: Troubleshoot Surface Hub
+            url: /surface-hub/troubleshoot-surface-hub?context=/troubleshoot/devices/context/context
+          - text: Collect logs
+            url: /surface-hub/collect-surface-hub-log-files?context=/troubleshoot/devices/context/context

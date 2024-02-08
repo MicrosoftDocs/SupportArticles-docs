@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot connectivity and registration for SUSE SLES VMs
 description: Troubleshoot scenarios in which an Azure VM that has a SUSE Linux Enterprise Server image can't connect to the SUSE Subscription Management Tool (SMT) repository.
-ms.date: 2/25/2022
+ms.date: 04/29/2023
 author: DennisLee-DennisLee
 ms.author: hokamath
 ms.reviewer: adelgadohell, mahuss, esanchezvela, scotro
@@ -13,9 +13,9 @@ keywords:
 ---
 # Troubleshoot connectivity and registration issues for SUSE Linux Enterprise Server VMs
 
-This article addresses a situation in which an Azure virtual machine (VM) is set up by using a SUSE Linux Enterprise Server (SLES) image, but the VM can't connect to the SUSE Subscription Management Tool (SMT) repository. The article describes some basic troubleshooting steps, and it outlines actions to take for specific scenarios (such as failures in Zypper, which is the SUSE command-line tool for managing packages). This information was assembled by Linux specialists at Microsoft, and it's based on support experience and documentation from SUSE.
+This article addresses a situation in which an Azure virtual machine (VM) is set up by using a SUSE Linux Enterprise Server (SLES) image, but the VM can't connect to the SUSE Subscription Management Tool (SMT) repository. The article describes some basic troubleshooting steps, and it outlines actions to take for specific scenarios (such as failures in Zypper, which is the SUSE command-line tool for managing packages). Linux specialists at Microsoft assembled this information based on support experience and documentation from SUSE.
 
-It's important to read the output of each command for additional clues. We recommend that you save the results and messages for further troubleshooting.
+It's important to read the output of each command for more clues. We recommend that you save the results and messages for further troubleshooting.
 
 ## Prerequisites
 
@@ -27,9 +27,11 @@ It's important to read the output of each command for additional clues. We recom
 - The [SUSEConnect](https://github.com/SUSE/connect) tool.
 - The [registercloudguest](https://github.com/SUSE-Enceladus/cloud-regionsrv-client/blob/master/man/man1/registercloudguest.1) tool.
 
-## Run a repository diagnostic script
+## Troubleshooting checklist
 
-Run the [SUSEcloud repocheck script](https://github.com/rfparedes/susecloud-repocheck) that's provided by Rich Paredes, a SUSE engineer. This Python script will do the following tasks:
+### Step 1: Run a repository diagnostic script
+
+Run the [SUSEcloud repocheck script](https://github.com/rfparedes/susecloud-repocheck) that's provided by Rich Paredes, a SUSE engineer. This Python script does the following tasks:
 
 1. Check for connectivity to the SUSE public cloud repositories.
 
@@ -43,9 +45,9 @@ To start the script, run the following command to transfer the script from its G
 python3 <(curl --location --silent https://raw.githubusercontent.com/rfparedes/susecloud-repocheck/main/sc-repocheck.py)
 ```
 
-To run successfully, the command requires internet access from the VM. Otherwise, you'll have to download the script first, and then modify the command so that it will run.
+To run successfully, the command requires internet access from the VM. Otherwise, you have to download the script first, and then modify the command so that it runs.
 
-## Check connectivity to server IP addresses on port 443
+### Step 2: Check connectivity to server IP addresses on port 443
 
 The VM must be able to open a TCP connection on port 443 to the SUSE repository server `smt-azure.susecloud.net` (based on the region where the VM is located) together with the region servers. The list of IP addresses for the repository server and the region servers can be found at the following locations.
 
@@ -113,7 +115,7 @@ DONE
 
 The output doesn't show the server certificate or SSL session. This scenario often occurs if the command traverses a network virtual appliance (NVA) that does SSL packet inspection. This inspection causes the NVA to inject its own SSL certificate into the encrypted session. Because SUSE uses certificate pinning, another injected SSL certificate can break the pinning operation. If pinning is broken, the SUSE repository denies the connection.
 
-### Action: Fix the network virtual appliance configuration
+### Action 1: Fix the network virtual appliance configuration
 
 Make sure that the network virtual appliance doesn't do the following:
 
@@ -123,20 +125,22 @@ Make sure that the network virtual appliance doesn't do the following:
 
 ## Cause 2: Outdated cloud infrastructure information
 
-SUSE made a [public cloud infrastructure update](https://www.suse.com/support/kb/doc/?id=000019633) on June 1, 2020. This change might cause connectivity issues for older VMs.
+SUSE made a [public cloud infrastructure update](https://www.suse.com/support/kb/doc/?id=000019633) on June 1, 2020. This change might cause connectivity issues for older VMs or for VMs that are newly deployed from older marketplace images.
 
-### Action: Update the SUSE public cloud infrastructure
+### Action 2: Update the SUSE public cloud infrastructure
 
-On a problematic VM, you have to download and extract an Azure offline update, and then use Zypper to update the packages manually. Run the following commands by replacing the `<SLE-base>` placeholder with the version of the SLES that's used on the VM (either `SLE12` or `SLE15`):
+1. On a problematic VM, you have to download and extract an Azure offline update, and then use Zypper to update the packages manually. Run the following commands by replacing the `<SLE-base>` placeholder with the version of the SLES that's used on the VM (either `SLE12` or `SLE15`):
 
-```bash
-archiveFileName=late_instance_offline_update_azure_<SLE-base>.tar.gz
-wget --no-check-certificate https://52.188.224.179/$archiveFileName
-sha1sum $archiveFileName
-tar --extract --file=$archiveFileName
-cd x86_64
-zypper --no-refresh --no-remote --non-interactive install *.rpm
-```
+   ```bash
+   archiveFileName=late_instance_offline_update_azure_<SLE-base>.tar.gz
+   wget --no-check-certificate https://52.188.224.179/$archiveFileName
+   sha1sum $archiveFileName
+   tar --extract --file=$archiveFileName
+   cd x86_64
+   zypper --no-refresh --no-remote --non-interactive install *.rpm
+   ```
+
+1. Rerun the [diagnostic script](#step-1-run-a-repository-diagnostic-script) to fix the repository issues.
 
 ## Cause 3: Unprocessable entity errors
 
@@ -154,11 +158,11 @@ SUSE now requires that VMs use attested data when they connect to the SUSE publi
 >
 >Unable to register modules, exiting.
 
-### Action: Update to the latest Azure and Azure Hybrid Benefit packages
+### Action 3: Update to the latest Azure and Azure Hybrid Benefit packages
 
-If you install the public cloud infrastructure update and Azure Hybrid Benefit, your VM will use attested data and avoid unprocessable entity errors. To do this, follow these steps:
+If you install the public cloud infrastructure update and Azure Hybrid Benefit, your VM uses attested data and avoids unprocessable entity errors. To do this, follow these steps:
 
-1. Make sure that you install the [Azure offline update for the SUSE public cloud infrastructure](#action-update-the-suse-public-cloud-infrastructure) from Cause 2.
+1. Make sure that you install the [Azure offline update for the SUSE public cloud infrastructure](#action-2-update-the-suse-public-cloud-infrastructure) from Cause 2.
 
 1. Run the following commands on the VM to install the [Azure Hybrid Benefit for SUSE Linux Enterprise](https://www.suse.com/c/suse-linux-enterprise-and-azure-hybrid-benefit/). Again, replace the `<SLE-base>` placeholder with the VM SLES version (`SLE12` or `SLE15`):
 
@@ -171,13 +175,13 @@ If you install the public cloud infrastructure update and Azure Hybrid Benefit, 
     zypper --no-refresh --no-remote --non-interactive install *.rpm
     ```
 
-1. Rerun the [diagnostic script](#run-a-repository-diagnostic-script) to fix the repository issues.
+1. Rerun the [diagnostic script](#step-1-run-a-repository-diagnostic-script) to fix the repository issues.
 
 ## Cause 4: General registration issues
 
 Your VM has stale credentials for repository access, or you get messages about your system not being registered after you try to make updates or installations.
 
-### Action: Force registration
+### Action 4: Force registration
 
 To fix most registration issues, specify the combination of the [SUSEConnect](https://github.com/SUSE/connect/blob/master/SUSEConnect.8.ronn) cleanup command and the [registercloudguest](https://github.com/SUSE-Enceladus/cloud-regionsrv-client/blob/master/man/man1/registercloudguest.1) command by using the **force-new** parameter:
 
@@ -218,15 +222,15 @@ In the JSON command output, look for a `"status":"Registered"` entry.
 
 ## Cause 5: No attested data supplied (422)
 
-After you run the [repository diagnostic script](#run-a-repository-diagnostic-script), you might experience the following error while the script tries to fix issues that affect the Zypper update:
+After you run the [repository diagnostic script](#step-1-run-a-repository-diagnostic-script), you might experience the following error while the script tries to fix issues that affect the Zypper update:
 
 > Error: Activating SLES_SAP 12.5 x86_64 ... Error: Registration server returned 'Instance verification failed: No attested data supplied' (422)
 
-### Action: Fix the Zypper update issue
+### Action 5: Fix the Zypper update issue
 
-1. If you haven't already done this, [update the SUSE public cloud infrastructure](#action-update-the-suse-public-cloud-infrastructure), as described in Cause 2.
+1. If you haven't already done this, [update the SUSE public cloud infrastructure](#action-2-update-the-suse-public-cloud-infrastructure), as described in Cause 2.
 
-1. Run the [diagnostic script](#run-a-repository-diagnostic-script) again.
+1. Run the [diagnostic script](#step-1-run-a-repository-diagnostic-script) again.
 
 1. If the "422" error persists, modify the */etc/regionserverclnt.cfg* configuration file to resemble the following text:
 
@@ -248,7 +252,7 @@ If you require further help, see [Support and troubleshooting for Azure VMs](/az
 
 ## More information
 
-For more information about [Endorsed Linux distributions](/azure/virtual-machines/linux/endorsed-distros) and open-source technologies in Azure, see [Support for Linux and open source technology in Azure](/troubleshoot/azure/cloud-services/support-linux-open-source-technology).
+For more information about [Endorsed Linux distributions](/azure/virtual-machines/linux/endorsed-distros) and open-source technologies in Azure, see [Support for Linux and open source technology in Azure](../cloud-services/support-linux-open-source-technology.md).
 
 ## Third-party information disclaimer
 

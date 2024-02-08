@@ -1,17 +1,17 @@
 ---
 title: Event 1202 with status 0x534 logged
 description: Provides a solution to an event logged on domain controllers after modifying security policy.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, arrenc
 ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
-ms.technology: windows-server-group-policy
+ms.subservice: group-policy
 ---
 # Event 1202 with status 0x534 logged on Windows Server 2008 R2 domain controllers after modifying security policy
 
@@ -105,3 +105,7 @@ When any security setting is modified in the Default Domain Controllers Policy o
 2. This issue doesn't occur when security policy is modified in policies other than Default Domain Controllers Policy.
 
 3. Despite the logging of the Event ID 1202 with status code 0x534, this issue doesn't prevent Windows computers from applying security policy contained in the Default Domain Controllers Policy. However, there's no way to distinguish a false positive event caused by this issue from a legitimate misconfiguration that will prevent security policy from applying, identified by the same Event ID 1202 and 0x534 status code.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Group Policy issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-group-policy.md).

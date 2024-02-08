@@ -1,17 +1,17 @@
 ---
 title: Bluetooth speakers don't work after update 4505903 is installed on Windows 10, version 1903
 description: Describes an issue in which Bluetooth speakers don't work after update 4505903 is installed on Windows 10, version 1903. Provides a workaround.
-ms.date: 12/07/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:devices-and-drivers, csstroubleshoot
-ms.technology: windows-client-deployment
+ms.subservice: deployment
 ---
 # Bluetooth speakers don't work after update 4505903 is installed in Windows 10, version 1903
 
@@ -46,3 +46,7 @@ To work around this issue, use the System File Checker tool (SFC.exe) to repair 
 3. After the process is finished, restart the computer.
 
 For more information, see [Use the System File Checker tool to repair missing or corrupted system files](https://support.microsoft.com/help/929833).
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

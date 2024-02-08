@@ -1,17 +1,17 @@
 ---
 title: VMBus device doesn't load
 description: Describes an issue in which the VMBus device doesn't load on a virtual machine.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, leons, v-srisan
 ms.custom: sap:integration-components, csstroubleshoot
-ms.technology: hyper-v
+ms.subservice: hyper-v
 ---
 # The VMBus device doesn't load on a virtual machine that is running on a computer with Hyper-V installed
 

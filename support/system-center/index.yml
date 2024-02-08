@@ -16,15 +16,15 @@ productDirectory:
     summary: Troubleshooting articles for Data Protection Manager
     url: dpm/welcome-dpm.yml
   - title: Operations Manager
-    imageSrc: "../media/hub-landing/system-center-operations-manager.png"
+    imageSrc: "../media/hub-landing/system-center-opsmgr.png"
     summary: Troubleshooting articles for Operations Manager
     url: scom/welcome-scom.yml   
   - title: Orchestrator
-    imageSrc: "../media/hub-landing/system-center-orchestrator.png"
+    imageSrc: "../media/hub-landing/system-center-orch.png"
     summary: Troubleshooting articles for Orchestrator
     url: orchestrator/welcome-orchestrator.yml
   - title: Service Manager
-    imageSrc: "../media/hub-landing/system-center-service-manager.png"
+    imageSrc: "../media/hub-landing/system-center-scsm.png"
     summary: Troubleshooting articles for Service Manager
     url: scsm/welcome-scsm.yml
   - title: Virtual Machine Manager

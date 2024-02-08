@@ -1,17 +1,17 @@
 ---
 title: Error 0x8007000D when you activate a machine
 description: This article helps fix the error 0x8007000D that occurs when you activate a Windows 7 machine by using any type of product key.
-ms.date: 9/24/2021
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:activation, csstroubleshoot
-ms.technology: windows-server-deployment
+ms.subservice: deployment
 ---
 # Error code 0x8007000D when you try to activate a Windows 7 machine by using any type of product key
 
@@ -36,3 +36,7 @@ If those permissions have been altered for the `Root` key or any subkey(s), we w
 ## Resolution
 
 Assign the minimum permission of Enumerate Subkeys to the System account for the registry path `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\Root`and any of its subkeys.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md).

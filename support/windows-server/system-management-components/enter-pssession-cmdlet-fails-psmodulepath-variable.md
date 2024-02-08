@@ -1,17 +1,17 @@
 ---
 title: Measure-Object not found error with Enter-PSSession cmdlet
 description: Enter-PSSession unexpectedly terminates when a network path is specified in PSModulePath.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, Gbrag, jerrycif
 ms.custom: sap:powershell, csstroubleshoot
-ms.technology: windows-server-system-management-components
+ms.subservice: system-mgmt-components
 ---
 # Enter-PSSession cmdlet fails when network path is specified in PSModulePath environment variable
 

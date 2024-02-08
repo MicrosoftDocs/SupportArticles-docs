@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, v-tea, v-jesits, dantes, arrenc
 ms.custom: sap:tcp/ip-communications, csstroubleshoot
-ms.technology: windows-client-networking
+ms.subservice: networking
 ---
 # An Internet Explorer or Edge window opens when your computer connects to a corporate network or a public network
 
@@ -105,7 +105,7 @@ In some cases, such as when you connect to a network that uses a proxy server to
 > - \*.msftncsi.com
 > - \*.msftconnecttest.com
 >
->For more information, see [KB 2778122, Using authenticated proxy servers together with Windows 8](/troubleshoot/windows-client/networking/use-authenticated-proxy-servers)
+>For more information, see [KB 2778122, Using authenticated proxy servers together with Windows 8](use-authenticated-proxy-servers.md)
 
 ## Workaround
 

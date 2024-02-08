@@ -3,8 +3,8 @@ title: Migrating BizTalk Servers to another domain isn't supported
 description: Describes migrating BizTalk Servers from one domain to another domain isn't supported.
 ms.date: 05/17/2022
 ms.custom: sap:BizTalk Server Setup and Configuration
-ms.reviewer: niklase  
-ms.author: v-sidong
+ms.reviewer: v-sidong
+ms.author: niklase
 author: NiklasEMS
 ---
 

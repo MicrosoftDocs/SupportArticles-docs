@@ -1,17 +1,17 @@
 ---
 title: Error 1384 when you log on to a domain
 description: Discusses an issue where you get a 1384 error when you log on to a domain or connect to a network share on a server.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, richfl
 ms.custom: sap:user-logon-fails, csstroubleshoot
-ms.technology: windows-server-user-profiles
+ms.subservice: user-profiles
 ---
 # Error message: During a logon attempt, the user's security context accumulated too many security IDs
 

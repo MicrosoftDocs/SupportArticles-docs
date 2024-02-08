@@ -1,17 +1,17 @@
 ---
 title: You receive an "access is denied" error message on a domain controller when you try to replicate the Active Directory directory service
 description: Describes a problem that occurs when the value of the RestrictRemoteClients registry entry is 2. Explains how to resolve this problem by modifying the registry or by disabling the Restrictions for Unauthenticated RPC Clients GPO.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:active-directory-database-issues-and-domain-controller-boot-failures, csstroubleshoot
-ms.technology: windows-server-active-directory
+ms.subservice: active-directory
 ---
 # You receive an "access is denied" error message on a domain controller when you try to replicate the Active Directory directory service
 

@@ -1,17 +1,17 @@
 ---
 title: KMS current count doesn't increase
 description: Describes a problem where the number of clients in a Key Management Server (KMS) computer does not increase when you add new Windows Vista-based client computers to the network.
-ms.date: 09/08/2020
+ms.date: 04/28/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:activation, csstroubleshoot
-ms.technology: windows-client-deployment
+ms.subservice: deployment
 ---
 # The KMS current count does not increase when you add new Windows Vista or Windows 7-based client computers to the network
 
@@ -88,3 +88,7 @@ To reset the activation timer and to set a unique CMID, the Rearm process must r
 - Force the Rearm process to occur by running the Slmgr.vbs script in an elevated Command Prompt window. For example, type: `cscript c:\windows\system32\slmgr.vbs -rearm`  
 
 If the Rearm process did not run because Sysprep was run together with the /generalize option or because you used the \<SkipRearm>1\</SkipRearm> setting in the Unattended.xml file, client computers may have identical CMIDs. Therefore, the computer count information does not increase as expected. The /generalize option is required when you deploy multiple images. The \<SkipRearm> setting should not be used in an unattended file when you deploy computers in a production environment. Therefore, for both cases, we recommend that you rebuild the base image.
+
+## Data collection
+
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for deployment-related issues](../windows-troubleshooters/gather-information-using-tss-deployment.md).

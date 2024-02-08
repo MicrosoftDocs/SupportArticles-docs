@@ -7,11 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
+ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, markstan
 ms.custom: sap:user-experience-virtualization-ue-v, csstroubleshoot
-ms.technology: windows-client-user-experience-virtualization-ue-v
+ms.subservice: user-experience-virtualization-ue-v
 ---
 # How to troubleshoot UE-V replication issues
 
@@ -59,7 +59,7 @@ The checklist below provides a general framework for isolating problem users, co
 
     3. Compare the modified date of the file and the file size with the current package in the user's Settings Storage Path.(Get-UevConfiguration).settingsstoragepath data.
 
-4. Run simultaneous traces on both machines to determine the point of failure. For more information, see [How to enable debug logging in Microsoft User Experience Virtualization (UE-V)](/troubleshoot/windows-client/ue-v/enable-debug-logging).
+4. Run simultaneous traces on both machines to determine the point of failure. For more information, see [How to enable debug logging in Microsoft User Experience Virtualization (UE-V)](enable-debug-logging.md).
 
 5. If the UE-V synchronization method (`SynMethod`) is set to **OfflineFiles** (the default), verify that Client-Side Caching (also known as Offline Files) is enabled and working properly. See [Managing Files and Folders](/previous-versions/windows/it-pro/windows-xp/bb457104(v=technet.10)) for general information on how to implement and troubleshoot Client-Side Caching.
 

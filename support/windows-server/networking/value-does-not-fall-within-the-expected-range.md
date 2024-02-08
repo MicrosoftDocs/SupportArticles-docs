@@ -1,17 +1,17 @@
 ---
 title: Error (Value does not fall within the expected range) when changing a DFS replication group or namespace
 description: Fixes an issue in which you can't add members to a DFS replication group or namespace after you install the .NET Framework 4.7.
-ms.date: 9/24/2021
+ms.date: 09/24/2021
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
+ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, takondo, fanx
 ms.custom: sap:dfsr, csstroubleshoot
-ms.technology: networking
+ms.subservice: networking
 ---
 # Error "Value does not fall within the expected range" when changing a DFS replication group or namespace in Windows Server 2016 or Windows Server 2012 R2
 
