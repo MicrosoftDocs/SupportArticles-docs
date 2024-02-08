@@ -5,8 +5,6 @@ ms.date: 05/10/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
-ms.subservice: windows-security
 ms.custom:sap: kerberos-authentication, csstroubleshoot
 localization_priority: medium
 ms.reviewer: kaushika, raviks, v-lianna

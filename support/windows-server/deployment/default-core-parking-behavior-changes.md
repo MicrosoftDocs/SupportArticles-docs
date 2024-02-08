@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, match
 ms.custom: sap:devices-and-drivers, csstroubleshoot
-ms.subservice: deployment
 ---
 # Windows Server 2012 R2 default Core Parking behavior changes
 

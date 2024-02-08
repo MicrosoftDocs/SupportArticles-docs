@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, herbertm, josefh
 ms.custom: sap:user-computer-group-and-object-management, csstroubleshoot
-ms.subservice: active-directory
 ---
 # Applications using NetUserGetInfo and similar APIs rely on read access to certain AD objects
 

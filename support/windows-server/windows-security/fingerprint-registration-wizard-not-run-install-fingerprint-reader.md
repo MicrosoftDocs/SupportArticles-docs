@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: v-jomcc, kaushika
 ms.custom: sap:kerberos-authentication, csstroubleshoot
-ms.subservice: windows-security
 ---
 # Fingerprint Registration Wizard doesn't run after you install Fingerprint Reader and DigitalPersona Password Manager software and restart the computer
 

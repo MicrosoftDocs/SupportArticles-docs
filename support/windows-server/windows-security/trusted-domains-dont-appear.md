@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:domain-and-forest-trusts, csstroubleshoot
-ms.subservice: windows-security
 ---
 # Trusted domains don't appear in the Available List for domain logon or setting security permissions
 

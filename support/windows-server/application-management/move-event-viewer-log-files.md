@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jwojan
 ms.custom: sap:event-system, csstroubleshoot
-ms.subservice: application-compatibility
 ---
 # How to move Event Viewer log files to another location
 

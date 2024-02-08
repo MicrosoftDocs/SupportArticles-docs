@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:managing-printers-through-group-policy, csstroubleshoot
-ms.subservice: group-policy
 ---
 # Group Policy Printer Preferences fails to set the default printer when new user profile is created
 

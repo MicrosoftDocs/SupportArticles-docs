@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, fengli
 ms.custom: sap:ldap-configuration-and-interoperability, csstroubleshoot
-ms.subservice: active-directory
 ---
 # When you run an LDAP query against a domain controller, you obtain a partial attribute list
 

@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, anrath, joshj, v-lianna
 ms.custom: sap:dns, csstroubleshoot, ikb2lmc
-ms.subservice: networking
 ---
 # DNS scavenging setup
 

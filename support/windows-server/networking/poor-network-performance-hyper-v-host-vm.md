@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:windows-nic-teaming-load-balance-failover, csstroubleshoot
-ms.subservice: networking
 ---
 # Poor network performance on virtual machines on a Windows Server 2012 Hyper-V host if VMQ is enabled
 

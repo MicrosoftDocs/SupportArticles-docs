@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:errors-and-troubleshooting:-print-spooler, csstroubleshoot
-ms.subservice: printing
 ---
 # The size of the EMF spool file may become very large when you print a document that contains lots of raster data
 

@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, eldenc
 ms.custom: sap:replacing-hardware-and-updating-the-operating-system, csstroubleshoot
-ms.subservice: high-availability
 ---
 # You cannot upgrade the operating system of a clustered server from Windows Server 2003 or later versions
 

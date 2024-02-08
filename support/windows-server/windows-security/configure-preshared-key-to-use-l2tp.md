@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:secure-channel-issues, csstroubleshoot
-ms.subservice: windows-security
 ---
 # Configure a preshared key for use with Layer 2 Tunneling Protocol Connections in Windows Server 2003
 

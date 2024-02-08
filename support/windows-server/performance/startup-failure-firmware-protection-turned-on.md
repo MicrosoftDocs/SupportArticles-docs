@@ -5,11 +5,9 @@ ms.date: 03/04/2022
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, rosasa, v-anfiro, v-lianna
 ms.custom: sap:no-boot-not-bugchecks, csstroubleshoot
-ms.subservice: performance
 ---
 # Startup failure when Firmware protection is turned on
 

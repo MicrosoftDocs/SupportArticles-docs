@@ -5,11 +5,9 @@ ms.date: 11/06/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-jenya, v-lianna
 ms.custom: sap:remote-desktop-services-terminal-services-licensing, csstroubleshoot
-ms.subservice: rds
 ---
 # Error after completing configuration of the RD Connection Broker server for high availability
 

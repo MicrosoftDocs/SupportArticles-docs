@@ -5,11 +5,9 @@ ms.date: 09/24/2021
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, roumaago, v-lianna
 ms.custom: sap:container, csstroubleshoot
-ms.subservice: hyper-v
 ---
 # Application Programming Interface (API) call of performance counters is delayed inside a container
 

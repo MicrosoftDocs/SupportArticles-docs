@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:windows-management-instrumentation-wmi, csstroubleshoot
-ms.subservice: admin-mgmt-development
 ---
 # Event log message indicates that the Windows Installer reconfigured all installed applications
 

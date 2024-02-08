@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:active-directory-backup-restore-or-disaster-recovery, csstroubleshoot
-ms.subservice: active-directory
 ---
 # How to relocate a SYSVOL tree that uses FRS for replication
 

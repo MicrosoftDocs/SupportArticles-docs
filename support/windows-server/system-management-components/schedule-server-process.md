@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, markstan
 ms.custom: sap:task-scheduler, csstroubleshoot
-ms.subservice: system-mgmt-components
 ---
 # How to schedule a server process
 

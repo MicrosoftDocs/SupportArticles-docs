@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: cpuckett, kaushika
 ms.custom: sap:cluster-aware-updating-cau, csstroubleshoot
-ms.subservice: high-availability
 ---
 # Recommended hotfixes and updates for Windows Server 2012-based failover clusters
 
