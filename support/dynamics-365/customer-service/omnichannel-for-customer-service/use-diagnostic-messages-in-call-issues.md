@@ -37,9 +37,9 @@ The following table lists the messages that appear when your agents have issues 
 
 ## Troubleshoot incoming call notification issues 
 
-Ensure that when utilizing a custom Incoming notification template (for both unauthenticated and authenticated) for your voice workstreams, the Countdown (seconds) **must not exceed 40 seconds**. Setting it beyond 40 seconds will result in agents receiving incoming call notifications for longer than 40 seconds if the call remains unaccepted, and upon acceptance, agents will encounter an error. So to avoid this, ensure the Coundown value does not exeed 40 seconds.
+Ensure that when utilizing a custom Incoming notification template for your voice workstreams, the Countdown (seconds) **must not exceed 40 seconds**. Setting it beyond 40 seconds will result in agents receiving incoming call notifications for longer than 40 seconds if the call remains unaccepted, and upon acceptance, agents will encounter an error. So to avoid this, ensure the Coundown value does not exeed 40 seconds.
 
-![image](https://github.com/MicrosoftDocs/SupportArticles-docs-pr/assets/47166753/270ea368-89bf-4caf-a6f4-c386833c872c)
+![image](https://github.com/MicrosoftDocs/SupportArticles-docs-pr/assets/47166753/4c87a53c-c29f-4263-b1c7-09640700adfb)
 ![image](https://github.com/MicrosoftDocs/SupportArticles-docs-pr/assets/47166753/9be61bee-0fce-40ce-96d6-ceba3e8c95d6)
 
 
