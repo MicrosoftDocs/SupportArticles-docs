@@ -126,3 +126,5 @@ To remove all unmanaged ribbon customizations for either a specific entity or ap
    <LocLabels />
    </RibbonDiffXml>
 ```
+## Reference
+[Command checker](ribbon-issues.md#use-command-checker)
