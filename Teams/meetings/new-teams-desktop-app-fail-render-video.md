@@ -15,7 +15,7 @@ search.appverid:
   - MET150
 ms.date: 02/07/2024
 ---
-# New Teams desktop app does not render video
+# New Teams desktop app fails to render video
 
 ## Symptoms
 
@@ -34,7 +34,7 @@ This issue occurs because of a conflict that exists between the new Teams app an
 To work around the issue, follow these steps:
 
 1. Exit the Teams desktop app.
-1. Locate the file that's named *BlackApps.dat*. This file is the exclusion list that's used by the Nahimic app. The default location for this file is `C:\ProgramData\A-Volute\A-Volute.Nahimic\Modules\Scheduled\Configurator\BlackApps.dat`.
+1. Locate the file named *BlackApps.dat*. This file is the exclusion list used by the Nahimic app. The default location for this file is `C:\ProgramData\A-Volute\A-Volute.Nahimic\Modules\Scheduled\Configurator\BlackApps.dat`.
 
    **Note:** The file location might vary depending on the version of Windows that's running on the device.
 1. Open the BlackApps.dat file by using a text editor, such as Notepad.
@@ -55,4 +55,3 @@ To work around the issue, follow these steps:
 1. Restart the Teams desktop app.
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-information-disclaimer.md)]
-
