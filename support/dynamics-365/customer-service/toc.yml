@@ -71,7 +71,7 @@
               href: service-level-agreements/sla-kpi-instance-compliance-timer.md
             - name: SLA timer doesn't pause when state is changed to OnHold on a holiday
               href: service-level-agreements/sla-timer-pause-state-changed.md
-            - name: SLA Timer keeps running or expires prior to the Timer failure time 
+            - name: SLA Timer keeps running or expires before the Timer failure time 
               href: service-level-agreements/sla-timer-keep-running-or-expired.md
             - name: Warning appears on SLA KPI instances
               href: service-level-agreements/warning-slakpiinstances.md
