@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: timtho, kaushika
 ms.custom: sap:file-explorer/windows-explorer, csstroubleshoot
-ms.subservice: shell-experience
 ---
 # How to remove the Security tab by using a group policy  
 

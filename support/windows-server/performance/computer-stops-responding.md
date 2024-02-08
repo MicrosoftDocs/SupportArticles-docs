@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, cbutch, v-jomcc
 ms.custom: sap:system-hang, csstroubleshoot
-ms.subservice: performance
 ---
 # When you restart a computer, the computer stops responding, or the "Applying computer settings" screen appears for longer than you expect
 

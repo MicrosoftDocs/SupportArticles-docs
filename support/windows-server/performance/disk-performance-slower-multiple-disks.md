@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, robsmi, v-srisan
 ms.custom: sap:performance-monitoring-tools, csstroubleshoot
-ms.subservice: performance
 ---
 # Disk performance may be slower than expected when you use multiple disks
 

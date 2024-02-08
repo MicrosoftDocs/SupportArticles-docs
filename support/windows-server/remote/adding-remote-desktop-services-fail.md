@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, robertvi
 ms.custom: sap:administration, csstroubleshoot
-ms.subservice: rds
 ---
 # Adding Remote Desktop Services role may fail when Firewall Service is stopped
 

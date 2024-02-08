@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:configuring-and-using-backup-software, csstroubleshoot
-ms.subservice: backup-and-storage
 ---
 # System State Backup fails when an invalid ImagePath is specified for services
 

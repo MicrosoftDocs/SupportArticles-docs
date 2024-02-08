@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, clandis
 ms.custom: sap:active-directory-federation-services-ad-fs, csstroubleshoot
-ms.subservice: active-directory
 ---
 # How to restore IIS and clean up Active Directory when you uninstall Active Directory Federation Services 2.0
 

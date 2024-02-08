@@ -7,17 +7,15 @@ ms.author: delhan
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:tcp/ip-communications, csstroubleshoot
-ms.subservice: networking
 ---
 # Set up your small business network
 
 This article walks you through the steps of evaluating, preparing, and setting up your small business network. The article is for IT Pros who help set up your small business network.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 10064
 
 ## Evaluate network types

@@ -848,6 +848,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/power-platform/power-automate/flow-creation/converting-time-zone-power-automate.md",
+      "redirect_url": "/power-automate/convert-time-zone",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/dynamics-365/fraud-protection/welcome-fraud-protection.yml",
       "redirect_url": "/troubleshoot/dynamics-365/",
       "redirect_document_id": false
@@ -6918,6 +6923,16 @@
       "source_path": "support/azure/virtual-machines/windows-vm-activation-error-0xc004fd02.md",
       "redirect_url": "/troubleshoot/azure/virtual-machines/windows-vm-activation-error-0xc004fd01-0xc004fd02",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/active-directory/unable-sign-out-online-services.md",
+      "redirect_url": "/microsoft-365/troubleshoot/sign-in/cannot-sign-out-cloud-service",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/active-directory/enable-disable-trace-online-services.md",
+      "redirect_url": "/powershell/microsoftgraph/overview?toc=%2Ftroubleshoot%2Fazure%2Factive-directory%2Ftoc.json&bc=%2Ftroubleshoot%2Fbreadcrumb%2Ftoc.json",
+      "redirect_document_id": false
     }
 ]
 }

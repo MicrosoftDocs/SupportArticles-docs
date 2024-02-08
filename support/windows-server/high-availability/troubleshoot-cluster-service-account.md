@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, stevemat, ELDENC
 ms.custom: sap:cluster-service-fails-to-start, csstroubleshoot
-ms.subservice: high-availability
 ---
 # How to troubleshoot the Cluster service account when it modifies computer objects
 

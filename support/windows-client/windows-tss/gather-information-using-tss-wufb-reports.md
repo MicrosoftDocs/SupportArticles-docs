@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, warrenw, v-lianna
 ms.custom: sap:windows-tss-dnd, csstroubleshoot
-ms.subservice: windows-troubleshooter
 ---
 # Gather information by using TSS for Windows Update for Business reports-related issues
 

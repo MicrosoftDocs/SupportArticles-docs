@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, davidg, georgev
 ms.custom: sap:management-and-configuration:-general-issues, csstroubleshoot
-ms.subservice: printing
 ---
 # How to add the Print Directory feature for folders in Windows XP, in Windows Vista, in Windows 7
 

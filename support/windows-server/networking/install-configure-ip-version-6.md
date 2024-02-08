@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, JAMIRC
 ms.custom: sap:ip-address-management-ipam, csstroubleshoot
-ms.subservice: networking
 ---
 # Install and configure IP version 6 in Windows Server 2003 Enterprise Server
 

@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: adityah, kaushika
 ms.custom: sap:applications, csstroubleshoot
-ms.subservice: performance
 ---
 # You cannot set page files on a partition that is larger than 2 terabytes
 

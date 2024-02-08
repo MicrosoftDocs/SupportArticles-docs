@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: scottmca, kaushika
 ms.custom: sap:setup, csstroubleshoot
-ms.subservice: deployment
 ---
 # Error message: Windows SIM was unable to generate a catalog or Parameter count mismatch
 

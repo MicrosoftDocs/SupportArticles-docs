@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:slow-performance, csstroubleshoot
-ms.subservice: performance
 ---
 # Troubleshooting slow file copying in Windows
 

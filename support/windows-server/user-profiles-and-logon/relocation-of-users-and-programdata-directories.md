@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:user-profiles, csstroubleshoot
-ms.subservice: user-profiles
 ---
 # Upgrade to Windows versions that is before Windows 10 is blocked if Users and ProgramData directories are changed
 

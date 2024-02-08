@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, takondo, match
 ms.custom: sap:wireless-networking-and-802.1x-authentication, csstroubleshoot
-ms.subservice: networking
 ---
 # Wireless devices are disabled after you turn off Airplane mode
 

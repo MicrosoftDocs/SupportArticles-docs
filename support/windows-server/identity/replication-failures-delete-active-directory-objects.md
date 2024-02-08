@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-jesits
 ms.custom: sap:active-directory-replication, csstroubleshoot
-ms.subservice: active-directory
 ---
 # Deleting Active Directory objects that have many links causes replication failures
 

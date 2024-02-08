@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:slow-logon, csstroubleshoot
-ms.subservice: user-profiles
 ---
 # Slow logon with a blank screen in Windows
 

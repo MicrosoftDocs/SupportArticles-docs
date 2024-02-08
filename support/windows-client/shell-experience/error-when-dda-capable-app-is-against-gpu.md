@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:dpi-and-display-issues, csstroubleshoot
-ms.subservice: shell-experience
 ---
 # Error generated when Desktop Duplication API-capable application is run against discrete GPU
 

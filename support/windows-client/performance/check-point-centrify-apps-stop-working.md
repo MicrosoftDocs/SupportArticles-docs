@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:applications, csstroubleshoot
-ms.subservice: performance
 ---
 # Check Point and Centrify applications stop working after the January 2017 Quality Update is installed
 

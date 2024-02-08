@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, keithpe
 ms.custom: sap:system-restore-or-resetting-your-computer, csstroubleshoot
-ms.subservice: backup-and-storage
 ---
 # How to restore a Windows 7 installation
 

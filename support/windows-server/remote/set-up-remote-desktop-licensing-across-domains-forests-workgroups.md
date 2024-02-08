@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, akhleshs, sabinn
 ms.custom: sap:remote-desktop-services-terminal-services-licensing, csstroubleshoot
-ms.subservice: rds
 ---
 # Best practices for setting up RDS licensing across Active Directory domains/forests or work groups
 

@@ -7,10 +7,8 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: koaiiot, kaushika
-ms.subservice: performance
 ms.custom: sap:no-boot-not-bugchecks, csstroubleshoot
 ---
 # Windows doesn't start after you exclude UWF from Microsoft Defender

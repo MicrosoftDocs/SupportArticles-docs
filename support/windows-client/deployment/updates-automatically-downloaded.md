@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, v-rezhou
 ms.custom: sap:servicing, csstroubleshoot
-ms.subservice: deployment
 ---
 # Windows Update automatically downloads and installs updates when you connect to the Internet for the first time
 

@@ -7,10 +7,8 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.subservice: shell-experience
 ---
 # Shell Experience troubleshooting documentation for Windows clients
 

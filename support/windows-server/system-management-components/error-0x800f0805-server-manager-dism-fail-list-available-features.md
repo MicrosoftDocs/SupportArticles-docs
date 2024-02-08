@@ -5,11 +5,9 @@ ms.date: 05/09/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, hamansoor, v-lianna
 ms.custom: sap:server-manager, csstroubleshoot, ikb2lmc
-ms.subservice: system-mgmt-components
 ---
 # Error 0x800f0805 when Server Manager and DISM fail to list the available features 
 

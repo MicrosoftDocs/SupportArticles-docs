@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, arrenc
 ms.custom: sap:sysvol-access-or-replication-issues, csstroubleshoot
-ms.subservice: group-policy
 ---
 # Troubleshoot missing SYSVOL and NETLOGON shares on Windows domain controllers
 

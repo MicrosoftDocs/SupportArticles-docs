@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:redirection-not-printer, csstroubleshoot
-ms.subservice: rds
 ---
 # RemoteFX USB redirected scanner doesn't start  
 

@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, shenry, liexgu
 ms.custom: sap:virtual-machine-will-not-boot, csstroubleshoot
-ms.subservice: hyper-v
 ---
 # Catastrophic failure (0x8000FFFF) error when you start a VM on a Windows Server 2012 R2-based Hyper-V server
 

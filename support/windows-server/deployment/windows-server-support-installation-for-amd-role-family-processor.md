@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, yuvraja
 ms.custom: sap:setup, csstroubleshoot
-ms.subservice: deployment
 ---
 # Windows Server support and installation instructions for the AMD EPYC 7000 Series server processors
 

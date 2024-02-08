@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, neilshen, v-lolang
 ms.custom: sap:smart-card-logon, csstroubleshoot
-ms.subservice: windows-security
 ---
 # Code 31 in Device Manager when Microsoft Usbccid Smartcard Reader is in a problem state
 

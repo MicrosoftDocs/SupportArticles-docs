@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:applocker-or-software-restriction-policies, csstroubleshoot
-ms.subservice: group-policy
 ---
 # How to apply Group Policy objects to Terminal Services servers
 

@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, ningzhan, delhan, christys
 ms.custom: sap:desktop-shell, csstroubleshoot
-ms.subservice: shell-experience
 ---
 # Upgrade and Privacy Experience (UPX) is displayed in the UI on managed Windows 10 device
 

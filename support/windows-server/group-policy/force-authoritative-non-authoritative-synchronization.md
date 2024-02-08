@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, nedpyle
 ms.custom: sap:sysvol-access-or-replication-issues, csstroubleshoot
-ms.subservice: group-policy
 ---
 # How to force authoritative and non-authoritative synchronization for DFSR-replicated sysvol replication
 

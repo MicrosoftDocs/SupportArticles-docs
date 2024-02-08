@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:user-computer-group-and-object-management, csstroubleshoot
-ms.subservice: active-directory
 ---
 # Known issues managing a Windows 10 Group Policy client in Windows Server 2012 R2
 

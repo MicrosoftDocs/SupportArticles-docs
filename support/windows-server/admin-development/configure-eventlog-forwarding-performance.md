@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, gbrag, raackley, leofa
 ms.custom: sap:windows-management-instrumentation-wmi, csstroubleshoot
-ms.subservice: admin-mgmt-development
 ---
 # Best practice for configuring EventLog forwarding in Windows Server 2012 R2
 

@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:nested-virtualization, csstroubleshoot
-ms.subservice: high-availability
 ---
 # How to retrieve data from a Windows XP Mode virtual machine on Windows 8 or Windows 10
 

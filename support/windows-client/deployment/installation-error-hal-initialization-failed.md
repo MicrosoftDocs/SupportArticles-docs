@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, scottmca, ctimon
 ms.custom: sap:setup, csstroubleshoot
-ms.subservice: deployment
 ---
 # Error HAL_INITIALIZATION_FAILED when you install Windows 8 or Windows Server 2012 on VMware VM
 

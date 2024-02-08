@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, tojens
 ms.custom: sap:dns, csstroubleshoot
-ms.subservice: networking
 ---
 # Support policy for DNS client-side caching on DNS clients
 

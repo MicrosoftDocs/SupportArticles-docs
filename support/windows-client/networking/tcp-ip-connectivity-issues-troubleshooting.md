@@ -2,13 +2,11 @@
 title: TCP/IP connectivity issues troubleshooting
 description: Learn how to troubleshoot TCP/IP connectivity and what you should do if you come across TCP reset in a network capture.
 ms.date: 03/10/2023
-ms.service: windows-client
 ms.topic: troubleshooting
 author: dansimp
 ms.author: dansimp
 manager: dcscontentpm
 ms.collection: highpri
-ms.subservice: networking
 ms.custom: sap:tcp/ip-communications, csstroubleshoot
 ms.reviewer: dansimp
 audience: itpro

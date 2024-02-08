@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:dst-and-timezones, csstroubleshoot
-ms.subservice: shell-experience
 ---
 # Changes to calendar date in BIOS are not reflected in Windows
 
