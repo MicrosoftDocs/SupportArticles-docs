@@ -13,7 +13,7 @@ appliesto:
   - New Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 02/07/2024
+ms.date: 02/08/2024
 ---
 # New Teams desktop app fails to render video
 
@@ -34,9 +34,7 @@ This issue occurs because of a conflict that exists between the new Teams app an
 To work around the issue, follow these steps:
 
 1. Exit the Teams desktop app.
-1. Locate the file named *BlackApps.dat*. This file is the exclusion list used by the Nahimic app. The default location for this file is `C:\ProgramData\A-Volute\A-Volute.Nahimic\Modules\Scheduled\Configurator\BlackApps.dat`.
-
-   **Note:** The file location might vary depending on the version of Windows that's running on the device.
+1. Search for the file named *BlackApps.dat*. This file is the exclusion list used by the Nahimic app.
 1. Open the BlackApps.dat file by using a text editor, such as Notepad.
 
    **Note:** If you can't open the file, follow these steps to change permissions on the file:
