@@ -5,7 +5,7 @@ ms.date: 07/17/2020
 ms.custom: sap:WWW Administration and Management
 ms.reviewer: mlaing
 ms.topic: how-to
-ms.technology: iis-www-administration-management
+ms.subservice: www-administration-management
 ---
 # Content types for HTTP compression in Internet Information Services
 

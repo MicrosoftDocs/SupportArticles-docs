@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:active-directory-federation-services-ad-fs, csstroubleshoot
-ms.technology: windows-server-active-directory
 ---
 # ADFS 2.0 certificate error: An error occurred during an attempt to build the certificate chain
 

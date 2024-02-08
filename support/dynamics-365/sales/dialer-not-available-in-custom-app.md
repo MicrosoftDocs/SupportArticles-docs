@@ -4,7 +4,7 @@ description: Provides a resolution for an issue where the Teams dialer isn't vis
 ms.date: 08/22/2023
 ms.reviewer: asaftzuk, ilanak
 author: t-ronioded
-ms.author: t-ronioded
+ms.author: ronihemed
 ---
 # Microsoft Teams dialer isn't visible in a custom app
 

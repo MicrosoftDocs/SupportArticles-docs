@@ -3,7 +3,7 @@ title: commands under GuiRunOnce doesn't run
 description: This article provides resolutions for the problem where the commands listed under the GuiRunOnce field in a sysprep.inf file may not run on first boot after sysprep is performed.
 ms.date: 09/02/2020
 ms.reviewer: twarwick, jtanner
-ms.technology: windows-hardware-general
+ms.subservice: general
 ---
 # GuiRunOnce in sysprep.inf not working in Windows POSReady
 

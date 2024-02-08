@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, markstan
 ms.custom: sap:user-experience-virtualization-ue-v, csstroubleshoot
-ms.technology: windows-client-user-experience-virtualization-ue-v
 ---
 # How to troubleshoot UE-V replication issues
 

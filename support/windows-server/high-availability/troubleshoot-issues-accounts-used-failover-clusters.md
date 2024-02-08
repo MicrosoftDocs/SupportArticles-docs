@@ -1,17 +1,15 @@
 ---
 title: Troubleshoot issues with accounts used by failover clusters
 description: Provides troubleshooting guidance for issues with accounts used by failover clusters.
-ms.date: 09/27/2023
+ms.date: 01/10/2024
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jdeffenbaugh, v-lianna
 ms.custom: sap:setup-and-configuration-of-clustered-services-and-applications, csstroubleshoot
-ms.technology: windows-server-high-availability
 ---
 # Troubleshoot issues with accounts used by failover clusters
 

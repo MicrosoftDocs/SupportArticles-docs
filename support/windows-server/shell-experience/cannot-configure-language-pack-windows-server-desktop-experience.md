@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, garrmc, estalin, v-jesits
 ms.custom: sap:desktop-shell, csstroubleshoot
-ms.technology: windows-server-shell-experience
 ---
 # Cannot configure a language pack for Windows Server 2019 Desktop Experience
 

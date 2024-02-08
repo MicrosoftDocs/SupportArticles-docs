@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: tinab, kaushika
 ms.custom: sap:legacy-authentication-ntlm, csstroubleshoot
-ms.technology: windows-server-security
 ---
 # Network access validation algorithms and examples for Windows Server 2003, Windows XP, and Windows 2000
 

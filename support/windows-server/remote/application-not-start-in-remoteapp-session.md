@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, mghazai
 ms.custom: sap:remoteapp-applications, csstroubleshoot
-ms.technology: windows-server-rds
 ---
 # An application does not start in a Windows Server Terminal Services RemoteApp session
 

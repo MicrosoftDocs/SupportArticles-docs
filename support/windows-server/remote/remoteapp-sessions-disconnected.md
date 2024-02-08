@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:remoteapp-applications, csstroubleshoot
-ms.technology: windows-server-rds
 ---
 # RemoteApp sessions are disconnected when all RemoteApp windows and user-launched notification area icons are closed
 

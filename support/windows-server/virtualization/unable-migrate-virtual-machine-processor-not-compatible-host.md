@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:live-migration, csstroubleshoot
-ms.technology: hyper-v
 ---
 # Unable to migrate virtual machine from one host to another
 
