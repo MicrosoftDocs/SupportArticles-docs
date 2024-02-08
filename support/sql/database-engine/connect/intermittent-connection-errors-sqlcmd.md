@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting intermittent connection errors with SQLCMD
-description: This article provides symptoms and resolution for troubleshooting intermittent connection errors with SQLCMD.
-ms.date: 01/02/2024
+description: This article provides vaious scenarios and resolution for troubleshooting intermittent connection errors with SQLCMD.
+ms.date: 01/08/2024
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
@@ -12,7 +12,7 @@ ms.custom: sap:Connection issues
 
 This article helps you to resolve the intermittent connection "OS error 10054" using the command line utility **SQLCMD**.
 
-## Symptoms
+## Errors
 
 You see the following warning and error messages:
 
@@ -26,19 +26,19 @@ One of the possible causes of these errors is an unsupported driver.
 
 ## Questions to consider
 
-Consider the following questions and check if any of them match your results:
+Consider the following scenarios and check if any of them match your issues:
 
-- You collect the Network trace and find that TLS v1.0 and v1.1 are disabled, while TLS v1.2 is enabled. On the SQL Server, TLS v1.0, v1.1, and v1.2 are enabled on the Application server.
+- You collect the Network trace and find that TLS v1.0 and v1.1 are disabled, while TLS v1.2 is enabled. On the SQL Server, TLS v1.0, v1.1, and v1.2 are enabled on the Application Server.
 
   :::image type="content" source="media/intermittent-connection-errors-with-sqlcmd/intermittent-connection-sqlcmd-errors.png" alt-text="TLS versions 1.0, 1.1, and 1.2 are enabled on the application server.":::
 
-- Did you run a [UDL test](test-oledb-connectivity-use-udl-file.md) on the application server using both the Microsoft OLE DB Provider for SQL Server and the SNAC 11 provider and the connection failed? The driver "Microsoft OLE DB Provider for SQL Server" is deprecated and doesn't support TLS 1.2.
+- You run a [UDL test](test-oledb-connectivity-use-udl-file.md) on the application server using both the Microsoft OLE DB Provider for SQL Server and the SNAC 11 provider and the connection fails. You also receive a message that the driver "Microsoft OLE DB Provider for SQL Server" is deprecated and doesn't support TLS 1.2.
 
-Has the Application Server successfully tested the ODBC data source using SQL Server Native Client 11? It could be possible that SQL Server Native Client 10.0 isn't supported and you might experience the error message "The connection failed with SQL State: '08001' SQL Server Error: 10054 [Microsoft][SQL Server Native Client 10.0]TCP Provider: An existing connection was forcibly closed by remote host. [Microsoft][SQL Server Native Client 10.0]Client unable to establish connection." The message might appear because the Application Server uses the older version of Diffie-Hellman algorithm v1, while SQL Server uses the newer version, v2, which causes intermittent TLS failures.
+- The Application Server uses SQL Server Native Client 11 to successfully test the ODBC data source. It could be possible that SQL Server Native Client 10.0 isn't supported and you might experience the error message "The connection failed with SQL State: '08001' SQL Server Error: 10054 [Microsoft][SQL Server Native Client 10.0]TCP Provider: An existing connection was forcibly closed by remote host. [Microsoft][SQL Server Native Client 10.0]Client unable to establish connection." The message might appear because the Application Server uses the older version of Diffie-Hellman algorithm v1, while SQL Server uses the newer version, v2, which causes intermittent TLS failures.
 
 ## Resolution
 
-To resolve the error messages, follow these steps:
+To resolve these issues, follow these steps:
 
 1. Specify SQL Server Native Client 11 in the connection string.
 
