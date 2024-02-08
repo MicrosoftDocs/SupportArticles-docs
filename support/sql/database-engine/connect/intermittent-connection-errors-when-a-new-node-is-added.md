@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting intermittent connection errors
-description: This article provides symptoms and resolution for troubleshooting the intermittent connection errors.
-ms.date: 01/02/2024
+description: This article helps you to resolve an issue related to the intermittent connection.
+ms.date: 01/08/2024
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
@@ -10,11 +10,15 @@ ms.custom: sap:Connection issues
 
 # Intermittent connection errors occur when a new node is added to the Always On environment
 
-There are intermittent connection errors when you add a new node to the existing Always On environment. When you try to connect to the SQL Server, the following intermittent error message is shown:
+You might experience intermittent connection errors when you add a new node to the existing Always On environment.
+
+## Symptoms
+
+Consider a scenario where you try to connect to the SQL Server, the following intermittent error message is shown:
 
 > The connection was successfully established with the server, but then an error occurred during the login process. (provider: SSL Provider, error: 0 - An existing connection was forcibly closed by the remote host.)
 
-## Symptoms
+## Cause
 
 One of the possible reasons for this issue could be due to a mismatch between security protocols between the database and the application machine.
 
@@ -23,7 +27,7 @@ One of the possible reasons for this issue could be due to a mismatch between se
 You can address the intermittent error message by resolving the mismatch between security protocols. Node1 encrypts information using AES128/256, while Node2 uses RC4. To troubleshoot this problem, follow these steps:
 
 1. Download [IIS Crypto](https://www.nartac.com/Products/IISCrypto/Download).
-1. Download and install the GUI version of the IIS Crypto tool on the server.
+1. Install the GUI version of the IIS Crypto tool on the server.
 1. Configure **Cipher Suites**.  
 1. Launch the **IIS Crypto** tool on the server.
 1. In the IIS Crypto interface, select **Cipher Suites** in the left panel.  
