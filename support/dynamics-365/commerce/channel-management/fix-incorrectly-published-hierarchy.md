@@ -23,11 +23,11 @@ To resolve this issue, follow these steps to delete the incorrectly dated hierar
 4. On the right side of the screen, select **Related information**.
 5. Under **Future changes**, select **More**.
 
-   :::image type="content" source="media/fix-incorrectly-published-heirarchy/hiearchy-related-information.png" alt-text="Screenshot that shows the More option under Future changes on the Related information flyout menu.":::
+   :::image type="content" source="media/fix-incorrectly-published-hierarchy/hiearchy-related-information.png" alt-text="Screenshot that shows the More option under Future changes on the Related information flyout menu.":::
 
 6. In the **Publication date** column, select the "Filter" icon.
 
-   :::image type="content" source="media/fix-incorrectly-published-heirarchy/hiearchy-publication-date-filter.png" alt-text="Screenshot that shows the filter icon in the Publication date column.":::
+   :::image type="content" source="media/fix-incorrectly-published-hierarchy/hiearchy-publication-date-filter.png" alt-text="Screenshot that shows the filter icon in the Publication date column.":::
 
 7. Select **Clear** to remove the filtered value.
 8. In the list, select the hierarchy with the future publish date.
