@@ -1,130 +1,127 @@
 ---
-# Required metadata
-# For more information, see https://review.learn.microsoft.com/en-us/help/platform/learn-editor-add-metadata?branch=main
-# For valid values of ms.service, ms.prod, and ms.topic, see https://review.learn.microsoft.com/en-us/help/platform/metadata-taxonomies?branch=main
-
-title:       # Add a title for the browser tab
-description: # Add a meaningful description for search results
-author:      sapatadi # GitHub alias
-ms.author:   sapatadi # Microsoft alias
-ms.service:  # Add the ms.service or ms.prod value
-# ms.prod:   # To use ms.prod, uncomment it and delete ms.service
-ms.topic:    # Add the ms.topic value
-ms.date:     02/06/2024
+title: Remove an active unmanaged layer for ribbon
+description: Provides steps to remove the unmanaged layer for a ribbon component in Microsoft Power Apps.
+author: caburk
+ms.author: caburk
+ms.reviewer: sapatadi, matp, brflood
+ms.date: 02/08/2024
 ---
 # Remove an active unmanaged layer for ribbon
 
-Unmanaged customizations reside at the top layer for a component and subsequently define the runtime behavior of the component. In most situations you don't want unmanaged customizations determining the behavior of your components. To remove the unmanaged layer for a component, follow these steps: 
+This article provides steps to remove the unmanaged layer for a ribbon component in Microsoft Power Apps.
 
-1. Open the Command Checker tool to delete unmanaged customization for ribbon components. To open Command Checker, append the &ribbondebug=true parameter to your Dynamics 365 application URL. Please follow [Troubleshooting ribbon issues in Power Apps - Power Apps | Microsoft Learn](/troubleshoot/power-platform/power-apps/create-and-use-apps/ribbon-issues) to understand how to use Command Checker. 
- 
-1. After the **Command Checker** dialog box opens, select the button/command/enable rule/display rule and click on “**View button solution layers**” for which there is an unmanaged customization. 
-As an example "New" Button below has an unmanaged customization! Once you select it, please click on “View button solution layers”   
-:::image type="content" source="media/ribbon-issues/unmanaged-button-location.png" alt-text="Screenshot shows button location in commandchecker." lightbox="media/ribbon-issues/unmanaged-button-location.png":::
+## Use Command Checker to remove an unmanaged layer for ribbon
 
-1. Once you click on "View button solution layers", you will see "Remove active customization" link next to unmanaged layer. 
+Unmanaged customizations reside at the top layer for a component and subsequently define the runtime behavior of the component. In most situations, you don't want unmanaged customizations determining the behavior of your components. To remove the unmanaged layer for a ribbon component, follow these steps:
 
-   1. :::image type="content" source="media/ribbon-issues/unmanaged-button-solutionlayer.png" alt-text="Screenshot shows solution layers for ribbon in commandchecker." lightbox="media/ribbon-issues/unmanaged-button-solutionlayer.png":::
- 
-1. Please regenerate metadata once you delete the unmanaged layer.
+1. Open the [Command Checker](ribbon-issues.md#use-command-checker) tool to delete unmanaged customization for ribbon components.
 
-:::image type="content" source="media/ribbon-issues/unmanaged-button-rcm.png" alt-text="Screenshot shows solution rcm ribbon in commandchecker." lightbox="media/ribbon-issues/unmanaged-button-rcm.png":::
+   To open Command Checker, append the `&ribbondebug=true` parameter to the URL of your Dynamics 365 application. For example:
 
-**Remove an unmanaged layer for ribbon (manual procedure)** 
+   `https://yourorgname.crm.dynamics.com/main.aspx?appid=<ID>&ribbondebug=true`
 
-This manual procedure can be done if the unmanaged ribbon customization you wish to remove is not visible in the Command Checker.  
-This process will require you to export an unmanaged solution containing the entity or Application Ribbon and edit the '<RibbonDiffXml>' in the customizations.xml file, and then import a new version of this solution where this component has been removed to delete the component. See [Export, prepare to edit, and import the ribbon](/powerapps/developer/model-driven-apps/export-prepare-edit-import-ribbon). 
+1. In the **Command Checker** dialog box, select a button and then select **View button solution layers** to find an unmanaged customization.
 
-**The ribbon component is entity-specific**
+   For example, the **New** button shown in the following screenshot has an unmanaged customization.
 
-Complete the following steps if the component is declared for a specific entity: 
-1. Open Advanced Settings. 
-1. Navigate to Settings > Solutions. 
-1. Open an existing solution or create a new solution 
-1. If creating a new solution (The following steps are not necessary if you already have an existing solution) 
-   1. Click New to create a new solution, set Publisher to your preferred publisher, or if you are unsure, use the default publisher for the organization. 
-   1. Click Entities. 
-   1. Click Add Existing. 
-   1. Select the entity your ribbon component is defined on and click OK. 
-   1. Make sure you uncheck the "Include entity metadata" and "Add all Assets" options before clicking Finish. 
-   1. Click Save. 
-1. Click Export Solution and export unmanaged solution. 
-1. Extract the .zip file. 
-1. Open the customizations.xml file. 
-1. Locate the ``<Entity>`` node child of the entity node you wish to edit and locate its child ``<RibbonDiffXml>`` node. 
-1. Locate the node to be deleted
-   1. To remove a command, you must locate the ``<CommandDefinition>`` node with the Id of the command you wish to delete.
-   1. To delete a HideCustomAction, you must locate the ``<HideCustomAction>`` node containing the Id of the item you wish to remove.
-   1. To delete an Enable Rule or Display Rule, you must locate the `<RuleDefinitions>` node and then locate the child `<EnableRule>` or `<DisplayRule>` node having the Id of the item you wish to delete.
-   
-   1. To remove a button, you must locate the ``<CustomAction>`` node with the Id of the CustomAction you wish to delete or locate and delete the CustomAction that contains the ``<button>``, ``<splitbutton>``, ``<flyoutanchor>`` or <group> node having the Id of the control you wish to delete.
-   
-   1. To remove a LocLabel, you must locate the <LocLabel> node with the Id of the LocLabel you wish to delete.
-   
-   1. To remove all ribbon customizations for this entity, replace the ``<RibbonDiffXml>`` with the default empty XMl as shown below under `[`Removing all unmanaged ribbon customizations`](https://eng.ms/docs/cloud-ai-platform/business-applications-and-platform/bap-power-apps/papps-scale/commanding-ribbon-alm/remove-unmanaged-solution-layer#removing-all-unmanaged-ribbon-customizations) 
-   
-1. Edit the ``<RibbonDiffXml>`` node and remove the appropriate node(s) located as described above. Make sure you don't unintentionally delete other nodes that may be present. 
-1. Save the customizations.xml file. 
-1. Add the modified customizations.xml file back to the solution .zip file. 
-1. Import the solution file. 
-1. Click Publish All Customizations. 
+   :::image type="content" source="media/ribbon-issues/unmanaged-button-location.png" alt-text="Screenshot that shows the button location in Command Checker." lightbox="media/ribbon-issues/unmanaged-button-location.png":::
 
-**The ribbon component is in the application ribbon (applies to "All entities")** 
+1. Select **View button solution layers**, and then select the **Remove active customization** link next to the unmanaged layer.
 
-If the component is not entity-specific, rather it is applicable to "All Entities" declared in the application ribbon, then the steps will be slightly different as follows: 
+   :::image type="content" source="media/ribbon-issues/unmanaged-button-solutionlayer.png" alt-text="Screenshot that shows the solution layers for ribbon in Command Checker." lightbox="media/ribbon-issues/unmanaged-button-solutionlayer.png":::
 
-1. Open Advanced Settings.
+1. Regenerate metadata once you delete the unmanaged layer.
 
-1. Navigate to Settings > Solutions. 
+    :::image type="content" source="media/ribbon-issues/unmanaged-button-rcm.png" alt-text="Screenshot that shows the solution rcm ribbon in Command Checker." lightbox="media/ribbon-issues/unmanaged-button-rcm.png":::
 
-1. Open an existing solution or create a new solution 
+## Remove an unmanaged layer for ribbon (manual procedure)
 
-1. If creating a new solution (The following steps are not necessary if you already have an existing solution) 
+This manual procedure can be done if the unmanaged ribbon customization you want to remove isn't visible in the Command Checker.  
 
-   1. Click New to create a new solution, set Publisher to your preferred publisher, or if you are unsure, use the default publisher for the organization. 
-   
-   1. Click Client Extensions. 
-   
-   1. Click Add Existing. 
-   
-   1. Click Application Ribbons. 
-   
-   1. Click Save. 
-   
-1. Click Export Solution and export unmanaged solution. 
+This process requires you to export an unmanaged solution containing the entity or application ribbon and edit the `<RibbonDiffXml>` in the *customizations.xml* file, and then import a new version of this solution where this component was removed to delete the component. For more information, see [Export, prepare to edit, and import the ribbon](/powerapps/developer/model-driven-apps/export-prepare-edit-import-ribbon).
 
-1. Extract the .zip file. 
+## The ribbon component is entity-specific
 
-1. Open the customizations.xml file. 
+Follow these steps if the component is declared for a specific entity:
 
-1. Locate the root <RibbonDiffXml> node. 
+1. Open **Advanced Settings**.
+1. Navigate to **Settings** > **Solutions**.
+1. Open an existing solution or create a new solution.
+1. Create a new solution. (The following steps aren't necessary if you already have an existing solution.)
+   1. Select **New** to create a new solution, set **Publisher** to your preferred publisher, or if you're unsure, use the default publisher for the organization.
+   1. Select **Entities**.
+   1. Select **Add Existing**.
+   1. Select the entity your ribbon component is defined on and select **OK**.
+   1. Make sure you uncheck the **Include entity metadata** and **Add all Assets** options before selecting **Finish**.
+   1. Select **Save**.
 
+1. Select **Export Solution** and export the unmanaged solution.
+1. Extract the *.zip* file.
+1. Open the *customizations.xml* file.
+1. Locate the `<Entity>` node, child of the entity node you want to edit, and locate its child `<RibbonDiffXml>` node.
 1. Locate the node to be deleted.
 
-   1.  To remove a command, you must locate the ``<CommandDefinition>`` node with the Id of the command you wish to delete. 
-   
-   1.  To delete a HideCustomAction, you must locate the ``<HideCustomAction>`` node containing the Id of the item you wish to remove. 
-   
-   1.  To delete an Enable Rule or Display Rule, you must locate the ``<RuleDefinitions>`` node and then locate the child ``<EnableRule>`` or ``<DisplayRule>`` node having the Id of the item you wish to delete. 
-   
-   1.  To remove a button, you must locate the ``<CustomAction>`` node with the Id of the CustomAction you wish to delete or locate and delete the CustomAction that contains the ``<button>``, ``<splitbutton>``, ``<flyoutanchor>`` or ``<group>`` node having the Id of the control you wish to delete. 
-   
-   1.  To remove a LocLabel, you must locate the ``<LocLabel>`` node with the Id of the LocLabel you wish to delete.
-   
-   1.  To remove all ribbon customizations for the application ribbon, replace the ``<RibbonDiffXml>`` with the default empty XMl as shown below under [Removing all unmanaged ribbon customizations](https://eng.ms/docs/cloud-ai-platform/business-applications-and-platform/bap-power-apps/papps-scale/commanding-ribbon-alm/remove-unmanaged-solution-layer#removing-all-unmanaged-ribbon-customizations) 
-   
-1.  Edit the ``<RibbonDiffXml>`` node and remove the appropriate node located as described above. Make sure you don't unintentionally delete other nodes that may be present. 
+   1. To remove a command, you must locate the `<CommandDefinition>` node with the ID of the command you want to delete.
+   1. To delete a `HideCustomAction`, you must locate the `<HideCustomAction>` node containing the ID of the item you want to remove.
+   1. To delete an "Enable Rule" or "Display Rule," you must locate the `<RuleDefinitions>` node and then locate the child `<EnableRule>` or `<DisplayRule>` node having the ID of the item you want to delete.
 
-1. Save the customizations.xml file. 
-1. Add the modified customizations.xml file back to the compressed solution .zip file. 
-1. Import the solution file. 
-1. Click Publish All Customizations.  
+   1. To remove a button, you must locate the `<CustomAction>` node with the ID of the `CustomAction` you want to delete. Or, locate and delete the `CustomAction` that contains the `<button>`, `<splitbutton>`, `<flyoutanchor>`, or `<group>` node having the ID of the control you want to delete.
 
-**Removing all unmanaged ribbon customizations** 
+   1. To remove a `LocLabel`, you must locate the `<LocLabel>` node with the ID of the `LocLabel` you want to delete.
 
-To remove all unmanaged ribbon customizations, for either a specific entity or application ribbon, follow the steps above and replace the ``<RibbonDiffXml>`` in the solution customizations.xml with the following default empty XML declaration:
+   1. To remove all ribbon customizations for this entity, replace the `<RibbonDiffXml>` with the default empty XMl as shown in the [Remove all unmanaged ribbon customizations](#remove-all-unmanaged-ribbon-customizations) section of this article.
 
-```
+1. Edit the `<RibbonDiffXml>` node and remove one or more appropriate nodes located as described above. Make sure you don't unintentionally delete other nodes that might be present.
+1. Save the *customizations.xml* file.
+1. Add the modified *customizations.xml* file back to the *solution .zip* file.
+1. Import the solution file.
+1. Select **Publish All Customizations**.
+
+## The ribbon component is in the application ribbon (applies to "All entities")
+
+If the component isn't entity-specific, rather it's applicable to "All Entities" declared in the application ribbon, then the steps are slightly different:
+
+1. Open **Advanced Settings**.
+1. Navigate to **Settings** > **Solutions**.
+1. Open an existing solution or create a new solution.
+1. Create a new solution. (The following steps aren't necessary if you already have an existing solution.)
+
+   1. Select **New** to create a new solution, set **Publisher** to your preferred publisher, or if you're unsure, use the default publisher for the organization.
+   1. Select **Client Extensions**.
+   1. Select **Add Existing**.
+   1. Select **Application Ribbons**.
+   1. Select **Save**.
+
+1. Select **Export Solution** and export unmanaged solution.
+1. Extract the *.zip file*.
+1. Open the *customizations.xml* file.
+1. Locate the root `<RibbonDiffXml>` node.
+1. Locate the node to be deleted.
+
+   1. To remove a command, you must locate the `<CommandDefinition>` node with the ID of the command you want to delete.
+
+   1. To delete a HideCustomAction, you must locate the `<HideCustomAction>` node containing the ID of the item you want to remove.
+
+   1. To delete an "Enable Rule" or "Display Rule," you must locate the `<RuleDefinitions>` node and then locate the child `<EnableRule>` or `<DisplayRule>` node having the ID of the item you want to delete.
+
+   1. To remove a button, you must locate the `<CustomAction>` node with the ID of the `CustomAction` you want to delete. Or, locate and delete the `CustomAction` that contains the `<button>`, `<splitbutton>`, `<flyoutanchor>`, or `<group>` node having the ID of the control you want to delete.
+
+   1. To remove a `LocLabel`, you must locate the ``<LocLabel>`` node with the ID of the `LocLabel` you want to delete.
+
+   1. To remove all ribbon customizations for the application ribbon, replace the `<RibbonDiffXml>` with the default empty XMl as shown in the [Remove all unmanaged ribbon customizations](#remove-all-unmanaged-ribbon-customizations) section of this article.
+
+1. Edit the `<RibbonDiffXml>` node and remove the appropriate node located as described above. Make sure you don't unintentionally delete other nodes that might be present.
+
+1. Save the *customizations.xml* file.
+1. Add the modified *customizations.xml* file back to the compressed solution *.zip* file.
+1. Import the solution file.
+1. Select **Publish All Customizations**.  
+
+## Remove all unmanaged ribbon customizations
+
+To remove all unmanaged ribbon customizations, for either a specific entity or application ribbon, follow the steps above and replace the `<RibbonDiffXml>` in the solution *customizations.xml* file with the following default empty XML declaration:
+
+```xml
 <RibbonDiffXml>
    <CustomActions />
    <Templates>
