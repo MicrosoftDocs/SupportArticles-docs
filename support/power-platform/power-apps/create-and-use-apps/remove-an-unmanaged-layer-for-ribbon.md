@@ -16,7 +16,7 @@ ms.date:     02/06/2024
 
 Unmanaged customizations reside at the top layer for a component and subsequently define the runtime behavior of the component. In most situations you don't want unmanaged customizations determining the behavior of your components. To remove the unmanaged layer for a component, follow these steps: 
 
-1. Open the Command Checker tool to delete unmanaged customization for ribbon components. To open Command Checker, append the &ribbondebug=true parameter to your Dynamics 365 application URL. Please follow [Troubleshooting ribbon issues in Power Apps - Power Apps | Microsoft Learn](/troubleshoot/power-platform/power-apps/create-and-use-apps/ribbon-issues) to understand how to use command checker. 
+1. Open the Command Checker tool to delete unmanaged customization for ribbon components. To open Command Checker, append the &ribbondebug=true parameter to your Dynamics 365 application URL. Please follow [Troubleshooting ribbon issues in Power Apps - Power Apps | Microsoft Learn](/troubleshoot/power-platform/power-apps/create-and-use-apps/ribbon-issues) to understand how to use Command Checker. 
  
 1. After the **Command Checker** dialog box opens, select the button/command/enable rule/display rule and click on “**View button solution layers**” for which there is an unmanaged customization. 
 As an example "New" Button below has an unmanaged customization! Once you select it, please click on “View button solution layers”   
@@ -42,12 +42,12 @@ Complete the following steps if the component is declared for a specific entity:
 1. Navigate to Settings > Solutions. 
 1. Open an existing solution or create a new solution 
 1. If creating a new solution (The following steps are not necessary if you already have an existing solution) 
-1. Click New to create a new solution, set Publisher to your preferred publisher, or if you are unsure, use the default publisher for the organization. 
-1. Click Entities. 
-1. Click Add Existing. 
-1. Select the entity your ribbon component is defined on and click OK. 
-1. Make sure you uncheck the "Include entity metadata" and "Add all Assets" options before clicking Finish. 
-1. Click Save. 
+   1. Click New to create a new solution, set Publisher to your preferred publisher, or if you are unsure, use the default publisher for the organization. 
+   1. Click Entities. 
+   1. Click Add Existing. 
+   1. Select the entity your ribbon component is defined on and click OK. 
+   1. Make sure you uncheck the "Include entity metadata" and "Add all Assets" options before clicking Finish. 
+   1. Click Save. 
 1. Click Export Solution and export unmanaged solution. 
 1. Extract the .zip file. 
 1. Open the customizations.xml file. 
@@ -124,7 +124,8 @@ If the component is not entity-specific, rather it is applicable to "All Entitie
 
 To remove all unmanaged ribbon customizations, for either a specific entity or application ribbon, follow the steps above and replace the ``<RibbonDiffXml>`` in the solution customizations.xml with the following default empty XML declaration:
 
-```<RibbonDiffXml>
+```
+<RibbonDiffXml>
    <CustomActions />
    <Templates>
       <RibbonTemplates Id="Mscrm.Templates"></RibbonTemplates>
@@ -136,4 +137,5 @@ To remove all unmanaged ribbon customizations, for either a specific entity or a
       <EnableRules />
    </RuleDefinitions>
    <LocLabels />
-   </RibbonDiffXml>```
+   </RibbonDiffXml>
+```
