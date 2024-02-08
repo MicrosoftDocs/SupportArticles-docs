@@ -20,6 +20,8 @@ items:
           href: create-and-use-apps/export-dynamic-worksheet-refresh-all.md
         - name: Ribbons and Command bar
           items:
+            - name: Ribbon issues
+              href: create-and-use-apps/ribbon-issues.md
             - name: Button is hidden
               href: create-and-use-apps/ribbon-issues-button-hidden.md
             - name: Button is visible
@@ -32,8 +34,6 @@ items:
               href: create-and-use-apps/ribbon-non-customizable-buttons.md
             - name: Remove an active unmanaged layer of the ribbon
               href: create-and-use-apps/remove-an-unmanaged-layer-for-ribbon.md
-            - name: Ribbon issues
-              href: create-and-use-apps/ribbon-issues.md
             - name: Regenerate ribbon metadata
               href: create-and-use-apps/regenerate-ribbon-metadata.md
         - name: Unified Interface
