@@ -22,7 +22,7 @@ After [setting up a greeting message for a channel](/dynamics365/customer-servic
 To resolve this issue, try the following workarounds:
 
 - You can shorten the greeting message configured for your voice channel.
-- If shortening the message isn't possible, you can introduce a Copilot Studio bot to welcome the customer instead of using a greeting message. The bot plays the same message, waits for the message to end, and then transfers the call to the agent. This method reduces the waiting time for the agent to be connected to the call.
+- If shortening the message isn't possible, you can introduce a [Copilot Studio bot](/dynamics365/customer-service/administer/overview-bots) to welcome the customer instead of using a greeting message. The bot plays the same message, waits for the message to end, and then transfers the call to the agent. This method reduces the waiting time for the agent to be connected to the call.
 
 To introduce a Copilot Studio bot to greet customers, complete the following steps:
 
