@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, yongrhee, ksarens, alexsc, niwelton
 ms.custom: sap:windows-defender-exploit-guard, csstroubleshoot
-ms.technology: windows-client-networking
 ---
 # Lost internet connectivity using VPN in Windows Defender Exploit Guard - Network Protection
 

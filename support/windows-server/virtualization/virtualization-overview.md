@@ -7,10 +7,8 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.technology: hyper-v
 ---
 # Virtualization troubleshooting documentation for Windows Server
 

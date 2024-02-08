@@ -5,7 +5,7 @@ author: adelgadohell
 ms.author: adelgadohell
 ms.reviewer: divargas
 ms.topic: troubleshooting
-ms.date: 10/13/2022
+ms.date: 01/31/2024
 ms.service: virtual-machines
 ms.subservice: vm-cannot-connect
 ms.collection: linux
@@ -22,7 +22,7 @@ Different distributions include SELinux out of the box or provide a straightforw
 
 * [Red Hat](https://www.redhat.com/en/topics/linux/what-is-selinux)
 * SUSE
-  * [SUSE Linux Enterprise Server 12](https://documentation.suse.com/sles/12-SP4/html/SLES-all/cha-selinux.html)
+  * [SUSE Linux Enterprise Server 12](https://documentation.suse.com/sles/12-SP5/html/SLES-all/cha-selinux.html)
   * [SUSE Linux Enterprise Server 15](https://documentation.suse.com/sles/15-SP4/html/SLES-all/cha-selinux.html)
 * [Debian](https://wiki.debian.org/SELinux)
 * [CentOS](https://wiki.centos.org/HowTos/SELinux)

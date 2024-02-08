@@ -3,7 +3,6 @@ title: Unicode BiDi isolation in dir not working
 description: The Unicode BiDi isolation in CSS dir property doesn't work in Internet Explorer and Microsoft Edge.
 ms.date: 03/26/2020
 ms.reviewer: saziz
-ms.technology: internet-explorer-development-website
 ---
 # Unicode BiDi isolation in CSS dir property doesn't work in Internet Explorer and Microsoft Edge
 

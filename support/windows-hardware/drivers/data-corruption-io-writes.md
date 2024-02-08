@@ -5,7 +5,7 @@ ms.date: 09/01/2020
 ms.custom: sap:Storage Driver
 ms.reviewer: ronh
 ms.topic: article
-ms.technology: windows-hardware-storage-driver
+ms.subservice: storage-driver
 ---
 # Storage developer may experience what appears as data corruption on IO writes
 

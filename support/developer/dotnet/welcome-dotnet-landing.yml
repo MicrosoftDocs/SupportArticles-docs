@@ -5,7 +5,7 @@ summary: Welcome to .NET troubleshooting. These articles explain how to determin
 metadata:
   title: .NET troubleshooting
   description: Landing page for .NET troubleshooting articles. # Required; article description that is displayed in search results. < 160 chars.
-  ms.prod: dotnet #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.service: dotnet
   ms.topic: landing-page # Required
   author: HaiyingYu #Required; your GitHub user alias, with correct capitalization.
   ms.author: HaiyingYu #Required; microsoft alias of author; optional team alias.

@@ -7,12 +7,10 @@ metadata:
   ms.author: delhan
   manager: dcscontentpm
   audience: itpro
-  ms.topic: faq
-  ms.prod: windows-server
+  ms.topic: faq  
   ms.custom: sap:general-information, csstroubleshoot
   localization_priority: medium
-  ms.reviewer: kaushika, squin, suehar, v-jeffbo
-  ms.technology: windows-server-eos
+  ms.reviewer: kaushika, squin, suehar, v-jeffbo  
 title: End of support for Windows Server 2008 and Windows Server 2008 R2
 summary: |
   This article provides some information about end of support for Windows Server 2008 and Windows Server 2008 R2.

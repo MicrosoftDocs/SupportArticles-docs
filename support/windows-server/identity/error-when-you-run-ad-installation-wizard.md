@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, fszita, v-jomcc
 ms.custom: sap:schema-update-failure-or-conflict, csstroubleshoot
-ms.technology: windows-server-active-directory
 ---
 # Error when you run the Active Directory Installation Wizard: The version of the Active Directory schema of the source forest is not compatible with the version of Active Directory on this computer
 

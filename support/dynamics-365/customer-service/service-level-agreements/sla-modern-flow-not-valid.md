@@ -3,7 +3,7 @@ title: SLA modern flow is not valid for ExecuteWorkflow error
 description: Provides a resolution for the Modern flow is not valid for ExecuteWorkflow error.
 ms.reviewer: sdas, ankugupta
 ms.author: sdas
-ms.date: 06/09/2023
+ms.date: 01/22/2024
 ---
 # "Modern flow is not valid for ExecuteWorkflow" error
 
@@ -25,7 +25,7 @@ To solve this issue, turn off and then turn on the SLA modern flow.
 
 Here are the steps to turn off or turn on a flow:
 
-1. Sign in to [Power Automate](https://make.powerautomate.com/) with a user who has the permissions to edit a flow.
+1. Sign in to [Power Automate](https://make.powerautomate.com/) as a user who has the permissions to edit a flow.
 
 2. Select the right environment from **Environments** in the upper-right corner.
 
@@ -43,7 +43,17 @@ Here are the steps to turn off or turn on a flow:
 
     :::image type="content" source="media/sla-modern-flow-not-valid/cloud-flows.png" alt-text="Screenshot shows the Cloud flows option in the left menu." border="false":::
 
-6. Select the respective flow, and then select **Turn off** and then **Turn on** from the top menu.
+6. To get the affected flow name, initiate an Open Data Protocol (OData) call using the affected flow ID from the error, and then search the flow name in Power Automate.
+
+   `<organization_url>/api/data/v9.1/workflows(<modern_flow_id_visible_in_error>)`
+
+    For example:
+
+   `"name": "Set default CDS entity workstream rule",`
+
+   :::image type="content" source="media/sla-modern-flow-not-valid/flow-name.png" alt-text="Screenshot shows how to identify the flow name through an OData call." border="false":::
+
+7. Select the respective flow, and then select **Turn off** and then **Turn on** from the top menu.
 
     If you aren't sure about the flow name, select any one of the listed flows, replace the flow ID (you can get it from the error message) in the URL from the browser's address bar, and press <kbd>Enter</kbd>. Then, select **Turn off** and then **Turn on** from the top menu.
 

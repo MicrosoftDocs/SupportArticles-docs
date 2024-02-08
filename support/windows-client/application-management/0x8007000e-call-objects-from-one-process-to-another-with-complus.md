@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:com+-administration-configuration-and-security, csstroubleshoot
-ms.technology: windows-client-application-compatibility
 ---
 # Error when you call many objects from one process to another by using COM+: Not enough storage is available to complete this operation (0x8007000e)
 

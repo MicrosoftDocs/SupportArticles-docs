@@ -7,12 +7,10 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: high
 ms.reviewer: kaushika
 ms.custom: sap:user-logon-fails, csstroubleshoot
 adobe-target: true
-ms.technology: windows-server-user-profiles
 ---
 # Turn on automatic logon in Windows
 

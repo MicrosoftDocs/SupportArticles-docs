@@ -51,7 +51,7 @@ The Boot partition contains a folder named "Boot." This folder is hidden by defa
 1. Run the following command line as an administrator, and then record the identifier of Windows Boot Loader (not Windows Boot Manager). The identifier is a 32-character code and it looks like this: xxxxxxxx-xxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx. You will use this identifier in the next step.
 
     ```console
-    bcdedit /store <Boot partition>:\boot\bcd /enum
+    bcdedit /store <Boot partition>:\boot\bcd /enum /v
     ```
 
 2. Repair the Boot Configuration data by running the following command lines. You must replace these placeholders by the actual values:

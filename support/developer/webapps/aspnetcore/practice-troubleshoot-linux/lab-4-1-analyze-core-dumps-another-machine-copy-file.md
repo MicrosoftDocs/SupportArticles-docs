@@ -2,9 +2,7 @@
 title: Copy core dump files to another machine
 description: This article describes how to copy core dump files from a Linux machine to another Windows VM.
 ms.date: 06/11/2021
-ms.prod: aspnet-core
 ms.reviewer: ramakoni, ahmetmb
-ms.technology: aspnetcore-practice-troubleshoot-linux
 author: ahmetmithat
 ---
 # Lab 4.1 Analyze core dump files after copying them to another machine

@@ -5,11 +5,9 @@ ms.date: 01/21/2022
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, feshehad, v-lianna
 ms.custom: sap:remote-desktop-services-terminal-services-licensing, csstroubleshoot
-ms.technology: windows-server-rds
 ---
 # License attributes aren't updated after installing 2019 license server
 

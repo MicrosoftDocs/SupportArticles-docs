@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-abhjoa, katpa
 ms.custom: sap:storage-hardware, csstroubleshoot
-ms.technology: windows-server-backup-and-storage
 ---
 # Replicated Cluster Shared Volumes are offline after an Azure Stack HCI upgrade
 

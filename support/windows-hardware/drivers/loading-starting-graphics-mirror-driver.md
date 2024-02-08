@@ -3,7 +3,7 @@ title: Loading and starting a graphics Mirror driver
 description: This article provides resolutions for the problem when a User connects to a remote computer with RDP and attempts to load a graphics mirror driver on a remote system, the mirror driver may fail to install or start.
 ms.date: 09/04/2020
 ms.custom: sap:Windows 7 Enterprise
-ms.technology: windows-hardware-display-driver
+ms.subservice: display-driver
 ---
 # Loading and starting a graphics Mirror driver over RDP
 

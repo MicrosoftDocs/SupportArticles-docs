@@ -2,7 +2,6 @@
 title: Error occurs when you remove a server
 description: This article provides resolutions for the problem that triggers an error when you try to remove an unreachable server from a Windows Server AppFabric cluster.
 ms.date: 08/24/2020
-ms.technology: dotnet-wcf
 ---
 # Error occurs when you try to remove a server from an AppFabric cluster
 

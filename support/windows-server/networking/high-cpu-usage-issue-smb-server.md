@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, alalve, v-lianna
 ms.custom: sap:smb, csstroubleshoot
-ms.technology: networking
 ---
 # High CPU usage issue on the SMB server
 
