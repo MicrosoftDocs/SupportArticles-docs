@@ -33,7 +33,7 @@ To introduce a Copilot Studio bot to greet customers, complete the following ste
 1. In the [Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio) app, open your copilot and go to the **Topics & Plugins** page.
 1. Under **System**, select the **Conversation start** topic.
 1. In the **Message** node, add the greeting message that you want to be played before a call is transferred (or escalated) to an agent. Make sure the message node is set to **Speech**.
-1. Add a new node to transfer the conversation to the agent. Select the “plus” icon, and then select **Topic management** > **Transfer conversation**.
+1. Add a new node to transfer the conversation to the agent. Select the "plus" icon, and then select **Topic management** > **Transfer conversation**.
 1. Enter the message you want the agent to hear. For more information about creating and editing topics, see [Use topics to design a copilot conversation](/microsoft-copilot-studio/authoring-create-edit-topics).
 
     :::image type="content" source="media/greeting-message-delay-agent-connection/configure-voice-message.png" alt-text="Screenshot that shows how to configure a voice bot in Copilot Studio.":::
