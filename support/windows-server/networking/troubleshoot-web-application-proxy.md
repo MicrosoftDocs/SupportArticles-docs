@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, kgremban, jgerend, v-lianna
 ms.custom: sap:tcp/ip-communications, csstroubleshoot
-ms.technology: networking
 ms.assetid: a2fef55d-747b-4e20-8f21-5f8807e7ef87
 ---
 # Troubleshoot Web Application Proxy

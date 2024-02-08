@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, steverac
 ms.custom: sap:wmi, csstroubleshoot
-ms.technology: windows-client-system-management-components
 ---
 # The SMS Agent Host service does not start after you restart a Systems Management Server 2003 client computer
 

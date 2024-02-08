@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, dennhu, rahugoyal, v-lianna
 ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot, ikb2lmc
-ms.technology: windows-server-deployment
 ---
 # User profiles older than a specified number of days aren't deleted as expected on system restart
 

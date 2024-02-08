@@ -4,7 +4,7 @@ description: Introduces basic troubleshooting steps for Microsoft Teams dialer i
 ms.date: 08/22/2023
 ms.reviewer: asaftzuk, ilanak
 author: t-ronioded
-ms.author: t-ronioded
+ms.author: ronihemed
 ---
 # Basic troubleshooting steps for Microsoft Teams dialer
 

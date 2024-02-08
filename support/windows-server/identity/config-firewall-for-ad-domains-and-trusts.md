@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:active-directory-domain-or-forest-functional-level-updates, csstroubleshoot
-ms.technology: windows-server-active-directory
 ---
 # How to configure a firewall for Active Directory domains and trusts
 

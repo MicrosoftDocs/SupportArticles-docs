@@ -2,7 +2,6 @@
 title: How to set the zoom level in Internet Explorer 9
 description: Describes how to set the default zoom in Internet Explorer 9 and later versions to a custom level so that you can make the screen display larger or smaller for a webpage.
 ms.date: 04/21/2020
-ms.technology: internet-explorer-core-features
 ---
 # How to set the zoom level in Internet Explorer 9 and later versions
 

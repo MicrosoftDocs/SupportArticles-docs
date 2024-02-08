@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, arrenc, deverett, paulhut
 ms.custom: sap:user-computer-group-and-object-management, csstroubleshoot
-ms.technology: windows-client-active-directory
 ---
 # UAC blocks the elevation of executable applications that are signed with revoked certificates
 

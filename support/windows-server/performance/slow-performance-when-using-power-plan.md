@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, papant, deepku
 ms.custom: sap:slow-performance, csstroubleshoot
-ms.technology: windows-server-performance
 ---
 # Slow performance on Windows Server when using the Balanced power plan
 

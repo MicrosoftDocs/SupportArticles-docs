@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, scottmca
 ms.custom: sap:activation, csstroubleshoot
-ms.technology: windows-server-deployment
 ---
 # Error message when you try to validate a copy of Windows: The cryptographic operation failed because of a local security option setting
 

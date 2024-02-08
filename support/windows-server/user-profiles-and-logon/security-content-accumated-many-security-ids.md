@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, richfl
 ms.custom: sap:user-logon-fails, csstroubleshoot
-ms.technology: windows-server-user-profiles
 ---
 # Error message: During a logon attempt, the user's security context accumulated too many security IDs
 

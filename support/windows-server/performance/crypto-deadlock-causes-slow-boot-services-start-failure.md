@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, tode
 ms.custom: sap:boot-is-slow, csstroubleshoot
-ms.technology: windows-server-performance
 ---
 # Http <-> Crypto deadlock causes slow boot and service start failure on SSL-enabled
 

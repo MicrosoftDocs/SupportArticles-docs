@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, rkiran, jarrettr, sabinn
 ms.custom: sap:performance-audio-and-video-and-remotefx, csstroubleshoot
-ms.technology: windows-server-rds
 ---
 # New and existing RemoteFX-enabled VMs do not start on a DC that is running the Remote Desktop Virtualization Host service on Windows Server
 

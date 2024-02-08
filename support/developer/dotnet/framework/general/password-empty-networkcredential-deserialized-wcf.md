@@ -3,7 +3,6 @@ title: Password is empty when NetworkCredential is deserialized
 description: This article describes a problem that occurs when you deserialize a NetworkCredential object that was passed as a parameter to a WCF service operation. In this situation, the password field is empty. A resolution is provided.
 ms.date: 05/12/2020
 ms.reviewer: amymcel, khdang
-ms.technology: dotnet-general
 ---
 # Password field is empty when a NetworkCredential object is deserialized at the WCF service
 

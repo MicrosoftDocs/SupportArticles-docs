@@ -4,7 +4,7 @@ description: This article provides a workaround for the problem that occurs when
 ms.date: 01/04/2021
 ms.reviewer: danielwh
 ms.topic: troubleshooting
-ms.technology: windows-hardware-general
+ms.subservice: general
 ---
 # VSS_WS_FAILED_AT_FREEZE error when you try to make a VSS shadow copy
 

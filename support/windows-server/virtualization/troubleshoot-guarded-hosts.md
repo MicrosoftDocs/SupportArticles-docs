@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, dongill, inhenkel, v-lianna
 ms.custom: sap:shielded-virtual-machines, csstroubleshoot
-ms.technology: hyper-v
 ms.assetid: 80ea38f4-4de6-4f85-8188-33a63bb1cf81
 ---
 # Troubleshoot guarded hosts

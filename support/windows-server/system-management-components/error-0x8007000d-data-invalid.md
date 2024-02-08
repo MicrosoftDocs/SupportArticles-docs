@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-sanair
 ms.custom: sap:task-scheduler, csstroubleshoot
-ms.technology: windows-server-system-management-components
 ---
 # Error message when you run an old scheduled task or a newly created scheduled task on a domain controller: "0x8007000d: The data is invalid"
 

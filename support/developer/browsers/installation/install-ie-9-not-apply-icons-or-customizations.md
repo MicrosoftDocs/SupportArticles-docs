@@ -3,7 +3,6 @@ title: Icons or customizations are missing of Internet Explorer 9
 description: This article describes the problem that icons and user-defined aren't displayed when the Internet Explorer 9 is installed but the system isn't restarted, here a solution is provided for this.
 ms.date: 06/09/2020
 ms.reviewer: 
-ms.technology: internet-explorer-installation
 ---
 # Installing Internet Explorer 9 doesn't apply icons or per-user customizations
 
