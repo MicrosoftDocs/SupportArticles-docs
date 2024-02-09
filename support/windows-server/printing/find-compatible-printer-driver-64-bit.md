@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:management-and-configuration:-installing-print-drivers, csstroubleshoot
-ms.technology: windows-server-printing
 ---
 # How to find a compatible printer driver for a computer that's running a 64-bit version of Windows
 

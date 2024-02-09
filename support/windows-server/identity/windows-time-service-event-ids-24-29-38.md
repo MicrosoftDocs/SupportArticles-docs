@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:virtualized-domain-controller-errors-and-questions, csstroubleshoot
-ms.technology: windows-server-active-directory
 ---
 # You receive Windows Time Service event IDs 24, 29, and 38 on a virtualized domain controller
 

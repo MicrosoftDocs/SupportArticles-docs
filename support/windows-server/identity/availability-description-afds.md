@@ -6,11 +6,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, bbrekkan
 ms.custom: sap:active-directory-federation-services-ad-fs, csstroubleshoot
-ms.technology: windows-server-active-directory
 ---
 # Availability and description of Active Directory Federation Services 2.0
 

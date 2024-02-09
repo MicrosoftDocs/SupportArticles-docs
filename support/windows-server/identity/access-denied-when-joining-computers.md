@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-jomcc, davete
 ms.custom: sap:user-computer-group-and-object-management, csstroubleshoot
-ms.technology: windows-server-active-directory
 ---
 # Error: Access is denied when non-administrator users who have been delegated control try to join computers to a domain controller
 

@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-tea, v-jesits, johnbay
 ms.custom: sap:permissions-access-control-and-auditing, csstroubleshoot
-ms.technology: windows-server-security
 ---
 # Some SIDs do not resolve into friendly names
 

@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: adityah, kaushika
 ms.custom: sap:configuring-and-using-backup-software, csstroubleshoot
-ms.technology: windows-server-backup-and-storage
 ---
 # Windows Server Backup MMC fails to open
 

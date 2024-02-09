@@ -4,7 +4,6 @@ description: This article provides a workaround for the problem where you cannot
 ms.date: 10/27/2020
 ms.custom: sap:General
 ms.reviewer: irfanahm
-ms.technology: dotnet-general
 ---
 # Error when you build a project in Visual Studio
 

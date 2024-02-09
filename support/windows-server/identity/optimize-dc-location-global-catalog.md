@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:active-directory-topology-sites-subnets-and-connection-objects, csstroubleshoot
-ms.technology: windows-server-active-directory
 ---
 # How to optimize the location of a domain controller or global catalog that resides outside of a client's site
 

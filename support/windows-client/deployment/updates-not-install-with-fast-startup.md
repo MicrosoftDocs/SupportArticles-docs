@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:power-management, csstroubleshoot
-ms.technology: windows-client-deployment
 ---
 # Updates may not be installed with Fast Startup in Windows 10
 

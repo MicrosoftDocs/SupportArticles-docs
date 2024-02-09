@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, rolandw, uspand, amaltsev
 ms.custom: sap:schema-update-known-issues-best-practices-workflow-review, csstroubleshoot
-ms.technology: windows-client-active-directory
 ---
 # Error when you check domain object properties by using RSAT in Windows 10: msDS-ExpirePasswordsOnSmartCardOnlyAccounts not exist
 

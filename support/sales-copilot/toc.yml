@@ -3,24 +3,28 @@
   items:
     - name: CRM permissions and configurations
       items:
+        - name: '"Align missing fields" error'
+          href: crm-permissions-and-configurations/align-missing-fields-error.md
         - name: Can't update records due to missing record access in Salesforce CRM
           href: crm-permissions-and-configurations/missing-record-update-edit-access.md
         - name: Can't update records due to missing object access in Salesforce CRM
           href: crm-permissions-and-configurations/missing-object-update-edit-access.md
         - name: Can't save email to CRM due to invalid mailbox settings
           href: crm-permissions-and-configurations/update-settings-to-save-emails-error.md
+        - name: Can't save email to CRM if enhanced email isn't enabled in Salesforce CRM
+          href: crm-permissions-and-configurations/update-settings-in-saleforce-error.md
         - name: '"Fix mailbox errors in Dynamics 365" error'
           href: crm-permissions-and-configurations/fix-mailbox-errors-in-dynamics-365.md
         - name: Missing privileges error when signing in
           href: crm-permissions-and-configurations/missing-privileges-sign-in.md
+        - name: '"No access to Dynamics 365" error'
+          href: crm-permissions-and-configurations/no-access-to-dynamics-365-error.md
         - name: Salesforce CRM users can't see data in Copilot for Sales
           href: crm-permissions-and-configurations/no-column-error.md
     - name: Outlook side panel
       items:
         - name: Sign-in issue when opening the Copilot for Sales pane in Outlook
           href: outlook-side-panel/problem-starting-copilot-for-sales.md
-        - name: Update add-in error in Copilot for Sales add-in for Microsoft Outlook
-          href: outlook-side-panel/update-add-in-error.md  
     - name: Setup, installation, and sign-in
       items:
         - name: Authentication issues when connecting to Salesforce CRM
@@ -33,10 +37,8 @@
           href: setup-installation-and-sign-in/connection-is-disabled-error.md
         - name: Can't sign in to Salesforce due to blocked Salesforce connector
           href: setup-installation-and-sign-in/sign-in-issue-with-blocked-connector.md
-        - name: Can't connect to Dynamics 365 with two-factor authentication enabled
+        - name: Can't connect to Dynamics 365 with multifactor authentication enabled
           href: setup-installation-and-sign-in/connection-issue-with-two-factor-auth.md
-        - name: Can't save email to CRM if enhanced email isn't enabled in Salesforce CRM
-          href: setup-installation-and-sign-in/update-settings-in-saleforce-error.md
         - name: '"Failure passed to redirect url" error when signing in'
           href: setup-installation-and-sign-in/failure-passed-to-redirect-url-blocked-app.md
         - name: First Salesforce CRM user can't access Copilot for Sales
@@ -45,10 +47,10 @@
           href: setup-installation-and-sign-in/oauth2-authorization-flow-failed-for-service.md
         - name: '"No default BAP location found for this tenant" error'
           href: setup-installation-and-sign-in/no-default-bap-location-found-error.md
-        - name: '"No access to Dynamics 365" error'
-          href: setup-installation-and-sign-in/no-access-to-dynamics-365-error.md
         - name: '"Request administrator permissions to access Salesforce using APIs" error'
           href: setup-installation-and-sign-in/request-your-crm-administrator-permissions-error.md
+        - name: Update add-in error in Copilot for Sales add-in for Microsoft Outlook
+          href: setup-installation-and-sign-in/update-add-in-error.md  
         - name: '"User does not have required privileges to access the org" error'
           href: setup-installation-and-sign-in/user-does-not-have-required-privileges-error.md
     - name: Teams collaboration spaces

@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:background-intelligent-transfer-service-bits, csstroubleshoot
-ms.technology: networking
 ---
 # Error when you download a file by using the Background Intelligent Transfer Service: Content file download failed
 

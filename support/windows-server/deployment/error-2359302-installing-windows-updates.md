@@ -7,11 +7,9 @@ ms.date: 11/23/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, shahke, v-lianna
 ms.custom: sap:servicing, csstroubleshoot, ikb2lmc
-ms.technology: windows-server-deployment
 ---
 # Error code 2359302 when installing updates in Windows Server 2019
 

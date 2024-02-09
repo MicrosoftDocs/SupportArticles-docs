@@ -1,14 +1,14 @@
 ---
 title: Deployment of private endpoints for Azure Cosmos DB fails
 description: Troubleshoot failed Azure Resource Manager deployments that are related to private endpoints created inline for Azure Cosmos DB accounts.
-ms.service: cosmos-db
-ms.custom: devx-track-arm-template
 author: seesharprun
-ms.author: sidandrews
-ms.topic: troubleshooting
 editor: v-jsitser
+ms.author: sidandrews
 ms.reviewer: ouryba, v-jayaramanp
-ms.date: 10/12/2023
+ms.service: cosmos-db
+ms.topic: troubleshooting-problem-resolution
+ms.date: 01/18/2024
+ms.custom: devx-track-arm-template
 ---
 
 # Deployment of private endpoints for Azure Cosmos DB fails

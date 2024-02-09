@@ -2,7 +2,6 @@
 title: Can't validate or run a workflow in WCF
 description: This article provides resolutions for the problem where you cannot validate or run a workflow in Windows Workflow Foundation that was created by using System.Activities.ActivityBuilder if it contains Visual Basic expressions.
 ms.date: 12/11/2020
-ms.technology: dotnet-wcf
 ---
 # You cannot validate or run a workflow in Windows Workflow Foundation that was created by using System.Activities.ActivityBuilder if it contains Visual Basic expressions
 

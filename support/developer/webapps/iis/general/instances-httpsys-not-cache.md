@@ -2,7 +2,7 @@
 title: Instances where HTTP.sys doesn't cache
 description: This article describes the instances that the HTTP.sys driver doesn't cache content.
 ms.date: 03/30/2020
-ms.technology: iis-general
+ms.subservice: general
 ---
 # Instances in which HTTP.sys doesn't cache content
 

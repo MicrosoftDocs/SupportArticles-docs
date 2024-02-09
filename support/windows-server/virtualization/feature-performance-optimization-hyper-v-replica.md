@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, prvijay
 ms.custom: sap:hyper-v-replica, csstroubleshoot
-ms.technology: hyper-v
 ---
 # Feature and performance optimization of Hyper-V Replica (HVR)
 

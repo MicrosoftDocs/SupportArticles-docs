@@ -5,11 +5,9 @@ ms.date: 05/14/2022
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate
 ms.custom: sap:nps, csstroubleshoot
-ms.technology: networking
 keywords: wireless connection, dropped connection, wireless authentication
 ---
 
