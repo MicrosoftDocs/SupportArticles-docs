@@ -425,6 +425,8 @@
           href: ../message-body/no-subject-content-in-automatically-email.md
         - name: Pictures are not shown but displayed as red X
           href: ../message-body/pictures-not-displayed-and-shown-as-red-x.md
+        - name: Record videos in Outlook and Loop
+          href: ../message-body/record-videos-in-outlook-and-loop.md
         - name: Strange characters in message body
           href: ../message-body/strange-characters-display-message-body.md
         - name: Specified Message Identity is Invalid error when opening delivery reports
