@@ -10,7 +10,7 @@ ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
 
 # SSL errors are reported after upgrading to TLS 1.2
 
-This article provides information about the Secure Sockets Layer (SSL) errors that you might encounter after you upgrade to TLS 1.2. It also lists the methods by which you can retrieve the data manually. You can also run the SQLCHECK tool and review the information in the SQLCHECK log file.
+This article provides information about the Secure Sockets Layer (SSL) errors that you might encounter after you upgrade to TLS 1.2. It also lists the methods by which you can retrieve the data manually. You can also run the SQLCHECK tool and review the information in the *SQLCHECK* log file.
 
 ## Symptoms
 
@@ -24,8 +24,6 @@ Consider the following scenario where you might see the following issues after y
 
 - There are no matching cryptographic algorithms between the client and the server.
 
-In the error certificate, you might observe the following points:
-
 In this scenario, you encounter the following issues after the upgrade is finished:
 
 - Problems that affect the server certificate also affect local connections and connections from client computers. For more information, see [Encrypting Connections to SQL Server](/previous-versions/sql/sql-server-2008-r2/ms189067(v=sql.105)?redirectedfrom=MSDN).
@@ -38,7 +36,7 @@ In this scenario, you encounter the following issues after the upgrade is finish
   **TCP**
   > A connection was successfully established with the server, but then an error occurred during the login process. (provider: SSL Provider, error: 0 - The connection was forcibly closed by remote host 10054) Microsoft SQL Server, Error: 233.
 
-If you have a network capture, it might resemble the following screenshot that shows that the server responds to the Client Hello packet by closing the connection.
+If you have a network capture, it might resemble the following screenshot that shows that the server responds to the `Client Hello` packet by closing the connection.
 
   :::image type="content" source="media/ssl-errors-after-tls-1-2/ss-errors-after-upgrade-netwk-capture.png" alt-text="Screenshot of a network capture that shows how the server responds to the Client Hello packet.":::
 
@@ -59,7 +57,7 @@ To resolve these errors, follow these steps:
      `2023-05-30 14:59:30.89 spid15s The certificate [Cert Hash(sha1) "B3029394BB92AA8EDA0B8E37BAD09345B4992E3D"] was successfully loaded for encryption.`
       or
      `2023-05-19 04:58:56.42 spid11s A self-generated certificate was successfully loaded for encryption.`
-    If the certificate is self-generated, skip to step b.
+    If the certificate is self-generated, skip to step 2.
 
 1. Open the **Computer Certificate Store** in the Microsoft Management Console (MMC).
 
@@ -103,8 +101,8 @@ To check the enabled and disabled TLS protocols, follow these steps:
 
    `[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Server] "DisabledByDefault"=dword:00000000 "Enabled"=dword:00000001`
 
-> [!NOTE]
-> Any non-zero value is treated as TRUE. However, **1** is generally preferred instead of **FFFFFFFF** (or **-1**).
+    > [!NOTE]
+    > Any non-zero value is treated as TRUE. However, **1** is generally preferred instead of **FFFFFFFF** (or **-1**).
 
 1. Make sure that there are no incompatible settings.
 
