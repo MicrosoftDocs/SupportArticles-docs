@@ -32,6 +32,8 @@ items:
               href: create-and-use-apps/ribbon-issues-button-wrong-label.md
             - name: Non-customizable buttons in ribbon
               href: create-and-use-apps/ribbon-non-customizable-buttons.md
+            - name: Remove an active unmanaged layer of the ribbon
+              href: create-and-use-apps/remove-an-unmanaged-layer-for-ribbon.md
             - name: Regenerate ribbon metadata
               href: create-and-use-apps/regenerate-ribbon-metadata.md
         - name: Unified Interface
