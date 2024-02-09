@@ -1,14 +1,14 @@
 ---
 title: Determine the authentication type
 description: This article explains about how to determine the type of authentication that's used when you connect to SQL Server. 
-ms.date: 02/02/2024
+ms.date: 02/09/2024
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 
-# How to use Kerberos authentication to identify your connection type 
+# How to determine if the authentication type is Kerberos
 
 This article provides a query to help you determine the type of authentication that's used when you connect to Microsoft SQL Server. Make sure that you run the query on a client computer, not on the SQL Server that you're testing. Otherwise the query returns `auth_scheme` as **NTLM** even if Kerberos is configured correctly. This occurs because of a per-service SID security hardening feature that was added in Windows 2008. This feature forces all local connections to use NTLM regardless of whether Kerberos is available.
 
@@ -98,7 +98,7 @@ Auth scheme: NTLM
 You can use PowerShell to test the SqlClient .NET provider to try to isolate the issue from your application:
 
 1. Copy the following script into a text editor, such as Notepad, and save it as *get-SqlAuthScheme.ps1*.
-1. Run the following script ata a command prompt:
+1. Run the following script at a command prompt:
 
 ```powershell
 #-------------------------------
