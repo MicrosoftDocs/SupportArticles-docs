@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting SSIS packages
-description: This article helps you to resolve issues That might occur when you execute SSIS packages using SQL Server agent.
-ms.date: 01/08/2024
+description: This article helps you to resolve issues That might occur when you execute SSIS packages using SQL Server Agent.
+ms.date: 02/09/2024
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
