@@ -47,7 +47,7 @@ By default, all enterprise users can use the new feature. However, as an admin, 
 - To turn off the feature for all enterprise users, disable the following policy in the [Cloud Policy service for Microsoft 365](/deployoffice/admincenter/overview-cloud-policy): **Record a Stream video from within supported Microsoft 365 applications**.
 
   > [!NOTE]
-  > When the policy is disabled, users won't be able to record videos in Loop or most Outlook versions. You can't disable video recording in Outlook for Android or [Microsoft Stream](https://www.microsoft.com/microsoft-365/microsoft-stream).
+  > When the policy is disabled, users won't be able to record videos in Loop or most Outlook versions. You can't disable video recording in Outlook for Android or [Microsoft Stream](https://support.microsoft.com/office/learn-more-about-stream-on-sharepoint-cf4c10c8-5ed3-4229-9e2a-60d31b31575d).
 
 ## Location of recorded videos
 
@@ -55,7 +55,7 @@ Outlook and Loop store recorded videos in the user folder in OneDrive for work o
 
 ## Access to recorded videos
 
-The default permissions policy for your work or school organization applies to videos that are recorded in Outlook or Loop. For more information about access permissions, see [Access permissions for embedded videos](/outlook/troubleshoot/message-body/embed-playback-videos-in-outlook-and-loop#access-permissions-for-embedded-videos).
+The default permissions policy for your work or school organization applies to videos that are recorded in Outlook or Loop. For more information about access permissions, see [Access to embedded videos](/outlook/troubleshoot/message-body/embed-playback-videos-in-outlook-and-loop#access-permissions-for-embedded-videos).
 
 ## Duration of recorded videos
 
