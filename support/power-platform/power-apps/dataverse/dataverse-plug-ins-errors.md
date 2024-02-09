@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Dataverse plug-ins
 description: Contains information about errors that can occur during plug-in execution, or Dataverse errors that are related to plug-ins, and how to avoid or fix them.
-ms.date: 02/07/2024
+ms.date: 02/09/2024
 author: divkamath
 ms.author: dikamath
 ms.reviewer: phecke
@@ -339,7 +339,7 @@ When a plug-in executes in the context of a disabled user, the following error i
 
 > Error Message: System.ServiceModel.FaultException`1[Microsoft.Xrm.Sdk.OrganizationServiceFault]: The user with **SystemUserId=\<User-ID\>** in OrganizationContext=\<Context\> is disabled. Disabled users cannot access the system. Consider enabling this user. Also, users are disabled if they don't have a license assigned to them.
 
-To fix the error, run a query to identify the steps linked to the disabled user, and get details about the related plug-in and `SdkMessage`.
+To troubleshoot the error, run the following query to identify the steps linked to the disabled user and get details about the related plug-in and `SdkMessage`.
 
 ```http
 https://<env-url>/api/data/v9.2/sdkmessageprocessingsteps
@@ -430,7 +430,7 @@ Plug-ins are intended to support business logic. Modifying any part of the data 
 
 The most common symptom of this issue is that the **Regarding** field in an activity record shows `(No Name)` rather than the primary name attribute value.
 
-Within a plug-in, you can set lookup attributes with an [EntityReference](xref:Microsoft.Xrm.Sdk.EntityReference) value. The [EntityReference.Name](xref:Microsoft.Xrm.Sdk.EntityReference.Name) property isn't required. Typically you don't need to include it when setting a lookup attribute value because Dataverse sets it. You should set values like this during the **PreOperation** stage of the event pipeline. For more information, see [Event execution pipeline](/power-apps/developer/data-platform/event-framework#event-execution-pipeline).
+Within a plug-in, you can set lookup attributes with an [EntityReference](xref:Microsoft.Xrm.Sdk.EntityReference) value. The [EntityReference.Name](xref:Microsoft.Xrm.Sdk.EntityReference.Name) property isn't required. Typically, you don't need to include it when setting a lookup attribute value because Dataverse sets it. You should set values like this during the **PreOperation** stage of the event pipeline. For more information, see [Event execution pipeline](/power-apps/developer/data-platform/event-framework#event-execution-pipeline).
 
 The exception to this rule is when setting the [ActivityPointer.RegardingObjectId](/power-apps/developer/data-platform/reference/entities/activitypointer#BKMK_RegardingObjectId) lookup. All the entity types that are derived from `ActivityPointer` inherit this lookup. By default, these include [Appointment](/power-apps/developer/data-platform/reference/entities/appointment), [Chat](/power-apps/developer/data-platform/reference/entities/chat), [Email](/power-apps/developer/data-platform/reference/entities/email), [Fax](/power-apps/developer/data-platform/reference/entities/fax), [Letter](/power-apps/developer/data-platform/reference/entities/letter), [PhoneCall](/power-apps/developer/data-platform/reference/entities/phonecall), [RecurringAppointmentMaster](/power-apps/developer/data-platform/reference/entities/recurringappointmentmaster), and any custom tables that were created as activity types. For more information, see [Activity tables](/power-apps/developer/data-platform/entity-metadata#activity-tables).
 
