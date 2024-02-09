@@ -49,9 +49,13 @@ Follow these steps if the component is declared for a specific entity:
    To create a new solution, follow these steps:
 
    1. Select **New** to create a new solution and set **Publisher** to your preferred publisher, or use your organization's default publisher if you're unsure.
+
    1. Select **Entities** > **Add Existing**.
+
    1. Select the entity your ribbon component is defined on and select **OK**.
+
    1. Make sure you clear the **Include entity metadata** and **Add all Assets** options before selecting **Finish**.
+
    1. Select **Save**.
 
 1. Select **Export Solution** and export the unmanaged solution.
@@ -80,12 +84,13 @@ If the component isn't entity-specific but applies to "All Entities" declared in
 1. Open **Advanced Settings**.
 1. Navigate to **Settings** > **Solutions**.
 1. Open an existing solution or create a new solution.
-1. Create a new solution. (The following steps aren't necessary if you already have an existing solution.)
 
    To create a new solution, follow these steps:
 
    1. Select **New** to create a new solution and set **Publisher** to your preferred publisher, or use your organization's default publisher if you're unsure.
+
    1. Select **Client Extensions** > **Add Existing** > **Application Ribbons**.
+
    1. Select **Save**.
 
 1. Select **Export Solution** and export the unmanaged solution.
@@ -126,5 +131,7 @@ To remove all unmanaged ribbon customizations for either a specific entity or ap
    <LocLabels />
    </RibbonDiffXml>
 ```
+
 ## Reference
+
 [Command checker](ribbon-issues.md#use-command-checker)
