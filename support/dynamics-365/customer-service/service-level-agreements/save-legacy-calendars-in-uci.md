@@ -12,7 +12,7 @@ This article provides a resolution for the "Calendar dates are corrupted" error 
 
 ## Symptoms
 
-When you migrate a legacy calendar to Unified Interface, you receive the following error message:
+After you migrate a legacy calendar to Unified Interface in Microsoft Dynamics 365 Customer Service, SLA item and time calculations for the failure and warning times don't work as expected due to a corrupted calendar, In addition, when you try to [apply an SLA](/dynamics365/customer-service/administer/apply-slas) on the `Incident` entity, you receive the following error message:
 
 > Error Code:0x10000003 Calendar 649bf685-aa40-e911-a95c-000d3ab3f13b dates are corrputed. Try to create a new Calendar.
 
