@@ -1,7 +1,7 @@
 ---
 title: Computer clock reverts to a previous date and time
 description: Describes workarounds for an issue where the computer clock resets to a past date and time.
-ms.date: 02/07/2024
+ms.date: 02/09/2024
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -10,14 +10,16 @@ ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate
 ms.custom: sap:windows-time-service, csstroubleshoot
-keywords: 
+keywords: Windows Time service, w32time, clock skew, NTP
 ---
 
-# Computer that is running Windows 10 or a later version reverts to a previous date and time
+# Computer that is running Windows reverts to a previous date and time
 
 This article provides workarounds for an issue where the computer clock resets incorrectly if you restart the computer while it doesn't have an internet connection.
 
 _Applies to:_ &nbsp; Windows 10 and later versions
+
+_Original KB #:_ &nbsp;3160312
 
 ## Symptoms
 
@@ -37,7 +39,7 @@ This behavior overrides changes that were made by an administrator.
 
 ## Cause
 
-This issue occurs because of a problem in the new Secure Time Seeding feature that is part of Windows Time service. This feature uses metadata from the computer's outgoing SSL connections to determine the approximate current time and date values. It stores this data in the registry. Windows can use this data to set the date and time instead of data from the Active Directory Domain Services (AD DS) domain hierarchy or from another Network Time Protocol (NTP) server.
+This issue occurs because of a problem in the Secure Time Seeding feature that is part of Windows Time service. This feature uses metadata from the computer's outgoing SSL connections to determine the approximate current time and date values. It stores this data in the registry. Windows can use this data to set the date and time instead of data from the Active Directory Domain Services (AD DS) domain hierarchy or from another Network Time Protocol (NTP) server.
 
 When the computer restarts in an environment where it doesn't send any outgoing SSL traffic, the Secure Time Seeding feature doesn't clear or update the old registry data. The Windows Time service sets the date and time based on the stale Secure Time Seeding information from the registry.
 
