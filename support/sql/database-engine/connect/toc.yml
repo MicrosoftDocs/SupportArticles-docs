@@ -9,7 +9,7 @@ items:
   href: certificate-validation-failure.md
 - name: Consistent SQL network connectivity issue
   href: consistent-sql-network-connectivity-issue.md
-- name: Determine if you are connected to SQL Server using Kerberos authentication
+- name: How to determine if the authentication type is Kerberos
   href: determine-the-authentication-type.md
 - name: Existing connection forcibly closed
   href: tls-exist-connection-closed.md
