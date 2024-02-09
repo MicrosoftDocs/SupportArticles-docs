@@ -16,10 +16,12 @@ _Original KB number:_ &nbsp; 4477072
 
 We have been noticing that some flows fail to run within PowerApps. Within the Flow run history or the powerapps telemetry, you may see a similar error to this one: 
 
+```output
     { 
         "code": "InvokerConnectionOverrideFailed", 
         "message": "Failed to parse invoker connections from trigger 'manual' outputs. Exception: Could not find any valid connection for connection reference name '<some_connection>' in APIM tokens header." 
     }
+```
 
     NOTE: This error also happens when calling install api on CDS, but the response is a generic "Install flow failed" 
 
@@ -40,10 +42,12 @@ The first thing to try when you have users hitting these issues is:
 
 ## Error code ConnectionAuthorizationFailed on Flow run 
 
+```output
     { 
         "code": "ConnectionAuthorizationFailed", 
         "message": "The caller with object id '{user_id}' does not have the minimum required permission to perform the requested operation on connection '{some_connection_id}' under API '{some_connection_api}'." 
     }
+```
 
 **The cause of the error:** 
 
@@ -57,10 +61,12 @@ Mitigation is to simply have all connections in the flow be owned by a single us
 
 ## Error code WorkflowTriggerIsNotEnabled on Flow run 
 
+```output
     { 
         "code": "WorkflowTriggerIsNotEnabled", 
         "message": "Could not execute workflow ‘<GUID>' trigger 'manual' with state 'Disabled': trigger is not enabled."  
     } 
+```
 
 **The cause of the error:**
 
@@ -74,6 +80,7 @@ Mitigation is to simply turn on the flow.
 
 ## Error code  0x80040265/0x80048d0b on Flow run 
 
+```output
     {
 
         "code": " 0x80040265", 
@@ -86,7 +93,8 @@ Mitigation is to simply turn on the flow.
         "message": "Failed to install the flow."  
 
     } 
- 
+ ```
+
 **The cause of the error:**
 
 This could be due to many reasons. Try solution mentioned for the following error codes 
@@ -107,10 +115,12 @@ Try solution mentioned for the following error codes
  
 ## Error code MissingConnectionReference on Flow run 
 
+```output
     { 
         "code": " MissingConnectionReference' ", 
         "message": " Connection reference ‘<connection name>’ was not given by invoker.” 
     } 
+```
 
     Example Error : Connection reference '<connection name>' was not given by invoker. 
 
@@ -132,10 +142,12 @@ The reason that it works in the source environment and not the target environmen
  
 ## Error code NotAllowedConnectionReferenceon Flow run 
 
+```output
     {
         "code": " NotAllowedConnectionReference", 
         "message": "Connection reference ‘<connection name>’ was not given by invoker.” 
     }
+```
 
     Example Error : Connection reference ‘<connection name>’ was not given by invoker. 
 
