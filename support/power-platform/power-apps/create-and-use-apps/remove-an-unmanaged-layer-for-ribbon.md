@@ -80,7 +80,6 @@ If the component isn't entity-specific but applies to "All Entities" declared in
 1. Open **Advanced Settings**.
 1. Navigate to **Settings** > **Solutions**.
 1. Open an existing solution or create a new solution.
-1. Create a new solution. (The following steps aren't necessary if you already have an existing solution.)
 
    To create a new solution, follow these steps:
 
