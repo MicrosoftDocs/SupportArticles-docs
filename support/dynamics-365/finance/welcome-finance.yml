@@ -9,7 +9,7 @@ metadata:
   ms.topic: landing-page # Required
   author: #Required; your GitHub user alias, with correct capitalization.
   ms.author: #Required; microsoft alias of author; optional team alias.
-  ms.date: 12/07/2023
+  ms.date: 02/05/2024
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -28,6 +28,10 @@ landingContent:
         links:
           - text: Business performance analytics self-help overview
             url: business-performance-analytics/business-performance-analytics-self-help-overview.md
+          - text: Decimal auto rounding error 
+            url: business-performance-analytics/decimal-auto-rounding-err00012.md
+          - text: Decimal limit exceeded error  
+            url: business-performance-analytics/decimal-limit-exceed-err00011.md
           - text: Missing fiscal calendar for general ledger 
             url: business-performance-analytics/missing-fiscal-calendar-for-general-ledger-err00001.md
           - text: Missing fiscal calendar for budget

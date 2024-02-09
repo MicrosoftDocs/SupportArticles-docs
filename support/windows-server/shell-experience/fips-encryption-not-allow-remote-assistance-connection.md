@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:remote-assistance, csstroubleshoot
-ms.subservice: shell-experience
 ---
 # Remote Assistance connection to Windows Server with FIPS encryption does not work
 

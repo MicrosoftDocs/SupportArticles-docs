@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jdickson
 ms.custom: sap:management-and-configuration:-installing-print-drivers, csstroubleshoot
-ms.subservice: printing
 ---
 # Printers installed using the same driver and port on Windows are grouped as one when viewed within Devices and Printers
 

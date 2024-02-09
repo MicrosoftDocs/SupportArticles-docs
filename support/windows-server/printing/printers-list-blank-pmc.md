@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, raackley
 ms.custom: sap:errors-and-troubleshooting:-print-spooler, csstroubleshoot
-ms.subservice: printing
 ---
 # Printers list blank in Print Management Console
 

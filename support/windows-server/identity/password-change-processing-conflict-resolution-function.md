@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, herbertm
 ms.custom: sap:active-directory-fsmo, csstroubleshoot
-ms.subservice: active-directory
 ---
 # Password change processing and conflict resolution functionality in Windows
 

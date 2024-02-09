@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:windows-script-host-cscript-or-wscript, csstroubleshoot
-ms.technology: windows-client-application-compatibility
 ---
 # How to change registry values or permissions from a command line or a script
 

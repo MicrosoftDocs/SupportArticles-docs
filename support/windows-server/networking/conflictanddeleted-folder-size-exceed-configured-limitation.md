@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, clandis, cdan
 ms.custom: sap:dfsr, csstroubleshoot
-ms.subservice: networking
 ---
 # The ConflictAndDeleted folder size may exceed its configured limitation
 

@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, shenry, yuqinwu
 ms.custom: sap:performance-audio-and-video-and-remotefx, csstroubleshoot
-ms.subservice: rds
 ---
 # Frame rate is limited to 30 FPS in Windows-based remote sessions
 

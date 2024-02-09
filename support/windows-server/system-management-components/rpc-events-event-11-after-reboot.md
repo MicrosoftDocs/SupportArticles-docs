@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:wmi, csstroubleshoot
-ms.subservice: system-mgmt-components
 ---
 # Microsoft-Windows-RPC-Events Event 11 after reboot
 

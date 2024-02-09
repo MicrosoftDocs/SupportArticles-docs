@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: warrenw, kaushika
 ms.custom: sap:dfsr, csstroubleshoot
-ms.subservice: networking
 ---
 # DFSR event ID 2213 in Windows Server 2008 R2
 

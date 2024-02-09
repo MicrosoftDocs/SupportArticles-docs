@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-naqviadil, v-lianna
 ms.custom: sap:activation, csstroubleshoot
-ms.subservice: deployment
 ---
 # Error 0xC004E015 (SL_E_EUL_CONSUMPTION_FAILED) when you activate Windows
 
