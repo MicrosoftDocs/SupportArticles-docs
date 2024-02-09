@@ -23,7 +23,8 @@ We have been noticing that some flows fail to run within PowerApps. Within the F
     }
 ```
 
-    NOTE: This error also happens when calling install api on CDS, but the response is a generic "Install flow failed" 
+> [!NOTE]
+> This error also happens when calling install api on CDS, but the response is a generic "Install flow failed" 
 
 **The cause of the error:**
 
@@ -122,7 +123,7 @@ Try solution mentioned for the following error codes
     } 
 ```
 
-    Example Error : Connection reference '<connection name>' was not given by invoker. 
+> Example Error : Connection reference '<connection name>' was not given by invoker. 
 
 **The cause of the error:** 
 
@@ -149,7 +150,7 @@ The reason that it works in the source environment and not the target environmen
     }
 ```
 
-    Example Error : Connection reference ‘<connection name>’ was not given by invoker. 
+> Example Error : Connection reference ‘<connection name>’ was not given by invoker. 
 
 **The cause of the error:** 
 
