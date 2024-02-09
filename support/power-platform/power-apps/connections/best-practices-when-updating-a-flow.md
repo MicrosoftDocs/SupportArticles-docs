@@ -12,7 +12,158 @@ This article describes best practices around updating Microsoft Flows used by Po
 _Applies to:_ &nbsp; Power Apps  
 _Original KB number:_ &nbsp; 4477072
 
-## Symptoms
+## Error code InvokerConnectionOverrideFailed on Flow run 
+
+We have been noticing that some flows fail to run within PowerApps. Within the Flow run history or the powerapps telemetry, you may see a similar error to this one: 
+
+    { 
+        "code": "InvokerConnectionOverrideFailed", 
+        "message": "Failed to parse invoker connections from trigger 'manual' outputs. Exception: Could not find any valid connection for connection reference name '<some_connection>' in APIM tokens header." 
+    }
+
+    NOTE: This error also happens when calling install api on CDS, but the response is a generic "Install flow failed" 
+
+**The cause of the error:**
+
+This is caused usually because the flow was updated to use a new connection, but the app still as the old flow metadata. Updating the flow will not update the apps that use the flow, so customer must manually update apps in order for changes to reflect in app and for flow to work 
+
+**Mitigation Steps:**
+
+**Make sure to do this steps in the Source/Dev environment and update the solution. Once solution is updated import it to all the Target/Prod environment.**
+
+The first thing to try when you have users hitting these issues is: 
+
+- open the app for edit using the latest version of the studio 
+- Remove the flows from the app (Remove flow from power automate tab).
+- Re-add the flows to the app. 
+- Save and republish the app. 
+
+## Error code ConnectionAuthorizationFailed on Flow run 
+
+    { 
+        "code": "ConnectionAuthorizationFailed", 
+        "message": "The caller with object id '{user_id}' does not have the minimum required permission to perform the requested operation on connection '{some_connection_id}' under API '{some_connection_api}'." 
+    }
+
+**The cause of the error:** 
+
+This means that although the maker has permissions to the flow, the maker does not have permissions to the dependent connections that are used in the flow actions. This a limitation of PowerApps and Flow integration.  
+
+**Mitigation Steps:**
+
+**Make sure to do this steps in the Source/Dev environment and update the solution. Once solution is updated import it to all the Target/Prod environment.**
+
+Mitigation is to simply have all connections in the flow be owned by a single user and then have that user add the flow to the app. 
+
+## Error code WorkflowTriggerIsNotEnabled on Flow run 
+
+    { 
+        "code": "WorkflowTriggerIsNotEnabled", 
+        "message": "Could not execute workflow ‘<GUID>' trigger 'manual' with state 'Disabled': trigger is not enabled."  
+    } 
+
+**The cause of the error:**
+
+This means that the flow is turned off.  
+
+**Mitigation Steps:**
+
+**Make sure to do this steps in the Source/Dev environment and update the solution. Once solution is updated import it to all the Target/Prod environment.**
+
+Mitigation is to simply turn on the flow. 
+
+## Error code  0x80040265/0x80048d0b on Flow run 
+
+    {
+
+        "code": " 0x80040265", 
+        "message": "Failed to install the flow."  
+
+    }  
+    {
+
+        "code": " 0x80048d0b", 
+        "message": "Failed to install the flow."  
+
+    } 
+ 
+**The cause of the error:**
+
+This could be due to many reasons. Try solution mentioned for the following error codes 
+
+- WorkflowTriggerIsNotEnabled 
+- ConnectionAuthorizationFailed 
+- InvokerConnectionOverrideFailed 
+
+**Mitigation Steps:** 
+
+**Make sure to do this steps in the Source/Dev environment and update the solution. Once solution is updated import it to all the Target/Prod environment.**
+
+Try solution mentioned for the following error codes 
+
+- WorkflowTriggerIsNotEnabled 
+- ConnectionAuthorizationFailed 
+- InvokerConnectionOverrideFailed 
+ 
+## Error code MissingConnectionReference on Flow run 
+
+    { 
+        "code": " MissingConnectionReference' ", 
+        "message": " Connection reference ‘<connection name>’ was not given by invoker.” 
+    } 
+
+    Example Error : Connection reference '<connection name>' was not given by invoker. 
+
+**The cause of the error:** 
+
+Essentially, app and flow metadata must be in sync and any changes made to a flow require that the app maker edit the apps using the flow and remove/re-add the changed flow. 
+
+With solution apps/flows, an app may successfully invoke the flow in the source environment and then fail in the target environment with this error message: "Connection not configured for this service." 
+
+The reason that it works in the source environment and not the target environment is that there may be a change in the flow on the target environment that does not exist in the source environment. 
+
+**Mitigation Steps:**
+
+**Make sure to do this steps in the Source/Dev environment and update the solution. Once solution is updated import it to all the Target/Prod environment.**
+
+- In the source environment, edit the app and remove then re-add the flows to the app. Save and publish the changes. 
+- In the target environment, remove all unmanaged layers on the app and flow if there is any. 
+- Export the solution and import into target environment (Note: there can be no unmanaged layers on either the flow or the app as this can cause issues in connection to the flow)
+ 
+## Error code NotAllowedConnectionReferenceon Flow run 
+
+    {
+        "code": " NotAllowedConnectionReference", 
+        "message": "Connection reference ‘<connection name>’ was not given by invoker.” 
+    }
+
+    Example Error : Connection reference ‘<connection name>’ was not given by invoker. 
+
+**The cause of the error:** 
+
+This means that the app has flow metadata that specifies that a sql connection is required on the install, but the actual flow metadata is different. 
+
+**Mitigation Steps:** 
+
+**ake sure to do this steps in the Source/Dev environment and update the solution. Once solution is updated import it to all the Target/Prod environment.**  
+
+**Mitigation Option 1** 
+
+- In the source environment, edit the app and remove then re-add the flows to the app. Save and publish the changes. 
+- In the target environment, remove all unmanaged layers on the app and flow if there is any. 
+- Export the solution and import into target environment (Note: there can be no unmanaged layers on either the flow or the app as this can cause issues in connection to the flow) 
+
+**Mitigation Option 2**
+
+- Change the connection from Embedded to Invoker 
+- Navigate to the flow portal, edit & update the flow settings 
+- Edit the "run only users". 
+- To update the flow connection source as Invoker - select "Provided by run-only user" and save. 
+- To update the flow connection source as Embedded -select "Use this connection" and save. 
+- Verify triggering the flow and see install flow network calls are succeeding now. 
+
+
+## Other Symptoms
 
 After updating a Flow, calls to that Flow from Power Apps start failing.
 
