@@ -190,7 +190,7 @@ If the high-CPU condition is resolved by using `T174`, enable it as a [startup p
 
 ### Random high CPU usage due to SOS_BLOCKALLOCPARTIALLIST spinlock contention on large-memory machines
 
-If your SQL Server instance experiences random high CPU usage due to `SOS_BLOCKALLOCPARTIALLIST` spinlock contention, we recommend that you apply [Cumulative Update 21 for SQL Server 2019](/troubleshoot/sql/releases/sqlserver-2019/cumulativeupdate21). For more information on how to solve the issue, see bug reference [2410400](../../releases/sqlserver-2019/cumulativeupdate21.md#2410400) and [DBCC DROPCLEANBUFFERS](/sql/t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql) that provides temporary mitigation.
+If your SQL Server instance experiences random high CPU usage due to `SOS_BLOCKALLOCPARTIALLIST` spinlock contention, we recommend that you apply [Cumulative Update 21 for SQL Server 2019](../../releases/sqlserver-2019/cumulativeupdate21.md). For more information on how to solve the issue, see bug reference [2410400](../../releases/sqlserver-2019/cumulativeupdate21.md#2410400) and [DBCC DROPCLEANBUFFERS](/sql/t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql) that provides temporary mitigation.
 
 ### High CPU usage due to spinlock contention on XVB_list on high-end machines
 
