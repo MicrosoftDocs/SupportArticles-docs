@@ -4,7 +4,7 @@ description: Provides a resolution for the Calendar dates are corrupted error th
 ms.reviewer: sdas, ankugupta, mpanduranga
 ms.author: v-psuraty
 author: v-psuraty
-ms.date: 01/25/2024
+ms.date: 02/09/2024
 ---
 # "Calendar dates are corrupted" error when migrating legacy calendar to Unified Interface
 
@@ -18,11 +18,11 @@ When you migrate a legacy calendar to Unified Interface, you receive the followi
 
 ## Cause
 
-This issue occurs because the legacy calendar isn't configured to Unified Interface after migration.
+This issue occurs when the legacy calendar isn't properly configured to Unified Interface during migration.
 
 ## Resolution
 
-To solve this issue, create a new calendar and replace it with the existing one in the SLA Item. Or, open the legacy calendar in Unified interface and save it.
+To solve this issue, create a new calendar and replace the existing one in the SLA Item with the new one. Or, open the legacy calendar in Unified interface and save it.
 
 ## More information
 
