@@ -19,7 +19,7 @@ This article provides workarounds for an issue where the computer clock resets i
 
 _Applies to:_ &nbsp; Windows 10 and later versions
 
-_Original KB #:_ &nbsp;3160312
+_Original KB number:_ &nbsp;3160312
 
 ## Symptoms
 
