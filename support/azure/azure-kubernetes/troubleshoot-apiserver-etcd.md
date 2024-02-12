@@ -3,7 +3,7 @@ title: Troubleshoot API server and etcd problems in AKS
 description: Provides a troubleshooting guide for API server and etcd problems in Azure Kubernetes Services.
 author: seguler
 ms.author: segule
-ms.date: 02/09/2024
+ms.date: 02/12/2024
 ms.service: azure-kubernetes-service
 ms.reviewer: mikerooney, v-weizhu, axelg, josebl, v-leedennis
 ---
@@ -23,7 +23,7 @@ Microsoft has tested the reliability and performance of the API server at a scal
 
 - The Standard tier for AKS clusters. If you're using the Free tier, the API server and etcd contain limited resources. AKS clusters in the Free tier don't provide high availability. This is often the root cause of API server and etcd problems.
 
-- The [Netcat](https://linux.die.net/man/1/nc) (`nc`) command-line tool for TCP connections.
+- The [kubectl-aks](https://go.microsoft.com/fwlink/p/?linkid=2259767#install) plugin for running commands directly on AKS nodes without using the Kubernetes control plane.
 
 ## Symptoms
 
