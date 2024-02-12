@@ -56,4 +56,6 @@ Users can use the **Recover Deleted Items** feature in Outlook or Outlook Web Ap
 
 For more information about deleted item recovery, see [Recoverable Items folder](/exchange/recoverable-items-folder-exchange-2013-help).
 
+For information about issues that might prevent retention policies from deleting email messages, see [Resolve email archive and deletion issues when using retention policies](/microsoft-365/troubleshoot/retention/troubleshoot-mrm-email-archive-deletion).
+
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

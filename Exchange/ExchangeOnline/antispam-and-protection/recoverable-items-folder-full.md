@@ -60,3 +60,7 @@ To resolve this issue, configure the retention policy tag for Recoverable Items 
     **Note:** Replace \<Retention_policy_tag> with the name of the policy tag that's applied to the Recoverable Items folder.
 
 4. Run the `Start-ManagedFolderAssistant` cmdlet to process the items to the Archive mailbox and free up space in the Recoverable Items folder.
+
+## More information
+
+For information about other issues that might prevent retention policies from deleting email messages, see [Resolve email archive and deletion issues when using retention policies](/microsoft-365/troubleshoot/retention/troubleshoot-mrm-email-archive-deletion).

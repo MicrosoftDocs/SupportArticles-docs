@@ -104,4 +104,6 @@ If these steps don't resolve the issue, contact [Microsoft Support](https://supp
 
 ## More information
 
+For information about other issues that might prevent retention policies from deleting email messages, see [Resolve email archive and deletion issues when using retention policies](/microsoft-365/troubleshoot/retention/troubleshoot-mrm-email-archive-deletion).
+
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
