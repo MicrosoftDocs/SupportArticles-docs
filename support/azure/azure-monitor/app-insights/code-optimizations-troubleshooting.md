@@ -8,7 +8,7 @@ ms.reviewer: hannahhunter, v-leedennis
 ms.service: azure-monitor
 ms.subservice: optimization-insights
 ms.topic: troubleshooting
-ms.date: 08/15/2023
+ms.date: 02/09/2024
 ---
 
 # Troubleshoot Code Optimizations (Preview)
@@ -51,6 +51,6 @@ To make sure that profiles are uploaded to your Application Insights resource, f
 
 ### Step 5: Regularly check the Profiler
 
-After you successfully complete the previous steps, keep checking the Profiler for insights. Meanwhile, the service continues to analyze your profiles and provide insights as soon as it detects any issues in your code. After you enable the Application Insights Profiler, several hours might be required for you to generate profiles and for the service to analyze them.
+After you successfully complete the previous steps, keep checking the Profiler for insights. Meanwhile, the service continues to analyze your profiles and provide insights as soon as it detects any issues in your code. After you enable the Application Insights Profiler, several hours might be required for you to generate profiles and for the service to analyze them. If the service detects no issues in your code, a message appears that confirms that no insights were found.
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

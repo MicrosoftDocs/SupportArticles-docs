@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:load-balancing-and-connection-broker, csstroubleshoot
-ms.technology: windows-server-rds
 ---
 # Remote Desktop Services role cannot coexist with AD DS role
 

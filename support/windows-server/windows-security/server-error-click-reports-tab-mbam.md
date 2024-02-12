@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: manojse, kaushika
 ms.custom: sap:bitlocker, csstroubleshoot
-ms.technology: windows-server-deployment
 ---
 # Error message when you click Reports tab in MBAM: Server Error in /Reports Application
 

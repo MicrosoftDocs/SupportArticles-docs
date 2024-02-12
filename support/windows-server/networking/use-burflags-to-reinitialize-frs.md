@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, arrenc
 ms.custom: sap:frs, csstroubleshoot
-ms.technology: networking
 ---
 # Use the BurFlags registry key to reinitialize File Replication Service
 

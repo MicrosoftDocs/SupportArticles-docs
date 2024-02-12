@@ -7,10 +7,8 @@ ms.author: alexmuk
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 ms.reviewer: kaushika
 ms.custom: sap:servicing, csstroubleshoot
-ms.technology: windows-client-performance
 localization_priority: medium
 ---
 

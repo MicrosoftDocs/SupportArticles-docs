@@ -5,10 +5,8 @@ ms.date: 03/04/2022
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate
-ms.technology: hyper-v
 keywords: DDA,passthrough,pass-through,LUN,MPIO
 ---
 

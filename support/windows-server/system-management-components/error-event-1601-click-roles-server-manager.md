@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:server-manager, csstroubleshoot
-ms.technology: windows-server-system-management-components
 ---
 # Error message when you select Roles in Server Manager on Windows Server
 

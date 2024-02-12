@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, RyukiY
 ms.custom: sap:windows-time-service, csstroubleshoot
-ms.technology: windows-server-active-directory
 ---
 # How the Windows Time service treats a leap second
 

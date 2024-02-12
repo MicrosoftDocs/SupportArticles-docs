@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, erwong
 ms.custom: sap:applocker-or-software-restriction-policies, csstroubleshoot
-ms.technology: windows-client-group-policy
 ---
 # Archived application can't be restored because of app update policies
 

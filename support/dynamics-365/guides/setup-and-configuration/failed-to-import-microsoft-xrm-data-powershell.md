@@ -3,7 +3,6 @@ title: Import failed when moving content with the Dynamics 365 Guides Content Mi
 description: Resolves the failure when migrating from Dynamics 365 Guides using the Content Migration Tool (Public Preview).
 ms.author: brunasi
 author: brunasilvalopes
-ms.service: dynamics-365-guides
 ms.date: 10/27/2023
 ms.reviewer: v-wendysmith, mhart
 ms.custom: bap-template 

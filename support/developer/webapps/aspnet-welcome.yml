@@ -5,7 +5,7 @@ summary: Welcome to ASP.NET troubleshooting. These articles explain how to deter
 metadata:
   title: ASP.NET troubleshooting
   description: Landing page for ASP.NET troubleshooting articles. # Required; article description that is displayed in search results. < 160 chars.
-  ms.prod: asp.net, aspnet-core  #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.service: aspnet, aspnet-core  #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
   author: HaiyingYu #Required; your GitHub user alias, with correct capitalization.
   ms.author: haiyingyu #Required; microsoft alias of author; optional team alias.

@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, leons, v-srisan
 ms.custom: sap:integration-components, csstroubleshoot
-ms.technology: hyper-v
 ---
 # The VMBus device doesn't load on a virtual machine that is running on a computer with Hyper-V installed
 

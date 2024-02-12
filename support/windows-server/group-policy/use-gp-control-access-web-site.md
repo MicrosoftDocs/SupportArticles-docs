@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:managing-internet-explorer-settings-through-group-policy, csstroubleshoot
-ms.technology: windows-server-group-policy
 ---
 # How to use Group Policy to control access to web sites
 
