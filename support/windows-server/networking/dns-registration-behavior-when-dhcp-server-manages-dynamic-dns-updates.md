@@ -5,11 +5,9 @@ ms.date: 02/14/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate
 ms.custom: sap:dns, csstroubleshoot
-ms.technology: networking
 keywords: DNS dynamic updates, DHCP option 81, client FQDN option, DHCP client
 ---
 

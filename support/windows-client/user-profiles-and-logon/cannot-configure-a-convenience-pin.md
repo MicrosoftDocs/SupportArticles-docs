@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, ntuttle, ardenw
 ms.custom: sap:user-profiles, csstroubleshoot
-ms.technology: windows-client-user-profiles
 ---
 # Can't configure a PIN when Convenience PIN and Hello for Business policies are enabled
 

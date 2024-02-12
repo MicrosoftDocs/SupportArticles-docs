@@ -5,8 +5,8 @@ author: cts-davean
 ms.author: davean
 ms.reviewer: v-sidong
 ms.custom: sap:System Services Development
-ms.technology: windows-dev-apps-system-services-dev
-ms.date: 09/04/2023
+ms.subservice: system-services-dev
+ms.date: 02/01/2024
 ---
 # GetTickCount resets to zero after approximately 776 days
 
@@ -16,11 +16,11 @@ This article describes a problem where the value returned by `GetTickCount` rese
 
 The time returned by the [GetTickCount](/windows/win32/api/sysinfoapi/nf-sysinfoapi-gettickcount) function resets from `0x9FFFFFF0` to `zero` if the system runs continuously for approximately 776 days.
 
-This problem occurs in 32-bit applications running on Windows 10 and later.
+This problem occurs in 32-bit applications running on Windows 8, Windows Server 2012, and later.
 
 ## Status
 
-Microsoft has confirmed this is a problem in Windows 10 and later.
+Microsoft has confirmed this is a problem in Windows 8, Windows Server 2012, and later.
 
 ## Workaround
 

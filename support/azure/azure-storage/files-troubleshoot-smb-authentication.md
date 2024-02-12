@@ -3,7 +3,7 @@ title: Troubleshoot Azure Files identity-based authentication and authorization 
 description: Troubleshoot problems using identity-based authentication to connect to SMB Azure file shares and see possible resolutions.
 ms.service: azure-file-storage
 ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
-ms.date: 01/17/2024
+ms.date: 01/30/2024
 ms.reviewer: kendownie, v-weizhu
 ---
 # Troubleshoot Azure Files identity-based authentication and authorization issues (SMB)
@@ -18,22 +18,25 @@ This article lists common problems when using SMB Azure file shares with identit
 | Standard file shares (GPv2), GRS/GZRS | :::image type="icon" source="media/files-troubleshoot-smb-authentication/yes-icon.png" border="false":::  | :::image type="icon" source="media/files-troubleshoot-smb-authentication/no-icon.png" border="false"::: |
 | Premium file shares (FileStorage), LRS/ZRS | :::image type="icon" source="media/files-troubleshoot-smb-authentication/yes-icon.png" border="false":::  | :::image type="icon" source="media/files-troubleshoot-smb-authentication/no-icon.png" border="false"::: |
 
-## Errors when running AzFilesHybrid module: Privilege issue
+## Error when running the AzFilesHybrid module
+
 When you try to run the AzFilesHybrid module, you might receive the following error:
 
--  A required privilege is not held by the client
+> A required privilege is not held by the client.
 
-### Cause: User does not have required AD permissions to run the module.
-This is due to insufficient AD privileges needed to execute the AzFilesHybrid module. 
+### Cause: AD permissions are insufficient
+
+This issue occurs because you don't have the required Active Directory (AD) permissions to run the module.
 
 ### Solution
-Refer to the Active Directory privileges for more information or reach out to your AD admin to provide the required privileges.
+
+Refer to the AD privileges or contact your AD admin to provide the required privileges.
 
 ## Error 5 when mounting an Azure file share
 
 When you try to mount a file share, you might receive the following error:
 
-- System error 5 has occurred. Access is denied.
+> System error 5 has occurred. Access is denied.
 
 ### Cause: Share-level permissions are incorrect
 
@@ -78,7 +81,10 @@ Third, you can run the `Debug-AzStorageAccountAuth` cmdlet to conduct a set of b
 $ResourceGroupName = "<resource-group-name-here>"
 $StorageAccountName = "<storage-account-name-here>"
 
-Debug-AzStorageAccountAuth -StorageAccountName $StorageAccountName -ResourceGroupName $ResourceGroupName -Verbose
+Debug-AzStorageAccountAuth `
+    -StorageAccountName $StorageAccountName `
+    -ResourceGroupName $ResourceGroupName `
+    -Verbose
 ```
 
 The cmdlet performs these checks in sequence and provides guidance for failures:
@@ -88,12 +94,40 @@ The cmdlet performs these checks in sequence and provides guidance for failures:
 3. `CheckDomainJoined`: Validate that the client machine is domain joined to AD. If your machine isn't domain joined to AD, refer to [Join a Computer to a Domain](/windows-server/identity/ad-fs/deployment/join-a-computer-to-a-domain) for domain join instructions.
 4. `CheckPort445Connectivity`: Check that port 445 is opened for SMB connection. If port 445 isn't open, refer to the troubleshooting tool [AzFileDiagnostics](https://github.com/Azure-Samples/azure-files-samples/tree/master/AzFileDiagnostics/Windows) for connectivity issues with Azure Files.
 5. `CheckSidHasAadUser`: Check that the logged on AD user is synced to Microsoft Entra ID. If you want to look up whether a specific AD user is synchronized to Microsoft Entra ID, you can specify the `-UserName` and `-Domain` in the input parameters. For a given SID, it checks if there is a Microsoft Entra user associated.
-6. `CheckAadUserHasSid`: Check that the logged on AD user is synced to Microsoft Entra ID. If you want to look up whether a specific AD user is synchronized to Microsoft Entra ID, you can specify the `-UserName` and `-Domain` in the input parameters. For a given Microsoft Entra user, it checks its SID.
+6. `CheckAadUserHasSid`: Check that the logged on AD user is synced to Microsoft Entra ID. If you want to look up whether a specific AD user is synchronized to Microsoft Entra ID, you can specify the `-UserName` and `-Domain` in the input parameters. For a given Microsoft Entra user, it checks its SID. To run this check, you must provide the `-ObjectId` parameter, along with the object ID of the Microsoft Entra user.
 7. `CheckGetKerberosTicket`: Attempt to get a Kerberos ticket to connect to the storage account. If there isn't a valid Kerberos token, run the `klist get cifs/storage-account-name.file.core.windows.net` cmdlet and examine the error code to determine the cause of the ticket retrieval failure.
 8. `CheckStorageAccountDomainJoined`: Check if the AD authentication has been enabled and the account's AD properties are populated. If not, [enable AD DS authentication on Azure Files](/azure/storage/files/storage-files-identity-ad-ds-enable).
 9. `CheckUserRbacAssignment`: Check if the AD identity has the proper RBAC role assignment to provide share-level permissions to access Azure Files. If not, [configure the share-level permission](/azure/storage/files/storage-files-identity-ad-ds-assign-permissions). (Supported on AzFilesHybrid v0.2.3+ version)
-10. `CheckUserFileAccess`: Check if the AD identity has the proper directory/file permission (Windows ACLs) to access Azure Files. If not, [configure the directory/file level permission](/azure/storage/files/storage-files-identity-ad-ds-configure-permissions). (Supported on AzFilesHybrid v0.2.3+ version)
+10. `CheckUserFileAccess`: Check if the AD identity has the proper directory/file permission (Windows ACLs) to access Azure Files. If not, [configure the directory/file level permission](/azure/storage/files/storage-files-identity-ad-ds-configure-permissions). To run this check, you must provide the `-FilePath` parameter, along with the path of the mounted file that you want to debug the access to. (Supported on AzFilesHybrid v0.2.3+ version)
 11. `CheckAadKerberosRegistryKeyIsOff`: Check if the Microsoft Entra Kerberos registry key is off. If the key is on, run `reg add HKLM\SYSTEM\CurrentControlSet\Control\Lsa\Kerberos\Parameters /v CloudKerberosTicketRetrievalEnabled /t REG_DWORD /d 0` from an elevated command prompt to turn it off, and then reboot your machine. (Supported on AzFilesHybrid v0.2.9+ version)
+
+If you just want to run a subselection of the previous checks, you can use the `-Filter` parameter, along with a comma-separated list of checks to run. For example, to run all checks related to share-level permissions (RBAC), use the following PowerShell cmdlets:
+
+```PowerShell
+$ResourceGroupName = "<resource-group-name-here>"
+$StorageAccountName = "<storage-account-name-here>"
+
+Debug-AzStorageAccountAuth `
+    -Filter CheckSidHasAadUser,CheckUserRbacAssignment `
+    -StorageAccountName $StorageAccountName `
+    -ResourceGroupName $ResourceGroupName `
+    -Verbose
+```
+
+If you have the file share mounted on `X:`, and if you only want to run the check related to file-level permissions (Windows ACLs), you can run the following PowerShell cmdlets:
+
+```PowerShell
+$ResourceGroupName = "<resource-group-name-here>"
+$StorageAccountName = "<storage-account-name-here>"
+$FilePath = "X:\example.txt"
+
+Debug-AzStorageAccountAuth `
+    -Filter CheckUserFileAccess `
+    -StorageAccountName $StorageAccountName `
+    -ResourceGroupName $ResourceGroupName `
+    -FilePath $FilePath `
+    -Verbose
+```
 
 ## Unable to configure directory/file level permissions (Windows ACLs) with Windows File Explorer
 

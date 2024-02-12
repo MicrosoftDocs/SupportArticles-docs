@@ -5,8 +5,6 @@ author: Deland-Han
 ms.author: delhan
 ms.topic: troubleshooting
 ms.date: 05/10/2023
-ms.prod: windows-server
-ms.technology: windows-server-security
 ms.custom: sap:kerberos-authentication, csstroubleshoot, ikb2lmc
 ms.reviewer: kaushika
 ---

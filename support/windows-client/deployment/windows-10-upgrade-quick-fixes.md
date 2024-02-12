@@ -5,10 +5,8 @@ ms.date: 04/28/2023
 manager: dcscontentpm
 ms.author: aaroncz
 ms.custom: sap:setup, csstroubleshoot
-ms.prod: windows-client
 author: aczechowski
 ms.topic: troubleshooting
-ms.technology: windows-client-deployment
 ms.reviewer: dougeby
 audience: itpro
 localization_priority: medium

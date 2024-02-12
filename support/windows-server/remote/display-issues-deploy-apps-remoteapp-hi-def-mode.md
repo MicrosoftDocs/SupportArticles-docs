@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-jesits
 ms.custom: sap:remoteapp-applications, csstroubleshoot
-ms.technology: windows-server-rds
 ---
 # Display issues occur when you deploy applications through RemoteApp Hi-Def mode
 

@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, chwall
 ms.custom: sap:wmi, csstroubleshoot
-ms.technology: windows-client-system-management-components
 ---
 # Event ID 10 is logged in the Application log
 

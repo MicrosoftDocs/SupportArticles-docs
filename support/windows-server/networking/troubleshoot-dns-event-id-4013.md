@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, nibinpm, arrenc,
 ms.custom: sap:dns, csstroubleshoot
-ms.technology: networking
 ---
 # Troubleshoot DNS Event ID 4013 (The DNS server was unable to load AD-integrated DNS zones)
 

@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, PATCH
 ms.custom: sap:active-directory-fsmo, csstroubleshoot
-ms.technology: windows-server-active-directory
 ---
 # Users can't sign in to the domain after password changes on a Remote Domain Controller
 

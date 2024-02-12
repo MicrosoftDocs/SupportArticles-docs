@@ -5,7 +5,7 @@ ms.date: 02/14/2022
 ms.custom: sap:System Services Development
 ms.reviewer: davean, v-jayaramanp
 ms.topic: troubleshooting
-ms.technology: windows-dev-apps-system-services-dev
+ms.subservice: system-services-dev
 ---
 # Add-in component guidelines for core OS processes
 

@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, herbertm, wincicadsec, mohak
 ms.custom: sap:kerberos-authentication, csstroubleshoot
-ms.technology: windows-server-security
 ---
 # Problems with Kerberos authentication when a user belongs to many groups
 

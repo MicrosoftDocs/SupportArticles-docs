@@ -5,7 +5,7 @@ summary: Welcome to BizTalk Server troubleshooting. These articles explain how t
 metadata:
   title: BizTalk Server troubleshooting document
   description: This article lists Knowledge Base (KB) and other Support articles for BizTalk Server. # Required; article description that is displayed in search results. < 160 chars.
-  ms.prod: biztalk-server
+  ms.service: biztalk-server
   ms.topic: landing-page # Required
   author: HaiyingYu  #Required; your GitHub user alias, with correct capitalization.
   ms.author: HaiyingYu #Required; microsoft alias of author; optional team alias.

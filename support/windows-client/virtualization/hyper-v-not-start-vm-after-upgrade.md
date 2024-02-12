@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:virtual-machine-performance, csstroubleshoot
-ms.technology: windows-client-hyper-v
 ---
 # Hyper-V virtual machines don't start after you upgrade to Windows 10
 

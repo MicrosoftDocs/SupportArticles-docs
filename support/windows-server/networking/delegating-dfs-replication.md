@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, mikelan
 ms.custom: sap:dfsr, csstroubleshoot
-ms.technology: networking
 ---
 # Delegate DFS replication in Windows Server 2003 R2
 
