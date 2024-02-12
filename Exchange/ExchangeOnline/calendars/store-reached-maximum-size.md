@@ -1,5 +1,5 @@
 ---
-title: Message store has reached its maximum size when delete an item
+title: Message store has reached its maximum size error when a Microsoft 365 user tries to delete an item
 description: Describes an issue that triggers a maximum size error message when a Microsoft 365 user tries to delete an item such as a calendar event in Outlook or Outlook on the Web.
 author: cloud-writer
 ms.author: meerak
@@ -45,7 +45,7 @@ For more information about how to increase the storage quota, see [Increase the 
 
 ## More information
 
-The Recoverable Items folder is not visible to the user. It contains mail items that have been soft-deleted.
+The Recoverable Items folder isn't visible to the user. It contains mail items that have been soft-deleted.
 
 An item is considered soft-deleted in the following cases:
 

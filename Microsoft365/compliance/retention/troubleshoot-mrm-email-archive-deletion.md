@@ -96,7 +96,7 @@ Check whether a Default Archive or Default Retention policy tag is applied to th
 
 - No personal archive or retention tags have been previously applied to folders that have the *never move to archive* or *never delete* action.
 - No disabled or default archive or retention tags have been applied to the entire mailbox.
-- The Default Archive tag (or any other policy tags that was applied) exists in the list of retention policy tags that are contained in the PR_ROAMING_XMLSTREAM property. If any tag is missing, delete the IPM.Configuration.MRM message that contains the PR_ROAMING_XMLSTREAM property, and use the [Start-ManagedFolderAssistant](/powershell/module/exchange/start-managedfolderassistant) cmdlet together with the `-FullCrawl` switch for the affected mailbox. Doing this regenerates the IPM.Configuration.MRM hidden message and updates the PR_ROAMING_XMLSTREAM to have the new policy tag.
+- The Default Archive tag (or any other policy tags that were applied) exists in the list of retention policy tags that are contained in the PR_ROAMING_XMLSTREAM property. If any tag is missing, delete the IPM.Configuration.MRM message that contains the PR_ROAMING_XMLSTREAM property, and use the [Start-ManagedFolderAssistant](/powershell/module/exchange/start-managedfolderassistant) cmdlet together with the `-FullCrawl` switch for the affected mailbox. Doing this regenerates the IPM.Configuration.MRM hidden message and updates the PR_ROAMING_XMLSTREAM to have the new policy tag.
 
 You can use MFCMAPI to check the PR_ROAMING_XMLSTREAM property by following these steps:
 
@@ -201,10 +201,10 @@ $xmlprops = [xml]($logProps.MailboxLog)
 $xmlprops.Properties.MailboxTable.Property | ? {$_.Name -like "ELC*"}
 ```
 
-If you still can't resolve the issue, [contact Microsot Support](https://support.microsoft.com/contactus/).
+If you still can't resolve the issue, [contact Microsoft Support](https://support.microsoft.com/contactus/).
 
 ## Best practices
 
 We recommend that you enable the archive mailbox for an account immediately after it's placed on Litigation Hold. This is especially true if the user has a lot of email traffic. Doing this can help prevent the *Recoverable Items* folder from becoming full and will let users continue to be able to further delete items from their primary mailbox. Additionally, we recommend that you enable [auto-expanding archiving](/microsoft-365/compliance/autoexpanding-archiving?view=o365-worldwide&preserve-view=true), depending on the user's [Microsoft 365 license](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#email-archiving).
 
-Notice that the *Recoverable Items* folder of the primary mailbox should not be at the maximum quota because it can also prevent MRM from moving items into the archive. For more information about mailbox folder limits and mailbox storage limits, see [Exchange Online limits](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits).
+Notice that the *Recoverable Items* folder of the primary mailbox shouldn't be at the maximum quota because it can also prevent MRM from moving items into the archive. For more information about mailbox folder limits and mailbox storage limits, see [Exchange Online limits](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits).
