@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, rhensing
 ms.custom: sap:servicing, csstroubleshoot
-ms.technology: windows-server-deployment
 ---
 # Why you may be prompted to restart your computer after you install a security update on a Windows-based computer
 

@@ -5,11 +5,9 @@ ms.date: 11/22/2021
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jories, milanmil, v-lianna
 ms.custom: sap:certificates-and-public-key-infrastructure-pki, csstroubleshoot
-ms.technology: windows-server-security
 ---
 # Approval required for certificate renewals when certificate autoenrollment configured
 

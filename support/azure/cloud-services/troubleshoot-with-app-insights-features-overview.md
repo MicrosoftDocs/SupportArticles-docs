@@ -18,7 +18,7 @@ This article describes Azure Monitor Application Insights features that are usef
 > [!NOTE]
 > This article applies to both classic cloud service and cloud service extended support.  
 
-## Configure Application Insights for Could Service apps
+## Configure Application Insights for Cloud Service apps
 
 To monitor your app with Application Insights, follow these steps:
 

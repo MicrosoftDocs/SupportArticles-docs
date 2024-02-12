@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:storage-hardware, csstroubleshoot
-ms.technology: windows-server-backup-and-storage
 ---
 # Microsoft support policy for 4K sector hard drives in Windows
 

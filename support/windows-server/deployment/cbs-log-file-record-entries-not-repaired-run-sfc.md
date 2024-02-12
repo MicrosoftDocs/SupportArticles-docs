@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kmcniel, kaushika
 ms.custom: sap:servicing, csstroubleshoot
-ms.technology: windows-server-deployment
 ---
 # The CBS.log file contains entries that some files aren't repaired even after you successfully run the SFC utility on a Windows Server based computer
 

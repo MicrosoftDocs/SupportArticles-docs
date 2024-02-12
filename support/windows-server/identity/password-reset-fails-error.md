@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, herbertm, nedpyle
 ms.custom: sap:user-computer-group-and-object-management, csstroubleshoot
-ms.technology: windows-server-active-directory
 ---
 # Password Reset using Active Directory Users & Computers fails with error "The System cannot find the path specified"
 

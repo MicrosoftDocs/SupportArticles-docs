@@ -5,11 +5,9 @@ ms.date: 12/09/2021
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate
 ms.custom: sap:kerberos-authentication, csstroubleshoot
-ms.technology: windows-server-performance
 ---
 
 # User-defined data collector set doesn't run as scheduled

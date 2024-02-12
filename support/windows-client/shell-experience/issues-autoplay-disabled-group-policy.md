@@ -5,11 +5,9 @@ ms.date: 06/07/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, warrenw, kimberj, olturcio, v-lianna
 ms.custom: sap:desktop-shell, csstroubleshoot
-ms.technology: windows-client-shell-experience
 ---
 # Issues after Autoplay is disabled in Group Policy
 

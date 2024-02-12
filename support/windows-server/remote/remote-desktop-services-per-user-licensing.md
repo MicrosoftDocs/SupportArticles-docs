@@ -6,12 +6,10 @@ author: Heidilohr
 ms.author: helohr
 manager: dcscontentpm
 audience: itpro
-ms.prod: windows-server
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, femila
 ms.custom: sap:remote-desktop-services-terminal-services-licensing
-ms.technology: windows-server-rds
 ---
 
 # The first connection to a non-persistent VDI session fails when using per-user Remote Desktop licensing

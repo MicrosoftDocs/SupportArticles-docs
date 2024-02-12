@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:active-directory-topology-sites-subnets-and-connection-objects, csstroubleshoot
-ms.technology: windows-server-active-directory
 ---
 # You cannot promote a Windows Server domain controller to be a global catalog server
 

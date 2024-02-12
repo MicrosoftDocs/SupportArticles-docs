@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:desktop-shell, csstroubleshoot
-ms.technology: windows-server-shell-experience
 ---
 # Enable and use the Run As feature in Windows Server 2003
 

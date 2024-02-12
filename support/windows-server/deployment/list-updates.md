@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, trined
 ms.custom: sap:servicing, csstroubleshoot
-ms.technology: windows-server-deployment
 ---
 # List of updates in Windows Server 2003 Service Pack 2
 

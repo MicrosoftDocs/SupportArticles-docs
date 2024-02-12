@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, SPAT, ELDENC
 ms.custom: sap:administration, csstroubleshoot
-ms.technology: windows-server-rds
 ---
 # How to shadow a Terminal Server session without a prompt for approval
 

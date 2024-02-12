@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, manojse, dereka
 ms.custom: sap:bitlocker, csstroubleshoot
-ms.technology: windows-client-security
 ---
 # Error when you enable BitLocker: The specified account does not exist
 

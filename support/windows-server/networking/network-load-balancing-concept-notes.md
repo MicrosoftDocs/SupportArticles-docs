@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:network-load-balancing-nlb, csstroubleshoot
-ms.technology: networking
 ---
 # Network Load Balancing - Concept and notes
 

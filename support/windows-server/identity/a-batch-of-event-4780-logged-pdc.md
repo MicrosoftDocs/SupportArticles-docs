@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, herbertm
 ms.custom: sap:user-computer-group-and-object-management, csstroubleshoot
-ms.technology: windows-server-active-directory
 ---
 # A batch of Event ID 4780 are logged in the primary domain controller
 

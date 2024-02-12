@@ -4,7 +4,7 @@ description: This article helps you resolve the problem of partial data loss whe
 ms.date: 10/14/2022
 ms.custom: sap:Graphics and multimedia development
 ms.reviewer: hiroakii, v-jayaramanp
-ms.technology: windows-dev-apps-graphics-multimedia-dev
+ms.subservice: graphics-multimedia-dev
 ---
 
 # Converting PDF to bitmap causes partial data loss in the image

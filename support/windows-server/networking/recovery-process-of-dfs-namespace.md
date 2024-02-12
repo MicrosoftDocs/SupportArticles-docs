@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:access-to-remote-file-shares-smb-or-dfs-namespace, csstroubleshoot
-ms.technology: networking
 ---
 # Recovery process of a DFS Namespace in Windows 2003 and 2008 Server
 

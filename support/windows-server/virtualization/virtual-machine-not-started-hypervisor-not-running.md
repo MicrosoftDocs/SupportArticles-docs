@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: stevenxu, kaushika
 ms.custom: sap:virtual-machine-will-not-boot, csstroubleshoot
-ms.technology: hyper-v
 ---
 # Error in Windows Server: Virtual machine could not start because the hypervisor is not running
 

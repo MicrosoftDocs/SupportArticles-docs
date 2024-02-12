@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, mjacquet
 ms.custom: sap:partition-and-volume-management, csstroubleshoot
-ms.technology: windows-server-backup-and-storage
 ---
 # Establish and boot to GPT mirrors in 64-bit Windows
 

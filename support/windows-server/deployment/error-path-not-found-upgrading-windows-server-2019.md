@@ -7,11 +7,9 @@ manager: dcscontentpm
 ms.date: 11/23/2023
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, hamansoor, v-lianna
 ms.custom: sap:setup, csstroubleshoot, ikb2lmc
-ms.technology: windows-server-deployment
 ---
 # ERROR_PATH_NOT_FOUND error when performing an in-place upgrade to Windows Server 2019
 

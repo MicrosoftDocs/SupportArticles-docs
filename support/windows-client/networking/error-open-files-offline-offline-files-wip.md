@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:folder-redirection-and-offline-files-and-folders-csc, csstroubleshoot
-ms.technology: windows-client-networking
 ---
 # Can't open files offline when you use Offline Files and Windows Information Protection
 

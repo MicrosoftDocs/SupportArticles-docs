@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jheath
 ms.custom: sap:dns, csstroubleshoot
-ms.technology: networking
 ---
 # WINS registration fails if a Windows Server 2016 server points to itself for WINS name resolution
 

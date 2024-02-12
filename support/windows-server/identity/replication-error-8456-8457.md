@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:active-directory-replication, csstroubleshoot
-ms.technology: windows-server-active-directory
 ---
 # Active Directory replication error 8456 or 8457: The source | destination server is currently rejecting replication requests
 

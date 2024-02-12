@@ -7,7 +7,7 @@ ms.author: haiyingyu
 manager: dcscontentpm
 ms.custom: sap:Desktop app UI development
 ms.reviewer: hihayak
-ms.technology: windows-dev-apps-desktop-app-ui-dev
+ms.subservice: desktop-app-ui-dev
 ---
 
 # A user-defined application using message filters may become unresponsive in Windows 10, version 2004/20H2/21H1/21H2

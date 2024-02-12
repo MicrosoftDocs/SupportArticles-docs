@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, mikeres
 ms.custom: sap:account-lockouts, csstroubleshoot
-ms.technology: windows-server-security
 ---
 # How to use the EventCombMT utility to search event logs for account lockouts
 

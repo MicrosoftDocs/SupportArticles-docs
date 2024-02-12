@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, aarthit, toklima
 ms.custom: sap:storage-hardware, csstroubleshoot
-ms.technology: windows-client-backup-and-storage
 ---
 # Event ID 158 is logged for identical disk GUIDs
 

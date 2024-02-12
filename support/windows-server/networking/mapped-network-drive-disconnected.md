@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:access-to-remote-file-shares-smb-or-dfs-namespace, csstroubleshoot
-ms.technology: networking
 ---
 # A mapped network drive appears to be disconnected after you install or upgrade to Symantec AntiVirus 10.0 or to Symantec Client Security 3.0
 

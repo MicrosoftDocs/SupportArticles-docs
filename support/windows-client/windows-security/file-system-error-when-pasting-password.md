@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, v-jeffbo, travisa
 ms.custom: sap:kerberos-authentication, csstroubleshoot
-ms.technology: windows-client-security
 ---
 # "File system error" when pasting password into credential dialog box in Windows 10
 

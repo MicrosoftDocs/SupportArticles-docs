@@ -5,11 +5,9 @@ ms.date: 06/15/2022
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate
 ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
-ms.technology: windows-client-group-policy
 keywords: Windows Update, known issue, kir, group policy, rollback
 ---
 

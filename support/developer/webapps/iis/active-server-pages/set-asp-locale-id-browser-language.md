@@ -5,7 +5,7 @@ ms.date: 03/23/2020
 ms.custom: sap:Active Server Pages
 ms.reviewer: mcai
 ms.topic: how-to
-ms.technology: iis-active-server-pages
+ms.subservice: active-server-pages
 ---
 # Set the ASP locale ID per the browser's language settings
 

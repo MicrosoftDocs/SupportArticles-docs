@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, tjung
 ms.custom: sap:devices-and-drivers, csstroubleshoot
-ms.technology: windows-server-deployment
 ---
 # "Stop 0x0000007B" error after you use a Group Policy setting to prevent the installation of devices
 
