@@ -1,26 +1,26 @@
 ---
 title: Troubleshooting Kerberos tickets issue 
 description: This article provides a resolution for the consistent authentication issue that affects Kerberos tickets.
-ms.date: 01/19/2024
+ms.date: 02/12/2024
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 
-# Troubleshooting issues in Kerberos tickets
+# Troubleshooting KRB_AP_ERR_TKT_EXPIRED in Kerberos tickets
 
 This article helps you resolve consistent authentication issues that might affect Kerberos tickets.
 
-Kerberos is a protocol that uses secret keys for providing secure authentication for client or server applications. A ticket is issued to a user for successful authentication. Typically, Kerberos tickets have a lifetime of about 10 hours and are renewed automatically.
+Kerberos is a protocol that uses secret keys for providing secure authentication for client or server applications. A token is issued to a user for successful authentication. Typically, Kerberos tokens have a lifetime of about 10 hours and are renewed automatically.
 
 ## Symptoms
 
-When a user presents expired tokens, the Key Distribution Center (KDC) displays a `KRB_AP_ERR_TKT_EXPIRED` error message that indicates that a service has failed.
+The Key Distribution Center (KDC) displays a `KRB_AP_ERR_TKT_EXPIRED` error message that indicates that a service has failed.
 
 ## Cause
 
-The Kerberos connection fails if a user tries to use an expired ticket for authentication. For more information, see [Kerberos authentication troubleshooting guidance](../../../windows-server/windows-security/kerberos-authentication-troubleshooting-guidance.md).
+The Kerberos connection fails if a user tries to use an expired token for authentication. For more information, see [Kerberos authentication troubleshooting guidance](../../../windows-server/windows-security/kerberos-authentication-troubleshooting-guidance.md).
 
 ## Resolution
 
