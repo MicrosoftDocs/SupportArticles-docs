@@ -12,7 +12,7 @@ ms.custom: sap:Connection issues
 
 This article helps you resolve consistent authentication issues that might affect Kerberos tickets.
 
-Kerberos is a protocol that uses secret keys for providing secure authentication for client or server applications. A token is issued to a user for successful authentication. Typically, Kerberos tokens have a lifetime of about 10 hours and are renewed automatically.
+Kerberos is a protocol that uses secret keys for providing secure authentication for client or server applications. A ticket is issued to a user for successful authentication. Typically, Kerberos tickets have a lifetime of about 10 hours and are renewed automatically.
 
 ## Symptoms
 
@@ -20,13 +20,13 @@ The Key Distribution Center (KDC) displays a `KRB_AP_ERR_TKT_EXPIRED` error mess
 
 ## Cause
 
-The Kerberos connection fails if a user tries to use an expired token for authentication. For more information, see [Kerberos authentication troubleshooting guidance](../../../windows-server/windows-security/kerberos-authentication-troubleshooting-guidance.md).
+The Kerberos connection fails if a user tries to use an expired ticket for authentication. For more information, see [Kerberos authentication troubleshooting guidance](../../../windows-server/windows-security/kerberos-authentication-troubleshooting-guidance.md).
 
 ## Resolution
 
 To resolve this error, follow these steps:
 
-1. Use the `KLIST purge` command to clear user tokens, or log off and back on, or restart the computer.
+1. Use the `KLIST purge` command to clear user tickets, or log off and back on, or restart the computer.
 
 1. Use the `KLIST` command together with the SSPIClient tool to view and manage Kerberos tickets and service principal names (SPNs), as shown in the following command:
   
