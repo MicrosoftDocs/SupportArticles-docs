@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting the explicit misplaced SPN issue 
 description: This article provides a resolution for the consistent authentication issue of explicit SPN being misplaced.  
-ms.date: 01/12/2024
+ms.date: 02/12/2024
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
@@ -14,11 +14,7 @@ This article helps you resolve a consistent authentication issue that affects th
 
 ## Symptoms
 
-You might experience a consistent authentication issue because the explicit SPNs are misplaced.
-
-## Cause
-
-If the SPN that you specify in the connection string exists on a service account that's not used by Microsoft SQL Server, you receive a Security Support Provider Interface (SSPI) context error message. The explicit misplaced SPNs can cause issues in Kerberos authentication and prevent clients from connecting to the service.
+If the SPN that you specify in the connection string exists on a service account that's not used by Microsoft SQL Server, you receive a Security Support Provider Interface (SSPI) context error message.
 
 If the SPN isn't registered correctly, you might receive the following error message:
 
@@ -27,6 +23,10 @@ If the SPN isn't registered correctly, you might receive the following error mes
 If you try to create an SPN that already exists, you receive the following error message:
 
 > Duplicate SPN found, aborting operation!
+
+## Cause
+
+The explicit misplaced SPNs can cause issues in Kerberos authentication and prevent clients from connecting to the service.
 
 ## Resolution
 
