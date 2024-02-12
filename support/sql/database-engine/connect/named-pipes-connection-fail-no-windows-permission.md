@@ -1,7 +1,7 @@
 ---
-title: Named pipes connections failure issue 
+title: Troubleshooting the Named Pipes connections error 
 description: This article provides a resolution for the named pipes connections failure consistent authentication error.
-ms.date: 01/24/2024
+ms.date: 02/12/2024
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
@@ -19,7 +19,7 @@ The SQLOLEDB provider displays a ["SQL Server does not exist or access denied"](
 Some other providers display both the following messages in a random order, whether you use integrated security or a Microsoft SQL Server login:
 
 > A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections.
-> 
+>
 > Could not open a connection to SQL Server.
 
 Some other providers might additionally display "Login timeout expired" within the error message.
