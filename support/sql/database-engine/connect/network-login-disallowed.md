@@ -8,7 +8,7 @@ ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 
-# User can't access the remote network
+# "User account not allowed" error and remote network access denied
 
 This article helps you resolve a consistent authentication issue that occurs if users don't have permissions to log in to a remote network.
 
@@ -17,6 +17,9 @@ This article helps you resolve a consistent authentication issue that occurs if 
 You receive the following error message in the Windows event security log on a computer that's running SQL Server:
 
 > The user account is not allowed the Network Login type.
+
+> [!NOTE]
+> The error message should read "The user account does not allow the Network Login type."
 
 ## Cause
 
