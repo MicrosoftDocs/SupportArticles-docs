@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:virtual-machine-creation, csstroubleshoot
-ms.technology: hyper-v
 ---
 # Microsoft server software and supported virtualization environments
 

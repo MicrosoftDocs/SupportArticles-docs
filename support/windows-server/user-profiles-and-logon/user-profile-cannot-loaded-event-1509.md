@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:user-profiles, csstroubleshoot
-ms.technology: windows-server-user-profiles
 ---
 # User profile cannot be loaded with Event ID 1509: DETAIL - The filename or extension is too long
 

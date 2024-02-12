@@ -2,9 +2,7 @@
 title: Use Docker to open core dump files on another machine
 description: This article describes how to use Docker to open a core dump file on another machine.
 ms.date: 06/11/2021
-ms.prod: aspnet-core
 ms.reviewer: ramakoni, ahmetmb
-ms.technology: aspnetcore-practice-troubleshoot-linux
 author: ahmetmithat
 ---
 # Lab 4.3 Analyze core dump files on another machine - Use Docker to open core dump files

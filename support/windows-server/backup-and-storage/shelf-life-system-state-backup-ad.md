@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, arrenc
 ms.custom: sap:active-directory-backup-and-restore-or-disaster-recovery, csstroubleshoot
-ms.technology: windows-server-backup-and-storage
 ---
 # Useful shelf life of a system-state backup of Active Directory
 

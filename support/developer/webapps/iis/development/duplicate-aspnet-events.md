@@ -3,7 +3,7 @@ title: Child requests generate duplicate ASP.NET events
 description: This article describes a problem that triggers duplicate ASP.NET events. Occurs because of URL child requests in IIS 7.0 or a later version of IIS.
 ms.date: 04/07/2020
 ms.custom: sap:Development
-ms.technology: iis-development
+ms.subservice: development
 ms.reviewer: amymcel, kaorif
 ms.topic: article
 ---

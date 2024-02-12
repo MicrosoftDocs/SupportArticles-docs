@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:user-computer-group-and-object-management, csstroubleshoot
-ms.technology: windows-server-active-directory
 ---
 # You cannot add a user name or an object name that only differs by a character with a diacritic mark
 

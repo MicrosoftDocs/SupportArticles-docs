@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:bitlocker, csstroubleshoot
-ms.technology: windows-client-security
 ---
 # "TPM is ready for use, with reduced functionality" message when the BIOS is in legacy mode with TPM 2.0
 

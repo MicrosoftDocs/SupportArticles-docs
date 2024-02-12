@@ -6,7 +6,7 @@ ms.reviewer: v-sidong
 author: hihayak
 ms.author: hihayak
 ms.custom: sap:Component development
-ms.technology: windows-dev-apps-component-dev
+ms.subservice: component-dev
 ---
 # CoInitializeEx function fails after calling the HtmlHelp function on the same thread
 

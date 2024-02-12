@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, BrCaton
 ms.custom: sap:remote-access, csstroubleshoot
-ms.technology: networking
 ---
 # VPN connections fail when using MS-CHAPv2
 

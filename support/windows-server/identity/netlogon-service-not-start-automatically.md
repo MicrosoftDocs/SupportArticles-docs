@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:domain-join-issues, csstroubleshoot
-ms.technology: windows-server-active-directory
 ---
 # Netlogon service doesn't keep settings after an in-place upgrade to Windows Server 2016 or Windows Server 2019
 

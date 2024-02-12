@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, shawnrab, v-jomcc
 ms.custom: sap:active-directory-certificate-services, csstroubleshoot
-ms.technology: windows-server-active-directory
 ---
 # Certificate Services may not start on a computer that is running Windows Server 2003 or Windows 2000
 

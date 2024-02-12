@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:domain-join-issues, csstroubleshoot
-ms.technology: windows-server-active-directory
 ---
 # Windows 7 or Windows Server 2008 R2 domain join displays error (Changing the Primary Domain DNS name of this computer to "" failed....)
 

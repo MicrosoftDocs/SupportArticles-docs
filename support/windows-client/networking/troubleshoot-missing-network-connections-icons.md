@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, waltere
 ms.custom: sap:tcp/ip-communications, csstroubleshoot
-ms.technology: windows-client-networking
 ---
 # How to troubleshoot missing network connections icons in Windows Server 2003 and in Windows XP
 

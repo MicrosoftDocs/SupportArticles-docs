@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:sysvol-access-or-replication-issues, csstroubleshoot
-ms.technology: windows-server-group-policy
 ---
 # How to rebuild the SYSVOL tree and its content in a domain
 

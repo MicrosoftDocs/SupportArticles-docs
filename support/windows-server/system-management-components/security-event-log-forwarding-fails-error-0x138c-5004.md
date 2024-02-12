@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, nitkum, v-jesits
 ms.custom: sap:event-viewer, csstroubleshoot
-ms.technology: windows-server-system-management-components
 ---
 # Security event log forwarding fails with Error 0x138C and 5004 in Windows Server
 

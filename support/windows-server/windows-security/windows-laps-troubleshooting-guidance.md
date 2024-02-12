@@ -5,11 +5,9 @@ ms.date: 04/21/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jsimmons, sandeo, mimanans, sdabbiru, deverett, raviks, v-lianna
 ms.custom: sap:windows-laps, csstroubleshoot
-ms.technology: windows-server-security
 ---
 # Windows LAPS troubleshooting guidance
 

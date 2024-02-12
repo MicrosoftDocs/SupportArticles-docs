@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:configuration-of-virtual-machine-settings, csstroubleshoot
-ms.technology: hyper-v
 ---
 # Hyper-V virtual machines cannot reach the network when the vLan tagging is enabled on a Windows Server 2008-based computer
 

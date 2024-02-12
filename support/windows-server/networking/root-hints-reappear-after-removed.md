@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, Dpracht, v-tea
 ms.custom: sap:dns, csstroubleshoot
-ms.technology: networking
 ---
 # Root hints reappear after they are removed
 

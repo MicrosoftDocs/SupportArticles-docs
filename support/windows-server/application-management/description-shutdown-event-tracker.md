@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, JEFFWADE, ScottMca
 ms.custom: sap:event-system, csstroubleshoot
-ms.technology: windows-server-application-compatibility
 ---
 # Description of the Shutdown Event Tracker
 

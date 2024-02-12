@@ -7,10 +7,8 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.technology: windows-client-hyper-v
 ---
 # Virtualization troubleshooting documentation for Windows clients
 

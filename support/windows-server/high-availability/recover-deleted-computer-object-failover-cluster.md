@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, ctimon, v-vincli
 ms.custom: sap:cannot-bring-a-resource-online, csstroubleshoot
-ms.technology: windows-server-high-availability
 ---
 # How to recover a deleted computer object that supports a Network Name resource in a failover cluster
 

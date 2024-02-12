@@ -2,13 +2,11 @@
 title: Troubleshoot Start menu errors
 description: Learn how to troubleshoot common Start menu errors in Windows 10. For example, learn to troubleshoot errors related to deployment, crashes, and performance.
 ms.date: 03/10/2023
-ms.prod: windows-client
 ms.author: lizlong
 author: lizgt2000
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.collection: highpri
-ms.technology: windows-client-shell-experience
 ms.custom: sap:start-menu, csstroubleshoot
 ms.reviewer: kaushika
 audience: itpro

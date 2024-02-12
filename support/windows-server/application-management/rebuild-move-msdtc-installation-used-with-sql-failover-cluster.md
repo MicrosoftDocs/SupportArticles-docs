@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:dtc-startup-configuration-connectivity-and-cluster, csstroubleshoot
-ms.technology: windows-server-application-compatibility
 ---
 # How to rebuild or move a MSDTC installation for use with a SQL failover cluster
 
