@@ -10,6 +10,7 @@ ms.service: active-directory
 ms.subservice: app-mgmt
 content_well_notification: 
   - AI-contribution
+  ai-usage: ai-assisted
 ---
 # Unable to delete an application due to disabled Delete button
 

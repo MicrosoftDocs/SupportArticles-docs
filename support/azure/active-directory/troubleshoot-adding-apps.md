@@ -10,6 +10,7 @@ ms.service: active-directory
 ms.subservice: app-mgmt
 content_well_notification: 
   - AI-contribution
+  ai-usage: ai-assisted
 ---
 # Troubleshoot common problems adding or removing an application to Microsoft Entra ID
 

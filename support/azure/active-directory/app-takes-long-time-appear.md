@@ -10,6 +10,7 @@ ms.service: active-directory
 ms.subservice: app-mgmt
 content_well_notification: 
   - AI-contribution
+  ai-usage: ai-assisted
 ---
 # Application takes a long time to appear after clicking the "add" button
 
