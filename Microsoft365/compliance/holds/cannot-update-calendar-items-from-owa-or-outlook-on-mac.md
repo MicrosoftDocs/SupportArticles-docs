@@ -13,7 +13,7 @@ ms.reviewer: gapart, munatara
 appliesto: 
   - Exchange Online Archiving
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 02/13/2024
 ---
 # Couldn't update the following event error when editing calendar items from OWA or Outlook
 
@@ -60,4 +60,6 @@ Because the user's mailbox is on hold, the items in the Versions folder are very
 
 ## More information
 
-When a user's mailbox is on in-place hold or litigation hold, original items and changed items are copied to the Versions folder. If the Versions folder is full, the changed copy of the original items cannot be stored in the folder. Therefore, the user cannot save changes to the original items.
+When a user's mailbox is on in-place hold or litigation hold, original items and changed items are copied to the Versions folder. If the Versions folder is full, the changed copy of the original items can't be stored in the folder. Therefore, the user can't save changes to the original items.
+
+For information about issues that might prevent retention policies from deleting email messages, see [Resolve email archive and deletion issues when using retention policies](/microsoft-365/troubleshoot/retention/troubleshoot-mrm-email-archive-deletion).

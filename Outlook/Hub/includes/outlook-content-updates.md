@@ -2,6 +2,15 @@
 
 
 
+## Week of February 05, 2024
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 2/6/2024 | [Embed and play back videos in Outlook and Loop](/outlook/troubleshoot/message-body/embed-playback-videos-in-outlook-and-loop) | added |
+| 2/7/2024 | [How to turn off e-mail matching for certificates](/outlook/troubleshoot/security/how-to-turn-off-email-matching-for-certificates) | modified |
+
+
 ## Week of January 22, 2024
 
 
