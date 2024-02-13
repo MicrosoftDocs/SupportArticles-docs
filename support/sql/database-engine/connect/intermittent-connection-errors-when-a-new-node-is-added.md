@@ -42,10 +42,10 @@ You can address the intermittent error message by resolving the mismatch between
 
 1. Reboot the server.
 
-After the changes have been applied, reboot the server to make sure the new cipher suite configuration takes effect.
+   After the changes have been applied, reboot the server to make sure the new cipher suite configuration takes effect.
 
-> [!NOTE]
-> This troubleshooting process forces the client to communicate using a different cipher suite with improved security implementation.
+  > [!NOTE]
+  > This troubleshooting process forces the client to communicate using a different cipher suite with improved security implementation.
 
 By following the previous steps, you should be able to resolve the intermittent connection error caused by the security protocol mismatch between the user and the computer.
 
