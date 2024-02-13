@@ -1,0 +1,52 @@
+---
+title: Troubleshooting the SQL Server dump generation
+description: This article helps you to resolve an issue where the SQL Server becomes unresponsive.
+ms.date: 02/13/2024
+ms.custom: sap:Database Engine
+---
+
+# SQL Server becomes unresponsive during SQL Server dump generation
+
+This article helps you resolve an issue that might arise when SQL Server becomes unresponsive when a SQL Server dump is generated.
+
+## Symptoms
+
+Consider the following scenario:
+
+- You are generating a SQL Server dump.
+- You experience the following error message that mentions the assert expression `pilb->m_cRef == 0`. For more information on what asserts are and how to troubleshoot them, please see [MSSQLSERVER_3624 - SQL Server](/sql/relational-databases/errors-events/mssqlserver-3624-database-engine-error).
+- The SQL Server becomes unresponsive during the dump process.
+
+Following are some conditions that can affect when the dump is being generated:
+
+- A remote query is executed using the `EXEC AT` command:
+
+  ```sql
+  DECLARE @test NVARCHAR(MAX) = N'ABC'
+  EXEC ('SELECT * FROM Customers.dbo.CustomerInformation WHERE CustomerId = ?', @test) AT [YourRemoteServer];
+  ```
+
+- A large object (LOB) argument is passed to the query.
+  For more information about a list of LOB data types, see [Data types (Transact-SQL) - SQL Server](/sql/t-sql/data-types/data-types-transact-sql?view=sql-server-ver16).
+
+In the previous example, the `NVARCHAR(MAX)` variable is passed as a query parameter. One of the underlying requests submitted to the linked server fails.
+
+You can also reproduce the issue by running the following query:
+
+```sql
+DECLARE @test NVARCHAR(MAX) = N'msdb' 
+EXEC ('---SELECT * FROM sys.databases where name = ?', @test) AT [<server>\<instance>]
+```
+
+Avoid by using non-blob (BLOB) data type in your database design or code:
+
+```sql
+DECLARE @test NVARCHAR(5) = N'msdb' 
+EXEC ('---SELECT * FROM sys.databases where name = ?', @test) AT  [<server>\<instance>]
+```
+
+## Resolution
+
+This article will be updated as we find more information or guidance. At present, there is no permanent resolution. Microsoft is still investigating this issue. Until then, you can try the following workaround:
+
+Change all `LOB` (Large Object) data types to fixed length data types (example is convert `NVARCHAR(MAX)` to `NVARCHAR(200))`) that the input data length supports.
