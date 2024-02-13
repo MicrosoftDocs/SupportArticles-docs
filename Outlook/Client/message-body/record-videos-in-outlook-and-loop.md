@@ -78,9 +78,7 @@ When a user records a video in an email message, the video file is automatically
 To report issues or provide feedback about the new feature, select the applicable option for your product:
 
 - In Outlook versions except Outlook for Android, select **Feedback** from the **Help** menu.
-
 - In Outlook for Android, see [Get in-app help for Outlook for iOS and Android](https://support.microsoft.com/office/get-in-app-help-for-outlook-for-ios-and-android-218a22d1-9fa5-4889-b689-de1c63493243).
-
 - In Loop, see [Want to give feedback?](https://support.microsoft.com/office/get-started-with-microsoft-loop-9f4d8d4f-dfc6-4518-9ef6-069408c21f0c#ID0EDR)
 
 ## More information
