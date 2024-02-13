@@ -161,4 +161,30 @@ To reduce the impact on your production, use the following methods:
 - Create a new pool.
 - Use the Batch service in another available region as a failover if the methods above aren't helpful.
 
+## Scenario 5: Insufficient capacity for the requested VM size in the current region
+
+### Symptom for Scenario 5
+
+The batch pool has been operating normally for some time. However, the resize operation unexpectedly failed with an insufficient capacity error, or the resize operation remained in the resizing state.
+
+Here's the error message:
+
+> **Code:** AllocationFailed  
+> **Message:**  
+> Desired number of dedicated nodes could not be allocated  
+> **Values:**  
+> Reason - Deployment allocation failed due to insufficient capacity for the requested VM size in the region.
+
+### Cause: Insufficient capacity issue
+
+The Batch service may experience insufficient capacity for the requested VM size in the current region due to some infrastructure limitations and it's not related to customer's core quota.
+
+### Solution: Retry the resize operation, create a new pool with different VM size, or use another region.
+
+Here are some potential solutions to this issue::
+
+- Retry Later: Resource availability can change as resources are constantly being freed up in the cluster, region, or zone1.
+- Change VM Size: If possible, you could create a new pool with different VM size.
+- Use the Batch service in another available region.
+
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
