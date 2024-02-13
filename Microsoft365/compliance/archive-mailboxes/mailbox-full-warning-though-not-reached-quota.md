@@ -14,7 +14,7 @@ ms.reviewer: wesmils
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 02/13/2024
 ---
 # "Mailbox is full" warning even if the mailbox hasn't reached the storage limit
 
@@ -103,5 +103,7 @@ Here are the steps to fix this issue:
 If these steps don't resolve the issue, contact [Microsoft Support](https://support.microsoft.com/contactus) for assistance.  
 
 ## More information
+
+For information about other issues that might prevent retention policies from deleting email messages, see [Resolve email archive and deletion issues when using retention policies](/microsoft-365/troubleshoot/retention/troubleshoot-mrm-email-archive-deletion).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
