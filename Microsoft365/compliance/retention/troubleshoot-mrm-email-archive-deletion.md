@@ -15,7 +15,7 @@ appliesto:
   - Exchange Online
   - Microsoft Purview
 search.appverid: MET150
-ms.date: 06/09/2023
+ms.date: 02/13/2024
 ---
 
 # Resolve email archive and deletion issues when using retention policies

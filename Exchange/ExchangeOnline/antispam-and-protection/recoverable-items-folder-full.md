@@ -1,7 +1,7 @@
 ---
 title: Recoverable Items folder not emptied for mailbox on litigation or retention hold
 description: Provides a fix for an issue that occurs if the items in the Recoverable Items folder aren't moved to the Archive mailbox.
-ms.date: 06/17/2022
+ms.date: 02/13/2024
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
