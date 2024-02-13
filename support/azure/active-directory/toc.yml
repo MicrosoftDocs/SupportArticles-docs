@@ -14,7 +14,7 @@
   - name: Maximum number of devices is reached
     href: maximum-number-of-devices-joined-workplace.md
   - name: Microsoft Graph PowerShell overview
-    href: /powershell/microsoftgraph/overview?toc=%2Ftroubleshoot%2Fazure%2Factive-directory%2Ftoc.json&bc=%2Ftroubleshoot%2Fbreadcrumb%2Ftoc.json
+    href: /powershell/microsoftgraph/overview?toc=%2Ftroubleshoot%2Fazure%2Factive-directory%2Ftoc.json&bc=%2Ftroubleshoot%2Fazure%2Factive-directory%2Fbreadcrumb%2Ftoc.json
   - name: Security context is not associated in IdFix
     href: security-context-not-associate-domian.md
   - name: Send Microsoft Authenticator logs and get an incident ID
