@@ -17,7 +17,7 @@ appliesto:
   - Outlook for Android
   - Loop
 search.appverid: MET150
-ms.date: 02/09/2024
+ms.date: 02/13/2024
 ---
 
 # Record videos in Outlook and Loop
