@@ -1,0 +1,22 @@
+items:
+- name: Docs
+  tocHref: /
+  topicHref: /
+  items:
+
+  - name: Troubleshoot
+    tocHref: /powershell/
+    topicHref: /troubleshoot/index
+    items:
+
+    - name: Azure
+      tocHref: /powershell/microsoftgraph/
+      topicHref: /troubleshoot/azure/
+      items:
+      - name: Microsoft Entra
+        tocHref: /powershell/microsoftgraph/
+        topicHref: /troubleshoot/azure/microsoft-entra/welcome-microsoft-entra
+        items:
+        - name: Microsoft Entra ID
+          tocHref: /powershell/microsoftgraph/
+          topicHref: /troubleshoot/azure/active-directory/welcome-azure-ad
