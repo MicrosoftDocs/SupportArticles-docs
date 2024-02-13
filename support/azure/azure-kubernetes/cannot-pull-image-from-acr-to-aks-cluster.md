@@ -1,10 +1,10 @@
 ---
 title: Can't pull images from Azure Container Registry to Kubernetes
 description: This article helps you troubleshoot the most common errors that you may encounter when pulling images from a container registry to an AKS cluster.
-ms.date: 12/26/2023
+ms.date: 02/12/2024
 author: genlin
 ms.author: genli
-ms.reviewer: chiragpa, andbar, v-weizhu
+ms.reviewer: chiragpa, andbar, v-weizhu, v-leedennis
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-cant-pull-images-from-acr-to-cluster
 ms.custom: devx-track-azurecli
@@ -13,7 +13,7 @@ ms.custom: devx-track-azurecli
 
 [!INCLUDE [Feedback](../../includes/feedback.md)]
 
-When you're using Microsoft Azure Container Registry together with Azure Kubernetes Service (AKS), an authentication mechanism must be established. You can set up the AKS to Container Registry integration by using a few simple Azure CLI or Azure PowerShell commands. This integration assigns the [AcrPull role](/azure/role-based-access-control/built-in-roles#acrpull) for the identity that's associated with the AKS cluster to pull images from a container registry.
+When you're using Microsoft Azure Container Registry together with Azure Kubernetes Service (AKS), an authentication mechanism must be established. You can set up the AKS to Container Registry integration by using a few simple Azure CLI or Azure PowerShell commands. This integration assigns the [AcrPull role](/azure/role-based-access-control/built-in-roles#acrpull) for the kubelet identity that's associated with the AKS cluster to pull images from a container registry.
 
 In some cases, trying to pull images from a container registry to an AKS cluster fails. This article provides guidance for troubleshooting the most common errors that you encounter when you pull images from a container registry to an AKS cluster.
 
@@ -58,7 +58,7 @@ The following sections help you troubleshoot the most common errors that are dis
 
 ## Cause 1: 401 Unauthorized error
 
-An AKS cluster requires an identity. This identity can be either a managed identity or a service principal. No matter what the identity is, the proper authorization that's used to pull an image from a container registry is necessary. Otherwise, you may get the following "401 Unauthorized" error:
+An AKS cluster requires an identity. This identity can be either a managed identity or a service principal. If the AKS cluster uses a managed identity, the kubelet identity is used for authenticating with ACR. If the AKS cluster is using as an identity a service principal, the service principal itself is used for authenticating with ACR. No matter what the identity is, the proper authorization that's used to pull an image from a container registry is necessary. Otherwise, you may get the following "401 Unauthorized" error:
 
 > Failed to pull image "\<acrname>.azurecr.io/\<repository\:tag>": [rpc error: code = Unknown desc = failed to pull and unpack image "\<acrname>.azurecr.io/\<repository\:tag>": failed to resolve reference "\<acrname>.azurecr.io/\<repository\:tag>": failed to authorize: failed to fetch oauth token: **unexpected status: 401 Unauthorized**
 
@@ -72,7 +72,7 @@ Several solutions can help you resolve this error, subject to the following cons
 
 ### Solution 1: Make sure AcrPull role assignment is created for identity
 
-The integration between AKS and Container Registry creates an AcrPull role assignment at container registry level for the AKS cluster's identity. Make sure that the role assignment is created.
+The integration between AKS and Container Registry creates an AcrPull role assignment at container registry level for the AKS cluster's kubelet identity. Make sure that the role assignment is created.
 
 To check whether the AcrPull role assignment is created, use one of the following methods:
 
