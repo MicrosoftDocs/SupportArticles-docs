@@ -18,7 +18,7 @@ Occasionally, the Azure Cosmos DB Data Explorer can't connect to your account or
 
 ## Prerequisites
 
-An existing Azure Cosmos DB for NoSQL, MongoDB, Apache Cassandra, Apache Gremlin, or Table account
+An existing Azure Cosmos DB for NoSQL, MongoDB RU, Apache Cassandra, Apache Gremlin, or Table account
 
 ## Symptoms
 
@@ -30,7 +30,7 @@ Even after you configure the correct role-based access control and portal permis
 
 - Some services, such as the API for NoSQL, API for Apache Gremlin, and API for Table, use a client-side JavaScript SDK to perform operations and require one set of solutions.
 
-- Other services, such as the API for MongoDB and API for Apache Cassandra, use protocol-specific middleware and require an alternative solution.
+- Other services, such as the API for MongoDB RU and API for Apache Cassandra, use protocol-specific middleware and require an alternative solution.
 
 ## Solution for the API for NoSQL, Apache Gremlin, or Table
 
@@ -52,7 +52,7 @@ Item (data plane) operations are executed using the JavaScript SDK within the co
 
 - For accounts configured with **public access disabled**, your device must be connected to a virtual network with connectivity to the account for data plane operations to function
 
-## Solution for the API for MongoDB or Apache Cassandra
+## Solution for the API for MongoDB RU or Apache Cassandra
 
 Review the control plane and data plane solutions, respectively.
 
