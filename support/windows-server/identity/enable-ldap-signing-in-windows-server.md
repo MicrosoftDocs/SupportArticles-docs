@@ -1,7 +1,7 @@
 ---
 title: How to enable LDAP signing
 description: Describes how to enable LDAP signing in Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, and Windows 10.
-ms.date: 09/24/2021
+ms.date: 02/16/2024
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -13,9 +13,9 @@ ms.custom: sap:ldap-configuration-and-interoperability, csstroubleshoot
 ---
 # How to enable LDAP signing in Windows Server
 
-This article describes how to enable LDAP signing in Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, and Windows 10.
+This article describes how to enable LDAP signing in Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10, and Windows 11.
 
-_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 11 - all editions, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 935834
 
 ## Summary
@@ -35,15 +35,6 @@ If the directory server is configured to reject unsigned SASL LDAP binds or LDAP
 ## How to configure the directory to require LDAP server signing for AD DS
 
 For information about possible affects of changing security settings, see [Client, service, and program issues can occur if you change security settings and user rights assignments](https://support.microsoft.com/help/823659).
-
-> [!NOTE]
-> Logging anomaly of Event ID 2889
->
-> Applications that use third-party LDAP clients may cause Windows to generate incorrect Event ID 2889 entries. This occurs when you log of LDAP interface events and if `LDAPServerIntegrity` is equal to **2**. The use of sealing (encryption) satisfies the protection against the MIM attack, but Windows logs Event ID 2889 anyway.
->
-> This happens when LDAP clients use only sealing together with SASL. We have seen this in the field in association with third-party LDAP clients.
->
-> When a connection does not use both signing and sealing, the connection security requirements check uses the flags correctly and disconnect. The check generates Error 8232 (ERROR_DS_STRONG_AUTH_REQUIRED).
 
 ### Using Group Policy
 
@@ -93,10 +84,10 @@ For information about possible affects of changing security settings, see [Clien
 
 By default, for Active Directory Lightweight Directory Services (AD LDS), the registry key is not available. Therefore, you must create a `LDAPServerIntegrity` registry entry of the REG_DWORD type under the following registry subkey:
 
-HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\\\<*InstanceName>*\Parameters
+`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\<InstanceName>\Parameters`
 
 > [!NOTE]
-> The placeholder \<InstanceName> represents the name of the AD LDS instance that you want to change.
+> The placeholder `<InstanceName>` represents the name of the AD LDS instance that you want to change.
 
 #### How to verify configuration changes
 
@@ -118,5 +109,5 @@ HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\\\<*InstanceName>*\Paramete
 
 ## References
 
-- [ADV190023: Microsoft Guidance for Enabling LDAP Channel Binding and LDAP Signing](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV190023)
+- [ADV190023: Microsoft Guidance for Enabling LDAP Channel Binding and LDAP Signing](https://portal.msrc.microsoft.com/security-guidance/advisory/ADV190023)
 - [2020 LDAP channel binding and LDAP signing requirement for Windows](https://support.microsoft.com/help/4520412)
