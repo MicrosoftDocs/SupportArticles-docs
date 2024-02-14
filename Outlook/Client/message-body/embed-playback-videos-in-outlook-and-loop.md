@@ -1,6 +1,6 @@
 ---
 title: Embed and play back videos in Outlook and Loop
-description: Provides an administrator overview of a new feature to embed and play back videos in Outlook email messages and Loop pages.
+description: Provides an overview of a new feature to embed and play back videos in Outlook email messages and Loop pages.
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -47,17 +47,17 @@ By default, all enterprise users can use the new feature. However, as an admin, 
 - To turn off the feature for all enterprise users, disable the following policy in the [Cloud Policy service for Microsoft 365](/deployoffice/admincenter/overview-cloud-policy): **Preview and playback a Stream video from within supported Microsoft 365 applications**.
 
 > [!NOTE]
-> When the policy is disabled, users won't be able to embed or play back videos in Outlook or Loop. The policy doesn't affect video playback in Microsoft Stream.
+> When the policy is disabled, users won't be able to embed or play back videos in Outlook or Loop. The policy doesn't affect video playback in [Microsoft Stream](https://support.microsoft.com/office/learn-more-about-stream-on-sharepoint-cf4c10c8-5ed3-4229-9e2a-60d31b31575d).
 
 ## Supported video files
 
 The feature supports video files in Microsoft Stream, OneDrive for work or school, and SharePoint. Users can't embed videos from local storage without first uploading the videos to one of the supported locations.
 
-There's no limit to the number of embedded videos that users can add to an email message in mobile versions of Outlook (Outlook for Android and Outlook for iOS) or to a Loop page.
+Users can embed an unlimited number of videos in a Loop page or an email message in mobile versions of Outlook (Outlook for Android and Outlook for iOS).
 
 Non-mobile versions of Outlook use Loop components to embed videos in email messages. The existing limit of five Loop components per email message applies. Video links that are added after the fifth video in an email message won't transform into embedded video players.
 
-## Access permissions for embedded videos
+## Access to embedded videos
 
 The default permissions policy for your work or school organization applies to videos regardless of whether they're embedded.
 
