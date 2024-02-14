@@ -4,8 +4,8 @@ description: Describes an error that may occur when an application calls CreateP
 author: cts-davean
 ms.author: davean
 ms.reviewer: mihayash, v-sidong
-ms.custom: sap:Desktop app UI development
-ms.subservice: desktop-app-ui-dev
+ms.custom: sap:process-thread-dll-apis 
+ms.subservice: system-services-dev
 ms.date: 08/26/2023
 ---
 

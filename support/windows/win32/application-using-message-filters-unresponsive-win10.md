@@ -1,7 +1,7 @@
 ---
 title: Apps using message filters may not respond in Windows 10
 description: This article discusses the problem when an application using its own message filters stops responding in Windows 10.
-ms.date: 12/29/2021
+ms.date: 12/19/2023
 author: HaiyingYu
 ms.author: haiyingyu
 manager: dcscontentpm
