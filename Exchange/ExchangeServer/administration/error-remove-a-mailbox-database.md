@@ -215,4 +215,4 @@ To fix the issue, follow these steps:
         auditMailboxes | Remove-Mailbox -AuditLog
         ```
 
-7. Wait for any pending mailbox move to finish, and then retry the command to remove the database.
+7. Wait for any pending mailbox moves to finish, and then retry the command to remove the database.
