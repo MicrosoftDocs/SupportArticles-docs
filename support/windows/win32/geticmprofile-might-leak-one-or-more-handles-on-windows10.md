@@ -1,11 +1,12 @@
 ---
 title: GetICMProfile leaks one or more handles in Windows 10
 description: This article describes an issue in which the GetICMProfile function doesn't close one or more registry handles in Windows 10.
-ms.date: 08/23/2022
+ms.date: 12/19/2023
 ms.reviewer: mihayash, davean, v-jayaramanp
 ms.custom: sap:graphics and multimedia development
 ms.subservice: graphics-multimedia-dev
 ---
+
 # GetICMProfile function leaks one or more handles in Windows 10
 
 This article describes a problem in which the `GetICMProfile` function leaks one or more handles in Windows 10.

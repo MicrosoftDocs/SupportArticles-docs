@@ -1,8 +1,8 @@
 ---
 title: Add-in component guidelines for core OS processes
 description: Avoid using high-level languages, libraries, or frameworks when building add-in components loaded by system processes.
-ms.date: 02/14/2022
-ms.custom: sap:System Services Development
+ms.date: 12/19/2023
+ms.custom: sap:other
 ms.reviewer: davean, v-jayaramanp
 ms.topic: troubleshooting
 ms.subservice: system-services-dev
