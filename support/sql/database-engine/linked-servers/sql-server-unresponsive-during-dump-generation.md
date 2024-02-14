@@ -1,6 +1,6 @@
 ---
-title: Troubleshooting the SQL Server dump generation
-description: This article helps you to resolve an issue where the SQL Server becomes unresponsive while generating a SQL Server dump.
+title: Troubleshooting the linked server issue
+description: This article helps you to resolve a linked server issue where the SQL Server becomes unresponsive while generating a SQL Server dump.
 ms.date: 02/14/2024
 ms.custom: sap:Database Engine
 ---
