@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting the SQL Server dump generation
-description: This article helps you to resolve an issue where the SQL Server becomes unresponsive.
-ms.date: 02/13/2024
+description: This article helps you to resolve an issue where the SQL Server becomes unresponsive while generating a SQL Server dump.
+ms.date: 02/14/2024
 ms.custom: sap:Database Engine
 ---
 
@@ -15,11 +15,17 @@ Consider the following scenario:
 
 - You're generating a SQL Server dump.
 - You experience the following error message that mentions the assert expression `pilb->m_cRef == 0`. For more information on what asserts are and how to troubleshoot them, see [MSSQLSERVER_3624 - SQL Server](/sql/relational-databases/errors-events/mssqlserver-3624-database-engine-error).
+  
+   > 2023-03-14 06:12:44.83 spid54      * Location: memilb.cpp:1836
+   > 2023-03-14 06:12:44.83 spid54      * Expression: pilb->m_cRef == 0
+
 - The SQL Server becomes unresponsive during the dump process.
 
-Following are some conditions that can affect when the dump is being generated:
+## Cause
 
-- A remote query is executed using the `EXEC AT` command:
+Following are some conditions that can affect when the SQL Server dump is being generated:
+
+- A remote query is executed using the `EXEC AT` command. For example:
 
   ```sql
   DECLARE @test NVARCHAR(MAX) = N'ABC'
