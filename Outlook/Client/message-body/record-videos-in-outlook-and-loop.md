@@ -55,7 +55,7 @@ Outlook and Loop store recorded videos in the user folder in OneDrive for work o
 
 ## Access to recorded videos
 
-The default permissions policy for your work or school organization applies to videos that are recorded in Outlook or Loop. For more information about access permissions, see [Access to embedded videos](/outlook/troubleshoot/message-body/embed-playback-videos-in-outlook-and-loop#access-permissions-for-embedded-videos).
+The default permissions policy for your work or school organization applies to videos that are recorded in Outlook or Loop. For more information about access permissions, see [Access to embedded videos](/outlook/troubleshoot/message-body/embed-playback-videos-in-outlook-and-loop#access-to-embedded-videos).
 
 ## Duration of recorded videos
 
