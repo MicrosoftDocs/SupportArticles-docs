@@ -1,8 +1,8 @@
 ---
 title: The year-end closing procedures
 description: Describes the year-end closing routine in Fixed Asset Management in Microsoft Dynamics GP.
-ms.reviewer: LMuelle, cwaswick
-ms.date: 03/31/2021
+ms.reviewer: theley
+ms.date: 02/15/2024
 ---
 # The year-end closing procedures for the Fixed Asset Management module in Microsoft Dynamics GP
 
@@ -53,15 +53,12 @@ Post all the additions, the changes, the transfers, and the retirements for the 
 2. In the **Beginning Period** box, type **2020-012**.
 
     > [!NOTE]
-    > The *2020-012*  placeholder represents period 12 of the fiscal year 2020. If you are not running on a calendar fiscal year, or if you have more than 12 periods, the period that you type would be different.
-3. In the **Ending Period** box, type **2020-012**.
+    > The *2024-012*  placeholder represents period 12 of the fiscal year 2024. If you are not running on a calendar fiscal year, or if you have more than 12 periods, the period that you type would be different.
+3. In the **Ending Period** box, type **2024-012**.
 4. In the **Transaction Date** box, type the last date of the current fiscal year, or type the date when you need the posting to affect the general ledger.
 5. Select **Continue**.
 6. When you receive a message that the batch number is being created, select **Continue**.
 7. In the Report Destination window, select the **Printer** check box, and then select **OK**.
-
-    > [!NOTE]
-    > You may want to keep this report as part of the year-end financial records.
 
 ### Step 5: Run any year-end reports that you want to keep as part of the year-end financial records
 
