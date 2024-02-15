@@ -4,10 +4,11 @@ description: Describes a problem where the value returned by GetTickCount resets
 author: cts-davean
 ms.author: davean
 ms.reviewer: v-sidong
-ms.custom: sap:System Services Development
+ms.custom: sap:other
 ms.subservice: system-services-dev
 ms.date: 12/19/2023
 ---
+
 # GetTickCount resets to zero after approximately 776 days
 
 This article describes a problem where the value returned by `GetTickCount` resets to `zero` after approximately 776 days.

@@ -5,8 +5,9 @@ ms.date: 12/19/2023
 ms.custom: sap:other
 ms.reviewer: davean, v-jayaramanp
 ms.topic: troubleshooting
-ms.subservice: system-services-dev
+ms.subservice: security-dev
 ---
+
 # Add-in component guidelines for core OS processes
 
 _Applies to:_ &nbsp; Windows  

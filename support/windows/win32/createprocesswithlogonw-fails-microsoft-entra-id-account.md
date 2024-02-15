@@ -4,7 +4,7 @@ description: Describes an error that may occur when an application calls CreateP
 author: cts-davean
 ms.author: davean
 ms.reviewer: mihayash, v-sidong
-ms.custom: sap:process-thread-dll-apis 
+ms.custom: sap:process-thread-dll-apis
 ms.subservice: system-services-dev
 ms.date: 12/19/2023
 ---

@@ -3,7 +3,7 @@ title: Enable diagnostic tracing for MS DTC
 description: This article describes how to enable diagnostic tracing for MS DTC on a Windows 10 computer.
 ms.date: 12/19/2023
 ms.reviewer: johngil
-ms.custom: sap:Distributed transactions
+ms.custom: sap:dtc-programming-runtime
 ms.topic: how-to
 ms.subservice: distributed-transactions
 ---
