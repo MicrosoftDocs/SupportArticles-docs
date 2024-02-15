@@ -42,7 +42,7 @@ This error typically indicates that the following volatile registry entry is mis
 
 ## Resolution
 
-[!INCLUDE [registry](..\..\includes\registry-important-alert.md)]
+[!INCLUDE [registry](../../includes/registry-important-alert.md)]
 
 You can resolve this issue by creating the following non-volatile registry entry on the affected computer:
 
