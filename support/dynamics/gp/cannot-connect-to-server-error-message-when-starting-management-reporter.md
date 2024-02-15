@@ -1,9 +1,9 @@
 ---
 title: Can't connect to the Management Reporter server error when starting Microsoft Management Reporter 2012
 description: Describes an error you may receive when you start Microsoft Management Reporter 2012. Provides a resolution.
-ms.reviewer: gbyer, kevogt
+ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 10/26/2022
+ms.date: 2/15/2024
 ---
 
 # "Can't connect to the Management Reporter server" error when you start Microsoft Management Reporter 2012
@@ -46,7 +46,7 @@ Here's a list of errors received when you select **Test Connection** and the pos
 
   or
 
-  > Message: System.ServiceModel.Security.MessageSecurityException: The security timestamp is invalid because its creation time ('2017-09-15T18:08:07.177Z') is in the future. Current time is '2017-09-1T18:00:34.847Z' and allowed clock skew is '00:05:00'.
+  > Message: System.ServiceModel.Security.MessageSecurityException: The security timestamp is invalid because its creation time ('2024-09-15T18:08:07.177Z') is in the future. Current time is '2024-09-1T18:00:34.847Z' and allowed clock skew is '00:05:00'.
 
   > [!NOTE]
   > The date/time indicated above is an example of the actual date/time.
