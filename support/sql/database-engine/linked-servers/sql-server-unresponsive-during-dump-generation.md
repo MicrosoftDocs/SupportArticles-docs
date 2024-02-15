@@ -53,6 +53,6 @@ EXEC ('---SELECT * FROM sys.databases where name = ?', @test) AT  [<server>\<ins
 
 ## Resolution
 
-This article will be updated as we find more information or guidance. Now, there's no permanent resolution. Microsoft is still investigating this issue. Until then, you can try the following workaround:
+Microsoft is still investigating this issue to identify a long-term fix. Until then, you can try the following workaround:
 
 Change all `LOB` (Large Object) data types to fixed length data types (for example, convert `NVARCHAR(MAX)` to `NVARCHAR(200))`) that the input data length supports.
