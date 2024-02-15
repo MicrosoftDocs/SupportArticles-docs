@@ -1,13 +1,13 @@
 ---
 title: How to remove purchase orders that are received but not invoiced or matched from the Received Not Invoiced report
 description: Describes how to remove purchase orders from the Received/Not Invoiced report in Purchase Order Processing in Microsoft Dynamics GP.
-ms.reviewer: 
+ms.reviewer: theley
 ms.topic: how-to
-ms.date: 04/22/2021
+ms.date: 02/15/2024
 ---
 # How to remove purchase orders that have been received but not invoiced or matched from the "Received/Not Invoiced" report in Purchase Order Processing
 
-This article describes how to remove purchase orders that have been received but not invoiced or matched from the Received/Not Invoiced report in Purchase Order Processing in Microsoft Dynamics GP and in Microsoft Business Solutions - Great Plains 8.0. The invoices for these purchase orders are entered and then posted manually in Payables Management. The invoices do not have to be entered and then posted from the Purchasing Invoice Entry window.
+This article describes how to remove purchase orders that have been received but not invoiced or matched from the Received/Not Invoiced report in Purchase Order Processing in Microsoft Dynamics GP. The invoices for these purchase orders are entered and then posted manually in Payables Management. The invoices do not have to be entered and then posted from the Purchasing Invoice Entry window.
 
 _Applies to:_ &nbsp; Microsoft Dynamics GP  
 _Original KB number:_ &nbsp; 929212
@@ -30,13 +30,8 @@ If you want to move the closed purchase orders from the work tables to the histo
 
 1. Follow the appropriate step:
 
-   - Microsoft Dynamics GP 10.0 and higher
-
-     On the **Microsoft Dynamics GP** menu, point to **Tools**, point to **Routines**, point to **Purchasing**, and then select **Remove Completed Purchase Orders**.
-   - Microsoft Dynamics GP 9.0 and Microsoft Business Solutions - Great Plains 8.0
-
-     On the **Tools** menu, point to **Routines**, point to **Purchasing**, and then select **Remove Completed Purchase Orders**.
-
+  On the **Microsoft Dynamics GP** menu, point to **Tools**, point to **Routines**, point to **Purchasing**, and then select **Remove Completed Purchase Orders**.
+ 
 2. In the Remove Completed Purchase Orders window, select the range of purchase order numbers that you want to remove, and then select **Insert**.
 3. Select **Process**.
 
