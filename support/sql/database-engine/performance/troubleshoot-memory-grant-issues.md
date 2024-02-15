@@ -356,7 +356,7 @@ SELECT TOP 20
         ELSE QS.statement_end_offset END   
             - QS.statement_start_offset)/2) + 1) AS statement_text  
   ,CONVERT(DECIMAL (10,2), max_grant_kb /1024.0) AS max_grant_mb
-  ,CONVERT(DECIMAL (10,2), min_grant_kb /1024.0) AS max_grant_mb
+  ,CONVERT(DECIMAL (10,2), min_grant_kb /1024.0) AS min_grant_mb
   ,CONVERT(DECIMAL (10,2), (total_grant_kb / execution_count) /1024.0) AS avg_grant_mb
   ,CONVERT(DECIMAL (10,2), max_used_grant_kb /1024.0) AS max_grant_used_mb
   ,CONVERT(DECIMAL (10,2), min_used_grant_kb /1024.0) AS min_grant_used_mb
