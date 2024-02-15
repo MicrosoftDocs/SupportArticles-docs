@@ -3,7 +3,7 @@ title: A batch is held in the several statuses
 description: Provides a solution to an error that occurs when you try to post a batch and open it in Microsoft Dynamics GP or in Microsoft Business Solutions - Great Plains.
 ms.reviewer: kyouells, melissa
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 02/15/2024
 ---
 # A batch is held in the Posting, Receiving, Busy, Marked, Locked, or Edited status in Microsoft Dynamics GP
 
@@ -26,35 +26,18 @@ After you try to post a batch in Microsoft Dynamics GP or in Microsoft Business 
 You can't post or unmark the batch. When you try to open the batch, you may receive the following error message:
 > "Batch is marked for posting by another user."
 
-This problem occurs when you use Microsoft Dynamics GP together with Microsoft SQL Server.
-
 ## Cause
 
 This issue may occur because a power fluctuation or some other problem caused the posting process to stop.
 
 ## Resolution
 
-To fix the problem, use one of the options below. To have us fix this problem for you, go to the [Here's an easy fix](#heres-an-easy-fix) section. If you prefer to fix this problem manually, go to the [Let me fix it myself](#let-me-fix-it-myself) section.
-
-### Here's an easy fix
-
-To clear the SY00800 Batch Activity table and update the batch status in the SY00500 batch table automatically, select the **Download** button. In the **File Download** dialog box, select **Run** or **Open**, and then follow the steps in the easy fix wizard.
-
-- This wizard may be in English only. However, the automatic fix also works for other language versions of Windows.
-- If you're not on the computer that has the problem, save the easy fix solution to a flash drive or a CD, and then run it on the computer that has the problem.
-
-### Let me fix it myself
-
-*Easy fix 50435*  
-Follow these steps to fix this problem yourself:
+To fix the problem, use the option below. 
 
 > [!NOTE]
 > All scripts that are in the "Resolution" section must be run in a query tool. To open the appropriate query tool, follow these guidelines:
 >
-> - If you're using Microsoft SQL Server 2000, run the statement in Query Analyzer. To open Management Studio, select **Start**, point to **Programs**, point to **Microsoft SQL Server 2000** and then select **Query Analyzer**. To run a script, select **New Query**.
-> - If you're using Microsoft SQL Server 2005, run the statement in Microsoft SQL Server Management Studio. To open Management Studio, select **Start**, point to **Programs**, point to **Microsoft SQL Server 2005** and then select **SQL Server Management Studio**. To run a script, select **New Query**.
-> - If you're using Microsoft SQL Server 2005 Express, run the statement in Microsoft SQL Server Management Studio Express. To open Management Studio Express, select **Start**, point to **Programs**, point to **Microsoft SQL Server 2005** and then select **SQL Server Management Studio Express**. To run a script, select **New Query**.
-> - If you're using Microsoft SQL Server 2008 (and later versions of SQL), run the statement in Microsoft SQL Server Management Studio. To open Management Studio, select **Start**, point to **Programs**, point to **Microsoft SQL Server 2008 (or the version you have)** and then select **SQL Server Management Studio**.
+> -Run the statement in Microsoft SQL Server Management Studio. To open Management Studio, select **Start**, point to **Programs**, point to **Microsoft SQL Server (2019) (or the version you have)** and then select **SQL Server Management Studio**.
 
 To run a script, select **New Query** To run the script, follow these steps:
 
@@ -96,5 +79,3 @@ To run a script, select **New Query** To run the script, follow these steps:
 5. Verify the accuracy of the transactions.
 6. Verify that you can edit and post the batches.
 
-> [!NOTE]
-> For more information about Payroll check interruptions, see [KB - Error message when you select a batch in the Build Payroll Checks window in Microsoft Dynamics GP](https://support.microsoft.com/help/851664).
