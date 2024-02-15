@@ -19,7 +19,7 @@ Consider the following scenario:
    > 2023-03-14 06:12:44.83 spid54      * Location: memilb.cpp:1836
    > 2023-03-14 06:12:44.83 spid54      * Expression: pilb->m_cRef == 0
 
-- The SQL Server becomes unresponsive during the dump process.
+- SQL Server becomes unresponsive during the dump process.
 
 ## Cause
 
