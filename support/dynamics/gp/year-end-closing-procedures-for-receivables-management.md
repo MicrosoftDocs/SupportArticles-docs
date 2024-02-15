@@ -1,8 +1,8 @@
 ---
 title: Year-end closing procedures for Receivables Management
 description: Describes how to do the year-end closing routine in Receivables Management.
-ms.reviewer: cwaswick, LMuelle
-ms.date: 03/31/2021
+ms.reviewer: theley
+ms.date: 02/15/2024
 ---
 # Year-end closing procedures for Receivables Management in Microsoft Dynamics GP
 
@@ -17,16 +17,6 @@ _Original KB number:_ &nbsp; 857444
 > Before you follow the instructions in this article, make sure that you have a complete backup copy of the database that you can restore if a problem occurs.
 
 This article describes the recommended year-end closing procedures for Receivables Management in Microsoft Dynamics GP. Read this article before you do one or more of the procedures.
-
-## To obtain technical support
-
-If you've questions about how to do the procedures, contact Technical Support for Microsoft Dynamics. To create a support request, follow these steps:
-
-1. Visit [Microsoft Support for business](https://serviceshub.microsoft.com/supportforbusiness).
-2. In the list of categories, select **Microsoft Dynamics GP**.
-3. In the list of subcategories, select **Receivables Management**, and then select **Next**.
-
-Or, contact Technical Support for Microsoft Dynamics by telephone at (888) 477-7877.
 
 ## Year-end closing checklist
 
