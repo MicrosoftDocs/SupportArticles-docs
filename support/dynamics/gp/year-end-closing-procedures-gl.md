@@ -2,7 +2,7 @@
 title: Year-end closing procedures for GL
 description: Describes the recommended year-end closing procedures for General Ledger in Microsoft Dynamics GP.
 ms.reviewer: dbader, LMuelle
-ms.date: 03/31/2021
+ms.date: 02/15/2024
 ---
 # Year-end closing procedures for General Ledger in Microsoft Dynamics GP
 
@@ -79,12 +79,6 @@ Only follow this step if General Ledger is integrated with other modules. If Gen
         > There is no separate year-end process that needs to be run in the Analytical Accounting module. When the year-end close process is run for General Ledger, it will automatically consolidate the balances and move the transactions in Analytical Accounting for dimensions that were properly marked (to link AA codes to the BBF entries in the AA tables [not GL tables]).
 
         For more information, see [The Year-end close procedures for Analytical Accounting in Microsoft Dynamics GP](https://support.microsoft.com/help/960356).
-
-        > [!IMPORTANT]
-        > If using AA with Microsoft Dynamics GP 2016, you should be 16.00.0675 or higher before closing the GL year! For more information, see Step 9 in [The Year-end close procedures for Analytical Accounting in Microsoft Dynamics GP](https://support.microsoft.com/help/960356).
-
-        > [!NOTE]
-        > Year-end procedures for Payroll are independent of the procedures in other modules. These procedures are always performed at the end of the calendar year. For more information, see [KB -Year-end closing procedures for Microsoft Dynamics GP Payroll](https://support.microsoft.com/help/850663).
 
 ### Step 2: Post the final adjusting entries in General Ledger
 
@@ -187,9 +181,6 @@ If you're maintaining the account history, the year-end closing routine transfer
 - The year-end closing routine prints the Year-End Closing report.
 
 When the year-end closing routine is complete, the Year-End Closing report is printed. This report lists the accounts that were closed and the transactions that were created to close those accounts. The Year-End Closing report is part of the audit trail. Save this report for the company's permanent records. The Year-End Closing report can't be reprinted.
-
-> [!NOTE]
-> If you use Microsoft SQL Server, and if database maintenance is not automated, we recommend that you perform database maintenance after you close the year.
 
 ### Step 12: (Optional) Close all the fiscal periods for all the series. (Tools | setup | company | Fiscal periods)
 
