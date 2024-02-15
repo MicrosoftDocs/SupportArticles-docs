@@ -42,7 +42,7 @@ This error typically indicates that the following volatile registry entry is mis
 
 ## Resolution
 
-[Registry include]
+[!INCLUDE [registry](..\..\includes\registry-important-alert.md)]
 
 You can resolve this issue by creating the following non-volatile registry entry on the affected computer:
 
@@ -56,6 +56,7 @@ You can use Registry Editor to manually create the registry entry. Alternatively
 ```console
 reg add HKLM\SYSTEM\CurrentControlSet\Control\ComputerName\ActiveComputerName /t REG_SZ /v ComputerName /d <Computer_Name> /f
 ```
+
 > [!NOTE]  
 > In this command, <Computer_Name> is the name of the local computer.
 
