@@ -1,9 +1,9 @@
 ---
 title: Change the fiscal period setup in General Ledger
 description: This article describes how to change the fiscal periods so that the fiscal periods differ from the current calendar year in Microsoft Dynamics GP.
-ms.reviewer: cwaswick
+ms.reviewer: Theley
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 02/15/2024
 ---
 # Change the fiscal period setup in General Ledger in Microsoft Dynamics GP
 
@@ -27,9 +27,7 @@ To change the fiscal period setup in General Ledger in Microsoft Dynamics GP, fo
 
 1. Open the Fiscal Periods Setup window. To do this, use the appropriate method:
 
-   - In Microsoft Dynamics GP 10.0, point to **Tools** on the **Microsoft Dynamics GP** menu, point to **Setup**, point to **Company**, and then click **Fiscal Periods**.
-
-   - In Microsoft Dynamics GP 9.0 and in Microsoft Business Solutions - Great Plains 8.0, point to **Setup** on the **Tools** menu, point to **Company**, and then click **Fiscal Periods**.
+   - In Microsoft Dynamics GP, point to **Tools** on the **Microsoft Dynamics GP** menu, point to **Setup**, point to **Company**, and then click **Fiscal Periods**.
 
 2. To set up the current fiscal year, follow these steps:
 
@@ -54,13 +52,11 @@ To change the fiscal period setup in General Ledger in Microsoft Dynamics GP, fo
 
    1. Use the appropriate method:
 
-      - In Microsoft Dynamics GP 10.0, point to **Tools** on the **Microsoft Dynamics GP** menu, point to **Utilities**, point to **Financial**, and then click **Reconcile**.
+      - In Microsoft Dynamics GP, point to **Tools** on the **Microsoft Dynamics GP** menu, point to **Utilities**, point to **Financial**, and then click **Reconcile**.
 
-      - In Microsoft Dynamics GP 9.0 and in Microsoft Business Solutions - Great Plains 8.0, point to **Utilities** on the **Tools** menu, point to **Financial**, and then click **Reconcile**.
+   2. Click to select the **Year** check box, and then click the earliest year in the list.
 
-   1. Click to select the **Year** check box, and then click the earliest year in the list.
-
-   1. Click **Reconcile**.
+   3. Click **Reconcile**.
 
      > [!NOTE]
      >
