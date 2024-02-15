@@ -183,7 +183,7 @@ The Batch service may experience insufficient capacity for the requested VM size
 
 Here are some potential solutions to this issue::
 
-- Retry Later: Resource availability can change as resources are constantly being freed up in the cluster, region, or zone1.
+- Retry Later: Resource availability can change as resources are constantly being freed up in the cluster, region, or zone.
 - Change VM Size: If possible, you could create a new pool with different VM size.
 - Use the Batch service in another available region.
 
