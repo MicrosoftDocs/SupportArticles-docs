@@ -1,14 +1,13 @@
 ---
 title: How to reprint the reports created in checkbook reconciliation
 description: Describes how to generate reports that show the information from a previous checkbook reconciliation process in Microsoft Dynamics GP.
-ms.reviewer: 
+ms.reviewer: theley
 ms.topic: how-to
-ms.date: 04/22/2021
+ms.date: 02/16/2024
 ---
 # How to reprint the reports that are generated during the checkbook reconciliation process in Microsoft Dynamics GP
 
-This article describes how to generate reports after you reconcile a checkbook in Microsoft Dynamics GP 10.0, in Microsoft Dynamics GP 9.0, or in Microsoft Business Solutions - Great Plains 8.0.
-
+This article describes how to generate reports after you reconcile a checkbook in Microsoft Dynamics GP.
 _Applies to:_ &nbsp; Microsoft Dynamics GP  
 _Original KB number:_ &nbsp; 973083
 
@@ -38,7 +37,7 @@ To determine whether a user has the access to the Bank Reconciliation reports
 
 To do this, use the appropriate steps:
 
-- In Microsoft Dynamics GP 9.0 and in Microsoft Business Solutions - Great Plains 8.0, follow these steps:
+- In Microsoft Dynamics GP, follow these steps:
   1. On the **Tools** menu, point to **Setup**, point to **System**, and then select **Security**.
   2. In the **User ID** list, select the appropriate user ID.
   3. In the **Product** list, select **Microsoft Dynamics GP** or **Microsoft Business Solutions - Great Plains**.
