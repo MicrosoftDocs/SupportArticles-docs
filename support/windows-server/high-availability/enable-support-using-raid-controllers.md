@@ -41,7 +41,7 @@ To add the key to the registry, follow these steps:
 1. Open Registry editor (regedit.exe).
 2. Locate and then select the following registry subkey:
 
-    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ClusDIsk\Parameters`
+    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ClusDisk\Parameters`
 3. Right-click **Parameters** and then select **New**.
 4. Select **DWORD** and give it a name of **AllowBusTypeRAID**.
 5. Once the key is created, give it a value of 0x01.

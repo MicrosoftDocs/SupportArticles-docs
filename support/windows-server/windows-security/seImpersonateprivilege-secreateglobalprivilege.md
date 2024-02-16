@@ -75,7 +75,7 @@ For more information about Impersonate functions (such as ImpersonateClient, Imp
 
 ### Issue 2: the "Create Global Objects" User Right (SeCreateGlobalPrivilege)
 
-The "Create global objects" user right (SeCreateGlobalPrivilege) is a Windows 2000 security setting that was first introduced in Windows 2000 SP4. The user right is required for a user account to create global objects in a Terminal Services session. Note that users can still create session-specific objects without being assigned this user right. By default, members of the Administrators group, the System account, and Services that are started by the Service Control Manager are assigned the "Create global objects" user right.
+The "Create global objects" user right (SeCreateGlobalPrivilege) is a Windows 2000 security setting that was first introduced in Windows 2000 SP4. The user right is required for a user account to create global file mapping and symbolic link objects. Note that users can still create session-specific objects without being assigned this user right. By default, members of the Administrators group, the System account, and Services that are started by the Service Control Manager are assigned the "Create global objects" user right.
 
 #### Troubleshooting for issue 2
 
