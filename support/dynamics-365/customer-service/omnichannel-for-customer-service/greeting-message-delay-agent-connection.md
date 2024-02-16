@@ -3,7 +3,7 @@ title: Voice call greeting messages delay connection between agents and customer
 description: Resolves an issue where voice call greeting messages delay an agent's ability to connect to a customer in the voice channel in Omnichannel for Customer Service.
 ms.reviewer: laalexan
 ms.author: srubinstein
-ms.date: 02/08/2024
+ms.date: 02/16/2024
 ---
 # Incoming voice calls with long greeting messages cause connection delays
 
@@ -22,9 +22,9 @@ After [setting up a greeting message for a channel](/dynamics365/customer-servic
 To resolve this issue, try the following workarounds:
 
 - You can shorten the greeting message configured for your voice channel.
-- If shortening the message isn't possible, you can introduce a [Copilot Studio bot](/dynamics365/customer-service/administer/overview-bots) to welcome the customer instead of using a greeting message. The bot plays the same message, waits for the message to end, and then transfers the call to the agent. This method reduces the waiting time for the agent to be connected to the call.
-
-To introduce a Copilot Studio bot to greet customers, complete the following steps:
+- If shortening the message isn't possible, you can introduce a [Copilot Studio bot](/dynamics365/customer-service/administer/overview-bots) to welcome the customer instead of using a greeting message. You'll need to configure a delay to prevent the call from being transferred to an agent. There are two ways you can choose to create a delay: Add a Power Automate delay flow, or add a message delay.
+  
+### Introduce a Copilot Studio bot to greet customers
 
 1. Add a bot and connect it to your workstream. For more information, see [Manage your bots](/dynamics365/customer-service/administer/manage-your-bots#add-a-bot).
 
@@ -36,6 +36,28 @@ To introduce a Copilot Studio bot to greet customers, complete the following ste
 1. Add a new node to transfer the conversation to the agent. Select the "plus" icon, and then select **Topic management** > **Transfer conversation**.
 1. Enter the message you want the agent to hear. For more information about creating and editing topics, see [Use topics to design a copilot conversation](/microsoft-copilot-studio/authoring-create-edit-topics).
 
+### Add a Power Automate delay flow
+
+Add a new node to create a delay flow.
+
+1. Select the "plus" icon, and then select **Call an action** > **Create a flow**. Power Automate opens, where you can see your delay flow.
+1. Open a blank automated cloud flow, set your flow trigger to **When Power Virtual Agents calls a flow**, and then select **Create**. Your flow editor page opens.
+1. Select the "plus" icon, and then select **Add an action**.
+1. Search for the **Delay** action, and then select it.
+1. Type a number for **Count**, and select the **Unit** for how long you want the delay to be. Ideally, the delay should be the same length of time as your message to prevent the call from being prematurely transferred.
+1. Select the "plus** icon, and then select **Add an action**.
+1. Search for the **Return value(s) to Power Virtual Agents** action, and then select it.
+1. Save your flow, and then go back to Copilot Studio and add it after the **Greeting Message** node.
+1. Add a new node to transfer the conversation to the agent: Select the "plus" icon, and then select **Topic Management** > **Transfer conversation**.
+1. Test your copilot to make sure the message works as expected, and then publish the change.
+
+### Add a meesage delay
+
+Add another **Message** node to explain that the call will be tranferred to an agent. This ensures that the call won't be transferred to the agent until both messages play.
+
+1. Add a new node to transfer the conversation to the agent: Select the "plus" icon, and then select **Topic management** > **Transfer conversation**.
+1. Type the message you want the agent to hear. For more information about creating and editing topics, see [Use topics to design a copilot conversation](/microsoft-copilot-studio/authoring-create-edit-topics).
+   
     :::image type="content" source="media/greeting-message-delay-agent-connection/configure-voice-message.png" alt-text="Screenshot that shows how to configure a voice bot in Copilot Studio.":::
 
-1. Test your copilot to make sure the message works as expected, and then publish the change.
+1. Test your copilot to make sure the message works as expected, and then publish the change. 
