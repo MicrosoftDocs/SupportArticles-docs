@@ -36,6 +36,7 @@ To resolve this issue, try the following workarounds:
 1. In the [Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio) app, open your copilot and go to the **Topics & Plugins** page.
 1. Under **System**, select the **Conversation start** topic.
 1. In the **Message** node, add the greeting message that you want to be played before a call is transferred (or escalated) to an agent. Make sure the message node is set to **Speech**.
+1. Create a delay either by [adding a Power Automate delay flow](#add-a-power-automate-delay-flow) or by [adding a message delay](#add-a-message-delay).
 
 ### Add a Power Automate delay flow
 
