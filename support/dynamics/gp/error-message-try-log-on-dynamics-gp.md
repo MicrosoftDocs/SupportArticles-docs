@@ -1,9 +1,9 @@
 ---
 title: Error message when you log on to Microsoft Dynamics GP 
 description: This article provides a resolution for the problem that occurs when you try to log on to Microsoft Dynamics GP.
-ms.reviewer: kyouells
+ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 02/16/2024
 ---
 # Error message when you try to log on to Microsoft Dynamics GP (This login failed. Attempt to log in again or contact your system administrator)
 
@@ -36,13 +36,13 @@ See Resolution 2 in the [Resolution](#resolution) section.
 
 This problem may occur if the following conditions are true:
 
-- You are running Microsoft Dynamics GP 9.0.
+- You are running Microsoft Dynamics GP.
 - A new user is created.
 - The new user cannot log on.See Resolution 3 in the [Resolution](#resolution) section.
 
 ### Cause 4
 
-This problem may occur if the **Advanced Password Policies** check boxes are selected in the User Setup window when you update from Microsoft SQL Server Desktop Engine (MSDE) 2000 to Microsoft SQL Server 2005 Express.
+This problem may occur if the **Advanced Password Policies** check boxes are selected in the User Setup window when you update from Microsoft SQL Server Desktop Engine (MSDE) to Microsoft SQL Server Express.
 
 See Resolution 4 in the [Resolution](#resolution) section.
 
@@ -59,13 +59,6 @@ This problem may occur if you are using mandatory profiles together with Termina
 See Resolution 6 in the [Resolution](#resolution) section.
 
 ### Cause 7
-
-This problem may occur if the following conditions are true:
-
-- You are running Microsoft Small Business Financials.
-- Not every new user can log on. Specifically, only the sa user can log on.See Resolution 7 in the [Resolution](#resolution) section.
-
-### Cause 8
 
 This problem may occur if the SQL login for the user is no longer present.
 
@@ -105,37 +98,23 @@ To resolve this problem, obtain the latest service pack for Microsoft Dynamics G
 
 To resolve this problem, follow these steps:
 
-1. Log on as the sa user.
-1. On the **Tools** menu, click **Setup**, click **System**, and then click **User**.
-1. Click the user who is experiencing the problem.
-1. Click to clear the following check boxes:
-
-   - **Change Password Next Login**  
-   - **Enforce Password Policy**  
-   - **Enforce Password Expiration**
-
-1. In the **Password** box and then in the **Confirm Password** box, type the user's password, and then click **OK**.
-1. Have the user log on to see whether the problem still occurs. For Microsoft
-
-   Dynamics GP 10.0 or Microsoft Dynamics GP 2010, follow these steps:
-
    1. Log on as the sa user.
-   1. On the **Microsoft Dynamics GP** menu, click **Tools**, point to **Setup**, point to **System**, and then click **User**.
-   1. Click the user who is experiencing the problem.
-   1. Click to clear the following check boxes:
+   2. On the **Microsoft Dynamics GP** menu, click **Tools**, point to **Setup**, point to **System**, and then click **User**.
+   3. Click the user who is experiencing the problem.
+   4. Click to clear the following check boxes:
 
     - **Change Password Next Login**  
     - **Enforce Password Policy**  
     - **Enforce Password Expiration**
 
-   1. In the **Password** box and then in the **Confirm Password** box, type the user's password, and then click **OK**.
-   1. Have the user log on to see whether the problem still occurs.
+   5. In the **Password** box and then in the **Confirm Password** box, type the user's password, and then click **OK**.
+   6. Have the user log on to see whether the problem still occurs.
 
 ### Resolution 5
 
 To resolve this problem, follow these steps, depending on the version of SQL Server that you are using.
 
-- SQL Server 2005 or SQL Server 2008
+- SQL Server 2008 or later
 
     1. Click **Start**, point to **Programs**, point to **Microsoft SQL Server 2005** or to **Microsoft SQL Server 2008**, and then click **SQL Server Management Studio**.
     2. Log on as the sa user.
@@ -147,36 +126,12 @@ To resolve this problem, follow these steps, depending on the version of SQL Ser
     8. On the **Permissions** tab, verify that **Public** appears under **Users or roles**.
     9. Click to select the **Execute/Grant** check box, and then click **OK**.
 
-- SQL Server 2000
-
-    1. Click **Start**, point to **Programs**, point to **Microsoft SQL Server**, and then click **Enterprise Manager**.
-    2. Log on as the sa user.
-    3. Under the server that is running SQL Server and Microsoft Dynamics GP, expand **Databases**, expand **Master**, and then expand **Stored Procedures**.
-    4. Right-click **smDex_Max_Char**, and then click **Properties**.
-    5. Click the **Permissions** button.
-    6. Click to select the **EXEC** check box next to the Public user, click **Apply**, and then click **OK** two times.
-
 ### Resolution 6
 
-To resolve this problem, take one of the following actions, depending on the version of Microsoft Dynamics GP that you are using.
-
-#### Microsoft Dynamics GP 2010 or Microsoft Dynamics GP 10.0
-
+#### Microsoft Dynamics GP 
 Have the system administrator remove the mandatory profile.
 
-#### Microsoft Dynamics GP 9.0
-
-Obtain hotfix 947362 or the latest update. For more information, visit the following Microsoft Web site.
-
-- [Partners](https://partner.microsoft.com/solutions/business-applications/dynamics-onprem?printpage=false)
-
 ### Resolution 7
-
-To resolve this problem, obtain the Microsoft Small Business Financials 9.0 logon hotfix. For more information, visit the following Microsoft Web site.
-
-- [Partners](https://mbs2.microsoft.com/userinfo/associateaccount.aspx)
-
-### Resolution 8
 
 To resolve this problem, verify that the SQL login exists. If the SQL login does not exist, remove the user ID from the Microsoft Dynamics GP database, and then re-create the SQL login. To do this, follow these steps.
 
@@ -184,7 +139,7 @@ To resolve this problem, verify that the SQL login exists. If the SQL login does
 
 To verify that the SQL login exists, follow these steps, depending on the version of SQL Server that you are using.
 
-##### SQL Server 2008
+##### SQL Server 2008 or later
 
 1. Click **Start**, point to **All Programs**, point to **Microsoft SQL Server 2008**, and then click **SQL Server Management Studio**.
 2. In the "Connect to Server" window, follow these steps:
@@ -205,55 +160,11 @@ To verify that the SQL login exists, follow these steps, depending on the versio
 4. On the **File** menu, click **Execute**.
 5. In the list of SQL logins, verify that the SQL login that is experiencing the problem exists.
 
-- SQL Server 2005
-
-    1. Click **Start**, point to **All Programs**, point to **Microsoft SQL Server 2005**, and then click **SQL Server Management Studio**.
-    2. In the "Connect to Server" window, follow these steps:
-
-       1. In the **Server name** box, type name of the SQL Server.
-
-       2. In the **Authentication** box, click **SQL Authentication**.
-
-       3. In the **Login** box, type sa .
-
-       4. In the **Password** box, type the password for the sa user, and then click **Connect**.
-
-    3. Click **New Query**, and then paste the following script into the blank query window:
-
-       ```sql
-       SELECT name FROM master.sys.sql_logins
-       ```
-
-    4. On the **File** menu, click **Execute**.
-    5. In the list of SQL logins, verify that the SQL login that is experiencing the problem exists.
-
-- SQL Server 2000
-
-    1. Click **Start**, point to **All Programs**, point to **Microsoft SQL Server**, and then click **Query Analyzer**.
-    2. In the **Connect to SQL Server** window, follow these steps:
-
-       1. In the **SQL Server** box, type the name of the SQL Server.
-
-       2. In the **Connect using** area, click **SQL Server Authentication**.
-
-       3. In the **Login name** box, type sa .
-
-       4. In the **Password** box, type the password for the sa user, and then click **OK**.
-
-    3. Click **New Query**, and then paste the following script into the blank query window:
-
-       ```sql
-       SELECT name FROM master..syslogins
-       ```
-  
-    4. On the **File** menu, click **Execute**.
-    5. In the list of SQL logins, verify that the SQL login that is experiencing the problem exists.
-
 #### Step 2: If the SQL login does not exist, remove the user ID from the Microsoft Dynamics GP database
 
-To remove the user ID from the Microsoft Dynamics GP database, take one of the following actions, depending on the version of SQL Server that you are using.
+To remove the user ID from the Microsoft Dynamics GP database, take one of the following actions, 
 
-- SQL Server 2008 or SQL Server 2005
+- SQL Server 2008 or later
 
     Run the following script against the DYNAMICS database and against all company databases:
   
@@ -261,17 +172,6 @@ To remove the user ID from the Microsoft Dynamics GP database, take one of the f
     DROP USER '<XXX>'
     ```
   
-    > [!NOTE]
-    > In this script, the placeholder `<XXX>` represents the actual login ID of the user.
-
-- SQL Server 2000
-
-    Run the following script against the DYNAMICS database and against all company databases:
-
-    ```sql
-    sp_dropuser '<XXX>'
-    ```
-
     > [!NOTE]
     > In this script, the placeholder `<XXX>` represents the actual login ID of the user.
 
@@ -304,15 +204,9 @@ To re-create the SQL login and the user ID in the Microsoft Dynamics GP database
 
    5. Close the User Setup window.
 
-4. Open the User Access Setup window. To do this, take one of the following actions, depending on the version of Microsoft Dynamics GP that you are using.
-
-   Microsoft Dynamics GP 2010 or Microsoft Dynamics GP 10.0
+4. Open the User Access Setup window. 
 
    On the **Microsoft Dynamics GP** menu, point to **Tools**, point to **Setup**, point to **System**, and then click **User Access**.
-
-   Microsoft Dynamics GP 9.0
-
-   On the **Tools** menu, point to **Setup**, point to **System**, and then click **User Access.**  
 
 5. Re-create the user ID for the company databases. To do this, select the user, click to clear the **Access** check box for all the companies that are selected, and then click to select the **Access** check box again for the companies to which you want the user to have access.
 
