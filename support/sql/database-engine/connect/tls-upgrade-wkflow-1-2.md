@@ -1,7 +1,7 @@
 ---
 title: TLS 1.2 upgrade workflow
 description: This article discusses the procedure about how to upgrade SQL Server client and servers to the TLS 1.2 protocol for SQL Server.
-ms.date: 01/16/2024
+ms.date: 01/29/2024
 ms.custom: sap:Connection issues
 author: Malcolm-Stewart 
 ms.author: mastewa
@@ -22,7 +22,7 @@ To implement TLS 1.2, follow these steps:
 
 1. Install the latest updates on all SQL Server-based servers in the environment.
 
-1. Make sure that TLS 1.2 is enabled by default on all servers. If you aren't sure about the TLS status, run **[SQLCHECK](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SQLCHECK)**.
+1. Make sure that TLS 1.2 is enabled by default on all servers. If you aren't sure about the TLS status, run [SQLCHECK](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SQLCHECK).
 
 1. Install the latest updates on all client computers and applications that connect to the SQL Server-based servers. For client driver updates, see [Client component downloads](tls-1-2-support-microsoft-sql-server.md#client-component-downloads).
 
@@ -30,7 +30,7 @@ To implement TLS 1.2, follow these steps:
 
 1. Disable TLS 1.0 on the servers. When you do this, you might also be able to see client computers that are disabled.
 
-### Challenges of implementing TLS 1.2
+## Challenges of implementing TLS 1.2
 
 You might encounter some challenges when you implement TLS 1.2:
 
