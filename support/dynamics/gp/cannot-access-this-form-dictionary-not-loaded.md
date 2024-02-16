@@ -1,9 +1,9 @@
 ---
 title: Cannot access this form because the dictionary containing it is not loaded error when you open a window in Microsoft Dynamics GP 
 description: Describes a problem in which you receive the Cannot access this form because the dictionary containing it is not loaded error when you open a window in Microsoft Dynamics GP. A resolution is provided.
-ms.reviewer: kyouells
+ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 02/16/2024
 ---
 # "Cannot access this form because the dictionary containing it is not loaded" error when you open a window in Microsoft Dynamics GP
 
@@ -37,8 +37,6 @@ Reinstall the module that was removed. This action re-creates the product dictio
 
 Select a form for Microsoft Dynamics GP to use. To do it, use the appropriate option.
 
-- Microsoft Dynamics GP 2010 or Microsoft Dynamics GP 10.0
-
     1. Open the Alternate/Modified Forms and Reports window. To do it, on the **Microsoft Dynamics GP** menu, point to **Tools** > **Setup** > **System**, and then click **Alternate/Modified Forms and Reports**.
     2. In the **ID** list, click the appropriate ID.
     3. In the **Product** list, click **All Products**.
@@ -47,15 +45,6 @@ Select a form for Microsoft Dynamics GP to use. To do it, use the appropriate op
     6. Expand the appropriate window, and then select **Microsoft Dynamics GP** or the appropriate option.
     7. Click **Save**.
     8. Close the Alternate/Modified Forms and Reports window.
-- Microsoft Dynamics GP 9.0
-
-    1. Open the Advanced Security window. To do it, on the **Tools** menu, point to **Setup** > **System**, and then click **Advanced Security**.
-    2. Click **View** > **by Dictionary**.
-    3. Expand **Forms**.
-    4. Expand the appropriate folder.
-    5. Expand the appropriate window.
-    6. Click **Microsoft Dynamics GP** or the appropriate option.
-    7. Click **Apply** > **OK**.
 
     > [!NOTE]
     > By default, when you open the Advanced Security window, the current user and the current company are selected. Any changes that you make are for the current user and for the current company. However, you can select more companies in the **Company Name** area. You can select more users in the **User** area of the Advanced Security window.
@@ -76,8 +65,6 @@ For more information about how to re-create the Forms.dic file, click the follow
 
 Select a form for Microsoft Dynamics GP to use. To do it, use the appropriate option.
 
-- Microsoft Dynamics GP 2010 or Microsoft Dynamics GP 10.0
-  
     1. Open the Alternate/Modified Forms and Reports window. To do it, on the **Microsoft Dynamics GP** menu, point to **Tools** > **Setup** > **System**, and then click **Alternate/Modified Forms and Reports**.
     2. In the **ID** list, click the appropriate ID.
     3. In the **Product** list, click **All Products**.
@@ -87,15 +74,5 @@ Select a form for Microsoft Dynamics GP to use. To do it, use the appropriate op
     7. Click **Save**.
     8. Close the Alternate/Modified Forms and Reports window.
 
-- Microsoft Dynamics GP 9.0
-  
-    1. Open the Advanced Security window. To do it, on the **Tools** menu, point to **Setup** > **System**, and then click **Advanced Security**.
-    2. Click **View** > **by Dictionary**.
-    3. Expand **Forms**.
-    4. Expand the appropriate folder.
-    5. Expand the appropriate window.
-    6. Click **Microsoft Dynamics GP** or the appropriate option.
-    7. Click **Apply** > **OK**.
-  
         > [!NOTE]
         > By default, when you open the Advanced Security window, the current user and the current company are selected. Any changes that you make are for the current user and for the current company. However, you can select more companies in the **Company Name** area. You can select more users in the **User** area of the Advanced Security window.
