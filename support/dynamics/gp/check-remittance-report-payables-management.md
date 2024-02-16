@@ -1,20 +1,20 @@
 ---
 title: Check Remittance report in Payables Management
-description: This article describes the Check Remittance report in Payables Management in Microsoft Dynamics GP 10.0, in Microsoft Dynamics GP 9.0, and in Microsoft Business Solutions - Great Plains 8.0.
-ms.reviewer: dbader
+description: This article describes the Check Remittance report in Payables Management in Microsoft Dynamics GP 
+ms.reviewer: theley
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 02/16/2024
 ---
 # Information about the Check Remittance report in Payables Management in Microsoft Dynamics GP
 
-This article describes the Check Remittance report in Payables Management in Microsoft Dynamics GP 10.0, in Microsoft Dynamics GP 9.0, and in Microsoft Business Solutions - Great Plains 8.0.
+This article describes the Check Remittance report in Payables Management in Microsoft Dynamics GP.
 
 _Applies to:_ &nbsp; Microsoft Dynamics GP  
 _Original KB number:_ &nbsp; 856280
 
 ## Introduction
 
-This article contains information about the Check Remittance report in Payables Management in Microsoft Dynamics GP 10.0, in Microsoft Dynamics GP 9.0, and Microsoft Business Solutions - Great Plains 8.0.
+This article contains information about the Check Remittance report in Payables Management in Microsoft Dynamics GP.
 
 ## When to print the Check Remittance report
 
