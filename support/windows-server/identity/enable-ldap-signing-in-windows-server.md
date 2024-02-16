@@ -89,7 +89,7 @@ By default, for Active Directory Lightweight Directory Services (AD LDS), the re
 > [!NOTE]
 > The placeholder `<InstanceName>` represents the name of the AD LDS instance that you want to change.
 
-The registry entry has the following values:
+The registry entry has the following possible values:
 
 - **0**: Signing is disabled.
 - **2**: Signing is enabled.
