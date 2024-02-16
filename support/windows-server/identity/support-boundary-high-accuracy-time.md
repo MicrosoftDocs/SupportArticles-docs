@@ -30,6 +30,11 @@ Tighter accuracy requirements were outside of the design specification of the Wi
 
 Time accuracy in Windows 10 and Windows Server 2016 has been substantially improved, while maintaining full backwards NTP compatibility with older Windows versions. Under the right operating conditions, systems running Windows 10 or Windows Server 2016 and newer releases can deliver 1 second, 50 ms (milliseconds), or 1-ms accuracy.
 
+> [!WARNING]
+> It is highly recommended to disable the Secure Time Seeding (STS) feature for the Windows Time service on devices that already sync with a reliable time source such as an NTP server. This includes both Active Directory domain controllers as well as member servers. This is because STS was designed specifically to correct only gross clock inaccuracies on portable devices such as tablets and laptops whose batteries might die or whose hardware clocks might not be as reliable. Furthermore, it is possible for STS to incorrectly set the system clock if enough SSL-based handshakes containing random data are received.
+>
+> For more information, see [Time accuracy improvements for Windows Server 2016](/windows-server/networking/windows-time-service/windows-server-2016-improvements).
+
 > [!IMPORTANT]
 >
 > - Highly accurate time sources
