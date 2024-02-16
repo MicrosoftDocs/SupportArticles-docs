@@ -1,26 +1,26 @@
 ---
 title: Frequently asked questions about role-based security
-description: This article describes answers for the frequently asked questions about role-based security in Microsoft Dynamics GP 10.0 and Microsoft Dynamics GP 2010.
-ms.reviewer: kyouells
-ms.date: 03/31/2021
+description: This article describes answers for the frequently asked questions about role-based security in Microsoft Dynamics GP.
+ms.reviewer: theley
+ms.date: 02/16/2024
 ---
-# Frequently asked questions about role-based security in Microsoft Dynamics GP 10.0 and Microsoft Dynamics GP 2010
+# Frequently asked questions about role-based security in Microsoft Dynamics GP
 
-This article describes answers for the frequently asked questions about role-based security in Microsoft Dynamics GP 10.0 and Microsoft Dynamics GP 2010.
+This article describes answers for the frequently asked questions about role-based security in Microsoft Dynamics GP.
 
 _Applies to:_ &nbsp; Microsoft Dynamics GP  
 _Original KB number:_ &nbsp; 951229
 
 ## Introduction
 
-This article contains frequently asked questions about role-based security in Microsoft Dynamics GP 10.0 and Microsoft Dynamics GP 2010.
+This article contains frequently asked questions about role-based security in Microsoft Dynamics GP.
 
 ## Overview
 
-- **Q1: Is documentation available that describes role-based security for Microsoft Dynamics GP 10.0 and Microsoft Dynamics GP 2010?**
+- **Q1: Is documentation available that describes role-based security for Microsoft Dynamics GP?**
 
-   A1: The SystemSetup.pdf file describes security in Microsoft Dynamics GP 10.0. The file contains information about role-based security for Microsoft Dynamics GP 10.0 and Microsoft Dynamics GP 2010.
-
+   A1: The [System Setup](https://learn.microsoft.com/en-us/dynamics-gp/installation/systemsetup) describes security in Microsoft Dynamics GP.
+  
 - **Q2: What are the basic components of role-based security?**
 
   A2: The basic components are as follows:
@@ -41,11 +41,11 @@ This article contains frequently asked questions about role-based security in Mi
 
 - **Q5: What is the POWERUSER role?**
 
-  A5: By default, the POWERUSER role is assigned to the sa user. The POWERUSER role grants the user access to all areas and to all modules in Microsoft Dynamics GP 10.0.
+  A5: By default, the POWERUSER role is assigned to the sa user. The POWERUSER role grants the user access to all areas and to all modules in Microsoft Dynamics GP.
 
-- **Q6: The security tables in Microsoft Dynamics GP 9.0 and Microsoft Business Solutions - Great Plains are the SY02000 table and the SY40300 table. Do both tables exist in Microsoft Dynamics GP 10.0?**
+- **Q6: What are the security tables?**
 
-  A6: No. These tables are removed when you convert the security to Microsoft Dynamics GP 10.0. For more information, see the "Security conversion" section in this article. The following are the new security tables in Microsoft Dynamics GP 10.0:
+  A6: The following are the security tables in Microsoft Dynamics GP:
 
   - SY09000: Task master
 
@@ -73,32 +73,19 @@ This article contains frequently asked questions about role-based security in Mi
 
 - **Q1: What are the steps to assign roles to a user?**
 
-  A1: The SystemSetup.pdf file describes how to assign roles to a user in Microsoft Dynamics GP 10.0 and Microsoft Dynamics GP 2010.
+  A1: The [System Setup](https://learn.microsoft.com/en-us/dynamics-gp/installation/systemsetup) describes how to assign roles to a user in Microsoft Dynamics GP.
 
-- **Q2: What are the steps to grant a user access to a SmartList object that is created by the SmartList Builder?**
+- **Q2: How do I grant a user access to a custom report in Microsoft Dynamics GP?**
 
-  A2: To grant access to a SmartList object that is created by the SmartList Builder, follow these steps:
+  A2: To add the custom report to a current security task that is assigned to the security role:
 
-    1. Click **Microsoft Dynamics GP**, point to **Tools**, point to **Setup**, point to **System**, and then click **Security Tasks**.
-
-    2. In the Security Tasks Setup window, open an existing task, or create a new task to find the SmartList objects.
-
-    3. In the **Product** list, click **SmartList**.
-
-    4. In the **Type** list, click **SmartList Object**.
-
-    5. In the **Series** list, click **SmartList Objects**.
-
-    6. After the SmartList objects appear in the **Access List** pane, click to select the check boxes of the SmartList objects to which you want to grant access.
-    7. Click **Save**.
-
-- **Q3: How do I grant a user access to a custom report in Microsoft Dynamics GP 10.0 and Microsoft Dynamics GP 2010?**
-
-  A3: To add the custom report to a current security task that is assigned to the security role, use Method 1. To create a new security task for the custom report, create a new security role, assign the new security task to the new security role, and grant the access to the new security role, use Method 2.
+Method 1. To create a new security task for the custom report, create a new security role, assign the new security task to the new security role, and grant the access to the new security role.
+OR
+Method 2. Create a new security task and a new security role for the custom report
 
   - Method 1: Add the custom report to a current security task
 
-    1. Log on to Microsoft Dynamics GP 10.0 or Microsoft Dynamics GP 2010 as the sa user.
+    1. Log on to Microsoft Dynamics GP as the sa user.
 
     2. Specify the security task. To do this, follow these steps:
 
@@ -155,7 +142,7 @@ This article contains frequently asked questions about role-based security in Mi
 
   - Method 2: Create a new security task and a new security role for the custom report
 
-    1. Log on to Microsoft Dynamics GP 10.0 or Microsoft Dynamics GP 2010 as the sa user.
+    1. Log on to Microsoft Dynamics GP as the sa user.
     2. Create a new security task. To do this, follow these steps:
 
        1. On the **Microsoft Dynamics GP** menu, point to **Tools**, point to **Setup**, point to **System**, and then click **Security Tasks**.
@@ -206,9 +193,9 @@ This article contains frequently asked questions about role-based security in Mi
 
        6. Close the User Security Setup window.
 
-- **Q4: What are the steps to find the SECURITYRESIDs for windows and for reports?**
+- **Q3: What are the steps to find the SECURITYRESIDs for windows and for reports?**
 
-    A4: To find the SECURITYRESIDs for windows and for reports, follow these steps:
+    A3: To find the SECURITYRESIDs for windows and for reports, follow these steps:
 
     1. Click **Microsoft Dynamics GP**, point to **Maintenance**, and then click **Clear Data** to open the Clear Data window.
 
@@ -261,13 +248,13 @@ This article contains frequently asked questions about role-based security in Mi
 
     If no security roles are assigned to the security tasks, the table is blank. If no security tasks are assigned to the operation, the table is also blank.
 
-- **Q5: How can I create my own security task and assign the task to a new security role?**
+- **Q4: How can I create my own security task and assign the task to a new security role?**
 
-  A5: For information about how to create a task and to create a role, see page 33 in the SystemSetup.pdf file.
+  A4: For information about how to create a task and to create a role, see page 33 in the SystemSetup.pdf file.
 
-- **Q6: How do I set up a security role for the navigation lists?**
+- **Q5: How do I set up a security role for the navigation lists?**
 
-  A6: You can grant access to the navigation lists by using a task. The default tasks already include access. To grant access to a navigation list by using a new task, follow these steps:
+  A5: You can grant access to the navigation lists by using a task. The default tasks already include access. To grant access to a navigation list by using a new task, follow these steps:
 
     1. On the **Microsoft Dynamics GP** menu, point to **Tools**, point to **Setup**, point to **System**, and then click **Security Tasks**.
     2. Enter the security task that you want to use.
@@ -280,9 +267,9 @@ This article contains frequently asked questions about role-based security in Mi
     > [!NOTE]
     > For more information about how to do this, see question 4 in the [Security setup](#security-setup) section.
 
-- **Q7: How do I grant access to the Create Return feature in the Sales Transaction Entry window?**
+- **Q6: How do I grant access to the Create Return feature in the Sales Transaction Entry window?**
 
-  A7: To grant access to the Create Return feature in the Sales Transaction Entry window, follow these steps:
+  A6: To grant access to the Create Return feature in the Sales Transaction Entry window, follow these steps:
 
     1. On the **Microsoft Dynamics GP** menu, point to **Tools**, point to **Setup**, point to **System**, and then click **Security Tasks**.
 
@@ -310,15 +297,13 @@ This article contains frequently asked questions about role-based security in Mi
 
     9. Click **Save**.
 
-- **Q8: Can I copy one user's security access to another user?**
+- **Q7: Can I copy one user's security access to another user?**
 
-  A8: Yes. The copy functionality exists with the User Security Setup window. To access this window, click **Microsoft Dynamics GP**, click **Tools**, point to **Setup**, point to **System**, and then click **User Security**. After you select the **User** and **Company** values, the **Copy** button becomes available. Click **Copy** to open the Copy User Security window. Use this window to copy the security roles and the alternative or modified forms ID for the selected user to the same user in any other company to which the user has access.
+  A7: Yes. The copy functionality exists with the User Security Setup window. To access this window, click **Microsoft Dynamics GP**, click **Tools**, point to **Setup**, point to **System**, and then click **User Security**. After you select the **User** and **Company** values, the **Copy** button becomes available. Click **Copy** to open the Copy User Security window. Use this window to copy the security roles and the alternative or modified forms ID for the selected user to the same user in any other company to which the user has access.
 
 ## Security conversion
 
-- **Q1: What occurs if I perform the security conversion when I upgrade from Microsoft Business Solutions - Great Plains 8.0 or Microsoft Dynamics GP 9.0 to Microsoft Dynamics GP 10.0 or Microsoft Dynamics GP 2010?**
-
-  A1: If you perform the security conversion when you upgrade to Microsoft Dynamics GP 10.0 or Microsoft Dynamics GP 2010, the following actions occur:
+1. If you perform the security conversion when you upgrade to Microsoft Dynamics GP 10.0 or 2010, the following actions occur:
 
   - For each user in a company, a task and a role are created. The name of the task and the role is CNV_USERID_COID. For example, if you perform the security conversion for the Phyllis user in the TWO company, the task and the role are named as CNV_PHYLLIS_TWO.
 
@@ -330,17 +315,7 @@ This article contains frequently asked questions about role-based security in Mi
 
   - The SY02000 security table and the SY40300 security table in Microsoft Business Solutions - Great Plains 8.0 or in Microsoft Dynamics GP 9.0 are removed.
 
-- **Q2: Do I have to convert the security to Microsoft Dynamics GP 10.0 and Microsoft Dynamics GP 2010?**
-
-  A2: No. You are not required to convert the security. However, if the security is not converted, non-sa users do not have access to any modules in Microsoft Dynamics GP 10.0.
-
-- **Q3: If the security is not converted when I upgrade to Microsoft Dynamics GP 10.0 or Microsoft Dynamics GP 2010, can I go back and convert the security?**
-
-  A3: No. It is difficult to go back after you upgrade to Microsoft Dynamics GP 10.0. We recommend that you convert the security when you update to Microsoft Dynamics GP 10.0.
-
-- **Q4: How can I view the records that are created when I perform the security conversion?**
-
-  A4: To view the records that are created when you perform the security conversion, you can run the following SQL script:
+2. To view the records that are created when you perform the security conversion, you can run the following SQL script:
 
   ```sql
   select * from DYNAMICS.dbo.SY10700 where SECURITYTASKID like 'CNV%'
@@ -357,46 +332,7 @@ This article contains frequently asked questions about role-based security in Mi
   select * from DYNAMICS.dbo.SY10550 where SECMODALTID like 'CNV%'
   ```
 
-- **Q5: When I convert the security, I receive a "The application at the location you specified is a different version than the database that you are attempting to convert. You must specify the location to the version X.0.0 application" error message. How can I resolve this problem?**
-
-  A5: To resolve this problem, review the resolution that Microsoft Knowledge Base article 935750 describes.
-
-- **Q6: How can I move security that I have set up in Microsoft Dynamics GP from my test environment to my live environment?**
-
-  A6: To move security that you have set up in Microsoft Dynamics GP from a test environment to a live environment, follow these steps:
-
-  1. Make a backup of the DYNAMICS database on both servers.
-
-  2. Export the following tables from the DYNAMICS database in the test environment, and then import the tables into the live environment:
-
-     - SY09000: Task master
-
-     - SY09100: Role master
-
-     - SY09200: Alternate or modified form and report ID master
-
-     - SY10500: Role assignment master
-
-     - SY10550: DEFAULTUSER task ID assignment master
-
-     - SY10600: Tasks assignments master
-
-     - SY10700: Operations assignments master
-
-     - SY10750: DEFAULTUSER task assignment
-
-     - SY10800: Alternate or modified form and report ID assignment master
-
-     > [!NOTE]
-     > If you use Extender:
-     >
-     > - EXT80500: PT_Extender_Tasks
-
-  For more information about how to export and import tables from one environment to another environment, see [How to transfer setup information between company databases by using Microsoft SQL Server](https://support.microsoft.com/help/874208).
-
-- **Q7: How can I remove converted security task IDs and converted security role IDs after security has been converted?**
-
-  A7: The converted security tasks and roles are created to provide a starting point for security. However, you can implement customized roles and tasks later. If you do this, you do not need the converted security tasks and roles anymore. To remove all of the converted security tasks and roles, run the following statements in Management Studio or in Query Analyzer:
+3. The converted security tasks and roles are created to provide a starting point for security. However, you can implement customized roles and tasks later. If you do this, you do not need the converted security tasks and roles anymore. To remove all of the converted security tasks and roles, run the following statements in Management Studio or in Query Analyzer:
 
   ```sql
   DELETE DYNAMICS..SY09000 WHERE SECURITYTASKID LIKE 'CNV%'
@@ -430,8 +366,8 @@ This article contains frequently asked questions about role-based security in Mi
 
   For more information, see [Error message when you use the Payroll Clerk security role to calculate payroll checks Microsoft Dynamics GP: "You don't have security privileges to open this window"](https://support.microsoft.com/help/942007).
 
-- **Q2: When I open the Purchase Order Entry window in Purchase Order Processing in Microsoft Dynamics GP 10.0, I receive a "You don't have security privileges to open this window. Contact your system administrator for assistance" error message. How can I resolve this problem?**
+- **Q2: When I open the Purchase Order Entry window in Purchase Order Processing in Microsoft Dynamics GP, I receive a "You don't have security privileges to open this window. Contact your system administrator for assistance" error message. How can I resolve this problem?**
 
-  A2: To resolve this problem, review the resolution that Microsoft Knowledge Base article 945957 describes.
+  A2: To resolve this problem, review the resolution that Microsoft article 945957 describes.
 
-  For more information, see [Error message when you try to open the Purchase Order Entry window in Purchase Order Processing in Microsoft Dynamics GP 10.0: "You don't have security privileges to open this window"](https://support.microsoft.com/help/945957).
+  For more information, see [Error message when you try to open the Purchase Order Entry window in Purchase Order Processing in Microsoft Dynamics GP: "You don't have security privileges to open this window"](https://support.microsoft.com/help/945957).
