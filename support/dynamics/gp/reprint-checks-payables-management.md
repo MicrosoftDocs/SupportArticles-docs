@@ -1,9 +1,9 @@
 ---
 title: Reprint checks in Payables Management
 description: Describes how to reprint checks that have already been processed or posted in Payables Management in Microsoft Dynamics GP.
-ms.reviewer: dbader
+ms.reviewer: theley
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 02/16/2024
 ---
 # How to reprint checks that have already been processed or posted in Payables Management in Microsoft Dynamics GP
 
@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 954623
 
 ## Introduction
 
-In Payables Management in Microsoft Dynamics GP and in Microsoft Business Solutions - Great Plains 8.0, the reprint feature can only be used if checks haven't yet been processed or posted. This article describes how to reprint checks that have already been posted without using the reprint feature. The checks are reprinted using the same check numbers.
+In Payables Management in Microsoft Dynamics GP, the reprint feature can only be used if checks haven't yet been processed or posted. This article describes how to reprint checks that have already been posted without using the reprint feature. The checks are reprinted using the same check numbers.
 
 ## More information
 
