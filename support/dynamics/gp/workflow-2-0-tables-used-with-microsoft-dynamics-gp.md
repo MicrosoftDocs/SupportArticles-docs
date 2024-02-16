@@ -1,19 +1,19 @@
 ---
-title: Workflow 2.0 tables used with Microsoft Dynamics GP
-description: Workflow 2.0 tables used with Microsoft Dynamics GP 2013 R2 and higher versions.
-ms.reviewer: cwaswick
-ms.date: 03/31/2021
+title: Workflow tables used with Microsoft Dynamics GP
+description: Workflow tables used with Microsoft Dynamics GP.
+ms.reviewer: theley
+ms.date: 02/16/2023
 ---
-# Workflow 2.0 tables used with Microsoft Dynamics GP
+# Workflow tables used with Microsoft Dynamics GP
 
-This article outlines the Workflow 2.0 tables used with Microsoft Dynamics GP 2013 R2 and higher versions.
+This article outlines the Workflow tables used with Microsoft Dynamics GP.
 
 _Applies to:_ &nbsp; Microsoft Dynamics GP  
 _Original KB number:_ &nbsp; 3091940
 
 ## Summary
 
-The workflow 2.0 tables are as follows:
+The workflow tables are as follows:
 
 WF00100 - Workflow Setup  
 WF00104 - Workflow User Security  
