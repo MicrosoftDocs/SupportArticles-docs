@@ -32,7 +32,7 @@ There are two registry keys to address this problem. Customers can apply one of 
 
 Consider the following scenario.
 
-- If you have multiple applications that encounter this problem, and each application has a different Window Class name for each DataGrid cell. In this case, you can add the new registry key, which contains an executable file name of application. Then, you will set the value to 0x00008000. You'll need to repeatedly set up the registry keys for every single application.
+- If you have multiple applications that encounter this problem, and each application has a different Window Class name for each DataGrid cell. In this case, you can add the new registry key, which contains an executable file name of application. Then, you can set the value to 0x00008000. You'll need to repeatedly set up the registry keys for every single application.
 
 - If you have multiple applications that encounter this problem but your applications use single-Window Class name for DataGrid cell because all of those applications' Window Class names are the same. In this case, you can add `AppCompatClassName` registry key. Then, you can set the value to Window class name of your application.
 
@@ -56,7 +56,7 @@ Consider the following scenario.
     DWORD Value: 0x00008000 (Hex value of 32,768)
 
 2. **For specific Windows class name:**  
- If you use this scenario, you have to apply following Windows Updates on your system.
+ If you use this scenario, you have to apply the following Windows Updates on your system.
 
     | Windows 10 Version| Article link |
     |---|---|
