@@ -28,7 +28,7 @@ items:
     href: long-image-pulls.md
     
 - name: Troubleshoot a running container group
-items:
+  items:
   - name: Can't pull images from Container Registry using a managed identity
     href: acr-image-pull-failures-managed-identity.md
   - text: Confidential container issues
@@ -39,7 +39,7 @@ items:
     href: aci-debug-tools.md
 
 - name: Troubleshoot a running container group
-items:
+  items:
   - name: Can't delete a virtual network or subnet
     href: cannot-delete-vnet-subnet.md
   - text: Error - Web socket is closed or could not be opened
