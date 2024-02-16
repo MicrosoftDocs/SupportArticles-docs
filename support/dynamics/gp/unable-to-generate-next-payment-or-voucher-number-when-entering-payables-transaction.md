@@ -1,9 +1,9 @@
 ---
 title: Unable to generate next payment number or Unable to generate next voucher number error when entering a payables transaction
 description: Describes an error may occur when you enter a payables transaction in Microsoft Dynamics GP. Provides a resolution.
-ms.reviewer: 
+ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 04/22/2021
+ms.date: 02/16/2024
 ---
 # "Unable to generate next payment number" or "Unable to generate next voucher number" error when entering a payables transaction
 
@@ -54,18 +54,15 @@ This problem can have any of the following causes.
 > Before you follow the instructions in this article, make sure that you have a complete backup copy of the database that you can restore if a problem occurs.
 
 > [!NOTE]
-> Resolutions 1, 2, 3, and 4 will make use of the Payables Setup Options window. To access the Payables Setup Options window, select the **Options** button after launching the Payables Management Setup window. To launch this window, please use the appropriate option:
+> Resolutions 1, 2, 3, and 4 will make use of the Payables Setup Options window. To access the Payables Setup Options window, select the **Options** button after launching the Payables Management Setup window. 
 
-- In Microsoft Dynamics GP 10.0, point to Tools on the **Microsoft Dynamics GP** menu, point to **Setup**, point to **Purchasing**, and then select **Payables**.
-- In Microsoft Dynamics GP 9, point to Setup on the **Tools** menu, point to **Purchasing**, and then select **Payables**.
+- In Microsoft Dynamics GP, point to Tools on the **Microsoft Dynamics GP** menu, point to **Setup**, point to **Purchasing**, and then select **Payables**.
 
 ### Resolution 1
 
-To resolve this problem, type a number in the **Next Payment Number/Voucher Number** field in the Payables Setup Options window. To access this window, follow the appropriate method:
+To resolve this problem, type a number in the **Next Payment Number/Voucher Number** field in the Payables Setup Options window. 
 
-- In Microsoft Dynamics GP 10.0, point to **Tools** on the Microsoft Dynamics GP menu, point to **Setup**, point to **Purchasing**, and then select **Payables**. Next, select the **Options** button.
-
-- In Microsoft Dynamics GP 9.0, select on **Tools**, point to **Setup**, point to **Purchasing**, and then select **Payables**. Next, select the **Options** button.
+- In Microsoft Dynamics GP, point to **Tools** on the Microsoft Dynamics GP menu, point to **Setup**, point to **Purchasing**, and then select **Payables**. Next, select the **Options** button.
 
 > [!NOTE]
 > Document types of Invoice, finance charge, miscellaneous charge, return and credit memo use voucher numbers, while checks (whether manual payments or computer checks) use payment numbers.
@@ -74,14 +71,11 @@ To resolve this problem, type a number in the **Next Payment Number/Voucher Numb
 
 To resolve this problem, enter a larger number in the **Next Payment Number/Voucher Number** field in the Payables Setup Options window that is higher than the maximum number already used. To determine the voucher number or highest payment number of the highest value that has already been used, use the steps below:
 
-1. Start the Support Administrator Console, Microsoft SQL Query Analyzer, or SQL Server Management Studio. To do this, use one of the following methods depending on the program that you are using:
-
-   - Method 1: For SQL Server Desktop Engine. If you are using SQL Server Desktop Engine (also known as MSDE 2000), start the Support Administrator Console. To do this, select **Start**, point to **All Programs**, point to **Microsoft Administrator Console**, and then select **Support Administrator Console**.
-   - Method 2: For SQL Server 2000. If you are using SQL Server 2000, start SQL Query Analyzer. To do this, select **Start**, point to **All Programs**, point to **Microsoft SQL Server**, and then select **Query Analyzer**.
-   - Method 3: For SQL Server 2005. If you are using SQL Server 2005, start SQL Server Management Studio. To do this, select **Start**, point to **All Programs**, point to **Microsoft SQL Server 2005**, and then select **SQL Server Management Studio**.
-   - Method 4: For SQL Server 2008. If you are using SQL Server 2008, start SQL Management Studio. To do this, select **Start**, point to **All Programs**, point to **Microsoft SQL Server 2008**, and then select **SQL Server Management Studio**.
+1. Start Microsoft SQL Server Management Studio. 
+ To do this, select **Start**, point to **All Programs**, point to **Microsoft SQL Server**, and then select **SQL Server Management Studio**.
 
 2. Select on New Query and select the company database.
+
 3. Run the following the appropriate script against the company database to identify the record that has the highest voucher / payment number.
 
     - To determine the highest **voucher number**, proceed with running this script:
@@ -113,8 +107,8 @@ To resolve this problem, perform the Check Links routine on the Payables Transac
 
 1. Follow the appropriate step:
 
-   - In Microsoft Dynamics GP 10.0, point to **Maintenance** on the **Microsoft Dynamics GP** menu, and then select **Check Links**.
-   - In Microsoft Dynamics GP 9.0, point to **Maintenance** on the **File** menu, and then select **Check Links**.
+   - In Microsoft Dynamics GP, point to **Maintenance** on the **Microsoft Dynamics GP** menu, and then select **Check Links**.
+   
 2. In the **Series** list, select **Purchasing**.
 3. Select **Payables Transaction Logical File**, select **Insert**, and then select **OK**.
 4. When you are prompted to print the error log, select a destination, and then select **OK**.
