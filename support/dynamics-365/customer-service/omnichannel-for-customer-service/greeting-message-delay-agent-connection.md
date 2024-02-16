@@ -33,29 +33,41 @@ To resolve this issue, try the following workarounds:
 1. In the [Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio) app, open your copilot and go to the **Topics & Plugins** page.
 1. Under **System**, select the **Conversation start** topic.
 1. In the **Message** node, add the greeting message that you want to be played before a call is transferred (or escalated) to an agent. Make sure the message node is set to **Speech**.
-1. Add a new node to transfer the conversation to the agent. Select the "plus" icon, and then select **Topic management** > **Transfer conversation**.
-1. Enter the message you want the agent to hear. For more information about creating and editing topics, see [Use topics to design a copilot conversation](/microsoft-copilot-studio/authoring-create-edit-topics).
 
 ### Add a Power Automate delay flow
 
 Add a new node to create a delay flow.
 
 1. Select the "plus" icon, and then select **Call an action** > **Create a flow**. Power Automate opens, where you can see your delay flow.
-1. Open a blank automated cloud flow, set your flow trigger to **When Power Virtual Agents calls a flow**, and then select **Create**. Your flow editor page opens.
+1. Open a blank automated cloud flow, set your flow trigger to **When Power Virtual Agents calls a flow**, and then select **Create**.
+   
+  :::image type="content" source="media/greeting-message-delay-agent-connection/automated-cloud-flow-voice-message.png" alt-text="Screenshot that shows the trigger for when Power Agents calls a flow.":::
+  
+   Your flow editor page opens.
+   
 1. Select the "plus" icon, and then select **Add an action**.
 1. Search for the **Delay** action, and then select it.
 1. Type a number for **Count**, and select the **Unit** for how long you want the delay to be. Ideally, the delay should be the same length of time as your message to prevent the call from being prematurely transferred.
+   
+   :::image type="content" source="media/greeting-message-delay-agent-connection/pva-delay-action.png" alt-text="Screenshot that the delay action in the Power Automate delay flow.":::
+   
 1. Select the "plus** icon, and then select **Add an action**.
 1. Search for the **Return value(s) to Power Virtual Agents** action, and then select it.
+
+   :::image type="content" source="media/greeting-message-delay-agent-connection/return-value-pva.png" alt-text="Screenshot that the flow action for Return value(s) to Power Virtual Agents.":::
+   
 1. Save your flow, and then go back to Copilot Studio and add it after the **Greeting Message** node.
 1. Add a new node to transfer the conversation to the agent: Select the "plus" icon, and then select **Topic Management** > **Transfer conversation**.
+
+   :::image type="content" source="media/greeting-message-delay-agent-connection/transfer-conversation-node.png" alt-text="Screenshot that shows the transfer conversation node in Copilot Studio.":::
+   
 1. Test your copilot to make sure the message works as expected, and then publish the change.
 
-### Add a meesage delay
+### Add a message delay
 
 Add another **Message** node to explain that the call will be tranferred to an agent. This ensures that the call won't be transferred to the agent until both messages play.
 
-1. Add a new node to transfer the conversation to the agent: Select the "plus" icon, and then select **Topic management** > **Transfer conversation**.
+1. Select the "plus" icon, and then select **Topic management** > **Transfer conversation**.
 1. Type the message you want the agent to hear. For more information about creating and editing topics, see [Use topics to design a copilot conversation](/microsoft-copilot-studio/authoring-create-edit-topics).
    
     :::image type="content" source="media/greeting-message-delay-agent-connection/configure-voice-message.png" alt-text="Screenshot that shows how to configure a voice bot in Copilot Studio.":::
