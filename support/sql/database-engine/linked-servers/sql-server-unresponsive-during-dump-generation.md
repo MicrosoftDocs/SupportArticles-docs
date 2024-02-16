@@ -4,7 +4,7 @@ description: This article discusses how to fix an assert dump-related SQL Server
 author: JamesFerebee
 ms.author: jaferebe
 ms.reviewer: jopilov, v-jayaramanp
-ms.date: 02/15/2024
+ms.date: 02/16/2024
 ms.custom: sap:Database Engine
 ---
 
@@ -46,7 +46,7 @@ DECLARE @test NVARCHAR(MAX) = N'msdb'
 EXEC ('---SELECT * FROM sys.databases where name = ?', @test) AT [<server>\<instance>]
 ```
 
-Avoid by using nonblob (BLOB) data type in your database design or code:
+To avoid this issue, use nonblob (BLOB) data type in your database design or code:
 
 ```sql
 DECLARE @test NVARCHAR(5) = N'msdb' 
@@ -54,7 +54,7 @@ EXEC ('---SELECT * FROM sys.databases where name = ?', @test) AT  [<server>\<ins
 ```
 
 > [!WARNING]
-> If you run this code in your environment, you are likely to encounter a dump file that will be an outage. Run at your own risk.
+> If you run this code in your environment, you are likely to encounter a dump file that will cause  an outage. Run at your own risk.
 
 ## Status
 
