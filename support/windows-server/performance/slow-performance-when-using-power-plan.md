@@ -15,7 +15,7 @@ ms.custom: sap:slow-performance, csstroubleshoot
 
 This article provides a solution to an issue where slow performance on Windows Server when using the Balanced power plan.
 
-_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1  and later version
 _Original KB number:_ &nbsp; 2207548
 
 ## Symptoms
