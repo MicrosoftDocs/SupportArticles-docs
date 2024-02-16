@@ -81,9 +81,21 @@ This section lists various causes that are related to aspects such as database, 
 - Database is offline: For detailed information regarding the issue, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
 - Database permissions: For detailed information regarding the issue, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
 - Linked Server Account Mapping: For more information, see [linked servers](linked-server-account-mapping-error.md).
-- |Proxy account doesn't have permissions: An SSIS job run by SQL Agent might need permissions other than the SQL Agent service account can provide. For more information, see [SSIS package does not run when called from a SQL Server Agent job step.](../../integration-services/ssis-package-doesnt-run-when-called-job-step.md).
+- Proxy account doesn't have permissions: An SSIS job run by SQL Agent might need permissions other than the SQL Agent service account can provide. For more information, see [SSIS package does not run when called from a SQL Server Agent job step.](../../integration-services/ssis-package-doesnt-run-when-called-job-step.md).
 - No Login: For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
-- Inconsistent metadata: Refers to a scenario where metadata of the linked server is inconsistent or doesn't match the expected metadata. A view or stored procedure receives login failures on a linked server whereas a distributed `SELECT` statement copied from them doesn't. This situation can happen if the View was created and then the linked server was recreated, or a remote table was modified without rebuilding the View. To resolve this issue, you can refresh the metadata of the linked server by running the `sp_refreshview` stored procedure.
+- [Bad metadata](#cause-6---bad-metadata): Refers to a scenario where metadata of the linked server is inconsistent or doesn't match the expected metadata.
+
+### Cause 6 - Bad metadata
+
+A view or stored procedure receives login failures on a linked server whereas a distributed `SELECT` statement copied from them doesn't.
+
+**Cause**
+
+This issue might happen if the View was created and then the linked server was recreated, or a remote table was modified without rebuilding the View.
+
+**Resolution**
+
+To resolve this issue, you can refresh the metadata of the linked server by running the `sp_refreshview` stored procedure.
 
 ## Issues related to connection string
 
@@ -103,7 +115,7 @@ This section lists various causes related to connection string.
 
 - Explicit SPN is duplicated: For more information, see ["Cannot generate SSPI context" error when using Windows authentication to connect SQL Server.](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended).
 
-### Causes related to Windows permissions or Policy settings
+## Causes related to Windows permissions or Policy settings
 
 This section lists various issues that might arise due to problems in permissions or settings. Some of the causes are:
 
@@ -111,7 +123,19 @@ This section lists various issues that might arise due to problems in permission
 
 - Network login disallowed: For more information, see [Troubleshooting the network login](network-login-disallowed.md) issue.
 
-- Only admins can log in: This issue occurs if the security log on a computer if full and doesn't have space to fill events. The security feature **[CrashOnAuditFail](/previous-versions/windows/it-pro/windows-2000-server/cc963220(v=technet.10))** is used by system administrators to check all security events. The valid values for `CrashOnAuditFail` are *0*, *1*, and *2*. If the key is set to *2*, it means that the security event log is full and the "Only Admins can login" error message is shown. To resolve this issue, follow these steps:
+- Only admins can log in: This issue occurs if the security log on a computer is full and doesn't have space to fill events.
+
+### Cause 3 - Only admins can log in
+
+The security feature **[CrashOnAuditFail](/previous-versions/windows/it-pro/windows-2000-server/cc963220(v=technet.10))** is used by system administrators to check all security events. The valid values for `CrashOnAuditFail` are *0*, *1*, and *2*.
+
+**Symptoms**
+
+If the key for `CrashOnAuditFail` is set to *2*, it means that the security event log is full and the "Only Admins can login" error message is shown.
+
+**Resolution**
+
+To resolve this issue, follow these steps:
 
  1. Start the Registry editor.
  1. Locate the following key, and then check whether the value of the key `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa!crashonauditfail` is set to *2*. This indicates that the security event log requires manual clearing.
