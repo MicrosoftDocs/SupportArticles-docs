@@ -65,7 +65,7 @@ Add a new node to create a delay flow.
 
 ### Add a message delay
 
-Add another **Message** node to explain that the call will be tranferred to an agent. This ensures that the call won't be transferred to the agent until both messages play.
+Add another **Message** node to explain that the call will be transferred to an agent. This ensures that the call won't be transferred to the agent until both messages play.
 
 1. Select the "plus" icon, and then select **Topic management** > **Transfer conversation**.
 1. Type the message you want the agent to hear. For more information about creating and editing topics, see [Use topics to design a copilot conversation](/microsoft-copilot-studio/authoring-create-edit-topics).
