@@ -14,15 +14,17 @@ Azure Batch creates resources at the subscription level, and it is necessary to 
 
 > [!NOTE]
 > The resources created use the following format.
--An Azure load balancer, with the name (Guid)-Azurebatch-cloudserviceloadbalancer
--A network security group, with the name (Guid)-Azurebatch-cloudservicenetworksecuritygroup
--An Azure public IP address, with the name (Guid)-Azurebatch-cloudservicepublicip
+> -An Azure load balancer, with the name (Guid)-Azurebatch-cloudserviceloadbalancer
+> -An Azure public IP address, with the name (Guid)-Azurebatch-cloudservicepublicip
+> -A network security group, with the name (Guid)-Azurebatch-cloudservicenetworksecuritygroup
+ 
 
 ## Cause: Azure Batch VNET integration  
 
 As described in the symptom, when a Batch pool is created using VNET Integration, the Azure Batch service automatically creates all necessary network resources for the operation of the pool. These resources are created in the same resource group where the VNET in use is located.
 
 :::image type="content" source="media/azure-batch-network-resources/network-resources-created-by-batch.png" alt-text="Screenshot of network resources created by batch." border="false":::
+
 
 ## Solution: Access the resource Tag to access the Batch Account/ Pool details 
 
