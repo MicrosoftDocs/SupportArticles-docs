@@ -3,7 +3,7 @@ title: Errors when selecting a batch
 description: Provides a solution to errors that occur when you select a batch in the Build Payroll Checks window in Microsoft Dynamics GP.
 ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 02/16/2024
 ---
 # Error messages when you select a batch in the Build Payroll Checks window in Microsoft Dynamics GP
 
@@ -85,12 +85,10 @@ To resolve this problem, follow these steps:
 
 ### Step 1: Delete records in Payroll work tables
 
-Follow one of the options below to delete the activity from the payroll work tables. To delete records, follow there steps:
 
 1. Open Microsoft SQL Server using the appropriate method below:
-   - If you use Microsoft SQL Server 2008, start SQL Server Management Studio. To do it, select **Start**, point to **All Programs**, point to **Microsoft SQL Server 2008**, and then select **SQL Server Management Studio**.
-   - If you use Microsoft SQL Server 2005, start SQL Server Management Studio. To do it, select **Start**, point to **All Programs**, point to **Microsoft SQL Server 2005**, and then select **SQL Server Management Studio**.
-   - If you use Microsoft SQL Server 2000, start SQL Query Analyzer. To do it, select **Start**, point to **All Programs**, point to **Microsoft SQL Server**, and then select **Query Analyzer**.
+   - Start SQL Server Management Studio. To do it, select **Start**, point to **All Programs**, point to **Microsoft SQL Server 2008**, and then select **SQL Server Management Studio**.
+
 2. Run delete statements against the company database.
 
     > [!NOTE]
@@ -110,7 +108,6 @@ Follow one of the options below to delete the activity from the payroll work tab
     Delete UPR10208
     Delete UPR10209
     Delete UPR10213
-    Delete UPR10301
     Delete UPR19900
     Delete UPR19901
     ```
