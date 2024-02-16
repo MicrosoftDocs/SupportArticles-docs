@@ -1,13 +1,13 @@
 ---
 title: Void a credit memo is applied incorrectly to an invoice
-description: This article describes how to correct a situation where a credit memo is applied incorrectly to an invoice in Payables Management in Microsoft Dynamics GP and Microsoft Business Solutions - Great Plains 8.0.
-ms.reviewer: dbader
+description: This article describes how to correct a situation where a credit memo is applied incorrectly to an invoice in Payables Management in Microsoft Dynamics GP.
+ms.reviewer: theley
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 02/16/2024
 ---
 # Void a credit memo that is applied incorrectly to an invoice in Payables Management in Microsoft Dynamics GP
 
-This article describes how to correct a situation where a credit memo is applied incorrectly to an invoice in Payables Management in Microsoft Dynamics GP and Microsoft Business Solutions - Great Plains 8.0.
+This article describes how to correct a situation where a credit memo is applied incorrectly to an invoice in Payables Management in Microsoft Dynamics GP.
 
 _Applies to:_ &nbsp; Microsoft Dynamics GP  
 _Original KB number:_ &nbsp; 953223
@@ -82,9 +82,7 @@ Sometimes credit memos are applied incorrectly to an invoice. This can occur man
 
    1. Follow the appropriate step:
 
-      - In Microsoft Dynamics GP 10.0, on the **Microsoft Dynamics GP** menu, point to **Tools**, point to **Utilities**, point to **Purchasing**, and then click **Remove Transaction History**.
-
-      - In Microsoft Dynamics GP 9.0 and Microsoft Business Solutions - Great Plains 8.0, on the **Tools** menu, point to **Utilities**, point to **Purchasing**, and then click **Remove Transaction History.**  
+      - In Microsoft Dynamics GP, on the **Microsoft Dynamics GP** menu, point to **Tools**, point to **Utilities**, point to **Purchasing**, and then click **Remove Transaction History**.
 
    2. In the **Ranges** list, click **Voucher Number** or **Document Number** to create a restriction for the specific dummy invoice.
 
