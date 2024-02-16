@@ -1,9 +1,9 @@
 ---
 title: Experience slow performance
 description: Provides information that you can use to troubleshoot performance problems. Also contains a list of questions that you should answer before you contact a support professional.
-ms.reviewer: kyouells, htriplet
+ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 02/161/2024
 ---
 # You experience slow performance when you do specific processes in Microsoft Dynamics GP
 
@@ -14,19 +14,9 @@ _Original KB number:_ &nbsp; 898982
 
 ## Symptoms
 
-You experience slow performance when you do specific processes, such as posting an inquiry or doing an inquiry, in Microsoft Dynamics GP or in Microsoft Business Solutions - Great Plains.
+You experience slow performance when you do specific processes, such as posting an inquiry or doing an inquiry, in Microsoft Dynamics GP.
 
 ## Resolution
-
-**Independent troubleshooting**  
-Service packs
-
-- Make sure that the latest service pack for Microsoft SQL Server is installed. For more information about the latest service pack for Microsoft SQL Server that is compatible with Microsoft Dynamics GP, see System Requirements.
-- On the System Requirements page, select the version of Microsoft Dynamics GP that you're using in the **Version** box. Then, select **Refresh List**.
-- Make sure that the latest service pack for Microsoft Dynamics GP is installed.
-
-    On the Service Packs/Product Releases page, select the version of Microsoft Dynamics GP that you're using in the **Version** box. Then, select **Refresh List**.
-- For a consolidated view of resources for each Microsoft Dynamics GP version, visit the Microsoft Dynamics GP Directory page.
 
 ### Posting problems
 
@@ -48,7 +38,7 @@ Service packs
 > - If you're using Microsoft SQL Server Management Studio for Microsoft SQL Server (any version), select **Start**, point to **Programs**, point to **Microsoft SQL Server 20XX** **(XX=your version)**, and then select **SQL Server Management Studio**.
 > - The PJOURNAL table is a temporary table and doesn't affect data.
 > - All users must exit Microsoft Dynamics GP before you run the DELETE statement.
-> - A PJOURNAL job is also created when you install Microsoft Business Solutions - Great Plains 7.5 and Microsoft Business Solutions - Great Plains 8.0. The PJOURNAL job must be turned on manually for the job to manage the PJOURNAL table so that the table does not grow larger and affect performance.
+> - A PJOURNAL job is also created when you install Microsoft Dynamics GP. The PJOURNAL job must be turned on manually for the job to manage the PJOURNAL table so that the table does not grow larger and affect performance.
 
 ### Printer settings that affect Microsoft Dynamics GP performance
 
@@ -86,7 +76,7 @@ The AutoComplete feature may cause performance issues when you open windows in M
 4. For Microsoft Dynamics GP performance, an OLE Notes path in the Dex.ini file that is local instead of on a network is recommended. If the OLE path has to be a network path, verify that it's a valid path and that there's good bandwidth.
 5. Verify that the SQL database options AutoClose and AutoShrink are set to FALSE.
    - If you use SQL Server Management Studio, follow these steps:
-      1. Select **Start**, point to **All Programs**, point to **Microsoft SQL Server 2005** or **Microsoft SQL Server 2008**, and then select **SQL Server Management Studio**.
+      1. Select **Start**, point to **All Programs**, point to **Microsoft SQL Server 2008** (or later), and then select **SQL Server Management Studio**.
       2. In the Connect to Server window, follow these steps:
          1. In the **Server Name** box, type the name of the server that is running SQL Server.
          2. In the **Authentication** box, select **SQL Authentication**.
@@ -181,7 +171,7 @@ Exclude the .MDB or .IMD files and the Integration Manager code folder which def
 
 `C:\Program Files\Microsoft Dynamics\Integration Manager`
 
-### Performance problems that occur on the home page in Microsoft Dynamics GP 10.0 and later versions
+### Performance problems that occur on the home page in Microsoft Dynamics GP
 
 One or more of the home page sections may cause performance problems when you sign in or when you refresh the home page. To determine the cause of this problem, follow these steps:
 
@@ -276,8 +266,3 @@ Information that is logged in the Application log on the computer that is runnin
 ## More information
 
 For Performance issues, see [Performance with Microsoft Dynamics GP: Where do I Start?](https://community.dynamics.com/blogs/post/?postid=b0ee4783-d6d4-46b9-8601-f152d5b04aac).
-
-> [!NOTE]
-> Select **System Manager-SQL** as the subcategory selection.
-
-Or, telephone Technical Support for Microsoft Dynamics at 888-477-7877.
