@@ -1,9 +1,9 @@
 ---
 title: You do not have permission to open this file error when starting Microsoft Dynamics GP
 description: Describes various problems that occur if the Dynamics.set file is corrupted or contains an incorrect path of a dictionary file. Resolutions are provided.
-ms.reviewer: htriplet, kyouells
+ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 04/22/2021
+ms.date: 02/16/2024
 ---
 # "You do not have permission to open this file" error when you try to start Microsoft Dynamics GP
 
@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 843755
 
 ## Symptoms
 
-When you try to start Microsoft Dynamics GP or Microsoft Business Solutions - Great Plains, you receive the following error message:
+When you try to start Microsoft Dynamics GP, you receive the following error message:
 
 > You do not have permission to open this file.
 
@@ -51,9 +51,8 @@ To resolve this problem, follow these steps:
 
 1. Locate the Dynamics.set file. By default, this file is located in the installation folder. Depending on which version of Microsoft Dynamics GP you use, the path of the installation folder is as follows:
 
-   - In Microsoft Dynamics GP 2010, in Microsoft Dynamics GP 10.0, or in Microsoft Dynamics GP 9.0, the path of the installation folder is C:\Program Files\Microsoft Dynamics\GP.
-   - In Microsoft Business Solutions - Great Plains 8.0 or in an earlier version, the path of the installation folder is C:\Program Files\Microsoft Business Solutions\Great Plains.
-
+   - In Microsoft Dynamics GP, the path of the installation folder is C:\Program Files\Microsoft Dynamics\GP.
+  
 2. Right-click the **Dynamics.set** file, select **Open with**, select **Select the program from a list**, select **OK**, select **Notepad**, and then select **OK**.
 3. Verify that all paths that are listed for the dictionary files are correct. Then, make sure that you can open all the listed folders.
 
@@ -61,11 +60,10 @@ To resolve this problem, follow these steps:
 
 To resolve this problem, follow these steps:
 
-1. Locate the Dynamics.set file. By default, this file is located in the installation folder. Depending on which version of Microsoft Dynamics GP you use, the path of the installation folder is as follows:
+1. Locate the Dynamics.set file. By default, this file is located in the installation folder. 
 
-    - In Microsoft Dynamics GP 2010, in Microsoft Dynamics GP 10.0, or in Microsoft Dynamics GP 9.0, the path of the installation folder is C:\Program Files\Microsoft Dynamics\GP.
-    - In Microsoft Business Solutions - Great Plains 8.0 or in an earlier version, the path of the installation folder is C:\Program Files\Microsoft Business Solutions\Great Plains.
-
+    - In Microsoft Dynamics GP, the path of the installation folder is C:\Program Files\Microsoft Dynamics\GP.
+   
 2. Right-click the **Dynamics.set** file, select **Open with**, select **Select the program from a list**, select **OK**, select **Notepad**, and then select **OK**.
 3. Note the locations for all the dictionary files.
 4. Verify the properties of each dictionary file. To do this, right-click the file, and then select **Properties**.
@@ -73,11 +71,10 @@ To resolve this problem, follow these steps:
 
 ## Resolution 4
 
-1. Locate the Dynamics.set file. By default, this file is located in the installation folder. Depending on which version of Microsoft Dynamics GP you use, the path of the installation folder is as follows:
+1. Locate the Dynamics.set file. By default, this file is located in the installation folder. 
 
-    - In Microsoft Dynamics GP 2010, in Microsoft Dynamics GP 10.0, or in Microsoft Dynamics GP 9.0, the path of the installation folder is C:\Program Files\Microsoft Dynamics\GP.
-    - In Microsoft Business Solutions - Great Plains 8 or in an earlier version, the path of the installation folder is C:\Program Files\Microsoft Business Solutions\Great Plains.
-
+    - In Microsoft Dynamics GP, the path of the installation folder is C:\Program Files\Microsoft Dynamics\GP.
+   
 2. Right-click the **Dynamics.set** file, select **Open with**, select **Select the program from a list**, select **OK**, select **Notepad**, and then select **OK**.
 3. Note the locations for all the dictionary files.
 
@@ -86,10 +83,7 @@ To resolve this problem, follow these steps:
     > [!NOTE]
     > If the dictionary file is located in a shared folder, verify the permissions on the share. By default, users and groups are given only read permissions. To do this, follow the appropriate steps:
     >
-    > - If you use Windows Server 2008, Windows 7, or Windows Vista:
+    > - If you use Windows Server:
     >   1. Right-click the folder, select **Properties**, select the **Sharing** tab, and then select **Advanced Sharing**.
     >   2. Select **Permissions**, and then make sure that the user or the user group that is receiving the error message has full control.
-    >
-    >   - If you use Windows Server 2003, Windows Small Business Server 2003, Windows Server 2000, or Windows XP:
-    >     1. Right-click the folder, select **Properties**, and then select the **Sharing** tab.
-    >     2. Make sure that the user or the group that is receiving the error message has full control.
+    
