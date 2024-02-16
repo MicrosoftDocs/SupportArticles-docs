@@ -10,7 +10,7 @@ ms.custom: sap:Connection issues
 
 # The SSL_PE_NO_CIPHER error occurs on endpoint 5022
 
-This article helps you resolve the error related to the SSL_PE_NO_CIPHER. It also provides scripts for enforcing Transport Layer Security (TLS) on different versions of .NET Framework.
+This article helps you resolve the error related to the `SSL_PE_NO_CIPHER`. It also provides scripts for enforcing Transport Layer Security (TLS) on different versions of .NET Framework.
 
 ## Symptoms
 
@@ -20,11 +20,14 @@ The Security Socket Layer (SSL) "SSL_PE_NO_CIPHER" error occurs on endpoint port
 
 To resolve this error, follow these steps:
 
-1. Update SSL or TLS libraries. Make sure that both the client and server have up-to-date SSL or TLS libraries installed. Outdated versions might not support modern and secure cipher suites.
+1. Update SSL or TLS libraries.
+   Make sure that both the client and server have up-to-date SSL or TLS libraries installed. Outdated versions might not support modern and secure cipher suites.
 
-1. Check Cipher Suite configurations. Check the cipher suite configurations on both the client and server. Make sure that modern and secure cipher suites are allowed and consider disabling outdated or weak cipher suites.
+1. Check Cipher Suite configurations on both the client and server. 
+   Make sure that modern and secure cipher suites are allowed. Consider disabling outdated or weak cipher suites.
 
-1. Verify SSL or TLS protocol versions. Confirm that both the client and server support the same SSL or TLS protocol versions. Outdated protocol versions might not be compatible with certain cipher suites. If TLS 1.2 isn't present on the servers, run the following script to enforce TLS 1.2 on .NET Framework:
+1. Verify SSL or TLS protocol versions.
+   Confirm that both the client and server support the same SSL or TLS protocol versions. Outdated protocol versions might not be compatible with certain cipher suites. If TLS 1.2 isn't present on the servers, run the following script to enforce TLS 1.2 on .NET Framework:
 
     ```powershell
     # .NET Framework v2.0.50727 
@@ -101,14 +104,20 @@ To resolve this error, follow these steps:
     Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Server" -Name "Enabled" -Value 0
     ```
 
-1. Check system time and date. Accurate system time and date are essential for SSL certificate validation. Verify that the system time and date on both the client and server are correct.
+1. Check system time and date.
+   Accurate system time and date are essential for SSL certificate validation. Verify that the system time and date are correct on both the client and server.
 
-1. Verify certificates. Make sure that the SSL certificate installed on the server is valid and hasn't expired. Check if the client can successfully validate the server's certificate.
+1. Verify certificates.
+   Make sure that the SSL certificate installed on the server is valid and hasn't expired. Check if the client can successfully validate the server's certificate.
 
-1. Firewall and proxy settings. Check if there are any firewall or proxy settings that might interfere with the SSL handshake that the necessary ports are open.  
+1. Check the firewall and proxy settings.
+   Verify that the required ports are open and that no firewall or proxy settings are blocking the SSL handshake.  
 
 1. Run the script as an administrator on both the client and server computers.  
 
 1. Reboot the servers after running the script.
 
-After completing these steps, the "SSL_PE_NO_CIPHER" error should be resolved.
+   After completing these steps, the "SSL_PE_NO_CIPHER" error should be resolved.
+
+> [!NOTE]
+> Microsoft recommends you to back up the Windows registry. 
