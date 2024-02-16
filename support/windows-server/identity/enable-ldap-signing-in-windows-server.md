@@ -119,4 +119,4 @@ When you change this value, the new value takes effect immediately. You don't ha
 - [ADV190023: Microsoft Guidance for Enabling LDAP Channel Binding and LDAP Signing](https://portal.msrc.microsoft.com/security-guidance/advisory/ADV190023)
 - [2020 LDAP channel binding and LDAP signing requirement for Windows](https://support.microsoft.com/help/4520412)
 - [2020, 2023, and 2024 LDAP channel binding and LDAP signing requirements for Windows (KB4520412)](https://support.microsoft.com/topic/2020-2023-and-2024-ldap-channel-binding-and-ldap-signing-requirements-for-windows-kb4520412-ef185fb8-00f7-167d-744c-f299a66fc00a)
-- [How to configure Active Directory and LDS diagnostic event logging](/windows-server/identity/configure-ad-and-lds-event-logging)
+- [How to configure Active Directory and LDS diagnostic event logging](configure-ad-and-lds-event-logging.md)
