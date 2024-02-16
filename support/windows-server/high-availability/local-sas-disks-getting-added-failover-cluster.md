@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, eldenc
 ms.custom: sap:cannot-bring-a-resource-online, csstroubleshoot
-ms.technology: windows-server-high-availability
 ---
 # Local SAS Disks Getting Added in Windows Server Failover Cluster
 

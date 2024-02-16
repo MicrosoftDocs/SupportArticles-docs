@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:rdweb, csstroubleshoot
-ms.technology: windows-server-rds
 ---
 # WinX: Remote Desktop tab in RDWEB is missing from Microsoft Edge browser
 

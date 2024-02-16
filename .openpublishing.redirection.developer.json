@@ -4653,6 +4653,11 @@
       "source_path": "support/developer/visualstudio/general/assembly-version-assembly-file-version.md",
       "redirect_url": "/troubleshoot/developer/dotnet/framework/general/assembly-version-assembly-file-version",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/database-engine/security/windows-prevents-unconstrained-delegation.md",
+      "redirect_url": "/troubleshoot/sql/database-engine/connect/windows-prevents-unconstrained-delegation",
+      "redirect_document_id": true
     }
   ]
 }

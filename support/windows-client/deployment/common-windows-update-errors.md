@@ -2,14 +2,12 @@
 title: Common Windows Update errors
 description: Describes some common issues you might experience with Windows Update and steps to resolve them.
 ms.date: 05/31/2023
-ms.prod: windows-client
-author: aczechowski
-ms.author: aaroncz
+author: kaushika-msft
+ms.author: kaushika
 manager: dcscontentpm
-ms.reviewer: kaushika, dougeby
+ms.reviewer: kaushika
 ms.topic: troubleshooting
 ms.collection: highpri
-ms.technology: windows-client-deployment
 ms.custom: sap:servicing, csstroubleshoot
 audience: itpro
 localization_priority: medium
@@ -33,7 +31,7 @@ _Applies to:_ &nbsp; Windows 10, Windows 11
 
 | Message | Description | Mitigation |
 |---------|-------------|------------|
-| WU_E_UH_INVALIDMETADATA | A handler operation couldn't be completed because the update contains invalid metadata. | Rename the software redistribution folder and try to download the updates again: <br>Rename the following folders to \*.BAK: <br>-*%systemroot%\\system32\\catroot2* <br><br>Type the following commands at a command prompt. Press ENTER after you type each command.<br>- `Ren %systemroot%\SoftwareDistribution\DataStore *.bak`<br>- `Ren %systemroot%\SoftwareDistribution\Download *.bak`<br>- `Ren %systemroot%\system32\catroot2 *.bak` |
+| WU_E_UH_INVALIDMETADATA | A handler operation couldn't be completed because the update contains invalid metadata. | Rename the software redistribution folder and try to download the updates again: <br>Rename the following folders to \*.BAK: <br>-*%systemroot%\\system32\\catroot2* <br><br>Type the following commands at a command prompt. Press ENTER after you type each command.<br>`Ren %systemroot%\SoftwareDistribution\DataStore DataStore.bak`<br>`Ren %systemroot%\SoftwareDistribution\Download Download.bak`<br>`Ren %systemroot%\system32\catroot2 catroot2.bak` |
 
 ## 0x80070BC9
 
@@ -123,7 +121,7 @@ _Applies to:_ &nbsp; Windows 10, Windows 11
 
 | Message | Description | Mitigation |
 |---------|-------------|------------|
-| CBS_E_CANNOT_UNINSTALL; Package can't be uninstalled. | Typically this error is due component store corruption caused when a component is in a partially installed state. | Repair the component store with the `Dism RestoreHealth` command or manually repair with a payload from the partially installed component. From an elevated command prompt, run these commands:<br>`DISM /ONLINE /CLEANUP-IMAGE /SCANHEALTH`<br>`DISM /ONLINE /CLEANUP-IMAGE /CHECKHEALTH`<br>`DISM /ONLINE /CLEANUP-IMAGE /RESTOREHEALTH`<br>`Sfc /Scannow`<br> Restart the device. |
+| CBS_E_CANNOT_UNINSTALL; Package can't be uninstalled. | Typically this error is due component store corruption caused when a component is in a partially installed state. | Repair the component store with the `Dism RestoreHealth` command or manually repair with a payload from the partially installed component. From an elevated command prompt, run these commands:<br>`Dism.exe /Online /Cleanup-Image /Restorehealth`<br>`Sfc.exe /Scannow`<br> Restart the device. |
 
 ## 0x800F0920
 
@@ -135,13 +133,13 @@ _Applies to:_ &nbsp; Windows 10, Windows 11
 
 | Message | Description | Mitigation |
 |---------|-------------|------------|
-| CBS_E_SOURCE_MISSING; source for package or file not found, ResolveSource() unsuccessful | Component Store corruption | Repair the component store with the `Dism RestoreHealth` command or manually repair with the payload from the partially installed component. From an elevated command prompt and run these commands:<br>`DISM /ONLINE /CLEANUP-IMAGE /SCANHEALTH`<br>`DISM /ONLINE /CLEANUP-IMAGE /CHECKHEALTH`<br>`DISM /ONLINE /CLEANUP-IMAGE /RESTOREHEALTH`<br>`Sfc /Scannow`<br> Restart the device. |
+| CBS_E_SOURCE_MISSING; source for package or file not found, ResolveSource() unsuccessful | Component Store corruption | Repair the component store with the `Dism RestoreHealth` command or manually repair with the payload from the partially installed component. From an elevated command prompt and run these commands:<br>`Dism.exe /Online /Cleanup-Image /Restorehealth`<br>`Sfc.exe /Scannow`<br> Restart the device. |
 
 ## 0x800f0831
 
 | Message | Description | Mitigation |
 |---------|-------------|------------|
-| CBS_E_STORE_CORRUPTION; CBS store is corrupted. | Corruption in the Windows Component  Store. | Repair the component store with `Dism RestoreHealth` or manually repair with   the payload from the partially installed component. From an elevated command prompt and run these commands:<br>`DISM /ONLINE /CLEANUP-IMAGE /SCANHEALTH`<br>`DISM /ONLINE /CLEANUP-IMAGE /CHECKHEALTH`<br>`DISM /ONLINE /CLEANUP-IMAGE /RESTOREHEALTH`<br>`Sfc /Scannow`<br> Restart the device.  |
+| CBS_E_STORE_CORRUPTION; CBS store is corrupted. | Corruption in the Windows Component  Store. | Repair the component store with `Dism RestoreHealth` or manually repair with   the payload from the partially installed component. From an elevated command prompt and run these commands:<br>`Dism.exe /Online /Cleanup-Image /Restorehealth`<br>`Sfc.exe /Scannow`<br> Restart the device.  |
 
 ## 0x80070005
 
@@ -153,7 +151,7 @@ _Applies to:_ &nbsp; Windows 10, Windows 11
 
 | Message | Description | Mitigation |
 |---------|-------------|------------|
-| ERROR_FILE_CORRUPT; The file or directory is corrupted and unreadable. | Component Store corruption | Repair the component store with `Dism RestoreHealth` or manually repair with the payload from the partially installed component. From an elevated command prompt and run these commands:<br>`DISM /ONLINE /CLEANUP-IMAGE /SCANHEALTH`<br>`DISM /ONLINE /CLEANUP-IMAGE /CHECKHEALTH`<br>`DISM /ONLINE /CLEANUP-IMAGE /RESTOREHEALTH`<br>`Sfc /Scannow`<br> Restart the device.|
+| ERROR_FILE_CORRUPT; The file or directory is corrupted and unreadable. | Component Store corruption | Repair the component store with `Dism RestoreHealth` or manually repair with the payload from the partially installed component. From an elevated command prompt and run these commands:<br>`Dism.exe /Online /Cleanup-Image /Restorehealth`<br>`Sfc.exe /Scannow`<br> Restart the device.|
 
 ## 0x80070003
 
@@ -171,13 +169,13 @@ _Applies to:_ &nbsp; Windows 10, Windows 11
 
 | Message | Description | Mitigation |
 |---------|-------------|------------|
-| ERROR_SXS_ASSEMBLY_MISSING; The referenced assembly couldn't be found. | Typically, a component store corruption caused when a component is in a partially installed state. | Repair the component store with `Dism RestoreHealth command` or manually repair it with the payload from the partially installed component. From an elevated command prompt, run these commands:<br>`DISM /ONLINE /CLEANUP-IMAGE /SCANHEALTH`<br>`DISM /ONLINE /CLEANUP-IMAGE /CHECKHEALTH`<br>`DISM /ONLINE /CLEANUP-IMAGE /RESTOREHEALTH`<br>`Sfc /Scannow`<br> Restart the device. |
+| ERROR_SXS_ASSEMBLY_MISSING; The referenced assembly couldn't be found. | Typically, a component store corruption caused when a component is in a partially installed state. | Repair the component store with `Dism RestoreHealth command` or manually repair it with the payload from the partially installed component. From an elevated command prompt, run these commands:<br>`Dism.exe /Online /Cleanup-Image /Restorehealth`<br>`Sfc.exe /Scannow`<br> Restart the device. |
 
 ## 0x8007371b
 
 | Message | Description | Mitigation |
 |---------|-------------|------------|
-| ERROR_SXS_TRANSACTION_CLOSURE_INCOMPLETE; One or more required members of the transaction aren't present. | Component Store corruption. | Repair the component store with `Dism RestoreHealth` command or manually repair it with the payload from the partially installed component. From an elevated command prompt and run these commands:<br>`DISM /ONLINE /CLEANUP-IMAGE /SCANHEALTH`<br>`DISM /ONLINE /CLEANUP-IMAGE /CHECKHEALTH`<br>`DISM /ONLINE /CLEANUP-IMAGE /RESTOREHEALTH`<br>`Sfc /Scannow`<br> Restart the device. |
+| ERROR_SXS_TRANSACTION_CLOSURE_INCOMPLETE; One or more required members of the transaction aren't present. | Component Store corruption. | Repair the component store with `Dism RestoreHealth` command or manually repair it with the payload from the partially installed component. From an elevated command prompt and run these commands:<br>`Dism.exe /Online /Cleanup-Image /Restorehealth`<br>`Sfc.exe /Scannow`<br> Restart the device. |
 
 ## 0x80072EFE
 

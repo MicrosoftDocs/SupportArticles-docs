@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, MASOUDH
 ms.custom: sap:remote-access, csstroubleshoot
-ms.technology: networking
 ---
 # You can't connect to the Internet after you connect to a VPN server
 

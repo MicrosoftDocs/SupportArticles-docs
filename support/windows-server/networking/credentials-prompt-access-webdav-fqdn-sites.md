@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, tonyga, stevenxu, kishore
 ms.custom: sap:webwindows-client-and-webdav, csstroubleshoot
-ms.technology: networking
 ---
 # Prompt for credentials when you access WebDav-based FQDN sites in Windows
 

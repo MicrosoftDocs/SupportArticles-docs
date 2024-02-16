@@ -1,17 +1,15 @@
 ---
 title: DNS Server Cache snooping attacks
 description: Provides a solution to an issue where DNS Server vulnerability to DNS Server Cache snooping attacks.
-ms.date: 08/09/2022
+ms.date: 01/12/2024
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, arrenc, jwesth
 ms.custom: sap:dns, csstroubleshoot
-ms.technology: networking
 ---
 # DNS Server vulnerability to DNS Server Cache snooping attacks
 
@@ -22,7 +20,7 @@ _Original KB number:_ &nbsp; 2678371
 
 ## Symptoms
 
-[What is "DNS cache snooping" and how do I prevent it?](https://simpledns.plus/kb/152/what-is-dns-cache-snooping-and-how-do-i-prevent-it) describes DNS cache snooping as:
+[What is "DNS cache snooping" and how do I prevent it?](https://simpledns.plus/kb/152-what-is-dns-cache-snooping-and-how-do-i-prevent-it) describes DNS cache snooping as:
 
 > DNS cache snooping is when someone queries a DNS server in order to find out (snoop) if the DNS server has a specific DNS record cached, and thereby deduce if the DNS server's owner (or its users) have recently visited a specific site.  
 This may reveal information about the DNS server's owner, such as what vendor, bank, service provider, etc. they use. Especially if this is confirmed (snooped) multiple times over a period.  

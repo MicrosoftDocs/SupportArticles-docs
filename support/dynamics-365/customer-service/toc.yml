@@ -17,6 +17,8 @@
       items:
         - name: Can't create entitlements due to Allocation Type missing options
           href: entitlements/allocation-type-missing-options.md
+        - name: Entitlement remaining terms don't decrement as expected
+          href: entitlements/decrementing-entitlement-terms.md
     - name: Knowledge Management
       items:  
         - name: Data isn't updated on Insights for integrated search providers
@@ -69,7 +71,7 @@
               href: service-level-agreements/sla-kpi-instance-compliance-timer.md
             - name: SLA timer doesn't pause when state is changed to OnHold on a holiday
               href: service-level-agreements/sla-timer-pause-state-changed.md
-            - name: SLA Timer keeps running or expires prior to the Timer failure time 
+            - name: SLA Timer keeps running or expires before the Timer failure time 
               href: service-level-agreements/sla-timer-keep-running-or-expired.md
             - name: Warning appears on SLA KPI instances
               href: service-level-agreements/warning-slakpiinstances.md
@@ -93,6 +95,8 @@
               href: service-level-agreements/slakpi-instance-not-existed-error.md
             - name: First Response By and Resolve By aren't getting populated
               href: service-level-agreements/sla-firstresponseby-resolveby-not-populating-uci.md
+            - name: '"String or binary data would be truncated" error when activating an SLA'
+              href: service-level-agreements/getting-error-message-while-activating-sla.md
             - name: SLA KPI instance status shows as canceled
               href: service-level-agreements/sla-kpi-instance-shows-canceled.md
             - name: Success, warning, and failure actions run many times in web client
@@ -167,5 +171,7 @@
               href: omnichannel-for-customer-service/social-data-sync.md
         - name: Voice channel
           items:
+            - name: Incoming voice calls with long greeting messages cause connection delays
+              href: omnichannel-for-customer-service/greeting-message-delay-agent-connection.md 
             - name: Use diagnostic messages to troubleshoot call issues
               href: omnichannel-for-customer-service/use-diagnostic-messages-in-call-issues.md 

@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:transport-layer-security-tls, csstroubleshoot
-ms.technology: windows-server-active-directory
 ---
 # Steps to disable TLS 1.0 and 1.1 on MBAM servers and force the use of TLS 1.2
 

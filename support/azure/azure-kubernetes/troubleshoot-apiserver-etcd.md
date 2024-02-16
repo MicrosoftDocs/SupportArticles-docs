@@ -3,9 +3,9 @@ title: Troubleshoot API server and etcd problems in AKS
 description: Provides a troubleshooting guide for API server and etcd problems in Azure Kubernetes Services.
 author: seguler
 ms.author: segule
-ms.date: 11/03/2023
+ms.date: 02/09/2024
 ms.service: azure-kubernetes-service
-ms.reviewer: mikerooney, v-weizhu, axelg, v-leedennis
+ms.reviewer: mikerooney, v-weizhu, axelg, josebl, v-leedennis
 ---
 # Troubleshoot API server and etcd problems in Azure Kubernetes Services
 
@@ -155,18 +155,21 @@ The results from this query can be useful to identify the kinds of API calls tha
 
 A network rule can block traffic between the agent nodes and the API server.
 
-To verify whether a misconfigured network policy is blocking communication between the API server and agent pool system nodes, run the following [az vmss run-command invoke](/cli/azure/vmss/run-command#az-vmss-run-command-invoke) command. This command invokes a shell script on the agent pool scale set to run a Netcat command that tries to connect to the API server:
+To verify whether a misconfigured network policy is blocking communication between the API server and agent nodes, run the following [kubectl-aks](https://go.microsoft.com/fwlink/p/?linkid=2259767) commands:
 
-```azurecli
-az vmss run-command invoke --resource-group "<myAgentpoolVmssResourceGroup>" \
-    --name "<myAgentpoolVmss>" \
-    --command-id RunShellScript \
-    --instance-id 0 \
-    --scripts "echo | nc -vz "<myAKSApiServerFQDN>" 443"
+```bash
+kubectl aks config import \
+    --subscription <mySubscriptionID> \
+    --resource-group <myResourceGroup> \
+    --cluster-name <myAKSCluster>
+
+kubectl aks check-apiserver-connectivity --node <myNode>
 ```
 
-> [!NOTE]  
-> If this command returns "connection succeeded," then the network connectivity is unimpeded.
+The [config import](https://go.microsoft.com/fwlink/p/?linkid=2259867#importing-configuration) command retrieves the Virtual Machine Scale Set information for all the nodes in the cluster. Then, the [check-apiserver-connectivity](https://go.microsoft.com/fwlink/p/?linkid=2259674) command uses this information to verify the network connectivity between the API server and a specified node, specifically for its underlying scale set instance.
+
+> [!NOTE]
+> If the output of the `check-apiserver-connectivity` command contains the `Connectivity check: succeeded` message, then the network connectivity is unimpeded.
 
 ### Solution 1: Fix the network policy to remove the traffic blockage
 

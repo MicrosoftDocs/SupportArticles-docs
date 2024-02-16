@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: delhan, jheath, ajayps, thierdel, mihaipe, alvinm, kaushika
 ms.custom: sap:remote-access, csstroubleshoot
-ms.technology: networking
 ---
 # DirectAccess network performance in Windows
 

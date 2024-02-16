@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-mafect
 ms.custom: sap:storage-spaces, csstroubleshoot
-ms.technology: windows-server-backup-and-storage
 ---
 # How to extend stand-alone tiered storage spaces
 

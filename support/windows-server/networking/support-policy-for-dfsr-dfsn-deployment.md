@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, luche
 ms.custom: sap:dfsr, csstroubleshoot
-ms.technology: networking
 ---
 # Information about Microsoft support policy for a DFS-R and DFS-N deployment scenario
 

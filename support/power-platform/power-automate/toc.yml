@@ -3,94 +3,60 @@
   items:
     - name: Administration
       items:
-        - name: Converting time zone
-          href: converting-time-zone-power-automate.md
-        - name: Customize or format Date and Time values in a flow
-          href: how-to-customize-or-format-date-and-time-values-in-flow.md
+        - name: Microsoft Flow Extension Package shows Installation failed
+          href: administration/flow-extension-package-shows-installation-failed.md
+        - name: Recommendations for conditional access and multi-factor authentication
+          href: administration/conditional-access-and-multi-factor-authentication-in-flow.md
+    - name: Approvals
+      items:
+        - name: Common errors creating and assigning flow approvals
+          href: approvals/common-errors-creating-and-assigning-flow-approvals.md
+        - name: Differences between flow approval actions
+          href: approvals/differences-between-flow-approval-actions.md
+        - name: Issues with flow approval emails in Outlook Desktop and Web
+          href: approvals/issues-with-flow-approval-emails-in-outlook.md
+        - name: Power Automate Approval Dataverse Provisioning errors and recommendations
+          href: approvals/flow-approval-cds-provisioning-errors.md
+        - name: Power Automate Approval Email delivery information
+          href: approvals/power-automate-approval-email-information.md
+        - name: '"The remote endpoint returned an error HTTP 403" approval email error'
+          href: approvals/guest-approval-email-error.md
+    - name: Authentication or Sign-in
+      items:
+        - name: Add images to email messages
+          href: /power-automate/desktop-flows/how-to/add-images-email-messages?context=/troubleshoot/power-platform/power-automate/context/context
+        - name: Authentication failed when signing in to Microsoft Flow
+          href: authentication-or-sign-in/cannot-sign-in-to-microsoft-flow-due-to-authentication-failed.md
+        - name: Can't sign into OneDrive connector
+          href: authentication-or-sign-in/cannot-sign-in-to-onedrive-connector-when-using-office-365-account-during-flow-creation.md
+        - name: Desktop flow invalid credentials error using Microsoft Entra account
+          href: authentication-or-sign-in/troubleshoot-ui-flow-invalid-credentials-error-using-aad-account.md
     - name: Connections
       items:
-        - name: Can't sign into OneDrive connector
-          href: cannot-sign-in-to-onedrive-connector-when-using-office-365-account-during-flow-creation.md
-        - name: Client Request Aborted or Failed to fetch
-          href: client-request-aborted-failed-fetch.md
-        - name: Refresh URL isn't displayed for custom connectors
-          href: ../power-apps/custom-connectors-not-show-refresh-url.md?context=/troubleshoot/power-platform/power-automate/context/context
-        - name: User doesn't have service plan adequate for non-Standard connection
-          href: user-does-not-have-a-service-plan-error.md
-    - name: Cloud flows
-      items:
-        - name: Authentication failed when signing in to Microsoft Flow
-          href: cannot-sign-in-to-microsoft-flow-due-to-authentication-failed.md
-        - name: Can't find Excel Online table in Microsoft Flow
-          href: unable-to-find-excel-online-table-in-microsoft-flow.md
         - name: Can't send SMTP Email
-          href: unable-send-smtp-email.md
-        - name: CDS user role can't access flows
-          href: cds-user-cannot-access-power-automate-business-process-flows-on-demand-workflows.md
+          href: connections/unable-send-smtp-email.md
+        - name: Client Request Aborted or Failed to fetch
+          href: connections/client-request-aborted-failed-fetch.md
         - name: Check if the gateway is in the right region
-          href: check-if-gateway-is-the-right-region.md
-        - name: Common errors creating and assigning flow approvals
-          href: common-errors-creating-and-assigning-flow-approvals.md
-        - name: Desktop flow invalid credentials error using Microsoft Entra account
-          href: troubleshoot-ui-flow-invalid-credentials-error-using-aad-account.md
-        - name: Differences between flow approval actions
-          href: differences-between-flow-approval-actions.md
-        - name: Dynamic content picker missing dynamic content from previous steps
-          href: dynamic-content-picker-missing-dynamic-content-from-previous-steps.md
-        - name: Errors with null fields
-          href: getting-errors-null-fields.md
-        - name: Fail to list Excel Online tables retrieving values
-          href: fail-to-list-excel-online-tables-retrieving-values.md
-        - name: Failed to fetch when creating a flow
-          href: failed-fetch-error-when-creating-flow.md
-        - name: Flow Editor issues and recommendations
-          href: flow-editor-issues-recommendations.md
-        - name: Flow Management errors and recommendations
-          href: flow-management-errors-recommendations.md
-        - name: Flow Runtime errors and recommendations
-          href: flow-runtime-errors-recommendations.md
-        - name: '"The remote endpoint returned an error HTTP 403" approval email error'
-          href: guest-approval-email-error.md
-        - name: How to use Flow to copy items between two data sources
-          href: how-to-copy-items-between-two-sharepoint-lists-via-flow.md
-        - name: How to use Power Automate's JavaScript Software Developer Kit
-          href: flow-embed-sdk.md
-        - name: Issues triggering emails with attachments from shared mailbox
-          href: issues-triggering-emails-with-attachments-from-shared-mailbox.md
-        - name: Issues with flow approval emails in Outlook Desktop and Web
-          href: issues-with-flow-approval-emails-in-outlook.md
-        - name: Known issues when using Power Apps V2 trigger
-          href: known-issues-power-apps-v2-trigger.md
-        - name: Manage orphan flows when the owner leaves the organization
-          href: manage-orphan-flow-when-owner-leaves-org.md
-        - name: Microsoft Flow Extension Package shows Installation failed
-          href: flow-extension-package-shows-installation-failed.md
-        - name: Missing runs or triggers history for a flow
-          href: missing-runs-or-triggers-history-for-a-flow.md
-        - name: Power Automate Approval Dataverse Provisioning errors and recommendations
-          href: flow-approval-cds-provisioning-errors.md
-        - name: Power Automate Approval Email delivery information
-          href: power-automate-approval-email-information.md
-        - name: Recommendations for conditional access and multi-factor authentication
-          href: conditional-access-and-multi-factor-authentication-in-flow.md
-        - name: Dropdown list doesn't load items in triggers or actions
-          href: dropdown-does-not-list-items-in-trigger-or-action.md
-        - name: There is a problem with the flow's trigger
-          href: there-is-a-problem-with-the-flows-trigger.md
-        - name: Third-party cookies or pop-up blocker errors when accessing Power Automate
-          href: widget-cookies-pop-up-error.md
+          href: connections/check-if-gateway-is-the-right-region.md
         - name: Troubleshoot Flow Connections
-          href: troubleshooting-flow-connections.md
+          href: connections/troubleshooting-flow-connections.md
         - name: Troubleshoot Flow Custom Connectors
-          href: troubleshooting-flow-custom-connectors.md
-        - name: Troubleshoot slow running flows
-          href: troubleshoot-slow-running-flows.md
+          href: connections/troubleshooting-flow-custom-connectors.md
+        - name: User doesn't have service plan adequate for non-Standard connection
+          href: connections/user-does-not-have-a-service-plan-error.md
+    - name: Dataverse (CDS)
+      items:
+        - name: CDS user role can't access flows
+          href: dataverse-cds/cds-user-cannot-access-power-automate-business-process-flows-on-demand-workflows.md
     - name: Desktop flows
       items:
         - name: Agent-related errors when running attended or unattended desktop flows
           href: desktop-flows/agent-connectivity-issues-pad.md
         - name: Browser automation actions stop working after a browser update
           href: desktop-flows/browser-automation-error-after-chromium-update.md
+        - name: Can't silently join a machine group
+          href: desktop-flows/silent-join-machine-group-troubleshoot.md
         - name: Can't automate webpage with cross-domain iframes
           href: desktop-flows/cannot-automate-webpage-with-iframes.md
         - name: Can't create a connection from a shared canvas app
@@ -185,6 +151,52 @@
           href: desktop-flows/temporary-profile-error-machine-registration.md
         - name: We can't sign you in - browser blocks cookies
           href: desktop-flows/browser-blocks-cookies.md
+    - name: Flow creation
+      items:
+        - name: Can't find Excel Online table in Microsoft Flow
+          href: flow-creation/unable-to-find-excel-online-table-in-microsoft-flow.md
+        - name: Converting time zone
+          href: /power-automate/convert-time-zone?context=/troubleshoot/power-platform/power-automate/context/context
+        - name: Customize or format Date and Time values in a flow
+          href: /power-automate/date-time-values?context=/troubleshoot/power-platform/power-automate/context/context
+        - name: Dropdown list doesn't load items in triggers or actions
+          href: flow-creation/dropdown-does-not-list-items-in-trigger-or-action.md
+        - name: Dynamic content picker missing dynamic content from previous steps
+          href: flow-creation/dynamic-content-picker-missing-dynamic-content-from-previous-steps.md
+        - name: Fail to list Excel Online tables retrieving values
+          href: flow-creation/fail-to-list-excel-online-tables-retrieving-values.md
+        - name: Failed to fetch when creating a flow
+          href: flow-creation/failed-fetch-error-when-creating-flow.md
+        - name: Flow Editor issues and recommendations
+          href: flow-creation/flow-editor-issues-recommendations.md
+        - name: Flow Management errors and recommendations
+          href: flow-creation/flow-management-errors-recommendations.md
+        - name: How to use Power Automate's JavaScript Software Developer Kit
+          href: flow-creation/flow-embed-sdk.md
+        - name: How to use Flow to copy items between two data sources
+          href: flow-creation/how-to-copy-items-between-two-sharepoint-lists-via-flow.md
+        - name: Known issues when using Power Apps V2 trigger
+          href: flow-creation/known-issues-power-apps-v2-trigger.md
+        - name: Third-party cookies or pop-up blocker errors when accessing Power Automate
+          href: flow-creation/widget-cookies-pop-up-error.md
+    - name: Flow management
+      items:
+        - name: Manage orphan flows when the owner leaves the organization
+          href: flow-management/manage-orphan-flow-when-owner-leaves-org.md
+    - name: Flow run issues
+      items:
+        - name: Errors with null fields
+          href: flow-run-issues/getting-errors-null-fields.md
+        - name: Flow Runtime errors and recommendations
+          href: flow-run-issues/flow-runtime-errors-recommendations.md
+        - name: Issues triggering emails with attachments from shared mailbox
+          href: flow-run-issues/issues-triggering-emails-with-attachments-from-shared-mailbox.md
+        - name: Missing runs or triggers history for a flow
+          href: flow-run-issues/missing-runs-or-triggers-history-for-a-flow.md
+        - name: There is a problem with the flow's trigger
+          href: flow-run-issues/there-is-a-problem-with-the-flows-trigger.md
+        - name: Troubleshoot slow running flows
+          href: flow-run-issues/troubleshoot-slow-running-flows.md
     - name: Solutions
       items:
         - name: Can't import solutions or publish changes
