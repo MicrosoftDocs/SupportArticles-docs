@@ -6931,7 +6931,7 @@
     },
     {
       "source_path": "support/azure/active-directory/enable-disable-trace-online-services.md",
-      "redirect_url": "/powershell/microsoftgraph/overview?toc=%2Ftroubleshoot%2Fazure%2Factive-directory%2Ftoc.json&bc=%2Ftroubleshoot%2Fbreadcrumb%2Ftoc.json",
+      "redirect_url": "/powershell/microsoftgraph/overview?toc=%2Ftroubleshoot%2Fazure%2Factive-directory%2Ftoc.json&bc=%2Ftroubleshoot%2Fazure%2Factive-directory%2Fbreadcrumb%2Ftoc.json",
       "redirect_document_id": false
     }
 ]
