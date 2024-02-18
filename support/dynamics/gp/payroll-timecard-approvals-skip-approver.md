@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 4132654
 
 ## Symptoms
 
-Payroll employe self service timecard approvals aren't going to correct approver in Microsoft Dynamics GP, or skipping direct managers.
+Payroll employee self service timecard approvals aren't going to correct approver in Microsoft Dynamics GP, or skipping direct managers.
 
 ## Cause
 
