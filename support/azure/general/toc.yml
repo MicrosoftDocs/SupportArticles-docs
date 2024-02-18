@@ -28,15 +28,6 @@
   - name: HTTP 403 - Forbidden issues
     href: request-throttling-http-403.md
 
-- name: Azure Stack
-  items:
-  - name: Kernel Soft Reboot error c0000034
-    href: azure-stack-hci-kernel-soft-reboot-error-c0000034.md
-  - name: Side-channel vulnerabilities protection
-    href: side-channel-vulnerabilities.md
-  - name: Warning message in Azure Stack
-    href: pending-service-account-password-expiration.md
-
 - name: Azure Stack Edge
   items:
   - name: Azure Stack Edge support package and device logs

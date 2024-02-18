@@ -6988,6 +6988,21 @@
       "source_path": "support/azure/general/update-2.1-for-cloud-platform-system-premium.md",
       "redirect_url": "https://azure.microsoft.com/products/azure-stack/",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/general/azure-stack-hci-kernel-soft-reboot-error-c0000034.md",
+      "redirect_url": "/answers/tags/205/azure-stack-hub",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/general/side-channel-vulnerabilities.md",
+      "redirect_url": "/answers/tags/205/azure-stack-hub",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/general/pending-service-account-password-expiration.md",
+      "redirect_url": "/answers/tags/205/azure-stack-hub",
+      "redirect_document_id": false
     }
 ]
 }
