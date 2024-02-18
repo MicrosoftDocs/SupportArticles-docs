@@ -3,9 +3,8 @@ title: Can't connect to the Management Reporter server error when starting Micro
 description: Describes an error you may receive when you start Microsoft Management Reporter 2012. Provides a resolution.
 ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 2/15/2024
+ms.date: 02/18/2024
 ---
-
 # "Can't connect to the Management Reporter server" error when you start Microsoft Management Reporter 2012
 
 This article provides a resolution for the error message that may occur when you start Microsoft Management Reporter 2012.
