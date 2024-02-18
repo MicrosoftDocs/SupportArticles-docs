@@ -6933,6 +6933,61 @@
       "source_path": "support/azure/active-directory/enable-disable-trace-online-services.md",
       "redirect_url": "/powershell/microsoftgraph/overview?toc=%2Ftroubleshoot%2Fazure%2Factive-directory%2Ftoc.json&bc=%2Ftroubleshoot%2Fazure%2Factive-directory%2Fbreadcrumb%2Ftoc.json",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/general/apply-out-of-band-updates-to-cps.md",
+      "redirect_url": "https://azure.microsoft.com/en-us/products/azure-stack/",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/how-to-enable-bitlocker-in-cloud-platform-system.md",
+      "redirect_url": "https://azure.microsoft.com/en-us/products/azure-stack/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/general/firmware-version-matrix.md",
+      "redirect_url": "https://azure.microsoft.com/en-us/products/azure-stack/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/general/how-to-renew-windows-azure-pack-authentication-sit.md",
+      "redirect_url": "https://azure.microsoft.com/en-us/products/azure-stack/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/general/update-1610-cps-premium.md",
+      "redirect_url": "https://azure.microsoft.com/en-us/products/azure-stack/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/general/update-1606-cps-premium.md",
+      "redirect_url": "https://azure.microsoft.com/en-us/products/azure-stack/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/general/update-1603-for-cloud-platform-system-premium.md",
+      "redirect_url": "https://azure.microsoft.com/en-us/products/azure-stack/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/general/update-1603-cps-standard.md",
+      "redirect_url": "https://azure.microsoft.com/en-us/products/azure-stack/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/general/update-1602-for-cloud-platform-system-premium.md",
+      "redirect_url": "https://azure.microsoft.com/en-us/products/azure-stack/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/general/update-2.3-for-cloud-platform-system-premium.md",
+      "redirect_url": "https://azure.microsoft.com/en-us/products/azure-stack/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/general/update-2.1-for-cloud-platform-system-premium.md",
+      "redirect_url": "https://azure.microsoft.com/en-us/products/azure-stack/",
+      "redirect_document_id": false
     }
 ]
 }
