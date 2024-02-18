@@ -1,7 +1,7 @@
 ---
 title: Azure batch pool resizing failure
 description: An Azure batch pool resizing failure occurs. You can review the symptoms, understand the causes, and apply solutions to this problem.
-ms.date: 07/11/2023
+ms.date: 02/18/2024
 ms.reviewer: biny, v-weizhu
 ms.service: batch
 ---
@@ -160,5 +160,35 @@ To reduce the impact on your production, use the following methods:
 - Retry your resize request after a few minutes.
 - Create a new pool.
 - Use the Batch service in another available region as a failover if the methods above aren't helpful.
+
+## Scenario 5: Insufficient capacity for the requested VM size in the current region
+
+### Symptom for Scenario 5
+
+The batch pool has been operating normally for some time. However, the resize operation failed with an insufficient capacity error, or the resize operation remained in the resizing state.
+
+Here's the error message:
+
+> **Code:** AllocationFailed  
+> **Message:**  
+> Desired number of dedicated nodes could not be allocated  
+> **Values:**  
+> Reason - Deployment allocation failed due to insufficient capacity for the requested VM size in the region.
+
+### Cause: Infrastructure limitations
+
+The Batch service may experience these issues due to some infrastructure limitations. It's not related to customers' core quota.
+
+### Solution: Retry the resize operation, create a new pool with different VM size, or use another region
+
+To resolve this issue, use the following methods:
+
+- Retry the resize operation.
+
+    Resource availability can change as resources are constantly being freed up in the cluster, region, or zone.
+
+- Change the VM size and then create a new pool with different VM size.
+
+- Use the Batch service in another available region.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
