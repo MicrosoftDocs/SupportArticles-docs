@@ -2,6 +2,16 @@
 
 
 
+## Week of February 12, 2024
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 2/13/2024 | [Recoverable Items folder not emptied for mailbox on litigation or retention hold](/exchange/troubleshoot/antispam-and-protection/recoverable-items-folder-full) | modified |
+| 2/13/2024 | [Message store has reached its maximum size error when a Microsoft 365 user tries to delete an item](/exchange/troubleshoot/calendars/store-reached-maximum-size) | modified |
+| 2/14/2024 | [Error when you try to remove a mailbox database](/exchange/troubleshoot/administration/error-remove-a-mailbox-database) | modified |
+
+
 ## Week of January 29, 2024
 
 
