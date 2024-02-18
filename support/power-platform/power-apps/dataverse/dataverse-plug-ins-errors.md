@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Dataverse plug-ins
 description: Contains information about errors that can occur during plug-in execution, or Dataverse errors that are related to plug-ins, and how to avoid or fix them.
-ms.date: 02/09/2024
+ms.date: 02/18/2024
 author: divkamath
 ms.author: dikamath
 ms.reviewer: phecke
@@ -15,7 +15,6 @@ contributors:
   - JimDaly
   - phecke
 ---
-
 # Troubleshoot Dataverse plug-ins
 
 This article contains information about errors that can occur during plug-in execution, or Dataverse errors that are related to plug-ins, and how to avoid or fix them.
