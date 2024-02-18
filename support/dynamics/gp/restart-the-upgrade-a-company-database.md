@@ -3,7 +3,7 @@ title: Restart the upgrade of a company database
 description: Describes the steps to restart the upgrade of a company database that was restored from a backup.
 ms.reviewer: theley
 ms.topic: how-to
-ms.date: 02/16/2024
+ms.date: 02/18/2024
 ---
 # How to restart the upgrade of a company database in Microsoft Dynamics GP
 
@@ -12,11 +12,7 @@ This article describes how to restart the upgrade of a company database to Micro
 _Applies to:_ &nbsp; Microsoft Dynamics GP  
 _Original KB number:_ &nbsp; 920900
 
-## Introduction
-
-## More information
-
-### Update from Microsoft Dynamics GP 9.0, Microsoft Dynamics GP 10.0, or Microsoft Dynamics GP 2010 to Microsoft Dynamics GP 10.0, Microsoft Dynamics GP 2010 or Microsoft Dynamics GP 2013
+## Update from Microsoft Dynamics GP 9.0, Microsoft Dynamics GP 10.0, or Microsoft Dynamics GP 2010 to Microsoft Dynamics GP 10.0, Microsoft Dynamics GP 2010 or Microsoft Dynamics GP 2013
 
 To restart the upgrade of a company database from Microsoft Dynamics GP 9.0 to Microsoft Dynamics GP 10.0, follow these steps:
 
@@ -53,8 +49,10 @@ To restart the upgrade of a company database from Microsoft Dynamics GP 9.0 to M
 
       1. Select **Start**, and then select **Programs**.
       2. Point to **Microsoft SQL Server 2005** or **Microsoft SQL Server 2008**, and then select **SQL Server Management Studio**.
+
           > [!NOTE]
-          >The Connect to Server window opens.
+          > The Connect to Server window opens.
+
       3. In the **Server name** box, type the name of the instance of SQL Server.
       4. In the **Authentication** list, select **SQL Authentication**.
       5. In the **User name** box, type **sa**.
@@ -101,7 +99,7 @@ To restart the upgrade of a company database from Microsoft Dynamics GP 9.0 to M
 If the update is still unsuccessful, contact Technical Support for Microsoft Dynamics at 888-477-7877.
 
 > [!NOTE]
-> If you contact Technical Support for Microsoft Dynamics, or if you visit the Technical Support for Microsoft Dynamics Web site, provide the Dexsql.log file for the update. Additionally, provide the results from the following script:
+> If you contact Technical Support for Microsoft Dynamics, or if you visit the Technical Support for Microsoft Dynamics Web site, provide the Dexsql.log file for the update. Additionally, provide the results from the following script.
 
 ```sql
 SELECT b.fileOSName, a.fileNumber, a.PRODID, a.Status, a.errornum, a.errordes, c.CMPANYID, c.INTERID
@@ -118,4 +116,4 @@ SELECT b.fileOSName, a.fileNumber, a.PRODID, a.Status, a.errornum, a.errordes, c
 
 ## References
 
-For more information, see [How to create a Dexsql.log file to troubleshoot error messages in Microsoft Dynamics GP](https://support.microsoft.com/help/850996).
+For more information, see [How to create a Dexsql.log file to troubleshoot error messages in Microsoft Dynamics GP](create-a-dexsql-dot-log-file-troubleshoot.md).
