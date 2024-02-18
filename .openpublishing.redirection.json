@@ -6937,7 +6937,7 @@
     {
       "source_path": "support/azure/general/apply-out-of-band-updates-to-cps.md",
       "redirect_url": "https://azure.microsoft.com/en-us/products/azure-stack/",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/azure/general/how-to-enable-bitlocker-in-cloud-platform-system.md",
