@@ -1,9 +1,9 @@
 ---
 title: Payroll timecard approvals skip approver
 description: Provides a solution to an issue where payroll timecard approvals aren't going to correct approver in Microsoft Dynamics GP.
-ms.reviewer: cwaswick
+ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 02/15/2024
+ms.date: 02/18/2024
 ---
 # Payroll timecard approvals aren't going to correct approver in Microsoft Dynamics GP
 
@@ -12,7 +12,7 @@ This article provides a solution to an issue where payroll timecard approvals ar
 _Applies to:_ &nbsp; Microsoft Dynamics GP  
 _Original KB number:_ &nbsp; 4132654
 
-## Symptom
+## Symptoms
 
 Payroll employe self service timecard approvals aren't going to correct approver in Microsoft Dynamics GP, or skipping direct managers.
 
