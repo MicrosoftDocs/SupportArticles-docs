@@ -1,9 +1,9 @@
 ---
-title: Modify the Dynamics.set file
+title: Modify the Dynamics set file
 description: Provides steps to modify the Dynamics.set file so that all users can use the same Reports.dic file that is shared on a computer that is running Microsoft Dynamics GP.
-ms.reviewer:theley
+ms.reviewer: theley
 ms.topic: how-to
-ms.date: 02/16/2024
+ms.date: 02/18/2024
 ---
 # How to modify the Dynamics.set file so that all users can share the Reports.dic file in Microsoft Dynamics GP
 
@@ -12,20 +12,19 @@ This article discusses how to modify the Dynamics.set file. You can modify this 
 _Applies to:_ &nbsp; Microsoft Dynamics GP  
 _Original KB number:_ &nbsp; 858327
 
-## Introduction
-
-To modify the Dynamics.set file so that all users can use the same Reports.dic file, follow these steps.
-
 ## More information
 
+To modify the Dynamics.set file so that all users can use the same Reports.dic file, follow these steps:
+
 1. Make a backup of the Dynamics.set file in the appropriate program folder.
+
    - Microsoft Dynamics GP
 
-        The default location of the program folder in the following location:  
-        `C:\Program Files\Microsoft Dynamics\GP`
+     The default location of the program folder is `C:\Program Files\Microsoft Dynamics\GP`.
 
       > [!NOTE]
-        > The Dynamics.set file is specific to each client computer. Therefore, you must perform the backup on each client computer.
+      > The Dynamics.set file is specific to each client computer. Therefore, you must perform the backup on each client computer.
+
 2. Locate the Dynamics.set file in the local Microsoft Dynamics GP program folder, right-click the Dynamics.set file, and then select **Edit**.
 
     > [!NOTE]
@@ -66,7 +65,6 @@ To modify the Dynamics.set file so that all users can use the same Reports.dic f
 5. In Notepad, select **File**, and then select **Save**.
 6. Select **File**, and then select **Exit**.
 7. Start Microsoft Dynamics GP.
-8. Make sure that you can see the modified reports. To do it, use one of the following methods:
-  On the **Microsoft Dynamics GP** menu, point to **Tools**, point to **Customize**, and then select **Report Writer**. Verify that the modified reports appear in the **Modified Reports** list.
+8. Make sure that you can see the modified reports. To do it, use the following method:
 
-
+   On the **Microsoft Dynamics GP** menu, point to **Tools** > **Customize**, and then select **Report Writer**. Verify that the modified reports appear in the **Modified Reports** list.
