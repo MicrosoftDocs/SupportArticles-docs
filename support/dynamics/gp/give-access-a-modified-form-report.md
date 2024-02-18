@@ -3,7 +3,7 @@ title: Give access to a modified form or report
 description: Describes how to give users access to the modified forms and reports in Microsoft Dynamics GP.
 ms.reviewer: theley
 ms.topic: how-to
-ms.date: 02/16/2024
+ms.date: 02/18/2024
 ---
 # How to give users access to a modified form or to a modified report in Microsoft Dynamics GP
 
