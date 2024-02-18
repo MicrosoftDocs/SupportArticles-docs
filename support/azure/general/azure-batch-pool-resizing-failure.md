@@ -181,7 +181,7 @@ The Batch service may experience these issues due to some infrastructure limitat
 
 ### Solution: Retry the resize operation, create a new pool with different VM size, or use another region
 
-To resolve this issue, use the following methods:
+To resolve this issue, try the following methods:
 
 - Retry the resize operation.
 
