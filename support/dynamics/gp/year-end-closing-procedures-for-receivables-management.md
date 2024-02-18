@@ -2,7 +2,7 @@
 title: Year-end closing procedures for Receivables Management
 description: Describes how to do the year-end closing routine in Receivables Management.
 ms.reviewer: theley
-ms.date: 02/15/2024
+ms.date: 02/18/2024
 ---
 # Year-end closing procedures for Receivables Management in Microsoft Dynamics GP
 
