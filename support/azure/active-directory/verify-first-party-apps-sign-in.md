@@ -1,8 +1,8 @@
 ---
 title: Verify first-party Microsoft applications in sign-in reports
 description: Describes how to verify first-party Microsoft applications in sign-in reports.
-ms.date: 12/05/2023
-ms.reviewer: bernaw, domooney, v-six
+ms.date: 02/18/2024
+ms.reviewer: bernaw, domooney, v-six, v-weizhu
 ms.service: active-directory
 ms.subservice: compliance
 ms.custom: has-azure-ad-ps-ref
