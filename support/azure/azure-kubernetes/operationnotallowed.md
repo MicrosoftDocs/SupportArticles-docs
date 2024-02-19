@@ -39,7 +39,7 @@ Some operations take time to run. Those operations block other operations if the
 
 To resolve these issues, you usually have to wait until the blocking operation finishes.
 
-Note that you can also try aborting the long-running operation by using [az aks operation-abort](https://learn.microsoft.com/azure/aks/manage-abort-operations).
+Note that you can also try aborting the long-running operation by using [az aks operation-abort](/azure/aks/manage-abort-operations).
 
 ## Solution 2: Get the current cluster status before you try an operation
 
