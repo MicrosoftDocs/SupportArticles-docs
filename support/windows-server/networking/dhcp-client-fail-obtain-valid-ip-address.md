@@ -1,7 +1,7 @@
 ---
 title: DHCP client can't get a DHCP-assigned IP address
 description: Discusses an issue where a DHCP client can't get a DHCP-assigned IP address.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

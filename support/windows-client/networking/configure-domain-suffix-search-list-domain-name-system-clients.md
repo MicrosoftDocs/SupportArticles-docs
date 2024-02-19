@@ -1,7 +1,7 @@
 ---
 title: How to configure a domain suffix search list on the Domain Name System clients
 description: Describes how to automate the process of configuring the domain suffix search list on your Domain Name System (DNS) clients.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

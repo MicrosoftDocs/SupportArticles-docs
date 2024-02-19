@@ -1,7 +1,7 @@
 ---
 title: Enable debug logging for Netlogon service
 description: Describes how to enable logging of debug information of the Netlogon service.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

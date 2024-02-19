@@ -1,7 +1,7 @@
 ---
 title: VSS writers report as failed on a virtual machine
 description: Provides some information about VSS writers report as failed on a virtual machine
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

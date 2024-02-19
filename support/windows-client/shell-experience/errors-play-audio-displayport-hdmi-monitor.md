@@ -1,7 +1,7 @@
 ---
 title: Can't play audio in a system with DisplayPort
 description: Resolves an issue that occurs when you are playing audio whose source is a system that uses a DisplayPort or HDMI monitor.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

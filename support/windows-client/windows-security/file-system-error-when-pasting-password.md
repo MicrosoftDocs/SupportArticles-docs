@@ -1,7 +1,7 @@
 ---
 title: Fail to paste password into credential dialog box
 description: Provides help to fix a File system error that occurs when you paste password into a credential dialog box.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

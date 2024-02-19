@@ -1,7 +1,7 @@
 ---
 title: Physical GPU settings are unavailable post domain join
 description: Describes how to solve the issue that Physical GPU settings are unavailable post domain join
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

@@ -1,7 +1,7 @@
 ---
 title: Create a desktop shortcut with Windows Script Host
 description: Describes how to create desktop shortcuts by using the Windows Scripting Host from within Visual FoxPro.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

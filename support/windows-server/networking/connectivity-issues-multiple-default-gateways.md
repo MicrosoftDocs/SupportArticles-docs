@@ -1,7 +1,7 @@
 ---
 title: Multiple default gateways cause connectivity problems
 description: Describes the connectivity issues that occur when multiple default gateways are used in TCP/IP configuration options.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

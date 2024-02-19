@@ -1,7 +1,7 @@
 ---
 title: A Group Policy setting isn't available in the security policy settings list
 description: Describes a problem in which the System objects Default owner for objects created by members of the Administrators group Group Policy setting isn't available in the security policy settings list. A resolution is provided.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

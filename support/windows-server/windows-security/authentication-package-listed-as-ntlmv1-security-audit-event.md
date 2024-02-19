@@ -1,7 +1,7 @@
 ---
 title: Audit event shows authentication package as NTLMv1 instead of NTLMv2
 description: Discusses an issue where the authentication was actually using NTLMv2 but reporting NTLMv1 in the event log.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

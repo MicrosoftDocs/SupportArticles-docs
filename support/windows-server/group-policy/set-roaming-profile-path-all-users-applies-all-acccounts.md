@@ -1,7 +1,7 @@
 ---
 title: Set roaming profile path for all users
 description: Describes the behavior where the Set roaming profile path for all users logging onto this computer Group Policy setting applies to all user accounts including local user accounts because Group Policy will override the local computer policy.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

@@ -1,7 +1,7 @@
 ---
 title: Support policy for DNS client-side caching
 description: Introduces the support policy for DNS client-side caching.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

@@ -1,7 +1,7 @@
 ---
 title: Can't configure a convenience PIN
 description: Describes an issue that prevents users of Windows 10 Anniversary Update from setting a convenience PIN. This change involves Windows Hello for Business and the increased security this feature offers. A resolution is provided.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

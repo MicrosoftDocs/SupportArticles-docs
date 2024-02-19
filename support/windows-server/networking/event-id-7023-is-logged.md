@@ -1,7 +1,7 @@
 ---
 title: Event ID 7023 is logged when Windows Server 2012 starts
 description: Describes an issue in which Event ID 7023 is logged when you start Windows Server 2012. You can safely ignore these events.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

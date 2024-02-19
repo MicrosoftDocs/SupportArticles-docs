@@ -3,7 +3,7 @@ title: ERROR_INVALID_DATA error after installing Windows updates
 description: Helps resolve the ERROR_INVALID_DATA error at system startup after installing Windows updates.
 author: Deland-Han
 ms.author: delhan
-ms.date: 45286
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

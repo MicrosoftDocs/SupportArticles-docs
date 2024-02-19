@@ -1,7 +1,7 @@
 ---
 title: Install imported certificates
 description: Describes how to import a Web site certificate into the certificate store of the local computer and assign the certificate to the Web site.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

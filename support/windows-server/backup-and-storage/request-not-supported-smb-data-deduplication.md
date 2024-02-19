@@ -1,7 +1,7 @@
 ---
 title: The request is not supported error for SMB Read Andx requests for files managed by Data Deduplication in Windows Server 2012
 description: Fixes errors that occur in SMB Read Andx requests for files managed by Data Deduplication.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

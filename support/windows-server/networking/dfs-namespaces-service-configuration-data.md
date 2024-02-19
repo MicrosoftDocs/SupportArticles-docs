@@ -1,7 +1,7 @@
 ---
 title: DFS Namespaces service and configuration
 description: Provides information about the Distributed File System (DFS) Namespaces service to help you create a new namespace.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

@@ -1,7 +1,7 @@
 ---
 title: Windows 10 Enterprise APN lost after SIM change or MBN adapter error
 description: A provisioning approach can help prevent a Windows 10 client from losing its enterprise APN information after a change or error in the SIM or MBN adapter.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

@@ -1,7 +1,7 @@
 ---
 title: Name resolution and connectivity issues
 description: Provides a solution to name resolution and connectivity issues on a Routing and Remote Access Server that also runs DNS or WINS.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

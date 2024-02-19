@@ -1,7 +1,7 @@
 ---
 title: A CA can't use a certificate template
 description: Provides a solution to an issue where a certificate template is unable to load and certificate requests are unsuccessful using the same template.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

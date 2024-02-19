@@ -1,7 +1,7 @@
 ---
 title: Terminal Server license for deployment
 description: Helps you understand and successfully deploy Terminal Services on computers that are running Microsoft Windows Server 2003.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

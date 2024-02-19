@@ -1,7 +1,7 @@
 ---
 title: Can't access WebDAV Web folder
 description: Describes how to edit the FileAttributesLimitInBytes registry entry so that you can access a Web folder that contains many files in Windows.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

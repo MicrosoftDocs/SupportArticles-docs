@@ -1,7 +1,7 @@
 ---
 title: Printer setting doesn't work with XPS-based print drivers
 description: Describes a problem that prevents the printer on a Windows 7 Service Pack 1-based system from printing. This issue occurs when the printer uses an XPS-based print driver.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

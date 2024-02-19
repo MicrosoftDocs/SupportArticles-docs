@@ -1,7 +1,7 @@
 ---
 title: Disk performance may be slower than expected when you use multiple disks
 description: Describes a resolution for an issue in which  disk performance may be slower than expected.  This issue may occur when you use a hardware or software-based RAID.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

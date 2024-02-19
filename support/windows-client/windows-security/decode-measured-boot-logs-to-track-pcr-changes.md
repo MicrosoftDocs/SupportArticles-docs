@@ -1,7 +1,7 @@
 ---
 title: Decode Measured Boot logs to track PCR changes
 description: Provides instructions for installing and using a tool for analyzing log information to identify changes to PCRs.
-ms.date: 45286
+ms.date: 12/26/2023
 ms.reviewer: kaushika, v-tappelgate
 manager: dcscontentpm
 ms.collection: Windows Security Technologies\BitLocker

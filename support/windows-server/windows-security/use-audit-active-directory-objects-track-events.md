@@ -1,7 +1,7 @@
 ---
 title: How to enable Audit Active Directory objects
 description: Describes how to use Windows Server 2003 auditing to track user activities and system-wide events in Active Directory.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

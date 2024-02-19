@@ -1,7 +1,7 @@
 ---
 title: Automate regional and language settings
 description: Describes how to automate regional and language settings.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

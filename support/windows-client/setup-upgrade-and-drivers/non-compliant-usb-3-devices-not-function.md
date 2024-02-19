@@ -1,7 +1,7 @@
 ---
 title: Non-compliant USB 3.0 devices don't function
 description: Resolves an issue where some non-compliant USB 3.0 devices don't function when connected to USB 3.0 ports.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

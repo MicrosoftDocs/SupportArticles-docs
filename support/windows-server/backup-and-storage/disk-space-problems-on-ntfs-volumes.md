@@ -1,7 +1,7 @@
 ---
 title: Correct disk space problems on NTFS volumes
 description: Describes how to locate and correct disk space problems on NTFS volumes.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

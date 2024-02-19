@@ -1,7 +1,7 @@
 ---
 title: Change IP address of a network adapter
 description: Provides some information about how to change the IP address of a network adapter.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

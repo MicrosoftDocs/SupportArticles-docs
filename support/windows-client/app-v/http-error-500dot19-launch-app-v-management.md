@@ -1,7 +1,7 @@
 ---
 title: HTTP Error 500.19 - Internal Server Error when launching the App-V Management Console
 description: Provides a solution to an issue where launching the App-V 5.0 Management console that's installed on a drive other than the C drive fails.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

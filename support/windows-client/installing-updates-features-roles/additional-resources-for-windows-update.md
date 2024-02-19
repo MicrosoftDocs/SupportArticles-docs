@@ -1,7 +1,7 @@
 ---
 title: Additional resources for Windows Update
 description: Describes details about to troubleshooting WSUS and resetting Windows Update components manually.
-ms.date: 45286
+ms.date: 12/26/2023
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.author: aaroncz

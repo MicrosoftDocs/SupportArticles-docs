@@ -1,7 +1,7 @@
 ---
 title: Command line switches supported by Self-Extractor packages
 description: Describes the command line switches supported by a software installation package, an update package, or a hotfix package created by using Microsoft Self-Extractor.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

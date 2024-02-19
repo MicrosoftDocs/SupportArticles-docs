@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot replication error 8606
 description: Provides a resolution to an issue where Active Directory replication fails with error 8606.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

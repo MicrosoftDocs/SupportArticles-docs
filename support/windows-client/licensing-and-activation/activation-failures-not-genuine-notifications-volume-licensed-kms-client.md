@@ -1,7 +1,7 @@
 ---
 title: Activation failures around January 8, 2019, on volume-licensed Windows 7 Service Pack 1 KMS clients
 description: Provides a solution to an issue where users may receive the Windows Activation or (Windows is not genuine) notifications starting at or after 10:00 UTC, January 8, 2019.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

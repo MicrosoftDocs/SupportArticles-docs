@@ -1,7 +1,7 @@
 ---
 title: RemoteFX USB redirected scanner doesn't start
 description: Fixes an issue in which RemoteFX USB redirected scanner can't open
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

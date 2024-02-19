@@ -1,7 +1,7 @@
 ---
 title: Group membership changes do not update over some VPN connections
 description: Describes a situation in which VPN users might experience resource access or configuration problems after their group membership changes.
-ms.date: 45286
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

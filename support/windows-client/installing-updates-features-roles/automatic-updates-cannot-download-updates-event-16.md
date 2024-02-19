@@ -1,7 +1,7 @@
 ---
 title: Automatic Updates can't download updates and event ID 16 is logged
 description: Describes an issue where Automatic Updates can't download updates and event ID 16 is recorded in the system log.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

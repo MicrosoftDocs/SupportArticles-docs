@@ -1,7 +1,7 @@
 ---
 title: Error codes for dial-up or VPN connections
 description: Lists the error codes that you may receive when you make a dial-up connection or a VPN connection.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

@@ -1,7 +1,7 @@
 ---
 title: NTLM network authentication changes
 description: Describes new behavior in Windows Server 2003 SP1 that affects NTLM password changes. After you install the service pack, domain users can change a password and still use their old password to authenticate. This setting can be changed in the registry.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

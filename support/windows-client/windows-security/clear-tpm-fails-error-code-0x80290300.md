@@ -1,7 +1,7 @@
 ---
 title: Clear TPM fails with error code 0x80290300
 description: Fixes the error code 0x80290300 that occurs when you clear TPM information.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

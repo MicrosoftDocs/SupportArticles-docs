@@ -1,7 +1,7 @@
 ---
 title: Dynamic Memory allocation in a Virtual Machine does not change although there is available memory on the host
 description: Provides a solution to an issue where Dynamic Memory allocation in a virtual machine does not change
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

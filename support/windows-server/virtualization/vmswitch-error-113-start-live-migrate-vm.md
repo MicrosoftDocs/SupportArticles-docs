@@ -1,7 +1,7 @@
 ---
 title: VmSwitch Error 113 event
 description: Discusses that VmSwitch Error 113 event is logged when you start or live migrate virtual machines in Windows Server 2012 R2.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

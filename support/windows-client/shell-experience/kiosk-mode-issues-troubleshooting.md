@@ -1,7 +1,7 @@
 ---
 title: Kiosk mode issues troubleshooting
 description: Learn how to troubleshoot single-app and multi-app kiosk configurations, as well as common problems like sign-in issues.
-ms.date: 45286
+ms.date: 12/26/2023
 manager: dcscontentpm
 author: lizgt2000
 ms.author: lizlong

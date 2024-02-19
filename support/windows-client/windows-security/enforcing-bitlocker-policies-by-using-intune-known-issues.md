@@ -1,7 +1,7 @@
 ---
 title: 'Enforcing BitLocker policies by using Intune: known issues'
 description: provides assistance for issues that you may see if you use Microsoft Intune policy to manage silent BitLocker encryption on devices.
-ms.date: 45286
+ms.date: 12/26/2023
 ms.reviewer: kaushika, v-tappelgate
 manager: dcscontentpm
 ms.collection:

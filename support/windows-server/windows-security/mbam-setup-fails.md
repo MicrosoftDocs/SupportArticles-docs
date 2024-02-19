@@ -1,7 +1,7 @@
 ---
 title: Installing MBAM Compliance and Audit Reports fails
 description: Solves an error that occurs when you install Microsoft BitLocker Administration and Monitoring (MBAM) Compliance and Audit Reports feature.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

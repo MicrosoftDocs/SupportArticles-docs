@@ -1,7 +1,7 @@
 ---
 title: Full garbage collection causes performance issues
 description: Describes issues that are triggered by the data churn that is associated with full garbage collection jobs in Windows Server. Provides workarounds.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

@@ -1,7 +1,7 @@
 ---
 title: Backup doesn't start after you perform BMR
 description: Describes a problem that prevents Windows Server Backup from starting after you perform a bare metal recovery. Occurs on a computer that's running Windows Server 2012. Provides a workaround.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

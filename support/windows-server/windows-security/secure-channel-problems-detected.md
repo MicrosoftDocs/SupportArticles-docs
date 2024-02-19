@@ -1,7 +1,7 @@
 ---
 title: Secure Channel Problems Detected
 description: Provides a solution to detected secure channel problems.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

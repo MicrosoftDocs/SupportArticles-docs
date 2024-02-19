@@ -1,7 +1,7 @@
 ---
 title: Move Event Viewer log files to another location
 description: Describes how to move Event Viewer log files to another location on the hard disk.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

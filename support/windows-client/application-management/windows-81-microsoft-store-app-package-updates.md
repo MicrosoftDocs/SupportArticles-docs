@@ -1,7 +1,7 @@
 ---
 title: Microsoft Store app package updates available
 description: Outlines the default Windows Store apps release cycle for administrators.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

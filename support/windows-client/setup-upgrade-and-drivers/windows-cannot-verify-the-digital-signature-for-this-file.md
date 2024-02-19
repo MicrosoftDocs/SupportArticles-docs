@@ -1,7 +1,7 @@
 ---
 title: Error (Windows cannot verify the digital signature for this file) occurs when you upgrade to Windows Storage Server 2016 or Windows Server 2016
 description: Describes an issue in which an upgrade to Windows Storage Server 2016 or Windows Server 2016 fails at 95 percent completion.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

@@ -1,7 +1,7 @@
 ---
 title: Report generation process stops responding
 description: Fixes an issue that the report generation process may stop responding when you run Perfmon.exe with the Active Directory Diagnostics template to generate a report.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

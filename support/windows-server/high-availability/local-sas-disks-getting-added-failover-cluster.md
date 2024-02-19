@@ -1,7 +1,7 @@
 ---
 title: Local SAS Disks Getting Added in Windows Server Failover Cluster
 description: Provides a workaround for the issue that Local SAS Disks getting added in Windows Server Failover Cluster
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

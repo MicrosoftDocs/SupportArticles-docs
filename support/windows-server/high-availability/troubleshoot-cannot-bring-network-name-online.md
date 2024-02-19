@@ -1,7 +1,7 @@
 ---
 title: Can't bring a network name online in a cluster
 description: Provides guidance for when a network name fails to come online in a Windows-based failover cluster
-ms.date: 45286
+ms.date: 12/26/2023
 author: kaushika-msft
 ms.author: kaushika
 manager: dcscontentpm

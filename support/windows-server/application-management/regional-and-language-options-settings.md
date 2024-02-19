@@ -1,7 +1,7 @@
 ---
 title: How the Regional and Language Options settings in Windows Server 2003 are applied
 description: Describes the user-specific and computer-wide settings in Regional and Language Options in Control Panel, the implications of configuring Regional and Language Options during Windows Setup, and the effects on Window Server 2003 Terminal Server.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

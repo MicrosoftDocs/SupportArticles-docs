@@ -1,7 +1,7 @@
 ---
 title: Fail to add additional disk to a scheduled backup
 description: Provides a solution to an issue where you receive an error message when you try to add an additional disk to a scheduled backup.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

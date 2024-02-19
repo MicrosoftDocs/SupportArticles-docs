@@ -1,7 +1,7 @@
 ---
 title: WinRM service does not start
 description: Describes the issue in which the Windows Remote Manager service doesn't start after you uninstall WinRM 2.0.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

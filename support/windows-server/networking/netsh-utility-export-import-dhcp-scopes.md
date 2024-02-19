@@ -1,7 +1,7 @@
 ---
 title: Netsh utility to export and import DHCP scopes
 description: Describes how to use the Netsh utility to export and import DHCP scopes.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

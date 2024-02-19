@@ -1,7 +1,7 @@
 ---
 title: No logon servers are available
 description: Occurs when cloning failed, and the server starts in Directory Services Repair Mode (DSRM). There's no visual indication that the domain controller has started in DSRM.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

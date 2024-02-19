@@ -1,7 +1,7 @@
 ---
 title: Assign a logon script to a profile
 description: Describes how to assign a logon script to a profile for a local user.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

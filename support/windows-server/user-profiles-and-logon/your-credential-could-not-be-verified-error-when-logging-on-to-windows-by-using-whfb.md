@@ -4,7 +4,7 @@ description: Introduces how to troubleshoot the Your credentials could not be ve
 author: Deland-Han
 ms.author: delhan
 ms.topic: troubleshooting
-ms.date: 45286
+ms.date: 12/26/2023
 ms.reviewer: kaushika
 ms.custom: sap:user-logon-fails, csstroubleshoot, ikb2lmc
 ---

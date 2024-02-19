@@ -1,7 +1,7 @@
 ---
 title: DCs can't be located and high-rate outbound sessions
 description: Provides some resolutions for the issue in which a machine creates outbound sessions at a high rate. When this issue occurs, the Netlogon service can't locate DCs and many UDP ports are used by the LSASS process.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

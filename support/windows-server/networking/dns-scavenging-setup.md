@@ -1,7 +1,7 @@
 ---
 title: Don't be afraid of DNS scavenging, just be patient
 description: Discusses how DNS scavenging is setup and gives an example of setting scavenging up on a pre-existing zone.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

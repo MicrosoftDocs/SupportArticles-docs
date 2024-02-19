@@ -1,7 +1,7 @@
 ---
 title: Set up dynamic boot partition mirroring on GPT disks
 description: Contains steps and examples of how to set up dynamic boot partition mirroring on GUID partition table (GPT) disks in Windows Server 2008.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

@@ -1,7 +1,7 @@
 ---
 title: Profile loading fails
 description: Describes an issue in which profile loading fails when the ntuser.dat or usrclass.dat file is defined as read-only, or the profile user lacks the appropriate permissions for these two .dat files.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

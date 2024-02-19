@@ -1,7 +1,7 @@
 ---
 title: Valid root CA certificates are untrusted
 description: Root CA certificates distributed using GPO might appear sporadically as untrusted. This article provides a workaround for this issue.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

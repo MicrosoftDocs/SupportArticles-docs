@@ -1,7 +1,7 @@
 ---
 title: How to launch processes inside the App-V 5.0 virtualized environment
 description: Describes how to launch processes inside the App-V 5.0 virtualized environment.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

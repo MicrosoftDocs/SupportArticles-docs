@@ -1,7 +1,7 @@
 ---
 title: Password policy changes aren't applied
 description: Provides a solution to an issue where the changes aren't applied as expected when you change the password policy.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

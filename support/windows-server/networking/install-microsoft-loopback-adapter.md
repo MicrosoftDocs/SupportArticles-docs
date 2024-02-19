@@ -1,7 +1,7 @@
 ---
 title: install the Microsoft Loopback Adapter
 description: This article describes how to install the Microsoft Loopback Adapter. You can use the DevCon utility to quickly install the Microsoft Loopback Adapter at a command prompt, or you can use the Hardware Wizard.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

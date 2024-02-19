@@ -1,7 +1,7 @@
 ---
 title: KDC_ERR_C_PRINCIPAL_UNKNOWN in S4U2Self request
 description: Provides a solution to an issue where S4U2Self requests fail with the error KDC_ERR_C_PRINCIPAL_UNKNOWN.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

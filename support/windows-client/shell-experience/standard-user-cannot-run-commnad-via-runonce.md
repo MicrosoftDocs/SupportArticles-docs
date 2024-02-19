@@ -1,7 +1,7 @@
 ---
 title: Can't execute commands with RunOnce and RunOnceEx
 description: Fixes an issue where standard users can't execute a command set via RunOnce or RunOnceEx.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

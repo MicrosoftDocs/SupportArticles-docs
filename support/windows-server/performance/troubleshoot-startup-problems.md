@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot startup problems
 description: Describes procedures that you can use to troubleshoot startup problems in Windows Server 2003.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

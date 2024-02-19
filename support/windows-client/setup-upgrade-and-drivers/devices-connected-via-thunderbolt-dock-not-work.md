@@ -1,7 +1,7 @@
 ---
 title: Devices connected through a Thunderbolt Dock stop working
 description: Describes an issue in which devices that are connected through a Thunderbolt Dock stop working after the computer resumes from a power state. Provides a workaround.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

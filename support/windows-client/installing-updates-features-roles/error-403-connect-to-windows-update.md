@@ -1,7 +1,7 @@
 ---
 title: Error 403 when you access Windows Update
 description: Provides a solution to an error 403 that occurs when you access Windows Update.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

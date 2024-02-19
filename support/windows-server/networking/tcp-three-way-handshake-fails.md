@@ -1,7 +1,7 @@
 ---
 title: TCP three-way handshake failure during SMB connection
 description: Introduces the TCP three-way handshake failure during SMB connection.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

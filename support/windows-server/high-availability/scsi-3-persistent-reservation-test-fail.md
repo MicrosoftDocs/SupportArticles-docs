@@ -1,7 +1,7 @@
 ---
 title: SCSI-3 Persistent Reservation test fails
 description: Provides a solution to an issue where the SCSI-3 Persistent Reservation test fails when you run the Failover Cluster Validation report.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

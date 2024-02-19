@@ -1,7 +1,7 @@
 ---
 title: MSI installation error 1603
 description: Provides solutions to the error 1603 that occurs when you install a Windows Installer package.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

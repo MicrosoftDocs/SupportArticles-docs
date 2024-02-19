@@ -1,7 +1,7 @@
 ---
 title: Computer doesn't start after you change active partition
 description: Provides a solution to an issue where the computer doesn't start after you mark your primary partition as active.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

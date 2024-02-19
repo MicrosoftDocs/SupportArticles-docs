@@ -1,7 +1,7 @@
 ---
 title: NTFRS deprecation blocks promotion of replica DCs
 description: NTFRS deprecation intentionally blocks the promotion of Windows Server 2016 RS3 replica DCs.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

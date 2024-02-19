@@ -1,7 +1,7 @@
 ---
 title: Adding Remote Desktop Services role fails
 description: Helps solve an issue where adding Remote Desktop Services role fails when Firewall Service is stopped.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

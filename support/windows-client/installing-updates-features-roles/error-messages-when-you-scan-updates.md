@@ -1,7 +1,7 @@
 ---
 title: Error messages when you scan for updates
 description: Describes the download behavior of Windows Update Web site and the error messages that can occur.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

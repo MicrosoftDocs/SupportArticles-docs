@@ -1,7 +1,7 @@
 ---
 title: System Management Components overview
 description: Overview of System Management Components troubleshooting articles for Windows clients.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

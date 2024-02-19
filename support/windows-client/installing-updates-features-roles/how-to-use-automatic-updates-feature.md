@@ -1,7 +1,7 @@
 ---
 title: How to schedule automatic updates in Windows
 description: Explains how to use the Automatic Updates feature in Windows Server 2003, in Windows XP, and in Windows 2000.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

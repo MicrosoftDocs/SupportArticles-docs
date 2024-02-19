@@ -1,7 +1,7 @@
 ---
 title: Task Manager can't be opened
 description: Provides help to resolve an error (Task Manager has been disabled by your administrator) that occurs when you try to use Task Manager.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

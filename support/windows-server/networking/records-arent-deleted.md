@@ -1,7 +1,7 @@
 ---
 title: Records aren't deleted
 description: Provides a solution to an issue where you enable Scavenging on the Windows DNS Server to get rid of some old and stale records on the zone.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

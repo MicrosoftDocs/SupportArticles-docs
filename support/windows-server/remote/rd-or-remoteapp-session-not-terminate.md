@@ -1,7 +1,7 @@
 ---
 title: Remote Desktop session doesn't terminate
 description: Resolve an issue where Remote Desktop that specifies a program to start on logon doesn't terminate when the specified program is exited.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

@@ -1,7 +1,7 @@
 ---
 title: Windows App cannot start after ADMT 3.2 security translation runs
 description: Provides a solution to an error that occurs when Windows App cannot start after ADMT 3.2 security translation runs.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

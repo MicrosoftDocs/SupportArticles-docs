@@ -1,7 +1,7 @@
 ---
 title: Use Rsop.msc to gather computer policy
 description: Describes how to use the Resultant Set of Policy utility to gather only computer-specific policy information.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

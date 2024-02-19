@@ -1,7 +1,7 @@
 ---
 title: Clients can't connect and get the Class not registered error
 description: Troubleshoot "Class not registered" error with remote desktop connection.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

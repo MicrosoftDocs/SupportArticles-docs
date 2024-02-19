@@ -1,7 +1,7 @@
 ---
 title: Incorrect shutdown reason code
 description: Provides a resolution for the issue that an incorrect shutdown reason code written to SEL on user initiated shutdown.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

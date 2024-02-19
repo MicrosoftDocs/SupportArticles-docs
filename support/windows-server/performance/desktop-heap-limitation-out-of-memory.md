@@ -1,7 +1,7 @@
 ---
 title: Desktop heap limitation causes out of memory error
 description: This article describes the desktop heap limitation, and provides a method to modify the desktop heap size.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

@@ -1,7 +1,7 @@
 ---
 title: Event ID 4105 when RD Licensing runs
 description: Event ID 4105 occurs on a computer running Remote Desktop Licensing (RD Licensing). This issue occurs in various scenarios for which resolutions are provided.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

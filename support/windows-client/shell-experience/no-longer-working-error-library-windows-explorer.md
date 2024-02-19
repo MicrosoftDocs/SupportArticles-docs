@@ -1,7 +1,7 @@
 ---
 title: Opening a Library in Windows Explorer gives error that it is no longer working
 description: This article provides some steps for fixing the error which shows it is no longer working when opening a Library in Windows Explorer.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

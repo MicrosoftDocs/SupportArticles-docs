@@ -1,7 +1,7 @@
 ---
 title: Guidance for troubleshooting DFS Namespace
 description: Introduces general guidance for troubleshooting scenarios related to DFS Namespace.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

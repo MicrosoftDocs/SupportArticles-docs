@@ -1,7 +1,7 @@
 ---
 title: Use the xray feature of TSS to identify known issues
 description: Introduces the xray feature of TSS. This feature is used to identify known issues.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

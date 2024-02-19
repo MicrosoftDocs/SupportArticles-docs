@@ -1,7 +1,7 @@
 ---
 title: Kerberos client receives KRB_AP_ERR_MODIFIED error
 description: Resolve an error (The kerberos client received a KRB_AP_ERR_MODIFIED error from the server) that occurs when you access to NLB virtual IP/NLB Virtual Name.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

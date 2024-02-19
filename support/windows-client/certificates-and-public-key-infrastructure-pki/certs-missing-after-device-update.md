@@ -1,7 +1,7 @@
 ---
 title: Certificates are missing after you update a device to a newer version of Windows 10
 description: Works around an issue in which a device loses its system and user certificates after an update.
-ms.date: 45286
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

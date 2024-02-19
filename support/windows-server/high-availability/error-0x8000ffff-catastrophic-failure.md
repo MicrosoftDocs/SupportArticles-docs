@@ -1,7 +1,7 @@
 ---
 title: Fail to change drive's Shadow Copy settings
 description: Describes a catastrophic failure error that occurs in Windows Server 2008 when you try to change a drive's Shadow Copy settings. A resolution is provided.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

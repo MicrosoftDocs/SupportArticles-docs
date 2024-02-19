@@ -1,7 +1,7 @@
 ---
 title: Certutil -view doesn't return issued certificates
 description: Fixes an issue where the Certutil -view command doesn't return issued certificates correctly.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

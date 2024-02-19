@@ -1,7 +1,7 @@
 ---
 title: How to restore a Windows 7 installation
 description: Describes how to restore a Windows 7 installation.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

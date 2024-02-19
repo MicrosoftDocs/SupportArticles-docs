@@ -1,7 +1,7 @@
 ---
 title: Log-off problems
 description: Discusses log off problems in Windows XP, in Windows Server 2003, in Windows 2000, and in Windows NT 4.0.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

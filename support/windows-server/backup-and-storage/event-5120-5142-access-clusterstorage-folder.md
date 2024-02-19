@@ -1,7 +1,7 @@
 ---
 title: Unable to access ClusterStorage folder
 description: Describes an issue where you can't access a CSV volume from a passive (non-coordinator) node and receive event ID 5120 or 5142.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

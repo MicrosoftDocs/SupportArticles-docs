@@ -1,7 +1,7 @@
 ---
 title: CS can't start on a computer
 description: Explains how to troubleshoot an issue when Certificate Services doesn't start on a computer that is running Windows Server 2003 or Windows 2000.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

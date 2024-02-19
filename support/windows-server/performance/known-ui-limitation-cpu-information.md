@@ -1,7 +1,7 @@
 ---
 title: Known UI limitation of the CPU information in Windows Server 2016
 description: Describes the known UI limitations in Windows Server 2016. The System Information (Msinfo32.exe) tool and the Performance tab of Task Manager display incorrect processor sockets number, cores number, L1 cache and L2 cache sizes.
-ms.date: 45286
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

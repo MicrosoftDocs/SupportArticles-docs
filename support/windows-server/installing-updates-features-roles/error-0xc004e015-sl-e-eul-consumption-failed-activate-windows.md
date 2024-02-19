@@ -1,7 +1,7 @@
 ---
 title: Error 0xC004E015 (SL_E_EUL_CONSUMPTION_FAILED) when activating Windows
 description: Provides a solution to an error 0xC004E015 (SL_E_EUL_CONSUMPTION_FAILED) when you try to activate Windows.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

@@ -1,7 +1,7 @@
 ---
 title: How to configure WINRM for HTTPS
 description: This article describes how to configure WINRM to listen to HTTPS by loading a certificate and running commands.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

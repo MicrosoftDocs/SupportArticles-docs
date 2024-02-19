@@ -1,7 +1,7 @@
 ---
 title: Icons for WSD devices show up incorrectly as a different class
 description: This article describes an issue with Web Services for Devices, and includes an automated FixIt solution.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

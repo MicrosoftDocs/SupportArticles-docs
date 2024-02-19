@@ -1,7 +1,7 @@
 ---
 title: This device cannot start error when deploying a hot plug NVMe SSD
 description: Describes an error "This device cannot start" that occurs when you deploy a hot plug NVMe SSD.
-ms.date: 45286
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

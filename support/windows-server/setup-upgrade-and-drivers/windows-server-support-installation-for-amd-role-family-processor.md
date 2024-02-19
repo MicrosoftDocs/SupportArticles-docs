@@ -1,7 +1,7 @@
 ---
 title: Windows Server support and installation instructions for AMD EPYC 7000 Series server processors
 description: Lists the AMD EPYC 7000 Series server processors that are supported by Windows Server 2019, Windows Server 2016, and Windows Server 2012 R2. Additionally lists support caveats and installation instructions.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

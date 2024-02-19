@@ -1,7 +1,7 @@
 ---
 title: A volume shows up as raw in disk management
 description: Provides solutions to an issue where a volume shows as raw in disk management but chkdsk shows the file system as NTFS after you extend the partition.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

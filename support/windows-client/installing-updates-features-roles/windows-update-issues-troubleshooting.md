@@ -1,7 +1,7 @@
 ---
 title: Windows Update issues troubleshooting
 description: Learn about troubleshooting Windows Update, issues related to HTTP/Proxy, and why some features are offered and others aren't.
-ms.date: 45286
+ms.date: 12/26/2023
 author: aczechowski
 ms.author: aaroncz
 manager: dcscontentpm

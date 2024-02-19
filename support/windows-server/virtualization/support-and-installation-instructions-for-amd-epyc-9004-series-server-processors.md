@@ -4,7 +4,7 @@ description: Introduce the Windows Server operating system support statements an
 author: Deland-Han
 ms.author: delhan
 ms.topic: troubleshooting
-ms.date: 45286
+ms.date: 12/26/2023
 ms.custom: sap:installation-and-configuration-of-hyper-v, csstroubleshoot
 ---
 # Windows Server support and installation instructions for the AMD EPYC 9004 Series server processors

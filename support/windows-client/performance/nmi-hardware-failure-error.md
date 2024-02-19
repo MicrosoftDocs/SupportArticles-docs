@@ -1,7 +1,7 @@
 ---
 title: NMI_HARDWARE_FAILURE error
 description: This article discusses a by-design behavior where NMI_HARDWARE_FAILURE error occurs when an NMI is triggered.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

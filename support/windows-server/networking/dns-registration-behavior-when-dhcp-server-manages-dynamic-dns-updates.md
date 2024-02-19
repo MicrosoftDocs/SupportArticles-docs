@@ -1,7 +1,7 @@
 ---
 title: Unexpected DNS record registration behavior when the DHCP server manages dynamic DNS updates
 description: Describes a change in Windows 8.1 and later versions that might cause unexpected behavior if the DHCP server configuration is "Always dynamically update DNS records."
-ms.date: 45286
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: Cluster fileshare resource fails
 description: Clustered Fileshare resource fails on one or more node(s) of a failover cluster. This article provides a solution to this issue.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

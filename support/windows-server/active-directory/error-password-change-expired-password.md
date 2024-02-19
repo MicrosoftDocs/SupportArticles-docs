@@ -1,7 +1,7 @@
 ---
 title: Password change for expired password failing
 description: Fixes an error that occurs when processing the password change for a user where the password is expired or set to change at next logon.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

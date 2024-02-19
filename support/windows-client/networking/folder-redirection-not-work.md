@@ -1,7 +1,7 @@
 ---
 title: Folder redirection doesn't work correctly
 description: Discusses a problem in which folder redirection does not work correctly after you restart a Windows Server 2008-based computer or a Windows Vista-based computer. A workaround is provided.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

@@ -1,7 +1,7 @@
 ---
 title: Error when you access an administrative share on a Windows Vista-based computer
 description: Describes a logon unsuccessful behavior when you try to access an administrative share on a Windows Vista-based computer from another Windows Vista-based computer that's a member of a workgroup.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

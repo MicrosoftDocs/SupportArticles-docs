@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting WINS error event ID 4102, 4243,  4242, and 4286 messages
 description: Describes how to troubleshoot Windows Internet Name Service (WINS) replication-related error messages.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

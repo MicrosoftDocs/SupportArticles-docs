@@ -1,7 +1,7 @@
 ---
 title: ReFS volume using DPM becomes unresponsive on Windows Server 2016
 description: Describes an issue in which DPM or ReFS volume becomes unresponsive on Windows Server 2016.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

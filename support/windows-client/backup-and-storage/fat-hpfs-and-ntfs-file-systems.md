@@ -1,7 +1,7 @@
 ---
 title: Overview of FAT, HPFS, and NTFS File Systems
 description: Describes the differences between File Allocation Table (FAT), High Performance File System (HPFS), and NT File System (NTFS) under Windows NT, and their advantages and disadvantages.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

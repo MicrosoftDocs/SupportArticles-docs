@@ -1,7 +1,7 @@
 ---
 title: Can't request certificate from web enrollment pages
 description: Provides help to solve an error that occurs when you request certificates from CA Web enrollment pages.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

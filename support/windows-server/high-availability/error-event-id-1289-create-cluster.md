@@ -1,7 +1,7 @@
 ---
 title: Error message and event ID 1289 when you try to create a cluster
 description: Fixes a problem that occurs when you try to create a cluster on a set of computers that have the Failover Clustering feature installed.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

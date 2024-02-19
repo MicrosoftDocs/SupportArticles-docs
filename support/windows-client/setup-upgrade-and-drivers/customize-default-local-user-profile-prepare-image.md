@@ -1,7 +1,7 @@
 ---
 title: How to customize the default local user profile when you prepare an image of Windows
 description: Describes how to customize the default local user profile when you prepare an image of Windows XP or Windows Server 2003.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

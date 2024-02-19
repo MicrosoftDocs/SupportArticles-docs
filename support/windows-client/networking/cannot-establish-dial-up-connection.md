@@ -1,7 +1,7 @@
 ---
 title: The PPP link control protocol was terminated error when you establish a dial-up connection
 description: Describes an issue where you can't establish a dial-up connection.
-ms.date: 45286
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
