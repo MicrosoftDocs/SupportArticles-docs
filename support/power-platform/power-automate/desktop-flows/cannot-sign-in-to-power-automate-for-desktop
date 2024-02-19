@@ -1,13 +1,13 @@
 ---
 title: Can't sign in to Power Automate for desktop
-description: This article helps to troubleshoot sign in related issues in Power Automate for desktop.
+description: This article helps troubleshoot sign in related issues with Power Automate for desktop.
 ms.reviewer: pefelesk
 ms.date: 02/19/2024
 ms.subservice: power-automate-desktop-flows
 ---
 # Can't sign in to Power Automate for desktop
 
-This article provides resolutions and workarounds to several sign in related issues. 
+This article provides resolutions and workarounds to several sign in related issues.
 
 ## Generic sign in or sign out issues
 
@@ -20,11 +20,11 @@ To delete the file, navigate to ```%localappdata%\Microsoft\Power Automate Des
 > [!NOTE]
 > If the **AppData** folder isn't visible in your user folder, try to [display hidden files](https://support.microsoft.com/windows/show-hidden-files-0320fe58-0117-fd59-6851-9b7f9840fdb2). 
 
-After deleting the **msalcache.bin3** file, exit Power Automate from the system tray or restart the Power Automate service and retry signing in. 
+After deleting the **msalcache.bin3** file, close the Power Automate console, exit Power Automate from the system tray or restart the Power Automate service and try again to sign in. 
 
 ## Web Account Manager (WAM) errors
 
-By default, Power Automate for desktop authenticates users through the Web Account Manager (WAM); a Windows component that ships with the Operating System that acts as an authentication broker. 
+By default, Power Automate for desktop authenticates users through the Web Account Manager (WAM); a Windows component that ships with the Operating System and acts as an authentication broker. 
 
 Learn more about WAM and related errors in [Using MSAL.NET with Web Account Manager (WAM)] (https://aka.ms/msal-net-wam) and [Interactive with WAM](https://learn.microsoft.com/entra/identity-platform/scenario-desktop-acquire-token-wam). 
 
@@ -50,7 +50,7 @@ To resolve this issue:
     - `login.microsoftonline.com`
     - `secure.aadcdn.microsoftonline-p.com`
 
-## Issue during sign in
+## Can't sign in due to connectivity issue
 
 ### Symptoms
 
@@ -68,13 +68,13 @@ The machine that hosts Power Automate for desktop can't connect to the required 
 
 For the latter, Power Automate for desktop can't authenticate with the proxy server, thus the communication fails. Note that the proxy server should be using automatic authentication with the user's Active Directory account.
 
-## Resolution for the blocked domains issue
+### Resolution for the blocked domains issue
 
 Approve the [Required services](/power-automate/ip-address-configuration#required-services) to which Power Automate connects. Ensure none of these services are blocked on your network.
 
 Approve the [Desktop flows services required for runtime](/power-automate/ip-address-configuration#desktop-flows-services-required-for-runtime) to enable the connection from the local machine for the desktop flows runs.
 
-## Resolution and workaround for the proxy authentication issue
+### Resolution and workaround for the proxy authentication issue
 
 To solve this issue, follow the steps described in [Proxy server related errors in Power Automate for desktop](proxy-error-console.md).
 
@@ -124,4 +124,3 @@ As an alternate, ensure Power Automate for desktop is closed (from the taskbar, 
 ### Workaround 2
 
 If the other solutions aren't possible, specify Power Automate for desktop executables to run as administrator. This workaround may only solve the issue in some cases, and it causes a User Account Control (UAC) prompt to appear each time.
-
