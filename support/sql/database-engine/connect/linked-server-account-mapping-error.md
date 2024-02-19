@@ -47,7 +47,6 @@ In the Linked Server security dialog box, select **Be made with this security co
 
 > [!NOTE]
 > When you select **Be made without using a security context** option, you will see the following error message:
-
 > "Login Failed for user NT AUTHORITY\ANONYMOUS LOGON".
 
 In addition to the main mapping settings in the **Linked Server security** dialog box, you can modify the individual account mappings in the upper portion of the box. These override the main mapping settings.
