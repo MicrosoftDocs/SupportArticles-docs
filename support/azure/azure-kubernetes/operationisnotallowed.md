@@ -1,6 +1,6 @@
 ---
-title: Cluster pending operation (OperationIsNotAllowed) errors
-description: Learn to resolve OperationIsNotAllowed errors that occur when you try to start, upgrade, or scale an Azure Kubernetes Service (AKS) cluster.
+title: Cluster pending operation (OperationNotAllowed) errors
+description: Learn to resolve OperationNotAllowed errors that occur when you try to start, upgrade, or scale an Azure Kubernetes Service (AKS) cluster.
 ms.date: 08/17/2023
 author: axelgMS
 ms.author: axelg
@@ -9,9 +9,9 @@ ms.reviewer: chiragpa, jpalma, v-leedennis
 ms.service: azure-kubernetes-service
 ms.subservice: common-issues
 ---
-# Cluster pending operation (OperationIsNotAllowed) errors
+# Cluster pending operation (OperationNotAllowed) errors
 
-This article discusses how to troubleshoot OperationIsNotAllowed errors that occur when you try to start, upgrade, or scale a Microsoft Azure Kubernetes Service (AKS) cluster.
+This article discusses how to troubleshoot OperationNotAllowed errors that occur when you try to start, upgrade, or scale a Microsoft Azure Kubernetes Service (AKS) cluster.
 
 ## Prerequisites
 
@@ -38,6 +38,8 @@ Some operations take time to run. Those operations block other operations if the
 ## Solution 1: Wait until the operation finishes
 
 To resolve these issues, you usually have to wait until the blocking operation finishes.
+
+Note that you can also try aborting the long-running operation by using [az aks operation-abort](https://learn.microsoft.com/en-us/azure/aks/manage-abort-operations).
 
 ## Solution 2: Get the current cluster status before you try an operation
 
