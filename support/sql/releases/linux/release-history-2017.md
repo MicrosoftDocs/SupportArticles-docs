@@ -4,7 +4,7 @@ description: This article contains the release history for SQL Server 2017 runni
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, vanto
-ms.date: 01/09/2024
+ms.date: 02/15/2024
 appliesto: SQL Server 2017
 ms.custom: linux-related-content
 ---

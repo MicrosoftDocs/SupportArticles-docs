@@ -28,44 +28,10 @@
   - name: HTTP 403 - Forbidden issues
     href: request-throttling-http-403.md
 
-- name: Azure Stack
-  items:
-  - name: Kernel Soft Reboot error c0000034
-    href: azure-stack-hci-kernel-soft-reboot-error-c0000034.md
-  - name: Side-channel vulnerabilities protection
-    href: side-channel-vulnerabilities.md
-  - name: Warning message in Azure Stack
-    href: pending-service-account-password-expiration.md
-
 - name: Azure Stack Edge
   items:
   - name: Azure Stack Edge support package and device logs
     href: azure-stack-edge-support-package-device-logs.md
-
-- name: Cloud Platform System
-  items:
-  - name: Apply out-of-band updates
-    href: apply-out-of-band-updates-to-cps.md
-  - name: Enable BitLocker in Cloud Platform System
-    href: how-to-enable-bitlocker-in-cloud-platform-system.md
-  - name: Firmware version matrix for Cloud Platform System Premium
-    href: firmware-version-matrix.md
-  - name: Renew Windows Azure Pack authentication sites certificates
-    href: how-to-renew-windows-azure-pack-authentication-sit.md
-  - name: Update 1610 for Cloud Platform System Premium
-    href: update-1610-cps-premium.md
-  - name: Update 1606 for Cloud Platform System Premium
-    href: update-1606-cps-premium.md
-  - name: Update 1603 for Cloud Platform System Premium
-    href: update-1603-for-cloud-platform-system-premium.md
-  - name: Update 1603 for Cloud Platform System Standard
-    href: update-1603-cps-standard.md
-  - name: Update 1602 for Cloud Platform System Premium
-    href: update-1602-for-cloud-platform-system-premium.md
-  - name: Update 2.3 for Cloud Platform System Premium
-    href: update-2.3-for-cloud-platform-system-premium.md
-  - name: Update 2.1 for Cloud Platform System Premium
-    href: update-2.1-for-cloud-platform-system-premium.md
 
 - name: Azure Information Protection
   items:

@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, milanmil, v-lianna
-ms.custom: sap:certificates-and-public-key-infrastructure-pki, csstroubleshoot
+ms.custom: sap:network-device-enrollment-services-ndes, csstroubleshoot
 ---
 # Error 0x80090022 NTE_SILENT_CONTEXT when CEP/CES autoenrollment using KBR fails on non-domain-joined clients
 

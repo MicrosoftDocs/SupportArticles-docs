@@ -1,7 +1,7 @@
 ---
 title: Understand AD FS sign-in events in Microsoft Entra ID with Connect Health
 description: Understand how to correlate sign-in events in Active Directory Federation Services (AD FS) security logs into one sign-in event in Azure for parsing.
-ms.date: 05/18/2023
+ms.date: 10/30/2023
 ms.reviewer: brheld, v-leedennis
 ms.service: active-directory
 ms.subservice: hybrid

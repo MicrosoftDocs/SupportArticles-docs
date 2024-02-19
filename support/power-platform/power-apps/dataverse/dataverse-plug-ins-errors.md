@@ -1,10 +1,10 @@
 ---
 title: Troubleshoot Dataverse plug-ins
 description: Contains information about errors that can occur during plug-in execution, or Dataverse errors that are related to plug-ins, and how to avoid or fix them.
-ms.date: 08/18/2023
-author: JimDaly
-ms.author: jdaly
-ms.reviewer: jdaly
+ms.date: 02/18/2024
+author: divkamath
+ms.author: dikamath
+ms.reviewer: phecke
 manager: kvivek
 search.audienceType: 
   - developer
@@ -19,14 +19,14 @@ contributors:
 
 This article contains information about errors that can occur during plug-in execution, or Dataverse errors that are related to plug-ins, and how to avoid or fix them.
 
-## Error "Time conversion could not be completed"
+## Error "Time conversion couldn't be completed"
 
 > Error Code: -2147220956  
 > Error Message: The conversion could not be completed because the supplied DataTime did not have the Kind property set correctly. For example, when the Kind property is DateTimeKind.Local, the source time zone must be TimeZoneInfo.Local.
 
 This error can occur during a <xref:System.TimeZoneInfo.ConvertTimeToUtc(System.DateTime,System.TimeZoneInfo)?displayProperty=nameWithType> call in the plug-in code to convert a `DateTime` value in the Santiago or Volgograd time zone to Coordinated Universal Time (UTC).
 
-This is a known product limitation, and there's presently no workaround.
+This error is caused by a known product limitation, and there's presently no workaround.
 
 For more information, see [Specify time zone settings for a user](/power-apps/developer/data-platform/specify-time-zone-settings-user).
 
@@ -35,18 +35,20 @@ For more information, see [Specify time zone settings for a user](/power-apps/de
 > Error Code: -2147204723  
 > Error Message: The plug-in execution failed because the Sandbox Worker process crashed. This is typically due to an error in the plug-in code.
 
-This error simply means that the worker process running your plug-in code crashed. Your plug-in may be the reason for the crash, but it could also be another plug-in running concurrently for your organization. Because the process crashed, we can't extract any more specific information about why it crashed. But after examining data from the crash dumps after the fact, we found that this error usually occurs due to one of the four reasons:
+This error simply means that the worker process running your plug-in code crashed. Your plug-in might be the reason for the crash, but it could also be another plug-in running concurrently for your organization. Because the process crashed, we can't extract any more specific information about why it crashed. But after examining data from the crash dumps after the fact, we found that this error usually occurs due to one of the four reasons:
 
 - [Unhandled exception in the plug-in](#unhandled-exception-in-the-plug-in)
-- [Stack Overflow error in the plug-in](#stack-overflow-error-in-the-plug-in)
 - [Using threads to queue work with no try/catch in thread delegate](#using-threads-to-queue-work-with-no-trycatch-in-thread-delegate)
+- [Stack Overflow error in the plug-in](#stack-overflow-error-in-the-plug-in)
 - [Worker process reaches the memory limit](#worker-process-reaches-the-memory-limit)
 
 ### Unhandled exception in the plug-in
 
-As mentioned in [Handle exceptions in plug-ins](/power-apps/developer/data-platform/handle-exceptions), when you write a plug-in, you should try to anticipate which operations may fail and wrap them in a try-catch block. When any errors occur, you should use the <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException> class to gracefully terminate the operation with an error meaningful to the user.
+When you write a plug-in, you should try to anticipate which operations might fail and wrap them in a try-catch block. When an error occurs, you should use the <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException> class to gracefully terminate the operation with an error meaningful to the user.
 
-A common scenario for this exception is when using the [HttpClient.SendAsync](xref:System.Net.Http.HttpClient.SendAsync%2A) or [HttpClient.GetAsync](xref:System.Net.Http.HttpClient.GetAsync%2A) method. These [HttpClient](xref:System.Net.Http.HttpClient) methods are asynchronous operations that return a [Task](xref:System.Threading.Tasks.Task). To work in a plug-in where code needs to be synchronous, people may use the [Task&lt;TResult&gt;.Result](xref:System.Threading.Tasks.Task%601.Result) property. When an error occurs, `Result` returns an [AggregateException](xref:System.AggregateException). An `AggregateException` consolidates multiple failures into a single exception, which can be difficult to handle. A better design is to use [Task&lt;TResult&gt;.GetAwaiter()](xref:System.Threading.Tasks.Task.GetAwaiter).[GetResult()](xref:System.Runtime.CompilerServices.TaskAwaiter.GetResult) because it propagates the results as the specific error that caused the failure.
+For more information, see [Handle exceptions in plug-ins](/power-apps/developer/data-platform/handle-exceptions).
+
+A common scenario for this exception is when using the [HttpClient.SendAsync](xref:System.Net.Http.HttpClient.SendAsync%2A) or [HttpClient.GetAsync](xref:System.Net.Http.HttpClient.GetAsync%2A) method. These [HttpClient](xref:System.Net.Http.HttpClient) methods are asynchronous operations that return a [Task](xref:System.Threading.Tasks.Task). To work in a plug-in where code needs to be synchronous, people might use the [Task&lt;TResult&gt;.Result](xref:System.Threading.Tasks.Task%601.Result) property. When an error occurs, `Result` returns an [AggregateException](xref:System.AggregateException). An `AggregateException` consolidates multiple failures into a single exception, which can be difficult to handle. A better design is to use [Task&lt;TResult&gt;.GetAwaiter()](xref:System.Threading.Tasks.Task.GetAwaiter).[GetResult()](xref:System.Runtime.CompilerServices.TaskAwaiter.GetResult) because it propagates the results as the specific error that caused the failure.
 
 The following example shows the correct way to manage the exception and an outbound call using the [HttpClient.GetAsync](xref:System.Net.Http.HttpClient.GetAsync%2A) method. This plug-in attempts to get the response text for a Uri set in the unsecure config for a step registered for it.
 
@@ -136,6 +138,35 @@ namespace ErrorRepro
 }
 ```
 
+### Using threads to queue work with no try/catch in thread delegate
+
+You shouldn't use parallel execution patterns in plug-ins. This anti-pattern is called out in the best practice article: [Don't use parallel execution within plug-ins and workflow activities](/power-apps/developer/data-platform/best-practices/business-logic/do-not-use-parallel-execution-in-plug-ins). Using these patterns can cause issues managing the transaction in a synchronous plug-in. However, another reason not to use these patterns is that any work done outside of a `try`/`catch` block in a thread delegate can crash the worker process.
+
+> [!IMPORTANT]
+> When the worker process crashes, the execution of your plug-in and other plug-ins currently running in that process will terminate. This includes plug-ins that you don't own or maintain.
+
+#### Application Insights to the rescue
+
+In the past, obtaining the stack trace or other execution information for unhandled plug-in exceptions from the crashed worker process was impossible. However, Dataverse now offers support for logging execution failures to Application Insights. To enable this function, you can link Application Insights to the environment where your plug-in is registered. Once linked, the logging of plug-in crashes occur automatically.
+
+For more information, see [Export data to Application Insights](/power-platform/admin/set-up-export-application-insights).
+
+After an Application Insights environment has been linked, the following data of a work process crash will be available for troubleshooting the problem.
+
+:::image type="content" source="media/dataverse-plug-ins-errors/dataverse-appinsights-crash-report.png" alt-text="Example of an Application Insights plug-in crash report.":::
+
+To navigate to the crash report in Application Insights, follow these steps:
+
+1. [Link Application Insights to your environment](/azure/azure-monitor/app/create-workspace-resource).
+1. Wait until a plug-in exception results in the crash error of the worker process.
+1. In the [Power Platform admin center](https://admin.powerplatform.microsoft.com/), navigate to Application Insights.
+1. On the Application Insights page, select **Failures** in the left panel.
+1. On the **Failures** page, select **Exceptions**.
+1. Under **Exception Problem ID**, in the **Overall** list, select **Microsoft.PowerPlatform.Dataverse.Plugin.PluginWorkerCrashException**.
+1. On the right side of the page, under **Overall**, select **PluginWorkerCrashException**. You'll now see the details of all recorded worker process crash exceptions.
+1. Search for and select the desired exception in the left panel, and the exception details report will be displayed on the right side of the page (see the preceding screenshot for an example).
+1. To access the stack trace, expand **CrashDetails** in the report.
+
 ### Stack overflow error in the plug-in
 
 This type of error occurs most frequently right after you make some changes in your plug-in code. Some people use their own set of base classes to streamline their development experience. Sometimes these errors originate from changes to those base classes that a particular plug-in depends on.
@@ -146,7 +177,7 @@ You should review any code changes that were applied recently for the plug-in an
 
 #### Example
 
-The following plug-in code causes a `StackOverflowException` due to a recursive call with no limits. Despite the use of the tracing and attempting to capture the error, the tracing and the error aren't returned because the worker process that would process them has terminated.
+The following plug-in code causes a `StackOverflowException` due to a recursive call with no limits. Despite the use of the tracing and attempting to capture the error, the tracing and the error aren't returned because the worker process that would process them terminated.
 
 ```csharp
 using Microsoft.Xrm.Sdk;
@@ -194,7 +225,7 @@ namespace ErrorRepro
 }
 ```
 
-In a synchronous plug-in step, the plug-in code above returns the following error in the Web API when the request is configured to [include additional details with errors](/power-apps/developer/data-platform/webapi/compose-http-requests-handle-errors#include-additional-details-with-errors).
+In a synchronous plug-in step, the plug-in code previously shown returns the following error in the Web API when the request is configured to [include additional details with errors](/power-apps/developer/data-platform/webapi/compose-http-requests-handle-errors#include-additional-details-with-errors).
 
 ```json
 {
@@ -217,7 +248,7 @@ In a synchronous plug-in step, the plug-in code above returns the following erro
 }
 ```
 
-The following shows how this error is recorded in the plug-in trace log:
+The following shows how this error is recorded in the plug-in Tracelog:
 
 ```console
 Unhandled exception: 
@@ -250,23 +281,19 @@ Exception rethrown at [0]:
 </OrganizationServiceFault>
 ```
 
-### Using threads to queue work with no try/catch in thread delegate
-
-You shouldn't use parallel execution patterns in plug-ins. This anti-pattern is called out in the best practice article: [Don't use parallel execution within plug-ins and workflow activities](/power-apps/developer/data-platform/best-practices/business-logic/do-not-use-parallel-execution-in-plug-ins). Using these patterns can cause issues managing the transaction in a synchronous plug-in. However, another reason not to use these patterns is that any work done outside of a `try`/`catch` block in a thread delegate can crash the worker process.
-
 ### Worker process reaches the memory limit
 
 Each worker process has a finite amount of memory. There are conditions where multiple concurrent operations that include large amounts of data could exceed the available memory and cause the process worker to crash.
 
 #### RetrieveMultiple with File data
 
-The common scenario, in this case, is when a plug-in executes for a `RetrieveMultiple` operation where the request includes file data. For example, when retrieving emails that include any file attachments. The amount of data that may be returned in a query like this is unpredictable because any email may be related to any number of file attachments, and the attachments can vary in size.
+The common scenario, in this case, is when a plug-in executes for a `RetrieveMultiple` operation where the request includes file data. For example, when retrieving emails that include any file attachments. The amount of data that might be returned in a query like this is unpredictable because any email might be related to any number of file attachments, and the attachments can vary in size.
 
 When multiple requests of a similar nature are running concurrently, the amount of memory required becomes large. If the amount of memory exceeds the limit, the process crashes. The key to preventing this situation is limiting `RetrieveMultiple` queries that include entities with related file attachments. Retrieve the records using `RetrieveMultiple`, but retrieve any related files as needed using individual `Retrieve` operations.
 
 #### Memory Leaks
 
-A less common scenario is where the code in the plug-in is leaking memory. This can occur when the plug-in isn't written as stateless, which is another best practice. For more information, see [Develop IPlugin implementations as stateless](/power-apps/developer/data-platform/best-practices/business-logic/develop-iplugin-implementations-stateless). When the plug-in isn't stateless, and there's an attempt to continually add data to a stateful property like an array, the amount of data grows to the point where it uses all the available memory.
+A less common scenario is where the code in the plug-in is leaking memory. This situation can occur when the plug-in isn't written as stateless, which is another best practice. For more information, see [Develop Plugin implementations as stateless](/power-apps/developer/data-platform/best-practices/business-logic/develop-iplugin-implementations-stateless). When the plug-in isn't stateless, and there's an attempt to continually add data to a stateful property like an array, the amount of data grows to the point where it uses all the available memory.
 
 ## Transaction errors
 
@@ -279,15 +306,15 @@ There are two common types of errors related to transactions:
 > Error Message: There is no active transaction. This error is usually caused by custom plug-ins that ignore errors from service calls and continue processing.
 
 > [!NOTE]
-> The top error was added most recently. It should occur immediately and in the context of the plug-in that contains the problem. The bottom error can still occur in different circumstances, typically involving custom workflow activities. It may be due to problems in another plug-in.
+> The top error was added most recently. It should occur immediately and in the context of the plug-in that contains the problem. The bottom error can still occur in different circumstances, typically involving custom workflow activities. It might be due to problems in another plug-in.
 
-To understand the message, you need to appreciate that anytime an error related to a data operation occurs within a synchronous plug-in the transaction for the entire operation has ended.
+Anytime an error related to a data operation occurs within a synchronous plug-in, the transaction for the entire operation is ended.
 
 For more information, see [Scalable Customization Design in Microsoft Dataverse](/power-apps/developer/data-platform/scalable-customization-design/overview).
 
 A common cause is that a developer believes they can attempt to perform an operation that *might* succeed, so they wrap that operation in a `try`/`catch` block and attempt to swallow the error when it fails.
 
-While this pattern may work for a client application, within the execution of a plug-in, any data operation failure results in rolling back the entire transaction. You can't swallow the error, so you must make sure to always return an <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException>.
+While this pattern might work for a client application, within the execution of a plug-in, any data operation failure results in rolling back the entire transaction. You can't swallow the error, so you must make sure to always return an <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException>.
 
 ## Error "Sql error: Execution Timeout Expired"
 
@@ -296,7 +323,7 @@ While this pattern may work for a client application, within the execution of a 
 
 ### Cause
 
-There are a wide variety of reasons why a SQL timeout error may occur. Three of them are described below:
+There are a wide variety of reasons why a SQL timeout error might occur. Three of them are described here:
 
 - [Blocking](#blocking)
 - [Cascade operations](#cascade-operations)
@@ -304,9 +331,9 @@ There are a wide variety of reasons why a SQL timeout error may occur. Three of 
 
 #### Blocking
 
-The most common cause for a SQL timeout error is that the operation is waiting for resources that are being blocked by another SQL transaction. The error is the result of Dataverse protecting the integrity of the data and from long-running requests that impact performance for users.
+The most common cause for a SQL timeout error is that the operation is waiting for resources blocked by another SQL transaction. The error is the result of Dataverse protecting the integrity of the data and from long-running requests that impact performance for users.
 
-Blocking may be due to other concurrent operations. Your code may work fine in isolation in a test environment and still be susceptible to conditions that only occur when multiple users are initiating the logic in your plug-in.
+Blocking might be due to other concurrent operations. Your code might work fine in isolation in a test environment and still be susceptible to conditions that only occur when multiple users are initiating the logic in your plug-in.
 
 When writing plug-ins, it's essential to understand how to design customizations that are scalable. For more information, see [Scalable Customization Design in Dataverse](/power-apps/developer/data-platform/scalable-customization-design/overview).
 
@@ -316,20 +343,36 @@ Certain actions you make in your plug-in, such as assigning or deleting a record
 
 You should consider the possible impact of these cascading operations on data operations in your plug-in. For more information, see [Table relationship behavior](/power-apps/maker/data-platform/create-edit-entity-relationships#table-relationship-behavior).
 
-Because these behaviors can be configured differently between environments, the behavior may be difficult to reproduce unless the environments are configured in the same way.
+Because these behaviors can be configured differently between environments, the behavior might be difficult to reproduce unless the environments are configured in the same way.
 
 #### Indexes on new tables
 
-If the plug-in is performing operations using a table or column that has been created recently, some Azure SQL capabilities to manage indexes might make a difference after a few days.
+If the plug-in is performing operations using a table or column that was created recently, some Azure SQL capabilities to manage indexes might make a difference after a few days.
 
 ## Errors due to user privileges
 
-In a client application, you can disable commands that users aren't allowed to perform. Within a plug-in, you don't have this ability. Your code may include some automation that the calling user doesn't have the privileges to perform.
+In a client application, you can disable commands that users aren't allowed to perform. Within a plug-in, you don't have this ability. Your code might include some automation that the calling user doesn't have the privileges to perform.
 
 You can register the plug-in to run in the context of a user known to have the correct privileges by setting the **Run in User's Context** value to that user. Or you can execute the operation by impersonating another user. For more information, see:
 
 - [Register a plug-in](/power-apps/developer/data-platform/register-plug-in)
 - [Impersonate a user](/power-apps/developer/data-platform/impersonate-a-user)
+
+## Error when executing in the context of a disabled user
+
+When a plug-in executes in the context of a disabled user, the following error is returned:
+
+> Error Message: System.ServiceModel.FaultException`1[Microsoft.Xrm.Sdk.OrganizationServiceFault]: The user with **SystemUserId=\<User-ID\>** in OrganizationContext=\<Context\> is disabled. Disabled users cannot access the system. Consider enabling this user. Also, users are disabled if they don't have a license assigned to them.
+
+To troubleshoot this error, you can execute a query to find the steps registered to the disabled user as well as the associated plug-in and `SdkMessage` details.
+
+```http
+https://<env-url>/api/data/v9.2/sdkmessageprocessingsteps
+?$filter=_impersonatinguserid_value eq '<disabled-userId-from-error>'&
+$expand=plugintypeid($select=name,friendlyname,assemblyname;
+$expand=pluginassemblyid($select=solutionid,name,isolationmode)),sdkmessageid($select=solutionid,name)&
+$select=solutionid,name,stage,_impersonatinguserid_value,mode
+```
 
 ## Error "Message size exceeded when sending context to Sandbox"
 
@@ -353,7 +396,7 @@ Dataverse frequently uses classes derived from the abstract <xref:Microsoft.Xrm.
 
 ### Error codes
 
-This error occurs when the key value in the code doesn't exist in the collection. This is a run-time error rather a platform error. When this error occurs within a plug-in, the error code depends on whether the error was caught.
+This error occurs when the key value in the code doesn't exist in the collection. The result is a run-time error rather a platform error. When this error occurs within a plug-in, the error code depends on whether the error was caught.
 
 If the developer caught the exception and returned <xref:Microsoft.Xrm.Sdk.InvalidPluginExecutionException>, as described in [Handle exceptions in plug-ins](/power-apps/developer/data-platform/handle-exceptions), the following error is returned:
 
@@ -372,7 +415,7 @@ However, with this error, it's common that the developer doesn't catch it proper
 
 This error frequently occurs at design time and can be due to a misspelling or using the incorrect casing. The key values are case-sensitive.
 
-At run-time, the error is frequently due to the developer assuming that the value is present when it isn't. For example, in a plug-in that's registered for the update of a table, only those values that are changed are included in the <xref:Microsoft.Xrm.Sdk.Entity>.<xref:Microsoft.Xrm.Sdk.Entity.Attributes> collection.
+At run-time, the error is frequently due to the developer assuming that the value is present when it isn't. For example, in a plug-in registered for the update of a table, only those values that are changed are included in the <xref:Microsoft.Xrm.Sdk.Entity>.<xref:Microsoft.Xrm.Sdk.Entity.Attributes> collection.
 
 ### Resolution
 
@@ -399,24 +442,24 @@ if (context.InputParameters.Contains("Target") &&
     }
 ```
 
-Some developers use the <xref:Microsoft.Xrm.Sdk.Entity>.<xref:Microsoft.Xrm.Sdk.Entity.GetAttributeValue%60%601(System.String)> method to avoid this error when accessing a table column. Be aware that this method returns the default value of the type if the column doesn't exist. If the default value is null, this method works as expected. But if the default value doesn't return null, such as with a `DateTime`, the value returned is `1/1/0001 00:00` rather than null.
+Some developers use the <xref:Microsoft.Xrm.Sdk.Entity>.<xref:Microsoft.Xrm.Sdk.Entity.GetAttributeValue%60%601(System.String)> method to avoid this error when accessing a table column. This method returns the default value of the type if the column doesn't exist. If the default value is null, this method works as expected. But if the default value doesn't return null, such as with a `DateTime`, the value returned is `1/1/0001 00:00` rather than null.
 
-## Error "You cannot start a transaction with a different isolation level than is already set on the current transaction"
+## Error "You can't start a transaction with a different isolation level than is already set on the current transaction"
 
 > Error Code: -2147220989  
 > Error Message: You cannot start a transaction with a different isolation level than is already set on the current transaction
 
-Plug-ins are intended to support business logic. Modifying any part of the data schema within a synchronous plug-in isn't supported. These operations frequently take longer and may cause cached metadata used by applications to become out of sync. However, these operations can be performed in a plug-in step registered to run asynchronously.
+Plug-ins are intended to support business logic. Modifying any part of the data schema within a synchronous plug-in isn't supported. These operations frequently take longer and might cause cached metadata used by applications to become out of sync. However, these operations can be performed in a plug-in step registered to run asynchronously.
 
 ## Known issue: Activity.RegardingObjectId name value not set with plug-in
 
 The most common symptom of this issue is that the **Regarding** field in an activity record shows `(No Name)` rather than the primary name attribute value.
 
-Within a plug-in, you can set lookup attributes with an [EntityReference](xref:Microsoft.Xrm.Sdk.EntityReference) value. The [EntityReference.Name](xref:Microsoft.Xrm.Sdk.EntityReference.Name) property isn't required. Typically you don't need to include it when setting a lookup attribute value because Dataverse will set it. You should set values like this during the **PreOperation** stage of the event pipeline. For more information, see [Event execution pipeline](/power-apps/developer/data-platform/event-framework#event-execution-pipeline).
+Within a plug-in, you can set lookup attributes with an [EntityReference](xref:Microsoft.Xrm.Sdk.EntityReference) value. The [EntityReference.Name](xref:Microsoft.Xrm.Sdk.EntityReference.Name) property isn't required. Typically, you don't need to include it when setting a lookup attribute value because Dataverse sets it. You should set values like this during the **PreOperation** stage of the event pipeline. For more information, see [Event execution pipeline](/power-apps/developer/data-platform/event-framework#event-execution-pipeline).
 
 The exception to this rule is when setting the [ActivityPointer.RegardingObjectId](/power-apps/developer/data-platform/reference/entities/activitypointer#BKMK_RegardingObjectId) lookup. All the entity types that are derived from `ActivityPointer` inherit this lookup. By default, these include [Appointment](/power-apps/developer/data-platform/reference/entities/appointment), [Chat](/power-apps/developer/data-platform/reference/entities/chat), [Email](/power-apps/developer/data-platform/reference/entities/email), [Fax](/power-apps/developer/data-platform/reference/entities/fax), [Letter](/power-apps/developer/data-platform/reference/entities/letter), [PhoneCall](/power-apps/developer/data-platform/reference/entities/phonecall), [RecurringAppointmentMaster](/power-apps/developer/data-platform/reference/entities/recurringappointmentmaster), and any custom tables that were created as activity types. For more information, see [Activity tables](/power-apps/developer/data-platform/entity-metadata#activity-tables).
 
-If you set this value in the **PreOperation** stage, the name value isn't added by Dataverse. The value will be null, and the formatted value that should contain this value isn't present when you retrieve the record.
+If you set this value in the **PreOperation** stage, the name value isn't added by Dataverse. The value is null, and the formatted value that should contain this value isn't present when you retrieve the record.
 
 ### Workaround
 
