@@ -28,8 +28,8 @@ To remove a company that is no longer being used in Microsoft Dynamics GP, follo
       2. Expand the instance of SQL Server for Microsoft Dynamics GP, and then expand **Databases**.
       3. Verify that the company database was removed. If the company database is listed, right-click the company database, and then select **Delete**.
 
-       > [!NOTE]
-       > Replace **XXX** with the database name of the company that you want to delete.
+         > [!NOTE]
+         > Replace **XXX** with the database name of the company that you want to delete.
 
 5. If the database has been manually removed or removed by the DROP script mentioned in step c of step 4, then there may be some references from the deleted database still within the DYNAMICS/system database. These references need to be removed. To do this, download the [ClearCompanies.sql script](https://mbs2.microsoft.com/fileexchange/downloadfile.aspx?fileid=e1140f50-afc0-4a4d-83ef-e9826aff6d64) and then follow the steps:
 
@@ -37,10 +37,10 @@ To remove a company that is no longer being used in Microsoft Dynamics GP, follo
 
       1. Start SQL Server Management Studio.
       2. Select **New Query** from the menu bar to start a new query window.
-      3. Paste the contents of the ClearCompanies.sql scripts into the empty query window.
-      4. Select **Execute** or press F5 to run the script.
+      3. Paste the contents of the `ClearCompanies.sql` scripts into the empty query window.
+      4. Select **Execute** or press <kbd>F5</kbd> to run the script.
 
          > [!NOTE]
-         > ClearCompanies.sql is a script that is automatically setup to run against the appropriate databases.
+         > `ClearCompanies.sql` is a script that is automatically setup to run against the appropriate databases.
 
 6. Sign in to Microsoft Dynamics GP to verify the company no longer exists.
