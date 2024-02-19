@@ -228,7 +228,7 @@ This error only happens in [user subscription pool allocation mode](/azure/batch
     2. On the **Access policies** page, select **Create**.
     3. On the **Create an access policy** screen, select a minimum of **Get**, **List**, **Set**, and **Delete** permissions under **Secret permissions**. For [key vaults with soft-delete enabled](/azure/key-vault/general/soft-delete-overview), also select **Recover**.
 
-        :::image type="content" source="media/azure-batch-pool-resizing-failure/kv-permission-issue-pic2.png" alt-text="Screenshot of the key vault secret permission.":::
+        :::image type="content" source="media/azure-batch-pool-resizing-failure/select-secret-permissions.png" alt-text="Screenshot of the key vault secret permission.":::
 
     4. Select **Next**.
     5. On the **Principal** tab, search for and select **Microsoft Azure Batch**.
