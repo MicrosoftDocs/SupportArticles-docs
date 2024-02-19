@@ -1,17 +1,17 @@
 ---
 title: Error codes on Flow run
-description: This article describes best practices around updating Microsoft Flows used by Power Apps.
+description: This article describes best practices for updating Microsoft Flows used by Power Apps.
 ms.reviewer: mlalavat
-ms.date: 02/18/2024
+ms.date: 02/19/2024
 ---
-# Best practices when updating a Flow used by a Power App
+# Best practices when updating a flow used by a Power App
 
-This article describes best practices around updating Microsoft Flows used by Power Apps.
+This article describes best practices for updating Microsoft Flows used by Power Apps.
 
 _Applies to:_ &nbsp; Power Apps  
 _Original KB number:_ &nbsp; 4477072
 
-## Error code InvokerConnectionOverrideFailed on Flow run
+## Error code "InvokerConnectionOverrideFailed" on Flow run
 
 Some flows fail to run in Power Apps. In the Flow run history or the Power Apps telemetry, you might receive an error that resembles the following:
 
@@ -23,23 +23,23 @@ Some flows fail to run in Power Apps. In the Flow run history or the Power Apps 
 ```
 
 > [!NOTE]
-> This error also occurs when you call the `install` API on the Common Data Service (CDS), but the response is a generic error "Install flow failed".
+> This error also occurs when you call the `install` API on Common Data Service (CDS), but the response is a generic error "Install flow failed."
 
 ### Cause
 
-This issue occurs because the flow is updated to use a new connection, but the app still uses the old flow metadata. Updating the flow doesn't update the apps that use the flow. To solve this issue, you must manually update apps for changes to reflect in app and for flow to work.
+This issue occurs because the flow has been updated to use a new connection, but the app still uses the old flow metadata. Updating the flow doesn't update the apps that use the flow. To solve this issue, you must manually update the app for changes to be reflected in the app and for the flow to work.
 
 ### Mitigation steps
 
 > [!NOTE]
-> Make sure you perform the following steps in the source or development environment and update the solution. Once the solution is updated, import it to all the target or production environments.
+> Make sure to perform the following steps in the source or development environment and update the solution. Once the solution is updated, import it to all the target or production environments.
 
-1. Open the app for edit using the [latest version of the Power Apps Studio](/power-platform/released-versions/powerapps).
+1. Open the app for editing using the [latest version of Power Apps Studio](/power-platform/released-versions/powerapps).
 2. [Remove the flows from the app](/power-apps/maker/canvas-apps/working-with-flows#remove-a-flow) (Remove flows from the Power Automate tab).
 3. Re-add the flows to the app.
 4. Save and republish the app.
 
-## Error code ConnectionAuthorizationFailed on Flow run
+## Error code "ConnectionAuthorizationFailed" on Flow run
 
 ```output
     { 
@@ -50,16 +50,16 @@ This issue occurs because the flow is updated to use a new connection, but the a
 
 ### Cause
 
-This error means that although the maker has permissions to the flow, the maker doesn't have permissions to the dependent connections that are used in the flow actions. This is a limitation of Power Apps and Flow integration.
+This error means that although the maker has permissions to the flow, the maker doesn't have permissions to the dependent connections that are used in the flow actions. This is a limitation of the Power Apps and Flow integration.
 
 ### Mitigation steps
 
 > [!NOTE]
-> Make sure you perform the following steps in the source or development environment and update the solution. Once the solution is updated, import it to all the target or production environments.
+> Make sure to perform the following steps in the source or development environment and update the solution. Once the solution is updated, import it to all the target or production environments.
 
-This mitigation is to simply have all connections in the flow be owned by a single user and then have that user add the flow to the app.
+This mitigation is to have all connections in the flow be owned by a single user and then have that user add the flow to the app.
 
-## Error code WorkflowTriggerIsNotEnabled on Flow run
+## Error code "WorkflowTriggerIsNotEnabled" on Flow run
 
 ```output
     { 
@@ -75,11 +75,11 @@ This error means that the flow is turned off.
 ### Mitigation steps
 
 > [!NOTE]
-> Make sure you perform the following steps in the source or development environment and update the solution. Once the solution is updated, import it to all the target or production environments.
+> Make sure to perform the following steps in the source or development environment and update the solution. Once the solution is updated, import it to all the target or production environments.
 
 The mitigation is to [turn on the flow](/power-automate/disable-flow#turn-on-a-flow).
 
-## Error code 0x80040265/0x80048d0b on Flow run
+## Error code "0x80040265" or "0x80048d0b" on Flow run
 
 ```output
     {
@@ -99,15 +99,15 @@ The mitigation is to [turn on the flow](/power-automate/disable-flow#turn-on-a-f
 ### Mitigation steps
 
 > [!NOTE]
-> Make sure you perform the following steps in the source or development environment and update the solution. Once the solution is updated, import it to all the target or production environments.
+> Make sure to perform the following steps in the source or development environment and update the solution. Once the solution is updated, import it to all the target or production environments.
 
-Try the solution mentioned for one of the following error codes:
+Try the solutions mentioned for one of the following error codes:
 
 - [WorkflowTriggerIsNotEnabled](#error-code-workflowtriggerisnotenabled-on-flow-run)
 - [ConnectionAuthorizationFailed](#error-code-connectionauthorizationfailed-on-flow-run)
 - [InvokerConnectionOverrideFailed](#error-code-invokerconnectionoverridefailed-on-flow-run)
 
-## Error code MissingConnectionReference on Flow run
+## Error code "MissingConnectionReference" on Flow run
 
 ```output
     { 
@@ -116,22 +116,24 @@ Try the solution mentioned for one of the following error codes:
     } 
 ```
 
-> Example Error : Connection reference '\<connection name>' was not given by invoker.
+Example error:
+
+> Connection reference '\<connection name>' was not given by invoker.
 
 ### Cause
 
-Essentially, app and flow metadata must be in synchronization. Any changes made to a flow require that the app maker edit the apps using the flow and remove or re-add the changed flow.
+Essentially, app and flow metadata must be synchronized. Any changes made to a flow require the app maker to edit the apps using the flow and remove or re-add the changed flow.
 
-With solution apps or flows, an app might successfully invoke the flow in the source environment and then fail in the target environment with this error message:
+For solution apps or flows, an app might successfully invoke the flow in the source environment and then fail in the target environment with this error message:
 
 > Connection not configured for this service.
 
-The reason is that there might be a change in the flow in the target environment, but it doesn't exist in the source environment.
+The reason is that there might be a change to the flow in the target environment, but it doesn't exist in the source environment.
 
 ### Mitigation steps
 
 > [!NOTE]
-> Make sure you perform the following steps in the source or development environment and update the solution. Once the solution is updated, import it to all the target or production environments.
+> Make sure to perform the following steps in the source or development environment and update the solution. Once the solution is updated, import it to all the target or production environments.
 
 1. In the source environment, edit the app. Remove and then re-add the flows to the app. Save and publish the changes.
 2. In the target environment, remove all unmanaged layers on the app and flow.
@@ -140,7 +142,7 @@ The reason is that there might be a change in the flow in the target environment
    > [!NOTE]
    > There can be no unmanaged layers on either the flow or the app because this can cause issues in connection to the flow.
 
-## Error code NotAllowedConnectionReferenceon on Flow run
+## Error code "NotAllowedConnectionReferenceon" on Flow run
 
 ```output
     {
@@ -149,22 +151,24 @@ The reason is that there might be a change in the flow in the target environment
     }
 ```
 
-> Example Error : Connection reference '\<connection name>' was not given by invoker.
+Example error:
+
+> Connection reference '\<connection name>' was not given by invoker.
 
 ### Cause
 
-This error means that the app has flow metadata that specifies that an sql connection is required on the installation, but the actual flow metadata is different.
+This error means that the app has flow metadata that specifies that a SQL connection is required on the installation, but the actual flow metadata is different.
 
 ### Mitigation steps
 
 > [!NOTE]
-> Make sure you perform the following steps in the source or development environment and update the solution. Once the solution is updated, import it to all the target or production environments.
+> Make sure to perform the following steps in the source or development environment and update the solution. Once the solution is updated, import it to all the target or production environments.
 
 #### Mitigation option 1
 
 1. In the source environment, edit the app. Remove and then re-add the flows to the app. Save and publish the changes.
 2. In the target environment, remove all unmanaged layers on the app and flow.
-3. Export the solution and import it into target environment.
+3. Export the solution and import it into the target environment.
 
    > [!NOTE]
    > There can be no unmanaged layers on either the flow or the app because this can cause issues in connection to the flow.
@@ -172,13 +176,13 @@ This error means that the app has flow metadata that specifies that an sql conne
 #### Mitigation option 2
 
 1. Change the connection from **Embedded** to **Invoker**.
-2. Navigate to the flow portal, edit, and update the flow settings.
+2. Navigate to the flow portal to edit and update the flow settings.
 3. On the flow details page, in the **Run only users** section, select **Edit**.
-4. To update the flow connection source as **Invoker**, select **Provided by run-only user** and save.
-5. To update the flow connection source as **Embedded**, select **Use this connection** and save.
-6. Verify by triggering the flow. You see the "install flow network" calls are succeeding now.
+4. To update the flow connection source to **Invoker**, select **Provided by run-only user** and save.
+5. To update the flow connection source to **Embedded**, select **Use this connection** and save.
+6. Verify by triggering the flow. You see that the "install flow network" calls now are succeeding.
 
-## Other Symptoms
+## Other symptoms
 
 After updating a flow, calls to that flow from Power Apps start failing.
 
@@ -186,7 +190,7 @@ After updating a flow, calls to that flow from Power Apps start failing.
 
     > Unable to process template language expressions in action 'Send_me_a_mobile_notification' inputs at line '1' and column '1900': 'The template language expression 'triggerBody()['Sendmeamobilenotification_Text']' cannot be evaluated because property 'Sendmeamobilenotification_Text' cannot be selected. Please see `https://aka.ms/logicexpressions` for usage details.'.
 
-    :::image type="content" source="media/best-practices-when-updating-a-flow/flow-fail-error-message.png" alt-text="Screenshot of the error message when adding the new input to the Flow without updating the Power App." lightbox="media/best-practices-when-updating-a-flow/flow-fail-error-message.png":::
+    :::image type="content" source="media/best-practices-when-updating-a-flow/flow-fail-error-message.png" alt-text="Screenshot of the error message when adding the new input to the flow without updating the Power App." lightbox="media/best-practices-when-updating-a-flow/flow-fail-error-message.png":::
 
 - If the connections required to run a flow change, an error complaining about connections should appear:
 
@@ -202,9 +206,9 @@ After updating a flow, calls to that flow from Power Apps start failing.
 
 - If a response output is removed, Power Apps will treat the value as blank and the Power App will behave unexpectedly.  
 
-## Cause
+### Cause
 
-To invoke a flow from Power Apps, Power Apps needs to know what inputs the flow needs, what connections to supply to flow and what outputs a flow will return. Power Apps store this information in the definition of your Power App. Which creates a binding between a version of a Power App and the flows used in it. Changing any of these three aspects of a flow can break all previous versions of Power Apps that integrate with that flow. To fix an affected Power App or to make use of one of these flow changes, the Power App needs to be updated.
+To invoke a flow from Power Apps, Power Apps needs to know what inputs the flow needs, what connections to supply to the flow, and what outputs the flow will return. Power Apps stores this information in the definition of your Power App, which creates a binding between a version of a Power App and the flows used in it. Changing any of these three aspects of a flow can break all previous versions of Power Apps that integrate with that flow. To fix an affected Power App or to use one of these flow changes, the Power App needs to be updated.
 
 Types of changes most likely to break a Power Apps ability to call a flow include:
 
@@ -228,20 +232,20 @@ Other changes to the inputs or outputs won't break the integration between Power
 
 ### Resolution
 
-- **Changing a live PowerApp**  
+#### Changing a live Power App
 
-    Once a Power App is published, it's always recommended to make copies of flows used by the Power Apps to make any updates. Any update to a flow referenced by a live Power App has the potential to break existing users. Don't delete or turn off the existing flows until all users have been upgraded to the new published version of the Power App.
+Once a Power App is published, it's always recommended to make copies of flows used by the Power Apps to make any updates. Any update to a flow referenced by a live Power App has the potential to break existing users. Don't delete or turn off the existing flows until all users have been upgraded to the new published version of the Power App.
 
-    :::image type="content" source="media/best-practices-when-updating-a-flow/make-copies-flow.png" alt-text="Screenshot to make copies of the Flows used by the Power Apps by selecting the Save As option.":::
+:::image type="content" source="media/best-practices-when-updating-a-flow/make-copies-flow.png" alt-text="Screenshot to make copies of the flows used by the Power App by selecting the Save As option.":::
 
-    In the new version of the Power App, reference the new flows. When the new version of the Power App is published, users will start to use the new flows with the correct inputs, outputs, and connections. Which will prevent flow updates for new versions of Power Apps from affecting users of the existing version.
+In the new version of the Power App, reference the new flows. When the new version of the Power App is published, users will start to use the new flows with the correct inputs, outputs, and connections. Which will prevent flow updates for new versions of Power Apps from affecting users of the existing version.
 
-- **Changing a PowerApp development version**
+#### Changing a Power App development version
 
-    While developing a Power App, making changes to a flow not used by a live version of the Power App is easy. After making changes to the inputs, outputs, or connections of a non-published flow, reselect the flow from the **Flows** pane.
+While developing a Power App, making changes to a flow not used by a live version of the Power App is easy. After making changes to the inputs, outputs, or connections of a non-published flow, reselect the flow from the **Flows** pane.
 
-    :::image type="content" source="media/best-practices-when-updating-a-flow/reselect-flow.png" alt-text="Screenshot of updating a Flow definition in Power Apps.":::
+:::image type="content" source="media/best-practices-when-updating-a-flow/reselect-flow.png" alt-text="Screenshot of updating a flow definition in Power Apps.":::
 
-    It will update the definition of the flow in the Power App validating that the correct input, outputs, and connections are used in the Power App.
+It will update the definition of the flow in the Power App validating that the correct input, outputs, and connections are used in the Power App.
 
-    Users of the Power App won't begin using the new flows until the Power App is published. So updating the existing flow is ok until it's used by a live version of the Power App.
+Users of the Power App won't begin using the new flows until the Power App is published. So updating the existing flow is ok until it's used by a live version of the Power App.
