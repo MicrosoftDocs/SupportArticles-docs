@@ -23,7 +23,7 @@ This article discusses the three components of the Developer Toolkit for Microso
 - Visual Studio Tools for Microsoft Dynamics GP
 - eConnect
 
-This article also includes information about availability and pricing.
+This article also includes information about availability of the components.
 
 ## Components of the Developer Toolkit for Microsoft Dynamics GP
 
@@ -49,7 +49,7 @@ This article also includes information about availability and pricing.
   - XML documentation
   - Optional Windows EAI services
 
-## Availability of the components
+## How to install eConnect
 
 To install eConnect, use one of the following methods:
 
