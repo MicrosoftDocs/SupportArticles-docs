@@ -8,7 +8,7 @@ ms.author: delhan
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.reviewer: hasokol,georgeri,gbock,jtierney,arrenc,roberg,kaushika
-ms.custom: sap:certificates-and-public-key-infrastructure-pki, csstroubleshoot
+ms.custom: sap:certificate-root-update-program, csstroubleshoot
 ms.date: 09/28/2023
 ---
 # Removal of the U.S. Federal Common Policy CA certificate from the Microsoft trusted root

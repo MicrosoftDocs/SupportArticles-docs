@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:certificates-and-public-key-infrastructure-pki, csstroubleshoot
+ms.custom: sap:ssl-or-tls, csstroubleshoot
 ---
 # Restrict the use of certain cryptographic algorithms and protocols in Schannel.dll
 

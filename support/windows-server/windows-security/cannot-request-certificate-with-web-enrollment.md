@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: akhleshs, kaushika
-ms.custom: sap:certificates-and-public-key-infrastructure-pki, csstroubleshoot
+ms.custom: sap:certificate-web-enrollment-pages-cwe, csstroubleshoot
 ---
 # Not able to request certificate using web enrollment
 
