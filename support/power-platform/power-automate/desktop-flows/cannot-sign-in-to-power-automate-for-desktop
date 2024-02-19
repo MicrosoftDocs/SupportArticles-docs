@@ -1,0 +1,22 @@
+---
+title: Can't sign in to Power Automate for desktop
+description: This article helps to troubleshoot sign in related issues in Power Automate for desktop.
+ms.reviewer: pefelesk
+ms.date: 02/19/2024
+ms.subservice: power-automate-desktop-flows
+---
+# Can't sign in to Power Automate for desktop
+
+This article provides resolutions and workarounds to several sign in related issues. 
+
+## Generic sign in or sign out issues
+
+Power Automate for desktop uses a file named **msalcache.bin3** to acquire tokens and authenticate users. 
+
+If you encounter errors while signing in or signing out, try to erase all the stored tokens by deleting this file. To delete the file, navigate to %localappdata%\Microsoft\Power Automate Desktop\Cache\MSI for MSI installations or %localappdata%\Microsoft\Power Automate Desktop\Cache\Store for MS Store installations. 
+
+ Note: If the AppData folder isn't visible in your user folder, try to display hidden files. 
+
+After deleting the msalcache.bin3 file, exit Power Automate from the system tray or restart the Power Automate service and retry signing in. 
+
+ 
