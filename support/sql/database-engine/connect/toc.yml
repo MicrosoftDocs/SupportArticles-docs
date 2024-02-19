@@ -9,6 +9,8 @@ items:
   href: certificate-validation-failure.md
 - name: Consistent SQL network connectivity issue
   href: consistent-sql-network-connectivity-issue.md
+- name: How to determine if the authentication type is Kerberos
+  href: determine-the-authentication-type.md
 - name: Existing connection forcibly closed
   href: tls-exist-connection-closed.md
 - name: Intermittent or periodic authentication issues
