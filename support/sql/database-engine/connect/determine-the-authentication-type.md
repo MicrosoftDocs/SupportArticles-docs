@@ -50,34 +50,34 @@ If either of the previous options aren't available, consider using the following
 
 1. Copy the following script into a text editor, such as Notepad, and save it as *getAuthScheme.vbs*:
 
-    ```vbs
-    ' Auth scheme VB script.
-    ' Run on a client machine, not the server.
-    ' If you run locally, you will always get NTLM even if Kerberos is properly enabled.
-    '
-    ' USAGE:  CSCRIPT getAuthScheme.vbs tcp:SQLProd01.contoso.com,1433   ' explicitly specify DNS suffix, protocol, and port # ('tcp' must be lower case)
-    ' USAGE:  CSCRIPT getAuthScheme.vbs SQLProd01                        ' let the driver figure out the DNS suffix, protocol, and port #
-    '
-    Dim cn, rs, s
-    s = WScript.Arguments.Item(0)              ' get the server name from the command-line
-    Set cn = createobject("adodb.connection")
-    '
-    ' Various connection strings depending on the driver/Provider installed on your machine
-    ' SQLOLEDB is selected as it is on all windows machines, but may have limitations, such as lack of TLS 1.2 support
-    ' Choose a newer provider or driver if you have it installed.
-    '
-    cn.open "Provider=SQLOLEDB;Data Source=" & s & ";Initial Catalog=master;Integrated Security=SSPI"          ' On all Windows machines
-    'cn.open "Provider=SQLNCLI11;Data Source=" & s & ";Initial Catalog=master;Integrated Security=SSPI"        ' Newer
-    'cn.open "Provider=MSOLEDBSQL;Data Source=" & s & ";Initial Catalog=master;Integrated Security=SSPI"       ' Latest, good for SQL 2012 and newer
-    'cn.open "Driver={ODBC Driver 17 for SQL Server};Server=" & s & ";Database=master;Trusted_Connection=Yes"  ' Latest
-    '
-    ' Run the query and display the results
-    '
-    set rs = cn.Execute("select auth_scheme from sys.dm_exec_connections where session_id=@@SPID")
-    WScript.Echo "Auth scheme: " & rs(0)
-    rs.close
-    cn.close
-    ```
+     ```vbs
+     ' Auth scheme VB script.
+     ' Run on a client machine, not the server.
+     ' If you run locally, you will always get NTLM even if Kerberos is properly enabled.
+     '
+     ' USAGE:  CSCRIPT getAuthScheme.vbs tcp:SQLProd01.contoso.com,1433   ' explicitly specify DNS suffix, protocol, and port # ('tcp' must be lower case)
+     ' USAGE:  CSCRIPT getAuthScheme.vbs SQLProd01                        ' let the driver figure out the DNS suffix, protocol, and port #
+     '
+     Dim cn, rs, s
+     s = WScript.Arguments.Item(0)              ' get the server name from the command-line
+     Set cn = createobject("adodb.connection")
+     '
+     ' Various connection strings depending on the driver/Provider installed on your machine
+     ' SQLOLEDB is selected as it is on all windows machines, but may have limitations, such as lack of TLS 1.2 support
+     ' Choose a newer provider or driver if you have it installed.
+     '
+     cn.open "Provider=SQLOLEDB;Data Source=" & s & ";Initial Catalog=master;Integrated Security=SSPI"          ' On all Windows machines
+     'cn.open "Provider=SQLNCLI11;Data Source=" & s & ";Initial Catalog=master;Integrated Security=SSPI"        ' Newer
+     'cn.open "Provider=MSOLEDBSQL;Data Source=" & s & ";Initial Catalog=master;Integrated Security=SSPI"       ' Latest, good for SQL 2012 and newer
+     'cn.open "Driver={ODBC Driver 17 for SQL Server};Server=" & s & ";Database=master;Trusted_Connection=Yes"  ' Latest
+     '
+     ' Run the query and display the results
+     '
+     set rs = cn.Execute("select auth_scheme from sys.dm_exec_connections where session_id=@@SPID")
+     WScript.Echo "Auth scheme: " & rs(0)
+     rs.close
+     cn.close
+     ```
 
 1. Run the *getAuthScheme.vbs* PowerShell script at a command prompt:
 
@@ -100,44 +100,44 @@ You can use PowerShell to test the SqlClient .NET provider to try to isolate the
 1. Copy the following script into a text editor, such as Notepad, and save it as *get-SqlAuthScheme.ps1*.
 1. Run the following script at a command prompt:
 
-```powershell
-#-------------------------------
-#
-# get-SqlAuthScheme.ps1
-#
-# PowerShell script to test a System.Data.SqlClient database connection
-#
-# USAGE: .\get-SqlAuthScheme tcp:SQLProd01.contoso.com,1433   ' explicitly specify DNS suffix, protocol, and port # ('tcp' must be lower case)
-# USAGE: .\get-SqlAuthScheme SQLProd01                        ' let the driver figure out the DNS suffix, protocol, and port #
-#
-#-------------------------------
-param ([string]$server = "localhost")
-Set-ExecutionPolicy Unrestricted-Scope CurrentUser
-$connstr = "Server=$server;Database=master;Integrated Security=SSPI"
-[System.Data.SqlClient.SqlConnection] $conn = New-Object System.Data.SqlClient.SqlConnection
-$conn.ConnectionString = $connstr
-[System.DateTime] $start = Get-Date
-$conn.Open()
-[System.Data.SqlClient.SqlCommand] $cmd = New-Object System.Data.SqlClient.SqlCommand
-$cmd.CommandText = "select auth_scheme from sys.dm_exec_connections where session_id=@@spid"
-$cmd.Connection = $conn
-$dr = $cmd.ExecuteReader()
-$result = $dr.Read()
-$auth_scheme = $dr.GetString(0)
-$conn.Close()
-$conn.Dispose()
-[System.DateTime] $end = Get-Date
-[System.Timespan] $span = ($end - $start)
-"End time: " + $end.ToString("M/d/yyyy HH:mm:ss.fff")
-"Elapsed time was " + $span.Milliseconds + " ms."
-"Auth scheme for " + $server + ": " + $auth_scheme
-```
+      ```powershell
+      #-------------------------------
+      #
+      # get-SqlAuthScheme.ps1
+      #
+      # PowerShell script to test a System.Data.SqlClient database connection
+      #
+      # USAGE: .\get-SqlAuthScheme tcp:SQLProd01.contoso.com,1433   ' explicitly specify DNS suffix,  protocol, and port # ('tcp' must be lower case)
+      # USAGE: .\get-SqlAuthScheme SQLProd01                        ' let the driver figure out the DNS suffix, protocol, and port #
+      #
+      #-------------------------------
+      param ([string]$server = "localhost")
+      Set-ExecutionPolicy Unrestricted-Scope CurrentUser
+      $connstr = "Server=$server;Database=master;Integrated Security=SSPI"
+      [System.Data.SqlClient.SqlConnection] $conn = New-Object System.Data.SqlClient.SqlConnection
+      $conn.ConnectionString = $connstr
+      [System.DateTime] $start = Get-Date
+      $conn.Open()
+      [System.Data.SqlClient.SqlCommand] $cmd = New-Object System.Data.SqlClient.SqlCommand
+      $cmd.CommandText = "select auth_scheme from sys.dm_exec_connections where session_id=@@spid"
+      $cmd.Connection = $conn
+      $dr = $cmd.ExecuteReader()
+      $result = $dr.Read()
+      $auth_scheme = $dr.GetString(0)
+      $conn.Close()
+      $conn.Dispose()
+      [System.DateTime] $end = Get-Date
+      [System.Timespan] $span = ($end - $start)
+      "End time: " + $end.ToString("M/d/yyyy HH:mm:ss.fff")
+      "Elapsed time was " + $span.Milliseconds + " ms."
+      "Auth scheme for " + $server + ": " + $auth_scheme
+     ```
 
 You should see the following output:
 
-```output
-C:\temp> .\get-sqlauthscheme sqlprod01
-End time: 10/26/2020 18:00:24.753
-Elapsed time was 0 ms.
-Auth scheme for sqlprod01: NTLM
-```
+   ```output
+   C:\temp> .\get-sqlauthscheme sqlprod01
+   End time: 10/26/2020 18:00:24.753
+   Elapsed time was 0 ms.
+   Auth scheme for sqlprod01: NTLM
+   ```
