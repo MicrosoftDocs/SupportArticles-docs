@@ -78,42 +78,78 @@ The consistent authentication errors have several causes and they are listed in 
 
 This section lists various causes that are related to aspects such as database, logon account permissions, and linked servers.
 
-- Database is offline: For detailed information regarding the issue, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
-- Database permissions: For detailed information regarding the issue, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
-- Linked Server Account Mapping: For more information, see [linked servers](linked-server-account-mapping-error.md).
-- Proxy account doesn't have permissions: An SSIS job run by SQL Agent might need permissions other than the SQL Agent service account can provide. For more information, see [SSIS package does not run when called from a SQL Server Agent job step.](../../integration-services/ssis-package-doesnt-run-when-called-job-step.md).
-- No Login: For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
-- [Bad metadata](#cause-6---bad-metadata): Refers to a scenario where metadata of the linked server is inconsistent or doesn't match the expected metadata.
+- [Database is offline](#database-is-offline)
+- [Database permissions](#database-permissions)
+- [Linked Server Account Mapping](#linked-server-account-mapping)
+- [Proxy account doesn't have permissions](#proxy-account-doesnt-have-permissions)
+- [No login](#no-login)
+- [Bad metadata](#bad-metadata)
 
-### Cause 6 - Bad metadata
+### Database is offline
 
-A view or stored procedure receives login failures on a linked server whereas a distributed `SELECT` statement copied from them doesn't.
+For detailed information regarding the issue, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
 
-**Cause**
+### Database permissions
 
-This issue might happen if the View was created and then the linked server was recreated, or a remote table was modified without rebuilding the View.
+For detailed information regarding the issue, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
 
-**Resolution**
+### Linked Server Account Mapping
 
-To resolve this issue, you can refresh the metadata of the linked server by running the `sp_refreshview` stored procedure.
+You might encounter an authentication process issue with linked servers in the context of SQL Server. For more information, see [linked servers](linked-server-account-mapping-error.md).
 
-## Issues related to connection string
+### Proxy account doesn't have permissions
+
+An SSIS job run by SQL Agent might need permissions other than the SQL Agent service account can provide. For more information, see [SSIS package does not run when called from a SQL Server Agent job step.](../../integration-services/ssis-package-doesnt-run-when-called-job-step.md).
+
+### No Login
+
+For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
+
+### Bad metadata
+
+Refers to a scenario where metadata of the linked server is inconsistent or doesn't match the expected metadata.
+
+A view or stored procedure receives login failures on a linked server whereas a distributed `SELECT` statement copied from them doesn't. This issue might happen if the View was created and then the linked server was recreated, or a remote table was modified without rebuilding the View. To resolve this issue, you can refresh the metadata of the linked server by running the `sp_refreshview` stored procedure.
+
+## Causes related to connection string
 
 This section lists various causes related to connection string.
 
-- Bad server name in connection string: This issue might occur if the specified server name is incorrect or can't be found. For more information, see [bad server name in connection string](bad-server-name-connection-string-error.md).
+- [Bad server name in connection string](#bad-server-name-in-connection-string)
+- [Invalid username](#invalid-username)
+- [Wrong database name in connection string](#wrong-database-name-in-connection-string)
+- [Wrong explicit SPN account](#wrong-explicit-spn-account)
+- [Explicit SPN is missing](#explicit-spn-is-missing)
+- [Explicit misplaced SPN](#explicit-misplaced-spn)
+- [Explicit SPN is duplicated](#explicit-spn-is-duplicated)
 
-- Invalid username: For more information, see [Login failed for user '\<username\>' or login failed for user '\<domain>\<username\>'](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
+### Bad server name in connection string
 
-- Wrong database name in connection string: This issue might occur if the [database name is incorrect](wrong-database-name-in-connection-string.md). Check if the name is spelled correctly.
+This issue might occur if the specified server name is incorrect or can't be found. For more information, see [bad server name in connection string](bad-server-name-connection-string-error.md).
 
-- Wrong explicit SPN account: For more information on these scenarios, see [Cannot generate SSPI context error](cannot-generate-sspi-context-error.md).
+### Invalid username
 
-- Explicit SPN is missing: For more information, see ["Cannot generate SSPI context" error when using Windows authentication to connect SQL Server.](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended).
+An issue might occur if the username provided for authentication is not correct. For more information, see [Login failed for user '\<username\>' or login failed for user '\<domain>\<username\>'](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
 
-- Explicit misplaced SPN: For more information, [Explicit misplaced SPN](explicit-spn-is-misplaced.md).
+### Wrong database name in connection string
 
-- Explicit SPN is duplicated: For more information, see ["Cannot generate SSPI context" error when using Windows authentication to connect SQL Server.](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended).
+This issue occurs if the database name provided for authentication is incorrect. Check if the name is spelled correctly. For more information, see [MSSQLSERVER_4064](/sql/relational-databases/errors-events/mssqlserver-4064-database-engine-error).
+
+### Wrong explicit SPN account
+
+This issue might occur if the SPN is associated with the wrong account in AD. For more information on these scenarios, see [Cannot generate SSPI context error](cannot-generate-sspi-context-error.md).
+
+### Explicit SPN is missing
+
+This issue occurs when the SPN is not configured or registered correctly. For more information, see ["Cannot generate SSPI context" error when using Windows authentication to connect SQL Server.](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended).
+
+### Explicit misplaced SPN
+
+This issue occurs when the SPN is associated with the wrong account in AD. For more information, [Explicit misplaced SPN](explicit-spn-is-misplaced.md).
+
+### Explicit SPN is duplicated
+
+This issue occurs when an SPN is duplicated that is registered more than once. For more information, see ["Cannot generate SSPI context" error when using Windows authentication to connect SQL Server.](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended).
 
 ## Causes related to Windows permissions or Policy settings
 
@@ -152,7 +188,7 @@ To resolve this issue, follow these steps:
 
 - Credential guard is enabled: For more information, see [Considerations and known issues when using Credential Guard](/windows/security/identity-protection/credential-guard/considerations-known-issues).
 
-### Issues specific to NT LAN Manager (NTLM)
+### Causes specific to NT LAN Manager (NTLM)
 
 This section lists some of the consistent authentication causes related to NTLM.
 
@@ -166,7 +202,7 @@ This section lists some of the consistent authentication causes related to NTLM.
 
 - LANMAN compatibility level: Refers to a security policy setting. For more information, see [Login failed for user NT AUTHORITY\ANONYMOUS LOGON](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
 
-### Issues related to Active Directory and Domain Controller
+### Causes related to Active Directory and Domain Controller
 
 This section lists various causes related to access to directory services and servers and their possible solutions:
 
@@ -174,13 +210,13 @@ This section lists various causes related to access to directory services and se
 
 - An account isn't in the group: You can access the database using groups rather than individually. Check the SQL logins to enumerate allowed groups and make sure the user belongs to one of them.
 
-- No permissions for cross-domain groups: Users from the [remote domain should belong to a group](../../../windows-server/windows-security/trust-between-windows-ad-domain-not-work-correctly.md) in the SQL Server domain. If the domains lack proper trust, adding the users in a group in the remote domain might prevent the SQL Server from enumerating the group's membership.
+- No permissions for cross-domain groups: Users from the [remote domain should belong to a group](../../../windows-server/windows-security/trust-between-windows-ad-domain-not-work-correctly.md) in the SQL Server domain. There might be a problem if you attempt to use a domain local group to connect to a SQL Server instance from another domain. If the domains lack proper trust, adding the users in a group in the remote domain might prevent the SQL Server from enumerating the group's membership.
 
-- Firewall blocks the DC: Make sure the DC is accessible from the client or the SQL Server using the `nltest /SC_QUERY:CONTOSO` command.
+- Firewall blocks the Domain Controller: Make sure the DC is accessible from the client or the SQL Server using the `nltest /SC_QUERY:CONTOSO` command.
 
 - Domain Controller is offline: Use NLTEST to force the computer to switch to another DC. See [Active Directory replication Event ID 2087: DNS lookup failure caused replication to fail](../../../windows-server/identity/active-directory-replication-event-id-2087.md).
 
-- Selective authentication is disabled: Is a feature of domain trusts that allows the domain administrator to limit which users have access to resources in the remote domain. If selective authentication isn't enabled, all users in the trusted domain can get access to the remote domain. To resolve this issue, make sure the users aren't allowed to authenticate in the remote domain by enabling selective authentication.
+- Selective authentication is disabled: Selective authentication is a feature of domain trusts that allows the domain administrator to limit which users have access to resources in the remote domain. If selective authentication isn't enabled, all users in the trusted domain can get access to the remote domain. To resolve this issue, make sure the users aren't allowed to authenticate in the remote domain by enabling selective authentication.
 
 - Account migration failed: If old user accounts can't connect to the SQL Server, but newly created accounts can, this could happen if account migration isn't correct. This issue is related to AD. For more information, see [Transfer logins and passwords between instances of SQL Server](../security/transfer-logins-passwords-between-instances.md).
 
@@ -192,7 +228,7 @@ This section lists various causes related to access to directory services and se
  1. [Register the SPNs](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731241(v=ws.11)) if required using the `- setspn -s` link.
  1. Test authentication with the `- runas /user:<Username> "cmd"` command.
 
-## Issues related to Kerberos authentication
+## Causes related to Kerberos authentication
 
 This section lists various causes related to Kerberos authentication.
 
@@ -201,7 +237,7 @@ This section lists various causes related to Kerberos authentication.
 - Duplicate SPN: For more information, see [Fix the error with Kerberos Configuration Manager (Recommended)](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended).
 - Sensitive account: For more information, see [Login failed for user NT AUTHORITY\ANONYMOUS LOGON](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
 - Not trusted for delegation: In a double-hop scenario, the service account of the mid-tier service must be trusted for delegation in AD. If you're an administrator, enable the **Trusted for delegation** option.
-- SPN on wrong account: You might receive this error message if your SPN is configured on the wrong account in Active Directory. To resolve the error, follow these steps:
+- SPN on wrong account: You might receive an error message if your SPN is configured on the wrong account in Active Directory. To resolve the error, follow these steps:
 
 1. Use `SETSPN -Q spnName` to locate the SPN and its current account.
 1. Use `SETSPN -D` to delete the existing SPNs.
@@ -223,7 +259,7 @@ This section lists various causes related to Kerberos authentication.
 - HTTP Ports: Normally, HTTP SPNs don't use port numbers, example `http/web01.contoso.com`, but you can enable this through the policy on the clients. The SPN would then have to be in the `http/web01.contoso.com:88` format, to enable Kerberos to function correctly. Otherwise, NTLM credentials are used, which aren't recommended because it would be difficult to diagnose the issue and it might be an excessive administrative overhead.
 SQL Alias: A SQL Server alias may cause an unexpected SPN to be generated. This results in NTLM credentials if the SPN isn't found, or an SSPI failure, if it inadvertently matches the SPN of another server.
 
-## Issues related to other aspects
+## Causes related to other aspects
 
 This section lists various miscellaneous authentication issues.
 
