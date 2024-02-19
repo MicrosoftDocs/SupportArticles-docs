@@ -1,14 +1,14 @@
 ---
-title: Conditional access and multifactor authentication in Flow
+title: Conditional access and multifactor authentication in Power Automate (Flow)
 description: Using conditional access has an unexpected effect on users who use Flow to connect to Microsoft services that are relevant to conditional access policies.
 ms.reviewer: sranjan, hamenon
 ms.date: 03/31/2021
 ms.subservice: power-automate-admin
 ms.custom: has-azure-ad-ps-ref
 ---
-# Recommendations for conditional access and multifactor authentication in Microsoft Flow
+# Recommendations for conditional access and multifactor authentication in Microsoft Power Automate (Flow)
 
-[Conditional Access](/azure/active-directory/conditional-access/overview) is a feature of Microsoft Entra ID that lets you control how and when users can access applications and services. Despite its usefulness, you should be aware that using conditional access might have an adverse or unexpected effect on users in your organization who use Microsoft Flow to connect to Microsoft services that are relevant to conditional access policies.
+[Conditional Access](/azure/active-directory/conditional-access/overview) is a feature of Microsoft Entra ID that lets you control how and when users can access applications and services. Despite its usefulness, you should be aware that using conditional access might have an adverse or unexpected effect on users in your organization who use Microsoft Power Automate (Flow) to connect to Microsoft services that are relevant to conditional access policies.
 
 _Applies to:_ &nbsp; Power Automate  
 _Original KB number:_ &nbsp; 4467879
@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 4467879
 ## Recommendations
 
 - Do not use [remember multifactor authentication for trusted devices](/azure/active-directory/authentication/howto-mfa-mfasettings#remember-multi-factor-authentication-for-trusted-devices) because token lifetimes will shorten and cause connections to require refresh at the interval configured rather than at the standard extended length.
-- Ensure that users that sign in to a flow use criteria that matches the policies for the connections that flow uses, so that policy conflict errors are avoided.
+- Ensure that users that sign in to Power Automate use criteria that matches the policies for the connections that a flow uses, so that policy conflict errors are avoided.
 
 ## Details
 
@@ -42,37 +42,37 @@ MFA can also be configured from **Microsoft 365 admin center**. A subset of Azur
 
 The **remember multi-factor authentication** setting can help you to reduce the number of user logons by using a persistent cookie. This policy controls the Microsoft Entra settings that are documented in [Remember multifactor authentication for trusted devices](/azure/active-directory/authentication/howto-mfa-mfasettings#remember-multi-factor-authentication-for-trusted-devices).
 
-Unfortunately, this setting changes the token policy settings that make the Flow connections expire every 14 days. This is one of the common reasons why Flow connections fail more frequently after MFA is enabled. We recommend that you don't use this setting. 
+Unfortunately, this setting changes the token policy settings that make the connections expire every 14 days. This is one of the common reasons why connections fail more frequently after MFA is enabled. We recommend that you don't use this setting. 
 
-## Effects on the Flow portal and embedded experiences
+## Effects on the Power Automate portal and embedded experiences
 
-This section details some of the adverse effects that conditional access can have on users in your organization who use Flow to connect to Microsoft services relevant to a policy.
+This section details some of the adverse effects that conditional access can have on users in your organization who use Power Automate to connect to Microsoft services relevant to a policy.
 
 ### Effect 1 - Failure on future runs
 
-If you enable a conditional access policy after flows and connections are created, flows fail on future runs. Owners of the connections will see the following error message in the Flow portal when they investigate the failed runs:
+If you enable a conditional access policy after flows and connections are created, flows fail on future runs. Owners of the connections will see the following error message in the Power Automate portal when they investigate the failed runs:
 
 > AADSTS50076: Due to a configuration change made by your administrator, or because you moved to a new location, you must use multi-factor authentication to access \<service>.
 
 :::image type="content" source="media/conditional-access-and-multi-factor-authentication-in-flow/error-details.png" alt-text="Screenshot of the error details including Time, Status, Error, Error Details, and how to fix.":::
 
-When users view connections on the Flow portal, they see an error message that resembles the following:
+When users view connections on the Power Automate portal, they see an error message that resembles the following:
 
-:::image type="content" source="media/conditional-access-and-multi-factor-authentication-in-flow/status-error.png" alt-text="Screenshot of the error Failed to refresh access token for service users see in the Flow portal." border="false":::
+:::image type="content" source="media/conditional-access-and-multi-factor-authentication-in-flow/status-error.png" alt-text="Screenshot of the error Failed to refresh access token for service users see in the Power Automate portal." border="false":::
 
-To resolve this issue, users must sign in to the Flow portal under conditions that match the access policy of the service that they're trying to access (such as multi-factor, corporate network, and so on), and then repair or re-create the connection.
+To resolve this issue, users must sign in to the Power Automate portal under conditions that match the access policy of the service that they're trying to access (such as multi-factor, corporate network, and so on), and then repair or re-create the connection.
 
 ### Effect 2 - Automatic connection creation failure
 
-If users don't sign in to Flow by using criteria that matches the policies, the automatic connection creation to first-party Microsoft services that are controlled by the conditional access policies fail. Users must manually create and authenticate the connections by using criteria that matches the conditional access policy of the service that they try to access. This behavior also applies to 1-click templates that are created from the Flow portal.
+If users don't sign in to Power Automate by using criteria that matches the policies, the automatic connection creation to first-party Microsoft services that are controlled by the conditional access policies fail. Users must manually create and authenticate the connections by using criteria that matches the conditional access policy of the service that they try to access. This behavior also applies to 1-click templates that are created from the Power Automate portal.
 
 :::image type="content" source="media/conditional-access-and-multi-factor-authentication-in-flow/automatic-connection-creation-error.png" alt-text="Screenshot of the automatic connection creation error with AADSTS50076.":::
 
-To resolve this issue, users must sign in to the Flow portal under conditions that match the access policy of the service they try to access (such as multi-factor, corporate network, and so on) before they create a template.
+To resolve this issue, users must sign in to the Power Automate portal under conditions that match the access policy of the service they try to access (such as multi-factor, corporate network, and so on) before they create a template.
 
 ### Effect 3 - Users can't create a connection directly
 
-If users don't sign in to Flow by using criteria that matches the policies, they can't create a connection directly, either through Power Apps or Flow. Users see the following error message when they try to create a connection:
+If users don't sign in to Power Automate by using criteria that matches the policies, they can't create a connection directly, either through Power Apps or Flow. Users see the following error message when they try to create a connection:
 
 > AADSTS50076: Due to a configuration change made by your administrator, or because you moved to a new location, you must use multi-factor authentication to access \<service>.
 
@@ -80,25 +80,25 @@ If users don't sign in to Flow by using criteria that matches the policies, they
 
 To resolve this issue, users must sign in under conditions that match the access policy of the service that they're trying to access, and then re-create the connection.
 
-### Effect 4 - People and email pickers on the Flow portal fail
+### Effect 4 - People and email pickers on the Power Automate portal fail
 
-If Exchange Online or SharePoint access is controlled by a conditional access policy, and if users don't sign in to Flow under the same policy, people and email pickers on the Flow portal fail. Users can't get complete results for groups in their organization when they perform the following queries (Office 365 groups won't be returned for these queries):
+If Exchange Online or SharePoint access is controlled by a conditional access policy, and if users don't sign in to Power Automate under the same policy, people and email pickers on the Power Automate portal fail. Users can't get complete results for groups in their organization when they perform the following queries (Office 365 groups won't be returned for these queries):
 
 - Trying to share ownership or run-only permissions to a flow
 - Selecting email addresses when building a flow in the designer
-- Selecting people in the **Flow Run** panel when selecting inputs to a flow
+- Selecting people in the **Flow Runs** panel when selecting inputs to a flow
 
-### Effect 5 - Using flow features embedded in other Microsoft services
+### Effect 5 - Using Power Automate features embedded in other Microsoft services
 
-When a flow is embedded in Microsoft services such as SharePoint, Power Apps, Excel, and Teams, the flow users are also subject to conditional access and multi-factor policies based on how they authenticated to the host service. For example, if a user signs in to SharePoint by using single-factor authentication, but tries to create or use a flow that requires multi-factor access to Microsoft Graph, the user receives an error message.
+When a flow is embedded in Microsoft services such as SharePoint, Power Apps, Excel, and Teams, the Power Automate users are also subject to conditional access and multi-factor policies based on how they authenticated to the host service. For example, if a user signs in to SharePoint by using single-factor authentication, but tries to create or use a flow that requires multi-factor access to Microsoft Graph, the user receives an error message.
 
 ### Effect 6 - Sharing flows by using SharePoint lists and libraries
 
-When you try to share ownership or run-only permissions by using SharePoint lists and libraries, Flow can't provide the display name of the lists. Instead, it displays the unique identifier of a list. The owner and run-only tiles on the **Flow** properties page for already-shared flows will be able to display the identifier, not the display name.
+When you try to share ownership or run-only permissions by using SharePoint lists and libraries, Power Automate can't provide the display name of the lists. Instead, it displays the unique identifier of a list. The owner and run-only tiles on the flow details page for already-shared flows will be able to display the identifier, but not the display name.
 
 More importantly, users might also be unable to discover or run their flows from SharePoint. This is because, currently, the conditional access policy information isn't passed between Power Automate and SharePoint to enable SharePoint to make an access decision.
 
-:::image type="content" source="media/conditional-access-and-multi-factor-authentication-in-flow/add-a-sharepoint-list-or-library-as-owner.png" alt-text="Screenshot to share Flows with SharePoint lists and libraries.":::
+:::image type="content" source="media/conditional-access-and-multi-factor-authentication-in-flow/add-a-sharepoint-list-or-library-as-owner.png" alt-text="Screenshot to share flows with SharePoint lists and libraries.":::
 
 :::image type="content" source="media/conditional-access-and-multi-factor-authentication-in-flow/owner-see-site-url-and-list-id.png" alt-text="Screenshot shows the site U R L and the list ID owners can see.":::
 
