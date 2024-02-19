@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, slight
-ms.custom: sap:certificates-and-public-key-infrastructure-pki, csstroubleshoot
+ms.custom: sap:active-directory-certificate-services-adcs, csstroubleshoot
 ---
 # How to import third-party certification authority (CA) certificates into the Enterprise NTAuth store
 

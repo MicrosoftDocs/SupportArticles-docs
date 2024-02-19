@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:certificates-and-public-key-infrastructure-pki, csstroubleshoot
+ms.custom: sap:active-directory-certificate-services-adcs, csstroubleshoot
 ---
 # Superseded Certificate Templates and impact on user's AD store
 
