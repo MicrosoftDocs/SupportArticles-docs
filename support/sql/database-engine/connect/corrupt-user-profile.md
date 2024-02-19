@@ -10,7 +10,7 @@ ms.custom: sap:Connection issues
 
 # Windows user profile can't be loaded
 
-This article helps you resolve issues that occur because of because of a corrupted Windows user profile.
+This article helps you resolve issues that occur because of a corrupted Windows user profile.
 
 ## Symptoms
 
