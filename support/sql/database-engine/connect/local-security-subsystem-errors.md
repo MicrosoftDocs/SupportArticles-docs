@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting LSASS errors
-description: This article provides symptoms and resolution for the consistent authentication errors related to local security subsystem related.
+description: This article provides a resolution for consistent authentication errors that are related to local security subsystem related.
 ms.date: 01/22/2024
 author: Malcolm-Stewart
 ms.author: mastewa
@@ -10,30 +10,30 @@ ms.custom: sap:Connection issues
 
 # Local security subsystem errors
 
-This article helps to resolve the issue that might arise due to a consistent authentication issue related to the unresponsive LSASS.
+This article helps you resolve a consistent authentication issue that's related to an unresponsive Local Security Authority Subsystem Service (LSASS).
 
 ## Symptoms
 
 The driver shows the "The login is from an untrusted domain and can't be used with Windows authentication" error message.
 
-Check if the SQL Server error log shows the following messages:
+Check whether the Microsoft SQL Server error log shows the following entries:
 
 > SSPI handshake failed with error code 0x80090311, state 14 while establishing a connection with integrated security; the connection has been closed. Reason: AcceptSecurityContext failed. The Windows error code indicates the cause of failure.
 
 > SSPI handshake failed with error code 0x80090304, state 14 while establishing a connection with integrated security; the connection has been closed. Reason: AcceptSecurityContext failed. The Windows error code indicates the cause of failure.
 
-You might also see Kerberos errors in the system event log on the SQL Server machine for the same time range. The following error code has a specific meaning:
+You might also see Kerberos errors in the system event log on the server that's running SQL Server during the same time range. The following error code has a specific meaning:
 
 > Error - 2146893039 (0x80090311): No authority could be contacted for authentication.
 
 ## Cause
 
-These errors occur when the local security authority subsystem service (LSASS) stops responding.
+These errors occur when the LSASS stops responding.
 
 ## Resolution
 
-To resolve these error messages, follow these steps:
+To resolve these errors, follow these steps:
 
-1. Check whether your Service Principal Name (SPN) is registered correctly on the Domain Controller (DC).
+1. Check whether your Service Principal Name (SPN) is registered correctly on the domain controller (DC).
 
-1. Use the `setspn -Q` or `setspn -L` commands to query your SPN and SPNs under your account respectively.
+1. Use the `setspn -Q` or `setspn -L` commands to query your SPN and SPNs, respectively, in your account.
