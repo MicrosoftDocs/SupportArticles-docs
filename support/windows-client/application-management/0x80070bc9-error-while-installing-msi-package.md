@@ -1,7 +1,7 @@
 ---
 title: 0x80070BC9 error when installing MSI package
 description: Describes an issue that occurs during Windows Setup or a hotfix installation.
-ms.date: 09/08/2020
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

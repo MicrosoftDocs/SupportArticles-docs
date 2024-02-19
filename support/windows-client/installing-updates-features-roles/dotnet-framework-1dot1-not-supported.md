@@ -1,7 +1,7 @@
 ---
 title: .NET Framework 1.1 isn't supported
 description: Microsoft .NET Framework version 1.1 is not supported on any version of Windows 7 or Windows Server 2008 R2 and higher Operating Systems.
-ms.date: 04/28/2023
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

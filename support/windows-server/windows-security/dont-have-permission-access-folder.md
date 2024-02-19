@@ -1,7 +1,7 @@
 ---
 title: Continue dialog box for folder access in Windows Explorer when user only has access with elevated token
 description: Describes an issue in which your user ID is added to the ACL list for a directory that you don't have permissions, and you receive an access denied message when accessing a folder which you don't have read permissions with Windows Explorer.
-ms.date: 09/24/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot replication error 8456 or 8457
 description: Describes how to troubleshoot replication error 8456 or 8457.
-ms.date: 04/28/2023
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

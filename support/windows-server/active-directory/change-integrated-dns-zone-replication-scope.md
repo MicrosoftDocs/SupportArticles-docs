@@ -1,7 +1,7 @@
 ---
 title: Can't change replication scope of AD-integrated zone
 description: Describes an issue where you receive an error message when you try to change the replication scope of an Active Directory-integrated DNS zone. Resolution involves the assignment of permissions to the built-in administrator account.
-ms.date: 04/28/2023
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

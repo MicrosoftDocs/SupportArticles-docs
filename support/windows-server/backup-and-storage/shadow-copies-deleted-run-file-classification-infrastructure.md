@@ -1,7 +1,7 @@
 ---
 title: Shadow copies are deleted on Windows Server when you try to run an FCI classification job
 description: Describes an issue in which shadow copies are deleted on Windows Server when you try to run an FCI classification job. This occurs when there's insufficient space on the volume for shadow copies.
-ms.date: 09/24/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

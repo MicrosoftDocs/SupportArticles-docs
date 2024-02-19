@@ -1,7 +1,7 @@
 ---
 title: Power Management tab isn't visible for some Wireless Network adapters with AOAC platforms
 description: Discusses a by-design behavior where the Power Management tab is no longer available in the Wireless Network advanced properties in an Always On/Always Connected (AOAC) platform.
-ms.date: 04/28/2023
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

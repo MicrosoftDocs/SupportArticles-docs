@@ -1,7 +1,7 @@
 ---
 title: Error 0xC004F074 when you activate Windows
 description: Helps fix the error 0xC004F074 that occurs when you activate Windows.
-ms.date: 04/28/2023
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

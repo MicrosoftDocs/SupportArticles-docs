@@ -1,7 +1,7 @@
 ---
 title: NTDS replication warning IDs 1083 and 1061
 description: Describes an issue that occurs if a change that is made on the local domain controller is also made on the domain controller that holds the PDC operations master role. In this scenario, the domain controllers may replicate the changes at the same time.
-ms.date: 04/28/2023
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

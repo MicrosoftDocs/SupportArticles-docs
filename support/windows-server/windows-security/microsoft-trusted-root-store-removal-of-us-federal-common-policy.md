@@ -9,7 +9,7 @@ manager: dcscontentpm
 ms.topic: troubleshooting
 ms.reviewer: hasokol,georgeri,gbock,jtierney,arrenc,roberg,kaushika
 ms.custom: sap:certificate-root-update-program, csstroubleshoot
-ms.date: 09/28/2023
+ms.date: 45286
 ---
 # Removal of the U.S. Federal Common Policy CA certificate from the Microsoft trusted root
 

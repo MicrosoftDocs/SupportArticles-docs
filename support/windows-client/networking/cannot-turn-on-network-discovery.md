@@ -1,7 +1,7 @@
 ---
 title: Can't turn on Network Discovery
 description: Describes an issue that changes to the Advanced sharing settings in **Network and Sharing Center** aren't saved. So you can't turn on Network Discovery.
-ms.date: 09/08/2020
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

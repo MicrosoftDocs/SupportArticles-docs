@@ -1,7 +1,7 @@
 ---
 title: Starting or live migrating Hyper-V VMs fails
 description: Error 0x80070569 occurs when you try to start or do a live migration for a Hyper-V virtual machine.
-ms.date: 09/24/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

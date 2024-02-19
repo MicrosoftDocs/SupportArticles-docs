@@ -1,7 +1,7 @@
 ---
 title: Run programs automatically
 description: Describes how to use group policies in Windows 2000 to configure a program to run automatically when a user signs in.
-ms.date: 09/27/2020
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

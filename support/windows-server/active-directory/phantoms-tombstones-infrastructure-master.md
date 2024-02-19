@@ -1,7 +1,7 @@
 ---
 title: Phantoms, tombstones, and the infrastructure master
 description: Describes the behavior of non-GCs when object links are managed across domains in a forest.
-ms.date: 09/24/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

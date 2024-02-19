@@ -1,7 +1,7 @@
 ---
 title: Recommendations for Domain Name System (DNS) client settings
 description: Describes recommendations for configuring DNS client settings.
-ms.date: 12/11/2023
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

@@ -1,7 +1,7 @@
 ---
 title: High CPU usage in LSAISO process
 description: Fixes a problem in which the LSAISO process experiences high CPU usage on a computer that's running Windows.
-ms.date: 09/08/2020
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

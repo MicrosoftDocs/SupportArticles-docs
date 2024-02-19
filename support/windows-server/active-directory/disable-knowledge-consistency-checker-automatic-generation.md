@@ -1,7 +1,7 @@
 ---
 title: Disable KCC from creating replication topology
 description: Describes how to disable the Knowledge Consistency Checker from automatically creating replication topology.
-ms.date: 04/28/2023
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

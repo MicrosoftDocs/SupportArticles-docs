@@ -1,7 +1,7 @@
 ---
 title: Remote Desktop Services overview
 description: Overview of Remote Desktop Services troubleshooting articles for Windows Server.
-ms.date: 06/17/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

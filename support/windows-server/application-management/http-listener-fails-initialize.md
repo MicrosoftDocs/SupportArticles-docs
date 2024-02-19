@@ -1,7 +1,7 @@
 ---
 title: HTTP Listener fails to initialize
 description: Provides a solution to an issue that HTTP Listener fails to initialize when user lacks SeChangeNotifyPrivilege.
-ms.date: 09/24/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

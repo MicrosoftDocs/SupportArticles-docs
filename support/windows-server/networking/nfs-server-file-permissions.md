@@ -1,7 +1,7 @@
 ---
 title: NFS Server and File Permissions
 description: Provides some information about NFS Server and File Permissions.
-ms.date: 09/24/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

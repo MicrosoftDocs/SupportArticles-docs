@@ -1,7 +1,7 @@
 ---
 title: Create Central Store on domain controller
 description: Describes how to create a Central Store on a domain controller. This Central Store is used to store and to replicate registry-based policies for Windows Vista-based clients in a domain.
-ms.date: 09/24/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

@@ -1,7 +1,7 @@
 ---
 title: Can't use ImageX.exe as backup tool
 description: Describes the reasons why you cannot use the ImageX.exe tool as a backup tool
-ms.date: 04/28/2023
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

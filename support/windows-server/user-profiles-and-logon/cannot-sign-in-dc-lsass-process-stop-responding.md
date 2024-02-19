@@ -1,7 +1,7 @@
 ---
 title: Can't sign in to a domain controller and the LSASS process stops responding
 description: Helps to fix the issue in which you can't sign in to a domain controller, and the Local Security Authority Subsystem Service (LSASS) process stops responding.
-ms.date: 05/09/2023
+ms.date: 45286
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

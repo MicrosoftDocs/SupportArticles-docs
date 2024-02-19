@@ -1,7 +1,7 @@
 ---
 title: Available updates for RDS
 description: Summarizes the available hotfixes and updates for issues that occur in Remote Desktop Services (Terminal Services) for Windows Server 2008 R2 environments.
-ms.date: 09/24/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

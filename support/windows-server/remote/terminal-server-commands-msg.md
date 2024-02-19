@@ -1,7 +1,7 @@
 ---
 title: Terminal Server commands MSG
 description: Describes syntax and parameters of Terminal Server commands MSG.
-ms.date: 09/24/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

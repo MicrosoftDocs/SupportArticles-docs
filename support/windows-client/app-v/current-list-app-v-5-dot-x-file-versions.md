@@ -1,7 +1,7 @@
 ---
 title: Current list of App-V 5.x file versions
 description: Provides current list of App-V 5.x file versions.
-ms.date: 12/07/2020
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

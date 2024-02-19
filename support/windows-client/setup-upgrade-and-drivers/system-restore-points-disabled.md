@@ -1,7 +1,7 @@
 ---
 title: System restore points are disabled after upgrade
 description: Describes an issue that disables System Restore points after you upgrade to Windows 10. A workaround is provided.
-ms.date: 04/28/2023
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

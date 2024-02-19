@@ -1,7 +1,7 @@
 ---
 title: Scheduled task may not run upon reboot if machine was off at time of task
 description: Helps to solve an issue where a scheduled task may not run upon reboot if the machine is off at the time of the task.
-ms.date: 09/24/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

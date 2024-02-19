@@ -1,7 +1,7 @@
 ---
 title: Guidance for troubleshooting DNS
 description: Introduces general guidance for troubleshooting scenarios related to DNS.
-ms.date: 07/13/2023
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

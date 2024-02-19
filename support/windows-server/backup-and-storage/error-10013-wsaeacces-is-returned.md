@@ -1,7 +1,7 @@
 ---
 title: Error 10013 when you bind excluded port again
 description: Resolves an issue in which you cannot bind an excluded port again even though the SO_REUSEADDR option is set. This issue occurs in Windows Server 2012 R2, Windows Server 2012, and Windows Server 2008 R2.
-ms.date: 06/21/2022
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

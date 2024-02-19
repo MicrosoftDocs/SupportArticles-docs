@@ -1,7 +1,7 @@
 ---
 title: Time service does not correct the time
 description: Provides a resolution for the issue that Windows Time service does not correct the time if the service gets into Spike state.
-ms.date: 10/28/2022
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

@@ -1,7 +1,7 @@
 ---
 title: Intranet site is identified as Internet site
 description: Works around an issue where an Intranet site is identified as an Internet site.
-ms.date: 09/25/2020
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

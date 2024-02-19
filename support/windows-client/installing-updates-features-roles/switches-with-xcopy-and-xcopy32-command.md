@@ -1,7 +1,7 @@
 ---
 title: Switches with Xcopy and Xcopy32 commands
 description: Describes syntax and switches that you can use with xcopy and xcopy32 commands.
-ms.date: 04/28/2023
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

@@ -1,7 +1,7 @@
 ---
 title: How to retain .bak files for AD logs
 description: Introduces a PowerShell script to retain .bak files. This script monitors .bak files at regular time intervals and renames them with a current timestamp.
-ms.date: 09/24/2021
+ms.date: 45286
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

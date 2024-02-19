@@ -1,7 +1,7 @@
 ---
 title: Configure a Low Disk Space Alert
 description: Describes how to configure a Low Disk Space Alert by using the Performance Logs and Alerts Feature.
-ms.date: 09/24/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

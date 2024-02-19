@@ -1,7 +1,7 @@
 ---
 title: Netlogon doesn't keep settings
 description: Describes an issue that prevents the Netlogon service on domain controllers from starting automatically after you upgrade to Windows Server 2016 or Windows Server 2019. Provides a resolution.
-ms.date: 09/24/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

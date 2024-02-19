@@ -1,7 +1,7 @@
 ---
 title: Determine hardware DEP is available
 description: Describes the requirements for using hardware-enforced DEP. Also describes how to confirm that hardware DEP is working.
-ms.date: 09/27/2020
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

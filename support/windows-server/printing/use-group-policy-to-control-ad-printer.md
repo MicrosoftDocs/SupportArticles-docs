@@ -1,7 +1,7 @@
 ---
 title: Use Group Policy settings to control printers
 description: Describes the policies specific to managing printers and how to enable or disable printer management by using the Local Group Policy Editor.
-ms.date: 09/24/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

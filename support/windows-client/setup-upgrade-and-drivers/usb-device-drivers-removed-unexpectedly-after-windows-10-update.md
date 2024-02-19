@@ -1,7 +1,7 @@
 ---
 title: USB device drivers are removed unexpectedly after Windows 10 is updated
 description: Address an issue in which USB device drivers are removed unexpectedly after Windows 10 is updated. Provides a workaround.
-ms.date: 04/28/2023
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

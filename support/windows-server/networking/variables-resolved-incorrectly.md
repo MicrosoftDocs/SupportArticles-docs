@@ -1,7 +1,7 @@
 ---
 title: Variables are resolved incorrectly
 description: Provides a solution to an issue where the `%HOMEPATH%`, `%HOMESHARE%`, and `%HOMEDRIVE%` variables are resolved incorrectly.
-ms.date: 09/24/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

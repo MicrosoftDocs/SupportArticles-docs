@@ -1,7 +1,7 @@
 ---
 title: Hotfixes for File Services technologies
 description: This article lists the hotfixes that are currently available for users who have installed the File Services technologies on a Windows Server 2012-based computer or on a Windows Server 2012 R2-based computer.
-ms.date: 03/24/2022
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

@@ -1,7 +1,7 @@
 ---
 title: 10060 Connection timed out error with proxy server or ISA Server on slow link
 description: Describes the 10060 Connection timed out error with proxy server or ISA Server on slow link.
-ms.date: 12/03/2020
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

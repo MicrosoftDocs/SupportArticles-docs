@@ -1,7 +1,7 @@
 ---
 title: Group Policy objects to Terminal Services
 description: Explains how to apply Group Policy objects to Terminal Services servers without adversely affecting other servers on the network.
-ms.date: 04/28/2023
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

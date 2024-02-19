@@ -1,7 +1,7 @@
 ---
 title: error code 0x800706BE
 description: Provides a resolution for the issue that you are unable to view Roles and Features and receive error code 0x800706BE in Server Manager.
-ms.date: 09/24/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

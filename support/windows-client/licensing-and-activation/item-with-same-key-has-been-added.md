@@ -1,7 +1,7 @@
 ---
 title: Fail to open a list in VAMT 2.0
 description: Fixes an error (An item with the same key has already been added) that occurs when you open a list in Volume Activation Management Tool (VAMT) 2.0
-ms.date: 04/28/2023
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

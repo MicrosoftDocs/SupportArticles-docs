@@ -1,7 +1,7 @@
 ---
 title: License attributes aren't updated after installing 2019 license server
 description: Provides a workaround for the issue in which the users license attributes (msTS*) aren't updated in Active Directory (AD).
-ms.date: 01/21/2022
+ms.date: 45286
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

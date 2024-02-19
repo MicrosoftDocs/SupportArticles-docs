@@ -1,7 +1,7 @@
 ---
 title: Local policy doesn't permit you to log on interactively
 description: Provides a resolution to an issue where Local Policy does not permit you to log on interactively.
-ms.date: 09/24/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

@@ -1,7 +1,7 @@
 ---
 title: Clients fail to apply group policy at startup
 description: Helps fix an issue where Windows 7 Clients intermittently fail to apply group policy at startup.
-ms.date: 09/08/2020
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

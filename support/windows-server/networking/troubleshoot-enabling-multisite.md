@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot enabling multisite
 description: Learn how to troubleshot issues related to the Enable-DAMultisite cmdlet.
-ms.date: 11/16/2023
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

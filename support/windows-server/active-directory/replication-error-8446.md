@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot AD replication error 8446
 description: Describes the symptoms, cause, and resolution steps for issues when Active Directory replication fails with error 8446.
-ms.date: 04/28/2023
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

@@ -1,7 +1,7 @@
 ---
 title: Enable Lightweight Directory Access Protocol (LDAP) over Secure Sockets Layer (SSL)
 description: Describes how to enable LDAP over SSL with a third-party certification authority.
-ms.date: 12/23/2022
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

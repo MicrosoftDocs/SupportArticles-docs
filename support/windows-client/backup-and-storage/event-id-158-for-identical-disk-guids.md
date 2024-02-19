@@ -1,7 +1,7 @@
 ---
 title: Event ID 158 for identical disk GUIDs
 description: Discusses that Event ID 158 is logged if identical disk GUIDs are found. Provides a resolution.
-ms.date: 09/08/2020
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

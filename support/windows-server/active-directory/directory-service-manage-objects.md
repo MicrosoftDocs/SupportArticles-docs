@@ -1,7 +1,7 @@
 ---
 title: Use Directory Service to manage AD objects
 description: Describes how to use the Directory Service command-line tools to perform administrative tasks for Active Directory in Windows Server 2003.
-ms.date: 09/24/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

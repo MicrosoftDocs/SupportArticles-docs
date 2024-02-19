@@ -1,7 +1,7 @@
 ---
 title: Event IDs 4016 and 4004 when DNS updates time out
 description: Helps resolve an issue in which Event IDs 4016 and 4004 are logged when DNS can't enumerate AD-integrated zones or create/write records in zones.
-ms.date: 11/23/2023
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

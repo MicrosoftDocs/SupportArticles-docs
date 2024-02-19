@@ -1,7 +1,7 @@
 ---
 title: Support boundary for high-accuracy time
 description: Describes the support boundary for the Windows Time (W32Time) service in environments that require highly accurate and stable system time.
-ms.date: 11/16/2023
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

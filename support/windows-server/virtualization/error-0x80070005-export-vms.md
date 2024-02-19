@@ -1,7 +1,7 @@
 ---
 title: Error 0x80070005 when you export VM over Network
 description: Provides a solution to an issue where the error 0x80070005 occurs when you export a virtual machine to a network share.
-ms.date: 09/24/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

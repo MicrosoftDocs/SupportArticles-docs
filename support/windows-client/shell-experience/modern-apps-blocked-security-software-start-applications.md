@@ -1,7 +1,7 @@
 ---
 title: Modern apps are blocked by security software when you start the applications on Windows 10
 description: Describes an issue in which Modern apps are blocked by security software when you start the applications on Windows 10. Provides a workaround.
-ms.date: 12/07/2020
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

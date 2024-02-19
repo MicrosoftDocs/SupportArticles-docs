@@ -1,7 +1,7 @@
 ---
 title: Wrong error message for missing .adml files
 description: Provides a solution to an issue where wrong error messages are returned when .adml files are missing.
-ms.date: 04/28/2023
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

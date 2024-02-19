@@ -1,7 +1,7 @@
 ---
 title: Group Policy overview
 description: Overview of Group Policy troubleshooting articles for Windows Server.
-ms.date: 06/17/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

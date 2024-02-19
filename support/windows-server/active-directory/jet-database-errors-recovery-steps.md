@@ -1,7 +1,7 @@
 ---
 title: Jet database errors and recovery steps
 description: Introduces Jet database error messages and troubleshooting steps.
-ms.date: 04/28/2023
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

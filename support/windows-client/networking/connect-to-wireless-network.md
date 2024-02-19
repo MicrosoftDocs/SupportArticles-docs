@@ -1,7 +1,7 @@
 ---
 title: connect to a wireless network
 description: Describes how to use the wireless networking functionality that is included.
-ms.date: 10/09/2020
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

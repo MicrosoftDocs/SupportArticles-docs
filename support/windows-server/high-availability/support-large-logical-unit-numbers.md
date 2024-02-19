@@ -1,7 +1,7 @@
 ---
 title: Adding support for more than eight LUNs in Windows Server
 description: Describes the support for a large number of logical unit numbers (LUNs) in Windows Server products.
-ms.date: 09/24/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

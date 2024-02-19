@@ -1,7 +1,7 @@
 ---
 title: Administrator account password expiration behavior
 description: Describes a by-design behavior of the administrator account password expiration policy.
-ms.date: 09/24/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

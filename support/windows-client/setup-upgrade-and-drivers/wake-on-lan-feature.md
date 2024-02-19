@@ -1,7 +1,7 @@
 ---
 title: Wake on LAN behavior
 description: Describes the different behaviors of the Wake on LAN (WOL) technology in Windows 7 and Windows 10.
-ms.date: 04/28/2023
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

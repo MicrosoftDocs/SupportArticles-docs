@@ -1,7 +1,7 @@
 ---
 title: Active Directory domain join troubleshooting guidance
 description: Provides guidance to troubleshoot domain join issues.
-ms.date: 07/24/2023
+ms.date: 45286
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

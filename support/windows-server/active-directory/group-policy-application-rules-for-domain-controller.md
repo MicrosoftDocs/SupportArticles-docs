@@ -1,7 +1,7 @@
 ---
 title: Group policy application rules for domain controllers
 description: Describes group policy application rules for domain controllers.
-ms.date: 09/24/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

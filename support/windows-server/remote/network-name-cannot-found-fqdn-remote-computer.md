@@ -1,7 +1,7 @@
 ---
 title: System error 67 has occurred when you use FQDN to connect to a remote computer
 description: Describes an issue where you may receive an error message when you try to connect to a remote computer by using an FQDN.
-ms.date: 09/24/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

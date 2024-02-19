@@ -1,7 +1,7 @@
 ---
 title: DHCP Server sends a DHCPNAK to clients
 description: Provides a solution to an issue when you start a Dynamic Host Configuration Protocol (DHCP) client.
-ms.date: 09/24/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

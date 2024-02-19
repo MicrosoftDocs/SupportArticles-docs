@@ -1,7 +1,7 @@
 ---
 title: Updates for Windows Server 2012 R2-based failover clusters
 description: Describes the hotfixes and updates that are currently available for Windows Server 2012 R2-based failover clusters.
-ms.date: 03/24/2022
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

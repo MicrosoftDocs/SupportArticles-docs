@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Windows activation error codes
 description: Provides troubleshooting information to help you respond to error messages that you may receive when you try to use a Multiple Activation Key (MAK) or the Key Management Service (KMS) to perform Volume Activation on one or more Windows-based computers.
-ms.date: 11/16/2023
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

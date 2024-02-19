@@ -1,7 +1,7 @@
 ---
 title: Userenv errors occur and events are logged
 description: Describes how to troubleshoot issues where computers on your network can't connect to the Group Policy objects in the Sysvol folders on your network domain controllers.
-ms.date: 09/24/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

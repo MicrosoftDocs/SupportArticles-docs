@@ -4,7 +4,7 @@ description: Introduce how to troubleshoot event ID 36884 that occurs during LDA
 author: Deland-Han
 ms.author: delhan
 ms.topic: troubleshooting
-ms.date: 12/12/2022
+ms.date: 45286
 ms.reviewer: garymu
 ms.custom: sap:ldap-configuration-and-interoperability, csstroubleshoot
 ---

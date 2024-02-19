@@ -1,7 +1,7 @@
 ---
 title: DNS works on both TCP and UDP
 description: Explains why some services use both the protocols TCP and UDP.
-ms.date: 09/24/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

@@ -1,7 +1,7 @@
 ---
 title: Active Directory replication error 1256
 description: Describes how to Active Directory replication error 1256.
-ms.date: 04/28/2023
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

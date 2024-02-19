@@ -1,7 +1,7 @@
 ---
 title: Remotely edit the registry
 description: Describes how to remotely edit the registry of a client computer from a host computer after you use Remote Recover to connect the host computer to the client computer.
-ms.date: 09/24/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

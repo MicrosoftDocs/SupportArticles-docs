@@ -1,7 +1,7 @@
 ---
 title: Network connectivity is lost
 description: Information about Microsoft Defender Antivirus antimalware platform update to solve problem of vpn users losing network connectivity.
-ms.date: 09/25/2020
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

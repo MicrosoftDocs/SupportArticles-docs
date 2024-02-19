@@ -1,7 +1,7 @@
 ---
 title: New SMB file server 3.0 features
 description: Describes new features in the next version of the Server Message Block (SMB) protocol, SMB 3.0. Windows Server introduced SMB 3.0.
-ms.date: 10/29/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

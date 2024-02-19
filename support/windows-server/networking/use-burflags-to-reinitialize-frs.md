@@ -1,7 +1,7 @@
 ---
 title: Use BurFlags to reinitialize File Replication Service (FRS)
 description: This article talks about using the BurFlags registry key to reinitialize FRS.
-ms.date: 09/24/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

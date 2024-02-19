@@ -1,7 +1,7 @@
 ---
 title: Microsoft-Windows-AppReadiness event ID 215 error
 description: Describes a Microsoft-Windows-AppReadiness event ID 215 error that occurs in Windows.
-ms.date: 09/08/2020
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

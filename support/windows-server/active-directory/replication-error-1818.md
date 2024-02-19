@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting AD Replication error 1818
 description: Describes an issue where AD operations fail with error 1818 (The remote procedure call was cancelled (RPC_S_CALL_CANCELLED)).
-ms.date: 04/28/2023
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

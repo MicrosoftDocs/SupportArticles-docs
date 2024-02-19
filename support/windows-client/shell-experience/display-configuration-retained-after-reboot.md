@@ -1,7 +1,7 @@
 ---
 title: Display issue when you use USB-attached monitor
 description: Describes an issue where the display configuration is retained after reboot when you use USB-attached monitor.
-ms.date: 09/08/2020
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

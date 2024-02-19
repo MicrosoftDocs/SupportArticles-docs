@@ -1,7 +1,7 @@
 ---
 title: The Microsoft support policy for Windows server failover clusters
 description: This article describes Microsoft support policy for Windows Server failover clusters.
-ms.date: 09/24/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

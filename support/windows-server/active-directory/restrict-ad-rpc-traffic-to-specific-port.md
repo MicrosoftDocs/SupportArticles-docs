@@ -1,7 +1,7 @@
 ---
 title: Restrict Active Directory RPC traffic to a specific port
 description: This article introduces how to configure Active Directory replication remote procedure calls traffic to a specific port.
-ms.date: 04/28/2023
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

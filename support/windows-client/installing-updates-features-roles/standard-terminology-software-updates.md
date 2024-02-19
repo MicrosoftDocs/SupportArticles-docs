@@ -1,7 +1,7 @@
 ---
 title: Description of the standard terminology
 description: This article describes the standard terminology that Microsoft uses to describe software updates.
-ms.date: 04/28/2023
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

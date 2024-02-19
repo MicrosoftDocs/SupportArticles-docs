@@ -1,7 +1,7 @@
 ---
 title: Forwarded DNS name resolution fails for dual-stacked queries
 description: Describes an issue in which DNS queries that include requests for A and AAAA records initially succeed but then fail.
-ms.date: 02/09/2023
+ms.date: 45286
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

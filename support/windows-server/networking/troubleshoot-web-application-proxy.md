@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Web Application Proxy
 description: Provides troubleshooting information for Web Application Proxy including event explanations and solutions.
-ms.date: 11/16/2023
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

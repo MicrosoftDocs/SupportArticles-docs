@@ -1,7 +1,7 @@
 ---
 title: Mirror the system and boot partition
 description: Describes how to mirror the system and boot partition (RAID1).
-ms.date: 09/24/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

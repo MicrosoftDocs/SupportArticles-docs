@@ -1,7 +1,7 @@
 ---
 title: Event ID 12321 Warning Token Based Activation failed
 description: Provides a resolution for Event ID 12321 Warning Token Based Activation failed
-ms.date: 04/28/2023
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

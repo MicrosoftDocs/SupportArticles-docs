@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot WMI high CPU usage issues
 description: Describes how to diagnose Windows Management Instrumentation (WMI) high CPU issues on any Windows operating system.
-ms.date: 12/13/2023
+ms.date: 45286
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

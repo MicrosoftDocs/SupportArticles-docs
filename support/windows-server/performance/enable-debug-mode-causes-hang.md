@@ -1,7 +1,7 @@
 ---
 title: Enable Debug mode causes to hang
 description: Provides a solution to an issue where the Operating System with debug mode enabled may hang if no Debugger is connected.
-ms.date: 09/24/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

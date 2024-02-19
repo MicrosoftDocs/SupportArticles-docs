@@ -1,7 +1,7 @@
 ---
 title: DFSR event ID 2213
 description: Describes an issue that triggers event ID 2213 in Windows 2008 or Windows 2012. This event occurs when a server or the DFSR Service experiences a dirty shutdown. Best practices are included.
-ms.date: 03/24/2022
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

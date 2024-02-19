@@ -1,7 +1,7 @@
 ---
 title: Can't display name of last logged-on user
 description: Describes how to prevent the name of the last logged-on user from being displayed in the Log On to Windows dialog box.
-ms.date: 09/24/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

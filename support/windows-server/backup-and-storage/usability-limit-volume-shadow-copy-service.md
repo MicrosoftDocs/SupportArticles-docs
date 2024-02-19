@@ -1,7 +1,7 @@
 ---
 title: Usability limit for Volume Shadow Copy Service
 description: Provides a workaround for usability limit of Volume Shadow Copy Service (VSS).
-ms.date: 09/24/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

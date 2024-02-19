@@ -1,7 +1,7 @@
 ---
 title: How to manually turn disk write caching on or off
 description: Describes the steps to manually turn on or off disk write caching.
-ms.date: 09/24/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

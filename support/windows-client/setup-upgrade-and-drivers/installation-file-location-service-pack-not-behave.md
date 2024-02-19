@@ -1,7 +1,7 @@
 ---
 title: Installation File Location not behaves
 description: Describes how to edit the registry to specify the location of the Installation files and the location of the Service Pack Installation files.
-ms.date: 04/28/2023
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

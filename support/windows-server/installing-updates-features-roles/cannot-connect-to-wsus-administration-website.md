@@ -1,7 +1,7 @@
 ---
 title: Unable to connect to WSUS Administration Website
 description: Provides a solution to an issue where you're unable to connect to WSUS Administration website.
-ms.date: 04/28/2023
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

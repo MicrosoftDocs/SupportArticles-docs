@@ -1,7 +1,7 @@
 ---
 title: SMS Agent Host service not starts
 description: Describes a problem that occurs when the system path variable is incorrect on the client computer. Provides two methods to resolve the problem.
-ms.date: 10/19/2020
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

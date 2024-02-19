@@ -1,7 +1,7 @@
 ---
 title: Group Policy is not applied to a user account for RunAs.exe or "Run as different user"
 description: Provides some information for the issue where group Policy is not applied to a user account for RunAs.exe or "Run as different user"
-ms.date: 09/21/2020
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

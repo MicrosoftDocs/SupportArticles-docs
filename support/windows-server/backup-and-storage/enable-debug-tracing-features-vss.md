@@ -1,7 +1,7 @@
 ---
 title: Enable debug tracing features of VSS
 description: Provides steps for modifying the registry in Windows Server 2003 to enable the Volume Shadow Copy service's debug tracing features.
-ms.date: 09/24/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

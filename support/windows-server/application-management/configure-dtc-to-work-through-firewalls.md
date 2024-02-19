@@ -1,7 +1,7 @@
 ---
 title: Configure Distributed Transaction Coordinator (DTC) to work through a firewall
 description: Describes how to configure DTC to work through firewalls.
-ms.date: 05/16/2023
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

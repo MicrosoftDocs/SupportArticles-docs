@@ -1,7 +1,7 @@
 ---
 title: WSAEMSGSIZE - Error 10040 in Winsock 2.0
 description: Describes how to fix WSAEMSGSIZE - Error 10040 in Winsock 2.0
-ms.date: 09/24/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

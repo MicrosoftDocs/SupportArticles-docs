@@ -1,7 +1,7 @@
 ---
 title: Active Directory overview
 description: Overview of Active Directory troubleshooting articles for Windows clients.
-ms.date: 11/09/2020
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

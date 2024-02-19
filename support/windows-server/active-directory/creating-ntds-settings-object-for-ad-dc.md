@@ -1,7 +1,7 @@
 ---
 title: Active Directory installation fails
 description: Fixes an error that occurs when you start Active Directory installation.
-ms.date: 09/24/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

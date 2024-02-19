@@ -1,7 +1,7 @@
 ---
 title: Overview of Server Message Block signing
 description: Describes how to configure SMB signing and how to determine whether SMB signing is enabled.
-ms.date: 12/19/2022
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

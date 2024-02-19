@@ -1,7 +1,7 @@
 ---
 title: Error message when you run the w32tm /resync command
 description: Describes a problem that occurs if a Group Policy object for a Windows Time Service object is configured incorrectly.
-ms.date: 12/05/2022
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

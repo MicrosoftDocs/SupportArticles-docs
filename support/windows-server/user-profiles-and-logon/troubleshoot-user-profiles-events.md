@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot user profiles with events
 description: Discusses how to troubleshoot problems loading and unloading user profiles by using events and trace logs.
-ms.date: 11/16/2023
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

@@ -1,7 +1,7 @@
 ---
 title: Custom credential providers don't load at first logon
 description: Address an issue in which custom credential providers do not work when you first log on
-ms.date: 09/14/2020
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

@@ -1,7 +1,7 @@
 ---
 title: Create an ISO image for UEFI platforms
 description: Describes how to create an UEFI bootable Windows PE RAM Disk on a CD-ROM.
-ms.date: 04/28/2023
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

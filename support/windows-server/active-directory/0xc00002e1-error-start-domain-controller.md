@@ -1,7 +1,7 @@
 ---
 title: 0xc00002e1 error when you start your Windows-based domain controller
 description: Explains how to recover from a corrupted Active Directory database or from a similar problem that prevents your computer from starting in normal mode.
-ms.date: 03/24/2022
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

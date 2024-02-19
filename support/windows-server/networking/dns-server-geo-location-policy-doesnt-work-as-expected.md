@@ -1,7 +1,7 @@
 ---
 title: DNS server geo-location policy doesn't work as expected
 description: Describes an issue where DNS resolution policy doesn't produce the results that might be expected.
-ms.date: 02/08/2023
+ms.date: 45286
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

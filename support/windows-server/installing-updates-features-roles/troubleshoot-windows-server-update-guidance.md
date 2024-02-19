@@ -1,7 +1,7 @@
 ---
 title: Guidance for troubleshooting Windows Server update
 description: Introduces general guidance for troubleshooting scenarios related to Windows Server update.
-ms.date: 04/28/2023
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

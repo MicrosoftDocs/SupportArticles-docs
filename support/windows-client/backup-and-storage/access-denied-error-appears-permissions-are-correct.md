@@ -1,7 +1,7 @@
 ---
 title: Access is denied error message appears when permissions are correct
 description: Provides a solution for access is denied error message when permissions are correct.
-ms.date: 12/03/2020
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

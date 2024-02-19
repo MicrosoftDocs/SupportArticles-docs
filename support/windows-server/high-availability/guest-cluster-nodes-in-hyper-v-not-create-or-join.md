@@ -1,7 +1,7 @@
 ---
 title: Guest Cluster nodes in Hyper-V may not be able to create or join
 description: This article provides workarounds for the issue that Guest Cluster nodes in Hyper-V may not be able to create or join.
-ms.date: 09/24/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

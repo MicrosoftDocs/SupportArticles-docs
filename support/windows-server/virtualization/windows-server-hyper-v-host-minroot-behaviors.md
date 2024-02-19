@@ -1,7 +1,7 @@
 ---
 title: Windows Server 2019 Hyper-V host minroot behavior
 description: Describes behavior that's specific to the Windows Server 2019 Hyper-V host minroot configuration, and provides links to more information about this behavior.
-ms.date: 11/17/2022
+ms.date: 45286
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: Can't manage cluster with failover cluster manager
 description: Helps fix an error that you receive when managing cluster by using failover cluster management console.
-ms.date: 12/09/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

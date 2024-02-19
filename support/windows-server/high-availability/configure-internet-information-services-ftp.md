@@ -1,7 +1,7 @@
 ---
 title: Configure FTP for IIS in a Windows Server failover cluster
 description: Describes how to configure FTP for IIS in a Windows Server failover cluster.
-ms.date: 08/31/2022
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

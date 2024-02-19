@@ -1,7 +1,7 @@
 ---
 title: Problems occur with DCs in AD integrated DNS zones
 description: Describes problems that can occur with many Domain Controllers in Active Directory integrated DNS zones.
-ms.date: 09/24/2021
+ms.date: 45286
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: System Restore fails with error 0x8007045b
 description: Describes an issue that occurs when you try to restore a system back to a restore point after you accept enforced security.
-ms.date: 10/21/2020
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

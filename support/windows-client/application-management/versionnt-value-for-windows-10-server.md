@@ -1,7 +1,7 @@
 ---
 title: VersionNT value for Windows 10 and Windows Server 2016
 description: Provides the VersionNT value for Windows 10 and Windows Server 2016.
-ms.date: 12/07/2020
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

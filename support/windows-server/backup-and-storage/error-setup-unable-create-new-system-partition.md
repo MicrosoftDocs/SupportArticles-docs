@@ -1,7 +1,7 @@
 ---
 title: Windows Setup in a boot from SAN configuration reports Setup was unable to create a new system partition or locate an existing system partition
 description: Works around an issue where you can't install Windows in the boot LUN from SAN configuration when there are multiple physical paths to the boot LUN.
-ms.date: 11/10/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

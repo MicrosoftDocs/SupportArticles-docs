@@ -1,7 +1,7 @@
 ---
 title: Gather information by using TSS for Active Directory replication issues
 description: Introduces how to gather information by using the TroubleShootingScript (TSS) toolset for Active Directory replication issues.
-ms.date: 07/13/2023
+ms.date: 45286
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

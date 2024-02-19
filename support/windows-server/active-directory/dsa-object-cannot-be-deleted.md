@@ -1,7 +1,7 @@
 ---
 title: Fail to delete orphaned NTDS Settings
 description: Resolves an issue where you fail to delete an orphaned NTDS Settings from Active Directory Sites and Services.
-ms.date: 09/24/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

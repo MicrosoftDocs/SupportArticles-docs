@@ -1,7 +1,7 @@
 ---
 title: Windows Search 4.0 and Multilingual User Interface Pack
 description: Describes the features and improvements in Windows Search 4.0. Provides download information.
-ms.date: 04/07/2023
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

@@ -1,7 +1,7 @@
 ---
 title: DNS server logs event 7062
 description: Provides a solution to solve the DNS server logs event 7062.
-ms.date: 12/21/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

@@ -1,7 +1,7 @@
 ---
 title: Terminal Server error messages 2200 to 2299
 description: Describes Terminal Server error messages 2200 to 2299.
-ms.date: 09/24/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

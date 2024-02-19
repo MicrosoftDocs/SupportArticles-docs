@@ -1,7 +1,7 @@
 ---
 title: How to move Windows DNS zones to another Windows server
 description: Describes how to move the zone files from one DNS server that is running Windows 2000 to another DNS server that is running Windows 2000.
-ms.date: 09/24/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

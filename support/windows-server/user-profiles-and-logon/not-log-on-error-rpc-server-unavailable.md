@@ -1,7 +1,7 @@
 ---
 title: Error the RPC server is unavailable
 description: Provides a resolution for the issue that the system cannot log you on, due to error the RPC server is unavailable.
-ms.date: 09/24/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

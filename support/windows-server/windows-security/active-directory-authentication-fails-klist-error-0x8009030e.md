@@ -4,7 +4,7 @@ description: Describes several Active Directory authentication issues and how to
 author: Deland-Han
 ms.author: delhan
 ms.topic: troubleshooting
-ms.date: 05/10/2023
+ms.date: 45286
 ms.custom: sap:kerberos-authentication, csstroubleshoot, ikb2lmc
 ms.reviewer: kaushika
 ---

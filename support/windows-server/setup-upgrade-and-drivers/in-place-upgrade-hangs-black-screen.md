@@ -1,7 +1,7 @@
 ---
 title: Domain Controllers in-place upgrade hangs at black screen
 description: This article describes a problem where domain controllers in-place upgraded hangs at a solid black screen.
-ms.date: 04/28/2023
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

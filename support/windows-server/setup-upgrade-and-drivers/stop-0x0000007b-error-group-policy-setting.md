@@ -1,7 +1,7 @@
 ---
 title: Stop 0x0000007B error after you use a Group Policy setting to prevent the installation of devices
 description: Describes an issue that occurs when you uninstall a third-party SATA controller driver and then restart the computer
-ms.date: 04/28/2023
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

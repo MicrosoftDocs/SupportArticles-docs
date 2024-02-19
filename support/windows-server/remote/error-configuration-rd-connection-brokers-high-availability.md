@@ -1,7 +1,7 @@
 ---
 title: Error after completing configuration of the RD Connection Broker server for high availability
 description: Provides resolutions for the error that occur after completing configuration of the RD Connection Broker server for high availability.
-ms.date: 11/06/2023
+ms.date: 45286
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

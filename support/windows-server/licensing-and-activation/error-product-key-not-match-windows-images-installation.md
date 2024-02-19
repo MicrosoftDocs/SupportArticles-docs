@@ -1,7 +1,7 @@
 ---
 title: Error The product key entered does not match any of the Windows images during Windows installation
 description: Describes an issue where you receive an error message during the installation of Windows.
-ms.date: 04/28/2023
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

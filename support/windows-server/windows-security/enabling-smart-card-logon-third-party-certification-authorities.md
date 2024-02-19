@@ -1,7 +1,7 @@
 ---
 title: Enabling smart card logon
 description: Provides some guidelines for enabling smart card logon with third-party certification authorities.
-ms.date: 08/21/2023
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

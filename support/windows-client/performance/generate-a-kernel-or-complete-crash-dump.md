@@ -1,7 +1,7 @@
 ---
 title: Generate a kernel or complete crash dump
 description: Learn how to generate a kernel or complete crash dump, and then use the output to troubleshoot several issues.
-ms.date: 08/23/2022
+ms.date: 45286
 ms.topic: troubleshooting
 author: Deland-Han
 ms.author: delhan

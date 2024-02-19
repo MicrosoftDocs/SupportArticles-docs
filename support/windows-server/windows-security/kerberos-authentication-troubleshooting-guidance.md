@@ -1,7 +1,7 @@
 ---
 title: Kerberos authentication troubleshooting guidance
 description: Provides guidance to troubleshoot Kerberos authentication issues.
-ms.date: 05/10/2023
+ms.date: 45286
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: Delete a user profile in Windows
 description: Describes steps to delete a user profile in Windows.
-ms.date: 06/17/2022
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

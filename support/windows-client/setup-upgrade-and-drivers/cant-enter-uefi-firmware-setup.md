@@ -1,7 +1,7 @@
 ---
 title: Can't enter UEFI firmware setup
 description: Provides a solution to an issue where you can't enter UEFI firmware setup when in native UEFI mode.
-ms.date: 04/28/2023
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

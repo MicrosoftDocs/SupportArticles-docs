@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot DFSN access failures
 description: Provides help to troubleshoot DFSN failures.
-ms.date: 09/24/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

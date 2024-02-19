@@ -1,7 +1,7 @@
 ---
 title: Print to File without user intervention
 description: Describes how to Print to File without user intervention.
-ms.date: 09/24/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

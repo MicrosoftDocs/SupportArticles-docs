@@ -1,7 +1,7 @@
 ---
 title: New sessions setup for LDAP services takes longer than expected if targeting host names
 description: Discusses a problem in which a new session setup for LDAP services takes longer than expected if it targets host names.
-ms.date: 06/21/2022
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

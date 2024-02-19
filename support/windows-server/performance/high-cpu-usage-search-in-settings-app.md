@@ -1,7 +1,7 @@
 ---
 title: High CPU usage when you search in the Settings app in Windows Server 2016
 description: Describes an issue in which you experience high CPU usage when you search in the Settings app in Windows Server 2016. Provides a workaround.
-ms.date: 12/07/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

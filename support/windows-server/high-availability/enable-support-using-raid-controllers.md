@@ -1,7 +1,7 @@
 ---
 title: Enable support for Clustered Windows Servers that use clustered RAID controllers
 description: Describes the steps required to enable a Direct Attached clustered RAID Storage Solution for Clustered Windows Servers.
-ms.date: 09/24/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

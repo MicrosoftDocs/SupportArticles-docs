@@ -1,7 +1,7 @@
 ---
 title: Decommission a Windows enterprise CA
 description: Provides step-by-step instructions for removing a CA from Windows Server 2012 R2.
-ms.date: 10/10/2022
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

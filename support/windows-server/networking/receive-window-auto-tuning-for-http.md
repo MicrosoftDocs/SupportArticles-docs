@@ -1,7 +1,7 @@
 ---
 title: Receive Window Auto-Tuning feature for HTTP traffic
 description: Describes how Auto-Tuning improves data transfer, how to enable Auto-Tuning for HTTP traffic on Windows Vista-based computers, and issues that may occur after you enable Auto-Tuning for HTTP traffic.
-ms.date: 09/24/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

@@ -1,7 +1,7 @@
 ---
 title: SSL/TLS communication problems after you install KB 931125
 description: Provides a solution to SSL/TLS communication problems that occur after you install KB 931125.
-ms.date: 03/24/2022
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

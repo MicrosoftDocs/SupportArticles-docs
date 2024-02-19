@@ -1,7 +1,7 @@
 ---
 title: System stops responding when using Citrix Virtual Apps and Desktops
 description: Helps resolve an issue in which the system stops responding when using Citrix Virtual Apps and Desktops to access a terminal server.
-ms.date: 11/23/2023
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

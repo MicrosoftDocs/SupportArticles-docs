@@ -1,7 +1,7 @@
 ---
 title: How to replace a driver by using Recovery Console
 description: Describes how to use Recovery Console to replace a driver on a Windows Server 2003-based computer that you can't start.
-ms.date: 04/28/2023
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

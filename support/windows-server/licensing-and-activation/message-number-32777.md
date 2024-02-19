@@ -1,7 +1,7 @@
 ---
 title: Fail to activate Windows Server over the Internet
 description: Provides help to solve an error that occurs when you activate Windows Server 2003 over the Internet fails.
-ms.date: 04/28/2023
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

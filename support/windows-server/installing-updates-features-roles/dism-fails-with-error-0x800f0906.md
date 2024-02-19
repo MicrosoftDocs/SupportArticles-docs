@@ -1,7 +1,7 @@
 ---
 title: Fail to convert Windows Server Core to GUI
 description: Describes an issue where converting Windows Server 2012 R2 Core to Server with a GUI by using a DISM or PowerShell command fails with error 0x800f0906.
-ms.date: 04/28/2023
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

@@ -1,7 +1,7 @@
 ---
 title: Earlier Windows versions don't start after you use Pre-Provision BitLocker with Windows 10, version 1511
 description: Explains why earlier Windows versions don't start after you run the Setup Windows and Configuration Manager step if Pre-Provision BitLocker is used with Windows 10, version 1511.
-ms.date: 09/14/2020
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

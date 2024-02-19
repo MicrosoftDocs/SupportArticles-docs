@@ -1,7 +1,7 @@
 ---
 title: Remote Desktop Licensing Service doesn't start
 description: Resolves an issue where Remote Desktop Licensing Service fails to start with event ID 623.
-ms.date: 05/16/2023
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

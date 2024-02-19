@@ -1,7 +1,7 @@
 ---
 title: Most recent previous versions are missing for a share that has Previous Versions enabled in Windows
 description: Works around an issue in which most recent previous versions aren't displayed for a share in Windows that has the Previous Versions feature enabled.
-ms.date: 04/27/2022
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

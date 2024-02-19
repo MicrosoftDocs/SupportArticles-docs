@@ -1,7 +1,7 @@
 ---
 title: Enumerate locked out user accounts using Saved Queries
 description: provides some step-by-step instructions to enumerate locked out user accounts using Saved Queries
-ms.date: 09/24/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

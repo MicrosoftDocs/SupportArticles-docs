@@ -1,7 +1,7 @@
 ---
 title: User-defined data collector set doesn't run as scheduled
 description: This article provides a workaround for an issue in which a user-defined data collector set that is configured to run on a schedule does not run.
-ms.date: 12/09/2021
+ms.date: 45286
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

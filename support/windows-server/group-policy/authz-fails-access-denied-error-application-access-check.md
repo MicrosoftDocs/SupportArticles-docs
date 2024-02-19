@@ -1,7 +1,7 @@
 ---
 title: Access checks fail because of AuthZ
 description: Addresses an issue in which AuthZ fails and returns an Access Denied error when an application does access checks in Windows Server.
-ms.date: 04/28/2023
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

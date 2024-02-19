@@ -1,7 +1,7 @@
 ---
 title: Daylight saving time help and support
 description: Describes the Microsoft policy in response to DST and time zone changes.
-ms.date: 01/19/2023
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

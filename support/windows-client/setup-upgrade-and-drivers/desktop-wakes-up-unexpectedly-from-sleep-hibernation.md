@@ -1,7 +1,7 @@
 ---
 title: Desktop wakes up unexpectedly from sleep or hibernation
 description: Document findings based on OEM support case, where customer observed unexpected wake behavior. Provide information on how to track down the source of wake events, and related information.
-ms.date: 04/28/2023
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

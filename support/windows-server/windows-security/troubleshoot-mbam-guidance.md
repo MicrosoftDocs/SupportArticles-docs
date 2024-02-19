@@ -1,7 +1,7 @@
 ---
 title: Guidance for troubleshooting MBAM
 description: Introduces general guidance for troubleshooting scenarios related to MBAM.
-ms.date: 05/10/2022
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

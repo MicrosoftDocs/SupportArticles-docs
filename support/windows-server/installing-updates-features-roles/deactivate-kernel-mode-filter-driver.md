@@ -1,7 +1,7 @@
 ---
 title: Deactivate the kernel mode filter driver
 description: Describes how you can temporarily deactivate the kernel mode filter driver in Windows.
-ms.date: 04/28/2023
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

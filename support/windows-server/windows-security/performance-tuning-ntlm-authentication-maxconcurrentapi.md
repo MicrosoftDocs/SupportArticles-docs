@@ -1,7 +1,7 @@
 ---
 title: performance tuning for NTLM authentication
 description: Describes how to do performance tuning for NTLM authentication by using the MaxConcurrentApi setting.
-ms.date: 09/24/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

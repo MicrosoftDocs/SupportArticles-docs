@@ -1,7 +1,7 @@
 ---
 title: Terminal Services Application Server mode
 description: Describes the issue when you toggle Terminal Services to Application Server mode, some programs may stop working.
-ms.date: 09/07/2022
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

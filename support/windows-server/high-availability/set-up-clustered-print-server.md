@@ -1,7 +1,7 @@
 ---
 title: How to set up a clustered print server
 description: Describes how to set up a clustered print server.
-ms.date: 09/24/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

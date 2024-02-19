@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Event ID 1311 messages
 description: Describes how to troubleshoot event ID 1311 messages in the Directory Service event.
-ms.date: 04/28/2023
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

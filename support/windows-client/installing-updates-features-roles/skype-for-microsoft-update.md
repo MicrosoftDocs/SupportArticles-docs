@@ -1,7 +1,7 @@
 ---
 title: Skype for Microsoft Update
 description: Describes how to keep Skype updated through Microsoft Update and through the Upgrade function in Skype.
-ms.date: 04/28/2023
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

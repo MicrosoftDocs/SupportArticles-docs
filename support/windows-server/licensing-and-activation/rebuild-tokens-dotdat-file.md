@@ -1,7 +1,7 @@
 ---
 title: Rebuild the Tokens.dat file
 description: Describes how to rebuild the Tokens.dat file when you troubleshoot Windows activation issues.
-ms.date: 04/28/2023
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

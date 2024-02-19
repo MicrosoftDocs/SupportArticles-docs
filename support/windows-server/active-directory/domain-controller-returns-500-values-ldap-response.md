@@ -1,7 +1,7 @@
 ---
 title: DC returns only 5000 values in LDAP response
 description: Provides a solution to an issue where the Windows Server 2008 R2 or newer domain controller only returns 5000 values for an LDAP response.
-ms.date: 09/24/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

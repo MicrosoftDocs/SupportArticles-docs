@@ -1,7 +1,7 @@
 ---
 title: User has not been authenticated error when you access a network drive mapped to a web share
 description: Describes an issue that triggers an error on a Windows-based computer when you try to access a mapped web share. Provides a resolution.
-ms.date: 10/09/2020
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

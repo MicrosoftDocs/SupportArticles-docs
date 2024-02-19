@@ -1,7 +1,7 @@
 ---
 title: Apps and APIs require access
 description: Explains that some applications and APIs must have access to the token-groups-global-and-universal (TGGAU) attribute on user account objects, or on computer account objects in the Active Directory directory service.
-ms.date: 09/24/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

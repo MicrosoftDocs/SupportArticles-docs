@@ -1,7 +1,7 @@
 ---
 title: Use Group Policy to deploy a Known Issue Rollback
 description: describes how to configure Group Policy to use a Known Issue Rollback (KIR) policy definition that activates a KIR on managed devices.
-ms.date: 06/15/2022
+ms.date: 45286
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

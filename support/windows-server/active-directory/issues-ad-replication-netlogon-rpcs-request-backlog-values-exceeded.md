@@ -1,7 +1,7 @@
 ---
 title: Issues when AD replication and Netlogon RPCs request backlog values are exceeded
 description: Describes how to configure Active Directory (AD) replication and Netlogon remote procedure calls (RPCs) request backlog values in Windows Server.
-ms.date: 08/22/2022
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

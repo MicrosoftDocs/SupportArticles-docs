@@ -1,7 +1,7 @@
 ---
 title: Event ID 236 on a Hyper-V server that has SR-IOV enabled on a VM in Windows Server
 description: Address an Event ID 236 that occurs on a Hyper-V server that has SR-IOV enabled on a VM in Windows Server.
-ms.date: 09/24/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

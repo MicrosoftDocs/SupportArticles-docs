@@ -1,7 +1,7 @@
 ---
 title: Cluster IP address resources fail on both nodes of a two-node, two-site cluster when one node disconnects from the public VLAN
 description: This article describes the behavior that occurs when one node of a two-node, two-site cluster disconnects from the public cluster VLAN. In this case, the IP address resources and their corresponding cluster groups fail on both nodes.
-ms.date: 12/09/2021
+ms.date: 45286
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

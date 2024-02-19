@@ -1,7 +1,7 @@
 ---
 title: Active Directory replication Event ID 2042 (It has been too long since this machine replicated)
 description: Helps you troubleshoot Active Directory replication Event ID 2042.
-ms.date: 04/28/2023
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

@@ -1,7 +1,7 @@
 ---
 title: Slow performance when you print
 description: Describes an issue on a failover cluster in which cluster nodes may stop responding temporarily.
-ms.date: 04/20/2022
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

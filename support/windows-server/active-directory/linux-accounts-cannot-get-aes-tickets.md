@@ -1,7 +1,7 @@
 ---
 title: Linux accounts cannot get AES tickets
 description: Provides methods to resolve an issue where Linux-integrated accounts in AD DS can't get AES-encrypted Kerberos tickets but get RC4-encrypted tickets instead.
-ms.date: 01/22/2022
+ms.date: 45286
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

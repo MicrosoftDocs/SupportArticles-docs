@@ -1,7 +1,7 @@
 ---
 title: Orphaned child domain controller isn't replicated
 description: Describes an issue in which an orphaned child domain controller can't replicate information to other domain controllers in a domain, and provides a resolution.
-ms.date: 04/28/2023
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

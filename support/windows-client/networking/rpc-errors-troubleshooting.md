@@ -1,7 +1,7 @@
 ---
 title: RPC error troubleshooting guidance
 description: Learn how to troubleshoot Remote Procedure Call (RPC) errors that occur during computer-to-computer communication. Such communication can involve Windows Management Instrumentation (WMI), SQL Server, Active Directory operations, or remote connections.
-ms.date: 03/10/2023
+ms.date: 45286
 ms.topic: troubleshooting
 manager: dcscontentpm
 ms.collection: highpri

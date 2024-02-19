@@ -1,7 +1,7 @@
 ---
 title: Fix heavy memory usage in ReFS
 description: Discusses memory pressure and performance issues that occur in the Resilient File System (ReFS) in Windows. Provides a resolution and workarounds.
-ms.date: 09/24/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

@@ -1,7 +1,7 @@
 ---
 title: New logging mechanism for VDS
 description: The old VDS logging mechanism is removed in Windows 8 and a new one is introduced.
-ms.date: 09/24/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

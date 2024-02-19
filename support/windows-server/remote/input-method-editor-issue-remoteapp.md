@@ -1,7 +1,7 @@
 ---
 title: Input method editor issue in RemoteApp scenarios
 description: Troubleshoot input method editor problems in RemoteApp scenarios.
-ms.date: 11/16/2023
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

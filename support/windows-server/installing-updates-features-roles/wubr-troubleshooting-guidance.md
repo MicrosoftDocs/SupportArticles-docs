@@ -1,7 +1,7 @@
 ---
 title: Guidance for troubleshooting Windows Update for Business reports issues
 description: Introduces general guidance for troubleshooting scenarios related to Windows Update for Business reports
-ms.date: 12/19/2023
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

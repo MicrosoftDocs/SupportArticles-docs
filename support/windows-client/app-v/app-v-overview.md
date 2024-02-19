@@ -1,7 +1,7 @@
 ---
 title: Application Virtualization (App-V) overview
 description: Overview of App-V troubleshooting articles for Windows clients.
-ms.date: 01/19/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

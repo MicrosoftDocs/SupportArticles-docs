@@ -1,7 +1,7 @@
 ---
 title: Redundant subnets are incorrectly created
 description: Discusses an issue in which redundant subnets are incorrectly created in an iSCSI IPv6 network.
-ms.date: 09/24/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

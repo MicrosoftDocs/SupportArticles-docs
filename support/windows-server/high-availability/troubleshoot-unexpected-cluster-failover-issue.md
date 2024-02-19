@@ -1,7 +1,7 @@
 ---
 title: Guidance for troubleshooting unexpected cluster failover
 description: Provides guidance to find the root cause of an unexpected failover in a Windows-based failover cluster.
-ms.date: 05/09/2022
+ms.date: 45286
 author: kaushika-msft
 ms.author: kaushika
 manager: dcscontentpm

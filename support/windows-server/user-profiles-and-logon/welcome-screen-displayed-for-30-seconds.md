@@ -1,7 +1,7 @@
 ---
 title: Welcome screen is displayed for 30 seconds
 description: Describes an issue that occurs because the logon process runs in session 0. However, the logon script process runs in a different session. Provides a resolution.
-ms.date: 09/24/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

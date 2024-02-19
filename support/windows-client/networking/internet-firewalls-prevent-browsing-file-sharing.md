@@ -1,7 +1,7 @@
 ---
 title: Internet firewalls prevent file sharing
 description: Explains that a firewall may keep you from searching or sharing files with other computers on a home network.
-ms.date: 09/22/2020
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

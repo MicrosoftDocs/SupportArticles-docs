@@ -1,7 +1,7 @@
 ---
 title: Disable Terminal Server Client Logons
 description: Describes how to temporarily disable Terminal Server Client Logons.
-ms.date: 09/24/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

@@ -1,7 +1,7 @@
 ---
 title: You cannot add a domain controller as a node in a failover cluster environment
 description: Provides some information about how to add a domain controller as a node in a failover cluster environment
-ms.date: 09/24/2021
+ms.date: 45286
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
