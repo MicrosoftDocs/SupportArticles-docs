@@ -9612,7 +9612,7 @@
     },
     {
        "source_path": "support/azure/azure-kubernetes/operationisnotallowed.md",
-       "redirect_url": "/support/azure/azure-kubernetes/operationnotallowed",
+       "redirect_url": "/troubleshoot/azure/azure-kubernetes/operationnotallowed",
        "redirect_document_id": true
     }
   ]
