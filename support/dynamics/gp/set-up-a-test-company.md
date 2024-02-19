@@ -2,7 +2,7 @@
 title: Set up a test company
 description: Describes how to set up a test company that has a copy of your live production company data by using Microsoft SQL Server.
 ms.reviewer: theley
-ms.date: 02/18/2024
+ms.date: 02/19/2024
 ---
 # Set up a test company that has a copy of live company data for Microsoft Dynamics GP by using Microsoft SQL Server
 
