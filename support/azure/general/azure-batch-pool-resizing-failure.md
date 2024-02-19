@@ -1,7 +1,7 @@
 ---
 title: Azure batch pool resizing failure
 description: An Azure batch pool resizing failure occurs. You can review the symptoms, understand the causes, and apply solutions to this problem.
-ms.date: 07/11/2023
+ms.date: 02/19/2024
 ms.reviewer: biny, v-weizhu
 ms.service: batch
 ---
@@ -160,5 +160,80 @@ To reduce the impact on your production, use the following methods:
 - Retry your resize request after a few minutes.
 - Create a new pool.
 - Use the Batch service in another available region as a failover if the methods above aren't helpful.
+
+## Scenario 6: Azure Batch service permission issue
+
+### Symptom for Scenario 6
+
+The following error message appears in the **Overview** pane of the pool:
+
+> **Resize errors:**  
+> Desired number of dedicated nodes could not be allocated (Code: AllocationFailed)  
+> Details:  
+>  \- Azure Batch Service does not have the desired permissions to perform a pool operation. (Code: Reason)
+
+### Cause: Azure Batch service doesn't have permissions to manage compute resources
+
+This error only happens in [user subscription pool allocation mode](/azure/batch/batch-account-create-portal#additional-configuration-for-user-subscription-mode). In user subscription pool allocation mode, compute and VM-related resources for pools are created directly in the Batch account subscription when a pool is created. As a result, Azure Batch service needs to have the right permission (the **Contributor** or **Owner** role) to manage these compute and VM-related resources in a user's subscription.
+
+### Solution: Grant right permissions for Microsoft Azure Batch
+
+1. In the [Azure portal](https://portal.azure.com/), search for and select **subscriptions**.
+2. On the **Subscriptions** page, select the subscription you want to use for the Batch account.
+3. Select **Access control (IAM)** from the left navigation.
+4. At the top of the **Access control (IAM)** page, select **Add** > **Add role assignment**.
+5. On the **Add role assignment** screen, under **Assignment type**, select **Privileged administrator role**, and then select **Next**.
+6. On the **Role** tab, select either the **Contributor** or **Owner** role for the Batch account, and then select **Next**.
+7. On the **Members** tab, select **Select members**. On the **Select members** screen, search for and select **Microsoft Azure Batch**, and then select **Select**.
+8. Select the **Review + assign** tab, and then select **assign**.
+
+For more information, see [Allow Batch to access the subscription](/azure/batch/batch-account-create-portal#allow-batch-to-access-the-subscription).
+
+## Scenario 7: Key vault permission issue
+
+### Symptom for Scenario 7
+
+The following error message appears in the **Overview** pane of the pool:
+
+> **Resize errors:**  
+> Desired number of dedicated nodes could not be allocated (Code: AllocationFailed)  
+> Details:  
+> \- Allocation failed as Batch is not authorized to access the key vault. (Code: Reason)
+
+### Cause: Azure Batch service doesn't have permission to access associated key vault
+
+This error only happens in [user subscription pool allocation mode](/azure/batch/batch-account-create-portal#additional-configuration-for-user-subscription-mode). In user subscription pool allocation mode, Azure Batch needs to access the associated Azure key vault to manage secrets for pool resize operations.
+
+### Solution: Grant access to the key vault
+
+1. In the Azure Batch portal, select **Properties** from the left navigation.
+2. At the bottom of the page, find the name of the associated Azure Key Vault.
+3. Search for and select the associated Azure Key Vault.
+4. Select **Access configuration** under **Settings** from the left navigation.
+5. Check the **Permission model** of your key vault.
+
+    If the key vault permission model is Azure role-based access control, follow these steps:
+
+    1. Select **Access control (IAM)** from the left navigation of the key vault page.
+    2. At the top of the **Access control (IAM)** page, select **Add** > **Add role assignment**.
+    3. On the **Add role assignment** screen, under **Role** tab, under **Job function roles** sub tab, select either **Key Vault Secrets Officer** or **Key Vault Administrator** role for the Batch account, and then select **Next**.
+    4. On the **Members** tab, select **Select members**. On the **Select members** screen, search for and select **Microsoft Azure Batch**, and then select **Select**.
+    5. Select **Review + create** on the bottom to go to **Review + assign** tab, and select **Review + create** again.
+
+    For detailed steps, see [Assign Azure roles by using the Azure portal](/azure/role-based-access-control/role-assignments-portal).
+
+    If the key vault permission model is Vault access policy, follow these steps:
+
+    1. Select **Access policies** from the left navigation of the key vault page.
+    2. On the **Access policies** page, select **Create**.
+    3. On the **Create an access policy** screen, select a minimum of **Get**, **List**, **Set**, and **Delete** permissions under **Secret permissions**. For [key vaults with soft-delete enabled](/azure/key-vault/general/soft-delete-overview), also select **Recover**.
+
+        :::image type="content" source="media/azure-batch-pool-resizing-failure/kv-permission-issue-pic2.png" alt-text="Screenshot of the key vault secret permission.":::
+
+    4. Select **Next**.
+    5. On the **Principal** tab, search for and select **Microsoft Azure Batch**.
+    6. Select the **Review + create** tab, and then select **Create**.
+
+For more details, see [Grant access to the key vault manually](/azure/batch/batch-account-create-portal#grant-access-to-the-key-vault-manually).
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
