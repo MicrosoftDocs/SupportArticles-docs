@@ -519,6 +519,8 @@
       href: windows-vm-activation-error-0xc004fd01-0xc004fd02.md
     - name: Error 0xC004F06C
       href: ../../windows-server/deployment/error-0xc004f06c-activate-windows.md?context=/troubleshoot/azure/virtual-machines/context/context
+    - name: Error 0xC004F074
+      href: windows-vm-activation-error-0xc004f074.md
   - name: KMS endpoints - new endpoints
     href: windows-activation-stopped-working.md
 
