@@ -7,7 +7,7 @@ ms.date: 02/19/2024
 ---
 # "Cannot access this form because the dictionary containing it is not loaded" error when you open a window in Microsoft Dynamics GP
 
-This article provides methods to resolve the "Cannot access this form because the dictionary containing it is not loaded" error.
+This article provides methods to resolve the "Cannot access this form because the dictionary containing it is not loaded" error in Microsoft Dynamics GP.
 
 _Applies to:_ &nbsp; Microsoft Dynamics GP  
 _Original KB number:_ &nbsp; 851052
