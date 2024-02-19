@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting intermittent connection errors
 description: This article helps you to resolve an issue related to the intermittent connection.
-ms.date: 01/08/2024
+ms.date: 02/19/2024
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
@@ -20,7 +20,7 @@ Consider a scenario where you try to connect to the SQL Server, the following in
 
 ## Cause
 
-One of the possible reasons for this issue could be due to a mismatch between security protocols between the database and the application machine.
+One of the possible reasons for this issue could be due to a mismatch between security protocols between the database and the application machines.
 
 ## Resolution
 
