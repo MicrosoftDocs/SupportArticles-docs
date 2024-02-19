@@ -3,7 +3,7 @@ title: Change the 1099 amount for a vendor
 description: Describes how to change the 1099 amount for a vendor who wasn't marked as a 1099 vendor in the year that the transactions were posted in Payables Management in Microsoft Dynamics GP.
 ms.reviewer: theley
 ms.topic: how-to
-ms.date: 02/15/2024
+ms.date: 02/19/2024
 ---
 # How to change the 1099 amount for a vendor who wasn't marked as a 1099 vendor in the year that the transactions were posted in Payables Management in Microsoft Dynamics GP
 
@@ -22,10 +22,6 @@ Transactions are posted in Microsoft Dynamics GP for a vendor who isn't marked a
 
 > [!NOTE]
 > Before you follow the instructions in this article, make sure that you have a complete backup copy of the database that you can restore if a problem occurs.
-
-Follow the method for the appropriate version you're using:
-
-### Microsoft Dynamics GP 
 
 New functionality was added to Microsoft Dynamics GP 2013 and higher versions that will make changing the 1099 status for a vendor easy. You can use the steps below to change the 1099 settings on the vendor and their transaction history at the select of a button, whether you're making the vendor a 1099 vendor or reversing them from being a 1099 vendor. Follow these steps for either scenario:
 
@@ -70,8 +66,7 @@ New functionality was added to Microsoft Dynamics GP 2013 and higher versions th
 
 > [!NOTE]
 > If you set the vendor to **Not a 1099 Vendor** using Method 1, you will get the message in this window:  
-> *"XXXXXX is not a 1099 Vendor."*.  
+> *"XXXXXX is not a 1099 Vendor."* 
 > If the Vendor card is set up to not be a 1099 vendor, you would be unable to select the vendor in this window as they have no 1099 information to view.
 
-Review the more information about the [Professional Services Tools Library](https://learn.microsoft.com/en-us/dynamics/s-e/gp/noam_pstl_delta).
-
+Review the more information about the [Professional Services Tools Library](/dynamics/s-e/gp/noam_pstl_delta).
