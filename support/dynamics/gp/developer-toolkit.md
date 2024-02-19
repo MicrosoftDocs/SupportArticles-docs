@@ -2,7 +2,7 @@
 title: The Developer Toolkit for Microsoft Dynamics GP
 description: This article describes the Developer Toolkit for Microsoft Dynamics GP.
 ms.reviewer: theley
-ms.date: 02/16/2024
+ms.date: 02/19/2024
 ---
 # The Developer Toolkit for Microsoft Dynamics GP
 
@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 914090
 
 ## Summary
 
-Microsoft Dynamics GP includes the Developer Toolkit for Microsoft Dynamics GP. This toolkit consists of three components that developers can use to build Microsoft .NET-based solutions, customizations, and extensions. One component, eConnect the other components, Web Services for Microsoft Dynamics GP and Visual Studio Tools for Microsoft Dynamics GP.
+Microsoft Dynamics GP includes the Developer Toolkit for Microsoft Dynamics GP. This toolkit consists of three components that developers can use to build Microsoft .NET-based solutions, customizations, and extensions. The three components are eConnect, Web Services for Microsoft Dynamics GP, and Visual Studio Tools for Microsoft Dynamics GP.
 
 ## Introduction
 
@@ -36,9 +36,7 @@ This article also includes information about availability and pricing.
   By using Visual Studio Tools for Microsoft Dynamics GP, you can use Microsoft Visual Studio .NET and .NET languages to build an integration add-in to the Microsoft Dynamics GP application. The architecture lets you use industry standard tools such as Microsoft Visual Studio to perform the following tasks:
 
   - Respond to Microsoft Dynamics GP events
-
   - Programmatically reference Microsoft Dynamics GP forms, windows, scrolling windows, fields, global variables, and global scripts
-
   - Form global scripts
 
 - eConnect
@@ -58,10 +56,9 @@ To install eConnect, use one of the following methods:
 - Perform a Runtime installation. To do this, locate the following file on the Dynamics GP media and then double-click the file.
 
    > [!NOTE]
-   > The Runtime Install option appears on the splash screen.
+   > The Runtime Install option appears on the splash screen.  
    > `\AdProd\eConnect\Microsoft_Business_Solutions_eConnect_Runtime.exe`
 
 - Perform a full eConnect installation. To do this, locate the following file on the media and then double-click the file:
 
    `\Tools\eConnect_SDK\Microsoft_Business_Solutions_eConnect.exe`
-
