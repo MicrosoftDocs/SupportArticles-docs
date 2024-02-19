@@ -38,17 +38,17 @@ Reinstall the module that was removed. This action re-creates the product dictio
 
 Select a form for Microsoft Dynamics GP to use. To do it, use the appropriate option.
 
-    1. Open the Alternate/Modified Forms and Reports window. To do it, on the **Microsoft Dynamics GP** menu, point to **Tools** > **Setup** > **System**, and then select **Alternate/Modified Forms and Reports**.
-    2. In the **ID** list, select the appropriate ID.
-    3. In the **Product** list, select **All Products**.
-    4. In the **Type** list, select **Windows**.
-    5. In the **Alternate/Modified Forms and Reports List** area, expand the appropriate node based on the window you want to access.
-    6. Expand the appropriate window, and then select **Microsoft Dynamics GP** or the appropriate option.
-    7. Select **Save**.
-    8. Close the Alternate/Modified Forms and Reports window.
+1. Open the **Alternate/Modified Forms and Reports** window. To do it, on the **Microsoft Dynamics GP** menu, point to **Tools** > **Setup** > **System**, and then select **Alternate/Modified Forms and Reports**.
+2. In the **ID** list, select the appropriate ID.
+3. In the **Product** list, select **All Products**.
+4. In the **Type** list, select **Windows**.
+5. In the **Alternate/Modified Forms and Reports List** area, expand the appropriate node based on the window you want to access.
+6. Expand the appropriate window, and then select **Microsoft Dynamics GP** or the appropriate option.
+7. Select **Save**.
+8. Close the **Alternate/Modified Forms and Reports** window.
 
-    > [!NOTE]
-    > By default, when you open the **Advanced Security** window, the current user and the current company are selected. Any changes that you make are for the current user and for the current company. However, you can select more companies in the **Company Name** area. You can select more users in the **User** area of the **Advanced Security** window.
+> [!NOTE]
+> By default, when you open the **Advanced Security** window, the current user and the current company are selected. Any changes that you make are for the current user and for the current company. However, you can select more companies in the **Company Name** area. You can select more users in the **User** area of the **Advanced Security** window.
 
 ## Resolution 2
 
@@ -64,14 +64,14 @@ For more information about how to re-create the _Forms.dic file_, see [How to re
 
 Select a form for Microsoft Dynamics GP to use. To do it, use the appropriate option.
 
-    1. Open the **Alternate/Modified Forms and Reports** window. To do it, on the **Microsoft Dynamics GP** menu, point to **Tools** > **Setup** > **System**, and then select **Alternate/Modified Forms and Reports**.
-    2. In the **ID** list, select the appropriate ID.
-    3. In the **Product** list, select **All Products**.
-    4. In the **Type** list, select **Windows**.
-    5. In the **Alternate/Modified Forms and Reports List** area, expand the appropriate node based on the window you want to access.
-    6. Expand the appropriate window, and then select **Microsoft Dynamics GP** or the appropriate option.
-    7. Select **Save**.
-    8. Close the Alternate/Modified Forms and Reports window.
+1. Open the **Alternate/Modified Forms and Reports** window. To do it, on the **Microsoft Dynamics GP** menu, point to **Tools** > **Setup** > **System**, and then select **Alternate/Modified Forms and Reports**.
+2. In the **ID** list, select the appropriate ID.
+3. In the **Product** list, select **All Products**.
+4. In the **Type** list, select **Windows**.
+5. In the **Alternate/Modified Forms and Reports List** area, expand the appropriate node based on the window you want to access.
+6. Expand the appropriate window, and then select **Microsoft Dynamics GP** or the appropriate option.
+7. Select **Save**.
+8. Close the **Alternate/Modified Forms and Reports** window.
 
-        > [!NOTE]
-        > By default, when you open the **Advanced Security** window, the current user and the current company are selected. Any changes that you make are for the current user and for the current company. However, you can select more companies in the **Company Name** area. You can select more users in the **User** area of the **Advanced Security** window.
+> [!NOTE]
+> By default, when you open the **Advanced Security** window, the current user and the current company are selected. Any changes that you make are for the current user and for the current company. However, you can select more companies in the **Company Name** area. You can select more users in the **User** area of the **Advanced Security** window.
