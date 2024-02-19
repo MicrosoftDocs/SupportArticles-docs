@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:schema-update-known-issues-best-practices-workflow-review, csstroubleshoot
-ms.technology: windows-server-active-directory
 ---
 # Finding the current Schema Version
 

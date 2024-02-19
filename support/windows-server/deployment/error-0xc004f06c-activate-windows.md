@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-naqviadil, v-lianna
 ms.custom: sap:activation, csstroubleshoot
-ms.technology: windows-server-deployment
 ---
 # Error 0xC004F06C when you activate Windows
 

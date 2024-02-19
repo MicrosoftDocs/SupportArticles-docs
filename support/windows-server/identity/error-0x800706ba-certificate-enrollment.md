@@ -6,8 +6,6 @@ ms.author: delhan
 ms.topic: troubleshooting
 ms.date: 12/13/2023
 ms.reviewer: kaushika
-ms.prod: windows-server
-ms.technology: windows-server-active-directory
 ms.custom: sap:active-directory-certificate-services, csstroubleshoot, ikb2lmc
 ---
 # Error 0x800706ba "The RPC Server is unavailable" when you enroll a certificate

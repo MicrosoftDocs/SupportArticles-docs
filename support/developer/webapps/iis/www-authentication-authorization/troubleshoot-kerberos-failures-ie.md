@@ -4,7 +4,7 @@ description: Provides symptoms and various steps you can take to solve them, dep
 ms.date: 07/13/2020
 ms.custom: sap:Internet Explorer
 ms.reviewer: ramakoni, paulboc, dili
-ms.technology: iis-www-authentication-authorization
+ms.subservice: www-authentication-authorization
 ---
 # Troubleshoot Kerberos failures in Internet Explorer
 

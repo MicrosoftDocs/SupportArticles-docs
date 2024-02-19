@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: willgloy, kaushika
 ms.custom: sap:administration, csstroubleshoot
-ms.technology: windows-server-rds
 ---
 # Terminal Server error messages: 2200 to 2299
 

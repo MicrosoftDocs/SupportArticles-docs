@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-dgit
 ms.custom: sap:management-and-configuration:-general-issues, csstroubleshoot
-ms.technology: windows-server-printing
 ---
 # The standard port monitor for TCP/IP
 

@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, fmu
 ms.custom: sap:managing-internet-explorer-settings-through-group-policy, csstroubleshoot
-ms.technology: windows-server-group-policy
 ---
 # "Allow active content to run files on My Computer" Group Policy setting does not work as expected
 

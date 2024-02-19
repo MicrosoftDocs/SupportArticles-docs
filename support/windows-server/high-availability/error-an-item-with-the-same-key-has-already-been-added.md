@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:errors-when-running-the-validation-wizard, csstroubleshoot
-ms.technology: windows-server-high-availability
 ---
 # Error: "An item with the same key has already been added"
 

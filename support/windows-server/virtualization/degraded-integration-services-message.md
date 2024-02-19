@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, abgupta
 ms.custom: sap:integration-components, csstroubleshoot
-ms.technology: hyper-v
 ---
 # Degraded integration services message for non-Windows guests
 

@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, nedpyle
 ms.custom: sap:setup, csstroubleshoot
-ms.technology: windows-server-deployment
 ---
 # Domain controller configuration error (The server is not operational) when you configure a server by using Server Manager
 

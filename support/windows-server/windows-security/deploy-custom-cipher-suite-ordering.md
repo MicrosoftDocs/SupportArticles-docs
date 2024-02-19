@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:secure-channel-issues, csstroubleshoot
-ms.technology: windows-server-security
 ---
 # How to deploy custom cipher suite ordering in Windows Server 2016
 

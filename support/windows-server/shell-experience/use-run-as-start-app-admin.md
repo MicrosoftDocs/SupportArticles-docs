@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, BOBQIN
 ms.custom: sap:desktop-shell, csstroubleshoot
-ms.technology: windows-server-shell-experience
 ---
 # How to use Run as to start an application as an administrator account
 

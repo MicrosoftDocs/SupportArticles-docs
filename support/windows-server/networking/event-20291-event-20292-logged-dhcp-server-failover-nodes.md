@@ -5,11 +5,9 @@ ms.date: 02/02/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, rnitsch, markusr, v-lianna
 ms.custom: sap:dynamic-host-configuration-protocol-dhcp, csstroubleshoot
-ms.technology: networking
 ---
 # Event ID 20291 and Event ID 20292 are logged on DHCP server failover nodes
 
