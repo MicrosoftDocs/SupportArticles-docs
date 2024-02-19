@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:configuring-and-using-backup-software, csstroubleshoot
-ms.subservice: backup-and-storage
 ---
 # Diskshadow error when you try to create a VSS snapshot  
 

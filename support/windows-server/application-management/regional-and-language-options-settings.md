@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: markreno, kaushika
 ms.custom: sap:multilingual-user-interface-mui-and-input-method-editor-ime, csstroubleshoot
-ms.subservice: application-compatibility
 ---
 # How the Regional and Language Options settings in Windows Server 2003 are applied
 

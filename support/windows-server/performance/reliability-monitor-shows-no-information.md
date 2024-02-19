@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, subheetr
 ms.custom: sap:performance-monitoring-tools, csstroubleshoot
-ms.subservice: performance
 ---
 # Reliability Monitor displays no information in Windows Server
 

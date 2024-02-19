@@ -7,11 +7,9 @@ ms.author: kaushika
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:root-cause-of-an-unexpected-failover, csstroubleshoot
-ms.subservice: high-availability
 ---
 # Unexpected cluster failover troubleshooting guidance
 

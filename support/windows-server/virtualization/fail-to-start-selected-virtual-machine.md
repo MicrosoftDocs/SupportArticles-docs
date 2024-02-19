@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:virtual-machine-will-not-boot, csstroubleshoot
-ms.subservice: hyper-v
 ---
 # An error occurred while attempting to start the selected virtual machine
 

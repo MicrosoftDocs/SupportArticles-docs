@@ -5,11 +5,9 @@ ms.date: 05/05/2022
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate
 ms.custom: sap:virtual-machine-state, csstroubleshoot
-ms.subservice: hyper-v
 keywords: Get-VMNetworkAdapter
 ---
 

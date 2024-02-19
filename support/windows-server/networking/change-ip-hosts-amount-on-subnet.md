@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, drewba
 ms.custom: sap:dynamic-host-configuration-protocol-dhcp, csstroubleshoot
-ms.subservice: networking
 ---
 # Increase the number of IP addresses on a subnet in a DHCP server
 

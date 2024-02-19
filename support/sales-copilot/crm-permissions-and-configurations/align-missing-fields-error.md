@@ -2,7 +2,6 @@
 title: Align missing fields error in Copilot for Sales
 description: Resolves an error that occurs due to field mismatching between Microsoft Dynamics 365 and Copilot for Sales.
 ms.date: 01/16/2024
-ms.service: microsoft-sales-copilot
 author: sbmjais
 ms.author: shjais
 ms.custom:

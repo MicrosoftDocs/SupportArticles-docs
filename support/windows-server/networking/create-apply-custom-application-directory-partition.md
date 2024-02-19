@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: rolandw, v-jomcc, kaushika
 ms.custom: sap:dns, csstroubleshoot
-ms.subservice: networking
 ---
 # How to create and apply a custom application directory partition on an Active Directory integrated DNS zone
 

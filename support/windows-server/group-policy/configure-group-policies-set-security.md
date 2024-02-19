@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:security-filtering-and-item-level-targeting, csstroubleshoot
-ms.subservice: group-policy
 ---
 # How To Configure Group Policies to Set Security for System Services
 

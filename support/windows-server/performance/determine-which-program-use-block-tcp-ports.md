@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: jamirc, kaushika
 ms.custom: sap:performance-monitoring-tools, csstroubleshoot
-ms.subservice: performance
 ---
 # How to determine which program uses or blocks specific Transmission Control Protocol ports in Windows Server 2003
 

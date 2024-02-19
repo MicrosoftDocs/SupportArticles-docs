@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, davemid, kbsec
 ms.custom: sap:permissions-access-control-and-auditing, csstroubleshoot
-ms.subservice: windows-security
 ---
 # When you select Continue for folder access in Windows Explorer, your user account is added to the ACL for the folder
 

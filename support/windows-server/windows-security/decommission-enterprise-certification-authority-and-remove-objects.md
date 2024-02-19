@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, lanaef, alrad, ckinder
-ms.custom: sap:certificates-and-public-key-infrastructure-pki, csstroubleshoot
-ms.subservice: windows-security
+ms.custom: sap:active-directory-certificate-services-adcs, csstroubleshoot
 ---
 # How to decommission a Windows enterprise certification authority and remove all related objects
 

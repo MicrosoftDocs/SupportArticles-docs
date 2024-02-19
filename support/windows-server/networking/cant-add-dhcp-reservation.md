@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, btoth, miodon, joelch
 ms.custom: sap:dynamic-host-configuration-protocol-dhcp, csstroubleshoot
-ms.subservice: networking
 ---
 # You cannot add a DHCP reservation that is outside of the scope distribution range in Windows Server
 

@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, Rajsin
-ms.custom: sap:certificates-and-public-key-infrastructure-pki, csstroubleshoot
-ms.subservice: windows-security
+ms.custom: sap:encrypting-file-system-efs, csstroubleshoot
 ---
 # Error when client computers encrypt a file in a Windows Server 2003 domain: Recovery policy configured for this system contains invalid recovery certificate
 

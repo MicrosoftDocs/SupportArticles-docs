@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:management-of-containers, csstroubleshoot
-ms.subservice: containers
 ---
 # Support policy for Windows Server containers in on-premises scenarios
 

@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, stevemat, CTIMON
 ms.custom: sap:root-cause-of-an-unexpected-failover, csstroubleshoot
-ms.subservice: high-availability
 ---
 # Run the chkdsk /f command on a shared cluster disk
 

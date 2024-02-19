@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-lianna
 ms.custom: sap:node-removed-from-the-cluster, csstroubleshoot
-ms.subservice: high-availability
 ---
 # Having a problem with nodes being removed from active failover cluster membership
 

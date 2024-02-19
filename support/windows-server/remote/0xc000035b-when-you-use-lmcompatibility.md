@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, Randym
 ms.custom: sap:authentication, csstroubleshoot
-ms.subservice: rds
 ---
 # Terminal Services client connection error 0xC000035B when you use LmCompatibility
 

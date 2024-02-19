@@ -5,11 +5,9 @@ ms.date: 12/09/2021
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-lianna
 ms.custom: sap:performance-monitoring-tools, csstroubleshoot
-ms.subservice: performance
 ---
 # Known UI limitation of the CPU information in Windows Server 2016
 

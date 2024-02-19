@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:management-and-configuration:-print-queue-backup-and-migration, csstroubleshoot
-ms.subservice: printing
 ---
 # Back up and then restore printers when you upgrade from Windows Server 2003 to Windows Server 2008
 

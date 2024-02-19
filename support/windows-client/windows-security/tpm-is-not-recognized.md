@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, manojse, raverma, suhasm
 ms.custom: sap:secure-boot-and-uefi, csstroubleshoot
-ms.technology: windows-client-security
 ---
 # A Trusted Platform Module (TPM) isn't recognized on some Windows 7 devices
 

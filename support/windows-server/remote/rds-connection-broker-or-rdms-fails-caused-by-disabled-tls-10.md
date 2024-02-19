@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jerrycif
 ms.custom: sap:certificate-management, csstroubleshoot
-ms.subservice: rds
 ---
 # RDS Connection Broker or RDMS fails after you disable TLS 1.0 in Windows Server
 

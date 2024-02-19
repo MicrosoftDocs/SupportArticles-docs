@@ -9,7 +9,7 @@ metadata:
   ms.topic: landing-page # Required
   author: genlin  #Required; your GitHub user alias, with correct capitalization.
   ms.author: genli #Required; microsoft alias of author; optional team alias.
-  ms.date: 01/26/2024
+  ms.date: 02/08/2024
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -31,7 +31,35 @@ landingContent:
             url: container-group-deployment-waiting-state.md
           - text: Inaccessible image failure
             url: inaccessible-image.md
+          - text: Error codes for Spot container creation
+            url: error-codes-spot-container-creation.md
           - text: Error - Web socket is closed or could not be opened
             url: web-socket-is-closed-or-could-not-be-opened.md
           - text: Image pull takes a long time to run
             url: long-image-pulls.md
+
+  # Card
+  - title: Troubleshoot a running container group 
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Can't pull images from Container Registry using a managed identity
+            url: acr-image-pull-failures-managed-identity.md
+          - text: Confidential container issues
+            url: common-confidential-container-errors.md
+          - text: Container group still runs after a stop or delete command 
+            url: aci-still-running-after-stop-delete-command.md
+          - text: Container Instances debugging tools
+            url: aci-debug-tools.md
+
+  # Card
+  - title: Troubleshoot container groups in virtual networks
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Can't delete a virtual network or subnet
+            url: cannot-delete-vnet-subnet.md
+          - text: Error - Web socket is closed or could not be opened
+            url: web-socket-is-closed-or-could-not-be-opened.md
+
+

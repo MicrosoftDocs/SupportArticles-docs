@@ -7,11 +7,9 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:kerberos-authentication, csstroubleshoot
-ms.subservice: windows-security
 ---
 # The kerberos client received a KRB_AP_ERR_MODIFIED error from the server
 
