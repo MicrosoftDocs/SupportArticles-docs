@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Dataverse plug-ins
 description: Contains information about errors that can occur during plug-in execution, or Dataverse errors that are related to plug-ins, and how to avoid or fix them.
-ms.date: 02/09/2024
+ms.date: 02/18/2024
 author: divkamath
 ms.author: dikamath
 ms.reviewer: phecke
@@ -38,8 +38,8 @@ For more information, see [Specify time zone settings for a user](/power-apps/de
 This error simply means that the worker process running your plug-in code crashed. Your plug-in might be the reason for the crash, but it could also be another plug-in running concurrently for your organization. Because the process crashed, we can't extract any more specific information about why it crashed. But after examining data from the crash dumps after the fact, we found that this error usually occurs due to one of the four reasons:
 
 - [Unhandled exception in the plug-in](#unhandled-exception-in-the-plug-in)
-- [Stack Overflow error in the plug-in](#stack-overflow-error-in-the-plug-in)
 - [Using threads to queue work with no try/catch in thread delegate](#using-threads-to-queue-work-with-no-trycatch-in-thread-delegate)
+- [Stack Overflow error in the plug-in](#stack-overflow-error-in-the-plug-in)
 - [Worker process reaches the memory limit](#worker-process-reaches-the-memory-limit)
 
 ### Unhandled exception in the plug-in
@@ -137,6 +137,35 @@ namespace ErrorRepro
     }
 }
 ```
+
+### Using threads to queue work with no try/catch in thread delegate
+
+You shouldn't use parallel execution patterns in plug-ins. This anti-pattern is called out in the best practice article: [Don't use parallel execution within plug-ins and workflow activities](/power-apps/developer/data-platform/best-practices/business-logic/do-not-use-parallel-execution-in-plug-ins). Using these patterns can cause issues managing the transaction in a synchronous plug-in. However, another reason not to use these patterns is that any work done outside of a `try`/`catch` block in a thread delegate can crash the worker process.
+
+> [!IMPORTANT]
+> When the worker process crashes, the execution of your plug-in and other plug-ins currently running in that process will terminate. This includes plug-ins that you don't own or maintain.
+
+#### Application Insights to the rescue
+
+In the past, obtaining the stack trace or other execution information for unhandled plug-in exceptions from the crashed worker process was impossible. However, Dataverse now offers support for logging execution failures to Application Insights. To enable this function, you can link Application Insights to the environment where your plug-in is registered. Once linked, the logging of plug-in crashes occur automatically.
+
+For more information, see [Export data to Application Insights](/power-platform/admin/set-up-export-application-insights).
+
+After an Application Insights environment has been linked, the following data of a work process crash will be available for troubleshooting the problem.
+
+:::image type="content" source="media/dataverse-plug-ins-errors/dataverse-appinsights-crash-report.png" alt-text="Example of an Application Insights plug-in crash report.":::
+
+To navigate to the crash report in Application Insights, follow these steps:
+
+1. [Link Application Insights to your environment](/azure/azure-monitor/app/create-workspace-resource).
+1. Wait until a plug-in exception results in the crash error of the worker process.
+1. In the [Power Platform admin center](https://admin.powerplatform.microsoft.com/), navigate to Application Insights.
+1. On the Application Insights page, select **Failures** in the left panel.
+1. On the **Failures** page, select **Exceptions**.
+1. Under **Exception Problem ID**, in the **Overall** list, select **Microsoft.PowerPlatform.Dataverse.Plugin.PluginWorkerCrashException**.
+1. On the right side of the page, under **Overall**, select **PluginWorkerCrashException**. You'll now see the details of all recorded worker process crash exceptions.
+1. Search for and select the desired exception in the left panel, and the exception details report will be displayed on the right side of the page (see the preceding screenshot for an example).
+1. To access the stack trace, expand **CrashDetails** in the report.
 
 ### Stack overflow error in the plug-in
 
@@ -252,10 +281,6 @@ Exception rethrown at [0]:
 </OrganizationServiceFault>
 ```
 
-### Using threads to queue work with no try/catch in thread delegate
-
-You shouldn't use parallel execution patterns in plug-ins. This anti-pattern is called out in the best practice article: [Don't use parallel execution within plug-ins and workflow activities](/power-apps/developer/data-platform/best-practices/business-logic/do-not-use-parallel-execution-in-plug-ins). Using these patterns can cause issues managing the transaction in a synchronous plug-in. However, another reason not to use these patterns is that any work done outside of a `try`/`catch` block in a thread delegate can crash the worker process.
-
 ### Worker process reaches the memory limit
 
 Each worker process has a finite amount of memory. There are conditions where multiple concurrent operations that include large amounts of data could exceed the available memory and cause the process worker to crash.
@@ -339,7 +364,7 @@ When a plug-in executes in the context of a disabled user, the following error i
 
 > Error Message: System.ServiceModel.FaultException`1[Microsoft.Xrm.Sdk.OrganizationServiceFault]: The user with **SystemUserId=\<User-ID\>** in OrganizationContext=\<Context\> is disabled. Disabled users cannot access the system. Consider enabling this user. Also, users are disabled if they don't have a license assigned to them.
 
-To troubleshoot the error, run the following query to identify the steps registered to the disabled user and get details about the related plug-in and `SdkMessage`.
+To troubleshoot this error, you can execute a query to find the steps registered to the disabled user as well as the associated plug-in and `SdkMessage` details.
 
 ```http
 https://<env-url>/api/data/v9.2/sdkmessageprocessingsteps
