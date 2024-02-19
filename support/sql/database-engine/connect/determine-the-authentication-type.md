@@ -1,7 +1,7 @@
 ---
 title: Determine the authentication type
 description: This article explains about how to determine the type of authentication that's used when you connect to SQL Server. 
-ms.date: 02/09/2024
+ms.date: 02/19/2024
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
@@ -50,48 +50,48 @@ If either of the previous options aren't available, consider using the following
 
 1. Copy the following script into a text editor, such as Notepad, and save it as *getAuthScheme.vbs*:
 
-```vbs
-' Auth scheme VB script.
-' Run on a client machine, not the server.
-' If you run locally, you will always get NTLM even if Kerberos is properly enabled.
-'
-' USAGE:  CSCRIPT getAuthScheme.vbs tcp:SQLProd01.contoso.com,1433   ' explicitly specify DNS suffix, protocol, and port # ('tcp' must be lower case)
-' USAGE:  CSCRIPT getAuthScheme.vbs SQLProd01                        ' let the driver figure out the DNS suffix, protocol, and port #
-'
-Dim cn, rs, s
-s = WScript.Arguments.Item(0)              ' get the server name from the command-line
-Set cn = createobject("adodb.connection")
-'
-' Various connection strings depending on the driver/Provider installed on your machine
-' SQLOLEDB is selected as it is on all windows machines, but may have limitations, such as lack of TLS 1.2 support
-' Choose a newer provider or driver if you have it installed.
-'
-cn.open "Provider=SQLOLEDB;Data Source=" & s & ";Initial Catalog=master;Integrated Security=SSPI"          ' On all Windows machines
-'cn.open "Provider=SQLNCLI11;Data Source=" & s & ";Initial Catalog=master;Integrated Security=SSPI"        ' Newer
-'cn.open "Provider=MSOLEDBSQL;Data Source=" & s & ";Initial Catalog=master;Integrated Security=SSPI"       ' Latest, good for SQL 2012 and newer
-'cn.open "Driver={ODBC Driver 17 for SQL Server};Server=" & s & ";Database=master;Trusted_Connection=Yes"  ' Latest
-'
-' Run the query and display the results
-'
-set rs = cn.Execute("select auth_scheme from sys.dm_exec_connections where session_id=@@SPID")
-WScript.Echo "Auth scheme: " & rs(0)
-rs.close
-cn.close
-```
+    ```vbs
+    ' Auth scheme VB script.
+    ' Run on a client machine, not the server.
+    ' If you run locally, you will always get NTLM even if Kerberos is properly enabled.
+    '
+    ' USAGE:  CSCRIPT getAuthScheme.vbs tcp:SQLProd01.contoso.com,1433   ' explicitly specify DNS suffix, protocol, and port # ('tcp' must be lower case)
+    ' USAGE:  CSCRIPT getAuthScheme.vbs SQLProd01                        ' let the driver figure out the DNS suffix, protocol, and port #
+    '
+    Dim cn, rs, s
+    s = WScript.Arguments.Item(0)              ' get the server name from the command-line
+    Set cn = createobject("adodb.connection")
+    '
+    ' Various connection strings depending on the driver/Provider installed on your machine
+    ' SQLOLEDB is selected as it is on all windows machines, but may have limitations, such as lack of TLS 1.2 support
+    ' Choose a newer provider or driver if you have it installed.
+    '
+    cn.open "Provider=SQLOLEDB;Data Source=" & s & ";Initial Catalog=master;Integrated Security=SSPI"          ' On all Windows machines
+    'cn.open "Provider=SQLNCLI11;Data Source=" & s & ";Initial Catalog=master;Integrated Security=SSPI"        ' Newer
+    'cn.open "Provider=MSOLEDBSQL;Data Source=" & s & ";Initial Catalog=master;Integrated Security=SSPI"       ' Latest, good for SQL 2012 and newer
+    'cn.open "Driver={ODBC Driver 17 for SQL Server};Server=" & s & ";Database=master;Trusted_Connection=Yes"  ' Latest
+    '
+    ' Run the query and display the results
+    '
+    set rs = cn.Execute("select auth_scheme from sys.dm_exec_connections where session_id=@@SPID")
+    WScript.Echo "Auth scheme: " & rs(0)
+    rs.close
+    cn.close
+    ```
 
 1. Run the *getAuthScheme.vbs* PowerShell script at a command prompt:
 
-```powershell
-C:\Temp>cscript getAuthScheme.vbs SQLProd01
-```
+    ```powershell
+    C:\Temp>cscript getAuthScheme.vbs SQLProd01
+    ```
 
-You should see the following output:
+    You should see the following output:
 
-```output
-Microsoft (R) Windows Script Host Version 5.812
-Copyright (C) Microsoft Corporation. All rights reserved.
-Auth scheme: NTLM
-```
+    ```output
+    Microsoft (R) Windows Script Host Version 5.812
+    Copyright (C) Microsoft Corporation. All rights reserved.
+    Auth scheme: NTLM
+    ```
 
 ## Use PowerShell
 
