@@ -4,7 +4,7 @@ description: This article contains the release history for SQL Server 2022 runni
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, vanto
-ms.date: 01/11/2024
+ms.date: 02/15/2024
 appliesto: SQL Server 2022
 ms.custom: linux-related-content
 ---
@@ -35,7 +35,7 @@ The following table lists the release history for [!INCLUDE [sql-server-2022](..
 
 ## <a id="CU11"></a> CU 11 (January 2024)
 
-This is the Cumulative Update 11 (CU 11) release of [!INCLUDE [sql-server-2022](../../includes/versions/sql-server-2022.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 16.0.4105.2. For information about the fixes and improvements in this release, see the [Support article](/troubleshoot/sql/releases/sqlserver-2022/cumulativeupdate11).
+This is the Cumulative Update 11 (CU 11) release of [!INCLUDE [sql-server-2022](../../includes/versions/sql-server-2022.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 16.0.4105.2. For information about the fixes and improvements in this release, see the [Support article](../sqlserver-2022/cumulativeupdate11.md).
 
 ### Package details
 
