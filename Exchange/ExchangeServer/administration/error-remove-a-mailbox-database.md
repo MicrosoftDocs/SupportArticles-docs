@@ -58,8 +58,8 @@ To fix the issue, follow these steps:
    1. Get a list of enabled user mailboxes by running the following PowerShell commands:
 
       ```PowerShell
-      userMailboxes = Get-Mailbox -Database <database name> | where {$_.IsMailboxEnabled}
-      userMailboxes
+      $userMailboxes = Get-Mailbox -Database <database name> | where {$_.IsMailboxEnabled}
+      $userMailboxes
       ```
 
       If the list is empty, go to step 3.
@@ -69,19 +69,19 @@ To fix the issue, follow these steps:
       - To move the user mailboxes to another database, run the following PowerShell cmdlet:
 
         ```PowerShell
-        userMailboxes | New-MoveRequest -TargetDatabase <target database name>
+        $userMailboxes | New-MoveRequest -TargetDatabase <target database name>
         ```
 
       - To disable the user mailboxes, run the following PowerShell cmdlet:
 
         ```PowerShell
-        userMailboxes | Disable-Mailbox
+        $userMailboxes | Disable-Mailbox
         ```
 
       - To remove the user mailboxes, run the following PowerShell cmdlet:
 
         ```PowerShell
-        userMailboxes | Remove-Mailbox
+        $userMailboxes | Remove-Mailbox
         ```
 
 3. Move or disable any enabled archive mailboxes in the database:
@@ -89,9 +89,9 @@ To fix the issue, follow these steps:
    1. Get a list of enabled archive mailboxes by running the following PowerShell commands:
 
       ```PowerShell
-      archiveMailboxes = Get-Mailbox -Archive -Database <database name> | where {$_.IsMailboxEnabled}
-      archiveMailboxes += Get-Mailbox | where {$_.ArchiveDatabase -eq "<database name>"} | where {$_.IsMailboxEnabled}
-      archiveMailboxes
+      $archiveMailboxes = Get-Mailbox -Archive -Database <database name> | where {$_.IsMailboxEnabled}
+      $archiveMailboxes += Get-Mailbox | where {$_.ArchiveDatabase -eq "<database name>"} | where {$_.IsMailboxEnabled}
+      $archiveMailboxes
       ```
 
       If the list is empty, go to step 4.
@@ -101,13 +101,13 @@ To fix the issue, follow these steps:
       - To move the archive mailboxes to another database, run the following PowerShell cmdlet:
 
         ```PowerShell
-        archiveMailboxes | New-MoveRequest -TargetDatabase <target database name>
+        $archiveMailboxes | New-MoveRequest -TargetDatabase <target database name>
         ```
 
       - To disable the archive mailboxes, run the following PowerShell cmdlet:
 
         ```PowerShell
-        archiveMailboxes | Disable-Mailbox -Archive
+        $archiveMailboxes | Disable-Mailbox -Archive
         ```
 
 4. Move, disable, or remove any enabled public folder mailboxes in the database:
@@ -115,8 +115,8 @@ To fix the issue, follow these steps:
    1. Get a list of enabled public folder mailboxes by running the following PowerShell commands:
 
       ```PowerShell
-      pfMailboxes = Get-Mailbox -PublicFolder -Database <database name> | where {$_.IsMailboxEnabled}
-      pfMailboxes
+      $pfMailboxes = Get-Mailbox -PublicFolder -Database <database name> | where {$_.IsMailboxEnabled}
+      $pfMailboxes
       ```
 
       If the list is empty, go to step 5.
@@ -126,19 +126,19 @@ To fix the issue, follow these steps:
       - To move the public folder mailboxes to another database, run the following PowerShell cmdlet:
 
         ```PowerShell
-        pfMailboxes | New-MoveRequest -TargetDatabase <target database name>
+        $pfMailboxes | New-MoveRequest -TargetDatabase <target database name>
         ```
 
       - To disable the public folder mailboxes, run the following PowerShell cmdlet:
 
         ```PowerShell
-        pfMailboxes | Disable-Mailbox -PublicFolder
+        $pfMailboxes | Disable-Mailbox -PublicFolder
         ```
 
       - To remove the public folder mailboxes, run the following PowerShell cmdlet:
 
         ```PowerShell
-        pfMailboxes | Remove-Mailbox -PublicFolder
+        $pfMailboxes | Remove-Mailbox -PublicFolder
         ```
 
 5. Move, disable, or remove any enabled arbitration mailboxes in the database:
@@ -146,8 +146,8 @@ To fix the issue, follow these steps:
    1. Get a list of enabled arbitration mailboxes by running the following PowerShell commands:
 
       ```PowerShell
-      arbitrationMailboxes = Get-Mailbox -Arbitration -Database <database name> | where {$_.IsMailboxEnabled}
-      arbitrationMailboxes
+      $arbitrationMailboxes = Get-Mailbox -Arbitration -Database <database name> | where {$_.IsMailboxEnabled}
+      $arbitrationMailboxes
       ```
 
       If the list is empty, go to step 6.
@@ -157,31 +157,31 @@ To fix the issue, follow these steps:
       - To move the arbitration mailboxes to another database, run the following PowerShell cmdlet:
 
         ```PowerShell
-        arbitrationMailboxes | New-MoveRequest -TargetDatabase <target database name>
+        $arbitrationMailboxes | New-MoveRequest -TargetDatabase <target database name>
         ```
 
       - To disable the arbitration mailboxes, run the following PowerShell cmdlet:
 
         ```PowerShell
-        arbitrationMailboxes | Disable-Mailbox -Arbitration
+        $arbitrationMailboxes | Disable-Mailbox -Arbitration
         ```
 
         **Note**: If you disable an arbitration mailbox, you might have to provide other parameters. For example:
 
         ```PowerShell
-        arbitrationMailboxes | Disable-Mailbox -Arbitration -DisableArbitrationMailboxWithOABsAllowed -DisableLastArbitrationMailboxAllowed
+        $arbitrationMailboxes | Disable-Mailbox -Arbitration -DisableArbitrationMailboxWithOABsAllowed -DisableLastArbitrationMailboxAllowed
         ```
 
       - To remove the arbitration mailboxes, run the following PowerShell cmdlet:
 
         ```PowerShell
-        arbitrationMailboxes | Remove-Mailbox -Arbitration
+        $arbitrationMailboxes | Remove-Mailbox -Arbitration
         ```
 
         **Note**: If you remove an arbitration mailbox, you might have to provide other parameters. For example:
 
         ```PowerShell
-        arbitrationMailboxes | Remove-Mailbox -Arbitration -RemoveArbitrationMailboxWithOABsAllowed -RemoveLastArbitrationMailboxAllowed
+        $arbitrationMailboxes | Remove-Mailbox -Arbitration -RemoveArbitrationMailboxWithOABsAllowed -RemoveLastArbitrationMailboxAllowed
         ```
 
 6. Move, disable, or remove any enabled audit log mailboxes in the database:
@@ -189,8 +189,8 @@ To fix the issue, follow these steps:
    1. Get a list of enabled audit log mailboxes by running the following PowerShell commands:
 
       ```PowerShell
-      auditMailboxes = Get-Mailbox -AuditLog -Database <database name> | where {$_.IsMailboxEnabled}
-      auditMailboxes
+      $auditMailboxes = Get-Mailbox -AuditLog -Database <database name> | where {$_.IsMailboxEnabled}
+      $auditMailboxes
       ```
 
       If the list is empty, go to step 7.
@@ -200,19 +200,19 @@ To fix the issue, follow these steps:
       - To move the audit log mailboxes to another database, run the following PowerShell cmdlet:
 
         ```PowerShell
-        auditMailboxes | New-MoveRequest -TargetDatabase <target database name>
+        $auditMailboxes | New-MoveRequest -TargetDatabase <target database name>
         ```
 
       - To disable the audit log mailboxes, run the following PowerShell cmdlet:
 
         ```PowerShell
-        auditMailboxes | Disable-Mailbox
+        $auditMailboxes | Disable-Mailbox
         ```
 
       - To remove the audit log mailboxes, run the following PowerShell cmdlet:
 
         ```PowerShell
-        auditMailboxes | Remove-Mailbox -AuditLog
+        $auditMailboxes | Remove-Mailbox -AuditLog
         ```
 
 7. Wait for any pending mailbox moves to finish, and then retry the command to remove the database.
