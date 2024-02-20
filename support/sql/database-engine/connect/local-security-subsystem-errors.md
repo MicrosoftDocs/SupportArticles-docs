@@ -8,9 +8,9 @@ ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 
-# Local security subsystem errors
+# Troubleshooting local security subsystem errors
 
-This article helps you resolve a consistent authentication issue that's related to an unresponsive Local Security Authority Subsystem Service (LSASS).
+This article helps you resolve a consistent authentication issue that's related to an unresponsive Local Security Authority Subsystem Service ([LSASS](/windows-server/security/credentials-protection-and-management/credentials-protection-and-management)).
 
 ## Symptoms
 
