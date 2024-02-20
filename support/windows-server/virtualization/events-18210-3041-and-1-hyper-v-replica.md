@@ -1,7 +1,7 @@
 ---
 title: Events 18210 and 3041 when Hyper-V Replica is configured
 description: Describes an issue that triggers events in the Application log when you have a Hyper-V host that's running Windows Server 2012 R2. This issue involves the Hyper-V Replica feature. The events can be safely ignored.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

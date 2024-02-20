@@ -1,7 +1,7 @@
 ---
 title: The requested Key ID is invalid
 description: Provides a solution to an error that occurs when you try to retrieve BitLocker Recovery Key using MBAM 2.0 Self Service Portal (SSP).
-ms.date: 09/23/2020
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

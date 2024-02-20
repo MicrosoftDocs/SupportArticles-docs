@@ -1,7 +1,7 @@
 ---
 title: Startup fails when Firmware protection is turned on
 description: Provides a solution to an issue where startup fails when Firmware protection is turned off.
-ms.date: 03/04/2022
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

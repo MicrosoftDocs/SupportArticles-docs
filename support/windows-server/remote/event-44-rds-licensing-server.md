@@ -1,7 +1,7 @@
 ---
 title: RDS License server logs Event 44 in Windows Server 2016 and 2012
 description: Address the Event 44 on a Remote Desktop Services (RDS) licensing server that's running Windows Server 2016 and Windows Server 2012.
-ms.date: 05/16/2023
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

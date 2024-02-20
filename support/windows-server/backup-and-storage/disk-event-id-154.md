@@ -1,7 +1,7 @@
 ---
 title: Disk Event ID 154
 description: Fixes event ID 154 that occurs on a computer that's connected to a storage array such as Fibre Channel (FC) storage.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

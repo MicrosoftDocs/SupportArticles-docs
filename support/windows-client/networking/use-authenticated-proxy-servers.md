@@ -1,7 +1,7 @@
 ---
 title: Use authenticated proxy servers
 description: Describes problems that you may encounter when you use apps that connect to the Internet if you use an Internet proxy server that requires authentication.
-ms.date: 09/10/2020
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
