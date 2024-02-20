@@ -3,7 +3,7 @@ title: 1099s aren't printing for Vendor
 description: This article contains answers why 1099s may not print for a vendor and other frequently asked questions about 1099s in Payables Management in Microsoft Dynamics GP.
 ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 02/16/2024
+ms.date: 02/20/2024
 ---
 # 1099s aren't printing for Vendor (and other FAQ about 1099s) in Payables Managements for Microsoft Dynamics GP
 
@@ -48,9 +48,9 @@ A 1099 may not print for a vendor for the following reasons:
 
 ## Frequently Asked Questions
 
-Q1: How are 1099 values updated?
+**Q1: How are 1099 values updated?**
 
-A1:  The 1099 Details are updated according to when an invoice is paid out/applied. Consider the example below:
+A1: The 1099 Details are updated according to when an invoice is paid out/applied. Consider the example below:
 
 Scenario 1 - Invoice Date is 11/27/2024; Payment Date is 12/11/2024 - This invoice will be included in the 1099 for year 2024.
 
@@ -61,7 +61,7 @@ Scenario 3 - Invoice Date is 5/1/2024 and hasn't yet been paid out - This invoic
 > [!NOTE]
 > The Historical Aged Trial Balance (HATB) Report will remove the invoice off the report based on the document date of the check that is applied to the invoice.
 
-Q2: How do you update 1099 amounts for vendors that weren't setup as 1099 vendors or that where switched half way through the year?
+**Q2: How do you update 1099 amounts for vendors that weren't setup as 1099 vendors or that where switched half way through the year?**
 
 A2: You can update vendors to be 1099able using any of the following methods:
 
@@ -77,7 +77,7 @@ For Microsoft Dynamics GP 2013 and later, if you mark **Vendor and 1099 Transact
 
   - Update 1099 Information per vendor - As already discussed in Method 3 above, in Microsoft Dynamics GP, by using the option for Not a 1099 Vendor in the TO and FROM fields as appropriate, you can mark a vendor (and transactions) as 1099able for the year that wasn't previously marked as 1099able, or remove the 1099 information for a vendor that was marked as 1099able in error for the year.
 
-Q3: What documents will update 1099 amounts?
+**Q3: What documents will update 1099 amounts?**
 
 A3: Below is how 1099 amounts are updated per document type:
 
@@ -89,7 +89,7 @@ A3: Below is how 1099 amounts are updated per document type:
 
 4. Voiding a check and causing the invoice to go back into open, the 1099 details window will be reduced by the amount of the check that was voided.
 
-Q4: What documents won't update the 1099 amount?
+**Q4: What documents won't update the 1099 amount?**
 
 A4: The scenarios won't update the 1099 amount:
 
@@ -105,7 +105,7 @@ A4: The scenarios won't update the 1099 amount:
 
 6. If a credit memo is keyed with a 1099 Amount and not yet applied.
 
-Q5: If I run a reconcile, what 1099 data will be changed?
+**Q5: If I run a reconcile, what 1099 data will be changed?**
 
 A5: If you run a reconcile, these fields will be corrected:
 
