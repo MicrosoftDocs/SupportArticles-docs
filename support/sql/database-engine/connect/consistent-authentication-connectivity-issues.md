@@ -155,21 +155,24 @@ This issue occurs when an SPN is duplicated that is registered more than once. F
 
 This section lists various issues that might arise due to problems in permissions or settings. Some of the causes are:
 
-- Access via group: If the user doesn't belong to a local group that's used to grant access to the server, the provider displays the "Login failed for user 'contoso/user1'" error message. The DBA can double-check this by looking at the Security or Logins in SSMS. If it's a contained database, check under `databasename`. For more information, see [Login failed for user '\<username\>' or login failed for user '\<domain\>\\<username\>'](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
+Access via group
+Network login disallowed
+Only admins can log in
+Service account isn't trusted for delegation
 
-- Network login disallowed: For more information, see [Troubleshooting the network login](network-login-disallowed.md) issue.
 
-- Only admins can log in: This issue occurs if the security log on a computer is full and doesn't have space to fill events.
 
-### Cause 3 - Only admins can log in
+### Access via group
 
-The security feature **[CrashOnAuditFail](/previous-versions/windows/it-pro/windows-2000-server/cc963220(v=technet.10))** is used by system administrators to check all security events. The valid values for `CrashOnAuditFail` are *0*, *1*, and *2*.
+If the user doesn't belong to a local group that's used to grant access to the server, the provider displays the "Login failed for user 'contoso/user1'" error message. The DBA can double-check this by looking at the Security or Logins in SSMS. If it's a contained database, check under `databasename`. For more information, see [Login failed for user '\<username\>' or login failed for user '\<domain\>\\<username\>'](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
 
-**Symptoms**
+### Network login disallowed
 
-If the key for `CrashOnAuditFail` is set to *2*, it means that the security event log is full and the "Only Admins can login" error message is shown.
+For more information, see [Troubleshooting the network login](network-login-disallowed.md) issue.
 
-**Resolution**
+### Only admins can log in
+
+This issue occurs if the security log on a computer is full and doesn't have space to fill events. The security feature **[CrashOnAuditFail](/previous-versions/windows/it-pro/windows-2000-server/cc963220(v=technet.10))** is used by system administrators to check all security events. The valid values for `CrashOnAuditFail` are *0*, *1*, and *2*. If the key for `CrashOnAuditFail` is set to *2*, it means that the security event log is full and the "Only Admins can login" error message is shown.
 
 To resolve this issue, follow these steps:
 
@@ -180,17 +183,27 @@ To resolve this issue, follow these steps:
 > [!NOTE]
 > This only affects integrated logins. A Named Pipe connection will also be affected with a SQL Login because Named Pipes first logs into Windows Admin Pipe before connecting to SQL Server.
 
-- Service account isn't trusted for delegation: This type of issue usually occurs when a service account is not allowed to assign credentials to other servers. This can affect services that require delegation. If a delegation scenario isn't enabled, check the SQL Server *secpol.msc* to see if the SQL Server service account is listed under **Local Policies -> User Rights Assignment -> Impersonate a client after authentication** security policy settings. For more information, see [Enable computer and user accounts to be trusted for delegation](/windows/security/threat-protection/security-policy-settings/enable-computer-and-user-accounts-to-be-trusted-for-delegation).
+### Service account isn't trusted for delegation
 
-- Local security subsystem issues: Refers to a consistent authentication issue related to the unresponsive LSASS. For more information, see [Troubleshooting LSASS errors](local-security-subsystem-errors.md).
+This type of issue usually occurs when a service account is not allowed to assign credentials to other servers. This can affect services that require delegation. If a delegation scenario isn't enabled, check the SQL Server *secpol.msc* to see if the SQL Server service account is listed under **Local Policies -> User Rights Assignment -> Impersonate a client after authentication** security policy settings. For more information, see [Enable computer and user accounts to be trusted for delegation](/windows/security/threat-protection/security-policy-settings/enable-computer-and-user-accounts-to-be-trusted-for-delegation).
 
-- Corrupt user profile: Refers to the Windows user profile issue. For more information, see troubleshooting the [Windows user profile issue](corrupt-user-profile.md).
+### Local security subsystem issues
 
-- Credential guard is enabled: For more information, see [Considerations and known issues when using Credential Guard](/windows/security/identity-protection/credential-guard/considerations-known-issues).
+Refers to a consistent authentication issue related to the unresponsive LSASS. For more information, see [Troubleshooting LSASS errors](local-security-subsystem-errors.md).
+
+### Corrupt user profile
+
+Refers to the Windows user profile issue. For more information, see troubleshooting the [Windows user profile issue](corrupt-user-profile.md).
+
+### Credential guard is enabled
+
+For more information, see [Considerations and known issues when using Credential Guard](/windows/security/identity-protection/credential-guard/considerations-known-issues).
 
 ### Causes specific to NT LAN Manager (NTLM)
 
 This section lists some of the consistent authentication causes related to NTLM.
+
+
 
 - NTLM Peer Login: When communicating between computers that are either in workstations or in domains that don't trust each other, you can set up identical accounts on both machines and use NTLM peer authentication. Logins only work if both the user account and the password match on both machines. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
 
