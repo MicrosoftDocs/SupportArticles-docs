@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, shawnrab, spat
-ms.custom: sap:certificates-and-public-key-infrastructure-pki, csstroubleshoot
+ms.custom: sap:certificate-web-enrollment-pages-cwe, csstroubleshoot
 ---
 # Error when a user requests certificate from CA web enrollment pages: No certificate templates could be found
 
