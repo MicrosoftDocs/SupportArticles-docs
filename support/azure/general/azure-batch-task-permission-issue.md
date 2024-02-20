@@ -29,7 +29,6 @@ To resolve this issue, provide your task with a "Pool autouser, Admin" elevation
 
 :::image type="content" source="media/azure-batch-task-permission-denied/pool-autouser-admin-elevation.png" alt-text="Screenshot that shows elevation level options":::
 
-
 ## Scenario 2: Batch start task fails due to access being denied while downloading files
 
 ### Symptoms
@@ -42,7 +41,7 @@ The following error message might appear:
 
 ### Cause
 
-This issue usually happens when there isn't the right permission to perform an operation. SAS by default includes only "READ" permission for the container, which means the SAS token will have only "r" specified.
+This issue usually happens when there isn't the right permission to perform an operation. SAS by default includes only "Read" permission for the container, which means the SAS token will have only "r" specified.
 
 Here's an example:
 
@@ -56,8 +55,6 @@ To resolve this issue, create a manual SAS with both "Read" and "List" permissio
 
 :::image type="content" source="media/azure-batch-task-permission-denied/resource-file-option.png" alt-text="Screenshot that shows the 'Resource files' option":::
 
-
 :::image type="content" source="media/azure-batch-task-permission-denied/resource-file-sas-url.png" alt-text="Screenshot that shows option to manually enter sas value ":::
-
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
