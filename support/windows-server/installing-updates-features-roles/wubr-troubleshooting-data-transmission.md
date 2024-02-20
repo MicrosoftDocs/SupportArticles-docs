@@ -1,7 +1,7 @@
 ---
 title: 'WUBr: Troubleshoot data transmission'
 description: Describes how to troubleshoot diagnostic data transmission issues in Windows Update for Business reports.
-ms.date: 12/19/2023
+ms.date: 12/26/2023
 manager: dcscontentpm
 author: Deland-Han
 ms.author: delhan

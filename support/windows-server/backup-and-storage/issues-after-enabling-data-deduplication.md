@@ -1,7 +1,7 @@
 ---
 title: Issues after enabling data deduplication
 description: Describes some known issues that may occur after you enable data deduplication on Cluster Shared Volumes (CSV).
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

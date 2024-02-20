@@ -1,7 +1,7 @@
 ---
 title: Add special groups to built-in groups
 description: Describes how to add special groups to built-in groups.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

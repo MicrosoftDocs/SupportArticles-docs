@@ -1,7 +1,7 @@
 ---
 title: RemoteApp sessions are disconnected
 description: Resolves an issue where RemoteApp sessions are disconnected when all RemoteApp windows and user-launched notification area icons are closed.
-ms.date: 12/28/2022
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

@@ -1,7 +1,7 @@
 ---
 title: Code 31 Microsoft Usbccid Smartcard Reader problem
 description: Provides a resolution for code 31 in Device Manager when Microsoft Usbccid Smartcard Reader is in a problem state.
-ms.date: 11/27/2020
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

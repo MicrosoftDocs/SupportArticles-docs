@@ -1,7 +1,7 @@
 ---
 title: Availability and description of AD FS 2.0
 description: Describes Active Directory Federation Services 2.0.
-ms.date: 03/24/2022
+ms.date: 12/26/2023
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro

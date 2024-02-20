@@ -1,7 +1,7 @@
 ---
 title: Establish and boot to GPT mirrors in 64-bit Windows
 description: Describes how to successfully set up dynamic boot partition mirroring on GUID Partition Table (GPT) disks
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

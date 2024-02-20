@@ -1,7 +1,7 @@
 ---
 title: Can't establish a Remote Desktop session
 description: Provides a solution to an error that occurs when you try to connect to the Terminal service running on one of the affected products.
-ms.date: 05/16/2023
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

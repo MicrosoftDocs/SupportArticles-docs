@@ -1,7 +1,7 @@
 ---
 title: Parameter is incorrect
 description: Provides a solution to an error when you try to enable BitLocker if you don't have a separate active partition.
-ms.date: 10/16/2020
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

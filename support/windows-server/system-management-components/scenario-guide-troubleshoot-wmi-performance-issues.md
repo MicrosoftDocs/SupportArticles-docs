@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot WMI performance issues
 description: Describes different ways to examine memory leaks or handle leaks to solve the Windows Management Instrumentation (WMI) performance issues, and how to gather additional information.
-ms.date: 12/13/2023
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
