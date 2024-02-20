@@ -1,11 +1,12 @@
 ---
 title: Determine the authentication type
 description: This article explains about how to determine the type of authentication that's used when you connect to SQL Server. 
-ms.date: 02/19/2024
+ms.date: 02/20/2024
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
 ms.custom: sap:Connection issues
+ms.topic: how-to
 ---
 
 # How to determine if the authentication type is Kerberos
@@ -50,7 +51,7 @@ If either of the previous options aren't available, consider using the following
 
 1. Copy the following script into a text editor, such as Notepad, and save it as *getAuthScheme.vbs*:
 
-     ```vbs
+     ```vbscript
      ' Auth scheme VB script.
      ' Run on a client machine, not the server.
      ' If you run locally, you will always get NTLM even if Kerberos is properly enabled.
