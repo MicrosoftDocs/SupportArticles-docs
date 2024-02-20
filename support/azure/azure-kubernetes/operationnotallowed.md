@@ -41,7 +41,20 @@ To resolve these issues, you usually have to wait until the blocking operation f
 
 Note that you can also try aborting the long-running operation by using [az aks operation-abort](/azure/aks/manage-abort-operations).
 
-## Solution 2: Get the current cluster status before you try an operation
+## Solution 2: Ensure you are not performing 2 similar operations in a row
+
+The OperationNotAllowed error can be thrown if you are executing an operation while the cluster is already in that desired state. eg. in the case of a cluster which is already stopped, you will receive the error if you are executing another Stop operation:
+
+```
+az aks stop -n <myAKSCluster> -g <myResourceGroup>
+
+(OperationNotAllowed) managed cluster is not currently running, stopping cannot be performed; The stop operation started at '2024-02-13T15:01:15Z' and elapsed time is: '7 days and 01:16:37' (RFC3339 format)
+Code: OperationNotAllowed
+Message: managed cluster is not currently running, stopping cannot be performed; The stop operation started at '2024-02-13T15:01:15Z' and elapsed time is: '7 days and 01:16:37' (RFC3339 format)
+```
+You would need to start the cluster before attempting to stop it again.
+
+## Solution 3: Get the current cluster status before you try an operation
 
 You can also determine the current status of the cluster before you try an operation. To help diagnose the issue, run the following [az aks show](/cli/azure/aks#az-aks-show) command to retrieve detailed status about the cluster.
 
