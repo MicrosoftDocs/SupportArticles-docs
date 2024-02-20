@@ -242,10 +242,8 @@ This error only happens in [user subscription pool allocation mode](/azure/batch
 4. Select **Access configuration** under **Settings** from the left navigation.
 5. Check the **Permission model** of your key vault.
 
-
     If the key vault permission model is Azure role-based access control, follow these steps:
-
-
+   
     1. Select **Access control (IAM)** from the left navigation of the key vault page.
     2. At the top of the **Access control (IAM)** page, select **Add** > **Add role assignment**.
     3. On the **Add role assignment** screen, under the **Role** tab, under the **Job function roles** subtab, select the **Key Vault Secrets Officer** or **Key Vault Administrator** role for the Batch account, and then select **Next**.
