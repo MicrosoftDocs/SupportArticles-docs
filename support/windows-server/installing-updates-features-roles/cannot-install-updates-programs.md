@@ -1,7 +1,7 @@
 ---
 title: Can't install updates or programs
 description: Discusses that you cannot install some updates or programs in Windows, and you receive an error message. Provides a resolution.
-ms.date: 04/28/2023
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

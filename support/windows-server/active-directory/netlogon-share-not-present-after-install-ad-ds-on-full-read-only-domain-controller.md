@@ -1,7 +1,7 @@
 ---
 title: The NETLOGON share is not present after you install Active Directory Domain Services on a new full or read-only Windows Server 2008-based domain controller
 description: This article contains a workaround for a problem that occurs after you install AD DS on a new full or read-only Windows Server 2008-based domain controller.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

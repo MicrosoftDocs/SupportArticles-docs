@@ -1,7 +1,7 @@
 ---
 title: Net Commands for Operating Systems
 description: Provides some information about Net Commands on Operating Systems.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

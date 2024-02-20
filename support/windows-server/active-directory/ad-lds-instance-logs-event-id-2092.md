@@ -1,7 +1,7 @@
 ---
 title: AD LDS instance logs Event ID 2092
 description: Provides a solution to an issue that occurs when you reboot an AD LDS server that holds FSMO roles or restart an AD LDS instance on that server.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

@@ -1,7 +1,7 @@
 ---
 title: Access is denied when using the "runas" command, Run as Administrator, or Run as a different user option
 description: Describes an issue where you can't use the "runas" command, "Run as Administrator" option, or the "Run as a different user" option. Provides some workarounds.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

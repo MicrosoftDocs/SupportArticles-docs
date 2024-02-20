@@ -1,7 +1,7 @@
 ---
 title: Avoid duplicate GUIDs when you image SMS clients
 description: Describes how to avoid duplicate globally unique identifiers (GUIDs) when you use disk imaging or cloning to deploy the Microsoft Systems Management Server (SMS) 2003 clients.
-ms.date: 04/28/2023
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

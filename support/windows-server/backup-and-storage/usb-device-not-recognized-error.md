@@ -1,7 +1,7 @@
 ---
 title: '"USB Device not recognized" error'
 description: Helps resolve the "USB Device not recognized error" that occurs when trying to access a USB external hard drive.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

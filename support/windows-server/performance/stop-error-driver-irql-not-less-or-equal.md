@@ -1,7 +1,7 @@
 ---
 title: Stop error "DRIVER_IRQL_NOT_LESS_OR_EQUAL"
 description: Helps to fix the error "DRIVER_IRQL_NOT_LESS_OR_EQUAL" or "USER_MODE_HEALTH_MONITOR"
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

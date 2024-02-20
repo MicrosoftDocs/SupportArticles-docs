@@ -1,7 +1,7 @@
 ---
 title: Error when you access a USB storage device
 description: Provides a solution to an error that occurs when you access a USB storage device after resuming from suspend.
-ms.date: 04/28/2023
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
