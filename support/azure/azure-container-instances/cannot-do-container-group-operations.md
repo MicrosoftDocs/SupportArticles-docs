@@ -1,7 +1,7 @@
 ---
 title: Can't do operations or the container group is in a bad state
 description: Learn how to resolve an issue in Azure Container Instances in which you can't do a container group operation or the container group is in a bad state.
-ms.date: 01/31/2024
+ms.date: 02/21/2024
 author: tysonfms
 ms.author: tysonfreeman
 editor: v-jsitser
@@ -28,7 +28,7 @@ You encounter one or more of the following problems:
 
 ## Cause
 
-The managed identity of the container group was deleted before an attempt was made to delete the associated container group. This scenario can occur if you try to do this order of deletions manually. It can also occur if you have a regularly scheduled script (such as a nightly script run) that deletes all the resources within a development resource group, including all managed identities and container groups. The script doesn't delete the resource in the correct order because it deleted the managed identity that's necessary to authenticate the container group before it tried to delete the container group itself.
+The managed identity of the container group was deleted before an attempt was made to delete the associated container group. This scenario can occur if you try to do this order of deletions manually. It can also occur if you have a regularly scheduled script (such as a nightly script run) that deletes all the resources within a development resource group, including all managed identities and container groups. The script doesn't delete the resources in the correct order: It first deletes the managed identity that's necessary to authenticate the container group, and then it tries to delete the container group itself.
 
 ## Solution 1: Delete the container group before you delete the managed identity
 
