@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:certificates-and-public-key-infrastructure-pki, csstroubleshoot
+ms.custom: sap:certificate-enrollment, csstroubleshoot
 ---
 # Clients can't authenticate with a server after you obtain a new certificate to replace an expired certificate on the server
 
