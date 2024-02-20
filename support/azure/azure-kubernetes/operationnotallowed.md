@@ -39,11 +39,11 @@ Some operations take time to run. Those operations block other operations if the
 
 To resolve these issues, you usually have to wait until the blocking operation finishes.
 
-Note that you can also try aborting the long-running operation by using [az aks operation-abort](/azure/aks/manage-abort-operations).
+You can also try aborting the long-running operation by using [az aks operation-abort](/azure/aks/manage-abort-operations).
 
 ## Solution 2: Ensure you are not performing 2 similar operations in a row
 
-The OperationNotAllowed error can be thrown if you are executing an operation while the cluster is already in that desired state. eg. in the case of a cluster which is already stopped, you will receive the error if you are executing another Stop operation:
+The OperationNotAllowed error can be thrown if you are executing an operation while the cluster is already in that desired state. For example, in the case of a cluster which is already stopped, you receive the error if you are executing another Stop operation:
 
 ```
 az aks stop -n <myAKSCluster> -g <myResourceGroup>
