@@ -1,7 +1,7 @@
 ---
 title: Azure batch pool resizing failure
 description: An Azure batch pool resizing failure occurs. You can review the symptoms, understand the causes, and apply solutions to this problem.
-ms.date: 02/18/2024
+ms.date: 02/20/2024
 ms.reviewer: biny, v-weizhu
 ms.service: batch
 ---
@@ -179,15 +179,15 @@ Here's the error message:
 
 The Batch service may experience these issues due to some infrastructure limitations. It's not related to customers' core quota.
 
-### Solution: Retry the resize operation, create a new pool with different VM size, or use another region
+### Solution: Retry the resize operation, create a new pool with a different VM size, or use another region
 
 To resolve this issue, try the following methods:
 
 - Retry the resize operation.
 
-    Resource availability can change as resources are constantly being freed up in the cluster, region, or zone.
+    Resource availability can change as resources are constantly freed up in the cluster, region, or zone.
 
-- Change the VM size and then create a new pool with different VM size.
+- Change the VM size and create a new pool with a different VM size.
 
 - Use the Batch service in another available region.
 
