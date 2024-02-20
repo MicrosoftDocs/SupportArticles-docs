@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:certificates-and-public-key-infrastructure-pki, csstroubleshoot
+ms.custom: sap:certificate-root-update-program, csstroubleshoot
 ---
 # Crypt32 8 events continuously reported in Windows
 
