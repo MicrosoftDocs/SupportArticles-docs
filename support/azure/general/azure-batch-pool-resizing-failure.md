@@ -245,6 +245,7 @@ This error only happens in [user subscription pool allocation mode](/azure/batch
    If the key vault permission model is Azure role-based access control, follow these steps:
 
    1. Select **Access control (IAM)** from the left navigation of the key vault page.
+
    2. At the top of the **Access control (IAM)** page, select **Add** > **Add role assignment**.
    3. On the **Add role assignment** screen, under the **Role** tab, under the **Job function roles** subtab, select the **Key Vault Secrets Officer** or **Key Vault Administrator** role for the Batch account, and then select **Next**.
    4. On the **Members** tab, select **Select members**. On the **Select members** screen, search for and select **Microsoft Azure Batch**, and then select **Select**.
@@ -253,7 +254,7 @@ This error only happens in [user subscription pool allocation mode](/azure/batch
     For detailed steps, see [Assign Azure roles by using the Azure portal](/azure/role-based-access-control/role-assignments-portal).
 
     If the key vault permission model is Vault access policy, follow these steps:
-   
+
     1. Select **Access policies** from the left navigation of the key vault page.
     2. On the **Access policies** page, select **Create**.
     3. On the **Create an access policy** screen, under **Secret permissions**, select a minimum of the **Get**, **List**, **Set**, and **Delete** permissions. For [key vaults with soft-delete enabled](/azure/key-vault/general/soft-delete-overview), also select **Recover**.
