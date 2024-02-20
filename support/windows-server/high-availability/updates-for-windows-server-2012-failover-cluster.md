@@ -1,7 +1,7 @@
 ---
 title: Recommended updates for Windows Server 2012-based failover clusters
 description: Describes the hotfixes that are currently available for Windows Server 2012-based failover clusters.
-ms.date: 03/24/2022
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

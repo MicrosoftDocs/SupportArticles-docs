@@ -1,7 +1,7 @@
 ---
 title: SMB multichannel troubleshooting
 description: Introduces SMB Multichannel troubleshooting methods.
-ms.date: 11/16/2023
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

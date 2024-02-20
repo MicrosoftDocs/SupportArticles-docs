@@ -1,7 +1,7 @@
 ---
 title: Register OCX and DLL files as system globals
 description: Describes how to register OCX and DLL files as system globals.
-ms.date: 09/21/2020
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

@@ -1,7 +1,7 @@
 ---
 title: How to move a certification authority to another server
 description: Describes how to move a certification authority (CA) to a different server in Windows Server 2003 and in Windows 2000 Server.
-ms.date: 12/21/2022
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

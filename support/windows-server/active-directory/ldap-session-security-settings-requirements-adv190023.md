@@ -1,7 +1,7 @@
 ---
 title: LDAP session security settings and requirements after ADV190023
 description: Discusses LDAP session security settings and requirements after security advisory ADV190023 is installed.
-ms.date: 07/07/2023
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

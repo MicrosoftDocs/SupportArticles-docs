@@ -1,7 +1,7 @@
 ---
 title: System Partition goes offline after installing third-party disk or Storage Management Software
 description: Provides a resolution to an issue where System Partition goes offline after installing some third-Party Disk or Storage Management Software.
-ms.date: 04/28/2023
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

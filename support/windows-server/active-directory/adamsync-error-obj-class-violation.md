@@ -1,7 +1,7 @@
 ---
 title: OBJ_CLASS_VIOLATION error in Adamsync tool
 description: Describes how to troubleshoot a problem that occurs when you try to synchronize Active Directory objects to ADAM by using the Adamsync tool.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

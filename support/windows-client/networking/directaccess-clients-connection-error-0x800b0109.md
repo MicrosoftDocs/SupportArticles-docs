@@ -1,7 +1,7 @@
 ---
 title: DirectAccess clients connection error 0x800b0109
 description: Provides a solution to an issue in which DirectAccess clients encounter error code 0x800b0109 and cannot connect to Windows Server by using IP-HTTPS.
-ms.date: 09/17/2020
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
