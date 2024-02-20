@@ -20,20 +20,20 @@ At a high level, the permissions for each user type are as follows:
 
 - Self Service
 
-  - Ability to Create requisitions.
+  - Ability to create requisitions.
   - Ability to enter Payroll timecards and expenses.
-  - Ability to enter Project timesheets and expenses, benefits self service, and workflow. (Also known as **Enter** access.)
+  - Ability to enter Project timesheets and expenses, benefits self service, and workflows. (Also known as **Enter** access.)
 
 - Limited
 
-  The Limited user can do all the Self Service user can do. In addition, the Limited user can view all inquiry, reports, and Smartlists. (Also known as **Enter** and **Inquire** access.)
+  The Limited user can do all operations the Self Service user can do. In addition, the Limited user can view all inquiries, reports, and Smartlists. (Also known as **Enter** and **Inquire** access.)
 - Full
 
-  The Full user has full control in Microsoft Dynamics GP. (Also known as **Enter**, **Inquire**, and **Edit** access.)
+  The Full user has full control of Microsoft Dynamics GP. (Also known as **Enter**, **Inquire**, and **Edit** access.)
 
-This is always a grey area too because you might expect something then it doesn't allow it based on the user type. It is recommended setting up a user and testing your process if you have limited users.
+This is always a grey area because you might expect something it doesn't allow based on the user type. It's recommended to set up a user and test your process if you have limited users.
 
-Sometimes there is a window you want to see in the process that's not available. It is recommended always testing with a user with that type to make sure it all works for their process as you expect.
+Sometimes, you want to see a window in the process, but it's unavailable. In this case, it's recommended to always test with a user with that type of user to make sure everything works for their process as you expect.
  
 Both Self Service and Limited users can approve workflows.
 
