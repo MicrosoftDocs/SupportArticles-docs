@@ -1,17 +1,15 @@
 ---
 title: The security ID structure is invalid
 description: Starting an imported virtual machine under Hyper-V sometimes fails with an error message that states.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, BenArm, SWernli
 ms.custom: sap:configuration-of-virtual-machine-settings, csstroubleshoot
-ms.subservice: hyper-v
 ---
 # Virtual machine can't start - The security ID structure is invalid (0x80070539)
 

@@ -1,17 +1,15 @@
 ---
 title: Direct host Server Message Block (SMB) over TCP/IP
 description: Describes the direct hosting of SMB over TCP/IP.
-ms.date: 12/07/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:tcp/ip-communications, csstroubleshoot
-ms.subservice: networking
 ---
 # Direct host SMB over TCP/IP
 

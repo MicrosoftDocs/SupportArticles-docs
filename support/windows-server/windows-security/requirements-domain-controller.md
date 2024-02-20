@@ -1,17 +1,15 @@
 ---
 title: Requirements for domain controller
 description: Describes the requirements that you need to fulfill to issue a domain controller certificate from a third-party certification authority (CA).
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, slight
 ms.custom: sap:certificates-and-public-key-infrastructure-pki, csstroubleshoot
-ms.subservice: windows-security
 ---
 # Requirements for domain controller certificates from a third-party CA
 

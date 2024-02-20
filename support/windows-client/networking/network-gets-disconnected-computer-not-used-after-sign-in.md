@@ -1,17 +1,15 @@
 ---
 title: Network gets disconnected when computer isn't used after you sign in to Windows 10
 description: Provides resolutions for the issue where network gets disconnected for several seconds if the computer isn't used after you sign in to Windows 10.
-ms.date: 12/28/2020
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, tyagi
 ms.custom: sap:tcp/ip-communication, csstroubleshoot
-ms.technology: windows-client-networking
 ---
 # Network gets disconnected for several seconds if the computer isn't used after you sign in to Windows 10
 

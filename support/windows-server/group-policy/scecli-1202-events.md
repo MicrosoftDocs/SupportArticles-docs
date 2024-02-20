@@ -1,17 +1,15 @@
 ---
 title: Troubleshoot SCECLI 1202 events
 description: Describes ways to troubleshoot and to resolve SCECLI 1202 events.
-ms.date: 04/28/2023
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:group-policy-management-gpmc-or-agpm, csstroubleshoot
-ms.subservice: group-policy
 ---
 # Troubleshoot SCECLI 1202 events
 

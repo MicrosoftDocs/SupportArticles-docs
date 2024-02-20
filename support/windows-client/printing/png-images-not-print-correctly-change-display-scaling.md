@@ -1,17 +1,15 @@
 ---
 title: PNG images don't print correctly in Word 2010 after the system display scaling setting is changed in Windows 7
 description: Discusses an issue in which PNG images don't print correctly in Word 2010 after the scaling setting for the system display is changed in Windows 7. Provides a workaround.
-ms.date: 05/16/2023
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, v-jesits
 ms.custom: sap:errors-and-troubleshooting:-print-output-or-print-failures, csstroubleshoot
-ms.technology: windows-client-printing
 ---
 # PNG images don't print correctly in Word 2010 after the system display scaling setting is changed in Windows 7
 

@@ -1,17 +1,15 @@
 ---
 title: Delayed Write Failed error
 description: Helps to fix the error message "Delayed Write Failed" which states that your data has been lost.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:access-to-remote-file-shares-smb-or-dfs-namespace, csstroubleshoot
-ms.subservice: networking
 ---
 # If you receive a "Delayed Write Failed" error message, it states that your data has been lost
 

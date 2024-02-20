@@ -1,17 +1,15 @@
 ---
 title: The Windows Trace Session Manager service does not start and Event ID 7000 occurs
 description: Describes the behavior of the Windows Trace Session Manager service not starting in the specified time. You can work around this problem by extending the default timeout value in the registry.
-ms.date: 12/07/2020
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:microsoft-management-console-mmc, csstroubleshoot
-ms.technology: windows-client-system-management-components
 ---
 # The Windows Trace Session Manager service does not start and Event ID 7000 occurs
 

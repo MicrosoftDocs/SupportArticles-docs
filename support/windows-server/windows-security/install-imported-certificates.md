@@ -1,17 +1,15 @@
 ---
 title: Install imported certificates
 description: Describes how to import a Web site certificate into the certificate store of the local computer and assign the certificate to the Web site.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:certificates-and-public-key-infrastructure-pki, csstroubleshoot
-ms.subservice: windows-security
+ms.custom: sap:certificate-enrollment, csstroubleshoot
 ---
 # How to install imported certificates on a Windows-based Web server
 

@@ -1,17 +1,15 @@
 ---
 title: Print Spooler errors
 description: Provides a solution to fix Print Spooler errors that occurs after you install or upgrade a Third-Party print driver.
-ms.date: 05/16/2023
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jdickson
 ms.custom: sap:management-and-configuration-installing-print-drivers, csstroubleshoot
-ms.subservice: printing
 ---
 # You experience Print Spooler error messages after you install or upgrade a Third-Party print driver
 

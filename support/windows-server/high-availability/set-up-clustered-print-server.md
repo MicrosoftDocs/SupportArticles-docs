@@ -1,17 +1,15 @@
 ---
 title: How to set up a clustered print server
 description: Describes how to set up a clustered print server.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: eldenc, kaushika
 ms.custom: sap:print-clusters-and-high-availability-printing, csstroubleshoot
-ms.subservice: high-availability
 ---
 # How to set up a clustered print server
 

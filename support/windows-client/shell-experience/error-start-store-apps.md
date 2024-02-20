@@ -1,17 +1,15 @@
 ---
 title: Fail to start Microsoft Store apps
 description: You receive an error message when you try to start a Windows Store app in Windows 8 or Windows Server 2012.
-ms.date: 09/08/2020
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:modern-inbox-and-microsoft-store-apps, csstroubleshoot
-ms.technology: windows-client-shell-experience
 ---
 # Error when you start Microsoft Store apps: This app has been blocked by your system administrator
 

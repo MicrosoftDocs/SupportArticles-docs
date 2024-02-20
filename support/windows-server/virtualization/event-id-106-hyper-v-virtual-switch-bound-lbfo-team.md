@@ -1,17 +1,15 @@
 ---
 title: Event ID 106
 description: Describes an issue in Windows Server 2012 or Windows Server 2012 in which Event ID 106 is logged.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, ajayps, tode, gsilva
 ms.custom: sap:hyper-v-network-virtualization-hnv, csstroubleshoot
-ms.subservice: hyper-v
 ---
 # Event ID 106 when a Hyper-V virtual switch is bound to an LBFO team
 

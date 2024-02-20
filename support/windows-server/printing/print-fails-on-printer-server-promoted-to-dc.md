@@ -1,17 +1,15 @@
 ---
 title: Fail to print with Type 4 or 3 printer drivers
 description: Provides a solution to an issue where you can't print with Type 4 or Type 3 XPS printer drivers after the printer server is promoted to a Domain Controller.
-ms.date: 04/20/2022
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, match
 ms.custom: sap:errors-and-troubleshooting-general-issues, csstroubleshoot
-ms.subservice: printing
 ---
 # Not able to print with Type 4 or Type 3 XPS printer drivers after a Windows Server is promoted to a Domain Controller
 

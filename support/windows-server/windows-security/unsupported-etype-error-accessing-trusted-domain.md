@@ -1,17 +1,15 @@
 ---
 title: Kerberos Unsupported etype error
 description: Describes how to resolve a configuration problem that prevents clients from authenticating when they attempt to access resources in a trusted domain.
-ms.date: 11/10/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, Arrenc, justintu, lindakup, herbertm, waynmc
 ms.custom: sap:kerberos-authentication, csstroubleshoot
-ms.subservice: windows-security
 ---
 # "Unsupported etype" error when accessing a resource in a trusted domain
 

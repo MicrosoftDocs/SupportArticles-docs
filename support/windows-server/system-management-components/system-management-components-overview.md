@@ -1,16 +1,14 @@
 ---
 title: System Management Components overview
 description: Overview of System Management Components troubleshooting articles for Windows Server.
-ms.date: 06/17/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.subservice: system-mgmt-components
 ---
 # System Management Components troubleshooting documentation for Windows Server
 

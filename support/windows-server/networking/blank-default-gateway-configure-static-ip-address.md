@@ -1,17 +1,15 @@
 ---
 title: Blank default gateway may occur after configuring Static IP address following network driver upgrade on Windows 7 and Server 2008 R2
 description: If a Windows 7 Service Pack 1 or Windows Server 2008 R2 Service Pack 1 system is configured with a Static IPv4 address, and the underlying network driver is uninstalled and reinstalled, reconfiguring the same Static IPv4 address information may result in a blank default gateway. The Static IP address information must be reentered twice before the information persists to the registry.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, steved
 ms.custom: sap:tcp/ip-communications, csstroubleshoot
-ms.subservice: networking
 ---
 # Blank default gateway may occur after configuring Static IP address following network driver upgrade in Windows 7 Service Pack 1 and Server 2008 R2 Service Pack 1
 

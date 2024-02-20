@@ -1,17 +1,15 @@
 ---
 title: Guidance for troubleshooting DNS
 description: Introduces general guidance for troubleshooting scenarios related to DNS.
-ms.date: 07/13/2023
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:dns, csstroubleshoot
-ms.subservice: networking
 ---
 # DNS troubleshooting guidance
 

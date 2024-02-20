@@ -1,17 +1,15 @@
 ---
 title: Configure Group Policies to Set Security
 description: Describes how to configure Group Policies to Set Security for System Services.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:security-filtering-and-item-level-targeting, csstroubleshoot
-ms.subservice: group-policy
 ---
 # How To Configure Group Policies to Set Security for System Services
 

@@ -1,17 +1,15 @@
 ---
 title: Best practice of configuring EventLog forwarding performance
 description: This article introduces the best practice of configuration of EventLog forwarding in a large environment.
-ms.date: 03/04/2022
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, gbrag, raackley, leofa
 ms.custom: sap:windows-management-instrumentation-wmi, csstroubleshoot
-ms.subservice: admin-mgmt-development
 ---
 # Best practice for configuring EventLog forwarding in Windows Server 2012 R2
 

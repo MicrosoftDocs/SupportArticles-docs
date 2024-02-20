@@ -1,17 +1,15 @@
 ---
 title: Error when you try to export a virtual machine
 description: Describes an issue in which you can't export a virtual machine on a Windows Server 2008-based computer that uses Hyper-V if the hard disk configuration settings or network adapter configuration settings are incorrect. Provides a resolution.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:backup-and-restore-of-virtual-machines, csstroubleshoot
-ms.subservice: hyper-v
 ---
 # Error when you try to export a virtual machine on a Windows Server 2008-based computer that uses Hyper-V: An error occurred while attempting to export the virtual machine
 

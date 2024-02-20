@@ -1,17 +1,15 @@
 ---
 title: How to force Kerberos to use TCP instead of UDP in Windows
 description: Describes how to force Kerberos to use TCP instead of UDP in Windows Server 2003, in Windows XP, and in Windows 2000.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:kerberos-authentication, csstroubleshoot
-ms.subservice: windows-security
 ---
 # How to force Kerberos to use TCP instead of UDP in Windows
 

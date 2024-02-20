@@ -1,17 +1,15 @@
 ---
 title: Troubleshoot Cluster service account
 description: Describes how to troubleshoot the Cluster service when it creates or modifies a computer object in Active Directory for a server cluster (virtual server).
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, stevemat, ELDENC
 ms.custom: sap:cluster-service-fails-to-start, csstroubleshoot
-ms.subservice: high-availability
 ---
 # How to troubleshoot the Cluster service account when it modifies computer objects
 

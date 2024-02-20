@@ -1,17 +1,15 @@
 ---
 title: Configure a secondary name server
 description: Describes how to configure a secondary DNS server.
-ms.date: 12/02/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:dns, csstroubleshoot
-ms.subservice: networking
 ---
 # Configure a secondary name server in Windows Server 2003  
 

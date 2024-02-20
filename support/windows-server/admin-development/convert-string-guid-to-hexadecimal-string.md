@@ -1,17 +1,15 @@
 ---
 title: Convert string formatted GUID to hexadecimal string form
 description: Describes how to convert a string formatted GUID (for example, {XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}) to its hexdecimal string form for use in a GUID bind string in the Active Directory.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:active-directory-services-interface-adsi, csstroubleshoot
-ms.subservice: admin-mgmt-development
 ---
 # Convert a String Formatted GUID to a Hexadecimal String Form For Use When Querying the Active Directory
 

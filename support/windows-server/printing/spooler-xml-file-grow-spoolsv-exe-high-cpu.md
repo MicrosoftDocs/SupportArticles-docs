@@ -1,17 +1,15 @@
 ---
 title: Spooler.xml file growth and high CPU in spoolsv.exe process on print server
 description: Resolves an issue where you experience higher CPU utilization in the spoolsv.exe process and the spooler.xml file grows in size.
-ms.date: 05/16/2023
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:errors-and-troubleshooting-general-issues, csstroubleshoot
-ms.subservice: printing
 ---
 # Spooler.xml file growth and high CPU in spoolsv.exe process on print server
 

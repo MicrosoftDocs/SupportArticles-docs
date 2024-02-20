@@ -1,17 +1,15 @@
 ---
 title: Troubleshoot Remote desktop disconnected errors
 description: Provides troubleshooting information for Remote desktop disconnected errors.
-ms.date: 05/16/2023
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:connecting-to-a-session-or-desktop, csstroubleshoot
-ms.subservice: rds
 adobe-target: true
 ---
 

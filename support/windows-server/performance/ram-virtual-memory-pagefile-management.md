@@ -1,17 +1,15 @@
 ---
 title: Virtual memory in 32-bit version of Windows
 description: Describes how to effectively manage the memory and improve the performance of your Windows-based computer.
-ms.date: 03/24/2022
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:performance-monitoring-tools, csstroubleshoot
-ms.subservice: performance
 ---
 # RAM, virtual memory, pagefile, and memory management in Windows
 

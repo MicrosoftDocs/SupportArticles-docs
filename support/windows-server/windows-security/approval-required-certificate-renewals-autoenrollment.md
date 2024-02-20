@@ -1,15 +1,13 @@
 ---
 title: Recommended values of validity period and renewal period in certificate templates
 description: Describes an issue in which certificate renewals require approvals when certificate autoenrollment is configured. Recommend values of the validity period and renewal period in certificate templates.
-ms.date: 11/22/2021
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jories, milanmil, v-lianna
-ms.custom: sap:certificates-and-public-key-infrastructure-pki, csstroubleshoot
-ms.subservice: windows-security
+ms.custom: sap:certificate-enrollment, csstroubleshoot
 ---
 # Approval required for certificate renewals when certificate autoenrollment configured
 

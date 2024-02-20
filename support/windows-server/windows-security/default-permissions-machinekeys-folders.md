@@ -1,17 +1,15 @@
 ---
 title: Default permissions for MachineKeys folders
 description: Describes default permissions for the MachineKeys folders.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:permissions-access-control-and-auditing, csstroubleshoot
-ms.subservice: windows-security
 ---
 # Default permissions for the MachineKeys folders
 

@@ -1,23 +1,21 @@
 ---
 title: Configure Wi-Fi Sense and Paid Wi-Fi Services
 description: Discusses the methods to configure Wi-Fi Sense and Paid Wi-Fi Services on Windows 10 Version 1607 computers that are deployed in an enterprise.
-ms.date: 09/09/2020
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:wireless-networking-and-802.1x-authentication, csstroubleshoot
-ms.technology: windows-client-networking
 ---
 # How to configure Wi-Fi Sense and Paid Wi-Fi Services on Windows 10 in an enterprise
 
 This article discusses the methods to configure Wi-Fi Sense and Paid Wi-Fi Services in Windows 10.
 
-_Applies to:_ &nbsp; Windows 10 - all editions
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 3085719
 
 ## Summary

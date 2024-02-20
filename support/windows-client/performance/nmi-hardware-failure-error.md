@@ -1,17 +1,15 @@
 ---
 title: NMI_HARDWARE_FAILURE error
 description: This article discusses a by-design behavior where NMI_HARDWARE_FAILURE error occurs when an NMI is triggered.
-ms.date: 09/08/2020
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:blue-screen/bugcheck, csstroubleshoot
-ms.technology: windows-client-performance
 ---
 # NMI_HARDWARE_FAILURE error when an NMI is triggered on Windows
 

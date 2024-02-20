@@ -1,17 +1,15 @@
 ---
 title: Stop 7F, 0x00000008 (double-fault) error
 description: Provides a solution to a STOP 0x0000007F, 0x00000008 error message on your computer because of a specific processor error.
-ms.date: 08/08/2023
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:blue-screen/bugcheck, csstroubleshoot
-ms.subservice: performance
 ---
 # Stop 7F, 0x00000008 (double-fault) error occurs because of a single-bit error in the ESP register
 

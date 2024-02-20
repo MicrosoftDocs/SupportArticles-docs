@@ -1,17 +1,15 @@
 ---
 title: Recover deleted computer object in failover cluster
 description: Describes how to recover a deleted computer object that supports a Network Name resource in a Windows Server 2008 or Windows Server 2008 R2 failover cluster.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, ctimon, v-vincli
 ms.custom: sap:cannot-bring-a-resource-online, csstroubleshoot
-ms.subservice: high-availability
 ---
 # How to recover a deleted computer object that supports a Network Name resource in a failover cluster
 

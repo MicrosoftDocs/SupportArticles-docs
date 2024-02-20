@@ -1,17 +1,15 @@
 ---
 title: Description of group policy restricted groups
 description: This article gives a description of group policy restricted groups.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:group-policy-management-gpmc-or-agpm, csstroubleshoot
-ms.subservice: group-policy
 ---
 # Description of group policy restricted groups
 

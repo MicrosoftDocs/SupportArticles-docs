@@ -1,17 +1,15 @@
 ---
 title: Decommission a Windows enterprise CA
 description: Provides step-by-step instructions for removing a CA from Windows Server 2012 R2.
-ms.date: 10/10/2022
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, lanaef, alrad, ckinder
-ms.custom: sap:certificates-and-public-key-infrastructure-pki, csstroubleshoot
-ms.subservice: windows-security
+ms.custom: sap:active-directory-certificate-services-adcs, csstroubleshoot
 ---
 # How to decommission a Windows enterprise certification authority and remove all related objects
 

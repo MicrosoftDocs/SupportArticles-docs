@@ -1,17 +1,15 @@
 ---
 title: Enabling smart card logon
 description: Provides some guidelines for enabling smart card logon with third-party certification authorities.
-ms.date: 08/21/2023
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, slight
 ms.custom: sap:smart-card-logon, csstroubleshoot
-ms.subservice: windows-security
 ---
 # Guidelines for enabling smart card logon with third-party certification authorities
 

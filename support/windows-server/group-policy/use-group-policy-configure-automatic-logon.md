@@ -1,17 +1,15 @@
 ---
 title: How to use Group Policy to configure automatic logon
 description: Describes the steps to use Group Policy to configure automatic logon in Microsoft Windows Server 2003 Terminal Services.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: cwest, jamirc, kaushika
 ms.custom: sap:deploying-software-through-group-policy, csstroubleshoot
-ms.subservice: group-policy
 ---
 # How to use Group Policy to configure automatic logon in Windows Server 2003 Terminal Services
 

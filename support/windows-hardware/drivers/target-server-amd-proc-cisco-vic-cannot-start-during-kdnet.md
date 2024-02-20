@@ -5,7 +5,6 @@ ms.date: 10/27/2020
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-hardware-driver-quality
 localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate
 keywords: amd processor, cisco VIC

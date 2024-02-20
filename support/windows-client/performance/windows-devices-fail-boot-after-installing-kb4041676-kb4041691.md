@@ -1,17 +1,15 @@
 ---
 title: Windows devices may fail to boot after installing October 10 version of  KB 4041676 or 4041691 that contained a publishing issue
 description: Microsoft is aware of a publishing issue with the October 10, 2017 monthly security updates for Windows 10 versions 1703 (KB4041676) and 1607 (KB4041691), and Windows Server 2016 for WSUS channel managed devices.
-ms.date: 12/07/2020
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:no-boot-not-bugchecks, csstroubleshoot
-ms.technology: windows-client-performance
 ---
 # Windows devices may fail to boot after installing October 10 version of KB4041676 or KB4041691 that contained a publishing issue
 

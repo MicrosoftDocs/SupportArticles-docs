@@ -1,17 +1,15 @@
 ---
 title: Update Windows Server failover clusters
 description: Describes how to update failover clusters in Windows Server.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:replacing-hardware-and-updating-the-operating-system, csstroubleshoot
-ms.subservice: high-availability
 ---
 # How to update Windows Server failover clusters
 

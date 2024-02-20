@@ -1,17 +1,15 @@
 ---
 title: Introducing Virtual Support Agent for Windows Commercial
 description: Describes the Virtual Support Agent for Windows Commercial that debuted on March 12, 2020.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:virtual-agent, csstroubleshoot
-ms.subservice: resources
 ---
 # Introducing Virtual Support Agent for Windows Commercial
 

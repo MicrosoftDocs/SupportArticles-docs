@@ -1,17 +1,15 @@
 ---
 title: DNS Servers may fail to resolve queries for some top-level domains
 description: Provides a solution to an issue where DNS Servers may fail to resolve queries for names in certain top-level domains.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:dns, csstroubleshoot
-ms.subservice: networking
 ---
 # Windows Server 2008 and Windows Server 2008 R2 DNS Servers may fail to resolve queries for some top-level domains
 

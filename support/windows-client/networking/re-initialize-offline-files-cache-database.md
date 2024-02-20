@@ -1,17 +1,15 @@
 ---
 title: How to reinitialize the offline files cache and database in Windows XP
 description: Provides two methods to reinitialize the offline files cache and database.
-ms.date: 12/07/2020
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:folder-redirection-and-offline-files-and-folders-csc, csstroubleshoot
-ms.technology: windows-client-networking
 ---
 # How to reinitialize the offline files cache and database in Windows XP
 

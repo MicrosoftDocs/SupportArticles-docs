@@ -1,17 +1,15 @@
 ---
 title: CPU usage over 100% if Intel Turbo Boost is active
 description: Describes an issue where CPU usage exceeds 100% in Task Manager and Performance Monitor if Intel Turbo Boost is active.
-ms.date: 09/10/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:performance-monitoring-tools, csstroubleshoot
-ms.technology: windows-client-performance
 ---
 # CPU usage exceeds 100% in Task Manager and Performance Monitor if Intel Turbo Boost is active
 

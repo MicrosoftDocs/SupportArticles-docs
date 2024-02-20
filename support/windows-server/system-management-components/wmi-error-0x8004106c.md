@@ -1,17 +1,15 @@
 ---
 title: Error 0x8004106C while you run WMI queries
 description: Provides a solution to fix the error 0x8004106C that occurs when you run WMI queries.
-ms.date: 05/16/2023
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:wmi, csstroubleshoot
-ms.subservice: system-mgmt-components
 ---
 # WMI Error: 0x8004106C Description: Quota violation, while you run WMI queries
 

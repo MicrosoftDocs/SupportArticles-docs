@@ -1,17 +1,15 @@
 ---
 title: RDS client can't connect to RD Session Host server
 description: Solves an issue where a Remote Desktop Services (RDS) client can't connect to a session collection. It occurs if the IP addresses of Remote Desktop (RD) Session Host servers in the collection are changed.
-ms.date: 10/12/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:remote-desktop-sessions, csstroubleshoot
-ms.subservice: rds
 ---
 # RDS client can't connect to RD Session Host server after the server IP address is changed
 

@@ -1,17 +1,15 @@
 ---
 title: Fail to log on to a terminal server
 description: Describes a problem that may occur if many users are logged on to the terminal server. To resolve this problem, modify the registry to increase the PoolUsageMaximum value and the PagedPoolSize value.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:connecting-to-a-session-or-desktop, csstroubleshoot
-ms.subservice: rds
 ---
 # Error message when you try to log on to a Windows Server 2003-based terminal server: Windows cannot load the user's profile but has logged you on with the default profile for the system
 

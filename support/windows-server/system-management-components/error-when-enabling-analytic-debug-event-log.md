@@ -1,17 +1,15 @@
 ---
 title: Fail to enable analytic or debug event log
 description: Fixes an error (The requested operation cannot be performed over an enabled direct channel. The channel must first be disabled before performing the requested operation) that occurs when you enable analytic or debug event log
-ms.date: 12/07/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:microsoft-management-console-mmc, csstroubleshoot
-ms.subservice: system-mgmt-components
 ---
 # Error when enabling analytic or debug event log: The requested operation cannot be performed over an enabled direct channel. The channel must first be disabled before performing the requested operation
 

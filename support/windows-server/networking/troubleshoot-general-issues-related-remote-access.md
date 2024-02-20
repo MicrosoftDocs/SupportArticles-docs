@@ -1,17 +1,15 @@
 ---
 title: Troubleshoot general issues related to Remote Access
 description: Learn how to troubleshoot general issues related to Remote Access.
-ms.date: 11/16/2023
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, brianlic, jgerend, v-lianna
 ms.custom: sap:remote-access-multisite, csstroubleshoot
-ms.subservice: networking
 ms.assetid: 354ae5e3-bae1-44f9-afd7-7eaba70f2346
 ---
 # Troubleshoot general issues related to Remote Access

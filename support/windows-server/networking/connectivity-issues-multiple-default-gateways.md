@@ -1,17 +1,15 @@
 ---
 title: Multiple default gateways cause connectivity problems
 description: Describes the connectivity issues that occur when multiple default gateways are used in TCP/IP configuration options.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:tcp/ip-communications, csstroubleshoot
-ms.subservice: networking
 ---
 # Multiple default gateways can cause connectivity problems
 

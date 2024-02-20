@@ -1,17 +1,15 @@
 ---
 title: connect to a wireless network
 description: Describes how to use the wireless networking functionality that is included.
-ms.date: 10/09/2020
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:wireless-networking-and-802.1x-authentication, csstroubleshoot
-ms.technology: windows-client-networking
 ---
 # How to connect to a wireless network
 

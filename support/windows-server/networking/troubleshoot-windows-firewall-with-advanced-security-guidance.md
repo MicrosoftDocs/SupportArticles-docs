@@ -1,17 +1,15 @@
 ---
 title: Guidance for troubleshooting Windows Firewall with Advanced Security
 description: Introduces general guidance for troubleshooting scenarios related to Windows Firewall with Advanced Security.
-ms.date: 07/13/2023
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:windows-firewall-with-advanced-security-wfas, csstroubleshoot
-ms.subservice: networking
 ---
 # Windows Firewall with Advanced Security troubleshooting guidance
 

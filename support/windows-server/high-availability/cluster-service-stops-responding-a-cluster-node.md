@@ -1,17 +1,15 @@
 ---
 title: Cluster Service Stops Responding
 description: Provides a resolution for the issue that Cluster Service stops responding on a Cluster Node when you restart the Active Node.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:cluster-service-fails-to-start, csstroubleshoot
-ms.subservice: high-availability
 ---
 # Cluster Service Stops Responding on a Cluster Node When You Restart the Active Node
 

@@ -1,17 +1,15 @@
 ---
 title: Reset user rights in the default domain GPO
 description: Describes how to reset user rights in the default domain Group Policy object (GPO) in Windows Server 2003.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, cenki
 ms.custom: sap:group-policy-management-gpmc-or-agpm, csstroubleshoot
-ms.subservice: group-policy
 ---
 # How to reset user rights in the default domain group policy in Windows Server 2003
 

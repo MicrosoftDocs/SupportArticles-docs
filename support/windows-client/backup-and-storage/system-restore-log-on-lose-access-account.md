@@ -1,17 +1,15 @@
 ---
 title: How to use System Restore to log on
 description: Describes how to recover when a password is corrupted or when a user account is lost.
-ms.date: 09/27/2020
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:system-restore-or-resetting-your-computer, csstroubleshoot
-ms.technology: windows-client-backup-and-storage
 ---
 # How to use System Restore to log on when you lose access to an account
 

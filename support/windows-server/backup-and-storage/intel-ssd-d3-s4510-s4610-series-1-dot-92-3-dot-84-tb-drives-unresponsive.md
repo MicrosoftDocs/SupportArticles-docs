@@ -1,17 +1,15 @@
 ---
 title: Intel SSD D3-S4510 and Intel SSD D3-S4610 series 1.92 TB and 3.84 TB drives unresponsive after 1,700 cumulative idle power-on hours
 description: Discusses that Intel SSD D3-S4510 and Intel SSD D3-S4610 series 1.92 TB and 3.84 TB drives become unresponsive after 1,700 cumulative idle power-on hours. Provides a resolution.
-ms.date: 09/18/2023
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-jesits
 ms.custom: sap:partition-and-volume-management, csstroubleshoot
-ms.subservice: backup-and-storage
 ---
 # Intel SSD D3-S4510 and Intel SSD D3-S4610 series 1.92 TB and 3.84 TB drives unresponsive after 1,700 cumulative idle power-on hours
 

@@ -1,17 +1,15 @@
 ---
 title: DFSR databases crash on primary member
 description: Describes how to recover from a DFSR database crash on designated primary member.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:dfsr, csstroubleshoot
-ms.subservice: networking
 ---
 # Recover from a DFSR database crash on designated primary member
 

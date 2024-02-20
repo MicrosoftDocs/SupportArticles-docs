@@ -1,15 +1,13 @@
 ---
 title: DNS server loses its NIC Teaming configuration
 description: Describes an issue in which a DNS server that's configured to use NIC Teaming reverts to using physical adapters after the computer restarts.
-ms.date: 02/08/2023
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate
 ms.custom: sap:dns, csstroubleshoot
-ms.subservice: networking
 keywords: DNS, listen, IP address, restart, ListenAddresses
 ---
 

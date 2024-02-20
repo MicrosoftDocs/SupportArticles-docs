@@ -5,13 +5,11 @@ author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
-ms.date: 11/23/2023
+ms.date: 12/26/2023
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jasone, v-lianna
 ms.custom: sap:system-hang, csstroubleshoot, ikb2lmc
-ms.subservice: performance
 ---
 # Windows Server stops responding when a Trigger Start service crashes with a failed restart
 

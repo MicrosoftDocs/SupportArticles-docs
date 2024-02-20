@@ -1,21 +1,19 @@
 ---
 title: Integrated Unblock screen not displayed when smart card PIN is blocked
 description: Provides several methods to resolve the issue which Integrated Unblock screen is not displayed when smart card PIN is blocked.
-ms.date: 05/07/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, takondo, mitsuchi, jamesxia
 ms.custom: sap:smart-card-logon, csstroubleshoot
-ms.technology: windows-client-user-profiles
 ---
 # Integrated Unblock screen not displayed when smart card PIN is blocked
 
-_Applies to:_ &nbsp; Windows 10  
+_Applies to:_ &nbsp; Windows 10
 
 Assume that the [**Allow Integrated Unblock screen to be displayed at the time of logon**](/windows/security/identity-protection/smart-cards/smart-card-group-policy-and-registry-settings#allow-integrated-unblock-screen-to-be-displayed-at-the-time-of-logon) group policy is enabled in Windows 10. After several failed logon attempts because of an incorrect PIN, the smart card is blocked and you receive this error message:
 

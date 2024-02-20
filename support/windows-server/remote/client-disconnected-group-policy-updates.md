@@ -1,17 +1,15 @@
 ---
 title: Client is disconnected during Group Policy update
 description: Describes an issue in which clients are disconnected from Remote Desktop sessions.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:remote-desktop-sessions, csstroubleshoot
-ms.subservice: rds
 ---
 # Remote Desktop sessions may be disconnected during Group Policy updates in Windows Server
 

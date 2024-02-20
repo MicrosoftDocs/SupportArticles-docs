@@ -1,17 +1,15 @@
 ---
 title: Enable support for Clustered Windows Servers that use clustered RAID controllers
 description: Describes the steps required to enable a Direct Attached clustered RAID Storage Solution for Clustered Windows Servers.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:setup-and-configuration-of-clustered-services-and-applications, csstroubleshoot
-ms.subservice: high-availability
 ---
 # Enable support for Clustered Windows Servers that use clustered RAID controllers
 
@@ -43,7 +41,7 @@ To add the key to the registry, follow these steps:
 1. Open Registry editor (regedit.exe).
 2. Locate and then select the following registry subkey:
 
-    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ClusDIsk\Parameters`
+    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ClusDisk\Parameters`
 3. Right-click **Parameters** and then select **New**.
 4. Select **DWORD** and give it a name of **AllowBusTypeRAID**.
 5. Once the key is created, give it a value of 0x01.

@@ -1,17 +1,15 @@
 ---
 title: An incorrect IP address is returned
 description: Describes an issue in which an incorrect IP address is returned when you ping a server by using its NetBIOS name.
-ms.date: 04/12/2022
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, danma
 ms.custom: sap:ip-address-management-ipam, csstroubleshoot
-ms.subservice: networking
 ---
 # An incorrect IP address is returned when you ping a server by using its NetBIOS name  
 

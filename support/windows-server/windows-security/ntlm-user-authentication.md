@@ -1,17 +1,15 @@
 ---
 title: NTLM user authentication
 description: Provides some information about NTLM user authentication.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:legacy-authentication-ntlm, csstroubleshoot
-ms.subservice: windows-security
 ---
 # NTLM user authentication  
 

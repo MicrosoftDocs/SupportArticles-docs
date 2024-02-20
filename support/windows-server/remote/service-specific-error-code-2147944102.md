@@ -1,17 +1,15 @@
 ---
 title: Error 2147944102 when you start BITS service
 description: Provides a solution to an error 2147944102 that occurs when you start the Background Intelligent Transfer Service (BITS) Service.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:administration, csstroubleshoot
-ms.subservice: rds
 ---
 # "Service-Specific Error Code -2147944102" error message if you try to start the BITS service
 

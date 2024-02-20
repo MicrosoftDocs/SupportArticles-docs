@@ -1,17 +1,15 @@
 ---
 title: A computer can't identify the network
 description: Provides a solution to an issue that a computer can't identify the network when this computer is a member of a child domain.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, clandis, ioanc
 ms.custom: sap:secure-channel-issues, csstroubleshoot
-ms.subservice: windows-security
 ---
 # A computer can't identify the network when the computer is running Windows Vista, Windows Server 2008, Windows 7, or Windows Server 2008 R2, and is a member of a child domain
 

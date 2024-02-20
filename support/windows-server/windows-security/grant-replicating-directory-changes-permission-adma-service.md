@@ -1,17 +1,15 @@
 ---
 title: Replicating Directory Changes permission
 description: Describes how to grant the "Replicating Directory Changes" permission for the Microsoft Metadirectory Services ADMA service account.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, dweiss
 ms.custom: sap:permissions-access-control-and-auditing, csstroubleshoot
-ms.subservice: windows-security
 ---
 # How to grant the "Replicating Directory Changes" permission for the Microsoft Metadirectory Services ADMA service account
 

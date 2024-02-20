@@ -1,17 +1,15 @@
 ---
 title: Local policy doesn't permit you to log on interactively
 description: Provides a resolution to an issue where Local Policy does not permit you to log on interactively.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:connecting-to-a-session-or-desktop, csstroubleshoot
-ms.subservice: rds
 ---
 # Local policy doesn't permit you to log on interactively
 

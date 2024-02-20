@@ -1,17 +1,15 @@
 ---
 title: Determine hardware DEP is available
 description: Describes the requirements for using hardware-enforced DEP. Also describes how to confirm that hardware DEP is working.
-ms.date: 09/27/2020
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, chrisw, patste, mmill
 ms.custom: sap:performance-monitoring-tools, csstroubleshoot
-ms.technology: windows-client-performance
 ---
 # How to determine that hardware DEP is available and configured on your computer
 

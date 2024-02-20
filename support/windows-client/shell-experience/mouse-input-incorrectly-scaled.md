@@ -1,17 +1,15 @@
 ---
 title: Mouse input in some games is incorrectly scaled on high-DPI devices
 description: Describes how to work around an issue in which mouse input in some games is incorrectly scaled on high-DPI devices.
-ms.date: 09/08/2020
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:dpi-and-display-issues, csstroubleshoot
-ms.technology: windows-client-shell-experience
 ---
 # Mouse input in some games is incorrectly scaled on high-DPI devices
 

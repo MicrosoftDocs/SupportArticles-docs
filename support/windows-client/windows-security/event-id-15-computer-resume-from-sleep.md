@@ -1,17 +1,15 @@
 ---
 title: Event ID 15 when a computer resumes from sleep
 description: Describes a problem that may occur when you use a Trusted Platform Module device on a computer that is running Windows 8.1 Windows Server 2012 R2, Windows 8, Windows Server 2012, Windows 7, or Windows Server 2008 R2.
-ms.date: 09/08/2020
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:bitlocker, csstroubleshoot
-ms.technology: windows-client-security
 ---
 # Event ID 15 may be logged when a Windows-based computer that has a TPM chip resumes from sleep
 

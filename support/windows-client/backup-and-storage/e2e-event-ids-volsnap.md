@@ -1,17 +1,15 @@
 ---
 title: e2e Event IDs for Volsnap
 description: Lists the event IDs for Volsnap
-ms.date: 09/21/2020
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:volume-shadow-copy-service-vss, csstroubleshoot
-ms.technology: windows-client-backup-and-storage
 ---
 # e2e: Event IDs for Volsnap
 

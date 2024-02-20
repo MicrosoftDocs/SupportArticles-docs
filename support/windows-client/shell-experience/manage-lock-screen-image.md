@@ -1,17 +1,15 @@
 ---
 title: Manage lock screen image
 description: Describes how an administrator can manage the lock screen image.
-ms.date: 09/08/2020
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, warrenw, justintu
 ms.custom: sap:lock-screen-or-screensaver, csstroubleshoot
-ms.technology: windows-client-shell-experience
 ---
 # How to Manage the Lock Screen Image on Windows 8 and Windows Server 2012
 

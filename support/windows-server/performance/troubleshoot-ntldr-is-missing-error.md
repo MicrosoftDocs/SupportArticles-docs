@@ -1,17 +1,15 @@
 ---
 title: troubleshoot "NTLDR Is Missing" error
 description: Describes how to troubleshoot the "NTLDR Is Missing" error message.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, larryga
 ms.custom: sap:no-boot-not-bugchecks, csstroubleshoot
-ms.subservice: performance
 ---
 # How to troubleshoot the "NTLDR is missing" error message
 

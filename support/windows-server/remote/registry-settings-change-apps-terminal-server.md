@@ -1,17 +1,15 @@
 ---
 title: Terminal Server registry settings for applications
 description: Discusses the registry settings that can be used to modify application behavior on a Terminal Server computer.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:application-compatibility, csstroubleshoot
-ms.subservice: rds
 ---
 # Terminal Server registry settings for applications
 

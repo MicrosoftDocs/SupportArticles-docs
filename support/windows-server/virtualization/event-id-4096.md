@@ -1,17 +1,15 @@
 ---
 title: Event ID 4096 is logged in Hyper-V host
 description: Discusses that Microsoft-Windows-Hyper-V-Integration-KvpExchange is logged on a Windows Server 2012 R2 and Windows Server 2012 Hyper-V host. This event can safely be ignored.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, ryhayash, v-jesits
 ms.custom: sap:integration-components, csstroubleshoot
-ms.subservice: hyper-v
 ---
 # Event ID 4096 (Microsoft-Windows-Hyper-V-Integration-KvpExchange) is logged
 

@@ -1,17 +1,15 @@
 ---
 title: Can't create Virtual switch in Hyper-V
 description: Address an issue in which you receive an error when you create Hyper-V virtual switch in Windows Server 2019 (Build 17763).
-ms.date: 11/15/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:virtual-switch-manager-vmswitch, csstroubleshoot
-ms.subservice: hyper-v
 ---
 # You receive "Error applying virtual switch properties changes" error on a Windows Server 2019 (Build 17763)-based Hyper-V server
 

@@ -1,16 +1,14 @@
 ---
 title: UE-V overview
 description: Overview of UE-V troubleshooting articles for Windows clients.
-ms.date: 11/09/2020
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.technology: windows-client-user-experience-virtualization-ue-v
 ---
 # UE-V troubleshooting documentation for Windows clients
 

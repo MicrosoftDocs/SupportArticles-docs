@@ -1,17 +1,15 @@
 ---
 title: How to use the BitLocker Recovery Password Viewer to view recovery passwords for Windows Vista
 description: Describes a tool that you can use to locate and to view BitLocker recovery passwords.
-ms.date: 03/24/2022
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:bitlocker, csstroubleshoot
-ms.subservice: windows-security
 ---
 # How to use the BitLocker Recovery Password Viewer for Active Directory Users and Computers tool to view recovery passwords for Windows Vista
 

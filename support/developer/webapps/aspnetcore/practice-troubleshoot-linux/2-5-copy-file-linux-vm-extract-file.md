@@ -2,9 +2,7 @@
 title: Copy and extract files from development environment to Linux
 description: This article describes how to copy files from a Windows-based computer to a Linux virtual machine and extract files.
 ms.date: 03/29/2021
-ms.service: aspnet-core
 ms.reviewer: ramakoni, ahmetmb
-ms.subservice: practice-troubleshoot-linux
 author: ahmetmithat
 ---
 # Part 2.5 - Copy and extract files from your development environment to Linux

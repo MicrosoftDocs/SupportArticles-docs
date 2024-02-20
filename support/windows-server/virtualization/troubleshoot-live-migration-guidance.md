@@ -1,17 +1,15 @@
 ---
 title: Guidance for troubleshooting virtual machine live migration
 description: Introduces general guidance for troubleshooting scenarios related to virtual machine live migration.
-ms.date: 09/28/2022
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:live-migration, csstroubleshoot
-ms.subservice: hyper-v
 ---
 # Virtual machine live migration troubleshooting guidance
 

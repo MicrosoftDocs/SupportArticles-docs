@@ -1,17 +1,15 @@
 ---
 title: Terminal Server licensing
 description: Describes Terminal Server licensing.
-ms.date: 05/16/2023
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, willgloy
 ms.custom: sap:remote-desktop-services-terminal-services-licensing, csstroubleshoot
-ms.subservice: rds
 ---
 # Terminal Server licensing
 

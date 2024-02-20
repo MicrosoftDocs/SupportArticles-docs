@@ -1,17 +1,15 @@
 ---
 title: Recommended updates for Windows Server 2012 R2 Hyper-V environments
 description: Describes the hotfixes, product updates, and known solutions that are recommended and currently available for Windows Server 2012 R2 Hyper-V environments.
-ms.date: 03/24/2022
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: AJAYPS, kaushika
 ms.custom: sap:installation-and-configuration-of-hyper-v, csstroubleshoot
-ms.subservice: hyper-v
 ---
 # Recommended hotfixes, updates, and known solutions for Windows Server 2012 R2 Hyper-V environments
 

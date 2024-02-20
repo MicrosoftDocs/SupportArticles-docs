@@ -1,17 +1,15 @@
 ---
 title: Error 51 or 53 when you access shared resources
 description: Provides a solution to system error 51 or 53 that occurs when you access shared resources.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:remote-access, csstroubleshoot
-ms.subservice: networking
 ---
 # Error when you try to access shared resources on a computer: System error 53 has occurred or System error 51 has occurred
 

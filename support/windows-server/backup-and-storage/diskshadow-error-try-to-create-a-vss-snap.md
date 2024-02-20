@@ -1,17 +1,15 @@
 ---
 title: Diskshadow error when creating VSS snapshot
 description: Describes an issue that triggers an error message when you try to create a Volume Shadow Services (VSS) diskshadow snapshot. The error message reflects a benign condition that doesn't disrupt the backup operation.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:configuring-and-using-backup-software, csstroubleshoot
-ms.subservice: backup-and-storage
 ---
 # Diskshadow error when you try to create a VSS snapshot  
 

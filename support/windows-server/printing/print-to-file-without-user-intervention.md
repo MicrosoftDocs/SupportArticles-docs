@@ -1,17 +1,15 @@
 ---
 title: Print to File without user intervention
 description: Describes how to Print to File without user intervention.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:management-and-configuration:-general-issues, csstroubleshoot
-ms.subservice: printing
 ---
 # How to Print to File without user intervention
 

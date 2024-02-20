@@ -1,17 +1,15 @@
 ---
 title: Modern apps or application packages are reported as vulnerable
 description: Provides resolutions for the issue in which modern apps or application packages are reported by vulnerability scanning.
-ms.date: 02/21/2022
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, kimberj
 ms.custom: sap:modern-inbox-and-microsoft-store-apps, csstroubleshoot
-ms.technology: windows-client-application-compatibility
 ---
 # Modern apps or application packages are reported as vulnerable
 

@@ -1,17 +1,15 @@
 ---
 title: Duplex printing options can't be set
 description: Resolves an issue that prevents the settings for duplex printing options from being changed through applications.
-ms.date: 05/16/2023
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, naokioh, juesaigo
 ms.custom: sap:errors-and-troubleshooting:-print-output-or-print-failures, csstroubleshoot
-ms.technology: windows-client-printing
 ---
 # Two-sided (duplex) printing options cannot be set for applications in Windows 8.1 and Windows 8
 

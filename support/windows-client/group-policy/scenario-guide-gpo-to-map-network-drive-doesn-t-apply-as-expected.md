@@ -4,9 +4,7 @@ description: This article introduces a troubleshooting scenario in which network
 author: Deland-Han
 ms.author: delhan
 ms.topic: troubleshooting
-ms.date: 10/10/2023
-ms.prod: windows-client
-ms.technology: windows-client-group-policy
+ms.date: 12/26/2023
 ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
 ---
 # Scenario guide: GPO to map a network drive doesn't apply as expected

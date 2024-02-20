@@ -1,17 +1,15 @@
 ---
 title: Start an application as an administrator account
 description: Describes how to start an application as an administrator account.
-ms.date: 06/28/2023
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, BOBQIN
 ms.custom: sap:desktop-shell, csstroubleshoot
-ms.subservice: shell-experience
 ---
 # How to use Run as to start an application as an administrator account
 

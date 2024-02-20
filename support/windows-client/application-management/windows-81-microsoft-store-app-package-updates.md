@@ -1,17 +1,15 @@
 ---
 title: Microsoft Store app package updates available
 description: Outlines the default Windows Store apps release cycle for administrators.
-ms.date: 09/08/2020
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, kledman
 ms.custom: sap:modern-inbox-and-microsoft-store-apps, csstroubleshoot
-ms.technology: windows-client-application-compatibility
 ---
 # Windows 8.1 Microsoft Store app package updates available for download
 

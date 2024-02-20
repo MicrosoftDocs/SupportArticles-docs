@@ -1,17 +1,15 @@
 ---
 title: Can't set up Folder Redirection with Group Policy
 description: Resolves an issue where you fail to set up Folder Redirection component of Group Policy.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:folder-redirection, csstroubleshoot
-ms.subservice: user-profiles
 ---
 # Event ID 101 and Event ID 1000 may be displayed when Folder Redirection is set up with Group Policy
 

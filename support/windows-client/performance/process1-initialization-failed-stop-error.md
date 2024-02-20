@@ -1,17 +1,15 @@
 ---
 title: PROCESS1_INITIALIZATION_FAILED stop error after you upgrade to Windows 10 Version 1607
 description: Describes an issue that triggers a stop error on a blue screen after you upgrade your system to Windows 10 Version 1607. This issue occurs if you have Hitachi HIBUN installed. Workarounds are provided.
-ms.date: 09/10/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:no-boot-not-bugchecks, csstroubleshoot
-ms.technology: windows-client-performance
 ---
 # PROCESS1_INITIALIZATION_FAILED stop error after you upgrade to Windows 10 Version 1607
 

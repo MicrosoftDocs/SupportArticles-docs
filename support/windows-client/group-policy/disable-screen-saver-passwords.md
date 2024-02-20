@@ -1,17 +1,15 @@
 ---
 title: Disable screen saver passwords by using policies
 description: Describes how to disable screen saver passwords by using policies.
-ms.date: 10/19/2020
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, CCLAY
 ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
-ms.technology: windows-client-group-policy
 ---
 # Disable screen saver passwords by using policies
 

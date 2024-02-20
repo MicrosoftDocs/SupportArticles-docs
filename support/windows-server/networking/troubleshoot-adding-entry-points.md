@@ -1,17 +1,15 @@
 ---
 title: Troubleshoot adding entry points
 description: Learn how to troubleshoot issues related to the Add-DAEntryPoint command.
-ms.date: 11/16/2023
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, brianlic, jgerend, v-lianna
 ms.custom: sap:remote-access-multisite, csstroubleshoot
-ms.subservice: networking
 ms.assetid: dcc1037f-1a65-4497-99e6-0df9aef748a8
 ---
 # Troubleshoot adding entry points

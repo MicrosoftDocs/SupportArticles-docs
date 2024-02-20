@@ -1,17 +1,15 @@
 ---
 title: Restore system/boot drive letter
 description: Describes how to change the system or boot drive letter in Windows.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:partition-and-volume-management, csstroubleshoot
-ms.subservice: backup-and-storage
 ---
 # Restore the system or boot drive letter in Windows  
 

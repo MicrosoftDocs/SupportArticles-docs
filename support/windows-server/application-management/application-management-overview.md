@@ -1,16 +1,14 @@
 ---
 title: Application Management overview
 description: Overview of Application Management troubleshooting articles for Windows Server.
-ms.date: 06/17/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.subservice: application-compatibility
 ---
 # Application Management troubleshooting documentation for Windows Server
 

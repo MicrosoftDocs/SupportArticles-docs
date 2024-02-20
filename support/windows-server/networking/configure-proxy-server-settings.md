@@ -1,17 +1,15 @@
 ---
 title: Configure proxy server settings
 description: Describes how to configure proxy server settings in Windows.
-ms.date: 10/27/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:tcp/ip-communications, csstroubleshoot
-ms.subservice: networking
 ---
 # Configure proxy server settings in Windows
 

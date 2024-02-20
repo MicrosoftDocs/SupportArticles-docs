@@ -1,17 +1,15 @@
 ---
 title: Error 0x8007000e when you call many objects from one process to another by using COM+
 description: Provides a solution to an issue where calling many objects from one process to another by using Microsoft COM+ fails.
-ms.date: 12/07/2020
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:com+-administration-configuration-and-security, csstroubleshoot
-ms.technology: windows-client-application-compatibility
 ---
 # Error when you call many objects from one process to another by using COM+: Not enough storage is available to complete this operation (0x8007000e)
 

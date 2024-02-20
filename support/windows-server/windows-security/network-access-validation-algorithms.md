@@ -1,17 +1,15 @@
 ---
 title: Network access validation algorithms and examples for Windows
 description: Describes network access validation algorithms and examples.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: tinab, kaushika
 ms.custom: sap:legacy-authentication-ntlm, csstroubleshoot
-ms.subservice: windows-security
 ---
 # Network access validation algorithms and examples for Windows Server 2003, Windows XP, and Windows 2000
 

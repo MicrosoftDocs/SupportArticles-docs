@@ -1,17 +1,15 @@
 ---
 title: Remote Desktop session doesn't terminate
 description: Resolve an issue where Remote Desktop that specifies a program to start on logon doesn't terminate when the specified program is exited.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:remote-desktop-sessions, csstroubleshoot
-ms.subservice: rds
 ---
 # Remote Desktop or RemoteApp session does not terminate due to spawned splwow64.exe process
 

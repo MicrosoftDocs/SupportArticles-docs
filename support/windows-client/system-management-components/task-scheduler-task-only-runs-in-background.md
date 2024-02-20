@@ -1,17 +1,15 @@
 ---
 title: Task scheduler runs tasks as background processes
 description: Provides solutions to an issue where task scheduler runs tasks as background processes after you use sysprep to create the master image.
-ms.date: 09/08/2020
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:task-scheduler, csstroubleshoot
-ms.technology: windows-client-system-management-components
 ---
 # Task scheduler task only runs in the background after you use sysprep to create master image
 

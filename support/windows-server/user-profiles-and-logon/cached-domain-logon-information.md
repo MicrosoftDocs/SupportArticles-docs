@@ -1,17 +1,15 @@
 ---
 title: Cached domain logon information
 description: This article describes how cached domain logon information works and how to control cached logon information.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:user-logon-fails, csstroubleshoot
-ms.subservice: user-profiles
 ---
 # Cached domain logon information
 

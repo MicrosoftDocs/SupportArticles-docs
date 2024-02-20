@@ -1,17 +1,15 @@
 ---
 title: Error messages on SMB connections
 description: Provides a solution to error messages that occur on SMB connections. Provides a workaround.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, joelch
 ms.custom: sap:access-to-remote-file-shares-smb-or-dfs-namespace, csstroubleshoot
-ms.subservice: networking
 ---
 # System error 2148073478, extended error, or Invalid Signature error message on SMB connections in Windows Server 2012 or Windows 8
 

@@ -1,17 +1,15 @@
 ---
 title: Error when DDA-capable app is run against GPU
 description: Describes an issue in which an error is generated when a Desktop Duplication API-capable application is run against a discrete GPU on a computer that is running Windows 8.1.
-ms.date: 09/17/2020
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:dpi-and-display-issues, csstroubleshoot
-ms.technology: windows-client-shell-experience
 ---
 # Error generated when Desktop Duplication API-capable application is run against discrete GPU
 

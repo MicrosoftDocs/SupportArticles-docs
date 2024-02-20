@@ -1,17 +1,15 @@
 ---
 title: OpenGL applications don't run on Miracast display
 description: Describes a problem in Windows 10 in which OpenGL applications cannot project to a Miracast display.
-ms.date: 09/18/2020
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, ddobyns
 ms.custom: sap:wireless-networking-and-802.1x-authentication, csstroubleshoot
-ms.technology: windows-client-networking
 ---
 # OpenGL applications do not run on a Miracast wireless display in Windows 10
 

@@ -1,17 +1,15 @@
 ---
 title: Applications can't remotely access COM+ object
 description: Discusses that you receive a 0x80004027-CO_E_CLASS_DISABLED error when you try to remotely access COM+ object after you upgrade to Windows Server 2016. Provides a resolution.
-ms.date: 10/10/2022
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:com+-administration-configuration-and-security, csstroubleshoot
-ms.subservice: application-compatibility
 ---
 # 0x80004027 error when you try to remotely access COM+ object after you upgrade to Windows Server 2016 or later versions
 

@@ -1,17 +1,15 @@
 ---
 title: General guidance to troubleshoot DHCP
 description: Introduces general guidance to troubleshoot DHCP.
-ms.date: 11/16/2023
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-lianna
 ms.custom: sap:dynamic-host-configuration-protocol-dhcp, csstroubleshoot
-ms.subservice: networking
 ---
 # General guidance to troubleshoot Dynamic Host Configuration Protocol (DHCP)
 

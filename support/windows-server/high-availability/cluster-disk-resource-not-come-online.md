@@ -1,17 +1,15 @@
 ---
 title: Cluster disk resource fails to come online
 description: Fixes an issue where the disk resource fails to come online when the name of the cluster disk resource has an invalid character.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jeffhugh, hisingh
 ms.custom: sap:cannot-bring-a-resource-online, csstroubleshoot
-ms.subservice: high-availability
 ---
 # A cluster disk resource may fail to come online and run chkdsk when an invalid character is used in the resource name
 

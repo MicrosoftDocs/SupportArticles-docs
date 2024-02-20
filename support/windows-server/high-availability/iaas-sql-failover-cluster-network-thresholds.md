@@ -1,17 +1,15 @@
 ---
 title: Tuning failover cluster network thresholds
 description: Introduces solutions for adjusting the threshold of failover cluster networks.
-ms.date: 11/16/2023
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-lianna
 ms.custom: sap:setup-and-configuration-of-clustered-services-and-applications, csstroubleshoot
-ms.subservice: high-availability
 ---
 # IaaS with SQL Server - tuning failover cluster network thresholds
 

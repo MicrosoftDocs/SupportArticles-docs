@@ -1,17 +1,15 @@
 ---
 title: Forwarders resolution timeouts
 description: Describes the fallback and timeout behavior that exist when one or more DNS Servers IPs are configured as forwarders or conditional forwarders on a DNS server.
-ms.date: 03/24/2022
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, arrenc, dpracht, kellyv, stegag
 ms.custom: sap:dns, csstroubleshoot
-ms.subservice: networking
 ---
 # NET: DNS: Forwarders and conditional forwarders resolution timeouts
 

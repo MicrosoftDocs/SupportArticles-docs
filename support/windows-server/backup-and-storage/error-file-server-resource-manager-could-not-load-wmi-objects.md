@@ -1,17 +1,15 @@
 ---
 title: File Server Resource Manager could not load WMI objects in Windows Server
 description: Fixes an error that occurs when starting the File Server Resource Manager on Windows Server.
-ms.date: 05/16/2023
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:file-server-resource-manager-fsrm, csstroubleshoot
-ms.subservice: backup-and-storage
 ---
 # File Server Resource Manager could not load WMI objects in Windows Server
 

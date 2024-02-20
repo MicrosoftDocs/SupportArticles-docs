@@ -1,17 +1,15 @@
 ---
 title: Disable machine account password changes
 description: Describes how an administrator can disable automatic machine account password changes.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, davidg
 ms.custom: sap:legacy-authentication-ntlm, csstroubleshoot
-ms.subservice: windows-security
 ---
 # How to disable automatic machine account password changes
 

@@ -1,17 +1,15 @@
 ---
 title: DNS records not shown in DNS zones
 description: Lists different reasons why DNS records disappear from DNS zones.
-ms.date: 03/24/2022
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:dns, csstroubleshoot
-ms.subservice: networking
 ---
 # Cumulative list of reasons that cause DNS records to disappear from DNS zones
 

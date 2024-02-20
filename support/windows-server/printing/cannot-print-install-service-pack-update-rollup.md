@@ -1,17 +1,15 @@
 ---
 title: Users can't print after you install a service pack, update rollup, or printer hotfix on a server in Windows
 description: Describes an issue where you can't print after you install a service pack or printer hotfix on a server.
-ms.date: 04/20/2022
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: eldenc, kaushika
 ms.custom: sap:errors-and-troubleshooting-general-issues, csstroubleshoot
-ms.subservice: printing
 ---
 # Users can't print after you install a service pack, update rollup, or printer hotfix on a Windows-based server
 

@@ -1,17 +1,15 @@
 ---
 title: Add Print Directory feature for folders
 description: Explains how to print a directory listing of the contents of a folder more easily by using the Print Directory feature.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, davidg, georgev
 ms.custom: sap:management-and-configuration:-general-issues, csstroubleshoot
-ms.subservice: printing
 ---
 # How to add the Print Directory feature for folders in Windows XP, in Windows Vista, in Windows 7
 

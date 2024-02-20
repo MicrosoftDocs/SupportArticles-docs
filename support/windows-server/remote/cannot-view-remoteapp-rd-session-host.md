@@ -1,17 +1,15 @@
 ---
 title: You cannot view "RemoteApp" programs on an RD Session Host server by using RD Web Access
 description: Provides a resolution for the issue that you cannot view "RemoteApp" programs on an RD Session Host server by using RD Web Access
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, nedpyle
 ms.custom: sap:rdweb, csstroubleshoot
-ms.subservice: rds
 ---
 # You cannot view "RemoteApp" programs on an RD Session Host server by using RD Web Access
 

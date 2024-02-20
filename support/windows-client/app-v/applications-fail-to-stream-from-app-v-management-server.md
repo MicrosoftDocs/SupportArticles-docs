@@ -1,17 +1,15 @@
 ---
 title: How to troubleshoot applications failing to stream from an App-V management server
 description: Describes how to troubleshoot virtualized applications in Microsoft Application Virtualization (App-V) that fail to stream from the management server.
-ms.date: 12/07/2020
+ms.date: 12/26/2023
 author: Deland-Han
-ms.author: delhan 
+ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, jeffpatt
 ms.custom: sap:management-server-issues, csstroubleshoot
-ms.technology: windows-client-application-virtualization-app-v
 ---
 # How to troubleshoot applications failing to stream from an App-V management server
 
