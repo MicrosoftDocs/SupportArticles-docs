@@ -135,11 +135,11 @@ If you created a Batch account with pool allocation mode set to **user subscript
 
     After you submit your support request, Azure support will contact you. Quota requests may be completed within a few minutes or up to two business days. Once the quota request is completed or fulfilled, the pool creation should be successful.
 
-## Scenario 4: Transient internal server error during batch pool resizing
+## Scenario 4: Transient internal server error during Batch pool resizing
 
 ### Symptom for Scenario 4
 
-The batch pool has been operating normally for some time. However, the resize operation unexpectedly failed with an internal server error, or the resize operation remained in the resizing state.
+The Batch pool has been operating normally for some time. However, the resize operation unexpectedly failed with an internal server error, or the resize operation remained in the resizing state.
 
 Here's the error message:
 
@@ -160,6 +160,36 @@ To reduce the impact on your production, use the following methods:
 - Retry your resize request after a few minutes.
 - Create a new pool.
 - Use the Batch service in another available region as a failover if the methods above aren't helpful.
+
+## Scenario 5: Insufficient capacity for the requested VM size in the current region
+
+### Symptom for Scenario 5
+
+The Batch pool has been operating normally for some time. However, the resize operation failed with an insufficient capacity error, or the resize operation remained in the resizing state.
+
+Here's the error message:
+
+> **Code:** AllocationFailed  
+> **Message:**  
+> Desired number of dedicated nodes could not be allocated  
+> **Values:**  
+> Reason - Deployment allocation failed due to insufficient capacity for the requested VM size in the region.
+
+### Cause: Infrastructure limitations
+
+The Batch service may experience these issues due to some infrastructure limitations. It's not related to users' core quota.
+
+### Solution: Retry the resize operation, create a new pool with a different VM size, or use another region
+
+To resolve this issue, try the following methods:
+
+- Retry the resize operation.
+
+    Resource availability can change as resources are constantly freed up in the cluster, region, or zone.
+
+- Change the VM size and create a new pool with a different VM size.
+
+- Use the Batch service in another available region.
 
 ## Scenario 6: Azure Batch service permission issue
 
