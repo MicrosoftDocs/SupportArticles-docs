@@ -177,7 +177,7 @@ Here's the error message:
 
 ### Cause: Infrastructure limitations
 
-The Batch service may experience these issues due to some infrastructure limitations. It's not related to customers' core quota.
+The Batch service may experience these issues due to some infrastructure limitations. It's not related to users' core quota.
 
 ### Solution: Retry the resize operation, create a new pool with a different VM size, or use another region
 
