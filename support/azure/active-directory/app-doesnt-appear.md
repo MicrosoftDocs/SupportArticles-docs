@@ -1,15 +1,15 @@
 ---
 title: Application does not appear after clicking the add button
 description: Understand why an application does not appear after clicking the add button.
-ms.date: 05/08/2023
+ms.date: 02/18/2024
 author: bernawy
 ms.author: bernaw
 editor: v-jsitser
 ms.reviewer: v-leedennis, jarrettr
 ms.service: active-directory
 ms.subservice: app-mgmt
-content_well_notification: 
-  - AI-contribution
+content_well_notification: AI-contribution
+ai-usage: ai-assisted
 ---
 # Application does not appear after clicking the add button
 
