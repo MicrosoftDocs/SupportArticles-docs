@@ -1,7 +1,7 @@
 ---
 title: System error 1331 when you connect to a share
 description: Helps fix the system error 1331 that occurs when you connect to a share.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

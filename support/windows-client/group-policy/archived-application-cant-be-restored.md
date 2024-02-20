@@ -1,7 +1,7 @@
 ---
 title: Archived application can't be restored
 description: Group Policy settings may block automatic application updates. Blocked on-demand applications must be updated by other means before they can be used.
-ms.date: 09/25/2020
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
