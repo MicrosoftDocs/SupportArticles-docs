@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, jories, milanmil, v-lianna
-ms.custom: sap:certificates-and-public-key-infrastructure-pki, csstroubleshoot
+ms.custom: sap:certificate-enrollment, csstroubleshoot
 ---
 # Approval required for certificate renewals when certificate autoenrollment configured
 
