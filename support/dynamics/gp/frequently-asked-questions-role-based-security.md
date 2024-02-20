@@ -19,7 +19,7 @@ This article contains frequently asked questions about role-based security in Mi
 
 - **Q1: Is documentation available that describes role-based security for Microsoft Dynamics GP?**
 
-   A1: The [System Setup](https://learn.microsoft.com/en-us/dynamics-gp/installation/systemsetup) describes security in Microsoft Dynamics GP.
+   A1: The [System Setup](/dynamics-gp/installation/systemsetup) describes security in Microsoft Dynamics GP.
   
 - **Q2: What are the basic components of role-based security?**
 
@@ -63,7 +63,7 @@ This article contains frequently asked questions about role-based security in Mi
 
 - **Q1: What are the steps to assign roles to a user?**
 
-  A1: The [System Setup](https://learn.microsoft.com/en-us/dynamics-gp/installation/systemsetup) describes how to assign roles to a user in Microsoft Dynamics GP.
+  A1: The [System Setup](/dynamics-gp/installation/systemsetup) describes how to assign roles to a user in Microsoft Dynamics GP.
 
 - **Q2: How do I grant a user access to a custom report in Microsoft Dynamics GP?**
 
