@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot AD replication error 1396
 description: Provides help to troubleshoot Active Directory replication error 1396.
-ms.date: 04/28/2023
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

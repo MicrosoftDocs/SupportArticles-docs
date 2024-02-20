@@ -1,7 +1,7 @@
 ---
 title: ISMServ.exe fails to start when a domain controller starts
 description: Describes a condition under which the Intersite Messaging Service does not start correctly when a domain controller starts. Provides a workaround.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

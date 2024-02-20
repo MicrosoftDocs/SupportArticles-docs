@@ -1,7 +1,7 @@
 ---
 title: Deleting Active Directory objects that have many links causes replication failures
 description: Discusses an issue in which deleting Active Directory objects that have many links causes replication failures. Provides a workaround.
-ms.date: 04/28/2023
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

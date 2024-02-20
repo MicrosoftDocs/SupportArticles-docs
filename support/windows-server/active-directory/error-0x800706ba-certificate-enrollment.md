@@ -4,7 +4,7 @@ description: Introduces steps to resolve the error 0x800706ba, The RPC Server is
 author: Deland-Han
 ms.author: delhan
 ms.topic: troubleshooting
-ms.date: 12/13/2023
+ms.date: 12/26/2023
 ms.reviewer: kaushika
 ms.custom: sap:active-directory-certificate-services, csstroubleshoot, ikb2lmc
 ---

@@ -1,7 +1,7 @@
 ---
 title: Event ID 84 occurs in AD RMS in Windows Server
 description: Fixes an issue in which event ID 84 is logged in Active Directory Rights Management Services (AD RMS) in Windows Server 2008 and later.
-ms.date: 12/09/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

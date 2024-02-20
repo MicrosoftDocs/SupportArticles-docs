@@ -1,8 +1,8 @@
 ---
 title: Set up a test company
 description: Describes how to set up a test company that has a copy of your live production company data by using Microsoft SQL Server.
-ms.reviewer:
-ms.date: 03/31/2021
+ms.reviewer: theley
+ms.date: 02/19/2024
 ---
 # Set up a test company that has a copy of live company data for Microsoft Dynamics GP by using Microsoft SQL Server
 
@@ -18,8 +18,6 @@ To test certain issues, a troubleshooting technique may be to copy the Live Comp
 ## More information
 
 Notes:
-
-- If you use **Record Level Notes** in your existing live company and plan to use them in the test company, you must run the NoteFix utility. For more information, contact the Microsoft Business Solutions System Technical Support team by telephone at (888) 477-7877.
 
 - If you're using **Human Resources** for Microsoft Dynamics GP, the Attendance Setup information appears to haven't been copied over. To open this window, select **Tools**, point to **Setup**, point to **Human Resources**, point to **Attendance**, and then select **Setup**. This table (TAST0130) is copied over, but it contains a field that still references the Live Company database. To correct this issue, you can reenter the data in the Attendance Setup window in the new Test company database to contain the same information as before and Save it. Or, you may choose to update the COMPANYCODE_I field in the TAST0130 table to change the company code reference to Test database instead (which can be found in the INTERID column value for the Test company in the Dynamics..SY01500 table).  
 

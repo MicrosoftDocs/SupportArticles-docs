@@ -1,7 +1,7 @@
 ---
 title: Name of redirected folder isn't user name
 description: Describes a behavior that occurs after you redirect the Documents folder of a Windows Vista-based or Windows 7-based computer to a network share. Describes how to work around this behavior.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

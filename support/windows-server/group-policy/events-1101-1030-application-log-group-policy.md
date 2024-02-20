@@ -1,7 +1,7 @@
 ---
 title: Events 1101 and 1030 are logged in the Application log when applying Group Policy
 description: Describes a problem that may occur when the Group Policy engine does not have read permissions to the gPLink attribute and the gPOptions attribute of the parent OUs. In this situation, the Group Policy engine cannot apply Group Policy settings.
-ms.date: 04/28/2023
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

@@ -1,7 +1,7 @@
 ---
 title: Windows registry for advanced users
 description: Describes the Windows registry and provides information about how to edit it.
-ms.date: 04/06/2022
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

@@ -1,7 +1,7 @@
 ---
 title: Error when you run the Convert-MsolDomainToStandard cmdlet
 description: Describes an issue where you receive an error message when converting a domain from federated to managed using Convert-MsolDomainToStandard cmdlet. Provides a resolution.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: willfid
 ms.author: delhan
 manager: dcscontentpm

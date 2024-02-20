@@ -1,7 +1,7 @@
 ---
 title: The system registry is no longer backed up to the RegBack folder starting in Windows 10 version 1803
 description: Starting in Windows 10, version 1803, Windows no longer automatically backs up the system registry to the RegBack folder. System restore points include registry information.
-ms.date: 04/28/2023
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

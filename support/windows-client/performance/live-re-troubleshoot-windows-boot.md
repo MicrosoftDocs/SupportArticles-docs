@@ -8,7 +8,7 @@ manager: dcscontentpm
 audience: itpro
 ms.custom: sap:no-boot-not-bugchecks, csstroubleshoot
 ms.topic: troubleshooting
-ms.date: 10/30/2021
+ms.date: 12/26/2023
 localization_priority: medium
 ---
 # Use LiveRE to troubleshoot Windows startup problems

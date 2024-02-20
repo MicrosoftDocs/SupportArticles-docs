@@ -1,7 +1,7 @@
 ---
 title: Can't install Windows Server 2019 on servers with a high processor count
 description: Provides workarounds for an issue in which Windows Server 2019 can't be installed on servers with a high processor count.
-ms.date: 05/18/2023
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
