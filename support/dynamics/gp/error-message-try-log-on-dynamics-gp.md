@@ -109,15 +109,15 @@ To resolve this problem, follow these steps, depending on the version of SQL Ser
 
 - SQL Server 2008 or later
 
-    1. Select **Start**, point to **Programs**, point to **Microsoft SQL Server 2005** or to **Microsoft SQL Server 2008**, and then select **SQL Server Management Studio**.
-    2. Log on as the sa user.
-    3. Under the server that is running SQL Server and Microsoft Dynamics GP, expand **Databases**, expand **System Databases**, expand **Master**, expand **Programmability**, and then expand **Stored Procedures**.
-    4. Right-click **smDex_Max_Char**, and then select **Properties**.
-    5. On the **Permissions** tab, select the **ADD** button under **Users or roles**.
-    6. In the "Select Users or Roles" window, select the **Browse** button.
-    7. Select to select the **Public** check box, and then select **OK** two times.
-    8. On the **Permissions** tab, verify that **Public** appears under **Users or roles**.
-    9. Select to select the **Execute/Grant** check box, and then select **OK**.
+   1. Select **Start**, point to **Programs**, point to **Microsoft SQL Server 2005** or to **Microsoft SQL Server 2008**, and then select **SQL Server Management Studio**.
+   2. Log on as the sa user.
+   3. Under the server that is running SQL Server and Microsoft Dynamics GP, expand **Databases**, expand **System Databases**, expand **Master**, expand **Programmability**, and then expand **Stored Procedures**.
+   4. Right-click **smDex_Max_Char**, and then select **Properties**.
+   5. On the **Permissions** tab, select the **ADD** button under **Users or roles**.
+   6. In the "Select Users or Roles" window, select the **Browse** button.
+   7. Select to select the **Public** checkbox, and then select **OK** two times.
+   8. On the **Permissions** tab, verify that **Public** appears under **Users or roles**.
+   9. Select to select the **Execute/Grant** checkbox, and then select **OK**.
 
 ### Resolution 6
 
