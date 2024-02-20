@@ -135,11 +135,11 @@ If you created a Batch account with pool allocation mode set to **user subscript
 
     After you submit your support request, Azure support will contact you. Quota requests may be completed within a few minutes or up to two business days. Once the quota request is completed or fulfilled, the pool creation should be successful.
 
-## Scenario 4: Transient internal server error during batch pool resizing
+## Scenario 4: Transient internal server error during Batch pool resizing
 
 ### Symptom for Scenario 4
 
-The batch pool has been operating normally for some time. However, the resize operation unexpectedly failed with an internal server error, or the resize operation remained in the resizing state.
+The Batch pool has been operating normally for some time. However, the resize operation unexpectedly failed with an internal server error, or the resize operation remained in the resizing state.
 
 Here's the error message:
 
@@ -165,7 +165,7 @@ To reduce the impact on your production, use the following methods:
 
 ### Symptom for Scenario 5
 
-The batch pool has been operating normally for some time. However, the resize operation failed with an insufficient capacity error, or the resize operation remained in the resizing state.
+The Batch pool has been operating normally for some time. However, the resize operation failed with an insufficient capacity error, or the resize operation remained in the resizing state.
 
 Here's the error message:
 
