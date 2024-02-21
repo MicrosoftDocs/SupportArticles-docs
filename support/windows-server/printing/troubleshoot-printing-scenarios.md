@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting scenarios for printing
 description: Advanced troubleshooting printing scenarios.
-ms.date: 05/16/2023
+ms.date: 12/26/2023
 author: kaushika-msft
 ms.author: kaushika
 manager: dcscontentpm

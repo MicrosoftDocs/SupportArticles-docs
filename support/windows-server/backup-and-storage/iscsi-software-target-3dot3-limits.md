@@ -1,7 +1,7 @@
 ---
 title: Microsoft iSCSI Software Target 3.3 limits
 description: Provides the supported and tested Microsoft iSCSI Software Target 3.3 limits.
-ms.date: 03/24/2022
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

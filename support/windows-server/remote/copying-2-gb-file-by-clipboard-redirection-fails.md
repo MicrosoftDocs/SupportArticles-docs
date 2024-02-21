@@ -1,7 +1,7 @@
 ---
 title: Copying files exceeding 2 GB fails
 description: When you try to copy a file larger than 2 GB by using Remote Desktop Protocol (RDP) client 6.0 or later, the file fails to copy. And you don't see an error message.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
