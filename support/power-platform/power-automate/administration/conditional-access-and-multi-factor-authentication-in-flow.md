@@ -1,8 +1,8 @@
 ---
 title: Conditional access and multifactor authentication in Power Automate (Flow)
 description: Using conditional access has an unexpected effect on users who use Flow to connect to Microsoft services that are relevant to conditional access policies.
-ms.reviewer: sranjan, hamenon
-ms.date: 03/31/2021
+ms.reviewer: sranjan, hamenon, cgarty
+ms.date: 02/21/2024
 ms.subservice: power-automate-admin
 ms.custom: has-azure-ad-ps-ref
 ---
@@ -15,8 +15,8 @@ _Original KB number:_ &nbsp; 4467879
 
 ## Recommendations
 
-- Do not use [remember multifactor authentication for trusted devices](/azure/active-directory/authentication/howto-mfa-mfasettings#remember-multi-factor-authentication-for-trusted-devices) because token lifetimes will shorten and cause connections to require refresh at the interval configured rather than at the standard extended length.
-- Ensure that users that sign in to Power Automate use criteria that matches the policies for the connections that a flow uses, so that policy conflict errors are avoided.
+- Don't use [remember multifactor authentication for trusted devices](/azure/active-directory/authentication/howto-mfa-mfasettings#remember-multi-factor-authentication-for-trusted-devices) because token lifetimes will shorten and cause connections to require refresh at the interval configured rather than at the standard extended length.
+- To avoid policy conflict errors, ensure that users that sign in to Power Automate use criteria that matches the policies for the connections that a flow uses.
 
 ## Details
 
@@ -34,7 +34,7 @@ You can also open the MFA configuration from the Azure portal. To do this, selec
 
 :::image type="content" source="media/conditional-access-and-multi-factor-authentication-in-flow/mfa-azure-portal.png" alt-text="Screenshot shows steps to open the M F A configuration from the Azure portal.":::
 
-MFA can also be configured from **Microsoft 365 admin center**. A subset of Azure MFA capabilities is available to Office 365 subscribers. For more information about how to enable MFA, see [Set up multifactor authentication for Office 365 users](/microsoft-365/admin/security-and-compliance/set-up-multi-factor-authentication).
+MFA can also be configured from **Microsoft 365 admin center**. A subset of Microsoft Entra multifactor authentication capabilities is available to Office 365 subscribers. For more information about how to enable MFA, see [Set up multifactor authentication for Office 365 users](/microsoft-365/admin/security-and-compliance/set-up-multi-factor-authentication).
 
 :::image type="content" source="media/conditional-access-and-multi-factor-authentication-in-flow/mfa-admin-center.png" alt-text="Screenshot shows that M F A can be configured from Microsoft 365 admin center.":::
 
@@ -42,7 +42,7 @@ MFA can also be configured from **Microsoft 365 admin center**. A subset of Azur
 
 The **remember multi-factor authentication** setting can help you to reduce the number of user logons by using a persistent cookie. This policy controls the Microsoft Entra settings that are documented in [Remember multifactor authentication for trusted devices](/azure/active-directory/authentication/howto-mfa-mfasettings#remember-multi-factor-authentication-for-trusted-devices).
 
-Unfortunately, this setting changes the token policy settings that make the connections expire every 14 days. This is one of the common reasons why connections fail more frequently after MFA is enabled. We recommend that you don't use this setting. 
+Unfortunately, this setting changes the token policy settings that make the connections expire every 14 days. This is one of the common reasons why connections fail more frequently after MFA is enabled. We recommend that you don't use this setting.
 
 ## Effects on the Power Automate portal and embedded experiences
 
@@ -64,7 +64,7 @@ To resolve this issue, users must sign in to the Power Automate portal under con
 
 ### Effect 2 - Automatic connection creation failure
 
-If users don't sign in to Power Automate by using criteria that matches the policies, the automatic connection creation to first-party Microsoft services that are controlled by the conditional access policies fail. Users must manually create and authenticate the connections by using criteria that matches the conditional access policy of the service that they try to access. This behavior also applies to 1-click templates that are created from the Power Automate portal.
+If users don't sign in to Power Automate by using criteria that match the policies, the automatic connection creation to first-party Microsoft services that are controlled by the conditional access policies fail. Users must manually create and authenticate the connections by using criteria that match the conditional access policy of the service that they try to access. This behavior also applies to 1-click templates that are created from the Power Automate portal.
 
 :::image type="content" source="media/conditional-access-and-multi-factor-authentication-in-flow/automatic-connection-creation-error.png" alt-text="Screenshot of the automatic connection creation error with AADSTS50076.":::
 
@@ -72,7 +72,7 @@ To resolve this issue, users must sign in to the Power Automate portal under con
 
 ### Effect 3 - Users can't create a connection directly
 
-If users don't sign in to Power Automate by using criteria that matches the policies, they can't create a connection directly, either through Power Apps or Flow. Users see the following error message when they try to create a connection:
+If users don't sign in to Power Automate by using criteria that match the policies, they can't create a connection directly, either through Power Apps or Flow. Users see the following error message when they try to create a connection:
 
 > AADSTS50076: Due to a configuration change made by your administrator, or because you moved to a new location, you must use multi-factor authentication to access \<service>.
 
