@@ -1,7 +1,7 @@
 ---
 title: Computer clock resets to a previous date and time
 description: Describes workarounds for an issue in which the computer clock resets to a past date and time.
-ms.date: 02/12/2024
+ms.date: 02/21/2024
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
