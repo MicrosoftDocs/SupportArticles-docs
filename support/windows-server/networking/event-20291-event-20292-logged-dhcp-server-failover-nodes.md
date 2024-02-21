@@ -1,7 +1,7 @@
 ---
 title: Event IDs 20291 and 20292 are logged on DHCP server failover nodes
 description: Describes the issue in which Event ID 20291 and Event ID 20292 are logged many times on DHCP server failover nodes.
-ms.date: 02/02/2023
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

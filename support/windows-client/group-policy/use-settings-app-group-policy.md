@@ -1,7 +1,7 @@
 ---
 title: Use Settings app Group Policy
 description: This article describes how to use Group Policies to manage access to the Settings app pages in Windows 10.
-ms.date: 09/08/2020
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

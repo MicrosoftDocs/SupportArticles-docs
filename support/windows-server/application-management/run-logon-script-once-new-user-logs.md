@@ -1,7 +1,7 @@
 ---
 title: Run a logon script once a new user logs on
 description: Describes how to configure a logon script or program to run one time when a user signs in to a computer for the first time.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

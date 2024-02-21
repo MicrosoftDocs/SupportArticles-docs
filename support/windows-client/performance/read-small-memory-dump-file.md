@@ -1,7 +1,7 @@
 ---
 title: Read small memory dump files
 description: Describes how to examine the small memory dump files that are created by Windows if your computer fails.
-ms.date: 10/09/2023
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

@@ -1,7 +1,7 @@
 ---
 title: (Faulted Not Found) status for NIC team after you restart Windows from an iSCSI boot disk
 description: Describes an issue that occurs if Windows Server 2012 is configured to start from an iSCSI disk
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

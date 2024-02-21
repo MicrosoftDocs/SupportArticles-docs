@@ -1,7 +1,7 @@
 ---
 title: Event ID 5120 Cluster Shared Volume troubleshooting guidance
 description: Provides guidance for finding the root cause of Event 5120 Cluster Shared Volume.
-ms.date: 09/28/2022
+ms.date: 12/26/2023
 author: kaushika-msft
 ms.author: kaushika
 manager: dcscontentpm

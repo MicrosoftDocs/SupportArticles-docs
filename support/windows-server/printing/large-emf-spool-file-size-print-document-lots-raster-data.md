@@ -1,7 +1,7 @@
 ---
 title: EMF spool file size grows big when you print a document that contains lots of raster data
 description: Describes a problem where the size of the Enhanced Metafile (EMF) spool file may grow very big when you print a document that contains many groups of raster data. A resolution is provided.
-ms.date: 05/16/2023
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
