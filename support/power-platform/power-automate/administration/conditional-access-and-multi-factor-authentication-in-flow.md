@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 4467879
 ## Recommendations
 
 - Don't use [remember multifactor authentication for trusted devices](/azure/active-directory/authentication/howto-mfa-mfasettings#remember-multi-factor-authentication-for-trusted-devices) because token lifetimes will shorten and cause connections to require refresh at the interval configured rather than at the standard extended length.
-- To avoid policy conflict errors, ensure that users that sign in to Power Automate use criteria that matches the policies for the connections that a flow uses.
+- To avoid policy conflict errors, ensure that users who sign in to Power Automate use criteria that match the policies for the connections a flow uses.
 
 ## Details
 
