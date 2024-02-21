@@ -87,7 +87,7 @@ This section lists various causes that are related to aspects such as database, 
 
 ### Database is offline
 
-For detailed information regarding the issue, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
+Refers to a scenario where a SQL Server database attempts to reconnect to a SQL Server authentication mode. For detailed information regarding the scenario, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
 
 ### Database permissions
 
@@ -204,8 +204,8 @@ This scenario indicates that the Credential Guard feature is enabled on a Window
 
 This section lists some of the consistent authentication causes related to NTLM.
 
-- NTLM Peer Login
-- Loopback protection
+- [NTLM Peer Login](#ntlm-peer-login)
+- [Loopback protection is not set correctly](#loopback-protection-is-not-set-correctly)
 - Always-On Listener loopback protection
 - Double hop scenarios on multiple computers
 - LANMAN compatibility level
@@ -214,7 +214,7 @@ This section lists some of the consistent authentication causes related to NTLM.
 
 When communicating between computers that are either in workstations or in domains that don't trust each other, you can set up identical accounts on both machines and use NTLM peer authentication. Logins only work if both the user account and the password match on both machines. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
 
-### Loopback protection
+### Loopback protection is not set correctly
 
 Loopback protect is designed to prohibit applications from calling other services on the same machine. If loopback protect isn't configured correctly or if there's any malfunction, it can indirectly cause authentication issues. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
 
@@ -235,13 +235,13 @@ Refers to a security policy setting. For more information, see [Login failed for
 This section lists various causes and scenarios related to access to directory services and servers and their possible solutions:
 
 - [An account is disabled](#an-account-is-disabled)
-- An account isn't in the group
-- No permissions for cross-domain groups
-- Firewall blocks the Domain Controller
-- Domain Controller is offline
-- Selective authentication is disabled
-- Account migration failed
-- Login is from untrusted domain
+- [An account isn't in the group](#an-account-isnt-in-the-group)
+- [No permissions for cross-domain groups](#no-permissions-for-cross-domain-groups)
+- [Firewall blocks the Domain Controller](#firewall-blocks-the-domain-controller)
+- [Domain Controller is offline](#domain-controller-is-offline)
+- [Selective authentication is disabled](#selective-authentication-is-disabled)
+- [Account migration failed](#account-migration-is-incorrect)
+- [Login is from untrusted domain](#login-is-from-an-untrusted-domain)
 
 ### An account is disabled
 
@@ -271,7 +271,7 @@ Selective authentication is a feature of domain trusts that allows the domain ad
 
 If old user accounts can't connect to the SQL Server, but newly created accounts can, this could happen if account migration isn't correct. This issue is related to AD. For more information, see [Transfer logins and passwords between instances of SQL Server](../security/transfer-logins-passwords-between-instances.md).
 
-### Login is from untrusted domain
+### Login is from an untrusted domain
 
 This issue is related to the trust level between domains. You might see the following error message "Login failed. The login is from an untrusted domain and cannot be used with Windows authentication. (18452)."
 
@@ -281,37 +281,37 @@ This issue is related to the trust level between domains. You might see the foll
  1. [Register the SPNs](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731241(v=ws.11)) if required using the `- setspn -s` link.
  1. Test authentication with the `- runas /user:<Username> "cmd"` command.
 
-## Causes related to Kerberos authentication
+## Causes and scenarios related to Kerberos authentication
 
 This section lists various causes related to Kerberos authentication.
 
-Missing SPN
-SPN on wrong account
-Duplicate SPN
-Sensitive account
-Not trusted for delegation
-SPN on wrong account
-An incorrect DNS suffix is appended to the NetBIOS name
-User belongs to many groups
-Clock skew
-Not a constrained target
-Disjoint DNS namespace
-NTLM and constrained delegation
-Issue with per-service security identifier (SID) permissions
-Legacy providers and named pipes
-Kernel-mode authentication
-Delegating credentials to Access or Excel
-Web site host header
-HOSTS file
-Delegating to a file share
-HTTP Ports
-SQL Alias
+- [Missing SPN](#missing-spn)
+- [Duplicate SPN](#duplicate-spn)
+- [Delegating sensitive accounts to other services](#delegating-sensitive-accounts-to-other-services)
+- [Service account can't be trusted for delegation](#service-account-isnt-trusted-for-delegation)
+- [SPN is associated with a wrong account](#spn-is-associated-with-a-wrong-account)
+- [An incorrect DNS suffix is appended to the NetBIOS name](#an-incorrect-dns-suffix-is-appended-to-the-netbios-name)
+- [Expired tickets](#expired-tickets)
+- [User belongs to many groups](#user-belongs-to-many-groups)
+- [Clock skew is too high](#clock-skew-is-too-high)
+- [Not a constrained target](#not-a-constrained-target)
+- [Disjoint DNS namespace](#disjoint-dns-namespace)
+- [NTLM and constrained delegation](#choose-constrained-delegation-instead-of-ntlm)
+- [Issue with per-service security identifier (SID) permissions](#issue-with-per-service-security-identifier-sid-permissions)
+- [Some legacy providers don't support Kerberos over Named Pipes](#some-legacy-providers-dont-support-kerberos-over-named-pipes)
+- [Kernel-mode authentication](#kernel-mode-authentication)
+- [Limit delegation rights to Access or Excel](#limit-delegation-rights-to-access-or-excel)
+- [Use HTTP host header](#use-http-host-header)
+- [HOSTS file is incorrect](#hosts-file-is-incorrect)
+- [Delegating to a file share](#assign-permissions-to-a-file-share-without-proper-constraints)
+- [Enable HTTP ports on SPNs](#enable-http-ports-on-spns)
+- [SQL Alias may not function correctly](#sql-alias-may-not-function-properly)
 
 ### Missing SPN
 
-For more information, see [Fix the error with Kerberos Configuration Manager (Recommended)](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended).
+This scenario might happen when an SPN related to a SQL Sever instance is absent. For more information, see [Fix the error with Kerberos Configuration Manager (Recommended)](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended).
 
-### SPN on wrong account
+### SPN is associated with a wrong account
 
 This issue might occur if an SPN is associated with the wrong account in AD. For more information, see [Fix the error with Kerberos Configuration Manager (Recommended)](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended).
 
@@ -323,15 +323,15 @@ You might receive an error message if your SPN is configured on the wrong accoun
 
 ### Duplicate SPN
 
-For more information, see [Fix the error with Kerberos Configuration Manager (Recommended)](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended).
+This scenario refers to a situation where two or more SPNs are identical within a domain. SPNs are used to uniquely identify services running on servers in a Windows domain. There can be authentication issues when duplicates occur. For more information, see [Fix the error with Kerberos Configuration Manager (Recommended)](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended).
 
-### Sensitive account
+### Delegating sensitive accounts to other services
 
-For more information, see [Login failed for user NT AUTHORITY\ANONYMOUS LOGON](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
+Some accounts may be marked as Sensitive in AD. These accounts can't be delegated to another service in a double-hop scenario. Sensitive accounts are critical to providing security but can impact authentication. For more information, see [Login failed for user NT AUTHORITY\ANONYMOUS LOGON](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
 
-### Not trusted for delegation
+### Service account can't be trusted for delegation
 
-In a double-hop scenario, the service account of the mid-tier service must be trusted for delegation in AD. If you're an administrator, enable the **Trusted for delegation** option.
+In a double-hop scenario, the service account of the mid-tier service must be trusted for delegation in AD. If the service account isn't trusted for delegation, Kereberos authentication can fail. If you're an administrator, enable the **Trusted for delegation** option.
 
 ### An incorrect DNS suffix is appended to the NetBIOS name
 
@@ -339,21 +339,25 @@ This can happen when you just use the NetBIOS name, example SQLPROD01, rather th
 
 ### User belongs to many groups
 
-If you use Kerberos over UDP, the entire security token must fit within a single packet. Users that belong to many groups have a larger security token than users who belong to fewer groups. If you use Kerberos over TCP, you can increase the [`MaxTokenSize`] setting. For more information, see [MaxTokenSize and Kerberos Token Bloat](/archive/blogs/shanecothran/maxtokensize-and-kerberos-token-bloat).
+When a user belongs to multiple groups, there can be authentication issues in Kerberos. If you use Kerberos over UDP, the entire security token must fit within a single packet. Users that belong to many groups have a larger security token than users who belong to fewer groups. If you use Kerberos over TCP, you can increase the [`MaxTokenSize`] setting. For more information, see [MaxTokenSize and Kerberos Token Bloat](/archive/blogs/shanecothran/maxtokensize-and-kerberos-token-bloat).
 
-### Clock skew
+### Expired tickets
 
-Refers to a consistent authentication issue when clocks on more than one device on a network aren't synchronized. For Kerberos server to work, the clocks between machines can't be turned off for more than five minutes.
+Refers to Kerberos tickets. Using expired Kerberos tickets can cause issues in authentication. For more information, see "Expired tickets".
+
+### Clock skew is too high
+
+Refers to a scenario when clocks on more than one device on a network aren't synchronized. For Kerberos server to work, the clocks between machines can't be turned off for more than five minutes.
 
 ### Not a constrained target
 
-If constrained delegation is enabled for a particular service account, Kerberos will fail if the target server's SPN is not on the list of targets of constrained delegation.
+If constrained delegation is enabled for a particular service account, Kerberos will fail if the target server's SPN isn't on the list of targets of constrained delegation.
 
 ### Disjoint DNS namespace
 
 Refers to a consistent authentication issue that might arise when the DNS suffix doesn't match between the domain member and DNS. You might experience authentication issues if you use a disjoint namespace. If the organizational hierarchy in Active Directory (AD) and in DNS don't match, the wrong Service Provider Name (SPN) might be generated if you use the NETBIOS name in the database application connection string. The SPN won't be found and NTLM credentials are used instead of Kerberos credentials. Use the fully qualified domain name (FQDN) of the server or specify the SPN name in the connection string to mitigate problems. For information on FQDN, see [Computer Naming](/windows-server/identity/ad-ds/plan/computer-naming).
 
-### NTLM and constrained delegation
+### Choose constrained delegation instead of NTLM
 
 If the target is a file share, the delegation type of the mid-tier service account must be **Constrained-Any** and not **Constrained-Kerberos**. If the delegation type is set to **Constrained-Kerberos**, the mid-tier account can only allocate to specific services whereas the other option allows the service account to delegate to any service. For more information, see [Login failed for user NT AUTHORITY\ANONYMOUS LOGON](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
 
@@ -361,35 +365,35 @@ If the target is a file share, the delegation type of the mid-tier service accou
 
 Per-service-SID is a security feature of SQL Server that limits local connections to use New Technology LAN Manager (NTLM) and not Kerberos as the authentication method. The service can make a single hop to another server using NTLM credentials, but it can't be delegated further without using the constrained delegation. For more information, see [Login failed for user NT AUTHORITY\ANONYMOUS LOGON](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
 
-### Legacy providers and named pipes
+### Some legacy providers don't support Kerberos over Named Pipes
 
-The legacy OLE DB Provider (SQLOLEDB) and ODBC Driver {SQL Server} that come with Windows don't support Kerberos over Named Pipes, only NTLM. Use a TCP connection to allow Kerberos.
+The legacy OLE DB Provider (SQLOLEDB) and ODBC Driver (SQL Server) that come with Windows don't support Kerberos over Named Pipes, only NTLM. Use a TCP connection to allow Kerberos.
 
 ### Kernel-mode authentication
 
 The SPN on the App Pool account is normally required for web servers; however, when using Kernel-mode authentication, the computer's HOST SPN is used for authentication, which takes place in the kernel. This setting might be used if the server hosts many different websites using the same host header URL, different App Pool accounts, and [Windows Authentication](/iis/configuration/system.webserver/security/authentication/).
 
-### Delegating credentials to Access or Excel
+### Limit delegation rights to Access or Excel
 
 The Joint Engine Technology (JET) and Access Connectivity Engine (ACE) providers are similar to any of the file systems. You must use constrained delegation to allow SQL Server to read files located on another machine. In general, the ACE provider shouldn't be used in a linked server as this is explicitly not supported. The JET provider is deprecated and is available on 32-bit machines only.
 
-### Web site host header
+### Use HTTP host header
 
 If the website has a host header name, the HOSTS SPN can't be used. An explicit HTTP SPN must be used. If the web site doesn't have a host header name, NTLM is used and it can't be delegated to a backend SQL Server or other service.
 
-### HOSTS file
+### HOSTS file is incorrect
 
-The Hosts file overrides DNS lookups and might generate an unexpected SPN name. This causes NTLM credentials to be used. If an unexpected IP address is in the HOSTS file, the SPN generated might not match the backend pointed to.
+The HOSTS file overrides DNS lookups and might generate an unexpected SPN name. This causes NTLM credentials to be used. If an unexpected IP address is in the HOSTS file, the SPN generated might not match the backend pointed to.
 
-### Delegating to a file share
+### Assign permissions to a file share without proper constraints
 
-Refers to an instance in which a user or application delegates its credentials to access a file share. Without proper constraints, delegating credentials to a file share might lead to  security risks. To resolve this kind of an issue, make sure to use constrained delegation.
+Refers to an instance in which a user or application delegates its credentials to access a file share. Without proper constraints, delegating credentials to a file share might lead to security risks. To resolve this kind of an issue, make sure to use constrained delegation.
 
-### HTTP Ports
+### Enable HTTP ports on SPNs
 
 Normally, HTTP SPNs don't use port numbers, example `http/web01.contoso.com`, but you can enable this through the policy on the clients. The SPN would then have to be in the `http/web01.contoso.com:88` format, to enable Kerberos to function correctly. Otherwise, NTLM credentials are used, which aren't recommended because it would be difficult to diagnose the issue and it might be an excessive administrative overhead.
 
-### SQL Alias
+### SQL Alias may not function properly
 
 A SQL Server alias may cause an unexpected SPN to be generated. This results in NTLM credentials if the SPN isn't found, or an SSPI failure, if it inadvertently matches the SPN of another server.
 
