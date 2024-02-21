@@ -5,7 +5,7 @@ ms.author: araghunath
 author: araghunath08
 ms.reviewer: nenellim 
 ms.collection: 
-ms.date: 09/13/2023
+ms.date: 02/21/2024
 ms.custom: bap-template
 ---
 # Use diagnostic messages to troubleshoot issues in voice calls
@@ -35,14 +35,12 @@ The following table lists the messages that appear when your agents have issues 
 | No microphone detected. Try connecting one so that others can hear you. | Appears when no microphone is detected on the agent's system.  | `noMicrophoneDevicesEnumerated` |
 |Your microphone is not working. On the communication panel, select More -> Device settings to connect to a different device or try reconnecting this one. |Appears when the microphone is muted unexpectedly or is not functioning.| `microphoneMuteUnexpectedly` `microphoneNotFunctioning`|
 
-## Troubleshoot incoming call notification issues 
+## Troubleshoot incoming call notification issues
 
-Ensure that when utilizing a custom Incoming notification template for your voice workstreams, the Countdown (seconds) **must not exceed 40 seconds**. Setting it beyond 40 seconds will result in agents receiving incoming call notifications for longer than 40 seconds if the call remains unaccepted, and upon acceptance, agents will encounter an error. So to avoid this, ensure the Coundown value does not exeed 40 seconds.
+When using a custom [Incoming notification template](/dynamics365/customer-service/administer/notification-templates?tabs=customerserviceadmincenter#create-a-notification-template) for your voice workstreams, set the **Countdown (seconds)** to 40 seconds or less. If set beyond 40 seconds, agents may receive call notifications for too long and encounter errors upon accepting the call. So, keep the **Countdown (seconds)** value at 40 seconds or less.
 
 ![image](https://github.com/MicrosoftDocs/SupportArticles-docs-pr/assets/47166753/4c87a53c-c29f-4263-b1c7-09640700adfb)
 ![image](https://github.com/MicrosoftDocs/SupportArticles-docs-pr/assets/47166753/9be61bee-0fce-40ce-96d6-ceba3e8c95d6)
-
-
 
 ## See also
 
