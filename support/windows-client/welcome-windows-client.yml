@@ -15,20 +15,12 @@ metadata:
 landingContent:
 
  # Card
-  - title: Deployment
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Deployment 
-            url: ./deployment/deployment-overview.md
-          - text: Windows 7 End of Support (EoS) FAQ
-            url: ./windows-7-eos-faq/windows-7-end-support-faq.yml
   - title: Identity and Access
     linkLists:
       - linkListType: how-to-guide
         links:
           - text: Active Directory
-            url: ./identity/active-directory-overview.md
+            url: ./active-directory/active-directory-overview.md
           - text: Group Policy
             url: ./group-policy/group-policy-overview.md
           - text: UserProfiles and Logon

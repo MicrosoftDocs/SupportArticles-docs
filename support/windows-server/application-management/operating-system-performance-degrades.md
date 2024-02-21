@@ -1,7 +1,7 @@
 ---
 title: Issue when you access files with FILE_FLAG_RANDOM_ACCESS
 description: Provides a solution to an issue that operating system performance may degrade when one or more processes access multiple large files using the CreateFile() API and the FILE_FLAG_RANDOM_ACCESS flag.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

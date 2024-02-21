@@ -1,7 +1,7 @@
 ---
 title: Print from Modern App creates large file
 description: Describes an issue that occurs when you print from Modern App as this creates a large spool file when you select Advanced Printing features such as number of pages per sheet.
-ms.date: 09/24/2020
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

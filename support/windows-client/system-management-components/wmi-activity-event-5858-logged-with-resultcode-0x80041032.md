@@ -1,7 +1,7 @@
 ---
 title: WMI-Activity Event 5858 ResultCode 0x80041032
 description: WMI-Activity Event ID 5858 is logged with ResultCode 0x80041032 when applications issue WMI queries.
-ms.date: 05/16/2023
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

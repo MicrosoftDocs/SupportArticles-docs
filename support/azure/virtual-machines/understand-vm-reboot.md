@@ -11,9 +11,9 @@ ms.subservice: vm-cannot-start-stop
 ms.topic: troubleshooting
 ms.tgt_pltfrm: na
 ms.workload: infrastructure-services
-ms.date: 05/15/2023
+ms.date: 02/18/2024
 ms.author: genli
-
+ms.reviewer: yutorigo, v-weizhu
 ---
 
 # Understand a system reboot for Azure VM
@@ -92,7 +92,7 @@ There are other cases in which Azure might actively suspend the use of a VM. You
 
 ### Host server faults
 
-The VM is hosted on a physical server that is running inside an Azure datacenter. The physical server runs an agent called the Host Agent in addition to a few other Azure components. When these Azure software components on the physical server become unresponsive, the monitoring system triggers a reboot of the host server to attempt recovery. The VM is usually available again within five minutes and continues to live on the same host as previously.
+The VM is hosted on a physical server that is running inside an Azure datacenter. The physical server runs an agent called the Host Agent in addition to a few other Azure components. When these Azure software components on the physical server become unresponsive, the monitoring system triggers a reboot of the host server to attempt recovery. In many cases, the VM will be available again within 10-15 minutes and continue to live on the same host as before.
 
 Server faults are usually caused by hardware failure, such as the failure of a hard disk or solid-state drive. Azure continuously monitors these occurrences, identifies the underlying bugs, and rolls out updates after the mitigation has been implemented and tested.
 

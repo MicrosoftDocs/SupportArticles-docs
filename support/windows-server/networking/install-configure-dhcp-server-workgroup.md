@@ -1,7 +1,7 @@
 ---
 title: Install and Configure a DHCP Server
 description: Describes how to install and configure a DHCP Server in a Workgroup.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
