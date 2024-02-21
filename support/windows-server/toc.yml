@@ -576,7 +576,7 @@ items:
   - name: Windows Time Service
     items:
     - name: Computer clock reverts to a previous date and time
-      href: ./identity/client-clock-reverts-to-previous-time.md
+      href: ./active-directory/client-clock-reverts-to-previous-time.md
     - name: Configure W32Time against a large time offset
       href: ./active-directory/configure-w32ime-against-huge-time-offset.md
     - name: Convert date/time attributes to standard time format
