@@ -7,9 +7,11 @@ ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
+ms.service: windows-client
+ms.subservice: networking
 localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate
-ms.custom: <sap/see CI>, csstroubleshoot
+ms.custom: sap:access to file shares (SMB), csstroubleshoot
 keywords: error 2250, service can't start, LanmanWorkstation service
 ---
 
