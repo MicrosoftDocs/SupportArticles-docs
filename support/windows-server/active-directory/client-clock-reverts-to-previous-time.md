@@ -29,7 +29,7 @@ The system date and time setting on a computer that's running Windows 10 or a la
 - The computer is turned off and then restarted while it's connected to a closed private network.
 - The private network has no SSL servers (therefore, the computer has no outbound SSL traffic).
 
-Other symptoms include, but aren't limited, to the following:
+Other symptoms include, but aren't limited to, the following:
 
 - Kernel-General event ID 1 in the system log indicates that the time setting has been reset to a past value.
 - Events that are recorded in the event log have invalid time stamps that are in the past.
