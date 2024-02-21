@@ -14,6 +14,7 @@ ms.custom:
 ms.reviewer: ahaque
 appliesto: 
   - Outlook 2019 for Mac
+  - Outlook 2021 for Mac
   - Outlook for Microsoft 365 for Mac
 search.appverid: MET150
 ms.date: 02/21/2024
