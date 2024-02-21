@@ -1,11 +1,11 @@
 ---
 title: Cluster pending operation (OperationNotAllowed) errors
 description: Learn to resolve OperationNotAllowed errors that occur when you try to start, upgrade, or scale an Azure Kubernetes Service (AKS) cluster.
-ms.date: 08/17/2023
+ms.date: 02/21/2023
 author: axelgMS
 ms.author: axelg
 editor: v-jsitser
-ms.reviewer: chiragpa, jpalma, v-leedennis
+ms.reviewer: chiragpa, jpalma, v-leedennis, v-weizhu
 ms.service: azure-kubernetes-service
 ms.subservice: common-issues
 ---
@@ -39,19 +39,20 @@ Some operations take time to run. Those operations block other operations if the
 
 To resolve these issues, you usually have to wait until the blocking operation finishes.
 
-You can also try aborting the long-running operation by using [az aks operation-abort](/azure/aks/manage-abort-operations).
+You can also try aborting the long running operation by using the [az aks operation-abort](/azure/aks/manage-abort-operations) command.
 
 ## Solution 2: Ensure you aren't performing two similar operations in a row
 
-The OperationNotAllowed error can be thrown if you're executing an operation while the cluster is already in that desired state. For example, in the case of a cluster which is already stopped, you receive the error if you're executing another Stop operation:
+If you're executing an operation on a cluster that's already in the desired state, the "OperationNotAllowed" error can occur. For example, if a cluster is already stopped, executing another stop operation would trigger this error:
 
-```
+```azurecli
 az aks stop -n <myAKSCluster> -g <myResourceGroup>
 
 (OperationNotAllowed) managed cluster is not currently running, stopping cannot be performed; The stop operation started at '2024-02-13T15:01:15Z' and elapsed time is: '7 days and 01:16:37' (RFC3339 format)
 Code: OperationNotAllowed
 Message: managed cluster is not currently running, stopping cannot be performed; The stop operation started at '2024-02-13T15:01:15Z' and elapsed time is: '7 days and 01:16:37' (RFC3339 format)
 ```
+
 You would need to start the cluster before attempting to stop it again.
 
 ## Solution 3: Get the current cluster status before you try an operation
