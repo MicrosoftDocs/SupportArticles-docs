@@ -179,4 +179,4 @@ You can merge differencing disks into an online VM. However, this is a multi-ste
 
 1. Copy the first command of the first pair, paste it at the command prompt, and then run it. Then, do the same for the second command of the first pair. These operations merge the differencing disk that the commands address.
 
-1. After the disk merges, repeat steps 1.b through 4 for the next differencing disk in the list. Continue for all the differencing disks that the _merge.txt_ file addresses.
+1. After the disk merges, repeat the preceding steps for the next differencing disk in the list. Continue for all the differencing disks that the _merge.txt_ file addresses.
