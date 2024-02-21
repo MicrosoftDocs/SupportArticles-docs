@@ -82,4 +82,21 @@ Then, use the following table to take the appropriate action based on the comman
 | Cluster update failed        | Locate the reason for the failure in the activity logs.       |
 | Cluster update succeeded     | Retry the start, scale, or other previously failed operation. |
 
+## Solution 4: Retry the operation
+
+There are scenarios where an operation fails because of a transient issue, and is left with an inconsistent state. 
+
+In this example, a deletion was issued on the node pool 'agentpool' but that deletion isn't completed yet. Once a deletion started, no other operation can be made on the resource and that's why the scale operation is failing with 'OperationNotAllowed'.
+
+```
+{
+"code": "OperationNotAllowed",
+"details": null,
+"message": "Unable to perform 'Scaling' operation on 'agentpool' since deletion was issued on 'agentpool'. The only allowed operation is deletion once deletion has started. The delete operation started at '2024-01-09T04:29:12Z' and elapsed time is: '00:30:28' (RFC3339 format)",
+"subcode": ""
+}
+```
+The solution here is to wait for the 'agentpool' deletion to finish. You can also retry that deletion later if it's not finished after a few hours.
+
+
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
