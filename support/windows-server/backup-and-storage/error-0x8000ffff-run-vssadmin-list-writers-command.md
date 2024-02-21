@@ -1,7 +1,7 @@
 ---
 title: Error 0x8000FFFF when running vssadmin list writers command in Windows Server 2003
 description: Resolves a problem that occurs when you use the vssadmin list writers command on a Windows Server 2003-based computer. You may receive an error message or the list may be blank.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

@@ -1,7 +1,7 @@
 ---
 title: Remote Desktop Connection (RDC) client requirements for TS Web Access
 description: A guide for IT professionals. Describes the client requirements to use TS Web Access in Windows Server 2008 RC0. Also, provide an overview of TS Web Access.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

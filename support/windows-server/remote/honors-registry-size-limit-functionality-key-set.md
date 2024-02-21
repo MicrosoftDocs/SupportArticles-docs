@@ -1,7 +1,7 @@
 ---
 title: Registry Size Limit (RSL) functionality is still be honored if the RegistrySizeLimit registry key is set
 description: Helps to solve the issue that Registry Size Limit (RSL) functionality is still be honored if the RegistrySizeLimit registry key is set
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

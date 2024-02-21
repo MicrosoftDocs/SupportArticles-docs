@@ -1,7 +1,7 @@
 ---
 title: Security certificate validation fails
 description: Works around an issue where security certificate that's presented by a website isn't issued when it has multiple trusted certification paths to root CAs.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:certificates-and-public-key-infrastructure-pki, csstroubleshoot
+ms.custom: sap:certificate-based-authentication, csstroubleshoot
 ---
 # Certificate validation fails when a certificate has multiple trusted certification paths to root CAs
 
