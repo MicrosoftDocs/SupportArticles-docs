@@ -37,7 +37,7 @@ The following table lists the messages that appear when your agents have issues 
 
 ## Troubleshoot incoming call notification issues
 
-If you are using custom notification templates and have set the countdown to more than 40 seconds, agents might receive call notifications for too long and encounter errors when they accept such calls. To avoid errors, set the **Countdown (seconds)** value to 40 seconds or less in the [custom notification template](/dynamics365/customer-service/administer/notification-templates?tabs=customerserviceadmincenter#create-a-notification-template) that's attached to the voice workstream.
+If you are using [custom notification templates](/dynamics365/customer-service/administer/notification-templates?tabs=customerserviceadmincenter#create-a-notification-template) and have set the countdown to more than 40 seconds, agents might receive call notifications for too long and encounter errors when they accept such calls. To avoid errors, set the **Countdown (seconds)** value to 40 seconds or less in the custom notification template that's attached to the voice workstream.
 
 :::image type="content" source="media/use-diagnostic-messages-in-call-issues/notification-template.png" alt-text="Screenshot of notification template settings that should be configured to avoid call notification issues.":::
 
