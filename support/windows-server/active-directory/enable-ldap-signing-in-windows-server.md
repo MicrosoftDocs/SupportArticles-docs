@@ -116,7 +116,7 @@ When you change this value, the new value takes effect immediately. You don't ha
 
 ## Events reference on LDAP signing requirement
 
-The following event is logged after starting DS services to remind administrators to enable signing requirement:
+Event ID 2886 is logged after starting DS services to remind administrators to enable signing requirement:
 
 ```output
 Log Name:      Directory Service
@@ -135,7 +135,7 @@ For more details and information on how to make this configuration change to the
 You can enable additional logging to log an event each time a client makes such a bind, including information on which client made the bind.  To do so, please raise the setting for the "LDAP Interface Events" event logging category to level 2 or higher.
 ```
 
-When a problem client was rejected, a summary of the last 24 hours is logged:
+When a problem client was rejected, a summary Event ID 2887 of the last 24 hours is logged:
 
 ```output
 Log Name:      Directory Service
@@ -159,7 +159,7 @@ Number of simple binds performed without SSL/TLS: 12
 Number of Negotiate/Kerberos/NTLM/Digest binds performed without signing: <count of binds>
 ```
 
-When a problem client was rejected, a summary of the last 24 hours is logged:
+When a problem client was rejected, a summary Event ID 2888 of the last 24 hours is logged:
 
 ```output
 Log Name:      Directory Service
@@ -183,7 +183,7 @@ Number of simple binds rejected because they were performed without SSL/TLS: <co
 Number of Negotiate/Kerberos/NTLM/Digest binds rejected because they were performed without signing: <count of binds>
 ```
 
-When a problem client tries to connect, the following event is logged:
+When a problem client tries to connect, Event ID 2889 is logged:
 
 ```output
 Log Name:      Directory Service
