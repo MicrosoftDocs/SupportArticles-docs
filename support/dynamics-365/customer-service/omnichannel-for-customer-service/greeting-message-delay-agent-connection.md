@@ -44,7 +44,7 @@ To add a new node to create a delay flow, follow these steps:
 1. Select the "plus" icon, and then select **Call an action** > **Create a flow**. When Power Automate opens, you can see your delay flow.
 1. Open a blank automated cloud flow, set your flow trigger to **When Power Virtual Agents calls a flow**, and then select **Create**.
 
-   :::image type="content" source="media/greeting-message-delay-agent-connection/automated-cloud-flow-voice-message.png" alt-text="Screenshot that shows the  When Power Virtual Agents calls a flow trigger.":::
+   :::image type="content" source="media/greeting-message-delay-agent-connection/automated-cloud-flow-voice-message.png" alt-text="Screenshot that shows the When Power Virtual Agents calls a flow trigger.":::
   
    Your flow editor page opens.
 
@@ -52,19 +52,17 @@ To add a new node to create a delay flow, follow these steps:
 1. Search for the **Delay** action, and then select it.
 1. Type a number for **Count**, and select the **Unit** for how long you want the delay to be. Ideally, the delay should be the same length of time as your message to prevent the call from being prematurely transferred.
 
-   :::image type="content" source="media/greeting-message-delay-agent-connection/pva-delay-action.png" alt-text="Screenshot that the Delay action in the Power Automate delay flow.":::
+   :::image type="content" source="media/greeting-message-delay-agent-connection/pva-delay-action.png" alt-text="Screenshot that shows the Delay action in the Power Automate delay flow.":::
 
 1. Select the "plus*" icon, and then select **Add an action**.
 1. Search for the **Return value(s) to Power Virtual Agents** action, and then select it.
 
-   :::image type="content" source="media/greeting-message-delay-agent-connection/return-value-pva.png" alt-text="Screenshot that the Return value(s) to Power Virtual Agents flow action.":::
+   :::image type="content" source="media/greeting-message-delay-agent-connection/return-value-pva.png" alt-text="Screenshot that shows the Return value(s) to Power Virtual Agents flow action.":::
 
 1. Save your flow, go back to Copilot Studio, and add the flow after the **Greeting Message** node.
-1. Add a new node to transfer the conversation to the agent:
+1. Add a new node to transfer the conversation to the agent by selecting the "plus" icon and then selecting **Topic Management** > **Transfer conversation**.
 
-   Select the "plus" icon, and then select **Topic Management** > **Transfer conversation**.
-
-   :::image type="content" source="media/greeting-message-delay-agent-connection/transfer-conversation-node.png" alt-text="Screenshot that shows the transfer conversation node in Copilot Studio.":::
+   :::image type="content" source="media/greeting-message-delay-agent-connection/transfer-conversation-node.png" alt-text="Screenshot that shows the Transfer conversation node in Copilot Studio.":::
 
 1. Test your copilot to make sure the message works as expected, and then publish the change.
 
