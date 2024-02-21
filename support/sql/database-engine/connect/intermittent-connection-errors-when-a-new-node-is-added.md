@@ -49,6 +49,6 @@ To fix this issue, resolve the mismatch between the security protocols. Node1 en
 
 Always make sure that you have the appropriate backups available. Also, consider testing any changes in a controlled, staged, or test environment before you apply them to the production computers. If the issue persists or if you have any other concerns, contact your network team.
 
-[!INCLUDE [third-party-disclaimer](../../../includes/third-party-information-disclaimer.md)]
+[!INCLUDE [third-party-disclaimer](../../../includes/third-party-disclaimer.md)]
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-contact-disclaimer.md)]
