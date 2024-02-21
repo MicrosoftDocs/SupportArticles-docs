@@ -39,7 +39,18 @@ Some operations take time to run. Those operations block other operations if the
 
 To resolve these issues, you usually have to wait until the blocking operation finishes.
 
+In the example below, the error happens because the cluster is being updated from one client, and it is also being started by another client while the update is still operating:
+
+```
+az aks start  -n <myAKSCluster> -g <myResourceGroup>
+
+(OperationNotAllowed) managed cluster is in Provisioning State(Updating) and Power State(Running), starting cannot be performed The previous operation started at '2024-02-21T13:33:55Z' and elapsed time is: '00:00:00' (RFC3339 format)
+Code: OperationNotAllowed
+Message: managed cluster is in Provisioning State(Starting) and Power State(Running), starting cannot be performed The previous operation started at '2024-02-21T13:33:55Z' and elapsed time is: '00:00:00' (RFC3339 format)
+```
+
 You can also try aborting the long running operation by using the [az aks operation-abort](/azure/aks/manage-abort-operations) command.
+
 
 ## Solution 2: Ensure you aren't performing two similar operations in a row
 
