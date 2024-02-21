@@ -1,6 +1,6 @@
 ---
 title: Azure Batch task fails due to permission issues
-description: Provides the causes and solutions for issues where an Azure Batch task fails with permission issues.
+description: Provides the causes and solutions for issues where an Azure Batch task fails due to permission issues.
 ms.date: 02/21/2024
 ms.reviewer: biny, v-weizhu
 ms.service: batch
@@ -51,7 +51,7 @@ However, for any other operations, such as downloading an entire file from a sto
 
 ### Solution: Generate SAS token with the right permission
 
-To resolve this issue, create a manual SAS with both "Read" and "List" permissions at the container level, and change it in the **Resource files** option of the Batch account **Start task** to successfully download the file.
+To resolve this issue, create a manual SAS with both "Read" and "List" permissions at the container level, and use it in the **Resource files** option of the Batch account **Start task** to successfully download the file.
 
 :::image type="content" source="media/azure-batch-task-permission-denied/resource-file-option.png" alt-text="Screenshot that shows the 'Resource files' option":::
 
