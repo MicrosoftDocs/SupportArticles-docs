@@ -1,7 +1,7 @@
 ---
 title: Disable screen saver passwords by using policies
 description: Describes how to disable screen saver passwords by using policies.
-ms.date: 10/19/2020
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

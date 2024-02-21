@@ -1,7 +1,7 @@
 ---
 title: Fail to modify existing DHCP scope
 description: Provides solutions to an error that occurs when you modify an existing scope.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

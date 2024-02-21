@@ -1,7 +1,7 @@
 ---
 title: Local drive redirection isn't working
 description: Provides a solution to an issue where local drive redirection isn't working in RDP Session.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
