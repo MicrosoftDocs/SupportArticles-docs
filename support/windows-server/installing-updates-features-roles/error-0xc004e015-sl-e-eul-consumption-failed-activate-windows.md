@@ -21,7 +21,7 @@ You receive the following error when you activate Windows:
 
 This error occurs because the *C:\\Windows\\System32\\spp\\store\\2.0\\tokens.dat* file is corrupted.
 
-To resolve the issue, rename the file to *tokens.dat.old* and activate Windows again.
+To resolve the issue, [rebuild the tokens.dat file](https://learn.microsoft.com/en-us/troubleshoot/windows-server/licensing-and-activation/rebuild-tokens-dotdat-file)
 
 ## More information
 
