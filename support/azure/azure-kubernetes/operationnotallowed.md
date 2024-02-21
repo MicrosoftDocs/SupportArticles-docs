@@ -39,7 +39,7 @@ Some operations take time to run. Those operations block other operations if the
 
 To resolve these issues, you usually have to wait until the blocking operation finishes.
 
-In the example below, the error happens because the cluster is being updated from one client, and it is also being started by another client while the update is still operating:
+In this example, the error happens because the cluster is being updated from one client and it's also being started from another client while the update is still operating.
 
 ```
 az aks start  -n <myAKSCluster> -g <myResourceGroup>
