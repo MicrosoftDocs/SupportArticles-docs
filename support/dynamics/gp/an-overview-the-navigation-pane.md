@@ -2,7 +2,7 @@
 title: An overview of the Navigation Pane
 description: Explains the new navigation lists for Microsoft Dynamics GP.  Provides a list of all of the lists and information about how to restrict security for each of these lists.
 ms.reviewer: Theley
-ms.date: 02/20/2024
+ms.date: 02/22/2024
 ---
 # An overview of the Navigation Pane in Microsoft Dynamics GP
 
@@ -67,7 +67,7 @@ Transaction lists are based on dates. The sales transaction list is an example o
 **Microsoft Dynamics GP**  
 Security access to the list windows in Microsoft Dynamics GP is controlled by the security tasks. For a user to have access to navigation lists, the list window must be marked under a security task and that security task must be assigned to a role that is assigned to the user. The default security tasks already include access to the navigation lists. To grant access to a navigation list by using a new security task, follow these steps:
 
-1. On the **Microsoft Dynamics GP** menu, point to **Tools**, point to **Setup**, point to **System**, and then select **Security Tasks**.
+1. On the **Microsoft Dynamics GP** menu, point to **Tools** > **Setup** > **System**, and then select **Security Tasks**.
 
 2. In the **Task ID** list, select the security task that you want to use.
 
@@ -81,8 +81,7 @@ Security access to the list windows in Microsoft Dynamics GP is controlled by th
 
 7. Assign the new task to a role.
 
-    For more information about security tasks and roles, see [Frequently asked questions about role-based security in Microsoft Dynamics GP 10.0 and Microsoft Dynamics GP 2010](https://support.microsoft.com/help/951229).
-
+    For more information about security tasks and roles, see [Frequently asked questions about role-based security in Microsoft Dynamics GP 10.0 and Microsoft Dynamics GP 2010](frequently-asked-questions-role-based-security.md).
 
 ## Navigation lists security - table
 
