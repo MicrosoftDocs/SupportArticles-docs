@@ -118,7 +118,7 @@ When you change this value, the new value takes effect immediately. You don't ha
 
 ### Event ID 2886
 
-After starting DS services to remind administrators to enable signing requirements, Event ID 2886 is logged:
+After starting DS services, Event ID 2886 is logged to remind administrators to enable signing requirements:
 
 ```output
 Log Name:      Directory Service
