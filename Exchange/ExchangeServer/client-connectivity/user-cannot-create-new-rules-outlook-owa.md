@@ -15,7 +15,7 @@ search.appverid: MET150
 ms.reviewer: danabeck, v-six
 author: cloud-writer
 ms.author: meerak
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # A user cannot create new rules in Outlook or Outlook on the web
 

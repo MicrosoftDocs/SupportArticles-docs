@@ -18,7 +18,7 @@ appliesto:
   - Exchange Server 2013 Standard Edition
   - Exchange Server 2019
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Messages aren't evenly distributed if BasicAuth, BasicAuthRequireTLS or NTLM is used in Exchange Server 2019, 2016, or 2013
 

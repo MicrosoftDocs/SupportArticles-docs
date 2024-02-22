@@ -15,7 +15,7 @@ search.appverid: MET150
 ms.reviewer: djball, v-six
 author: cloud-writer
 ms.author: meerak
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 
 # "Custom error module does not recognize this error" error when you use an OWA web part URL

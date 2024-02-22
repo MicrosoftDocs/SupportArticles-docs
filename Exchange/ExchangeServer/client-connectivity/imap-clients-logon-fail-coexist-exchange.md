@@ -17,7 +17,7 @@ appliesto:
   - Exchange Server 2010
 search.appverid: 
   - MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 
 # IMAP clients fail to logon when Exchange Server 2010 coexists with Exchange Server 2016

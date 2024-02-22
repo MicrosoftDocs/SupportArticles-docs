@@ -16,7 +16,7 @@ search.appverid:
 appliesto: 
   - Exchange Server 2016
   - Exchange Server 2013
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # ActiveSync clients cannot connect or synchronizing is delayed in an Exchange Server environment
 
