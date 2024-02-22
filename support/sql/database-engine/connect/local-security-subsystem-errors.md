@@ -14,7 +14,7 @@ This article helps you resolve a consistent authentication issue when connecting
 
 ## Symptoms
 
-You might experience security subsystem issues related to (LSASS). The Windows authentication driver might show the "The login is from an untrusted domain and can't be used with Windows authentication" error message.
+You might experience security subsystem issues related to LSASS. The Windows authentication driver might show the "The login is from an untrusted domain and can't be used with Windows authentication" error message.
 
 Check whether the Microsoft SQL Server error log shows the following entries:
 
