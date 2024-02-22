@@ -18,7 +18,7 @@ appliesto:
   - Outlook 2010
   - Outlook for Microsoft 365
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 # You can't expand a nested contact group and Unknown is displayed in the group name in Outlook
 

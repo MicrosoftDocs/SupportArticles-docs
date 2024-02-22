@@ -16,7 +16,7 @@ appliesto:
   - Microsoft Office Outlook 2007
   - Microsoft Office Outlook 2003
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 # Microsoft Outlook cannot start the required translator error when you import or export files in Outlook
 

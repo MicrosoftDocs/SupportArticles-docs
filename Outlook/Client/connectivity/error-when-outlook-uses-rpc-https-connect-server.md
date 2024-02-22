@@ -17,7 +17,7 @@ appliesto:
   - Microsoft Office Outlook 2007
   - Exchange Online
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 # Error when Outlook tries to connect to a server by using an RPC connection or an HTTPS connection: There is a problem with the proxy server's security certificate
 

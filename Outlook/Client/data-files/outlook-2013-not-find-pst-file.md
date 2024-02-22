@@ -14,7 +14,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Outlook 2013
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 # Error when you send, receive email or open Outlook 2013: Cannot find xxx.pst
 

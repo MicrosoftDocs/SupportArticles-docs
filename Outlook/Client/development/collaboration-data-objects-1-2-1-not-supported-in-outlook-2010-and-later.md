@@ -12,7 +12,7 @@ search.appverid: MET150
 ms.reviewer: v-six
 author: cloud-writer
 ms.author: meerak
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 # Collaboration Data Objects (CDO) 1.2.1 is not supported with Outlook 2010 and later versions
 
