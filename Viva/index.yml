@@ -111,6 +111,12 @@ productDirectory:
         - url: ./pulse/viva-pulse-welcome.yml
           text: Microsoft Viva Pulse
     # Card
+    - title: Microsoft Viva
+      imageSrc: /support/media/hub-landing/logo-viva.png
+      links:        
+        - url: ./viva-suite-administration/viva-suite-administration-welcome.yml
+          text: Microsoft Viva Suite Administration          
+    # Card
     - title: Endpoint management
       imageSrc: /media/logos/logo-ms-social.png
       links:
