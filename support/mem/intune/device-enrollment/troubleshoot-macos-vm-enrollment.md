@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting macOS virtual machine enrollment in Intune
 description: Troubleshooting guidance to help resolve errors when you enroll macOS virutal machines in Microsoft Intune.
-ms.date: 09/30/2021
+ms.date: 12/05/2023
 search.appverid: MET150
 ms.reviewer: kaushika
 ---

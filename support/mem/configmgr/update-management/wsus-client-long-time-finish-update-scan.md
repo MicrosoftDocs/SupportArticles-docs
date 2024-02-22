@@ -1,7 +1,7 @@
 ---
 title: A WSUS client takes too long to finish an update scan
 description: Fixes an issue where a Windows Server Update Services client computer takes longer than expected to finish a scan to determine whether an update applies to the client computer.
-ms.date: 08/12/2020
+ms.date: 12/05/2023
 ms.reviewer: kaushika, v-jomcc
 ---
 # A WSUS client takes longer than expected to finish an update scan

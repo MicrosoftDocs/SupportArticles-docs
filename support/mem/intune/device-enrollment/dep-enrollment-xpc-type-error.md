@@ -1,7 +1,7 @@
 ---
 title: Apple Automated Device Enrollment (ADE) Intune enrollment error XPC_TYPE_ERROR
 description: Fixes an issue in which you receive error 'XPC_TYPE_ERROR Connection invalid' during enrolling an Apple ADE device in Microsoft.
-ms.date: 12/23/2021
+ms.date: 12/05/2023
 search.appverid: MET150
 ms.custom: sap:iOS/iPadOS enrollment
 ms.reviewer: kaushika
