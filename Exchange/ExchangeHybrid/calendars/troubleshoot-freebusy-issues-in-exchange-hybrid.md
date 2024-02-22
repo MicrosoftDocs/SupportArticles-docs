@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot free/busy issues in Exchange hybrid
 description: Resolves free/busy issues in an Exchange hybrid deployment.
-ms.date: 04/19/2023
+ms.date: 01/24/2024
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm

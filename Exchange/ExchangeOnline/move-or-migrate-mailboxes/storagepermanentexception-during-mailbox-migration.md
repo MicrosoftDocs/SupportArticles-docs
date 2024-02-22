@@ -15,7 +15,7 @@ ms.reviewer: deenaelkadim, ninob, meerak, v-trisshores
 appliesto:
   - Exchange Online
 search.appverid: MET150
-ms.date: 10/27/2023
+ms.date: 01/24/2024
 ---
 
 # StoragePermanentException transient failures during a mailbox migration

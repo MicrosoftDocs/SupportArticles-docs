@@ -16,7 +16,7 @@ appliesto:
   - Exchange Online
 search.appverid: 
   - MET150
-ms.date: 01/12/2024
+ms.date: 01/24/2024
 ---
 
 # Public folder auto-replies are sent from an incorrect email address

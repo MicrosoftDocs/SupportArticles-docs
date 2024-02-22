@@ -16,7 +16,7 @@ ms.reviewer: batre
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 11/08/2023
+ms.date: 01/24/2024
 ---
 # Microsoft 365 Groups - common tasks
 

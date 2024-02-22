@@ -15,7 +15,7 @@ ms.reviewer: moabozei, tylewis, meerak, v-trisshores
 appliesto:
   - Exchange Online
 search.appverid: MET150
-ms.date: 01/09/2024
+ms.date: 01/24/2024
 ---
 
 # Meeting shows an incorrect time zone for an attendee

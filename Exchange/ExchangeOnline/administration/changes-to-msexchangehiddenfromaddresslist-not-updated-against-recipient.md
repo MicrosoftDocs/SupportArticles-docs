@@ -14,7 +14,7 @@ ms.reviewer: gabesl, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 12/15/2023
+ms.date: 01/24/2024
 ---
 # Changes to msExchangeHiddenFromAddressList attribute not updated against recipient object in Exchange Online
 

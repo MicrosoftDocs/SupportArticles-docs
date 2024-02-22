@@ -16,7 +16,7 @@ appliesto:
   - Exchange Online
 search.appverid: 
   - MET150
-ms.date: 06/14/2023
+ms.date: 01/24/2024
 ---
 
 # Can't create public folder mailbox in Exchange Online
