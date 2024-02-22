@@ -1,7 +1,7 @@
 ---
 title: Windows 7 black screen on computer unlock
 description: Describes an issue about Windows black screen when unlocking a computer.
-ms.date: 09/14/2020
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

@@ -1,7 +1,7 @@
 ---
 title: Change registry values or permissions
 description: Describes how to change registry values or permissions from a command line or a script.
-ms.date: 09/28/2020
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

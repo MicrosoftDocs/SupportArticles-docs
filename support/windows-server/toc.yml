@@ -1,607 +1,608 @@
+items:
 - name: Windows Server
   href: welcome-windows-server.yml
 - name: Active Directory
   items:
   - name: Active Directory
-    href: ./identity/active-directory-overview.md
+    href: ./active-directory/active-directory-overview.md
   - name: Active Directory backup, restore, or disaster recovery
     items:
     - name: c00002e2 error or "Choose an option" is displayed
-      href: ./identity/domain-controller-not-start-c00002e2-error.md
+      href: ./active-directory/domain-controller-not-start-c00002e2-error.md
     - name: Directory Services event 2095 when USN rollback occurs
-      href: ./identity/detect-and-recover-from-usn-rollback.md
+      href: ./active-directory/detect-and-recover-from-usn-rollback.md
     - name: Event 2089 if you don't back up a domain controller
-      href: ./identity/ntds-replication-event-2089-backup-latency-interval.md
+      href: ./active-directory/ntds-replication-event-2089-backup-latency-interval.md
     - name: How to remove orphaned domains
-      href: ./identity/remove-orphaned-domains.md
+      href: ./active-directory/remove-orphaned-domains.md
     - name: How to restore deleted user accounts and their groups
-      href: ./identity/retore-deleted-accounts-and-groups-in-ad.md
+      href: ./active-directory/retore-deleted-accounts-and-groups-in-ad.md
     - name: No logon servers are available
-      href: ./identity/no-logon-servers-are-available.md
+      href: ./active-directory/no-logon-servers-are-available.md
     - name: Offline defragmentation of Active Directory database
-      href: ./identity/ad-database-offline-defragmentation.md
+      href: ./active-directory/ad-database-offline-defragmentation.md
     - name: Relocate a SYSVOL tree
-      href: ./identity/relocate-sysvol-tree-frs-for-replication.md
+      href: ./active-directory/relocate-sysvol-tree-frs-for-replication.md
     - name: RODC replicates passwords
-      href: ./identity/rodc-replicates-passwords-grant-incorrect-permissions.md
+      href: ./active-directory/rodc-replicates-passwords-grant-incorrect-permissions.md
     - name: Syskey.exe utility is no longer supported
-      href: ./identity/syskey-exe-utility-is-no-longer-supported.md
+      href: ./active-directory/syskey-exe-utility-is-no-longer-supported.md
     - name: SYSVOL folder isn't replicated between domain controllers
-      href: ./identity/file-replication-service-event-13552-13555.md
+      href: ./active-directory/file-replication-service-event-13552-13555.md
   - name: Active Directory Certificate Services
     items:
     - name: A Certification Authority can't use a certificate template
-      href: ./identity/ca-cant-use-certificate-template.md
+      href: ./active-directory/ca-cant-use-certificate-template.md
     - name: Back up recovery agent EFS private key
-      href: ./identity/back-up-recovery-agent-efs-private-key.md
+      href: ./active-directory/back-up-recovery-agent-efs-private-key.md
     - name: Can't select CA-compatible certificate templates
-      href: ./identity/cannot-select-windows-server-2016-ca-compatible-certificate-templates.md
+      href: ./active-directory/cannot-select-windows-server-2016-ca-compatible-certificate-templates.md
     - name: Can't share files with multiple EFS certificates
-      href: ./identity/cant-share-files-multiple-efs-certificates.md
+      href: ./active-directory/cant-share-files-multiple-efs-certificates.md
     - name: Certificate Services doesn't start
-      href: ./identity/certificate-services-not-start.md
+      href: ./active-directory/certificate-services-not-start.md
     - name: Certificate Services may not start on a computer
-      href: ./identity/cs-cant-start-computer.md
+      href: ./active-directory/cs-cant-start-computer.md
     - name: Change expiration date of certificates issued by CA
-      href: ./identity/change-certificates-expiration-date.md
+      href: ./active-directory/change-certificates-expiration-date.md
     - name: DPAPI MasterKey backup failures
-      href: ./identity/dpapi-masterkey-backup-failures.md
+      href: ./active-directory/dpapi-masterkey-backup-failures.md
     - name: Error 0x800706ba during certificate enrollment
-      href: ./identity/error-0x800706ba-certificate-enrollment.md
+      href: ./active-directory/error-0x800706ba-certificate-enrollment.md
     - name: Export Root Certification Authority Certificate
-      href: ./identity/export-root-certification-authority-certificate.md
+      href: ./active-directory/export-root-certification-authority-certificate.md
     - name: Find the name of Enterprise Root CA server
-      href: ./identity/find-name-enterprise-root-ca-server.md
+      href: ./active-directory/find-name-enterprise-root-ca-server.md
     - name: How to reinstall CA role
-      href: ./identity/uninstall-reinstall-ca-role.md
+      href: ./active-directory/uninstall-reinstall-ca-role.md
     - name: How to remove manually Enterprise Windows Certificate Authority
-      href: ./identity/delete-enterprise-windows-certificate-authority.md
+      href: ./active-directory/delete-enterprise-windows-certificate-authority.md
     - name: Move a certification authority to another server
-      href: ./identity/move-certification-authority-to-another-server.md
+      href: ./active-directory/move-certification-authority-to-another-server.md
     - name: Move Certificate Server database and log files
-      href: ./identity/move-certificate-server-database-log-files.md
+      href: ./active-directory/move-certificate-server-database-log-files.md
     - name: Required trusted root certificates
-      href: ./identity/trusted-root-certificates-are-required.md
+      href: ./active-directory/trusted-root-certificates-are-required.md
     - name: Set different validity period for subordinate CA
-      href: ./identity/set-enterprise-subordinate-ca-validity-period.md
+      href: ./active-directory/set-enterprise-subordinate-ca-validity-period.md
     - name: Set up certificate-based authentication across forests without trust for a web server
-      href: ./identity/set-up-certificate-based-authentication-across-forest-without-trust.md
+      href: ./active-directory/set-up-certificate-based-authentication-across-forest-without-trust.md
     - name: Valid root CA certificates are untrusted
-      href: ./identity/valid-root-ca-certificates-untrusted.md
+      href: ./active-directory/valid-root-ca-certificates-untrusted.md
     - name: Version 3 templates don't appear in certificate web enrollment
-      href: ./identity/cng-templates-not-appear-certificate-web-enrollment.md
+      href: ./active-directory/cng-templates-not-appear-certificate-web-enrollment.md
   - name: Active Directory database issues and domain controller boot failures
     items:
     - name: '"access is denied" error when replicating AD directory service'
-      href: ./identity/access-is-denied-error-domain-controller-replicate-ad.md
+      href: ./active-directory/access-is-denied-error-domain-controller-replicate-ad.md
     - name: '"Directory Services cannot start" error when starting a domain controller'
-      href: ./identity/0xc00002e1-error-start-domain-controller.md
+      href: ./active-directory/0xc00002e1-error-start-domain-controller.md
     - name: AD communication fails on multihomed domain controllers
-      href: ./identity/active-directory-communication-fails.md
+      href: ./active-directory/active-directory-communication-fails.md
     - name: ADWS service crashes after upgrade
-      href: ./identity/adws-service-crashes-after-you-upgrade.md
+      href: ./active-directory/adws-service-crashes-after-you-upgrade.md
     - name: Database garbage collection process
-      href: ./identity/database-garbage-collection-caculation-of-allowed-intervals.md
-    - name: Error when you configure a server with Server Manager
-      href: ./identity/fail-to-configure-server-using-server-manager.md
+      href: ./active-directory/database-garbage-collection-caculation-of-allowed-intervals.md
     - name: ESENT event IDs 1000, 1202, 412, and 454
-      href: ./identity/esent-events-1000-1202-412-454.md
+      href: ./active-directory/esent-events-1000-1202-412-454.md
     - name: Event IDs 5788 and 5789 occur
-      href: ./identity/event-ids-5788-5789.md
+      href: ./active-directory/event-ids-5788-5789.md
     - name: How to run the semantic checker on the AD database
-      href: ./identity/complete-semantic-database-analysis-ad-db.md
+      href: ./active-directory/complete-semantic-database-analysis-ad-db.md
     - name: How to use Ntdsutil to manage Active Directory files
-      href: ./identity/use-ntdsutil-manage-ad-files.md
+      href: ./active-directory/use-ntdsutil-manage-ad-files.md
     - name: ISMServ.exe fails to start when domain controller starts
-      href: ./identity/ismserv-not-start-when-domain-controller-starts.md
+      href: ./active-directory/ismserv-not-start-when-domain-controller-starts.md
   - name: Active Directory domain or forest functional level updates
     items:
     - name: '"Adprep could not contact a replica" error when running "Adprep /rodcprep" command'
-      href: ./identity/error-run-adprep-rodcprep-command.md
+      href: ./active-directory/error-run-adprep-rodcprep-command.md
     - name: Configure Kerberos Constrained Delegation
-      href: ./identity/configure-kerberos-constrained-delegation.md
+      href: ./active-directory/configure-kerberos-constrained-delegation.md
     - name: Domain controller promotion process shows "Windows Server Technical Preview"
-      href: ./identity/domain-controller-promotion-windows-server-technical-preview.md
+      href: ./active-directory/domain-controller-promotion-windows-server-technical-preview.md
     - name: How to configure firewall for domains and trusts
-      href: ./identity/config-firewall-for-ad-domains-and-trusts.md
+      href: ./active-directory/config-firewall-for-ad-domains-and-trusts.md
     - name: Raise Active Directory domain and forest functional levels
-      href: ./identity/raise-active-directory-domain-forest-functional-levels.md
+      href: ./active-directory/raise-active-directory-domain-forest-functional-levels.md
     - name: Troubleshoot domain controller deployment
-      href: ./identity/troubleshoot-domain-controller-deployment.md  
+      href: ./active-directory/troubleshoot-domain-controller-deployment.md
   - name: Active Directory Federation Services (AD FS)
     items:
     - name: Troubleshoot ADFS SSO issues
-      href: ./identity/troubleshoot-ad-fs-sso-issue.md
+      href: ./active-directory/troubleshoot-ad-fs-sso-issue.md
     - name: ADFS error 180 and endpoints missing
-      href: ./identity/adfs-error-180-endpoints-missing.md
+      href: ./active-directory/adfs-error-180-endpoints-missing.md
     - name: ADFS 2.0 certificate error
-      href: ./identity/adfs-2-certificate-error-build-chain.md
+      href: ./active-directory/adfs-2-certificate-error-build-chain.md
     - name: ADFS 2.0 error 401
-      href: ./identity/adfs-error-401-requested-resource-requires-authentication.md
+      href: ./active-directory/adfs-error-401-requested-resource-requires-authentication.md
     - name: 'ADFS 2.0 error: This page cannot be displayed'
-      href: ./identity/this-page-cant-displayed.md
+      href: ./active-directory/this-page-cant-displayed.md
     - name: ADFS 2.0 service fails to start
-      href: ./identity/adfs-2-service-fails-to-start.md
+      href: ./active-directory/adfs-2-service-fails-to-start.md
     - name: Availability and description of Active Directory Federation Services 2.0
-      href: ./identity/availability-description-afds.md
+      href: ./active-directory/availability-description-afds.md
     - name: Change AD FS 2.0 service communications certificate
-      href: ./identity/change-ad-fs-2-dot-0-service-communications.md
+      href: ./active-directory/change-ad-fs-2-dot-0-service-communications.md
     - name: Description of the Extranet Smart Lockout feature
-      href: ./identity/extranet-smart-lockout-feature.md
+      href: ./active-directory/extranet-smart-lockout-feature.md
     - name: Disable and replace TLS 1.0 in ADFS
-      href: ./identity/disable-and-replace-tls-1dot0.md
+      href: ./active-directory/disable-and-replace-tls-1dot0.md
     - name: Error 0x80072EE7 when you perform Workplace Join
-      href: ./identity/workplace-join-fail-error-0x80072ee7.md
+      href: ./active-directory/workplace-join-fail-error-0x80072ee7.md
     - name: Fail to connect ADFS service
-      href: ./identity/connection-adfs-failed-set-msoladfscontex.md
+      href: ./active-directory/connection-adfs-failed-set-msoladfscontex.md
     - name: Fail to convert domain to Standard
-      href: ./identity/convert-domain-federated.md
+      href: ./active-directory/convert-domain-federated.md
     - name: Restore IIS and clean up Active Directory
-      href: ./identity/restore-iis-clean-up-active-directory.md
+      href: ./active-directory/restore-iis-clean-up-active-directory.md
     - name: Troubleshoot AD FS 2.0 error
-      href: ./identity/adfs-2-error-access-is-denied.md
+      href: ./active-directory/adfs-2-error-access-is-denied.md
     - name: Troubleshoot AD FS issues in Microsoft Entra ID
-      href: ./identity/troubleshoot-ad-fs-issues.md
+      href: ./active-directory/troubleshoot-ad-fs-issues.md
   - name: Active Directory FSMO
     items:
     - name: Can't sign in to the domain
-      href: ./identity/cant-sign-the-domain.md
+      href: ./active-directory/cant-sign-the-domain.md
     - name: Fail to seize RID master role with Ntdsutil
-      href: ./identity/error-seize-rid-master-role-with-ntdsutil.md
+      href: ./active-directory/error-seize-rid-master-role-with-ntdsutil.md
     - name: Find servers that hold FSMO roles
-      href: ./identity/find-servers-holding-fsmo-role.md
+      href: ./active-directory/find-servers-holding-fsmo-role.md
     - name: FSMO roles
-      href: ./identity/fsmo-roles.md
+      href: ./active-directory/fsmo-roles.md
     - name: How to transfer or seize Operation Master roles
-      href: ./identity/transfer-or-seize-operation-master-roles-in-ad-ds.md
+      href: ./active-directory/transfer-or-seize-operation-master-roles-in-ad-ds.md
     - name: How to view and transfer FSMO roles
-      href: ./identity/view-transfer-fsmo-roles.md
+      href: ./active-directory/view-transfer-fsmo-roles.md
     - name: Password change processing and conflict resolution function
-      href: ./identity/password-change-processing-conflict-resolution-function.md
+      href: ./active-directory/password-change-processing-conflict-resolution-function.md
     - name: Process of transferring and seizing FSMO roles
-      href: ./identity/fsmo-transfer-seizure-process.md
+      href: ./active-directory/fsmo-transfer-seizure-process.md
   - name: Active Directory Lightweight Directory Services (AD LDS) and Active Directory Application Mode (ADAM)
     items:
     - name: ADAM General Event ID 1161 is logged on an AD LDS server
-      href: ./identity/adam-general-event-id-1161-logged-ad-lds-server.md
+      href: ./active-directory/adam-general-event-id-1161-logged-ad-lds-server.md
     - name: Change Windows Active Directory user password through LDAP
-      href: ./identity/change-windows-active-directory-user-password.md
+      href: ./active-directory/change-windows-active-directory-user-password.md
     - name: Hide or display InetOrgPerson object class
-      href: ./identity/hide-display-inetorgperson-object-class.md
+      href: ./active-directory/hide-display-inetorgperson-object-class.md
     - name: How to configure AD and LDS diagnostic event logging
-      href: ./identity/configure-ad-and-lds-event-logging.md
+      href: ./active-directory/configure-ad-and-lds-event-logging.md
     - name: LDAP operations to Active Directory are disabled
-      href: ./identity/anonymous-ldap-operations-active-directory-disabled.md
+      href: ./active-directory/anonymous-ldap-operations-active-directory-disabled.md
     - name: LDS service startup fails with Event ID 1168
-      href: ./identity/lds-service-startup-fails.md
+      href: ./active-directory/lds-service-startup-fails.md
     - name: Numerous "Event ID 1216" Events
-      href: ./identity/event-id-1216-directory-services-event-log.md
+      href: ./active-directory/event-id-1216-directory-services-event-log.md
     - name: Problems occur with Domain Controllers in Active Directory integrated DNS zones
-      href: ./identity/problems-with-dc-ad-integrated-dns-zones.md
+      href: ./active-directory/problems-with-dc-ad-integrated-dns-zones.md
     - name: Troubleshoot OBJ_CLASS_VIOLATION error in Adamsync
-      href: ./identity/adamsync-error-obj-class-violation.md
+      href: ./active-directory/adamsync-error-obj-class-violation.md
   - name: Active Directory Migration Tool (ADMT)
     items:
     - name: AD LDS instance logs Event ID 2092
-      href: ./identity/ad-lds-instance-logs-event-id-2092.md
+      href: ./active-directory/ad-lds-instance-logs-event-id-2092.md
     - name: ADMT 3.1 PES installation fails with error
-      href: ./identity/supplied-password-not-match-encryption-keys-password.md
+      href: ./active-directory/supplied-password-not-match-encryption-keys-password.md
     - name: Fail to run ADMT console after installation
-      href: ./identity/admt-3dot2-installation-incomplete.md
+      href: ./active-directory/admt-3dot2-installation-incomplete.md
     - name: Issues when you migrate to domain with ADMT 3.1
-      href: ./identity/issues-admt-3dot1-migrate-to-domain.md
+      href: ./active-directory/issues-admt-3dot1-migrate-to-domain.md
     - name: Support policy and known issues for ADMT
-      href: ./identity/support-policy-and-known-issues-for-admt.md
+      href: ./active-directory/support-policy-and-known-issues-for-admt.md
     - name: Troubleshoot intra-forest password migrations
-      href: ./identity/inter-forest-password-migration-with-admtv2.md
+      href: ./active-directory/inter-forest-password-migration-with-admtv2.md
     - name: Troubleshoot sIDHistory migration with ADMTv2
-      href: ./identity/inter-forest-sidhistory-migration-with-admt.md
+      href: ./active-directory/inter-forest-sidhistory-migration-with-admt.md
     - name: Windows App can't start
-      href: ./identity/windows-app-cant-start.md
+      href: ./active-directory/windows-app-cant-start.md
   - name: Active Directory replication
     items:
     - name: 'Troubleshooting guidance: Active Directory replication'
-      href: ./identity/troubleshoot-adreplication-guidance.md
+      href: ./active-directory/troubleshoot-adreplication-guidance.md
     - name: Active Directory changes don't replicate
-      href: ./identity/active-directory-changes-not-replicate.md
+      href: ./active-directory/active-directory-changes-not-replicate.md
     - name: Active Directory replication error 1256
-      href: ./identity/active-directory-replication-error-1256.md
+      href: ./active-directory/active-directory-replication-error-1256.md
     - name: Active Directory replication error 8304
-      href: ./identity/active-directory-replication-error-8304.md
+      href: ./active-directory/active-directory-replication-error-8304.md
     - name: Active Directory Replication Error 8451
-      href: ./identity/active-directory-replication-error-8451.md
+      href: ./active-directory/active-directory-replication-error-8451.md
     - name: Active Directory replication Event ID 1388 or 1988
-      href: ./identity/active-directory-replication-event-id-1388-1988.md
+      href: ./active-directory/active-directory-replication-event-id-1388-1988.md
     - name: Active Directory replication Event ID 1925
-      href: ./identity/active-directory-replication-event-id-1925-dns-lookup.md
+      href: ./active-directory/active-directory-replication-event-id-1925-dns-lookup.md
     - name: Active Directory replication Event ID 2042
-      href: ./identity/active-directory-replication-event-id-2042.md
+      href: ./active-directory/active-directory-replication-event-id-2042.md
     - name: Active Directory replication Event ID 2087
-      href: ./identity/active-directory-replication-event-id-2087.md
+      href: ./active-directory/active-directory-replication-event-id-2087.md
     - name: Active Directory replication Event ID 2108 and 1084
-      href: ./identity/replication-event-id-2108-1084.md
+      href: ./active-directory/replication-event-id-2108-1084.md
     - name: AD operations fail with Win32 error 1127
-      href: ./identity/replication-error-1127.md
+      href: ./active-directory/replication-error-1127.md
     - name: AD operations fail with Win32 error 8240
-      href: ./identity/active-directory-replication-error-8240.md
+      href: ./active-directory/active-directory-replication-error-8240.md
     - name: AD replication fails with error 8409
-      href: ./identity/ad-replication-fails-error-8409.md
+      href: ./active-directory/ad-replication-fails-error-8409.md
     - name: AD replication isn't working and event 1865
-      href: ./identity/active-directory-replication-not-work-event-1865.md
+      href: ./active-directory/active-directory-replication-not-work-event-1865.md
     - name: AD replications fail with error 1818
-      href: ./identity/replication-error-1818.md
+      href: ./active-directory/replication-error-1818.md
     - name: AD replications fail with error 5
-      href: ./identity/replications-fail-with-error-5.md
+      href: ./active-directory/replications-fail-with-error-5.md
     - name: AD replications fail with error 8333
-      href: ./identity/replication-error-8333.md
+      href: ./active-directory/replication-error-8333.md
     - name: AD replications fail with error 8477
-      href: ./identity/replication-error-8477.md
+      href: ./active-directory/replication-error-8477.md
     - name: Can't change replication scope of AD-integrated zone
-      href: ./identity/change-integrated-dns-zone-replication-scope.md
+      href: ./active-directory/change-integrated-dns-zone-replication-scope.md
     - name: Can't delete AD objects with many links
-      href: ./identity/replication-failures-delete-active-directory-objects.md
+      href: ./active-directory/replication-failures-delete-active-directory-objects.md
     - name: Changes aren't replicated to destination domain controllers
-      href: ./identity/changes-arent-replicated-controllers.md
+      href: ./active-directory/changes-arent-replicated-controllers.md
     - name: DCDiag VerifyReferences test fails
-      href: ./identity/dcdiag-verifyreferences-test-fails.md
+      href: ./active-directory/dcdiag-verifyreferences-test-fails.md
     - name: Diagnose replication failures
-      href: ./identity/diagnose-replication-failures.md
+      href: ./active-directory/diagnose-replication-failures.md
     - name: Disable KCC from automatically creating replication topology
-      href: ./identity/disable-knowledge-consistency-checker-automatic-generation.md
+      href: ./active-directory/disable-knowledge-consistency-checker-automatic-generation.md
     - name: Duplicate AD replication connections are created
-      href: ./identity/duplicate-active-directory-replication-connections.md
+      href: ./active-directory/duplicate-active-directory-replication-connections.md
     - name: Get and use AD Replication Status Tool
-      href: ./identity/get-use-active-directory-replication-status-tool.md
+      href: ./active-directory/get-use-active-directory-replication-status-tool.md
     - name: Hotfixes for DFS technologies
-      href: ./identity/distributed-file-system-hotfixes.md
+      href: ./active-directory/distributed-file-system-hotfixes.md
     - name: How to restrict RPC traffic to a specific port
-      href: ./identity/restrict-ad-rpc-traffic-to-specific-port.md
+      href: ./active-directory/restrict-ad-rpc-traffic-to-specific-port.md
     - name: lingering objects in a Windows Server Active Directory forest
-      href: ./identity/information-lingering-objects.md
+      href: ./active-directory/information-lingering-objects.md
     - name: Lingering objects still remain
-      href: ./identity/lingering-objects-remain.md
+      href: ./active-directory/lingering-objects-remain.md
     - name: Manually replicating data between domain controllers fails
-      href: ./identity/target-principal-name-is-incorrect-when-replicating-data.md
+      href: ./active-directory/target-principal-name-is-incorrect-when-replicating-data.md
     - name: Modify the default intra-site DC replication interval
-      href: ./identity/modify-default-intra-site-dc-replication-interval.md
+      href: ./active-directory/modify-default-intra-site-dc-replication-interval.md
     - name: NTDS Replication Warning Event ID 1093
-      href: ./identity/ntds-replication-warning-event-id-1093.md
+      href: ./active-directory/ntds-replication-warning-event-id-1093.md
     - name: NTDS replication warning IDs 1083 and 1061
-      href: ./identity/ntds-replication-warning-1083-1061-sam-error-12294.md
+      href: ./active-directory/ntds-replication-warning-1083-1061-sam-error-12294.md
     - name: NTFRS deprecation blocks installation of replica DCs
-      href: ./identity/ntfrs-deprecation-blocks-replic-dc-installation.md
+      href: ./active-directory/ntfrs-deprecation-blocks-replic-dc-installation.md
     - name: Operations fail with Win32 error 1753
-      href: ./identity/replication-error-1753.md
+      href: ./active-directory/replication-error-1753.md
     - name: Operations fail with Win32 error 8524
-      href: ./identity/replication-error-8524.md
+      href: ./active-directory/replication-error-8524.md
     - name: Orphaned child domain controller is not replicated
-      href: ./identity/orphaned-child-domain-isnt-replicated.md
+      href: ./active-directory/orphaned-child-domain-isnt-replicated.md
     - name: Replication error 1722
-      href: ./identity/replication-error-1722-rpc-server-unavailable.md
+      href: ./active-directory/replication-error-1722-rpc-server-unavailable.md
     - name: Replication error 2146893022
-      href: ./identity/replication-error-2146893022.md
+      href: ./active-directory/replication-error-2146893022.md
     - name: Replication error 5 - Access is denied
-      href: ./identity/replication-error-5.md
+      href: ./active-directory/replication-error-5.md
     - name: Replication error 8452
-      href: ./identity/replication-error-8452.md
+      href: ./active-directory/replication-error-8452.md
     - name: Replication error 8453
-      href: ./identity/replication-error-8453.md
+      href: ./active-directory/replication-error-8453.md
     - name: Replication error 8614
-      href: ./identity/replication-error-8614.md
+      href: ./active-directory/replication-error-8614.md
     - name: Troubleshoot Active Directory replication error 1396
-      href: ./identity/active-directory-replication-error-1396.md
+      href: ./active-directory/active-directory-replication-error-1396.md
     - name: Troubleshoot AD replication error 8446
-      href: ./identity/replication-error-8446.md
+      href: ./active-directory/replication-error-8446.md
     - name: Troubleshoot AD replication error 8464
-      href: ./identity/replication-error-8464.md
+      href: ./active-directory/replication-error-8464.md
     - name: Troubleshoot AD replication error 8545
-      href: ./identity/active-directory-replication-error-8545.md
+      href: ./active-directory/active-directory-replication-error-8545.md
     - name: Troubleshoot common Active Directory replication errors
-      href: ./identity/common-active-directory-replication-errors.md
+      href: ./active-directory/common-active-directory-replication-errors.md
     - name: Troubleshoot domain controller replication error 1727
-      href: ./identity/remote-procedure-call-failed-and-did-not-execute-error.md
+      href: ./active-directory/remote-procedure-call-failed-and-did-not-execute-error.md
     - name: Troubleshoot Event ID 1311 messages
-      href: ./identity/troubleshoot-event-id-1311-messages.md
+      href: ./active-directory/troubleshoot-event-id-1311-messages.md
     - name: Troubleshoot Jet database errors and recovery steps
-      href: ./identity/jet-database-errors-recovery-steps.md
+      href: ./active-directory/jet-database-errors-recovery-steps.md
     - name: Troubleshoot replication error 8418
-      href: ./identity/replication-error-8418.md
+      href: ./active-directory/replication-error-8418.md
     - name: Troubleshoot replication error 8456 or 8457
-      href: ./identity/replication-error-8456-8457.md
+      href: ./active-directory/replication-error-8456-8457.md
     - name: Troubleshoot replication error 8461
-      href: ./identity/adrepl-troubleshoot-replication-error-8461.md
+      href: ./active-directory/adrepl-troubleshoot-replication-error-8461.md
     - name: Troubleshoot replication error 8606
-      href: ./identity/replication-error-8606.md
+      href: ./active-directory/replication-error-8606.md
     - name: Use Ntdsutil to find and clean up duplicate security identifiers
-      href: ./identity/ntdsutil-find-clean-duplicate-security-identifiers.md
+      href: ./active-directory/ntdsutil-find-clean-duplicate-security-identifiers.md
   - name: Active Directory Rights Management Services
     items:
     - name: Event ID 84 occurs in AD RMS in Windows Server
-      href: ./identity/event-id-84-occurs-ad-rms-windows-server.md
+      href: ./active-directory/event-id-84-occurs-ad-rms-windows-server.md
   - name: Active Directory topology (sites, subnets, and connection objects)
     items:
     - name: Can't promote a DC to global catalog server
-      href: ./identity/cannot-promote-dc-to-global-catalog-server.md
+      href: ./active-directory/cannot-promote-dc-to-global-catalog-server.md
     - name: Fail to create a DFS namespace
-      href: ./identity/namespace-not-queried-rpc-server-unavailable.md
+      href: ./active-directory/namespace-not-queried-rpc-server-unavailable.md
     - name: Issues when renaming sites in the AD forest
-      href: ./identity/problems-rename-active-directory-forest-sites.md
+      href: ./active-directory/problems-rename-active-directory-forest-sites.md
     - name: KFSO doesn't work in external trust
-      href: ./identity/kfso-not-work-in-external-trust-event-is-17.md
+      href: ./active-directory/kfso-not-work-in-external-trust-event-is-17.md
     - name: Optimize domain controller location
-      href: ./identity/optimize-dc-location-global-catalog.md
+      href: ./active-directory/optimize-dc-location-global-catalog.md
     - name: Problems with promoting DC to global catalog server
-      href: ./identity/promoting-dc-to-global-catalog-server-issues.md
+      href: ./active-directory/promoting-dc-to-global-catalog-server-issues.md
   - name: DCPromo and the installation of domain controllers
     items:
     - name: '"Schema mismatch" error when try to run the Active Directory Installation Wizard'
-      href: ./identity/schema-mismatch-error-ad-installation-wizard-dcpromo.md
+      href: ./active-directory/schema-mismatch-error-ad-installation-wizard-dcpromo.md
     - name: Access is denied error occurs with DCPROMO
-      href: ./identity/access-denied-error-occurs-dcpromo.md
+      href: ./active-directory/access-denied-error-occurs-dcpromo.md
     - name: Access is denied when you promote domain controller
-      href: ./identity/access-denied-create-ntds-settings-object.md
+      href: ./active-directory/access-denied-create-ntds-settings-object.md
     - name: AD DS configuration operations fails
-      href: ./identity/service-cannot-be-started-error.md
+      href: ./active-directory/service-cannot-be-started-error.md
     - name: Cannot add a domain controller as a node
-      href: ./identity/cannot-add-domain-controller-node-failover-cluster.md
+      href: ./active-directory/cannot-add-domain-controller-node-failover-cluster.md
     - name: Can't select DNS Server role when adding a domain controller into an existing AD domain
-      href: ./identity/auto-install-dns-server-role-disabled-promte-domain-controller.md
+      href: ./active-directory/auto-install-dns-server-role-disabled-promte-domain-controller.md
     - name: Create an Active Directory server
-      href: ./identity/create-an-active-directory-server.md
+      href: ./active-directory/create-an-active-directory-server.md
     - name: DC promotion stops responding
-      href: ./identity/dc-promotion-not-respond-netbios-disabled.md
+      href: ./active-directory/dc-promotion-not-respond-netbios-disabled.md
     - name: DCPROMO demotion fails
-      href: ./identity/dcpromo-demotion-fails.md
+      href: ./active-directory/dcpromo-demotion-fails.md
     - name: Deployment and operation of Active Directory domains
-      href: ./identity/deployment-operation-ad-domains.md
+      href: ./active-directory/deployment-operation-ad-domains.md
     - name: Domain controller rename doesn't rename all AD DFSR SYSVOL objects
-      href: ./identity/sysvol-msdfsr-member-container-not-updated.md
+      href: ./active-directory/sysvol-msdfsr-member-container-not-updated.md
     - name: Domain controllers don't demote
-      href: ./identity/domain-controllers-not-demote.md
+      href: ./active-directory/domain-controllers-not-demote.md
     - name: Errors when you run DCDIAG commands
-      href: ./identity/dcdiag-commands-running-errors.md
+      href: ./active-directory/dcdiag-commands-running-errors.md
     - name: Fail to demote domain controller with Dcpromo.exe
-      href: ./identity/cannot-demote-domain-controller.md
+      href: ./active-directory/cannot-demote-domain-controller.md
     - name: FSMO placement and optimization
-      href: ./identity/fsmo-placement-and-optimization-on-ad-dcs.md
+      href: ./active-directory/fsmo-placement-and-optimization-on-ad-dcs.md
     - name: Group policy application rules for domain controllers
-      href: ./identity/group-policy-application-rules-for-domain-controller.md
+      href: ./active-directory/group-policy-application-rules-for-domain-controller.md
     - name: Group Policy preparation isn't performed
-      href: ./identity/group-policy-preparation-isnt-performed.md
+      href: ./active-directory/group-policy-preparation-isnt-performed.md
     - name: How to upgrade domain controllers
-      href: ./identity/add-domain-controllers-to-windows-2000-domain.md
+      href: ./active-directory/add-domain-controllers-to-windows-2000-domain.md
     - name: How to use unattended mode to install and remove AD DS
-      href: ./identity/syntax-build-answer-files-unattended-installation-ad-ds.md
+      href: ./active-directory/syntax-build-answer-files-unattended-installation-ad-ds.md
     - name: Installing AD DS fails
-      href: ./identity/installing-ad-ds-fails.md
+      href: ./active-directory/installing-ad-ds-fails.md
     - name: Internal error during replication phase of dcpromo
-      href: ./identity/dcpromo-replication-phase-error.md
+      href: ./active-directory/dcpromo-replication-phase-error.md
     - name: Move Windows Server to a domain fails
-      href: ./identity/wizard-not-gain-access-to-domain.md
+      href: ./active-directory/wizard-not-gain-access-to-domain.md
     - name: NETLOGON share isn't present after you install AD DS on a new full or read-only domain controller
-      href: ./identity/netlogon-share-not-present-after-install-ad-ds-on-full-read-only-domain-controller.md
+      href: ./active-directory/netlogon-share-not-present-after-install-ad-ds-on-full-read-only-domain-controller.md
     - name: Newly promoted domain controller fails to advertise after DCpromo
-      href: ./identity/newly-promoted-domain-controller-fail-advertise.md
+      href: ./active-directory/newly-promoted-domain-controller-fail-advertise.md
   - name: Domain controller scalability or performance (including LDAP)
     items:
     - name: DC returns only 5000 values in LDAP response
-      href: ./identity/domain-controller-returns-500-values-ldap-response.md
+      href: ./active-directory/domain-controller-returns-500-values-ldap-response.md
     - name: Domain controller is not functioning correctly
-      href: ./identity/domain-controller-not-functioning-correctly.md
+      href: ./active-directory/domain-controller-not-functioning-correctly.md
     - name: Event ID 1644 when LDAP queries are run
-      href: ./identity/ldap-queries-run-slowly.md
+      href: ./active-directory/ldap-queries-run-slowly.md
     - name: How to troubleshoot high Lsass.exe CPU utilization
-      href: ./identity/troubleshoot-high-lsass.exe-cpu-utilization.md
+      href: ./active-directory/troubleshoot-high-lsass.exe-cpu-utilization.md
     - name: Issues when AD replication and Netlogon RPCs request backlog values are exceeded
-      href: ./identity/issues-ad-replication-netlogon-rpcs-request-backlog-values-exceeded.md
+      href: ./active-directory/issues-ad-replication-netlogon-rpcs-request-backlog-values-exceeded.md
     - name: LDAP and Kerberos servers not respond to UDP requests or reset TCP sessions
-      href: ./identity/ldap-kerberos-server-not-respond-udp-request-reset-tcp-sessions.md
+      href: ./active-directory/ldap-kerberos-server-not-respond-udp-request-reset-tcp-sessions.md
     - name: Performance issues after you upgrade DCs
-      href: ./identity/dc-delayed-response-to-ldap-kerberos-request.md
+      href: ./active-directory/dc-delayed-response-to-ldap-kerberos-request.md
     - name: Use Event1644Reader.ps1 to analyze LDAP query performance
-      href: ./identity/event1644reader-analyze-ldap-query-performance.md
+      href: ./active-directory/event1644reader-analyze-ldap-query-performance.md
   - name: Domain join issues
     items:
     - name: 'Troubleshooting guidance: Active Directory domain join'
-      href: ./identity/active-directory-domain-join-troubleshooting-guidance.md
+      href: ./active-directory/active-directory-domain-join-troubleshooting-guidance.md
     - name: '"The account is not authorized to login from this station" error'
-      href: ./identity/account-not-authorized-login-from-this-station.md
+      href: ./active-directory/account-not-authorized-login-from-this-station.md
     - name: Active Directory installation fails
-      href: ./identity/creating-ntds-settings-object-for-ad-dc.md
+      href: ./active-directory/creating-ntds-settings-object-for-ad-dc.md
     - name: Cannot contect to the Internet or the domain
-      href: ./identity/cannot-connect-internet-domain.md
+      href: ./active-directory/cannot-connect-internet-domain.md
     - name: Default limit to workstation numbers
-      href: ./identity/default-workstation-numbers-join-domain.md
+      href: ./active-directory/default-workstation-numbers-join-domain.md
     - name: Mechanism to locate a domain controller
-      href: ./identity/how-domain-controllers-are-located.md
+      href: ./active-directory/how-domain-controllers-are-located.md
     - name: Netlogon service doesn't keep settings after in-place upgrade
-      href: ./identity/netlogon-service-not-start-automatically.md
+      href: ./active-directory/netlogon-service-not-start-automatically.md
     - name: Support boundaries for Active Directory over NAT
-      href: ./identity/support-for-active-directory-over-nat.md
+      href: ./active-directory/support-for-active-directory-over-nat.md
     - name: Sync Center syncs offline files very slow
-      href: ./identity/sync-center-slow-syncing-of-offline-files.md
+      href: ./active-directory/sync-center-slow-syncing-of-offline-files.md
     - name: Troubleshooting AD Replication error 1908
-      href: ./identity/ad-replication-error-1908-not-find-domain-controller.md
+      href: ./active-directory/ad-replication-error-1908-not-find-domain-controller.md
     - name: Troubleshoot errors when joining computers to a domain
-      href: ./identity/troubleshoot-errors-join-computer-to-domain.md
+      href: ./active-directory/troubleshoot-errors-join-computer-to-domain.md
     - name: Unable to join computers to a domain
-      href: ./identity/cannot-join-computer-to-domain.md
+      href: ./active-directory/cannot-join-computer-to-domain.md
     - name: Using domain join UI to join a computer to AD domain fails
-      href: ./identity/fail-to-join-computer-to-ad-domain.md
+      href: ./active-directory/fail-to-join-computer-to-ad-domain.md
   - name: LDAP configuration and interoperability
     items:
     - name: DCs can't be located and high-rate outbound sessions
-      href: ./identity/dcs-cannot-be-located-high-rate-outbound-sessions.md
+      href: ./active-directory/dcs-cannot-be-located-high-rate-outbound-sessions.md
     - name: Enable LDAP over SSL
-      href: ./identity/enable-ldap-over-ssl-3rd-certification-authority.md
+      href: ./active-directory/enable-ldap-over-ssl-3rd-certification-authority.md
     - name: How to disable TLS 1.3 for AD and LDAP
-      href: ./identity/how-to-disable-tls-1-3-for-ad-and-ldap.md
+      href: ./active-directory/how-to-disable-tls-1-3-for-ad-and-ldap.md
     - name: How to enable LDAP signing in Windows Server
-      href: ./identity/enable-ldap-signing-in-windows-server.md
+      href: ./active-directory/enable-ldap-signing-in-windows-server.md
     - name: How to turn on debug logging of the LDAP client
-      href: ./identity/turn-on-debug-logging-ldap-client.md
+      href: ./active-directory/turn-on-debug-logging-ldap-client.md
     - name: LDAPS connection fails with event ID 36884
-      href: ./identity/ldaps-connection-fails-with-event-id-36884.md
+      href: ./active-directory/ldaps-connection-fails-with-event-id-36884.md
     - name: LDAP paged queries with subordinate referrals are not chased properly
-      href: ./identity/ldap-paged-queries-subordinate-referrals-not-chased.md
+      href: ./active-directory/ldap-paged-queries-subordinate-referrals-not-chased.md
     - name: LDAP queries return partial attribute list
-      href: ./identity/ldap-query-against-domain-controller-partial-attribute.md
+      href: ./active-directory/ldap-query-against-domain-controller-partial-attribute.md
     - name: LDAP queries targeting host names take longer
-      href: ./identity/ldap-session-takes-longer-target-host-names.md
+      href: ./active-directory/ldap-session-takes-longer-target-host-names.md
     - name: LDAP session security settings and requirements after ADV190023
-      href: ./identity/ldap-session-security-settings-requirements-adv190023.md
+      href: ./active-directory/ldap-session-security-settings-requirements-adv190023.md
     - name: LDAPS connection problems
-      href: ./identity/ldap-over-ssl-connection-issues.md
+      href: ./active-directory/ldap-over-ssl-connection-issues.md
     - name: Make DCs to reply to LDAP Ping on UDP 138 port
-      href: ./identity/dc-respond-to-ldap-ping-on-udp-138-port.md
+      href: ./active-directory/dc-respond-to-ldap-ping-on-udp-138-port.md
     - name: Use the Online Dbdump feature in Ldp.exe
-      href: ./identity/use-online-dbdump-feature-ldp-dot-exe.md
+      href: ./active-directory/use-online-dbdump-feature-ldp-dot-exe.md
     - name: View and set LDAP policy by using Ntdsutil
-      href: ./identity/view-set-ldap-policy-using-ntdsutil.md
+      href: ./active-directory/view-set-ldap-policy-using-ntdsutil.md
   - name: Schema update - known issues, best practices, workflow review
     items:
     - name: How to find the current Schema Version
-      href: ./identity/find-current-schema-version.md
+      href: ./active-directory/find-current-schema-version.md
   - name: Schema update failure or conflict
     items:
     - name: Delays when domain members communicate to DCs
-      href: ./identity/delays-domain-members-dc-remote-domains.md
+      href: ./active-directory/delays-domain-members-dc-remote-domains.md
     - name: Error when you run AD Installation Wizard
-      href: ./identity/error-when-you-run-ad-installation-wizard.md
+      href: ./active-directory/error-when-you-run-ad-installation-wizard.md
   - name: Transport Layer Security (TLS)
     items:
     - name: Disable TLS 1.0 and 1.1 and force the use of TLS 1.2
-      href: ./identity/disable-tls-1-1dot1-mbam-servers.md
+      href: ./active-directory/disable-tls-1-1dot1-mbam-servers.md
     - name: Errors when applications try to connect to SQL Server
-      href: ./identity/apps-forcibly-closed-tls-connection-errors.md
+      href: ./active-directory/apps-forcibly-closed-tls-connection-errors.md
   - name: User, computer, group, and object management
     items:
     - name: '"This property is limited to 64 values" error'
-      href: ./identity/this-property-limited-64-values.md
+      href: ./active-directory/this-property-limited-64-values.md
     - name: A batch of Event ID 4780 are logged in the PDC
-      href: ./identity/a-batch-of-event-4780-logged-pdc.md
+      href: ./active-directory/a-batch-of-event-4780-logged-pdc.md
     - name: Access denied after logging on to a local administrator account
-      href: ./identity/access-denied-log-on-administrator-domain-account.md
+      href: ./active-directory/access-denied-log-on-administrator-domain-account.md
     - name: ACCESS DENIED with NetUser and NetGroup APIs
-      href: ./identity/netuser-netgroup-fails-with-access-denied.md
+      href: ./active-directory/netuser-netgroup-fails-with-access-denied.md
     - name: Access is denied when non-administrator users join computers
-      href: ./identity/access-denied-when-joining-computers.md
+      href: ./active-directory/access-denied-when-joining-computers.md
     - name: Account-identifier allocator fails to initialize
-      href: ./identity/event-16650-account-identifier-allocator-not-initialize.md
+      href: ./active-directory/event-16650-account-identifier-allocator-not-initialize.md
     - name: Add special groups to built-in groups
-      href: ./identity/add-special-groups-to-built-in-groups.md
+      href: ./active-directory/add-special-groups-to-built-in-groups.md
     - name: All members of a group may not be returned
-      href: ./identity/all-members-group-may-not-be-returned.md
+      href: ./active-directory/all-members-group-may-not-be-returned.md
     - name: AuditPol and Local Security Policy results are different
-      href: ./identity/auditpol-local-security-policy-results-differ.md
+      href: ./active-directory/auditpol-local-security-policy-results-differ.md
     - name: Can't access AD data from Source Control Explorer
-      href: ./identity/fail-to-access-data-from-source-control-explorer.md
+      href: ./active-directory/fail-to-access-data-from-source-control-explorer.md
     - name: Can't add user or object to directory service
-      href: ./identity/cannot-add-user-object-differ-by-diacritic-mark-character.md
+      href: ./active-directory/cannot-add-user-object-differ-by-diacritic-mark-character.md
     - name: Can't start Active Directory Users and Computers Tool
-      href: ./identity/cannot-start-active-directory-users-and-computers-tool.md
+      href: ./active-directory/cannot-start-active-directory-users-and-computers-tool.md
     - name: Compatibility with user accounts ending with the dollar sign
-      href: ./identity/compatibility-user-accounts-end-dollar-sign.md
+      href: ./active-directory/compatibility-user-accounts-end-dollar-sign.md
     - name: Define Security Templates by Security Templates Snap-In
-      href: ./identity/define-security-templates-using-security-templates-snap-in.md
+      href: ./active-directory/define-security-templates-using-security-templates-snap-in.md
     - name: Error "The directory datatype cannot be converted to/ from a native DS datatype"
-      href: ./identity/directory-datatype-cannot-converted-to-from-native-ds-datatype-error.md
+      href: ./active-directory/directory-datatype-cannot-converted-to-from-native-ds-datatype-error.md
     - name: Event ID 5722 is logged on domain controller
-      href: ./identity/event-id-5722-logged-on-domain-controller.md
+      href: ./active-directory/event-id-5722-logged-on-domain-controller.md
     - name: Fail to delete orphaned NTDS Settings
-      href: ./identity/dsa-object-cannot-be-deleted.md
+      href: ./active-directory/dsa-object-cannot-be-deleted.md
     - name: Fail to run Get-ADGroupMember for domain local group
-      href: ./identity/get-adgroupmember-error-remote-forest-members.md
+      href: ./active-directory/get-adgroupmember-error-remote-forest-members.md
     - name: RSoP Planning mode is not supported in a cross-forest scenario
-      href: ./identity/rsop-not-supported-across-multiple-forests.md
+      href: ./active-directory/rsop-not-supported-across-multiple-forests.md
     - name: How to change display names of Active Directory users
-      href: ./identity/change-display-names-ad-users.md
+      href: ./active-directory/change-display-names-ad-users.md
     - name: How to enable Kerberos event logging
-      href: ./identity/enable-kerberos-event-logging.md
+      href: ./active-directory/enable-kerberos-event-logging.md
     - name: How to reset the DSRM administrator password
-      href: ./identity/reset-directory-services-restore-mode-admin-pwd.md
+      href: ./active-directory/reset-directory-services-restore-mode-admin-pwd.md
     - name: How to use phantoms
-      href: ./identity/phantoms-tombstones-infrastructure-master.md
+      href: ./active-directory/phantoms-tombstones-infrastructure-master.md
     - name: Information about devices configured as RODCs
-      href: ./identity/info-devices-configured-rodcs.md
+      href: ./active-directory/info-devices-configured-rodcs.md
     - name: Let non-administrators view deleted objects container
-      href: ./identity/non-administrators-view-deleted-object-container.md
+      href: ./active-directory/non-administrators-view-deleted-object-container.md
     - name: Linux accounts can't get AES encrypted tickes in AD DS
-      href: ./identity/linux-accounts-cannot-get-aes-tickets.md
+      href: ./active-directory/linux-accounts-cannot-get-aes-tickets.md
     - name: Modify filtered properties of an object
-      href: ./identity/modify-filtered-properties-of-object.md
+      href: ./active-directory/modify-filtered-properties-of-object.md
     - name: Multiple tabs of user properties are missing
-      href: ./identity/multiple-tabs-of-user-property-missing.md
+      href: ./active-directory/multiple-tabs-of-user-property-missing.md
     - name: Name computers, domains, sites, and OUs
-      href: ./identity/naming-conventions-for-computer-domain-site-ou.md
+      href: ./active-directory/naming-conventions-for-computer-domain-site-ou.md
     - name: NET.EXE /ADD command doesn't support names longer than 20 characters
-      href: ./identity/net-add-not-support-names-exceeding-20-characters.md
+      href: ./active-directory/net-add-not-support-names-exceeding-20-characters.md
     - name: Netlogon service doesn't start
-      href: ./identity/netlogon-service-not-start-event-2112-7024.md
+      href: ./active-directory/netlogon-service-not-start-event-2112-7024.md
     - name: Outdated cached credentials are used when running an elevated task
-      href: ./identity/outdated-cached-credentials-used-when-run-elevated-task.md
+      href: ./active-directory/outdated-cached-credentials-used-when-run-elevated-task.md
     - name: Password change for expired password fails
-      href: ./identity/error-password-change-expired-password.md
+      href: ./active-directory/error-password-change-expired-password.md
     - name: Password Reset fails with error
-      href: ./identity/password-reset-fails-error.md
+      href: ./active-directory/password-reset-fails-error.md
     - name: Password-change protocols in Windows
-      href: ./identity/password-change-mechanisms.md
+      href: ./active-directory/password-change-mechanisms.md
     - name: Poor performance when calling lookup functions
-      href: ./identity/poor-performance-calling-lookup-functions.md
+      href: ./active-directory/poor-performance-calling-lookup-functions.md
     - name: Redirect users and computers containers
-      href: ./identity/redirect-users-computers-containers.md
+      href: ./active-directory/redirect-users-computers-containers.md
     - name: Rename an item after replication collision
-      href: ./identity/rename-item-replication-collision.md
+      href: ./active-directory/rename-item-replication-collision.md
     - name: Restrict use of a computer to one domain user only
-      href: ./identity/restrict-use-one-domain-user-only.md
+      href: ./active-directory/restrict-use-one-domain-user-only.md
     - name: Set a user's password with Ldifde
-      href: ./identity/set-user-password-with-ldifde.md
+      href: ./active-directory/set-user-password-with-ldifde.md
     - name: Some applications and APIs require access to authorization information
-      href: ./identity/apps-apis-require-access.md
+      href: ./active-directory/apps-apis-require-access.md
     - name: The Lingering Object Liquidator (LoL) tool
-      href: ./identity/lingering-object-liquidator-tool.md
+      href: ./active-directory/lingering-object-liquidator-tool.md
     - name: Troubleshoot AD replication error 8589
-      href: ./identity/replication-error-8589.md
+      href: ./active-directory/replication-error-8589.md
     - name: Use Adminpak to remotely administer computers
-      href: ./identity/use-adminpak-remotely-administer-computers.md
+      href: ./active-directory/use-adminpak-remotely-administer-computers.md
     - name: Use Directory Service to manage AD objects
-      href: ./identity/directory-service-manage-objects.md
+      href: ./active-directory/directory-service-manage-objects.md
     - name: UserAccountControl property flags
-      href: ./identity/useraccountcontrol-manipulate-account-properties.md
+      href: ./active-directory/useraccountcontrol-manipulate-account-properties.md
   - name: Virtualized domain controller (errors and questions)
     items:
     - name: Host AD DCs in virtual hosting environments
-      href: ./identity/ad-dc-in-virtual-hosting-environment.md
+      href: ./active-directory/ad-dc-in-virtual-hosting-environment.md
     - name: Windows Time Service event IDs 24, 29, and 38
-      href: ./identity/windows-time-service-event-ids-24-29-38.md
+      href: ./active-directory/windows-time-service-event-ids-24-29-38.md
   - name: Windows Time Service
     items:
+    - name: Computer clock reverts to a previous date and time
+      href: ./active-directory/client-clock-reverts-to-previous-time.md
     - name: Configure W32Time against a large time offset
-      href: ./identity/configure-w32ime-against-huge-time-offset.md
+      href: ./active-directory/configure-w32ime-against-huge-time-offset.md
     - name: Convert date/time attributes to standard time format
-      href: ./identity/convert-datetime-attributes-to-standard-format.md
+      href: ./active-directory/convert-datetime-attributes-to-standard-format.md
     - name: Error message when you run the "w32tm /resync" command
-      href: ./identity/error-message-run-w32tm-resync-no-time-data-available.md
+      href: ./active-directory/error-message-run-w32tm-resync-no-time-data-available.md
     - name: 'Event 142: The time service has stopped advertising'
-      href: ./identity/w32time-event-142-time-service-stopped-advertising.md
+      href: ./active-directory/w32time-event-142-time-service-stopped-advertising.md
     - name: How to configure authoritative time server
-      href: ./identity/configure-authoritative-time-server.md
+      href: ./active-directory/configure-authoritative-time-server.md
     - name: How Windows Time service treats leap second
-      href: ./identity/time-service-treats-leap-second.md
+      href: ./active-directory/time-service-treats-leap-second.md
     - name: Support boundary for high-accuracy time
-      href: ./identity/support-boundary-high-accuracy-time.md
+      href: ./active-directory/support-boundary-high-accuracy-time.md
     - name: Support for the leap second
-      href: ./identity/support-for-leap-second.md
+      href: ./active-directory/support-for-leap-second.md
     - name: Time service not correct the time
-      href: ./identity/specialpollinterval-polling-interval-time-service-not-correct.md
+      href: ./active-directory/specialpollinterval-polling-interval-time-service-not-correct.md
     - name: Time synchronization may not succeed
-      href: ./identity/time-synchronization-not-succeed-non-ntp.md
+      href: ./active-directory/time-synchronization-not-succeed-non-ntp.md
     - name: Turn on debug logging in Windows Time Service
-      href: ./identity/turn-on-debug-logging-in-windows-time-service.md
+      href: ./active-directory/turn-on-debug-logging-in-windows-time-service.md
     - name: W32time settings fail when starting Windows Time Service in a workgroup
-      href: ./identity/w32time-sync-specialpollInterval-ignored.md
+      href: ./active-directory/w32time-sync-specialpollInterval-ignored.md
     - name: Windows Time Service settings aren't preserved in an upgrade
-      href: ./identity/windows-time-service-values-reverted.md
+      href: ./active-directory/windows-time-service-values-reverted.md
 - name: Admin Development
   items:
   - name: Admin Development
@@ -781,7 +782,7 @@
     - name: Not enough storage to process this command
       href: ./backup-and-storage/not-enough-storage-process-this-command.md
     - name: Troubleshoot File Server Resource Manager
-      href: ./backup-and-storage/troubleshoot-file-server-resource-manager.md      
+      href: ./backup-and-storage/troubleshoot-file-server-resource-manager.md
   - name: iSCSI
     items:
     - name: File shares on iSCSI devices aren't re-created
@@ -855,7 +856,7 @@
     - name: Simple volumes may become inaccessible
       href: ./backup-and-storage/simple-volumes-inaccessible-power-loss.md
     - name: Troubleshoot Disk Management
-      href: ./backup-and-storage/troubleshoot-disk-management.md     
+      href: ./backup-and-storage/troubleshoot-disk-management.md
     - name: Usability limit for Volume Shadow Copy Service (VSS)
       href: ./backup-and-storage/usability-limit-volume-shadow-copy-service.md
     - name: Use the Disk Management Snap-in
@@ -922,238 +923,6 @@
     items:
     - name: Support policy for Windows containers and Docker in on-premises scenarios
       href: ./containers/support-for-windows-containers-docker-on-premises-scenarios.md
-- name: Deployment
-  items:
-  - name: Deployment
-    href: ./deployment/deployment-overview.md
-  - name: Activation
-    items:
-    - name: '"Windows is not genuine" error'
-      href: ./deployment/windows-not-genuine-error.md
-    - name: 0xc004f063 when activating an OEM version
-      href: ./deployment/0xc004f063-when-activating-oem-version.md
-    - name: Application Event Log Warning ID 1058
-      href: ./deployment/application-event-log-warning-id-1058.md
-    - name: 'Error 0x80070005 "Access denied" when you activate Windows'
-      href: ./deployment/error-0x80070005-access-denied.md
-    - name: Error 0x8007000D when you activate a machine
-      href: ./deployment/0x8007000d-activate-machine.md
-    - name: Error 0xC004E002 during activation
-      href: ./deployment/error-0xc004e002-during-activation.md
-    - name: Error 0xC004E015 (SL_E_EUL_CONSUMPTION_FAILED)
-      href: ./deployment/error-0xc004e015-sl-e-eul-consumption-failed-activate-windows.md
-    - name: Error 0xC004F015 when you activate Windows 10
-      href: ./deployment/error-0xc004f015-activate-windows-10.md
-    - name: Error 0xC004F06C when you activate Windows
-      href: ./deployment/error-0xc004f06c-activate-windows.md
-    - name: Error 0xC004F074 when you activate Windows
-      href: ./deployment/error-0xc004f074-activate-windows.md
-    - name: Error when you validate a copy of Windows
-      href: ./deployment/error-when-you-validate-copy-windows.md
-    - name: Event 12293 when registering a KMS host record
-      href: ./deployment/event-12293-error-0x800723-set-kms-host.md
-    - name: Event ID 12321 Warning Token Based Activation failed
-      href: ./deployment/event-id-12321-warning-token-based-activation-failed.md
-    - name: Event ID 8208, 8200, or 900 is logged
-      href: ./deployment/event-id-8208-8200-900.md
-    - name: Fail to activate Windows Server over the Internet
-      href: ./deployment/message-number-32777.md
-    - name: How to change the Volume Licensing product key
-      href: ./deployment/change-volume-licensing-product-key.md
-    - name: How to rebuild the Tokens.dat file
-      href: ./deployment/rebuild-tokens-dotdat-file.md
-    - name: Specified database is not a valid VAMT database error
-      href: ./deployment/specified-database-not-valid-vamt-error.md
-    - name: Troubleshoot ADBA clients that don't activate
-      href: ./deployment/troubleshoot-adba-clients-not-activate.md
-    - name: Troubleshoot Windows activation error codes
-      href: ./deployment/troubleshoot-activation-error-codes.md
-    - name: Windows Activation fails with error 0x8007267C
-      href: ./deployment/windows-activation-fails-with-error-0x8007267.md
-    - name: Windows installation fails with error
-      href: ./deployment/error-product-key-not-match-windows-images-installation.md
-  - name: Devices and Drivers
-    items:
-    - name: '"Stop 0x0000007B" error'
-      href: ./deployment/stop-0x0000007b-error-group-policy-setting.md
-    - name: '"This device cannot start" error when deploying a hot plug NVMe SSD'
-      href: ./deployment/device-cannot-start-error-hot-plug-nvme-ssd.md
-    - name: '%NUMBER_OF_PROCESSORS% environment variable shows incorrect values'
-      href: ./deployment/number-of-processors-environment-variable-show-incorrect-values.md
-    - name: Can't find the Microsoft Loopback Adapter
-      href: ./deployment/microsoft-loopback-adapter-rename.md
-    - name: Can't install a VMWare driver on Windows Server 2008 R2
-      href: ./deployment/error-install-vmware-driver.md
-    - name: Changes of the default behavior for Core Parking
-      href: ./deployment/default-core-parking-behavior-changes.md
-    - name: Enable Plug and Play feature for parallel port devices
-      href: ./deployment/enable-plug-play-for-parallel-port-devices.md
-    - name: Event ID 37 after you change power policy
-      href: ./deployment/event-id-37-windows-kernel-processor-power.md
-    - name: Event ID 56 is logged
-      href: ./deployment/event-id-56-logged.md
-    - name: Fail to insert a smart card in a reader
-      href: ./deployment/cannot-insert-smart-card-in-reader.md
-    - name: How to determine the type of processor
-      href: ./deployment/determine-the-type-of-processor.md
-    - name: How to replace a driver by using Recovery Console
-      href: ./deployment/use-recovery-console-replace-driver.md
-    - name: How to use Device Manager to configure devices
-      href: ./deployment/use-device-manager-configure-devices.md
-    - name: Support policy for third-party, kernel-level software
-      href: ./deployment/support-policy-third-party-kernel-level-attestation.md
-    - name: VMware driver installation fails in Windows Server 2008 R2 SP1
-      href: ./deployment/virtual-machines-vmware-not-install-update.md
-    - name: Windows Deployment Services (WDS) support for UEFI
-      href: ./deployment/deploy-uefi-based-systems-wds.md
-  - name: MDM
-    items:
-    - name: Multicast deployment fails from WDS
-      href: ./deployment/multicast-deployment-fails-from-wds.md
-  - name: Servicing
-    items:
-    - name: 'Troubleshooting guidance: Installing Windows features or roles'
-      href: ./deployment/troubleshoot-install-features-roles-guidance.md
-    - name: 'Troubleshooting guidance: Windows Server update'
-      href: ./deployment/troubleshoot-windows-server-update-guidance.md
-    - name: 'Troubleshooting guidance: Windows Update for Business reports'
-      href: ./deployment/wubr-troubleshooting-guidance.md
-    - name: '"Failed to be changed to the Absent state. Status: 0x800f0922" error'
-      href: ./deployment/failed-changed-absent-state-status-0x800f0922-error.md    
-    - name: Can't connect to WSUS Administration Website
-      href: ./deployment/cannot-connect-to-wsus-administration-website.md
-    - name: Can't install .NET Framework 3.5 on OEM Windows installation
-      href: ./deployment/cannot-install-dotnet-framework-3dot5-oem.md
-    - name: Can't install updates or programs
-      href: ./deployment/cannot-install-updates-programs.md
-    - name: Can't install Windows Server 2019 on servers with a high processor count
-      href: ./deployment/cannot-install-windows-server-2019-high-processor-count.md
-    - name: CBS.log file contains entries that some files aren't repaired
-      href: ./deployment/cbs-log-file-record-entries-not-repaired-run-sfc.md
-    - name: Description of System File Checker (Sfc.exe)
-      href: ./deployment/system-file-checker.md
-    - name: Description of Windows Server Update Services 3.0
-      href: ./deployment/description-of-windows-server-update-services-3.md
-    - name: ERROR_INVALID_DATA error after installing Windows updates
-      href: ./deployment/error-invalid-data-startup-installing-updates.md
-    - name: Error 0x800705aa when Windows Update fails
-      href: ./deployment/error-0x800705aa-windows-update-fails.md
-    - name: Error 0x800f0906 when you convert Server Core to GUI
-      href: ./deployment/dism-fails-with-error-0x800f0906.md
-    - name: Error 0x800f0922 when installing Windows updates
-      href: ./deployment/error-0x800f0922-installing-windows-updates.md
-    - name: Error 0x800f0922 when MPIO feature installation fails
-      href: ./deployment/error-0x800f0922-mpio-feature-installation-fails.md
-    - name: Error 0x800f0922 when you uninstall roles/features
-      href: ./deployment/error-0x800f0922-uninstall-role-feature.md
-    - name: Error C0190003 after installing updates
-      href: ./deployment/error-c0190003-install-updates-restart-computer.md
-    - name: Error code 2359302 when installing updates in Windows Server 2019
-      href: ./deployment/error-2359302-installing-windows-updates.md
-    - name: Fail to install Network Policy Server role
-      href: ./deployment/error-0x80004005-network-policy-server-role.md
-    - name: Failed to schedule Software Protection service for restart
-      href: ./deployment/failed-schedule-software-protection.md
-    - name: Fix Windows Update errors
-      href: ./deployment/fix-windows-update-errors.md
-    - name: How to block user access to Windows Update
-      href: ./deployment/block-user-access-windows-update.md
-    - name: How to use the Recovery Console
-      href: ./deployment/use-recovery-console-not-start.md
-    - name: Install Microsoft Product Support Reporting Tool
-      href: ./deployment/microsoft-product-support-reporting-tool-v5220030.md
-    - name: List of updates
-      href: ./deployment/list-updates.md
-    - name: Re-register Windows client/server in WSUS
-      href: ./deployment/re-register-windows-clientserver-in-wsus.md
-    - name: System Partition goes offline after installing some 3rd Party Disk
-      href: ./deployment/system-partition-offline-install-3rd-party-disk.md
-    - name: SystemInfo.exe doesn't display all installed updates
-      href: ./deployment/systeminfo-not-display-all-updates.md
-    - name: Temporarily deactivate the kernel mode filter driver
-      href: ./performance/deactivate-kernel-mode-filter-driver.md
-    - name: Why you may be prompted to restart your computer
-      href: ./deployment/why-prompted-restart-computer.md
-    - name: Windows Server 2008 Service Pack 2
-      href: ./deployment/windows-server-2008-service-pack-2.md
-    - name: 'WUBr: Troubleshoot diagnostic data transmission'
-      href: ./deployment/wubr-troubleshooting-data-transmission.md
-    - name: 'WUBr: Use the configuration script to troubleshoot device configuration'
-      href: ./deployment/wubr-troubleshooting-device-config-using-script.md
-    - name: WSUS 3.0 installation package is available
-      href: ./deployment/wsus-3-installation-package.md
-    - name: WSUS 3.0 SP2 Dynamic Install for Server Manager
-      href: ./deployment/windows-server-update-services-3-sp2.md
-    - name: WSUS SelfUpdate doesn't send automatic updates
-      href: ./deployment/wsus-selfupdate-not-send-automatic-updates.md
-    - name: WUSA returns 0x5 ERROR_ACCESS_DENIED
-      href: ./deployment/windows-update-standalone-installer-returns-error.md
-    - name: You can't install features in Windows Server 2012 R2
-      href: ./deployment/you-cant-install-features.md
-  - name: Setup
-    items:
-    - name: Add OEM PnP drivers to Windows installations
-      href: ./deployment/add-oem-plug-play-drivers.md
-    - name: Avoid duplicate GUIDs when you image SMS clients
-      href: ./deployment/avoid-duplicate-guids-deploy-sms.md
-    - name: Can't open EXE files
-      href: ./deployment/cant-open-exe-files.md
-    - name: Chinese IME dictionaries are not ready yet
-      href: ./deployment/chinese-ime-dictionaries-not-ready.md
-    - name: Chinese (Simplified) input method doesn't work
-      href: ./deployment/chinese-simplified-input-method-not-working.md
-    - name: Create an ISO image for UEFI platforms
-      href: ./deployment/create-iso-image-for-uefi-platforms.md
-    - name: Enable logging and tracing for WDS components
-      href: ./deployment/enable-logging-windows-deployment-service.md
-    - name: ERROR_PATH_NOT_FOUND error when performing an in-place upgrade
-      href: ./deployment/error-path-not-found-upgrading-windows-server-2019.md      
-    - name: Event ID 307 and 304 logged for deploying Windows
-      href: ./deployment/event-307-and-304-logged-for-deploying.md
-    - name: Fail to run applications on Windows Server Core
-      href: ./deployment/subsystem-needed-support-image-type-not-present.md
-    - name: How to perform an in-place/repair upgrade
-      href: ./deployment/repair-or-in-place-upgrade.md
-    - name: In-place upgrade hangs at black screen
-      href: ./deployment/in-place-upgrade-hangs-black-screen.md
-    - name: Integrate Windows Server Update Services (WSUS) 3.0 into Server Manager
-      href: ./deployment/update-available-integrates-wsus-into-server-manager.md
-    - name: Known issues that affect AppX cleanup maintenance task
-      href: ./deployment/issues-appx-cleanup-maintenance-task.md
-    - name: Long paths with spaces require quotation marks
-      href: ./deployment/filenames-with-spaces-require-quotation-mark.md
-    - name: Manually edit Boot.ini file
-      href: ./deployment/manually-edit-boot-file.md
-    - name: MDT Media Deployment USB isn't bootable
-      href: ./deployment/mdt-media-deployment-isnt-bootable.md
-    - name: Microsoft Deployment Toolkit support life cycle
-      href: ./deployment/deployment-toolkit-support.md
-    - name: Mitigation for AMD Family 17h Models 30h-3Fh/Rome Erratum 1474
-      href: ./deployment/mitigation-for-amd-family-17h-models-30h-3fh-rome-erratum-1474.md
-    - name: Post-Deployment Configuration task fails
-      href: ./deployment/post-deployment-configuration-task-fail.md
-    - name: Setup fails on a VM with error 0xE0000100
-      href: ./deployment/setup-fail-on-vm-error-0xe0000100.md
-    - name: SYSPREP and CAPTURE task sequence fails
-      href: ./deployment/sysprep-capture-task-sequence-fails-0x80070070.md
-    - name: The WDS server may not start
-      href: ./deployment/wds-server-may-not-start.md
-    - name: Unattended Setup does not Use Computer Name Specified by User during OOBE
-      href: ./deployment/unattended-setup-not-use-computer-name-specified-oobe.md
-    - name: Upgrade fails with error 0x000000C4
-      href: ./deployment/upgrade-fail-with-error-0x000000c4.md
-    - name: Using language IDs to identify language packs
-      href: ./deployment/use-language-id-identify-language-pack.md
-    - name: Windows Deployment Service fails to start
-      href: ./deployment/windows-deployment-service-not-start.md
-    - name: Windows Internal Database (WID) installation fails
-      href: ./deployment/error-install-windows-internal-database.md
-    - name: PCR7 configuration "Binding not possible" error
-      href: ./deployment/pcr7-configuration-binding-not-possible.md
-    - name: Windows Server support and installation instructions for the AMD Rome family of processors
-      href: ./deployment/windows-server-support-installation-for-amd-role-family-processor.md
-    - name: WSUS clients can't install updates
-      href: ./deployment/wsus-clients-cant-install-updates.md
 - name: Group Policy
   items:
   - name: Group Policy
@@ -1243,13 +1012,13 @@
     - name: 'Troubleshooting guidance: Applying Group Policy'
       href: ./group-policy/applying-group-policy-troubleshooting-guidance.md
     - name: '"LDAP Bind function call failed" error when updating Group Policy settings'
-      href: ./group-policy/ldap-bind-function-call-failed-error.md      
+      href: ./group-policy/ldap-bind-function-call-failed-error.md
     - name: '"Namespace is already defined" error when editing a policy'
       href: ./group-policy/microsoft-policies-sensors-windowslocationprovider-defined.md
     - name: '"Set roaming profile path for all users logging onto this computer" setting applies to local accounts'
       href: ./group-policy/set-roaming-profile-path-all-users-applies-all-acccounts.md
     - name: Group Policy fails to apply
-      href: ./group-policy/specify-startup-policy-processing-wait-time-default-value-not-honored.md      
+      href: ./group-policy/specify-startup-policy-processing-wait-time-default-value-not-honored.md
     - name: A Group Policy setting isn't available in the security policy settings list
       href: ./group-policy/default-owner-objects-created-members-administrators-group-not-available.md
     - name: AuthZ fails with an Access Denied error
@@ -1287,7 +1056,7 @@
     - name: User GPP Scheduled Task item fails to apply
       href: ./group-policy/user-gpp-scheduled-task-item-fails-apply.md
     - name: User-based GPO settings aren't applied when signing in with shadow principals
-      href: ./group-policy/user-based-gpo-settings-not-work-shadow-principals.md      
+      href: ./group-policy/user-based-gpo-settings-not-work-shadow-principals.md
     - name: Userenv errors occur and events are logged
       href: ./group-policy/userenv-errors-occur-events-are-logged.md
     - name: Windows Server stops responding on startup when applying Group Policy
@@ -1541,7 +1310,7 @@
     - name: Guest access in SMB2 is disabled by default
       href: ./networking/guest-access-in-smb2-is-disabled-by-default.md
     - name: High CPU usage issue on the SMB server
-      href: ./networking/high-cpu-usage-issue-smb-server.md      
+      href: ./networking/high-cpu-usage-issue-smb-server.md
     - name: Hotfixes for File Services technologies
       href: ./networking/hotfixes-for-file-services-technologies.md
     - name: How to allow remote users to access your network
@@ -1577,7 +1346,7 @@
     - name: Slow SMB files transfer speed
       href: ./networking/slow-smb-file-transfer.md
     - name: SMB Multichannel troubleshooting
-      href: ./networking/smb-multichannel-troubleshooting.md 
+      href: ./networking/smb-multichannel-troubleshooting.md
     - name: System error 1331 when you connect to a share
       href: ./networking/account-currently-disabled-system-error-1331.md
     - name: System error 67 has occurred. The network name cannot be found
@@ -1585,13 +1354,13 @@
     - name: TCP connection is aborted during Validate Negotiate
       href: ./networking/tcp-connection-abort-validate-negotiate.md
     - name: TCP three-way handshake failure during SMB connection
-      href: ./networking/tcp-three-way-handshake-fails.md     
+      href: ./networking/tcp-three-way-handshake-fails.md
     - name: Troubleshoot DFSN access failures
       href: ./networking/dfsn-access-failures.md
     - name: Troubleshoot event ID 1020 on a file server
       href: ./networking/troubleshoot-event-id-1020-warnings-file-server.md
     - name: Troubleshoot the Event ID 50 error message
-      href: ./networking/troubleshoot-event-id-50-error.md    
+      href: ./networking/troubleshoot-event-id-50-error.md
   - name: Background Intelligent Transfer Service (BITS)
     items:
     - name: '"Content file download failed" error when downloading a file by BITS'
@@ -1676,7 +1445,7 @@
       href: ./networking/dns-zone-transfer-options-reset.md
     - name: DNS Server becomes an island
       href: ./networking/dns-server-becomes-island.md
-    - name: 'DNS zone transfer fails when using "Only to servers listed in the Name servers tab"'
+    - name: DNS zone transfer fails when using "Only to servers listed in the Name servers tab"
       href: ./networking/dns-zone-transfer-fails-only-servers-listed-name-servers.md
     - name: Events 407 and 408 when querying DNS server
       href: ./networking/events-407-408-in-dns-server-event-log.md
@@ -1685,7 +1454,7 @@
     - name: Event ID 4015 is logged and the DNS server encounters a critical error
       href: ./networking/event-4015-dns-server-encounters-critical-error.md
     - name: Event IDs 4016 and 4004 when DNS updates time out
-      href: ./networking/event-4016-4004-dns-updates-time-out.md      
+      href: ./networking/event-4016-4004-dns-updates-time-out.md
     - name: Forwarded DNS name resolution fails for dual-stacked queries
       href: ./networking/forwarded-dns-name-resolution-fails-for-dual-stacked-queries.md
     - name: Forwarders and conditional forwarders resolution timeouts
@@ -2193,11 +1962,11 @@
     - name: Enabling Debug mode causes Windows to hang
       href: ./performance/enable-debug-mode-causes-hang.md
     - name: System stops responding when using Citrix Virtual Apps and Desktops
-      href: ./performance/system-stops-responding-citrix-virtual-apps-desktops.md  
+      href: ./performance/system-stops-responding-citrix-virtual-apps-desktops.md
     - name: The computer stops responding
       href: ./performance/computer-stops-responding.md
     - name: Windows Server stops responding during the sign-in process of a custom account
-      href: ./performance/windows-server-stops-responding-signing-custom-account.md    
+      href: ./performance/windows-server-stops-responding-signing-custom-account.md
     - name: Windows Server stops responding when a Trigger Start service crashes
       href: ./performance/windows-server-stops-responding-trigger-start-service-crashes.md
 - name: Printing
@@ -2483,7 +2252,7 @@
     - name: 'Troubleshooting guidance: RDS session connectivity'
       href: ./remote/troubleshoot-rds-session-connectivity-guidance.md
     - name: '"Out of memory" error when connecting to Azure Virtual Desktop'
-      href: ./remote/out-of-memory-error-avd.md     
+      href: ./remote/out-of-memory-error-avd.md
     - name: '"System error 67 has occurred" when using FQDN to connect a remote computer'
       href: ./remote/network-name-cannot-found-fqdn-remote-computer.md
     - name: Applications crash if another user logs off
@@ -2509,19 +2278,19 @@
     - name: How to disable warning message for idle remote desktop sessions
       href: ./remote/how-to-disable-warning-message-idle-rdp-sessions.md
     - name: Input method editor issue in RemoteApp scenarios
-      href: ./remote/input-method-editor-issue-remoteapp.md 
+      href: ./remote/input-method-editor-issue-remoteapp.md
     - name: Local drive redirection isn't working in RDP Session
       href: ./remote/local-drive-redirection-isnt-working.md
     - name: Log Off all Terminal Server Session Users
       href: ./remote/log-off-terminal-server-session-users-command-prompt.md
     - name: Poor performance or application problems during remote desktop connection
-      href: ./remote/poor-performance-application-problems-rdc.md 
+      href: ./remote/poor-performance-application-problems-rdc.md
     - name: QUERY USER command can't query from remote server
       href: ./remote/query-user-command-cannot-query-remotely.md
     - name: RDS client can't connect to RD Session Host server
       href: ./remote/rds-client-not-connect-to-rd-session-host-server.md
     - name: Remote Desktop client disconnects and can't reconnect to the same session
-      href: ./remote/rdp-client-disconnects-cannot-reconnect-same-session.md 
+      href: ./remote/rdp-client-disconnects-cannot-reconnect-same-session.md
     - name: Remote Desktop Connection 6.0 prompts for credentials
       href: ./remote/remote-desktop-connection-6-prompts-credentials.md
     - name: Remote Desktop IP Virtualization
@@ -2716,11 +2485,11 @@
       href: ./system-management-components/rpc-events-event-11-after-reboot.md
     - name: New WMI arbitrator behavior
       href: ./system-management-components/new-wmi-arbitrator-behavior-in-windows-server.md
-    - name: "Scenario guide: Troubleshoot WMI connectivity and access issues"
+    - name: 'Scenario guide: Troubleshoot WMI connectivity and access issues'
       href: ./system-management-components/scenario-guide-troubleshoot-wmi-connectivity-access-issues.md
-    - name: "Scenario guide: Troubleshoot WMI performance issues"
+    - name: 'Scenario guide: Troubleshoot WMI performance issues'
       href: ./system-management-components/scenario-guide-troubleshoot-wmi-performance-issues.md
-    - name: "Scenario guide: Troubleshoot WmiPrvse.exe quota exceeded issues"
+    - name: 'Scenario guide: Troubleshoot WmiPrvse.exe quota exceeded issues'
       href: ./system-management-components/scenario-guide-troubleshoot-wmiprvse-quota-exceeded-issues.md
 - name: UserProfiles and Logon
   items:
@@ -2777,7 +2546,7 @@
     - name: Roaming user profiles versioning
       href: ./user-profiles-and-logon/roaming-user-profiles-versioning.md
     - name: Troubleshoot user profiles with events
-      href: ./user-profiles-and-logon/troubleshoot-user-profiles-events.md  
+      href: ./user-profiles-and-logon/troubleshoot-user-profiles-events.md
     - name: User may not be able to Change Their Password
       href: ./user-profiles-and-logon/user-must-change-password-at-next-logon-setting.md
 - name: Virtualization
@@ -3244,3 +3013,245 @@
       href: ../windows-client/windows-troubleshooters/gather-information-using-tss-group-policy.md?context=/troubleshoot/windows-server/context/context
     - name: Gather information for user experience-related issues
       href: ../windows-client/windows-troubleshooters/gather-information-using-tss-user-experience.md?context=/troubleshoot/windows-server/context/context
+- name: Installing Windows Updates, features, or roles
+  items:
+  - name: Installing Windows Updates, features, or roles
+    href: ./installing-updates-features-roles/installing-updates-features-roles-overview.md
+  - name: Failure to install Windows Updates
+    items:
+    - name: How to use the Recovery Console
+      href: ./installing-updates-features-roles/use-recovery-console-not-start.md
+    - name: Fail to install Network Policy Server role
+      href: ./installing-updates-features-roles/error-0x80004005-network-policy-server-role.md
+    - name: WSUS 3.0 installation package is available
+      href: ./installing-updates-features-roles/wsus-3-installation-package.md
+    - name: Fix Windows Update errors
+      href: ./installing-updates-features-roles/fix-windows-update-errors.md
+    - name: WUSA returns 0x5 ERROR_ACCESS_DENIED
+      href: ./installing-updates-features-roles/windows-update-standalone-installer-returns-error.md
+    - name: You can't install features in Windows Server 2012 R2
+      href: ./installing-updates-features-roles/you-cant-install-features.md
+    - name: Error 0x800f0906 when you convert Server Core to GUI
+      href: ./installing-updates-features-roles/dism-fails-with-error-0x800f0906.md
+    - name: SystemInfo.exe doesn't display all installed updates
+      href: ./installing-updates-features-roles/systeminfo-not-display-all-updates.md
+    - name: Description of Windows Server Update Services 3.0
+      href: ./installing-updates-features-roles/description-of-windows-server-update-services-3.md
+    - name: CBS.log file contains entries that some files aren't repaired
+      href: ./installing-updates-features-roles/cbs-log-file-record-entries-not-repaired-run-sfc.md
+    - name: Error 0x800f0922 when you uninstall roles/features
+      href: ./installing-updates-features-roles/error-0x800f0922-uninstall-role-feature.md
+    - name: System Partition goes offline after installing some 3rd Party Disk
+      href: ./installing-updates-features-roles/system-partition-offline-install-3rd-party-disk.md
+    - name: 'Troubleshooting guidance: Windows Server update'
+      href: ./installing-updates-features-roles/troubleshoot-windows-server-update-guidance.md
+    - name: Error C0190003 after installing updates
+      href: ./installing-updates-features-roles/error-c0190003-install-updates-restart-computer.md
+    - name: How to block user access to Windows Update
+      href: ./installing-updates-features-roles/block-user-access-windows-update.md
+    - name: Can't connect to WSUS Administration Website
+      href: ./installing-updates-features-roles/cannot-connect-to-wsus-administration-website.md
+    - name: Install Microsoft Product Support Reporting Tool
+      href: ./installing-updates-features-roles/microsoft-product-support-reporting-tool-v5220030.md
+    - name: Error 0x800f0922 when MPIO feature installation fails
+      href: ./installing-updates-features-roles/error-0x800f0922-mpio-feature-installation-fails.md
+    - name: Description of System File Checker (Sfc.exe)
+      href: ./installing-updates-features-roles/system-file-checker.md
+    - name: List of updates
+      href: ./installing-updates-features-roles/list-updates.md
+    - name: Windows Server 2008 Service Pack 2
+      href: ./installing-updates-features-roles/windows-server-2008-service-pack-2.md
+    - name: Re-register Windows client/server in WSUS
+      href: ./installing-updates-features-roles/re-register-windows-clientserver-in-wsus.md
+    - name: WSUS 3.0 SP2 Dynamic Install for Server Manager
+      href: ./installing-updates-features-roles/windows-server-update-services-3-sp2.md
+    - name: Why you may be prompted to restart your computer
+      href: ./installing-updates-features-roles/why-prompted-restart-computer.md
+    - name: Temporarily deactivate the kernel mode filter driver
+      href: ./installing-updates-features-roles/deactivate-kernel-mode-filter-driver.md
+    - name: Can't install updates or programs
+      href: ./installing-updates-features-roles/cannot-install-updates-programs.md
+    - name: WSUS SelfUpdate doesn't send automatic updates
+      href: ./installing-updates-features-roles/wsus-selfupdate-not-send-automatic-updates.md
+    - name: Failed to schedule Software Protection service for restart
+      href: ./installing-updates-features-roles/failed-schedule-software-protection.md
+    - name: 'Troubleshooting guidance: Installing Windows features or roles'
+      href: ./installing-updates-features-roles/troubleshoot-install-features-roles-guidance.md
+    - name: Can't install Windows Server 2019 on servers with a high processor count
+      href: ./installing-updates-features-roles/cannot-install-windows-server-2019-high-processor-count.md
+    - name: Can't install .NET Framework 3.5 on OEM Windows installation
+      href: ./installing-updates-features-roles/cannot-install-dotnet-framework-3dot5-oem.md
+    - name: WSUS clients can't install updates
+      href: ./installing-updates-features-roles/wsus-clients-cant-install-updates.md
+    - name: Error 0x80070005 "Access denied" when you activate Windows
+      href: ./installing-updates-features-roles/error-0x80070005-access-denied.md
+    - name: Error 0xC004E015 (SL_E_EUL_CONSUMPTION_FAILED)
+      href: ./installing-updates-features-roles/error-0xc004e015-sl-e-eul-consumption-failed-activate-windows.md
+    - name: 'WUBr: Troubleshoot diagnostic data transmission'
+      href: ./installing-updates-features-roles/wubr-troubleshooting-data-transmission.md
+    - name: 'WUBr: Use the configuration script to troubleshoot device configuration'
+      href: ./installing-updates-features-roles/wubr-troubleshooting-device-config-using-script.md
+    - name: 'Troubleshooting guidance: Windows Update for Business reports'
+      href: ./installing-updates-features-roles/wubr-troubleshooting-guidance.md
+    - name: Error 0x800705aa when Windows Update fails
+      href: ./installing-updates-features-roles/error-0x800705aa-windows-update-fails.md
+    - name: Error 0x800f0922 when installing Windows updates
+      href: ./installing-updates-features-roles/error-0x800f0922-installing-windows-updates.md
+    - name: Error code 2359302 when installing updates in Windows Server 2019
+      href: ./installing-updates-features-roles/error-2359302-installing-windows-updates.md
+    - name: ERROR_INVALID_DATA error after installing Windows updates
+      href: ./installing-updates-features-roles/error-invalid-data-startup-installing-updates.md
+    - name: '"Failed to be changed to the Absent state. Status: 0x800f0922" error'
+      href: ./installing-updates-features-roles/failed-changed-absent-state-status-0x800f0922-error.md
+- name: Licensing and activation
+  items:
+  - name: Licensing and activation
+    href: ./licensing-and-activation/licensing-and-activation-overview.md
+  - name: Windows volume activation
+    items:
+    - name: Fail to activate Windows Server over the Internet
+      href: ./licensing-and-activation/message-number-32777.md
+    - name: '"Windows is not genuine" error'
+      href: ./licensing-and-activation/windows-not-genuine-error.md
+    - name: Error 0xC004F074 when you activate Windows
+      href: ./licensing-and-activation/error-0xc004f074-activate-windows.md
+    - name: Error 0xC004F015 when you activate Windows 10
+      href: ./licensing-and-activation/error-0xc004f015-activate-windows-10.md
+    - name: Error 0xC004E002 during activation
+      href: ./licensing-and-activation/error-0xc004e002-during-activation.md
+    - name: Application Event Log Warning ID 1058
+      href: ./licensing-and-activation/application-event-log-warning-id-1058.md
+    - name: Error 0x8007000D when you activate a machine
+      href: ./licensing-and-activation/0x8007000d-activate-machine.md
+    - name: Event ID 12321 Warning Token Based Activation failed
+      href: ./licensing-and-activation/event-id-12321-warning-token-based-activation-failed.md
+    - name: How to rebuild the Tokens.dat file
+      href: ./licensing-and-activation/rebuild-tokens-dotdat-file.md
+    - name: 0xc004f063 when activating an OEM version
+      href: ./licensing-and-activation/0xc004f063-when-activating-oem-version.md
+    - name: Error when you validate a copy of Windows
+      href: ./licensing-and-activation/error-when-you-validate-copy-windows.md
+    - name: Windows installation fails with error
+      href: ./licensing-and-activation/error-product-key-not-match-windows-images-installation.md
+    - name: Event ID 8208, 8200, or 900 is logged
+      href: ./licensing-and-activation/event-id-8208-8200-900.md
+    - name: Event 12293 when registering a KMS host record
+      href: ./licensing-and-activation/event-12293-error-0x800723-set-kms-host.md
+    - name: Windows Activation fails with error 0x8007267C
+      href: ./licensing-and-activation/windows-activation-fails-with-error-0x8007267.md
+    - name: How to change the Volume Licensing product key
+      href: ./licensing-and-activation/change-volume-licensing-product-key.md
+    - name: Specified database is not a valid VAMT database error
+      href: ./licensing-and-activation/specified-database-not-valid-vamt-error.md
+    - name: Error 0xC004F06C when you activate Windows
+      href: ./licensing-and-activation/error-0xc004f06c-activate-windows.md
+    - name: Troubleshoot Windows activation error codes
+      href: ./licensing-and-activation/troubleshoot-activation-error-codes.md
+    - name: Troubleshoot ADBA clients that don't activate
+      href: ./licensing-and-activation/troubleshoot-adba-clients-not-activate.md
+- name: Setup, upgrades, and drivers
+  items:
+  - name: Setup, upgrades, and drivers
+    href: ./setup-upgrade-and-drivers/setup-upgrade-and-drivers-overview.md
+  - name: Driver installation or driver update
+    items:
+    - name: Can't find the Microsoft Loopback Adapter
+      href: ./setup-upgrade-and-drivers/microsoft-loopback-adapter-rename.md
+    - name: '"Stop 0x0000007B" error'
+      href: ./setup-upgrade-and-drivers/stop-0x0000007b-error-group-policy-setting.md
+    - name: VMware driver installation fails in Windows Server 2008 R2 SP1
+      href: ./setup-upgrade-and-drivers/virtual-machines-vmware-not-install-update.md
+    - name: How to use Device Manager to configure devices
+      href: ./setup-upgrade-and-drivers/use-device-manager-configure-devices.md
+    - name: Can't install a VMWare driver on Windows Server 2008 R2
+      href: ./setup-upgrade-and-drivers/error-install-vmware-driver.md
+    - name: Event ID 56 is logged
+      href: ./setup-upgrade-and-drivers/event-id-56-logged.md
+    - name: Event ID 37 after you change power policy
+      href: ./setup-upgrade-and-drivers/event-id-37-windows-kernel-processor-power.md
+    - name: How to determine the type of processor
+      href: ./setup-upgrade-and-drivers/determine-the-type-of-processor.md
+    - name: How to replace a driver by using Recovery Console
+      href: ./setup-upgrade-and-drivers/use-recovery-console-replace-driver.md
+    - name: '"This device cannot start" error when deploying a hot plug NVMe SSD'
+      href: ./setup-upgrade-and-drivers/device-cannot-start-error-hot-plug-nvme-ssd.md
+    - name: Support policy for third-party, kernel-level software
+      href: ./setup-upgrade-and-drivers/support-policy-third-party-kernel-level-attestation.md
+    - name: Fail to insert a smart card in a reader
+      href: ./setup-upgrade-and-drivers/cannot-insert-smart-card-in-reader.md
+    - name: Windows Deployment Services (WDS) support for UEFI
+      href: ./setup-upgrade-and-drivers/deploy-uefi-based-systems-wds.md
+    - name: Changes of the default behavior for Core Parking
+      href: ./setup-upgrade-and-drivers/default-core-parking-behavior-changes.md
+    - name: Enable Plug and Play feature for parallel port devices
+      href: ./setup-upgrade-and-drivers/enable-plug-play-for-parallel-port-devices.md
+    - name: '%NUMBER_OF_PROCESSORS% environment variable shows incorrect values'
+      href: ./setup-upgrade-and-drivers/number-of-processors-environment-variable-show-incorrect-values.md
+  - name: Windows ADK installation
+    items:
+    - name: Multicast deployment fails from WDS
+      href: ./setup-upgrade-and-drivers/multicast-deployment-fails-from-wds.md
+  - name: Installing or upgrading Windows
+    items:
+    - name: Windows Internal Database (WID) installation fails
+      href: ./setup-upgrade-and-drivers/error-install-windows-internal-database.md
+    - name: Microsoft Deployment Toolkit support life cycle
+      href: ./setup-upgrade-and-drivers/deployment-toolkit-support.md
+    - name: Create an ISO image for UEFI platforms
+      href: ./setup-upgrade-and-drivers/create-iso-image-for-uefi-platforms.md
+    - name: SYSPREP and CAPTURE task sequence fails
+      href: ./setup-upgrade-and-drivers/sysprep-capture-task-sequence-fails-0x80070070.md
+    - name: In-place upgrade hangs at black screen
+      href: ./setup-upgrade-and-drivers/in-place-upgrade-hangs-black-screen.md
+    - name: Using language IDs to identify language packs
+      href: ./setup-upgrade-and-drivers/use-language-id-identify-language-pack.md
+    - name: Setup fails on a VM with error 0xE0000100
+      href: ./setup-upgrade-and-drivers/setup-fail-on-vm-error-0xe0000100.md
+    - name: Event ID 307 and 304 logged for deploying Windows
+      href: ./setup-upgrade-and-drivers/event-307-and-304-logged-for-deploying.md
+    - name: Add OEM PnP drivers to Windows installations
+      href: ./setup-upgrade-and-drivers/add-oem-plug-play-drivers.md
+    - name: Enable logging and tracing for WDS components
+      href: ./setup-upgrade-and-drivers/enable-logging-windows-deployment-service.md
+    - name: Unattended Setup does not Use Computer Name Specified by User during OOBE
+      href: ./setup-upgrade-and-drivers/unattended-setup-not-use-computer-name-specified-oobe.md
+    - name: MDT Media Deployment USB isn't bootable
+      href: ./setup-upgrade-and-drivers/mdt-media-deployment-isnt-bootable.md
+    - name: The WDS server may not start
+      href: ./setup-upgrade-and-drivers/wds-server-may-not-start.md
+    - name: Known issues that affect AppX cleanup maintenance task
+      href: ./setup-upgrade-and-drivers/issues-appx-cleanup-maintenance-task.md
+    - name: Avoid duplicate GUIDs when you image SMS clients
+      href: ./setup-upgrade-and-drivers/avoid-duplicate-guids-deploy-sms.md
+    - name: How to perform an in-place/repair upgrade
+      href: ./setup-upgrade-and-drivers/repair-or-in-place-upgrade.md
+    - name: Chinese IME dictionaries are not ready yet
+      href: ./setup-upgrade-and-drivers/chinese-ime-dictionaries-not-ready.md
+    - name: Chinese (Simplified) input method doesn't work
+      href: ./setup-upgrade-and-drivers/chinese-simplified-input-method-not-working.md
+    - name: Windows Deployment Service fails to start
+      href: ./setup-upgrade-and-drivers/windows-deployment-service-not-start.md
+    - name: Windows Server support and installation instructions for the AMD Rome family of processors
+      href: ./setup-upgrade-and-drivers/windows-server-support-installation-for-amd-role-family-processor.md
+    - name: Manually edit Boot.ini file
+      href: ./setup-upgrade-and-drivers/manually-edit-boot-file.md
+    - name: Can't open EXE files
+      href: ./setup-upgrade-and-drivers/cant-open-exe-files.md
+    - name: Long paths with spaces require quotation marks
+      href: ./setup-upgrade-and-drivers/filenames-with-spaces-require-quotation-mark.md
+    - name: Fail to run applications on Windows Server Core
+      href: ./setup-upgrade-and-drivers/subsystem-needed-support-image-type-not-present.md
+    - name: Integrate Windows Server Update Services (WSUS) 3.0 into Server Manager
+      href: ./setup-upgrade-and-drivers/update-available-integrates-wsus-into-server-manager.md
+    - name: Upgrade fails with error 0x000000C4
+      href: ./setup-upgrade-and-drivers/upgrade-fail-with-error-0x000000c4.md
+    - name: Post-Deployment Configuration task fails
+      href: ./setup-upgrade-and-drivers/post-deployment-configuration-task-fail.md
+    - name: PCR7 configuration "Binding not possible" error
+      href: ./setup-upgrade-and-drivers/pcr7-configuration-binding-not-possible.md
+    - name: Error when you configure a server with Server Manager
+      href: ./setup-upgrade-and-drivers/fail-to-configure-server-using-server-manager.md
+    - name: Mitigation for AMD Family 17h Models 30h-3Fh/Rome Erratum 1474
+      href: ./setup-upgrade-and-drivers/mitigation-for-amd-family-17h-models-30h-3fh-rome-erratum-1474.md  
+    - name: ERROR_PATH_NOT_FOUND error when performing an in-place upgrade
+      href: ./setup-upgrade-and-drivers/error-path-not-found-upgrading-windows-server-2019.md

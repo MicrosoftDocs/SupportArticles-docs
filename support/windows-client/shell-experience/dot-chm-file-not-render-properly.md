@@ -1,7 +1,7 @@
 ---
 title: Some .CHM files may not render properly on Windows Vista and Windows 7
 description: This article describes the fixing steps for some .CHM file not render properly.
-ms.date: 09/10/2020
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
