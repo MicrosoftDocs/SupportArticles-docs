@@ -87,6 +87,35 @@ To do this, follow these steps:
 
 1. Restart the node to return it to the default state.
 
+
+### Simplified Node Communication
+
+Simplified node communication is provides an alternative for the user so that the configuration for the V-Net can be simplified.
+
+In a pool that is adopting simplified node communication and the node is still showing **Unusable**, you can check the following possible cause for self-troubleshooting.
+
+#### Cause 1: NSG rule blockage
+
+When applying public networ, the outbound request from the internal node still needs to be fluent to the external. The node will become unusable if the outbound request is blocked.
+
+    :::image type="content" source="media/azure-batch-node-unusable-state/blocking-outbound-nsg.png" alt-text="Screenshot that shows the NSG rule that blocks outbound request":::
+
+#### Solution 1: Remove the NSG rule that blocks the request
+
+The issue can be resolved if the rule is removed.
+
+#### Cause 2: Unusable node with No Public IP setting
+
+By default, all the nodes in an Azure Batch VM configuration pool are assigned a public IP address. With the utilization of simplified node communication, it is able to restrict access to these nodes and reduce the discoverability of these nodes from the internet.
+
+This scenario is about the cause for the unusable node when adopting No Public IP setting.
+
+#### Solution 2: Additional Network Setting
+
+1. If you are using **Public Network**, then this issue shuold not happen. In this scenario, I would suggest you referring to other possible cause.
+   
+2. In the case of using **Selected Network** or **Disable Network** in your network setting, if you only configure **Batch Account Private Endpoint** or did not configure Any Private Endpoint, you need to configure a new **Node Management Private Endpoint** to make sure the internal communication between nodes is fluid.
+
 #### Cause 3: A bad DNS configuration prevents the node from communicating with the node management endpoint
 
 If the DNS isn't configured correctly, the nodes might be unable to communicate with the Batch service endpoint. This situation causes the Batch nodes to become stuck in an unusable state.
@@ -181,34 +210,6 @@ Verify whether the custom DNS is configured correctly and points to the private 
 </details>
 
 For more information, see [Troubleshoot node management private endpoints](/azure/batch/simplified-node-communication-pool-no-public-ip#using-nodemanagement-private-endpoint).
-
-### Simplified Node Communication
-
-Simplified node communication is provides an alternative for the user so that the configuration for the V-Net can be simplified.
-
-In a pool that is adopting simplified node communication and the node is still showing **Unusable**, you can check the following possible cause for self-troubleshooting.
-
-#### Cause 1: NSG rule blockage
-
-When applying public networ, the outbound request from the internal node still needs to be fluent to the external. The node will become unusable if the outbound request is blocked.
-
-    :::image type="content" source="media/azure-batch-node-unusable-state/blocking-outbound-nsg.png" alt-text="Screenshot that shows the NSG rule that blocks outbound request":::
-
-#### Solution 1: Remove the NSG rule that blocks the request
-
-The issue can be resolved if the rule is removed.
-
-#### Cause 2: Unusable node with No Public IP setting
-
-By default, all the nodes in an Azure Batch VM configuration pool are assigned a public IP address. With the utilization of simplified node communication, it is able to restrict access to these nodes and reduce the discoverability of these nodes from the internet.
-
-This scenario is about the cause for the unusable node when adopting No Public IP setting.
-
-#### Solution 2: Additional Network Setting
-
-1. Check if you are using **Selected Network** in your network setting. In this scenario, if you only configure **Batch Account Private Endpoint** or did not configure **Any Private Endpoint**, you need to configure a new **Node Management Private Endpoint** to make sure the internal communication between nodes is fluid.
-
-2. If the above configuration has been done properly, you can refer to [Classic Node Communication - Cause 3](#cause-3-bad-dns-configuration-causing-node-unable-to-communicate-with-node-management-endpoint) for the setting of DNS.
 
 ## Issue 2: Disk full issue
 
