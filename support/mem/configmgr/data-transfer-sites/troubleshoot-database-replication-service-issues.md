@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot database replication service issues
 description: Describes how to diagnose and resolve database replication service problems in Configuration Manager.
-ms.date: 08/22/2020
+ms.date: 12/05/2023
 ms.reviewer: kaushika
 ---
 # Troubleshoot database replication service issues in Configuration Manager

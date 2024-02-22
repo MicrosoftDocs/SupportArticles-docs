@@ -1,7 +1,7 @@
 ---
 title: Maintenance tasks default settings
 description: Lists the default settings for the maintenance tasks in Configuration Manager.
-ms.date: 06/01/2020
+ms.date: 12/05/2023
 ms.reviewer: kaushika
 ---
 # Maintenance tasks default settings in Configuration Manager

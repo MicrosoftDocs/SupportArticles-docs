@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting exemptions to data transfer policies
 description: Troubleshooting guidance for scenarios when an exemption to Microsoft Intune app protection policies (APP) doesn't work as expected.
-ms.date: 12/10/2022
+ms.date: 12/05/2023
 ms.reviewer: chauntain, roblane-msft, kkreh
 search.appverid: MET150
 ---

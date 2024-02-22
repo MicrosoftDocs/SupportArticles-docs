@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot use of Simple Certificate Enrollment Protocol (SCEP) certificate profiles to provision certificates with Microsoft Intune
 description: Troubleshoot the use of SCEP by devices to request certificates for use with Intune, including communication from devices to Network Device Enrollment Service (NDES), NDES to certification authorities, and from the Intune Certificate Connector to the Intune service.  
-ms.date: 09/09/2021
+ms.date: 12/05/2023
 ms.reviewer: kaushika, lacranda
 search.appverid: MET150
 ---
