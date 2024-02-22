@@ -15,7 +15,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Outlook 2013
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 # Junk email message settings aren't synchronized when you use Outlook 2013 to connect to an Outlook.com account
 

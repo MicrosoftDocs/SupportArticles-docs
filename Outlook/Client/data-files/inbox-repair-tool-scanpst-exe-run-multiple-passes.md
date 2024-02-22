@@ -15,7 +15,7 @@ appliesto:
   - Outlook 2016
   - Outlook for Microsoft 365
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 # The Inbox Repair tool (Scanpst.exe) can run multiple passes in Outlook 2016
 

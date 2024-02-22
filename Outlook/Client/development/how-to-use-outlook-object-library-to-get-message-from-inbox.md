@@ -12,7 +12,7 @@ search.appverid: MET150
 ms.reviewer: v-six
 author: cloud-writer
 ms.author: meerak
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 # How to use the Microsoft Outlook Object Library to retrieve a message by using Visual C# from the Inbox
 

@@ -17,7 +17,7 @@ ms.reviewer: aruiz, EXOL_Triage
 appliesto: 
   - Outlook 2019
   - Outlook 2016
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 
 # DLP Policy Tip notifications are not displayed in Outlook for Windows
