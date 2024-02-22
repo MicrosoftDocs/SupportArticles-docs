@@ -1,7 +1,7 @@
 ---
 title: Introduction to consistent authentication issues
 description: This article introduces to consistent authentication issues, the types of error messages, and workarounds to troubleshoot various issues.
-ms.date: 01/31/2024
+ms.date: 02/22/2024
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes v-jayaramanp
@@ -19,15 +19,15 @@ A consistent authentication issue in SQL Server typically refers to problems rel
 
 Before you start to troubleshoot errors, it's important to understand what each error means and also what is the type of error. Some errors might appear in more than one category. You can use the troubleshooting information mentioned in the [Errors](#errors) section to resolve the error. If you still encounter issues, check the possible causes and solutions or workarounds in the other sections such as:
 
-- [Issues specific to various aspects of SQL Server]#issues-specific-to-various-aspects-of-sql-server)
+- [Causes and scenarios specific to various aspects of SQL Server](#causes-and-scenarios-specific-to-various-aspects-of-sql-server)
 
-- [Issues related to Connection String](#issues-related-to-connection-string)
+- [Causes and scenarios specific to connection string](#causes-related-to-connection-string)
 
-- [Issues related to Windows permissions or Policy settings](#issues-related-to-active-directory-and-domain-controller)
+- [Causes and scenarios specific to Windows permissions or Policy settings](#causes-related-to-windows-permissions-or-policy-settings)
 
-- [Issues related to Active Directory (AD) and Domain Controller (DC)](#issues-related-to-kerberos-authentication)
+- [Causes and scenarios specific to Active Directory and Domain Controller](#causes-and-scenarios-related-to-active-directory-and-domain-controller)
 
-- [Issues related to other aspects](#issues-related-to-other-aspects)
+- [Causes and scenarios specific to other aspects](#causes-related-to-other-aspects)
 
 ## Prerequisites
 
@@ -74,7 +74,7 @@ This section lists some specific "Login Failed" error messages and their possibl
 
 The consistent authentication errors have several causes and they are listed in the next few sections.
 
-## Causes specific to various aspects of SQL Server
+## Causes and scenarios specific to various aspects of SQL Server
 
 This section lists various causes that are related to aspects such as database, logon account permissions, and linked servers.
 
@@ -82,16 +82,16 @@ This section lists various causes that are related to aspects such as database, 
 - [Database permissions](#database-permissions)
 - [Linked Server Account Mapping](#linked-server-account-mapping)
 - [Proxy account doesn't have permissions](#proxy-account-doesnt-have-permissions)
-- [No login](#no-login)
-- [Bad metadata](#bad-metadata)
+- [Unable to log in to SQL Server database](#unable-to-log-in-to-sql-server-database)
+- [Metadata of the linked server is inconsistent](#metadata-of-the-linked-server-is-inconsistent)
 
 ### Database is offline
 
-Refers to a scenario where a SQL Server database attempts to reconnect to a SQL Server authentication mode. For detailed information regarding the scenario, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
+Refers to a scenario where a SQL Server database attempts to reconnect to a SQL Server authentication mode. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
 
 ### Database permissions
 
-For detailed information regarding the issue, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
+Refers to enabling or restricting access to SQL Server database. For more information, see  [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
 
 ### Linked Server Account Mapping
 
@@ -101,22 +101,21 @@ You might encounter an authentication process issue with linked servers in the c
 
 An SSIS job run by SQL Agent might need permissions other than the SQL Agent service account can provide. For more information, see [SSIS package does not run when called from a SQL Server Agent job step.](../../integration-services/ssis-package-doesnt-run-when-called-job-step.md).
 
-### No Login
+### Unable to log in to SQL Server database
 
-For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
+The inability to log in can cause failures in authentication. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
 
-### Bad metadata
+### Metadata of the linked server is inconsistent
 
 Refers to a scenario where metadata of the linked server is inconsistent or doesn't match the expected metadata.
 
-A view or stored procedure receives login failures on a linked server whereas a distributed `SELECT` statement copied from them doesn't. This issue might happen if the View was created and then the linked server was recreated, or a remote table was modified without rebuilding the View. To resolve this issue, you can refresh the metadata of the linked server by running the `sp_refreshview` stored procedure.
+A view or stored procedure queries tables or views in the linked server but receives login failures whereas a distributed `SELECT` statement copied from them doesn't. This issue might happen if the View was created and then the linked server was recreated, or a remote table was modified without rebuilding the View. To resolve this issue, you can refresh the metadata of the linked server by running the `sp_refreshview` stored procedure.
 
 ## Causes related to connection string
 
 This section lists various causes related to connection string.
 
 - [Bad server name in connection string](#bad-server-name-in-connection-string)
-- [Invalid username](#invalid-username)
 - [Wrong database name in connection string](#wrong-database-name-in-connection-string)
 - [Wrong explicit SPN account](#wrong-explicit-spn-account)
 - [Explicit SPN is missing](#explicit-spn-is-missing)
@@ -126,10 +125,6 @@ This section lists various causes related to connection string.
 ### Bad server name in connection string
 
 This issue might occur if the specified server name is incorrect or can't be found. For more information, see [bad server name in connection string](bad-server-name-connection-string-error.md).
-
-### Invalid username
-
-An issue might occur if the username provided for authentication is not correct. For more information, see [Login failed for user '\<username\>' or login failed for user '\<domain>\<username\>'](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
 
 ### Wrong database name in connection string
 
@@ -141,7 +136,7 @@ This issue might occur if the SPN is associated with the wrong account in AD. Fo
 
 ### Explicit SPN is missing
 
-This issue occurs when the SPN is not configured or registered correctly. For more information, see ["Cannot generate SSPI context" error when using Windows authentication to connect SQL Server.](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended).
+This issue occurs when the SPN isn't configured or registered correctly. For more information, see ["Cannot generate SSPI context" error when using Windows authentication to connect SQL Server.](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended).
 
 ### Explicit misplaced SPN
 
@@ -149,21 +144,21 @@ This issue occurs when the SPN is associated with the wrong account in AD. For m
 
 ### Explicit SPN is duplicated
 
-This issue occurs when an SPN is duplicated that is registered more than once. For more information, see ["Cannot generate SSPI context" error when using Windows authentication to connect SQL Server.](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended).
+This issue occurs when an SPN is duplicated that's registered more than once. For more information, see ["Cannot generate SSPI context" error when using Windows authentication to connect SQL Server.](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended).
 
 ## Causes related to Windows permissions or Policy settings
 
 This section lists various issues that might arise due to problems in permissions or settings. Some of the causes are:
 
-- [Access via group](#access-via-group)
+- [Access is granted through local groups](#access-is-granted-through-local-groups)
 - [Network login disallowed](#network-login-disallowed)
 - [Only admins can log in](#only-admins-can-log-in)
 - [Service account isn't trusted for delegation](#service-account-isnt-trusted-for-delegation)
-- [Local security subsystem issues](#local-security-subsystem-issues)
-- [Corrupt user profile](#corrupt-user-profile)
+- [Local security subsystem errors](#local-security-subsystem-errors)
+- [User profile is corrupt](#user-profile-is-corrupt)
 - [Credential guard is enabled](#credential-guard-is-enabled)
 
-### Access via group
+### Access is granted through local groups
 
 If the user doesn't belong to a local group that's used to grant access to the server, the provider displays the "Login failed for user 'contoso/user1'" error message. The DBA can double-check this by looking at the Security or Logins in SSMS. If it's a contained database, check under `databasename`. For more information, see [Login failed for user '\<username\>' or login failed for user '\<domain\>\\<username\>'](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
 
@@ -188,11 +183,11 @@ To resolve this issue, follow these steps:
 
 This type of issue usually occurs when a service account is not allowed to assign credentials to other servers. This can affect services that require delegation. If a delegation scenario isn't enabled, check the SQL Server *secpol.msc* to see if the SQL Server service account is listed under **Local Policies -> User Rights Assignment -> Impersonate a client after authentication** security policy settings. For more information, see [Enable computer and user accounts to be trusted for delegation](/windows/security/threat-protection/security-policy-settings/enable-computer-and-user-accounts-to-be-trusted-for-delegation).
 
-### Local security subsystem issues
+### Local security subsystem errors
 
-Refers to a consistent authentication issue related to the unresponsive LSASS. For more information, see [Troubleshooting LSASS errors](local-security-subsystem-errors.md).
+Refers to a consistent authentication issue related to the unresponsive LSASS. For more information, see [Troubleshoot LSASS errors with SQL Server authentication](local-security-subsystem-errors.md).
 
-### Corrupt user profile
+### User profile is corrupt
 
 Refers to the Windows user profile issue. For more information, see troubleshooting the [Windows user profile issue](corrupt-user-profile.md).
 
@@ -205,34 +200,34 @@ This scenario indicates that the Credential Guard feature is enabled on a Window
 This section lists some of the consistent authentication causes related to NTLM.
 
 - [NTLM Peer Login](#ntlm-peer-login)
-- [Loopback protection is not set correctly](#loopback-protection-is-not-set-correctly)
-- Always-On Listener loopback protection
-- Double hop scenarios on multiple computers
+- [Loopback protection isn't set correctly](#loopback-protection-isnt-set-correctly)
+- [Loopback protection fails when you connect to the Always-on listener](#loopback-protection-fails-when-you-connect-to-the-always-on-listener)
+- [Double hop scenarios on multiple computers](#double-hop-scenarios-on-multiple-computers)
 - LANMAN compatibility level
 
-### NTLM peer login
+### NTLM peer logins access is denied
 
 When communicating between computers that are either in workstations or in domains that don't trust each other, you can set up identical accounts on both machines and use NTLM peer authentication. Logins only work if both the user account and the password match on both machines. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
 
-### Loopback protection is not set correctly
+### Loopback protection isn't set correctly
 
 Loopback protect is designed to prohibit applications from calling other services on the same machine. If loopback protect isn't configured correctly or if there's any malfunction, it can indirectly cause authentication issues. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
 
-### Always-On Listener loopback protection
+### Loopback protection fails when you connect to the Always-on listener
 
-When connecting to the Always-On Listener from the primary node, the connection will be NTLM. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
+This issue is related to loopback protection. When connecting to the Always-On Listener from the primary node, the connection uses NTLM authentication. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
 
 ### Double hop scenarios on multiple computers
 
-Performing a double-hop will fail using NTLM credentials. Kerberos credentials are required. For more information, see [Login failed for user NT AUTHORITY\ANONYMOUS LOGON](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
+Performing a double-hop will fail if NTLM credentials are used. Kerberos credentials are required. For more information, see [Login failed for user NT AUTHORITY\ANONYMOUS LOGON](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
 
-### LANMAN compatibility level
+### Issue with LANMAN compatibility level
 
-Refers to a security policy setting. For more information, see [Login failed for user NT AUTHORITY\ANONYMOUS LOGON](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
+The LAN Manager authentication issue usually occurs if there is a mismatch in the authentication protocols used by old and new computers. When you set the compatibility level to 5, NTLMv2 isn't allowed. Switching to Kerberos avoids this issue as Kerberos is more secure. For more information, see [Login failed for user NT AUTHORITY\ANONYMOUS LOGON](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
 
-### Causes related to Active Directory and Domain Controller
+### Causes and scenarios related to Active Directory and Domain Controller
 
-This section lists various causes and scenarios related to access to directory services and servers and their possible solutions:
+This section lists various causes and scenarios related to directory services and servers and their possible solutions:
 
 - [An account is disabled](#an-account-is-disabled)
 - [An account isn't in the group](#an-account-isnt-in-the-group)
@@ -401,7 +396,19 @@ A SQL Server alias may cause an unexpected SPN to be generated. This results in 
 
 This section lists various miscellaneous authentication issues.
 
-- Integrated authentication isn't enabled: This might be related to the integrated authentication issues. To resolve this type of error, make sure that the **Integrated Windows Authentication** is enabled in the **Internet Options**.
-- Wrong Internet zone: This might happen if you try to access a web site that isn't in the correct Internet zone in IE. The credentials won't work if the web site is in the Local Intranet zone.
-- IIS Authentication isn't allowed: Configure the web site to allow Windows Authentication and set the `<identity impersonate="true"/>` value in the *web.config* file.
-- Service account isn't trusted for delegation: If a delegation scenario isn't enabled, check the SQL Server *secpol.msc* to see if the SQL Server service account is listed under **Local Policies -> User Rights Assignment -> Impersonate a client after authentication** security policy settings. For more information, see [How to Configure the Server to be Trusted for Delegation - Microsoft Desktop Optimization Pack](/microsoft-desktop-optimization-pack/appv-v4/how-to-configure-the-server-to-be-trusted-for-delegation).
+- [Integrated authentication isn't enabled](#integrated-authentication-isnt-enabled)
+- [Wrong Internet zone](#wrong-internet-zone)
+- [IIS Authentication isn't allowed](#iis-authentication-isnt-allowed)
+- [Service account isn't trusted for delegation](#service-account-isnt-trusted-for-delegation-1)
+
+### Integrated authentication isn't enabled
+
+This might be related to the integrated authentication issues. To resolve this type of error, make sure that the **Integrated Windows Authentication** is enabled in the **Internet Options**.
+
+### Wrong Internet zone
+
+This might happen if you try to access a web site that isn't in the correct Internet zone in IE. The credentials won't work if the web site is in the Local Intranet zone.
+
+### IIS Authentication isn't allowed
+
+Configure the web site to allow Windows Authentication and set the `<identity impersonate="true"/>` value in the *web.config* file.
