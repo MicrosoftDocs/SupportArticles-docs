@@ -15,7 +15,7 @@ appliesto:
   - SharePoint Server 2016
   - SharePoint Server 2013
   - SharePoint Server 2010
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 
 # Blank screen when you log on to a SharePoint site  

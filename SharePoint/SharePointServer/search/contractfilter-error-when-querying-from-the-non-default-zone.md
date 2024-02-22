@@ -13,7 +13,7 @@ ms.author: luche
 appliesto: 
   - SharePoint Server 2016
   - SharePoint Server 2013
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 
 # ContractFilter error when querying from the non-default zone in a farm  

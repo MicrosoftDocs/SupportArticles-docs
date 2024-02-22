@@ -14,7 +14,7 @@ appliesto:
   - SharePoint Server 2013
   - Workflow Manager 1.0
 ms.reviewer: valerieg, christys
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 # (Specified RunAs account is invalid) error when you configure Workflow Manager 1.0
 
