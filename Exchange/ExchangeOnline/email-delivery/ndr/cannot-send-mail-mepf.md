@@ -17,7 +17,7 @@ appliesto:
   - Exchange Online
 search.appverid: 
   - MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # "554 5.2.2 mailbox full" when sending emails to a mail-enabled public folder
 

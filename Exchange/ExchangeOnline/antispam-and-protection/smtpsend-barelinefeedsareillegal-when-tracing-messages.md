@@ -15,7 +15,7 @@ appliesto:
   - Exchange Online
   - Exchange Online Protection
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # SMTPSEND.BareLineFeedsAreIllegal NDR received by Exchange Online or EOP users in Office 365 Dedicated/ITAR
 

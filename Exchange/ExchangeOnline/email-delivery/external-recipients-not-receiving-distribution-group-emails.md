@@ -14,7 +14,7 @@ ms.reviewer: takchow, timothyh, jhayes, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # External recipients don't receive email messages that are sent to a distribution group in Exchange Online and senders don't receive nondelivery reports
 

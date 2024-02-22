@@ -19,7 +19,7 @@ appliesto:
   - Outlook for Microsoft 365
   - Outlook 2019
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Can't accept a meeting invitation for a room mailbox in Outlook if the delegate is a shared mailbox
 
