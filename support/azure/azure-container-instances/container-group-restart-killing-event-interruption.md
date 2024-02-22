@@ -1,6 +1,6 @@
 ---
 title: Container group intermittently restarts
-description: Provides a solution to an issue where Azure container group is unexpectedly stopped and restarted due to killing event interruptions.
+description: Provides a solution to an issue where an Azure container group is unexpectedly stopped and restarted due to killing event interruptions.
 ms.date: 02/22/2024
 ms.reviewer: tysonfreeman, v-weizhu
 ms.service: container-instances
@@ -8,7 +8,7 @@ ms.service: container-instances
 
 # Azure container group intermittently restarts due to killing event interruptions
 
-This article provides a solution to an issue where Azure container group is unexpectedly stopped and restarted due to killing event interruptions.
+This article provides a solution to an issue where an Azure container group is unexpectedly stopped and restarted due to killing event interruptions.
 
 ## Symptoms
 
@@ -16,7 +16,7 @@ This article provides a solution to an issue where Azure container group is unex
 - Events of type `Killing` are shown in the `SubscriptionDeploymentEvents` kusto table.
 - An portal event message "Killing container with id fc5a90a" is shown.
 - Log Analytic events show the "Killing container with id dccaxxx" message.
-- Container group IP address gets changed.
+- The container group IP address is changed.
 
 ## Cause
 
