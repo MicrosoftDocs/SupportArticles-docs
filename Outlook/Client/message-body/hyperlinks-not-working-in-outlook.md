@@ -20,7 +20,7 @@ appliesto:
   - Outlook 2019
   - Outlook for Microsoft 365
 search.appverid: MET150
-ms.date: 07/26/2023
+ms.date: 10/30/2023
 ---
 
 # Hyperlinks are not working in Outlook

@@ -18,7 +18,7 @@ appliesto:
   - Microsoft Outlook 2010
   - Outlook for Microsoft 365
 search.appverid: MET150
-ms.date: 09/08/2023
+ms.date: 10/30/2023
 ---
 # Issues that can occur when you add multiple Exchange accounts to the same Outlook profile
 
