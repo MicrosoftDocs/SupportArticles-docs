@@ -1,7 +1,7 @@
 ---
 title: Azure Batch node gets stuck in the Unusable state because of configuration issues
 description: Provides solutions to issues that cause unusable Azure Batch nodes.
-ms.date: 02/21/2024
+ms.date: 02/22/2024
 author: SvenRandom
 ms.author: biny
 editor: v-jsitser
@@ -94,6 +94,8 @@ Check whether DNS name resolution works correctly, and fix the DNS configuration
 
 <details>
 <summary>Procedure for automatic private DNS integration</summary>
+Verify that the automatic private DNS integration is configured correctly by following these steps:
+
 1. Make sure that the private endpoint is integrated into the private DNS zone `privatelink.batch.azure.com`.
 
    :::image type="content" source="media/azure-batch-node-unusable-state/private-endpoint-dns-configuration-automatic.png" alt-text="Azure portal screenshot of the DNS configuration page (auto config version) of the node management private endpoint." lightbox="media/azure-batch-node-unusable-state/private-endpoint-dns-configuration-automatic.png":::

@@ -1,14 +1,14 @@
 ---
 title: Error 0xC004E015 (SL_E_EUL_CONSUMPTION_FAILED) when activating Windows
 description: Provides a solution to an error 0xC004E015 (SL_E_EUL_CONSUMPTION_FAILED) when you try to activate Windows.
-ms.date: 12/26/2023
+ms.date: 02/22/2024
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
-ms.reviewer: kaushika, v-naqviadil, v-lianna
+ms.reviewer: kaushika, v-naqviadil, v-lianna, cwhitley
 ms.custom: sap:failure-to-install-windows-updates, csstroubleshoot
 ---
 # Error 0xC004E015 (SL_E_EUL_CONSUMPTION_FAILED) when you activate Windows
@@ -21,7 +21,7 @@ You receive the following error when you activate Windows:
 
 This error occurs because the *C:\\Windows\\System32\\spp\\store\\2.0\\tokens.dat* file is corrupted.
 
-To resolve the issue, rename the file to *tokens.dat.old* and activate Windows again.
+To resolve the issue, [rebuild the tokens.dat file](../licensing-and-activation/rebuild-tokens-dotdat-file.md) and activate Windows again.
 
 ## More information
 

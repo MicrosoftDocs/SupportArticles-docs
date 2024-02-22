@@ -2,7 +2,7 @@
 title: Troubleshooting BitLocker with the Intune encryption report
 description: How to troubleshoot encryption failures using the Intune encryption report from the Microsoft Intune admin center.
 ms.reviewer: kaushika, luker
-ms.date: 12/01/2021
+ms.date: 12/05/2023
 search.appverid: MET150
 --- 
 # Troubleshooting BitLocker with the Intune encryption report
