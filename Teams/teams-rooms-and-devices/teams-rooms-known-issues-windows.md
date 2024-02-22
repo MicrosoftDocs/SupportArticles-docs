@@ -26,7 +26,6 @@ ms.date: 02/22/2024
 ---
 # Known issues with Teams Rooms on Windows
 
-This article lists the known issues for the Microsoft Teams Rooms app when it's used on Windows devices.
 <!-- If you get word that one of these issues no longer applies, contact meerak@microsoft.com or kaushika@microsoft.com and let them know to EoL the corresponding KB  -->
 
 ## Software issues
