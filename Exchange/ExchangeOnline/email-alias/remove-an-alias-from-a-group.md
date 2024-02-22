@@ -23,7 +23,7 @@ search.appverid:
   - MOE150
 ms.assetid: d96989c4-6efc-4523-9c89-44ce06e601bf
 description: Learn how to remove the email alias from the group using Exchange Online PowerShell.
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ms.reviewer: v-six
 ---
 # Troubleshoot: Remove an alias from a group

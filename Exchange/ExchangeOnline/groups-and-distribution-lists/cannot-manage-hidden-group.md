@@ -14,7 +14,7 @@ ms.reviewer: jhayes, kunalsh, ninob, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # The owner of a mail-enabled security group or distribution group can't manage the group if it's hidden from the GAL
 

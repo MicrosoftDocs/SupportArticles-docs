@@ -14,7 +14,7 @@ ms.reviewer: rrajan, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Administrative limit for this request was exceeded error when you add recipient domains to outbound connector
 

@@ -26,7 +26,7 @@ ms.custom:
 manager: dcscontentpm
 appliesto: 
   - Exchange Online
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Find and fix email delivery issues as a Microsoft 365 for business admin
 

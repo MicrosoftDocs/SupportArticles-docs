@@ -14,7 +14,7 @@ ms.reviewer: jhayes, v-six
 appliesto: 
 - xchange Online
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # This mailbox exceeded the maximum number of large items when migrating a user's mailbox data from the on-premises environment to Microsoft 365
 
