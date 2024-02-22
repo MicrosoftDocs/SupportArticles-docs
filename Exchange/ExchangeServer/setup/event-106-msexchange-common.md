@@ -15,7 +15,7 @@ appliesto:
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Event ID 106 errors after you install an Exchange Server 2013 cumulative update: Performance counter updating error
 

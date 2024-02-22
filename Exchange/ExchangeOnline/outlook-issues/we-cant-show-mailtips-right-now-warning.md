@@ -14,7 +14,7 @@ ms.reviewer: kellybos, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # We can't show MailTips right now warning in Outlook in Microsoft 365
 

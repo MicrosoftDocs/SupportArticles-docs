@@ -14,7 +14,7 @@ ms.reviewer: martinfu, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Microsoft 365 users get a blank page when they use Outlook Web App to access a shared mailbox
 

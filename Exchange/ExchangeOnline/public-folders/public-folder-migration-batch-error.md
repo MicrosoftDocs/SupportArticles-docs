@@ -15,7 +15,7 @@ ms.reviewer: haembab
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # "ErrorFoldersRestoredDuringMigrationPermanentException" error in a public folder migration batch
 

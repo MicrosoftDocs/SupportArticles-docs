@@ -15,7 +15,7 @@ appliesto:
   - Exchange Online
   - Microsoft 365 Apps for enterprise
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Unable to open default folders-you do not have permissions to logon error when accessing another user's mailbox folder
 
