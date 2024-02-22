@@ -15,7 +15,7 @@ ms.reviewer: alexaca, batre, nualex, meerak, v-trisshores
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 10/20/2022
+ms.date: 01/24/2024
 ---
 # Proxy address conflict when adding an email address in Exchange Online
 

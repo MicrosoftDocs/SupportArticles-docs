@@ -1,7 +1,7 @@
 ---
 title: Attachments dropped during IMAIL conversion
 description: Email messages with attachments sent to Exchange users are intermittently dropped during IMAIL conversion. Provides a resolution.
-ms.date: 08/10/2020
+ms.date: 01/24/2024
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm

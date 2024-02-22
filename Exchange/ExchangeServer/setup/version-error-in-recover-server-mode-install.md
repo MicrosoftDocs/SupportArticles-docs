@@ -17,7 +17,7 @@ search.appverid:
 appliesto:
   - Exchange Server 2019
   - Exchange Server 2016
-ms.date: 01/23/2022
+ms.date: 01/24/2024
 ---
 
 # Version error when you install Exchange Server in RecoverServer mode

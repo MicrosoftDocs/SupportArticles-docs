@@ -16,7 +16,7 @@ appliesto:
   - Exchange Online via Office 365 E Plans
   - Exchange Online via Office 365 P Plans
 search.appverid: MET150
-ms.date: 09/21/2022
+ms.date: 01/24/2024
 ---
 # Microsoft 365 ownerless group policy
 

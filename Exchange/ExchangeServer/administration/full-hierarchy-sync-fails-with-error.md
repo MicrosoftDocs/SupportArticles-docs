@@ -1,7 +1,7 @@
 ---
 title: Full hierarchy sync fails with error
 description: Describes an issue that occurs when the sync state of the public folder hierarchy exceeds the maximum message size.
-ms.date: 08/05/2020
+ms.date: 01/24/2024
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm

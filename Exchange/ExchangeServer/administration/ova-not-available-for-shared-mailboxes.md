@@ -1,7 +1,7 @@
 ---
 title: OVA not available for a shared mailbox
 description: Works around an issue in which Outlook Voice Access (OVA) is not available when a user tries to call from a shared mailbox.
-ms.date: 08/05/2020
+ms.date: 01/24/2024
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
