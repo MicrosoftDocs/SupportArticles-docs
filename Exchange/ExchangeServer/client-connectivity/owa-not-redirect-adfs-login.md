@@ -17,7 +17,7 @@ appliesto:
   - Exchange Server 2016 Enterprise Edition
   - Exchange Server 2013 Standard Edition
   - Exchange Server 2013 Enterprise
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Outlook Web App published through WAP with ADFS pre-authentication doesn't redirect to ADFS login after the ADFS SSO token expires
 

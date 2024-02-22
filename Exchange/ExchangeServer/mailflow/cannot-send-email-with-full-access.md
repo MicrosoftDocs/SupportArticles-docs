@@ -21,7 +21,7 @@ appliesto:
   - Exchange Server 2016 Enterprise Edition
   - Exchange Server 2016 Standard Edition
   - Exchange Server 2013 Enterprise
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ms.reviewer: v-six
 ---
 

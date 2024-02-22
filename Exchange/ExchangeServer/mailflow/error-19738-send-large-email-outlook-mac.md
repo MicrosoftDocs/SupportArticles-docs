@@ -18,7 +18,7 @@ appliesto:
   - Exchange Server 2013 Enterprise
   - Exchange Server 2010 Enterprise
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Error code 19738 when you use Outlook for Mac to send a large email message through Exchange Server
 

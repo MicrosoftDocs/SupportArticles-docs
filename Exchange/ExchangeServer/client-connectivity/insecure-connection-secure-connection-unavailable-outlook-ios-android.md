@@ -15,7 +15,7 @@ appliesto:
   - Outlook for iOS
   - Outlook for Android
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Error when Outlook for iOS or Android connects to Exchange Server: Insecure connection or Secure connection unavailable
 
