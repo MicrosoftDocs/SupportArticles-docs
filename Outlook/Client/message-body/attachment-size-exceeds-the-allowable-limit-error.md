@@ -18,7 +18,7 @@ appliesto:
   - Outlook 2013
   - Outlook for Microsoft 365
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 # Attachment size exceeds the allowable limit error when you add a large attachment to an email message in Outlook
 

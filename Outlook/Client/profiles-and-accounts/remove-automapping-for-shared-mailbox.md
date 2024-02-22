@@ -15,7 +15,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Outlook for Microsoft 365
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 
 # How to remove automapping for a shared mailbox in Outlook for Microsoft 365
