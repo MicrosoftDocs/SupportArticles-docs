@@ -12,7 +12,7 @@ ms.custom:
   - CI181229
 appliesto: 
   - SharePoint Online
-ms.date: 09/15/2023
+ms.date: 12/17/2023
 ---
 # SharePoint site collection admins can't register apps or update permissions
 

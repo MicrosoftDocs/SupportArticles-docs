@@ -4,7 +4,7 @@ description: How to troubleshoot Error 404 when you try to view content in OneDr
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
-ms.date: 07/26/2021
+ms.date: 12/17/2023
 audience: Admin
 ms.topic: troubleshooting
 localization_priority: Normal

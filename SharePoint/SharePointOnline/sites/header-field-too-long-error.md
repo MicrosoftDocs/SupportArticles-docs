@@ -14,7 +14,7 @@ ms.reviewer: hisakam
 appliesto: 
   - SharePoint Online
 search.appverid: MET150
-ms.date: 10/31/2022
+ms.date: 12/17/2023
 ---
 # "Header Field Too Long" error when accessing a SharePoint Online site  
 

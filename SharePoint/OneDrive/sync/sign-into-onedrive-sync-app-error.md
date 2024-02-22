@@ -16,7 +16,7 @@ appliesto:
 search.appverid: 
   - MET150
   - SPO160
-ms.date: 06/14/2022
+ms.date: 12/17/2023
 ---
 # Error AADSTS50020 when signing in to the OneDrive sync app
 

@@ -3,7 +3,7 @@ title: Handling ransomware in Sharepoint Online
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
-ms.date: 02/18/2020
+ms.date: 12/17/2023
 audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal

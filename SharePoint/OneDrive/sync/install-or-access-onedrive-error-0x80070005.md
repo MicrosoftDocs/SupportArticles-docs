@@ -15,7 +15,7 @@ appliesto:
   - OneDrive for Business
 search.appverid: 
   - MET150
-ms.date: 11/02/2022
+ms.date: 12/17/2023
 ---
 # Error 0x80070005 when you install or access OneDrive
 
