@@ -128,13 +128,13 @@ Task Category: LDAP Interface
 Level:         Warning
 Keywords:      Classic
 Description:
-The security of this directory server can be significantly enhanced by configuring the server to reject SASL (Negotiate, Kerberos, NTLM, or Digest) LDAP binds that do not request signing (integrity verification) and LDAP simple binds that are performed on a clear text (non-SSL/TLS-encrypted) connection.  Even if no clients are using such binds, configuring the server to reject them will improve the security of this server. 
+The security of this directory server can be significantly enhanced by configuring the server to reject SASL (Negotiate, Kerberos, NTLM, or Digest) LDAP binds that do not request signing (integrity verification) and LDAP simple binds that are performed on a clear text (non-SSL/TLS-encrypted) connection. Even if no clients are using such binds, configuring the server to reject them will improve the security of this server. 
  
-Some clients may currently be relying on unsigned SASL binds or LDAP simple binds over a non-SSL/TLS connection, and will stop working if this configuration change is made.  To assist in identifying these clients, if such binds occur this directory server will log a summary event once every 24 hours indicating how many such binds occurred.  You are encouraged to configure those clients to not use such binds.  Once no such events are observed for an extended period, it is recommended that you configure the server to reject such binds. 
+Some clients may currently be relying on unsigned SASL binds or LDAP simple binds over a non-SSL/TLS connection, and will stop working if this configuration change is made. To assist in identifying these clients, if such binds occur this directory server will log a summary event once every 24 hours indicating how many such binds occurred. You are encouraged to configure those clients to not use such binds. Once no such events are observed for an extended period, it is recommended that you configure the server to reject such binds. 
  
 For more details and information on how to make this configuration change to the server, please see http://go.microsoft.com/fwlink/?LinkID=87923. 
  
-You can enable additional logging to log an event each time a client makes such a bind, including information on which client made the bind.  To do so, please raise the setting for the "LDAP Interface Events" event logging category to level 2 or higher.
+You can enable additional logging to log an event each time a client makes such a bind, including information on which client made the bind. To do so, please raise the setting for the "LDAP Interface Events" event logging category to level 2 or higher.
 ```
 
 ### Event ID 2887
@@ -153,13 +153,13 @@ During the previous 24 hour period, some clients attempted to perform LDAP binds
 (1) A SASL (Negotiate, Kerberos, NTLM, or Digest) LDAP bind that did not request signing (integrity validation), or
 (2) A LDAP simple bind that was performed on a clear text (non-SSL/TLS-encrypted) connection
 
-This directory server is not currently configured to reject such binds.  The security of this directory server can be significantly enhanced by configuring the server to reject such binds.  For more details and information on how to make this configuration change to the server, please see http://go.microsoft.com/fwlink/?LinkID=87923.
+This directory server is not currently configured to reject such binds. The security of this directory server can be significantly enhanced by configuring the server to reject such binds. For more details and information on how to make this configuration change to the server, please see http://go.microsoft.com/fwlink/?LinkID=87923.
 
 Summary information on the number of these binds received within the past 24 hours is below.
 
-You can enable additional logging to log an event each time a client makes such a bind, including information on which client made the bind.  To do so, please raise the setting for the "LDAP Interface Events" event logging category to level 2 or higher.
+You can enable additional logging to log an event each time a client makes such a bind, including information on which client made the bind. To do so, please raise the setting for the "LDAP Interface Events" event logging category to level 2 or higher.
 
-Number of simple binds performed without SSL/TLS: 12
+Number of simple binds performed without SSL/TLS: <count of binds>
 Number of Negotiate/Kerberos/NTLM/Digest binds performed without signing: <count of binds>
 ```
 
@@ -179,7 +179,7 @@ During the previous 24 hour period, some clients attempted to perform LDAP binds
 (1) A SASL (Negotiate, Kerberos, NTLM, or Digest) LDAP bind that did not request signing (integrity validation), or
 (2) A LDAP simple bind that was performed on a clear text (non-SSL/TLS-encrypted) connection
 
-This directory server is configured to reject such binds.  This is the recommend configuration setting, and significantly enhances the security of this server.  For more details, please see http://go.microsoft.com/fwlink/?LinkID=87923.
+This directory server is configured to reject such binds.  This is the recommended configuration setting, and significantly enhances the security of this server. For more details, please see http://go.microsoft.com/fwlink/?LinkID=87923.
 
 Summary information on the number of such binds received within the past 24 hours is below.
 
@@ -206,7 +206,7 @@ The following client performed a SASL (Negotiate/Kerberos/NTLM/Digest) LDAP bind
 Client IP address:
 <IP address>:<TCP port>
 Identity the client attempted to authenticate as:
-contoso\RolandW
+contoso\<username>
 Binding Type:
 0 – Simple Bind that does not support signing
 1 – SASL Bind that does not use signing
