@@ -94,15 +94,15 @@ Simplified node communication is provides an alternative for the user so that th
 
 In a pool that is adopting simplified node communication and the node is still showing **Unusable**, you can check the following possible cause for self-troubleshooting.
 
-#### Cause 1: NSG rule blockage
+#### Cause 1: Missing outbound NSG rule
 
-When applying public networ, the outbound request from the internal node still needs to be fluent to the external. The node will become unusable if the outbound request is blocked.
+When applying virtual network, the outbound request from the internal node still needs to be fluent to the external. The node will become unusable if the outbound request is not properly configured.
+
+#### Solution 1: Outbound Service Tag for Batch Node Management{/region}
+
+In this case, you need to add a service tag to BatchManagement.region in the outbound NSG rule. Please refer to the following figure. For more information, check the document [Outbound Security Rule](https://learn.microsoft.com/en-us/azure/batch/batch-virtual-network#outbound-security-rules)
 
     :::image type="content" source="media/azure-batch-node-unusable-state/blocking-outbound-nsg.png" alt-text="Screenshot that shows the NSG rule that blocks outbound request":::
-
-#### Solution 1: Remove the NSG rule that blocks the request
-
-The issue can be resolved if the rule is removed.
 
 #### Cause 2: Unusable node with No Public IP setting
 
