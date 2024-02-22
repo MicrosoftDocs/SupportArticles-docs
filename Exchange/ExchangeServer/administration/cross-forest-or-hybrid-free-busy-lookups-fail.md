@@ -20,7 +20,7 @@ appliesto:
   - Microsoft Exchange Server 2007 Service Pack 3 (SP3) Update Rollup 6 and later versions
   - Microsoft Exchange Online
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Cross-forest or Hybrid free/busy availability lookups fail in Exchange Server
 

@@ -14,7 +14,7 @@ ms.reviewer: anthonge, nbanup, v-six
 appliesto: 
   - Exchange Server 2010 Service Pack 3
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Event ID 9875 source MSExchangeIS Mailbox Store error
 

@@ -16,7 +16,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Exchange Server
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # How to determine the version number, the build number, and the service pack level of Exchange Server
 
