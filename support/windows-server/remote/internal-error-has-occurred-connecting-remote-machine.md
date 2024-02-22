@@ -136,7 +136,7 @@ Check if there's a policy for configuring ciphers. Set the following policy sett
 **Computer Configuration** > **Administrative Templates** > **Network** > **SSL Configuration Settings** - **SSL Cipher Suite Order**
 
 > [!NOTE]
-> After setting the policy to Not configured, delete the following registry value if it exists:  
+> After setting the policy to **Not configured**, delete the following registry value if it exists:  
 > `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Cryptography\Configuration\SSL\00010002` - `Functions`.
 
 ### Replace the SCHANNEL subkey
