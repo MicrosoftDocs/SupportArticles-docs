@@ -1,7 +1,7 @@
 ---
 title: No permissions to load Intune Troubleshooting pane
 description: Provides a solution for the issue when the Microsoft Intune Troubleshoot pane fails to load for help desk operators.
-ms.date: 12/18/2021
+ms.date: 12/05/2023
 search.appverid: MET150
 ms.custom: sap:User logon or authentication
 ms.reviewer: kaushika, joelste, intunecic

@@ -4,7 +4,7 @@ description: Provides a T-SQL script that can be used to reindex and defragment 
 author: helenclu
 ms.author: luche
 ms.reviewer: kaushika, vinpa
-ms.date: 02/09/2021
+ms.date: 12/05/2023
 ms.custom: sap:WSUS
 ---
 # Reindex the WSUS database

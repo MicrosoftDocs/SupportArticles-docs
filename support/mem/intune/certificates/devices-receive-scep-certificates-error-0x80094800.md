@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot when devices can't obtain SCEP certificates
 description: Helps resolve an issue when devices can't obtain SCEP certificates from the NDES server and return error 80094800 and Event ID 31.
-ms.date: 09/09/2021
+ms.date: 12/05/2023
 search.appverid: MET150
 ms.custom: sap:Configure certificates
 ms.reviewer: kaushika
