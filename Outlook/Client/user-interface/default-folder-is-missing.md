@@ -23,7 +23,7 @@ appliesto:
   - Exchange Server 2013
   - Exchange Server 2010
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 # Default folder is missing in Outlook and Outlook on the web
 

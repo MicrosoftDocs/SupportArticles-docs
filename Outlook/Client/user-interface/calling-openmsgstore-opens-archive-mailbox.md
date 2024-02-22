@@ -18,7 +18,7 @@ appliesto:
   - Outlook 2016
   - Outlook 2019
   - Outlook Development
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 
 # Calling OpenMsgStore in Outlook opens the archive mailbox instead of the primary mailbox
