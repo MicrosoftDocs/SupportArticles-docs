@@ -20,7 +20,7 @@ appliesto:
   - Exchange Server 2013 Enterprise
   - Exchange Server 2010 Standard
   - Exchange Server 2010 Enterprise
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Event ID 9519 and error 0x80004005 when you try to mount a database in Exchange Server
 

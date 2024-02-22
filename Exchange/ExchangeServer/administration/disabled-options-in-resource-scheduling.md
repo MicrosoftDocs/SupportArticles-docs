@@ -18,7 +18,7 @@ appliesto:
   - Exchange Server 2010
   - Exchange Server 2007
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Options in Outlook's Resource Scheduling dialog box are disabled
 

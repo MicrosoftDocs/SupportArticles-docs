@@ -16,7 +16,7 @@ search.appverid:
 appliesto: 
   - Exchange Server 2016 Enterprise Edition
   - Exchange Server 2016 Standard Edition
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Users receive an error (object couldn't be found) and can't configure Out of Office messages in Outlook Web App or Exchange Control Panel
 
