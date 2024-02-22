@@ -1,7 +1,7 @@
 ---
 title: DAG network Misconfigured error
 description: Misconfigured error occurs when using the Multi-NIC Cluster Network feature on an Exchange Server 2016 DAG node.
-ms.date: 06/22/2020
+ms.date: 01/24/2024
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm

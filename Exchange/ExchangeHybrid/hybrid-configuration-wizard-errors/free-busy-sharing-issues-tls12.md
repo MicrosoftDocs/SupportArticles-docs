@@ -18,7 +18,7 @@ appliesto:
   - Exchange Server 2013
   - Exchange Online
 search.appverid: MET150
-ms.date: 11/29/2022
+ms.date: 01/24/2024
 ---
 
 # Resolve free/busy sharing issues in a hybrid Exchange environment

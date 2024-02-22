@@ -1,7 +1,7 @@
 ---
 title: Cannot reset Local replica age limit (days)
 description: Provides workarounds for a problem in which you cannot reset the value of the Local replica age limit (days) setting.
-ms.date: 08/05/2020
+ms.date: 01/24/2024
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm

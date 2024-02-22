@@ -15,7 +15,7 @@ ms.reviewer: dpaul
 appliesto: 
   - Exchange Server 2019
 search.appverid: MET150
-ms.date: 04/21/2022
+ms.date: 01/24/2024
 ---
 # Missing items in eDiscovery search results in Exchange Server 2019
 

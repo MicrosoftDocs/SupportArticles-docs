@@ -1,7 +1,7 @@
 ---
 title: Accessing other people's mailboxes
 description: Describes how to open other people's mailboxes in Microsoft 365.
-ms.date: 08/13/2020
+ms.date: 01/24/2024
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm

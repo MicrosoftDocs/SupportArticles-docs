@@ -1,7 +1,7 @@
 ---
 title: Develop apps via Exchange PowerShell and .NET Framework
 description: Describes the recommended and supported methods for developing applications that automate Exchange 2010 cmdlets by using any of the Microsoft .NET Framework languages.
-ms.date: 08/10/2020
+ms.date: 01/24/2024
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
