@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot LSASS errors
+title: Troubleshoot LSASS errors with SQL Server authentication
 description: This article provides a resolution for consistent authentication errors that are related to local security subsystem related.
 ms.date: 02/19/2024
 author: Malcolm-Stewart
