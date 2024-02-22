@@ -139,7 +139,7 @@ You can enable additional logging to log an event each time a client makes such 
 
 ### Event ID 2887
 
-When a problem client is rejected, a summary event (Event ID 2887) of the past 24 hours is logged:
+When a problem client is detected but permitted, a summary event (Event ID 2887) of the past 24 hours is logged:
 
 ```output
 Log Name:      Directory Service
