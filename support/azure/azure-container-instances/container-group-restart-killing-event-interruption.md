@@ -14,7 +14,7 @@ This article provides a solution to an issue where an Azure container group is u
 
 - Container groups intermittently restart without clear causes.
 - Events of type `Killing` are shown in the `SubscriptionDeploymentEvents` kusto table.
-- An portal event message "Killing container with id fc5a90a" is shown.
+- A portal event message "Killing container with id fc5a90a" is shown.
 - Log Analytic events show the "Killing container with id dccaxxx" message.
 - The container group IP address is changed.
 
