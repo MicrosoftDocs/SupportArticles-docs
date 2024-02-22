@@ -13,7 +13,7 @@ ms.topic: troubleshooting
 ms.custom: sap:spsexperts, CSSTroubleshoot
 appliesto: 
   - Office Web Apps
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 
 # "Edit Document requires a Microsoft SharePoint Foundation compatible application and web browser" when you open documents from SharePoint
