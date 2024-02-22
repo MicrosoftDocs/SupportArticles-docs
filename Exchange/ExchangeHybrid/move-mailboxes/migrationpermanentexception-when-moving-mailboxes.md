@@ -14,7 +14,7 @@ ms.reviewer: hbohl, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # (MigrationPermanentException Cannot find a recipient that has mailbox GUID) error when moving mailboxes
 

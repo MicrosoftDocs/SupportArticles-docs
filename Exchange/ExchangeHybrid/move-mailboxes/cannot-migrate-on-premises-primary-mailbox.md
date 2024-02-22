@@ -15,7 +15,7 @@ ms.reviewer: haembab, meerak, ninob, v-chazhang
 search.appverid: MET150
 appliesto: 
   - Exchange Online
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 
 # Can't migrate on-premises primary mailbox with cloud-based archive to Exchange Online

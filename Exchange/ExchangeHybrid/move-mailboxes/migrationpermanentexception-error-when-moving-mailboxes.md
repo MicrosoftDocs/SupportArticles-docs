@@ -16,7 +16,7 @@ appliesto:
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # MigrationPermanentException error when moving mailboxes from Exchange Online to Exchange Server 2010
 

@@ -14,7 +14,7 @@ ms.reviewer: logonzal, v-six
 appliesto: 
   - MSfC O365-Exchange Online
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Cisco Unity duplicate voicemails appear if VoiceMessages search folder uses content indexing
 

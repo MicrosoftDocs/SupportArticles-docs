@@ -14,7 +14,7 @@ ms.reviewer: pojaya, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # How to view and update address list membership for objects in Exchange Online
 
