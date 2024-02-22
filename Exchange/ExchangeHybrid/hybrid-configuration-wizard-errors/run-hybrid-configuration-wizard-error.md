@@ -15,7 +15,7 @@ appliesto:
   - Exchange Online
   - Exchange Server 2010 Enterprise
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Subtask CheckPrereqs execution failed error when you run the Hybrid Configuration wizard
 

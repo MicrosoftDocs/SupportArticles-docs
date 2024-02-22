@@ -17,7 +17,7 @@ appliesto:
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Emails sent from Microsoft 365 in a hybrid deployment are rejected and nondelivery reports are received
 

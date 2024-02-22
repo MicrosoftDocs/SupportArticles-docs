@@ -16,7 +16,7 @@ search.appverid: MET150
 ms.reviewer: scotro, v-six
 author: cloud-writer
 ms.author: meerak
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 
 # "InternalError InternalError: Internal error" when you run Set-FederatedOrganizationIdentifier to set up a hybrid deployment

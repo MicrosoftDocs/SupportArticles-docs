@@ -12,7 +12,7 @@ search.appverid: MET150
 ms.reviewer: kellybos, v-jeffbo, v-six
 author: cloud-writer
 ms.author: meerak
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # "550 5.1.11 RESOLVER.ADR.ExRecipNotFound" when delegate sends update to meeting after manager moved to Microsoft 365 hybrid environment
 
