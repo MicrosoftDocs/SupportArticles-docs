@@ -49,6 +49,8 @@ landingContent:
             url: common-confidential-container-errors.md
           - text: Container group still runs after a stop or delete command 
             url: aci-still-running-after-stop-delete-command.md
+          - text: Spot Container Errors
+            url: error-codes-spot-container-creation.md
           - text: Container Instances debugging tools
             url: aci-debug-tools.md
 
