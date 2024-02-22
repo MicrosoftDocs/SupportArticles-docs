@@ -13,7 +13,7 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Server 2010
 ms.reviewer: lubomirb
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 # SharePoint 2010 projects with field elements cannot be redeployed
 

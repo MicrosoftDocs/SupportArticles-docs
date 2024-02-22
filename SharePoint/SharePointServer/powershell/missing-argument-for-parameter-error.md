@@ -13,7 +13,7 @@ ms.reviewer: alfong
 appliesto: 
   - PowerPoint for the web
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 # Missing an argument for parameter when you use the Set-SPPowerPointServiceApplication command
 
