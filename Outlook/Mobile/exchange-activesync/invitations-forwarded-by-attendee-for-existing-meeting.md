@@ -17,7 +17,7 @@ appliesto:
   - Exchange Server 2013 Enterprise
   - Exchange Server 2010 Enterprise
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 # Meeting invitations are forwarded by an attendee for an existing meeting
 

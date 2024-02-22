@@ -21,7 +21,7 @@ appliesto:
   - Exchange Online via Office 365 E Plans
   - Exchange Online via Office 365 P Plans
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Exchange ActiveSync device is blocked unexpectedly by ABQ list
 

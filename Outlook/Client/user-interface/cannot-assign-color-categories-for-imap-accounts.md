@@ -14,7 +14,7 @@ ms.reviewer: talmagev, aruiz
 appliesto: 
   - Outlook 2016
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 # You can't assign color categories for IMAP accounts in Outlook 2016
 

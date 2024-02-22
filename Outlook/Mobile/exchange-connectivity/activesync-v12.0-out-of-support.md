@@ -17,7 +17,7 @@ appliesto:
   - Outlook for Android
 search.appverid: 
   - MET150
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 
 # Exchange ActiveSync protocol v12.0 is out-of-support for Outlook for iOS and Android

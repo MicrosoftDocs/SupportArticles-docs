@@ -15,7 +15,7 @@ appliesto:
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Items in the Sync Issues folder aren't processed or deleted by a Messaging Records Management (MRM) policy in Outlook 2007 or Outlook 2010
 

@@ -19,7 +19,7 @@ appliesto:
   - Exchange Server 2010 Standard
   - Exchange Server 2010 Service Pack 3
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # The remote server returned an error (403) Forbidden error when moving mailboxes to Exchange Online
 

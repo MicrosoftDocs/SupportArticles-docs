@@ -21,7 +21,7 @@ appliesto:
   - PowerPoint 2013
   - PowerPoint 2010
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 # Office program errors when DisableThemes is configured in the __COMPAT_LAYER environment variable
 

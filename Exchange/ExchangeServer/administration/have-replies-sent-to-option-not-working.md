@@ -1,7 +1,7 @@
 ---
 title: Have replies sent to option not working
 description: The Have replies sent to option does not work with autoreply in Exchange Server 2010.
-ms.date: 08/05/2020
+ms.date: 01/24/2024
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm

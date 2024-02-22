@@ -3,7 +3,7 @@ title: App permission error when updating user profile properties in SharePoint
 description: Fix an access error and System.UnauthorizedAccessException when you use a Microsoft Entra app to update user profile properties in SharePoint Online by using app-only authentication.
 manager: dcscontentpm
 localization_priority: Normal
-ms.date: 10/13/2023
+ms.date: 12/17/2023
 audience: Admin
 ms.topic: troubleshooting
 ms.custom:

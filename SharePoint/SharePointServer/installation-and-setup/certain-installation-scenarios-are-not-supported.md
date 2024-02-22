@@ -14,7 +14,7 @@ ms.custom:
   - CI 164509
 appliesto: 
   - SharePoint Server 2013
-ms.date: 06/23/2022
+ms.date: 12/17/2023
 ---
 
 # Certain Microsoft SharePoint Server 2013 installation scenarios are not supported  

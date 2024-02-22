@@ -18,7 +18,7 @@ appliesto:
   - Exchange Server 2010
   - Exchange Online
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # On-premises users can't access cloud archive mailboxes with Full Access permission in Outlook
 

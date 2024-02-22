@@ -11,7 +11,7 @@ search.appverid: MET150
 ms.reviewer: v-six
 author: cloud-writer
 ms.author: meerak
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Could not load file or assembly error occurs when browsing the Exchange EWS or Autodiscover sites
 

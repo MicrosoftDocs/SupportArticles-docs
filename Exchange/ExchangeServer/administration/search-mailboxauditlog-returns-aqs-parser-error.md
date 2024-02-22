@@ -15,7 +15,7 @@ ms.reviewer: jcoiffin, lusassl, meerak, v-trisshores
 appliesto:
   - Exchange Server 2019
 search.appverid: MET150
-ms.date: 11/17/2023
+ms.date: 01/24/2024
 ---
 
 # Search-MailboxAuditLog returns "AQS parser has been removed"

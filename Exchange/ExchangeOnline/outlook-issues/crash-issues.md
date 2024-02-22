@@ -20,7 +20,7 @@ appliesto:
   - Outlook 2016
   - Outlook 2013
   - Microsoft Outlook 2010
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ms.reviewer: v-six
 ---
 # How to troubleshoot issues that cause Outlook to crash or stop responding when used with Microsoft 365

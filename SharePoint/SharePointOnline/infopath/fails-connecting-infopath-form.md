@@ -12,7 +12,7 @@ ms.custom: CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - SharePoint Online
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 
 # Error message when you connect an InfoPath form to a SharePoint Online web service: "An error occurred while connecting to a Web Service"

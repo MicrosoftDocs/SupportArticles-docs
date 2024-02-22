@@ -1,7 +1,7 @@
 ---
 title: MAPI is the only way to change profiles
 description: You can only use Extended MAPI to programmatically change profiles.
-ms.date: 08/05/2020
+ms.date: 10/30/2023
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm

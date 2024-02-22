@@ -18,7 +18,7 @@ appliesto:
   - Outlook 2013
   - Outlook 2010
 search.appverid: MET150
-ms.date: 10/13/2023
+ms.date: 10/30/2023
 ---
 
 # Outlook Calendar displays working hours as grey

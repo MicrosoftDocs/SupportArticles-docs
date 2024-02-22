@@ -12,7 +12,7 @@ search.appverid: MET150
 ms.reviewer: aruiz, gregmans, tsimon, laurentc, amkanade, Najmal, doakm, randyto, gbratton, bobcool, v-six
 author: cloud-writer
 ms.author: meerak
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 # A new Outlook Data File (.pst) is created by default in Outlook 2010 when you add a new POP3 account
 

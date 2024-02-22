@@ -17,7 +17,7 @@ appliesto:
   - Exchange Server 2019
   - Exchange Server 2016
   - Exchange Server 2013
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ms.reviewer: v-six
 ---
 # Error when you move mailboxes from on-premises to Exchange Online in a hybrid deployment: User is already being moved‎

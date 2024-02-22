@@ -15,7 +15,7 @@ ms.reviewer: svajda, lindabr, meerak, v-trisshores
 appliesto:
   - Exchange Server 2019
 search.appverid: MET150
-ms.date: 04/25/2023
+ms.date: 01/24/2024
 ---
 
 # eDiscovery search ignores some keywords in a query

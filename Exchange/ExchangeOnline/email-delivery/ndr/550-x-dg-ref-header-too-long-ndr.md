@@ -15,7 +15,7 @@ ms.reviewer: braalf, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # "550 x-dg-ref header is too long" when sending mail in Exchange Online
 

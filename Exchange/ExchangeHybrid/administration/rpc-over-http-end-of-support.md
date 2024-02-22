@@ -19,7 +19,7 @@ appliesto:
   - Outlook 2013
   - Microsoft Outlook 2010
   - Microsoft Office Outlook 2007
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ms.reviewer: v-six
 ---
 # RPC over HTTP reaches end of support in Microsoft 365 on October 31, 2017

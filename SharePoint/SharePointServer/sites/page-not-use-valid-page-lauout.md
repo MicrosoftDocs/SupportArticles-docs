@@ -12,7 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Server 2010
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 
 # Trying to view a SharePoint .aspx page generates the error "This page is not using a valid page layout"

@@ -19,7 +19,7 @@ appliesto:
   - Outlook 2010
   - Microsoft 365 Apps for enterprise
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Email messages are sent to the wrong account when multiple accounts are associated with an Outlook profile
 

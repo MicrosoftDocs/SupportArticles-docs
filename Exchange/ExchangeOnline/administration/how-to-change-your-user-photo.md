@@ -15,7 +15,7 @@ appliesto:
   - Exchange Online
   - Microsoft 365
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # How to change your user photo in Microsoft 365
 

@@ -23,7 +23,7 @@ appliesto:
   - Outlook for Mac
   - Outlook for Mac for Microsoft 365
 search.appverid: MET150
-ms.date: 08/31/2023
+ms.date: 01/24/2024
 ---
 
 # Shared calendar appears in delegate's Online Archive folder

@@ -16,7 +16,7 @@ appliesto:
   - Office Professional 2010
   - Office Professional Plus 2010
   - Office Standard 2010
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 
 # Server Message bar is missing for Office documents opened via a hyperlink

@@ -18,7 +18,7 @@ appliesto:
   - Outlook 2013
   - Outlook 2010
   - Office Outlook 2007
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 
 # Unexpected Autodiscover behavior when you have registry settings under the \Autodiscover key

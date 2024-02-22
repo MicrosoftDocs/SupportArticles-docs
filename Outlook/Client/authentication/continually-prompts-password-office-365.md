@@ -18,7 +18,7 @@ appliesto:
   - Outlook 2010
   - Office Outlook 2007
   - Exchange Online
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 
 # Outlook continually prompts for your password when you try to connect to Microsoft 365

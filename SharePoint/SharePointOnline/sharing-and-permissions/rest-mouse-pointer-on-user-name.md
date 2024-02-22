@@ -13,7 +13,7 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Online
   - OneDrive for Business
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 
 # Credential prompt after you rest the mouse pointer over the name of a user in SharePoint Online

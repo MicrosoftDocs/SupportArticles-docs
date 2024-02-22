@@ -18,7 +18,7 @@ appliesto:
   - Exchange Server 2013 Standard Edition
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # HTTP clients can still connect to Exchange after account is disabled or password is changed
 

@@ -15,7 +15,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Exchange Online
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 
 # Offboarding mailbox fails with error: MigrationPermanentException Target user already has a primary mailbox

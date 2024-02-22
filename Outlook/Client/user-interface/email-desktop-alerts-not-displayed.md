@@ -17,7 +17,7 @@ appliesto:
   - Windows Server 2012 R2 Standard
   - Windows Server 2012 Standard
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 # Email desktop alerts (toast notifications) aren't displayed in Outlook on Windows Server 2012
 

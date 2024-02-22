@@ -15,7 +15,7 @@ ms.reviewer: matbyrd, ninob, meerak, v-trisshores
 appliesto: 
   - Exchange Server 2019
 search.appverid: MET150
-ms.date: 05/22/2023
+ms.date: 01/24/2024
 ---
 
 # Mailboxes are stalled during a migration

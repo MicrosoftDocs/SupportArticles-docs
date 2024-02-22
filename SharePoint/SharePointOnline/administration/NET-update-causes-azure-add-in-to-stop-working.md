@@ -3,7 +3,7 @@ title: .NET update causes SharePoint provider-hosted add-in running on Azure to 
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
-ms.date: 02/18/2020
+ms.date: 12/17/2023
 audience: Admin
 ms.topic: troubleshooting
 localization_priority: Normal

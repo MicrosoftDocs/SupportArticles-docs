@@ -15,7 +15,7 @@ search.appverid: MET150
 ms.reviewer: gregmans, v-six
 author: cloud-writer
 ms.author: meerak
-ms.date: 08/08/2023
+ms.date: 10/30/2023
 ---
 # You experience issues in Outlook when you try to configure free/busy information or when you try to delegate information
 

@@ -15,7 +15,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 
 # Error when signing into Teams: You're missing out! Ask your admin to enable Microsoft Teams for \<CompanyName>

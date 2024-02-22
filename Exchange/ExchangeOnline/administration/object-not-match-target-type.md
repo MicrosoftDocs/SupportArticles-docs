@@ -16,7 +16,7 @@ appliesto:
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Object doesn't match target type when using the Exchange 2010 Management Console to view Exchange Online mailbox properties
 

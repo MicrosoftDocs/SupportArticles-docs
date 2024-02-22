@@ -14,7 +14,7 @@ ms.reviewer: v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # HTTP 500 error when a user tries to publish the calendar of a shared mailbox in Microsoft 365
 

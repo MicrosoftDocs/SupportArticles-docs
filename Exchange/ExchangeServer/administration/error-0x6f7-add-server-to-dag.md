@@ -14,7 +14,7 @@ ms.reviewer: mnanjund, benwinz, v-six
 appliesto: 
   - Exchange Server
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Operation failed with message: Error 0x6f7 when adding a server to a database availability group in Exchange Server
 

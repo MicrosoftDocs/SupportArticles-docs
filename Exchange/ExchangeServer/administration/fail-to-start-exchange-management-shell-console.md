@@ -18,7 +18,7 @@ appliesto:
   - Exchange Server 2016
   - Exchange Server 2013
   - Exchange Server 2010
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Error (The connection to the specified remote host was refused) when you try to start Exchange Management Shell or Exchange Management Console
 

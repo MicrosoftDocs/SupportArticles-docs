@@ -15,7 +15,7 @@ ms.custom:
   - CI-158475
 appliesto: 
   - SharePoint Online
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 
 # SharePoint Online Lists and Libraries Modern View Compatibility check

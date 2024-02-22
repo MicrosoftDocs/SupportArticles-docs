@@ -16,7 +16,7 @@ appliesto:
   - Exchange Server 2016 Standard Edition
   - Microsoft Outlook 2010
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 # Outlook can't open a mailbox by using MAPI over HTTP
 

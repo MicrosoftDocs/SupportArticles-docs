@@ -22,7 +22,7 @@ appliesto:
   - Outlook 2016
 search.appverid: 
   - MET150
-ms.date: 12/15/2023
+ms.date: 01/24/2024
 ---
 
 # Can't expand or view the content of a public folder in Outlook

@@ -21,7 +21,7 @@ appliesto:
   - Exchange Server 2013
 search.appverid: 
   - MET150
-ms.date: 03/10/2023
+ms.date: 01/24/2024
 ---
 
 # Public folder users can't rename, move, or delete subfolders

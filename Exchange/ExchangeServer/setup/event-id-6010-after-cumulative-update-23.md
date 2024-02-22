@@ -15,7 +15,7 @@ appliesto:
   - Exchange Server 2016 Standard Edition
   - Exchange Server 2016 Enterprise Edition
 search.appverid: MET150
-ms.date: 08/04/2022
+ms.date: 01/24/2024
 ---
 # Event 6010 entries fill the Application event log in Exchange Server 2016
 

@@ -14,7 +14,7 @@ ms.reviewer: aruiz, sbradley, gregmans
 appliesto: 
   - Microsoft Outlook 2010
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 # Outlook 2010 programmatic security settings for Simple MAPI cannot be configured by using the Group Policy Object
 

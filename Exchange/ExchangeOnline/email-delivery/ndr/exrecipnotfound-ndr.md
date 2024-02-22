@@ -17,7 +17,7 @@ appliesto:
   - Exchange Online
   - Microsoft 365 Apps for enterprise
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # "550 5.1.1 RESOLVER.ADR.ExRecipNotFound" when sending emails by using Outlook in Microsoft 365
 

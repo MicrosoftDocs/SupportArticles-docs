@@ -21,7 +21,7 @@ appliesto:
   - Outlook 2016
   - Outlook 2016 for Mac
 search.appverid: MET150
-ms.date: 04/21/2022
+ms.date: 01/24/2024
 ---
 # Internal recipient's address isn't autocompleted or suggested
 

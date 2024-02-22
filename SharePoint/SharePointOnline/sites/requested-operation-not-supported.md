@@ -15,7 +15,7 @@ ms.custom:
 ms.author: luche
 appliesto: 
   - SharePoint Online
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 
 # Site deletion error: “The requested operation is not supported for site”  

@@ -15,7 +15,7 @@ appliesto:
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 # Emails have empty bodies when ESET NOD32 4.x is installed on client machines on Exchange Server 2010
 

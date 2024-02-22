@@ -3,7 +3,7 @@ title: Search box removed for customers with search control in Suite Nav turned 
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
-ms.date: 09/11/2020
+ms.date: 12/17/2023
 audience: Admin
 ms.topic: troubleshooting
 search.appverid: 

@@ -1,7 +1,7 @@
 ---
 title: High memory usage by W3wp.exe of default app
 description: Resolves an issue in which the W3wp.exe consumes too much memory. This issue occurs if you have more than 64 Client Access servers in a single Active Directory site in an Exchange Server 2010 environment.
-ms.date: 08/05/2020
+ms.date: 01/24/2024
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm

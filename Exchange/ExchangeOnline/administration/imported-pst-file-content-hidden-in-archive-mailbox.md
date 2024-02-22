@@ -15,7 +15,7 @@ ms.reviewer: aabdelmoniem, haembab, lusassl, meerak, v-trisshores
 appliesto:
   - Exchange Online
 search.appverid: MET150
-ms.date: 10/17/2023
+ms.date: 01/24/2024
 ---
 
 # Imported PST file content doesn't appear in archive mailbox

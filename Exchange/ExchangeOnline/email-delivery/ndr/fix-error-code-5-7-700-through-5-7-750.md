@@ -1,6 +1,6 @@
 ---
 title: Fix NDR error 5.7.700 through 5.7.750 in Exchange Online
-ms.date: 07/26/2023
+ms.date: 01/24/2024
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm

@@ -14,7 +14,7 @@ ms.reviewer: dahans
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 # How to export contacts from Outlook 2011 for Mac to Exchange Online by using OWA in Microsoft 365
 

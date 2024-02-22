@@ -15,7 +15,7 @@ ms.custom:
   - CI 150095
 appliesto: 
   - SharePoint Online
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 
 # @Mentions in SharePoint files don’t send email notifications to participants

@@ -14,7 +14,7 @@ ms.reviewer: v-mosha, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Cannot convert value when you disable the Enable Forwarding option for a Microsoft 365 user
 

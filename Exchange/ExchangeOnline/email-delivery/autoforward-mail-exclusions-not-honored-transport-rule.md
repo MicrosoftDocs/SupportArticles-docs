@@ -16,7 +16,7 @@ appliesto:
   - Exchange Online
 search.appverid: 
   - MET150
-ms.date: 05/25/2023
+ms.date: 01/24/2024
 ---
 # A transport rule doesn't match if user mailbox rules automatically forward messages
 

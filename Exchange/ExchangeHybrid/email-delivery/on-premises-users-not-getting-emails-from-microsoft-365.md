@@ -14,7 +14,7 @@ ms.reviewer: jhayes, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # On-premises users can't get email messages from Microsoft 365 users in an Exchange hybrid deployment
 

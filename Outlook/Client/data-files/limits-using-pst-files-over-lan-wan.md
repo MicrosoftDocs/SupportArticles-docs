@@ -28,7 +28,7 @@ appliesto:
   - Windows Server 2003
   - Windows Vista
   - Windows XP
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 # Limits to using personal folders files over LAN and WAN links
 

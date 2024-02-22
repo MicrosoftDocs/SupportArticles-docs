@@ -16,7 +16,7 @@ appliesto:
   - Exchange Online
   - Exchange Online Protection
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # 5.7.1 Unable to Relay: Blocked by Customer Allow List
 

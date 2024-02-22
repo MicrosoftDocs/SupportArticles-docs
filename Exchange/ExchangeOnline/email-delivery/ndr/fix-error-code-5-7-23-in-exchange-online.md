@@ -1,6 +1,6 @@
 ---
 title: Fix NDR error 5.7.23 in Exchange Online
-ms.date: 01/29/2023
+ms.date: 01/24/2024
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm

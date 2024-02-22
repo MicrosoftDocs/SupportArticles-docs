@@ -16,7 +16,7 @@ appliesto:
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Repeated calls against the same folder are slow in Exchange Server 2013 or Exchange Online
 

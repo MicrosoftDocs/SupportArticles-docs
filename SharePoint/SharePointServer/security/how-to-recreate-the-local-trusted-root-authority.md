@@ -15,7 +15,7 @@ appliesto:
   - SharePoint Server 2013
   - SharePoint Foundation 2010
   - SharePoint Server 2010
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 
 # How to re-create the local Trusted Root Authority  

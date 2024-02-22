@@ -15,7 +15,7 @@ appliesto:
   - Outlook on the web (OWA)
   - Exchange Online
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Delegate can only see free/busy information in OWA when manager is in another forest during coexistence
 

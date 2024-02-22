@@ -15,7 +15,7 @@ ms.reviewer: haembab, ninob, meerak, v-trisshores
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 09/21/2022
+ms.date: 01/24/2024
 ---
 # "Multiple entries" error when a remote move migration fails
 

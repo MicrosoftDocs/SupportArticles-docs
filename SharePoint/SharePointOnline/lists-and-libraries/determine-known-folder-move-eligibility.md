@@ -14,7 +14,7 @@ appliesto:
   - OneDrive
   - SharePoint Online
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 # Check for Known Folder Move eligibility in OneDrive for SharePoint
 

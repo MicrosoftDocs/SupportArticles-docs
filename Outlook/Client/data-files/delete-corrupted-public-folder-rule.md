@@ -18,7 +18,7 @@ appliesto:
   - Outlook for Microsoft 365
   - Outlook LTSC 2021
 search.appverid: MET150
-ms.date: 05/12/2022
+ms.date: 10/30/2023
 ---
 # Can't access Folder Assistant in Outlook
 

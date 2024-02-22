@@ -1,7 +1,7 @@
 ---
 title: 404 error if calling makeEwsRequestAsync
 description: Describes an issue that you receive a 404 error message when a modern add-in calls the makeEwsRequestAsync function in Exchange Server 2013.
-ms.date: 06/22/2020
+ms.date: 01/24/2024
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm

@@ -14,7 +14,7 @@ ms.reviewer: kellybos, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Users receive NDR 5.2.0 when they send meeting invites in Microsoft 365 hybrid environment
 

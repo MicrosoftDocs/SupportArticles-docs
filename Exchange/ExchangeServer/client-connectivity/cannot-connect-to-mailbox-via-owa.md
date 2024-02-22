@@ -15,7 +15,7 @@ appliesto:
   - Exchange Server 2010 Standard
   - Exchange Server 2010 Enterprise
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # You cannot connect to an Exchange Server 2010 mailbox from Outlook Web App
 

@@ -15,7 +15,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Exchange Online
-ms.date: 10/20/2023
+ms.date: 01/24/2024
 ---
 # Overview of delegation in a Microsoft 365 hybrid environment
 

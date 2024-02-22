@@ -15,7 +15,7 @@ ms.custom:
   - CI 150405
 appliesto: 
   - SharePoint Online
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 
 # Default column name shown in list settings after name change

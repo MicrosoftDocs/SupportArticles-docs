@@ -15,7 +15,7 @@ ms.reviewer: saurkosh, jamesmi, romccart, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # "554 4.3.2 mailbox busy" when sending emails to a mailbox in Exchange Online
 

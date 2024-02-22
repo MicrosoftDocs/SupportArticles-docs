@@ -23,7 +23,7 @@ appliesto:
   - Microsoft Outlook 2010
   - Outlook for Microsoft 365
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # You can't view mailbox folders on an Exchange ActiveSync or Outlook client after an IMAP migration
 

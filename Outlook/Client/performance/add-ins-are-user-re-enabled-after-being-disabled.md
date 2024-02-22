@@ -21,7 +21,7 @@ appliesto:
   - Word 2013
   - PowerPoint 2013
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 # Add-ins are user re-enabled after being disabled by Office programs
 

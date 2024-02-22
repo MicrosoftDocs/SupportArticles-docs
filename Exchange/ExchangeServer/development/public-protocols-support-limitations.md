@@ -19,7 +19,7 @@ appliesto:
   - Exchange Server 2013 Standard Edition
   - Exchange Server 2016 Standard Edition
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Developer Support limitations for public protocols
 

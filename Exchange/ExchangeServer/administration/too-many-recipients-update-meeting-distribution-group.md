@@ -20,7 +20,7 @@ appliesto:
   - Exchange Server 2010 Enterprise
   - Outlook 2013
   - Outlook 2010
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Error (too many recipients) when you update a meeting in a large Outlook distribution group
 

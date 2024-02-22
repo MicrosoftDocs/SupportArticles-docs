@@ -15,7 +15,7 @@ appliesto:
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 # Calendar item body disappears in Outlook online mode in an Exchange Server 2013 environment
 

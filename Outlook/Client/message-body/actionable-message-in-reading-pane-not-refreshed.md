@@ -13,7 +13,7 @@ ms.reviewer: michael.green, gbratton, meerak, v-trisshores
 appliesto: 
   - Outlook for Microsoft 365
 search.appverid: MET150
-ms.date: 05/17/2023
+ms.date: 10/30/2023
 ---
 
 # Actionable message doesn't automatically refresh in the Outlook reading pane

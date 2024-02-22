@@ -16,7 +16,7 @@ appliesto:
   - SharePoint Server 2013
   - SharePoint Server 2010
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 # SharePoint server configuration requirements to support Kerberos AES encryption if errors occur
 

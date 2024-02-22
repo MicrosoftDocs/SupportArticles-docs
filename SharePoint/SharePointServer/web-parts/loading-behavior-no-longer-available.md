@@ -15,7 +15,7 @@ appliesto:
   - SharePoint Server 2013
   - SharePoint Server 2016
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 # Loading behavior no longer available in SharePoint Search Results Web Part properties
 

@@ -14,7 +14,7 @@ ms.reviewer: batre, ninob, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 08/31/2023
+ms.date: 01/24/2024
 ---
 # Error when creating public folder migration endpoint
 

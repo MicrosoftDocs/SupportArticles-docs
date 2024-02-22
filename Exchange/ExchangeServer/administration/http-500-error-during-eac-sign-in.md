@@ -16,7 +16,7 @@ appliesto:
   - Exchange Server 2019
   - Exchange Server 2016
 search.appverid: MET150
-ms.date: 10/18/2023
+ms.date: 01/24/2024
 ---
 
 # HTTP server error status (500) when signing in to EAC

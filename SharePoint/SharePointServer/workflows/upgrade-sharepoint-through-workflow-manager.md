@@ -15,7 +15,7 @@ appliesto:
   - SharePoint Server 2013
   - Workflow Manager 1.0
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 # Upgrade SharePoint 2013 to SharePoint 2016 through Workflow Manager
 

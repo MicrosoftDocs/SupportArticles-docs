@@ -14,7 +14,7 @@ appliesto:
   - SharePoint Foundation 2013
   - SharePoint Server 2013
   - Microsoft SharePoint Server 2013 Service Pack 1
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 
 # Incomplete search results for choice type columns with multiple values  

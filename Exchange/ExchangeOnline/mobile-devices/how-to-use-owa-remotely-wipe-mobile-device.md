@@ -12,7 +12,7 @@ search.appverid: MET150
 ms.reviewer: v-six
 author: cloud-writer
 ms.author: meerak
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 
 # How to use Outlook Web App to remotely wipe an ActiveSync device in Microsoft 365
