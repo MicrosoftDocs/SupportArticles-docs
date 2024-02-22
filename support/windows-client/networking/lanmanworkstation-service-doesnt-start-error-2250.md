@@ -39,27 +39,27 @@ This error typically indicates that the following volatile registry entry is mis
 > - Registry key: `ComputerName`
 > - Value: <*Computer_Name*>
 
-> [!NOTE]  
-> In the registry entry, <*Computer_Name*> is the name of the local computer.
-
-## Resolution
-
-[!INCLUDE [registry](../../includes/registry-important-alert.md)]
-
-You can resolve this issue by creating the following nonvolatile registry entry on the affected computer:
+This value should be the same vale as the value of the following non-volatile entry:
 
 > Registry subkey: `HKLM\System\CurrentControlSet\Control\ComputerName\ComputerName`
 > - Registry type: REG_SZ
 > - Registry key: ComputerName
 > - Value: <*Computer_Name*>
 
-You can use Registry Editor to manually create the registry entry. Alternatively, you can open an administrative Command Prompt window and then run the following command:
+> [!NOTE]  
+> In both registry entries, <*Computer_Name*> represents the name of the local computer.
+
+## Resolution
+
+[!INCLUDE [registry](../../includes/registry-important-alert.md)]
+
+You can resolve this issue by creating the  registry entry on the affected computer. You can use Registry Editor to manually create the registry entry. or you can open an administrative Command Prompt window and then run the following command:
 
 ```console
 reg add HKLM\SYSTEM\CurrentControlSet\Control\ComputerName\ActiveComputerName /t REG_SZ /v ComputerName /d <Computer_Name> /f
 ```
 
 > [!NOTE]  
-> In this command, <Computer_Name> is the name of the local computer.
+> In this command, <Computer_Name> represents the name of the local computer.
 
 After you edit the registry, restart the computer.
