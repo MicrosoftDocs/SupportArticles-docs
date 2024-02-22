@@ -14,7 +14,7 @@ ms.reviewer: chwillia, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Outlook connectivity issues when stateful packet inspection (SPI) is enabled on the router
 
