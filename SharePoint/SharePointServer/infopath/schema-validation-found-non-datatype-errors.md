@@ -14,7 +14,7 @@ appliesto:
   - SharePoint Server 2010
   - InfoPath 2010
 ms.reviewer: thomabr, sheyia, erica, markmead, harikumh, zsolti, russmax, fselkirk
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 # (Schema validation found non-datatype errors) error message when you try to open an InfoPath Form Web Part on an external list in SharePoint Server 2010
 

@@ -18,7 +18,7 @@ appliesto:
   - Windows Server 2012 R2 Preview
   - Windows Server 2012 R2 Standard
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 # SharePoint 2013 SP1 support in Windows Server 2012 R2
 

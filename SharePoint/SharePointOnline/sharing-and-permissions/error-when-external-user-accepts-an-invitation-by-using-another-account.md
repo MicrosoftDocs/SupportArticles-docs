@@ -14,7 +14,7 @@ ms.custom:
   - has-azure-ad-ps-ref
 appliesto: 
   - SharePoint Online
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 
 # Error when an external user accepts a SharePoint Online invitation by using another account

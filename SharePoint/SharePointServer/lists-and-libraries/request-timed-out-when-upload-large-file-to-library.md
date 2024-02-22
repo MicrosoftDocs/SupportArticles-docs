@@ -12,7 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Windows SharePoint Services 3.0
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 
 # "Request timed out" when you try to upload a large file to a SharePoint Services 3.0 document library

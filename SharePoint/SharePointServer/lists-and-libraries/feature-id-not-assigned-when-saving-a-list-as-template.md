@@ -12,7 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Microsoft SharePoint
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 
 # Feature ID not assigned when saving a list as a template  
