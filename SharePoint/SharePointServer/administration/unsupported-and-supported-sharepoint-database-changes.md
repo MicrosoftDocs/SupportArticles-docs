@@ -18,7 +18,7 @@ appliesto:
   - SharePoint Server 2019
   - SharePoint Server Subscription Edition
 search.appverid: MET150
-ms.date: 09/19/2023
+ms.date: 12/17/2023
 ---
 
 # Unsupported and supported SharePoint Server database changes

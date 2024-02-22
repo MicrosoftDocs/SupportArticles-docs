@@ -3,7 +3,7 @@ title: How to delete a content type from the SharePoint Content Type Hub
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
-ms.date: 05/11/2020
+ms.date: 12/17/2023
 audience: Admin
 ms.topic: troubleshooting
 localization_priority: Normal

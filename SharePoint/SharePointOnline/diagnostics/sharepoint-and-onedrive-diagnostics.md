@@ -3,7 +3,7 @@ title: Self-help diagnostics for SharePoint Online and OneDrive administrators
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
-ms.date: 10/18/2023
+ms.date: 12/17/2023
 audience: Admin
 ms.topic: troubleshooting
 localization_priority: Normal

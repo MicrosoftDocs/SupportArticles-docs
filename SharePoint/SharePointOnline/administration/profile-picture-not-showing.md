@@ -15,7 +15,7 @@ ms.custom:
   - CI 150415
 appliesto: 
   - SharePoint Online
-ms.date: 09/15/2023
+ms.date: 12/17/2023
 ---
 
 # Profile picture not showing in SharePoint Online

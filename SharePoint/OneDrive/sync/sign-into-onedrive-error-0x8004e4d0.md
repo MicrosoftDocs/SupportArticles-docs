@@ -14,7 +14,7 @@ ms.reviewer: salarson, prbalusu
 appliesto: 
   - OneDrive for Business
 search.appverid: MET150
-ms.date: 09/28/2022
+ms.date: 12/17/2023
 ---
 # Error 0x8004e4d0 when signing in to OneDrive
 

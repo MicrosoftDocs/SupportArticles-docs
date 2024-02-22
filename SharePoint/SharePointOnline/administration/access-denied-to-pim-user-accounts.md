@@ -3,7 +3,7 @@ title: Access denied error for PIM-managed accounts in SharePoint or OneDrive ad
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
-ms.date: 10/19/2023
+ms.date: 12/17/2023
 audience: Admin
 ms.topic: troubleshooting
 localization_priority: Normal

@@ -16,7 +16,7 @@ appliesto:
   - Microsoft OneDrive
 search.appverid: 
   - MET150
-ms.date: 10/27/2022
+ms.date: 12/17/2023
 ---
 # The OneDrive sync status icon incorrectly shows "syncing" in File Explorer
 
