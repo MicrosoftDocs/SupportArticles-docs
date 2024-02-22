@@ -15,7 +15,7 @@ search.appverid:
 appliesto: 
   - Exchange Online
   - Microsoft Exchange Server
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ms.reviewer: v-six
 ---
 # Mailbox Move to the cloud fail with error when you move mailboxes to Microsoft 365

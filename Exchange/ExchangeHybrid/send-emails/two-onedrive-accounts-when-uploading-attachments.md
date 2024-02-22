@@ -18,7 +18,7 @@ appliesto:
   - Exchange Server 2016
   - Exchange Server 2019
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Two OneDrive accounts appear when uploading attachments from Outlook on the web
 

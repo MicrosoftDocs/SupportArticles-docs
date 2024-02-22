@@ -17,7 +17,7 @@ appliesto:
   - Exchange Online
   - Exchange Server 2010 Standard
   - Exchange Server 2010 Enterprise
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ms.reviewer: v-six
 ---
 # (Exception has been thrown by the target) error when moving mailboxes to or from Microsoft 365 in a hybrid deployment

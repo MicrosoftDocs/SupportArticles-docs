@@ -22,7 +22,7 @@ appliesto:
   - Exchange Online
   - Exchange Server 2019
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Can't establish a TLS connection to a remote mail server in Exchange Online or Exchange Server
 
