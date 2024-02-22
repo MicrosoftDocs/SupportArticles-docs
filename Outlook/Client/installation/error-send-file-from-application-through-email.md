@@ -16,7 +16,7 @@ search.appverid:
 appliesto: 
   - Outlook 2013
   - Outlook 2010
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 # Error sending a file from an application when two versions of Outlook are installed
 

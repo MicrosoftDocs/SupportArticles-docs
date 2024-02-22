@@ -14,7 +14,7 @@ ms.reviewer: sercast
 appliesto: 
   - Outlook 2016
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 # Skype Meeting control is not displayed on Outlook 2016
 
