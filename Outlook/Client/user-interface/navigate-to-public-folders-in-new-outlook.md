@@ -13,7 +13,7 @@ ms.reviewer: meerak, batre, v-trisshores
 appliesto: 
   - Outlook for Microsoft 365
 search.appverid: MET150
-ms.date: 07/20/2023
+ms.date: 10/30/2023
 ---
 # Access public folders in Outlook for Windows
 

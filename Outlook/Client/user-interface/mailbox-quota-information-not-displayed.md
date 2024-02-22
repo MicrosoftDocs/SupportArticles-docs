@@ -24,7 +24,7 @@ appliesto:
   - Exchange Server 2019
   - Exchange Server 2016
   - Exchange Server 2013
-ms.date: 10/10/2023
+ms.date: 10/30/2023
 ---
 
 # Mailbox quota information isn't displayed on the Status bar in Outlook
