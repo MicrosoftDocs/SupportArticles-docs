@@ -1,7 +1,7 @@
 ---
 title: Offline servicing a WIM image with Latest Cumulative Update fails with error 0x80004001 "Applicability check not supported".
 description: Describes how to correct a failed process if you use Microsoft Endpoint Configuration Manager to do Offline Servicing on a .wim file after you install the latest cumulative update for Windows 10.
-ms.date: 05/19/2021
+ms.date: 12/05/2023
 ms.reviewer: kaushika
 ---
 

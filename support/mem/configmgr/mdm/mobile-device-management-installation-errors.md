@@ -1,7 +1,7 @@
 ---
 title: Mobile device management installation fails
 description: Describes a problem in which you receive the Call to HttpSendRequestSync failed for port 443 with status code 401 error when trying to enable a mobile device on a management point.
-ms.date: 06/16/2020
+ms.date: 12/05/2023
 ms.reviewer: kaushika
 ---
 # Mobile device management installation errors on System Center 2012 Configuration Manager SP1 management point

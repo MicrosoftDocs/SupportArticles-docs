@@ -1,7 +1,7 @@
 ---
 title: Software Metering failed to start PrepDriver
 description: Describes an issue in which Software Metering Agent fails when you install update 3125574 before you install the Configuration Manager client software.
-ms.date: 06/09/2020
+ms.date: 12/05/2023
 ms.reviewer: kaushika
 ---
 # Software Metering Agent fails with the Software Metering failed to start PrepDriver error
