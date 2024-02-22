@@ -17,7 +17,7 @@ appliesto:
   - SharePoint Server 2019
   - SharePoint Server 2016
   - SharePoint Server 2013
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 
 # Can't import active users through AD Import in a User Profile application in SharePoint

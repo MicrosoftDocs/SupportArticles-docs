@@ -13,7 +13,7 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - Word for iPad, iPhone and iPod touch
   - PowerPoint for iPad, iPhone and iPod touch
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 
 # Unable to open Office files from SharePoint 2010 on an iPad

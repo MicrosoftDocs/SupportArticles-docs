@@ -12,7 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - OneDrive
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 
 # How to block OneDrive.exe from being advertised after you install Office 2016  

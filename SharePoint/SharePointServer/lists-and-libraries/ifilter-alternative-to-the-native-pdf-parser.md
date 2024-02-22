@@ -14,7 +14,7 @@ appliesto:
   - Microsoft SharePoint Server 2019
   - Microsoft SharePoint Server 2016
   - Microsoft SharePoint Server 2013
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 
 # IFilter alternatives to the native PDF parser  
