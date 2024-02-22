@@ -84,7 +84,7 @@ Make sure the following services are running, as they're needed to generate the 
 
 ### Check MachineKeys permissions
 
-1. Go to C:\\ProgramData\\Microsoft\\Crypto\\RSA\\ on the affected computer.
+1. Go to *C:\\ProgramData\\Microsoft\\Crypto\\RSA\\* on the affected computer.
 2. Right-click **MachineKeys**, and then select **Properties** > **Security** > **Advanced**.
 3. Make sure that only the following permissions are configured:
 
@@ -95,7 +95,7 @@ Make sure the following services are running, as they're needed to generate the 
 
 ### Check permissions of the RDP machine key
 
-1. Go to C:\\ProgramData\\Microsoft\\Crypto\\RSA\\MachineKeys on the affected computer.
+1. Go to *C:\\ProgramData\\Microsoft\\Crypto\\RSA\\MachineKeys* on the affected computer.
 2. Right-click the key starting with **f686aace6942fb7f7ceb231212eef4a4**, and then select **Properties** > **Security** > **Advanced**.
 3. Change the **Owner** to someone with administrative rights to the machine.
 4. Close and reopen the **Advanced Security Settings** window.
