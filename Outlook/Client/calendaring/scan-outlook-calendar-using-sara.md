@@ -14,7 +14,7 @@ appliesto:
   - Outlook 2016
   - Outlook 2019
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 
 # Scan Outlook calendar by using Microsoft Support and Recovery Assistant

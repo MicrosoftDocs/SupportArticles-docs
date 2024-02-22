@@ -16,7 +16,7 @@ appliesto:
   - Outlook 2016
   - Outlook for Microsoft 365
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 # You can't add an Internet calendar in Outlook 2019, Outlook 2016, and Outlook for Microsoft 365
 

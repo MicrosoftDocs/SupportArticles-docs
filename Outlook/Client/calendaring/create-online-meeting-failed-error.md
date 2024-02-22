@@ -14,7 +14,7 @@ ms.reviewer: robevans
 appliesto: 
   - Outlook 2013
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 # Create online meeting failed error when the Lync add-in is managed by Group Policy
 

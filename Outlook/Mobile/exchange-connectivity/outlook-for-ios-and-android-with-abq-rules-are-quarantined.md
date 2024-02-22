@@ -16,7 +16,7 @@ appliesto:
   - Outlook for Android
   - Exchange Online
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 # Users who use Outlook for iOS and Android and Device Access (ABQ) rules are unexpectedly quarantined
 
