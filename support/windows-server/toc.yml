@@ -2368,7 +2368,7 @@
       href: ./remote/custom-server-authentication-certificate-for-tls.md
   - name: Connecting to a session or desktop
     items:
-    - name: '"An internal error has occurred"' when connecting to a remote machine
+    - name: '"An internal error has occurred" when connecting to a remote machine'
       href: ./remote/internal-error-has-occurred-connecting-remote-machine.md
     - name: Connect to and shadow console session with Terminal Services
       href: ./remote/connect-to-and-shadow-console-session.md
