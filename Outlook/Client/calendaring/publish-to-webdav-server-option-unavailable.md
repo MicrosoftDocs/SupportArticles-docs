@@ -14,7 +14,7 @@ ms.reviewer: gbratton
 appliesto: 
   - Microsoft Outlook 2010
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 # Publish to WebDAV Server option is unavailable for a calendar in Outlook 2010
 

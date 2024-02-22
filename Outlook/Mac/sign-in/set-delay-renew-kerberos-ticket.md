@@ -14,7 +14,7 @@ ms.topic: troubleshooting
 ms.author: meerak
 appliesto: 
   - Outlook 2016 for Mac
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 
 # How to set Outlook 2016 for Mac to delay trying to renew a Kerberos ticket

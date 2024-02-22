@@ -18,7 +18,7 @@ appliesto:
   - Outlook for Microsoft 365
   - Outlook 2019
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 # Outlook prompts for password and doesn't use Modern Authentication to connect to Microsoft 365
 

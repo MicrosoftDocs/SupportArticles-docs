@@ -15,7 +15,7 @@ ms.author: meerak
 appliesto: 
   - Exchange Online
   - Outlook 2016 for Mac
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 
 # Outlook 2016 for Mac repeatedly prompts for authentication
