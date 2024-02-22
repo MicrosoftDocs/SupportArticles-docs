@@ -12,7 +12,7 @@ ms.topic: troubleshooting
 ms.author: luche
 appliesto: 
   - OneDrive
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 
 # 401 error when you use Graph API to access OneDrive data with location-based policy enabled

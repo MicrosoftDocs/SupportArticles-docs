@@ -16,7 +16,7 @@ ms.author: luche
 appliesto: 
   - SharePoint Online
   - Microsoft Teams
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 
 # "This site can't be reached" and ERR_INVALID_RESPONSE error when accessing a SharePoint site

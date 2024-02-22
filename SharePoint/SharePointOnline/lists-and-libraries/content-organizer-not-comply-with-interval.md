@@ -13,7 +13,7 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Online
   - SharePoint Server
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 
 # Content Organizer doesn't comply with specified interval for sending alerts to rule managers

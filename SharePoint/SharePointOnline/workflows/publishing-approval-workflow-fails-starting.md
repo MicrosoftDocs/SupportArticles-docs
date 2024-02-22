@@ -13,7 +13,7 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Online
   - SharePoint Server
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 
 # Publishing Approval workflow doesn't automatically start in SharePoint Online or in SharePoint Server on-premises
