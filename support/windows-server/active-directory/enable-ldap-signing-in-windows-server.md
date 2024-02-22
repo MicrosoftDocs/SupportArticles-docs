@@ -1,7 +1,7 @@
 ---
 title: How to enable LDAP signing
 description: Describes how to enable LDAP signing in Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, and Windows 10.
-ms.date: 02/21/2024
+ms.date: 02/22/2024
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -114,11 +114,11 @@ When you change this value, the new value takes effect immediately. You don't ha
 
     > Ldap_simple_bind_s() failed: Strong Authentication Required
 
-## Events reference on LDAP signing requirement
+## Event reference for LDAP signing requirements
 
 ### Event ID 2886
 
-After starting DS services to remind administrators to enable signing requirement, Event ID 2886 is logged:
+After starting DS services to remind administrators to enable signing requirements, Event ID 2886 is logged:
 
 ```output
 Log Name:      Directory Service
@@ -139,7 +139,7 @@ You can enable additional logging to log an event each time a client makes such 
 
 ### Event ID 2887
 
-When a problem client was rejected, a summary event (Event ID 2887) of the last 24 hours is logged:
+When a problem client is rejected, a summary event (Event ID 2887) of the past 24 hours is logged:
 
 ```output
 Log Name:      Directory Service
@@ -165,7 +165,7 @@ Number of Negotiate/Kerberos/NTLM/Digest binds performed without signing: <count
 
 ### Event ID 2888
 
-When a problem client was rejected, a summary event (Event ID 2888) of the last 24 hours is logged:
+When a problem client is rejected, a summary event (Event ID 2888) of the past 24 hours is logged:
 
 ```output
 Log Name:      Directory Service
