@@ -183,7 +183,7 @@ This directory server is configured to reject such binds.  This is the recommend
 
 Summary information on the number of such binds received within the past 24 hours is below.
 
-You can enable additional logging to log an event each time a client makes such a bind, including information on which client made the bind.  To do so, please raise the setting for the "LDAP Interface Events" event logging category to level 2 or higher.
+You can enable additional logging to log an event each time a client makes such a bind, including information on which client made the bind. To do so, please raise the setting for the "LDAP Interface Events" event logging category to level 2 or higher.
 
 Number of simple binds rejected because they were performed without SSL/TLS: <count of binds>
 Number of Negotiate/Kerberos/NTLM/Digest binds rejected because they were performed without signing: <count of binds>
