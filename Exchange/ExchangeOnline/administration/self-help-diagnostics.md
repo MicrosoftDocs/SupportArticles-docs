@@ -16,7 +16,7 @@ appliesto:
   - Exchange Online
   - Outlook
 search.appverid: MET150
-ms.date: 10/19/2023
+ms.date: 01/24/2024
 ---
 # Self-help diagnostics for issues in Exchange Online and Outlook
 

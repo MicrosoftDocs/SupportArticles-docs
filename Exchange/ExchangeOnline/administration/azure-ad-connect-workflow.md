@@ -15,7 +15,7 @@ ms.reviewer: kerbo, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 10/20/2023
+ms.date: 01/24/2024
 ---
 # How Microsoft Entra Connect works in Microsoft 365
 

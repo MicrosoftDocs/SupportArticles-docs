@@ -16,7 +16,7 @@ appliesto:
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition
 search.appverid: MET150
-ms.date: 09/29/2023
+ms.date: 01/24/2024
 ---
 # User photos aren't synced from the on-premises environment to Exchange Online in a hybrid deployment
 

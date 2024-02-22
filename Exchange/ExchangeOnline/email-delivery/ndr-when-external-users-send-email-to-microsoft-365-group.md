@@ -15,7 +15,7 @@ ms.reviewer: batre, meerak, v-trisshores
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 11/08/2023
+ms.date: 01/24/2024
 ---
 
 # NDR 550 5.7.193 when external users send email to a Microsoft 365 group

@@ -14,7 +14,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Exchange Online
-ms.date: 12/19/2023
+ms.date: 01/24/2024
 ms.reviewer: v-six
 ---
 # Microsoft 365 users can't open or view attachments in Outlook on the web

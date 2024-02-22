@@ -15,7 +15,7 @@ appliesto:
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition
 search.appverid: MET150
-ms.date: 03/29/2023
+ms.date: 01/24/2024
 recommendations: false
 ---
 # "Cannot process argument transformation" error for cmdlets in Exchange Server 2013 with CU11

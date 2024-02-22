@@ -16,7 +16,7 @@ appliesto:
   - Exchange Online
   - Outlook 2016 Professional MSI
 search.appverid: MET150
-ms.date: 03/06/2023
+ms.date: 01/24/2024
 ---
 
 # Outlook doesn't connect when using Modern authentication

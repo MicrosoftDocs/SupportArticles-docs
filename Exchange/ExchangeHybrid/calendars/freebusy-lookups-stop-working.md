@@ -18,7 +18,7 @@ appliesto:
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition
 search.appverid: MET150
-ms.date: 12/04/2023
+ms.date: 01/24/2024
 ---
 # Free/busy lookups stop working in a cross-premises environment or an Exchange Server hybrid deployment
 
