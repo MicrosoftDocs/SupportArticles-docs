@@ -1,6 +1,6 @@
 ---
-title: Container group is stopped due to killing event interruptions
-description: Provides a solution to an issue where Azure container group is unexpectedly stopped due to killing event interruptions.
+title: Container group intermittently restarts
+description: Provides a solution to an issue where Azure container group is unexpectedly stopped and restarted due to killing event interruptions.
 ms.date: 02/22/2024
 ms.reviewer: tysonfreeman, v-weizhu
 ms.service: container-instances
