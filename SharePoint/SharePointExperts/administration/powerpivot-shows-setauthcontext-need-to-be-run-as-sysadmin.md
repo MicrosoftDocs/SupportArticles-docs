@@ -13,7 +13,7 @@ ms.topic: troubleshooting
 ms.custom: sap:spsexperts, CSSTroubleshoot
 appliesto: 
   - Microsoft SharePoint
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 
 # "SetAuthContext need to be run as sysadmin" error in PowerPivot

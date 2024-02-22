@@ -13,7 +13,7 @@ ms.reviewer: randring
 ms.custom: sap:spsexperts, CSSTroubleshoot
 appliesto: 
   - SharePoint Server 2016
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 
 # SharePoint 2016 Microsoft Excel Online Web Part error "We couldn't find the file you wanted"

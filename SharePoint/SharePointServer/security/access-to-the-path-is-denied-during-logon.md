@@ -12,7 +12,7 @@ ms.custom: CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - Windows SharePoint Services 2.0
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 
 # "Server Error in '/' Application. Access to the path  is denied" when you log on to Windows SharePoint Services 2.0  

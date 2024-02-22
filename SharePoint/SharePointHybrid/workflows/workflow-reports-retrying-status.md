@@ -13,7 +13,7 @@ ms.author: luche
 appliesto: 
   - SharePoint Online
   - SharePoint Server
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 
 # "Failed on Start (retrying)" status for a "Collect Feedback in SharePoint 2010" workflow in SharePoint Online or SharePoint Server

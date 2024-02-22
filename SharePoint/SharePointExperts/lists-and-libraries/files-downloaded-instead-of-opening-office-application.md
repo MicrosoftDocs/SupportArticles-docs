@@ -13,7 +13,7 @@ ms.topic: troubleshooting
 ms.custom: sap:spsexperts, CSSTroubleshoot
 appliesto: 
   - Office Web Apps
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 
 # A SharePoint file is downloaded instead of opening the Office application with a direct connection to it

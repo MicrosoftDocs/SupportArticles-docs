@@ -13,7 +13,7 @@ ms.custom: sap:spsexperts, CSSTroubleshoot
 ms.reviewer: randring
 appliesto: 
   - SharePoint Server 2016
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 
 # PowerPivot Gallery Snapshots Fail for SSL Host Header Sites

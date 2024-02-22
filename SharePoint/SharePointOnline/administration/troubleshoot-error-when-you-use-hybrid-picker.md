@@ -12,7 +12,7 @@ ms.topic: troubleshooting
 ms.author: luche
 appliesto: 
   - SharePoint Online
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 
 # "My site URL or team site URL from Discovery Service is null or empty" error when you use the SharePoint Hybrid Picker
