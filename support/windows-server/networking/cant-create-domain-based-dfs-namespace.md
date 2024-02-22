@@ -33,7 +33,7 @@ At the same time, you can successfully create a stand-alone namespace.
 
 When you create a new domain-based namespace, the computer queries the Domain Name System (DNS) server for domain information. The DNS server responds by sending a list of the A records of the domain controllers for that domain. The computer then contacts one of the domain controllers, and attempts to use your account credentials authenticate by using NTLM authentication.
 
-If your account belongs to the Protected Users group, your account can't use NTLM authentication. Authentication fails, and generates a STATUS_ACCOUNT_RESTRICTION.
+If your account belongs to the Protected Users group, your account can't use NTLM authentication. Authentication fails, and generates a STATUS_ACCOUNT_RESTRICTION error.
 
 ## Resolution
 
