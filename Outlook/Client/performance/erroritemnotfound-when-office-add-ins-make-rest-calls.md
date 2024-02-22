@@ -17,7 +17,7 @@ appliesto:
   - Outlook 2016
   - Outlook 2013
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 # ErrorItemNotFound error when Office add-ins make REST calls against an Outlook item ID
 

@@ -15,7 +15,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Outlook 2013
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 # Microsoft Exchange dialog doesn't include a Connection tab in Outlook 2013
 

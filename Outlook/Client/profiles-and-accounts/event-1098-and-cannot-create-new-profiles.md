@@ -15,7 +15,7 @@ appliesto:
   - Outlook 2019
   - Outlook 2016
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 # Unable to create an Outlook profile after a migration with Event 1098 in Microsoft Entra ID log
 
