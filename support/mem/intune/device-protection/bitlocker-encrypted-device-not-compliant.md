@@ -1,7 +1,7 @@
 ---
 title: BitLocker-encrypted device displays as Not compliant
 description: Describes an issue in which a BitLocker-encrypted Windows 10 device shows as Not compliant in Intune because BitLocker encryption takes a long time.
-ms.date: 11/29/2021
+ms.date: 12/05/2023
 ms.reviewer: kaushika, saurkosh
 search.appverid: MET150
 ms.custom: sap:Device protection

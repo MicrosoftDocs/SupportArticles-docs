@@ -1,7 +1,7 @@
 ---
 title: App-V applications can't be streamed from a DP
 description: Describes a problem in which an App-V application cannot be streamed to a client that has the Bypass proxy server for local addresses option set.
-ms.date: 06/16/2020
+ms.date: 12/05/2023
 ms.reviewer: kaushika, ErinWi, prakask, keiththo, alvinm
 ---
 # App-V applications cannot be streamed from a distribution point if Bypass proxy server for local addresses is set
