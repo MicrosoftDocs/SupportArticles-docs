@@ -24,8 +24,6 @@ items:
     href: common-confidential-container-errors.md
   - name: Container group still runs after a stop or delete command 
     href: aci-still-running-after-stop-delete-command.md
-  - name: Container Instances debugging tools
-    href: aci-debug-tools.md
   - name: ACI debugging tools
     href: aci-debug-tools.md
 
