@@ -62,21 +62,9 @@ On sign in, you receive the following message:
 
 Try to sign in to the [Power Automate Portal](https://flow.microsoft.com). If it works as expected, then the issue should be related to the local network configuration of the machine that hosts Power Automate for desktop.
 
-### Cause
+### Resolution
 
-The machine that hosts Power Automate for desktop can't connect to the required domains. This issue could happen either because the domains are blocked on the network, or because you're using a proxy server that requires authentication.
-
-For the latter, Power Automate for desktop can't authenticate with the proxy server, thus the communication fails. Note that the proxy server should be using automatic authentication with the user's Active Directory account.
-
-### Resolution for the blocked domains issue
-
-Approve the [Required services](/power-automate/ip-address-configuration#required-services) to which Power Automate connects. Ensure none of these services are blocked on your network.
-
-Approve the [Desktop flows services required for runtime](/power-automate/ip-address-configuration#desktop-flows-services-required-for-runtime) to enable the connection from the local machine for the desktop flows runs.
-
-### Resolution and workaround for the proxy authentication issue
-
-To solve this issue, follow the steps described in [Proxy server related errors in Power Automate for desktop](proxy-error-console.md).
+For more information about possible causes and steps to resolve, see [Can't sign in or create or edit or save or view desktop flows](https://learn.microsoft.com/troubleshoot/power-platform/power-automate/desktop-flows/cannot-sign-in-create-edit-save-view-desktop-flows#cause)
 
 ## Login window keeps popping up
 
