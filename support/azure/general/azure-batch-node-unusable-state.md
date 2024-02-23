@@ -112,6 +112,8 @@ This scenario is about the cause for the unusable node when adopting No Public I
 
 #### Solution 2: Additional Network Setting
 
+In the blade of **Batch Account Network setting**
+
 1. If you are using **Public Network**, then this issue shuold not happen. In this scenario, I would suggest you referring to other possible cause.
    
 2. In the case of using **Selected Network** or **Disable Network** in your network setting, if you only configure **Batch Account Private Endpoint** or did not configure Any Private Endpoint, you need to configure a new **Node Management Private Endpoint** to make sure the internal communication between nodes is fluid.
