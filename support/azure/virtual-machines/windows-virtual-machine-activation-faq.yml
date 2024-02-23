@@ -32,7 +32,17 @@ sections:
       - question: |
           What happens if the Windows activation period expires?
         answer: |
+          When the grace period expires and Windows is still not activated, all versions will be limited to 2Gb of memory within the virtual machine. Windows Server 2008 R2 and later versions of Windows show more notifications about activating. The desktop wallpaper remains black, and Windows Update installs security and critical updates only, but it doesn't install optional updates. See the *Notifications* section at the bottom of the [Licensing Conditions](/previous-versions/tn-archive/ff793403(v=technet.10)) page.
+
+      - question: |
+          What happens if the Windows activation period expires?
+        answer: |
           When the grace period expires and Windows is still not activated, Windows Server 2008 R2 and later versions of Windows show more notifications about activating. The desktop wallpaper remains black, and Windows Update installs security and critical updates only, but it doesn't install optional updates. See the *Notifications* section at the bottom of the [Licensing Conditions](/previous-versions/tn-archive/ff793403(v=technet.10)) page.
+
+      - question: |
+          Is memory limited within the virtual machine when the Windows activation period expires?
+        answer: |
+          Yes. Memory is limited to 2 Gb.
 
 additionalContent: |
   ## More information
