@@ -1,7 +1,7 @@
 ---
 title: Cluster pending operation (OperationNotAllowed) errors
 description: Learn to resolve OperationNotAllowed errors that occur when you try to start, upgrade, or scale an Azure Kubernetes Service (AKS) cluster.
-ms.date: 02/22/2023
+ms.date: 02/22/2024
 author: axelgMS
 ms.author: axelg
 editor: v-jsitser
@@ -37,7 +37,7 @@ Some operations take time to run. Those operations block other operations if the
 
 ## Solution 1: Wait until the operation finishes
 
-In the following example, if a cluster is being updated from one client and it's also being started from another client while the update is still operating, the "OperationNotAllowed" error occurs.
+In the following example, if you start a cluster from one client while the cluster is being updated from another client, the "OperationNotAllowed" error occurs.
 
 ```azurecli
 az aks start  -n <myAKSCluster> -g <myResourceGroup>
@@ -47,13 +47,13 @@ Code: OperationNotAllowed
 Message: managed cluster is in Provisioning State(Starting) and Power State(Running), starting cannot be performed The previous operation started at '2024-02-21T13:33:55Z' and elapsed time is: '00:00:00' (RFC3339 format)
 ```
 
-To resolve such issue, you usually have to wait until the blocking operation finishes. You can also try aborting the long running operation by using the [az aks operation-abort](/azure/aks/manage-abort-operations) command.
+To resolve such issue, you can wait until the blocking operation finishes, or try aborting the long running operation by using the [az aks operation-abort](/azure/aks/manage-abort-operations) command.
 
-## Solution 2: Ensure you aren't performing two similar operations in a row
+## Solution 2: Ensure you don't perform two similar operations in a row
 
-If you're executing an operation on a cluster that's already in the desired state, the "OperationNotAllowed" error can occur.
+If you execute an operation on a cluster that's already in the desired state, the "OperationNotAllowed" error occurs.
 
-For example, if a cluster is already stopped, executing another stop operation would trigger this error:
+For example, if a cluster is already stopped, executing another stop operation triggers this error:
 
 ```azurecli
 az aks stop -n <myAKSCluster> -g <myResourceGroup>
@@ -85,7 +85,7 @@ Then, use the following table to take the appropriate action based on the comman
 
 There are scenarios where an operation fails because of a transient issue, and is left with an inconsistent state. 
 
-In the following example, a deletion was issued on the node pool \<agentpool> but that deletion isn't completed yet. Once a deletion started, no other operation can be made on the resource. That's why the scale operation is failing with the "OperationNotAllowed" error.
+In the following example, a deletion was issued on the node pool \<agentpool> but that deletion isn't completed yet. Once a deletion started, no other operation can be made on the resource. That's why the scale operation fails with the "OperationNotAllowed" error.
 
 ```output
 {
