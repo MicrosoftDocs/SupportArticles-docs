@@ -16,7 +16,7 @@ appliesto:
   - Microsoft 365 Apps for enterprise
   - Outlook
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 02/22/2024
 ---
 # Install Microsoft Support and Recovery Assistant from a network share or internet location
 
