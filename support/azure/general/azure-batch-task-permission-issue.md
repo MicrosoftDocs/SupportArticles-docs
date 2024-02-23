@@ -41,7 +41,7 @@ The following error message might appear:
 
 ### Cause
 
-This issue usually happens when you don't have the right permission to perform the operation. By default, SAS includes only the "Read" permission for the container, which means the SAS token only specifies "r".
+This issue usually happens when you don't have the right permission to perform the operation. By default, SAS includes only the "Read" permission for the container, which means the SAS token only specifies "r."
 
 Here's an example:
 
