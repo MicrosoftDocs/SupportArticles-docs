@@ -17,7 +17,7 @@ ms.date: 03/31/2022
 
 # Description of the Office Feature Updates task
 
-The Office Feature Updates task checks for updates to service-delivered Office features, such as Copilot. This task runs for every user for all Microsoft 365 Apps Channels. However, it downloads feature updates based on your defined policies. For example, Semi-Annual Enterprise Channel (SAEC) users are expected to receive updates on a six-month cadence. Therefore, this task doesn't schedule downloads of feature updates to run every few hours.
+The Office Feature Updates task checks for updates to service-delivered Office features, such as Copilot. This task runs for every user for all Microsoft 365 Apps Channels. However, it downloads feature updates based on your defined policies. For example, Semi-Annual Enterprise Channel (SAEC) users are expected to receive updates twice a year. Therefore, this task doesn't schedule downloads of feature updates to run every few hours.
 
 ## Summary
 
