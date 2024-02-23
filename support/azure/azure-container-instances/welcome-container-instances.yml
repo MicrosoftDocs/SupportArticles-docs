@@ -9,7 +9,7 @@ metadata:
   ms.topic: landing-page # Required
   author: genlin  #Required; your GitHub user alias, with correct capitalization.
   ms.author: genli #Required; microsoft alias of author; optional team alias.
-  ms.date: 02/08/2024
+  ms.date: 02/23/2024
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -37,12 +37,16 @@ landingContent:
             url: web-socket-is-closed-or-could-not-be-opened.md
           - text: Image pull takes a long time to run
             url: long-image-pulls.md
+          - text: ServiceUnavailable - container group quota exceeded in region
+            url: service-unavailable-container-group-quota-exceeded.md
 
   # Card
   - title: Troubleshoot a running container group 
     linkLists:
       - linkListType: how-to-guide
         links:
+          - text: Azure Container Instances shows unexpected memory usage metrics
+            url: unexpected-memory-usage-metrics.md
           - text: Can't pull images from Container Registry using a managed identity
             url: acr-image-pull-failures-managed-identity.md
           - text: Confidential container issues
