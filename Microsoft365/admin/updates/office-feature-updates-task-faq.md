@@ -17,7 +17,7 @@ ms.date: 03/31/2022
 
 # Description of the Office Feature Updates task
 
-The Office Feature Updates task checks for updates to service-delivered Office features, such as Copilot. This task runs for every user for all Microsoft 365 Apps Channels. However, it downloads feature updates based on your defined policies. For example, Semi-Annual Enterprise Channel (SAEC) users are expected to receive updates twice a year. Therefore, this task doesn't schedule downloads of feature updates to run every few hours.
+The Office Feature Updates task checks for updates to [Connected experiences in Microsoft 365](https://support.microsoft.com/office/connected-experiences-in-microsoft-365-8d2c04f7-6428-4e6e-ac58-5828d4da5b7c), such as Copilot. This task runs for every user for all Microsoft 365 Apps Channels. However, it downloads feature updates based on your defined policies. For example, Semi-Annual Enterprise Channel (SAEC) users are expected to receive updates twice a year. Therefore, this task doesn't schedule downloads of feature updates to run every few hours.
 
 ## Summary
 
@@ -46,7 +46,7 @@ The **Office Feature Updates** task calls the "SDXHelper.exe" process in the bac
 
 **Q2: Can I disable this task?**
 
-**A2:** For Microsoft 365 customers, we recommend that they don't disable the Office Feature Updates task. This task makes sure that their service-delivered Office features download the latest updates when the updates are available. However, these services are still updated through the standard update mechanisms.
+**A2:** For Microsoft 365 customers, we recommend that they don't disable the Office Feature Updates task. This task makes sure that their connected experiences download the latest updates when the updates are available. However, these experiences are still updated through the standard update mechanisms.
 
 **Q3: Is this task dependent on the Office Automatic Updates 2.0 task (or vice versa) for Office feature updates?**
 
@@ -62,8 +62,8 @@ The **Office Feature Updates** task calls the "SDXHelper.exe" process in the bac
 
 **Q6: How do connection settings affect the update task?**
 
-**A6:** Any applications and other settings, like firewalls, that block connections to the supporting Content Delivery Network (CDN) also block the delivery feature updates to user's machine. The URLs and IP addresses that need to be reachable are documented with other Microsoft domains and URLs in the article [Microsoft 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges). Lines 46 and 47 are the relevant items for this feature.
+**A6:** Any applications and other settings that block connections to the supporting Content Delivery Network (CDN), such as firewalls, also block the delivery feature updates to user's machine. The URLs and IP addresses that need to be reachable are documented with other Microsoft domains and URLs in the article [Microsoft 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges). Lines 46 and 47 are the relevant items for this feature.
 
-**Q7: When do updates for service-delivered features happen?**
+**Q7: When do updates for connected experiences happen?**
 
-**A7:** Updates to service-delivered features can happen at any time. However, these updates are silent and don't require any user intervention. They don't require Office to restart.
+**A7:** Updates to connected experiences can happen at any time. However, these updates are silent and don't require any user intervention. They don't require Office to restart.
