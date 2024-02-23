@@ -1323,21 +1323,21 @@ items:
       href: ./setup-upgrade-and-drivers/usmt-return-codes.md
     - name: USMT common issues
       href: ./setup-upgrade-and-drivers/usmt-common-issues.md
-- name: certificates-and-public-key-infrastructure-pki
+- name: Certificates and Public Key Infrastructure (PKI)
   items:
-  - name: sap:certificate-chaining-and-revocation, csstroubleshoot
+  - name: Certificate chaining and revocation
     items:
     - name: Certificates are missing after you update a device
-      href: support\windows-client\certificates-and-public-key-infrastructure-pki\certs-missing-after-device-update.md
-  - name: ''
+      href: ./certificates-and-public-key-infrastructure-pki/certs-missing-after-device-update.md
+  - name: Smart card logon
     items:
     - name: Code 31 for Microsoft USB CCID smart card reader
-      href: support\windows-client\certificates-and-public-key-infrastructure-pki\code-31-device-manager-usbccid-smartcard-reader-problem.md
+      href: ./certificates-and-public-key-infrastructure-pki/code-31-device-manager-usbccid-smartcard-reader-problem.md
     - name: Can't authenticate because of an incorrect PIV smart card driver update
-      href: support\windows-client\certificates-and-public-key-infrastructure-pki\cannot-authenticate-incorrect-piv-smart-card-driver-update.md
+      href: ./certificates-and-public-key-infrastructure-pki/cannot-authenticate-incorrect-piv-smart-card-driver-update.md
     - name: 0x6 ERROR_INVALID_HANDLE error when a multithreaded application accesses a smart card
-      href: support\windows-client\certificates-and-public-key-infrastructure-pki\0x6-error-invalid-handle-multithreaded-application.md
+      href: ./certificates-and-public-key-infrastructure-pki/0x6-error-invalid-handle-multithreaded-application.md
     - name: Integrated Unblock screen not displayed when smart card PIN is blocked
-      href: support\windows-client\certificates-and-public-key-infrastructure-pki\integrated-unblock-screen-not-displayed-smart-card-pin-blocked.md
+      href: ./certificates-and-public-key-infrastructure-pki/integrated-unblock-screen-not-displayed-smart-card-pin-blocked.md
     - name: Registry keys for smart card PIN caching options not available
-      href: support\windows-client\certificates-and-public-key-infrastructure-pki\registry-keys-smart-card-pin-caching-options-not-available.md
+      href: ./certificates-and-public-key-infrastructure-pki/registry-keys-smart-card-pin-caching-options-not-available.md

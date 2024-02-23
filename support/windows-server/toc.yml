@@ -3153,131 +3153,131 @@ items:
       href: ./setup-upgrade-and-drivers/mitigation-for-amd-family-17h-models-30h-3fh-rome-erratum-1474.md
     - name: ERROR_PATH_NOT_FOUND error when performing an in-place upgrade
       href: ./setup-upgrade-and-drivers/error-path-not-found-upgrading-windows-server-2019.md
-- name: certificates-and-public-key-infrastructure-pki
+- name: Certificates and Public Key Infrastructure (PKI)
   items:
-  - name: ''
+  - name: Smart card logon
     items:
     - name: Can't select CA-compatible certificate templates
-      href: support\windows-server\certificates-and-public-key-infrastructure-pki\cannot-select-windows-server-2016-ca-compatible-certificate-templates.md
+      href: ./certificates-and-public-key-infrastructure-pki/cannot-select-windows-server-2016-ca-compatible-certificate-templates.md
     - name: Required trusted root certificates
-      href: support\windows-server\certificates-and-public-key-infrastructure-pki\trusted-root-certificates-are-required.md
+      href: ./certificates-and-public-key-infrastructure-pki/trusted-root-certificates-are-required.md
     - name: Move Certificate Server database and log files
-      href: support\windows-server\certificates-and-public-key-infrastructure-pki\move-certificate-server-database-log-files.md
+      href: ./certificates-and-public-key-infrastructure-pki/move-certificate-server-database-log-files.md
     - name: A Certification Authority can't use a certificate template
-      href: support\windows-server\certificates-and-public-key-infrastructure-pki\ca-cant-use-certificate-template.md
+      href: ./certificates-and-public-key-infrastructure-pki/ca-cant-use-certificate-template.md
     - name: Can't share files with multiple EFS certificates
-      href: support\windows-server\certificates-and-public-key-infrastructure-pki\cant-share-files-multiple-efs-certificates.md
+      href: ./certificates-and-public-key-infrastructure-pki/cant-share-files-multiple-efs-certificates.md
     - name: Back up recovery agent EFS private key
-      href: support\windows-server\certificates-and-public-key-infrastructure-pki\back-up-recovery-agent-efs-private-key.md
+      href: ./certificates-and-public-key-infrastructure-pki/back-up-recovery-agent-efs-private-key.md
     - name: Version 3 templates don't appear in certificate web enrollment
-      href: support\windows-server\certificates-and-public-key-infrastructure-pki\cng-templates-not-appear-certificate-web-enrollment.md
+      href: ./certificates-and-public-key-infrastructure-pki/cng-templates-not-appear-certificate-web-enrollment.md
     - name: Move a certification authority to another server
-      href: support\windows-server\certificates-and-public-key-infrastructure-pki\move-certification-authority-to-another-server.md
+      href: ./certificates-and-public-key-infrastructure-pki/move-certification-authority-to-another-server.md
     - name: Find the name of Enterprise Root CA server
-      href: support\windows-server\certificates-and-public-key-infrastructure-pki\find-name-enterprise-root-ca-server.md
+      href: ./certificates-and-public-key-infrastructure-pki/find-name-enterprise-root-ca-server.md
     - name: How to reinstall CA role
-      href: support\windows-server\certificates-and-public-key-infrastructure-pki\uninstall-reinstall-ca-role.md
+      href: ./certificates-and-public-key-infrastructure-pki/uninstall-reinstall-ca-role.md
     - name: Certificate Services may not start on a computer
-      href: support\windows-server\certificates-and-public-key-infrastructure-pki\cs-cant-start-computer.md
+      href: ./certificates-and-public-key-infrastructure-pki/cs-cant-start-computer.md
     - name: Error 0x800706ba during certificate enrollment
-      href: support\windows-server\certificates-and-public-key-infrastructure-pki\error-0x800706ba-certificate-enrollment.md
+      href: ./certificates-and-public-key-infrastructure-pki/error-0x800706ba-certificate-enrollment.md
     - name: How to remove manually Enterprise Windows Certificate Authority
-      href: support\windows-server\certificates-and-public-key-infrastructure-pki\delete-enterprise-windows-certificate-authority.md
+      href: ./certificates-and-public-key-infrastructure-pki/delete-enterprise-windows-certificate-authority.md
     - name: Valid root CA certificates are untrusted
-      href: support\windows-server\certificates-and-public-key-infrastructure-pki\valid-root-ca-certificates-untrusted.md
+      href: ./certificates-and-public-key-infrastructure-pki/valid-root-ca-certificates-untrusted.md
     - name: Set up certificate-based authentication across forests without trust for a web server
-      href: support\windows-server\certificates-and-public-key-infrastructure-pki\set-up-certificate-based-authentication-across-forest-without-trust.md
+      href: ./certificates-and-public-key-infrastructure-pki/set-up-certificate-based-authentication-across-forest-without-trust.md
     - name: Certificate Services doesn't start
-      href: support\windows-server\certificates-and-public-key-infrastructure-pki\certificate-services-not-start.md
+      href: ./certificates-and-public-key-infrastructure-pki/certificate-services-not-start.md
     - name: Set different validity period for subordinate CA
-      href: support\windows-server\certificates-and-public-key-infrastructure-pki\set-enterprise-subordinate-ca-validity-period.md
+      href: ./certificates-and-public-key-infrastructure-pki/set-enterprise-subordinate-ca-validity-period.md
     - name: Change expiration date of certificates issued by CA
-      href: support\windows-server\certificates-and-public-key-infrastructure-pki\change-certificates-expiration-date.md
+      href: ./certificates-and-public-key-infrastructure-pki/change-certificates-expiration-date.md
     - name: Export Root Certification Authority Certificate
-      href: support\windows-server\certificates-and-public-key-infrastructure-pki\export-root-certification-authority-certificate.md
+      href: ./certificates-and-public-key-infrastructure-pki/export-root-certification-authority-certificate.md
     - name: 'Troubleshooting guidance: Active Directory replication'
-      href: support\windows-server\certificates-and-public-key-infrastructure-pki\troubleshoot-adreplication-guidance.md
+      href: ./certificates-and-public-key-infrastructure-pki/troubleshoot-adreplication-guidance.md
     - name: DPAPI MasterKey backup failures
-      href: support\windows-server\certificates-and-public-key-infrastructure-pki\dpapi-masterkey-backup-failures.md
+      href: ./certificates-and-public-key-infrastructure-pki/dpapi-masterkey-backup-failures.md
     - name: Errors when applications try to connect to SQL Server
-      href: support\windows-server\certificates-and-public-key-infrastructure-pki\apps-forcibly-closed-tls-connection-errors.md
+      href: ./certificates-and-public-key-infrastructure-pki/apps-forcibly-closed-tls-connection-errors.md
     - name: Disable TLS 1.0 and 1.1 and force the use of TLS 1.2
-      href: support\windows-server\certificates-and-public-key-infrastructure-pki\disable-tls-1-1dot1-mbam-servers.md
+      href: ./certificates-and-public-key-infrastructure-pki/disable-tls-1-1dot1-mbam-servers.md
   - name: sap:certificate-root-update-program, csstroubleshoot
     items:
     - name: Crypt32 8 events continuously reported
-      href: support\windows-server\certificates-and-public-key-infrastructure-pki\crypt32-event-8.md
+      href: ./certificates-and-public-key-infrastructure-pki/crypt32-event-8.md
     - name: Event ID 4107 or Event ID 11 is logged
-      href: support\windows-server\certificates-and-public-key-infrastructure-pki\event-id-4107-or-event-id-11-is-logged.md
+      href: ./certificates-and-public-key-infrastructure-pki/event-id-4107-or-event-id-11-is-logged.md
     - name: Removal of US Federal Common Policy from Microsoft Trusted Root Store
-      href: support\windows-server\certificates-and-public-key-infrastructure-pki\microsoft-trusted-root-store-removal-of-us-federal-common-policy.md
+      href: ./certificates-and-public-key-infrastructure-pki/microsoft-trusted-root-store-removal-of-us-federal-common-policy.md
   - name: sap:certificate-enrollment, csstroubleshoot
     items:
     - name: Clients can't authenticate with a server
-      href: support\windows-server\certificates-and-public-key-infrastructure-pki\clients-cant-authenticate-server.md
+      href: ./certificates-and-public-key-infrastructure-pki/clients-cant-authenticate-server.md
     - name: Remote Desktop server certificates are renewed two times daily
-      href: support\windows-server\certificates-and-public-key-infrastructure-pki\remote-desktop-server-certificates-renewed.md
+      href: ./certificates-and-public-key-infrastructure-pki/remote-desktop-server-certificates-renewed.md
     - name: Add SAN to secure LDAP certificate
-      href: support\windows-server\certificates-and-public-key-infrastructure-pki\add-san-to-secure-ldap-certificate.md
+      href: ./certificates-and-public-key-infrastructure-pki/add-san-to-secure-ldap-certificate.md
     - name: How to install imported certificates on a Web server
-      href: support\windows-server\certificates-and-public-key-infrastructure-pki\install-imported-certificates.md
+      href: ./certificates-and-public-key-infrastructure-pki/install-imported-certificates.md
     - name: Certutil -view command doesn't return issued certificates
-      href: support\windows-server\certificates-and-public-key-infrastructure-pki\certutil-view-not-return-issued-certificate.md
+      href: ./certificates-and-public-key-infrastructure-pki/certutil-view-not-return-issued-certificate.md
     - name: Approval required for certificate renewals
-      href: support\windows-server\certificates-and-public-key-infrastructure-pki\approval-required-certificate-renewals-autoenrollment.md
+      href: ./certificates-and-public-key-infrastructure-pki/approval-required-certificate-renewals-autoenrollment.md
   - name: sap:active-directory-certificate-services-adcs, csstroubleshoot
     items:
     - name: How to decommission Windows enterprise CA and remove related objects
-      href: support\windows-server\certificates-and-public-key-infrastructure-pki\decommission-enterprise-certification-authority-and-remove-objects.md
+      href: ./certificates-and-public-key-infrastructure-pki/decommission-enterprise-certification-authority-and-remove-objects.md
     - name: How to import third-party CAs into Enterprise NTAuth store
-      href: support\windows-server\certificates-and-public-key-infrastructure-pki\import-third-party-ca-to-enterprise-ntauth-store.md
+      href: ./certificates-and-public-key-infrastructure-pki/import-third-party-ca-to-enterprise-ntauth-store.md
     - name: CA doesn't publish certificates in trusted domain
-      href: support\windows-server\certificates-and-public-key-infrastructure-pki\cannot-publish-certificate-trusted-domain.md
+      href: ./certificates-and-public-key-infrastructure-pki/cannot-publish-certificate-trusted-domain.md
     - name: Superseded Certificate Templates and impact on user’s AD store
-      href: support\windows-server\certificates-and-public-key-infrastructure-pki\superseded-certificate-templates-impact-user-ad-store.md
+      href: ./certificates-and-public-key-infrastructure-pki/superseded-certificate-templates-impact-user-ad-store.md
   - name: sap:certificates-and-public-key-infrastructure-pki, csstroubleshoot
     items:
     - name: Support for Suite B cryptographic algorithms
-      href: support\windows-server\certificates-and-public-key-infrastructure-pki\description-support-suite-b-cryptographic-ipsec.md
+      href: ./certificates-and-public-key-infrastructure-pki/description-support-suite-b-cryptographic-ipsec.md
     - name: Requirements for domain controller certificates from a third-party CA
-      href: support\windows-server\certificates-and-public-key-infrastructure-pki\requirements-domain-controller.md
+      href: ./certificates-and-public-key-infrastructure-pki/requirements-domain-controller.md
   - name: sap:network-device-enrollment-services-ndes, csstroubleshoot
     items:
     - name: '"Http error 500.0" when getting the NDES enrollment challenge password'
-      href: support\windows-server\certificates-and-public-key-infrastructure-pki\http-error-500-internal-server-error.md
+      href: ./certificates-and-public-key-infrastructure-pki/http-error-500-internal-server-error.md
     - name: Error 0x80090022 when CEP/CES autoenrollment using KBR fails
-      href: support\windows-server\certificates-and-public-key-infrastructure-pki\error-0x80090022-nte-silent-context-cep-ces-autoenrollment-kbr-fails.md
+      href: ./certificates-and-public-key-infrastructure-pki/error-0x80090022-nte-silent-context-cep-ces-autoenrollment-kbr-fails.md
     - name: Renewal of Enrollment Agent certificate fails
-      href: support\windows-server\certificates-and-public-key-infrastructure-pki\renewal-of-enrollment-agent-certificate-fail.md
+      href: ./certificates-and-public-key-infrastructure-pki/renewal-of-enrollment-agent-certificate-fail.md
   - name: sap:kerberos-authentication, csstroubleshoot
     items:
     - name: KDC_ERR_C_PRINCIPAL_UNKNOWN in S4U2Self request
-      href: support\windows-server\certificates-and-public-key-infrastructure-pki\kdc-err-c-principal-unknown-s4u2self-request.md
+      href: ./certificates-and-public-key-infrastructure-pki/kdc-err-c-principal-unknown-s4u2self-request.md
   - name: sap:certificate-based-authentication, csstroubleshoot
     items:
     - name: Security certificate validation fails
-      href: support\windows-server\certificates-and-public-key-infrastructure-pki\secured-website-certificate-validation-fails.md
+      href: ./certificates-and-public-key-infrastructure-pki/secured-website-certificate-validation-fails.md
     - name: Root CA certificate doesn't appear
-      href: support\windows-server\certificates-and-public-key-infrastructure-pki\root-ca-certificate-doesnt-appear.md
+      href: ./certificates-and-public-key-infrastructure-pki/root-ca-certificate-doesnt-appear.md
     - name: Use and troubleshoot CryptAcquireContext function
-      href: support\windows-server\certificates-and-public-key-infrastructure-pki\cryptacquirecontext-troubleshooting.md
+      href: ./certificates-and-public-key-infrastructure-pki/cryptacquirecontext-troubleshooting.md
   - name: sap:certificate-web-enrollment-pages-cwe, csstroubleshoot
     items:
     - name: Can't request certificate from web enrollment pages
-      href: support\windows-server\certificates-and-public-key-infrastructure-pki\no-certificate-templates-be-found.md
+      href: ./certificates-and-public-key-infrastructure-pki/no-certificate-templates-be-found.md
     - name: Can't request certificate using web enrollment
-      href: support\windows-server\certificates-and-public-key-infrastructure-pki\cannot-request-certificate-with-web-enrollment.md
+      href: ./certificates-and-public-key-infrastructure-pki/cannot-request-certificate-with-web-enrollment.md
   - name: sap:encrypting-file-system-efs, csstroubleshoot
     items:
     - name: Client computers can't encrypt a file in a domain
-      href: support\windows-server\certificates-and-public-key-infrastructure-pki\recovery-policy-contains-invalid-recovery-certificate.md
+      href: ./certificates-and-public-key-infrastructure-pki/recovery-policy-contains-invalid-recovery-certificate.md
     - name: Use Cipher.exe to overwrite deleted data
-      href: support\windows-server\certificates-and-public-key-infrastructure-pki\use-cipher-to-overwrite-deleted-data.md
+      href: ./certificates-and-public-key-infrastructure-pki/use-cipher-to-overwrite-deleted-data.md
   - name: sap:ssl-or-tls, csstroubleshoot
     items:
     - name: Restrict cryptographic algorithms and protocols
-      href: support\windows-server\certificates-and-public-key-infrastructure-pki\restrict-cryptographic-algorithms-protocols-schannel.md
+      href: ./certificates-and-public-key-infrastructure-pki/restrict-cryptographic-algorithms-protocols-schannel.md
   - name: sap:sap:smart-card-logon, csstroubleshoot
     items:
     - name: Enabling smart card logon
-      href: support\windows-server\certificates-and-public-key-infrastructure-pki\enabling-smart-card-logon-third-party-certification-authorities.md
+      href: ./certificates-and-public-key-infrastructure-pki/enabling-smart-card-logon-third-party-certification-authorities.md
