@@ -14,7 +14,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Exchange Server
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ms.reviewer: v-six
 ---
 # Obtain internet mail exchanger records with the nslookup.exe utility

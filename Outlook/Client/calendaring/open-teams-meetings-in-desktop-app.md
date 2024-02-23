@@ -16,7 +16,7 @@ appliesto:
   - Outlook 2019
   - Outlook 2016
 search.appverid: MET150
-ms.date: 11/23/2022
+ms.date: 10/30/2023
 ---
 
 # Configure Teams meeting links to open in Teams desktop app

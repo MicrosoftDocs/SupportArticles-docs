@@ -3,7 +3,7 @@ title: Configure Proofpoint Email Protection with Exchange Online
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
-ms.date: 10/22/2020
+ms.date: 01/24/2024
 audience: Admin
 ms.topic: troubleshooting
 localization_priority: Normal

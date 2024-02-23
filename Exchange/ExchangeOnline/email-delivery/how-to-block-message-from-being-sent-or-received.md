@@ -14,7 +14,7 @@ ms.reviewer: v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # How to block a message from being sent or received based on the file name extension of the attachment in Microsoft 365
 

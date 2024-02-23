@@ -20,7 +20,7 @@ appliesto:
   - Outlook 2019
   - Outlook 2016
 search.appverid: MET150
-ms.date: 12/04/2023
+ms.date: 01/24/2024
 ---
 
 # Resolve issues with Inbox rules in Outlook

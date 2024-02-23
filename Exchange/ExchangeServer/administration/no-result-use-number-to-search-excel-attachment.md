@@ -15,7 +15,7 @@ appliesto:
   - Exchange Server 2016 Enterprise Edition
   - Exchange Server 2016 Standard Edition
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # No result when you use a number to search for an Excel attachment in Outlook or Outlook on the web
 

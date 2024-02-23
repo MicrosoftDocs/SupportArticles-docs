@@ -15,7 +15,7 @@ appliesto:
   - Outlook 2016
   - Outlook 2013
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 # Outlook shows Disconnected in status bar if the last character in legacyExchangeDN is a space
 

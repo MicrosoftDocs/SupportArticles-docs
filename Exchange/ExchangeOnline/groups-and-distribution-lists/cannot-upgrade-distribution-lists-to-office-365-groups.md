@@ -15,7 +15,7 @@ appliesto:
   - Exchange Online
   - MSfC O365-Exchange Online
 search.appverid: MET150
-ms.date: 04/06/2023
+ms.date: 01/24/2024
 ---
 # Can't upgrade distribution lists to Microsoft 365 groups
 

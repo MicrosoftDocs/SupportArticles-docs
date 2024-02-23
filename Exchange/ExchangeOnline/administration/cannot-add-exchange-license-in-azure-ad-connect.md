@@ -15,7 +15,7 @@ ms.reviewer: kerbo, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Can't add Exchange license in Microsoft Entra Connect for Microsoft 365
 

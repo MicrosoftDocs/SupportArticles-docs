@@ -16,7 +16,7 @@ appliesto:
   - Exchange Online
   - Outlook
 search.appverid: MET150
-ms.date: 10/13/2022
+ms.date: 01/24/2024
 ---
 # Can't copy or move public folders in Outlook
 

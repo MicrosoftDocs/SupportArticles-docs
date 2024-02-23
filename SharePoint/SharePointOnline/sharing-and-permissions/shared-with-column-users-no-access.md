@@ -12,7 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Online
-ms.date: 07/13/2023
+ms.date: 12/17/2023
 ---
 
 # "SharedWith" displays users without document access in SharePoint Online

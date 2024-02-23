@@ -18,7 +18,7 @@ appliesto:
   - Microsoft Outlook 2010
   - Outlook for Microsoft 365
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 # Event 4096 is logged if the WarmUp entry is set for VSTO add-ins in Outlook
 

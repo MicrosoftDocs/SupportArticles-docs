@@ -14,7 +14,7 @@ search.appverid: MET150
 ms.reviewer: aruiz, v-six
 author: cloud-writer
 ms.author: meerak
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 # Attachment issues in Outlook 2010, Outlook 2007, or Outlook 2003
 

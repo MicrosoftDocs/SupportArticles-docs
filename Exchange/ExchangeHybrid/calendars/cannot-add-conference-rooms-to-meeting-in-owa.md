@@ -14,7 +14,7 @@ ms.reviewer: v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Exchange Online users can't add on-premises conference rooms to meeting requests in Outlook Web App
 

@@ -15,7 +15,7 @@ appliesto:
   - Microsoft Outlook 2010
   - Microsoft Office Outlook 2007
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 # After you obtain an S/MIME certificate, no buttons are available to sign or encrypt email messages in Outlook 2007 and in Outlook 2010
 

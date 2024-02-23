@@ -1,7 +1,7 @@
 ---
 title: Cannot restore individual database via Backup
 description: Discusses the options that are available when you back up the Exchange databases by using Windows Server Backup.
-ms.date: 08/05/2020
+ms.date: 01/24/2024
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm

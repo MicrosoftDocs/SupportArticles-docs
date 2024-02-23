@@ -15,7 +15,7 @@ ms.custom:
 ms.reviewer: clake
 appliesto: 
   - SharePoint Server 2016
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 
 # Error 2711 when installing RBS client for SQL server 2016 with SharePoint Server 2016

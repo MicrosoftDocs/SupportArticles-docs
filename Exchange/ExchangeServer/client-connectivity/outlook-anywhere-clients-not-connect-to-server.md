@@ -15,7 +15,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Exchange Server 2010 Service Pack 3
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Outlook Anywhere clients can't connect to an Exchange server after you install Exchange Server 2010 SP3
 

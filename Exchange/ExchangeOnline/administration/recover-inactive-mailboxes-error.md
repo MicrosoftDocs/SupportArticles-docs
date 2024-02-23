@@ -15,7 +15,7 @@ ms.reviewer: malgzetsky, lindabr
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 09/21/2022
+ms.date: 01/24/2024
 ---
 # "The mailbox has additional shards that need recovery" error when recovering an inactive mailbox
 

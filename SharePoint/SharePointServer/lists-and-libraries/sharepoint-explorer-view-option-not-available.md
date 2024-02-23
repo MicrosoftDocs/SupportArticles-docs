@@ -13,7 +13,7 @@ search.appverid: MET150
 ms.reviewer: 
 author: simonxjx
 ms.author: v-six
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 # Explorer View option isn't available on the Current View list box in SharePoint Server
 

@@ -16,7 +16,7 @@ appliesto:
 search.appverid: 
   - MET150
   - SPO160
-ms.date: 04/07/2023
+ms.date: 12/17/2023
 ---
 # "FSLogix_unsupported_environment" and OneDrive sync error on virtual machines
 

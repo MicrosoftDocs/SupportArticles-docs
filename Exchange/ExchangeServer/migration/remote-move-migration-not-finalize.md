@@ -15,7 +15,7 @@ ms.reviewer: haembab, ninob, meerak, v-trisshores
 appliesto: 
   - Exchange Server
 search.appverid: MET150
-ms.date: 08/31/2022
+ms.date: 01/24/2024
 ---
 # Remote move migration doesn't finalize
 

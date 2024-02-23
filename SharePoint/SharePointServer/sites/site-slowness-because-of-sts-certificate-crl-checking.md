@@ -14,7 +14,7 @@ ms.author: luche
 appliesto: 
   - SharePoint Foundation 2010
   - SharePoint Server 2010
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 
 # Site slowness because of SharePoint STS certificate CRL checking  

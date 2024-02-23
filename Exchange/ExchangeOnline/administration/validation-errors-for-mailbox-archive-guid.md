@@ -13,7 +13,7 @@ appliesto:
   - Exchange Online
 search.appverid: MET150
 ms.reviewer: kellybos, v-six
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Validation errors for a mailbox archive GUID for Microsoft 365 users
 

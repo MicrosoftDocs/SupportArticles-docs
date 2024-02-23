@@ -16,7 +16,7 @@ appliesto:
   - Outlook on the web
   - Exchange Server 2016 RTM
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Add-ins will stop working in Outlook on the web for Exchange Server 2016 RTM
 

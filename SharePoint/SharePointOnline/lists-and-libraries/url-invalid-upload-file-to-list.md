@@ -13,7 +13,7 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Online
   - SharePoint Server
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 
 # "The URL is invalid" error message when you upload a file to a SharePoint list

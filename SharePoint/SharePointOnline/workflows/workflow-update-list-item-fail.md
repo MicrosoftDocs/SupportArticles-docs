@@ -12,7 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Online
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 
 # SharePoint Online workflow that uses the Update List Item action fails to update a Person or Group column

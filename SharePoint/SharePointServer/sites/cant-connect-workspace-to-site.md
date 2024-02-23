@@ -14,7 +14,7 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Server 2013
   - SharePoint Workspace 2010
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 
 # You cannot connect a SharePoint workspace in SharePoint Workspace 2010 to an Office SharePoint Server 2007 site

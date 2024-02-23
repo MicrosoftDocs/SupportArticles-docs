@@ -15,7 +15,7 @@ ms.reviewer: haembab
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # "550 5.7.13 STOREDRV.AuthenticationRequiredForPublicFolder" error for messages sent to a mail-enabled public folder
 

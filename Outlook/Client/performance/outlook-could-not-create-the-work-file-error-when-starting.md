@@ -18,7 +18,7 @@ appliesto:
   - Microsoft Outlook 2010
   - Outlook for Microsoft 365
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 # Outlook could not create the work file error when you start Outlook
 

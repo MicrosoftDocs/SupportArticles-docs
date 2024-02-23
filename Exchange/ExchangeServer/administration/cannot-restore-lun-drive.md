@@ -1,7 +1,7 @@
 ---
 title: Cannot restore a LUN drive
 description: Resolves an issue in which you can't use an Exchange-aware backup program (such as EMC AppSync) to restore a logical unit number drive in Exchange Server 2013.
-ms.date: 08/10/2020
+ms.date: 01/24/2024
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm

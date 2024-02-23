@@ -18,7 +18,7 @@ appliesto:
   - Exchange Server 2013 Standard Edition
   - Exchange Online
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Error when users reset Windows password in an Exchange environment: Unable to update the password
   

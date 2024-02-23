@@ -15,7 +15,7 @@ appliesto:
   - SharePoint Server 2016
   - SharePoint Server 2013
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 # SharePoint installs the obsolete SQL Server 2005 Analysis Services ADOMD.NET
 

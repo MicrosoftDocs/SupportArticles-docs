@@ -12,7 +12,7 @@ ms.custom: CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - SharePoint Online
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 
 # Users who are in the "Everyone" or "Everyone except external users" group don't receive email invitations

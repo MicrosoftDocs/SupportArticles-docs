@@ -14,7 +14,7 @@ ms.reviewer: aruiz, laurentc
 appliesto: 
   - Outlook 2013
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 # Outlook 2013 Compact Navigation options are not saved
 

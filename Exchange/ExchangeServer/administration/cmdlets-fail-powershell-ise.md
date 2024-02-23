@@ -15,7 +15,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Exchange Server 2010 Service Pack 3
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Some cmdlets fail in PowerShell ISE after an upgrade to Exchange Server 2010 SP3
 

@@ -14,7 +14,7 @@ search.appverid: MET150
 ms.reviewer: jhayes, shawsull, benwinz, sulobr, v-six
 author: cloud-writer
 ms.author: meerak
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Can't access a mailbox by using Outlook after a remote mailbox move from an on-premises Exchange Server environment to Microsoft 365
 

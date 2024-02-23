@@ -12,7 +12,7 @@ search.appverid: MET150
 ms.reviewer: jhayes, v-six
 author: cloud-writer
 ms.author: meerak
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 
 # How to specify the email message format that's used for external recipients to prevent Winmail.dat attachments

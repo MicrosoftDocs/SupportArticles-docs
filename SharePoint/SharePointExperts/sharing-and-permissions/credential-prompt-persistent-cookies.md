@@ -12,7 +12,7 @@ ms.topic: troubleshooting
 ms.author: luche
 appliesto: 
   - Microsoft SharePoint
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 
 # Additional credential prompts when opening Office documents from a web server by persistent cookies

@@ -14,7 +14,7 @@ ms.reviewer: aruiz, wbrandt
 appliesto: 
   - Outlook 2013
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 # Some Outlook 2013 commands are not available when you use Quick Reply
 

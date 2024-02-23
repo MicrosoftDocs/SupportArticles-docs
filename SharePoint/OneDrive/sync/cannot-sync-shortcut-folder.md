@@ -15,7 +15,7 @@ appliesto:
   - Microsoft OneDrive
   - OneDrive for Business
 search.appverid: MET150
-ms.date: 10/25/2022
+ms.date: 12/17/2023
 ---
 
 # You can't sync a shared folder that's set as a shortcut in OneDrive sync app

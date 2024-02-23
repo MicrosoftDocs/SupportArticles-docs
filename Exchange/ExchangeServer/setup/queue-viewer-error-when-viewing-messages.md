@@ -15,7 +15,7 @@ ms.reviewer: lusassl, srvar, nasira, meerak, v-trisshores
 appliesto:
   - Exchange Server 2016
 search.appverid: MET150
-ms.date: 02/08/2023
+ms.date: 01/24/2024
 ---
 
 # Error when you try to view queue messages in Queue Viewer

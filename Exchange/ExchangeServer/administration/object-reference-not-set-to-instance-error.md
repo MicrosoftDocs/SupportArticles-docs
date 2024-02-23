@@ -16,7 +16,7 @@ appliesto:
   - Exchange Server 2013
   - Exchange Server 2010
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Object reference not set to an instance of an object error and message trace fails in an Exchange hybrid environment
 

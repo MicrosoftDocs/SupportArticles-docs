@@ -19,7 +19,7 @@ appliesto:
   - Microsoft Office Outlook 2007
   - Outlook for Microsoft 365
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 # Outlook.exe.log file in the %Temp% folder consumes too much disk space
 

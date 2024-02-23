@@ -15,7 +15,7 @@ appliesto:
   - SharePoint Server 2019
   - SharePoint Server 2016
   - SharePoint Server 2013
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 
 # Provider-hosted add-ins stop working and HTTP 401 error after you configure SharePoint farm hybrid features  

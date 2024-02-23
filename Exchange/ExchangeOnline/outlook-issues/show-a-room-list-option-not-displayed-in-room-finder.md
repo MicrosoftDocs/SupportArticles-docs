@@ -25,7 +25,7 @@ appliesto:
   - Microsoft Outlook 2010
   - Outlook for Microsoft 365
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Show a Room list option isn't displayed in the Room Finder pane in Outlook
 

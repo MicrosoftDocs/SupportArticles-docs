@@ -15,7 +15,7 @@ ms.reviewer: likhitk, batre, meerak, v-trisshores
 appliesto:
   - Exchange Online
 search.appverid: MET150
-ms.date: 08/09/2023
+ms.date: 01/24/2024
 ---
 
 # Favorites folders are missing in the Outlook client after migration to Exchange Online

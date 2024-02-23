@@ -14,7 +14,7 @@ ms.reviewer: ajaysi, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # On-premises security groups are not synced to Exchange Online in a hybrid deployment
 

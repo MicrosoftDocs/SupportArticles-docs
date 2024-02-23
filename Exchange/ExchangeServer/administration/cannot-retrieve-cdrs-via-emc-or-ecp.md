@@ -1,7 +1,7 @@
 ---
 title: Cannot retrieve CDRs via EMC or ECP
 description: Works around an issue in which you cannot retrieve CDRs by using Exchange Server 2010 EMC or ECP. This issue occurs after you move an e-Discovery arbitration mailbox from Microsoft Exchange Server 2010 to Exchange Server 2013.
-ms.date: 08/10/2020
+ms.date: 01/24/2024
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm

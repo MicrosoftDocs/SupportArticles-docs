@@ -14,7 +14,7 @@ ms.reviewer: sercast
 appliesto: 
   - Outlook 2013
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 # An image in an HTML-formatted email message is not displayed in Outlook 2013 when you use a proxy server that is configured to use basic authentication
 

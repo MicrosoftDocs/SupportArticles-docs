@@ -18,7 +18,7 @@ appliesto:
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition
 search.appverid: MET150
-ms.date: 09/11/2023
+ms.date: 01/24/2024
 ---
 
 # Errors about missing parameters when moving only a primary mailbox either to or from Exchange Online

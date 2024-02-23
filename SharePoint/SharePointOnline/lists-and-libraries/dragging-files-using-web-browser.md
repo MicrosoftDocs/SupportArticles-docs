@@ -13,7 +13,7 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Online
   - SharePoint Server
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 
 # Information about dragging files into document libraries in SharePoint Server 2013 or SharePoint Online by using a web browser

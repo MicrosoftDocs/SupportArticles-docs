@@ -14,7 +14,7 @@ ms.reviewer: martinfu, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Unable to import a trusted publishing domain from RMS Online to Exchange Online
 

@@ -14,7 +14,7 @@ ms.reviewer: jhayes, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Outlook Web App opens in the light version when it's used in Microsoft 365 even though the user has a supported web browser
 

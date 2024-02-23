@@ -20,7 +20,7 @@ appliesto:
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Users prompted for credentials after adding a shared mailbox as a second Exchange email account in their Outlook profile
 

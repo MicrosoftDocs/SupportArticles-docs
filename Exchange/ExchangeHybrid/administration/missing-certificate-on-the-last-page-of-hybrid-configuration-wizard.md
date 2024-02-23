@@ -14,7 +14,7 @@ ms.reviewer: chwillia, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Missing certificate on the last page of the Hybrid Configuration Wizard
 

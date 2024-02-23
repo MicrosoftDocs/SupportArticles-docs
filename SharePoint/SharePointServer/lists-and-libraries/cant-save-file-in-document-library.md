@@ -14,7 +14,7 @@ ms.reviewer: erica, harikumh, markmead, russmax, sheyia, zsolti, rrogers, christ
 appliesto: 
   - SharePoint Foundation 2010
   - SharePoint Server 2010
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 
 # You cannot save a document in a SharePoint 2010 document library when the document library contains a required Business data field

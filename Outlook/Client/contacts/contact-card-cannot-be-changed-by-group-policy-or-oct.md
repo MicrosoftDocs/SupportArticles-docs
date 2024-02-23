@@ -14,7 +14,7 @@ ms.reviewer: mchen, aruiz, gregmans, tsimon, laurentc, amkanade, doakm, randyto,
 appliesto: 
   - Microsoft Outlook 2010
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 # The Contact Card in Outlook 2010 does not change when you try to customize it by using Group Policy or the Office Customization Tool (OCT)
 

@@ -18,7 +18,7 @@ appliesto:
   - Microsoft Outlook 2010
   - Outlook for Microsoft 365
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 # The customization options that are available for your Outlook Today view in Outlook
 

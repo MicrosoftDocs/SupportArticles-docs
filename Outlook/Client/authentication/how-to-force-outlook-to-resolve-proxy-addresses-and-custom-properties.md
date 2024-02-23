@@ -14,7 +14,7 @@ search.appverid: MET150
 ms.reviewer: bwilson, v-six
 author: cloud-writer
 ms.author: meerak
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 # How to force Outlook 2010, 2007 or 2003 to resolve proxy addresses and custom properties in Cached Mode
 

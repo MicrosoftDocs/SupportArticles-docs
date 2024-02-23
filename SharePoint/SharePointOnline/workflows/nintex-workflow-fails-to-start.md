@@ -15,7 +15,7 @@ ms.custom:
   - CI 146979
 appliesto: 
   - SharePoint Online
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 
 # Nintex workflow on SharePoint Online does not start

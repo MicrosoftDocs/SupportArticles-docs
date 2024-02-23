@@ -17,7 +17,7 @@ appliesto:
   - Exchange Online
 search.appverid: 
   - MET150
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 
 # "Something went wrong and your search couldn't be completed" error message when searching from an additional mailbox in Outlook

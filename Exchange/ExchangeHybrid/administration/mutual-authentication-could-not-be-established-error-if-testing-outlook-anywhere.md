@@ -12,7 +12,7 @@ search.appverid: MET150
 ms.reviewer: v-six
 author: cloud-writer
 ms.author: meerak
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # "Mutual Authentication could not be established" error when using Remote Connectivity Analyzer to test Outlook Anywhere in Microsoft 365
 

@@ -15,7 +15,7 @@ ms.reviewer: pramods, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # "550 5.2.0 RESOLVER.ADR.BadPrimary" when an Exchange Online user sends mail to an external contact
 

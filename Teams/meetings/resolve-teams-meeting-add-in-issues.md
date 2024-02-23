@@ -15,7 +15,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 04/21/2023
+ms.date: 10/30/2023
 ---
 
 # Resolve issues with Teams Meeting add-in for Outlook

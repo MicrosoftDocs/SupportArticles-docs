@@ -16,7 +16,7 @@ search.appverid:
 appliesto: 
   - Exchange Server 2016 Standard Edition
   - Exchange Server 2016 Enterprise Edition
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Email messages sent to a Dynamic Distribution Group aren't delivered to all recipients
 

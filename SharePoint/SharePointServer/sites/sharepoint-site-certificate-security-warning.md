@@ -16,7 +16,7 @@ appliesto:
   - SharePoint Server 2016
   - SharePoint Server 2019
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 # Certificate security warning for a SharePoint site when you start Outlook
 

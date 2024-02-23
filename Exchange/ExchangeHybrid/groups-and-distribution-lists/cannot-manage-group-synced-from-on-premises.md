@@ -17,7 +17,7 @@ appliesto:
   - Exchange Server 2013 Enterprise
   - Exchange Server 2010 Enterprise
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Users can't manage group synced from on-premises to Microsoft 365 in a hybrid environment
 

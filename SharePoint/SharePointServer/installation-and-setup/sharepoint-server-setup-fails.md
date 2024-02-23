@@ -14,7 +14,7 @@ ms.reviewer: troys
 appliesto: 
   - SharePoint Server 2019
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 
 # "This product requires Visual C++ Redistributable Package for Visual Studio 2017" error when installing SharePoint Server 2019

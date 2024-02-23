@@ -15,7 +15,7 @@ ms.reviewer: scottlan, v-six
 appliesto: 
   - Exchange Online Protection
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # "550 5.6.0 APPROVAL.InvalidExpiry" when sending messages to a moderated recipient
 

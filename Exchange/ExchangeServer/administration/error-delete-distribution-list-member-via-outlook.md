@@ -15,7 +15,7 @@ appliesto:
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Error when you remove members from an Exchange Server 2010 distribution list: Changes to the distribution list membership cannot be saved
 

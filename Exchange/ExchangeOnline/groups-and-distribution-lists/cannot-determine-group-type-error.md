@@ -16,7 +16,7 @@ appliesto:
   - Exchange Online
 search.appverid: 
   - MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # (Cannot determine group type) error when checking group in Microsoft 365 admin center
 

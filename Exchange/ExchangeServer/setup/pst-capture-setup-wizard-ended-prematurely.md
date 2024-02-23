@@ -18,7 +18,7 @@ appliesto:
   - Windows Server 2008 R2 Foundation
   - Windows Server 2008 R2 Enterprise
   - Windows Server 2008 R2 Datacenter
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Error when you install the PST Capture tool in Windows Server 2008 R2: Setup wizard ended prematurely because of an error
 

@@ -14,7 +14,7 @@ ms.reviewer: danv
 appliesto: 
   - Outlook 2016 for Mac
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 # Microsoft Outlook for Mac compatibility with Apple iCloud
 

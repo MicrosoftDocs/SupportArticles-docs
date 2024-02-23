@@ -19,7 +19,7 @@ appliesto:
   - Outlook 2019
   - Outlook 2016
   - Outlook 2013
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 
 # Can't sign in or activate Outlook and Microsoft 365 applications

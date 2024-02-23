@@ -15,7 +15,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Exchange Online
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ms.reviewer: v-six
 ---
 # Outlook can't set up a new profile by using Exchange Autodiscover for an Exchange Online mailbox in Microsoft 365

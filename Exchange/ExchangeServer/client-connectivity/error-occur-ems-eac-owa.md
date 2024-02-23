@@ -17,7 +17,7 @@ appliesto:
   - Exchange Server 2013 Standard Edition
   - Exchange Server 2013 Enterprise
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Error occurs in EMS, EAC, ECP, OWA, or Outlook on the web in Exchange Server 2013 or Exchange Server 2016
 

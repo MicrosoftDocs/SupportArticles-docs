@@ -18,7 +18,7 @@ appliesto:
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 # Outlook users are prompted for credentials when they switch from a LAN to a WAN
 

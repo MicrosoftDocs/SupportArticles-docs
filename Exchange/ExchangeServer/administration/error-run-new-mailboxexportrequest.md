@@ -14,7 +14,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Exchange Server 2010
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ms.reviewer: v-six
 ---
 # Error when you run the New-MailboxExportRequest cmdlet in Exchange Server 2010 SP1 or SP2: Couldn't find the Enterprise Organization container

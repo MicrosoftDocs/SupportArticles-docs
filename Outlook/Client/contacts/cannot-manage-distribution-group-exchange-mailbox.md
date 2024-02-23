@@ -16,7 +16,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Exchange Server 2010
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 # Can't manage distribution group from Outlook with Exchange Server mailbox
 

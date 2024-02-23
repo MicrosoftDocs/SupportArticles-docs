@@ -13,7 +13,7 @@ ms.reviewer: lgreer
 ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Workspace 2010
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 
 # Error message when you start SharePoint Workspace or Groove: "SharePoint Workspace/Groove has detected another device with the same DeviceURL as yours"

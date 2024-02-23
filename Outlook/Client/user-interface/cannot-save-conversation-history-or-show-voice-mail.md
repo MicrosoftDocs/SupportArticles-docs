@@ -14,7 +14,7 @@ ms.reviewer: alinastr
 appliesto: 
   - Skype for Business
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 # Skype for Business can't save conversation history or show voice mail
 

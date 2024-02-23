@@ -13,7 +13,7 @@ ms.topic: troubleshooting
 ms.custom: sap:spsexperts, CSSTroubleshoot
 appliesto: 
   - Office Online Server
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 
 # Antivirus and intermittent issues when you view Office documents by using Office Online Server

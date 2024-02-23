@@ -15,7 +15,7 @@ ms.reviewer: gregmans; zebamehdi; meerak
 appliesto: 
   - Microsoft 365
 search.appverid: MET150
-ms.date: 10/26/2022
+ms.date: 02/22/2024
 ---
 # Enterprise version of Microsoft Support and Recovery Assistant
 
@@ -145,6 +145,7 @@ The following table provides the versions of the Enterprise version of the Assis
 
 |Release date|Version|
 |----------|-----------|
+|February 20, 2024|17.01.1440.000|
 |November 15, 2023|17.01.0987.011|
 |September 5, 2023|17.01.0495.021|
 |June 6, 2023|17.01.0268.003|

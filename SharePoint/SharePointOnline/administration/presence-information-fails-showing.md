@@ -14,7 +14,7 @@ appliesto:
   - SharePoint Server 2019
   - SharePoint Server 2016
   - SharePoint Online
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 
 # Presence information does not show on a SharePoint page

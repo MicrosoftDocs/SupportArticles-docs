@@ -12,7 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Designer 2013
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 
 # SharePoint Designer 2013 shows empty wfpub library  

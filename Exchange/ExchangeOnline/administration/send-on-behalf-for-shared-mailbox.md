@@ -16,7 +16,7 @@ search.appverid:
 appliesto: 
   - Exchange Online
   - Microsoft 365
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Can't manage Send on Behalf permissions for shared mailboxes in the EAC
 

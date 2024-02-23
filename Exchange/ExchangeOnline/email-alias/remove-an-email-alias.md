@@ -23,7 +23,7 @@ search.appverid:
   - MOE150
 ms.assetid: dde511e8-0719-4b7a-8e56-d4dad0c308b3
 description: Learn how to remove an email alias from a user in the admin center.
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ms.reviewer: v-six
 ---
 # Troubleshoot: Remove an email alias from a user

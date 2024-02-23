@@ -15,7 +15,7 @@ ms.reviewer: bhartley, batre, meerak, v-trisshores
 appliesto:
   - Exchange Online
 search.appverid: MET150
-ms.date: 09/21/2023
+ms.date: 01/24/2024
 ---
 
 # Can't restore an Outlook form that's deleted from the organizational forms library

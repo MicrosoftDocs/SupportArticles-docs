@@ -19,7 +19,7 @@ appliesto:
   - Outlook 2010
   - Office Outlook 2007
   - Office Outlook 2003
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 
 # How to enable transport logging in Outlook

@@ -15,7 +15,7 @@ ms.custom:
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ms.reviewer: v-six
 ---
 # "554 5.6.0 Invalid message content" when sending a message that contains an Excel or Word attachment

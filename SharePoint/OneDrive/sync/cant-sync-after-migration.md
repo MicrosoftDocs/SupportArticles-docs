@@ -15,7 +15,7 @@ search.appverid:
   - MET150
 appliesto: 
   - OneDrive for Business
-ms.date: 05/06/2022
+ms.date: 12/17/2023
 ---
 
 # OneDrive for Business can't sync after tenant migration

@@ -3,7 +3,7 @@ title: New guests can't access a SharePoint resource
 description: Fix the Selected user account does not exist error when new guests access a SharePoint site, list, or library.
 manager: dcscontentpm
 localization_priority: Normal
-ms.date: 10/23/2023
+ms.date: 12/17/2023
 audience: Admin
 ms.topic: troubleshooting
 ms.custom:

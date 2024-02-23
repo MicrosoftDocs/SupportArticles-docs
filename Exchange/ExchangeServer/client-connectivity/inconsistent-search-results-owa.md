@@ -13,7 +13,7 @@ search.appverid: MET150
 ms.reviewer: dennym, erlendp, v-six
 author: cloud-writer
 ms.author: meerak
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 
 # Inconsistent search results when email body contains both English and non-English characters in Exchange Server 2013

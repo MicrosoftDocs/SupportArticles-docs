@@ -12,7 +12,7 @@ metadata:
   audience: ITPro
   author: cloud-writer #Required; your GitHub user alias, with correct capitalization.
   ms.author: meerak #Required; microsoft alias of author; optional team alias.
-  ms.date: 07/03/2019 #Required; mm/dd/yyyy format.
+  ms.date: 10/30/2023 #Required; mm/dd/yyyy format.
   ms.service: outlook
 
 # productDirectory section (optional)

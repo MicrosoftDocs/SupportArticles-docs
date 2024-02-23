@@ -23,7 +23,7 @@ search.appverid:
   - MOE150
 ms.assetid: ea585b86-76aa-4cf4-912e-f8271677d1d5
 description: Learn how to remove an email address from a shared mailbox in the admin center so that you can reuse it.
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ms.reviewer: v-six
 ---
 # Troubleshoot: Remove an alias from a shared mailbox

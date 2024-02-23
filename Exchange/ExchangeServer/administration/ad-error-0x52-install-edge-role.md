@@ -15,7 +15,7 @@ appliesto:
   - Exchange Server 2016 Enterprise Edition
   - Exchange Server 2016 Enterprise Edition
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Active Directory error 0x52 at Exchange Server 2016 Edge role installation
 
