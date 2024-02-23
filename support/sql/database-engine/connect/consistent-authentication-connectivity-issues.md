@@ -203,7 +203,7 @@ This section lists some of the consistent authentication causes related to NTLM.
 - [Loopback protection isn't set correctly](#loopback-protection-isnt-set-correctly)
 - [Loopback protection fails when you connect to the Always-on listener](#loopback-protection-fails-when-you-connect-to-the-always-on-listener)
 - [Double hop scenarios on multiple computers](#double-hop-scenarios-on-multiple-computers)
-- LANMAN compatibility level
+- [Issue with LANMAN compatibility level](#issue-with-lanman-compatibility-level)
 
 ### Access is denied for NTLM peer logins
 
@@ -223,7 +223,7 @@ Performing a double-hop will fail if NTLM credentials are used. Kerberos credent
 
 ### Issue with LANMAN compatibility level
 
-The LAN Manager authentication issue usually occurs if there is a mismatch in the authentication protocols used by old and new computers. When you set the compatibility level to 5, NTLMv2 isn't allowed. Switching to Kerberos avoids this issue as Kerberos is more secure. For more information, see [Login failed for user NT AUTHORITY\ANONYMOUS LOGON](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
+The LAN Manager (LANMAN) authentication issue usually occurs if there is a mismatch in the authentication protocols used by older (pre Windows 2008) and newer computers. When you set the compatibility level to 5, NTLMv2 isn't allowed. Switching to Kerberos avoids this issue as Kerberos is more secure. For more information, see [Login failed for user NT AUTHORITY\ANONYMOUS LOGON](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
 
 ### Causes and scenarios related to Active Directory and Domain Controller
 
