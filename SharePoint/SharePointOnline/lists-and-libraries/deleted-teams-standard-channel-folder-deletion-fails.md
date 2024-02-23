@@ -15,7 +15,7 @@ ms.custom:
 ms.reviewer: prbalusu
 appliesto: 
 - SharePoint Online
-ms.date: 02/22/2023
+ms.date: 12/17/2023
 ---
 # You can't delete the folder for a deleted Teams standard channel
 

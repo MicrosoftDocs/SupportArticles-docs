@@ -17,7 +17,7 @@ appliesto:
   - Outlook for Microsoft 365
   - Outlook 2016
   - Outlook 2013
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 
 # Can't send or receive email in Outlook and "Metered Connection Warning" is triggered

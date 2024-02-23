@@ -14,7 +14,7 @@ ms.reviewer: v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Connection to Microsoft Exchange is unavailable error when a Microsoft 365 user tries to set up Outlook
 

@@ -15,7 +15,7 @@ search.appverid:
 appliesto: 
   - Exchange Server 2010
   - Exchange Server 2007
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ms.reviewer: v-six
 ---
 # 550 550 5.1.1 or 550 5.7.1 NDR message when an external user sends an email message to a Universal Distribution Group

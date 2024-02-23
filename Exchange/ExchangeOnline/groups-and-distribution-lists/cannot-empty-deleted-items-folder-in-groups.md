@@ -15,7 +15,7 @@ ms.reviewer: batre, meerak, v-trisshores
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 08/24/2023
+ms.date: 01/24/2024
 ---
 
 # Can't empty Deleted Items folder in Microsoft 365 Groups

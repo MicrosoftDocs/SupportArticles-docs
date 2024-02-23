@@ -1,7 +1,7 @@
 ---
 title: Cannot replicate public folder
 description: Resolves an issue in which you receive an Unable to get Replica list for the folder error when trying to replicate public folder to Exchange Server 2013. Provides a resolution.
-ms.date: 08/11/2020
+ms.date: 01/24/2024
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm

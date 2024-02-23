@@ -16,7 +16,7 @@ appliesto:
   - SharePoint Server 2019
   - SharePoint Server Subscription Edition
 search.appverid: MET150
-ms.date: 07/03/2023
+ms.date: 12/17/2023
 ---
 
 # Update the DST information manually in SharePoint Server

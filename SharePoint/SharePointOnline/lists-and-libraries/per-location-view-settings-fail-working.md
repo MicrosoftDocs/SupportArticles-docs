@@ -16,7 +16,7 @@ appliesto:
   - SharePoint Server 2013
   - SharePoint Foundation 2010
   - SharePoint Server 2010
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 
 # Per-location view settings don't work at the folder level in SharePoint 2013, SharePoint 2010, and SharePoint Online

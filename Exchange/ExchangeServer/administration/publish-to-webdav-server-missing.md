@@ -19,7 +19,7 @@ appliesto:
   - Outlook 2013
   - Outlook 2010
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # The Publish to WebDAV Server option is missing from the Calendar folder shortcut menu
 

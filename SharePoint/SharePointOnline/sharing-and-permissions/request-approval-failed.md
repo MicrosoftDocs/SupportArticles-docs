@@ -15,7 +15,7 @@ appliesto:
   - SharePoint Server 2019
   - SharePoint Server 2016
   - SharePoint Server 2010
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 
 # "Access Denied" to Access Requests list or "Request approval failed" when you process a pending request

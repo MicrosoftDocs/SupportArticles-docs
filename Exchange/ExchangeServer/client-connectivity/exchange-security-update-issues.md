@@ -19,7 +19,7 @@ appliesto:
   - Exchange Server 2016
   - Exchange Server 2013
   - Exchange Server 2010 Service Pack 3
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 
 # Repair failed installations of Exchange Cumulative and Security updates

@@ -14,7 +14,7 @@ search.appverid:
   - MET150
 appliesto: 
   - SharePoint Online
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 
 # "Your organization's policies do not allow you to share with these users" error when sharing an item or site in SharePoint Online or OneDrive for Business 

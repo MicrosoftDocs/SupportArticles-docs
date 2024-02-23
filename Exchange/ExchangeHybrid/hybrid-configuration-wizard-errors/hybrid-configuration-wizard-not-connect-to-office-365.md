@@ -18,7 +18,7 @@ appliesto:
   - Exchange Server
   - Exchange Online
 search.appverid: MET150
-ms.date: 09/29/2022
+ms.date: 01/24/2024
 ---
 
 # Hybrid Configuration wizard doesn't connect to Office 365

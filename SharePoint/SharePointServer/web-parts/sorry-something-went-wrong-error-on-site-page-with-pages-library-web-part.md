@@ -15,7 +15,7 @@ appliesto:
   - SharePoint Designer
   - SharePoint Foundation
   - SharePoint Server
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 
 # "Sorry, something went wrong" error on a Site Page with a Pages library web part added

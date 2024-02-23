@@ -14,7 +14,7 @@ ms.reviewer: svincent, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Items you're trying to open couldn't be found when you remove a mobile device partnership
 

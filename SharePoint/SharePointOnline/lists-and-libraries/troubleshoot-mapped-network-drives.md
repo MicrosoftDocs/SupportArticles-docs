@@ -3,7 +3,7 @@ title: Mapping and syncing network drives that connect to SharePoint Online
 description: Describes how to troubleshoot mapped network drives that connect to SharePoint Online.
 author: helenclu
 manager: dcscontentpm
-ms.date: 05/14/2020
+ms.date: 12/17/2023
 localization_priority: Normal
 search.appverid: 
   - MET150

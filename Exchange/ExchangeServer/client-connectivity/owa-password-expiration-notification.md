@@ -20,7 +20,7 @@ appliesto:
   - Exchange Server 2010 Standard
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # OWA password expiration notification when you use fine-grained password policy
 

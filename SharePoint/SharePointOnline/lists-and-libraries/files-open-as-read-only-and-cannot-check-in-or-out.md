@@ -18,7 +18,7 @@ appliesto:
   - OneDrive for Business
   - SharePoint Online
 description: Describes how to resolve an issue where a SharePoint file checked out from an online or local folder opens as read only.
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 # SharePoint files open as read-only
 

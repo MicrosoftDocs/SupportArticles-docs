@@ -14,7 +14,7 @@ ms.reviewer: desadan, jhayes, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Manage a mailbox when a Microsoft 365 mailbox exists but an on-premises mail-enabled user doesn't exist
   

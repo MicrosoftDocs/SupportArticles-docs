@@ -15,7 +15,7 @@ ms.custom:
 ms.author: luche
 appliesto: 
   - SharePoint Online
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 
 # Gather SharePoint 2013 Workflow troubleshooting data with ShowScopeDebugInfo

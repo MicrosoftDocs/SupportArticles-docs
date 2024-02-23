@@ -14,7 +14,7 @@ ms.reviewer: bpeterse, salarson
 appliesto: 
   - OneDrive for Business
 search.appverid: MET150
-ms.date: 09/19/2022
+ms.date: 12/17/2023
 ---
 # Error 0x80071128 or 0x80071129 when deleting a OneDrive-synced file locally
 

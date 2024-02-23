@@ -18,7 +18,7 @@ search.appverid: MET150
 ms.reviewer: abdallaa, excontent, ninob, kellybos, jmartin, v-six
 author: cloud-writer
 ms.author: meerak
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Can't open a shared folder in Outlook on the web in Exchange Server
 

@@ -16,7 +16,7 @@ appliesto:
   - Exchange Online
 search.appverid: 
   - MET150
-ms.date: 11/03/2022
+ms.date: 01/24/2024
 ---
 
 # Public folder mailbox not found in a multi-geo environment

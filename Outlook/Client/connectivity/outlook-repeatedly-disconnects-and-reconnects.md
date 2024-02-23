@@ -16,7 +16,7 @@ appliesto:
   - Exchange Server 2013 Service Pack 1
   - Exchange Server 2013 Standard Edition
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 # Outlook clients repeatedly disconnect from and reconnect to Exchange Server 2013
 

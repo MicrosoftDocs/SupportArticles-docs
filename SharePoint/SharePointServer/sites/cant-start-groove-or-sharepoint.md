@@ -13,7 +13,7 @@ ms.reviewer: fselkirk
 ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Workspace 2010
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 
 # Error message when you try to start Groove or SharePoint Workspace: "Error opening binary file store database"

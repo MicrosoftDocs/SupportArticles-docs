@@ -17,7 +17,7 @@ appliesto:
   - Outlook 2019
   - Microsoft 365 Apps for enterprise
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # You can't view free/busy information on another user's Calendar in Exchange Online
 

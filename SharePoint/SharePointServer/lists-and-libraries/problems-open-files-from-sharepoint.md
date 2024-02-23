@@ -12,7 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Office 2010
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 
 # Problems opening Office documents from a SharePoint site if web client service is disabled

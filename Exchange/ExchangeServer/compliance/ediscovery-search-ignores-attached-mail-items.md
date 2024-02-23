@@ -15,7 +15,7 @@ ms.reviewer: svajda, batre, meerak, v-trisshores
 appliesto:
   - Exchange Server 2019
 search.appverid: MET150
-ms.date: 06/09/2023
+ms.date: 01/24/2024
 ---
 
 # In-Place eDiscovery search doesn't search the file names of attached mail items

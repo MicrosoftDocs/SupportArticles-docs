@@ -12,7 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Microsoft SharePoint
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 
 # Anonymous Users cannot open XLSX files from a document library  

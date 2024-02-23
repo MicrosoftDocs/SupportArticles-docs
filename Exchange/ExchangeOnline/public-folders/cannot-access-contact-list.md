@@ -16,7 +16,7 @@ editor: v-jesits
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 
 # "Out of memory or system resources" error when accessing contact list from public folder

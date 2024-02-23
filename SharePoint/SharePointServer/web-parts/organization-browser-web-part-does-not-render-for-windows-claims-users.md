@@ -12,7 +12,7 @@ ms.custom: CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - Microsoft SharePoint
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 
 # Organization Browser web part does not render for Windows Claims users

@@ -15,7 +15,7 @@ appliesto:
   - Exchange Online
   - Exchange Online Protection
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Recipient rejects mail from Exchange Online or Exchange Online Protection and host name does not match IP address error
 

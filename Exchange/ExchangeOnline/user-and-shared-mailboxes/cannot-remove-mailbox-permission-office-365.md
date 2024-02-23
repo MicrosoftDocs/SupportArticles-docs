@@ -14,7 +14,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft Exchange Online Dedicated
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ms.reviewer: v-six
 ---
 # Can't remove mailbox permissions in Office 365 dedicated/ITAR

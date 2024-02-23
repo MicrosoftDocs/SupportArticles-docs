@@ -16,7 +16,7 @@ appliesto:
   - Azure Active Directory
   - Microsoft 365
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Mail-enabled groups that have an email address aren't synchronized to Microsoft 365
 

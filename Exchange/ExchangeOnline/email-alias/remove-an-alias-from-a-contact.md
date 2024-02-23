@@ -20,7 +20,7 @@ search.appverid:
   - MOE150
 ms.assetid: 0baf335d-ea9b-428c-9573-d0878126f014
 description: Learn how to remove an email alias from a contact using Exchange Online PowerShell.
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ms.reviewer: v-six
 ---
 # Troubleshoot: Remove an alias from a contact

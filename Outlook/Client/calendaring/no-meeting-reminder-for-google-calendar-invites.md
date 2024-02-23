@@ -15,7 +15,7 @@ appliesto:
   - Outlook 2016
   - Outlook LTSC 2021
 search.appverid: MET150
-ms.date: 10/12/2022
+ms.date: 10/30/2023
 ---
 # Outlook doesn't show a reminder for a Google Calendar event invitation
 

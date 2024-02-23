@@ -15,7 +15,7 @@ appliesto:
   - Exchange Server 2013 Standard Edition
   - Exchange Server 2013 Enterprise
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Can't use EAC to export to a PST file when the target user belongs to a child domain in Exchange Server 2013
 

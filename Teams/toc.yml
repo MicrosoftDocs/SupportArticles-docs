@@ -223,8 +223,10 @@
       href: ./teams-rooms-and-devices/collect-device-logs.md
     - name: Conditional Access-related issues on Teams Android devices
       href: ./teams-rooms-and-devices/teams-android-devices-conditional-access-issues.md
-    - name: Known issues
-      href: ./teams-rooms-and-devices/rooms-known-issues.md
+    - name: Known issues with Teams Rooms on Android
+      href: ./teams-rooms-and-devices/teams-rooms-known-issues-android.md
+    - name: Known issues with Teams Rooms on Windows
+      href: ./teams-rooms-and-devices/teams-rooms-known-issues-windows.md
     - name: On-screen keyboard size is reduced on some devices
       href: ./teams-rooms-and-devices/teams-rooms-device-keyboard-size-reduced.md
     - name: Signed out of Teams Android devices

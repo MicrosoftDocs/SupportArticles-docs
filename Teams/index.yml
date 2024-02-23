@@ -13,7 +13,7 @@ metadata:
   audience: ITPro
   author: helenclu #Required; your GitHub user alias, with correct capitalization.
   ms.author: luche #Required; microsoft alias of author; optional team alias.
-  ms.date: 07/03/2019 #Required; mm/dd/yyyy format.
+  ms.date: 10/30/2023 #Required; mm/dd/yyyy format.
 
 # productDirectory section (optional)
 productDirectory:
@@ -106,10 +106,16 @@ productDirectory:
           text: Microsoft Viva Glint
         - url: /viva/troubleshoot/insights/viva-insights-welcome
           text: Microsoft Viva Insights
+   # Card
+    - title: Microsoft Viva
+      imageSrc: /support/media/hub-landing/logo-viva.png
+      links:
         - url: /viva/troubleshoot/learning/viva-learning-welcome
           text: Microsoft Viva Learning
         - url: /viva/troubleshoot/pulse/viva-pulse-welcome
-          text: Microsoft Viva Pulse
+          text: Microsoft Viva Pulse  
+        - url: /viva/troubleshoot/viva-suite-administration/viva-suite-administration-welcome
+          text: Microsoft Viva Suite Administration
     # Card
     - title: Microsoft Endpoint Manager
       imageSrc: /media/logos/logo-ms-social.png

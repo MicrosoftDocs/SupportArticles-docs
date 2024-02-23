@@ -15,7 +15,7 @@ appliesto:
   - SharePoint Server 2010
   - InfoPath Designer 2010
 ms.reviewer: jbooze, fselkirk
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 # (Invalid form template) error message when you run the InfoPath Designer 2010 design checker on a form
 

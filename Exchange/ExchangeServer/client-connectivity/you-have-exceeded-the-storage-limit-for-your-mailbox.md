@@ -17,7 +17,7 @@ appliesto:
   - Exchange Server 2013 Standard Edition
   - Exchange Server 2013 Enterprise
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # You've exceeded the storage limit for your mailbox error when signing in to Outlook on the Web
 

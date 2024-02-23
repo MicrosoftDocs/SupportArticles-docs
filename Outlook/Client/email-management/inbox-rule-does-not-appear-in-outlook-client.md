@@ -18,7 +18,7 @@ appliesto:
   - Outlook 2019
   - Outlook 2016
 search.appverid: MET150
-ms.date: 08/10/2023
+ms.date: 10/30/2023
 ---
 
 # Inbox rule in Outlook on the web doesn't appear in Outlook for Windows

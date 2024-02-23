@@ -15,7 +15,7 @@ ms.custom:
   - CI 156281
 appliesto: 
   - SharePoint Online
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 
 # Task list shows item title as .000

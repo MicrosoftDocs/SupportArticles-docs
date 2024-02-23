@@ -19,7 +19,7 @@ appliesto:
   - Outlook 2016
   - Outlook on the web
 search.appverid: MET150
-ms.date: 07/11/2023
+ms.date: 10/30/2023
 ---
 
 # "Send updates" prompt not displayed when updating meetings

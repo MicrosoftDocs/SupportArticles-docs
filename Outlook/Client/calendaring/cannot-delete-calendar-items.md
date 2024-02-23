@@ -18,7 +18,7 @@ appliesto:
   - Exchange Server 2019
   - Exchange Online
 search.appverid: MET150
-ms.date: 06/14/2022
+ms.date: 10/30/2023
 ---
 # Can't delete calendar items in Outlook
 

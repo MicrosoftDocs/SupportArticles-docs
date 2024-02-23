@@ -17,7 +17,7 @@ appliesto:
   - Exchange Online
   - Outlook for Microsoft 365
 search.appverid: MET150
-ms.date: 03/06/2023
+ms.date: 01/24/2024
 ---
 
 # Outlook can't set up a Microsoft 365 account

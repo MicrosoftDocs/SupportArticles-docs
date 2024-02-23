@@ -16,7 +16,7 @@ appliesto:
   - Outlook for Microsoft 365
 search.appverid: 
   - MET150
-ms.date: 03/31/2022
+ms.date: 10/30/2023
 ---
 
 # Focused Inbox disappears when you switch folders in Outlook

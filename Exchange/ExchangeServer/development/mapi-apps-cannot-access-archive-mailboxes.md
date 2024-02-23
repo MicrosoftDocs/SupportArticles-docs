@@ -16,7 +16,7 @@ appliesto:
   - Exchange Server 2019
   - Exchange Server 2016
 search.appverid: MET150
-ms.date: 08/15/2023
+ms.date: 01/24/2024
 ---
 
 # MAPI applications can't access archive mailboxes in Exchange Server 2016 and later versions

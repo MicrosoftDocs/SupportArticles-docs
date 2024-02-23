@@ -14,7 +14,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Exchange Online
-ms.date: 07/11/2023
+ms.date: 01/24/2024
 ms.reviewer: v-six
 ---
 # Messages sent from a shared mailbox aren't saved to the Sent Items folder of the shared mailbox in Outlook

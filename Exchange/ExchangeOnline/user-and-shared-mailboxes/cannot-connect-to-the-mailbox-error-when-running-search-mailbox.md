@@ -14,7 +14,7 @@ search.appverid: MET150
 ms.reviewer: kellybos, v-six
 author: cloud-writer
 ms.author: meerak
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # "Can't connect to the mailbox" error when you run cmdlets for a mailbox hosted in a different Exchange Online region
 

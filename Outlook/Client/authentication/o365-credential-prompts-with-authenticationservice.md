@@ -16,7 +16,7 @@ appliesto:
   - Outlook 2010
   - Outlook 2007
 search.appverid: MET150
-ms.date: 08/03/2023
+ms.date: 10/30/2023
 ---
 # Microsoft 365 credential prompts with AuthenticationService registry value
 

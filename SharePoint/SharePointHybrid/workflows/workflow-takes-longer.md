@@ -13,7 +13,7 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Online
   - SharePoint Server 2010
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 
 # A SharePoint 2010 workflow in SharePoint Online takes longer than expected to complete or shows "Please wait" for about one minute

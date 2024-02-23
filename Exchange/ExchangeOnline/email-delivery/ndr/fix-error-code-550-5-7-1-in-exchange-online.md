@@ -1,6 +1,6 @@
 ---
 title: Fix NDR error 550 5.7.1 in Exchange Online
-ms.date: 01/29/2023
+ms.date: 01/24/2024
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm

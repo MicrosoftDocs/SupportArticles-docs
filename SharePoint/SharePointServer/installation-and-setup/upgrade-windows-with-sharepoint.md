@@ -14,7 +14,7 @@ ms.custom:
   - CI 152110
 appliesto: 
   - SharePoint Server
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 
 # Upgrade Windows on a server that has SharePoint Server installed

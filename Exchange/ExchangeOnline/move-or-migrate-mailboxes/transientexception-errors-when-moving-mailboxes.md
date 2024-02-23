@@ -15,7 +15,7 @@ appliesto:
   - Exchange Online
   - Exchange Server 2010
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # TransientException when moving mailboxes from Exchange Online to Exchange Server 2010 in on-premises
 

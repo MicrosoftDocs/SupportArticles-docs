@@ -16,7 +16,7 @@ appliesto:
   - Exchange Server 2019
   - Exchange Server 2016
 search.appverid: MET150
-ms.date: 01/23/2024
+ms.date: 01/24/2024
 ---
 
 # Shared mailbox in Exchange Online is unexpectedly disconnected

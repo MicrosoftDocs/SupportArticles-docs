@@ -14,7 +14,7 @@ ms.reviewer: salarson, CLAKE
 search.appverid: MET150
 appliesto: 
   - SharePoint Online
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 
 # No verification code when external recipients access shared secure links

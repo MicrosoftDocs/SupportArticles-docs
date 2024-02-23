@@ -14,7 +14,7 @@ ms.reviewer: bradhugh, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Mailbox quotas not increased automatically for qualifying licenses in Exchange Online
 

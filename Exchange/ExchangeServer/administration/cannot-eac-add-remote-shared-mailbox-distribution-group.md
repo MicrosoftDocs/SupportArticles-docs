@@ -1,7 +1,7 @@
 ---
 title: Can't use EAC to add remote shared mailbox to distribution group
 description: Resolves an issue in which you can't use EAC to add remote shared mailbox to delivery management of distribution group.
-ms.date: 05/17/2021
+ms.date: 01/24/2024
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm

@@ -17,7 +17,7 @@ appliesto:
   - Outlook for Microsoft 365
   - Outlook 2019
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # All users' free/busy info shows in Microsoft 365 modern group calendar
 

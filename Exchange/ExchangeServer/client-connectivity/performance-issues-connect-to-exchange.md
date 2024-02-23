@@ -18,7 +18,7 @@ appliesto:
   - Windows Server 2012
   - Windows Server 2008
   - Exchange Server 2013
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # Performance issues or delays when you connect to Exchange Server 2013 that is running in Windows Server
 

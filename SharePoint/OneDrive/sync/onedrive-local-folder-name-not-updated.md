@@ -16,7 +16,7 @@ appliesto:
 search.appverid: 
   - MET150
   - SPO160
-ms.date: 06/14/2023
+ms.date: 12/17/2023
 ---
 # OneDrive local folder name isn't updated after changing the organization name
 

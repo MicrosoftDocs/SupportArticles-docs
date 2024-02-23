@@ -15,7 +15,7 @@ ms.reviewer: batre, meerak, v-trisshores
 appliesto:
   - Exchange Online
 search.appverid: MET150
-ms.date: 02/14/2023
+ms.date: 01/24/2024
 ---
 
 # Public folder permissions in Exchange admin center show GUID instead of name

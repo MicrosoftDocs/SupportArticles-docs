@@ -33,7 +33,7 @@ appliesto:
   - SQL Server 2014 Reporting Services
   - SQL Server 2012 Reporting Services
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 # Configure SQL Server Reporting Services in SharePoint Server for Kerberos authentication
 

@@ -15,7 +15,7 @@ appliesto:
   - Microsoft Outlook 2010
   - Exchange Online
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # On-premises users are unable to see MailTips of Exchange Online users in Outlook 2010
 

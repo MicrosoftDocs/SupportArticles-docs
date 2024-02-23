@@ -16,7 +16,7 @@ ms.custom:
   - CI 164597
 appliesto: 
   - SharePoint Online
-ms.date: 06/27/2022
+ms.date: 12/17/2023
 ---
 
 # Notifications sent to SharePoint sites connected to Microsoft 365 groups aren’t received

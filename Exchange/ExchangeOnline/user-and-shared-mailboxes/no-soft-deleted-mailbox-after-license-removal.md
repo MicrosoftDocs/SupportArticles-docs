@@ -15,7 +15,7 @@ ms.reviewer: benjak, kellybos, v-six
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 
 # No soft-deleted mailbox after license removal in Microsoft 365

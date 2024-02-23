@@ -13,7 +13,7 @@ ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Microsoft SharePoint
-ms.date: 03/31/2022
+ms.date: 12/17/2023
 ---
 
 # SharePoint app "Import Spreadsheet" fails with error "An unexpected error has occurred. (-2147352567)"

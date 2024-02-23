@@ -14,7 +14,7 @@ ms.reviewer: v-six
 appliesto: 
   - Exchange Server
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ---
 # A description of the multipart/mixed Internet message format
 

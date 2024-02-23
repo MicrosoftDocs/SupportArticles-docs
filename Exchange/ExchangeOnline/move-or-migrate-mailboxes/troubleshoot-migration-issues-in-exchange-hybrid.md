@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot migration issues in Exchange hybrid
 description: Troubleshoots issues with mailbox move in hybrid environment.
-ms.date: 08/19/2020
+ms.date: 01/24/2024
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm

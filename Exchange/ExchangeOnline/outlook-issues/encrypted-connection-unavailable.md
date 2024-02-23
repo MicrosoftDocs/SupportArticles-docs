@@ -13,7 +13,7 @@ ms.custom:
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 03/31/2022
+ms.date: 01/24/2024
 ms.reviewer: v-six
 ---
 # (Encrypted connection to your mail server is not available) error when Microsoft 365 F plan users try to set up an Outlook profile for Exchange Online in Microsoft 365

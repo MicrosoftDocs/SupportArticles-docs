@@ -28,7 +28,7 @@ appliesto:
   - Outlook for iOS
   - Outlook for Android
 search.appverid: MET150
-ms.date: 05/17/2023
+ms.date: 01/24/2024
 ---
 
 # Outlook read receipt shows incorrect information
