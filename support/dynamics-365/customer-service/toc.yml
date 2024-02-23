@@ -47,6 +47,8 @@
               href: service-level-agreements/sla-migration-issues.md
             - name: Can't migrate a large number of SLAs
               href: service-level-agreements/migration-tool-issue-slas.md
+            - name: '"Calendar dates are corrupted" error when migrating SLAs from legacy to Unified Interface'
+              href: service-level-agreements/save-legacy-calendars-in-uci.md
             - name: GUID is shown instead of owner name in migrated SLA action flow
               href: service-level-agreements/guid-instead-name-in-flow-generated-email.md
             - name: Standard SLAs not showing in migration tool

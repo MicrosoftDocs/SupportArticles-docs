@@ -1,7 +1,7 @@
 ---
 title: Software update installations stop responding
 description: Describes an issue that software update installations stop responding in Configuration Manager current branch version 1810 and 1806.
-ms.date: 06/09/2020
+ms.date: 12/05/2023
 ms.reviewer: kaushika
 ---
 # Update installations to clients stop responding in Configuration Manager

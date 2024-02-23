@@ -1,13 +1,13 @@
 ---
 title: Error 0x80090022 NTE_SILENT_CONTEXT when CEP/CES autoenrollment using KBR fails
 description: Helps resolve the issue in which Certificate Enrollment Policy Web Service (CEP) and Certificate Enrollment Web Service (CES) autoenrollment using key-based renewal (KBR) fails on non-domain-joined clients, and you receive error 0x80090022 NTE_SILENT_CONTEXT.
-ms.date: 07/03/2023
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, milanmil, v-lianna
-ms.custom: sap:certificates-and-public-key-infrastructure-pki, csstroubleshoot
+ms.custom: sap:network-device-enrollment-services-ndes, csstroubleshoot
 ---
 # Error 0x80090022 NTE_SILENT_CONTEXT when CEP/CES autoenrollment using KBR fails on non-domain-joined clients
 

@@ -1,7 +1,7 @@
 ---
 title: Certutil -view doesn't return issued certificates
 description: Fixes an issue where the Certutil -view command doesn't return issued certificates correctly.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, jtierney
-ms.custom: sap:certificates-and-public-key-infrastructure-pki, csstroubleshoot
+ms.custom: sap:certificate-enrollment, csstroubleshoot
 ---
 # "Certutil -view" command does not return issued certificates correctly
 

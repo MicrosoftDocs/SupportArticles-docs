@@ -1,7 +1,7 @@
 ---
 title: Gather information by using TSS for deployment-related issues
 description: Introduces how to gather information by using the TroubleShootingScript (TSS) toolset for deployment-related issues.
-ms.date: 07/13/2023
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

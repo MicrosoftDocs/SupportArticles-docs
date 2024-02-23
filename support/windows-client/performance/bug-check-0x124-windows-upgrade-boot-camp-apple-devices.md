@@ -1,7 +1,7 @@
 ---
 title: Bug check 0x124 after a Windows in-place upgrade on Apple devices
 description: Helps resolve bug check 0x124 after performing an in-place upgrade of Windows 10 by using Boot Camp Assistant on Apple devices.
-ms.date: 11/23/2023
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

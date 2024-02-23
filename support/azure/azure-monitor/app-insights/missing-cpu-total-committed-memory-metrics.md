@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot missing CPU Total and Committed Memory metrics
 description: Troubleshoot missing CPU Total and Committed Memory metrics when you look at live metrics in Application Insights.
-ms.date: 05/09/2022
+ms.date: 02/20/2024
 ms.reviewer: vitalyg, toddfous, v-leedennis
 ms.service: azure-monitor
 ms.subservice: application-insights
