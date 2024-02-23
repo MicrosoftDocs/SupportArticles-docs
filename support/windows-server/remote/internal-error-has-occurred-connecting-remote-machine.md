@@ -131,7 +131,7 @@ Check the following registry key:
 
 ### Check the configuration of the SSL Cipher Suite Order policy
 
-Check if there's a policy for configuring ciphers. Set the following policy setting to Not configured if it exists:
+Check if there's a [policy for configuring ciphers](/windows-server/security/tls/manage-tls#configuring-tls-cipher-suite-order). Set the following policy setting to Not configured if it exists:
 
 **Computer Configuration** > **Administrative Templates** > **Network** > **SSL Configuration Settings** - **SSL Cipher Suite Order**
 
