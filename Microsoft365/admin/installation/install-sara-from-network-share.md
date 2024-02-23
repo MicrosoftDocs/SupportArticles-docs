@@ -101,11 +101,11 @@ There are several variables in the script that can be modified, including the do
 
 ## Version history of the Assistant
 
-A new build of the Assistant is released monthly. The following table provides the versions that were made available on the specified dates.
+A new build of the Assistant is released every 90 days. The following table provides the versions that were made available on the specified dates.
 
 |Release date|Version of the Assistant|
 |--------|--------|
-|February 20, 2024|17.01.1440.0|
+|February 20, 2024|17.01.1440.000|
 |June 6, 2023|17.01.0268.003|
 |April 21, 2023|17.01.0040.005|
 |January 26, 2023|17.00.9663.002|
