@@ -14,7 +14,7 @@ ms.topic: troubleshooting-problem-resolution
 
 Azure Batch might set [the state of a Batch node](/rest/api/batchservice/compute-node/get#computenodestate) to **Unusable** for any of several reasons. You can't schedule tasks to a node in the **Unusable** state, but it still incurs charges. In most cases, the Batch service tries to recover the node. However, if the **Unusable** state is caused by a configuration issue, the node can't be recovered. This article discusses some common configuration issues that cause nodes to become unusable, and provides solutions.
 
-## Issue 1: Virtual network configuration issue
+## Issue 1: Virtual network configuration issues
 
 In this part, we will discuss the virtual network configuration in both **Classic Node Communication** and **Simplified Node Communication**, respectively.
 
