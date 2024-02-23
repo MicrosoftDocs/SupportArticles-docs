@@ -2,8 +2,6 @@
 title: Can't copy files from mapped drive to local directory
 description: You receive the Location is not available error when you try to copy files from a mapped drive to a local directory. This error occurs when User Account Control (UAC) is enabled.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

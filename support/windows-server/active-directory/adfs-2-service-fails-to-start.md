@@ -2,8 +2,6 @@
 title: ADFS 2.0 service fails to start
 description: Provides troubleshooting steps for ADFS service configuration and startup problems.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

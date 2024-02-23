@@ -2,8 +2,6 @@
 title: Recommended updates for Windows Server 2008 R2 SP1 Failover Clusters
 description: Describes the hotfixes for Windows Server 2008 R2 SP1 Failover Clusters that we recommend you install, depending on your environment.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

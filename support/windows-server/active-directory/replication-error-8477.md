@@ -2,8 +2,6 @@
 title: Troubleshooting AD Replication error 8477
 description: Describes an issue where AD operations fail with error 8477 (The replication request has been posted; waiting for reply).
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

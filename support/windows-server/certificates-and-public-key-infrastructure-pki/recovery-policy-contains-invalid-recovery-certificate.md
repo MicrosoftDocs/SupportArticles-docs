@@ -2,8 +2,6 @@
 title: Client computers can't encrypt files in a domain
 description: Describes a problem in which client computers receive an error message when the clients try to encrypt a file on a remote computer. This problem occurs if a valid recovery agent certificate is not available on the client computer.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

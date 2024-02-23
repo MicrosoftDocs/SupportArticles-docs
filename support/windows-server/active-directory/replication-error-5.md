@@ -2,8 +2,6 @@
 title: AD replication error 5
 description: This article describes various reasons of Active Directory replication error 5.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

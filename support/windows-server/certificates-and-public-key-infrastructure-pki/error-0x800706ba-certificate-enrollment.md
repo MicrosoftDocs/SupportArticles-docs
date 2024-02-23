@@ -1,8 +1,6 @@
 ---
 title: Error 0x800706ba during certificate enrollment
 description: Introduces steps to resolve the error 0x800706ba, The RPC Server is unavailable, which occurs during certificate enrollment.
-author: Deland-Han
-ms.author: delhan
 ms.topic: troubleshooting
 ms.date: 12/26/2023
 ms.reviewer: kaushika

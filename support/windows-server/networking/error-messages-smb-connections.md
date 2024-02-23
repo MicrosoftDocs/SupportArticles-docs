@@ -2,8 +2,6 @@
 title: Error messages on SMB connections
 description: Provides a solution to error messages that occur on SMB connections. Provides a workaround.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -2,8 +2,6 @@
 title: Can't promote a DC to global catalog server
 description: Describes a problem where you can't promote a Windows Server-based domain controller to be a global catalog server.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -2,8 +2,6 @@
 title: Error "An item with the same key has already been added"
 description: Helps to fix the error "An item with the same key has already been added"
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

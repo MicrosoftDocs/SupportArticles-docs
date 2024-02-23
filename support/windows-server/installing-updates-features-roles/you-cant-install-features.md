@@ -2,8 +2,6 @@
 title: You can't install features
 description: Resolves an issue that prevents you from adding features to a Windows Server 2012 R2-based computer that's running the Server Core installation option. This problem occurs if the server doesn't have Internet access or access to Windows Update.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

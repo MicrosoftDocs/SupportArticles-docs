@@ -2,8 +2,6 @@
 title: Use Ntdsutil to manage AD files
 description: Describes how to manage the Active Directory database file, Ntds.dit, from the command line.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

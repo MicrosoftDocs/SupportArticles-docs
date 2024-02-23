@@ -2,8 +2,6 @@
 title: Information about Group Policy Preferences events
 description: Provides some information about Group Policy Preferences events.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

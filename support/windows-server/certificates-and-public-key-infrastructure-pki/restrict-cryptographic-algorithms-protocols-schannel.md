@@ -2,8 +2,6 @@
 title: Restrict cryptographic algorithms and protocols
 description: Discusses how to restrict the use of certain cryptographic algorithms and protocols in Schannel.dll.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

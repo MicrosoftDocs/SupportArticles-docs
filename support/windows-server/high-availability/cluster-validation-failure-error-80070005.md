@@ -2,8 +2,6 @@
 title: Cluster validation fails with error 80070005
 description: Provides a solution to the error 80070005 that occurs when failover cluster validate fails.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

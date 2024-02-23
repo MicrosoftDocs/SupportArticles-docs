@@ -2,8 +2,6 @@
 title: Changes to calendar date in BIOS are not reflected in Windows
 description: In Windows 8 or later and Windows 2012 or later, changing the date in the BIOS to a date earlier than the date shown in Windows does not change the date shown in Windows.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

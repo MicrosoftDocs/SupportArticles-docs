@@ -2,8 +2,6 @@
 title: Resultant Set of Policy (RSoP) planning mode is not supported in a cross-forest scenario
 description: Discusses a limitation to RSoP planning mode in a multiple-forest scenario.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

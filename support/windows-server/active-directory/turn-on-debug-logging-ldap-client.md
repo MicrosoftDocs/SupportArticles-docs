@@ -2,8 +2,6 @@
 title: How to Turn on Debug Logging of the LDAP Client (Wldap32.dll)
 description: Describes how to turn on debug logging of the LDAP client (Wldap32.dll).
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -2,8 +2,6 @@
 title: Security identifier could not be resolved error with a one-way trust
 description: Fixes an error (Security identifier could not be resolved) that occurs with a one-way trust.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

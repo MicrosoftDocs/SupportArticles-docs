@@ -2,8 +2,6 @@
 title: ICS doesn't work after computer or service restarts in Windows 10
 description: Address an issue in which ICS looses settings after computer or service restarts on Windows 10.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

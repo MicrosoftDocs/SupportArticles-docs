@@ -2,8 +2,6 @@
 title: Certificates and PKI overview
 description: Overview of Certificates and PKI troubleshooting articles for Windows clients.
 ms.date: 2/23/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
