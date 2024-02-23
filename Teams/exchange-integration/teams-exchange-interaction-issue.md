@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot Microsoft Teams and Exchange Server interaction issues
+title: Resolve interaction issues between Teams and Exchange Server 
 description: Provides steps to troubleshoot interaction issues that occur between Microsoft Teams and Exchange Server.
 author: helenclu
 ms.author: luche
@@ -18,34 +18,30 @@ search.appverid:
   - MET150
 ms.date: 10/30/2023
 ---
-# Troubleshoot Microsoft Teams and Exchange Server interaction issues
+# Resolve interaction issues between Teams and Exchange Server
 
-This article provides steps to troubleshoot interaction issues between Microsoft Teams and Microsoft Exchange Server.
-
-#### Getting Started
-
-Learn [How Exchange and Teams Interact](/MicrosoftTeams/exchange-teams-interact) to validate version and environment compatibility.
+To begin, check the information about how [Microsoft Exchange Server and Microsoft Teams Interact](/MicrosoftTeams/exchange-teams-interact) to validate their version and environment compatibility in your deployment.
 
 ## Symptoms
 
-#### Issue 1: A delegate cannot schedule a Teams meeting on behalf of a delegator
+#### Issue 1: A delegate is unable to schedule a Teams meeting on behalf of a delegator
 
-A user whose mailbox is hosted on Exchange Server adds another user as a delegate to manage the Outlook calendar. The delegate who is using the Teams Add-in for Outlook cannot schedule a Teams meeting on behalf of the delegator, and Outlook returns this error message:
+A user whose mailbox is hosted on Exchange Server adds another user as a delegate to manage the Microsoft Outlook calendar. The delegate who is using the Teams add-in for Outlook is unable to schedule a Teams meeting on behalf of the delegator, and Outlook returns the following error message:
 
 > Looks like you don't have permission to schedule meetings for this account. Talk to the owner to get permission and try again.
 
-#### Issue 2: You experience issues when you try to use the Teams Calendar App
+#### Issue 2: You experience issues when you try to use the Teams Calendar app
 
 Either of these issues occurs:
 
 - The Calendar icon isn't displayed in the Teams client.
-- The Microsoft Teams Calendar App displays a "Sorry, we couldn't get your meeting details" error message when you use the Teams desktop client or web client.
+- The Teams Calendar app displays a "Sorry, we couldn't get your meeting details" error message when you use the Teams desktop client or web client.
 
-Teams Calendar App requires access to the Exchange mailbox through Exchange Web Services (EWS). The Exchange mailbox can be online or on-premises in the scope of Exchange hybrid deployment.
+The Teams Calendar app requires access to the Exchange mailbox through Exchange Web Services (EWS). The Exchange mailbox can be online or on-premises in the scope of an Exchange hybrid deployment.
 
-#### Issue 3: The Teams presence status is stuck on Out of Office or doesn't display 'In a meeting' when the user is attending an Outlook calendar meeting
+#### Issue 3: The presence status in Teams is stuck on Out of Office or doesn't display 'In a meeting' when the user is attending an Outlook calendar meeting
 
-A user whose mailbox is hosted on an on-premises Exchange server turned off the Outlook client automatic replies but the Teams presence status displays 'Out of Office' to all Teams clients from the same organization. This may last a few days.
+A user whose mailbox is hosted on an on-premises Exchange server has turned off the Automatic Replies feature in the Outlook client but the Teams presence status displays 'Out of Office' to all Teams clients from the same organization. This may last a few days.
 
 > [!NOTE]
 > For users whose mailbox is hosted on-premises, it's expected to have presence delays with a maximum of an hour.
@@ -54,16 +50,16 @@ A user is attending an Outlook calendar meeting but the Teams presence status do
 
 ## Prerequisites
 
-To integrate the Microsoft Teams service with your installation of Exchange Server, make sure your local Exchange Server environment meets these requirements:
+To integrate the Teams service with your installation of Exchange Server, make sure your local Exchange Server environment meets these requirements:
 
-- Microsoft Teams must be aware whether the mailbox is hosted on Exchange Online or on-premises. requiring [hybrid Exchange server deployment](/exchange/exchange-hybrid). Teams services call the Exchange Online services through REST API, being redirected to on-premises servers hosting the mailbox where applicable, based on hybrid configuration.
+- Microsoft Teams must be aware whether the mailbox is hosted on Exchange Online, on-premises, or in a [hybrid Exchange server deployment](/exchange/exchange-hybrid). Teams services call the Exchange Online services through a REST API, which is redirected to on-premises servers hosting the mailbox where applicable, based on a hybrid configuration.
 
-- Exchange Online integrates with the on-premises Exchange server environment, as described in [What is OAuth authentication?](/exchange/using-oauth-authentication-to-support-ediscovery-in-an-exchange-hybrid-deployment-exchange-2013-help#what-is-oauth-authentication). It's preferable that you configure it by running the Exchange Hybrid Wizard, however it can be achieved manually as described in [Configure OAuth authentication between Exchange and Exchange Online organizations](/exchange/configure-oauth-authentication-between-exchange-and-exchange-online-organizations-exchange-2013-help). Exchange Online is represented by the application ID `00000002-0000-0ff1-ce00-000000000000`. 
+- Exchange Online integrates with the on-premises Exchange server environment, as described in [What is OAuth authentication?](/exchange/using-oauth-authentication-to-support-ediscovery-in-an-exchange-hybrid-deployment-exchange-2013-help#what-is-oauth-authentication). It's preferable that you configure it by running the Exchange Hybrid Wizard, but the same result can be achieved manually as described in [Configure OAuth authentication between Exchange and Exchange Online organizations](/exchange/configure-oauth-authentication-between-exchange-and-exchange-online-organizations-exchange-2013-help). Exchange Online is represented by the application ID `00000002-0000-0ff1-ce00-000000000000`.
 
-- Additionally Microsoft Teams services, need to authenticate on behalf of the user, to access the mailbox hosted on-premises also using OAuth. In this case the application ID of Skype for Business Online `00000004-0000-0ff1-ce00-000000000000` is used by Teams scheduling service, together with MailUser referenced at [Configure Integration and OAuth between Skype for Business Online and Exchange Server](/skypeforbusiness/deploy/integrate-with-exchange-server/oauth-with-online-and-on-premises):
-  - The account is hidden from the Exchange address book. It's a best practice to hide the account from the address book because it's a disabled user account.
+- Additionally, Teams services need to authenticate on behalf of the user to access the mailbox hosted on-premises also using OAuth. In this case the application ID of Skype for Business Online `00000004-0000-0ff1-ce00-000000000000` is used by the Teams scheduling service, together with MailUser referenced at [Configure Integration and OAuth between Skype for Business Online and Exchange Server](/skypeforbusiness/deploy/integrate-with-exchange-server/oauth-with-online-and-on-premises):
+  - The account is hidden from the Exchange address book. It is a best practice to hide the account from the address book because it is a disabled user account.
   - The account has an Exchange management role assignment of [**UserApplication**](/exchange/userapplication-role-exchange-2013-help).
-  - For retention and archiving a role assignment of [**ArchiveApplication**](/exchange/archiveapplication-role-exchange-2013-help) is required.
+  - For retention and archiving, a role assignment of [**ArchiveApplication**](/exchange/archiveapplication-role-exchange-2013-help) is required.
   - All steps in the article are required for full Teams and Exchange server on-premises.
 
 > [!NOTE]
@@ -71,19 +67,22 @@ To integrate the Microsoft Teams service with your installation of Exchange Serv
 
 - You should configure your internet-facing firewall or reverse proxy server to allow Microsoft Teams to access the servers that are running Exchange Server by adding the URLs and IP address ranges for Skype for Business Online and Microsoft Teams into the allow list. For more information, see the "Skype for Business Online and Microsoft Teams" section of [Microsoft 365 URLs and IP address ranges](/office365/enterprise/urls-and-ip-address-ranges#skype-for-business-online-and-microsoft-teams).
 
-- Exchange Autodiscover V2 is required to allow the Teams service to perform an unauthenticated discovery against the user's mailbox that's located in Exchange Server. Autodiscover V2 is fully supported in Exchange Server 2013 Cumulative Update 19 or later. This is good enough to enable Teams delegation to work correctly. However, Teams Calendar App requires Exchange Server 2016 Cumulative Update 3 or later to be installed. Therefore, for full feature support, Exchange Server 2016 Cumulative Update 3 or later is required.
+- Exchange Autodiscover V2 is required to allow the Teams service to perform an unauthenticated discovery against the user's mailbox that's located in Exchange Server. Autodiscover V2 is fully supported in Exchange Server 2013 Cumulative Update 19 or later. This is enough to enable Teams delegation to work correctly. However, the Teams Calendar app requires Exchange Server 2016 Cumulative Update 3 or later to be installed. Therefore, for full feature support, Exchange Server 2016 Cumulative Update 3 or later is required.
 
 ## Common troubleshooting steps
 
 > [!NOTE]
 > These troubleshooting steps apply to all the issues listed above.
 
-#### Step 1: Verify that the Autodiscover service works properly
+#### Step 1: Verify that the Autodiscover service is working correctly
 
-Microsoft Teams service uses the Exchange Autodiscover service to locate the EWS URL that is published by the server that's running Exchange Server. To verify that the Autodiscover process is working properly:
+The Teams service uses the Exchange Autodiscover service to locate the EWS URL that is published by the server that's running Exchange Server. To verify that the Autodiscover process is working correctly, use the following steps:
 
 1. Ask the user to navigate to the [Microsoft Remote Connectivity Analyzer](https://testconnectivity.microsoft.com/tests/Ola/input).
-1. Input the requested information (make sure that the **Use Autodiscover to detect server settings** check box is selected).
+The Remote Connectivity Analyzer tool uses a specific set of IP addresses to locate the EWS URL. For a list of these IP addresses for Microsoft 365, see the information for ID 46 in [Microsoft 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide#microsoft-365-common-and-office-online&preserve-view=true).
+
+1. Select the **Use Autodiscover to detect server settings** check box.
+1. Input the requested information.
 1. Select the **Perform Test** button to start the Autodiscover test.
 
 If the test fails, you must first resolve the Autodiscover issue.
@@ -91,18 +90,18 @@ If the test fails, you must first resolve the Autodiscover issue.
 :::image type="content" source="media/teams-exchange-interaction-issue/outlook-connectivity.png" alt-text="Screenshot of the Outlook Connectivity page of Microsoft Remote Connectivity Analyzer.":::
 
 > [!NOTE]
-> For the Teams delegation issue, the delegator's mailbox is the target mailbox to test. For the Teams calendar App issue and Teams presence issue, the affected user's mailbox is the target mailbox to test.
+> For the Teams delegation issue, test the delegator's mailbox. For the Teams Calendar app and Teams presence issues, test the affected user's mailbox.
 
 #### Step 2: Verify that the Autodiscover service can route the Autodiscover requests to on-premises
 
-In Windows PowerShell, run this command:
+In Windows PowerShell, run the following command:
 
 ```powershell
 Invoke-RestMethod -Uri "https://outlook.office365.com/autodiscover/autodiscover.json?Email=onpremisemailbox@contoso.com&Protocol=EWS&RedirectCount=5" -UserAgent Teams
 ```
 
 > [!NOTE]
-> For the Teams delegation issue, the delegator's mailbox is the target mailbox to test. For the Teams calendar App issue and Teams presence issue, the affected user's mailbox is the target mailbox to test.
+> For the Teams delegation issue, test the delegator's mailbox. For the Teams Calendar app and Teams presence issues, test the affected user's mailbox.
 
 For a mailbox hosted on-premises, the EWS URL should point to the on-premises external EWS. The output should resemble the following:
 
@@ -131,7 +130,7 @@ Additionally, run the **Free/Busy** connectivity test that is available in the M
 ## Troubleshoot the Teams delegation issue
 
 > [!NOTE]
-> These troubleshooting steps apply to only the [Issue 1](#symptoms).
+> These troubleshooting steps apply only to [Issue 1](#symptoms).
 
 #### Step 1: Verify that the delegate has been granted the Editor permission to access the delegator's calendar
 
@@ -216,7 +215,7 @@ If you verified that there's no problem with the prerequisites or configurations
 ## Troubleshoot the Teams calendar App issue
 
 > [!NOTE]
-> The troubleshooting steps below only apply to the [Issue 2](#symptoms).
+> These troubleshooting steps apply only to [Issue 2](#symptoms).
 
 #### Step 1: Verify that Teams Calendar App is enabled
 
@@ -300,20 +299,22 @@ If you verified that there's no problem with the prerequisites and configuration
 
 ## Troubleshoot the Teams presence issue
 
-These troubleshooting steps apply to only the [Issue 3](#symptoms).
+> [!NOTE]
+> These troubleshooting steps apply only to [Issue 3](#symptoms).
 
 #### Step 1: Verify that the URL for the on-premises Exchange REST API has been published on the public network
 
-Run [Step 2](#common-troubleshooting-steps) in the Common Troubleshooting Steps above against the user's mailbox to locate the on-premises Exchange EWS URL, and change the URL format (replace "/EWS/Exchange.asmx" with "/api") in this manner: `https://mail.contoso.com/EWS/Exchange.asmx` to `https://mail.contoso.com/api`.
+Run [Step 2](#common-troubleshooting-steps) in the Common Troubleshooting Steps section by using the user's mailbox to locate the on-premises Exchange EWS URL, and change the URL format. For example, change `https://mail.contoso.com/EWS/Exchange.asmx` to `https://mail.contoso.com/api`.
 
-Try to access the REST API URL from a browser in the external network. If you get a 401 response from the on-premises Exchange environment, the REST API URL has been published. Otherwise, contact the local network team to get the URL published.
+Try to access the REST API URL from a browser in the external network. If you get a 401 response from the on-premises Exchange environment, it indicates that the REST API URL has been published. Otherwise, contact the local network team to get the URL published.
 
 > [!NOTE]
 > Teams presence service doesn't support the fallback to the EWS URL if the access to the Exchange REST API fails.
 
 #### Step 2: Verify that the Teams Presence Based on Calendar Events test is successful
 
-1. Ask the user to go to the [Teams Presence Based on Calendar Events](https://testconnectivity.microsoft.com/tests/TeamsCalendarPresence/input) section of **Microsoft Remote Connectivity Analyzer**.
+1. Ask the user to navigate to the [Teams Presence Based on Calendar Events](https://testconnectivity.microsoft.com/tests/TeamsCalendarPresence/input) section of **Microsoft Remote Connectivity Analyzer**.
+The Remote Connectivity Analyzer tool uses a specific set of IP addresses to locate the EWS URL. For a list of these IP addresses for Microsoft 365, see the information for ID 46 in [Microsoft 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide#microsoft-365-common-and-office-online&preserve-view=true).
 2. Input the requested information.
 3. Select the **Perform Test** button to start the Teams Presence Based on Calendar Events test.
 
@@ -364,8 +365,3 @@ If you verified there's no problem with the prerequisites and configurations men
 - The UserPrincipalName of the affected user.
 - The time in UTC when the issue was reproduced.
 - Teams client debug logs. For more information about how to collect these logs, see [Use log files in troubleshooting Microsoft Teams](/microsoftteams/log-files).
-
-## References
-
-- [How Exchange and Microsoft Teams interact](/microsoftteams/exchange-teams-interact)
-- [Configuring Teams calendar access for on-premises Exchange mailboxes](https://techcommunity.microsoft.com/t5/exchange-team-blog/configuring-teams-calendar-access-for-exchange-on-premises/ba-p/1484009)
