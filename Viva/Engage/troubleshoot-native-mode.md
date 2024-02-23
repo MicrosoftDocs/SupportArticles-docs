@@ -15,7 +15,7 @@ search.appverid:
 ms.date: 12/20/2023
 ---
 
-# Troubleshoot your Viva Engage network for problems with Native Mode
+# Resolve issues with your Viva Engage network in Native Mode
 
 ## What is Native Mode?
 
