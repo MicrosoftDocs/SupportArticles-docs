@@ -216,4 +216,4 @@ Don't share `SYSVOL` and NETLOGON manually to work around this issue. Don't set 
 
 For more information on lowering the AD Replication convergence time using Inter-site Change Notification, see [Appendix B - Procedures Reference](/previous-versions/windows/it-pro/windows-2000-server/bb727062(v=technet.10)).
 
-For more information on `SYSVOL` migration from FRS to DFSR, see [Migrate SYSVOL replication to DFS Replication](https://technet.microsoft.com/library/dd640019%28WS.10%29.aspx/windows-server/storage/dfs-replication/migrate-sysvol-to-dfsr).
+For more information on `SYSVOL` migration from FRS to DFSR, see [Migrate SYSVOL replication to DFS Replication](https://learn.microsoft.com/en-us/windows-server/storage/dfs-replication/migrate-sysvol-to-dfsr).
