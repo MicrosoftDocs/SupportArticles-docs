@@ -19,7 +19,7 @@ keywords: error 2250, service can't start, LanmanWorkstation service
 
 This article describes how to resolve an issue where the LanManWorkstation service doesn't start and Windows generates error 2250.
 
-_Applies to:_ &nbsp; 
+_Applies to:_ &nbsp; Windows Server 2022, Windows Server 2019, Windows 11, Windows 10
 
 ## Symptoms
 
