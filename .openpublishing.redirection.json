@@ -9611,6 +9611,11 @@
       "redirect_document_id": false
     },
     {
+       "source_path": "support/azure/azure-kubernetes/operationisnotallowed.md",
+       "redirect_url": "/troubleshoot/azure/azure-kubernetes/operationnotallowed",
+       "redirect_document_id": true
+    },
+    {
       "source_path": "support/windows-client/windows-security/code-31-device-manager-usbccid-smartcard-reader-problem.md",
       "redirect_url": "/troubleshoot/windows-client/certificates-and-public-key-infrastructure-pki/code-31-device-manager-usbccid-smartcard-reader-problem",
       "redirect_document_id": true
