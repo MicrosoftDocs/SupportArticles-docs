@@ -79,7 +79,7 @@ To integrate the Teams service with your installation of Exchange Server, make s
 The Teams service uses the Exchange Autodiscover service to locate the EWS URL that is published by the server that's running Exchange Server. To verify that the Autodiscover process is working correctly, use the following steps:
 
 1. Ask the user to navigate to the [Microsoft Remote Connectivity Analyzer](https://testconnectivity.microsoft.com/tests/Ola/input).
-The Remote Connectivity Analyzer tool uses a specific set of IP addresses to locate the EWS URL. For a list of these IP addresses for Microsoft 365, see the information for ID 46 in [Microsoft 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide#microsoft-365-common-and-office-online).
+The Remote Connectivity Analyzer tool uses a specific set of IP addresses to locate the EWS URL. For a list of these IP addresses for Microsoft 365, see the information for ID 46 in [Microsoft 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide#microsoft-365-common-and-office-online&preserve-view=true).
 
 1. Select the **Use Autodiscover to detect server settings** check box.
 1. Input the requested information.
@@ -314,7 +314,7 @@ Try to access the REST API URL from a browser in the external network. If you ge
 #### Step 2: Verify that the Teams Presence Based on Calendar Events test is successful
 
 1. Ask the user to navigate to the [Teams Presence Based on Calendar Events](https://testconnectivity.microsoft.com/tests/TeamsCalendarPresence/input) section of **Microsoft Remote Connectivity Analyzer**.
-The Remote Connectivity Analyzer tool uses a specific set of IP addresses to locate the EWS URL. For a list of these IP addresses for Microsoft 365, see the information for ID 46 in [Microsoft 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide#microsoft-365-common-and-office-online).
+The Remote Connectivity Analyzer tool uses a specific set of IP addresses to locate the EWS URL. For a list of these IP addresses for Microsoft 365, see the information for ID 46 in [Microsoft 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide#microsoft-365-common-and-office-online&preserve-view=true).
 2. Input the requested information.
 3. Select the **Perform Test** button to start the Teams Presence Based on Calendar Events test.
 
