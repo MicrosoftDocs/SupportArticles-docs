@@ -106,10 +106,16 @@ productDirectory:
           text: Microsoft Viva Glint
         - url: ./insights/viva-insights-welcome.yml
           text: Microsoft Viva Insights
+    # Card
+    - title: Microsoft Viva
+      imageSrc: /support/media/hub-landing/logo-viva.png
+      links:        
         - url: ./learning/viva-learning-welcome.yml
           text: Microsoft Viva Learning  
         - url: ./pulse/viva-pulse-welcome.yml
-          text: Microsoft Viva Pulse
+          text: Microsoft Viva Pulse                  
+        - url: ./viva-suite-administration/viva-suite-administration-welcome.yml
+          text: Microsoft Viva Suite Administration
     # Card
     - title: Endpoint management
       imageSrc: /media/logos/logo-ms-social.png
