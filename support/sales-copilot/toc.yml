@@ -13,6 +13,8 @@
           href: crm-permissions-and-configurations/update-settings-to-save-emails-error.md
         - name: Can't save email to CRM if enhanced email isn't enabled in Salesforce CRM
           href: crm-permissions-and-configurations/update-settings-in-saleforce-error.md
+        - name: Duplicate record error
+          href: crm-permissions-and-configurations/duplicate-record-error.md
         - name: '"Fix mailbox errors in Dynamics 365" error'
           href: crm-permissions-and-configurations/fix-mailbox-errors-in-dynamics-365.md
         - name: Missing privileges error when signing in
