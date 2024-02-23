@@ -83,7 +83,7 @@ To configure the IIS Web server in the resource forest, follow these steps:
 
 ## More information
 
-If you want to set up delegation on this resource web server to query a backend server, such as a database server or a CA, you may also configure constrained delegation by using a custom service account. Additionally, you must set up the web server for constrained delegation (S4U2Self) or protocol transition. For more information, see [How to configure Kerberos Constrained Delegation for Web Enrollment proxy pages](configure-kerberos-constrained-delegation.md).
+If you want to set up delegation on this resource web server to query a backend server, such as a database server or a CA, you may also configure constrained delegation by using a custom service account. Additionally, you must set up the web server for constrained delegation (S4U2Self) or protocol transition. For more information, see [How to configure Kerberos Constrained Delegation for Web Enrollment proxy pages](../active-directory/configure-kerberos-constrained-delegation.md).
 
 If you want to skip the UPN in the SAN attribute of the user smart card certificate, you have to either explicitly map by using [AltSecID attributes](/previous-versions/dotnet/articles/bb905527%28v=msdn.10%29#BKMK_ClientCertificate.), or use [name hints](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff404287%28v=ws.10%29).
 

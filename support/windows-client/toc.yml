@@ -167,6 +167,26 @@ items:
       href: ./backup-and-storage/e2e-event-ids-volsnap.md
     - name: Most recent previous versions are missing for a share
       href: ./backup-and-storage/most-recent-previous-versions-missing-for-share.md
+- name: Certificates and PKI
+  items:
+  - name: Certificates and PKI
+    href: ./certificates-and-public-key-infrastructure-pki/certificates-and-public-key-infrastructure-pki-overview.md
+  - name: Certificate chaining and revocation
+    items:
+    - name: Certificates are missing after you update a device
+      href: ./certificates-and-public-key-infrastructure-pki/certs-missing-after-device-update.md
+  - name: Smart card logon
+    items:
+    - name: Code 31 for Microsoft USB CCID smart card reader
+      href: ./certificates-and-public-key-infrastructure-pki/code-31-device-manager-usbccid-smartcard-reader-problem.md
+    - name: Can't authenticate because of an incorrect PIV smart card driver update
+      href: ./certificates-and-public-key-infrastructure-pki/cannot-authenticate-incorrect-piv-smart-card-driver-update.md
+    - name: 0x6 ERROR_INVALID_HANDLE error when a multithreaded application accesses a smart card
+      href: ./certificates-and-public-key-infrastructure-pki/0x6-error-invalid-handle-multithreaded-application.md
+    - name: Integrated Unblock screen not displayed when smart card PIN is blocked
+      href: ./certificates-and-public-key-infrastructure-pki/integrated-unblock-screen-not-displayed-smart-card-pin-blocked.md
+    - name: Registry keys for smart card PIN caching options not available
+      href: ./certificates-and-public-key-infrastructure-pki/registry-keys-smart-card-pin-caching-options-not-available.md
 - name: Group Policy
   items:
   - name: Group Policy
@@ -866,13 +886,7 @@ items:
   - name: Slow logon
     items:
     - name: Slow logon with a blank screen
-      href: ./user-profiles-and-logon/slow-logon-with-blank-screen.md
-  - name: Smart card logon
-    items:
-    - name: Integrated Unblock screen not displayed when smart card PIN is blocked
-      href: ./user-profiles-and-logon/integrated-unblock-screen-not-displayed-smart-card-pin-blocked.md
-    - name: Registry keys for smart card PIN caching options not available
-      href: ./user-profiles-and-logon/registry-keys-smart-card-pin-caching-options-not-available.md
+      href: ./user-profiles-and-logon/slow-logon-with-blank-screen.md  
   - name: User Logon fails
     items:
     - name: Custom credential providers don't load when you first log on
@@ -1033,14 +1047,6 @@ items:
       href: ./windows-security/clear-tpm-fails-error-code-0x80290300.md
     - name: TPM isn't recognized as a compatible device
       href: ./windows-security/tpm-is-not-recognized.md
-  - name: Smart card logon
-    items:
-    - name: 0x6 ERROR_INVALID_HANDLE error when a multithreaded application accesses a smart card
-      href: ./windows-security/0x6-error-invalid-handle-multithreaded-application.md
-    - name: Can't authenticate because of an incorrect PIV smart card driver update
-      href: ./windows-security/cannot-authenticate-incorrect-piv-smart-card-driver-update.md
-    - name: Code 31 for Microsoft USB CCID smart card reader
-      href: ./windows-security/code-31-device-manager-usbccid-smartcard-reader-problem.md
   - name: TPM
     items:
     - name: Events 14 and 17 for TPM command failure or non-recoverable error
@@ -1055,12 +1061,6 @@ items:
     href: ./windows-troubleshooters/windows-troubleshooters-overview.md
   - name: Active and retired Windows 10 troubleshooters
     href: ./windows-troubleshooters/active-and-retired-troubleshooters-windows-10.md
-- name: Certificates and public key infrastructure
-  items:
-  - name: Certificate chaining and revocation
-    items:
-    - name: Certificates are missing after you update a device
-      href: ./certificates-and-public-key-infrastructure-pki/certs-missing-after-device-update.md
 - name: Installing Windows Updates, features, or roles
   items:
   - name: Installing Windows Updates, features, or roles
