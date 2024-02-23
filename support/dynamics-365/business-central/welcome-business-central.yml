@@ -1,0 +1,66 @@
+### YamlMime:Landing
+
+title: Microsoft Dynamics 365 Business Central
+summary: Welcome to Microsoft Dynamics 365 Business Central. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Customer Insights - Data. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+metadata:
+  title: Microsoft Dynamics 365 Business Central
+  description: Landing page for Microsoft Dynamics 365 Business Central troubleshooting articles.
+  ms.topic: landing-page
+  ms.service: customer-insights
+  author: SusanneWindfeldPedersen
+  ms.author: solsen
+  ms.date: 02/23/2024
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+  # Card
+  - title: Data replication
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot data replication issues in cloud migration
+            url: data-replication/migration-data-replication.md
+  # Card
+  - title: Cloud migration setup
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Something
+            url: data-replication/migration-data-replication.md          
+  # Card
+  - title: Query performance
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Something
+            url: data-replication/migration-data-replication.md
+
+  # Card
+  - title: Client
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Something
+            url: data-replication/migration-data-replication.md
+
+  # Card
+  - title: Documentation and training
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Business Central documentation
+            url: /dynamics365/business-central/
+          - text: Business Central training
+            url: /training/dynamics365/
+
+  # Card
+  - title: Support Resources
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Business Central forum
+            url: https://community.dynamics.com/forums/thread/?partialUrl=business
+          - text: Share your ideas
+            url: https://go.microsoft.com/fwlink/?linkid=2074172 # get fwdlink
