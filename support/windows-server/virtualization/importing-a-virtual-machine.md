@@ -2,8 +2,6 @@
 title: Importing a virtual machine
 description: Describes a situation in which you receive an error message when you try to move a virtual machine from a Windows Server 2012 R2 Hyper-V host into a Windows Server 2012 Hyper-V host.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

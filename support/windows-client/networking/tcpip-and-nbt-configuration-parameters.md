@@ -2,8 +2,6 @@
 title: TCP/IP and NBT configuration parameters for Windows XP
 description: Describes how to use Registry Editor to change TCP/IP and NBT configuration parameters in the rare circumstance where you must use this configuration. Defines standard and optional parameters and describes the parameters that should not be changed.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

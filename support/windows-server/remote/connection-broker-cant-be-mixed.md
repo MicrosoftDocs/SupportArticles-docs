@@ -2,8 +2,6 @@
 title: Connection Broker can't be mixed
 description: Remote Desktop Service can't be used in a mixed environment where Remote Desktop Connection Broker is installed on a Windows Server 2012/2012 R2 and a Remote Desktop Session Host is installed on Windows Server 2008 R2 or versions earlier.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

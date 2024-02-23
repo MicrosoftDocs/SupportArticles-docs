@@ -3,8 +3,6 @@ title: Removal of the U.S. Federal Common Policy CA certificate from the Microso
 description: Discusses the removal of U.S. "G1" root certificate and provides solutions to avoid issues.
 localization_priority: medium
 audience: itpro
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.reviewer: hasokol,georgeri,gbock,jtierney,arrenc,roberg,kaushika

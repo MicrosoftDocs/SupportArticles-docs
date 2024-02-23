@@ -2,8 +2,6 @@
 title: Push-button reset fails because language resources are missing
 description: Fixes an issue in which Push-button reset fails because language resources are missing.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: alexmuk
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

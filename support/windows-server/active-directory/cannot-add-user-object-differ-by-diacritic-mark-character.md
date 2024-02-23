@@ -2,8 +2,6 @@
 title: Can't add user or object to directory service
 description: Describes the problem that may occur when you try to add a user or an object to Active Directory. If the user name or the object name contains certain special German characters, you may receive an error message. A resolution is provided.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -2,8 +2,6 @@
 title: can't modify user environment variables
 description: Provides a resolution for the issue that you can't modify user environment variables in the System Properties dialog box.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

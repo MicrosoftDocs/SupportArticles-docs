@@ -2,8 +2,6 @@
 title: Supported Guest Operating Systems in Virtual PC
 description: Provides some information about supported Guest Operating Systems in Virtual PC
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

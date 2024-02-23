@@ -2,8 +2,6 @@
 title: LACP Timer is configured incorrectly when you create a new NIC Team for LBFO in Windows Server 2016
 description: Describes an issue that misconfigures the LACP Timer when you create a new NIC Team for LBFO in Windows Server 2016. A workaround is provided.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

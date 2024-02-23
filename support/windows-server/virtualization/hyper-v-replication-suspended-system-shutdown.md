@@ -2,8 +2,6 @@
 title: Hyper-V replication is suspended at system shutdown
 description: Helps resolve the issue in which Hyper-V replication is suspended when the primary server or the replica server is shut down.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

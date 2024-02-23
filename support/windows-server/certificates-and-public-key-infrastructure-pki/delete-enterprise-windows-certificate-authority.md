@@ -2,8 +2,6 @@
 title: Remove Enterprise Windows Certificate Authority
 description: Describes how to manually delete Enterprise Windows Certificate Authority from a Windows 2000/2003 domain.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

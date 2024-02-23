@@ -2,8 +2,6 @@
 title: Error 0x000006D9 when you share a printer
 description: Provides a solution to an error 0x000006D9 when you try to share a printer on a computer.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

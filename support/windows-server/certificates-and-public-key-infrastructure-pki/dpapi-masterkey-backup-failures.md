@@ -2,8 +2,6 @@
 title: DPAPI MasterKey backup failures
 description: Helps solve DPAPI MasterKey backup failures that occur when RWDC isn't available.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -2,8 +2,6 @@
 title: An Internet Explorer or Edge window opens when your computer connects to a corporate network or a public network
 description: When you connect a computer that's running Windows 8 or later to a network under certain conditions, you may see a sign-in page or the MSN Portal page.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

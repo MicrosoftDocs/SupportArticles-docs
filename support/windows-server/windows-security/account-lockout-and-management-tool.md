@@ -2,8 +2,6 @@
 title: Introduction to Account Lockout and Management Tools
 description: Introduces Account Lockout and Management Tools for Windows Server.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

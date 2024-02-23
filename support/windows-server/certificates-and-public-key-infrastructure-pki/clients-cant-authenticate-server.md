@@ -2,8 +2,6 @@
 title: Clients can't authenticate with a server
 description: Provides a solution to an issue where clients can't authenticate with a server after you obtain a new certificate to replace an expired certificate on the server.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

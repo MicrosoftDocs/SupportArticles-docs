@@ -2,8 +2,6 @@
 title: Can't create a Hyper-V virtual switch
 description: Fixes an issue in which you can't re-create a victual switch for Hyper-V on an upgraded 64-bit Windows-10-based computer.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

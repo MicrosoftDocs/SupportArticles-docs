@@ -2,8 +2,6 @@
 title: Support policy for third-party, kernel-level software
 description: Describes the support that Microsoft Support provides for Microsoft software products, when you run that product together with attestation-signed kernel-level drivers and any associated physical devices or applications.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

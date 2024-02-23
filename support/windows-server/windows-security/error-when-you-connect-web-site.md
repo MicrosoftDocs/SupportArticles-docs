@@ -2,8 +2,6 @@
 title: Error 403 or 500 when you connect to a Web site
 description: Describes a problem that occurs if the user tries to connect to a computer that is running ISA Server 2004 SP2 and that requires Basic, RADIUS, or OWA Forms-Based authentication. A script is available to work around this issue.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

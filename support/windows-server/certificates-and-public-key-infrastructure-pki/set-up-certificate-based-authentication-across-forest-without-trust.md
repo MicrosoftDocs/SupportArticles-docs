@@ -2,8 +2,6 @@
 title: How to set up certificate-based authentication across forests without trust for a web server
 description: Describes how to configure a web server and Active Directory to use certificate authentication across forests without using forest trusts.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
