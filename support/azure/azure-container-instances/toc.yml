@@ -28,3 +28,6 @@ items:
     href: web-socket-is-closed-or-could-not-be-opened.md
   - name: Image pull takes a long time to run
     href: long-image-pulls.md
+  - name: ServiceUnavailable - container group quota exceeded in region
+    href: service-unavailable-container-group-quota-exceeded.md
+    displayName: fraud
