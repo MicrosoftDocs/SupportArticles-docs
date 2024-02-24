@@ -17,7 +17,7 @@ ms.date: 03/31/2022
 
 # Description of the Office Feature Updates task
 
-The Office Feature Updates task checks for updates to [Connected experiences in Microsoft 365](https://support.microsoft.com/office/connected-experiences-in-microsoft-365-8d2c04f7-6428-4e6e-ac58-5828d4da5b7c), such as Copilot. This task runs for every user for all Microsoft 365 Apps Channels. However, it downloads feature updates based on your defined policies. For example, Semi-Annual Enterprise Channel (SAEC) users are expected to receive updates twice a year. Therefore, this task doesn't schedule downloads of feature updates to run every few hours.
+The Office Feature Updates task checks for updates to [Connected experiences in Microsoft 365](https://support.microsoft.com/office/connected-experiences-in-microsoft-365-8d2c04f7-6428-4e6e-ac58-5828d4da5b7c), such as Copilot for Excel, Word, and PowerPoint. This task runs for every user for all Microsoft 365 Apps Channels. However, it downloads feature updates based on your defined policies. For example, Semi-Annual Enterprise Channel (SAEC) users are expected to receive updates twice a year. Therefore, this task doesn't schedule downloads of feature updates to run every few hours.
 
 ## Summary
 
@@ -50,7 +50,7 @@ The **Office Feature Updates** task calls the "SDXHelper.exe" process in the bac
 
 **Q3: Can I disable this task or control the update process?**
 
-**A3:** We recommend that Microsoft 365 customers don't disable the Office Feature Updates task. This task makes sure that their connected experiences update when the updates are available. If blocked, connected experiences are updated as part of regular Office updates, but delayed updates result in out-of-date experiences and potential functionally issues.
+**A3:** Customers can block these updates entirely by preventing the Office Feature Updates process from starting (for example, by disabling the Office Feature Updates tasks in the Windows task scheduler), but blocking updates isn't recommended. This task makes sure that their connected experiences update when the updates are available. If blocked, connected experiences are updated as part of regular Office updates, but delayed updates result in out-of-date experiences and potential functionally issues.
 
 **Q4: Is this task dependent on the Office Automatic Updates 2.0 task (or vice versa) for Office feature updates?**
 
@@ -58,7 +58,7 @@ The **Office Feature Updates** task calls the "SDXHelper.exe" process in the bac
 
 **Q5: Does the update polling occur on a metered network connection?**
 
-**A5:** On low-cost networks, we don't run any update polling.
+**A5:** No. On low-cost networks, we don't run any update polling.
 
 **Q6: How does this feature affect battery life?**
 
