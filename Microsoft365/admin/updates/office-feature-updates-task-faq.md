@@ -40,30 +40,36 @@ The **Office Feature Updates** task calls the "SDXHelper.exe" process in the bac
 
 ## Frequently asked questions (FAQ)
 
-**Q1: Does this feature apply for Semi-Annual Enterprise Channel (SAEC) users?**
+**Q1: When do updates for connected experiences happen?**
 
-**A1:** The Office Feature Updates task runs every four hours. It might run for users in SAEC. However, it doesn't download any feature updates for these users.
+**A1:** Each connected experience that supports dynamic updates publishes upgraded **.appx** files as changes are made and validated, similar to application updates on mobile devices. The Office Feature Updates task runs approximately every 4 hours on users' devices and downloads the most up-to-date package if a newer one is available. Updates are silent and don't require user interaction. They don't require Office to restart. Updates are applied at the next opportunity that doesn't interrupt the user's experience (for example, the next time the user invokes that feature within the application UI).  
 
-**Q2: Can I disable this task?**
+**Q2: Does this feature apply for Semi-Annual Enterprise Channel (SAEC) users?**
 
-**A2:** For Microsoft 365 customers, we recommend that they don't disable the Office Feature Updates task. This task makes sure that their connected experiences download the latest updates when the updates are available. However, these experiences are still updated through the standard update mechanisms.
+**A2:** The Office Feature Updates task runs every four hours. It might run for users in SAEC. However, it doesn't download any feature updates for these users.
 
-**Q3: Is this task dependent on the Office Automatic Updates 2.0 task (or vice versa) for Office feature updates?**
+**Q3: Can I disable this task or control the update process?**
 
-**A3:** No.
+**A3:** We recommend that Microsoft 365 customers don't disable the Office Feature Updates task. This task makes sure that their connected experiences update when the updates are available. If blocked, connected experiences are updated as part of regular Office updates, but delayed updates result in out-of-date experiences and potential functionally issues.
 
-**Q4: Does the update polling occur on a metered network connection?**
+**Q4: Is this task dependent on the Office Automatic Updates 2.0 task (or vice versa) for Office feature updates?**
 
-**A4:** On low-cost networks, we don't run any update polling.
+**A4:** No.
 
-**Q5: How does this feature affect battery life?**
+**Q5: Does the update polling occur on a metered network connection?**
 
-**A5:** The Office Feature Updates task doesn't run when a laptop is reliant on battery power. These updates only occur when the computer connected to a power source.
+**A5:** On low-cost networks, we don't run any update polling.
 
-**Q6: How do connection settings affect the update task?**
+**Q6: How does this feature affect battery life?**
 
-**A6:** Any applications and other settings that block connections to the supporting Content Delivery Network (CDN), such as firewalls, also block the delivery feature updates to user's machine. The URLs and IP addresses that need to be reachable are documented with other Microsoft domains and URLs in the article [Microsoft 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges). Lines 46 and 47 are the relevant items for this feature.
+**A6:** The Office Feature Updates task doesn't run when a laptop is reliant on battery power. These updates only occur when the computer connected to a power source.
 
-**Q7: When do updates for connected experiences happen?**
+**Q7: How do connection settings affect the update task?**
 
-**A7:** Updates to connected experiences can happen at any time. However, these updates are silent and don't require any user intervention. They don't require Office to restart.
+**A7:** Any applications and other settings that block connections to the supporting Content Delivery Network (CDN), such as firewalls, also block the delivery feature updates to user's machine. The URLs and IP addresses that need to be reachable are documented with other Microsoft domains and URLs in the article [Microsoft 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges). Lines 46 and 47 are the relevant items for this feature.
+
+**Q8: What specific changes and updates are made by .appx files?**
+**A8:** These packages contain updated versions of resources used by connected experiences in Office, such as Copilot in Word. This update mechanism allows those features to be updated and enhanced along with the cloud-based services that power them. The files contained within the package are stored locally to improve performance.
+
+**Q9: How do we ensure the integrity and security of these .appx files?**
+**A9:** Microsoft digitally signs each update package before publishing it. After a package is downloaded, that signature is validated before the contents of the package are made available on the local device. The signature ensures that no one manipulated the package after it was created. This verification also means each individual file in the package matches the original published version.
