@@ -2,8 +2,6 @@
 title: Trust between a Windows NT domain and an Active Directory domain can't be established or it doesn't work as expected
 description: Describes trust configuration issues between a Windows NT 4.0-based domain and an Active Directory-based domain.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

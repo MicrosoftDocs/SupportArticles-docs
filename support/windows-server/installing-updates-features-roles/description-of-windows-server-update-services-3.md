@@ -2,8 +2,6 @@
 title: Description of the Windows Server Update Services 3.0 Service Pack 1 package
 description: Describes the Windows Server Update Services 3.0 Service Pack 1 package.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

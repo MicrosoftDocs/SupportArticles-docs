@@ -2,8 +2,6 @@
 title: Use WHOIS to research Internet domains
 description: Describes how to use WHOIS to research Internet domains.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -2,8 +2,6 @@
 title: Error after you enter BitLocker PIN at startup
 description: Helps fix an error (Too many PIN entry attempts) that occurs after you enter a BitLocker PIN at Windows startup.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

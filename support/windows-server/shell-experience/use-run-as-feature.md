@@ -2,8 +2,6 @@
 title: Enable and use the Run As feature
 description: Describes how to enable and use the Run as feature in Microsoft Windows Server 2003.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

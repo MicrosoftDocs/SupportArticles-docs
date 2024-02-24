@@ -2,8 +2,6 @@
 title: Install Service Packs and Hotfixes
 description: Describes how to best install and remove service packs and hotfix updates on Windows-based computers that are running in Safe mode.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -2,8 +2,6 @@
 title: Can't connect to Internet on a Virtual Private Network (VPN) server
 description: Fixes an issue where you can't connect to the Internet after you log on to a server that's running Routing and Remote Access by using VPN.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

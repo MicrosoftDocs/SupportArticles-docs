@@ -1,7 +1,7 @@
 ---
 title: Download and install Endpoint Protection for Linux
 description: Provides the steps to download and install Microsoft System Center 2012 Endpoint Protection for Linux.
-ms.date: 06/09/2020
+ms.date: 12/05/2023
 ms.reviewer: kaushika
 ---
 # How to download and install System Center 2012 Endpoint Protection for Linux

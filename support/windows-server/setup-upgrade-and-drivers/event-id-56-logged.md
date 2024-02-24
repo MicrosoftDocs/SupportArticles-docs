@@ -2,8 +2,6 @@
 title: Event ID 56 is logged in Windows Server
 description: Provides help to fix Event ID 56 that's logged in Windows Server.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

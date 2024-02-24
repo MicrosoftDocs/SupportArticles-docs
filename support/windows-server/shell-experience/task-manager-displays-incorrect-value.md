@@ -2,8 +2,6 @@
 title: Task manager displays incorrect value for L2/L3 cache
 description: Provides a solution to an issue where task manager may display incorrect value for L2/L3 cache.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

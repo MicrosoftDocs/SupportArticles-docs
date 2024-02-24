@@ -2,8 +2,6 @@
 title: Database backup/restore error 3266/3013
 description: Resolves error 3266 or 3013 that occurs when you perform a database backup to disk or tape or a database restore from disk or tape.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
