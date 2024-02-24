@@ -1,5 +1,5 @@
 ---
-title: Office Feature Updates task description and FAQ
+title: The Office Feature Updates task 
 description: Describes Office Feature Updates task
 author: helenclu
 manager: dcscontentpm
@@ -15,7 +15,7 @@ appliesto:
 ms.date: 02/23/2024
 ---
 
-# Description of the Office Feature Updates task
+# The Office Feature Updates task
 
 Microsoft Office ProPlus build 16.0.11220.* and later builds provide two new tasks:
 
