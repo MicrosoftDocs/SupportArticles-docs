@@ -2,6 +2,16 @@
 
 
 
+## Week of February 19, 2024
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 2/23/2024 | [Known issues with Teams Rooms on Android](/microsoftteams/troubleshoot/teams-rooms-and-devices/teams-rooms-known-issues-android) | added |
+| 2/23/2024 | [Known issues with Teams Rooms on Windows](/microsoftteams/troubleshoot/teams-rooms-and-devices/teams-rooms-known-issues-windows) | renamed |
+| 2/23/2024 | [Resolve interaction issues between Teams and Exchange Server](/microsoftteams/troubleshoot/exchange-integration/teams-exchange-interaction-issue) | modified |
+
+
 ## Week of January 29, 2024
 
 
