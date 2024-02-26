@@ -22,6 +22,8 @@ landingContent:
         links:
           - text: Troubleshoot data replication issues in cloud migration
             url: data-replication/migration-data-replication.md
+          - text: Troubleshoot data replication issues for large tables in cloud migration
+            url: data-replication/migration-data-replication-large-tables.md
   # Card
   - title: Cloud migration setup
     linkLists:
