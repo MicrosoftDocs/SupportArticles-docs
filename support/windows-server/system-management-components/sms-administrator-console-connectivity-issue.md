@@ -1,17 +1,13 @@
 ---
 title: Troubleshoot SMS Administrator console connectivity
 description: Discusses how to troubleshoot a new or an existing SMS Administrator console to determine why it cannot connect to the site server.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jarrettr
 ms.custom: sap:microsoft-management-console-mmc, csstroubleshoot
-ms.subservice: system-mgmt-components
 ---
 # How to troubleshoot SMS Administrator console connectivity
 

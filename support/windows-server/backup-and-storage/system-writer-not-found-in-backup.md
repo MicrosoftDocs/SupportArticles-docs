@@ -1,17 +1,13 @@
 ---
 title: System state backup fails
 description: Provides a solution to an issue where you fail to perform a system state backup by using Windows Server Backup.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-nirmsh
 ms.custom: sap:volume-shadow-copy-service-vss, csstroubleshoot
-ms.subservice: backup-and-storage
 ---
 # System state backup by using Windows Server Backup fails with error: System writer is not found in the backup
 

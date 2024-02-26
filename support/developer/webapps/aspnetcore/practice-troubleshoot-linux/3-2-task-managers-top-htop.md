@@ -2,9 +2,7 @@
 title: Use top, htop command to monitor processes
 description: This article describes how to use top and htop command line tools to monitor processes.
 ms.date: 09/15/2021
-ms.service: aspnet-core
 ms.reviewer: ramakoni, ahmetmb
-ms.subservice: practice-troubleshoot-linux
 author: ahmetmithat
 ---
 # Part 3.2 - Linux task managers, top, and htop

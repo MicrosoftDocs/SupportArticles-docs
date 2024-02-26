@@ -1,17 +1,13 @@
 ---
 title: DirectAccess clients can connect over Teredo but not through IP-HTTPS
 description: Describes an issue that prevents DirectAccess clients from connecting by using IP-HTTPS even though they can connect over Teredo. A resolution is provided.
-ms.date: 09/07/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: ajayps, kaushika
 ms.custom: sap:remote-access, csstroubleshoot
-ms.technology: windows-client-networking
 ---
 # DirectAccess clients can connect over Teredo but not through IP-HTTPS
 

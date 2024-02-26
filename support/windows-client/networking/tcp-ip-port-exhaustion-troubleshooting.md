@@ -1,14 +1,12 @@
 ---
 title: TCP/IP port exhaustion troubleshooting
 description: Learn how to troubleshoot port exhaustion issues. Port exhaustion occurs when all the ports on a machine are used.
-ms.date: 03/10/2023
-ms.prod: windows-client
+ms.date: 12/26/2023
 ms.topic: troubleshooting
 author: dansimp
 ms.author: dansimp
 manager: dcscontentpm
 ms.collection: highpri
-ms.technology: windows-client-networking
 ms.custom: sap:tcp/ip-communications, csstroubleshoot
 ms.reviewer: dansimp
 audience: itpro
@@ -22,8 +20,8 @@ TCP and UDP protocols work based on port numbers used for establishing connectio
 
 There are two types of ports:
 
-- Ephemeral ports, which are dynamic ports, are the set of ports that every machine by default will have them to make an outbound connection.
-- Well-known ports are the defined port for a particular application or service. For example, file server service is on port 445, HTTPS is 443, HTTP is 80, and RPC is 135. Custom application will also have their defined port numbers.
+- Ephemeral ports, which are dynamic ports, are the set of ports that every machine by default will have to make an outbound connection.
+- Well-known ports are the defined ports for a particular application or service. For example, file server service is on port 445, HTTPS is 443, HTTP is 80, and RPC is 135. Custom applications will also have their own defined port numbers.
 
 When a connection is being established with an application or service, client devices use an ephemeral port from the device to connect to a well-known port defined for that application or service. A browser on a client machine will use an ephemeral port to connect to `https://www.microsoft.com` on port 443.
 

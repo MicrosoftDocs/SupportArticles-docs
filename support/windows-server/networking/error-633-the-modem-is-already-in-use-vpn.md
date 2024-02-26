@@ -1,17 +1,13 @@
 ---
 title: Error 633 the modem is already in use
 description: Describes an issue where you may not be able to establish a VPN connection because of a TCP port conflict. Workarounds are provided.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, santoshc
 ms.custom: sap:remote-access, csstroubleshoot
-ms.subservice: networking
 ---
 # "Error 633 - the modem (or other connecting device) is already in use" error message when you try to establish a VPN connection
 

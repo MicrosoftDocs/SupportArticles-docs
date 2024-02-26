@@ -1,17 +1,13 @@
 ---
 title: Administrator account password expiration behavior
 description: Describes a by-design behavior of the administrator account password expiration policy.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, joramos
 ms.custom: sap:account-lockouts, csstroubleshoot
-ms.subservice: windows-security
 ---
 # Administrator account password expiration behavior
 

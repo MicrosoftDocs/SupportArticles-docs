@@ -1,17 +1,13 @@
 ---
 title: Server service configuration and tuning
 description: Describes how to configure and tuning Windows Server service.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: peterlo, kaushika
 ms.custom: sap:performance-monitoring-tools, csstroubleshoot
-ms.subservice: performance
 ---
 # Server service configuration and tuning
 

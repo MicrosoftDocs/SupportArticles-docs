@@ -1,17 +1,13 @@
 ---
 title: Error "An item with the same key has already been added"
 description: Helps to fix the error "An item with the same key has already been added"
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:errors-when-running-the-validation-wizard, csstroubleshoot
-ms.subservice: high-availability
 ---
 # Error: "An item with the same key has already been added"
 

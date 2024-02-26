@@ -1,17 +1,13 @@
 ---
 title: Remote laptop disconnects from wireless network
 description: Troubleshoot an issue in which remote laptop disconnects from wireless network.
-ms.date: 11/16/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, rklemen, v-lianna
 ms.custom: sap:remote-desktop-sessions, csstroubleshoot
-ms.subservice: rds
 ---
 # Remote laptop disconnects from wireless network
 

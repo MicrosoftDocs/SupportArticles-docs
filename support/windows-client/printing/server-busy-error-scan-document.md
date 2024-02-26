@@ -1,17 +1,13 @@
 ---
 title: (Server Busy) error message when you try to scan a document
 description: Provides a resolution for fixing (Server Busy) error when you try to scan a document
-ms.date: 05/16/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, philipd, match
 ms.custom: sap:issues-with-scanning, csstroubleshoot
-ms.technology: windows-client-printing
 ---
 # "Server Busy" error message when you try to scan a document  
 

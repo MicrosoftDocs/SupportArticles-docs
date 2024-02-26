@@ -1,8 +1,8 @@
 ---
 title: East Asian first character isn't recognized
 description: This article provides resolutions for the problem where the first input character for East Asian languages isn't recognized correctly in DataGridView cell on Windows 10.
-ms.date: 01/29/2021
-ms.custom: sap:Desktop app UI development
+ms.date: 12/19/2023
+ms.custom: sap:other
 ms.reviewer: hirotoh
 ms.subservice: desktop-app-ui-dev
 ---
@@ -19,7 +19,7 @@ The first input character for East Asian Languages isn't recognized correctl
 
 ## Cause
 
-The input composition for Edit control doesn't include the first character typed into the DataGrid cell. The text entered could therefore be incorrect.  The Edit control content must be cleared to ensure the correct text is entered. This is an application compatibility issue. Changing compatibility registry is workaround.
+The input composition for Edit control doesn't include the first character typed into the DataGrid cell. The text entered could therefore be incorrect. The Edit control content must be cleared to ensure the correct text is entered. This is an application compatibility issue. Changing compatibility registry is workaround.
 
 ## Resolution
 
@@ -28,13 +28,13 @@ The input composition for Edit control doesn't include the first character typed
 
 For more information about how to back up and restore the registry, see: [How to back up and restore the registry in Windows](https://support.microsoft.com/help/322756).
 
-There are two registry keys to address this problem. Customers can apply one of the following registry key to the system.
+There are two registry keys to address this problem. Customers can apply one of the following registry key to the system.
 
 Consider the following scenario.
 
-- If you have multiple applications that encounter this problem and each application has a different Window Class name for each DataGrid cell. In this case, you can add the new registry key, which contains an executable file name of application. Then, you will set the value to 0x00008000. You will need to repeatedly set up the registry keys for every single application.
+- If you have multiple applications that encounter this problem, and each application has a different Window Class name for each DataGrid cell. In this case, you can add the new registry key, which contains an executable file name of application. Then, you can set the value to 0x00008000. You'll need to repeatedly set up the registry keys for every single application.
 
-- If you have multiple applications that encounter this problem but your applications use single-Window Class name for DataGrid cell because all of those applications' Window Class names are the same. In this case, you can add `AppCompatClassName` registry key. Then, you will set the value to Window class name of your application.
+- If you have multiple applications that encounter this problem but your applications use single-Window Class name for DataGrid cell because all of those applications' Window Class names are the same. In this case, you can add `AppCompatClassName` registry key. Then, you can set the value to Window class name of your application.
 
 1. **For specific process name:**  
  **Registry entry**  
@@ -43,7 +43,7 @@ Consider the following scenario.
     REG_DWORD: Compatibility  
     DWORD Value: 0x00008000 (Hex value of 32,768)
 
-    If x86 applications are executed on a x64 Windows system, the following registry key can be applied instead of the one mentioned above:
+    If x86 applications are executed on a x64 Windows system, the following registry key can be applied instead of the one mentioned previously:
 
     > HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\CTF\Compatibility\\\<ExecutableFileName>  
     REG_DWORD: Compatibility  
@@ -56,7 +56,7 @@ Consider the following scenario.
     DWORD Value: 0x00008000 (Hex value of 32,768)
 
 2. **For specific Windows class name:**  
- If you use this scenario, you have to apply following Windows Updates on your system.
+ If you use this scenario, you have to apply the following Windows Updates on your system.
 
     | Windows 10 Version| Article link |
     |---|---|

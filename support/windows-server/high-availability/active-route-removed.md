@@ -1,17 +1,13 @@
 ---
 title: Active Route removed
 description: This article provides a solution to an issue that the Active route is removed when you add a static persistent route to a network adapter.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, johnmar
 ms.custom: sap:cannot-bring-a-resource-online, csstroubleshoot
-ms.subservice: high-availability
 ---
 # Active Route removed on Windows Server Failover Cluster
 

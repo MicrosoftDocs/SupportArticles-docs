@@ -1,17 +1,13 @@
 ---
 title: DNS server logs event 7062
 description: Provides a solution to solve the DNS server logs event 7062.
-ms.date: 12/21/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:dns, csstroubleshoot
-ms.subservice: networking
 ---
 # DNS Server Logs Event 7062: "DNS Server Encountered a Packet Addressed to Itself"
 

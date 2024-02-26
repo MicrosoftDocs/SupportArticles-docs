@@ -1,17 +1,13 @@
 ---
 title: Performance issues when using custom default user profile in Windows 10, Windows Server 2016, or Windows Server 2019
 description: Address a performance issue with customize default user profile. Event log ID 454 is received when the issue occurs.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:slow-performance, csstroubleshoot
-ms.subservice: performance
 ---
 # Performance is poor when using custom default user profile in Windows
 

@@ -1,17 +1,13 @@
 ---
 title: Error 0x80004005 when you create DSN with GPP
 description: Provides help to fix the error 0x80004005 that occurs when you configure a Data Source Name (DSN) using Group Policy Preferences (GPP).
-ms.date: 04/28/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, sajijohn, markgray
 ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
-ms.subservice: group-policy
 ---
 # Unable to create DSN using Group Policy Preferences, unspecified error 0x80004005
 

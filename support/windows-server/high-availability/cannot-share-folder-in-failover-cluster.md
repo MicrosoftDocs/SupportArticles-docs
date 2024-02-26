@@ -1,17 +1,13 @@
 ---
 title: Error when you share folders in failover cluster
 description: Describes a problem in which you may receive warning messages or error messages when you provision a shared folder on a cluster physical disk resource in Windows Server 2008.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, ctimon
 ms.custom: sap:cannot-bring-a-resource-online, csstroubleshoot
-ms.subservice: high-availability
 ---
 # You may receive error messages when you share a folder in a Windows Server 2008 failover cluster
 

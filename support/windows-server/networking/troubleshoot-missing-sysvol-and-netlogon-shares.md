@@ -1,17 +1,13 @@
 ---
 title: Troubleshoot missing SYSVOL and Netlogon shares for Distributed File System (DFS) Replication
 description: Describes how to troubleshoot SYSVOL and Netlogon shares that are missing.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:dfsr, csstroubleshoot
-ms.subservice: networking
 ---
 # How to troubleshoot missing SYSVOL and Netlogon shares
 

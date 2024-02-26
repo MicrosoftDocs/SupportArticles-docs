@@ -1,17 +1,13 @@
 ---
 title: Error when you log on to Terminal Server client
 description: Provides a solution to an issue that occurs when you log on to a computer running Terminal Server Edition.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:connecting-to-a-session-or-desktop, csstroubleshoot
-ms.subservice: rds
 ---
 # Error message: an application error has occurred and an application error log is being generated
 

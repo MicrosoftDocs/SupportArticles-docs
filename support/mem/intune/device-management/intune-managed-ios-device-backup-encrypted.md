@@ -1,7 +1,7 @@
 ---
 title: iTunes automatically turns on backup encryption on Intune-managed iOS device
 description: Describes a behavior that causes the automatic encryption of a backup of an Intune-managed iOS device if an Intune certificate profile was deployed to the device.
-ms.date: 09/22/2021
+ms.date: 12/05/2023
 search.appverid: MET150
 ms.custom: sap:Configure certificates
 ms.reviewer: kaushika

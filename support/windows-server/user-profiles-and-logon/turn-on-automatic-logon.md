@@ -1,18 +1,14 @@
 ---
 title: Configure Windows to automate logon
 description: This article describes how to turn on the automatic logon feature in Windows by editing the registry.
-ms.date: 11/08/2022
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: high
 ms.reviewer: kaushika
 ms.custom: sap:user-logon-fails, csstroubleshoot
 adobe-target: true
-ms.subservice: user-profiles
 ---
 # Turn on automatic logon in Windows
 

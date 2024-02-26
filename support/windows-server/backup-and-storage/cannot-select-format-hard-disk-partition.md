@@ -1,17 +1,13 @@
 ---
 title: Can't select or format hard disk partition
 description: Describes a problem that may occur when you try to install Windows.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, kimnle
 ms.custom: sap:partition-and-volume-management, csstroubleshoot
-ms.subservice: backup-and-storage
 ---
 # You cannot select or format a hard disk partition when you try to install Windows
 

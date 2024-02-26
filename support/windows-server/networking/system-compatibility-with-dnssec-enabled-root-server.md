@@ -1,17 +1,13 @@
 ---
 title: OS compatibility with DNSSEC enabled root servers
 description: DNSSEC was recently enabled on root servers on the Internet between January and May 2010. Several blogs and press articles have reported potential DNS outages because of DNSSEC being recently enabled on root hint DNS servers on the internet. This document describes the impact and compatibility story for Windows client and server operating systems as well computers hosting the Microsoft DNS Server role.
-ms.date: 03/24/2022
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, BBenson
 ms.custom: sap:tcp/ip-communications, csstroubleshoot
-ms.subservice: networking
 ---
 # Windows client and server operating system compatibility with DNSSEC enabled root servers
 

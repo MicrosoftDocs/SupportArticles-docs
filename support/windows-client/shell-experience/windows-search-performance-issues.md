@@ -1,17 +1,13 @@
 ---
 title: Troubleshoot Windows Search performance
 description: Provides guidelines for troubleshooting poor Windows Search performance.
-ms.date: 09/21/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: winciccore, kaushika
 ms.custom: sap:cortana-and-search, csstroubleshoot
-ms.technology: windows-client-shell-experience
 adobe-target: true
 ---
 # Troubleshoot Windows Search performance

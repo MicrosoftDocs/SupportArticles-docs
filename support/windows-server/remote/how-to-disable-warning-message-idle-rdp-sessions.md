@@ -1,15 +1,13 @@
 ---
 title: How to disable warning message for idle remote desktop sessions
 description: Provides the method to disable warning message for idle remote desktop sessions by using PowerShell.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, ishimada, v-lianna
 ms.custom: sap:remote-desktop-sessions, csstroubleshoot
-ms.subservice: rds
 ---
 # How to disable warning message for idle remote desktop sessions
 

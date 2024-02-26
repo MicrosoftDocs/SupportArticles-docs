@@ -1,7 +1,7 @@
 ---
 title: WDS doesn't start on a PXE enabled remote distribution point
 description: Fixes an issue in which Windows Deployment Services (WDS) doesn't start on a PXE enabled remote distribution point in Configuration Manager.
-ms.date: 06/04/2020
+ms.date: 12/05/2023
 ms.reviewer: kaushika, frankroj
 ---
 # WDS doesn't start on a PXE enabled remote distribution point in Configuration Manager

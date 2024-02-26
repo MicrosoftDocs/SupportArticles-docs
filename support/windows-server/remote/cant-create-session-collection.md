@@ -1,17 +1,13 @@
 ---
 title: Can't create a session collection
 description: Describes an issue in which you can't create a session collection correctly in Windows Server 2012.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, ryhayash
 ms.custom: sap:administration, csstroubleshoot
-ms.subservice: rds
 ---
 # You cannot create a session collection and an error occurs in Windows Server 2012
 

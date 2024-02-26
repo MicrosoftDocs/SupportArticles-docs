@@ -1,17 +1,13 @@
 ---
 title: Services depending on ASP.NET State Service don't start
 description: Describes an issue that may occur on a Windows Server computer. Provides a workaround.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:.net-framework-installation, csstroubleshoot
-ms.subservice: application-compatibility
 ---
 # Services that depend on the ASP.NET State Service do not start after you upgrade to the .NET Framework 4.0
 

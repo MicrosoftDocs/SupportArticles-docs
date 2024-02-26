@@ -1,17 +1,13 @@
 ---
 title: How to rebuild or move a MSDTC installation for use with a SQL failover cluster
 description: Describes how to rebuild a broken Microsoft Distributed Transaction Coordinator (MSDTC) installation for use with a failover clustered SQL Server installation, and how to move the MSDTC clustered resource to a new group.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:dtc-startup-configuration-connectivity-and-cluster, csstroubleshoot
-ms.subservice: application-compatibility
 ---
 # How to rebuild or move a MSDTC installation for use with a SQL failover cluster
 

@@ -1,17 +1,13 @@
 ---
 title: Guidance for troubleshooting RDS Licensing
 description: Introduces general guidance for troubleshooting scenarios related to RDS Licensing.
-ms.date: 05/16/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:remote-desktop-services-terminal-services-licensing, csstroubleshoot
-ms.subservice: rds
 ---
 # RDS Licensing troubleshooting guidance
 

@@ -1,17 +1,13 @@
 ---
 title: VM can't reach network configured by vLan tagging
 description: Resolves an issue where virtual machines can't reach the network that's configured by using vLan tagging.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:configuration-of-virtual-machine-settings, csstroubleshoot
-ms.subservice: hyper-v
 ---
 # Hyper-V virtual machines cannot reach the network when the vLan tagging is enabled on a Windows Server 2008-based computer
 

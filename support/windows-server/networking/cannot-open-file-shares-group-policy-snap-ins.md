@@ -1,17 +1,13 @@
 ---
 title: Fail to open file shares or Group Policy snap-ins
 description: Describes how to resolve a problem that occurs when SMB signing is disabled for the Workstation or Server service on a domain controller, but SMB signing is required for the Server or Workstation service on the same domain controller. This problem occurs in Windows Small Business Server 2003, Windows Server 2003, and Windows 2000 Server.
-ms.date: 12/10/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-sanair
 ms.custom: sap:access-to-remote-file-shares-smb-or-dfs-namespace, csstroubleshoot
-ms.subservice: networking
 ---
 # You cannot open file shares or Group Policy snap-ins on a domain controller
 

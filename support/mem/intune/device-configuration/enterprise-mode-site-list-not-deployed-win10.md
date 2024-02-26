@@ -1,7 +1,7 @@
 ---
 title: Intune Enterprise Mode site list not deployed
 description: Describes an issue in which Intune Enterprise Mode site list isn't deployed to co-managed Windows 10 devices.
-ms.date: 12/20/2021
+ms.date: 12/05/2023
 search.appverid: MET150
 ms.custom: sap:Configure device restrictions
 ms.reviewer: kaushika

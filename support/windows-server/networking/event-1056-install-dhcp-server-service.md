@@ -1,17 +1,13 @@
 ---
 title: Event ID 1056 after installing DHCP
 description: Fixes an issue where event ID 1056 is logged after you install the DHCP Server service on a Windows Server 2003 domain controller that's also running the DNS Server service.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:dynamic-host-configuration-protocol-dhcp, csstroubleshoot
-ms.subservice: networking
 ---
 # Event ID 1056 is logged after installing DHCP
 
