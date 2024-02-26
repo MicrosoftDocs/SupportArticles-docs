@@ -1,7 +1,7 @@
 ---
 title: Netlogon service doesn't start
 description: Describes an issue where the Netlogon service doesn't start and event IDs 2114 and 7024 are logged. Provides a resolution for this issue.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

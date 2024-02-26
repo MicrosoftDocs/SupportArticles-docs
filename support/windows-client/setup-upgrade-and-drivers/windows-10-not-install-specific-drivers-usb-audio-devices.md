@@ -1,7 +1,7 @@
 ---
 title: Windows 10 doesn't install specific drivers for USB audio devices on the first connection
 description: Fixes an issue in which device-specific drivers aren't installed for USB audio devices the first time that you connect the device on Windows 10 Version 1703.
-ms.date: 04/28/2023
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

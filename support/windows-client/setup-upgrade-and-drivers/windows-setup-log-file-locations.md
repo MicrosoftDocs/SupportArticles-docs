@@ -1,7 +1,7 @@
 ---
 title: Windows setup log file locations
 description: Describes the setup log file locations for each setup phase of Windows Vista, Windows 7, Windows Server 2008 R2, Windows 8.1, and Windows 10 Version 1607.
-ms.date: 04/28/2023
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

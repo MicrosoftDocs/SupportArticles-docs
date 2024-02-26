@@ -1,7 +1,7 @@
 ---
 title: Microsoft Product Support Reporting Tool for Microsoft Software Update Services v 5.2.2003.0
 description: Provides some steps for installing the Microsoft Product Support Reporting Tool for Microsoft Software Update Services
-ms.date: 04/28/2023
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

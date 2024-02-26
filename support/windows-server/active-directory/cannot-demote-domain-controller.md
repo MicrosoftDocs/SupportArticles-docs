@@ -1,7 +1,7 @@
 ---
 title: Error when you demote a domain controller
 description: Resolves an issue where demoting a domain controller by using the Active Directory Installation wizard (Dcpromo.exe) fails.
-ms.date: 08/01/2023
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

@@ -1,7 +1,7 @@
 ---
 title: Unable to install Secure Web Services on Devices (WSD) Printer
 description: Fixes an issue in which you can't install a Secure Web Services on Devices (WSD) printer from Print Management Console.
-ms.date: 05/16/2023
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

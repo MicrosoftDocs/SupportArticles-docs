@@ -1,7 +1,7 @@
 ---
 title: User profile cannot be loaded with Event ID 1509
 description: Provides resolutions to fix the error User Profile Service failed the logon. User profile cannot be loaded.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

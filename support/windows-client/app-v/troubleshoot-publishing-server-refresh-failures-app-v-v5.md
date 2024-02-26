@@ -1,7 +1,7 @@
 ---
 title: How to troubleshoot publishing server refresh failures in App-V v5
 description: Describes how to troubleshoot publishing server refresh failures in App-V v5.
-ms.date: 12/04/2020
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

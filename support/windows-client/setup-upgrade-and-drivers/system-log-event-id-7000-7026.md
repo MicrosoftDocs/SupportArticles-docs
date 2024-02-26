@@ -1,7 +1,7 @@
 ---
 title: Event ID 7000 or 7026 in System log
 description: Describes a problem in which event ID 7000 or event ID 7026 may be logged after you start a computer that's running Windows.
-ms.date: 04/28/2023
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

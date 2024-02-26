@@ -1,7 +1,7 @@
 ---
 title: Cannot use different credentials for a network share
 description: Describes an issue in which you receive error messages when you try to use user credentials to connect to a network share from a Windows-based computer. Workarounds are provided.
-ms.date: 09/24/2021
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm

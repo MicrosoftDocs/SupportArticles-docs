@@ -1,7 +1,7 @@
 ---
 title: Windows 10 BitLocker Recovery auto-shutdown in UEFI mode
 description: Discusses the BitLocker Recovery auto-shutdown process in UEFI mode in Windows 10.
-ms.date: 12/07/2020
+ms.date: 12/26/2023
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
