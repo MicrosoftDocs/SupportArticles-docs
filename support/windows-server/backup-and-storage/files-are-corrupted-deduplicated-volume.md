@@ -2,8 +2,6 @@
 title: Files are corrupted on deduplicated volume that were created as NTFS-compressed
 description: Discusses that files cannot be opened and are logged as corrupted on deduplicated volumes that were created by having NTFS compression enabled. Provides a resolution.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

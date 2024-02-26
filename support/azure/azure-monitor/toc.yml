@@ -57,10 +57,10 @@ items:
         href: app-insights/internal-server-availability-tests-firewall.md     
     - name: Daily cap unexpected behaviors
       href: app-insights/daily-cap-unexpected-behaviors.md              
-    - name: Error retrieving data in portal
-      href: app-insights/troubleshoot-portal-connectivity.md
     - name: Missing CPU Total and Committed Memory metrics
       href: app-insights/missing-cpu-total-committed-memory-metrics.md
+    - name: Portal connectivity issues
+      href: app-insights/troubleshoot-portal-connectivity.md
     - name: Troubleshoot Application Insights Profiler
       href: app-insights/profiler-troubleshooting.md
     - name: Troubleshoot Code Optimizations (Preview)

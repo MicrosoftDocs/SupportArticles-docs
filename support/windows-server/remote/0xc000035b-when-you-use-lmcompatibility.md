@@ -2,8 +2,6 @@
 title: 0xC000035B when you use LmCompatibility
 description: Discusses that Terminal Services client connection error 0xC000035B is logged when you use LmCompatibility for a connection through a Windows Server 2012 RD Gateway server.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

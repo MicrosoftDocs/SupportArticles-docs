@@ -2,8 +2,6 @@
 title: USMT 4.0 migration from x86 to x64 results in corrupted COM+ components
 description: Solves an issue where COM+ component settings will be corrupt when you migrate from an x86 platform to an x64 platform.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

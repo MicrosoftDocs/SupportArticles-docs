@@ -2,8 +2,6 @@
 title: Recommended private heartbeat configuration on a cluster server
 description: Describes recommended configuration for the private adapter on a cluster server.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

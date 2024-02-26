@@ -2,8 +2,6 @@
 title: Issues occur on computer running the Volume Shadow Copy Service
 description: Describes issues in which Event ID 8019, Event ID 20, Event ID 8193, or Event ID 12302 may be logged in the Application log. You may receive an Error 0x8004230F error message or an Error 0x80004002 error message.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

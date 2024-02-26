@@ -2,8 +2,6 @@
 title: Windows procedures don't work without RPC service
 description: Provides a solution to an issue where some Windows procedures don't work when the Remote Procedure Call (RPC) service is disabled.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

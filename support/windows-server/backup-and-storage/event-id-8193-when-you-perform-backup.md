@@ -2,8 +2,6 @@
 title: Event ID 8193 when you perform a backup
 description: Describes an issue that triggers event ID 8193 when you try to perform a VSS backup in Windows Server 2012 and earlier versions of Windows. A resolution is provided.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

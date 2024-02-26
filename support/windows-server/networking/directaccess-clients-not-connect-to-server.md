@@ -2,8 +2,6 @@
 title: DirectAccess clients can't connect to server
 description: Describes an issue in which DirectAccess clients encounter error code 0x103, 0x2AFC, or 0x2AF9 and cannot connect to Windows Server by using IP-HTTPS.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

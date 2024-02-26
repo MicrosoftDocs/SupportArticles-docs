@@ -2,8 +2,6 @@
 title: Fail to log on to a terminal server
 description: Describes a problem that may occur if many users are logged on to the terminal server. To resolve this problem, modify the registry to increase the PoolUsageMaximum value and the PagedPoolSize value.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

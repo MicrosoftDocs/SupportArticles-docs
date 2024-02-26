@@ -2,8 +2,6 @@
 title: Updates may not install with Fast Startup in Windows 10
 description: Describes that the Fast Startup feature may impede the installation of certain Windows 10 updates.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

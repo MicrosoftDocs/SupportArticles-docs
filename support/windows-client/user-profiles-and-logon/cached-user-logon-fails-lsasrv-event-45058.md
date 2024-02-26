@@ -2,8 +2,6 @@
 title: Cached user logon fails with LSASRV event 45058
 description: Fixes an issue that occurs when logging on to a domain-joined Windows Vista or Windows 7 computer using cached credentials.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

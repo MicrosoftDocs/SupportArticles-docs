@@ -2,8 +2,6 @@
 title: Supported partners for non-Microsoft hardware virtualization software
 description: Explains that Novell, Inc. has partnered with Microsoft to provide support for virtualized software.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

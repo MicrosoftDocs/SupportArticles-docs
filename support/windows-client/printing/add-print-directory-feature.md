@@ -2,8 +2,6 @@
 title: Add print directory feature to Windows Explorer
 description: Describes how to add the print directory feature, and how to enable printing of the directory listing from within Windows Explorer.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
