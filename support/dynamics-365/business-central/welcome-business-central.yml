@@ -32,14 +32,6 @@ landingContent:
           - text: Something
             url: data-replication/migration-data-replication.md      
   # Card
-  - title: Query performance
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Something
-            url: data-replication/migration-data-replication.md
-
-  # Card
   - title: Client
     linkLists:
       - linkListType: how-to-guide

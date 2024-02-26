@@ -13,10 +13,6 @@
         items:
           - name: Something
             href: data-replication/migration-data-replication.md
-      - name: Query performance
-        items: 
-          - name: Something
-            href: data-replication/migration-data-replication.md
       - name: Client
         items:
           - name: Troubleshoot user personalization can't be started
