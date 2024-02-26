@@ -2,6 +2,24 @@
 
 
 
+## Week of February 19, 2024
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 2/19/2024 | [Error when you try to remove a mailbox database](/exchange/troubleshoot/administration/error-remove-a-mailbox-database) | modified |
+
+
+## Week of February 12, 2024
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 2/13/2024 | [Recoverable Items folder not emptied for mailbox on litigation or retention hold](/exchange/troubleshoot/antispam-and-protection/recoverable-items-folder-full) | modified |
+| 2/13/2024 | [Message store has reached its maximum size error when a Microsoft 365 user tries to delete an item](/exchange/troubleshoot/calendars/store-reached-maximum-size) | modified |
+| 2/14/2024 | [Error when you try to remove a mailbox database](/exchange/troubleshoot/administration/error-remove-a-mailbox-database) | modified |
+
+
 ## Week of January 29, 2024
 
 
@@ -18,11 +36,3 @@
 | Published On |Topic title | Change |
 |------|------------|--------|
 | 1/24/2024 | [Shared mailbox in Exchange Online is unexpectedly disconnected](/exchange/troubleshoot/user-and-shared-mailboxes/shared-mailboxes-unexpectedly-converted-to-user-mailboxes) | modified |
-
-
-## Week of January 15, 2024
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 1/16/2024 | [Public folder auto-replies are sent from an incorrect email address](/exchange/troubleshoot/public-folders/public-folder-auto-replies-incorrect-email-address) | added |

@@ -2,17 +2,9 @@
 
 
 
-## Week of December 04, 2023
+## Week of February 19, 2024
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 12/6/2023 | [Increase the size of diagnostic logs for Microsoft 365 Apps for enterprise](/microsoft-365/troubleshoot/diagnostic-logs/collect-office-diagnostic-logs) | modified |
-
-
-## Week of November 27, 2023
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 11/30/2023 | [Resolve search errors in eDiscovery (Standard)](/microsoft-365/troubleshoot/ediscovery/resolve-ediscovery-issues) | modified |
+| 2/23/2024 | [The Office Feature Updates task](/microsoft-365/troubleshoot/updates/office-feature-updates-task-faq) | modified |
