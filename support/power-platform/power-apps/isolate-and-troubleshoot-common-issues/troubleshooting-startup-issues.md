@@ -77,16 +77,22 @@ Try the following steps to resolve the issue:
 3. Try signing in with a different browser. For a list of supported browsers, see [system requirements](/power-apps/limits-and-config#supported-browsers-for-running-power-apps).
 4. Check your network connection to make sure it's stable.
 5. If you're getting Microsoft Entra errors, they're usually related to user authentication and authorization. The error page might contain additional information that can help diagnose and fix the problem. To resolve Microsoft Entra errors, you might need assistance from your IT department.
-6. Only consider the following resolution step if you are experiencing sign-in/sign-out issues under the following conditions:
-a. Condition A: You use a device that has multiple Microsoft Entra identities sign-in to access different       applications.
-b. Condition B: You access multiple applications using Microsoft Entra across more than one tab. When you sign out of one tab you observe you aren't signed out of the second tab.
-c. Condition C: You access Power Apps that are embedded (via iFrame) in a 3rd party website.
-d. Condition D: You access a canvas app that's embedded in a model driven app form. 
-e. Resolution step: Check if your browser has Third-party Storage Partitioning enabled or set to Default. For the time being, it must be disabled.
-- You can check this setting in Edge by navigating to "edge://flags/#third-party-storage-partitioning" in the browser textbox.
-- You can check this setting in Chrome by navigating to "chrome://flags/#third-party-storage-partitioning" in the browser textbox.
+6. Check the **Third-party Storage Partitioning** setting in your browser to make sure it's disabled.
 
-![image](https://github.com/MicrosoftDocs/SupportArticles-docs-pr/assets/11514622/0391fbcb-7558-48f6-981c-c55fa198e93c)
+   > [!NOTE]
+   > Only consider this resolution step when you experience sign-in or sign-out issues under one of the following conditions:
+   >
+   > - You use a device that has multiple Microsoft Entra identities sign-in to access different applications.
+   > - You access multiple applications using Microsoft Entra across more than one tab. When you sign out of one tab, you observe you aren't signed out of the second tab.
+   > - You access Power Apps that are embedded ([via an iframe](/power-apps/maker/canvas-apps/embed-apps-dev#embed-your-app-in-a-website) in a third-party website.
+   > - You access a canvas app that's embedded in a model driven app form.
+   
+   To check the **Third-party Storage Partitioning** setting in Microsoft Edge or Google Chrome, you can follow these steps:
+
+   - In Microsoft Edge, you can check the setting by navigating to `edge://flags/#third-party-storage-partitioning` using the address bar.
+   - In Google Chrome, you can check the setting by navigating to `chrome://flags/#third-party-storage-partitioning` using the address bar.
+
+   ![image](https://github.com/MicrosoftDocs/SupportArticles-docs-pr/assets/11514622/0391fbcb-7558-48f6-981c-c55fa198e93c)
 
 
 ## Enable storage of third-party cookies and local data in your browser or app
