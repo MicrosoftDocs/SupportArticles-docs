@@ -11,7 +11,11 @@ ms.custom: bap-template
 
 # Troubleshoot user personalization can't be started
 
-When there are issues preventing the user personalization in [!INCLUDE [prod_short](includes/prod_short.md)], the user will get an error message, and not be able to start user personalization.
+When there are issues preventing the user personalization in Business Central, the user will get an error message, and not be able to start user personalization.
+
+## Prerequisites
+
+You need tenant administrator permissions in Business Central.
 
 ## Symptoms
 
@@ -19,7 +23,7 @@ The user sees the following error message "Sorry, something went wrong and perso
 
 ## Resolution
 
-As a tenant administrator, you can do the following to mitigate the issue. 
+Do the following to mitigate the issue. 
 
 > [!NOTE]  
 > The following steps will delete records with compilation errors and the specific user personalizations will be deleted. It's recommended to take a screenshot of any personalizations done, before deleting them.
