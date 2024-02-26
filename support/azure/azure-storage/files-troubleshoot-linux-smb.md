@@ -132,7 +132,7 @@ For capacity load balancing purposes, storage accounts are sometimes live-migrat
 
 You can mitigate this issue by rebooting the client OS, but you might run into the issue again if you don't upgrade your client OS to a Linux distro version with account migration support. Note that umount and remount of the share might appear to fix the issue temporarily.
 
-To work around this issue better, clear the kernel DNS resolver cache:
+To better work around this issue, clear the kernel DNS resolver cache:
 
 1. Display the status of the kernel `dns_resolver` module by running the following command:
 
@@ -140,7 +140,7 @@ To work around this issue better, clear the kernel DNS resolver cache:
     grep '.dns_resolver' /proc/keys
     ```
 
-    You should see the command output like the following example:
+    You should see command output like the following example:
 
     ```output
     132b6bbf I------     1 perm 1f030000     0     0 keyring   .dns_resolver: 1
@@ -158,7 +158,7 @@ To work around this issue better, clear the kernel DNS resolver cache:
     grep '.dns_resolver' /proc/keys
     ```
 
-    You should see the command output like the following example, indicating that the cache is now empty:
+    You should see command output like the following example, indicating that the cache is now empty:
 
     ```output
     132b6bbf I------     1 perm 1f030000     0     0 keyring   .dns_resolver: empty
