@@ -70,10 +70,6 @@ This section describes the types of errors and its related information.
   |"The user account is not allowed the Network Login type"|You might not be able to [log in to the network](network-login-disallowed.md).|
   |"The login is from an untrusted domain and cannot be used with Windows authentication."|This error might be related to the [Local Security Subsystem](local-security-subsystem-issues.md) issues.|
 
-## Causes
-
-The consistent authentication errors have several causes and they are listed in the next few sections.
-
 ## Causes and scenarios specific to various aspects of SQL Server
 
 This section lists various causes that are related to aspects such as database, logon account permissions, and linked servers.
@@ -84,6 +80,88 @@ This section lists various causes that are related to aspects such as database, 
 - [Proxy account doesn't have permissions](#proxy-account-doesnt-have-permissions)
 - [Unable to log in to SQL Server database](#unable-to-log-in-to-sql-server-database)
 - [Metadata of the linked server is inconsistent](#metadata-of-the-linked-server-is-inconsistent)
+
+## Causes related to connection string
+
+This section lists various causes related to connection string.
+
+- [Bad server name in connection string](#bad-server-name-in-connection-string)
+- [Wrong database name in connection string](#wrong-database-name-in-connection-string)
+- [Wrong explicit SPN account](#wrong-explicit-spn-account)
+- [Explicit SPN is missing](#explicit-spn-is-missing)
+- [Explicit misplaced SPN](#explicit-misplaced-spn)
+- [Explicit SPN is duplicated](#explicit-spn-is-duplicated)
+
+## Causes related to Windows permissions or Policy settings
+
+This section lists various issues that might arise due to problems in permissions or settings. Some of the causes are:
+
+- [Access is granted through local groups](#access-is-granted-through-local-groups)
+- [Network login disallowed](#network-login-disallowed)
+- [Only admins can log in](#only-admins-can-log-in)
+- [Service account isn't trusted for delegation](#service-account-isnt-trusted-for-delegation)
+- [Local security subsystem errors](#local-security-subsystem-errors)
+- [User profile is corrupt](#user-profile-is-corrupt)
+- [Credential guard is enabled](#credential-guard-is-enabled)
+
+## Causes specific to NT LAN Manager (NTLM)
+
+This section lists some of the consistent authentication causes related to NTLM.
+
+- [Access is denied for NTLM peer logins](#access-is-denied-for-ntlm-peer-logins)
+- [Loopback protection isn't set correctly](#loopback-protection-isnt-set-correctly)
+- [Loopback protection fails when you connect to the Always-on listener](#loopback-protection-fails-when-you-connect-to-the-always-on-listener)
+- [Double hop scenarios on multiple computers](#double-hop-scenarios-on-multiple-computers)
+- [Issue with LANMAN compatibility level](#issue-with-lanman-compatibility-level)
+
+## Causes and scenarios related to Active Directory and Domain Controller
+
+This section lists various causes and scenarios related to directory services and servers and their possible solutions:
+
+- [An account is disabled](#an-account-is-disabled)
+- [An account isn't in the group](#an-account-isnt-in-the-group)
+- [No permissions for cross-domain groups](#no-permissions-for-cross-domain-groups)
+- [Firewall blocks the Domain Controller](#firewall-blocks-the-domain-controller)
+- [Domain Controller is offline](#domain-controller-is-offline)
+- [Selective authentication is disabled](#selective-authentication-is-disabled)
+- [Account migration failed](#account-migration-is-incorrect)
+- [Login is from untrusted domain](#login-is-from-an-untrusted-domain)
+
+## Causes and scenarios related to Kerberos authentication
+
+This section lists various causes related to Kerberos authentication.
+
+- [Missing SPN](#missing-spn)
+- [Duplicate SPN](#duplicate-spn)
+- [Delegating sensitive accounts to other services](#delegating-sensitive-accounts-to-other-services)
+- [Service account can't be trusted for delegation](#service-account-isnt-trusted-for-delegation)
+- [SPN is associated with a wrong account](#spn-is-associated-with-a-wrong-account)
+- [An incorrect DNS suffix is appended to the NetBIOS name](#an-incorrect-dns-suffix-is-appended-to-the-netbios-name)
+- [Expired tickets](#expired-tickets)
+- [User belongs to many groups](#user-belongs-to-many-groups)
+- [Clock skew is too high](#clock-skew-is-too-high)
+- [Not a constrained target](#not-a-constrained-target)
+- [Disjoint DNS namespace](#disjoint-dns-namespace)
+- [NTLM and constrained delegation](#choose-constrained-delegation-instead-of-ntlm)
+- [Issue with per-service security identifier (SID) permissions](#issue-with-per-service-security-identifier-sid-permissions)
+- [Some legacy providers don't support Kerberos over Named Pipes](#some-legacy-providers-dont-support-kerberos-over-named-pipes)
+- [Kernel-mode authentication](#kernel-mode-authentication)
+- [Limit delegation rights to Access or Excel](#limit-delegation-rights-to-access-or-excel)
+- [Use HTTP host header](#use-http-host-header)
+- [HOSTS file is incorrect](#hosts-file-is-incorrect)
+- [Delegating to a file share](#assign-permissions-to-a-file-share-without-proper-constraints)
+- [Enable HTTP ports on SPNs](#enable-http-ports-on-spns)
+- [SQL Alias may not function correctly](#sql-alias-may-not-function-properly)
+
+## Causes related to other aspects
+
+This section lists various miscellaneous authentication issues.
+
+- [Integrated authentication isn't enabled](#integrated-authentication-isnt-enabled)
+- [Wrong Internet zone](#wrong-internet-zone)
+- [IIS Authentication isn't allowed](#iis-authentication-isnt-allowed)
+
+## Scenarios and solutions (rethink about the title)
 
 ### Database is offline
 
@@ -111,17 +189,6 @@ Refers to a scenario where metadata of the linked server is inconsistent or does
 
 A view or stored procedure queries tables or views in the linked server but receives login failures whereas a distributed `SELECT` statement copied from them doesn't. This issue might happen if the View was created and then the linked server was recreated, or a remote table was modified without rebuilding the View. To resolve this issue, you can refresh the metadata of the linked server by running the `sp_refreshview` stored procedure.
 
-## Causes related to connection string
-
-This section lists various causes related to connection string.
-
-- [Bad server name in connection string](#bad-server-name-in-connection-string)
-- [Wrong database name in connection string](#wrong-database-name-in-connection-string)
-- [Wrong explicit SPN account](#wrong-explicit-spn-account)
-- [Explicit SPN is missing](#explicit-spn-is-missing)
-- [Explicit misplaced SPN](#explicit-misplaced-spn)
-- [Explicit SPN is duplicated](#explicit-spn-is-duplicated)
-
 ### Bad server name in connection string
 
 This issue might occur if the specified server name is incorrect or can't be found. For more information, see [bad server name in connection string](bad-server-name-connection-string-error.md).
@@ -145,18 +212,6 @@ This issue occurs when the SPN is associated with the wrong account in AD. For m
 ### Explicit SPN is duplicated
 
 This issue occurs when an SPN is duplicated that's registered more than once. For more information, see ["Cannot generate SSPI context" error when using Windows authentication to connect SQL Server.](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended).
-
-## Causes related to Windows permissions or Policy settings
-
-This section lists various issues that might arise due to problems in permissions or settings. Some of the causes are:
-
-- [Access is granted through local groups](#access-is-granted-through-local-groups)
-- [Network login disallowed](#network-login-disallowed)
-- [Only admins can log in](#only-admins-can-log-in)
-- [Service account isn't trusted for delegation](#service-account-isnt-trusted-for-delegation)
-- [Local security subsystem errors](#local-security-subsystem-errors)
-- [User profile is corrupt](#user-profile-is-corrupt)
-- [Credential guard is enabled](#credential-guard-is-enabled)
 
 ### Access is granted through local groups
 
@@ -195,16 +250,6 @@ Refers to the Windows user profile issue. For more information, see troubleshoot
 
 This scenario indicates that the Credential Guard feature is enabled on a Windows system and is used to create a secure environment to store sensitive information. However, in certain situations, this feature might lead to authentication issues. For more information, see [Considerations and known issues when using Credential Guard](/windows/security/identity-protection/credential-guard/considerations-known-issues).
 
-### Causes specific to NT LAN Manager (NTLM)
-
-This section lists some of the consistent authentication causes related to NTLM.
-
-- [Access is denied for NTLM peer logins](#access-is-denied-for-ntlm-peer-logins)
-- [Loopback protection isn't set correctly](#loopback-protection-isnt-set-correctly)
-- [Loopback protection fails when you connect to the Always-on listener](#loopback-protection-fails-when-you-connect-to-the-always-on-listener)
-- [Double hop scenarios on multiple computers](#double-hop-scenarios-on-multiple-computers)
-- [Issue with LANMAN compatibility level](#issue-with-lanman-compatibility-level)
-
 ### Access is denied for NTLM peer logins
 
 When communicating between computers that are either in workstations or in domains that don't trust each other, you can set up identical accounts on both machines and use NTLM peer authentication. Logins only work if both the user account and the password match on both machines. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
@@ -224,19 +269,6 @@ Performing a double-hop will fail if NTLM credentials are used. Kerberos credent
 ### Issue with LANMAN compatibility level
 
 The LAN Manager (LANMAN) authentication issue usually occurs if there is a mismatch in the authentication protocols used by older (pre Windows 2008) and newer computers. When you set the compatibility level to 5, NTLMv2 isn't allowed. Switching to Kerberos avoids this issue as Kerberos is more secure. For more information, see [Login failed for user NT AUTHORITY\ANONYMOUS LOGON](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
-
-### Causes and scenarios related to Active Directory and Domain Controller
-
-This section lists various causes and scenarios related to directory services and servers and their possible solutions:
-
-- [An account is disabled](#an-account-is-disabled)
-- [An account isn't in the group](#an-account-isnt-in-the-group)
-- [No permissions for cross-domain groups](#no-permissions-for-cross-domain-groups)
-- [Firewall blocks the Domain Controller](#firewall-blocks-the-domain-controller)
-- [Domain Controller is offline](#domain-controller-is-offline)
-- [Selective authentication is disabled](#selective-authentication-is-disabled)
-- [Account migration failed](#account-migration-is-incorrect)
-- [Login is from untrusted domain](#login-is-from-an-untrusted-domain)
 
 ### An account is disabled
 
@@ -275,32 +307,6 @@ This issue is related to the trust level between domains. You might see the foll
  1. List SPNs for the service account using the `- setspn -l` command.
  1. [Register the SPNs](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc731241(v=ws.11)) if required using the `- setspn -s` link.
  1. Test authentication with the `- runas /user:<Username> "cmd"` command.
-
-## Causes and scenarios related to Kerberos authentication
-
-This section lists various causes related to Kerberos authentication.
-
-- [Missing SPN](#missing-spn)
-- [Duplicate SPN](#duplicate-spn)
-- [Delegating sensitive accounts to other services](#delegating-sensitive-accounts-to-other-services)
-- [Service account can't be trusted for delegation](#service-account-isnt-trusted-for-delegation)
-- [SPN is associated with a wrong account](#spn-is-associated-with-a-wrong-account)
-- [An incorrect DNS suffix is appended to the NetBIOS name](#an-incorrect-dns-suffix-is-appended-to-the-netbios-name)
-- [Expired tickets](#expired-tickets)
-- [User belongs to many groups](#user-belongs-to-many-groups)
-- [Clock skew is too high](#clock-skew-is-too-high)
-- [Not a constrained target](#not-a-constrained-target)
-- [Disjoint DNS namespace](#disjoint-dns-namespace)
-- [NTLM and constrained delegation](#choose-constrained-delegation-instead-of-ntlm)
-- [Issue with per-service security identifier (SID) permissions](#issue-with-per-service-security-identifier-sid-permissions)
-- [Some legacy providers don't support Kerberos over Named Pipes](#some-legacy-providers-dont-support-kerberos-over-named-pipes)
-- [Kernel-mode authentication](#kernel-mode-authentication)
-- [Limit delegation rights to Access or Excel](#limit-delegation-rights-to-access-or-excel)
-- [Use HTTP host header](#use-http-host-header)
-- [HOSTS file is incorrect](#hosts-file-is-incorrect)
-- [Delegating to a file share](#assign-permissions-to-a-file-share-without-proper-constraints)
-- [Enable HTTP ports on SPNs](#enable-http-ports-on-spns)
-- [SQL Alias may not function correctly](#sql-alias-may-not-function-properly)
 
 ### Missing SPN
 
@@ -391,14 +397,6 @@ Normally, HTTP SPNs don't use port numbers, example `http/web01.contoso.com`, bu
 ### SQL Alias may not function properly
 
 A SQL Server alias may cause an unexpected SPN to be generated. This results in NTLM credentials if the SPN isn't found, or an SSPI failure, if it inadvertently matches the SPN of another server.
-
-## Causes related to other aspects
-
-This section lists various miscellaneous authentication issues.
-
-- [Integrated authentication isn't enabled](#integrated-authentication-isnt-enabled)
-- [Wrong Internet zone](#wrong-internet-zone)
-- [IIS Authentication isn't allowed](#iis-authentication-isnt-allowed)
 
 ### Integrated authentication isn't enabled
 
