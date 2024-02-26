@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot MDT
 description: Troubleshooting reference for the Microsoft Deployment Toolkit (MDT)
-ms.date: 09/09/2016
+ms.date: 12/05/2023
 ms.reviewer: kaushika
 ---
 

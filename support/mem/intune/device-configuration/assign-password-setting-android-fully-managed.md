@@ -4,7 +4,7 @@ description: Describes different behavior when a device restrictions profile tha
 author: helenclu
 ms.author: luche
 ms.reviewer: kaushika, anziob
-ms.date: 12/20/2021
+ms.date: 12/05/2023
 search.appverid: MET150
 ---
 # Assigning device password settings to Android Enterprise fully managed devices in Intune

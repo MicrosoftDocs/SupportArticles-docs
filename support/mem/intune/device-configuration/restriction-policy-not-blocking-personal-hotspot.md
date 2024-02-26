@@ -1,7 +1,7 @@
 ---
 title: Block iOS Personal Hotspot policy in Intune doesn't work
 description: Describes a default behavior in Microsoft Intune where an active device restriction policy to block iOS Personal Hotspot still allows the setting to be enabled.
-ms.date: 12/18/2021
+ms.date: 12/05/2023
 search.appverid: MET150
 ms.custom: sap:Configure device restrictions
 ms.reviewer: kaushika

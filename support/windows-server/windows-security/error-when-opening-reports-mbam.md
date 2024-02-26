@@ -1,9 +1,7 @@
 ---
 title: Error when you open Enterprise or Computer Compliance Reports in MBAM
 description: Provides a solution to an error that occurs when you open Enterprise or Computer Compliance Reports in MBAM.
-ms.date: 11/22/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
