@@ -1,9 +1,7 @@
 ---
 title: Troubleshoot errors that occur when you join Windows-based computers to a domain
 description: Troubleshooting guide for error messages that occurs when you join Windows-based computers to a domain.
-ms.date: 10/04/2022
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

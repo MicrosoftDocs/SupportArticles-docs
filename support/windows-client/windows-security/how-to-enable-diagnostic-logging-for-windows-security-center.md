@@ -1,9 +1,7 @@
 ---
 title: How to enable diagnostic logging for the Windows Security app
 description: Describes how to enable diagnostic logging for Windows Security
-ms.date: 09/14/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

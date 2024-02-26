@@ -1,9 +1,7 @@
 ---
 title: Upgrade fails with error 0x000000C4
 description: Provides a solution to fix the error 0x000000C4 that occurs when you upgrade a Windows Server computer.
-ms.date: 04/28/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

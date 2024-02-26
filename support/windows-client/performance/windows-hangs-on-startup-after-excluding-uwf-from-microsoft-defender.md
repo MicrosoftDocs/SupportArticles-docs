@@ -1,9 +1,7 @@
 ---
 title: Windows startup hangs after you exclude UWF from Microsoft Defender
 description: Discusses how to work around an issue in which Windows doesn't start after you exclude the UWF feature from Microsoft Defender.
-ms.date: 04/24/2022
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

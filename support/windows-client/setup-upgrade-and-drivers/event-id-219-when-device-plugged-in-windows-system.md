@@ -1,9 +1,7 @@
 ---
 title: Event ID 219 is logged when a device is plugged into a Windows-based system
 description: Describes a scenario in which event ID 219 is logged when a device is plugged into a Windows-based system.
-ms.date: 04/28/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

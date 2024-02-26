@@ -1,9 +1,7 @@
 ---
 title: Remote procedure call failed and did not execute error
 description: Troubleshoot error 1727 that occurs during DC replication on Windows Server. Identify the cause and get to the solution.
-ms.date: 04/28/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

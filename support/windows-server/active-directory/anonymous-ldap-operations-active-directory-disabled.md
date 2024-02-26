@@ -1,9 +1,7 @@
 ---
 title: LDAP to Active Directory is disabled
 description: Provides some information about the issue that anonymous LDAP operations to Active Directory are disabled on domain controllers.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

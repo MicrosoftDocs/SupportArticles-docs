@@ -1,9 +1,7 @@
 ---
 title: Fail to install Network Policy Server role
 description: Describes an issue in Windows Server 2008 R2 in which you cannot install the Network Policy Server role service and in which you cannot start the Network Policy Server service.
-ms.date: 04/28/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

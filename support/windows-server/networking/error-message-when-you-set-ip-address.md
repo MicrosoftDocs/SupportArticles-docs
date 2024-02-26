@@ -1,9 +1,7 @@
 ---
 title: Error message when you set an IP address
 description: Provides a solution to an error that occurs when you try to set an IP address on a network adapter.
-ms.date: 01/18/2022
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

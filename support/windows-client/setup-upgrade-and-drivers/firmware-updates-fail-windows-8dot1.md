@@ -1,9 +1,7 @@
 ---
 title: Firmware update failures in Windows 8.1
 description: Describes how and why firmware updates occasionally fail in a Windows 8.1 environment.
-ms.date: 04/28/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

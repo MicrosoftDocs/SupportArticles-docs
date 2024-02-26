@@ -1,9 +1,7 @@
 ---
 title: Fail to create a DFS namespace
 description: Provides a solution to an error that occurs when you create a DFS namespace.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

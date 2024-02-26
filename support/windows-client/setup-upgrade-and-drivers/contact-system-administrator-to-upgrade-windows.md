@@ -1,9 +1,7 @@
 ---
 title: Fail to upgrade Windows 10 Enterprise edition
 description: Describes an error that's returned when you run the Windows 10 update tool and provides a solution to this issue.
-ms.date: 04/28/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

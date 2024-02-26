@@ -1,9 +1,7 @@
 ---
 title: Numerous "Event ID 1216"
 description: Provides a resolution for the issue that numerous "Event ID 1216" Events occur in Directory Services Event Log.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

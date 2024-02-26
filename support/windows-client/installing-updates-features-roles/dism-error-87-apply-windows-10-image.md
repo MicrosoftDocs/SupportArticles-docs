@@ -1,9 +1,7 @@
 ---
 title: DISM command fails with error code 87
 description: Resolves an issue in which you can't apply a Windows 10 image.
-ms.date: 04/28/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

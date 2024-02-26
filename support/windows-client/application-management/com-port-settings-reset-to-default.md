@@ -1,9 +1,7 @@
 ---
 title: Com port settings reset to default after making changes in Device Manager
 description: Describes an issue where the communications port (COM port) settings revert to the default when you restart the computer.
-ms.date: 09/08/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

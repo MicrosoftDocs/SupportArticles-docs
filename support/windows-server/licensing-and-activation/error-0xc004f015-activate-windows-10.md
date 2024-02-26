@@ -1,9 +1,7 @@
 ---
 title: Error 0xC004F015 when you activate Windows 10
 description: Discusses that you cannot activate Windows 10 Enterprise on a Windows Server 2012 R2 and Windows Server 2008 R2 KMS host and Error 0xC004F015 is logged. Provides a resolution.
-ms.date: 04/28/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

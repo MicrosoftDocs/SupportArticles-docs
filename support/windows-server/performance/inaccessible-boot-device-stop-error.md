@@ -1,9 +1,7 @@
 ---
 title: Error 0x7B after you reconfigure hardware devices
 description: Discusses that you receive a Stop error (INACCESSIBLE_BOOT_DEVICE) after you reconfigure critical hardware devices.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -1,9 +1,7 @@
 ---
 title: Unattended Setup doesn't Use Computer Name Specified by User during OOBE to Join the Domain
 description: Provides a resolution for the issue that unattended setup doesn't use Computer Name Specified by User during OOBE to Join the Domain
-ms.date: 04/28/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

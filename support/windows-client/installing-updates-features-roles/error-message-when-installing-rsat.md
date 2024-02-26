@@ -1,9 +1,7 @@
 ---
 title: Error (This update is not applicable to your computer) when installing RSAT
 description: Provides a solution to an error that occurs when you install the Remote Server Administration Tools.
-ms.date: 04/28/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

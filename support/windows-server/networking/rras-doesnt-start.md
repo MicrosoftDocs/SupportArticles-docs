@@ -1,9 +1,7 @@
 ---
 title: Routing and Remote Access service doesn't start when there's no network connectivity
 description: Describes that the Routing and Remote Access service doesn't start if there's no network connectivity.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

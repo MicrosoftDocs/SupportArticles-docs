@@ -1,9 +1,7 @@
 ---
 title: Changes to GPO permissions through AGPM aren't saved
 description: Describes an issue that blocks you from changing Group Policy object permissions in Advanced Group Policy Management (AGPM). A workaround is provided.
-ms.date: 11/10/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
