@@ -1,9 +1,7 @@
 ---
 title: Can't modify the Hosts or Lmhosts file
 description: This article describes how to modify the Hosts file or the Lmhosts file in Windows 7.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -1,9 +1,7 @@
 ---
 title: PowerShell Console characters garbled for Chinese, Japanese, and Korean languages on Windows Server 2022
 description: PowerShell Console characters are garbled for Chinese, Japanese, and Korean languages on Windows Server 2022.
-ms.date: 10/15/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
