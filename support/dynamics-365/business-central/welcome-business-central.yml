@@ -42,8 +42,8 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Something
-            url: data-replication/migration-data-replication.md
+          - text: Troubleshoot user personalization can't be started
+            url: client/client-user-personalization.md
 
   # Card
   - title: Documentation and training

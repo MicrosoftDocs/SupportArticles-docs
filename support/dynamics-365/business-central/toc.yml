@@ -17,5 +17,5 @@
             href: data-replication/migration-data-replication.md
       - name: Client
         items:
-          - name: Something
-            href: data-replication/migration-data-replication.md
+          - name: Troubleshoot user personalization can't be started
+            href: client/client-user-personalization.md
