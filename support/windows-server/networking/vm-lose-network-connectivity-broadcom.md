@@ -2,8 +2,6 @@
 title: Virtual machines lose network connectivity
 description: Addresses an issue that occurs with Broadcom NetXtreme network adapters when you use them on a Hyper-V server.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

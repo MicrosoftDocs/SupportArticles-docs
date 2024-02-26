@@ -2,8 +2,6 @@
 title: MiracastView cause sysprep error in Windows 10 Version 1709
 description: Address an issue in which sysprep fails with an error after you upgrade a computer to Windows 10 Version 1709.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

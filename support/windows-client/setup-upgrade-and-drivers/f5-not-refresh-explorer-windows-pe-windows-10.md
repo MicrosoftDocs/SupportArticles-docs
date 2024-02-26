@@ -2,8 +2,6 @@
 title: F5 doesn't refresh Explorer in Windows PE of Windows 10
 description: Describes how to work around F5 not refreshing file and folder list in Windows 10 Creators Update.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

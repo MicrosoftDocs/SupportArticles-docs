@@ -2,8 +2,6 @@
 title: Command-line switches for Microsoft software update packages
 description: Describes the consistent set of command-line switches that Microsoft is adopting for deploying packages that contain software updates.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

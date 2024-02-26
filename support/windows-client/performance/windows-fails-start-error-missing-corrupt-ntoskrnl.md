@@ -2,8 +2,6 @@
 title: Windows fails to start with error missing or corrupt ntoskrnl.exe when keys are pressed during startup
 description: Provides a workaround for the issue Windows fails to start with error missing or corrupt ntoskrnl.exe when keys are pressed during startup.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

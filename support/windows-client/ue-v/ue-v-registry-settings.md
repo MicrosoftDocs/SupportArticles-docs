@@ -2,8 +2,6 @@
 title: UE-V registry settings
 description: Describes UE-V registry settings.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

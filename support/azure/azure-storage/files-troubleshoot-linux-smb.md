@@ -130,7 +130,39 @@ For capacity load balancing purposes, storage accounts are sometimes live-migrat
 
 ### Workaround
 
-You can mitigate this issue by rebooting the client OS, but you might run into the issue again if you don't upgrade your client OS to a Linux distro version with account migration support. Note that umount and remount of the share may appear to fix the issue temporarily.
+You can mitigate this issue by rebooting the client OS, but you might run into the issue again if you don't upgrade your client OS to a Linux distro version with account migration support. Note that umount and remount of the share might appear to fix the issue temporarily.
+
+A better workaround is to clear the kernel DNS resolver cache by following these steps.
+
+1. Display the status of the kernel `dns_resolver` module by running the following command:
+
+    ```bash
+    grep '.dns_resolver' /proc/keys
+    ```
+
+2. You should see output like this:
+
+    ```output
+    132b6bbf I------     1 perm 1f030000     0     0 keyring   .dns_resolver: 1
+    ```
+
+3. Clear the kernel DNS resolver cache by running the following command:
+
+    ```bash
+    sudo keyctl clear $((16#$(grep '.dns_resolver' /proc/keys | cut -f1 -d\ ) ))
+    ```
+
+4. Display the status of the kernel `dns_resolver` module again:
+
+    ```bash
+    grep '.dns_resolver' /proc/keys
+    ```
+
+5. You should see output like this, indicating that the cache is now empty:
+
+    ```output
+    132b6bbf I------     1 perm 1f030000     0     0 keyring   .dns_resolver: empty
+    ```
 
 ### Solution
 
@@ -158,6 +190,7 @@ kernel: CIFS: VFS: Error -2 during NTLMSSP authentication
 kernel: CIFS: VFS: \\contoso.file.core.windows.net Send error in SessSetup = -2
 kernel: CIFS: VFS: cifs_mount failed w/return code = -2
 ```
+
 >[!IMPORTANT]
 >FIPS is a set of standards that the U.S. government uses to ensure the security and integrity of computer systems. When a system is in FIPS mode, it adheres to specific cryptographic requirements outlined by these standards.
 
@@ -172,6 +205,7 @@ To verify if FIPS mode is enabled on the client, run the following command. If t
 ```bash
 sudo cat /proc/sys/crypto/fips_enabled
 ```
+
 ###  Solution
 
 To resolve this issue, enable Kerberos authentication for SMB file share. If FIPS is enabled unintentionally, refer to [option2](#option2) to disable it. 
@@ -191,11 +225,13 @@ To mount a SMB file share on the Linux VM where FIPS is enabled, use Kerberos/Az
     ```bash
     sudo grub2-mkconfig -o /boot/grub2/grub.cfg
     ```
-4. Rebuilt the initramfs image with the following command:
 
-    ```
+4. Rebuild the initramfs image with the following command:
+
+    ```bash
     sudo dracut -fv
     ```
+
 5. Reboot the VM.
 
 For more information, see to the following documents from Linux distributors:

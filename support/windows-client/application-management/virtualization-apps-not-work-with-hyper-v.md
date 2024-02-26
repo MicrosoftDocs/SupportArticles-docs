@@ -2,8 +2,6 @@
 title: Disable Hyper-V to run virtualization software
 description: Discusses an issue in which virtualization applications don't work together with Hyper-V, Device Guard, and Credential Guard. Provides a resolution.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

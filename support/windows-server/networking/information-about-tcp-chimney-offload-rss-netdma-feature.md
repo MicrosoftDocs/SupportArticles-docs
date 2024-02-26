@@ -2,8 +2,6 @@
 title: Information about the TCP Chimney Offload, Receive Side Scaling, and Network Direct Memory Access features in Windows Server 2008
 description: Describes the TCP Chimney offload feature in Windows Server 2008. Describes how you can enable or disable this feature.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -2,8 +2,6 @@
 title: NetBIOS and WINS don't bind to cluster IP address resources
 description: Discusses a new behavior in which NetBIOS and WINS don't bind to cluster IP address resources
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

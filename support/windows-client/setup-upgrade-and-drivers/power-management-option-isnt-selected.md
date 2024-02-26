@@ -2,8 +2,6 @@
 title: Power management option isn't selected
 description: Provides a solution to an issue that the **Allow the computer to turn off this device to save power** option doesn't remain selected after you restart the computer.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

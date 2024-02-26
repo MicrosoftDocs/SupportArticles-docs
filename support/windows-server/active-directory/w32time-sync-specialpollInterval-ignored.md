@@ -2,8 +2,6 @@
 title: W32time settings fail when starting Windows Time Service
 description: Fixes an issue where the NTP client doesn't synchronize time at the SpecialPollInterval period as expected.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

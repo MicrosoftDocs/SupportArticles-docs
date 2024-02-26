@@ -2,8 +2,6 @@
 title: How to enable LDAP signing
 description: Describes how to enable LDAP signing in Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, and Windows 10.
 ms.date: 02/22/2024
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

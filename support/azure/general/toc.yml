@@ -66,6 +66,8 @@
     href: azure-batch-task-stuck-in-running-state.md
   - name: Batch pool resizing failure
     href: azure-batch-pool-resizing-failure.md
+  - name: Batch tasks fail due to permission issues 
+    href: azure-batch-task-permission-issue.md
   - name: Batch task fails without stdout or stderr
     href: azure-batch-task-failure-no-stdout-stderr-log.md
   - name: Use managed identities in a Batch account or a Batch pool
