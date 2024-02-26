@@ -48,6 +48,8 @@ landingContent:
             url: client/client-user-personalization.md
           - text: Troubleshoot client returns wrong `ClientType`
             url: client/client-returns-wrong-clienttype.md
+          - text: Troubleshoot device date is causing connectivity issues
+            url: client/client-device-date-connectivity-issues.md
 
   # Card
   - title: Documentation and training
