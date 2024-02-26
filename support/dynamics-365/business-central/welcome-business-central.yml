@@ -46,6 +46,8 @@ landingContent:
         links:
           - text: Troubleshoot user personalization can't be started
             url: client/client-user-personalization.md
+          - text: Troubleshoot client returns wrong `ClientType`
+            url: client/client-returns-wrong-clienttype.md
 
   # Card
   - title: Documentation and training
