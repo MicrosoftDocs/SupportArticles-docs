@@ -1,42 +1,42 @@
 ---
 title: Can't sign in to Power Automate for desktop
-description: This article helps troubleshoot sign in related issues with Power Automate for desktop.
+description: Helps troubleshoot sign-in related issues with Power Automate for desktop.
 ms.reviewer: pefelesk
-ms.date: 02/19/2024
+ms.date: 02/26/2024
 ms.subservice: power-automate-desktop-flows
 ---
 # Can't sign in to Power Automate for desktop
 
-This article provides resolutions and workarounds to several sign in related issues.
+This article provides resolutions and workarounds to several sign-in related issues in Power Automate for desktop.
 
-## Generic sign in or sign out issues
+## Generic sign-in or sign-out issues
 
-Power Automate for desktop uses a file named **msalcache.bin3** to acquire tokens and authenticate users.
+Power Automate for desktop uses a file named *msalcache.bin3* to acquire tokens and authenticate users.
 
-If you encounter errors while signing in or signing out, erase all the stored tokens by deleting this file. 
+If you encounter errors while signing in or signing out, remove all the stored tokens by deleting this file.
 
-To delete the file, navigate to ```%localappdata%\Microsoft\Power Automate Desktop\Cache\MSI``` for MSI installations or ```%localappdata%\Microsoft\Power Automate Desktop\Cache\Store``` for MS Store installations. 
+To delete the file, navigate to `%localappdata%\Microsoft\Power Automate Desktop\Cache\MSI` for [MSI installations](/power-automate/desktop-flows/install#install-power-automate-using-the-msi-installer) or `%localappdata%\Microsoft\Power Automate Desktop\Cache\Store` for [Microsoft Store installations](/power-automate/desktop-flows/install#install-power-automate-from-microsoft-store).
 
 > [!NOTE]
-> If the **AppData** folder isn't visible in your user folder, try to [display hidden files](https://support.microsoft.com/windows/show-hidden-files-0320fe58-0117-fd59-6851-9b7f9840fdb2). 
+> If the *AppData* folder isn't visible in your user folder, try to [display hidden files](https://support.microsoft.com/windows/show-hidden-files-0320fe58-0117-fd59-6851-9b7f9840fdb2).
 
-After deleting the **msalcache.bin3** file, close the Power Automate console, exit Power Automate from the system tray or restart the Power Automate service and try again to sign in. 
+After deleting the *msalcache.bin3* file, close the Power Automate console, exit Power Automate from the system tray or restart the Power Automate service and try again to sign in.
 
 ## Web Account Manager (WAM) errors
 
-By default, Power Automate for desktop authenticates users through the Web Account Manager (WAM); a Windows component that ships with the Operating System and acts as an authentication broker. 
+By default, Power Automate for desktop authenticates users through the Web Account Manager (WAM); a Windows component that ships with the Operating System and acts as an authentication broker.
 
-Learn more about WAM and related errors in [Using MSAL.NET with Web Account Manager (WAM)] (https://aka.ms/msal-net-wam) and [Interactive with WAM](https://learn.microsoft.com/entra/identity-platform/scenario-desktop-acquire-token-wam). 
+Learn more about WAM and related errors, see [Using MSAL.NET with Web Account Manager (WAM)](https://aka.ms/msal-net-wam) and [Interactive with WAM](/entra/identity-platform/scenario-desktop-acquire-token-wam).
 
-## Wrong region selected
+## Wrong region
 
-Before signing in, make sure you have selected your region correctly by clicking on the **Change region** option. 
+Before signing in, make sure you have selected your region correctly by selecting the **Change region** option.
 
-:::image type="content" source="media/cannot-sign-in-to-power-automate-for-desktop/change-region.png" alt-text="Change region option in Power Automate console.":::
+:::image type="content" source="media/cannot-sign-in-to-power-automate-for-desktop/change-region.png" alt-text="Screenshot that shows the Change region option in Power Automate console.":::
 
 ## Browser blocks cookies
 
-On sign in, you receive the following message:
+When you sign in to Power Automate for desktop, you receive the following error message:
 
 > We can't sign you in. Your browser is currently set to block cookies. You need to allow cookies to use this service.
 
@@ -50,21 +50,21 @@ To resolve this issue:
     - `login.microsoftonline.com`
     - `secure.aadcdn.microsoftonline-p.com`
 
-## Can't sign in due to connectivity issue
+## Can't sign in due to a connectivity issue
 
 ### Symptoms
 
-On sign in, you receive the following message:
+When you sign in to Power Automate for desktop, you receive the following error message:
 
 > There was an issue during sign in. Try again later or contact an administrator.
 
 ### Verifying issue
 
-Try to sign in to the [Power Automate Portal](https://flow.microsoft.com). If it works as expected, then the issue should be related to the local network configuration of the machine that hosts Power Automate for desktop.
+Try to sign in to [Power Automate](https://make.powerautomate.com/). If it works as expected, then the issue should be related to the local network configuration of the machine that hosts Power Automate for desktop.
 
 ### Resolution
 
-For more information about possible causes and steps to resolve, see [Can't sign in or create or edit or save or view desktop flows](https://learn.microsoft.com/troubleshoot/power-platform/power-automate/desktop-flows/cannot-sign-in-create-edit-save-view-desktop-flows#cause)
+For more information about possible causes and steps to resolve this issue, see [Can't sign in or create or edit or save or view desktop flows](/troubleshoot/power-platform/power-automate/desktop-flows/cannot-sign-in-create-edit-save-view-desktop-flows#cause).
 
 ## Login window keeps popping up
 
@@ -74,14 +74,14 @@ During signing in to Power Automate for desktop, the **login to your account** w
 
 ### Cause
 
-Another process may run a named pipes server in the same machine. This process runs with elevated rights using the localhost endpoint and blocks other applications from using this endpoint.
+Another process might run a named pipes server in the same machine. This process runs with elevated rights using the localhost endpoint and blocks other applications from using this endpoint.
 
 To identify if another process is running:
 
 1. Download the [Sysinternals Suite](/sysinternals/downloads/sysinternals-suite).
-1. Extract the .zip file to a folder.
+1. Extract the *.zip file* to a folder.
 1. Run a command prompt as an administrator.
-1. Navigate to the folder that Sysinternals Suite has been extracted to.
+1. Navigate to the folder that the Sysinternals Suite has been extracted to.
 1. Run the following command:
 
     ```cmd
@@ -111,4 +111,4 @@ As an alternate, ensure Power Automate for desktop is closed (from the taskbar, 
 
 ### Workaround 2
 
-If the other solutions aren't possible, specify Power Automate for desktop executables to run as administrator. This workaround may only solve the issue in some cases, and it causes a User Account Control (UAC) prompt to appear each time.
+If the other solutions aren't possible, specify Power Automate for desktop executables to run as administrator. This workaround might only solve the issue in some cases, and it causes a User Account Control (UAC) prompt to appear each time.
