@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting incorrect server name in connection string
 description: This article provides a workaround for the consistent authentication issue that occurs if a matching name is not provided during login.
-ms.date: 01/24/2024
+ms.date: 02/26/2024
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
@@ -42,7 +42,7 @@ You will likely also see either of the following error messages in the SQL Serve
 
 ## Cause
 
-You experience these errors if you deploy an application that uses a DEV or QA server in production and you don't update the connection string. 
+You experience these errors if you deploy an application that uses a DEV or QA server in production and you don't update the connection string.
 
 ## Solution
 
