@@ -2,8 +2,6 @@
 title: Virtual memory in 32-bit version of Windows
 description: Describes how to effectively manage the memory and improve the performance of your Windows-based computer.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -2,8 +2,6 @@
 title: Maximum number of access control entries in the access control list
 description: Describes an issue that occurs when you reach the maximum size of the access control list.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

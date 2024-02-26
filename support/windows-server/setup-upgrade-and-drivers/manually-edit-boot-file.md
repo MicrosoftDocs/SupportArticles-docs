@@ -2,8 +2,6 @@
 title: Manually edit Boot.ini file
 description: Describes how to manually edit the Boot.ini file in a Windows Server 2003 environment.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

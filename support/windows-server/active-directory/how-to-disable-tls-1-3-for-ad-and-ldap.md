@@ -1,8 +1,6 @@
 ---
 title: How to disable TLS 1.3 for AD and LDAP
 description: Introduces how to disable TLS 1.3 for AD and LDAP to resolve compatibility issues.
-author: Deland-Han
-ms.author: delhan
 ms.topic: troubleshooting
 ms.date: 12/26/2023
 ms.custom: sap:ldap-configuration-and-interoperability, csstroubleshoot

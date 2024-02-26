@@ -2,8 +2,6 @@
 title: Error 0xC004F06C when you activate Windows
 description: Provides a solution to an error 0xC004F06C when you activate Windows.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

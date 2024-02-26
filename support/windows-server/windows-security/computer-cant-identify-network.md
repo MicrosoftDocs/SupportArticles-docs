@@ -2,8 +2,6 @@
 title: A computer can't identify the network
 description: Provides a solution to an issue that a computer can't identify the network when this computer is a member of a child domain.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

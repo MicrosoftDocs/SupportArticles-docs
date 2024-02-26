@@ -2,8 +2,6 @@
 title: Devices not working  before you log on a computer that is running Windows 10
 description: Addresses an issue in which a device isn't working before a logon in Windows 10. For example, wireless doesn't connect until a user logon.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

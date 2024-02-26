@@ -2,8 +2,6 @@
 title: Cannot configure a language pack for Windows Server 2019 Desktop Experience
 description: Describes an issue in which you cannot install language packs by using the Language page in the Settings app in Windows Server 2019. Provides a resolution.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

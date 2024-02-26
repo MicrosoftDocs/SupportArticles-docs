@@ -2,8 +2,6 @@
 title: Move the CSC folder to a new location
 description: Describes how to move the client-side caching (CSC) folder to a new location in Windows Vista or later versions of Windows.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -2,8 +2,6 @@
 title: Offline file synchronization issues
 description: Provides a solution to solve issues where the Work Offline/Work Online option button disappears from Windows Explorer after an offline/online transition and the Client-Side Caching remains offline until the next restart of the computer.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

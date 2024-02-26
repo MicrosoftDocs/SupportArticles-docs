@@ -2,8 +2,6 @@
 title: Error when you validate a copy of Windows
 description: Provides a solution to an error that occurs when you try to validate a copy of Windows.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

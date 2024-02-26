@@ -2,8 +2,6 @@
 title: AuditPol and Local Security Policy results may differ
 description: Fixes an issue where audit policy settings with AuditPol and the Local Security Policy (SECPOL.msc) show different results.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
