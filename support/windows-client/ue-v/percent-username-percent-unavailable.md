@@ -1,9 +1,7 @@
 ---
 title: Variable %username% is unavailable
 description: Resolves an issue in which username is unavailable in Windows that has OneDrive for Business installed.
-ms.date: 09/25/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

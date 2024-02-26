@@ -1,9 +1,7 @@
 ---
 title: Authentication failure from non-Windows NTLM or Kerberos servers
 description: Fixes an issue in which NTLM and Kerberos servers can't authenticate Windows 7 and Windows Server 2008 R2-based computers.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -1,9 +1,7 @@
 ---
 title: Trusted domains don't appear in Available List
 description: Provides a solution to an issue where trusted domains don't appear in the Available List for domain logon or setting security permissions.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

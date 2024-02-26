@@ -4,7 +4,7 @@ description: Fixes an issue in which updates aren't downloaded when you run an A
 author: helenclu
 ms.author: luche
 ms.reviewer: kaushika, lamosley
-ms.date: 03/18/2021
+ms.date: 12/05/2023
 ---
 # Updates aren't downloaded when you run an ADR
 

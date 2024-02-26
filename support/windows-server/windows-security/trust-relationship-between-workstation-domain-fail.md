@@ -1,9 +1,7 @@
 ---
 title: Unable to log on to a domain in Windows
 description: Fixes an error that occurs when you try to log on to your domain in Windows.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting app installation issues with Intune
 description: How to use the Microsoft Intune troubleshooting pane to help you troubleshoot app installation issues.
-ms.date: 10/14/2021
+ms.date: 12/05/2023
 ms.reviewer: kaushika, mghadial
 search.appverid: MET150
 ---

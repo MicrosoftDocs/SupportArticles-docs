@@ -1,7 +1,7 @@
 ---
 title: Overall introduction of content distribution
 description: Helps administrators understand content distribution and builds a foundation for diagnosing and resolving related problems in Configuration Manager.
-ms.date: 03/30/2020
+ms.date: 12/05/2023
 ms.reviewer: kaushika
 ---
 # Content distribution in Configuration Manager

@@ -1,7 +1,7 @@
 ---
 title: Applications aren't deployed to Windows 10 ARM64 devices
 description: Describes an issue in which applications that are deployed to Windows 10 devices in an earlier version of Configuration Manager aren't deployed to Windows 10 ARM64 devices.
-ms.date: 06/15/2020
+ms.date: 12/05/2023
 ms.reviewer: kaushika
 ---
 # Applications aren't deployed to Windows 10 ARM64 devices in Configuration Manager

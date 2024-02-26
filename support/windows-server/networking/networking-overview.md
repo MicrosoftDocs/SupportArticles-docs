@@ -1,9 +1,7 @@
 ---
 title: Networking overview
 description: Overview of Windows Server networking troubleshooting articles.
-ms.date: 06/17/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

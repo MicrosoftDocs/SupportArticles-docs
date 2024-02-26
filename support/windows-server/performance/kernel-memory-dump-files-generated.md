@@ -1,9 +1,7 @@
 ---
 title: Kernel memory dump files are generated
 description: This behavior occurs to help prevent kernel memory dump files from being written to a page file where the memory dump file is larger than the page file. Workaround is to modify the registry to enable this behavior.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -1,9 +1,7 @@
 ---
 title: Event ID 5973 when you open Windows Store apps
 description: Windows Modern Applications quit immediately with Event ID 5973.
-ms.date: 10/20/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
