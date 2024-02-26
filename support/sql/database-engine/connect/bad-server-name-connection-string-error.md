@@ -14,7 +14,7 @@ This article helps you to resolve an authentication issue that occurs if the spe
 
 ## Symptoms
 
-The SQLOLEDB and SQLNCLI11 OLE DB providers that use the TCP or Named Pipes protocols show either of the following error messages:
+The SQL OLE DB and SQLNCLI11 OLE DB providers that use the TCP or Named Pipes protocols show either of the following error messages:
 
 ```output
 Login failed for user 'userx' - This error message is shown when the providers use an SQL login.
