@@ -33,4 +33,4 @@ The symptom can be one of the following:
 
 ## Next steps
 
-[Run data replication](migrate-data-replication-run.md)  
+[Run data replication](/dynamics365/business-central/dev-itpro/administration/migrate-data-replication-run)  
