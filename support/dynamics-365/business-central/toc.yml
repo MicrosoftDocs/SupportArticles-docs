@@ -24,4 +24,6 @@
           - name: Troubleshoot client returns wrong clienttype
             href: client/client-returns-wrong-clienttype.md
           - name: Troubleshoot device date is causing connectivity issues
-            href: client/client-device-date-connectivity-issues.md  
+            href: client/client-device-date-connectivity-issues.md
+          - name: Troubleshoot icon font not loaded
+            href: client/client-icon-font-not-loaded.md  

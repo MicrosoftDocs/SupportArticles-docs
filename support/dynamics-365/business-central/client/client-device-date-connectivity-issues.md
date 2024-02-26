@@ -5,7 +5,8 @@ ms.custom: na
 ms.date: 02/26/2024
 ms.reviewer: na
 ms.topic: troubleshooting
-author: solsen
+author: SusanneWindfeldPedersen
+ms.author: solsen
 ---
 
 # Troubleshoot device date is causing connectivity issues

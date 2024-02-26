@@ -50,7 +50,8 @@ landingContent:
             url: client/client-returns-wrong-clienttype.md
           - text: Troubleshoot device date is causing connectivity issues
             url: client/client-device-date-connectivity-issues.md
-
+          - text: Troubleshoot icon font not loaded
+            url: client/client-icon-font-not-loaded.md
   # Card
   - title: Documentation and training
     linkLists:
