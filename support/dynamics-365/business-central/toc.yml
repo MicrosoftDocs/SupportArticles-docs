@@ -21,3 +21,5 @@
         items:
           - name: Troubleshoot user personalization can't be started
             href: client/client-user-personalization.md
+          - name: Troubleshoot client returns wrong clienttype
+            href: client/client-returns-wrong-clienttype.md
