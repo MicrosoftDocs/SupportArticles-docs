@@ -2,8 +2,6 @@
 title: Can't delete files on NTFS file system
 description: Describes why you can't delete a file or folder on an NTS file system volume. Provides resolutions for each of the possible causes.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

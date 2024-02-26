@@ -2,8 +2,6 @@
 title: Updates are automatically downloaded
 description: Explains that if you select the default Windows Update option when you install Windows Vista, important updates are automatically downloaded and installed.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

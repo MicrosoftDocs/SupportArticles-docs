@@ -2,8 +2,6 @@
 title: Enable verbose startup, shutdown, logon, and logoff status messages in Windows Server 2003
 description: Describes how to enable verbose status messages by using Group Policy Object Editor or by editing the Windows registry.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

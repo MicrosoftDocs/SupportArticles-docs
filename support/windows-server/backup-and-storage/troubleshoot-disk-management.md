@@ -2,8 +2,6 @@
 title: Troubleshoot Disk Management
 description: Describes how to diagnose and troubleshoot the most common issues you might see when using Disk Management for Windows and Windows Server.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

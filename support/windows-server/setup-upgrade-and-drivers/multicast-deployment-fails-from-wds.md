@@ -2,8 +2,6 @@
 title: Multicast deployment fails from WDS
 description: Provides a solution to an issue where deploying an image from a Windows Deployment Services (WDS) server by using multicast fails.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -2,8 +2,6 @@
 title: Cannot install the May 2019 update of Windows 10 on computers that run certain versions of AMD RAID drivers
 description: Discusses that certain AMD RAID drivers do not support the May 2019 update of Windows 10. The fix is to obtain new drivers directly from AMD.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

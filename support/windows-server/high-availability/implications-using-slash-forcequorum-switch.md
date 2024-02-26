@@ -2,8 +2,6 @@
 title: Implications of using /forcequorum switch
 description: Describes the implications of starting the Cluster service by using the /forcequorum switch in Windows Server 2008. Discusses server clusters that are configured to use a majority node set quorum model.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

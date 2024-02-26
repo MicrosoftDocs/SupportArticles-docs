@@ -2,8 +2,6 @@
 title: The task XML is missing a required element or attribute error when you use the /z switch together with the Schtasks command in Windows Vista
 description: Resolve an issue where you receive an error when you use the /z switch together with the Schtasks.exe command in Windows Vista.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

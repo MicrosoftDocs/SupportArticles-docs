@@ -2,8 +2,6 @@
 title: Can't open files offline when you use Offline Files and Windows Information Protection
 description: Describes an issue that prevents you from opening files offline when you're using the Offline Files feature together with Windows Information Protection. Occurs in Windows 10 Anniversary Edition. Workarounds are provided.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -2,8 +2,6 @@
 title: use backup feature to back up and restore data
 description: Describes how to use the Backup feature to back up and restore data on your Windows Server 2003-based computer.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

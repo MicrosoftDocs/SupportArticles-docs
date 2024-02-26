@@ -2,8 +2,6 @@
 title: Windows Troubleshooters overview
 description: Overview of Windows Troubleshooters troubleshooting articles.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

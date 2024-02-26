@@ -1,8 +1,6 @@
 ---
 title: Mitigation for AMD Family 17h Models 30h-3Fh/Rome Erratum 1474
 description: Introduces the Windows mitigation for AMD Family 17h Models 30h-3Fh/Rome Erratum 1474.
-author: Deland-Han
-ms.author: delhan
 ms.topic: troubleshooting
 ms.date: 12/26/2023
 ms.custom: sap:installing-or-upgrading-windows, csstroubleshoot

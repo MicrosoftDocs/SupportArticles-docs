@@ -2,8 +2,6 @@
 title: Terminal Server commands change
 description: Provides some information about Terminal Server command change.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

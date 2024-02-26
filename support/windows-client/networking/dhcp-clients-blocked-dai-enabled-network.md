@@ -2,8 +2,6 @@
 title: DHCP clients are blocked and meet network issues
 description: Discusses that DHCP clients are blocked when a DAI-enabled network device is used together with a DHCP failover on a Windows Server 2012 server. Provides a workaround.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -2,8 +2,6 @@
 title: Restrict use of a computer to one domain user only
 description: Describes how to restrict use of a computer to one domain user only.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

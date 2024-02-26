@@ -2,8 +2,6 @@
 title: Can't associate a program with an extension
 description: You can't associate a program with an extension in Windows 7 because the program that you're pointing to isn't registered correctly.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

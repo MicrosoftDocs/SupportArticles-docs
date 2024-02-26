@@ -2,8 +2,6 @@
 title: The %TEMP% folder with logon session ID is deleted
 description: Discusses an issue in which the %TEMP% folder that includes the logon session ID is deleted in Windows Server that has Desktop Experience installed.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

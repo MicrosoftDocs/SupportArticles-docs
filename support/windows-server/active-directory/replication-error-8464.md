@@ -2,8 +2,6 @@
 title: Active Directory replication error 8464
 description: Describes the symptoms, cause, and resolution for resolving issues in which Active Directory replication fails and returns error 8464.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -2,8 +2,6 @@
 title: Use WinRE to troubleshoot startup issues
 description: This article discusses how to use Windows Recovery Environment (WinRE) to troubleshoot common startup issues.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

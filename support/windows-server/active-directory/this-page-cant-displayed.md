@@ -2,8 +2,6 @@
 title: This page can't be displayed
 description: Discusses that you receive a "This page cannot be displayed" error message when you try to access an application on a website that uses AD FS 2.0. Provides a resolution.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

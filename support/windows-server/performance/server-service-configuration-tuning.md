@@ -2,8 +2,6 @@
 title: Server service configuration and tuning
 description: Describes how to configure and tuning Windows Server service.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
