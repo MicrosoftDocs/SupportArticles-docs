@@ -23,12 +23,12 @@ Azure Batch creates resources at the subscription level. The resources that are 
 
 When a Batch pool is created by using virtual network integration, the Azure Batch service automatically generates all necessary network resources for the pool's operation. These resources are created in the same resource group in which the virtual network that's being used is located.
 
-:::image type="content" source="media/azure-batch-creates-network-resources/network-resources-created-by-batch.png" alt-text="Screenshot of network resources created by batch." border="false":::
+:::image type="content" source="media/azure-batch-creates-network-resources/network-resources-created-by-batch.png" alt-text="Screenshot of network resources created by batch." border="true":::
 
 ## Use the resource tag to access the linked Batch account or pool 
 
 To identify the Batch resources that are linked to a specific network resource, access the resource, and then check the **Tags** section. That section displays information about the Batch account name and pool name. Notice that after the pool is resized to 0 or deleted, the associated network resources are also deleted.
 
-:::image type="content" source="media/azure-batch-creates-network-resources/batch-network-resources-tags.png" alt-text="Screenshot of Tags information that contains information about the batch account and pool." border="false":::
+:::image type="content" source="media/azure-batch-creates-network-resources/batch-network-resources-tags.png" alt-text="Screenshot of Tags information that contains information about the batch account and pool." border="true":::
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
