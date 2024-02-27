@@ -14,7 +14,7 @@ ms.reviewer: skipb
 appliesto: 
   - Outlook
 search.appverid: MET150
-ms.date: 10/30/2023
+ms.date: 01/30/2024
 ---
 # How to change the folder where e-mail messages and attachments are saved in Outlook
 

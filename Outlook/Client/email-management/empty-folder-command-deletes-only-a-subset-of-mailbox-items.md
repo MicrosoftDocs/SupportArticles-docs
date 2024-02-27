@@ -13,7 +13,7 @@ search.appverid: MET150
 ms.reviewer: aruiz, rakeshs, v-six
 author: cloud-writer
 ms.author: meerak
-ms.date: 10/30/2023
+ms.date: 01/30/2024
 ---
 # The Empty Folder command deletes only a subset of Exchange mailbox items in Outlook 2013
 

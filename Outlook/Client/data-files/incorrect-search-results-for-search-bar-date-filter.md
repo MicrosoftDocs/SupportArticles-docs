@@ -15,7 +15,7 @@ ms.reviewer: gbratton, batre, meerak, v-trisshores
 appliesto: 
   - Microsoft 365 Apps for enterprise
 search.appverid: MET150
-ms.date: 10/30/2023
+ms.date: 01/30/2024
 ---
 
 # Incorrect search results when using a date filter in the Outlook search bar

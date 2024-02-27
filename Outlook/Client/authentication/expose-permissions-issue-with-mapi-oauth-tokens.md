@@ -15,7 +15,7 @@ ms.custom:
 appliesto: 
   - Microsoft Exchange Server
   - Microsoft Outlook
-ms.date: 10/30/2023
+ms.date: 01/30/2024
 ---
 
 # Microsoft doesn't expose permissions to generate OAuth tokens for Extended MAPI access to mailboxes
