@@ -1,9 +1,7 @@
 ---
 title: Adding a package version in Microsoft Application Virtualization returns error 0x8007012F
 description: This article describes the steps to take if error 0x8007012F is returned when adding an App-V v5 package.
-ms.date: 12/07/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

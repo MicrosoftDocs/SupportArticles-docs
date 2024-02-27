@@ -1,9 +1,7 @@
 ---
 title: Use the at command to schedule tasks
 description: Describes how to use the at command to create and to cancel scheduled tasks.
-ms.date: 09/25/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

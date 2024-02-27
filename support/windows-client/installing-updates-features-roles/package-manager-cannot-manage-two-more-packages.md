@@ -1,9 +1,7 @@
 ---
 title: Package Manager can install only the first package when you extract two or more packages to the same folder in Windows Vista
 description: Describes a problem that occurs because Package Manager can't manage two or more packages in the same sandbox. To resolve this problem, don't expand two or more packages to the same folder. Or, create a different sandbox for each package.
-ms.date: 04/28/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

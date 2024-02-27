@@ -1,9 +1,7 @@
 ---
 title: Schedule a server process in
 description: This article describes how to schedule a server process, provides a step-by-step resolution.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

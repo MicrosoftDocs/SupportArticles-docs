@@ -1,13 +1,11 @@
 ---
 title: FAQ about printer issues
-description: Describes frequently asked questions about printer issues in Microsoft Dynamics GP 2010, Microsoft Dynamics GP 10.0 or in Microsoft Dynamics GP 9.0.
-ms.reviewer: kyouells, lmiller
-ms.date: 03/31/2021
+description: Describes frequently asked questions about printer issues in Microsoft Dynamics GP
+ms.reviewer: theley
+ms.date: 02/16/2024
 ---
-# Frequently asked questions about printer issues in Microsoft Dynamics GP 2013, Microsoft Dynamics GP 2010, Microsoft Dynamics GP 10.0 or in Microsoft Dynamics GP 9.0
-
-This article describes frequently asked questions about printer issues in Microsoft Dynamics GP 2013, Microsoft Dynamics GP 2010, or Microsoft Dynamics GP 10.0.
-
+# Frequently asked questions about printer issues in Microsoft Dynamics GP
+This article describes frequently asked questions about printer issues in Microsoft Dynamics GP
 _Applies to:_ &nbsp; Microsoft Dynamics GP  
 _Original KB number:_ &nbsp; 959033
 

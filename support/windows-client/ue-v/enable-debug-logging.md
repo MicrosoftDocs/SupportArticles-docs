@@ -1,9 +1,7 @@
 ---
 title: Enable debug logging in UE-V
 description: Describes how to enable debug logging for the Microsoft User Experience Virtualization (UE-V) agent.
-ms.date: 09/16/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

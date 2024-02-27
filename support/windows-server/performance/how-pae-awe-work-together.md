@@ -1,9 +1,7 @@
 ---
 title: Large memory support is available in Windows Server 2003 and in Windows 2000
 description: Describes PAE and AWE and explains how they work together and also discusses the limitations of using memory beyond the 4-GB range that is inherent to 32-bit operating systems.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

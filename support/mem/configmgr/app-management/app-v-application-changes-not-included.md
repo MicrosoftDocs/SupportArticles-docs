@@ -1,7 +1,7 @@
 ---
 title: Changes to an App-V application aren't included
 description: Describes a problem in which changes to an App-V application are not included when you use App-V Sequencer.
-ms.date: 06/16/2020
+ms.date: 12/05/2023
 ms.reviewer: kaushika, ErinWi, prakask, keiththo, alvinm
 ---
 # Changes to an App-V application are not included when you use App-V Sequencer

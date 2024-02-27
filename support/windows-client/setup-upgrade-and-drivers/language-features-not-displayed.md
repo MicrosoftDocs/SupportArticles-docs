@@ -1,9 +1,7 @@
 ---
 title: Language features not displayed to standard users
 description: Provides the information that language features aren't displayed to standard users starting from Windows 10, version 1809.
-ms.date: 04/28/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

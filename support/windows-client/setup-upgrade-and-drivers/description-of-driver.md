@@ -1,9 +1,7 @@
 ---
 title: A description of the driver
 description: Describes the device driver requirements for x64-based versions of Windows.
-ms.date: 04/28/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

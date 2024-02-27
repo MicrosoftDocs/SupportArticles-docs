@@ -1,9 +1,7 @@
 ---
 title: Fail to move Windows Server to a domain
 description: Provides a solution to an issue that you receive the error message (The wizard cannot gain access to the list of domains in the forest) when you use Dcpromo.exe to move a Windows Server into an existing domain.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

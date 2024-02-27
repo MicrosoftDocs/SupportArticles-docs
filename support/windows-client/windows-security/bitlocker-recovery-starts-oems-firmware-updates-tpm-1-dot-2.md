@@ -1,9 +1,7 @@
 ---
 title: BitLocker Recovery starts when OEMs perform firmware updates for TPM 1.2
 description: Provides a workaround for the issue where BitLocker Recovery starts when OEMs perform firmware updates for TPM 1.2.
-ms.date: 12/07/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -1,9 +1,7 @@
 ---
 title: Compress large registry hives
 description: Describes how to compress large registry hives.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

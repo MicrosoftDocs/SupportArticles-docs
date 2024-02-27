@@ -1,9 +1,7 @@
 ---
 title: Event ID 1053 is logged when you use the gpupdate command
 description: Provides a resolution for the issue that Event ID 1053 is logged when you use the Gpupdate /force command, or you restart a domain controller
-ms.date: 04/28/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

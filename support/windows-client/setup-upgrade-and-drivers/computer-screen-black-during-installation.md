@@ -1,9 +1,7 @@
 ---
 title: Computer screen goes black during setup
 description: Fixes an issue where a black screen is displayed during Windows 7 setup on systems with embedded DisplayPort from AMD/ATI.
-ms.date: 04/28/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -1,9 +1,7 @@
 ---
 title: Problem with promoting DC to global catalog server
 description: Discusses problems with promoting a domain controller to a global catalog server. Discusses possible causes of global catalog promotion failure and ways to resolve global catalog promotion failure.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

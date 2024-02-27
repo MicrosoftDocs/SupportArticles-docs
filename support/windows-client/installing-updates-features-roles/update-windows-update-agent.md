@@ -1,9 +1,7 @@
 ---
 title: Update Windows Update Agent to latest version
 description: Provides information about updating Windows Update Agent to the latest version.
-ms.date: 04/28/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

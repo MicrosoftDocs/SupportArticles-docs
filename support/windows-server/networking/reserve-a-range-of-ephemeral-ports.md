@@ -1,9 +1,7 @@
 ---
 title: Reserve a range of ephemeral ports
 description: Describes how to reserve a range of ephemeral ports on a computer.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

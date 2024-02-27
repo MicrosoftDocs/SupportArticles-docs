@@ -1,9 +1,7 @@
 ---
 title: Check Microsoft Broadband Network Adapter
 description: Provides some information about checking your Microsoft Broadband Network Adapter with Ping.exe.
-ms.date: 09/27/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

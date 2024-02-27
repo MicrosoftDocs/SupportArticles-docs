@@ -1,9 +1,7 @@
 ---
 title: Deployment and operation of AD domains
 description: This article provides information about the deployment and operation of Windows member computers and domain controllers that are joined to Active Directory domains that are configured by using single-label DNS names.
-ms.date: 03/24/2022
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

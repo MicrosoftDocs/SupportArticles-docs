@@ -1,9 +1,7 @@
 ---
 title: Hyper-V can't start VM after upgrade
 description: Address an issue in which Windows 10 Hyper-V cannot start virtual machines after a Windows 10 upgrade.
-ms.date: 09/08/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

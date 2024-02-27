@@ -1,9 +1,7 @@
 ---
 title: Redirect users and computers containers
 description: Describes how to use redirusr and redircmp to redirect user, computer, and group accounts in Active Directory domains.
-ms.date: 12/22/2022
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

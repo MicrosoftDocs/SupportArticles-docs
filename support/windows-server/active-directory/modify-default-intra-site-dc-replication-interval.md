@@ -1,9 +1,7 @@
 ---
 title: Modify the default intra-site DC replication interval
 description: Describes how to modify the default intra-site domain controller replication interval.
-ms.date: 04/28/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

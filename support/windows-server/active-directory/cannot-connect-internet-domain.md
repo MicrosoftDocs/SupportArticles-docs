@@ -1,9 +1,7 @@
 ---
 title: Cannot connect to Internet or domain
 description: Resolves an issue in Windows Server 2003 where clients cannot join or log on to the domain.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: Can't access company resources on Intune-enrolled ADE devices
 description: Troubleshoot an issue in which Conditional Access fails on an Apple Automated Device Enrollment (ADE) device that's enrolled in Microsoft Intune.
-ms.date: 12/20/2021
+ms.date: 12/05/2023
 search.appverid: MET150
 ms.custom: sap:Create and assign conditional access policy
 ms.reviewer: kaushika
