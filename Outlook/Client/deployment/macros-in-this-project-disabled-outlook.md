@@ -16,7 +16,7 @@ appliesto:
   - Outlook 2013
   - Microsoft Outlook 2010
 search.appverid: MET150
-ms.date: 10/30/2023
+ms.date: 01/30/2024
 ---
 # Error when running macros that are assigned a Digital Signature certificate in Outlook: The macros in this project are disabled
 
