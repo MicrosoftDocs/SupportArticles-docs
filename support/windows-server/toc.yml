@@ -1025,8 +1025,6 @@ items:
       href: ./group-policy/information-group-policy-preferences-events.md
   - name: Sysvol access or replication issues
     items:
-    - name: Change the default permissions on GPOs
-      href: ./group-policy/change-default-permissions-on-gpo.md
     - name: DFSR SYSVOL fails to migrate or replicate
       href: ./group-policy/dfsr-sysvol-fails-migrate-replicate.md
     - name: Errors when you run GPMC
@@ -2904,15 +2902,15 @@ items:
   - name: TroubleShootingScript toolset (TSS)
     items:
     - name: Introduction to TroubleShootingScript toolset (TSS)
-      href: ../windows-client/windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tss.md?context=/troubleshoot/windows-server/context/context
+      href: ../windows-client/windows-tss/introduction-to-troubleshootingscript-toolset-tss.md?context=/troubleshoot/windows-server/context/context
     - name: Gather information for Active Directory replication issues
-      href: ../windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication.md?context=/troubleshoot/windows-server/context/context
+      href: ../windows-client/windows-tss/gather-information-using-tss-ad-replication.md?context=/troubleshoot/windows-server/context/context
     - name: Gather information for deployment-related issues
-      href: ../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md?context=/troubleshoot/windows-server/context/context
+      href: ../windows-client/windows-tss/gather-information-using-tss-deployment.md?context=/troubleshoot/windows-server/context/context
     - name: Gather information for Group Policy issues
-      href: ../windows-client/windows-troubleshooters/gather-information-using-tss-group-policy.md?context=/troubleshoot/windows-server/context/context
+      href: ../windows-client/windows-tss/gather-information-using-tss-group-policy.md?context=/troubleshoot/windows-server/context/context
     - name: Gather information for user experience-related issues
-      href: ../windows-client/windows-troubleshooters/gather-information-using-tss-user-experience.md?context=/troubleshoot/windows-server/context/context
+      href: ../windows-client/windows-tss/gather-information-using-tss-user-experience.md?context=/troubleshoot/windows-server/context/context
 - name: Installing Windows Updates, features, or roles
   items:
   - name: Installing Windows Updates, features, or roles
