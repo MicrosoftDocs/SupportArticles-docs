@@ -1,7 +1,7 @@
 ---
-title: Troubleshooting the Named Pipes connections error 
-description: This article provides a resolution for the named pipes connections failure consistent authentication error.
-ms.date: 02/12/2024
+title: Troubleshooting the Named Pipes connections error in SQL Server
+description: This article provides a resolution for the named pipes connections failure consistent authentication error to SQL Server.
+ms.date: 02/27/2024
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
@@ -14,7 +14,7 @@ This article helps you to resolve consistent authentication issue that causes th
 
 ## Symptoms
 
-The SQLOLEDB provider displays a ["SQL Server does not exist or access denied"](../startup-shutdown/event-id-7000-access-denied.md) error message.
+The SQL OLE DB provider displays the ["SQL Server does not exist or access denied"](../startup-shutdown/event-id-7000-access-denied.md) error message.
 
 Some other providers display both the following messages in a random order, whether you use integrated security or a Microsoft SQL Server login:
 
@@ -30,4 +30,4 @@ The Named Pipes connections fail because the user doesn't have permission to log
 
 ## Resolution
 
-Add the user to the Users group on the server that's running SQL Server. If SQL Server is mirrored or clustered, take the same action on all computers within the group.
+Add the user to the Users group on the server that's running SQL Server. If SQL Server is mirrored or clustered, repeat on all computers within the group.
