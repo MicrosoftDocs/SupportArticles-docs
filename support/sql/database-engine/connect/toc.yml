@@ -17,7 +17,7 @@ items:
   href: intermittent-periodic-authentication.md
 - name: Login failed for user
   href: /sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error?context=/troubleshoot/sql/context/context
-- name: Troubleshooting local security subsystem errors
+- name: Troubleshooting local security subsystem errors in SQL Server
   href: local-security-subsystem-errors.md
 - name: Troubleshooting linked server account mapping error
   href: linked-server-account-mapping-error.md
