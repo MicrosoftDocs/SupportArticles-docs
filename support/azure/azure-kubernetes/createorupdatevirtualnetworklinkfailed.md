@@ -25,7 +25,7 @@ An AKS cluster update or upgrade operation fails and returns the following error
 > 
 > Message: Reconcile private dns failed
 > 
-> Details: Create or update virtual network link failed. Subscription: <SubscriptionID>; resource group: <RGName;<> private dns zone: \<GUID>.privatelink.\<region>.azmk8s.io; virtual network link: <VNET_Link>.
+> Details: Create or update virtual network link failed. Subscription: \<SubscriptionID>; resource group: \<RGName>; private dns zone: \<GUID>.privatelink.\<region>.azmk8s.io; virtual network link: \<VNET_Link>.
 > 
 > Message: A virtual network cannot be linked to multiple zones with overlapping namespaces. You tried to link virtual network with '\<GUID>.privatelink.\<region>.azmk8s.io' and '\<GUID>.privatelink.\<region>.azmk8s.io' zones.
 
