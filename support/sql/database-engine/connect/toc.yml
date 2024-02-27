@@ -9,7 +9,7 @@ items:
   href: certificate-validation-failure.md
 - name: Consistent SQL network connectivity issue
   href: consistent-sql-network-connectivity-issue.md
-- name: Login failed due to incorrect server name in connection string
+- name: Login failed due to incorrect server name in SQL Server
   href: bad-server-name-connection-string-error.md
 - name: How to determine if the authentication type is Kerberos
   href: determine-the-authentication-type.md
