@@ -14,7 +14,7 @@ ms.reviewer:
 appliesto: 
   - Microsoft Outlook 2010
 search.appverid: MET150
-ms.date: 10/30/2023
+ms.date: 01/30/2024
 ---
 # Known issues in Outlook 2010 when you use the object model
 

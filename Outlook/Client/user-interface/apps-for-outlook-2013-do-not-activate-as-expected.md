@@ -1,7 +1,7 @@
 ---
 title: Apps for Outlook 2013 do not activate as expected in email
 description: Apps for Outlook 2013 cannot be displayed as expected in an open email message. Provides a resolution.
-ms.date: 10/30/2023
+ms.date: 01/30/2024
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm

@@ -18,7 +18,7 @@ appliesto:
   - Exchange Online
   - Exchange Server 2016 Standard Edition
   - Exchange Server 2013 Standard Edition
-ms.date: 10/30/2023
+ms.date: 01/30/2024
 ---
 # Email messages aren't sent when you use a template file in Outlook 2010
 
