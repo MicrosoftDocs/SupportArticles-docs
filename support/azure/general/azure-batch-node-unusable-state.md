@@ -91,7 +91,7 @@ To do this, follow these steps:
 
 Using the simplified node communication mode can simplify the VNet configuration in a pool. If the nodes in a pool that uses the simplified node communication mode show the **Unusable** state, check the following possible causes and solutions for self-troubleshooting.
 
-#### Cause 1: Missing outbound NSG rule
+#### Cause 1: Missing outbound NSG rules
 
 When applying a VNet, make sure that the outbound request from the internal node to the external is properly configured. Otherwise, the node will become unusable.
 
@@ -99,9 +99,9 @@ When applying a VNet, make sure that the outbound request from the internal node
 
 To resolve this issue, add a BatchNodeManagement.\<region> service tag in the outbound NSG rule.
 
-:::image type="content" source="media/azure-batch-node-unusable-state/block-outbound-nsg.png" alt-text="Screenshot that shows the NSG rule that blocks the outbound request":::
+:::image type="content" source="media/azure-batch-node-unusable-state/block-outbound-nsg.png" alt-text="Screenshot that shows the NSG rule that blocks the outbound request" lightbox="media/azure-batch-node-unusable-state/block-outbound-nsg.png":::
 
-For more information, see [Outbound Security Rule](/azure/batch/batch-virtual-network#outbound-security-rules).
+For more information, see [Outbound security rules](/azure/batch/batch-virtual-network#outbound-security-rules).
 
 #### Cause 2: No public IP addresses
 
@@ -109,7 +109,7 @@ By default, all the nodes in an Azure Batch virtual machine configuration pool a
 
 #### Solution 2: Confiure a nodeManagement private endpoint
 
-Check your network setting through navigating to your Batch account and selecting **Settings** > **Networking**. If the **Selected network** or **Disable** option is enabled, but you don't configure any private endpoint or only configure a batchAcount private endpoint, configure a nodeManagement private endpoint to ensure the internal communication between nodes.
+Check your network setting through navigating to your Batch account and selecting **Settings** > **Networking**. If the **Selected network** or **Disable** option is enabled, but you only configure a batchAcount private endpoint or don't configure any private endpoint, configure a nodeManagement private endpoint to ensure the internal communication between nodes.
 
 #### Cause 3: A bad DNS configuration prevents the node from communicating with the node management endpoint
 
