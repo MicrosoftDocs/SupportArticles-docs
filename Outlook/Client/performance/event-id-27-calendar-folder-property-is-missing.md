@@ -14,7 +14,7 @@ ms.reviewer: abarglo, gbratton, aruiz
 appliesto: 
   - Microsoft Outlook 2010
 search.appverid: MET150
-ms.date: 10/30/2023
+ms.date: 01/30/2024
 ---
 # Event ID 27 and Calendar Folder property is missing error occurs after you apply Office 2010 SP2
 

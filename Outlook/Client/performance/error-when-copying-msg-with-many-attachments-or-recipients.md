@@ -3,7 +3,7 @@ title: You receive an error when copying MSG email files in Outlook that contain
 ms.author: meerak
 author: cloud-writer
 manager: dcscontentpm
-ms.date: 10/30/2023
+ms.date: 01/30/2024
 audience: Admin
 ms.topic: troubleshooting
 localization_priority: Normal

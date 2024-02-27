@@ -17,7 +17,7 @@ appliesto:
   - Outlook for Microsoft 365
   - Microsoft Outlook 2010
 search.appverid: MET150
-ms.date: 10/30/2023
+ms.date: 01/30/2024
 ---
 # An OLE registration error occurred message when you access an InfoPath Forms folder in Outlook
 

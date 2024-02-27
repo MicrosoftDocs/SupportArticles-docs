@@ -15,7 +15,7 @@ appliesto:
   - Exchange Server 2013 Enterprise Edition
   - Exchange Server 2010 Enterprise
 search.appverid: MET150
-ms.date: 10/30/2023
+ms.date: 01/30/2024
 ---
 # Event ID 9646 when a service account opens many MAPI sessions
 

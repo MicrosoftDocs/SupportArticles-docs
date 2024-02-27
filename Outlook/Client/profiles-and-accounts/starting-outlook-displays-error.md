@@ -17,7 +17,7 @@ appliesto:
   - Outlook 2013
   - Outlook 2010
   - Outlook 2007
-ms.date: 10/30/2023
+ms.date: 01/30/2024
 ---
 # Outlook displays "This information service is not installed on your computer" error message
 

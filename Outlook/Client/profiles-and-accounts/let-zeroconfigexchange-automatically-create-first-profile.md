@@ -15,7 +15,7 @@ appliesto:
   - Outlook 2019
   - Outlook 2016
 search.appverid: MET150
-ms.date: 10/30/2023
+ms.date: 01/30/2024
 ---
 # How to manually create additional Outlook 2016 profiles with ZeroConfigExchange in place
 
