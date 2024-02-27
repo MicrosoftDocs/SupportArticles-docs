@@ -13,15 +13,13 @@ search.app:
 ---
 # Troubleshooting startup or sign-in issues for Power Apps
 
-This article helps you resolve some of the common issues that may occur when starting up or signing in to [Power Apps](https://make.powerapps.com).
+This article helps you resolve some of the common issues or errors that might occur when starting up or signing in to [Power Apps](https://make.powerapps.com).
 
-## Common errors
+## Common issues or errors
 
-The following are some common errors that may appear when you start up or sign in to Power Apps.
+The following are some common issues or errors that might appear when you start up or sign in to Power Apps.
 
-- You're prompted to sign in every time an app is embedded in another client such as SharePoint and Microsoft Teams.
-
-  > The Power Apps open experience starts and halts until you sign-in
+- You're prompted to sign in every time an app is embedded in another client such as SharePoint and Microsoft Teams. The Power Apps open experience starts and halts until you sign in.
 
 - Error message related to cookie settings.
 
@@ -96,9 +94,9 @@ Try the following steps to resolve the issue:
 
 ## Enable storage of third-party cookies and local data in your browser or app
 
-Power Apps stores some data locally, such as user identity and preferences, leveraging your browser's capabilities. Problems occur if the browser blocks the storage of such local data, or third-party cookies set by Power Apps.
+Power Apps stores some data locally, such as user identity and preferences, using your browser's capabilities. Problems occur if the browser blocks the storage of such local data, or third-party cookies set by Power Apps.
 
-Most browsers allow settings to reflect the changes immediately. You may also need to close all the browser windows and reopen them instead.
+Most browsers allow settings to reflect the changes immediately. You might also need to close all the browser windows and reopen them instead.
 
 To enable this setting for the Power Apps and Dynamics 365 mobile apps for iOS, you need to work through the iOS settings linked to the app rather than through the browser settings for iOS.
 
@@ -197,7 +195,7 @@ To allow apps to use cookies when they're embedded in another client, such as Sh
 
 ## Clear your browser cache
 
-The browser cache is stored on your device's hard drive. When you visit a website, your browser downloads certain information that allows it to load faster when you revisit the same website in the future. Some Power Apps features use the browser cache to provide a faster user experience. In some cases, you may want to clear your browser cache. Here are the instructions for different browsers:
+The browser cache is stored on your device's hard drive. When you visit a website, your browser downloads certain information that allows it to load faster when you revisit the same website in the future. Some Power Apps features use the browser cache to provide a faster user experience. In some cases, you might want to clear your browser cache. Here are the instructions for different browsers:
 
 - [Microsoft Edge](https://www.microsoft.com/en-US/microsoft-365-life-hacks/privacy-and-safety/how-to-clear-cache)
 - [Google Chrome](https://support.google.com/accounts/answer/32050?hl=en&co=GENIE.Platform%3DDesktop)
