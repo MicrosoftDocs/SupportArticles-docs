@@ -79,6 +79,36 @@ This error means that the flow is turned off.
 
 The mitigation is to [turn on the flow](/power-automate/disable-flow#turn-on-a-flow).
 
+## Error "FlowTimeout.Run Failed"  or Inner Error code "ResponseTimeout" on Flow run
+
+```output
+        {
+            "error": {
+            "code": 504,
+            "source": "<api hub source>",
+            "clientRequestId": "<GUID>",
+            "message": "BadGateway",
+            "innerError": {
+                "error": {
+                    "code": "ResponseTimeout",
+                    "message": "The server did not receive a timely response from the upstream server. Request tracking id '<some_tracking_id>'."
+                    }
+                }
+            }
+        } 
+```
+
+### Cause
+
+This error means that the synchronous flow is taking more then 2 minutes to run hence its timing out.
+
+### Mitigation steps
+
+> [!NOTE]
+> Make sure to perform the following steps in the source or development environment and update the solution. Once the solution is updated, import it to all the target or production environments.
+
+The mitigation is to find [what part is taking time and optimizing it to run under 2 minutes](/power-automate/fix-flow-failures#identify-specific-flow-runs).
+
 ## Error code "0x80040265" or "0x80048d0b" on Flow run
 
 ```output
