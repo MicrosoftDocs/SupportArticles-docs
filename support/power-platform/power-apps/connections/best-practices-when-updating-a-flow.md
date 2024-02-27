@@ -2,7 +2,7 @@
 title: Error codes on Flow run
 description: This article describes best practices for updating Microsoft Flows used by Power Apps.
 ms.reviewer: mlalavat
-ms.date: 02/19/2024
+ms.date: 02/27/2024
 ---
 # Best practices when updating a flow used by a Power App
 
@@ -79,7 +79,7 @@ This error means that the flow is turned off.
 
 The mitigation is to [turn on the flow](/power-automate/disable-flow#turn-on-a-flow).
 
-## Inner Error code "ResponseTimeout" on Flow run
+## Inner error code "ResponseTimeout" on Flow run
 
 ```output
         {
@@ -100,14 +100,14 @@ The mitigation is to [turn on the flow](/power-automate/disable-flow#turn-on-a-f
 
 ### Cause
 
-This error means that the synchronous flow is taking more then 2 minutes to run hence its timing out.
+This error means that the synchronous flow takes longer than two minutes to finish, causing it to time out.
 
 ### Mitigation steps
 
 > [!NOTE]
 > Make sure to perform the following steps in the source or development environment and update the solution. Once the solution is updated, import it to all the target or production environments.
 
-The mitigation is to find [what part is taking time and optimizing it to run under 2 minutes](/power-automate/fix-flow-failures#identify-specific-flow-runs).
+The mitigation is to [find which flow run is taking too long](/power-automate/fix-flow-failures#identify-specific-flow-runs) and optimize it to run in two minutes.
 
 ## Error code "0x80040265" or "0x80048d0b" on Flow run
 
