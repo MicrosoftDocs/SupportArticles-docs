@@ -5,7 +5,7 @@ author: amchern
 ms.author: amchern
 ms.reviewer: tapanm, mkaur, alaug
 ms.custom: canvas
-ms.date: 12/06/2023
+ms.date: 02/27/2024
 search.audienceType: 
   - maker
 search.app: 
@@ -77,22 +77,22 @@ Try the following steps to resolve the issue:
 3. Try signing in with a different browser. For a list of supported browsers, see [system requirements](/power-apps/limits-and-config#supported-browsers-for-running-power-apps).
 4. Check your network connection to make sure it's stable.
 5. If you're getting Microsoft Entra errors, they're usually related to user authentication and authorization. The error page might contain additional information that can help diagnose and fix the problem. To resolve Microsoft Entra errors, you might need assistance from your IT department.
-6. Check the **Third-party Storage Partitioning** setting in your browser to make sure it's disabled.
+6. [Check the **Third-party Storage Partitioning** setting in your browser](#check-the-third-party-storage-partitioning-setting-in-microsoft-edge-or-google-chrome) to make sure it's disabled.
 
    > [!NOTE]
    > Only consider this resolution step when you experience sign-in or sign-out issues under one of the following conditions:
    >
    > - You use a device that has multiple Microsoft Entra identities sign-in to access different applications.
    > - You access multiple applications using Microsoft Entra across more than one tab. When you sign out of one tab, you observe you aren't signed out of the second tab.
-   > - You access Power Apps that are embedded ([via an iframe](/power-apps/maker/canvas-apps/embed-apps-dev#embed-your-app-in-a-website) in a third-party website.
+   > - You access Power Apps that are embedded [via an iframe](/power-apps/maker/canvas-apps/embed-apps-dev#embed-your-app-in-a-website) in a third-party website.
    > - You access a canvas app that's embedded in a model driven app form.
-   
-### Check the **Third-party Storage Partitioning** setting in Microsoft Edge or Google Chrome:
 
-   - In Microsoft Edge, you can check the setting by navigating to `edge://flags/#third-party-storage-partitioning` using the address bar.
-   - In Google Chrome, you can check the setting by navigating to `chrome://flags/#third-party-storage-partitioning` using the address bar.
+### Check the Third-party Storage Partitioning setting in Microsoft Edge or Google Chrome
 
-   ![image](https://github.com/MicrosoftDocs/SupportArticles-docs-pr/assets/11514622/0391fbcb-7558-48f6-981c-c55fa198e93c)
+- In Microsoft Edge, you can check the setting by navigating to `edge://flags/#third-party-storage-partitioning` using the address bar.
+- In Google Chrome, you can check the setting by navigating to `chrome://flags/#third-party-storage-partitioning` using the address bar.
+
+![image](https://github.com/MicrosoftDocs/SupportArticles-docs-pr/assets/11514622/0391fbcb-7558-48f6-981c-c55fa198e93c)
 
 ## Enable storage of third-party cookies and local data in your browser or app
 
