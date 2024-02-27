@@ -16,7 +16,7 @@ appliesto:
   - Outlook 2016
   - Outlook for Microsoft 365
 search.appverid: MET150
-ms.date: 10/30/2023
+ms.date: 01/30/2024
 ---
 # The address list cannot be displayed error when you try to view the contacts of a public folder in Outlook
 

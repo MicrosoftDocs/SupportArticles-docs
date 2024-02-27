@@ -15,7 +15,7 @@ ms.reviewer: bobz, tasitae
 appliesto: 
   - Outlook 2016
 search.appverid: MET150
-ms.date: 10/30/2023
+ms.date: 01/30/2024
 ---
 # A recipient's photo, details, or presence doesn't appear in Outlook contact card
 
