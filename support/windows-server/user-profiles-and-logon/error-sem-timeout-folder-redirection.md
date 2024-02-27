@@ -2,8 +2,6 @@
 title: Folder Redirection fails with the error ERROR_SEM_TIMEOUT or the semaphore timeout period has expired
 description: Helps fix an ERROR_SEM_TIMEOUT error that occurs when you find out the Folder Redirection policy isn't working on the client machine.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

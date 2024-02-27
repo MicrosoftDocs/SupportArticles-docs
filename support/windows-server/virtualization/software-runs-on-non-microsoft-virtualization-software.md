@@ -2,8 +2,6 @@
 title: Run programs on non-Microsoft hardware virtualization software
 description: Describes the type of support that Microsoft provides for programs that are run in a virtual environment.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

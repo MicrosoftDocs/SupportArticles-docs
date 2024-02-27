@@ -2,8 +2,6 @@
 title: 80072EE6 error code when you download an update
 description: Resolve the 80072EE6 error code that occurs when you download an update from Windows Server Update Services.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

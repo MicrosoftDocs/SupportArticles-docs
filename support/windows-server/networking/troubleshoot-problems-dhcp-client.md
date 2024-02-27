@@ -2,8 +2,6 @@
 title: Troubleshoot problems on the DHCP client
 description: Introduces how to troubleshoot problems on the DHCP client and collect data.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

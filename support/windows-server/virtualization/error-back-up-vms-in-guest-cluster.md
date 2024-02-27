@@ -2,8 +2,6 @@
 title: Errors when you back up VMs that belong to a guest cluster
 description: Address errors that occur when you try to back up VMs that belong to a guest cluster.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

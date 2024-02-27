@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot the Microsoft Intune certificate connector and event IDs
 description:  Troubleshoot the Microsoft Intune certificate connector by reviewing Event IDs and descriptions, and review diagnostic codes for the Intune connector service.
-ms.date: 05/01/2019
+ms.date: 12/05/2023
 ms.reviewer: kaushika, lacranda
 search.appverid: MET150
 ---

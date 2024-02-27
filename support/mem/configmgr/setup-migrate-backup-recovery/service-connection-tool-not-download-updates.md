@@ -1,7 +1,7 @@
 ---
 title: Error downloading the ConfigMgr.AdminUIContent.cab file
 description: An AdminUIContentDownload error occurs when you download updates for Configuration Manager by using service connection point online mode or ServiceConnectionTool.exe.
-ms.date: 02/28/2022
+ms.date: 12/05/2023
 ms.reviewer: kaushika
 ---
 # Error when downloading ConfigMgr.AdminUIContent.cab by using SMS_DMP_DOWNLOADER or ServiceConnectionTool.exe

@@ -2,8 +2,6 @@
 title: Active Directory Replication Error 8451
 description: provides a resolution for Active Directory Replication Error 8451 "The replication operation encountered a database error".
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -2,8 +2,6 @@
 title: Remote Control always prompts for user permission
 description: Provides a solution to an issue where the user is still prompted for permissions to allow the Remote Control even though you uncheck Require User's permission under the Remote Control tab.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

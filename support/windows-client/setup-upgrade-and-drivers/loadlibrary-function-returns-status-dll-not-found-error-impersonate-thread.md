@@ -2,8 +2,6 @@
 title: LoadLibrary function returns STATUS_DLL_NOT_FOUND error on impersonate thread in Windows
 description: Describes an issue that causes the LoadLibrary function to return a STATUS_DLL_NOT_FOUND error on an impersonate thread in Windows 10 and Windows Server 2016.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

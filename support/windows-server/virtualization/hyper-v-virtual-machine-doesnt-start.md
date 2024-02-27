@@ -2,8 +2,6 @@
 title: Hyper-V virtual machine doesn't start and triggers 0x80070057 error
 description: Describes an issue that triggers an error when you try to start a virtual machine that's running in a Windows Server 2012 R2 Hyper-V environment. This issue occurs when McAfee VirusScan is installed. A workaround is provided.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

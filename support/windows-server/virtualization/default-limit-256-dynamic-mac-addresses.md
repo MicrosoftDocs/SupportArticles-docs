@@ -2,8 +2,6 @@
 title: Windows Hyper-V server has a default limit of 256 dynamic MAC addresses
 description: Provides a solution to an issue that occurs when you start a guest virtual machine.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

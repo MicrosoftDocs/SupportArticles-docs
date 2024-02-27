@@ -2,8 +2,6 @@
 title: Diagnostic logging for troubleshooting Workplace Join issues
 description: Describes how to troubleshoot Workplace Join issues by collecting and reviewing log information through Event Viewer.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
