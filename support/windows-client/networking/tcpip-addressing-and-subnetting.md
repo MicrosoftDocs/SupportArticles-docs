@@ -1,9 +1,7 @@
 ---
 title: TCP/IP addressing and subnetting
 description: A general introduction to the concepts of IP networks and subnetting.
-ms.date: 09/21/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

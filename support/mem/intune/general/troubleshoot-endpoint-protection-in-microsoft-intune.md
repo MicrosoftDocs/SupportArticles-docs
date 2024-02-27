@@ -1,7 +1,7 @@
 ---
 title: Common endpoint protection messages in Microsoft Intune
 description: See common messages and possible solution when using and troubleshooting endpoint protection and Microsoft Defender for Endpoint in Microsoft Intune.
-ms.date: 11/09/2021
+ms.date: 12/05/2023
 ms.reviewer: kaushika, tscott
 search.appverid: MET150
 ---

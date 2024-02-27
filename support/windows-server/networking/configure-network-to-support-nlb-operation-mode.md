@@ -1,9 +1,7 @@
 ---
 title: Configure network infrastructure to support the NLB operation mode
 description: Describes how the different NLB operation modes affect network infrastructure, and the best ways in which the network can support each mode.
-ms.date: 02/02/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

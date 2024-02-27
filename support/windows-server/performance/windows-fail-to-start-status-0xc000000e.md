@@ -1,9 +1,7 @@
 ---
 title: Fail to restart Windows after full OS recovery
 description: Fixes a problem in which you receive an error message when you restart Windows Server 2008 R2 after a full OS recovery
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

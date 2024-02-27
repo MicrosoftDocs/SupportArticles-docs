@@ -1,9 +1,7 @@
 ---
 title: Remote Desktop Connection for credentials
 description: Describes a problem that you may experience after you install the Remote Desktop Connection 6.0 client update. Provides a workaround.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -8,27 +8,19 @@ metadata:
   ms.topic: landing-page # Required
   author: Deland-Han  #Required; your GitHub user alias, with correct capitalization.
   ms.author: delhan #Required; microsoft alias of author; optional team alias.
-  ms.date: 04/20/2021
+  ms.date: 12/26/2023
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
 landingContent:
 
  # Card
-  - title: Deployment
-    linkLists:      
-      - linkListType: how-to-guide
-        links:
-          - text: Deployment 
-            url: ./deployment/deployment-overview.md
-          - text: Windows Server End of Support (EoS FAQ)
-            url: ./windows-server-eos-faq/end-of-support-windows-server-2008-2008r2.yml
   - title: Identity and Access
     linkLists:      
       - linkListType: how-to-guide
         links:
           - text: Active Directory 
-            url: ./identity/active-directory-overview.md
+            url: ./active-directory/active-directory-overview.md
           - text: Group Policy 
             url: ./group-policy/group-policy-overview.md
           - text: UserProfiles and Logon 

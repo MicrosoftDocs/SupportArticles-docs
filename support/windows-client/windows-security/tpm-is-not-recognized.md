@@ -1,9 +1,7 @@
 ---
 title: Trusted Platform Module (TPM) isn't recognized
 description: TPM isn't recognized on some Windows 7 devices. Provides a resolution.
-ms.date: 09/08/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -1,9 +1,7 @@
 ---
 title: Windows DNS registers duplicate SRV records for a DC if its computer name has uppercase letters
 description: Fixes an issue in which Windows DNS records duplicate SRV records for domain controllers that run Windows Server 2016 or later if those DCs have uppercase characters in their computer names.
-ms.date: 03/24/2022
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

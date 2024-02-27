@@ -1,7 +1,7 @@
 ---
 title: Can't uninstall apps in Intune that were installed from Apple App Store
 description: Gives a workaround solution to help uninstall apps that are installed from the Apple App Store can't be uninstalled in Intune.
-ms.date: 10/15/2021
+ms.date: 12/05/2023
 search.appverid: MET150
 ms.custom: sap:Add apps
 ms.reviewer: kaushika

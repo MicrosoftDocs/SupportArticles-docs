@@ -1,9 +1,7 @@
 ---
 title: You do not see the cluster disk in explorer or diskmgmt on Failover in a Windows 2008 or Windows 2008 R2 Cluster
 description: Provides a resolution to an issue where cluster disk cannot be found in explorer or diskmgmt on failover.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -1,9 +1,7 @@
 ---
 title: Whitespace characters in file and folder names
 description: Describes support for whitespace characters in file and folder names.
-ms.date: 09/08/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
