@@ -13,7 +13,7 @@ search.appverid: MET150
 ms.reviewer: jonl, v-six
 author: cloud-writer
 ms.author: meerak
-ms.date: 10/30/2023
+ms.date: 01/30/2024
 ---
 # Outlook shows "Disconnected" after you enable modern authentication in Microsoft 365
 

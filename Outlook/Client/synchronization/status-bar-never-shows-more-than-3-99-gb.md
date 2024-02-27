@@ -20,7 +20,7 @@ appliesto:
   - Exchange Online
   - Outlook for Microsoft 365
 search.appverid: MET150
-ms.date: 10/30/2023
+ms.date: 01/30/2024
 ---
 # Status bar progress never shows more than 3.99 GB remaining on initial Sync of large folders
 

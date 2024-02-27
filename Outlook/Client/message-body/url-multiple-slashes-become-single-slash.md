@@ -15,7 +15,7 @@ ms.reviewer: gbratton
 appliesto: 
   - Word
   - Outlook
-ms.date: 10/30/2023
+ms.date: 01/30/2024
 ---
 
 # Two or more consecutive slashes in a hyperlink are changed to one slash

@@ -15,7 +15,7 @@ appliesto:
   - Exchange Server 2016
   - Exchange Online
 search.appverid: MET150
-ms.date: 10/30/2023
+ms.date: 01/30/2024
 ---
 # Personal policy tag for an Inbox rule doesn't work correctly in Exchange
 

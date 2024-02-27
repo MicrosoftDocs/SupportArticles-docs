@@ -17,7 +17,7 @@ appliesto:
   - Outlook 2010
   - Office Outlook 2007
   - Office Outlook 2003
-ms.date: 10/30/2023
+ms.date: 01/30/2024
 ---
 
 # How to use Outlook policy to control credential prompts when connecting to an Exchange Server mailbox

@@ -19,7 +19,7 @@ appliesto:
   - Internet Explorer 11
 search.appverid: MET150
 ms.reviewer: 
-ms.date: 10/30/2023
+ms.date: 01/30/2024
 ---
 # Automatically generated email messages in Outlook don't contain Subject or contents
 

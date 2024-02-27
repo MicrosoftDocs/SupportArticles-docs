@@ -21,7 +21,7 @@ appliesto:
   - Outlook for Microsoft 365
   - Outlook 2010 with Business Contact Manager
 search.appverid: MET150
-ms.date: 10/30/2023
+ms.date: 01/30/2024
 ---
 # Description of the AutoArchive feature in Outlook
 

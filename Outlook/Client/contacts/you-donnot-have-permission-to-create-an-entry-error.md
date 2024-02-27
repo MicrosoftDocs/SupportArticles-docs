@@ -15,7 +15,7 @@ appliesto:
   - Outlook
   - Microsoft 365
 search.appverid: MET150
-ms.date: 10/30/2023
+ms.date: 01/30/2024
 ---
 # You don't have permission to create an entry in this folder error when you add contacts to a contacts folder
 

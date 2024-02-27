@@ -15,7 +15,7 @@ appliesto:
   - Outlook
   - Outlook Development
 search.appverid: MET150
-ms.date: 10/30/2023
+ms.date: 01/30/2024
 ---
 # Office add-ins are not displayed correctly in Outlook
 

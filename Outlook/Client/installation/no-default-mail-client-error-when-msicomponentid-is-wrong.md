@@ -14,7 +14,7 @@ ms.reviewer: robevans, gregmans
 appliesto: 
   - Outlook 2013
 search.appverid: MET150
-ms.date: 10/30/2023
+ms.date: 01/30/2024
 ---
 # No default mail client error when MSIComponentID registry value is incorrect for Outlook 2013
 

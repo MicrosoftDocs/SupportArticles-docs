@@ -16,7 +16,7 @@ appliesto:
   - Microsoft Outlook 2010
   - Microsoft Office Outlook 2007
 search.appverid: MET150
-ms.date: 10/30/2023
+ms.date: 01/30/2024
 ---
 # Sometimes emails do not appear in Cached mode Inbox even if they were synchronized down from mailbox
 

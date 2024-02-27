@@ -15,7 +15,7 @@ appliesto:
   - Exchange Server 2010
   - Exchange Server 2007
 search.appverid: MET150
-ms.date: 10/30/2023
+ms.date: 01/30/2024
 ---
 # Exchange ActiveSync does not synchronize some Outlook contact information as expected
 

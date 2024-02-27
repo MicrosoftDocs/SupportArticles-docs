@@ -14,7 +14,7 @@ ms.reviewer: gquintin, aruiz, van.eric; meerak
 appliesto: 
   - Outlook for Microsoft 365
 search.appverid: MET150
-ms.date: 10/30/2023
+ms.date: 01/30/2024
 ---
 
 # Web links from Outlook and Teams open in Microsoft Edge in side-by-side view

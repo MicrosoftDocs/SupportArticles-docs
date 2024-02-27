@@ -20,7 +20,7 @@ appliesto:
   - Outlook 2016
   - Outlook 2013
   - Outlook 2010
-ms.date: 10/30/2023
+ms.date: 01/30/2024
 ---
 
 # Items that are deleted from a shared mailbox go to the wrong folder in Outlook

@@ -18,7 +18,7 @@ appliesto:
   - Outlook 2019
   - Outlook 2016
 search.appverid: MET150
-ms.date: 01/16/2024
+ms.date: 01/30/2024
 ---
 
 # Remove a tentative meeting that's automatically added to your calendar

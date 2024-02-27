@@ -16,7 +16,7 @@ search.appverid: MET150
 ms.reviewer: willfid, gregmans, v-six
 author: cloud-writer
 ms.author: meerak
-ms.date: 10/30/2023
+ms.date: 01/30/2024
 ---
 # Outlook performance is slow in the Microsoft 365 environment
 

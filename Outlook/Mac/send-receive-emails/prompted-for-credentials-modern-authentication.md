@@ -16,7 +16,7 @@ search.appverid:
 appliesto: 
   - Exchange Online
   - Outlook 2016 for Mac
-ms.date: 10/30/2023
+ms.date: 01/30/2024
 ---
 # You're repeatedly prompted for credentials when using modern authentication in Outlook 2016 for Mac
 

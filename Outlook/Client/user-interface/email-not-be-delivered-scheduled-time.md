@@ -12,7 +12,7 @@ search.appverid: MET150
 ms.reviewer: v-six
 author: cloud-writer
 ms.author: meerak
-ms.date: 10/30/2023
+ms.date: 01/30/2024
 ---
 # Email may not be delivered at the scheduled time when the "Do not deliver before" option is enabled in an Outlook message
 

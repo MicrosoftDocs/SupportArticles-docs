@@ -15,7 +15,7 @@ appliesto:
   - Outlook 2016 for Mac
   - Exchange Online
 search.appverid: MET150
-ms.date: 10/30/2023
+ms.date: 01/30/2024
 ---
 # How to suppress the Microsoft 365 AutoDiscover redirect warning in Outlook 2016 for Mac
 

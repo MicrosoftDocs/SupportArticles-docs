@@ -15,7 +15,7 @@ appliesto:
   - Microsoft Outlook 2010
   - Outlook 2010 with Business Contact Manager
 search.appverid: MET150
-ms.date: 10/30/2023
+ms.date: 01/30/2024
 ---
 # Can't map custom fields when importing an XLS or CSV file in the Hebrew version of Outlook 2010
 

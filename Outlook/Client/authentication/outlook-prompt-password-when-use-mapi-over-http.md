@@ -15,7 +15,7 @@ appliesto:
   - Outlook 2010
   - Outlook 2016
 search.appverid: MET150
-ms.date: 10/30/2023
+ms.date: 01/30/2024
 ---
 # Outlook repeatedly prompts for credentials when using MAPI over HTTP to connect to Exchange
 
