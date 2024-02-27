@@ -27,4 +27,10 @@ This error occurs if any existing problems affect the Windows permissions or pol
 
 ## Resolution
 
-Check the *secpol.msc* file to determine whether the user account (or any group that the user might belong to) exists in the security policy settings under **Local Policies > User Rights Assignment > Deny access to this computer from the network**.
+To resolve this error, follow these steps:
+
+1. In the Local Security Policy console, navigate to **Security Settings > Local Policies > User Rights Assignment**.
+
+1. Look for the **Deny access to this computer from the network** policy setting.
+
+   Check the *secpol.msc* file to determine whether the user account (or any group that the user might belong to) exists in the security policy settings.
