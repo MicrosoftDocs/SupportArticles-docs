@@ -1,7 +1,7 @@
 ---
-title: Troubleshooting Kerberos tickets issue 
-description: This article provides a resolution for the consistent authentication issue that affects Kerberos tickets.
-ms.date: 02/12/2024
+title: Troubleshooting Kerberos tickets issue in SQL Server
+description: This article provides a resolution for the consistent authentication issue in SQL Server that affects Kerberos tickets.
+ms.date: 02/27/2024
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
