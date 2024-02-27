@@ -1,14 +1,14 @@
 ---
-title: Troubleshooting the Windows user profile issue 
-description: This article provides a resolution for issues that are caused by a corrupted Windows user profile.
-ms.date: 02/26/2024
+title: Troubleshooting the Windows user profile issue in SQL Server
+description: This article provides a resolution for issues that are caused by a corrupted Windows user profile in SQL Server.
+ms.date: 02/27/2024
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 
-# Windows user profile can't be loaded
+# Windows user profile can't be loaded in SQL Server
 
 This article helps you resolve issues that occur because of a corrupted Windows user profile.
 
