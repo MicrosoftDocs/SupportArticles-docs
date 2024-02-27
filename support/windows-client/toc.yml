@@ -4,23 +4,23 @@ items:
 - name: Active Directory
   items:
   - name: Active Directory
-    href: ./identity/active-directory-overview.md
+    href: ./active-directory/active-directory-overview.md
   - name: Schema update - known issues, best practices, workflow review
     items:
     - name: Error when checking domain object property
-      href: ./identity/error-when-checking-domain-object-property.md
+      href: ./active-directory/error-when-checking-domain-object-property.md
   - name: User, computer, group, and object management
     items:
     - name: Known issues for managing Group Policy clients
-      href: ./identity/known-issues-for-group-policy-clients.md
+      href: ./active-directory/known-issues-for-group-policy-clients.md
     - name: The LsaLookupSids function returns the old user name
-      href: ./identity/lsalookupsids-function-not-return-new-user-name.md
+      href: ./active-directory/lsalookupsids-function-not-return-new-user-name.md
     - name: UAC blocks elevation of executable applications
-      href: ./identity/uac-blocks-elevation-executable-apps.md
+      href: ./active-directory/uac-blocks-elevation-executable-apps.md
   - name: Windows Time Service
     items:
     - name: W32Time doesn't start automatically
-      href: ./identity/w32time-not-start-on-workgroup.md
+      href: ./active-directory/w32time-not-start-on-workgroup.md
 - name: Admin Development
   items:
   - name: Admin Development
@@ -167,274 +167,26 @@ items:
       href: ./backup-and-storage/e2e-event-ids-volsnap.md
     - name: Most recent previous versions are missing for a share
       href: ./backup-and-storage/most-recent-previous-versions-missing-for-share.md
-- name: Deployment
+- name: Certificates and PKI
   items:
-  - name: Deployment
-    href: ./deployment/deployment-overview.md
-  - name: Activation
+  - name: Certificates and PKI
+    href: ./certificates-and-public-key-infrastructure-pki/certificates-and-public-key-infrastructure-pki-overview.md
+  - name: Certificate chaining and revocation
     items:
-    - name: Activation failures on volume-licensed KMS clients
-      href: ./deployment/activation-failures-not-genuine-notifications-volume-licensed-kms-client.md
-    - name: Can't activate Windows 7 with KMS
-      href: ./deployment/cannot-activate-windows-from-oem.md
-    - name: Fail to open a list in VAMT 2.0
-      href: ./deployment/item-with-same-key-has-been-added.md
-    - name: How to validate the OEM activation key
-      href: ./deployment/validate-oem-activation-key.md
-    - name: KMS current count doesn't increase
-      href: ./deployment/kms-current-count-not-increase.md
-  - name: Devices and Drivers
-    items:
-    - name: '"The operation timed out" error'
-      href: ./deployment/operation-timed-out-error-disk-management-console.md
-    - name: A description of the driver support
-      href: ./deployment/description-of-driver.md
-    - name: A high pitched noise is heard when using Bluetooth headphones
-      href: ./deployment/high-pitched-noise-is-heard.md
-    - name: Bluetooth speakers don't work after KB 4505903 is applied
-      href: ./deployment/bluetooth-speakers-not-work-after-KB4505903-installed.md
-    - name: Create a user-defined service
-      href: ./deployment/create-user-defined-service.md
-    - name: Desktop icon isn't visible in Extended mode
-      href: ./deployment/desktop-icon-not-visible-disconnect-hdmi-display.md
-    - name: Devices not working before you log on a computer
-      href: ./deployment/devices-not-working-before-log-on-computer.md
-    - name: Dynamic link library (DLL)
-      href: ./deployment/dynamic-link-library.md
-    - name: Error when you access a USB storage device
-      href: ./deployment/error-when-you-access-usb-storage-device.md
-    - name: Event ID 219 when a device is plugged into a Windows system
-      href: ./deployment/event-id-219-when-device-plugged-in-windows-system.md
-    - name: Event ID 7000 or 7026 after starting a computer
-      href: ./deployment/system-log-event-id-7000-7026.md
-    - name: Fail to attach PCI Express expansion chassis
-      href: ./deployment/error-attach-pci-express-expansion-chassis.md
-    - name: Firmware update failures in Windows 8.1
-      href: ./deployment/firmware-updates-fail-windows-8dot1.md
-    - name: Hide Devices in Devices and Printers
-      href: ./deployment/disable-devices-in-devices-and-printers.md
-    - name: How to use or to reference the Usbser.sys driver
-      href: ./deployment/how-to-use-reference-usbser-driver-universal-serial-bus.md
-    - name: Limitations of $WinPeDriver$
-      href: ./deployment/limitations-dollar-sign-winpedriver-dollar-sign.md
-    - name: LoadLibrary function returns STATUS_DLL_NOT_FOUND error on impersonate thread
-      href: ./deployment/loadlibrary-function-returns-status-dll-not-found-error-impersonate-thread.md
-    - name: Loss of functionality for Intel SMBus Controller devices
-      href: ./deployment/functionality-loss-for-intel-smbus-controller-device.md
-    - name: Media device isn't available
-      href: ./deployment/media-device-isnt-available.md
-    - name: Msinfo32.exe reports wrong values for Adapter RAM
-      href: ./deployment/msinfo32-report-wrong-display-adapter-ram.md
-    - name: Non-compliant USB 3.0 devices doesn't function
-      href: ./deployment/non-compliant-usb-3-devices-not-function.md
-    - name: Power Management tab isn't visible
-      href: ./deployment/power-management-not-visible-in-aoac-platform.md
-    - name: Running TPM Management console fails
-      href: ./deployment/cannot-load-tpm-management-console.md
-    - name: Uninstalling driver doesn't remove associated files
-      href: ./deployment/uninstalling-driver-not-remove-associated-files.md
-    - name: USB device drivers are removed unexpectedly after Windows 10 is updated
-      href: ./deployment/usb-device-drivers-removed-unexpectedly-after-windows-10-update.md
-    - name: Windows 10 doesn't install specific drivers for USB audio device
-      href: ./deployment/windows-10-not-install-specific-drivers-usb-audio-devices.md
-    - name: WSD devices icons show incorrectly
-      href: ./deployment/icons-wsd-devices-incorrectly-devices-printers.md
-  - name: Power Management
-    items:
-    - name: Desktop wakes up unexpectedly from sleep or hibernation
-      href: ./deployment/desktop-wakes-up-unexpectedly-from-sleep-hibernation.md
-    - name: Devices attached to Thunderbolt Dock stop working
-      href: ./deployment/devices-connected-via-thunderbolt-dock-not-work.md
-    - name: Fast startup causes system shutdown
-      href: ./deployment/fast-startup-causes-system-hibernation-shutdown-fail.md
-    - name: Hard disk usage reaches 100 percent
-      href: ./deployment/hard-disk-usage-reaches-100-percent.md
-    - name: How to disable and re-enable hibernation
-      href: ./deployment/disable-and-re-enable-hibernation.md
-    - name: How to enable Wake on LAN
-      href: ./deployment/wake-on-lan-feature.md
-    - name: Power/shutdown button is missing from start screen
-      href: ./deployment/power-shutdown-button-missing.md
-    - name: The Power Management option isn't selected
-      href: ./deployment/power-management-option-isnt-selected.md
-    - name: Updates may not install with Fast Startup
-      href: ./deployment/updates-not-install-with-fast-startup.md
-  - name: Servicing
-    items:
-    - name: Additional resources for Windows Update
-      href: ./deployment/additional-resources-for-windows-update.md
-    - name: 'Troubleshooting guidance: Windows Update'
-      href: ./deployment/troubleshoot-windows-update-issues.md
-    - name: .NET Framework 1.1 isn't supported
-      href: ./deployment/dotnet-framework-1dot1-not-supported.md
-    - name: 80072EE6 error when downloading an update from WSUS
-      href: ./deployment/error-80072ee6-downlaod-wsus-update.md
-    - name: Analyze log file entries that SFC.exe generates
-      href: ./deployment/analyze-sfc-program-log-file-entries.md
-    - name: Automatic Updates can't download updates
-      href: ./deployment/automatic-updates-cannot-download-updates-event-16.md
-    - name: Cannot install May 2019 update of Windows 10 on computers running AMD RAID drivers
-      href: ./deployment/cannot-install-may-2019-update-windows-10-amd-raid-drivers.md
-    - name: Cannot use the ImageX.exe tool for backup
-      href: ./deployment/cannot-use-imagex-tool-backup.md
     - name: Certificates are missing after you update a device
-      href: ./deployment/certs-missing-after-device-update.md
-    - name: Command-line switches for software update packages
-      href: ./deployment/command-line-switches-deploy-update-packages.md
-    - name: Command-line switches supported by Self-Extractor packages
-      href: ./deployment/command-switches-supported-by-self-extractor-package.md
-    - name: DISM /Apply-Image command fails with error code 5
-      href: ./deployment/dism-apply-image-command-fails-error-code-5.md
-    - name: Download updates from Windows Update Catalog
-      href: ./deployment/download-updates-drivers-hotfixes-windows-update-catalog.md
-    - name: Error 403 when you access Windows Update
-      href: ./deployment/error-403-connect-to-windows-update.md
-    - name: Error 87 when a Windows 10 image is applied
-      href: ./deployment/dism-error-87-apply-windows-10-image.md
-    - name: Error message when installing RSAT
-      href: ./deployment/error-message-when-installing-rsat.md
-    - name: Error messages when you scan for updates
-      href: ./deployment/error-messages-when-you-scan-updates.md
-    - name: Fix errors found in CheckSUR.log
-      href: ./deployment/errors-in-checksur-log.md
-    - name: Get the latest Skype version by Microsoft Update
-      href: ./deployment/skype-for-microsoft-update.md
-    - name: How to downgrade from Windows 8
-      href: ./deployment/downgrade-from-windows-8.md
-    - name: How to get updates via Windows Update
-      href: ./deployment/get-updates-through-windows-update.md
-    - name: How to keep Windows up to date
-      href: ./deployment/keep-windows-up-to-date.md
-    - name: How to schedule automatic updates
-      href: ./deployment/how-to-use-automatic-updates-feature.md
-    - name: How to solve disk space issues caused by WinSxS directory
-      href: ./deployment/address-disk-space-issues-caused-by-winsxs.md
-    - name: In-place upgrade to Windows 10 problem
-      href: ./deployment/in-place-upgrade-to-windows-10-problems.md
-    - name: Install Service Packs and Hotfixes
-      href: ./deployment/install-service-packs-hotfixes.md
-    - name: Package Manager can install only the first package
-      href: ./deployment/package-manager-cannot-manage-two-more-packages.md
-    - name: Previously released updates are reoffered
-      href: ./deployment/previously-released-updates-reoffered.md
-    - name: Restore missing Windows Installer cache files
-      href: ./deployment/missing-windows-installer-cache.md
-    - name: SFC detects Opencl.dll as corrupted
-      href: ./deployment/sfc-detects-opencl-dot-dll-corrupted.md
-    - name: SFC flags Windows Defender files as corrupted
-      href: ./deployment/sfc-flags-windows-defender-powershell-module-files-corrupted.md
-    - name: Standard terminology that defines software updates
-      href: ./deployment/standard-terminology-software-updates.md
-    - name: Switches with Xcopy and Xcopy32 commands
-      href: ./deployment/switches-with-xcopy-and-xcopy32-command.md
-    - name: Sysprep fails after you remove or update Microsoft Store apps
-      href: ./deployment/sysprep-fails-remove-or-update-store-apps.md
-    - name: System Error 126 when you start TrustedInstaller
-      href: ./deployment/system-error-126-start-windows-modules-installer.md
-    - name: System registry is no longer backed up to the RegBack folder
-      href: ./deployment/system-registry-no-backed-up-regback-folder.md
-    - name: The processor not supported with Windows version
-      href: ./deployment/processor-not-supported-together-with-windows-version.md
-    - name: The same update is offered repeately
-      href: ./deployment/repeatedly-offer-the-same-update.md
-    - name: Update Windows Update Agent to latest version
-      href: ./deployment/update-windows-update-agent.md
-    - name: view system registry with 64-bit versions of Windows
-      href: ./deployment/view-system-registry-with-64-bit-windows.md
-    - name: Windows Update automatically downloads and installs updates
-      href: ./deployment/updates-automatically-downloaded.md
-    - name: Windows Update blocked because of drive reassignment
-      href: ./deployment/drive-reassignment-block-update.md
-    - name: Windows Update common errors and mitigation
-      href: ./deployment/common-windows-update-errors.md
-    - name: Windows Update hangs
-      href: ./deployment/windows-update-hangs-updates-uninstalled.md
-    - name: Windows Update issues troubleshooting
-      href: ./deployment/windows-update-issues-troubleshooting.md
-  - name: Setup
+      href: ./certificates-and-public-key-infrastructure-pki/certs-missing-after-device-update.md
+  - name: Smart card logon
     items:
-    - name: Windows 10 upgrade resolution procedures
-      href: ./deployment/windows-10-upgrade-resolution-procedures.md
-    - name: Windows 10 upgrade quick fixes
-      href: ./deployment/windows-10-upgrade-quick-fixes.md
-    - name: .NET Framework 4.5.1 (web installer)
-      href: ./deployment/dotnet-framework-4dot5dot1-web-installer.md
-    - name: An upgrade to Windows Server 2016 fails
-      href: ./deployment/windows-cannot-verify-the-digital-signature-for-this-file.md
-    - name: Automate regional and language settings
-      href: ./deployment/automate-regional-language-settings.md
-    - name: Can't enter UEFI firmware setup
-      href: ./deployment/cant-enter-uefi-firmware-setup.md
-    - name: Can't turn off a computer from Audit mode
-      href: ./deployment/fail-to-turn-off-computer-from-audit-mode.md
-    - name: Windows 10 upgrade issues troubleshooting
-      href: ./deployment/windows-10-upgrade-issues-troubleshooting.md
-    - name: Windows 10 upgrade error codes
-      href: ./deployment/windows-10-upgrade-error-codes.md
-    - name: Computer screen goes black during setup
-      href: ./deployment/computer-screen-black-during-installation.md
-    - name: Customize default local user profile
-      href: ./deployment/customize-default-local-user-profile.md
-    - name: Download and burn an ISO file from VLSC
-      href: ./deployment/iso-file-on-vlsc.md
-    - name: Error "certificate in the connection information has expired"
-      href: ./deployment/error-certificate-connection-information-expired.md    
-    - name: Error 0x80042468 when creating a single partition
-      href: ./deployment/error-when-creating-single-partition.md
-    - name: Event ID 10 is logged in Application log
-      href: ./deployment/event-10-is-logged-in-application-log.md
-    - name: F5 doesn't refresh Explorer
-      href: ./deployment/f5-not-refresh-explorer-windows-pe-windows-10.md
-    - name: Fail to perform an in-place upgrade
-      href: ./deployment/windows-not-parse-process-unattend-answer-file.md
-    - name: Fail to start an operating system on a 64-bit UEFI-based computer
-      href: ./deployment/blinitializelibrary-failed-start-os-on-64-bit-uefi-based-computer.md
-    - name: Fail to upgrade Windows 10 Enterprise edition
-      href: ./deployment/contact-system-administrator-to-upgrade-windows.md
-    - name: HAL_INITIALIZATION_FAILED error on VMWare VM
-      href: ./deployment/installation-error-hal-initialization-failed.md
-    - name: How to customize the default local user profile when creating an image
-      href: ./deployment/customize-default-local-user-profile-prepare-image.md
-    - name: How to edit the Boot.ini file in Windows 2000
-      href: ./deployment/edit-boot-ini-file-windows-2000.md
-    - name: Installation File Location not behave on the Explain tab
-      href: ./deployment/installation-file-location-service-pack-not-behave.md
-    - name: Language features aren't displayed in Windows 10
-      href: ./deployment/language-features-not-displayed.md
-    - name: Language packs no longer available
-      href: ./deployment/language-packs-no-longer-available-after-upgrade.md
-    - name: MiracastView package cause sysprep error after upgrading a computer
-      href: ./deployment/miracastview-cause-sysprep-error-upgrade-windows-10-1709.md
-    - name: Network provider settings are removed during an in-place upgrade
-      href: ./deployment/network-provider-settings-removed-in-place-upgrade.md
-    - name: Operations fail if Windows 8 is improperly identified as a WTG installation
-      href: ./deployment/windows-8-incorrectly-reported-as-wtg-installation.md
-    - name: Remote Server Admin Tools uninstalled during in-place upgrade
-      href: ./deployment/remote-server-admin-tools-uninstalled-in-place-upgrade.md
-    - name: Running Sysprep /generalize returns error
-      href: ./deployment/error-occurs-when-running-sysprep-generalize.md
-    - name: Sysprep and capture task sequence fails
-      href: ./deployment/sysprep-capture-task-sequence-fails.md
-    - name: System restore points are disabled after upgrade
-      href: ./deployment/system-restore-points-disabled.md
-    - name: Windows optional component setup tool
-      href: ./deployment/use-ocsetup-to-install-remove-components.md
-    - name: Windows setup log file locations
-      href: ./deployment/windows-setup-log-file-locations.md
-    - name: Windows SIM can't generate a catalog
-      href: ./deployment/windows-sim-unable-generate-catalog-error.md
-    - name: Windows 7 Upgrade Advisor tool failed to run
-      href: ./deployment/upgrade-advisor-tool-failed-to-run.md
-    - name: WinRE can't be built after deploying an image
-      href: ./deployment/winre-cannot-built-deploy-image-captured-non-uefi-computer.md
-    - name: You can't access an EFI system partition
-      href: ./deployment/cant-access-efi-system-partition.md
-  - name: USMT
-    items:
-    - name: USMT common issues
-      href: ./deployment/usmt-common-issues.md
-    - name: USMT return codes
-      href: ./deployment/usmt-return-codes.md
+    - name: Code 31 for Microsoft USB CCID smart card reader
+      href: ./certificates-and-public-key-infrastructure-pki/code-31-device-manager-usbccid-smartcard-reader-problem.md
+    - name: Can't authenticate because of an incorrect PIV smart card driver update
+      href: ./certificates-and-public-key-infrastructure-pki/cannot-authenticate-incorrect-piv-smart-card-driver-update.md
+    - name: 0x6 ERROR_INVALID_HANDLE error when a multithreaded application accesses a smart card
+      href: ./certificates-and-public-key-infrastructure-pki/0x6-error-invalid-handle-multithreaded-application.md
+    - name: Integrated Unblock screen not displayed when smart card PIN is blocked
+      href: ./certificates-and-public-key-infrastructure-pki/integrated-unblock-screen-not-displayed-smart-card-pin-blocked.md
+    - name: Registry keys for smart card PIN caching options not available
+      href: ./certificates-and-public-key-infrastructure-pki/registry-keys-smart-card-pin-caching-options-not-available.md
 - name: Group Policy
   items:
   - name: Group Policy
@@ -1062,7 +814,7 @@ items:
     - name: Task scheduler runs tasks as background processes
       href: ./system-management-components/task-scheduler-task-only-runs-in-background.md
     - name: Use the at command to schedule tasks
-      href: ./system-management-components/use-at-command-to-schedule-tasks.md 
+      href: ./system-management-components/use-at-command-to-schedule-tasks.md
   - name: WER
     items:
     - name: Windows Error Reporting and Windows diagnostics enablement guidance
@@ -1109,6 +861,8 @@ items:
   items:
   - name: Introduction to TroubleShootingScript toolset (TSS)
     href: ./windows-tss/introduction-to-troubleshootingscript-toolset-tss.md
+  - name: Use the xray feature of TSS
+    href: ./windows-tss/use-the-xray-feature-of-tss-to-identify-known-issues.md
   - name: Identity
     items:
     - name: Gather information for Active Directory replication issues
@@ -1124,7 +878,7 @@ items:
   - name: User Experience (UEX)
     items:
     - name: Gather information for user experience-related issues
-      href: ./windows-tss/gather-information-using-tss-user-experience.md 
+      href: ./windows-tss/gather-information-using-tss-user-experience.md
 - name: UserProfiles and Logon
   items:
   - name: UserProfiles and Logon
@@ -1132,13 +886,7 @@ items:
   - name: Slow logon
     items:
     - name: Slow logon with a blank screen
-      href: ./user-profiles-and-logon/slow-logon-with-blank-screen.md
-  - name: Smart card logon
-    items:
-    - name: Integrated Unblock screen not displayed when smart card PIN is blocked
-      href: ./user-profiles-and-logon/integrated-unblock-screen-not-displayed-smart-card-pin-blocked.md
-    - name: Registry keys for smart card PIN caching options not available
-      href: ./user-profiles-and-logon/registry-keys-smart-card-pin-caching-options-not-available.md
+      href: ./user-profiles-and-logon/slow-logon-with-blank-screen.md  
   - name: User Logon fails
     items:
     - name: Custom credential providers don't load when you first log on
@@ -1299,14 +1047,6 @@ items:
       href: ./windows-security/clear-tpm-fails-error-code-0x80290300.md
     - name: TPM isn't recognized as a compatible device
       href: ./windows-security/tpm-is-not-recognized.md
-  - name: Smart card logon
-    items:
-    - name: 0x6 ERROR_INVALID_HANDLE error when a multithreaded application accesses a smart card
-      href: ./windows-security/0x6-error-invalid-handle-multithreaded-application.md
-    - name: Can't authenticate because of an incorrect PIV smart card driver update
-      href: ./windows-security/cannot-authenticate-incorrect-piv-smart-card-driver-update.md
-    - name: Code 31 for Microsoft USB CCID smart card reader
-      href: ./windows-security/code-31-device-manager-usbccid-smartcard-reader-problem.md
   - name: TPM
     items:
     - name: Events 14 and 17 for TPM command failure or non-recoverable error
@@ -1321,3 +1061,277 @@ items:
     href: ./windows-troubleshooters/windows-troubleshooters-overview.md
   - name: Active and retired Windows 10 troubleshooters
     href: ./windows-troubleshooters/active-and-retired-troubleshooters-windows-10.md
+- name: Installing Windows Updates, features, or roles
+  items:
+  - name: Installing Windows Updates, features, or roles
+    href: ./installing-updates-features-roles/installing-updates-features-roles-overview.md
+  - name: Failure to install Windows Updates
+    items:
+    - name: 'Troubleshooting guidance: Windows Update'
+      href: ./installing-updates-features-roles/troubleshoot-windows-update-issues.md
+    - name: SFC flags Windows Defender files as corrupted
+      href: ./installing-updates-features-roles/sfc-flags-windows-defender-powershell-module-files-corrupted.md
+    - name: Update Windows Update Agent to latest version
+      href: ./installing-updates-features-roles/update-windows-update-agent.md
+    - name: Windows Update common errors and mitigation
+      href: ./installing-updates-features-roles/common-windows-update-errors.md
+    - name: Switches with Xcopy and Xcopy32 commands
+      href: ./installing-updates-features-roles/switches-with-xcopy-and-xcopy32-command.md
+    - name: Analyze log file entries that SFC.exe generates
+      href: ./installing-updates-features-roles/analyze-sfc-program-log-file-entries.md
+    - name: How to solve disk space issues caused by WinSxS directory
+      href: ./installing-updates-features-roles/address-disk-space-issues-caused-by-winsxs.md
+    - name: Automatic Updates can't download updates
+      href: ./installing-updates-features-roles/automatic-updates-cannot-download-updates-event-16.md
+    - name: DISM /Apply-Image command fails with error code 5
+      href: ./installing-updates-features-roles/dism-apply-image-command-fails-error-code-5.md
+    - name: How to keep Windows up to date
+      href: ./installing-updates-features-roles/keep-windows-up-to-date.md
+    - name: Command-line switches supported by Self-Extractor packages
+      href: ./installing-updates-features-roles/command-switches-supported-by-self-extractor-package.md
+    - name: Fix errors found in CheckSUR.log
+      href: ./installing-updates-features-roles/errors-in-checksur-log.md
+    - name: Error message when installing RSAT
+      href: ./installing-updates-features-roles/error-message-when-installing-rsat.md
+    - name: How to get updates via Windows Update
+      href: ./installing-updates-features-roles/get-updates-through-windows-update.md
+    - name: System registry is no longer backed up to the RegBack folder
+      href: ./installing-updates-features-roles/system-registry-no-backed-up-regback-folder.md
+    - name: Install Service Packs and Hotfixes
+      href: ./installing-updates-features-roles/install-service-packs-hotfixes.md
+    - name: Download updates from Windows Update Catalog
+      href: ./installing-updates-features-roles/download-updates-drivers-hotfixes-windows-update-catalog.md
+    - name: SFC detects Opencl.dll as corrupted
+      href: ./installing-updates-features-roles/sfc-detects-opencl-dot-dll-corrupted.md
+    - name: Restore missing Windows Installer cache files
+      href: ./installing-updates-features-roles/missing-windows-installer-cache.md
+    - name: Previously released updates are reoffered
+      href: ./installing-updates-features-roles/previously-released-updates-reoffered.md
+    - name: .NET Framework 1.1 isn't supported
+      href: ./installing-updates-features-roles/dotnet-framework-1dot1-not-supported.md
+    - name: In-place upgrade to Windows 10 problem
+      href: ./installing-updates-features-roles/in-place-upgrade-to-windows-10-problems.md
+    - name: Get the latest Skype version by Microsoft Update
+      href: ./installing-updates-features-roles/skype-for-microsoft-update.md
+    - name: Windows Update automatically downloads and installs updates
+      href: ./installing-updates-features-roles/updates-automatically-downloaded.md
+    - name: Error 403 when you access Windows Update
+      href: ./installing-updates-features-roles/error-403-connect-to-windows-update.md
+    - name: Sysprep fails after you remove or update Microsoft Store apps
+      href: ./installing-updates-features-roles/sysprep-fails-remove-or-update-store-apps.md
+    - name: 80072EE6 error when downloading an update from WSUS
+      href: ./installing-updates-features-roles/error-80072ee6-downlaod-wsus-update.md
+    - name: Standard terminology that defines software updates
+      href: ./installing-updates-features-roles/standard-terminology-software-updates.md
+    - name: Additional resources for Windows Update
+      href: ./installing-updates-features-roles/additional-resources-for-windows-update.md
+    - name: The same update is offered repeately
+      href: ./installing-updates-features-roles/repeatedly-offer-the-same-update.md
+    - name: How to downgrade from Windows 8
+      href: ./installing-updates-features-roles/downgrade-from-windows-8.md
+    - name: Package Manager can install only the first package
+      href: ./installing-updates-features-roles/package-manager-cannot-manage-two-more-packages.md
+    - name: Error messages when you scan for updates
+      href: ./installing-updates-features-roles/error-messages-when-you-scan-updates.md
+    - name: Cannot use the ImageX.exe tool for backup
+      href: ./installing-updates-features-roles/cannot-use-imagex-tool-backup.md
+    - name: Cannot install May 2019 update of Windows 10 on computers running AMD RAID drivers
+      href: ./installing-updates-features-roles/cannot-install-may-2019-update-windows-10-amd-raid-drivers.md
+    - name: How to schedule automatic updates
+      href: ./installing-updates-features-roles/how-to-use-automatic-updates-feature.md
+    - name: System Error 126 when you start TrustedInstaller
+      href: ./installing-updates-features-roles/system-error-126-start-windows-modules-installer.md
+    - name: The processor not supported with Windows version
+      href: ./installing-updates-features-roles/processor-not-supported-together-with-windows-version.md
+    - name: Windows Update hangs
+      href: ./installing-updates-features-roles/windows-update-hangs-updates-uninstalled.md
+    - name: Windows Update issues troubleshooting
+      href: ./installing-updates-features-roles/windows-update-issues-troubleshooting.md
+    - name: Error 87 when a Windows 10 image is applied
+      href: ./installing-updates-features-roles/dism-error-87-apply-windows-10-image.md
+    - name: view system registry with 64-bit versions of Windows
+      href: ./installing-updates-features-roles/view-system-registry-with-64-bit-windows.md
+    - name: Windows Update blocked because of drive reassignment
+      href: ./installing-updates-features-roles/drive-reassignment-block-update.md
+    - name: Command-line switches for software update packages
+      href: ./installing-updates-features-roles/command-line-switches-deploy-update-packages.md
+- name: Licensing and activation
+  items:
+  - name: Licensing and activation
+    href: ./licensing-and-activation/licensing-and-activation-overview.md
+  - name: Windows volume activation
+    items:
+    - name: How to validate the OEM activation key
+      href: ./licensing-and-activation/validate-oem-activation-key.md
+    - name: KMS current count doesn't increase
+      href: ./licensing-and-activation/kms-current-count-not-increase.md
+    - name: Fail to open a list in VAMT 2.0
+      href: ./licensing-and-activation/item-with-same-key-has-been-added.md
+    - name: Can't activate Windows 7 with KMS
+      href: ./licensing-and-activation/cannot-activate-windows-from-oem.md
+    - name: Activation failures on volume-licensed KMS clients
+      href: ./licensing-and-activation/activation-failures-not-genuine-notifications-volume-licensed-kms-client.md
+    - name: Error "certificate in the connection information has expired"
+      href: ./licensing-and-activation/error-certificate-connection-information-expired.md
+- name: Setup upgrade and drivers
+  items:
+  - name: Setup upgrade and drivers
+    href: ./setup-upgrade-and-drivers/setup-upgrade-and-drivers-overview.md
+  - name: Driver installation or driver update
+    items:
+    - name: Limitations of $WinPeDriver$
+      href: ./setup-upgrade-and-drivers/limitations-dollar-sign-winpedriver-dollar-sign.md
+    - name: Desktop icon isn't visible in Extended mode
+      href: ./setup-upgrade-and-drivers/desktop-icon-not-visible-disconnect-hdmi-display.md
+    - name: LoadLibrary function returns STATUS_DLL_NOT_FOUND error on impersonate thread
+      href: ./setup-upgrade-and-drivers/loadlibrary-function-returns-status-dll-not-found-error-impersonate-thread.md
+    - name: Msinfo32.exe reports wrong values for Adapter RAM
+      href: ./setup-upgrade-and-drivers/msinfo32-report-wrong-display-adapter-ram.md
+    - name: Power Management tab isn't visible
+      href: ./setup-upgrade-and-drivers/power-management-not-visible-in-aoac-platform.md
+    - name: USB device drivers are removed unexpectedly after Windows 10 is updated
+      href: ./setup-upgrade-and-drivers/usb-device-drivers-removed-unexpectedly-after-windows-10-update.md
+    - name: Error when you access a USB storage device
+      href: ./setup-upgrade-and-drivers/error-when-you-access-usb-storage-device.md
+    - name: Devices not working before you log on a computer
+      href: ./setup-upgrade-and-drivers/devices-not-working-before-log-on-computer.md
+    - name: Media device isn't available
+      href: ./setup-upgrade-and-drivers/media-device-isnt-available.md
+    - name: Running TPM Management console fails
+      href: ./setup-upgrade-and-drivers/cannot-load-tpm-management-console.md
+    - name: A description of the driver support
+      href: ./setup-upgrade-and-drivers/description-of-driver.md
+    - name: Event ID 219 when a device is plugged into a Windows system
+      href: ./setup-upgrade-and-drivers/event-id-219-when-device-plugged-in-windows-system.md
+    - name: Fail to attach PCI Express expansion chassis
+      href: ./setup-upgrade-and-drivers/error-attach-pci-express-expansion-chassis.md
+    - name: Firmware update failures in Windows 8.1
+      href: ./setup-upgrade-and-drivers/firmware-updates-fail-windows-8dot1.md
+    - name: A high pitched noise is heard when using Bluetooth headphones
+      href: ./setup-upgrade-and-drivers/high-pitched-noise-is-heard.md
+    - name: '"The operation timed out" error'
+      href: ./setup-upgrade-and-drivers/operation-timed-out-error-disk-management-console.md
+    - name: Bluetooth speakers don't work after KB 4505903 is applied
+      href: ./setup-upgrade-and-drivers/bluetooth-speakers-not-work-after-kb4505903-installed.md
+    - name: Create a user-defined service
+      href: ./setup-upgrade-and-drivers/create-user-defined-service.md
+    - name: Hide Devices in Devices and Printers
+      href: ./setup-upgrade-and-drivers/disable-devices-in-devices-and-printers.md
+    - name: Dynamic link library (DLL)
+      href: ./setup-upgrade-and-drivers/dynamic-link-library.md
+    - name: Loss of functionality for Intel SMBus Controller devices
+      href: ./setup-upgrade-and-drivers/functionality-loss-for-intel-smbus-controller-device.md
+    - name: Uninstalling driver doesn't remove associated files
+      href: ./setup-upgrade-and-drivers/uninstalling-driver-not-remove-associated-files.md
+    - name: WSD devices icons show incorrectly
+      href: ./setup-upgrade-and-drivers/icons-wsd-devices-incorrectly-devices-printers.md
+    - name: Non-compliant USB 3.0 devices doesn't function
+      href: ./setup-upgrade-and-drivers/non-compliant-usb-3-devices-not-function.md
+    - name: How to use or to reference the Usbser.sys driver
+      href: ./setup-upgrade-and-drivers/how-to-use-reference-usbser-driver-universal-serial-bus.md
+    - name: Windows 10 doesn't install specific drivers for USB audio device
+      href: ./setup-upgrade-and-drivers/windows-10-not-install-specific-drivers-usb-audio-devices.md
+    - name: Event ID 7000 or 7026 after starting a computer
+      href: ./setup-upgrade-and-drivers/system-log-event-id-7000-7026.md
+  - name: Power management
+    items:
+    - name: Hard disk usage reaches 100 percent
+      href: ./setup-upgrade-and-drivers/hard-disk-usage-reaches-100-percent.md
+    - name: Devices attached to Thunderbolt Dock stop working
+      href: ./setup-upgrade-and-drivers/devices-connected-via-thunderbolt-dock-not-work.md
+    - name: The Power Management option isn't selected
+      href: ./setup-upgrade-and-drivers/power-management-option-isnt-selected.md
+    - name: Desktop wakes up unexpectedly from sleep or hibernation
+      href: ./setup-upgrade-and-drivers/desktop-wakes-up-unexpectedly-from-sleep-hibernation.md
+    - name: How to enable Wake on LAN
+      href: ./setup-upgrade-and-drivers/wake-on-lan-feature.md
+    - name: How to disable and re-enable hibernation
+      href: ./setup-upgrade-and-drivers/disable-and-re-enable-hibernation.md
+    - name: Power/shutdown button is missing from start screen
+      href: ./setup-upgrade-and-drivers/power-shutdown-button-missing.md
+    - name: Updates may not install with Fast Startup
+      href: ./setup-upgrade-and-drivers/updates-not-install-with-fast-startup.md
+    - name: Fast startup causes system shutdown
+      href: ./setup-upgrade-and-drivers/fast-startup-causes-system-hibernation-shutdown-fail.md
+  - name: Installing or upgrading Windows
+    items:
+    - name: Windows 10 upgrade issues troubleshooting
+      href: ./setup-upgrade-and-drivers/windows-10-upgrade-issues-troubleshooting.md
+    - name: .NET Framework 4.5.1 (web installer)
+      href: ./setup-upgrade-and-drivers/dotnet-framework-4dot5dot1-web-installer.md
+    - name: Fail to perform an in-place upgrade
+      href: ./setup-upgrade-and-drivers/windows-not-parse-process-unattend-answer-file.md
+    - name: Windows SIM can't generate a catalog
+      href: ./setup-upgrade-and-drivers/windows-sim-unable-generate-catalog-error.md
+    - name: Running Sysprep /generalize returns error
+      href: ./setup-upgrade-and-drivers/error-occurs-when-running-sysprep-generalize.md
+    - name: Language features aren't displayed in Windows 10
+      href: ./setup-upgrade-and-drivers/language-features-not-displayed.md
+    - name: An upgrade to Windows Server 2016 fails
+      href: ./setup-upgrade-and-drivers/windows-cannot-verify-the-digital-signature-for-this-file.md
+    - name: WinRE can't be built after deploying an image
+      href: ./setup-upgrade-and-drivers/winre-cannot-built-deploy-image-captured-non-uefi-computer.md
+    - name: Fail to start an operating system on a 64-bit UEFI-based computer
+      href: ./setup-upgrade-and-drivers/blinitializelibrary-failed-start-os-on-64-bit-uefi-based-computer.md
+    - name: Event ID 10 is logged in Application log
+      href: ./setup-upgrade-and-drivers/event-10-is-logged-in-application-log.md
+    - name: Download and burn an ISO file from VLSC
+      href: ./setup-upgrade-and-drivers/iso-file-on-vlsc.md
+    - name: Sysprep and capture task sequence fails
+      href: ./setup-upgrade-and-drivers/sysprep-capture-task-sequence-fails.md
+    - name: Fail to upgrade Windows 10 Enterprise edition
+      href: ./setup-upgrade-and-drivers/contact-system-administrator-to-upgrade-windows.md
+    - name: Installation File Location not behave on the Explain tab
+      href: ./setup-upgrade-and-drivers/installation-file-location-service-pack-not-behave.md
+    - name: Windows setup log file locations
+      href: ./setup-upgrade-and-drivers/windows-setup-log-file-locations.md
+    - name: F5 doesn't refresh Explorer
+      href: ./setup-upgrade-and-drivers/f5-not-refresh-explorer-windows-pe-windows-10.md
+    - name: Customize default local user profile
+      href: ./setup-upgrade-and-drivers/customize-default-local-user-profile.md
+    - name: How to customize the default local user profile when creating an image
+      href: ./setup-upgrade-and-drivers/customize-default-local-user-profile-prepare-image.md
+    - name: Windows 10 upgrade resolution procedures
+      href: ./setup-upgrade-and-drivers/windows-10-upgrade-resolution-procedures.md
+    - name: Error 0x80042468 when creating a single partition
+      href: ./setup-upgrade-and-drivers/error-when-creating-single-partition.md
+    - name: Can't enter UEFI firmware setup
+      href: ./setup-upgrade-and-drivers/cant-enter-uefi-firmware-setup.md
+    - name: HAL_INITIALIZATION_FAILED error on VMWare VM
+      href: ./setup-upgrade-and-drivers/installation-error-hal-initialization-failed.md
+    - name: Automate regional and language settings
+      href: ./setup-upgrade-and-drivers/automate-regional-language-settings.md
+    - name: Can't turn off a computer from Audit mode
+      href: ./setup-upgrade-and-drivers/fail-to-turn-off-computer-from-audit-mode.md
+    - name: MiracastView package cause sysprep error after upgrading a computer
+      href: ./setup-upgrade-and-drivers/miracastview-cause-sysprep-error-upgrade-windows-10-1709.md
+    - name: Operations fail if Windows 8 is improperly identified as a WTG installation
+      href: ./setup-upgrade-and-drivers/windows-8-incorrectly-reported-as-wtg-installation.md
+    - name: Windows 10 upgrade quick fixes
+      href: ./setup-upgrade-and-drivers/windows-10-upgrade-quick-fixes.md
+    - name: Network provider settings are removed during an in-place upgrade
+      href: ./setup-upgrade-and-drivers/network-provider-settings-removed-in-place-upgrade.md
+    - name: Windows optional component setup tool
+      href: ./setup-upgrade-and-drivers/use-ocsetup-to-install-remove-components.md
+    - name: Computer screen goes black during setup
+      href: ./setup-upgrade-and-drivers/computer-screen-black-during-installation.md
+    - name: Windows 7 Upgrade Advisor tool failed to run
+      href: ./setup-upgrade-and-drivers/upgrade-advisor-tool-failed-to-run.md
+    - name: Windows 10 upgrade error codes
+      href: ./setup-upgrade-and-drivers/windows-10-upgrade-error-codes.md
+    - name: System restore points are disabled after upgrade
+      href: ./setup-upgrade-and-drivers/system-restore-points-disabled.md
+    - name: You can't access an EFI system partition
+      href: ./setup-upgrade-and-drivers/cant-access-efi-system-partition.md
+    - name: Remote Server Admin Tools uninstalled during in-place upgrade
+      href: ./setup-upgrade-and-drivers/remote-server-admin-tools-uninstalled-in-place-upgrade.md
+    - name: Language packs no longer available
+      href: ./setup-upgrade-and-drivers/language-packs-no-longer-available-after-upgrade.md
+    - name: How to edit the Boot.ini file in Windows 2000
+      href: ./setup-upgrade-and-drivers/edit-boot-ini-file-windows-2000.md
+  - name: User state migration tool
+    items:
+    - name: USMT return codes
+      href: ./setup-upgrade-and-drivers/usmt-return-codes.md
+    - name: USMT common issues
+      href: ./setup-upgrade-and-drivers/usmt-common-issues.md

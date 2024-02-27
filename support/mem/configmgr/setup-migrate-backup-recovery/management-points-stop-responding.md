@@ -1,7 +1,7 @@
 ---
 title: Management points stop responding to HTTP requests
 description: Management points stop responding to HTTP requests and you receive error 500.19.
-ms.date: 06/09/2020
+ms.date: 12/05/2023
 ms.custom: sap:Management point Operations
 ms.reviewer: kaushika
 ---

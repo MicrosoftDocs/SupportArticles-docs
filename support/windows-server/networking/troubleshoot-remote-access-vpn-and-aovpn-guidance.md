@@ -1,17 +1,13 @@
 ---
 title: Guidance for troubleshooting Remote Access (VPN and AOVPN)
 description: Introduces general guidance for troubleshooting scenarios related to Remote Access (VPN and AOVPN).
-ms.date: 07/13/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:vpn, csstroubleshoot
-ms.technology: networking
 ---
 # Remote Access (VPN and AOVPN) troubleshooting guidance
 

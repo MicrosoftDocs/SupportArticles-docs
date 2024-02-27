@@ -1,17 +1,13 @@
 ---
 title: Troubleshoot using the Guarded Fabric Diagnostic Tool
 description: Provides information about troubleshooting using the Guarded Fabric Diagnostic Tool.
-ms.date: 11/16/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, dongill, inhenkel, v-lianna
 ms.custom: sap:shielded-virtual-machines, csstroubleshoot
-ms.technology: hyper-v
 ms.assetid: 07691d5b-046c-45ea-8570-a0a85c3f2d22
 ---
 # Troubleshoot using the Guarded Fabric Diagnostic Tool

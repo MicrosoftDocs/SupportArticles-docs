@@ -1,17 +1,13 @@
 ---
 title: Microsoft Exchange compatibility with Single Label Domains, Disjointed Namespaces, and Discontiguous Namespaces
 description: Describes compatibility of Microsoft products with Single Label Domains, Disjoint Namespaces, and Discontiguous Namespaces.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: jarrettr, kaushika
 ms.custom: sap:dns, csstroubleshoot
-ms.technology: networking
 ---
 # Microsoft Exchange compatibility with Single Label Domains, Disjointed Namespaces, and Discontiguous Namespaces
 

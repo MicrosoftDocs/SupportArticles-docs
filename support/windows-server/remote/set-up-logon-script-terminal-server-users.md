@@ -1,17 +1,13 @@
 ---
 title: Set up logon script only for Terminal Server users
 description: Describes how to set up a logon script only for Terminal Server users.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:administration, csstroubleshoot
-ms.technology: windows-server-rds
 ---
 # How to set up a logon script only for Terminal Server users
 

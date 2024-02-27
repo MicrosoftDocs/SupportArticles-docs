@@ -1,17 +1,13 @@
 ---
 title: Shelf life of a system-state backup of AD
 description: Describes the useful shelf life of a system-state backup of Active Directory (AD).
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, arrenc
 ms.custom: sap:active-directory-backup-and-restore-or-disaster-recovery, csstroubleshoot
-ms.technology: windows-server-backup-and-storage
 ---
 # Useful shelf life of a system-state backup of Active Directory
 

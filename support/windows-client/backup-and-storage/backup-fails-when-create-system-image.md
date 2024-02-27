@@ -1,17 +1,13 @@
 ---
 title: Backup fails when you create system image
 description: Resolves an issue where backup fails when you create a system image.
-ms.date: 09/14/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, willgloy
 ms.custom: sap:configuring-and-using-backup-software, csstroubleshoot
-ms.technology: windows-client-backup-and-storage
 ---
 # Backup fails when you try to create a system image
 

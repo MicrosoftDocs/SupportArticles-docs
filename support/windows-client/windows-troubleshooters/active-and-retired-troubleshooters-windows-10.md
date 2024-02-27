@@ -1,17 +1,13 @@
 ---
 title: Active and retired troubleshooters for Windows 10 and Windows 11
 description: Introduce active and retired troubleshooters for Windows 10 and Windows 11.
-ms.date: 12/15/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, fangmikko
 ms.custom: sap:windows-troubleshooters, csstroubleshoot
-ms.technology: windows-client-troubleshooter
 ---
 # Active and retired troubleshooters for Windows 10 and Windows 11
 

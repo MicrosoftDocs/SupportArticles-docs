@@ -1,17 +1,13 @@
 ---
 title: Error 10013 when you bind excluded port again
 description: Resolves an issue in which you cannot bind an excluded port again even though the SO_REUSEADDR option is set. This issue occurs in Windows Server 2012 R2, Windows Server 2012, and Windows Server 2008 R2.
-ms.date: 06/21/2022
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, makotkat
 ms.custom: sap:file-server-resource-manager-fsrm, csstroubleshoot
-ms.technology: windows-server-backup-and-storage
 ---
 # Error 10013 (WSAEACCES) is returned when a second bind to an excluded port fails in Windows
 

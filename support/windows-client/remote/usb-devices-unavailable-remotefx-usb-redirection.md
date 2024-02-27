@@ -1,17 +1,13 @@
 ---
 title: Some USB devices aren't available
 description: This article describes why specific USB devices may not be available for RemoteFX USB redirection, and how to make them available.
-ms.date: 09/08/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:redirection-not-printer, csstroubleshoot
-ms.technology: windows-client-rds
 ---
 # Some USB devices are not available through RemoteFX USB redirection
 

@@ -1,17 +1,13 @@
 ---
 title: Local computer behaves as if the Windows logo key is pressed after you switch from a Remote Desktop session
 description: Fixes an issue in which the Windows logo key is displayed as pressed after you use an RDP session in Windows.
-ms.date: 12/07/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, yaimairi
 ms.custom: sap:connecting-to-a-session-or-desktop, csstroubleshoot
-ms.technology: windows-client-rds
 ---
 # Local computer behaves as if the Windows logo key is pressed after you switch from a Remote Desktop session
 

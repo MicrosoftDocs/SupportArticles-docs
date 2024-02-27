@@ -9,12 +9,20 @@
       items:
         - name: Business performance analytics self-help
           href: business-performance-analytics/business-performance-analytics-self-help-overview.md
+        - name: Decimal auto rounding ERR00012
+          href: business-performance-analytics/decimal-auto-rounding-err00012.md
+        - name: Decimal limit exceeded ERR00011 
+          href: business-performance-analytics/decimal-limit-exceed-err00011.md
+        - name: Entity dataframe counts differ between prejoin and postjoin ERR00009
+          href: business-performance-analytics/entity-dataframe-counts-err00009.md
         - name: Missing fiscal calendar for GL ERR00001
           href: business-performance-analytics/missing-fiscal-calendar-for-general-ledger-err00001.md
         - name: Missing fiscal calendar for budget ERR00002
           href: business-performance-analytics/missing-fiscal-calendar-for-budget-err00002.md
         - name: Missing main account in budget ERR00003 
           href: business-performance-analytics/missing-main-account-in-budget-err00003.md
+        - name: Missing main account in general ledger ERR00010
+          href: business-performance-analytics/missing-main-account-in-gl-err00010.md
         - name: Missing journal entries ERR00004 
           href: business-performance-analytics/missing-journal-entries-err00004.md
         - name: Mismatch between debits and credits ERR00005 
@@ -23,6 +31,8 @@
           href: business-performance-analytics/missing-budget-data-err00006.md
         - name: Missing budget transaction header ERR00007
           href: business-performance-analytics/missing-budget-transaction-header-err00007.md
+        - name: Missing foreign key reference ERR00008
+          href: business-performance-analytics/missing-foreign-key-err0008.md
     - name: Cash and bank management
       items:
         - name: Troubleshoot issues with transactions that can't be settled

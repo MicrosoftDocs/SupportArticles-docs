@@ -1,17 +1,13 @@
 ---
 title: Upgrade to Windows versions that is before Windows 10 is blocked if Users and ProgramData directories are changed
 description: Describes information about the policy changes for relocation of the Users directory and ProgramData directory to a drive other than the %systemdrive% in Windows.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:user-profiles, csstroubleshoot
-ms.technology: windows-server-user-profiles
 ---
 # Upgrade to Windows versions that is before Windows 10 is blocked if Users and ProgramData directories are changed
 

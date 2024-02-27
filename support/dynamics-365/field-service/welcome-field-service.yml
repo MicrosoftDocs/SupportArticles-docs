@@ -9,7 +9,7 @@ metadata:
   ms.service: dynamics-365-field-service
   author: m-hartmann
   ms.author: mhart
-  ms.date: 10/19/2023
+  ms.date: 01/23/2024
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -19,12 +19,18 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
+          - text: Can't find a user when setting up frontline workers
+            url: administration/cannot-find-user-set-up-frontline-workers.md
+          - text: Can't identify the user in an error message
+            url: administration/cant-identify-user.md
           - text: Date Window Start/End fields don't exist
             url: administration/date-window-fields-missing.md
           - text: Error with AttributeMap when upgrading
             url: administration/attibutemap-error-upgrade.md
           - text: Entity record texts have duplicated numbers
             url: administration/entity-names-duplicated-numbers.md
+          - text: '"The user has not been assigned any roles" error'
+            url: administration/user-has-no-roles.md
   
   # Card
   - title: Customization
@@ -51,18 +57,36 @@ landingContent:
             url: iot/troubleshoot-iot-issues-logic-app.md
 
   # Card
+  - title: Mobile app
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Booking timestamp is created with an incorrect time
+            url: mobile-app/booking-timestamp-incorrect-time.md
+          - text: Camera pictures are blurry or not focused
+            url: mobile-app/camera-picture-not-focused.md
+          - text: Duplicated inspection responses
+            url: mobile-app/duplicate-inspection-responses.md
+          - text: Incorrect or missing data in offline mode
+            url: mobile-app/incorrect-missing-data-offline-mode.md
+          - text: Troubleshoot issues with publishing a mobile offline profile
+            url: mobile-app/publish-mobile-offline-profile.md
+          - text: '"Validations have been restarted in the background" error'
+            url: mobile-app/validation-restarted-background.md
+
+  # Card
   - title: Resource Scheduling Optimization Add-in for Field Service
     linkLists:
       - linkListType: how-to-guide
         links:
-        - text: Optimization request fails to modify some bookings
-          url: rso/system-failed-modify-bookings-error.md
-        - text: Requirements not scheduled
-          url: rso/requirement-not-scheduled-in-rso.md
-        - text: Troubleshoot issues with bookings
-          url: rso/troubleshoot-bookings-in-rso.md
-        - text: '"User lacks privileges" error'
-          url: rso/user-lacks-privileges-error.md
+          - text: Optimization request fails to modify some bookings
+            url: rso/system-failed-modify-bookings-error.md
+          - text: Requirements not scheduled
+            url: rso/requirement-not-scheduled-in-rso.md
+          - text: Troubleshoot issues with bookings
+            url: rso/troubleshoot-bookings-in-rso.md
+          - text: '"User lacks privileges" error'
+            url: rso/user-lacks-privileges-error.md
 
   # Card
   - title: Scheduling
@@ -71,6 +95,16 @@ landingContent:
         links:
           - text: Issue with cascading crew changes when assigning a booking
             url: scheduling/cascade-crew-changes-booking.md
+
+  # Card
+  - title: Integrations
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Create permissions error occurs in Microsoft Outlook or Teams
+            url: integrations/create-permissions-error.md
+          - text: Viva Connections dashboard doesn't have the correct tiles
+            url: integrations/viva-incorrect-tiles.md
 
   # Card
   - title: Documentation and training

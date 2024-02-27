@@ -1,17 +1,13 @@
 ---
 title: Fail to access file shares on SOFS-configured server
 description: Describes an issue that occurs when you try to access file shares on a SMB server that has the Scale-Out File Server role configured, and provides a resolution.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, nedpyle, kapilth, robhind, jgerend, kumud
 ms.custom: sap:file-server-resource-manager-fsrm, csstroubleshoot
-ms.technology: windows-server-backup-and-storage
 ---
 # Error when you access file shares on a SOFS-configured server: Not enough server storage is available to process this command
 

@@ -1,17 +1,13 @@
 ---
 title: Troubleshoot guarded hosts
 description: Provides resolutions to common problems encountered when deploying or operating a guarded Hyper-V host in your guarded fabric.
-ms.date: 11/16/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, dongill, inhenkel, v-lianna
 ms.custom: sap:shielded-virtual-machines, csstroubleshoot
-ms.technology: hyper-v
 ms.assetid: 80ea38f4-4de6-4f85-8188-33a63bb1cf81
 ---
 # Troubleshoot guarded hosts

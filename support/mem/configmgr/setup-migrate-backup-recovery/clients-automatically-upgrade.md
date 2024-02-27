@@ -1,7 +1,7 @@
 ---
 title: ConfigMgr clients are automatically upgraded
 description: Configuration Manager clients are automatically upgraded to the Service Pack 1 client version after an upgrade to Configuration Manager 2012 R2 SP1 CU1. Provides a workaround.
-ms.date: 06/16/2020
+ms.date: 12/05/2023
 ms.reviewer: kaushika
 ---
 # Clients are automatically upgraded after you update to System Center 2012 R2 Configuration Manager SP1 CU1

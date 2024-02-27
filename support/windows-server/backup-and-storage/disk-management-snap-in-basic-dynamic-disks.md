@@ -1,17 +1,13 @@
 ---
 title: Use the Disk Management Snap-in
 description: Describes how to use the Disk Management Snap-in to manage Basic and Dynamic Disks.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:partition-and-volume-management, csstroubleshoot
-ms.technology: windows-server-backup-and-storage
 ---
 # How to use the Disk Management Snap-in to manage Basic and Dynamic Disks  
 

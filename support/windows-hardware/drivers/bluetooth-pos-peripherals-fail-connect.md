@@ -2,7 +2,7 @@
 title: Bluetooth and POS peripherals fail to connect
 description: This article provides resolutions for the problem where the Human Interface Device Access Service, or HID Input Service fails to start on Windows Embedded for Point of Service.
 ms.date: 09/02/2020
-ms.technology: windows-hardware-hid-driver
+ms.subservice: hid-driver
 ---
 # Bluetooth devices and Common POS peripherals fail to connect on Windows Embedded for Point of Service systems
 

@@ -1,17 +1,13 @@
 ---
 title: Can't use kdump or kexec for Linux virtual machines on Hyper-V
 description: Provides a resolution for the issue that kdump or kexec cannot be used for Linux virtual machines on Hyper-V.
-ms.date: 09/21/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: abgupta, kaushika
 ms.custom: sap:installation-and-configuration-of-hyper-v, csstroubleshoot
-ms.technology: windows-client-hyper-v
 ---
 # Can't use kdump or kexec for Linux virtual machines on Hyper-V
 

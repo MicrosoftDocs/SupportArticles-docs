@@ -1,17 +1,13 @@
 ---
 title: Emulated and synthetic hardware specification for Windows Server 2012 Hyper-V
 description: Summarizes the specifications for supported emulated and synthetic hardware in a Windows Server 2012 environment.
-ms.date: 03/24/2022
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: samacha, kaushika
 ms.custom: sap:installation-and-configuration-of-hyper-v, csstroubleshoot
-ms.technology: hyper-v
 ---
 # Emulated and synthetic hardware specification for Windows Server 2012 Hyper-V
 

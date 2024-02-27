@@ -4,7 +4,6 @@ description: Describes the information that may be collected from a computer whe
 ms.date: 05/11/2020
 ms.custom: sap:Installation
 ms.reviewer: KelHo
-ms.technology: dotnet-installation
 ---
 # .NET Framework setup diagnostics
 

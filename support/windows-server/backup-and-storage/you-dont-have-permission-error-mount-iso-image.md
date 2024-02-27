@@ -1,17 +1,13 @@
 ---
 title: You don't have permission error
 description: Helps to fix the error "You don't have permission" when you try to mount an ISO image.
-ms.date: 12/09/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, dewitth, ctimon
 ms.custom: sap:partition-and-volume-management, csstroubleshoot
-ms.technology: windows-server-backup-and-storage
 ---
 # "You don't have permission" error message when you try to mount an ISO image
 

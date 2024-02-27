@@ -1,17 +1,13 @@
 ---
 title: Intranet site is identified as Internet site
 description: Works around an issue where an Intranet site is identified as an Internet site.
-ms.date: 09/25/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:ip-address-management-ipam, csstroubleshoot
-ms.technology: windows-client-networking
 ---
 # Intranet site is identified as an Internet site when you use an FQDN or an IP address
 

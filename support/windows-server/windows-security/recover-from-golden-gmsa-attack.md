@@ -1,15 +1,13 @@
 ---
 title: How to recover from a Golden gMSA attack
 description: Describes how to repair compromised gMSAs after a Golden gMSA attack.
-ms.date: 09/19/2023
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate, herbertm, juriviere
 ms.custom: sap:domain-and-forest-trusts, csstroubleshoot
-ms.technology: windows-server-security
 keywords: gMSA, golden gMSA, kds root key object
 ---
 

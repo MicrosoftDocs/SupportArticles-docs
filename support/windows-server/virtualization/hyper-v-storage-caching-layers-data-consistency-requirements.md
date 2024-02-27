@@ -1,17 +1,13 @@
 ---
 title: Hyper-V storage caching layers and implications for data consistency
 description: Describes the various levels of caching in the storage stack, virtualized or otherwise, that have implications for data consistency.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:configuration-of-virtual-machine-settings, csstroubleshoot
-ms.technology: hyper-v
 ---
 # Hyper-V storage: Caching layers and implications for data consistency
 

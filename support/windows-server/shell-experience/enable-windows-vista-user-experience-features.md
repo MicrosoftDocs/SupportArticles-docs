@@ -1,17 +1,13 @@
 ---
 title: How to enable Windows Vista user experience features on a computer that is running Windows Server 2008
 description: Describes how to configure Windows Server 2008 as a workstation computer.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:windows-media-player, csstroubleshoot
-ms.technology: windows-server-shell-experience
 ---
 # How to enable Windows Vista user experience features on a computer that is running Windows Server 2008
 
