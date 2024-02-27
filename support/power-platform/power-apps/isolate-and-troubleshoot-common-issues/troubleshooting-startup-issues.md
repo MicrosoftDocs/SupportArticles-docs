@@ -87,13 +87,12 @@ Try the following steps to resolve the issue:
    > - You access Power Apps that are embedded ([via an iframe](/power-apps/maker/canvas-apps/embed-apps-dev#embed-your-app-in-a-website) in a third-party website.
    > - You access a canvas app that's embedded in a model driven app form.
    
-   To check the **Third-party Storage Partitioning** setting in Microsoft Edge or Google Chrome, you can follow these steps:
+### Check the **Third-party Storage Partitioning** setting in Microsoft Edge or Google Chrome:
 
    - In Microsoft Edge, you can check the setting by navigating to `edge://flags/#third-party-storage-partitioning` using the address bar.
    - In Google Chrome, you can check the setting by navigating to `chrome://flags/#third-party-storage-partitioning` using the address bar.
 
    ![image](https://github.com/MicrosoftDocs/SupportArticles-docs-pr/assets/11514622/0391fbcb-7558-48f6-981c-c55fa198e93c)
-
 
 ## Enable storage of third-party cookies and local data in your browser or app
 
