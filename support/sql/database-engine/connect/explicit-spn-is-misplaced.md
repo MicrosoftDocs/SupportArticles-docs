@@ -1,16 +1,16 @@
 ---
-title: Troubleshooting the explicit misplaced SPN issue 
-description: This article provides a resolution for the consistent authentication issue of explicit SPN being misplaced.  
-ms.date: 02/12/2024
+title: Troubleshooting the explicit misplaced SPN issue in SQL Server
+description: This article provides a workaround for the SQL Server consistent authentication problem where the explicit SPN is missing.
+ms.date: 02/27/2024
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 
-# Explicit misplaced SPN issue
+# Explicit misplaced SPN issue in SQL Server
 
-This article helps you resolve a consistent authentication issue that affects the explicit misplaced Service Principal Name (SPN).
+This article helps you resolve a SQL Server consistent authentication problem that affects the explicit misplaced Service Principal Name (SPN).
 
 ## Symptoms
 
