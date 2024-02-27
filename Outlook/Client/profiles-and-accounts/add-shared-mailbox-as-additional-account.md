@@ -15,7 +15,7 @@ appliesto:
   - Outlook 2019
   - Outlook 2016
 search.appverid: MET150
-ms.date: 11/17/2023
+ms.date: 01/30/2024
 ---
 
 # Add a shared mailbox as an additional account in Outlook Desktop

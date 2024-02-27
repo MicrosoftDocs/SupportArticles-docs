@@ -16,7 +16,7 @@ search.appverid:
 appliesto: 
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition
-ms.date: 10/30/2023
+ms.date: 01/30/2024
 ---
 # Outlook clients may be unable to set OOF status or view Free busy in an Exchange Server 2013 coexistence environment
 

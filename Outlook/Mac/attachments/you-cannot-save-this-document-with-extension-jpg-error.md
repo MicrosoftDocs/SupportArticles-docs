@@ -14,7 +14,7 @@ ms.reviewer: tsimon
 appliesto: 
   - Outlook 2016 for Mac
 search.appverid: MET150
-ms.date: 10/30/2023
+ms.date: 01/30/2024
 ---
 # A message is shown about the file name extension when saving a .jpg file attachment
 
