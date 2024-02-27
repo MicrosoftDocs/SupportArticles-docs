@@ -13,13 +13,13 @@ search.app:
 ---
 # Troubleshooting startup or sign-in issues for Power Apps
 
-This article helps you resolve some of the common issues or errors that might occur when starting up or signing in to [Power Apps](https://make.powerapps.com).
+This article helps you resolve some common issues or errors that might occur when starting up or signing in to [Power Apps](https://make.powerapps.com).
 
 ## Common issues or errors
 
 The following are some common issues or errors that might appear when you start up or sign in to Power Apps.
 
-- You're prompted to sign in every time an app is embedded in another client such as SharePoint and Microsoft Teams. The Power Apps open experience starts and halts until you sign in.
+- You're prompted to sign in every time an app is embedded in another client such as SharePoint and Microsoft Teams. The Power Apps opening experience starts and halts until you sign in.
 
 - Error message related to cookie settings.
 
@@ -71,21 +71,21 @@ The following are some common issues or errors that might appear when you start 
 Try the following steps to resolve the issue:
 
 1. [Enable third-party cookies and local data in your browser or app](#enable-storage-of-third-party-cookies-and-local-data-in-your-browser-or-app).
-2. Cached data can sometimes prevent you from signing in. [Clear your browser's cache](#clear-your-browser-cache) and cookies and try again.
+2.  [Clear your browser's cache](#clear-your-browser-cache) and cookies and try again. Cached data can sometimes prevent you from signing in.
 3. Try signing in with a different browser. For a list of supported browsers, see [system requirements](/power-apps/limits-and-config#supported-browsers-for-running-power-apps).
 4. Check your network connection to make sure it's stable.
 5. If you're getting Microsoft Entra errors, they're usually related to user authentication and authorization. The error page might contain additional information that can help diagnose and fix the problem. To resolve Microsoft Entra errors, you might need assistance from your IT department.
-6. [Check the **Third-party Storage Partitioning** setting in your browser](#check-the-third-party-storage-partitioning-setting-in-microsoft-edge-or-google-chrome) to make sure it's disabled.
+6. [Check the "Third-party Storage Partitioning" setting in your browser](#check-the-third-party-storage-partitioning-setting-in-microsoft-edge-or-google-chrome) to make sure it's disabled.
 
    > [!NOTE]
-   > Only consider this resolution step when you experience sign-in or sign-out issues under one of the following conditions:
+   > Consider this resolution step only when you experience sign-in or sign-out issues under one of the following conditions:
    >
-   > - You use a device that has multiple Microsoft Entra identities sign-in to access different applications.
-   > - You access multiple applications using Microsoft Entra across more than one tab. When you sign out of one tab, you observe you aren't signed out of the second tab.
+   > - You use a device that has multiple Microsoft Entra identity sign-ins to access different applications.
+   > - You access multiple applications using Microsoft Entra across more than one tab. When you sign out of one tab, you observe that you aren't signed out of the second tab.
    > - You access Power Apps that are embedded [via an iframe](/power-apps/maker/canvas-apps/embed-apps-dev#embed-your-app-in-a-website) in a third-party website.
-   > - You access a canvas app that's embedded in a model driven app form.
+   > - You access a canvas app that's embedded in a model-driven app form.
 
-### Check the Third-party Storage Partitioning setting in Microsoft Edge or Google Chrome
+### Check the "Third-party Storage Partitioning" setting in Microsoft Edge or Google Chrome
 
 - In Microsoft Edge, you can check the setting by navigating to `edge://flags/#third-party-storage-partitioning` using the address bar.
 - In Google Chrome, you can check the setting by navigating to `chrome://flags/#third-party-storage-partitioning` using the address bar.
