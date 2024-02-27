@@ -2,7 +2,7 @@
 
 title: Enable TLS 1.2 support as Microsoft Entra TLS 1.0/1.1 is deprecated
 description: This article describes how to enable support for TLS 1.2 in your environment, in preparation for upcoming Microsoft Entra TLS 1.0/1.1 deprecation.
-ms.date: 11/08/2023
+ms.date: 02/28/2024
 ms.reviewer: dahans, abizerh, v-leedennis, v-weizhu
 ms.service: active-directory
 ms.subservice: authentication
@@ -41,6 +41,27 @@ The **TLS 1.0**, **TLS 1.1**, and **3DES Cipher suite** services are being depre
 | U.S. government instances                        | March 31, 2021   | **COMPLETED** |
 | Public instances                                 | January 31, 2022 | **COMPLETED** |
 | Microsoft Entra instances operated by 21Vianet in China | June 2023        | **ONGOING**   |
+
+## TLS 1.3 support for Microsoft Entra services
+
+Microsoft Entra is rolling out support for TLS 1.3 for its endpoints to align with security best practices ([NIST - SP 800-52 Rev. 2](https://csrc.nist.gov/pubs/sp/800/52/r2/final)). With this change, the Microsoft Entra ID related endpoints will support both TLS 1.2 and TLS 1.3 protocols.
+
+TLS 1.3 support is being rolled out gradually to all Microsoft Entra endpoints, so the coverage might vary depending on your region and service. 
+
+TLS 1.3 is the latest and most secure version, offering several benefits over TLS 1.2, such as: 
+
+- Faster connection establishment: TLS 1.3 reduces the number of round trips required to negotiate a secure connection, resulting in lower latency and better performance. 
+- Stronger encryption: TLS 1.3 removes some weaker cipher suites and hash algorithms that are supported by TLS 1.2 and provides new ones that are more resistant to attacks. 
+- Improved privacy: TLS 1.3 encrypts more handshake data, preventing passive observers from inferring information about the connection, such as the server name or the application protocol. 
+
+Client operating system (OS) and applications that support TLS 1.3 will automatically use it to establish a secure connection to the Microsoft Entra service endpoints enabled for TLS 1.3. If the client doesn't support TLS 1.3, it should automatically fallback to TLS 1.2 to establish a secure connection. If you need more time to upgrade to TLS 1.3, you can continue to use TLS 1.2 by controlling the TLS negotiations through the client configuration.  
+
+For troubleshooting purposes, you can enable and disable TLS 1.3 by creating the following DWORD values under `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.3\Client`:
+
+- `DisabledByDefault`:00000001 
+- `Enabled`: 00000000
+
+To ensure .NET Framework applications remain secure, the TLS version should not be hardcoded. .NET Framework applications should use the TLS version that the OS supports. TLS 1.3 is supported by .NET Framework 4.8 and later versions. For more information, see [Transport Layer Security (TLS) best practices with the .NET Framework](/dotnet/framework/network-programming/tls).
 
 ## Enable support for TLS 1.2 in your environment
 
