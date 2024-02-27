@@ -14,7 +14,7 @@ ms.reviewer: scottlan
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 10/30/2023
+ms.date: 01/30/2024
 ---
 # Specific users can't receive meeting requests in Outlook because of Delegate Access is enabled
 

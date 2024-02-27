@@ -15,7 +15,7 @@ appliesto:
   - Outlook 2016 for Mac
 search.appverid: 
   - MET150
-ms.date: 10/30/2023
+ms.date: 01/30/2024
 ---
 
 # Use Kerberos authentication with Outlook 2016 for Mac

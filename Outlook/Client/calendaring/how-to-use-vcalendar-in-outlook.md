@@ -21,7 +21,7 @@ appliesto:
   - Exchange Server 2010 Standard
   - Exchange Server 2010 Enterprise
 search.appverid: MET150
-ms.date: 10/30/2023
+ms.date: 01/30/2024
 ---
 # How to use vCalendar in Outlook
 

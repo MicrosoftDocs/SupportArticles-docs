@@ -26,7 +26,7 @@ appliesto:
   - Exchange Server 2010 Standard
   - Outlook for Microsoft 365
 search.appverid: MET150
-ms.date: 10/30/2023
+ms.date: 01/30/2024
 ---
 # Meetings are Tentative but not receiving requests or meeting responses from others don't show in inbox
 

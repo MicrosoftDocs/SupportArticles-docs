@@ -17,7 +17,7 @@ appliesto:
 - Outlook 2016
 - Outlook for Microsoft 365
 search.appverid: MET150
-ms.date: 01/24/2024
+ms.date: 01/30/2024
 ---
 # Presence icons don't appear in Outlook
 
