@@ -1,7 +1,7 @@
 ---
 title: Azure Batch node gets stuck in the Unusable state because of configuration issues
 description: Provides solutions to issues that cause unusable Azure Batch nodes.
-ms.date: 02/22/2024
+ms.date: 02/27/2024
 author: SvenRandom
 ms.author: biny
 editor: v-jsitser
@@ -16,13 +16,19 @@ Azure Batch might set [the state of a Batch node](/rest/api/batchservice/compute
 
 ## Issue 1: Virtual network configuration issues
 
-In a pool that's associated with a subnet of a virtual network, all nodes are in the **Unusable** state, but no [error](/rest/api/batchservice/compute-node/get#computenodeerror) code appears on the nodes.
+This section discusses the virtual network (VNet) configuration issues in both *classic* and *simplified* node communication modes.
+
+### Classic node communication
+
+The classic node communication mode is the original communication way for a pool that's associated with a subnet of a VNet. This feature will be replaced with the simplified communication node mode in 2026.
+
+In a pool that's associated with a subnet of a VNet, all nodes are in the **Unusable** state. But there's no [error](/rest/api/batchservice/compute-node/get#computenodeerror) code on the nodes.
 
 :::image type="content" source="media/azure-batch-node-unusable-state/node-state-shows-unusable.png" alt-text="Screenshot that shows the state of a node.":::
 
-This symptom indicates that the Batch service can't communicate with the nodes. In most cases, this situation is caused by virtual network configuration issues. The following sections describe the two most common causes of the issues.
+The symptom above means that the Batch service is unable to communicate with the nodes. In most cases, it's caused by VNet configuration issues. The following sections describe the two most common causes.
 
-### Cause 1: Missing required network security group (NSG) rules
+#### Cause 1: Missing required network security group (NSG) rules
 
 If an NSG is configured in the subnet, you must configure this NSG to have at least the inbound and outbound security rules (as shown in the following screenshot) so that the Batch service can communicate with the nodes. If the communication to the nodes in the specified subnet is denied by the NSG, the Batch service will set the state of the nodes to **Unusable**.
 
@@ -34,7 +40,7 @@ If an NSG is configured in the subnet, you must configure this NSG to have at le
 
     :::image type="content" source="media/azure-batch-node-unusable-state/outbound-security-rules.png" alt-text="Screenshot of outbound security rules." border="false":::
 
-### Solution 1: Configure NSG to have the required inbound and outbound security rules
+#### Solution 1: Configure NSG to have the required inbound and outbound security rules
 
 To resolve this issue, configure the NSG to have the required inbound and outbound security rules, as recommended in [Network security groups for Virtual Machine Configuration pools: Specifying subnet-level rules](/azure/batch/batch-virtual-network#network-security-groups-for-virtual-machine-configuration-pools-specifying-subnet-level-rules).
 
@@ -56,11 +62,11 @@ To perform the configuration, follow these steps:
 1. Configure this NSG to have the required inbound and outbound security rules.
 1. Restart the node to return it to the default state.
 
-### Cause 2: Missing required user-defined routes (UDR)
+#### Cause 2: Missing required user-defined routes (UDR)
 
 If the virtual network to which the pool is associated enables forced tunneling, you must add a UDR that corresponds to the BatchNodeManagement.\<region> service tag in the region where your Batch account exists. Otherwise, the traffic between the Batch service and the nodes is blocked, and the compute nodes become unusable.
 
-### Solution 2: Add UDR corresponding to BatchNodeManagement.\<region> service tag
+#### Solution 2: Add UDR corresponding to BatchNodeManagement.\<region> service tag
 
 To resolve this issue, add a UDR that corresponds to the BatchNodeManagement.\<region> service tag in the region in which your Batch account exists. Then, set the **Next hop type** to **Internet**. For more information, see [User-defined routes for forced tunneling](/azure/batch/batch-virtual-network#user-defined-routes-for-forced-tunneling).
 
@@ -81,14 +87,38 @@ To do this, follow these steps:
 
 1. Restart the node to return it to the default state.
 
-### Cause 3: A bad DNS configuration prevents the node from communicating with the node management endpoint
+### Simplified node communication
+
+Using the simplified node communication mode can simplify the VNet configuration in a pool. If the nodes in a pool that uses the simplified node communication mode show the **Unusable** state, check the following possible causes and solutions for self-troubleshooting.
+
+#### Cause 1: Missing outbound NSG rule
+
+When applying a VNet, make sure that the outbound request from the internal node to the external is properly configured. Otherwise, the node will become unusable.
+
+#### Solution 1: Add an outbound service tag BatchNodeManagement.\<region>
+
+To resolve this issue, add a BatchNodeManagement.\<region> service tag in the outbound NSG rule.
+
+:::image type="content" source="media/azure-batch-node-unusable-state/block-outbound-nsg.png" alt-text="Screenshot that shows the NSG rule that blocks the outbound request":::
+
+For more information, see [Outbound Security Rule](/azure/batch/batch-virtual-network#outbound-security-rules).
+
+#### Cause 2: No public IP addresses
+
+By default, all the nodes in an Azure Batch virtual machine configuration pool are assigned a public IP address. However, using the simplified node communication in the pool restricts access to the nodes and reduces the discoverability of the nodes from the internet, which cause unusable nodes.
+
+#### Solution 2: Confiure a nodeManagement private endpoint
+
+Check your network setting through navigating to your Batch account and selecting **Settings** > **Networking**. If the **Selected network** or **Disable** option is enabled, but you don't configure any private endpoint or only configure a batchAcount private endpoint, configure a nodeManagement private endpoint to ensure the internal communication between nodes.
+
+#### Cause 3: A bad DNS configuration prevents the node from communicating with the node management endpoint
 
 If the DNS isn't configured correctly, the nodes might be unable to communicate with the Batch service endpoint. This situation causes the Batch nodes to become stuck in an unusable state.
 
 > [!NOTE]
 > This scenario is for batch pools that enable a node management private endpoint. Usually these pools have simplified node communication and don't use public IP addresses.
 
-### Solution 3: Fix the DNS configuration
+#### Solution 3: Fix the DNS configuration
 
 Check whether DNS name resolution works correctly, and fix the DNS configuration if necessary. The correct process to verify the DNS configuration depends on whether you created the node management private endpoint by using an automatic private DNS integration or a custom DNS configuration.
 
