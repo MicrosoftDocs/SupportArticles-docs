@@ -1,7 +1,7 @@
 ---
-title: Troubleshooting network login issues 
-description: This article provides a resolution for the consistent authentication issue that affects network login.
-ms.date: 01/23/2024
+title: Troubleshooting network login issues in SQL Server
+description: This article provides a resolution for the consistent authentication issue in SQL Server that affects network login.
+ms.date: 02/27/2024
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
