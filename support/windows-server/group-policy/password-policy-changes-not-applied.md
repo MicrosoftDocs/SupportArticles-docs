@@ -1,17 +1,13 @@
 ---
 title: Password policy changes aren't applied
 description: Provides a solution to an issue where the changes aren't applied as expected when you change the password policy.
-ms.date: 04/28/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
-ms.subservice: group-policy
 ---
 # Changes are not applied when you change the password policy
 

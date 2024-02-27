@@ -1,17 +1,13 @@
 ---
 title: Log files for troubleshooting RDS issues
 description: Introduces the logs that you must collect when you troubleshoot RDS issues in Windows Server 2012. Describes how to collect the files.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, rkiran, malladi
 ms.custom: sap:administration, csstroubleshoot
-ms.subservice: rds
 ---
 # Useful log files for troubleshooting RDS issues
 

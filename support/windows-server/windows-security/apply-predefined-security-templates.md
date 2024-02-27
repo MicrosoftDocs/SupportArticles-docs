@@ -1,17 +1,13 @@
 ---
 title: Apply predefined security templates
 description: Describes how to apply predefined security templates.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:security-templates, csstroubleshoot
-ms.subservice: windows-security
 ---
 # How to apply predefined security templates in Windows Server 2003
 

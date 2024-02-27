@@ -1,17 +1,13 @@
 ---
 title: Computer crashes with error code 0x113
 description: Resolves an issue in which the computer crashes with error code 0x113. This issue occurs if the computer has hybrid graphic cards installed.
-ms.date: 09/10/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, chadbee, tidavis
 ms.custom: sap:blue-screen/bugcheck, csstroubleshoot
-ms.technology: windows-client-performance
 ---
 # Stop error 0x113 if you use Intel and AMD graphics adapters on a Windows 8.1-based computer
 

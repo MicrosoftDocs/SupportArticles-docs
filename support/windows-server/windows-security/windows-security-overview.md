@@ -1,16 +1,12 @@
 ---
 title: Windows Security overview
 description: Overview of Windows Security troubleshooting articles for Windows Server.
-ms.date: 06/17/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.subservice: windows-security
 ---
 # Windows Security troubleshooting documentation for Windows Server
 

@@ -1,17 +1,13 @@
 ---
 title: Incorrect time displayed after in-place upgrade
 description: Fixes an issue where the displayed time on affected computers doesn't match the current local time after you do an in-place upgrade to a 64-bit version of Windows 7 or Windows Server 2008 R2.
-ms.date: 12/21/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:dst-and-timezones, csstroubleshoot
-ms.subservice: shell-experience
 ---
 # Incorrect time displayed on 64-bit versions of Windows 7 or Windows Server 2008 R2 after in-place upgrade
 

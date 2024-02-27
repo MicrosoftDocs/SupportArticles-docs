@@ -1,17 +1,13 @@
 ---
 title: How to allow remote users to access your network in Windows Server 2003
 description: Describes how to configure a computer that is running Windows Server 2003 to allow remote users to establish an encrypted channel to a corporate network.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:access-to-remote-file-shares-smb-or-dfs-namespace, csstroubleshoot
-ms.subservice: networking
 ---
 # How to allow remote users to access your network in Windows Server 2003  
 

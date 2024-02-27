@@ -1,17 +1,13 @@
 ---
 title: Remote Desktop can't connect to VDI-based computer
 description: Fixes an issue where Remote Desktop can't connect to a VDI-based remote computer.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:performance-audio-and-video-and-remotefx, csstroubleshoot
-ms.subservice: rds
 ---
 # Remote Desktop cannot connect to the VDI-based remote computer after enabling Microsoft RemoteFX 3D Video Adapter
 

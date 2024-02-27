@@ -1,17 +1,13 @@
 ---
 title: Roaming user profiles versioning
 description: Roaming user profiles in Windows 10, Windows Server 2016, and later versions are incompatible with roaming user profiles in earlier versions of Windows.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:user-profiles, csstroubleshoot
-ms.subservice: user-profiles
 ---
 # Roaming user profiles of earlier versions of Windows are incompatible with Windows 10, Windows Server 2016, and later versions
 

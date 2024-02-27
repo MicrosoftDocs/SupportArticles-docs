@@ -1,17 +1,13 @@
 ---
 title: Can't manage cluster with failover cluster manager
 description: Helps fix an error that you receive when managing cluster by using failover cluster management console.
-ms.date: 12/09/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:setup-and-configuration-of-clustered-services-and-applications, csstroubleshoot
-ms.subservice: high-availability
 ---
 # Unable to manage cluster using failover cluster manager. Error Received: "Connection to the cluster is not allowed since you are not an administrator on the cluster node(s)"
 

@@ -1,17 +1,13 @@
 ---
 title: Certificate requirements when you use EAP-TLS
 description: Discusses the requirements when you use Extensible Authentication Protocol (EAP) Transport Layer Security (TLS) or Protected Extensible Authentication Protocol (PEAP)-EAP-TLS in Windows Server.
-ms.date: 06/20/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, samyun
 ms.custom: sap:radius-network-policy-server-nps-or-internet-authentication-service-ias, csstroubleshoot
-ms.subservice: networking
 ---
 # Certificate requirements when you use EAP-TLS or PEAP with EAP-TLS
 

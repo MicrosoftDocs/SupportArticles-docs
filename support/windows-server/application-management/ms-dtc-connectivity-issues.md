@@ -1,17 +1,13 @@
 ---
 title: Troubleshoot connectivity issues in MS DTC by using the DTCPing tool
 description: Explains how to use the DTCPing tool to troubleshoot MS DTC connectivity issues.
-ms.date: 03/24/2022
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:dtc-startup-configuration-connectivity-and-cluster, csstroubleshoot
-ms.subservice: application-compatibility
 ---
 # How to troubleshoot connectivity issues in MS DTC by using the DTCPing tool
 

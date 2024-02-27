@@ -1,17 +1,13 @@
 ---
 title: Switch options for Boot.ini files
 description: Describes the switch options that you can use to modify Windows startup.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:no-boot-not-bugchecks, csstroubleshoot
-ms.subservice: performance
 ---
 # Available switch options for the Windows XP and the Windows Server 2003 Boot.ini files
 

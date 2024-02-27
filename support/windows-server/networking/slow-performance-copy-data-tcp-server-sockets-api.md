@@ -1,17 +1,13 @@
 ---
 title: Slow performance occurs when you copy data to a TCP server by using a Windows Sockets API program
 description: Provides workarounds for the issue slow performance occurs when you copy data to a TCP server by using a Windows Sockets API program.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, tdetzner
 ms.custom: sap:tcp/ip-communications, csstroubleshoot
-ms.subservice: networking
 ---
 # Slow performance occurs when you copy data to a TCP server by using a Windows Sockets API program
 

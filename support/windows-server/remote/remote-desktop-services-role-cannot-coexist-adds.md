@@ -1,17 +1,13 @@
 ---
 title: RDS role cannot coexist with AD DS role
 description: Provides a resolution for the issue that Remote Desktop Services role cannot coexist with AD DS role.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:load-balancing-and-connection-broker, csstroubleshoot
-ms.subservice: rds
 ---
 # Remote Desktop Services role cannot coexist with AD DS role
 

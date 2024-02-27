@@ -1,17 +1,13 @@
 ---
 title: Audit event shows authentication package as NTLMv1 instead of NTLMv2
 description: Discusses an issue where the authentication was actually using NTLMv2 but reporting NTLMv1 in the event log.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: herbertm, kaushika
 ms.custom: sap:legacy-authentication-ntlm, csstroubleshoot
-ms.subservice: windows-security
 ---
 # Audit event shows authentication package as NTLMv1 instead of NTLMv2
 

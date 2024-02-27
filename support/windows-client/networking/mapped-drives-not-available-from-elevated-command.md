@@ -1,17 +1,13 @@
 ---
 title: Mapped drives are not available
 description: Describes an issue in which mapped drives are unavailable from an elevated command prompt.
-ms.date: 09/08/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, ntuttle, ardenw
 ms.custom: sap:access-to-remote-file-shares-smb-or-dfs-namespace, csstroubleshoot
-ms.technology: windows-client-networking
 ---
 # Mapped drives are not available from an elevated prompt when UAC is configured to Prompt for credentials
 

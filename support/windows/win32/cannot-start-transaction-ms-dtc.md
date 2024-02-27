@@ -1,10 +1,11 @@
 ---
 title: Can't start a transaction in MS DTC
 description: This article describes a problem that may occur intermittently when you try to start a transaction in the MS DTC. A resolution is provided.
-ms.date: 03/20/2020
-ms.custom: sap:Developer Tools
+ms.date: 12/19/2023
+ms.custom: sap:dtc-programming-runtime
 ms.subservice: distributed-transactions
 ---
+
 # New transaction can't enlist in the specified transaction coordinator when you try to start a transaction in MS DTC
 
 This article helps you resolve a problem when you start a transaction in Microsoft Distributed Transaction Coordinator (MS DTC).

@@ -1,17 +1,13 @@
 ---
 title: Some Group Policy areas are missing
 description: Provides a solution to an issue where some Group Policy areas are missing from the Group Policy Editor.
-ms.date: 04/28/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
-ms.subservice: group-policy
 ---
 # Some Group Policy areas are missing from the Group Policy Editor
 

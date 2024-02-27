@@ -1,7 +1,7 @@
 ---
 title: Different results are displayed for software updates
 description: Discusses that different results are displayed for software updates when you use saved searches in non-English versions of Configuration Manager. Provides a workaround.
-ms.date: 06/16/2020
+ms.date: 12/05/2023
 ms.reviewer: kaushika,  ErinWi, prakask, keiththo
 ---
 # Different results are shown for software updates when using saved searches in non-English versions of Configuration Manager

@@ -1,17 +1,13 @@
 ---
 title: Description of the Remote Desktop Connection 6.1 client update for Terminal Services
 description: Describes the Remote Desktop Connection 6.1 client update and how it affects Terminal Services in Windows Vista SP1, in Windows XP SP3, and in Windows Server 2008.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: ayesham, kaushika
 ms.custom: sap:connecting-to-a-session-or-desktop, csstroubleshoot
-ms.subservice: rds
 ---
 # Description of the Remote Desktop Connection 6.1 client update for Terminal Services
 

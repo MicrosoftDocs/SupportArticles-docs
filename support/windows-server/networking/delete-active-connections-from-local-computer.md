@@ -1,17 +1,13 @@
 ---
 title: Disconnect all shared resources from local computer
 description: Describes how you can delete active or remembered connections on a local computer.
-ms.date: 01/08/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-nirmsh
 ms.custom: sap:tcp/ip-communications, csstroubleshoot
-ms.subservice: networking
 ---
 # Disconnect all shared resources from local computer
 

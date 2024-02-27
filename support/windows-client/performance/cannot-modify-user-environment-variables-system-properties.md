@@ -1,17 +1,13 @@
 ---
 title: can't modify user environment variables
 description: Provides a resolution for the issue that you can't modify user environment variables in the System Properties dialog box.
-ms.date: 10/09/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:performance-monitoring-tools, csstroubleshoot
-ms.technology: windows-client-performance
 ---
 # You cannot modify user environment variables in the System Properties dialog box if you log on by using a standard user account
 

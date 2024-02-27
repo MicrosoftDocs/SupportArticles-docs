@@ -1,17 +1,13 @@
 ---
 title: Assign a logon script to a profile
 description: Describes how to assign a logon script to a profile for a local user.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:user-profiles, csstroubleshoot
-ms.subservice: user-profiles
 ---
 # How to assign a logon script to a profile for a local user
 

@@ -1,17 +1,15 @@
 ---
 title: Guidance for troubleshooting unexpected cluster failover
 description: Provides guidance to find the root cause of an unexpected failover in a Windows-based failover cluster.
-ms.date: 05/09/2022
+ms.date: 12/26/2023
 author: kaushika-msft
 ms.author: kaushika
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:root-cause-of-an-unexpected-failover, csstroubleshoot
-ms.subservice: high-availability
 ---
 # Unexpected cluster failover troubleshooting guidance
 

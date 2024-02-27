@@ -1,17 +1,13 @@
 ---
 title: How to extend stand-alone tiered storage spaces
 description: Shows how to extend stand-alone tiered storage spaces
-ms.date: 12/09/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-mafect
 ms.custom: sap:storage-spaces, csstroubleshoot
-ms.subservice: backup-and-storage
 ---
 # How to extend stand-alone tiered storage spaces
 

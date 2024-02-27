@@ -1,17 +1,13 @@
 ---
 title: Not enough storage is available
 description: Describes a problem that occurs when you try to join a client computer to a domain. Event ID 6 is logged in the System log on the client computer.
-ms.date: 10/09/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, okang
 ms.custom: sap:kerberos-authentication, csstroubleshoot
-ms.technology: windows-client-security
 ---
 # "Not enough storage is available to complete this operation" error message when you use a domain controller to join a computer to a domain
 

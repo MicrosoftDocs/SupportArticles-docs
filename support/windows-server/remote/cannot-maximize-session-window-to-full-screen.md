@@ -1,17 +1,13 @@
 ---
 title: Can't maximize RDC session window to full-screen
 description: Describes an issue where you can't maximize the Remote Desktop Connection session window to full-screen by using the Mstsc command together with the /v parameter. Provides a resolution to this issue.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:remote-desktop-sessions, csstroubleshoot
-ms.subservice: rds
 ---
 # You can't maximize a Remote Desktop Connection session window to full-screen when you use the /v parameter
 

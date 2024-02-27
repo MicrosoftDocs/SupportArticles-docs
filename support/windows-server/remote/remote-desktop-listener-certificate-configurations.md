@@ -1,17 +1,13 @@
 ---
 title: Remote Desktop listener certificate configurations
 description: Describes the methods to configure RDP listener certificates in Windows Server 2012 R2 and Windows Server 2012.
-ms.date: 12/09/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:remote-desktop-services-terminal-services-licensing, csstroubleshoot
-ms.subservice: rds
 ---
 # Remote Desktop listener certificate configurations
 

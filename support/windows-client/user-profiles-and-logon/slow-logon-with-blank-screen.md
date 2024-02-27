@@ -1,17 +1,13 @@
 ---
 title: Slow logon with a blank screen
 description: Describes an issue that makes Windows logon slow, with a blank screen displayed during the delay. A workaround is provided.
-ms.date: 09/08/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:slow-logon, csstroubleshoot
-ms.technology: windows-client-user-profiles
 ---
 # Slow logon with a blank screen in Windows
 

@@ -1,17 +1,13 @@
 ---
 title: Information about Group Policy Preferences events
 description: Provides some information about Group Policy Preferences events.
-ms.date: 04/28/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.service: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:security-filtering-and-item-level-targeting, csstroubleshoot
-ms.subservice: group-policy
 ---
 # Information about Group Policy Preferences events
 

@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Content Distribution issues
 description: Describes how to troubleshoot common content distribution problems.
-ms.date: 03/30/2020
+ms.date: 12/05/2023
 ms.reviewer: kaushika
 ---
 # Troubleshoot content distribution
