@@ -1,9 +1,7 @@
 ---
 title: use the System Configuration utility
 description: Describes how to use the System Configuration utility to troubleshoot errors that may prevent from starting correctly.
-ms.date: 09/27/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

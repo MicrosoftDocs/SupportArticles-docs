@@ -1,9 +1,7 @@
 ---
 title: Obtain a Console Window Handle
 description: Describes how to obtain a Console Window Handle (HWND).
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

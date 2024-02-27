@@ -1,7 +1,7 @@
 ---
 title: Windows Installer source list update fails
 description: Windows Installer source list doesn't update when Configuration Manager clients communicate with distribution points by using HTTPS.
-ms.date: 09/11/2020
+ms.date: 12/05/2023
 ms.reviewer: kaushika
 ---
 # Windows Installer source list update fails when distribution points are configured for HTTPS

@@ -1,9 +1,7 @@
 ---
 title: Troubleshoot the Event ID 50 error message
 description: Describes how to troubleshoot the Event ID 50 error message.
-ms.date: 11/16/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

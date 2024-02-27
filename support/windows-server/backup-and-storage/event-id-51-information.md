@@ -1,9 +1,7 @@
 ---
 title: Information about Event ID 51
 description: This article describes the information about Event ID 51 that occurs when you write information to the physical disk.
-ms.date: 03/24/2022
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

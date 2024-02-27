@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting 503 errors for Microsoft Intune NAC integration
 description: Troubleshoot 503 errors that network access control (NAC) partners receive from Intune, and learn about the four-hour throttle window for unfiltered queries.
-ms.date: 03/01/2022
+ms.date: 12/05/2023
 search.appverid: MET150
 ms.reviewer: kaushika
 ---

@@ -1,9 +1,7 @@
 ---
 title: Event collector doesn't forward events
 description: Describes an issue that occurs when you use source-initiated event forwarding to send events to a Windows Server event collector.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

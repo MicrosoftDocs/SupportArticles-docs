@@ -1,21 +1,19 @@
 ---
 title: Slow performance when using power plan
 description: Provides a solution to an issue where slow performance on Windows Server when using the Balanced power plan.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 02/20/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
-ms.reviewer: kaushika, papant, deepku
+ms.reviewer: kaushika, papant, deepku, aviarengo
 ms.custom: sap:slow-performance, csstroubleshoot
 ---
 # Slow performance on Windows Server when using the Balanced power plan
 
 This article provides a solution to an issue where slow performance on Windows Server when using the Balanced power plan.
 
-_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; All supported versions of Windows  
 _Original KB number:_ &nbsp; 2207548
 
 ## Symptoms
