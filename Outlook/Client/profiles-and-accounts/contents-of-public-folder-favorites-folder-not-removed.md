@@ -15,7 +15,7 @@ appliesto:
   - Outlook 2007
   - Outlook 2003
 search.appverid: MET150
-ms.date: 10/30/2023
+ms.date: 01/30/2024
 ---
 # Contents of Public Folder Favorites folder not removed from offline folder files if Download Public Folder Favorites is turn off
 

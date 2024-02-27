@@ -20,7 +20,7 @@ appliesto:
   - Outlook 2016
   - Microsoft Purview
 search.appverid: MET150
-ms.date: 10/30/2023
+ms.date: 01/30/2024
 ---
 
 # External recipient can't open encrypted email that uses Microsoft Purview Message Encryption

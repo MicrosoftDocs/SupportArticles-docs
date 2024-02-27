@@ -16,7 +16,7 @@ appliesto:
   - Outlook 2016
   - Outlook 2013
 search.appverid: MET150
-ms.date: 10/30/2023
+ms.date: 01/30/2024
 ---
 # How to troubleshoot an Exchange Online Archive mailbox that is not displayed in Outlook
 
