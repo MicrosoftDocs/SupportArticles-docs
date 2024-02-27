@@ -17,7 +17,7 @@ appliesto:
   - Outlook 2019
   - Outlook 2016
   - Outlook 2013
-ms.date: 10/30/2023
+ms.date: 01/30/2024
 ---
 # Error when you try to install the Calendar Printing Assistant for Outlook: Setup cannot complete
 

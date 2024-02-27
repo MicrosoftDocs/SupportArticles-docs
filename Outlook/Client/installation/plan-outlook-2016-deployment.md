@@ -22,7 +22,7 @@ appliesto:
   - Outlook 2021
   - Outlook for Microsoft 365
   - Microsoft 365
-ms.date: 10/30/2023
+ms.date: 01/30/2024
 ---
 
 # Planning considerations to deploy Outlook for Windows

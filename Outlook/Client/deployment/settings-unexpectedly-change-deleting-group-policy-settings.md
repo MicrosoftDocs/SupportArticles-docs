@@ -12,7 +12,7 @@ search.appverid: MET150
 ms.reviewer: randyto, aruiz, sercast, v-six
 author: cloud-writer
 ms.author: meerak
-ms.date: 10/30/2023
+ms.date: 01/30/2024
 ---
 # Outlook settings may unexpectedly change after administrator removes Group Policy settings that control some Outlook features
 
