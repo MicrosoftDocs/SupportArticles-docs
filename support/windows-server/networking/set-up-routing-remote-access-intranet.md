@@ -2,8 +2,6 @@
 title: How To Set Up Routing and Remote Access
 description: Describes how to set up routing and remote access for an Intranet.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

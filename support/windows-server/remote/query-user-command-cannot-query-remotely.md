@@ -2,8 +2,6 @@
 title: Query User command can't query from remote server
 description: Fixes an issue where the QUERY USER command doesn't query information from a remote server.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

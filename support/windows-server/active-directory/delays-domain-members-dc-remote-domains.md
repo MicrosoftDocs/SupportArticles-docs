@@ -2,8 +2,6 @@
 title: Delays when domain members are required to communicate to DCs on remote domains
 description: Discusses a problem that causes delays when domain members try to access domain controllers in other domains.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

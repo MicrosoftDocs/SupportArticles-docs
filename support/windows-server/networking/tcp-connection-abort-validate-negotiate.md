@@ -2,8 +2,6 @@
 title: TCP connection is aborted during Validate Negotiate
 description: Introduces how to troubleshoot the SMB issue when the TCP connection is aborted during Validate Negotiate.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

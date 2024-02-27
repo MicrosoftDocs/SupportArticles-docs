@@ -3,8 +3,6 @@ title: User State Migration Tool (USMT) return codes
 description: Learn about User State Migration Tool (USMT) 10.0 return codes and error messages. Also view a list of USMT return codes and their associated migration steps.
 ms.reviewer: frankroj
 manager: dcscontentpm
-ms.author: delhan
-author: Deland-Han
 ms.date: 12/26/2023
 ms.topic: troubleshooting
 ms.custom: sap:user-state-migration-tool, csstroubleshoot

@@ -2,8 +2,6 @@
 title: Troubleshoot Windows Search performance
 description: Provides guidelines for troubleshooting poor Windows Search performance.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

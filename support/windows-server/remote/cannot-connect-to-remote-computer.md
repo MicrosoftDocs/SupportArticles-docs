@@ -2,8 +2,6 @@
 title: Can't connect to remote computer
 description: Describes a workaround for an issue in which you cannot connect to a remote computer or start a remote application when you use TS Web Access or Remote Web Workspace. Occurs because of an ActiveX control issue.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -2,8 +2,6 @@
 title: Caps Lock status change isn't synced to client
 description: The Caps Lock key status change that is triggered by an application in a remote desktop session will not be synced back to the client computer.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

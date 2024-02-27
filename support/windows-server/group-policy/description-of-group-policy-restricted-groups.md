@@ -2,8 +2,6 @@
 title: Description of group policy restricted groups
 description: This article gives a description of group policy restricted groups.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

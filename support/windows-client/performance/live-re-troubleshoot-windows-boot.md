@@ -1,8 +1,6 @@
 ---
 title: Advanced troubleshooting Windows startup problems with LiveRE tool
 description: Learn to troubleshoot by using the LiveRE tool when Windows does't start.
-author: Deland-Han
-ms.author: delhan
 ms.reviewer: visohra, kaushika
 manager: dcscontentpm
 audience: itpro

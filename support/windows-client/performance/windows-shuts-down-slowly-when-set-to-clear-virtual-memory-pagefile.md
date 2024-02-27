@@ -2,8 +2,6 @@
 title: Windows shuts down slowly when it is set to clear the virtual memory pagefile on shutdown
 description: This article provides a solution for the issue Windows shuts down slowly when it is set to clear the virtual memory pagefile on shutdown.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
