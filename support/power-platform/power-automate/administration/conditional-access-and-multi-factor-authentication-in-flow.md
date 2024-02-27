@@ -2,7 +2,7 @@
 title: Conditional access and multifactor authentication in Power Automate (Flow)
 description: Using conditional access has an unexpected effect on users who use Flow to connect to Microsoft services that are relevant to conditional access policies.
 ms.reviewer: sranjan, hamenon, cgarty
-ms.date: 02/21/2024
+ms.date: 02/27/2024
 ms.subservice: power-automate-admin
 ms.custom: has-azure-ad-ps-ref
 ---
@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 4467879
 
 ## Recommendations
 
-- Don't use [remember multifactor authentication for trusted devices](/azure/active-directory/authentication/howto-mfa-mfasettings#remember-multi-factor-authentication-for-trusted-devices) because token lifetimes will shorten and cause connections to require refresh at the interval configured rather than at the standard extended length.
+- Don't use [remember multifactor authentication for trusted devices](/entra/identity/authentication/howto-mfa-mfasettings#remember-multi-factor-authentication) because token lifetimes will shorten and cause connections to require refresh at the interval configured rather than at the standard extended length.
 - To avoid policy conflict errors, ensure that users who sign in to Power Automate use criteria that match the policies for the connections a flow uses.
 
 ## Details
@@ -40,7 +40,7 @@ MFA can also be configured from **Microsoft 365 admin center**. A subset of Micr
 
 :::image type="content" source="media/conditional-access-and-multi-factor-authentication-in-flow/remember-multi-factor-authentication-option.png" alt-text="Screenshot of the remember multifactor authentication option details.":::
 
-The **remember multi-factor authentication** setting can help you to reduce the number of user logons by using a persistent cookie. This policy controls the Microsoft Entra settings that are documented in [Remember multifactor authentication for trusted devices](/azure/active-directory/authentication/howto-mfa-mfasettings#remember-multi-factor-authentication-for-trusted-devices).
+The **remember multi-factor authentication** setting can help you to reduce the number of user logons by using a persistent cookie. This policy controls the Microsoft Entra settings that are documented in [Remember multifactor authentication for trusted devices](/entra/identity/authentication/howto-mfa-mfasettings#remember-multi-factor-authentication).
 
 Unfortunately, this setting changes the token policy settings that make the connections expire every 14 days. This is one of the common reasons why connections fail more frequently after MFA is enabled. We recommend that you don't use this setting.
 
