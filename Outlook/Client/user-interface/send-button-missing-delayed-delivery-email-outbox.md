@@ -17,7 +17,7 @@ appliesto:
   - Outlook 2013
   - Outlook 2010
   - Exchange Server 2013 Enterprise
-ms.date: 10/30/2023
+ms.date: 01/30/2024
 ---
 # The Send button is missing from a delayed delivery message in Outlook
 
