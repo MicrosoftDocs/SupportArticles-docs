@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot "Set up for work or school" enrollment in Intune
 description: Troubleshoot blocked Microsoft Intune enrollment for Windows devices when the user chooses "Set up for work or school" and signs in with Microsoft Entra ID. The device is recognized as a personal device and the tenant doesn't allow for this device type.
-ms.date: 01/31/2022
+ms.date: 12/05/2023
 search.appverid: MET150
 ms.reviewer: kaushika
 ---

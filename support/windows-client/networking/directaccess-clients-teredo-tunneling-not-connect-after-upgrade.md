@@ -1,9 +1,7 @@
 ---
 title: DirectAccess clients that use Teredo tunneling cannot connect after upgrade to Windows 10
 description: Address an issue in which DirectAccess clients that use Teredo tunneling cannot connect after you upgrade the system to Windows 10.
-ms.date: 12/07/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

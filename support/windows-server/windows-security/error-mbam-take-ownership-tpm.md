@@ -1,9 +1,7 @@
 ---
 title: MBAM fails to take ownership of TPM
 description: Describes an issue where an error occurs when MBAM tries to initialize TPM.
-ms.date: 11/22/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

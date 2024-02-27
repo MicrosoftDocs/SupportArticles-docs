@@ -1,9 +1,7 @@
 ---
 title: Saving and restoring existing Windows shares
 description: Provides some information about saving and restoring existing Windows shares.
-ms.date: 12/31/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

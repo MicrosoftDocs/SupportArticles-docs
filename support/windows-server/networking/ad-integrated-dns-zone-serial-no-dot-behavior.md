@@ -1,9 +1,7 @@
 ---
 title: AD-integrated DNS zone serial No. behavior
 description: Describes Active Directory-integrated Domain Name System (DNS) zone serial number behaviors.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

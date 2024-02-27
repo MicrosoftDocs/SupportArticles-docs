@@ -1,9 +1,7 @@
 ---
 title: DFSR Health Report shows Event ID 4302
 description: Describes a problem that occurs when you run the DFSR Diagnostics Report (DFSR Health Report). Many entries of Event ID 4302 are reported even though the files have already been replicated.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

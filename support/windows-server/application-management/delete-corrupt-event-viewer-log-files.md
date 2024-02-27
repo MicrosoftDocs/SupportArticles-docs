@@ -1,9 +1,7 @@
 ---
 title: Delete corrupt Event Viewer Log files
 description: Describes a method to rename or move these files for troubleshooting purposes.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

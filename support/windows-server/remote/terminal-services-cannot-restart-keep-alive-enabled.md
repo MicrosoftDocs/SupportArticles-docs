@@ -1,9 +1,7 @@
 ---
 title: Remote Desktop Service can't be restarted if Keep-Alive feature is enabled
 description: Discusses an issue where you can't restart the Remote Desktop Services (Terminal Services) if Keep-Alive is enabled.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
