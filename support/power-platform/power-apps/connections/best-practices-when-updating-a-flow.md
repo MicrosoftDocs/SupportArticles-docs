@@ -79,7 +79,7 @@ This error means that the flow is turned off.
 
 The mitigation is to [turn on the flow](/power-automate/disable-flow#turn-on-a-flow).
 
-## Error "FlowTimeout.Run Failed"  or Inner Error code "ResponseTimeout" on Flow run
+## Inner Error code "ResponseTimeout" on Flow run
 
 ```output
         {
