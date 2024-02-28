@@ -4,7 +4,7 @@ description: Provides a resolution for the issue where a desktop flow run fails 
 ms.reviewer: tapanm, gtrantzas, cponath
 ms.author: cvassallo
 author: V-Camille
-ms.date: 02/27/2024
+ms.date: 02/28/2024
 ms.subservice: power-automate-desktop-flows
 ---
 # A failed license check on a desktop flow run
@@ -39,7 +39,7 @@ For more information, see [Types of Power Automate licenses](/power-platform/adm
 
 If the `licenseCheck` result is invalid, the `message` attribute shows the missing licensing components. For more information, see the below table.
 
-|code|message|
+|Code|Message|
 |---|---|
 |`ValidLicenseCoverage`|Valid License Coverage|
 |`LicensingCheckFailed`|Unable to perform licensing checks for this Desktop Flow|
@@ -51,7 +51,7 @@ If the `licenseCheck` result is invalid, the `message` attribute shows the missi
 To solve this issue:
 
 - If the "Power Automate Premium" user license is missing, contact your Microsoft 365 administrator to get this license assigned to the user owning the desktop flow connection.
-- If the "Unattended RPA add-on" or the "Power Automate Process" license is missing, ask your Power Platform administrator to assign one to your environment from the Power Platform admin center.
+- If the "Unattended RPA add-on" or "Power Automate Process" license is missing, ask your Power Platform administrator to assign one to your environment from the Power Platform admin center.
 
 > [!NOTE]
 > A failed license check (if it doesn't block the desktop flow run immediately) can mean that the cloud flow triggering the desktop flow run will soon be suspended for licensing reasons. Check the cloud flow in question to get more information.
