@@ -9976,11 +9976,6 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "support/azure/general/batch-node-creation-delay-restart-reimage.md",
-      "redirect_url": "/troubleshoot/azure/hpc-batch/batch-node-creation-delay-restart-reimage",
-      "redirect_document_id": true
-    },
-    {
       "source_path": "support/azure/general/azure-batch-node-unusable-state.md",
       "redirect_url": "/troubleshoot/azure/hpc-batch/azure-batch-node-unusable-state",
       "redirect_document_id": true

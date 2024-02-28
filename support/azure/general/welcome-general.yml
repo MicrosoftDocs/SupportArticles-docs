@@ -25,11 +25,11 @@ landingContent:
           - text: Azure API is returning blank response
             url: ../api-mgmt/api-return-blank-response.md
           - text: Request throttling problems and HTTP 403 - Forbidden issues
-            url: ../api-mgmtrequest-throttling-http-403.md
+            url: ../api-mgmt/request-throttling-http-403.md
           - text: Troubleshooting overview
-            url: ../api-mgmtapim-troubleshooting-series.md
+            url: ../api-mgmt/apim-troubleshooting-series.md
           - text: Unauthorized errors 401 while invoking APIs
-            url: ../api-mgmtunauthorized-errors-invoke-apis.md
+            url: ../api-mgmt/unauthorized-errors-invoke-apis.md
 
 # Card
   - title: Azure Automation
