@@ -1,16 +1,16 @@
 ---
-title: Troubleshooting scenarios related to linked server after migrating on-premises server
-description: This article provides a resolution to the problem where the linked server can't be created after migrating on-premises server to Azure.
-ms.date: 01/08/2024
+title: Troubleshooting an error while creating a linked server after migrating SQL Server to Azure
+description: This article provides a resolution to the problem where the linked server can't be created after migrating on-premises SQL Server to Azure.
+ms.date: 02/28/2024
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 
-# A linked server couldn't be created after migrating on-premises server to Azure
+# A linked server couldn't be created after migrating on-premises SQL Server to Azure
 
-This article helps you resolve an issue when you can't create a linked server after you move the on-premises server to Azure.
+This article helps you resolve an issue when you can't create a linked server after you move the on-premises SQL Server to Azure.
 
 ## Symptoms
 
@@ -86,7 +86,7 @@ To resolve this error, follow these steps:
 
 1. Restart the server again.
 
-> [!NOTE]
-> Make sure that you have the English (United States) language pack is installed before you run the previous commands.
+    > [!NOTE]
+    > Make sure that you have the English (United States) language pack is installed before you run the previous commands.
 
 To check the connectivity using UDL, see [Universal Data Link (UDL) configuration](/sql/connect/oledb/help-topics/data-link-pages).
