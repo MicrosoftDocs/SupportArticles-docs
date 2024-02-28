@@ -10032,47 +10032,47 @@
     },
     {
       "source_path": "support/azure/general/troubleshoot-install-failure-hpc-pack-linux-node-agent.md",
-      "redirect_url": "/troubleshoot/azure/hcp-pack/troubleshoot-install-failure-hpc-pack-linux-node-agent",
+      "redirect_url": "/troubleshoot/azure/hpc-pack/troubleshoot-install-failure-hpc-pack-linux-node-agent",
       "redirect_document_id": true
     },
     {
       "source_path": "support/azure/general/job-stuck-canceling-mode.md",
-      "redirect_url": "/troubleshoot/azure/hcp-pack/job-stuck-canceling-mode",
+      "redirect_url": "/troubleshoot/azure/hpc-pack/job-stuck-canceling-mode",
       "redirect_document_id": true
     },
     {
       "source_path": "support/azure/general/hpc-management-service-not-start.md",
-      "redirect_url": "/troubleshoot/azure/hcp-pack/hpc-management-service-not-start",
+      "redirect_url": "/troubleshoot/azure/hpc-pack/hpc-management-service-not-start",
       "redirect_document_id": true
     },
     {
       "source_path": "support/azure/general/compute-node-not-shown-error-state.md",
-      "redirect_url": "/troubleshoot/azure/hcp-pack/compute-node-not-shown-error-state",
+      "redirect_url": "/troubleshoot/azure/hpc-pack/compute-node-not-shown-error-state",
       "redirect_document_id": true
     },
     {
       "source_path": "support/azure/general/hpc-node-manager-service-unreachable-certificate.md",
-      "redirect_url": "/troubleshoot/azure/hcp-pack/hpc-node-manager-service-unreachable-certificate",
+      "redirect_url": "/troubleshoot/azure/hpc-pack/hpc-node-manager-service-unreachable-certificate",
       "redirect_document_id": true
     },
     {
       "source_path": "support/azure/general/hpc-pack-excel-offloading-job-stalled.md",
-      "redirect_url": "/troubleshoot/azure/hcp-pack/hpc-pack-excel-offloading-job-stalled",
+      "redirect_url": "/troubleshoot/azure/hpc-pack/hpc-pack-excel-offloading-job-stalled",
       "redirect_document_id": true
     },
     {
       "source_path": "support/azure/general/hpc-management-reporting-database-connection-issue.md",
-      "redirect_url": "/troubleshoot/azure/hcp-pack/hpc-management-reporting-database-connection-issue",
+      "redirect_url": "/troubleshoot/azure/hpc-pack/hpc-management-reporting-database-connection-issue",
       "redirect_document_id": true
     },
     {
       "source_path": "support/azure/general/hpc-management-reporting-database-permission-problem.md",
-      "redirect_url": "/troubleshoot/azure/hcp-pack/hpc-management-reporting-database-permission-problem",
+      "redirect_url": "/troubleshoot/azure/hpc-pack/hpc-management-reporting-database-permission-problem",
       "redirect_document_id": true
     },
     {
       "source_path": "support/azure/general/error-no-virtual-network-found.md",
-      "redirect_url": "/troubleshoot/azure/hcp-pack/error-no-virtual-network-found",
+      "redirect_url": "/troubleshoot/azure/hpc-pack/error-no-virtual-network-found",
       "redirect_document_id": true
     }
   ]

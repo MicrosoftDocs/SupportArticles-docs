@@ -109,23 +109,23 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Failed Linux compute node agent extension installation
-            url: ../hcp-pack/troubleshoot-install-failure-hpc-pack-linux-node-agent.md
+            url: ../hpc-pack/troubleshoot-install-failure-hpc-pack-linux-node-agent.md
           - text: HPC jobs are stuck in canceling mode, and new jobs don't start
-            url: ../hcp-pack/job-stuck-canceling-mode.md
+            url: ../hpc-pack/job-stuck-canceling-mode.md
           - text: HPC Management Service fails to start after restoring database
-            url: ../hcp-pack/hpc-management-service-not-start.md
+            url: ../hpc-pack/hpc-management-service-not-start.md
           - text: HPC compute nodes aren't shown or are in error state
-            url: ../hcp-pack/compute-node-not-shown-error-state.md
+            url: ../hpc-pack/compute-node-not-shown-error-state.md
           - text: HPC node manager service unreachable
-            url: ../hcp-pack/hpc-node-manager-service-unreachable-certificate.md
+            url: ../hpc-pack/hpc-node-manager-service-unreachable-certificate.md
           - text: HPC Pack Excel offloading job is stalled
-            url: ../hcp-pack/hpc-pack-excel-offloading-job-stalled.md
+            url: ../hpc-pack/hpc-pack-excel-offloading-job-stalled.md
           - text: HPC reporting database connection problem
-            url: ../hcp-pack/hpc-management-reporting-database-connection-issue.md
+            url: ../hpc-pack/hpc-management-reporting-database-connection-issue.md
           - text: HPC reporting database permission problem
-            url: ../hcp-pack/hpc-management-reporting-database-permission-problem.md
+            url: ../hpc-pack/hpc-management-reporting-database-permission-problem.md
           - text: Error "No virtual network found" when you enter the application ID
-            url: ../hcp-pack/error-no-virtual-network-found.md
+            url: ../hpc-pack/error-no-virtual-network-found.md
 
 
 # Card

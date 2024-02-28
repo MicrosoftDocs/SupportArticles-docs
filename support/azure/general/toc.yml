@@ -85,23 +85,23 @@
 - name: HPC Pack
   items:
   - name: Failed Linux compute node agent extension installation
-    href: ../hcp-pack/troubleshoot-install-failure-hpc-pack-linux-node-agent.md
+    href: ../hpc-pack/troubleshoot-install-failure-hpc-pack-linux-node-agent.md
   - name: HPC jobs are stuck in canceling mode, and new jobs don't start
-    href: ../hcp-pack/job-stuck-canceling-mode.md
+    href: ../hpc-pack/job-stuck-canceling-mode.md
   - name: HPC Management Service fails to start after restoring database
-    href: ../hcp-pack/hpc-management-service-not-start.md
+    href: ../hpc-pack/hpc-management-service-not-start.md
   - name: HPC compute nodes aren't shown or are in error state
-    href: ../hcp-pack/compute-node-not-shown-error-state.md
+    href: ../hpc-pack/compute-node-not-shown-error-state.md
   - name: HPC node manager service unreachable
-    href: ../hcp-pack/hpc-node-manager-service-unreachable-certificate.md
+    href: ../hpc-pack/hpc-node-manager-service-unreachable-certificate.md
   - name: HPC Pack Excel offloading job is stalled
-    href: ../hcp-pack/hpc-pack-excel-offloading-job-stalled.md
+    href: ../hpc-pack/hpc-pack-excel-offloading-job-stalled.md
   - name: HPC reporting database connection problem
-    href: ../hcp-pack/hpc-management-reporting-database-connection-issue.md
+    href: ../hpc-pack/hpc-management-reporting-database-connection-issue.md
   - name: HPC reporting database permission problem
-    href: ../hcp-pack/hpc-management-reporting-database-permission-problem.md
+    href: ../hpc-pack/hpc-management-reporting-database-permission-problem.md
   - name: Error "No virtual network found" when you enter the application ID
-    href: ../hcp-pack/error-no-virtual-network-found.md
+    href: ../hpc-pack/error-no-virtual-network-found.md
 
 - name: General
   items:
