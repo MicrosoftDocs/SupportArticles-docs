@@ -1,7 +1,7 @@
 ---
 title: Software update point installation and configuration
 description: Describes how to tack the software update point installation and how to configure Software update point. 
-ms.date: 09/16/2020
+ms.date: 12/05/2023
 ms.reviewer: kaushika
 ---
 # Software update point installation and configuration

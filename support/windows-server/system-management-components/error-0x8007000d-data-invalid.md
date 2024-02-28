@@ -1,9 +1,7 @@
 ---
 title: Error message when you run an old scheduled task or a newly created scheduled task on a Windows Server 2003 Service Pack 2-based domain controller
 description: Describes the problem in which you cannot run an old scheduled task or a newly created scheduled task on a Windows Server 2003 Service Pack 2-based domain controller. A resolution is provided.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

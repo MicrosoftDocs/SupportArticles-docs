@@ -250,8 +250,8 @@
     href: changing-property-imagereference-not-allowed.md
   - name: Cluster upgrading and scaling errors
     href: upgrading-or-scaling-does-not-succeed.md
-  - name: OperationIsNotAllowed errors
-    href: operationisnotallowed.md
+  - name: OperationNotAllowed errors
+    href: operationnotallowed.md
   - name: '"Error from server: error dialing backend: dial tcp" messages'
     href: error-from-server-error-dialing-backend-dial-tcp.md
   - name: Errors using features that require virtual machine scale sets

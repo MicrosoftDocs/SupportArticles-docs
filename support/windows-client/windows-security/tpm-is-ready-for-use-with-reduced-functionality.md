@@ -1,9 +1,7 @@
 ---
 title: Error when BIOS is in legacy mode with TPM 2.0
 description: Describes an issue that triggers an error (TPM is ready for use, with reduced functionality) when the BIOS is in legacy mode with TPM 2.0.
-ms.date: 09/08/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -1,9 +1,7 @@
 ---
 title: Corrupted memory dump file is generated
 description: Resolves an issue where a corrupted memory dump file is generated when you try to obtain a full memory dump file from a virtual machine.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

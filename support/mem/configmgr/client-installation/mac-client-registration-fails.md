@@ -1,7 +1,7 @@
 ---
 title: Can't register a Mac client
 description: Fixes an issue in which a Mac client fails to register in System Center Configuration Manager SP1.
-ms.date: 06/15/2020
+ms.date: 12/05/2023
 ms.reviewer: kaushika
 ---
 # Mac client registration fails in System Center 2012 Configuration Manager SP1

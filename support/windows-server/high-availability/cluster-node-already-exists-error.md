@@ -1,9 +1,7 @@
 ---
 title: Error (The cluster node already exists) occurs during cluster setup
 description: Provides a solution to the error (The cluster node already exists) that occurs during cluster setup.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
