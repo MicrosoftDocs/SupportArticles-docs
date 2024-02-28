@@ -26,7 +26,7 @@ Some other providers might additionally display "Login timeout expired" within t
 
 ## Cause
 
-The Named Pipes connections fail because the user doesn't have permission to log in to Windows.
+The Named Pipes connections fail because user doesn't have permission to log in to Windows.
 
 ## Resolution
 
