@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting incorrect server name in SQL Server
-description: This article provides a workaround for the problem where a matching name isn't provided while logging in to SQL Server.
-ms.date: 02/26/2024
+description: This article addresses the problem where a matching name isn't provided while logging in to SQL Server.
+ms.date: 02/28/2024
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
@@ -42,7 +42,7 @@ You will likely also see either of the following error messages in the SQL Serve
 
 ## Cause
 
-You experience these errors if you deploy an application that uses a DEV or QA server in production and you don't update the connection string.
+You will encounter these errors if you deploy an application using a DEV or QA server in a production environment without updating the connection string.
 
 ## Solution
 
