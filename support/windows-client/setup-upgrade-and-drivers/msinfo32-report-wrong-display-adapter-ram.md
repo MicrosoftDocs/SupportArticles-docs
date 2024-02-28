@@ -2,8 +2,6 @@
 title: Msinfo32.exe reports wrong values for Adapter RAM
 description: Discusses an issue where Microsoft System Information (Msinfo32.exe) tool reports incorrect Adapter RAM values under Components > Display.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

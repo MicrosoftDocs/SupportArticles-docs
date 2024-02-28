@@ -2,8 +2,6 @@
 title: Terminal Server licensing
 description: Describes Terminal Server licensing.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

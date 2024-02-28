@@ -2,8 +2,6 @@
 title: Memory allocation errors can be caused by slow page file growth
 description: Describes an issue that causes memory allocation errors that can be caused by slow page file growth.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

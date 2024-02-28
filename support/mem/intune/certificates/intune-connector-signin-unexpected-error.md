@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot error when you sign in to Intune Connector for Active Directory
 description: Fixes an unexpected error problem that occurs when you sign in to Intune Connector for Active Directory.
-ms.date: 10/06/2021
+ms.date: 12/05/2023
 search.appverid: MET150
 ms.custom: sap:Sign in to Intune
 ms.reviewer: kaushika, saurkosh, intunecic

@@ -2,8 +2,6 @@
 title: Logging on a user account fails
 description: Describes a problem when a user who is a member of more than 1,010 security groups tries to log on. Provides a resolution.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

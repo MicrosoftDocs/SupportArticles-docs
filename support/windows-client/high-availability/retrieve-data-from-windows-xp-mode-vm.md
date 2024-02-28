@@ -2,8 +2,6 @@
 title: Retrieve data from Windows XP Mode VM
 description: When you upgrade from Windows 7 to Windows 8, Windows XP Mode is installed on your machine, however Windows Virtual PC isn't present anymore. This issue occurs because Windows Virtual PC isn't supported on Windows 8. To retrieve data from the Windows XP Mode virtual machine, perform the steps listed in this article.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

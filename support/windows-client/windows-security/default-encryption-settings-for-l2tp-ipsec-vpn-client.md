@@ -2,8 +2,6 @@
 title: Default encryption settings for the Microsoft L2TP/IPSec VPN client
 description: Describes the default encryption settings for the Microsoft L2TP/IPSec virtual private network (VPN) client.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

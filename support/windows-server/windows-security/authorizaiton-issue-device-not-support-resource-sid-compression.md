@@ -2,8 +2,6 @@
 title: Resource SID Compression causes Authorization problems on devices
 description: Fixes an access denied error when accessing file shares hosted on devices that don't support Resource SID compression.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

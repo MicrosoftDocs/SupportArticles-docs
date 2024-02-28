@@ -1,7 +1,7 @@
 ---
 title: SQL CUs must be installed on secondary sites
 description: Describes that SQL Server cumulative updates must be manually installed on secondary sites that use SQL Server Express.
-ms.date: 06/16/2020
+ms.date: 12/05/2023
 ms.reviewer: kaushika, ErinWi, prakask, keiththo
 ---
 # SQL Server cumulative updates must be manually installed on secondary sites that use SQL Server Express

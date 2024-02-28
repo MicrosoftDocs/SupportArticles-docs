@@ -1,8 +1,6 @@
 ---
 title: LDAP Bind function call failed error when updating Group Policy settings
 description: Helps resolve the error LDAP Bind function call failed when updating Group Policy settings.
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.date: 12/26/2023

@@ -2,8 +2,6 @@
 title: Errors when you bring a physical disk resource online on a server
 description: Describes a problem in which various errors messages may be logged for a resource on a server that is running Windows Server 2008. Provides workarounds for this problem.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

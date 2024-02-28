@@ -2,8 +2,6 @@
 title: Windows Media Feature Pack for Windows 7 N and for Windows 7 KN
 description: Describes the Windows Media Feature Pack for Windows 7 N and for Windows 7 KN.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

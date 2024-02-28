@@ -2,8 +2,6 @@
 title: Problems with deleting a node from active failover cluster membership
 description: Describes the problems encountered when removing nodes from active failover cluster membership.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

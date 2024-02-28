@@ -2,8 +2,6 @@
 title: Error log of Trusted Platform Module (TPM) device driver
 description: The TPM device driver is recorded in the system log when it encounters an unrecoverable error.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
