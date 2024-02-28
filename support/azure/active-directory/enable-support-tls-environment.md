@@ -44,7 +44,7 @@ The **TLS 1.0**, **TLS 1.1**, and **3DES Cipher suite** services are being depre
 
 ## TLS 1.3 support for Microsoft Entra services
 
-Microsoft Entra is rolling out support for TLS 1.3 for its endpoints to align with security best practices ([NIST - SP 800-52 Rev. 2](https://csrc.nist.gov/pubs/sp/800/52/r2/final)). With this change, the Microsoft Entra ID related endpoints will support both TLS 1.2 and TLS 1.3 protocols.
+Microsoft Entra is rolling out support for TLS 1.3 for its endpoints to align with security best practices ([NIST - SP 800-52 Rev. 2](https://csrc.nist.gov/pubs/sp/800/52/r2/final)). With this change, Microsoft Entra endpoints will support both TLS 1.2 and TLS 1.3 protocols.
 
 TLS 1.3 support is being rolled out gradually to all Microsoft Entra endpoints, so the coverage might vary depending on your region and service. 
 
