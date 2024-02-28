@@ -1025,8 +1025,6 @@ items:
       href: ./group-policy/information-group-policy-preferences-events.md
   - name: Sysvol access or replication issues
     items:
-    - name: Change the default permissions on GPOs
-      href: ./group-policy/change-default-permissions-on-gpo.md
     - name: DFSR SYSVOL fails to migrate or replicate
       href: ./group-policy/dfsr-sysvol-fails-migrate-replicate.md
     - name: Errors when you run GPMC
@@ -1241,6 +1239,8 @@ items:
       href: ./networking/delayed-write-failed-error-data-lost.md
     - name: '%HOMEPATH%, %HOMESHARE%, and %HOMEDRIVE% variables are resolved incorrectly'
       href: ./networking/variables-resolved-incorrectly.md
+    - name: Can't create a domain-based DFS namespace
+      href: ./networking/cant-create-domain-based-dfs-namespace.md
     - name: Can't use different credentials for a network share
       href: ./networking/cannot-connect-to-network-share.md
     - name: Computer Management shows clients sessions slow
