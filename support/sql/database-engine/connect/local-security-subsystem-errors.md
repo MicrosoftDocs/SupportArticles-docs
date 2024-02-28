@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot LSASS errors with SQL Server authentication
 description: This article provides a resolution for consistent authentication errors to SQL Server that are related to local security subsystem.
-ms.date: 02/27/2024
+ms.date: 02/28/2024
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
@@ -32,7 +32,7 @@ These errors occur when the LSASS stops responding.
 
 ## Resolution
 
-To resolve these errors, follow these steps:
+To resolve the LSASS errors, follow these steps:
 
 1. Check whether your Service Principal Name (SPN) is registered correctly on the domain controller (DC).
 
