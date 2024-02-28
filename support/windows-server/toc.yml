@@ -1239,6 +1239,8 @@ items:
       href: ./networking/delayed-write-failed-error-data-lost.md
     - name: '%HOMEPATH%, %HOMESHARE%, and %HOMEDRIVE% variables are resolved incorrectly'
       href: ./networking/variables-resolved-incorrectly.md
+    - name: Can't create a domain-based DFS namespace
+      href: ./networking/cant-create-domain-based-dfs-namespace.md
     - name: Can't use different credentials for a network share
       href: ./networking/cannot-connect-to-network-share.md
     - name: Computer Management shows clients sessions slow
