@@ -2,8 +2,6 @@
 title: Services depending on ASP.NET State Service don't start
 description: Describes an issue that may occur on a Windows Server computer. Provides a workaround.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

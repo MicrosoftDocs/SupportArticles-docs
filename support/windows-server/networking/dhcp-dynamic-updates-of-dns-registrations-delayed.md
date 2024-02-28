@@ -2,8 +2,6 @@
 title: Dynamic updates of DNS registrations are delayed
 description: Discusses that a change in the DHCP DNS update behavior in Windows Server 2008 and later versions may delay DNS Registration. Provides a resolution.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

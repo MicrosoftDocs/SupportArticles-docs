@@ -2,8 +2,6 @@
 title: Error messages when a cluster group online
 description: Describes how to resolve the error messages when you try to bring a cluster group online after a cluster stops.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

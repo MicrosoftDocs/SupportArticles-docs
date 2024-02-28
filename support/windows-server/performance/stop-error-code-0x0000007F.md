@@ -2,8 +2,6 @@
 title: Stop error code 0x0000007F
 description: You receive a Stop error 0000007F (Error 0x7F, UNEXPECTED KERNEL MODE TRAP) error message, or your computer unexpectedly restarts.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

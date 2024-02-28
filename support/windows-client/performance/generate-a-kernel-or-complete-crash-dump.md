@@ -3,8 +3,6 @@ title: Generate a kernel or complete crash dump
 description: Learn how to generate a kernel or complete crash dump, and then use the output to troubleshoot several issues.
 ms.date: 12/26/2023
 ms.topic: troubleshooting
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 ms.collection: highpri
 ms.custom: sap:blue-screen/bugcheck, csstroubleshoot

@@ -2,8 +2,6 @@
 title: Description of password-change protocols in Windows
 description: Describes the mechanisms for changing passwords in Windows.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

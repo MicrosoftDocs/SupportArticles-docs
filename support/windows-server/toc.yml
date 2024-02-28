@@ -30,47 +30,7 @@ items:
     - name: SYSVOL folder isn't replicated between domain controllers
       href: ./active-directory/file-replication-service-event-13552-13555.md
   - name: Active Directory Certificate Services
-    items:
-    - name: A Certification Authority can't use a certificate template
-      href: ./active-directory/ca-cant-use-certificate-template.md
-    - name: Back up recovery agent EFS private key
-      href: ./active-directory/back-up-recovery-agent-efs-private-key.md
-    - name: Can't select CA-compatible certificate templates
-      href: ./active-directory/cannot-select-windows-server-2016-ca-compatible-certificate-templates.md
-    - name: Can't share files with multiple EFS certificates
-      href: ./active-directory/cant-share-files-multiple-efs-certificates.md
-    - name: Certificate Services doesn't start
-      href: ./active-directory/certificate-services-not-start.md
-    - name: Certificate Services may not start on a computer
-      href: ./active-directory/cs-cant-start-computer.md
-    - name: Change expiration date of certificates issued by CA
-      href: ./active-directory/change-certificates-expiration-date.md
-    - name: DPAPI MasterKey backup failures
-      href: ./active-directory/dpapi-masterkey-backup-failures.md
-    - name: Error 0x800706ba during certificate enrollment
-      href: ./active-directory/error-0x800706ba-certificate-enrollment.md
-    - name: Export Root Certification Authority Certificate
-      href: ./active-directory/export-root-certification-authority-certificate.md
-    - name: Find the name of Enterprise Root CA server
-      href: ./active-directory/find-name-enterprise-root-ca-server.md
-    - name: How to reinstall CA role
-      href: ./active-directory/uninstall-reinstall-ca-role.md
-    - name: How to remove manually Enterprise Windows Certificate Authority
-      href: ./active-directory/delete-enterprise-windows-certificate-authority.md
-    - name: Move a certification authority to another server
-      href: ./active-directory/move-certification-authority-to-another-server.md
-    - name: Move Certificate Server database and log files
-      href: ./active-directory/move-certificate-server-database-log-files.md
-    - name: Required trusted root certificates
-      href: ./active-directory/trusted-root-certificates-are-required.md
-    - name: Set different validity period for subordinate CA
-      href: ./active-directory/set-enterprise-subordinate-ca-validity-period.md
-    - name: Set up certificate-based authentication across forests without trust for a web server
-      href: ./active-directory/set-up-certificate-based-authentication-across-forest-without-trust.md
-    - name: Valid root CA certificates are untrusted
-      href: ./active-directory/valid-root-ca-certificates-untrusted.md
-    - name: Version 3 templates don't appear in certificate web enrollment
-      href: ./active-directory/cng-templates-not-appear-certificate-web-enrollment.md
+    items: []
   - name: Active Directory database issues and domain controller boot failures
     items:
     - name: '"access is denied" error when replicating AD directory service'
@@ -199,8 +159,6 @@ items:
       href: ./active-directory/windows-app-cant-start.md
   - name: Active Directory replication
     items:
-    - name: 'Troubleshooting guidance: Active Directory replication'
-      href: ./active-directory/troubleshoot-adreplication-guidance.md
     - name: Active Directory changes don't replicate
       href: ./active-directory/active-directory-changes-not-replicate.md
     - name: Active Directory replication error 1256
@@ -468,11 +426,7 @@ items:
     - name: Error when you run AD Installation Wizard
       href: ./active-directory/error-when-you-run-ad-installation-wizard.md
   - name: Transport Layer Security (TLS)
-    items:
-    - name: Disable TLS 1.0 and 1.1 and force the use of TLS 1.2
-      href: ./active-directory/disable-tls-1-1dot1-mbam-servers.md
-    - name: Errors when applications try to connect to SQL Server
-      href: ./active-directory/apps-forcibly-closed-tls-connection-errors.md
+    items: []
   - name: User, computer, group, and object management
     items:
     - name: '"This property is limited to 64 values" error'
@@ -1071,8 +1025,6 @@ items:
       href: ./group-policy/information-group-policy-preferences-events.md
   - name: Sysvol access or replication issues
     items:
-    - name: Change the default permissions on GPOs
-      href: ./group-policy/change-default-permissions-on-gpo.md
     - name: DFSR SYSVOL fails to migrate or replicate
       href: ./group-policy/dfsr-sysvol-fails-migrate-replicate.md
     - name: Errors when you run GPMC
@@ -1287,6 +1239,8 @@ items:
       href: ./networking/delayed-write-failed-error-data-lost.md
     - name: '%HOMEPATH%, %HOMESHARE%, and %HOMEDRIVE% variables are resolved incorrectly'
       href: ./networking/variables-resolved-incorrectly.md
+    - name: Can't create a domain-based DFS namespace
+      href: ./networking/cant-create-domain-based-dfs-namespace.md
     - name: Can't use different credentials for a network share
       href: ./networking/cannot-connect-to-network-share.md
     - name: Computer Management shows clients sessions slow
@@ -2791,62 +2745,8 @@ items:
       href: ./windows-security/mbam-setup-fails.md
   - name: Certificates and public key infrastructure (PKI)
     items:
-    - name: '"Http error 500.0" when getting the NDES enrollment challenge password'
-      href: ./windows-security/http-error-500-internal-server-error.md
-    - name: Add SAN to secure LDAP certificate
-      href: ./windows-security/add-san-to-secure-ldap-certificate.md
-    - name: Approval required for certificate renewals
-      href: ./windows-security/approval-required-certificate-renewals-autoenrollment.md
-    - name: CA doesn't publish certificates in trusted domain
-      href: ./windows-security/cannot-publish-certificate-trusted-domain.md
-    - name: Can't request certificate from web enrollment pages
-      href: ./windows-security/no-certificate-templates-be-found.md
-    - name: Can't request certificate using web enrollment
-      href: ./windows-security/cannot-request-certificate-with-web-enrollment.md
-    - name: Certutil -view command doesn't return issued certificates
-      href: ./windows-security/certutil-view-not-return-issued-certificate.md
-    - name: Client computers can't encrypt a file in a domain
-      href: ./windows-security/recovery-policy-contains-invalid-recovery-certificate.md
-    - name: Clients can't authenticate with a server
-      href: ./windows-security/clients-cant-authenticate-server.md
-    - name: Crypt32 8 events continuously reported
-      href: ./windows-security/crypt32-event-8.md
-    - name: Error 0x80090022 when CEP/CES autoenrollment using KBR fails
-      href: ./windows-security/error-0x80090022-nte-silent-context-cep-ces-autoenrollment-kbr-fails.md
-    - name: Event ID 4107 or Event ID 11 is logged
-      href: ./windows-security/event-id-4107-or-event-id-11-is-logged.md
-    - name: How to decommission Windows enterprise CA and remove related objects
-      href: ./windows-security/decommission-enterprise-certification-authority-and-remove-objects.md
     - name: How to expand the maximum extension size limit at AD CS
       href: ./windows-security/expand-maximum-extension-size-limit-ad-cs.md
-    - name: How to import third-party CAs into Enterprise NTAuth store
-      href: ./windows-security/import-third-party-ca-to-enterprise-ntauth-store.md
-    - name: How to install imported certificates on a Web server
-      href: ./windows-security/install-imported-certificates.md
-    - name: KDC_ERR_C_PRINCIPAL_UNKNOWN in S4U2Self request
-      href: ./windows-security/kdc-err-c-principal-unknown-s4u2self-request.md
-    - name: Removal of US Federal Common Policy from Microsoft Trusted Root Store
-      href: ./windows-security/microsoft-trusted-root-store-removal-of-us-federal-common-policy.md
-    - name: Remote Desktop server certificates are renewed two times daily
-      href: ./windows-security/remote-desktop-server-certificates-renewed.md
-    - name: Renewal of Enrollment Agent certificate fails
-      href: ./windows-security/renewal-of-enrollment-agent-certificate-fail.md
-    - name: Requirements for domain controller certificates from a third-party CA
-      href: ./windows-security/requirements-domain-controller.md
-    - name: Restrict cryptographic algorithms and protocols
-      href: ./windows-security/restrict-cryptographic-algorithms-protocols-schannel.md
-    - name: Root CA certificate doesn't appear
-      href: ./windows-security/root-ca-certificate-doesnt-appear.md
-    - name: Security certificate validation fails
-      href: ./windows-security/secured-website-certificate-validation-fails.md
-    - name: Superseded Certificate Templates and impact on user’s AD store
-      href: ./windows-security/superseded-certificate-templates-impact-user-ad-store.md
-    - name: Support for Suite B cryptographic algorithms
-      href: ./windows-security/description-support-suite-b-cryptographic-ipsec.md
-    - name: Use and troubleshoot CryptAcquireContext function
-      href: ./windows-security/cryptacquirecontext-troubleshooting.md
-    - name: Use Cipher.exe to overwrite deleted data
-      href: ./windows-security/use-cipher-to-overwrite-deleted-data.md
   - name: Domain and forest trusts
     items:
     - name: '"The server is not operational" error when adding a trusted domain user'
@@ -2986,9 +2886,7 @@ items:
     - name: Apply predefined security templates
       href: ./windows-security/apply-predefined-security-templates.md
   - name: Smart card logon
-    items:
-    - name: Enabling smart card logon
-      href: ./windows-security/enabling-smart-card-logon-third-party-certification-authorities.md
+    items: []
   - name: Windows LAPS
     items:
     - name: 'Troubleshooting guidance: Windows LAPS'
@@ -3004,15 +2902,15 @@ items:
   - name: TroubleShootingScript toolset (TSS)
     items:
     - name: Introduction to TroubleShootingScript toolset (TSS)
-      href: ../windows-client/windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tss.md?context=/troubleshoot/windows-server/context/context
+      href: ../windows-client/windows-tss/introduction-to-troubleshootingscript-toolset-tss.md?context=/troubleshoot/windows-server/context/context
     - name: Gather information for Active Directory replication issues
-      href: ../windows-client/windows-troubleshooters/gather-information-using-tss-ad-replication.md?context=/troubleshoot/windows-server/context/context
+      href: ../windows-client/windows-tss/gather-information-using-tss-ad-replication.md?context=/troubleshoot/windows-server/context/context
     - name: Gather information for deployment-related issues
-      href: ../windows-client/windows-troubleshooters/gather-information-using-tss-deployment.md?context=/troubleshoot/windows-server/context/context
+      href: ../windows-client/windows-tss/gather-information-using-tss-deployment.md?context=/troubleshoot/windows-server/context/context
     - name: Gather information for Group Policy issues
-      href: ../windows-client/windows-troubleshooters/gather-information-using-tss-group-policy.md?context=/troubleshoot/windows-server/context/context
+      href: ../windows-client/windows-tss/gather-information-using-tss-group-policy.md?context=/troubleshoot/windows-server/context/context
     - name: Gather information for user experience-related issues
-      href: ../windows-client/windows-troubleshooters/gather-information-using-tss-user-experience.md?context=/troubleshoot/windows-server/context/context
+      href: ../windows-client/windows-tss/gather-information-using-tss-user-experience.md?context=/troubleshoot/windows-server/context/context
 - name: Installing Windows Updates, features, or roles
   items:
   - name: Installing Windows Updates, features, or roles
@@ -3252,6 +3150,134 @@ items:
     - name: Error when you configure a server with Server Manager
       href: ./setup-upgrade-and-drivers/fail-to-configure-server-using-server-manager.md
     - name: Mitigation for AMD Family 17h Models 30h-3Fh/Rome Erratum 1474
-      href: ./setup-upgrade-and-drivers/mitigation-for-amd-family-17h-models-30h-3fh-rome-erratum-1474.md  
+      href: ./setup-upgrade-and-drivers/mitigation-for-amd-family-17h-models-30h-3fh-rome-erratum-1474.md
     - name: ERROR_PATH_NOT_FOUND error when performing an in-place upgrade
       href: ./setup-upgrade-and-drivers/error-path-not-found-upgrading-windows-server-2019.md
+- name: Certificates and Public Key Infrastructure (PKI)
+  items:
+  - name: Smart card logon
+    items:
+    - name: Can't select CA-compatible certificate templates
+      href: ./certificates-and-public-key-infrastructure-pki/cannot-select-windows-server-2016-ca-compatible-certificate-templates.md
+    - name: Required trusted root certificates
+      href: ./certificates-and-public-key-infrastructure-pki/trusted-root-certificates-are-required.md
+    - name: Move Certificate Server database and log files
+      href: ./certificates-and-public-key-infrastructure-pki/move-certificate-server-database-log-files.md
+    - name: A Certification Authority can't use a certificate template
+      href: ./certificates-and-public-key-infrastructure-pki/ca-cant-use-certificate-template.md
+    - name: Can't share files with multiple EFS certificates
+      href: ./certificates-and-public-key-infrastructure-pki/cant-share-files-multiple-efs-certificates.md
+    - name: Back up recovery agent EFS private key
+      href: ./certificates-and-public-key-infrastructure-pki/back-up-recovery-agent-efs-private-key.md
+    - name: Version 3 templates don't appear in certificate web enrollment
+      href: ./certificates-and-public-key-infrastructure-pki/cng-templates-not-appear-certificate-web-enrollment.md
+    - name: Move a certification authority to another server
+      href: ./certificates-and-public-key-infrastructure-pki/move-certification-authority-to-another-server.md
+    - name: Find the name of Enterprise Root CA server
+      href: ./certificates-and-public-key-infrastructure-pki/find-name-enterprise-root-ca-server.md
+    - name: How to reinstall CA role
+      href: ./certificates-and-public-key-infrastructure-pki/uninstall-reinstall-ca-role.md
+    - name: Certificate Services may not start on a computer
+      href: ./certificates-and-public-key-infrastructure-pki/cs-cant-start-computer.md
+    - name: Error 0x800706ba during certificate enrollment
+      href: ./certificates-and-public-key-infrastructure-pki/error-0x800706ba-certificate-enrollment.md
+    - name: How to remove manually Enterprise Windows Certificate Authority
+      href: ./certificates-and-public-key-infrastructure-pki/delete-enterprise-windows-certificate-authority.md
+    - name: Valid root CA certificates are untrusted
+      href: ./certificates-and-public-key-infrastructure-pki/valid-root-ca-certificates-untrusted.md
+    - name: Set up certificate-based authentication across forests without trust for a web server
+      href: ./certificates-and-public-key-infrastructure-pki/set-up-certificate-based-authentication-across-forest-without-trust.md
+    - name: Certificate Services doesn't start
+      href: ./certificates-and-public-key-infrastructure-pki/certificate-services-not-start.md
+    - name: Set different validity period for subordinate CA
+      href: ./certificates-and-public-key-infrastructure-pki/set-enterprise-subordinate-ca-validity-period.md
+    - name: Change expiration date of certificates issued by CA
+      href: ./certificates-and-public-key-infrastructure-pki/change-certificates-expiration-date.md
+    - name: Export Root Certification Authority Certificate
+      href: ./certificates-and-public-key-infrastructure-pki/export-root-certification-authority-certificate.md
+    - name: 'Troubleshooting guidance: Active Directory replication'
+      href: ./certificates-and-public-key-infrastructure-pki/troubleshoot-adreplication-guidance.md
+    - name: DPAPI MasterKey backup failures
+      href: ./certificates-and-public-key-infrastructure-pki/dpapi-masterkey-backup-failures.md
+    - name: Errors when applications try to connect to SQL Server
+      href: ./certificates-and-public-key-infrastructure-pki/apps-forcibly-closed-tls-connection-errors.md
+    - name: Disable TLS 1.0 and 1.1 and force the use of TLS 1.2
+      href: ./certificates-and-public-key-infrastructure-pki/disable-tls-1-1dot1-mbam-servers.md
+  - name: sap:certificate-root-update-program, csstroubleshoot
+    items:
+    - name: Crypt32 8 events continuously reported
+      href: ./certificates-and-public-key-infrastructure-pki/crypt32-event-8.md
+    - name: Event ID 4107 or Event ID 11 is logged
+      href: ./certificates-and-public-key-infrastructure-pki/event-id-4107-or-event-id-11-is-logged.md
+    - name: Removal of US Federal Common Policy from Microsoft Trusted Root Store
+      href: ./certificates-and-public-key-infrastructure-pki/microsoft-trusted-root-store-removal-of-us-federal-common-policy.md
+  - name: sap:certificate-enrollment, csstroubleshoot
+    items:
+    - name: Clients can't authenticate with a server
+      href: ./certificates-and-public-key-infrastructure-pki/clients-cant-authenticate-server.md
+    - name: Remote Desktop server certificates are renewed two times daily
+      href: ./certificates-and-public-key-infrastructure-pki/remote-desktop-server-certificates-renewed.md
+    - name: Add SAN to secure LDAP certificate
+      href: ./certificates-and-public-key-infrastructure-pki/add-san-to-secure-ldap-certificate.md
+    - name: How to install imported certificates on a Web server
+      href: ./certificates-and-public-key-infrastructure-pki/install-imported-certificates.md
+    - name: Certutil -view command doesn't return issued certificates
+      href: ./certificates-and-public-key-infrastructure-pki/certutil-view-not-return-issued-certificate.md
+    - name: Approval required for certificate renewals
+      href: ./certificates-and-public-key-infrastructure-pki/approval-required-certificate-renewals-autoenrollment.md
+  - name: sap:active-directory-certificate-services-adcs, csstroubleshoot
+    items:
+    - name: How to decommission Windows enterprise CA and remove related objects
+      href: ./certificates-and-public-key-infrastructure-pki/decommission-enterprise-certification-authority-and-remove-objects.md
+    - name: How to import third-party CAs into Enterprise NTAuth store
+      href: ./certificates-and-public-key-infrastructure-pki/import-third-party-ca-to-enterprise-ntauth-store.md
+    - name: CA doesn't publish certificates in trusted domain
+      href: ./certificates-and-public-key-infrastructure-pki/cannot-publish-certificate-trusted-domain.md
+    - name: Superseded Certificate Templates and impact on user’s AD store
+      href: ./certificates-and-public-key-infrastructure-pki/superseded-certificate-templates-impact-user-ad-store.md
+  - name: sap:certificates-and-public-key-infrastructure-pki, csstroubleshoot
+    items:
+    - name: Support for Suite B cryptographic algorithms
+      href: ./certificates-and-public-key-infrastructure-pki/description-support-suite-b-cryptographic-ipsec.md
+    - name: Requirements for domain controller certificates from a third-party CA
+      href: ./certificates-and-public-key-infrastructure-pki/requirements-domain-controller.md
+  - name: sap:network-device-enrollment-services-ndes, csstroubleshoot
+    items:
+    - name: '"Http error 500.0" when getting the NDES enrollment challenge password'
+      href: ./certificates-and-public-key-infrastructure-pki/http-error-500-internal-server-error.md
+    - name: Error 0x80090022 when CEP/CES autoenrollment using KBR fails
+      href: ./certificates-and-public-key-infrastructure-pki/error-0x80090022-nte-silent-context-cep-ces-autoenrollment-kbr-fails.md
+    - name: Renewal of Enrollment Agent certificate fails
+      href: ./certificates-and-public-key-infrastructure-pki/renewal-of-enrollment-agent-certificate-fail.md
+  - name: sap:kerberos-authentication, csstroubleshoot
+    items:
+    - name: KDC_ERR_C_PRINCIPAL_UNKNOWN in S4U2Self request
+      href: ./certificates-and-public-key-infrastructure-pki/kdc-err-c-principal-unknown-s4u2self-request.md
+  - name: sap:certificate-based-authentication, csstroubleshoot
+    items:
+    - name: Security certificate validation fails
+      href: ./certificates-and-public-key-infrastructure-pki/secured-website-certificate-validation-fails.md
+    - name: Root CA certificate doesn't appear
+      href: ./certificates-and-public-key-infrastructure-pki/root-ca-certificate-doesnt-appear.md
+    - name: Use and troubleshoot CryptAcquireContext function
+      href: ./certificates-and-public-key-infrastructure-pki/cryptacquirecontext-troubleshooting.md
+  - name: sap:certificate-web-enrollment-pages-cwe, csstroubleshoot
+    items:
+    - name: Can't request certificate from web enrollment pages
+      href: ./certificates-and-public-key-infrastructure-pki/no-certificate-templates-be-found.md
+    - name: Can't request certificate using web enrollment
+      href: ./certificates-and-public-key-infrastructure-pki/cannot-request-certificate-with-web-enrollment.md
+  - name: sap:encrypting-file-system-efs, csstroubleshoot
+    items:
+    - name: Client computers can't encrypt a file in a domain
+      href: ./certificates-and-public-key-infrastructure-pki/recovery-policy-contains-invalid-recovery-certificate.md
+    - name: Use Cipher.exe to overwrite deleted data
+      href: ./certificates-and-public-key-infrastructure-pki/use-cipher-to-overwrite-deleted-data.md
+  - name: sap:ssl-or-tls, csstroubleshoot
+    items:
+    - name: Restrict cryptographic algorithms and protocols
+      href: ./certificates-and-public-key-infrastructure-pki/restrict-cryptographic-algorithms-protocols-schannel.md
+  - name: sap:sap:smart-card-logon, csstroubleshoot
+    items:
+    - name: Enabling smart card logon
+      href: ./certificates-and-public-key-infrastructure-pki/enabling-smart-card-logon-third-party-certification-authorities.md

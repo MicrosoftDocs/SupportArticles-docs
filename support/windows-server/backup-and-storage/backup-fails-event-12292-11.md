@@ -2,8 +2,6 @@
 title: Backup fails with VSS event ID 12292 and 11
 description: Fixes an issue in which backup operation using Windows Server Backup or a third-party backup application fails.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

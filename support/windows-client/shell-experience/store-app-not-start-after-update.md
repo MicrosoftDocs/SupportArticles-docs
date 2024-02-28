@@ -2,8 +2,6 @@
 title: Microsoft Store app cannot open when one user installs an older version than the current version installed by another user
 description: Address an issue in which Windows 10 Apps won't open after update. This issue occurs when the App is used by multiple users.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

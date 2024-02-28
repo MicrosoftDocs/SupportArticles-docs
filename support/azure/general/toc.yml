@@ -70,6 +70,8 @@
     href: azure-batch-task-permission-issue.md
   - name: Batch task fails without stdout or stderr
     href: azure-batch-task-failure-no-stdout-stderr-log.md
+  - name: Identify resources created by Azure Batch
+    href: azure-batch-creates-network-resources.md
   - name: Use managed identities in a Batch account or a Batch pool
     href: use-managed-identities-azure-batch-account-pool.md
 

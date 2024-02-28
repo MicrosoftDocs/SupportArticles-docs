@@ -2,8 +2,6 @@
 title: Support for Active Directory over NAT
 description: Describes the support boundaries for Active Directory over NAT. Additionally, the scenario is not tested by Active Directory.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

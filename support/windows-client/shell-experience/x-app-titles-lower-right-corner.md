@@ -2,8 +2,6 @@
 title: App titles have an x in the lower-right corner
 description: Provides a solution to an issue in which the titles for Windows 8 and Windows 8.1 apps have an x in the lower-right corner.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -2,8 +2,6 @@
 title: Power management setting on a network adapter
 description: This article talks about the power management setting on a network adapter. Provides resolutions to disable the network adapter power management on a single computer.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -2,8 +2,6 @@
 title: Error 0x800f0922 when the Multipath I/O (MPIO) feature installation fails
 description: Resolves an issue in which the Multipath I/O (MPIO) feature installation fails.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

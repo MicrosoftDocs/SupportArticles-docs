@@ -2,8 +2,6 @@
 title: Task Manager shows incorrect CPU speed when Hyper-V is enabled
 description: Discusses that Windows Task Manager shows an incorrect CPU speed when Hyper-V is enabled in Windows Server 2012 R2. Provides a workaround.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
