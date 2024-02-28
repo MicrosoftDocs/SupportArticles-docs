@@ -1,7 +1,7 @@
 ---
-title: Troubleshooting the Windows user profile issue in SQL Server
-description: This article provides a resolution for issues that are caused by a corrupted Windows user profile in SQL Server.
-ms.date: 02/27/2024
+title: Troubleshooting Windows user profile issue in SQL Server
+description: This article addresses SQL Server consistent authentication issues related to the Windows user profile.
+ms.date: 02/28/2024
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
