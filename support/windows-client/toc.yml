@@ -259,6 +259,8 @@ items:
       href: ./networking/cannot-access-shared-folder-file-explorer.md
     - name: Error when accessing an administrative share
       href: ./networking/cannot-logon-access-administrative-share.md
+    - name: Error 2250 (NERR_UseNotFound) when LanmanWorkstation service fails to start
+      href: ./networking/lanmanworkstation-service-doesnt-start-error-2250.md
     - name: Mapped drive connection to network share is lost
       href: ./networking/mapped-drive-connection-to-network-share-lost.md
     - name: Mapped drives not available in elevated command prompt
