@@ -48,6 +48,8 @@ Microsoft Entra is rolling out support for TLS 1.3 for its endpoints to align wi
 
 TLS 1.3 support is being rolled out gradually to all Microsoft Entra endpoints, so the coverage might vary depending on your region and service. 
 
+:::image type="content" source="media/enable-support-tls-environment/ssl-report.png" alt-text="Screenshot that shows TLS 1.3 support in the SSL report.":::
+
 TLS 1.3 is the latest and most secure version, offering several benefits over TLS 1.2, such as: 
 
 - Faster connection establishment: TLS 1.3 reduces the number of round trips required to negotiate a secure connection, resulting in lower latency and better performance. 
