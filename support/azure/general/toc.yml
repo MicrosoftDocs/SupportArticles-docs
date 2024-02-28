@@ -3,30 +3,30 @@
 - name: Azure Automation
   items:
   - name: Automation modifications aren't reflected in the portal
-    href: modifications-not-reflect-portal.md
+    href: ../../automation/modifications-not-reflect-portal.md
   - name: Capture diagnostics information
-    href: automation-scripted-diagnostic-capture.md
+    href: ../../automation/automation-scripted-diagnostic-capture.md
   - name: Find-AzureRmResource returns error
-    href: find-azurermresource-fails.md
+    href: ../../automation/find-azurermresource-fails.md
   - name: How to capture debug stream
-    href: capture-debug-stream-automation-runbook.md
+    href: ../../automation/capture-debug-stream-automation-runbook.md
   - name: Reinstall Operations Management Suite Agent
-    href: reinstall-oms-agent-linux.md
+    href: ../../automation/reinstall-oms-agent-linux.md
 
 - name: Azure API Management
   items:
   - name: Troubleshooting overview
-    href: apim-troubleshooting-series.md
+    href: ../../api-mgmt/apim-troubleshooting-series.md
   - name: Blank response is returned
-    href: api-return-blank-response.md
+    href: ../../api-mgmt/api-return-blank-response.md
   - name: HTTP 404 and 500 status codes
-    href: soap-based-api-return-404-http-code.md
+    href: ../../api-mgmt/soap-based-api-return-404-http-code.md
   - name: Unauthorized errors (401)
-    href: unauthorized-errors-invoke-apis.md
+    href: ../../api-mgmt/unauthorized-errors-invoke-apis.md
   - name: Performance issues in API calls
-    href: performance-hit-api-calls.md
+    href: ../../api-mgmt/performance-hit-api-calls.md
   - name: HTTP 403 - Forbidden issues
-    href: request-throttling-http-403.md
+    href: ../../api-mgmt/request-throttling-http-403.md
 
 - name: Azure Stack Edge
   items:
@@ -41,67 +41,67 @@
 - name: Azure Virtual Network
   items:
   - name: Virtual Network troubleshooter
-    href: sdp3fdcb6045-5616-45b4-bb68-0bd11081c184-vnet.md
+    href: ../../virtual-network/sdp3fdcb6045-5616-45b4-bb68-0bd11081c184-vnet.md
 
 - name: Azure Service Fabric
   items:
   - name: Azure Service Fabric troubleshooter
-    href: fabric-logs.md
+    href: ../../service-fabric/fabric-logs.md
 
 - name: Azure Batch
   items:
   - name: Access to storage account is denied
-    href: access-denied-execute-azure-batch-job.md
+    href: ../../hpc-batch/access-denied-execute-azure-batch-job.md
   - name: AccountEncryptionKeyUnavailable error message
-    href: error-accountencryptionkeyunavailable.md
+    href: ../../hpc-batch/error-accountencryptionkeyunavailable.md
   - name: Batch node creation delays when restarting or reimaging
-    href: batch-node-creation-delay-restart-reimage.md
+    href: ../../hpc-batch/batch-node-creation-delay-restart-reimage.md
   - name: Batch node is stuck in Unusable state
-    href: azure-batch-node-unusable-state.md
+    href: ../../hpc-batch/azure-batch-node-unusable-state.md
   - name: Batch pool creation failure
-    href: azure-batch-pool-creation-failure.md
+    href: ../../hpc-batch/azure-batch-pool-creation-failure.md
   - name: Batch pool deletion failure
-    href: azure-batch-pool-deletion-failure.md
+    href: ../../hpc-batch/azure-batch-pool-deletion-failure.md
   - name: Batch task is stuck in Running state
-    href: azure-batch-task-stuck-in-running-state.md
+    href: ../../hpc-batch/azure-batch-task-stuck-in-running-state.md
   - name: Batch pool resizing failure
-    href: azure-batch-pool-resizing-failure.md
+    href: ../../hpc-batch/azure-batch-pool-resizing-failure.md
   - name: Batch tasks fail due to permission issues 
-    href: azure-batch-task-permission-issue.md
+    href: ../../hpc-batch/azure-batch-task-permission-issue.md
   - name: Batch task fails without stdout or stderr
-    href: azure-batch-task-failure-no-stdout-stderr-log.md
+    href: ../../hpc-batch/azure-batch-task-failure-no-stdout-stderr-log.md
   - name: Identify resources created by Azure Batch
-    href: azure-batch-creates-network-resources.md
+    href: ../../hpc-batch/azure-batch-creates-network-resources.md
   - name: Use managed identities in a Batch account or a Batch pool
-    href: use-managed-identities-azure-batch-account-pool.md
+    href: ../../hpc-batch/use-managed-identities-azure-batch-account-pool.md
 
 - name: CycleCloud
   items:
   - name: Error "Client secret key is expired"
-    href: invalid-client-secret.md
+    href: ../../hpc-cyclecloud/invalid-client-secret.md
   - name: Error "Invalid Azure credentials provided" 
-    href: error-invalid-azure-credentials-cycle-cloud.md
+    href: ../../hpc-cyclecloud/error-invalid-azure-credentials-cycle-cloud.md
 
 - name: HPC Pack
   items:
   - name: Failed Linux compute node agent extension installation
-    href: troubleshoot-install-failure-hpc-pack-linux-node-agent.md
+    href: ../../hcp-pack/troubleshoot-install-failure-hpc-pack-linux-node-agent.md
   - name: HPC jobs are stuck in canceling mode, and new jobs don't start
-    href: job-stuck-canceling-mode.md
+    href: ../../hcp-pack/job-stuck-canceling-mode.md
   - name: HPC Management Service fails to start after restoring database
-    href: hpc-management-service-not-start.md
+    href: ../../hcp-pack/hpc-management-service-not-start.md
   - name: HPC compute nodes aren't shown or are in error state
-    href: compute-node-not-shown-error-state.md
+    href: ../../hcp-pack/compute-node-not-shown-error-state.md
   - name: HPC node manager service unreachable
-    href: hpc-node-manager-service-unreachable-certificate.md
+    href: ../../hcp-pack/hpc-node-manager-service-unreachable-certificate.md
   - name: HPC Pack Excel offloading job is stalled
-    href: hpc-pack-excel-offloading-job-stalled.md
+    href: ../../hcp-pack/hpc-pack-excel-offloading-job-stalled.md
   - name: HPC reporting database connection problem
-    href: hpc-management-reporting-database-connection-issue.md
+    href: ../../hcp-pack/hpc-management-reporting-database-connection-issue.md
   - name: HPC reporting database permission problem
-    href: hpc-management-reporting-database-permission-problem.md
+    href: ../../hcp-pack/hpc-management-reporting-database-permission-problem.md
   - name: Error "No virtual network found" when you enter the application ID
-    href: error-no-virtual-network-found.md
+    href: ../../hcp-pack/error-no-virtual-network-found.md
 
 - name: General
   items:
