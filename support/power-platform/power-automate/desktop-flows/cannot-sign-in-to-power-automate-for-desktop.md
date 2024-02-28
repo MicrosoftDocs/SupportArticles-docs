@@ -1,8 +1,8 @@
 ---
 title: Can't sign in to Power Automate for desktop
 description: Helps troubleshoot sign-in related issues with Power Automate for desktop.
-ms.reviewer: pefelesk
-ms.date: 02/26/2024
+ms.reviewer: pefelesk, matp
+ms.date: 02/28/2024
 ms.subservice: power-automate-desktop-flows
 ---
 # Can't sign in to Power Automate for desktop
@@ -12,8 +12,6 @@ This article provides resolutions and workarounds for several sign-in related is
 ## Generic sign-in or sign-out issues
 
 Power Automate for desktop uses a file named *msalcache.bin3* to acquire tokens and authenticate users.
-
-### Resolution
 
 If you encounter errors while signing in or signing out, remove all the stored tokens by deleting this file.
 
@@ -89,7 +87,7 @@ To identify if another process is running:
    > [!NOTE]
    > Running this command should display a list of processes that use named pipes and the address they listen to.
 
-1. You need to identify whether there's a process displaying the `EbmV0LnBpcGU6Ly8rLw==` string and decode the process using the following link:
+1. Identify whether there's a process displaying the `EbmV0LnBpcGU6Ly8rLw==` string and decode the process using the following link:
 
     `https://www.base64decode.org/`
 
@@ -101,12 +99,8 @@ To identify if another process is running:
 
 ### Resolution
 
-To fix this issue, stop the process that causes the issue, or if it's an internal process, use a more specific endpoint, such as `net.pipe://localhost/something`.
+To fix this issue, stop the process identified in the previous step, or if it's an internal process, use a more specific endpoint, such as `net.pipe://localhost/something`.
 
-### Workaround 1
+- As an alternate, ensure Power Automate for desktop is closed (also from the taskbar), kill the process identified in the previous steps, and then try again to restart Power Automate for desktop.
 
-As an alternate, ensure Power Automate for desktop is closed (also from the taskbar), kill the process identified in the previous steps, and then try again to restart Power Automate for desktop.
-
-### Workaround 2
-
-If the preceding solutions don't work, specify Power Automate for desktop executables to run as administrator. This workaround might only solve the issue in some cases, and it causes a User Account Control (UAC) prompt to appear each time.
+- If the other solutions aren't possible, specify Power Automate for desktop executables to run as administrator. This workaround might only solve the issue in some cases, and it causes a User Account Control (UAC) prompt to appear each time.
