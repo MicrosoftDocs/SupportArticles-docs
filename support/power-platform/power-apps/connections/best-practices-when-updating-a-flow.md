@@ -100,14 +100,14 @@ The mitigation is to [turn on the flow](/power-automate/disable-flow#turn-on-a-f
 
 ### Cause
 
-This error means that the synchronous flow takes longer than two minutes to finish, causing it to time out.
+This error means that the synchronous flow takes longer than 120 seconds (2 minutes) to finish, causing it to time out. [Learn more about the timeout limit of an outbound synchronous request.](/power-automate/limits-and-config#request-limits)
 
 ### Mitigation steps
 
 > [!NOTE]
 > Make sure to perform the following steps in the source or development environment and update the solution. Once the solution is updated, import it to all the target or production environments.
 
-The mitigation is to [find which flow run is taking too long](/power-automate/fix-flow-failures#identify-specific-flow-runs) and optimize it to run in two minutes.
+The mitigation is to [find which flow run is taking too long](/power-automate/fix-flow-failures#identify-specific-flow-runs) and optimize it to run in two minutes using the resolutions provided in [Troubleshoot slow running flows](../flow-run-issues/troubleshoot-slow-running-flows.md).
 
 ## Error code "0x80040265" or "0x80048d0b" on Flow run
 
