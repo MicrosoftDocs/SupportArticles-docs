@@ -56,7 +56,7 @@ TLS 1.3 is the latest and most secure version, offering several benefits over TL
 
 Client operating system (OS) and applications that support TLS 1.3 will automatically use it to establish a secure connection to the Microsoft Entra service endpoints enabled for TLS 1.3. If the client doesn't support TLS 1.3, it should automatically fallback to TLS 1.2 to establish a secure connection. If you need more time to upgrade to TLS 1.3, you can continue to use TLS 1.2 by controlling the TLS negotiations through the client configuration.  
 
-For troubleshooting purposes, you can enable and disable TLS 1.3 by creating the following DWORD values under `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.3\Client`:
+For troubleshooting purposes, you can enable and disable TLS 1.3 by adding the following DWORD values under `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.3\Client`:
 
 - `DisabledByDefault`:00000001 
 - `Enabled`: 00000000
