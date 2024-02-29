@@ -265,7 +265,7 @@ You can verify the firewall configuration depending on the default instance or n
 A default instance typically runs on port 1433. Some installations also use a non-standard port (other than 1433) to run SQL instances. The firewall may block either port. To check the port number further:
 
 1. Determine the port your SQL instance is running on, see [Get the TCP port of the instance](#get-the-tcp-port-of-the-instance).
-
+1. 
     - If your SQL Server is configured to listen on port 1433, make sure that firewalls on the network between the client and the server allow traffic on that port. Review [Configure a Windows Firewall for Database Engine Access](/sql/database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access) and work with your network administrator to implement necessary solutions.
     - If your SQL Server default instance isn't using 1433, try to append the port number of SQL Server to the server name by using the format `<servername>,<portnumber>` and see whether it works. For example, your SQL instance name is *MySQLDefaultinstance* and it's running on port 2000. Specify the server name as *MySQLServer, 2000* and see whether it works.
         - If it doesn't work, it indicates the firewall is blocking the port. You can follow the instructions at [Configure a Windows Firewall for Database Engine Access](/sql/database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access) or work with your network administrator to add the port to the firewall exclusion list.
