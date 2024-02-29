@@ -64,11 +64,11 @@ To perform the configuration, follow these steps:
 
 #### Cause 2: Missing required user-defined routes (UDR)
 
-If the VNet to which the pool is associated enables forced tunneling, you must add a UDR that corresponds to the `BatchNodeManagement.\<region>` service tag in the region where your Batch account exists. Otherwise, the traffic between the Batch service and the nodes is blocked, and the compute nodes become unusable.
+If the VNet to which the pool is associated enables forced tunneling, you must add a UDR that corresponds to the `BatchNodeManagement.<region>` service tag in the region where your Batch account exists. Otherwise, the traffic between the Batch service and the nodes is blocked, and the compute nodes become unusable.
 
 #### Solution 2: Add UDR corresponding to BatchNodeManagement.\<region> service tag
 
-To resolve this issue, add a UDR that corresponds to the `BatchNodeManagement.\<region>` service tag in the region in which your Batch account exists. Then, set the **Next hop type** to **Internet**. For more information, see [User-defined routes for forced tunneling](/azure/batch/batch-virtual-network#user-defined-routes-for-forced-tunneling).
+To resolve this issue, add a UDR that corresponds to the `BatchNodeManagement.<region>` service tag in the region in which your Batch account exists. Then, set the **Next hop type** to **Internet**. For more information, see [User-defined routes for forced tunneling](/azure/batch/batch-virtual-network#user-defined-routes-for-forced-tunneling).
 
 To do this, follow these steps:
 
