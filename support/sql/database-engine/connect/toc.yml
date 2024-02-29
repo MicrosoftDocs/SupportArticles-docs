@@ -25,6 +25,8 @@ items:
   href: /sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error?context=/troubleshoot/sql/context/context
 - name: Troubleshooting linked server account mapping error in SQL Server
   href: linked-server-account-mapping-error.md
+- name: Troubleshooting the Named Pipes connections issue
+  href: named-pipes-connection-fail-no-windows-permission.md
 - name: Network-related or instance-specific error
   href: network-related-or-instance-specific-error-occurred-while-establishing-connection.md
 - name: Pre-reqs for connectivity troubleshooting
