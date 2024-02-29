@@ -5,27 +5,6 @@ items:
   href: cannot-generate-sspi-context-error.md
 - name: Consistent authentication connectivity issues
   href: consistent-authentication-connectivity-issues.md
-  items:
-   - name: Bad server name in connection string
-     href: bad-server-name-connection-string-error.md
-   - name: Corrupt user profile
-     href: corrupt-user-profile.md
-   - name: Determine if I am connected to SQL Server using Kerberos authentication
-     href: determine-the-authentication-type.md
-   - name: Domain trust
-     href: domain-trust-error.md
-   - name: Disjoint DNS Namespace
-     href: disjoint-dns-namespace-error.md
-   - name: Explicit SPN is misplaced
-     href: explicit-spn-is-misplaced.md
-   - name: Local security subsystem issues
-     href: local-security-subsystem-issues.md
-   - name: Named Pipes connections fail
-     href: named-pipes-connection-fail-no-windows-permission.md
-   - name: SQL logins are not enabled
-     href: sql-logins-are-not-enabled.md
-   - name: Wrong explicit SPN account
-     href: wrong-explicit-spn-account-connection-string.md
 - name: Consistent SQL network connectivity issue
   href: consistent-sql-network-connectivity-issue.md
 - name: How to determine if the authentication type is Kerberos

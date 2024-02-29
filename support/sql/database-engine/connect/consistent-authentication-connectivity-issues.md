@@ -1,7 +1,7 @@
 ---
 title: Introduction to consistent authentication issues
 description: This article introduces to consistent authentication issues, the types of error messages, and workarounds to troubleshoot various issues.
-ms.date: 02/22/2024
+ms.date: 02/29/2024
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes v-jayaramanp
@@ -161,8 +161,6 @@ This section lists various miscellaneous authentication issues.
 - [Wrong Internet zone](#wrong-internet-zone)
 - [IIS Authentication isn't allowed](#iis-authentication-isnt-allowed)
 
-## Scenarios and solutions (rethink about the title)
-
 ### Database is offline
 
 Refers to a scenario where a SQL Server database attempts to reconnect to a SQL Server authentication mode. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
@@ -240,7 +238,7 @@ This type of issue usually occurs when a service account is not allowed to assig
 
 ### Local security subsystem errors
 
-Refers to a consistent authentication issue related to the unresponsive LSASS. For more information, see [Troubleshoot LSASS errors with SQL Server authentication](local-security-subsystem-errors.md).
+Refers to a consistent authentication issue related to the unresponsive LSASS. For more information, see [Troubleshoot LSASS errors with SQL Server authentication](local-security-subsystem-issues.md).
 
 ### User profile is corrupt
 
@@ -344,7 +342,7 @@ When a user belongs to multiple groups, there can be authentication issues in Ke
 
 ### Expired tickets
 
-Refers to Kerberos tickets. Using expired Kerberos tickets can cause issues in authentication. For more information, see "Expired tickets".
+Refers to Kerberos tickets. Using expired Kerberos tickets can cause issues in authentication. For more information, see [Expired tickets](expired-tickets-issue.md).
 
 ### Clock skew is too high
 
