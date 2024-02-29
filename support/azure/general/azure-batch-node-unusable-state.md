@@ -1,7 +1,7 @@
 ---
 title: Azure Batch node gets stuck in the Unusable state because of configuration issues
 description: Provides solutions to issues that cause unusable Azure Batch nodes.
-ms.date: 02/27/2024
+ms.date: 02/29/2024
 author: SvenRandom
 ms.author: biny
 editor: v-jsitser
@@ -103,9 +103,9 @@ To resolve this issue, add a BatchNodeManagement.\<region> service tag in the ou
 
 For more information, see [Outbound security rules](/azure/batch/batch-virtual-network#outbound-security-rules).
 
-#### Cause 2: No public IP addresses
+#### Cause 2: Missing outbound access for Batch node management
 
-By default, all the nodes in an Azure Batch virtual machine configuration pool are assigned a public IP address. However, using the simplified node communication in the pool restricts access to the nodes and reduces the discoverability of the nodes from the internet, which cause unusable nodes.
+This cause is only applied to the scenario where the Batch pool doesn't have public IP addresses. By default, all the nodes in an Azure Batch virtual machine configuration pool are assigned with public IP addresses. However, users may provision the pool without public IP addresses to restrict access to these nodes and reduce the discoverability of these nodes from the internet. A pool with no public IP addresses doesn't have internet outbound access enabled by default, leading to network communication issue between Batch nodes and Batch node management service.
 
 #### Solution 2: Confiure a nodeManagement private endpoint
 
