@@ -17,6 +17,10 @@ items:
   items:
   - name: SQL Server 2022 build versions
     href: sqlserver-2022/build-versions.md
+  - name: Cumulative Update 12
+    items:
+    - name: Cumulative Update 12 (KB5033663)
+      href: sqlserver-2022/cumulativeupdate12.md
   - name: Cumulative Update 11
     items:
     - name: Cumulative Update 11 (KB5032679)
