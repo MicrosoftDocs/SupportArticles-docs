@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot connection issues after implementing cipher suite policies on a server
-description: This article provides symptoms and resolution for troubleshooting issues in connection that occur when implementing cipher suite policies.
+description: This article provides troubleshooting guidance for issues that occur after you implement cipher suite policies.
 ms.date: 01/08/2024
 author: prmadhes-msft
 ms.author: prmadhes
@@ -8,40 +8,47 @@ ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 
-# Issues in connection after implementing cipher suite policies on a server
+# "Client unable to establish connection" error after implementing cipher suite policies on a server
 
-This article helps you resolve the issues that might occur after you implement the cipher suite policies on a server.
+This article helps you resolve issues that occur after you implement cipher suite policies on a server.
 
 ## Symptoms
 
-> An existing connection was forcibly closed by the remote host. [SQLSTATE 42000] (Error 10054) OLE DB provider "" for linked server "DB name" returned message "Client unable to establish connection".
+After you implement cipher suite policies on a server, you receive the following error message:
 
-There are many causes for the error message.
+> An existing connection was forcibly closed by the remote host. [SQLSTATE 42000] (Error 10054) OLE DB provider "" for linked server "DB name" returned message "Client unable to establish connection."
 
-## Cause 1
+## Cause
 
-If a cipher suite doesn't include RC4, any attempt to use RC4 for encryption will fail. Similarly, if a cipher suite includes RC4 but one of the parties involved doesn't, the handshake will fail, and the connection won't be established.
+This error might occur for either of the following reasons.
 
-## Solution 1
+### Cause 1
 
-To resolve this issue, follow these steps:
+If a cipher suite doesn't include RC4, any attempt to use RC4 for encryption fails. Similarly, if a cipher suite includes RC4 but one of the parties involved doesn't, the handshake fails, and no connection is established.
 
-1. Check whether the `msds-supportedEncryptionType` property is set. When the property isn't set, it enables only RC4.
-1. Set the value as *28* to enable RC4, AES128, and AES256.
+### Cause 2
 
-## Cause 2
+There is a mismatch in TLS versions. This issue might occur if the client initiates the connection by using TLS 1.0. Modern cipher suites often don't support TLS 1.0 because they prefer more secure versions, such as TLS 1.2.
 
-There might be a mismatch in TLS version. This issue might occur when the client initiates the connection using TLS 1.0. Modern cipher suites often don't support TLS 1.0, preferring more secure versions like TLS 1.2.
+## Solution
 
-## Solution 2
+To resolve this issue, use the appropriate solution.
 
-To fix this problem, follow these steps:
+### Solution for Cause 1
 
-1. Make sure that the client's driver supports TLS 1.2 (update if necessary).
+Follow these steps:
 
+1. Check whether the `msds-supportedEncryptionType` property is set. If the property isn't set, only RC4 is enabled.
+1. Set the value for this property to *28* to enable RC4, AES128, and AES256. 
+
+### Solution for Cause 2
+
+Follow these steps:
+
+1. Make sure that the client driver supports TLS 1.2. If it doesn't, update the driver.
 1. Add the following ciphers to the local policy to support TLS 1.0 communication:
 
    - `TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA`
    - `TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA`
    - `TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA`
-   - `TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA`
+   - `TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA` 
