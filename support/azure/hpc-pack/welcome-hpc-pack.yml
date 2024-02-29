@@ -1,0 +1,43 @@
+### YamlMime:Landing
+
+title: Troubleshoot common issues with Azure HPC Pack
+summary: These articles explain how to determine, diagnose, and fix various issues that you might encounter when you use Azure HPC Pack. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+
+metadata:
+  title: Troubleshoot common issues with Azure HPC Pack
+  description: Documentation for troubleshooting common issues with Azure HPC Pack. # Required; article description that is displayed in search results. < 160 chars.
+  services: azure
+  ms.service: azure-common-issues-support #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.topic: landing-page # Required
+  author: genlin  #Required; your GitHub user alias, with correct capitalization.
+  ms.author: genli #Required; microsoft alias of author; optional team alias.
+  ms.date: 02/29/2024
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+# Card
+  - title: HPC Pack
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Failed Linux compute node agent extension installation
+            url: troubleshoot-install-failure-hpc-pack-linux-node-agent.md
+          - text: HPC jobs are stuck in canceling mode, and new jobs don't start
+            url: job-stuck-canceling-mode.md
+          - text: HPC Management Service fails to start after restoring database
+            url: hpc-management-service-not-start.md
+          - text: HPC compute nodes aren't shown or are in error state
+            url: compute-node-not-shown-error-state.md
+          - text: HPC node manager service unreachable
+            url: hpc-node-manager-service-unreachable-certificate.md
+          - text: HPC Pack Excel offloading job is stalled
+            url: hpc-pack-excel-offloading-job-stalled.md
+          - text: HPC reporting database connection problem
+            url: hpc-management-reporting-database-connection-issue.md
+          - text: HPC reporting database permission problem
+            url: hpc-management-reporting-database-permission-problem.md
+          - text: Error "No virtual network found" when you enter the application ID
+            url: error-no-virtual-network-found.md
+                                                                                 

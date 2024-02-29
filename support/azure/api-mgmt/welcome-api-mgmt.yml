@@ -1,0 +1,37 @@
+### YamlMime:Landing
+
+title: Troubleshoot common issues with Azure API Management
+summary: These articles explain how to determine, diagnose, and fix various issues that you might encounter when you use Azure API Management. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+
+metadata:
+  title: Troubleshoot common issues with Azure API Management
+  description: Documentation for troubleshooting common issues with Azure API Management. # Required; article description that is displayed in search results. < 160 chars.
+  services: azure
+  ms.service: azure-common-issues-support #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.topic: landing-page # Required
+  author: genlin  #Required; your GitHub user alias, with correct capitalization.
+  ms.author: genli #Required; microsoft alias of author; optional team alias.
+  ms.date: 02/29/2024
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+ # Card
+  - title: Azure API Management
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Azure API is returning blank response
+            url: api-return-blank-response.md
+          - text: HTTP 404 and 500 status codes
+            url: soap-based-api-return-404-http-code.md
+          - text: Performance issues in API calls
+            url: performance-hit-api-calls.md
+          - text: Request throttling problems and HTTP 403 - Forbidden issues
+            url: request-throttling-http-403.md
+          - text: Troubleshooting overview
+            url: apim-troubleshooting-series.md
+          - text: Unauthorized errors 401 while invoking APIs
+            url: unauthorized-errors-invoke-apis.md
+                                                                                
