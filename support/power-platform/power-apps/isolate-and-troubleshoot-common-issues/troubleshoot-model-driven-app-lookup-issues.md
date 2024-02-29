@@ -57,5 +57,5 @@ The Lookup control's search results are presented in the order that they are lis
 
 [General Power Apps troubleshooting strategies](isolate-common-issues.md)
 [Isolate issues in model-driven apps - Power Apps](isolate-model-app-issues.md)
-[Records aren't filtered in lookup for particular entity](/power-platform/power-apps/create-and-use-apps/lookup-does-not-filter-entity-records)
+<!-- TODO fix link [Records aren't filtered in lookup for particular entity](/power-platform/power-apps/create-and-use-apps/lookup-does-not-filter-entity-records) -->
 [Work with Quick Find’s search item limit (Microsoft Dataverse)](/power-apps/developer/data-platform/quick-find-limit)
