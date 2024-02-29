@@ -21,6 +21,8 @@ items:
     items:
     - name: Cumulative Update 12 (KB5033663)
       href: sqlserver-2022/cumulativeupdate12.md
+    - name: 'Improvement: Add Chinese collations that comply with the GB18030-2022 standard'
+      href: sqlserver-2022/add-chinese-collations-comply-gb18030-2022-standard.md
   - name: Cumulative Update 11
     items:
     - name: Cumulative Update 11 (KB5032679)
