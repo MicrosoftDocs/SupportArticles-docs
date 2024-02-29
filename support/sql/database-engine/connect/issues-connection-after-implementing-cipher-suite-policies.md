@@ -30,7 +30,7 @@ If a cipher suite doesn't include RC4, any attempt to use RC4 for encryption fai
 
 There is a mismatch in TLS versions. This issue might occur if the client initiates the connection by using TLS 1.0. Modern cipher suites often don't support TLS 1.0 because they prefer more secure versions, such as TLS 1.2.
 
-## Solution
+## Resolution
 
 To resolve this issue, use the appropriate solution.
 
