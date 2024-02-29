@@ -2,8 +2,8 @@
 title: Troubleshoot Dataverse client errors
 description: Provides resolutions for common client errors that occur in Microsoft Dataverse.
 ms.date: 11/09/2023
-author: hakhemic
-ms.author: hakhemic
+author: divkamath
+ms.author: dikamath
 ms.reviewer: jdaly
 manager: tasousa
 search.audienceType: 

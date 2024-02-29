@@ -1,17 +1,13 @@
 ---
 title: DirectAccess network performance in Windows
 description: Discuss a performance issue that affects DirectAccess networking.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: delhan, jheath, ajayps, thierdel, mihaipe, alvinm, kaushika
 ms.custom: sap:remote-access, csstroubleshoot
-ms.technology: networking
 ---
 # DirectAccess network performance in Windows
 

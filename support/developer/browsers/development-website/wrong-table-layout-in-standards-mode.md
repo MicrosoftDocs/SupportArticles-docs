@@ -3,7 +3,6 @@ title: Unexpected table height calculation in Internet Explorer standards mode
 description: Different table layout behaviors for standard and quirks mode in Internet Explorer.
 ms.date: 03/23/2020
 ms.reviewer: jeanr
-ms.technology: internet-explorer-development-website
 ---
 # Unexpected table height calculation in Internet Explorer standards mode
 

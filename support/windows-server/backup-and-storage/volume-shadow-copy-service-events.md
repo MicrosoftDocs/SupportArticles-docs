@@ -1,17 +1,13 @@
 ---
 title: Issues occur on computer running the Volume Shadow Copy Service
 description: Describes issues in which Event ID 8019, Event ID 20, Event ID 8193, or Event ID 12302 may be logged in the Application log. You may receive an Error 0x8004230F error message or an Error 0x80004002 error message.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:volume-shadow-copy-service-vss, csstroubleshoot
-ms.technology: windows-server-backup-and-storage
 ---
 # Various issues may occur on a Windows Server 2003-based computer that's running the Volume Shadow Copy Service
 

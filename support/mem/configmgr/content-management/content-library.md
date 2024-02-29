@@ -1,7 +1,7 @@
 ---
 title: Use content library explorer and transfer tool
 description: Describes how to use content library in Configuration Manager.
-ms.date: 03/30/2020
+ms.date: 12/05/2023
 ms.reviewer: kaushika
 ---
 # Content library in Configuration Manager

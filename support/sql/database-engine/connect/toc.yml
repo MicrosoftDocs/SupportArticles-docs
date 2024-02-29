@@ -3,8 +3,14 @@ items:
   href: resolve-connectivity-errors-overview.md
 - name: Cannot generate SSPI context
   href: cannot-generate-sspi-context-error.md
+- name: Can't use Kerberos unconstrained delegation in Windows
+  href: windows-prevents-unconstrained-delegation.md
+- name: Certificate validation failure
+  href: certificate-validation-failure.md
 - name: Consistent SQL network connectivity issue
   href: consistent-sql-network-connectivity-issue.md
+- name: How to determine if the authentication type is Kerberos
+  href: determine-the-authentication-type.md
 - name: Existing connection forcibly closed
   href: tls-exist-connection-closed.md
   items:
@@ -14,6 +20,8 @@ items:
   href: intermittent-periodic-authentication.md
 - name: Login failed for user
   href: /sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error?context=/troubleshoot/sql/context/context
+- name: Troubleshooting linked server account mapping error in SQL Server
+  href: linked-server-account-mapping-error.md
 - name: Network-related or instance-specific error
   href: network-related-or-instance-specific-error-occurred-while-establishing-connection.md
 - name: Pre-reqs for connectivity troubleshooting
@@ -24,6 +32,8 @@ items:
   href: timeout-expired-error.md
 - name: TLS 1.2 support for Microsoft SQL Server
   href: tls-1-2-support-microsoft-sql-server.md
+- name: Basic guide to upgrading SQL Server and clients to TLS 1.2
+  href: tls-upgrade-wkflow-1-2.md
 - name: Token-based server access validation failed
   href: cannot-connect-remotely.md
 - name: Untrusted certificate authority error

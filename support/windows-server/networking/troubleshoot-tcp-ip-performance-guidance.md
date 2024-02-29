@@ -1,17 +1,13 @@
 ---
 title: Guidance for troubleshooting TCP/IP performance
 description: Introduces general guidance for troubleshooting scenarios related to TCP/IP performance.
-ms.date: 07/13/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:tcpip-performance, csstroubleshoot
-ms.technology: networking
 ---
 # TCP/IP performance troubleshooting guidance
 

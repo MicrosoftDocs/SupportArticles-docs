@@ -1,17 +1,13 @@
 ---
 title: Specify startup policy processing wait time default value isn't honored
 description: Helps resolve an issue in which Group Policy fails to apply because the Specify startup policy processing wait time value isn't honored.
-author: Deland-Han
-ms.author: delhan
-ms.date: 11/23/2023
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, teterenc, dennhu, v-lianna
 ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot, ikb2lmc
-ms.technology: windows-server-group-policy
 ---
 # Group Policy fails to apply if default value of "Specify startup policy processing wait time" isn't honored
 

@@ -1,17 +1,13 @@
 ---
 title: Saving and restoring existing Windows shares
 description: Provides some information about saving and restoring existing Windows shares.
-ms.date: 12/31/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, peterlo
 ms.custom: sap:access-to-remote-file-shares-smb-or-dfs-namespace, csstroubleshoot
-ms.technology: windows-client-networking
 ---
 # Saving and restoring existing Windows shares
 

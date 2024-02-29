@@ -3,7 +3,6 @@ title: How to set IE to open Office documents in Office program
 description: Provides a resolution for an issue that occurs when you select an HTML link to a Microsoft Office file and Internet Explorer opens the file in Internet Explorer instead of opening the file in the appropriate Office program.
 ms.date: 10/13/2020
 ms.reviewer: davidg, JerryHa, ramakoni
-ms.technology: internet-explorer-administration
 ---
 # How to configure Internet Explorer to open Office documents in the appropriate Office program
 

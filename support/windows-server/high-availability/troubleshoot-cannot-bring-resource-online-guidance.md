@@ -1,17 +1,15 @@
 ---
 title: Can't bring a clustered resource online troubleshooting guidance
 description: Provides guidance for when a clustered resource fails to come online in a Windows-based failover cluster
-ms.date: 10/28/2022
+ms.date: 12/26/2023
 author: kaushika-msft
 ms.author: kaushika
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:cannot-bring-a-resource-online, csstroubleshoot
-ms.technology: windows-server-high-availability
 ---
 # Can't bring a clustered resource online troubleshooting guidance
 

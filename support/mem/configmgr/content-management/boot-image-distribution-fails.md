@@ -1,7 +1,7 @@
 ---
 title: Can't distribute a boot image to a PXE enabled DP
 description: Describes a behavior where you can't distribute a boot image to a PXE enabled distribution point if the NO_SMS_ON_DRIVE.SMS file is on the partition that's used to host the content library.
-ms.date: 06/15/2020
+ms.date: 12/05/2023
 ms.reviewer: kaushika, erinwi
 ---
 # Distribution of a boot image to a PXE enabled distribution point fails in Configuration Manager

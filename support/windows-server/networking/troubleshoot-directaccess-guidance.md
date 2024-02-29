@@ -1,17 +1,13 @@
 ---
 title: Guidance for troubleshooting DirectAccess
 description: Introduces general guidance for troubleshooting scenarios related to DirectAccess.
-ms.date: 07/13/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:directaccess, csstroubleshoot
-ms.technology: networking
 ---
 # DirectAccess troubleshooting guidance
 

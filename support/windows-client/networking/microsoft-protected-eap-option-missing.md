@@ -1,17 +1,13 @@
 ---
 title: Protected EAP (PEAP) option is missing
 description: Fixes an issue where Microsoft Protected EAP (PEAP) option is missing.
-ms.date: 09/14/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, prachank
 ms.custom: sap:wireless-networking-and-802.1x-authentication, csstroubleshoot
-ms.technology: windows-client-networking
 ---
 # Microsoft: Protected EAP (PEAP) option is missing while creating the Wireless Profile
 

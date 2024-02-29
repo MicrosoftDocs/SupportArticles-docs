@@ -1,17 +1,13 @@
 ---
 title: Virtual machine could not start because the hypervisor is not running error in Windows Server
 description: Fixes an issue that you're unable to start virtual machines because of incorrect DEP setting in BIOS.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: stevenxu, kaushika
 ms.custom: sap:virtual-machine-will-not-boot, csstroubleshoot
-ms.technology: hyper-v
 ---
 # Error in Windows Server: Virtual machine could not start because the hypervisor is not running
 

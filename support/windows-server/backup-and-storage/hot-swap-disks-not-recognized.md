@@ -1,17 +1,13 @@
 ---
 title: Hot-swap disks are not recognized
 description: Fixes an issue in which Windows Disk Management does not show hot-swap drives
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, aamelt, delhan
 ms.custom: sap:partition-and-volume-management, csstroubleshoot
-ms.technology: windows-server-backup-and-storage
 ---
 # Hot-swap disks are not recognized
 
