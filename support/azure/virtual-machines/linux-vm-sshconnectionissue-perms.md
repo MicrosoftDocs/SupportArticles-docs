@@ -24,8 +24,7 @@ sudo tail /var/log/messages
 ```
 
 ```output
-Starting sshd: /var/empty/sshd must be owned by root and not group or world-writable.  
-[FAILED]
+sshd: /var/empty/sshd must be owned by root and not group or world-writable.  
 ```
 
 ### [SUSE](#tab/slessymp)
