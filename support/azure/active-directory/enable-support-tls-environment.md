@@ -2,7 +2,7 @@
 
 title: Enable TLS 1.2 support as Microsoft Entra TLS 1.0/1.1 is deprecated
 description: This article describes how to enable support for TLS 1.2 in your environment, in preparation for upcoming Microsoft Entra TLS 1.0/1.1 deprecation.
-ms.date: 02/28/2024
+ms.date: 02/29/2024
 ms.reviewer: dahans, abizerh, v-leedennis, v-weizhu
 ms.service: active-directory
 ms.subservice: authentication
