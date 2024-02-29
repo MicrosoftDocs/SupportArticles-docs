@@ -11,6 +11,8 @@ items:
   href: consistent-sql-network-connectivity-issue.md
 - name: How to determine if the authentication type is Kerberos
   href: determine-the-authentication-type.md
+- name: Windows user profile can't be loaded in SQL Server
+  href: corrupt-user-profile.md
 - name: Existing connection forcibly closed
   href: tls-exist-connection-closed.md
 - name: Troubleshooting KRB_AP_ERR_TKT_EXPIRED in Kerberos tickets
