@@ -26,7 +26,7 @@ In a pool that's associated with a subnet of a VNet, all nodes are in the **Unus
 
 :::image type="content" source="media/azure-batch-node-unusable-state/node-state-shows-unusable.png" alt-text="Screenshot that shows the state of a node.":::
 
-The symptom above means that the Batch service is unable to communicate with the nodes. In most cases, it's caused by VNet configuration issues. The following sections describe the two most common causes.
+The preceding symptom means that the Batch service is unable to communicate with the nodes. In most cases, it's caused by VNet configuration issues. The following sections describe the two most common causes.
 
 #### Cause 1: Missing required network security group (NSG) rules
 
@@ -47,11 +47,11 @@ To resolve this issue, configure the NSG to have the required inbound and outbou
 To perform the configuration, follow these steps:
 
 1. Navigate to the pool from the Azure portal.
-1. Check the pool properties to obtain the virtual network and subnet names.
+1. Check the pool properties to obtain the VNet and subnet names.
 
     :::image type="content" source="media/azure-batch-node-unusable-state/check-vnet-subnet-name.png" alt-text="Screenshot of the network configuration." lightbox="media/azure-batch-node-unusable-state/check-vnet-subnet-name.png":::
 
-1. Navigate to the virtual network. On the virtual network page, select **Settings** > **Subnets**. In the list of subnets, select the expected subnet. In the subnet pane, locate the NSG.
+1. Navigate to the VNet. On the VNet page, select **Settings** > **Subnets**. In the list of subnets, select the expected subnet. In the subnet pane, locate the NSG.
 
     :::image type="content" source="media/azure-batch-node-unusable-state/check-nsg-associated-to-subnet.png" alt-text="Screenshot of the subnet information." lightbox="media/azure-batch-node-unusable-state/check-nsg-associated-to-subnet.png":::
 
@@ -64,20 +64,20 @@ To perform the configuration, follow these steps:
 
 #### Cause 2: Missing required user-defined routes (UDR)
 
-If the virtual network to which the pool is associated enables forced tunneling, you must add a UDR that corresponds to the BatchNodeManagement.\<region> service tag in the region where your Batch account exists. Otherwise, the traffic between the Batch service and the nodes is blocked, and the compute nodes become unusable.
+If the VNet to which the pool is associated enables forced tunneling, you must add a UDR that corresponds to the `BatchNodeManagement.\<region>` service tag in the region where your Batch account exists. Otherwise, the traffic between the Batch service and the nodes is blocked, and the compute nodes become unusable.
 
 #### Solution 2: Add UDR corresponding to BatchNodeManagement.\<region> service tag
 
-To resolve this issue, add a UDR that corresponds to the BatchNodeManagement.\<region> service tag in the region in which your Batch account exists. Then, set the **Next hop type** to **Internet**. For more information, see [User-defined routes for forced tunneling](/azure/batch/batch-virtual-network#user-defined-routes-for-forced-tunneling).
+To resolve this issue, add a UDR that corresponds to the `BatchNodeManagement.\<region>` service tag in the region in which your Batch account exists. Then, set the **Next hop type** to **Internet**. For more information, see [User-defined routes for forced tunneling](/azure/batch/batch-virtual-network#user-defined-routes-for-forced-tunneling).
 
 To do this, follow these steps:
 
 1. Navigate to the pool from the Azure portal.
-1. Check the pool properties to obtain the virtual network and subnet names.
+1. Check the pool properties to obtain the VNet and subnet names.
 
     :::image type="content" source="media/azure-batch-node-unusable-state/check-vnet-subnet-name.png" alt-text="Screenshot of the network configuration." lightbox="media/azure-batch-node-unusable-state/check-vnet-subnet-name.png":::
 
-1. Navigate to the virtual network. On the virtual network page, select **Settings** > **Subnets**. In the list of subnets, select the route table that's associated with the expected subnet.
+1. Navigate to the VNet. On the VNet page, select **Settings** > **Subnets**. In the list of subnets, select the route table that's associated with the expected subnet.
 
     :::image type="content" source="media/azure-batch-node-unusable-state/select-route-table.png" alt-text="Screenshot that shows the subnet and its route table.":::
 
@@ -97,19 +97,19 @@ When applying a VNet, make sure that the outbound request from the internal node
 
 #### Solution 1: Add an outbound service tag BatchNodeManagement.\<region>
 
-To resolve this issue, add a BatchNodeManagement.\<region> service tag in the outbound NSG rule.
+To resolve this issue, add the `BatchNodeManagement.\<region>` service tag in the outbound NSG rule.
 
-:::image type="content" source="media/azure-batch-node-unusable-state/block-outbound-nsg.png" alt-text="Screenshot that shows the NSG rule that blocks the outbound request" lightbox="media/azure-batch-node-unusable-state/block-outbound-nsg.png":::
+:::image type="content" source="media/azure-batch-node-unusable-state/block-outbound-nsg.png" alt-text="Screenshot that shows the NSG rule that blocks the outbound request." lightbox="media/azure-batch-node-unusable-state/block-outbound-nsg.png":::
 
 For more information, see [Outbound security rules](/azure/batch/batch-virtual-network#outbound-security-rules).
 
 #### Cause 2: Missing outbound access for Batch node management
 
-This cause is only applied to the scenario where the Batch pool doesn't have public IP addresses. By default, all the nodes in an Azure Batch virtual machine configuration pool are assigned with public IP addresses. However, users may provision the pool without public IP addresses to restrict access to these nodes and reduce the discoverability of these nodes from the internet. A pool with no public IP addresses doesn't have internet outbound access enabled by default, leading to network communication issue between Batch nodes and Batch node management service.
+This cause only applies to the scenario where the Batch pool doesn't have public IP addresses. By default, all the nodes in an Azure Batch virtual machine configuration pool are assigned public IP addresses. However, users may provision the pool without public IP addresses to restrict access to these nodes and reduce the discoverability of these nodes on the internet. A pool with no public IP addresses doesn't have internet outbound access enabled by default, leading to network communication issues between Batch nodes and the Batch node management service.
 
-#### Solution 2: Confiure a nodeManagement private endpoint
+#### Solution 2: Configure a node management private endpoint
 
-Check your network setting through navigating to your Batch account and selecting **Settings** > **Networking**. If the **Selected network** or **Disable** option is enabled, but you only configure a batchAcount private endpoint or don't configure any private endpoint, configure a nodeManagement private endpoint to ensure the internal communication between nodes.
+Check your network settings by navigating to your Batch account and selecting **Settings** > **Networking**. If the **Selected network** or **Disable** option is enabled, but you only configure a `batchAcount` private endpoint or don't configure any private endpoint, configure a `nodeManagement` private endpoint to ensure the internal communication between nodes.
 
 #### Cause 3: A bad DNS configuration prevents the node from communicating with the node management endpoint
 
@@ -130,7 +130,7 @@ Verify that the automatic private DNS integration is configured correctly by fol
 
    :::image type="content" source="media/azure-batch-node-unusable-state/private-endpoint-dns-configuration-automatic.png" alt-text="Azure portal screenshot of the DNS configuration page (auto config version) of the node management private endpoint." lightbox="media/azure-batch-node-unusable-state/private-endpoint-dns-configuration-automatic.png":::
 
-1. Make sure that this private DNS zone is linked to the same or peered virtual network that the batch pool uses.
+1. Make sure that this private DNS zone is linked to the same or peered VNet that the batch pool uses.
 
    :::image type="content" source="media/azure-batch-node-unusable-state/dnszone-vnetlink.png" alt-text="Azure portal screenshot of the Virtual network links page of the private DNS zone." lightbox="media/azure-batch-node-unusable-state/dnszone-vnetlink.png":::
 </details>
@@ -202,8 +202,8 @@ Verify whether the custom DNS is configured correctly and points to the private 
 
    | Issue scenario | Troubleshooting guidance |
    |--|--|
-   | The result of the nslookup command isn't as expected. | Check the custom DNS setting of the virtual network of the batch pool. Values to verify include the following items: <ul> <li>The private DNS zone name</li> <li>The custom DNS server</li> <li>Any other services or components that might affect the DNS name resolution</li> </ul> |
-   | The result of the nslookup command is expected, but the result of the `Test-NetConnection` cmdlet or `nc` command is unexpected. | Check whether any service exists (such as Network Security Group and Firewall) that can block the outgoing connectivity from the virtual network. |
+   | The result of the nslookup command isn't as expected. | Check the custom DNS setting of the VNet of the batch pool. Values to verify include the following items: <ul> <li>The private DNS zone name</li> <li>The custom DNS server</li> <li>Any other services or components that might affect the DNS name resolution</li> </ul> |
+   | The result of the nslookup command is expected, but the result of the `Test-NetConnection` cmdlet or `nc` command is unexpected. | Check whether any service exists (such as Network Security Group and Firewall) that can block the outgoing connectivity from the VNet. |
 </details>
 
 For more information, see [Troubleshoot node management private endpoints](/azure/batch/simplified-node-communication-pool-no-public-ip#using-nodemanagement-private-endpoint).
