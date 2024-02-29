@@ -31,10 +31,10 @@ If the fetchXML is incorrect then there may be a problem with:
 
   1. The Quick Find view and/or the view being searched on, such as
       - missing search fields, or
-      - missing presence of the primary field, or
-      - the view includes a filter that is blocking or otherwise altering results.
+      - missing the primary field, or
+      - the view includes a filter that is blocking results.
   2. A client script is modifying the control's behavior with API such as [`addPreSearch`](/power-apps/developer/model-driven-apps/clientapi/reference/controls/addpresearch) or [`addCustomFilter`](/power-apps/developer/model-driven-apps/clientapi/reference/controls/addcustomfilter).
-  3. The user does not have correct permissions for some of entities. Note that this won't necessarily be apparent in the network response other than an omission of results.
+  3. The user does not have correct permissions for some of entities. Note that this won't necessarily be apparent in the network response other than with an omission of results.
 
 If the fetchXML is correct but the data returned is incorrect then the issue is on the server, such as a misconfigured relationship.
 
