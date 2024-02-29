@@ -97,7 +97,7 @@ When applying a VNet, you must configure the outbound request from the internal 
 
 #### Solution 1: Add an outbound service tag BatchNodeManagement.\<region>
 
-To resolve this issue, add the `BatchNodeManagement.\<region>` service tag in the outbound NSG rule.
+To resolve this issue, add the `BatchNodeManagement.<region>` service tag in the outbound NSG rule.
 
 :::image type="content" source="media/azure-batch-node-unusable-state/block-outbound-nsg.png" alt-text="Screenshot that shows the NSG rule that blocks the outbound request." lightbox="media/azure-batch-node-unusable-state/block-outbound-nsg.png":::
 
