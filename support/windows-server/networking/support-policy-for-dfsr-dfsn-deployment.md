@@ -2,8 +2,6 @@
 title: Unsupported DFS-R and DFS-N deployment scenario
 description: This article describes a DFS-R and DFS-N deployment scenario that Microsoft does not support.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

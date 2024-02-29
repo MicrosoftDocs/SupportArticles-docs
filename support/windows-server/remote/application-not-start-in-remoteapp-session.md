@@ -2,8 +2,6 @@
 title: Application doesn't start in TS RemoteApp session
 description: Describes the issue in which you cannot run an application that relies on the Explorer.exe file in a TS RemoteApp session. Two workarounds are offered that use Group Policy settings and changes.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

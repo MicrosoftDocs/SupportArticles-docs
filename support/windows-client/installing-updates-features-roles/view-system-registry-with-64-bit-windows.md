@@ -2,8 +2,6 @@
 title: View registry keys with 64-bit versions of Windows
 description: Describes how to view the Windows registry by using 64-bit versions of Windows.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -2,8 +2,6 @@
 title: Error when you try to install a shared network printer
 description: Describes an issue in which you can't install a shared network printer locally on a Windows Server 2003-based or a Windows XP SP1-based computer.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

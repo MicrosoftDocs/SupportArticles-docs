@@ -2,8 +2,6 @@
 title: Registry changes in x64-based versions of Windows
 description: Describes some of the important registry changes that have been made in the x64 Edition version of the Windows operating system.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -2,8 +2,6 @@
 title: Clustering information on IP address failover
 description: Describes the clustering information on IP address failover.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

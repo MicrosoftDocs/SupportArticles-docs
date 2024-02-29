@@ -2,8 +2,6 @@
 title: Registry values for Process Control parameters
 description: Describes the parameters for the Process Control service components.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

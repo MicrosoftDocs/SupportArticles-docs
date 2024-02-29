@@ -2,8 +2,6 @@
 title: Error when you log on to Terminal Server client
 description: Provides a solution to an issue that occurs when you log on to a computer running Terminal Server Edition.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

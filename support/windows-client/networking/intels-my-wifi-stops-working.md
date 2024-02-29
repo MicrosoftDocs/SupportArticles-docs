@@ -2,8 +2,6 @@
 title: Intel's My WiFi Technology stops working
 description: Fixes an issue where Intel's My WiFi Technology stops working after your computer resumes from sleep or hibernate.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

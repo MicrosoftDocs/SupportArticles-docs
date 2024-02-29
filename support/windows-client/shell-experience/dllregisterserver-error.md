@@ -2,8 +2,6 @@
 title: Fail to register a DLL by using Regsvr32.exe
 description: Provides a solution to a 0x80070005 error that occurs when you register a DLL by using Regsvr32.exe.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

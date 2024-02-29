@@ -2,8 +2,6 @@
 title: Microsoft support for Single Label Domains
 description: Provides information about Microsoft's support policy about Single Label Domains (SLD).
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

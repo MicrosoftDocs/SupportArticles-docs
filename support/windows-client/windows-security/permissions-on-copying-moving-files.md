@@ -2,8 +2,6 @@
 title: Permissions when you copy and move files
 description: Describes how Windows Explorer handles file and folder permissions in different situations.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

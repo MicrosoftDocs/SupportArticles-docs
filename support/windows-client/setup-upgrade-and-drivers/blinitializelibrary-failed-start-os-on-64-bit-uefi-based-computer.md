@@ -2,8 +2,6 @@
 title: Error (BlInitializeLibrary failed XXX) when you install or start an operating system on a 64-bit UEFI-based computer
 description: Works around a problem that occurs when you install or start an operating system on a 64-bit UEFI-based computer.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

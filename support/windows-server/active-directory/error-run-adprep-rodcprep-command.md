@@ -2,8 +2,6 @@
 title: Error when running the Adprep /rodcprep command in Windows Server 2008
 description: The Adprep /rodcprep command isn't completed successfully. The reason is that the infrastructure master for one or more active directory Non-Domain Naming Contexts (NDNCs) isn't reachable. A resolution is provided.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

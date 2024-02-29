@@ -2,8 +2,6 @@
 title: Time synchronization may not succeed
 description: Describes a problem that may occur when you try to use a non-Windows NTP time server as a time source. Provides steps to let you synchronize to the non-Windows NTP server.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

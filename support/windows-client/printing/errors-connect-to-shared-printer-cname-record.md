@@ -2,8 +2,6 @@
 title: Errors when you connect to a shared printer by using a CNAME record
 description: This article describes two issues that occur when you connect to a shared printer by using a CNAME record
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

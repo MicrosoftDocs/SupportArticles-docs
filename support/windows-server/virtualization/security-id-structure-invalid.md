@@ -2,8 +2,6 @@
 title: The security ID structure is invalid
 description: Starting an imported virtual machine under Hyper-V sometimes fails with an error message that states.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

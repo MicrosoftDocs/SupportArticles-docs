@@ -2,8 +2,6 @@
 title: Disable or enable Dr. Watson program
 description: Describes how to disable and re-enable the Dr. Watson program for Windows.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

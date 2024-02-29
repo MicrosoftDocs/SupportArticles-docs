@@ -2,8 +2,6 @@
 title: Periodic SMBClient event ID 30818 is logged on Windows Server 2012 R2
 description: Resolves an issue in which event ID 30818 is logged when the RDMA connections fail back to TCP. This issue occurs in Windows Server 2012 R2.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

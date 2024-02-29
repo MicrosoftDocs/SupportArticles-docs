@@ -2,8 +2,6 @@
 title: Enable Windows Installer logging
 description: This article describes how to enable Windows Installer logging.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -2,8 +2,6 @@
 title: CAP in failover cluster doesn't come online
 description: Fixes an issue where a Client Access Point (CAP) in a failover cluster does not come online as expected.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

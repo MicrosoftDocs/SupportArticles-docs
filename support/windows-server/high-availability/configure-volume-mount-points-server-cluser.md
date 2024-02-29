@@ -2,8 +2,6 @@
 title: Configure volume mount points on a server cluster
 description: Describes how to configure volume mount points on a server cluster.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

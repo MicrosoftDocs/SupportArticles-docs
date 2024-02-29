@@ -2,8 +2,6 @@
 title: Use Telnet to test port 3389 functionality
 description: Describes how to use Telnet to test port 3389 functionality.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
