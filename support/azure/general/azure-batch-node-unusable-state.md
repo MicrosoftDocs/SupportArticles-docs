@@ -93,7 +93,7 @@ Using the simplified node communication mode can simplify the VNet configuration
 
 #### Cause 1: Missing outbound NSG rules
 
-When applying a VNet, make sure that the outbound request from the internal node to the external is properly configured. Otherwise, the node will become unusable.
+When applying a VNet, you must configure the outbound request from the internal node to the external correctly. Otherwise, the node will become unusable.
 
 #### Solution 1: Add an outbound service tag BatchNodeManagement.\<region>
 
