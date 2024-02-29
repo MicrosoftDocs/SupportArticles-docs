@@ -1,7 +1,7 @@
 ---
-title: Troubleshooting issues when SQL Server agent can't start
+title: Troubleshooting errors when SQL Server agent can't start
 description: This article provides symptoms, cause, and resolution for troubleshooting the error that occurs when the SQL Servent agent can't start.
-ms.date: 01/03/2024
+ms.date: 02/29/2024
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
@@ -28,6 +28,8 @@ The `DisabledByDefault` and `Enabled` registry values in the `[HKEY_LOCAL_MACHIN
 
 ## Resolution
 
+To resolve these errors, follow these steps:
+
 1. Enable the TLS 1.2 for SQL Server communication as follows:
 
    `[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2]`
@@ -41,3 +43,7 @@ The `DisabledByDefault` and `Enabled` registry values in the `[HKEY_LOCAL_MACHIN
 1. Navigate to `[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Client]`.
 
 1. Set the `DisabledByDefault` to *0* and `Enabled` to *1* for both client and server.
+
+## See also
+
+[An existing connection was forcibly closed by the remote host (OS error 10054)](tls-exist-connection-closed.md)
