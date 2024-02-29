@@ -1,7 +1,7 @@
 ---
 title: Microsoft Entra Connect services don't start
 description: Describes an issue that prevents Microsoft Entra Connect services from starting. Provides a resolution.
-ms.date: 05/26/2022
+ms.date: 02/28/2024
 ms.reviewer: riantu, nualex, reviei, v-leedennis
 ms.service: active-directory
 ms.subservice: enterprise-users
@@ -54,7 +54,7 @@ Make group policy changes if necessary so that the ADSync service account can lo
 
 ## Solution 2: Troubleshoot error messages in directory synchronization logging
 
-You can also try to find and fix the problem by scanning the application and system events in the directory synchronization logs. For more information, see [Troubleshoot other error messages](installation-configuration-wizard-errors.md#troubleshoot-other-error-messages).
+You can also try to find and fix the problem by scanning the application and system events in the directory synchronization logs. All directory synchronization logging is viewable in Event Viewer. For details, see [Troubleshoot other error messages](installation-configuration-wizard-errors.md#troubleshoot-other-error-messages).
 
 ## Solution 3: Reinstall directory synchronization
 
