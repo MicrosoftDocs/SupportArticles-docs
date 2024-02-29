@@ -29,7 +29,7 @@ If the Lookup's search results are missing items or include unexpected items, in
 
 If the fetchXML is incorrect, then there is a problem with:
 
-  1. The Quick Find view or the view being searched may be misconfigured:
+  1. The Quick Find view or the view being searched is misconfigured:
       - Missing search fields.
       - Missing the primary field.
       - Using a filter that is blocking results.
