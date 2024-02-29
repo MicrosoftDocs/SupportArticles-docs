@@ -262,7 +262,7 @@ You can verify the firewall configuration depending on the default instance or n
 
 ### Default instance of SQL Server
 
-A default instance typically runs on port 1433. Some installations also use a non-standard port (other than 1433) to run SQL instances. The firewall may block either port. To check the port number further:
+A default instance typically runs on port 1433. Some installations also use a non-standard port (other than 1433) to run SQL instances. The firewall may block either port. To check the port number further, follow these steps:
 
 1. Determine the port your SQL instance is running on, see [Get the TCP port of the instance](#get-the-tcp-port-of-the-instance).
 1. 
