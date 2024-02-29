@@ -1,9 +1,7 @@
 ---
 title: Troubleshoot SCECLI 1202 events
 description: Describes ways to troubleshoot and to resolve SCECLI 1202 events.
-ms.date: 04/28/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

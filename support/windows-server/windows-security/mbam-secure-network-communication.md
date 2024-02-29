@@ -1,9 +1,7 @@
 ---
 title: MBAM and Secure Network Communication
 description: Discusses how to configure Microsoft's BitLocker Administration and Monitoring (MBAM) with Secure Network Communication.
-ms.date: 11/15/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

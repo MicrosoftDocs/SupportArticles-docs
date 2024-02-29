@@ -1,9 +1,7 @@
 ---
 title: Active Directory Replication fails with Win32 error 1753
 description: Describes an issue where AD operations fail with Win32 error 1753 (There are no more endpoints available from the endpoint mapper).
-ms.date: 05/10/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -1,9 +1,7 @@
 ---
 title: Finding the current Active Directory Schema Version
 description: Describes how to find the current Schema Version.
-ms.date: 12/26/2022
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

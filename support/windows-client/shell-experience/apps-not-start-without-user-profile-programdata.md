@@ -1,9 +1,7 @@
 ---
 title: Microsoft Store Apps can't start
 description: Provides a solution to an issue where Microsoft Store Apps can't start after the Users directory, a user profile, or the ProgramData directory is moved from their default locations.
-ms.date: 09/17/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

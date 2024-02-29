@@ -1,9 +1,7 @@
 ---
 title: Failed to schedule Software Protection
 description: Describes an issue that triggers event 16385 in a Windows Server 2012 environment. Occurs when the Network Service account doesn't have permissions to the SoftwareProtectionPlatform folder.
-ms.date: 04/28/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

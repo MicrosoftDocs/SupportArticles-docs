@@ -1,9 +1,7 @@
 ---
 title: VSS event 8193 when you restart the Cryptographic Services service after you install the DHCP role
 description: Describes an issue where event ID 8193 occurs when you restart the Cryptographic Services service if the DHCP role has installed on a computer that is running Windows Server.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

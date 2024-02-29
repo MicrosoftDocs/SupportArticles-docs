@@ -1,9 +1,7 @@
 ---
 title: Sysprep fails with Microsoft Store apps
 description: Describes an issue that occurs when you remove a provisioned Windows Store app or update a Windows Store app by using the Windows Store and then running sysprep on the machine.
-ms.date: 04/28/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

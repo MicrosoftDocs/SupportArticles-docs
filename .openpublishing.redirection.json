@@ -9609,6 +9609,291 @@
       "source_path": "support/azure/general/pending-service-account-password-expiration.md",
       "redirect_url": "/answers/tags/205/azure-stack-hub",
       "redirect_document_id": false
+    },
+    {
+       "source_path": "support/azure/azure-kubernetes/operationisnotallowed.md",
+       "redirect_url": "/troubleshoot/azure/azure-kubernetes/operationnotallowed",
+       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/windows-security/code-31-device-manager-usbccid-smartcard-reader-problem.md",
+      "redirect_url": "/troubleshoot/windows-client/certificates-and-public-key-infrastructure-pki/code-31-device-manager-usbccid-smartcard-reader-problem",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/windows-security/cannot-authenticate-incorrect-piv-smart-card-driver-update.md",
+      "redirect_url": "/troubleshoot/windows-client/certificates-and-public-key-infrastructure-pki/cannot-authenticate-incorrect-piv-smart-card-driver-update",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/windows-security/0x6-error-invalid-handle-multithreaded-application.md",
+      "redirect_url": "/troubleshoot/windows-client/certificates-and-public-key-infrastructure-pki/0x6-error-invalid-handle-multithreaded-application",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/user-profiles-and-logon/integrated-unblock-screen-not-displayed-smart-card-pin-blocked.md",
+      "redirect_url": "/troubleshoot/windows-client/certificates-and-public-key-infrastructure-pki/integrated-unblock-screen-not-displayed-smart-card-pin-blocked",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/user-profiles-and-logon/registry-keys-smart-card-pin-caching-options-not-available.md",
+      "redirect_url": "/troubleshoot/windows-client/certificates-and-public-key-infrastructure-pki/registry-keys-smart-card-pin-caching-options-not-available",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/active-directory/cannot-select-windows-server-2016-ca-compatible-certificate-templates.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/cannot-select-windows-server-2016-ca-compatible-certificate-templates",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/active-directory/trusted-root-certificates-are-required.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/trusted-root-certificates-are-required",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/active-directory/move-certificate-server-database-log-files.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/move-certificate-server-database-log-files",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/active-directory/ca-cant-use-certificate-template.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/ca-cant-use-certificate-template",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/active-directory/cant-share-files-multiple-efs-certificates.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/cant-share-files-multiple-efs-certificates",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/active-directory/back-up-recovery-agent-efs-private-key.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/back-up-recovery-agent-efs-private-key",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/active-directory/cng-templates-not-appear-certificate-web-enrollment.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/cng-templates-not-appear-certificate-web-enrollment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/active-directory/move-certification-authority-to-another-server.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/move-certification-authority-to-another-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/active-directory/find-name-enterprise-root-ca-server.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/find-name-enterprise-root-ca-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/active-directory/uninstall-reinstall-ca-role.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/uninstall-reinstall-ca-role",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/active-directory/cs-cant-start-computer.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/cs-cant-start-computer",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/active-directory/error-0x800706ba-certificate-enrollment.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/error-0x800706ba-certificate-enrollment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/active-directory/delete-enterprise-windows-certificate-authority.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/delete-enterprise-windows-certificate-authority",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/active-directory/valid-root-ca-certificates-untrusted.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/valid-root-ca-certificates-untrusted",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/active-directory/set-up-certificate-based-authentication-across-forest-without-trust.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/set-up-certificate-based-authentication-across-forest-without-trust",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/active-directory/certificate-services-not-start.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/certificate-services-not-start",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/active-directory/set-enterprise-subordinate-ca-validity-period.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/set-enterprise-subordinate-ca-validity-period",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/active-directory/change-certificates-expiration-date.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/change-certificates-expiration-date",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/active-directory/export-root-certification-authority-certificate.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/export-root-certification-authority-certificate",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/active-directory/troubleshoot-adreplication-guidance.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/troubleshoot-adreplication-guidance",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/active-directory/dpapi-masterkey-backup-failures.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/dpapi-masterkey-backup-failures",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/active-directory/apps-forcibly-closed-tls-connection-errors.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/apps-forcibly-closed-tls-connection-errors",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/active-directory/disable-tls-1-1dot1-mbam-servers.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/disable-tls-1-1dot1-mbam-servers",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/windows-security/crypt32-event-8.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/crypt32-event-8",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/windows-security/clients-cant-authenticate-server.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/clients-cant-authenticate-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/windows-security/decommission-enterprise-certification-authority-and-remove-objects.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/decommission-enterprise-certification-authority-and-remove-objects",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/windows-security/description-support-suite-b-cryptographic-ipsec.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/description-support-suite-b-cryptographic-ipsec",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/windows-security/remote-desktop-server-certificates-renewed.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/remote-desktop-server-certificates-renewed",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/windows-security/add-san-to-secure-ldap-certificate.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/add-san-to-secure-ldap-certificate",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/windows-security/install-imported-certificates.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/install-imported-certificates",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/windows-security/requirements-domain-controller.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/requirements-domain-controller",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/windows-security/certutil-view-not-return-issued-certificate.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/certutil-view-not-return-issued-certificate",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/windows-security/event-id-4107-or-event-id-11-is-logged.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/event-id-4107-or-event-id-11-is-logged",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/windows-security/http-error-500-internal-server-error.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/http-error-500-internal-server-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/windows-security/microsoft-trusted-root-store-removal-of-us-federal-common-policy.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/microsoft-trusted-root-store-removal-of-us-federal-common-policy",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/windows-security/import-third-party-ca-to-enterprise-ntauth-store.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/import-third-party-ca-to-enterprise-ntauth-store",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/windows-security/approval-required-certificate-renewals-autoenrollment.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/approval-required-certificate-renewals-autoenrollment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/windows-security/cannot-publish-certificate-trusted-domain.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/cannot-publish-certificate-trusted-domain",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/windows-security/kdc-err-c-principal-unknown-s4u2self-request.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/kdc-err-c-principal-unknown-s4u2self-request",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/windows-security/secured-website-certificate-validation-fails.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/secured-website-certificate-validation-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/windows-security/no-certificate-templates-be-found.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/no-certificate-templates-be-found",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/windows-security/error-0x80090022-nte-silent-context-cep-ces-autoenrollment-kbr-fails.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/error-0x80090022-nte-silent-context-cep-ces-autoenrollment-kbr-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/windows-security/superseded-certificate-templates-impact-user-ad-store.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/superseded-certificate-templates-impact-user-ad-store",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/windows-security/recovery-policy-contains-invalid-recovery-certificate.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/recovery-policy-contains-invalid-recovery-certificate",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/windows-security/use-cipher-to-overwrite-deleted-data.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/use-cipher-to-overwrite-deleted-data",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/windows-security/renewal-of-enrollment-agent-certificate-fail.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/renewal-of-enrollment-agent-certificate-fail",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/windows-security/root-ca-certificate-doesnt-appear.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/root-ca-certificate-doesnt-appear",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/windows-security/cryptacquirecontext-troubleshooting.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/cryptacquirecontext-troubleshooting",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/windows-security/cannot-request-certificate-with-web-enrollment.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/cannot-request-certificate-with-web-enrollment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/windows-security/restrict-cryptographic-algorithms-protocols-schannel.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/restrict-cryptographic-algorithms-protocols-schannel",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/windows-security/enabling-smart-card-logon-third-party-certification-authorities.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/enabling-smart-card-logon-third-party-certification-authorities",
+      "redirect_document_id": true
     }
   ]
 }

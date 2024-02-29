@@ -1,9 +1,7 @@
 ---
 title: Error when checking domain object property
 description: Describes an issue in which ADAC fails on the domain object property. A workaround is provided.
-ms.date: 09/24/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

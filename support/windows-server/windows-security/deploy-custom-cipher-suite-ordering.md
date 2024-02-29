@@ -1,9 +1,7 @@
 ---
 title: How to deploy custom cipher suite ordering in Windows Server 2016
 description: Describes how to deploy custom cipher suite ordering in Windows Server 2016.
-ms.date: 03/04/2022
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -1,9 +1,7 @@
 ---
 title: Kerberos Unsupported etype error
 description: Describes how to resolve a configuration problem that prevents clients from authenticating when they attempt to access resources in a trusted domain.
-ms.date: 11/10/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

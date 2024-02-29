@@ -1,9 +1,7 @@
 ---
 title: Firewall profile doesn't switch to Domain when you use a third-party VPN
 description: Fixes an issue in which Windows Firewall profile doesn't switch to Domain when you connect to domain network by using a third-party VPN client.
-ms.date: 09/21/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

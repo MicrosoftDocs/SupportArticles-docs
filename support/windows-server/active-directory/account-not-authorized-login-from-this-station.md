@@ -1,9 +1,7 @@
 ---
 title: Account is not authorized to login
 description: Discusses an issue where an error occurs when you try to join a Windows 2000-based computer to a Microsoft Windows NT 4.0-based domain.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
