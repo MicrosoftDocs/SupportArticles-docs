@@ -27,7 +27,7 @@ Issues with this operation usually fall into one of these categories:
 
 If the Lookup's search results are missing items or include unexpected items, inspect the fetchXML of the outgoing network request that the control makes.
 
-If the fetchXML is incorrect, then there is a problem with:
+If the fetchXML is incorrect, then there's a problem with:
 
   1. The Quick Find view or the view being searched is misconfigured:
       - Missing search fields.
@@ -50,7 +50,7 @@ If the [`addCustomView`](/power-apps/developer/model-driven-apps/clientapi/refer
 
 ## Result fields are incorrect
 
-The Lookup control's search results are presented in the order that they're listed for that entity's Lookup view, with blank fields being replaced with the next non-blank field. A multi-entity Lookup can have results with different orders of fields if the entities' Lookup views have different field combinations.
+The Lookup control's search results are presented in the order that they're listed for that entity's Lookup view, with blank fields being replaced with the next nonblank field. A multi-entity Lookup can have results with different orders of fields if the entities' Lookup views have different field combinations.
 
 ## See also
 
