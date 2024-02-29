@@ -1,8 +1,5 @@
 - name: Welcome
   href: welcome-virtual-network.yml
-
-- name: Azure Virtual Network
-  items:
-  - name: Virtual Network troubleshooter
-    href: sdp3fdcb6045-5616-45b4-bb68-0bd11081c184-vnet.md
+- name: Virtual Network troubleshooter
+  href: sdp3fdcb6045-5616-45b4-bb68-0bd11081c184-vnet.md
 

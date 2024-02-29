@@ -1,17 +1,14 @@
 - name: Welcome
   href: welcome-api-mgmt.yml
-
-- name: Azure API Management
-  items:
-  - name: Blank response is returned
-    href: api-return-blank-response.md
-  - name: HTTP 403 - Forbidden issues
-    href: request-throttling-http-403.md
-  - name: HTTP 404 and 500 status codes
-    href: soap-based-api-return-404-http-code.md
-  - name: Unauthorized errors (401)
-    href: unauthorized-errors-invoke-apis.md
-  - name: Performance issues in API calls
-    href: performance-hit-api-calls.md
-  - name: Troubleshooting overview
-    href: apim-troubleshooting-series.md
+- name: Blank response is returned
+  href: api-return-blank-response.md
+- name: HTTP 403 - Forbidden issues
+  href: request-throttling-http-403.md
+- name: HTTP 404 and 500 status codes
+  href: soap-based-api-return-404-http-code.md
+- name: Unauthorized errors (401)
+  href: unauthorized-errors-invoke-apis.md
+- name: Performance issues in API calls
+  href: performance-hit-api-calls.md
+- name: Troubleshooting overview
+  href: apim-troubleshooting-series.md
