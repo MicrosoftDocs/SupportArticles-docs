@@ -1,33 +1,4 @@
 ---
-title: Troubleshooting the explicit misplaced SPN issue 
-description: This article provides cause, symptoms, and workarounds for troubleshooting the explicit SPN is missing issue.
-ms.date: 12/06/2023
-author: Malcolm-Stewart
-ms.author: mastewa
-ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
-ms.custom: sap:Connection issues
----
-
-# Explicit misplaced SPN error
-
-This article helps you to resolve the explicit misplaced SPN error.
-
-## Symptoms
-
-If the SPN you specify in the connection string exists on a service account that's not used by SQL Server, you will receive an "SSPI Context" error message.
-
-## Solution
-
-To resolve this error, follow these steps:
-
-1. Use `SETSPN -L domain\svcacct` to list SPNs on the SQL Server service account.
-
-1. Use `SETSPN -Q spnName` to find what account the SPN is on. You can move the SPN using `SETSPN -D` and `SETSPN -A` or choose an SPN already in the correct account.
-
-## See also
-
-[Troubleshoot consistent authentication issues](consistent-authentication-connectivity-issues.md)
----
 title: Troubleshooting the explicit misplaced SPN issue in SQL Server
 description: This article provides a workaround for the SQL Server consistent authentication problem where the explicit SPN is missing.
 ms.date: 02/27/2024
@@ -59,7 +30,9 @@ The explicit misplaced SPNs can cause issues in Kerberos authentication and prev
 
 ## Resolution
 
-If you are experiencing explicit misplaced SPNs, you might have to create or re-create the SPN for the service. To create or re-create the SPN by using the `SETSPN` command, follow these steps:
+If you are experiencing explicit misplaced SPNs, you might have to create or re-create the SPN for the service.
+
+To create or re-create the SPN by using the `SETSPN` command, follow these steps:
 
 1. Run the `SETSPN -L domain\svcacct` command to list SPNs on the SQL Server service account.
 1. Run the `SETSPN -Q spnName` command to learn which service account the SPN is registered on.
