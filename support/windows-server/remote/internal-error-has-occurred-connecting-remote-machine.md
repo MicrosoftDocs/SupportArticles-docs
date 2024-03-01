@@ -24,6 +24,17 @@ When you use a direct Remote Desktop Protocol (RDP) connection to connect to a W
 >
 > To resolve this issue, disable the Windows Audio service on the remote machine and optionally on the source machine if necessary.
 
+## Verify if the error is related to network
+
+Use the following steps to check if you can connect to the server through the web console (for example, Hyper-V):
+
+1. Type *mstsc* in the **Run** box.
+2. In the **Remote Desktop Connection** application, type *localhost* in the **Computer** box and select **Connect**.
+
+If the error doesn't occur again, it's related to the network. Contact Microsoft Support for further assistance.
+
+If the error persists, the problem is on the server. Move to the next troubleshooting step.
+
 ## Verify if the error is related to the encryption negotiation
 
 The issue usually occurs when the source and destination machines negotiate the security protocols, ciphers, or other encryption configurations. To verify if the error is related to the encryption negotiation, run the following commands to adjust the `UserAuthentication` and `SecurityLayer` values to `0` on the affected machine:
@@ -80,7 +91,7 @@ Make sure the following services are running, as they're needed to generate the 
 - The Remote Desktop Configuration service (SessionEnv)
 
 > [!NOTE]
-> If any of the preceding services fails to start, check if there's a problem with its dependencies.
+> If any of the preceding services fails to start, check if there's a problem with its dependencies on system event logs from the Service Control Manager source.
 
 ### Check MachineKeys permissions
 
