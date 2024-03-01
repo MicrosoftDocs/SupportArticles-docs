@@ -1,7 +1,7 @@
 ---
 title: An internal error has occurred 
 description: Helps troubleshoot the "An internal error has occurred" error when connecting to a remote machine.
-ms.date: 02/22/2024
+ms.date: 03/01/2024
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
