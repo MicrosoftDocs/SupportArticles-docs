@@ -24,7 +24,7 @@ When you use a direct Remote Desktop Protocol (RDP) connection to connect to a W
 >
 > To resolve this issue, disable the Windows Audio service on the remote machine and optionally on the source machine if necessary.
 
-## Verify if the error is related to network
+## Verify if the error is related to the network
 
 Use the following steps to check if you can connect to the server through the web console (for example, Hyper-V):
 
