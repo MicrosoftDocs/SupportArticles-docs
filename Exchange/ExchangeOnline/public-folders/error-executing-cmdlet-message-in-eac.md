@@ -64,7 +64,7 @@ Note: The `HierarchyMailboxGuid` parameter value is all zeros if your organizati
 If the primary hierarchy public folder mailbox in your organization is in `HoldForMigration` mode, you see the following command output:
 
 ```output
-HierarchyMailboxGuid : \<non-zero GUID value\>
+HierarchyMailboxGuid : <non-zero GUID value>
 Type : InTransitMailboxGuid
 LockedForMigration : True
 ```
