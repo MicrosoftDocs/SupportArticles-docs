@@ -26,14 +26,14 @@ When you use a direct Remote Desktop Protocol (RDP) connection to connect to a W
 
 ## Verify if the error is related to the network
 
-Use the following steps to check if you can connect to the server through the web console (for example, Hyper-V):
+Use the following steps to check if you can connect to the server through a web console (for example, Hyper-V):
 
 1. Type *mstsc* in the **Run** box.
 2. In the **Remote Desktop Connection** application, type *localhost* in the **Computer** box and select **Connect**.
 
-If the error doesn't occur again, it's related to the network. Contact Microsoft Support for further assistance.
+If the error no longer occurs, it's related to the network. Contact Microsoft Support for further assistance.
 
-If the error persists, the problem is on the server. Move to the next troubleshooting step.
+If the error persists, the problem is with the server. Move to the next troubleshooting step.
 
 ## Verify if the error is related to the encryption negotiation
 
