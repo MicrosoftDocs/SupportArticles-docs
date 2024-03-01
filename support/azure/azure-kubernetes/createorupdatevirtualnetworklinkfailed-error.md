@@ -30,7 +30,7 @@ An AKS cluster update or upgrade operation fails and returns the following error
 
 This error happens in this scenario:
 
-- You disassociate the original AKS cluster's private Domain Name System (DNS) zone.
+- You disassociate the original private Domain Name System (DNS) zone of the AKS cluster.
 - You link a private DNS zone that has the same name as the original one, but that's located in a different resource group or subscription.
 
 That is why you see the same private DNS zone name *\<GUID>.privatelink.\<region>.azmk8s.io* in the error message. The first one is the new zone in the new resource group or subscription while the second one is the original one created with the AKS cluster.
@@ -40,7 +40,7 @@ That is why you see the same private DNS zone name *\<GUID>.privatelink.\<region
 
 To resolve this issue, follow these steps:
 
-1. Remove the link between the AKS cluster's VNET and the private DNS zone created in the wrong subscription.
+1. Remove the link between the AKS cluster's VNET and the private DNS zone created in the wrong resource group or subscription.
 1. Update the cluster by running the following command:
 
     ```azurecli
