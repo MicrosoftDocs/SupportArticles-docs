@@ -12,7 +12,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft 365 Apps for enterprise
-ms.date: 02/23/2024
+ms.date: 02/28/2024
 ---
 
 # The Office Feature Updates task
@@ -40,7 +40,7 @@ The Office Feature Updates task calls the "SDXHelper.exe" process in the backgro
 
 **Q1: When do updates for connected experiences happen?**
 
-**A1:** Each connected experience that supports dynamic updates publishes upgraded .appx files when changes are made and validated. This process is similar to application updates on mobile devices. The Office Feature Updates task runs approximately every 4 hours on each user's devices and downloads the the latest version of the package when available. The updates are installed silently and don't require user interaction. The installation also doesn't require Office to restart. The updates are applied at the next opportunity that doesn't interrupt the user's experience such as the next time the user invokes that feature within the application.  
+**A1:** Each connected experience that supports dynamic updates publishes upgraded .appx files when changes are made and validated. This process is similar to application updates on mobile devices. The Office Feature Updates task runs approximately every 4 hours on each user's devices and downloads the latest version of the package when available. The updates are installed silently and don't require user interaction. The installation also doesn't require Office to restart. The updates are applied at the next opportunity that doesn't interrupt the user's experience such as the next time the user invokes that feature within the application.  
 
 **Q2: Does this feature apply for Semi-Annual Enterprise Channel (SAEC) users?**
 
@@ -67,7 +67,9 @@ The Office Feature Updates task calls the "SDXHelper.exe" process in the backgro
 **A7:** Any applications and other settings that block connections to the supporting Content Delivery Network (CDN), such as firewalls, also block the delivery of feature updates to a user's machine. The URLs and IP addresses that the Office Feature Updates task needs to reach are listed along with other Microsoft domains and URLs in the information for ID 46 & 47 in the article [Microsoft 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide#microsoft-365-common-and-office-online&preserve-view=true). 
 
 **Q8: What specific changes and updates are made by .appx files?**
+
 **A8:** These packages contain updated versions of connected experiences in Office, such as Copilot for Word. The update mechanism allows those experiences to be updated and enhanced along with the cloud-based services that power them. The files contained within the package are stored locally to improve performance.
 
 **Q9: How do you ensure the integrity and security of these .appx files?**
+
 **A9:** Microsoft digitally signs each update package before publishing it. After a package is downloaded, that signature is validated before the contents of the package are made available on the local device. The signature ensures that the package wasn't manipulated after it was created. This verification also means that each individual file in the package matches the original published version.
