@@ -1,17 +1,13 @@
 ---
 title: Error when you open gpedit.msc
 description: Provides help to solve an issue where you receive an error (Resource $(string id="Win7Only)' referenced in attribute displayName could not be found) when you open gpedit.msc.
-ms.date: 10/10/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, Warrenw, ajayps
 ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
-ms.technology: windows-client-group-policy
 ---
 # Error when you open gpedit.msc: Resource $(string id="Win7Only)' referenced in attribute displayName could not be found
 

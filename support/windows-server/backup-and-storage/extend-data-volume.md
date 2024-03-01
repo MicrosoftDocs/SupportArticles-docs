@@ -1,17 +1,13 @@
 ---
 title: Extend a data volume
 description: Describes how to use the Diskpart.exe command prompt utility to extend a data volume in unallocated space. Also describes how to extend the boot partition.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:partition-and-volume-management, csstroubleshoot
-ms.technology: windows-server-backup-and-storage
 ---
 # Extend a data volume in Windows
 

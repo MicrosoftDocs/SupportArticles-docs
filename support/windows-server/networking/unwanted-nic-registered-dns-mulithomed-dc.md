@@ -1,17 +1,13 @@
 ---
 title: Avoid registering unwanted Network Interface Controllers (NICs) in Domain Name System (DNS)
 description: This article provides a solution to an issue where unwanted NICs are registered in DNS on a multihomed domain controller.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:dns, csstroubleshoot
-ms.technology: networking
 ---
 # Steps to avoid registering unwanted NICs in DNS on a multihomed domain controller
 

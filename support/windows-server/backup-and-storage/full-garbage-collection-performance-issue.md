@@ -1,17 +1,13 @@
 ---
 title: Full garbage collection causes performance issues
 description: Describes issues that are triggered by the data churn that is associated with full garbage collection jobs in Windows Server. Provides workarounds.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:deduplication, csstroubleshoot
-ms.technology: windows-server-backup-and-storage
 ---
 # Churn from Full Garbage Collection during deduplication can cause performance problems in Windows Server
 

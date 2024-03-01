@@ -1,17 +1,13 @@
 ---
 title: Audit use of NTLMv1 on a domain controller
 description: Steps to audit the usage of NTLMv1 on a Windows Server-based domain controller.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:legacy-authentication-ntlm, csstroubleshoot
-ms.technology: windows-server-security
 ---
 # Audit use of NTLMv1 on a Windows Server-based domain controller
 

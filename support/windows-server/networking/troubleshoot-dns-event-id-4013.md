@@ -1,17 +1,13 @@
 ---
 title: Troubleshoot DNS Event ID 4013
 description: Solves an issue that the DNS server can't load AD-integrated DNS zones.
-ms.date: 03/24/2022
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, nibinpm, arrenc,
 ms.custom: sap:dns, csstroubleshoot
-ms.technology: networking
 ---
 # Troubleshoot DNS Event ID 4013 (The DNS server was unable to load AD-integrated DNS zones)
 

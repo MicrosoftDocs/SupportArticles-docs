@@ -1,17 +1,13 @@
 ---
 title: 64-bit versions of Windows don't support 16-bit components, 16-bit processes, or 16-bit applications
 description: Discusses the lack of support for 16-bit components, 16-bit processes, or 16-bit applications in x64-based versions Windows.
-ms.date: 09/08/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:1st-party-applications, csstroubleshoot
-ms.technology: windows-client-application-compatibility
 ---
 # 64-bit versions of Windows don't support 16-bit components, 16-bit processes, or 16-bit applications
 

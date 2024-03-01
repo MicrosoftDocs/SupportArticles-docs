@@ -1,17 +1,13 @@
 ---
 title: Applications crash if another user logs off
 description: Discusses an issue in which applications crash or become unresponsive if another user logs off a Remote Desktop session in Windows Server 2012/R2 or Windows Server 2008/R2.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:remote-desktop-sessions, csstroubleshoot
-ms.technology: windows-server-rds
 ---
 # Applications crash or become unresponsive if another user logs off a Remote Desktop session in Windows Server 2012/R2 or Windows Server 2008/R2
 

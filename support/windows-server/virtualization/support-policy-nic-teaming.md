@@ -1,17 +1,13 @@
 ---
 title: Support Policy for NIC Teaming with Hyper-V
 description: Describes the Microsoft Support Policy for Network Adapter Teaming when used in conjunction with Hyper-V.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:installation-and-configuration-of-hyper-v, csstroubleshoot
-ms.technology: hyper-v
 ---
 # Microsoft support policy for NIC Teaming with Hyper-V
 

@@ -1,17 +1,13 @@
 ---
 title: Old user profiles aren't deleted as expected on system restart
 description: Helps resolve an issue in which the Delete user profile older than a specified number of days on system restart Group Policy is applied but doesn't take effect.
-ms.date: 11/23/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, dennhu, rahugoyal, v-lianna
 ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot, ikb2lmc
-ms.technology: windows-server-deployment
 ---
 # User profiles older than a specified number of days aren't deleted as expected on system restart
 

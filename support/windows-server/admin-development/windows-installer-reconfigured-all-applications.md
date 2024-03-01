@@ -1,17 +1,13 @@
 ---
 title: Windows Installer reconfigured all applications
 description: Fixes an error that indicates the Windows Installer reconfigured all installed applications.
-ms.date: 09/23/2022
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:windows-management-instrumentation-wmi, csstroubleshoot
-ms.technology: windows-server-administration-management-development
 ---
 # Event log message indicates that the Windows Installer reconfigured all installed applications
 

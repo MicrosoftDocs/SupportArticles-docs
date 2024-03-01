@@ -4,32 +4,23 @@ title: Windows Server troubleshooting # < 60 chars
 summary: This library provides solutions enabling IT Pros to troubleshoot and support Windows Server operating systems. To bring you the most accurate content, this library is managed by a team that works directly with the Windows product group and support professionals.
 metadata:
   title: Windows Server troubleshooting documentation
-  description: Documentation for troubleshooting common issues with Windows Server. # Required; article description that is displayed in search results. < 160 chars.
-  ms.prod: windows-server
+  description: Documentation for troubleshooting common issues with Windows Server. # Required; article description that is displayed in search results. < 160 chars.  
   ms.topic: landing-page # Required
   author: Deland-Han  #Required; your GitHub user alias, with correct capitalization.
   ms.author: delhan #Required; microsoft alias of author; optional team alias.
-  ms.date: 04/20/2021
+  ms.date: 12/26/2023
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
 landingContent:
 
  # Card
-  - title: Deployment
-    linkLists:      
-      - linkListType: how-to-guide
-        links:
-          - text: Deployment 
-            url: ./deployment/deployment-overview.md
-          - text: Windows Server End of Support (EoS FAQ)
-            url: ./windows-server-eos-faq/end-of-support-windows-server-2008-2008r2.yml
   - title: Identity and Access
     linkLists:      
       - linkListType: how-to-guide
         links:
           - text: Active Directory 
-            url: ./identity/active-directory-overview.md
+            url: ./active-directory/active-directory-overview.md
           - text: Group Policy 
             url: ./group-policy/group-policy-overview.md
           - text: UserProfiles and Logon 

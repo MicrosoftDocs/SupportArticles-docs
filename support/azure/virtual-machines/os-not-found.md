@@ -110,7 +110,7 @@ To fix this issue, stop (de-allocate) and restart the VM. Then, check whether th
 2. Run the following command line as an administrator, and then record the identifier of Windows Boot Loader (not Windows Boot Manager). The identifier is a 32-character code that resembles "xxxxxxxx-xxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx." You will use this identifier in the next step.
 
     ```console
-    bcdedit /store <Boot partition>:\boot\bcd /enum
+    bcdedit /store <Boot partition>:\boot\bcd /enum /v
     ```
 
 3. Repair the Boot Configuration data by running the following commands. Replace the placeholders by using the actual values.

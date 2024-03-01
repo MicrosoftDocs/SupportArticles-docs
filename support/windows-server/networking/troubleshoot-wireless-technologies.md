@@ -1,15 +1,13 @@
 ---
 title: Guidance for troubleshooting wireless technology issues
 description: Learn how to troubleshoot scenarios related to wireless technologies
-ms.date: 05/14/2022
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate
 ms.custom: sap:nps, csstroubleshoot
-ms.technology: networking
 keywords: wireless connection, dropped connection, wireless authentication
 ---
 

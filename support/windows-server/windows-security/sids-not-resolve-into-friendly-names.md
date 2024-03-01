@@ -1,17 +1,13 @@
 ---
 title: Some SIDs do not resolve into friendly names
 description: Some security identifiers that you see in access control lists or Security Audit reports do not resolve into friendly names. These may be capability SIDs.
-ms.date: 11/10/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-tea, v-jesits, johnbay
 ms.custom: sap:permissions-access-control-and-auditing, csstroubleshoot
-ms.technology: windows-server-security
 ---
 # Some SIDs do not resolve into friendly names
 

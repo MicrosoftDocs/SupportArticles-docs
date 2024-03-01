@@ -4,12 +4,11 @@ description: This article contains the release history for SQL Server 2017 runni
 author: rwestMSFT
 ms.author: randolphwest
 ms.reviewer: amitkh, vanto
-ms.date: 10/10/2023
+ms.date: 02/15/2024
+appliesto: SQL Server 2017
 ms.custom: linux-related-content
 ---
 # <a id="release-history"></a> Release history for SQL Server 2017 on Linux
-
-[!INCLUDE [sql-server-2017-linux](../../includes/applies-to/sql-server-2017-linux.md)]
 
 The following table lists the release history for [!INCLUDE [sql-server-2017](../../includes/versions/sql-server-2017.md)]. For release history on other editions, see the following articles:
 

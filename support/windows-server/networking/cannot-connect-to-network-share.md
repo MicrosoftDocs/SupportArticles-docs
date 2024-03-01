@@ -1,17 +1,13 @@
 ---
 title: Cannot use different credentials for a network share
 description: Describes an issue in which you receive error messages when you try to use user credentials to connect to a network share from a Windows-based computer. Workarounds are provided.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:access-to-remote-file-shares-smb-or-dfs-namespace, csstroubleshoot
-ms.technology: networking
 ---
 # The network folder specified is currently mapped using a different user name and password error
 

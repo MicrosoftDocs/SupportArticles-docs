@@ -1,17 +1,13 @@
 ---
 title: Error message and event ID 1289 when you try to create a cluster
 description: Fixes a problem that occurs when you try to create a cluster on a set of computers that have the Failover Clustering feature installed.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, ahmedb, dewitth
 ms.custom: sap:initial-cluster-creation-or-adding-node, csstroubleshoot
-ms.technology: windows-server-high-availability
 ---
 # You receive an error message, and event ID 1289 is logged when you try to create a cluster
 

@@ -1,17 +1,13 @@
 ---
 title: .admx errors when running Local Group Policy Editor (gpedit.msc)
 description: Describes an issue that occurs after you change the system language
-ms.date: 09/21/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:group-policy-management-gpmc-or-agpm, csstroubleshoot
-ms.technology: windows-client-group-policy
 ---
 # .admx errors when running Local Group Policy Editor (gpedit.msc)  
 

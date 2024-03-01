@@ -5,11 +5,10 @@ ms.date: 05/31/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: surface
 localization_priority: medium
 ms.reviewer: v-six, v-lianna
 ms.custom: csstroubleshoot
-ms.technology: windows
+ms.subservice: windows
 ---
 # PXE boot fails on a Surface Laptop
 
