@@ -119,6 +119,8 @@
           href: desktop-flows/focus-window-action-not-working.md
         - name: How to get Power Automate for desktop installer logs
           href: desktop-flows/how-to-get-power-automate-desktop-installer-logs.md
+        - name: Handle issues with a desktop application that crashes due to UI automation
+          href: desktop-flows/desktop-application-crashes-ui-automation.md
         - name: '"Invalid Private key file" error in Open secure FTP connection action'
           href: desktop-flows/invalid-private-key-file-error.md
         - name: Internet connection is interrupted after installing Power Automate
