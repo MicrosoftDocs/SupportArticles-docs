@@ -37,7 +37,7 @@ sections:
       - question: |
           Is my memory limited to 2 GB when the Windows machine isn't activated?
         answer: |
-          Yes, you need to activate your Windows machine to get access to all the memory available.
+          Yes, you need to activate your Windows machine to access all the available memory.
           
 additionalContent: |
   ## More information
