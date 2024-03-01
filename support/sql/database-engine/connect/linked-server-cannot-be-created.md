@@ -14,41 +14,15 @@ This article helps you resolve an issue when you can't create a linked server af
 
 ## Symptoms
 
-You might see the following output when you connect from your SQL Server 2022 source environment to the SQL Server 2012 destination environment.
-
-```output
-Environment
-Source
-Product:          Microsoft SQL Server 2022 RTM 16.0.1000.6
-Operating System: Windows Server 2022
-Server Down:      Partially
-Production:       Yes
-Cluster:          No
-Replication:      N/A
-Virtual Server:   Yes, Azure, Standard_B8ms
-Destination
-Product:          Microsoft SQL Server 2012 SP4 11.0.7001.0 
-Operating System: Windows Server 2012 R2
-Server Down:      Partially  
-Production:       Yes
-Cluster:          No
-Replication:      N/A
-Virtual Server:   Yes
-```
-
-In the output, the destination of linked server is on-premises. The source server is SQL Server 2022 and Windows Server 2022. The destination SQL Server is SQL Server 2012 and Windows Server 2012 R2.
-
-You might also see the following error pop-up when you try to create linked server between these servers.
-
-:::image type="content" source="media/linked-server-cannot-be-created/on-premises-error.png" alt-text="Error message pops up when you try to create linked server.":::
+This problem can happen when you use a SQL Server Linked Server to connect from a Windows Server 2022 or later to a SQL Server that's operating on a previous version of Windows.
 
 ## Cause
 
-TLS 1.2 support is a possible cause of the problem in connecting to the SQL Server 2012 with the new Azure machines.
+The support for TLS 1.2 can be a possible cause of the problem in connecting to the SQL Server 2012 with the new Azure machines.
 
 You might reproduce the same error:
 
-> [Microsoft OLE DB Driver for SQL Server]: Client unable to Establish connection 
+> [Microsoft OLE DB Driver for SQL Server]: Client unable to Establish connection
 
 > [Microsoft OLE DB Driver for SQL Server]: TCP Provider: An existing connection has been forced to be interrupted by the remote host.
 
