@@ -16,7 +16,7 @@ items:
 - name: Existing connection forcibly closed
   href: tls-exist-connection-closed.md
   items:
-   - name: Troubleshoot linked server connectivity issues in SQL Server
+   - name: Connectivity issues occur when SQL agent SSIS packages don't run
      href: sql-server-faces-connectivity-issue-ssispack-fail.md
 - name: Explicit SPN is misplaced problem in SQL Server
   href: explicit-spn-is-misplaced.md
