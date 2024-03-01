@@ -13,7 +13,7 @@ This article provides suggestions for troubleshooting hosted machine issues in P
 
 - [Errors related to VM Image](/graph/api/resources/cloudpcdeviceimage?#cloudpcdeviceimagestatusdetails-values) used in hosted machine
 - [Errors related to network connection](/graph/api/resources/cloudpconpremisesconnectionhealthcheck#cloudpconpremisesconnectionhealthcheckerrortype-values) used in hosted machine
-- [Hosted machines](https://learn.microsoft.com/power-automate/desktop-flows/hosted-machines) details
+- [Hosted machines](/power-automate/desktop-flows/hosted-machines) details
 
 The following table provides information about hosted machine provisioning errors and steps to mitigate such errors.
 

@@ -147,6 +147,8 @@
           href: desktop-flows/troubleshoot-direct-connectivity-issues.md
         - name: Troubleshoot desktop flow run queue-based errors
           href: desktop-flows/troubleshoot-desktop-flow-run-queue-errors.md
+        - name: Troubleshoot hosted machines in Power Automate for desktop
+          href: desktop-flows/troubleshoot-hosted-machines-in-power-automate-for-desktop.md
         - name: Troubleshoot issues with Power Automate browser extensions
           href: desktop-flows/web-extensions-policies.md
         - name: Temporary profile error during machine registration
