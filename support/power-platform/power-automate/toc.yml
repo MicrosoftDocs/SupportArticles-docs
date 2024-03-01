@@ -105,6 +105,8 @@
           href: desktop-flows/troubleshoot-excel-errors.md
         - name: Errors when running attended or unattended desktop flows
           href: desktop-flows/troubleshoot-errors-running-attended-or-unattended-desktop-flows.md
+        - name: Failed connection between Power Automate components
+          href: desktop-flows/failed-connection-between-power-automate-components.md
         - name: Failed license check on a desktop flow run
           href: desktop-flows/desktop-flow-run-time-license-check.md
         - name: Failed to get UI element
