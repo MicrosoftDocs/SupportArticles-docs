@@ -65,6 +65,8 @@
           href: desktop-flows/web-automation-action-fails-runtime.md
         - name: Can't record in a VDI environment
           href: desktop-flows/cannot-record-in-vdi-environments.md
+        - name: Can't sign in to Power Automate for desktop
+          href: desktop-flows/cannot-sign-in-to-power-automate-for-desktop.md
         - name: Can't sign in with JavaScript error
           href: desktop-flows/enable-webview-pad-login.md
         - name: Can't access the parent flow

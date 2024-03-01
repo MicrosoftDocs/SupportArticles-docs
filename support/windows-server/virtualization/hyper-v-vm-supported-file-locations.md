@@ -1,9 +1,7 @@
 ---
 title: Hyper-V VM supported file locations
 description: Discusses supported locations for Hyper-V virtual machine files.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -1,9 +1,7 @@
 ---
 title: Large WinSxS directory causes disk space issues
 description: Discusses how to address disk space issues that are caused by a large Windows component store (WinSxS) directory.
-ms.date: 04/28/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -1,7 +1,7 @@
 ---
 title: Windows Server Update Services (WSUS) maintenance guide for Configuration Manager
 description: Describes the complete guide to WSUS maintenance for Configuration Manager environments.
-ms.date: 12/21/2020
+ms.date: 12/05/2023
 ms.custom: sap:Software update point configuration
 ms.reviewer: kaushika, mstewart, erice
 ---

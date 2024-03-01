@@ -1,9 +1,7 @@
 ---
 title: Access is denied error occurs with DCPROMO
 description: Provides a solution to an Access is denied error that occurs with DCPROMO.
-ms.date: 03/24/2022
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

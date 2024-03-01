@@ -1,7 +1,7 @@
 ---
 title: Support policy and known issues for ADMT
 description: Learn Support policy and known issues for Active Directory Migration Tool.
-ms.date: 11/17/2022
+ms.date: 12/26/2023
 author: kaushika-msft
 ms.author: kaushika
 manager: dcscontentpm

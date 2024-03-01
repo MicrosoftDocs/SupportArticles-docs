@@ -1,9 +1,7 @@
 ---
 title: Re-register Windows client/server in WSUS
 description: Provides the steps to re-register a Windows client/server in WSUS.
-ms.date: 04/28/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

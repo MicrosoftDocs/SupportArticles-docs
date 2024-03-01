@@ -1,9 +1,7 @@
 ---
 title: administrative shares are missing
 description: Provides an explanation of various symptoms that can occur when the IPC$, ADMIN$, or C$ shares are missing on your computer, and provides steps to resolve the issue.
-ms.date: 11/16/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

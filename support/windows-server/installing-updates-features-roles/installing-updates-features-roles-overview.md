@@ -2,8 +2,6 @@
 title: Installing updates features roles overview
 description: Overview of installing Windows Updates, features, or roles troubleshooting articles for Windows Server.
 ms.date: 02/06/2024
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

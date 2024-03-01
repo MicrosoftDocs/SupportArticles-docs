@@ -1,9 +1,7 @@
 ---
 title: Errors when you have a large Folder Redirection policy settings file in Windows
 description: Describes the problems that you may experience when you have a large Folder Redirection policy file. Provides a workaround.
-ms.date: 09/14/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

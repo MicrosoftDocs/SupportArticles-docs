@@ -1,9 +1,7 @@
 ---
 title: Set up your small business network
 description: Explains how to set up the network for your small business.
-ms.date: 09/08/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

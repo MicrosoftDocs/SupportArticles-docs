@@ -1,9 +1,7 @@
 ---
 title: How to detect and recover from a USN rollback in a Windows Server-based domain controller
 description: Explains how to recover if a domain controller is incorrectly rolled back by using an image-based installation of the operating system.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

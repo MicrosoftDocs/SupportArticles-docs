@@ -1,9 +1,7 @@
 ---
 title: Enable Plug and Play for parallel port devices
 description: Describes how to enable the Plug and Play feature on devices that use a parallel port device.
-ms.date: 04/28/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -1,9 +1,7 @@
 ---
 title: Domain controller is not functioning correctly
 description: Provides common resolutions to issues where you cannot open Active Directory snap-ins or connect to a domain controller from another computer. Additionally, discusses resolutions to errors in the DCDIAG tool.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

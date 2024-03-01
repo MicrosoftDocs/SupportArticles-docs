@@ -1,9 +1,7 @@
 ---
 title: Performance issues after you upgrade DCs
 description: Provides a solution to solve performance issues (such as logon delays and Outlook hangs) that occur after you upgrade your Domain Controllers (DCs).
-ms.date: 11/18/2022
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

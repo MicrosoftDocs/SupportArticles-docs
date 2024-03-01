@@ -1,9 +1,7 @@
 ---
 title: ADFS 2.0 certificate error
 description: Discusses that a certificate-related change in AD FS 2.0 causes certificate, SSL, and trust errors and triggers an Event 133 error. Provides a resolution.
-ms.date: 12/09/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
