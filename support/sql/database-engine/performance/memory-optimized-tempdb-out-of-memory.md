@@ -1,7 +1,7 @@
 ---
 title: Memory-optimized tempdb metadata out of memory errors
 description: Provides resolutions to troubleshoot out of memory issues with memory-optimized tempdb metadata.
-ms.date: 10/03/2023
+ms.date: 03/01/2024
 ms.custom: sap:Database Engine
 ms.reviewer: jopilov, hesha, randolphwest
 author: Hemin-msft
@@ -143,14 +143,16 @@ By using the DMVs to verify the cause, you may see different scenarios of the is
 
    This change requires a restart to take effect, even if memory-optimized tempdb metadata is already enabled. For more information, see:
 
-    - [Configure and use memory-optimized tempdb metadata](/sql/relational-databases/databases/tempdb-database#configure-and-use-memory-optimized-tempdb-metadata).
+   - [Configure and use memory-optimized tempdb metadata](/sql/relational-databases/databases/tempdb-database#configure-and-use-memory-optimized-tempdb-metadata).
 
-    - [Create a Resource Pool](/sql/relational-databases/resource-governor/create-a-resource-pool).
+   - [Create a Resource Pool](/sql/relational-databases/resource-governor/create-a-resource-pool).
 
    > [!WARNING]
-   > After binding HktempDB to a pool, the pool may reach its maximum setting and any queries that use `tempdb` may fail with out of memory errors. The SQL Server service will continue functioning, but any queries that use `tempdb` may fail. You might see the following error:
+   > After binding HktempDB to a pool, the pool may reach its maximum setting, and any queries that use `tempdb` may fail with out of memory errors. For example:
    >
    > > Disallowing page allocations for database 'tempdb' due to insufficient memory in the resource pool 'HkTempDB'. See '`http://go.microsoft.com/fwlink/?LinkId=510837`' for more information. XTP failed page allocation due to memory pressure: FAIL_PAGE_ALLOCATION 8
+   >
+   > Under certain circumstances, the SQL Server service could potentially stop if an out-of-memory error occurs. To reduce the chance of this happening, set the memory pool's `MAX_MEMORY_PERCENT` to a high value.
 
 1. The memory-optimized tempdb metadata feature doesn't support every workload. For example, using explicit transactions with DDL statements on temporary tables that run for a long time will lead to the scenarios described. If you have such transactions in your workload and you can't control their duration, then perhaps this feature isn't appropriate for your environment. You should test extensively before using HkTempDB.
 
