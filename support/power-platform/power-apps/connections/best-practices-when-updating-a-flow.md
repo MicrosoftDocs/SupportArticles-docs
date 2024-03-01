@@ -1,12 +1,12 @@
 ---
 title: Error codes on Flow run
-description: This article describes best practices for updating Microsoft Flows used by Power Apps.
+description: Describes best practices and steps to mitigate common errors when running Microsoft flows in Power Apps.
 ms.reviewer: mlalavat
-ms.date: 02/27/2024
+ms.date: 03/01/2024
 ---
 # Best practices when updating a flow used by a Power App
 
-This article describes best practices for updating Microsoft Flows used by Power Apps.
+This article describes best practices and steps to mitigate common errors when running Microsoft flows in Power Apps.
 
 _Applies to:_ &nbsp; Power Apps  
 _Original KB number:_ &nbsp; 4477072
