@@ -81,7 +81,7 @@ The following table lists some, but not all, first-party Microsoft applications.
 |Azure Data Lake|e9f49c6b-5ce5-44c8-925d-015017e9f7ad|
 |Azure Lab Services Portal|835b2a73-6e10-4aa5-a979-21dfda45231c|
 |Azure Portal|c44b4083-3bb0-49c1-b47d-974e53cbdf3c|
-|Azure SQL Database|22907d3-0f1b-48f7-badc-1ba6abab6d66| 
+|Azure SQL Database|022907d3-0f1b-48f7-badc-1ba6abab6d66| 
 |AzureSupportCenter|37182072-3c9c-4f6a-a4b3-b3f91cacffce|
 |Bing|9ea1ad79-fdb6-4f9a-8bc3-2b70f96e34c7|
 |ContactsInferencingEmailProcessor|20a11fe0-faa8-4df5-baf2-f965f8f9972e|
