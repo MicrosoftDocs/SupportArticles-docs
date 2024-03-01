@@ -53,17 +53,21 @@ Get the root public folder mailbox configuration for your organization by runnin
 
 If your organization has no public folder mailboxes, you see the following command output:
 
-> HierarchyMailboxGuid : 00000000-0000-0000-0000-000000000000
-> Type : MailboxGuid
-> LockedForMigration : False
+```output
+HierarchyMailboxGuid : 00000000-0000-0000-0000-000000000000
+Type : MailboxGuid
+LockedForMigration : False
+```
 
 Note: The `HierarchyMailboxGuid` parameter value is all zeros if your organization has no public folder mailboxes.
 
 If the primary hierarchy public folder mailbox in your organization is in `HoldForMigration` mode, you see the following command output:
 
-> HierarchyMailboxGuid : \<non-zero GUID value\>
-> Type : InTransitMailboxGuid
-> LockedForMigration : True
+```output
+HierarchyMailboxGuid : \<non-zero GUID value\>
+Type : InTransitMailboxGuid
+LockedForMigration : True
+```
 
 Note: The `LockedForMigration` parameter value is `True` in `HoldForMigration` mode.
 
