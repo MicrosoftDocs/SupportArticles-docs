@@ -36,6 +36,16 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "support/power-platform/power-automate/desktop-flows/browser-blocks-cookiess.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/cannot-sign-in-to-power-automate-for-desktop#browser-blocks-cookies",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows/login-windows-keep-appearing.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/cannot-sign-in-to-power-automate-for-desktop#login-window-keeps-popping-up",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "support/power-platform/power-automate/flow-approval-cds-provisioning-errors.md",
       "redirect_url": "/troubleshoot/power-platform/power-automate/approvals/flow-approval-cds-provisioning-errors",
       "redirect_document_id": true

@@ -2,7 +2,7 @@
 title: Can't sign in to Power Automate for desktop
 description: Helps troubleshoot sign-in related issues with Power Automate for desktop.
 ms.reviewer: pefelesk, matp
-ms.date: 02/28/2024
+ms.date: 03/01/2024
 ms.subservice: power-automate-desktop-flows
 ---
 # Can't sign in to Power Automate for desktop
@@ -62,7 +62,7 @@ Try to sign in to [Power Automate](https://make.powerautomate.com/). If it works
 
 ### Resolution
 
-For more information about possible causes and steps to resolve this issue, see [Can't sign in, create, edit, save, or view desktop flows](/troubleshoot/power-platform/power-automate/desktop-flows/cannot-sign-in-create-edit-save-view-desktop-flows#cause).
+For more information about possible causes and steps to resolve this issue, see [Can't create, edit, save, or view desktop flows](/troubleshoot/power-platform/power-automate/desktop-flows/cannot-sign-in-create-edit-save-view-desktop-flows#cause).
 
 ## Login window keeps popping up
 
