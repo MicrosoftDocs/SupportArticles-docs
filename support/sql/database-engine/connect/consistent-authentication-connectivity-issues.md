@@ -21,11 +21,15 @@ Before you start to troubleshoot errors, it's important to understand what each 
 
 - [Causes and scenarios specific to various aspects of SQL Server](#causes-and-scenarios-specific-to-various-aspects-of-sql-server)
 
-- [Causes and scenarios specific to connection string](#causes-related-to-connection-string)
+- [Causes specific to connection string](#causes-related-to-connection-string)
 
-- [Causes and scenarios specific to Windows permissions or Policy settings](#causes-related-to-windows-permissions-or-policy-settings)
+- [Causes specific to Windows permissions or Policy settings](#causes-related-to-windows-permissions-or-policy-settings)
+
+- [Causes specific to NT LAN Manager (NTLM)](#causes-specific-to-nt-lan-manager-ntlm)
 
 - [Causes and scenarios specific to Active Directory and Domain Controller](#causes-and-scenarios-related-to-active-directory-and-domain-controller)
+
+- [Causes and scenarios related to Kerberos authentication](#causes-and-scenarios-related-to-kerberos-authentication)
 
 - [Causes and scenarios specific to other aspects](#causes-related-to-other-aspects)
 
@@ -68,7 +72,7 @@ This section describes the types of errors and its related information.
   |"Login failed for user \<username\>." </br> "Login failed for user '\<database\username\>"</br>    | Check if there's a [bad server name in connection string](bad-server-name-connection-string-error.md). Also, check if the user doesn't belong to a local group used to grant access to the server. For more causes, see [NT AUTHORITY\ANONYMOUS LOGON](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).    |
   |"Cannot generate SSPI context" | The explicit SPN account might be [wrong](wrong-explicit-spn-account-connection-string.md), missing, or misplaced. |
   |"The user account is not allowed the Network Login type"|You might not be able to [log in to the network](network-login-disallowed.md).|
-  |"The login is from an untrusted domain and cannot be used with Windows authentication."|This error might be related to the [Local Security Subsystem](local-security-subsystem-issues.md) issues.|
+  |"The login is from an untrusted domain and cannot be used with Windows authentication."|This error might be related to the [Local Security Subsystem](local-security-subsystem-errors.md) issues.|
 
 ## Causes and scenarios specific to various aspects of SQL Server
 
