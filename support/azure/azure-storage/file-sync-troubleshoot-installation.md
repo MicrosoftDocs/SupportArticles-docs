@@ -93,9 +93,9 @@ If Azure File Sync agent version 17 is installed, ServerRegistration.exe may fai
 In the AfsSrvRegistration*.log file (located under %LocalAppData%\Temp), the following error is logged:  
 > ManagementCode: 'NoRegisteredProviderFound'
 
-A service-side fix will be deployed in all region by March 10, 2024.
+To resolve this issue, a service-side fix will be deployed in all regions by March 10, 2024.
 
-You can work around this issue by using the following PowerShell commands to register the server:
+Until the fix is deployed in your region, you can work around this issue by using the following PowerShell commands to register the server:
 
 ```powershell
 Connect-AzAccount -Subscription "<guid>" -Tenant "<guid>"
