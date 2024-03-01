@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting errors when SQL Server agent can't start
-description: This article provides symptoms, cause, and resolution for troubleshooting the error that occurs when the SQL Servent agent can't start.
+description: This article provides symptoms, cause, and resolution for troubleshooting the error that occurs when the SQL Server agent can't start.
 ms.date: 02/29/2024
 author: prmadhes-msft
 ms.author: prmadhes
