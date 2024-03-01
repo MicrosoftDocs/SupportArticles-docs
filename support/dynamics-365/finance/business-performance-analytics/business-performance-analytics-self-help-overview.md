@@ -4,7 +4,7 @@ description: Provides information about business performance analytics self-help
 author: jinniew
 ms.author: jiwo
 ms.reviewer: twheeloc 
-ms.date: 02/05/2024
+ms.date: 03/01/2024
 ms.custom:
 ms.search.form: business-performance-analytics
 audience: Application User
@@ -22,7 +22,7 @@ To access the **Bpa self help logs** table, follow these steps.
 
 1. Open the [Power Apps maker portal](https://make.preview.powerapps.com/).
 2. Go to **Tables** > **All**.
-3. Search for **BPA\Slef\Help\ Logs**.
+3. Search for **BPA\Self\Help\Logs**.
 
 ## Understand the "Bpa self help logs" table
 
