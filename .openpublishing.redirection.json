@@ -38,7 +38,7 @@
     {
       "source_path": "support/power-platform/power-automate/desktop-flows/browser-blocks-cookiess.md",
       "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/cannot-sign-in-to-power-automate-for-desktop#browser-blocks-cookies",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/power-platform/power-automate/desktop-flows/login-windows-keep-appearing.md",
