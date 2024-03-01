@@ -10,9 +10,9 @@ metadata:
   ms.collection: windows
   ms.workload: na
   ms.tgt_pltfrm: vm-windows
-  ms.date: 01/19/2024
+  ms.date: 03/01/2024
   ms.author: genli
-  ms.reviewer: cwhitley, jusilver, v-naqviadil, v-leedennis, v-weizhu
+  ms.reviewer: cwhitley, jusilver, scotro, v-naqviadil, v-leedennis, v-weizhu
     
 title: Azure Windows virtual machine activation FAQ
 summary: This article answers frequently asked questions (FAQ) about activating a Microsoft Windows virtual machine (VM) in Azure.
@@ -34,6 +34,11 @@ sections:
         answer: |
           When the grace period expires and Windows is still not activated, Windows Server 2008 R2 and later versions of Windows show more notifications about activating. The desktop wallpaper remains black, and Windows Update installs security and critical updates only, but it doesn't install optional updates. See the *Notifications* section at the bottom of the [Licensing Conditions](/previous-versions/tn-archive/ff793403(v=technet.10)) page.
 
+      - question: |
+          Is my memory limited to 2 GB when the Windows machine isn't activated?
+        answer: |
+          Yes, you need to activate your Windows machine to access all the available memory.
+          
 additionalContent: |
   ## More information
 
