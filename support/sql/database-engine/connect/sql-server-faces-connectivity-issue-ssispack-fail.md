@@ -22,10 +22,6 @@ When you try to run SSIS packages that use an SQL agent, the packages don't run,
 
 > An OLE DB record is available. Source "Microsoft OLE DB Driver for SQL Server" Hresult. 0x80004005 Description "TCP Provider: An existing connection was forcibly closed by the remote host".
 
-## Cause
-
-When you run an SSIS package through SQL Server Agent, the package might not run. This situation might cause connectivity issues.
-
 ## Resolution
 
 To resolve this issue, follow these steps:
