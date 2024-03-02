@@ -9,17 +9,6 @@ localization_priority: medium
 ms.reviewer: kaushika, anupamk, thyog
 ms.custom: sap:tcp/ip-communications, csstroubleshoot
 ---
----
-title: Can't install the SNMP and WMI SNMP Provider features
-description: Works around the issue in which the SNMP and WMI SNMP Provider features can't be installed using the DISM.exe tool in Windows 10 or Windows 11.
-ms.date: 12/26/2023
-manager: dcscontentpm
-audience: ITPro
-ms.topic: troubleshooting
-localization_priority: medium
-ms.reviewer: kaushika, anupamk, thyog
-ms.custom: sap:tcp/ip-communications, csstroubleshoot
----
 # Can't add the SNMP and WMI SNMP Provider features in Windows 10 or Windows 11
 
 This article provides workarounds to add the Simple Network Management Protocol (SNMP) and Windows Management Instrumentation (WMI) SNMP Provider features in Windows 10 or Windows 11.
