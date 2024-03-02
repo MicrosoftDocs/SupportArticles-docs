@@ -50,11 +50,11 @@ To verify the added state, select **See optional features history**.
 1. Start Windows PowerShell as an administrator.
 1. Run the following [Add-WindowsCapability](/powershell/module/dism/add-windowscapability) cmdlets to add the SNMP and WMI SNMP Provider features.
 
-       ```powershell
+    ```powershell
     Add-WindowsCapability -Online -Name "SNMP.Client~~~~0.0.1.0"
     ```
 
-       ```powershell
+    ```powershell
     Add-WindowsCapability -Online -Name "WMI-SNMP-Provider.Client~~~~0.0.1.0"
     ```
 
