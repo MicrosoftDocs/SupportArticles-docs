@@ -80,9 +80,9 @@ If you have to install management tools in Windows Server 2012 R2 for specific r
 > [!NOTE]
 > You can't use the Turn Windows features on and off dialog from the Control Panel
 
-Installing the RSAT Tools for Windows 10 version 1809 and later version is slightly different from earlier versions. RSAT is now part of the Operating System an can be installed via **Optional Features**.
+Installing the RSAT Tools for Windows 10 version 1809 and later version is slightly different from earlier versions. RSAT is now part of the Operating System and can be added via **Optional Features**.
 
-To enable the tools, click **Start**, click **Settings**, click **Apps**, and then click **Optional features**, after that click on the panel **Add a feature** and enter Remote in the search bar.
+To enable the tools, click **Start**, click **Settings**, click **Apps** (if you are on Windows 10 22H2, click **System** instead), and then click **Optional features**, after that click on the panel **Add a feature** and enter Remote in the search bar.
 
 ## References
 
