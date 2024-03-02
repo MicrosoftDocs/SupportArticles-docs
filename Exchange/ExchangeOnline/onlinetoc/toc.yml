@@ -583,6 +583,8 @@
           href: ../public-folders/pf-hierarchy-sync-emails.md
         - name: Error when creating public folder migration endpoint
           href: ../public-folders/new-migrationendpoint-returns-error.md
+        - name: '"Error executing cmdlet" message in the EAC'
+          href: ../public-folders/error-executing-cmdlet-message-in-eac.md
         - name: MEPF synchronization issues
           href: ../public-folders/mepf-sync-failures-script.md
         - name: Migration errors due to orphaned objects
