@@ -16,6 +16,16 @@ productDirectory:
     links:
     - url: app-service/welcome-app-service.yml
       text: Troubleshooting articles for Azure App Service
+  - title: Azure API Management
+    imageSrc: "https://static.docs.com/ui/media/product/azure/api-management.svg"
+    links:
+    - url: api-mgmt/welcome-api-mgmt.yml
+      text: Troubleshooting articles for Azure API Management
+  - title: Azure Automation
+    imageSrc: "https://static.docs.com/ui/media/product/azure/automation.svg"
+    links:
+    - url: automation/welcome-automation.yml
+      text: Troubleshooting articles for Azure Automation
   - title: Azure Blob Storage
     imageSrc: "https://static.docs.com/ui/media/product/azure/storage-accounts.svg"
     links:
@@ -61,16 +71,35 @@ productDirectory:
     links:
     - url: azure-monitor/welcome-azure-monitor.yml
       text: Troubleshooting articles for Azure Monitor
+  - title: Azure Service Fabric
+    imageSrc: "https://static.docs.com/ui/media/product/azure/service-fabric-clusters.svg"
+    links:
+    - url: service-fabric/welcome-service-fabric.yml
+      text: Troubleshooting articles for Azure Service Fabric
   - title: Azure Synapse Analytics
     imageSrc: "https://static.docs.com/ui/media/product/azure/synapse.svg"
     links:
     - url: synapse-analytics/welcome-synapse-analytics.yml
       text: Troubleshooting articles for Azure Synapse Analytics
+  - title: Azure Virtual Network
+    imageSrc: "https://static.docs.com/ui/media/product/azure/virtual-networks.svg"
+    links:
+    - url: virtual-network/welcome-virtual-network.yml
+      text: Troubleshooting articles for Azure Virtual Network
   - title: Cloud Services
     imageSrc: "https://static.docs.com/ui/media/product/azure/cloud-services.svg"
     links:
     - url: cloud-services/welcome-cloud-services.yml
       text: Troubleshooting articles for Cloud Services
+  - title: High Performance Computing
+    imageSrc: "https://static.docs.com/ui/media/product/azure/container-registry.svg"
+    links:
+    - url: hpc-cyclecloud/welcome-hpc-cyclecloud.yml
+      text: Troubleshooting articles for Azure HPC Pack
+    - url: hpc-batch/welcome-hpc-batch.yml
+      text: Troubleshooting articles for Azure Batch
+    - url: hpc-pack/welcome-hpc-pack.yml
+      text: Troubleshooting articles for Azure HPC Pack
   - title: Microsoft Entra
     imageSrc: "./microsoft-entra/media/microsoft-entra.svg"
     links:

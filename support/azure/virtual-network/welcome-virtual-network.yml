@@ -1,7 +1,7 @@
 ### YamlMime:Landing
 
-title: Troubleshoot common issues with Azure Virtual Network
-summary: These articles explain how to determine, diagnose, and fix various issues that you might encounter when you use Azure Virtual Network. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+title: Azure Virtual Network troubleshooting documentation
+summary: Welcome to Azure Virtual Network troubleshooting. These articles explain how to determine, diagnose, and fix various issues that you might encounter when you use Azure Virtual Network. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
 
 metadata:
   title: Troubleshoot common issues with Azure Virtual Network
@@ -11,7 +11,7 @@ metadata:
   ms.topic: landing-page # Required
   author: genlin  #Required; your GitHub user alias, with correct capitalization.
   ms.author: genli #Required; microsoft alias of author; optional team alias.
-  ms.date: 02/29/2024
+  ms.date: 03/04/2024
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
