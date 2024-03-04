@@ -19,8 +19,12 @@
           href: crm-permissions-and-configurations/missing-privileges-sign-in.md
         - name: '"No access to Dynamics 365" error'
           href: crm-permissions-and-configurations/no-access-to-dynamics-365-error.md
+        - name: Required fields missing error
+          href: crm-permissions-and-configurations/required-fields-missing.md
         - name: Salesforce CRM users can't see data in Copilot for Sales
           href: crm-permissions-and-configurations/no-column-error.md
+        - name: Salesforce permission error
+          href: crm-permissions-and-configurations/salesforce-permission-error.md
     - name: Outlook side panel
       items:
         - name: Sign-in issue when opening the Copilot for Sales pane in Outlook

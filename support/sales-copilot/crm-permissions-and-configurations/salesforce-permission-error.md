@@ -1,7 +1,7 @@
 ---
 title: Salesforce permission error
 description: Resolves the errors displayed in the record type cards in the Microsoft Copilot for Sales panel in Outlook.
-ms.date: 02/25/2024
+ms.date: 03/04/2024
 author: sbmjais
 ms.author: shjais
 ---
@@ -50,4 +50,4 @@ To resolve this issue, you must update user profile permissions in Salesforce.
 
 If your issue is still unresolved, go to the [Copilot for Sales - Microsoft Community Hub](https://techcommunity.microsoft.com/t5/viva-sales/bd-p/VivaSales) to engage with our experts.
 
-
+[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
