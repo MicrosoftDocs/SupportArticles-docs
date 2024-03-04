@@ -1338,8 +1338,6 @@ items:
     - name: DFSR Health Report shows Event ID 4302
       href: ./networking/dfsr-diagnostics-shows-sharing-violations-events.md
     - name: Error when changing DFS replication group or namespace
-      href: ./networking/value-does-not-fall-within-the-expected-range.md
-    - name: How to configure DFSR logging
       href: ./networking/change-dfsr-debug-log-settings.md
     - name: Security setting changes delays on DFSR replication partners
       href: ./networking/security-setting-changes-not-appear-dfsr-replication.md
