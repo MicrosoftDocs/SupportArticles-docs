@@ -34,7 +34,7 @@ The following is an example of two frequently changed folders:
 > FRS has been deprecated in newer versions of Windows Server. For more information about moving to a newer solution, see the following articles:
 >  
 > - [Windows Server version 1709 no longer supports FRS](windows-server-version-1709-no-longer-supports-frs.md)
-> - [Migrate SYSVOL replication to DFS Replication](../storage/dfs-replication/migrate-sysvol-to-dfsr.md)
+> - [Migrate SYSVOL replication to DFS Replication](/windows-server/storage/dfs-replication/migrate-sysvol-to-dfsr)
 
 ## Cause
 
