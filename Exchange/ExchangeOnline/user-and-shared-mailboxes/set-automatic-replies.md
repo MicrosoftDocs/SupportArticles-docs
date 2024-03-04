@@ -34,8 +34,9 @@ This article describes four methods that administrators can use to set automatic
 
 1. Sign in to the Microsoft 365 admin portal by using administrator credentials.
 1. Expand **Admin Centers**, and then select **Exchange**.
-1. Click the picture in the upper-right corner, select **Another User**, and then select the user mailbox that you want to change.
-1. On the left side, select **Options**, click **Organize E-mail**, and then click **Automatic replies**.
+1. Choose a mailbox that you want to change from **Mailboxes** under **Recipients.**
+
+1. Select **Others**, and then click **Automatic replies** under Automatic replies.
 
 ## Method 3
 
