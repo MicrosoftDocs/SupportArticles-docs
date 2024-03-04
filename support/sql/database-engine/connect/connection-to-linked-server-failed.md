@@ -1,6 +1,6 @@
 ---
-title: Connection to the linked server failed error
-description: This article explains about an error that might occur An error is generated when there is a failure in connecting to the linked server.
+title: Connection to the linked server fails
+description: This article discusses errors that occurs if the connection to the linked server fails.
 ms.date: 03/04/2024
 author: prmadhes-msft
 ms.author: prmadhes
@@ -8,13 +8,13 @@ ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 
-# Connection to the linked server failed
+# "Connection to the linked server has failed" error after you update Windows Server
 
-This article helps you to resolve the errors that might arise when the connection to linked server fails. After Windows server patches are installed, connection to the linked server failed.
+This article helps you resolve multiple errors that occur when a connection to the linked server fails after Windows Server updates are installed.
 
 ## Symptoms
 
-You might receive the following error messages:
+You receive the following error messages:
 
 > TCP Provider: An existing connection was forcibly closed by the remote host.
 
@@ -24,33 +24,33 @@ You might receive the following error messages:
 
 > Destination SQL Version SQL 2016 Enterprise Edition
 
-  :::image type="content" source="media/connection-to-linked-server-failed/connection-to-linked-server-failed.png" alt-text="Connection to the linked server has failed.":::
+  :::image type="content" source="media/connection-to-linked-server-failed/connection-to-linked-server-failed.png" alt-text="Screenshot that shows that multiple errors occur after the connection to the linked server fails.":::
 
 ## Cause
 
-After installing the Windows Server patches, there was a change in ciphers for client and SQL Server and hence there were communication issues.
+After you installed Windows Server updates, a change was made in the ciphers for the client and server that's running SQL Server. In turn, the changes caused communication problems to occur.
 
-## How to check cipher's value on client and server machines
+## How to check cipher values
 
-To check the cipher's value on the client and server machines, follow these steps:
+To check the cipher values on the client and server computers, follow these steps:
 
-1. Open PowerShell with administrative privileges and run the following command on both servers that's your client and main server.
+1. Open an administrative PowerShell session, and then run the following command on both the client and main server:
 
    ```PowerShell
    Get-ItemPropertyValue  -Path HKLM:\System\CurrentControlSet\Control\Cryptography\Configuration\Local\SSL\00010002\ -Name Functions
    ```
 
-1. Check and compare these two values from both machines. If they're different, then it means the ciphers are different for both servers.
+1. Compare the values from both computers to determine whether the ciphers differ.
 
 ## Resolution
 
-To check the issue, follow these steps:
+To resolve the problem, follow these steps:
 
-1. If a network trace isn't available, check the functions value under this registry key:
+1. If a network trace isn't available, check the functions value in this registry subkey:
 
    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Cryptography\Configuration\Local\SSL\00010002`
 
-1. Use the following PowerShell command to find the TLS functions:
+1. Run the following PowerShell command to find the TLS functions:
 
    ```PowerShell
    Get-ItemPropertyValue  -Path HKLM:\System\CurrentControlSet\Control\Cryptography\Configuration\Local\SSL\00010002\ -Name Functions
