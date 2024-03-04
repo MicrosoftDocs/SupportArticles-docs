@@ -75,7 +75,7 @@
           href: desktop-flows/automate-save-as-open-upload-dialog-box-web-browser.md
         - name: Can't interact with desktop application without an error
           href: desktop-flows/cannot-interact-with-desktop-application.md
-        - name: Can't sign in, create, edit, save or view desktop flows
+        - name: Can't create, edit, save or view desktop flows
           href: desktop-flows/cannot-sign-in-create-edit-save-view-desktop-flows.md
         - name: Can't establish connection to Access Database Engine OLE DB
           href: desktop-flows/cannot-connect-access-database-engine-ole-db.md
