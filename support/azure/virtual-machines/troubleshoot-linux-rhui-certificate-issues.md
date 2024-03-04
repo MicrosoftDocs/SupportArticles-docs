@@ -525,7 +525,7 @@ The following steps apply if the OS version is *earlier than the latest version 
    enabled=1 
    gpgcheck=1 
    gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-microsoft-azure-release 
-   sslverify=
+   sslverify=1
    ```
 
 3. Install the `rhui-azure-rhel8-sap-ha` package by running the `dnf install` command:
