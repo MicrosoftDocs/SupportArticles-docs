@@ -94,10 +94,10 @@ productDirectory:
   - title: High Performance Computing
     imageSrc: "https://static.docs.com/ui/media/product/azure/container-registry.svg"
     links:
-    - url: hpc-cyclecloud/welcome-hpc-cyclecloud.yml
-      text: Troubleshooting articles for Azure HPC Pack
     - url: hpc-batch/welcome-hpc-batch.yml
       text: Troubleshooting articles for Azure Batch
+    - url: hpc-cyclecloud/welcome-hpc-cyclecloud.yml
+      text: Troubleshooting articles for Azure CycleCloud
     - url: hpc-pack/welcome-hpc-pack.yml
       text: Troubleshooting articles for Azure HPC Pack
   - title: Microsoft Entra
