@@ -1,15 +1,13 @@
 ---
 title: User-defined data collector set doesn't run as scheduled
 description: This article provides a workaround for an issue in which a user-defined data collector set that is configured to run on a schedule does not run.
-ms.date: 12/09/2021
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate
 ms.custom: sap:kerberos-authentication, csstroubleshoot
-ms.technology: windows-server-performance
 ---
 
 # User-defined data collector set doesn't run as scheduled

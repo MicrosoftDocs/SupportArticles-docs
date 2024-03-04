@@ -1,7 +1,7 @@
 ---
 title: Clients become inactive and don't send inventory
 description: Describes an issue in which Configuration Manager clients that report to a particular server or subset of servers repeatedly become inactive.
-ms.date: 06/09/2020
+ms.date: 12/05/2023
 ms.reviewer: kaushika
 ---
 # Configuration Manager clients become inactive and don't send inventory

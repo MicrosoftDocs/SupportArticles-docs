@@ -1,17 +1,13 @@
 ---
 title: Unexpected warning and error messages in a virtualized Windows Server failover cluster
 description: Describes an issue where unexpected warning and error messages occur in a Windows Server failover cluster that has been configured to run as a guest (virtual machine) in a Hyper-V environment.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: ctimon, sdwyer, kaushika
 ms.custom: sap:setup-and-configuration-of-clustered-services-and-applications, csstroubleshoot
-ms.technology: windows-server-high-availability
 ---
 # Unexpected warning and error messages in a virtualized Windows Server failover cluster
 

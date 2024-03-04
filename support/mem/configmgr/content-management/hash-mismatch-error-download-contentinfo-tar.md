@@ -1,7 +1,7 @@
 ---
 title: Hash mismatch error when downloading Contentinfo.tar
 description: Describes an issue in which you receive a hash mismatch error when the Configuration Manager clients try to download the Contentinfo.tar file from cloud DPs that are assigned to multiple primary sites.
-ms.date: 06/09/2020
+ms.date: 12/05/2023
 ms.custom: sap:System Center Configuration Manager
 ms.reviewer: kaushika
 ---

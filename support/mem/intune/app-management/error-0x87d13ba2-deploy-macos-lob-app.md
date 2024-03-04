@@ -4,7 +4,7 @@ description: Fixes the 0x87D13BA2 error when you deploy a macOS LOB app that con
 author: helenclu
 ms.author: luche
 ms.reviewer: kaushika, markstan
-ms.date: 10/18/2021
+ms.date: 12/05/2023
 search.appverid: MET150
 ms.custom: sap:App management
 ---

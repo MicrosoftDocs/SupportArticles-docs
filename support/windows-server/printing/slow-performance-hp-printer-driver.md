@@ -1,17 +1,13 @@
 ---
 title: Slow performance when you print
 description: Describes an issue on a failover cluster in which cluster nodes may stop responding temporarily.
-ms.date: 04/20/2022
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:errors-and-troubleshooting-general-issues, csstroubleshoot
-ms.technology: windows-server-printing
 ---
 # Slow performance when you try to print, when you open the printer properties, or when you open the printer preferences
 

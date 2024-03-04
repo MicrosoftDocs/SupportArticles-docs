@@ -1,17 +1,13 @@
 ---
 title: Host's A record is registered in DNS
 description: The IP address registers an A record for the host name in its primary DNS suffix zone. It occurs after you clear the "Register this connection's address in DNS" check box.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:dns, csstroubleshoot
-ms.technology: networking
 ---
 # The host's A record is registered in DNS after you choose not to register the connection's address
 

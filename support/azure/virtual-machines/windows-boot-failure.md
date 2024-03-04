@@ -121,7 +121,7 @@ To fix the issue, stop (de-allocate) and start the VM then recheck to see if iss
    1. For Generation 1 VMs:
 
        ```console
-       bcdedit /store <Boot partition>:\boot\bcd /enum
+       bcdedit /store <Boot partition>:\boot\bcd /enum /v
        ```  
    2. For Generation 2 VMs:
  

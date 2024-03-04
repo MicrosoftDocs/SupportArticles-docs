@@ -1,17 +1,13 @@
 ---
 title: Create and manage Central Store
 description: Describes how to create a Central Store on a domain controller to store and replicate registry-based policies for Windows.
-ms.date: 07/27/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:group-policy-management-gpmc-or-agpm, csstroubleshoot
-ms.technology: windows-client-group-policy
 ---
 # How to create and manage the Central Store for Group Policy Administrative Templates in Windows
 

@@ -1,17 +1,13 @@
 ---
 title: Create Central Store on domain controller
 description: Describes how to create a Central Store on a domain controller. This Central Store is used to store and to replicate registry-based policies for Windows Vista-based clients in a domain.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, timtho
 ms.custom: sap:group-policy-management-gpmc-or-agpm, csstroubleshoot
-ms.technology: windows-server-group-policy
 ---
 # How to create the Central Store for Group Policy Administrative Template files in Windows Vista
 

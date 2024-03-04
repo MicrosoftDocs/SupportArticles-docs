@@ -1,17 +1,13 @@
 ---
 title: Name resolution and connectivity issues
 description: Provides a solution to name resolution and connectivity issues on a Routing and Remote Access Server that also runs DNS or WINS.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, JOELSCH
 ms.custom: sap:dns, csstroubleshoot
-ms.technology: networking
 ---
 # Name resolution and connectivity issues on a Routing and Remote Access Server that also runs DNS or WINS
 

@@ -1,17 +1,13 @@
 ---
 title: Event ID 1053 is logged when you use the gpupdate command
 description: Provides a resolution for the issue that Event ID 1053 is logged when you use the Gpupdate /force command, or you restart a domain controller
-ms.date: 04/28/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, Rajsin
 ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
-ms.technology: windows-server-group-policy
 ---
 # Event ID 1053 is logged when you use the Gpupdate /force command, or you restart a domain controller
 

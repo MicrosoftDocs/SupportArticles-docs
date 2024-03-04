@@ -2,7 +2,6 @@
 title: WCF service using a non-default ETW provider ID
 description: This article discusses a problem where WCF service using a non-default ETW provider ID when you view ETW traces.
 ms.date: 08/24/2020
-ms.technology: dotnet-wcf
 ---
 # Viewing ETW traces for WCF service using a non-default ETW provider ID
 

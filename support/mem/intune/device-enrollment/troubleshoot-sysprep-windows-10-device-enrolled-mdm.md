@@ -4,7 +4,7 @@ description: Provides tips for troubleshooting when Sysprep will not run correct
 author: helenclu
 ms.author: jchornbe
 ms.reviewer: kaushika, jchornbe
-ms.date: 10/06/2021
+ms.date: 12/05/2023
 search.appverid: MET150
 ms.custom: sap:Windows enrollment
 ---

@@ -24,7 +24,7 @@ sections:
       - question: |
           How can I create a web app in a region that's unavailable in the subscription?
         answer: |
-          Certain Azure regions require customers to go through a request process to gain access. For more information, see the [Azure region access request process](/troubleshoot/azure/general/region-access-request-process) and [Azure App Service available by region](https://azure.microsoft.com/global-infrastructure/services/?products=app-service&regions=all).
+          Certain Azure regions require customers to go through a request process to gain access. For more information, see the [Azure region access request process](../general/region-access-request-process.md) and [Azure App Service available by region](https://azure.microsoft.com/global-infrastructure/services/?products=app-service&regions=all).
 
       - question: |
           What if the requested SKU of the App Service Plan isn't available in the Resource Group?

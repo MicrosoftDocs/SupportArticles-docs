@@ -1,17 +1,13 @@
 ---
 title: Access Denied when you visit Microsoft websites hosted on Akamai CDN
 description: When you visit certain Microsoft websites, you may be denied access if you or your organization makes too many connections attempts too quickly. This article provides a solution to this problem.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:tcp/ip-communications, csstroubleshoot
-ms.technology: networking
 ---
 # Error message when you visit a Microsoft website that is hosted on Akamai CDN: Access Denied
 

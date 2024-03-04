@@ -1,17 +1,13 @@
 ---
 title: Troubleshoot establishing Terminal Services session
 description: Helps you understand the most common settings that affect establishing a Terminal Services session in an enterprise environment.
-ms.date: 05/16/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, gavinl
 ms.custom: sap:connecting-to-a-session-or-desktop, csstroubleshoot
-ms.technology: windows-server-rds
 ---
 # Remote Desktop disconnected or can't connect to remote computer or Remote Desktop server (Terminal Server) that is running Windows Server 2003
 

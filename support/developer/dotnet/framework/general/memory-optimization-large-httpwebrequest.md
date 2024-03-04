@@ -4,7 +4,6 @@ description: This article provides a resolution for the problem that occurs when
 ms.date: 10/26/2020
 ms.custom: sap:General
 ms.reviewer: huizhu, pphadke
-ms.technology: dotnet-general
 ---
 # Memory optimization for a large HttpWebRequest POST or PUT based on .NET framework 4.5
 

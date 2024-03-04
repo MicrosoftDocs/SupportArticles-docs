@@ -1,17 +1,13 @@
 ---
 title: Third-party storage solutions support policy
 description: Explains the Microsoft third-party storage software solutions support policy that works in conjunction with Microsoft server products.
-ms.date: 04/07/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:setup-and-configuration-of-clustered-services-and-applications, csstroubleshoot
-ms.technology: windows-server-high-availability
 ---
 # Overview of the Microsoft third-party storage software solutions support policy
 

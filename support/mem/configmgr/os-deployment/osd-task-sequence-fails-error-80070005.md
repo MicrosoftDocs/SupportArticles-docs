@@ -1,7 +1,7 @@
 ---
 title: An OSD task sequence fails with error 80070005
 description: Describes an issue where an OSD task sequence fails during the Setup Windows and ConfigMgr step. This issue occurs when the step still runs in Windows PE.
-ms.date: 05/25/2020
+ms.date: 12/05/2023
 ms.custom: sap:Task sequence tasks
 ms.reviewer: kaushika
 ---

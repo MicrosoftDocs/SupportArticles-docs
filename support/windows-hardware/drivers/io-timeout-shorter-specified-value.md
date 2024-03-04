@@ -4,7 +4,7 @@ description: This article provides resolutions for the problem in which the actu
 ms.date: 01/29/2021
 ms.custom: sap:Developer Tools\Windows Driver Kit (WDK, HLK)\Windows Driver Kit 10\Windows Device Driver Interface (DDI)\User-Mode Driver Framework (UMDF)Developer Tools\Windows Driver Kit (WDK, HLK)\Windows Driver Kit 8.1\Windows Device Driver Interface (DDI)\User-Mode Driver Framework (UMDF)
 ms.reviewer: heikom
-ms.technology: windows-hardware-other-driver
+ms.subservice: other-driver
 ---
 # Actual I/O time-out is 10 times shorter than the specified value in User-Mode Driver Framework 2.0
 

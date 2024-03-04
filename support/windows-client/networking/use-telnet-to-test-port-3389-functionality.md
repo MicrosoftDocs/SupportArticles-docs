@@ -1,23 +1,19 @@
 ---
 title: Use Telnet to test port 3389 functionality
 description: Describes how to use Telnet to test port 3389 functionality.
-ms.date: 12/04/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:tcp/ip-communications, csstroubleshoot
-ms.technology: windows-client-networking
 ---
 # Use Telnet to test port 3389 functionality
 
 This article describes how to use Telnet to test port 3389 functionality.
 
-_Applies to:_ &nbsp; Windows 10 - all editions
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 187628
 
 ## Summary

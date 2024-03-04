@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting Windows device enrollment problems in Intune
 description: Suggestions for troubleshooting some of the most common error messages when you enroll Windows devices in Microsoft Intune.
-ms.date: 10/01/2021
+ms.date: 12/05/2023
 ms.reviewer: kaushika, mghadial
 search.appverid: MET150
 ---

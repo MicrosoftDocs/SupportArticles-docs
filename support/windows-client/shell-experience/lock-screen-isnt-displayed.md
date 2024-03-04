@@ -1,17 +1,13 @@
 ---
 title: Lock screen isn't displayed
 description: Describe an issue that prevents the lock screen from being displayed when you try to resume a Windows 10-based computer from Away Mode.
-ms.date: 09/10/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:lock-screen-or-screensaver, csstroubleshoot
-ms.technology: windows-client-shell-experience
 ---
 # Lock screen isn't displayed when you resume a Windows 10-based computer
 

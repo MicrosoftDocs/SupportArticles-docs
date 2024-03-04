@@ -1,17 +1,13 @@
 ---
 title: Hotfixes for File Services technologies in Windows Server 2008
 description: This article lists the hotfixes that are currently available for users who have installed the File Services technologies on a Windows Server 2008-based computer or on a Windows Server 2008 R2-based computer.
-ms.date: 03/24/2022
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: cpuckett, waltere, kaushika
 ms.custom: sap:file-server-resource-manager-fsrm, csstroubleshoot
-ms.technology: windows-server-backup-and-storage
 ---
 # List of currently available hotfixes for the File Services technologies in Windows Server 2008 and in Windows Server 2008 R2
 

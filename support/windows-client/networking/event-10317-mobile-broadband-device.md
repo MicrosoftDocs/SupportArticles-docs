@@ -1,17 +1,13 @@
 ---
 title: Event 10317 when turning on mobile broadband device
 description: Describes error events that may be logged when you turn on a device that has a mobile broadband connection or resume the device from sleep.
-ms.date: 09/08/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:wireless-networking-and-802.1x-authentication, csstroubleshoot
-ms.technology: windows-client-networking
 ---
 # Event ID 10317 is logged when you turn on a mobile broadband device or resume it from sleep
 

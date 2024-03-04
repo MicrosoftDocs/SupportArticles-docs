@@ -5,7 +5,7 @@ ms.date: 01/04/2021
 ms.custom: sap:TBD
 ms.reviewer: jlaborde
 ms.topic: article
-ms.technology: windows-hardware-general
+ms.subservice: general
 ---
 # VSS GetBackupMetadata may return incorrect path for Terminal Services
 

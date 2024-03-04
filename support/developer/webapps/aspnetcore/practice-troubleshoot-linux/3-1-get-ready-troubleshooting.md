@@ -2,9 +2,7 @@
 title: Get ready for troubleshooting
 description: This article helps you consider the troubleshooting process as a whole.
 ms.date: 03/18/2021
-ms.prod: aspnet-core
 ms.reviewer: ramakoni, ahmetmb
-ms.technology: aspnetcore-practice-troubleshoot-linux
 author: ahmetmithat
 ---
 # Part 3.1 - Get ready for troubleshooting

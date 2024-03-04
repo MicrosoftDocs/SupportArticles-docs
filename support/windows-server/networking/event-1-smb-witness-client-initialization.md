@@ -1,17 +1,13 @@
 ---
 title: SMB witness client initialization fails
 description: This article describes Event 1 that is logged about SMB witness client initialization when you install Windows Server.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jongrkim
 ms.custom: sap:access-to-remote-file-shares-smb-or-dfs-namespace, csstroubleshoot
-ms.technology: networking
 ---
 # Event 1 about SMB witness client initialization when you install Windows Server
 
