@@ -10074,6 +10074,16 @@
       "source_path": "support/azure/general/error-no-virtual-network-found.md",
       "redirect_url": "/troubleshoot/azure/hpc-pack/error-no-virtual-network-found",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows/browser-blocks-cookies.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/cannot-sign-in-to-power-automate-for-desktop#browser-blocks-cookies",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows/login-windows-keep-appearing.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/cannot-sign-in-to-power-automate-for-desktop#login-window-keeps-popping-up",
+      "redirect_document_id": true
     }
   ]
 }
