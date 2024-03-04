@@ -52,7 +52,7 @@ The `DSNConversionMode` parameter determines the format to use for delivery stat
 
     Exchange converts the DSNs to the Exchange Server 2013 DSN format. This format is the same as the Exchange Server 2010 DSN format. However, any customized text or attachments that were associated with the original DSN are overwritten if the DSN is delivered from another Microsoft 365 organization or from an external organization.
 
-- **PreserveDNSBody**
+- **PreserveDSNBody**
 
     Exchange converts the DSNs to the Exchange Server 2013 DSN format, and the text in the body of the DSN message is retained.
 
