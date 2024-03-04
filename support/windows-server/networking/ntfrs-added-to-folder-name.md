@@ -30,6 +30,12 @@ The following is an example of two frequently changed folders:
 07/29/2002 10:18a scripts  
 07/29/2002 10:02p scripts_NTFRS_000874bb  
 
+> [!NOTE]  
+> FRS has been deprecated in newer versions of Windows Server. For more information about moving to a newer solution, see the following articles:
+>  
+> - [Windows Server version 1709 no longer supports FRS](windows-server-version-1709-no-longer-supports-frs.md)
+> - [Migrate SYSVOL replication to DFS Replication](../storage/dfs-replication/migrate-sysvol-to-dfsr.md)
+
 ## Cause
 
 When two users create a folder of the same name on two different replicas, File Replication service (FRS) detects a name conflict during replication.
