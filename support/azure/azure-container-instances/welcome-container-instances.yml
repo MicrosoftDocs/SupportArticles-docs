@@ -9,7 +9,7 @@ metadata:
   ms.topic: landing-page # Required
   author: genlin  #Required; your GitHub user alias, with correct capitalization.
   ms.author: genli #Required; microsoft alias of author; optional team alias.
-  ms.date: 02/23/2024
+  ms.date: 03/04/2024
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -39,6 +39,8 @@ landingContent:
             url: long-image-pulls.md
           - text: ServiceUnavailable - container group quota exceeded in region
             url: service-unavailable-container-group-quota-exceeded.md
+          - text: ServiceUnavailable (409) - requested resource is not available in the location
+            url: service-unavailable-requested-resource-is-not-available.md
 
   # Card
   - title: Troubleshoot a running container group 

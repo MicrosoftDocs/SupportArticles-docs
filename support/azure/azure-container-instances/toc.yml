@@ -31,3 +31,5 @@ items:
   - name: ServiceUnavailable - container group quota exceeded in region
     href: service-unavailable-container-group-quota-exceeded.md
     displayName: fraud
+  - name: ServiceUnavailable (409) - requested resource is not available in the location
+    href: service-unavailable-requested-resource-is-not-available.md
