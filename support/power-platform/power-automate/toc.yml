@@ -75,7 +75,7 @@
           href: desktop-flows/automate-save-as-open-upload-dialog-box-web-browser.md
         - name: Can't interact with desktop application without an error
           href: desktop-flows/cannot-interact-with-desktop-application.md
-        - name: Can't sign in, create, edit, save or view desktop flows
+        - name: Can't create, edit, save or view desktop flows
           href: desktop-flows/cannot-sign-in-create-edit-save-view-desktop-flows.md
         - name: Can't establish connection to Access Database Engine OLE DB
           href: desktop-flows/cannot-connect-access-database-engine-ole-db.md
@@ -123,8 +123,6 @@
           href: desktop-flows/invalid-private-key-file-error.md
         - name: Internet connection is interrupted after installing Power Automate
           href: desktop-flows/no-ethernet-after-pad-install.md
-        - name: Login windows keep appearing
-          href: desktop-flows/login-windows-keep-appearing.md
         - name: Machine registration failure
           href: desktop-flows/desktop-flow-machine-registration-troubleshooting.md
         - name: Module or action wasn't found error
@@ -153,8 +151,6 @@
           href: desktop-flows/web-extensions-policies.md
         - name: Temporary profile error during machine registration
           href: desktop-flows/temporary-profile-error-machine-registration.md
-        - name: We can't sign you in - browser blocks cookies
-          href: desktop-flows/browser-blocks-cookies.md
     - name: Flow creation
       items:
         - name: Can't find Excel Online table in Microsoft Flow
