@@ -1,18 +1,21 @@
 ---
-title: JDBC Configuring and Troubleshooting
-description: 
-ms.date: 02/28/2024
+title: JDBC Configuring and troubleshooting
+description: This article explains Java database connectivity (JDBC) and troubleshooting steps that occur during configuration.
+ms.date: 03/04/2024
 ms.reviewer: mastewa, prmadhes, jopilov, v-sidong
 ms.custom: sap:Connection issues
 ---
 # JDBC configuring and troubleshooting
+
+> [!NOTE]
+> This article is based on the latest driver ([12.4](https://techcommunity.microsoft.com/t5/sql-server-blog/jdbc-driver-12-4-for-sql-server-released/ba-p/3889965)) installed in the root of C drive.
 
 This article explains Java database connectivity (JDBC) and troubleshooting steps that occur during configuration.
 
 This is a reference guide to JDBC, where to find the driver and supporting documentation and how to install on various operating systems with troubleshooting SQL connections.
 
 > [!NOTE]
-> Microsoft will not troubleshoot JDBC connections where there is a 3rd party connection pool manager in place. Troubleshooting with a 3rd party connection pool manager has the potential to expose intellectual property information.
+> Microsoft won't troubleshoot JDBC connections where there is a 3rd party connection pool manager in place. Troubleshooting with a 3rd party connection pool manager has the potential to expose intellectual property information.
 
 - [Download Microsoft JDBC Driver for SQL Server](/sql/connect/jdbc/download-microsoft-jdbc-driver-for-sql-server)
 - [Setting the connection properties](/sql/connect/jdbc/setting-the-connection-properties)
@@ -26,30 +29,28 @@ This is a reference guide to JDBC, where to find the driver and supporting docum
 
 ## JDBC requirements
 
-The [JRE](/sql/connect/jdbc/system-requirements-for-the-jdbc-driver) version must match the driver with the JRE version specified in the name. For example, *mssql-jdbc-9.4.1.jre8.jar* requires JRE1.8 and *mssql-jdbc-9.4.1.jre11.jar* requires JRE11.
+- The [JRE](/sql/connect/jdbc/system-requirements-for-the-jdbc-driver) version must match the driver with the JRE version specified in the name. For example, *mssql-jdbc-9.4.1.jre8.jar* requires JRE1.8 and *mssql-jdbc-9.4.1.jre11.jar* requires JRE11.
 
-[CLASSPATH](/sql/connect/jdbc/using-the-jdbc-driver) is a Java environment variable that contains the directory path and binary jar files. Java needs it to execute the desired application. This is a requirement to specify what driver and dependencies binary jar files Java will need to run. The minimum CLASSPATH includes current working directory `.;` and the location of the JDBC driver jar file.
+- [CLASSPATH](/sql/connect/jdbc/using-the-jdbc-driver) is a Java environment variable that contains the directory path and binary jar files. Java needs it to execute the desired application. This is a requirement to specify what driver and dependencies binary jar files Java will need to run. The minimum CLASSPATH includes current working directory `.;` and the location of the JDBC driver jar file.
+
+## JDBC configuration and troubleshooting steps
+
+### Set the CLASSPATH
 
 CLASSPATHs can be defined in the operating system environment variable or in the application environment itself, like Tomcat. If the CLASSPATH is defined in the application environment, the application vendor or developer will have to be engaged to ensure proper CLASSPATH configurations are in place.
-
-## JDBC configuration
-
-This document is based on the latest driver ([12.4](https://techcommunity.microsoft.com/t5/sql-server-blog/jdbc-driver-12-4-for-sql-server-released/ba-p/3889965)) installed in the root of C drive.
-
-## Set the CLASSPATH
 
 To set CLASSPATH, use one of the following methods:
 
 > [!NOTE]
 > Command prompt setting is a temporary setting and will be removed when you close the command prompt window. GUI is a permanent setting and will require a reboot.
 
-### Command prompt
+#### Command prompt
 
 ```cmd
 Set CLASSPATH=.;C:\sqljdbc_12.4\enu\mssql-jdbc-12.4.0.jre8.jar
 ```
 
-### GUI
+#### GUI
 
 To set the CLASSPATH using GUI, follow these steps:
 
@@ -63,25 +64,25 @@ To set the CLASSPATH using GUI, follow these steps:
 
 1. Select **OK**.
 
-## Connection strings with passed in credentials
+### Connection strings with passed in credentials
 
 Connection strings with passed in credentials refers to a connection string that includes authentication credentials (such as username and password) as parameters or values within the string. When a program connects to a database or another service, it needs to provide authentication information to establish a secure connection.
 
 The following connection string shows an example of how to connect to a SQL Server database based on the authentication mode you want to use:
 
-### SQL Server Authentication
+#### SQL Server Authentication
 
 Connection string = `jdbc:sqlserver://<ServerName>:<PortNum>;user=<MySQLAuthAccount>;password=<MyPassword>;trustServerCertificate=true;`
 
-### Windows AD Authentication without integrated security
+#### Windows AD Authentication without integrated security
 
 Connection string = `jdbc:sqlserver://ServerName:Port;user=<MyADAuthAccount>;password=<MyPassword>;Domain=<MyDomain>;trustServerCertificate=true;javaAuthentication=NTLM`
 
-### Windows AD Authentication with Kerberos and without integrated security
+#### Windows AD Authentication with Kerberos and without integrated security
 
 Connection string = `jdbc:sqlserver://ServerName:Port;user=<MyADAuthAccount>;password=<MyPassword>;Domain=<MyDomain>;trustServerCertificate=true;javaAuthentication=JavaKerberos`
 
-### Integrated NTLM connection
+#### Integrated NTLM connection
 
 In this kind of connection, client machine must be on a windows domain.
 
@@ -99,7 +100,7 @@ You can either modify and add the path or copy the file into an already establis
 
 Connection string = `jdbc:sqlserver://ServerName:Port;integratedSecurity=true;Domain=mydomain;trustServerCertificate=true;javaAuthentication=NTLM`
 
-### Integrated Kerberos connections
+#### Integrated Kerberos connections
 
 Prerequisites for this type of connection are:
 
@@ -123,7 +124,7 @@ The *Jaas.conf* files will allow java to use the current context of the logged i
 
 - In the *Java.Security* file, you need to modify the following line:
 
-  ```output
+  ```java
   # Default login configuration file
     
   login.config.url.1=C:=\<Path to the File>\jaas.conf
@@ -148,9 +149,9 @@ The *Jaas.conf* files will allow java to use the current context of the logged i
   };
   ```
 
-Connection string = `jdbc:sqlserver://ServerName:Port;integratedSecurity=true;Domain=mydomain;trustServerCertificate=true;javaAuthentication=JavaKerberos;`
+Connection string = `jdbc:sqlserver://<ServerName>:<PortNum>;integratedSecurity=true;Domain=<MyyDomain>;trustServerCertificate=true;javaAuthentication=JavaKerberos;`
 
-## Sample code
+### Sample code
 
 All JDBC drivers come with sample code in the *\sqljdbc_12.4\enu\samples* directory. The one most commonly used will be in *\sqljdbc_12.4\enu\samples\connections\ConnectURR.java*. Create a file called *ConnectURL.java* or use the *ConnectURL.java* from the sampled supplied with the driver.
 
@@ -184,177 +185,191 @@ public class ConnectURL {
 }
 ```
 
-## JDBC driver tracing
+### JDBC driver tracing
 
-[Tracing driver operation](/sql/connect/jdbc/tracing-driver-operation).
+Generally, we always want to set tracing to `FINEST` for the more detail. There are two methods of driver tracing, [enabling tracing programmatically](/sql/connect/jdbc/tracing-driver-operation#enabling-tracing-programmatically) and [enabling tracing by using the *logging.properties* file](/sql/connect/jdbc/tracing-driver-operation#enabling-tracing-by-using-the-loggingproperties-file).
 
-Generally, we always want to set tracing to `FINEST` for the more detail. There are two methods of driver tracing, programmatically and enabling it by using the *logging.properties* file.
+If you choose to use the *logging.properties* file, you must find the correct environment for the *logging.properties* file. *$JAVA_HOME\conf\\* and *$JAVA_HOME\jre\lib* are two possible locations.
 
-If you choose to use the *logging.properties* file, you must find the correct environment for the *logging.properties* file. *$JAVA_HOME\conf\\* and *$JAVA_HOME\jre\lib* are two possible locations. Modify the *logging.properties* files to look like the following Global Properties:
+Follow these steps to configure this file:
 
-```output
-# "handlers" specifies a comma-separated list of log Handler
-# classes. These handlers will be installed during VM startup.
-# Note that these classes must be on the system classpath.
-# By default we only configure a ConsoleHandler, which will only
-# show messages at the INFO and above levels.
-handlers= java.util.logging.ConsoleHandler
+1. Modify the *logging.properties* files to look like the following Global Properties:
 
-# To also add the FileHandler, use the following line instead.
-#handlers= java.util.logging.FileHandler
+    ```java
+    ############################################################
+    #  Global properties
+    ############################################################
+    # "handlers" specifies a comma-separated list of log Handler
+    # classes. These handlers will be installed during VM startup.
+    # Note that these classes must be on the system classpath.
+    # By default, we only configure a ConsoleHandler, which will only
+    # show messages at the INFO and above levels.
+    
+    handlers= java.util.logging.ConsoleHandler
+    
+    # To also add the FileHandler, use the following line instead.
+    #handlers= java.util.logging.FileHandler
+    
+    # Default global logging level.
+    # This specifies which kinds of events are logged across
+    # all loggers.  For any given facility this global level
+    # can be overridden by a facility-specific level
+    # Note that the ConsoleHandler also has a separate level
+    # setting to limit messages printed to the console.
+    
+    .level= INFO
+    ```
 
-# Default global logging level.
-# This specifies which kinds of events are logged across
-# all loggers.  For any given facility this global level
-# can be overridden by a facility-specific level
-# Note that the ConsoleHandler also has a separate level
-# setting to limit messages printed to the console.
-.level= INFO
-```
+    Handlers tell java where to export the output. There are two locations FileHandler writes to a file and ConsoleHandler writes to a console window. There's going to be a lot of data coming from the output, so write the output to a file.
 
-Handlers tell java where to export the output. There are two locations FileHandler writes to a file and ConsoleHandler writes to a console window. There's going to be a lot of data coming from the output, so we really want to just write the output to a file.
+    - **Comment line**
 
-Comment line
+      ```java
+      #handlers= java.util.logging.ConsoleHandler
+      ```
 
-`#handlers= java.util.logging.ConsoleHandler`
+    - **Uncomment line**
 
-Uncomment line
+      ```java
+      handlers= java.util.logging.FileHandler
+      ```
 
-`handlers= java.util.logging.FileHandler`
+    > [!NOTE]
+    > Set `.level` to `OFF`, you don't see messages on the console window.
+    >
+    > ```java
+    >  .level=OFF
+    >  ```
 
-We also want to set `.level` to `OFF` so we don't see messages on the console window.
+1. Set the Specific FileHandler logging:
 
-`.level=OFF`
+    ```java
+    ############################################################
+    # Handler specific properties.
+    # Describes specific configuration info for Handlers.
+    ############################################################
+    
+    # default file output is in user's home directory.
+    java.util.logging.FileHandler.pattern = %h/java%u.log
+    java.util.logging.FileHandler.limit = 50000
+    java.util.logging.FileHandler.count = 1
+    # Default number of locks FileHandler can obtain synchronously.
+    # This specifies maximum number of attempts to obtain lock file by FileHandler
+    # implemented by incrementing the unique field %u as per FileHandler API documentation.
+    java.util.logging.FileHandler.maxLocks = 100
+    java.util.logging.FileHandler.formatter = java.util.logging.XMLFormatter
+    
+    # Limit the messages that are printed on the console to INFO and above.
+    java.util.logging.ConsoleHandler.level = INFO
+    java.util.logging.ConsoleHandler.formatter = java.util.logging.SimpleFormatter
+    
+    # Example to customize the SimpleFormatter output format
+    # to print one-line log message like this:
+    #     <level>: <log message> [<date/time>]
+    #
+    # java.util.logging.SimpleFormatter.format=%4$s: %5$s [%1$tc]%n
+    ```
 
-Specific FileHander logging settings:
+1. Modify this portion, so it looks like or contains the following:
 
-```output
-############################################################
-# Handler specific properties.
-# Describes specific configuration info for Handlers.
-############################################################
+    ```java
+    java.util.logging.FileHandler.pattern = /Path/java%u.log
+    java.util.logging.FileHandler.limit = 5000000
+    java.util.logging.FileHandler.count = 20
+    java.util.logging.FileHandler.formatter = java.util.logging.SimpleFormatter
+    java.util.logging.FileHandler.level = FINEST
+    ```
 
-# default file output is in user's home directory.
-java.util.logging.FileHandler.pattern = %h/java%u.log
-java.util.logging.FileHandler.limit = 50000
-java.util.logging.FileHandler.count = 1
-# Default number of locks FileHandler can obtain synchronously.
-# This specifies maximum number of attempts to obtain lock file by FileHandler
-# implemented by incrementing the unique field %u as per FileHandler API documentation.
-java.util.logging.FileHandler.maxLocks = 100
-java.util.logging.FileHandler.formatter = java.util.logging.XMLFormatter
+1. Modify `java.util.logging.FileHandler.pattern = %h/java%u.log` line and replace `%h/` with a path you want to the file to be stored. For example:
 
-# Limit the messages that are printed on the console to INFO and above.
-java.util.logging.ConsoleHandler.level = INFO
-java.util.logging.ConsoleHandler.formatter = java.util.logging.SimpleFormatter
+   `java.util.logging.FileHandler.pattern = c:/Temp/java%u.log`
 
-# Example to customize the SimpleFormatter output format
-# to print one-line log message like this:
-#     <level>: <log message> [<date/time>]
-#
-# java.util.logging.SimpleFormatter.format=%4$s: %5$s [%1$tc]%n
-```
+1. Set the driver logging level:
 
-Modify this portion so it looks like or contains the following:
+    ```java
+    ############################################################
+    # Facility-specific properties.
+    # Provides extra control for each logger.
+    ############################################################
+    
+    # For example, set the com.xyz.foo logger to only log SEVERE
+    # messages:
+    # com.xyz.foo.level = SEVERE
+    ```
 
-```output
-java.util.logging.FileHandler.pattern = /Path/java%u.log
-java.util.logging.FileHandler.limit = 5000000
-java.util.logging.FileHandler.count = 20
-java.util.logging.FileHandler.formatter = java.util.logging.SimpleFormatter
-java.util.logging.FileHandler.level = FINEST
-```
+    At the bottom of this section, add the following line:
 
-I would modify `java.util.logging.FileHandler.pattern = %h/java%u.log` line and replace `%h/` with a path you want to the file to be stored.
+    `com.microsoft.sqlserver.jdbc.level=FINEST`
 
-`java.util.logging.FileHandler.pattern = c:/Temp/java%u.log`
+1. Save the changes made.
 
-Lastly, in this file, we want to set the driver logging level:
-
-```output
-############################################################
-# Facility-specific properties.
-# Provides extra control for each logger.
-############################################################
-
-# For example, set the com.xyz.foo logger to only log SEVERE
-# messages:
-# com.xyz.foo.level = SEVERE
-```
-
-At the bottom of this section, add the following line:
-
-`com.microsoft.sqlserver.jdbc.level=FINEST`
-
-Save the changes made.
-
-The file should look like the following:
-
-```output
-############################################################
-#  Default Logging Configuration File
-#
-# You can use a different file by specifying a filename
-# with the java.util.logging.config.file system property.
-# For example, java -Djava.util.logging.config.file=myfile
-############################################################
-
-############################################################
-#  Global properties
-############################################################
-
-# "handlers" specifies a comma-separated list of log Handler
-# classes.  These handlers will be installed during VM startup.
-# Note that these classes must be on the system classpath.
-# By default we only configure a ConsoleHandler, which will only
-# show messages at the INFO and above levels.
-#handlers= java.util.logging.ConsoleHandler
-
-# To also add the FileHandler, use the following line instead.
-handlers= java.util.logging.FileHandler
-
-# Default global logging level.
-# This specifies which kinds of events are logged across
-# all loggers.  For any given facility this global level
-# can be overridden by a facility-specific level
-# Note that the ConsoleHandler also has a separate level
-# setting to limit messages printed to the console.
-.level= OFF
-
-############################################################
-# Handler specific properties.
-# Describes specific configuration info for Handlers.
-############################################################
-
-# default file output is in user's home directory.
-java.util.logging.FileHandler.pattern = c:/Temp/java%u.log
-java.util.logging.FileHandler.limit = 50000
-java.util.logging.FileHandler.count = 1
-# Default number of locks FileHandler can obtain synchronously.
-# This specifies maximum number of attempts to obtain lock file by FileHandler
-# implemented by incrementing the unique field %u as per FileHandler API documentation.
-java.util.logging.FileHandler.maxLocks = 100
-java.util.logging.FileHandler.formatter = java.util.logging.SimpleFormatter
-
-# Limit the messages that are printed on the console to INFO and above.
-#java.util.logging.ConsoleHandler.level = INFO
-#java.util.logging.ConsoleHandler.formatter = java.util.logging.SimpleFormatter
-
-# Example to customize the SimpleFormatter output format
-# to print one-line log message like this:
-#     <level>: <log message> [<date/time>]
-#
-# java.util.logging.SimpleFormatter.format=%4$s: %5$s [%1$tc]%n
-
-############################################################
-# Facility-specific properties.
-# Provides extra control for each logger.
-############################################################
-
-# For example, set the com.xyz.foo logger to only log SEVERE
-# messages:
-# com.xyz.foo.level = SEVERE
-com.microsoft.sqlserver.jdbc.level=FINEST
-```
+    The file should look like the following:
+    
+    ```java
+    ############################################################
+    #  Default Logging Configuration File
+    #
+    # You can use a different file by specifying a filename
+    # with the java.util.logging.config.file system property.
+    # For example, java -Djava.util.logging.config.file=myfile
+    ############################################################
+    
+    ############################################################
+    #  Global properties
+    ############################################################
+    
+    # "handlers" specifies a comma-separated list of log Handler
+    # classes.  These handlers will be installed during VM startup.
+    # Note that these classes must be on the system classpath.
+    # By default we only configure a ConsoleHandler, which will only
+    # show messages at the INFO and above levels.
+    #handlers= java.util.logging.ConsoleHandler
+    
+    # To also add the FileHandler, use the following line instead.
+    handlers= java.util.logging.FileHandler
+    
+    # Default global logging level.
+    # This specifies which kinds of events are logged across
+    # all loggers.  For any given facility this global level
+    # can be overridden by a facility-specific level
+    # Note that the ConsoleHandler also has a separate level
+    # setting to limit messages printed to the console.
+    .level= OFF
+    
+    ############################################################
+    # Handler specific properties.
+    # Describes specific configuration info for Handlers.
+    ############################################################
+    
+    # default file output is in user's home directory.
+    java.util.logging.FileHandler.pattern = c:/Temp/java%u.log
+    java.util.logging.FileHandler.limit = 50000
+    java.util.logging.FileHandler.count = 1
+    # Default number of locks FileHandler can obtain synchronously.
+    # This specifies maximum number of attempts to obtain lock file by FileHandler
+    # implemented by incrementing the unique field %u as per FileHandler API documentation.
+    java.util.logging.FileHandler.maxLocks = 100
+    java.util.logging.FileHandler.formatter = java.util.logging.SimpleFormatter
+    
+    # Limit the messages that are printed on the console to INFO and above.
+    #java.util.logging.ConsoleHandler.level = INFO
+    #java.util.logging.ConsoleHandler.formatter = java.util.logging.SimpleFormatter
+    
+    # Example to customize the SimpleFormatter output format
+    # to print one-line log message like this:
+    #     <level>: <log message> [<date/time>]
+    #
+    # java.util.logging.SimpleFormatter.format=%4$s: %5$s [%1$tc]%n
+    
+    ############################################################
+    # Facility-specific properties.
+    # Provides extra control for each logger.
+    ############################################################
+    
+    # For example, set the com.xyz.foo logger to only log SEVERE
+    # messages:
+    # com.xyz.foo.level = SEVERE
+    com.microsoft.sqlserver.jdbc.level=FINEST
+    ```
 
 After you have reproduced the error, you'll want to revert the changes to stop the logger from creating files.
