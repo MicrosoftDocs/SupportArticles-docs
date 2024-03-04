@@ -1,7 +1,7 @@
 ---
-title: Troubleshooting an error when you try to create a linked server after migrating SQL Server to Azure
+title: An error occurs when you try to create a linked server
 description: This article provides a resolution to a problem in which a linked server can't be created after you migrate on-premises SQL Server to Azure.
-ms.date: 02/28/2024
+ms.date: 03/04/2024
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
@@ -10,7 +10,7 @@ ms.custom: sap:Connection issues
 
 # Can't create a linked server after migrating on-premises SQL Server to Azure
 
-This article helps you resolve a problem in which you can't create a linked server after you move an instance of Microsoft SQL Server to Azure.
+This article helps you resolve a problem in which you try to create a linked server after you move an instance of Microsoft SQL Server to Azure.
 
 ## Symptoms
 
@@ -18,27 +18,27 @@ After you migrate on-premises SQL Server to Azure, you can't create a linked ser
 
 ## Cause
 
-The support for TLS 1.2 can be a possible cause of the problem in connecting to the SQL Server 2012 with the new Azure machines.
+The presence of support for TLS 1.2 can be a possible cause of the problem in connecting to the SQL Server 2012 with the Azure virtual machines.
 
-You might reproduce the same error:
+You might receive the following error messages:
 
 > [Microsoft OLE DB Driver for SQL Server]: Client unable to Establish connection
 
 > [Microsoft OLE DB Driver for SQL Server]: TCP Provider: An existing connection has been forced to be interrupted by the remote host.
 
-Here, the remote server receives the following TLS messages when it tries to connect to SQL Server:
+Here, the remote server receives the following TLS messages when the server tries to connect to SQL Server:
 
-"An unrecoverable alert was generated and sent to the remote end." 
+> "An unrecoverable alert was generated and sent to the remote end."
 
-Note: You might see this message when the connection is terminated. The defined unrecoverable error code of the TLS protocol is **40**. The status of the Windows SChannel error is **1205**.
+   You might see this message when the connection is terminated. The defined unrecoverable error code of the TLS protocol is **40**. The status of the Windows SChannel error is **1205**.
 
-"An unrecoverable alert was generated and sent to the remote end."
+> "An unrecoverable alert was generated and sent to the remote end."
 
-Note: This error might cause the connection to terminate. The TLS protocol defined fatal error code is **40**. The Windows SChannel error status is **1205**.
+   This error might terminate the connection. The TLS protocol defined fatal error code is **40**. The Windows SChannel error status is **1205**.
 
 ## Resolution
 
-To resolve this problem, add the following required registry keys, and update SQL Server to 2012 SP4 so that SQL Server 2022 can make the connection.
+To resolve this problem, add the following required registry keys, and update SQL Server to 2012 SP4 so that SQL Server 2022 can connect to it.
 
 `[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2]`
 
@@ -52,8 +52,8 @@ You might receive the following error message after you install updates on the S
 
 To resolve this error, follow these steps.
 
-    > [!NOTE]
-    > Make sure that you have the English (United States) language pack installed before you run the commands in this procedure.
+  > [!NOTE]
+  > Make sure that you have the English (United States) language pack installed before you run the commands in this procedure.
 
 1. Open PowerShell.
 
