@@ -29,6 +29,8 @@ landingContent:
         links:
           - text: Container group deployment remains in Waiting state
             url: container-group-deployment-waiting-state.md
+          - text: Container group remains in transitioning state
+            url: container-group-transitioning-state.md
           - text: Inaccessible image failure
             url: inaccessible-image.md
           - text: Error codes for Spot container creation
@@ -41,7 +43,6 @@ landingContent:
             url: service-unavailable-container-group-quota-exceeded.md
           - text: ServiceUnavailable (409) - requested resource is not available in the location
             url: service-unavailable-requested-resource-is-not-available.md
-
   # Card
   - title: Troubleshoot a running container group 
     linkLists:
@@ -55,6 +56,8 @@ landingContent:
             url: acr-image-pull-failures-managed-identity.md
           - text: Confidential container issues
             url: common-confidential-container-errors.md
+          - text: Container group remains in transitioning state
+            url: container-group-transitioning-state.md
           - text: Container group still runs after a stop or delete command 
             url: aci-still-running-after-stop-delete-command.md
           - text: Container Instances debugging tools

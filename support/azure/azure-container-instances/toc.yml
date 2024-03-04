@@ -9,7 +9,9 @@ items:
   href: unexpected-memory-usage-metrics.md
 - name: Can't delete a virtual network or subnet used by Azure Container Instances
   href: cannot-delete-vnet-subnet.md
-- name: Common confidential containers issues
+- name: Container group remains in transitioning state
+  href: container-group-transitioning-state.md
+- name: Common confidential container issues
   href: common-confidential-container-errors.md
 - name: Container instance continues to run after the stop or delete command
   href: aci-still-running-after-stop-delete-command.md
