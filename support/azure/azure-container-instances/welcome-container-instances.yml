@@ -49,6 +49,8 @@ landingContent:
         links:
           - text: Azure Container Instances shows unexpected memory usage metrics
             url: unexpected-memory-usage-metrics.md
+          - text: Can't do operations or the container group is in a bad state
+            url: cannot-do-container-group-operations.md
           - text: Can't pull images from Container Registry using a managed identity
             url: acr-image-pull-failures-managed-identity.md
           - text: Confidential container issues
@@ -67,5 +69,3 @@ landingContent:
             url: cannot-delete-vnet-subnet.md
           - text: Error - Web socket is closed or could not be opened
             url: web-socket-is-closed-or-could-not-be-opened.md
-
-
