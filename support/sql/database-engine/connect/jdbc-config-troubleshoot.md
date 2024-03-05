@@ -31,7 +31,7 @@ This article is a reference guide to JDBC. It includes the driver and support do
 
 ## JDBC requirements
 
-- The [Java Runtime Environment (JRE)](/sql/connect/jdbc/system-requirements-for-the-jdbc-driver) version must match the driver with the JRE version specified in the name. For example, *mssql-jdbc-9.4.1.jre8.jar* requires JRE1.8 and *mssql-jdbc-9.4.1.jre11.jar* requires JRE11.
+- The [Java Runtime Environment (JRE)](/sql/connect/jdbc/system-requirements-for-the-jdbc-driver) version must match the driver with the JRE version specified in the name. For example, *mssql-jdbc-9.4.1.jre8.jar* requires JRE1.8, and *mssql-jdbc-9.4.1.jre11.jar* requires JRE11.
 
 - [CLASSPATH](/sql/connect/jdbc/using-the-jdbc-driver) is a Java environment variable that contains the directory path and binary jar files. Java needs it to execute the desired application. It's a requirement to specify which driver and dependency binary jar files Java needs to run. The minimum `CLASSPATH` includes the current working directory `.;` and the location of the JDBC driver jar file.
 
