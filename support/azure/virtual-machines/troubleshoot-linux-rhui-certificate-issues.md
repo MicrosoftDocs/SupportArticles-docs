@@ -3,9 +3,9 @@ title: Troubleshoot common certificate issues in RHUI
 description: Troubleshoot common Red Hat Update Infrastructure certificate issues in Azure that are caused by expired or missing TLS or SSL certificates.
 author: msaenzbosupport
 ms.author: msaenzbo
-ms.reviewer: divargas-msft, v-weizhu
+ms.reviewer: divargas-msft, pagienge, v-weizhu
 editor: v-jsitser
-ms.date: 01/15/2024
+ms.date: 03/05/2024
 ms.service: virtual-machines
 ms.subservice: redhat
 ---
@@ -525,7 +525,7 @@ The following steps apply if the OS version is *earlier than the latest version 
    enabled=1 
    gpgcheck=1 
    gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-microsoft-azure-release 
-   sslverify=
+   sslverify=1
    ```
 
 3. Install the `rhui-azure-rhel8-sap-ha` package by running the `dnf install` command:
