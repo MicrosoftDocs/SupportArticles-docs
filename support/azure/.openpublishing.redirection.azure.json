@@ -101,11 +101,6 @@
         "redirect_document_id": true
       },
       {
-        "source_path": "support/azure/cloud-services/instance-level-public-ip-address-configuration.md",
-        "redirect_url": "/troubleshoot/azure/cloud-services-extended/instance-level-public-ip-address-configuration",
-        "redirect_document_id": true
-      },
-      {
         "source_path": "support/azure/cloud-services/disk-partition-preservation.md",
         "redirect_url": "/troubleshoot/azure/cloud-services-extended/disk-partition-preservation",
         "redirect_document_id": true
@@ -163,11 +158,6 @@
       {
         "source_path": "support/azure/cloud-services/role-startup-failure.md",
         "redirect_url": "/troubleshoot/azure/cloud-services-extended/role-startup-failure",
-        "redirect_document_id": true
-      },
-      {
-        "source_path": "support/azure/cloud-services/failed-update-ongoing-migration-process.md",
-        "redirect_url": "/troubleshoot/azure/cloud-services-extended/failed-update-ongoing-migration-process",
         "redirect_document_id": true
       },
       {
