@@ -1,17 +1,13 @@
 ---
 title: Code 31 error for WAN Miniport device
 description: Describes an error that's returned in Device Manager for the WAN Miniport (Network monitor) device. Occurs after you install Windows. A resolution is provided.
-ms.date: 09/08/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:wireless-networking-and-802.1x-authentication, csstroubleshoot
-ms.technology: windows-client-networking
 ---
 # Code 31 error in Device Manager for WAN Miniport (Network monitor) device in Windows
 

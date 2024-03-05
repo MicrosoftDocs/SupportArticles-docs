@@ -1,17 +1,15 @@
 ---
 title: Guidance for troubleshooting data corruption and disk errors
 description: Provides guidance to help troubleshoot data corruption and disk errors in Windows.
-ms.date: 05/10/2022
+ms.date: 12/26/2023
 author: kaushika-msft
 ms.author: kaushika
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:data-corruption-and-disk-errors, csstroubleshoot
-ms.technology: windows-server-backup-and-storage
 ---
 # Data corruption and disk errors troubleshooting guidance
 

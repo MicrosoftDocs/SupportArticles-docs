@@ -1,15 +1,13 @@
 ---
 title: Gather information by using TSS for user experience-related issues
 description: Introduces how to gather information by using the TroubleShootingScript (TSS) toolset for user experience-related issues.
-ms.date: 07/13/2023
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, warrenw, v-lianna
 ms.custom: sap:windows-tss-uex, csstroubleshoot
-ms.technology: windows-client-troubleshooter
 ---
 # Gather information by using TSS for user experience-related issues
 

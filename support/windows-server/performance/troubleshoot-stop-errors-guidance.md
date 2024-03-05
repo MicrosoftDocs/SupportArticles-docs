@@ -1,17 +1,13 @@
 ---
 title: Guidance for troubleshooting stop errors and unexpected restart.
 description: Introduces general guidance for troubleshooting scenarios related to stop errors and unexpected restart.
-ms.date: 08/22/2022
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:blue-screen/bugcheck, csstroubleshoot
-ms.technology: windows-server-performance
 ---
 # Stop errors and unexpected restart troubleshooting guidance
 

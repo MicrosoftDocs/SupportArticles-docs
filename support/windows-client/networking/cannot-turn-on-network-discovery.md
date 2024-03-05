@@ -1,17 +1,13 @@
 ---
 title: Can't turn on Network Discovery
 description: Describes an issue that changes to the Advanced sharing settings in **Network and Sharing Center** aren't saved. So you can't turn on Network Discovery.
-ms.date: 09/08/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, ahamad, vipekkan
 ms.custom: sap:tcp/ip-communications, csstroubleshoot
-ms.technology: windows-client-networking
 ---
 # You can't turn on Network Discovery in Network and Sharing Center
 

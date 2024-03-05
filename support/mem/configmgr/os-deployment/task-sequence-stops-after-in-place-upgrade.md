@@ -1,7 +1,7 @@
 ---
 title: Task sequence stops after an in-place upgrade
 description: The task sequence in Configuration Manager stops after an in-place upgrade from Windows 7 or Windows 8.1 to Windows 10.
-ms.date: 06/04/2020
+ms.date: 12/05/2023
 ms.reviewer: kaushika, frankroj
 ---
 # Configuration Manager task sequence doesn't continue after an in-place upgrade to Windows 10

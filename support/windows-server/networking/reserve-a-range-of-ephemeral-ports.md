@@ -1,17 +1,13 @@
 ---
 title: Reserve a range of ephemeral ports
 description: Describes how to reserve a range of ephemeral ports on a computer.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:tcp/ip-communications, csstroubleshoot
-ms.technology: networking
 ---
 # Reserve a range of ephemeral ports on a computer that is running Windows Server 2003 or Windows 2000 Server
 

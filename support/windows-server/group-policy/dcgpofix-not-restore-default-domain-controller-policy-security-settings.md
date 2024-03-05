@@ -1,17 +1,13 @@
 ---
 title: The Dcgpofix tool doesn't restore security settings in the Default Domain Controller Policy to their original state
 description: Explains that the Dcgpofix tool doesn't restore security settings in the Default Domain Controller Policy to the same state that they were in after successfully completing Dcpromo and that it's best to use this tool only in disaster recovery scenario.
-ms.date: 03/24/2022
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: timtho, kaushika
 ms.custom: sap:group-policy-management-gpmc-or-agpm, csstroubleshoot
-ms.technology: windows-server-group-policy
 ---
 # The Dcgpofix tool doesn't restore security settings in the Default Domain Controller Policy to their original state
 

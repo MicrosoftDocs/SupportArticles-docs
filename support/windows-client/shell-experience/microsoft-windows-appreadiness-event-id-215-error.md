@@ -1,17 +1,13 @@
 ---
 title: Microsoft-Windows-AppReadiness event ID 215 error
 description: Describes a Microsoft-Windows-AppReadiness event ID 215 error that occurs in Windows.
-ms.date: 09/08/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:modern-inbox-and-microsoft-store-apps, csstroubleshoot
-ms.technology: windows-client-shell-experience
 ---
 # Microsoft-Windows-AppReadiness event ID 215 error after a user first logs on
 

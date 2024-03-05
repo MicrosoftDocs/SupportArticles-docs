@@ -4,7 +4,7 @@ description: This guide describes how to configure Android enterprise devices in
 keywords:
 author: helenclu
 ms.author: luche
-ms.date: 03/04/2020
+ms.date: 12/05/2023
 ms.reviewer: kaushika, mandia
 search.appverid: MET150
 ms.custom: 

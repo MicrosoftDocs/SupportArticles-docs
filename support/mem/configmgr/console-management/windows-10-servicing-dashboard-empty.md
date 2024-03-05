@@ -4,7 +4,7 @@ description: After you upgrade to Configuration Manager version 2103, no data ap
 author: helenclu
 ms.author: vinpa
 ms.reviewer: kaushika, vinpa
-ms.date: 04/14/2021
+ms.date: 12/05/2023
 ---
 # The Windows 10 servicing dashboard shows no data
 

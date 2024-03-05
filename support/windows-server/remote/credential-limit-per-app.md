@@ -1,17 +1,13 @@
 ---
 title: Credential limit per app
 description: Troubleshoot an issue where only 20 credentials can be used per app.
-ms.date: 11/16/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, helohr, femila, v-lianna
 ms.custom: sap:remote-desktop-sessions, csstroubleshoot
-ms.technology: windows-server-rds
 ---
 # Credential limit per app
 

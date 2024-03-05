@@ -5,7 +5,7 @@ ms.date: 03/19/2020
 ms.custom: sap:WWW modules and features
 ms.reviewer: mlaing
 ms.topic: article
-ms.technology: iis-www-modules-features
+ms.subservice: www-modules-features
 ---
 # Global Modules should be added and removed at both the server level and child level configuration in IIS
 

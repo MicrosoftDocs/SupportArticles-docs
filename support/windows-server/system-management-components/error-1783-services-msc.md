@@ -1,17 +1,13 @@
 ---
 title: Error 1783 when you open Services.msc
 description: Provides a solution to an issue where you get the error 1783 when you open Services.msc.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:microsoft-management-console-mmc, csstroubleshoot
-ms.technology: windows-server-system-management-components
 ---
 # Error 1783: The stub received bad data
 

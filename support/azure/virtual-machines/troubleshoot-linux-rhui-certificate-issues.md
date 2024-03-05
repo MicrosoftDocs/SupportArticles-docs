@@ -3,9 +3,9 @@ title: Troubleshoot common certificate issues in RHUI
 description: Troubleshoot common Red Hat Update Infrastructure certificate issues in Azure that are caused by expired or missing TLS or SSL certificates.
 author: msaenzbosupport
 ms.author: msaenzbo
-ms.reviewer: divargas-msft
+ms.reviewer: divargas-msft, pagienge, v-weizhu
 editor: v-jsitser
-ms.date: 12/25/2023
+ms.date: 03/05/2024
 ms.service: virtual-machines
 ms.subservice: redhat
 ---
@@ -479,15 +479,13 @@ The following steps apply if the OS version is *earlier than the latest version 
 2. Add the required client configuration RPM repositories for `SAP-APPS` to the */root/repo.config* file:
 
    ```console
-   [rhui-microsoft-azure-rhel8-sapapps]
-   name=Microsoft Azure RPMs for Red Hat Enterprise Linux 8 (rhel8-sapapps)
-   baseurl=https://rhui-1.microsoft.com/pulp/repos/microsoft-azure-rhel8-sapapps
-           https://rhui-2.microsoft.com/pulp/repos/microsoft-azure-rhel8-sapapps
-           https://rhui-3.microsoft.com/pulp/repos/microsoft-azure-rhel8-sapapps
-   enabled=1
-   gpgcheck=1
-   gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-microsoft-azure-release
-   sslverify=1
+   [rhui-microsoft-azure-rhel8-sapapps] 
+   name=Microsoft Azure RPMs for Red Hat Enterprise Linux 8 (rhel8-sapapps) 
+   baseurl=https://rhui4-1.microsoft.com/pulp/repos/unprotected/microsoft-azure-rhel8-sapapps 
+   enabled=1 
+   gpgcheck=1 
+   gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-microsoft-azure-release 
+   sslverify=1 
    ```
 
 3. Install the `rhui-azure-rhel8-sapapps` package by running the `dnf install` command:
@@ -521,14 +519,12 @@ The following steps apply if the OS version is *earlier than the latest version 
 2. Add the required client configuration RPM repositories for `SAP HANA` to the */root/repo.config* file:
 
    ```console
-   [rhui-microsoft-azure-rhel8-sap-ha]
-   name=Microsoft Azure RPMs for Red Hat Enterprise Linux 8 (rhel8-sap-ha)
-   baseurl=https://rhui-1.microsoft.com/pulp/repos/microsoft-azure-rhel8-sap-ha
-           https://rhui-2.microsoft.com/pulp/repos/microsoft-azure-rhel8-sap-ha
-           https://rhui-3.microsoft.com/pulp/repos/microsoft-azure-rhel8-sap-ha
-   enabled=1
-   gpgcheck=1
-   gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-microsoft-azure-release
+   [rhui-microsoft-azure-rhel8-sap-ha] 
+   name=Microsoft Azure RPMs for Red Hat Enterprise Linux 8 (rhel8-sap-ha) 
+   baseurl=https://rhui4-1.microsoft.com/pulp/repos/unprotected/microsoft-azure-rhel8-sap-ha 
+   enabled=1 
+   gpgcheck=1 
+   gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-microsoft-azure-release 
    sslverify=1
    ```
 
@@ -552,25 +548,37 @@ The following steps apply if the OS version is *earlier than the latest version 
 
 #### [RHEL 8._x_ - RHEL-HA (E4S)](#tab/rhel8-rhel-ha-e4s)
 
-1. Download the EUS repository configuration file by running the [wget](https://www.gnu.org/software/wget/) command:
+1. Create the */root/repo.config* file:
 
    ```bash
-   sudo wget https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhel8-ha.config
+   sudo vi /root/repo.config 
    ```
 
-2. Install the `rhui-azure-rhel8-ha` package by running the [dnf](https://dnf.readthedocs.io/en/latest/command_ref.html) installation command:
+2. Add the required client configuration RPM repositories for `RHEL 8 HA` to the */root/repo.config* file:
+
+   ```console
+   [rhui-microsoft-azure-rhel8-ha] 
+   name=Microsoft Azure RPMs for Red Hat Enterprise Linux 8 (rhel8-ha) 
+   baseurl=https://rhui4-1.microsoft.com/pulp/repos/unprotected/microsoft-azure-rhel8-ha 
+   enabled=1 
+   gpgcheck=1 
+   gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-microsoft-azure-release 
+   sslverify=1 
+   ```
+   
+3. Install the `rhui-azure-rhel8-ha` package by running the `dnf install` command:
 
    ```bash
-   sudo dnf --config=rhui-microsoft-azure-rhel8-ha.config install rhui-azure-rhel8-ha
+   sudo dnf --config /root/repo.config install rhui-azure-rhel8-ha
    ```
 
-3. Lock the `releasever` variable:
+4. Lock the `releasever` variable by running the following command:
 
    ```bash
    sudo echo $(. /etc/os-release && echo $VERSION_ID) > /etc/yum/vars/releasever
    ```
-
-4. Verify that the corresponding repositories are available and show no errors by running the `dnf repolist` command:
+   
+5. Verify that the corresponding repositories are available and show no errors by running the `dnf repolist` command:
 
    ```bash
    sudo dnf repolist all
@@ -582,81 +590,45 @@ The following steps apply if the OS version is *earlier than the latest version 
 
 Select the tab of an SAP image type to see the corresponding instructions.
 
-#### [RHEL 9.0 - RHEL-SAP-APPS](#tab/rhel9-rhel-sap-apps)
+#### [RHEL 9._x_ - RHEL-SAP-APPS](#tab/rhel9-rhel-sap-apps)
 
 The following steps apply if the OS version is *earlier than the latest version that's available* that's supported by SAP for `RHEL 9.0`, and if the VM was created by using the `RHEL-SAP-APPS` offer image.
 
-1. Create the */root/repo.config* file:
+1. Install the `rhui-azure-rhel9-sapapps` package by running the `dnf install` command:
 
    ```bash
-   sudo vi /root/repo.config 
+   sudo dnf --config='https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhel9-sapapps.config' install rhui-azure-rhel9-sapapps
    ```
 
-2. Add the required client configuration RPM repositories for `SAP-APPS` to the */root/repo.config* file:
-
-   ```console
-   [rhui-microsoft-azure-rhel9-sapapps]
-   name=Microsoft Azure RPMs for Red Hat Enterprise Linux 9 (rhel9-sapapps)
-   baseurl=https://rhui4-1.microsoft.com/pulp/repos/unprotected/microsoft-azure-rhel9-sapapps
-   enabled=1
-   gpgcheck=1
-   gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-microsoft-azure-release
-   sslverify=1
-   ```
-
-3. Install the `rhui-azure-rhel9-sapapps` package by running the `dnf install` command:
+2. Lock the `releasever` level. Currently, it has to be 9.0 or 9.2.
 
    ```bash
-   sudo dnf --config /root/repo.config install rhui-azure-rhel9-sapapps
-   ```
-   
-4. Lock the `releasever` variable by running the following command:
-
-   ```bash
-   sudo echo $(. /etc/os-release && echo $VERSION_ID) > /etc/yum/vars/releasever
+   sudo sh -c 'echo 9.2 > /etc/dnf/vars/releasever'
    ```
 
-5. Verify that the corresponding repositories are available and show no errors. To do this, run the `dnf repolist` command:
+3. Verify that the corresponding repositories are available and show no errors. To do this, run the `dnf repolist` command:
 
    ```bash
    sudo dnf repolist all
    ```
 
-#### [RHEL 9.0 - RHEL-SAP-HA (E4S)](#tab/rhel9-rhel-sap-ha-e4s)
+#### [RHEL 9._x_ - RHEL-SAP-HA (E4S)](#tab/rhel9-rhel-sap-ha-e4s)
 
 The following steps apply if the OS version is *earlier than the latest version available* that's supported by SAP for `RHEL 9.0`, and if the VM was created by using the `RHEL-SAP-HA` offer image.
 
-1. Create the */root/repo.config* file:
+1. Install the `rhui-azure-rhel9-sap-ha` package by running the `dnf install` command:
 
    ```bash
-   sudo vi /root/repo.config 
+   sudo dnf --config='https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhel9-sap-ha.config' install rhui-azure-rhel9-sap-ha
    ```
 
-2. Add the required client configuration RPM repositories for `SAP HANA` to the */root/repo.config* file:
-
-   ```console
-   [rhui-microsoft-azure-rhel9-sap-ha]
-   name=Microsoft Azure RPMs for Red Hat Enterprise Linux 9 (rhel9-sap-ha)
-   baseurl=https://rhui4-1.microsoft.com/pulp/repos/unprotected/microsoft-azure-rhel9-sap-ha
-   enabled=1
-   gpgcheck=1
-   gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-microsoft-azure-release
-   sslverify=1
-   ```
-
-3. Install the `rhui-azure-rhel9-sap-ha` package by running the `dnf install` command:
+2. Lock the `releasever` level. Currently, it has to be 9.0 or 9.2.
 
    ```bash
-   sudo dnf --config /root/repo.config install rhui-azure-rhel9-sap-ha
+   sudo sh -c 'echo 9.2 > /etc/dnf/vars/releasever'
    ```
 
-4. Lock the `releasever` variable by running the following command:
-
-   ```bash
-   sudo echo $(. /etc/os-release && echo $VERSION_ID) > /etc/yum/vars/releasever
-   ```
-
-5. Verify that the corresponding repositories are available and show no errors. To do this, run the `dnf repolist` command:
+3. Verify that the corresponding repositories are available and show no errors. To do this, run the `dnf repolist` command:
 
    ```bash
    sudo dnf repolist all

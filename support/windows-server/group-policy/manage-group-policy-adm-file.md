@@ -1,17 +1,13 @@
 ---
 title: Recommendations for managing Group Policy administrative template (.adm) files
 description: Describes how ADM files work, the policy settings that are available to manage their operation, and recommendations about how to handle common ADM file management scenarios
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:group-policy-management-gpmc-or-agpm, csstroubleshoot
-ms.technology: windows-server-group-policy
 ---
 # Recommendations for managing Group Policy administrative template (.adm) files
 

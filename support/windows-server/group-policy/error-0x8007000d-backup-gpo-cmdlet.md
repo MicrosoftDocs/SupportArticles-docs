@@ -1,17 +1,13 @@
 ---
 title: Error 0x8007000D when you run the Backup-GPO PowerShell CmdLet in Windows Server Core edition
 description: Describes an issue in which you receive error 0x8007000D when you run the Backup-GPO PowerShell CmdLet in Windows Server Core edition.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: herbertm
 ms.custom: sap:group-policy-management-gpmc-or-agpm, csstroubleshoot
-ms.technology: windows-server-group-policy
 ---
 # Error 0x8007000D when running the Backup-GPO PowerShell CmdLet in Windows Server Core edition
 

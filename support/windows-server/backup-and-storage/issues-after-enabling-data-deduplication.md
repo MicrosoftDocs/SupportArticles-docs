@@ -1,17 +1,13 @@
 ---
 title: Issues after enabling data deduplication
 description: Describes some known issues that may occur after you enable data deduplication on Cluster Shared Volumes (CSV).
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, vimalsh
 ms.custom: sap:deduplication, csstroubleshoot
-ms.technology: windows-server-backup-and-storage
 ---
 # Known issues after you enable data deduplication on CSV
 

@@ -1,17 +1,13 @@
 ---
 title: HTTP Listener fails to initialize
 description: Provides a solution to an issue that HTTP Listener fails to initialize when user lacks SeChangeNotifyPrivilege.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:multilingual-user-interface-mui-and-input-method-editor-ime, csstroubleshoot
-ms.technology: windows-server-application-compatibility
 ---
 # HTTP Listener fails to initialize when lacking SeChangeNotifyPrivilege
 

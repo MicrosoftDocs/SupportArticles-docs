@@ -1,15 +1,13 @@
 ---
 title: Error 0x800f0805 when Server Manager and DISM fail to list the available features
 description: Helps resolve the issue in which Server Manager and the Deployment Image Servicing and Management (DISM) tool fail to list the available features.
-ms.date: 05/09/2023
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, hamansoor, v-lianna
 ms.custom: sap:server-manager, csstroubleshoot, ikb2lmc
-ms.technology: windows-server-system-management-components
 ---
 # Error 0x800f0805 when Server Manager and DISM fail to list the available features 
 

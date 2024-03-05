@@ -3,7 +3,6 @@ title: Information about the Unsafe File List
 description: The article provides information about the Unsafe File List in Internet Explorer.
 ms.date: 10/13/2020
 ms.reviewer: ramakoni
-ms.technology: internet-explorer-security-privacy
 ---
 # Information about the Unsafe File List in Internet Explorer
 

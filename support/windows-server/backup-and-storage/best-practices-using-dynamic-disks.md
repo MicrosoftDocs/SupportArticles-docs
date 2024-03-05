@@ -1,17 +1,13 @@
 ---
 title: Best practices for using dynamic disks
 description: Describes the best practices for using dynamic disks on Windows Server 2003-based computers.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, mjacquet
 ms.custom: sap:partition-and-volume-management, csstroubleshoot
-ms.technology: windows-server-backup-and-storage
 ---
 # Best practices for using dynamic disks on Windows Server 2003-based computers
 

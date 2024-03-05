@@ -1,17 +1,13 @@
 ---
 title: Cached user logon fails with LSASRV event 45058
 description: Fixes an issue that occurs when logging on to a domain-joined Windows Vista or Windows 7 computer using cached credentials.
-ms.date: 09/08/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:user-logon-fails, csstroubleshoot
-ms.technology: windows-client-user-profiles
 ---
 # Cached user logon fails when LSASRV event 45058 indicates FIFO deletion of cached credential
 
