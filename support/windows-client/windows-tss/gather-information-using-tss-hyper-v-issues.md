@@ -80,5 +80,5 @@ Some parameters are optional to perform a quicker and more streamlined collectio
 > You can combine multiple skip parameters with comma-separated items, such as the following example:
 >  
 > ```powershell
->    .\TSS.ps1 -SDP HyperV -SkipSDPList skipBPA,skipHang,skipTS,skipCsvSMB,skipHVreplica
+> .\TSS.ps1 -SDP HyperV -SkipSDPList skipBPA,skipHang,skipTS,skipCsvSMB,skipHVreplica
 > ```
