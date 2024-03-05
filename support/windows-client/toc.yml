@@ -1136,7 +1136,7 @@ items:
   - name: Storage and High Availability (SHA)
     items:
     - name: Gather information for Windows failover cluster related issues
-      href: ./windows-tss/gather-information-using-tss-windows-failover-cluster-issues
+      href: ./windows-tss/gather-information-using-tss-windows-failover-cluster-issues.md
   - name: User Experience (UEX)
     items:
     - name: Gather information for user experience-related issues
