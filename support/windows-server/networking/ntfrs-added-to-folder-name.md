@@ -18,7 +18,7 @@ _Original KB number:_ &nbsp; 328492
 
 ## Symptoms
 
-When you create a folder that's replicated by File Replication Service (FRS), FRS appends "\_*NTFRS*\_\<xxxxxxxx>" to the folder name when it replicates the folder.
+When you create a folder that's replicated by File Replication Service (FRS), FRS appends "\_*NTFRS*\_\<xxxxxxxx>" to the folder name.
 
 > [!NOTE]
 > In this example, \<xxxxxxxx> represents eight random hexadecimal digits.
@@ -75,9 +75,9 @@ To resolve this problem, follow these steps:
 
 All files and folders that FRS manages are uniquely identified by a file or folder GUID. FRS uses GUIDs as the canonical identifiers of files and folders that are being replicated.
 
-FRS tries to make sure that the GUID for each file or folder is exactly the same on all members of the replica set. To FRS, the file or folder name that's visible in Windows Explorer or in the output of the `DIR` command is just a property of a file or folder. The name and path don't identify the file. The GUID identifies the file.
+FRS tries to make sure that the GUID for each file or folder is exactly the same on all members of the replica set. To FRS, the file or folder name that's visible in Windows Explorer or in the output of the `DIR` command is only a property of a file or folder. The name and path don't identify the file. The GUID identifies the file.
 
-If an FRS member receives a change order to create a folder by using the name of an existing folder, FRS detects a naming conflict. The existing folder and the new folder have different GUIDs, so the new folder can't use the same name as the existing folder. In this situation, the new folder is given a new name in the form of \<FolderName>\_*NTFRS*\_\<xxxxxxxx>.
+If an FRS member receives a change order to create a folder by using the name of an existing folder, FRS detects a naming conflict. The existing folder and the new folder have different GUIDs. Therefore, the new folder can't have the same name as the existing folder. In this situation, the new folder is given a new name in the form of \<FolderName>\_*NTFRS*\_\<xxxxxxxx>.
 
 > [!NOTE]
 > In this example, \<FolderName> represents the name that was requested (the name of the first folder) and \<xxxxxxxx> represents eight random hexadecimal digits, such as "001a84b2."
