@@ -1,7 +1,7 @@
 ---
 title: Can't install the SNMP and WMI SNMP Provider features
 description: Works around the issue in which the SNMP and WMI SNMP Provider features can't be installed using the DISM.exe tool in Windows 10 or Windows 11.
-ms.date: 12/26/2023
+ms.date: 03/05/2024
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -37,10 +37,12 @@ To work around this issue, use one of the following methods.
 ## Add the SNMP and WMI SNMP Provider features from the Settings page
 
 1. Go to Start, select **Settings** > **System**.
-> [!NOTE]
-> On versions older than Windows 10 22H2, go to Settings > Apps > Apps & features instead.
+
+   > [!NOTE]
+   > In versions later than Windows 10, version 22H2, go to **Settings** > **Apps** > **Apps & features** instead.
 
 2. Select **Optional features** > **Add a feature**.
+
    - To add the SNMP feature, select **Simple Network Management Protocol (SNMP)** > **Add**.
    - To add the WMI SNMP Provider feature, select **WMI SNMP Provider** > **Add**.
       
@@ -49,7 +51,7 @@ To verify the added state, select **See optional features history**.
 ## Add the SNMP and WMI SNMP Provider features by using Windows PowerShell
 
 1. Start Windows PowerShell as an administrator.
-1. Run the following [Add-WindowsCapability](/powershell/module/dism/add-windowscapability) cmdlets to add the SNMP and WMI SNMP Provider features.
+2. Run the following [Add-WindowsCapability](/powershell/module/dism/add-windowscapability) cmdlets to add the SNMP and WMI SNMP Provider features.
 
     ```powershell
     Add-WindowsCapability -Online -Name "SNMP.Client~~~~0.0.1.0"
