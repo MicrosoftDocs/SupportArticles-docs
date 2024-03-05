@@ -16,8 +16,8 @@ items:
 - name: Existing connection forcibly closed
   href: tls-exist-connection-closed.md
   items:
-  - name: Connection to the linked server failed
-    href: connection-to-linked-server-failed.md
+  - name: Client machine can't connect to SQL Server by using SQL authentication
+    href: client-machine-cannot-connect-to-sqlserver.md
 - name: Explicit SPN is misplaced problem in SQL Server
   href: explicit-spn-is-misplaced.md
 - name: Troubleshooting KRB_AP_ERR_TKT_EXPIRED in Kerberos tickets

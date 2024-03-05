@@ -7,6 +7,7 @@ author: HaiyingYu
 ms.author: haiyingyu
 ms.reviewer: jopilov, v-jayaramanp
 ---
+
 # An existing connection was forcibly closed by the remote host (OS error 10054)
 
 _Applies to:_ &nbsp; SQL Server
