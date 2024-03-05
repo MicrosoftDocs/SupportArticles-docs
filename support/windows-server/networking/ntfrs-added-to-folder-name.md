@@ -1,7 +1,7 @@
 ---
 title: NTFRS_xxxxxxxx is added to a folder name
 description: Helps fix an issue in which File Replication Service (FRS) adds "NTFRS_xxxxxxxx" to a folder name.
-ms.date: 12/26/2023
+ms.date: 03/06/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -9,19 +9,19 @@ localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:frs, csstroubleshoot
 ---
-# Folder names are changed to "FolderName_NTFRS_\<xxxxxxxx>"
+# A folder name changes to "\<FolderName>\_*NTFRS*\_\<xxxxxxxx>"
 
-This article help you fix an issue in which File Replication Service (FRS) adds "NTFRS_**xxxxxxxx**" to folder names.
+This article helps you fix an issue in which File Replication Service (FRS) adds "\_*NTFRS*\_\<xxxxxxxx>" to a folder name.
 
 _Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2016  
 _Original KB number:_ &nbsp; 328492
 
 ## Symptoms
 
-When File Replication Service (FRS) is used to distribute shared files, FRS appends "NTFRS_ **xxxxxxxx**" to the folder names.
+When you create a folder that's replicated by File Replication Service (FRS), FRS appends "\_*NTFRS*\_\<xxxxxxxx>" to the folder name when it replicates the folder.
 
 > [!NOTE]
-> In this example, **xxxxxxxx** represents eight random hexadecimal digits.
+> In this example, \<xxxxxxxx> represents eight random hexadecimal digits.
 
 The following table shows how FRS might change the names of two folders.
 
@@ -48,9 +48,9 @@ There are two common causes of this problem:
 
 - You initiate an authoritative restore (D4) on one server but you don't perform the following preparations:  
 
-  - Stop the service on all other members of the reinitialized replica set before the NTFRS service restarts after the authoritative restore.
+  - Before the NTFRS service restarts after the authoritative restore, stop the service on all other members of the reinitialized replica set.
 
-  - Set the D2 registry key on all other members of the reinitialized replica set before any server can replicate outbound changes to reinitialized members of the replica set.
+  - Before any server can replicate outbound changes to reinitialized members of the replica set, configure the D2 registry key on all other members of the reinitialized replica set.
 
 ## Resolution
 
@@ -61,7 +61,7 @@ To resolve this problem, follow these steps:
 
 1. Rename the original folders and the changed folders, and then wait for the new names to propagate throughout the system.
 
-    This makes sure that the folder has a common name throughout the SYSVOL, and that the names and GUIDs match on all members.
+    This makes sure that each folder has a common name throughout the SYSVOL, and that the names and GUIDs match on all members.
 
     > [!NOTE]
     > Don't delete the undesired folder and then rename the other one. This can cause even more naming conflicts.
@@ -73,11 +73,11 @@ To resolve this problem, follow these steps:
 
 ## More information
 
-All files and folders that FRS manages are uniquely identified by a file GUID. FRS uses file GUIDs as the canonical identifiers of files and folders that are being replicated.
+All files and folders that FRS manages are uniquely identified by a file or folder GUID. FRS uses GUIDs as the canonical identifiers of files and folders that are being replicated.
 
 FRS tries to make sure that the GUID for each file or folder is exactly the same on all members of the replica set. To FRS, the file or folder name that's visible in Windows Explorer or in the output of the `DIR` command is just a property of a file or folder. The name and path don't identify the file. The GUID identifies the file.
 
-If an FRS member receives a change order to create a folder by using the name of an existing folder that has a different file GUID, FRS detects a naming conflict. Because the file GUIDs for the two folders differ, the existing folder name can't be changed. In this situation, the new folder is given a new name in the form of **FolderName** _NTFRS_ **GUIDname**.
+If an FRS member receives a change order to create a folder by using the name of an existing folder, FRS detects a naming conflict. The existing folder and the new folder have different GUIDs, so the new folder can't use the same name as the existing folder. In this situation, the new folder is given a new name in the form of \<FolderName>\_*NTFRS*\_\<xxxxxxxx>.
 
 > [!NOTE]
-> In this example, **FolderName** is the original name and **GUIDname** is a unique XX character string, such as "001a84b2."
+> In this example, \<FolderName> represents the name that was requested (the name of the first folder) and \<xxxxxxxx> represents eight random hexadecimal digits, such as "001a84b2."
