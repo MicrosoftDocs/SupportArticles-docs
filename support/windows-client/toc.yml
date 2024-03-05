@@ -1135,7 +1135,7 @@ items:
       href: ./windows-tss/gather-information-using-tss-wufb-reports.md
   - name: Storage and High Availability (SHA)
     items:
-    - name: Gather information by using TSS for Hyper-V related issues
+    - name: Gather information for Hyper-V related issues
       href: ./windows-tss/gather-information-using-tss-hyper-v-issues
   - name: User Experience (UEX)
     items:
