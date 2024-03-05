@@ -6,7 +6,7 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 localization_priority: medium
-ms.reviewer: kaushika, anupamk, thyog
+ms.reviewer: kaushika, anupamk, thyog, jtrox
 ms.custom: sap:tcp/ip-communications, csstroubleshoot
 ---
 # Can't add the SNMP and WMI SNMP Provider features in Windows 10 or Windows 11
