@@ -1,26 +1,26 @@
 ---
-title: Troubleshooting errors when SQL Server agent can't start
-description: This article provides a resolution for a problem in which the SQL Server agent can't start.
-ms.date: 02/29/2024
+title: Event ID 17052 - Can't start SQL Server Agent
+description: This article provides a resolution to the problem where the SQL Server Agent can't start.
+ms.date: 03/04/2024
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 
-# Event ID 17052 and you can't start SQL Server agent
+# Event ID 17052 and you can't start SQL Server Agent
 
-This article helps you resolve a problem in which you can't start the Microsoft SQL Server agent.
+This article helps you resolve a problem in which you can't start the Microsoft SQL Server Agent.
 
 ## Symptoms
 
-You receive the following error messages:
+You might receive the following error messages:
 
 > SQL Server does not accept the connection (error: 233). Waiting for Sql Server to allow connections. Operation attempted was: Verify Connection On Start.
 
 > A connection was successfully established with the server, but then an error occurred during the login process. (provider: SSL Provider, error: 0 - An existing connection was forcibly closed by the remote host.) (Microsoft SQL Server, Error: 10054)
 
-Additionally, the event viewer logs Event ID 17052.
+Additionally, the event viewer logs event ID 17052.
 
 ## Cause
 
@@ -30,7 +30,7 @@ The `DisabledByDefault` and `Enabled` registry entries in the `[HKEY_LOCAL_MACHI
 
 To resolve these problems, follow these steps:
 
-1. Enable the TLS 1.2 protocol for SQL Server communication as follows:
+1. Enable the TLS 1.2 protocol for SQL Server communication by updating the following registry entries:
 
    `[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2]`
 

@@ -16,7 +16,7 @@ items:
 - name: Existing connection forcibly closed
   href: tls-exist-connection-closed.md
   items:
-    - name: Unable to start SQL Server agent
+    - name: Event ID 17052 and you can't start SQL Server Agent
       href: unable-to-start-sql-agent.md
 - name: Explicit SPN is misplaced problem in SQL Server
   href: explicit-spn-is-misplaced.md
