@@ -1133,6 +1133,10 @@ items:
       href: ./windows-tss/gather-information-using-tss-deployment.md
     - name: Gather information for Windows Update for Business reports-related issues
       href: ./windows-tss/gather-information-using-tss-wufb-reports.md
+  - name: Storage and High Availability (SHA)
+    items:
+    - name: Gather information for SQL cluster (AG/FCI) related issues
+      href: ./windows-tss/gather-information-using-tss-sql-cluster-ag-fci-issues
   - name: User Experience (UEX)
     items:
     - name: Gather information for user experience-related issues
