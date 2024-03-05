@@ -14,7 +14,7 @@ This article helps you resolve a problem in which you try to create a linked ser
 
 ## Symptoms
 
-This problem might occur if you are connecting using a SQL Server Linked server to from a Windows 2022 Server or later to a SQL Server running on a lower version of Windows.
+This problem can occur if you are connecting from a Windows Server 2022 or later to a SQL Server running on a lower version of Windows using the SQL Server Linked Server functionality.
 
 ## Cause
 
