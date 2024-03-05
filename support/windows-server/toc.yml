@@ -1239,6 +1239,8 @@ items:
       href: ./networking/delayed-write-failed-error-data-lost.md
     - name: '%HOMEPATH%, %HOMESHARE%, and %HOMEDRIVE% variables are resolved incorrectly'
       href: ./networking/variables-resolved-incorrectly.md
+    - name: Can't create a domain-based DFS namespace
+      href: ./networking/cant-create-domain-based-dfs-namespace.md
     - name: Can't use different credentials for a network share
       href: ./networking/cannot-connect-to-network-share.md
     - name: Computer Management shows clients sessions slow
@@ -2089,6 +2091,8 @@ items:
       href: ./remote/custom-server-authentication-certificate-for-tls.md
   - name: Connecting to a session or desktop
     items:
+    - name: '"An internal error has occurred" when connecting to a remote machine'
+      href: ./remote/internal-error-has-occurred-connecting-remote-machine.md
     - name: Connect to and shadow console session with Terminal Services
       href: ./remote/connect-to-and-shadow-console-session.md
     - name: Error 0xc0000005 when you log on to Terminal Server client
