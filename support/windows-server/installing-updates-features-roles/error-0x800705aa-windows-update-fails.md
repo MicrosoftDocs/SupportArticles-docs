@@ -1,8 +1,6 @@
 ---
 title: Windows Update fails with error 0x800705aa
 description: Helps resolve an issue in which Windows Update fails with error 0x800705aa.
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.date: 12/26/2023

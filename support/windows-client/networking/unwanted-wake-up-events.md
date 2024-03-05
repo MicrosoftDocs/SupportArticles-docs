@@ -2,8 +2,6 @@
 title: Unwanted wake-up events when you enable WOL
 description: Explains why unwanted wake-up events may occur when you enable WOL functionality in Windows 7 and in Windows Vista.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

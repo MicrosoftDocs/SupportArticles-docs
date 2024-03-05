@@ -2,8 +2,6 @@
 title: How to extend stand-alone tiered storage spaces
 description: Shows how to extend stand-alone tiered storage spaces
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

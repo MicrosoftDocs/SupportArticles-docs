@@ -2,8 +2,6 @@
 title: SFC detects Opencl.dll as corrupted
 description: Fixes an issue that causes SFC to detect Opencl.dll as corrupted in Windows 10.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

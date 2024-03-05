@@ -2,8 +2,6 @@
 title: User can't authenticate or must authenticate twice
 description: Troubleshoot an issue in which user can't authenticate or must authenticate twice when starting a remote desktop connection.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

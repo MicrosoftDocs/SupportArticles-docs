@@ -24,7 +24,7 @@ By default, the BitLocker setup wizard prompts users to enable encryption. You c
 Prerequisites for *user-enabled* encryption:
 
 - The hard disk must be partitioned into an operating system drive formatted with NTFS and a system drive of at least 350 MB formatted as FAT32 for UEFI and NTFS for BIOS.
-- Thee must be enrolled in Intune through Microsoft Entra hybrid join, Microsoft Entra registration, or Microsoft Entra join.
+- The device must be enrolled in Intune through Microsoft Entra hybrid join, Microsoft Entra registration, or Microsoft Entra join.
 - A Trusted Platform Module (TPM) chip is not required, but *highly recommended* for increased security.
 
 Prerequisites for BitLocker *silent* encryption:

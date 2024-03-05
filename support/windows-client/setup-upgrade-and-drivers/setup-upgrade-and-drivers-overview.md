@@ -2,8 +2,6 @@
 title: Setup upgrade and drivers overview
 description: Overview of setup upgrade and drivers troubleshooting articles for Windows clients.
 ms.date: 02/06/2024
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

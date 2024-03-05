@@ -2,8 +2,6 @@
 title: Software Defined Networking overview
 description: Overview of Software Defined Networking troubleshooting articles.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

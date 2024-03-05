@@ -2,8 +2,6 @@
 title: Not enough storage is available
 description: Describes a problem that occurs when you try to join a client computer to a domain. Event ID 6 is logged in the System log on the client computer.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

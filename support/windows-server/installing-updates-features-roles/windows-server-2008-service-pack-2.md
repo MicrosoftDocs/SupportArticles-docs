@@ -2,8 +2,6 @@
 title: Windows Server 2008 Service Pack 2
 description: Describes how to obtain the latest service pack for Windows Server 2008.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

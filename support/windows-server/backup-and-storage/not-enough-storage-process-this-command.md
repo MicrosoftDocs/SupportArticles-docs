@@ -2,8 +2,6 @@
 title: Fail to access file shares on SOFS-configured server
 description: Describes an issue that occurs when you try to access file shares on a SMB server that has the Scale-Out File Server role configured, and provides a resolution.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -2,8 +2,6 @@
 title: FSRM quota usage is incorrect when you change the size of the page file
 description: Resolves an issue in which the FSRM quota usage is incorrect when you change the size of the page file.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

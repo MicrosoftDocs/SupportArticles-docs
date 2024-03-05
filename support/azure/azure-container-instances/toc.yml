@@ -3,16 +3,22 @@ items:
 - name: Welcome
   href: welcome-container-instances.yml
   
-- name: ACI debugging tools
+- name: Azure Container Instances debugging tools
   href: aci-debug-tools.md
-- name: Can't delete a virtual network or subnet used by ACI
+- name: Azure Container Instances shows unexpected memory usage metrics
+  href: unexpected-memory-usage-metrics.md
+- name: Can't delete a virtual network or subnet used by Azure Container Instances
   href: cannot-delete-vnet-subnet.md
-- name: Common confidential containers issues
+- name: Container group remains in transitioning state
+  href: container-group-transitioning-state.md
+- name: Common confidential container issues
   href: common-confidential-container-errors.md
 - name: Container instance continues to run after the stop or delete command
   href: aci-still-running-after-stop-delete-command.md
 - name: Fails to pull ACR images by using Managed Identity authentication
   href: acr-image-pull-failures-managed-identity.md
+- name: Can't do operations or the container group is in a bad state
+  href: cannot-do-container-group-operations.md
 
 - name: Troubleshoot create operations
   items:
@@ -26,4 +32,8 @@ items:
     href: web-socket-is-closed-or-could-not-be-opened.md
   - name: Image pull takes a long time to run
     href: long-image-pulls.md
-
+  - name: ServiceUnavailable - container group quota exceeded in region
+    href: service-unavailable-container-group-quota-exceeded.md
+    displayName: fraud
+  - name: ServiceUnavailable (409) - requested resource is not available in the location
+    href: service-unavailable-requested-resource-is-not-available.md
