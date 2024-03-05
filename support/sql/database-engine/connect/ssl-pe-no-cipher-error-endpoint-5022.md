@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting the SSL_PE_NO_CIPHER error
-description: This article provides symptoms and resolution for troubleshooting the bad server name in connection string error.
+description: This article helps you to resolve the SSL_PE_NO_CIPHER error that occurs on endpoint 5022.
 ms.date: 01/08/2024
 author: prmadhes-msft
 ms.author: prmadhes
@@ -23,7 +23,7 @@ To resolve this error, follow these steps:
 1. Update SSL or TLS libraries.
    Make sure that both the client and server have up-to-date SSL or TLS libraries installed. Outdated versions might not support modern and secure cipher suites.
 
-1. Check Cipher Suite configurations on both the client and server. 
+1. Check Cipher Suite configurations on both the client and server.
    Make sure that modern and secure cipher suites are allowed. Consider disabling outdated or weak cipher suites.
 
 1. Verify SSL or TLS protocol versions.
@@ -120,4 +120,4 @@ To resolve this error, follow these steps:
    After completing these steps, the "SSL_PE_NO_CIPHER" error should be resolved.
 
 > [!NOTE]
-> Microsoft recommends you to back up the Windows registry. 
+> Microsoft recommends you to back up the Windows registry.
