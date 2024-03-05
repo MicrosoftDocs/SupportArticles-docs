@@ -6,7 +6,7 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
-ms.reviewer: kaushika
+ms.reviewer: kaushika, jtrox
 ms.custom: sap:server-manager, csstroubleshoot
 adobe-target: true
 ---
