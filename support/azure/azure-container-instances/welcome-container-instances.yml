@@ -9,7 +9,7 @@ metadata:
   ms.topic: landing-page # Required
   author: genlin  #Required; your GitHub user alias, with correct capitalization.
   ms.author: genli #Required; microsoft alias of author; optional team alias.
-  ms.date: 03/04/2024
+  ms.date: 03/05/2024
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -62,6 +62,8 @@ landingContent:
             url: aci-still-running-after-stop-delete-command.md
           - text: Container Instances debugging tools
             url: aci-debug-tools.md
+          - text: Spot container errors
+            url: error-codes-spot-container-creation.md
 
   # Card
   - title: Troubleshoot container groups in virtual networks
