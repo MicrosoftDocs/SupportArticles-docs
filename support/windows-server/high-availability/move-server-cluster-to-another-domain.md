@@ -1,9 +1,7 @@
 ---
 title: Move Windows Server cluster to another domain
 description: Describes how to move a Windows Server cluster from one domain to another.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

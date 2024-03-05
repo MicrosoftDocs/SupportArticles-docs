@@ -1,9 +1,7 @@
 ---
 title: Error 0x8007000e when you call many objects from one process to another by using COM+
 description: Provides a solution to an issue where calling many objects from one process to another by using Microsoft COM+ fails.
-ms.date: 12/07/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

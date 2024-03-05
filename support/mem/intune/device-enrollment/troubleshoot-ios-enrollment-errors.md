@@ -2,7 +2,7 @@
 title: Troubleshooting iOS/iPadOS device enrollment errors in Microsoft Intune
 description: Suggestions for troubleshooting some of the most common enrollment and sync token errors when enrolling iOS/iPadOS devices in Intune.
 ms.reviewer: kaushika, mghadial
-ms.date: 09/30/2021
+ms.date: 12/05/2023
 search.appverid: MET150
 ---
 

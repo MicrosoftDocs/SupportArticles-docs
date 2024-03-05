@@ -1,7 +1,7 @@
 ---
 title: SMS_DP_SMSPKG$ Anonymous Authentication disabled
 description: Fixes an issue in which IIS application folder SMS_DP_SMSPKG$ Anonymous Authentication settings are disabled.
-ms.date: 06/09/2020
+ms.date: 12/05/2023
 ms.reviewer: kaushika, windsw
 ---
 # IIS application folder SMS_DP_SMSPKG$ anonymous authentication settings periodically reset to Disabled

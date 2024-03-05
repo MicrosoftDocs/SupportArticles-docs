@@ -1,9 +1,7 @@
 ---
 title: TCP traffic stops
 description: Describes a problem that occurs when you enable both receive-side scaling and Internet Connection Sharing. To resolve this problem, disable either receive-side scaling or Internet Connection Sharing.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

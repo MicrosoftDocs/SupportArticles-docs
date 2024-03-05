@@ -1,7 +1,7 @@
 ---
 title: Unhandled exception when launching the console
 description: provides a solution for the Microsoft.ConfigurationManagement has stopped working error that occurs when you try to launch the System Center 2012 Configuration Manager console.
-ms.date: 06/09/2020
+ms.date: 12/05/2023
 ms.reviewer: kaushika, justini
 ---
 # Unhandled exception when launching the System Center 2012 Configuration Manager SP1 Console

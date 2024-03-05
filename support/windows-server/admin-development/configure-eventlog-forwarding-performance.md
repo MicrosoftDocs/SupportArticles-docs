@@ -1,9 +1,7 @@
 ---
 title: Best practice of configuring EventLog forwarding performance
 description: This article introduces the best practice of configuration of EventLog forwarding in a large environment.
-ms.date: 03/04/2022
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -1,9 +1,7 @@
 ---
 title: Folder Redirection settings aren't applied
 description: Provides a solution to an issue where folders aren't redirected after you configure Folder redirection.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

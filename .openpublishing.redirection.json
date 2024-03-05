@@ -55,7 +55,7 @@
       "redirect_url": "/troubleshoot/power-platform/power-automate/approvals/power-automate-approval-email-information",
       "redirect_document_id": true
     },
- {
+    {
       "source_path": "support/power-platform/power-automate/desktop-flows/double-click-drag-drop-are-not-working.md",
       "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/desktop-flows/double-click-drag-drop-are-not-working",
       "redirect_document_id": false
@@ -75,7 +75,6 @@
       "redirect_url": "/troubleshoot/power-platform/power-automate/authentication-or-sign-in/troubleshoot-ui-flow-invalid-credentials-error-using-aad-account",
       "redirect_document_id": true
     },
-
     {
       "source_path": "support/power-platform/power-automate/check-if-gateway-is-the-right-region.md",
       "redirect_url": "/troubleshoot/power-platform/power-automate/connections/check-if-gateway-is-the-right-region",
@@ -211,13 +210,12 @@
       "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/cloud-flows/unable-create-ui-flow",
       "redirect_document_id": false
     },
- {
+    {
       "source_path": "support/power-platform/power-automate/desktop-flows/find-which-machine-is-failing-within-a-cluster.md",
       "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/desktop-flows/find-which-machine-is-failing-within-a-cluster",
       "redirect_document_id": false
     },
-
- {
+    {
       "source_path": "support/power-platform/power-automate/desktop-flows/issue-with-ui-flows-error-uiaelementnotfound.md",
       "redirect_url": "/previous-versions/troubleshoot/power-platform/power-automate/desktop-flows/issue-with-ui-flows-error-uiaelementnotfound",
       "redirect_document_id": false
@@ -5402,12 +5400,12 @@
       "redirect_url": "/troubleshoot/sql/database-engine/log-shipping/logshipping-monitor-14420-error",
       "redirect_document_id": true
     },
-    { 
+    {
       "source_path": "support/sql/admin/sql-server-startup-errors.md",
       "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/sql-server-startup-errors",
       "redirect_document_id": true
     },
-    { 
+    {
       "source_path": "support/sql/admin/event-id-7000-access-denied.md",
       "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/event-id-7000-access-denied",
       "redirect_document_id": true
@@ -5467,7 +5465,7 @@
       "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/fails-start-error-17182",
       "redirect_document_id": true
     },
-     {
+    {
       "source_path": "support/sql/admin/sql-cannot-start-with-domain-account.md",
       "redirect_url": "/troubleshoot/sql/database-engine/startup-shutdown/sql-cannot-start-with-domain-account",
       "redirect_document_id": true
@@ -5712,7 +5710,6 @@
       "redirect_url": "/troubleshoot/sql/database-engine/availability-groups/listener-connection-times-out",
       "redirect_document_id": true
     },
-
     {
       "source_path": "support/sql/admin/assertion-execute-bulk-insert-bcp.md",
       "redirect_url": "/troubleshoot/sql/database-engine/database-mirroring/assertion-execute-bulk-insert-bcp",
@@ -5752,22 +5749,22 @@
       "source_path": "support/sql/admin/access-violations-memory-dump-files.md",
       "redirect_url": "/troubleshoot/sql/database-engine/backup-restore/access-violations-memory-dump-files",
       "redirect_document_id": true
-    },   
+    },
     {
       "source_path": "support/sql/admin/asr-agent-vss-backup-fails.md",
       "redirect_url": "/troubleshoot/sql/database-engine/backup-restore/asr-agent-vss-backup-fails",
       "redirect_document_id": true
-    }, 
+    },
     {
       "source_path": "support/sql/admin/revocery-jobs-fail-servers.md",
       "redirect_url": "/troubleshoot/sql/database-engine/backup-restore/revocery-jobs-fail-servers",
       "redirect_document_id": true
-    }, 
+    },
     {
       "source_path": "support/sql/admin/backup-database-using-vss-backup-application.md",
       "redirect_url": "/troubleshoot/sql/database-engine/backup-restore/backup-database-using-vss-backup-application",
       "redirect_document_id": true
-    }, 
+    },
     {
       "source_path": "support/sql/admin/backup-operation-backup-history-table.md",
       "redirect_url": "/troubleshoot/sql/database-engine/backup-restore/backup-operation-backup-history-table",
@@ -5822,17 +5819,17 @@
       "source_path": "support/sql/connect/resolve-connectivity-errors-overview.md",
       "redirect_url": "/troubleshoot/sql/database-engine/connect/resolve-connectivity-errors-overview",
       "redirect_document_id": true
-    },   
+    },
     {
       "source_path": "support/sql/connect/certificate-chain-not-trusted.md",
       "redirect_url": "/troubleshoot/sql/database-engine/connect/certificate-chain-not-trusted",
       "redirect_document_id": true
-    }, 
+    },
     {
       "source_path": "support/sql/connect/resolve-connectivity-errors-checklist.md",
       "redirect_url": "/troubleshoot/sql/database-engine/connect/resolve-connectivity-errors-checklist",
       "redirect_document_id": true
-    }, 
+    },
     {
       "source_path": "support/sql/connect/cannot-generate-sspi-context-error.md",
       "redirect_url": "/troubleshoot/sql/database-engine/connect/cannot-generate-sspi-context-error",
@@ -5842,7 +5839,7 @@
       "source_path": "support/sql/connect/tls-exist-connection-closed.md",
       "redirect_url": "/troubleshoot/sql/database-engine/connect/tls-exist-connection-closed",
       "redirect_document_id": true
-    }, 
+    },
     {
       "source_path": "support/sql/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection.md",
       "redirect_url": "/troubleshoot/sql/database-engine/connect/network-related-or-instance-specific-error-occurred-while-establishing-connection",
@@ -6373,7 +6370,6 @@
       "redirect_url": "/troubleshoot/sql/database-engine/replication/update-statements-replicated-as-delete-insert",
       "redirect_document_id": true
     },
-
     {
       "source_path": "support/sql/install/understanding-dotnet-framework-requirements.md",
       "redirect_url": "/troubleshoot/sql/database-engine/install/windows/understanding-dotnet-framework-requirements",
@@ -6528,12 +6524,12 @@
       "source_path": "support/windows-server/identity/restoring-domain-controller-cause-inconsistencies.md",
       "redirect_url": "/troubleshoot/windows-server/identity/active-directory-overview",
       "redirect_document_id": false
-    }, 
+    },
     {
       "source_path": "support/sql/replication/configure-troubleshoot-subscriptionstreamsof-distribution-agent.md",
       "redirect_url": "/troubleshoot/sql/database-engine/performance/configure-troubleshoot-subscriptionstreamsof-distribution-agent",
       "redirect_document_id": true
-    }, 
+    },
     {
       "source_path": "support/sql/database-engine/install/windows/error-install-sql-server-2005-sp4.md",
       "redirect_url": "/troubleshoot/sql/database-engine/install/windows/user-data-log-directory-invalid",
@@ -6568,7 +6564,7 @@
       "source_path": "support/windows-server/identity/transfer-or-seize-fsmo-roles-in-ad-ds.md",
       "redirect_url": "/troubleshoot/windows-server/identity/transfer-or-seize-operation-master-roles-in-ad-ds",
       "redirect_document_id": true
-    }, 
+    },
     {
       "source_path": "support/windows-server/identity/password-change-conflict-resolution-function.md",
       "redirect_url": "/troubleshoot/windows-server/identity/password-change-processing-conflict-resolution-function",
@@ -6578,7 +6574,7 @@
       "source_path": "support/windows-server/system-management-components/high-cpu-usage-wmiprvse-process-regular-intervals.md",
       "redirect_url": "/troubleshoot/windows-server/system-management-components/troubleshoot-wmi-high-cpu-issues",
       "redirect_document_id": true
-    }, 
+    },
     {
       "source_path": "support/sql/general/servicing-models-sql-server.md",
       "redirect_url": "/troubleshoot/sql/releases/servicing-models-sql-server",
@@ -6588,22 +6584,22 @@
       "source_path": "support/azure/azure-kubernetes/troubleshoot-common-mariner-aks.md",
       "redirect_url": "/troubleshoot/azure/azure-kubernetes/troubleshoot-common-azure-linux-aks",
       "redirect_document_id": true
-    }, 
+    },
     {
       "source_path": "support/azure/virtual-machines/connect-linux-vm-sshconnection.md",
       "redirect_url": "/troubleshoot/azure/virtual-machines/linux-vm-sshconnectionissue-perms",
       "redirect_document_id": true
-    }, 
+    },
     {
       "source_path": "support/azure/app-service/web-apps-configuration-and-management-faqs.md",
       "redirect_url": "/troubleshoot/azure/app-service/create-delete-resources-faq",
       "redirect_document_id": true
-    }, 
+    },
     {
       "source_path": "support/sql/linux/release-history-2017.md",
       "redirect_url": "/troubleshoot/sql/releases/linux/release-history-2017",
       "redirect_document_id": true
-    }, 
+    },
     {
       "source_path": "support/sql/linux/release-history-2019.md",
       "redirect_url": "/troubleshoot/sql/releases/linux/release-history-2019",
@@ -6925,6 +6921,2616 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "support/windows-client/deployment/certs-missing-after-device-update.md",
+      "redirect_url": "/troubleshoot/windows-client/certificates-and-public-key-infrastructure-pki/certs-missing-after-device-update",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/troubleshoot-windows-update-issues.md",
+      "redirect_url": "/troubleshoot/windows-client/installing-updates-features-roles/troubleshoot-windows-update-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/sfc-flags-windows-defender-powershell-module-files-corrupted.md",
+      "redirect_url": "/troubleshoot/windows-client/installing-updates-features-roles/sfc-flags-windows-defender-powershell-module-files-corrupted",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/update-windows-update-agent.md",
+      "redirect_url": "/troubleshoot/windows-client/installing-updates-features-roles/update-windows-update-agent",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/common-windows-update-errors.md",
+      "redirect_url": "/troubleshoot/windows-client/installing-updates-features-roles/common-windows-update-errors",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/switches-with-xcopy-and-xcopy32-command.md",
+      "redirect_url": "/troubleshoot/windows-client/installing-updates-features-roles/switches-with-xcopy-and-xcopy32-command",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/analyze-sfc-program-log-file-entries.md",
+      "redirect_url": "/troubleshoot/windows-client/installing-updates-features-roles/analyze-sfc-program-log-file-entries",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/address-disk-space-issues-caused-by-winsxs.md",
+      "redirect_url": "/troubleshoot/windows-client/installing-updates-features-roles/address-disk-space-issues-caused-by-winsxs",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/automatic-updates-cannot-download-updates-event-16.md",
+      "redirect_url": "/troubleshoot/windows-client/installing-updates-features-roles/automatic-updates-cannot-download-updates-event-16",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/dism-apply-image-command-fails-error-code-5.md",
+      "redirect_url": "/troubleshoot/windows-client/installing-updates-features-roles/dism-apply-image-command-fails-error-code-5",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/keep-windows-up-to-date.md",
+      "redirect_url": "/troubleshoot/windows-client/installing-updates-features-roles/keep-windows-up-to-date",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/command-switches-supported-by-self-extractor-package.md",
+      "redirect_url": "/troubleshoot/windows-client/installing-updates-features-roles/command-switches-supported-by-self-extractor-package",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/errors-in-checksur-log.md",
+      "redirect_url": "/troubleshoot/windows-client/installing-updates-features-roles/errors-in-checksur-log",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/error-message-when-installing-rsat.md",
+      "redirect_url": "/troubleshoot/windows-client/installing-updates-features-roles/error-message-when-installing-rsat",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/get-updates-through-windows-update.md",
+      "redirect_url": "/troubleshoot/windows-client/installing-updates-features-roles/get-updates-through-windows-update",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/system-registry-no-backed-up-regback-folder.md",
+      "redirect_url": "/troubleshoot/windows-client/installing-updates-features-roles/system-registry-no-backed-up-regback-folder",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/install-service-packs-hotfixes.md",
+      "redirect_url": "/troubleshoot/windows-client/installing-updates-features-roles/install-service-packs-hotfixes",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/download-updates-drivers-hotfixes-windows-update-catalog.md",
+      "redirect_url": "/troubleshoot/windows-client/installing-updates-features-roles/download-updates-drivers-hotfixes-windows-update-catalog",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/sfc-detects-opencl-dot-dll-corrupted.md",
+      "redirect_url": "/troubleshoot/windows-client/installing-updates-features-roles/sfc-detects-opencl-dot-dll-corrupted",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/missing-windows-installer-cache.md",
+      "redirect_url": "/troubleshoot/windows-client/installing-updates-features-roles/missing-windows-installer-cache",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/previously-released-updates-reoffered.md",
+      "redirect_url": "/troubleshoot/windows-client/installing-updates-features-roles/previously-released-updates-reoffered",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/dotnet-framework-1dot1-not-supported.md",
+      "redirect_url": "/troubleshoot/windows-client/installing-updates-features-roles/dotnet-framework-1dot1-not-supported",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/in-place-upgrade-to-windows-10-problems.md",
+      "redirect_url": "/troubleshoot/windows-client/installing-updates-features-roles/in-place-upgrade-to-windows-10-problems",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/skype-for-microsoft-update.md",
+      "redirect_url": "/troubleshoot/windows-client/installing-updates-features-roles/skype-for-microsoft-update",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/updates-automatically-downloaded.md",
+      "redirect_url": "/troubleshoot/windows-client/installing-updates-features-roles/updates-automatically-downloaded",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/error-403-connect-to-windows-update.md",
+      "redirect_url": "/troubleshoot/windows-client/installing-updates-features-roles/error-403-connect-to-windows-update",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/sysprep-fails-remove-or-update-store-apps.md",
+      "redirect_url": "/troubleshoot/windows-client/installing-updates-features-roles/sysprep-fails-remove-or-update-store-apps",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/error-80072ee6-downlaod-wsus-update.md",
+      "redirect_url": "/troubleshoot/windows-client/installing-updates-features-roles/error-80072ee6-downlaod-wsus-update",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/standard-terminology-software-updates.md",
+      "redirect_url": "/troubleshoot/windows-client/installing-updates-features-roles/standard-terminology-software-updates",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/additional-resources-for-windows-update.md",
+      "redirect_url": "/troubleshoot/windows-client/installing-updates-features-roles/additional-resources-for-windows-update",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/repeatedly-offer-the-same-update.md",
+      "redirect_url": "/troubleshoot/windows-client/installing-updates-features-roles/repeatedly-offer-the-same-update",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/downgrade-from-windows-8.md",
+      "redirect_url": "/troubleshoot/windows-client/installing-updates-features-roles/downgrade-from-windows-8",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/package-manager-cannot-manage-two-more-packages.md",
+      "redirect_url": "/troubleshoot/windows-client/installing-updates-features-roles/package-manager-cannot-manage-two-more-packages",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/error-messages-when-you-scan-updates.md",
+      "redirect_url": "/troubleshoot/windows-client/installing-updates-features-roles/error-messages-when-you-scan-updates",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/cannot-use-imagex-tool-backup.md",
+      "redirect_url": "/troubleshoot/windows-client/installing-updates-features-roles/cannot-use-imagex-tool-backup",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/cannot-install-may-2019-update-windows-10-amd-raid-drivers.md",
+      "redirect_url": "/troubleshoot/windows-client/installing-updates-features-roles/cannot-install-may-2019-update-windows-10-amd-raid-drivers",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/how-to-use-automatic-updates-feature.md",
+      "redirect_url": "/troubleshoot/windows-client/installing-updates-features-roles/how-to-use-automatic-updates-feature",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/system-error-126-start-windows-modules-installer.md",
+      "redirect_url": "/troubleshoot/windows-client/installing-updates-features-roles/system-error-126-start-windows-modules-installer",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/processor-not-supported-together-with-windows-version.md",
+      "redirect_url": "/troubleshoot/windows-client/installing-updates-features-roles/processor-not-supported-together-with-windows-version",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/windows-update-hangs-updates-uninstalled.md",
+      "redirect_url": "/troubleshoot/windows-client/installing-updates-features-roles/windows-update-hangs-updates-uninstalled",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/windows-update-issues-troubleshooting.md",
+      "redirect_url": "/troubleshoot/windows-client/installing-updates-features-roles/windows-update-issues-troubleshooting",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/dism-error-87-apply-windows-10-image.md",
+      "redirect_url": "/troubleshoot/windows-client/installing-updates-features-roles/dism-error-87-apply-windows-10-image",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/view-system-registry-with-64-bit-windows.md",
+      "redirect_url": "/troubleshoot/windows-client/installing-updates-features-roles/view-system-registry-with-64-bit-windows",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/drive-reassignment-block-update.md",
+      "redirect_url": "/troubleshoot/windows-client/installing-updates-features-roles/drive-reassignment-block-update",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/command-line-switches-deploy-update-packages.md",
+      "redirect_url": "/troubleshoot/windows-client/installing-updates-features-roles/command-line-switches-deploy-update-packages",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/validate-oem-activation-key.md",
+      "redirect_url": "/troubleshoot/windows-client/licensing-and-activation/validate-oem-activation-key",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/kms-current-count-not-increase.md",
+      "redirect_url": "/troubleshoot/windows-client/licensing-and-activation/kms-current-count-not-increase",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/item-with-same-key-has-been-added.md",
+      "redirect_url": "/troubleshoot/windows-client/licensing-and-activation/item-with-same-key-has-been-added",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/cannot-activate-windows-from-oem.md",
+      "redirect_url": "/troubleshoot/windows-client/licensing-and-activation/cannot-activate-windows-from-oem",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/activation-failures-not-genuine-notifications-volume-licensed-kms-client.md",
+      "redirect_url": "/troubleshoot/windows-client/licensing-and-activation/activation-failures-not-genuine-notifications-volume-licensed-kms-client",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/limitations-dollar-sign-winpedriver-dollar-sign.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/limitations-dollar-sign-winpedriver-dollar-sign",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/desktop-icon-not-visible-disconnect-hdmi-display.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/desktop-icon-not-visible-disconnect-hdmi-display",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/loadlibrary-function-returns-status-dll-not-found-error-impersonate-thread.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/loadlibrary-function-returns-status-dll-not-found-error-impersonate-thread",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/msinfo32-report-wrong-display-adapter-ram.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/msinfo32-report-wrong-display-adapter-ram",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/power-management-not-visible-in-aoac-platform.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/power-management-not-visible-in-aoac-platform",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/usb-device-drivers-removed-unexpectedly-after-windows-10-update.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/usb-device-drivers-removed-unexpectedly-after-windows-10-update",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/error-when-you-access-usb-storage-device.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/error-when-you-access-usb-storage-device",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/devices-not-working-before-log-on-computer.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/devices-not-working-before-log-on-computer",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/media-device-isnt-available.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/media-device-isnt-available",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/cannot-load-tpm-management-console.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/cannot-load-tpm-management-console",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/description-of-driver.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/description-of-driver",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/event-id-219-when-device-plugged-in-windows-system.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/event-id-219-when-device-plugged-in-windows-system",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/error-attach-pci-express-expansion-chassis.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/error-attach-pci-express-expansion-chassis",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/firmware-updates-fail-windows-8dot1.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/firmware-updates-fail-windows-8dot1",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/high-pitched-noise-is-heard.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/high-pitched-noise-is-heard",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/operation-timed-out-error-disk-management-console.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/operation-timed-out-error-disk-management-console",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/bluetooth-speakers-not-work-after-kb4505903-installed.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/bluetooth-speakers-not-work-after-kb4505903-installed",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/create-user-defined-service.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/create-user-defined-service",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/disable-devices-in-devices-and-printers.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/disable-devices-in-devices-and-printers",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/dynamic-link-library.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/dynamic-link-library",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/functionality-loss-for-intel-smbus-controller-device.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/functionality-loss-for-intel-smbus-controller-device",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/uninstalling-driver-not-remove-associated-files.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/uninstalling-driver-not-remove-associated-files",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/icons-wsd-devices-incorrectly-devices-printers.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/icons-wsd-devices-incorrectly-devices-printers",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/non-compliant-usb-3-devices-not-function.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/non-compliant-usb-3-devices-not-function",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/how-to-use-reference-usbser-driver-universal-serial-bus.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/how-to-use-reference-usbser-driver-universal-serial-bus",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/windows-10-not-install-specific-drivers-usb-audio-devices.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/windows-10-not-install-specific-drivers-usb-audio-devices",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/system-log-event-id-7000-7026.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/system-log-event-id-7000-7026",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/hard-disk-usage-reaches-100-percent.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/hard-disk-usage-reaches-100-percent",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/devices-connected-via-thunderbolt-dock-not-work.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/devices-connected-via-thunderbolt-dock-not-work",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/power-management-option-isnt-selected.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/power-management-option-isnt-selected",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/desktop-wakes-up-unexpectedly-from-sleep-hibernation.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/desktop-wakes-up-unexpectedly-from-sleep-hibernation",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/wake-on-lan-feature.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/wake-on-lan-feature",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/disable-and-re-enable-hibernation.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/disable-and-re-enable-hibernation",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/power-shutdown-button-missing.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/power-shutdown-button-missing",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/updates-not-install-with-fast-startup.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/updates-not-install-with-fast-startup",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/fast-startup-causes-system-hibernation-shutdown-fail.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/fast-startup-causes-system-hibernation-shutdown-fail",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/windows-10-upgrade-issues-troubleshooting.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/windows-10-upgrade-issues-troubleshooting",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/dotnet-framework-4dot5dot1-web-installer.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/dotnet-framework-4dot5dot1-web-installer",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/windows-not-parse-process-unattend-answer-file.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/windows-not-parse-process-unattend-answer-file",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/windows-sim-unable-generate-catalog-error.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/windows-sim-unable-generate-catalog-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/error-occurs-when-running-sysprep-generalize.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/error-occurs-when-running-sysprep-generalize",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/language-features-not-displayed.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/language-features-not-displayed",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/windows-cannot-verify-the-digital-signature-for-this-file.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/windows-cannot-verify-the-digital-signature-for-this-file",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/winre-cannot-built-deploy-image-captured-non-uefi-computer.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/winre-cannot-built-deploy-image-captured-non-uefi-computer",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/blinitializelibrary-failed-start-os-on-64-bit-uefi-based-computer.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/blinitializelibrary-failed-start-os-on-64-bit-uefi-based-computer",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/event-10-is-logged-in-application-log.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/event-10-is-logged-in-application-log",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/iso-file-on-vlsc.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/iso-file-on-vlsc",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/sysprep-capture-task-sequence-fails.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/sysprep-capture-task-sequence-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/contact-system-administrator-to-upgrade-windows.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/contact-system-administrator-to-upgrade-windows",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/installation-file-location-service-pack-not-behave.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/installation-file-location-service-pack-not-behave",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/windows-setup-log-file-locations.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/windows-setup-log-file-locations",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/f5-not-refresh-explorer-windows-pe-windows-10.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/f5-not-refresh-explorer-windows-pe-windows-10",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/customize-default-local-user-profile.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/customize-default-local-user-profile",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/customize-default-local-user-profile-prepare-image.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/customize-default-local-user-profile-prepare-image",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/windows-10-upgrade-resolution-procedures.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/windows-10-upgrade-resolution-procedures",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/error-when-creating-single-partition.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/error-when-creating-single-partition",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/cant-enter-uefi-firmware-setup.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/cant-enter-uefi-firmware-setup",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/installation-error-hal-initialization-failed.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/installation-error-hal-initialization-failed",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/automate-regional-language-settings.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/automate-regional-language-settings",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/fail-to-turn-off-computer-from-audit-mode.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/fail-to-turn-off-computer-from-audit-mode",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/miracastview-cause-sysprep-error-upgrade-windows-10-1709.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/miracastview-cause-sysprep-error-upgrade-windows-10-1709",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/windows-8-incorrectly-reported-as-wtg-installation.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/windows-8-incorrectly-reported-as-wtg-installation",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/windows-10-upgrade-quick-fixes.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/windows-10-upgrade-quick-fixes",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/network-provider-settings-removed-in-place-upgrade.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/network-provider-settings-removed-in-place-upgrade",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/use-ocsetup-to-install-remove-components.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/use-ocsetup-to-install-remove-components",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/computer-screen-black-during-installation.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/computer-screen-black-during-installation",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/upgrade-advisor-tool-failed-to-run.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/upgrade-advisor-tool-failed-to-run",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/windows-10-upgrade-error-codes.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/windows-10-upgrade-error-codes",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/system-restore-points-disabled.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/system-restore-points-disabled",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/cant-access-efi-system-partition.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/cant-access-efi-system-partition",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/remote-server-admin-tools-uninstalled-in-place-upgrade.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/remote-server-admin-tools-uninstalled-in-place-upgrade",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/language-packs-no-longer-available-after-upgrade.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/language-packs-no-longer-available-after-upgrade",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/edit-boot-ini-file-windows-2000.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/edit-boot-ini-file-windows-2000",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/usmt-return-codes.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/usmt-return-codes",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/usmt-common-issues.md",
+      "redirect_url": "/troubleshoot/windows-client/setup-upgrade-and-drivers/usmt-common-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/use-recovery-console-not-start.md",
+      "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/use-recovery-console-not-start",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/error-0x80004005-network-policy-server-role.md",
+      "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/error-0x80004005-network-policy-server-role",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/wsus-3-installation-package.md",
+      "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/wsus-3-installation-package",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/fix-windows-update-errors.md",
+      "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/fix-windows-update-errors",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/windows-update-standalone-installer-returns-error.md",
+      "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/windows-update-standalone-installer-returns-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/you-cant-install-features.md",
+      "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/you-cant-install-features",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/dism-fails-with-error-0x800f0906.md",
+      "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/dism-fails-with-error-0x800f0906",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/systeminfo-not-display-all-updates.md",
+      "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/systeminfo-not-display-all-updates",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/description-of-windows-server-update-services-3.md",
+      "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/description-of-windows-server-update-services-3",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/cbs-log-file-record-entries-not-repaired-run-sfc.md",
+      "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/cbs-log-file-record-entries-not-repaired-run-sfc",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/error-0x800f0922-uninstall-role-feature.md",
+      "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/error-0x800f0922-uninstall-role-feature",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/system-partition-offline-install-3rd-party-disk.md",
+      "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/system-partition-offline-install-3rd-party-disk",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/troubleshoot-windows-server-update-guidance.md",
+      "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/troubleshoot-windows-server-update-guidance",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/error-c0190003-install-updates-restart-computer.md",
+      "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/error-c0190003-install-updates-restart-computer",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/block-user-access-windows-update.md",
+      "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/block-user-access-windows-update",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/cannot-connect-to-wsus-administration-website.md",
+      "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/cannot-connect-to-wsus-administration-website",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/microsoft-product-support-reporting-tool-v5220030.md",
+      "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/microsoft-product-support-reporting-tool-v5220030",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/error-0x800f0922-mpio-feature-installation-fails.md",
+      "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/error-0x800f0922-mpio-feature-installation-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/system-file-checker.md",
+      "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/system-file-checker",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/list-updates.md",
+      "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/list-updates",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/windows-server-2008-service-pack-2.md",
+      "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/windows-server-2008-service-pack-2",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/re-register-windows-clientserver-in-wsus.md",
+      "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/re-register-windows-clientserver-in-wsus",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/windows-server-update-services-3-sp2.md",
+      "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/windows-server-update-services-3-sp2",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/why-prompted-restart-computer.md",
+      "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/why-prompted-restart-computer",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/performance/deactivate-kernel-mode-filter-driver.md",
+      "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/deactivate-kernel-mode-filter-driver",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/cannot-install-updates-programs.md",
+      "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/cannot-install-updates-programs",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/wsus-selfupdate-not-send-automatic-updates.md",
+      "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/wsus-selfupdate-not-send-automatic-updates",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/failed-schedule-software-protection.md",
+      "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/failed-schedule-software-protection",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/troubleshoot-install-features-roles-guidance.md",
+      "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/troubleshoot-install-features-roles-guidance",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/cannot-install-windows-server-2019-high-processor-count.md",
+      "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/cannot-install-windows-server-2019-high-processor-count",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/cannot-install-dotnet-framework-3dot5-oem.md",
+      "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/cannot-install-dotnet-framework-3dot5-oem",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/wsus-clients-cant-install-updates.md",
+      "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/wsus-clients-cant-install-updates",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/message-number-32777.md",
+      "redirect_url": "/troubleshoot/windows-server/licensing-and-activation/message-number-32777",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/windows-not-genuine-error.md",
+      "redirect_url": "/troubleshoot/windows-server/licensing-and-activation/windows-not-genuine-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/error-0xc004f074-activate-windows.md",
+      "redirect_url": "/troubleshoot/windows-server/licensing-and-activation/error-0xc004f074-activate-windows",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/error-0xc004f015-activate-windows-10.md",
+      "redirect_url": "/troubleshoot/windows-server/licensing-and-activation/error-0xc004f015-activate-windows-10",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/error-0xc004e002-during-activation.md",
+      "redirect_url": "/troubleshoot/windows-server/licensing-and-activation/error-0xc004e002-during-activation",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/application-event-log-warning-id-1058.md",
+      "redirect_url": "/troubleshoot/windows-server/licensing-and-activation/application-event-log-warning-id-1058",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/0x8007000d-activate-machine.md",
+      "redirect_url": "/troubleshoot/windows-server/licensing-and-activation/0x8007000d-activate-machine",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/event-id-12321-warning-token-based-activation-failed.md",
+      "redirect_url": "/troubleshoot/windows-server/licensing-and-activation/event-id-12321-warning-token-based-activation-failed",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/rebuild-tokens-dotdat-file.md",
+      "redirect_url": "/troubleshoot/windows-server/licensing-and-activation/rebuild-tokens-dotdat-file",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/0xc004f063-when-activating-oem-version.md",
+      "redirect_url": "/troubleshoot/windows-server/licensing-and-activation/0xc004f063-when-activating-oem-version",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/error-when-you-validate-copy-windows.md",
+      "redirect_url": "/troubleshoot/windows-server/licensing-and-activation/error-when-you-validate-copy-windows",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/error-product-key-not-match-windows-images-installation.md",
+      "redirect_url": "/troubleshoot/windows-server/licensing-and-activation/error-product-key-not-match-windows-images-installation",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/event-id-8208-8200-900.md",
+      "redirect_url": "/troubleshoot/windows-server/licensing-and-activation/event-id-8208-8200-900",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/event-12293-error-0x800723-set-kms-host.md",
+      "redirect_url": "/troubleshoot/windows-server/licensing-and-activation/event-12293-error-0x800723-set-kms-host",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/windows-activation-fails-with-error-0x8007267.md",
+      "redirect_url": "/troubleshoot/windows-server/licensing-and-activation/windows-activation-fails-with-error-0x8007267",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/change-volume-licensing-product-key.md",
+      "redirect_url": "/troubleshoot/windows-server/licensing-and-activation/change-volume-licensing-product-key",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/specified-database-not-valid-vamt-error.md",
+      "redirect_url": "/troubleshoot/windows-server/licensing-and-activation/specified-database-not-valid-vamt-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/microsoft-loopback-adapter-rename.md",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/microsoft-loopback-adapter-rename",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/stop-0x0000007b-error-group-policy-setting.md",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/stop-0x0000007b-error-group-policy-setting",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/virtual-machines-vmware-not-install-update.md",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/virtual-machines-vmware-not-install-update",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/use-device-manager-configure-devices.md",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/use-device-manager-configure-devices",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/error-install-vmware-driver.md",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/error-install-vmware-driver",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/event-id-56-logged.md",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/event-id-56-logged",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/event-id-37-windows-kernel-processor-power.md",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/event-id-37-windows-kernel-processor-power",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/determine-the-type-of-processor.md",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/determine-the-type-of-processor",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/use-recovery-console-replace-driver.md",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/use-recovery-console-replace-driver",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/device-cannot-start-error-hot-plug-nvme-ssd.md",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/device-cannot-start-error-hot-plug-nvme-ssd",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/support-policy-third-party-kernel-level-attestation.md",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/support-policy-third-party-kernel-level-attestation",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/cannot-insert-smart-card-in-reader.md",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/cannot-insert-smart-card-in-reader",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/deploy-uefi-based-systems-wds.md",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/deploy-uefi-based-systems-wds",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/default-core-parking-behavior-changes.md",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/default-core-parking-behavior-changes",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/enable-plug-play-for-parallel-port-devices.md",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/enable-plug-play-for-parallel-port-devices",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/number-of-processors-environment-variable-show-incorrect-values.md",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/number-of-processors-environment-variable-show-incorrect-values",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/multicast-deployment-fails-from-wds.md",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/multicast-deployment-fails-from-wds",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/error-install-windows-internal-database.md",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/error-install-windows-internal-database",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/deployment-toolkit-support.md",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/deployment-toolkit-support",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/create-iso-image-for-uefi-platforms.md",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/create-iso-image-for-uefi-platforms",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/sysprep-capture-task-sequence-fails-0x80070070.md",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/sysprep-capture-task-sequence-fails-0x80070070",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/in-place-upgrade-hangs-black-screen.md",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/in-place-upgrade-hangs-black-screen",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/use-language-id-identify-language-pack.md",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/use-language-id-identify-language-pack",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/setup-fail-on-vm-error-0xe0000100.md",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/setup-fail-on-vm-error-0xe0000100",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/event-307-and-304-logged-for-deploying.md",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/event-307-and-304-logged-for-deploying",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/add-oem-plug-play-drivers.md",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/add-oem-plug-play-drivers",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/enable-logging-windows-deployment-service.md",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/enable-logging-windows-deployment-service",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/unattended-setup-not-use-computer-name-specified-oobe.md",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/unattended-setup-not-use-computer-name-specified-oobe",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/mdt-media-deployment-isnt-bootable.md",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/mdt-media-deployment-isnt-bootable",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/wds-server-may-not-start.md",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/wds-server-may-not-start",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/issues-appx-cleanup-maintenance-task.md",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/issues-appx-cleanup-maintenance-task",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/avoid-duplicate-guids-deploy-sms.md",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/avoid-duplicate-guids-deploy-sms",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/repair-or-in-place-upgrade.md",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/repair-or-in-place-upgrade",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/chinese-ime-dictionaries-not-ready.md",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/chinese-ime-dictionaries-not-ready",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/chinese-simplified-input-method-not-working.md",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/chinese-simplified-input-method-not-working",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/windows-deployment-service-not-start.md",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/windows-deployment-service-not-start",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/windows-server-support-installation-for-amd-role-family-processor.md",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/windows-server-support-installation-for-amd-role-family-processor",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/manually-edit-boot-file.md",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/manually-edit-boot-file",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/cant-open-exe-files.md",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/cant-open-exe-files",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/filenames-with-spaces-require-quotation-mark.md",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/filenames-with-spaces-require-quotation-mark",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/subsystem-needed-support-image-type-not-present.md",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/subsystem-needed-support-image-type-not-present",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/update-available-integrates-wsus-into-server-manager.md",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/update-available-integrates-wsus-into-server-manager",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/upgrade-fail-with-error-0x000000c4.md",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/upgrade-fail-with-error-0x000000c4",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/post-deployment-configuration-task-fail.md",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/post-deployment-configuration-task-fail",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/pcr7-configuration-binding-not-possible.md",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/pcr7-configuration-binding-not-possible",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/fail-to-configure-server-using-server-manager.md",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/fail-to-configure-server-using-server-manager",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/mitigation-for-amd-family-17h-models-30h-3fh-rome-erratum-1474.md",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/mitigation-for-amd-family-17h-models-30h-3fh-rome-erratum-1474",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/error-certificate-connection-information-expired.md",
+      "redirect_url": "/troubleshoot/windows-client/licensing-and-activation/error-certificate-connection-information-expired",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/error-0x80070005-access-denied.md",
+      "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/error-0x80070005-access-denied",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/error-0x800705aa-windows-update-fails.md",
+      "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/error-0x800705aa-windows-update-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/error-0x800f0922-installing-windows-updates.md",
+      "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/error-0x800f0922-installing-windows-updates",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/error-0xc004e015-sl-e-eul-consumption-failed-activate-windows.md",
+      "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/error-0xc004e015-sl-e-eul-consumption-failed-activate-windows",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/error-0xc004f06c-activate-windows.md",
+      "redirect_url": "/troubleshoot/windows-server/licensing-and-activation/error-0xc004f06c-activate-windows",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/error-2359302-installing-windows-updates.md",
+      "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/error-2359302-installing-windows-updates",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/error-invalid-data-startup-installing-updates.md",
+      "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/error-invalid-data-startup-installing-updates",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/error-path-not-found-upgrading-windows-server-2019.md",
+      "redirect_url": "/troubleshoot/windows-server/setup-upgrade-and-drivers/error-path-not-found-upgrading-windows-server-2019",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/failed-changed-absent-state-status-0x800f0922-error.md",
+      "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/failed-changed-absent-state-status-0x800f0922-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/troubleshoot-activation-error-codes.md",
+      "redirect_url": "/troubleshoot/windows-server/licensing-and-activation/troubleshoot-activation-error-codes",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/troubleshoot-adba-clients-not-activate.md",
+      "redirect_url": "/troubleshoot/windows-server/licensing-and-activation/troubleshoot-adba-clients-not-activate",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/wubr-troubleshooting-data-transmission.md",
+      "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/wubr-troubleshooting-data-transmission",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/wubr-troubleshooting-device-config-using-script.md",
+      "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/wubr-troubleshooting-device-config-using-script",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/wubr-troubleshooting-guidance.md",
+      "redirect_url": "/troubleshoot/windows-server/installing-updates-features-roles/wubr-troubleshooting-guidance",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/identity/active-directory-overview.md",
+      "redirect_url": "/troubleshoot/windows-client/active-directory/active-directory-overview",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/identity/error-when-checking-domain-object-property.md",
+      "redirect_url": "/troubleshoot/windows-client/active-directory/error-when-checking-domain-object-property",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/identity/known-issues-for-group-policy-clients.md",
+      "redirect_url": "/troubleshoot/windows-client/active-directory/known-issues-for-group-policy-clients",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/identity/lsalookupsids-function-not-return-new-user-name.md",
+      "redirect_url": "/troubleshoot/windows-client/active-directory/lsalookupsids-function-not-return-new-user-name",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/identity/uac-blocks-elevation-executable-apps.md",
+      "redirect_url": "/troubleshoot/windows-client/active-directory/uac-blocks-elevation-executable-apps",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/identity/w32time-not-start-on-workgroup.md",
+      "redirect_url": "/troubleshoot/windows-client/active-directory/w32time-not-start-on-workgroup",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/0xc00002e1-error-start-domain-controller.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/0xc00002e1-error-start-domain-controller",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/a-batch-of-event-4780-logged-pdc.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/a-batch-of-event-4780-logged-pdc",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/access-denied-create-ntds-settings-object.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/access-denied-create-ntds-settings-object",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/access-denied-error-occurs-dcpromo.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/access-denied-error-occurs-dcpromo",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/access-denied-log-on-administrator-domain-account.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/access-denied-log-on-administrator-domain-account",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/access-denied-when-joining-computers.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/access-denied-when-joining-computers",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/access-is-denied-error-domain-controller-replicate-ad.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/access-is-denied-error-domain-controller-replicate-ad",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/account-not-authorized-login-from-this-station.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/account-not-authorized-login-from-this-station",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/active-directory-changes-not-replicate.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/active-directory-changes-not-replicate",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/active-directory-communication-fails.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/active-directory-communication-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/active-directory-domain-join-troubleshooting-guidance.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/active-directory-domain-join-troubleshooting-guidance",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/active-directory-overview.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/active-directory-overview",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/active-directory-replication-error-1256.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/active-directory-replication-error-1256",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/active-directory-replication-error-1396.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/active-directory-replication-error-1396",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/active-directory-replication-error-8240.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/active-directory-replication-error-8240",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/active-directory-replication-error-8304.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/active-directory-replication-error-8304",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/active-directory-replication-error-8451.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/active-directory-replication-error-8451",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/active-directory-replication-error-8545.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/active-directory-replication-error-8545",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/active-directory-replication-event-id-1388-1988.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/active-directory-replication-event-id-1388-1988",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/active-directory-replication-event-id-1925-dns-lookup.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/active-directory-replication-event-id-1925-dns-lookup",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/active-directory-replication-event-id-2042.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/active-directory-replication-event-id-2042",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/active-directory-replication-event-id-2087.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/active-directory-replication-event-id-2087",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/active-directory-replication-not-work-event-1865.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/active-directory-replication-not-work-event-1865",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/ad-database-offline-defragmentation.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/ad-database-offline-defragmentation",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/ad-dc-in-virtual-hosting-environment.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/ad-dc-in-virtual-hosting-environment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/ad-lds-instance-logs-event-id-2092.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/ad-lds-instance-logs-event-id-2092",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/ad-replication-error-1908-not-find-domain-controller.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/ad-replication-error-1908-not-find-domain-controller",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/ad-replication-fails-error-8409.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/ad-replication-fails-error-8409",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/adam-general-event-id-1161-logged-ad-lds-server.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/adam-general-event-id-1161-logged-ad-lds-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/adamsync-error-obj-class-violation.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/adamsync-error-obj-class-violation",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/add-domain-controllers-to-windows-2000-domain.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/add-domain-controllers-to-windows-2000-domain",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/add-special-groups-to-built-in-groups.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/add-special-groups-to-built-in-groups",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/adfs-2-certificate-error-build-chain.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/adfs-2-certificate-error-build-chain",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/adfs-2-error-access-is-denied.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/adfs-2-error-access-is-denied",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/adfs-2-service-fails-to-start.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/adfs-2-service-fails-to-start",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/adfs-error-180-endpoints-missing.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/adfs-error-180-endpoints-missing",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/adfs-error-401-requested-resource-requires-authentication.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/adfs-error-401-requested-resource-requires-authentication",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/admt-3dot2-installation-incomplete.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/admt-3dot2-installation-incomplete",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/adrepl-troubleshoot-replication-error-8461.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/adrepl-troubleshoot-replication-error-8461",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/adws-service-crashes-after-you-upgrade.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/adws-service-crashes-after-you-upgrade",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/all-members-group-may-not-be-returned.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/all-members-group-may-not-be-returned",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/anonymous-ldap-operations-active-directory-disabled.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/anonymous-ldap-operations-active-directory-disabled",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/apps-apis-require-access.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/apps-apis-require-access",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/apps-forcibly-closed-tls-connection-errors.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/apps-forcibly-closed-tls-connection-errors",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/auditpol-local-security-policy-results-differ.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/auditpol-local-security-policy-results-differ",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/auto-install-dns-server-role-disabled-promte-domain-controller.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/auto-install-dns-server-role-disabled-promte-domain-controller",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/availability-description-afds.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/availability-description-afds",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/back-up-recovery-agent-efs-private-key.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/back-up-recovery-agent-efs-private-key",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/ca-cant-use-certificate-template.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/ca-cant-use-certificate-template",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/cannot-add-domain-controller-node-failover-cluster.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/cannot-add-domain-controller-node-failover-cluster",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/cannot-add-user-object-differ-by-diacritic-mark-character.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/cannot-add-user-object-differ-by-diacritic-mark-character",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/cannot-connect-internet-domain.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/cannot-connect-internet-domain",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/cannot-demote-domain-controller.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/cannot-demote-domain-controller",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/cannot-join-computer-to-domain.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/cannot-join-computer-to-domain",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/cannot-promote-dc-to-global-catalog-server.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/cannot-promote-dc-to-global-catalog-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/cannot-select-windows-server-2016-ca-compatible-certificate-templates.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/cannot-select-windows-server-2016-ca-compatible-certificate-templates",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/cannot-start-active-directory-users-and-computers-tool.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/cannot-start-active-directory-users-and-computers-tool",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/cant-share-files-multiple-efs-certificates.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/cant-share-files-multiple-efs-certificates",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/cant-sign-the-domain.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/cant-sign-the-domain",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/certificate-services-not-start.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/certificate-services-not-start",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/change-ad-fs-2-dot-0-service-communications.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/change-ad-fs-2-dot-0-service-communications",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/change-certificates-expiration-date.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/change-certificates-expiration-date",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/change-display-names-ad-users.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/change-display-names-ad-users",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/change-integrated-dns-zone-replication-scope.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/change-integrated-dns-zone-replication-scope",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/change-windows-active-directory-user-password.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/change-windows-active-directory-user-password",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/changes-arent-replicated-controllers.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/changes-arent-replicated-controllers",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/cng-templates-not-appear-certificate-web-enrollment.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/cng-templates-not-appear-certificate-web-enrollment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/common-active-directory-replication-errors.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/common-active-directory-replication-errors",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/compatibility-user-accounts-end-dollar-sign.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/compatibility-user-accounts-end-dollar-sign",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/complete-semantic-database-analysis-ad-db.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/complete-semantic-database-analysis-ad-db",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/config-firewall-for-ad-domains-and-trusts.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/config-firewall-for-ad-domains-and-trusts",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/configure-ad-and-lds-event-logging.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/configure-ad-and-lds-event-logging",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/configure-authoritative-time-server.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/configure-authoritative-time-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/configure-kerberos-constrained-delegation.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/configure-kerberos-constrained-delegation",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/configure-w32ime-against-huge-time-offset.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/configure-w32ime-against-huge-time-offset",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/connection-adfs-failed-set-msoladfscontex.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/connection-adfs-failed-set-msoladfscontex",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/convert-datetime-attributes-to-standard-format.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/convert-datetime-attributes-to-standard-format",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/convert-domain-federated.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/convert-domain-federated",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/create-an-active-directory-server.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/create-an-active-directory-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/creating-ntds-settings-object-for-ad-dc.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/creating-ntds-settings-object-for-ad-dc",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/cs-cant-start-computer.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/cs-cant-start-computer",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/database-garbage-collection-caculation-of-allowed-intervals.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/database-garbage-collection-caculation-of-allowed-intervals",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/dc-delayed-response-to-ldap-kerberos-request.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/dc-delayed-response-to-ldap-kerberos-request",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/dc-promotion-not-respond-netbios-disabled.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/dc-promotion-not-respond-netbios-disabled",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/dc-respond-to-ldap-ping-on-udp-138-port.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/dc-respond-to-ldap-ping-on-udp-138-port",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/dcdiag-commands-running-errors.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/dcdiag-commands-running-errors",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/dcdiag-verifyreferences-test-fails.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/dcdiag-verifyreferences-test-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/dcpromo-demotion-fails.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/dcpromo-demotion-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/dcpromo-replication-phase-error.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/dcpromo-replication-phase-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/dcs-cannot-be-located-high-rate-outbound-sessions.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/dcs-cannot-be-located-high-rate-outbound-sessions",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/default-workstation-numbers-join-domain.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/default-workstation-numbers-join-domain",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/define-security-templates-using-security-templates-snap-in.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/define-security-templates-using-security-templates-snap-in",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/delays-domain-members-dc-remote-domains.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/delays-domain-members-dc-remote-domains",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/delete-enterprise-windows-certificate-authority.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/delete-enterprise-windows-certificate-authority",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/deployment-operation-ad-domains.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/deployment-operation-ad-domains",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/detect-and-recover-from-usn-rollback.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/detect-and-recover-from-usn-rollback",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/diagnose-replication-failures.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/diagnose-replication-failures",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/directory-datatype-cannot-converted-to-from-native-ds-datatype-error.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/directory-datatype-cannot-converted-to-from-native-ds-datatype-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/directory-service-manage-objects.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/directory-service-manage-objects",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/disable-and-replace-tls-1dot0.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/disable-and-replace-tls-1dot0",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/disable-knowledge-consistency-checker-automatic-generation.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/disable-knowledge-consistency-checker-automatic-generation",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/disable-tls-1-1dot1-mbam-servers.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/disable-tls-1-1dot1-mbam-servers",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/distributed-file-system-hotfixes.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/distributed-file-system-hotfixes",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/domain-controller-not-functioning-correctly.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/domain-controller-not-functioning-correctly",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/domain-controller-not-start-c00002e2-error.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/domain-controller-not-start-c00002e2-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/domain-controller-promotion-windows-server-technical-preview.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/domain-controller-promotion-windows-server-technical-preview",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/domain-controller-returns-500-values-ldap-response.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/domain-controller-returns-500-values-ldap-response",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/domain-controllers-not-demote.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/domain-controllers-not-demote",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/dpapi-masterkey-backup-failures.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/dpapi-masterkey-backup-failures",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/dsa-object-cannot-be-deleted.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/dsa-object-cannot-be-deleted",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/duplicate-active-directory-replication-connections.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/duplicate-active-directory-replication-connections",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/enable-kerberos-event-logging.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/enable-kerberos-event-logging",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/enable-ldap-over-ssl-3rd-certification-authority.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/enable-ldap-over-ssl-3rd-certification-authority",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/enable-ldap-signing-in-windows-server.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/enable-ldap-signing-in-windows-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/error-0x800706ba-certificate-enrollment.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/error-0x800706ba-certificate-enrollment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/error-message-run-w32tm-resync-no-time-data-available.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/error-message-run-w32tm-resync-no-time-data-available",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/error-password-change-expired-password.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/error-password-change-expired-password",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/error-run-adprep-rodcprep-command.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/error-run-adprep-rodcprep-command",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/error-seize-rid-master-role-with-ntdsutil.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/error-seize-rid-master-role-with-ntdsutil",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/error-when-you-run-ad-installation-wizard.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/error-when-you-run-ad-installation-wizard",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/esent-events-1000-1202-412-454.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/esent-events-1000-1202-412-454",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/event-16650-account-identifier-allocator-not-initialize.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/event-16650-account-identifier-allocator-not-initialize",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/event-id-1216-directory-services-event-log.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/event-id-1216-directory-services-event-log",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/event-id-5722-logged-on-domain-controller.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/event-id-5722-logged-on-domain-controller",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/event-id-84-occurs-ad-rms-windows-server.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/event-id-84-occurs-ad-rms-windows-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/event-ids-5788-5789.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/event-ids-5788-5789",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/event1644reader-analyze-ldap-query-performance.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/event1644reader-analyze-ldap-query-performance",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/export-root-certification-authority-certificate.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/export-root-certification-authority-certificate",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/extranet-smart-lockout-feature.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/extranet-smart-lockout-feature",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/fail-to-access-data-from-source-control-explorer.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/fail-to-access-data-from-source-control-explorer",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/fail-to-join-computer-to-ad-domain.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/fail-to-join-computer-to-ad-domain",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/file-replication-service-event-13552-13555.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/file-replication-service-event-13552-13555",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/find-current-schema-version.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/find-current-schema-version",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/find-name-enterprise-root-ca-server.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/find-name-enterprise-root-ca-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/find-servers-holding-fsmo-role.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/find-servers-holding-fsmo-role",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/fsmo-placement-and-optimization-on-ad-dcs.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/fsmo-placement-and-optimization-on-ad-dcs",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/fsmo-roles.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/fsmo-roles",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/fsmo-transfer-seizure-process.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/fsmo-transfer-seizure-process",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/get-adgroupmember-error-remote-forest-members.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/get-adgroupmember-error-remote-forest-members",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/get-use-active-directory-replication-status-tool.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/get-use-active-directory-replication-status-tool",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/group-policy-application-rules-for-domain-controller.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/group-policy-application-rules-for-domain-controller",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/group-policy-preparation-isnt-performed.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/group-policy-preparation-isnt-performed",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/hide-display-inetorgperson-object-class.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/hide-display-inetorgperson-object-class",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/how-domain-controllers-are-located.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/how-domain-controllers-are-located",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/how-to-disable-tls-1-3-for-ad-and-ldap.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/how-to-disable-tls-1-3-for-ad-and-ldap",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/info-devices-configured-rodcs.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/info-devices-configured-rodcs",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/information-lingering-objects.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/information-lingering-objects",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/installing-ad-ds-fails.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/installing-ad-ds-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/inter-forest-password-migration-with-admtv2.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/inter-forest-password-migration-with-admtv2",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/inter-forest-sidhistory-migration-with-admt.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/inter-forest-sidhistory-migration-with-admt",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/ismserv-not-start-when-domain-controller-starts.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/ismserv-not-start-when-domain-controller-starts",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/issues-ad-replication-netlogon-rpcs-request-backlog-values-exceeded.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/issues-ad-replication-netlogon-rpcs-request-backlog-values-exceeded",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/issues-admt-3dot1-migrate-to-domain.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/issues-admt-3dot1-migrate-to-domain",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/jet-database-errors-recovery-steps.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/jet-database-errors-recovery-steps",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/kfso-not-work-in-external-trust-event-is-17.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/kfso-not-work-in-external-trust-event-is-17",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/ldap-kerberos-server-not-respond-udp-request-reset-tcp-sessions.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/ldap-kerberos-server-not-respond-udp-request-reset-tcp-sessions",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/ldap-over-ssl-connection-issues.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/ldap-over-ssl-connection-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/ldap-paged-queries-subordinate-referrals-not-chased.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/ldap-paged-queries-subordinate-referrals-not-chased",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/ldap-queries-run-slowly.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/ldap-queries-run-slowly",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/ldap-query-against-domain-controller-partial-attribute.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/ldap-query-against-domain-controller-partial-attribute",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/ldap-session-security-settings-requirements-adv190023.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/ldap-session-security-settings-requirements-adv190023",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/ldap-session-takes-longer-target-host-names.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/ldap-session-takes-longer-target-host-names",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/ldaps-connection-fails-with-event-id-36884.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/ldaps-connection-fails-with-event-id-36884",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/lds-service-startup-fails.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/lds-service-startup-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/lingering-object-liquidator-tool.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/lingering-object-liquidator-tool",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/lingering-objects-remain.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/lingering-objects-remain",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/linux-accounts-cannot-get-aes-tickets.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/linux-accounts-cannot-get-aes-tickets",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/modify-default-intra-site-dc-replication-interval.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/modify-default-intra-site-dc-replication-interval",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/modify-filtered-properties-of-object.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/modify-filtered-properties-of-object",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/move-certificate-server-database-log-files.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/move-certificate-server-database-log-files",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/move-certification-authority-to-another-server.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/move-certification-authority-to-another-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/multiple-tabs-of-user-property-missing.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/multiple-tabs-of-user-property-missing",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/namespace-not-queried-rpc-server-unavailable.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/namespace-not-queried-rpc-server-unavailable",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/naming-conventions-for-computer-domain-site-ou.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/naming-conventions-for-computer-domain-site-ou",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/net-add-not-support-names-exceeding-20-characters.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/net-add-not-support-names-exceeding-20-characters",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/netlogon-service-not-start-automatically.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/netlogon-service-not-start-automatically",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/netlogon-service-not-start-event-2112-7024.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/netlogon-service-not-start-event-2112-7024",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/netlogon-share-not-present-after-install-ad-ds-on-full-read-only-domain-controller.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/netlogon-share-not-present-after-install-ad-ds-on-full-read-only-domain-controller",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/netuser-netgroup-fails-with-access-denied.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/netuser-netgroup-fails-with-access-denied",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/newly-promoted-domain-controller-fail-advertise.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/newly-promoted-domain-controller-fail-advertise",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/no-logon-servers-are-available.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/no-logon-servers-are-available",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/non-administrators-view-deleted-object-container.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/non-administrators-view-deleted-object-container",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/ntds-replication-event-2089-backup-latency-interval.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/ntds-replication-event-2089-backup-latency-interval",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/ntds-replication-warning-1083-1061-sam-error-12294.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/ntds-replication-warning-1083-1061-sam-error-12294",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/ntds-replication-warning-event-id-1093.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/ntds-replication-warning-event-id-1093",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/ntdsutil-find-clean-duplicate-security-identifiers.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/ntdsutil-find-clean-duplicate-security-identifiers",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/ntfrs-deprecation-blocks-replic-dc-installation.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/ntfrs-deprecation-blocks-replic-dc-installation",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/optimize-dc-location-global-catalog.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/optimize-dc-location-global-catalog",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/orphaned-child-domain-isnt-replicated.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/orphaned-child-domain-isnt-replicated",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/outdated-cached-credentials-used-when-run-elevated-task.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/outdated-cached-credentials-used-when-run-elevated-task",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/password-change-mechanisms.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/password-change-mechanisms",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/password-change-processing-conflict-resolution-function.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/password-change-processing-conflict-resolution-function",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/password-reset-fails-error.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/password-reset-fails-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/phantoms-tombstones-infrastructure-master.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/phantoms-tombstones-infrastructure-master",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/poor-performance-calling-lookup-functions.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/poor-performance-calling-lookup-functions",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/problems-rename-active-directory-forest-sites.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/problems-rename-active-directory-forest-sites",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/problems-with-dc-ad-integrated-dns-zones.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/problems-with-dc-ad-integrated-dns-zones",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/promoting-dc-to-global-catalog-server-issues.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/promoting-dc-to-global-catalog-server-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/raise-active-directory-domain-forest-functional-levels.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/raise-active-directory-domain-forest-functional-levels",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/redirect-users-computers-containers.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/redirect-users-computers-containers",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/relocate-sysvol-tree-frs-for-replication.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/relocate-sysvol-tree-frs-for-replication",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/remote-procedure-call-failed-and-did-not-execute-error.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/remote-procedure-call-failed-and-did-not-execute-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/remove-orphaned-domains.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/remove-orphaned-domains",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/rename-item-replication-collision.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/rename-item-replication-collision",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/replication-error-1127.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/replication-error-1127",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/replication-error-1722-rpc-server-unavailable.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/replication-error-1722-rpc-server-unavailable",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/replication-error-1753.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/replication-error-1753",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/replication-error-1818.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/replication-error-1818",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/replication-error-2146893022.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/replication-error-2146893022",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/replication-error-5.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/replication-error-5",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/replication-error-8333.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/replication-error-8333",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/replication-error-8418.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/replication-error-8418",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/replication-error-8446.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/replication-error-8446",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/replication-error-8452.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/replication-error-8452",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/replication-error-8453.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/replication-error-8453",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/replication-error-8456-8457.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/replication-error-8456-8457",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/replication-error-8464.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/replication-error-8464",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/replication-error-8477.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/replication-error-8477",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/replication-error-8524.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/replication-error-8524",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/replication-error-8589.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/replication-error-8589",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/replication-error-8606.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/replication-error-8606",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/replication-error-8614.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/replication-error-8614",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/replication-event-id-2108-1084.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/replication-event-id-2108-1084",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/replication-failures-delete-active-directory-objects.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/replication-failures-delete-active-directory-objects",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/replications-fail-with-error-5.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/replications-fail-with-error-5",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/reset-directory-services-restore-mode-admin-pwd.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/reset-directory-services-restore-mode-admin-pwd",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/restore-iis-clean-up-active-directory.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/restore-iis-clean-up-active-directory",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/restrict-ad-rpc-traffic-to-specific-port.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/restrict-ad-rpc-traffic-to-specific-port",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/restrict-use-one-domain-user-only.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/restrict-use-one-domain-user-only",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/retore-deleted-accounts-and-groups-in-ad.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/retore-deleted-accounts-and-groups-in-ad",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/rodc-replicates-passwords-grant-incorrect-permissions.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/rodc-replicates-passwords-grant-incorrect-permissions",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/rsop-not-supported-across-multiple-forests.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/rsop-not-supported-across-multiple-forests",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/schema-mismatch-error-ad-installation-wizard-dcpromo.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/schema-mismatch-error-ad-installation-wizard-dcpromo",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/service-cannot-be-started-error.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/service-cannot-be-started-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/set-enterprise-subordinate-ca-validity-period.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/set-enterprise-subordinate-ca-validity-period",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/set-up-certificate-based-authentication-across-forest-without-trust.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/set-up-certificate-based-authentication-across-forest-without-trust",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/set-user-password-with-ldifde.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/set-user-password-with-ldifde",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/specialpollinterval-polling-interval-time-service-not-correct.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/specialpollinterval-polling-interval-time-service-not-correct",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/supplied-password-not-match-encryption-keys-password.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/supplied-password-not-match-encryption-keys-password",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/support-boundary-high-accuracy-time.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/support-boundary-high-accuracy-time",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/support-for-active-directory-over-nat.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/support-for-active-directory-over-nat",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/support-for-leap-second.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/support-for-leap-second",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/support-policy-and-known-issues-for-admt.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/support-policy-and-known-issues-for-admt",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/sync-center-slow-syncing-of-offline-files.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/sync-center-slow-syncing-of-offline-files",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/syntax-build-answer-files-unattended-installation-ad-ds.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/syntax-build-answer-files-unattended-installation-ad-ds",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/syskey-exe-utility-is-no-longer-supported.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/syskey-exe-utility-is-no-longer-supported",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/sysvol-msdfsr-member-container-not-updated.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/sysvol-msdfsr-member-container-not-updated",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/target-principal-name-is-incorrect-when-replicating-data.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/target-principal-name-is-incorrect-when-replicating-data",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/this-page-cant-displayed.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/this-page-cant-displayed",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/this-property-limited-64-values.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/this-property-limited-64-values",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/time-service-treats-leap-second.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/time-service-treats-leap-second",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/time-synchronization-not-succeed-non-ntp.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/time-synchronization-not-succeed-non-ntp",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/transfer-or-seize-operation-master-roles-in-ad-ds.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/transfer-or-seize-operation-master-roles-in-ad-ds",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/troubleshoot-ad-fs-issues.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/troubleshoot-ad-fs-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/troubleshoot-ad-fs-sso-issue.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/troubleshoot-ad-fs-sso-issue",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/troubleshoot-adreplication-guidance.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/troubleshoot-adreplication-guidance",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/troubleshoot-domain-controller-deployment.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/troubleshoot-domain-controller-deployment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/troubleshoot-errors-join-computer-to-domain.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/troubleshoot-errors-join-computer-to-domain",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/troubleshoot-event-id-1311-messages.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/troubleshoot-event-id-1311-messages",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/troubleshoot-high-lsass.exe-cpu-utilization.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/troubleshoot-high-lsass.exe-cpu-utilization",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/trusted-root-certificates-are-required.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/trusted-root-certificates-are-required",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/turn-on-debug-logging-in-windows-time-service.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/turn-on-debug-logging-in-windows-time-service",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/turn-on-debug-logging-ldap-client.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/turn-on-debug-logging-ldap-client",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/uninstall-reinstall-ca-role.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/uninstall-reinstall-ca-role",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/use-adminpak-remotely-administer-computers.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/use-adminpak-remotely-administer-computers",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/use-ntdsutil-manage-ad-files.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/use-ntdsutil-manage-ad-files",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/use-online-dbdump-feature-ldp-dot-exe.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/use-online-dbdump-feature-ldp-dot-exe",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/useraccountcontrol-manipulate-account-properties.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/useraccountcontrol-manipulate-account-properties",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/valid-root-ca-certificates-untrusted.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/valid-root-ca-certificates-untrusted",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/view-set-ldap-policy-using-ntdsutil.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/view-set-ldap-policy-using-ntdsutil",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/view-transfer-fsmo-roles.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/view-transfer-fsmo-roles",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/w32time-event-142-time-service-stopped-advertising.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/w32time-event-142-time-service-stopped-advertising",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/w32time-sync-specialpollInterval-ignored.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/w32time-sync-specialpollInterval-ignored",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/windows-app-cant-start.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/windows-app-cant-start",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/windows-time-service-event-ids-24-29-38.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/windows-time-service-event-ids-24-29-38",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/windows-time-service-values-reverted.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/windows-time-service-values-reverted",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/wizard-not-gain-access-to-domain.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/wizard-not-gain-access-to-domain",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/identity/workplace-join-fail-error-0x80072ee7.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/workplace-join-fail-error-0x80072ee7",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/deployment/deployment-overview.md",
+      "redirect_url": "/troubleshoot/windows-client/welcome-windows-client",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/deployment-overview.md",
+      "redirect_url": "/troubleshoot/windows-server/welcome-windows-server",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "support/azure/active-directory/unable-sign-out-online-services.md",
       "redirect_url": "/microsoft-365/troubleshoot/sign-in/cannot-sign-out-cloud-service",
       "redirect_document_id": false
@@ -6933,6 +9539,551 @@
       "source_path": "support/azure/active-directory/enable-disable-trace-online-services.md",
       "redirect_url": "/powershell/microsoftgraph/overview?toc=%2Ftroubleshoot%2Fazure%2Factive-directory%2Ftoc.json&bc=%2Ftroubleshoot%2Fazure%2Factive-directory%2Fbreadcrumb%2Ftoc.json",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/general/apply-out-of-band-updates-to-cps.md",
+      "redirect_url": "https://azure.microsoft.com/products/azure-stack/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/general/how-to-enable-bitlocker-in-cloud-platform-system.md",
+      "redirect_url": "https://azure.microsoft.com/products/azure-stack/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/general/firmware-version-matrix.md",
+      "redirect_url": "https://azure.microsoft.com/products/azure-stack/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/general/how-to-renew-windows-azure-pack-authentication-sit.md",
+      "redirect_url": "https://azure.microsoft.com/products/azure-stack/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/general/update-1610-cps-premium.md",
+      "redirect_url": "https://azure.microsoft.com/products/azure-stack/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/general/update-1606-cps-premium.md",
+      "redirect_url": "https://azure.microsoft.com/products/azure-stack/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/general/update-1603-for-cloud-platform-system-premium.md",
+      "redirect_url": "https://azure.microsoft.com/products/azure-stack/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/general/update-1603-cps-standard.md",
+      "redirect_url": "https://azure.microsoft.com/products/azure-stack/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/general/update-1602-for-cloud-platform-system-premium.md",
+      "redirect_url": "https://azure.microsoft.com/products/azure-stack/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/general/update-2.3-for-cloud-platform-system-premium.md",
+      "redirect_url": "https://azure.microsoft.com/products/azure-stack/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/general/update-2.1-for-cloud-platform-system-premium.md",
+      "redirect_url": "https://azure.microsoft.com/products/azure-stack/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/general/azure-stack-hci-kernel-soft-reboot-error-c0000034.md",
+      "redirect_url": "/answers/tags/205/azure-stack-hub",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/general/side-channel-vulnerabilities.md",
+      "redirect_url": "/answers/tags/205/azure-stack-hub",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/general/pending-service-account-password-expiration.md",
+      "redirect_url": "/answers/tags/205/azure-stack-hub",
+      "redirect_document_id": false
+    },
+    {
+       "source_path": "support/azure/azure-kubernetes/operationisnotallowed.md",
+       "redirect_url": "/troubleshoot/azure/azure-kubernetes/operationnotallowed",
+       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/windows-security/code-31-device-manager-usbccid-smartcard-reader-problem.md",
+      "redirect_url": "/troubleshoot/windows-client/certificates-and-public-key-infrastructure-pki/code-31-device-manager-usbccid-smartcard-reader-problem",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/windows-security/cannot-authenticate-incorrect-piv-smart-card-driver-update.md",
+      "redirect_url": "/troubleshoot/windows-client/certificates-and-public-key-infrastructure-pki/cannot-authenticate-incorrect-piv-smart-card-driver-update",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/windows-security/0x6-error-invalid-handle-multithreaded-application.md",
+      "redirect_url": "/troubleshoot/windows-client/certificates-and-public-key-infrastructure-pki/0x6-error-invalid-handle-multithreaded-application",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/user-profiles-and-logon/integrated-unblock-screen-not-displayed-smart-card-pin-blocked.md",
+      "redirect_url": "/troubleshoot/windows-client/certificates-and-public-key-infrastructure-pki/integrated-unblock-screen-not-displayed-smart-card-pin-blocked",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/user-profiles-and-logon/registry-keys-smart-card-pin-caching-options-not-available.md",
+      "redirect_url": "/troubleshoot/windows-client/certificates-and-public-key-infrastructure-pki/registry-keys-smart-card-pin-caching-options-not-available",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/active-directory/cannot-select-windows-server-2016-ca-compatible-certificate-templates.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/cannot-select-windows-server-2016-ca-compatible-certificate-templates",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/active-directory/trusted-root-certificates-are-required.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/trusted-root-certificates-are-required",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/active-directory/move-certificate-server-database-log-files.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/move-certificate-server-database-log-files",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/active-directory/ca-cant-use-certificate-template.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/ca-cant-use-certificate-template",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/active-directory/cant-share-files-multiple-efs-certificates.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/cant-share-files-multiple-efs-certificates",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/active-directory/back-up-recovery-agent-efs-private-key.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/back-up-recovery-agent-efs-private-key",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/active-directory/cng-templates-not-appear-certificate-web-enrollment.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/cng-templates-not-appear-certificate-web-enrollment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/active-directory/move-certification-authority-to-another-server.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/move-certification-authority-to-another-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/active-directory/find-name-enterprise-root-ca-server.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/find-name-enterprise-root-ca-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/active-directory/uninstall-reinstall-ca-role.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/uninstall-reinstall-ca-role",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/active-directory/cs-cant-start-computer.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/cs-cant-start-computer",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/active-directory/error-0x800706ba-certificate-enrollment.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/error-0x800706ba-certificate-enrollment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/active-directory/delete-enterprise-windows-certificate-authority.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/delete-enterprise-windows-certificate-authority",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/active-directory/valid-root-ca-certificates-untrusted.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/valid-root-ca-certificates-untrusted",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/active-directory/set-up-certificate-based-authentication-across-forest-without-trust.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/set-up-certificate-based-authentication-across-forest-without-trust",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/active-directory/certificate-services-not-start.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/certificate-services-not-start",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/active-directory/set-enterprise-subordinate-ca-validity-period.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/set-enterprise-subordinate-ca-validity-period",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/active-directory/change-certificates-expiration-date.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/change-certificates-expiration-date",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/active-directory/export-root-certification-authority-certificate.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/export-root-certification-authority-certificate",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/active-directory/troubleshoot-adreplication-guidance.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/troubleshoot-adreplication-guidance",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/active-directory/dpapi-masterkey-backup-failures.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/dpapi-masterkey-backup-failures",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/active-directory/apps-forcibly-closed-tls-connection-errors.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/apps-forcibly-closed-tls-connection-errors",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/active-directory/disable-tls-1-1dot1-mbam-servers.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/disable-tls-1-1dot1-mbam-servers",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/windows-security/crypt32-event-8.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/crypt32-event-8",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/windows-security/clients-cant-authenticate-server.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/clients-cant-authenticate-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/windows-security/decommission-enterprise-certification-authority-and-remove-objects.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/decommission-enterprise-certification-authority-and-remove-objects",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/windows-security/description-support-suite-b-cryptographic-ipsec.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/description-support-suite-b-cryptographic-ipsec",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/windows-security/remote-desktop-server-certificates-renewed.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/remote-desktop-server-certificates-renewed",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/windows-security/add-san-to-secure-ldap-certificate.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/add-san-to-secure-ldap-certificate",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/windows-security/install-imported-certificates.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/install-imported-certificates",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/windows-security/requirements-domain-controller.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/requirements-domain-controller",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/windows-security/certutil-view-not-return-issued-certificate.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/certutil-view-not-return-issued-certificate",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/windows-security/event-id-4107-or-event-id-11-is-logged.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/event-id-4107-or-event-id-11-is-logged",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/windows-security/http-error-500-internal-server-error.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/http-error-500-internal-server-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/windows-security/microsoft-trusted-root-store-removal-of-us-federal-common-policy.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/microsoft-trusted-root-store-removal-of-us-federal-common-policy",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/windows-security/import-third-party-ca-to-enterprise-ntauth-store.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/import-third-party-ca-to-enterprise-ntauth-store",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/windows-security/approval-required-certificate-renewals-autoenrollment.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/approval-required-certificate-renewals-autoenrollment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/windows-security/cannot-publish-certificate-trusted-domain.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/cannot-publish-certificate-trusted-domain",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/windows-security/kdc-err-c-principal-unknown-s4u2self-request.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/kdc-err-c-principal-unknown-s4u2self-request",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/windows-security/secured-website-certificate-validation-fails.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/secured-website-certificate-validation-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/windows-security/no-certificate-templates-be-found.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/no-certificate-templates-be-found",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/windows-security/error-0x80090022-nte-silent-context-cep-ces-autoenrollment-kbr-fails.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/error-0x80090022-nte-silent-context-cep-ces-autoenrollment-kbr-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/windows-security/superseded-certificate-templates-impact-user-ad-store.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/superseded-certificate-templates-impact-user-ad-store",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/windows-security/recovery-policy-contains-invalid-recovery-certificate.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/recovery-policy-contains-invalid-recovery-certificate",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/windows-security/use-cipher-to-overwrite-deleted-data.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/use-cipher-to-overwrite-deleted-data",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/windows-security/renewal-of-enrollment-agent-certificate-fail.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/renewal-of-enrollment-agent-certificate-fail",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/windows-security/root-ca-certificate-doesnt-appear.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/root-ca-certificate-doesnt-appear",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/windows-security/cryptacquirecontext-troubleshooting.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/cryptacquirecontext-troubleshooting",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/windows-security/cannot-request-certificate-with-web-enrollment.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/cannot-request-certificate-with-web-enrollment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/windows-security/restrict-cryptographic-algorithms-protocols-schannel.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/restrict-cryptographic-algorithms-protocols-schannel",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/windows-security/enabling-smart-card-logon-third-party-certification-authorities.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/enabling-smart-card-logon-third-party-certification-authorities",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/modifications-not-reflect-portal.md",
+      "redirect_url": "/troubleshoot/azure/automation/modifications-not-reflect-portal",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/automation-scripted-diagnostic-capture.md",
+      "redirect_url": "/troubleshoot/azure/automation/automation-scripted-diagnostic-capture",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/find-azurermresource-fails.md",
+      "redirect_url": "/troubleshoot/azure/automation/find-azurermresource-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/capture-debug-stream-automation-runbook.md",
+      "redirect_url": "/troubleshoot/azure/automation/capture-debug-stream-automation-runbook",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/reinstall-oms-agent-linux.md",
+      "redirect_url": "/troubleshoot/azure/automation/reinstall-oms-agent-linux",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/apim-troubleshooting-series.md",
+      "redirect_url": "/troubleshoot/azure/api-mgmt/apim-troubleshooting-series",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/api-return-blank-response.md",
+      "redirect_url": "/troubleshoot/azure/api-mgmt/api-return-blank-response",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/soap-based-api-return-404-http-code.md",
+      "redirect_url": "/troubleshoot/azure/api-mgmt/soap-based-api-return-404-http-code",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/unauthorized-errors-invoke-apis.md",
+      "redirect_url": "/troubleshoot/azure/api-mgmt/unauthorized-errors-invoke-apis",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/performance-hit-api-calls.md",
+      "redirect_url": "/troubleshoot/azure/api-mgmt/performance-hit-api-calls",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/request-throttling-http-403.md",
+      "redirect_url": "/troubleshoot/azure/api-mgmt/request-throttling-http-403",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/sdp3fdcb6045-5616-45b4-bb68-0bd11081c184-vnet.md",
+      "redirect_url": "/troubleshoot/azure/virtual-network/sdp3fdcb6045-5616-45b4-bb68-0bd11081c184-vnet",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/fabric-logs.md",
+      "redirect_url": "/troubleshoot/azure/service-fabric/fabric-logs",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/access-denied-execute-azure-batch-job.md",
+      "redirect_url": "/troubleshoot/azure/hpc-batch/access-denied-execute-azure-batch-job",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/error-accountencryptionkeyunavailable.md",
+      "redirect_url": "/troubleshoot/azure/hpc-batch/error-accountencryptionkeyunavailable",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/batch-node-creation-delay-restart-reimage.md",
+      "redirect_url": "/troubleshoot/azure/hpc-batch/batch-node-creation-delay-restart-reimage",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/azure-batch-node-unusable-state.md",
+      "redirect_url": "/troubleshoot/azure/hpc-batch/azure-batch-node-unusable-state",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/azure-batch-pool-creation-failure.md",
+      "redirect_url": "/troubleshoot/azure/hpc-batch/azure-batch-pool-creation-failure",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/azure-batch-pool-deletion-failure.md",
+      "redirect_url": "/troubleshoot/azure/hpc-batch/azure-batch-pool-deletion-failure",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/azure-batch-task-stuck-in-running-state.md",
+      "redirect_url": "/troubleshoot/azure/hpc-batch/azure-batch-task-stuck-in-running-state",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/azure-batch-pool-resizing-failure.md",
+      "redirect_url": "/troubleshoot/azure/hpc-batch/azure-batch-pool-resizing-failure",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/azure-batch-task-permission-issue.md",
+      "redirect_url": "/troubleshoot/azure/hpc-batch/azure-batch-task-permission-issue",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/azure-batch-task-failure-no-stdout-stderr-log.md",
+      "redirect_url": "/troubleshoot/azure/hpc-batch/azure-batch-task-failure-no-stdout-stderr-log",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/azure-batch-creates-network-resources.md",
+      "redirect_url": "/troubleshoot/azure/hpc-batch/azure-batch-creates-network-resources",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/use-managed-identities-azure-batch-account-pool.md",
+      "redirect_url": "/troubleshoot/azure/hpc-batch/use-managed-identities-azure-batch-account-pool",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/invalid-client-secret.md",
+      "redirect_url": "/troubleshoot/azure/hpc-cyclecloud/invalid-client-secret",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/error-invalid-azure-credentials-cycle-cloud.md",
+      "redirect_url": "/troubleshoot/azure/hpc-cyclecloud/error-invalid-azure-credentials-cycle-cloud",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/troubleshoot-install-failure-hpc-pack-linux-node-agent.md",
+      "redirect_url": "/troubleshoot/azure/hpc-pack/troubleshoot-install-failure-hpc-pack-linux-node-agent",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/job-stuck-canceling-mode.md",
+      "redirect_url": "/troubleshoot/azure/hpc-pack/job-stuck-canceling-mode",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/hpc-management-service-not-start.md",
+      "redirect_url": "/troubleshoot/azure/hpc-pack/hpc-management-service-not-start",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/compute-node-not-shown-error-state.md",
+      "redirect_url": "/troubleshoot/azure/hpc-pack/compute-node-not-shown-error-state",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/hpc-node-manager-service-unreachable-certificate.md",
+      "redirect_url": "/troubleshoot/azure/hpc-pack/hpc-node-manager-service-unreachable-certificate",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/hpc-pack-excel-offloading-job-stalled.md",
+      "redirect_url": "/troubleshoot/azure/hpc-pack/hpc-pack-excel-offloading-job-stalled",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/hpc-management-reporting-database-connection-issue.md",
+      "redirect_url": "/troubleshoot/azure/hpc-pack/hpc-management-reporting-database-connection-issue",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/hpc-management-reporting-database-permission-problem.md",
+      "redirect_url": "/troubleshoot/azure/hpc-pack/hpc-management-reporting-database-permission-problem",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/error-no-virtual-network-found.md",
+      "redirect_url": "/troubleshoot/azure/hpc-pack/error-no-virtual-network-found",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows/browser-blocks-cookies.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/cannot-sign-in-to-power-automate-for-desktop#browser-blocks-cookies",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows/login-windows-keep-appearing.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/cannot-sign-in-to-power-automate-for-desktop#login-window-keeps-popping-up",
+      "redirect_document_id": true
     }
-]
+  ]
 }

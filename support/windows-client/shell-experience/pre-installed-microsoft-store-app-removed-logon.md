@@ -1,9 +1,7 @@
 ---
 title: Pre-installed Microsoft Store app is removed at first Windows logon
 description: Provides a workaround for the issue in which a pre-installed Microsoft Store App is unexpectedly removed the first time that a user logs on
-ms.date: 09/21/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

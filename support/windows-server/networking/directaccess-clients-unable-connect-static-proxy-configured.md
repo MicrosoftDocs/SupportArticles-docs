@@ -1,9 +1,7 @@
 ---
 title: DirectAccess clients may be unable to connect when a static proxy is configured
 description: Describes an issue that occurs when you have the Remote Access role installed on a Windows Server 2012 R2-based server.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
