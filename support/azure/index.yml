@@ -86,11 +86,16 @@ productDirectory:
     links:
     - url: virtual-network/welcome-virtual-network.yml
       text: Troubleshooting articles for Azure Virtual Network
-  - title: Cloud Services
+  - title: Cloud Services (classic)
     imageSrc: "https://static.docs.com/ui/media/product/azure/cloud-services.svg"
     links:
-    - url: cloud-services/welcome-cloud-services.yml
-      text: Troubleshooting articles for Cloud Services
+    - url: cloud-services-classic/welcome-cloud-services-classic.yml
+      text: Troubleshooting articles for Cloud Services (classic)
+  - title: Cloud Services (extended support)
+    imageSrc: "https://static.docs.com/ui/media/product/azure/cloud-services.svg"
+    links:
+    - url: cloud-services-extended/welcome-cloud-services-extended.yml
+      text: Troubleshooting articles for Cloud Services (extended support)
   - title: High Performance Computing
     imageSrc: "https://static.docs.com/ui/media/product/azure/container-registry.svg"
     links:
