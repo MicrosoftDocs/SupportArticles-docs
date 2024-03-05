@@ -15,7 +15,7 @@ When an entitlement is created for an account and you try to create a case with 
 
 ## Cause
 
-The account selected in the entitlement might have a specific contact attached to it and selected in the Contacts grid. In this case, the entitlement gets applied only when the contact selected in the entitlement's contact grid is also selected in the case.
+The account selected in the entitlement might have a specific contact attached to it and selected in the contacts grid. In this case, the entitlement gets applied only when the contact selected in the entitlement's contact grid is also selected in the case.
 
 :::image type="content" source="media\entitlement-with-associate-customer-contact\seleted-account-on-entitlement.png" alt-text="Screenshot that shows account is selected on the entitlement.":::
 
