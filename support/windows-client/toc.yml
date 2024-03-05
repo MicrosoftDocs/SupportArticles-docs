@@ -1136,7 +1136,7 @@ items:
   - name: Storage and High Availability (SHA)
     items:
     - name: Gather information for Hyper-V related issues
-      href: ./windows-tss/gather-information-using-tss-hyper-v-issues
+      href: ./windows-tss/gather-information-using-tss-hyper-v-issues.md
   - name: User Experience (UEX)
     items:
     - name: Gather information for user experience-related issues
