@@ -43,37 +43,36 @@ Refer to [Introduction to TroubleShootingScript toolset (TSS)](introduction-to-t
 > - The collection is stored in a compressed file in the *C:\\MS_DATA* folder. After a support case is created, this file can be uploaded to the secure workspace for analysis.
 
 ## Optional parameters
- 
+
 Some parameters are optional to perform a quicker and more streamlined collection, which may help the script finish successfully if a certain section stops responding.
- 
--	This cmdlet skips running the Best Practices Analyzer and makes the collection faster.
 
-	```powershell
-	.\TSS.ps1 -SDP SQLbase -SkipSDPList skipBPA 
-	```	
+- This cmdlet skips running the Best Practices Analyzer and makes the collection faster.
 
--	This cmdlet skips some small collection items that may fail in a regular collection and makes the script more reliable.
- 
-	```powershell
-	.\TSS.ps1 -SDP SQLbase -SkipSDPList skipHang
-	```
+    ```powershell
+    .\TSS.ps1 -SDP SQLbase -SkipSDPList skipBPA 
+    ```
 
--	This cmdlet skips some additional collection parameters that may not be needed.
+- This cmdlet skips some small collection items that may fail in a regular collection and makes the script more reliable.
 
-	```powershell
-	.\TSS.ps1 -SDP SQLbase -SkipSDPList skipTS
-	```
+    ```powershell
+    .\TSS.ps1 -SDP SQLbase -SkipSDPList skipHang
+    ```
 
--	This cmdlet skips testing Server Message Block (SMB) connectivity to any Cluster Shared Volumes (CSVs) in the failover cluster.
- 
-	```powershell
-	.\TSS.ps1 -SDP SQLbase -SkipSDPList skipCsvSMB
-	```
+- This cmdlet skips some additional collection parameters that may not be needed.
+
+    ```powershell
+    .\TSS.ps1 -SDP SQLbase -SkipSDPList skipTS
+    ```
+
+- This cmdlet skips testing Server Message Block (SMB) connectivity to any Cluster Shared Volumes (CSVs) in the failover cluster.
+
+    ```powershell
+    .\TSS.ps1 -SDP SQLbase -SkipSDPList skipCsvSMB
+    ```
 
 > [!NOTE]
 > You can combine multiple skip parameters with comma-separated items, such as the following example: 
 >  
 > ```powershell
-> 	.\TSS.ps1 -SDP SQLbase -SkipSDPList skipBPA,skipHang,skipTS,skipCsvSMB
+> .\TSS.ps1 -SDP SQLbase -SkipSDPList skipBPA,skipHang,skipTS,skipCsvSMB
 > ```
- 
