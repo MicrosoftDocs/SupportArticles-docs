@@ -1,9 +1,7 @@
 ---
 title: Can't access SMB file server
 description: Describes an issue that blocks SMB file server share access to files and other resources through the DNS CNAME alias in some scenarios and successful in other scenarios. Provides a resolution.
-ms.date: 09/15/2022
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

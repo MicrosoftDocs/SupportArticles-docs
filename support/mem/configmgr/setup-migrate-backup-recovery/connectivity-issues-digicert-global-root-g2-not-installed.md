@@ -1,7 +1,7 @@
 ---
 title: Connectivity issues if the DigiCert Global Root G2 root certificate is not installed
 description: Fixes a connectivity issue in which the DigiCert Global Root G2 root certificate is not installed.
-ms.date: 10/22/2020
+ms.date: 12/05/2023
 author: helenclu
 ms.author: vinpa
 ms.reviewer: kaushika, vinpa

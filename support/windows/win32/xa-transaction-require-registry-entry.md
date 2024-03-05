@@ -1,8 +1,8 @@
 ---
 title: XA transaction support requires registry entries
-description: Discusses that starting with Windows Server 2003, Microsoft Distributed Transaction Coordinator (MS DTC) requires that you create registry values for all XA DLLs that you plan to use. Provides steps to modify the registry.
-ms.date: 03/16/2020
-ms.custom: sap:Distributed transactions
+description: This article explains about how to create registry values for all XA DLLs you intend to use in order to use Microsoft Distributed Transaction Coordinator (MS DTC), starting with Windows Server 2003.
+ms.date: 12/19/2023
+ms.custom: sap:dtc-programming-runtime
 ms.topic: article
 ms.subservice: distributed-transactions
 ---
@@ -29,7 +29,7 @@ For example, when you upgrade an existing system to Windows Server 2003, and the
 
 A security risk occurs when MS DTC uses user-specified DLLs. These DLLs are loaded directly in the MS DTC process. MS DTC uses these DLLs to communicate with the Transaction Manager (TM) of the XA partner. This scenario can expose the Resource Manager (RM) databases to serious data corruption. This scenario can also permit denial-of-service attacks if a malicious or defective XA DLL does not verify that the distributed transaction commits or aborts correctly. Also, if a malicious or defective XA DLL contains code that is not security-enhanced, an attacker might exploit this weakness to cause a denial-of-service attack.
 
-To help to prevent this security risk, Windows Server 2003 turns off all XA transactions when you upgrade to Windows Server 2003. By turning off XA transactions, Windows Server 2003 helps to protect MS DTC from denial-of-service attacks.
+To help to prevent this security risk, Windows Server 2003 turns off all XA transactions when you upgrade to Windows Server 2003. If the support for XA transactions is turned off, Windows Server 2003 helps to protect MS DTC from denial-of-service attacks.
 
 You may have to turn on support for XA transactions. To do this, follow these steps:
 

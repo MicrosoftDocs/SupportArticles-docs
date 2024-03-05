@@ -1,7 +1,7 @@
 ---
 title: Changes to built-in collections are overwritten
 description: Describes an issue in which built-in collections that are changed in System Center 2012 Configuration Manager are reset to the default settings when you upgrade to System Center 2012 Configuration Manager SP1.
-ms.date: 06/16/2020
+ms.date: 12/05/2023
 ms.reviewer: kaushika, erinwi
 ---
 # Changes to built-in collections are overwritten when you upgrade to System Center 2012 Configuration Manager SP1

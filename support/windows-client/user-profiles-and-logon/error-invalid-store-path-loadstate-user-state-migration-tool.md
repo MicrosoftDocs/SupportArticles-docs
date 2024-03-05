@@ -1,9 +1,7 @@
 ---
 title: Error "Invalid store path" during the LoadState process when you use the User State Migration Tool
 description: Describes how to fix the error "Invalid store path" during the LoadState process when you use the User State Migration Tool
-ms.date: 09/14/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

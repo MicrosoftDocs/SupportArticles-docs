@@ -1,9 +1,7 @@
 ---
 title: Error when connecting to a Terminal server
 description: Provides a solution to various certificate-related error messages when you connect to a Terminal server.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

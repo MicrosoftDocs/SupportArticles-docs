@@ -1,9 +1,7 @@
 ---
 title: Modern apps or application packages are reported as vulnerable
 description: Provides resolutions for the issue in which modern apps or application packages are reported by vulnerability scanning.
-ms.date: 02/21/2022
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
