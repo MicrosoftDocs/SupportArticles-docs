@@ -15,7 +15,7 @@ An SLA KPI instance isn't created on the entity on which the SLA is enabled.
 
 ## Resolution
 
-Based on the specific reason for the issue, you can select the most appropriate solution.
+You can select the most appropriate solution based on the specific reason for the issue.
 
 - SLA isn't applied.
 
@@ -29,6 +29,6 @@ Based on the specific reason for the issue, you can select the most appropriate 
 - Dependencies are disabled.
 
   If dependencies are disabled, in the SLA form, activate notifications about any out-of-the-box component, if any.
-- The contact record on the regarding record has same text but a different GUID.
+- The contact record on the regarding record has the same text but a different GUID.
 
-  If the condition used in **Applicable When** uses a lookup field, verify that the GUID of the lookup field matches with the GUID of the contact in the **Applicable When** condition.
+  If the condition used in **Applicable When** uses a lookup field, verify that the GUID of the lookup field matches the GUID of the contact in the **Applicable When** condition.
