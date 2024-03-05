@@ -1,8 +1,6 @@
 ---
 title: Event ID 32 occurs and shadow copies are unexpectedly deleted
 description: Introduces a workaround for an issue in which shadow copy volume is delayed in being brought online, and shadow copies are unexpectedly deleted. Event ID 32 is received when the issue occurs.
-author: Deland-Han
-ms.author: delhan
 ms.topic: troubleshooting
 ms.date: 12/26/2023
 ms.reviewer: kaushika, cdascoli, bechinch, khoffman

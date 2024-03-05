@@ -2,8 +2,6 @@
 title: Installing Windows Updates, features, or roles overview
 description: Overview of installing updates, features, or roles troubleshooting articles for Windows clients.
 ms.date: 02/06/2024
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

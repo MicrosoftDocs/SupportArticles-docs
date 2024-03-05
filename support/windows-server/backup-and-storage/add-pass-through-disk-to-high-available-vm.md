@@ -2,8 +2,6 @@
 title: Pass-through disk is read-only after added to highly available VM
 description: Discusses the steps that add a pass-through disk to a highly available virtual machine (VM) in a Windows Server 2008 R2 SP1-based failover cluster. Resolves an issue of a read-only disk status in the VM.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

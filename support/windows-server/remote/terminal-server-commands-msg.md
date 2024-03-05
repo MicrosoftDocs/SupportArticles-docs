@@ -2,8 +2,6 @@
 title: Terminal Server commands MSG
 description: Describes syntax and parameters of Terminal Server commands MSG.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

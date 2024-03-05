@@ -265,7 +265,7 @@ You can verify the firewall configuration depending on the default instance or n
 A default instance typically runs on port 1433. Some installations also use a non-standard port (other than 1433) to run SQL instances. The firewall may block either port. To check the port number further, follow these steps:
 
 1. Determine the port your SQL instance is running on, see [Get the TCP port of the instance](#get-the-tcp-port-of-the-instance).
-1.
+1. 
     - If your SQL Server is configured to listen on port 1433, make sure that firewalls on the network between the client and the server allow traffic on that port. Review [Configure a Windows Firewall for Database Engine Access](/sql/database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access) and work with your network administrator to implement necessary solutions.
     - If your SQL Server default instance isn't using 1433, try to append the port number of SQL Server to the server name by using the format `<servername>,<portnumber>` and see whether it works. For example, your SQL instance name is *MySQLDefaultinstance* and it's running on port 2000. Specify the server name as *MySQLServer, 2000* and see whether it works.
         - If it doesn't work, it indicates the firewall is blocking the port. You can follow the instructions at [Configure a Windows Firewall for Database Engine Access](/sql/database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access) or work with your network administrator to add the port to the firewall exclusion list.
@@ -390,6 +390,10 @@ Once you can connect by using TCP on the same computer, it's time to try to conn
     1. On the client computer, use SQL Server Configuration Manager. In the left-pane, expand **SQL Native Client \<version> Configuration**, and then select **Client Protocols**.
     1. On the right-pane, make sure that **TCP/IP** is enabled. If **TCP/IP** is disabled, right-click **TCP/IP** and select **Enable**.
     1. Make sure that the protocol order for TCP/IP is a smaller number than the named pipes (or VIA on older versions) protocols. Generally, you should leave shared memory as order 1 and TCP/IP as order 2. Shared memory is only used when the client and SQL Server are running on the same computer. All enabled protocols are tried in order until one succeeds, but shared memory is skipped when the connection isn't on the same computer.
+
+## Step 10: Check user permissions
+
+If you are using Named Pipes to connect, check if a user has permissions to log into Windows. For more information, see [Troubleshooting the Named Pipes connections issue](named-pipes-connection-fail-no-windows-permission.md).
 
 ## See also
 

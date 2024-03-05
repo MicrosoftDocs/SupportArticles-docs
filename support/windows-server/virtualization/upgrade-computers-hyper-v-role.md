@@ -2,8 +2,6 @@
 title: Upgrade computers with Hyper-V role
 description: Describes the options available for upgrading or migrating from a Windows Server 2008 installation that has the Hyper-V role enabled to Windows Server 2008 R2.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

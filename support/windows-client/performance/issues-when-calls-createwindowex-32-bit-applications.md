@@ -2,8 +2,6 @@
 title: Issues when Windows 10 calls CreateWindowEx for some 32-bit applications
 description: Describes an issue in which Windows 10 causes some 32-bit applications to crash. Provides a workaround.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

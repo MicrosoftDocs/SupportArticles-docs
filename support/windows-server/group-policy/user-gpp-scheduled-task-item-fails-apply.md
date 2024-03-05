@@ -2,8 +2,6 @@
 title: User GPP Scheduled Task item fails to apply
 description: Provides a solution to an issue where User GPP Scheduled Task item fails to apply.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

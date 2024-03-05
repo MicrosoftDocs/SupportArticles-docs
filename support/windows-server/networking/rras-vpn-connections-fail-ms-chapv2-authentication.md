@@ -2,8 +2,6 @@
 title: VPN connections fail when using the MS-CHAPv2 authentication
 description: VPN connections to a Windows RAS Server fail when using the MS-CHAPv2 authentication. Provides a resolution.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

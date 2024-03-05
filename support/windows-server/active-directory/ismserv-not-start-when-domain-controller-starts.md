@@ -1,9 +1,7 @@
 ---
 title: ISMServ.exe fails to start when a domain controller starts
 description: Describes a condition under which the Intersite Messaging Service does not start correctly when a domain controller starts. Provides a workaround.
-ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 02/28/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -77,7 +75,8 @@ To configure LDAP ETW, follow these steps:
 2. Open an elevated Command Prompt window, and run the following commands:
 
     ```console
-    logman create trace "autosession\g_os" -ow -o c:\boot-ldap.etl -p "Microsoft-Windows-LDAP-Client" 0xffffffffffffffff 0xff -nb 16 16 -bs 1024 -mode Circular -f bincirc -max 4096 -ets reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\WMI\Autologger\g_os /v FileMax /t REG_DWORD /d 2 /F
+    logman create trace "autosession\g_os" -ow -o c:\boot-ldap.etl -p "Microsoft-Windows-LDAP-Client" 0xffffffffffffffff 0xff -nb 16 16 -bs 1024 -mode Circular -f bincirc -max 4096 -ets
+    reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\WMI\Autologger\g_os /v FileMax /t REG_DWORD /d 2 /F
     ```
 
 3. Restart the computer.
@@ -91,7 +90,7 @@ To configure LDAP ETW, follow these steps:
 5. When you finish collecting data, run the following command at an elevated command prompt to stop tracing:
 
     ```console
-    logman delete "autosession\g_os" -et
+    logman delete "autosession\g_os" -ets
     ```
 
 ## Status

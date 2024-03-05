@@ -2,8 +2,6 @@
 title: Add a user to Services RDP permissions
 description: Describes three methods to add users or groups to Terminal Services Remote Desktop Protocol (RDP) permissions.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

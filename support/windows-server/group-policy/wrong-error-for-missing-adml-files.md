@@ -2,8 +2,6 @@
 title: Wrong error message for missing .adml files
 description: Provides a solution to an issue where wrong error messages are returned when .adml files are missing.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

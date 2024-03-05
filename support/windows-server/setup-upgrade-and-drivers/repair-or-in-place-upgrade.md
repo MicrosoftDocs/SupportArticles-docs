@@ -2,8 +2,6 @@
 title: How to do an in-place upgrade
 description: This article introduces how to do a repair/in-place upgrade of the existing installation for Windows.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

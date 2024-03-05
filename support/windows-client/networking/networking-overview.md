@@ -2,8 +2,6 @@
 title: Networking overview
 description: Overview of Windows clients networking troubleshooting articles.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

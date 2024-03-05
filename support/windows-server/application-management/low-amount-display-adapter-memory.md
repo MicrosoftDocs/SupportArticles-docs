@@ -2,8 +2,6 @@
 title: DXDIAG reports low display adapters memory
 description: Describes an issue where Direct-X diagnostics tool (DXDIAG) reports an unexpected value for the display adapters memory.
 ms.date: 12/26/2023
-author: Deland-Han
-ms.author: delhan
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
