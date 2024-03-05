@@ -82,7 +82,7 @@ If you have to install management tools in Windows Server 2012 R2 for specific r
 
 Installing the RSAT Tools for Windows 10 version 1809 and later version is slightly different from earlier versions. RSAT is now part of the Operating System and can be added via **Optional Features**.
 
-To enable the tools, select **Start** > **Settings** > **Apps** (if you're using Windows 10, version 22H2, select **System** instead), and then select **Optional features**. After that, select the **Add a feature** panel and enter *Remote* in the search bar.
+To enable the tools, select **Start** > **Settings** > **Apps** (if you're using Windows 10, version 22H2 or later versions, select **System** instead), and then select **Optional features**. After that, select the **Add a feature** panel and enter *Remote* in the search bar.
 
 ## References
 
