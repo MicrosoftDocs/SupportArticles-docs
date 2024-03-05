@@ -39,7 +39,7 @@ To work around this issue, use one of the following methods.
 1. Go to Start, select **Settings** > **System**.
 
    > [!NOTE]
-   > In versions later than Windows 10, version 22H2, go to **Settings** > **Apps** > **Apps & features** instead.
+   > In versions older than Windows 10, version 22H2, go to **Settings** > **Apps** > **Apps & features** instead.
 
 2. Select **Optional features** > **Add a feature**.
 
