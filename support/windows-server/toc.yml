@@ -1733,8 +1733,6 @@ items:
       href: ./networking/event-4199-windows-client-cannot-get-ip-address-dhcp-server.md
     - name: Fail to modify existing DHCP scope
       href: ./networking/modify-existing-dhcp-scope-results.md
-    - name: General guidance to troubleshoot DHCP
-      href: ./networking/general-guidance-troubleshoot-dhcp.md
     - name: Increase the number of IP addresses on a subnet
       href: ./networking/change-ip-hosts-amount-on-subnet.md
     - name: Install and Configure a DHCP Server in a Workgroup
