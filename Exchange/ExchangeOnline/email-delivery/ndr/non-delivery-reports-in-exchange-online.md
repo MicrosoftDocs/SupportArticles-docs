@@ -1,6 +1,6 @@
 ---
 title: Email non-delivery report (NDR) and SMTP errors in Exchange Online
-ms.date: 01/24/2024
+ms.date: 03/06/2024
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -99,6 +99,7 @@ The following table contains the error codes (also known as enhanced status code
 |5.7.703|`Your message can't be delivered because messages to XXX, YYY are blocked by your organization using Tenant Allow Block List.`|Someone in your organization sent mail to an email address or domain that's blocked in the [Tenant Allow/Block List](/microsoft-365/security/office-365-security/tenant-allow-block-list-about#block-entries-in-the-tenant-allowblock-list). The entire message is blocked for all internal and external recipients of the message, even if only one recipient email address or domain is defined in a block entry.|
 |5.7.705 <br/><br/> 5.7.708|`5.7.705 Access denied, tenant has exceeded threshold`, `5.7.708 Access denied, traffic not accepted from this IP`|Most of the traffic from this tenant has been detected as suspicious and this detection has resulted in a ban on the sending ability for the tenant.|Ensure that any compromises or open relays have been resolved, and then contact support through your regular channel. <br/><br/> For more information, see [Fix email delivery issues for error codes 5.7.700 through 5.7.750 in Exchange Online](fix-error-code-5-7-700-through-5-7-750.md).|
 |5.7.750|`Service unavailable. Client blocked from sending from unregistered domains`|A suspicious number of messages from unprovisioned domains is coming from this tenant.|Add and validate any or all domains that you use to send email from Microsoft 365 or Office 365. <br/><br/> For more information, see [Fix email delivery issues for error codes 5.7.700 through 5.7.750 in Exchange Online](fix-error-code-5-7-700-through-5-7-750.md).|
+|5.7.800|`Access denied, banned sender`|The sending Ehlo, P1, or P2 domain for this message has been banned due to detected spam activity.|To restore this domain's ability to send mail, please contact support through your regular channel.|
 |n/a|`The message can't be submitted because the sender's submission quota was exceeded`|The user account has exceeded the recipient rate limit (10,000 recipients per day).|The account has likely been compromised. For more information, see [Fix email delivery issues for error 'the sender's submission quota was exceeded' in Exchange Online](fix-error-for-submission-quota-exceeded-in-exchange-online.md).|
 
 ## Run non-delivery report diagnostics
