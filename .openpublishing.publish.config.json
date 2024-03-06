@@ -71,7 +71,8 @@
   "contribution_branch_mappings": {},
   "redirection_files": [
     ".openpublishing.redirection.json",
-    ".openpublishing.redirection.developer.json"
+    ".openpublishing.redirection.developer.json",
+    "azure/.openpublishing.redirection.developer.json"
   ],
   "need_generate_pdf_url_template": true
 }
