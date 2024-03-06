@@ -1,6 +1,6 @@
 ---
 title: Connection to the linked server fails
-description: This article discusses errors that might occur if the connection to the linked server fails.
+description: This article explains about the errors that might occur if the connection to the linked server fails.
 ms.date: 03/06/2024
 author: prmadhes-msft
 ms.author: prmadhes
@@ -10,7 +10,7 @@ ms.custom: sap:Connection issues
 
 # "Connection to the linked server has failed" error after you update Windows Server
 
-This article helps you resolve multiple errors that occur when a connection to the linked server fails after the latest Windows Server updates are installed.
+This article helps you resolve errors that occur when a connection to the linked server fails after the recent Windows Server updates are installed.
 
 ## Symptoms
 
