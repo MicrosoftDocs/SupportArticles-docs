@@ -44,6 +44,9 @@ In-place system upgrades are supported for specific versions of Azure Windows VM
 - Windows 8.1
 - Windows 7 Enterprise
 
+   > [!NOTE]
+   > When migrating to Windows 11, follow best practices by deploying new virtual machines. This approach avoids potential compatibility issues and ensures an optimized configuration.
+   
 ## In-place system upgrade process for a Windows 10 VM
 
 This process requires 45-60 minutes to complete and for the VM to restart. To do the in-place system upgrade, follow these steps:
