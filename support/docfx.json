@@ -98,6 +98,7 @@
         "power-platform/power-apps/**/*.md": "https://ideas.powerapps.com/d365community/forum/f1458c72-ae29-ed11-9db2-000d3a8c451e",
         "power-platform/power-automate/**/*.md": "https://ideas.powerautomate.com/d365community/forum/086dd68e-597f-ec11-8d21-0022482e8f9f",
         "power-platform/ai-builder/*.md": "https://powerusers.microsoft.com/t5/AI-Builder/bd-p/AIBuilder1",
+        "power-platform/power-pages/*.md": "https://ideas.powerpages.microsoft.com/d365community/forum/1edba0ec-30cf-ec11-a7b5-000d3a545c96",
         "windows-server/**/*.md": "https://techcommunity.microsoft.com/t5/windows-server-for-it-pro/bd-p/WindowsServer",
         "windows-client/**/*.md": "https://support.microsoft.com/windows/f59187f8-8739-22d6-ba93-f66612949332",
         "windows-hardware/**/*.md": "https://support.microsoft.com/windows/f59187f8-8739-22d6-ba93-f66612949332",
@@ -511,6 +512,7 @@
         "power-platform/power-apps/**/*.md": "Power Apps",
         "power-platform/power-automate/**/*.md": "Power Automate",
         "power-platform/ai-builder/*.md": "AI Builder",
+        "power-platform/power-pages/*.md": "Power Pages",
         "sales-copilot/**/*.md": "Copilot for Sales",
         "dynamics/gp/*.md": "Dynamics GP"
       },
