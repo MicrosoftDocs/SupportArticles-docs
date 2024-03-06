@@ -16,7 +16,7 @@
     - name: Issues receiving messages and calls
       href: /microsoftteams/legacy-login-issues?context=/MicrosoftTeams/troubleshoot/context/context
     - name: Resolve the new Teams installation issues
-      href: ../teams-administration/fix-new-teams-installation-issues.md
+      href: ./teams-administration/fix-new-teams-installation-issues.md
     - name: Self-help diagnostics for Teams admins
       href: ./teams-administration/admin-self-help-diagnostics.md
     - name: '"The following application instance is not present in BVD" error when assigning a phone number to a resource accounts'
