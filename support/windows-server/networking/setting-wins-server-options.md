@@ -1,6 +1,6 @@
 ---
 title: Error when you configure Primary and Secondary WINS addresses for a WINS server
-description: Provides a solution to an error that occurs when you try to specify the same WINS address in the Secondary WINS address or when you set the Primary WINS address of a WINS server to another WINS server.
+description: Provides a solution to an error that occurs when you tried to specify the same WINS address in the Secondary WINS address or when you set the Primary WINS address of a WINS server to another WINS server.
 ms.date: 03/08/2024
 manager: dcscontentpm
 audience: itpro
@@ -52,7 +52,7 @@ Split registration is a temporary condition. After the newly started WINS server
 
 Consider a WINS server (SRV1), a domain controller that runs in the `contoso.com` domain. SRV1 points to itself as the Primary WINS server and points to another WINS server (WINS2) as the Secondary WINS server. When SRV1 starts, it tries to register its services before its own WINS service starts. Because those registrations fail, it tries to register them at WINS2. If WINS2 is available, it accepts the registration requests. During this process, SRV1 continues to check its local WINS service. When SRV1 detects that its WINS service is running, it stops sending registration requests to WINS2 and handles them locally instead.
 
-After the WINS records have replicated between SRV1 and WINS2, the databases on both servers show the following record ownership:
+After the WINS records replicat between SRV1 and WINS2, the databases on both servers show the following record ownership:
 
 | Records that SRV1 owns | Records that WINS2 owns |
 | --- | --- |
