@@ -1,6 +1,11 @@
 {
     "redirections": [
       {
+        "source_path": "cloud-services/welcome-cloud-services.yml",
+        "redirect_url": "/troubleshoot/azure/",
+        "redirect_document_id": true
+      },
+      {
         "source_path": "cloud-services/dev-troubleshoot-series.md",
         "redirect_url": "/troubleshoot/azure/cloud-services-classic/dev-troubleshoot-series",
         "redirect_document_id": true
