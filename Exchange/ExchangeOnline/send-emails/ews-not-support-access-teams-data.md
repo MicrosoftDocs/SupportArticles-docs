@@ -16,7 +16,7 @@ appliesto:
   - Exchange Online
 search.appverid: 
   - MET150
-ms.date: 01/24/2024
+ms.date: 03/06/2024
 ---
 # EWS isn't supported when accessing Teams data
 
@@ -24,10 +24,9 @@ ms.date: 01/24/2024
 
 Microsoft Exchange Web Services (EWS) and other messaging application programming interfaces (API) aren't supported when accessing the Microsoft Teams data stored in a user's mailbox. Third-party applications aren't allowed to access or use Teams data in mailboxes. Teams can change its location and use of data at any time. Therefore, the use of email APIs such as EWS, Exchange REST, MAPI, or Outlook Object Model poses the risk of code failure.
 
-Access to Teams data is only supported by Microsoft Graph. Fully supported access to Teams message data is available through the [Microsoft Graph Teams Export API](/microsoftteams/export-teams-content). Teams Export APIs allow you to export 1:1, group chat, meeting chats, and channel messages from Microsoft Teams.
+Access to Teams data is only supported by Microsoft Graph. Fully supported access to Teams message data is available through the [Microsoft Teams Export APIs](/microsoftteams/export-teams-content). Teams Export APIs allow you to export 1:1, group chat, meeting chats, and channel messages from Microsoft Teams.
 
 ## More information
 
-If your organization’s application needs to export Microsoft Teams messages, you can extract them using Teams Export APIs, refer to [Teams Export API](/microsoftteams/export-teams-content) for more information. Also, API references for Microsoft Teams are documented here: [Use the Microsoft Graph API to work with Microsoft Teams](/graph/api/resources/teams-api-overview)
-Additionally, you can also subscribe to change notification by creating a subscription for Teams resources. For more information, see [Create subscription](/graph/api/subscription-post-subscriptions).
+If your organization's applications need to export Microsoft Teams messages, you can extract them by using the [Teams Export APIs](/microsoftteams/export-teams-content). For more information about the API references for Microsoft Teams, see [Use the Microsoft Graph API to work with Microsoft Teams](/graph/api/resources/teams-api-overview). You can also subscribe to change notifications by [creating a subscription](/graph/api/subscription-post-subscriptions) for Teams resources.
 
