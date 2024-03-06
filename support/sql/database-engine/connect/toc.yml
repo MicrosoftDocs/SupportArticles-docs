@@ -9,6 +9,8 @@ items:
   href: certificate-validation-failure.md
 - name: Consistent SQL network connectivity issue
   href: consistent-sql-network-connectivity-issue.md
+- name: Intermittent or periodic network issue
+  href: intermittent-periodic-network-issue.md
 - name: How to determine if the authentication type is Kerberos
   href: determine-the-authentication-type.md
 - name: Windows user profile can't be loaded in SQL Server
