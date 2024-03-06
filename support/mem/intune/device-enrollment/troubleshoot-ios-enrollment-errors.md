@@ -47,6 +47,26 @@ This section includes token sync errors related to Apple Automated Device Enroll
 | Apple profile not found | Multiple possible causes | Create a new profile, and assign the profile to devices. |
 | Invalid department entry | The department field entry is invalid | Edit the department field for your profiles. |
 
+If the ADE token upload fails for any reason, and you see an error that says, “An error occurred while uploading the enrollment program token.”, then try the following steps - 
+1) Visit https://developer.microsoft.com/en-us/graph/graph-explorer and login with your Intune admin credentials.
+2) Run a get query to enumerate all of the tokens in the tenant: https://graph.microsoft.com/beta/deviceManagement/depOnboardingSettings
+3) Grant consent if required, and then run this query again. Find the guid of the token the admin needs to renew.
+4) Locate the public encryption key for that token by running a get query https://graph.microsoft.com/beta/deviceManagement/depOnboardingSettings('<TokenGuid>')/getEncryptionPublicKey The returned value looks like
+{
+"@odata.context": "https://graph.microsoft.com/beta/$metadata#Edm.String",
+"value": "-----BEGIN CERTIFICATE-----SOMEBASE64STRING==-----END CERTIFICATE-----"
+}
+5) Copy the value from above and paste it into a text file, and name it something like: token.pem. The text file should have 3 lines - with the contents as shown below (there should be NO line breaks in the base 64 string):
+-----BEGIN CERTIFICATE-----
+SOMEBASE64STRING==
+-----END CERTIFICATE-----
+6) Log into Apple Business Manager or Apple School Manager.  Find the Token server that needs to be updated and click on “edit”. 
+7) In the MDM Server settings, upload the new .pem file. If there is an error stating that it is not in the correct format, ensure point 4 above is followed. 
+8) If the PEM file format is fixed, you need to exit the edit page and then choose to edit again because the upload box does not update its error state value (this is a UX bug).
+9) Once complete, click save
+10) Download the new Token
+11) Log into Intune again and choose to refresh that last downloaded token.
+
 ## Other errors and issues
 
 This section provides troubleshooting steps for these additional scenarios:
