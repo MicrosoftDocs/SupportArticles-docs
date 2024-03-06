@@ -1,5 +1,5 @@
 ---
-title: NTFRS_xxxxxxxx is added to a folder name
+title: FRS adds _NTFRS_<xxxxxxxx> to folder names
 description: Helps fix an issue in which File Replication Service (FRS) adds "NTFRS_xxxxxxxx" to a folder name.
 ms.date: 03/06/2024
 manager: dcscontentpm
@@ -9,9 +9,9 @@ localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:frs, csstroubleshoot
 ---
-# A folder name changes to "\<FolderName>\_*NTFRS*\_\<xxxxxxxx>"
+# FRS appends "\_*NTFRS*\_\<xxxxxxxx>" to folder names
 
-This article helps you fix an issue in which File Replication Service (FRS) adds "\_*NTFRS*\_\<xxxxxxxx>" to a folder name.
+This article helps you fix an issue in which File Replication Service (FRS) adds "\_*NTFRS*\_\<xxxxxxxx>" to folder names.
 
 _Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2016  
 _Original KB number:_ &nbsp; 328492
