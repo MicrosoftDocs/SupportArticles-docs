@@ -12,7 +12,8 @@ This article provides a solution to an issue where an Azure container group is u
 
 ## Symptoms
 
-- Container groups intermittently restart without clear causes.
+A container group intermittently restarts without clear causes. You also experience one or more of the following symptoms and receive exit code 7147, 7148, or 0:
+
 - Events of type `Killing` are shown in the `SubscriptionDeploymentEvents` Kusto table.
 - A portal event message "Killing container with id fc5a90a" is shown.
 - Log Analytic events show the "Killing container with id dccaxxx" message.
