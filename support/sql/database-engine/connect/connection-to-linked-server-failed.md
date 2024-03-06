@@ -18,7 +18,7 @@ You receive the following error messages:
 
 > TCP Provider: An existing connection was forcibly closed by the remote host.
 
-> OLE DB provider "MSOLEDBSQL" for linked server "PAYMENT GATEWAY" returned message "Client unable to establish connection". (Microsoft SQL Server, Error: 10054)
+> OLE DB provider "MSOLEDBSQL" for linked server "LinkedServer Name" returned message "Client unable to establish connection". (Microsoft SQL Server, Error: 10054)
 
 You might also receive the following messages:
 
