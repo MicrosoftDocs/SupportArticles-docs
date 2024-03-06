@@ -1531,8 +1531,6 @@ items:
       href: ./networking/high-cpu-usage-issue-smb-server.md
     - name: Hotfixes for File Services technologies
       href: ./networking/hotfixes-for-file-services-technologies.md
-    - name: How to allow remote users to access your network
-      href: ./networking/allow-remote-users-to-access-your-network.md
     - name: How to create a virtual directory on an existing Web site
       href: ./networking/create-virtual-directory-folder-remote-computer.md
     - name: How to manually decommission a root server
@@ -1735,8 +1733,6 @@ items:
       href: ./networking/event-4199-windows-client-cannot-get-ip-address-dhcp-server.md
     - name: Fail to modify existing DHCP scope
       href: ./networking/modify-existing-dhcp-scope-results.md
-    - name: General guidance to troubleshoot DHCP
-      href: ./networking/general-guidance-troubleshoot-dhcp.md
     - name: Increase the number of IP addresses on a subnet
       href: ./networking/change-ip-hosts-amount-on-subnet.md
     - name: Install and Configure a DHCP Server in a Workgroup
@@ -1755,7 +1751,7 @@ items:
       href: ./networking/frs-event-log-error-codes.md
     - name: How to reset the FRS staging folder
       href: ./networking/move-frs-staging-folder-to-different-drive.md
-    - name: NTFRS_xxxxxxxx is added to a folder name
+    - name: 'FRS appends "_NTFRS_<xxxxxxxx>" to folder names'
       href: ./networking/ntfrs-added-to-folder-name.md
     - name: NTFRS error event 13559 and replication stops
       href: ./networking/ntfrs-error-event-13559-replication-stops.md
