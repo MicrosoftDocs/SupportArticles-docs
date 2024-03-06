@@ -1,9 +1,7 @@
 ---
 title: The given Key was not present in the dictionary
 description: Describes an issue that occurs when you run the Group Policy Modeling Wizard against a new Group Policy setting.
-ms.date: 04/28/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -1,14 +1,12 @@
 ---
 title: Guidance for troubleshooting DHCP
 description: Introduces general guidance for troubleshooting scenarios related to DHCP.
-ms.date: 07/13/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 03/06/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
-ms.reviewer: kaushika
+ms.reviewer: kaushika, v-lianna
 ms.custom: sap:dynamic-host-configuration-protocol-dhcp, csstroubleshoot
 ---
 # DHCP troubleshooting guidance
@@ -26,6 +24,21 @@ DHCP is a standard protocol that's defined by RFC 1541 (which is superseded by R
 - Other information, such as Domain Name Service (DNS) server addresses and Windows Internet Name Service (WINS) server addresses. The system administrator configures the DHCP server by using the options that are parsed out to the client.
 
 For more information, see [DHCP Basics](/windows-server/troubleshoot/dynamic-host-configuration-protocol-basics).
+
+## Troubleshooting checklist
+
+Before you begin to troubleshoot, check the following items. These items can help you find the root cause of the problem.
+
+- When did the problem start?
+- Are there any error messages?
+- Was the DHCP server working previously, or has it never worked? If it worked previously, did anything change before the problem started. For example, was an update installed? Was a change made to the infrastructure?
+- Is the problem persistent or intermittent? If it is intermittent, when did it last occur?
+- Are address lease failures occurring for all clients or for only specific clients, such as a single-scope subnet?
+- Are there any clients on the same network subnet as the DHCP server?
+- If clients reside on the same network subnet, can they obtain IP addresses?
+- If clients are not on the same network subnet, are the routers or VLAN switches correctly configured to have DHCP relay agents (also known as IP Helpers)?
+- Is the DHCP server standalone or is it configured for high availability, such as split-scope or DHCP Failover?
+- Check the intermediate devices for features such as VRRP/HSRP, Dynamic ARP Inspection, or DHCP snooping that are known to cause problems.
 
 ## Troubleshoot DHCP servers
 

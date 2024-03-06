@@ -1,9 +1,7 @@
 ---
 title: Distributed Link Tracking on domain controllers
 description: Describes how you can use the Distributed Link Tracking services on Windows-based domain controllers.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

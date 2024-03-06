@@ -1,9 +1,7 @@
 ---
 title: WINS registration fails if a Windows Server 2016 server points to itself for WINS name resolution
 description: Fixes an issue in which WINS registration fails if a Windows Server 2016 server points to self for name resolution.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

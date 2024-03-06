@@ -44,6 +44,8 @@
   items:
   - name: Allocation failure
     href: allocation-failure.md
+  - name: Allow internet traffic by using an application gateway
+    href: allow-internet-traffic-cses-application-gateway.md
   - name: Application pool is crashing
     href: application-pool-crashes.md
   - name: Configure instance-level public IP addresses (PIPs)

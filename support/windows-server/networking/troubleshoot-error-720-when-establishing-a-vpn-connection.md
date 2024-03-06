@@ -1,9 +1,7 @@
 ---
 title: "\"Error 720: Can't connect to a VPN Connection\" when you try to establish a VPN connection"
 description: Discusses how to troubleshoot error 720 that occurs when you try to establish a VPN connection.
-ms.date: 12/07/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

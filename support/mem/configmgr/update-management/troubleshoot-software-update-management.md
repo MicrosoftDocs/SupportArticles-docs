@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot software update management
 description: Helps you troubleshoot the software update management process in Configuration Manager.
-ms.date: 05/25/2020
+ms.date: 12/05/2023
 ms.custom: sap:Software Update Management and Compliance
 ms.reviewer: kaushika
 ---

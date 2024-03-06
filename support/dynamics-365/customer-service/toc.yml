@@ -47,6 +47,8 @@
               href: service-level-agreements/sla-migration-issues.md
             - name: Can't migrate a large number of SLAs
               href: service-level-agreements/migration-tool-issue-slas.md
+            - name: '"Calendar dates are corrupted" error when migrating SLAs from legacy to Unified Interface'
+              href: service-level-agreements/save-legacy-calendars-in-uci.md
             - name: GUID is shown instead of owner name in migrated SLA action flow
               href: service-level-agreements/guid-instead-name-in-flow-generated-email.md
             - name: Standard SLAs not showing in migration tool
@@ -71,7 +73,7 @@
               href: service-level-agreements/sla-kpi-instance-compliance-timer.md
             - name: SLA timer doesn't pause when state is changed to OnHold on a holiday
               href: service-level-agreements/sla-timer-pause-state-changed.md
-            - name: SLA Timer keeps running or expires prior to the Timer failure time 
+            - name: SLA Timer keeps running or expires before the Timer failure time 
               href: service-level-agreements/sla-timer-keep-running-or-expired.md
             - name: Warning appears on SLA KPI instances
               href: service-level-agreements/warning-slakpiinstances.md
@@ -171,5 +173,7 @@
               href: omnichannel-for-customer-service/social-data-sync.md
         - name: Voice channel
           items:
+            - name: Incoming voice calls with long greeting messages cause connection delays
+              href: omnichannel-for-customer-service/greeting-message-delay-agent-connection.md 
             - name: Use diagnostic messages to troubleshoot call issues
               href: omnichannel-for-customer-service/use-diagnostic-messages-in-call-issues.md 

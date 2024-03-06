@@ -1,9 +1,7 @@
 ---
 title: Incompatible version errors are logged
 description: Describes a problem that occurs when you start Windows Server 2008 R2 as a Windows Server 2008 Hyper-V guest.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

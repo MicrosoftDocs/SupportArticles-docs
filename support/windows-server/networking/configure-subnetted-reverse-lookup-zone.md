@@ -1,9 +1,7 @@
 ---
 title: configure a subnetted reverse lookup zone
 description: Describes how to configure a subnetted reverse lookup zone.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

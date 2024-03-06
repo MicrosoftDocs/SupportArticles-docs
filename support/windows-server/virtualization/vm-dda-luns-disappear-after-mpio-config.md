@@ -1,7 +1,7 @@
 ---
 title: Virtual machine LUNs disappear after you configure them as MPIO devices
 description: When you use discrete device assignment to connect a LUN to a virtual machine, you cannot use that LUN as an MPIO device
-ms.date: 03/04/2022
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

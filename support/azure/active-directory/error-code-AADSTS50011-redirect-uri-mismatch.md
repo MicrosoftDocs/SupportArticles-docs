@@ -2,7 +2,7 @@
 title: Error AADSTS50011 the redirect URI does not match the redirect URIs configured for the application
 description: Describes error AADSTS50011 that occurs when you sign in to an OIDC-based SSO application in Microsoft Entra ID.
 author: aricrowe57
-ms.date: 04/14/2023
+ms.date: 02/28/2024
 ms.reviewer: arcrowe
 ms.service: active-directory
 ms.subservice: app-mgmt

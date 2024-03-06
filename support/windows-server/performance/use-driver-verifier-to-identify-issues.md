@@ -1,9 +1,7 @@
 ---
 title: Use Driver Verifier to identify issues
 description: This article introduces how to use Driver Verifier to identify issues.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

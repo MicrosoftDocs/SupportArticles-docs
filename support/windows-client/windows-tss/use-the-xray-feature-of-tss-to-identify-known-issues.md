@@ -1,9 +1,7 @@
 ---
 title: Use the xray feature of TSS to identify known issues
 description: Introduces the xray feature of TSS. This feature is used to identify known issues.
-ms.date: 11/14/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -13,7 +11,7 @@ ms.custom: sap:windows-tss, csstroubleshoot
 ---
 # Identify known issues by using the xray feature of TSS
 
-xray (all lowercase) is a diagnostic framework-based PowerShell feature of the [TroubleShootingScript (TSS)](/troubleshoot/windows-client/windows-tss/introduction-to-troubleshootingscript-toolset-tss) toolset. The xray feature scans for known issues during data collection and creates reports with issue information and solutions. The xray feature displays the reports on the screen and also saves the reports in the dataset in a .zip file created by the TSS tool.
+xray (all lowercase) is a diagnostic framework-based PowerShell feature of the [TroubleShootingScript (TSS)](introduction-to-troubleshootingscript-toolset-tss.md) toolset. The xray feature scans for known issues during data collection and creates reports with issue information and solutions. The xray feature displays the reports on the screen and also saves the reports in the dataset in a .zip file created by the TSS tool.
 
 The xray feature is a dynamic feature with new versions released every week. It constantly updates its diagnostics to identify new problems and removes outdated ones to enhance performance and reduce runtime. TSS prompts you to update automatically when you run it. Be sure to keep TSS updated to get the latest features and fixes from TSS and xray. Otherwise, you might not able to detect some issues that were recently added to xray.
 

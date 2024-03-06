@@ -1,9 +1,7 @@
 ---
 title: Recovery process of a DFS namespace
 description: Describes the methods to recover a Distributed File System Namespace (DFSN)
-ms.date: 03/24/2022
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
