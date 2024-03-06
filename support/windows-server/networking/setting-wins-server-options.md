@@ -41,7 +41,7 @@ Most clients and servers should be configured with a Primary and Secondary WINS 
 
 ### Example
 
-Consider a WINS server (Srv1) that points to itself as Primary and points to another WINS as Secondary (Wins2). When Srv1 starts, it tries to register its services before its own WINS service starts. Because those registrations fail, it tries to register them at Wins2. If Wins2 is available, it accepts the registration requests. During this process, Srv1 continues to check its local WINS service. When Srv1 detects that its WINS service is running, it stops sending registration requests to WINS2 and handles them locally instead. 
+Consider a WINS server (Srv1) that points to itself as Primary and points to another WINS as Secondary (Wins2). When Srv1 starts, it tries to register its services before its own WINS service starts. Because those registrations fail, it tries to register them at Wins2. If Wins2 is available, it accepts the registration requests. During this process, Srv1 continues to check its local WINS service. When Srv1 detects that its WINS service is running, it stops sending registration requests to WINS2 and handles them locally instead.
 
 
 
