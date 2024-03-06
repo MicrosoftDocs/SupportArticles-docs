@@ -4,7 +4,7 @@ description: Provides resolutions for issues related to the wrap feature in Powe
 ms.reviewer: sitaramp
 ms.author: arijitba
 author: arijitba
-ms.date: 12/11/2023
+ms.date: 03/04/2024
 ms.custom: has-azure-ad-ps-ref
 ---
 # Troubleshoot issues with the wrap feature in Power Apps
@@ -43,7 +43,7 @@ For more information, see [Create Azure key vault for wrap in Power Apps](/power
 
 #### Step 4: Try again if you have all the proper configurations
 
-If your wrap build still fails after you've verified that your wrap project has all the proper configurations, reach out to <pamobsup@microsoft.com>. For details, see the [Other issues in wrap](#other-issues-in-wrap-for-power-apps) section of this article.
+If your wrap build still fails after you've verified that your wrap project has all the proper configurations, see the [Other issues in wrap](#other-issues-in-wrap-for-power-apps) section of this article.
 
 ## Issue 2 - Wrap button is disabled for my app
 
@@ -238,7 +238,11 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
 
 ## Other issues in wrap for Power Apps
 
-For all other issues, or if your issue persists after following these steps, reach out to <pamobsup@microsoft.com>. You need to provide a repro video, screenshots, or both, and a session ID that can be get in the following ways:
+For all other issues, or if your issue persists after following these steps, see [Next steps](#next-steps) later in this article to report the issue through a support request. You need to provide a repro video, screenshots, or both, and a session ID that can be get in the following ways:
 
 - On the sign-in screen, go to the lower right corner to select the gear icon, and then select **Session Details**.
 - After you open the app, tap and hold on the screen, and then select **Session Details**.
+
+## Next steps
+
+If your issue isn't listed in this article, you can [search for more support resources](https://powerapps.microsoft.com/support), or contact [Microsoft support](https://admin.powerplatform.microsoft.com/support). For more information, see [Get Help + Support](/power-platform/admin/get-help-support).
