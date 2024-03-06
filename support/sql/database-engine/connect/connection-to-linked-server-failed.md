@@ -20,6 +20,8 @@ You receive the following error messages:
 
 > OLE DB provider "MSOLEDBSQL" for linked server "PAYMENT GATEWAY" returned message "Client unable to establish connection". (Microsoft SQL Server, Error: 10054)
 
+You might also receive the following messages:
+
 > Source SQL Version SQL 2019 Enterprise Edition
 
 > Destination SQL Version SQL 2016 Enterprise Edition
