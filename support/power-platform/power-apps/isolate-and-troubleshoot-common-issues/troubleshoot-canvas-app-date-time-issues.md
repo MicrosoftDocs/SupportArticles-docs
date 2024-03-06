@@ -86,6 +86,6 @@ If you don't want users to see or edit the time component of the value,
   > [!NOTE]
   > This is different from the **Date Only** format. This is a permanent change and can't be undone. Other apps, plugins, or workflows that previously adjusted the column for time zones might not work correctly.
 
-#### See also
+## See also
 
 [Behavior and format of the Dataverse Date and Time column](/power-apps/maker/data-platform/behavior-format-date-time-field)
