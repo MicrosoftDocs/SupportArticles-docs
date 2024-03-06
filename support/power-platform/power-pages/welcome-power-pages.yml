@@ -5,11 +5,11 @@ summary: Welcome to Power Pages troubleshooting. These articles explain how to d
 metadata:
   title: Power Pages troubleshooting
   description: Landing page for Power Pages troubleshooting articles. # Required; article description that is displayed in search results. < 160 chars.
-  ms.service: powerapps #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.service: power-pages #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
   author: #Required; your GitHub user alias, with correct capitalization.
   ms.author: #Required; microsoft alias of author; optional team alias.
-  ms.date: 3/31/2021
+  ms.date: 03/05/2024
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -23,12 +23,12 @@ landingContent:
             #url: best-practices-troubleshooting.md
 
   # Card
-#  - title: Create and use sites
-    #linkLists:
-      #- linkListType: how-to-guide
-        #links:
-          #- text: Troubleshoot workspace issues
-          #  url: workspace-issues.md
+  - title: Edit sites
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Missing filter label text in list components
+            url: filter-label-list-components.md
 
   # Card
   - title: Documentation and training
