@@ -108,27 +108,48 @@ items:
       - name: Azure App Service
         tocHref: /troubleshoot/azure/app-service/
         topicHref: /troubleshoot/azure/app-service/welcome-app-service
+      - name: Azure API Management
+        tocHref: /troubleshoot/azure/api-mgmt/
+        topicHref: /troubleshoot/azure/api-mgmt/welcome-api-mgmt
+      - name: Azure Automation
+        tocHref: /troubleshoot/azure/automation/
+        topicHref: /troubleshoot/azure/automation/welcome-automation
+      - name: Azure Batch
+        tocHref: /troubleshoot/azure/hpc-batch/
+        topicHref: /troubleshoot/azure/hpc-batch/welcome-hpc-batch
       - name: Azure Cosmos DB
         tocHref: /troubleshoot/azure/cosmos-db/
         topicHref: /troubleshoot/azure/cosmos-db/
       - name: Azure Container Instances
         tocHref: /troubleshoot/azure/azure-container-instances/
         topicHref: /troubleshoot/azure/azure-container-instances/welcome-container-instances
+      - name: Azure CycleCloud
+        tocHref: /troubleshoot/azure/hpc-cyclecloud/
+        topicHref: /troubleshoot/azure/hpc-cyclecloud/welcome-hpc-cyclecloud
       - name: Azure Functions
         tocHref: /troubleshoot/azure/azure-functions
         topicHref: /troubleshoot/azure/azure-functions/welcome-azure-functions
+      - name: Azure HPC Pack
+        tocHref: /troubleshoot/azure/hpc-pack/
+        topicHref: /troubleshoot/azure/hpc-pack/welcome-hpc-pack
       - name: Azure Kubernetes Service
         tocHref: /troubleshoot/azure/azure-kubernetes/
         topicHref: /troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes
       - name: Azure Monitor
         tocHref: /troubleshoot/azure/azure-monitor/
         topicHref: /troubleshoot/azure/azure-monitor/welcome-azure-monitor
+      - name: Azure Service Fabric
+        tocHref: /troubleshoot/azure/service-fabric/
+        topicHref: /troubleshoot/azure/service-fabric/welcome-service-fabric
       - name: Azure Storage
         tocHref: /troubleshoot/azure/azure-storage/
         topicHref: /troubleshoot/azure/azure-storage/welcome-azure-storage
       - name: Azure Synapse Analytics
         tocHref: /troubleshoot/azure/synapse-analytics
         topicHref: /troubleshoot/azure/synapse-analytics/welcome-synapse-analytics
+      - name: Azure Virtual Network
+        tocHref: /troubleshoot/azure/virtual-network/
+        topicHref: /troubleshoot/azure/virtual-network/welcome-virtual-network
       - name: Cloud Services
         tocHref: /troubleshoot/azure/cloud-services/
         topicHref: /troubleshoot/azure/cloud-services/welcome-cloud-services
