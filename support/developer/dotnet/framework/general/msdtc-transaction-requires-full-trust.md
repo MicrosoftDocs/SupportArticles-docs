@@ -3,7 +3,6 @@ title: MSDTC transaction requires Full Trust
 description: This article describes a behavior in which an MSDTC transaction requires Full Trust and can't run in a sandboxed solution.
 ms.date: 05/11/2020
 ms.reviewer: jcarley; amymcel
-ms.technology: dotnet-general
 ---
 # MSDTC transaction requires Full Trust and can't run in a sandboxed solution
 

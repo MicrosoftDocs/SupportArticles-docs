@@ -2,7 +2,6 @@
 title: Install a PFX file by using X509Certificate
 description: An error occurs when you install a PFX file using X509Certificate from a standard .NET application. This article provides resolutions.
 ms.date: 05/06/2020
-ms.technology: dotnet-general
 ---
 # Install a PFX file by using X509Certificate from a standard .NET application
 

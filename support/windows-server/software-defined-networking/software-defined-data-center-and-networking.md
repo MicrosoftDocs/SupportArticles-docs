@@ -1,17 +1,13 @@
 ---
 title: Software Defined Data Center and Software Defined Networking
 description: Software Defined Data Center and Software Defined Networking
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, johnmar
 ms.custom: sap:internal-dns-server-for-sdn, csstroubleshoot
-ms.technology: windows-server-sdn
 ---
 # Software Defined Data Center and Software Defined Networking in Windows Server
 

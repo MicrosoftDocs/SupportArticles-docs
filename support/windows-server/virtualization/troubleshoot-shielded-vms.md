@@ -1,17 +1,13 @@
 ---
 title: Troubleshoot shielded VMs
 description: Helps troubleshoot shielded VMs.
-ms.date: 11/16/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, dongill, inhenkel, v-lianna
 ms.custom: sap:shielded-virtual-machines, csstroubleshoot
-ms.technology: hyper-v
 ---
 # Troubleshoot shielded VMs
 

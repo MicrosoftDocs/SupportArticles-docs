@@ -1,17 +1,13 @@
 ---
 title: Create performance counter alert and send email
 description: Describes how to create performance counter alert and send email when the alert is triggered.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:performance-monitoring-tools, csstroubleshoot
-ms.technology: windows-server-performance
 ---
 # Create performance counter alert and send email when the alert is triggered
 

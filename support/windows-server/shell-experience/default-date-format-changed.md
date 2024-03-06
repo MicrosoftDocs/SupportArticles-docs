@@ -1,17 +1,13 @@
 ---
 title: The default date format is changed
 description: Discusses that the default date format is changed in Windows 8 and Windows Server 2012.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, cenki, v-jesits
 ms.custom: sap:dst-and-timezones, csstroubleshoot
-ms.technology: windows-server-shell-experience
 ---
 # The default date format is changed in Windows 8 and Windows Server 2012
 

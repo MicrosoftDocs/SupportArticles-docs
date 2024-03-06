@@ -1,17 +1,13 @@
 ---
 title: Virtual Machines exhibits slow startup and shutdown
 description: Fixes slow virtual machines (VMs) startup or shutdown performance issues.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jeffpatt
 ms.custom: sap:configuration-of-virtual-machine-settings, csstroubleshoot
-ms.technology: hyper-v
 ---
 # Hyper-V virtual machines exhibit slow startup and shutdown
 

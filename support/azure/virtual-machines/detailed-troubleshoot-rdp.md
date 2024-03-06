@@ -92,7 +92,7 @@ Work with your network administrator to correct the settings of your organizatio
 
 ## Source 3: Cloud service endpoint and ACL
 
-[!INCLUDE [classic-vm-deprecation](../../includes/classic-vm-deprecation.md)]
+[!INCLUDE [classic-vm-deprecation](../../includes/azure/classic-vm-deprecation.md)]
 
 For VMs created using the Classic deployment model, verify that another Azure VM that is in the same cloud service or virtual network can make Remote Desktop connections to your Azure VM.
 

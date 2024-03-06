@@ -1,17 +1,13 @@
 ---
 title: Troubleshoot startup problems
 description: Describes procedures that you can use to troubleshoot startup problems in Windows Server 2003.
-ms.date: 02/09/2022
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:boot-is-slow, csstroubleshoot
-ms.technology: windows-server-performance
 ---
 # How to troubleshoot startup problems in Windows Server 2003
 

@@ -1,17 +1,13 @@
 ---
 title: You may receive a "Stop 0x0000000A" error message when a processor resumes from a C1 idle state
 description: Provides a workaround for the error message "Stop 0x0000000A" when a processor resumes from a C1 idle state
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:blue-screen/bugcheck, csstroubleshoot
-ms.technology: windows-server-performance
 ---
 # You may receive a "Stop 0x0000000A" error message when a processor resumes from a C1 idle state
 

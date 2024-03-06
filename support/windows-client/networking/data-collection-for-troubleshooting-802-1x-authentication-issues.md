@@ -1,13 +1,11 @@
 ---
 title: Data collection for troubleshooting 802.1X authentication issues
 description: Use the steps in this article to collect data that can be used to troubleshoot 802.1X authentication issues.
-ms.date: 02/14/2023
+ms.date: 12/26/2023
 manager: dcscontentpm
-ms.prod: windows-client
 author: dansimp
 ms.author: dansimp
 ms.topic: troubleshooting
-ms.technology: windows-client-networking
 ms.custom: sap:wireless-networking-and-802.1x-authentication, csstroubleshoot
 ms.reviewer: dansimp
 audience: itpro

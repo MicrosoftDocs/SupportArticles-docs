@@ -3,7 +3,7 @@ title: Recover Azure Linux VM from kernel-related boot issues
 description: Provides solutions to an issue in which a Linux virtual machine (VM) can't boot after applying kernel changes.
 author: divargas-msft
 ms.author: divargas
-ms.date: 05/29/2023
+ms.date: 01/31/2024
 ms.reviewer: jofrance
 ms.service: virtual-machines
 ms.subservice: vm-cannot-start-stop
@@ -214,7 +214,7 @@ To modify the default kernel version from a repair VM (inside chroot) or on a ru
         ```
     
         > [!NOTE]
-        > For more information about how to configure the `GRUB_DEFAULT` variable, see [SUSE Boot Loader GRUB2](https://documentation.suse.com/sles/12-SP4/html/SLES-all/cha-grub2.html) and [Ubuntu Grub2/Setup](https://help.ubuntu.com/community/Grub2/Setup). As a reference: the top level menuentry value is 0, the first top level submenu value is 1, and each nested menuentry value starts with 0. For example, "1>2" is the third menuentry from the first submenu.
+        > For more information about how to configure the `GRUB_DEFAULT` variable, see [SUSE Boot Loader GRUB2](https://documentation.suse.com/sles/12-SP5/html/SLES-all/cha-grub2.html) and [Ubuntu Grub2/Setup](https://help.ubuntu.com/community/Grub2/Setup). As a reference: the top level menuentry value is 0, the first top level submenu value is 1, and each nested menuentry value starts with 0. For example, "1>2" is the third menuentry from the first submenu.
 
     3. Regenerate the GRUB configuration file to apply the changes. Follow the instructions in [Reinstall GRUB and regenerate GRUB configuration file](troubleshoot-vm-boot-error.md#reinstall-grub-regenerate-grub-configuration-file) for the corresponding Linux distribution and VM generation.
 

@@ -1,10 +1,12 @@
 ---
 title: IME may crash when processing a window message sent from another thread
 description: Describes the scenario where an Input Method Editor (IME) may crash when processing a window message sent from another thread, where the window procedure handling the message calls an Imm* function, such as ImmSetOpenStatus.
-ms.date: 07/28/2020
+ms.date: 12/19/2023
 ms.reviewer: koichm, davean
-ms.technology: windows-dev-apps-desktop-app-ui-dev
+ms.custom: sap:winuser-32-api-windows-messages
+ms.subservice: desktop-app-ui-dev
 ---
+
 # IME crashes when processing a window message sent from another thread
 
 Describes a scenario where an Input Method Editor (IME) crashes while processing a window message sent from another thread, and where the window procedure handling the message calls an `Imm*` function such as `ImmSetOpenStatus`.

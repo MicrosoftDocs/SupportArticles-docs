@@ -6,7 +6,6 @@ ms.reviewer: joelba, DEV_Triage, v-tappelgate
 ms.custom: 
   - CI 122170
   - CSSTroubleshooting
-ms.technology: internet-explorer-security-privacy
 ---
 
 # Applications try to access web cache content that belongs to the local Administrator account

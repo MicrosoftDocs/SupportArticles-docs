@@ -1,17 +1,13 @@
 ---
 title: Error log of Trusted Platform Module (TPM) device driver
 description: The TPM device driver is recorded in the system log when it encounters an unrecoverable error.
-ms.date: 09/21/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: ksharma, kaushika
 ms.custom: sap:tpm, csstroubleshoot
-ms.technology: windows-client-security
 ---
 # Event ID 14, 17 log for TPM command failure or non-recoverable error
 

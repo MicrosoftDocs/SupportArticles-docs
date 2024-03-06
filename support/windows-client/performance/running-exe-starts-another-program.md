@@ -1,17 +1,13 @@
 ---
 title: Running an.exe file starts different program
 description: Describes a problem in which you run an .exe file and the file starts a different program. A resolution is provided.
-ms.date: 09/08/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:applications, csstroubleshoot
-ms.technology: windows-client-performance
 ---
 # The file may start a different program when you run an .exe file in Windows 7
 

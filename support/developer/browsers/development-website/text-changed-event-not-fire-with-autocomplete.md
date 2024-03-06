@@ -2,7 +2,6 @@
 title: TextChanged event not fire with AutoComplete enabled in Internet Explorer
 description: Describes a behavior where the TextChanged event of a TextBox control does not fire when you select the text from the AutoComplete list in the Internet Explorer even if the text in the TextBox control changes.
 ms.date: 03/08/2020
-ms.technology: internet-explorer-development-website
 ---
 # TextChanged event of TextBox control may not fire if AutoComplete is enabled in Internet Explorer
 

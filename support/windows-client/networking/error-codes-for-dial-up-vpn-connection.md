@@ -1,17 +1,13 @@
 ---
 title: Error codes for dial-up or VPN connections
 description: Lists the error codes that you may receive when you make a dial-up connection or a VPN connection.
-ms.date: 09/23/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, tode
 ms.custom: sap:remote-access, csstroubleshoot
-ms.technology: windows-client-networking
 ---
 # List of error codes for dial-up connections or VPN connections
 

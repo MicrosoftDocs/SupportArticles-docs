@@ -1,17 +1,13 @@
 ---
 title: Clear TPM fails with error code 0x80290300
 description: Fixes the error code 0x80290300 that occurs when you clear TPM information.
-ms.date: 09/08/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:secure-boot-and-uefi, csstroubleshoot
-ms.technology: windows-client-security
 ---
 # Clear TPM fails with error code: 0x80290300
 
