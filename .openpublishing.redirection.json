@@ -10089,6 +10089,11 @@
       "source_path": "support/power-platform/power-automate/desktop-flows/login-windows-keep-appearing.md",
       "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/cannot-sign-in-to-power-automate-for-desktop#login-window-keeps-popping-up",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/networking/use-telnet-to-test-port-3389-functionality.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-tcp-ip-communication-guidance",
+      "redirect_document_id": true
     }
   ]
 }
