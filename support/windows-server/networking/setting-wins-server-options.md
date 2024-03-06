@@ -41,14 +41,17 @@ Most clients and servers should be configured with a Primary and Secondary WINS 
 
 ### Example
 
-Consider a WINS server (Srv1) that points to itself as Primary and points to another WINS as Secondary (Wins2). When Srv1 starts, it tries to register its services before its own WINS service starts. Because those registrations fail, it tries to register them at Wins2. If Wins2 is available, it accepts the registration requests. During this process, Srv1 continues to check its local WINS service. When Srv1 detects that its WINS service is running, it stops sending registration requests to WINS2 and handles them locally instead.
+Consider a WINS server (SRV1), a domain controller that runs in the `contoso.com` domain. SRV1 points to itself as the Primary WINS server and points to another WINS server (WINS2) as the Secondary WINS server. When SRV1 starts, it tries to register its services before its own WINS service starts. Because those registrations fail, it tries to register them at WINS2. If WINS2 is available, it accepts the registration requests. During this process, SRV1 continues to check its local WINS service. When SRV1 detects that its WINS service is running, it stops sending registration requests to WINS2 and handles them locally instead.
+
+After the WINS records have replicated between SRV1 and WINS2, the databases on both servers show the following record ownership:
+
+| Records that SRV1 owns | Records that WINS2 owns |
+| --- | --- |
+| `SRV1<20>` | Other registrations from SRV1 |
+| `CONTOSO<1C>` | `CONTOSO<1C>` |
 
 
 
-After replication has occurred between Srv1 and Wins2, both databases show this ownership:
-
-Srv1: Owns his Srv1<20>, and Domain<1c> (if it is a domain controller)  
-Wins2: Owns all other Srv1 registrations, and also owns Domain<1c> from Srv1
 
 It potentially problematic condition is referred to as split registration.
 
