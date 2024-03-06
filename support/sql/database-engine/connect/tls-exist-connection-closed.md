@@ -41,7 +41,7 @@ To resolve this issue, use one of the following methods:
 
 - Upgrade your SQL Server or your client providers to a version that supports TLS 1.2. For more information, see [TLS 1.2 support for Microsoft SQL Server](https://support.microsoft.com/topic/kb3135244-tls-1-2-support-for-microsoft-sql-server-e4472ef8-90a9-13c1-e4d8-44aad198cdbe).
 - Ask your system administrators to temporarily enable TLS 1.0 or TLS 1.1 on both the client and the server computers by performing one of the following actions:
-  - Use the [IIS Crypto](https://www.nartac.com/Products/IISCrypto/) tool (Ciphers suites section) to validate and make changes to the current TLS settings.
+  - Use the **Ciphers Suites** tab in the [**IIS Crypto**](https://www.nartac.com/Products/IISCrypto/) tool to validate and make changes to the current TLS settings.
   - Start Registry Editor, and locate the Schannel-specific registry keys: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL`. For more information, see [TLS 1.2 Upgrade Workflow](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/0700-TLS-1.2-Upgrade-Workflow) and [SSL Errors after Upgrading to TLS 1.2](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/0710-SSL-Errors-after-Upgrading-to-TLS-1.2).
 
 ## Scenario 2: Matching TLS protocols on the client and the server, but no matching TLS cipher suites
@@ -62,7 +62,7 @@ To check the issue, follow these steps:
    Get-ItemPropertyValue  -Path HKLM:\System\CurrentControlSet\Control\Cryptography\Configuration\Local\SSL\00010002\ -Name Functions
    ```
 
-1. Use a tool such as IIS Crypto (Ciphers suites section) to check whether there are any matching algorithms. If no matching algorithms are found, contact Microsoft Support.
+1. Use the **Ciphers Suites** tab in the [**IIS Crypto**](https://www.nartac.com/Products/IISCrypto/) toolp to check whether there are any matching algorithms. If no matching algorithms are found, contact Microsoft Support.
 
 For more information, see [TLS 1.2 Upgrade Workflow](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/0700-TLS-1.2-Upgrade-Workflow) and [Transport Layer Security (TLS) connections might fail or timeout when connecting or attempting a resumption](https://support.microsoft.com/topic/transport-layer-security-tls-connections-might-fail-or-timeout-when-connecting-or-attempting-a-resumption-326bd5b1-52a1-b367-8179-b154e5c01e90).
 

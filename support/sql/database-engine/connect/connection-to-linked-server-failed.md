@@ -1,7 +1,7 @@
 ---
 title: Connection to the linked server fails
-description: This article discusses errors that occurs if the connection to the linked server fails.
-ms.date: 03/04/2024
+description: This article discusses errors that might occur if the connection to the linked server fails.
+ms.date: 03/06/2024
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
@@ -10,11 +10,11 @@ ms.custom: sap:Connection issues
 
 # "Connection to the linked server has failed" error after you update Windows Server
 
-This article helps you resolve multiple errors that occur when a connection to the linked server fails after Windows Server updates are installed.
+This article helps you resolve multiple errors that occur when a connection to the linked server fails after the latest Windows Server updates are installed.
 
 ## Symptoms
 
-You receive the following error messages:
+The following error entries are logged in the \<LogName\> log.
 
 > TCP Provider: An existing connection was forcibly closed by the remote host.
 
@@ -30,7 +30,7 @@ You might also receive the following messages:
 
 ## Cause
 
-After you installed Windows Server updates, a change was made in the ciphers for the client and server that's running SQL Server. In turn, the changes caused communication problems to occur.
+The ciphers for the SQL Server client and server were modified after you installed Windows Server updates. As a result, there were issues with communication.
 
 ## How to check cipher values
 
@@ -52,12 +52,16 @@ To resolve the problem, follow these steps:
 
    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Cryptography\Configuration\Local\SSL\00010002`
 
-1. Run the following PowerShell command to find the TLS functions:
+1. Run the following PowerShell command to find the Transport Layer Security (TLS) functions:
 
    ```PowerShell
    Get-ItemPropertyValue  -Path HKLM:\System\CurrentControlSet\Control\Cryptography\Configuration\Local\SSL\00010002\ -Name Functions
    ```
 
-1. Use a tool such as [IIS Crypto](https://www.nartac.com/Products/IISCrypto/) (Ciphers suites section) to check whether there are any matching algorithms. If no matching algorithms are found, contact Microsoft Support.
+1. Use the **Ciphers Suites** tab in the [**IIS Crypto**](https://www.nartac.com/Products/IISCrypto/) tool to check whether there are any matching algorithms. If no matching algorithms are found, contact Microsoft Support.
 
 [!INCLUDE [third-party-contact-disclaimer](../../../includes/third-party-contact-disclaimer.md)]
+
+## See also
+
+[An existing connection was forcibly closed by the remote host (OS error 10054)](tls-exist-connection-closed.md)
