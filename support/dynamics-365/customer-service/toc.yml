@@ -19,6 +19,8 @@
           href: entitlements/allocation-type-missing-options.md
         - name: Entitlement remaining terms don't decrement as expected
           href: entitlements/decrementing-entitlement-terms.md
+        - name: '"Select an active entitlement" error when creating a case'
+          href: entitlements/entitlement-with-associate-customer-contact.md
     - name: Knowledge Management
       items:  
         - name: Data isn't updated on Insights for integrated search providers
