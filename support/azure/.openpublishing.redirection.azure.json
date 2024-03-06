@@ -116,7 +116,7 @@
         "redirect_document_id": true
       },
       {
-        "source_path": "cloud-services/role-instance-restarts-faq.md",
+        "source_path": "cloud-services/role-instance-restarts-faq.yml",
         "redirect_url": "/troubleshoot/azure/cloud-services-extended/role-instance-restarts-faq",
         "redirect_document_id": true
       },
