@@ -1755,7 +1755,7 @@ items:
       href: ./networking/frs-event-log-error-codes.md
     - name: How to reset the FRS staging folder
       href: ./networking/move-frs-staging-folder-to-different-drive.md
-    - name: NTFRS_xxxxxxxx is added to a folder name
+    - name: 'FRS appends "_NTFRS_<xxxxxxxx>" to folder names'
       href: ./networking/ntfrs-added-to-folder-name.md
     - name: NTFRS error event 13559 and replication stops
       href: ./networking/ntfrs-error-event-13559-replication-stops.md
