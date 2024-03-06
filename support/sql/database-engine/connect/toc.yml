@@ -16,7 +16,7 @@ items:
 - name: Existing connection forcibly closed
   href: tls-exist-connection-closed.md
   items:
-  - name: Issues in connection after implementing cipher suite policies on a server
+  - name: Troubleshoot issues in connection after implementing cipher suite policies on a server
     href: issues-connection-after-implementing-cipher-suite-policies.md
 - name: Explicit SPN is misplaced problem in SQL Server
   href: explicit-spn-is-misplaced.md
