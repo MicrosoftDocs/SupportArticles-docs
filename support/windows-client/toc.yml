@@ -503,8 +503,6 @@ items:
       href: ./networking/troubleshoot-missing-network-connections-icons.md
     - name: Unwanted wake-up events when you enable WOL
       href: ./networking/unwanted-wake-up-events.md
-    - name: Use Telnet to test Port 3389 functionality
-      href: ./networking/use-telnet-to-test-port-3389-functionality.md
     - name: Winsock timeout errors on slow links with Proxy Server or ISA Server
       href: ./networking/10060-connection-timed-out-with-proxy-server.md
   - name: Web Application Proxy (WAP) role service
