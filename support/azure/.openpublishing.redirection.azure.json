@@ -1,197 +1,197 @@
 {
     "redirections": [
       {
-        "source_path": "support/azure/cloud-services/dev-troubleshoot-series.md",
+        "source_path": "cloud-services/dev-troubleshoot-series.md",
         "redirect_url": "/troubleshoot/azure/cloud-services-classic/dev-troubleshoot-series",
         "redirect_document_id": true
       },
       {
-        "source_path": "support/azure/cloud-services/dev-zipengine-role-stuck-busy-restart.md",
+        "source_path": "cloud-services/dev-zipengine-role-stuck-busy-restart.md",
         "redirect_url": "/troubleshoot/azure/cloud-services-classic/dev-zipengine-role-stuck-busy-restart",
         "redirect_document_id": true
       },
       {
-        "source_path": "support/azure/cloud-services/dev-assemblybinder-role-instance-stuck-busy-restart.md",
+        "source_path": "cloud-services/dev-assemblybinder-role-instance-stuck-busy-restart.md",
         "redirect_url": "/troubleshoot/azure/cloud-services-classic/dev-assemblybinder-role-instance-stuck-busy-restart",
         "redirect_document_id": true
       },
       {
-        "source_path": "support/azure/cloud-services/dev-autoscale-not-trigger-fileuploader.md",
+        "source_path": "cloud-services/dev-autoscale-not-trigger-fileuploader.md",
         "redirect_url": "/troubleshoot/azure/cloud-services-classic/dev-autoscale-not-trigger-fileuploader",
         "redirect_document_id": true
       },
       {
-        "source_path": "support/azure/cloud-services/dev-processorengine-role-stuck-busy-state.md",
+        "source_path": "cloud-services/dev-processorengine-role-stuck-busy-state.md",
         "redirect_url": "/troubleshoot/azure/cloud-services-classic/dev-processorengine-role-stuck-busy-state",
         "redirect_document_id": true
       },
       {
-        "source_path": "support/azure/cloud-services/dev-http-error-503-cannot-access-website.md",
+        "source_path": "cloud-services/dev-http-error-503-cannot-access-website.md",
         "redirect_url": "/troubleshoot/azure/cloud-services-classic/dev-http-error-503-cannot-access-website",
         "redirect_document_id": true
       },
       {
-        "source_path": "support/azure/cloud-services/dev-connect-healthmonitor-worker-role-rdp.md",
+        "source_path": "cloud-services/dev-connect-healthmonitor-worker-role-rdp.md",
         "redirect_url": "/troubleshoot/azure/cloud-services-classic/dev-connect-healthmonitor-worker-role-rdp",
         "redirect_document_id": true
       },
       {
-        "source_path": "support/azure/cloud-services/dev-asp-net-signair-app-cannot-access.md",
+        "source_path": "cloud-services/dev-asp-net-signair-app-cannot-access.md",
         "redirect_url": "/troubleshoot/azure/cloud-services-classic/dev-asp-net-signair-app-cannot-access",
         "redirect_document_id": true
       },
       {
-        "source_path": "support/azure/cloud-services/dev-aspnet-signalr-application-not-work.md",
+        "source_path": "cloud-services/dev-aspnet-signalr-application-not-work.md",
         "redirect_url": "/troubleshoot/azure/cloud-services-classic/dev-aspnet-signalr-application-not-work",
         "redirect_document_id": true
       },
       {
-        "source_path": "support/azure/cloud-services/azure-devops-publish-cloud-service-extended.md",
+        "source_path": "cloud-services/azure-devops-publish-cloud-service-extended.md",
         "redirect_url": "/troubleshoot/azure/cloud-services-extended/azure-devops-publish-cloud-service-extended",
         "redirect_document_id": true
       },
       {
-        "source_path": "support/azure/cloud-services/rdp-not-working-cloud-service.md",
+        "source_path": "cloud-services/rdp-not-working-cloud-service.md",
         "redirect_url": "/troubleshoot/azure/cloud-services-classic/rdp-not-working-cloud-service",
         "redirect_document_id": true
       },
       {
-        "source_path": "support/azure/cloud-services/instance-level-public-ip-address-configuration.md",
+        "source_path": "cloud-services/instance-level-public-ip-address-configuration.md",
         "redirect_url": "/troubleshoot/azure/cloud-services-classic/instance-level-public-ip-address-configuration",
         "redirect_document_id": true
       },
       {
-        "source_path": "support/azure/cloud-services/troubleshoot-mismatched-config.md",
+        "source_path": "cloud-services/troubleshoot-mismatched-config.md",
         "redirect_url": "/troubleshoot/azure/cloud-services-classic/troubleshoot-mismatched-config",
         "redirect_document_id": true
       },
       {
-        "source_path": "support/azure/cloud-services/troubleshoot-role-recycle-swap.md",
+        "source_path": "cloud-services/troubleshoot-role-recycle-swap.md",
         "redirect_url": "/troubleshoot/azure/cloud-services-classic/troubleshoot-role-recycle-swap",
         "redirect_document_id": true
       },
       {
-        "source_path": "support/azure/cloud-services/troubleshoot-subscription-policy.md",
+        "source_path": "cloud-services/troubleshoot-subscription-policy.md",
         "redirect_url": "/troubleshoot/azure/cloud-services-classic/troubleshoot-subscription-policy",
         "redirect_document_id": true
       },
       {
-        "source_path": "support/azure/cloud-services/failed-update-ongoing-migration-process.md",
+        "source_path": "cloud-services/failed-update-ongoing-migration-process.md",
         "redirect_url": "/troubleshoot/azure/cloud-services-classic/failed-update-ongoing-migration-process",
         "redirect_document_id": true
       },
       {
-        "source_path": "support/azure/cloud-services/troubleshoot-vip-swap.md",
+        "source_path": "cloud-services/troubleshoot-vip-swap.md",
         "redirect_url": "/troubleshoot/azure/cloud-services-classic/troubleshoot-vip-swap",
         "redirect_document_id": true
       },
       {
-        "source_path": "support/azure/cloud-services/allocation-failure.md",
+        "source_path": "cloud-services/allocation-failure.md",
         "redirect_url": "/troubleshoot/azure/cloud-services-extended/allocation-failure",
         "redirect_document_id": true
       },
       {
-        "source_path": "support/azure/cloud-services/allow-internet-traffic-cses-application-gateway.md",
+        "source_path": "cloud-services/allow-internet-traffic-cses-application-gateway.md",
         "redirect_url": "/troubleshoot/azure/cloud-services-extended/allow-internet-traffic-cses-application-gateway",
         "redirect_document_id": true
       },
       {
-        "source_path": "support/azure/cloud-services/application-pool-crashes.md",
+        "source_path": "cloud-services/application-pool-crashes.md",
         "redirect_url": "/troubleshoot/azure/cloud-services-extended/application-pool-crashes",
         "redirect_document_id": true
       },
       {
-        "source_path": "support/azure/cloud-services/disk-partition-preservation.md",
+        "source_path": "cloud-services/disk-partition-preservation.md",
         "redirect_url": "/troubleshoot/azure/cloud-services-extended/disk-partition-preservation",
         "redirect_document_id": true
       },
       {
-        "source_path": "support/azure/cloud-services/enable-https-communication.md",
+        "source_path": "cloud-services/enable-https-communication.md",
         "redirect_url": "/troubleshoot/azure/cloud-services-extended/enable-https-communication",
         "redirect_document_id": true
       },
       {
-        "source_path": "support/azure/cloud-services/role-instance-restarts-faq.md",
+        "source_path": "cloud-services/role-instance-restarts-faq.md",
         "redirect_url": "/troubleshoot/azure/cloud-services-extended/role-instance-restarts-faq",
         "redirect_document_id": true
       },
       {
-        "source_path": "support/azure/cloud-services/gather-log-files-offline-analysis-preservation.md",
+        "source_path": "cloud-services/gather-log-files-offline-analysis-preservation.md",
         "redirect_url": "/troubleshoot/azure/cloud-services-extended/gather-log-files-offline-analysis-preservation",
         "redirect_document_id": true
       },
       {
-        "source_path": "support/azure/cloud-services/grant-virtual-network-sole-access.md",
+        "source_path": "cloud-services/grant-virtual-network-sole-access.md",
         "redirect_url": "/troubleshoot/azure/cloud-services-extended/grant-virtual-network-sole-access",
         "redirect_document_id": true
       },
       {
-        "source_path": "support/azure/cloud-services/manage-vip-swap-powershell.md",
+        "source_path": "cloud-services/manage-vip-swap-powershell.md",
         "redirect_url": "/troubleshoot/azure/cloud-services-extended/manage-vip-swap-powershell",
         "redirect_document_id": true
       },
       {
-        "source_path": "support/azure/cloud-services/no-space-e-f-drive.md",
+        "source_path": "cloud-services/no-space-e-f-drive.md",
         "redirect_url": "/troubleshoot/azure/cloud-services-extended/no-space-e-f-drive",
         "redirect_document_id": true
       },
       {
-        "source_path": "support/azure/cloud-services/intermittent-connection-failures-rdp.md",
+        "source_path": "cloud-services/intermittent-connection-failures-rdp.md",
         "redirect_url": "/troubleshoot/azure/cloud-services-extended/intermittent-connection-failures-rdp",
         "redirect_document_id": true
       },
       {
-        "source_path": "support/azure/cloud-services/read-key-vault-certificate-secrets-from-cloud-service-app.md",
+        "source_path": "cloud-services/read-key-vault-certificate-secrets-from-cloud-service-app.md",
         "redirect_url": "/troubleshoot/azure/cloud-services-extended/read-key-vault-certificate-secrets-from-cloud-service-app",
         "redirect_document_id": true
       },
       {
-        "source_path": "support/azure/cloud-services/retrieve-cloud-service-extended-support-detail-powershell.md",
+        "source_path": "cloud-services/retrieve-cloud-service-extended-support-detail-powershell.md",
         "redirect_url": "/troubleshoot/azure/cloud-services-extended/retrieve-cloud-service-extended-support-detail-powershell",
         "redirect_document_id": true
       },
       {
-        "source_path": "support/azure/cloud-services/role-instance-restarts-os-upgrade.md",
+        "source_path": "cloud-services/role-instance-restarts-os-upgrade.md",
         "redirect_url": "/troubleshoot/azure/cloud-services-extended/role-instance-restarts-os-upgrade",
         "redirect_document_id": true
       },
       {
-        "source_path": "support/azure/cloud-services/role-startup-failure.md",
+        "source_path": "cloud-services/role-startup-failure.md",
         "redirect_url": "/troubleshoot/azure/cloud-services-extended/role-startup-failure",
         "redirect_document_id": true
       },
       {
-        "source_path": "support/azure/cloud-services/update-or-change-certificate-used.md",
+        "source_path": "cloud-services/update-or-change-certificate-used.md",
         "redirect_url": "/troubleshoot/azure/cloud-services-extended/update-or-change-certificate-used",
         "redirect_document_id": true
       },
       {
-        "source_path": "support/azure/cloud-services/troubleshoot-with-app-insights-features-overview.md",
+        "source_path": "cloud-services/troubleshoot-with-app-insights-features-overview.md",
         "redirect_url": "/troubleshoot/azure/cloud-services-extended/troubleshoot-with-app-insights-features-overview",
         "redirect_document_id": true
       },
       {
-        "source_path": "support/azure/cloud-services/troubleshoot-common-scenario-use-app-insights.md",
+        "source_path": "cloud-services/troubleshoot-common-scenario-use-app-insights.md",
         "redirect_url": "/troubleshoot/azure/cloud-services-extended/troubleshoot-common-scenario-use-app-insights",
         "redirect_document_id": true
       },
       {
-        "source_path": "support/azure/cloud-services/app-insights-track-free-space-logical-drive.md",
+        "source_path": "cloud-services/app-insights-track-free-space-logical-drive.md",
         "redirect_url": "/troubleshoot/azure/cloud-services-extended/app-insights-track-free-space-logical-drive",
         "redirect_document_id": true
       },
       {
-        "source_path": "support/azure/cloud-services/windows-azure-paas-compute-diagnostic-data.md",
+        "source_path": "cloud-services/windows-azure-paas-compute-diagnostic-data.md",
         "redirect_url": "/troubleshoot/azure/cloud-services-extended/windows-azure-paas-compute-diagnostic-data",
         "redirect_document_id": true
       },
       {
-        "source_path": "support/azure/cloud-services/install-dotnet-core-linux.md",
+        "source_path": "cloud-services/install-dotnet-core-linux.md",
         "redirect_url": "/troubleshoot/azure/cloud-services-classic/install-dotnet-core-linux",
         "redirect_document_id": true
       },
       {
-        "source_path": "support/azure/cloud-services/support-linux-open-source-technology.md",
+        "source_path": "cloud-services/support-linux-open-source-technology.md",
         "redirect_url": "/troubleshoot/azure/cloud-services-classic/support-linux-open-source-technology",
         "redirect_document_id": true
       }
