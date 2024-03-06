@@ -1531,8 +1531,6 @@ items:
       href: ./networking/high-cpu-usage-issue-smb-server.md
     - name: Hotfixes for File Services technologies
       href: ./networking/hotfixes-for-file-services-technologies.md
-    - name: How to allow remote users to access your network
-      href: ./networking/allow-remote-users-to-access-your-network.md
     - name: How to create a virtual directory on an existing Web site
       href: ./networking/create-virtual-directory-folder-remote-computer.md
     - name: How to manually decommission a root server
