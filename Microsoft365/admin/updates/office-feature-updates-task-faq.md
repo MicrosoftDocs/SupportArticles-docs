@@ -12,7 +12,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft 365 Apps for enterprise
-ms.date: 02/28/2024
+ms.date: 03/05/2024
 ---
 
 # The Office Feature Updates task
@@ -48,7 +48,7 @@ The Office Feature Updates task calls the "SDXHelper.exe" process in the backgro
 
 **Q3: Can I disable this task or control the update process?**
 
-**A3:** Customers can block these updates entirely by preventing the Office Feature Updates process from starting. For example, they can disable the Office Feature Updates task in the Windows task scheduler. However, blocking updates isn't recommended. This task makes sure that their connected experiences update when the updates are available. If blocked, connected experiences are updated as part of regular Office updates, but delayed updates result in out-of-date experiences and potential functional issues.
+**A3:** Customers can block these updates entirely by preventing the Office Feature Updates process from starting. For example, they can disable the Office Feature Updates task in the Windows task scheduler. However, blocking updates isn't recommended. This task makes sure that their connected experiences update when the updates are available. If blocked, connected experiences are updated as part of regular Office updates, but delayed updates result in out-of-date experiences. Some features, such as Copilot, will have functional issues if updates are blocked.
 
 **Q4: Is this task dependent on the Office Automatic Updates 2.0 task (or vice versa) for Office feature updates?**
 
@@ -64,7 +64,7 @@ The Office Feature Updates task calls the "SDXHelper.exe" process in the backgro
 
 **Q7: How do connection settings affect the update task?**
 
-**A7:** Any applications and other settings that block connections to the supporting Content Delivery Network (CDN), such as firewalls, also block the delivery of feature updates to a user's machine. The URLs and IP addresses that the Office Feature Updates task needs to reach are listed along with other Microsoft domains and URLs in the information for ID 46 & 47 in the article [Microsoft 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide#microsoft-365-common-and-office-online&preserve-view=true). 
+**A7:** Any applications and other settings that block connections to the supporting Content Delivery Network (CDN), such as firewalls, also block the delivery of feature updates to a user's machine. The URLs and IP addresses that the Office Feature Updates task needs to reach are listed along with other Microsoft domains and URLs in the information for ID 46 & 47 in the article [Microsoft 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide#microsoft-365-common-and-office-online&preserve-view=true).
 
 **Q8: What specific changes and updates are made by .appx files?**
 
