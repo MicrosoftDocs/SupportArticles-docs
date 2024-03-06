@@ -10089,6 +10089,11 @@
       "source_path": "support/power-platform/power-automate/desktop-flows/login-windows-keep-appearing.md",
       "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/cannot-sign-in-to-power-automate-for-desktop#login-window-keeps-popping-up",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/networking/allow-remote-users-to-access-your-network.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/install-configure-virtual-private-network-server",
+      "redirect_document_id": true
     }
   ]
 }
