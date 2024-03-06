@@ -22,11 +22,10 @@ To fix this text color issue, perform the following steps:
 
 1. Open the affected site in the [Portal Management](/power-pages/configure/portal-management-app) app.
 1. Go to **Content** > **Web Files**.
-1. Select file **portalbasictheme.css**.
-1. Select the **Notes** tab.
-1. To download the file, select the attachment link.
-1. Make a copy of the file **portalbasictheme.original.css** as a backup if you need to revert to the default later.
-1. Open the **portalbasictheme.css** file in a text editor such as notepad, and keep the browser open to replace the updated file later.
+1. Select the file **portalbasictheme.css**.
+1. From **File Content**, select the file **portalbasictheme.css** again and download it.
+1. Save the file locally and create a copy (such as "portalbasictheme.original.css") as a backup if you need to revert to the default later. Keep the browser open to replace the updated file later.
+1. Open the downloaded file **portalbasictheme.css** in a text editor such as notepad.
 1. Add the following to the end of the file.
 
     `
@@ -36,8 +35,8 @@ To fix this text color issue, perform the following steps:
     `
 
 1. Save and close the file.
-1. Back in Portal Management app from the open browser, select the **Edit this note** pencil icon from the right-side of the screen.
-1. Select the attachment icon at the bottom-most left > select your updated file > select **Save** button.
+1. Back in Portal Management app from the open browser, select the **Delete** > select **Ok** to delete the file.
+1. Select **Choose File** > select your updated file > select **Open** > select **Save** to save the uploaded file.
 
 ### See also
 
