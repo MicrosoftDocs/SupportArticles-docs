@@ -10099,6 +10099,11 @@
       "source_path": "support/windows-server/networking/allow-remote-users-to-access-your-network.md",
       "redirect_url": "/troubleshoot/windows-server/networking/install-configure-virtual-private-network-server",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/networking/general-guidance-troubleshoot-dhcp.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-dhcp-guidance",
+      "redirect_document_id": true
     }
   ]
 }
