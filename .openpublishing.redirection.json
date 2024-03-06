@@ -1896,6 +1896,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/power-platform/power-pages/index.md",
+      "redirect_url": "/support/power-platform/power-pages/welcome-power-pages",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/power-platform/power-automate/index.md",
       "redirect_url": "/support/power-platform/power-automate/welcome-power-automate",
       "redirect_document_id": false
