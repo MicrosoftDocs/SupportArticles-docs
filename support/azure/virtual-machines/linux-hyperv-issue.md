@@ -8,6 +8,7 @@ ms.topic: troubleshooting
 ms.date: 10/11/2022
 ms.service: virtual-machines
 ms.subservice: vm-cannot-start-stop
+ms.custom: linux-related-content
 ms.collection: linux
 ---
 

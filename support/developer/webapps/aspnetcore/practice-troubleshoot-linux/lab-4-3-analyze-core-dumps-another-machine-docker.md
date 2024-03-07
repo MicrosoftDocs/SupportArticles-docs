@@ -2,6 +2,7 @@
 title: Use Docker to open core dump files on another machine
 description: This article describes how to use Docker to open a core dump file on another machine.
 ms.date: 06/11/2021
+ms.custom: linux-related-content
 ms.reviewer: ramakoni, ahmetmb
 author: ahmetmithat
 ---

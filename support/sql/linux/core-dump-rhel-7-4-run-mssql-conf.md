@@ -2,7 +2,7 @@
 title: Core dump on RHEL 7.4 when you run mssql-conf
 description: This article provides a resolution for the problem where SQL Server terminates and generates a core dump on RHEL 7.4 when you try to run mssql-conf after installation.
 ms.date: 09/25/2020
-ms.custom: sap:SQL Server on Linux
+ms.custom: 'sap:SQL Server on Linux', linux-related-content
 ---
 # SQL Server terminates and generates a core dump on RHEL 7.4 when you try to run mssql-conf
 

@@ -5,6 +5,7 @@ ms.date: 11/17/2021
 ms.reviewer: v-leedennis
 ms.service: virtual-machines
 ms.subservice: vm-performance
+ms.custom: linux-related-content
 ---
 # PerfInsights and scale set VM instances
 

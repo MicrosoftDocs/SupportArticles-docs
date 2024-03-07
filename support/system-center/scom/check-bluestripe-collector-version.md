@@ -2,6 +2,7 @@
 title: Check BlueStripe Collector version
 description: Describes how to check the BlueStripe Collector version.
 ms.date: 08/13/2020
+ms.custom: linux-related-content
 ---
 # How to check the BlueStripe Collector version
 

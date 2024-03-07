@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: abgupta, kaushika
-ms.custom: sap:installation-and-configuration-of-hyper-v, csstroubleshoot
+ms.custom: 'sap:installation-and-configuration-of-hyper-v', csstroubleshoot, linux-related-content
 ---
 # Can't use kdump or kexec for Linux virtual machines on Hyper-V
 
