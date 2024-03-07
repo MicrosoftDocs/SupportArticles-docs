@@ -1979,7 +1979,7 @@ items:
       href: ./networking/services-not-automatically-restart-nic-teaming.md
   - name: WINS
     items:
-    - name: Error when you configure Primary and Secondary WINS addresses for a WINS server
+    - name: Error or connection issues when you configure WINS addresses for a WINS server
       href: ./networking/setting-wins-server-options.md
     - name: Troubleshoot WINS events 4102, 4243,  4242, and 4286
       href: ./networking/windows-internet-name-service-replication-related-errors.md
