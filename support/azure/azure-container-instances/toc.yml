@@ -3,9 +3,6 @@ items:
 - name: Welcome
   href: welcome-container-instances.yml
 
-- name: Container group intermittently restarts
-  href: container-group-restart-killing-event-interruption.md
-
 - name: Troubleshoot container group startup
   items:
   - name: Container group deployment remains in Waiting state
@@ -27,6 +24,8 @@ items:
   items:
   - name: ACI debugging tools
     href: aci-debug-tools.md
+  - name: Container group intermittently restarts
+    href: container-group-restart-killing-event-interruption.md
   - name: Azure Container Instances shows unexpected memory usage metrics
     href: unexpected-memory-usage-metrics.md
   - name: Can't pull images from Container Registry using a managed identity
