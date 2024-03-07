@@ -1793,8 +1793,6 @@ items:
       href: ./networking/configure-remote-access-client-account-lockout.md
     - name: DirectAccess clients can't connect to server
       href: ./networking/directaccess-clients-not-connect-to-server.md
-    - name: DirectAccess network performance in Windows
-      href: ./networking/improve-directaccess-network-performance.md
     - name: Error 51 or 53 when you access shared resources
       href: ./networking/system-error-51-53-access-shared-resources.md
     - name: Error 633 - the modem is already in use
