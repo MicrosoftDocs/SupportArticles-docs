@@ -62,7 +62,7 @@ Try to sign in to [Power Automate](https://make.powerautomate.com/). If it works
 
 ### Resolution
 
-For more information about possible causes and steps to resolve this issue, see [Can't create, edit, save, or view desktop flows](/troubleshoot/power-platform/power-automate/desktop-flows/cannot-sign-in-create-edit-save-view-desktop-flows#cause).
+For more information about possible causes and steps to resolve this issue, see [Can't create, edit, save, or view desktop flows](cannot-sign-in-create-edit-save-view-desktop-flows.md#cause).
 
 ## Login window keeps popping up
 
