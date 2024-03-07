@@ -1875,8 +1875,6 @@ items:
       href: ./networking/error-message-when-you-set-ip-address.md
     - name: Event 1500 when SNMP is enabled
       href: ./networking/event-1500-when-snmp-enabled.md
-    - name: Event ID 7023 is logged
-      href: ./networking/event-id-7023-is-logged.md
     - name: Fail to open TCP/IP properties of network adapter
       href: ./networking/cannot-open-network-adapter-tcp-ip-properties.md
     - name: How to change the IP address of a network adapter
