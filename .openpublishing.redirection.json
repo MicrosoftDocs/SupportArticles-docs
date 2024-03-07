@@ -10109,6 +10109,11 @@
       "source_path": "support/windows-server/networking/general-guidance-troubleshoot-dhcp.md",
       "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-dhcp-guidance",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/networking/improve-directaccess-network-performance.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/improve-directaccess-network-performance",
+      "redirect_document_id": false
     }
   ]
 }
