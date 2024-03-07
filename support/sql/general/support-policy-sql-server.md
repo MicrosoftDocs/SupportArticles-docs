@@ -2,7 +2,7 @@
 title: Support policy for SQL Server
 description: This article describes the support policy for Microsoft SQL Server.
 ms.date: 06/30/2023
-ms.custom: 'sap:General', linux-related-content
+ms.custom: sap:General, linux-related-content
 ms.reviewer: sureshka
 ---
 # Technical support policy for Microsoft SQL Server
