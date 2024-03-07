@@ -74,12 +74,22 @@ This section describes the types of errors and its related information.
   |"The user account is not allowed the Network Login type"|You might not be able to [log in to the network](network-login-disallowed.md).|
   |"The login is from an untrusted domain and cannot be used with Windows authentication."|This error might be related to the [Local Security Subsystem](local-security-subsystem-errors.md) issues.|
 
+## Causes and scenarios specific to SQL login
+
+This section lists various causes related to failure of SQL Login.
+
+- [Bad password](#bad-password)
+- [Invalid username](#invalid-username)
+- [SQL logins aren't enabled](#sql-logins-are-not-enabled)
+- [Named Pipes connections fail because the user doesn't have permission to log into Windows](#named-pipes-connections-fail-because-the-user-doesnt-have-permission-to-log-into-windows)
+
 ## Causes and scenarios specific to various aspects of SQL Server
 
 This section lists various causes that are related to aspects such as database, logon account permissions, and linked servers.
 
 - [Database is offline](#database-is-offline)
 - [Database permissions](#database-permissions)
+- [User has not logged in](#user-has-not-logged-in)
 - [Linked Server Account Mapping](#linked-server-account-mapping)
 - [Proxy account doesn't have permissions](#proxy-account-doesnt-have-permissions)
 - [Unable to log in to SQL Server database](#unable-to-log-in-to-sql-server-database)
@@ -165,6 +175,22 @@ This section lists various miscellaneous authentication issues.
 - [Wrong Internet zone](#wrong-internet-zone)
 - [IIS Authentication isn't allowed](#iis-authentication-isnt-allowed)
 
+### Bad password
+
+Refers to the login related issue. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
+
+### Invalid username
+
+Refers to the Login related issue. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
+
+### SQL logins are not enabled
+
+Refers to the scenario where you try to connect to a Microsoft SQL Server instance using SQL Server authentication but the login associated with the account is disabled. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
+
+### Named Pipes connections fail because the user doesn't have permission to log into Windows
+
+Refers to the permissions issue in Windows. For more information, see [Troubleshooting the Named Pipes connections issue in SQL Server](named-pipes-connection-fail-no-windows-permission.md).
+
 ### Database is offline
 
 Refers to a scenario where a SQL Server database attempts to reconnect to a SQL Server authentication mode. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
@@ -172,6 +198,10 @@ Refers to a scenario where a SQL Server database attempts to reconnect to a SQL 
 ### Database permissions
 
 Refers to enabling or restricting access to SQL Server database. For more information, see  [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
+
+### User has not logged in
+
+Refers to the Anonymous Logon Account error. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error?view=sql-server-ver16).
 
 ### Linked Server Account Mapping
 
@@ -242,7 +272,7 @@ This type of issue usually occurs when a service account is not allowed to assig
 
 ### Local security subsystem errors
 
-Refers to a consistent authentication issue related to the unresponsive LSASS. For more information, see [Troubleshoot LSASS errors with SQL Server authentication](local-security-subsystem-issues.md).
+Refers to a consistent authentication issue related to the unresponsive LSASS. For more information, see [Troubleshoot LSASS errors with SQL Server authentication](local-security-subsystem-errors.md).
 
 ### User profile is corrupt
 
@@ -346,7 +376,7 @@ When a user belongs to multiple groups, there can be authentication issues in Ke
 
 ### Expired tickets
 
-Refers to Kerberos tickets. Using expired Kerberos tickets can cause issues in authentication. For more information, see [Expired tickets](expired-tickets-issue.md).
+Refers to Kerberos tickets. Using expired Kerberos tickets can cause issues in authentication. For more information, see "Expired tickets".
 
 ### Clock skew is too high
 
