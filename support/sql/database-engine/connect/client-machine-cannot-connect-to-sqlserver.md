@@ -1,5 +1,5 @@
 ---
-title: Client computer can't connect to SQL Server by using SQL authentication
+title: Client computer can't connect to the linked server by using SQL authentication
 description: This article provides a resolution for an error that prevents a client computer from connecting to the linked server.
 ms.date: 03/04/2024
 author: prmadhes-msft
@@ -8,13 +8,13 @@ ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 
-# Client can't connect to SQL Server through SQL authentication
+# Client can't connect to the linked server through SQL authentication
 
 This article helps you resolve errors in Microsoft SQL Server that prevent a client computer from establishing a connection with the linked server.
 
 ## Symptoms
 
-You receive the following error message on a SQL Server client computer:
+You receive the following error message:
 
 > An existing connection was forcibly closed by the remote host (OS error 10054)
 
