@@ -20,7 +20,7 @@ _Original KB number:_ &nbsp; 327825
 
 A user who belongs to a large number of security groups has problems authenticating. When authenticating, the user may see a message such as **HTTP 400 - Bad Request (Request Header too long)**. The user also has problems accessing resources, and the user's Group Policy settings may not update correctly.
 
-For more information about the context of the error, see [HTTP 400 Bad Request (Request Header too long) responses to HTTP requests](/troubleshoot/iis/http-bad-request-response-kerberos).
+For more information about the context of the error, see [HTTP 400 Bad Request (Request Header too long) responses to HTTP requests](../..//developer/webapps/iis/www-administration-management/http-bad-request-response-kerberos.md).
 
 > [!NOTE]
 > Under similar conditions, Windows NTLM authentication works as expected. You may not see the Kerberos authentication problem unless you analyze the Windows behavior. However, in such scenarios, Windows may not be able to update Group Policy settings.

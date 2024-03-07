@@ -515,4 +515,4 @@ The answer is that you probably could, but I wouldn't. If my coworker across the
 For more information about SUP maintenance in Configuration Manager, see the following articles:
 
 - [Software updates maintenance](/mem/configmgr/sum/deploy-use/software-updates-maintenance)
-- [Software updates maintenance in Configuration Manager](/troubleshoot/mem/configmgr/software-update-maintenance)
+- [Software updates maintenance in Configuration Manager](software-update-maintenance.md)
