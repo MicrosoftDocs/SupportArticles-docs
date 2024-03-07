@@ -1,27 +1,28 @@
 ---
-title: SLAItem delete operation encountered some errors during solution upgrade
-description: Resolves an error that occurs when a solution upgrade fails in Microsoft Dynamics Customer Service. 
+title: The uninstall operation will delete the base layer for the component with ID error
+description: Resolves an error that occurs when you try to delete an SLA Item for an SLA with multiple solutions in Microsoft Dynamics Customer Service.
 ms.reviewer: sdas, ankugupta, v-psuraty
 ms.author: mpanduranga
 ms.date: 03/07/2024
 ---
-# "SLAItem delete operation encountered some errors" occurs during solution upgrade 
+# "The uninstall operation will delete the base layer for the component with ID" error when deleting an SLA Item
 
-This article provides a resolution for the "SLAItem delete operation encountered some errors, The uninstall operation will delete the base layer for the component" error that occurs when you upgrade a solution in Microsoft Dynamics Customer Service.
+This article provides a resolution for the "The uninstall operation will delete the base layer for the component \<component> with ID \<componentID>" error that occurs when you try to delete an SLA Item for an SLA that has multiple solutions in Microsoft Dynamics Customer Service.
 
 ## Symptoms
 
-A [solution upgrade](/dynamics365/customer-service/administer/manage-solution#upgrade) fails with the following error:
+When you try to delete an SLA Item for a service-level agreement (SLA) that has both unmanaged and managed solutions, the operation isn't successful because there are other managed layers over the base layer. Additionally, you receive the following error message:
 
-> SLAItem delete operation encountered some errors, The uninstall operation will delete the base layer for the component '\<component>' with id '\<componentID>', The operation cannot continue because there are other managed layers over the base layer.
+> The uninstall operation will delete the base layer for the component \<component> with id \<componentID>
 
 ## Cause
 
-- This issue occurs when a single service-level agreement (SLA) has multiple layers.
-
-  For example, SLA 1 is introduced using solution 1 and later it's upgraded using solution 2 or solution 3.
-- Multiple managed and unmanaged solutions for a single SLA also can cause this issue.
+The issue occurs when there are multiple solutions for a single SLA. For example, if SLA 1 is created with solution 1 but it's upgraded using solution 2 or 3. The issue also occurs when you have both multiple managed and unmanaged solutions for an SLA.
 
 ## Resolution
 
-It's recommended to have a single managed solution for SLAs when upgrading their environments. A single SLA shouldn't be upgraded using both unmanaged and managed solutions.
+It's recommended to have a single managed solution for SLAs when you upgrade them. Additionally, you shouldn't upgrade an SLA using both unmanaged and managed solutions.
+
+## See also
+
+[Manage solutions with SLAs](/dynamics365/customer-service/administer/manage-solution)
