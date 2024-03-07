@@ -372,4 +372,4 @@ For more information, see [Recover a deleted account from the Azure portal](/azu
 
 1. Select **Recover** to restore the account. The portal displays a notification that the recovery is in progress.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
