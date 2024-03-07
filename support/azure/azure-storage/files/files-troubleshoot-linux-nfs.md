@@ -193,4 +193,4 @@ If you still need help, [contact support](https://portal.azure.com/?#blade/Micro
 - [Troubleshoot Azure Files authentication and authorization (SMB)](files-troubleshoot-linux-nfs.md)
 - [Troubleshoot Azure Files general SMB issues on Linux](files-troubleshoot-linux-smb.md)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

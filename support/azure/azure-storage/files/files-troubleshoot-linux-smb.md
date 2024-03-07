@@ -250,6 +250,6 @@ If you still need help, [contact support](https://portal.azure.com/?#blade/Micro
 - [Troubleshoot Azure Files connectivity (SMB)](files-troubleshoot-smb-connectivity.md)
 - [Troubleshoot Azure Files authentication and authorization (SMB)](files-troubleshoot-smb-authentication.md)
 - [Troubleshoot Azure Files general NFS issues on Linux](files-troubleshoot-linux-nfs.md)
-- [Troubleshoot Azure File Sync issues](file-sync-troubleshoot.md)
+- [Troubleshoot Azure File Sync issues](../azure-storage/file-sync-troubleshoot.md)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
