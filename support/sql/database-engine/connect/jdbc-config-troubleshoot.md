@@ -139,7 +139,7 @@ You also have to create a *Jaas.conf* file. By default, this file doesn't come w
   java -Djava.security.auth.login.config=c:\myDirectory\Jaas.conf myapp
   ```
 
-To establish a connection to a SQL Server using Kerberos integrated authentication, configure the *Jaas.conf* file :
+To establish a connection to a SQL Server using Kerberos integrated authentication, configure the *Jaas.conf* file:
 
 ```java
 SQLJDBCDriver {
@@ -269,7 +269,7 @@ Follow these steps to configure this file:
     # java.util.logging.SimpleFormatter.format=%4$s: %5$s [%1$tc]%n
     ```
 
-1. Modify this portion to ensure it resembles or contains the following:
+1. Modify this portion to ensure it resembles or contains the following lines:
 
     ```java
     java.util.logging.FileHandler.pattern = /Path/java%u.log
@@ -300,7 +300,7 @@ Follow these steps to configure this file:
 
 1. Save the changes.
 
-    The file should look like the following:
+   The file should look like the following one:
 
     ```java
     ############################################################
