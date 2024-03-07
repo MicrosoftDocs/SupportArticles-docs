@@ -16,7 +16,7 @@ SLAItem delete operation encountered some errors, The uninstall operation will d
 
 ## Cause
 
-This happens when there are multiple layers for a single SLA, It can be the SLA upgrades are happening with 2-3 solution or the SLAs are upgraded using unmanaged and managed solutions.
+This happens when there are multiple layers for a single SLA. For example, if SLA1 is introduced using solution1 and later it is upgraded using solution2 or solution3 and so on might lead to this error. Also having multiple managed and unmanaged solutions for single SLA will also cause this issue.
 
 ## Resolution
 
