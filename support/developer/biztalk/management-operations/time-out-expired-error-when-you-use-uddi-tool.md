@@ -30,4 +30,4 @@ This issue was first fixed in the following cumulative update of BizTalk Server:
 
 - For information about service packs and a cumulative update list for BizTalk Server, see [Service Pack and cumulative update list for BizTalk Server](https://support.microsoft.com/help/2555976).
 
-- For more information about BizTalk Server hotfixes, see [Information about BizTalk Server hotfixes, cumulative updates, and service packs](/troubleshoot/biztalk/biztalk-hotfixes-cumulative-update).
+- For more information about BizTalk Server hotfixes, see [Information about BizTalk Server hotfixes, cumulative updates, and service packs](../setup-config/biztalk-hotfixes-cumulative-update.md).
