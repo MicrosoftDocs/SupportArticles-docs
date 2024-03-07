@@ -13,7 +13,7 @@ ms.custom: sap:dns, csstroubleshoot
 
 This article provides a workaround for a problem where you fail to modify the Hosts file or the Lmhosts file.
 
-_Applies to:_ &nbsp; Windows, all versions, and Windows Server, all versions
+_Applies to:_ &nbsp; Windows, all versions, and Windows Server, all versions  
 _Original KB number:_ &nbsp; 923947
 
 ## Symptoms
