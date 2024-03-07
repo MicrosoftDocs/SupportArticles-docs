@@ -49,7 +49,7 @@ Microsoft Application Virtualization 4.5 and later versions such as Management S
 
 Microsoft BizTalk Server 2009, BizTalk Server 2006 R2, BizTalk Server 2006, and BizTalk Server 2004 are fully supported when they're installed on a supported operating system that is running on Windows Server 2008 Hyper-V.
 
-For more information, see [Microsoft BizTalk Server supportability on a virtual machine](/troubleshoot/biztalk/biztalk-server-supportability-on-vm).
+For more information, see [Microsoft BizTalk Server supportability on a virtual machine](../../developer/biztalk/setup-config/biztalk-server-supportability-on-vm.md).
 
 ### Microsoft Commerce Server
 
