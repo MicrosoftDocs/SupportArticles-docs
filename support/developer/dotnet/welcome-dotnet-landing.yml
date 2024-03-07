@@ -32,11 +32,11 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Open SQL database by VB .NET
-            url: general/open-database-by-sql-server-dotnet-data-provider.md
+            url: framework/general/open-database-by-sql-server-dotnet-data-provider.md
           - text: WPF render thread failures
-            url: general/wpf-render-thread-failures.md
+            url: framework/general/wpf-render-thread-failures.md
           - text: Out of memory exception in a managed app
-            url: general/out-of-memory-dotnet-framework-461.md
+            url: framework/general/out-of-memory-dotnet-framework-461.md
 
   # Card
   - title: Documentation, training, and support
