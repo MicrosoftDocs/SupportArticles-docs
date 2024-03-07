@@ -30,7 +30,7 @@ _Original KB number:_ &nbsp; 878449
 
 On the old server, copy the following Capture_Logins.sql script to the local hard disk. To obtain the Capture_Logins.sql script, see:
 
-- **For SQL Server 2014 and later versions**: [Transfer logins and passwords between instances of SQL Server](/troubleshoot/sql/security/transfer-logins-passwords-between-instances)
+- **For SQL Server 2014 and later versions**: [Transfer logins and passwords between instances of SQL Server](../../sql/database-engine/security/transfer-logins-passwords-between-instances.md)
 
 > [!NOTE]
 > If link doesn't work, copy and paste it to a new browser and try it again.
