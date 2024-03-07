@@ -113,7 +113,7 @@ This section provides troubleshooting steps for these additional scenarios:
 
 Enrolling ADE devices with user affinity requires WS-Trust 1.3 Username/Mixed endpoint to be enabled to request user tokens. Active Directory enables this endpoint by default. If WS-Trust 1.3 is not enabled, Automated Device Enrollment (ADE) iOS/iPadOS devices can't be enrolled.
 
-To get a list of enabled endpoints, use the Get-AdfsEndpoint PowerShell cmdlet and looking for the trust/13/UsernameMixed endpoint. For example:
+To get a list of enabled endpoints, use the `Get-AdfsEndpoint` PowerShell cmdlet and looking for the trust/13/UsernameMixed endpoint. For example:
 
 ```powershell
 Get-AdfsEndpoint -AddressPath "/adfs/services/trust/13/UsernameMixed"
