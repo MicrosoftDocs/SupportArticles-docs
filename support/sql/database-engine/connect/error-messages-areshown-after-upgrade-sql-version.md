@@ -1,6 +1,6 @@
 ---
-title: Errors are shown after upgrading SQL version  
-description: This article provides a workaround for the errors that you might see after upgrading the SQL Server version.
+title: Connection errors occur in SQL Server after a program upgrade  
+description: This article provides a workaround for errors that you experience after you upgrade SQL Server.
 ms.date: 03/06/2024
 author: prmadhes-msft
 ms.author: prmadhes
@@ -8,13 +8,13 @@ ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 
-# Errors are seen after upgrading the version of SQL Server
+# Error 10054 after a SQL Server upgrade
 
-You experience an error message after you upgrade from a lower SQL Server version of Standard Edition (STD) to a higher SQL version of STD. You might still continue to see the error even after using the local system account for the SQL Server Agent service.
+After a Microsoft SQL Server upgrade, you experience a connection error. The error might continue even after you use the local system account for the SQL Server Agent service.
 
 ## Symptoms
 
-After patching the operating system, the SQL Server Agent for SQL instance starts and stops immediately.
+After you upgrade Microsoft SQL Server Standard Edition (STD), SQL Server Agent starts and stops immediately. Additionally, you receive the following error messages:
 
 > SQL Server does not accept the connection (error: 10054). Waiting for SQL Server to allow connections. Operation attempted was: Verify Connection on Start.
 
@@ -24,11 +24,11 @@ After patching the operating system, the SQL Server Agent for SQL instance start
 
 ## Cause
 
-One of the possible causes of this issue is that Transport Layer Security (TLS) might be disabled. Also, check if the TLS continues to be disabled after the Windows patches are installed.
+One possible cause of the error is that Transport Layer Security (TLS) might be disabled. Also, check whether the TLS protocol continues to be disabled after the upgrade is installed.
 
-## Workaround
+## Resolution
 
-To resolve these errors, follow these steps:
+To resolve the error, follow these steps:
 
 1. Enable TLS by setting the following registry entries:
 
@@ -38,7 +38,7 @@ To resolve these errors, follow these steps:
 
     `Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS1.2`
 
-1. Reboot the computer to make sure that the change is applied.
+1. Restart the computer to make sure that the change is applied.
 
 ## See also
 
