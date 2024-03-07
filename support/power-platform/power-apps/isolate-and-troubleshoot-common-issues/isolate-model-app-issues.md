@@ -126,6 +126,6 @@ The process of creating a [vanilla repro app](vanilla-model-driven-app-repro.md)
 - [Debugging model-driven apps with Monitor](/power-apps/maker/monitor-modelapps)
 - [Debugging model-driven apps forms with Monitor](/power-apps/maker/model-driven-apps/monitor-form-checker)
 
-### See also
+## See also
 
 - [General Power Apps debugging strategies](isolate-common-issues.md)
