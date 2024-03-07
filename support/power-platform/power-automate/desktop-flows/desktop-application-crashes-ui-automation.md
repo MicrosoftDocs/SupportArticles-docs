@@ -20,7 +20,7 @@ This article provides a resolution for a crash issue in desktop applications tha
 
 ## Resolution
 
-Create a new configuration file in Power Automate for desktop installation folder.
+Create a new configuration file in the Power Automate for desktop installation folder.
 
 ### Before creating the configuration file
 
@@ -57,7 +57,7 @@ Before creating the configuration file, make sure that Power Automate for deskto
   - Possible values:
     - `true`: The focus event is disabled.
     - `false`(default): The focus event remains enabled.
-- `UIA3.DisableWindowStateEvent`: Makes Power Automate for desktop stop monitoring window state changes on the desktop. The window state changes could be things like minimizing or maximizing a window. Disabling the window state change event can help resolve the application crash issues described in the "Symptoms" section.
+- `UIA3.DisableWindowStateEvent`: Makes Power Automate for desktop stop monitoring window state changes on the desktop. The window state changes could be things like minimizing or maximizing the window. Disabling the window state change event can help resolve the application crash issues described in the "Symptoms" section.
   - Possible values:
     - `true`: The window state change event is disabled.
     - `false`(default): The window state change event remains enabled.
