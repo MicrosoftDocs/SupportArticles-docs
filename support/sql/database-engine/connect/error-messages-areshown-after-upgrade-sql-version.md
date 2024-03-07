@@ -1,6 +1,6 @@
 ---
-title: Connection errors occur in SQL Server after a program upgrade  
-description: This article provides a workaround for errors that you experience after you upgrade SQL Server.
+title: Connection error occurs in SQL Server after a program upgrade  
+description: This article provides a resolution for an error that you experience after you upgrade SQL Server.
 ms.date: 03/06/2024
 author: prmadhes-msft
 ms.author: prmadhes
