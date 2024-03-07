@@ -9,9 +9,9 @@ localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:dns, csstroubleshoot
 ---
-# You can't modify the Hosts file or the Lmhosts file in Windows 7
+# You can't modify the Hosts file or the Lmhosts file
 
-This article provides a workaround for a problem where you fail to modify the Hosts file or the Lmhosts file in Windows 7.
+This article provides a workaround for a problem where you fail to modify the Hosts file or the Lmhosts file.
 
 _Applies to:_ &nbsp; Windows, all versions, and Windows Server, all versions
 _Original KB number:_ &nbsp; 923947
