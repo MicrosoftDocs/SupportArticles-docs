@@ -1,21 +1,21 @@
 ---
 title: Can't install the SNMP and WMI SNMP Provider features
 description: Works around the issue in which the SNMP and WMI SNMP Provider features can't be installed using the DISM.exe tool in Windows 10 or Windows 11.
-ms.date: 12/26/2023
+ms.date: 03/05/2024
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 localization_priority: medium
-ms.reviewer: kaushika, anupamk, thyog
+ms.reviewer: kaushika, anupamk, thyog, jtrox
 ms.custom: sap:tcp/ip-communications, csstroubleshoot
 ---
-# Can't install the SNMP and WMI SNMP Provider features in Windows 10 or Windows 11
+# Can't add the SNMP and WMI SNMP Provider features in Windows 10 or Windows 11
 
-This article provides workarounds to install the Simple Network Management Protocol (SNMP) and Windows Management Instrumentation (WMI) SNMP Provider features in Windows 10 or Windows 11.
+This article provides workarounds to add the Simple Network Management Protocol (SNMP) and Windows Management Instrumentation (WMI) SNMP Provider features in Windows 10 or Windows 11.
 
-## Error when installing the SNMP and WMI SNMP Provider features
+## Error when adding the SNMP and WMI SNMP Provider features
 
-You try to install the SNMP and WMI SNMP Provider features in Windows 10 or Windows 11 by using the [Deployment Image Servicing and Management (DISM.exe)](/windows-hardware/manufacture/desktop/what-is-dism) tool as follows:
+You try to add the SNMP and WMI SNMP Provider features in Windows 10 or Windows 11 by using the [Deployment Image Servicing and Management (DISM.exe)](/windows-hardware/manufacture/desktop/what-is-dism) tool as follows:
 
 ```console
 dism /online /enable-feature /featureName:SNMP /featureName:WMISnmpProvider
@@ -34,19 +34,24 @@ Then, you receive this error message:
 
 To work around this issue, use one of the following methods.
 
-## Install the SNMP and WMI SNMP Provider features from the Settings page
+## Add the SNMP and WMI SNMP Provider features from the Settings page
 
-1. Go to Start, select **Settings** > **Apps**.
-2. Under **Apps & features**, select **Optional features** > **Add a feature**.
-    - To install the SNMP feature, select **Simple Network Management Protocol (SNMP)** > **Install**.
-    - To install the WMI SNMP Provider feature, select **WMI SNMP Provider** > **Install**.
+1. Go to Start, select **Settings** > **System**.
 
-To verify the installation state, select **See optional features history**.
+   > [!NOTE]
+   > In versions older than Windows 10, version 22H2, go to **Settings** > **Apps** > **Apps & features** instead.
 
-## Install the SNMP and WMI SNMP Provider features by using Windows PowerShell
+2. Select **Optional features** > **Add a feature**.
+
+   - To add the SNMP feature, select **Simple Network Management Protocol (SNMP)** > **Add**.
+   - To add the WMI SNMP Provider feature, select **WMI SNMP Provider** > **Add**.
+      
+To verify the added state, select **See optional features history**.
+
+## Add the SNMP and WMI SNMP Provider features by using Windows PowerShell
 
 1. Start Windows PowerShell as an administrator.
-2. Run the following [Add-WindowsCapability](/powershell/module/dism/add-windowscapability) cmdlets to install the SNMP and WMI SNMP Provider features.
+2. Run the following [Add-WindowsCapability](/powershell/module/dism/add-windowscapability) cmdlets to add the SNMP and WMI SNMP Provider features.
 
     ```powershell
     Add-WindowsCapability -Online -Name "SNMP.Client~~~~0.0.1.0"
@@ -56,7 +61,7 @@ To verify the installation state, select **See optional features history**.
     Add-WindowsCapability -Online -Name "WMI-SNMP-Provider.Client~~~~0.0.1.0"
     ```
 
-To verify the installation state, run the following [Get-WindowsCapability](/powershell/module/dism/get-windowscapability) cmdlets.
+To verify the added state, run the following [Get-WindowsCapability](/powershell/module/dism/get-windowscapability) cmdlets.
 
 ```powershell
 Get-WindowsCapability -Online -Name "SNMP.Client~~~~0.0.1.0"
@@ -66,7 +71,7 @@ Get-WindowsCapability -Online -Name "SNMP.Client~~~~0.0.1.0"
 Get-WindowsCapability -Online -Name "WMI-SNMP-Provider.Client~~~~0.0.1.0"
 ```
 
-The state is **Installed** if these features are installed correctly.
+The state is **Installed** if these features are added correctly.
 
 ## Data collection
 

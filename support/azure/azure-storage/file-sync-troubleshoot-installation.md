@@ -4,7 +4,7 @@ description: Troubleshoot common issues with installing the Azure File Sync agen
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 10/13/2023
+ms.date: 03/05/2024
 ms.author: kendownie
 ---
 # Troubleshoot Azure File Sync agent installation and server registration
@@ -84,6 +84,23 @@ After creating a server endpoint on Windows Server 2012 R2, the following error 
 To resolve this issue, install [KB2919355](https://support.microsoft.com/help/2919355/windows-rt-8-1-windows-8-1-windows-server-2012-r2-update-april-2014) and restart the server. If this update won't install because a later update is already installed, go to **Windows Update**, install the latest updates for Windows Server 2012 R2 and restart the server.
 
 ## Server registration
+
+<a id="server-registration-failed"></a>**Server Registration displays this error: "Failed to register the server"**
+
+If Azure File Sync Agent version 17 is installed, *ServerRegistration.exe* might fail to register the server with the following error message:
+
+> Failed to register the server
+
+In the *AfsSrvRegistration\*.log* file located under *%LocalAppData%\Temp*, the following error is logged:
+
+> ManagementCode: 'NoRegisteredProviderFound'
+
+Until a service-side fix is deployed in your region, you can work around this issue by using the following PowerShell commands to register the server:
+
+```powershell
+Connect-AzAccount -Subscription "<guid>" -Tenant "<guid>"
+Register-AzStorageSyncServer -ResourceGroupName "<your-resource-group-name>" -StorageSyncServiceName "<your-storage-sync-service-name>"
+```
 
 <a id="server-registration-missing-subscriptions"></a>**Server Registration does not list all Azure Subscriptions**
 
