@@ -11,7 +11,7 @@ ms.reviewer: kendownie, jarrettr, v-weizhu, v-six, hanagpal
 
 This article lists common problems that might occur when you try to connect to and access Server Message Block (SMB) Azure file shares from Windows or Linux clients. It also provides possible causes and resolutions for these problems.
 
-[!INCLUDE [Feedback](../../includes/feedback.md)]
+[!INCLUDE [Feedback](../../../includes/feedback.md)]
 
 > [!IMPORTANT]
 > This article applies only to SMB shares. For details about Network File System (NFS) shares, see [Troubleshoot Azure NFS file shares](/azure/storage/files/files-troubleshoot-linux-nfs).
@@ -610,6 +610,6 @@ When a new file is uploaded, the **CacheControl** property by default is **no-ca
 - [Troubleshoot Azure Files authentication and authorization (SMB)](files-troubleshoot-smb-authentication.md)
 - [Troubleshoot Azure Files general SMB issues on Linux](files-troubleshoot-linux-smb.md)
 - [Troubleshoot Azure Files general NFS issues on Linux](files-troubleshoot-linux-nfs.md)
-- [Troubleshoot Azure File Sync issues](file-sync-troubleshoot.md)
+- [Troubleshoot Azure File Sync issues](../azure-storage/file-sync-troubleshoot.md)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
