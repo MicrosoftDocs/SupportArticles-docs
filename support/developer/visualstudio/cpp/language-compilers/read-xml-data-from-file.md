@@ -57,7 +57,7 @@ To read the XML data from a file, follow these steps:
     Under **Templates**, click **CLR Console Application** if you are using Visual Studio 2005.
 
 5. In the **Name** box, type *Q815658*, and then click **OK**.
-6. Add a reference to `System.xml.dll` in the project. For more information about how to add references to a managed Visual C++ project, see [Add references to a managed Visual C++ project](/troubleshoot/cpp/add-references-managed)
+6. Add a reference to `System.xml.dll` in the project. For more information about how to add references to a managed Visual C++ project, see [Add references to a managed Visual C++ project](add-references-managed.md)
 
 7. Specify the using directive in the `System::Xml` namespace as follows:
 
