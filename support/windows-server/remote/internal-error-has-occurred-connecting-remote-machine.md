@@ -1,6 +1,6 @@
 ---
 title: An internal error has occurred 
-description: Helps troubleshoot the "An internal error has occurred" error when connecting to a remote machine.
+description: Helps troubleshoot An internal error has occurred error when connecting to a remote machine.
 ms.date: 03/01/2024
 author: Deland-Han
 ms.author: delhan
