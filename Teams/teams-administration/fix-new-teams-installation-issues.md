@@ -40,8 +40,8 @@ The following registry keys could block new Teams MSIX package installation:
 >
 >- [**Windows 10: October 26, 2023—KB5031445 (OS Build 19045.3636)**](https://support.microsoft.com/topic/october-26-2023-kb5031445-os-build-19045-3636-preview-03f350cb-57f9-45e6-bfd7-438895d3c7fa)
 >- [**Windows 11: October 26, 2023—KB5031455 (OS Build 22621.2506)** ](https://support.microsoft.com/topic/october-26-2023-kb5031455-os-build-22621-2506-preview-6513c5ec-c5a2-4aaf-97f5-44c13d29e0d4)
-
-If this optional October update isn't available for your OS build, the November security update includes the fix.
+>
+> If this optional October update isn't available for your OS build, the November security update includes the fix.
 
 These three registry keys can be found at either of the following locations:
 
@@ -71,7 +71,7 @@ Some policies might change these registry keys and block app installation in you
 - If you don't see the **Try the new Teams** toggle, make sure that you're running the minimum required versions of Windows and Teams.
 - After you successfully switch to new Teams, if you can't find the toggle at the top left corner of the window to switch between new Teams and Microsoft Teams classic (work or school), start the version that you want by searching for it on the Start menu, or by selecting it on the taskbar.
 
-## Policies that can block the user from seeing the App switcher toggle
+## Conditions that can block the user from seeing the App switcher toggle
 
 The following conditions can block users from seeing the app switcher toggle:
 
@@ -106,17 +106,17 @@ The following conditions can block users from seeing the app switcher toggle:
 
 ## Update and restart message in the title bar
 
-Issue: After a user opts in to the new Teams, they might receive an **Update and restart** message in the title bar.
+After a user opts in to the new Teams, they might receive an **Update and restart** message in the title bar.
 
-Action: This message is expected behavior. Select the link to restart the app.
+This message is expected behavior. Select the link to restart the app.
 
 ## Windows 10 users receive an error message
 
-Issue: Windows 10 users receive the following error message when they download and install the new Teams:
+Windows 10 users receive the following error message when they download and install the new Teams:
 
 > We've run into an issue
 
-Action: [Download and install WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/#download-section). Then, restart the Teams desktop app and try again.
+To fix this issue, [download and install WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/#download-section). Then, restart the Teams desktop app and try again.
 
 ## Some people don't see the toggle to opt in
 
