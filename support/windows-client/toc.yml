@@ -429,8 +429,6 @@ items:
     items:
     - name: Change default MTU Size Settings
       href: ./networking/change-default-mtu-size-for-ppp-vpn-connection.md
-    - name: CMAK-based VPN client doesn't work
-      href: ./networking/cmak-based-vpn-doesnt-work.md
     - name: Default gateway route doesn't appear in Routing Table
       href: ./networking/default-gateway-route-not-appear.md
     - name: DirectAccess clients can't connect by IP-HTTPS
