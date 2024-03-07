@@ -1,0 +1,46 @@
+### YamlMime:Landing
+
+title: Azure Blob Storage troubleshooting documentation
+summary: Welcome to Azure Blob Storage troubleshooting. These articles explain how to determine, diagnose, and fix various issues that you might encounter when you use Azure Blob Storage. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+
+metadata:
+  title: Troubleshoot Azure Blob Storage issues
+  description: Documentation for troubleshooting common issues with Azure Blob Storage. # Required; article description that is displayed in search results. < 160 chars.
+  ms.service: azure-storage #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.topic: landing-page # Required
+  author: genlin  #Required; your GitHub user alias, with correct capitalization.
+  ms.author: genli #Required; microsoft alias of author; optional team alias.
+  ms.date: 03/07/2024
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+ # Card
+  - title: Azure Blob Storage documentation
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Azure Storage documentation
+            url: /azure/storage/blobs/
+
+# Card
+  - title: Blob Storage and Azure Data Lake Store Gen2
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Azure Storage data protection, backup, and recovery
+            url: data-protection-backup-recovery.md
+          - text: Copy blobs between storage accounts with network restriction
+            url: copy-blobs-between-storage-accounts-network-restriction.md
+          - text: Embedded application error when install Azure backup agent
+            url: ../../general/unable-to-execute-the-embedded-application-error-backup-agent.md
+          - text: Invalid blob or block content, or invalid block list
+            url: ../../general/invalid-blob-or-block-content-or-invalid-block-list.md
+          - text: Optimize CreateFile function
+            url: ../../general/optimize-createfile-function.md
+          - text: Request body is too large error when write to file
+            url: ../../general/request-body-large.md
+          - text: Troubleshoot high CPU or disk usage issues
+            url: ../../general/diagnose-high-cpu-disk-perfinsights.md  
+
