@@ -29,7 +29,7 @@ When cloud-init is responsible for provisioning, the swap file must be configure
 
 To resolve this problem, follow these steps:
 
-1. Disable resource disk formatting and swap configuration within waagent configuration because this task is now handled by Cloud-Init. Set the parameters as follows:
+1. Disable resource disk formatting and swap configuration within waagent configuration `/etc/waagent.conf` because this task is now handled by Cloud-Init. Set the parameters as follows:
 
     ```
     # Format if unformatted. If 'n', resource disk will not be mounted.
