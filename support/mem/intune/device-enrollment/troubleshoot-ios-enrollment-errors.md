@@ -47,21 +47,21 @@ This section includes token sync errors related to Apple Automated Device Enroll
 | Apple profile not found | Multiple possible causes | Create a new profile, and assign the profile to devices. |
 | Invalid department entry | The department field entry is invalid | Edit the department field for your profiles. |
 
-### An error occurred while uploading the enrollment program token
+### Error: An error occurred while uploading the enrollment program token
 
 If the ADE token upload fails with the error message, try the following steps to create a new token:
 
 1. Sign in to [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) as an Intune administrator.
 
-1. Run a GET request to enumerate the tokens in the tenant by using the following URL:
+1. Run a `GET` request to enumerate the tokens in the tenant by using the following URL:
 
     `https://graph.microsoft.com/beta/deviceManagement/depOnboardingSettings`
 
-    If necessary, grant consent and run the request again.
+    If necessary, grant consent and rerun the request.
 
 1. Find the GUID of the token that needs to be renewed.
 
-1. Run a GET request to get the public encryption key of the token by using the following URL:
+1. Run a `GET` request to get the public encryption key of the token by using the following URL:
 
     `https://graph.microsoft.com/beta/deviceManagement/depOnboardingSettings('<TokenGuid>')/getEncryptionPublicKey`
 
@@ -77,7 +77,7 @@ If the ADE token upload fails with the error message, try the following steps to
 1. Copy the value from the response and create a text file as follows. Then, save the text file as a *.pem* file. For example, *token.pem*.
 
     > [!IMPORTANT]
-    > The file contains 3 lines and there are no link breaks in the base64 string.
+    > The file contains three lines, and there are no link breaks in the base64 string.
 
     ```output
     -----BEGIN CERTIFICATE-----
@@ -90,7 +90,7 @@ If the ADE token upload fails with the error message, try the following steps to
 1. In the **MDM Server Settings** section, upload the *.pem* file, and then select **Save**.
 
     > [!NOTE]
-    > If you receive an error message indicates the file format is incorrect, make sure that the file is created according to step 5. After the file format is fixed, close the page and select **Edit** again because the upload dialog box doesn't update the error state value.
+    > If you receive an error message indicating the file format is incorrect, make sure that the file is created according to step 5. After the file format is fixed, close the page and select **Edit** again.
 
 1. Select **Download Token** to download the new token.
 
