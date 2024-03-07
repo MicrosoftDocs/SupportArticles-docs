@@ -50,6 +50,8 @@ landingContent:
         links:
           - text: Azure Container Instances shows unexpected memory usage metrics
             url: unexpected-memory-usage-metrics.md
+          - text: Container Group Killing Event
+            url: container-group-restart-killing-event-interruption.md
           - text: Can't do operations or the container group is in a bad state
             url: cannot-do-container-group-operations.md
           - text: Can't pull images from Container Registry using a managed identity
