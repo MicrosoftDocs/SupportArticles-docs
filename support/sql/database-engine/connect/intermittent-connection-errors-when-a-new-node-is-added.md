@@ -1,7 +1,7 @@
 ---
-title: Troubleshooting intermittent connection errors
-description: This article helps you resolve the issue of intermittent connection errors.
-ms.date: 02/19/2024
+title: Troubleshooting intermittent connection errors in SQL Server
+description: This article helps you resolve the issue of intermittent connection errors in in SQL Server when a new node is added.
+ms.date: 03/07/2024
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
