@@ -1,5 +1,5 @@
 ---
-title: Desktop applications crashes due to the UI automation of Power Automate for desktop
+title: Desktop application crashes due to the UI automation of Power Automate for desktop
 description: Resolves an issue where the execution of a UI automation action using Power Automate for desktop causes the desktop application being interacted with to crash.
 ms.reviewer: nimoutzo
 ms.date: 03/07/2024
