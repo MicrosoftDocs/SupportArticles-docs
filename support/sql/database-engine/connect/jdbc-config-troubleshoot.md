@@ -10,14 +10,13 @@ ms.custom: sap:Connection issues
 This article describes Java database connectivity (JDBC) and the troubleshooting steps that occur during configuration.
 
 > [!NOTE]
-> This article is based on the latest JDBC driver ([version 12.4](https://techcommunity.microsoft.com/t5/sql-server-blog/jdbc-driver-12-4-for-sql-server-released/ba-p/3889965)) installed in the root of the *C* drive.
+>
+> - This article is based on the latest JDBC driver ([version 12.4](https://techcommunity.microsoft.com/t5/sql-server-blog/jdbc-driver-12-4-for-sql-server-released/ba-p/3889965)) installed in the root of the *C* drive.
+> - Microsoft doesn't troubleshoot JDBC connections where a third-party connection pool manager exists. Troubleshooting with a third-party connection pool manager has the potential to expose intellectual property information.
 
+## Microsoft JDBC Driver for SQL Server
 
-
-This article is a reference guide to JDBC. It includes the driver and support documentation and how to install JDBC on various operating systems (OS) when troubleshooting SQL Server connections.
-
-> [!NOTE]
-> Microsoft doesn't troubleshoot JDBC connections where a third-party connection pool manager exists. Troubleshooting with a third-party connection pool manager has the potential to expose intellectual property information.
+This article provides reference guide to JDBC, including the driver and supporting documentation, installation instructions for different operating systems (OS), and troubleshooting SQL Server connection issues.
 
 - [Download Microsoft JDBC Driver for SQL Server](/sql/connect/jdbc/download-microsoft-jdbc-driver-for-sql-server)
 - [Setting the connection properties](/sql/connect/jdbc/setting-the-connection-properties)
@@ -31,7 +30,7 @@ This article is a reference guide to JDBC. It includes the driver and support do
 
 ## JDBC requirements
 
-- The [Java Runtime Environment (JRE)](/sql/connect/jdbc/system-requirements-for-the-jdbc-driver) version must match the driver with the JRE version specified in the name. For example, *mssql-jdbc-9.4.1.jre8.jar* requires JRE1.8, and *mssql-jdbc-9.4.1.jre11.jar* requires JRE11.
+- The [Java Runtime Environment (JRE)](/sql/connect/jdbc/system-requirements-for-the-jdbc-driver) version must match the driver with the JRE version specified in the name. For example, *mssql-jdbc-9.4.1.jre8.jar* requires JRE 1.8, and *mssql-jdbc-9.4.1.jre11.jar* requires JRE 11.0.
 
 - [CLASSPATH](/sql/connect/jdbc/using-the-jdbc-driver) is a Java environment variable that contains the directory path and binary jar files. Java needs it to execute the desired application. It's a requirement to specify which driver and dependency binary jar files Java needs to run. The minimum `CLASSPATH` includes the current working directory `.;` and the location of the JDBC driver jar file.
 
@@ -74,15 +73,15 @@ The following connection string shows an example of how to connect to a SQL Serv
 
 #### SQL Server authentication
 
-Connection string = `jdbc:sqlserver://<ServerName>:<PortNum>;user=<MySQLAuthAccount>;password=<MyPassword>;trustServerCertificate=true;`
+Connection String is `String connectionUrl = "jdbc:sqlserver://<ServerName>:<PortNum>;user=<MySQLAuthAccount>;password=<MyPassword>;trustServerCertificate=true;"`
 
 #### Windows AD authentication without integrated security
 
-Connection string = `jdbc:sqlserver://ServerName:Port;user=<MyADAuthAccount>;password=<MyPassword>;Domain=<MyDomain>;trustServerCertificate=true;javaAuthentication=NTLM`
+Connection String is `String connectionUrl = "jdbc:sqlserver://<ServerName>:<PortNum>;user=<MyADAuthAccount>;password=<MyPassword>;Domain=<MyDomain>;trustServerCertificate=true;javaAuthentication=NTLM"`
 
 #### Windows AD authentication with Kerberos and without integrated security
 
-Connection string = `jdbc:sqlserver://ServerName:Port;user=<MyADAuthAccount>;password=<MyPassword>;Domain=<MyDomain>;trustServerCertificate=true;javaAuthentication=JavaKerberos`
+Connection String is `String connectionUrl = "jdbc:sqlserver://<ServerName>:<PortNum>;user=<MyADAuthAccount>;password=<MyPassword>;Domain=<MyDomain>;trustServerCertificate=true;javaAuthentication=JavaKerberos"`
 
 #### Integrated NTLM connection
 
@@ -100,15 +99,15 @@ The *mssql-jdbc_auth-\<version\>-\<arch\>.dll* file must be in the following pat
 
 You can either modify and add the path or copy the file into an already established path. For more information, see [Connecting with integrated authentication on Windows](/sql/connect/jdbc/building-the-connection-url#Connectingintegrated).
 
-Connection string = `jdbc:sqlserver://ServerName:Port;integratedSecurity=true;Domain=mydomain;trustServerCertificate=true;javaAuthentication=NTLM`
+Connection String is `String connectionUrl = "jdbc:sqlserver://<ServerName>:<PortNum>;integratedSecurity=true;Domain=<MyDomain>;trustServerCertificate=true;javaAuthentication=NTLM"`
 
 #### Integrated Kerberos connections
 
 The prerequisites for this type of connection are:
 
 - Must be a part of a domain.
-- Must have SSSD installed and configured (Linux OS).
-- Must have KLIST installed and configured (Linux OS).
+- Must have SSSD installed and configured on Linux OS.
+- Must have Klist installed and configured on Linux OS.
 
 The *mssql-jdbc_auth-\<version\>-\<arch\>.dll* file must be in the following paths. You can either modify and add the path or copy the file into an already established path.
 
@@ -120,11 +119,12 @@ The *mssql-jdbc_auth-\<version\>-\<arch\>.dll* file must be in the following pat
 
   `%Path%;C:\sqljdbc_12.4.1.0_enu\sqljdbc_12.4\enu\auth\x86\mssql-jdbc_auth-12.4.1.x86.dll`
 
-You also have to create a *Jaas.conf* file. By default, this file doesn't come with the driver and doesn't get installed with Java. You also need to tell the environment where to find this file. You can do this by either modifying the *Java.Security* file or adding the file via a parameter when you load your environment or application.
+You also have to create a *Jaas.conf* file. By default, this file doesn't come with the driver and doesn't get installed with Java. To help the environment to locate this file, use one of the following methods:
 
-The *Jaas.conf* file will allow Java to use the current context of the logged-in user. It will also tell Java to use the currently cached Kerberos tickets.
+> [!NOTE]
+> The *Jaas.conf* file will allow Java to use the current context of the logged-in user. It will also tell Java to use the currently cached Kerberos tickets.
 
-- In the *Java.Security* file, you need to modify the following line:
+- Modify the following line in the *Java.Security* file:
 
   ```java
   # Default login configuration file
@@ -132,26 +132,23 @@ The *Jaas.conf* file will allow Java to use the current context of the logged-in
   login.config.url.1=C:=\<Path to the File>\jaas.conf
   ```
 
-- Alternatively, you can modify or add the *Java.Security* file via a parameter. You should also use the same parameter when you compile the Java file.
+- Alternatively, add the *Jaas.conf* file via a parameter when you load your environment or application. Ensure you use the same parameter when you compile the Java file:
 
-  - ```cmd
-    javac -Djava.security.auth.login.config=c:\myDirectory\Jaas.conf myapp.java
-    ```
-
-  - ```cmd
-    java -Djava.security.auth.login.config=c:\myDirectory\Jaas.conf myapp
-    ```
-
-  The *Jaas.conf* file:
-
-  ```java
-  SQLJDBCDriver {
-  com.sun.security.auth.module.Krb5LoginModule required 
-   =true;
-  };
+  ```cmd
+  javac -Djava.security.auth.login.config=c:\myDirectory\Jaas.conf myapp.java
+  java -Djava.security.auth.login.config=c:\myDirectory\Jaas.conf myapp
   ```
 
-Connection string = `jdbc:sqlserver://<ServerName>:<PortNum>;integratedSecurity=true;Domain=<MyyDomain>;trustServerCertificate=true;javaAuthentication=JavaKerberos;`
+To establish a connection to a SQL Server using Kerberos integrated authentication, configure the *Jaas.conf* file :
+
+```java
+SQLJDBCDriver {
+com.sun.security.auth.module.Krb5LoginModule required 
+useTicketCache=true; 
+};
+```
+
+Connection String is `String connectionUrl = "jdbc:sqlserver://<ServerName>:<PortNum>;integratedSecurity=true;Domain=<MyyDomain>;trustServerCertificate=true;javaAuthentication=JavaKerberos;"`
 
 ### Sample code
 
@@ -288,6 +285,8 @@ Follow these steps to configure this file:
 
 1. Set the driver logging level:
 
+   Add `com.microsoft.sqlserver.jdbc.level=FINEST` at the bottom of the following section:
+
     ```java
     ############################################################
     # Facility-specific properties.
@@ -299,14 +298,10 @@ Follow these steps to configure this file:
     # com.xyz.foo.level = SEVERE
     ```
 
-    At the bottom of this section, add the following line:
-
-    `com.microsoft.sqlserver.jdbc.level=FINEST`
-
 1. Save the changes.
 
     The file should look like the following:
-    
+
     ```java
     ############################################################
     #  Default Logging Configuration File
@@ -374,4 +369,6 @@ Follow these steps to configure this file:
     com.microsoft.sqlserver.jdbc.level=FINEST
     ```
 
-After reproducing the error, you need to revert the changes to stop the logger from creating files.
+After reproducing the error, revert the changes to stop the logger from creating files.
+
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
