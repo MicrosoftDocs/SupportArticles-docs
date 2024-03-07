@@ -1,13 +1,13 @@
 ---
-title: Can't sign in or create or edit or save or view desktop flows
-description: Provides a resolution for the error message that occurs when you try to sign in, create, edit, save, or view desktop flows in Power Automate.
+title: Can't create or edit or save or view desktop flows
+description: Provides a resolution for the error message that occurs when you try to create, edit, save, or view desktop flows in Power Automate.
 ms.reviewer: pefelesk
-ms.date: 10/23/2023
+ms.date: 03/01/2024
 ms.subservice: power-automate-desktop-flows
 ---
-# Can't sign in, create, edit, save, or view desktop flows
+# Can't create, edit, save, or view desktop flows
 
-This article provides a resolution to an issue where you receive an error message when trying to sign in, create, edit, or view a desktop flow in Microsoft Power Automate for desktop.
+This article provides a resolution to an issue where you receive an error message when trying to create, edit, or view a desktop flow in Microsoft Power Automate for desktop.
 
 _Applies to:_ &nbsp; Power Automate  
 _Original KB number:_ &nbsp; 5004096
@@ -15,10 +15,6 @@ _Original KB number:_ &nbsp; 5004096
 ## Symptoms
 
 In Microsoft Power Automate for desktop, you experience the following issues:
-
-- When you sign in to Power Automate for desktop, you receive the following error message:
-
-   > There was an issue during sign in. Try again later or contact an administrator.
 
 - When you create a new desktop flow, you receive the following error message:
 
