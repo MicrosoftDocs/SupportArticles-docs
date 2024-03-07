@@ -85,7 +85,7 @@ If the ADE token upload fails with the error message, try the following steps to
     -----END CERTIFICATE-----
     ```
 
-1. Sign in to ABM or SAM and find the token server that needs to be updated. Then, select **Edit**.
+1. Sign in to ABM or ASM and find the token server that needs to be updated. Then, select **Edit**.
 
 1. In the **MDM Server Settings** section, upload the *.pem* file, and then select **Save**.
 
