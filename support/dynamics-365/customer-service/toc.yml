@@ -27,7 +27,7 @@
       items:
         - name: Import, export, or upgrade SLA
           items:
-            - name: '"A managed solution can't overwrite the SLAItem component" error'
+            - name: '"A managed solution cannot overwrite the SLAItem component" error'
               href: service-level-agreements/solution-contains-slakpi-butnot-slaitem.md
             - name: Changes to SLAItem via upgrade solution don't appear
               href: service-level-agreements/slaitem-changes-missing-upgrade.md
@@ -71,7 +71,7 @@
               href: service-level-agreements/sla-deletion-error-messages.md
             - name: OnHold Time isn't populated for Case for Unified Interface SLA
               href: service-level-agreements/onhold-time-not-populated.md
-            - name: SLA KPI instance isn't Nearing Non-compliance or Non-compliant and timer runs
+            - name: SLA KPI instance isn't Nearing Non-compliance or Noncompliant and timer runs
               href: service-level-agreements/sla-kpi-instance-compliance-timer.md
             - name: SLA timer doesn't pause when state is changed to OnHold on a holiday
               href: service-level-agreements/sla-timer-pause-state-changed.md
@@ -81,7 +81,7 @@
               href: service-level-agreements/warning-slakpiinstances.md
         - name: SLA flow
           items:
-            - name: '"Disabled users can't access the system" error'
+            - name: '"Disabled users cannot access the system" error'
               href: service-level-agreements/sla-users-cannot-access-system.md
             - name: '"Modern flow is not valid for ExecuteWorkflow" error'
               href: service-level-agreements/sla-modern-flow-not-valid.md
