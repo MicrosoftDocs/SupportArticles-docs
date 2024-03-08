@@ -17,7 +17,7 @@ _Original KB number:_ &nbsp; 301111
 This step-by-step article illustrates how to navigate Extensible Markup Language (XML) documents with an `XPathNavigator` object that is created from an `XPathDocument` object. This sample loads an `XPathDocument` object with XML data, creates an `XPathNavigator` object as a view onto the data, and displays the XML by walking through the document.
 
 For a Microsoft Visual C# version of this article, see
-[Use Visual C# to navigate XML documents with the XPathNavigator class](/troubleshoot/dotnet/csharp/xml-xpathnavigator).
+[Use Visual C# to navigate XML documents with the XPathNavigator class](../../csharp/language-compilers/xml-xpathnavigator.md).
 
 ## Requirements
 

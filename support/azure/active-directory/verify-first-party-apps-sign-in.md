@@ -1,8 +1,8 @@
 ---
 title: Verify first-party Microsoft applications in sign-in reports
 description: Describes how to verify first-party Microsoft applications in sign-in reports.
-ms.date: 02/18/2024
-ms.reviewer: bernaw, domooney, v-six, v-weizhu
+ms.date: 03/08/2024
+ms.reviewer: bernaw, domooney, grtaylor, v-six, v-weizhu
 ms.service: active-directory
 ms.subservice: compliance
 ms.custom: has-azure-ad-ps-ref
@@ -81,7 +81,7 @@ The following table lists some, but not all, first-party Microsoft applications.
 |Azure Data Lake|e9f49c6b-5ce5-44c8-925d-015017e9f7ad|
 |Azure Lab Services Portal|835b2a73-6e10-4aa5-a979-21dfda45231c|
 |Azure Portal|c44b4083-3bb0-49c1-b47d-974e53cbdf3c|
-|Azure SQL Database|22907d3-0f1b-48f7-badc-1ba6abab6d66| 
+|Azure SQL Database|022907d3-0f1b-48f7-badc-1ba6abab6d66| 
 |AzureSupportCenter|37182072-3c9c-4f6a-a4b3-b3f91cacffce|
 |Bing|9ea1ad79-fdb6-4f9a-8bc3-2b70f96e34c7|
 |ContactsInferencingEmailProcessor|20a11fe0-faa8-4df5-baf2-f965f8f9972e|
@@ -117,6 +117,7 @@ The following table lists some, but not all, first-party Microsoft applications.
 |Microsoft Exchange Online Protection|00000007-0000-0ff1-ce00-000000000000|
 |Microsoft Exchange ProtectedServiceHost|51be292c-a17e-4f17-9a7e-4b661fb16dd2|
 |Microsoft Exchange REST API Based Powershell|fb78d390-0c51-40cd-8e17-fdbfab77341b|
+|Microsoft Exchange Web Services|47629505-c2b6-4a80-adb1-9b3a3d233b7b|
 |Microsoft Forms|c9a559d2-7aab-4f13-a6ed-e7e9c52aec87|
 |Microsoft Graph|00000003-0000-0000-c000-000000000000|
 |Microsoft Intune Web Company Portal|74bcdadc-2fdc-4bb3-8459-76d06952a0e9|
