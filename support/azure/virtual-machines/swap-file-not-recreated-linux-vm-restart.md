@@ -4,6 +4,7 @@ description: Describes how to resolve the problem that prevents a swap file from
 ms.date: 12/09/2021
 ms.service: virtual-machines
 ms.subservice: vm-cannot-start-stop
+ms.custom: linux-related-content
 ms.collection: linux
 ms.author: srijangupta
 author: srijang

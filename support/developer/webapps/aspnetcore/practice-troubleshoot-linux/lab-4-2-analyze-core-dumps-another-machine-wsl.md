@@ -2,6 +2,7 @@
 title: Use WSL to open core dumps on another machine
 description: This article describes how to use Windows Subsystem for Linux to open a core dump file on another machine.
 ms.date: 06/18/2021
+ms.custom: linux-related-content
 ms.reviewer: ramakoni, ahmetmb
 author: ahmetmithat
 ---

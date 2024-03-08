@@ -2,6 +2,7 @@
 title: Create and configure ASP.NET Core applications in Linux
 description: This article describes how to create and configure ASP.NET Core applications in Linux.
 ms.date: 03/18/2021
+ms.custom: linux-related-content
 ms.reviewer: ramakoni, ahmetmb
 author: ahmetmithat
 ---
