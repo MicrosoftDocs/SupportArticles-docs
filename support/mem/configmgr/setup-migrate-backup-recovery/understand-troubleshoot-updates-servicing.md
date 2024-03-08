@@ -1,7 +1,7 @@
 ---
 title: Understand and troubleshoot Updates and Servicing
 description: This article helps administrators understand Updates and Servicing and troubleshoot some common issues in Configuration Manager.
-ms.date: 12/05/2023
+ms.date: 03/08/2024
 ms.reviewer: kaushika
 ---
 # Understand and troubleshoot Updates and Servicing in Configuration Manager
@@ -1020,11 +1020,7 @@ The following are the state codes and the states that they represent:
 
 - Check Configuration Manager update history:
 
-    See [ConfigMgr Update History TSQL Query](https://gallery.technet.microsoft.com/ConfigMgr-Update-History-d5cca015?redir=0).
-
 - Check Configuration Manager build numbers that are mapped by using build release names:
-
-    See [ConfigMgr Build Numbers mapped with Build Release Names and Update types](https://gallery.technet.microsoft.com/ConfigMgr-Build-Numbers-62840395?redir=0).  
 
 ## Tips
 

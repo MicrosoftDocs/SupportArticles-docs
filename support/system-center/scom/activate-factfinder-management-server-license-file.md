@@ -2,6 +2,7 @@
 title: Activate a FactFinder management server license file
 description: Describes how to activate a license file for a FactFinder management server.
 ms.date: 08/13/2020
+ms.custom: linux-related-content
 ---
 # How to activate a license file for a FactFinder management server
 
