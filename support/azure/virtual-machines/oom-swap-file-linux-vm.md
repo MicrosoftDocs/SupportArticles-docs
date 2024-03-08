@@ -5,10 +5,10 @@ ms.date: 10/27/2023
 ms.reviewer: azurevmlnxcic, v-denlee
 ms.service: virtual-machines
 ms.subservice: vm-common-errors-issues
+ms.custom: linux-related-content
 ms.collection: linux
 author: pagienge
 ms.author: pagienge
-
 ---
 # Out of memory error occurs in Linux Azure virtual machine
 

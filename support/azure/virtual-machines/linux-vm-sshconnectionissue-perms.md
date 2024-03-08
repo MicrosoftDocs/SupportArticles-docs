@@ -6,6 +6,7 @@ author: saimsh-msft
 ms.reviewer: divargas, adelgadohell
 ms.service: virtual-machines
 ms.subservice: vm-cannot-connect
+ms.custom: linux-related-content
 ms.collection: linux
 ---
 
