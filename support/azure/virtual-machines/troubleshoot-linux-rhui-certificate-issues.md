@@ -8,6 +8,7 @@ editor: v-jsitser
 ms.date: 03/05/2024
 ms.service: virtual-machines
 ms.subservice: redhat
+ms.custom: linux-related-content
 ---
 
 # Troubleshoot RHUI certificate issues in Azure

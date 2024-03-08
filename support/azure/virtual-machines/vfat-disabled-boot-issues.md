@@ -7,6 +7,7 @@ ms.date: 10/10/2022
 ms.reviewer: jofrance
 ms.service: virtual-machines
 ms.subservice: vm-cannot-start-stop
+ms.custom: linux-related-content
 ms.collection: linux
 ms.topic: troubleshooting
 ---

@@ -2,6 +2,7 @@
 title: Secure Linux VM by configuring a firewall
 description: This article describes how to configure a local firewall to secure your Linux virtual machine.
 ms.date: 03/29/2021
+ms.custom: linux-related-content
 ms.reviewer: ramakoni, ahmetmb
 author: ahmetmithat
 ---
