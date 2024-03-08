@@ -37,7 +37,7 @@ This solution is designed to help you troubleshoot Domain Name System (DNS) scen
 
 Windows contains a client-side DNS cache. Microsoft doesn't recommend disabling DNS client-side caching on DNS clients. A configuration in which DNS client-side caching is disabled isn't supported.
 
-Microsoft does not guarantee that a resolution will be found for issues that involve unsupported devices or configuration. If no resolution is found, the cost of an investigation into the incident is not refunded. If it is not agreed that a solution is not guaranteed, Microsoft Support will not fix the problem and will refund the cost of investigating the incident.
+Microsoft doesn't guarantee that a resolution will be found for issues that involve unsupported devices or configuration. If no resolution is found, the cost of an investigation into the incident isn't refunded. If it's not agreed that a solution isn't guaranteed, Microsoft Support won't fix the problem and will refund the cost of investigating the incident.
 
 ### DNS records are missing in a DNS zone
 
@@ -51,9 +51,9 @@ To troubleshoot this issue, see [Using DNS aging and scavenging](/previous-versi
 
 #### Host "A" record is deleted when the IP address is changed
 
-Sometimes, the host "A" record is deleted on the original DNS server after the host "A" record is registered on the newly configured DNS server IP address (Active Directory Integrated DNS). From a user perspective, anything that depends on name resolution is broken. When the DNS server IP address is changed on the client, the client sends an SOA update to delete its "A" record from the old DNS server. Then, it sends another update to register its "A" record to the new DNS server.
+Sometimes, the host "A" record is deleted on the original DNS server after the host "A" record is registered on the newly configured DNS server IP address (Active Directory Integrated DNS). From a user perspective, anything that depends on name resolution is broken. When the DNS server IP address is changed on the client, the client sends a Start of Authority (SOA) update to delete its "A" record from the previous DNS server. Then, it sends another update to register its "A" record to the new DNS server.
 
-The trouble occurs in Active Directory integrated zones. Issues occur when the DNS Server IP address is changed on the client. When the IP address changes, the client sends a registration request to the new server, and sends a deletion request to old server. Because both servers are already synced, the records aren't registered. However, the "A" record is deleted on the old server, and then it's deleted on both servers because of Active Directory replication.
+The trouble occurs in Active Directory integrated zones. Issues occur when the DNS Server IP address is changed on the client. When the IP address changes, the client sends a registration request to the new server, and sends a deletion request to previous server. Because both servers are already synced, the records aren't registered. However, the "A" record is deleted on the previous server, and then the deletion replicates to the new server. As a result, the record is deleted on both servers.
 
 #### DHCP clients that have option 81 configured unregister host "A" records during host "AAAA" registration
 
@@ -61,9 +61,9 @@ This problem occurs if Option 81 is defined and ISATAP or 6to4 interfaces are pr
 
 #### The DNS Dynamic Update Protocol update to existing records fails
 
-The DNS Dynamic Update Protocol update to existing records fails. Because of this, the scavenging process considers the records to be aged, and it deletes them.
+The DNS Dynamic Update Protocol update to existing records fails. Because of this problem, the scavenging process considers the records to be aged, and it deletes them.
 
-NETLOGON "event 577X" events are logged for record registration failures of SRV records by the NETLOGON service. Other events are logged for registration failures of host "A" and PTR records. Check the system logs for these failures. Such events may be logged by a client that registers these records. Or they may be logged by the DHCP servers that register the records on the client's behalf.
+The NETLOGON service logs "event 577X" events when it can't register SRV records. Other events are logged for registration failures of host "A" and PTR records. Check the system logs for these failures. The client that registers these records might log such events, or the DHCP servers that register the records on the client's behalf might log them.
 
 #### Converting an active dynamic lease to a reservation deletes the "A" and PTR records for that client
 
@@ -77,15 +77,15 @@ To prevent this issue, make sure that the unwanted network adapter address isn't
 
 1. In **Network Connections**, open the properties for the unwanted network card, open TCP/IP properties, select **Advanced** > **DNS**, and then clear the **Register this connections Address in DNS** checkbox.
 2. In the left pane, open the DNS server console, highlight the server, and then select **Action** > **Properties**. On the **Interfaces** tab, select **listen on only the following IP addresses**. Remove the unwanted IP address from the list.
-3. On the **Zone** properties page, select the **Name server** tab. In addition to the FQDN of the domain controller, you'll see the IP address that's associated with the domain controller. Remove the unwanted IP address if it's listed.
+3. On the **Zone** properties page, select the **Name server** tab. In addition to the FQDN of the domain controller, this tab lists the IP address that's associated with the domain controller. Remove the unwanted IP address if it's listed.
 4. Delete the existing unwanted host "A" record of the domain controller.
 
 ### DNS query response delays
 
-A DNS query request may time out if the DNS server forwards the query to unreachable forwarders or root hints. To troubleshoot this issue, follow these steps:
+A DNS query request might time out if the DNS server forwards the query to unreachable forwarders or root hints. To troubleshoot this issue, follow these steps:
 
 1. Open the DNS console on the DNS server, and check whether forwarders or conditional forwarders are reachable. If some of the forwarders are unreachable, remove them.
-2. If the DNS server doesn't have to use forwarders and root hints, open the DNS console on the DNS server, open the server **Properties** window, select **Advanced**, and then turn on **Disable recursion**. (This also disables forwarders.)
+2. If the DNS server doesn't have to use forwarders and root hints, open the DNS console on the DNS server, open the server **Properties** window, select **Advanced**, and then turn on **Disable recursion**. (This setting also disables forwarders.)
 
 ### Event ID 4004 and event ID 4013
 
@@ -143,11 +143,11 @@ Before contacting Microsoft support, you can gather information about your issue
 
 ### Prerequisites
 
-- TSS must be run by accounts that have administrator privileges on the local system, and the EULA must be accepted. (After the EULA is accepted, TSS won't prompt again.)
+- Run TSS in the security context of an account that has administrator privileges on the local system, and the EULA must be accepted. (After the EULA is accepted, TSS won't prompt again.)
 - We recommend the LocalMachine `RemoteSigned` PowerShell execution policy.
 
-> [!NOTE]
-> If the current PowerShell execution policy doesn't allow running TSS, take the following actions:
+  > [!NOTE]
+  > If the current PowerShell execution policy doesn't allow running TSS, take the following actions:
 >
 > - Set the `RemoteSigned` execution policy for the process level by running the cmdlet, `PS C:\> Set-ExecutionPolicy -scope Process -ExecutionPolicy RemoteSigned`.
 > - To verify that the change takes effect, run the cmdlet, `PS C:\> Get-ExecutionPolicy -List`.
@@ -180,7 +180,7 @@ Before contacting Microsoft support, you can gather information about your issue
 
 7. Enter *Y* to finish the log collection after the issue is reproduced.
 
-The traces are stored in a compressed file in the *C:\\MS_DATA* folder. This can be uploaded to the workspace for analysis.
+The traces are stored in a compressed file in the *C:\\MS_DATA* folder. You can upload this file to the workspace for analysis.
 
 ## References
 
