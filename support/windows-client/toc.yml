@@ -429,8 +429,6 @@ items:
     items:
     - name: Change default MTU Size Settings
       href: ./networking/change-default-mtu-size-for-ppp-vpn-connection.md
-    - name: CMAK-based VPN client doesn't work
-      href: ./networking/cmak-based-vpn-doesnt-work.md
     - name: Default gateway route doesn't appear in Routing Table
       href: ./networking/default-gateway-route-not-appear.md
     - name: DirectAccess clients can't connect by IP-HTTPS
@@ -503,8 +501,6 @@ items:
       href: ./networking/troubleshoot-missing-network-connections-icons.md
     - name: Unwanted wake-up events when you enable WOL
       href: ./networking/unwanted-wake-up-events.md
-    - name: Use Telnet to test Port 3389 functionality
-      href: ./networking/use-telnet-to-test-port-3389-functionality.md
     - name: Winsock timeout errors on slow links with Proxy Server or ISA Server
       href: ./networking/10060-connection-timed-out-with-proxy-server.md
   - name: Web Application Proxy (WAP) role service
@@ -1135,6 +1131,8 @@ items:
       href: ./windows-tss/gather-information-using-tss-wufb-reports.md
   - name: Storage and High Availability (SHA)
     items:
+    - name: Gather information for Hyper-V related issues
+      href: ./windows-tss/gather-information-using-tss-hyper-v-issues.md
     - name: Gather information for Windows failover cluster related issues
       href: ./windows-tss/gather-information-using-tss-windows-failover-cluster-issues.md
   - name: User Experience (UEX)
