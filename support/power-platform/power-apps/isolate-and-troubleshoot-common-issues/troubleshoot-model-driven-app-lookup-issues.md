@@ -2,7 +2,7 @@
 title: Troubleshoot Lookup issues in model-driven apps
 description: Helps troubleshoot Simple Lookup control issues in Power Apps model-driven apps.
 author: hwhong
-ms.date: 03/06/2024
+ms.date: 03/07/2024
 ms.author: hwhong
 search.audienceType: 
   - maker
