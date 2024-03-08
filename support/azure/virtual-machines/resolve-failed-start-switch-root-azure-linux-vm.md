@@ -6,12 +6,12 @@ documentationcenter: ''
 author: genlin
 manager: dcscontentpm
 tags: top-support-issue
+ms.custom: linux-related-content
 ms.service: virtual-machines
 ms.subservice: vm-cannot-start-stop
 ms.topic: troubleshooting
 ms.date: 08/19/2021
 ms.author: tibasham
-
 ---
 # Resolve "Failed to start Switch Root" for an Azure Linux VM
 

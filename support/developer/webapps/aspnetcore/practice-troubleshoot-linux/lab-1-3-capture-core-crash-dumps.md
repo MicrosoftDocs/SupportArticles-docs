@@ -2,6 +2,7 @@
 title: Capture core crash dumps with createdump tool
 description: This article describes how to use the createdump tool to capture .NET Core crash dumps in Linux and open the dump in lldb to diagnose the crash problem.
 ms.date: 04/07/2021
+ms.custom: linux-related-content
 ms.reviewer: ramakoni, ahmetmb
 author: ahmetmithat
 ---

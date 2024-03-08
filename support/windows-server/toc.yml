@@ -3265,11 +3265,25 @@ items:
     items:
     - name: Introduction to TroubleShootingScript toolset (TSS)
       href: ../windows-client/windows-tss/introduction-to-troubleshootingscript-toolset-tss.md?context=/troubleshoot/windows-server/context/context
-    - name: Gather information for Active Directory replication issues
-      href: ../windows-client/windows-tss/gather-information-using-tss-ad-replication.md?context=/troubleshoot/windows-server/context/context
-    - name: Gather information for deployment-related issues
-      href: ../windows-client/windows-tss/gather-information-using-tss-deployment.md?context=/troubleshoot/windows-server/context/context
-    - name: Gather information for Group Policy issues
-      href: ../windows-client/windows-tss/gather-information-using-tss-group-policy.md?context=/troubleshoot/windows-server/context/context
-    - name: Gather information for user experience-related issues
-      href: ../windows-client/windows-tss/gather-information-using-tss-user-experience.md?context=/troubleshoot/windows-server/context/context
+    - name: Identity
+      items:
+      - name: Gather information for Active Directory replication issues
+        href: ../windows-client/windows-tss/gather-information-using-tss-ad-replication.md?context=/troubleshoot/windows-server/context/context
+      - name: Gather information for Group Policy issues
+        href: ../windows-client/windows-tss/gather-information-using-tss-group-policy.md?context=/troubleshoot/windows-server/context/context
+    - name: Deployment (DnD)
+      items:
+      - name: Gather information for deployment-related issues
+        href: ../windows-client/windows-tss/gather-information-using-tss-deployment.md?context=/troubleshoot/windows-server/context/context
+    - name: Storage and High Availability (SHA)
+      items:
+      - name: Gather information for Hyper-V related issues
+        href: ../windows-client/windows-tss/gather-information-using-tss-hyper-v-issues.md?context=/troubleshoot/windows-server/context/context
+      - name: Gather information for SQL cluster (AG/FCI) related issues
+        href: ../windows-client/windows-tss/gather-information-using-tss-sql-cluster-ag-fci-issues.md?context=/troubleshoot/windows-server/context/context
+      - name: Gather information for Windows failover cluster related issues
+        href: ../windows-client/windows-tss/gather-information-using-tss-windows-failover-cluster-issues.md?context=/troubleshoot/windows-server/context/context
+    - name: User Experience (UEX)
+      items:
+      - name: Gather information for user experience-related issues
+        href: ../windows-client/windows-tss/gather-information-using-tss-user-experience.md?context=/troubleshoot/windows-server/context/context
