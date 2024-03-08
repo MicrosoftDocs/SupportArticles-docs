@@ -2,7 +2,7 @@
 title: Cumulative update 13 for SQL Server 2017 (KB4466404)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2017 cumulative update 13 (KB4466404).
 ms.date: 08/04/2023
-ms.custom: KB4466404
+ms.custom: KB4466404, linux-related-content
 appliesto:
 - SQL Server 2017 on Windows
 - SQL Server 2017 on Linux

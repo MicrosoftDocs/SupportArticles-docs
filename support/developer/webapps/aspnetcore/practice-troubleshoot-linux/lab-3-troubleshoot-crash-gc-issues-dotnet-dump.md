@@ -2,6 +2,7 @@
 title: Troubleshoot crash and GC issues with dotnet-dump
 description: This article describes how to use the dotnet-dump tool to capture and analyze core dump files, and how to use dotnet-gcdump to generate GC-related reports in Linux.
 ms.date: 04/15/2021
+ms.custom: linux-related-content
 ms.reviewer: ramakoni, ahmetmb
 author: ahmetmithat
 ---
