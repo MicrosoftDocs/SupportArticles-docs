@@ -68,7 +68,7 @@ In this case, try the following steps to create a new token:
 
 1. Run a `GET` request to get the public encryption key of the token by using the following URL:
 
-    `https://graph.microsoft.com/beta/deviceManagement/depOnboardingSettings('<TokenGuid>')/getEncryptionPublicKey`
+    `https://graph.microsoft.com/beta/deviceManagement/depOnboardingSettings/<TokenGuid>/getEncryptionPublicKey`
 
     The response looks like the following example:
 
