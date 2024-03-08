@@ -1,7 +1,7 @@
 ---
 title: Guidance for troubleshooting SMB
 description: Introduces general guidance for troubleshooting scenarios related to SMB.
-ms.date: 12/26/2023
+ms.date: 03/12/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -14,19 +14,19 @@ ms.custom: sap:smb, csstroubleshoot
 > [!div class="nextstepaction"]
 > <a href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=31806211" target='_blank'>Try our Virtual Agent</a> - It can help you quickly identify and fix common SMB issues.
 
-This article is designed to help you troubleshooting Server Message Block (SMB) issues. Most users are able to resolve their issue by using the solutions that are provided here.
+This article is designed to help you troubleshoot Server Message Block (SMB) issues. Most users are able to resolve their issue by using the solutions that are provided here.
 
-## Introduction of SMB
+## Introduction to SMB
 
 Communicating correct terminology is a key aspect of quality SMB troubleshooting. Therefore, you should learn basic SMB terminology to ensure accuracy of data collection and analysis.
 
 - SMB Server (SRV) is always the system that hosts the file system, also called the file server.
 - SMB Client (CLI) is always the system that tries to access the file system.
-- These terms are consistent regardless of the OS version or edition. For example, if a Windows Server 2016-based computer tries to reach the SMB share *\\\\MyWorkstation\\Data* on a Windows 10-based computer, Windows Server 2016 is the SMB Client and Windows 10 is the SMB Server.
+- These terms are consistent regardless of the operating system version or edition. For example, if a Windows Server 2016-based computer tries to reach the SMB share *\\\\MyWorkstation\\Data* on a Windows 10-based computer, Windows Server 2016 is the SMB Client and Windows 10 is the SMB Server.
 
 ## Troubleshooting checklist
 
-- The SMBv1 network protocol is no longer installed by default.
+- Check that the SMB network protocol is installed. The SMBv1 network protocol is no longer installed by default.
 - [Disable SMBv1](/windows-server/storage/file-server/troubleshoot/detect-enable-and-disable-smbv1-v2-v3#how-to-remove-smbv1).
 - If SMBv1 is disabled on a device that supports only SMBv1, you cannot access that device. In this situation, upgrade your system.
 - You cannot disable SMBv2 or SMBv3 separately because these versions are part of the same driver.
@@ -59,6 +59,17 @@ We recommend that you update the following components before you troubleshoot SM
 - iSCSI: A file server requires file storage. If your storage has iSCSI components, update those components.
 - Network: Update the network components.
 - WIndows Core: For better performance and stability, update Windows Core.
+
+## Command to disconnect all shared resources from local computer
+
+You can use the `Net Use * /delete` command to disconnect active or remembered shared resources on a local computer.
+
+> [!NOTE]
+> This command can also be used on remote computers. Run `Net help use` for more options.
+
+### Reference
+
+[!INCLUDE [Community Solutions Content Disclaimer](../../includes/community-solutions-content-disclaimer.md)]
 
 ## Common issues and solutions
 
