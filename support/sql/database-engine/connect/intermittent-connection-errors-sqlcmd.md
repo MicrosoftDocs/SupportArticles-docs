@@ -1,7 +1,7 @@
 ---
-title: Troubleshooting intermittent connection errors with SQLCMD
+title: Troubleshooting intermittent connection errors using SQLCMD
 description: This article provides a resolution for intermittent connection errors that affect SQLCMD.
-ms.date: 01/08/2024
+ms.date: 03/08/2024
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
@@ -36,7 +36,7 @@ Review the following scenarios to determine whether any match your issue:
 
 - The application server uses SQL Server Native Client 11 to successfully test the ODBC data source. If SQL Server Native Client 10.0 isn't supported, you might receive the following error message:
 
->   The connection failed with SQL State: '08001' SQL Server Error: 10054 [Microsoft][SQL Server Native Client 10.0]TCP Provider: An existing connection was forcibly closed by remote host. [Microsoft][SQL Server Native Client 10.0] Client unable to establish connection.
+  > The connection failed with SQL State: '08001' SQL Server Error: 10054 [Microsoft][SQL Server Native Client 10.0]TCP Provider: An existing connection was forcibly closed by remote host. [Microsoft][SQL Server Native Client 10.0] Client unable to establish connection.
 
 This message might be displayed because the application server uses the older version of Diffie-Hellman algorithm (v1) and SQL Server uses the newer version (v2). This mismatch causes intermittent TLS failures.
 
@@ -55,3 +55,7 @@ To resolve these issues, follow these steps:
    - [Release notes for OLE DB Driver - OLE DB Driver for SQL Server](/sql/connect/oledb/release-notes-for-oledb-driver-for-sql-server?view=sql-server-ver16&preserve-view=true)
 
    - [Release Notes for ODBC Driver for SQL Server on Windows - ODBC Driver for SQL Server](/sql/connect/odbc/windows/release-notes-odbc-sql-server-windows)
+
+## See also
+
+[An existing connection was forcibly closed by the remote host (OS error 10054)](tls-exist-connection-closed.md)
