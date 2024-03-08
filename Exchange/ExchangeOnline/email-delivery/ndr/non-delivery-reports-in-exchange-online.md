@@ -1,6 +1,6 @@
 ---
 title: Email non-delivery report (NDR) and SMTP errors in Exchange Online
-ms.date: 03/06/2024
+ms.date: 03/08/2024
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
