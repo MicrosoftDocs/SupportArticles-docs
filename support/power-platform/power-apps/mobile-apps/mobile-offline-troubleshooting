@@ -7,3 +7,14 @@ Data sync can fail in offline-enabled apps due to various errors. Depending on t
 If the offline sync status icon indicates a warning or error, you can tap on it to open the Device Status page to see more details. In the Device Status page, you’ll see your current device state and details from the last sync. If an error or warning occurred, you’ll see a message describing what went wrong.  
 
 See [View offline sync status - Power Apps | Microsoft Learn](https://learn.microsoft.com/power-apps/mobile/offline-sync-icon#types-of-offline-syncs). 
+
+## Canvas apps (preview)
+In canvas apps, sync errors may occur when opening the app for the first time. A dialogue will appear with the error message. See [Work with canvas apps offline (preview) - Power Apps | Microsoft Learn](https://learn.microsoft.com/power-apps/mobile/canvas-mobile-offline-working) for details. 
+
+## Offline sync errors 
+If you encounter an error while syncing offline data, look for the error message below and contact your admin or app maker to follow the recommended actions. 
+
+Make sure you have the latest version of the app from the Google Play Store, Apple App Store or Microsoft Store. 
+
+| Error message | Recommended actions|
+| Failed to download because we cannot connect to the server. | Check that you have a strong internet connection and try again. 
