@@ -68,3 +68,7 @@ To resolve this error, follow these steps.
 1. Restart the server again.
 
 To check the connectivity by using UDL, see [Universal Data Link (UDL) configuration](/sql/connect/oledb/help-topics/data-link-pages).
+
+## See also
+
+[An existing connection was forcibly closed by the remote host (OS error 10054)](tls-exist-connection-closed.md)
