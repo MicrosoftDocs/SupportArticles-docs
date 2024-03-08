@@ -18,6 +18,7 @@ ms.custom:
   - CI 121996
   - CI 160661
   - CI 164223
+  - CI 187786
 appliesto: 
   - Microsoft Teams
 search.appverid: 
@@ -60,12 +61,6 @@ ms.date: 02/22/2024
 |an't resume a call after using **Consult first** option on Teams phones | After using the **Consult first** option in the **Transfer** menu when you select the **Resume** option to resume the call, the call fails. | End the call made by using the **Consult first** option and then resume the original call.|
 |Calls on long hold in GCCH tenants drop intermittently|On GCCH tenants that are running 2022 update #4A (Teams app version 1449/1.0.94.2022110803), when a user puts a call on long hold the call drops in some instances. This issue doesn't occur on other clouds.|No workaround is available at this time.|
 |In Better together mode, the **Mute** setting on Teams phones doesn't seem to work during a screen share with audio|On Teams phones that use the Better together feature, when you share a screen and enable the **Include computer sound** option during a Teams meeting, the audio from the phones that are muted is still heard.<br/><br/>If you toggle the **Unmute** and **Mute** options a few times, the audio output that is coming from both from the desktop client and the Teams phones results in howling.|No workaround is available at this time.|
-
-## Issues with Teams panels
-
-| Issue  |  Description | Workaround |
-| --- | --- | --- |
-|Joining a meeting on a Teams Rooms device doesn't check you in for the meeting|You have a panel that shares a resource account with a Teams Room device. If you join a scheduled meeting on the Teams Rooms device, you might not be checked in for your reservation on the panel. This issue occurs intermittently.|If the issue is happening often, turn off the **Release room if no one checks in** setting in the Microsoft Teams admin center.|
 
 ## Limitations
 
