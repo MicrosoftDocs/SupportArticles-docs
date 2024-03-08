@@ -89,7 +89,7 @@ When a computer starts up, it may take some time until a network connection is e
 - Requirement to authenticate to wired network authentication services.
 - Other network services are required to establish a connection between the client network and a network with Internet connectivity.
 
-No settings are available to delay the automatic user logon for a Microsoft Entra ID user until the network connectivity is available. The computer would attempt the logon and fail as no server endpoint is available to process the logon request.
+No settings are available to delay the automatic user logon for a Microsoft Entra ID user until the network connectivity is available. The computer will attempt the logon and fail as no server endpoint is available to process the logon request.
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
 
