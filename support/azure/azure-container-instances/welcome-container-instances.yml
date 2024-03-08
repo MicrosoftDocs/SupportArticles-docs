@@ -56,7 +56,7 @@ landingContent:
             url: acr-image-pull-failures-managed-identity.md
           - text: Confidential container issues
             url: common-confidential-container-errors.md
-          - text: Container group killing events
+          - text: Container group killing event interruptions
             url: container-group-restart-killing-event-interruption.md
           - text: Container group remains in transitioning state
             url: container-group-transitioning-state.md
