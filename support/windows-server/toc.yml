@@ -1855,8 +1855,6 @@ items:
       href: ./networking/configure-proxy-server-settings.md
     - name: Configure SNMP Service
       href: ./networking/configure-snmp-service.md
-    - name: Delete all active connections from local computer
-      href: ./networking/delete-active-connections-from-local-computer.md
     - name: Direct host SMB over TCP/IP
       href: ./networking/direct-hosting-of-smb-over-tcpip.md
     - name: DirectAccess clients unable to connect when a static proxy is configured
