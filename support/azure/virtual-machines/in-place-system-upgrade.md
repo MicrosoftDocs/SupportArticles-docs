@@ -44,8 +44,8 @@ In-place system upgrades are supported for specific versions of Azure Windows VM
 - Windows 8.1
 - Windows 7 Enterprise
 
-   > [!NOTE]
-   > When migrating to Windows 11, follow best practices by deploying new virtual machines. This approach avoids potential compatibility issues and ensures an optimized configuration.
+> [!NOTE]
+> When migrating from Windows 10 to Windows 11, follow best practices by deploying new virtual machines. This approach avoids potential compatibility issues and ensures an optimized configuration.
    
 ## In-place system upgrade process for a Windows 10 VM
 
