@@ -7,6 +7,7 @@ documentationcenter: ''
 author: genlin
 manager: dcscontentpm
 tags: top-support-issue,azure-service-management,azure-resource-manager
+ms.custom: linux-related-content
 ms.service: virtual-machines
 ms.subservice: vm-cannot-connect
 
@@ -17,7 +18,6 @@ ms.tgt_pltfrm: vm-linux
 ms.topic: troubleshooting
 ms.date: 10/31/2018
 ms.author: genli
-
 ---
 # Detailed SSH troubleshooting steps for issues connecting to a Linux VM in Azure
 

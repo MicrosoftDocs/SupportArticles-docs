@@ -11,10 +11,10 @@ ms.subservice: vm-backup-restore
 ms.collection: linux
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-linux
+ms.custom: linux-related-content
 ms.workload: infrastructure
 ms.date: 10/11/2021
 ms.author: genli
-
 ---
 
 # Troubleshoot a Linux VM by attaching the OS disk to a recovery VM using the Azure portal
