@@ -201,7 +201,7 @@ Refers to enabling or restricting access to SQL Server database. For more inform
 
 ### User has not logged in
 
-Refers to the Anonymous Logon Account error. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error?view=sql-server-ver16).
+Refers to the Anonymous Logon Account error. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error).
 
 ### Linked Server Account Mapping
 
@@ -376,7 +376,7 @@ When a user belongs to multiple groups, there can be authentication issues in Ke
 
 ### Expired tickets
 
-Refers to Kerberos tickets. Using expired Kerberos tickets can cause issues in authentication. For more information, see "Expired tickets".
+Refers to Kerberos tickets. Using expired Kerberos tickets can cause issues in authentication. For more information, see [Expired tickets](expired-tickets-issue.md).
 
 ### Clock skew is too high
 
