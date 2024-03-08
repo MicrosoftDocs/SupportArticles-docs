@@ -1,6 +1,6 @@
 ---
 title: Can't modify the Hosts or Lmhosts file
-description: This article describes how to modify the Hosts file or the Lmhosts file.
+description: This article provides a workaround for a problem that prevents you from modifying the Hosts file or the Lmhosts file.
 ms.date: 03/08/2024
 manager: dcscontentpm
 audience: itpro
