@@ -22,7 +22,7 @@ When intermittent or periodic network issues occur, you might encounter the foll
 - **Connection Timeout Expired**: The connection to the server timed out, suggesting a delay or unavailability of the server.
 - **General network error**: A general network error message often indicates an unspecified issue with the network.
 - **Transport-level error**: This error occurs at the transport layer, suggesting problems with data transmission.
-- **The specified network name is no long available**: This message implies that the specified network resource can't be reached.
+- **The specified network name is no longer available**: This message implies that the specified network resource can't be reached.
 - **Semaphore timeout**: This error points to a timeout condition related to the use of semaphores in the network.
 - **The Wait Operation Timed Out**: A wait operation has exceeded its allowed time, typically due to network delays.
 - **A fatal error occurred while reading the input stream from the network**: This message suggests a critical error when reading data from the network.
@@ -148,7 +148,7 @@ Consult your network security admins. If the situation improves, you may need to
 
 ### Windows Firewall auditing
 
-The [Application side reset](/troubleshoot/windows-client/networking/tcp-ip-connectivity-issues-troubleshooting#application-side-reset) section in the article "Troubleshoot TCP/IP connectivity" descri how to turn on firewall auditing in Windows to determine whether the firewall has dropped any packets.
+The [Application side reset](/troubleshoot/windows-client/networking/tcp-ip-connectivity-issues-troubleshooting#application-side-reset) section in the article "Troubleshoot TCP/IP connectivity" describes how to turn on firewall auditing in Windows to determine whether the firewall has dropped any packets.
 
 For SQL Server, this could be the client or server machine. The network trace will show that the machine received a packet but didn't respond. The packet may then be retransmitted, again get no response, and eventually, the connection is reset.
 
@@ -191,7 +191,7 @@ For other offloading, you have to go to the network adapter properties to view a
 
 The ESX host that contains the virtual machine (VM) has a small network buffer that can cause reliability issues if there's a burst in traffic. The following VMware article describes how to increase the buffer size. No reboot is required. This operation must be done on the ESX host machine, not the VM.
 
-[Large packet loss in the guest OS using VMXNET3 in ESXi]( https://kb.vmware.com/s/article/2039495)
+[Large packet loss in the guest OS using VMXNET3 in ESXi](https://kb.vmware.com/s/article/2039495)
 
 In addition, try moving the VMs to a different ESX host server or moving the client and server to the same ESX host server and see whether the problem goes away. If it does, it's a base network issue.
 
