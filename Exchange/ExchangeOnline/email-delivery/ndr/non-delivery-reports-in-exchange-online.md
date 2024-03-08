@@ -218,8 +218,6 @@ Although the **Original message headers** are omitted from this example due to t
 
 - [My messages won't send](https://support.office.com/article/97748418-bbd5-4743-a05b-581f22a466dd.aspx)
 
-- [Fix Outlook account problems in Microsoft 365](https://go.microsoft.com/fwlink/p/?LinkId=724310)
-
 - [Message trace in the Security & Compliance Center](/office365/securitycompliance/message-trace-scc)
 
 - [Troubleshoot Microsoft 365 mail flow](/exchange/mail-flow-best-practices/troubleshoot-mail-flow)
