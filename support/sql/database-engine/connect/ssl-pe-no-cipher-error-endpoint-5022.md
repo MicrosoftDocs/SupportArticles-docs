@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting the SSL_PE_NO_CIPHER error
 description: This article helps you to resolve the SSL_PE_NO_CIPHER error that occurs on endpoint 5022.
-ms.date: 01/08/2024
+ms.date: 03/08/2024
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
@@ -121,3 +121,7 @@ To resolve this error, follow these steps:
 
 > [!NOTE]
 > Microsoft recommends you to back up the Windows registry.
+
+## See also
+
+[An existing connection was forcibly closed by the remote host (OS error 10054)](tls-exist-connection-closed.md)
