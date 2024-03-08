@@ -15,6 +15,9 @@ items:
   href: corrupt-user-profile.md
 - name: Existing connection forcibly closed
   href: tls-exist-connection-closed.md
+  items:
+  - name: Intermittent connection errors with SQLCMD
+    href: intermittent-connection-errors-sqlcmd.md
 - name: Explicit SPN is misplaced problem in SQL Server
   href: explicit-spn-is-misplaced.md
 - name: Troubleshooting KRB_AP_ERR_TKT_EXPIRED in Kerberos tickets
