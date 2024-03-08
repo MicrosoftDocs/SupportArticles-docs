@@ -1,7 +1,7 @@
 ---
 title: Gather information by using TSS for Windows failover cluster related issues
 description: Introduces how to gather information by using TSS for Windows failover cluster related issues.
-ms.date: 03/05/2024
+ms.date: 03/08/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
