@@ -11,7 +11,7 @@ ms.custom: sap:dns, csstroubleshoot
 ---
 # You can't modify the Hosts file or the Lmhosts file
 
-This article provides a workaround for a problem where you fail to modify the Hosts file or the Lmhosts file.
+This article provides a workaround for a problem in which you can't modify the Hosts file or the Lmhosts file.
 
 _Applies to:_ &nbsp; Windows, all versions, and Windows Server, all versions  
 _Original KB number:_ &nbsp; 923947
@@ -29,7 +29,7 @@ When you try to change the Hosts file or the Lmhosts file, Windows might deny yo
     > Cannot create the C:\Windows\System32\drivers\etc\hosts file.  
     > Make sure that the path and file name are correct.
 
-This issue occurs even though you sign in by using an account that has administrative credentials.
+This problem occurs even though you sign in by using an account that has administrative credentials.
 
 ## Workaround
 
