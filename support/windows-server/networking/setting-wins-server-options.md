@@ -1,6 +1,6 @@
 ---
 title: Error or connection issues when you configure WINS addresses for a WINS server
-description: Provides a solution to an error that occurs if you try to specify the same WINS address for a server as both Primary and Secondary, or if you set the same Primary address on multiple WINS servers.
+description: Provides a solution to problems that occur when you configure the Primary WINS address and Secondary WINS address of a WINS server.
 ms.date: 03/08/2024
 manager: dcscontentpm
 audience: itpro
@@ -25,13 +25,13 @@ When you configure the Primary and Secondary WINS address for a WINS server, you
 
 > The WINS server is already in the list.
 
-If you do not see this error and the WINS server appears to function, clients begin to experience connection problems. The problems disappear in time, but recur when the affected WINS server restarts.
+If you don't see this error and the WINS server appears to function, clients begin to experience connection problems. The problems disappear in time, but recur when the affected WINS server restarts.
 
 ## Cause
 
-These problems indicate that the WINS server's Primary and Secondary WINS addresses are not correctly configured. You can't use the same address for both the Primary and Secondary WINS address.
+These problems indicate that the WINS server's Primary and Secondary WINS addresses aren't correctly configured. You can't use the same address for both the Primary and Secondary WINS address.
 
-If you set the Primary WINS address to the address of a different WINS server and set the Secondary WINS address to the WINS server's own address, there's no error message. However, when the WINS server registers its services, it might register some of those services on the different WINS server. After a period of time, it registers the services correctly in its local WINS database. As a result, some of the records are registered on both WINS servers. This is known as "split registration."
+If you set the Primary WINS address to the address of a different WINS server and set the Secondary WINS address to the WINS server's own address, there's no error message. However, when the WINS server registers its services, it might register some of those services on the different WINS server. After a period of time, it registers the services correctly in its local WINS database. As a result, some of the records are registered on both WINS servers. This situation is known as "split registration."
 
 Split registration can cause connection problems. Clients might not be able to connect to the affected WINS server or its services. As the split registration replicates to other WINS servers, the likelihood of connection problems for clients increases. The exact conditions that cause failure vary. The severity of the issue depends on your replication scheme.
 
@@ -47,7 +47,7 @@ Microsoft has confirmed that this is a problem in the Microsoft products that ar
 
 ## More information
 
-When a Windows Server-based computer runs the WINS service and participates in WINS database replication on the network, you must carefully configure the destination that the WINS server uses for its own name resolution.
+When a Windows Server-based computer runs the WINS service and participates in WINS database replication on the network, you must carefully configure the destination that the WINS server uses to resolve its own name.
 
 You can configure this setting in the Network control panel, in **TCP/IP Protocol** > **Configuration**. You can also configure this setting by using the registry (although if the address is already added, you don't have to add it again).
 
@@ -55,7 +55,7 @@ You can configure this setting in the Network control panel, in **TCP/IP Protoco
 
 When any WINS-enabled computer starts, it registers different kinds of services with WINS. Typically, the computer has a Primary and Secondary WINS address configured in the TCP/IP setup. If the Primary WINS address doesn't respond to the registration attempts, the computer tries the Secondary WINS address.
 
-When a WINS server starts, it should register its own services in its own local WINS database before it connects to other WINS servers. However, the WINS server might try to register services before its own WINS service starts. If the Primary WINS address is set to a remote WINS server, or if both the WINS addresses are set to remote WINS servers, the newly started WINS server might register its own services in the database of a remote WINS server. After the local WINS service starts, the WINS server registers its services locally. However, this doesn't immediately remove the remote registrations.
+When a WINS server starts, it should register its own services in its own local WINS database before it connects to other WINS servers. However, the WINS server might try to register services before its own WINS service starts. If the Primary WINS address is set to a remote WINS server, or if both the WINS addresses are set to remote WINS servers, the newly started WINS server might register its own services with a remote WINS server. After the local WINS service starts, the WINS server registers its services locally. However, this doesn't immediately remove the remote registrations.
 
 ### Example
 
