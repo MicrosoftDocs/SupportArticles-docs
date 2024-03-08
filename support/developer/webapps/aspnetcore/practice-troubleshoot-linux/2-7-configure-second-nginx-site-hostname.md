@@ -2,6 +2,7 @@
 title: Configure a second website with hostname in Nginx
 description: This article describes how to configure a second website in Nginx by using hostname, and how to test the configuration.
 ms.date: 09/03/2021
+ms.custom: linux-related-content
 ms.reviewer: ramakoni, ahmetmb
 author: ahmetmithat
 ---

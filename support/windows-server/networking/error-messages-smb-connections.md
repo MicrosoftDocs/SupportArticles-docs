@@ -74,4 +74,4 @@ To work around this problem, use either of the following methods:
 
 ## References
 
-For more information, see [New SMB 3.0 features in the Windows Server 2012 file server](/troubleshoot/windows-server/high-availability/smb-3-%20file-server-features)
+For more information, see [New SMB 3.0 features in the Windows Server 2012 file server](../high-availability/smb-3-file-server-features.md)

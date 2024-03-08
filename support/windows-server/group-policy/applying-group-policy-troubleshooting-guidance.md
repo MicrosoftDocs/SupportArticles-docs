@@ -205,7 +205,7 @@ Check if the LDAP ports are open. If not, then make sure the ports are open on t
 #### How to determine port block
 
 - Use portqueryUI tool to determine which ports are blocked. For more information, see [How to use PortQry to troubleshoot Active Directory connectivity issues](../networking/use-portqry-verify-active-directory-tcp-ip-connectivity.md).
-- Use [telnet](../../windows-client/networking/use-telnet-to-test-port-3389-functionality.md) for port 389 to check connectivity on the ldap port.
+- Use [telnet](../networking/troubleshoot-tcp-ip-communication-guidance.md) for port 389 to check connectivity on the ldap port.
 - How to [configure domain and trust ports](../identity/config-firewall-for-ad-domains-and-trusts.md).
 - Configuring the [default outbound firewall behavior](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee215186%28v=ws.10%29).
 - Configure [firewall port requirements for Group Policy](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj572986%28v=ws.11%29).

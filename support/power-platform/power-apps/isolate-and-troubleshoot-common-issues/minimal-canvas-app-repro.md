@@ -130,7 +130,7 @@ You can [export custom pages in an unmanaged solution](/power-apps/maker/data-pl
 - [Ask a question with Microsoft Power Apps Community](https://powerusers.microsoft.com/t5/Power-Apps-Community/ct-p/PowerApps1)
 - [Get Microsoft Support](https://powerapps.microsoft.com/support/)
 
-### See also
+## See also
 
 - [Debugging canvas apps with Monitor](/power-apps/maker/monitor-canvasapps)
 - [Debugging model-driven apps with Monitor](/power-apps/maker/monitor-modelapps)
