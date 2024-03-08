@@ -9,7 +9,7 @@ metadata:
   ms.topic: landing-page # Required
   author: genlin  #Required; your GitHub user alias, with correct capitalization.
   ms.author: genli #Required; microsoft alias of author; optional team alias.
-  ms.date: 03/05/2024
+  ms.date: 03/08/2024
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -50,14 +50,14 @@ landingContent:
         links:
           - text: Azure Container Instances shows unexpected memory usage metrics
             url: unexpected-memory-usage-metrics.md
-          - text: Container Group Killing Event
-            url: container-group-restart-killing-event-interruption.md
           - text: Can't do operations or the container group is in a bad state
             url: cannot-do-container-group-operations.md
           - text: Can't pull images from Container Registry using a managed identity
             url: acr-image-pull-failures-managed-identity.md
           - text: Confidential container issues
             url: common-confidential-container-errors.md
+          - text: Container group killing events
+            url: container-group-restart-killing-event-interruption.md
           - text: Container group remains in transitioning state
             url: container-group-transitioning-state.md
           - text: Container group still runs after a stop or delete command 
