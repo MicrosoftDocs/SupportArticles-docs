@@ -3,7 +3,7 @@ title: Troubleshoot issues with emails
 description: Provides resolutions for the known issues that are related to emails in Dynamics 365 Sales.
 author: sbmjais
 ms.author: shjais
-ms.reviewer: 
+ms.reviewer: lavanyakr, aam, veparim
 ms.date: 03/08/2024
 ms.subservice: d365-sales-sales
 ---
