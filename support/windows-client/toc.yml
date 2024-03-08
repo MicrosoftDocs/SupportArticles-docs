@@ -429,8 +429,6 @@ items:
     items:
     - name: Change default MTU Size Settings
       href: ./networking/change-default-mtu-size-for-ppp-vpn-connection.md
-    - name: CMAK-based VPN client doesn't work
-      href: ./networking/cmak-based-vpn-doesnt-work.md
     - name: Default gateway route doesn't appear in Routing Table
       href: ./networking/default-gateway-route-not-appear.md
     - name: DirectAccess clients can't connect by IP-HTTPS
@@ -1131,6 +1129,14 @@ items:
       href: ./windows-tss/gather-information-using-tss-deployment.md
     - name: Gather information for Windows Update for Business reports-related issues
       href: ./windows-tss/gather-information-using-tss-wufb-reports.md
+  - name: Storage and High Availability (SHA)
+    items:
+    - name: Gather information for Hyper-V related issues
+      href: ./windows-tss/gather-information-using-tss-hyper-v-issues.md
+    - name: Gather information for SQL cluster (AG/FCI) related issues
+      href: ./windows-tss/gather-information-using-tss-sql-cluster-ag-fci-issues.md
+    - name: Gather information for Windows failover cluster related issues
+      href: ./windows-tss/gather-information-using-tss-windows-failover-cluster-issues.md
   - name: User Experience (UEX)
     items:
     - name: Gather information for user experience-related issues

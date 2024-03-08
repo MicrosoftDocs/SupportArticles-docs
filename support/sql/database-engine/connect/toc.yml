@@ -18,6 +18,10 @@ items:
   items:
   - name: Troubleshoot issues in connection after implementing cipher suite policies on a server
     href: issues-connection-after-implementing-cipher-suite-policies.md
+  - name: The SSL_PE_NO_CIPHER error occurs on endpoint 5022
+    href: ssl-pe-no-cipher-error-endpoint-5022.md
+  - name: Intermittent connection errors with SQLCMD
+    href: intermittent-connection-errors-sqlcmd.md
 - name: Explicit SPN is misplaced problem in SQL Server
   href: explicit-spn-is-misplaced.md
 - name: Troubleshooting KRB_AP_ERR_TKT_EXPIRED in Kerberos tickets
@@ -26,6 +30,8 @@ items:
   href: intermittent-periodic-authentication.md
 - name: Login failed for user
   href: /sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error?context=/troubleshoot/sql/context/context
+- name: Troubleshooting the network access issues in SQL Server
+  href: network-login-disallowed.md
 - name: Troubleshooting local security subsystem errors in SQL Server
   href: local-security-subsystem-errors.md
 - name: Troubleshooting linked server account mapping error in SQL Server

@@ -54,7 +54,7 @@ In a particular case, the Windows Management Instrumentation is restarted as par
 
 If you're running SCCM 2012, ensure that you're not running in the behavior described in the following article:
 
-[Configuration Manager management points fail after the Client Health Evaluation task runs](/troubleshoot/mem/configmgr/management-points-fail-http-500-errors)
+[Configuration Manager management points fail after the Client Health Evaluation task runs](../../mem/configmgr/setup-migrate-backup-recovery/management-points-fail-http-500-errors.md)
 
 ## Data collection
 
