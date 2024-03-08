@@ -1133,6 +1133,8 @@ items:
     items:
     - name: Gather information for Hyper-V related issues
       href: ./windows-tss/gather-information-using-tss-hyper-v-issues.md
+    - name: Gather information for SQL cluster (AG/FCI) related issues
+      href: ./windows-tss/gather-information-using-tss-sql-cluster-ag-fci-issues.md
     - name: Gather information for Windows failover cluster related issues
       href: ./windows-tss/gather-information-using-tss-windows-failover-cluster-issues.md
   - name: User Experience (UEX)
