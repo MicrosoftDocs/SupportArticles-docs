@@ -24,6 +24,16 @@ This article discusses common issues in the Red Hat Update Infrastructure (RHUI)
 > [!IMPORTANT]
 > RHUI is intended for only pay-as-you-go images. Are you using custom or golden images (also known as "bring-your-own-subscription (BYOS)") instead? In that case, the system has to be attached to Red Hat Subscription Manager (RHSM) or Satellite in order to receive updates. For more information, see [How to register and subscribe an RHEL system to the Red Hat Customer Portal using RHSM](https://access.redhat.com/solutions/253273).
 
+
+> [!NOTE]
+>
+> - As of October 12, 2023, all pay-as-you-go (PAYG) clients will be directed to the Red Hat Update Infrastructure (RHUI) 4 IPs in phase over the next two months. During this time, the RHUI3 IPs will remain for continued updates but will be removed at a future time. Existing routes and rules allowing access to RHUI3 IPs must be updated to also include RHUI4 IP addresses for uninterrupted access to packages and updates. Do not remove RHUI3 IPs to continue receiving updates during the transition period.
+>
+> - Also, the new Azure US Government images, as of January 2020, uses Public IP mentioned previously under the Azure Global header.
+>
+> - Also, Azure Germany is deprecated in favor of public Germany regions. We recommend for Azure Germany customers to start pointing to public RHUI by using the steps in [Manual update procedure to use the Azure RHUI servers](#manual-update-procedure-to-use-the-azure-rhui-servers).
+
+
 ## Cause 1: RHUI client certificate is expired
 
 The Azure RHUI certificates typically expire every two years. If you use an older RHEL VM image, such as RHEL version 7.4 (image URN: `RedHat:RHEL:7.4:7.4.2018010506`), you experience degraded connectivity to RHUI because of a now-expired TLS/SSL client certificate. For example, you might receive one of the following error messages:
@@ -268,15 +278,13 @@ The following steps apply if the OS version is *earlier than RHEL 7.9* and the V
 2. Add the required client configuration RPM repositories for `SAPAPPS` to the */root/repo.config* file:
 
    ```console
-   [rhui-microsoft-azure-rhel7-sapapps]
-   name=Microsoft Azure RPMs for Red Hat Enterprise Linux 7 (rhel7-sapapps)
-   baseurl=https://rhui-1.microsoft.com/pulp/repos/microsoft-azure-rhel7-sap
-           https://rhui-2.microsoft.com/pulp/repos/microsoft-azure-rhel7-sap
-           https://rhui-3.microsoft.com/pulp/repos/microsoft-azure-rhel7-sap
-   enabled=1
-   gpgcheck=1
-   gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-microsoft-azure-release
-   sslverify=1
+   [rhui-microsoft-azure-rhel7-sapapps] 
+   name=Microsoft Azure RPMs for Red Hat Enterprise Linux 7 (rhel7-sapapps) 
+   baseurl=https://rhui4-1.microsoft.com/pulp/repos/unprotected/microsoft-azure-rhel7-sap 
+   enabled=1 
+   gpgcheck=1 
+   gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-microsoft-azure-release 
+   sslverify=1 
    ```
 
 3. Install the `rhui-azure-rhel7-sapapps` package by running the `yum install` command:
@@ -310,15 +318,13 @@ The following steps apply if the OS version is *RHEL 7.9* and the VM was created
 2. Add the required client configuration RPM repositories for `SAPAPPS` to the */root/repo.config* file:
 
    ```console
-   [rhui-microsoft-azure-rhel7-base-sap-apps]
-   name=Microsoft Azure RPMs for Red Hat Enterprise Linux 7 (rhel7-base-sap-apps)
-   baseurl=https://rhui-1.microsoft.com/pulp/repos/microsoft-azure-rhel7-base-sap-apps
-           https://rhui-2.microsoft.com/pulp/repos/microsoft-azure-rhel7-base-sap-apps
-           https://rhui-3.microsoft.com/pulp/repos/microsoft-azure-rhel7-base-sap-apps
-   enabled=1
-   gpgcheck=1
-   gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-microsoft-azure-release
-   sslverify=1
+   [rhui-microsoft-azure-rhel7-base-sap-apps] 
+   name=Microsoft Azure RPMs for Red Hat Enterprise Linux 7 (rhel7-base-sap-apps) 
+   baseurl=https://rhui4-1.microsoft.com/pulp/repos/unprotected/microsoft-azure-rhel7-base-sap-apps 
+   enabled=1 
+   gpgcheck=1 
+   gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-microsoft-azure-release 
+   sslverify=1  
    ```
 
 3. Install the `rhui-azure-rhel7-base-sap-apps` package by running the `yum install` command:
@@ -352,9 +358,7 @@ To install the `SAP-HANA` repositories in this specific scenario, install the `E
    ```console
    [rhui-microsoft-azure-rhel7-sap-ha]
    name=Microsoft Azure RPMs for Red Hat Enterprise Linux 7 (rhel7-e4s)
-   baseurl=https://rhui-1.microsoft.com/pulp/repos/microsoft-azure-rhel7-e4s
-           https://rhui-2.microsoft.com/pulp/repos/microsoft-azure-rhel7-e4s
-           https://rhui-3.microsoft.com/pulp/repos/microsoft-azure-rhel7-e4s
+   baseurl=https://rhui4-1.microsoft.com/pulp/repos/unprotected/microsoft-azure-rhel7-e4s
    enabled=1
    gpgcheck=1
    gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-microsoft-azure-release
@@ -397,15 +401,13 @@ The images from the following offers that were created *after* December 2019 are
 2. Add the required client configuration RPM repositories for `E4S` to the */root/repo.config* file:
 
    ```console
-   [rhui-microsoft-azure-rhel7-sap-ha]
-   name=Microsoft Azure RPMs for Red Hat Enterprise Linux 7 (rhel7-e4s)
-   baseurl=https://rhui-1.microsoft.com/pulp/repos/microsoft-azure-rhel7-e4s
-           https://rhui-2.microsoft.com/pulp/repos/microsoft-azure-rhel7-e4s
-           https://rhui-3.microsoft.com/pulp/repos/microsoft-azure-rhel7-e4s
-   enabled=1
-   gpgcheck=1
-   gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-microsoft-azure-release
-   sslverify=1
+   [rhui-microsoft-azure-rhel7-sap-ha] 
+   name=Microsoft Azure RPMs for Red Hat Enterprise Linux 7 (rhel7-e4s) 
+   baseurl=https://rhui4-1.microsoft.com/pulp/repos/unprotected/microsoft-azure-rhel7-e4s 
+   enabled=1 
+   gpgcheck=1 
+   gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-microsoft-azure-release 
+   sslverify=1 
    ```
 
 3. Install the `rhui-azure-rhel7-sap-ha` package by running the `yum install` command:
@@ -439,15 +441,13 @@ The following steps apply if the OS version is *RHEL 7.9* and the VM was created
 2. Add the required client configuration RPM repositories for `microsoft-azure-rhel7-base-sap-ha` to the */root/repo.config* file:
 
    ```console
-   [rhui-microsoft-azure-rhel7-base-sap-ha]
-   name=Microsoft Azure RPMs for Red Hat Enterprise Linux 7 (rhel7-base-sap-ha)
-   baseurl=https://rhui-1.microsoft.com/pulp/repos/microsoft-azure-rhel7-base-sap-ha
-           https://rhui-2.microsoft.com/pulp/repos/microsoft-azure-rhel7-base-sap-ha
-           https://rhui-3.microsoft.com/pulp/repos/microsoft-azure-rhel7-base-sap-ha
-   enabled=1
-   gpgcheck=1
-   gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-microsoft-azure-release
-   sslverify=1
+   [rhui-microsoft-azure-rhel7-base-sap-ha] 
+   name=Microsoft Azure RPMs for Red Hat Enterprise Linux 7 (rhel7-base-sap-ha) 
+   baseurl=https://rhui4-1.microsoft.com/pulp/repos/unprotected/microsoft-azure-rhel7-base-sap-ha 
+   enabled=1 
+   gpgcheck=1 
+   gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-microsoft-azure-release 
+   sslverify=1 
    ```
 
 3. Install the `rhui-azure-rhel7-base-sap-ha` package by running the `yum install` command:
