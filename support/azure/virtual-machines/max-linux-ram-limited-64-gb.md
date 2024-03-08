@@ -5,6 +5,7 @@ ms.date: 09/18/2023
 ms.reviewer: 
 ms.service: virtual-machines
 ms.subservice: vm-support-statements
+ms.custom: linux-related-content
 ms.collection: linux
 ---
 # The maximum memory of an Azure Linux virtual machine is limited to 64 GB

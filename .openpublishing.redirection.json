@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "support/windows-server/networking/value-does-not-fall-within-the-expected-range.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/value-does-not-fall-within-the-expected-range",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/windows-server/virtualization/windows-server-2019-support-for-live-migration-after-installing-hyper-v-role.md",
       "redirect_url": "/troubleshoot/windows-server/virtualization/troubleshoot-live-migration-guidance",
       "redirect_document_id": false
@@ -1888,6 +1893,11 @@
     {
       "source_path": "support/power-platform/power-apps/index.md",
       "redirect_url": "/support/power-platform/power-apps/welcome-power-apps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-pages/index.md",
+      "redirect_url": "/support/power-platform/power-pages/welcome-power-pages",
       "redirect_document_id": false
     },
     {
@@ -9894,6 +9904,226 @@
       "source_path": "support/windows-server/windows-security/enabling-smart-card-logon-third-party-certification-authorities.md",
       "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/enabling-smart-card-logon-third-party-certification-authorities",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/modifications-not-reflect-portal.md",
+      "redirect_url": "/troubleshoot/azure/automation/modifications-not-reflect-portal",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/automation-scripted-diagnostic-capture.md",
+      "redirect_url": "/troubleshoot/azure/automation/automation-scripted-diagnostic-capture",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/find-azurermresource-fails.md",
+      "redirect_url": "/troubleshoot/azure/automation/find-azurermresource-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/capture-debug-stream-automation-runbook.md",
+      "redirect_url": "/troubleshoot/azure/automation/capture-debug-stream-automation-runbook",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/reinstall-oms-agent-linux.md",
+      "redirect_url": "/troubleshoot/azure/automation/reinstall-oms-agent-linux",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/apim-troubleshooting-series.md",
+      "redirect_url": "/troubleshoot/azure/api-mgmt/apim-troubleshooting-series",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/api-return-blank-response.md",
+      "redirect_url": "/troubleshoot/azure/api-mgmt/api-return-blank-response",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/soap-based-api-return-404-http-code.md",
+      "redirect_url": "/troubleshoot/azure/api-mgmt/soap-based-api-return-404-http-code",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/unauthorized-errors-invoke-apis.md",
+      "redirect_url": "/troubleshoot/azure/api-mgmt/unauthorized-errors-invoke-apis",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/performance-hit-api-calls.md",
+      "redirect_url": "/troubleshoot/azure/api-mgmt/performance-hit-api-calls",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/request-throttling-http-403.md",
+      "redirect_url": "/troubleshoot/azure/api-mgmt/request-throttling-http-403",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/sdp3fdcb6045-5616-45b4-bb68-0bd11081c184-vnet.md",
+      "redirect_url": "/troubleshoot/azure/virtual-network/sdp3fdcb6045-5616-45b4-bb68-0bd11081c184-vnet",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/fabric-logs.md",
+      "redirect_url": "/troubleshoot/azure/service-fabric/fabric-logs",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/access-denied-execute-azure-batch-job.md",
+      "redirect_url": "/troubleshoot/azure/hpc-batch/access-denied-execute-azure-batch-job",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/error-accountencryptionkeyunavailable.md",
+      "redirect_url": "/troubleshoot/azure/hpc-batch/error-accountencryptionkeyunavailable",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/batch-node-creation-delay-restart-reimage.md",
+      "redirect_url": "/troubleshoot/azure/hpc-batch/batch-node-creation-delay-restart-reimage",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/azure-batch-node-unusable-state.md",
+      "redirect_url": "/troubleshoot/azure/hpc-batch/azure-batch-node-unusable-state",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/azure-batch-pool-creation-failure.md",
+      "redirect_url": "/troubleshoot/azure/hpc-batch/azure-batch-pool-creation-failure",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/azure-batch-pool-deletion-failure.md",
+      "redirect_url": "/troubleshoot/azure/hpc-batch/azure-batch-pool-deletion-failure",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/azure-batch-task-stuck-in-running-state.md",
+      "redirect_url": "/troubleshoot/azure/hpc-batch/azure-batch-task-stuck-in-running-state",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/azure-batch-pool-resizing-failure.md",
+      "redirect_url": "/troubleshoot/azure/hpc-batch/azure-batch-pool-resizing-failure",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/azure-batch-task-permission-issue.md",
+      "redirect_url": "/troubleshoot/azure/hpc-batch/azure-batch-task-permission-issue",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/azure-batch-task-failure-no-stdout-stderr-log.md",
+      "redirect_url": "/troubleshoot/azure/hpc-batch/azure-batch-task-failure-no-stdout-stderr-log",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/azure-batch-creates-network-resources.md",
+      "redirect_url": "/troubleshoot/azure/hpc-batch/azure-batch-creates-network-resources",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/use-managed-identities-azure-batch-account-pool.md",
+      "redirect_url": "/troubleshoot/azure/hpc-batch/use-managed-identities-azure-batch-account-pool",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/invalid-client-secret.md",
+      "redirect_url": "/troubleshoot/azure/hpc-cyclecloud/invalid-client-secret",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/error-invalid-azure-credentials-cycle-cloud.md",
+      "redirect_url": "/troubleshoot/azure/hpc-cyclecloud/error-invalid-azure-credentials-cycle-cloud",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/troubleshoot-install-failure-hpc-pack-linux-node-agent.md",
+      "redirect_url": "/troubleshoot/azure/hpc-pack/troubleshoot-install-failure-hpc-pack-linux-node-agent",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/job-stuck-canceling-mode.md",
+      "redirect_url": "/troubleshoot/azure/hpc-pack/job-stuck-canceling-mode",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/hpc-management-service-not-start.md",
+      "redirect_url": "/troubleshoot/azure/hpc-pack/hpc-management-service-not-start",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/compute-node-not-shown-error-state.md",
+      "redirect_url": "/troubleshoot/azure/hpc-pack/compute-node-not-shown-error-state",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/hpc-node-manager-service-unreachable-certificate.md",
+      "redirect_url": "/troubleshoot/azure/hpc-pack/hpc-node-manager-service-unreachable-certificate",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/hpc-pack-excel-offloading-job-stalled.md",
+      "redirect_url": "/troubleshoot/azure/hpc-pack/hpc-pack-excel-offloading-job-stalled",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/hpc-management-reporting-database-connection-issue.md",
+      "redirect_url": "/troubleshoot/azure/hpc-pack/hpc-management-reporting-database-connection-issue",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/hpc-management-reporting-database-permission-problem.md",
+      "redirect_url": "/troubleshoot/azure/hpc-pack/hpc-management-reporting-database-permission-problem",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/error-no-virtual-network-found.md",
+      "redirect_url": "/troubleshoot/azure/hpc-pack/error-no-virtual-network-found",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows/browser-blocks-cookies.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/cannot-sign-in-to-power-automate-for-desktop#browser-blocks-cookies",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-automate/desktop-flows/login-windows-keep-appearing.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/cannot-sign-in-to-power-automate-for-desktop#login-window-keeps-popping-up",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/networking/use-telnet-to-test-port-3389-functionality.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-tcp-ip-communication-guidance",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/networking/allow-remote-users-to-access-your-network.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/install-configure-virtual-private-network-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/networking/general-guidance-troubleshoot-dhcp.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-dhcp-guidance",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/networking/improve-directaccess-network-performance.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/improve-directaccess-network-performance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/networking/cmak-based-vpn-doesnt-work.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/cmak-based-vpn-doesnt-work",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/event-id-7023-is-logged.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/event-id-7023-is-logged",
+      "redirect_document_id": false
     }
   ]
 }

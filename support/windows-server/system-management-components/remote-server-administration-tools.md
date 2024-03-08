@@ -1,12 +1,12 @@
 ---
 title: Remote Server Administration Tools
 description: This article describes the tools that are available in Remote Server Administration Tools for Windows.
-ms.date: 12/26/2023
+ms.date: 03/05/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
-ms.reviewer: kaushika
+ms.reviewer: kaushika, jtrox
 ms.custom: sap:server-manager, csstroubleshoot
 adobe-target: true
 ---
@@ -25,7 +25,7 @@ _Original KB number:_ &nbsp; 2693643
 
 You can't install RSAT on computers that are running Home or Standard editions of Windows. You can install RSAT only on Professional or Enterprise editions of the Windows client operating system. Unless the download page specifically states that RSAT applies to a beta, preview, or other prerelease version of Windows, you must be running a full (RTM) release of the Windows operating system to install and use RSAT. Some users have found ways of manually cracking or hacking the RSAT MSU to install RSAT on unsupported releases or editions of Windows. This behavior is a violation of the Windows end-user license agreement.
 
-Installing RSAT is similar to installing Adminpak.msi in Windows 2000-based or Windows XP-based client computers. However, there's one major difference: in Windows 7, the tools aren't automatically available after you download and install RSAT. Enable the tools that you want to use by using Control Panel. To enable the tools, click **Start**, click **Control Panel**, click **Programs and Features**, and then click **Turn Windows features on or off**.
+Installing RSAT is similar to installing Adminpak.msi in Windows 2000-based or Windows XP-based client computers. However, there's one major difference: in Windows 7, the tools aren't automatically available after you download and install RSAT. Enable the tools that you want to use by using Control Panel. To enable the tools, select **Start** > **Control Panel** > **Programs and Features**, and then select **Turn Windows features on or off**.
 
 In the RSAT releases for Windows 10, tools are again all enabled by default. You can open **Turn Windows features on or off** to disable tools that you don't want to use for Windows 7.
 
@@ -80,9 +80,9 @@ If you have to install management tools in Windows Server 2012 R2 for specific r
 > [!NOTE]
 > You can't use the Turn Windows features on and off dialog from the Control Panel
 
-Installing the RSAT Tools for Windows 10 version 1809 and later version is slightly different from earlier versions. RSAT is now part of the Operating System an can be installed via **Optional Features**.
+Installing the RSAT Tools for Windows 10 version 1809 and later version is slightly different from earlier versions. RSAT is now part of the Operating System and can be added via **Optional Features**.
 
-To enable the tools, click **Start**, click **Settings**, click **Apps**, and then click **Optional features**, after that click on the panel **Add a feature** and enter Remote in the search bar.
+To enable the tools, select **Start** > **Settings** > **Apps** (if you're using Windows 10, version 22H2 or later versions, select **System** instead), and then select **Optional features**. After that, select the **Add a feature** panel and enter *Remote* in the search bar.
 
 ## References
 

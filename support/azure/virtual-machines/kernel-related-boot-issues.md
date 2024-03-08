@@ -7,7 +7,7 @@ ms.date: 01/31/2024
 ms.reviewer: jofrance
 ms.service: virtual-machines
 ms.subservice: vm-cannot-start-stop
-ms.custom: devx-track-azurecli
+ms.custom: devx-track-azurecli, linux-related-content
 ms.collection: linux
 ms.topic: troubleshooting
 ---
