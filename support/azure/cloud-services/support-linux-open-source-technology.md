@@ -7,6 +7,7 @@ author: patcatun
 ms.author: patcatun
 ms.service: cloud-services
 ms.subservice: reference
+ms.custom: linux-related-content
 ---
 
 # Support for Linux and open-source technology in Azure
