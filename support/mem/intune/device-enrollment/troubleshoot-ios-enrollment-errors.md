@@ -2,7 +2,7 @@
 title: Troubleshooting iOS/iPadOS device enrollment errors in Microsoft Intune
 description: Suggestions for troubleshooting some of the most common enrollment and sync token errors when enrolling iOS/iPadOS devices in Intune.
 ms.reviewer: kaushika, mghadial, annovich
-ms.date: 03/07/2024
+ms.date: 03/08/2024
 search.appverid: MET150
 ---
 
@@ -35,9 +35,9 @@ This section includes token sync errors related to Apple Automated Device Enroll
 
 |Error message| Cause | Solution|
 |-------------|-----|----------|
-| Expired or invalid token | The token may be expired, revoked, or malformed. | Expired tokens can be renewed, Invalid token will need to have a new token created in Intune.<br/> The new token can be used on an existing MDM Server in Apple Business Manager/Apple School Manager (ABM/ASM): Edit option > MDM Server settings > Upload public key |
-| Access denied | Intune can't talk to Apple anymore. For example, Intune has been removed from the MDM server list in ABM/ASM. The token has possibly expired. | 1. Verify whether your token has expired, and if a new token was created.<br/>2. Check to see if Intune is in the MDM server list |
-| Terms and conditions not accepted | New terms and conditions (T&C) need to be accepted in ABM/ASM. | Accept the new T&C in Apple ABM/ASM Portal.<br/>**Note:** This must be done by a user with the Administrator role in ABM/ASM. |
+| Expired or invalid token | The token may be expired, revoked, or malformed. | Expired tokens can be renewed, Invalid token will need to have a new token created in Intune.<br/> The new token can be used on an existing MDM Server in Apple Business Manager or Apple School Manager: Edit option > MDM Server settings > Upload public key |
+| Access denied | Intune can't talk to Apple anymore. For example, Intune has been removed from the MDM server list in Apple Business Manager or Apple School Manager. The token has possibly expired. | 1. Verify whether your token has expired, and if a new token was created.<br/>2. Check to see if Intune is in the MDM server list |
+| Terms and conditions not accepted | New terms and conditions (T&C) need to be accepted in Apple Business Manager or Apple School Manager. | Accept the new T&C in Apple Apple Business Manager or Apple School Manager Portal.<br/>**Note:** This must be done by a user with the Administrator role in Apple Business Manager or Apple School Manager. |
 | Internal server error | Needs further investigation | Contact the [Intune support team](/mem/get-support), as additional logs are needed |
 | Invalid support phone number | The support phone number is invalid. | Edit the support phone number for your profiles. |
 | Invalid configuration profile name | The configuration profile name is either invalid, empty, or too long. | Edit the name of the profile. |
@@ -47,9 +47,14 @@ This section includes token sync errors related to Apple Automated Device Enroll
 | Apple profile not found | Multiple possible causes | Create a new profile, and assign the profile to devices. |
 | Invalid department entry | The department field entry is invalid | Edit the department field for your profiles. |
 
-### Error: An error occurred while uploading the enrollment program token
+### Error: An error occurred while uploading the Enrollment Program token
 
-If the ADE token upload fails with the error message, try the following steps to create a new token:
+If the ADE token upload fails, you might see an error message that resembles the following:
+
+> An error occurred.  
+> An error occurred while uploading the Enrollment Program token. Request ID: AjaxError: ajaxExtended call failed
+
+In this case, try the following steps to create a new token:
 
 1. Sign in to [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) as an Intune administrator.
 
@@ -85,7 +90,7 @@ If the ADE token upload fails with the error message, try the following steps to
     -----END CERTIFICATE-----
     ```
 
-1. Sign in to ABM or ASM and find the token server that needs to be updated. Then, select **Edit**.
+1. Sign in to Apple Business Manager or Apple School Manager and find the token server that needs to be updated. Then, select **Edit**.
 
 1. In the **MDM Server Settings** section, upload the *.pem* file, and then select **Save**.
 
