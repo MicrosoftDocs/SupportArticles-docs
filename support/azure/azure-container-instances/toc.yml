@@ -3,6 +3,9 @@ items:
 - name: Welcome
   href: welcome-container-instances.yml
 
+- name: Container group intermittently restarts
+  href: container-group-restart-killing-event-interruption.md
+
 - name: Troubleshoot container group startup
   items:
   - name: Container group deployment remains in Waiting state

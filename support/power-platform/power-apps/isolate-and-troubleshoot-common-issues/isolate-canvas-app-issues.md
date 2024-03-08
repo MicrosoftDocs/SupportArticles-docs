@@ -173,6 +173,6 @@ The process of creating a [minimal repro app](minimal-canvas-app-repro.md) may u
 
 [Debugging canvas apps with Monitor](/power-apps/maker/monitor-canvasapps)
 
-### See also
+## See also
 
 [General Power Apps debugging strategies](isolate-common-issues.md)

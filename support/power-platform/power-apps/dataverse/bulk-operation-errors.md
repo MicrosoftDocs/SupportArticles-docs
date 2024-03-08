@@ -63,6 +63,6 @@ This error isn't related to the use of bulk operations. Review any custom plug-i
 
 You might encounter errors caused by issues in the bulk operation requests being sent. If you encounter a client error when using bulk operations, see [Troubleshoot Dataverse client errors](client-errors.md).
 
-### See also
+## See also
 
 [Scalable Customization Design in Microsoft Dataverse](/power-apps/developer/data-platform/scalable-customization-design/overview)
