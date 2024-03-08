@@ -1,5 +1,5 @@
 ---
-title: Error or connection issues when you configure WINS addresses for a WINS server
+title: Error or connection problems when you configure WINS addresses for a WINS server
 description: Provides a solution to problems that occur when you configure the Primary WINS address and Secondary WINS address of a WINS server.
 ms.date: 03/08/2024
 manager: dcscontentpm
@@ -9,9 +9,9 @@ localization_priority: medium
 ms.reviewer: kaushika, timball
 ms.custom: sap:access-to-remote-file-shares-smb-or-dfs-namespace, csstroubleshoot
 ---
-# Error or connection issues when you configure WINS addresses for a WINS server
+# Error or connection problems when you configure WINS addresses for a WINS server
 
-This article provides a solution to issues that occur when you configure the Windows Internet Naming Service (WINS) addresses for a WINS server.
+This article provides a solution to problems that occur when you configure the Windows Internet Naming Service (WINS) addresses for a WINS server.
 
 > [!IMPORTANT]  
 > WINS is deprecated. Therefore, you should no longer use it as a name resolution system.
@@ -25,17 +25,17 @@ When you configure the Primary and Secondary WINS address for a WINS server, you
 
 > The WINS server is already in the list.
 
-If you don't see this error and the WINS server appears to function, clients begin to experience connection problems. The problems disappear in time, but recur when the affected WINS server restarts.
+Alternatively, clients begin to experience connection problems even if you don't see this error message and the WINS server appears to function correctly. The problems disappear in time but recur when the affected WINS server restarts.
 
 ## Cause
 
 These problems indicate that the WINS server's Primary and Secondary WINS addresses aren't correctly configured. You can't use the same address for both the Primary and Secondary WINS address.
 
-If you set the Primary WINS address to the address of a different WINS server and set the Secondary WINS address to the WINS server's own address, there's no error message. However, when the WINS server registers its services, it might register some of those services on the different WINS server. After a period of time, it registers the services correctly in its local WINS database. As a result, some of the records are registered on both WINS servers. This situation is known as "split registration."
+If you set the Primary WINS address to the address of a different WINS server and set the Secondary WINS address to the WINS server's own address, you won't receive the error message. However, when the WINS server registers its services, it might register some of those services on the different WINS server. After some time, the server registers the services correctly in its local WINS database. This causes some records to be registered on both WINS servers. This situation is known as "split registration."
 
-Split registration can cause connection problems. Clients might not be able to connect to the affected WINS server or its services. As the split registration replicates to other WINS servers, the likelihood of connection problems for clients increases. The exact conditions that cause failure vary. The severity of the issue depends on your replication scheme.
+Split registration can cause connection problems. Clients might not be able to connect to the affected WINS server or its services. As the split registration replicates to other WINS servers, the likelihood of connection problems for clients increases. The exact conditions that cause failure vary. The severity of the problem depends on your replication scheme.
 
-Split registration is a temporary condition. After the newly started WINS server stops registering its services remotely, the remote WINS server stops renewing the incorrect registrations. Eventually, the corrected registrations replicate throughout the system and resolve the connection problems. Unfortunately, until you correct the address configuration of the affected WINS server, the problem recurs when that WINS server restarts.
+Split registration is a temporary condition. After the newly started WINS server stops registering its services remotely, the remote WINS server stops renewing the incorrect registrations. Eventually, the corrected registrations replicate throughout the system and resolve the connection problems. Hopwever, until you correct the address configuration of the affected WINS server, the problem recurs when that WINS server restarts.
 
 ## Workaround
 
@@ -43,7 +43,7 @@ We recommend that you set a WINS server to always point to itself as the Primary
 
 ## Status
 
-Microsoft has confirmed that this is a problem in the Microsoft products that are listed at the beginning of this article.
+Microsoft has confirmed that this is a problem in the Microsoft products that are listed in the "Applies to" section.
 
 ## More information
 
