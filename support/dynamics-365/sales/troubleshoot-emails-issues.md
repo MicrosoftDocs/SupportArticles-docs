@@ -3,11 +3,10 @@ title: Troubleshoot issues with emails
 description: Provides resolutions for the known issues that are related to emails in Dynamics 365 Sales.
 author: sbmjais
 ms.author: shjais
-ms.topic: troubleshooting
-ms.date: 02/28/2022
+ms.reviewer: 
+ms.date: 03/08/2024
 ms.subservice: d365-sales-sales
 ---
-
 # Troubleshoot issues with emails
 
 This article helps you troubleshoot and resolve issues related to emails in Dynamics 365 Sales.
@@ -54,24 +53,25 @@ To resolve this issue, you must add the `onload` and `onchange` events to the cu
 
 5. [Import the solution](/powerapps/maker/common-data-service/import-update-export-solutions).
 
+## Issue: Can't view untracked emails and meetings in auto capture
 
-## Issue: Unable to view untracked emails and meetings in auto capture
-
-Auto capture doesn't show untracked emails and meetings for a few or all users in an org. 
+[Auto capture](/dynamics365/sales/configure-auto-capture) doesn't show untracked emails and meetings for a few or all users in an orgnazation.
 
 ### Cause
 
-From version 9.2.24031.0010, Dynamics 365 Sales follows the [principle of least privilege access](/entra/identity-platform/secure-least-privileged-access), which blocks access to untracked emails and meetings for users who have [conditional access policies](/entra/identity/conditional-access/concept-conditional-access-policy-common?tabs=secure-foundation) on their tenants. If a user is unable to see untracked emails and meetings, verify whether the issue is due to a conditional access policy. 
+Starting from version 9.2.24031.0010, Dynamics 365 Sales follows the [principle of least privilege access](/entra/identity-platform/secure-least-privileged-access), which blocks access to untracked emails and meetings for users who have [Conditional Access policies](/entra/identity/conditional-access/concept-conditional-access-policy-common?tabs=secure-foundation) on their tenants.
 
-1. Sign in to the Microsoft Entra admin center as at least a Conditional Access Administrator.
+If a user can't see untracked emails and meetings, perform the following steps to verify whether the issue is caused by a Conditional Access policy.
+
+1. Sign in to the [Microsoft Entra admin center](https://entra.microsoft.com/) as at least a Conditional Access Administrator.
 2. Go to **Identity** > **Monitoring & health** > **Sign-in logs**.
-3. Switch to the **User sign-ins (non-interactive)** tab and add the following filters: 
+3. Switch to the **User sign-ins (non-interactive)** tab and add the following filters:
    - **Application** contains **Dataverse**
-   - **Resource** contains **Microsoft Graph** 
-   - **Status** equals **Failure** 
-    
-    If there are any results for the affected users, then the issue is due to a conditional access policy.
+   - **Resource** contains **Microsoft Graph**
+   - **Status** equals **Failure**
+
+    If some results are returned for the affected users, then the issue is due to a Conditional Access policy.
 
 ### Resolution
 
-There's no direct resolution available for this issue. Users can use [Microsoft Copilot for Sales in Outlook](/microsoft-sales-copilot/save-outlook-activities-crm) or [server-side synchronization](/power-platform/admin/email-message-filtering-correlation) to track all emails and meetings automatically, as an alternative.
+There's no resolution available for this issue. Users can use [Microsoft Copilot for Sales in Outlook](/microsoft-sales-copilot/save-outlook-activities-crm) or [server-side synchronization](/power-platform/admin/email-message-filtering-correlation) to track all emails and meetings automatically, as an alternative.
