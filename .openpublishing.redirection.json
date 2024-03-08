@@ -3,7 +3,7 @@
     {
       "source_path": "support/windows-client/networking/support-policy-for-dns-client-side-caching.md",
       "redirect_url": "/troubleshoot/windows-server/troubleshoot-dns-guidance",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/windows-server/networking/value-does-not-fall-within-the-expected-range.md",
