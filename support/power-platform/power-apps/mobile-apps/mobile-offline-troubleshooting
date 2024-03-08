@@ -1,0 +1,9 @@
+
+# Offline Sync error troubleshooting 
+Data sync can fail in offline-enabled apps due to various errors. Depending on the type of app, the error message may appear differently. 
+
+## Model-driven apps including Field Service 
+
+If the offline sync status icon indicates a warning or error, you can tap on it to open the Device Status page to see more details. In the Device Status page, you’ll see your current device state and details from the last sync. If an error or warning occurred, you’ll see a message describing what went wrong.  
+
+See [View offline sync status - Power Apps | Microsoft Learn](https://learn.microsoft.com/power-apps/mobile/offline-sync-icon#types-of-offline-syncs). 
