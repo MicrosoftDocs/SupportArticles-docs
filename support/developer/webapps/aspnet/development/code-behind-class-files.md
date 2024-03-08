@@ -186,4 +186,4 @@ If your code-behind class files will be compiled on demand instead of precompile
 
 - For more information about general Web Forms syntax, see [Web Forms Syntax](/previous-versions/dotnet/netframework-1.1/fy30at8h(v=vs.71)).
 
-- For more information, see [ASP.NET Code-behind model overview](/troubleshoot/aspnet/code-behind-model).
+- For more information, see [ASP.NET Code-behind model overview](code-behind-model.md).

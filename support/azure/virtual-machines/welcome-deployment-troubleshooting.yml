@@ -36,7 +36,7 @@ landingContent:
             url: https://azure.microsoft.com/global-infrastructure/services
           - text: Templates overview - Azure Resource Manager
             url: /azure/azure-resource-manager/templates/overview
-          - text: Pricing Overview—How Azure Pricing Works
+          - text: Pricing Overview-How Azure Pricing Works
             url: https://azure.microsoft.com/pricing
 
           
@@ -60,7 +60,7 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Troubleshooting Azure VM allocation failures - Virtual Machines
-            url: /troubleshoot/azure/virtual-machines/allocation-failure
+            url: allocation-failure.md
           - text: Troubleshoot common deployment errors - Azure Resource Manager
             url: /azure/azure-resource-manager/templates/common-deployment-errors
           - text: Quota errors - Azure Resource Manager
@@ -68,9 +68,9 @@ landingContent:
           - text: SKU not available errors - Azure Resource Manager
             url: /azure/azure-resource-manager/templates/error-sku-not-available
           - text: Troubleshoot deploying Windows virtual machine issues in Azure - Virtual Machines
-            url: /troubleshoot/azure/virtual-machines/troubleshoot-deploy-vm-windows
+            url: troubleshoot-deploy-vm-windows.md
           - text: Troubleshoot deploying Linux virtual machine issues in Azure - Virtual Machines
-            url: /troubleshoot/azure/virtual-machines/troubleshoot-deploy-vm-linux
+            url: troubleshoot-deploy-vm-linux.md
           - text: Invalid template errors - Azure Resource Manager
             url: /azure/azure-resource-manager/templates/error-invalid-template
           - text: RequestDisallowedByPolicy error - Azure Resource Manager

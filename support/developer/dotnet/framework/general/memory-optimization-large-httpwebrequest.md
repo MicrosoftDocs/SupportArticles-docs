@@ -20,19 +20,19 @@ You may notice that the application that uses the `HttpWebRequest` class consume
 
 ## Cause
 
-This issue occurs because the .NET Framework buffers the outgoing data by default when you use the `HttpWebRequest` class. [A POST or PUT request fails when you use the HttpWebRequest class to send lots of data](/troubleshoot/dotnet/framework/post-put-request-fail-httpwebrequest) documents the original issue.
+This issue occurs because the .NET Framework buffers the outgoing data by default when you use the `HttpWebRequest` class. [A POST or PUT request fails when you use the HttpWebRequest class to send lots of data](post-put-request-fail-httpwebrequest.md) documents the original issue.
 
 ## Resolution
 
 To work around this issue, set the `HttpWebRequest.AllowWriteStreamBuffering` property to false. By doing this, outgoing data (entity body) for the POST or the PUT request will not be buffered in memory.
 
-In versions of .NET Framework earlier than 4.5, setting `HttpWebRequest.AllowWriteStreamBuffering` property to false would sometimes result in errors when uploading data to authenticated endpoints. For example, you might encounter a `System.Net.WebException` with the message **This request requires buffering data to succeed**. However, on deeper investigation the response associated with the exception actually indicates a status code of `System.Net.HttpStatusCode.Unauthorized` (401). [A POST or PUT request fails when you use the HttpWebRequest class to send lots of data](/troubleshoot/dotnet/framework/post-put-request-fail-httpwebrequest) documents a workaround of pre-authentication and KeepAlive connection to handle 401 response.
+In versions of .NET Framework earlier than 4.5, setting `HttpWebRequest.AllowWriteStreamBuffering` property to false would sometimes result in errors when uploading data to authenticated endpoints. For example, you might encounter a `System.Net.WebException` with the message **This request requires buffering data to succeed**. However, on deeper investigation the response associated with the exception actually indicates a status code of `System.Net.HttpStatusCode.Unauthorized` (401). [A POST or PUT request fails when you use the HttpWebRequest class to send lots of data](post-put-request-fail-httpwebrequest.md) documents a workaround of pre-authentication and KeepAlive connection to handle 401 response.
 
 Unlike .NET Framework 1.1, 2.0, 3.0, 3.5 and 4.0, .NET Framework 4.5 adds new design functionality for the `HttpWebRequest.AllowWriteStreamBuffering` property. The new functionality can handle the authentication scenario directly as long as the `Expect100Continue` feature is enabled. The default `ServicePointManager.Expect100Continue` value is **true**.
 
 ## More information
 
-- [A POST or PUT request fails when you use the HttpWebRequest class to send lots of data](/troubleshoot/dotnet/framework/post-put-request-fail-httpwebrequest)
+- [A POST or PUT request fails when you use the HttpWebRequest class to send lots of data](post-put-request-fail-httpwebrequest.md)
 
 - [HttpWebRequest.AllowWriteStreamBuffering Property](/dotnet/api/system.net.httpwebrequest.allowwritestreambuffering)
 

@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "support/windows-server/networking/value-does-not-fall-within-the-expected-range.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/value-does-not-fall-within-the-expected-range",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/windows-server/virtualization/windows-server-2019-support-for-live-migration-after-installing-hyper-v-role.md",
       "redirect_url": "/troubleshoot/windows-server/virtualization/troubleshoot-live-migration-guidance",
       "redirect_document_id": false
@@ -1888,6 +1893,11 @@
     {
       "source_path": "support/power-platform/power-apps/index.md",
       "redirect_url": "/support/power-platform/power-apps/welcome-power-apps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-pages/index.md",
+      "redirect_url": "/support/power-platform/power-pages/welcome-power-pages",
       "redirect_document_id": false
     },
     {
@@ -10084,6 +10094,36 @@
       "source_path": "support/power-platform/power-automate/desktop-flows/login-windows-keep-appearing.md",
       "redirect_url": "/troubleshoot/power-platform/power-automate/desktop-flows/cannot-sign-in-to-power-automate-for-desktop#login-window-keeps-popping-up",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-client/networking/use-telnet-to-test-port-3389-functionality.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-tcp-ip-communication-guidance",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/networking/allow-remote-users-to-access-your-network.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/install-configure-virtual-private-network-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/networking/general-guidance-troubleshoot-dhcp.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-dhcp-guidance",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/networking/improve-directaccess-network-performance.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/improve-directaccess-network-performance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/networking/cmak-based-vpn-doesnt-work.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-client/cmak-based-vpn-doesnt-work",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/event-id-7023-is-logged.md",
+      "redirect_url": "/previous-versions/troubleshoot/windows-server/event-id-7023-is-logged",
+      "redirect_document_id": false
     }
   ]
 }

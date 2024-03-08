@@ -5,6 +5,7 @@ services: virtual-machines
 author: genlin
 manager: dcscontentpm
 tags: 
+ms.custom: linux-related-content
 ms.service: virtual-machines
 ms.subservice: vm-cannot-connect
 ms.collection: linux
@@ -13,7 +14,6 @@ ms.tgt_pltfrm: vm-linux
 ms.topic: troubleshooting
 ms.date: 12/30/2021
 ms.author: genli
-
 ---
 # Can’t SSH to Azure Linux VM because permissions are too open
 

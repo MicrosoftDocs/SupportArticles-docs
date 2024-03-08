@@ -1,9 +1,10 @@
 ---
 title: Swap file isn't re-created after a Linux VM restarts
 description: Describes how to resolve the problem that prevents a swap file from being re-created after a restart of a Linux virtual machine.
-ms.date: 12/09/2021
+ms.date: 03/08/2024
 ms.service: virtual-machines
 ms.subservice: vm-cannot-start-stop
+ms.custom: linux-related-content
 ms.collection: linux
 ms.author: srijangupta
 author: srijang
@@ -29,7 +30,7 @@ When cloud-init is responsible for provisioning, the swap file must be configure
 
 To resolve this problem, follow these steps:
 
-1. Disable resource disk formatting and swap configuration within waagent configuration because this task is now handled by Cloud-Init. Set the parameters as follows:
+1. Disable resource disk formatting and swap configuration within waagent configuration */etc/waagent.conf* because this task is now handled by Cloud-Init. Set the parameters as follows:
 
     ```
     # Format if unformatted. If 'n', resource disk will not be mounted.
