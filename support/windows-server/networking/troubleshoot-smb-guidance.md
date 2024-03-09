@@ -131,8 +131,8 @@ Before contacting Microsoft support, you can gather information about your issue
 
 ### Prerequisites
 
-1. TSS must be run by accounts with administrator privileges on the local system, and EULA must be accepted (once EULA is accepted, TSS won't prompt again).
-2. We recommend the local machine `RemoteSigned` PowerShell execution policy.
+1. Run TSS in the security context of an account that has administrator privileges on the local system. The first time you run it, accept the EULA (after you accept the EULA, TSS won't prompt again).
+2. We recommend that you use the local machine `RemoteSigned` PowerShell execution policy.
 
 > [!NOTE]
 > If the current PowerShell execution policy doesn't allow you to run TSS, take the following actions:
