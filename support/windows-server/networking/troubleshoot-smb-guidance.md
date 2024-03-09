@@ -69,9 +69,10 @@ You can use the `Net Use * /delete` command to disconnect active or remembered s
 > [!NOTE]
 > This command can also be used on remote computers. Run `Net help use` for more options.
 
-### Reference
-
-[!INCLUDE [Community Solutions Content Disclaimer](../../includes/community-solutions-content-disclaimer.md)]
+> [!IMPORTANT]  
+> This section of this article is based on community content.
+>  
+> [!INCLUDE [Community Solutions Content Disclaimer](../../includes/community-solutions-content-disclaimer.md)]
 
 ## Common issues and solutions
 
