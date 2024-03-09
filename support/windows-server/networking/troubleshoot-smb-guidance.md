@@ -77,9 +77,9 @@ You can use the `Net Use * /delete` command to disconnect active or remembered s
 
 ### When you access a Scale-Out File Server, performance is limited
 
-The client access network uses high-speed remote direct memory access (RDMA), but the cluster network doesn't. Because of this behavior, redirection only occurs only the cluster network (which is usually a one-GbE network adapter).
+The client access network uses high-speed remote direct memory access (RDMA), but the cluster network doesn't. Because of this behavior, redirection only occurs on the cluster network (which is usually a 1-GbE network adapter).
 
-To troubleshoot this issue, you can configure the option to use the client access network for Cluster Shared Volumes (CSV). Or, upgrade to Windows Server 2012 R2 or a later version. That system automatically redirects clients to the cluster node that has the best access to the volume that's used by the file share. For more information, see the following blog article: [Automatic SMB Scale-Out Rebalancing in Windows Server 2012 R2](/archive/blogs/josebda/automatic-smb-scale-out-rebalancing-in-windows-server-2012-r2).
+To troubleshoot this issue, you can configure the option to use the client access network for Cluster Shared Volumes (CSV). Or, upgrade to Windows Server 2012 R2 or a later version. That system automatically redirects clients to the cluster node that has the best access to the file share's volume. For more information, see the following blog article: [Automatic SMB Scale-Out Rebalancing in Windows Server 2012 R2](/archive/blogs/josebda/automatic-smb-scale-out-rebalancing-in-windows-server-2012-r2).
 
 ### SMB prefers to use the slower physical network adapter over the virtual network adapter
 
@@ -101,7 +101,7 @@ On server operating systems, SMB Multichannel starts quickly only one time per s
 
 ### SMB Multichannel doesn't aggregate multiple 10-GbE network adapters
 
-An RSS-capable 10-GbE network adapter is sometimes identified as non-RSS-capable. When this occurs, SMB uses only one TCP connection. When SMB Multichannel uses both RSS-capable and non-RSS network adapters, it should use only the RSS-capable network adapters.
+An RSS-capable 10-GbE network adapter is sometimes identified as non-RSS-capable. When this issue occurs, SMB uses only one TCP connection. When SMB Multichannel uses both RSS-capable and non-RSS network adapters, it should use only the RSS-capable network adapters.
 
 Server-class network adapters should appear as RSS-capable. If they don't, you should update the network adapter driver from the manufacturer's website, and then recheck the RSS settings.  
 
