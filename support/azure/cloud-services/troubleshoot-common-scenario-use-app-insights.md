@@ -66,7 +66,7 @@ The following table shows the mapping between the options in Diagnostic setting 
 
 ## Advanced way to use Application Insights with Cloud Service
 
-There are several common advanced ways to use Application Insights with Cloud Service. For example, you can use Azure Application Insights SDK in a Cloud Service project to generate or modify the data saved into Application Insights.
+There are several common advanced ways to use Application Insights with Cloud Service. For example, user can use Azure Application Insights SDK in a Cloud Service project to generate or modify the data saved into Application Insights.
 
 ### Add custom log
 
@@ -77,12 +77,31 @@ To add a custom log to your application, follow these steps:
 
     :::image type="content" source="./media/troubleshoot-common-scenario-use-app-insights/install-package.png" alt-text="Screenshot shows the installed Microsoft ApplicationInsights package.":::
 
-1. Add the following code in the startup function of your role. The startup function of Web Role can normally be `Application_Start()` in Global.asax. For Worker Role, it can be `OnStart()` in WorkerRoleName.cs.
+3. Add the Application Insight configuration into .cscfg and .csdef file. (As this [announcement](https://azure.microsoft.com/updates/technical-support-for-instrumentation-key-based-global-ingestion-in-application-insights-will-end-on-31-march-2025/#:~:text=On%2031%20March%202025%2C%20technical%20support%20for%20instrumentation,or%20customer%20support%20for%20instrumentation%20key%E2%80%93based%20global%20ingestion), the support for instrumentation key-based ingestion will end on 31 March 2025. It's suggested to use the connection string instead to connect to Application Insight before that date.)
+
+   APPINSIGHTS_INSTRUMENTATIONKEY is automatically added when the Application Insight is linked with Cloud Service project as this [document](/troubleshoot/azure/cloud-services/troubleshoot-with-app-insights-features-overview).
+
+   In .csdef file: 
+    ```xml
+   <ConfigurationSettings>
+      <Setting name="APPLICATIONINSIGHTS_CONNECTION_STRING" />
+      <Setting name="APPINSIGHTS_INSTRUMENTATIONKEY" />
+    </ConfigurationSettings>
+    ```
+
+   In .cscfg file: (The Conenction String can be found in the overview page of Application Insight. Refer to this [document](/azure/azure-monitor/app/migrate-from-instrumentation-keys-to-connection-strings) for more details.)
+   ```xml
+   <ConfigurationSettings>
+        <Setting name="APPINSIGHTS_INSTRUMENTATIONKEY" value="{Instrumentation_key}" />
+        <Setting name="APPLICATIONINSIGHTS_CONNECTION_STRING" value="{Connection_String}" />
+    </ConfigurationSettings>
+    ```
+4. Add the following code in the startup function of your role. The startup function of Web Role can normally be `Application_Start()` in Global.asax. For Worker Role, it can be `OnStart()` in WorkerRoleName.cs.
 
     ```csharp
-    TelemetryConfiguration.Active.InstrumentationKey = RoleEnvironment.GetConfigurationSettingValue("APPINSIGHTS_INSTRUMENTATIONKEY"); 
+    TelemetryConfiguration.Active.ConnectionString = RoleEnvironment.GetConfigurationSettingValue("APPLICATIONINSIGHTS_CONNECTION_STRING"); 
     ```
-4. Create a telemetry client and record the log context:
+5. Create a telemetry client and record the log context:
 
     ```csharp
     using Microsoft.ApplicationInsights; 
