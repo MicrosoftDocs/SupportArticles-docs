@@ -17,14 +17,16 @@ After an entitlement is created for an account, when you try to [create a case](
 
 ## Cause
 
-The account selected in the entitlement might have a specific contact attached to it and selected in the contacts grid. In this case, the entitlement is applied only when the contact selected in the entitlement's contacts grid is also selected in the case.
+The account selected in the entitlement might have a specific contact attached to it and selected in the Contacts grid. In this case, the entitlement is applied only when the contact selected in the entitlement's Contacts grid is also selected in the case. Otherwise, you will receive the above error message.
 
 :::image type="content" source="media\entitlement-with-associate-customer-contact\seleted-account-on-entitlement.png" alt-text="Screenshot that shows an account is selected in an entitlement.":::
 
 ### Resolution
 
-- Check the contacts grid in the entitlement and see if a contact is also elected.
-- In the case record where the entitlement needs to be applied, select the account and the contact selected in the entitlement contact's grid. Or, remove the contact from the entitlement so that it isn't attached to a specific contact.
-- Use the `https://orgurl/api/data/v9.2/entitlementcontactscollection` API to check if the contact is attached to the entitlement.
+- Check the Contacts grid in the entitlement and see if a contact is also selected.
+- If a contact is selected, do one of the following: 
+    - In the case record where the entitlement needs to be applied, select the account and the contact which is selected in the entitlement's Contacts grid.
+    - Remove the contact from the entitlement so the entitlement isn't attached to a specific contact.
+- Use the `https://<orgurl>/api/data/v9.2/entitlementcontactscollection` API to check if the contact is attached to the entitlement.
 
 For more information, see [Associate a customer contact with the entitlement](/dynamics365/customer-service/create-entitlement-define-support-terms-customer?tabs=customerserviceadmincenter#associate-a-customer-contact-with-the-entitlement).
