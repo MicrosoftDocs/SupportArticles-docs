@@ -4,6 +4,7 @@ description: Based on the version of Power Automate, provides resolutions to a P
 ms.reviewer: quseleba
 ms.date: 02/27/2024
 ms.subservice: power-automate-desktop-flows
+ms.custom: sap:Desktop flows\Cannot create desktop flow connection
 ---
 
 # Failed connection between Power Automate components
