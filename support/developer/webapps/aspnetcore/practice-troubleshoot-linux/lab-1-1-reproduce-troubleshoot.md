@@ -2,6 +2,7 @@
 title: Reproduce the crash problem and start to troubleshoot
 description: This article describes the process of reproducing the .NET Core crash problem in Linux, and checking the Nginx tool and system logs for crash symptoms and indications.
 ms.date: 04/07/2021
+ms.custom: linux-related-content
 ms.reviewer: ramakoni, ahmetmb
 author: ahmetmithat
 ---

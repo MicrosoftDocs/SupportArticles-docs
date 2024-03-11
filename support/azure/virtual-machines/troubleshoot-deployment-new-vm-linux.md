@@ -7,6 +7,7 @@ documentationcenter: ''
 author: srijang
 manager: dcscontentpm
 tags: top-support-issue, azure-resource-manager
+ms.custom: linux-related-content
 ms.service: virtual-machines
 ms.subservice: vm-deploy
 ms.collection: linux
@@ -15,7 +16,6 @@ ms.tgt_pltfrm: vm-linux
 ms.topic: troubleshooting
 ms.date: 12/09/2021
 ms.author: srijangupta
-
 ---
 # Troubleshoot Resource Manager deployment issues with creating a new Linux virtual machine in Azure
 

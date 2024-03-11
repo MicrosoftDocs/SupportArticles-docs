@@ -42,6 +42,6 @@ To resolve this issue, add the Service User accounts in Release Management. To d
 
 ## References
 
-Check out [Known issues when you install Release Management for Visual Studio 2013](/troubleshoot/visualstudio/install/release-management-installation-issues).
+Check out [Known issues when you install Release Management for Visual Studio 2013](../../developer/visualstudio/installation/release-management-installation-issues.md).
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

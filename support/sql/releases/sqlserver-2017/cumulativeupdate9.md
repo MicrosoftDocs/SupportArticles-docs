@@ -2,7 +2,7 @@
 title: Cumulative update 9 for SQL Server 2017 (KB4341265)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2017 cumulative update 9 (KB4341265).
 ms.date: 08/04/2023
-ms.custom: KB4341265
+ms.custom: KB4341265, linux-related-content
 appliesto:
 - SQL Server 2017 on Windows
 - SQL Server 2017 on Linux

@@ -6,6 +6,7 @@ documentationcenter: ''
 author: amkarmak
 manager: dcscontentpm
 tags: virtual-machines
+ms.custom: linux-related-content
 ms.service: virtual-machines
 ms.subservice: vm-deploy
 ms.collection: linux
@@ -15,7 +16,6 @@ ms.tgt_pltfrm: vm-linux
 ms.devlang: azurecli
 ms.date: 05/21/2020
 ms.author: arremana
-
 ---
 
 # Upgrade Azure VM with SLES 12 to SLES 15 SP1
