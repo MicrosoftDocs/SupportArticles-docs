@@ -21,7 +21,7 @@ The account selected in the entitlement might have a specific contact attached t
 
 :::image type="content" source="media\entitlement-with-associate-customer-contact\seleted-account-on-entitlement.png" alt-text="Screenshot that shows an account is selected in an entitlement.":::
 
-### Resolution
+## Resolution
 
 - Check the Contacts grid in the entitlement and see if a contact is also selected.
 - If a contact is selected, do one of the following: 
