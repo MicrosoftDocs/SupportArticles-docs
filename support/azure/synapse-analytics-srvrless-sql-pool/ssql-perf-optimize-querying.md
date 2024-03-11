@@ -75,4 +75,4 @@ We recommend the following best practices when you use Power BI and other report
 | OPENROWSET and External Tables | [OPENROWSET function](/azure/synapse-analytics/sql/develop-openrowset)<br>[External tables](/azure/synapse-analytics/sql/develop-tables-external-tables?tabs=native)<br>[Stored Procedures](/azure/synapse-analytics/sql/develop-stored-procedures)<br>[Views](/azure/synapse-analytics/sql/create-use-views)<br>[Data transformations](/azure/synapse-analytics/sql/develop-tables-cetas#cetas-in-serverless-sql-pool) |
 | Available T-SQL features in serverless SQL pools | [T-SQL features in Azure Synapse pools](/azure/synapse-analytics/sql/overview-features) |
 
-[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
