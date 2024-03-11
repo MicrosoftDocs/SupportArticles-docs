@@ -73,15 +73,15 @@ The following connection string shows an example of how to connect to a SQL Serv
 
 #### SQL Server authentication
 
-Connection String is `String connectionUrl = "jdbc:sqlserver://<ServerName>:<PortNum>;user=<MySQLAuthAccount>;password=<MyPassword>;trustServerCertificate=true;"`
+Connection string is `String connectionUrl = "jdbc:sqlserver://<ServerName>:<PortNum>;user=<MySQLAuthAccount>;password=<MyPassword>;trustServerCertificate=true;"`
 
 #### Windows AD authentication without integrated security
 
-Connection String is `String connectionUrl = "jdbc:sqlserver://<ServerName>:<PortNum>;user=<MyADAuthAccount>;password=<MyPassword>;Domain=<MyDomain>;trustServerCertificate=true;javaAuthentication=NTLM"`
+Connection string is `String connectionUrl = "jdbc:sqlserver://<ServerName>:<PortNum>;user=<MyADAuthAccount>;password=<MyPassword>;Domain=<MyDomain>;trustServerCertificate=true;javaAuthentication=NTLM"`
 
 #### Windows AD authentication with Kerberos and without integrated security
 
-Connection String is `String connectionUrl = "jdbc:sqlserver://<ServerName>:<PortNum>;user=<MyADAuthAccount>;password=<MyPassword>;Domain=<MyDomain>;trustServerCertificate=true;javaAuthentication=JavaKerberos"`
+Connection string is `String connectionUrl = "jdbc:sqlserver://<ServerName>:<PortNum>;user=<MyADAuthAccount>;password=<MyPassword>;Domain=<MyDomain>;trustServerCertificate=true;javaAuthentication=JavaKerberos"`
 
 #### Integrated NTLM connection
 
@@ -99,7 +99,7 @@ The *mssql-jdbc_auth-\<version\>-\<arch\>.dll* file must be in the following pat
 
 You can either modify and add the path or copy the file into an already established path. For more information, see [Connecting with integrated authentication on Windows](/sql/connect/jdbc/building-the-connection-url#Connectingintegrated).
 
-Connection String is `String connectionUrl = "jdbc:sqlserver://<ServerName>:<PortNum>;integratedSecurity=true;Domain=<MyDomain>;trustServerCertificate=true;javaAuthentication=NTLM"`
+Connection string is `String connectionUrl = "jdbc:sqlserver://<ServerName>:<PortNum>;integratedSecurity=true;Domain=<MyDomain>;trustServerCertificate=true;javaAuthentication=NTLM"`
 
 #### Integrated Kerberos connections
 
@@ -148,7 +148,7 @@ useTicketCache=true;
 };
 ```
 
-Connection String is `String connectionUrl = "jdbc:sqlserver://<ServerName>:<PortNum>;integratedSecurity=true;Domain=<MyyDomain>;trustServerCertificate=true;javaAuthentication=JavaKerberos;"`
+Connection string is `String connectionUrl = "jdbc:sqlserver://<ServerName>:<PortNum>;integratedSecurity=true;Domain=<MyyDomain>;trustServerCertificate=true;javaAuthentication=JavaKerberos;"`
 
 ### Sample code
 
