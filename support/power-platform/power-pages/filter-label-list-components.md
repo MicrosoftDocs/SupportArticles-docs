@@ -24,9 +24,9 @@ This problem happens because of a text color issue in the theme CSS file.
 To fix the text color issue, perform the following steps:
 
 > [!NOTE]
-> If you are using the enhanced data model, use the Power Pages Management app instead of the Portal Management app.
+> If you're using the enhanced data model, use the Power Pages Management app instead of the Portal Management app.
 
-1. Open the affected site in the [Portal Management](/power-pages/configure/portal-management-app) app.
+1. Open the affected site in the [Portal Management app](/power-pages/configure/portal-management-app).
 1. Go to **Content** > **Web Files**.
 1. Select the *portalbasictheme.css* file.
 1. Go to the **Notes** tab and select the attachment link to download the *portalbasictheme.css* file.
@@ -47,7 +47,8 @@ To fix the text color issue, perform the following steps:
 1. Go back to the Portal Management app from the open browser, and then select **Delete** > **OK** to delete the file.
 1. Replace the existing file with the modified version:
 
-   1. Select the "Edit this note" pencil icon from the side of the screen.
+   1. Select the "Edit this note" pencil icon on the side of the screen.
+
    1. Select the attachment icon at the bottom.
    1. Select your updated file.
    1. Select **Save**.
