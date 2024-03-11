@@ -2,7 +2,7 @@
 title: Automatic update not working in Teams
 ms.author: luche
 author: helenclu
-ms.date: 10/30/2023
+ms.date: 03/11/2024
 audience: ITPro
 ms.topic: troubleshooting
 manager: dcscontentpm
@@ -14,12 +14,13 @@ appliesto:
   - Microsoft Teams
 ms.custom: 
   - CI 113425
+  - CI 187812
   - CSSTroubleshoot
 ms.reviewer: scapero
-description: Resolves an issue where Teams does not automatically update.
+description: Resolves an issue where Teams doesn't automatically update.
 ---
 
-# Teams does not automatically update
+# Teams doesn't automatically update
 
 ## Summary
 
@@ -41,5 +42,7 @@ To force Microsoft Teams to check and install updates, select your avatar in the
 ## More information
 
 For more information about Teams update process, see [Teams update process](/microsoftteams/teams-client-update).
+
+For more information about how to update the Teams desktop app on Virtual Desktop Infrastructure (VDI), see [Install or update the Teams desktop app on VDI](/microsoftteams/teams-for-vdi#install-or-update-the-teams-desktop-app-on-vdi).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
