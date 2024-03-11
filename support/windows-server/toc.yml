@@ -1531,8 +1531,6 @@ items:
       href: ./networking/high-cpu-usage-issue-smb-server.md
     - name: Hotfixes for File Services technologies
       href: ./networking/hotfixes-for-file-services-technologies.md
-    - name: How to allow remote users to access your network
-      href: ./networking/allow-remote-users-to-access-your-network.md
     - name: How to create a virtual directory on an existing Web site
       href: ./networking/create-virtual-directory-folder-remote-computer.md
     - name: How to manually decommission a root server
@@ -1559,8 +1557,6 @@ items:
       href: ./networking/robocopy-may-report-error-1338-87.md
     - name: Overview of Server Message Block signing
       href: ./networking/overview-server-message-block-signing.md
-    - name: Setting primary and secondary WINS server options
-      href: ./networking/setting-wins-server-options.md
     - name: Slow SMB files transfer speed
       href: ./networking/slow-smb-file-transfer.md
     - name: SMB Multichannel troubleshooting
@@ -1602,8 +1598,6 @@ items:
     - name: DFSR Health Report shows Event ID 4302
       href: ./networking/dfsr-diagnostics-shows-sharing-violations-events.md
     - name: Error when changing DFS replication group or namespace
-      href: ./networking/value-does-not-fall-within-the-expected-range.md
-    - name: How to configure DFSR logging
       href: ./networking/change-dfsr-debug-log-settings.md
     - name: Security setting changes delays on DFSR replication partners
       href: ./networking/security-setting-changes-not-appear-dfsr-replication.md
@@ -1737,8 +1731,6 @@ items:
       href: ./networking/event-4199-windows-client-cannot-get-ip-address-dhcp-server.md
     - name: Fail to modify existing DHCP scope
       href: ./networking/modify-existing-dhcp-scope-results.md
-    - name: General guidance to troubleshoot DHCP
-      href: ./networking/general-guidance-troubleshoot-dhcp.md
     - name: Increase the number of IP addresses on a subnet
       href: ./networking/change-ip-hosts-amount-on-subnet.md
     - name: Install and Configure a DHCP Server in a Workgroup
@@ -1757,7 +1749,7 @@ items:
       href: ./networking/frs-event-log-error-codes.md
     - name: How to reset the FRS staging folder
       href: ./networking/move-frs-staging-folder-to-different-drive.md
-    - name: NTFRS_xxxxxxxx is added to a folder name
+    - name: 'FRS appends "_NTFRS_<xxxxxxxx>" to folder names'
       href: ./networking/ntfrs-added-to-folder-name.md
     - name: NTFRS error event 13559 and replication stops
       href: ./networking/ntfrs-error-event-13559-replication-stops.md
@@ -1799,8 +1791,6 @@ items:
       href: ./networking/configure-remote-access-client-account-lockout.md
     - name: DirectAccess clients can't connect to server
       href: ./networking/directaccess-clients-not-connect-to-server.md
-    - name: DirectAccess network performance in Windows
-      href: ./networking/improve-directaccess-network-performance.md
     - name: Error 51 or 53 when you access shared resources
       href: ./networking/system-error-51-53-access-shared-resources.md
     - name: Error 633 - the modem is already in use
@@ -1883,8 +1873,6 @@ items:
       href: ./networking/error-message-when-you-set-ip-address.md
     - name: Event 1500 when SNMP is enabled
       href: ./networking/event-1500-when-snmp-enabled.md
-    - name: Event ID 7023 is logged
-      href: ./networking/event-id-7023-is-logged.md
     - name: Fail to open TCP/IP properties of network adapter
       href: ./networking/cannot-open-network-adapter-tcp-ip-properties.md
     - name: How to change the IP address of a network adapter
@@ -1991,6 +1979,8 @@ items:
       href: ./networking/services-not-automatically-restart-nic-teaming.md
   - name: WINS
     items:
+    - name: Error or connection issues when you configure WINS addresses for a WINS server
+      href: ./networking/setting-wins-server-options.md
     - name: Troubleshoot WINS events 4102, 4243,  4242, and 4286
       href: ./networking/windows-internet-name-service-replication-related-errors.md
   - name: Wireless networking and 802.1X authentication
@@ -3275,11 +3265,25 @@ items:
     items:
     - name: Introduction to TroubleShootingScript toolset (TSS)
       href: ../windows-client/windows-tss/introduction-to-troubleshootingscript-toolset-tss.md?context=/troubleshoot/windows-server/context/context
-    - name: Gather information for Active Directory replication issues
-      href: ../windows-client/windows-tss/gather-information-using-tss-ad-replication.md?context=/troubleshoot/windows-server/context/context
-    - name: Gather information for deployment-related issues
-      href: ../windows-client/windows-tss/gather-information-using-tss-deployment.md?context=/troubleshoot/windows-server/context/context
-    - name: Gather information for Group Policy issues
-      href: ../windows-client/windows-tss/gather-information-using-tss-group-policy.md?context=/troubleshoot/windows-server/context/context
-    - name: Gather information for user experience-related issues
-      href: ../windows-client/windows-tss/gather-information-using-tss-user-experience.md?context=/troubleshoot/windows-server/context/context
+    - name: Identity
+      items:
+      - name: Gather information for Active Directory replication issues
+        href: ../windows-client/windows-tss/gather-information-using-tss-ad-replication.md?context=/troubleshoot/windows-server/context/context
+      - name: Gather information for Group Policy issues
+        href: ../windows-client/windows-tss/gather-information-using-tss-group-policy.md?context=/troubleshoot/windows-server/context/context
+    - name: Deployment (DnD)
+      items:
+      - name: Gather information for deployment-related issues
+        href: ../windows-client/windows-tss/gather-information-using-tss-deployment.md?context=/troubleshoot/windows-server/context/context
+    - name: Storage and High Availability (SHA)
+      items:
+      - name: Gather information for Hyper-V related issues
+        href: ../windows-client/windows-tss/gather-information-using-tss-hyper-v-issues.md?context=/troubleshoot/windows-server/context/context
+      - name: Gather information for SQL cluster (AG/FCI) related issues
+        href: ../windows-client/windows-tss/gather-information-using-tss-sql-cluster-ag-fci-issues.md?context=/troubleshoot/windows-server/context/context
+      - name: Gather information for Windows failover cluster related issues
+        href: ../windows-client/windows-tss/gather-information-using-tss-windows-failover-cluster-issues.md?context=/troubleshoot/windows-server/context/context
+    - name: User Experience (UEX)
+      items:
+      - name: Gather information for user experience-related issues
+        href: ../windows-client/windows-tss/gather-information-using-tss-user-experience.md?context=/troubleshoot/windows-server/context/context

@@ -5,6 +5,7 @@ services: virtual-machines
 documentationcenter: ''
 author: divargas-msft
 tags: Linux chroot LVM
+ms.custom: linux-related-content
 ms.service: virtual-machines
 ms.subservice: vm-cannot-start-stop
 ms.collection: linux
