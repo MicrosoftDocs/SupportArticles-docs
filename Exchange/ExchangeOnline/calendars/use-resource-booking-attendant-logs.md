@@ -107,7 +107,7 @@ If you can't find the relevant entries for a booking request in the Booking Atte
 
 - The Booking Attendant can process booking requests for a workspace mailbox only if the `AcceptConflict` and `EnforceCapacity` parameters in the booking policy are both set to `true`. By default, the value of both parameters is `false`.
 
-- The Booking Attendant can't process booking requests if the booking request **Location** specifies more than one workspace mailbox, and the `EnforceCapacity` parameter in the booking policy is set to `true`.
+- The Booking Attendant can't process booking requests if the booking request **Location** specifies more than one workspace mailbox and the `EnforceCapacity` parameter in the booking policy is set to `true`.
 
 > [!NOTE]
 > If you can't use the Booking Attendant log, you can also use Calendar diagnostic logs to investigate resource booking issues.
