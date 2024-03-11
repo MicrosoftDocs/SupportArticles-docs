@@ -15,34 +15,30 @@ This article helps troubleshoot the Event ID 50 error message.
 
 ## Symptoms
 
-When information is being written to the physical disk, the following two event messages may be logged in the system event log:
+When Windows writes information to the physical disk, it might log the following two event messages in the System event log:
 
-```output
-Event ID: 50 
-Event Type: Warning 
-Event Source: Ftdisk 
-Description: {Lost Delayed-Write Data} The system was attempting to transfer file data from buffers to \Device\HarddiskVolume4. The write operation failed, and only some of the data may have been written to the file.
-Data: 
-0000: 00 00 04 00 02 00 56 00 
-0008: 00 00 00 00 32 00 04 80 
-0010: 00 00 00 00 00 00 00 00 
-0018: 00 00 00 00 00 00 00 00 
-0020: 00 00 00 00 00 00 00 00 
-0028: 11 00 00 80 
-```
+> Event ID: 50  
+Event Type: Warning  
+Event Source: Ftdisk  
+Description: {Lost Delayed-Write Data} The system was attempting to transfer file data from buffers to \Device\HarddiskVolume4. The write operation failed, and only some of the data may have been written to the file.  
+Data:  
+0000: 00 00 04 00 02 00 56 00  
+0008: 00 00 00 00 32 00 04 80  
+0010: 00 00 00 00 00 00 00 00  
+0018: 00 00 00 00 00 00 00 00  
+0020: 00 00 00 00 00 00 00 00  
+0028: 11 00 00 80  
 
-```output
-Event ID: 26 
-Event Type: Information
-Event Source: Application Popup
-Description: Windows - Delayed Write Failed : Windows was unable to save all the data for the file \Device\HarddiskVolume4\Program Files\Microsoft SQL Server\MSSQL$INSTANCETWO\LOG\ERRORLOG. The data has been lost. This error may be caused by a failure of your computer hardware or network connection.
-
-Please try to save this file elsewhere.
-```
+> Event ID: 26  
+Event Type: Information  
+Event Source: Application Popup  
+Description: Windows - Delayed Write Failed : Windows was unable to save all the data for the file \Device\HarddiskVolume4\Program Files\Microsoft SQL Server\MSSQL$INSTANCETWO\LOG\ERRORLOG. The data has been lost. This error may be caused by a failure of your computer hardware or network connection.  
+  
+Please try to save this file elsewhere.  
 
 These event ID messages mean exactly the same thing and are generated for the same reasons. For the purposes of this article, only the event ID 50 message is described.
 
-> [!NOTE]
+> [!NOTE]  
 > The device and path in the description and the specific hexadecimal data will vary.
 
 ## More information
@@ -97,7 +93,7 @@ The final status code is the most important piece of information in an event ID 
 0028: 11 00 00 80 
 ```
 
-In this case, the final status equals 0x80000011.This status code maps to `STATUS_DEVICE_BUSY` and implies that the device is currently busy.
+In this case, the final status equals 0x80000011. This status code maps to `STATUS_DEVICE_BUSY` and implies that the device is currently busy.
 
 > [!NOTE]
 > When you are converting the hexadecimal data in the event ID 50 message to the status code, remember that the values are represented in the little-endian format. Because the status code is the only piece of information that you are interested in, it may be easier to view the data in WORDS format instead of BYTES. If you do so, the bytes will be in the correct format and the data may be easier to interpret quickly.
@@ -111,4 +107,4 @@ Data:
 Words 0000: 00040000 00560002 00000000 80040032 0010: 00000000 00000000 00000000 00000000 0020: 00000000 00000000 80000011
 ```
 
-To obtain a list of Windows NT status codes, see NTSTATUS.H in the Windows Software Developers Kit (SDK).
+To obtain a list of Windows NT status codes, see *NTSTATUS.H* in the Windows Software Developers Kit (SDK).
