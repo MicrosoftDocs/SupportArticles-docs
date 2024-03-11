@@ -201,6 +201,8 @@
           href: ../calendars/shared-calendar-in-delegate-online-archive.md
         - name: Still can reserve a meeting room even if it's reserved
           href: ../calendars/you-still-can-reserve-a-meeting-room-even-if-it-is-reserved.md
+        - name: Use Resource Booking Attendant logs
+          href: ../calendars/use-resource-booking-attendant-logs.md
     - name: Development
       items:
         - name: POX Autodiscover not supported with OAuth client credentials grant
