@@ -1,6 +1,26 @@
 {
   "redirections": [
     {
+      "source_path": "support/windows-server/networking/event-1-smb-witness-client-initialization.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-smb-guidance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/troubleshoot-event-id-50-error.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-smb-guidance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/troubleshoot-event-id-1020-warnings-file-server.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-smb-guidance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/periodic-smbclient-event-id-30818.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-smb-guidance",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/windows-server/networking/value-does-not-fall-within-the-expected-range.md",
       "redirect_url": "/previous-versions/troubleshoot/windows-server/value-does-not-fall-within-the-expected-range",
       "redirect_document_id": false
