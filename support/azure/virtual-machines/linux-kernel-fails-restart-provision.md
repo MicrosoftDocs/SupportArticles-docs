@@ -69,7 +69,7 @@ To resolve this problem, try [manually restarting](/cli/azure/vm#az-vm-restart) 
   
 ## More information
 
-For more information about [Endorsed Linux distributions](/azure/virtual-machines/linux/endorsed-distros) and open-source technologies in Azure, see [Support for Linux and open source technology in Azure](../cloud-services/support-linux-open-source-technology.md).  
+For more information about [Endorsed Linux distributions](/azure/virtual-machines/linux/endorsed-distros) and open-source technologies in Azure, see [Support for Linux and open source technology in Azure](../cloud-services-classic/support-linux-open-source-technology.md).  
 
 **Third-party information disclaimer**
   
