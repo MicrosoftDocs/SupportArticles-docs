@@ -141,6 +141,12 @@ items:
       - name: Azure Service Fabric
         tocHref: /troubleshoot/azure/service-fabric/
         topicHref: /troubleshoot/azure/service-fabric/welcome-service-fabric
+      - name: Blob Storage
+        tocHref: /troubleshoot/azure/azure-storage/blobs
+        topicHref: /troubleshoot/azure/azure-storage/blobs/welcome-blob-storage
+      - name: Files Storage
+        tocHref: /troubleshoot/azure/azure-storage/files
+        topicHref: /troubleshoot/azure/azure-storage/files/welcome-files-storage
       - name: Azure Storage
         tocHref: /troubleshoot/azure/azure-storage/
         topicHref: /troubleshoot/azure/azure-storage/welcome-azure-storage
