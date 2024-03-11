@@ -144,9 +144,18 @@ items:
       - name: Azure Storage
         tocHref: /troubleshoot/azure/azure-storage/
         topicHref: /troubleshoot/azure/azure-storage/welcome-azure-storage
-      - name: Azure Synapse Analytics
-        tocHref: /troubleshoot/azure/synapse-analytics
-        topicHref: /troubleshoot/azure/synapse-analytics/welcome-synapse-analytics
+      - name: Azure Synapse Analytics Apache Spark Pool
+        tocHref: /troubleshoot/azure/synapse-analytics-spark
+        topicHref: /troubleshoot/azure/synapse-analytics-spark/welcome-synapse-analytics-spark
+      - name: Azure Synapse Analytics Dedicated SQL Pool
+        tocHref: /troubleshoot/azure/synapse-analytics-ded-sql-pool
+        topicHref: /troubleshoot/azure/synapse-analytics-ded-sql-pool/welcome-synapse-analytics-ded-sql-pool
+      - name: Azure Synapse Analytics Serverless SQL Pool
+        tocHref: /troubleshoot/azure/synapse-analytics-srvrless-sql-pool
+        topicHref: /troubleshoot/azure/synapse-analytics-srvrless-sql-pool/welcome-synapse-analytics-srvrless-sql-pool
+      - name: Azure Synapse Analytics Workspace
+        tocHref: /troubleshoot/azure/synapse-analytics-workspace
+        topicHref: /troubleshoot/azure/synapse-analytics-workspace/welcome-synapse-analytics-workspace
       - name: Azure Virtual Network
         tocHref: /troubleshoot/azure/virtual-network/
         topicHref: /troubleshoot/azure/virtual-network/welcome-virtual-network

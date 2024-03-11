@@ -1,0 +1,16 @@
+- name: Welcome
+  href: welcome-synapse-analytics-ded-sql-pool.yml
+- name: Troubleshoot connectivity issues on a dedicated SQL pool
+  href: dsql-conn-dropped-connections.md
+- name: Troubleshoot a slow query on a dedicated SQL pool
+  href: troubleshoot-dsql-perf-slow-query.md
+- name: Troubleshoot common query errors
+  href: dsql-perf-common-query-errors.md
+- name: Assess and correct clustered columnstore index health in a dedicated SQL pool
+  href: dsql-perf-cci-health.md
+- name: Check statistics accuracy on a dedicated SQL pool
+  href: dsql-perf-stats-accuracy.md
+- name: Troubleshoot tempdb errors on a dedicated SQL pool
+  href: dsql-perf-tempdb-errors.md
+- name: Backup, restore, and recovery guidance for Azure Synapse dedicated SQL pools
+  href: dsql-maint-backup-restore-guidance.md

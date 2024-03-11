@@ -1,0 +1,32 @@
+### YamlMime:Landing
+
+title: Azure Synapse Analytics Dedicated SQL Pool troubleshooting documentation
+summary: Welcome to Azure Synapse Analytics Dedicated SQL Pool troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Azure Synapse Analytics Dedicated SQL Pool. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+
+metadata:
+  title: Troubleshoot Azure Synapse Analytics Dedicated SQL Pool issues
+  description: Documentation for troubleshooting common issues with Azure Synapse Analytics Dedicated SQL Pool. # Required; article description that is displayed in search results. < 160 chars.
+  services: synapse-analytics
+  ms.service: synapse-analytics #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.topic: landing-page # Required
+  author: scott-epperly  #Required; your GitHub user alias, with correct capitalization.
+  ms.author: scepperl #Required; microsoft alias of author; optional team alias.
+  ms.date: 03/11/2024
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+ # Card
+  - title: Troubleshoot Dedicated SQL pool issues
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot a slow query on a dedicated SQL pool
+            url: troubleshoot-dsql-perf-slow-query.md
+          - text: Assess and correct clustered columnstore index health on a dedicated SQL pool
+            url: dsql-perf-cci-health.md
+          - text: Check statistics accuracy on a dedicated SQL pool
+            url: dsql-perf-stats-accuracy.md
+          - text: Troubleshoot tempdb errors on a dedicated SQL pool
+            url: dsql-perf-tempdb-errors.md

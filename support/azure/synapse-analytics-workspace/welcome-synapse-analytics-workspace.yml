@@ -1,0 +1,26 @@
+### YamlMime:Landing
+
+title: Azure Synapse Analytics Workspace troubleshooting documentation
+summary: Welcome to Azure Synapse Analytics Workspace troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Azure Synapse Analytics Workspace. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+
+metadata:
+  title: Troubleshoot Azure Synapse Analytics Workspace issues
+  description: Documentation for troubleshooting common issues with Azure Synapse Analytics Workspace. # Required; article description that is displayed in search results. < 160 chars.
+  services: synapse-analytics
+  ms.service: synapse-analytics #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.topic: landing-page # Required
+  author: scott-epperly  #Required; your GitHub user alias, with correct capitalization.
+  ms.author: scepperl #Required; microsoft alias of author; optional team alias.
+  ms.date: 03/11/2024
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+  # Card
+  - title: Troubleshoot Synapse Analytics Workspace issues
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Resolve Azure Synapse Studio connectivity issues
+            url: wrk-conn-synapse-studio.md
