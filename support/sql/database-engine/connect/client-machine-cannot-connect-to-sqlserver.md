@@ -1,5 +1,5 @@
 ---
-title: Client computer can't connect to the linked server by using SQL authentication
+title: Local SQL Server can't connect to a linked server when RSA encryption is used
 description: This article provides a resolution for an error that prevents a client computer from connecting to the linked server.
 ms.date: 03/04/2024
 author: prmadhes-msft
@@ -8,7 +8,7 @@ ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 
-# Client can't connect to the linked server through SQL authentication
+# Local SQL Server can't connect to a linked server when RSA encryption is used
 
 This article helps you resolve errors in Microsoft SQL Server that prevent a client computer from establishing a connection with the linked server.
 
