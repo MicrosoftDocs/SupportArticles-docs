@@ -1,7 +1,7 @@
 ---
 title: Guidance for troubleshooting SMB
 description: Introduces general guidance for troubleshooting scenarios related to SMB.
-ms.date: 12/26/2023
+ms.date: 3/15/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -99,6 +99,25 @@ You may have to disable RSS on both network adapters to aggregate throughput. Fo
 The virtual network adapter on the host is not RSS-capable. Without an RSS-capable network adapter, SMB uses only one TCP connection. This occurs when using 10 GbE network adapters, RSS-capable network adapters, and NIC Teaming.
 
 To troubleshoot this issue, use multiple virtual network adapters to make sure that you have multiple TCP connections. For more information, see the following blog article: [Windows Server 2012 File Server Tip: Make sure your network interfaces are RSS-capable](https://blogs.technet.com/b/josebda/archive/2012/11/10/windows-server-2012-file-server-tip-make-sure-your-network-interfaces-are-rss-capable.aspx).
+
+### Periodic SMBClient event ID 30818 is logged on Windows Server 2012 R2
+
+Assume that a Windows Server 2012 R2-based computer uses an InfiniBand network adapter. This adapter uses the SMB Direct feature to support Remote Direct Memory Access (RDMA) communication between cluster nodes and Hyper-V hosts. After you restart a Hyper-V host, event ID 30818 may be logged under the Applications and Services Logs/Microsoft/Windows/SmbClient path in Event Viewer. When this issue occurs, it may cause performance issues.
+
+On Windows Server 2012 R2, the SmbDirect interface is started automatically by the LanmanServer service. However, if the LanmanWorkstation service happens to start first and tries to open an RDMA connection before the SmbDirect is loaded, event ID 30818 will be logged. When the client initially communicates to the server over TCP/IP, new client connections will start to use the RDMA interface. Therefore, no user action is needed to recover.
+
+A change is being considered to resolve this problem in a future version of Windows Server.
+
+To work around this problem on Windows Server 2012 R2, the SmbDirect service should be configured to start automatically. To do this, follow these steps:
+
+1. Open Registry Editor, and then locate to the following registry subkey:
+    `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\smbdirect`
+
+2. Right-click the **Start** registry entry, and then click **Modify**.
+3. In the **Value data** box, change the value (by default, it's **3** as on-demand) to **2** (automatic). Then, the event 30818 error should no longer be logged immediately after a restart of the server, unless there's some other problem that prevents the RDMA interface from initializing.
+
+### 
+
 
 ## SMB known issues
 
