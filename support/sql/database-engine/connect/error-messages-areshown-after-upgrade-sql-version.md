@@ -1,7 +1,7 @@
 ---
-title: Connection error occurs in SQL Server after a program upgrade  
+title: Connection error occurs in SQL Server after a program upgrade
 description: This article provides a resolution for an error that you experience after you upgrade SQL Server.
-ms.date: 03/06/2024
+ms.date: 03/11/2024
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
@@ -14,7 +14,7 @@ After a Microsoft SQL Server upgrade, you experience a connection error. The err
 
 ## Symptoms
 
-After you upgrade Microsoft SQL Server Standard Edition (STD), SQL Server Agent starts and stops immediately. Additionally, you receive the following error messages:
+After you upgrade Microsoft SQL Server Standard Edition (STD), SQL Server Agent starts and stops immediately. Additionally, you receive one or more of the following error messages:
 
 > SQL Server does not accept the connection (error: 10054). Waiting for SQL Server to allow connections. Operation attempted was: Verify Connection on Start.
 
