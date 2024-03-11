@@ -2,6 +2,7 @@
 title: Install .NET Core in Linux
 description: This article introduces how to install .NET Core in Linux and describes the .NET Core versions.
 ms.date: 03/08/2021
+ms.custom: linux-related-content
 ms.reviewer: ramakoni, ahmetmb
 author: ahmetmithat
 ---

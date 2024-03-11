@@ -75,6 +75,8 @@ items:
           href: isolate-and-troubleshoot-common-issues/troubleshoot-canvas-app-date-time-issues.md
         - name: Troubleshoot date and time issues in model-driven apps
           href: isolate-and-troubleshoot-common-issues/troubleshoot-model-driven-app-date-time-issues.md
+        - name: Troubleshoot Lookup issues in model-driven apps
+          href: isolate-and-troubleshoot-common-issues/troubleshoot-model-driven-app-lookup-issues.md
         - name: Troubleshoot Power Query
           href: isolate-and-troubleshoot-common-issues/troubleshoot-power-query-issues.md
         - name: Troubleshoot startup issues for Power Apps
