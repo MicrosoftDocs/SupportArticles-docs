@@ -6,7 +6,7 @@ documentationcenter: virtual-machines
 author: genlin
 manager: dcscontentpm
 tags: azure-resource-manager,top-support-issue
-ms.custom: devx-track-azurecli
+ms.custom: devx-track-azurecli, linux-related-content
 ms.service: virtual-machines
 ms.subservice: vm-common-errors-issues
 ms.collection: linux

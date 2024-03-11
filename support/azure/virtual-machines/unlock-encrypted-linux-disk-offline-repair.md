@@ -10,6 +10,7 @@ manager: dcscontentpm
 editor: v-jesits
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-linux
+ms.custom: linux-related-content
 ms.workload: infrastructure
 ms.date: 05/17/2022
 ms.author: diambroi

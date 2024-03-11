@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting network login issues in SQL Server
 description: This article provides a resolution for the consistent authentication issue in SQL Server that affects network login.
-ms.date: 02/27/2024
+ms.date: 03/08/2024
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
@@ -10,7 +10,7 @@ ms.custom: sap:Connection issues
 
 # "User account not allowed" error and remote network access denied
 
-This article helps you resolve a consistent authentication issue that occurs if users don't have permissions to log in to a remote network.
+This article helps you resolve a consistent authentication issue that occurs when users don't have permissions to log in to a remote network.
 
 ## Symptoms
 
