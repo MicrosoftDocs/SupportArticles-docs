@@ -1,11 +1,11 @@
 ---
-title: Intermittent or periodic network issues
+title: Intermittent or periodic issues with connecting to SQL Server
 description: Troubleshoots intermittent or periodic network issues in SQL Server connectivity.
 ms.date: 03/08/2024
 ms.custom: sap:Connection issues
 ms.reviewer: mastewa, prmadhes, jopilov, v-sidong
 ---
-# Intermittent or periodic network issues in SQL Server
+# How to troubleshoot intermittent or periodic issues with connecting to SQL Server
 
 > [!NOTE]
 > Before you start troubleshooting, we recommend that you check the [prerequisites](resolve-connectivity-errors-checklist.md#recommended-prerequisites) and go through the checklist. For more information, see [Self-Help Articles](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/0015-Self-Help-Articles).
