@@ -116,8 +116,17 @@ To work around this problem on Windows Server 2012 R2, the SmbDirect service sho
 2. Right-click the **Start** registry entry, and then click **Modify**.
 3. In the **Value data** box, change the value (by default, it's **3** as on-demand) to **2** (automatic). Then, the event 30818 error should no longer be logged immediately after a restart of the server, unless there's some other problem that prevents the RDMA interface from initializing.
 
-### 
+### Event 1 about SMB witness client initialization when you install Windows Server
 
+During the deployment of Windows Server 2019, Windows Server 2016, and Windows Server 2012 R2, the following error message is logged in Event Viewer indicating that Server Message Block (SMB) witness client initialization failed and returned Event 1:
+
+> Log Name: Microsoft-Windows-SMBWitnessClient/Admin  
+Source: Microsoft-Windows-SMBWitnessClient  
+Event ID:1  
+Level: Error  
+Description: Witness Client initialization failed with error (The system cannot find the file specified.)
+
+You can safely ignore this event if this is a fresh deployment of Windows Server that has no role and no feature is enabled.
 
 ## SMB known issues
 

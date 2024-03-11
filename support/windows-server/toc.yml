@@ -1519,10 +1519,6 @@ items:
       href: ./networking/dns-cname-alias-cannot-access-smb-file-server-share.md
     - name: Error messages on SMB connections
       href: ./networking/error-messages-smb-connections.md
-    - name: Event 1 about SMB witness client initialization
-      href: ./networking/event-1-smb-witness-client-initialization.md
-    - name: Event 30818 when the RDMA connections fail back to TCP
-      href: ./networking/periodic-smbclient-event-id-30818.md
     - name: Fail to open file shares or Group Policy snap-ins
       href: ./networking/cannot-open-file-shares-group-policy-snap-ins.md
     - name: Guest access in SMB2 is disabled by default
