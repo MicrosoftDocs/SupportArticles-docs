@@ -1,6 +1,6 @@
 ---
 title: Error (You're missing out) when signing in Teams
-description: Describes an issue in which an error (You're missing out) occurs when you sign in Teams
+description: Describes an issue in which an error (You're missing out) occurs when you sign in Teams.
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -19,7 +19,7 @@ search.appverid:
 ms.date: 03/11/2024
 ---
 
-# Error when signing into Teams: You're missing out! Ask your admin to enable Microsoft Teams for \<CompanyName\>
+# Error when signing into Teams "You're missing out! Ask your admin to enable Microsoft Teams for \<CompanyName\>"
 
 ## Symptoms
 
@@ -29,7 +29,7 @@ When users try to sign in to Microsoft Teams, they receive this error message:
 
 ## Resolution
 
-In Microsoft 365 Education tenants, Microsoft Teams isn't enabled by default. You'll have to turn it on. Here's how to [Enable Microsoft Teams for your school](/microsoft-365/education/deploy/enable-microsoft-teams).
+In Microsoft 365 Education tenants, Microsoft Teams isn't enabled by default. You must to turn it on. Here's how to [Enable Microsoft Teams for your school](/microsoft-365/education/deploy/enable-microsoft-teams).
 
 If your organization is eligible for the Microsoft Teams Exploratory experience, make sure that end users can run the Teams Exploratory experience. For more information, see [Manage the Teams Exploratory experience](/microsoftteams/teams-exploratory#manage-the-teams-exploratory-experience).
 
