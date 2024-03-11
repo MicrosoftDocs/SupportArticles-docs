@@ -7,7 +7,7 @@ metadata:
    services: service
    ms.service: azure-common-issues-support
    ms.author: genlin
-   ms.date: 09/20/2023
+   ms.date: 03/08/2024
 
 productDirectory:
   items:
@@ -89,8 +89,10 @@ productDirectory:
   - title: Cloud Services
     imageSrc: "https://static.docs.com/ui/media/product/azure/cloud-services.svg"
     links:
-    - url: cloud-services/welcome-cloud-services.yml
-      text: Troubleshooting articles for Cloud Services
+    - url: cloud-services-classic/welcome-cloud-services-classic.yml
+      text: Troubleshooting articles for Cloud Services (classic)
+    - url: cloud-services-extended/welcome-cloud-services-extended.yml
+      text: Troubleshooting articles for Cloud Services (extended support)
   - title: High Performance Computing
     imageSrc: "https://static.docs.com/ui/media/product/azure/container-registry.svg"
     links:
