@@ -9,26 +9,29 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
   - CI 120062
+  - CI 187813
   - CSSTroubleshoot
 ms.reviewer: clake
 appliesto: 
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 10/30/2023
+ms.date: 03/11/2024
 ---
 
-# Error when signing into Teams: You're missing out! Ask your admin to enable Microsoft Teams for \<CompanyName>
+# Error when signing into Teams: You're missing out! Ask your admin to enable Microsoft Teams for \<CompanyName\>
 
 ## Symptoms
 
-When you sign into Microsoft Teams, you receive this error message:
+When users try to sign in to Microsoft Teams, they receive this error message:
 
-> "You're missing out! Ask your admin to enable Microsoft Teams for \<CompanyName>"
+> "You're missing out! Ask your admin to enable Microsoft Teams for \<CompanyName\>"
 
 ## Resolution
 
 In Microsoft 365 Education tenants, Microsoft Teams isn't enabled by default. You'll have to turn it on. Here's how to [Enable Microsoft Teams for your school](/microsoft-365/education/deploy/enable-microsoft-teams).
+
+If your organization is eligible for the Microsoft Teams Exploratory experience, make sure that end users can run the Teams Exploratory experience. For more information, see [Manage the Teams Exploratory experience](/microsoftteams/teams-exploratory#manage-the-teams-exploratory-experience).
 
 ## More information
 
