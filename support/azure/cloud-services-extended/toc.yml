@@ -1,44 +1,10 @@
 - name: Welcome
-  href: welcome-cloud-services.yml
+  href: welcome-cloud-services-extended.yml
   
 - name: Troubleshooting series for developers
-  href: dev-troubleshoot-series.md
   items:
-  - name: ZipEngine role throws Could not load file or assembly
-    href: dev-zipengine-role-stuck-busy-restart.md
-  - name: AssemblyBinder role throws Not enough space error
-    href: dev-assemblybinder-role-instance-stuck-busy-restart.md
-  - name: Autoscale is not triggering for FileUploader role
-    href: dev-autoscale-not-trigger-fileuploader.md
-  - name: ProcessorEngine role is stuck in Busy state
-    href: dev-processorengine-role-stuck-busy-state.md
-  - name: Website throws HTTP Error 503 with default cloud services url
-    href: dev-http-error-503-cannot-access-website.md
-  - name: Cannot RDP to HealthMonitor role
-    href: dev-connect-healthmonitor-worker-role-rdp.md
-  - name: Cannot access the website although all role instances are running
-    href: dev-asp-net-signair-app-cannot-access.md
-  - name: Webapp can't work when TryWebSockets is disabled
-    href: dev-aspnet-signalr-application-not-work.md
   - name: Use Azure DevOps to publish Cloud Services (extended support)
     href: azure-devops-publish-cloud-service-extended.md
-- name: Remote Desktop Protocol doesn't work with Cloud Services (classic) resource
-  href: rdp-not-working-cloud-service.md
-
-- name: Troubleshooting deployment failures in Cloud Services (classic)
-  items:
-  - name: Configure instance-level public IP addresses (PIPs)
-    href: instance-level-public-ip-address-configuration.md
-  - name: InvalidModel exception
-    href: troubleshoot-mismatched-config.md
-  - name: Role recycle threshold exceptions
-    href: troubleshoot-role-recycle-swap.md
-  - name: SubscriptionPolicyCountExceeded exception
-    href: troubleshoot-subscription-policy.md
-  - name: Update failed during migration from classic to extended support
-    href: failed-update-ongoing-migration-process.md
-  - name: Virtual IP address (VIP) swap failures
-    href: troubleshoot-vip-swap.md
 
 - name: Troubleshooting Cloud Services (extended support)
   items:
@@ -49,7 +15,7 @@
   - name: Application pool is crashing
     href: application-pool-crashes.md
   - name: Configure instance-level public IP addresses (PIPs)
-    href: instance-level-public-ip-address-configuration.md
+    href: ../cloud-services-classic/instance-level-public-ip-address-configuration.md
   - name: Disk partition preservation
     href: disk-partition-preservation.md
   - name: Enable HTTPS communication
@@ -75,7 +41,7 @@
   - name: Roles that fail to start
     href: role-startup-failure.md
   - name: Update failed during migration from classic to extended support
-    href: failed-update-ongoing-migration-process.md
+    href: ../cloud-services-classic/failed-update-ongoing-migration-process.md
   - name: Update or change the certificate used
     href: update-or-change-certificate-used.md
   - name: Troubleshoot with App Insights-features overview
@@ -86,10 +52,3 @@
     href: app-insights-track-free-space-logical-drive.md
   - name: Windows PaaS compute diagnostic data
     href: windows-azure-paas-compute-diagnostic-data.md
-
-- name: Reference
-  items:
-  - name: Install .NET Core with Azure Batch start task
-    href: install-dotnet-core-linux.md
-  - name: Support for Linux and open-source technology in Azure
-    href: support-linux-open-source-technology.md

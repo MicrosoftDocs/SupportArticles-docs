@@ -1,0 +1,46 @@
+### YamlMime:Landing
+
+title: Azure Cloud Services (classic) troubleshooting documentation
+summary: Welcome to Azure Cloud Services (classic) troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Azure Cloud Services (classic). In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+
+metadata:
+  title: Troubleshoot Azure Cloud Services (classic) issues
+  description: Documentation for troubleshooting common issues with Azure Cloud Services (classic). # Required; article description that is displayed in search results. < 160 chars.
+  services: cloud-services
+  ms.service: cloud-services #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.topic: landing-page # Required
+  author: genlin  #Required; your GitHub user alias, with correct capitalization.
+  ms.author: genli #Required; microsoft alias of author; optional team alias.
+  ms.date: 03/11/2024
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+ # Card
+  - title: Troubleshooting deployment failures in Cloud Services (classic)
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Configure instance-level public IP addresses (PIPs)
+            url: instance-level-public-ip-address-configuration.md
+          - text: InvalidModel exception
+            url: troubleshoot-mismatched-config.md
+          - text: Role recycle threshold exceptions
+            url: troubleshoot-role-recycle-swap.md
+          - text: SubscriptionPolicyCountExceeded exception
+            url: troubleshoot-subscription-policy.md
+          - text: Virtual IP address (VIP) swap failures
+            url: troubleshoot-vip-swap.md
+
+ # Card
+  - title: Troubleshooting Series for developers
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: ZipEngine role is stuck between Restarting and Busy state
+            url: dev-zipengine-role-stuck-busy-restart.md
+          - text: AssemblyBinder role throws Not enough space error
+            url: dev-assemblybinder-role-instance-stuck-busy-restart.md
+          - text: Autoscale is not triggering for FileUploader role
+            url: dev-autoscale-not-trigger-fileuploader.md
