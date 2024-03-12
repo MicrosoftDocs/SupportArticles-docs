@@ -10,9 +10,9 @@ ms.collection: windows
 ms.workload: na
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting-problem-resolution
-ms.date: 12/08/2023
+ms.date: 03/12/2024
 ms.author: genli
-ms.reviewer: cwhitley, jusilver, v-naqviadil, v-leedennis
+ms.reviewer: cwhitley, jusilver, v-naqviadil, v-leedennis, v-weizhu
 ---
 # Troubleshoot Azure Windows virtual machine activation problems
 
@@ -26,10 +26,13 @@ Azure uses different endpoints for Key Management Services (KMS) activation depe
 
 | Region | KMS endpoint |
 |--|--|
-| Azure public cloud regions | `kms.core.windows.net:1688` or `azkms.core.windows.net:1688` |
+| Azure public cloud regions | `azkms.core.windows.net:1688` |
 | Azure China 21Vianet national cloud regions | `kms.core.chinacloudapi.cn:1688` or `azkms.core.chinacloudapi.cn:1688` |
 | Azure Germany national cloud regions | `kms.core.cloudapi.de:1688` |
 | Azure US Gov national cloud regions | `kms.core.usgovcloudapi.net:1688` |
+
+> [!NOTE]
+> `kms.core.windows.net` for Azure public cloud regions was updated to `azkms.core.windows.net` in July of 2022. For more information, see [KMS endpoints - new endpoints](windows-activation-stopped-working.md).
 
 ## Symptoms
 
@@ -43,7 +46,7 @@ Generally, Azure VM activation issues occur if the Windows VM has one or both of
 
 - Isn't configured by using the appropriate KMS client setup key
 
-- Has a connectivity problem to the Azure KMS service (`kms.core.windows.net`, port 1688)
+- Has a connectivity problem to the Azure KMS service (`azkms.core.windows.net`, port 1688)
 
 ## Solution
 
@@ -96,19 +99,19 @@ For the VM created from a custom image, you must configure the appropriate KMS c
 1. Make sure that the VM is configured to use the correct Azure KMS server. To do this, run the following command:
   
     ```powershell
-    Invoke-Expression "$env:windir\system32\cscript.exe $env:windir\system32\slmgr.vbs /skms kms.core.windows.net:1688"
+    Invoke-Expression "$env:windir\system32\cscript.exe $env:windir\system32\slmgr.vbs /skms azkms.core.windows.net:1688"
     ```
 
     The command should return the following text:
 
-    > Key Management Service machine name set to `kms.core.windows.net:1688` successfully.
+    > Key Management Service machine name set to `azkms.core.windows.net:1688` successfully.
 
 2. Ensure that the outbound network traffic to KMS endpoint on port 1688 isn't blocked by the firewall in the VM. To do this, run the [Test-NetConnection](/powershell/module/nettcpip/test-netconnection) PowerShell cmdlet or [PsPing](/sysinternals/downloads/psping) tool.
 
     - Verify by running `Test-NetConnection`:
 
         ```powershell
-        Test-NetConnection kms.core.windows.net -port 1688
+        Test-NetConnection azkms.core.windows.net -port 1688
         ```
 
        If the connectivity is permitted, you can see `TcpTestSucceeded: True` in the output.
@@ -116,23 +119,23 @@ For the VM created from a custom image, you must configure the appropriate KMS c
     - Verify by using PsPing. Switch to the folder in which you extracted the `Pstools.zip` archive, and then run the following command:
 
         ```cmd
-        .\psping.exe kms.core.windows.net:1688
+        .\psping.exe azkms.core.windows.net:1688
         ```
 
         In the second-to-last line of the output, make sure that you see the following text:
 
         > Sent = 4, Received = 4, Lost = 0 (0% loss)
 
-        If Lost is greater than 0 (zero), the VM doesn't have connectivity to the KMS server. In this situation, if the VM is in a virtual network and has specified a custom DNS server, you must make sure that DNS server is able to resolve `kms.core.windows.net`. Or, change the DNS server to one that does resolve `kms.core.windows.net`.
+        If Lost is greater than 0 (zero), the VM doesn't have connectivity to the KMS server. In this situation, if the VM is in a virtual network and has specified a custom DNS server, you must make sure that DNS server is able to resolve `azkms.core.windows.net`. Or, change the DNS server to one that does resolve `azkms.core.windows.net`.
 
         > [!NOTE]  
-        > If you remove all DNS servers from a virtual network, the VMs use Azure's internal DNS service. This service can resolve `kms.core.windows.net`.
+        > If you remove all DNS servers from a virtual network, the VMs use Azure's internal DNS service. This service can resolve `azkms.core.windows.net`.
 
-3. Verify using [Azure Network Watcher next hop](/azure/network-watcher/network-watcher-next-hop-overview) that the next hop type from the VM in question to the destination IP `23.102.135.246` (for `kms.core.windows.net`) or the IP of the appropriate KMS endpoint that applies to your region is **Internet**.
+3. Verify using [Azure Network Watcher next hop](/azure/network-watcher/network-watcher-next-hop-overview) that the next hop type from the VM in question to the destination IP ` 20.118.99.224` or `40.83.235.53` (for `azkms.core.windows.net`) or the IP of the appropriate KMS endpoint that applies to your region is **Internet**.
 
    If the result is **VirtualAppliance** or **VirtualNetworkGateway**, it's likely that a default route exists. Contact your network administrator and work with them to determine the correct course of action. This might be a [custom route](./custom-routes-enable-kms-activation.md) if that solution is consistent with your organization's policies.
 
-4. After you verify successful connectivity to `kms.core.windows.net`, run the following command at that elevated Windows PowerShell prompt. This command tries activation multiple times:
+4. After you verify successful connectivity to `azkms.core.windows.net`, run the following command at that elevated Windows PowerShell prompt. This command tries activation multiple times:
 
     ```powershell
     1..12 | ForEach-Object {
