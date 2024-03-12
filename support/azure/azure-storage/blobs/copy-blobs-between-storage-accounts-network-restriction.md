@@ -65,4 +65,28 @@ Here's the full process of this mechanism for the two scenarios:
 3. After getting the 403 error, the destination storage sent another GetBlob request on behalf of the client. If the client has access to the source storage, the destination will be able to get the blocks from the source and return a success response code to the client.
 4. The client sent PutBlockList to the destination storage to commit the blocks and finish the process after receiving a success response code from the request.
 
+## Copy blobs between storage accounts in a Hub & Spoke architecture using Private Endpoints
+A 403 Error occurs when using AzCopy to copy blobs between Storage accounts connected to Private Endpoints in different Spoke VNETs from a VM in a Hub VNET. You can find a "403 This request is not authorized to perform this operation - CannotVerfiyCopySource" error in the AzCopy logs or in the Azure Storage logs. The following architecture diagram shows the scenario in which the error occurs.
+
+:::image type="content" source="media/copy-blobs-between-storage-accounts-network-restriction/hub-spoke-network-topology-architecture.png" alt-text="Diagram that shows the 403 error of coping blobs between storage accounts in a Hub & Spoke architecture using Private Endpoints.":::
+
+
+### Mitigation 1: Create a Private endpoint of the destination storage account in the source VNET
+A Possible workaround is to create a Private Endpoint of the destination storage account in the source VNET. This will allow the VM using AzCopy to successfully copy the blobs between the storage accounts. The following architecture diagram shows the process of coping blobs between storage accounts in Mitigation 1.
+
+:::image type="content" source="media/copy-blobs-between-storage-accounts-network-restriction/hub-spoke-network-topology-architecture-mitigation-1.png" alt-text="Diagram that shows the process of coping blobs between storage accounts in Mitigation 1.":::
+
+### Mitigation 2: Place the VM in the same VNET as the source storage account and peer the VNET with the destination VNET
+Another option is to place the VM in the same VNET as the source storage account and peer the VNET with the destination VNET. This will allow the VM using AzCopy to successfully copy the blobs between the storage accounts. The following architecture diagram shows the process of coping blobs between storage accounts in Mitigation 2.
+
+:::image type="content" source="media/copy-blobs-between-storage-accounts-network-restriction/hub-spoke-network-topology-architecture-mitigation-2.png" alt-text="Diagram that shows the process of coping blobs between storage accounts in Mitigation 2.":::
+
+### Mitigation 3: Use a temporary staging account to copy the data.
+If you cannot apply the above workarounds or are not allowed to change the current network configuration of an account or VNET, you can use a temporary staging account to copy the data. Create a temporary storage account in the same region as the source storage account and the destination storage account. Then, use AzCopy to copy the data from the source storage account to the temporary storage account and then from the temporary storage account to the destination storage account. You need to make sure that the temporary storage account has an private endpoint in the same VNET as the account at the time the data is processed. 
+
+### Mitigation 4: Use a VM and download the data to the VM and then upload the data to the destination storage account.
+Only use this workaround if all others are not possible for you. You can use a VM to download the data from the source storage account and later upload it to the target storage account. This can be done with AzCopy "copy" or another tool. Make sure that the size of the VM and the disk is suitable for the data transfer.
+
+
+
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
