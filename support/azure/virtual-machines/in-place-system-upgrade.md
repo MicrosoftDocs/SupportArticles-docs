@@ -1,7 +1,7 @@
 ---
 title: In-place upgrade for supported VMs running Windows in Azure
 description: Understand how to work around the unsupported in-place system upgrade on an Azure VM that runs Windows.
-ms.date: 03/08/2024
+ms.date: 03/12/2024
 ms.reviewer: joscon, scotro, azurevmcptcic
 ms.service: virtual-machines
 ms.subservice: vm-common-errors-issues
