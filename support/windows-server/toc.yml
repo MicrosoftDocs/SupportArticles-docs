@@ -1497,6 +1497,12 @@ items:
     items:
     - name: 'Troubleshooting guidance: SMB'
       href: ./networking/troubleshoot-smb-guidance.md
+    - name: Common SMB events
+      items:
+        - name: Troubleshoot event ID 1020 on a file server
+          href: ./networking/troubleshoot-event-id-1020-warnings-file-server.md
+        - name: Troubleshoot the Event ID 50 error message
+          href: ./networking/troubleshoot-event-id-50-error.md
     - name: 'Troubleshooting guidance: DFS Namespace'
       href: ./networking/troubleshoot-dfs-namespace-guidance.md
     - name: '"Delayed Write Failed" error'
@@ -1567,10 +1573,6 @@ items:
       href: ./networking/tcp-three-way-handshake-fails.md
     - name: Troubleshoot DFSN access failures
       href: ./networking/dfsn-access-failures.md
-    - name: Troubleshoot event ID 1020 on a file server
-      href: ./networking/troubleshoot-event-id-1020-warnings-file-server.md
-    - name: Troubleshoot the Event ID 50 error message
-      href: ./networking/troubleshoot-event-id-50-error.md
   - name: Background Intelligent Transfer Service (BITS)
     items:
     - name: '"Content file download failed" error when downloading a file by BITS'
