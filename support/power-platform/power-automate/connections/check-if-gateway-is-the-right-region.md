@@ -1,61 +1,98 @@
 ---
-title: Check if gateway is in the right region
-description: Provides a solution to an issue where you can't see your gateway in Power Automate.
-ms.reviewer: quseleba
-ms.date: 03/31/2021
+title: Can't view gateways in Power Automate
+description: Provides a solution for an issue where you can't see your gateway in Power Automate.
+ms.reviewer: quseleba, cgarty
+ms.date: 03/12/2024
 ms.subservice: power-automate-connections
 ---
-# Check if the gateway is in the right region
+# Can't view gateways in Power Automate
 
-This article provides a solution to an issue where you can't see your gateway in Power Automate.
+This article provides a solution for an issue where you can't see your gateway in Power Automate.
 
 _Applies to:_ &nbsp; Power Automate  
 _Original KB number:_ &nbsp; 4555609
 
 ## Symptoms
 
-I can't see my gateway in Power Automate, either on the Gateway page and/or when trying to create a desktop flows connection.
+You can't see one (or more) of your gateways on the **Gateways** page in the [Power Automate](https://make.powerautomate.com/) portal.
 
-## Verifying issue
+## Cause
 
-1. Check the region of your Power Apps environment
-    1. Go to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/environments).
-    1. Verify the region of the environment you're using:
+If the region where you installed the on-premises data gateway doesn't match the region in which your Power Automate or Power Apps environment is located, you won't be able to view or use that gateway in that environment.
 
-        :::image type="content" source="media/check-if-gateway-is-the-right-region/verify-region-environment.png" alt-text="Screenshot to check the region of the Power Platform environment." lightbox="media/check-if-gateway-is-the-right-region/verify-region-environment.png":::
+## Verifying the issue
 
-    1. Go to [Power Automate](https://flow.microsoft.com/) and verify you're using the expected environment.
+To verify the issue, first check the region of the environment you're using and ensure you've selected the desired environment in Power Automate. Then, check the region of your on-premises data gateway.
 
-        :::image type="content" source="media/check-if-gateway-is-the-right-region/verify-environment-is-expected.png" alt-text="Screenshot to check the environment used in flow. "lightbox="media/check-if-gateway-is-the-right-region/verify-environment-is-expected.png":::
+1. Verify the region of your Power Apps environment.
 
-    1. If you're using the expected environment and can't see your gateway, we need to verify the gateway's region.
+    1. As an administrator, sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/environments).
 
-2. Verify the region of your gateway
-    1. On the computer hosting the gateway, search for **On-premises data gateway** in the **start** menu, and launch the app:
+    1. Verify the region of the environment you're using.
 
-        :::image type="content" source="media/check-if-gateway-is-the-right-region/search-launch-app.png" alt-text="Screenshot to search for the On-premises data gateway app in the start menu.":::
+        :::image type="content" source="media/check-if-gateway-is-the-right-region/verify-region-environment.png" alt-text="Screenshot that shows how to check the region of the Power Platform environment." lightbox="media/check-if-gateway-is-the-right-region/verify-region-environment.png":::
 
-    1. On the app's **Status** page, press the **Sign-In** button and sign in with the credentials you used when creating the gateway. If you can't remember the credentials you used when creating the Gateway, go straight to section 3 below (Solving steps).
+    1. Sign in to [Power Automate](https://flow.microsoft.com/) and ensure you've selected the desired environment.
 
-        :::image type="content" source="media/check-if-gateway-is-the-right-region/sign-in-the-gateway.png" alt-text="Screenshot to select the Sign-in option on the app's Status page.":::
+        :::image type="content" source="media/check-if-gateway-is-the-right-region/verify-environment-is-expected.png" alt-text="Screenshot that shows how to check the environment used in flow. "lightbox="media/check-if-gateway-is-the-right-region/verify-environment-is-expected.png":::
 
-    1. Once signed in, you can see the region of your Gateway on the **Status** page. If the region matches the one of your environments, contact support. Otherwise, continue reading on:
+    1. Select **Gateways** in the navigation pane on the left side.
 
-        :::image type="content" source="media/check-if-gateway-is-the-right-region/verify-the-region.png" alt-text="Screenshot to check the gateway's region on the Status page.":::
+       If **Gateways** isn't visible in the left navigation pane, select **More** > **Discover all**, find **Gateways** under **Data**, and then pin it to the navigation pane.
 
-## Solving steps
+    1. If you don't see your gateway, go to the next step to verify the gateway's region.
 
-Reinstalling the Gateway in the proper environment.
+2. Verify the region of your gateway.
 
-It's unfortunately not possible to change the region of a gateway that's already installed, so you'll need to do the setup from scratch.
+    1. On the computer hosting the gateway, go to the **Start** menu, search for **On-premises data gateway**, and launch the app:
 
-1. Uninstall the Gateway from the **Add or Remove Programs app**. Search for **On-premises Data Gateway**, select **Uninstall** and follow the wizard.
-1. Download and run the latest version of the On-Premises Data Gateway installer available [here](https://powerapps.microsoft.com/downloads/).
-1. Follow the wizard until reaching the Gateway naming page. Select the **Change region** link:
+        :::image type="content" source="media/check-if-gateway-is-the-right-region/search-launch-app.png" alt-text="Screenshot that shows how to search for the On-premises data gateway app in the Start menu.":::
 
-    :::image type="content" source="media/check-if-gateway-is-the-right-region/select-change-region-link.png" alt-text="Screenshot to change the gateway region on the Gateway naming page.":::
+    1. On the app's **Status** page, select **Sign in** and sign in with the credentials you used when creating the gateway. If you can't remember the credentials, go to the [Resolution](#resolution) section.
 
-1. Select the region matching your Power Apps environment, and hit **Done**.
-1. Keep following the Gateway installation wizard until complete.
-1. Go to the Gateway page of the flow portal in the target environment.
-1. Verify that the Gateway properly appears in the list of Gateways. If the Gateway is still missing, contact Microsoft support.
+        :::image type="content" source="media/check-if-gateway-is-the-right-region/sign-in-the-gateway.png" alt-text="Screenshot that shows the Sign in option on the app's Status page.":::
+
+    1. After you're signed in, you can see the region of your gateway on the **Status** page.
+
+       :::image type="content" source="media/check-if-gateway-is-the-right-region/verify-the-region.png" alt-text="Screenshot that shows the gateway's region on the Status page.":::
+
+        > [!NOTE]
+        > The region where your gateway is installed must map to your Power Automate region. Refer to [Regions overview for Power Automate](/power-automate/regions-overview) to check the mapping of gateway region to Power Platform region.
+
+    1. If the region doesn't match your environment, follow the steps below to resolve the issue. If the region matches your environment, or if the steps below don't resolve the issue, contact [Microsoft Power Automate support](https://powerautomate.microsoft.com/support/) for further assistance.
+
+## Resolution
+
+It's not possible to change the region of a gateway that's already installed, but you can follow the steps below to reinstall the gateway in the region that matches your Power Automate environment region.
+
+1. Go to **Add or Remove Programs** and select **On-premises Data Gateway**.
+
+1. Select **Uninstall** and follow the wizard to uninstall the gateway.
+
+1. [Download and run the latest version of the On-Premises Data Gateway installer](https://powerapps.microsoft.com/downloads/). Before installing, see [Install an on-premises data gateway](/data-integration/gateway/service-gateway-install) for minimum requirements and considerations.
+
+1. Follow the installation wizard until you reach the step to name the gateway. For detailed installation steps, see [Install an on-premises data gateway](/data-integration/gateway/service-gateway-install#download-and-install-a-standard-gateway).
+
+1. Select the **Change Region** link.
+
+    :::image type="content" source="media/check-if-gateway-is-the-right-region/select-change-region-link.png" alt-text="Screenshot that shows how to change the gateway region on the Gateway naming page.":::
+
+1. Select the region matching your Power Apps environment and select **Done**.
+
+   > [!NOTE]
+   > The region where your gateway is installed must map to your Power Automate region. Refer to [Regions overview for Power Automate](/power-automate/regions-overview) to check the mapping of gateway region to Power Platform region.
+
+1. Follow the gateway installation wizard until it's complete.
+1. Sign in to [Power Automate](https://make.powerautomate.com/), and select **Gateways** in the navigation pane on the left side.
+
+   If **Gateways** isn't visible in the navigation pane, select **More** > **Discover all**, find **Gateways** under **Data**, and then pin it to the navigation pane.
+
+1. Check if the gateway appears in the list of gateways. If the gateway is still missing, contact [Microsoft Power Automate support](https://powerautomate.microsoft.com/support/) for assistance.
+
+## More information
+
+- [On-premises data gateway](/power-automate/gateway-reference)
+- [Install an on-premises data gateway](/data-integration/gateway/service-gateway-install)
+- [Learn to manage on-premises data gateways](/power-automate/gateway-manage)
+- [Troubleshoot the on-premises data gateway](/data-integration/gateway/service-gateway-tshoot)
+- [Regions overview for Power Automate](/power-automate/regions-overview)
