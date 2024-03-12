@@ -2,7 +2,7 @@
 title: Failed connection between Power Automate components
 description: Based on the version of Power Automate, provides resolutions to a Power Automate connection error that occurs on startup.
 ms.reviewer: quseleba
-ms.date: 02/27/2024
+ms.date: 03/12/2024
 ms.subservice: power-automate-desktop-flows
 ms.custom: sap:Desktop flows\Cannot create desktop flow connection
 ---
@@ -21,15 +21,15 @@ On startup, Power Automate shows the following error message:
 
 ## Cause
 
-This issue could occur because there are two Power Automate for desktop applications installed on the machine (one installed from the Microsoft Store and one from the MSI installer), and they are of different version. This is not a supported scenario due to conflicts between the installations.
+This issue could occur if there are two Power Automate for desktop applications installed on the computer (one installed from the Microsoft Store and one from the MSI installer), and they are of different version. This is not a supported scenario due to conflicts between the installations.
 
 ## Resolution
 
 If your version of Power Automate for desktop is **2.34.176.23181 or higher** (Microsoft Store version **10.0.7118.0 or higher**), then follow the steps below to uninstall either one of the two apps and resolve the issue:
 
-1. Go to Windows Start Menu > Settings > Apps > Installed apps
-1. Search for **Power Automate**
-1. Uninstall either one of the two – either Power Automate (Microsoft Store installation) or Power Automate for desktop (MSI installation)
+1. Go to **Start** > **Settings** > **Apps** > **Installed apps**.
+1. Search for **Power Automate**.
+1. Uninstall either one of the two – either Power Automate (Microsoft Store installation) or Power Automate for desktop (MSI installation).
 
 If your version of Power Automate for desktop is **less than 2.34.176.23181** (Microsoft Store version **less than 10.0.7118.0**), then this error might occur if another process is running a named pipes server on the same machine. This process probably runs with elevated rights using the localhost endpoint. As a result, it blocks other applications from using the endpoint.
 
@@ -52,7 +52,7 @@ Follow these steps to identify whether another process is indeed the issue:
 
 1. Identify whether a process displaying the string **EbmV0LnBpcGU6Ly8rLw==** exists.
 
-1. If such a process exists, stop the process identified in the previous step
+1. If such a process exists, stop the process identified in the previous step.
 1. Launch Power Automate again.
 
 As a permanent fix, you can stop the process that is causing the issue from running. Alternatively,  if it's an internal process, you can change it to use a more specific endpoint, such as **net.pipe://localhost/something**.
