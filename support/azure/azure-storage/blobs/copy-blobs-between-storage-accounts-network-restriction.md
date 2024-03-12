@@ -65,4 +65,4 @@ Here's the full process of this mechanism for the two scenarios:
 3. After getting the 403 error, the destination storage sent another GetBlob request on behalf of the client. If the client has access to the source storage, the destination will be able to get the blocks from the source and return a success response code to the client.
 4. The client sent PutBlockList to the destination storage to commit the blocks and finish the process after receiving a success response code from the request.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

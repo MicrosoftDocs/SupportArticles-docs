@@ -199,6 +199,66 @@
         "source_path": "cloud-services/support-linux-open-source-technology.md",
         "redirect_url": "/troubleshoot/azure/cloud-services-classic/support-linux-open-source-technology",
         "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/files-troubleshoot-create-alerts.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/files/files-troubleshoot-create-alerts",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/files-troubleshoot.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/files/files-troubleshoot",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/files-troubleshoot-smb-connectivity.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/files/files-troubleshoot-smb-connectivity",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/files-troubleshoot-smb-authentication.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/files/files-troubleshoot-smb-authentication",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/files-troubleshoot-performance.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/files/files-troubleshoot-performance",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/troubleshoot-azure-files.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/files/troubleshoot-azure-files",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/files-troubleshoot-linux-smb.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/files/files-troubleshoot-linux-smb",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/files-troubleshoot-linux-nfs.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/files/files-troubleshoot-linux-nfs",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/files-client-other-errors.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/files/files-client-other-errors",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/data-protection-backup-recovery.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/blobs/data-protection-backup-recovery",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/copy-blobs-between-storage-accounts-network-restriction.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/blobs/copy-blobs-between-storage-accounts-network-restriction",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/adls-gen2-sticky-bit-403-access-denied.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/blobs/adls-gen2-sticky-bit-403-access-denied",
+        "redirect_document_id": true
       }
   ]
 }

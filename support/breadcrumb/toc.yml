@@ -144,6 +144,13 @@ items:
       - name: Azure Storage
         tocHref: /troubleshoot/azure/azure-storage/
         topicHref: /troubleshoot/azure/azure-storage/welcome-azure-storage
+        items:
+        - name: Blob Storage
+          tocHref: /troubleshoot/azure/azure-storage/blobs
+          topicHref: /troubleshoot/azure/azure-storage/blobs/welcome-blob-storage
+        - name: Files Storage
+          tocHref: /troubleshoot/azure/azure-storage/files
+          topicHref: /troubleshoot/azure/azure-storage/files/welcome-files-storage
       - name: Azure Synapse Analytics
         tocHref: /troubleshoot/azure/synapse-analytics
         topicHref: /troubleshoot/azure/synapse-analytics/welcome-synapse-analytics
