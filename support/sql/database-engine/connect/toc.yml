@@ -9,7 +9,7 @@ items:
   href: certificate-validation-failure.md
 - name: Consistent SQL network connectivity issue
   href: consistent-sql-network-connectivity-issue.md
-- name: Intermittent or periodic network issues
+- name: Intermittent or periodic issues with connecting to SQL Server
   href: intermittent-periodic-network-issue.md
 - name: How to determine if the authentication type is Kerberos
   href: determine-the-authentication-type.md
