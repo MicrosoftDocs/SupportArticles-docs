@@ -5,7 +5,7 @@ author: msaenzbosupport
 ms.author: msaenzbo
 ms.reviewer: divargas-msft, pagienge, v-weizhu
 editor: v-jsitser
-ms.date: 03/05/2024
+ms.date: 03/12/2024
 ms.service: virtual-machines
 ms.subservice: redhat
 ms.custom: linux-related-content
@@ -26,10 +26,8 @@ This article discusses common issues in the Red Hat Update Infrastructure (RHUI)
 
 
 > [!NOTE]
->
-> - As of October 12, 2023, all pay-as-you-go (PAYG) clients will be directed to the Red Hat Update Infrastructure (RHUI) 4 IPs in phase over the next two months. During this time, the RHUI3 IPs will remain for continued updates but will be removed at a future time. Existing routes and rules allowing access to RHUI-3 IPs must be updated to also include RHUI-4 IP addresses for uninterrupted access to packages and updates. Do not remove RHUI-3 IPs to continue receiving updates during the transition period.
->
-> - Additionally, the new Azure US Government images, as of January 2020, uses Public IP mentioned previously under the Azure Global header.
+> - Starting from October 12, 2023, all pay-as-you-go (PAYG) clients will be directed to the Red Hat Update Infrastructure (RHUI) 4 IPs in phase over the next two months. The RHUI 3 IPs will still be available for continued updates during this time, but will be removed in the future. To ensure uninterrupted access to packages and updates, you must update existing routes and rules that allow access to RHUI-3 IPs to include RHUI 4 IP addresses. However, to continue receiving updates during this transition period, don't remove RHUI 3 IPs.
+> - Starting from January 2020, the new Azure US Government images have started using public IP addresses that are mentioned previously under the Azure Global header.
 
 
 ## Cause 1: RHUI client certificate is expired
