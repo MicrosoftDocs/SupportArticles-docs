@@ -33,8 +33,8 @@ Data:
 Event Type: Information  
 Event Source: Application Popup  
 Description: Windows - Delayed Write Failed : Windows was unable to save all the data for the file \Device\HarddiskVolume4\Program Files\Microsoft SQL Server\MSSQL$INSTANCETWO\LOG\ERRORLOG. The data has been lost. This error may be caused by a failure of your computer hardware or network connection.  
-  
-Please try to save this file elsewhere.  
+>  
+> Please try to save this file elsewhere.  
 
 These event ID messages mean exactly the same thing and are generated for the same reasons. For the purposes of this article, only the event ID 50 message is described.
 
