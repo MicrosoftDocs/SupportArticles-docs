@@ -17,7 +17,7 @@ Microsoft SQL Server 2022 currently complies with the GB18030-2005 standard. The
 This improvement adds a new `sp_db_gb18030_unicode_collations` system stored procedure that can be used to control the visibility of the new collations in a user database. Additionally, the stored procedure increases the database version of the internal user.
 
 > [!NOTE]
-> If a database has the new collation enabled, you won't be able to use the database together with a previous Cumulative Update (CU), for example, you can't downgrade the CU.
+> If a database has the new collation enabled, you won't be able to use the database together with a previous Cumulative Update (CU). For example, you can't downgrade the CU.
 
 Here's an example of how to use the new collation:
 
