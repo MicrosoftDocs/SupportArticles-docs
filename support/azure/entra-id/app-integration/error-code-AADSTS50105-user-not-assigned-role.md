@@ -10,7 +10,7 @@ ms.subservice: app-mgmt
 
 This article provides a resolution to the AADSTS50105 error that occurs during federated authentication with Microsoft Entra ID.
 
-[!INCLUDE [Feedback](../../includes/feedback.md)]
+[!INCLUDE [Feedback](../../../includes/feedback.md)]
 
 ## Symptoms
 
@@ -33,4 +33,4 @@ To assign one or more users to an application directly, see [Quickstart: Assign 
 
 For a full list of Active Directory authentication and authorization error codes, see [Microsoft Entra authentication and authorization error codes](/azure/active-directory/develop/reference-aadsts-error-codes).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

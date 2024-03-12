@@ -21,4 +21,4 @@ When deleting an app in Microsoft Entra ID, the Delete button may be disabled in
 
 - For service principals that correspond to a managed identity, you can't delete the service principals in the Enterprise apps blade. You need to go to the Azure resource to manage it. To learn more about Managed Identity, please refer to the article [Managed Identity](/azure/active-directory/managed-identities-azure-resources/overview).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

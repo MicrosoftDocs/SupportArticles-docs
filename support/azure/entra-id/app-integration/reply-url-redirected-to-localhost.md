@@ -26,4 +26,4 @@ Delete the unused reply URLs configured for the application.
 
 On the SAML-based SSO configuration page, in the **Reply URL (Assertion Consumer Service URL)** section, delete unused or default Reply URLs created by the system. For example, `https://127.0.0.1:444/applications/default.aspx`.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

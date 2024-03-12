@@ -38,4 +38,4 @@ For a full list of authentication and authorization error codes, see [Microsoft 
 
 To investigate individual errors, go to <https://login.microsoftonline.com/error>.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)] 
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)] 

@@ -19,4 +19,4 @@ Follow these steps to send logs to customer support and get the incident ID.
 1. Fill out the form, and then select **Send** to send the feedback and/or logs (**Send** is on the top left on iOS, and on the top right on Android).
 1. Note the incident ID. You or your administrator will need this ID if you contact Microsoft Support.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

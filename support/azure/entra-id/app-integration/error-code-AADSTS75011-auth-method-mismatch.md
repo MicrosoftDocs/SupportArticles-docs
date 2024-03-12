@@ -10,7 +10,7 @@ ms.subservice: app-mgmt
 
 This article describes a problem in which you receive the error message, "Error - AADSTS75011 Authentication method by which the user authenticated with the service doesn't match requested authentication method AuthnContextClassRef," when you try to sign in to a SAML-based single sign-on (SSO) configured app that has been integrated with Microsoft Entra ID.
 
-[!INCLUDE [Feedback](../../includes/feedback.md)]
+[!INCLUDE [Feedback](../../../includes/feedback.md)]
 
 ## Symptoms
 
@@ -30,4 +30,4 @@ Another option is to make sure that the `RequestedAuthnContext` value will be ho
 
 For a full list of Active Directory Authentication and authorization error codes, see [Microsoft Entra authentication and authorization error codes](/azure/active-directory/develop/reference-aadsts-error-codes)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

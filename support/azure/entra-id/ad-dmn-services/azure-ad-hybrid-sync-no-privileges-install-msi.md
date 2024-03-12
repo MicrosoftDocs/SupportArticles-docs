@@ -42,4 +42,4 @@ To resolve this issue, provide *ALL SERVICES* user rights to **Log on as a servi
 
 The wizard now completes successfully.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

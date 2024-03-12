@@ -17,4 +17,4 @@ If you experience a delay in the appearance of your application after clicking t
 
 If your application is not added or you encounter an error when clicking the Add button, you will see a Notification in an Error state. To obtain more information about the error and learn more or share with a support engineer, you can follow the steps in [How to see the details of a portal notification](./send-notification-details.md).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

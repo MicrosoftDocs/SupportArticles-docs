@@ -38,4 +38,4 @@ If you need help with learning about applications, the [List of Tutorials on How
 
 In addition to this, the [Microsoft Entra Applications Document Library](/azure/active-directory/manage-apps/what-is-application-management) can help you learn more about single sign-on with Microsoft Entra ID and how it works.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

@@ -23,6 +23,6 @@ Your version of the Transport Layer Security (TLS) protocol is out of date. The 
 
 ## Solution
 
-Upgrade your TLS version to 1.2. For upgrade instructions, see [Enable support for TLS 1.2 in your environment](../active-directory/enable-support-tls-environment.md).
+Upgrade your TLS version to 1.2. For upgrade instructions, see [Enable support for TLS 1.2 in your environment](../entra-id/ad-dmn-services/enable-support-tls-environment.md).
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

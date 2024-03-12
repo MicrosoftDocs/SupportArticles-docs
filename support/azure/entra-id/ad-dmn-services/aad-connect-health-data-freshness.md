@@ -385,4 +385,4 @@ To collect Diagnostics Agent logs for AD FS, follow these steps:
 
 1. Search for `Error` in the logs, and check whether any error entry indicates a specific problem (such as connectivity or proxy configuration).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

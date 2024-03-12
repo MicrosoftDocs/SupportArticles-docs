@@ -198,4 +198,4 @@ When a guest user accepts an invitation, the user's `LiveID` attribute (the uniq
 
 Reset the redemption status of the guest user account in the resource tenant. Then, you can keep the guest user object without having to delete and then re-create the guest account. You can reset the redemption status by using the Azure portal, Azure PowerShell, or the Microsoft Graph API. For instructions, see [Reset redemption status for a guest user](/azure/active-directory/external-identities/reset-redemption-status).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

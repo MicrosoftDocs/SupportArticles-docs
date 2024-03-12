@@ -113,4 +113,4 @@ The default value for the **OtherWellKnownObjects** attribute is:
 
 To resolve this issue, open a ticket with Windows Directory Services Team.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

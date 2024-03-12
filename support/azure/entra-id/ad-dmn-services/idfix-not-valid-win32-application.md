@@ -29,4 +29,4 @@ Install and run the IdFix tool on a computer that's running the 64-bit version o
 
 For more information about the IdFix tool, see [IdFix DirSync Error Remediation Tool](https://github.com/microsoft/idfix) (This includes a list of system requirements.).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

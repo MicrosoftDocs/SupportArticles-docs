@@ -42,4 +42,4 @@ To resolve this issue, check the System event logs for **eventID 7041**. The eve
 
 :::image type="content" source="media/azure-ad-hybrid-sync-cannot-start-aadconnect-provisioning-agent/5-event-7041.png" alt-text="Screenshot of the Event 7041, Service Control Manager window. It notes that the service account doesn't have the required user right." border="true":::
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
