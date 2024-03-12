@@ -25,11 +25,6 @@ This article discusses common issues in the Red Hat Update Infrastructure (RHUI)
 > RHUI is intended for only pay-as-you-go images. Are you using custom or golden images (also known as "bring-your-own-subscription (BYOS)") instead? In that case, the system has to be attached to Red Hat Subscription Manager (RHSM) or Satellite in order to receive updates. For more information, see [How to register and subscribe an RHEL system to the Red Hat Customer Portal using RHSM](https://access.redhat.com/solutions/253273).
 
 
-> [!NOTE]
-> - Starting from October 12, 2023, all pay-as-you-go (PAYG) clients will be directed to the Red Hat Update Infrastructure (RHUI) 4 IPs in phase over the next two months. The RHUI 3 IPs will still be available for continued updates during this time, but will be removed in the future. To ensure uninterrupted access to packages and updates, you must update existing routes and rules that allow access to RHUI-3 IPs to include RHUI 4 IP addresses. However, to continue receiving updates during this transition period, don't remove RHUI 3 IPs.
-> - Starting from January 2020, the new Azure US Government images have started using public IP addresses that are mentioned previously under the Azure Global header.
-
-
 ## Cause 1: RHUI client certificate is expired
 
 The Azure RHUI certificates typically expire every two years. If you use an older RHEL VM image, such as RHEL version 7.4 (image URN: `RedHat:RHEL:7.4:7.4.2018010506`), you experience degraded connectivity to RHUI because of a now-expired TLS/SSL client certificate. For example, you might receive one of the following error messages:
