@@ -239,6 +239,6 @@ The Windows PowerShell commands that are mentioned in this article require the A
 [Manage Microsoft Entra ID using Windows PowerShell](/previous-versions/azure/jj151815(v=azure.100)?redirectedfrom=MSDN).
 
 For more information about filtering directory synchronization by attributes, see the following Microsoft TechNet wiki article:  
-[List of Attributes that are Synced by the Azure Active Directory Sync Tool](https://learn.microsoft.com/archive/technet-wiki/19901.dirsync-list-of-attributes-that-are-synced-by-the-azure-active-directory-sync-tool)
+[List of Attributes that are Synced by the Azure Active Directory Sync Tool](/archive/technet-wiki/19901.dirsync-list-of-attributes-that-are-synced-by-the-azure-active-directory-sync-tool)
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

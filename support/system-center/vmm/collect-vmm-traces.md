@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 3037626
 The Storage Management Service communicates with SMI-S providers from several third-party providers.
 
 > [!NOTE]
-> For a complete list of providers, see [System Center 2012 VMM: Supported Storage Arrays](https://learn.microsoft.com/archive/technet-wiki/16100.system-center-2012-vmm-supported-storage-arrays).
+> For a complete list of providers, see [System Center 2012 VMM: Supported Storage Arrays](/archive/technet-wiki/16100.system-center-2012-vmm-supported-storage-arrays).
 
 Storage traces (CIMXML output) are useful when you troubleshoot storage provider failures.
 
