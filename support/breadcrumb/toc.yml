@@ -144,6 +144,7 @@ items:
       - name: Azure Storage
         tocHref: /troubleshoot/azure/azure-storage/
         topicHref: /troubleshoot/azure/azure-storage/welcome-azure-storage
+<<<<<<< HEAD
       - name: Azure Synapse Analytics Apache Spark Pool
         tocHref: /troubleshoot/azure/synapse-analytics-spark
         topicHref: /troubleshoot/azure/synapse-analytics-spark/welcome-synapse-analytics-spark
@@ -156,6 +157,18 @@ items:
       - name: Azure Synapse Analytics Workspace
         tocHref: /troubleshoot/azure/synapse-analytics-workspace
         topicHref: /troubleshoot/azure/synapse-analytics-workspace/welcome-synapse-analytics-workspace
+=======
+        items:
+        - name: Blob Storage
+          tocHref: /troubleshoot/azure/azure-storage/blobs
+          topicHref: /troubleshoot/azure/azure-storage/blobs/welcome-blob-storage
+        - name: Files Storage
+          tocHref: /troubleshoot/azure/azure-storage/files
+          topicHref: /troubleshoot/azure/azure-storage/files/welcome-files-storage
+      - name: Azure Synapse Analytics
+        tocHref: /troubleshoot/azure/synapse-analytics
+        topicHref: /troubleshoot/azure/synapse-analytics/welcome-synapse-analytics
+>>>>>>> upstream/main
       - name: Azure Virtual Network
         tocHref: /troubleshoot/azure/virtual-network/
         topicHref: /troubleshoot/azure/virtual-network/welcome-virtual-network

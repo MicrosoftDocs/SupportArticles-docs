@@ -348,4 +348,4 @@ For more information about backing up Azure file shares, see:
 - [Back up Azure file shares](/azure/backup/backup-afs)
 - [Back up Azure file share FAQ](/azure/backup/backup-azure-files-faq)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

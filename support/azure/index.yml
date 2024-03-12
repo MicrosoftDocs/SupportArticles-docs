@@ -29,7 +29,7 @@ productDirectory:
   - title: Azure Blob Storage
     imageSrc: "https://static.docs.com/ui/media/product/azure/storage-accounts.svg"
     links:
-    - url: azure-storage/welcome-azure-storage.yml
+    - url: azure-storage/blobs/welcome-blob-storage.yml
       text: Troubleshooting articles for Azure Blob Storage
   - title: Azure Cosmos DB
     imageSrc: "https://static.docs.com/ui/media/product/azure/cosmos-db.svg"
@@ -54,7 +54,7 @@ productDirectory:
   - title: Azure Files
     imageSrc: "https://static.docs.com/ui/media/product/azure/storage-azure-files.svg"
     links:
-    - url: azure-storage/files-troubleshoot.md
+    - url: azure-storage/files/welcome-files-storage.yml
       text: Troubleshooting articles for Azure Files
   - title: Azure Functions
     imageSrc: "https://static.docs.com/ui/media/product/azure/functions.svg"
