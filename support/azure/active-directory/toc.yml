@@ -2,7 +2,7 @@
   href: welcome-azure-ad.yml
 
 - name: Azure AD Domain Services
-  items:
+items:
   - name: Can't verify account when resetting password
     href: could-not-verify-account-reset-pwd.md
   - name: Enable support for TLS 1.2 in your environment
@@ -31,7 +31,6 @@
     href: reference-connect-device-disappearance.md
 
   - name: Microsoft Entra Hybrid Sync Agent Installation Issues
-
     items:
     - name: Installation issues overview
       href: azure-ad-hybrid-sync-agent-install-welcome.md

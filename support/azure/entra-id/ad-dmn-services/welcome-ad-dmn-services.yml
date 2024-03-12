@@ -1,0 +1,33 @@
+### YamlMime:Landing
+
+title: Microsoft Entra Domain Services (Microsoft Managed - DCaaS) troubleshooting documentation # < 60 chars
+summary: Welcome to Microsoft Entra Domain Services (Microsoft Managed - DCaaS) troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Microsoft Entra Domain Services (Microsoft Managed - DCaaS). In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+metadata:
+  title: Troubleshoot Microsoft Entra Domain Services (Microsoft Managed - DCaaS) issues
+  description: Documentation for troubleshooting common issues with Microsoft Entra Domain Services (Microsoft Managed - DCaaS). # Required; article description that is displayed in search results. < 160 chars.
+  services: active-directory
+  ms.service: active-directory  #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.topic: landing-page # Required
+  author: genlin  #Required; your GitHub user alias, with correct capitalization.
+  ms.author: genli #Required; microsoft alias of author; optional team alias.
+  ms.date: 03/12/2024
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+ # Card
+  - title: Microsoft Entra Hybrid Sync Agent Installation Issues
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: No privileges to install MSI
+            url: azure-ad-hybrid-sync-no-privileges-install-msi.md
+          - text: Cannot start service AADConnectProvisioningAgent
+            url: azure-ad-hybrid-sync-cannot-start-aadconnect-provisioning-agent.md
+          - text: The gMSA is set to log on as Service
+            url: azure-ad-hybrid-sync-gMSA-set-logon-service.md
+          - text: There is no such object on the server
+            url: azure-ad-hybrid-sync-no-such-object-on-server.md
+          - text: Unable to create gMSA because KDS may not be running on domain controller
+            url: azure-ad-hybrid-sync-unable-create-gmsa-kds-domain-controller.md

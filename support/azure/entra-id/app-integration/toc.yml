@@ -1,0 +1,48 @@
+- name: Welcome
+  href: welcome-app-integration.yml
+
+- name: Troubleshoot adding apps
+  href: troubleshoot-adding-apps.md
+  items: 
+    - name: Application takes a long time to appear
+      href: app-takes-long-time-appear.md
+    - name: Application doesn't appear
+      href: app-doesnt-appear.md
+    - name: Unable to delete an application
+      href: unable-delete-app.md
+    - name: Send notification details to Microsoft support
+      href: send-notification-details.md
+- name: Troubleshoot sign-in to apps
+  items:
+    - name: Error AADSTS50003 - certificate or key not configured
+      href: error-code-AADSTS50003-cert-or-key-not-configured.md
+    - name: Error AADSTS50011 - reply URL mismatch (SAML)
+      href: error-code-AADSTS50011-reply-url-mismatch.md
+    - name: Error AADSTS50011 - redirect URI mismatch (OIDC/OAuth2)
+      href: error-code-AADSTS50011-redirect-uri-mismatch.md
+    - name: Error AADSTS50020 - guest sign-in to resource tenant fails
+      href: error-code-AADSTS50020-user-account-identity-provider-does-not-exist.md
+    - name: Error AADSTS50057 - user account is disabled
+      href: error-code-aadsts50057-user-account-is-disabled.md
+    - name: Error AADSTS500571 - guest user account is disabled
+      href: error-code-aadsts500571-guest-user-account-is-disabled.md
+    - name: Error AADSTS50105 - user not assigned a role
+      href: error-code-AADSTS50105-user-not-assigned-role.md
+    - name: Error AADSTS650056 - misconfigured app
+      href: error-code-AADSTS650056-misconfigured-app.md
+    - name: Error AADSTS70001 - app not found in directory
+      href: error-code-AADSTS70001-app-not-found-in-directory.md
+    - name: Error AADSTS75011 - authentication method mismatch
+      href: error-code-AADSTS75011-auth-method-mismatch.md
+    - name: Error AADSTS75005 - not a valid saml request
+      href: error-code-AADSTS75005-not-a-valid-saml-request.md
+    - name: Error AADSTS750054 - SAML request or response not present
+      href: error-code-AADSTS750054-saml-request-not-present.md
+    - name: Error AADSTS7000110 - request is ambiguous, multiple application identifiers found
+      href: error-code-aadsts7000110-request-is-ambiguous.md
+    - name: Error AADSTS7000112 - application is disabled
+      href: error-code-aadsts7000112-application-is-disabled.md
+    - name: Troubleshoot signing in to SAML-based single sign-on configured apps
+      href: troubleshoot-sign-in-saml-based-apps.md
+    - name: User redirected to incorrect reply URL or localhost
+      href: reply-url-redirected-to-localhost.md

@@ -1,0 +1,41 @@
+### YamlMime:Landing
+
+title: Microsoft Entra App Integration and Development troubleshooting documentation # < 60 chars
+summary: Welcome to Microsoft Entra App Integration and Development troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Microsoft Entra App Integration and Development. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+metadata:
+  title: Troubleshoot Microsoft Entra App Integration and Development issues
+  description: Documentation for troubleshooting common issues with Microsoft Entra App Integration and Development. # Required; article description that is displayed in search results. < 160 chars.
+  services: active-directory
+  ms.service: active-directory  #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.topic: landing-page # Required
+  author: genlin  #Required; your GitHub user alias, with correct capitalization.
+  ms.author: genli #Required; microsoft alias of author; optional team alias.
+  ms.date: 03/12/2024
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+ # Card
+  - title: Sign-in to SAML-based SSO apps
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Error AADSTS50003 - certificate or key not configured
+            url: error-code-AADSTS50003-cert-or-key-not-configured.md
+          - text: Error AADSTS50011 - reply URL mismatch
+            url: error-code-AADSTS50011-reply-url-mismatch.md
+          - text: Error AADSTS50020 - guest sign-in to resource tenant fails
+            url: error-code-AADSTS50020-user-account-identity-provider-does-not-exist.md
+          - text: Error AADSTS50105 - user not assigned a role
+            url: error-code-AADSTS50105-user-not-assigned-role.md
+          - text: Error AADSTS650056 - misconfigured app
+            url: error-code-AADSTS650056-misconfigured-app.md
+          - text: Error AADSTS70001 - app not found in directory
+            url: error-code-AADSTS70001-app-not-found-in-directory.md
+          - text: Error AADSTS75011 - authentication method mismatch
+            url: error-code-AADSTS75011-auth-method-mismatch.md
+          - text: Error AADSTS75005 - not a valid saml request
+            url: error-code-AADSTS75005-not-a-valid-saml-request.md
+          - text: Error AADSTS750054 - SAML request or response not present
+            url: error-code-AADSTS750054-saml-request-not-present.md
