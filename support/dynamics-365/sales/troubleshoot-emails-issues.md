@@ -3,16 +3,15 @@ title: Troubleshoot issues with emails
 description: Provides resolutions for the known issues that are related to emails in Dynamics 365 Sales.
 author: sbmjais
 ms.author: shjais
-ms.topic: troubleshooting
-ms.date: 02/28/2022
+ms.reviewer: lavanyakr, aam, veparim
+ms.date: 03/12/2024
 ms.subservice: d365-sales-sales
 ---
-
 # Troubleshoot issues with emails
 
 This article helps you troubleshoot and resolve issues related to emails in Dynamics 365 Sales.
 
-## Issue: Email editor shows incorrect title in contextual email popup window
+## Issue 1: Email editor shows incorrect title in contextual email popup window
 
 After upgrading to Dynamics 365 2020 release wave 2, the email editor shows incorrect title in contextual email popup window.
 
@@ -76,4 +75,4 @@ If a user can't see untracked emails and meetings, perform the following steps t
 
 ### Workaround
 
-There's no resolution available for this issue as it's the expected behavior. As an alternative, users can use [Microsoft Copilot for Sales in Outlook](/microsoft-sales-copilot/save-outlook-activities-crm) to record individual activities or use [server-side synchronization](/power-platform/admin/email-message-filtering-correlation) to track all emails and meetings automatically.
+There's no resolution available for this issue as it's the expected behavior. As an alternative, users can use [Microsoft Copilot for Sales in Outlook](/microsoft-sales-copilot/save-outlook-activities-crm) to record individual activities, or use [server-side synchronization](/power-platform/admin/email-message-filtering-correlation) to track all emails and meetings automatically.
