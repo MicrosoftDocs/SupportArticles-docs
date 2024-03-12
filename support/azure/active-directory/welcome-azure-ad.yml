@@ -29,22 +29,6 @@ landingContent:
             url: ./code-403-azure-seamless-sso-win10.md
 
  # Card
-  - title: Microsoft Entra Hybrid Sync Agent Installation Issues
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: No privileges to install MSI
-            url: ./azure-ad-hybrid-sync-no-privileges-install-msi.md
-          - text: Cannot start service AADConnectProvisioningAgent
-            url: ./azure-ad-hybrid-sync-cannot-start-aadconnect-provisioning-agent.md
-          - text: The gMSA is set to log on as Service
-            url: ./azure-ad-hybrid-sync-gMSA-set-logon-service.md
-          - text: There is no such object on the server
-            url: ./azure-ad-hybrid-sync-no-such-object-on-server.md
-          - text: Unable to create gMSA because KDS may not be running on domain controller
-            url: ./azure-ad-hybrid-sync-unable-create-gmsa-kds-domain-controller.md
-
- # Card
   - title: Password writeback issues
     linkLists:
       - linkListType: how-to-guide
@@ -65,27 +49,3 @@ landingContent:
             url: ./password-writeback-servers-need-time-catch-up.md
           - text: On-premises policy disallows password reset
             url: ./password-writeback-not-compliant-on-premises-ad-pwd-policy.md
-
- # Card
-  - title: Sign-in to SAML-based SSO apps
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Error AADSTS50003 - certificate or key not configured
-            url: ./error-code-AADSTS50003-cert-or-key-not-configured.md
-          - text: Error AADSTS50011 - reply URL mismatch
-            url: ./error-code-AADSTS50011-reply-url-mismatch.md
-          - text: Error AADSTS50020 - guest sign-in to resource tenant fails
-            url: ./error-code-AADSTS50020-user-account-identity-provider-does-not-exist.md
-          - text: Error AADSTS50105 - user not assigned a role
-            url: ./error-code-AADSTS50105-user-not-assigned-role.md
-          - text: Error AADSTS650056 - misconfigured app
-            url: ./error-code-AADSTS650056-misconfigured-app.md
-          - text: Error AADSTS70001 - app not found in directory
-            url: ./error-code-AADSTS70001-app-not-found-in-directory.md
-          - text: Error AADSTS75011 - authentication method mismatch
-            url: ./error-code-AADSTS75011-auth-method-mismatch.md
-          - text: Error AADSTS75005 - not a valid saml request
-            url: ./error-code-AADSTS75005-not-a-valid-saml-request.md
-          - text: Error AADSTS750054 - SAML request or response not present
-            url: ./error-code-AADSTS750054-saml-request-not-present.md

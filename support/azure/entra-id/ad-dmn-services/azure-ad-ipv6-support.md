@@ -82,7 +82,7 @@ For the IP ranges that are specified for Microsoft Entra ID, make sure that you 
 
 ### Device configuration
 
-By default, both IPv6 and IPv4 traffic is supported on Windows and most other operating system (OS) platforms. Changes to the standard IPv6 configuration may result in unintended consequences. For more information, see [Guidance for configuring IPv6 in Windows for advanced users](../../windows-server/networking/configure-ipv6-in-windows.md).
+By default, both IPv6 and IPv4 traffic is supported on Windows and most other operating system (OS) platforms. Changes to the standard IPv6 configuration may result in unintended consequences. For more information, see [Guidance for configuring IPv6 in Windows for advanced users](../../../windows-server/networking/configure-ipv6-in-windows.md).
 
 ### Service endpoints
 

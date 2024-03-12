@@ -371,7 +371,7 @@ If you set up "assignment required" for the corresponding enterprise application
 
 #### Solution
 
-Don't select **Assignment required for Microsoft Entra application** for the storage account because we don't populate entitlements in the Kerberos ticket that's returned back to the requestor. For more information, see [Error AADSTS50105 - The signed in user is not assigned to a role for the application](../../entra-id/ad-dmn-services/error-code-aadsts50105-user-not-assigned-role.md).
+Don't select **Assignment required for Microsoft Entra application** for the storage account because we don't populate entitlements in the Kerberos ticket that's returned back to the requestor. For more information, see [Error AADSTS50105 - The signed in user is not assigned to a role for the application](../../../entra-id/ad-dmn-services/error-code-aadsts50105-user-not-assigned-role.md).
 
 ## See also
 
