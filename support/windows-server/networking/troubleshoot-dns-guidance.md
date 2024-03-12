@@ -1,7 +1,7 @@
 ---
 title: Guidance for troubleshooting DNS
 description: Introduces general guidance for troubleshooting scenarios related to DNS.
-ms.date: 12/26/2023
+ms.date: 3/12/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -99,9 +99,9 @@ To troubleshoot this issue, see [Troubleshoot AD DS and restart the DNS Server s
 
 Consider the following scenario:
 
-   - You use an Active Directory integrated zone (default zone scope) that's named contoso.com.
-   - You use geo-location zone scopes that are associated with specific subnets.
-   - You use the Windows PowerShell `Add-DnsServerQueryResolutionPolicy` cmdlet to configure DNS resolution policies.
+- You use an Active Directory integrated zone (default zone scope) that's named contoso.com.
+- You use geo-location zone scopes that are associated with specific subnets.
+- You use the Windows PowerShell `Add-DnsServerQueryResolutionPolicy` cmdlet to configure DNS resolution policies.
 
 In this scenario, the desired outcome is that a client tries to locate a requested resource, first in the local zone scope and then in the default zone scope. However, after the organization configures these policies, clients from the defined subnets can't successfully resolve records that are hosted in the default zone scope (contoso.com). For example, clients can't resolve **hostA.contoso.com**. When the DNS server receives such requests, it returns a "Server Failure" message.
 
@@ -164,24 +164,24 @@ Before you contact Microsoft Support, you can gather information about your issu
 2. Open the *C:\\tss* folder at an elevated PowerShell command prompt.
 3. Start the traces on the client and server by using the following cmdlets:
 
-    - Client:  
+   - Client:  
 
-        ```powershell
-        TSS.ps1 -Scenario NET_DNScli
-        ```
+     ```powershell
+     TSS.ps1 -Scenario NET_DNScli
+     ```
 
-    - Server:  
+   - Server:  
 
-        ```powershell
-        TSS.ps1 -Scenario NET_DNSsrv
-        ```
+     ```powershell
+     TSS.ps1 -Scenario NET_DNSsrv
+     ```
 
 4. Accept the EULA if the traces are run for the first time on the server or the client.
 5. Allow recording (PSR or video).
 6. Reproduce the issue before you enter *Y*.
 
-     > [!NOTE]
-     > If you collect logs on both the client and the server, wait for this message to appear on both nodes before you reproducing the issue.
+   > [!NOTE]
+   > If you collect logs on both the client and the server, wait for this message to appear on both nodes before you reproduce the issue.
 
 7. Enter *Y* to finish the log collection after the issue is reproduced.
 
