@@ -31,7 +31,7 @@ Use a formula pattern as follows:
 Filter(datasource, IfError(<query predicate>, false))
 ```
 
-### See also
+## See also
 
 - [Get started with formulas in canvas apps](/power-apps/maker/canvas-apps/working-with-formulas)
 - [Formula reference for Power Apps](/power-platform/power-fx/formula-reference)

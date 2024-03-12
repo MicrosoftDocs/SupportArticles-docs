@@ -6,6 +6,7 @@ documentationcenter: ''
 author: genlin
 manager: dcscontentpm
 tags: top-support-issue, azure-resource-manager
+ms.custom: linux-related-content
 ms.service: virtual-machines
 ms.subservice: vm-performance
 ms.collection: windows
