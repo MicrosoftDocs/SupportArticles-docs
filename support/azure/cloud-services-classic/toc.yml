@@ -1,0 +1,47 @@
+- name: Welcome
+  href: welcome-cloud-services-classic.yml
+
+- name: Remote Desktop Protocol doesn't work with Cloud Services (classic) resource
+  href: rdp-not-working-cloud-service.md
+
+- name: Troubleshooting series for developers
+  href: dev-troubleshoot-series.md
+  items:
+  - name: ZipEngine role throws Could not load file or assembly
+    href: dev-zipengine-role-stuck-busy-restart.md
+  - name: AssemblyBinder role throws Not enough space error
+    href: dev-assemblybinder-role-instance-stuck-busy-restart.md
+  - name: Autoscale is not triggering for FileUploader role
+    href: dev-autoscale-not-trigger-fileuploader.md
+  - name: ProcessorEngine role is stuck in Busy state
+    href: dev-processorengine-role-stuck-busy-state.md
+  - name: Website throws HTTP Error 503 with default cloud services url
+    href: dev-http-error-503-cannot-access-website.md
+  - name: Cannot RDP to HealthMonitor role
+    href: dev-connect-healthmonitor-worker-role-rdp.md
+  - name: Cannot access the website although all role instances are running
+    href: dev-asp-net-signair-app-cannot-access.md
+  - name: Webapp can't work when TryWebSockets is disabled
+    href: dev-aspnet-signalr-application-not-work.md
+
+- name: Troubleshooting deployment failures in Cloud Services (classic)
+  items:
+  - name: Configure instance-level public IP addresses (PIPs)
+    href: instance-level-public-ip-address-configuration.md
+  - name: InvalidModel exception
+    href: troubleshoot-mismatched-config.md
+  - name: Role recycle threshold exceptions
+    href: troubleshoot-role-recycle-swap.md
+  - name: SubscriptionPolicyCountExceeded exception
+    href: troubleshoot-subscription-policy.md
+  - name: Update failed during migration from classic to extended support
+    href: failed-update-ongoing-migration-process.md
+  - name: Virtual IP address (VIP) swap failures
+    href: troubleshoot-vip-swap.md
+
+- name: Reference
+  items:
+  - name: Install .NET Core with Azure Batch start task
+    href: install-dotnet-core-linux.md
+  - name: Support for Linux and open-source technology in Azure
+    href: support-linux-open-source-technology.md

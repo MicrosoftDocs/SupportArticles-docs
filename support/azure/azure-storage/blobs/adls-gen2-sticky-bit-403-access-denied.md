@@ -137,4 +137,4 @@ Here's an example of disabling/enabling the sticky bit setting with Azure CLI.
 
     :::image type="content" source="media/adls-gen2-sticky-bit-403-access-denied/az-storage-fs-access-set-command-output.png" alt-text="Screenshot of the command output sample.":::
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

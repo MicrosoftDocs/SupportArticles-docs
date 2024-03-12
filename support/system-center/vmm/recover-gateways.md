@@ -1,7 +1,7 @@
 ---
 title: Recover a gateway deployed through VMM
 description: Describes how to recover gateways that are running Windows Server 2012 R2 and were deployed through Virtual Machine Manager.
-ms.date: 05/07/2020
+ms.date: 03/12/2024
 ms.reviewer: scottnap
 ---
 # How to recover a gateway that was deployed through VMM and is running Windows Server 2012 R2
@@ -36,31 +36,6 @@ When you originally deployed the gateway that is running Windows Server 2012 R2 
 > This service template helps you create a pair of virtual machines on a host cluster, and together the virtual machines and the cluster help provide high availability for the gateway that runs on them.
 
 If both of the virtual machines that make up the gateway fail, and if you have [Update Rollup 4](https://support.microsoft.com/help/2992024) for Microsoft System Center 2012 R2 VMM installed, you can re-create the failed gateway by deploying a service template again. When you re-create the gateway, the names of the virtual machines can differ from before, and you can deploy them to a different host cluster. Other settings, such as the subnets that are specified in the network sites, must remain the same as when you originally deployed the gateway. The following procedures provide details.
-
-### How to collect information to prepare for gateway recovery after failure of both virtual machines
-
-1. In your VMM environment, make sure that you have installed [Update Rollup 4](https://support.microsoft.com/help/2992024) for System Center 2012 R2 VMM.
-
-   > [!NOTE]
-   > You must install [Update Rollup 4](https://support.microsoft.com/help/2992024) before you can perform the recovery process that is described in these steps.
-
-2. In the **Fabric** workspace in VMM, select **Network Service** in the console tree under **Networking**.
-3. In the **Network Services** pane, find the listing for the gateway that you want to recover, and then record the name of the gateway. In this article, this name is known as _GATEWAY-NAME_.
-4. Right-click the listing for the gateway, and then click **Properties**.
-5. Click **Connectivity**, and then record the information that is displayed for the front end and the back end (network adapters and network sites).
-6. Close the properties page.
-7. Make sure that you downloaded the following Windows PowerShell script:
-
-   [RecoverGatewayScript.psm1](https://gallery.technet.microsoft.com/scvmm-hyperv-network-b8f540bf)
-
-8. Determine the MAC address of the gateway by running the following script commands. Make sure that you substitute the correct path for _PATH_ and the name of the gateway (as described in step 3) for _GATEWAY-NAME_.
-
-   ```powershell
-   Import-Module PATH\GatewayRecovery.psm1
-   $svcName = "GATEWAY-NAME"
-   $hostCredential = Get-Credential
-   GetMacAddress $svcName $hostCredential
-   ```
 
 ### How to recover after failure of both virtual machines that support the gateway
 
