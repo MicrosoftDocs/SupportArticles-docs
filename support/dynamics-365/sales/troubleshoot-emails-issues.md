@@ -59,7 +59,7 @@ To resolve this issue, you must add the `onload` and `onchange` events to the cu
 
 ### Cause
 
-Starting from version 9.2.24031.0010, Dynamics 365 Sales follows the [principle of least privilege access](/entra/identity-platform/secure-least-privileged-access), which prevents users who have [Conditional Access policies](/entra/identity/conditional-access/concept-conditional-access-policy-common?tabs=secure-foundation) on their tenants from accessing untracked emails and meetings.
+Starting from version 9.2.24031.00102, Dynamics 365 Sales follows the [principle of least privilege access](/entra/identity-platform/secure-least-privileged-access), which prevents users who have [Conditional Access policies](/entra/identity/conditional-access/concept-conditional-access-policy-common?tabs=secure-foundation) on their tenants from accessing untracked emails and meetings.
 
 If a user can't see untracked emails and meetings, perform the following steps to verify whether the issue is caused by a Conditional Access policy.
 
@@ -74,4 +74,4 @@ If a user can't see untracked emails and meetings, perform the following steps t
 
 ### Workaround
 
-There's no resolution available for this issue. As an alternative, users can use [Microsoft Copilot for Sales in Outlook](/microsoft-sales-copilot/save-outlook-activities-crm) or [server-side synchronization](/power-platform/admin/email-message-filtering-correlation) to track all emails and meetings automatically.
+There's no resolution available for this issue. As an alternative, users can use [Microsoft Copilot for Sales in Outlook](/microsoft-sales-copilot/save-outlook-activities-crm) to record individual activities or use [server-side synchronization](/power-platform/admin/email-message-filtering-correlation) to track all emails and meetings automatically.
