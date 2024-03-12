@@ -1,0 +1,24 @@
+- name: Welcome
+  href: welcome-blob-storage.yml
+
+- name: Blob Storage and Azure Data Lake Store Gen2
+  items:
+  - name: Azure Storage data protection, backup, and recovery
+    href: data-protection-backup-recovery.md
+  - name: Copy blobs between storage accounts with network restriction
+    href: copy-blobs-between-storage-accounts-network-restriction.md
+  - name: Embedded application error when install Azure backup agent
+    href: ../../general/unable-to-execute-the-embedded-application-error-backup-agent.md
+  - name: Invalid blob or block content, or invalid block list
+    href: ../../general/invalid-blob-or-block-content-or-invalid-block-list.md
+  - name: Optimize CreateFile function
+    href: ../../general/optimize-createfile-function.md
+  - name: Request body is too large error when write to file
+    href: ../../general/request-body-large.md
+  - name: Sticky bit causes 403 authorization error
+    href: adls-gen2-sticky-bit-403-access-denied.md
+  - name: Troubleshoot high CPU or disk usage issues
+    href: ../../general/diagnose-high-cpu-disk-perfinsights.md
+
+
+

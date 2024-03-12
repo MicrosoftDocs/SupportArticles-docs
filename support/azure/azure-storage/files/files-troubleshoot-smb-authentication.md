@@ -371,7 +371,7 @@ If you set up "assignment required" for the corresponding enterprise application
 
 #### Solution
 
-Don't select **Assignment required for Microsoft Entra application** for the storage account because we don't populate entitlements in the Kerberos ticket that's returned back to the requestor. For more information, see [Error AADSTS50105 - The signed in user is not assigned to a role for the application](../active-directory/error-code-aadsts50105-user-not-assigned-role.md).
+Don't select **Assignment required for Microsoft Entra application** for the storage account because we don't populate entitlements in the Kerberos ticket that's returned back to the requestor. For more information, see [Error AADSTS50105 - The signed in user is not assigned to a role for the application](../../active-directory/error-code-aadsts50105-user-not-assigned-role.md).
 
 ## See also
 
@@ -380,6 +380,6 @@ Don't select **Assignment required for Microsoft Entra application** for the sto
 - [Troubleshoot Azure Files connectivity (SMB)](files-troubleshoot-smb-connectivity.md)
 - [Troubleshoot Azure Files general SMB issues on Linux](files-troubleshoot-linux-smb.md)
 - [Troubleshoot Azure Files general NFS issues on Linux](files-troubleshoot-linux-nfs.md)
-- [Troubleshoot Azure File Sync issues](file-sync-troubleshoot.md)
+- [Troubleshoot Azure File Sync issues](../file-sync-troubleshoot.md)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
