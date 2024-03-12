@@ -1,11 +1,12 @@
 ---
 title: Missing filter label text in list components
 description: Provides a resolution for an issue where the filter labels in list components might not be visible in Power Pages design studio due to a text color issue.
-ms.reviewer: dmartens
+ms.reviewer: dmartens, rituchawla, jakeatkins
 author: tapanm-MSFT
 ms.author: tapanm
-ms.date: 03/11/2024
+ms.date: 03/12/2024
 ms.service: power-pages
+ms.custom: sap:Site customization or browsing\Pages workspace
 ---
 # Filter label text is missing in list components in Power Pages design studio
 
