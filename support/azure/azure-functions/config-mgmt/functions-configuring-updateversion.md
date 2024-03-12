@@ -2,6 +2,7 @@
 title: Upgrade the Azure Functions app runtime version or language version
 description: Describes how to upgrade the Azure Functions runtime to v4 and resolve issues during the upgrade.
 ms.date: 08/24/2023
+ms.custom: linux-related-content
 ms.reviewer: gasridha, v-sidong
 ---
 # Troubleshoot common issues during Azure Runtime upgrade

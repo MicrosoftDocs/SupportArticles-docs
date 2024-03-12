@@ -1,7 +1,7 @@
 ---
 title: Collect Virtual Machine Manager traces
 description: Describes how to enable logging for the System Center 2012 R2 Virtual Machine Manager Storage Management Service.
-ms.date: 05/07/2020
+ms.date: 03/12/2024
 ---
 # How to collect Virtual Machine Manager traces
 
@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 3037626
 The Storage Management Service communicates with SMI-S providers from several third-party providers.
 
 > [!NOTE]
-> For a complete list of providers, see [System Center 2012 VMM: Supported Storage Arrays](https://social.technet.microsoft.com/wiki/contents/articles/16100.supported-storage-arrays-for-system-center-2012-vmm.aspx).
+> For a complete list of providers, see [System Center 2012 VMM: Supported Storage Arrays](/archive/technet-wiki/16100.system-center-2012-vmm-supported-storage-arrays).
 
 Storage traces (CIMXML output) are useful when you troubleshoot storage provider failures.
 

@@ -1,7 +1,7 @@
 ---
 title: In-place upgrade for supported VMs running Windows in Azure
 description: Understand how to work around the unsupported in-place system upgrade on an Azure VM that runs Windows.
-ms.date: 01/18/2023
+ms.date: 03/12/2024
 ms.reviewer: joscon, scotro, azurevmcptcic
 ms.service: virtual-machines
 ms.subservice: vm-common-errors-issues
@@ -37,13 +37,14 @@ In-place system upgrades are supported for specific versions of Azure Windows VM
 - Windows 10 Enterprise multi-session, all versions
 
    > [!NOTE]
-   > It's not currently possible to upgrade an existing virtual machine that's running Windows 10 Professional or Enterprise to [Windows 10 Enterprise multi-session](/azure/virtual-desktop/windows-10-multisession-faq#can-i-upgrade-a-windows-10-vm-to-windows-10-enterprise-multi-session).
+   > - It's not currently possible to upgrade an existing virtual machine that's running Windows 10 Professional or Enterprise to [Windows 10 Enterprise multi-session](/azure/virtual-desktop/windows-10-multisession-faq#can-i-upgrade-a-windows-10-vm-to-windows-10-enterprise-multi-session).
+   > - When migrating from Windows 10 to Windows 11, follow best practices by deploying new virtual machines. This approach avoids potential compatibility issues and ensures an optimized configuration.
 
 ### Windows versions not yet supported for in-place system upgrades (consider using a workaround)
 
 - Windows 8.1
 - Windows 7 Enterprise
-
+   
 ## In-place system upgrade process for a Windows 10 VM
 
 This process requires 45-60 minutes to complete and for the VM to restart. To do the in-place system upgrade, follow these steps:

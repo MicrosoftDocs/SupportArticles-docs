@@ -6,6 +6,7 @@ documentationcenter: ''
 author: genlin
 manager: dcscontentpm
 tags: virtual-machines
+ms.custom: linux-related-content
 ms.service: virtual-machines
 ms.subservice: vm-backup-restore
 ms.collection: linux
@@ -15,7 +16,6 @@ ms.tgt_pltfrm: vm-linux
 ms.devlang: azurecli
 ms.date: 10/11/2021
 ms.author: genli
-
 ---
 
 # Repair a Linux VM by using the Azure Virtual Machine repair commands

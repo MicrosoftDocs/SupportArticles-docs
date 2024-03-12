@@ -4,6 +4,7 @@ description: Provides the update awareness and frequently asked questions about 
 ms.date: 10/10/2020
 ms.service: virtual-machines
 ms.subservice: vm-extensions-not-operating
+ms.custom: linux-related-content
 ms.collection: linux
 ms.author: genli
 author: genlin
