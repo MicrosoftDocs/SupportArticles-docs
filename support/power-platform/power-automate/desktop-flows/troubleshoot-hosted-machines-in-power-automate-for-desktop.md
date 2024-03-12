@@ -1,19 +1,14 @@
 ---
 title: Troubleshoot hosted machines in Power Automate for desktop
 description: Suggestions for troubleshooting hosted machine issues in Power Automate for desktop.
-ms.reviewer: quseleba
-ms.date: 09/21/2022
+ms.reviewer: kenseongtan, pefelesk, tapanm
+ms.date: 03/12/2024
 ms.subservice: power-automate-desktop-flows
+ms.custom: sap:Desktop flows\
 ---
 # Troubleshoot hosted machines in Power Automate for desktop
 
-This article provides suggestions for troubleshooting hosted machine issues in Power Automate for desktop.
-
-### Hosted machine errors
-
-- [Errors related to VM Image](/graph/api/resources/cloudpcdeviceimage?#cloudpcdeviceimagestatusdetails-values) used in hosted machine
-- [Errors related to network connection](/graph/api/resources/cloudpconpremisesconnectionhealthcheck#cloudpconpremisesconnectionhealthcheckerrortype-values) used in hosted machine
-- [Hosted machines](/power-automate/desktop-flows/hosted-machines) details
+This article provides suggestions for troubleshooting [hosted machine](/power-automate/desktop-flows/hosted-machines) issues in Power Automate for desktop.
 
 The following table provides information about hosted machine provisioning errors and steps to mitigate such errors.
 
@@ -52,24 +47,25 @@ The following table provides information about hosted machine provisioning error
 
 - Network Level Authentication (NLA) not disabled
 
-    Network Level Authentication (NLA) must be disabled for unattended runs. You may see the following error details if an unattended flow run is triggered against a machine with NLA enabled:
+  You might see the following error details if an unattended flow run is triggered against a machine that's NLA-enabled:
 
-    >Could not create unattended session with these credentials. Please make sure you have Network Level Authentication (NLA) disabled in your remote settings if you’re using Microsoft Entra credentials.
+  > Could not create unattended session with these credentials. Please make sure you have Network Level Authentication (NLA) disabled in your remote settings if you’re using Microsoft Entra credentials.
+
+  To resolve the issue, disable Network Level Authentication (NLA) for unattended runs.
 
 - Active session exists
 
-    When reuse session is disabled, no active user session should be running on the target machine. You may see the following error details when an unattended flow run is triggered against a machine with an active user session:
+  You might see the following error details when an unattended flow run is triggered against a machine with an active user session:
 
-    >No machine able to run the desktop flow has been found. Aborting execution. Error encountered when connecting to machines: There is a user session on the target machine. Cannot execute unattended desktop flow.
+  > No machine able to run the desktop flow has been found. Aborting execution. Error encountered when connecting to machines: There is a user session on the target machine. Cannot execute unattended desktop flow.
 
-    To resolve this issue, open the Task Manager and go to the **Users** tab. There, terminate all other user sessions except for the current session, and then log-off from the machine.
+  When "reuse session" is disabled, no active user session should be running on the target machine. To resolve this issue, open the Task Manager and go to the **Users** tab, terminate all other user sessions except for the current session, and then sign out from the machine.
 
-    :::image type="content" source="media/troubleshoot-hosted-machines-in-power-automate-for-desktop/task-manager-sessions.png" alt-text="Screenshot of the Users tab in Task Manager.":::
+  :::image type="content" source="media/troubleshoot-hosted-machines-in-power-automate-for-desktop/task-manager-sessions.png" alt-text="Screenshot of the Users tab in Task Manager.":::
 
+## More information
 
-
-
-
-
+- [Errors related to VM Image](/graph/api/resources/cloudpcdeviceimage?#cloudpcdeviceimagestatusdetails-values) used in hosted machine
+- [Errors related to network connection](/graph/api/resources/cloudpconpremisesconnectionhealthcheck#cloudpconpremisesconnectionhealthcheckerrortype-values) used in hosted machine
 
 <!--- End of original article markdown --->
