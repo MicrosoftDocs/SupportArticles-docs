@@ -37,7 +37,7 @@ To narrow the possible causes, follow these steps:
         net time \\<FQDN of the machine>
         ```
 
-    2. If necessary, force time synchronization by using the following commands in the affected machine:
+    2. If required, force time synchronization by using the following commands in the affected machine:
 
         ```console
         net stop w32time #To stop the Windows Time service
