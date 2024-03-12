@@ -3,15 +3,16 @@ title: Troubleshoot issues with emails
 description: Provides resolutions for the known issues that are related to emails in Dynamics 365 Sales.
 author: sbmjais
 ms.author: shjais
-ms.reviewer: lavanyakr, aam, veparim
-ms.date: 03/11/2024
+ms.topic: troubleshooting
+ms.date: 02/28/2022
 ms.subservice: d365-sales-sales
 ---
+
 # Troubleshoot issues with emails
 
 This article helps you troubleshoot and resolve issues related to emails in Dynamics 365 Sales.
 
-## Issue 1: Email editor shows incorrect title in contextual email popup window
+## Issue: Email editor shows incorrect title in contextual email popup window
 
 After upgrading to Dynamics 365 2020 release wave 2, the email editor shows incorrect title in contextual email popup window.
 
@@ -52,6 +53,7 @@ To resolve this issue, you must add the `onload` and `onchange` events to the cu
     ```
 
 5. [Import the solution](/powerapps/maker/common-data-service/import-update-export-solutions).
+
 
 ## Issue 2: Can't view untracked emails and meetings in auto capture
 
