@@ -366,11 +366,11 @@ To confirm, you can use Azure Metrics in the portal.
 - If file change notification isn't used, disable file change notification (preferred).
 
   - [Disable file change notification](https://support.microsoft.com/help/911272/fix-asp-net-2-0-connected-applications-on-a-web-site-may-appear-to-sto) by updating FCNMode.
-  - Update the IIS Worker Process (W3WP) polling interval to 0 by setting `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\W3SVC\Parameters\ConfigPollMilliSeconds` in your registry and restart the W3WP process. To learn about this setting, see [Common registry keys that are used by many parts of IIS](../../developer/webapps/iis/general/use-registry-keys.md#registry-keys-that-apply-to-iis-worker-process-w3wp).
+  - Update the IIS Worker Process (W3WP) polling interval to 0 by setting `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\W3SVC\Parameters\ConfigPollMilliSeconds` in your registry and restart the W3WP process. To learn about this setting, see [Common registry keys that are used by many parts of IIS](../../../developer/webapps/iis/general/use-registry-keys.md#registry-keys-that-apply-to-iis-worker-process-w3wp).
 
 - Increase the frequency of the file change notification polling interval to reduce volume.
 
-    Update the W3WP worker process polling interval to a higher value (for example, 10 or 30 minutes) based on your requirement. Set `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\W3SVC\Parameters\ConfigPollMilliSeconds` [in your registry](../../developer/webapps/iis/general/use-registry-keys.md#registry-keys-that-apply-to-iis-worker-process-w3wp) and restart the W3WP process.
+    Update the W3WP worker process polling interval to a higher value (for example, 10 or 30 minutes) based on your requirement. Set `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\W3SVC\Parameters\ConfigPollMilliSeconds` [in your registry](../../../developer/webapps/iis/general/use-registry-keys.md#registry-keys-that-apply-to-iis-worker-process-w3wp) and restart the W3WP process.
 
 - If your web site's mapped physical directory has a nested directory structure, you can try to limit the scope of file change notifications to reduce the notification volume. By default, IIS uses configuration from *Web.config* files in the physical directory to which the virtual directory is mapped, as well as in any child directories in that physical directory. If you don't want to use *Web.config* files in child directories, specify `false` for the `allowSubDirConfig` attribute on the virtual directory. More details can be found [here](/iis/get-started/planning-your-iis-architecture/understanding-sites-applications-and-virtual-directories-on-iis#virtual-directories).
 
@@ -384,4 +384,4 @@ To confirm, you can use Azure Metrics in the portal.
 - [Overview of alerts in Microsoft Azure](/azure/azure-monitor/alerts/alerts-overview)
 - [Azure Files FAQ](/azure/storage/files/storage-files-faq)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

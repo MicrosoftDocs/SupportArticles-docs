@@ -362,6 +362,6 @@ If you're using a proxy, consult your proxy's documentation and ensure it's conf
 - [Troubleshoot Azure File Sync sync group management](file-sync-troubleshoot-sync-group-management.md)
 - [Troubleshoot Azure File Sync sync errors](file-sync-troubleshoot-sync-errors.md)
 - [Monitor Azure File Sync](/azure/storage/file-sync/file-sync-monitoring)
-- [Troubleshoot Azure Files](files-troubleshoot.md)
+- [Troubleshoot Azure Files](files/files-troubleshoot.md)
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
