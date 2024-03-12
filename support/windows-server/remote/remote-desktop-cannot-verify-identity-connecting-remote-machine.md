@@ -22,7 +22,7 @@ When you use a direct Remote Desktop Protocol (RDP) connection to connect to a W
 
 ## RDP error is persistent
 
-If the error is persistent, it usually occurs when there is a time difference between the client computer or remote computer and the target domain controller.
+If the error is persistent, it usually occurs when there's a time difference between the client computer or remote computer and the target domain controller.
 
 > [!NOTE]
 > In case you have a time inaccuracy, you may be able to connect via RDP using a local account.
@@ -37,7 +37,7 @@ To narrow the possible causes, follow these steps:
         net time \\<FQDN of the machine>
         ```
 
-    2. If required, force time synchronization by using the following commands in the affected machine:
+    2. If necessary, force time synchronization by using the following commands in the affected machine:
 
         ```console
         net stop w32time #To stop the Windows Time service
@@ -59,7 +59,7 @@ Other RDP errors may be related with a TCP port exhaustion, such as:
 > [!NOTE]
 Usually only domain accounts are affected, you may be able to connect via RDP using a local account.
 
-To check if there is a port exhaustion on the affected machine, open system logs in the Event Viewer and check if any of the following events are logged.
+To check if there's a port exhaustion on the affected machine, open system logs in the Event Viewer and check if any of the following events are logged.
 
 |Event ID  |Source  |Description  |
 |---------|---------|---------|
