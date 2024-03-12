@@ -11,7 +11,7 @@ ms.subservice: d365-sales-sales
 
 This article helps you troubleshoot and resolve issues related to emails in Dynamics 365 Sales.
 
-## Issue: Email editor shows incorrect title in contextual email popup window
+## Issue 1: Email editor shows incorrect title in contextual email popup window
 
 After upgrading to Dynamics 365 2020 release wave 2, the email editor shows incorrect title in contextual email popup window.
 
@@ -53,7 +53,7 @@ To resolve this issue, you must add the `onload` and `onchange` events to the cu
 
 5. [Import the solution](/powerapps/maker/common-data-service/import-update-export-solutions).
 
-## Issue: Can't view untracked emails and meetings in auto capture
+## Issue 2: Can't view untracked emails and meetings in auto capture
 
 [Auto capture](/dynamics365/sales/configure-auto-capture) doesn't show untracked emails and meetings for some or all users in an organization.
 
@@ -72,6 +72,6 @@ If a user can't see untracked emails and meetings, perform the following steps t
 
     If some results are returned for the affected users, the issue is due to a Conditional Access policy.
 
-### Resolution
+### Workaround
 
 There's no resolution available for this issue. As an alternative, users can use [Microsoft Copilot for Sales in Outlook](/microsoft-sales-copilot/save-outlook-activities-crm) or [server-side synchronization](/power-platform/admin/email-message-filtering-correlation) to track all emails and meetings automatically.
