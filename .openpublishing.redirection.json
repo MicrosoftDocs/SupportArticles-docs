@@ -10134,6 +10134,11 @@
       "source_path": "support/windows-server/networking/event-id-7023-is-logged.md",
       "redirect_url": "/previous-versions/troubleshoot/windows-server/event-id-7023-is-logged",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/virtual-machines/linux-upgrade-suse-15sp1.md",
+      "redirect_url": "/troubleshoot/azure/virtual-machines/welcome-virtual-machines",
+      "redirect_document_id": true
     }
   ]
 }
