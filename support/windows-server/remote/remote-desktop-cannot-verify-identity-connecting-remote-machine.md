@@ -31,7 +31,7 @@ To narrow the possible causes, follow these steps:
 
 1. Determine if the time inaccuracy is in the client machine, server machine or in the domain controller (DC).
 
-    1. Open a command prompt and run the following command.
+    1. Open a command prompt and run the following command:
 
         ```console
         net time \\<FQDN of the machine>
@@ -57,7 +57,7 @@ Other RDP errors may be related with a TCP port exhaustion, such as:
 - > There are currently no logon servers available to service the logon request.
 
 > [!NOTE]
-Usually only domain accounts are affected, you may be able to connect via RDP using a local account.
+> Usually only domain accounts are affected, you may be able to connect via RDP using a local account.
 
 To check if there's a port exhaustion on the affected machine, open system logs in the Event Viewer and check if any of the following events are logged.
 
