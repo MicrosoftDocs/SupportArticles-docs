@@ -171,7 +171,7 @@ Managed Microsoft Entra integrated applications and Windows PowerShell scripts (
 
 First, determine the installed .NET versions.
 
-- For more information, see [Determine which versions and service pack levels of .NET Framework are installed](../../dotnet/framework/determine-dotnet-versions-service-pack-levels.md).
+- For more information, see [Determine which versions and service pack levels of .NET Framework are installed](../../../dotnet/framework/determine-dotnet-versions-service-pack-levels.md).
 
 #### Install .NET updates
 
