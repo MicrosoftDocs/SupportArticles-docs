@@ -43,19 +43,39 @@ These event ID messages mean exactly the same thing and are generated for the sa
 
 ## More information
 
-An event ID 50 message is logged if a generic error occurs when Windows is trying to write information to the disk. This error occurs when Windows is trying to commit data from the file system Cache Manager (not hardware level cache) to the physical disk. This behavior is part of the memory management of Windows. For example, if a program sends a write request, the write request is cached by Cache Manager and the program is told the write is completed successfully. At a later point in time, Cache Manager tries to write the data to the physical disk. When Cache Manager tries to commit the data to disk, an error occurs writing the data, and the data is flushed from the cache and discarded. Write-back caching improves system performance, but data loss and volume integrity loss can occur as a result of lost delayed-write failures.
+There are several different sources for an event ID 50 message. For example, an event ID 50 message logged from a MRxSmb source occurs if there's a network connectivity problem that involves the redirector. This article addresses event ID 50 messages that refer to disk write problems. Review the event ID 50 message to confirm that it refers to a disk write problem and that this article applies.
 
-It's important to remember that not all I/O is buffered I/O by Cache Manager. Programs can set a `FILE_FLAG_NO_BUFFERING` flag that bypasses Cache Manager. When SQL performs critical writes to a database, this flag is set to guarantee that the transaction is completed directly to disk. For example, non-critical writes to log files perform buffered I/O to improve overall performance. An event ID 50 message never results from non-buffered I/O.
+In this context, Windows logs an event ID 50 message if a generic error occurs when Windows tries to write information from the file system Cache Manager (not the hardware-level cache) to the physical disk. This write behavior, known as write-back or delayed-write caching, is part of the memory management function of Windows. Write-back caching improves system performance. However, failures in the delayed-write operations might cause losses of data or volume integrity.
 
-There are several different sources for an event ID 50 message. For example, an event ID 50 message logged from a MRxSmb source occurs if there's a network connectivity problem with the redirector. To avoid performing incorrect troubleshooting steps, make sure to review the event ID 50 message to confirm that it refers to a disk I/O issue and that this article applies.
+Typically, when an application sends a write request to Windows, Cache Manager caches the write request and reports to the application that the write was successful. Later, Cache Manager writes the data to the physical disk and then clears the cache. If an error occurs during the write operation, the data is lost when Cache Manager clears the cache.
 
-An event ID 50 message is similar to an event ID 9 and an event ID 11 message. Although the error isn't as serious as the error indicated by the event ID 9 and an event ID 11 message, you can use the same troubleshooting techniques for an event ID 50 message as you do for an event ID 9 and an event ID 11 message. However, remember that anything in the stack can cause lost-delay writes, such as filter drivers and mini-port drivers.
+Applications or processes that write non-critical data, such as logging processes, use Cache Manager to improve overall performance. Applications that write critical data, such as SQL Server, do not use Cache Manager. Such applications set a `FILE_FLAG_NO_BUFFERING` flag to guarantee that the transaction is completed directly to disk. Direct-to-disk writes never generate event ID 50 messages.
 
-You can use the binary data that is associated with any accompanying "DISK" error (indicated by an event ID 9, 11, 51 error message or other messages) to help you in identifying the problem.
+An event ID 50 message is similar to an event ID 9 or an event ID 11 message. Although the error isn't as serious as the error indicated by the event ID 9 or event ID 11 message, you can use the same troubleshooting techniques for an event ID 50 message as you do for an event ID 9 and an event ID 11 message. However, remember that anything in the stack can cause lost-delay writes, such as filter drivers and mini-port drivers.
 
-### How to decode the data section of an Event ID 50 event message
+Event ID 50 messages (as well as event ID 9, 11, 51 or similar "DISK" messages) include binary data that you can use to help identify the problem.
 
-When you decode the data section in the example of an event ID 50 message that is included in the "Summary" section, you see that the attempt to perform a write operation failed because the device was busy and the data was lost. This section describes how to decode this event ID 50 message.
+### How to identify the target disk
+
+You can identify the disk that the write was being tried to by using the symbolic link that is listed to the drive in the "Description" section of the event ID message, for example: *\\Device\\HarddiskVolume4*.
+
+### How to decode the data section of an event ID 50 event message
+
+The [Symptoms](#symptoms) section of this article provides an example of an event ID 50 message. The message includes the following data section:
+
+> Data:  
+0000: 00 00 04 00 02 00 56 00  
+0008: 00 00 00 00 32 00 04 80  
+0010: 00 00 00 00 00 00 00 00  
+0018: 00 00 00 00 00 00 00 00  
+0020: 00 00 00 00 00 00 00 00  
+0028: 11 00 00 80  
+
+
+, you see that the attempt to perform a write operation failed because the device was busy and the data was lost. This section describes how to decode this event ID 50 message.
+
+> [!NOTE]  
+> When you are converting the hexadecimal data in the event ID message to the status code, remember that the values are represented in the little-endian format.
 
 The following table describes what each offset of this message represents:
 
@@ -72,20 +92,13 @@ The following table describes what each offset of this message represents:
 |0x20|8|Not Used|
 |0x28|4|NT Status error code|
 
-#### Key sections to decode
+**The event category code**
 
-**The error code**
+In the example in the "Symptoms" section, the error code is listed in the second line. This line starts with "0008:" and it includes the last 4 bytes in this line: 0008: 00 00 00 00 32 00 04 80. In this case, the error code is 0x80040032. The following code is the code for error 50, and it's the same for all event ID 50 messages: `IO_LOST_DELAYED_WRITE`.
 
-In the example in the "Summary" section, the error code is listed in the second line. This line starts with "0008:" and it includes the last 4 bytes in this line: 0008: 00 00 00 00 32 00 04 80. In this case, the error code is 0x80040032. The following code is the code for error 50, and it's the same for all event ID 50 messages: `IO_LOST_DELAYED_WRITE`.
 
-> [!NOTE]
-> When you are converting the hexadecimal data in the event ID message to the status code, remember that the values are represented in the little-endian format.
 
-**The target disk**
-
-You can identify the disk that the write was being tried to by using the symbolic link that is listed to the drive in the "Description" section of the event ID message, for example: *\\Device\\HarddiskVolume4*.
-
-**The final status code**
+**The NT Status error code**
 
 The final status code is the most important piece of information in an event ID 50 message. This is the error code that is return when the I/O request was made, and it's the key source of information. In the example in the "Summary" section, the final status code is listed at 0x28, the sixth line that starts with "0028:" and includes the only four octets in this line:
 
