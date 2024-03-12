@@ -131,7 +131,7 @@ For the VM created from a custom image, you must configure the appropriate KMS c
         > [!NOTE]  
         > If you remove all DNS servers from a virtual network, the VMs use Azure's internal DNS service. This service can resolve `azkms.core.windows.net`.
 
-3. Verify using [Azure Network Watcher next hop](/azure/network-watcher/network-watcher-next-hop-overview) that the next hop type from the VM in question to the destination IP ` 20.118.99.224` or `40.83.235.53` (for `azkms.core.windows.net`) or the IP of the appropriate KMS endpoint that applies to your region is **Internet**.
+3. Verify using [Azure Network Watcher next hop](/azure/network-watcher/network-watcher-next-hop-overview) that the next hop type from the VM in question to the destination IP ` 20.118.99.224` and `40.83.235.53` (for `azkms.core.windows.net`) or the IP of the appropriate KMS endpoint that applies to your region is **Internet**.
 
    If the result is **VirtualAppliance** or **VirtualNetworkGateway**, it's likely that a default route exists. Contact your network administrator and work with them to determine the correct course of action. This might be a [custom route](./custom-routes-enable-kms-activation.md) if that solution is consistent with your organization's policies.
 
