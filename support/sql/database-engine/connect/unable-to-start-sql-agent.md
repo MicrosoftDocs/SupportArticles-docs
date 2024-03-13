@@ -8,7 +8,7 @@ ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 
-# Event ID 17052 and you can't start SQL Server Agent
+# SQL Server Agent fails to start while connecting to SQL Server due to misconfigured TLS protocol
 
 This article helps you resolve a problem in which you can't start the Microsoft SQL Server Agent.
 
