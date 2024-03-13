@@ -1,5 +1,5 @@
 ---
-title: Event ID 17052 - Can't start SQL Server Agent
+# SQL Server Agent fails to start while connecting to SQL Server due to misconfigured TLS protocol
 description: This article provides a resolution to the problem where the SQL Server Agent can't start.
 ms.date: 03/04/2024
 author: prmadhes-msft
