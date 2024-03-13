@@ -243,7 +243,7 @@ The columns associated with the **Selector**, **Amount field**, and **Date field
 
 ### Resolution
 
-To solve the issue, you need to grant the **Read** permission to the **Dynamics 365 Sales Forecasting** user in the field security profiles. Otherwise, the column will show **0** to all users. Follow these steps to configure the field security profiles:
+To solve the issue, you need to grant the **Read** permission to the **# Dynamics 365 Sales Forecasting** user in the field security profiles. Otherwise, the column will show **0** to all users. Follow these steps to configure the field security profiles:
 
 1. Go to **Settings**> **Advanced Settings** > **Security** > **Field Security Profiles**.
 1. Select the field security profile associated with the field that shows **0**.
