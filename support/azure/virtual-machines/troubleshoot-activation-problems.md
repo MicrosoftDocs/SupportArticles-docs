@@ -52,6 +52,7 @@ To troubleshoot a Windows activation issue, follow these steps:
        The error code and message will help identify the possible cause and solution of the activation issue.
 
 2. Search the error message and error code online for possible solutions or check known errors and issues below:
+
     |Known error codes|error message or issue|
     |---|---|
     |Error 0xC004F074|["No Key Management Service (KMS) could be contacted"](windows-vm-activation-error-0xc004f074.md)|
