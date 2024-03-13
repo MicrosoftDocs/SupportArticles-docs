@@ -2,7 +2,7 @@
 title: Year-end closing for Payables Management
 description: Describes how to do the year-end closing routine in Payables Management in Microsoft Dynamics GP.
 ms.reviewer:
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # Year-end closing procedures for the Payables Management module in Microsoft Dynamics GP
 

@@ -3,7 +3,7 @@ title: How to create Inventory Valuation and GMROI and Inventory Turns reports
 description: Inserts historical data into the new fields that were added as part of Microsoft Dynamics RMS 2.0 Feature Pack 1. This enables users to generate Inventory Valuation and GMROI and Inventory Turns reports for dates before Microsoft Dynamics RMS 2.0 Feature Pack 1 is installed.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # Cannot create "Inventory Valuation" and "GMROI and Inventory Turns" reports for dates before applying Dynamics RMS 2.0 Feature Pack 1
 

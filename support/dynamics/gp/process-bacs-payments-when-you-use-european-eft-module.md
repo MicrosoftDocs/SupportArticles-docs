@@ -2,7 +2,7 @@
 title: Process BACS payments when you use European EFT module
 description: Describes the setup steps and the transaction steps for processing Bankers Automated Clearing System (BACS) payments in Great Plains 8.0 without using an additional product.
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # How to process BACS payments when you use the European Electronic Funds Transfer module in Great Plains
 

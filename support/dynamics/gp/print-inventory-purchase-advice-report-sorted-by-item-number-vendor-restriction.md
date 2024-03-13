@@ -3,7 +3,7 @@ title: Print Inventory Purchase Advice Report so that it is sorted by item numbe
 description: How to print the Inventory Purchase Advice Report so that it is sorted by item number and by vendor restriction in Microsoft Dynamics GP and in Microsoft Great Plains.
 ms.reviewer:
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # How to print the Inventory Purchase Advice Report so that it is sorted by item number and by vendor restriction in Microsoft Dynamics GP and in Microsoft Great Plains
 

@@ -2,7 +2,7 @@
 title: Three types of OLAP storage schemes are compatible with Analysis Cubes for Microsoft Excel
 description: Describes the data storage and the data retrieval of Multidimensional OLAP (MOLAP), Relational OLAP (ROLAP), and Hybrid OLAP (HOLAP). Compares the speed of the query performances.
 ms.reviewer: ngregg
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # Three types of OLAP storage schemes in Analysis Services are compatible with Analysis Cubes for Microsoft Excel
 

@@ -3,7 +3,7 @@ title: Set up Quebec QHIP tax in Canadian Payroll
 description: Describes how to set up Quebec QHIP tax in Canadian Payroll for Microsoft Dynamics GP.
 ms.reviewer: cwaswick
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # How to set up Quebec QHIP tax in Canadian Payroll for Microsoft Dynamics GP
 

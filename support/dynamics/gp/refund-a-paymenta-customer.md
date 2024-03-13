@@ -3,7 +3,7 @@ title: Refund a payment to a customer
 description: Describes how to refund a payment to a customer without using the Refund Checks module in Microsoft Dynamics GP and Microsoft Business Solutions - Great Plains 8.0.
 ms.reviewer: dbader
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # How to refund a payment to a customer without using the Refund Checks module in Microsoft Dynamics GP
 

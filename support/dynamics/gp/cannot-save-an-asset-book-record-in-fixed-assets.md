@@ -3,7 +3,7 @@ title: Asset Record Changed by Another User error when saving Asset Book record 
 description: You cannot save an Asset Book record in the Fixed Assets module of Microsoft Dynamics GP due to the Asset Record Changed by Another User error.
 ms.reviewer: Cwaswick, Ryanklev
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # "Asset Record Changed by Another User" error when saving an Asset Book record in the Fixed Assets module of Microsoft Dynamics GP
 

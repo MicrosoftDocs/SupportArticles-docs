@@ -3,7 +3,7 @@ title: Make the Add Item option a default option in the Sales Order Processing a
 description: Steps to make the Add Item option a default option in the Sales Order Processing and Purchase Order Processing modules in Microsoft Dynamics GP.
 ms.reviewer: 
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # How to make the Add Item option a default option in the Sales Order Processing and Purchase Order Processing modules in Microsoft Dynamics GP
 

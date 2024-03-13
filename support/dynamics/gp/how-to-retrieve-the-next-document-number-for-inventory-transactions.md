@@ -3,7 +3,7 @@ title: How to get next document number for Inventory in Miscellaneous Routines A
 description: How to retrieve the next document number for Inventory transactions when you use the Miscellaneous Routines Assembly in eConnect.
 ms.reviewer: kjohns
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # How to retrieve the next document number for Inventory transactions when you use the Miscellaneous Routines Assembly in eConnect
 

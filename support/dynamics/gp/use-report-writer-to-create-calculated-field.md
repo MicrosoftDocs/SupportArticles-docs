@@ -3,7 +3,7 @@ title: Use Report Writer to create calculated field to mask the social security 
 description: Describes how to block out the social security number on an employee checks report.
 ms.reviewer:
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # How to use Report Writer in Microsoft Dynamics GP 9.0 to create a calculated field to mask the social security number on the Employee Checks report and on the "Direct Deposit Statement of Earnings" report
 

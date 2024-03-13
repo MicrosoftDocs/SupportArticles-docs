@@ -3,7 +3,7 @@ title: Analytical Accounting information missing for transactions error
 description: During the Write Off routine or Finance Charge Routine in Receivables Management, the batch is going to Batch Recovery, the account used is not linked to Analytical Accounting. Provides a resolution.
 ms.reviewer: cwaswick
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # "Analytical Accounting information missing for transactions..." during Write Off or Finance Charge Routine
 

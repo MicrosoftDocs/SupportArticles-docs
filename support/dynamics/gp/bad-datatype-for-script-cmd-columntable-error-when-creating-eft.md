@@ -3,7 +3,7 @@ title: Bad datatype for SCRIPT_CMD_COLUMNOFTABLE error
 description: When you create an EFT file, you receive an SCRIPT_CMD_COLUMNOFTABLE error. Provides a resolution.
 ms.reviewer: cwaswick
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # Bad datatype for "SCRIPT_CMD_COLUMNOFTABLE" error when creating EFT file in Microsoft Dynamics GP
 

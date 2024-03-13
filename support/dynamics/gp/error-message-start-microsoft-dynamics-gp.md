@@ -3,7 +3,7 @@ title: Error message when you start Microsoft Dynamics GP
 description: This article provides a resolution for the problem that occurs when you start Microsoft Dynamics GP.
 ms.reviewer: kyouells
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # Error message when you start Microsoft Dynamics GP (Your attempt to log into the server failed because of an unknown error. Attempt to log in again.)
 

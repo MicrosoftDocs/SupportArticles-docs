@@ -3,7 +3,7 @@ title: Error when VAT Return is generated
 description: When running the VAT return, an error message appears. This article provides a solution to this error.
 ms.topic: troubleshooting
 ms.reviewer: cwaswick
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # Error on VAT Return in Microsoft Dynamics GP: The Input tax for this range hasn't been entered
 

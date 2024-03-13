@@ -3,7 +3,7 @@ title: How to create log file for printer in Named Printers Options
 description: Provides information that will help you troubleshoot problems that may occur when you print by using named printers in Microsoft Dynamics GP.
 ms.reviewer: 
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # How to create a log file to troubleshoot when program not using the printer specified in Named Printers Options
 

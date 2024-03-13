@@ -3,7 +3,7 @@ title: Your previous transaction-level posting session has not finished processi
 description: Describes a problem that may occur when records are locked in the SY00500 table, in the SY00800 table, or in the SOP10100 table. A resolution is provided.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 04/22/2021
+ms.date: 03/13/2024
 ---
 # "Your previous transaction-level posting session has not finished processing" error when opening the Sales Transaction Entry window in Sales Order Processing
 

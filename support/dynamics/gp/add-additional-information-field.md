@@ -3,7 +3,7 @@ title: Add the Additional Information field from Internet Information
 description: Describes how to add the Additional Information field from the Internet Information window to the SOP Blank Invoice Form report and to the POP Purchase Order Blank Form report in Microsoft Dynamics GP.
 ms.reviewer: ppeterso
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # How to add the Additional Information field from the Internet Information window to the SOP Blank Invoice Form report and to the POP Purchase Order Blank Form report in Microsoft Dynamics GP
 

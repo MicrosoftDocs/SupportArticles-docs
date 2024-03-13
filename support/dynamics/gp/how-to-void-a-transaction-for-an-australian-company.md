@@ -3,7 +3,7 @@ title: How to void a transaction for an Australian company
 description: Describes how to void a transaction for an Australian company in Microsoft Dynamics GP 9.0, Microsoft Business Solutions - Great Plains 8.0, and Microsoft Business Solutions - Great Plains 7.5.
 ms.reviewer: lmuelle
 ms.topic: how-to
-ms.date: 04/22/2021
+ms.date: 03/13/2024
 ---
 # How to void a transaction for an Australian company in Microsoft Dynamics GP
 

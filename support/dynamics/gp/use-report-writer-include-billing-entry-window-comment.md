@@ -3,7 +3,7 @@ title: Use Report Writer to include the comment from the Billing Entry window on
 description: Describes the steps to use Report Writer to include the comment from the Billing Entry window on the RM Detail Historical Aged Trial Balance report in Microsoft Dynamics GP.
 ms.reviewer: lmuelle
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # How to use "Report Writer" to include the comment from the "Billing Entry" window on the "RM Detail Historical Aged Trial Balance" report in Microsoft Dynamics GP
 
@@ -76,4 +76,3 @@ To use Report Writer to include the comment from the Billing Entry window on the
   
         > [!NOTE]
         > By default, the current user and company are selected when you start Advanced Level Security. Any changes that you make apply to the current user and company. However, you can select additional users and companies in the Company area and in the User area of the Advanced Level Security window.
-  

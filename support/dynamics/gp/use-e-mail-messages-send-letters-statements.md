@@ -3,7 +3,7 @@ title: Use e-mail messages to send letters, statements, and invoices
 description: This article describes how to set up a query and use it to send letters, statements, and invoices by using e-mail messages.
 ms.reviewer: 
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # Use e-mail messages to send letters, statements, and invoices to customers in Microsoft Dynamics GP
 

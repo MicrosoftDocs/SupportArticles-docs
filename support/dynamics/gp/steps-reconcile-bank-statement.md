@@ -3,7 +3,7 @@ title: Steps to reconcile bank statement
 description: Steps to reconcile bank statement with no activity in Bank Reconciliation using Microsoft Dynamics GP.
 ms.reviewer: lmuelle, cwaswick
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # Steps to reconcile bank statement with no activity in Bank Reconciliation using Microsoft Dynamics GP
 

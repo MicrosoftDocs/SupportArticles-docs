@@ -3,7 +3,7 @@ title: Start the program and do other tasks
 description: Discusses how to automatically generate reports, start the program, and do other tasks by using macros and Scheduled Tasks in Microsoft Dynamics GP.
 ms.reviewer: kyouells
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # How to use macros and Scheduled Tasks to automatically start the program and to do other tasks in Microsoft Dynamics GP
 

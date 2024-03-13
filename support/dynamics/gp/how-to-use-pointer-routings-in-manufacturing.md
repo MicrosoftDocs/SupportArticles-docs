@@ -3,7 +3,7 @@ title: How to use pointer routings in Manufacturing
 description: Provides a detailed explanation of pointer routings and an example of how to use them.
 ms.reviewer: ttorgers, aeckman
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # How to use pointer routings in Manufacturing in Microsoft Dynamics GP
 

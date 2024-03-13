@@ -3,7 +3,7 @@ title: You are creating a check with remit-to address PRIMARY error
 description: You may receive an error message that happens for certain vendors in the Edit payables checks window in Payables Management. Provides a resolution.
 ms.reviewer: cwaswick, lmuelle
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # "You are creating a check with remit-to address PRIMARY" error in Edit Payables Checks window in Payables Management
 

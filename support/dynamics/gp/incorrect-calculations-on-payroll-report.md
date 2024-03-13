@@ -3,7 +3,7 @@ title: Incorrect calculations on a Payroll Report
 description: Provides a solution to an issue where incorrect calculations are on the Payroll 941 Quarterly Summary Report in Microsoft Dynamics GP.
 ms.reviewer: cwaswick
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # Incorrect calculations are on the Payroll 941 Quarterly Summary Report in Microsoft Dynamics GP
 

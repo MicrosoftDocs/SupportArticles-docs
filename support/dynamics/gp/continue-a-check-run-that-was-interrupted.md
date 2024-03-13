@@ -3,7 +3,7 @@ title: Continue a check run that was interrupted
 description: Describes how to continue a check run after the check run is interrupted in Payables Management in Microsoft Dynamics GP.
 ms.reviewer: lmuelle, cwaswick, kriszree
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # How to continue a check run that was interrupted in Payables Management in Microsoft Dynamics GP
 

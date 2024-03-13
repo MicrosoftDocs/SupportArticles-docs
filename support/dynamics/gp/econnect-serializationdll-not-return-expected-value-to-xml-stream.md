@@ -3,7 +3,7 @@ title: The eConnect Serialization.dll file doesn't return the expected value int
 description: The eConnect Serialization.dll file doesn't return the expected value into the XML stream that serialized in a Visual Studio project.
 ms.reviewer: dclauson
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # The eConnect Serialization.dll file doesn't return the expected value into the XML stream that serialized in a Visual Studio project
 

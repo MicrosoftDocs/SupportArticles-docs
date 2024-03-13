@@ -2,7 +2,7 @@
 title: Cannot turn off AA Trx Edit Lists
 description: Describes a by design behavior that you can't turn off the AA Trx Edit Lists in Microsoft Dynamics GP.
 ms.reviewer: cwaswick
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # Can't turn off the "AA Trx Edit Lists" in Microsoft Dynamics GP
 

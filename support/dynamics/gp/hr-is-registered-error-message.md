@@ -3,7 +3,7 @@ title: HR is registered error message
 description: Provides a solution to an error that occurs when using the Class ID field in Payroll in Microsoft Dynamics GP.
 ms.reviewer: cwaswick 
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # "HR is registered" Error message when using the Class ID field in Payroll in Microsoft Dynamics GP
 

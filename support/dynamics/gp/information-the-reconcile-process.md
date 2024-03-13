@@ -2,7 +2,7 @@
 title: Information about the reconcile process
 description: Provides information about the tables and fields used during the reconcile process in Payroll in Microsoft Dynamics GP.
 ms.reviewer: lmueller
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # Information about the reconcile process in Payroll in Microsoft Dynamics GP
 

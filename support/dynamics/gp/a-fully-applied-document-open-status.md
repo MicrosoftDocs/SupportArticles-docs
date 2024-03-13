@@ -3,7 +3,7 @@ title: A fully applied document is in open status
 description: Provides a solution to an issue where a fully applied document is still in open status in Payables Management.
 ms.reviewer: cwaswick
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # A fully applied document is still in open status in Payables Management
 

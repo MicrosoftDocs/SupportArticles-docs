@@ -3,7 +3,7 @@ title: Error when you print the Historical Aged Trial Balance report in Microsof
 description: Describes an error message that occurs when you try to print the Historical Aged Trial Balance report in Microsoft Dynamics GP.
 ms.reviewer:
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # "Unable to close table; DBMS: 208, dynamics: 0" error when you try to print the Historical Aged Trial Balance report in Microsoft Dynamics GP
 

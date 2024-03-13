@@ -3,7 +3,7 @@ title: Open layer exists in purchase receipts table where valuation method not s
 description: You may receive an error message that states open layer exists in purchase receipts table where valuation method not stamped when you run the HITB reset tool in Microsoft Dynamics GP.
 ms.reviewer: ppeterso, Beckyber
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # "Open layer exists in purchase receipts table where valuation method not stamped" error when you run HITB reset tool
 

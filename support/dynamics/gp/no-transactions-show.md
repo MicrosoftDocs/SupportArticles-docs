@@ -3,7 +3,7 @@ title: No transactions show
 description: Describes a problem where the Select Bank Transactions window shows no transactions when you try to reconcile your checkbook in Bank Reconciliation.
 ms.reviewer: cwaswick
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # No transactions show when you open the Select Bank Transaction window in Microsoft Dynamics GP
 

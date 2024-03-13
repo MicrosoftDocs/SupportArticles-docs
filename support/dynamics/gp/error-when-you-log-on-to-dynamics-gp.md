@@ -3,7 +3,7 @@ title: Error when you log on to Dynamics GP
 description: Describes a problem that occurs when you try to log on to Microsoft Dynamics GP. A resolution is provided.
 ms.topic: troubleshooting
 ms.reviewer: Kyouells
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # Error message when you try to log on to Microsoft Dynamics GP: "FP:Bad component offset.Form:80 Wind:1 Fld:14"
 

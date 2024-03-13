@@ -3,7 +3,7 @@ title: Unknown Dictionary Error
 description: Provides a solution to an error that occurs when starting Microsoft Dynamics GP or Microsoft Business Solutions - Great Plains.
 ms.reviewer: kyouells
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # "Unknown Dictionary Error" Error message displays when you start Microsoft Dynamics GP
 

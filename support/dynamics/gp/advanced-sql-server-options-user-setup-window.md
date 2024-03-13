@@ -2,7 +2,7 @@
 title: Advanced SQL Server options in the User Setup window
 description: This article describes the frequently asked questions about the advanced SQL Server options that are used to integrate the Active Directory domain password policies with Microsoft Dynamics GP.
 ms.reviewer: kyouells
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # Frequently asked questions about the advanced SQL Server options in the User Setup window in Microsoft Dynamics GP
 

@@ -2,7 +2,7 @@
 title: Information about the Change Decimal Places window
 description: Introduces the Change Decimal Places window in Microsoft Dynamics GP.
 ms.reviewer: lmuelle
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # Information about the Change Decimal Places window in Microsoft Dynamics GP
 

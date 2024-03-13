@@ -3,7 +3,7 @@ title: Convert a negative No. to a positive No.
 description: Discusses how to add a script to an integration to convert negative numbers to positive numbers in Integration Manager for Microsoft Dynamics GP or for Microsoft Business Solutions - Great Plains.
 ms.reviewer:
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # VBScript to convert a negative number to a positive number by using Integration Manager for Microsoft Dynamics GP
 

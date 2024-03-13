@@ -3,7 +3,7 @@ title: A problem with this Chequebook's balances
 description: Provides a solution to an error that occurs when opening the Bank Statement Reconcile window.
 ms.reviewer: cwaswick, jegrant 
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # Cashbook Management Reconciliation Error: "There is a problem with this Chequebook's balances"
 

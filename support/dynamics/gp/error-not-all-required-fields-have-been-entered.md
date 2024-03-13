@@ -3,7 +3,7 @@ title: Payables Transaction Integration Manager error Not all required fields ha
 description: Describe the Payables Transaction Integration Manager error - Not all required fields have been entered. Required fields appear in bold type.
 ms.reviewer:
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # Payables Transaction Integration Manager error: Not all required fields have been entered. Required fields appear in bold type
 

@@ -3,7 +3,7 @@ title: The variance or counted quantity for this serial number does not equal th
 description: When you do a stock count on a serialized item in Microsoft Dynamics GP, you receive an error that states the variance or counted quantity for this serial number does not equal the variance or counted quantity for this item. Provides a resolution.
 ms.reviewer: lmuelle
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # "The variance or counted quantity for this serial number does not equal the variance or counted quantity for this item" error when doing a stock count on a serialized item
 

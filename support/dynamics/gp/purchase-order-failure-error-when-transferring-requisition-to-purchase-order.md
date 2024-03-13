@@ -3,7 +3,7 @@ title: The Purchasing purchase option for an item does not exist error when tran
 description: Describes a problem where you receive an error that the purchase option for an item does not exist in Requisition Management when you transfer a requisition to a purchase order in Microsoft Dynamics GP. Provides a resolution.
 ms.reviewer: ppeterso
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # "The Purchasing purchase option for an item does not exist" error when you transfer a requisition to a purchase order
 

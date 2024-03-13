@@ -3,7 +3,7 @@ title: Steps to modify BAI file format in Electronic Reconcile
 description: This article explains how to set up and modify the BAI file format in Electronic Reconcile in Microsoft Dynamics GP 2013 to use the standard Version 2 BAI file format.
 ms.reviewer: cwaswick
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # Steps to modify the BAI file format in Electronic Reconcile in Microsoft Dynamics GP
 

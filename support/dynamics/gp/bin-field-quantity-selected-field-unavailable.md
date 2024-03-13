@@ -2,7 +2,7 @@
 title: The Bin field and Quantity Selected field are unavailable in the Bin Quantity Entry window
 description: Describes an issue that occurs if the MOP_Bin_Issue table (MOP1027) contains an invalid-quantity unposted entry. Provides a resolution.
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # The "Bin" field and the "Quantity Selected" field are unavailable in the "Bin Quantity Entry" window when you enter a "Reverse Issue" transaction in Manufacturing in Microsoft Dynamics GP or Microsoft Great Plains
 

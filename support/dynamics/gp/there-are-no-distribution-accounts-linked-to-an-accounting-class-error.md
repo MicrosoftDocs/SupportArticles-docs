@@ -3,7 +3,7 @@ title: There are no distribution accounts linked to an Accounting Class error in
 description: When you post a transaction in Microsoft Dynamics GP, you receive an error message that states there are no distribution accounts linked to an Accounting Class.
 ms.reviewer: cwaswick, lmuelle
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # "There are no distribution accounts linked to an Accounting Class" error in Analytical Accounting for Microsoft Dynamics GP
 

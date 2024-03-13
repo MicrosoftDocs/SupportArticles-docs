@@ -3,7 +3,7 @@ title: Modify FA Period Projection-Detail report
 description: How to modify the Fixed Assets Period Projection - Detail report to prevent pre-projection amounts from being displayed in Microsoft Dynamics GP.
 ms.reviewer: ryanklev, cwaswick, nikkij
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # How to modify the Fixed Assets Period Projection - Detail report to prevent pre-projection amounts from being displayed in Microsoft Dynamics GP
 

@@ -3,7 +3,7 @@ title: Third-party customization is triggered even if cannot sign in
 description: Describes a problem in which a third-party customization is still triggered although a user is unable to sign in to the company in Microsoft Dynamics GP. A resolution is provided.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # A third-party customization is still triggered even if a user cannot sign in to the company in Microsoft Dynamics GP
 

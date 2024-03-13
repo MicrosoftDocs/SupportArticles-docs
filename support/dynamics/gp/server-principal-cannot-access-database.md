@@ -3,7 +3,7 @@ title: Server principal cannot access database
 description: Provides a solution to an error that occurs when using Audit Trails in Microsoft Dynamics GP.
 ms.reviewer: cwaswick, lmuelle
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # "The server principal 'xxx' is not able to access the database 'XXXXX' under the current security context." Error message when using Audit Trails in Microsoft Dynamics GP
 

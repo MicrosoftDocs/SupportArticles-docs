@@ -3,7 +3,7 @@ title: Error when you select a purchase order in the Purchasing Invoice Entry wi
 description: Provides a solution to an error that occurs if you try to select a purchase order in the Purchasing Invoice Entry window in Microsoft Dynamics GP.
 ms.reviewer:
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # Error if you try to select a purchase order in the Purchasing Invoice Entry window in Microsoft Dynamics GP: "You cannot receive against unauthorized purchase orders"
 

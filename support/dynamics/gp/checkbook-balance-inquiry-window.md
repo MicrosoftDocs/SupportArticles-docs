@@ -3,7 +3,7 @@ title: Checkbook Balance Inquiry window in Microsoft Dynamics GP
 description: Provides more information about the Checkbook Balance Inquiry window in Microsoft Dynamics GP.
 ms.reviewer: cwaswick
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # Checkbook Balance Inquiry window in Microsoft Dynamics GP
 

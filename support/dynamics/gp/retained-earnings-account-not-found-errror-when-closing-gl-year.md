@@ -3,7 +3,7 @@ title: Retained earnings account not found error
 description: You may receive the Retained earnings account not found error when closing the GL year in Microsoft Dynamics GP. Provides a resolution.
 ms.reviewer: cwaswick
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # "Retained earnings account not found" error when closing the GL year in Microsoft Dynamics GP
 

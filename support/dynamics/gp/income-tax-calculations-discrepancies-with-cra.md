@@ -3,7 +3,7 @@ title: Income Tax calculations or discrepancies with the CRA in Canadian Payroll
 description: This article provides information on how income taxes are calculated in Canadian Payroll for Microsoft Dynamics GP, and why the tax calculations in GP may be different than other tax calculators from the Canada Revenue Agency (CRA).
 ms.topic: troubleshooting
 ms.reviewer: cwaswick
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # Income Tax calculations or discrepancies with the CRA in Canadian Payroll for Microsoft Dynamics GP
 

@@ -3,7 +3,7 @@ title: The ADP import process in Payroll Connect
 description: Describes the Payroll Connect installation process and provides information about specific fields that are required for Microsoft Dynamics GP.
 ms.reviewer: cwaswick
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # The ADP import process in Payroll Connect and the specific fields that are required for Microsoft Dynamics GP
 

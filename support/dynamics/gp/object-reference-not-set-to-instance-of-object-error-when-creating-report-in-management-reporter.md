@@ -3,7 +3,7 @@ title: Object reference not set to an instance of an object error when creating 
 description: Describes an error you may receive when you generate a report in Microsoft Management Reporter 2012. Provides resolutions.
 ms.reviewer: gbyer
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # "Object reference not set to an instance of an object" error when you generate a report in Microsoft Management Reporter 2012
 

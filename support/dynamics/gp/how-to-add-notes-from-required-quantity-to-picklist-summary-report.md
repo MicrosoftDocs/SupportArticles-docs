@@ -3,7 +3,7 @@ title: How to add notes from Required Quantity to Picklist Summary Report
 description: Describes how to create a relationship between the Picklist file (MOP_Item_Master) and the MFG_Notes table.
 ms.reviewer: aeckman, lmuelle
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # How to add notes from the Required Quantity field in the Picklist window to the "Picklist Summary Report" form in Manufacturing
 

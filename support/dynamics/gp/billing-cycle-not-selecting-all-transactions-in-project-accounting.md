@@ -3,7 +3,7 @@ title: Billing cycle not selecting all transactions
 description: When running the billing cycle in Project Accounting, some of the transactions were not selected to be billed. Provides a resolution.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 04/22/2021
+ms.date: 03/13/2024
 ---
 # Billing cycle not selecting all transactions in Project Accounting
 

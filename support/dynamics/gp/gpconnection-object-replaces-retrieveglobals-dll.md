@@ -2,7 +2,7 @@
 title: Information about the new connection object in Integration Manager for Microsoft Dynamics GP 10.0
 description: Discusses the new connection object that's available in Integration Manager for Microsoft Dynamics GP 10.0. This connection object replaces the RetrieveGlobals DLL.
 ms.reviewer: kvogel
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # Information about the new connection object in Integration Manager for Microsoft Dynamics GP 10.0
 

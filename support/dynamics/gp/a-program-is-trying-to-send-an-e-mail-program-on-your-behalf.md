@@ -3,7 +3,7 @@ title: A program is trying to send an e-mail program on your behalf message
 description: When you send a Word Template document via E-mail in Microsoft Dynamics GP, you may receive a message that states a program is trying to send an e-mail message on your behalf.
 ms.reviewer: cwaswick
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # "A program is trying to send an e-mail program on your behalf" message when you send a Word Template document via E-mail
 
