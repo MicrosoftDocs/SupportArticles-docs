@@ -3,6 +3,7 @@ title: Use Dexterity code to program the new Actions button on the SOP_Entry for
 description: This article provides Microsoft Dynamics GP 10.0 Dexterity code examples that you can use to  manage the new Actions button.
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.reviewer: theley
 ---
 # How to use Dexterity code to program the new Actions button on the SOP_Entry form in Dexterity in Microsoft Dynamics GP
 

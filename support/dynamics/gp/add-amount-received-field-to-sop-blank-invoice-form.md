@@ -3,6 +3,7 @@ title: Add Amount Received field to SOP Blank Invoice Form and SOP Blank Order F
 description: How to add the Amount Received field to the SOP Blank Invoice Form and the SOP Blank Order Form in Microsoft Dynamics GP or Microsoft Business Solutions - Great Plains.
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.reviewer: theley
 ---
 # How to add the Amount Received field to the SOP Blank Invoice Form and the SOP Blank Order Form in Microsoft Dynamics GP or Microsoft Business Solutions - Great Plains
 
