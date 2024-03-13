@@ -81,4 +81,4 @@ Set-MsolDirSyncEnabled -EnableDirSync $true
 
 It's important to plan carefully when you re-enable directory synchronization. If you used the cloud service portal or Windows PowerShell to make any changes directly to the objects that were originally synchronized from on-premises AD DS, the changes will be overwritten by on-premises attributes and settings the first time that synchronization occurs after directory synchronization is re-enabled.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

@@ -36,4 +36,4 @@ Take one of the following actions:
 - Have a global admin remove the user from the recycle bin.
 - Wait 30 days. Deleted users will remain in the recycle bin for 30 days. After 30 days, they are automatically removed from the recycle bin.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

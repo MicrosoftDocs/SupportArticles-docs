@@ -54,4 +54,4 @@ Use the command `Set-MsolDomainFederationSettings` to modify the IssuerURI of th
 
    The necessary IssuerURI value is listed by Microsoft Entra ID in the authentication failure message.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

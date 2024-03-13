@@ -153,4 +153,4 @@ Have the user follow these steps to refresh the PRT and verify that they now hav
    NT AUTHORITY\Cloud Account Authentication Well-known group S-1-5-64-36                                         Mandatory group, Enabled by default, Enabled group
    ```
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

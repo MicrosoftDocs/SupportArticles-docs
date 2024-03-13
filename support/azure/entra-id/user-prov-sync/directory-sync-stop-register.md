@@ -13,7 +13,7 @@ This article describes a performance problem in Azure Active Directory Sync Tool
 _Original product version:_ &nbsp; Microsoft Entra ID, Microsoft Intune, Azure Backup, Office 365 Identity Management  
 _Original KB number:_ &nbsp; 2882421
 
-[!INCLUDE [Feedback](../../includes/feedback.md)]
+[!INCLUDE [Feedback](../../../includes/feedback.md)]
 
 ## Symptoms
 
@@ -103,4 +103,4 @@ This issue may occur if one or more of the following conditions are true:
 
     3. Start the service or services for which you set the new password.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

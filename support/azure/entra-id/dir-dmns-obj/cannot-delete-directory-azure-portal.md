@@ -119,4 +119,4 @@ Contact Microsoft Partner Support at [Microsoft Partner Site](https://partner.mi
 
 To fix this issue, follow the steps in ["Cannot delete" error when you try to delete a B2C directory in Microsoft Entra ID](https://support.microsoft.com/help/3112170).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

@@ -60,4 +60,4 @@ If the computer is already joined to an AD DS domain, make sure that the compute
 8. If the issue isn't resolved, restart the computer that has Directory Sync Tool installed.
 9. If the issue still isn't resolved, make sure that the computer that has the Directory Sync Tool is installed can communicate with the computer that's running AD DS.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

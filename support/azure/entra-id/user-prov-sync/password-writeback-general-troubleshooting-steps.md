@@ -84,4 +84,4 @@ Recheck the name of the current account for the Active Directory Domain Connecto
 
 To review the lists of supported and unsupported password writeback operations, see [How does self-service password reset writeback work in Microsoft Entra ID?](/azure/active-directory/authentication/concept-sspr-writeback).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

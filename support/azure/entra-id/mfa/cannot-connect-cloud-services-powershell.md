@@ -36,4 +36,4 @@ To resolve this issue, refer one of the following articles, as appropriate for y
 
 For more information about Azure Active Directory module for Windows PowerShell, see [Manage Microsoft Entra ID using Windows PowerShell](/previous-versions/azure/jj151815(v=azure.100)).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

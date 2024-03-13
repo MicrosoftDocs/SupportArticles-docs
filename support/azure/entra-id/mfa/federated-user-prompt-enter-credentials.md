@@ -105,4 +105,4 @@ Accessing Office 365 resources by using a non-federated account or a federated a
 
 The experience for logging on to Microsoft Outlook connections is also not expected to be a single sign-on experience.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

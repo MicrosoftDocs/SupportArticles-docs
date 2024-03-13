@@ -44,4 +44,4 @@ To resolve this issue for only those users who aren't synced to Microsoft Entra 
 
 The yellow exclamation mark isn't displayed in Office 2016 applications.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

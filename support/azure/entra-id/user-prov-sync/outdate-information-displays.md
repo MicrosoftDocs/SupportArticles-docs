@@ -92,4 +92,4 @@ To reinstall Health Agent for Sync:
    5. When you are prompted for credentials, provide your Microsoft Entra Global Admin credentials.
    6. Wait about two hours, and then verify that the Health panel is showing up-to-date information about Sync.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

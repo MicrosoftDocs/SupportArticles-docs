@@ -85,4 +85,4 @@ To work around this issue, follow these steps:
 
     :::image type="content" source="media/cannot-work-automatic-upgrade/optional-features.png" alt-text="Screenshot shows the Password synchronization and Password writeback options are enabled in Optional features page." border="false":::
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

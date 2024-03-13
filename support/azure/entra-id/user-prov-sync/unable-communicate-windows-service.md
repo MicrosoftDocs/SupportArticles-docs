@@ -66,4 +66,4 @@ To fix this issue, follow these steps:
 
 For more information, see [Error on .NET client that consumes a web service through an HTTP proxy server](https://support.microsoft.com/help/318140).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

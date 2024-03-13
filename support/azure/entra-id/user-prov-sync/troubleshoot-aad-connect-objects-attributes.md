@@ -580,4 +580,4 @@ Fortunately, the issues that affect these components usually generate an error i
 - [Troubleshoot an object that is not synchronizing with Microsoft Entra ID](/azure/active-directory/hybrid/tshoot-connect-object-not-syncing)
 - [Microsoft Entra Connect Single Object Sync](/azure/active-directory/hybrid/how-to-connect-single-object-sync)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

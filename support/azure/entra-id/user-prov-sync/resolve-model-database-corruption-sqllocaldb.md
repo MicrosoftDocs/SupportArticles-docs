@@ -103,4 +103,4 @@ Microsoft has introduced a fix for this issue in Microsoft Entra Connect version
 
 To prevent the corruption issues in the SQLLocalDB `Model` database, install the latest Microsoft Entra Connect build, which is available at [Microsoft Entra Connect: Version release history](/azure/active-directory/hybrid/reference-connect-version-history).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

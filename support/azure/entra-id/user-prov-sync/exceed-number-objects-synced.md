@@ -77,4 +77,4 @@ In this scenario, the online company that's performing the evaluation of the clo
 
 **Answer 3**: No. You're granted a directory quota of 300,000 objects if you have one or more verified domains. You're not granted a quota of 300,000 objects for _each_ verified domain that you register.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

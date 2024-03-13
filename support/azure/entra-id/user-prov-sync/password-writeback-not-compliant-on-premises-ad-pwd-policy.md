@@ -155,4 +155,4 @@ The command completed successfully.
 
 Is the entered password compliant with the local Active Directory password policy, but the issue persists? If so, check whether you're using [Microsoft Entra Password Protection](/azure/active-directory/authentication/concept-password-ban-bad-on-premises) in your on-premises AD DS environment, or if you have any third-party password filter software installed on your domain controllers.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

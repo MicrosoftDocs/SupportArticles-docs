@@ -58,4 +58,4 @@ To fix this issue, follow these steps:
      Remove-MsolUser -UserPrincipalName John.Smith@Contoso.com
      ```
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

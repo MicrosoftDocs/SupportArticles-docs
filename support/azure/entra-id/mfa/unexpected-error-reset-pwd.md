@@ -30,4 +30,4 @@ To resolve this problem, work with your administrator to update your telephone n
 > [!NOTE]
 > If available, try to use another method such as using your mobile phone, office telephone, or mobile app.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

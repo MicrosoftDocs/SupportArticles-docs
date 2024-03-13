@@ -189,4 +189,4 @@ For the Free edition of Microsoft Entra ID, you can create a maximum of 50,000 M
 
 For more information, see [Microsoft Entra service limits and restrictions](/azure/active-directory/enterprise-users/directory-service-limits-restrictions).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

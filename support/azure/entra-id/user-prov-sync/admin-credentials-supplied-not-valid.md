@@ -52,4 +52,4 @@ To check whether an account has enterprise admin permissions, follow these steps
 
 5. Check whether the user is listed in the **Members** list. If the user isn't in the list, one of the members of this list must log on and add the user to this list. Or, a member of this list can use their credentials in the Directory Sync Tool Configuration Wizard.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

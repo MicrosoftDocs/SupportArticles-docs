@@ -111,4 +111,4 @@ Global Administrators can delete a user's authenticator app by using the Microso
 
 1. Repeat steps 2–4 for each of the authenticator apps that you want to delete.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

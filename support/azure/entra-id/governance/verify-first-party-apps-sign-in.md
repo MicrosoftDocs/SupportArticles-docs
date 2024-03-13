@@ -9,7 +9,7 @@ ms.custom: has-azure-ad-ps-ref
 ---
 # Verify first-party Microsoft applications in sign-in reports
 
-[!INCLUDE [Feedback](../../includes/feedback.md)]
+[!INCLUDE [Feedback](../../../includes/feedback.md)]
 
 When you review your sign-in reports, you might see an application in your sign-in report that you don't own and want to identify. You also might wonder how you signed in to that app, if you don't remember accessing the app.
 
@@ -203,4 +203,4 @@ The following table lists some, but not all, Microsoft tenant-owned applications
 
 For more information, see [Sign-in activity reports in the Microsoft Entra admin center](/azure/active-directory/reports-monitoring/concept-sign-ins#sign-ins-report).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

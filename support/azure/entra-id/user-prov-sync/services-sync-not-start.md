@@ -62,4 +62,4 @@ If solutions 1 and 2 don't resolve the issue, remove and then reinstall director
 
 For example, if you use the Azure Active Directory Sync tool, remove and then reinstall it. Or, if you use Azure AD Sync, remove and then reinstall it.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

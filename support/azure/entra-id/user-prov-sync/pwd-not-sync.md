@@ -48,4 +48,4 @@ Before troubleshooting this issue, it's important to know which scenarios allow 
 
 To resolve this issue, see the **Troubleshoot Password Writeback** section of [How to troubleshoot Password Management](/azure/active-directory/authentication/active-directory-passwords-troubleshoot#troubleshoot-password-writeback).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

@@ -60,4 +60,4 @@ To do this, follow these steps:
 
 3. Follow the instructions in the portal.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

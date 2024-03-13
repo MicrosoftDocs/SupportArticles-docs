@@ -110,4 +110,4 @@ For more information about how to implement and verify sync rule changes, see to
 
 If the Password Hash Synchronization feature is enabled on Microsoft Entra Connect, the Password Synchronization Manager synchronizes the on-premises Active Directory **PwdLastSet** attribute with the Microsoft Entra ID **LastPasswordChangeTimestamp** attribute. This is true even if the **PwdLastSet** attribute has been filtered by using the two methods in this section.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

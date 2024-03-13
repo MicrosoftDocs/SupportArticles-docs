@@ -93,4 +93,4 @@ For more troubleshooting information, see the following article in the Microsoft
 
 [Diagnostic logging for troubleshooting Workplace Join issues](https://support.microsoft.com/help/3045377).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

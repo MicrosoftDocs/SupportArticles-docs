@@ -29,4 +29,4 @@ For example:
 
 Programs that need to query groups to give users access that is based on group membership should also query for the **PrimaryGroupID** attribute. However, Microsoft Entra Connect does not support **PrimaryGroupID** because of the complexity of group membership synchronization.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

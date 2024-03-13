@@ -31,4 +31,4 @@ To resolve this problem, do one of the following:
 
 After directory synchronization occurs, users' computer passwords in the on-premises Active Directory environment are synced to Microsoft Entra ID. Users can then log on to their computers and sign in to the cloud service by using the same password.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

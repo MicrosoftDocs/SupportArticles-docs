@@ -31,4 +31,4 @@ Do one of the following:
 - Install Windows Management Framework 3.0 on the Windows Server 2008 R2-based computer. For more information, see [Windows Management Framework 3.0](https://www.microsoft.com/download/details.aspx?id=34595).
 - Run the Directory Sync tool from a Windows Server 2012 R2-based computer. To install the Directory Sync tool, see [Install or upgrade the Directory Sync tool](/azure/active-directory/hybrid/whatis-hybrid-identity).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

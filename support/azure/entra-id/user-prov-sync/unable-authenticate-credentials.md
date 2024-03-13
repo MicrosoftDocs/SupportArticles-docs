@@ -60,4 +60,4 @@ To perform administrative tasks by using the Azure Active Directory module for W
 - Disable Microsoft Entra multifactor authentication for the user account.
 - Use a different admin account that isn't enabled for Microsoft Entra multifactor authentication.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

@@ -36,4 +36,4 @@ To resolve this issue, use one or more of the following methods:
   7. Select the **Domain** option, and then type the domain name in the **Domain** dialog box to add the computer back to the domain.
   8. Restart the computer.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

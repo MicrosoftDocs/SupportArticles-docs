@@ -71,4 +71,4 @@ To resolve this issue, make sure that the following are true:
 
 For more information on Azure Information Protection, visit [AIPService](/powershell/module/aipservice/).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

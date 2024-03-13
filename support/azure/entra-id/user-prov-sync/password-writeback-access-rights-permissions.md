@@ -321,4 +321,4 @@ To make sure that you have the correct domain group policies, follow these steps
 
 For more information, see the [default values for the **Impersonate a client after authentication** policy](/windows/security/threat-protection/security-policy-settings/impersonate-a-client-after-authentication#default-values).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

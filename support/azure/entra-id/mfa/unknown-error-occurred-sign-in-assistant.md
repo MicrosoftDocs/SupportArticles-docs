@@ -30,4 +30,4 @@ To resolve this issue, follow these steps:
    1. Select **Start**, type `services.msc`, and then press **Enter**.
    2. In the list of services, make sure that the entry in the **Status** column for **Microsoft Online Services Sign-In Assistant** is **Started**.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

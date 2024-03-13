@@ -40,4 +40,4 @@ Enable SSPR-A on the tenant by running the [Set-MsolCompanySettings](/powershell
 Set-MsolCompanySettings -SelfServePasswordResetEnabled $true
 ```
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

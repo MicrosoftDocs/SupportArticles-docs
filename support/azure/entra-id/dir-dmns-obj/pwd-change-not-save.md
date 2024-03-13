@@ -23,4 +23,4 @@ This problem occurs when you use special characters such as the less-than sign `
 
 To resolve this problem, do not use special characters as part of your password.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

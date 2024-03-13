@@ -95,6 +95,6 @@ After the delta synchronization finishes successfully, repeat the procedure to r
 
 [LDAP policies](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc770976(v=ws.11))
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
 
 [Start-ADSyncSyncCycle]: /azure/active-directory/hybrid/connect/how-to-connect-sync-feature-scheduler

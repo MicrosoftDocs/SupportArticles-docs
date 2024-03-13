@@ -34,4 +34,4 @@ This issue occurs because Windows unexpectedly evaluates a condition in which a
 
 To resolve this issue, use a workgroup name that does not match the NetBIOS name of the on-premises domain.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

@@ -28,4 +28,4 @@ To make sure that password writeback updates the new password in on-premises Act
 
 For more information, see [How does self-service password reset writeback work in Microsoft Entra ID?](/azure/active-directory/authentication/concept-sspr-writeback).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

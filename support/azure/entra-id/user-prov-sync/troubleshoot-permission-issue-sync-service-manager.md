@@ -275,4 +275,4 @@ The following table lists known issues that cause **permission-issue** errors bu
 | The **AdminCount** attribute for a user is greater than zero, even though the user is no longer a member of a Protected Group. | You see unexpected synchronization results or **permission-issue** errors because the new permissions aren't applied. |
 | There are [SDProp](/windows-server/identity/ad-ds/plan/security-best-practices/appendix-c--protected-accounts-and-groups-in-active-directory#sdprop) issues in Active Directory. | The **permission-issue** error persists after you apply a solution because Active Directory can't propagate the new permissions for all child objects in the domain. |
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

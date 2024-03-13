@@ -46,4 +46,4 @@ To resolve this issue for Active Directory Domain Services (AD DS) and Active 
 
 To resolve this issue for Microsoft Entra Connect, install the [latest version of Microsoft Entra Connect](https://go.microsoft.com/fwlink/?LinkId=615771).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

@@ -36,4 +36,4 @@ Alternatively, you can restart the Forefront Identity Manager Synchronization Se
 2. In the list of services, right-click **Forefront Identity Manager Synchronization Service**, and then click **Stop**.
 3. Right-click **Forefront Identity Manager Synchronization Service**, and then click **Start**.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

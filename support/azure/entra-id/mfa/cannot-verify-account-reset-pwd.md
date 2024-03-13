@@ -25,4 +25,4 @@ When a new user tries to reset password in Microsoft Azure, Microsoft Office 365
 
 Assign a Microsoft Entra ID P1 or P2 license to the user. Users must have a Microsoft Entra ID P1 or P2 license to be able to reset their own password.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

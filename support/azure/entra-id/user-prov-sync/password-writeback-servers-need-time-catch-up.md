@@ -30,4 +30,4 @@ In this scenario, the user tries to sign in before password hash synchronization
 
 After an Active Directory administrator resets the password on-premises, Microsoft Entra Connect takes at least two minutes to sync that temporary password to Microsoft Entra ID. To avoid receiving this warning message, the user has to wait at least two minutes to sign in and update the password. This provides time for password hash synchronization to sync the temporary password.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

@@ -85,4 +85,4 @@ To change the setting, follow these steps:
 
 5. Select **OK**, and then restart the server.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

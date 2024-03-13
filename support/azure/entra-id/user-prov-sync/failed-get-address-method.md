@@ -28,4 +28,4 @@ To resolve this issue, follow these steps:
 1. Uninstall any versions of the Microsoft Online Services Sign-in Assistant that are currently installed on the directory synchronization computer.
 2. Install the latest version of the Microsoft Online Services Sign-In Assistant from [Microsoft Online Services Sign-In Assistant for IT Professionals RTW](https://download.microsoft.com/download/7/1/E/71EF1D05-A42C-4A1F-8162-96494B5E615C/msoidcli_32bit.msi).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

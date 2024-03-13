@@ -54,4 +54,4 @@ To resolve this issue, you must configure Microsoft Entra ID to let AD FS native
     Set-MsolDomainFederationSettings -DomainNameyour_domain_name-PreferredAuthenticationProtocol <current auth setting such as WsFed> -SupportsMfa $True -PromptLoginBehavior NativeSupport
     ```
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

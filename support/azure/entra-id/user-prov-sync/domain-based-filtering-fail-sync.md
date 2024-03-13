@@ -56,4 +56,4 @@ This issue may occur if the run profile isn't updated.
 8. Right-click the same management agent or Connector again, and then select **Run**.
 9. Select **Full Sync**, and then select **OK**.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

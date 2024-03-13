@@ -61,4 +61,4 @@ Therefore, with the `msExchRecipientTypeDetails` set to 2  the object is not fil
 
 In the scenario that you do not have an account-resource forest topology, and a user has `msExchRecipientTypeDetails` value is 2, changing the value to a value that is similar to a usual object will sync the user object.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

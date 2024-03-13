@@ -44,4 +44,4 @@ Make sure that the **Sign and Encrypt LDAP Traffic** setting is enabled in three
 
 1. Select **Start**, enter *services.msc*, and then select the **Services** snap-in. Select **Microsoft Azure AD Sync** from the list of services, and then select the **Restart Service** icon.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

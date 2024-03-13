@@ -31,4 +31,4 @@ To resolve this issue, sign out and then sign in to the computer. If the issue p
 4. Add yourself to the **ADSyncAdmins** group.
 5. Sign out, and then sign in to the computer again.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

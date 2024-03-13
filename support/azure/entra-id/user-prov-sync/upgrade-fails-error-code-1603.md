@@ -47,4 +47,4 @@ To resolve this issue, follow these steps:
 4. Set the account by using Domain\SamAccountName instead of using the UPN.
 5. Select **Apply** and **OK**.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

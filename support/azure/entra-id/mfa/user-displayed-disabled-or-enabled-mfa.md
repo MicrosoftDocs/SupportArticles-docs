@@ -42,4 +42,4 @@ Guest users are users from one directory who are added to another directory. For
 > [!NOTE]
 > To quickly check whether a user is a guest user, notice whether the check box next to the user on the Manage Multi-Factor Auth screen is dimmed. A dimmed check box indicates that the user is a guest user.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

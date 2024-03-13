@@ -225,4 +225,4 @@ _Original KB number:_ &nbsp; 4032987
 - [Get started with certificate based authentication on iOS - Public Preview](/azure/active-directory/authentication/active-directory-certificate-based-authentication-ios)
 - [ADFS: Certificate Authentication with Microsoft Entra ID & Office 365](/archive/blogs/samueld/adfs-certauth-aad-o365)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

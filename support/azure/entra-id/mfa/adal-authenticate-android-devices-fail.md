@@ -59,4 +59,4 @@ To resolve this issue, configure your STS and Web Application Proxy (WAP) server
 > [!NOTE]
 > The certificate store of Network Load Balancers should also be updated to include the entire certificate chain.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

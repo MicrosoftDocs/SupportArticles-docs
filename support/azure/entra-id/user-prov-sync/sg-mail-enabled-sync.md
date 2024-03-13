@@ -42,4 +42,4 @@ To work around this issue, use one of the following methods:
 
 - Move the security group to another organizational unit (OU) that has not been synchronized (filtered out). When you do this, the group is removed from the cloud. Then, move the group back to the original OU.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

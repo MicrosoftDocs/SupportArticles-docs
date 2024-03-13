@@ -73,4 +73,4 @@ Without this configuration, all AD FS clients will be serviced by the same IP ad
 
 To overcome this limitation, it's desirable to override the default name resolution that is given to on-premises clients by creating an identically named domain in on-premises DNS. Because the DNS distributed architecture returns the first response that is found to a forward lookup query, this effectively masks the public DNS domain advertisements for that domain for all on-premises client computer requests because their requests are handled by on-premises DNS servers first.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

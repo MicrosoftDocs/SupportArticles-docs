@@ -25,4 +25,4 @@ Ask another cloud services admin to reset your Multi-Factor Authentication setti
 4. Select **Manage user settings**.
 5. Select the **Require selected users to provide contact methods again** check box, and then select **Save**.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

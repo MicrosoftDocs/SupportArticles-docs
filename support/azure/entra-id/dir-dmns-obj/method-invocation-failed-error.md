@@ -34,4 +34,4 @@ To resolve this problem, do either of the following:
 - Install the latest version of Azure PowerShell. To upgrade the program, see [How to install and configure Azure PowerShell](/powershell/azure).
 - Make sure that you are using the correct method name.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

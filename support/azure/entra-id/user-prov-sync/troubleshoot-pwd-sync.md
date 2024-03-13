@@ -13,7 +13,7 @@ This article helps you troubleshoot common issues that you may encounter when yo
 _Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Microsoft Entra ID, Microsoft Intune, Azure Backup, Office 365 Identity Management  
 _Original KB number:_ &nbsp; 2855271
 
-[!INCLUDE [Feedback](../../includes/feedback.md)]
+[!INCLUDE [Feedback](../../../includes/feedback.md)]
 
 ## Before you start troubleshooting
 
@@ -161,4 +161,4 @@ To do a full password sync, follow these steps, as appropriate for the Azure AD 
 
 2. If you're using the Azure AD Sync Service or Microsoft Entra Connect, run the script that's on this page: [Azure AD Sync: How to Use PowerShell to Trigger a Full Password Sync](/archive/technet-wiki/28433.azure-ad-sync-how-to-use-powershell-to-trigger-a-full-password-sync)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

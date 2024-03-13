@@ -82,4 +82,4 @@ If these conditions are true, reset the authentication setting for the domain an
 
 If this problem occurs, contact Microsoft Support to have the domain federation reversed temporarily so that the administrator (who is no longer SSO-enabled) can regain access to troubleshoot SSO-related problems.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

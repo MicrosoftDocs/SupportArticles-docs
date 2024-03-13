@@ -67,4 +67,4 @@ To resolve this problem, make sure that all domain controllers are running in a 
 
 4. Investigate and resolve the problem. Most likely, the domain controller that's hosting the domain is not running or is not in the network.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

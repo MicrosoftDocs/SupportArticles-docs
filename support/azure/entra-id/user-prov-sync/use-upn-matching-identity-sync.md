@@ -71,4 +71,4 @@ To start the UPN matching process, follow these steps:
 
 For more information about UPN soft match, see [Microsoft Entra Connect Sync service features](/azure/active-directory/hybrid/how-to-connect-syncservice-features#userprincipalname-soft-match).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

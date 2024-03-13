@@ -34,4 +34,4 @@ To resolve this problem, follow these steps:
 3. Delete the `supportedencryptiontypes` DWORD entry if it exists.
 4. Restart the device.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

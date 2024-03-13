@@ -14,7 +14,7 @@ This article describes how the proxyAddresses attribute is populated in Microsof
 _Original product version:_ &nbsp; Microsoft Entra ID  
 _Original KB number:_ &nbsp; 3190357
 
-[!INCLUDE [Feedback](../../includes/feedback.md)]
+[!INCLUDE [Feedback](../../../includes/feedback.md)]
 
 The proxyAddresses attribute in Active Directory is a multi-value property that can contain various known address entries. For example, it can contain SMTP addresses, X500 addresses, and SIP addresses. When an object is synchronized to Microsoft Entra ID, the values that are specified in the mail or proxyAddresses attribute in Active Directory are copied to a shadow mail or proxyAddresses attribute in Microsoft Entra ID. Then, they are used to calculate the final proxyAddresses of the object in Microsoft Entra according to internal Microsoft Entra ID rules. The logic that populates mail, mailNickName, and proxyAddresses attributes in Microsoft Entra ID is called proxy calculation. It takes into account many different aspects of the on-premises Active Directory data, such as:
 
@@ -332,5 +332,5 @@ AAD:proxyAddresses    : {smtp:user6mnn5236@Contoso.onmicrosoft.com; SMTP:user6b@
 AAD:userPrincipalName : user6b@Contoso.com
 ```
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
 

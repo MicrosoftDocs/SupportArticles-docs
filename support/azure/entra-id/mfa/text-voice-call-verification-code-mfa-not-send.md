@@ -38,4 +38,4 @@ If you have a Microsoft Entra multifactor authentication or Microsoft Entra ID P
 
 If you have Office 365 and don't have a Microsoft Entra multifactor authentication or Microsoft Entra ID P1 or P2 subscription, contact Office 365 Support.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
