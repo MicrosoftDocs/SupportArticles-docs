@@ -1,12 +1,12 @@
 ---
 title: Guidance for troubleshooting SMB
 description: Introduces general guidance for troubleshooting scenarios that are related to SMB.
-ms.date: 03/12/2024
+ms.date: 03/13/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
-ms.reviewer: kaushika
+ms.reviewer: kaushika, v-tappelgate
 ms.custom: sap:smb, csstroubleshoot
 ---
 # SMB troubleshooting guidance
@@ -132,15 +132,16 @@ Before you contact Microsoft Support, you can gather information about your issu
 
 ### Prerequisites
 
-1. Run TSS in the security context of an account that has administrator privileges on the local system. The first time that you run it, accept the EULA. (After you accept the EULA, TSS won't prompt you again.)
-2. We recommend that you use the local machine `RemoteSigned` PowerShell execution policy.
+- Run TSS in the security context of an account that has administrator privileges on the local system. The first time that you run it, accept the EULA. (After you accept the EULA, TSS won't prompt you again.)
+- We recommend that you use the `RemoteSigned` PowerShell execution policy, at the `LocalMachine` scope.
 
-> [!NOTE]
+> [!NOTE]  
 > If the current PowerShell execution policy doesn't allow you to run TSS, take the following actions:
 >
-> - Set the `RemoteSigned` execution policy for the process level by running the `PS C:\> Set-ExecutionPolicy -scope Process -ExecutionPolicy RemoteSigned` cmdlet.
-> - To verify that the change takes effect, run the `PS C:\> Get-ExecutionPolicy -List` cmdlet.
-> - Because the process level permissions apply to only the current PowerShell session, after the given PowerShell window in which TSS runs is closed, the assigned permission for the process level will also revert to the previously configured state.
+> 1. Set the `RemoteSigned` execution policy for the process level by running the `Set-ExecutionPolicy -scope Process -ExecutionPolicy RemoteSigned` cmdlet.
+> 2. To verify that the change takes effect, run the `Get-ExecutionPolicy -List` cmdlet.  
+>
+> These process-level permissions apply to only the current PowerShell session. After you close the PowerShell window in which TSS runs, the assigned permission for the process level revert to the previously-configured state.
 
 ### Gather key information before contacting Microsoft support
 
@@ -162,14 +163,15 @@ Before you contact Microsoft Support, you can gather information about your issu
 
 4. Accept the EULA if the traces are run for the first time on the server or the client.
 5. Allow recording (PSR or video).
-6. Reproduce the issue.
 
    > [!NOTE]  
    > If you collect logs on both the client and the server, wait for this message to appear on both nodes before you reproduce the issue.
 
+6. Reproduce the issue.
+
 7. After you reproduce the issue, enter *Y* to finish logging data.
 
-TSS stores the traces in a .zip file in the *C:\\MS_DATA* folder. You can upload the file to the workspace for analysis.
+TSS stores the traces in a compressed file in the *C:\\MS_DATA* folder. You can upload the file to the workspace for analysis.
 
 ## References
 

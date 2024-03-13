@@ -154,18 +154,19 @@ Before you contact Microsoft Support, you can gather information about your issu
 - Run TSS in the security context of an account that has administrator privileges on the local system. The first time that you run TSS, accept the EULA. (After you accept the EULA, TSS won't prompt you again.)
 - We recommend that you use the `RemoteSigned` PowerShell execution policy, at the `LocalMachine` scope.
 
-  > [!NOTE]
-  > If the current PowerShell execution policy doesn't allow running TSS, take the following actions:
-  >
-  > - Set the `RemoteSigned` execution policy for the process level by running the cmdlet, `PS C:\> Set-ExecutionPolicy -scope Process -ExecutionPolicy RemoteSigned`.
-  > - To verify that the change takes effect, run the cmdlet, `PS C:\> Get-ExecutionPolicy -List`.
-  > - Because the process level permissions apply to only the current PowerShell session, after the given PowerShell window in which TSS runs is closed, the assigned permission for the process level also reverts to the previously configured state.
+> [!NOTE]  
+> If the current PowerShell execution policy doesn't allow running TSS, take the following actions:
+>
+> 1. Set the `RemoteSigned` execution policy for the process level by running the cmdlet, `Set-ExecutionPolicy -scope Process -ExecutionPolicy RemoteSigned`.
+> 2. To verify that the change takes effect, run the `Get-ExecutionPolicy -List` cmdlet.  
+>
+> These process-level permissions apply to only the current PowerShell session. After you close the PowerShell window in which TSS runs, the assigned permission for the process level reverts to the previously-configured state.
 
 ### Gather key information before contacting Microsoft support
 
 1. Download [TSS](https://aka.ms/getTSS) on all nodes, and expand the file into the *C:\\tss* folder.
-2. Open the *C:\\tss* folder at an elevated PowerShell command prompt.
-3. Start the traces on the client and server by using the following cmdlets:
+2. Open the *C:\\tss* folder at an elevated PowerShell Command Prompt window.
+3. Start the traces on the client and server by running the following cmdlets:
 
    - Client:  
 
@@ -181,14 +182,15 @@ Before you contact Microsoft Support, you can gather information about your issu
 
 4. Accept the EULA if the traces are run for the first time on the server or the client.
 5. Allow recording (PSR or video).
-6. Reproduce the issue before you enter *Y*.
 
    > [!NOTE]
    > If you collect logs on both the client and the server, wait for this message to appear on both nodes before you reproduce the issue.
 
-7. Enter *Y* to finish the log collection after the issue is reproduced.
+6. Reproduce the issue.
 
-The traces are stored in a compressed file in the *C:\\MS_DATA* folder. You can upload this file to the workspace for analysis.
+7. After you reproduce the issue, enter *Y* to finish logging data.
+
+TSS stores the traces in a compressed file in the *C:\\MS_DATA* folder. You can upload the file to the workspace for analysis.
 
 ## References
 
