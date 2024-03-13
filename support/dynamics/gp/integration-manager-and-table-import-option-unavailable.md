@@ -3,6 +3,7 @@ title: Integration Manager option and Table Import option are unavailable in Mic
 description: Provides solutions to an issue where the Integration Manager option and the Table Import option are not available in Microsoft Dynamics GP.
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.reviewer: theley
 ---
 # The Integration Manager option and the Table Import option are not available in Microsoft Dynamics GP
 
