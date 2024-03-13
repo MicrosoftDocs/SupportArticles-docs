@@ -1,7 +1,7 @@
 ---
-title: Troubleshooting intermittent connection errors using SQLCMD
-description: This article provides a resolution for intermittent connection errors that affect SQLCMD.
-ms.date: 03/08/2024
+title: Intermittent connection errors using SQLCMD
+description: This article provides a resolution for resolving intermittent connection errors that are generated when you use the SQLCMD tool.
+ms.date: 03/13/2024
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
@@ -38,7 +38,7 @@ Review the following scenarios to determine whether any match your issue:
 
   > The connection failed with SQL State: '08001' SQL Server Error: 10054 [Microsoft][SQL Server Native Client 10.0]TCP Provider: An existing connection was forcibly closed by remote host. [Microsoft][SQL Server Native Client 10.0] Client unable to establish connection.
 
-This message might be displayed because the application server uses the older version of Diffie-Hellman algorithm (v1) and SQL Server uses the newer version (v2). This mismatch causes intermittent TLS failures.
+  This message might be displayed because the application server uses the older version of Diffie-Hellman algorithm (v1) and SQL Server uses the newer version (v2). This mismatch causes intermittent TLS failures.
 
 ## Resolution
 
