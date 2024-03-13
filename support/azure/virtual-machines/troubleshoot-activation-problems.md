@@ -32,7 +32,7 @@ Azure uses different endpoints for Key Management Services (KMS) activation depe
 | Azure US Gov national cloud regions | `kms.core.usgovcloudapi.net:1688` |
 
 > [!NOTE]
-> `kms.core.windows.net` for Azure public cloud regions was updated to `azkms.core.windows.net` in July of 2022. For more information, see [KMS endpoints - new endpoints](windows-activation-stopped-working.md).
+> `kms.core.windows.net` for Azure public cloud regions was updated to `azkms.core.windows.net` in July 2022. For more information, see [KMS endpoints - new endpoints](windows-activation-stopped-working.md).
 
 ## Troubleshoot Windows activation issues
 
@@ -40,20 +40,19 @@ To troubleshoot a Windows activation issue, follow these steps:
 
 1. Get the error message and the error code:
 
-    1. Open a command prompt as an administrator
-    2. Type `slmgr.vbs /ato` and press Enter.
+    1. Open a command prompt as an administrator, type `slmgr.vbs /ato`, and then press <kbd>Enter</kbd>.
         
         This command will try to activate Windows using the current product key and display the result.
 
-    3. If the activation fails, you will receive an error message and an error code. For example,
+    3. If the activation fails, you'll receive an error message and error code. For example,
 
        > Error: 0xC004F074 The Software Licensing Service reported that the computer could not be activated. No Key Management Service (KMS) could be contacted.
     
-       The error code and message will help identify the possible cause and solution of the activation issue.
+       The error code and message will help identify the possible cause and solution to the activation issue.
 
-2. Search the error message and error code online for possible solutions or check known errors and issues below:
+2. Search the error message and error code online for possible solutions or check the following known errors and issues:
 
-    |Known error codes|error message or issue|
+    |Known error codes|Error messages or issues|
     |---|---|
     |Error 0xC004F074|["No Key Management Service (KMS) could be contacted"](windows-vm-activation-error-0xc004f074.md)|
     |Error 0xC004FD01|["Windows isn't running on a supported Microsoft Hyper-V virtualization platform"](windows-vm-activation-error-0xc004fd01-0xc004fd02.md)|
@@ -67,6 +66,6 @@ To troubleshoot a Windows activation issue, follow these steps:
 
 ## More information
 
-- [Azure Windows virtual machine activation FAQ](./windows-virtual-machine-activation-faq.yml)
+[Azure Windows virtual machine activation FAQ](./windows-virtual-machine-activation-faq.yml)
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
