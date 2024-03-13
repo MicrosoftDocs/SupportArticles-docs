@@ -1,12 +1,12 @@
 ---
 title: Guidance for troubleshooting DNS
 description: Introduces general guidance for troubleshooting scenarios related to DNS.
-ms.date: 3/12/2024
+ms.date: 03/13/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
-ms.reviewer: kaushika
+ms.reviewer: kaushika, v-tappelgate
 ms.custom: sap:dns, csstroubleshoot
 ---
 # DNS troubleshooting guidance
@@ -24,7 +24,7 @@ This solution is designed to help you troubleshoot Domain Name System (DNS) scen
 - DNS server
 - Authoritative data
 - Recursion
-- Zone Transfer
+- Zone transfer
 
 ### Client-side issues
 
@@ -45,23 +45,28 @@ This issue can have any one of the following causes.
 
 #### DNS scavenging is misconfigured
 
-If DNS records go missing from DNS zones, scavenging is the most common cause. Even Windows-based computers that have statically-assigned servers register their records every 24 hours. Check whether the **NoRefresh** and **Refresh** intervals are too low. For example, if these values are both "less than 24 hours," you lose DNS records.
+If DNS records go missing from DNS zones, scavenging is the most common cause. Even Windows-based computers that have statically-assigned servers register their records every 24 hours. Check whether the no-refresh and refresh intervals are too low. For example, if these values are both less than 24 hours, you lose DNS records.
 
-To troubleshoot this issue, see [Using DNS aging and scavenging](/previous-versions/windows/it-pro/windows-server-2003/cc757041%28v=ws.10%29).
+To troubleshoot this issue and to understand no-refresh and refresh intervals, see [Using DNS aging and scavenging](/previous-versions/windows/it-pro/windows-server-2003/cc757041%28v=ws.10%29).
 
 #### Host "A" record is deleted when the IP address is changed
 
 Sometimes, the host "A" record is deleted on the original DNS server after the host "A" record is registered on the newly configured DNS server IP address (Active Directory Integrated DNS). From a user perspective, anything that depends on name resolution is broken. When the DNS server IP address is changed on the client, the client sends a Start of Authority (SOA) update to delete its "A" record from the previous DNS server. Then, it sends another update to register its "A" record to the new DNS server.
 
-The trouble occurs in Active Directory integrated zones. Issues occur when the DNS Server IP address is changed on the client. When the IP address changes, the client sends a registration request to the new server, and sends a deletion request to previous server. Because both servers are already synced, the records aren't registered. However, the "A" record is deleted on the previous server, and then the deletion replicates to the new server. As a result, the record is deleted on both servers.
+The trouble occurs in Active Directory-integrated zones. Issues occur when the DNS Server IP address is changed on the client. When the IP address changes, the client sends a registration request to the new server, and sends a deletion request to the previous server. Because both servers are already synced, the records aren't registered. On the previous server, the DNS service deletes the "A" record is deleted on the previous server, and then the deletion replicates to the new server. As a result, the record is deleted on both servers.
 
-#### DHCP clients that have Option 81 configured unregister host "A" records during host "AAAA" registration
+#### DHCP clients that use DHCP Option 81 unregister host "A" records during host "AAAA" registration
 
-This issue occurs if Option 81 is defined and ISATAP or 6to4 interfaces are present. The DNS Dynamic Update Protocol update incorrectly sets **TTL** to **0**. This triggers record deletion for IPv6 record registration.
+This issue occurs if DHCP client computers use ISATAP or 6to4 network adapters, and both the DNS clients and DNS servers are configured to dynamically update DNS records. Because of this configuration, DHCP Option 81 (also known as the *Client FQDN option*) is enabled on both the clients and the servers. In this situation, the DHCP server might create the client's DNS "A" record (IPv4). Then the client creates its "AAAA" (IPv6) record. However, as part of this operation, the client first sends and updated "A" record that has a time-to-live (TTL) of **0**. As a result, the DNS server deletes the client's "A" record while it registers the "AAAA" record.
 
-#### The DNS Dynamic Update Protocol update to existing records fails
+To work around this behavior, avoid configuring DHCP clients that use these adapters to dynamically update DNS records when the DHCP servers are already configured to do so.
 
-The DNS Dynamic Update Protocol update to existing records fails. Because of this issue, the scavenging process considers the records to be aged, and it deletes them.
+> [!NOTE]  
+> For more information about DHCP Option 81, see [Unexpected DNS record registration behavior if DHCP server uses "Always dynamically update DNS records"](dns-registration-behavior-when-dhcp-server-manages-dynamic-dns-updates.md). That article describes a different issue, but explains more about DHPC Option 81.
+
+#### The DNS Dynamic Update Protocol update to existing DNS records fails
+
+The DNS Dynamic Update Protocol update to existing records fails. Because of this issue, the DNS scavenging process considers the records to be aged, and it deletes them.
 
 The NETLOGON service logs "event 577X" events when it can't register SRV records. Other events are logged for registration failures of host "A" and PTR records. Check the system logs for these failures. The client that registers these records might log such events, or the DHCP servers that register the records on the client's behalf might log them.
 
@@ -99,7 +104,7 @@ To troubleshoot this issue, see [Troubleshoot AD DS and restart the DNS Server s
 
 Consider the following scenario:
 
-- You use an Active Directory integrated zone (default zone scope) that's named contoso.com.
+- You use an Active Directory-integrated zone (default zone scope) that's named contoso.com.
 - You use geo-location zone scopes that are associated with specific subnets.
 - You use the Windows PowerShell `Add-DnsServerQueryResolutionPolicy` cmdlet to configure DNS resolution policies.
 
