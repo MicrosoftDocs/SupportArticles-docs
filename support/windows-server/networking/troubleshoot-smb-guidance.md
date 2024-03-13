@@ -22,7 +22,8 @@ Communicating correct terminology is a key aspect of quality SMB troubleshooting
 
 - SMB Server (SRV) (also known as the file server) is always the system that hosts the file system.
 - SMB Client (CLI) is always the system that tries to access the file system.
-- These terms are consistent regardless of the operating system version or edition. For example, if a Windows Server 2016-based computer tries to reach the SMB share *\\\\MyWorkstation\\Data* on a Windows 10-based computer, Windows Server 2016 is the SMB Client and Windows 10 is the SMB Server.
+
+These terms are consistent regardless of the operating system version or edition. For example, if a Windows Server 2016-based computer tries to reach the SMB share *\\\\MyWorkstation\\Data* on a Windows 10-based computer, Windows Server 2016 is the SMB Client and Windows 10 is the SMB Server.
 
 ## Troubleshooting checklist
 
