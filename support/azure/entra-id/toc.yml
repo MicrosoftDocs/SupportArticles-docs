@@ -1,5 +1,98 @@
 - name: Welcome
-  href: welcome-azure-ad.yml
+  href: welcome-entra-id.yml
+
+- name: Azure AD Domain Services
+  items:
+  - name: Can't verify account when resetting password
+    href: could-not-verify-account-reset-pwd.md
+  - name: Enable support for TLS 1.2 in your environment
+    href: enable-support-tls-environment.md
+  - name: IdFix.exe is not a valid Win32 application
+    href: idfix-not-valid-win32-application.md
+  - name: IPv6 Support in Microsoft Entra ID
+    href: azure-ad-ipv6-support.md
+  - name: Maximum number of devices is reached
+    href: maximum-number-of-devices-joined-workplace.md
+  - name: Microsoft Graph PowerShell overview
+    href: /powershell/microsoftgraph/overview?toc=%2Ftroubleshoot%2Fazure%2Factive-directory%2Ftoc.json&bc=%2Ftroubleshoot%2Fazure%2Factive-directory%2Fbreadcrumb%2Ftoc.json
+  - name: Security context is not associated in IdFix
+    href: security-context-not-associate-domian.md
+  - name: Send Microsoft Authenticator logs and get an incident ID
+    href: send-microsoft-authenticator-logs.md  
+  - name: Support data collection
+    href: support-data-collection-diagnostic-logs.md
+  - name: Troubleshoot data freshness alerts in Microsoft Entra Connect Health
+    href: aad-connect-health-data-freshness.md
+  - name: Unable to register a device
+    href: cant-connect-service-error-register-device.md
+  - name: Understand AD FS sign-in events in Microsoft Entra ID with Connect Health
+    href: understand-ad-fs-sign-in-events-azure-ad-connect-health.md
+  - name: Understand Microsoft Entra Connect 1.4 and device disappearance
+    href: reference-connect-device-disappearance.md
+
+  - name: Microsoft Entra Hybrid Sync Agent Installation Issues
+
+    items:
+    - name: Installation issues overview
+      href: azure-ad-hybrid-sync-agent-install-welcome.md
+    - name: No privileges to install MSI
+      href: azure-ad-hybrid-sync-no-privileges-install-msi.md
+    - name: Cannot start service AADConnectProvisioningAgent
+      href: azure-ad-hybrid-sync-cannot-start-aadconnect-provisioning-agent.md
+    - name: The gMSA is set to log on as Service
+      href: azure-ad-hybrid-sync-gmsa-set-logon-service.md
+    - name: There is no such object on the server
+      href: azure-ad-hybrid-sync-no-such-object-on-server.md
+    - name: Unable to create gMSA because KDS may not be running on domain controller
+      href: azure-ad-hybrid-sync-unable-create-gmsa-kds-domain-controller.md
+
+- name: App Integration and Development 
+  items:
+  - name: Troubleshoot adding apps
+    href: troubleshoot-adding-apps.md
+    items: 
+      - name: Application takes a long time to appear
+        href: app-takes-long-time-appear.md
+      - name: Application doesn't appear
+        href: app-doesnt-appear.md
+      - name: Unable to delete an application
+        href: unable-delete-app.md
+      - name: Send notification details to Microsoft support
+        href: send-notification-details.md
+  - name: Troubleshoot sign-in to apps
+    items:
+      - name: Error AADSTS50003 - certificate or key not configured
+        href: error-code-AADSTS50003-cert-or-key-not-configured.md
+      - name: Error AADSTS50011 - reply URL mismatch (SAML)
+        href: error-code-AADSTS50011-reply-url-mismatch.md
+      - name: Error AADSTS50011 - redirect URI mismatch (OIDC/OAuth2)
+        href: error-code-AADSTS50011-redirect-uri-mismatch.md
+      - name: Error AADSTS50020 - guest sign-in to resource tenant fails
+        href: error-code-AADSTS50020-user-account-identity-provider-does-not-exist.md
+      - name: Error AADSTS50057 - user account is disabled
+        href: error-code-aadsts50057-user-account-is-disabled.md
+      - name: Error AADSTS500571 - guest user account is disabled
+        href: error-code-aadsts500571-guest-user-account-is-disabled.md
+      - name: Error AADSTS50105 - user not assigned a role
+        href: error-code-AADSTS50105-user-not-assigned-role.md
+      - name: Error AADSTS650056 - misconfigured app
+        href: error-code-AADSTS650056-misconfigured-app.md
+      - name: Error AADSTS70001 - app not found in directory
+        href: error-code-AADSTS70001-app-not-found-in-directory.md
+      - name: Error AADSTS75011 - authentication method mismatch
+        href: error-code-AADSTS75011-auth-method-mismatch.md
+      - name: Error AADSTS75005 - not a valid saml request
+        href: error-code-AADSTS75005-not-a-valid-saml-request.md
+      - name: Error AADSTS750054 - SAML request or response not present
+        href: error-code-AADSTS750054-saml-request-not-present.md
+      - name: Error AADSTS7000110 - request is ambiguous, multiple application identifiers found
+        href: error-code-aadsts7000110-request-is-ambiguous.md
+      - name: Error AADSTS7000112 - application is disabled
+        href: error-code-aadsts7000112-application-is-disabled.md
+      - name: Troubleshoot signing in to SAML-based single sign-on configured apps
+        href: troubleshoot-sign-in-saml-based-apps.md
+      - name: User redirected to incorrect reply URL or localhost
+        href: reply-url-redirected-to-localhost.md
 
 - name: Business to Consumer
   items:
