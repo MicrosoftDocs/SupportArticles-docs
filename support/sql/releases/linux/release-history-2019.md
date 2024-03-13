@@ -51,7 +51,7 @@ The following table lists the release history for [!INCLUDE [sql-server-2019](..
 
 ## <a id="CU25"></a> CU 25 (February 2024)
 
-This is the Cumulative Update 25 (CU 25) release of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.4355.3. For information about the fixes and improvements in this release, see the [Support article](/troubleshoot/sql/releases/sqlserver-2019/cumulativeupdate25).
+This is the Cumulative Update 25 (CU 25) release of [!INCLUDE [sql-server-2019](../../includes/versions/sql-server-2019.md)]. The [!INCLUDE [sql-server-database-engine](../../includes/versions/sql-server-database-engine.md)] version for this release is 15.0.4355.3. For information about the fixes and improvements in this release, see the [Support article](../sqlserver-2019/cumulativeupdate25.md).
 
 ### Package details
 

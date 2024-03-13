@@ -2,6 +2,7 @@
 title: Can't deploy the Linux agent to a Red Hat server
 description: Fixes an issue in which you can't deploy the System Center Operations Manager Linux agent to a Red Hat server.
 ms.date: 07/13/2020
+ms.custom: linux-related-content
 ms.reviewer: monsee
 ---
 # The certificate Common Name (CN) does not match when deploying the Operations Manager Linux agent

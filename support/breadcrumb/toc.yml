@@ -144,15 +144,25 @@ items:
       - name: Azure Storage
         tocHref: /troubleshoot/azure/azure-storage/
         topicHref: /troubleshoot/azure/azure-storage/welcome-azure-storage
+        items:
+        - name: Blob Storage
+          tocHref: /troubleshoot/azure/azure-storage/blobs
+          topicHref: /troubleshoot/azure/azure-storage/blobs/welcome-blob-storage
+        - name: Files Storage
+          tocHref: /troubleshoot/azure/azure-storage/files
+          topicHref: /troubleshoot/azure/azure-storage/files/welcome-files-storage
       - name: Azure Synapse Analytics
         tocHref: /troubleshoot/azure/synapse-analytics
         topicHref: /troubleshoot/azure/synapse-analytics/welcome-synapse-analytics
       - name: Azure Virtual Network
         tocHref: /troubleshoot/azure/virtual-network/
         topicHref: /troubleshoot/azure/virtual-network/welcome-virtual-network
-      - name: Cloud Services
-        tocHref: /troubleshoot/azure/cloud-services/
-        topicHref: /troubleshoot/azure/cloud-services/welcome-cloud-services
+      - name: Cloud Services (classic)
+        tocHref: /troubleshoot/azure/cloud-services-classic/
+        topicHref: /troubleshoot/azure/cloud-services-classic/welcome-cloud-services-classic
+      - name: Cloud Services (extended support)
+        tocHref: /troubleshoot/azure/cloud-services-extended/
+        topicHref: /troubleshoot/azure/cloud-services-extended/welcome-cloud-services-extended
       - name: DevOps Services
         tocHref: /troubleshoot/azure/devops/
         topicHref: /troubleshoot/azure/devops/welcome-azure-devops

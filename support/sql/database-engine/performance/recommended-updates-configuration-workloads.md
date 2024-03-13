@@ -2,7 +2,7 @@
 title: Updates and configuration for workloads
 description: This article describes a list of performance improvements and configuration options that are available for SQL Server 2016 and later versions.
 ms.date: 09/25/2020
-ms.custom: sap:Performance
+ms.custom: sap:Performance, linux-related-content
 ms.reviewer: Sureshka
 ---
 # Recommended updates and configuration options for SQL Server 2017 and 2016 with high-performance workloads
