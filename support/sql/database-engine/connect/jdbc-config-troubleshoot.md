@@ -371,7 +371,7 @@ Follow these steps to configure this file:
 
 After reproducing the error, revert the changes to stop the logger from creating files.
 
-Alternatively, you can create or copy the text above and save it to a file and add the file to the startup command when loading the application.
+Alternatively, you can create or copy the text above, save it to a file, and add the file to the startup command when loading the application.
 
 ```cmd
 java -Djava.util.logging.config.file=c:\<Path to the file>\logging.properties myapp
