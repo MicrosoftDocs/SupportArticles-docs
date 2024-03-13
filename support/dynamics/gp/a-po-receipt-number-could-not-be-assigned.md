@@ -1,9 +1,9 @@
 ---
 title: A PO/receipt number could not be assigned
 description: Provides a solution to an error that occurs when you select the PO Number field in the Purchase Order Entry window or when you select the Receipt No. field in the Receivings Transaction Entry window in Microsoft Dynamics GP.
-ms.reviewer: lmuelle
+ms.reviewer: theley, lmuelle
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # "A unique PO/receipt number couldn't be assigned" Error message when you select the PO Number field in the Purchase Order Entry window or when you select the Receipt No. field in the Receivings Transaction Entry window in Microsoft Dynamics GP
 

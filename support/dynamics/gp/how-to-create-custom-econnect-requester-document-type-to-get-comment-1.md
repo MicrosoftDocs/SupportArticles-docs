@@ -1,9 +1,9 @@
 ---
 title: How to create eConnect Requester Document Type to get Comment_1
 description: Introduces how to create a custom eConnect Requester Document Type to retrieve the Comment_1 information for a transaction in Sales Order Processing.
-ms.reviewer: dclauson
+ms.reviewer: theley, dclauson
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # How to create a custom eConnect "Requester Document Type" to retrieve the Comment_1 information for a transaction in Sales Order Processing
 

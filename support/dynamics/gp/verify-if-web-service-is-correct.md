@@ -1,9 +1,9 @@
 ---
 title: Verify if Web Services are correct
 description: Describes how to verify that Microsoft Dynamics GP Web Services run correctly after you install Microsoft Dynamics GP Web Services.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: how-to
-ms.date: 10/08/2022
+ms.date: 03/13/2024
 ---
 # How to verify if Microsoft Dynamics GP Web Services are functioning correctly
 

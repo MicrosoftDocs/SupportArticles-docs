@@ -1,9 +1,9 @@
 ---
 title: Unable to obtain the next FAINDEX error when you use the Fixed Assets eConnect adapter on Microsoft Dynamics GP 10.0 to import asset general and asset book information 
 description: Describes an error that occurs when you use the Fixed Assets eConnect adapter to import asset general and asset book information on Microsoft Dynamics GP 10.0.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # Error when you use the Fixed Assets eConnect adapter on Microsoft Dynamics GP 10.0 to import asset general and asset book information: "Unable to obtain the next FAINDEX"
 

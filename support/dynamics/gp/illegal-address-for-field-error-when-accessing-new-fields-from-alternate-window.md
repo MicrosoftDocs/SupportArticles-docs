@@ -1,9 +1,9 @@
 ---
 title: Cannot access new fields from an alternate window
 description: When you create alternate forms in Dexterity, you can refer to new fields that are added to the windows. This article describes how to prevent the error message when you refer to the new fields that are added to the windows.
-ms.reviewer: 
+ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # "Illegal Address for field 'field name' in script 'script name'" error when you access new fields from an alternate window
 

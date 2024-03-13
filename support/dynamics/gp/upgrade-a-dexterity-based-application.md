@@ -1,9 +1,9 @@
 ---
 title: Upgrade a Dexterity-based application
 description: Describes the supported method to upgrade Dexterity code by using Dexterity Source Code Control Service.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # How to upgrade a Dexterity-based application in Microsoft Dynamics GP by using the Dexterity Source Code Control Service
 

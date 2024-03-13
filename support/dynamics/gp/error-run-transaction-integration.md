@@ -2,8 +2,8 @@
 title: Error when you run a transaction integration in Integration Manager
 description: This article provides a resolution for the problem that occurs after you upgrade from Integration Manager 8.0 to Integration Manager 9.0.
 ms.topic: troubleshooting
-ms.reviewer: dlanglie, kvogel
-ms.date: 03/31/2021
+ms.reviewer: theley, dlanglie, kvogel
+ms.date: 03/13/2024
 ---
 # Error message when you run a transaction integration in Integration Manager in Microsoft Dynamics GP 9.0 (Distribution account does not have a default)
 

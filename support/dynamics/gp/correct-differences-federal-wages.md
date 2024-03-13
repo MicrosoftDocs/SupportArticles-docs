@@ -2,7 +2,7 @@
 title: Correct differences between federal wages
 description: This article discusses why there may be differences in federal wages between Form 941 and the Payroll Summary report. This article also describes how to correct these differences.
 ms.reviewer: theley
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # Correcting differences between federal wages in Form 941 and in the Payroll Summary report in Microsoft Dynamics GP
 

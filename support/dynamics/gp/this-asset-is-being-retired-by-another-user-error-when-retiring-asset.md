@@ -1,9 +1,9 @@
 ---
 title: This asset is being retired by another user error when retiring an asset
 description: When you try to retire an asset in Microsoft Dynamics GP, you receive an error message that states this asset is being retired by another user. Provides a resolution.
-ms.reviewer: 
+ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # "This asset is being retired by another user" error when retiring an asset
 

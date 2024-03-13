@@ -1,9 +1,9 @@
 ---
 title: Grace Periods work in Payables/Receivables
 description: Describes how Grace Periods work in Payables/Receivables Management in Dynamics GP.
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # How Grace Periods work in Payables/Receivables Management in Microsoft Dynamics GP
 
