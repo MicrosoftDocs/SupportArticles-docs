@@ -2,8 +2,7 @@
 title: Troubleshoot hosted machines in Power Automate for desktop
 description: Suggestions for troubleshooting hosted machine issues in Power Automate for desktop.
 ms.reviewer: kenseongtan, pefelesk, tapanm
-ms.date: 03/12/2024
-ms.subservice: power-automate-desktop-flows
+ms.date: 03/13/2024
 ms.custom: sap:Desktop flows\
 ---
 # Troubleshoot hosted machines in Power Automate for desktop
