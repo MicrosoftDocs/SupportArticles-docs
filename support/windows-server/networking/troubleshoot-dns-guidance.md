@@ -74,11 +74,9 @@ In the case of a service that requires a SRV record, the local Netlogon service 
 
 This behavior is by design. The DNS records ("A" or PTR) are automatically updated during the next DHCP renewal request from the client.
 
-### Avoid registering unwanted network adapter in DNS
+### Avoid registering unwanted network adapters in DNS
 
-If the network adapter is configured to register the connection address in DNS, then the DHCP/DNS client service registers the record in DNS. Unwanted network cards should be configured not to register the connection address in DNS.
-
-To prevent this issue, make sure that the unwanted network adapter address isn't registered in DNS. Follow these steps:
+If a network adapter is configured to register the connection address in DNS, then the DHCP/DNS client services register the record in DNS. If a computer has a network adapter that you don't want to register, follow these steps:
 
 1. In **Network Connections**, open the properties for the unwanted network adapter, open TCP/IP properties, select **Advanced** > **DNS**, and then clear the **Register this connections Address in DNS** checkbox.
 2. In the left pane, open the DNS server console, highlight the server, and then select **Action** > **Properties**.
@@ -154,14 +152,14 @@ Before you contact Microsoft Support, you can gather information about your issu
 ### Prerequisites
 
 - Run TSS in the security context of an account that has administrator privileges on the local system. The first time that you run TSS, accept the EULA. (After you accept the EULA, TSS won't prompt you again.)
-- We recommend that you use the LocalMachine `RemoteSigned` PowerShell execution policy.
+- We recommend that you use the `RemoteSigned` PowerShell execution policy, at the `LocalMachine` scope.
 
   > [!NOTE]
   > If the current PowerShell execution policy doesn't allow running TSS, take the following actions:
->
-> - Set the `RemoteSigned` execution policy for the process level by running the cmdlet, `PS C:\> Set-ExecutionPolicy -scope Process -ExecutionPolicy RemoteSigned`.
-> - To verify that the change takes effect, run the cmdlet, `PS C:\> Get-ExecutionPolicy -List`.
-> - Because the process level permissions apply to only the current PowerShell session, after the given PowerShell window in which TSS runs is closed, the assigned permission for the process level also reverts to the previously configured state.
+  >
+  > - Set the `RemoteSigned` execution policy for the process level by running the cmdlet, `PS C:\> Set-ExecutionPolicy -scope Process -ExecutionPolicy RemoteSigned`.
+  > - To verify that the change takes effect, run the cmdlet, `PS C:\> Get-ExecutionPolicy -List`.
+  > - Because the process level permissions apply to only the current PowerShell session, after the given PowerShell window in which TSS runs is closed, the assigned permission for the process level also reverts to the previously configured state.
 
 ### Gather key information before contacting Microsoft support
 
