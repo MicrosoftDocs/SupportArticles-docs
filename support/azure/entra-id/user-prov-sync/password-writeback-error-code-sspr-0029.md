@@ -49,7 +49,7 @@ To resolve issues that affect Active Directory permissions, see [Password Writeb
 ### Workaround: Target a different Active Directory domain controller
 
 > [!NOTE]
-> Password writeback has a dependency on the legacy API [NetUserGetInfo](/windows/win32/api/lmaccess/nf-lmaccess-netusergetinfo). The `NetUserGetInfo` API requires a complex set of allowed permissions in Active Directory that can be difficult to identify, especially when a Microsoft Entra Connect server is running on a domain controller. For more information, see [Applications using NetUserGetInfo and similar APIs rely on read access to certain Active Directory objects](../../windows-server/identity/netuser-netgroup-fails-with-access-denied.md).
+> Password writeback has a dependency on the legacy API [NetUserGetInfo](/windows/win32/api/lmaccess/nf-lmaccess-netusergetinfo). The `NetUserGetInfo` API requires a complex set of allowed permissions in Active Directory that can be difficult to identify, especially when a Microsoft Entra Connect server is running on a domain controller. For more information, see [Applications using NetUserGetInfo and similar APIs rely on read access to certain Active Directory objects](../../../windows-server/identity/netuser-netgroup-fails-with-access-denied.md).
 
 Do you have a scenario in which a Microsoft Entra Connect server is running on a domain controller, and it isn't possible to resolve Active Directory permissions? In this case, we recommend that you deploy Microsoft Entra Connect server on a member server instead of a domain controller. Or, configure your Active Directory connector to **Only use preferred domain controllers** by using the following steps:
 

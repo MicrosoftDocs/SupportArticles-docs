@@ -22,7 +22,7 @@ landingContent:
       - linkListType: reference
         links:
           - text: Microsoft Entra troubleshooting documentation
-            url: ../active-directory/welcome-azure-ad.yml
+            url: ../entra-id/welcome-entra-id.yml
 
  # Card
   - title: Global Secure Access
