@@ -10201,11 +10201,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "support/dynamics/gp/steps-that-tdbx-update-diagnostic-perform.md",
-      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "support/dynamics/gp/not-privileged-to-run-report.md",
       "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
       "redirect_document_id": false
