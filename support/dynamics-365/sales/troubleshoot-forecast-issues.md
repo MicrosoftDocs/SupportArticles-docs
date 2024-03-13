@@ -249,10 +249,10 @@ To solve the issue, you need to grant the **Read** permission to the **# Dynamic
 1. Select the field security profile associated with the field that shows **0**.
 1. Select **Users** > **Add**.
 1. Search for the **# Dynamics 365 Sales Forecasting** user, select the checkbox against the user name, and then select **Select** > **Add**.
-1. Select **Field Permissions** and grant the **Read** permission to the field.
+1. Select **Field Permissions** and grant **Read** permission to the field.
 1. Save and close the profile.
 
-Recalculate the forecast and verify that the column is showing appropriate values.
+Recalculate the forecast and verify that the column shows appropriate values.
 
 ## Issue 12 - Can't manually recalculate the prediction column on the Forecasts page
 
