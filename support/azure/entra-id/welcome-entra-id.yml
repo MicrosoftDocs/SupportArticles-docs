@@ -10,7 +10,7 @@ metadata:
   ms.topic: landing-page # Required
   author: genlin  #Required; your GitHub user alias, with correct capitalization.
   ms.author: genli #Required; microsoft alias of author; optional team alias.
-  ms.date: 02/11/2022
+  ms.date: 03/13/2024
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -22,11 +22,11 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Authorization_RequestDenied error when changing password
-            url: ./authorization-request-denied-graph-api.md
+            url: mfa/authorization-request-denied-graph-api.md
           - text: Can't authenticate using ADAL
-            url: ./adal-authenticate-android-devices-fail.md
+            url: mfa/adal-authenticate-android-devices-fail.md
           - text: Code 403 Forbidden error when using SSO
-            url: ./code-403-azure-seamless-sso-win10.md
+            url: mfa/code-403-azure-seamless-sso-win10.md
 
  # Card
   - title: Microsoft Entra Hybrid Sync Agent Installation Issues
@@ -34,15 +34,15 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: No privileges to install MSI
-            url: ./azure-ad-hybrid-sync-no-privileges-install-msi.md
+            url: ad-dmn-services/azure-ad-hybrid-sync-no-privileges-install-msi.md
           - text: Cannot start service AADConnectProvisioningAgent
-            url: ./azure-ad-hybrid-sync-cannot-start-aadconnect-provisioning-agent.md
+            url: ad-dmn-services/azure-ad-hybrid-sync-cannot-start-aadconnect-provisioning-agent.md
           - text: The gMSA is set to log on as Service
-            url: ./azure-ad-hybrid-sync-gMSA-set-logon-service.md
+            url: ad-dmn-services/azure-ad-hybrid-sync-gMSA-set-logon-service.md
           - text: There is no such object on the server
-            url: ./azure-ad-hybrid-sync-no-such-object-on-server.md
+            url: ad-dmn-services/azure-ad-hybrid-sync-no-such-object-on-server.md
           - text: Unable to create gMSA because KDS may not be running on domain controller
-            url: ./azure-ad-hybrid-sync-unable-create-gmsa-kds-domain-controller.md
+            url: ad-dmn-services/azure-ad-hybrid-sync-unable-create-gmsa-kds-domain-controller.md
  
  # Card
   - title: Password writeback issues
@@ -50,21 +50,21 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: General troubleshooting steps
-            url: ./password-writeback-general-troubleshooting-steps.md
+            url: user-prov-sync/password-writeback-general-troubleshooting-steps.md
           - text: Access rights and permissions
-            url: ./password-writeback-access-rights-permissions.md
+            url: user-prov-sync/password-writeback-access-rights-permissions.md
           - text: Error code 8023062C - insecure password reset or change
-            url: ./password-writeback-error-code-8023062c.md
+            url: user-prov-sync/password-writeback-error-code-8023062c.md
           - text: Error code SSPR_009 - synced Microsoft Entra admin can't do cloud reset
-            url: ./password-writeback-error-code-sspr-009.md
+            url: user-prov-sync/password-writeback-error-code-sspr-009.md
           - text: Error code SSPR_0029 - on-premises configuration not set up
-            url: ./password-writeback-error-code-sspr-0029.md
+            url: user-prov-sync/password-writeback-error-code-sspr-0029.md
           - text: Admin password reset on Microsoft 365 admin center
-            url: ./password-writeback-microsoft-365-admin-center.md
+            url: user-prov-sync/password-writeback-microsoft-365-admin-center.md
           - text: Initial sign-in delays after forced password change
-            url: ./password-writeback-servers-need-time-catch-up.md
+            url: user-prov-sync/password-writeback-servers-need-time-catch-up.md
           - text: On-premises policy disallows password reset
-            url: ./password-writeback-not-compliant-on-premises-ad-pwd-policy.md
+            url: user-prov-sync/password-writeback-not-compliant-on-premises-ad-pwd-policy.md
 
  # Card
   - title: Sign-in to SAML-based SSO apps
@@ -72,20 +72,20 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Error AADSTS50003 - certificate or key not configured
-            url: ./error-code-AADSTS50003-cert-or-key-not-configured.md
+            url: app-integration/error-code-AADSTS50003-cert-or-key-not-configured.md
           - text: Error AADSTS50011 - reply URL mismatch
-            url: ./error-code-AADSTS50011-reply-url-mismatch.md
+            url: app-integration/error-code-AADSTS50011-reply-url-mismatch.md
           - text: Error AADSTS50020 - guest sign-in to resource tenant fails
-            url: ./error-code-AADSTS50020-user-account-identity-provider-does-not-exist.md
+            url: app-integration/error-code-AADSTS50020-user-account-identity-provider-does-not-exist.md
           - text: Error AADSTS50105 - user not assigned a role
-            url: ./error-code-AADSTS50105-user-not-assigned-role.md
+            url: app-integration/error-code-AADSTS50105-user-not-assigned-role.md
           - text: Error AADSTS650056 - misconfigured app
-            url: ./error-code-AADSTS650056-misconfigured-app.md
+            url: app-integration/error-code-AADSTS650056-misconfigured-app.md
           - text: Error AADSTS70001 - app not found in directory
-            url: ./error-code-AADSTS70001-app-not-found-in-directory.md
+            url: app-integration/error-code-AADSTS70001-app-not-found-in-directory.md
           - text: Error AADSTS75011 - authentication method mismatch
-            url: ./error-code-AADSTS75011-auth-method-mismatch.md
+            url: app-integration/error-code-AADSTS75011-auth-method-mismatch.md
           - text: Error AADSTS75005 - not a valid saml request
-            url: ./error-code-AADSTS75005-not-a-valid-saml-request.md
+            url: app-integration/error-code-AADSTS75005-not-a-valid-saml-request.md
           - text: Error AADSTS750054 - SAML request or response not present
-            url: ./error-code-AADSTS750054-saml-request-not-present.md
+            url: app-integration/error-code-AADSTS750054-saml-request-not-present.md

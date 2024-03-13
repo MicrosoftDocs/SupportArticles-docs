@@ -244,7 +244,7 @@
   - name: Can't sign in after converting domain
     href: user-prov-sync/cannot-signin-convert-domain-federated.md
   - name: Can't sync system mailbox
-    href: user-prov-sync/unable-sync-system-discovery-mailbox.md
+    href: mfa/unable-sync-system-discovery-mailbox.md
   - name: Can't verify account when resetting password
     href: user-prov-sync/could-not-verify-account-reset-pwd.md
   - name: Changes to mail-enabled security group don't sync
