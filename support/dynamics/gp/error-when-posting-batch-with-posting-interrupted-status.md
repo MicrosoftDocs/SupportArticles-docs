@@ -1,9 +1,9 @@
 ---
 title: Error when you post a batch that has a Posting Interrupted status in the Batch Recovery window 
 description: Discusses a problem that occurs if records are locked open on the server. Provides a resolution.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # Error when you try to post a batch that has a Posting Interrupted status in the Batch Recovery window in Microsoft Dynamics GP: Batch Failed to Complete Posting
 

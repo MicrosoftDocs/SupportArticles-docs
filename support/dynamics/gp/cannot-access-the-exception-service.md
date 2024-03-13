@@ -1,9 +1,9 @@
 ---
 title: Cannot access the exception service
 description: Provides a solution to an error that occurs when you start the Exception Management console in Web Services for Microsoft Dynamics GP.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # "Cannot access the exception service" Error message when you start the Exception Management console in Web Services for Microsoft Dynamics GP
 

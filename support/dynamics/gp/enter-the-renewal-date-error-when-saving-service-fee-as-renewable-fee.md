@@ -1,9 +1,9 @@
 ---
 title: Please enter the renewal date error when saving a service fee as a renewable fee 
 description: Describes a problem where you receive the error - Please enter the renewal date when saving a service fee as a renewable fee in the Fee Maintenance window in Project Accounting. Provides a resolution.
-ms.reviewer: ansather, beckyber
+ms.reviewer: theley, ansather, beckyber
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # "Please enter the renewal date" error when saving a service fee as a renewable fee in the Fee Maintenance window in Project Accounting
 

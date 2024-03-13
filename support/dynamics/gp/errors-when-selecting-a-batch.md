@@ -3,7 +3,7 @@ title: Errors when selecting a batch
 description: Provides a solution to errors that occur when you select a batch in the Build Payroll Checks window in Microsoft Dynamics GP.
 ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/12/2024
 ---
 # Error messages when you select a batch in the Build Payroll Checks window in Microsoft Dynamics GP
 
@@ -49,27 +49,16 @@ Error message 10
 Additionally, an Open Operation error, a Get/Change error, or a Save Operation error may occur on one of the following files to indicate that the Payroll batch is stuck:
 
 - UPR_WORK_MSTR
-
 - UPR_WORK_MSTR_Detail
-
 - UPR_WORK_HDR
-
 - UPR_WORK_Pay_Type
-
 - UPR_WORK_Deduction
-
 - UPR_WORK_Benefit
-
 - UPR_WORK_State_Tax
-
 - UPR_WORK_Local Tax
-
 - UPR_WORK_Check
-
 - UPR_WORK_Post
-
 - UPR_Flat_Tax_Records
-
 - UPR_Account_Cache
 
 ## Cause
@@ -85,12 +74,11 @@ To resolve this problem, follow these steps:
 
 ### Step 1: Delete records in Payroll work tables
 
-Follow one of the options below to delete the activity from the payroll work tables. To delete records, follow there steps:
 
-1. Open Microsoft SQL Server using the appropriate method below:
-   - If you use Microsoft SQL Server 2008, start SQL Server Management Studio. To do it, select **Start**, point to **All Programs**, point to **Microsoft SQL Server 2008**, and then select **SQL Server Management Studio**.
-   - If you use Microsoft SQL Server 2005, start SQL Server Management Studio. To do it, select **Start**, point to **All Programs**, point to **Microsoft SQL Server 2005**, and then select **SQL Server Management Studio**.
-   - If you use Microsoft SQL Server 2000, start SQL Query Analyzer. To do it, select **Start**, point to **All Programs**, point to **Microsoft SQL Server**, and then select **Query Analyzer**.
+1. Open Microsoft SQL Server using SQL Server Management Studio (SSMS).
+
+   To start SQL Server Management Studio, select **Start**, point to **All Programs** > **Microsoft SQL Server 2008**, and then select **SQL Server Management Studio**.
+
 2. Run delete statements against the company database.
 
     > [!NOTE]
@@ -110,7 +98,6 @@ Follow one of the options below to delete the activity from the payroll work tab
     Delete UPR10208
     Delete UPR10209
     Delete UPR10213
-    Delete UPR10301
     Delete UPR19900
     Delete UPR19901
     ```
@@ -133,7 +120,7 @@ In the directory, delete the files that begin with TNT. Then, delete the files t
 
 Check Links will check the linking of the data between the tables to ensure data integrity. To do it, follow these steps:
 
-1. Open the check Links window. In Microsoft Dynamics GP, select **Microsoft Dynamics GP**, select **Maintenance**, and then select **Check Links.**  
+1. Open the check Links window. In Microsoft Dynamics GP, select **Microsoft Dynamics GP**, select **Maintenance**, and then select **Check Links**.  
 2. In the **Series** list, select **Payroll**.
 3. In the **Logical Tables** list, select **Payroll Transactions**, select **Insert**, and then select **OK**.
 4. In the **Report Destination** dialog box, select the appropriate check box, and then select **OK**.
@@ -147,11 +134,12 @@ Check Links will check the linking of the data between the tables to ensure data
 
 Build the check file again. All the batches are still in the check file.
 
-**COMMON QUESTIONS:**  
-Q1:  I don't want to delete the whole payroll batch and start over, should I still follow the steps above?
+**Common questions:** 
 
-A1:  Yes, the Transactions in the payroll batch are stored in the **UPR10302** Payroll Transactions table, and you aren't deleting that table in the scripts above, so the transactions aren’t getting removed. The scripts only remove the **batch** **header** record (**UPR10301**) and when you run **checklinks**, the system will recreate that batch header record again (because it sees it on the transactions still, so it will recreate it.),
+Q1: I don't want to delete the whole payroll batch and start over, should I still follow the steps above?
+
+A1: Yes, the Transactions in the payroll batch are stored in the **UPR10302** Payroll Transactions table, and you aren't deleting that table in the scripts above, so the transactions aren’t getting removed. The scripts only remove the **batch** **header** record (**UPR10301**) and when you run **checklinks**, the system will recreate that batch header record again (because it sees it on the transactions still, so it will recreate it.)
 
 Q2: I posted the new batch and it disappeared. It should have been a recurring batch.
 
-A2:  When you ran check links to rebuild the batch, it built it with a **single use** frequency by default. You should have edited the batch frequency before posting it, if it should have been a recurring batch. If you posted the batch, it's too late now. You'll need to manually key the batch/transactions back in again (starting on the next posting date needed), and change the frequency on the new batch to be used going forward.
+A2: When you ran check links to rebuild the batch, it built it with a **single use** frequency by default. You should have edited the batch frequency before posting it, if it should have been a recurring batch. If you posted the batch, it's too late now. You'll need to manually key the batch/transactions back in again (starting on the next posting date needed), and change the frequency on the new batch to be used going forward.

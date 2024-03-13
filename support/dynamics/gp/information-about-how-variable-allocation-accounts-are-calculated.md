@@ -1,8 +1,8 @@
 ---
 title: How variable allocation accounts are calculated
 description: This article contains the information about how variable allocation accounts are calculated in Microsoft Dynamics GP.
-ms.reviewer: 
-ms.date: 03/31/2021
+ms.reviewer: theley
+ms.date: 03/13/2024
 ---
 # Information about how variable allocation accounts are calculated in Microsoft Dynamics GP
 
@@ -42,4 +42,3 @@ The following information is posted to the distribution accounts.
 |300-6180-00|$10,000 × 40% = $4,000|
 |400-6180-00|$10,000 × 20% = $2,000|
 |Total amount that is posted|$10,000|
-  

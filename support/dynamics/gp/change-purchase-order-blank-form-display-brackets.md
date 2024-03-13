@@ -1,9 +1,9 @@
 ---
 title: How to modify the Purchase Order Blank Form to display brackets around the Trade Discount Amount in Microsoft Dynamics GP
 description: Describes steps to modify the Purchase Order Blank Form to display brackets around the Trade Discount Amount in Microsoft Dynamics GP.
-ms.reviewer: ppeterso
+ms.reviewer: theley, ppeterso
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # How to modify the Purchase Order Blank Form to display brackets around the Trade Discount Amount in Microsoft Dynamics GP
 
