@@ -28,11 +28,11 @@ This error indicates a time-out. It might be caused by network connectivity or D
 
 ## Troubleshooting steps
 
-Follow the steps in [Verify the connectivity between the VM and Azure KMS service](#verify-the-connectivity-between-the-vm-and-azure-kms-service) to check network connectivity problems, and then retry the activation.
+Perform the following steps to check network connectivity problems, and then retry the activation.
 
-### Verify the connectivity between the VM and Azure KMS service
+### Verify the connectivity between the VM and the Azure KMS service
 
-1. Make sure that the VM is configured to use the correct Azure KMS server. To do this, run the following command:
+1. Make sure that the VM is configured to use the correct Azure Key Management Services (KMS) server. To do this, run the following command:
   
     ```powershell
     Invoke-Expression "$env:windir\system32\cscript.exe $env:windir\system32\slmgr.vbs /skms azkms.core.windows.net:1688"
@@ -42,7 +42,7 @@ Follow the steps in [Verify the connectivity between the VM and Azure KMS servic
 
     > Key Management Service machine name set to `azkms.core.windows.net:1688` successfully.
 
-2. Ensure that the outbound network traffic to KMS endpoint on port 1688 isn't blocked by the firewall in the VM. To do this, run the [Test-NetConnection](/powershell/module/nettcpip/test-netconnection) PowerShell cmdlet or [PsPing](/sysinternals/downloads/psping) tool.
+2. Ensure that the outbound network traffic to the KMS endpoint on port 1688 isn't blocked by the firewall in the VM. To do this, run the [Test-NetConnection](/powershell/module/nettcpip/test-netconnection) PowerShell cmdlet or the [PsPing](/sysinternals/downloads/psping) tool.
 
     - Verify by running `Test-NetConnection`:
 
@@ -58,20 +58,20 @@ Follow the steps in [Verify the connectivity between the VM and Azure KMS servic
         .\psping.exe azkms.core.windows.net:1688
         ```
 
-        In the second-to-last line of the output, make sure that you see the following text:
+        On the second-to-last line of the output, make sure that you see the following text:
 
-        > Sent = 4, Received = 4, Lost = 0 (0% loss)
+        `Sent = 4, Received = 4, Lost = 0 (0% loss)`
 
-        If Lost is greater than 0 (zero), the VM doesn't have connectivity to the KMS server. In this situation, if the VM is in a virtual network and has specified a custom DNS server, you must make sure that DNS server is able to resolve `azkms.core.windows.net`. Or, change the DNS server to one that does resolve `azkms.core.windows.net`.
+        If `Lost` is greater than 0 (zero), the VM doesn't have connectivity to the KMS server. In this situation, if the VM is in a virtual network and has specified a custom DNS server, you must make sure that the DNS server is able to resolve `azkms.core.windows.net`. Or, change the DNS server to one that does resolve `azkms.core.windows.net`.
 
         > [!NOTE]  
         > If you remove all DNS servers from a virtual network, the VMs use Azure's internal DNS service. This service can resolve `azkms.core.windows.net`.
 
-3. Verify using [Azure Network Watcher next hop](/azure/network-watcher/network-watcher-next-hop-overview) that the next hop type from the VM in question to the destination IP `20.118.99.224` and `40.83.235.53` (for `azkms.core.windows.net`) or the IP of the appropriate KMS endpoint that applies to your region is **Internet**.
+3. Verify using [Azure Network Watcher next hop](/azure/network-watcher/network-watcher-next-hop-overview) that the next hop type from the VM in question to the destination IPs `20.118.99.224` and `40.83.235.53` (for `azkms.core.windows.net`) or the IP of the appropriate KMS endpoint that applies to your region is **Internet**.
 
-   If the result is **VirtualAppliance** or **VirtualNetworkGateway**, it's likely that a default route exists. Contact your network administrator and work with them to determine the correct course of action. This might be a [custom route](./custom-routes-enable-kms-activation.md) if that solution is consistent with your organization's policies.
+   If the result is **VirtualAppliance** or **VirtualNetworkGateway**, a default route likely exists. Contact your network administrator and work with them to determine the correct course of action. This might be a [custom route](./custom-routes-enable-kms-activation.md) if that solution is consistent with your organization's policies.
 
-4. After you verify successful connectivity to `azkms.core.windows.net`, run the following command at that elevated Windows PowerShell prompt. This command tries activation multiple times:
+4. After you verify successful connectivity to `azkms.core.windows.net`, run the following command at an elevated Windows PowerShell prompt. This command tries activation multiple times:
 
     ```powershell
     1..12 | ForEach-Object {
