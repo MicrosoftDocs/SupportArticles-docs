@@ -45,7 +45,7 @@ This issue can have any one of the following causes.
 
 #### DNS scavenging is misconfigured
 
-If DNS records go missing from DNS zones, scavenging is the most common cause. Even Windows-based computers that have statically-assigned servers register their records every 24 hours. Check whether the no-refresh and refresh intervals are too low. For example, if these values are both less than 24 hours, you lose DNS records.
+If DNS records go missing from DNS zones, scavenging is the most common cause. Even Windows-based computers that have statically-assigned DNS servers register their records every 24 hours. Check whether the no-refresh and refresh intervals are too low. For example, if these values are both less than 24 hours, you lose DNS records.
 
 To troubleshoot this issue and to understand no-refresh and refresh intervals, see [Using DNS aging and scavenging](/previous-versions/windows/it-pro/windows-server-2003/cc757041%28v=ws.10%29).
 
@@ -102,7 +102,7 @@ To troubleshoot this issue, see [Troubleshoot AD DS and restart the DNS Server s
 
 Consider the following scenario:
 
-- You use an Active Directory-integrated zone (default zone scope) that's named contoso.com.
+- You use an Active Directory-integrated zone (default zone scope) that's named "contoso.com."
 - You use geo-location zone scopes that are associated with specific subnets.
 - You use the Windows PowerShell `Add-DnsServerQueryResolutionPolicy` cmdlet to configure DNS resolution policies.
 
