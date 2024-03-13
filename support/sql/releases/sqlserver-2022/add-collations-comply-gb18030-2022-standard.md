@@ -50,6 +50,7 @@ Each new cumulative update for SQL Server contains all the hotfixes and security
 
 ## References
 
+- [Language improvements](/sql/sql-server/what-s-new-in-sql-server-2022#language)
 - [Collation and Unicode support](/sql/relational-databases/collations/collation-and-unicode-support)
 - [sys.fn_helpcollations (Transact-SQL)](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql)
 - [COLLATE (Transact-SQL)](/sql/t-sql/statements/collations)
