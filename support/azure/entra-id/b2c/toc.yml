@@ -1,0 +1,10 @@
+- name: Welcome
+  href: welcome-b2c.yml
+- name: An exception occurs in application
+  href: server-error-application-exception.md
+- name: Can't delete a directory
+  href: cannot-delete-directory.md
+- name: Fail to sign in to application
+  href: error-sign-into-app.md
+- name: Server Error in '/' Application error in application
+  href: server-error-application.md
