@@ -2,7 +2,7 @@
 title: Workflow tables used with Microsoft Dynamics GP
 description: Workflow tables used with Microsoft Dynamics GP.
 ms.reviewer: theley
-ms.date: 02/18/2023
+ms.date: 03/12/2024
 ---
 # Workflow tables used with Microsoft Dynamics GP
 
