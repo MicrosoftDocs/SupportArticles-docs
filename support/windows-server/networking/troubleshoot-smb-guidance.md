@@ -1,6 +1,6 @@
 ---
 title: Guidance for troubleshooting SMB
-description: Introduces general guidance for troubleshooting scenarios related to SMB.
+description: Introduces general guidance for troubleshooting scenarios that are related to SMB.
 ms.date: 03/12/2024
 manager: dcscontentpm
 audience: itpro
@@ -16,11 +16,11 @@ ms.custom: sap:smb, csstroubleshoot
 
 This article is designed to help you troubleshoot Server Message Block (SMB) issues. Most users are able to resolve their issue by using the solutions that are provided here.
 
-## Introduction to SMB
+## SMB terminology
 
 Communicating correct terminology is a key aspect of quality SMB troubleshooting. Therefore, you should learn basic SMB terminology to ensure accuracy of data collection and analysis.
 
-- SMB Server (SRV) is always the system that hosts the file system, also called the file server.
+- SMB Server (SRV) (also known as the file server) is always the system that hosts the file system.
 - SMB Client (CLI) is always the system that tries to access the file system.
 - These terms are consistent regardless of the operating system version or edition. For example, if a Windows Server 2016-based computer tries to reach the SMB share *\\\\MyWorkstation\\Data* on a Windows 10-based computer, Windows Server 2016 is the SMB Client and Windows 10 is the SMB Server.
 
@@ -62,12 +62,12 @@ We recommend that you update the following components before you troubleshoot SM
 - Network: Update the network components.
 - Windows Core: For better performance and stability, update Windows Core.
 
-## Command to disconnect all shared resources from local computer
+## Disconnecting all shared resources from local computer
 
 You can use the `Net Use * /delete` command to disconnect active or remembered shared resources on a local computer.
 
 > [!NOTE]
-> This command can also be used on remote computers. Run `Net help use` for more options.
+> You can use this command on remote computers, also. Run `Net help use` for more options.
 
 > [!IMPORTANT]  
 > This section of this article is based on community content.
@@ -78,41 +78,41 @@ You can use the `Net Use * /delete` command to disconnect active or remembered s
 
 ### When you access a Scale-Out File Server, performance is limited
 
-The client access network uses high-speed remote direct memory access (RDMA), but the cluster network doesn't. Because of this behavior, redirection only occurs on the cluster network (which is usually a 1-GbE network adapter).
+The client access network uses high-speed remote direct memory access (RDMA), but the cluster network doesn't. Because of this behavior, redirection occurs only on the cluster network. This is usually a 1-GbE network adapter.
 
-To troubleshoot this issue, you can configure the option to use the client access network for Cluster Shared Volumes (CSV). Or, upgrade to Windows Server 2012 R2 or a later version. That system automatically redirects clients to the cluster node that has the best access to the file share's volume. For more information, see the following blog article: [Automatic SMB Scale-Out Rebalancing in Windows Server 2012 R2](/archive/blogs/josebda/automatic-smb-scale-out-rebalancing-in-windows-server-2012-r2).
+To troubleshoot this issue, you can configure the option to use the client access network for Cluster Shared Volumes (CSV). Or, upgrade to Windows Server 2012 R2 or a later version. That system automatically redirects clients to the cluster node that has the best access to the volume of the file share. For more information, see the following Blog Archive blog article: [Automatic SMB Scale-Out Rebalancing in Windows Server 2012 R2](/archive/blogs/josebda/automatic-smb-scale-out-rebalancing-in-windows-server-2012-r2).
 
-### SMB prefers to use the slower physical network adapter over the virtual network adapter
+### SMB prefers the slower physical network adapter to the virtual network adapter
 
-The virtual network adapter on the host isn't RSS-capable. The physical network adapter is RSS-capable. SMB always uses the RSS-capable network adapter over the non-RSS network adapter even when the RSS network adapter is slower.
+The virtual network adapter on the host isn't RSS-capable. The physical network adapter is RSS-capable. SMB always uses the RSS-capable network adapter instead of the non-RSS network adapter even if the RSS network adapter is slower.
 
-To troubleshoot this issue, you should disable the RSS capability on the physical network adapter, or use SMB Multichannel constraints to restrict SMB communication to one or more defined network interfaces. For more information, see the [New-SmbMultichannelConstraint](/powershell/module/smbshare/new-smbmultichannelconstraint) SMB Share cmdlet in Windows PowerShell.
+To troubleshoot this issue, disable the RSS capability on the physical network adapter, or use SMB Multichannel constraints to restrict SMB communication to one or more defined network interfaces. For more information, see the [New-SmbMultichannelConstraint](/powershell/module/smbshare/new-smbmultichannelconstraint) SMB Share cmdlet in Windows PowerShell.
 
-### SMB reports that the network adapter isn't RDMA-capable, even though I'm using an RDMA-capable network adapter
+### SMB reports the network adapter isn't RDMA-capable even though you believe it is
 
 This issue occurs because RDMA-capable network adapters that have older drivers or firmware might not correctly identify themselves as being RDMA-capable.
 
 To troubleshoot this issue, update the network adapter firmware and driver from the manufacturer's website.
 
-### The required amount of network traffic before SMB Multichannel starts
+### The required amount of network traffic before SMB Multichannel starts varies
 
 SMB Multichannel is used to discover the RSS and RDMA capabilities of network adapters. On server operating systems, SMB Multichannel starts when the initial read or write operation occurs. On client operating systems, SMB Multichannel doesn't start until a certain amount of network traffic occurs.
 
-On server operating systems, SMB Multichannel starts quickly only one time per session. On client operating systems, you can configure a registry entry to start SMB Multichannel more quickly. For more information, see the following blog article: [How much traffic needs to pass between the SMB Client and Server before Multichannel actually starts?](/archive/blogs/josebda/how-much-traffic-needs-to-pass-between-the-smb-client-and-server-before-multichannel-actually-starts).
+On server operating systems, SMB Multichannel starts quickly only one time per session. On client operating systems, you can configure a registry entry to start SMB Multichannel more quickly. For more information, see the following Blog Archive blog article: [How much traffic needs to pass between the SMB Client and Server before Multichannel actually starts?](/archive/blogs/josebda/how-much-traffic-needs-to-pass-between-the-smb-client-and-server-before-multichannel-actually-starts).
 
 ### SMB Multichannel doesn't aggregate multiple 10-GbE network adapters
 
 An RSS-capable 10-GbE network adapter is sometimes identified as non-RSS-capable. When this issue occurs, SMB uses only one TCP connection. When SMB Multichannel uses both RSS-capable and non-RSS network adapters, it should use only the RSS-capable network adapters.
 
-Server-class network adapters should appear as RSS-capable. If they don't, you should update the network adapter driver from the manufacturer's website, and then recheck the RSS settings.  
+Server-class network adapters should appear as RSS-capable. If they don't, update the network adapter driver from the manufacturer's website, and then recheck the RSS settings.  
 
-You might have to disable RSS on both network adapters to aggregate throughput. For more information, see the following blog article: [Windows Server 2012 File Server Tip: Make sure your network interfaces are RSS-capable](/archive/blogs/josebda/windows-server-2012-file-server-tip-make-sure-your-network-interfaces-are-rss-capable).
+You might have to disable RSS on both network adapters to aggregate throughput. For more information, see the following Blog Archive blog article: [Windows Server 2012 File Server Tip: Make sure your network interfaces are RSS-capable](/archive/blogs/josebda/windows-server-2012-file-server-tip-make-sure-your-network-interfaces-are-rss-capable).
 
 ### The virtual network adapter on the host doesn't perform well
 
-The virtual network adapter on the host isn't RSS-capable. Without an RSS-capable network adapter, SMB uses only one TCP connection. This behavior occurs when using 10-GbE network adapters, RSS-capable network adapters, and NIC Teaming.
+The virtual network adapter on the host isn't RSS-capable. Without an RSS-capable network adapter, SMB uses only one TCP connection. This behavior occurs when you use 10-GbE network adapters, RSS-capable network adapters, and NIC Teaming.
 
-To troubleshoot this issue, use multiple virtual network adapters to make sure that you have multiple TCP connections. For more information, see the following blog article: [Windows Server 2012 File Server Tip: Make sure your network interfaces are RSS-capable](/archive/blogs/josebda/windows-server-2012-file-server-tip-make-sure-your-network-interfaces-are-rss-capable).
+To troubleshoot this issue, use multiple virtual network adapters to make sure that you have multiple TCP connections. For more information, see the following Blog Archive blog article: [Windows Server 2012 File Server Tip: Make sure your network interfaces are RSS-capable](/archive/blogs/josebda/windows-server-2012-file-server-tip-make-sure-your-network-interfaces-are-rss-capable).
 
 ## SMB known issues
 
@@ -128,25 +128,25 @@ To troubleshoot this issue, use multiple virtual network adapters to make sure t
 
 ## Data collection
 
-Before contacting Microsoft support, you can gather information about your issue.
+Before you contact Microsoft Support, you can gather information about your issue.
 
 ### Prerequisites
 
-1. Run TSS in the security context of an account that has administrator privileges on the local system. The first time you run it, accept the EULA (after you accept the EULA, TSS won't prompt again).
+1. Run TSS in the security context of an account that has administrator privileges on the local system. The first time that you run it, accept the EULA. (After you accept the EULA, TSS won't prompt you again.)
 2. We recommend that you use the local machine `RemoteSigned` PowerShell execution policy.
 
 > [!NOTE]
 > If the current PowerShell execution policy doesn't allow you to run TSS, take the following actions:
 >
-> - Set the `RemoteSigned` execution policy for the process level by running the cmdlet `PS C:\> Set-ExecutionPolicy -scope Process -ExecutionPolicy RemoteSigned`.
-> - To verify if the change takes effect, run the cmdlet `PS C:\> Get-ExecutionPolicy -List`.
-> - Because the process level permissions only apply to the current PowerShell session, once the given PowerShell window in which TSS runs is closed, the assigned permission for the process level will also go back to the previously configured state.
+> - Set the `RemoteSigned` execution policy for the process level by running the `PS C:\> Set-ExecutionPolicy -scope Process -ExecutionPolicy RemoteSigned` cmdlet.
+> - To verify that the change takes effect, run the `PS C:\> Get-ExecutionPolicy -List` cmdlet.
+> - Because the process level permissions apply to only the current PowerShell session, after the given PowerShell window in which TSS runs is closed, the assigned permission for the process level will also revert to the previously configured state.
 
 ### Gather key information before contacting Microsoft support
 
-1. Download [TSS](https://aka.ms/getTSS) on all nodes and unzip it in the *C:\\tss* folder.
-2. Open the *C:\\tss* folder from an elevated PowerShell command prompt.
-3. Start the traces on the client and the server by using the following cmdlets:
+1. Download [TSS](https://aka.ms/getTSS) on all nodes, and expand the file into the *C:\\tss* folder.
+2. Open the *C:\\tss* folder in an elevated PowerShell Command Prompt window.
+3. Start the traces on the client and the server by running the following cmdlets:
 
     - Client:  
 
@@ -162,18 +162,18 @@ Before contacting Microsoft support, you can gather information about your issue
 
 4. Accept the EULA if the traces are run for the first time on the server or the client.
 5. Allow recording (PSR or video).
-6. Reproduce the issue before entering *Y*.
+6. Reproduce the issue before you enter *Y*.
 
      > [!NOTE]
-     > If you collect logs on both the client and the server, wait for this message on both nodes before reproducing the issue.
+     > If you collect logs on both the client and the server, wait for this message to appear on both nodes before you reproduce the issue.
 
 7. Enter *Y* to finish the log collection after the issue is reproduced.
 
-TSS stores the traces in a zip file in the *C:\\MS_DATA* folder. You can upload the file to the workspace for analysis.
+TSS stores the traces in a .zip file in the *C:\\MS_DATA* folder. You can upload the file to the workspace for analysis.
 
 ## References
 
 - [Advanced Troubleshooting Server Message Block (SMB)](/windows-server/storage/file-server/troubleshoot/troubleshooting-smb)
 - [Enable or disable SMB versions](/windows-server/storage/file-server/troubleshoot/detect-enable-and-disable-smbv1-v2-v3)
 - [File sharing using the SMBv3](/windows-server/storage/file-server/file-server-smb-overview)
-- [SMB Compression](/windows-server/storage/file-server/smb-compression)
+- [SMB compression](/windows-server/storage/file-server/smb-compression)
