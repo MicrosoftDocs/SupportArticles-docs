@@ -921,7 +921,7 @@ items:
       href: ./certificates-and-public-key-infrastructure-pki/apps-forcibly-closed-tls-connection-errors.md
     - name: Disable TLS 1.0 and 1.1 and force the use of TLS 1.2
       href: ./certificates-and-public-key-infrastructure-pki/disable-tls-1-1dot1-mbam-servers.md
-  - name: Certificate root update program
+  - name: Certificate Root Update Program
     items:
     - name: Crypt32 8 events continuously reported
       href: ./certificates-and-public-key-infrastructure-pki/crypt32-event-8.md
@@ -943,7 +943,7 @@ items:
       href: ./certificates-and-public-key-infrastructure-pki/certutil-view-not-return-issued-certificate.md
     - name: Approval required for certificate renewals
       href: ./certificates-and-public-key-infrastructure-pki/approval-required-certificate-renewals-autoenrollment.md
-  - name: Active Directory Certificate Services
+  - name: Active Directory Certificate Services (ADCS)
     items:
     - name: How to decommission Windows enterprise CA and remove related objects
       href: ./certificates-and-public-key-infrastructure-pki/decommission-enterprise-certification-authority-and-remove-objects.md
@@ -959,7 +959,7 @@ items:
       href: ./certificates-and-public-key-infrastructure-pki/description-support-suite-b-cryptographic-ipsec.md
     - name: Requirements for domain controller certificates from a third-party CA
       href: ./certificates-and-public-key-infrastructure-pki/requirements-domain-controller.md
-  - name: Network device enrollment services
+  - name: Network Device Enrollment Services (NDES) 
     items:
     - name: '"Http error 500.0" when getting the NDES enrollment challenge password'
       href: ./certificates-and-public-key-infrastructure-pki/http-error-500-internal-server-error.md
@@ -971,7 +971,7 @@ items:
     items:
     - name: KDC_ERR_C_PRINCIPAL_UNKNOWN in S4U2Self request
       href: ./certificates-and-public-key-infrastructure-pki/kdc-err-c-principal-unknown-s4u2self-request.md
-  - name: Certificate based authentication
+  - name: Certificate-based authentication
     items:
     - name: Security certificate validation fails
       href: ./certificates-and-public-key-infrastructure-pki/secured-website-certificate-validation-fails.md
@@ -979,13 +979,13 @@ items:
       href: ./certificates-and-public-key-infrastructure-pki/root-ca-certificate-doesnt-appear.md
     - name: Use and troubleshoot CryptAcquireContext function
       href: ./certificates-and-public-key-infrastructure-pki/cryptacquirecontext-troubleshooting.md
-  - name: Certificate web enrollment-pages
+  - name: Certificate web enrollment pages (CWE)
     items:
     - name: Can't request certificate from web enrollment pages
       href: ./certificates-and-public-key-infrastructure-pki/no-certificate-templates-be-found.md
     - name: Can't request certificate using web enrollment
       href: ./certificates-and-public-key-infrastructure-pki/cannot-request-certificate-with-web-enrollment.md
-  - name: Encrypting file system
+  - name: Encrypting File System (EFS)
     items:
     - name: Client computers can't encrypt a file in a domain
       href: ./certificates-and-public-key-infrastructure-pki/recovery-policy-contains-invalid-recovery-certificate.md
