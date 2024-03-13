@@ -40,7 +40,7 @@ That's why you see the same private DNS zone name *\<GUID>.privatelink.\<region>
 
 To resolve this issue, follow these steps:
 
-1. Remove the link between the AKS cluster's VNET and the private DNS zone created in the wrong resource group or subscription.
+1. Remove the link between the AKS cluster's virtual network (VNET) and the private DNS zone created in the wrong resource group or subscription.
 1. Update the cluster by running the following command:
 
     ```azurecli
