@@ -21,7 +21,7 @@ landingContent:
     linkLists:
       - linkListType: reference
         links:
-          - text: Microsoft Entra troubleshooting documentation
+          - text: Microsoft Entra ID troubleshooting documentation
             url: ../entra-id/welcome-entra-id.yml
 
  # Card

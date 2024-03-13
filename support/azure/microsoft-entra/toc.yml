@@ -1,6 +1,10 @@
 - name: Welcome
   href: welcome-microsoft-entra.yml
 
+- name: Microsoft Entra ID
+  items:
+  - name: Microsoft Entra ID troubleshooting documentation
+    href: ../entra-id/welcome-entra-id.yml
 - name: Global Secure Access
   items:
   - name: Troubleshoot Global Secure Access client for Windows issues

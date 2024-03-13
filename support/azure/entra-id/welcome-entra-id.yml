@@ -1,7 +1,7 @@
 ### YamlMime:Landing
 
-title: Microsoft Entra troubleshooting documentation # < 60 chars
-summary: Welcome to Microsoft Entra troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Microsoft Entra ID. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+title: Microsoft Entra ID troubleshooting documentation # < 60 chars
+summary: Welcome to Microsoft Entra ID troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Microsoft Entra ID. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
 metadata:
   title: Troubleshoot Microsoft Entra ID issues
   description: Documentation for troubleshooting common issues with Microsoft Entra ID. # Required; article description that is displayed in search results. < 160 chars.
