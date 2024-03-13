@@ -30,6 +30,8 @@ This article introduces the PowerShell commands that you can use to enable or di
 > [!NOTE]
 > Before you run any of the commands in the following steps, first [connect to Exchange Online by using remote PowerShell](/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell).
 
+> [!CAUTION]
+> Protocol access follows the authenticated user not the mailbox.  Therefore, disabling any protocol on a shared mailbox will not prevent users that have that protocol enabled from accessing the shared mailbox.
 ## Enable or disable POP3 for an Exchange Online mailbox
 
 To enable POP3 for a specific user, run the following cmdlet:
