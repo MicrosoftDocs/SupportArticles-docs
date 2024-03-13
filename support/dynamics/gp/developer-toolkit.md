@@ -2,7 +2,7 @@
 title: The Developer Toolkit for Microsoft Dynamics GP
 description: This article describes the Developer Toolkit for Microsoft Dynamics GP.
 ms.reviewer: theley
-ms.date: 02/19/2024
+ms.date: 03/12/2024
 ---
 # The Developer Toolkit for Microsoft Dynamics GP
 
