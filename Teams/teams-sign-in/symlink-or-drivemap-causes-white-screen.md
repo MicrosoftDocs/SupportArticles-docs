@@ -30,7 +30,7 @@ When you use a Unix symlink or map a drive to C:\users, the Teams app with start
 
 When you use an installation script to install Microsoft Teams to Program Files instead of the default location, the client won't automatically update when a new version is available. This is an expected limitation of Teams if the installation location is changes by a custom script.
 
-## More information
+## Resolution
 
 Make sure that you install the application in the default location: `user\Appdata`. If the mapping must exist, use the web version of Microsoft Teams instead.
 
