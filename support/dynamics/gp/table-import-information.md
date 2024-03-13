@@ -1,8 +1,8 @@
 ---
 title: General information about Table Import in Microsoft Dynamics GP
 description: This article lists some facts about Table Import in Microsoft Dynamics GP.
-ms.reviewer: dlanglie
-ms.date: 03/31/2021
+ms.reviewer: theley, dlanglie
+ms.date: 03/13/2024
 ---
 # General information about Table Import in Microsoft Dynamics GP
 

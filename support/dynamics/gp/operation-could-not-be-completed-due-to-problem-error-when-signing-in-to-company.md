@@ -1,9 +1,9 @@
 ---
 title: The operation could not be completed due to a problem in the data provider framework error when you sign in to a company
 description: Describes an error message you may receive in Management Reporter 2012. Provides a resolution.
-ms.reviewer: kellybj, kevogt
+ms.reviewer: theley, kellybj, kevogt
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # "The operation could not be completed due to a problem in the data provider framework" error when signing in to a company
 

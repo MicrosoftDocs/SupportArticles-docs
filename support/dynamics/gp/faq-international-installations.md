@@ -1,8 +1,8 @@
 ---
 title: FAQ about international installations
 description: Contains answers to frequently asked questions about international installations of Microsoft Great Plains.
-ms.reviewer: kyouells
-ms.date: 03/31/2021
+ms.reviewer: theley, kyouells
+ms.date: 03/13/2024
 ---
 # Answers to frequently asked questions about international installations of Microsoft Dynamics GP
 

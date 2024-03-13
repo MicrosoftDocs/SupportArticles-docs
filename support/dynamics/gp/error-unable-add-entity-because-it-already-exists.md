@@ -1,9 +1,9 @@
 ---
 title: Unable to add entity because it already exists error when you transfer a requisition to a purchase order in Microsoft Dynamics GP
 description: Describes a problem where you receive the error message - Unable to add entity because it already exists.
-ms.reviewer: steves, ppeterso
+ms.reviewer: theley, steves, ppeterso
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # Error message when you transfer a requisition to a purchase order in Microsoft Dynamics GP: "Unable to add entity because it already exists"
 

@@ -1,9 +1,9 @@
 ---
 title: Reduce a customer's outstanding credit balance when you have Receivables Management and Payables Management registered in Microsoft Dynamics GP
 description: Describes steps to reduce a customer's outstanding credit balance when you have Receivables Management and Payables Management registered in Microsoft Dynamics GP.
-ms.reviewer: lmuelle
+ms.reviewer: theley, lmuelle
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # How to reduce a customer's outstanding credit balance when you have Receivables Management and Payables Management registered in Microsoft Dynamics GP
 

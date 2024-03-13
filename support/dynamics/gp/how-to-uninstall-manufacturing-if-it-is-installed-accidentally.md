@@ -1,9 +1,9 @@
 ---
 title: How to uninstall Manufacturing if installed accidentally
 description: Describes how to uninstall Manufacturing in Microsoft Dynamics GP if Manufacturing is installed accidentally.
-ms.reviewer: beckyber
+ms.reviewer: theley, beckyber
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # How to uninstall Manufacturing in Microsoft Dynamics GP if Manufacturing is installed accidentally
 
