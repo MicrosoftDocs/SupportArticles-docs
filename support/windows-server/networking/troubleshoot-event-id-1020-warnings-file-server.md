@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot event ID 1020 warnings on a file server
 description: Explains how to troubleshoot event ID 1020 warnings on a file server
-ms.date: 12/26/2023
+ms.date: 03/12/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
