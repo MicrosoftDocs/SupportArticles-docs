@@ -11,7 +11,7 @@ ms.reviewer: mikerooney, v-weizhu, axelg, josebl, v-leedennis
 
 This guide is designed to help you identify and resolve any unlikely problems that you might encounter within the API server in large Microsoft Azure Kubernetes Services (AKS) deployments.
 
-Microsoft has tested the reliability and performance of the API server at a scale of 5,000 nodes and 65,000 pods. The cluster that contains the API server has the ability to automatically scale out and deliver [Kubernetes Service Level Objectives (SLOs)](https://github.com/kubernetes/community/blob/master/sig-scalability/slos/slos.md). If you experience high latencies or time-outs, it's probably because there's a resource leakage on the distributed `etc` directory (etcd), or an offending client has excessive API calls.
+Microsoft has tested the reliability and performance of the API server at a scale of 5,000 nodes and 200000 pods. The cluster that contains the API server has the ability to automatically scale out and deliver [Kubernetes Service Level Objectives (SLOs)](https://github.com/kubernetes/community/blob/master/sig-scalability/slos/slos.md). If you experience high latencies or time-outs, it's probably because there's a resource leakage on the distributed `etc` directory (etcd), or an offending client has excessive API calls.
 
 ## Prerequisites
 
