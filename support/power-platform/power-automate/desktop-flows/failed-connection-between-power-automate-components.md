@@ -1,9 +1,8 @@
 ---
 title: Failed connection between Power Automate components
 description: Based on the version of Power Automate, provides resolutions to a Power Automate connection error that occurs on startup.
-ms.reviewer: quseleba
+ms.reviewer: kokapare, pefelesk, tapanm
 ms.date: 03/12/2024
-ms.subservice: power-automate-desktop-flows
 ms.custom: sap:Desktop flows\Cannot create desktop flow connection
 ---
 
