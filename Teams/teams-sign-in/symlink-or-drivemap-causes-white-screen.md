@@ -1,5 +1,5 @@
 ---
-title: 'Using a symlink or drive map causes Teams to open with white screen'
+title: Using a symlink or drive map causes Teams to open with white screen
 ms.author: luche
 author: helenclu
 ms.date: 10/30/2023
