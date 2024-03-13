@@ -20,7 +20,7 @@ ms.reviewer: scapero
 description: Resolves an issue where Teams opens with a white screen when you use a Unix symlink or drive map to C:\users.
 ---
 
-# Using a symlink or mapping a drive to C:\users causes Teams to start with a white screen
+# Teams starts with a white screen
 
 ## Symptoms
 
