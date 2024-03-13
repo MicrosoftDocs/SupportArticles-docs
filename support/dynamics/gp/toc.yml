@@ -105,8 +105,6 @@
       href: errors-display-when-you-integrate-accounts.md
     - name: Example of a PATimeSheetsType XML Schema in eConnect
       href: example-of-patimesheetstype-xml-schema-in-econnect.md
-    - name: Faq about the File Exchange System
-      href: frequently-asked-questions-about-file-exchange-system.md
     - name: Faq about the integration of SSRS
       href: faq-the-integration-ssrs.md
     - name: Fatal error during installation when installing Integration Manager
@@ -937,8 +935,6 @@
         href: how-to-create-an-excel-spreadsheet-to-load-actuals-into-forecaster.md
       - name: Information on using the Microsoft Management Reporter Migration Wizard
         href: information-on-using-microsoft-management-reporter-migration-wizard.md
-      - name: Management Reporter 2012 AX 2012 User Validation diagnostic
-        href: management-reporter-2012-ax-2012-user-validation-diagnostic.md
       - name: Management Reporter 2012 Base diagnostic
         href: management-reporter-2012-base-diagnostic.md
       - name: Management Reporter 2012 Data mart integration error Index was out of range
@@ -953,8 +949,6 @@
         href: management-reporter-report-viewer-stops-working-if-image-is-in-header.md
       - name: Management Reporter Report Viewer stops working when viewing a report
         href: management-reporter-report-viewer-stops-working-when-reviewing-report.md
-      - name: MaxItemsInObjectGraphin Microsoft Management Reporter AX 2012 DDM task
-        href: maxitemsinobjectgraph-error-in-management-reporter-ax-2012-ddm-task.md
       - name: Microsoft Management Reporter 2012 Cumulative Update 10
         href: microsoft-management-reporter-2012-cumulative-update-10.md
       - name: Microsoft Management Reporter 2012 Cumulative Update 11
@@ -969,8 +963,6 @@
         href: object-reference-not-set-to-instance-of-object-error-when-creating-report-in-management-reporter.md
       - name: Processing will be aborted when running ERP Integration
         href: processing-will-be-aborted-error-when-running-erp-integration.md
-      - name: Removal of the Dynamics AX 2012 Legacy Data Provider for Management Reporter 2012
-        href: removal-of-dynamics-ax-2012-legacy-data-provider-for-management-reporter-2012.md
       - name: The company calendar couldn't be retrieved
         href: company-calendar-could-not-be-retrieved.md
       - name: The connection to the Microsoft Dynamics GP database failed
