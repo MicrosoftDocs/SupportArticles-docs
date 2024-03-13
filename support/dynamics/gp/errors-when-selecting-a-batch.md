@@ -3,7 +3,7 @@ title: Errors when selecting a batch
 description: Provides a solution to errors that occur when you select a batch in the Build Payroll Checks window in Microsoft Dynamics GP.
 ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 02/18/2024
+ms.date: 03/12/2024
 ---
 # Error messages when you select a batch in the Build Payroll Checks window in Microsoft Dynamics GP
 
