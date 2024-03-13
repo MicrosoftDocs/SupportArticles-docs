@@ -33,22 +33,20 @@ Warning Threshold (in milliseconds): 15000
 Guidance:  
 The underlying file system has taken too long to respond to an operation. This typically indicates a problem with the storage and not SMB.
 
-You may also observe:
+You might also observe the following symptoms:
 
-- Performance issues on clients working with this file server.
-- Connectivity issues for clients working with this file server.
-- Performance issues for applications or other components that run locally on this file server.
+- Clients that use this file server experience performance issues.
+- Clients that use this file server experience connectivity issues.
+- Applications or other components that run locally on this file server experience performance issues.
 - The file server appears to stop responding.
 
 ## Cause
 
-This issue occurs because filesystem takes more than 15 seconds (default warning threshold) to complete an I/O from the file server.  
+This event indicates that the SMB server's file system can't complete a read/write (also known as I/O) operation within the time allowed. By default, the time allowed is 15 seconds. Typically, we expect such operations to complete in a single-digit millisecond timeframe.  
 
-The SMB Server has encountered a stalled I/O. This indicates severe issues with the underlaying file system instead of the SMB itself.  
+The event data includes the exact duration of the delay as well as the SMB command code that encountered the delay. 
 
-For a good performing file server, we expect single-digit millisecond response times from its filesystem.  
-
-The exact duration of the delay as well as the SMB Command Code that encountered the delay can be retrieved from the Event. A list of SMB2 Command Codes can be found at [2.2.1.2 SMB2 Packet Header - SYNC](/openspecs/windows_protocols/ms-smb2/fb188936-5050-48d3-b350-dc43059638a4).  
+A list of SMB2 Command Codes can be found at [2.2.1.2 SMB2 Packet Header - SYNC](/openspecs/windows_protocols/ms-smb2/fb188936-5050-48d3-b350-dc43059638a4).  
 
 File system delays in the magnitude of several seconds can be caused by mal-functioning filesystem filter drivers.  
 
@@ -89,7 +87,7 @@ Furthermore, long I/O response times can lead to problems accessing shares and m
 
 Other applications and components that are running on this server and access the same file system may also be negatively affected by the long response times. Those applications and components may not possess their own logging or monitoring for high I/O response times.  
 
-> [!Note]
+> [!NOTE]  
 >
 > - Not all disks are affected.  
 > - Not all disks might be affected at the same time.
