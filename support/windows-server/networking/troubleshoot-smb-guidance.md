@@ -31,7 +31,7 @@ Communicating correct terminology is a key aspect of quality SMB troubleshooting
 - If SMBv1 is disabled on a device that supports only SMBv1, you can't access that device. In this situation, upgrade your system.
 - You can't disable SMBv2 or SMBv3 separately because these versions are part of the same driver.
 - Analyze the traffic: SMB is an application-level protocol that uses TCP/IP as the network transport protocol. Therefore, an SMB issue might indicate that there are underlying TCP/IP issues.
-- Analyze the protocol: Look at the actual SMB protocol details in the network trace to understand the exact commands and options that are used.
+- Analyze the protocol: To understand the exact commands and options that are used, look at the actual SMB protocol details in the network trace.
 - Update SMB-related system files: Keep the system files updated. Make sure that the latest [update rollup](https://support.microsoft.com/help/4498140/windows-10-update-history) is installed.
 
 ## SMB file information
@@ -47,7 +47,7 @@ SMB Client binaries that are listed under *%windir%\\system32\\Drivers*:
 
 SMB Server binaries that are listed under *%windir%\\system32*:
 
-- srvsvc.dll
+- Srvsvc.dll
 
 SMB Server binaries that are listed under *%windir%\\system32\\Drivers*:
 
@@ -78,9 +78,9 @@ You can use the `Net Use * /delete` command to disconnect active or remembered s
 
 ### When you access a Scale-Out File Server, performance is limited
 
-The client access network uses high-speed remote direct memory access (RDMA), but the cluster network doesn't. Because of this behavior, redirection occurs only on the cluster network. This is usually a 1-GbE network adapter.
+The client access network uses high-speed remote direct memory access (RDMA), but the cluster network doesn't. Because of this behavior, redirection occurs only on the cluster network. The cluster network typically connects to 1-GbE network adapters.
 
-To troubleshoot this issue, you can configure the option to use the client access network for Cluster Shared Volumes (CSV). Or, upgrade to Windows Server 2012 R2 or a later version. That system automatically redirects clients to the cluster node that has the best access to the volume of the file share. For more information, see the following Blog Archive blog article: [Automatic SMB Scale-Out Rebalancing in Windows Server 2012 R2](/archive/blogs/josebda/automatic-smb-scale-out-rebalancing-in-windows-server-2012-r2).
+To troubleshoot this issue, you can configure the option to use the client access network for Cluster Shared Volumes (CSV). Or, upgrade to Windows Server 2012 R2 or a later version. That system automatically redirects clients to the cluster node that has the best access to the volume of the file share. For more information, see the following Blog Archive article: [Automatic SMB Scale-Out Rebalancing in Windows Server 2012 R2](/archive/blogs/josebda/automatic-smb-scale-out-rebalancing-in-windows-server-2012-r2).
 
 ### SMB prefers the slower physical network adapter to the virtual network adapter
 
@@ -88,7 +88,7 @@ The virtual network adapter on the host isn't RSS-capable. The physical network 
 
 To troubleshoot this issue, disable the RSS capability on the physical network adapter, or use SMB Multichannel constraints to restrict SMB communication to one or more defined network interfaces. For more information, see the [New-SmbMultichannelConstraint](/powershell/module/smbshare/new-smbmultichannelconstraint) SMB Share cmdlet in Windows PowerShell.
 
-### SMB reports the network adapter isn't RDMA-capable even though you believe it is
+### SMB reports the network adapter isn't RDMA-capable even though you believe that it is
 
 This issue occurs because RDMA-capable network adapters that have older drivers or firmware might not correctly identify themselves as being RDMA-capable.
 
@@ -96,7 +96,7 @@ To troubleshoot this issue, update the network adapter firmware and driver from 
 
 ### The required amount of network traffic before SMB Multichannel starts varies
 
-SMB Multichannel is used to discover the RSS and RDMA capabilities of network adapters. On server operating systems, SMB Multichannel starts when the initial read or write operation occurs. On client operating systems, SMB Multichannel doesn't start until a certain amount of network traffic occurs.
+The SMB Multichannel feature is used to discover the RSS and RDMA capabilities of network adapters. On server operating systems, SMB Multichannel starts when the initial read or write operation occurs. On client operating systems, SMB Multichannel doesn't start until a certain amount of network traffic occurs.
 
 On server operating systems, SMB Multichannel starts quickly only one time per session. On client operating systems, you can configure a registry entry to start SMB Multichannel more quickly. For more information, see the following Blog Archive blog article: [How much traffic needs to pass between the SMB Client and Server before Multichannel actually starts?](/archive/blogs/josebda/how-much-traffic-needs-to-pass-between-the-smb-client-and-server-before-multichannel-actually-starts).
 
@@ -162,12 +162,12 @@ Before you contact Microsoft Support, you can gather information about your issu
 
 4. Accept the EULA if the traces are run for the first time on the server or the client.
 5. Allow recording (PSR or video).
-6. Reproduce the issue before you enter *Y*.
+6. Reproduce the issue.
 
-     > [!NOTE]
-     > If you collect logs on both the client and the server, wait for this message to appear on both nodes before you reproduce the issue.
+   > [!NOTE]  
+   > If you collect logs on both the client and the server, wait for this message to appear on both nodes before you reproduce the issue.
 
-7. Enter *Y* to finish the log collection after the issue is reproduced.
+7. After you reproduce the issue, enter *Y* to finish logging data.
 
 TSS stores the traces in a .zip file in the *C:\\MS_DATA* folder. You can upload the file to the workspace for analysis.
 
