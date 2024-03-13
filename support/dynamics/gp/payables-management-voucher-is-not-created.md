@@ -3,7 +3,7 @@ title: Payables Management voucher isn't created
 description: Provides a solution to an issue where Payables Management voucher isn't created from service call billing in Service Call Management.
 ms.reviewer: beckyber 
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # Payables Management voucher isn't created from service call billing in Service Call Management in Microsoft Dynamics GP 2010
 

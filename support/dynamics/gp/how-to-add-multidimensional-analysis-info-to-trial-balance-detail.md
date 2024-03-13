@@ -3,7 +3,7 @@ title: Add Multidimensional Analysis info to Trial Balance Detail
 description: How to add Multidimensional Analysis information to the Trial Balance Detail report in Microsoft Dynamics GP.
 ms.reviewer: lmuelle
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # How to add Multidimensional Analysis information to the Trial Balance Detail report in Microsoft Dynamics GP
 

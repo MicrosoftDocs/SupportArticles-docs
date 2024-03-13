@@ -3,7 +3,7 @@ title: RPC Server is unavailable
 description: Provides a solution to an error that occurs when you run an integration in Integration Manager for Microsoft Dynamics GP 10.0.
 ms.reviewer: kvogel, dlanglie
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # "RPC Server is unavailable" Error message when you run an integration in Integration Manager for Microsoft Dynamics GP 10.0
 

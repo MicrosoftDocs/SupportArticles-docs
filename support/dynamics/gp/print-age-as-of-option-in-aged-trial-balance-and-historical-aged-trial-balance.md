@@ -2,7 +2,7 @@
 title: Print Age as of in Aged Trial Balance and Historical Aged Trial Balance
 description: Describes the difference between the Print/Age as of option in the Aged Trial Balance and in the Historical Aged Trial Balance.
 ms.reviewer: v-jomcc
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # The difference between the "Print/Age as of" option in the Aged Trial Balance and in the Historical Aged Trial Balance
 

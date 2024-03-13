@@ -3,7 +3,7 @@ title: An open apply record exists or an apply record exists outside the selecte
 description: Describes a problem that occurs if a document has an asterisk next to the body of the report. A resolution is provided.
 ms.reviewer: lmuelle
 ms.topic: troubleshooting
-ms.date: 04/22/2021
+ms.date: 03/13/2024
 ---
 # "An open apply record exists or an apply record exists outside the selected range" error when printing Receivables Transaction History Removal report
 

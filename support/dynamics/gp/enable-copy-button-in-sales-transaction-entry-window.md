@@ -2,7 +2,7 @@
 title: Enable the Copy button in the Sales Transaction Entry window, Purchase Order Entry window, and Item Maintenance window
 description: Describes how to enable the Copy button in the Sales Transaction Entry window, in the Purchase Order Entry window, and in the Item Maintenance window in Microsoft Dynamics GP.
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # How to enable the "Copy" button in the Sales Transaction Entry window, Purchase Order Entry window, and Item Maintenance window in Microsoft Dynamics GP
 

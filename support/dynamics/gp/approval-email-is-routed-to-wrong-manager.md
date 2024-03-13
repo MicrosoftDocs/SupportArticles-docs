@@ -3,7 +3,7 @@ title: Approval email is routed to wrong manager
 description: Provides a solution to an issue where the approval email for a Timecard isn't routed to the correct manager in Microsoft Dynamics GP.
 ms.reviewer: cwaswick
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # The approval email for a Timecard isn't routed to the correct manager in Microsoft Dynamics GP
 

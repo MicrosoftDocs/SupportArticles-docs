@@ -3,7 +3,7 @@ title: User actions in Management Reporter Report Designer are slow
 description: Describes performance issues in Management Reporter 2012. Provides a resolution.
 ms.reviewer: kellybj, kevogt
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # User actions in Management Reporter Report Designer are slow
 

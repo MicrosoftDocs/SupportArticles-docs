@@ -2,7 +2,7 @@
 title: Microsoft Management Reporter 2012 Cumulative Update 10 (CU10) is available
 description: Lists the fixes of cumulative update 10 for Management Report 2012.
 ms.reviewer: gbyer
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # Microsoft Management Reporter 2012 Cumulative Update 10 (CU10) is available
 

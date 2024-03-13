@@ -3,7 +3,7 @@ title: Return Code 2 error when running depreciation in Fixed Assets
 description: When you run depreciation in Fixed Assets in Microsoft Dynamics GP, you receive a Return Code 2 error. Provides a resolution.
 ms.reviewer:
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # "Return Code 2" error when you run depreciation in Fixed Assets in Microsoft Dynamics GP
 

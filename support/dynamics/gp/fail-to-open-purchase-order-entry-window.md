@@ -2,7 +2,7 @@
 title: Error when you open the Purchase Order Entry window in Purchase Order Processing in Microsoft Dynamics GP
 description: Provides a solution to an error that occurs when you open the **Purchase Order Entry** window in Purchase Order Processing in Microsoft Dynamics GP.
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # Error message when you try to open the Purchase Order Entry window in Purchase Order Processing in Microsoft Dynamics GP 10.0: "You don't have security privileges to open this window"
 

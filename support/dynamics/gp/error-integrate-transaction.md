@@ -3,7 +3,7 @@ title: Error when you integrate a transaction
 description: This article provides a resolution for the problem that occurs when Sales Tax Detail Summary data is mapped for the invoice.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # Error message when you integrate a transaction in Microsoft Dynamics GP 9.0 or in Microsoft Great Plains 8.0
 

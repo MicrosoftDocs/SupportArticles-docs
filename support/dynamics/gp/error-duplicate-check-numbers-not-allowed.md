@@ -3,7 +3,7 @@ title: Duplicate check numbers are not allowed or Data entry errors exist error
 description: Describes errors when EFT computer batch goes to Batch Recovery in Payables Management for Microsoft Dynamics GP.
 ms.reviewer: cwaswick, lmuelle
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # EFT computer batch goes to Batch Recovery and produces error message in Payables Management for Microsoft Dynamics GP: "Duplicate check numbers are not allowed" or "Data entry errors exist"
 

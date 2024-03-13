@@ -3,7 +3,7 @@ title: Privilege Error
 description: Provides a solution to an error that occurs when you select Yes to include new code in Microsoft Dynamics GP.
 ms.reviewer: v-jomcc
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # "Privilege Error" Error message displays when you select Yes to include new code in Microsoft Dynamics GP
 

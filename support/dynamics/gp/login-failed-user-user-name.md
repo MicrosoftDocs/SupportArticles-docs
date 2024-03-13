@@ -3,7 +3,7 @@ title: Login failed for user User Name
 description: Provides a solution to an error that occurs when you run the UserInfoGet.CreateADOConnection VBA function in Microsoft Dynamics GP 10.0.
 ms.reviewer: grwill, KVogel
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # "Login failed for user '[User Name]'" Error message when you run the UserInfoGet.CreateADOConnection VBA function in Microsoft Dynamics GP 10.0
 

@@ -3,7 +3,7 @@ title: Report Viewer stops working if image is in header
 description: Describes an error that you may receive when you view a report that contains an image in the header. Provides a workaround.
 ms.reviewer: kellybj, kevogt
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # Microsoft Management Reporter Report Viewer may stop working when there is an image in header
 

@@ -3,7 +3,7 @@ title: What to expect when processing an Inventory transfer on Microsoft Dynamic
 description: Describes an issue where the Average Cost is recalculating differently than what was expected.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # What to expect when processing an Inventory transfer on Microsoft Dynamics GP 9.0 or later that originated on Microsoft Business Solutions-Great Plains 8.0
 

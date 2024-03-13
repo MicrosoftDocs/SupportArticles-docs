@@ -3,7 +3,7 @@ title: Transaction info not imported if SQL table used as Integration source
 description: Describes how to get transaction line information to import when you use a Microsoft SQL Server table as your Integration source for Integration Manager for Microsoft Dynamics GP.
 ms.reviewer: v-anlang, dlanglie
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # Transaction line information is not imported when you use a Microsoft SQL Server table as an Integration source in Integration Manager for Microsoft Dynamics GP
 

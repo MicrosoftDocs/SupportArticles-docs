@@ -3,7 +3,7 @@ title: YTD Depreciation field value in the Asset Book window isn't set to zero f
 description: Fixes an issue where YTD Depreciation field in the Asset Book window isn't set to zero for the new fiscal year in Fixed Asset Management in Microsoft Dynamics GP.
 ms.reviewer: dbader
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # The value in the "YTD Depreciation" field in the Asset Book window isn't set to zero for the new fiscal year in Fixed Asset Management in Microsoft Dynamics GP
 

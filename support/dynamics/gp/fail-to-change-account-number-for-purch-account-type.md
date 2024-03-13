@@ -3,7 +3,7 @@ title: Error when you change account number for PURCH account type in the Purcha
 description: Describes a problem where you receive an error message (You cannot change the PURCH account at the summary level) when you try to change the account number for the PURCH account type. A resolution is provided.
 ms.reviewer:
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # Error when you try to change the account number for the PURCH account type in the Purchasing Distribution Entry window in Microsoft Dynamics GP: "You cannot change the PURCH account at the summary level"
 

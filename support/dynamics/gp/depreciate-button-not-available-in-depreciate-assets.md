@@ -3,7 +3,7 @@ title: Depreciate not available in Depreciate Assets
 description: The Depreciate button is not available in the Depreciate Assets window when you try to depreciate assets in Microsoft Dynamics GP. Provides a resolution.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # The Depreciate button is not available in the Depreciate Assets window when you try to depreciate assets in Microsoft Dynamics GP
 

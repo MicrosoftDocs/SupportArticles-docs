@@ -3,7 +3,7 @@ title: Add the Hold field from the RM Customer MSTR table to the Sales Order Pro
 description: Contains step-by-step instructions about how to add the Hold field from the RM Customer MSTR table to the Sales Order Processing Invoice report form in Manufacturing in Microsoft Dynamics GP 9.0.
 ms.topic: how-to
 ms.reviewer: aeckman
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # How to add the Hold field from the RM Customer MSTR table to the Sales Order Processing Invoice report form when you use Manufacturing in Dynamics GP
 

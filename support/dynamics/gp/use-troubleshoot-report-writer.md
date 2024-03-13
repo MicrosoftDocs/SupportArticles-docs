@@ -3,7 +3,7 @@ title: Use and troubleshoot Report Writer
 description: Provides information about how to use Report Writer and how to troubleshoot common problems in Report Writer.
 ms.reviewer:
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # How to use and troubleshoot Report Writer in Microsoft Dynamics GP
 

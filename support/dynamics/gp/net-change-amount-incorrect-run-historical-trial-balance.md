@@ -3,7 +3,7 @@ title: Change amount is incorrect when you run the Historical Trial Balance repo
 description: This article provides a workaround for the problem that occurs when you run the Historical Trial Balance report in Microsoft.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # The net change amount is incorrect when you run the Historical Trial Balance report in Microsoft
 

@@ -3,7 +3,7 @@ title: A get or change next operation on table GL_Account_MSTR is for an invalid
 description: Error occurs when using the scroll buttons in the GL Summary Inquiry window or other GL reports in Microsoft Dynamics GP. Provides a resolution.
 ms.reviewer: cwaswick
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # "A get/change next operation on table 'GL_Account_MSTR' is for an invalid key" message when scrolling in GL reports
 

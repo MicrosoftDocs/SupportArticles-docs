@@ -3,7 +3,7 @@ title: Vac Sick grayed out or missing on Employee Maintenance Card
 description: The Vac Sick tab is grayed out or missing on the Employee Maintenance Card in Payroll in Microsoft Dynamics GP. Provides a resolution.
 ms.reviewer: cwaswick
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # The Vac/Sick tab is grayed out or missing on the Employee Maintenance Card in Microsoft Dynamics GP
 

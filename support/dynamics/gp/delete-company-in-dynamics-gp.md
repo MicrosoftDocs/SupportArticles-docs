@@ -2,7 +2,7 @@
 title: Delete a company in Microsoft Dynamics GP
 description: Describes how to delete a company in Microsoft Dynamics GP if you also run Microsoft SQL Server. The procedure requires that you delete the company both from the DYNAMICS database and from the computer that is running SQL Server.
 ms.reviewer: kyouells
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # Delete a company in Microsoft Dynamics GP
 

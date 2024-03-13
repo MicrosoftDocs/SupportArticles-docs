@@ -2,7 +2,7 @@
 title: PAYG and BAS error messages in Microsoft Dynamics GP
 description: Describes the Pay As You Go (PAYG) error codes and the Business Activity Statement (BAS) error codes in Microsoft Great Plains 8.0. Lists the error or warning messages of the BAS and of the PAYG vendor summaries.
 ms.reviewer:
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # Description of Pay As You Go error messages and Business Activity Statement error messages in Microsoft Dynamics GP
 
@@ -122,4 +122,3 @@ The error messages display a red cross. The warning messages display a yellow ex
 |58|Supplier Street Address ID, Postcode does not contain 4 digits|
 |59|Supplier Postal Address ID, State Invalid Abbreviation|
 |60|Supplier Postal Address ID, Postcode does not contain 4 digits|
-  

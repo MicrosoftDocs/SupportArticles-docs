@@ -3,7 +3,7 @@ title: MRP is suggesting to create a Purchase Order instead of Moving in an exis
 description: Provides a solution to an issue where MRP is suggesting to create a Purchase Order instead of moving in an existing PO.
 ms.reviewer:
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # MRP is suggesting to create a Purchase Order instead of moving in an existing PO in Microsoft Dynamics GP
 

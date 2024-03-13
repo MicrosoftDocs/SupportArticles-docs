@@ -3,7 +3,7 @@ title: How to prevent zero dollar remittances from printing in Payables Manageme
 description: Describes how to prevent zero dollar remittances from printing in Payables Management in Microsoft Dynamics GP.
 ms.reviewer: 
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # How to prevent zero dollar remittances from printing in Payables Management in Microsoft Dynamics GP
 

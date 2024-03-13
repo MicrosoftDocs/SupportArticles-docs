@@ -3,7 +3,7 @@ title: Closing of Purchase Orders does not always generate a journal entry backi
 description: Provides a solution to an issue where the Closing of Purchase Orders does not always generate a journal entry backing out Accrued Purchases in Microsoft Dynamics GP.
 ms.reviewer:
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # The Closing of Purchase Orders does not always generate a journal entry backing out Accrued Purchases in Microsoft Dynamics GP
 

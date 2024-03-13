@@ -3,7 +3,7 @@ title: Save/Delete and Tax Detail ID Lookup buttons is grayed out on VAT Daybook
 description: The Save/Delete buttons grayed out and Lookup button for Tax Detail ID is grayed out on the VAT Daybook Column Codes window in Microsoft Dynamics GP. This article provides a solution to this issue.
 ms.topic: troubleshooting
 ms.reviewer: cwaswick
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # The Save/Delete buttons and Tax Detail ID Lookup button is grayed out on VAT Daybook Column Codes window in Microsoft Dynamics GP
 

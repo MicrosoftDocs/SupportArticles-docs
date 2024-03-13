@@ -3,7 +3,7 @@ title: Process a purchase order return
 description: Describes how to process a purchase order return in which the original supplier's invoice is paid by a credit card vendor.
 ms.reviewer: lmuelle
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # How to process a purchase order return in which the original supplier's invoice is paid by a credit card vendor
 

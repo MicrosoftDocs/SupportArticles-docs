@@ -3,7 +3,7 @@ title: Create the IMTraceLog.txt file
 description: Describes how to create a trace file for Integration Manager for Microsoft Dynamics GP. The IMTraceLog.txt file replaces the Macros.txt file.
 ms.reviewer: kvogel
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # How to configure the new Microsoft.Dynamics.GP.IntegrationManager.exe.config file so that Integration Manager for Microsoft Dynamics GP 10.0 creates the IMTraceLog.txt file
 

@@ -3,7 +3,7 @@ title: Upgrade tables for Payables Management
 description: Contains table conversions for Electronic Funds Transfer (EFT) for Payables Management and for EFT for Receivables Management in Microsoft Dynamics 10.0.
 ms.reviewer: lmuelle, cwaswick
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # Upgrading tables for EFT for Payables Management and EFT for Receivables Management between versions of Microsoft Dynamics GP
 

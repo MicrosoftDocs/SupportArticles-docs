@@ -2,7 +2,7 @@
 title: Questions about licensing certain modules
 description: Contains answers to frequently asked questions about licensing certain modules for use in Microsoft Dynamics GP.
 ms.reviewer: kvogel
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # Frequently asked questions about licensing Dexterity, Integration Manager, and Modifier with Visual Basic for Applications for use in Microsoft Dynamics GP
 

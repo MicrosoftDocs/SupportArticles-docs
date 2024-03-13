@@ -3,7 +3,7 @@ title: You can't post to a tax period that has not been set up
 description: You can't post on a new Australian installation for Microsoft Dynamics GP. Provides a resolution.
 ms.reviewer: cwaswick
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # "You can't post to a tax period that has not been set up" in Microsoft Dynamics GP
 

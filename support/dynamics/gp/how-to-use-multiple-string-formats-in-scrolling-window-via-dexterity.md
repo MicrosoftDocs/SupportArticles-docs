@@ -3,7 +3,7 @@ title: How to use multiple string formats in scrolling window via Dexterity
 description: Describes how to use multiple string formats in a scrolling window by using Dexterity in Microsoft Dynamics GP.
 ms.reviewer: 
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # How to use multiple string formats in a scrolling window by using Dexterity in Microsoft Dynamics GP
 

@@ -3,7 +3,7 @@ title: Object reference not set to an object
 description: Provides a solution to an error that occurs when you try to open the Query Relationship window in Integration Manager for Microsoft Dynamics GP 10.0.
 ms.reviewer: dlanglie
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # "Object reference not set to an instance of an object" Error message in Integration Manager for Microsoft Dynamics GP 10.0
 

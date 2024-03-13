@@ -3,7 +3,7 @@ title: How to implement MS DTC with eConnect
 description: Introduces how to implement Microsoft Distributed Transaction Coordinator (MS DTC) with eConnect for Microsoft Dynamics GP.
 ms.reviewer: dclauson
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # How to implement Microsoft Distributed Transaction Coordinator with eConnect for Microsoft Dynamics GP
 

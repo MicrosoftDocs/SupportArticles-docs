@@ -3,7 +3,7 @@ title: You must enter a step/grade value
 description: Provides a solution to an error that occurs when you assign a pay code to an employee in Microsoft Dynamics GP.
 ms.reviewer: lmuelle, ryanklev
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # "You must enter a step/grade value before this record can be saved" Error message when you assign a pay code to an employee in Microsoft Dynamics GP
 

@@ -3,7 +3,7 @@ title: The RNI report shows shipment receipts
 description: Describes an issue in which the Received/Not Invoiced report is incorrect for a partially received item or a partially returned item.
 ms.reviewer: ppeterso
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # The Received/Not Invoiced report shows shipment receipts in Microsoft Great Plains even though some of the items on the report have been returned
 

@@ -3,7 +3,7 @@ title: How to write Passthrough SQL statements and Range Where clauses in Micros
 description: Explains how to write Passthrough SQL statements and Range Where clauses in Microsoft Great Plains Dexterity.
 ms.reviewer:
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # How to write "Passthrough" SQL statements and "Range Where" clauses in Microsoft Great Plains Dexterity
 

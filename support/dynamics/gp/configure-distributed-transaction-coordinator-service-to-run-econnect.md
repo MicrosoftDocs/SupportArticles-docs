@@ -3,7 +3,7 @@ title: Configure Distributed Transaction Coordinator service to run eConnect on 
 description: Describes how to configure the Distributed Transaction Coordinator service to run eConnect for Microsoft Dynamics GP 9.0 on a Windows Vista-based computer.
 ms.topic: how-to
 ms.reviewer: dclauson
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # How to configure the Distributed Transaction Coordinator service to run eConnect for Microsoft Dynamics GP 9.0 on a Windows Vista-based computer
 

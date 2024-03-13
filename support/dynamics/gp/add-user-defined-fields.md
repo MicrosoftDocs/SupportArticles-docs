@@ -3,7 +3,7 @@ title: Add user-defined fields to POP Receivings Posting Journal
 description: This article describes how to add the receiving user-defined fields to the POP Receivings Posting Journal report in Microsoft Dynamics GP.
 ms.reviewer: 
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # Add the receiving user-defined fields to the POP Receivings Posting Journal report in Microsoft Dynamics GP
 

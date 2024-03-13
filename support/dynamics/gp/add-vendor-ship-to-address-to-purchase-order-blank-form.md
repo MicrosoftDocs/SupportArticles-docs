@@ -3,7 +3,7 @@ title: Add the vendor ship-to address from the Purchasing Vendor Detail Entry wi
 description: Describes steps to add the vendor ship-to address from the Purchasing Vendor Detail Entry window to the POP Purchase Order Blank Form in Microsoft Dynamics GP.
 ms.reviewer: ppeterso
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # How to add the vendor ship-to address from the Purchasing Vendor Detail Entry window to the POP Purchase Order Blank Form in Microsoft Dynamics GP
 

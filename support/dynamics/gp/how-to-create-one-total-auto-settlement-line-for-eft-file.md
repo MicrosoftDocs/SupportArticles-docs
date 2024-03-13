@@ -3,7 +3,7 @@ title: How to create one total auto settlement line for EFT file
 description: Explains how to create one total auto-settlement line for the entire EFT file instead of an auto settlement line for each vendor in Microsoft Dynamics GP.
 ms.reviewer: 
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # How to create one total auto settlement line for the Electronic Funds Transfer (EFT) file in Microsoft Dynamics GP
 

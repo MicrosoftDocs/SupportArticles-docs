@@ -2,7 +2,7 @@
 title: Error when you run an integration in Microsoft Dynamics GP
 description: Provides a solution to an error that occurs when you run an integration in Microsoft Dynamics GP 9.0.
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # Error message when you run an integration in Microsoft Dynamics GP 9.0: "The Reversing Date must be equal to or later than the Transaction Date"
 

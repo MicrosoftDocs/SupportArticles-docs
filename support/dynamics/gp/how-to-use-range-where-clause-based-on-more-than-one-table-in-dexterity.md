@@ -3,7 +3,7 @@ title: How to use Range Where clause based on more than one table
 description: Describes how to use the Range Where clause in Dexterity in Microsoft Dynamics GP.
 ms.reviewer: 
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # How to use a "Range Where" clause that is based on more than one table in Dexterity in Microsoft Dynamics GP
 

@@ -2,7 +2,7 @@
 title: Account is inactive error and no GL validation for defaulted accounts
 description: Introduces a by design behavior that there's no GL validation for defaulted accounts in RM/PM/SOP/POP in Microsoft Dynamics GP.
 ms.reviewer: cwaswick
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # "Account is inactive" error and no GL validation for defaulted accounts in RM/PM/SOP/POP in Microsoft Dynamics GP
 

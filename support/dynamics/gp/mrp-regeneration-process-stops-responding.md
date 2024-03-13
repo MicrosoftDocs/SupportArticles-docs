@@ -3,7 +3,7 @@ title: MRP Regeneration process stops responding
 description: Describes that how to resolve the problems when you run the Material Requirements Planning (MRP) Regeneration process in Manufacturing.
 ms.reviewer: lmuelle
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # The MRP Regeneration process in Manufacturing stops responding, locks up, or isn't processed completely in Microsoft Dynamics GP
 

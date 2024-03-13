@@ -3,7 +3,7 @@ title: Error when you grant a user access to a test company
 description: This article provides a resolution for a problem that occurs when a user already exists in the company database.
 ms.reviewer: kyouells
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # Error message when you try to grant a user access to a test company in Microsoft Dynamics GP (The user could not be added to one or more databases)
 

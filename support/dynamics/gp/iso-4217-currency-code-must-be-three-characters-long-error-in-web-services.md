@@ -3,7 +3,7 @@ title: ISO 4217 Currency Code must be three characters long error in Web Service
 description: Describes a problem that causes a SOAP exception. The problem occurs because a duplicate ISO currency code was set up in Microsoft Dynamics GP. Provides steps to resolve the problem.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # "An ISO 4217 Currency Code must be three characters long" error when you use Web Services
 

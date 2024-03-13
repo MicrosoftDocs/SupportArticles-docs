@@ -3,7 +3,7 @@ title: Make a field conditionally required
 description: Describes how to make a field conditionally required in Microsoft Dynamics GP 9.0.
 ms.reviewer:
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # How to make a field conditionally required in Microsoft Dynamics GP 9.0
 

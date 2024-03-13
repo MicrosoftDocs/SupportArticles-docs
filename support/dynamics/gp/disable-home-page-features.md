@@ -3,7 +3,7 @@ title: Disable home page features
 description: Describes how to disable home page features in Microsoft Dynamics GP by using Microsoft Dynamics GP or by using a SQL query.
 ms.reviewer:
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # How to disable home page features in Microsoft Dynamics GP
 

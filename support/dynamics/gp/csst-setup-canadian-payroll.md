@@ -3,7 +3,7 @@ title: CSST Setup for Canadian Payroll
 description: Contains steps to set up CSST in Canadian Payroll.
 ms.reviewer:
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # CSST Setup for Canadian Payroll in Microsoft Dynamics GP
 

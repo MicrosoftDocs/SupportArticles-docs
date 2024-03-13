@@ -3,7 +3,7 @@ title: Must use SQL Server Management Studio error when connecting to store data
 description: Fixes a problem that occurs when you try to connect a store database server from a client that is running Microsoft Dynamics Retail Management System Store Operations Administrator.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # "To connect to this server you must use SQL Server Management Studio..." error when connecting to a store database server
 

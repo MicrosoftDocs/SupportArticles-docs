@@ -3,7 +3,7 @@ title: Printing Project Accounting Billing Invoices
 description: How to print customer invoices in their currency within Project Accounting.
 ms.reviewer: 
 ms.topic: how-to
-ms.date: 04/22/2021
+ms.date: 03/13/2024
 ---
 # How to print Project Accounting Billing Invoices in the Customers Currency
 

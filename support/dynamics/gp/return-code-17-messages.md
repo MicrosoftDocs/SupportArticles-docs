@@ -3,7 +3,7 @@ title: Return code 17 when you run the Depreciation process in Fixed Asset Manag
 description: Describes a problem that occurs when you run the Depreciation process in Fixed Asset Management in Microsoft Dynamics GP. A resolution is provided.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # "Return code 17" error messages when you run the Depreciation process in Fixed Asset Management in Microsoft Dynamics GP
 

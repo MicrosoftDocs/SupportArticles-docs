@@ -3,7 +3,7 @@ title: You cannot inactivate a customer record
 description: Provides a solution to an error that occurs when you try to inactivate a customer in SOP.
 ms.reviewer:
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # Error message when you try to inactivate a customer in SOP
 

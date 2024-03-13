@@ -3,7 +3,7 @@ title: Transaction Level Posting Has Not Completed error when using the Sales Tr
 description: Describes a problem that occurs for one specific user ID. This problem may occur if an invalid record exists in the SY00500 table. A resolution is provided.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # "Transaction Level Posting Has Not Completed" error when using the Sales Transaction Entry window
 

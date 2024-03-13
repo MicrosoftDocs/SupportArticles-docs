@@ -3,7 +3,7 @@ title: Errors when you print PA Revenue Recognition Edit List
 description: Provides a solution to errors that occurs when you print the "PA Revenue Recognition Edit List" in Microsoft Dynamics GP.
 ms.reviewer:
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # Errors when you print the "PA Revenue Recognition Edit List" in Microsoft Dynamics GP: "Total Revenues Earned is incorrect" and "Total Recognized Project Revenues is incorrect"
 

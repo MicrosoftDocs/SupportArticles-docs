@@ -3,7 +3,7 @@ title: String overflow on set errors
 description: Provides options to solve the string overflow on set errors that may occur in Microsoft Dynamics GP.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # "String overflow on set" error messages occur in Microsoft Dynamics GP
 

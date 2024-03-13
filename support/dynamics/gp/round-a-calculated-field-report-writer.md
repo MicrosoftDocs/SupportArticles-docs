@@ -3,7 +3,7 @@ title: Round a calculated field in Report Writer
 description: Describes how to create a calculated field to round to the nearest two decimal places or the nearest whole dollar by using Report Writer in Microsoft Dynamics GP.
 ms.reviewer: lmuelle
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # How to round a calculated field in Report Writer in Microsoft Dynamics GP
 

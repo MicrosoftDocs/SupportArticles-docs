@@ -3,7 +3,7 @@ title: How to re-create the manufacturing reports dictionary
 description: Discusses how to re-create the manufacturing reports dictionary (ICONRPTS.dic) in Microsoft Dynamics GP.
 ms.reviewer: lmuelle
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # How to re-create the manufacturing reports dictionary in Microsoft Dynamics GP
 

@@ -3,7 +3,7 @@ title: Selected database exists error when installing Web Services
 description: The selected database exists error occurs when you install Web Services for Microsoft Dynamics GP. Provides a resolution.
 ms.reviewer: kyouells
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # "The selected database exists, but its owner is not a valid Windows user" error when installing Web Services
 

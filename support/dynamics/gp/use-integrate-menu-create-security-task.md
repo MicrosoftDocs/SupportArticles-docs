@@ -3,7 +3,7 @@ title: How to create a Security Task for Integration Manager for Microsoft Dynam
 description: Describes how to create a Security Task for Integration Manager for Microsoft Dynamics GP 10.0 by using the Integrate menu.
 ms.reviewer: kvogel
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # How to create a Security Task for Integration Manager for Microsoft Dynamics GP 10.0
 
