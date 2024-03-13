@@ -18,9 +18,9 @@ ms.reviewer: cwhitley, jusilver, v-naqviadil, v-leedennis, v-weizhu
 
 [!INCLUDE [Feedback](../../includes/feedback.md)]
 
-This article helps you troubleshoot an activation issue that occurs when you create a Microsoft Azure Windows Virtual Machine (VM).
+This article helps you troubleshoot an activation issue that occurs when you create a Microsoft Azure Windows virtual machine (VM).
 
-## Understanding Azure KMS endpoints for Windows product activation of Azure Virtual Machines
+## Understanding Azure KMS endpoints for Windows product activation of Azure VMs
 
 Azure uses different endpoints for Key Management Services (KMS) activation depending on the cloud region in which the VM resides. When using this troubleshooting guide, use the appropriate KMS endpoint that applies to your region.
 
@@ -52,7 +52,6 @@ To troubleshoot a Windows activation issue, follow these steps:
        The error code and message will help identify the possible cause and solution of the activation issue.
 
 2. Search the error message and error code online for possible solutions or check known errors and issues below:
-
     |Known error codes|error message or issue|
     |---|---|
     |Error 0xC004F074|["No Key Management Service (KMS) could be contacted"](windows-vm-activation-error-0xc004f074.md)|
