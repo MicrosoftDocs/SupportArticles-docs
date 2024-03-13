@@ -53,7 +53,7 @@ To troubleshoot this issue and to understand no-refresh and refresh intervals, s
 
 Sometimes, the host "A" record is deleted on the original DNS server after the host "A" record is registered on the newly configured DNS server IP address (Active Directory Integrated DNS). From a user perspective, anything that depends on name resolution is broken. When the DNS server IP address is changed on the client, the client sends a Start of Authority (SOA) update to delete its "A" record from the previous DNS server. Then, it sends another update to register its "A" record to the new DNS server.
 
-The trouble occurs in Active Directory-integrated zones. Issues occur when the DNS Server IP address is changed on the client. When the IP address changes, the client sends a registration request to the new server, and sends a deletion request to the previous server. Because both servers are already synced, the records aren't registered. On the previous server, the DNS service deletes the "A" record is deleted on the previous server, and then the deletion replicates to the new server. As a result, the record is deleted on both servers.
+The trouble occurs in Active Directory-integrated zones. Issues occur when the DNS Server IP address is changed on the client. When the IP address changes, the client sends a registration request to the new server, and sends a deletion request to the previous server. Because both servers are already synced, the records aren't registered. On the previous server, the DNS service deletes the "A" record, and then the deletion replicates to the new server. As a result, the record is deleted on both servers.
 
 #### DHCP clients that use DHCP Option 81 unregister host "A" records during host "AAAA" registration
 
