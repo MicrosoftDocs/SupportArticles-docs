@@ -3,7 +3,7 @@ title: Unable to generate next payment number or Unable to generate next voucher
 description: Describes an error may occur when you enter a payables transaction in Microsoft Dynamics GP. Provides a resolution.
 ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 02/19/2024
+ms.date: 03/12/2024
 ---
 # "Unable to generate next payment number" or "Unable to generate next voucher number" error when entering a payables transaction
 
@@ -101,9 +101,6 @@ Data in the Payables Transaction Logical File group is missing or is corrupted.
 ### Resolution 
 
 To resolve this problem, perform the Check Links routine on the Payables Transaction Logical File. Have all users sign out of Microsoft Dynamics GP before proceeding. To do this, follow these steps.
-
-> [!WARNING]
-> If you use Microsoft Dynamics GP 9.0, you must install Service Pack 2 before you follow these steps. The Check Links process may incorrectly remove applied records if you run Check Links in Microsoft Dynamics GP 9.0 or in Microsoft Dynamics GP 9.0 Service Pack 1.
 
 1. In Microsoft Dynamics GP, point to **Maintenance** on the **Microsoft Dynamics GP** menu, and then select **Check Links**.
 2. In the **Series** list, select **Purchasing**.
