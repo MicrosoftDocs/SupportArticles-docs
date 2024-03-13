@@ -2,7 +2,7 @@
 title: Guidelines to generate EFT files
 description: Describes troubleshooting tips to use when you generate Electronic Funds Transfer (EFT) files or EFT Prenote files.
 ms.reviewer: theley
-ms.date: 02/20/2024
+ms.date: 03/12/2024
 ---
 # Guidelines to follow when you generate EFT files or EFT prenote files in Electronic Funds Transfer for Payables Management or Receivables Management in Microsoft Dynamics GP
 
@@ -226,7 +226,7 @@ To verify it's working for the respective module, select **Cards**, point to **P
 
 ##### Q8: What if my bank uses a file format that varies slightly from one of the standard formats offered in Dynamics GP?
 
-A8: The EFT file formats available in Microsoft Dynamics GP are set up to follow the US Government and NACHA (National Automated Clearing House Association) published formats. They're published standard requirements. The file formats currently offered in Microsoft Dynamics GP are coded to achieve the required **** fields in these standard formats. So if your bank requires a format that varies slightly from one of the standard formats offered in GP, or a more updated version of a format, you may need to pursue a consulting service for the customization. In the meantime, you could check with the bank to see if they would make an exception, or accept any other formats that Dynamics GP can do (such as one of the standard NACHA formats), or edit the EFT file in Notepad before sending it to the bank.
+A8: The EFT file formats available in Microsoft Dynamics GP are set up to follow the US Government and NACHA (National Automated Clearing House Association) published formats. They're published standard requirements. The file formats currently offered in Microsoft Dynamics GP are coded to achieve the required fields in these standard formats. So if your bank requires a format that varies slightly from one of the standard formats offered in GP, or a more updated version of a format, you may need to pursue a consulting service for the customization. In the meantime, you could check with the bank to see if they would make an exception, or accept any other formats that Dynamics GP can do (such as one of the standard NACHA formats), or edit the EFT file in Notepad before sending it to the bank.
 
 ##### Q9: My bank doesn't use any of the EFT File formats listed in GP. How can I create a new format to follow my bank?
 
@@ -384,4 +384,4 @@ A31: No, at this time, you aren't able to count/sum until after the lines are li
 
 1. Run 'one check per invoice' instead of 'one check per vendor', and hard code the addenda count =1 in the EFT file format.
 2. Ask the bank if they would make an exception or accept any other NACHA format such as the CCD or PPD format. (Many banks have accepted the 'detail + addenda' count in a footer line instead.)
-3. Seek out a third-party product that allows this functionality or 4) a dexterity customization.
+3. Seek out a third-party product that allows this functionality or a dexterity customization.
