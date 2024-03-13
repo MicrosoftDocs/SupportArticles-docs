@@ -3,7 +3,7 @@ title: How to reprint the reports created in checkbook reconciliation
 description: Describes how to generate reports that show the information from a previous checkbook reconciliation process in Microsoft Dynamics GP.
 ms.reviewer: theley
 ms.topic: how-to
-ms.date: 02/19/2024
+ms.date: 03/12/2024
 ---
 # How to reprint the reports that are generated during the checkbook reconciliation process in Microsoft Dynamics GP
 
@@ -47,31 +47,6 @@ To do this, use the appropriate steps:
   4. In the **Type** list, select **Reports**.
   5. In the **Series** list, select **Financial**.
   6. In the **Access** list, double-click the appropriate report, and then select **OK**.
-- In Microsoft Dynamics GP 10.0, follow these steps:
-  1. On the **Microsoft Dynamics GP** menu, point to **Tools**, point to **Setup**, point to **System**, and then select **Security Tasks**.
-  2. In the **Task ID** list, select the appropriate task ID.
-  3. In the **Category** list, select **Financial**.
-  4. In the **Product** list, select **Microsoft Dynamics GP**.
-  5. In the **Type** list, select **Reports**.
-  6. In the **Series** list, select **Financial**.
-  7. Select to select the **Reconcile Journal** check box, and then select **Print Operation Access**.
-  8. In the Report Destination window, select the appropriate destination, and then select **OK** to print a report that displays users who have access to the report.
-
-      > [!NOTE]
-      > If you receive the following message, save the changes in the window, and then follow step 1 through step 8 again. Select a record first.
-
-  9. Follow step 1 through step 8 for the following reports:
-     - Bank Adjustment Edit List
-     - Bank Adjustment Posting Journal
-     - Marked Transactions Report
-     - Outstanding Transactions Report
-
-  10. If users are not displayed on the report that is printed in step 8, follow these steps:
-
-      1. On the **Microsoft Dynamics GP** menu, point to **Tools**, point to **Setup**, point to **System**, and then select **Security Roles**.
-      2. In the **Role ID** list, select the appropriate role ID.
-      3. Select to select the appropriate security task ID check box, and then select **Save**.
-      4. Follow step a through step h for the remaining reports.
 
 ## How to reprint the Bank Reconciliation reports
 
