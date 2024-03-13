@@ -1,8 +1,8 @@
 ---
 title: How manual payments, credit memos appear
 description: Describes how manual payments, credit memos, and returns appear on the Payables Management check stub.
-ms.reviewer: lmuelle
-ms.date: 03/31/2021
+ms.reviewer: theley, lmuelle
+ms.date: 03/13/2024
 ---
 # Information about how manual payments, credit memos, and returns appear on the check stub when you run the Select Checks process in Microsoft Dynamics GP
 

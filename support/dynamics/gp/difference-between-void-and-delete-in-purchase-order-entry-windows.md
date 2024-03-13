@@ -1,8 +1,8 @@
 ---
 title: Difference between void and delete in the Purchase Order Entry window in Purchase Order Processing in Microsoft Dynamics GP
 description: Describes information about the difference between void and delete in the Purchase Order Entry window in Purchase Order Processing in Microsoft Dynamics GP.
-ms.reviewer:
-ms.date: 03/31/2021
+ms.reviewer: theley
+ms.date: 03/13/2024
 ---
 # Information about the difference between void and delete in the Purchase Order Entry window in Purchase Order Processing in Microsoft Dynamics GP
 

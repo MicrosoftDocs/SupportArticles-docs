@@ -91,7 +91,7 @@ To troubleshoot this issue, see [Troubleshoot password hash synchronization with
 
 ## You're changing from a single-sign on (SSO) solution to password synchronization
 
-To resolve this issue, see [How to switch from Single Sign-On to Password Sync](https://social.technet.microsoft.com/wiki/contents/articles/17857.how-to-switch-from-single-sign-on-to-password-sync.aspx).
+To resolve this issue, see [How to switch from Single Sign-On to Password Sync](/archive/technet-wiki/17857.dirsync-how-to-switch-from-single-sign-on-to-password-sync).
 
 ## Event ID messages in Event Viewer
 
@@ -159,6 +159,6 @@ To do a full password sync, follow these steps, as appropriate for the Azure AD 
       Restart-Service FIMSynchronizationService -Force
       ```
 
-2. If you're using the Azure AD Sync Service or Microsoft Entra Connect, run the script that's on this page: [Azure AD Sync: How to Use PowerShell to Trigger a Full Password Sync](https://social.technet.microsoft.com/wiki/contents/articles/28433.how-to-use-powershell-to-trigger-a-full-password-sync-in-azure-ad-sync.aspx)
+2. If you're using the Azure AD Sync Service or Microsoft Entra Connect, run the script that's on this page: [Azure AD Sync: How to Use PowerShell to Trigger a Full Password Sync](/archive/technet-wiki/28433.azure-ad-sync-how-to-use-powershell-to-trigger-a-full-password-sync)
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
