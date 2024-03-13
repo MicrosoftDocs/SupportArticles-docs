@@ -1,7 +1,7 @@
 ---
 title: No account specified for distributions
 description: Provides a solution to an error that occurs when posting transactions in Payables Management or Receivables Management.
-ms.reviewer: lmuelle
+ms.reviewer: theley, lmuelle
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

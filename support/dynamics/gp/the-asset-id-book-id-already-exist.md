@@ -1,7 +1,7 @@
 ---
 title: The Asset ID and Book ID already exist
 description: Provides a solution to an error that occurs when you run a Fixed Assets integration by using Integration Manager for Microsoft Dynamics GP 10.0.
-ms.reviewer: dlanglie
+ms.reviewer: theley, dlanglie
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

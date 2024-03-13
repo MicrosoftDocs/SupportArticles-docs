@@ -1,7 +1,7 @@
 ---
 title: Add the notes to the SOP Blank Packing Slip
 description: This article describes how to add the notes that are attached to the Shipping Method in the Shipping Methods Setup window to the SOP Blank Packing Slip in Microsoft Dynamics GP.
-ms.reviewer: 
+ms.reviewer: theley
 ms.topic: how-to
 ms.date: 03/13/2024
 ---

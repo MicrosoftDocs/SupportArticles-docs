@@ -1,7 +1,7 @@
 ---
 title: Change the current SQL Server name
 description: This article lists steps on how to change the Web Services files to the new Microsoft SQL Server name.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: how-to
 ms.date: 03/13/2024
 ---

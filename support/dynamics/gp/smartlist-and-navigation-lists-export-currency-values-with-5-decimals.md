@@ -1,7 +1,7 @@
 ---
 title: Smartlist and Navigation Lists export currency values with five decimals
 description: Smartlist and Navigation Lists export currency values with five decimals in Excel using Microsoft Dynamics GP 2013.
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

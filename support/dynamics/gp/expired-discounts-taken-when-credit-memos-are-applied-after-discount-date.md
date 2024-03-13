@@ -1,7 +1,7 @@
 ---
 title: Expired discounts taken if apply credit memo after discount date
 description: Expired discounts are still taken when credit memos are applied after discount date in Payables Management. Provides a resolution.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

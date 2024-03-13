@@ -1,7 +1,7 @@
 ---
 title: What Print Previously Applied DOCS does
 description: Describes what does the Print Previously Applied Documents option in the Select Payables Checks window do in Microsoft Dynamics GP.
-ms.reviewer: Cwaswick
+ms.reviewer: theley, Cwaswick
 ms.date: 03/13/2024
 ---
 # What does the Print Previously Applied Documents option in the Select Payables Checks window do in Microsoft Dynamics GP?

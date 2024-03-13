@@ -1,7 +1,7 @@
 ---
 title: Errors in Payables Batch Edit List about Multicurrency using Microsoft Dynamics GP
 description: Describes error messages The Currency ID is missing, or The Rate Type ID is missing, or The Exchange Table ID is missing in Payables Batch Edit list.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

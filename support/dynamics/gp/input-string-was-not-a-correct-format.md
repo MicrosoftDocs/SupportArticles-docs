@@ -1,7 +1,7 @@
 ---
 title: Input string was not in a correct format 
 description: Provides a solution to an error that occurs in Integration Manager for Microsoft Dynamics GP.
-ms.reviewer: grwill, dlanglie
+ms.reviewer: theley, grwill, dlanglie
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

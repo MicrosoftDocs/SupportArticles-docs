@@ -1,7 +1,7 @@
 ---
 title: How to use Misc Charges item with Periodic item
 description: The article describes how to use a Misc Charges item with Microsoft Dynamics GP Manufacturing so it will process correctly with the correct accounts.
-ms.reviewer: BeckyBer
+ms.reviewer: theley, BeckyBer
 ms.topic: how-to
 ms.date: 03/13/2024
 ---

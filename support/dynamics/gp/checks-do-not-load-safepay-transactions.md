@@ -1,7 +1,7 @@
 ---
 title: Checks don't load to SafePay-Transactions
 description: Provides a solution to an issue where checks don't load to the SafePay-Transactions Upload window in Microsoft Dynamics GP.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

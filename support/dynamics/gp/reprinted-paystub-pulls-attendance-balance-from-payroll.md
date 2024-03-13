@@ -2,7 +2,7 @@
 title: Reprinted Paystub pulls Attendance Balance from Payroll instead of Human Resources
 description: The new feature in Microsoft Dynamics GP 2010 to reprint payroll checks will print the attendance balance from Payroll instead of Human Resources, even if Human Resources is marked in the HR Attendance setup window. This article provides a solution to this issue.
 ms.topic: troubleshooting
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.date: 03/13/2024
 ---
 # Reprinted Paystub pulls Attendance Balance from Payroll instead of Human Resources in Microsoft Dynamics GP 2010

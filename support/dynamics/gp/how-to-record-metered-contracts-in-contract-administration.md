@@ -1,7 +1,7 @@
 ---
 title: How to record metered contracts in Contract Administration
 description: Describes the steps that you must follow to record metered contracts in Contract Administration in Microsoft Dynamics GP and in Microsoft Great Plains.
-ms.reviewer: lmuelle
+ms.reviewer: theley, lmuelle
 ms.topic: how-to
 ms.date: 03/13/2024
 ---

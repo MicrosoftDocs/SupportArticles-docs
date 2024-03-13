@@ -1,7 +1,7 @@
 ---
 title: The payment number isn't reserved
 description: Provides a solution to an error that occurs when you post an invoice that has an attached deposit in Sales Order Processing in Microsoft Dynamics GP.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

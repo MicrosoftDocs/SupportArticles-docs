@@ -1,7 +1,7 @@
 ---
 title: An integration leaves 0.01 instead of zero in On Account
 description: Discusses that the On Account field of an invoice contains $0.01 instead of zero when you integrate a multi-currency Sales Order Processing invoice that has a payment in Dynamics GP and in Great Plains. A service pack is available to fix this problem.
-ms.reviewer: lmuelle
+ms.reviewer: theley, lmuelle
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

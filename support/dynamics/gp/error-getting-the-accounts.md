@@ -1,7 +1,7 @@
 ---
 title: Error in getting the Accounts
 description: Provides a solution to an error that occurs when you print the PA Transaction Adjustment Report in Project Accounting in Microsoft Dynamics GP.
-ms.reviewer: lmuelle
+ms.reviewer: theley, lmuelle
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

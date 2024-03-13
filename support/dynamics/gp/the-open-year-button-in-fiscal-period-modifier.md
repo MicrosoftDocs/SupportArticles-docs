@@ -1,7 +1,7 @@
 ---
 title: The Open Year button in the Fiscal Period Modifier
 description: Introduces the Open Year button in the Fiscal Period Modifier.
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.date: 03/13/2024
 ---
 # The Open Year button in the Fiscal Period Modifier

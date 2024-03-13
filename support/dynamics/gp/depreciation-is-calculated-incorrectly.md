@@ -1,7 +1,7 @@
 ---
 title: Depreciation is calculated incorrectly
 description: Provides a solution to an issue where depreciation is calculated incorrectly when you use a Month averaging convention in the Fixed Assets module of Microsoft Dynamics GP.
-ms.reviewer: cwaswick, ryanklev
+ms.reviewer: theley, cwaswick, ryanklev
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

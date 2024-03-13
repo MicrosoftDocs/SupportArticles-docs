@@ -1,7 +1,7 @@
 ---
 title: MergeField wasn't found in header record
 description: Provides a solution to an error that occurs when you use the Letter Writing Assistant (LWA) to Prepare an Employee benefits.
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

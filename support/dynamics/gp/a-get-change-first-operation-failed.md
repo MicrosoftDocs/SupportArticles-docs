@@ -1,7 +1,7 @@
 ---
 title: A Get/Change First Operation failed
 description: Provides a solution to an error that occurs when you sign into Microsoft Dynamics GP after you've migrated to Microsoft SQL Server 2005 from Microsoft SQL Server 2000 with a different server name.
-ms.reviewer: v-jomcc
+ms.reviewer: theley, v-jomcc
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

@@ -1,7 +1,7 @@
 ---
 title: Add Special Depreciation Allowance Amount via Report Writer or SmartList
 description: How to use Report Writer or SmartList to add the Special Depreciation Allowance Amount field as a separate line item in Microsoft Dynamics GP.
-ms.reviewer: ryanklev
+ms.reviewer: theley, ryanklev
 ms.topic: how-to
 ms.date: 03/13/2024
 ---

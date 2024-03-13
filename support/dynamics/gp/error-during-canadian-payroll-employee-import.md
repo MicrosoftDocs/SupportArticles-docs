@@ -2,7 +2,7 @@
 title: Error during Canadian Payroll Employee Import
 description: Provides a solution to an error during Canadian Payroll Employee Import.
 ms.topic: troubleshooting
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.date: 03/13/2024
 ---
 # Error during Canadian Payroll Employee Import: "Employee Exceeds available size. - Import Aborted."

@@ -2,7 +2,7 @@
 title: Error when you enter a non-inventoried item in Field Service
 description: This article provides a resolution for the problem that occurs when you try to enter a non-inventoried item on a Field Service transaction in Microsoft Dynamics GP 2010.
 ms.topic: troubleshooting
-ms.reviewer: Beckyber
+ms.reviewer: theley, Beckyber
 ms.date: 03/13/2024
 ---
 # Error message when you enter a non-inventoried item in Field Service in Microsoft Dynamics GP 2010 (Item's master record does not exist)

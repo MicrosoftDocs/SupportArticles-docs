@@ -1,7 +1,7 @@
 ---
 title: Microsoft Management Reporter 2012 Cumulative Update 11 (CU11) is available
 description: Lists the fixes of cumulative update 11 for Management Report 2012.
-ms.reviewer: gbyer, jopankow
+ms.reviewer: theley, gbyer, jopankow
 ms.date: 03/13/2024
 ---
 # Microsoft Management Reporter 2012 Cumulative Update 11 (CU11) is available

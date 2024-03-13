@@ -2,7 +2,7 @@
 title: How to modify the POP Purchase Order Blank Form report to print the 
 description: Describes how to modify the POP Purchase Order Blank Form report to print the "purchase order line item quantity ordered" note if you use Project Accounting.
 ms.topic: how-to
-ms.reviewer: mnissen
+ms.reviewer: theley, mnissen
 ms.date: 03/13/2024
 ---
 # How to modify the POP Purchase Order Blank Form report to print the "purchase order line item quantity ordered" note if you use Project Accounting in Microsoft Dynamics GP

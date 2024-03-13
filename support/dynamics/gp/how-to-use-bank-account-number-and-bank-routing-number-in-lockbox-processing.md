@@ -1,7 +1,7 @@
 ---
 title: How to use bank account and bank routing numbers in Lockbox
 description: Describes how to use the bank account number and bank routing number instead of the customer ID in Lockbox Processing in Microsoft Dynamics GP.
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.topic: how-to
 ms.date: 03/13/2024
 ---

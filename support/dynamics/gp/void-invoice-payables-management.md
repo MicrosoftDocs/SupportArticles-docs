@@ -1,7 +1,7 @@
 ---
 title: Void an invoice in Payables Management
 description: Explains how to void an invoice, depending on the applied status of the invoice and of the apply document.
-ms.reviewer: lmuelle
+ms.reviewer: theley, lmuelle
 ms.topic: how-to
 ms.date: 03/13/2024
 ---

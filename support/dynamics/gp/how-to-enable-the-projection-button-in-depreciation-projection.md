@@ -1,7 +1,7 @@
 ---
 title: Enable the Projection button in Depreciation Projection
 description: Describes how to make the Projection button available in the Depreciation Projection window for Fixed Assets.
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.topic: how-to
 ms.date: 03/13/2024
 ---

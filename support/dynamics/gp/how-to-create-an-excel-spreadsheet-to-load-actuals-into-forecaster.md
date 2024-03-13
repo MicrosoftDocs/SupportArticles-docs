@@ -1,7 +1,7 @@
 ---
 title: How to create spreadsheet to load actuals into Forecaster
 description: Explains how to create a Microsoft Excel spreadsheet to load actuals into Microsoft Forecaster 7.0 using Microsoft Management Reporter 2012.
-ms.reviewer: kevogt, gbyer
+ms.reviewer: theley, kevogt, gbyer
 ms.topic: how-to
 ms.date: 03/13/2024
 ---

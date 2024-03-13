@@ -1,7 +1,7 @@
 ---
 title: Access info about Report Writer functions
 description: Describe how to access information about Report Writer functions that can be used to customize Report Writer. The information is available in the Microsoft Dynamics GP SDK.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

@@ -1,7 +1,7 @@
 ---
 title: The RNI report shows shipment receipts
 description: Describes an issue in which the Received/Not Invoiced report is incorrect for a partially received item or a partially returned item.
-ms.reviewer: ppeterso
+ms.reviewer: theley, ppeterso
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

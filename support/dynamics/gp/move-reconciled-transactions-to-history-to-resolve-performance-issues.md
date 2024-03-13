@@ -1,7 +1,7 @@
 ---
 title: Move reconciled transactions to history for performance issues
 description: Performance issues when voiding a bank deposit in Microsoft Dynamics GP. Provides a resolution.
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

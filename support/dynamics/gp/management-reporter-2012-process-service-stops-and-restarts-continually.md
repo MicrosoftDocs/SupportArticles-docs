@@ -1,7 +1,7 @@
 ---
 title: Management Reporter 2012 Process Service will not stay running
 description: Describes a problem where the Management Reporter 2012 Process Service will stop and restart continually. Provides a resolution.
-ms.reviewer: gbyer, jopankow
+ms.reviewer: theley, gbyer, jopankow
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

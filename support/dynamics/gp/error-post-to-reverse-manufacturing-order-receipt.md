@@ -1,7 +1,7 @@
 ---
 title: Error when you post to reverse a manufacturing order receipt in Microsoft Dynamics GP 10.0
 description: Describes a problem that occurs because the inventory adjustment may contain incorrect component quantities when you post to reverse the manufacturing order receipt.
-ms.reviewer: ttorgers, lmuelle
+ms.reviewer: theley, ttorgers, lmuelle
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

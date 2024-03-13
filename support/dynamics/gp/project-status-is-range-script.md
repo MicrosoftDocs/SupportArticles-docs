@@ -1,7 +1,7 @@
 ---
 title: Project Status is out of range in script 
 description: Provides a solution to an error that occurs when you look up a project number in Project Accounting in Microsoft Dynamics GP 9.0.
-ms.reviewer: lmuelle, ppeterso
+ms.reviewer: theley, lmuelle, ppeterso
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

@@ -1,7 +1,7 @@
 ---
 title: How to get Absolute Value of Checks and Voids added together
 description: Introduces how to get the Absolute Value of Checks and Voids added together in the footer record of the Safepay file in Microsoft Dynamics GP.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: how-to
 ms.date: 03/13/2024
 ---

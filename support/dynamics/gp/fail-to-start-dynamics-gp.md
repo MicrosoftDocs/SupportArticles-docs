@@ -1,7 +1,7 @@
 ---
 title: Error when you try to start Dynamics GP
 description: Describes an issue that occurs when an incorrect setting exists in the Dynamics.set file for Microsoft Dynamics GP or Microsoft Business Solutions - Great Plains. Provides a resolution.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

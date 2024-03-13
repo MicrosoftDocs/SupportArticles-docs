@@ -1,7 +1,7 @@
 ---
 title: Cannot process EFT batches in Payables or Receivables
 description: When you try to process EFT batches in Payables or Receivables in Microsoft Dynamics GP, you receive an error message that states the bank country/region assigned to the vendor's remit-to address can't be the same as the bank country/region assigned to the checkbook that's assigned to the batch.
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

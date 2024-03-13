@@ -1,7 +1,7 @@
 ---
 title: Guidelines to delete an account from GL
 description: Guidelines to use when you delete an account from the general ledger in Microsoft Dynamics GP.
-ms.reviewer: lmuelle
+ms.reviewer: theley, lmuelle
 ms.date: 03/13/2024
 ---
 # Guidelines to use when you delete an account from the general ledger in Microsoft Dynamics GP

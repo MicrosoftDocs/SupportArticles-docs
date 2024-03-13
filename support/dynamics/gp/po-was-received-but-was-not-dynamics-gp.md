@@ -1,7 +1,7 @@
 ---
 title: PO was received but wasn't in Dynamics GP
 description: Provides a solution to an issue where purchase order was received but shouldn't have been in Microsoft Dynamics GP.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

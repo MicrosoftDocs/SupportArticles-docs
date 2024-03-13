@@ -1,7 +1,7 @@
 ---
 title: How to add Sales User-Defined Work History table to RM Transferred Commissions Journal Detail report
 description: Introduces how to add the Sales User-Defined Work History (SOP10106) table to the RM Transferred Commissions Journal Detail report in Microsoft Dynamics GP.
-ms.reviewer: 
+ms.reviewer: theley
 ms.topic: how-to
 ms.date: 03/13/2024
 ---

@@ -1,7 +1,7 @@
 ---
 title: How to modify invoice to make numbers converted into words
 description: Describes how to modify an invoice in Microsoft Dynamics GP so that numbers are converted into words and then displayed at the bottom of the PA Invoice Format Project Detail Page 1 report.
-ms.reviewer: lmuelle
+ms.reviewer: theley, lmuelle
 ms.topic: how-to
 ms.date: 03/13/2024
 ---

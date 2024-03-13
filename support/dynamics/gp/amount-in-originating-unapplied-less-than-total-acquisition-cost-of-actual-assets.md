@@ -1,7 +1,7 @@
 ---
 title: Amount in Originating Unapplied less than total acquisition cost
 description: The amount that appears in the Originating Unapplied box is less than the total acquisition cost of the actual assets that were saved by using this purchasing transaction. Provides a workaround.
-ms.reviewer: 
+ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

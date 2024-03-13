@@ -1,7 +1,7 @@
 ---
 title: Modify the aged trial balance reports in Report Writer so that the printed reports show the number of days outstanding in Payables Management in Microsoft Dynamics GP 9.0 and in Microsoft Great Plains 8.0
 description: Describes steps to modify the aged trial balance reports in Report Writer so that the printed reports show the number of days outstanding in Payables Management in Microsoft Dynamics GP 9.0 and in Microsoft Great Plains 8.0.
-ms.reviewer: ryanklev
+ms.reviewer: theley, ryanklev
 ms.topic: how-to
 ms.date: 03/13/2024
 ---

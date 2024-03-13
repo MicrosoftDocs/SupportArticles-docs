@@ -1,7 +1,7 @@
 ---
 title: Error when you grant a user access to a test company
 description: This article provides a resolution for a problem that occurs when a user already exists in the company database.
-ms.reviewer: kyouells
+ms.reviewer: theley, kyouells
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

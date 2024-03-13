@@ -2,7 +2,7 @@
 title: Checks are not printed in Payables Management
 description: This article provides a resolution for the problem that occurs when you process a batch in the Print Payables Checks window in Microsoft Dynamics GP and in Microsoft Business Solutions - Great Plains 8.0.
 ms.topic: troubleshooting
-ms.reviewer: kriszree
+ms.reviewer: theley, kriszree
 ms.date: 03/13/2024
 ---
 # Checks are not printed in Payables Management in Microsoft Dynamics GP

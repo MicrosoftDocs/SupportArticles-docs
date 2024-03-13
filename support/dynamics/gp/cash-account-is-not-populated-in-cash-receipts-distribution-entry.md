@@ -1,7 +1,7 @@
 ---
 title: Cash account not populated in Cash Receipts Distribution Entry
 description: The cash account field is not populated in the Cash Receipts Distribution Entry window if you enter a cash receipt in Microsoft Dynamics GP.
-ms.reviewer: lmuelle
+ms.reviewer: theley, lmuelle
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

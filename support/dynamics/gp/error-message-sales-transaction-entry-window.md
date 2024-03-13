@@ -1,7 +1,7 @@
 ---
 title: Error message in the Sales Transaction Entry window
 description: This article provides a resolution for the problem that occurs when you try to access, to enter, to save, to print, or to post transactions in the Sales Transaction Entry window in Microsoft Dynamics GP.
-ms.reviewer: aeckman
+ms.reviewer: theley, aeckman
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

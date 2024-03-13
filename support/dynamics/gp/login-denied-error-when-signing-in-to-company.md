@@ -1,7 +1,7 @@
 ---
 title: Login denied error when signing in to a company
 description: Describes a problem that occurs when you try to sign in to a company in Microsoft Dynamics GP. Provides a resolution.
-ms.reviewer: ryanklev
+ms.reviewer: theley, ryanklev
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

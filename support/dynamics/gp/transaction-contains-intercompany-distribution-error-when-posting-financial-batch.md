@@ -1,7 +1,7 @@
 ---
 title: Transaction contains intercompany distributions error when posting financial batch
 description: When posting a batch in General Ledger, this error message (Transaction contains intercompany distributions; mark as an IC transaction) is returned, but the customer does not have any intercompany relationships set up.
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

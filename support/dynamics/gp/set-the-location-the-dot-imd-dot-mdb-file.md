@@ -1,7 +1,7 @@
 ---
 title: Set the location of the .imd or .mdb file
 description: Describes how to set the location of the .imd or .mdb file without opening Integration Manager.
-ms.reviewer: kvogel
+ms.reviewer: theley, kvogel
 ms.topic: how-to
 ms.date: 03/13/2024
 ---

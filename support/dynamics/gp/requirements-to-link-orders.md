@@ -1,7 +1,7 @@
 ---
 title: Requirements to link orders
 description: Discusses how to link an order from Purchase Order Processing to Sales Order Processing in Microsoft Dynamics GP and in Microsoft Business Solutions - Great Plains.
-ms.reviewer:
+ms.reviewer: theley
 ms.date: 03/13/2024
 ---
 # Requirements to successfully link orders from Purchase Order Processing to Sales Order Processing

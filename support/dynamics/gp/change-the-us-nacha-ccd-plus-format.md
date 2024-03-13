@@ -1,7 +1,7 @@
 ---
 title: Change the US-NACHA-CCD+ format
 description: Describes the method to change the US-NACHA-CCD+ format to include an invoice number in the Addenda record in Electronic Funds Transfer for Payables Management in Microsoft Dynamics GP.
-ms.reviewer: lmuelle
+ms.reviewer: theley, lmuelle
 ms.topic: how-to
 ms.date: 03/13/2024
 ---

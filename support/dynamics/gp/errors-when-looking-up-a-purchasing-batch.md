@@ -1,7 +1,7 @@
 ---
 title: Errors when looking up a Purchasing batch
 description: Provides a solution to errors that occur when trying to look up a Purchasing batch in Payables Management using Microsoft Dynamics GP.
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

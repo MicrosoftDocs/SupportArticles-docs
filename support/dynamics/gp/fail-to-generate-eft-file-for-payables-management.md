@@ -2,7 +2,7 @@
 title: Error when you generate an EFT file for Payables Management
 description: Provides a solution to an error that occurs when you generate an EFT file for Payables Management in Microsoft Dynamics GP.
 ms.topic: troubleshooting
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.date: 03/13/2024
 ---
 # Error message when you generate an EFT file for Payables Management in Microsoft Dynamics GP: "EXCEPTION_CLASS_SCRIPT_DIVIDE_BY_ZERO"

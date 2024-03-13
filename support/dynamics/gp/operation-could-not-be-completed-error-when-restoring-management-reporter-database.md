@@ -1,7 +1,7 @@
 ---
 title: The operation could not be completed error when restoring Microsoft Management Reporter 2012 database
 description: Describes an error message that you may receive if you restore or move the Management Reporter 2012 database to a new server. Provides a resolution.
-ms.reviewer: jopankow, kevogt
+ms.reviewer: theley, jopankow, kevogt
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

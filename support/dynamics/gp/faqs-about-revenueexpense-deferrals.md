@@ -1,7 +1,7 @@
 ---
 title: FAQs about Revenue/Expense Deferrals in Dynamics GP
 description: Provides answers to frequently asked questions about Revenue/Expense Deferrals in Microsoft Dynamics GP.
-ms.reviewer:
+ms.reviewer: theley
 ms.date: 03/13/2024
 ---
 # Frequently asked questions about Revenue/Expense Deferrals in Microsoft Dynamics GP

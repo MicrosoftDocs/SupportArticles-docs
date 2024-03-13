@@ -1,7 +1,7 @@
 ---
 title: Accrual checkboxes not automatically mark off in Accrual Period Setup
 description: When the accrual process is run, it should automatically mark off the Accrual checkboxes in the Accrual Period Setup window to show the accrual has been completed. However, after manually marking or unmarking in this window, the checkboxes do not get automatically updated any longer when the accrual is run for Human Resources in Microsoft Dynamics GP.
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

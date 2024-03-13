@@ -1,7 +1,7 @@
 ---
 title: Invalid column name error during Year-End Close process
 description: You may receive the Invalid column name error during Year-End Close process with Analytical Accounting installed in Microsoft Dynamics GP.
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

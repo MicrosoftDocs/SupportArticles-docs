@@ -1,7 +1,7 @@
 ---
 title: How to write Passthrough SQL statements and Range Where clauses in Microsoft Great Plains Dexterity
 description: Explains how to write Passthrough SQL statements and Range Where clauses in Microsoft Great Plains Dexterity.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: how-to
 ms.date: 03/13/2024
 ---

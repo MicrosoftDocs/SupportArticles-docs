@@ -1,7 +1,7 @@
 ---
 title: Payroll isn't updated when you set up benefits or deductions in Human Resources in Microsoft Dynamics GP
 description: Describes a problem in which Payroll isn't updated when you set up benefits or deductions in Human Resources in Microsoft Dynamics GP.
-ms.reviewer: v-kimh, cwaswick
+ms.reviewer: theley, v-kimh, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

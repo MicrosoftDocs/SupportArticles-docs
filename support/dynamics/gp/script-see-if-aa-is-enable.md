@@ -1,7 +1,7 @@
 ---
 title: Script to see if AA is enabled
 description: SQL Script to see if AA is enabled in Microsoft Dynamics GP.
-ms.reviewer: Cwaswick
+ms.reviewer: theley, Cwaswick
 ms.topic: how-to
 ms.date: 03/13/2024
 ---

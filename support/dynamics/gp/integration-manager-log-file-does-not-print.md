@@ -1,7 +1,7 @@
 ---
 title: Integration Manager log file doesn't print
 description: Provides a solution to an error that occurs when you print the Integration Manager log file.
-ms.reviewer: dlanglie
+ms.reviewer: theley, dlanglie
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

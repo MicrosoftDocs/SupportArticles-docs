@@ -1,7 +1,7 @@
 ---
 title: Error when printing a GL TB detail report
 description: Provides a solution to errors that occur when you print a General Ledger Trial Balance (TB) detailed report.
-ms.reviewer: kyouells
+ms.reviewer: theley, kyouells
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

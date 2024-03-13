@@ -1,7 +1,7 @@
 ---
 title: GL Trial Balance SRS Reports return no data
 description: This article provides a resolution for the problem where GL Trial Balance SRS reports do not return any data in Microsoft Dynamics GP 2010 R2 and higher versions.
-ms.reviewer: 
+ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

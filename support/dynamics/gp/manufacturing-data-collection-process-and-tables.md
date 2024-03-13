@@ -1,7 +1,7 @@
 ---
 title: Manufacturing Data Collection Process and Tables
 description: Manufacturing Data Collection Process and Tables in Microsoft Dynamics GP.
-ms.reviewer: 
+ms.reviewer: theley
 ms.date: 03/13/2024
 ---
 # Manufacturing Data Collection Process and Tables in Microsoft Dynamics GP

@@ -1,7 +1,7 @@
 ---
 title: Stored Procedure smCleanupFilesBeforeLogin
 description: Provides a solution to an error that occurs when you try to sign in to a company in Microsoft Great Plains or in Microsoft Dynamics GP.
-ms.reviewer: kyouells
+ms.reviewer: theley, kyouells
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

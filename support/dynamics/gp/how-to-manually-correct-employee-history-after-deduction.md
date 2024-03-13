@@ -1,7 +1,7 @@
 ---
 title: How to manually correct employee history after deduction
 description: Discusses how to manually correct employee history after a pay run was processed with incorrect federal and state tax settings for a deduction in Microsoft Dynamics GP.
-ms.reviewer: lmuelle
+ms.reviewer: theley, lmuelle
 ms.topic: how-to
 ms.date: 03/13/2024
 ---

@@ -1,7 +1,7 @@
 ---
 title: Information on credit card processing
 description: Provides general information on how the credit card processing functions in Payables Management for Microsoft Dynamics GP.
-ms.reviewer: lmuelle
+ms.reviewer: theley, lmuelle
 ms.topic: how-to
 ms.date: 03/13/2024
 ---

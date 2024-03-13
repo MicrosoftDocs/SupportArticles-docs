@@ -1,7 +1,7 @@
 ---
 title: The menu path for Electronic Reconcile does not show
 description: The menu path for Electronic Reconcile does not appear in Microsoft Dynamics GP. Provides a resolution.
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

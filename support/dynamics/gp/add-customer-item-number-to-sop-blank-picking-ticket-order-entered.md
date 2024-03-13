@@ -1,7 +1,7 @@
 ---
 title: Add the customer item number to the "SOP Blank Picking Ticket Order Entered" report in Microsoft Dynamics GP
 description: Describes steps to add the customer item number to the SOP Blank Picking Ticket Order Entered report in Microsoft Dynamics GP 9.0 or in Microsoft Great Plains 8.0.
-ms.reviewer: krasmuss, lmuelle
+ms.reviewer: theley, krasmuss, lmuelle
 ms.topic: how-to
 ms.date: 03/13/2024
 ---

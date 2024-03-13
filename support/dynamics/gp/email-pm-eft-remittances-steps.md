@@ -1,7 +1,7 @@
 ---
 title: Quick step guide to email PM EFT Remittances in Microsoft Dynamics GP 2010
 description: Describes steps to email PM EFT Remittances in Microsoft Dynamics GP 2010.
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.topic: how-to
 ms.date: 03/13/2024
 ---

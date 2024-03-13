@@ -1,7 +1,7 @@
 ---
 title: All cash receipt transactions not imported
 description: Describes a problem that occurs because duplicate check numbers are in imported transactions. A workaround is provided.
-ms.reviewer: ryanklev, cwaswick
+ms.reviewer: theley, ryanklev, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

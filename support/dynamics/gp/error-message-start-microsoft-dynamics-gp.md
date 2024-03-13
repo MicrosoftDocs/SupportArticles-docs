@@ -1,7 +1,7 @@
 ---
 title: Error message when you start Microsoft Dynamics GP
 description: This article provides a resolution for the problem that occurs when you start Microsoft Dynamics GP.
-ms.reviewer: kyouells
+ms.reviewer: theley, kyouells
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---
