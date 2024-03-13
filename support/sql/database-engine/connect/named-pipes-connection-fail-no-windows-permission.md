@@ -1,16 +1,16 @@
 ---
-title: Troubleshooting Named Pipes connection error in SQL Server
+title: Named Pipes connection error in SQL Server
 description: This article provides a resolution for named pipes connection failures when authenticating to SQL Server.
-ms.date: 02/28/2024
+ms.date: 03/13/2024
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 
-# Troubleshooting the Named Pipes connections issue in SQL Server
+# Named Pipes connections causes failure to SQL Server
 
-This article helps you to resolve consistent authentication issue that causes a Named Pipes connections failure to SQL Server.
+This article helps you to resolve a consistent authentication issue that causes a Named Pipes connections failure to SQL Server.
 
 ## Symptoms
 
@@ -30,4 +30,4 @@ The Named Pipes connections fail because user doesn't have permission to log in 
 
 ## Resolution
 
-Add the user to the Users group on the server that's running SQL Server. If SQL Server is mirrored or clustered, repeat on all computers within the group.
+Add the user to the **Users** group on the server that's running SQL Server. If SQL Server is mirrored or clustered, repeat on all computers within the group.

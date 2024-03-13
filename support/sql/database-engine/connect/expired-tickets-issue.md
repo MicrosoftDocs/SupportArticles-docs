@@ -1,14 +1,14 @@
 ---
-title: Troubleshooting the Kerberos tickets issue in SQL Server
+title: Kerberos tickets issue in SQL Server
 description: This article provides symptoms and resolution for the consistent authentication errors to SQL Server that impact Kerberos tickets.
-ms.date: 02/28/2024
+ms.date: 03/13/2024
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 
-# Troubleshooting KRB_AP_ERR_TKT_EXPIRED in Kerberos tickets
+# KRB_AP_ERR_TKT_EXPIRED error in Kerberos tickets
 
 This article helps you resolve consistent authentication issues that might affect Kerberos tickets.
 
