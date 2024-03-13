@@ -1,9 +1,9 @@
 ---
 title: A connection could not be established
 description: Provides a solution to an error that occurs when using Microsoft Dynamics GP drilldown functionality.
-ms.reviewer: robalsta, cwaswick
+ms.reviewer: theley, robalsta, cwaswick
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # "A connection Microsoft Dynamics GP could not be established. Be sure you are logged on to the appropriate Company and try again." error when using drilldown functionality
 

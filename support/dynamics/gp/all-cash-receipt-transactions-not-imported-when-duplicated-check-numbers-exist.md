@@ -1,9 +1,9 @@
 ---
 title: All cash receipt transactions not imported
 description: Describes a problem that occurs because duplicate check numbers are in imported transactions. A workaround is provided.
-ms.reviewer: ryanklev, cwaswick
+ms.reviewer: theley, ryanklev, cwaswick
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # All the cash receipt transactions are not imported in when duplicate check numbers exist using Lockbox Processing
 

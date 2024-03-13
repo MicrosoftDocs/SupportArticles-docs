@@ -1,9 +1,9 @@
 ---
 title: Workflow is locked and cannot be edited
 description: Provides a solution to an error that occurs when trying to modify a workflow type in Microsoft Dynamics GP.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # "This workflow is locked by another user and cannot be edited. Please try again later." when trying to modify a workflow type in Microsoft Dynamics GP
 

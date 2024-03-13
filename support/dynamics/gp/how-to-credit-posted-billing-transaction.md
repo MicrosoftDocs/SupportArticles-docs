@@ -1,9 +1,9 @@
 ---
 title: How to credit a posted billing transaction
 description: Introduces how to credit a billing transaction that has been posted in Microsoft Dynamics GP.
-ms.reviewer: 
+ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 06/22/2022
+ms.date: 03/13/2024
 ---
 # How to do credits in Project Accounting Billing Entry in Microsoft Dynamics GP
 

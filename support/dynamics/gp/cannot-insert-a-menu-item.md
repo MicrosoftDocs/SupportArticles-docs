@@ -1,8 +1,8 @@
 ---
 title: Cannot insert a menu item
 description: Explains that you can't insert a menu item that is always visible by using Visual Studio Tools for Microsoft Dynamics GP.
-ms.reviewer:
-ms.date: 03/31/2021
+ms.reviewer: theley
+ms.date: 03/13/2024
 ---
 # You can't insert a menu item that is always visible by using Visual Studio Tools for Microsoft Dynamics GP
 

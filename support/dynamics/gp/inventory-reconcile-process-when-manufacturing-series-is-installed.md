@@ -1,8 +1,8 @@
 ---
 title: Inventory reconcile process when Manufacturing series is installed
 description: Explains how the inventory reconcile process functions when the Manufacturing series is installed in Microsoft Dynamics GP 9.0 and in Microsoft Great Plains 8.0.
-ms.reviewer: ttorgers
-ms.date: 03/31/2021
+ms.reviewer: theley, ttorgers
+ms.date: 03/13/2024
 ---
 # Information about the inventory reconcile process when the Manufacturing series is installed in Microsoft Dynamics GP 9.0 and in Microsoft Great Plains 8.0
 

@@ -1,9 +1,9 @@
 ---
 title: Determine when asset begins to depreciate or when asset is considered discontinued
 description: How to determine when an asset begins to depreciate or when an asset is considered discontinued in Fixed Asset Management in Microsoft Dynamics GP.
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # How to determine when an asset begins to depreciate or when an asset is considered discontinued in Fixed Asset Management
 
