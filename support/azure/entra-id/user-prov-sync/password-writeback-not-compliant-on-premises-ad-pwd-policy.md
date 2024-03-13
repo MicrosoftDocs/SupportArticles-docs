@@ -81,7 +81,7 @@ Provide a password that meets the local Active Directory password policy.
 
 First, verify the current settings for the password policy to be able to determine any violations. Then, go to the domain controller, and use one or more of the following methods:
 
-- From an on-premises domain controller, open an administrative Command Prompt window, and run the [net accounts](../../windows-server/networking/net-commands-on-operating-systems.md) command:
+- From an on-premises domain controller, open an administrative Command Prompt window, and run the [net accounts](../../../windows-server/networking/net-commands-on-operating-systems.md) command:
 
   ```output
   C:\>net accounts

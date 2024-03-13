@@ -117,7 +117,7 @@
   - name: Can't open Azure AD module PowerShell
     href: dir-dmns-obj/cant-open-aad-module-powershell.md
   - name: Can't verify account when resetting password
-    href: dir-dmns-obj/could-not-verify-account-reset-pwd.md
+    href: user-prov-sync/could-not-verify-account-reset-pwd.md
   - name: Method invocation failed error in Azure PowerShell
     href: dir-dmns-obj/method-invocation-failed-error.md
   - name: Password changes aren't saved
@@ -163,7 +163,7 @@
   - name: Can't sync SystemMailbox or DiscoveryMailboxSearch accounts
     href: mfa/unable-sync-system-discovery-mailbox.md
   - name: Can't verify account when resetting password
-    href: mfa/could-not-verify-account-reset-pwd.md
+    href: user-prov-sync/could-not-verify-account-reset-pwd.md
   - name: Code 403 Forbidden error when using SSO
     href: mfa/code-403-azure-seamless-sso-win10.md
   - name: Connect-MsolService fails with access denied error
@@ -280,9 +280,9 @@
   - name: Must join domain error when installing sync tool
     href: user-prov-sync/computer-must-joined-domain.md
   - name: Number is added to username
-    href: number-add-username-email-address.md
+    href: user-prov-sync/number-add-username-email-address.md
   - name: Number of objects are exceeded
-    href: exceed-number-objects-synced.md
+    href: user-prov-sync/exceed-number-objects-synced.md
   - name: user-prov-sync/Object deletions aren't synched
     href: user-prov-sync/object-deletions-not-sync.md
   - name: One or more objects don't sync 
@@ -300,7 +300,7 @@
   - name: ProxyAddresses attribute in Microsoft Entra ID
     href: user-prov-sync/proxyaddresses-attribute-populate.md
   - name: Request isn't processed when resetting password
-    href: user-prov-sync/request-not-processed-reset-pwd.md
+    href: mfa/request-not-processed-reset-pwd.md
   - name: RPC errors affecting Microsoft Entra Connect
     href: user-prov-sync/rpc-errors-affecting-aadconnect.md
   - name: Scripts cannot be loaded
