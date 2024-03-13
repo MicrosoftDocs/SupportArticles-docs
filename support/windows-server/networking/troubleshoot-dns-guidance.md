@@ -57,7 +57,7 @@ The trouble occurs in Active Directory-integrated zones. Issues occur when the D
 
 #### DHCP clients that use DHCP Option 81 unregister host "A" records during host "AAAA" registration
 
-This issue occurs if DHCP client computers use ISATAP or 6to4 network adapters, and both the DNS clients and DNS servers are configured to dynamically update DNS records. Because of this configuration, DHCP Option 81 (also known as the *Client FQDN option*) is enabled on both the clients and the servers. In this situation, the DHCP server might create the client's DNS "A" record (IPv4). Then the client creates its "AAAA" (IPv6) record. However, as part of this operation, the client first sends and updated "A" record that has a time-to-live (TTL) of **0**. As a result, the DNS server deletes the client's "A" record while it registers the "AAAA" record.
+This issue occurs if DHCP client computers use ISATAP or 6to4 network adapters, and both the DNS clients and DNS servers are configured to dynamically update DNS records. Because of this configuration, DHCP Option 81 (also known as the *Client FQDN option*) is enabled on both the clients and the servers. In this situation, the DHCP server might create the client's DNS "A" record (IPv4). Then the client creates its "AAAA" (IPv6) record. However, as part of this operation, the client first sends an updated "A" record that has a time-to-live (TTL) of **0**. As a result, the DNS server deletes the client's "A" record while it registers the "AAAA" record.
 
 To work around this behavior, avoid configuring DHCP clients that use these adapters to dynamically update DNS records when the DHCP servers are already configured to do so.
 
