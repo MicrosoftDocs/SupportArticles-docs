@@ -62,13 +62,13 @@ This issue occurs if DHCP client computers use ISATAP or 6to4 network adapters, 
 To work around this behavior, avoid configuring DHCP clients that use these adapters to dynamically update DNS records when the DHCP servers are already configured to do so.
 
 > [!NOTE]  
-> For more information about DHCP Option 81, see [Unexpected DNS record registration behavior if DHCP server uses "Always dynamically update DNS records"](dns-registration-behavior-when-dhcp-server-manages-dynamic-dns-updates.md). That article describes a different issue, but explains more about DHPC Option 81.
+> For more information about DHCP Option 81, see [Unexpected DNS record registration behavior if DHCP server uses "Always dynamically update DNS records"](dns-registration-behavior-when-dhcp-server-manages-dynamic-dns-updates.md). That article describes a different issue, but explains more about DHCP Option 81.
 
 #### The DNS Dynamic Update Protocol update to existing DNS records fails
 
 The DNS Dynamic Update Protocol update to existing records fails. Because of this issue, the DNS scavenging process considers the records to be aged, and it deletes them.
 
-The NETLOGON service logs "event 577X" events when it can't register SRV records. Other events are logged for registration failures of host "A" and PTR records. Check the system logs for these failures. The client that registers these records might log such events, or the DHCP servers that register the records on the client's behalf might log them.
+In the case of a service that requires a SRV record, the local Netlogon service logs "event ID 577*X*" events when it can't register SRV records. For example, if the Netlogon service of a domain controller triggers a dynamic update for its LDAP SRV record, and that update fails, the Netlogon service logs an event on the domain controller. Other events are logged for registration failures of host "A" and PTR records. Check the System event logs on the DNS servers and any other affected computers for these failures. The client that registers these records might log such events, or the DHCP servers that register the records on the client's behalf might log them. These additional events can provide insight into the cause of the failure.
 
 #### Converting an active dynamic lease to a reservation deletes the "A" and PTR records for that client
 
