@@ -1,5 +1,5 @@
 ---
-title: Troubleshooting Windows user profile issue in SQL Server
+title: Windows user profile issue in SQL Server
 description: This article addresses SQL Server consistent authentication issues related to the Windows user profile.
 ms.date: 02/28/2024
 author: Malcolm-Stewart
