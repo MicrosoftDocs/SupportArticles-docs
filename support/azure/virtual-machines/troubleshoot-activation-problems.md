@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot Windows virtual machine activation problems in Azure
-description: Provides the troubleshoot steps for fixing Windows virtual machine activation problems in Azure
+description: Provides the troubleshoot steps for fixing Windows virtual machine activation problems in Azure.
 services: virtual-machines, azure-resource-manager
 author: genlin
 tags: top-support-issue, azure-resource-manager
@@ -44,7 +44,7 @@ To troubleshoot a Windows activation issue, follow these steps:
         
         This command will try to activate Windows using the current product key and display the result.
 
-    3. If the activation fails, you'll receive an error message and error code. For example,
+    2. If the activation fails, you'll receive an error message and error code. For example,
 
        > Error: 0xC004F074 The Software Licensing Service reported that the computer could not be activated. No Key Management Service (KMS) could be contacted.
     
