@@ -33,7 +33,7 @@ This error happens in this scenario:
 - You disassociate the original private Domain Name System (DNS) zone of the AKS cluster.
 - You link a private DNS zone that has the same name as the original zone but is located in a different resource group or subscription.
 
-That's why you see the same private DNS zone name *\<GUID>.privatelink.\<region>.azmk8s.io* in the error message. The first is the new zone in the new resource group or subscription, while the second is the original zone created with the AKS cluster.
+That's why you see the same private DNS zone name "\<GUID>.privatelink.\<region>.azmk8s.io" in the error message. The first is the new zone in the new resource group or subscription, while the second is the original zone created with the AKS cluster.
 
 
 ## Solution
