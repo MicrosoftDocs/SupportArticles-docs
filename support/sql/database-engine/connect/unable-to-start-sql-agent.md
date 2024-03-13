@@ -1,6 +1,6 @@
 ---
-# SQL Server Agent fails to start while connecting to SQL Server due to misconfigured TLS protocol
-description: This article provides a resolution to the problem where the SQL Server Agent can't start.
+title: SQL Server Agent fails to start while connecting to SQL Server due to misconfigured TLS protocol
+description: This article provides a resolution to the problem where the SQL Server Agent can't start because of a misconfigured TLS protocol.
 ms.date: 03/04/2024
 author: prmadhes-msft
 ms.author: prmadhes
@@ -30,7 +30,7 @@ The `DisabledByDefault` and `Enabled` registry entries in the `[HKEY_LOCAL_MACHI
 
 To resolve these problems, follow these steps:
 
-1. Enable the TLS 1.2 protocol for SQL Server communication by updating the following registry entries:
+1. Enable the Transport Layer Security (TLS) 1.2 protocol for SQL Server communication by updating the following registry entries:
 
    `[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2]`
 
