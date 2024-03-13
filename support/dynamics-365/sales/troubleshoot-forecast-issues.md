@@ -4,7 +4,7 @@ description: Provides resolutions for the known issues that are related to forec
 author: sbmjais
 ms.author: shjais
 ms.reviewer: ladirohit, lavanyakr
-ms.date: 11/22/2023
+ms.date: 03/13/2024
 ms.subservice: d365-sales-sales
 ---
 # Troubleshoot issues with forecasting
@@ -243,16 +243,16 @@ The columns associated with the **Selector**, **Amount field**, and **Date field
 
 ### Resolution
 
-To solve the issue, you need to provide the read permission to the **Dynamics 365 Sales Forecasting** user in the field security profiles. Otherwise, the column will show **0** to all users. Follow these steps to configure the field security profiles:
+To solve the issue, you need to grant the **Read** permission to the **Dynamics 365 Sales Forecasting** user in the field security profiles. Otherwise, the column will show **0** to all users. Follow these steps to configure the field security profiles:
 
 1. Go to **Settings**> **Advanced Settings** > **Security** > **Field Security Profiles**.
-1. Select the field security profile associated with the field that's showing 0.
+1. Select the field security profile associated with the field that shows **0**.
 1. Select **Users** > **Add**.
-2. Search for the **# Dynamics 365 Sales Forecasting** user, select the checkbox against the user name, and then select **Select** > **Add**.
-1. Select **Field Permissions** and grant **Read** permission for the field. 
+1. Search for the **Dynamics 365 Sales Forecasting** user, select the checkbox against the user name, and then select **Select** > **Add**.
+1. Select **Field Permissions** and grant the **Read** permission to the field.
 1. Save and close the profile.
 
-Recalculate the forecast and verify that the column is showing appropriate values.  
+Recalculate the forecast and verify that the column is showing appropriate values.
 
 ## Issue 12 - Can't manually recalculate the prediction column on the Forecasts page
 
