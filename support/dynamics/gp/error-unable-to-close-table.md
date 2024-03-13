@@ -1,7 +1,7 @@
 ---
 title: Error when you print the Historical Aged Trial Balance report in Microsoft Dynamics GP
 description: Describes an error message that occurs when you try to print the Historical Aged Trial Balance report in Microsoft Dynamics GP.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

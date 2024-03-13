@@ -1,7 +1,7 @@
 ---
 title: Error when you use the Budget Wizard for Excel in Microsoft Dynamics GP to try to import a budget
 description: Describes a problem that occurs if fiscal periods are set up in a date format. Provides a resolution.
-ms.reviewer: cwaswick, lmuelle
+ms.reviewer: theley, cwaswick, lmuelle
 ms.date: 03/13/2024
 ---
 # "The number of periods for the budget does not match the number of columns in Excel" error when you use the "Budget Wizard for Excel" in Microsoft Dynamics GP to try to import a budget

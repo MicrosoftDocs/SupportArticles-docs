@@ -1,7 +1,7 @@
 ---
 title: This transaction is edited by another user
 description: Provides a solution to an error that occurs when you select an existing purchase order in the Purchase Order Entry window.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

@@ -1,7 +1,7 @@
 ---
 title: CM Transaction type changed to Cheque
 description: The CM Transaction Type changes to cheque type when clearing the Bank Transaction window after selecting Void Transaction.
-ms.reviewer: deeptivu, cwaswick
+ms.reviewer: theley, deeptivu, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

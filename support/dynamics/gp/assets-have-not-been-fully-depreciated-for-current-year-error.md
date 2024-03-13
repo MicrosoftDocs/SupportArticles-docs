@@ -1,7 +1,7 @@
 ---
 title: Assets have not been fully depreciated for the current year error in Fixed Assets
 description: Describes an issue that prompts you with an Assets have not been fully depreciated for the current year message when you try to close the year in Fixed Assets in Microsoft Dynamics GP.
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

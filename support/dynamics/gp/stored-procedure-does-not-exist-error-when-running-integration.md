@@ -1,7 +1,7 @@
 ---
 title: Cannot run integration via eConnect destination adapter
 description: Describes how to resolve the stored procedure error for a Microsoft Dynamics GP eConnect destination adapter in Integration Manager for Microsoft Dynamics GP.
-ms.reviewer: grwill, dclauson
+ms.reviewer: theley, grwill, dclauson
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

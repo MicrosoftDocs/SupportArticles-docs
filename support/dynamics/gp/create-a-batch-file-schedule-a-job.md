@@ -1,7 +1,7 @@
 ---
 title: Create a batch file to schedule a job
 description: Describes how to create a batch file to schedule a job by using Windows Task Scheduler.
-ms.reviewer: kyouells
+ms.reviewer: theley, kyouells
 ms.topic: how-to
 ms.date: 03/13/2024
 ---

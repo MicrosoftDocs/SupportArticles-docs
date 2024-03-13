@@ -1,7 +1,7 @@
 ---
 title: Cannot use Electronic Reconcile in Bank Reconciliation
 description: Describes a problem where you receive the error message Bank Account Number from text file could not be matched when using Electronic Reconcile in Bank Reconciliation in Microsoft Dynamics GP.
-ms.reviewer: cwaswick, lmuelle
+ms.reviewer: theley, cwaswick, lmuelle
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

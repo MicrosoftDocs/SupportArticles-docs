@@ -1,7 +1,7 @@
 ---
 title: Description of the different ranges in Dexterity
 description: Describes how to use some Dexterity ranges in Microsoft Dynamics GP.
-ms.reviewer: 
+ms.reviewer: theley
 ms.date: 03/13/2024
 ---
 # Description of the different ranges in Dexterity for Microsoft Dynamics GP

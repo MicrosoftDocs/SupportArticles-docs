@@ -1,7 +1,7 @@
 ---
 title: You cannot stop the current process in the Process Monitor
 description: This article provides a resolution for the problem where you cannot stop the current process in the Process Monitor.
-ms.reviewer: v-erikjo, kyouells
+ms.reviewer: theley, v-erikjo, kyouells
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

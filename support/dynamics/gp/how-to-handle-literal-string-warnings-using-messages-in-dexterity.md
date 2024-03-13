@@ -1,7 +1,7 @@
 ---
 title: How to handle literal string warnings in Dexterity
 description: Contains information about how to use messages to handle literal string warnings in Dexterity in Microsoft Dynamics GP. Code samples are also provided.
-ms.reviewer: 
+ms.reviewer: theley
 ms.topic: how-to
 ms.date: 03/13/2024
 ---

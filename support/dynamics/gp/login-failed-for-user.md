@@ -1,7 +1,7 @@
 ---
 title: Login failed for user
 description: This article gives steps on how to resolve this error on Windows XP and Windows Vista computers.
-ms.reviewer: dlanglie
+ms.reviewer: theley, dlanglie
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

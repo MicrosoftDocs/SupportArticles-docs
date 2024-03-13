@@ -1,7 +1,7 @@
 ---
 title: A transaction cannot fall in a fiscal year
 description: Provides a solution to an error that occurs when you select Year and Reconcile in the Reconcile Financial Information window.
-ms.reviewer: LMuelle, cwaswick
+ms.reviewer: theley, LMuelle, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

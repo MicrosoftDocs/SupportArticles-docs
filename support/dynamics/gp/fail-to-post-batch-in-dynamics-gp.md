@@ -1,7 +1,7 @@
 ---
 title: Error when you post a batch in Dynamics GP
 description: Describes that you receive an error message when you try to post a batch in Microsoft Dynamics GP, or in Microsoft Business Solutions - Great Plains 8.0. Provides a resolution.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

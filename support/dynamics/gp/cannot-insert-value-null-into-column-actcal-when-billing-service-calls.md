@@ -1,7 +1,7 @@
 ---
 title: Cannot insert the value NULL into column error when billing service calls in Contract Administration
 description: Describes steps to resolve the error message - Cannot insert the value NULL into column ACTCAL, table xxx.dbo.SVC00601, column does not allow nulls when you attempt to run the Service Call Billing process.
-ms.reviewer: Beckyber
+ms.reviewer: theley, Beckyber
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

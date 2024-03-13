@@ -1,7 +1,7 @@
 ---
 title: Error when you post a reverse issue transaction
 description: Describes a problem that may occur because there are pending quantities in various tables. A resolution is provided.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

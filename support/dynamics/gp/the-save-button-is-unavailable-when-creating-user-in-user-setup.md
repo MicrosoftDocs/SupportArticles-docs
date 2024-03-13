@@ -1,7 +1,7 @@
 ---
 title: Cannot save when creating user in User Setup
 description: The Save button is unavailable when you try to create a user in the User Setup window in Microsoft Dynamics GP.
-ms.reviewer: lmuelle
+ms.reviewer: theley, lmuelle
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

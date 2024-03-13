@@ -2,7 +2,7 @@
 title: Fail to void a sales order in Microsoft Dynamics GP
 description: Describes a behavior that occurs because a manufacturing order is linked to an item on a sales order. A resolution is provided.
 ms.topic: troubleshooting
-ms.reviewer: beckyber, aeckman
+ms.reviewer: theley, beckyber, aeckman
 ms.date: 03/13/2024
 ---
 # Error message when you try to void a sales order in Microsoft Dynamics GP: You cannot void this sales order because manufacturing orders are attached to one or more line items

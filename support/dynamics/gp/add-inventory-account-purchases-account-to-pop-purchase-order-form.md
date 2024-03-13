@@ -1,7 +1,7 @@
 ---
 title: Add Inventory Account or Purchases Account to POP Purchase Order form in Dynamics GP
 description: Describes how to add the Inventory Account or Purchases Account to the POP Purchase Order form in Microsoft Dynamics GP.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: how-to
 ms.date: 03/13/2024
 ---

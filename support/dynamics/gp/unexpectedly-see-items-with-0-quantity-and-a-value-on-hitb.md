@@ -1,7 +1,7 @@
 ---
 title: Items have 0 quantity but a value on HITB
 description: One or more items that have 0 in the Quantity field but do have an amount in the Value field on the Historical Inventory Trial Balance in Microsoft Dynamics GP.
-ms.reviewer: ppeterso
+ms.reviewer: theley, ppeterso
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

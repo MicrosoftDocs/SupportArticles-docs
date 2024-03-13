@@ -1,7 +1,7 @@
 ---
 title: Description of the fiscal year-end closing process
 description: Describes the fiscal year-end closing process in General Ledger, in Payables Management, and in Receivables Management in Microsoft Dynamics GP.
-ms.reviewer: jakelaux, Lmuelle
+ms.reviewer: theley, jakelaux, Lmuelle
 ms.date: 03/13/2024
 ---
 # Description of the fiscal year-end closing process in General Ledger, Payables Management, and Receivables Management

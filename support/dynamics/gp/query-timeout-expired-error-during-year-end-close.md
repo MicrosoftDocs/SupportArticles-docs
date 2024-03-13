@@ -1,7 +1,7 @@
 ---
 title: Query timeout expired error during year-end close
 description: When you do a year-end close in Microsoft Dynamics GP, you may receive an error message that states Query timeout expired. Provides a resolution.
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

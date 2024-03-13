@@ -1,7 +1,7 @@
 ---
 title: Fatal Error During Installation when installing Web Services
 description: Describes how to avoid or resolve error messages that may occur during the installation of Web Services for Microsoft Dynamics GP.
-ms.reviewer: jplesuk, kyouells
+ms.reviewer: theley, jplesuk, kyouells
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

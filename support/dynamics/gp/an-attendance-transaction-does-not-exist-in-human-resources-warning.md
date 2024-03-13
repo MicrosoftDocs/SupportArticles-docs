@@ -1,7 +1,7 @@
 ---
 title: An attendance transaction does not exist in Human Resources warning during payrun build
 description: You may receive a warning message that states an attendance transaction does not exist in Human Resources during the payrun build process in Microsoft Dynamics GP. Provides a resolution.
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

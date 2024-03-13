@@ -1,7 +1,7 @@
 ---
 title: Account Number is a required field but value was not supplied error when running General Journal integration
 description: Describes a problem that occurs if the integration source file contains blank rows in Integration Manager for Microsoft Dynamics GP. Provides several resolutions.
-ms.reviewer: Dclauson
+ms.reviewer: theley, Dclauson
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

@@ -1,7 +1,7 @@
 ---
 title: How to recreate fiscal periods
 description: Describes how to re-create fiscal periods if they are damaged or if they are incorrect in Microsoft Dynamics GP on Microsoft SQL Server.
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.topic: how-to
 ms.date: 03/13/2024
 ---

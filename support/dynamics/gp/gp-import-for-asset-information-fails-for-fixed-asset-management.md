@@ -1,7 +1,7 @@
 ---
 title: GP Import for asset information fails
 description: Describes that GP Import for asset information fails for Fixed Asset Management in Microsoft Dynamics GP.
-ms.reviewer: 
+ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

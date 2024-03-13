@@ -2,7 +2,7 @@
 title: Error when you process in Microsoft Dynamics GP
 description: Provides a solution to an error that occurs when you process in Microsoft Dynamics GP.
 ms.topic: troubleshooting
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.date: 03/13/2024
 ---
 # Error when processing in Microsoft Dynamics GP: A remove range operation on table 'syContentPageXMLCache' cannot find the table

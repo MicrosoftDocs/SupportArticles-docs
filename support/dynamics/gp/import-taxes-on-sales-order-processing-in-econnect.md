@@ -2,7 +2,7 @@
 title: Import taxes on Sales Order Processing invoice in eConnect
 description: How to import taxes on a Sales Order Processing invoice in eConnect for Microsoft Dynamics GP 10.0.
 ms.topic: how-to
-ms.reviewer: dclauson
+ms.reviewer: theley, dclauson
 ms.date: 03/13/2024
 ---
 # How to import taxes on a Sales Order Processing invoice in eConnect for Microsoft Dynamics GP 10.0

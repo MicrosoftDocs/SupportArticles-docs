@@ -1,7 +1,7 @@
 ---
 title: How to set up and use the outsourcing features in Manufacturing
 description: Explains how to set up and use the outsourcing features in Manufacturing in Microsoft Dynamics GP and in Microsoft Great Plains.
-ms.reviewer: ttorgers
+ms.reviewer: theley, ttorgers
 ms.topic: how-to
 ms.date: 03/13/2024
 ---

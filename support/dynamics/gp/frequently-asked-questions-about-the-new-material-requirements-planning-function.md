@@ -1,7 +1,7 @@
 ---
 title: FAQ about the new Material Requirements Planning functionality
 description: Lists answers to frequently asked questions about the new Material Requirements Planning functionality in Manufacturing in Microsoft Dynamics GP 10.0.
-ms.reviewer: 
+ms.reviewer: theley
 ms.date: 03/13/2024
 ---
 # Frequently asked questions about the new Material Requirements Planning functionality in Manufacturing in Microsoft Dynamics GP

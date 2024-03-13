@@ -1,7 +1,7 @@
 ---
 title: The default accounts in the Purchase Item Detail Entry window
 description: This article describes information about the default accounts in the Purchase Item Detail Entry window in Microsoft Dynamics GP.
-ms.reviewer: ppeterso
+ms.reviewer: theley, ppeterso
 ms.date: 03/13/2024
 ---
 # Information about the default accounts in the Purchase Item Detail Entry window in Microsoft Dynamics GP

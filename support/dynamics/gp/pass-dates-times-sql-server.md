@@ -1,7 +1,7 @@
 ---
 title: Pass dates and times to SQL Server
 description: Explains that you must pass dates and times in formats that don't conflict with the computer's regional settings.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: how-to
 ms.date: 03/13/2024
 ---

@@ -1,7 +1,7 @@
 ---
 title: Close the Sales Kit Options window before modifying the transaction error when you run a Sales Order Processing integration that contains a kit item
 description: Describes a problem that occurs when the Sales Order Processing integration contains a kit item. Provides a resolution.
-ms.reviewer: lmuelle
+ms.reviewer: theley, lmuelle
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

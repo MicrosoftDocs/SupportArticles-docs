@@ -1,7 +1,7 @@
 ---
 title: Return Code 17 error when retiring an asset
 description: When a user attempts to retire an asset they receive an error Return code 17 (Duplicate record) on script FA_Retire_Asset. Provides a resolution.
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

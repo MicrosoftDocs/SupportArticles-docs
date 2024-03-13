@@ -1,7 +1,7 @@
 ---
 title: Data entry errors exist in batch UserID
 description: Provides a solution to an error that occurs when you select Process in the Create Refund Checks window in Microsoft Dynamics GP.
-ms.reviewer: lmuelle
+ms.reviewer: theley, lmuelle
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

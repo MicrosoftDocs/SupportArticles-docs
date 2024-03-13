@@ -1,7 +1,7 @@
 ---
 title: The rate type ID is missing 
 description: Provides a solution to an error that occurs when you print an edit list in General Ledger in Microsoft Dynamics GP 9.0 and in Microsoft Business Solutions - Great Plains 8.0.
-ms.reviewer: lmuelle
+ms.reviewer: theley, lmuelle
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

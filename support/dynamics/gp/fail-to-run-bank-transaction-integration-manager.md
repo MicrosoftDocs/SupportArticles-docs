@@ -1,7 +1,7 @@
 ---
 title: Error when you run Bank Transaction integration in Integration Manager
 description: Provides a solution to an error that occurs when you run the Bank Transaction integration in Integration Manager for Microsoft Dynamics GP.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

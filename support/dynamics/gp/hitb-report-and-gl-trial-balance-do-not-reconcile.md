@@ -1,7 +1,7 @@
 ---
 title: HITB report and GL Trial Balance do not reconcile
 description: Provides a resolution for the issue that the HITB report and GL Trial Balance do not reconcile in Microsoft Dynamics GP.
-ms.reviewer: beckyber, ppeterso
+ms.reviewer: theley, beckyber, ppeterso
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

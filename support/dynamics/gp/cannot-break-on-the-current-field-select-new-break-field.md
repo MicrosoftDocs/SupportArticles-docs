@@ -1,7 +1,7 @@
 ---
 title: Cannot break on the current field. Select new break field error 
 description: Describes a problem that occurs because a break field is not selected. Explains how to resolve the problem.
-ms.reviewer: ryanklev
+ms.reviewer: theley, ryanklev
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

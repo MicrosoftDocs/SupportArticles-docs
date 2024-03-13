@@ -1,7 +1,7 @@
 ---
 title: Unable to open REPORTS.DIC in read/write mode error when starting Report Writer
 description: When you start Report Writer in Microsoft Dynamics GP, you receive the error message - Unable to open REPORTS.DIC in read/write mode.
-ms.reviewer: lmuelle 
+ms.reviewer: theley, lmuelle 
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

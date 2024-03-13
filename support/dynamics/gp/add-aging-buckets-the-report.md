@@ -1,7 +1,7 @@
 ---
 title: Add aging buckets to the report
 description: Describes how to use Report Writer in Microsoft Dynamics GP to add aging buckets to the RM Summary Historical Aged Trial Balance report.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: how-to
 ms.date: 03/13/2024
 ---

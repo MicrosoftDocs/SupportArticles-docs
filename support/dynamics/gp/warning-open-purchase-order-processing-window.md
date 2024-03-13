@@ -2,7 +2,7 @@
 title: Warning when you open a Purchase Order Processing window
 description: This article provides a resolution for the problem that occurs when you try to open a Purchase Order Processing window in Microsoft Dynamics GP 9.0.
 ms.topic: troubleshooting
-ms.reviewer: ppeterso
+ms.reviewer: theley, ppeterso
 ms.date: 03/13/2024
 ---
 # Warning message when you try to open a Purchase Order Processing window in Microsoft Dynamics GP 9.0 (Please set up this user first)

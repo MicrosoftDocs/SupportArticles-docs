@@ -1,7 +1,7 @@
 ---
 title: Upgrade the Reports Dictionary
 description: Describes how to upgrade the Reports Dictionary in Microsoft Dynamics GP.
-ms.reviewer: kyouells
+ms.reviewer: theley, kyouells
 ms.topic: how-to
 ms.date: 03/13/2024
 ---

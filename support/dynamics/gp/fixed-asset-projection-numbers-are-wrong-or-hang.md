@@ -1,7 +1,7 @@
 ---
 title: Fixed Asset Projection numbers are incorrect or hang
 description: Fixed Asset Project numbers are incorrect or hang. Provides a resolution.
-ms.reviewer: cwaswick, kenhub
+ms.reviewer: theley, cwaswick, kenhub
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

@@ -1,7 +1,7 @@
 ---
 title: Error message in Microsoft Dynamics GP
 description: This article provides a resolution for the problem where you receive the error message (Stored Procedure XXXX returned the following results).
-ms.reviewer: kyouells
+ms.reviewer: theley, kyouells
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

@@ -1,7 +1,7 @@
 ---
 title: Processing will be aborted error when running ERP Integration
 description: Describes an error message when you run the ERP Integration from the Management Reporter Configuration Console. Provides a resolution.
-ms.reviewer: kevogt
+ms.reviewer: theley, kevogt
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

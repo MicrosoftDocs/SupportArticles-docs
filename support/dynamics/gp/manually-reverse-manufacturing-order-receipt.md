@@ -2,7 +2,7 @@
 title: Manually reverse a manufacturing order receipt in Manufacturing in Microsoft Dynamics GP
 description: Describes how to manually reverse a manufacturing order receipt in Manufacturing in Microsoft Dynamics GP.
 ms.topic: how-to
-ms.reviewer: ttorgers, beckyber
+ms.reviewer: theley, ttorgers, beckyber
 ms.date: 03/13/2024
 ---
 # How to manually reverse a manufacturing order receipt in Manufacturing in Microsoft Dynamics GP

@@ -1,7 +1,7 @@
 ---
 title: A save operation cannot find the table
 description: Provides a solution to an error that occurs when printing remittances in Payables Management in Microsoft Dynamics GP.
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

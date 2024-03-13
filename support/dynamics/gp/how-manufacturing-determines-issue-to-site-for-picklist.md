@@ -1,7 +1,7 @@
 ---
 title: How Manufacturing determines issue-to site for a picklist
 description: Describes how Manufacturing determines the issue-to site for a picklist.
-ms.reviewer: beckyber, aeckman
+ms.reviewer: theley, beckyber, aeckman
 ms.date: 03/13/2024
 ---
 # Information about how Manufacturing in Microsoft Dynamics GP determines the issue-to site for a picklist in Microsoft Dynamics GP

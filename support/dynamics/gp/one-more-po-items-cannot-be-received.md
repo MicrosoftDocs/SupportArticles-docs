@@ -1,7 +1,7 @@
 ---
 title: One or more PO items cannot be received
 description: Provides a solution to an error that occurs when you try to receive a purchase order in Microsoft Dynamics GP.
-ms.reviewer: Beckyber
+ms.reviewer: theley, Beckyber
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

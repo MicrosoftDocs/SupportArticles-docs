@@ -1,7 +1,7 @@
 ---
 title: Key Segment not found
 description: Provides a solution to errors that occur when after installing a recent update or service pack for Microsoft Dynamics GP.
-ms.reviewer: lmuelle, jolse
+ms.reviewer: theley, lmuelle, jolse
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

@@ -1,7 +1,7 @@
 ---
 title: Error when changing standard cost on an item
 description: An error occurs when changing standard cost on an item in Microsoft Dynamics GP. Provides a resolution.
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

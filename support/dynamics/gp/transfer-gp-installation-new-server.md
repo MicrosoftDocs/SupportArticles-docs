@@ -1,7 +1,7 @@
 ---
 title: Transfer GP installation to a new server
 description: Discusses how to transfer your existing financial application to a new server that is running Microsoft SQL Server. Also discusses how to maintain the user logins and databases.
-ms.reviewer: kyouells, 
+ms.reviewer: theley, kyouells, 
 ms.topic: how-to
 ms.date: 03/13/2024
 ---

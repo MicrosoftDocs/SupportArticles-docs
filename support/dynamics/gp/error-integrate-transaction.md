@@ -1,7 +1,7 @@
 ---
 title: Error when you integrate a transaction
 description: This article provides a resolution for the problem that occurs when Sales Tax Detail Summary data is mapped for the invoice.
-ms.reviewer: 
+ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

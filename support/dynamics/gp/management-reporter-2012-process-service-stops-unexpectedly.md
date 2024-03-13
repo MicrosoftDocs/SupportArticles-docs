@@ -1,7 +1,7 @@
 ---
 title: Management Reporter 2012 Process Service stops unexpectedly
 description: Describe an issue where the Management Reporter Process Service will unexpectedly stop running. Provides a resolution.
-ms.reviewer: kellybj, kevogt
+ms.reviewer: theley, kellybj, kevogt
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

@@ -1,7 +1,7 @@
 ---
 title: Cannot access new fields from an alternate window
 description: When you create alternate forms in Dexterity, you can refer to new fields that are added to the windows. This article describes how to prevent the error message when you refer to the new fields that are added to the windows.
-ms.reviewer: 
+ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

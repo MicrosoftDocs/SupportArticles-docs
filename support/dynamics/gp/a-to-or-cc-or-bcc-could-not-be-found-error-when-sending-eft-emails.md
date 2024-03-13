@@ -1,7 +1,7 @@
 ---
 title: A To or CC or Bcc Address could not be found error when sending EFT emails
 description: An error that states a A or CC or Bcc address could not be found when sending EFT emails in Microsoft Dynamics.
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

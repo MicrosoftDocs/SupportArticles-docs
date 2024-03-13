@@ -1,7 +1,7 @@
 ---
 title: Error when you print a batch edit list or post a batch in General Ledger
 description: Describes steps to resolve the error message that occurs when you print a batch edit list or post a batch in General Ledger in Microsoft Dynamics GP.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

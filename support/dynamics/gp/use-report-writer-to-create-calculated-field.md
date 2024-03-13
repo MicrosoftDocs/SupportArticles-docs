@@ -1,7 +1,7 @@
 ---
 title: Use Report Writer to create calculated field to mask the social security number
 description: Describes how to block out the social security number on an employee checks report.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: how-to
 ms.date: 03/13/2024
 ---

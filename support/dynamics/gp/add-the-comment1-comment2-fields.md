@@ -1,7 +1,7 @@
 ---
 title: Add the Comment1 and Comment2 fields
 description: Describes how to add the Comment1 and Comment2 fields to the SOP Blank Invoice Form report by using Report Writer in Microsoft Dynamics GP 9.0.
-ms.reviewer: aeckman, lmuelle
+ms.reviewer: theley, aeckman, lmuelle
 ms.topic: how-to
 ms.date: 03/13/2024
 ---

@@ -1,7 +1,7 @@
 ---
 title: Budgets do not save when you add new accounts to budget
 description: Describes a problem where budgets do not save when you add new accounts to the budget in Analytical Accounting in Microsoft Dynamics GP. A resolution is provided.
-ms.reviewer: kfrankha, lmuelle
+ms.reviewer: theley, kfrankha, lmuelle
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

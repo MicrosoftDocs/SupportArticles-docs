@@ -1,7 +1,7 @@
 ---
 title: Error if Management Reporter service account password expires
 description: Describes an error message you may receive when you sign in to a company in Management Reporter. Provides a resolution.
-ms.reviewer: jopankow, kevogt
+ms.reviewer: theley, jopankow, kevogt
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

@@ -1,7 +1,7 @@
 ---
 title: Match transactions in Electronic Reconcile
 description: Introduces the criteria that Electronic Reconcile uses to match transactions in Microsoft Dynamics GP.
-ms.reviewer: 
+ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

@@ -1,7 +1,7 @@
 ---
 title: Problems occur when approving a document
 description: Provides solutions to errors that occur when you approve a document in Project Time and Expense if Automatic Processing is enabled in Microsoft Dynamics GP.
-ms.reviewer: ppeterso
+ms.reviewer: theley, ppeterso
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

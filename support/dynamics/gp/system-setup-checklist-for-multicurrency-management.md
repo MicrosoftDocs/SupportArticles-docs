@@ -1,7 +1,7 @@
 ---
 title: System setup checklist for Multicurrency Management
 description: System setup checklist for Multicurrency Management in Microsoft Dynamics GP.
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.topic: how-to
 ms.date: 03/13/2024
 ---

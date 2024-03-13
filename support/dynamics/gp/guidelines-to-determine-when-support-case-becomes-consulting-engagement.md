@@ -1,7 +1,7 @@
 ---
 title: Guidelines to decide when support case becomes consulting engagement
 description: This article describes the guidelines that Microsoft Dynamics Retail Support Professionals use to determine when a support case becomes a consulting engagement.
-ms.reviewer: tberger
+ms.reviewer: theley, tberger
 ms.date: 03/13/2024
 ---
 # Guidelines that Dynamics Retail Support Professionals use to determine when a support case becomes a consulting engagement

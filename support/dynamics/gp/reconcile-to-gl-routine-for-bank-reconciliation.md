@@ -1,7 +1,7 @@
 ---
 title: Reconcile to GL routine for bank reconciliation
 description: Provides more information about the Reconcile to GL routine for Bank Reconciliation in Microsoft Dynamics GP.
-ms.reviewer: 
+ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

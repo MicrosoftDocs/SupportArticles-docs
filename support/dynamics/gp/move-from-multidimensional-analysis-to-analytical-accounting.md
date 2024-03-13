@@ -2,7 +2,7 @@
 title: How to move from Multidimensional Analysis to Analytical Accounting
 description: Describes how to move from Multidimensional Analysis to Analytical Accounting.
 ms.topic: how-to
-ms.reviewer: ryanklev
+ms.reviewer: theley, ryanklev
 ms.date: 03/13/2024
 ---
 # How to move from Multidimensional Analysis to Analytical Accounting

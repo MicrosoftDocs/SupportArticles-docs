@@ -1,7 +1,7 @@
 ---
 title: How to handle EFT/ACH files with Bank Reconciliation
 description: How to handle EFT/ACH files with Bank Reconciliation in Microsoft Dynamics GP. This includes EFT/ACH files from EFT for Payables Management, EFT for Receivables Management, and ACH for Payroll Direct Deposit.
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.topic: how-to
 ms.date: 03/13/2024
 ---

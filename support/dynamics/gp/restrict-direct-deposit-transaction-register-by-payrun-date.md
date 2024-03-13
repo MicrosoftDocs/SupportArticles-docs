@@ -2,7 +2,7 @@
 title: Restrict Direct Deposit Transaction Register by Payrun Date in Microsoft Dynamics GP
 description: This article describes how to modify the Direct Deposit Transaction Register to show only those payroll transactions that were processed on a specific date.
 ms.topic: troubleshooting
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.date: 03/13/2024
 ---
 # Restrict Direct Deposit Transaction Register by Payrun Date in Microsoft Dynamics GP

@@ -2,7 +2,7 @@
 title: Change telephone format by using Modifier with VB
 description: This article provides steps in Modifier with Visual Basic for Applications that you can use to change the telephone format for SmartList and for Letter Writing Assistant.
 ms.topic: how-to
-ms.reviewer: kvogel
+ms.reviewer: theley, kvogel
 ms.date: 03/13/2024
 ---
 # Change the telephone format for SmartList and for Letter Writing Assistant in Microsoft Dynamics GP by using Modifier with Visual Basic for Applications

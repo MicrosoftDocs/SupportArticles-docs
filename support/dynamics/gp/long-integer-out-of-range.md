@@ -1,7 +1,7 @@
 ---
 title: Long Integer out of range
 description: Provides a solution to an error that occurs when running the Reconcile to GL financial routine.
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

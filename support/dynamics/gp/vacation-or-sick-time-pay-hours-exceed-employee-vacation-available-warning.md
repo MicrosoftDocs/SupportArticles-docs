@@ -1,7 +1,7 @@
 ---
 title: Vacation or Sick time pay hours exceed employee vacation or sick time available warning
 description: The Check File Report from the build checks process may show a warning message that the employee does not have enough vacation or sick time available in Microsoft Dynamics GP. Provides a resolution.
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

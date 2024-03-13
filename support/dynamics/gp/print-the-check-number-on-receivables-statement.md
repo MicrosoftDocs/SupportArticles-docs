@@ -1,7 +1,7 @@
 ---
 title: How to print the Check Number on a Receivables Statement in Microsoft Dynamics GP 9.0 and 10.0
 description: Describes instructions on how to print the Payment Check Number on Receivables Management Customer Statements in Report Writer for Microsoft Dynamics GP 9.0 and 10.0.
-ms.reviewer: 
+ms.reviewer: theley
 ms.topic: how-to
 ms.date: 03/13/2024
 ---

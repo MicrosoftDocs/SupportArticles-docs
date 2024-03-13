@@ -1,7 +1,7 @@
 ---
 title: Error message when you import budgets
 description: Error message when you import budgets in Analytical Accounting in Microsoft Dynamics GP.
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

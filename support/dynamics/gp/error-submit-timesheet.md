@@ -1,7 +1,7 @@
 ---
 title: Error message when you submit a timesheet
 description: This article provides a resolution for the problem that occurs when you submit a timesheet in Microsoft Dynamics GP.
-ms.reviewer: 
+ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

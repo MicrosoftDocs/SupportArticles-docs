@@ -1,7 +1,7 @@
 ---
 title: Add a record-level note
 description: Describes how to add a record-level note for the Voucher No. field to the PM Paid Transaction History Detail report.
-ms.reviewer: lmuelle
+ms.reviewer: theley, lmuelle
 ms.topic: how-to
 ms.date: 03/13/2024
 ---

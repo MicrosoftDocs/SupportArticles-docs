@@ -1,7 +1,7 @@
 ---
 title: How to truncate last two decimal places for payables checks
 description: Describes how to truncate the last two decimal places for payables checks in the Check Total field in Microsoft Dynamics GP.
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.topic: how-to
 ms.date: 03/13/2024
 ---

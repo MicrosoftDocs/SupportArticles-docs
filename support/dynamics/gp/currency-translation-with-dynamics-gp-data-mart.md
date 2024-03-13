@@ -1,7 +1,7 @@
 ---
 title: Currency translation for Management Reporter 2012 with data mart
 description: Describes how to use currency translation with Microsoft Management Reporter 2012 Data Mart and Microsoft Dynamics GP.
-ms.reviewer: jopankow
+ms.reviewer: theley, jopankow
 ms.date: 03/13/2024
 ---
 # Currency translation for Microsoft Management Reporter 2012 with Microsoft Dynamics GP data mart
