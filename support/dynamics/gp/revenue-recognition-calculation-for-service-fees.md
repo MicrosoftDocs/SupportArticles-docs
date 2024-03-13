@@ -1,8 +1,8 @@
 ---
 title: Revenue recognition calculation for service fees
 description: Describes the calculation that is used for revenue recognition for service fees in Project Accounting in Microsoft Dynamics GP.
-ms.reviewer: jchrist, lmuelle
-ms.date: 03/31/2021
+ms.reviewer: theley, jchrist, lmuelle
+ms.date: 03/13/2024
 ---
 # Information about the revenue recognition calculation for service fees in Project Accounting
 

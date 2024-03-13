@@ -2,7 +2,8 @@
 title: Error when you print the Purchasing Invoice Edit list in Purchase Order Processing in Microsoft Dynamics GP 
 description: Provides a solution to an error that occurs when you print the Purchasing Invoice Edit list in Purchase Order Processing in Microsoft Dynamics GP.
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
+ms.reviewer: theley
 ---
 # Error message when you print the Purchasing Invoice Edit list in Purchase Order Processing in Microsoft Dynamics GP: "Line Items Are Not Fully Matched"
 

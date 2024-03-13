@@ -1,8 +1,8 @@
 ---
 title: Guidelines that support professionals use
 description: Describes the guidelines we use to determine when a support case becomes a consulting engagement.
-ms.reviewer: kyouells
-ms.date: 03/31/2021
+ms.reviewer: theley, kyouells
+ms.date: 03/13/2024
 ---
 # Guidelines that Microsoft support professionals use to determine when a support case becomes a consulting engagement
 
@@ -207,4 +207,3 @@ For more information about consulting engagements that involve Report Writer, Sm
 > Advisory requests are no longer being accepted by Microsoft Dynamics GP Support. You must search for an ISV on your own to assist with any customizations. Here is a link to help you search:
 >
 > [Dynamics ISV central](http://www.isv-central.com/search/products.aspx)
-
