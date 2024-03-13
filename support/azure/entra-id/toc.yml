@@ -4,337 +4,336 @@
 - name: Azure AD Domain Services
   items:
   - name: Can't verify account when resetting password
-    href: could-not-verify-account-reset-pwd.md
+    href: user-prov-sync/could-not-verify-account-reset-pwd.md
   - name: Enable support for TLS 1.2 in your environment
-    href: enable-support-tls-environment.md
+    href: ad-dmn-services/enable-support-tls-environment.md
   - name: IdFix.exe is not a valid Win32 application
-    href: idfix-not-valid-win32-application.md
+    href: ad-dmn-services/idfix-not-valid-win32-application.md
   - name: IPv6 Support in Microsoft Entra ID
-    href: azure-ad-ipv6-support.md
+    href: ad-dmn-services/azure-ad-ipv6-support.md
   - name: Maximum number of devices is reached
-    href: maximum-number-of-devices-joined-workplace.md
+    href: ad-dmn-services/maximum-number-of-devices-joined-workplace.md
   - name: Microsoft Graph PowerShell overview
     href: /powershell/microsoftgraph/overview?toc=%2Ftroubleshoot%2Fazure%2Factive-directory%2Ftoc.json&bc=%2Ftroubleshoot%2Fazure%2Factive-directory%2Fbreadcrumb%2Ftoc.json
   - name: Security context is not associated in IdFix
-    href: security-context-not-associate-domian.md
+    href: ad-dmn-services/security-context-not-associate-domian.md
   - name: Send Microsoft Authenticator logs and get an incident ID
-    href: send-microsoft-authenticator-logs.md  
+    href: ad-dmn-services/send-microsoft-authenticator-logs.md  
   - name: Support data collection
-    href: support-data-collection-diagnostic-logs.md
+    href: ad-dmn-services/support-data-collection-diagnostic-logs.md
   - name: Troubleshoot data freshness alerts in Microsoft Entra Connect Health
-    href: aad-connect-health-data-freshness.md
+    href: ad-dmn-services/aad-connect-health-data-freshness.md
   - name: Unable to register a device
-    href: cant-connect-service-error-register-device.md
+    href: ad-dmn-services/cant-connect-service-error-register-device.md
   - name: Understand AD FS sign-in events in Microsoft Entra ID with Connect Health
-    href: understand-ad-fs-sign-in-events-azure-ad-connect-health.md
+    href: ad-dmn-services/understand-ad-fs-sign-in-events-azure-ad-connect-health.md
   - name: Understand Microsoft Entra Connect 1.4 and device disappearance
-    href: reference-connect-device-disappearance.md
+    href: ad-dmn-services/reference-connect-device-disappearance.md
 
   - name: Microsoft Entra Hybrid Sync Agent Installation Issues
-
     items:
     - name: Installation issues overview
-      href: azure-ad-hybrid-sync-agent-install-welcome.md
+      href: ad-dmn-services/azure-ad-hybrid-sync-agent-install-welcome.md
     - name: No privileges to install MSI
-      href: azure-ad-hybrid-sync-no-privileges-install-msi.md
+      href: ad-dmn-services/azure-ad-hybrid-sync-no-privileges-install-msi.md
     - name: Cannot start service AADConnectProvisioningAgent
-      href: azure-ad-hybrid-sync-cannot-start-aadconnect-provisioning-agent.md
+      href: ad-dmn-services/azure-ad-hybrid-sync-cannot-start-aadconnect-provisioning-agent.md
     - name: The gMSA is set to log on as Service
-      href: azure-ad-hybrid-sync-gmsa-set-logon-service.md
+      href: ad-dmn-services/azure-ad-hybrid-sync-gmsa-set-logon-service.md
     - name: There is no such object on the server
-      href: azure-ad-hybrid-sync-no-such-object-on-server.md
+      href: ad-dmn-services/azure-ad-hybrid-sync-no-such-object-on-server.md
     - name: Unable to create gMSA because KDS may not be running on domain controller
-      href: azure-ad-hybrid-sync-unable-create-gmsa-kds-domain-controller.md
+      href: ad-dmn-services/azure-ad-hybrid-sync-unable-create-gmsa-kds-domain-controller.md
 
 - name: App Integration and Development 
   items:
   - name: Troubleshoot adding apps
-    href: troubleshoot-adding-apps.md
+    href: app-integration/troubleshoot-adding-apps.md
     items: 
       - name: Application takes a long time to appear
-        href: app-takes-long-time-appear.md
+        href: app-integration/app-takes-long-time-appear.md
       - name: Application doesn't appear
-        href: app-doesnt-appear.md
+        href: app-integration/app-doesnt-appear.md
       - name: Unable to delete an application
-        href: unable-delete-app.md
+        href: app-integration/unable-delete-app.md
       - name: Send notification details to Microsoft support
-        href: send-notification-details.md
+        href: app-integration/send-notification-details.md
   - name: Troubleshoot sign-in to apps
     items:
       - name: Error AADSTS50003 - certificate or key not configured
-        href: error-code-AADSTS50003-cert-or-key-not-configured.md
+        href: app-integration/error-code-AADSTS50003-cert-or-key-not-configured.md
       - name: Error AADSTS50011 - reply URL mismatch (SAML)
-        href: error-code-AADSTS50011-reply-url-mismatch.md
+        href: app-integration/error-code-AADSTS50011-reply-url-mismatch.md
       - name: Error AADSTS50011 - redirect URI mismatch (OIDC/OAuth2)
-        href: error-code-AADSTS50011-redirect-uri-mismatch.md
+        href: app-integration/error-code-AADSTS50011-redirect-uri-mismatch.md
       - name: Error AADSTS50020 - guest sign-in to resource tenant fails
-        href: error-code-AADSTS50020-user-account-identity-provider-does-not-exist.md
+        href: app-integration/error-code-AADSTS50020-user-account-identity-provider-does-not-exist.md
       - name: Error AADSTS50057 - user account is disabled
-        href: error-code-aadsts50057-user-account-is-disabled.md
+        href: app-integration/error-code-aadsts50057-user-account-is-disabled.md
       - name: Error AADSTS500571 - guest user account is disabled
-        href: error-code-aadsts500571-guest-user-account-is-disabled.md
+        href: app-integration/error-code-aadsts500571-guest-user-account-is-disabled.md
       - name: Error AADSTS50105 - user not assigned a role
-        href: error-code-AADSTS50105-user-not-assigned-role.md
+        href: app-integration/error-code-AADSTS50105-user-not-assigned-role.md
       - name: Error AADSTS650056 - misconfigured app
-        href: error-code-AADSTS650056-misconfigured-app.md
+        href: app-integration/error-code-AADSTS650056-misconfigured-app.md
       - name: Error AADSTS70001 - app not found in directory
-        href: error-code-AADSTS70001-app-not-found-in-directory.md
+        href: app-integration/error-code-AADSTS70001-app-not-found-in-directory.md
       - name: Error AADSTS75011 - authentication method mismatch
-        href: error-code-AADSTS75011-auth-method-mismatch.md
+        href: app-integration/error-code-AADSTS75011-auth-method-mismatch.md
       - name: Error AADSTS75005 - not a valid saml request
-        href: error-code-AADSTS75005-not-a-valid-saml-request.md
+        href: app-integration/error-code-AADSTS75005-not-a-valid-saml-request.md
       - name: Error AADSTS750054 - SAML request or response not present
-        href: error-code-AADSTS750054-saml-request-not-present.md
+        href: app-integration/error-code-AADSTS750054-saml-request-not-present.md
       - name: Error AADSTS7000110 - request is ambiguous, multiple application identifiers found
-        href: error-code-aadsts7000110-request-is-ambiguous.md
+        href: app-integration/error-code-aadsts7000110-request-is-ambiguous.md
       - name: Error AADSTS7000112 - application is disabled
-        href: error-code-aadsts7000112-application-is-disabled.md
+        href: app-integration/error-code-aadsts7000112-application-is-disabled.md
       - name: Troubleshoot signing in to SAML-based single sign-on configured apps
-        href: troubleshoot-sign-in-saml-based-apps.md
+        href: app-integration/troubleshoot-sign-in-saml-based-apps.md
       - name: User redirected to incorrect reply URL or localhost
-        href: reply-url-redirected-to-localhost.md
+        href: app-integration/reply-url-redirected-to-localhost.md
 
 - name: Business to Consumer
   items:
   - name: An exception occurs in application
-    href: server-error-application-exception.md
+    href: b2c/server-error-application-exception.md
   - name: Can't delete a directory
-    href: cannot-delete-directory.md
+    href: b2c/cannot-delete-directory.md
   - name: Fail to sign in to application
-    href: error-sign-into-app.md
+    href: b2c/error-sign-into-app.md
   - name: Server Error in '/' Application error in application
-    href: server-error-application.md
+    href: b2c/server-error-application.md
 
 - name: Microsoft Entra Directories, Domains, and Objects
   items:
   - name: Devices
     items:
       - name: No local administrator group privileges on Microsoft Entra joined device
-        href: no-local-admin-privileges-azure-ad-joined-device.md
+        href: dir-dmns-obj/no-local-admin-privileges-azure-ad-joined-device.md
       - name: Pending devices
-        href: pending-devices.md
+        href: dir-dmns-obj/pending-devices.md
   - name: Can't delete a directory using portal
-    href: cannot-delete-directory-azure-portal.md
+    href: dir-dmns-obj/cannot-delete-directory-azure-portal.md
   - name: Can't open Azure AD module PowerShell
-    href: cant-open-aad-module-powershell.md
+    href: dir-dmns-obj/cant-open-aad-module-powershell.md
   - name: Can't verify account when resetting password
-    href: could-not-verify-account-reset-pwd.md
+    href: dir-dmns-obj/could-not-verify-account-reset-pwd.md
   - name: Method invocation failed error in Azure PowerShell
-    href: method-invocation-failed-error.md
+    href: dir-dmns-obj/method-invocation-failed-error.md
   - name: Password changes aren't saved
-    href: pwd-change-not-save.md
+    href: dir-dmns-obj/pwd-change-not-save.md
   - name: Perform a Workplace Join using DRS
-    href: cant-perform-workplace-join.md
+    href: dir-dmns-obj/cant-perform-workplace-join.md
   - name: Remove user from recycle bin
-    href: remove-msoluser-user-not-found-recyclebin.md
+    href: dir-dmns-obj/remove-msoluser-user-not-found-recyclebin.md
   - name: Set up your enterprise for working remotely FAQ
-    href: faq-set-up-enterprise-work-remotely.yml
+    href: dir-dmns-obj/faq-set-up-enterprise-work-remotely.yml
   - name: The term is not recognized error in Azure PowerShell
-    href: term-cmdlet-name-not-recognized-aad-cmdlet.md
+    href: dir-dmns-obj/term-cmdlet-name-not-recognized-aad-cmdlet.md
   - name: Troubleshoot dynamic groups
-    href: troubleshoot-dynamic-groups.md
+    href: dir-dmns-obj/troubleshoot-dynamic-groups.md
   - name: Troubleshoot user creation and deletion issues
-    href: troubleshoot-user-creation-deletion-issues.md
+    href: dir-dmns-obj/troubleshoot-user-creation-deletion-issues.md
 
 - name: Governance, Compliance and Reporting 
   items:
   - name: Audit Logs
     items:
       - name: Unknown Actors in Audit Reports
-        href: unknown-actors-in-audit-reports.md
+        href: governance/unknown-actors-in-audit-reports.md
   - name: Sign-in Activity Reports
     items:
       - name: Verify 1st party Microsoft apps in sign-in reports
-        href: verify-first-party-apps-sign-in.md
+        href: governance/verify-first-party-apps-sign-in.md
 
 - name: Sign-in and Multi-factor authentication
   items:
   - name: An unknown error occurred
-    href: unknown-error-occurred-sign-in-assistant.md
+    href: mfa/unknown-error-occurred-sign-in-assistant.md
   - name: Authentication fails with error 'The requested federation realm object '<Object ID>' does not exist'
-    href: authentication-fails-with-error.md
+    href: mfa/authentication-fails-with-error.md
   - name: Authorization_RequestDenied error when changing password
-    href: authorization-request-denied-graph-api.md
+    href: mfa/authorization-request-denied-graph-api.md
   - name: Can't authenticate using ADAL
-    href: adal-authenticate-android-devices-fail.md
+    href: mfa/adal-authenticate-android-devices-fail.md
   - name: Can't perform a Workplace Join
-    href: confirm-signin-info-workplace-join.md
+    href: mfa/confirm-signin-info-workplace-join.md
   - name: MFA fails because five registered devices already use authenticator apps
-    href: cant-set-up-mfa-five-devices-registered.md
+    href: mfa/cant-set-up-mfa-five-devices-registered.md
   - name: Can't sync SystemMailbox or DiscoveryMailboxSearch accounts
-    href: unable-sync-system-discovery-mailbox.md
+    href: mfa/unable-sync-system-discovery-mailbox.md
   - name: Can't verify account when resetting password
-    href: could-not-verify-account-reset-pwd.md
+    href: mfa/could-not-verify-account-reset-pwd.md
   - name: Code 403 Forbidden error when using SSO
-    href: code-403-azure-seamless-sso-win10.md
+    href: mfa/code-403-azure-seamless-sso-win10.md
   - name: Connect-MsolService fails with access denied error
-    href: cannot-connect-cloud-services-powershell.md
+    href: mfa/cannot-connect-cloud-services-powershell.md
   - name: ESR settings don't sync
-    href: esr-settings-not-sync-mfa-enabled.md
+    href: mfa/esr-settings-not-sync-mfa-enabled.md
   - name: Federated user is forced to sign in
-    href: federated-users-forced-sign-in.md
+    href: mfa/federated-users-forced-sign-in.md
   - name: Federated user is prompted to enter credentials
-    href: federated-user-prompt-enter-credentials.md
+    href: mfa/federated-user-prompt-enter-credentials.md
   - name: Federated users sign in two times
-    href: federated-users-sign-in-two-times-mfa.md
+    href: mfa/federated-users-sign-in-two-times-mfa.md
   - name: Federation service identifier is already in use
-    href: federation-service-identifier-specified.md
+    href: mfa/federation-service-identifier-specified.md
   - name: MFA users aren't prompted for a second verification
-    href: multi-factor-auth-second-verification.md
+    href: mfa/multi-factor-auth-second-verification.md
   - name: No response received when resetting password
-    href: unable-reset-pwd-response-call.md
+    href: mfa/unable-reset-pwd-response-call.md
   - name: Request isn't processed when resetting password
-    href: request-not-processed-reset-pwd.md
+    href: mfa/request-not-processed-reset-pwd.md
   - name: Reset MFA setting after phone number changes
-    href: cannot-use-mfa-signin-lose-phone.md
+    href: mfa/cannot-use-mfa-signin-lose-phone.md
   - name: Settings aren't sync between devices
-    href: event-id-6065-user-cant-sign.md
+    href: mfa/event-id-6065-user-cant-sign.md
   - name: Split-brain DNS configuration
-    href: faulty-split-brain-dns-configuration-prevent-sso.md
+    href: mfa/faulty-split-brain-dns-configuration-prevent-sso.md
   - name: The MFA status is displayed incorrectly
-    href: user-displayed-disabled-or-enabled-mfa.md
+    href: mfa/user-displayed-disabled-or-enabled-mfa.md
   - name: Troubleshoot account lockout
-    href: account-lockout-adfs-window-server.md
+    href: mfa/account-lockout-adfs-window-server.md
   - name: Troubleshooting MFA issues
-    href: troubleshoot-azure-mfa-issue.md
+    href: mfa/troubleshoot-azure-mfa-issue.md
   - name: User name or password is incorrect
-    href: user-name-pwd-incorrect.md
+    href: mfa/user-name-pwd-incorrect.md
   - name: Unexpected error when resetting password
-    href: unexpected-error-reset-pwd.md
+    href: mfa/unexpected-error-reset-pwd.md
   - name: Verify account error when resetting password
-    href: cannot-verify-account-reset-pwd.md
+    href: mfa/cannot-verify-account-reset-pwd.md
   - name: Cannot receive MFA verification code
-    href: text-voice-call-verification-code-mfa-not-send.md
+    href: mfa/text-voice-call-verification-code-mfa-not-send.md
 
 - name: User Provisioning and Synchronization
   items:
   - name: Password writeback
     items:
     - name: General troubleshooting steps
-      href: password-writeback-general-troubleshooting-steps.md
+      href: user-prov-sync/password-writeback-general-troubleshooting-steps.md
     - name: Access rights and permissions
-      href: password-writeback-access-rights-permissions.md
+      href: user-prov-sync/password-writeback-access-rights-permissions.md
     - name: Error code 8023062C - insecure password reset or change
-      href: password-writeback-error-code-8023062c.md
+      href: user-prov-sync/password-writeback-error-code-8023062c.md
     - name: Error code SSPR_009 - synced Microsoft Entra admin can't do cloud reset
-      href: password-writeback-error-code-sspr-009.md
+      href: user-prov-sync/password-writeback-error-code-sspr-009.md
     - name: Error code SSPR_0029 - on-premises configuration not set up
-      href: password-writeback-error-code-sspr-0029.md
+      href: user-prov-sync/password-writeback-error-code-sspr-0029.md
     - name: Admin password reset on Microsoft 365 admin center
-      href: password-writeback-microsoft-365-admin-center.md
+      href: user-prov-sync/password-writeback-microsoft-365-admin-center.md
     - name: Initial sign-in delays after forced password change
-      href: password-writeback-servers-need-time-catch-up.md
+      href: user-prov-sync/password-writeback-servers-need-time-catch-up.md
     - name: On-premises policy disallows password reset
-      href: password-writeback-not-compliant-on-premises-ad-pwd-policy.md
+      href: user-prov-sync/password-writeback-not-compliant-on-premises-ad-pwd-policy.md
   - name: Administrator credentials error
-    href: admin-credentials-supplied-not-valid.md
+    href: user-prov-sync/admin-credentials-supplied-not-valid.md
   - name: Microsoft Entra Connect services don't start
-    href: services-sync-not-start.md
+    href: user-prov-sync/services-sync-not-start.md
   - name: Microsoft Entra Connect hangs during importing
-    href: aad-management-agent-hangs-during-import.md
+    href: user-prov-sync/aad-management-agent-hangs-during-import.md
   - name: Microsoft Entra Connect won't work after upgrading
-    href: cannot-work-automatic-upgrade.md
+    href: user-prov-sync/cannot-work-automatic-upgrade.md
   - name: Can't connect to Azure RMS
-    href: fail-connect-azure-information-protection-powerShell.md
+    href: user-prov-sync/fail-connect-azure-information-protection-powerShell.md
   - name: Can't enable Device writeback
-    href: cannot-enable-device-writeback.md
+    href: user-prov-sync/cannot-enable-device-writeback.md
   - name: Can't manage or remove objects
-    href: cannot-manage-objects.md
+    href: user-prov-sync/cannot-manage-objects.md
   - name: Can't run DirSyncConfigShell.psc1
-    href: load-file-or-assembly-error.md
+    href: user-prov-sync/load-file-or-assembly-error.md
   - name: Can't sign in after converting domain
-    href: cannot-signin-convert-domain-federated.md
+    href: user-prov-sync/cannot-signin-convert-domain-federated.md
   - name: Can't sync system mailbox
-    href: unable-sync-system-discovery-mailbox.md
+    href: user-prov-sync/unable-sync-system-discovery-mailbox.md
   - name: Can't verify account when resetting password
-    href: could-not-verify-account-reset-pwd.md
+    href: user-prov-sync/could-not-verify-account-reset-pwd.md
   - name: Changes to mail-enabled security group don't sync
-    href: sg-mail-enabled-sync.md
+    href: user-prov-sync/sg-mail-enabled-sync.md
   - name: Computer startup delays
-    href: computers-3-hour-delay-boot.md
+    href: user-prov-sync/computers-3-hour-delay-boot.md
   - name: Directory sync to Azure stops
-    href: directory-sync-stop-register.md
+    href: user-prov-sync/directory-sync-stop-register.md
   - name: Email addresses aren't synced
-    href: email-addresses-not-sync.md
+    href: user-prov-sync/email-addresses-not-sync.md
   - name: Enable password hash sync
-    href: pwd-hash-sync-auto-enable.md
+    href: user-prov-sync/pwd-hash-sync-auto-enable.md
   - name: Error code 1603 in Microsoft Entra Connect
-    href: upgrade-fails-error-code-1603.md
+    href: user-prov-sync/upgrade-fails-error-code-1603.md
   - name: Error 80070005 in Azure AD Sync Services config wizard
-    href: aad-sync-services-config-wizard-error.md
+    href: user-prov-sync/aad-sync-services-config-wizard-error.md
   - name: Errors with event ID 6301 after installing Microsoft Entra Connect
-    href: tvp-errors-when-AADConnect-installed-on-Windows-Server-2019.md
+    href: user-prov-sync/tvp-errors-when-AADConnect-installed-on-Windows-Server-2019.md
   - name: Fail to get address for method
-    href: failed-get-address-method.md
+    href: user-prov-sync/failed-get-address-method.md
   - name: Fail to install Azure AD module
-    href: unable-install-aad-module-powershell.md
+    href: user-prov-sync/unable-install-aad-module-powershell.md
   - name: Fail to sync domain-based filtering changes
-    href: domain-based-filtering-fail-sync.md
+    href: user-prov-sync/domain-based-filtering-fail-sync.md
   - name: High CPU usage when using Microsoft Entra Connect
-    href: high-cpu-usage.md
+    href: user-prov-sync/high-cpu-usage.md
   - name: Identity sync client can't authenticate
-    href: unable-communicate-windows-service.md
+    href: user-prov-sync/unable-communicate-windows-service.md
   - name: Logon failure with 1789 error
-    href: error-code-1789-configuration-wizard.md
+    href: user-prov-sync/error-code-1789-configuration-wizard.md
   - name: Model database corruption in SQLLocalDB
-    href: resolve-model-database-corruption-sqllocaldb.md
+    href: user-prov-sync/resolve-model-database-corruption-sqllocaldb.md
   - name: Must join domain error when installing sync tool
-    href: computer-must-joined-domain.md
+    href: user-prov-sync/computer-must-joined-domain.md
   - name: Number is added to username
     href: number-add-username-email-address.md
   - name: Number of objects are exceeded
     href: exceed-number-objects-synced.md
-  - name: Object deletions aren't synched
-    href: object-deletions-not-sync.md
+  - name: user-prov-sync/Object deletions aren't synched
+    href: user-prov-sync/object-deletions-not-sync.md
   - name: One or more objects don't sync 
-    href: objects-dont-sync-ad-sync-tool.md
+    href: user-prov-sync/objects-dont-sync-ad-sync-tool.md
   - name: Outdate information is displayed
-    href: outdate-information-displays.md 
+    href: user-prov-sync/outdate-information-displays.md 
   - name: Password hash sync stops work
-    href: pwd-hash-sync-stop-work-fim.md
+    href: user-prov-sync/pwd-hash-sync-stop-work-fim.md
   - name: Password isn't sync after reset
-    href: pwd-not-sync.md
+    href: user-prov-sync/pwd-not-sync.md
   - name: Password sync fails with event ID 611 
-    href: pwd-hash-sync-stops-work.md
+    href: user-prov-sync/pwd-hash-sync-stops-work.md
   - name: Permission-issue 8344 (insufficient access rights to perform the operation)
-    href: troubleshoot-permission-issue-sync-service-manager.md
+    href: user-prov-sync/troubleshoot-permission-issue-sync-service-manager.md
   - name: ProxyAddresses attribute in Microsoft Entra ID
-    href: proxyaddresses-attribute-populate.md
+    href: user-prov-sync/proxyaddresses-attribute-populate.md
   - name: Request isn't processed when resetting password
-    href: request-not-processed-reset-pwd.md
+    href: user-prov-sync/request-not-processed-reset-pwd.md
   - name: RPC errors affecting Microsoft Entra Connect
-    href: rpc-errors-affecting-aadconnect.md
+    href: user-prov-sync/rpc-errors-affecting-aadconnect.md
   - name: Scripts cannot be loaded
-    href: cannot-run-scripts-powershell.md
+    href: user-prov-sync/cannot-run-scripts-powershell.md
   - name: Separate passwords required
-    href: separate-pwds-required-computer-work-account.md
+    href: user-prov-sync/separate-pwds-required-computer-work-account.md
   - name: Size limit was exceeded
-    href: size-limit-exceeded.md
+    href: user-prov-sync/size-limit-exceeded.md
   - name: Slow performance and high CPU usage
-    href: slow-performance-high-cpu-usage.md
+    href: user-prov-sync/slow-performance-high-cpu-usage.md
   - name: Troubleshoot Microsoft Entra Connect version upgrading issues
-    href: troubleshoot-aad-connect-fails-to-install-upgraded-version.md
+    href: user-prov-sync/troubleshoot-aad-connect-fails-to-install-upgraded-version.md
   - name: Troubleshoot Azure AD Sync installation issues
-    href: installation-configuration-wizard-errors.md
+    href: user-prov-sync/installation-configuration-wizard-errors.md
   - name: Troubleshoot Microsoft Entra Connect objects and attributes
-    href: troubleshoot-aad-connect-objects-attributes.md
+    href: user-prov-sync/troubleshoot-aad-connect-objects-attributes.md
   - name: Troubleshoot Certificate-Based Authentication issues
-    href: certificate-based-authenticate-issue.md
+    href: user-prov-sync/certificate-based-authenticate-issue.md
   - name: Troubleshoot password sync issues
-    href: troubleshoot-pwd-sync.md
+    href: user-prov-sync/troubleshoot-pwd-sync.md
   - name: Unable to add subdomain
-    href: new-msoldomain-cmdle-add-subdomain.md
+    href: user-prov-sync/new-msoldomain-cmdle-add-subdomain.md
   - name: Unable to authenticate your credentials
-    href: unable-authenticate-credentials.md
+    href: user-prov-sync/unable-authenticate-credentials.md
   - name: Unable to configure password writeback
-    href: unable-configure-pwd-writeback-error.md
+    href: user-prov-sync/unable-configure-pwd-writeback-error.md
   - name: Unknown error 0x80005000
-    href: unknown-error-0x80005000.md 
+    href: user-prov-sync/unknown-error-0x80005000.md 
   - name: UPN matching for identity sync
-    href: use-upn-matching-identity-sync.md
+    href: user-prov-sync/use-upn-matching-identity-sync.md
   - name: User object is missing or filtered
-    href: user-object-missing-filtered.md
+    href: user-prov-sync/user-object-missing-filtered.md
   - name: User's primary group is excluded
-    href: exclude-user-primary-group.md
+    href: user-prov-sync/exclude-user-primary-group.md
   - name: Yellow exclamation mark in Office 2013
-    href: yellow-exclamation-mark-office2013.md
+    href: user-prov-sync/yellow-exclamation-mark-office2013.md
