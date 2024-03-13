@@ -16,7 +16,7 @@ items:
 - name: Existing connection forcibly closed
   href: tls-exist-connection-closed.md
   items:
-    - name: Event ID 17052 and you can't start SQL Server Agent
+    - name: SQL Server Agent fails to start due to TLS issues
       href: unable-to-start-sql-agent.md
   - name: The SSL_PE_NO_CIPHER error occurs on endpoint 5022
     href: ssl-pe-no-cipher-error-endpoint-5022.md
