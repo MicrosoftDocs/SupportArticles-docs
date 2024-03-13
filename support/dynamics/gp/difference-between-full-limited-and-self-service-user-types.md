@@ -2,7 +2,7 @@
 title: Difference between Full, Limited, and Self Service user types
 description: This article provides the answer for the question about what is the difference between Full, Limited, and Self Service user types in User Setup in Microsoft Dynamics GP.
 ms.reviewer: theley
-ms.date: 02/20/2024
+ms.date: 03/13/2024
 ---
 # Difference between Full, Limited, and Self Service user types in User Setup in Microsoft Dynamics GP
 
@@ -31,7 +31,7 @@ At a high level, the permissions for each user type are as follows:
 
   The Full user has full control of Microsoft Dynamics GP. (Also known as **Enter**, **Inquire**, and **Edit** access.)
 
-This is always a grey area because you might expect something it doesn't allow based on the user type. It's recommended to set up a user and test your process if you have limited users.
+What a user type does in Dynamics GP is always a grey area because you might expect something to function in a specific way and the user type doesn't allow based on the user type specifications. It's recommended to set up a user and test your process if you have limited users.
 
 Sometimes, you want to see a window in the process, but it's unavailable. In this case, it's recommended to always test with a user with that type of user to make sure everything works for their process as you expect.
  
