@@ -5,9 +5,9 @@ ms.date: 03/04/2024
 ms.reviewer: mastewa, prmadhes, jopilov, v-sidong
 ms.custom: sap:Connection issues
 ---
-# JDBC configuring and troubleshooting
+# JDBC configuration and troubleshooting
 
-This article describes Java database connectivity (JDBC) and the troubleshooting steps that occur during configuration.
+This article describes Java database connectivity (JDBC) and the troubleshooting steps that occur during configuration. The focus is on JDBC for SQL Server.
 
 > [!NOTE]
 >
@@ -45,13 +45,13 @@ To set `CLASSPATH`, use one of the following methods:
 > [!NOTE]
 > The command prompt setting is temporary and will be removed when you close the command prompt window. The graphical user interface (GUI) is a permanent setting and requires a reboot.
 
-#### Command prompt
+#### Command prompt example
 
 ```cmd
 Set CLASSPATH=.;C:\sqljdbc_12.4\enu\mssql-jdbc-12.4.0.jre8.jar
 ```
 
-#### GUI
+#### GUI example
 
 To set `CLASSPATH` using the GUI, follow these steps:
 
