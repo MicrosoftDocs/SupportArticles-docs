@@ -10,8 +10,8 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
-- CSSTroubleshoot
-- CI 169809
+  - CSSTroubleshoot
+  - CI 169809
 appliesto: 
   - Excel for Microsoft 365
   - Excel 2019

@@ -14,7 +14,8 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft Teams
-ms.custom: CI171525
+ms.custom: 
+  - CI171525
 ---
 # The USB Peripheral Power Drain status is Unhealthy
 
