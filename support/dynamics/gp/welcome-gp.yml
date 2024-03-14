@@ -9,7 +9,7 @@ metadata:
   ms.topic: landing-page # Required
   author:   #Required; your GitHub user alias, with correct capitalization.
   ms.author:  #Required; microsoft alias of author; optional team alias.
-  ms.date: 03/14/2024
+  ms.date: 03/13/2024
   ms.reviewer: theley
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
@@ -17,127 +17,11 @@ metadata:
 landingContent:
 
  # Card
-  - title: Bank Reconciliation
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: How to void a transaction in Bank Reconciliation
-            url: void-transaction-bank-reconciliation.md
-
- # Card
   - title: Developer
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Developer Toolkit for Microsoft Dynamics GP
-            url: developer-toolkit.md
-          - text: Use a VBA script to connect to a SQL database
-            url: use-vba-script-connect-sql-database.md
-
-  # Card
-  - title: Fixed Assets
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: The year-end closing procedures for Fixed Asset Management
-            url: the-year-end-closing-procedures.md           
-
- # Card
-  - title: General Ledger
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Change the fiscal period setup 
-            url: change-fiscal-period-setup-general-ledger.md
-          - text: Steps to post to a closed year or to a closed period
-            url: post-closed-year-or-closed-period.md
-          - text: The differences when reconciling to Payables or Receivables Management
-            url: differences-when-reconciling-gl-to-payables-or-receivables-management.md
-          - text: Year-end closing procedures for General Ledger
-            url: year-end-closing-procedures-gl.md
-
-  # Card
-  - title: Inventory
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Year-end closing procedures for Inventory Control
-            url: year-end-closing-inventory-control.md                  
-
- # Card
-  - title: Management Reporter
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: '"Cannot connect to the Management Reporter server" error'
-            url: cannot-connect-to-server-error-message-when-starting-management-reporter.md
-
- # Card
-  - title: Payables Management
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: A batch is held in the Posting, Receiving, Busy, Marked, Locked, or Edited status 
-            url: a-batch-is-held-in-the-several-statuses.md
-          - text: Guidelines to generate EFT files or EFT prenote files
-            url: guidelines-generate-eft-files.md
-          - text: How manual payments, credit memos, and returns appear
-            url: how-manual-payments-credit-memos-appear.md
-          - text: How to change the 1099 amount for a vendor
-            url: change-the-1099-amount-a-vendor.md
-          - text: How to void transactions in Payables Management
-            url: void-transactions-payables-management.md
-          - text: How to continue a check run that was interrupted in Payables Management
-            url: continue-a-check-run-that-was-interrupted.md
-          - text: How to reprint checks that have been processed or posted
-            url: reprint-checks-payables-management.md
-          - text: Year-end closing procedures for Payables Management
-            url: year-end-closing-payables-management.md
-            
- # Card
-  - title: Payroll
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Year-end closing procedures for Payroll
-            url: year-end-closing-procedures-for-payroll.md
-
- # Card
-  - title: Purchase Order Processing
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Remove purchase orders that are received but not invoiced or matched
-            url: how-to-remove-purchase-orders-that-are-received-but-not-invoiced-or-matched.md
-
- # Card
-  - title: Receivable Management
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Void or delete sales documents
-            url: void-delete-sales-documents-receivables-management.md   
-          - text: Year-end closing procedures for Receivables Management
-            url: year-end-closing-procedures-for-receivables-management.md   
-
- # Card
-  - title: Sales Order Processing
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: '"Your previous transaction-level posting session has not finished processing" error'
-            url: previous-transaction-level-posting-session-not-finished-processing.md
-
- # Card
-  - title: Systems
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Dynamics GP stops responding or crashes
-            url: microsoft-dynamics-gp-stops-responding-crashes.md
-          - text: Frequently asked questions about the Windows Installer .msp files
-            url: faq-the-windows-installer-dot-msp-files.md
-          - text: Set up a test company that has a copy of live company data
-            url: set-up-a-test-company.md
-          - text: Transfer Dynamics GP installation to a new server
-            url: transfer-gp-installation-new-server.md
+          - text: How to change the current SQL Server name
+            url: change-the-current-sql-server-name.md
+          - text: How to create a chunk file in Dexterity
+            url: create-a-chunk-file-dexterity.md
