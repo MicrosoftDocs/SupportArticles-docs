@@ -10,7 +10,8 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: v-six
 ms.reviewer: dahans
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - CSSTroubleshoot
 appliesto: 
   - Skype for Business Online
   - Skype for Business 2015
