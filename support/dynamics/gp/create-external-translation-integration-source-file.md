@@ -2,8 +2,8 @@
 title: Create an external translation Integration Source file in Integration Manager for Microsoft Dynamics GP
 description: Describes how to create an external translation Integration Source file in Integration Manager for Microsoft Dynamics GP.
 ms.topic: how-to
-ms.reviewer: dlanglie
-ms.date: 03/31/2021
+ms.reviewer: theley, dlanglie
+ms.date: 03/13/2024
 ---
 # How to create an external translation Integration Source file in Integration Manager for Microsoft Dynamics GP
 

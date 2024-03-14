@@ -4,7 +4,7 @@ description: Provides resolutions for the known issues that are related to email
 author: sbmjais
 ms.author: shjais
 ms.reviewer: lavanyakr, aam, veparim
-ms.date: 03/11/2024
+ms.date: 03/12/2024
 ms.subservice: d365-sales-sales
 ---
 # Troubleshoot issues with emails
@@ -53,13 +53,14 @@ To resolve this issue, you must add the `onload` and `onchange` events to the cu
 
 5. [Import the solution](/powerapps/maker/common-data-service/import-update-export-solutions).
 
+
 ## Issue 2: Can't view untracked emails and meetings in auto capture
 
 [Auto capture](/dynamics365/sales/configure-auto-capture) doesn't show untracked emails and meetings for some or all users in an organization.
 
 ### Cause
 
-Starting from version 9.2.24031.0010, Dynamics 365 Sales follows the [principle of least privilege access](/entra/identity-platform/secure-least-privileged-access), which prevents users who have [Conditional Access policies](/entra/identity/conditional-access/concept-conditional-access-policy-common?tabs=secure-foundation) on their tenants from accessing untracked emails and meetings.
+Starting from version 9.2.24031.00102, Dynamics 365 Sales follows the [principle of least privilege access](/entra/identity-platform/secure-least-privileged-access), which prevents users who have [Conditional Access policies](/entra/identity/conditional-access/concept-conditional-access-policy-common?tabs=secure-foundation) on their tenants from accessing untracked emails and meetings.
 
 If a user can't see untracked emails and meetings, perform the following steps to verify whether the issue is caused by a Conditional Access policy.
 
@@ -74,4 +75,4 @@ If a user can't see untracked emails and meetings, perform the following steps t
 
 ### Workaround
 
-There's no resolution available for this issue. As an alternative, users can use [Microsoft Copilot for Sales in Outlook](/microsoft-sales-copilot/save-outlook-activities-crm) or [server-side synchronization](/power-platform/admin/email-message-filtering-correlation) to track all emails and meetings automatically.
+There's no resolution available for this issue as it's the expected behavior. As an alternative, users can use [Microsoft Copilot for Sales in Outlook](/microsoft-sales-copilot/save-outlook-activities-crm) to record individual activities, or use [server-side synchronization](/power-platform/admin/email-message-filtering-correlation) to track all emails and meetings automatically.
