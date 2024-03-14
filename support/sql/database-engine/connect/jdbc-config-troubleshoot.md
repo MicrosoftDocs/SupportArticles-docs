@@ -150,7 +150,7 @@ useTicketCache=true;
 
 Connection string is `String connectionUrl = "jdbc:sqlserver://<ServerName>:<PortNum>;integratedSecurity=true;Domain=<MyyDomain>;trustServerCertificate=true;javaAuthentication=JavaKerberos;"`
 
-### Sample code
+#### Sample code
 
 All JDBC drivers come with sample code in the *\sqljdbc_12.4\enu\samples* directory. The most commonly used one is in *\sqljdbc_12.4\enu\samples\connections\ConnectURR.java*. Create a file called *ConnectURL.java*, or use *ConnectURL.java* from the sample supplied with the driver.
 
