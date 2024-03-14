@@ -8,7 +8,9 @@ localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
-ms.custom: sap:office-experts, CSSTroubleshoot
+ms.custom: 
+  - sap:office-experts
+  - CSSTroubleshoot
 ms.topic: troubleshooting
 ms.reviewer: ericspli
 appliesto: 

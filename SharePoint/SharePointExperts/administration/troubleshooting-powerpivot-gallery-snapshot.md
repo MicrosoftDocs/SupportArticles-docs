@@ -9,7 +9,9 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.custom: sap:spsexperts, CSSTroubleshoot
+ms.custom: 
+  - sap:spsexperts
+  - CSSTroubleshoot
 ms.reviewer: randring
 appliesto: 
   - SharePoint Server 2016
