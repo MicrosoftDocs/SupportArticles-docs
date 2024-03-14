@@ -123,7 +123,7 @@ On Windows Server 2012 R2, the LanmanServer service automatically starts the Smb
 
 Microsoft is considering a resolution for this problem in a future version of Windows Server.
 
-### Workaround
+#### Workaround
 
 [!INCLUDE [Registry alert](../../includes/registry-important-alert.md)]
 
@@ -138,9 +138,9 @@ To work around this problem on Windows Server 2012 R2, configure the SmbDirect s
 
 After you finish this change, You should be able to restart the computer without Windows logging event ID 30818 messages. If Windows continues to log these events, some other problem might be preventing the RDMA interface from initializing.
 
-### Event 1 about SMB witness client initialization when you install Windows Server
+### When you install Windows Server, Windows logs Event ID 1
 
-During the deployment of Windows Server 2019, Windows Server 2016, and Windows Server 2012 R2, the following error message is logged in Event Viewer indicating that Server Message Block (SMB) witness client initialization failed and returned Event 1:
+When you install Windows Server 2019, Windows Server 2016, and Windows Server 2012 R2, Windows logs Event ID 1. The event information resembles the following:
 
 > Log Name: Microsoft-Windows-SMBWitnessClient/Admin  
 Source: Microsoft-Windows-SMBWitnessClient  
@@ -148,7 +148,7 @@ Event ID:1
 Level: Error  
 Description: Witness Client initialization failed with error (The system cannot find the file specified.)
 
-You can safely ignore this event if this is a fresh deployment of Windows Server that has no role and no feature is enabled.
+If this is a fresh deployment of Windows Server that has no roles or features enabled, you can safely ignore this event.
 
 ## SMB known issues
 
