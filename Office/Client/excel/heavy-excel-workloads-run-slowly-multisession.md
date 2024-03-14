@@ -9,8 +9,8 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.reviewer: rtaylor, jefferc
 ms.custom: 
-- CSSTroubleshoot
-- CI 172461
+  - CSSTroubleshoot
+  - CI 172461
 search.appverid: 
   - MET150
 appliesto: 

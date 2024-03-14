@@ -11,8 +11,8 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
-- CSSTroubleshoot
-- CI172876
+  - CSSTroubleshoot
+  - CI172876
 appliesto: 
   - SharePoint Online
 ms.date: 12/17/2023

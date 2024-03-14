@@ -14,7 +14,8 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft Teams
-ms.custom: CI167993
+ms.custom: 
+  - CI167993
 ---
 # Black or blank screen or no system response in Teams Rooms
 
