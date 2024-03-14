@@ -1,23 +1,14 @@
 ---
 title: Troubleshoot common Cloud Service Application issues with Application Insights
 description: Describes common scenarios that use Application Insights to troubleshoot Cloud Service Application issues.
-ms.date: 07/22/2022
+ms.date: 03/14/2024
 ms.reviewer: patcatun
 author: JerryZhangMS
 ms.author: genli
 ms.service: cloud-services
 ms.subservice: troubleshoot-extended-support
 ---
----
-title: Troubleshoot common Cloud Service Application issues with Application Insights
-description: Describes common scenarios that use Application Insights to troubleshoot Cloud Service Application issues.
-ms.date: 07/22/2022
-ms.reviewer: patcatun
-author: JerryZhangMS
-ms.author: genli
-ms.service: cloud-services
-ms.subservice: troubleshoot-extended-support
----
+
 # Troubleshoot Cloud Service app with Application Insights - common scenarios
 
 When Azure Cloud Service is used to host a website or proceed with a data process, it's recommended to integrate a log system to collect more detailed information and log records. Application Insights is designed for this purpose. This document provides common scenarios where we can benefit from integrating  Application Insights with Cloud Service.  
@@ -76,7 +67,7 @@ The following table shows the mapping between the options in Diagnostic setting 
 
 ## Advanced way to use Application Insights with Cloud Service
 
-There are several common advanced ways to use Application Insights with Cloud Service. For example, user can use Azure Application Insights SDK in a Cloud Service project to generate or modify the data saved into Application Insights.
+There are several common advanced ways to use Application Insights with Cloud Service. For example, users can use Azure Application Insights SDK in a Cloud Service project to generate or modify the data saved into Application Insights.
 
 ### Add custom log
 
@@ -87,26 +78,33 @@ To add a custom log to your application, follow these steps:
 
     :::image type="content" source="./media/troubleshoot-common-scenario-use-app-insights/install-package.png" alt-text="Screenshot shows the installed Microsoft ApplicationInsights package.":::
 
-3. Add the Application Insight configuration into .cscfg and .csdef file. (As this [announcement](https://azure.microsoft.com/updates/technical-support-for-instrumentation-key-based-global-ingestion-in-application-insights-will-end-on-31-march-2025/#:~:text=On%2031%20March%202025%2C%20technical%20support%20for%20instrumentation,or%20customer%20support%20for%20instrumentation%20key%E2%80%93based%20global%20ingestion), the support for instrumentation key-based ingestion will end on 31 March 2025. It's suggested to use the connection string instead to connect to Application Insight before that date.)
+3. Add the Application Insight configuration into the *.cscfg* and *.csdef* files.
 
-   APPINSIGHTS_INSTRUMENTATIONKEY is automatically added when the Application Insight is linked with Cloud Service project as this [document](/troubleshoot/azure/cloud-services/troubleshoot-with-app-insights-features-overview).
+    > [!NOTE]
+    > - The technical support for instrumentation key-based global ingestion will end on 31 March 2025. It's recommended to use the connection string instead of connecting to Application Insight before that date. For more information, see [Transition to using connection strings for data ingestion by 31 March 2025](https://azure.microsoft.com/updates/technical-support-for-instrumentation-key-based-global-ingestion-in-application-insights-will-end-on-31-march-2025/).
+    > - When Application Insight is linked with a Cloud Service project, `APPINSIGHTS_INSTRUMENTATIONKEY` is automatically added. For more information, see [Troubleshoot Cloud Services app with Application Insights - features overview](/troubleshoot/azure/cloud-services/troubleshoot-with-app-insights-features-overview).
 
-   In .csdef file: 
+    Here's an example of the *.csdef* file:
+
     ```xml
-   <ConfigurationSettings>
+    <ConfigurationSettings>
       <Setting name="APPLICATIONINSIGHTS_CONNECTION_STRING" />
       <Setting name="APPINSIGHTS_INSTRUMENTATIONKEY" />
     </ConfigurationSettings>
     ```
 
-   In .cscfg file: (The Conenction String can be found in the overview page of Application Insight. Refer to this [document](/azure/azure-monitor/app/migrate-from-instrumentation-keys-to-connection-strings) for more details.)
+   Here's an example of the *.cscfg* file:
+
    ```xml
    <ConfigurationSettings>
         <Setting name="APPINSIGHTS_INSTRUMENTATIONKEY" value="{Instrumentation_key}" />
         <Setting name="APPLICATIONINSIGHTS_CONNECTION_STRING" value="{Connection_String}" />
     </ConfigurationSettings>
     ```
-4. Add the following code in the startup function of your role. The startup function of Web Role can normally be `Application_Start()` in Global.asax. For Worker Role, it can be `OnStart()` in WorkerRoleName.cs.
+
+    The conenction string can be found in the overview page of Application Insight. For more information, see [Migrate from Application Insights instrumentation keys to connection strings](/azure/azure-monitor/app/migrate-from-instrumentation-keys-to-connection-strings).
+
+4. Add the following code in the startup function of your role. The startup function for Web Role is `Application_Start()` in *Global.asax*. For Worker Role, it's `OnStart()` in *WorkerRoleName.cs*.
 
     ```csharp
     TelemetryConfiguration.Active.ConnectionString = RoleEnvironment.GetConfigurationSettingValue("APPLICATIONINSIGHTS_CONNECTION_STRING"); 
