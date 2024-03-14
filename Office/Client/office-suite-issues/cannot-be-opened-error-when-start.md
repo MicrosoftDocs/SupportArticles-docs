@@ -7,8 +7,8 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
-- CSSTroubleshoot
-- CI 171649
+  - CSSTroubleshoot
+  - CI 171649
 localization_priority: Normal
 search.appverid: 
   - MET150

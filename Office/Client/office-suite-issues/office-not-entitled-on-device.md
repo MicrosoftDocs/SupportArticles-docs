@@ -6,7 +6,8 @@ manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
   - MET150
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - CSSTroubleshoot
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche

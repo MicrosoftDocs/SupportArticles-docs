@@ -9,7 +9,8 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - CSSTroubleshoot
 ms.reviewer: erica, harikumh, markmead, russmax, sheyia, zsolti, rrogers, christwe, darinr, majoshi, sridhara, rrogers
 appliesto: 
   - SharePoint Foundation 2010
