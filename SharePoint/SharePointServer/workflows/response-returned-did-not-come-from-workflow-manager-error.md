@@ -7,7 +7,8 @@ localization_priority: Normal
 ms.date: 12/17/2023
 audience: Admin
 ms.topic: troubleshooting
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - CSSTroubleshoot
 search.appverid: 
   - SPO160
   - MET150
