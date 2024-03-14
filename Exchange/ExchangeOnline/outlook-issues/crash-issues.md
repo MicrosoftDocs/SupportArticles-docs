@@ -60,8 +60,8 @@ To help troubleshoot Outlook issues in a Microsoft 365 environment, follow these
 1. Run the [Outlook won't start](https://aka.ms/SaRA-OutlookWontStart) automated diagnostics to fix the issues.
 
     > [!NOTE]
-    > Click **Run** when you're prompted by your browser.
-2. If the tool doesn't resolve the issue, go to Windows or Look to start **Microsoft Support and Recovery Assistant**.
+    > Select **Run** when you're prompted by your browser.
+2. If the tool doesn't resolve the issue, use the [Microsoft Support and Recovery Assistant](https://support.microsoft.com/office/about-the-microsoft-support-and-recovery-assistant-e90bb691-c2a7-4697-a94f-88836856c72f#ID0ED6=Outlook).
 3. On the first screen, select **Outlook**, and then select **Next**.
 4. Select any of the following options, as appropriate, and then select **Next**:
    - **Outlook keeps hanging or freezing**

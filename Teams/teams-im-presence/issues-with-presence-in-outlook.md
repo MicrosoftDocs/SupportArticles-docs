@@ -16,7 +16,7 @@ appliesto:
   - Outlook
 search.appverid: 
   - MET150
-ms.date: 10/30/2023
+ms.date: 03/14/2024
 ---
 # User presence status issues in Outlook
 
@@ -31,6 +31,8 @@ You see any of the following issues when you check the presence status for a use
 ## Resolution
 
 ### Use the Microsoft Support and Recovery Assistant
+
+[!INCLUDE [Microsoft Support and Recovery Assistant note](../../includes/sara-note-new-teams.md)]
 
 To fix these issues, download and run the Assistant for automated troubleshooting steps and fixes.
 

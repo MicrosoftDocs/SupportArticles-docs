@@ -22,7 +22,7 @@ search.appverid: MET150
 ms.reviewer: aruiz, randyto, v-six
 author: cloud-writer
 ms.author: meerak
-ms.date: 01/30/2024
+ms.date: 03/14/2024
 ---
 # Information about the Calendar Checking Tool for Outlook (CalCheck)
 
@@ -46,6 +46,8 @@ Because these calendar item fields may contain personal information or details, 
 To use CalCheck, the Outlook calendar must reside on a computer that is running Microsoft Exchange Server. The tool doesn't work with IMAP, POP3, or other non-Exchange email accounts.
 
 ### Method 1: Use the Microsoft Support and Recovery Assistant
+
+[!INCLUDE [Microsoft Support and Recovery Assistant note](../../../includes/sara-note-new-outlook.md)]
 
 The Assistant fully automates all the steps required to perform Outlook calendar checking and is available in two versions. Use the version that suits your requirements.
 
