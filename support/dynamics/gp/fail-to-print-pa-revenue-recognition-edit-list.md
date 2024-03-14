@@ -4,6 +4,7 @@ description: Provides a solution to errors that occurs when you print the "PA Re
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Project Accounting
 ---
 # Errors when you print the "PA Revenue Recognition Edit List" in Microsoft Dynamics GP: "Total Revenues Earned is incorrect" and "Total Recognized Project Revenues is incorrect"
 

@@ -4,6 +4,7 @@ description: When you save an Asset Book record, an error that states save opera
 ms.reviewer: theley, lmuelle, dbader
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Fixed Assets
 ---
 # "A save operation on table 'FA_ASSET_MSTR' failed accessing SQL" error when you save an Asset Book record
 

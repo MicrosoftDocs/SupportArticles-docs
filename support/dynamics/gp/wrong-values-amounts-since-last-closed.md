@@ -4,6 +4,7 @@ description: Provides a solution to an issue where the Amounts Since Last Close 
 ms.reviewer: theley 
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # Amounts Since Last Closed view in Customer or Vendor Summary reflects incorrect close date in Microsoft Dynamics GP
 

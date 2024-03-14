@@ -4,6 +4,7 @@ description: You receive an error message in Microsoft Dynamics GP when you try 
 ms.topic: troubleshooting
 ms.reviewer: theley, ryanklev
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Bank Reconciliation
 ---
 # You receive an error message in Microsoft Dynamics GP when you try to enter a checkbook transaction
 

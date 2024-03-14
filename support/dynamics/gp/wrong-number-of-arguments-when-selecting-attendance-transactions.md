@@ -4,6 +4,7 @@ description: Describes a problem that occurs when you select  Attendance Transac
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Human Resources
 ---
 # "Unhandled script exception: Wrong number of arguments" error when selecting Attendance Transactions in Navigation Pane after upgrading
 

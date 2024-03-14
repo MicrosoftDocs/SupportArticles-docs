@@ -4,6 +4,7 @@ description: Provides a solution to an issue where purchase order was received b
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Distribution - Purchase Order Processing
 ---
 # Issue where purchase order was received but shouldn't have been in Microsoft Dynamics GP
 

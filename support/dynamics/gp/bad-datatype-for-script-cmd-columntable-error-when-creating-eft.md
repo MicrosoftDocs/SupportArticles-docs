@@ -4,6 +4,7 @@ description: When you create an EFT file, you receive an SCRIPT_CMD_COLUMNOFTABL
 ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # Bad datatype for "SCRIPT_CMD_COLUMNOFTABLE" error when creating EFT file in Microsoft Dynamics GP
 

@@ -4,6 +4,7 @@ description: Provides a solution to an issue where the Balance field on the top 
 ms.reviewer: theley, Beckyber, ppeterso
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Distribution - Inventory
 ---
 # The Balance in Item Stock Inquiry is incorrect in Microsoft Dynamics GP
 

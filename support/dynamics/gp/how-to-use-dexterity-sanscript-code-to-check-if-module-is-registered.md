@@ -4,6 +4,7 @@ description: Provides a table of module ID values and names that you can use in 
 ms.reviewer: theley
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # How to use Microsoft Dexterity Sanscript code to determine whether a specific module is registered
 

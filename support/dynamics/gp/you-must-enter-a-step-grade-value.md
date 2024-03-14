@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when you assign a pay c
 ms.reviewer: theley, lmuelle, ryanklev
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Payroll
 ---
 # "You must enter a step/grade value before this record can be saved" Error message when you assign a pay code to an employee in Microsoft Dynamics GP
 

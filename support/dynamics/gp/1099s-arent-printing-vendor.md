@@ -4,6 +4,7 @@ description: This article contains answers why 1099s may not print for a vendor 
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 02/20/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # 1099s aren't printing for Vendor (and other FAQ about 1099s) in Payables Managements for Microsoft Dynamics GP
 

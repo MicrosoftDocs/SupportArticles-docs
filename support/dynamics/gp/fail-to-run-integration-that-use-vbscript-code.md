@@ -4,6 +4,7 @@ description: This article gives an example VBScript code that is in the Retrieve
 ms.topic: troubleshooting
 ms.reviewer: theley, grwill, dlanglie
 ms.date: 03/13/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # Error message when you run an integration that uses VBScript code after you upgrade to Integration Manager for Microsoft Dynamics GP 10.0: "DOC 1 ERROR: Object required"
 

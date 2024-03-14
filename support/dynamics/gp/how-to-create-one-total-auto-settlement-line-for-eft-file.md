@@ -4,6 +4,7 @@ description: Explains how to create one total auto-settlement line for the entir
 ms.reviewer: theley
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # How to create one total auto settlement line for the Electronic Funds Transfer (EFT) file in Microsoft Dynamics GP
 

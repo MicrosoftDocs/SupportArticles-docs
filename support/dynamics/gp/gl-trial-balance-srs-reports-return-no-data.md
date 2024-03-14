@@ -4,6 +4,7 @@ description: This article provides a resolution for the problem where GL Trial B
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - General Ledger
 ---
 # GL Trial Balance SRS Reports return no data using Microsoft Dynamics GP
 

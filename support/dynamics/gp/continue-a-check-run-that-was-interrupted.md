@@ -4,6 +4,7 @@ description: Describes how to continue a check run after the check run is interr
 ms.reviewer: theley, lmuelle, cwaswick, kriszree
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # How to continue a check run that was interrupted in Payables Management in Microsoft Dynamics GP
 

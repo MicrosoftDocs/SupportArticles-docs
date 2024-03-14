@@ -4,6 +4,7 @@ description: Explains how to specify Maintain History options in Microsoft Dynam
 ms.reviewer: theley
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Europe, Latin America, Africa, Asia, and Australia
 ---
 # How to specify Maintain History options for Business Activity Statement and Pay As You Go reporting
 

@@ -4,6 +4,7 @@ description: Explains how to create a Microsoft Excel spreadsheet to load actual
 ms.reviewer: theley, kevogt, gbyer
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Management Reporter
 ---
 # How to create an Excel spreadsheet to load actuals into Forecaster 7.0 using Management Reporter 2012
 

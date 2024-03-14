@@ -4,6 +4,7 @@ description: Error - VBA Cannot be initialized. Cannot Import this package becau
 ms.reviewer: theley, dlanglie
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # "VBA Cannot be initialized. Cannot Import this package because it contains VBA components" error when importing a package file in Microsoft Dynamics GP
 

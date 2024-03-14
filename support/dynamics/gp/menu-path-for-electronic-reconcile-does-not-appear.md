@@ -4,6 +4,7 @@ description: The menu path for Electronic Reconcile does not appear in Microsoft
 ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # The menu path for Electronic Reconcile does not display in Microsoft Dynamics GP
 

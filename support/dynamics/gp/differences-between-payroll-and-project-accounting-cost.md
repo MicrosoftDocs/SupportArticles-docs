@@ -4,6 +4,7 @@ description: There are differences between the cost posted to the project and th
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Project Accounting
 ---
 # Differences between Payroll and Project Accounting cost for a salaried employee who worked over 40 hours on a project
 

@@ -4,6 +4,7 @@ description: Describes how to create a SmartList object that has a Go To functio
 ms.reviewer: theley
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Distribution - Purchase Order Processing
 ---
 # How to use SmartList Builder to create a SmartList object that has a "Go To" function for the Sales Transaction Entry window
 

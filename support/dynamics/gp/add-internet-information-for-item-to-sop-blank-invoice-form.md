@@ -4,6 +4,7 @@ description: How to add Internet information for an item to the SOP Blank Invoic
 ms.reviewer: theley
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Distribution - Sales Order Processing
 ---
 # How to add Internet information for an item to the "SOP Blank Invoice" form in Microsoft Dynamics GP
 

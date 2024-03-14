@@ -4,6 +4,7 @@ description: Describes how to process a purchase order return in which the origi
 ms.reviewer: theley, lmuelle
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # How to process a purchase order return in which the original supplier's invoice is paid by a credit card vendor
 

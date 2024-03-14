@@ -4,6 +4,7 @@ description: Describes a problem that occurs because a break field is not select
 ms.reviewer: theley, ryanklev
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Bank Reconciliation
 ---
 # "Cannot break on the current field. Select new break field" error when viewing the dist total additional footer in Report Writer
 

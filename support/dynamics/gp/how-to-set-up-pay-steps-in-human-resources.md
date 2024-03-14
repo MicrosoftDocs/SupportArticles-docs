@@ -4,6 +4,7 @@ description: This article explains the process of creating a pay step table, ass
 ms.reviewer: theley, Kimberly Haisley
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Human Resources
 ---
 # How to set up Pay Steps in Human Resources for Microsoft Dynamics GP
 

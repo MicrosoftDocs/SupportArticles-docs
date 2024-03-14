@@ -4,6 +4,7 @@ description: Describes a problem that occurs if one item has the same number for
 ms.reviewer: theley, kvogel, bgardner
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Distribution - Inventory
 ---
 # "The quantity entered is not available for this current bin" Error message when you have multi-bin items and lot-numbered items in a Sales Transaction integration in Integration Manager for Microsoft Dynamics GP
 

@@ -4,6 +4,7 @@ description: Describes how to correct the posting type on an account after you c
 ms.reviewer: theley, ryanklev, cwaswick, lmuelle
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - General Ledger
 ---
 # Changing the posting type on an account after you close the year in General Ledger for Microsoft Dynamics GP
 

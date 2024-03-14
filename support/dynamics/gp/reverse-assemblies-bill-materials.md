@@ -4,6 +4,7 @@ description: Discusses the reversal of assembly transactions in Microsoft Dynami
 ms.reviewer: theley, v-mialm 
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Manufacturing Series
 ---
 # How to reverse assemblies in Bill of Materials in Microsoft Dynamics GP and in Microsoft Great Plains
 

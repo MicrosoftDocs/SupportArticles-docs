@@ -4,6 +4,7 @@ description: This article describes how to add the due date information in the R
 ms.topic: how-to
 ms.reviewer: theley, ryanklev
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Receivables Management
 ---
 # Add the due date information in the RM Statement on Blank Paper report for customers who belong to a National Account
 

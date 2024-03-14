@@ -4,6 +4,7 @@ description: This article provides a resolution for the problem that occurs when
 ms.topic: troubleshooting
 ms.reviewer: theley, kriszree
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # Checks are not printed in Payables Management in Microsoft Dynamics GP
 

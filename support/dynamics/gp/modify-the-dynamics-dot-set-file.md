@@ -4,6 +4,7 @@ description: Provides steps to modify the Dynamics.set file so that all users ca
 ms.reviewer: theley
 ms.topic: how-to
 ms.date: 02/18/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # How to modify the Dynamics.set file so that all users can share the Reports.dic file in Microsoft Dynamics GP
 

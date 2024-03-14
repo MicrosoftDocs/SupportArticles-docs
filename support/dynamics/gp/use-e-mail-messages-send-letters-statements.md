@@ -4,6 +4,7 @@ description: This article describes how to set up a query and use it to send let
 ms.reviewer: theley
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # Use e-mail messages to send letters, statements, and invoices to customers in Microsoft Dynamics GP
 

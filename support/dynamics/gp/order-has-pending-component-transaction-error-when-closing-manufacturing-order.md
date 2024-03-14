@@ -4,6 +4,7 @@ description: Describes a problem in which you receive an error message when you 
 ms.reviewer: theley, beckyber
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Manufacturing Series
 ---
 # "This Manufacturing Order has a Pending Component Transaction" error when closing a manufacturing order
 

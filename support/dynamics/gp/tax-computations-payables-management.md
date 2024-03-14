@@ -3,6 +3,7 @@ title: Tax computations in Payables Management
 description: Describes how taxes are computed in Payables Management in Microsoft Dynamics GP  based on the tax schedule IDs and the shipping method.
 ms.reviewer: theley
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # Tax computations in Payables Management in Microsoft Dynamics GP
 

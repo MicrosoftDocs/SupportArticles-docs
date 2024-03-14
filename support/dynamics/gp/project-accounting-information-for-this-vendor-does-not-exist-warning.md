@@ -4,6 +4,7 @@ description: Project Accounting information for this vendor does not exist this 
 ms.reviewer: theley, ppeterso
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # Project Accounting information for this vendor does not exist warning in Microsoft Dynamics GP purchasing
 

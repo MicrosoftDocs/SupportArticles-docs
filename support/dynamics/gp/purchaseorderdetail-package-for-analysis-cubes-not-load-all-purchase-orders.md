@@ -4,6 +4,7 @@ description: Describes an issue where the Purchase Orders may be missing from An
 ms.topic: troubleshooting
 ms.reviewer: theley, kellybj, kevogt
 ms.date: 03/13/2024
+ms.custom: sap:Distribution - Purchase Order Processing
 ---
 # PurchaseOrderDetail package for Analysis Cubes may not load all Purchase Orders
 

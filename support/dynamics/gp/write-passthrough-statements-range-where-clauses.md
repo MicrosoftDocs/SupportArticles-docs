@@ -4,6 +4,7 @@ description: Explains how to write Passthrough SQL statements and Range Where cl
 ms.reviewer: theley
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # How to write "Passthrough" SQL statements and "Range Where" clauses in Microsoft Great Plains Dexterity
 

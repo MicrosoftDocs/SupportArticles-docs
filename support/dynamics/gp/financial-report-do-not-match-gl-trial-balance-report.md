@@ -4,6 +4,7 @@ description: Provides steps to solve the issue that financial reports from Manag
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Analytical Accounting
 ---
 # Financial Reports from Management Reporter don't match the General Ledger Trial Balance Reports in Microsoft Dynamics GP
 

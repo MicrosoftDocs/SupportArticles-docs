@@ -4,6 +4,7 @@ description: Provides a solution to an issue where the Electronic Reconcile opti
 ms.topic: troubleshooting
 ms.reviewer: theley, cwaswick
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # Electronic Reconcile in the Registration window in Microsoft Dynamics GP
 

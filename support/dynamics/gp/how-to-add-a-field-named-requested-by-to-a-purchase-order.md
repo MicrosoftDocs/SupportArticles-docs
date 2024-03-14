@@ -4,6 +4,7 @@ description: Shows you how to add a field that is named Requested by to a purcha
 ms.reviewer: theley, kfrankha
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Distribution - Purchase Order Processing
 ---
 # How to add a field that is named "Requested by" to a purchase order in Microsoft Dynamics GP
 

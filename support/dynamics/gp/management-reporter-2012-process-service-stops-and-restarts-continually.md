@@ -4,6 +4,7 @@ description: Describes a problem where the Management Reporter 2012 Process Serv
 ms.reviewer: theley, gbyer, jopankow
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Management Reporter
 ---
 # Management Reporter 2012 Process Service will not stay running
 

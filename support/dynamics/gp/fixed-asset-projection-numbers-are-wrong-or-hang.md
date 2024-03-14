@@ -4,6 +4,7 @@ description: Fixed Asset Project numbers are incorrect or hang. Provides a resol
 ms.reviewer: theley, cwaswick, kenhub
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Fixed Assets
 ---
 # Fixed Asset Projection numbers are incorrect or hang in Fixed Asset Management using Microsoft Dynamics GP
 

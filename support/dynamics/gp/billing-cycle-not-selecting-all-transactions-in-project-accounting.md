@@ -4,6 +4,7 @@ description: When running the billing cycle in Project Accounting, some of the t
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Project Accounting
 ---
 # Billing cycle not selecting all transactions in Project Accounting
 

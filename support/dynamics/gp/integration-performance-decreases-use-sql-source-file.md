@@ -4,6 +4,7 @@ description: Describes a problem where integration performance decreases when yo
 ms.reviewer: theley, kvogel
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # Integration performance decreases when you use a SQL source file after you upgrade to Integration Manager 8.0 or to Integration Manager 7.5
 

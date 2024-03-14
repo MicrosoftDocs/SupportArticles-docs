@@ -4,6 +4,7 @@ description: Troubleshoot the Initialization errors when you remove or install I
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # Troubleshooting Initialization errors when you remove or install Integration Manager
 

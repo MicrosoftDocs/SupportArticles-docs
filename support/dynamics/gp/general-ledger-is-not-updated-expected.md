@@ -4,6 +4,7 @@ description: Describes a problem in which the General Ledger isn't updated as ex
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ms.reviewer: theley
+ms.custom: sap:Financial - General Ledger
 ---
 # The General Ledger isn't updated as expected when you post a pay run in Microsoft Dynamics GP
 

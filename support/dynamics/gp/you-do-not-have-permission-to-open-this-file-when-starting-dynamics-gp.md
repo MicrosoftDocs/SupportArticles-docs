@@ -4,6 +4,7 @@ description: Describes various problems that occur if the Dynamics.set file is c
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 02/19/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # "You do not have permission to open this file" error when you try to start Microsoft Dynamics GP
 

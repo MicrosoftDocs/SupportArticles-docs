@@ -4,6 +4,7 @@ description: Describes a problem where you receive the error - Please enter the 
 ms.reviewer: theley, ansather, beckyber
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Project Accounting
 ---
 # "Please enter the renewal date" error when saving a service fee as a renewable fee in the Fee Maintenance window in Project Accounting
 

@@ -4,6 +4,7 @@ description: This article describes how to start using Bank Reconciliation with 
 ms.reviewer: theley, cwaswick
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Bank Reconciliation
 ---
 # How to start using an existing checkbook to reconcile in Bank Reconciliation for Microsoft Dynamics GP
 

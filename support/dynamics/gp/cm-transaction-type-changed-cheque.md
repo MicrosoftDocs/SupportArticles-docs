@@ -4,6 +4,7 @@ description: The CM Transaction Type changes to cheque type when clearing the Ba
 ms.reviewer: theley, deeptivu, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Bank Reconciliation
 ---
 # CM Transaction type for an Increase Adjustment incorrectly changed to Cheque (CHQ) after selecting Void Transaction in Bank Reconciliation
 

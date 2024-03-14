@@ -3,6 +3,7 @@ title: Workflow Manager in Microsoft Dynamics GP
 description: Introduces Workflow Manager do in Microsoft Dynamics GP.
 ms.reviewer: theley
 ms.date: 03/13/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # Workflow Manager in Microsoft Dynamics GP
 

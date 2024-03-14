@@ -4,6 +4,7 @@ description: Provides a solution to an error that you may receive when you drill
 ms.topic: troubleshooting
 ms.reviewer: theley, davidtre, kevogt
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Management Reporter
 ---
 # Error message when you drill back to Dynamics GP from Microsoft Management Reporter 2012: "A connection to Microsoft Dynamics GP could not be established"
 

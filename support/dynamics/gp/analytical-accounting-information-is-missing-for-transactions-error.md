@@ -4,6 +4,7 @@ description: During the Write Off routine or Finance Charge Routine in Receivabl
 ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Analytical Accounting
 ---
 # "Analytical Accounting information missing for transactions..." during Write Off or Finance Charge Routine
 

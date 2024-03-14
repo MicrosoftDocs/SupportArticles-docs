@@ -4,6 +4,7 @@ description: Provides a solution to an issue where the date in the Last Year-End
 ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Payroll
 ---
 # The date in the Last Year-End Update field isn't updated after you install the Payroll Year-End Update for Microsoft Dynamics GP
 

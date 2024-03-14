@@ -4,6 +4,7 @@ description: How to create a Smartlist Designer report using a SQL view.
 ms.reviewer: theley, cwaswick
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # How to create a Smartlist Designer report using a SQL view
 

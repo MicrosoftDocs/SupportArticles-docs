@@ -4,6 +4,7 @@ description: Describes a problem where the warning - Vacation pay hours exceed e
 ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Payroll
 ---
 # Warning "Vacation pay hours exceed employee vacation available" on the Build Check File Report when employee has sufficient vacation hours in Human Resources
 

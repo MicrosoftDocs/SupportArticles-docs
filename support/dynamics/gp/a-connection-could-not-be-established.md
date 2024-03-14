@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when using Microsoft Dy
 ms.reviewer: theley, robalsta, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # "A connection Microsoft Dynamics GP could not be established. Be sure you are logged on to the appropriate Company and try again." error when using drilldown functionality
 

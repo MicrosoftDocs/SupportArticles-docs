@@ -4,6 +4,7 @@ description: Applying Multicurrency documents in Receivables Management in Micro
 ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Receivables Management
 ---
 # Applying Multicurrency documents in Receivables Management in Microsoft Dynamics GP
 

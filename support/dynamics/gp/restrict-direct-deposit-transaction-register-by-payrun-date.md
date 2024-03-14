@@ -4,6 +4,7 @@ description: This article describes how to modify the Direct Deposit Transaction
 ms.topic: troubleshooting
 ms.reviewer: theley, cwaswick
 ms.date: 03/13/2024
+ms.custom: sap:Payroll
 ---
 # Restrict Direct Deposit Transaction Register by Payrun Date in Microsoft Dynamics GP
 

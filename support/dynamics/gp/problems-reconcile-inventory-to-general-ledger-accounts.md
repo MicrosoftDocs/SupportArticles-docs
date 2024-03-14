@@ -4,6 +4,7 @@ description: Describes a problem that occurs when you reconcile inventory accoun
 ms.reviewer: theley, lmuelle
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - General Ledger
 ---
 # Problems occur when you reconcile inventory accounts to general ledger accounts in Microsoft Dynamics GP
 

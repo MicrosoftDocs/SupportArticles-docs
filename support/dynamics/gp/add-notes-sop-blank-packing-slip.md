@@ -4,6 +4,7 @@ description: This article describes how to add the notes that are attached to th
 ms.reviewer: theley
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Distribution - Sales Order Processing
 ---
 # Add the notes that are attached to the Shipping Method in the Shipping Methods Setup window to the SOP Blank Packing Slip in Microsoft Dynamics GP
 

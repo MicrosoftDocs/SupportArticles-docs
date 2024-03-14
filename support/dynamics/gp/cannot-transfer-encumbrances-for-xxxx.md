@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs in Microsoft Dynamics G
 ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Distribution - Sales Order Processing
 ---
 # "You can't transfer encumbrances for XXXX when there are outstanding encumbrance amounts for a prior fiscal year." error displays in Microsoft Dynamics GP (Blog)
 

@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when using the Class ID
 ms.reviewer: theley, cwaswick 
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Human Resources
 ---
 # "HR is registered" Error message when using the Class ID field in Payroll in Microsoft Dynamics GP
 

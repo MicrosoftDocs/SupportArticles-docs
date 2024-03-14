@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when you start the Exce
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # "Cannot access the exception service" Error message when you start the Exception Management console in Web Services for Microsoft Dynamics GP
 

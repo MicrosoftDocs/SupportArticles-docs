@@ -3,6 +3,7 @@ title: Information about the MRP Exclusions Build window in Microsoft Dynamics G
 description: Describes the functionality of the MRP Exclusions Build window in Microsoft Dynamics GP and in Microsoft Business Solutions-Great Plains.
 ms.reviewer: theley
 ms.date: 03/13/2024
+ms.custom: sap:Manufacturing Series
 ---
 # Information about the MRP Exclusions Build window in Microsoft Dynamics GP
 

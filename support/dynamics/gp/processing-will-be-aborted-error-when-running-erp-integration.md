@@ -4,6 +4,7 @@ description: Describes an error message when you run the ERP Integration from th
 ms.reviewer: theley, kevogt
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Management Reporter
 ---
 # "Processing will be aborted. Error text: Compiler executable file csc.exe cannot be found" error when running ERP Integration in Management Reporter 2012
 

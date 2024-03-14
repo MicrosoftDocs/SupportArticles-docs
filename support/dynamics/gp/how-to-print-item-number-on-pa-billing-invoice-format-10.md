@@ -4,6 +4,7 @@ description: Introduces how to print the Item Number field on the PA Billing Inv
 ms.reviewer: theley, ppeterso
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Project Accounting
 ---
 # How to print the Item Number field on the "PA Billing Invoice Format 10" report in Microsoft Dynamics GP
 

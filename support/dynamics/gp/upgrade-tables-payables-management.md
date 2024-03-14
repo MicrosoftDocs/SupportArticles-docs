@@ -4,6 +4,7 @@ description: Contains table conversions for Electronic Funds Transfer (EFT) for 
 ms.reviewer: theley, lmuelle, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Receivables Management
 ---
 # Upgrading tables for EFT for Payables Management and EFT for Receivables Management between versions of Microsoft Dynamics GP
 

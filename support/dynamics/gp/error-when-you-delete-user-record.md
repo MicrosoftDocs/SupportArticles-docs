@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when you delete a user 
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 02/22/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # "Get Change Operation on SY_Current Activity Record Was Already Locked" error when deleting a user record that's stuck in User Activity
 

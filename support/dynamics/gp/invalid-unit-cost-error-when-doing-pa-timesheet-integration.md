@@ -4,6 +4,7 @@ description: Describes a problem that occurs because a functional currency is no
 ms.reviewer: theley, kvogel
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # "Invalid Unit Cost. If Currency ID is different than Functional ID than you need to pass in PAUNITCOST" error when doing a PA Timesheet integration
 

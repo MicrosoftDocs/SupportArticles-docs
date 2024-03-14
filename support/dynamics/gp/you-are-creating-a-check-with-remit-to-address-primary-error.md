@@ -4,6 +4,7 @@ description: You may receive an error message that happens for certain vendors i
 ms.reviewer: theley, cwaswick, lmuelle
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # "You are creating a check with remit-to address PRIMARY" error in Edit Payables Checks window in Payables Management
 

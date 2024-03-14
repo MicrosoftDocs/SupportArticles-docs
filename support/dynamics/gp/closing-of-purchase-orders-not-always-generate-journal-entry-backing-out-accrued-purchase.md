@@ -4,6 +4,7 @@ description: Provides a solution to an issue where the Closing of Purchase Order
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Distribution - Purchase Order Processing
 ---
 # The Closing of Purchase Orders does not always generate a journal entry backing out Accrued Purchases in Microsoft Dynamics GP
 

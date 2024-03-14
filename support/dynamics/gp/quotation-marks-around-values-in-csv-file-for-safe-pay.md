@@ -4,6 +4,7 @@ description: Quotation marks are appearing around each value in a field in the S
 ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # Quotation marks appear around values in .csv file for Safe Pay in Microsoft Dynamics GP
 

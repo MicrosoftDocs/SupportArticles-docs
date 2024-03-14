@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when you select an exis
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Distribution - Purchase Order Processing
 ---
 # "This transaction is being edited by another user" Error message when you select an existing purchase order in Purchase Order Processing in Microsoft Dynamics GP
 

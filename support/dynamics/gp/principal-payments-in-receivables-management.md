@@ -3,6 +3,7 @@ title: Principal payments functionality in Receivables Management in Microsoft D
 description: Describes how the principal payments functionality can be used as an enhancement to the scheduled payments functionality in Receivables Management in Microsoft Dynamics GP.
 ms.topic: how-to
 ms.date: 02/18/2024
+ms.custom: sap:Financial - Receivables Management
 ---
 # Description of the principal payments functionality in Receivables Management in Microsoft Dynamics GP
 
@@ -19,4 +20,3 @@ When a customer sends a payment that has an additional amount that is to be appl
     > Would you like to apply principal payment amount to the principal?
 
 3. Select **Yes**. The Principal Payment window appears to confirm the action.
-

@@ -4,6 +4,7 @@ description: Describes how to display a radio option in a report in Microsoft Dy
 ms.reviewer: theley, lmuelle
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # How to display a string label instead of an integer representation of a radio group in Microsoft Dynamics GP
 

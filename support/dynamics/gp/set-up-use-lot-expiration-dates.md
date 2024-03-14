@@ -4,6 +4,7 @@ description: Describes how to set up and use lot expiration dates in Microsoft D
 ms.reviewer: theley, ppeterso
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Distribution - Inventory
 ---
 # How to set up and use lot expiration dates in Microsoft Dynamics GP 10.0
 

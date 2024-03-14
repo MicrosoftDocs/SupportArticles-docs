@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when you try to receive
 ms.reviewer: theley, Beckyber
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Distribution - Purchase Order Processing
 ---
 # "One or more purchase order items can't be received as they have an encumbrance status of pre-encumbered or invalid" Error message when you try to receive a purchase order in Microsoft Dynamics GP
 

@@ -4,6 +4,7 @@ description: This document covers creating a consolidated currency translation r
 ms.reviewer: theley, kevogt, erikjohn
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Management Reporter
 ---
 # Consolidated Currency Translation with Management Reporter GP Legacy Provider
 

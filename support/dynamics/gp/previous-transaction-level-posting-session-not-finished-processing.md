@@ -4,6 +4,7 @@ description: Describes a problem that may occur when records are locked in the S
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Distribution - Sales Order Processing
 ---
 # "Your previous transaction-level posting session has not finished processing" error when opening the Sales Transaction Entry window in Sales Order Processing
 

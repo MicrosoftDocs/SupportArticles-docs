@@ -4,6 +4,7 @@ description: Provides a resolution for the issue that the HITB report and GL Tri
 ms.reviewer: theley, beckyber, ppeterso
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - General Ledger
 ---
 # The HITB report and GL Trial Balance do not reconcile
 

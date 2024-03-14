@@ -4,6 +4,7 @@ description: This article describes the EFT for Payables Management format types
 ms.topic: how-to
 ms.reviewer: theley, cwaswick
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # How EFT for Payables Management bank groups in Microsoft Dynamics GP 9.0 correspond to EFT format types in Microsoft Dynamics GP 10.0
 

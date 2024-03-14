@@ -3,6 +3,7 @@ title: How inventory on Stock Status report is calculated
 description: Discusses how the inventory value is calculated on the Stock Status report in Microsoft Dynamics GP.
 ms.reviewer: theley
 ms.date: 03/13/2024
+ms.custom: sap:Distribution - Inventory
 ---
 # How the inventory value on the Stock Status report is calculated in Microsoft Dynamics GP
 

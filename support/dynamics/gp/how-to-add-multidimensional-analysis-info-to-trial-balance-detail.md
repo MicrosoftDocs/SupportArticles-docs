@@ -4,6 +4,7 @@ description: How to add Multidimensional Analysis information to the Trial Balan
 ms.reviewer: theley, lmuelle
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Financial - General Ledger
 ---
 # How to add Multidimensional Analysis information to the Trial Balance Detail report in Microsoft Dynamics GP
 

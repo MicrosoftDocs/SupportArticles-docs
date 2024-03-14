@@ -4,6 +4,7 @@ description: How to use Report Writer or SmartList to add the Special Depreciati
 ms.reviewer: theley, ryanklev
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Fixed Assets
 ---
 # How to use Report Writer or SmartList to add the "Special Depreciation Allowance Amount" field as a separate line item
 

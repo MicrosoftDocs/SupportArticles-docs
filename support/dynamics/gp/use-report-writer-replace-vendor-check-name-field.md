@@ -4,6 +4,7 @@ description: This article describes how to use Report Writer to replace the Vend
 ms.topic: how-to
 ms.reviewer: theley
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # Use Report Writer to replace the Vendor Check Name field with the vendor note for a Payables Management check in Microsoft Dynamics GP
 

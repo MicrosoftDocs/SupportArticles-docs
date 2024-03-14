@@ -4,6 +4,7 @@ description: Provides more information about how to set up an employee to split 
 ms.reviewer: theley
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Payroll
 ---
 # How to set up an employee to split wages between a payroll check and a direct deposit statement of earnings
 

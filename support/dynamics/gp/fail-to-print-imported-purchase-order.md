@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when you print an impor
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ms.reviewer: theley
+ms.custom: sap:Distribution - Purchase Order Processing
 ---
 # Error message when you try to print an imported purchase order in Microsoft Dynamics GP: "A Get/Change Next Operation on table POP_PO_Line failed"
 

@@ -4,6 +4,7 @@ description: When you open a purchase order in the Purchase Order Entry window i
 ms.reviewer: theley, lmuelle
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Distribution - Purchase Order Processing
 ---
 # "Unhandled script exception: Value of range" error when you open a purchase order in the Purchase Order Entry window
 

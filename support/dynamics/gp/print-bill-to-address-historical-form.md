@@ -4,6 +4,7 @@ description: Provides a solution to an issue where the address that was on the o
 ms.reviewer: theley, Cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Distribution - Sales Order Processing
 ---
 # Printing Bill to Address assigned to Customer Maintenance on the Historical SOP Invoice form for Microsoft Dynamics GP 2016
 

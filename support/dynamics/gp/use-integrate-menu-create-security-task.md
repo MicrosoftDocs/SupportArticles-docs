@@ -4,6 +4,7 @@ description: Describes how to create a Security Task for Integration Manager for
 ms.reviewer: theley, kvogel
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # How to create a Security Task for Integration Manager for Microsoft Dynamics GP 10.0
 

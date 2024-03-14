@@ -4,6 +4,7 @@ description: Describes the order in which you reconcile inventory quantities whe
 ms.reviewer: theley
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Distribution - Inventory
 ---
 # How to reconcile inventory quantities in Microsoft Great Plains when you use Inventory Control, Field Service, or Project Accounting
 

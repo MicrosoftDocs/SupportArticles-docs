@@ -4,6 +4,7 @@ description: Provides a solution to an issue where the Send E-mail Statements ch
 ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Receivables Management
 ---
 # Send E-mail Statements checkbox/section grayed out in Customer Maintenance Options window in Microsoft Dynamics GP 2013
 

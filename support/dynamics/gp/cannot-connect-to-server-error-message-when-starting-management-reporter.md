@@ -4,6 +4,7 @@ description: Describes an error you may receive when you start Microsoft Managem
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 02/18/2024
+ms.custom: sap:Financial - Management Reporter
 ---
 # "Can't connect to the Management Reporter server" error when you start Microsoft Management Reporter 2012
 

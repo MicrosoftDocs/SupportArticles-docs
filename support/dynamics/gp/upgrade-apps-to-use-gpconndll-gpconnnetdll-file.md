@@ -4,6 +4,7 @@ description: Describes how to upgrade applications to use the GPConn.dll file or
 ms.reviewer: theley
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # How to upgrade applications to use the GPConn.dll file or the GPConnNet.dll file in Microsoft Dynamics GP
 

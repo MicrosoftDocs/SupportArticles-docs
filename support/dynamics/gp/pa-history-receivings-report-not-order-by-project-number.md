@@ -4,6 +4,7 @@ description: The PA History Receivings Report is not sorted by Project Number. T
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ms.reviewer: theley
+ms.custom: sap:Project Accounting
 ---
 # PA History Receivings Report does not order by project number in Microsoft Dynamics GP
 

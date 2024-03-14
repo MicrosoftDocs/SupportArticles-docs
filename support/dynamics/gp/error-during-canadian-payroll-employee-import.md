@@ -4,6 +4,7 @@ description: Provides a solution to an error during Canadian Payroll Employee Im
 ms.topic: troubleshooting
 ms.reviewer: theley, cwaswick
 ms.date: 03/13/2024
+ms.custom: sap:Payroll
 ---
 # Error during Canadian Payroll Employee Import: "Employee Exceeds available size. - Import Aborted."
 

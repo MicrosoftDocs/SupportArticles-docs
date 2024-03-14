@@ -3,6 +3,7 @@ title: Use Reconcile Attendance Transactions utility with imported attendance tr
 description: Describes when to use the Reconcile Attendance Transactions option in the Reconcile Human Resources window when attendance transaction information is imported directly into the Payroll Transaction Entry window in Microsoft Dynamics GP.
 ms.reviewer: theley, lmuelle, cwaswick
 ms.date: 03/13/2024
+ms.custom: sap:Human Resources
 ---
 # When to use Reconcile Attendance Transactions utility when attendance transaction information is imported directly into Payroll
 

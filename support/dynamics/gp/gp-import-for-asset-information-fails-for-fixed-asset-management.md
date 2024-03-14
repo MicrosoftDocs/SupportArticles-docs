@@ -4,6 +4,7 @@ description: Describes that GP Import for asset information fails for Fixed Asse
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Fixed Assets
 ---
 # GP Import for asset information fails for Fixed Asset Management in Microsoft Dynamics GP
 

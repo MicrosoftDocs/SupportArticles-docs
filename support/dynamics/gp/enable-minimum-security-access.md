@@ -4,6 +4,7 @@ description: Discusses the minimum security access that's required for a user to
 ms.reviewer: theley, lmuelle
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # How to set up minimum security access to sign in Microsoft Dynamics GP or to Microsoft Great Plains
 

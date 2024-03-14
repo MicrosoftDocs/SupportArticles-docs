@@ -4,6 +4,7 @@ description: Describes a problem in which Payroll isn't updated when you set up 
 ms.reviewer: theley, v-kimh, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Payroll
 ---
 # Payroll isn't updated when you set up benefits or deductions in Human Resources in Microsoft Dynamics GP
 

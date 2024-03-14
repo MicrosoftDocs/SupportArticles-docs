@@ -3,6 +3,7 @@ title: Information about the Check Links process
 description: Provides information about the Check Links process in Microsoft Dynamics GP.
 ms.reviewer: theley, cwaswick
 ms.date: 03/13/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # Information about the Check Links process in Microsoft Dynamics GP
 

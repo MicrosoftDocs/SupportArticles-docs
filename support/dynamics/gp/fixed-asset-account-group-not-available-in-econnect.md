@@ -4,6 +4,7 @@ description: The Fixed Asset Account Group field is not available to be mapped i
 ms.reviewer: theley, dlanglie
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Fixed Assets
 ---
 # Fixed Asset Account Group not available to be mapped in eConnect Destination Adapter in Integration Manager
 

@@ -4,6 +4,7 @@ description: Introduces how to add tracking number to the SOP order and invoice 
 ms.reviewer: theley, aeckman
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Distribution - Sales Order Processing
 ---
 # How to add tracking number to the SOP order and invoice forms in Microsoft Dynamics GP
 

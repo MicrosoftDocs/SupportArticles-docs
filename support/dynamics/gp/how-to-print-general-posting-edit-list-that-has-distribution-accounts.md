@@ -4,6 +4,7 @@ description: Explains how to print the General Posting Edit List with distributi
 ms.reviewer: theley, lmuelle
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Financial - General Ledger
 ---
 # How to print a General Posting Edit List that includes distribution accounts for variable and fixed allocation accounts in Microsoft Dynamics GP
 

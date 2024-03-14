@@ -4,6 +4,7 @@ description: Describes a problem in which the Calculate Manufacturing Lead Times
 ms.reviewer: theley, aeckman
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Manufacturing Series
 ---
 # The "Calculate Manufacturing Lead Times" utility doesn't calculate the manufacturing lead time for some items in Microsoft Dynamics GP
 

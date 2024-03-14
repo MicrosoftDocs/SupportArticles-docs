@@ -4,6 +4,7 @@ description: The installation process requires that the eConnect service account
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 02/21/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # The recommended steps to install eConnect for Microsoft Dynamics GP in a Workgroup Environment that will resolve the "Unable to add user to SQL" error message
 

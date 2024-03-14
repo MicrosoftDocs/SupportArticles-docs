@@ -4,6 +4,7 @@ description: Describes an error message that may occur during the FiscalYearProv
 ms.reviewer: theley, davidtre
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Management Reporter
 ---
 # "An item with the same key has already been added" Error message displays in Management Reporter 2012 FiscalYearProvider to Fiscal Year task
 

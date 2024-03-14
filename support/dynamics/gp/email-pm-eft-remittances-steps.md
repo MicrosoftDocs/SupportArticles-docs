@@ -4,6 +4,7 @@ description: Describes steps to email PM EFT Remittances in Microsoft Dynamics G
 ms.reviewer: theley, cwaswick
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # Quick step guide to email PM EFT Remittances in Microsoft Dynamics GP 2010
 

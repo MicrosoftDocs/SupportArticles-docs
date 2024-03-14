@@ -4,6 +4,7 @@ description: Describes a problem that occurs when you try to delete a Sales Orde
 ms.topic: troubleshooting
 ms.reviewer: theley, kevtunst
 ms.date: 03/13/2024
+ms.custom: sap:Europe, Latin America, Africa, Asia, and Australia
 ---
 # Error message when you try to delete a Sales Order Processing batch in Microsoft Dynamics GP: "Unhandled script exception: Illegal address for field 'Customer Number' in script 'vatDaybook_SOPRemoveRC'"
 

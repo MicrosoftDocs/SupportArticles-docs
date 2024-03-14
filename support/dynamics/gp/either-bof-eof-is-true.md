@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when you run a SQL Opt 
 ms.reviewer: theley, kvogel
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Distribution - Inventory
 ---
 # "DOC1 Error: Either BOF or EOF is true or the current record has been deleted. Requested operation requires the current record" Error message when you run a SQL Opt Inventory Transaction integration in Integration Manager
 

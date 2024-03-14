@@ -4,6 +4,7 @@ description: Describes an error when you import a Canadian Payroll file using th
 ms.reviewer: theley, jakelaux, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Payroll
 ---
 # Error message when attempting to import a Canadian Payroll import file in Dynamics GP: "Imported file must end with _BCH.csv when File Type Selected is CSV"
 

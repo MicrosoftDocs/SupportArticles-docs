@@ -4,6 +4,7 @@ description: When you run Depreciation in Fixed Assets in Microsoft Dynamics GP,
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Fixed Assets
 ---
 # "Return Code 10" error when you run Depreciation in Fixed Assets
 

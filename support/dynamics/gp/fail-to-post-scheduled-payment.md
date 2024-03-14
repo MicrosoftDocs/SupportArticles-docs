@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when you post a schedul
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ms.reviewer: theley
+ms.custom: sap:Financial - Receivables Management
 ---
 # Error when you post a scheduled payment in Receivables Management in Microsoft Dynamics GP 9.0: "The fiscal period that contains the document date is closed"
 

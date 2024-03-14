@@ -4,6 +4,7 @@ description: Describes how to refund a payment to a customer without using the R
 ms.reviewer: theley, dbader
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # How to refund a payment to a customer without using the Refund Checks module in Microsoft Dynamics GP
 

@@ -4,6 +4,7 @@ description: Error occurs when you try to run a PA TimeSheets integration or a P
 ms.reviewer: theley, kvogel
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Project Accounting
 ---
 # "Login failed for user" error when running a PA TimeSheets or a PA Employee Expense integration via Project Accounting destination
 

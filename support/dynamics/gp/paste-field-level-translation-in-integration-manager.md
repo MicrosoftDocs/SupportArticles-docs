@@ -4,6 +4,7 @@ description: Describes steps to paste to a field level translation in Integratio
 ms.reviewer: theley, kvogel, dlanglie
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # How to paste to a field level translation in Integration Manager for Microsoft Dynamics GP 10.0
 

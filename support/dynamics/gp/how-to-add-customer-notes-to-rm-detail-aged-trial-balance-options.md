@@ -4,6 +4,7 @@ description: How to add the customer notes from the Customer Maintenance window 
 ms.reviewer: theley, cwaswick
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Receivables Management
 ---
 # How to add customer notes from the Customer Maintenance window to the RM Detail Aged Trial Balance - Options report
 

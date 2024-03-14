@@ -4,6 +4,7 @@ description: Provides a resolution for the Could not email status report to Send
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Receivables Management
 ---
 # "Could not e-mail status report to Sender. Invalid Recipients" error when emailing Receivables Management Statements
 

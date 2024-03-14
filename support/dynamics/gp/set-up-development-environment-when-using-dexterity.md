@@ -4,6 +4,7 @@ description: Describes how to set up the development environment for multiple ve
 ms.topic: how-to
 ms.date: 03/13/2024
 ms.reviewer: theley
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # How to set up the development environment when you use Dexterity in Microsoft Dynamics GP
 

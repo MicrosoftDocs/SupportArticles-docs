@@ -4,6 +4,7 @@ description: Describes that even though Microsoft Dynamics GP 9.0 lets you set a
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # The Use Default field option is unavailable for the GL Account Description field in Integration Manager
 

@@ -4,6 +4,7 @@ description: Discusses that a Purchase Order Receiving integration incorrectly u
 ms.reviewer: theley, lmuelle
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Distribution - Purchase Order Processing
 ---
 # Purchase Order Receiving integration uses the Purchase Price Variance account from Posting Accounts Setup instead of Item Account Maintenance
 

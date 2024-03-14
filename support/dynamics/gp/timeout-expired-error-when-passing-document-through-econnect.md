@@ -4,6 +4,7 @@ description: You may receive the Timeout expired error when you pass a document 
 ms.reviewer: theley, dclauson
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # Timeout expired error when you pass a document through eConnect in Microsoft Dynamics GP
 

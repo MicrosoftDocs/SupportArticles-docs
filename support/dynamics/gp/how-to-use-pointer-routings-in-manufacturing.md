@@ -4,6 +4,7 @@ description: Provides a detailed explanation of pointer routings and an example 
 ms.reviewer: theley, ttorgers, aeckman
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Manufacturing Series
 ---
 # How to use pointer routings in Manufacturing in Microsoft Dynamics GP
 

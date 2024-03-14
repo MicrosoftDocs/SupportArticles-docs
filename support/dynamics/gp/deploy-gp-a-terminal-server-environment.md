@@ -4,6 +4,7 @@ description: Discusses how to deploy Microsoft Dynamics GP and Microsoft Busines
 ms.reviewer: theley, jcirks, kyouells
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # How to deploy Microsoft Dynamics GP and Microsoft Business Solutions - Great Plains in a Terminal Server environment
 

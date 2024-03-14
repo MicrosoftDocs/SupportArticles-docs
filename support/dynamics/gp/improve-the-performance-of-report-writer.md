@@ -4,6 +4,7 @@ description: Describes how to improve the performance of a user-defined Report W
 ms.reviewer: theley
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # How to improve the performance of user-defined Report Writer functions in Microsoft Dynamics GP 9.0 or in Microsoft Great Plains
 

@@ -3,6 +3,7 @@ title: Run replication and clustering together
 description: Describes the requirements to run replication, clustering, log shipping, and database mirroring together with Microsoft Dynamics GP. Includes support contact information.
 ms.reviewer: theley, kyouells
 ms.date: 03/13/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # Description of the requirements to run replication, clustering, log shipping, and database mirroring together with Microsoft Dynamics GP
 

@@ -4,6 +4,7 @@ description: The article illustrates how to set up the regular vacation accrual 
 ms.reviewer: theley
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Payroll
 ---
 # How to set up the Vacation Accrual in Canadian Payroll
 

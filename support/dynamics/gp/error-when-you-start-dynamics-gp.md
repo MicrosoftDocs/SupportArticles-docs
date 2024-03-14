@@ -4,6 +4,7 @@ description: Discusses that you receive an error message after you install SQL S
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # Error message when you try to start Microsoft Dynamics GP: "You are attempting to log in from a data source using a trusted connection"
 

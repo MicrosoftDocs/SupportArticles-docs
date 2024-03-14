@@ -4,6 +4,7 @@ description: Describes an error message you may receive in Management Reporter 2
 ms.reviewer: theley, kellybj, kevogt
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Management Reporter
 ---
 # "The operation could not be completed due to a problem in the data provider framework" error when signing in to a company
 

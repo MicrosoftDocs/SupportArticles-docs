@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when trying to delete a
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Europe, Latin America, Africa, Asia, and Australia
 ---
 # "User XX is busy with batch YYY" Error message displays  when trying to delete a Cashbook Bank Management batch using Microsoft Dynamics GP
 

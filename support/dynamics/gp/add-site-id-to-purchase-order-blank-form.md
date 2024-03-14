@@ -4,6 +4,7 @@ description: Describes how to add the Site ID field to the Purchase Order Blank 
 ms.topic: how-to
 ms.date: 03/13/2024
 ms.reviewer: theley
+ms.custom: sap:Distribution - Purchase Order Processing
 ---
 # How to add the Site ID field to the Purchase Order Blank Form in Microsoft Dynamics GP
 

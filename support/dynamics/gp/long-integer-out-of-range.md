@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when running the Reconc
 ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - General Ledger
 ---
 # Reconcile to GL utility throws "Long Integer out of range." error
 

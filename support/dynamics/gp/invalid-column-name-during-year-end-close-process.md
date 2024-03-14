@@ -4,6 +4,7 @@ description: You may receive the Invalid column name error during Year-End Close
 ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Analytical Accounting
 ---
 # "Invalid column name 'X'" during Year-End Close process with Analytical Accounting installed
 

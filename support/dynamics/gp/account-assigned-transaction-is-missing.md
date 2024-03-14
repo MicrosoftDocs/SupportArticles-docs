@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when you run the Genera
 ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - General Ledger
 ---
 # "Account assigned to a transaction is missing" Error message when you run the General Ledger Year-End Closing routine in Microsoft Dynamics GP
 

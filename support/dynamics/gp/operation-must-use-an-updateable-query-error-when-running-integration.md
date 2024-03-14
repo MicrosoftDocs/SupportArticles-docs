@@ -4,6 +4,7 @@ description: Describes how to resolve the updateable query error message in Inte
 ms.reviewer: theley, dlanglie
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # "Operation must use an updateable query" error when you run an integration in Integration Manager
 

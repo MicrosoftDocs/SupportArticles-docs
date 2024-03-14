@@ -4,6 +4,7 @@ description: Describes a problem where budgets do not save when you add new acco
 ms.reviewer: theley, kfrankha, lmuelle
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Analytical Accounting
 ---
 # Budgets do not save when adding new accounts to the budget in Analytical Accounting in Microsoft Dynamics GP
 

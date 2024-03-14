@@ -4,6 +4,7 @@ description: Provides a solution to an issue where incorrect calculations are on
 ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Payroll
 ---
 # Incorrect calculations are on the Payroll 941 Quarterly Summary Report in Microsoft Dynamics GP
 

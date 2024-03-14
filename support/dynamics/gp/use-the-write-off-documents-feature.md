@@ -4,6 +4,7 @@ description: Describes how the Write Off Documents feature works.
 ms.reviewer: theley, angelag, krasmuss
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Receivables Management
 ---
 # How to use the Write Off Documents feature in Microsoft Dynamics GP
 

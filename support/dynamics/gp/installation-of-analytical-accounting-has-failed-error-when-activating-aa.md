@@ -4,6 +4,7 @@ description: When trying to activate Analytical Accounting (AA), you receive an 
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Analytical Accounting
 ---
 # "Installation of analytical accounting has failed..." error when activating Analytical Accounting (AA)
 

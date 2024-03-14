@@ -4,6 +4,7 @@ description: Introduces how to create a custom eConnect Requester Document Type 
 ms.reviewer: theley, dclauson
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # How to create a custom eConnect "Requester Document Type" to retrieve the Comment_1 information for a transaction in Sales Order Processing
 

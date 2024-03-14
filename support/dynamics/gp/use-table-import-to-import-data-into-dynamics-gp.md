@@ -4,6 +4,7 @@ description: Provides guidelines to perform a successful data import in Microsof
 ms.reviewer: theley
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # How to use Table Import to import data into Microsoft Dynamics GP
 

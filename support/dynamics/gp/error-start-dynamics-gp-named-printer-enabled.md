@@ -4,6 +4,7 @@ description: Describes a problem in which Microsoft Dynamics GP exits unexpected
 ms.topic: troubleshooting
 ms.reviewer: theley, kyouells
 ms.date: 03/13/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # Error when you try to start Microsoft Dynamics GP on a computer on which named printers are enabled: Application must close
 

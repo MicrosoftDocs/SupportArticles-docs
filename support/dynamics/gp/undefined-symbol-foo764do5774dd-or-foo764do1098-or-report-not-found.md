@@ -4,6 +4,7 @@ description: Describes a problem that occurs when you have security set up on th
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Payroll
 ---
 # "Undefined Symbol FOO764DO5774DD Mask Doll" or "Undefined symbol FOO764DO1098 Employee_ID" or "Report not found" error when you print a check in Payroll - US
 

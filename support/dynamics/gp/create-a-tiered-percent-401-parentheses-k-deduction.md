@@ -4,6 +4,7 @@ description: Describes how to create a tiered percent 401(k) deduction with a ma
 ms.reviewer: theley
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Payroll
 ---
 # How to create a tiered percent 401(k) deduction with a matching benefit in Payroll in Microsoft Dynamics GP
 

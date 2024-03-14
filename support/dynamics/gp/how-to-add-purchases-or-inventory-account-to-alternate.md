@@ -4,6 +4,7 @@ description: Describes how to add these accounts to the alternate POP Purchase O
 ms.reviewer: theley, jchrist
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Distribution - Purchase Order Processing
 ---
 # How to add Purchases account or Inventory account to the alternate "POP Purchase Order Blank Form" in Project Accounting
 

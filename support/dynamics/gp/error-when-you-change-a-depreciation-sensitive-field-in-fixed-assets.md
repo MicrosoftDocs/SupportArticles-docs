@@ -4,6 +4,7 @@ description: Describes a situation where you receive the error when you change a
 ms.topic: troubleshooting
 ms.reviewer: theley, cwaswick
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Fixed Assets
 ---
 # Error when you change a depreciation sensitive field in Fixed Assets in Microsoft Dynamics GP: Recalc/Reset was unsuccessful. Return Code 99
 

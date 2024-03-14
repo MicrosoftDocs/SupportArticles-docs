@@ -4,6 +4,7 @@ description: This article describes what to do when you are using Project Time a
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ms.reviewer: theley
+ms.custom: sap:Project Accounting
 ---
 # You do not see an expected document to approve in Project Time and Expense
 

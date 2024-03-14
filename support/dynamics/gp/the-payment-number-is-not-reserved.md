@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when you post an invoic
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Distribution - Sales Order Processing
 ---
 # "The payment number is not reserved in Receivables Management" Error message when you post an invoice that has an attached deposit in Sales Order Processing
 

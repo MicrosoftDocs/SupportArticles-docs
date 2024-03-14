@@ -4,6 +4,7 @@ description: Describes how to generate reports that show the information from a 
 ms.reviewer: theley
 ms.topic: how-to
 ms.date: 03/12/2024
+ms.custom: sap:Financial - Bank Reconciliation
 ---
 # How to reprint the reports that are generated during the checkbook reconciliation process in Microsoft Dynamics GP
 

@@ -4,6 +4,7 @@ description: How to add or remove a Smartlist report from My Reports.
 ms.reviewer: theley, cwaswick
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # How to add or remove a Smartlist report from My Reports on the Home Page in Microsoft Dynamics GP
 

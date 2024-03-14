@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when you run a PA Times
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 02/18/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # "Error Description = Pay code (PAPayCode) does not exist for Employee (EMPLOYID) in rate table - PA01403" when you run a PA Timesheet integration in Integration Manager in Microsoft Dynamics GP
 

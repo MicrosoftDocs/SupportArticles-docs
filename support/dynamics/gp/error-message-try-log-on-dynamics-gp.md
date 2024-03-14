@@ -4,6 +4,7 @@ description: This article provides a resolution for the problem that occurs when
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 02/20/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # "This login failed. Attempt to log in again or contact your system administrator" error when you log on to Microsoft Dynamics GP
 

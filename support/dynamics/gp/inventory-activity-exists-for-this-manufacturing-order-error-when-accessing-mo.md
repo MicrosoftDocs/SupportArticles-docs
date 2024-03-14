@@ -4,6 +4,7 @@ description: When you try to access a manufacturing order, you receive an error 
 ms.reviewer: theley, jimscha
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Distribution - Inventory
 ---
 # "Inventory activity exists for this manufacturing order" error when accessing an MO via the Quick MO window
 

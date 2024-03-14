@@ -4,6 +4,7 @@ description: Provides more information about the Checkbook Balance Inquiry windo
 ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Bank Reconciliation
 ---
 # Checkbook Balance Inquiry window in Microsoft Dynamics GP
 

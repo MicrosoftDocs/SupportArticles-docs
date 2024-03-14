@@ -4,6 +4,7 @@ description: You receive the Could not run file trigger script error message whe
 ms.reviewer: theley, dlanglie
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - General Ledger
 ---
 # "Could not run file trigger script" error when you delete or post a transaction that has an Extender window associated with the transaction
 

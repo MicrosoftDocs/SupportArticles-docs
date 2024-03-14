@@ -4,6 +4,7 @@ description: How to modify the SOP Blank Invoice Form to display the total amoun
 ms.reviewer: theley, lmuelle
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Distribution - Sales Order Processing
 ---
 # How to modify the SOP Blank Invoice Form to display the total amount of the invoice in words in Microsoft Dynamics GP and in Microsoft Great Plains
 

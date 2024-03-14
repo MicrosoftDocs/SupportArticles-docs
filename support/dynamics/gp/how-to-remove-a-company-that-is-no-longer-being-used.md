@@ -4,6 +4,7 @@ description: Describes how to remove a company that is no longer being used in M
 ms.reviewer: theley
 ms.topic: how-to
 ms.date: 02/18/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # How to remove a company that is no longer being used in Microsoft Dynamics GP
 

@@ -4,6 +4,7 @@ description: This article describes how to add buckets to the Payables Managemen
 ms.reviewer: theley
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # Add buckets to the Payables Management Aged Trial Balance report for the detail print option in Report Writer in Microsoft Dynamics GP
 

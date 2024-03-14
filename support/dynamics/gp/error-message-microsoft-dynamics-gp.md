@@ -4,6 +4,7 @@ description: This article provides a resolution for the problem where you receiv
 ms.reviewer: theley, kyouells
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # Error message in Microsoft Dynamics GP (Stored Procedure XXXX returned the following results. DBMS: 12, Microsoft Dynamics GP: 0)
 

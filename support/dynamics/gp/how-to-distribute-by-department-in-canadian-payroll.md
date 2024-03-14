@@ -4,6 +4,7 @@ description: Introduces how to distribute by department in Canadian Payroll for 
 ms.reviewer: theley, cwaswick
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Payroll
 ---
 # How to distribute by Department in Canadian Payroll using Microsoft Dynamics GP
 

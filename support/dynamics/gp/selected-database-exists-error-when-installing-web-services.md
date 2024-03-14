@@ -4,6 +4,7 @@ description: The selected database exists error occurs when you install Web Serv
 ms.reviewer: theley, kyouells
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # "The selected database exists, but its owner is not a valid Windows user" error when installing Web Services
 

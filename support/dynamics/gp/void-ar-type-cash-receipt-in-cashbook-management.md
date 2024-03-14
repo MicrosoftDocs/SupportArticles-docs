@@ -4,6 +4,7 @@ description: Describes how to void an AR type cash receipt in Cashbook Managemen
 ms.topic: troubleshooting
 ms.reviewer: theley, cwaswick
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # How to void an AR type cash receipt in Cashbook Management in Microsoft Dynamics GP
 

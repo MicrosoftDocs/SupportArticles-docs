@@ -4,6 +4,7 @@ description: Describes that you receive an error message when you create a compa
 ms.topic: troubleshooting
 ms.reviewer: theley, kyouells
 ms.date: 03/13/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # Error when you create a company by using Microsoft Dynamics GP Utilities: "Violation of PRIMARY KEY constraint 'PKSY60100'. Cannot insert duplicate key in object 'dbo.SY60100'"
 

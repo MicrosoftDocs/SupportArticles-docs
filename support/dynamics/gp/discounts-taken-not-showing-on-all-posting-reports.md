@@ -4,6 +4,7 @@ description: When automatically applying credit memos during the checkrun to inv
 ms.reviewer: theley, cwaswick, lmuelle
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # Discounts Taken not showing on all posting reports in Payables Management for Microsoft Dynamics GP
 

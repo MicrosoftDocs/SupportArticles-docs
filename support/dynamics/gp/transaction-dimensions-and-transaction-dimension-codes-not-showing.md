@@ -4,6 +4,7 @@ description: Describes a problem where transaction dimensions and transaction di
 ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Analytical Accounting
 ---
 # Transaction dimensions and transaction dimension codes do not display in the Transaction Dimension lookup window in Analytical Accounting
 

@@ -4,6 +4,7 @@ description: This article provides a step-by-step example of how to set up a GL 
 ms.topic: how-to
 ms.reviewer: theley, grwill
 ms.date: 03/13/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # Steps to set up a GL Transaction Integration with Analytical Accounting in Microsoft Dynamics GP
 

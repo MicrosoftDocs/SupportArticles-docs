@@ -4,6 +4,7 @@ description: How to determine when an asset begins to depreciate or when an asse
 ms.reviewer: theley, cwaswick
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Fixed Assets
 ---
 # How to determine when an asset begins to depreciate or when an asset is considered discontinued in Fixed Asset Management
 

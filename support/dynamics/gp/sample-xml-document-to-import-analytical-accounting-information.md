@@ -3,6 +3,7 @@ title: Sample XML to import Analytical Accounting information
 description: This article contains information that you must have in an XML document for the Analytical Accounting information on a Payables Transaction when you use eConnect for Microsoft Dynamics GP.
 ms.reviewer: theley, dclauson
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Analytical Accounting
 ---
 # A sample XML document to import Analytical Accounting information on a Payables Transaction when using eConnect
 

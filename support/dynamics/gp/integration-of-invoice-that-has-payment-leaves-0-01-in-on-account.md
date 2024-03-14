@@ -4,6 +4,7 @@ description: Discusses that the On Account field of an invoice contains $0.01 in
 ms.reviewer: theley, lmuelle
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Distribution - Sales Order Processing
 ---
 # An integration of a multi-currency Sales Order Processing invoice that has a payment leaves $0.01 instead of zero in the "On Account" field
 

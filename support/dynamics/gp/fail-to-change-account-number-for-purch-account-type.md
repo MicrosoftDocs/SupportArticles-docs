@@ -4,6 +4,7 @@ description: Describes a problem where you receive an error message (You cannot 
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # Error when you try to change the account number for the PURCH account type in the Purchasing Distribution Entry window in Microsoft Dynamics GP: "You cannot change the PURCH account at the summary level"
 

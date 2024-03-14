@@ -4,6 +4,7 @@ description: Describes a problem that occurs if a document has an asterisk next 
 ms.reviewer: theley, lmuelle
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Receivables Management
 ---
 # "An open apply record exists or an apply record exists outside the selected range" error when printing Receivables Transaction History Removal report
 

@@ -4,6 +4,7 @@ description: Provides a resolution for the issue that sending lots of emails suc
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # Performance issue with sending a large volume of emails such as PM EFT remittances in Microsoft Dynamics GP
 

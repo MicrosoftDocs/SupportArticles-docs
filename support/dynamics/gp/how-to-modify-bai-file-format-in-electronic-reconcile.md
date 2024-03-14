@@ -4,6 +4,7 @@ description: This article explains how to set up and modify the BAI file format 
 ms.reviewer: theley, cwaswick
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # Steps to modify the BAI file format in Electronic Reconcile in Microsoft Dynamics GP
 

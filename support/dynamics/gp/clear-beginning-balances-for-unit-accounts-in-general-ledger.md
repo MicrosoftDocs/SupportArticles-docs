@@ -4,6 +4,7 @@ description: Discusses that the balances for all unit accounts roll forward afte
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - General Ledger
 ---
 # How to clear beginning balances for unit accounts in General Ledger in Microsoft Dynamics GP
 

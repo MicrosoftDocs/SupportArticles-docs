@@ -4,6 +4,7 @@ description: Contains information about how to use messages to handle literal st
 ms.reviewer: theley
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # How to handle literal string warnings by using messages in Dexterity
 

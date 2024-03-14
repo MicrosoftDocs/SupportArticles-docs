@@ -4,6 +4,7 @@ description: When the accrual process is run, it should automatically mark off t
 ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Human Resources
 ---
 # The Accrual Checkboxes in the Accrual Period Setup window do not automatically mark off when the accrual is completed using Human Resources
 

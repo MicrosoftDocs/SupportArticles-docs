@@ -4,6 +4,7 @@ description: When you send a Word Template document via E-mail in Microsoft Dyna
 ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # "A program is trying to send an e-mail program on your behalf" message when you send a Word Template document via E-mail
 

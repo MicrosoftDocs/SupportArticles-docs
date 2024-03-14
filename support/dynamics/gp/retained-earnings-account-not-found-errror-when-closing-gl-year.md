@@ -4,6 +4,7 @@ description: You may receive the Retained earnings account not found error when 
 ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - General Ledger
 ---
 # "Retained earnings account not found" error when closing the GL year in Microsoft Dynamics GP
 

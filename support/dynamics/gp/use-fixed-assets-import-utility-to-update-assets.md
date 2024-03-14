@@ -3,6 +3,7 @@ title: You can use the Fixed Assets Import utility to update assets
 description: Introduces the Fixed Assets Import utility to update assets in Microsoft Dynamics GP.
 ms.reviewer: theley
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Fixed Assets
 ---
 # You can use the Fixed Assets Import utility to update assets in Microsoft Dynamics GP
 

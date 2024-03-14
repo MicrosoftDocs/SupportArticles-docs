@@ -4,6 +4,7 @@ description: Explains that you receive the A billing transaction with an earlier
 ms.reviewer: theley, ppeterso
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Project Accounting
 ---
 # "A billing transaction with an earlier cutoff date exists..." error when you select a project number in Billing Entry
 

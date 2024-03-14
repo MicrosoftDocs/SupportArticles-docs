@@ -4,6 +4,7 @@ description: Describes how to set up an adjusting period to record adjustments t
 ms.reviewer: theley, dbader
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Financial - General Ledger
 ---
 # How to set up an adjusting period in General Ledger in Microsoft Dynamics GP
 

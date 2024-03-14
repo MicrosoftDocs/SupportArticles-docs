@@ -3,6 +3,7 @@ title: Difference between Full, Limited, and Self Service user types
 description: This article provides the answer for the question about what is the difference between Full, Limited, and Self Service user types in User Setup in Microsoft Dynamics GP.
 ms.reviewer: theley
 ms.date: 03/13/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # Difference between Full, Limited, and Self Service user types in User Setup in Microsoft Dynamics GP
 
@@ -43,4 +44,3 @@ The best way to really understand what the users can do is to look at the role-b
 
 - [What are the SelfServe and Limited Users?](https://community.dynamics.com/blogs/post/?postid=5dd0d260-fd46-49ef-8ada-43ee2cd4db9d)
 - [ESS Security roles in Microsoft Dynamics GP 2013/GP2015 - What do they give users access to?](https://community.dynamics.com/blogs/post/?postid=5381b125-c9b6-4f1a-9acf-49034f612b6d)
-

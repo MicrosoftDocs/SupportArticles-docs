@@ -4,6 +4,7 @@ description: Explains that you must pass dates and times in formats that don't c
 ms.reviewer: theley
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # How to pass dates and times to SQL Server from Dexterity in Microsoft Dynamics GP
 

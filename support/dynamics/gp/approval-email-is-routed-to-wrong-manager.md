@@ -4,6 +4,7 @@ description: Provides a solution to an issue where the approval email for a Time
 ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # The approval email for a Timecard isn't routed to the correct manager in Microsoft Dynamics GP
 

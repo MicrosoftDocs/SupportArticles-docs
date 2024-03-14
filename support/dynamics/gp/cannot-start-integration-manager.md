@@ -4,6 +4,7 @@ description: Provides a solution to an issue where you can't start Integration M
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # Can't start Integration Manager or select Run Integration within Microsoft Dynamics GP
 

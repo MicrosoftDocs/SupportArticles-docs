@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when you try to assign 
 ms.reviewer: theley, kriszree
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - General Ledger
 ---
 # "Activity for this currency already exists. The functional currency can't be changed." Error message when you try to assign or change a currency on the Multicurrency Setup page in Microsoft Dynamics GP
 

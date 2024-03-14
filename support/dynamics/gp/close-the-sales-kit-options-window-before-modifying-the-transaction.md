@@ -4,6 +4,7 @@ description: Describes a problem that occurs when the Sales Order Processing int
 ms.reviewer: theley, lmuelle
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Distribution - Sales Order Processing
 ---
 # "Close the Sales Kit Options window before modifying the transaction" error when running a Sales Order Processing integration that has a kit item
 

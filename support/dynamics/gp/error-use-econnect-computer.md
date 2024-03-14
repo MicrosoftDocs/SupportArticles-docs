@@ -4,6 +4,7 @@ description: This article provides a resolution for a problem that occurs when y
 ms.reviewer: theley, kjohns
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # You receive a (New transaction cannot enlist in the specified transaction coordinator) error message when you use eConnect on a computer that is running Windows XP SP2
 

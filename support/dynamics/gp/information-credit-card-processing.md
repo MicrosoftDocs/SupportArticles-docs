@@ -4,6 +4,7 @@ description: Provides general information on how the credit card processing func
 ms.reviewer: theley, lmuelle
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # Information on credit card processing in Payables Management in Microsoft Dynamics GP
 

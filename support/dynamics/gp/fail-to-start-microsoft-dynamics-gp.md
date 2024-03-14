@@ -4,6 +4,7 @@ description: Fixes an issue that occurs after you update to Microsoft Dynamics G
 ms.topic: troubleshooting
 ms.reviewer: theley, kyouells
 ms.date: 03/13/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # Error message when you start Microsoft Dynamics GP: Database setup has not been completed for Microsoft Dynamics GP
 

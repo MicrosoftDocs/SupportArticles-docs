@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when you run a Fixed As
 ms.reviewer: theley, dlanglie
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Fixed Assets
 ---
 # "The Asset ID and Book ID already exist in the FA00200 and updates are not supported on Asset Books at this time" Error when you run a Fixed Assets integration by using Integration Manager for Microsoft Dynamics GP 10.0
 

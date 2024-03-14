@@ -4,6 +4,7 @@ description: This article provides a resolution for a problem that occurs when y
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Receivables Management
 ---
 # Error message when you try to select a document in the Sales Transaction Entry window in Microsoft Dynamics GP (This document is being edited by another user)
 

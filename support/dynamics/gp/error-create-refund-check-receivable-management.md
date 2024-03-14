@@ -4,6 +4,7 @@ description: This article provides a resolution for the problem that occurs when
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Receivables Management
 ---
 # Error message when you try to create a refund check in Receivables Management in Microsoft Dynamics GP 9.0 (The refund checks setup information is missing or damaged)
 

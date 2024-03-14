@@ -4,6 +4,7 @@ description: Provides a solution to a problem where only one addenda record is a
 ms.topic: troubleshooting
 ms.reviewer: theley, cwaswick
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # Only one addenda record is listed for each vendor payment in the EFT file when using Electronic Funds Transfer for Payables Management in Microsoft Dynamics GP
 

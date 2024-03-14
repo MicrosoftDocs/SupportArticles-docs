@@ -4,6 +4,7 @@ description: Performance issues can occur with payments in Payables Management a
 ms.reviewer: theley, cwaswick, lmuelle
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Receivables Management
 ---
 # Performance issues with manual payments in Payables Management or cash receipts in Receivables Management
 

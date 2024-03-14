@@ -4,6 +4,7 @@ description: This article describes how to add the receiving user-defined fields
 ms.reviewer: theley
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Distribution - Purchase Order Processing
 ---
 # Add the receiving user-defined fields to the POP Receivings Posting Journal report in Microsoft Dynamics GP
 

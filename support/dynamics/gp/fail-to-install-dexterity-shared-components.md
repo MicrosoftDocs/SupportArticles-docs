@@ -4,6 +4,7 @@ description: Describes a problem that may occur if the new version of the Micros
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # Error message when you try to install the Microsoft Dexterity Shared Components: "Another version of this product is already installed"
 

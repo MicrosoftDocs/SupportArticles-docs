@@ -4,6 +4,7 @@ description: Describe how to access information about Report Writer functions th
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # How to access information about Report Writer functions in the Microsoft Dynamics GP SDK
 

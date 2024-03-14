@@ -4,6 +4,7 @@ description: Provides steps to review why user is unable to add a logo to a repo
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ms.reviewer: theley
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # Logo does not appear on report or appears fuzzy in Microsoft Dynamics GP
 

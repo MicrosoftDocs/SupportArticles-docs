@@ -4,6 +4,7 @@ description: When you start Report Writer in Microsoft Dynamics GP, you receive 
 ms.reviewer: theley, lmuelle 
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # "Unable to open REPORTS.DIC in read/write mode" error when you start Report Writer in Microsoft Dynamics GP
 

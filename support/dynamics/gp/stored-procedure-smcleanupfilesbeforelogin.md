@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when you try to sign in
 ms.reviewer: theley, kyouells
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # "Stored Procedure smCleanupFilesBeforeLogin returned the following results" Error message when you try to sign in to a company in Microsoft Great Plains or in Microsoft Dynamics GP
 

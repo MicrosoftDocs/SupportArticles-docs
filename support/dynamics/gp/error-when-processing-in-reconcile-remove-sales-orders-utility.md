@@ -4,6 +4,7 @@ description: This information contains information on what to do if you have dup
 ms.reviewer: theley, Beckyber
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Distribution - Sales Order Processing
 ---
 # "Violation of PRIMARY KEY constraint 'PKSOP30200'..." error when processing in the Reconcile - Remove Sales Orders Utility in Sales Order Processing
 

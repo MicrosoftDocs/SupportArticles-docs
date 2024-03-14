@@ -4,6 +4,7 @@ description: You receive an error when you attempt to enter a negative quantity 
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Project Accounting
 ---
 # You receive an error when you try to enter a negative quantity or do a return for a project in Microsoft Dynamics GP
 

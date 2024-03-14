@@ -4,6 +4,7 @@ description: How to retrieve the next purchase order number for Purchase Order P
 ms.reviewer: theley, dclauson
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Distribution - Purchase Order Processing
 ---
 # How to retrieve the next purchase order number for Purchase Order Processing documents when you use the Miscellaneous Routines Assembly in eConnect
 

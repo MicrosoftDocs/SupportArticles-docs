@@ -4,6 +4,7 @@ description: Discusses Australian GST and reduced-input tax credits (RITC). Cont
 ms.reviewer: theley, lmuelle
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Europe, Latin America, Africa, Asia, and Australia
 ---
 # How to handle reduced-input tax credits in the Business Activity Statement reporting tool in the Australian version of Microsoft Dynamics GP
 

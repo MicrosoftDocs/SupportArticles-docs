@@ -4,6 +4,7 @@ description: Fixes a problem that occurs in Microsoft Dynamics GP 10.0 and GP 20
 ms.topic: troubleshooting
 ms.reviewer: theley, cwaswick
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Receivables Management
 ---
 # Error message when using Lockbox in Microsoft Dynamics GP: "This module isn't registered. To register this module, contact your Microsoft Dynamics GP Representative"
 

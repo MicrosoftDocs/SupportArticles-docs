@@ -4,6 +4,7 @@ description: Describes an issue that prompts you with an Assets have not been fu
 ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Fixed Assets
 ---
 # "Assets have not been fully depreciated for the current year" error in Fixed Assets in Microsoft Dynamics GP
 

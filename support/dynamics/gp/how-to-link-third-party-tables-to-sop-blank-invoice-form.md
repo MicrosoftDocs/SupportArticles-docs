@@ -4,6 +4,7 @@ description: How to link third-party tables to the SOP Blank Invoice Form report
 ms.reviewer: theley
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Distribution - Sales Order Processing
 ---
 # How to link third-party tables to the SOP Blank Invoice Form report by using Dexterity for Microsoft Dynamics GP
 

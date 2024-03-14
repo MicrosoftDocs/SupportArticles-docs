@@ -4,6 +4,7 @@ description: When you try to enter a document in the Payables Transaction Entry 
 ms.reviewer: theley, lmuelle, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # "Document Already Exists" error when entering a document in the Payables Transaction Entry window
 

@@ -4,6 +4,7 @@ description: The new feature in Microsoft Dynamics GP 2010 to reprint payroll ch
 ms.topic: troubleshooting
 ms.reviewer: theley, cwaswick
 ms.date: 03/13/2024
+ms.custom: sap:Human Resources
 ---
 # Reprinted Paystub pulls Attendance Balance from Payroll instead of Human Resources in Microsoft Dynamics GP 2010
 

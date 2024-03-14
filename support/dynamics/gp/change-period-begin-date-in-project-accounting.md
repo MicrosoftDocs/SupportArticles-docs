@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when you change the Per
 ms.topic: troubleshooting
 ms.reviewer: theley, Beckyber
 ms.date: 03/13/2024
+ms.custom: sap:Project Accounting
 ---
 # Error when you change the Period Begin date in Project Accounting in Microsoft Dynamics GP: "This is an invalid Reporting Date. It will be adjusted."
 

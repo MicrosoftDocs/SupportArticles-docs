@@ -4,6 +4,7 @@ description: Describes a problem that occurs because the version of the Dynamics
 ms.topic: troubleshooting
 ms.reviewer: theley, kyouells
 ms.date: 03/13/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # Error message when you start Microsoft Dynamics GP on a client workstation: "A product on the computer is on a different version than the database version"
 

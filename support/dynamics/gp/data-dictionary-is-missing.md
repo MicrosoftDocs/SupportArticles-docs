@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when you try to start o
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # "Data dictionary is missing" Error message when you try to start or when you try to print a report in Report Writer in Microsoft Dynamics GP
 

@@ -3,6 +3,7 @@ title: FAQ about international installations
 description: Contains answers to frequently asked questions about international installations of Microsoft Great Plains.
 ms.reviewer: theley, kyouells
 ms.date: 03/13/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # Answers to frequently asked questions about international installations of Microsoft Dynamics GP
 

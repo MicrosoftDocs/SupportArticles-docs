@@ -4,6 +4,7 @@ description: When adding items to a Purchase Order, Transfer In, or Transfer Out
 ms.reviewer: theley, randyh
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Distribution - Purchase Order Processing
 ---
 # "2147217833 The statement has been terminated" error when you add items to a Purchase Order, Transfer In, or Transfer Out
 

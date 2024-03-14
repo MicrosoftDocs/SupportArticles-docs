@@ -4,6 +4,7 @@ description: Describes how to re-create fiscal periods if they are damaged or if
 ms.reviewer: theley, cwaswick
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Financial - General Ledger
 ---
 # How to recreate fiscal periods in Microsoft Dynamics GP
 

@@ -4,6 +4,7 @@ description: Describes an error that you may receive when you try to sign in to 
 ms.reviewer: theley, gbyer, kevogt
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Management Reporter
 ---
 # "The connection to the Microsoft Dynamics GP database failed" error when you sign in to a company
 

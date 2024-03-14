@@ -4,6 +4,7 @@ description: The VAT Daybook reports are used by European customers for tax repo
 ms.reviewer: theley, lmuelle
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Europe, Latin America, Africa, Asia, and Australia
 ---
 # How to set up the VAT Daybook reports in Microsoft Dynamics GP
 

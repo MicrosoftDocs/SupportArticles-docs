@@ -4,6 +4,7 @@ description: Describes an issue that occurs if the MOP_Bin_Issue table (MOP1027)
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ms.reviewer: theley
+ms.custom: sap:Manufacturing Series
 ---
 # The "Bin" field and the "Quantity Selected" field are unavailable in the "Bin Quantity Entry" window when you enter a "Reverse Issue" transaction in Manufacturing in Microsoft Dynamics GP or Microsoft Great Plains
 

@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs after you try to print 
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # Unhandled Database Exception: A save operation on table 'PM_Transaction_WORK' caused a sharing error EXCEPTION_CLASS_DB DB_ERR_LOCKED
 

@@ -4,6 +4,7 @@ description: When you try to retire an asset in Microsoft Dynamics GP, you recei
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Fixed Assets
 ---
 # "This asset is being retired by another user" error when retiring an asset
 

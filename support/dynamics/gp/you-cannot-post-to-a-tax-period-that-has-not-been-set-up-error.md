@@ -4,6 +4,7 @@ description: You can't post on a new Australian installation for Microsoft Dynam
 ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - General Ledger
 ---
 # "You can't post to a tax period that has not been set up" in Microsoft Dynamics GP
 

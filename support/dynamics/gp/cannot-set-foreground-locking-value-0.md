@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when you run an integra
 ms.reviewer: theley, kvogel
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # "Could not set foreground locking value to 0" Error message when you run an integration in Integration Manager for Microsoft Dynamics GP
 

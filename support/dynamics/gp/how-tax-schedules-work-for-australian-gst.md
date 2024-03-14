@@ -4,6 +4,7 @@ description: Contains detailed information about how tax schedules work for the 
 ms.reviewer: theley, lmuelle
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Europe, Latin America, Africa, Asia, and Australia
 ---
 # How tax schedules work for the Australian GST in Microsoft Dynamics GP
 

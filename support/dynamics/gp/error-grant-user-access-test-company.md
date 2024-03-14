@@ -4,6 +4,7 @@ description: This article provides a resolution for a problem that occurs when a
 ms.reviewer: theley, kyouells
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # Error message when you try to grant a user access to a test company in Microsoft Dynamics GP (The user could not be added to one or more databases)
 

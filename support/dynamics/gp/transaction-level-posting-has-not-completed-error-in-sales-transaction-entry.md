@@ -4,6 +4,7 @@ description: Describes a problem that occurs for one specific user ID. This prob
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Receivables Management
 ---
 # "Transaction Level Posting Has Not Completed" error when using the Sales Transaction Entry window
 

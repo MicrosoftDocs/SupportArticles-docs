@@ -4,6 +4,7 @@ description: This article describes how to resolve the error that occurs when yo
 ms.reviewer: theley, dlanglie, dclauson
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # "Errors occurred during load" when starting Dynamics GP or "Class {C62A69F0-16DC-11CE-9E98-00AA00574A4F}" error when importing a package file
 

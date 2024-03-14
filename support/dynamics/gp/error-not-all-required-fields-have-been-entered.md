@@ -4,6 +4,7 @@ description: Describe the Payables Transaction Integration Manager error - Not a
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # Payables Transaction Integration Manager error: Not all required fields have been entered. Required fields appear in bold type
 

@@ -4,6 +4,7 @@ description: Describes how to truncate the last two decimal places for payables 
 ms.reviewer: theley, cwaswick
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # How to truncate the last two decimal places for payables checks in the Check Total field
 

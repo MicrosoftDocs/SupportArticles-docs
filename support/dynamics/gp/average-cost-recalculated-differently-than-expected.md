@@ -4,6 +4,7 @@ description: Describes an issue where the Average Cost is recalculating differen
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Distribution - Inventory
 ---
 # What to expect when processing an Inventory transfer on Microsoft Dynamics GP 9.0 or later that originated on Microsoft Business Solutions-Great Plains 8.0
 

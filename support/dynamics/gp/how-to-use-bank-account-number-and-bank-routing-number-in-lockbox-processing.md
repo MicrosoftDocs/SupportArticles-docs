@@ -4,6 +4,7 @@ description: Describes how to use the bank account number and bank routing numbe
 ms.reviewer: theley, cwaswick
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Receivables Management
 ---
 # How to use the bank account number and bank routing number instead of the customer ID in Lockbox Processing in Microsoft Dynamics GP
 

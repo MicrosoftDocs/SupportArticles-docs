@@ -4,6 +4,7 @@ description: This article lists the order that Canadian Payroll tables are updat
 ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Payroll
 ---
 # Order that Canadian Payroll is updated during Update Masters for Microsoft Dynamics GP
 

@@ -4,6 +4,7 @@ description: When posting a batch in General Ledger, this error message (Transac
 ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - General Ledger
 ---
 # "Transaction contains intercompany distributions; mark as an IC transaction" error when posting a financial batch in GL
 

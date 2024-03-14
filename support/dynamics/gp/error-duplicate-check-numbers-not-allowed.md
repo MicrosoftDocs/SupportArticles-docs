@@ -4,6 +4,7 @@ description: Describes errors when EFT computer batch goes to Batch Recovery in 
 ms.reviewer: theley, cwaswick, lmuelle
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # EFT computer batch goes to Batch Recovery and produces error message in Payables Management for Microsoft Dynamics GP: "Duplicate check numbers are not allowed" or "Data entry errors exist"
 

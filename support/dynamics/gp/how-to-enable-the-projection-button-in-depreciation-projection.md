@@ -4,6 +4,7 @@ description: Describes how to make the Projection button available in the Deprec
 ms.reviewer: theley, cwaswick
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Fixed Assets
 ---
 # How to enable the Projection button in the Depreciation Projection window for Fixed Assets in Microsoft Dynamics GP and in Microsoft Business Solutions - Great Plains
 

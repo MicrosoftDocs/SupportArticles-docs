@@ -4,6 +4,7 @@ description: Describe an issue where the Management Reporter Process Service wil
 ms.reviewer: theley, kellybj, kevogt
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Management Reporter
 ---
 # The Management Reporter 2012 Process Service stops unexpectedly
 

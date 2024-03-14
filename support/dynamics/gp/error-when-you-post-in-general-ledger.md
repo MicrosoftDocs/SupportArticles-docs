@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when you post in Genera
 ms.topic: troubleshooting
 ms.reviewer: theley, cwaswick
 ms.date: 03/13/2024
+ms.custom: sap:Financial - General Ledger
 ---
 # Error message when you post in General Ledger in Microsoft Dynamics GP: Arithmetic overflow error for data type smallint, value = 35001
 

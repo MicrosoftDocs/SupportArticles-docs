@@ -4,6 +4,7 @@ description: Describes how to set up and calculate the minimum wage balance in M
 ms.reviewer: lmuelle, theley
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Payroll
 ---
 # How to set up and calculate the minimum wage balance in Microsoft Dynamics GP
 

@@ -4,6 +4,7 @@ description: Describes steps to add the standard cost of a BOM component to the 
 ms.reviewer: theley, lmuelle
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Manufacturing Series
 ---
 # How to add the standard cost of a BOM component to the BM Assembly Posting Journal form in Microsoft Dynamics GP
 

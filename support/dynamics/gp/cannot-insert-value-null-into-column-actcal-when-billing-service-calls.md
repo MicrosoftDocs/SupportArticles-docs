@@ -4,6 +4,7 @@ description: Describes steps to resolve the error message - Cannot insert the va
 ms.reviewer: theley, Beckyber
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Field Service Series
 ---
 # "Cannot insert the value NULL into column 'ACTCAL', table 'xxx.dbo.SVC00601'" error when billing service calls in Contract Administration
 

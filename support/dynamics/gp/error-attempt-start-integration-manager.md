@@ -4,6 +4,7 @@ description: This article provides a resolution for the problem that occurs when
 ms.reviewer: theley, grwill, dlanglie
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # You receive an error message (Access to the Path is Denied) when you start Integration Manager for Microsoft Dynamics GP 2010
 

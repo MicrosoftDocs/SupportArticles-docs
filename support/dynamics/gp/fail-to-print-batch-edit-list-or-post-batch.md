@@ -4,6 +4,7 @@ description: Describes steps to resolve the error message that occurs when you p
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - General Ledger
 ---
 # Error message when you print a batch edit list or post a batch in General Ledger in Microsoft Dynamics GP: "The stored procedure glpBatchCleanup returned the following results: DBMS 0, Great Plains 20488"
 

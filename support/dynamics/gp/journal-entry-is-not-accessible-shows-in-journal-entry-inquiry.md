@@ -4,6 +4,7 @@ description: When trying to view a journal entry in the Journal Entry Inquiry wi
 ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - General Ledger
 ---
 # "The journal entry is not accessible" displays in the Journal Entry Inquiry window
 

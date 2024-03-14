@@ -4,6 +4,7 @@ description: This article provides information on how income taxes are calculate
 ms.topic: troubleshooting
 ms.reviewer: theley, cwaswick
 ms.date: 03/13/2024
+ms.custom: sap:Payroll
 ---
 # Income Tax calculations or discrepancies with the CRA in Canadian Payroll for Microsoft Dynamics GP
 

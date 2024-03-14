@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when you try to inactiv
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Distribution - Sales Order Processing
 ---
 # Error message when you try to inactivate a customer in SOP
 

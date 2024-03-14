@@ -3,6 +3,7 @@ title: The Open Year button in the Fiscal Period Modifier
 description: Introduces the Open Year button in the Fiscal Period Modifier.
 ms.reviewer: theley, cwaswick
 ms.date: 03/13/2024
+ms.custom: sap:Financial - General Ledger
 ---
 # The Open Year button in the Fiscal Period Modifier
 

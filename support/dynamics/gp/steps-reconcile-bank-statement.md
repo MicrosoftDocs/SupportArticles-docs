@@ -4,6 +4,7 @@ description: Steps to reconcile bank statement with no activity in Bank Reconcil
 ms.reviewer: theley, lmuelle, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Bank Reconciliation
 ---
 # Steps to reconcile bank statement with no activity in Bank Reconciliation using Microsoft Dynamics GP
 

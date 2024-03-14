@@ -4,6 +4,7 @@ description: The cash account field is not populated in the Cash Receipts Distri
 ms.reviewer: theley, lmuelle
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Receivables Management
 ---
 # The cash account field is not populated in Cash Receipts Distribution Entry if you enter a cash receipt
 

@@ -4,6 +4,7 @@ description: Describes a problem that occurs when you run a Fixed Assets integra
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 02/19/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # "If Special Depreciation Allowance (SPECDEPRALLOW) is false, the Special Depreciation Allowance Percentage (SPECDEPRALLOWPCT) must be 0" error when running a Fixed Assets integration in Integration Manager for Microsoft Dynamics GP
 

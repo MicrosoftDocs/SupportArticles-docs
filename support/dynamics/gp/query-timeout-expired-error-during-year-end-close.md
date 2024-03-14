@@ -4,6 +4,7 @@ description: When you do a year-end close in Microsoft Dynamics GP, you may rece
 ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - General Ledger
 ---
 # "Query timeout expired" error during year-end close in Microsoft Dynamics GP
 

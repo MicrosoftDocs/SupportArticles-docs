@@ -4,6 +4,7 @@ description: Describes how to remove all the inactive sessions from the DEX_SESS
 ms.reviewer: theley
 ms.topic: how-to
 ms.date: 02/22/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # How to remove all the inactive sessions from the DEX_SESSION table in the TempDB database when you use Microsoft Dynamics GP together with Microsoft SQL Server
 

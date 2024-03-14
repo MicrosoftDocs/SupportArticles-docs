@@ -4,6 +4,7 @@ description: Explains why an asset may be retired or fully depreciated, but yet 
 ms.reviewer: theley, cwaswick, lmuelle
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Fixed Assets
 ---
 # Fully depreciated asset still has remaining Net Book Value (NBV) amount in Fixed Assets for Microsoft Dynamics GP
 

@@ -4,6 +4,7 @@ description: One or more items that have 0 in the Quantity field but do have an 
 ms.reviewer: theley, ppeterso
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Distribution - Inventory
 ---
 # You unexpectedly see items with 0 quantity and with a value on the Historical Inventory Trial Balance in Microsoft Dynamics GP
 

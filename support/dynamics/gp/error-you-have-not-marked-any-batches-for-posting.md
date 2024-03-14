@@ -4,6 +4,7 @@ description: Describes a problem that occurs with a batch in Microsoft Dynamics 
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - General Ledger
 ---
 # "You have not marked any batches for posting" error when you select a batch in the Batch Recovery window in Microsoft Dynamics GP
 

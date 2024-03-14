@@ -4,6 +4,7 @@ description: Describes a problem in which SUTA or FUTA taxable wages are off by 
 ms.reviewer: theley, lmuelle
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Payroll
 ---
 # SUTA or FUTA taxable wages are off by the amount of a TSA deduction in Microsoft Dynamics GP
 

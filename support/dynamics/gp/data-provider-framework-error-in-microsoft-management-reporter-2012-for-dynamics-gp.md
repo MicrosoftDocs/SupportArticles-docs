@@ -4,6 +4,7 @@ description: Describes an error message in Management Reporter 2012 for Dynamics
 ms.reviewer: theley, kellybj, kevogt
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Management Reporter
 ---
 # Data provider framework error in Microsoft Management Reporter 2012 for Microsoft Dynamics GP
 

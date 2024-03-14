@@ -4,6 +4,7 @@ description: Describes an error that occurs when you generate a report in Manage
 ms.reviewer: theley, gbyer, kevogt
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Management Reporter
 ---
 # "The operation could not be completed due to a problem in the data provider framework" error when you create a report
 

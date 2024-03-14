@@ -4,6 +4,7 @@ description: Describes a problem that causes a SOAP exception. The problem occur
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # "An ISO 4217 Currency Code must be three characters long" error when you use Web Services
 

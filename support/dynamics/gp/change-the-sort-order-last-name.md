@@ -4,6 +4,7 @@ description: Describes how to change the sort order for employees in Microsoft D
 ms.reviewer: theley, shannona, dbader
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Payroll
 ---
 # How to change the sort order for employees to "Last Name" in the Employee Maintenance window in Microsoft Dynamics GP
 

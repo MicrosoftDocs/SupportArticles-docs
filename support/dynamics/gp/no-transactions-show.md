@@ -4,6 +4,7 @@ description: Describes a problem where the Select Bank Transactions window shows
 ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Bank Reconciliation
 ---
 # No transactions show when you open the Select Bank Transaction window in Microsoft Dynamics GP
 

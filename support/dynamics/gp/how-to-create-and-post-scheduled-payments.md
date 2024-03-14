@@ -4,6 +4,7 @@ description: Explains that when you post scheduled payments, they function like 
 ms.reviewer: theley, lmuelle
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # How to create and post scheduled payments in Microsoft Dynamics GP
 

@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when using Audit Trails
 ms.reviewer: theley, cwaswick, lmuelle
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # "The server principal 'xxx' is not able to access the database 'XXXXX' under the current security context." Error message when using Audit Trails in Microsoft Dynamics GP
 

@@ -4,6 +4,7 @@ description: When you try to process EFT batches in Payables or Receivables in M
 ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Receivables Management
 ---
 # "The bank country/region assigned to vendor's remit-to address can't be the same as the bank..." error when processing EFTs
 

@@ -4,6 +4,7 @@ description: Describes how to modify the IV Item Transaction Inquiry report to i
 ms.reviewer: theley, marianv, Lmuelle
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Distribution - Inventory
 ---
 # How to modify the IV Item Transaction Inquiry report to improve the system performance when you print a report that is sorted by the date in Microsoft Dynamics GP
 

@@ -4,6 +4,7 @@ description: Explains how to resolve the prompt to initialize smartlist error me
 ms.reviewer: theley, kyouells
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # You receive a SmartList initialization message when you start Microsoft Dynamics GP
 

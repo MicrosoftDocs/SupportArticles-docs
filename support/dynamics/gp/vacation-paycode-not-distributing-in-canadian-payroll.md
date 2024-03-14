@@ -4,6 +4,7 @@ description: Department masks were set up to distribute, and it works for all pa
 ms.topic: troubleshooting
 ms.reviewer: theley, cwaswick
 ms.date: 03/13/2024
+ms.custom: sap:Payroll
 ---
 # Vacation paycode not distributing in Canadian Payroll for Microsoft Dynamics GP
 

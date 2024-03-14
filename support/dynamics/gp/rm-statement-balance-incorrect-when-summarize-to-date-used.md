@@ -4,6 +4,7 @@ description: When printing RM statements, the ending statement balance is incorr
 ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Receivables Management
 ---
 # RM statement balance incorrect when 'Summarize To' Date is used in Receivables Management for Microsoft Dynamics GP
 

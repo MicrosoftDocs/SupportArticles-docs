@@ -4,6 +4,7 @@ description: The Trial Balance Detail report in GL is out of balance due to an u
 ms.reviewer: theley, cwaswick, lmuelle
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - General Ledger
 ---
 # Trial Balance Detail report is out of balance in General Ledger using Microsoft Dynamics GP
 

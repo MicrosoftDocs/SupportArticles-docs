@@ -4,6 +4,7 @@ description: Fixes a problem that occurs when you reconcile the checkbook in Sel
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Bank Reconciliation
 ---
 # "The difference must be zero before you can reconcile this checkbook" error when reconciling the checkbook in Select Bank Transactions
 

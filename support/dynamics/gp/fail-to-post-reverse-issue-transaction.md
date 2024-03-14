@@ -4,6 +4,7 @@ description: Describes a problem that may occur because there are pending quanti
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Distribution - Inventory
 ---
 # Error message when you try to post a "reverse issue" transaction in the Component Transaction Entry window in Microsoft Dynamics GP: "Quantities of the items are insufficient for this transaction"
 

@@ -4,6 +4,7 @@ description: Describes a problem that occurs because the next value in the AAG00
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Analytical Accounting
 ---
 # Error when you try to post Analytical Accounting transactions or save a Master record in Microsoft Dynamics GP: Cannot insert duplicate key in object 'AAGXXXXX'
 

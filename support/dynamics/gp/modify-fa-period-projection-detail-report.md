@@ -4,6 +4,7 @@ description: How to modify the Fixed Assets Period Projection - Detail report to
 ms.reviewer: theley, ryanklev, cwaswick, nikkij
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Fixed Assets
 ---
 # How to modify the Fixed Assets Period Projection - Detail report to prevent pre-projection amounts from being displayed in Microsoft Dynamics GP
 

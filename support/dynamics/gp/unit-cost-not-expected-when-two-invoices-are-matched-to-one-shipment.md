@@ -4,6 +4,7 @@ description: The Unit Cost of the receipt layer is not correct when two invoices
 ms.reviewer: theley, ppeterso
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Distribution - Purchase Order Processing
 ---
 # The Unit Cost of the receipt layer is not what you would expect when two invoices are matched to one shipment
 

@@ -4,6 +4,7 @@ description: Describes how to turn off Garnishment Detail/Summary reports in Pay
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Payroll
 ---
 # GP 2018 New feature - How to turn off Garnishment Detail/Summary reports in Payroll for Microsoft Dynamics GP
 

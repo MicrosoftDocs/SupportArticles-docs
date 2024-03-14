@@ -4,6 +4,7 @@ description: This article describes how to post to a closed year or to a closed 
 ms.reviewer: theley
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Financial - General Ledger
 ---
 # Steps to post to a closed year or to a closed period in Microsoft Dynamics GP
 

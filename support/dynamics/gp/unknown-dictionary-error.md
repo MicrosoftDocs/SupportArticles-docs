@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when starting Microsoft
 ms.reviewer: theley, kyouells
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # "Unknown Dictionary Error" Error message displays when you start Microsoft Dynamics GP
 

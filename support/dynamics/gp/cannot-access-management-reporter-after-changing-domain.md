@@ -4,6 +4,7 @@ description: Describes the steps to take that will give users access to Manageme
 ms.reviewer: theley, erikjohn
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # No longer have permission to access Management Reporter after you make changes to your domain
 

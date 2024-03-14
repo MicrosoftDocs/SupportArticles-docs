@@ -4,6 +4,7 @@ description: Describes a problem that occurs when you try to post a voucher by u
 ms.reviewer: theley, lmuelle
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # "Distributions for this transaction contain errors" when posting a voucher via a printed check payment
 

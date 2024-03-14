@@ -4,6 +4,7 @@ description: Explains a problem that occurs even though you have not applied a t
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # "This document cannot be marked for voiding, It has been either partially applied or is on hold" error when voiding a payables transaction
 

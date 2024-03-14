@@ -4,6 +4,7 @@ description: Describes how to completely remove Analytical Accounting from a com
 ms.topic: how-to
 ms.reviewer: theley, ryanklev
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Analytical Accounting
 ---
 # How to remove Analytical Accounting from a computer that has Microsoft Dynamics GP installed
 

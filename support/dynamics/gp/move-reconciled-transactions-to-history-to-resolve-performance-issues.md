@@ -4,6 +4,7 @@ description: Performance issues when voiding a bank deposit in Microsoft Dynamic
 ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Bank Reconciliation
 ---
 # Move reconciled transactions to history to help performance issues in Bank Reconciliation using Microsoft Dynamics GP
 

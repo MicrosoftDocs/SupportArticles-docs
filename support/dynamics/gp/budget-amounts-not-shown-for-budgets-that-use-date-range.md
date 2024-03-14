@@ -4,6 +4,7 @@ description: Provides a resolution for the issue that Microsoft Management Repor
 ms.reviewer: theley, kevogt, erikjohn
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Management Reporter
 ---
 # Microsoft Management Report does not display budget amounts for budgets that use a date range
 

@@ -4,6 +4,7 @@ description: Describes steps to use Report Writer to print all seven aging perio
 ms.reviewer: theley, lmuelle, kfrankha
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Receivables Management
 ---
 # How to use Report Writer to print all seven aging periods on the RM Aged Trial Balance report in Microsoft Dynamics GP 9.0
 

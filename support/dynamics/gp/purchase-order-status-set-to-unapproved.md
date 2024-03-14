@@ -4,6 +4,7 @@ description: Documents a problem that occurs when a purchase order is created in
 ms.reviewer: theley, kyouells, rolso
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Receivables Management
 ---
 # The status of a purchase order that comes from the Requisition Management module is automatically set to unapproved
 

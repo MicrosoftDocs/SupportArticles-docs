@@ -4,6 +4,7 @@ description: Provides a solution to errors that occur when you try to print a re
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # "Report not found" or "Cannot Open Report" Error message when you try to print a report in Microsoft Dynamics GP
 

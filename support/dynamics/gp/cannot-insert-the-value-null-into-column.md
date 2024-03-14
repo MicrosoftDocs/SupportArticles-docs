@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when you try to post a 
 ms.reviewer: theley, lmuelle
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Analytical Accounting
 ---
 # "Cannot insert the value NULL into column 'aatrxsource' table" Error message when you try to post a journal entry that contains Analytical Accounting assignments in Microsoft Dynamics GP
 

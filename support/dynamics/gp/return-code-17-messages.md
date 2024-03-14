@@ -4,6 +4,7 @@ description: Describes a problem that occurs when you run the Depreciation proce
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Fixed Assets
 ---
 # "Return code 17" error messages when you run the Depreciation process in Fixed Asset Management in Microsoft Dynamics GP
 

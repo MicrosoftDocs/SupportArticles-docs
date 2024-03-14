@@ -4,6 +4,7 @@ description: This article describes the Check Remittance report in Payables Mana
 ms.reviewer: theley
 ms.topic: how-to
 ms.date: 02/20/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # Information about the Check Remittance report in Payables Management in Microsoft Dynamics GP
 

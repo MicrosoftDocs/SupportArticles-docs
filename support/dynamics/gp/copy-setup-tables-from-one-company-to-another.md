@@ -4,6 +4,7 @@ description: Describes how to copy setup tables from one company to another in M
 ms.topic: how-to
 ms.reviewer: theley
 ms.date: 03/13/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # How to copy setup tables from one company to another in Microsoft Dynamics GP
 

@@ -3,6 +3,7 @@ title: Recommended month-end procedures for Open Item customers in Receivables M
 description: Describes the month-end procedures that are recommended for Open Item customers in Receivables Management in Microsoft Dynamics GP or in Microsoft Business Solutions - Great Plains.
 ms.date: 03/13/2024
 ms.reviewer: theley
+ms.custom: sap:Financial - Receivables Management
 ---
 # Recommended month-end procedures for Open Item customers in Receivables Management in Microsoft Dynamics GP
 

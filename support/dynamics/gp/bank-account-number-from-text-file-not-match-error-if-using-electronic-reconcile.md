@@ -4,6 +4,7 @@ description: Describes a problem where you receive the error message Bank Accoun
 ms.reviewer: theley, cwaswick, lmuelle
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Bank Reconciliation
 ---
 # "Bank Account Number from text file could not be matched..." error when using Electronic Reconcile in Bank Reconciliation
 

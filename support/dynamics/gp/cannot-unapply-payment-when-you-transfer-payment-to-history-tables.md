@@ -4,6 +4,7 @@ description: Describes a problem that occurs in which you cannot unapply a payme
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # You cannot unapply a payment when you transfer the payment to the history tables in Receivables Management in Microsoft Dynamics GP
 

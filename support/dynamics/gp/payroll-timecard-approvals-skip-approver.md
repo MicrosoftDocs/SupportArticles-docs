@@ -4,6 +4,7 @@ description: Provides a solution to an issue where payroll employee self service
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/12/2024
+ms.custom: sap:Payroll
 ---
 # Payroll employee self service timecard approvals aren't going to correct approver in Microsoft Dynamics GP
 

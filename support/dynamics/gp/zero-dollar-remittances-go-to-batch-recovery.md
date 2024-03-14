@@ -4,6 +4,7 @@ description: When posting a computer check batch for Electronic Funds Transfers 
 ms.reviewer: theley, cwaswick, lmuelle
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # Zero-dollar Remittances go to Batch Recovery when processing EFT payments in Payables Management
 

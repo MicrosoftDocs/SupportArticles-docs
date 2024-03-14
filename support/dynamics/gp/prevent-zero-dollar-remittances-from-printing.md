@@ -4,6 +4,7 @@ description: Describes how to prevent zero dollar remittances from printing in P
 ms.reviewer: theley
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # How to prevent zero dollar remittances from printing in Payables Management in Microsoft Dynamics GP
 

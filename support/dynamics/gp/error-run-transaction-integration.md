@@ -4,6 +4,7 @@ description: This article provides a resolution for the problem that occurs afte
 ms.topic: troubleshooting
 ms.reviewer: theley, dlanglie, kvogel
 ms.date: 03/13/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # Error message when you run a transaction integration in Integration Manager in Microsoft Dynamics GP 9.0 (Distribution account does not have a default)
 

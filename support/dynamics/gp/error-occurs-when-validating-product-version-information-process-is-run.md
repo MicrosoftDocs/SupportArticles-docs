@@ -4,6 +4,7 @@ description: Describes a problem that occurs if the collations and the sort orde
 ms.reviewer: theley, kyouells
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # You receive an error message when the Validating Product Version Information process is run in Microsoft Dynamics GP Utilities
 

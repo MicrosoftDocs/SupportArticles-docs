@@ -4,6 +4,7 @@ description: When you run an Integration in Integration Manager it imports in al
 ms.reviewer: theley, dlanglie
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # All dates from source data are imported instead of wanted date range when running an integration in Integration Manager
 

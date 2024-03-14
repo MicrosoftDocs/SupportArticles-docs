@@ -4,6 +4,7 @@ description: The article describes how to use a Misc Charges item with Microsoft
 ms.reviewer: theley, BeckyBer
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Manufacturing Series
 ---
 # How to use a Misc Charges item with a Periodic item (Standard Cost) with Microsoft Dynamics GP Manufacturing
 

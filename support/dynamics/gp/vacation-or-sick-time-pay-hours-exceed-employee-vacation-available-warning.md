@@ -4,6 +4,7 @@ description: The Check File Report from the build checks process may show a warn
 ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Human Resources
 ---
 # "Vacation/Sick Time pay hours exceed employee vacation/sick time available" warning when employee has sufficient time available in Human Resources
 

@@ -4,6 +4,7 @@ description: Discusses how to add a script to an integration to convert negative
 ms.reviewer: theley
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # VBScript to convert a negative number to a positive number by using Integration Manager for Microsoft Dynamics GP
 

@@ -4,6 +4,7 @@ description: Provides solutions to an issue where the Integration Manager option
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ms.reviewer: theley
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # The Integration Manager option and the Table Import option are not available in Microsoft Dynamics GP
 

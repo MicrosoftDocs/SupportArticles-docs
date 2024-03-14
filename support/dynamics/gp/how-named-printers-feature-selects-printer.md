@@ -4,6 +4,7 @@ description: Describes how the named printers feature selects a printer in Micro
 ms.topic: how-to
 ms.reviewer: theley, Kyouells
 ms.date: 03/13/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # How the named printers feature selects a printer in Microsoft Dynamics GP
 

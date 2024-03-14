@@ -4,6 +4,7 @@ description: Describes an error you may receive when you publish a report to Sha
 ms.reviewer: theley, kellybj, kevogt
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Management Reporter
 ---
 # "Unable to create the related report link" error in Management Reporter 2012 when publishing a report to SharePoint
 

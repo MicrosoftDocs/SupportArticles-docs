@@ -4,6 +4,7 @@ description: Describes an error message in Purchase Order Entry window in Micros
 ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Distribution - Purchase Order Processing
 ---
 # "Address information is missing for the Ship-To Address" error in Purchase Order Entry window in Microsoft Dynamics GP
 

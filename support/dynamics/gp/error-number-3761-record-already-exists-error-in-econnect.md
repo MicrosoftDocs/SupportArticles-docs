@@ -4,6 +4,7 @@ description: When you try to use eConnect to pass in a transactional document, y
 ms.reviewer: theley, dclauson
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Distribution - Inventory
 ---
 # "Error Number = 3761 Record already exists, cannot insert" occurs in eConnect for Microsoft Dynamics GP
 

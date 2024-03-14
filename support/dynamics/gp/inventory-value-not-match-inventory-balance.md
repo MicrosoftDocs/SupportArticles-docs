@@ -4,6 +4,7 @@ description: Discusses why the inventory value does not match the inventory bala
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Distribution - Inventory
 ---
 # Issue where inventory value does not match the inventory balance in Microsoft Dynamics GP
 

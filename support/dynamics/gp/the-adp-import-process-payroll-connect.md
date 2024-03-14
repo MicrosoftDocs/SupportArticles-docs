@@ -4,6 +4,7 @@ description: Describes the Payroll Connect installation process and provides inf
 ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - General Ledger
 ---
 # The ADP import process in Payroll Connect and the specific fields that are required for Microsoft Dynamics GP
 

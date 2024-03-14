@@ -4,6 +4,7 @@ description: Provides a resolution for the Packing batch entry file -1 error in 
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Payroll
 ---
 # Update Masters "Error packing batch entry file -1" in Canadian Payroll
 

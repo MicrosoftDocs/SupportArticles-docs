@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when you use the Letter
 ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Human Resources
 ---
 # Microsoft Dynamics GP hangs when selecting for payroll options for Benefit and deduction letters in LWA and/or get Invalid merge field error
 

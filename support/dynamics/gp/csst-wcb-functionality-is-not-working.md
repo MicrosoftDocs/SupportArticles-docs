@@ -4,6 +4,7 @@ description: Provides a solution to an issue where CSST/WCB functionality isn't 
 ms.reviewer: theley, lmuelle, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Payroll
 ---
 # CSST/WCB functionality isn't working in Canadian Payroll for Microsoft Dynamics GP
 

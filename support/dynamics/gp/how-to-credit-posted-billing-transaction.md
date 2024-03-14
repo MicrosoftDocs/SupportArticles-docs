@@ -4,6 +4,7 @@ description: Introduces how to credit a billing transaction that has been posted
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Project Accounting
 ---
 # How to do credits in Project Accounting Billing Entry in Microsoft Dynamics GP
 

@@ -3,6 +3,7 @@ title: Year-End Closing in Inventory Control
 description: Describes how to close the year and how to prepare your inventory records for the new fiscal year in Inventory Control in Microsoft Dynamics GP.
 ms.reviewer: theley, lmuelle
 ms.date: 03/13/2024
+ms.custom: sap:Distribution - Inventory
 ---
 # Year-End Closing procedures in Inventory Control in Microsoft Dynamics GP
 

@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when you post a batch i
 ms.reviewer: theley, lmuelle
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - General Ledger
 ---
 # "The Stored Procedure GLpBatchCleanup Returned the Following Results: DBMS: 0, Dynamics: 20486" Error message when you post a batch in the general ledger in Microsoft Dynamics GP
 

@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when you generate a rep
 ms.reviewer: theley, gbyer, jopankow
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Management Reporter
 ---
 # "Currency USD does not exist for company" Error displays when you generate a report in Management Reporter
 

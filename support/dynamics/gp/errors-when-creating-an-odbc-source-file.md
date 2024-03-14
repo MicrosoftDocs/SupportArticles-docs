@@ -4,6 +4,7 @@ description: Provides a solution to errors that occur when you create an Open Da
 ms.reviewer: theley, lmuelle
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # Error messages when you create an ODBC integration source file to connect to a SQL Server 2005 database in Microsoft Dynamics GP
 

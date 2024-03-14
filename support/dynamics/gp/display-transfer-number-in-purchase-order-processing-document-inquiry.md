@@ -3,6 +3,7 @@ title: Display transfer number in the Purchase Order Processing Document Inquiry
 description: Describes how to display the transfer number in the Purchase Order Processing Document Inquiry window in Microsoft Dynamics GP.
 ms.topic: how-to
 ms.date: 02/19/2024
+ms.custom: sap:Distribution - Purchase Order Processing
 ---
 # How to display the transfer number in the "Purchase Order Processing Document Inquiry" window in Microsoft Dynamics GP
 

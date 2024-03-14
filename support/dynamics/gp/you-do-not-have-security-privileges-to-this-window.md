@@ -4,6 +4,7 @@ description: Describes an issue that occurs when you start Microsoft Dynamics GP
 ms.reviewer: theley, lmiller
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # "You don't have security privileges to this window" error when signing in to Microsoft Dynamics GP or open a window or a report
 

@@ -4,6 +4,7 @@ description: Provides more information about why payroll deductions aren't inclu
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Payroll
 ---
 # Payroll deductions aren't taken in Microsoft Dynamics GP
 

@@ -4,6 +4,7 @@ description: The Save button is unavailable when you try to create a user in the
 ms.reviewer: theley, lmuelle
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # The Save button is unavailable when you try to create a user in the User Setup window
 

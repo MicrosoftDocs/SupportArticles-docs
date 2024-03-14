@@ -4,6 +4,7 @@ description: When you do a stock count on a serialized item in Microsoft Dynamic
 ms.reviewer: theley, lmuelle
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Distribution - Inventory
 ---
 # "The variance or counted quantity for this serial number does not equal the variance or counted quantity for this item" error when doing a stock count on a serialized item
 

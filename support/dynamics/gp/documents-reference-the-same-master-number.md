@@ -4,6 +4,7 @@ description: Provides a solution to an issue where multiple customers have docum
 ms.reviewer: theley, ppeterso
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Distribution - Sales Order Processing
 ---
 # Multiple customers have documents that reference the same master number in Sales Order Processing in Microsoft Dynamics GP
 

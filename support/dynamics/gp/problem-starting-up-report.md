@@ -4,6 +4,7 @@ description: Provides a solution to errors that occur when you try to start Micr
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # "Unable to open dictionary C:\DYNAMICS\REPORTS.DIC" and "Problem starting up report" error messages when you try to print a report
 

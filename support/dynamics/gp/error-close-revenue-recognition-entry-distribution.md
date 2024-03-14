@@ -4,6 +4,7 @@ description: Describes a problem that occurs when you close the Distribution dia
 ms.reviewer: theley, ppeterso
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Project Accounting
 ---
 # Error message when you close the "Revenue Recognition Entry Distribution" dialog box in Project Accounting in Microsoft Dynamics GP and in Microsoft Great Plains: Line(s) contain errors
 

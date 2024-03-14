@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when you try to print t
 ms.reviewer: theley, lmuelle
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Payroll
 ---
 # "Could not find stored procedure 'XXXX.dbo. GSDELETEFUTARANGE'" Error message when you try to print the FUTA or SUTA report from Greenshades
 

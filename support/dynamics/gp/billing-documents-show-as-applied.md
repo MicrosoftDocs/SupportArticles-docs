@@ -4,6 +4,7 @@ description: Provides a solution to an issue where billing documents from Projec
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Project Accounting
 ---
 # Billing documents from Project Accounting show as applied in Receivables Management but not in Project Accounting on Microsoft Dynamics GP
 

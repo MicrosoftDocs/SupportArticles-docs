@@ -4,6 +4,7 @@ description: Describes how to use the Range Where clause in Dexterity in Microso
 ms.reviewer: theley
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # How to use a "Range Where" clause that is based on more than one table in Dexterity in Microsoft Dynamics GP
 

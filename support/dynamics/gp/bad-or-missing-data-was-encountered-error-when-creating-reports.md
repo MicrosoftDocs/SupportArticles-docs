@@ -4,6 +4,7 @@ description: Describes an error message you get when you generate a report in Mi
 ms.reviewer: theley, kellybj, kevogt
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Management Reporter
 ---
 # "Bad or missing data was encountered" error when you generate a report in Microsoft Management Reporter
 

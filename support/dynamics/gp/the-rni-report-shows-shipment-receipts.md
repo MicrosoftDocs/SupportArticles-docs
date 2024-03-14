@@ -4,6 +4,7 @@ description: Describes an issue in which the Received/Not Invoiced report is inc
 ms.reviewer: theley, ppeterso
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Distribution - Purchase Order Processing
 ---
 # The Received/Not Invoiced report shows shipment receipts in Microsoft Great Plains even though some of the items on the report have been returned
 

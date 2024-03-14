@@ -4,6 +4,7 @@ description: Describes an error message that you receive when you start Microsof
 ms.reviewer: theley, kyouells
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # "A Get/Change First operation on table SY_Users_MSTR failed accessing SQL data" error when you start Microsoft Dynamics GP
 

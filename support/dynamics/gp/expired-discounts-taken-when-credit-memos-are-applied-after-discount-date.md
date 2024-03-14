@@ -4,6 +4,7 @@ description: Expired discounts are still taken when credit memos are applied aft
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # Expired discounts taken when credit memos are applied after discount date in Payables Management in Dynamics GP
 

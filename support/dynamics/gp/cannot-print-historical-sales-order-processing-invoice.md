@@ -4,6 +4,7 @@ description: When you try to print a historical Sales Order Processing invoice i
 ms.reviewer: theley, lmuelle
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Distribution - Sales Order Processing
 ---
 # "You must be viewing by Functional or Originating currency to print a document" error when printing a historical Sales Order Processing invoice
 

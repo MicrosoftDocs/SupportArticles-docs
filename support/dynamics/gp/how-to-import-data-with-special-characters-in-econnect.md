@@ -4,6 +4,7 @@ description: This article gives an XML code example of how to use CDATA in the e
 ms.reviewer: theley, dclauson
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # How to import data with special characters in eConnect for Microsoft Dynamics GP
 

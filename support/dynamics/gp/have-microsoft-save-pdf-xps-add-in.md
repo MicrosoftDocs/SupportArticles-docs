@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when you try to send a 
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # You must have the Microsoft Save as PDF or XPS add-in for 2007 Microsoft Office
 

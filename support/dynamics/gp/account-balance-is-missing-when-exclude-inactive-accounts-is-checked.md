@@ -4,6 +4,7 @@ description: When the option exclude inactive accounts is selected, account bala
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Management Reporter
 ---
 # Account balance is missing in Management Reporter 2012 for Dynamics GP when Exclude inactive accounts is checked
 

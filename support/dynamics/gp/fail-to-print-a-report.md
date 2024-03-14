@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when you print a report
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # Error message when you print a report in Microsoft Dynamics GP: "Undefined Symbol"
 

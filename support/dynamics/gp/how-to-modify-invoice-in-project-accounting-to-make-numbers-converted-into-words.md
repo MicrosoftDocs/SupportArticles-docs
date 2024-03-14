@@ -4,6 +4,7 @@ description: Describes how to modify an invoice in Microsoft Dynamics GP so that
 ms.reviewer: theley, lmuelle
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Project Accounting
 ---
 # How to modify an invoice to make numbers converted into words and shown at the bottom of "PA Invoice Format Project Detail Page 1"
 

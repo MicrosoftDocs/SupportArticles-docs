@@ -4,6 +4,7 @@ description: When you try to select an invoice in the Sales Transaction Entry wi
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Receivables Management
 ---
 # "This document number already exists" error when selecting an invoice in the Sales Transaction Entry window
 

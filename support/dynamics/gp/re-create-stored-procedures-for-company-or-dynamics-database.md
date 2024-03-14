@@ -4,6 +4,7 @@ description: Discusses how to re-create stored procedures for a company database
 ms.topic: how-to
 ms.reviewer: theley, aeckman
 ms.date: 03/13/2024
+ms.custom: sap:Manufacturing Series
 ---
 # How to re-create stored procedures for a company database and for the DYNAMICS database for Manufacturing in Microsoft Dynamics GP
 

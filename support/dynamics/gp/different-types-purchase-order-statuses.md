@@ -3,6 +3,7 @@ title: Different types of purchase order statuses
 description: Describes the different types of purchase order statuses in Microsoft Dynamics GP.
 ms.reviewer: theley, jchrist
 ms.date: 03/13/2024
+ms.custom: sap:Distribution - Purchase Order Processing
 ---
 # The different types of purchase order statuses in Microsoft Dynamics GP
 

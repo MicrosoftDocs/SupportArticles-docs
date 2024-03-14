@@ -4,6 +4,7 @@ description: Describes a problem that occurs when you try to do the year-end clo
 ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - General Ledger
 ---
 # "Violation of PRIMARY KEY constraint" Error message when you try to do the year-end closing routine in General Ledger in Microsoft Dynamics GP
 

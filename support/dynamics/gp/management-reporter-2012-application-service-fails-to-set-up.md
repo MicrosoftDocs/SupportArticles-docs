@@ -4,6 +4,7 @@ description: Describes an error message that may occur when you configure the ap
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Management Reporter
 ---
 # Management Reporter 2012 Application Service fails to configure
 

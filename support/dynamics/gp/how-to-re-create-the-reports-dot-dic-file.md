@@ -4,6 +4,7 @@ description: Describes how to re-create the Reports.dic file in Microsoft Dynami
 ms.reviewer: theley
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # How to re-create the Reports.dic file in Microsoft Dynamics GP
 

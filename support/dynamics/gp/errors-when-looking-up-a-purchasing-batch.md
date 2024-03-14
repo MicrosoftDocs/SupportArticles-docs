@@ -4,6 +4,7 @@ description: Provides a solution to errors that occur when trying to look up a P
 ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # "Index 0 of array 'VerifyBatchTotals' is out of range in script" Error messages when trying to look up a Purchasing batch in Payables Management using Microsoft Dynamics GP
 

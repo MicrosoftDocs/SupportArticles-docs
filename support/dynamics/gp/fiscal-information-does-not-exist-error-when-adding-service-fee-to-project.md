@@ -4,6 +4,7 @@ description: Describes a problem where you receive a warning message when adding
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Project Accounting
 ---
 # "Fiscal information does not exist for service fee dates" error when adding a service fee to a project in Project Accounting
 

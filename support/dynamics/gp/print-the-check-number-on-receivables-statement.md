@@ -4,6 +4,7 @@ description: Describes instructions on how to print the Payment Check Number on 
 ms.reviewer: theley
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Receivables Management
 ---
 # How to print the Check Number on a Receivables Statement in Microsoft Dynamics GP 9.0 and 10.0
 

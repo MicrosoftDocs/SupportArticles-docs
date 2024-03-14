@@ -4,6 +4,7 @@ description: Describes how to add line item comments to graphical purchase order
 ms.topic: how-to
 ms.reviewer: theley, kfrankha
 ms.date: 03/13/2024
+ms.custom: sap:Distribution - Inventory
 ---
 # How to add line item comments to graphical purchase order reports without creating additional white space in Microsoft Dynamics GP
 

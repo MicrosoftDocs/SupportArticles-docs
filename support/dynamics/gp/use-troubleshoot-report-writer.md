@@ -4,6 +4,7 @@ description: Provides information about how to use Report Writer and how to trou
 ms.reviewer: theley
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # How to use and troubleshoot Report Writer in Microsoft Dynamics GP
 

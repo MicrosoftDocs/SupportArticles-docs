@@ -4,6 +4,7 @@ description: This article provides two resolutions for the problem that occurs w
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Manufacturing Series
 ---
 # The standard costs do not change as expected when you roll up and then revalue standard costs in Manufacturing Order Processing in Microsoft Dynamics GP2010 and GP10.0
 

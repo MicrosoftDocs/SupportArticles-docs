@@ -4,6 +4,7 @@ description: Describes a problem where the Year list and the Period list are bla
 ms.reviewer: theley, kriszree, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Analytical Accounting
 ---
 # The Year and the Period list options are blank when you try to create a Distribution Query or a Multilevel Query in Analytical Accounting in Microsoft Dynamics GP
 

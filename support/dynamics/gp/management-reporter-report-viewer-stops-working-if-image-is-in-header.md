@@ -4,6 +4,7 @@ description: Describes an error that you may receive when you view a report that
 ms.reviewer: theley, kellybj, kevogt
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Management Reporter
 ---
 # Microsoft Management Reporter Report Viewer may stop working when there is an image in header
 

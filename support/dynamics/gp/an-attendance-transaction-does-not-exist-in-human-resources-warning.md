@@ -4,6 +4,7 @@ description: You may receive a warning message that states an attendance transac
 ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Human Resources
 ---
 # "An attendance transaction does not exist in Human Resources" warning occurs during payrun build
 

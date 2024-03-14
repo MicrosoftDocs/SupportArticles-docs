@@ -4,6 +4,7 @@ description: When you try to start Microsoft Dynamics GP, the error - An error h
 ms.reviewer: theley, sarahcud
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # "An error has occurred in the script on this page" script error when launching Microsoft Dynamics GP
 

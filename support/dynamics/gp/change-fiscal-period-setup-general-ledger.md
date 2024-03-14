@@ -4,6 +4,7 @@ description: This article describes how to change the fiscal periods so that the
 ms.reviewer: Theley
 ms.topic: how-to
 ms.date: 02/19/2024
+ms.custom: sap:Financial - General Ledger
 ---
 # Change the fiscal period setup in General Ledger in Microsoft Dynamics GP
 

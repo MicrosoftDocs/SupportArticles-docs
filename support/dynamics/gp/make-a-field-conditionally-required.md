@@ -4,6 +4,7 @@ description: Describes how to make a field conditionally required in Microsoft D
 ms.reviewer: theley
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # How to make a field conditionally required in Microsoft Dynamics GP 9.0
 

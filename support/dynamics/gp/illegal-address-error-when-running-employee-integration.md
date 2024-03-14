@@ -4,6 +4,7 @@ description: Describes a problem that occurs because HRM Solution Series for Mic
 ms.reviewer: theley, kvogel
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # "Illegal address" error when you run an employee integration in Integration Manager
 

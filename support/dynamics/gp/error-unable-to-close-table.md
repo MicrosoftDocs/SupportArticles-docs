@@ -4,6 +4,7 @@ description: Describes an error message that occurs when you try to print the Hi
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - General Ledger
 ---
 # "Unable to close table; DBMS: 208, dynamics: 0" error when you try to print the Historical Aged Trial Balance report in Microsoft Dynamics GP
 

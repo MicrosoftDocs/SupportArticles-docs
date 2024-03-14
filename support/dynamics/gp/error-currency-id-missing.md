@@ -4,6 +4,7 @@ description: Describes error messages The Currency ID is missing, or The Rate Ty
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # Error messages in Payables Batch Edit List about Multicurrency using Microsoft Dynamics GP
 

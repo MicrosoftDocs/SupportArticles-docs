@@ -4,6 +4,7 @@ description: When you post a transaction in Microsoft Dynamics GP, you receive a
 ms.reviewer: theley, cwaswick, lmuelle
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Analytical Accounting
 ---
 # "There are no distribution accounts linked to an Accounting Class" error in Analytical Accounting for Microsoft Dynamics GP
 

@@ -4,6 +4,7 @@ description: The Purchase button does not show in Fixed Asset General Informatio
 ms.reviewer: theley, cwaswick, lmuelle
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Fixed Assets
 ---
 # Purchase button does not show in the Fixed Asset General Information window in Microsoft Dynamics GP
 

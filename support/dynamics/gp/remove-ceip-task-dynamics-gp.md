@@ -4,6 +4,7 @@ description: Describes the steps to remove the Customer Experience Improvement P
 ms.reviewer: theley, kyouells
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # How to remove the Customer Experience Improvement Program (CEIP) task from Microsoft Dynamics GP
 

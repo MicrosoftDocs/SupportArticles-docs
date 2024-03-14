@@ -4,6 +4,7 @@ description: Explains how to void an invoice, depending on the applied status of
 ms.reviewer: theley, lmuelle
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # How to void an invoice that is applied in Payables Management in Microsoft Dynamics GP
 

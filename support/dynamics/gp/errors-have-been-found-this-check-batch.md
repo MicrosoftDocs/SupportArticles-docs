@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when you try to print a
 ms.reviewer: theley, lmuelle
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # "Errors have been found in this check batch. Please correct the errors before printing" Error message when you try to print a batch of checks in Payables Management in Microsoft Dynamics GP
 

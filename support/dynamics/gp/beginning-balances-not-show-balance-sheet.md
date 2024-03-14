@@ -4,6 +4,7 @@ description: Provides a resolution for the issue that beginning balances don't d
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - General Ledger
 ---
 # Beginning Balances don't appear correctly on the Balance Sheet
 

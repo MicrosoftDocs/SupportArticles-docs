@@ -3,6 +3,7 @@ title: Features of Analytical Accounting and Multidimensional Analysis
 description: Describes some differences and similarities in the features of Analytical Accounting and of Multidimensional Analysis.
 ms.reviewer: theley, cwaswick, lmuelle
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Analytical Accounting
 ---
 # Comparison of the features of Analytical Accounting and of Multidimensional Analysis
 

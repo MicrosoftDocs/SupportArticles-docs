@@ -4,6 +4,7 @@ description: Introduces the Payables Management EFT Standard ACH format in Micro
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # Payables EFT Standard ACH format
 

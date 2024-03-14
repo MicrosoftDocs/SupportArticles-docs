@@ -3,6 +3,7 @@ title: How Remove Bank History utility works
 description: Introduces how Remove Bank History utility works in Microsoft Dynamics GP.
 ms.reviewer: theley, Cwaswick
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Bank Reconciliation
 ---
 # How the Remove Bank History utility works in Microsoft Dynamics GP
 

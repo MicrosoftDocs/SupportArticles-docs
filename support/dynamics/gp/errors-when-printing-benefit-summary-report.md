@@ -4,6 +4,7 @@ description: Describes an issue that occurs when you print the Benefit Summary r
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Payroll
 ---
 # You receive error messages when you print the Benefit Summary report in Microsoft Great Plains
 

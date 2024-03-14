@@ -4,6 +4,7 @@ description: Describes steps to resolve the message Company XXX doesn't have acc
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - General Ledger
 ---
 # "Company XXX doesn't have access to currency" error when using Multicurrency with any module in Microsoft Dynamics GP
 

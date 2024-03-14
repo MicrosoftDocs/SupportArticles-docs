@@ -4,6 +4,7 @@ description: An error occurs when changing standard cost on an item in Microsoft
 ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Distribution - Inventory
 ---
 # Error when changing standard cost on an item in Microsoft Dynamics GP
 

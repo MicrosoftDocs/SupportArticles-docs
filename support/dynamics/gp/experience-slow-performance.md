@@ -4,6 +4,7 @@ description: Provides information that you can use to troubleshoot performance p
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 02/20/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # You experience slow performance when you do specific processes in Microsoft Dynamics GP
 

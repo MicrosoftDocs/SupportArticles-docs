@@ -4,6 +4,7 @@ description: When you create alternate forms in Dexterity, you can refer to new 
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # "Illegal Address for field 'field name' in script 'script name'" error when you access new fields from an alternate window
 

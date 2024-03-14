@@ -4,6 +4,7 @@ description: Describes a problem that occurs if the functional currency is not c
 ms.reviewer: theley, lmuelle
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # The service item, the cost, and the vendor do not appear when you view an outsourced purchase order in Manufacturing in Microsoft Dynamics GP
 

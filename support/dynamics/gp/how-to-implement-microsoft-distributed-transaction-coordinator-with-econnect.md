@@ -4,6 +4,7 @@ description: Introduces how to implement Microsoft Distributed Transaction Coord
 ms.reviewer: theley, dclauson
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # How to implement Microsoft Distributed Transaction Coordinator with eConnect for Microsoft Dynamics GP
 

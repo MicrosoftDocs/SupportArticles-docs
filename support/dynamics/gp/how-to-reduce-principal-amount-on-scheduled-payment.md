@@ -4,6 +4,7 @@ description: This article describes how to reduce the Principal amount on a Sche
 ms.reviewer: theley, cwaswick
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Receivables Management
 ---
 # How to reduce the Principal Amount on a Scheduled Payment in Receivables Management
 

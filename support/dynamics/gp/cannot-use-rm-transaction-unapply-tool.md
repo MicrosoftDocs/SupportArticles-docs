@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when trying to unapply 
 ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Receivables Management
 ---
 # Unable to use RM Transaction Unapply tool in PSTL in Microsoft Dynamics GP
 

@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when you generate an EF
 ms.reviewer: theley, Lmuelle
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # "The bank country/region assigned to the vendor's remit-to address is missing or inactive" Error message when you generate an EFT file for Payables Management in Microsoft Dynamics GP
 

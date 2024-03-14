@@ -4,6 +4,7 @@ description: Describes how to add the Credit Card Number information from Sales 
 ms.reviewer: theley
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Distribution - Sales Order Processing
 ---
 # How to modify the SOP Blank Invoice Form or the SOP Blank Order Form in Report Writer to include the Credit Card Number information from the Sales Payment Entry window
 

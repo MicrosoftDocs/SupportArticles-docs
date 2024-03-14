@@ -3,6 +3,7 @@ title: Tools for Sales Order and PO Processing
 description: Information about tools that are available for Sales Order Processing and Purchase Order Processing in Microsoft Dynamics GP.
 ms.reviewer: theley
 ms.date: 03/13/2024
+ms.custom: sap:Distribution - Sales Order Processing
 ---
 # Information about tools that are available for Sales Order Processing and Purchase Order Processing in Microsoft Dynamics GP
 

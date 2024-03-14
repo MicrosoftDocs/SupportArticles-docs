@@ -4,6 +4,7 @@ description: Describes how to integrate Project Accounting with Fixed Asset Mana
 ms.reviewer: theley, lmuelle
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Project Accounting
 ---
 # How to integrate Project Accounting with Fixed Asset Management in Microsoft Dynamics GP
 

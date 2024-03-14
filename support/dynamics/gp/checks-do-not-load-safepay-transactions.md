@@ -4,6 +4,7 @@ description: Provides a solution to an issue where checks don't load to the Safe
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Bank Reconciliation
 ---
 # Checks don't load to the SafePay-Transactions Upload window in Microsoft Dynamics GP
 

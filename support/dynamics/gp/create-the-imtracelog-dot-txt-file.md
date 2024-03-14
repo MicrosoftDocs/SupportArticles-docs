@@ -4,6 +4,7 @@ description: Describes how to create a trace file for Integration Manager for Mi
 ms.reviewer: theley, kvogel
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # How to configure the new Microsoft.Dynamics.GP.IntegrationManager.exe.config file so that Integration Manager for Microsoft Dynamics GP 10.0 creates the IMTraceLog.txt file
 

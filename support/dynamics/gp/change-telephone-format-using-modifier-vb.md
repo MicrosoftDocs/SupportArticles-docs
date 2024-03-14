@@ -4,6 +4,7 @@ description: This article provides steps in Modifier with Visual Basic for Appli
 ms.topic: how-to
 ms.reviewer: theley, kvogel
 ms.date: 03/13/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # Change the telephone format for SmartList and for Letter Writing Assistant in Microsoft Dynamics GP by using Modifier with Visual Basic for Applications
 

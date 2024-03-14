@@ -4,6 +4,7 @@ description: Describes how to create an external translation Integration Source 
 ms.topic: how-to
 ms.reviewer: theley, dlanglie
 ms.date: 03/13/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # How to create an external translation Integration Source file in Integration Manager for Microsoft Dynamics GP
 

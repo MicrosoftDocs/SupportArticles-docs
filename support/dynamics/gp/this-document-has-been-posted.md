@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when you try to enter a
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Receivables Management
 ---
 # "This document has been posted" Error message when you try to enter an unposted sales document in the Sales Transaction Entry window in Microsoft Dynamics GP
 

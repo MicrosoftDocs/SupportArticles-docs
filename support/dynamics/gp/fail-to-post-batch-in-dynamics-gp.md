@@ -4,6 +4,7 @@ description: Describes that you receive an error message when you try to post a 
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # Error when you try to post a batch in Microsoft Dynamics GP: "The stored procedure glpPostBatch returned the following results: DBMS: 0, Great Plains: 20286"
 

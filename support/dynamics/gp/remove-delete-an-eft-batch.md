@@ -4,6 +4,7 @@ description: Describes how to delete an EFT batch before you create an EFT file 
 ms.reviewer: theley
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # How to remove and then delete an EFT batch that was voided in Microsoft Dynamics GP
 

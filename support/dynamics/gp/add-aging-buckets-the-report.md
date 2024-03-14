@@ -4,6 +4,7 @@ description: Describes how to use Report Writer in Microsoft Dynamics GP to add 
 ms.reviewer: theley
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Receivables Management
 ---
 # How to add aging buckets to the RM Summary Historical Aged Trial Balance report by using Report Writer in Microsoft Dynamics GP
 

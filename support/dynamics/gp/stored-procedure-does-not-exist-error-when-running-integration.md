@@ -4,6 +4,7 @@ description: Describes how to resolve the stored procedure error for a Microsoft
 ms.reviewer: theley, grwill, dclauson
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # Stored procedure doesn't exist error when running an integration via a Dynamics GP eConnect destination adapter
 

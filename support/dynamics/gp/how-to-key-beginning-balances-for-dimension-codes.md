@@ -4,6 +4,7 @@ description: Introduces how to enter or offset Beginning Balances for Dimension 
 ms.reviewer: theley, cwaswick
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Analytical Accounting
 ---
 # How to key Beginning Balances for Dimension Codes in Analytical Accounting for Microsoft Dynamics GP
 

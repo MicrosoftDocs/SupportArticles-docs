@@ -4,6 +4,7 @@ description: Describes an issue where you receive the Check Printing status when
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # "Check Printing" status when choosing process later in Payables Management
 

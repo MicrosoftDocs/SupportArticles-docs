@@ -4,6 +4,7 @@ description: Provides more information about the Reconcile to GL routine for Ban
 ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Bank Reconciliation
 ---
 # Reconcile to GL routine for Bank Reconciliation in Microsoft Dynamics GP
 

@@ -4,6 +4,7 @@ description: Describes how to set up and then depreciate low-cost assets accordi
 ms.reviewer: theley, dbader
 ms.topic: how-to
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Fixed Assets
 ---
 # How to set up and then depreciate low-cost assets according to German law in Microsoft Dynamics GP
 

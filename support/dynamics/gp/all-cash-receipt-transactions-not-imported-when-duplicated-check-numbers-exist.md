@@ -4,6 +4,7 @@ description: Describes a problem that occurs because duplicate check numbers are
 ms.reviewer: theley, ryanklev, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Receivables Management
 ---
 # All the cash receipt transactions are not imported in when duplicate check numbers exist using Lockbox Processing
 

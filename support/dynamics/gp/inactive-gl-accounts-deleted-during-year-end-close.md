@@ -4,6 +4,7 @@ description: The year-end close process deletes any accounts that are marked as 
 ms.reviewer: theley, cwaswick, lmuelle
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - General Ledger
 ---
 # Inactive GL accounts deleted during Year-End Close process for General Ledger in Microsoft Dynamics GP
 

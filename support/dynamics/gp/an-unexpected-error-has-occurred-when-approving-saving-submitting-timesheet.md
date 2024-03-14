@@ -4,6 +4,7 @@ description: Provides a resolution to solve the unexpected error that occurs whe
 ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Project Accounting
 ---
 # "An unexpected error has occurred" when approving, saving, or submitting a timesheet in Project Time and Expense
 

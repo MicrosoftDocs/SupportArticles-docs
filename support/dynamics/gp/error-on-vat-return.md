@@ -4,6 +4,7 @@ description: When running the VAT return, an error message appears. This article
 ms.topic: troubleshooting
 ms.reviewer: theley, cwaswick
 ms.date: 03/13/2024
+ms.custom: sap:Europe, Latin America, Africa, Asia, and Australia
 ---
 # Error on VAT Return in Microsoft Dynamics GP: The Input tax for this range hasn't been entered
 

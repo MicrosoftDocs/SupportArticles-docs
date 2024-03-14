@@ -4,6 +4,7 @@ description: Provides a solution to an error that occurs when printing remittanc
 ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # "A save operation on table 'syReportProcessingStatusHdr' cannot find the table" error message when printing remittances in Payables Management in Microsoft Dynamics GP
 

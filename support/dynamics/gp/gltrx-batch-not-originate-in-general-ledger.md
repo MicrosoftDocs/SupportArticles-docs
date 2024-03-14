@@ -4,6 +4,7 @@ description: Unexpected GLTRX Batch appears under Financial Batch Entry in Micro
 ms.topic: troubleshooting
 ms.reviewer: theley, AEckman
 ms.date: 03/13/2024
+ms.custom: sap:Financial - General Ledger
 ---
 # An unexpected GLTRX Batch appears in Financial Batch Entry in Microsoft Dynamics GP
 

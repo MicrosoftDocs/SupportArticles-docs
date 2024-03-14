@@ -4,6 +4,7 @@ description: When you try to post a transaction in General Ledger in Microsoft D
 ms.reviewer: theley, ryanklev
 ms.topic: troubleshooting
 ms.date: 03/13/2024
+ms.custom: sap:Financial - General Ledger
 ---
 # "Year End Close is still in process and batches cannot be posted" error when posting a transaction in General Ledger after the year is closed
 

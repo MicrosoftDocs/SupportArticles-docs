@@ -4,6 +4,7 @@ description: Describes that the PAY type account is not entered in the Account f
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ms.reviewer: theley
+ms.custom: sap:Financial - Payables Management
 ---
 # You experience multiple symptoms when you create a manual payment to pay off an invoice if you change the vendor default account in Payables Management in Microsoft Dynamics GP
 

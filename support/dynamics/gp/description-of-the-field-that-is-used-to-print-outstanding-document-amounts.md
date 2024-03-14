@@ -3,6 +3,7 @@ title: Field that is used to print outstanding document amounts
 description: Describes the field that is used to print the outstanding document amounts in the MC RM Detail Historical Aged Trial Balance report in Microsoft Dynamics GP.
 ms.reviewer: theley, lmuelle
 ms.date: 03/13/2024
+ms.custom: sap:Financial - Receivables Management
 ---
 # Description of the field that is used to print the outstanding document amounts in the MC RM Historical Aged Trial Balance report
 
