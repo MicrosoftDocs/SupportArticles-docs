@@ -13,9 +13,11 @@ ms.reviewer: gregmans; zebamehdi; meerak
 appliesto: 
   - Microsoft 365
 search.appverid: MET150
-ms.date: 10/25/2022
+ms.date: 03/14/2024
 ---
 # Scenario: Outlook Scan
+
+[!INCLUDE [Microsoft Support and Recovery Assistant note](../../../includes/sara-note-new-outlook.md)]
 
 The Outlook Scan scenario scans your device and creates a detailed report about Microsoft Outlook, Microsoft Office, Windows, and mailbox configurations.
 

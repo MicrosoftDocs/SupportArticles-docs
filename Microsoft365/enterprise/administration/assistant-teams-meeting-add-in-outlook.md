@@ -13,9 +13,11 @@ ms.reviewer: gregmans; zebamehdi
 appliesto: 
   - Microsoft 365
 search.appverid: MET150
-ms.date: 10/25/2022
+ms.date: 03/14/2024
 ---
 # Scenario: Teams Meeting Add-in for Outlook
+
+[!INCLUDE [Microsoft Support and Recovery Assistant note](../../../includes/sara-note-new-teams.md)]
 
 The Teams Meeting Add-in for Outlook scenario automates all the check and recovery actions (except the two checks under [Check policies](/microsoftteams/troubleshoot/meetings/resolve-teams-meeting-add-in-issues#check-policies)) that are described and provided in [Resolve issues with Teams Meeting add-in for Outlook](/microsoftteams/troubleshoot/meetings/resolve-teams-meeting-add-in-issues).
 

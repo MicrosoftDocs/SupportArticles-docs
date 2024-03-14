@@ -15,7 +15,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Exchange Online
-ms.date: 01/24/2024
+ms.date: 03/14/2024
 ms.reviewer: v-six
 ---
 # Outlook can't set up a new profile by using Exchange Autodiscover for an Exchange Online mailbox in Microsoft 365
@@ -47,6 +47,8 @@ This problem occurs for one of the following reasons:
 ### Recommended method
 
 #### Method 1: Run Microsoft 365 Support and Recovery Assistant
+
+[!INCLUDE [Microsoft Support and Recovery Assistant note](../../../includes/sara-note-new-outlook.md)]
 
 Use the [I need help setting up my Microsoft 365 email in Outlook](https://aka.ms/SaRA-OutlookSetupProfile) **diagnostic** in the Support and Recovery Assistant (SaRA). Click **Run** when you are prompted by your browser.
 
@@ -124,7 +126,7 @@ After the correct values are set for these attributes, [force directory synchron
 
 #### Method 2: Use the Add New Account Wizard in Outlook
 
-If Method 1 doesn't resolve the problem, and you're not using a custom domain together with Microsoft 365, you can use the Add New Account Wizard in Outlook to set up your Outlook profile by using the default "onmicrosoft.com"-based email address that's associated with users' Exchange Online mailboxes when you signed up for Microsoft 365. When you use the Add New Account Wizard to set up a new mail profile, you specify your Microsoft 365 password and your default Microsoft 365 email address in the form of \<user>@\<domain>.onmicrosoft.com (for example, kim@contoso.onmicrosoft.com).
+If Method 1 doesn't resolve the problem, and you're not using a custom domain together with Microsoft 365, you can use the Add New Account Wizard in Outlook to set up your Outlook profile by using the default "onmicrosoft.com"-based email address that's associated with users' Exchange Online mailboxes when you signed up for Microsoft 365. When you use the Add New Account Wizard to set up a new mail profile, you specify your Microsoft 365 password and your default Microsoft 365 email address in the form of \<user\>@\<domain\>.onmicrosoft.com (for example, kim@contoso.onmicrosoft.com).
 
 This method is supported and works for customers who may not plan to have their own vanity or custom domain. This method also supports Autodiscover. If your mailbox server location changes, Outlook is updated accordingly by using the new location of your mailbox server.
 

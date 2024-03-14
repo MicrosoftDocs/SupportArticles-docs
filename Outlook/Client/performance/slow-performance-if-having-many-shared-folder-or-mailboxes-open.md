@@ -18,7 +18,7 @@ appliesto:
   - Microsoft Outlook 2010
   - Outlook for Microsoft 365
 search.appverid: MET150
-ms.date: 01/30/2024
+ms.date: 03/14/2024
 ---
 # Outlook performance issues when you have many shared folders or mailboxes open
 
@@ -112,3 +112,5 @@ When you open a shared Inbox folder, it appears in Outlook only until you select
 ## More information
 
 Many of the items that are discussed in this article can be automatically checked by the Microsoft Support and Recovery Assistant (SaRA). Start the automated checks by running the [Outlook Advanced Diagnostics](https://aka.ms/SaRA-OutlookAdvDiagnostics) scenario. Select **Run** when you are prompted by your browser. In the report that's generated, review the items on the **Issues found** tab. For details about the Outlook, Windows, and computer configuration, review the settings on the **Detailed View** tab.
+
+[!INCLUDE [Microsoft Support and Recovery Assistant note](../../../includes/sara-note-new-outlook.md)]

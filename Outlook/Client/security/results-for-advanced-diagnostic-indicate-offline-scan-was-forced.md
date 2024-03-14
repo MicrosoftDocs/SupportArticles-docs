@@ -15,7 +15,7 @@ search.appverid: MET150
 ms.reviewer: tasitae, v-six
 author: cloud-writer
 ms.author: meerak
-ms.date: 01/30/2024
+ms.date: 03/14/2024
 ---
 # Outlook Advanced Diagnostic scenario in SaRA results indicate an offline scan was forced by group policy for Outlook object model access
 
@@ -24,6 +24,8 @@ ms.date: 01/30/2024
 When you run the Outlook Advanced Diagnostics scenario in the Support and Recovery Assistant (SaRA), the results indicate an Offline scan was performed.
 
 :::image type="content" source="media/results-for-advanced-diagnostic-indicate-offline-scan-was-forced/offline-scan-forced-by-offcat.png" alt-text="Results screen from SaRa." border="false":::
+
+[!INCLUDE [Microsoft Support and Recovery Assistant note](../../../includes/sara-note-new-outlook.md)]
 
 ## Cause
 
