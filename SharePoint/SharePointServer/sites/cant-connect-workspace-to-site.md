@@ -10,7 +10,8 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: patrigan, fselkirk
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - CSSTroubleshoot
 appliesto: 
   - SharePoint Server 2013
   - SharePoint Workspace 2010

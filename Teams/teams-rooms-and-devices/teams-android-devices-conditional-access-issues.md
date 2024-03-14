@@ -14,7 +14,8 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft Teams
-ms.custom: CI168070
+ms.custom: 
+  - CI168070
 ---
 # Fix Conditional Access-related issues for Teams Android devices
 

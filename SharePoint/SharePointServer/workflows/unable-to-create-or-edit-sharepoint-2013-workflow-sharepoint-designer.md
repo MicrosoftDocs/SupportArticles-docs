@@ -7,7 +7,8 @@ manager: dcscontentpm
 localization_priority: Normal
 audience: Admin
 ms.topic: troubleshooting
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - CSSTroubleshoot
 search.appverid: 
   - MET150
 appliesto: 

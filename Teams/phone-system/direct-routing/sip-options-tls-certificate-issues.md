@@ -13,7 +13,10 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft Teams
-ms.custom: CI-124780,CSSTroubleshoot,scenario:Direct-Routing-1
+ms.custom: 
+  - CI-124780
+  - CSSTroubleshoot
+  - scenario:Direct-Routing-1
 ms.reviewer: mikebis
 ---
 
@@ -62,15 +65,15 @@ After the TLS connection is successfully established, and the SBC is able to sen
 <details>
 <summary><b>SBC doesn't receive a "200 OK" response from SIP proxy</b></summary>
 
-This situation might occur if you’re using an older version of TLS. To enforce stricter security, enable TLS 1.2.
+This situation might occur if you're using an older version of TLS. To enforce stricter security, enable TLS 1.2.
 
 Make sure that your SBC certificate is not self-signed and that you got it from a [trusted Certificate Authority (CA)](/microsoftteams/direct-routing-plan#public-trusted-certificate-for-the-sbc?preserve-view=true#resolution).
 
-If you’re using the minimum required version of TLS or higher, and your SBC certificate is valid, then the issue might occur because the FQDN is misconfigured in your SIP profile and not recognized as belonging to any tenant. Check for the following conditions, and fix any errors that you find:
+If you're using the minimum required version of TLS or higher, and your SBC certificate is valid, then the issue might occur because the FQDN is misconfigured in your SIP profile and not recognized as belonging to any tenant. Check for the following conditions, and fix any errors that you find:
 
 - The FQDN provided by the SBC in the Record-Route or Contact header is different from what is configured in Teams.
 - The Contact header contains an IP address instead of the FQDN.
-- The domain isn’t [fully validated](/microsoft-365/admin/setup/add-domain). If you add an FQDN that wasn’t validated previously, you must validate it now.
+- The domain isn't [fully validated](/microsoft-365/admin/setup/add-domain). If you add an FQDN that wasn't validated previously, you must validate it now.
 - After you register an SBC domain name, you must activate it by [adding at least one E3- or E5-licensed user](/microsoftteams/direct-routing-connect-the-sbc#connect-the-sbc-to-the-tenant?preserve-view=true#resolution).
 
 </details>
@@ -112,9 +115,9 @@ This issue might occur in the following situations:
 </details>
 
 <details>
-<summary><b>FQDN doesn’t match the contents of CN or SAN in the provided certificate</b></summary>
+<summary><b>FQDN doesn't match the contents of CN or SAN in the provided certificate</b></summary>
 
-This issue occurs if a wildcard doesn't match a lower-level subdomain. For example, the wildcard `\*\.contoso.com` would match sbc1.contoso.com, but not customer10.sbc1.contoso.com. You can't have multiple levels of subdomains under a wildcard. If the FQDN doesn’t match the Common Name (CN) or Subject Alternate Name (SAN) in the provided certificate, then request a new certificate that matches your domain names.
+This issue occurs if a wildcard doesn't match a lower-level subdomain. For example, the wildcard `\*\.contoso.com` would match sbc1.contoso.com, but not customer10.sbc1.contoso.com. You can't have multiple levels of subdomains under a wildcard. If the FQDN doesn't match the Common Name (CN) or Subject Alternate Name (SAN) in the provided certificate, then request a new certificate that matches your domain names.
 
 For more information about certificates, see the **Public trusted certificate for the SBC** section of [Plan Direct Routing](/MicrosoftTeams/direct-routing-plan#public-trusted-certificate-for-the-sbc).
 </details>

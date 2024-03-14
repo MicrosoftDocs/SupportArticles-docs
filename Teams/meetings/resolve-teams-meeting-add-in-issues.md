@@ -8,9 +8,9 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- CSSTroubleshoot
-- CI 162959
-- CI 171788
+  - CSSTroubleshoot
+  - CI 162959
+  - CI 171788
 appliesto: 
   - Microsoft Teams
 search.appverid: 
