@@ -9,7 +9,8 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - CSSTroubleshoot
 appliesto: 
   - Office Home & Business 2016 for Mac
   - Office Home & Student 2016 for Mac

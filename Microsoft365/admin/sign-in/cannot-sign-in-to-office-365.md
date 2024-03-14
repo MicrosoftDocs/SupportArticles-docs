@@ -8,7 +8,8 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: willfid, v-chblod
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - CSSTroubleshoot
 search.appverid: 
   - MET150
 appliesto: 

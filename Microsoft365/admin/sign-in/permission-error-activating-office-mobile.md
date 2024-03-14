@@ -6,7 +6,8 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 manager: dcscontentpm
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - CSSTroubleshoot
 localization_priority: Normal
 search.appverid: 
   - MET150

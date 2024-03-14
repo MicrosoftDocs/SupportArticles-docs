@@ -5,7 +5,8 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - CSSTroubleshoot
 appliesto:
 - Excel for Mac 2011
 - Excel 2016 for Mac
