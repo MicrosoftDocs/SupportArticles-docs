@@ -6,7 +6,7 @@ ms.reviewer: kaushika, sausarka
 author: helenclu
 ms.author: sausarka
 search.appverid: MET150
-ms.custom: sap:device configuration, CI 121166, CSSTroubleshooting
+ms.custom: sap:Configure Devices - Windows\Custom, CI 121166, CSSTroubleshooting
 ---
 
 # Deploy OMA-URIs to target a CSP through Intune, and a comparison to on-premises
