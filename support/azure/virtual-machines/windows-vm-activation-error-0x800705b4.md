@@ -1,7 +1,7 @@
 ---
 title: Windows VM activation error 0x800705B4
 description: Provides a solution to the error 0x800705B4 that occurs when you try to activate an Azure Windows virtual machine (VM).
-ms.date: 03/13/2024
+ms.date: 03/14/2024
 ms.service: virtual-machines
 ms.subservice: vm-windows-activation
 ms.collection: windows
