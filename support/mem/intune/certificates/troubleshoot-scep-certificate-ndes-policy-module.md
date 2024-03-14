@@ -4,6 +4,7 @@ description: Troubleshooting the operation of the Network Device Enrollment Serv
 ms.date: 12/05/2023
 ms.reviewer: kaushika, lacranda
 search.appverid: MET150
+ms.custom: sap:Configure Devices - iOS\SCEP Certificates
 ---
 # Troubleshooting the NDES policy module in Microsoft Intune
 
