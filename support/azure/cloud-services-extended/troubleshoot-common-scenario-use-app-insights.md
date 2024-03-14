@@ -78,13 +78,13 @@ To add a custom log to your application, follow these steps:
 
     :::image type="content" source="./media/troubleshoot-common-scenario-use-app-insights/install-package.png" alt-text="Screenshot shows the installed Microsoft ApplicationInsights package.":::
 
-3. Add the Application Insights configuration into *.cscfg* and *.csdef* files.
+3. Add the Application Insights configuration into the *.cscfg* and *.csdef* files.
 
     > [!NOTE]
     > - Technical support for instrumentation key-based global ingestion will end on March 31, 2025. It's recommended to use the connection string instead of connecting to Application Insights before that date. For more information, see [Transition to using connection strings for data ingestion by 31 March 2025](https://azure.microsoft.com/updates/technical-support-for-instrumentation-key-based-global-ingestion-in-application-insights-will-end-on-31-march-2025/).
     > - When Application Insights is linked with a Cloud Service project, `APPINSIGHTS_INSTRUMENTATIONKEY` is automatically added. For more information, see [Troubleshoot Cloud Services app with Application Insights - features overview](/troubleshoot/azure/cloud-services/troubleshoot-with-app-insights-features-overview).
 
-    Here's an example of a *.csdef* file:
+    Here's an example of the *.csdef* file:
 
     ```xml
     <ConfigurationSettings>
@@ -93,7 +93,7 @@ To add a custom log to your application, follow these steps:
     </ConfigurationSettings>
     ```
 
-   Here's an example of a *.cscfg* file:
+   Here's an example of the *.cscfg* file:
 
    ```xml
    <ConfigurationSettings>
