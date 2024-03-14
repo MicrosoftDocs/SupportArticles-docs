@@ -10131,11 +10131,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "support/azure/virtual-machines/linux-upgrade-suse-15sp1.md",
-      "redirect_url": "/troubleshoot/azure/virtual-machines/welcome-virtual-machines",
-      "redirect_document_id": true
-    },
-    {
       "source_path": "support/dynamics/gp/how-to-solve-alignment-issues-in-1099-reports.md",
       "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
       "redirect_document_id": false
