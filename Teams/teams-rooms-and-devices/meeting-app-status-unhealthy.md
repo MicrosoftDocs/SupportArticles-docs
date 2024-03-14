@@ -14,7 +14,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft Teams
-ms.custom:
+ms.custom: 
   - CI167273
   - CI185119
 ---
