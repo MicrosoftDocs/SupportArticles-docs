@@ -1,7 +1,7 @@
 ---
 title: What may cause interruption when posting a batch
 description: Discusses suggestions that can help you determine the cause of frequent posting interruptions in Microsoft Dynamics GP.
-ms.reviewer: 
+ms.reviewer: theley
 ms.date: 03/13/2024
 ---
 # Information about what may cause an interruption when you post a batch in Microsoft Dynamics GP

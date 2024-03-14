@@ -1,7 +1,7 @@
 ---
 title: Error when Validating Product Version Information is run
 description: Describes a problem that occurs if the collations and the sort orders of the DYNAMICS database and of the company database do not match the collations and the sort orders of the SQL Server system databases. A resolution is provided.
-ms.reviewer: kyouells
+ms.reviewer: theley, kyouells
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

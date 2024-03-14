@@ -1,7 +1,7 @@
 ---
 title: Set up a test company that has a copy of live company data
 description: Describes how to set up a test company that has live company data by using Microsoft Dynamics GP running on MSDE 2000, on SQL Server 2005 Express, or on SQL Server 2008 Express.
-ms.reviewer: kyouells
+ms.reviewer: theley, kyouells
 ms.topic: how-to
 ms.date: 03/13/2024
 ---

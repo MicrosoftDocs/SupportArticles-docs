@@ -1,7 +1,7 @@
 ---
 title: How to set up Vacation Accrual in Canadian Payroll
 description: The article illustrates how to set up the regular vacation accrual based on dollars or units in CPR.
-ms.reviewer: 
+ms.reviewer: theley
 ms.topic: how-to
 ms.date: 03/13/2024
 ---

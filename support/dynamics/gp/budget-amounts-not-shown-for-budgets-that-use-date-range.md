@@ -1,7 +1,7 @@
 ---
 title: Budget amounts not shown for budgets that use date range
 description: Provides a resolution for the issue that Microsoft Management Report does not show budget amounts for budgets that use a date range.
-ms.reviewer: kevogt, erikjohn
+ms.reviewer: theley, kevogt, erikjohn
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

@@ -1,7 +1,7 @@
 ---
 title: 3761 Record already exists cannot insert error in eConnect
 description: When you try to use eConnect to pass in a transactional document, you may receive error 3761 record already exists error in eConnect for Microsoft Dynamics GP.
-ms.reviewer: dclauson
+ms.reviewer: theley, dclauson
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

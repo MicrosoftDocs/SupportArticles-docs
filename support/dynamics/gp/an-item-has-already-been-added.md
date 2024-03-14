@@ -1,7 +1,7 @@
 ---
 title: An item has already been added
 description: Describes an error message that may occur during the FiscalYearProvider to Fiscal Year task in Microsoft Management Reporter.
-ms.reviewer: davidtre
+ms.reviewer: theley, davidtre
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

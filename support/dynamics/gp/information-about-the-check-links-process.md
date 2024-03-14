@@ -1,7 +1,7 @@
 ---
 title: Information about the Check Links process
 description: Provides information about the Check Links process in Microsoft Dynamics GP.
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.date: 03/13/2024
 ---
 # Information about the Check Links process in Microsoft Dynamics GP

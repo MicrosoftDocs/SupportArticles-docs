@@ -1,7 +1,7 @@
 ---
 title: Server principal cannot access database
 description: Provides a solution to an error that occurs when using Audit Trails in Microsoft Dynamics GP.
-ms.reviewer: cwaswick, lmuelle
+ms.reviewer: theley, cwaswick, lmuelle
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

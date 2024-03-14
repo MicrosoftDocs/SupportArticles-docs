@@ -1,7 +1,7 @@
 ---
 title: Description of the Fiscal Period Modifier tool
 description: Description of the Fiscal Period Modifier tool in Microsoft Dynamics.
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.date: 03/13/2024
 ---
 # Description of the Fiscal Period Modifier tool in Microsoft Dynamics GP

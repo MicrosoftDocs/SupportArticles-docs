@@ -1,7 +1,7 @@
 ---
 title: Control the location of the Dexterity tables in SQL Server by using Dexterity path names in Microsoft Dynamics GP 9.0 or in Microsoft Business Solutions - Great Plains
 description: Contains manual and programmatic methods to specify path names for Dexterity tables.
-ms.reviewer: 
+ms.reviewer: theley
 ms.topic: how-to
 ms.date: 03/13/2024
 ---

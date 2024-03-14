@@ -1,7 +1,7 @@
 ---
 title: Error when you attempt to start Integration Manager
 description: This article provides a resolution for the problem that occurs when you attempt to start Integration Manager for Microsoft Dynamics GP 2010 on a Windows Server 2008 or Windows 7 machine.
-ms.reviewer: grwill, dlanglie
+ms.reviewer: theley, grwill, dlanglie
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

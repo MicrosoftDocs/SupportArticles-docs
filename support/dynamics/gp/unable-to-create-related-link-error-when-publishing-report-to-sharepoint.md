@@ -1,7 +1,7 @@
 ---
 title: Unable to create the related report link error when publishing report to SharePoint
 description: Describes an error you may receive when you publish a report to SharePoint from Management Reporter 2012.
-ms.reviewer: kellybj, kevogt
+ms.reviewer: theley, kellybj, kevogt
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

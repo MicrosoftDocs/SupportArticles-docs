@@ -1,7 +1,7 @@
 ---
 title: Remove and delete an EFT batch
 description: Describes how to delete an EFT batch before you create an EFT file for the bank.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: how-to
 ms.date: 03/13/2024
 ---

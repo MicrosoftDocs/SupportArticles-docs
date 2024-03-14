@@ -1,7 +1,7 @@
 ---
 title: The operation could not be completed due to a failure on the server error when changing a user
 description: Describes an error you receive when you change a user in Microsoft Management Reporter. Provides a resolution.
-ms.reviewer: erikjohn, kevogt
+ms.reviewer: theley, erikjohn, kevogt
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

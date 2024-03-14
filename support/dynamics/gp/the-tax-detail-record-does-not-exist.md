@@ -1,7 +1,7 @@
 ---
 title: The tax detail record doesn't exist
 description: Provides a solution to an error that occurs when you try to post a transaction in Purchase Order Processing on Microsoft Dynamics GP 2010 SP 1 or Microsoft Dynamics GP 10.0 SP 5.
-ms.reviewer: beckyber
+ms.reviewer: theley, beckyber
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

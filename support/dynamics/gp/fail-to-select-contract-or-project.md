@@ -2,7 +2,7 @@
 title: Error when you select a contract or project
 description: Describes a problem that occurs if an invalid record exists in the PA000001 table. You must remove this invalid record. A resolution is provided.
 ms.topic: troubleshooting
-ms.reviewer: ppeterso
+ms.reviewer: theley, ppeterso
 ms.date: 03/13/2024
 ---
 # Error message when you select a contract or when you select a project in Microsoft Dynamics GP: "This Contract is being used by another user" or "This Project is being used by another user"

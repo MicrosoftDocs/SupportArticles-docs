@@ -1,7 +1,7 @@
 ---
 title: Analytical Accounting and Intercompany compatibility
 description: This article describes how to post intercompany transactions in Analytical Accounting in Microsoft Dynamics GP.
-ms.reviewer: jaredha
+ms.reviewer: theley, jaredha
 ms.topic: how-to
 ms.date: 03/13/2024
 ---

@@ -1,7 +1,7 @@
 ---
 title: Either there is no default mail client or the current mail client cannot fulfill the message request error 
 description: Provides a resolution for the e-mail errors that may occur in Microsoft Dynamics GP.
-ms.reviewer: dalbau
+ms.reviewer: theley, dalbau
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

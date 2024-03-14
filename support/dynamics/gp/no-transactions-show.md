@@ -1,7 +1,7 @@
 ---
 title: No transactions show
 description: Describes a problem where the Select Bank Transactions window shows no transactions when you try to reconcile your checkbook in Bank Reconciliation.
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

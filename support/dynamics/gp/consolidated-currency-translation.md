@@ -1,7 +1,7 @@
 ---
 title: Consolidated Currency Translation
 description: This document covers creating a consolidated currency translation report that uses Microsoft Dynamics GP and Management Reporter Dynamics GP Legacy provider.
-ms.reviewer: kevogt, erikjohn
+ms.reviewer: theley, kevogt, erikjohn
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

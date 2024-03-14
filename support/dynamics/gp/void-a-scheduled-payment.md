@@ -1,7 +1,7 @@
 ---
 title: Void a scheduled payment
 description: Description of the Scheduled Payments transaction and a description of how to void a scheduled payment in Microsoft Dynamics GP.
-ms.reviewer: lmuelle
+ms.reviewer: theley, lmuelle
 ms.date: 03/13/2024
 ---
 # Description of the Scheduled Payments transaction and a description of how to void a scheduled payment in Microsoft Dynamics GP

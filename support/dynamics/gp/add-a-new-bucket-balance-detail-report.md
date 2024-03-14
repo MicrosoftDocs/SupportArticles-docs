@@ -1,7 +1,7 @@
 ---
 title: Add a new bucket to Balance-Detail report
 description: Describes how to add a new bucket to the "Aged Trial Balance-Detail with Options" report in Payables Management in Microsoft Dynamics GP.
-ms.reviewer: Lmuelle
+ms.reviewer: theley, Lmuelle
 ms.topic: how-to
 ms.date: 03/13/2024
 ---

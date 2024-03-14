@@ -1,7 +1,7 @@
 ---
 title: MRP Regeneration process stops responding
 description: Describes that how to resolve the problems when you run the Material Requirements Planning (MRP) Regeneration process in Manufacturing.
-ms.reviewer: lmuelle
+ms.reviewer: theley, lmuelle
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

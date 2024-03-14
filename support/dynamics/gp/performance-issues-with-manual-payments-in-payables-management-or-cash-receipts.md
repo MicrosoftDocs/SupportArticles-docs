@@ -1,7 +1,7 @@
 ---
 title: Performance issues with manual payments
 description: Performance issues can occur with payments in Payables Management and Receivables Management if the module Payment Document Management is installed.
-ms.reviewer: cwaswick, lmuelle
+ms.reviewer: theley, cwaswick, lmuelle
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

@@ -1,7 +1,7 @@
 ---
 title: Purchase Order Receiving integration uses Purchase Price Variance account from Posting Accounts Setup
 description: Discusses that a Purchase Order Receiving integration incorrectly uses the Purchase Price Variance from the Posting Accounts Setup window in Microsoft Dynamics GP and in Microsoft Great Plains 8.0. A service pack is available to resolve the problem.
-ms.reviewer: lmuelle
+ms.reviewer: theley, lmuelle
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

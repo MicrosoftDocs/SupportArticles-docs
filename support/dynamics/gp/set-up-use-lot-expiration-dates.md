@@ -1,7 +1,7 @@
 ---
 title: Set up and use lot expiration dates
 description: Describes how to set up and use lot expiration dates in Microsoft Dynamics GP 10.0.
-ms.reviewer: ppeterso
+ms.reviewer: theley, ppeterso
 ms.topic: how-to
 ms.date: 03/13/2024
 ---

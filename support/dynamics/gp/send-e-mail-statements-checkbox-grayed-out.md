@@ -1,7 +1,7 @@
 ---
 title: Send E-mail Statements checkbox grayed out
 description: Provides a solution to an issue where the Send E-mail Statements checkbox/section is grayed out in Customer Maintenance Options window in Microsoft Dynamics GP 2013.
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

@@ -1,7 +1,7 @@
 ---
 title: Issues with Credit Memos on Check Stub
 description: Discusses different issues for how credit memo's display on the check stub or remittance in Payables Management for Microsoft Dynamics GP.
-ms.reviewer: cwaswick, lmuelle
+ms.reviewer: theley, cwaswick, lmuelle
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

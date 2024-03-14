@@ -1,7 +1,7 @@
 ---
 title: Service item cost and vendor do not show in outsourced purchase order 
 description: Describes a problem that occurs if the functional currency is not configured correctly for the company. A resolution is provided.
-ms.reviewer: lmuelle
+ms.reviewer: theley, lmuelle
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

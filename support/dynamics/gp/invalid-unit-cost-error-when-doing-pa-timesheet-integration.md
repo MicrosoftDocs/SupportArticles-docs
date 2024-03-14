@@ -1,7 +1,7 @@
 ---
 title: Invalid Unit Cost error when doing PA Timesheet integration
 description: Describes a problem that occurs because a functional currency is not set up in Microsoft Dynamics GP or in Microsoft Great Plains.
-ms.reviewer: kvogel
+ms.reviewer: theley, kvogel
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

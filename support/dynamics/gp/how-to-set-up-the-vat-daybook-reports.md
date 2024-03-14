@@ -1,7 +1,7 @@
 ---
 title: How to set up the VAT Daybook reports
 description: The VAT Daybook reports are used by European customers for tax reporting. VAT Daybook generates separate VAT Daybook reports for the sales modules and for the purchasing modules.
-ms.reviewer: lmuelle
+ms.reviewer: theley, lmuelle
 ms.topic: how-to
 ms.date: 03/13/2024
 ---

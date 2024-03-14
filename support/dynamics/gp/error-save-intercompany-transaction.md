@@ -1,7 +1,7 @@
 ---
 title: Can't save an intercompany transaction in Payables Management or in General Ledger 
 description: Describes error At least one distribution amount for a company does not match the corresponding company when you save an intercompany transaction in Payables Management or in General Ledger.
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

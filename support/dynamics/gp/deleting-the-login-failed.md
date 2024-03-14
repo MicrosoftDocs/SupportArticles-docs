@@ -1,7 +1,7 @@
 ---
 title: Deleting the login failed
 description: Provides a solution to an error that occurs when you try to delete a user through Microsoft Dynamics GP.
-ms.reviewer: KYouells
+ms.reviewer: theley, KYouells
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

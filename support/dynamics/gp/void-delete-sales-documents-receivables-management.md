@@ -1,7 +1,7 @@
 ---
 title: Void or delete sales documents in Receivables Management
 description: This article describes how to void or delete sales documents in Receivables Management and Sales Order Processing in Microsoft Dynamics GP.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: how-to
 ms.date: 03/13/2024
 ---

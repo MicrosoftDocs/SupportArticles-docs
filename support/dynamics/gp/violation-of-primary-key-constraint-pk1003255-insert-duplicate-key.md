@@ -1,7 +1,7 @@
 ---
 title: Error in Receivables Management Inquiry window
 description: Provides a solution to an error that may occur when you look up some customers in the Receivables Management Inquiry window.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

@@ -1,7 +1,7 @@
 ---
 title: Currency USD doesn't exist for company  
 description: Provides a solution to an error that occurs when you generate a report.
-ms.reviewer: gbyer, jopankow
+ms.reviewer: theley, gbyer, jopankow
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

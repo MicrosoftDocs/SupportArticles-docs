@@ -1,7 +1,7 @@
 ---
 title: Errors when you print PA Revenue Recognition Edit List
 description: Provides a solution to errors that occurs when you print the "PA Revenue Recognition Edit List" in Microsoft Dynamics GP.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

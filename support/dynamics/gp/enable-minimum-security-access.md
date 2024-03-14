@@ -1,7 +1,7 @@
 ---
 title: How to set up minimum security access to sign in Microsoft Dynamics GP or to Microsoft Great Plains
 description: Discusses the minimum security access that's required for a user to sign in Microsoft Dynamics GP or to Microsoft Great Plains.
-ms.reviewer: lmuelle
+ms.reviewer: theley, lmuelle
 ms.topic: how-to
 ms.date: 03/13/2024
 ---

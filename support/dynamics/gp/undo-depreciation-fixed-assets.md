@@ -1,7 +1,7 @@
 ---
 title: Undo depreciation for fixed assets
 description: Describes how to undo depreciation for fixed assets after you process depreciation in Microsoft Dynamics GP.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

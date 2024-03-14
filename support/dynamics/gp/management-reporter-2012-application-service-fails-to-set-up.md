@@ -1,7 +1,7 @@
 ---
 title: Cannot set up Management Reporter 2012 Application Service
 description: Describes an error message that may occur when you configure the application and process services for Management Reporter.
-ms.reviewer: 
+ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

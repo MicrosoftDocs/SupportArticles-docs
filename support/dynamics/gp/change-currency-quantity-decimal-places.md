@@ -1,7 +1,7 @@
 ---
 title: Change currency/quantity decimal places
 description: Describes how to change the currency decimal places or the quantity decimal places in Microsoft Dynamics GP.
-ms.reviewer: aeckman, lmuelle
+ms.reviewer: theley, aeckman, lmuelle
 ms.topic: how-to
 ms.date: 03/13/2024
 ---

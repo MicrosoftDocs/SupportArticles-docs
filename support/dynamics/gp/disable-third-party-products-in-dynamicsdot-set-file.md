@@ -1,7 +1,7 @@
 ---
 title: Disable third-party products or temporarily disable additional products in the Dynamics.set file in Microsoft Dynamics GP
 description: Describes the steps to change the Dynamics.set file to stop third-party products from starting when Microsoft Dynamics GP is started.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: how-to
 ms.date: 03/13/2024
 ---

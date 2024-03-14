@@ -1,7 +1,7 @@
 ---
 title: Use Report Writer to include the comment from the Billing Entry window on the RM Detail Historical Aged Trial Balance report in Microsoft Dynamics GP
 description: Describes the steps to use Report Writer to include the comment from the Billing Entry window on the RM Detail Historical Aged Trial Balance report in Microsoft Dynamics GP.
-ms.reviewer: lmuelle
+ms.reviewer: theley, lmuelle
 ms.topic: how-to
 ms.date: 03/13/2024
 ---

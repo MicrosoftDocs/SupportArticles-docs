@@ -1,7 +1,7 @@
 ---
 title: Missing account balance if enabling Exclude inactive accounts
 description: When the option exclude inactive accounts is selected, account balances are missing from Management Reporter 2012 reports. Provides a resolution.
-ms.reviewer: 
+ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

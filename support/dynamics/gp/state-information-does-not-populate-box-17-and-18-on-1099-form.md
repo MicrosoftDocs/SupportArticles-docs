@@ -1,7 +1,7 @@
 ---
 title: State information does not populate Box 17 and 18 on 1099-MISC
 description: The state information is not populating in boxes 17 and 18 on the 1099-MISC form in Payables Management. Provides a resolution.
-ms.reviewer: cwaswick, lmuelle
+ms.reviewer: theley, cwaswick, lmuelle
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

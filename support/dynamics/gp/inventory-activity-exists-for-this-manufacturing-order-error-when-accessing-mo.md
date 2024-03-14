@@ -1,7 +1,7 @@
 ---
 title: Inventory activity exists for this manufacturing order error when accessing MO
 description: When you try to access a manufacturing order, you receive an error that states Inventory activity exists for this manufacturing order. Provides a resolution.
-ms.reviewer: jimscha
+ms.reviewer: theley, jimscha
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

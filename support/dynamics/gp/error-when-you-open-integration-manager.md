@@ -1,7 +1,7 @@
 ---
 title: Error when you open Integration Manager
 description: Provides a solution to an error that occurs when you open Integration Manager or when you run an integration in Integration Manager.
-ms.reviewer: kvogel
+ms.reviewer: theley, kvogel
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

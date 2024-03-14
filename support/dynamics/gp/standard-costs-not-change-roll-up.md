@@ -1,7 +1,7 @@
 ---
 title: The standard costs do not change when you roll up
 description: This article provides two resolutions for the problem that occurs when you use the incorrect dialog box to roll up and then revalue the standard costs.
-ms.reviewer: 
+ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

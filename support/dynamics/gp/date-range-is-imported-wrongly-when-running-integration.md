@@ -1,7 +1,7 @@
 ---
 title: All dates from the source data are imported when running integration
 description: When you run an Integration in Integration Manager it imports in all dates from the source data instead of just the date range that you want. Provides a resolution.
-ms.reviewer: dlanglie
+ms.reviewer: theley, dlanglie
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

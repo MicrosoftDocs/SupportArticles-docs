@@ -1,7 +1,7 @@
 ---
 title: Differences between Payroll and Project Accounting cost
 description: There are differences between the cost posted to the project and the cost in Payroll for salaried employees who worked more than 40 hours in a week. Provides a resolution.
-ms.reviewer: 
+ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

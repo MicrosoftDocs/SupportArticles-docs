@@ -1,7 +1,7 @@
 ---
 title: FP cannot close table
 description: Provides a solution to an error that occurs when you print any report or open any window.
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

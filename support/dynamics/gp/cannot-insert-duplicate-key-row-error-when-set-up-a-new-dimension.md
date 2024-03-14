@@ -1,7 +1,7 @@
 ---
 title: Cannot insert duplicate key row in object dbo AAG00600 error when setting up new dimension
 description: Describes a problem where you receive the following error message when you set up a new dimension in Analytical Accounting in Microsoft Dynamics GP. Provides a resolution.
-ms.reviewer: cwaswick, lmuelle
+ms.reviewer: theley, cwaswick, lmuelle
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

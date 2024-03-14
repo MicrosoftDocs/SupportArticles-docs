@@ -1,7 +1,7 @@
 ---
 title: Cannot create a receipt for this order
 description: Provides a solution to an error that occurs when creating Manufacturing Order Receipts in Microsoft Dynamics GP.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

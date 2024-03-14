@@ -1,7 +1,7 @@
 ---
 title: Integration between RED and AA
 description: Describes the integration between RED and AA in Microsoft Dynamics GP.
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

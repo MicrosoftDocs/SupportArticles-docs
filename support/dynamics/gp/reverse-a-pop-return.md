@@ -1,7 +1,7 @@
 ---
 title: Reverse a POP Return
 description: Provides a solution to an issue where a POP Return was entered and posted in error or was entered and posted with the incorrect quantities or price.
-ms.reviewer: Beckyber
+ms.reviewer: theley, Beckyber
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

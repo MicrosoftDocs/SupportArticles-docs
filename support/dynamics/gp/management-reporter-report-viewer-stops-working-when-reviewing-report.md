@@ -1,7 +1,7 @@
 ---
 title: Report Viewer stops working when viewing report
 description: Describes an issue when viewing a report that contains an image. Provides a resolution.
-ms.reviewer: kellybj, kevogt
+ms.reviewer: theley, kellybj, kevogt
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

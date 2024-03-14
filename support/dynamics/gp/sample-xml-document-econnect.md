@@ -1,7 +1,7 @@
 ---
 title: Sample XML document in eConnect
 description: A sample XML document that you can use to import tax information for a sales order processing transaction in eConnect for Microsoft Dynamics GP.
-ms.reviewer: dclauson
+ms.reviewer: theley, dclauson
 ms.date: 03/13/2024
 ---
 # Sample XML document that you can use to import tax information for a sales order processing transaction in eConnect for Microsoft Dynamics GP

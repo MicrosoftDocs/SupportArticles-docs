@@ -1,7 +1,7 @@
 ---
 title:  Company doesn't have access to currency error when using Multicurrency with any module
 description: Describes steps to resolve the message Company XXX doesn't have access to currency that occurs when you try to use Multicurrency with any module in Microsoft Dynamics GP.
-ms.reviewer: 
+ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

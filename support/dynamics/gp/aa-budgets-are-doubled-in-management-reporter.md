@@ -1,7 +1,7 @@
 ---
 title: AA budgets are doubled in Management Reporter
 description: AA budgets are doubled in Management Reporter using Microsoft Dynamics GP. Provides a resolution.
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

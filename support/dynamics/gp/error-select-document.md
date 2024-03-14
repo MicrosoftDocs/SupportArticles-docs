@@ -1,7 +1,7 @@
 ---
 title: Error when you select a document
 description: This article provides a resolution for a problem that occurs when you try to select a document in the Sales Transaction Entry window.
-ms.reviewer: 
+ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

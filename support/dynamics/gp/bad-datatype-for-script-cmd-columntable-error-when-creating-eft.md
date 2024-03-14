@@ -1,7 +1,7 @@
 ---
 title: Bad datatype for SCRIPT_CMD_COLUMNOFTABLE error
 description: When you create an EFT file, you receive an SCRIPT_CMD_COLUMNOFTABLE error. Provides a resolution.
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

@@ -2,7 +2,7 @@
 title: Convert IM.mdb file from an earlier version of Integration Manager to Integration Manager for Microsoft Dynamics GP 10.0
 description: This article gives steps on how to convert the IM.mdb file from an earlier version to Integration Manager for Microsoft Dynamics GP 10.0.
 ms.topic: how-to
-ms.reviewer: kvogel
+ms.reviewer: theley, kvogel
 ms.date: 03/13/2024
 ---
 # How to convert the IM.mdb file from an earlier version of Integration Manager to Integration Manager for Microsoft Dynamics GP 10.0

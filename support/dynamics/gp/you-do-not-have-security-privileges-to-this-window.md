@@ -1,7 +1,7 @@
 ---
 title: You don't have security privileges to this window error when signing in or opening a window or a report
 description: Describes an issue that occurs when you start Microsoft Dynamics GP or when you open a window or a report in Microsoft Dynamics GP. Provides a resolution.
-ms.reviewer: lmiller
+ms.reviewer: theley, lmiller
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

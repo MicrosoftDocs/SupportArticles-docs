@@ -1,7 +1,7 @@
 ---
 title: Integration performance decreases when you use a SQL source file after you upgrade to Integration Manager 8.0 or to Integration Manager 7.5
 description: Describes a problem where integration performance decreases when you use an ODBC source that connects to a SQL table after you upgrade to Integration Manager 8.0 or to Integration Manager 7.5. You must obtain a service pack to resolve this problem.
-ms.reviewer: kvogel
+ms.reviewer: theley, kvogel
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

@@ -1,7 +1,7 @@
 ---
 title: Create a Dexsql.log file to troubleshoot
 description: Describes how to create a Dexsql.log file that can help you troubleshoot error messages.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: how-to
 ms.date: 03/13/2024
 ---

@@ -1,7 +1,7 @@
 ---
 title: Return Code 10 error when running Depreciation in Fixed Assets
 description: When you run Depreciation in Fixed Assets in Microsoft Dynamics GP, you receive the Return Code 10 error. Provides a resolution.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

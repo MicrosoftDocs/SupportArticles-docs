@@ -1,7 +1,7 @@
 ---
 title: Timeout expired error when passing documents through eConnect
 description: You may receive the Timeout expired error when you pass a document through eConnect in Microsoft Dynamics GP. Provides a resolution.
-ms.reviewer: dclauson
+ms.reviewer: theley, dclauson
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

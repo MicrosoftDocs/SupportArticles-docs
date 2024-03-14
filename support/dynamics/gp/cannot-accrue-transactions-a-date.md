@@ -1,7 +1,7 @@
 ---
 title: Cannot accrue transactions for a date
 description: Provides a solution to an error that occurs when you save a transaction or when you accrue attendance in Microsoft Dynamics GP.
-ms.reviewer: lmuelle, jakelaux
+ms.reviewer: theley, lmuelle, jakelaux
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

@@ -1,7 +1,7 @@
 ---
 title: The request failed with HTTP status 400 error when integrating transactions
 description: Fixes an issue that occurs when you integrate lots of transactions that contain many distributions.
-ms.reviewer: ttorgers, cwaswick, kyouells
+ms.reviewer: theley, ttorgers, cwaswick, kyouells
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

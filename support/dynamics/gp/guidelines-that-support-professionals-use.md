@@ -1,7 +1,7 @@
 ---
 title: Guidelines that support professionals use
 description: Describes the guidelines we use to determine when a support case becomes a consulting engagement.
-ms.reviewer: kyouells
+ms.reviewer: theley, kyouells
 ms.date: 03/13/2024
 ---
 # Guidelines that Microsoft support professionals use to determine when a support case becomes a consulting engagement

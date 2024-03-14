@@ -1,7 +1,7 @@
 ---
 title: Check Stub displays Attendance balances
 description: Provides a solution to an issue where Check Stub or Earnings Statement displays Attendance balances from Payroll instead of Human Resources
-ms.reviewer: cwaswick, v-Kimh
+ms.reviewer: theley, cwaswick, v-Kimh
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

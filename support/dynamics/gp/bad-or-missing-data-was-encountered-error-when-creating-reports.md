@@ -1,7 +1,7 @@
 ---
 title: Bad or missing data was encountered error when creating reports
 description: Describes an error message you get when you generate a report in Microsoft Management Reporter. Provides a resolution.
-ms.reviewer: kellybj, kevogt
+ms.reviewer: theley, kellybj, kevogt
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

@@ -2,7 +2,7 @@
 title: Unexpected GLTRX Batch appears in Financial Batch Entry
 description: Unexpected GLTRX Batch appears under Financial Batch Entry in Microsoft Dynamics GP. This article provides a solution to this issue.
 ms.topic: troubleshooting
-ms.reviewer: AEckman
+ms.reviewer: theley, AEckman
 ms.date: 03/13/2024
 ---
 # An unexpected GLTRX Batch appears in Financial Batch Entry in Microsoft Dynamics GP

@@ -1,7 +1,7 @@
 ---
 title: How to add or remove Smartlist report from My Reports
 description: How to add or remove a Smartlist report from My Reports.
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.topic: how-to
 ms.date: 03/13/2024
 ---

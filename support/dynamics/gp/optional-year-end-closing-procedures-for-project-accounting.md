@@ -1,7 +1,7 @@
 ---
 title: Optional year-end closing procedures for Project Accounting
 description: Describes the optional year-end closing procedures for Project Accounting in Microsoft Dynamics.
-ms.reviewer: ppeterso
+ms.reviewer: theley, ppeterso
 ms.date: 03/13/2024
 ---
 # Optional year-end closing procedures for Project Accounting in Microsoft Dynamics

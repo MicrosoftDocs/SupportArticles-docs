@@ -1,7 +1,7 @@
 ---
 title: Standard Cost isn't rolling up
 description: Provides a solution to an issue where Standard Cost isn't rolling up in Manufacturing for the Rollup and Revalue process in Microsoft Dynamics GP.
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

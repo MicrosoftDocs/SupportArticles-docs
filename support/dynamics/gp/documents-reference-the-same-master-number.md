@@ -1,7 +1,7 @@
 ---
 title: Documents reference the same master number
 description: Provides a solution to an issue where multiple customers have documents that reference the same master number in Sales Order Processing in Microsoft Dynamics GP.
-ms.reviewer: ppeterso
+ms.reviewer: theley, ppeterso
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

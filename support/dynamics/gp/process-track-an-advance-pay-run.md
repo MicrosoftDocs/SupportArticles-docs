@@ -1,7 +1,7 @@
 ---
 title: Process and track an advance pay run
 description: Explains how to process and track an advance pay run in Payroll.
-ms.reviewer: lmuelle
+ms.reviewer: theley, lmuelle
 ms.topic: how-to
 ms.date: 03/13/2024
 ---

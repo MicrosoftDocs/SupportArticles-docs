@@ -1,7 +1,7 @@
 ---
 title: Inventory value doesn't match inventory balance in Microsoft Dynamics GP
 description: Discusses why the inventory value does not match the inventory balance in the general ledger when you use the LIFO/FIFO Perpetual valuation method in Microsoft Dynamics GP.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: troubleshooting
 ms.date: 03/13/2024
 ---

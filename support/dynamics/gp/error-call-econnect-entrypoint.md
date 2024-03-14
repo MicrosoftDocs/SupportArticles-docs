@@ -2,7 +2,7 @@
 title: Error when you call the eConnect_EntryPoint in eConnect
 description: This article provides a resolution for the problem that occurs when you call the eConnect_EntryPoint method in eConnect for Microsoft Dynamics GP 10.0.
 ms.topic: troubleshooting
-ms.reviewer: dclauson
+ms.reviewer: theley, dclauson
 ms.date: 03/13/2024
 ---
 # Error message when you call the eConnect_EntryPoint method in eConnect for Microsoft Dynamics GP 10.0 (System Error)

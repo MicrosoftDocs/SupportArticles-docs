@@ -1,7 +1,7 @@
 ---
 title: Regenerate Taxes Utility in Dynamics GP
 description: Regenerate Taxes Utility in Microsoft Dynamics GP.
-ms.reviewer:
+ms.reviewer: theley
 ms.date: 03/13/2024
 ---
 # Regenerate Taxes Utility in Microsoft Dynamics GP
