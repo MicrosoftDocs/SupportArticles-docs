@@ -18,7 +18,7 @@ This article is designed to help you troubleshoot Server Message Block (SMB) iss
 
 ## SMB terminology
 
-Communicating correct terminology is a key aspect of quality SMB troubleshooting. Therefore, you should learn basic SMB terminology to ensure accuracy of data collection and analysis.
+Communicating correct terminology is a key aspect of quality SMB troubleshooting. Therefore, you should learn basic SMB terminology to ensure the accuracy of data collection and analysis.
 
 - SMB Server (SRV) (also known as the file server) is always the system that hosts the file system.
 - SMB Client (CLI) is always the system that tries to access the file system.
@@ -31,7 +31,7 @@ These terms are consistent regardless of the operating system version or edition
 - [Disable SMBv1](/windows-server/storage/file-server/troubleshoot/detect-enable-and-disable-smbv1-v2-v3#how-to-remove-smbv1).
 - If SMBv1 is disabled on a device that supports only SMBv1, you can't access that device. In this situation, upgrade your system.
 - You can't disable SMBv2 or SMBv3 separately because these versions are part of the same driver.
-- Analyze the traffic: SMB is an application-level protocol that uses TCP/IP as the network transport protocol. Therefore, an SMB issue might indicate that there are underlying TCP/IP issues.
+- Analyze the traffic: SMB is an application-level protocol that uses TCP/IP as the network transport protocol. Therefore, an SMB-related issue might indicate that there are underlying TCP/IP-related issues.
 - Analyze the protocol: To understand the exact commands and options that are used, look at the actual SMB protocol details in the network trace.
 - Update SMB-related system files: Keep the system files updated. Make sure that the latest [update rollup](https://support.microsoft.com/help/4498140/windows-10-update-history) is installed.
 
@@ -134,7 +134,7 @@ Before you contact Microsoft Support, you can gather information about your issu
 ### Prerequisites
 
 - Run TSS in the security context of an account that has administrator privileges on the local system. The first time that you run it, accept the EULA. (After you accept the EULA, TSS won't prompt you again.)
-- We recommend that you use the `RemoteSigned` PowerShell execution policy, at the `LocalMachine` scope.
+- We recommend that you use the `RemoteSigned` PowerShell execution policy at the `LocalMachine` scope.
 
 > [!NOTE]  
 > If the current PowerShell execution policy doesn't allow you to run TSS, take the following actions:
