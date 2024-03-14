@@ -13,7 +13,7 @@ appliesto:
   - New Microsoft Teams
   - Classic Microsoft Teams
   - Teams on the web
-ms.custom:
+ms.custom: 
   - CI 184113
   - CSSTroubleshoot
 ms.reviewer: corbinm, kristinw
