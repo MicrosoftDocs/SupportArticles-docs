@@ -4,11 +4,9 @@
   - name: Azure Container Instances
     href: azure-container-instances/welcome-container-instances.yml
   - name: Microsoft Entra ID
-    href: active-directory/welcome-azure-ad.yml
+    href: active-directory/welcome-entra-id.yml
   - name: Microsoft Entra
     href: microsoft-entra/welcome-microsoft-entra.yml
-  - name: Microsoft Entra ID
-    href: active-directory/welcome-azure-ad.yml
   - name: Azure Kubernetes Services
     href: azure-kubernetes/welcome-azure-kubernetes.yml
   - name: Azure Monitor

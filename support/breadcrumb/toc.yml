@@ -183,8 +183,8 @@ items:
         topicHref: /troubleshoot/azure/microsoft-entra/welcome-microsoft-entra
         items:
         - name: Microsoft Entra ID
-          tocHref: /troubleshoot/azure/active-directory/
-          topicHref: /troubleshoot/azure/active-directory/welcome-azure-ad
+          tocHref: /troubleshoot/azure/entra-id/
+          topicHref: /troubleshoot/azure/entra-id/welcome-entra-id
       - name: Site Recovery
         tocHref: /troubleshoot/azure/site-recovery/
         topicHref: /troubleshoot/azure/site-recovery/welcome-site-recovery

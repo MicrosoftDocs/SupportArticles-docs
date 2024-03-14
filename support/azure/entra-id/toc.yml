@@ -283,7 +283,7 @@
     href: user-prov-sync/number-add-username-email-address.md
   - name: Number of objects are exceeded
     href: user-prov-sync/exceed-number-objects-synced.md
-  - name: user-prov-sync/Object deletions aren't synched
+  - name: Object deletions aren't synched
     href: user-prov-sync/object-deletions-not-sync.md
   - name: One or more objects don't sync 
     href: user-prov-sync/objects-dont-sync-ad-sync-tool.md
