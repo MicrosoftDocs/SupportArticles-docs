@@ -104,11 +104,15 @@ To troubleshoot this issue, use multiple virtual network adapters to make sure t
 
 Assume that a Windows Server 2012 R2-based computer uses an InfiniBand network adapter. This adapter uses the SMB Direct feature to support Remote Direct Memory Access (RDMA) communication between cluster nodes and Hyper-V hosts. After you restart a Hyper-V host, event ID 30818 may be logged under the Applications and Services Logs/Microsoft/Windows/SmbClient path in Event Viewer. When this issue occurs, it may cause performance issues.
 
-On Windows Server 2012 R2, the SmbDirect interface is started automatically by the LanmanServer service. However, if the LanmanWorkstation service happens to start first and tries to open an RDMA connection before the SmbDirect is loaded, event ID 30818 will be logged. When the client initially communicates to the server over TCP/IP, new client connections will start to use the RDMA interface. Therefore, no user action is needed to recover.
+On Windows Server 2012 R2, the LanmanServer service automatically starts the SmbDirect service. However, if the LanmanWorkstation service happens to start first and tries to open an RDMA connection before the SmbDirect service loads, Windows logs event ID 30818. When the client initially communicates with the server over TCP/IP, it uses the RDMA interface. Therefore, no user action is needed to recover.
 
 A change is being considered to resolve this problem in a future version of Windows Server.
 
-To work around this problem on Windows Server 2012 R2, the SmbDirect service should be configured to start automatically. To do this, follow these steps:
+### Workaround
+
+
+
+To work around this problem on Windows Server 2012 R2, configure the SmbDirect service to start automatically. To do this, follow these steps:
 
 1. Open Registry Editor, and then locate to the following registry subkey:
     `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\smbdirect`
