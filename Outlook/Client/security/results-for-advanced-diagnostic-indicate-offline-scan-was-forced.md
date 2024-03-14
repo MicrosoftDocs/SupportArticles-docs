@@ -57,7 +57,7 @@ Value: **0**
 
 ## Resolution
 
-If you need to perform a full scan of Outlook, you can temporarily modify the `PromptOOMAddressInformationAccess` and/or `PromptOOMAddressBookAccess` registry values to **1**. This will cause Outlook to no longer automatically deny requests (_from any program_) to access Outlook data and will instead prompt you to approve the access request. The value of 1 is the default setting for this feature.
+If you need to perform a full scan of Outlook, you can temporarily modify the `PromptOOMAddressInformationAccess` and/or `PromptOOMAddressBookAccess` registry values to **1**. This change causes Outlook to no longer automatically deny requests (_from any program_) to access Outlook data and instead prompt you to approve the access request. The value of 1 is the default setting for this feature.
 
 The available value data for these registry values is listed below.
 

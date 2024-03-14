@@ -21,7 +21,7 @@ ms.date: 03/14/2024
 
 The Teams Meeting Add-in for Outlook scenario automates all the check and recovery actions (except the two checks under [Check policies](/microsoftteams/troubleshoot/meetings/resolve-teams-meeting-add-in-issues#check-policies)) that are described and provided in [Resolve issues with Teams Meeting add-in for Outlook](/microsoftteams/troubleshoot/meetings/resolve-teams-meeting-add-in-issues).
 
-In the full version of the Microsoft Support and Recovery Assistant Assistant, the equivalent entry point for this scenario is *Teams \ The Teams meeting option isn't shown or the Teams Meeting add-in doesn't load in Outlook*.
+In the full version of the Microsoft Support and Recovery Assistant, the equivalent entry point for this scenario is *Teams \ The Teams meeting option isn't shown or the Teams Meeting add-in doesn't load in Outlook*.
 
 **Note:** This scenario doesn't require that you use an elevated Command Prompt window.
 
@@ -56,7 +56,7 @@ Here's a sample combination of switches to run this scenario:
 
 ## Detected conditions and results
 
-When you run the Teams Meeting Add-in for Outlook scenario by using the Enterprise version of the Assistant, you don't receive any prompts. This is a different experience from the full version of the Assistant. The following table describes the actions that the Enterprise version of the Assistant takes for each condition that's encountered by this scenario, and the corresponding output that's displayed.
+When you run the Teams Meeting Add-in for Outlook scenario by using the Enterprise version of the Assistant, you don't receive any prompts. It's a different experience from the full version of the Assistant. The following table describes the actions that the Enterprise version of the Assistant takes for each condition that's encountered by this scenario, and the corresponding output that's displayed.
 
 |Condition|Action taken by the Enterprise version|Output shown in the Command Prompt window|
 |---|---|---|
@@ -65,7 +65,7 @@ When you run the Teams Meeting Add-in for Outlook scenario by using the Enterpri
 |The user didn't include the `-AcceptEula` switch|Exit the scenario|01: Please provide `-AcceptEula` to continue with this scenario. For additional information, please visit [https://aka.ms/SaRA_CommandLineVersion](https://aka.ms/SaRA_CommandLineVersion) |
 |Teams isn't installed|Exit the scenario|20: Could not find an installed version of Teams. Please see [https://support.office.com/article/how-do-i-get-access-to-microsoft-teams-fc7f1634-abd3-4f26-a597-9df16e4ca65b](https://support.office.com/article/how-do-i-get-access-to-microsoft-teams-fc7f1634-abd3-4f26-a597-9df16e4ca65b)|
 |Outlook 2013 or later isn't installed|Exit the scenario|21: Could not find an installed version of Outlook 2013, or later. See [https://go.microsoft.com/fwlink/?linkid=2129032](https://go.microsoft.com/fwlink/?linkid=2129032) |
-|Windows 7 user doesn't have the [Update for Universal C Runtime in Windows](https://support.microsoft.com/topic/update-for-universal-c-runtime-in-windows-c0514201-7fe6-95a3-b0a5-287930f3560c) installed|Exit the scenario| 22: Pre-requisites not met. Update from KB2999226 needs to be installed. See [https://go.microsoft.com/fwlink/?linkid=2129032](https://go.microsoft.com/fwlink/?linkid=2129032)|
-|Registry issues detected: <br/><br/>LoadBehavior<>3 or add-in listed under the `DisabledItems` key or TeamsAddin.Connect<>1 under the `DoNotDisableAddinList` key|Run the registry recovery action, and then exit the scenario.|23: The registry was updated to address missing or incorrect values. Please exit and restart Outlook.<br/><br/>17: An error occurred while running this scenario. You can also try using the full SaRA version.|
+|Windows 7 user doesn't have the [Update for Universal C Runtime in Windows](https://support.microsoft.com/topic/update-for-universal-c-runtime-in-windows-c0514201-7fe6-95a3-b0a5-287930f3560c) installed|Exit the scenario| 22: Prerequisites not met. Update from KB2999226 needs to be installed. See [https://go.microsoft.com/fwlink/?linkid=2129032](https://go.microsoft.com/fwlink/?linkid=2129032)|
+|Registry issues detected: <br/><br/>LoadBehavior<>3 or add-in listed under the `DisabledItems` key or `TeamsAddin.Connect`<>1 under the `DoNotDisableAddinList` key|Run the registry recovery action, and then exit the scenario.|23: The registry was updated to address missing or incorrect values. Please exit and restart Outlook.<br/><br/>17: An error occurred while running this scenario. You can also try using the full SaRA version.|
 |None of the listed conditions were detected| Run the re-register dll recovery action, and then exit the scenario.|24: The Microsoft.Teams.AddinLoader.dll was re-registered. Please exit and restart Teams. Then, exit and restart Outlook.|
 |Failure to complete the scenario (for any reason)|Exit the scenario|17: An error occurred while running this scenario. You can also try using the full SaRA version.|

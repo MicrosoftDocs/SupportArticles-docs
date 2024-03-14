@@ -32,13 +32,13 @@ When you start Microsoft Outlook, switch folders, or synchronize email, you may 
 
 ## Cause
 
-You have many shared folders or mailboxes, or both, open in Outlook. In the case with a shared calendar, modifications or additions cannot be made until the program is finished syncing updates.
+You have many shared folders or mailboxes, or both, open in Outlook. In the case with a shared calendar, modifications or additions can't be made until the program is finished syncing updates.
 
 The number of shared folders and mailboxes that you can have open without issues depends on several factors, including hardware, mailbox size, size of the shared folders or mailboxes, number of folders in a shared mailbox, item count in folders, and network speed. A computer that has slower hardware, a large mailbox, and slow network connection may not be able to open more than five shared folders or mailboxes. However, a faster computer that has a smaller mailbox and a fast network connection may be able to open 10 or more shared folders or mailboxes.
 
 ## Resolution
 
-Reduce the number of shared folders or mailboxes that you have open in Outlook. To do this, you must first determine whether you have shared folders or shared mailboxes open. If you have shared mailboxes open, you must also determine how they are opened, such as being opened manually as an additional mailbox or being opened because of AutoMapping.
+Reduce the number of shared folders or mailboxes that you have open in Outlook. To do so, you must first determine whether you have shared folders or shared mailboxes open. If you have shared mailboxes open, you must also determine how they're opened, such as being opened manually as an additional mailbox or being opened because of AutoMapping.
 
 A shared mailbox appears below your own mailbox in the Folder Pane, as shown in the following screenshot.
 
@@ -83,7 +83,7 @@ To remove an automapped mailbox from Outlook, use one of the following options:
 1. Remove your Full Access permissions from the mailbox. This is a good option if you no longer require access to the shared mailbox.
 
    [Manage Full Access Permissions](/previous-versions/office/exchange-server-2010/bb676551(v=exchg.141))
-2. Remove AutoMapping for the shared mailbox. This is a good option if you must have access to the shared mailbox, but do not want it AutoMapped in Outlook automatically.
+2. Remove AutoMapping for the shared mailbox. This is a good option if you must have access to the shared mailbox, but don't want it AutoMapped in Outlook automatically.
 
    - [Disable Outlook Auto-Mapping with Full Access Mailboxes](/previous-versions/office/exchange-server-2010/hh529943(v=exchg.141))
    - [How to remove automapping for a shared mailbox in Outlook for Microsoft 365](/outlook/troubleshoot/profiles-and-accounts/remove-automapping-for-shared-mailbox)
@@ -92,7 +92,7 @@ To remove an automapped mailbox from Outlook, use one of the following options:
 
 1. Open Outlook.
 2. Select the **Calendar, Contacts, Tasks or Notes** folder in the **Navigation** pane in which you have a shared folder open.
-3. Look under Shared \<Folder name> for any shared folders, as shown in the following screenshot.
+3. Look under Shared \<Folder name\> for any shared folders, as shown in the following screenshot.
 
    :::image type="content" source="media/slow-performance-if-having-many-shared-folder-or-mailboxes-open/different-types-of-shared-folders.png" alt-text="Screenshot showing shared folders of different types.":::
 
@@ -107,10 +107,10 @@ Follow steps 2 through 4 for any remaining shared folders that you want to remov
 
 ### Close a Shared Inbox Folder
 
-When you open a shared Inbox folder, it appears in Outlook only until you select a different folder. It does not remain in the Folder list. To remove a shared Inbox folder, close it by selecting a different folder in your Mailbox.
+When you open a shared Inbox folder, it appears in Outlook only until you select a different folder. It doesn't remain in the Folder list. To remove a shared Inbox folder, close it by selecting a different folder in your Mailbox.
 
 ## More information
 
-Many of the items that are discussed in this article can be automatically checked by the Microsoft Support and Recovery Assistant (SaRA). Start the automated checks by running the [Outlook Advanced Diagnostics](https://aka.ms/SaRA-OutlookAdvDiagnostics) scenario. Select **Run** when you are prompted by your browser. In the report that's generated, review the items on the **Issues found** tab. For details about the Outlook, Windows, and computer configuration, review the settings on the **Detailed View** tab.
+Many of the items that are discussed in this article can be automatically checked by the Microsoft Support and Recovery Assistant (SaRA). Start the automated checks by running the [Outlook Advanced Diagnostics](https://aka.ms/SaRA-OutlookAdvDiagnostics) scenario. Select **Run** when you're prompted by your browser. In the report that's generated, review the items on the **Issues found** tab. For details about the Outlook, Windows, and computer configuration, review the settings on the **Detailed View** tab.
 
 [!INCLUDE [Microsoft Support and Recovery Assistant note](../../../includes/sara-note-new-outlook.md)]
