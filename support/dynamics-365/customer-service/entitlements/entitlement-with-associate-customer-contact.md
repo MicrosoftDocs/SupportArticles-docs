@@ -3,7 +3,7 @@ title: Select an active entitlement that belongs to the specified customer, cont
 description: Resolves an error that occurs when selecting an active entitlement on a case in Microsoft Dynamics 365 Customer Service.
 ms.reviewer: sdas, ankugupta
 ms.author: sdas
-ms.date: 03/11/2024
+ms.date: 03/14/2024
 ---
 # "Select an active entitlement that belongs to the specified customer, contact, or product" error
 
