@@ -1,9 +1,9 @@
 ---
 title: Distributions for this transaction contain errors when posting voucher via printed check payment
 description: Describes a problem that occurs when you try to post a voucher by using a printed check payment in Microsoft Dynamics GP. A resolution is provided.
-ms.reviewer: lmuelle
+ms.reviewer: theley, lmuelle
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # "Distributions for this transaction contain errors" when posting a voucher via a printed check payment
 

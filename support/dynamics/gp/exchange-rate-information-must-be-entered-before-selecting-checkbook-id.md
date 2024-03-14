@@ -1,9 +1,9 @@
 ---
 title: Exchange rate information must be entered before selecting a Checkbook ID error in Cash Flow Management 
 description: Describes a problem where you receive the error - Exchange rate information must be entered before selecting a Checkbook ID in Cash Flow Management in Microsoft Dynamics GP. A resolution is provided.
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
-ms.date: 04/22/2021
+ms.date: 03/13/2024
 ---
 # "Exchange rate information must be entered before selecting a Checkbook ID" error in Cash Flow Management in Microsoft Dynamics GP
 

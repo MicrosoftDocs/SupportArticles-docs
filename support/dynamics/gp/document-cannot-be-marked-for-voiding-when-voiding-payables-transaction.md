@@ -1,9 +1,9 @@
 ---
 title: This document cannot be marked for voiding error when voiding a payables transaction
 description: Explains a problem that occurs even though you have not applied a transaction or put the transaction on hold. Describes how to resolve this problem.
-ms.reviewer: 
+ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 04/22/2021
+ms.date: 03/13/2024
 ---
 # "This document cannot be marked for voiding, It has been either partially applied or is on hold" error when voiding a payables transaction
 

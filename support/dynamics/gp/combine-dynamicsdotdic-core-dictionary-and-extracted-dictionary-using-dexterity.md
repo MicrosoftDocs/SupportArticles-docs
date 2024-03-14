@@ -2,7 +2,8 @@
 title: How to combine Dynamics.dic core dictionary and an extracted dictionary by using Dexterity Utilities in Microsoft Dynamics GP
 description: Discusses how to combine a Dynamics.dic file and an extracted dictionary by using Dexterity Utilities in Microsoft Dynamics GP.
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/13/2024
+ms.reviewer: theley
 ---
 # How to combine the Dynamics.dic core dictionary and an extracted dictionary by using Dexterity Utilities in Microsoft Dynamics GP
 

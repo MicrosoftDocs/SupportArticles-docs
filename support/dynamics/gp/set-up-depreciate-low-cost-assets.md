@@ -1,9 +1,9 @@
 ---
 title: Set up and depreciate low-cost assets
 description: Describes how to set up and then depreciate low-cost assets according to German law in Microsoft Dynamics GP.
-ms.reviewer: dbader
+ms.reviewer: theley, dbader
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # How to set up and then depreciate low-cost assets according to German law in Microsoft Dynamics GP
 

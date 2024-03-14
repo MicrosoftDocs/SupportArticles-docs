@@ -1,9 +1,9 @@
 ---
 title: Data Mart integration setup fails with nondefault SQL port
 description: Can't configure a Microsoft Dynamics GP Data Mart integration by using a nondefault SQL Server port. Provides a resolution.
-ms.reviewer: 
+ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # Configuring a Microsoft Dynamics GP Data Mart integration fails when you specify a nondefault SQL Server port
 

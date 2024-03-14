@@ -1,9 +1,9 @@
 ---
 title: Violation of PRIMARY KEY constraint
 description: Describes a problem that occurs when you try to do the year-end closing routine in General Ledger. Resolutions are provided.
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # "Violation of PRIMARY KEY constraint" Error message when you try to do the year-end closing routine in General Ledger in Microsoft Dynamics GP
 
