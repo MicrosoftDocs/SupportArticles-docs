@@ -1,12 +1,12 @@
 ---
 title: Troubleshoot event ID 1020 warnings on a file server
 description: Explains how to troubleshoot event ID 1020 warnings on a file server
-ms.date: 03/12/2024
+ms.date: 03/13/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
-ms.reviewer: kaushika
+ms.reviewer: kaushika, v-tappelgate
 ms.custom: sap:access-to-remote-file-shares-smb-or-dfs-namespace, csstroubleshoot
 ---
 # Troubleshoot event ID 1020 warnings on a file server
@@ -21,14 +21,14 @@ _Original KB number:_ &nbsp; 4562940
 On a Windows Server-based file server, you observe Event ID 1020 warnings from **SMB-Server** in the **Microsoft-Windows-SMBServer/Operational** event log:  
 
 > File system operation has taken longer than expected.  
-Client Name: \<Client-IP/Name>  
-Client Address: \<Client-IP>:\<Client-Port>  
-User Name: \<Username>  
-Session ID: \<SMB-Session-ID>  
-Share Name: \<SMB-Share-Name>  
-File Name: \<File-Name>  
-Command: \<SMB-Command-Code>  
-Duration (in milliseconds): \<Duration>  
+Client Name: \<*Client-IP/Name*>  
+Client Address: \<*Client-IP*>:\<*Client-Port*>  
+User Name: \<*Username*>  
+Session ID: \<*SMB-Session-ID*>  
+Share Name: \<*SMB-Share-Name*>  
+File Name: \<*File-Name*>  
+Command: \<*SMB-Command-Code*>  
+Duration (in milliseconds): \<*Duration*>  
 Warning Threshold (in milliseconds): 15000  
 Guidance:  
 The underlying file system has taken too long to respond to an operation. This typically indicates a problem with the storage and not SMB.
@@ -46,17 +46,17 @@ This event indicates that the SMB server's file system can't complete a read/wri
 
 The event data includes the exact duration of the delay as well as the SMB command code that encountered the delay. 
 
-A list of SMB2 Command Codes can be found at [2.2.1.2 SMB2 Packet Header - SYNC](/openspecs/windows_protocols/ms-smb2/fb188936-5050-48d3-b350-dc43059638a4).  
+For a list of SMBv2 command codes, see [2.2.1.2 SMB2 Packet Header - SYNC](/openspecs/windows_protocols/ms-smb2/fb188936-5050-48d3-b350-dc43059638a4).  
 
 File system delays in the magnitude of several seconds can be caused by mal-functioning filesystem filter drivers.  
 
 Other possible causes include severe performance problems towards the physical storage including:
 
-- overload of the physical disks
-- prolonged disk freeze operations such as the ones performed by VSS or other backup solutions
-- the network/storage stack of an underlaying hypervisor
-- the network connections to the storage
-- the SAN/NAS/Storage-Appliance itself  
+- Overload of the physical disks
+- Prolonged disk freeze operations such as the ones performed by VSS or other backup solutions
+- The network/storage stack of an underlaying hypervisor
+- The network connections to the storage
+- The SAN/NAS/Storage-Appliance itself  
 
 File system delays below the 15-second threshold do not produce a warning event but are still detrimental to the File server Performance.
 
@@ -72,10 +72,10 @@ For extreme delays (10 or more minutes) and under some other conditions, the fil
 
 The dump creation is logged by two events in the Microsoft-Windows-SMBServer/Operational Eventlog:
 
-- Event 1031: The server detected a problem and has captured a live kernel dump to collect debug information.
-- Event 1032: The server detected a problem but was unable to capture a live kernel dump to collect debug information.
+- Event ID 1031: The server detected a problem and has captured a live kernel dump to collect debug information.
+- Event ID 1032: The server detected a problem but was unable to capture a live kernel dump to collect debug information.
 
-If a dump was successfully created, it can be found under %SystemRoot%\LiveKernelReports and is immensely valuable for troubleshooting.
+If a dump was successfully created, it can be found under *%SystemRoot%\LiveKernelReports* and is immensely valuable for troubleshooting.
 
 ## More information
 
@@ -93,4 +93,4 @@ Other applications and components that are running on this server and access the
 > - Not all disks might be affected at the same time.
 > - Not all disks might be affected to the same degree.  
 
-Check the SMB-Server 1020 Events for details and patterns.
+Check the event log on the SMB-server for event ID 1020 events, and review them to find details and patterns.
