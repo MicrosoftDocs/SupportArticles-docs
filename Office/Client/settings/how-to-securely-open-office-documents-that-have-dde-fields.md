@@ -6,8 +6,8 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- CSSTroubleshoot
-- CI 162524
+  - CSSTroubleshoot
+  - CI 162524
 appliesto:
 - Outlook
 - Exchange

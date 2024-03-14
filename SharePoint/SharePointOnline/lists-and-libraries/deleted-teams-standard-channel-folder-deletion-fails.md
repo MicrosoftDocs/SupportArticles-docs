@@ -10,8 +10,8 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
-- CSSTroubleshoot
-- CI 171872
+  - CSSTroubleshoot
+  - CI 171872
 ms.reviewer: prbalusu
 appliesto: 
 - SharePoint Online

@@ -9,7 +9,9 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
-ms.custom: sap:spsexperts, CSSTroubleshoot
+ms.custom: 
+  - sap:spsexperts
+  - CSSTroubleshoot
 appliesto: 
   - PowerPoint Web App
 ms.date: 12/17/2023

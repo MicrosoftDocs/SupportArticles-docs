@@ -6,8 +6,8 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- CI 186626
-- CSSTroubleshoot
+  - CI 186626
+  - CSSTroubleshoot
 ms.reviewer: revaldiv,corbinm,scapero
 appliesto: 
   - New Microsoft Teams
