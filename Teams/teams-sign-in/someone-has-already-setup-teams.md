@@ -16,7 +16,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 03/13/2024
+ms.date: 03/14/2024
 ---
 
 # "Someone has already set up Teams for your organization" error in Microsoft Teams
