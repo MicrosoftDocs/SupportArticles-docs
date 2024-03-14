@@ -57,7 +57,7 @@ The HeartBeatState metric data is always saved in Application Insights automatic
 
 The following table shows the mapping between the options in Diagnostic setting and table names in Application Insights logs:
 
-| Table in Application insights | logs in Diagnostic setting |
+| Table in Application Insights | Logs in Diagnostic setting |
 | ----------- | ----------- |
 | traces      | Application logs     |
 | traces   | ETW logs       |
@@ -78,13 +78,13 @@ To add a custom log to your application, follow these steps:
 
     :::image type="content" source="./media/troubleshoot-common-scenario-use-app-insights/install-package.png" alt-text="Screenshot shows the installed Microsoft ApplicationInsights package.":::
 
-3. Add the Application Insight configuration into the *.cscfg* and *.csdef* files.
+3. Add the Application Insights configuration into *.cscfg* and *.csdef* files.
 
     > [!NOTE]
-    > - The technical support for instrumentation key-based global ingestion will end on 31 March 2025. It's recommended to use the connection string instead of connecting to Application Insight before that date. For more information, see [Transition to using connection strings for data ingestion by 31 March 2025](https://azure.microsoft.com/updates/technical-support-for-instrumentation-key-based-global-ingestion-in-application-insights-will-end-on-31-march-2025/).
-    > - When Application Insight is linked with a Cloud Service project, `APPINSIGHTS_INSTRUMENTATIONKEY` is automatically added. For more information, see [Troubleshoot Cloud Services app with Application Insights - features overview](/troubleshoot/azure/cloud-services/troubleshoot-with-app-insights-features-overview).
+    > - Technical support for instrumentation key-based global ingestion will end on March 31, 2025. It's recommended to use the connection string instead of connecting to Application Insights before that date. For more information, see [Transition to using connection strings for data ingestion by 31 March 2025](https://azure.microsoft.com/updates/technical-support-for-instrumentation-key-based-global-ingestion-in-application-insights-will-end-on-31-march-2025/).
+    > - When Application Insights is linked with a Cloud Service project, `APPINSIGHTS_INSTRUMENTATIONKEY` is automatically added. For more information, see [Troubleshoot Cloud Services app with Application Insights - features overview](/troubleshoot/azure/cloud-services/troubleshoot-with-app-insights-features-overview).
 
-    Here's an example of the *.csdef* file:
+    Here's an example of a *.csdef* file:
 
     ```xml
     <ConfigurationSettings>
@@ -93,7 +93,7 @@ To add a custom log to your application, follow these steps:
     </ConfigurationSettings>
     ```
 
-   Here's an example of the *.cscfg* file:
+   Here's an example of a *.cscfg* file:
 
    ```xml
    <ConfigurationSettings>
@@ -102,9 +102,9 @@ To add a custom log to your application, follow these steps:
     </ConfigurationSettings>
     ```
 
-    The conenction string can be found in the overview page of Application Insight. For more information, see [Migrate from Application Insights instrumentation keys to connection strings](/azure/azure-monitor/app/migrate-from-instrumentation-keys-to-connection-strings).
+    The connection string can be found on the overview page of Application Insights. For more information, see [Migrate from Application Insights instrumentation keys to connection strings](/azure/azure-monitor/app/migrate-from-instrumentation-keys-to-connection-strings).
 
-4. Add the following code in the startup function of your role. The startup function for Web Role is `Application_Start()` in *Global.asax*. For Worker Role, it's `OnStart()` in *WorkerRoleName.cs*.
+4. Add the following code in the startup function of your role. The startup function of Web Role is `Application_Start()` in *Global.asax*. For Worker Role, it's `OnStart()` in *WorkerRoleName.cs*.
 
     ```csharp
     TelemetryConfiguration.Active.ConnectionString = RoleEnvironment.GetConfigurationSettingValue("APPLICATIONINSIGHTS_CONNECTION_STRING"); 
@@ -357,4 +357,4 @@ If the instances are having high CPU/Memory issues and the application is experi
  procdump.exe -accepteula -c 85 -s 3 -n 5 WaWorkerHost.exe c:\procdumps
 ```
 
-In the Diagnostic setting page of Cloud Service, you can also set the crash dump file auto-generation. For more details, review [this article](/visualstudio/azure/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines?toc=%2Fazure%2Fcloud-services%2Ftoc.json&view=vs-2022#crash-dumps&preserve-view=true).
+In the Diagnostic setting page of Cloud Service, you can also set the crash dump file auto-generation. For more details, see [Set up diagnostics for Azure Cloud Services and virtual machines](/visualstudio/azure/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines?toc=%2Fazure%2Fcloud-services%2Ftoc.json&view=vs-2022#crash-dumps&preserve-view=true).
