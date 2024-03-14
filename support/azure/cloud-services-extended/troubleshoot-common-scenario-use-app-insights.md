@@ -357,4 +357,4 @@ If the instances are having high CPU/Memory issues and the application is experi
  procdump.exe -accepteula -c 85 -s 3 -n 5 WaWorkerHost.exe c:\procdumps
 ```
 
-In the Diagnostic setting page of Cloud Service, you can also set the crash dump file auto-generation. For more details, see [Set up diagnostics for Azure Cloud Services and virtual machines](/visualstudio/azure/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines?toc=%2Fazure%2Fcloud-services%2Ftoc.json&view=vs-2022#crash-dumps&preserve-view=true).
+In the Diagnostic setting page of Cloud Service, you can also set the crash dump file auto-generation. For more information, see [Set up diagnostics for Azure Cloud Services and virtual machines](/visualstudio/azure/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines?toc=%2Fazure%2Fcloud-services%2Ftoc.json&view=vs-2022#crash-dumps&preserve-view=true).
