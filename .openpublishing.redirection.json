@@ -10709,6 +10709,36 @@
       "source_path": "support/dynamics/gp/management-reporter-2012-ax-2012-user-validation-diagnostic.md",
       "redirect_url": "/previous-versions/troubleshoot/dynamics/ax/management-reporter-2012-ax-2012-user-validation-diagnostic",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/scsm/disable-diagnostics-connectivity-data.md",
+      "redirect_url": "/troubleshoot/system-center/scsm/welcome-scsm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/scsm/object-type-monitoringclass-not-found.md",
+      "redirect_url": "/troubleshoot/system-center/scsm/welcome-scsm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/scsm/could-not-load-type-error.md",
+      "redirect_url": "/troubleshoot/system-center/scsm/welcome-scsm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/scsm/cannot-impersonate-user-data-source.md",
+      "redirect_url": "/troubleshoot/system-center/scsm/welcome-scsm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/scsm/data-warehouse-base-library-mp-shows-failed-status.md",
+      "redirect_url": "/troubleshoot/system-center/scsm/welcome-scsm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/scsm/cannot-upgrade-to-system-center-2012-r2-service-manager.md",
+      "redirect_url": "/troubleshoot/system-center/scsm/welcome-scsm",
+      "redirect_document_id": false
     }
   ]
 }
