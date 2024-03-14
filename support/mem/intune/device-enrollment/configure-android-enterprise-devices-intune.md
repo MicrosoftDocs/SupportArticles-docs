@@ -7,9 +7,7 @@ ms.author: luche
 ms.date: 12/05/2023
 ms.reviewer: kaushika, mandia
 search.appverid: MET150
-ms.custom: 
-- intune-azure
-- CI 114553
+ms.custom: intune-azure, CI 114553
 ---
 
 # End-to-end guide for configuring Android enterprise devices in Microsoft Intune 

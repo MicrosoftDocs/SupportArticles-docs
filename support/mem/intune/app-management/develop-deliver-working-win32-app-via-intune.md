@@ -6,10 +6,7 @@ ms.reviewer: kaushika, sausarka
 author: helenclu
 ms.author: sausarka
 search.appverid: MET150
-ms.custom: 
-- CI 121778
-- CSSTroubleshooting
-- sap:app management
+ms.custom: sap:app management, CI 121778, CSSTroubleshooting
 ---
 
 # Support Tip - Understanding the flow behind deployment, delivery, and processing of a Win32 application through Intune
