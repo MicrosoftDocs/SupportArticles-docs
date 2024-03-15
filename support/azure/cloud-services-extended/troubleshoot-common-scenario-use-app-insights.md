@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot common Cloud Service Application issues with Application Insights
 description: Describes common scenarios that use Application Insights to troubleshoot Cloud Service Application issues.
-ms.date: 03/14/2024
+ms.date: 03/15/2024
 ms.reviewer: patcatun
 author: JerryZhangMS
 ms.author: genli
