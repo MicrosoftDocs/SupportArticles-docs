@@ -2347,7 +2347,7 @@ items:
     items:
     - name: '"An internal error has occurred" when connecting to a remote machine'
       href: ./remote/internal-error-has-occurred-connecting-remote-machine.md
-    - name: '"Remote Desktop cannot verify the identity of the remote computer"'
+    - name: 'Error "Remote Desktop cannot verify the identity of the remote computer"'
       href: ./remote/remote-desktop-cannot-verify-identity-connecting-remote-machine.md      
     - name: Connect to and shadow console session with Terminal Services
       href: ./remote/connect-to-and-shadow-console-session.md

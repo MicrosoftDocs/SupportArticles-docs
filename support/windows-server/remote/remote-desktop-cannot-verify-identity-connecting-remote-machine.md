@@ -1,7 +1,7 @@
 ---
 title: Remote Desktop cannot verify the identity of the remote computer
 description: Helps troubleshoot the Remote Desktop cannot verify the identity of the remote computer error when connecting to a domain-joined remote machine.
-ms.date: 03/12/2024
+ms.date: 03/15/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -13,23 +13,23 @@ ms.custom: sap:connecting-to-a-session-or-desktop, csstroubleshoot
 
 This article helps troubleshoot the "Remote Desktop cannot verify the identity of the remote computer" error when connecting to a domain-joined remote machine.
 
-When you use a direct Remote Desktop Protocol (RDP) connection to connect to a Windows machine, the connection fails with the following error, which occurs after entering the credentials.
+When you use a direct Remote Desktop Protocol (RDP) connection to connect to a Windows machine, the connection fails after entering the credentials, and the following error occurs:
 
 > Remote Desktop cannot verify the identity of the remote computer because there is a time or date difference between your computer and the remote computer. Make sure your computer's clock is set to the correct time, and then try connecting again. If the problem occurs again, contact your network administrator or the owner of the remote computer.
 
 > [!NOTE]
-> For the troubleshooting, it is important to understand if the error is persistent or intermittent. To confirm this, restart the affected Windows machine and check if the issue is still reproduced.
+> For troubleshooting, it's important to understand if the error is persistent or intermittent. To confirm this, restart the affected Windows machine and check if the issue is still reproduced.
 
 ## RDP error is persistent
 
-If the error is persistent, it usually occurs when there's a time difference between the client computer or remote computer and the target domain controller.
+If the error is persistent, it usually occurs when there's a time difference between the client or remote computer and the target domain controller.
 
 > [!NOTE]
-> In case you have a time inaccuracy, you may be able to connect via RDP using a local account.
+> In case you have a time inaccuracy, you can connect via RDP using a local account.
 
 To narrow the possible causes, follow these steps:
 
-1. Determine if the time inaccuracy is in the client machine, server machine or in the domain controller (DC).
+1. Determine if the time inaccuracy is in the client machine, server machine, or the domain controller (DC).
 
     1. Open a command prompt and run the following command:
 
@@ -37,7 +37,7 @@ To narrow the possible causes, follow these steps:
         net time \\<FQDN of the machine>
         ```
 
-    2. If required, force time synchronization by using the following commands in the affected machine:
+    2. If necessary, force time synchronization by using the following commands in the affected machine:
 
         ```console
         net stop w32time #To stop the Windows Time service
@@ -49,17 +49,17 @@ To narrow the possible causes, follow these steps:
 
 ## RDP error is intermittent
 
-If the error is intermittent, and it usually occurs after the Windows machine is running for several days and a restart temporarily fixes the issue, the cause may be a Transmission Control Protocol (TCP) port exhaustion.
+If the error is intermittent and usually occurs after the Windows machine runs for several days, and a restart temporarily fixes the issue, the cause may be that the Transmission Control Protocol (TCP) port is exhausted.
 
-Other RDP errors may be related with a TCP port exhaustion, such as:
+Other RDP errors may be related to TCP port exhaustion, such as:
 
 - > We can't sign you in with this credential because your domain isn't available. Make sure your device is connected to your organization's network and try again. If you previously signed in on this device with another credential, you can sign in with that credential.
 - > There are currently no logon servers available to service the logon request.
 
 > [!NOTE]
-> Usually only domain accounts are affected, you may be able to connect via RDP using a local account.
+> Usually, only domain accounts are affected, so you may be able to connect via RDP using a local account.
 
-To check if there's a port exhaustion on the affected machine, open system logs in the Event Viewer and check if any of the following events are logged.
+To check if port exhaustion exists on the affected machine, open system logs in the Event Viewer and check if any of the following events are logged.
 
 |Event ID  |Source  |Description  |
 |---------|---------|---------|
@@ -68,7 +68,7 @@ To check if there's a port exhaustion on the affected machine, open system logs 
 |4231     |Tcpip         |A request to allocate an ephemeral port number from the global TCP port space has failed due to all such ports being in use.         |
 |5719     |NETLOGON         |This computer was not able to set up a secure session with a domain controller in domain CONTOSO due to the following:<br>We can't sign you in with this credential because your domain isn't available. Make sure your device is connected to your organization's network and try again. If you previously signed in on this device with another credential, you can sign in with that credential.<br>This may lead to authentication problems. Make sure that this computer is connected to the network. If the problem persists, please contact your domain administrator.<br><br>ADDITIONAL INFO<br>If this computer is a domain controller for the specified domain, it sets up the secure session to the primary domain controller emulator in the specified domain. Otherwise, this computer sets up the secure session to any domain controller in the specified domain.         |
 
-If any of the events are reported in the system logs, you may have a process or service causing a TCP port exhaustion.
+If any of the events are reported in the system logs, there may be a process or service causing the TCP port to exhaust.
 
 To troubleshoot a TCP port exhaustion issue, see [Troubleshoot port exhaustion issues](/troubleshoot/windows-client/networking/tcp-ip-port-exhaustion-troubleshooting) to understand how to identify the misbehaving process.
 
@@ -76,4 +76,4 @@ Finally, when the issue occurs, stop the misbehaving process, and then sign in v
 
 ## Contact Microsoft Support
 
-If the misbehaving process is one from Microsoft, or if the preceding steps can't resolve the issue, contact Microsoft Support for further assistance.
+If the misbehaving process is from Microsoft, or the preceding steps can't resolve the issue, contact Microsoft Support for further assistance.
