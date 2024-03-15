@@ -2,7 +2,7 @@
 title: Interoperability between GDI and GDI+
 description: Explains how to mix GDI and GDI+ drawing operations in the same code path.
 ms.date: 12/19/2023
-ms.custom: sap:gdi-plus-api
+ms.custom: sap:Graphics and Multimedia development\GDI+ API
 ms.reviewer: V-JEFFBO, jhornick
 ms.topic: article
 ms.subservice: graphics-multimedia-dev
