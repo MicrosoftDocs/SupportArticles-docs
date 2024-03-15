@@ -1,17 +1,17 @@
 ---
 title: Troubleshoot hosted machines in Power Automate for desktop
-description: Suggestions for troubleshooting hosted machine issues in Power Automate for desktop.
+description: This article provides suggestions for how to troubleshoot hosted machine issues in Power Automate for desktop.
 ms.reviewer: kenseongtan, pefelesk, tapanm
 ms.date: 03/13/2024
 ms.custom: sap:Desktop flows\
 ---
 # Troubleshoot hosted machines in Power Automate for desktop
 
-This article provides suggestions for troubleshooting [hosted machine](/power-automate/desktop-flows/hosted-machines) issues in Power Automate for desktop.
+This article provides suggestions about how to troubleshoot issues that affect [hosted virtual machines (VMs)](/power-automate/desktop-flows/hosted-machines) in Power Automate for desktop.
 
-The following table provides information about hosted machine provisioning errors and steps to mitigate such errors.
+The following table provides information about hosted machine provisioning errors and the steps to mitigate such errors.
 
-| Error code | Short Summary | Description | Learn more |
+| Error code | Short summary | Description | Learn more |
 | ----------| --------------|-------------|------------|
 | intuneEnrollFailed | We can’t complete MEM enrollment of this Cloud PC. Check MEM policy settings and retry. If that doesn’t work, contact Customer support. | Intune MDM enrollment has failed. During %brandName% provisioning, an Intune MDM enrollment occurs. This action has failed. Possible causes for this issue include: Windows enrollment is blocked in Intune, the Intune endpoints can’t be reached on your vNet, or your Intune tenant isn’t in a healthy state. Ensure the Intune MDM enrollment will be successful and retry provisioning. | [Troubleshooting Windows enrollment errors](/troubleshoot/mem/intune/device-enrollment/troubleshoot-windows-enrollment-errors) |
 | intuneEnroll_BlockedByEnrollmentRestriction | An Intune enrollment restriction exists for this user/tenant, causing MDM enrollment to fail. Ensure Windows enrollment is allowed in your Intune tenant. | Intune enrollment restriction blocking enrollment. An Intune enrollment restriction exists for this user/tenant, causing MDM enrollment to fail. Ensure Windows enrollment is allowed in your Intune tenant. | [Intune enrollment failed](/windows-365/enterprise/provisioning-errors#intune-enrollment-failed) |
@@ -46,7 +46,7 @@ The following table provides information about hosted machine provisioning error
 
 - Network Level Authentication (NLA) not disabled
 
-  You might see the following error details if an unattended flow run is triggered against a machine that's NLA-enabled:
+  You might see the following error details if an unattended flow run is triggered against a VM that's NLA-enabled:
 
   > Could not create unattended session with these credentials. Please make sure you have Network Level Authentication (NLA) disabled in your remote settings if you’re using Microsoft Entra credentials.
 
@@ -54,17 +54,17 @@ The following table provides information about hosted machine provisioning error
 
 - Active session exists
 
-  You might see the following error details when an unattended flow run is triggered against a machine with an active user session:
+  You might see the following error details if an unattended flow run is triggered against a VM that has an active user session:
 
   > No machine able to run the desktop flow has been found. Aborting execution. Error encountered when connecting to machines: There is a user session on the target machine. Cannot execute unattended desktop flow.
 
-  When "reuse session" is disabled, no active user session should be running on the target machine. To resolve this issue, open the Task Manager and go to the **Users** tab, terminate all other user sessions except for the current session, and then sign out from the machine.
+  If the "reuse session" option is disabled, no active user session should be running on the target VM. To resolve this issue, open Task Manager, select the **Users** tab, terminate all other user sessions except the current session, and then sign out from the VM.
 
   :::image type="content" source="media/troubleshoot-hosted-machines-in-power-automate-for-desktop/task-manager-sessions.png" alt-text="Screenshot of the Users tab in Task Manager.":::
 
 ## More information
 
-- [Errors related to VM Image](/graph/api/resources/cloudpcdeviceimage?#cloudpcdeviceimagestatusdetails-values) used in hosted machine
-- [Errors related to network connection](/graph/api/resources/cloudpconpremisesconnectionhealthcheck#cloudpconpremisesconnectionhealthcheckerrortype-values) used in hosted machine
+- [Errors related to a VM image](/graph/api/resources/cloudpcdeviceimage?#cloudpcdeviceimagestatusdetails-values) that's used in a hosted virtual machine
+- [Errors related to network connection](/graph/api/resources/cloudpconpremisesconnectionhealthcheck#cloudpconpremisesconnectionhealthcheckerrortype-values) that's used in a hosted VM.
 
 <!--- End of original article markdown --->
