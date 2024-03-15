@@ -1,9 +1,9 @@
 ---
 title: Close the Sales Item Detail Entry window
 description: Provides a solution to an error that occurs when you run a sales transaction integration that has extended pricing enabled for an item on promotion.
-ms.reviewer: kvogel, bgardner
+ms.reviewer: theley, kvogel, bgardner
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # "Please close the Sales Item Detail Entry window before continuing" Error message when you run a sales transaction integration that has extended pricing enabled for an item on promotion in Integration Manager for Microsoft Dynamics GP
 

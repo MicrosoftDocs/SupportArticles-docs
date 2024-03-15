@@ -1,9 +1,9 @@
 ---
 title: Stored Procedure GLpBatchCleanup Returned
 description: Provides a solution to an error that occurs when you post a batch in the general ledger in Microsoft Dynamics GP.
-ms.reviewer: lmuelle
+ms.reviewer: theley, lmuelle
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # "The Stored Procedure GLpBatchCleanup Returned the Following Results: DBMS: 0, Dynamics: 20486" Error message when you post a batch in the general ledger in Microsoft Dynamics GP
 

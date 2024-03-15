@@ -8,6 +8,7 @@ editor: v-jsitser
 ms.reviewer: v-leedennis, jarrettr
 ms.service: active-directory
 ms.subservice: app-mgmt
+ms.topic: overview
 content_well_notification: AI-contribution
 ai-usage: ai-assisted
 ---

@@ -6,6 +6,7 @@ documentationcenter: ''
 author: genlin
 manager: dcscontentpm
 tags: ''
+ms.custom: linux-related-content
 ms.service: virtual-machines
 ms.subservice: vm-cannot-start-stop
 ms.collection: linux

@@ -1,9 +1,9 @@
 ---
 title: How to add Purchases or Inventory account to alternate
 description: Describes how to add these accounts to the alternate POP Purchase Order Blank Form. By default, this report contains the Project Number and the Cost Category. You must be an administrator to complete these steps.
-ms.reviewer: jchrist
+ms.reviewer: theley, jchrist
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # How to add Purchases account or Inventory account to the alternate "POP Purchase Order Blank Form" in Project Accounting
 

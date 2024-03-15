@@ -1,9 +1,9 @@
 ---
 title: Dynamics needs a shared directory to store your OLE notes error when you click the Note icon in Microsoft Dynamics GP
 description: Fixes an issue in which you receive an error when you click the Note icon.
-ms.reviewer: kyouells, sarahcud
+ms.reviewer: theley, kyouells, sarahcud
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # "Dynamics needs a shared directory to store your OLE notes" error message when you click the Note icon in Microsoft Dynamics GP
 

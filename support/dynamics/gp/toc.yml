@@ -53,8 +53,6 @@
       href: guidelines-that-support-professionals-use.md
     - name: Developer Toolkit
       href: developer-toolkit.md
-    - name: Different packages that are available for Integration Manager
-      href: available-packages-integration-manager.md
     - name: eConnect requires Integrated Security
       href: econnect-requires-integrated-security.md
     - name: eConnect Serialization.dll doesn't return expected value
@@ -69,8 +67,6 @@
       href: error-when-you-open-integration-manager.md
     - name: Error when running a Dynamics eConnect Destination Adapter integration
       href: login-failed-for-user.md
-    - name: Error when running an integration in Integration Manager
-      href: errors-when-you-run-an-integration.md
     - name: Error when running an integration in Integration Manager in a Citrix environment
       href: the-destination-could-not-be-initialized.md
     - name: Error when running the Validating Product Version Information process
@@ -109,12 +105,6 @@
       href: errors-display-when-you-integrate-accounts.md
     - name: Example of a PATimeSheetsType XML Schema in eConnect
       href: example-of-patimesheetstype-xml-schema-in-econnect.md
-    - name: Fail to install Web Services
-      href: fail-to-install-web-services-for-dynamics-gp.md
-    - name: Faq about the Extender objects
-      href: frequently-asked-questions-about-extender-objects.md
-    - name: Faq about the File Exchange System
-      href: frequently-asked-questions-about-file-exchange-system.md
     - name: Faq about the integration of SSRS
       href: faq-the-integration-ssrs.md
     - name: Fatal error during installation when installing Integration Manager
@@ -131,8 +121,6 @@
       href: upgrade-a-dexterity-based-application.md
     - name: How to use ADO with VBA on a window
       href: use-activex-data-object-vba.md
-    - name: How to use the new RetrieveGlobals9.dll file
-      href: use-the-new-retrieveglobals9-dot-dll-file.md
     - name: How to create an IMTraceLog.txt file for Integration Manager
       href: how-to-create-imtracelog-txt-file-for-integration-manager.md
     - name: How to create custom eConnect Requester Document Type to retrieve Comment_1
@@ -167,16 +155,12 @@
       href: initialization-errors-when-removing-or-installing-integration-manager.md
     - name: Input string was not in a correct format
       href: input-string-was-not-a-correct-format.md
-    - name: Input string was not in a correct format when you process a message in eConnect
-      href: input-string-was-not-in-correct-format-error-when-processing-message-in-econnect.md
     - name: Integration Manager log file doesn't print
       href: integration-manager-log-file-does-not-print.md
     - name: Integration performance decreases after an upgrade
       href: integration-performance-decreases-use-sql-source-file.md
     - name: Invalid Unit Cost when doing PA Timesheet integration
       href: invalid-unit-cost-error-when-doing-pa-timesheet-integration.md
-    - name: Issues when integrating a blanket purchase order transaction
-      href: problems-integrate-blanket-purchase-order-transaction-type.md
     - name: Login failed for user '[User Name]'
       href: login-failed-user-user-name.md
     - name: Non-administrator user experiences VBA permission problems
@@ -193,8 +177,6 @@
       href: paste-field-level-translation-in-integration-manager.md
     - name: Pay code does not exist for Employee in rate table
       href: pay-code-does-not-exist-employee.md
-    - name: PDF attachment is sent as a dat file or is missing
-      href: pdf-attachement-is-sent-as-dat-file-or-missing-if-using-dexterity-custom-code-to-send-email.md
     - name: Please close the Sales Item Detail Entry window before continuing
       href: close-the-sales-item-detail-entry-window.md
     - name: Questions about licensing certain modules
@@ -231,8 +213,6 @@
       href: transaction-line-info-not-imported-when-sql-table-used-as-integration-source.md
     - name: Unavailable Integration Manager option and Table Import option
       href: integration-manager-and-table-import-option-unavailable.md
-    - name: Upgrade integrations for Great Plains Integration Manager
-      href: upgrade-integrations-for-great-plains-integration-manager.md
     - name: Upgrade an application that uses the Crypto.dll file
       href: upgrade-apps-to-use-gpconndll-gpconnnetdll-file.md
     - name: Use a VBA script to connect to a SQL database
@@ -369,8 +349,6 @@
         href: different-types-purchase-order-statuses.md
       - name: Display transfer number in the Purchase Order Processing Document Inquiry window
         href: display-transfer-number-in-purchase-order-processing-document-inquiry.md
-      - name: Dynamics GP doesn't respond when selecting Submit for Approval
-        href: microsoft-dynamics-gp-does-not-respond.md
       - name: Error when printing imported purchase order
         href: fail-to-print-imported-purchase-order.md
       - name: Error when selecting an existing purchase order
@@ -395,10 +373,6 @@
         href: how-to-add-user-category-values-to-pop-purchase-order-blank-form.md
       - name: How to create a SmartList object that has a Go To function
         href: how-to-create-smartlist-object-that-has-go-to-function.md
-      - name: How to modify POP Purchase Order Blank to include information from Extender
-        href: how-to-modify-pop-purchase-order-blank-to-include-information-from-extender.md
-      - name: How to print a purchase order from history
-        href: print-a-purchase-order-from-history.md
       - name: How to remove purchase orders that have been received but not invoiced or matched
         href: how-to-remove-purchase-orders-that-are-received-but-not-invoiced-or-matched.md
       - name: How to retrieve the next purchase order number for Purchase Order Processing documents
@@ -443,8 +417,6 @@
         href: reverse-a-pop-return.md
       - name: The Received/Not Invoiced report shows shipment receipts
         href: the-rni-report-shows-shipment-receipts.md
-      - name: The table isn't updated with the values
-        href: the-table-is-not-updated-the-values.md
       - name: The tax detail record doesn't exist
         href: the-tax-detail-record-does-not-exist.md
       - name: Unhandled script exception Value of range when opening purchase order
@@ -539,20 +511,14 @@
     items:
       - name: A cash receipt showing as a negative amount
         href: a-cash-receipt-shows-as-a-negative-amount.md
-      - name: Enter an Australian domestic or an international telephone number
-        href: enter-an-australian-domestic-telephone-no-dot.md
       - name: Error when VAT Return is generated
         href: error-on-vat-return.md
       - name: Error when you delete a Sales Order Processing batch
         href: fail-to-delete-sales-order-processing.md
-      - name: Features in Microsoft Dynamics GP specific to Argentina
-        href: features-in-dynamics-gp-specific-to-argentina.md
       - name: How the PAYG withholding amount is calculated
         href: how-the-payg-withholding-amount-is-calculated-for.md
       - name: How tax schedules work for the Australian GST
         href: how-tax-schedules-work-for-australian-gst.md
-      - name: How to electronically submit the VAT Return or VAT Daybook report
-        href: how-to-electronically-submit-the-vat-return-or-vat-daybook-report.md
       - name: How to handle reduced-input tax credits in Business Activity Statement reporting tool
         href: how-to-handle-reduced-input-tax-credits-in-business-activity-atatement-reporting-tool.md
       - name: How to set up the VAT Daybook reports
@@ -689,8 +655,6 @@
         href: move-reconciled-transactions-to-history-to-resolve-performance-issues.md
       - name: No transactions show in the Select Bank Transaction window
         href: no-transactions-show.md
-      - name: Performance issue with Checkbook Register Inquiry window
-        href: performance-issue-with-checkbook-register-inquiry-window.md
       - name: Reconcile process handles a voided transaction in Bank Reconciliation
         href: reconcile-process-handles-transaction.md
       - name: Reconcile to GL routine for Bank Reconciliation
@@ -717,8 +681,6 @@
         href: assets-have-not-been-fully-depreciated-for-current-year-error.md
       - name: Can't import asset general and asset book information
         href: error-unable-to-obtain-next-faindex.md
-      - name: Changes occur in the luxury automobile tax limits for depreciation schedules
-        href: changes-occur-in-the-luxury-automobile-tax-limits-for-depreciation-schedules.md
       - name: Clear data for Fixed Asset files to rerun an import
         href: clear-data-for-the-fixed-asset-files.md
       - name: Depreciation is calculated incorrectly
@@ -741,8 +703,6 @@
         href: fully-depreciated-asset-still-has-remaining-nbv-amount.md
       - name: GP Import for asset information fails for Fixed Asset Management
         href: gp-import-for-asset-information-fails-for-fixed-asset-management.md
-      - name: GPS Error 54 or SQL Error 2601 or ODBC Error 2300
-        href: gps-error-54-sql-error-2601-or-odbc-error-2300.md
       - name: How to enable the Projection button in the Depreciation Projection window
         href: how-to-enable-the-projection-button-in-depreciation-projection.md
       - name: How to modify the Fixed Assets Period Projection - Detail report
@@ -855,8 +815,6 @@
         href: how-average-exchange-rate-affects-realized-gains-and-losses-in-revaluation-report.md
       - name: How to add Multidimensional Analysis information to the Trial Balance Detail report
         href: how-to-add-multidimensional-analysis-info-to-trial-balance-detail.md
-      - name: How to create a calculated field in Report Writer to print Extender fields
-        href: how-to-create-calculated-field-in-report-writer-to-print-extender-fields.md
       - name: How to import Excel spreadsheets into General Ledger
         href: how-to-import-excel-spreadsheets-into-general-ledger.md
       - name: How to print a General Posting Edit List that includes distribution accounts
@@ -891,14 +849,10 @@
         href: query-timeout-expired-error-during-year-end-close.md
       - name: Re-create the Account Index Master table (GL00105)
         href: re-create-account-index-master-table-gl00105.md
-      - name: Resynchronize Audit Trail codes in a Multilingual installation
-        href: resynchronize-audit-trail-codes.md
       - name: Retained earnings account not found when closing GL year
         href: retained-earnings-account-not-found-errror-when-closing-gl-year.md
       - name: RM SQL scripts to locate RM transactions that are not in GL
         href: rm-sql-scripts-to-locate-rm-transactions-not-in-gl.md
-      - name: Stop Audit Trail triggers in the test company from updating the live audit database
-        href: stop-audit-trail-triggers-in-the-test-company-from-updating-live-audit-database.md
       - name: System crashes or not responding when duplicating Advanced Financial report
         href: system-crashes-or-not-responding-when-duplicating-advanced-financial-report.md
       - name: The ADP import process in Payroll Connect
@@ -963,8 +917,6 @@
         href: management-reporter-2012-application-service-fails-to-set-up.md
       - name: Configuring Data Mart integration fails with nondefault SQL Server port
         href: configuring-data-mart-integration-fails-when-specifying-nondefault-sql-port.md
-      - name: Consolidate companies that have different fiscal year ends produce wrong results
-        href: consolidate-companies-that-have-different-year-ends-produce-wrong-results.md
       - name: Consolidated Currency Translation with Management Reporter GP Legacy Provider
         href: consolidated-currency-translation.md
       - name: Currency USD does not exist for company
@@ -975,8 +927,6 @@
         href: data-provider-framework-error-in-microsoft-management-reporter-2012-for-dynamics-gp.md
       - name: Data Provider isn't available in Source System drop-down list
         href: data-provider-not-available-in-source-system-drop-down-list.md
-      - name: Description of the Management Reporter Base Collector diagnostic
-        href: description-of-management-reporter-base-collector-diagnostic.md
       - name: Error when you drill back to Dynamics GP
         href: fail-to-drill-back-to-dynamics-gp-from-management-reporter-2012.md
       - name: Errors after Management Reporter service account password expires
@@ -985,18 +935,10 @@
         href: how-to-create-an-excel-spreadsheet-to-load-actuals-into-forecaster.md
       - name: Information on using the Microsoft Management Reporter Migration Wizard
         href: information-on-using-microsoft-management-reporter-migration-wizard.md
-      - name: Information that the Management Reporter Client Diagnostic collects
-        href: information-that-management-reporter-client-diagnostic-collects.md
-      - name: Management Reporter 2012 AX 2012 User Validation diagnostic
-        href: management-reporter-2012-ax-2012-user-validation-diagnostic.md
       - name: Management Reporter 2012 Base diagnostic
         href: management-reporter-2012-base-diagnostic.md
-      - name: Management Reporter 2012 Company Code Update Diagnostic
-        href: management-reporter-2012-company-code-update-diagnostic.md
       - name: Management Reporter 2012 Data mart integration error Index was out of range
         href: management-reporter-2012-data-mart-integration-error-index-was-out-of-range.md
-      - name: Management Reporter 2012 Exception Call Stack Diagnostic
-        href: management-reporter-2012-exception-call-stack-diagnostic.md
       - name: Management Reporter 2012 Process Service doesn't stay running
         href: management-reporter-2012-process-service-stops-and-restarts-continually.md
       - name: Management Reporter 2012 Process Service stops unexpectedly
@@ -1007,8 +949,6 @@
         href: management-reporter-report-viewer-stops-working-if-image-is-in-header.md
       - name: Management Reporter Report Viewer stops working when viewing a report
         href: management-reporter-report-viewer-stops-working-when-reviewing-report.md
-      - name: MaxItemsInObjectGraphin Microsoft Management Reporter AX 2012 DDM task
-        href: maxitemsinobjectgraph-error-in-management-reporter-ax-2012-ddm-task.md
       - name: Microsoft Management Reporter 2012 Cumulative Update 10
         href: microsoft-management-reporter-2012-cumulative-update-10.md
       - name: Microsoft Management Reporter 2012 Cumulative Update 11
@@ -1023,8 +963,6 @@
         href: object-reference-not-set-to-instance-of-object-error-when-creating-report-in-management-reporter.md
       - name: Processing will be aborted when running ERP Integration
         href: processing-will-be-aborted-error-when-running-erp-integration.md
-      - name: Removal of the Dynamics AX 2012 Legacy Data Provider for Management Reporter 2012
-        href: removal-of-dynamics-ax-2012-legacy-data-provider-for-management-reporter-2012.md
       - name: The company calendar couldn't be retrieved
         href: company-calendar-could-not-be-retrieved.md
       - name: The connection to the Microsoft Dynamics GP database failed
@@ -1081,8 +1019,6 @@
         href: bad-datatype-for-script-cmd-columntable-error-when-creating-eft.md
       - name: Batch status messages in the Batch Recovery window
         href: batch-status-messages-in-the-batch-recovery-window.md
-      - name: Can you electronically submit 1099-MISC forms?
-        href: submit-1099-misc-forms-electronically.md
       - name: Can't print EFT checks in Payables Management module
         href: error-print-eft-checks-in-payables-management-module.md
       - name: Can't save an intercompany transaction
@@ -1115,8 +1051,6 @@
         href: continue-a-check-run-that-was-interrupted.md
       - name: Create calculated fields to filter Payables Management documents
         href: create-calculated-fields.md
-      - name: Credit card number field that was removed from SmartList and from Advanced Lookups
-        href: credit-card-number-field-removed-smartlist-advanced-lookups.md
       - name: Custom data fields for Electronic Funds Transfer (EFT) formats
         href: custom-data-fields-for-electronic-funds-transfer-formats.md
       - name: Description of the fiscal year-end closing process
@@ -1137,12 +1071,8 @@
         href: electronic-reconcile-appears-in-registration-window.md
       - name: Email PM EFT Remittances
         href: email-pm-eft-remittances-steps.md
-      - name: Enable Email functionality on all Sales and Purchasing document formats
-        href: enable-email-functionality-on-all-formats.md
       - name: Enter a prepayment for a purchase order
         href: enter-prepayment-a-purchase-order.md
-      - name: Error when emailing EFT Remittances in Payables Management
-        href: not-privileged-to-run-report.md
       - name: Error when saving operation in PM_Transaction_WORK table
         href: error-occurs-after-printing-an-edit-list.md
       - name: Error when you change account number for PURCH account type
@@ -1201,14 +1131,10 @@
         href: how-to-print-check-date-fields-in-mmddyyyy-in-payables-management-reports.md
       - name: How to reupload SafePay Transactions Upload file in different format
         href: how-to-reupload-safepay-transactions-upload-in-different-format-after-processed.md
-      - name: How to solve alignment problems in 1099 reports in Payables Management
-        href: how-to-solve-alignment-issues-in-1099-reports.md
       - name: How to truncate the last two decimal places for payables checks in Check Total
         href: how-to-truncate-the-last-two-decimal-places-for-payables-checks-in-check-total.md
       - name: Information on credit card processing in Payables Management
         href: information-credit-card-processing.md
-      - name: Information about the Check Amount to Words tool
-        href: information-about-the-check-amount-to-words-tool.md
       - name: Information about what may cause an interruption
         href: information-about-what-may-cause-interruption-when-posting-batch.md
       - name: Issues when you create a manual payment to pay off an invoice
@@ -1219,8 +1145,6 @@
         href: multiple-addenda-lines-the-eft-file.md
       - name: Only one addenda record is listed for each vendor payment in the EFT file
         href: only-one-addenda-record-is-listed-for-each-vendor-payment.md
-      - name: Payables batch shows error after an upgrade to Dynamics GP 2010
-        href: getchange-operation-on-table-cmtransactioneft-table-failed-accessing-sql-data.md
       - name: Payables Management EFT Standard ACH format
         href: payables-eft-standard-ach-format.md
       - name: Prevent zero dollar remittances from printing
@@ -1241,16 +1165,12 @@
         href: reprint-checks-payables-management.md
       - name: Retrieve next payment number for Payables Management payments
         href: retrieve-next-payment-number-for-payables-management-payments.md
-      - name: Safe Pay file doesn't pick up a reissued check from Payables Management or Payroll
-        href: safepay-file-not-pick-up-reissued-check-from-payables-management-or-payroll.md
       - name: SCRIPT_CMD_COLUMNOFTABLE when creating an EFT file
         href: columnoftable-error-when-creating-eft-file.md
       - name: Set up backup withholding for reporting for miscellaneous vendors
         href: set-up-backup-withholding-reporting.md
       - name: Settlement line calculates wrongly in Electronic Funds Transfer file
         href: settlement-line-calculates-incorrectly-in-eft.md
-      - name: Slow performance when selecting the Generate EFT File button
-        href: slow-performance-when-selecting-the-button.md
       - name: State information does not populate Box 17 and 18 on 1099-MISC
         href: state-information-does-not-populate-box-17-and-18-on-1099-form.md
       - name: Steps to modify the BAI file format in Electronic Reconcile
@@ -1291,18 +1211,12 @@
         href: what-print-previously-applied-docs-does.md
       - name: Year-end closing procedures for the Payables Management module
         href: year-end-closing-payables-management.md
-      - name: You aren't allowed to delete unposted documents
-        href: not-allowed-delete-unposted-documents.md
-      - name: You don't have security privileges to open this window
-        href: you-do-not-have-security-privileges-to-open-this-window.md
       - name: You are creating a check with remit-to address PRIMARY
         href: you-are-creating-a-check-with-remit-to-address-primary-error.md
       - name: Zero-dollar Remittances go to Batch Recovery
         href: zero-dollar-remittances-go-to-batch-recovery.md
     - name: Receivable Mangement
       items:
-      - name: A pdf hangs when sending emails for RM Statements
-        href: a-pdf-hangs-when-sending-emails.md
       - name: Add "Hold" field from RM Customer MSTR table to Sales Order Processing Invoice report form
         href: add-hold-field-from-rm-customer-mstr-table-to-sales-processing-invoice-report.md
       - name: Add aging buckets to Summary Historical Aged Trial Balance report
@@ -1321,18 +1235,12 @@
         href: unable-to-remove-this-transaction-if-printing-receivable-transaction-history-removal.md
       - name: Applying Multicurrency documents in Receivables Management
         href: applying-multicurrency-documents-in-receivables-management.md
-      - name: Can't email CRM Statement templates
-        href: no-option-to-email-rm-statement-templates.md
-      - name: Can't run an integration for the Sales Transaction destination
-        href: error-could-not-determine-scrolling-window.md
       - name: Can't process EFT batches in Payables or Receivables
         href: cannot-process-eft-batches-due-to-bank-country-region-error.md
       - name: Can't transfer a requisition to a purchase order 
         href: error-unable-add-entity-because-it-already-exists.md
       - name: Cash account isn't populated in Cash Receipts Distribution Entry
         href: cash-account-is-not-populated-in-cash-receipts-distribution-entry.md
-      - name: Cash receipts are automatically depositing into Bank Rec
-        href: cash-receipt-batches-post-as-individual-deposits.md
       - name: Change amount is incorrect when you run the Historical Trial Balance report
         href: net-change-amount-incorrect-run-historical-trial-balance.md
       - name: Cost is $0.00 when you enter an RMA and receive it
@@ -1405,8 +1313,6 @@
         href: reduce-customers-outstanding-credit-balance.md
       - name: Regenerate Taxes Utility
         href: regenerate-taxes-utility.md
-      - name: Right margin cut off in emails for RM Statement
-        href: right-margin-cut-off-in-emails.md
       - name: RM statement balance incorrect when Summarize To Date is used
         href: rm-statement-balance-incorrect-when-summarize-to-date-used.md
       - name: Scheduled Payments transaction and void a scheduled payment
@@ -1439,38 +1345,20 @@
         href: year-end-closing-procedures-for-receivables-management.md
   - name: Human Resources
     items:
-      - name: A newer version of Human Resources application has been found
-        href: a-newer-version-of-the-hunman-resources-app-has-been-found-error-when-starting.md
-      - name: ACA blog links
-        href: aca-blog-links-dynamics-gp.md
       - name: Accrual Checkboxes in Accrual Period Setup not automatically checked off
         href: accrual-checkboxes-in-accrual-period-setup-not-automatically-mark-off.md
       - name: An attendance transaction doesn't exist in Human Resources warning
         href: an-attendance-transaction-does-not-exist-in-human-resources-warning.md
-      - name: Benefits that are set up based on a deduction calculate incorrectly
-        href: benefit-setup-based-on-deductions-calculates-incorrectly.md
       - name: Can't accrue transactions for a date
         href: cannot-accrue-transactions-a-date.md
       - name: Check Stub or Earnings Statement displays Attendance balances
         href: check-stub-or-earnings-statement-displays-attendance.md
-      - name: Class ID not updated between Human Resources and Canadian Payroll
-        href: class-id-not-updated-between-human-resources-and-canadian-payroll.md
-      - name: Correct negative FMLA hours
-        href: correct-negative-fmla-hours.md
-      - name: Dex Procedure to create HR Attendance Transactions
-        href: dex-procedure-to-create-hr-attendance-transactions.md
       - name: Dynamics GP hangs when selecting for payroll options for Benefit
         href: mergefield-was-not-found-header-record.md
-      - name: Edit an attendance transaction in Human Resources
-        href: edit-attendance-transaction-in-human-resources.md
       - name: How to set up Pay Steps in Human Resources
         href: how-to-set-up-pay-steps-in-human-resources.md
       - name: HR is registered when using the Class ID field
         href: hr-is-registered-error-message.md
-      - name: Human Resources is registered
-        href: human-resources-is-registered.md
-      - name: Human Resources reports for OSHA 300, OSHA 300A, and OSHA 301 display incorrectly
-        href: human-resources-reports-for-osha-300-300a-301-are-wrong.md
       - name: Importing data into the Human Resources module
         href: importing-data-into-human-resources-module.md
       - name: Information about HR Accrual Types
@@ -1479,18 +1367,12 @@
         href: what-reports-can-use-to-view-hr-attendance-balances.md
       - name: Reprinted Paystub pulls Attendance Balance from Payroll instead of Human Resources
         href: reprinted-paystub-pulls-attendance-balance-from-payroll.md
-      - name: Set up a Health Savings Account in Dynamics GP
-        href: set-up-a-health-savings-account.md
-      - name: This module isn't registered error in HR training or license window
-        href: this-module-is-not-registered-error-in-hr-training-or-license-window.md
       - name: Update the Inactive status for a Benefit/Deduction
         href: update-the-inactive-status.md
       - name: Use Reconcile Attendance Transactions utility when attendance transaction info is imported
         href: use-reconcile-attendance-transactions-utility-with-imported-attendance-transaction.md
       - name: Vacation or Sick Time pay hours exceed employee vacation or sick time available warning
         href: vacation-or-sick-time-pay-hours-exceed-employee-vacation-available-warning.md
-      - name: Why doesn't Life Insurance calculate for Life Insurance Enrollment using Human Resources
-        href: life-insurance-calculate-for-life-insurance-enrollment.md
       - name: Wrong number of arguments when selecting Attendance Transactions
         href: wrong-number-of-arguments-when-selecting-attendance-transactions.md
   - name: Manufacturing Series
@@ -1561,10 +1443,6 @@
         href: cannot-create-a-receipt-this-order.md
   - name: Payroll
     items:
-      - name: A REPRINTED employee ID appears in payroll tables
-        href: reprinted-employee-id-appears-in-payroll-tables.md
-      - name: A few employees set up for Direct Deposit receive a check
-        href: a-few-employees-set-up-for-direct-deposit-receive-a-check.md
       - name: ACH Fields Setup window fields
         href: ach-fields-setup-window-fields.md
       - name: Add Display Calc Work Records shortcut in Canadian Payroll
@@ -1575,8 +1453,6 @@
         href: an-incorrect-recon-batch-is-created.md
       - name: Assign an employee and allocate the wages to different departments
         href: assign-an-employee-allocate-the-wages.md
-      - name: Box 84 isn't available on T4 in Canadian Payroll
-        href: box-84-not-available-on-t4-in-canadian-payroll.md
       - name: Calculations for the Quarterly 941 report in US Payroll
         href: calculations-for-quarterly-941-report-in-us-payroll.md
       - name: Can't import a Canadian Payroll import file
@@ -1585,18 +1461,10 @@
         href: error-activity-exists-for-this-code.md
       - name: Change the sort order for employees to Last Name
         href: change-the-sort-order-last-name.md
-      - name: Check HRP Suite versions
-        href: check-payroll-extensions-version.md
-      - name: Checks cannot be calculated while year-end closing is in process
-        href: checks-cannot-be-calculated.md
-      - name: Check Register does not print in Payroll
-        href: check-register-does-not-print-in-payroll.md
       - name: Correct an overpayment that's made to an employee in Payroll
         href: correct-overpayment-made-to-employee.md
       - name: Correcting differences between federal wages in Form 941
         href: correct-differences-federal-wages.md
-      - name: CPP and EI taxes not stopping at Yearly Maximum in Canadian Payroll
-        href: cpp-and-ei-taxes-not-stopping-at-yearly-maximum-in-canadian-payroll.md
       - name: Create a test or historical company in Payroll or in Canadian Payroll
         href: create-test-historical-company-payroll.md
       - name: Create a tiered percent 401(k) deduction with a matching benefit
@@ -1613,8 +1481,6 @@
         href: could-not-find-stored-procedure.md
       - name: Error packing batch entry file -1
         href: packing-batch-entry-file-1-error.md
-      - name: Error when you save a future effective record
-        href: fail-to-save-future-effective-record.md
       - name: Errors when selecting a batch in Build Payroll Checks
         href: errors-when-selecting-a-batch.md
       - name: Error when you print the Benefit Summary report
@@ -1629,8 +1495,6 @@
         href: process-track-an-advance-pay-run.md
       - name: How to set up Quebec QHIP tax in Canadian Payroll
         href: set-up-quebec-qhip-tax-canadian-payroll.md
-      - name: How SUTA/FUTA calculates in Microsoft Dynamics GP
-        href: how-sutafuta-calculates.md
       - name: How to accrue vacation by units in Canadian Payroll
         href: how-to-accrue-vacation-by-units-in-canadian-payroll.md
       - name: How to correct over-withholding of employee payroll taxes
@@ -1645,16 +1509,12 @@
         href: how-to-modify-payroll-check-or-direct-deposit-statement-of-earnings.md
       - name: How to set up and calculate minimum wage balance
         href: how-to-set-up-and-calculate-minimum-wage-balance.md
-      - name: How to set up PTO Manager to accrue a specific number of hours
-        href: how-to-set-up-pto-manager-to-accrue-specific-number-of-hours.md
       - name: How to set up the Vacation Accrual in Canadian Payroll
         href: how-to-set-up-vacation-accrual-in-canadian-payroll.md
       - name: How to split wages between a payroll check and direct deposit statement of earnings
         href: how-to-split-wages-between-payroll-and-direct-deposit-statement-of-earnings.md
       - name: How to use negative deductions to adjust employee records
         href: how-to-use-negative-deductions-to-adjust-employee-records.md
-      - name: Human Resource and Payroll Workflow Setup
-        href: human-resource-and-payroll-workflow-setup.md
       - name: Income Tax calculations or discrepancies with the CRA in Canadian Payroll
         href: income-tax-calculations-discrepancies-with-cra.md
       - name: Incorrect calculations on the Payroll 941 Quarterly Summary Report
@@ -1663,8 +1523,6 @@
         href: information-the-reconcile-process.md
       - name: Information about the tax fields and year-end update fields
         href: tax-fields-year-end-update-fields.md
-      - name: Modify Employer Number on R1 form for Quebec
-        href: modify-employer-number-on-releve-1-form-for-quebec.md
       - name: Order that Canadian Payroll is updated during Update Masters
         href: order-that-canadian-payroll-is-updated-during-update-masters.md
       - name: Payroll deductions are not included when calculating checks
@@ -1687,12 +1545,8 @@
         href: last-year-end-update-field-is-not-updated.md
       - name: The order in which payroll checks are calculated in Payroll
         href: order-payroll-checks-calculated-payroll.md
-      - name: The direct-deposit .ach file not updated
-        href: direct-deposit-ach-file-not-updated-void-payroll-check.md
       - name: The Vac/Sick tab is grayed out or missing on the Employee Maintenance Card
         href: vac-sick-tab-is-grayed-out-or-missing-on-employee-maintenance-card.md
-      - name: Time Management App for Human Resource and Payroll
-        href: time-management-app-hr-payroll.md
       - name: Turn off Garnishment Detail/Summary reports in Payroll
         href: turn-off-garnishment-detail-summary-report.md
       - name: Undefined Symbol FOO764DO5774DD or FOO764DO1098 or Report not found
@@ -1711,14 +1565,10 @@
         href: year-end-closing-procedures-for-the-canadian-payroll-module.md
       - name: You must enter a step/grade value
         href: you-must-enter-a-step-grade-value.md
-      - name: You don't have security privileges to open this window
-        href: cannot-use-payroll-clerk-security-to-calculate-payroll-checks.md
   - name: Project Accounting
     items:
       - name: A billing transaction with an earlier cutoff date exists for this project
         href: billing-transaction-with-earlier-cutoff-date-exists-for-this-project-error.md
-      - name: A get change operation on table MC Currency Account MSTR
-        href: get-change-operation-on-table-mc-currency-account-mstr-failed-accessing-sql-data.md
       - name: An unexpected error has occurred when approving, saving or submitting a timesheet
         href: an-unexpected-error-has-occurred-when-approving-saving-submitting-timesheet.md
       - name: Billing cycle not selecting all transactions in Project Accounting
@@ -1787,70 +1637,44 @@
         href: how-to-print-project-accounting-billing-invoices.md
       - name: Problems occur when you approve a document
         href: problems-occur-when-approving-a-document.md
-      - name: PTE transactions aren't flowing to the Project Accounting tables
-        href: pte-transactions-do-not-flow-pa-tables.md
       - name: Re-create the Project Accounting Reports dictionary
         href: re-create-project-accounting-reports-dictionary.md
       - name: Revenue recognition calculation for service fees in Project Accounting
         href: revenue-recognition-calculation-for-service-fees.md
       - name: Tax calculations in Project Accounting
         href: tax-calculations-in-project-accounting.md
-      - name: The EXECUTE permission was denied on the object when signing in
-        href: execute-permission-was-denied-on-the-object-when-signing-in.md
       - name: The multicurrency billing feature
         href: multicurrency-billing-feature.md
       - name: The Project button is missing from Maintenance window
         href: project-button-missing-from-maintenance.md
       - name: The PA Returned Item Lookup window does not show the expected information
         href: the-pa-returned-item-lookup-window-does-not-show-expected-information.md
-      - name: Unwanted data in Project Accounting after you start over
-        href: unwanted-data-in-project-accounting-after-starting-over.md
       - name: Use Banked paycodes with Project Accounting
         href: use-banked-paycodes-with-project-accounting.md
       - name: What do the Reverse and Correct buttons do in the Select Timesheets for Adjustment window
         href: what-do-the-reverse-and-correct-buttons-do-in-select-timesheets-for-adjustment.md
   - name: RMS
     items:
-      - name: 7973 The Sales Return Account is Inactive when importing items
-        href: 7973-error-when-importing-items-from-headquarters.md
       - name: Can't create Inventory Valuation and GMROI and Inventory Turns reports
         href: cannot-create-inventory-valuation-and-gmroi-and-inventory-turns-reports.md
-      - name: Execution of user code in .NET Framework is disabled error
-        href: execution-of-user-code-in-net-framework-is-disabled-error-after-restoring-sql-database.md
       - name: Guidelines to determine when a support case becomes a consulting engagement
         href: guidelines-to-determine-when-support-case-becomes-consulting-engagement.md
-      - name: How to configure Microsoft Dynamics RMS Store Operations QuickBooks integration
-        href: how-to-configure-store-operations-quickbooks-integration.md
-      - name: How to enable an Ingenico i6550 device
-        href: how-to-enable-an-ingenico-i6550-device.md
-      - name: How to obtain the database schemas
-        href: how-to-obtain-the-database-schemas.md
-      - name: Microsoft Dynamics RMS Diagnostic
-        href: microsoft-dynamics-rms-diagnostic.md
-      - name: Microsoft Dynamics RMS Store Operations SQL Baseline Information Collector
-        href: microsoft-dynamics-rms-store-operations-sql-baseline-information-collector.md
       - name: To connect to this server you must use SQL Server Management Studio
         href: must-use-sql-server-management-studio-error-when-connecting-to-store-database-server.md
   - name: Systems
     items:
-      - name: 64-bit OS supported with Dynamics GP
-        href: run-dynamics-gp-64-bit-os.md
       - name: A connection could not be established
         href: a-connection-could-not-be-established.md
       - name: A Get/Change First Operation on Table coProcess failed
         href: a-get-change-first-operation-failed.md
       - name: A program is trying to send an e-mail program on your behalf message
         href: a-program-is-trying-to-send-an-e-mail-program-on-your-behalf.md
-      - name: Add or Remove Features window is blank
-        href: add-remove-features-window-blank.md
       - name: Advanced SQL Server options in the User Setup window
         href: advanced-sql-server-options-user-setup-window.md
       - name: An overview of the Navigation Pane in Dynamics GP
         href: an-overview-the-navigation-pane.md
       - name: An error has occurred in the script on this page when starting
         href: script-error-when-launching-microsoft-dynamics-gp.md
-      - name: An error was encountered while exporting data error
-        href: error-was-encountered-while-exporting-data-when-exporting-store.md
       - name: Answers to frequently asked questions about international installations
         href: faq-international-installations.md
       - name: Application must close when starting Dynamics GP
@@ -1863,8 +1687,6 @@
         href: error-when-starting-pstl-shortcuts.md
       - name: Can't print a modified copy of a modified report
         href: error-report-not-found-problem-starting-up-report.md
-      - name: Changes that you make to a Modified report don't print
-        href: changes-a-modified-report-do-not-print.md
       - name: Copy setup tables from one company to another
         href: copy-setup-tables-from-one-company-to-another.md
       - name: Create a Dexsql.log file to troubleshoot error messages
@@ -1889,24 +1711,12 @@
         href: disable-third-party-products-in-dynamicsdot-set-file.md
       - name: Display a date in any format in a report
         href: display-date-in-any-format-in-a-report.md
-      - name: Documentation for Workflow 2.0
-        href: documentation-for-workflow-2-0.md
-      - name: Duplicate entries tracked when signing out using Activity Tracking
-        href: duplicate-entries-tracked-when-signing-out-of-gp.md
       - name: Dynamics GP stops responding or crashes
         href: microsoft-dynamics-gp-stops-responding-crashes.md
-      - name: Dynamics GP crashes when emailing with MAPI after updating Office
-        href: dynamics-gp-crashes-when-emailing-with-mapi-after-updating-office.md
-      - name: Dynamics SQL Database has not been setup for this version
-        href: dynamics-sql-database-has-not-been-setup-for-this-version-error-when-starting-dynamics-gp.md
       - name: 'Dynamics.set: unable to open file'
         href: dynamics-dot-set-unable-open-file.md
       - name: Either there is no default mail client or the current mail client cannot fulfill the message request
         href: email-errors-in-microsoft-dynamics-gp.md
-      - name: Error 0xc0000005 when starting Dynamics GP
-        href: error-0xc0000005-when-you-start-dynamics-gp.md
-      - name: Error Registering table ASI_MSTR_Explorer_Favorites
-        href: error-registering-table.md
       - name: Error when accessing SQL data
         href: error-accessing-sql-data.md
       - name: Error when changing password
@@ -1915,16 +1725,10 @@
         href: errors-when-creating-an-odbc-source-file.md
       - name: Error when selecting Yes to include new code
         href: privilege-error.md
-      - name: Error when sending a report as a .pdf file
-        href: error-when-sending-a-report-a-dot-pdf-file.md
-      - name: Error when viewing a SmartList object
-        href: you-do-not-have-security-privileges.md
       - name: Error when you enter URL for SQL Reporting Services report server or report manager server
         href: fail-to-enter-url-for-sql-reporting-services-report-server.md
       - name: Error when you grant a user access to a test company
         href: error-grant-user-access-test-company.md
-      - name: Error when you perform a Bulk Copy Process
-        href: error-message-perform-bulk-copy-process.md
       - name: Error when you print a report
         href: fail-to-print-a-report.md
       - name: Error when you process in Dynamics GP
@@ -1933,16 +1737,10 @@
         href: fail-to-start-dynamics-gp-on-client-workstations.md
       - name: Error when you try to start Dynamics GP
         href: fail-to-start-dynamics-gp.md
-      - name: Error when you view the home page
-        href: fail-to-view-home-page.md
       - name: Error when opening a window
         href: cannot-access-this-form-dictionary-not-loaded.md
-      - name: Error after installing the Payroll Year-End Update
-        href: error-dictionary-dynamics-reports-dic-needs-upgraded.md
       - name: Error when clicking the Note icon 
         href: error-dynamics-needs-shared-directory-store-ole-notes.md
-      - name: Errors and troubleshooting steps for network connectivity problems
-        href: common-errors-and-troubleshooting-steps-for-network-connectivity-issues.md
       - name: Fail to create a company by using Dynamics GP Utilities
         href: fail-to-create-a-company-with-dynamics-gp-utilities.md
       - name: Fail to delete user record that's stuck in the User Activity window
@@ -2003,8 +1801,6 @@
         href: how-to-create-log-to-troubleshoot-when-program-not-using-correct-printer.md
       - name: How to create a Smartlist Designer report using a SQL view
         href: how-to-create-smartlist-designer-report-using-sql-view.md
-      - name: How to install Microsoft Dynamics GP 2015 using the command line
-        href: how-to-install-microsoft-dynamics-gp-2015-using-command-line.md
       - name: How to obtain the table and field information for windows
         href: how-to-obtain-table-and-field-information-for-windows.md
       - name: How to print bar-code numbers from third-party solutions
@@ -2019,32 +1815,20 @@
         href: incorrect-company-appears-in-company-drop-down-list.md
       - name: Information about the Check Links process
         href: information-about-the-check-links-process.md
-      - name: Install a version of Great Plains for SQL Server
-        href: incompatible-dynamics-dot-dic.md
       - name: Key Segment not found or Error Registering table
         href: key-segment-not-found.md
       - name: Logo doesn't appear on report or it appears fuzzy
         href: logo-not-appear-on-report-or-appears-fuzzy.md
       - name: Make a field conditionally required
         href: make-a-field-conditionally-required.md
-      - name: Management Reporter 2012 WCF diagnostic
-        href: management-reporter-2012-wcf-diagnostic.md
       - name: Menus for a third-party product don't appear in the by Menu view
         href: menus-for-third-party-product-not-appear-in-by-menu-view-of-advanced-security-windows.md
-      - name: Microsoft Dynamics GP crashes or closes when emailing
-        href: dynamics-gp-crashes-or-closes-when-emailing.md
-      - name: New feature documentation for Dynamics GP 2016
-        href: new-feature-documentation.md
-      - name: New feature documentation for Microsoft Dynamics GP
-        href: new-feature-documentation-for-microsoft-dynamics-gp.md
       - name: No permission to access Management Reporter after making changes to domain
         href: cannot-access-management-reporter-after-changing-domain.md
       - name: Nothing happens when using Copy and Paste from Excel to GL
         href: nothing-happens-when-using-copy-and-paste-from-excel-to-gl.md
       - name: Prevent image quality of a graphic from being reduced
         href: prevent-image-quality-of-graphic-from-being-reduced.md
-      - name: Product 6499 doesn't support upgrading from version
-        href: product-6499-does-not-support-upgrading.md
       - name: Reminder emails for Workflow new feature
         href: reminder-emails-for-workflow-new-feature.md
       - name: Remove all the inactive sessions from the DEX_LOCK table
@@ -2053,8 +1837,6 @@
         href: remove-all-the-inactive-dex-session.md
       - name: Remove named printers from the current installation
         href: remove-named-printers-from-current-installation.md
-      - name: Repeatedly prompted for Exchange credentials when emailing form or report
-        href: repeatedly-prompted-for-exchange-login-id-and-password-when-emailing.md
       - name: Report not found or Cannot Open Report
         href: report-not-found-cannot-open-report.md
       - name: Reports Dictionary must be upgraded
@@ -2073,8 +1855,6 @@
         href: stored-procedure-smcleanupfilesbeforelogin.md
       - name: String overflow on set errors
         href: string-overflow-on-set-errors.md
-      - name: Support of Dynamics GP in a virtual environment
-        href: dynamics-gp-support-virtual-environment.md
       - name: syReportProcessingStatusHdr error
         href: a-save-operation-on-table-syreportprocessingstatus.md
       - name: System Requirements for Microsoft Dynamics Web Components
@@ -2083,8 +1863,6 @@
         href: table-hierarchy-inconsistency-errors-in-dexterity.md
       - name: The approval email isn't routed to the correct manager
         href: approval-email-is-routed-to-wrong-manager.md
-      - name: The new Exclude Inactive Accounts feature does not work
-        href: new-exclude-inactive-accounts-feature-not-work.md
       - name: The Save button is unavailable when  creating a user in User Setup
         href: the-save-button-is-unavailable-when-creating-user-in-user-setup.md
       - name: The selected database exists when installing Web Services
@@ -2109,12 +1887,8 @@
         href: problem-starting-up-report.md
       - name: Unable to open REPORTS.DIC in read/write mode
         href: unable-to-open-reports-dtc-in-read-write-mode-error-when-starting-report-writer.md
-      - name: Unhandled object exception error messages
-        href: unhandled-object-exception-errors.md
       - name: Unknown Dictionary when starting Dynamics GP
         href: unknown-dictionary-error.md
-      - name: Unknown error when sending emails
-        href: unknown-error-when-sending-email.md
       - name: Unknown error when starting Dynamics GP
         href: error-message-start-microsoft-dynamics-gp.md
       - name: Use BCP to export Dynamics GP data from one database
@@ -2125,8 +1899,6 @@
         href: start-the-program-do-other-tasks.md
       - name: Use named printers to enable printer destination selection
         href: description-how-use-named-printers.md
-      - name: User can't tab between fields in a Dynamics GP window
-        href: user-cannot-tab-between-fields.md
       - name: Word template option missing in Report destination window when printing
         href: word-template-option-missing-in-report-destination-window.md
       - name: Workflow 2.0 tables
@@ -2137,7 +1909,5 @@
         href: cannot-stop-current-process-process-monitor.md
       - name: You experience slow performance when you do specific processes
         href: experience-slow-performance.md
-      - name: You must activate email functionality for this document
-        href: you-must-activate-email-functionality.md
       - name: Your login has been removed from the user activity file
         href: you-cannot-be-the-accounting-system.md

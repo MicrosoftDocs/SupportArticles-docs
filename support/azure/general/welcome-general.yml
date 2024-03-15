@@ -11,7 +11,7 @@ metadata:
   ms.topic: landing-page # Required
   author: genlin  #Required; your GitHub user alias, with correct capitalization.
   ms.author: genli #Required; microsoft alias of author; optional team alias.
-  ms.date: 10/19/2022
+  ms.date: 03/08/2024
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -23,13 +23,13 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Azure API is returning blank response
-            url: ./api-return-blank-response.md
+            url: ../api-mgmt/api-return-blank-response.md
           - text: Request throttling problems and HTTP 403 - Forbidden issues
-            url: ./request-throttling-http-403.md
+            url: ../api-mgmt/request-throttling-http-403.md
           - text: Troubleshooting overview
-            url: ./apim-troubleshooting-series.md
+            url: ../api-mgmt/apim-troubleshooting-series.md
           - text: Unauthorized errors 401 while invoking APIs
-            url: ./unauthorized-errors-invoke-apis.md
+            url: ../api-mgmt/unauthorized-errors-invoke-apis.md
 
 # Card
   - title: Azure Automation
@@ -37,9 +37,9 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: How to capture Azure Automation-scripted diagnostics
-            url: ./automation-scripted-diagnostic-capture.md
+            url: ../automation/automation-scripted-diagnostic-capture.md
           - text: How to capture debug stream in Azure Automation runbooks
-            url: ./capture-debug-stream-automation-runbook.md
+            url: ../automation/capture-debug-stream-automation-runbook.md
 
 # Card
   - title: Azure Batch
@@ -47,15 +47,15 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Access denied when executing Azure Batch jobs
-            url: ./access-denied-execute-azure-batch-job.md
+            url: ../hpc-batch/access-denied-execute-azure-batch-job.md
           - text: AccountEncryptionKeyUnavailable error when you try to list pools in Azure Batch
-            url: ./error-accountencryptionkeyunavailable.md
+            url: ../hpc-batch/error-accountencryptionkeyunavailable.md
           - text: Batch node creation delays when restarting or reimaging
-            url: ./batch-node-creation-delay-restart-reimage.md
+            url: ../hpc-batch/batch-node-creation-delay-restart-reimage.md
           - text: Batch pool deletion failure
-            url: ./azure-batch-pool-deletion-failure.md
+            url: ../hpc-batch/azure-batch-pool-deletion-failure.md
           - text: Use managed identities in a Batch account or a Batch pool
-            url: ./use-managed-identities-azure-batch-account-pool.md
+            url: ../hpc-batch/use-managed-identities-azure-batch-account-pool.md
 
 # Card
   - title: Azure Information Protection
@@ -71,7 +71,25 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Microsoft Azure Service Fabric Logs
-            url: ./fabric-logs.md
+            url: ../service-fabric/fabric-logs.md
+
+# Card
+  - title: Azure Virtual Network
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Virtual Network troubleshooter
+            url: ../virtual-network/sdp3fdcb6045-5616-45b4-bb68-0bd11081c184-vnet.md
+
+# Card
+  - title: CycleCloud
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Error "Client secret key is expired"
+            url: ../hpc-cyclecloud/invalid-client-secret.md
+          - text: Error "Invalid Azure credentials provided"
+            url: ../hpc-cyclecloud/error-invalid-azure-credentials-cycle-cloud.md
 
 # Card
   - title: General
@@ -84,6 +102,31 @@ landingContent:
             url: ./secure-file-exchange-transfer-files.md
           - text: Domains used by Microsoft support agents
             url: ./email-domains-support-agent.md    
+
+# Card
+  - title: HPC Pack
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Failed Linux compute node agent extension installation
+            url: ../hpc-pack/troubleshoot-install-failure-hpc-pack-linux-node-agent.md
+          - text: HPC jobs are stuck in canceling mode, and new jobs don't start
+            url: ../hpc-pack/job-stuck-canceling-mode.md
+          - text: HPC Management Service fails to start after restoring database
+            url: ../hpc-pack/hpc-management-service-not-start.md
+          - text: HPC compute nodes aren't shown or are in error state
+            url: ../hpc-pack/compute-node-not-shown-error-state.md
+          - text: HPC node manager service unreachable
+            url: ../hpc-pack/hpc-node-manager-service-unreachable-certificate.md
+          - text: HPC Pack Excel offloading job is stalled
+            url: ../hpc-pack/hpc-pack-excel-offloading-job-stalled.md
+          - text: HPC reporting database connection problem
+            url: ../hpc-pack/hpc-management-reporting-database-connection-issue.md
+          - text: HPC reporting database permission problem
+            url: ../hpc-pack/hpc-management-reporting-database-permission-problem.md
+          - text: Error "No virtual network found" when you enter the application ID
+            url: ../hpc-pack/error-no-virtual-network-found.md
+
 
 # Card
   - title: Other common issues
@@ -99,4 +142,3 @@ landingContent:
           - text: Connection status is incorrect on the portal
             url: ./connection-status-not-display-correctly-portal.md
                                                                                  
-

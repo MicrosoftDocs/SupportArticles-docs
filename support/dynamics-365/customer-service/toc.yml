@@ -19,6 +19,8 @@
           href: entitlements/allocation-type-missing-options.md
         - name: Entitlement remaining terms don't decrement as expected
           href: entitlements/decrementing-entitlement-terms.md
+        - name: '"Select an active entitlement" error when creating a case'
+          href: entitlements/entitlement-with-associate-customer-contact.md
     - name: Knowledge Management
       items:  
         - name: Data isn't updated on Insights for integrated search providers
@@ -33,6 +35,8 @@
               href: service-level-agreements/slaitem-changes-missing-upgrade.md
             - name: Can't import solution with active SLAs and SLAs are deactivated when imported
               href: service-level-agreements/import-solution-active-slas.md
+            - name: '"The uninstall operation will delete the base layer for the component" error'
+              href: service-level-agreements/sla-item-delete-operation-encountered-some-errors.md
             - name: SLA's state changes from Active to Draft after importing an upgrade solution
               href: service-level-agreements/sla-draft-state-post-solution-import.md
         - name: SLA creation
@@ -69,7 +73,7 @@
               href: service-level-agreements/sla-deletion-error-messages.md
             - name: OnHold Time isn't populated for Case for Unified Interface SLA
               href: service-level-agreements/onhold-time-not-populated.md
-            - name: SLA KPI instance isn't Nearing Non-compliance or Non-compliant and timer runs
+            - name: SLA KPI instance isn't Nearing Non-compliance or Noncompliant and timer runs
               href: service-level-agreements/sla-kpi-instance-compliance-timer.md
             - name: SLA timer doesn't pause when state is changed to OnHold on a holiday
               href: service-level-agreements/sla-timer-pause-state-changed.md

@@ -6,6 +6,7 @@ documentationcenter: ''
 author: saimsh-msft
 manager: dcscontentpm
 tags: ''
+ms.custom: linux-related-content
 ms.service: virtual-machines
 ms.subservice: vm-cannot-start-stop
 ms.collection: linux
@@ -15,7 +16,6 @@ ms.tgt_pltfrm: vm-linux
 ms.devlang: azurecli
 ms.date: 09/10/2022
 ms.author: saimsh
-
 ---
 # Troubleshoot Linux VM boot issues due to fstab errors
 

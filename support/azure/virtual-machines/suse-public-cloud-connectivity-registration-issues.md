@@ -8,6 +8,7 @@ ms.reviewer: adelgadohell, mahuss, esanchezvela, scotro
 editor: v-jsitser
 ms.service: virtual-machines
 ms.subservice: vm-cannot-connect
+ms.custom: linux-related-content
 keywords:
 #Customer intent: As a user who wants to set up an Azure virtual machine by using a SUSE Linux Enterprise Server image, I want establish an internet connection to the SUSE Subscription Management Tool repository so that I can successfully register the virtual machine.
 ---
@@ -252,7 +253,7 @@ If you require further help, see [Support and troubleshooting for Azure VMs](/az
 
 ## More information
 
-For more information about [Endorsed Linux distributions](/azure/virtual-machines/linux/endorsed-distros) and open-source technologies in Azure, see [Support for Linux and open source technology in Azure](../cloud-services/support-linux-open-source-technology.md).
+For more information about [Endorsed Linux distributions](/azure/virtual-machines/linux/endorsed-distros) and open-source technologies in Azure, see [Support for Linux and open source technology in Azure](../cloud-services-classic/support-linux-open-source-technology.md).
 
 ## Third-party information disclaimer
 

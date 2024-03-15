@@ -77,7 +77,7 @@ This code seems harmless enough, but here's what you're storing in memory:
 <html><table><tr><td>First Cell</td></tr></table></html>
 ```
 
-You may think that you're just storing the last line, but you're storing *all* of these lines. You can see how it could get out of hand, especially when you're building a large table, perhaps by looping through a large recordset. If it's what you're doing, use our `System.Text.StringBuilder` class, so that you just store the one large string. See [Use Visual C# to improve string concatenation performance](/troubleshoot/dotnet/csharp/string-concatenation)
+You may think that you're just storing the last line, but you're storing *all* of these lines. You can see how it could get out of hand, especially when you're building a large table, perhaps by looping through a large recordset. If it's what you're doing, use our `System.Text.StringBuilder` class, so that you just store the one large string. See [Use Visual C# to improve string concatenation performance](../../../visualstudio/csharp/language-compilers/string-concatenation.md)
 
 ## .NET Framework Service Pack 1 (SP1)
 

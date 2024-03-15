@@ -1,9 +1,9 @@
 ---
 title: Incorrect balance in Item Stock Inquiry
 description: Provides a solution to an issue where the Balance field on the top line of the Item Stock Inquiry window doesn't total across to equal the amount from the transaction.
-ms.reviewer: Beckyber, ppeterso
+ms.reviewer: theley, Beckyber, ppeterso
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # The Balance in Item Stock Inquiry is incorrect in Microsoft Dynamics GP
 

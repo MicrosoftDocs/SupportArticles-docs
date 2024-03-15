@@ -1,9 +1,9 @@
 ---
 title: Create a test or historical company in Payroll or in Canadian Payroll
 description: This article describes how to create a test or historical company in Payroll or in Canadian Payroll in Microsoft Dynamics GP.
-ms.reviewer: 
+ms.reviewer: theley
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # Create a test or historical company in Payroll or in Canadian Payroll in Microsoft Dynamics GP
 

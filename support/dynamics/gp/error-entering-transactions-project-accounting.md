@@ -1,9 +1,9 @@
 ---
 title: Error when entering Transactions in Project Accounting
 description: This article provides a resolution for the problem that occurs when you enter a transaction in Project Accounting in Microsoft Dynamics GP.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # Error (Violation of PRIMARY KEY Constraint XXXXXXXX. Cannot Insert Duplicate Key in object XXXXXXXX) when entering Transactions in Project Accounting in Microsoft Dynamics GP
 

@@ -1,9 +1,9 @@
 ---
 title: The status of a purchase order that comes from the Requisition Management module is automatically set to unapproved
 description: Documents a problem that occurs when a purchase order is created in the Requisition Management module in Business Portal 2.5. Because the Business Portal user doesn't exist in Great Plains, the status of the purchase order is set to unapproved.
-ms.reviewer: kyouells, rolso
+ms.reviewer: theley, kyouells, rolso
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # The status of a purchase order that comes from the Requisition Management module is automatically set to unapproved
 

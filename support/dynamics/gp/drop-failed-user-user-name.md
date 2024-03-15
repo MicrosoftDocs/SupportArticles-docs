@@ -1,9 +1,9 @@
 ---
 title: Drop failed for User user name
 description: Provides a solution to an error that occurs when you try to grant a user access to or remove user access from a company in Microsoft Dynamics GP.
-ms.reviewer: kyouells
+ms.reviewer: theley, kyouells
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # "This user cannot be removed from one or more databases" or "Drop failed for User" Error message when you try to grant a user access to or remove user access from a company in Microsoft Dynamics GP
 
