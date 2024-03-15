@@ -4,7 +4,7 @@ description: Provides resolutions for the known issues that are related to forec
 author: sbmjais
 ms.author: shjais
 ms.reviewer: ladirohit, lavanyakr
-ms.date: 03/13/2024
+ms.date: 03/15/2024
 ms.subservice: d365-sales-sales
 ---
 # Troubleshoot issues with forecasting
