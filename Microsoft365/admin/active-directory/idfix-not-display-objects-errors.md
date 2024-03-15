@@ -9,7 +9,8 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - CSSTroubleshoot
 ms.reviewer: v-chblod, willfid
 appliesto: 
   - Cloud Services (Web roles/Worker roles)

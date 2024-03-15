@@ -9,7 +9,8 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - CSSTroubleshoot
 appliesto: 
   - Windows SharePoint Services 3.0
 ms.date: 12/17/2023

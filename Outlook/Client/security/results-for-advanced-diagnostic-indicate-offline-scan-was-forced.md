@@ -5,7 +5,8 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - CSSTroubleshoot
 appliesto:
 - Outlook 2019
 - Outlook 2016
@@ -15,7 +16,7 @@ search.appverid: MET150
 ms.reviewer: tasitae, v-six
 author: cloud-writer
 ms.author: meerak
-ms.date: 01/30/2024
+ms.date: 03/14/2024
 ---
 # Outlook Advanced Diagnostic scenario in SaRA results indicate an offline scan was forced by group policy for Outlook object model access
 
@@ -24,6 +25,8 @@ ms.date: 01/30/2024
 When you run the Outlook Advanced Diagnostics scenario in the Support and Recovery Assistant (SaRA), the results indicate an Offline scan was performed.
 
 :::image type="content" source="media/results-for-advanced-diagnostic-indicate-offline-scan-was-forced/offline-scan-forced-by-offcat.png" alt-text="Results screen from SaRa." border="false":::
+
+[!INCLUDE [Microsoft Support and Recovery Assistant note](../../../includes/sara-note-new-outlook.md)]
 
 ## Cause
 
@@ -55,7 +58,7 @@ Value: **0**
 
 ## Resolution
 
-If you need to perform a full scan of Outlook, you can temporarily modify the `PromptOOMAddressInformationAccess` and/or `PromptOOMAddressBookAccess` registry values to **1**. This will cause Outlook to no longer automatically deny requests (_from any program_) to access Outlook data and will instead prompt you to approve the access request. The value of 1 is the default setting for this feature.
+If you need to perform a full scan of Outlook, you can temporarily modify the `PromptOOMAddressInformationAccess` and/or `PromptOOMAddressBookAccess` registry values to **1**. This change causes Outlook to no longer automatically deny requests (_from any program_) to access Outlook data and instead prompt you to approve the access request. The value of 1 is the default setting for this feature.
 
 The available value data for these registry values is listed below.
 

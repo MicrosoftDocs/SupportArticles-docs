@@ -8,7 +8,8 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - CSSTroubleshoot
 ms.author: v-six
 ms.reviewer: corbinm， mirung， daveh， msp， jasco， rischwen， amitpeer， landerl
 appliesto: 

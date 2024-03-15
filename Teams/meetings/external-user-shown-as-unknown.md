@@ -7,7 +7,9 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
-ms.custom: CI 159415, CSSTroubleshoot
+ms.custom: 
+  - CI 159415
+  - CSSTroubleshoot
 ms.reviewer: akhairnar
 appliesto: 
   - Microsoft Teams

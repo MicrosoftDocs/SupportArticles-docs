@@ -8,7 +8,8 @@ search.appverid: MET150
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - CSSTroubleshoot
 appliesto: 
   - SharePoint Server 2013
   - SharePoint Server 2010

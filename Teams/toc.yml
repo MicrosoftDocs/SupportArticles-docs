@@ -201,7 +201,7 @@
       href: ./teams-sign-in/teams-doesnt-automatically-update.md
     - name: Teams doesn't load
       href: ./teams-sign-in/sign-in-loop.md      
-    - name: Using a symlink or mapping a drive to C:\users causes Teams to start with a white screen
+    - name: Teams starts with a white screen
       href: ./teams-sign-in/symlink-or-drivemap-causes-white-screen.md
     - name: Error "You're missing out" during sign-in
       href: ./teams-sign-in/error-missing-out-sign-in-teams.md

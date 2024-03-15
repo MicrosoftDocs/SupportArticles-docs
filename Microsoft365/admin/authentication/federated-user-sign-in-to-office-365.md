@@ -9,7 +9,8 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - CSSTroubleshoot
 appliesto: 
   - Cloud Services (Web roles/Worker roles)
   - Azure Active Directory

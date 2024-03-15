@@ -11,10 +11,10 @@ ms.localizationpriority: high
 f1.keywords:
 - CSH
 ms.custom: 
-- Exchange Online
-- CSSTroubleshoot
-- CI 167832
-- CI 179631
+  - Exchange Online
+  - CSSTroubleshoot
+  - CI 167832
+  - CI 179631
 search.appverid:
 - MET150
 - MOP150

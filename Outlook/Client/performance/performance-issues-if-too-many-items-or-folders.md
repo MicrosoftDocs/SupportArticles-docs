@@ -21,7 +21,7 @@ appliesto:
   - Outlook 2013
   - Outlook 2010
 search.appverid: MET150
-ms.date: 01/30/2024
+ms.date: 03/14/2024
 ---
 # Outlook performance issues in a Cached Exchange Mode .ost or .pst file
 
@@ -129,12 +129,14 @@ To adjust the number of days of data that are synced for shared folders, add the
 
 |Description|Setting to enable Shared Folders window|
 |---|---|
-|Registry path|HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Outlook\Cached Mode|
-|Name|SharedFolderSyncWindowSettingDays|
-|Type|REG_DWORD|
+|Registry path|`HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Outlook\Cached Mode`|
+|Name|`SharedFolderSyncWindowSettingDays`|
+|Type|`REG_DWORD`|
 |Value|Value = Select a _Decimal_ value to set the number of days (1-365) for the shared folders sync window.|
 
 ### Run Microsoft Support and Recovery Assistant
+
+[!INCLUDE [Microsoft Support and Recovery Assistant note](../../../includes/sara-note-new-outlook.md)]
 
 You can use Microsoft Support and Recovery Assistant to diagnose both Calendar and Mail issues that affect Outlook. To download and install the Assistant, see [About the Microsoft Support and Recovery Assistant](https://support.microsoft.com/office/about-the-microsoft-support-and-recovery-assistant-e90bb691-c2a7-4697-a94f-88836856c72f).
 
