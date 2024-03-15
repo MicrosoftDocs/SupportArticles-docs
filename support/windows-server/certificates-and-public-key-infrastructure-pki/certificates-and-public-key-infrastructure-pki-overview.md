@@ -17,7 +17,6 @@ The topics in this section provide solutions and scenario guides to help you tro
 - Certificate Root Update Program
 - Certificate enrollment
 - Active Directory Certificate Services (ADCS)
-- Certificates and Public Key Infrastructure (PKI)
 - Network Device Enrollment Services (NDES)
 - Kerberos authentication
 - Certificate-based authentication
