@@ -88,7 +88,7 @@ items:
           href: manage-apps/wrap-issues.md
     - name: Mobile Apps
       items:
-        - name: Troubleshoot Offline sync errors
+        - name: Troubleshoot offline sync errors in the Power Apps mobile app
           href: mobile-apps/mobile-offline-troubleshooting.md
     - name: Solutions
       items:
