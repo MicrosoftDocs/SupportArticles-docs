@@ -4,23 +4,23 @@
 - name: Azure Files
   items:
   - name: Create file share throttling alerts
-    href: files-troubleshoot-create-alerts.md
+    href: files/files-troubleshoot-create-alerts.md
   - name: Troubleshoot Azure Files
-    href: files-troubleshoot.md
+    href: files/files-troubleshoot.md
   - name: Troubleshoot Azure Files connectivity (SMB)
-    href: files-troubleshoot-smb-connectivity.md
+    href: files/files-troubleshoot-smb-connectivity.md
   - name: Troubleshoot Azure Files identity-based authentication (SMB)
-    href: files-troubleshoot-smb-authentication.md
+    href: files/files-troubleshoot-smb-authentication.md
   - name: Troubleshoot Azure Files performance issues
-    href: files-troubleshoot-performance.md
+    href: files/files-troubleshoot-performance.md
   - name: Troubleshoot backing up file shares
-    href: troubleshoot-azure-files.md
+    href: files/troubleshoot-azure-files.md
   - name: Troubleshoot general SMB issues on Linux
-    href: files-troubleshoot-linux-smb.md
+    href: files/files-troubleshoot-linux-smb.md
   - name: Troubleshoot general NFS issues on Linux
-    href: files-troubleshoot-linux-nfs.md
+    href: files/files-troubleshoot-linux-nfs.md
   - name: Troubleshoot ClientOtherErrors (SMB)
-    href: files-client-other-errors.md
+    href: files/files-client-other-errors.md
 - name: Azure File Sync
   items:
   - name: Troubleshoot Azure File Sync
@@ -37,9 +37,9 @@
 - name: Blob Storage and Azure Data Lake Store Gen2
   items:
   - name: Azure Storage data protection, backup, and recovery
-    href: data-protection-backup-recovery.md
+    href: blobs/data-protection-backup-recovery.md
   - name: Copy blobs between storage accounts with network restriction
-    href: copy-blobs-between-storage-accounts-network-restriction.md
+    href: blobs/copy-blobs-between-storage-accounts-network-restriction.md
   - name: Embedded application error when install Azure backup agent
     href: ../general/unable-to-execute-the-embedded-application-error-backup-agent.md
   - name: Invalid blob or block content, or invalid block list
@@ -49,7 +49,7 @@
   - name: Request body is too large error when write to file
     href: ../general/request-body-large.md
   - name: Sticky bit causes 403 authorization error
-    href: adls-gen2-sticky-bit-403-access-denied.md
+    href: blobs/adls-gen2-sticky-bit-403-access-denied.md
   - name: Troubleshoot high CPU or disk usage issues
     href: ../general/diagnose-high-cpu-disk-perfinsights.md
 

@@ -1,9 +1,9 @@
 ---
 title: Login failed for user error when running PA TimeSheets or Employee Expense integration
 description: Error occurs when you try to run a PA TimeSheets integration or a PA Employee Expense integration by using the Project Accounting destination in Integration Manager for Microsoft Dynamics GP. Provides a resolution.
-ms.reviewer: kvogel
+ms.reviewer: theley, kvogel
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # "Login failed for user" error when running a PA TimeSheets or a PA Employee Expense integration via Project Accounting destination
 

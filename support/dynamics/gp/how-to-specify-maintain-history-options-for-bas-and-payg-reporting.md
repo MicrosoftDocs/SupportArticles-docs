@@ -1,9 +1,9 @@
 ---
 title: How to set Maintain History options for BAS and PAYG reporting
 description: Explains how to specify Maintain History options in Microsoft Dynamics GP 9.0. And also contains steps to report the correct information for Business Activity Statement (BAS) and Pay As You Go (PAYG) reporting.
-ms.reviewer: 
+ms.reviewer: theley
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # How to specify Maintain History options for Business Activity Statement and Pay As You Go reporting
 

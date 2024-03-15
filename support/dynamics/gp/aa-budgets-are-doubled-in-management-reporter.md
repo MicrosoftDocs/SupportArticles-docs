@@ -1,9 +1,9 @@
 ---
 title: AA budgets are doubled in Management Reporter
 description: AA budgets are doubled in Management Reporter using Microsoft Dynamics GP. Provides a resolution.
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # AA budgets are doubled in Management Reporter using Microsoft Dynamics GP
 
@@ -17,4 +17,3 @@ _Original KB number:_ &nbsp; 4013058
 If one dimension is owned by another dimension, then both dimensions need to be added. If you add only one dimension, then you will only see that one. If you do not add any, then the amounts may be doubled. If one dimension is owned by another, you should add both to the account to have the amounts show correctly on the MR report. See the example in the below blow article:
 
 [Reporting on AA budgets in MR](https://community.dynamics.com/blogs/post/?postid=6a43acd4-e5e9-4383-a9b7-d81fa862518a)
-

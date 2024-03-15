@@ -1,9 +1,9 @@
 ---
 title: How to create and post scheduled payments
 description: Explains that when you post scheduled payments, they function like an invoice. They are displayed as open invoices that are waiting for payment.
-ms.reviewer: lmuelle
+ms.reviewer: theley, lmuelle
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # How to create and post scheduled payments in Microsoft Dynamics GP
 

@@ -1,9 +1,9 @@
 ---
 title: Post to a closed year or to a closed period
 description: This article describes how to post to a closed year or to a closed period in Microsoft Dynamics GP.
-ms.reviewer: 
+ms.reviewer: theley
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # Steps to post to a closed year or to a closed period in Microsoft Dynamics GP
 
