@@ -1,18 +1,18 @@
 ---
 title: Failed connection between Power Automate components
-description: Based on the version of Power Automate, provides resolutions to a Power Automate connection error that occurs on startup.
+description: Provides various resolutions per product version to a Power Automate connection error that occurs on startup.
 ms.reviewer: kokapare, pefelesk, tapanm
 ms.date: 03/13/2024
 ms.custom: sap:Desktop flows\Cannot create desktop flow connection
 ---
 
-# Failed connection between Power Automate components
+# "Communication error" and the connection between Power Automate components fails
 
 _Applies to:_ &nbsp; Power Automate  
 
 ## Symptoms
 
-On startup, Power Automate shows the following error message:
+When you try to start Power Automate, you receive the following error message:
 
 > Communication error:
 >  
@@ -20,40 +20,41 @@ On startup, Power Automate shows the following error message:
 
 ## Cause
 
-This issue could occur if there are two Power Automate for desktop applications installed on the computer (one installed from the Microsoft Store and one from the MSI installer), and they are of different version. This is not a supported scenario due to conflicts between the installations.
+This issue might occur if two different versions of Power Automate are installed on the computer. In this scenario, one version (Power Automate) is installed from the Microsoft Store and the other (Power Automate for desktop) is installed by using the MSI installer. This scenario is not supported because of conflicts that exist between the two kinds of installers.
 
 ## Resolution
 
-If your version of Power Automate for desktop is **2.34.176.23181 or higher** (Microsoft Store version **10.0.7118.0 or higher**), then follow the steps below to uninstall either one of the two apps and resolve the issue:
+If your version of Power Automate (Microsoft Store) is **10.0.7118.0** or later, and your version of Power Automate for desktop (MSI) is **2.34.176.23181** or later, follow these steps to uninstall one version of the app:
 
 1. Go to **Start** > **Settings** > **Apps** > **Installed apps**.
 1. Search for **Power Automate**.
-1. Uninstall either one of the two – either Power Automate (Microsoft Store installation) or Power Automate for desktop (MSI installation).
+1. Uninstall either version of the app.
 
-If your version of Power Automate for desktop is **less than 2.34.176.23181** (Microsoft Store version **less than 10.0.7118.0**), then this error might occur if another process is running a named pipes server on the same machine. This process probably runs with elevated rights using the localhost endpoint. As a result, it blocks other applications from using the endpoint.
+If your version of Power Automate (Microsoft Store) **10.0.7118.0** or earlier, and your version of Power Automate for desktop is **2.34.176.23181** or earlier, then this error might occur if another process is running a named pipes server on the same computer. This process likely runs by having elevated rights and by using the localhost endpoint. Therefore, the process blocks other applications from using the endpoint.
 
-Follow these steps to identify whether another process is indeed the issue:
+To determine whether another process is causing the error, follow these steps:
 
-1. Close Power Automate and use Windows Task Manager to ensure that its process isn't still running.
+1. Close Power Automate. Use Windows Task Manager to verify that the Power Automate process is no longer running.
 1. Download the [Sysinternals Suite](/sysinternals/downloads/sysinternals-suite).
-1. Extract the zip file to a folder on your desktop.
-1. Run a command prompt session as administrator.
-1. Navigate to the folder in which you've extracted Sysinternals.
+1. Extract the compressed file to a folder on your desktop.
+1. Open an elevated Command Prompt window.
+1. Navigate to the folder to which you extracted Sysinternals.
 1. Run the following command:
 
    ```console
    handle net.pipe
    ```
 
-   Running this command should display a list of processes that use named pipes and the address they listen to.
+   Running this command should display a list of processes that use named pipes and display the address that they listen to.
 
    :::image type="content" source="media/failed-connection-between-power-automate-components/command-prompt.png" alt-text="Screenshot of the results of the handle net.pipe command.":::
 
-1. Identify whether a process displaying the string **EbmV0LnBpcGU6Ly8rLw==** exists.
+1. Determine whether a process that displays the **EbmV0LnBpcGU6Ly8rLw==** string exists.
 
-1. If such a process exists, stop the process identified in the previous step.
-1. Launch Power Automate again.
+1. If such a process exists, stop the process.
 
-As a permanent fix, you can stop the process that is causing the issue from running. Alternatively,  if it's an internal process, you can change it to use a more specific endpoint, such as **net.pipe://localhost/something**.
+1. Start Power Automate again.
 
-If none of the above is possible, specify Power Automate executables to run as administrator. However, this solution might not solve the issue in all cases, and it will cause a UAC prompt to appear each time.
+As a permanent fix, you can stop the process that is causing the issue from running. Alternatively, if the process is internal, you can configure it to use a more specific endpoint, such as **net.pipe://localhost/something**.
+
+If none of these actions is possible, specify Power Automate executables to run in administrative mode. However, this solution might not resolve the issue in all cases. Additionally, this solution will cause a UAC prompt to appear every time that you run the app.
