@@ -16,7 +16,7 @@ items:
 - name: Existing connection forcibly closed
   href: tls-exist-connection-closed.md
   items:
-   - name: Intermittent connection errors occur when a new node is added to the Always On environment
+  - name: Intermittent connection errors occur when a new node is added to the Always On environment
      href: intermittent-connection-errors-when-a-new-node-is-added.md
   - name: The SSL_PE_NO_CIPHER error occurs on endpoint 5022
     href: ssl-pe-no-cipher-error-endpoint-5022.md
