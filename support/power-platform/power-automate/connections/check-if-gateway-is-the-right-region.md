@@ -2,8 +2,8 @@
 title: Can't view gateways in Power Automate
 description: Provides a solution to an issue where you can't see your gateway in Power Automate.
 ms.reviewer: quseleba, cgarty
-ms.date: 03/14/2024
-ms.subservice: power-automate-connections
+ms.date: 03/15/2024
+ms.custom:sap:Connections\Gateways
 ---
 # Can't view gateways in Power Automate
 
@@ -30,11 +30,11 @@ To verify the issue, first check the region of the environment you're using and 
 
 1. Verify the region of the environment you're using.
 
-    :::image type="content" source="media/check-if-gateway-is-the-right-region/verify-region-environment.png" alt-text="Screenshot that shows how to check the region of the Power Platform environment." lightbox="media/check-if-gateway-is-the-right-region/verify-region-environment.png":::
+    :::image type="content" source="media/check-if-gateway-is-the-right-region/verify-region-environment.png" alt-text="Screenshot that shows how to check the region of the Power Platform environment.":::
 
 1. Sign in to [Power Automate](https://flow.microsoft.com/) and ensure you've selected the desired environment.
 
-    :::image type="content" source="media/check-if-gateway-is-the-right-region/verify-environment-is-expected.png" alt-text="Screenshot that shows how to check the environment used in the flow. "lightbox="media/check-if-gateway-is-the-right-region/verify-environment-is-expected.png":::
+    :::image type="content" source="media/check-if-gateway-is-the-right-region/power-automate-environment.png" alt-text="Screenshot that shows how to check the environment used in the flow.":::
 
 1. Select **Gateways** in the left navigation pane.
 
