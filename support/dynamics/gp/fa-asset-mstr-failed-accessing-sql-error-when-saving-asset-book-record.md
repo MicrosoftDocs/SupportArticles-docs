@@ -1,9 +1,9 @@
 ---
 title: A save operation on table FA_ASSET_MSTR failed error when saving Asset Book record
 description: When you save an Asset Book record, an error that states save operation on table FA_ASSET_MSTR failed accessing SQL occurs. Provides a resolution.
-ms.reviewer: lmuelle, dbader
+ms.reviewer: theley, lmuelle, dbader
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # "A save operation on table 'FA_ASSET_MSTR' failed accessing SQL" error when you save an Asset Book record
 

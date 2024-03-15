@@ -1,9 +1,9 @@
 ---
 title: Inactive GL accounts deleted during Year-End Close process
 description: The year-end close process deletes any accounts that are marked as inactivate if there is no history for these accounts.
-ms.reviewer: cwaswick, lmuelle
+ms.reviewer: theley, cwaswick, lmuelle
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # Inactive GL accounts deleted during Year-End Close process for General Ledger in Microsoft Dynamics GP
 

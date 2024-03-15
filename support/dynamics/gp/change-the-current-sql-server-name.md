@@ -1,9 +1,9 @@
 ---
 title: Change the current SQL Server name
 description: This article lists steps on how to change the Web Services files to the new Microsoft SQL Server name.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # How to change the current SQL Server name that is set up with Web Services for Microsoft Dynamics GP
 

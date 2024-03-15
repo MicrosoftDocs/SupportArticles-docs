@@ -3,7 +3,7 @@ title: Undefined Symbol FOO764DO5774DD or FOO764DO1098 or Report not found error
 description: Describes a problem that occurs when you have security set up on the report that is associated with a print format that was removed. Security must be removed from the report. Provides a resolution.
 ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 04/22/2021
+ms.date: 03/13/2024
 ---
 # "Undefined Symbol FOO764DO5774DD Mask Doll" or "Undefined symbol FOO764DO1098 Employee_ID" or "Report not found" error when you print a check in Payroll - US
 

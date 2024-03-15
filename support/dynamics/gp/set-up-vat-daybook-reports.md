@@ -1,8 +1,8 @@
 ---
 title: Set up VAT Daybook reports
 description: How to map columns in VAT Daybook using Microsoft Dynamics GP.
-ms.reviewer: cwaswick
-ms.date: 03/31/2021
+ms.reviewer: theley, cwaswick
+ms.date: 03/13/2024
 ---
 # Set up VAT Daybook reports in Microsoft Dynamics GP
 

@@ -1,9 +1,9 @@
 ---
 title: Re-create the Forms.dic file
 description: Describes how to re-create the Forms.dic file in Microsoft Dynamics GP.
-ms.reviewer: kyouells, dlanglie, grwill
+ms.reviewer: theley, kyouells, dlanglie, grwill
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # How to re-create the Forms.dic file in Microsoft Dynamics GP
 

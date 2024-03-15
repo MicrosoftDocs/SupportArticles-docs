@@ -3,9 +3,6 @@ items:
 - name: Welcome
   href: welcome-container-instances.yml
 
-- name: Container group intermittently restarts
-  href: container-group-restart-killing-event-interruption.md
-
 - name: Troubleshoot container group startup
   items:
   - name: Container group deployment remains in Waiting state
@@ -25,7 +22,7 @@ items:
     
 - name: Troubleshoot a running container group
   items:
-  - name: ACI debugging tools
+  - name: Azure Container Instances debugging tools
     href: aci-debug-tools.md
   - name: Azure Container Instances shows unexpected memory usage metrics
     href: unexpected-memory-usage-metrics.md
@@ -35,6 +32,8 @@ items:
     href: cannot-do-container-group-operations.md
   - name: Confidential container issues
     href: common-confidential-container-errors.md
+  - name: Container group intermittently restarts
+    href: container-group-restart-killing-event-interruption.md
   - name: Container group still runs after a stop or delete command 
     href: aci-still-running-after-stop-delete-command.md
   - name: Spot Container Errors

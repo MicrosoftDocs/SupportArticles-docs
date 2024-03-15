@@ -1,9 +1,9 @@
 ---
 title: Transfer GP installation to a new server
 description: Discusses how to transfer your existing financial application to a new server that is running Microsoft SQL Server. Also discusses how to maintain the user logins and databases.
-ms.reviewer: kyouells, 
+ms.reviewer: theley, kyouells, 
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # How to transfer an existing Microsoft Dynamics GP, Small Business Financials, or Small Business Manager installation to a new server that is running SQL Server
 
@@ -30,7 +30,7 @@ _Original KB number:_ &nbsp; 878449
 
 On the old server, copy the following Capture_Logins.sql script to the local hard disk. To obtain the Capture_Logins.sql script, see:
 
-- **For SQL Server 2014 and later versions**: [Transfer logins and passwords between instances of SQL Server](/troubleshoot/sql/security/transfer-logins-passwords-between-instances)
+- **For SQL Server 2014 and later versions**: [Transfer logins and passwords between instances of SQL Server](../../sql/database-engine/security/transfer-logins-passwords-between-instances.md)
 
 > [!NOTE]
 > If link doesn't work, copy and paste it to a new browser and try it again.

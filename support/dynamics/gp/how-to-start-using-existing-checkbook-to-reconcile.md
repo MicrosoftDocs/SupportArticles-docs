@@ -1,9 +1,9 @@
 ---
 title: How to start using existing checkbook to reconcile
 description: This article describes how to start using Bank Reconciliation with an existing checkbook in Microsoft Dynamics GP.
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # How to start using an existing checkbook to reconcile in Bank Reconciliation for Microsoft Dynamics GP
 

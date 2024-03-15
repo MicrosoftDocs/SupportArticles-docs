@@ -1,0 +1,52 @@
+### YamlMime:Landing
+
+title: Azure Cloud Services (extended support) troubleshooting documentation
+summary: Welcome to Azure Cloud Services (extended support) troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Azure Cloud Services (extended support). In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+
+metadata:
+  title: Troubleshoot Azure Cloud Services (extended support) issues
+  description: Documentation for troubleshooting common issues with Azure Cloud Services (extended support). # Required; article description that is displayed in search results. < 160 chars.
+  services: cloud-services
+  ms.service: cloud-services #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.topic: landing-page # Required
+  author: genlin  #Required; your GitHub user alias, with correct capitalization.
+  ms.author: genli #Required; microsoft alias of author; optional team alias.
+  ms.date: 03/11/2024
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+ # Card
+  - title: Troubleshooting Cloud Services (extended support)
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Application pool is crashing
+            url: application-pool-crashes.md
+          - text: Disk partition preservation
+            url: disk-partition-preservation.md
+          - text: Enable HTTPS communication
+            url: enable-https-communication.md
+          - text: FAQ about role instance restarts due to OS upgrades
+            url: role-instance-restarts-faq.yml
+          - text: Gather log files for offline analysis and preservation
+            url: gather-log-files-offline-analysis-preservation.md
+          - text: No space on the E or F drive
+            url: no-space-e-f-drive.md
+          - text: Read key vault certificate secrets from an app
+            url: read-key-vault-certificate-secrets-from-cloud-service-app.md
+          - text: Role instance restarts due to OS upgrades
+            url: role-instance-restarts-os-upgrade.md
+          - text: Roles that fail to start
+            url: role-startup-failure.md
+          - text: Windows PaaS compute diagnostic data
+            url: windows-azure-paas-compute-diagnostic-data.md
+
+ # Card
+  - title: Troubleshooting Series for developers
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Use Azure DevOps to publish Cloud Services (extended support)
+            url: azure-devops-publish-cloud-service-extended.md
