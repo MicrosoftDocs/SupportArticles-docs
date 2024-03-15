@@ -5,7 +5,7 @@ author: amchern
 ms.author: amchern
 ms.reviewer: tapanm, mkaur, alaug
 ms.custom: canvas
-ms.date: 02/27/2024
+ms.date: 03/15/2024
 search.audienceType: 
   - maker
 search.app: 
@@ -71,7 +71,7 @@ The following are some common issues or errors that might appear when you start 
 Try the following steps to resolve the issue:
 
 1. [Enable third-party cookies and local data in your browser or app](#enable-storage-of-third-party-cookies-and-local-data-in-your-browser-or-app).
-2.  [Clear your browser's cache](#clear-your-browser-cache) and cookies and try again. Cached data can sometimes prevent you from signing in.
+2. [Clear your browser's cache](#clear-your-browser-cache) and cookies and try again. Cached data can sometimes prevent you from signing in.
 3. Try signing in with a different browser. For a list of supported browsers, see [system requirements](/power-apps/limits-and-config#supported-browsers-for-running-power-apps).
 4. Check your network connection to make sure it's stable.
 5. If you're getting Microsoft Entra errors, they're usually related to user authentication and authorization. The error page might contain additional information that can help diagnose and fix the problem. To resolve Microsoft Entra errors, you might need assistance from your IT department.
@@ -90,7 +90,7 @@ Try the following steps to resolve the issue:
 - In Microsoft Edge, you can check the setting by navigating to `edge://flags/#third-party-storage-partitioning` using the address bar.
 - In Google Chrome, you can check the setting by navigating to `chrome://flags/#third-party-storage-partitioning` using the address bar.
 
-![image](https://github.com/MicrosoftDocs/SupportArticles-docs-pr/assets/11514622/0391fbcb-7558-48f6-981c-c55fa198e93c)
+:::image type="content" source="media/troubleshooting-startup-issues/third-party-storage-partitioning.png" alt-text="Screenshot that shows the Third-party Storage Partitioning setting in Microsoft Edge.":::
 
 ## Enable storage of third-party cookies and local data in your browser or app
 
