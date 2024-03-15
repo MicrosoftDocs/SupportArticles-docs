@@ -117,17 +117,17 @@ To troubleshoot this issue, use multiple virtual network adapters to make sure t
 
 ### Windows Server 2012 R2 periodically logs SMBClient event ID 30818
 
-Assume that a Windows Server 2012 R2-based computer uses an InfiniBand network adapter. This adapter uses the SMB Direct feature to support Remote Direct Memory Access (RDMA) communication between cluster nodes and Hyper-V hosts. After you restart a Hyper-V host, Windows might log event ID 30818 under the **Applications and Services Logs/Microsoft/Windows/SmbClient** path in Event Viewer. When this occurs, you may also experience performance issues.
+Assume that a Windows Server 2012 R2-based computer uses an InfiniBand network adapter. This adapter uses the SMB Direct feature to support Remote Direct Memory Access (RDMA) communication between cluster nodes and Hyper-V hosts. After you restart a Hyper-V host, Windows might log event ID 30818 under the **Applications and Services Logs/Microsoft/Windows/SmbClient** path in Event Viewer. When this occurs, you might also experience performance issues.
 
 On Windows Server 2012 R2, the LanmanServer service automatically starts the SmbDirect service. However, if the LanmanWorkstation service happens to start first and tries to open an RDMA connection before the SmbDirect service loads, Windows logs event ID 30818. When the client initially communicates with the server over TCP/IP, it uses the RDMA interface. Therefore, no user action is needed to recover.
 
-Microsoft is considering a resolution for this problem in a future version of Windows Server.
+Microsoft is considering providing a resolution for this issue in a future version of Windows Server.
 
 #### Workaround
 
 [!INCLUDE [Registry alert](../../includes/registry-important-alert.md)]
 
-To work around this problem on Windows Server 2012 R2, configure the SmbDirect service to start automatically. To do this, follow these steps:
+To work around this issue on Windows Server 2012 R2, configure the SmbDirect service to start automatically. To do this, follow these steps:
 
 1. Open Registry Editor, and then navigate to the following registry subkey:  
 
@@ -136,11 +136,11 @@ To work around this problem on Windows Server 2012 R2, configure the SmbDirect s
 2. Right-click the **Start** registry entry, and then select **Modify**.
 3. In the **Value data** box, change the value (the default value is **3**, which means on-demand) to **2** (automatic).
 
-After you finish this change, You should be able to restart the computer without Windows logging event ID 30818 messages. If Windows continues to log these events, some other problem might be preventing the RDMA interface from initializing.
+After you make this change, you should be able to restart the computer without Windows logging event ID 30818 messages. If Windows continues to log these events, some other issue might be preventing the RDMA interface from initializing.
 
 ### When you install Windows Server, Windows logs Event ID 1
 
-When you install Windows Server 2019, Windows Server 2016, and Windows Server 2012 R2, Windows logs Event ID 1. The event information resembles the following:
+When you install Windows Server 2019, Windows Server 2016, or Windows Server 2012 R2, Windows logs Event ID 1. The event information resembles the following:
 
 > Log Name: Microsoft-Windows-SMBWitnessClient/Admin  
 Source: Microsoft-Windows-SMBWitnessClient  
@@ -177,7 +177,7 @@ Before you contact Microsoft Support, you can gather information about your issu
 > 1. Set the `RemoteSigned` execution policy for the process level by running the `Set-ExecutionPolicy -scope Process -ExecutionPolicy RemoteSigned` cmdlet.
 > 2. To verify that the change takes effect, run the `Get-ExecutionPolicy -List` cmdlet.  
 >
-> These process-level permissions apply to only the current PowerShell session. After you close the PowerShell window in which TSS runs, the assigned permission for the process level revert to the previously-configured state.
+> These process-level permissions apply to only the current PowerShell session. After you close the PowerShell window in which TSS runs, the assigned permission for the process level reverts to the previously-configured state.
 
 ### Gather key information before contacting Microsoft support
 
