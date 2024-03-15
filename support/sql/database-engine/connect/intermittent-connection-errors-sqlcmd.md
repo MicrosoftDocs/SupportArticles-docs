@@ -1,7 +1,7 @@
 ---
-title: Intermittent connection errors using SQLCMD
+title: Intermittent connection errors occur when the SQLCMD tool is used
 description: This article provides a resolution for resolving intermittent connection errors that are generated when you use the SQLCMD tool.
-ms.date: 03/13/2024
+ms.date: 03/15/2024
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
@@ -50,7 +50,7 @@ To resolve these issues, follow these steps:
    > Microsoft no longer supports SNAC 11. If you experience any issues while you use SNAC 11, you must upgrade to a supported version of the Microsoft driver before technical support can be provided.
 
 1. Upgrade the application driver to a supported driver.
-1. Use MSOLEDBSQL v18 or ODBC v17 if you aren't using encryption for the connection. If you are using encryption for the connection on the application server, use MSOLEDBSQL v19 or ODBC v18. By default because these drivers are included together with the encryption. For more information, see the following articles:
+1. Use MSOLEDBSQL v18 or ODBC v17 if you aren't using encryption for the connection. If you are using encryption for the connection on the application server, use MSOLEDBSQL v19 or ODBC v18. By default, these drivers are included together with the encryption. For more information, see the following articles:
 
    - [Release notes for OLE DB Driver - OLE DB Driver for SQL Server](/sql/connect/oledb/release-notes-for-oledb-driver-for-sql-server?view=sql-server-ver16&preserve-view=true)
 

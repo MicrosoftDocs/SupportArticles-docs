@@ -1,7 +1,7 @@
 ---
-title: Troubleshooting the SSL_PE_NO_CIPHER error
-description: This article helps you to resolve the SSL_PE_NO_CIPHER error that occurs on endpoint 5022.
-ms.date: 03/08/2024
+title: Resolving the SSL_PE_NO_CIPHER error
+description: This article provides the symptoms and resolution using which you will be able to resolve the SSL_PE_NO_CIPHER error.
+ms.date: 03/15/2024
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
@@ -10,7 +10,7 @@ ms.custom: sap:Connection issues
 
 # The SSL_PE_NO_CIPHER error occurs on endpoint 5022
 
-This article helps you resolve the error related to the `SSL_PE_NO_CIPHER`. It also provides scripts for enforcing Transport Layer Security (TLS) on different versions of .NET Framework.
+This article helps you resolve the error related to the `SSL_PE_NO_CIPHER` that occurs on endpoint 5022. It also provides scripts for enforcing Transport Layer Security (TLS) on different versions of .NET Framework.
 
 ## Symptoms
 
