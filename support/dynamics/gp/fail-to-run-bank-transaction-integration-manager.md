@@ -1,9 +1,9 @@
 ---
 title: Error when you run Bank Transaction integration in Integration Manager
 description: Provides a solution to an error that occurs when you run the Bank Transaction integration in Integration Manager for Microsoft Dynamics GP.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # Error message when you run the Bank Transaction integration in Integration Manager for Microsoft Dynamics GP: "The Transaction Amount is Not Fully Distributed"
 

@@ -6,6 +6,7 @@ documentationcenter: ''
 manager: dcscontentpm
 editor: 'v-jesits'
 tags: ''
+ms.custom: linux-related-content
 ms.service: virtual-machines
 ms.subservice: vm-cannot-connect
 ms.collection: linux

@@ -1,9 +1,9 @@
 ---
 title: Error when you post a reverse issue transaction
 description: Describes a problem that may occur because there are pending quantities in various tables. A resolution is provided.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # Error message when you try to post a "reverse issue" transaction in the Component Transaction Entry window in Microsoft Dynamics GP: "Quantities of the items are insufficient for this transaction"
 

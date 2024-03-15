@@ -1,9 +1,9 @@
 ---
 title: Wrong Unit Cost if 2 invoices are matched to 1 shipment
 description: The Unit Cost of the receipt layer is not correct when two invoices are matched to one shipment in Microsoft Dynamics GP. Provides a resolution.
-ms.reviewer: ppeterso
+ms.reviewer: theley, ppeterso
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # The Unit Cost of the receipt layer is not what you would expect when two invoices are matched to one shipment
 

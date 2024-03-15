@@ -3,7 +3,7 @@ title: Applications don't print to XPS Document Writer
 description: This article describes a problem in which the Save As dialog box is hidden behind the app that's printing to an XPS Document Writer printer. This makes the application appear to hang. A workaround is provided.
 ms.date: 12/19/2023
 ms.reviewer: robcap, philipd
-ms.custom: sap:other
+ms.custom: sap:Graphics and Multimedia development\Other
 ms.subservice: graphics-multimedia-dev
 ---
 

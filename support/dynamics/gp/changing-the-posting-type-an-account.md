@@ -1,9 +1,9 @@
 ---
 title: Changing the posting type on an account
 description: Describes how to correct the posting type on an account after you close the year in General Ledger.
-ms.reviewer: ryanklev, cwaswick, lmuelle
+ms.reviewer: theley, ryanklev, cwaswick, lmuelle
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # Changing the posting type on an account after you close the year in General Ledger for Microsoft Dynamics GP
 

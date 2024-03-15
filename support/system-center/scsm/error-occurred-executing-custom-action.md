@@ -1,7 +1,8 @@
 ---
 title: Can't install SharePoint portal in Service Manager
 description: Fixes an issue in which you can't install the SharePoint portal in System Center 2012 Service Manager.
-ms.date: 08/04/2020
+ms.date: 03/14/2024
+ms.reviewer: khusmeno
 ---
 # An error occurred while executing a custom action when installing the SharePoint portal in Service Manager
 

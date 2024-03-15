@@ -2,8 +2,8 @@
 title: Error when you enter a checkbook transaction
 description: You receive an error message in Microsoft Dynamics GP when you try to enter a checkbook transaction. This article provides a solution to this issue.
 ms.topic: troubleshooting
-ms.reviewer: ryanklev
-ms.date: 03/31/2021
+ms.reviewer: theley, ryanklev
+ms.date: 03/13/2024
 ---
 # You receive an error message in Microsoft Dynamics GP when you try to enter a checkbook transaction
 

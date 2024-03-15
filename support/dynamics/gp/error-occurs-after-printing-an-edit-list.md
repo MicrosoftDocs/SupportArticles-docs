@@ -1,9 +1,9 @@
 ---
 title: Error occurs after printing an edit list
 description: Provides a solution to an error that occurs after you try to print an edit list in Payables Management in Microsoft Dynamics GP.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # Unhandled Database Exception: A save operation on table 'PM_Transaction_WORK' caused a sharing error EXCEPTION_CLASS_DB DB_ERR_LOCKED
 
