@@ -1653,14 +1653,6 @@
         href: use-banked-paycodes-with-project-accounting.md
       - name: What do the Reverse and Correct buttons do in the Select Timesheets for Adjustment window
         href: what-do-the-reverse-and-correct-buttons-do-in-select-timesheets-for-adjustment.md
-  - name: RMS
-    items:
-      - name: Can't create Inventory Valuation and GMROI and Inventory Turns reports
-        href: cannot-create-inventory-valuation-and-gmroi-and-inventory-turns-reports.md
-      - name: Guidelines to determine when a support case becomes a consulting engagement
-        href: guidelines-to-determine-when-support-case-becomes-consulting-engagement.md
-      - name: To connect to this server you must use SQL Server Management Studio
-        href: must-use-sql-server-management-studio-error-when-connecting-to-store-database-server.md
   - name: Systems
     items:
       - name: A connection could not be established
