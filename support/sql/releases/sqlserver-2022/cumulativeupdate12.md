@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 12 for SQL Server 2022 (KB5033663)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2022 cumulative update 12 (KB5033663).
-ms.date: 03/14/2024
+ms.date: 03/15/2024
 ms.custom: KB5033663
 ms.reviewer: v-qianli2
 appliesto:
@@ -16,7 +16,7 @@ _Version:_ &nbsp; 16.0.4115.5
 
 ## Summary
 
-This article describes Cumulative Update package 12 (CU12) for Microsoft SQL Server 2022. This update contains 49 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 11, and it updates components in the following builds:
+This article describes Cumulative Update package 12 (CU12) for Microsoft SQL Server 2022. This update contains 50 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 11, and it updates components in the following builds:
 
 - SQL Server - Product version: **16.0.4115.5**, file version: **2022.160.4115.5**
 - Analysis Services - Product version: **16.0.43.229**, file version: **2022.160.43.229**
@@ -55,6 +55,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id=2937584>[2937584](#2937584) </a> | Fixes an issue in which the `sp_server_diagnostics` stored procedure doesn't respond to the Always On availability group (AG) resource DLL within the `HealthCheckTimeout` when the I/O takes a long time, which causes unnecessary restart and failover. For example, when the `sp_server_diagnostics` stored procedure is waiting for the `PREEMPTIVE_OS_GETFINALFILEPATHBYHANDLE` wait type. </br></br>**Note**: To apply this fix, you need to turn on trace flag 16301, which is off by default. Tracing is added for this event regardless of the trace flag.| SQL Server Engine | High Availability and Disaster Recovery| All|
 | <a id=2845380>[2845380](#2845380) </a> | Removes the following incorrect error that's related to `ca-certificates` when starting SQL Server on Linux: </br></br>Error searching first file in /var/opt/mssql/security/ca-certificates | SQL Server Engine | Linux| Linux|
 | <a id=2920073>[2920073](#2920073) </a> | Fixes an issue in which an unreliable network connection causes an unsuccessful status during backup to a network share, which causes the SQL Server instance to stop responding.| SQL Server Engine | Linux| Linux|
+| <a id=2958874>[2958874](#2958874) </a> | Fixes an issue in which the SQL Server instance fails to start on Linux kernels 6.7 and later versions.| SQL Server Engine | Linux| Linux|
 | <a id=2768282>[2768282](#2768282) </a> | Fixes an assertion failure (Location: "sql\\\ntdbms\\\storeng\\\dfs\\\trans\\\PageFlush.cpp":1840; Expression: IS_OFF (BUF_LOG_BUFWRITE, buf->bstat) \|\| IS_ON (BUF_DIRTY, buf->bstat) \|\| m_ownerXdes->GetPru ()->IsSuspect ()) that you encounter when running the `BULK INSERT` statement.| SQL Server Engine | Methods to access stored data| All|
 | <a id=2837848>[2837848](#2837848) </a> | Fixes a deadlock issue that you encounter when creating or updating statistics by turning off the blocking Auto Stats feature. The blocking Auto Stats feature is turned on when you use PolyBase. Turning off the blocking Auto Stats feature might cause a different query plan and execution time because query compilation isn't blocked by statistics collection. | SQL Server Engine | PolyBase | All|
 | <a id=2870726>[2870726](#2870726) </a> | Fixes an issue in which the exported delimited text file created by using `CREATE EXTERNAL TABLE AS SELECT (CETAS)` is incorrect if the `FIELD_TERMINATOR` character is `'\t'`. | SQL Server Engine | PolyBase | All|
