@@ -16,7 +16,7 @@ _Version:_ &nbsp; 16.0.4115.5
 
 ## Summary
 
-This article describes Cumulative Update package 12 (CU12) for Microsoft SQL Server 2022. This update contains 49 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 11, and it updates components in the following builds:
+This article describes Cumulative Update package 12 (CU12) for Microsoft SQL Server 2022. This update contains 50 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 11, and it updates components in the following builds:
 
 - SQL Server - Product version: **16.0.4115.5**, file version: **2022.160.4115.5**
 - Analysis Services - Product version: **16.0.43.229**, file version: **2022.160.43.229**
