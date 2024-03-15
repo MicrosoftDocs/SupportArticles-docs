@@ -1,7 +1,7 @@
 ---
 title: An error occurs when you try to create a linked server
 description: This article provides a resolution to a problem in which a linked server can't be created after you migrate on-premises SQL Server to Azure.
-ms.date: 03/04/2024
+ms.date: 03/15/2024
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
@@ -26,15 +26,11 @@ You might receive the following error messages:
 
 > [Microsoft OLE DB Driver for SQL Server]: TCP Provider: An existing connection has been forced to be interrupted by the remote host.
 
-Here, the remote server receives the following TLS messages when the server tries to connect to SQL Server:
+Here, the remote server receives the TLS messages when the server tries to connect to SQL Server:
 
-> "An unrecoverable alert was generated and sent to the remote end."
+- An unrecoverable alert was generated and sent to the remote end. You might see this message when the connection is terminated. The defined unrecoverable error code of the TLS protocol is **40**. The status of the Windows SChannel error is **1205**.
 
-   You might see this message when the connection is terminated. The defined unrecoverable error code of the TLS protocol is **40**. The status of the Windows SChannel error is **1205**.
-
-> "An unrecoverable alert was generated and sent to the remote end."
-
-   This error might terminate the connection. The TLS protocol defined fatal error code is **40**. The Windows SChannel error status is **1205**.
+- An unrecoverable alert was generated and sent to the remote end. This error might terminate the connection. The TLS protocol defined fatal error code is **40**. The Windows SChannel error status is **1205**.
 
 ## Resolution
 
