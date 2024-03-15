@@ -22,7 +22,7 @@ items:
     
 - name: Troubleshoot a running container group
   items:
-  - name: ACI debugging tools
+  - name: Azure Container Instances debugging tools
     href: aci-debug-tools.md
   - name: Azure Container Instances shows unexpected memory usage metrics
     href: unexpected-memory-usage-metrics.md
