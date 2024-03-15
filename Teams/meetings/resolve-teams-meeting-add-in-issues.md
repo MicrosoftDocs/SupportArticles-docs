@@ -8,14 +8,14 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- CSSTroubleshoot
-- CI 162959
-- CI 171788
+  - CSSTroubleshoot
+  - CI 162959
+  - CI 171788
 appliesto: 
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 10/30/2023
+ms.date: 03/14/2024
 ---
 
 # Resolve issues with Teams Meeting add-in for Outlook
@@ -32,7 +32,7 @@ Verify that the following policies are assigned to the affected users:
 
 ## Use the Teams Add-in Missing in Outlook diagnostic
 
-If you're an administrator, you can use the following diagnostic tool to validate that a user has the correct policies to enable the Teams Outlook add-in. 
+If you're an administrator, you can use the following diagnostic tool to validate that a user has the correct policies to enable the Teams Outlook add-in.
 
 1. Select the following **Run Tests** button to populate the diagnostic in the Microsoft 365 admin center:
 
@@ -44,12 +44,16 @@ If you're an administrator, you can use the following diagnostic tool to validat
 
 ## Use Microsoft Support and Recovery Assistant
 
+[!INCLUDE [Microsoft Support and Recovery Assistant note](../../includes/sara-note-new-teams.md)]
+
 If the policies are assigned correctly, but you're still unable to install the add-in, or if you're not an administrator, download and run Microsoft Support and Recovery Assistant by selecting the button below. The Assistant is the recommended solution to perform automated troubleshooting steps and make the required fixes.
 
 > [!div class="nextstepaction"]
 > [Download the Assistant](https://aka.ms/SaRA-TeamsAddInScenario)
 
 ## The Enterprise version of the Assistant
+
+[!INCLUDE [Microsoft Support and Recovery Assistant note](../../includes/sara-note-new-teams.md)]
 
 If you're an administrator who has multiple users affected by the issues with the Teams Meeting add-in, you can use the Enterprise version of the Assistant. The Enterprise version of the Assistant is a command-line version that can be scripted to detect and fix most of the issues automatically without requiring user interaction. For details about using the Enterprise version of the Assistant to troubleshoot issues with the Teams Meeting add-in, see [Enterprise version of Microsoft Support and Recovery Assistant](/microsoft-365/troubleshoot/administration/sara-command-line-version#supported-switches).  
 

@@ -15,7 +15,7 @@ ms.reviewer: gregmans; zebamehdi; meerak
 appliesto: 
   - Microsoft 365
 search.appverid: MET150
-ms.date: 02/22/2024
+ms.date: 03/14/2024
 ---
 # Enterprise version of Microsoft Support and Recovery Assistant
 
@@ -29,6 +29,9 @@ To resolve issues on a single computer, we recommend that you use the [full ve
 ## Supported scenarios
 
 You can use the Enterprise version of the Assistant to resolve issues for the following scenarios. Select a scenario for details about how to run it.
+
+> [!NOTE]
+> The Microsoft Support and Recovery Assistant isn't applicable to new Outlook for Windows and new Teams.
 
 |Scenario|Description|\<Scenarioname\>|
 |---|---|---|

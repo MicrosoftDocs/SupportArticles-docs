@@ -59,7 +59,7 @@ If you have a different edition or version installed on your device, run the SaR
 <details>
 <summary><b>Reset Microsoft 365 activation state</b></summary>
 
-Download and run the Microsoft Support and Recovery Assistant to reset the Mincrosoft 365 activation state.
+Download and run the Microsoft Support and Recovery Assistant to reset the Microsoft 365 activation state.
 
 > [!div class="nextstepaction"]
 > [Download the Assistant](https://aka.ms/SaRA-OfficeActivation-Reset)

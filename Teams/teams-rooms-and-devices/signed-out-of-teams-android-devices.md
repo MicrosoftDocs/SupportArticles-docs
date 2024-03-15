@@ -13,7 +13,8 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft Teams
-ms.custom: CI163313
+ms.custom: 
+  - CI163313
 ms.reviewer: kponnus
 ---
 

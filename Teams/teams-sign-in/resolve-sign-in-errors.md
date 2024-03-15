@@ -16,7 +16,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 03/11/2024
+ms.date: 03/14/2024
 ---
 # Resolve sign-in errors in Teams
 
@@ -47,6 +47,8 @@ This test verifies that the user account meets the requirements to sign in to Te
 
 ## Use the Microsoft Support and Recovery Assistant (SaRA)
 
+[!INCLUDE [Microsoft Support and Recovery Assistant note](../../includes/sara-note-new-teams.md)]
+
 If the diagnostic doesn't detect any issue, but you still can't sign in to Teams, or you don't have a Microsoft 365 administrator account, select the button below to download SaRA and automatically start the tests. For more information about SaRA, see [About the Microsoft Support and Recovery Assistant](https://support.microsoft.com/office/about-the-microsoft-support-and-recovery-assistant-e90bb691-c2a7-4697-a94f-88836856c72f).
 
 > [!NOTE]
@@ -67,8 +69,9 @@ If you want to perform the checks and fix the issue manually, follow these steps
 
 1. Check the error code on the Teams sign-in screen. If the code is listed here, follow the provided guidance to fix the error. If the code isn't listed here, see [Why am I having trouble signing in to Microsoft Teams?](https://support.microsoft.com/topic/a02f683b-61a3-4008-9447-ee60c5593b0f)
 
+
     - **0xCAA82EE7** or **0xCAA82EE2**  
-        Make sure that the user has Internet access. Then, use the [Network assessment tool](https://www.microsoft.com/en-us/download/details.aspx?id=53885) to verify that the network and network elements between the user location and the Microsoft network are configured correctly. This is necessary to enable communication to the IP addresses and ports that are required for Teams calls.
+        Make sure that the user has Internet access. Then, use the [Network assessment tool](https://www.microsoft.com/download/details.aspx?id=53885) to verify that the network and network elements between the user location and the Microsoft network are configured correctly. This is necessary to enable communication to the IP addresses and ports that are required for Teams calls.
 
         For information about endpoints that users should be able to reach if they're using Teams in Microsoft 365 plans, government environments, or other clouds, see [Microsoft 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges).
 

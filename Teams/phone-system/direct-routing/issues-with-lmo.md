@@ -7,7 +7,10 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
-ms.custom: CI-126688,CSSTroubleshoot,scenario:Direct-Routing-2
+ms.custom: 
+  - CI-126688
+  - CSSTroubleshoot
+  - scenario:Direct-Routing-2
 ms.reviewer: mikebis
 appliesto: 
   - Microsoft Teams

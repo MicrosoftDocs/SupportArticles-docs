@@ -10,8 +10,8 @@ ms.service: viva
 ms.subservice: viva-connections
 localization_priority: Normal
 ms.custom: 
-- CI 169239
-- CSSTroubleshoot
+  - CI 169239
+  - CSSTroubleshoot
 ms.reviewer: bpeterse
 ms.date: 11/07/2022
 search.appverid: 

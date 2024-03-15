@@ -14,10 +14,12 @@ appliesto:
   - Outlook 2016
   - Outlook 2019
 search.appverid: MET150
-ms.date: 01/30/2024
+ms.date: 03/14/2024
 ---
 
 # Scan Outlook calendar by using Microsoft Support and Recovery Assistant
+
+[!INCLUDE [Microsoft Support and Recovery Assistant note](../../../includes/sara-note-new-outlook.md)]
 
 You can use [Microsoft Support and Recovery Assistant](https://support.microsoft.com/office/about-the-microsoft-support-and-recovery-assistant-e90bb691-c2a7-4697-a94f-88836856c72f) to run the Outlook Calendar diagnostic to troubleshoot and fix such issues as missing meeting entries and shared calendars that can't be accessed by other users. This advanced diagnostic closely mimics the scan logic that was introduced in the [Calendar Checking Tool for Outlook](https://support.microsoft.com/topic/information-about-the-calendar-checking-tool-for-outlook-calcheck-0d2ccac8-f8dd-9289-82cc-943650e36a76) (CalCheck) to identify and report issues that involve general settings such as permissions, free/busy publishing, delegate configuration, and automatic booking. The tool also alerts you to known issues that affect the Outlook calendar folder and calendar items.
 

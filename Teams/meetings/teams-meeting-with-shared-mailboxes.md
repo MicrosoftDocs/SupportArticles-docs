@@ -8,7 +8,7 @@ audience: ITPro
 ms.topic: conceptual
 localization_priority: Normal
 ms.custom: 
-- CI 172564
+  - CI 172564
 ms.reviewer: heiris
 appliesto: 
   - Microsoft Teams
