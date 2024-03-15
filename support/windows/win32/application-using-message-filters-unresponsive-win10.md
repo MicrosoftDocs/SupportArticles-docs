@@ -5,7 +5,7 @@ ms.date: 12/19/2023
 author: HaiyingYu
 ms.author: haiyingyu
 manager: dcscontentpm
-ms.custom: sap:winuser-32-api-windows-messages
+ms.custom: sap:Desktop app UI development\Windows management (User32) API and Windows messages
 ms.reviewer: hihayak
 ms.subservice: desktop-app-ui-dev
 ---
