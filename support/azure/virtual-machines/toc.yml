@@ -371,6 +371,10 @@
       href: cloud-init-deployment-delay.md
     - name: Upload Hyper-V DC to Azure
       href: upload-existing-hyperv-dc-azure-ps.md
+  - name: VM upgrade issues
+    items:
+    - name: Upgrade to SLES 15 SP1
+      href: linux-upgrade-suse-15sp1.md
 
 - name: VM cannot start or stop VM
   items:
