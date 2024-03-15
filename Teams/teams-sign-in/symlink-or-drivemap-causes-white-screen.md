@@ -24,7 +24,7 @@ description: Resolves an issue where Teams opens with a white screen when you us
 
 ## Symptoms
 
-When you use a Unix symlink or map a drive to C:\users, the Teams app with start or launch to a white screen.
+When you use a Unix symlink or map a drive to C:\users, a white screen appears when the Teams app starts.
 
 ## Cause
 
