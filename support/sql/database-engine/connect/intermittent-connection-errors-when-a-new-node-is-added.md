@@ -1,7 +1,7 @@
 ---
-title: Troubleshooting intermittent connection errors in SQL Server
-description: This article helps you resolve the issue of intermittent connection errors in in SQL Server when a new node is added.
-ms.date: 03/07/2024
+title: Intermittent connection errors occur
+description: This article helps you resolve the issue of intermittent connection errors in SQL Server when a new node is added.
+ms.date: 03/15/2024
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
@@ -20,11 +20,11 @@ When you try to connect to a server that's running Microsoft SQL Server, the fol
 
 ## Cause
 
-This error might occur if a mismatch in security protocols exists between the database and the application servers.
+This error might occur if a there is a mismatch in security protocols between the database and the application servers.
 
 ## Resolution
 
-To fix this issue, resolve the mismatch between the security protocols. Node1 encrypts information by using AES128/256. Node2 encrypts information by using RC4. To troubleshoot this issue, follow these steps:
+To fix this error, resolve the mismatch between the security protocols. Node1 encrypts information by using AES128/256. Node2 encrypts information by using RC4. To troubleshoot this issue, follow these steps:
 
 1. Download [IIS Crypto](https://www.nartac.com/Products/IISCrypto/Download).
 1. Install the GUI version of the IIS Crypto tool on the server.
