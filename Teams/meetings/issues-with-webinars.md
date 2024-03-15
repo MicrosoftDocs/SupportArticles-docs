@@ -15,11 +15,35 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 10/30/2023
+ms.date: 03/15/2024
 ---
 # Issues with Teams webinars
 
-Microsoft Teams recently unveiled the webinar feature as an alternative to standard meetings. To learn how to manage webinars, see [Set up for webinars in Microsoft Teams](/microsoftteams/set-up-webinars). To learn how to use webinars, see [Get started with Teams webinars](https://support.microsoft.com/office/get-started-with-teams-webinars-42f3f874-22dc-4289-b53f-bbc1a69013e3) and [Schedule a webinar](https://support.microsoft.com/office/schedule-a-webinar-0719a9bd-07a0-47fd-8415-6c576860f36a). This article discusses known issues that might occur when you use webinars, and provides resolutions and workarounds that you can try.
+Microsoft Teams recently unveiled the webinar feature as an alternative to standard meetings. To learn how to manage webinars, see [Set up for webinars in Microsoft Teams](/microsoftteams/set-up-webinars). To learn how to use webinars, see [Get started with Teams webinars](https://support.microsoft.com/office/get-started-with-teams-webinars-42f3f874-22dc-4289-b53f-bbc1a69013e3) and [Schedule a webinar](https://support.microsoft.com/office/schedule-a-webinar-0719a9bd-07a0-47fd-8415-6c576860f36a). This article discusses known issues that might occur when your users use webinars, and provides resolutions and workarounds that you can try.
+
+## The Webinar option is missing
+
+> [!NOTE]
+> This feature isn't available for users who use new Teams on Virtualized Desktop Infrastructure (VDI).
+
+When users try to [create a webinar](https://support.microsoft.com/office/schedule-a-webinar-in-microsoft-teams-0719a9bd-07a0-47fd-8415-6c576860f36a#bkmk_createwebinar), the **Webinar** option is missing.
+
+This issue may occur for several reasons:
+
+- Display issues caused by cached data.
+- The user account isn't allowed to schedule webinar.
+
+To fix the issue, follow these steps:
+
+1. Verify that the user is enabled to create webinar:
+
+   1. Open the [Teams admin center](https://admin.teams.microsoft.com/).
+   1. Select **Meetings** from the navigation pane.
+   1. Under **Meetings**, select **Events Policies**.
+   1. Select an existing policy or create a new one.
+   1. If the **Allow webinars** setting is **Off**, toggle it **On**.
+   1. Select **Save**.
+1. If the issue persists, ask the user to [clear the Teams client cache](../teams-administration/clear-teams-cache.md).
 
 ## The "For everyone" option is grayed out or missing
 
@@ -43,18 +67,18 @@ This issue may occur if **Require Registration** is set to **None** when the web
 
 To work around this issue, set **Require Registration** to **For people in your org** or **For everyone** when scheduling a webinar.
 
-## Webinar invitations are not received by attendees
+## Webinar invitations aren't received by attendees
 
-In Teams, the invitations to webinars are sent using the email delivery service in Microsoft Dynamics 365. If you have set up security policies for external emails received by your tenant, then your users might not get the emails from this service because they are quarantined by your spam filter.
+In Teams, the invitations to webinars are sent using the email delivery service in Microsoft Dynamics 365. If you have set up security policies for external emails received by your tenant, then your users might not get the emails from this service because they're quarantined by your spam filter.
 
-To resolve this issue, add the [IP addresses used by the Dynamics email delivery service](/dynamics365/customer-insights/journeys/public-ip-addresses-for-email-sending) to the allow list of your spam filter. See your spam filter's documentation for instructions on how to modify the allow list settings.
+To fix this issue, add the [IP addresses used by the Dynamics email delivery service](/dynamics365/customer-insights/journeys/public-ip-addresses-for-email-sending) to the allowlist of your spam filter. See your spam filter's documentation for instructions on how to modify the allowlist settings.
 
 If your users are still not receiving invitations to Teams webinars, modify the default Connection filter policy by using the following steps:
 
 1. Navigate to the [Anti-spam policies](https://security.microsoft.com/antispam) page on the Microsoft 365 Defender portal.
 1. Select **Connection filter policy (Default)** from the list (but don't select the check box next to the name).
 1. In the flyout pane, select **Edit connection filter policy** in the **Connection filtering** section.
-1. Click in the box for the **Always allow messages from the following IP addresses or address range** option and type one of the IP addresses used by the email delivery service.
+1. Select the **Always allow messages from the following IP addresses or address range** option and type one of the IP addresses used by the email delivery service.
 1. Either press the ENTER key or select the complete IP address value that's displayed below the box.
 1. Select **Save**.
 1. If prompted to enable customization, select **Yes**. This step might take some time to complete.
