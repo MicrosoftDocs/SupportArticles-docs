@@ -2,7 +2,7 @@
 title: Converting PDF to bitmap causes partial data loss in the image
 description: This article helps you resolve the problem of partial data loss when you convert a PDF to a Bitmap image by using the classes of the Windows.Data.Pdf namespace.
 ms.date: 12/19/2023
-ms.custom: sap:printing-print-spooler-api
+ms.custom: sap:Graphics and Multimedia development\Printing and the Print Spooler API
 ms.reviewer: hiroakii, v-jayaramanp
 ms.subservice: graphics-multimedia-dev
 ---

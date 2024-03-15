@@ -1,9 +1,9 @@
 ---
 title: PA Returned Item Lookup does not show expected information
 description: The PA Returned Item Lookup window does not show the expected information in Microsoft Dynamics GP. Provides resolutions.
-ms.reviewer: ppeterso
+ms.reviewer: theley, ppeterso
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # The PA Returned Item Lookup window does not show the expected information in Microsoft Dynamics GP
 

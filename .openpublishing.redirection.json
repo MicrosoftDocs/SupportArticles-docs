@@ -1,6 +1,16 @@
 {
   "redirections": [
     {
+      "source_path": "support/windows-server/networking/delete-active-connections-from-local-computer.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-smb-guidance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/networking/support-policy-for-dns-client-side-caching.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-dns-guidance",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/windows-server/networking/value-does-not-fall-within-the-expected-range.md",
       "redirect_url": "/previous-versions/troubleshoot/windows-server/value-does-not-fall-within-the-expected-range",
       "redirect_document_id": false
@@ -10126,11 +10136,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "support/azure/virtual-machines/linux-upgrade-suse-15sp1.md",
-      "redirect_url": "/troubleshoot/azure/virtual-machines/welcome-virtual-machines",
-      "redirect_document_id": true
-    },
-    {
       "source_path": "support/dynamics/gp/how-to-solve-alignment-issues-in-1099-reports.md",
       "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
       "redirect_document_id": false
@@ -10682,6 +10687,71 @@
     },
     {
       "source_path": "support/dynamics/gp/modify-employer-number-on-releve-1-form-for-quebec.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/frequently-asked-questions-about-file-exchange-system.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/ax/frequently-asked-questions-about-file-exchange-system",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/maxitemsinobjectgraph-error-in-management-reporter-ax-2012-ddm-task.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/ax/maxitemsinobjectgraph-error-in-management-reporter-ax-2012-ddm-task",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/removal-of-dynamics-ax-2012-legacy-data-provider-for-management-reporter-2012.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/ax/removal-of-dynamics-ax-2012-legacy-data-provider-for-management-reporter-2012",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/management-reporter-2012-ax-2012-user-validation-diagnostic.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/ax/management-reporter-2012-ax-2012-user-validation-diagnostic",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/scsm/disable-diagnostics-connectivity-data.md",
+      "redirect_url": "/troubleshoot/system-center/scsm/welcome-scsm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/scsm/object-type-monitoringclass-not-found.md",
+      "redirect_url": "/troubleshoot/system-center/scsm/welcome-scsm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/scsm/could-not-load-type-error.md",
+      "redirect_url": "/troubleshoot/system-center/scsm/welcome-scsm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/scsm/cannot-impersonate-user-data-source.md",
+      "redirect_url": "/troubleshoot/system-center/scsm/welcome-scsm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/scsm/data-warehouse-base-library-mp-shows-failed-status.md",
+      "redirect_url": "/troubleshoot/system-center/scsm/welcome-scsm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/scsm/cannot-upgrade-to-system-center-2012-r2-service-manager.md",
+      "redirect_url": "/troubleshoot/system-center/scsm/welcome-scsm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/cannot-create-inventory-valuation-and-gmroi-and-inventory-turns-reports.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/guidelines-to-determine-when-support-case-becomes-consulting-engagement.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/must-use-sql-server-management-studio-error-when-connecting-to-store-database-server.md",
       "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
       "redirect_document_id": false
     }

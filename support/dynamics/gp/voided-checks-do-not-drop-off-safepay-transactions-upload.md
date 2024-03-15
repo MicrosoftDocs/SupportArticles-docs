@@ -1,9 +1,9 @@
 ---
 title: Voided checks do not drop off SafePay Transactions Upload window
 description: Voided checks do not drop off SafePay Transactions Upload window in Microsoft Dynamics GP. Provides a resolution.
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # Voided checks not dropping off SafePay Transactions Upload window in Microsoft Dynamics GP
 

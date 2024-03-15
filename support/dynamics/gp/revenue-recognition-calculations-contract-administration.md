@@ -1,8 +1,8 @@
 ---
 title: Revenue Recognition calculations for Contract Administration
 description: This article explains that the revenue that is recognized each month is based upon the liability type that you select for the contract in Great Plains.
-ms.reviewer: 
-ms.date: 03/31/2021
+ms.reviewer: theley
+ms.date: 03/13/2024
 ---
 # Revenue Recognition calculations for Contract Administration are based on the liability type that is in Great Plains Field Service Series
 

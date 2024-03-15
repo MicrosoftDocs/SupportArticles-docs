@@ -1,9 +1,9 @@
 ---
 title: Add the bin number to the Inventory Transaction Edit List
 description: This article describes how to add the bin number to the Inventory Transaction Edit List report with multiple bins enabled in Report Writer in Microsoft Dynamics GP.
-ms.reviewer: 
+ms.reviewer: theley
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # Add the bin number to the Inventory Transaction Edit List report with multiple bins enabled in Report Writer in Microsoft Dynamics GP
 

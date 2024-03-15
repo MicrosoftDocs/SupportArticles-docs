@@ -1,9 +1,9 @@
 ---
 title: How to handle reduced-input tax credits
 description: Discusses Australian GST and reduced-input tax credits (RITC). Contains information about how RITC ratio formulas and the BAS reporting tool are used to calculate tax amounts in Microsoft Dynamics GP.
-ms.reviewer: lmuelle
+ms.reviewer: theley, lmuelle
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # How to handle reduced-input tax credits in the Business Activity Statement reporting tool in the Australian version of Microsoft Dynamics GP
 

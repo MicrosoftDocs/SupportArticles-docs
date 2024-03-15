@@ -1,9 +1,9 @@
 ---
 title: How to add customer notes to RM Detail Aged Trial Balance Options
 description: How to add the customer notes from the Customer Maintenance window to the RM Detail Aged Trial Balance - Options report in Microsoft Dynamics GP.
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # How to add customer notes from the Customer Maintenance window to the RM Detail Aged Trial Balance - Options report
 

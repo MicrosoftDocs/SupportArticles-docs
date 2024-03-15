@@ -1,9 +1,9 @@
 ---
 title: Add the purchase order number
 description: Describes how to add the purchase order number to the Open Sales Order report in Microsoft Dynamics GP.
-ms.reviewer: kfrankha, lmuelle
+ms.reviewer: theley, kfrankha, lmuelle
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # How to add the purchase order number to the Open Sales Order report in Microsoft Dynamics GP
 
