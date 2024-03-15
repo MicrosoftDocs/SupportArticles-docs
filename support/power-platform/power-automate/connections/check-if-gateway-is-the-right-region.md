@@ -3,7 +3,7 @@ title: Can't view gateways in Power Automate
 description: Provides a solution to an issue where you can't see your gateway in Power Automate.
 ms.reviewer: quseleba, cgarty
 ms.date: 03/15/2024
-ms.custom:sap:Connections\Gateways
+ms.custom: sap:Connections\Gateways
 ---
 # Can't view gateways in Power Automate
 
