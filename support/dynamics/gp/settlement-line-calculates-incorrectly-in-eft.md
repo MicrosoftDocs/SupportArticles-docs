@@ -1,9 +1,9 @@
 ---
 title: Settlement line is wrong in EFT file for Payables Management
 description: Settlement line calculates wrongly in the Electronic Funds Transfer (EFT) file for Payables Management in Microsoft Dynamics GP. Provides a resolution.
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # Settlement line calculates incorrectly in the Electronic Funds Transfer file for Payables Management
 

@@ -25,8 +25,7 @@ sudo tail /var/log/messages
 ```
 
 ```output
-Starting sshd: /var/empty/sshd must be owned by root and not group or world-writable.  
-[FAILED]
+sshd: /var/empty/sshd must be owned by root and not group or world-writable.  
 ```
 
 ### [SUSE](#tab/slessymp)
@@ -36,7 +35,7 @@ sudo tail /var/log/messages
 ```
 
 ```output
-sshd[4022]: fatal: /var/lib/empty must be owned by root and not group or world-writable.
+sshd[4022]: /var/lib/empty must be owned by root and not group or world-writable.
 ```
 
 ### [Ubuntu](#tab/ubuntusymp)
@@ -46,7 +45,7 @@ sudo tail /var/log/auth.log
 ```
 
 ```output
-sshd[1850]: fatal: /var/run/sshd must be owned by root and not group or world-writable.
+sshd[1850]: /var/run/sshd must be owned by root and not group or world-writable.
 ```
 
 ---

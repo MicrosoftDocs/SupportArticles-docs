@@ -1,8 +1,8 @@
 ---
 title: Information about the localized code
 description: Describes additional code and functionality that is provided when you install the Australian localized version of Microsoft Great Plains. Also provides information about core features of Microsoft Great Plains that can be enabled for use in Australia.
-ms.reviewer: 
-ms.date: 04/22/2021
+ms.reviewer: theley
+ms.date: 03/13/2024
 ---
 # Information about the localized code for the Australian version of Microsoft Great Plains
 

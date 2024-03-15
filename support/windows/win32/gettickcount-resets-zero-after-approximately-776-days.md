@@ -4,7 +4,7 @@ description: Describes a problem where the value returned by GetTickCount resets
 author: cts-davean
 ms.author: davean
 ms.reviewer: v-sidong
-ms.custom: sap:other
+ms.custom: sap:System Services Development\Other
 ms.subservice: system-services-dev
 ms.date: 12/19/2023
 ---

@@ -1,9 +1,9 @@
 ---
 title: Error when you select a document
 description: This article provides a resolution for a problem that occurs when you try to select a document in the Sales Transaction Entry window.
-ms.reviewer: 
+ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # Error message when you try to select a document in the Sales Transaction Entry window in Microsoft Dynamics GP (This document is being edited by another user)
 

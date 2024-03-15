@@ -921,7 +921,7 @@ items:
       href: ./certificates-and-public-key-infrastructure-pki/apps-forcibly-closed-tls-connection-errors.md
     - name: Disable TLS 1.0 and 1.1 and force the use of TLS 1.2
       href: ./certificates-and-public-key-infrastructure-pki/disable-tls-1-1dot1-mbam-servers.md
-  - name: sap:certificate-root-update-program, csstroubleshoot
+  - name: Certificate Root Update Program
     items:
     - name: Crypt32 8 events continuously reported
       href: ./certificates-and-public-key-infrastructure-pki/crypt32-event-8.md
@@ -929,7 +929,7 @@ items:
       href: ./certificates-and-public-key-infrastructure-pki/event-id-4107-or-event-id-11-is-logged.md
     - name: Removal of US Federal Common Policy from Microsoft Trusted Root Store
       href: ./certificates-and-public-key-infrastructure-pki/microsoft-trusted-root-store-removal-of-us-federal-common-policy.md
-  - name: sap:certificate-enrollment, csstroubleshoot
+  - name: Certificate enrollment
     items:
     - name: Clients can't authenticate with a server
       href: ./certificates-and-public-key-infrastructure-pki/clients-cant-authenticate-server.md
@@ -943,7 +943,7 @@ items:
       href: ./certificates-and-public-key-infrastructure-pki/certutil-view-not-return-issued-certificate.md
     - name: Approval required for certificate renewals
       href: ./certificates-and-public-key-infrastructure-pki/approval-required-certificate-renewals-autoenrollment.md
-  - name: sap:active-directory-certificate-services-adcs, csstroubleshoot
+  - name: Active Directory Certificate Services (ADCS)
     items:
     - name: How to decommission Windows enterprise CA and remove related objects
       href: ./certificates-and-public-key-infrastructure-pki/decommission-enterprise-certification-authority-and-remove-objects.md
@@ -953,13 +953,13 @@ items:
       href: ./certificates-and-public-key-infrastructure-pki/cannot-publish-certificate-trusted-domain.md
     - name: Superseded Certificate Templates and impact on user’s AD store
       href: ./certificates-and-public-key-infrastructure-pki/superseded-certificate-templates-impact-user-ad-store.md
-  - name: sap:certificates-and-public-key-infrastructure-pki, csstroubleshoot
+  - name: Certificates and Public Key Infrastructure (PKI)
     items:
     - name: Support for Suite B cryptographic algorithms
       href: ./certificates-and-public-key-infrastructure-pki/description-support-suite-b-cryptographic-ipsec.md
     - name: Requirements for domain controller certificates from a third-party CA
       href: ./certificates-and-public-key-infrastructure-pki/requirements-domain-controller.md
-  - name: sap:network-device-enrollment-services-ndes, csstroubleshoot
+  - name: Network Device Enrollment Services (NDES) 
     items:
     - name: '"Http error 500.0" when getting the NDES enrollment challenge password'
       href: ./certificates-and-public-key-infrastructure-pki/http-error-500-internal-server-error.md
@@ -967,11 +967,11 @@ items:
       href: ./certificates-and-public-key-infrastructure-pki/error-0x80090022-nte-silent-context-cep-ces-autoenrollment-kbr-fails.md
     - name: Renewal of Enrollment Agent certificate fails
       href: ./certificates-and-public-key-infrastructure-pki/renewal-of-enrollment-agent-certificate-fail.md
-  - name: sap:kerberos-authentication, csstroubleshoot
+  - name: Kerberos authentication
     items:
     - name: KDC_ERR_C_PRINCIPAL_UNKNOWN in S4U2Self request
       href: ./certificates-and-public-key-infrastructure-pki/kdc-err-c-principal-unknown-s4u2self-request.md
-  - name: sap:certificate-based-authentication, csstroubleshoot
+  - name: Certificate-based authentication
     items:
     - name: Security certificate validation fails
       href: ./certificates-and-public-key-infrastructure-pki/secured-website-certificate-validation-fails.md
@@ -979,23 +979,23 @@ items:
       href: ./certificates-and-public-key-infrastructure-pki/root-ca-certificate-doesnt-appear.md
     - name: Use and troubleshoot CryptAcquireContext function
       href: ./certificates-and-public-key-infrastructure-pki/cryptacquirecontext-troubleshooting.md
-  - name: sap:certificate-web-enrollment-pages-cwe, csstroubleshoot
+  - name: Certificate web enrollment pages (CWE)
     items:
     - name: Can't request certificate from web enrollment pages
       href: ./certificates-and-public-key-infrastructure-pki/no-certificate-templates-be-found.md
     - name: Can't request certificate using web enrollment
       href: ./certificates-and-public-key-infrastructure-pki/cannot-request-certificate-with-web-enrollment.md
-  - name: sap:encrypting-file-system-efs, csstroubleshoot
+  - name: Encrypting File System (EFS)
     items:
     - name: Client computers can't encrypt a file in a domain
       href: ./certificates-and-public-key-infrastructure-pki/recovery-policy-contains-invalid-recovery-certificate.md
     - name: Use Cipher.exe to overwrite deleted data
       href: ./certificates-and-public-key-infrastructure-pki/use-cipher-to-overwrite-deleted-data.md
-  - name: sap:ssl-or-tls, csstroubleshoot
+  - name: SSL or TLS
     items:
     - name: Restrict cryptographic algorithms and protocols
       href: ./certificates-and-public-key-infrastructure-pki/restrict-cryptographic-algorithms-protocols-schannel.md
-  - name: sap:sap:smart-card-logon, csstroubleshoot
+  - name: Smart card logon
     items:
     - name: Enabling smart card logon
       href: ./certificates-and-public-key-infrastructure-pki/enabling-smart-card-logon-third-party-certification-authorities.md
@@ -1557,8 +1557,6 @@ items:
       href: ./networking/robocopy-may-report-error-1338-87.md
     - name: Overview of Server Message Block signing
       href: ./networking/overview-server-message-block-signing.md
-    - name: Setting primary and secondary WINS server options
-      href: ./networking/setting-wins-server-options.md
     - name: Slow SMB files transfer speed
       href: ./networking/slow-smb-file-transfer.md
     - name: SMB Multichannel troubleshooting
@@ -1855,8 +1853,6 @@ items:
       href: ./networking/configure-proxy-server-settings.md
     - name: Configure SNMP Service
       href: ./networking/configure-snmp-service.md
-    - name: Delete all active connections from local computer
-      href: ./networking/delete-active-connections-from-local-computer.md
     - name: Direct host SMB over TCP/IP
       href: ./networking/direct-hosting-of-smb-over-tcpip.md
     - name: DirectAccess clients unable to connect when a static proxy is configured
@@ -1981,6 +1977,8 @@ items:
       href: ./networking/services-not-automatically-restart-nic-teaming.md
   - name: WINS
     items:
+    - name: Error or connection issues when you configure WINS addresses for a WINS server
+      href: ./networking/setting-wins-server-options.md
     - name: Troubleshoot WINS events 4102, 4243,  4242, and 4286
       href: ./networking/windows-internet-name-service-replication-related-errors.md
   - name: Wireless networking and 802.1X authentication

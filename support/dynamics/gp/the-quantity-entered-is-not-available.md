@@ -1,9 +1,9 @@
 ---
 title: The quantity entered is not available
 description: Describes a problem that occurs if one item has the same number for the lot number and for the bin number. A resolution is provided.
-ms.reviewer: kvogel, bgardner
+ms.reviewer: theley, kvogel, bgardner
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # "The quantity entered is not available for this current bin" Error message when you have multi-bin items and lot-numbered items in a Sales Transaction integration in Integration Manager for Microsoft Dynamics GP
 

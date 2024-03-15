@@ -2,8 +2,8 @@
 title: PurchaseOrderDetail package for Analysis Cubes may not load all Purchase Orders
 description: Describes an issue where the Purchase Orders may be missing from Analysis Cubes for Dynamics GP. Provides a solution.
 ms.topic: troubleshooting
-ms.reviewer: kellybj, kevogt
-ms.date: 03/31/2021
+ms.reviewer: theley, kellybj, kevogt
+ms.date: 03/13/2024
 ---
 # PurchaseOrderDetail package for Analysis Cubes may not load all Purchase Orders
 

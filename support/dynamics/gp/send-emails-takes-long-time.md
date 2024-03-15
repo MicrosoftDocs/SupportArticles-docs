@@ -1,9 +1,9 @@
 ---
 title: Sending many emails takes long time to run
 description: Provides a resolution for the issue that sending lots of emails such as PM EFT remittances takes a long time to run or stops responding in Microsoft Dynamics GP.
-ms.reviewer: 
+ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 06/22/2022
+ms.date: 03/13/2024
 ---
 # Performance issue with sending a large volume of emails such as PM EFT remittances in Microsoft Dynamics GP
 

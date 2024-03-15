@@ -1,8 +1,8 @@
 ---
 title: The Get-SCDWJob cmdlet is slow or times out
 description: Fixes an issue in which the Get-SCDWJob cmdlet is slow or times out when the fn_OrchestrationJobHistoryView function runs for a long time.
-ms.date: 08/04/2020
-ms.reviewer: austinm, luche
+ms.date: 03/14/2024
+ms.reviewer: austinm, luche, khusmeno
 ---
 # The Get-SCDWJob cmdlet times out when the fn_OrchestrationJobHistoryView function runs for a long time
 

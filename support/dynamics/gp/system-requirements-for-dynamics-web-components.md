@@ -2,7 +2,7 @@
 title: System Requirements for Microsoft Dynamics Web Components
 description: Describes the system Requirements for Microsoft Dynamics Web Components.
 ms.reviewer: Theley, cwaswick
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # System Requirements for Microsoft Dynamics Web Components
 

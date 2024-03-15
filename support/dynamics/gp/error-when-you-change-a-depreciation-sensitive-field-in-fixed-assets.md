@@ -2,8 +2,8 @@
 title: Error when you change a depreciation sensitive field in Fixed Assets in Microsoft Dynamics GP 
 description: Describes a situation where you receive the error when you change a depreciation sensitive field in Fixed Assets in Microsoft Dynamics GP. Provides a solution.
 ms.topic: troubleshooting
-ms.reviewer: cwaswick
-ms.date: 03/31/2021
+ms.reviewer: theley, cwaswick
+ms.date: 03/13/2024
 ---
 # Error when you change a depreciation sensitive field in Fixed Assets in Microsoft Dynamics GP: Recalc/Reset was unsuccessful. Return Code 99
 
