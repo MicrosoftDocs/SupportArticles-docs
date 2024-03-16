@@ -18,13 +18,23 @@ If Windows Search is unresponsive or the search results don't appear as expected
 
 _Original KB number:_ 4520146
 
-## Solution 1: Check for updates
+## Solution 1: Restart Windows Font Cache Service
+
+Sometimes, SearchApp crashes and restarting Windows Font Cache Service fixes it. To do so:
+
+1. Press <kbd>CTRL</kbd>+<kbd>R</kbd> to open **Run**.
+2. Type `services.msc`.
+3. Find Windows Font Cache Service and stop it.
+4. Check if search now starts working.
+5. Start the service back.
+
+## Solution 2: Check for updates
 
 Windows 11 and Windows 10 let you choose when and how to get the latest updates to keep your device running smoothly and securely. To manage your options and see any available updates, select the **Start** button, and then go to **Settings** > **Update & Security** > **Windows Update** > **Check for updates**. Install any available updates, and then restart your computer if the updates require it.
 
 For more information, see [Update Windows](https://support.microsoft.com/help/4027667).
 
-## Solution 2: Search and Indexing troubleshooter
+## Solution 3: Search and Indexing troubleshooter
 
 Your PC automatically indexes content to deliver faster search results. If you're running Windows 10, version 1903 (May 2019 Update) or later versions and Windows can detect a problem, we'll run the Search troubleshooter automatically. This troubleshooter will reset Windows Search back to the default experience. View your troubleshooter history under **Settings** > **Update & Security** > **Troubleshoot** > **View History**. Follow the solutions below if your issue is still not resolved.
 
@@ -45,7 +55,7 @@ msdt.exe -ep WindowsHelp id SearchDiagnostic
 - [Performance issues that affect Windows Search and Search indexing](windows-search-performance-issues.md).
 - FAQs on [Search indexing in Windows 10](https://support.microsoft.com/help/4098843).
 
-## Solution 3: Restart Windows Search
+## Solution 4: Restart Windows Search
 
 End the **SearchUI** process to restart Windows Search by following these steps:
 
@@ -62,7 +72,7 @@ If this solution doesn't fix your problem, try restarting your device. Restartin
 > [!NOTE]
 > You may want to bookmark this page before you restart.
 
-## Solution 4: Reset Windows Search
+## Solution 5: Reset Windows Search
 
 Try resetting Windows Search by using the method that's appropriate for your version of Windows.
 
@@ -139,7 +149,7 @@ If Windows 11, Windows 10 May 2019 Update, or a later update is installed, use W
 > [!IMPORTANT]
 > If your organization has disabled the ability to run scripts, contact your administrator for help.
 
-## Solution 5: Regenerate the Microsoft.Windows.Search package AppData folder
+## Solution 6: Regenerate the Microsoft.Windows.Search package AppData folder
 
 [!INCLUDE [Registry warning](../../includes/registry-important-alert.md)]
 
