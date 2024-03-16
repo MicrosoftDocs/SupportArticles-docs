@@ -1,6 +1,6 @@
 ---
 title: Fix Teams sign-in errors
-description: Provides troubleshooting steps if you encounter errors when trying to sign in to Microsoft Teams.
+description: Provides troubleshooting steps for errors that you encounter when trying to sign in to Microsoft Teams.
 author: v-charloz
 ms.author: v-chazhang
 manager: dcscontentpm
@@ -20,7 +20,7 @@ ms.date: 03/14/2024
 ---
 # Resolve sign-in errors in Teams
 
-If your users encounter errors when they try to sign in to Microsoft Teams, use the following steps to troubleshoot the problem:
+If your users encounter errors when they try to sign in to Microsoft Teams, use the following steps to troubleshoot the problem.
 
 ## Run the Teams Sign-in diagnostic
 
@@ -31,25 +31,25 @@ If your users encounter errors when they try to sign in to Microsoft Teams, use 
 
    > [!div class="nextstepaction"]
    > [Run Tests: Teams Sign-in](https://aka.ms/TeamsSignInDiag)
-1. In the **Provide the username or email of the user reporting this issue** field, enter the email address of the impacted user, and then select **Run Tests**.
+1. In the **Provide the username or email of the user reporting this issue** field, enter the email address of the affected user, and then select **Run Tests**.
 
 ## Run the Microsoft Remote Connectivity Analyzer diagnostic
 
 > [!NOTE]
 > Currently the Microsoft Remote Connectivity Analyzer tool doesn't support Microsoft 365 Government environments (GCC or GCC High).
 
-1. Open a web browser, and then go to the [Teams Sign in] test(https://testconnectivity.microsoft.com/tests/TeamsSignin/input).
+1. Open a web browser, and then go to the [Teams Sign in](https://testconnectivity.microsoft.com/tests/TeamsSignin/input) test.
 1. Sign in by using the credentials of the user account that you want to test.
 1. Enter the provided verification code.
 1. Select **Verify**.
 
 This test verifies that the user account meets the requirements to sign in to Teams.
 
-## Use the Microsoft Support and Recovery Assistant (SaRA)
+## Use the Microsoft Support and Recovery Assistant
 
 [!INCLUDE [Microsoft Support and Recovery Assistant note](../../includes/sara-note-new-teams.md)]
 
-If the diagnostic doesn't detect any issue, but you still can't sign in to Teams, or you don't have a Microsoft 365 administrator account, select the button below to download SaRA and automatically start the tests. For more information about SaRA, see [About the Microsoft Support and Recovery Assistant](https://support.microsoft.com/office/about-the-microsoft-support-and-recovery-assistant-e90bb691-c2a7-4697-a94f-88836856c72f).
+If the diagnostic doesn't detect any issue, but you still can't sign in to Teams, or you don't have a Microsoft 365 administrator account, select the following below to download the Support and Recovery Assistant and automatically start the tests. For more information about the tool, see [About the Microsoft Support and Recovery Assistant](https://support.microsoft.com/office/about-the-microsoft-support-and-recovery-assistant-e90bb691-c2a7-4697-a94f-88836856c72f).
 
 > [!NOTE]
 > By downloading this app, you agree to the terms of the [Microsoft Services Agreement and Privacy Statement](https://www.microsoft.com/servicesagreement).
@@ -86,6 +86,6 @@ If you want to perform the checks and fix the issue manually, follow these steps
 
     1. [Uninstall Teams](https://support.microsoft.com/windows/uninstall-or-remove-apps-and-programs-in-windows-10-4b55f974-2cc6-2d2b-d092-5905080eaf98).
     1. Browse to the *%appdata%\Microsoft* folder on the user's computer, and delete the *Teams* folder.
-    1. Download and install [Teams](https://www.microsoft.com/microsoft-teams/group-chat-software). If possible, reinstall Teams as an administrator. To do this, right-click the Teams installer file, and select  **Run as administrator**.
+    1. Download and install [Teams](https://www.microsoft.com/microsoft-teams/group-chat-software). If possible, reinstall Teams as an administrator. To do this, right-click the Teams installer file, and select **Run as administrator**.
 
-If none of these steps help to resolve the Teams sign-in issue, create a support request. For the request, [collect debug logs](/microsoftteams/log-files), and provide the error code that's displayed on the Teams sign-in screen.
+If none of these steps helps to resolve the Teams sign-in issue, create a support request. For the request, [collect debug logs](/microsoftteams/log-files), and provide the error code that's displayed on the Teams sign-in screen.
