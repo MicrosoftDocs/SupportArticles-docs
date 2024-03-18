@@ -121,8 +121,10 @@ productDirectory:
   - title: Virtual Machines
     imageSrc: "https://static.docs.com/ui/media/product/azure/virtual-machine.svg"
     links:
-    - url: virtual-machines/welcome-virtual-machines.yml
-      text: Troubleshooting articles for Virtual Machines
+    - url: virtual-machines-linux/welcome-virtual-machines-linux.yml
+      text: Troubleshooting articles for Linux Virtual Machines
+    - url: virtual-machines-windows/welcome-virtual-machines-windows.yml
+      text: Troubleshooting articles for Windows Virtual Machines
   - title: Virtual Machine Scale Sets
     imageSrc: "https://static.docs.com/ui/media/product/azure/vm-scale-sets.svg"
     links:

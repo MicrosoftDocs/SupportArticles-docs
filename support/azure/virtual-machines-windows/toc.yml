@@ -1,0 +1,531 @@
+- name: Welcome
+  href: welcome-virtual-machines-windows.yml
+
+- name: Get additional support for VM-specific issues
+  href: /azure/virtual-machines/vm-support-help?context=/troubleshoot/azure/virtual-machines/context/context
+- name: How to create an Azure support request
+  href: /azure/azure-portal/supportability/how-to-create-azure-support-request?context=/troubleshoot/azure/virtual-machines/context/context
+
+- name: Configuration and Setup
+  items:
+  - name: Support statements
+    items:
+    - name: What Microsoft server software is supported in Azure virtual machines
+      href: server-software-support.md
+    - name: What 32-bit operating systems are supported?
+      href: support-32-bit-operating-systems-virtual-machines.md
+
+- name: Windows Update, Guest Patching and OS Upgrades
+  items:
+  - name: Windows Server 2008 R2 Support statements
+    items:
+    - name: Upgrade Windows Server 2008 and Windows Server 2008 R2
+      href: /windows-server/get-started/extended-security-updates?context=/troubleshoot/azure/virtual-machines/context/context
+    - name: Windows Server 2008/2008 R2 Extended Security Updates
+      href: /windows-server/get-started/uploading-specialized-ws08-image-to-azure?context=/troubleshoot/azure/virtual-machines/context/context
+    - name: Upload a Windows Server 2008/2008 R2 specialized image to Azure
+      href: /windows-server/get-started/modernize-windows-server-2008?context=/troubleshoot/azure/virtual-machines/context/context
+  - name: Windows Server 2003 on Azure statement
+    href: run-win-server-2003.md
+  - name: Citrix services support policy
+    href: support-policy-citrix-services.md
+  - name: Retirement of the hybrid use benefit images
+    href: retirement-hybrid-use-benefit-images.md
+  - name: Windows Server images updated to .NET Framework 4.7
+    href: updates-included-windows-server-images.md
+
+- name: Increase compute vCPU limits (Quota)
+  items:
+  - name: Resource Manager (ARM) quota increases
+    items:
+    - name: Increase VM series vCPU limit
+      href: /azure/azure-portal/supportability/per-vm-quota-requests?context=/troubleshoot/azure/virtual-machines/context/context
+    - name: Increase total regional vCPU limit
+      href: /azure/azure-portal/supportability/regional-quota-requests?context=/troubleshoot/azure/virtual-machines/context/context
+    - name: Increase spot quota limit
+      href: /azure/azure-portal/supportability/low-priority-quota?context=/troubleshoot/azure/virtual-machines/context/context
+  - name: ASM (Classic) quota increases
+    href: /azure/azure-portal/supportability/classic-deployment-model-quota-increase-requests?context=/troubleshoot/azure/virtual-machines/context/context
+  - name: Networking quota increases
+    items:
+      - name: Increase networking limits
+        href: /azure/azure-portal/supportability/networking-quota-requests?context=/troubleshoot/azure/virtual-machines/context/context
+
+- name: Cannot connect to my VM
+  items:
+  - name: Cannot RDP because "You must change your password before logging on the first time" error
+    href: must-change-password.md
+  - name: Cannot RDP into Azure VM because of authentication errors
+    href: cannot-connect-rdp-azure-vm.md
+  - name: CredSSP encryption oracle remediation
+    href: credssp-encryption-oracle-remediation.md
+  - name: No Internet access
+    href: no-internet-access-multi-ip.md
+  - name: Netlogon service is not starting
+    href: azure-vm-netlogon-not-starting.md
+  - name: Network Store Interface service is not starting
+    href: azure-vm-nsi-not-starting.md
+  - name: Cannot RDP into Azure VM because of a brute force attack
+    href: cannot-rdp-azure-vm-brute-force.md
+  - name: Reset RDP
+    href: reset-rdp.md
+  - name: Reset NIC
+    href: reset-network-interface.md
+  - name: RDP troubleshooting
+    href: troubleshoot-rdp-connection.md
+  - name: Detailed RDP troubleshooting
+    href: detailed-troubleshoot-rdp.md
+  - name: Troubleshoot a failed trust relationship in an Azure Windows VM
+    href: troubleshoot-broken-secure-channel.md
+  - name: Troubleshoot RDP error because DHCP is disabled
+    href: troubleshoot-rdp-dhcp-disabled.md
+  - name: Troubleshoot RDP error because of the NSG setting
+    href: troubleshoot-rdp-nsg-problem.md
+  - name: Troubleshoot specific errors
+    href: troubleshoot-specific-rdp-errors.md
+  - name: Troubleshoot no license server errors
+    href: troubleshoot-rdp-no-license-server.md
+  - name: Troubleshoot remote desktop services issues
+    href: troubleshoot-remote-desktop-services-issues.md
+  - name: Troubleshoot an internal error
+    href: Troubleshoot-rdp-internal-error.md
+  - name: Troubleshoot RDP access is denied error
+    href: troubleshoot-rdp-access-denied.md
+  - name: Troubleshoot connection disconnects frequently issue
+    href: troubleshoot-rdp-intermittent-connectivity.md
+  - name: Troubleshoot a general error
+    href: troubleshoot-rdp-general-error.md
+  - name: Troubleshoot Azure VM RDP connection issues by Event ID
+    href: event-id-troubleshoot-vm-rdp-connecton.md
+  - name: Troubleshoot RDP error in VM due to static IP
+    href: troubleshoot-rdp-static-ip.md
+  - name: Troubleshoot RDP error in VM due to disabled NIC
+    href: troubleshoot-rdp-nic-disabled.md
+  - name: Troubleshoot RDP error caused by Safe Mode
+    href: troubleshoot-rdp-safe-mode.md
+  - name: Disable the guest OS Firewall in Azure VM
+    href: disable-guest-os-firewall-windows.md
+  - name: Enable or disable a firewall rule on a guest OS
+    href: enable-disable-firewall-rule-guest-os.md
+  - name: Guest OS firewall is blocking inbound traffic
+    href: guest-os-firewall-blocking-inbound-traffic.md
+  - name: Guest OS firewall is misconfigured
+    href: guest-os-firewall-misconfigured.md
+  - name: Troubleshoot RDP error caused by netvsc.sys
+    href: troubleshoot-rdp-driver-netvsc.md
+  - name: Maximum allowed connections reached
+    href: troubleshoot-rdp-too-many-admin-sessions-open.md
+  - name: Can't sign into your account
+    href: troubleshoot-rdp-cannot-sign-into-account.md
+- name: Application access issues
+  href: troubleshoot-app-connection.md
+
+- name: VM password reset
+  items:
+  - name: Reset local Windows password for Azure VM offline
+    href: reset-local-password-without-agent.md
+
+- name: My VM is not booting
+  items:
+  - name: Boot diagnostics
+    href: boot-diagnostics.md
+  - name: Windows - Specific scenarios
+    href: boot-error-troubleshoot.md
+    items:
+      - name: Blue screen errors
+        href: troubleshoot-common-blue-screen-error.md
+      - name: VM startup is stuck in "Getting Windows Ready"
+        href: troubleshoot-vm-boot-configure-update.md
+      - name: Boot Error - Disk Read Error Occurred
+        href: boot-error-disk-read-error-occurred.md
+      - name: BitLocker errors
+        href: troubleshoot-bitlocker-boot-error.md
+      - name: Troubleshoot directory service initialization failure
+        href: troubleshoot-directory-service-initialization-failure.md
+      - name: Critical process disabled
+        href: troubleshoot-guide-critical-process-died.md
+      - name: Critical service failed
+        href: troubleshoot-critical-service-failed-boot-error.md
+      - name: Troubleshoot boot error 0xC0000225 - Status not found
+        href: boot-error-status-not-found.md
+      - name: Troubleshoot Windows could not finish configuring the system
+        href: windows-could-not-configure-system.md
+      - name: Troubleshoot Windows Update installation capacity
+        href: windows-update-installation-capacity.md
+      - name: Not a bootable disk
+        href: troubleshoot-guide-not-bootable-disk.md
+      - name: Reboot loop
+        href: troubleshoot-reboot-loop.md
+      - name: Stuck at Windows update
+        href: troubleshoot-stuck-updating-boot-error.md
+      - name: Unexpected restart or error
+        href: troubleshoot-unexpected-restart-error-during-vm-boot.md
+      - name: VM startup is stuck
+        href: troubleshoot-vm-boot-configure-update.md
+      - name: VM cannot boot due to Windows Boot Manager
+        href: troubleshoot-guide-windows-boot-manager-menu.md
+      - name: VM is unresponsive due to updating
+        href: unresponsive-vm-apply-windows-update.md
+      - name: VM is unresponsive while applying audit configuration policy
+        href: vm-unresponsive-applying-audit-configuration-policy.md
+      - name: VM is unresponsive while applying default domain controllers policy
+        href: vm-unresponsive-domain-controllers-policy.md
+      - name: VM is unresponsive when applying group policy
+        href: unresponsive-vm-apply-group-policy.md
+      - name: VM is unresponsive when applying security policy
+        href: unresponsive-vm-apply-security-policy.md
+      - name: VM is unresponsive while waiting for Local Session Manager
+        href: vm-unresponsive-wait-local-session-manager.md
+      - name: Windows Boot Manager error - Status Invalid Image Hash
+        href: windows-boot-error-invalid-image-hash.md
+      - name: Windows stop error - Bad System Config Info
+        href: windows-stop-error-bad-system-config-info.md
+      - name: Windows stop error - Hardware malfunction
+        href: windows-stop-error-hardware-malfunction.md
+      - name: Windows stop error - Status No Memory
+        href: troubleshoot-windows-stop-error.md
+      - name: Windows stop error - System Process Terminated
+        href: windows-stop-error-system-process-terminated.md
+      - name: Windows stop error - System thread exception not handled
+        href: windows-stop-error-system-thread-exception-not-handled.md
+      - name: Can't boot with 0xc000000f
+        href: boot-error-0xc000000f.md
+      - name: Can't boot with 0xc00000ba
+        href: boot-error-0xc00000ba.md
+      - name: Can't boot with 0xc0000011
+        href: boot-error-0xc0000011.md
+      - name: Can't boot with 0xc000014c
+        href: boot-error-0xc000014c.md
+      - name: Can't boot with 0xc0000034
+        href: boot-error-0xc0000034.md
+      - name: Can't boot with 0xc0000098
+        href: boot-error-0xc0000098.md
+      - name: Can't boot with 0xC0000102
+        href: error-code-0xC0000102-status-file-corrupt.md
+      - name: Can't boot with 0xc0000359
+        href: boot-error-0xc0000359.md
+      - name: Can't boot with 0xc000000e
+        href: error-code-0xc000000e.md
+      - name: Can't boot with 0xc0000605
+        href: error-code-0xc0000605.md
+      - name: Can't boot with 0xc0000221
+        href: boot-error-0xc0000221.md
+      - name: Boot failure with error INACCESSIBLE_BOOT_DEVICE
+        href: windows-boot-failure.md
+      - name: Troubleshoot Windows VM OS with missing boot manager
+        href: os-bootmgr-missing.md
+      - name: OS isn't found
+        href: os-not-found.md
+      - name: Troubleshoot Windows VM OS boot failure
+        href: os-bucket-boot-failure.md
+      - name: VM stops at "Please wait for the Group Policy Client" screen
+        href: vm-stops-at-please-wait-for-group-policy-client.md
+      - name: VM stops at "Checking file system" screen
+        href: troubleshoot-check-disk-boot-error.md
+      - name: Azure VM cannot RDP - driver IRQL not less or equal
+        href: azure-vm-cannot-rdp-driver-irql-not-less-equal.md
+      - name: Azure VM cannot RDP - working on features
+        href: azure-vm-cannot-rdp-working-features.md
+
+- name: VM performance
+  items:
+  - name: Performance diagnostics (PerfInsights)
+    items:
+    - name: Performance diagnostics in the Azure Portal
+      href: performance-diagnostics.md
+    - name: PerfInsights in Windows
+      href: how-to-use-perfinsights.md
+    - name: PerfInsights in Linux
+      href: how-to-use-perfinsights-linux.md
+    - name: Performance diagnostics VM extension
+      items:
+      - name: Performance diagnostics extension in Windows
+        href: performance-diagnostics-vm-extension.md
+  - name: Performance diagnostics VMSS extension
+    items:
+    - name: PerfInsights and scale set VM instances
+      href: perfinsights-and-scale-set-vm-instances.md
+  - name: Troubleshoot VM performance issues - Windows
+    items:
+    - name: Troubleshoot high CPU issues in Azure Windows virtual machines
+      href: troubleshoot-high-cpu-issues-azure-windows-vm.md
+    - name: Troubleshoot high memory issues for Azure Windows virtual machines
+      href: azure-windows-vm-memory-issue.md
+    - name: Poor performance on Windows Server 2012 R2
+      href: poor-performance-emulated-storage-stack.md
+
+- name: VM health
+  items:
+  - name: HealthResources table in Resource Graph has missing entries
+    href: healthresources-table-resource-graph-missing-entries.md
+  - name: VM availability might be inaccurate during restart
+    href: inaccurate-vm-availability-during-vm-restart.md
+
+- name: On-demand Capacity Reservation issues
+  items:
+  - name: Can't deploy Virtual Machines or Virtual Machine Scale Sets (Uniform) with Capacity Reservation
+    href: capacity-reservation-cant-deploy-vm-vmss.md
+  - name: Can't create Capacity Reservation
+    href: capacity-reservation-cant-create-vm-vmss.md
+  - name: Can't delete a Capacity Reservation or Group
+    href: capacity-reservation-cant-delete-group.md
+  - name: Capacity Reservation billing scenarios
+    href: capacity-reservation-billing-scenerios.md
+  - name: A Capacity Reservation is in a "Failed" provisioning state
+    href: capacity-reservation-failed-provisioning-state.md
+
+- name: VM allocation failures
+  items:
+  - name: Allocation failures
+    href: allocation-failure.md
+  - name: Classic allocation failures
+    href: allocation-failure-classic.md
+
+- name: VM planned maintenance
+  items:
+  - name: Overview
+    href: /azure/virtual-machines/maintenance-notifications?context=/troubleshoot/azure/virtual-machines/context/context
+
+- name: VM restarts or stops unexpectedly
+  items:
+    - name: Understand a system reboot
+      href: understand-vm-reboot.md
+    - name: Unexpected reboots of VMs with attached VHDs
+      href: unexpected-reboots-attached-vhds.md
+    - name: Root Cause Analysis of unexpected VM reboot
+      href: unexpected-vm-reboot-root-cause-analysis.md
+
+- name: VM deployment failures
+  items:
+  - name: VM deployment issues
+    href: welcome-deployment-troubleshooting.yml
+
+- name: New VM deployments
+  items:
+  - name: Troubleshoot deploying Windows virtual machine
+    href: troubleshoot-deployment-new-vm-windows.md
+  - name: Support for Availability sets
+    href: virtual-machines-availability-set-supportability.md
+  - name: Troubleshoot virtual machine deployment due to detached disks
+    href: troubleshoot-vm-deployment-detached.md
+  - name: Uploaded VHD is not supported
+    href: uploaded-vhd-not-support.md
+  - name: Image deployment and management
+    items:
+    - name: Cloud-init-enabled VM takes a long time to start up
+      href: cloud-init-deployment-delay.md
+    - name: Upload Hyper-V DC to Azure
+      href: upload-existing-hyperv-dc-azure-ps.md
+  - name: Cannot start or stop VM
+    items:
+    - name: Understanding VM lifecycle and states
+      href: /azure/virtual-machines/states-billing?context=/troubleshoot/azure/virtual-machines/context/context
+    - name: Restarting or resizing a VM
+      href: restart-resize-error-troubleshooting.md
+    - name: Troubleshoot Start/Stop VMs during off-hours (Azure Automation)
+      href: /azure/automation/troubleshoot/start-stop-vm?context=/troubleshoot/azure/virtual-machines/context/context
+    - name: Start VM with last known good configuration
+      href: start-vm-last-known-good.md
+    - name: Swap file is not re-created
+      href: swap-file-not-recreated-linux-vm-restart.md
+    - name: Restarting or resizing a VM
+      href: restart-resize-error-troubleshooting.md
+    - name: Restarting, shutting down, or stopping services
+      href: boot-error-troubleshoot-windows.md
+
+- name: VM extensions
+  items:
+  - name: Windows VM agent
+    items:
+    - name: Minimum version support for agents
+      href: support-extensions-agent-version.md
+    - name: Azure Windows VM Agent overview
+      href: /azure/virtual-machines/extensions/agent-windows?context=/troubleshoot/azure/virtual-machines/context/context
+    - name: Install Windows VM agent offline
+      href: install-vm-agent-offline.md
+    - name: Troubleshoot Windows VM agent
+      href: windows-azure-guest-agent.md
+    - name: Supported operating systems
+      href: extension-supported-os.md
+    - name: Supported extensions
+      href: support-agent-extensions.md
+    - name: Troubleshoot extension issues
+      href: /azure/virtual-machines/extensions/troubleshoot?context=/troubleshoot/azure/virtual-machines/context/context
+    - name: Multiple certificates on IaaS VM that uses extensions
+      href: multiple-certificates-iaas-vm-extensions.md
+    - name: Troubleshoot extension certificate issues on Windows VM
+      href: troubleshoot-extension-certificates-issues-windows-vm.md
+
+  - name: Azure Disk Encryption (ADE)
+    items:
+    - name: Can't enable Azure Disk Encryption
+      href: extension-version-2.2-not-supported.md
+  - name: Azure extension overview
+    href: /azure/virtual-machines/extensions/overview?context=/troubleshoot/azure/virtual-machines/context/context
+  - name: Custom script extenions (CSE)
+    items:
+    - name: Previous command is re-run
+      href: customscript-reruns-previous-command.md
+    - name: Troubleshoot - Linux
+      href: /azure/virtual-machines/extensions/custom-script-linux#troubleshooting?context=/troubleshoot/azure/virtual-machines/context/context
+    - name: Troubleshoot - Windows
+      href: /azure/virtual-machines/extensions/custom-script-windows#troubleshoot-and-support?context=/troubleshoot/azure/virtual-machines/context/context
+
+- name: Disk operations
+  items:
+  - name: Resizing disks
+    items:
+      - name: Downsize a data disk without losing data
+        href: downsize-data-disk-without-losing-data.md
+  - name: Managed and Unmanaged disks
+    items:
+    - name: Overview
+      href: /azure/virtual-machines/managed-disks-overview?context=/troubleshoot/azure/virtual-machines/context/context
+    - name: FAQ
+      href: /azure/virtual-machines/faq-for-disks?context=/troubleshoot/azure/virtual-machines/context/context
+    - name: FAQ - Azure IaaS VM disks, and managed and unmanaged premium disks
+      href: azure-iaas-vm-disks-managed-unmanaged.md
+    - name: Cannot extend an encrypted OS volume in Windows
+      href: cannot-extend-encrypted-os-volume.md
+    - name: Cannot extend volume on a SQL standalone server virtual machine
+      href: cannot-extend-volume-sql-server.md
+    - name: Errors when deleting storage resources
+      href: storage-resource-deletion-errors.md
+    - name: Errors when deleting classic storage resources
+      href: storage-classic-cannot-delete-storage-account-container-vhd.md
+    - name: VHD is not supported when you create a VM in Azure
+      href: vhd-not-supported-vm-azure.md
+  - name: Windows activation
+    items:
+  - name: Troubleshoot Windows activation problems
+    href: troubleshoot-activation-problems.md
+  - name: Frequently asked questions (FAQ)
+    href: windows-virtual-machine-activation-faq.yml
+  - name: Understanding Generic Volume License Key (GVLK)
+    href: /windows-server/get-started/kms-client-activation-keys?context=/troubleshoot/azure/virtual-machines/context/context
+  - name: Activation fails in forced tunneling scenario
+    href: custom-routes-enable-kms-activation.md
+  - name: Duplicate Client Machine ID
+    href: windows-activation-duplicate-client-machine-id.md
+  - name: Error 0x80070005
+    href: ../windows-server/deployment/error-0x80070005-access-denied.md?context=/troubleshoot/azure/virtual-machines/context/context
+  - name: Error 0x800705B4
+    href: windows-vm-activation-error-0x800705b4.md
+  - name: Error 0xC004E015 (SL_E_EUL_CONSUMPTION_FAILED)
+    href: ../windows-server/deployment/error-0xc004e015-sl-e-eul-consumption-failed-activate-windows.md?context=/troubleshoot/azure/virtual-machines/context/context
+  - name: Error 0xC004FD01 or 0xC004FD02
+    href: windows-vm-activation-error-0xc004fd01-0xc004fd02.md
+  - name: Error 0xC004F06C
+    href: ../windows-server/deployment/error-0xc004f06c-activate-windows.md?context=/troubleshoot/azure/virtual-machines/context/context
+  - name: Error 0xC004F074
+    href: windows-vm-activation-error-0xc004f074.md
+  - name: KMS endpoints - new endpoints
+    href: windows-activation-stopped-working.md
+
+- name: Azure disk encryption - Windows
+  items:
+- name: Overview
+  href: /azure/virtual-machines/windows/disk-encryption-overview?context=/troubleshoot/azure/virtual-machines/context/context
+- name: Troubleshoot
+  href: /azure/virtual-machines/windows/disk-encryption-troubleshooting?context=/troubleshoot/azure/virtual-machines/context/context
+- name: FAQ
+  href: /azure/virtual-machines/windows/disk-encryption-faq?context=/troubleshoot/azure/virtual-machines/context/context
+
+- name: Azure Compute Gallery
+  items:
+  - name: Windows/Linux troubleshooting
+    href: /azure/virtual-machines/troubleshooting-shared-images?context=/troubleshoot/azure/virtual-machines/context/context
+- name: Azure Backup
+  href: /azure/backup/backup-azure-vms-troubleshoot?context=/troubleshoot/azure/virtual-machines/context/context
+  
+- name: Issues with Azure Virtual Desktop
+  items:
+  - name: VM Administration
+    items:
+    - name: What log files are collected during troubleshooting
+      items:
+      - name: Microsoft Azure IaaS VM logs and diagnostic information
+        href: iaas-logs.md
+      - name: Microsoft Azure PaaS VM logs
+        href: sdp352ef8720-e3ee-4a12-a37e-cc3b0870f359-windows-vm.md
+  - name: Remote troubleshooting for VM tools
+    href: remote-tools-troubleshoot-azure-vm-issues.md
+    items:
+      - name: Custom Script Extension or Run Command
+        items:
+          - name: Debug scripts run by Custom Script Extension or Run Command
+            href: debug-customscriptextension-runcommand-scripts.md
+      - name: VM Inspector
+        items:
+          - name: VM Inspector for Azure Virtual Machines
+            href: vm-inspector-azure-virtual-machines.md
+          - name: VM Inspector error messages
+            href: vm-inspector-error-messages.md
+      - name: Serial Console
+        items:
+          - name: Overview
+            href: serial-console-overview.md
+          - name: Serial Console for Windows
+            href: serial-console-windows.md
+            items:
+              - name: CMD and PowerShell commands
+                href: serial-console-cmd-ps-commands.md
+          - name: Enabling and disabling Serial Console
+            href: serial-console-enable-disable.md
+          - name: Power options within Serial Console
+            href: serial-console-power-options.md
+          - name: Common Serial Console errors
+            href: serial-console-errors.md
+
+- name: Tools - VM recovery access using nested virtualization
+  items:
+  - name: Repair a VM with Nested Hyper-V
+    href: troubleshoot-vm-by-use-nested-virtualization.md
+  - name: Windows
+    items:
+    - name: Portal
+      href: troubleshoot-recovery-disks-portal-windows.md
+    - name: PowerShell
+      href: troubleshoot-recovery-disks-windows.md
+    - name: Azure Virtual Machine repair
+      href: repair-windows-vm-using-azure-virtual-machine-repair-commands.md
+    - name: Unlocking disks for offline repair
+      href: unlock-encrypted-disk-offline.md
+    - name: Repair unmanaged disks offline
+      href: unmanaged-disk-offline-repair.md
+
+- name: Common Azure VM errors and issues
+  items:
+  - name: Common error messages
+    href: error-messages.md
+  - name: Throttling errors
+    href: troubleshooting-throttling-errors.md
+  - name: Computer names are missing
+    href: computer-names-missing-blank.md
+  - name: Fail to ping a Clustered Name
+    href: ping-clustered-name-fail.md
+  - name: Failed to get log in Boot Diagnostics
+    href: failed-get-contents-log-error.md
+  - name: GPU is disabled
+    href: gpu-disabled-upgrade-ubuntu.md
+  - name: In-place system upgrade for Windows-based Azure VMs
+    href: in-place-system-upgrade.md
+  - name: Out of memory error in Linux VM
+    href: oom-swap-file-linux-vm.md
+  - name: Upgrade VM to contain more than 64 vCPUs
+    href: vm-cannot-upgrade-64-vcpu.md
+  - name: VM stuck in failed state
+    href: vm-stuck-in-failed-state.md
+  - name: VM is unavailable for 15 minutes
+    href: azure-vm-unavailable.md
+
+- name: Redeploy a VM
+  items:
+  - name: Redeploy Windows virtual machine to new Azure node
+    href: redeploy-to-new-node-windows.md
+
+- name: Azure Virtual Desktop
+  href: how-to-videos-windows-virtual-desktop.md
+
+
+

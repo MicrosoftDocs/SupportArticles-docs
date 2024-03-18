@@ -1,0 +1,145 @@
+### YamlMime:Landing
+
+title: Azure Linux Virtual Machines troubleshooting documentation
+summary: Welcome to Azure Linux Virtual Machines troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Azure Linux Virtual Machines. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+
+metadata:
+  title: Troubleshoot common issues with Azure Linux Virtual Machines
+  description: Documentation for troubleshooting common issues with Azure Linux Virtual Machines. # Required; article description that is displayed in search results. < 160 chars.
+  services: virtual-machines
+  ms.service: virtual-machines #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.topic: landing-page # Required
+  author: genlin  #Required; your GitHub user alias, with correct capitalization.
+  ms.author: genli #Required; microsoft alias of author; optional team alias.
+  ms.date: 03/18/2024
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+# Cards and links should be based on top customer tasks or top subjects
+# Start card title with a verb
+
+  # Card
+  - title: Create and manage Virtual machines
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Documentation for creating and managing VMs
+            url: /azure/virtual-machines/
+
+  # Card
+  - title: Troubleshoot deployment failures
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+        - text: Troubleshoot common deployment errors - Azure Resource Manager
+          url: /azure/azure-resource-manager/troubleshooting/common-deployment-errors
+        - text: Troubleshoot deploying Linux virtual machine
+          url: troubleshoot-deployment-new-vm-linux.md
+        - text: Resolve errors for invalid template
+          url: azure/azure-resource-manager/templates/error-invalid-template
+        - text: Resolve errors for SKU not available
+          url: azure/azure-resource-manager/templates/error-sku-not-available
+
+  # Card
+  - title: Can't connect to my VM
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Debian Linux VM
+            url: cannot-connect-debian-linux.md
+          - text: Detailed SSH troubleshooting
+            url: detailed-troubleshoot-ssh-connection.md
+          - text: Fail to connect to VM through SSH due to SELinux misconfiguration
+            url: linux-selinux-troubleshooting.md
+          - text: Troubleshoot Linux VM UEFI boot failures
+            url: azure-linux-vm-uefi-boot-failures.md
+              
+  # Card
+  - title: Password reset
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: How to reset a local Linux password on Azure VMs
+            url:  reset-password.md
+  # Card
+  - title: VM is not booting
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot file system errors
+            url: linux-recovery-cannot-start-file-system-errors.md
+          - text: Troubleshoot Linux VM UEFI boot failures
+            url: azure-linux-vm-uefi-boot-failures.md
+          - text: Troubleshoot fstab errors
+            url: linux-virtual-machine-cannot-start-fstab-errors.md
+          - text: Troubleshoot kernel panic
+            url: linux-kernel-panic-troubleshooting.md
+          - text: Troubleshoot GRUB rescue issues
+            url: troubleshoot-vm-boot-error.md
+          - text: Troubleshoot VM boot issues due to disabled Hyper-V drivers
+            url: linux-hyperv-issue.md
+
+  # Card
+  - title: Unexpected VM restart
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: How to view VM reboot logs to identify the cause of reboot
+            url: https://azure.microsoft.com/blog/viewing-vm-reboot-logs
+          - text: Diagnose and recover from boot failures after a restart
+            url: https://azure.microsoft.com/blog/boot-diagnostics-for-virtual-machines-v2/
+          - text: Understand planned maintenance for virtual machines in Azure
+            url: /azure/virtual-machines/maintenance-and-updates
+
+  # Card
+  - title: Virtual Disk management issues
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Virtual Disks FAQ
+            url: /azure/virtual-machines/faq-for-disks
+          - text: Troubleshoot allocation failures when resizing a VM
+            url: allocation-failure.md
+          - text: Understanding the temporary drive on your VM
+            url: /azure/virtual-machines/managed-disks-overview#temporary-disk
+          - text: Overview of Azure Managed Disks
+            url: /azure/virtual-machines/managed-disks-overview
+
+  # Card
+  - title: Disk encryption issues
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text:  Troubleshooting Azure disk encryption
+            url: /azure/security/fundamentals/azure-disk-encryption-vms-vmss
+          - text:  How to troubleshoot Azure Extensions
+            url: /azure/virtual-machines/extensions/troubleshoot
+                    
+   # Card
+  - title: VM performance issues
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Isolate bottlenecks in Linux
+            url: troubleshoot-performance-bottlenecks-linux.md
+          - text: Troubleshoot performance issues through Monitoring
+            url: troubleshoot-performance-virtual-machine-linux-windows.md                      
+       
+   # Card
+  - title: VM Extension issues
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Azure Linux VM Agent overview
+            url: /azure/virtual-machines/extensions/agent-linux?context=/troubleshoot/azure/virtual-machines/context/context
+          - text: Troubleshoot Linux VM agent
+            href: linux-azure-guest-agent.md
+          - text: Extension status isn't reported
+            url: linux-vm-extension-status-not-reported.md
+          - text: Linux VM extensions stop running
+            url: extensions-stop-running.md
+          - text: The host keys of Linux VM are written to ec2
+            url: cloud-init-writes-vm-host-keys-as-ec2.md
+          - text: Update awareness for Linux Image Provisioning Agent
+            url: linux-image-provisioning-agent-update-awareness.md

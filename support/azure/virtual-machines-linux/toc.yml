@@ -1,0 +1,173 @@
+- name: Welcome
+  href: welcome-virtual-machines-linux.yml
+
+- name: Cannot connect to my VM
+  items:
+  - name: Serial Console for Linux
+    href: serial-console-linux.md
+  - name: Debian Linux VM
+    href: cannot-connect-debian-linux.md
+  - name: Detailed SSH troubleshooting
+    href: detailed-troubleshoot-ssh-connection.md
+  - name: Fail to connect to VM through SSH due to SELinux misconfiguration
+    href: linux-selinux-troubleshooting.md
+  - name: Troubleshoot Linux VM UEFI boot failures
+    href: azure-linux-vm-uefi-boot-failures.md
+  - name: Network issues
+    href: cannot-connect-linux-network.md
+  - name: SSH connection fails due to permission and ownership issues
+    href: linux-vm-sshconnectionissue-perms.md
+  - name: SSH troubleshooting
+    href: troubleshoot-ssh-connection.md
+  - name: Reset network interface for Azure Linux VM
+    href: reset-network-interface-azure-linux-vm.md
+  - name: Troubleshoot "permissions are too open" error
+    href: troubleshoot-ssh-permissions-too-open.md
+
+- name: How to reset a local Linux password on Azure VMs
+  href: reset-password.md
+
+- name: My VM is not booting
+  items:
+  - name: Linux - Specific scenarios
+    href: boot-error-troubleshoot-linux.md
+    items:
+      - name: Troubleshoot file system errors
+        href: linux-recovery-cannot-start-file-system-errors.md
+      - name: Troubleshoot Linux VM UEFI boot failures
+        href: azure-linux-vm-uefi-boot-failures.md
+      - name: Troubleshoot fstab errors
+        href: linux-virtual-machine-cannot-start-fstab-errors.md
+      - name: Troubleshoot kernel panic
+        href: linux-kernel-panic-troubleshooting.md
+      - name: Troubleshoot GRUB rescue issues
+        href: troubleshoot-vm-boot-error.md
+      - name: Troubleshoot VM boot issues due to disabled Hyper-V drivers
+        href: linux-hyperv-issue.md
+      - name: Can't boot after a host node upgrade
+        href: linux-kernel-panics-upgrade.md
+      - name: Device names are changed
+        href: troubleshoot-device-names-problems.md
+      - name: Error in an Azure Linux VM - Failed to start Switch Root
+        href: resolve-failed-start-switch-root-azure-linux-vm.md
+      - name: Linux VM does not start after an LIS upgrade
+        href: linux-vm-not-start-kernel-lis.md
+      - name: Linux VM fails to boot due to full OS disk
+        href: linux-fulldisk-boot-error.md
+      - name: Troubleshoot VM when LVM is used in the OS disk
+        href: chroot-logical-volume-manager.md
+      - name: VM fails to boot after VFAT is disabled
+        href: vfat-disabled-boot-issues.md
+      - name: VM fails to boot and lands in dracut emergency shell
+        href: linux-no-boot-dracut.md
+
+- name: Troubleshoot VM performance issues - Linux
+  items:
+  - name: Isolate bottlenecks in Linux
+    href: troubleshoot-performance-bottlenecks-linux.md
+  - name: Troubleshoot performance issues through monitoring
+    href: troubleshoot-performance-virtual-machine-linux-windows.md
+
+- name: New VM deployments
+  items:
+  - name: Troubleshoot deploying Linux virtual machine
+    href: troubleshoot-deployment-new-vm-linux.md
+  - name: Fail to create a VM with Ed25519 SSH keys
+    href: ed25519-ssh-keys.md
+
+- name: VM upgrade issues
+  items:
+  - name: Upgrade to SLES 15 SP1
+    href: linux-upgrade-suse-15sp1.md
+
+- name: VM cannot start or stop VM
+  items:
+  - name: Can't restart after applying kernel changes
+    href: kernel-related-boot-issues.md
+  - name: Fail to access Generation 2 Linux VM
+    href: unable-access-g2-linux-vm-reboot.md
+  - name: Fail to restart or be provisioned
+    href: linux-kernel-fails-restart-provision.md
+
+- name: VM extensions
+  items:
+  - name: Linux VM Agent
+    items:
+    - name: Azure Linux VM Agent overview
+      href: /azure/virtual-machines/extensions/agent-linux?context=/troubleshoot/azure/virtual-machines/context/context
+    - name: Troubleshoot Linux VM agent
+      href: linux-azure-guest-agent.md
+    - name: Extension status isn't reported
+      href: linux-vm-extension-status-not-reported.md
+    - name: Linux VM extensions stop running
+      href: extensions-stop-running.md
+    - name: The host keys of Linux VM are written to ec2
+      href: cloud-init-writes-vm-host-keys-as-ec2.md
+    - name: Update awareness for Linux Image Provisioning Agent
+      href: linux-image-provisioning-agent-update-awareness.md
+    - name: Can't process extensions
+      href: linux-agent-cannot-process-extensions.md
+  - name: Cloud-init
+    items:
+    - name: Azure cloud-init support for Linux VMs
+      href: cloud-init-support-linux-vms.md
+  - name: General issues
+    items:
+    - name: Issues with Python 3-enabled Linux systems
+      href: /azure/virtual-machines/extensions/issues-using-vm-extensions-python-3?context=/troubleshoot/azure/virtual-machines/context/context
+
+- name: Azure disk encryption
+  items:
+  - name: Overview
+    href: /azure/virtual-machines/linux/disk-encryption-overview?context=/troubleshoot/azure/virtual-machines/context/context
+  - name: Troubleshoot
+    href: /azure/virtual-machines/linux/disk-encryption-troubleshooting?context=/troubleshoot/azure/virtual-machines/context/context
+  - name: FAQ
+    href: /azure/virtual-machines/linux/disk-encryption-faq?context=/troubleshoot/azure/virtual-machines/context/context
+
+- name: Linux administration
+  items:
+  - name: Configure multiple NICs
+    href: linux-vm-multiple-virtual-network-interfaces-configuration.md
+  - name: Create a SWAP file
+    href: create-swap-file-linux-vm.md
+  - name: Maximum RAM memory of Linux VM
+    href: max-linux-ram-limited-64-gb.md
+
+- name: Linux repositories
+  items:
+  - name: SUSE
+    items:
+    - name: SUSE VM connectivity and registration issues
+      href: suse-public-cloud-connectivity-registration-issues.md
+  - name: Red Hat
+    items:
+    - name: Red Hat RHUI certificate issues
+      href: troubleshoot-linux-rhui-certificate-issues.md
+
+- name: Serial Console for Linux
+  href: serial-console-linux.md
+  items:
+      - name: Serial Console GRUB/Single user mode
+        href: serial-console-grub-single-user-mode.md
+      - name: Serial Console NMI/SysRq
+        href: serial-console-nmi-sysrq.md
+      - name: Serial console grub proactive configuration
+        href: serial-console-grub-proactive-configuration.md
+
+- name: Repair a VM with Nested Hyper-V
+  items:
+  - name: Portal
+    href: troubleshoot-recovery-disks-portal-linux.md
+  - name: CLI
+    href: troubleshoot-recovery-disks-linux.md
+  - name: Azure Virtual Machine repair
+    href: repair-linux-vm-using-azure-virtual-machine-repair-commands.md
+  - name: Azure Linux Auto Repair
+    href: repair-linux-vm-using-ALAR.md
+  - name: Unlock the encrypted disk for offline repair
+    href: unlock-encrypted-linux-disk-offline-repair.md
+  - name: Troubleshoot chroot environment for Linux rescue VM
+    href: chroot-environment-linux.md
+  - name: Redeploy Linux virtual machine to new Azure node
+    href: redeploy-to-new-node-linux.md
