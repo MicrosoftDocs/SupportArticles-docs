@@ -172,8 +172,6 @@ This section provides troubleshooting guidance for the following scenarios:
   4. A window opens that shows the path to the log files. Select **Export**.
   5. Go to the `\Users\Public\Documents\MDMDiagnostics` path, and view the report:
 
-      :::image type="content" source="media/troubleshoot-wi-fi-profiles/windows-mdm-diagnostic-info.png" alt-text="Screenshot of a sample MDM Diagnostic Information that shows WiFi profile configuration on Windows 10 devices." lightbox="media/troubleshoot-wi-fi-profiles/windows-mdm-diagnostic-info.png":::
-
   > [!TIP]
   > For more information, see [Diagnose MDM failures in Windows 10](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10).
 

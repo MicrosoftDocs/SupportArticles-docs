@@ -23,8 +23,6 @@ Intune provides app troubleshooting details based on the apps installed on a spe
 4. Type the name or email address of the user you want to troubleshoot, and then click **Select** at the bottom of the pane. The troubleshooting information for the user is displayed in the **Troubleshoot** pane.
 5. Select the device that you want to troubleshoot from the **Devices** list.
 
-    :::image type="content" source="media/troubleshoot-app-install/devices.png" alt-text="Screenshot of the Intune Troubleshooting pane." border="false" lightbox="media/troubleshoot-app-install/devices.png":::
-
 6. Select **Managed Apps** from selected device pane. A list of managed apps is displayed.
 
     :::image type="content" source="media/troubleshoot-app-install/managed-apps.png" alt-text="Screenshot of the details of a specific device managed by Intune." border="false" lightbox="media/troubleshoot-app-install/managed-apps.png":::

@@ -115,8 +115,6 @@ The **Status details** page will display the following message if WinRE is not c
 
 Another reason could be administrative rights. If your BitLocker policy is targeting a user who does not have administrative rights and **Allow standard users to enable encryption during Autopilot** is not enabled, you will see the following encryption status details.
 
-:::image type="content" source="media\troubleshoot-bitlocker-admin-center\no-admin-rights.png" alt-text="Intune device encryption status details showing that the user does not have admin rights.":::
-
 **Encryption status explained:**
 
 Set **Allow standard users to enable encryption during Autopilot** to **Yes** to resolve this issue for Microsoft Entra joined devices.
