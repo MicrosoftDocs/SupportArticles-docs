@@ -4,7 +4,6 @@ description: This article provides resolutions for the problem where the first i
 ms.date: 12/19/2023
 ms.custom: sap:Desktop app UI development\Other
 ms.reviewer: hirotoh
-ms.subservice: desktop-app-ui-dev
 ---
 # East Asian language first character not recognized in DataGrid cell
 
