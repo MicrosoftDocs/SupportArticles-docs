@@ -1,14 +1,14 @@
 ---
-title: Intermittent connection errors occur
-description: This article helps you resolve the issue of intermittent connection errors in SQL Server when a new node is added.
-ms.date: 03/15/2024
+title: Intermittent connection errors occur in SQL Server
+description: This article helps you resolve the problem of intermittent connection errors in SQL Server when a new node is added to the Always On environment.
+ms.date: 03/18/2024
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 
-# Intermittent connection errors occur when a node is added to the Always On environment
+# Intermittent connection errors occur when a node is added to the Always On environment in SQL Server
 
 You experience intermittent connection errors when you add a new node to the existing Always On environment.
 
@@ -20,11 +20,11 @@ When you try to connect to a server that's running Microsoft SQL Server, the fol
 
 ## Cause
 
-This error might occur if a there is a mismatch in security protocols between the database and the application servers.
+This error might occur if a there's a mismatch in security protocols between the database and the application servers.
 
 ## Resolution
 
-To fix this error, resolve the mismatch between the security protocols. Node1 encrypts information by using AES128/256. Node2 encrypts information by using RC4. To troubleshoot this issue, follow these steps:
+To fix this error, resolve the mismatch between the security protocols. Node1 encrypts information by using AES128/256. Node2 encrypts information by using RC4. To troubleshoot this error, follow these steps:
 
 1. Download [IIS Crypto](https://www.nartac.com/Products/IISCrypto/Download).
 1. Install the GUI version of the IIS Crypto tool on the server.
