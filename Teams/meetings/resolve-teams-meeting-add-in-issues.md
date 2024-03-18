@@ -15,7 +15,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 10/30/2023
+ms.date: 03/18/2023
 ---
 
 # Resolve issues with Teams Meeting add-in for Outlook
@@ -26,7 +26,7 @@ If you're a Microsoft Teams administrator and your users aren't able to install 
 
 Verify that the following policies are assigned to the affected users:
 
-- A Teams Upgrade policy which enables scheduling meetings in Teams. For more information, see [Set your coexistence and upgrade settings](/microsoftteams/setting-your-coexistence-and-upgrade-settings).
+- A Teams Upgrade policy that enables scheduling meetings in Teams. For more information, see [Set your coexistence and upgrade settings](/microsoftteams/setting-your-coexistence-and-upgrade-settings).
 
 - A Teams Meeting policy that permits the Outlook add-in to be installed. For more information, see [Meeting policy settings](/microsoftteams/meeting-policies-in-teams-general#outlook-add-in).
 
@@ -44,7 +44,7 @@ If you're an administrator, you can use the following diagnostic tool to validat
 
 ## Use Microsoft Support and Recovery Assistant
 
-If the policies are assigned correctly, but you're still unable to install the add-in, or if you're not an administrator, download and run Microsoft Support and Recovery Assistant by selecting the button below. The Assistant is the recommended solution to perform automated troubleshooting steps and make the required fixes.
+If the policies are assigned correctly, but you're still unable to install the add-in, or if you're not an administrator, download and run Microsoft Support and Recovery Assistant by selecting the following button. The Assistant is the recommended solution to perform automated troubleshooting steps and make the required fixes.
 
 > [!div class="nextstepaction"]
 > [Download the Assistant](https://aka.ms/SaRA-TeamsAddInScenario)
@@ -55,33 +55,34 @@ If you're an administrator who has multiple users affected by the issues with th
 
 ## Fix the issue manually
 
-If you'd like to perform the checks and make the fixes manually, do the following:
+If you'd like to perform the checks and make the fixes manually, follow these steps:
 
-- If the users are running Windows 7, install the [Update for Universal C Runtime in Windows](https://support.microsoft.com/topic/update-for-universal-c-runtime-in-windows-c0514201-7fe6-95a3-b0a5-287930f3560c). This update is required for the Teams Meeting add-in to work.
+1. Verify that the users have the Teams desktop client installed. The meeting add-in can't be installed when using only the Teams web client.
+1. Verify that the users are running Outlook 2016 or later.
+1. Verify that all available updates for the Outlook desktop client have been applied.
+1. Exit Outlook.
+1. Exit Teams.
+1. Re-register Microsoft.Teams.AddinLoader.dll:
 
-- Verify that the users have the Teams desktop client installed. The meeting add-in can't be installed when using only the Teams web client.
+   1. Open File Explorer, and then navigate to the `%LocalAppData%\Microsoft\TeamsMeetingAddin` folder.
+   1. If there are multiple subfolders with the same version number under this folder, select the subfolder with the highest build number, and then copy the path of this subfolder. For example, `%LocalAppData%\Microsoft\TeamsMeetingAddin\1.0.23334.11`.
+   1. Open an elevated Command Prompt window, and then run one of the following commands that's appropriate for your Office installation:
 
-- Verify that the users are running Outlook 2013 or later.
+     - For 64-bit Office
 
-- Verify that all available updates for the Outlook desktop client have been applied.
+       ```powershell
+       %SystemRoot%\System32\regsvr32.exe /n /i:user <path copied in step b>\x64\Microsoft.Teams.AddinLoader.dll
+       ```
 
-- Exit Outlook.
+     - For 32-bit Office
 
-- Exit Teams.
+       ```powershell
+        %SystemRoot%\SysWOW64\regsvr32.exe /n /i:user <path copied in step b>\x86\Microsoft.Teams.AddinLoader.dll
+       ```
 
-- Run one of the following commands that's appropriate for your Office installation to re-register Microsoft.Teams.AddinLoader.dll:
-
-    - **64 Bit Office:** `%SystemRoot%\System32\regsvr32.exe /n /i:user %LocalAppData%\Microsoft\TeamsMeetingAddin\1.0.18012.2\x64\Microsoft.Teams.AddinLoader.dll`
-
-    - **32 Bit Office:** `%SystemRoot%\SysWOW64\regsvr32.exe /n /i:user %LocalAppData%\Microsoft\TeamsMeetingAddin\1.0.18012.2\x86\Microsoft.Teams.AddinLoader.dll`
-
-    **Note** There might be multiple folders with the same version number under *\TeamsMeetingAddin*. Select the folder with the highest build number.
-
-- Restart the Teams desktop client.
-
-- Sign out and then sign into the Teams desktop client.
-
-- Restart the Outlook desktop client and make sure that Outlook isn't running in admin mode.
+1. Restart the Teams desktop client.
+1. Sign out and then sign in to the Teams desktop client.
+1. Restart the Outlook desktop client and make sure that Outlook isn't running in admin mode.
 
 ## Check the status of the add-in in Outlook
 
@@ -93,7 +94,7 @@ If you still don't see the Teams Meeting add-in, make sure it's enabled in Outlo
 
 - Check whether **Microsoft Teams Meeting Add-in for Microsoft Office** is listed in the **Active Application Add-ins** list.
 
-- If the add-in is not listed in the list of active applications, and you see the Teams Meeting Add-in listed in the **Disabled Application Add-ins** list, select **Manage** > **COM Add-ins** and then select **Go…**
+- If the add-in isn't listed in the list of active applications, and you see the Teams Meeting Add-in listed in the **Disabled Application Add-ins** list, select **Manage** > **COM Add-ins** and then select **Go…**
 
 - Select the checkbox next to **Microsoft Teams Meeting Add-in for Microsoft Office**.
 
