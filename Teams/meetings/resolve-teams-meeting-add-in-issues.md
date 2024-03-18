@@ -69,7 +69,7 @@ If you'd like to perform the checks and make the fixes manually, follow these st
 1. Re-register Microsoft.Teams.AddinLoader.dll:
 
    1. Open File Explorer, and then navigate to the `%LocalAppData%\Microsoft\TeamsMeetingAddin` folder.
-   1. If there are multiple subfolders with the same version number under this folder, select the subfolder with the highest build number, and then copy the path of this subfolder. For example, `%LocalAppData%\Microsoft\TeamsMeetingAddin\1.0.23334.11`.
+   1. Select the subfolder with a name equal to the version number. If there are multiple subfolders with the same version number, select the subfolder with the highest build number. Then, copy the path of this subfolder. For example, `%LocalAppData%\Microsoft\TeamsMeetingAddin\1.0.23334.11`.
    1. Open an elevated Command Prompt window, and then run one of the following commands that's appropriate for your Office installation:
 
      - For 64-bit Office
