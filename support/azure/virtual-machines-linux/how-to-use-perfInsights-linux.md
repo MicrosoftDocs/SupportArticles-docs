@@ -18,7 +18,7 @@ ms.author: genli
 ---
 # How to use PerfInsights
 
-[PerfInsights Linux](https://aka.ms/perfinsightslinuxdownload) is a self-help diagnostics tool that collects and analyzes the diagnostic data, and provides a report to help troubleshoot Linux virtual machine performance problems in Azure. PerfInsights can be run on supported virtual machines as a standalone tool, or directly from the portal by using [Performance Diagnostics for Azure virtual machines](performance-diagnostics.md).
+[PerfInsights Linux](https://aka.ms/perfinsightslinuxdownload) is a self-help diagnostics tool that collects and analyzes the diagnostic data, and provides a report to help troubleshoot Linux virtual machine performance problems in Azure. PerfInsights can be run on supported virtual machines as a standalone tool, or directly from the portal by using [Performance Diagnostics for Azure virtual machines](../virtual-machines-windows/performance-diagnostics.md).
 
 If you are experiencing performance problems with virtual machines, before contacting support, run this tool.
 
@@ -226,7 +226,7 @@ You can run PerfInsights on a virtual machine by installing Azure Performance Di
 
 #### Install and run PerfInsights from the Azure portal
 
-For more information about this option, see [Azure Performance Diagnostics](performance-diagnostics.md).  
+For more information about this option, see [Azure Performance Diagnostics](../virtual-machines-windows/performance-diagnostics.md).  
 
 #### Run PerfInsights in standalone mode
 

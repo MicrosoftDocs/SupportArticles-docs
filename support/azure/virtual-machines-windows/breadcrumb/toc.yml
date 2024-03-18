@@ -32,7 +32,7 @@
       tocHref: /azure/azure-portal/
       topicHref: /troubleshoot/azure/index
       items:
-      - name: Virtual Machines
+      - name: Windows Virtual Machines
         tocHref: /azure/azure-portal/
         topicHref: /troubleshoot/azure/virtual-machines-windows/welcome-virtual-machines-windows
 
@@ -40,7 +40,7 @@
       tocHref: /azure/backup/
       topicHref: /troubleshoot/azure/index
       items:
-      - name: Virtual Machines
+      - name: Windows Virtual Machines
         tocHref: /azure/backup/
         topicHref: /troubleshoot/azure/virtual-machines-windows/welcome-virtual-machines-windows
  
@@ -52,6 +52,6 @@
       tocHref: /troubleshoot/windows-server/
       topicHref: /troubleshoot/azure/index
       items:
-      - name: Virtual Machines
+      - name: Windows Virtual Machines
         tocHref: /troubleshoot/windows-server/deployment/
         topicHref: /troubleshoot/azure/virtual-machines-windows/welcome-virtual-machines-windows
