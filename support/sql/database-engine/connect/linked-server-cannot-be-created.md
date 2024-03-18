@@ -8,7 +8,7 @@ ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 
-# A linked server SQL Server couldn't be created after transition to a Windows 2022 OnPrem or Azure VM
+# A linked server couldn't be created after transition to a Windows 2022 OnPrem or Azure VM
 
 This article helps you resolve a problem in which you try to create a linked server after you move an instance of Microsoft SQL Server to Azure.
 
