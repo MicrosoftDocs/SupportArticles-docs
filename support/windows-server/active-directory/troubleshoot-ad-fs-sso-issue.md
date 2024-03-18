@@ -655,8 +655,6 @@ To check if the claim rules for immutableID and UPN in AD FS matches what Micros
 
    3. On the **Review Your Solution** page, make a note of the values of **SOURCE ANCHOR** and **USER PRINCIPAL NAME**.
 
-      :::image type="content" source="media/troubleshoot-adfs-sso-issue/azure-active-directory-connect.png"  alt-text="Get the values of SOURCE ANCHOR and USER PRINCIPAL NAME in the Microsoft Entra Connect page.":::
-
 2. Verify the values of immutableID (sourceAnchor) and UPN in the corresponding claim rule configured in the AD FS server.
 
    1. On the AD FS server, open the AD FS management console.
