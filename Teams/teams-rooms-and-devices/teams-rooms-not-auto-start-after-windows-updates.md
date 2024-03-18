@@ -14,7 +14,8 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft Teams
-ms.custom: CI174147
+ms.custom: 
+  - CI174147
 ---
 # Teams Rooms app doesn't start automatically after a Windows update
 

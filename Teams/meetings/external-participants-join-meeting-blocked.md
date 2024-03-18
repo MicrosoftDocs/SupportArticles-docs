@@ -8,8 +8,8 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- CI 169117
-- CSSTroubleshoot
+  - CI 169117
+  - CSSTroubleshoot
 ms.reviewer: rbronisevsky,lehill
 appliesto: 
   - Microsoft Teams

@@ -9,7 +9,8 @@ localization_priority: Normal
 search.appverid: 
   - MET150
 audience: Admin
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - CSSTroubleshoot
 ms.topic: troubleshooting
 appliesto: 
   - SharePoint Server 2013

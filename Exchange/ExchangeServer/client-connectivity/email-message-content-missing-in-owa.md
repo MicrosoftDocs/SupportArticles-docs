@@ -5,7 +5,8 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - CSSTroubleshoot
 appliesto: 
 - Exchange Server 2010 Enterprise
 - Exchange Server 2010 Standard

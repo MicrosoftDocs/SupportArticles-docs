@@ -12,7 +12,8 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft Teams
-ms.custom: CI179889
+ms.custom: 
+  - CI179889
 ---
 # The Sleep timer status is Unhealthy
 

@@ -10,7 +10,9 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: arhinesm
-ms.custom: sap:office-experts, CSSTroubleshoot
+ms.custom: 
+  - sap:office-experts
+  - CSSTroubleshoot
 appliesto: 
   - Office Online Server
 ms.date: 03/31/2022

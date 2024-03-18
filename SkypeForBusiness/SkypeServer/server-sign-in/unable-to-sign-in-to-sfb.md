@@ -10,7 +10,8 @@ audience: Admin
 search.appverid: 
   - MET150
 ms.topic: troubleshooting
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - CSSTroubleshoot
 ms.date: 04/17/2019
 appliesto: 
   - Skype for Business

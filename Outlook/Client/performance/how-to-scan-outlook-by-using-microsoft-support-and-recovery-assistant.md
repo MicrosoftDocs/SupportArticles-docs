@@ -17,11 +17,11 @@ appliesto:
   - Outlook 2010
   - Outlook for Microsoft 365
 search.appverid: MET150
-ms.date: 01/30/2024
+ms.date: 03/14/2024
 ---
 # Scan Outlook by using Microsoft Support and Recovery Assistant
 
-_Original KB number:_ &nbsp; 4098558
+[!INCLUDE [Microsoft Support and Recovery Assistant note](../../../includes/sara-note-new-outlook.md)]
 
 ## Overview
 
