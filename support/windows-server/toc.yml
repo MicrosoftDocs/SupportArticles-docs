@@ -29,8 +29,6 @@ items:
       href: ./active-directory/syskey-exe-utility-is-no-longer-supported.md
     - name: SYSVOL folder isn't replicated between domain controllers
       href: ./active-directory/file-replication-service-event-13552-13555.md
-  - name: Active Directory Certificate Services
-    items: []
   - name: Active Directory database issues and domain controller boot failures
     items:
     - name: '"access is denied" error when replicating AD directory service'
@@ -425,8 +423,6 @@ items:
       href: ./active-directory/delays-domain-members-dc-remote-domains.md
     - name: Error when you run AD Installation Wizard
       href: ./active-directory/error-when-you-run-ad-installation-wizard.md
-  - name: Transport Layer Security (TLS)
-    items: []
   - name: User, computer, group, and object management
     items:
     - name: '"This property is limited to 64 values" error'
