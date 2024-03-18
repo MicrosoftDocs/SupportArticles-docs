@@ -5,6 +5,7 @@ author: jshotts
 ms.author: jasonshotts
 ms.reviewer: mhart
 ms.date: 10/19/2023
+ms.custom: sap:Customizations and Integrations
 ---
 # Can't delete record because of a restrict-delete relationships
 

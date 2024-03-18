@@ -5,7 +5,7 @@ ms.author: andreo
 author: Andrea-Orimoto
 ms.reviewer: mhart
 ms.date: 12/21/2023
-ms.custom: sap:cant-save-data
+ms.custom: sap:Mobile Application\Can't save data
 ---
 # "Validations have been restarted in the background because of inconsistent validation data" error
 
