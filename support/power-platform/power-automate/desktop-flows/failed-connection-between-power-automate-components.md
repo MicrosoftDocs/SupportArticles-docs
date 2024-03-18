@@ -20,7 +20,7 @@ When you try to start Power Automate, you receive the following error message:
 
 ## Cause
 
-This issue might occur if two different versions of Power Automate for desktop are installed on the computer. In this scenario, one version is installed from the Microsoft Store and a different version is installed by using the MSI installer. This could result in conflicts between the two versions, and is an unsupported scenario.
+This issue might occur if two different versions of Power Automate for desktop are installed on the computer. In this scenario, one version is installed using the MSI installer and a different version is installed from the Microsoft Store. This could result in conflicts between the two versions, and is an unsupported scenario.
 
 ## Resolution
 
