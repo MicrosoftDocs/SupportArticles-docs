@@ -16,7 +16,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 03/11/2024
+ms.date: 03/17/2024
 ---
 
 # "You're missing out!" error when signing in to Teams
