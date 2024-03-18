@@ -1,9 +1,9 @@
 ---
 title: Data provider framework error in Microsoft Management Reporter 2012 for Dynamics GP
 description: Describes an error message in Management Reporter 2012 for Dynamics GP. Provides a resolution.
-ms.reviewer: kellybj, kevogt
+ms.reviewer: theley, kellybj, kevogt
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # Data provider framework error in Microsoft Management Reporter 2012 for Microsoft Dynamics GP
 

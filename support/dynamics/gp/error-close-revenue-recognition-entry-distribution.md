@@ -1,9 +1,9 @@
 ---
 title: Error when you close Revenue Recognition Entry Distribution dialog box
 description: Describes a problem that occurs when you close the Distribution dialog box after creating a Revenue Recognition transaction. Provides solutions to this problem.
-ms.reviewer: ppeterso
+ms.reviewer: theley, ppeterso
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # Error message when you close the "Revenue Recognition Entry Distribution" dialog box in Project Accounting in Microsoft Dynamics GP and in Microsoft Great Plains: Line(s) contain errors
 

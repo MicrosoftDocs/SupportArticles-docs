@@ -5,6 +5,7 @@ ms.date: 12/05/2023
 ms.reviewer: kaushika, sccmcsscontent, alpasc
 author: helenclu
 ms.author: luche
+ms.custom: sap:Operating Systems Deployment (OSD)\Task Sequence Media (all types)
 ---
 # Errors when capturing Windows 11 image by using capture media in Configuration Manager
 

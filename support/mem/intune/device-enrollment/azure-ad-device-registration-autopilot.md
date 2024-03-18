@@ -6,7 +6,7 @@ ms.author: luche
 ms.reviewer: kaushika, horemaw
 ms.date: 12/05/2023
 search.appverid: MET150
-ms.custom: sap:Windows enrollment
+ms.custom: sap:Autopilot\DevicePrep
 ---
 # Troubleshooting Microsoft Entra device registration and Windows Autopilot
 

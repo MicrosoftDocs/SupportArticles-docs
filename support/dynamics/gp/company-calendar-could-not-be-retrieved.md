@@ -1,9 +1,9 @@
 ---
 title: Company calendar could not be retrieved
 description: Provides a solution to an error that occurs when you generate a report in Microsoft Management Reporter.
-ms.reviewer: kevogt, gbyer
+ms.reviewer: theley, kevogt, gbyer
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # "The company calendar couldn't be retrieved" Error message when you generate a report in Microsoft Management Reporter
 
