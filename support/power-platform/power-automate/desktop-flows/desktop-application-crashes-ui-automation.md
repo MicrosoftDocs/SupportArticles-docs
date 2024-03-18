@@ -1,13 +1,13 @@
 ---
 title: Desktop application crashes due to the UI automation of Power Automate for desktop
-description: Resolves an issue where the execution of a UI automation action using Power Automate for desktop causes the desktop application being interacted with to crash.
+description: Provides a workaround for an issue where the execution of a UI automation action using Power Automate for desktop causes the desktop application being interacted with to crash.
 ms.reviewer: nimoutzo
-ms.date: 03/07/2024
+ms.date: 03/18/2024
 ms.subservice: power-automate-desktop-flows
 ---
 # A desktop application crashes due to the execution of UI automation of Power Automate for desktop
 
-This article provides a resolution for a crash issue in desktop applications that Power Automate for desktop interacts with using a UI automation action.
+This article provides a workaround for a crash issue in desktop applications that Power Automate for desktop interacts with using a UI automation action.
 
 ## Prerequisites
 
@@ -18,9 +18,9 @@ This article provides a resolution for a crash issue in desktop applications tha
 - When a user launches the Power Automate for desktop recorder or the UI element picker, and tries to hover over a UI element in a specific desktop application, the desktop application crashes.
 - When a UI automation action is being executed and interacting with a UI element in a specific desktop application, the desktop application crashes.
 
-## Resolution
+## Workaround
 
-Create a new configuration file in the Power Automate for desktop installation folder.
+In the Power Automate for desktop installation folder, create a new configuration file with key and value pairs that disable monitoring of element focus changes and window state changes on the desktop.
 
 ### Before creating the configuration file
 
@@ -53,11 +53,11 @@ Before creating the configuration file, make sure that Power Automate for deskto
 
 ### Key values editing
 
-- `UIA3.DisableFocusEvent`: Makes Power Automate for desktop stop monitoring element focus changes on the desktop. Disabling the focus-changed event can help resolve the application crash issues described in the "Symptoms" section.
+- `UIA3.DisableFocusEvent`: Makes Power Automate for desktop stop monitoring element focus changes on the desktop. Disabling the focus-changed event can help resolve the application crash issues.
   - Possible values:
     - `true`: The focus event is disabled.
     - `false`(default): The focus event remains enabled.
-- `UIA3.DisableWindowStateEvent`: Makes Power Automate for desktop stop monitoring window state changes on the desktop. The window state changes could be things like minimizing or maximizing the window. Disabling the window state change event can help resolve the application crash issues described in the "Symptoms" section.
+- `UIA3.DisableWindowStateEvent`: Makes Power Automate for desktop stop monitoring window state changes on the desktop. The window state changes could be things like minimizing or maximizing the window. Disabling the window state change event can help resolve the application crash issues.
   - Possible values:
     - `true`: The window state change event is disabled.
     - `false`(default): The window state change event remains enabled.
