@@ -20,7 +20,6 @@ While installing Cloud Provisioning Agent, you may get the following error:
 
 > Unable to create gMSA because KDS may not be running on domain controller. Please create/run KDS manually.
 
-:::image type="content" source="media/azure-ad-hybrid-sync-unable-create-gmsa-kds-domain-controller/1-agent-configuration-unable-create-gmsa.png" alt-text="Screenshot of the agent configuration screen. It couldn't create a group managed service account (g M S A), so create and run K D S manually." border="true" lightbox="media/azure-ad-hybrid-sync-unable-create-gmsa-kds-domain-controller/1-agent-configuration-unable-create-gmsa.png":::
 
 To locate the 9001 and 9002 EventIDs, go to **Applications and Services Logs** > **Microsoft** > **Windows** > **Security - Netlogon**.
 

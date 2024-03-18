@@ -56,8 +56,6 @@ To do this, follow these steps:
 1. In the Azure AD B2C directory, locate and select the **Microsoft Entra ID** blade in the Azure portal.
 2. On the **Overview** menu, select **Delete Directory**.
 
-    :::image type="content" source="media/cannot-delete-directory/overview.png" alt-text="Screenshot shows the Delete Directory option on the Overview menu." border="false":::
-
 3. Follow the instructions in the portal.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

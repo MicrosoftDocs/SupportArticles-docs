@@ -232,9 +232,6 @@ After enabling Microsoft Entra Kerberos authentication, you'll need to explicitl
 1. Open **Microsoft Entra ID**.
 2. Select **App registrations** in the left pane.
 3. Select **All Applications** in the right pane.
-
-   :::image type="content" source="media/files-troubleshoot-smb-authentication/azure-portal-azure-ad-app-registrations.png" alt-text="Screenshot that shows all applications in the directory." lightbox="media/files-troubleshoot-smb-authentication/azure-portal-azure-ad-app-registrations.png":::
-
 4. Select the application with the name matching *[Storage Account] $storageAccountName.file.core.windows.net*.
 5. Select **API permissions** in the left pane.
 6. Select **Add permissions** at the bottom of the page.

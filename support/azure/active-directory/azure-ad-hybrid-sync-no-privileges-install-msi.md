@@ -20,8 +20,6 @@ While installing Cloud Provisioning Agent, you may get the following error:
 
 > Service 'Microsoft Entra Connect Provisioning Agent' (AADConnectProvisioningAgent) failed to start. Verify that you have sufficient privileges to start system services.
 
-:::image type="content" source="media/azure-ad-hybrid-sync-no-privileges-install-msi/1-provisioning-agent-failed-start.png" alt-text="Screenshot of error when installing Microsoft Entra Connect Provisioning Agent, about how the Connect Provisioning Agent service failed to start." border="true":::
-
 To verify that you have sufficient privileges:
 
 1. Make sure the user context credentials are set to either Domain Administrator or Enterprise Administrator.

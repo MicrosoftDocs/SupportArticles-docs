@@ -48,8 +48,6 @@ During automatic upgrade, the current installation of Microsoft Entra Connect is
 
 To check which version of Microsoft Entra Connect is installed, open the **Programs and Features** item in Control Panel, and examine the version number of Microsoft Entra Connect.
 
-:::image type="content" source="media/cannot-work-automatic-upgrade/version-of-azure-ad-connect.png" alt-text="Screenshot shows the Microsoft Entra Connection version." border="false":::
-
 To check the version of Microsoft Entra Connect in the server configuration, run the following command in Windows PowerShell, and look for the value of the **Microsoft.Synchronize.ServerConfigurationVersion** property:
 
 ```powershell
@@ -72,7 +70,6 @@ If the value of **SchedulerSuspended** is **True**, the scheduler is suspended.
 
 If Microsoft Entra Connect is upgraded correctly, open the Microsoft Entra Connect wizard, and then select **Review your solution** to verify that the password synchronization and password writeback features are enabled.
 
-:::image type="content" source="media/cannot-work-automatic-upgrade/synchronization-settings.png" alt-text="Screenshot shows the password synchronization and password writeback features under Review your solution item." border="false":::
 
 ## Workaround
 
@@ -82,7 +79,5 @@ To work around this issue, follow these steps:
 2. After the upgrade is complete, verify that the installed version of Microsoft Entra Connect matches the version in the server configuration.
 3. If you have previously enabled the password synchronization feature or the password writeback feature, verify that the feature remains enabled after the upgrade is complete.
 4. If any of the features is disabled after the upgrade, select **Customize synchronization options** in the Microsoft Entra Connect wizard, and then manually enable the feature.
-
-    :::image type="content" source="media/cannot-work-automatic-upgrade/optional-features.png" alt-text="Screenshot shows the Password synchronization and Password writeback options are enabled in Optional features page." border="false":::
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

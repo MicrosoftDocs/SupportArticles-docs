@@ -20,8 +20,6 @@ When installing Cloud Provisioning Agent, you may get this error during installa
 
 > Error while creating group managed service account (gMSA). Error: There is no such object on the server.
 
-:::image type="content" source="media/azure-ad-hybrid-sync-no-such-object-on-server/1-agent-configuration-error-creating-gmsa-v1.png" alt-text="Screenshot of the agent configuration screen. It includes an error saying there isn't a group Managed Service Account (g M S A) object on the server." border="true" lightbox="media/azure-ad-hybrid-sync-no-such-object-on-server/1-agent-configuration-error-creating-gmsa-v1.png":::
-
 The installation wizard's trace file isn't clear about what's missing:
 
 ```output
@@ -52,8 +50,6 @@ The following items are [Active Directory Domain Service requirements](/windows-
 In a similar scenario as above, you may get the following error:
 
 > Error when creating group managed service account (gMSA). Error: There is no such object on the server.
-
-:::image type="content" source="media/azure-ad-hybrid-sync-no-such-object-on-server/3-agent-configuration-error-creating-gmsa-v2.png" alt-text="Screenshot of the agent configuration screen. It shows an error that says there isn't a group Managed Service Account (g M S A) object on the server." border="true" lightbox="media/azure-ad-hybrid-sync-no-such-object-on-server/3-agent-configuration-error-creating-gmsa-v2.png":::
 
 The wizard trace shows the following information:
 
