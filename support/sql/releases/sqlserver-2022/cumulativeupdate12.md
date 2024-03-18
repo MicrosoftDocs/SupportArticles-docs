@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 12 for SQL Server 2022 (KB5033663)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2022 cumulative update 12 (KB5033663).
-ms.date: 03/15/2024
+ms.date: 03/18/2024
 ms.custom: KB5033663
 ms.reviewer: v-qianli2
 appliesto:
@@ -16,7 +16,7 @@ _Version:_ &nbsp; 16.0.4115.5
 
 ## Summary
 
-This article describes Cumulative Update package 12 (CU12) for Microsoft SQL Server 2022. This update contains 49 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 11, and it updates components in the following builds:
+This article describes Cumulative Update package 12 (CU12) for Microsoft SQL Server 2022. This update contains 51 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 11, and it updates components in the following builds:
 
 - SQL Server - Product version: **16.0.4115.5**, file version: **2022.160.4115.5**
 - Analysis Services - Product version: **16.0.43.229**, file version: **2022.160.43.229**
@@ -78,6 +78,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id=2870518>[2870518](#2870518) </a> | Fixes an issue in which the size of the `_$update_bitmap` column of `dbo.conflict_<owner>_<table>` doesn't get updated with changes in the number of columns of the original conflicting table, which causes the Distributor agent in peer-to-peer replication to fail with the following error message: </br></br>String or binary data would be truncated in table '\<TableName>', column '\<ColumnName>'. Truncated value: "."| SQL Server Engine | Replication| All|
 | <a id=2929215>[2929215](#2929215) </a> | Fixes an issue in which [error 18482](/sql/relational-databases/errors-events/mssqlserver-18482-database-engine-error) is caused when using `sp_adddistributor` to add a remote distributor if the Publisher server name contains lowercase characters and the Distributor server has the case-sensitive (_CS) collation. | SQL Server Engine | Replication| All|
 | <a id=2877337>[2877337](#2877337) </a> | Adds the following fields to the `sqlserver.fulltext_filter_usage` Extended Event (XEvent) to improve the telemetry reporting for the XEvent: </br></br>- min_input_size </br>- max_input_size </br>- min_output_size </br>- max_output_size | SQL Server Engine | Search | Windows|
+| <a id=2917001>[2917001](#2917001) </a> | Adds support for iterated and salted hash password verifiers. This is a more secure process than simply storing the SHA-512 hash of the password. This feature is available only in SQL Server 2022 CU12 and later versions. For more information, see [Support for Iterated and Salted Hash Password Verifiers in SQL Server 2022 CU12](https://techcommunity.microsoft.com/t5/azure-sql-blog/support-for-iterated-and-salted-hash-password-verifiers-in-sql/ba-p/4087155)| SQL Server Engine | Security Infrastructure | All|
 | <a id=2907888>[2907888](#2907888) </a> | Fixes an issue that causes the SQL Server Agent to terminate with the following error message: </br></br>Exception 5 caught at line \<LineNumber> of file \<FileName>. SQLServerAgent initiating self-termination.| SQL Server Engine | SQL Agent| All|
 | <a id=2830811>[2830811](#2830811) </a> | Adds trace flag 2616 to enable the stack signature feature when a dump occurs on a SQL Server instance, which avoids multiple dumps for the same exception.| SQL Server Engine | SQL OS | All|
 | <a id=2899892>[2899892](#2899892) </a> | Makes the following improvements to the compressed memory dump feature: </br></br>- Adds the use of the `FILE_FLAG_NO_BUFFERING` flag to improve I/O performance and prevent excessive growth of the file cache. </br>- Adds the dynamic auto-tuning parallelism to the feature to take advantage of the available CPU cores.| SQL Server Engine | SQL OS | Windows|

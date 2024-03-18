@@ -1,13 +1,23 @@
 {
   "redirections": [
     {
+      "source_path": "support/windows-server/networking/periodic-smbclient-event-id-30818.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-smb-guidance#windows-server-2012-r2-periodically-logs-SMBClient-event-id-30818",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/event-1-smb-witness-client-initialization.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-smb-guidance#when-you-install-windows-server-windows-logs-event-id-1",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/windows-server/networking/delete-active-connections-from-local-computer.md",
-      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-smb-guidance",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-smb-guidance#disconnecting-all-shared-resources-from-local-computer",
       "redirect_document_id": false
     },
     {
       "source_path": "support/windows-client/networking/support-policy-for-dns-client-side-caching.md",
-      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-dns-guidance",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-dns-guidance#support-policy-for-dns-client-side-caching-on-dns-clients",
       "redirect_document_id": false
     },
     {
@@ -10738,6 +10748,21 @@
     {
       "source_path": "support/system-center/scsm/cannot-upgrade-to-system-center-2012-r2-service-manager.md",
       "redirect_url": "/troubleshoot/system-center/scsm/welcome-scsm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/cannot-create-inventory-valuation-and-gmroi-and-inventory-turns-reports.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/guidelines-to-determine-when-support-case-becomes-consulting-engagement.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/must-use-sql-server-management-studio-error-when-connecting-to-store-database-server.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
       "redirect_document_id": false
     }
   ]

@@ -3,6 +3,7 @@ title: WSUS and Windows Update Agent diagnostics
 description: This diagnostic package is designed to collect information used to troubleshoot most Windows Update issues.
 ms.date: 12/05/2023
 ms.reviewer: kaushika
+ms.custom: sap:Software Update Management (SUM)\WSUS Installation or Configuration
 ---
 # [SDP3][721e15b6-76f5-43d0-a435-191d3474a359] Windows Server Update Services and Windows Update Agent diagnostics
 

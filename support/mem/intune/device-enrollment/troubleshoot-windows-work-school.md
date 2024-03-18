@@ -4,6 +4,7 @@ description: Troubleshoot blocked Microsoft Intune enrollment for Windows device
 ms.date: 12/05/2023
 search.appverid: MET150
 ms.reviewer: kaushika
+ms.custom: sap:Enroll Device - Windows\Advisory
 ---
 
 # Unblock Windows "Set up for work or school" enrollment
