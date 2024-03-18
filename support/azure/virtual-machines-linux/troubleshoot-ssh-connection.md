@@ -34,7 +34,7 @@ After each troubleshooting step, try reconnecting to the VM.
    * If you are using Microsoft Entra ID to manage SSH logins, the user must be assigned the **Virtual Machine Administrator Login** or **Virtual Machine User Login** role on the resource group that contains the VM and its associated resources. Otherwise, the "Permission denied (publickey)" error will be received. For more information, see [Configure role assignments for the VM that uses Microsoft Entra login](/azure/active-directory/devices/howto-vm-sign-in-azure-ad-linux#configure-role-assignments-for-the-vm).
 4. Check the [VM resource health](/azure/service-health/resource-health-overview).
    * Ensure that the VM reports as being healthy.
-   * If you have [boot diagnostics enabled](boot-diagnostics.md), verify the VM is not reporting boot errors in the logs.
+   * If you have [boot diagnostics enabled](../virtual-machines-windows/boot-diagnostics.md), verify the VM is not reporting boot errors in the logs.
 5. [Restart the VM](#restart-a-vm).
 6. [Redeploy the VM](#redeploy-a-vm).
 
@@ -340,7 +340,7 @@ Try these steps to resolve the most common SSH connection failures for VMs that 
 * Reset remote access from the [Azure portal](https://portal.azure.com). On the Azure portal, select your VM and then select **Reset Remote...**.
 * Restart the VM. On the [Azure portal](https://portal.azure.com), select your VM and select **Restart**.
 
-* Redeploy the VM to a new Azure node. For information about how to redeploy a VM, see [Redeploy virtual machine to new Azure node](./redeploy-to-new-node-windows.md?toc=/azure/virtual-machines/windows/toc.json).
+* Redeploy the VM to a new Azure node. For information about how to redeploy a VM, see [Redeploy virtual machine to new Azure node](../virtual-machines-windows/redeploy-to-new-node-windows.md?toc=/azure/virtual-machines/windows/toc.json).
 
     After this operation finishes, ephemeral disk data will be lost and dynamic IP addresses that are associated with the virtual machine will be updated.
 * Follow the instructions in [How to reset a password or SSH for Linux-based virtual machines](/previous-versions/azure/virtual-machines/linux/classic/reset-access-classic) to:
@@ -354,7 +354,7 @@ Try these steps to resolve the most common SSH connection failures for VMs that 
 ## Additional resources
 
 * If you are still unable to SSH to your VM after following the after steps, see [more detailed troubleshooting steps](detailed-troubleshoot-ssh-connection.md) to review additional steps to resolve your issue.
-* For more information about troubleshooting application access, see [Troubleshoot access to an application running on an Azure virtual machine](./troubleshoot-app-connection.md?toc=/azure/virtual-machines/linux/toc.json)
+* For more information about troubleshooting application access, see [Troubleshoot access to an application running on an Azure virtual machine](../virtual-machines-windows/troubleshoot-app-connection.md?toc=/azure/virtual-machines/linux/toc.json)
 * For more information about troubleshooting virtual machines that were created by using the classic deployment model, see [How to reset a password or SSH for Linux-based virtual machines](/previous-versions/azure/virtual-machines/linux/classic/reset-access-classic).
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

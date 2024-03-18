@@ -462,11 +462,11 @@ PerfInsights is the recommended tool from Azure support for VM performance issue
 
 ### Run PerfInsights
 
-PerfInsights is available for both the [Windows](how-to-use-perfinsights.md) and [Linux](how-to-use-perfinsights-linux.md) OS. Verify that your Linux distribution is in the list of [supported distributions](performance-diagnostics.md#linux) for Performance Diagnostics for Linux.
+PerfInsights is available for both the [Windows](../virtual-machines-windows/how-to-use-perfinsights.md) and [Linux](how-to-use-perfinsights-linux.md) OS. Verify that your Linux distribution is in the list of [supported distributions](../virtual-machines-windows/performance-diagnostics.md#linux) for Performance Diagnostics for Linux.
 
 ### Run and analyze reports through the Azure portal
 
-When PerfInsights is [installed through the Azure portal](performance-diagnostics.md), the software installs an extension on the VM. Users can also install PerfInsights as an extension by going directly to [Extensions in VM blade](performance-diagnostics-vm-extension.md), and then selecting a performance diagnostics option.
+When PerfInsights is [installed through the Azure portal](../virtual-machines-windows/performance-diagnostics.md), the software installs an extension on the VM. Users can also install PerfInsights as an extension by going directly to [Extensions in VM blade](../virtual-machines-windows/performance-diagnostics-vm-extension.md), and then selecting a performance diagnostics option.
 
 #### Azure portal option 1
 
@@ -500,6 +500,6 @@ For more information about PerfInsights in the Linux OS, review [How to use Perf
 
 - [Troubleshoot Azure virtual machine performance on Linux or Windows](troubleshoot-performance-virtual-machine-linux-windows.md)
 
-- [Performance diagnostics for Azure virtual machines](performance-diagnostics.md)
+- [Performance diagnostics for Azure virtual machines](../virtual-machines-windows/performance-diagnostics.md)
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

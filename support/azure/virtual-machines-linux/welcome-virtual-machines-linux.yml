@@ -37,9 +37,9 @@ landingContent:
         - text: Troubleshoot deploying Linux virtual machine
           url: troubleshoot-deployment-new-vm-linux.md
         - text: Resolve errors for invalid template
-          url: azure/azure-resource-manager/templates/error-invalid-template
+          url: /azure/azure-resource-manager/templates/error-invalid-template
         - text: Resolve errors for SKU not available
-          url: azure/azure-resource-manager/templates/error-sku-not-available
+          url: /azure/azure-resource-manager/templates/error-sku-not-available
 
   # Card
   - title: Can't connect to my VM
@@ -134,7 +134,7 @@ landingContent:
           - text: Azure Linux VM Agent overview
             url: /azure/virtual-machines/extensions/agent-linux?context=/troubleshoot/azure/virtual-machines/context/context
           - text: Troubleshoot Linux VM agent
-            href: linux-azure-guest-agent.md
+            url: linux-azure-guest-agent.md
           - text: Extension status isn't reported
             url: linux-vm-extension-status-not-reported.md
           - text: Linux VM extensions stop running

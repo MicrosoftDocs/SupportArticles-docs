@@ -36,7 +36,7 @@ To troubleshoot [Scenario 3: Other Hyper-V drivers are disabled](#hyperv-drivers
 
 ## <a id="network-hyperv-disabled"></a> Scenario 1: Network Hyper-V driver is disabled
 
-Because the networking services are unavailable, you're unable to Secure Shell Protocol (SSH) to a virtual machine, but you still can sign in via [serial console](./serial-console-overview.md) from the Azure portal. You see the following types of errors in the serial console or latest serial log within the [Boot Diagnostics](./boot-diagnostics.md) pane in the Azure portal:
+Because the networking services are unavailable, you're unable to Secure Shell Protocol (SSH) to a virtual machine, but you still can sign in via [serial console](../virtual-machines-windows/serial-console-overview.md) from the Azure portal. You see the following types of errors in the serial console or latest serial log within the [Boot Diagnostics](../virtual-machines-windows/boot-diagnostics.md) pane in the Azure portal:
 
 ```output
  cloud-init[807]: Cloud-init v. 19.4 running 'init-local' at Tue, xx Aug 20XX 20:41:53 +0000. Up 5.83 seconds.
@@ -132,7 +132,7 @@ Always take a backup of the original initial RAMdisk image to facilitate the rol
 
 ## <a id="macaddress-issue"></a>Scenario 2: NIC MAC address is changed or doesn't match
 
-If the Network Interface Card MAC address is changed or doesn't match within the OS configuration, you won't be able to SSH to the VM because the networking services are unavailable. You're still able to sign in via [serial console](./serial-console-overview.md) from the Azure portal. Errors that are similar to the ones in [Scenario 1: Network Hyper-V driver is disabled](#network-hyperv-disabled) are displayed.
+If the Network Interface Card MAC address is changed or doesn't match within the OS configuration, you won't be able to SSH to the VM because the networking services are unavailable. You're still able to sign in via [serial console](../virtual-machines-windows/serial-console-overview.md) from the Azure portal. Errors that are similar to the ones in [Scenario 1: Network Hyper-V driver is disabled](#network-hyperv-disabled) are displayed.
 
 If the issue continues even though the Hyper-V network driver is enabled, use one of the following solutions to validate the OS NIC configuration and resolve the issue.
 
@@ -167,7 +167,7 @@ If the issue continues even though the Hyper-V network driver is enabled, use on
 
 ## <a id="hyperv-drivers-disabled"></a>Scenario 3: Other Hyper-V drivers are disabled
 
-If you experience boot issues with other Hyper-V drivers, you're likely unable to SSH to a VM because the networking services are unavailable. You're dropped to a dracut shell. This issue can be viewed via the [serial console](./serial-console-overview.md) from the Azure portal. You can see the following errors in the serial console or latest serial log within the [Boot Diagnostics](./boot-diagnostics.md) pane in the Azure portal:
+If you experience boot issues with other Hyper-V drivers, you're likely unable to SSH to a VM because the networking services are unavailable. You're dropped to a dracut shell. This issue can be viewed via the [serial console](../virtual-machines-windows/serial-console-overview.md) from the Azure portal. You can see the following errors in the serial console or latest serial log within the [Boot Diagnostics](../virtual-machines-windows/boot-diagnostics.md) pane in the Azure portal:
 
 ```output
  dracut-initqueue[455]: Warning: dracut-initqueue timeout - starting timeout scripts

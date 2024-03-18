@@ -152,7 +152,7 @@ For instructions on how to use the Azure portal to assign roles, read the follow
 
 ## Next steps
 
-* Learn more about the [Azure Serial Console for Linux VMs](./serial-console-linux.md)
+* Learn more about the [Azure Serial Console for Linux VMs](../virtual-machines-linux/serial-console-linux.md)
 * Learn more about the [Azure Serial Console for Windows VMs](./serial-console-windows.md)
 * Learn about [power management options within the Azure Serial Console](./serial-console-power-options.md)
 

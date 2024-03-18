@@ -188,7 +188,7 @@ Azure portal now supports change the OS disk of the VM. To do this, follow these
 
 ## Next steps
 
-If you are having issues connecting to your VM, see [Troubleshoot SSH connections to an Azure VM](troubleshoot-ssh-connection.md). For issues with accessing applications running on your VM, see [Troubleshoot application connectivity issues on a Linux VM](./troubleshoot-app-connection.md?toc=/azure/virtual-machines/linux/toc.json).
+If you are having issues connecting to your VM, see [Troubleshoot SSH connections to an Azure VM](troubleshoot-ssh-connection.md). For issues with accessing applications running on your VM, see [Troubleshoot application connectivity issues on a Linux VM](../virtual-machines-windows/troubleshoot-app-connection.md?toc=/azure/virtual-machines/linux/toc.json).
 
 For more information about using Resource Manager, see [Azure Resource Manager overview](/azure/azure-resource-manager/management/overview).
 

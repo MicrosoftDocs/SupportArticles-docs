@@ -18,7 +18,7 @@ In this article, get information about:
 - The causes of the allocation failures.
 - How to troubleshoot allocation failures when they arise.
 
-To troubleshoot allocation failures for standard virtual machines (VMs), see [Troubleshoot allocation failures when you create, restart, or resize VMs in Azure](../virtual-machines/allocation-failure.md).
+To troubleshoot allocation failures for standard virtual machines (VMs), see [Troubleshoot allocation failures when you create, restart, or resize VMs in Azure](../virtual-machines-windows/allocation-failure.md).
 
 ## Symptom
 
@@ -134,7 +134,7 @@ If you use availability zones, try another zone within the region that may have 
 
 If your allocation request is large (more than 500 cores), see the following sections to break up the request into smaller deployments.
 
-Try [redeploying the VM instance](../virtual-machines/redeploy-to-new-node-windows.md), which allocates the VM instance to a new cluster within the region.
+Try [redeploying the VM instance](../virtual-machines-windows/redeploy-to-new-node-windows.md), which allocates the VM instance to a new cluster within the region.
 
 ## Allocation failures for older VM sizes
 

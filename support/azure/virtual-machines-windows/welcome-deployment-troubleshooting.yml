@@ -59,7 +59,7 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Troubleshooting Azure VM allocation failures - Virtual Machines
+          - text: Troubleshooting Azure VM allocation failures
             url: allocation-failure.md
           - text: Troubleshoot common deployment errors - Azure Resource Manager
             url: /azure/azure-resource-manager/templates/common-deployment-errors
@@ -67,10 +67,10 @@ landingContent:
             url: /azure/azure-resource-manager/templates/error-resource-quota
           - text: SKU not available errors - Azure Resource Manager
             url: /azure/azure-resource-manager/templates/error-sku-not-available
-          - text: Troubleshoot deploying Windows virtual machine issues in Azure - Virtual Machines
-            url: troubleshoot-deploy-vm-windows.md
-          - text: Troubleshoot deploying Linux virtual machine issues in Azure - Virtual Machines
-            url: troubleshoot-deploy-vm-linux.md
+          - text: Troubleshoot deploying Windows virtual machine issues in Azure
+            url: troubleshoot-deployment-new-vm-windows.md
+          - text: Troubleshoot deploying Linux virtual machine issues in Azure
+            url: ../virtual-machines-linux/troubleshoot-deploy-vm-linux.md
           - text: Invalid template errors - Azure Resource Manager
             url: /azure/azure-resource-manager/templates/error-invalid-template
           - text: RequestDisallowedByPolicy error - Azure Resource Manager

@@ -24,7 +24,7 @@ There are various reasons when you cannot start or connect to an application run
 If you are having issues connecting to your VM using RDP or SSH, see one of the following articles first:
 
 * [Troubleshoot Remote Desktop connections to a Windows-based Azure Virtual Machine](troubleshoot-rdp-connection.md)
-* [Troubleshoot Secure Shell (SSH) connections to a Linux-based Azure virtual machine](troubleshoot-ssh-connection.md).
+* [Troubleshoot Secure Shell (SSH) connections to a Linux-based Azure virtual machine](../virtual-machines-linux/troubleshoot-ssh-connection.md).
 
 If you need more help at any point in this article, you can contact the Azure experts on [the MSDN Azure and the Stack Overflow forums](https://azure.microsoft.com/support/forums/). Alternatively, you can also file an Azure support incident. Go to the [Azure support site](https://azure.microsoft.com/support/options/) and select **Get Support**.
 
@@ -39,7 +39,7 @@ If you have problems connecting to an application, try the following general tro
 * Connect from different location, such as a different Azure virtual network
 * Redeploy the virtual machine
   * [Redeploy Windows VM](redeploy-to-new-node-windows.md)
-  * [Redeploy Linux VM](redeploy-to-new-node-linux.md)
+  * [Redeploy Linux VM](../virtual-machines-linux/redeploy-to-new-node-linux.md)
 * Recreate the virtual machine
 
 For more information, see [Troubleshooting Endpoint Connectivity (RDP/SSH/HTTP, etc. failures)](https://social.msdn.microsoft.com/Forums/azure/en-US/538a8f18-7c1f-4d6e-b81c-70c00e25c93d/troubleshooting-endpoint-connectivity-rdpsshhttp-etc-failures?forum=WAVirtualMachinesforWindows).
@@ -144,6 +144,6 @@ For more information, see [Azure network monitoring overview](/azure/network-wat
 
 [Troubleshoot Remote Desktop connections to a Windows-based Azure Virtual Machine](troubleshoot-rdp-connection.md)
 
-[Troubleshoot Secure Shell (SSH) connections to a Linux-based Azure virtual machine](troubleshoot-ssh-connection.md)
+[Troubleshoot Secure Shell (SSH) connections to a Linux-based Azure virtual machine](../virtual-machines-linux/troubleshoot-ssh-connection.md)
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
