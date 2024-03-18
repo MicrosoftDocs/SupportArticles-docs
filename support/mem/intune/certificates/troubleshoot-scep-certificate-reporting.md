@@ -4,6 +4,7 @@ description: Troubleshoot the reporting by NDES and the Intune Certificate Conne
 ms.date: 12/05/2023
 ms.reviewer: kaushika, lacranda
 search.appverid: MET150
+ms.custom: sap:Configure Devices - iOS\SCEP Certificates
 ---
 # Troubleshooting NDES reporting of certificate deployments in Intune
 

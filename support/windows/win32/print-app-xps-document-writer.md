@@ -4,7 +4,6 @@ description: This article describes a problem in which the Save As dialog box is
 ms.date: 12/19/2023
 ms.reviewer: robcap, philipd
 ms.custom: sap:Graphics and Multimedia development\Other
-ms.subservice: graphics-multimedia-dev
 ---
 
 # The Save As dialog box is displayed behind the application that's printing to the XPS Document Writer

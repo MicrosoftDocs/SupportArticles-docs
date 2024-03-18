@@ -4,6 +4,7 @@ description: Resolves an issue where iOS/iPadOS devices are stuck on an enrollme
 ms.date: 12/05/2023
 search.appverid: MET150
 ms.reviewer: kaushika
+ms.custom: sap:Enroll Devices - iOS\Advisory
 ---
 
 # iOS or iPadOS device is stuck on an enrollment screen

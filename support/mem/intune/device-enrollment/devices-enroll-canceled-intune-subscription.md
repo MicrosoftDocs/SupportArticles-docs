@@ -4,6 +4,7 @@ description: Fixes an issue in which devices keep trying to enroll in an Intune 
 ms.date: 12/05/2023
 search.appverid: MET150
 ms.reviewer: kaushika
+ms.custom: sap:Enroll Device - Windows\Advisory
 ---
 # Devices continue to try to enroll in a canceled Intune subscription
 

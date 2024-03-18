@@ -5,6 +5,7 @@ ms.date: 12/05/2023
 ms.reviewer: kaushika, lacranda
 search.appverid: MET150
 
+ms.custom: sap:Configure Devices - Windows\SCEP Certificates
 ---
 # Troubleshooting the delivery of certificates provisioned by SCEP to devices in Microsoft Intune
 
