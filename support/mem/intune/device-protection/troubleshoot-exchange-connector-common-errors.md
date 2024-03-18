@@ -4,6 +4,7 @@ description: Troubleshoot and resolve common error codes for the on-premises Mic
 ms.date: 12/05/2023
 search.appverid: MET150
 ms.reviewer: kaushika
+ms.custom: sap:Configure Devices - Windows\Email
 ---
 # Resolve common errors for the Intune Exchange Connector
 

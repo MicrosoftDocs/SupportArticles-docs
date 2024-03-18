@@ -1,9 +1,9 @@
 ---
 title: Field on window is inactive or disabled error when importing fixed assets info 
 description: When you import fixed assets information in Microsoft Dynamics GP, receive an error message that states Field on window is inactive or disabled. Provides a resolution.
-ms.reviewer: Lmuelle
+ms.reviewer: theley, Lmuelle
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # "Field on window is inactive or disabled. (Line #26)" error when you import fixed assets information
 

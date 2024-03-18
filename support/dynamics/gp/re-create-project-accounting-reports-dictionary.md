@@ -2,8 +2,8 @@
 title: Re-create the Project Accounting Reports dictionary (Parept.dic) for Microsoft Dynamics GP
 description: Describes how to re-create the Project Accounting Reports dictionary (Parept.dic) for Microsoft Dynamics GP.
 ms.topic: how-to
-ms.reviewer: ansather, ppeterso
-ms.date: 03/31/2021
+ms.reviewer: theley, ansather, ppeterso
+ms.date: 03/13/2024
 ---
 # How to re-create the Project Accounting Reports dictionary (Parept.dic) for Microsoft Dynamics GP
 

@@ -1,9 +1,9 @@
 ---
 title: Payroll deductions aren't taken
 description: Provides more information about why payroll deductions aren't included when checks are calculated in Microsoft Dynamics GP.
-ms.reviewer: 
+ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 06/22/2022
+ms.date: 03/13/2024
 ---
 # Payroll deductions aren't taken in Microsoft Dynamics GP
 

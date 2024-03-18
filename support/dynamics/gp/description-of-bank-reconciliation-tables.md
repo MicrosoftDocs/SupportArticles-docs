@@ -1,8 +1,8 @@
 ---
 title: Description of Bank Reconciliation tables
 description: Discusses the tables in Bank Reconciliation. This includes a description of what each table holds and how they work together in Microsoft Dynamics GP.
-ms.reviewer: 
-ms.date: 03/31/2021
+ms.reviewer: theley
+ms.date: 03/13/2024
 ---
 # Description of Bank Reconciliation tables in Microsoft Dynamics GP
 

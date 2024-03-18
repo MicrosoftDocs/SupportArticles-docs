@@ -1,6 +1,26 @@
 {
   "redirections": [
     {
+      "source_path": "support/windows-server/networking/periodic-smbclient-event-id-30818.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-smb-guidance#windows-server-2012-r2-periodically-logs-SMBClient-event-id-30818",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/event-1-smb-witness-client-initialization.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-smb-guidance#when-you-install-windows-server-windows-logs-event-id-1",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/networking/delete-active-connections-from-local-computer.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-smb-guidance#disconnecting-all-shared-resources-from-local-computer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/networking/support-policy-for-dns-client-side-caching.md",
+      "redirect_url": "/troubleshoot/windows-server/networking/troubleshoot-dns-guidance#support-policy-for-dns-client-side-caching-on-dns-clients",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/windows-server/networking/value-does-not-fall-within-the-expected-range.md",
       "redirect_url": "/previous-versions/troubleshoot/windows-server/value-does-not-fall-within-the-expected-range",
       "redirect_document_id": false
@@ -10126,9 +10146,624 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "support/azure/virtual-machines/linux-upgrade-suse-15sp1.md",
-      "redirect_url": "/troubleshoot/azure/virtual-machines/welcome-virtual-machines",
-      "redirect_document_id": true
+      "source_path": "support/dynamics/gp/how-to-solve-alignment-issues-in-1099-reports.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/execution-of-user-code-in-net-framework-is-disabled-error-after-restoring-sql-database.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/unknown-error-when-sending-email.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/not-allowed-delete-unposted-documents.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/errors-when-you-run-an-integration.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/available-packages-integration-manager.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/print-a-purchase-order-from-history.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/submit-1099-misc-forms-electronically.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/error-when-sending-a-report-a-dot-pdf-file.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/execute-permission-was-denied-on-the-object-when-signing-in.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/you-do-not-have-security-privileges.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/input-string-was-not-in-correct-format-error-when-processing-message-in-econnect.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/repeatedly-prompted-for-exchange-login-id-and-password-when-emailing.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/unhandled-object-exception-errors.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/not-privileged-to-run-report.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/error-message-perform-bulk-copy-process.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/common-errors-and-troubleshooting-steps-for-network-connectivity-issues.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/cash-receipt-batches-post-as-individual-deposits.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/checks-cannot-be-calculated.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/changes-a-modified-report-do-not-print.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/error-registering-table.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/incompatible-dynamics-dot-dic.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/enter-an-australian-domestic-telephone-no-dot.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/how-sutafuta-calculates.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/run-dynamics-gp-64-bit-os.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/how-to-install-microsoft-dynamics-gp-2015-using-command-line.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/how-to-obtain-the-database-schemas.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/error-was-encountered-while-exporting-data-when-exporting-store.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/how-to-configure-store-operations-quickbooks-integration.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/dynamics-gp-crashes-or-closes-when-emailing.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/microsoft-dynamics-gp-does-not-respond.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/dynamics-sql-database-has-not-been-setup-for-this-version-error-when-starting-dynamics-gp.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/consolidate-companies-that-have-different-year-ends-produce-wrong-results.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/how-to-set-up-pto-manager-to-accrue-specific-number-of-hours.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/new-exclude-inactive-accounts-feature-not-work.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/upgrade-integrations-for-great-plains-integration-manager.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/gps-error-54-sql-error-2601-or-odbc-error-2300.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/dynamics-gp-support-virtual-environment.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/error-0xc0000005-when-you-start-dynamics-gp.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/how-to-create-calculated-field-in-report-writer-to-print-extender-fields.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/human-resources-is-registered.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/direct-deposit-ach-file-not-updated-void-payroll-check.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/frequently-asked-questions-about-extender-objects.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/how-to-electronically-submit-the-vat-return-or-vat-daybook-report.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/product-6499-does-not-support-upgrading.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/microsoft-dynamics-rms-store-operations-sql-baseline-information-collector.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/resynchronize-audit-trail-codes.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/this-module-is-not-registered-error-in-hr-training-or-license-window.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/check-register-does-not-print-in-payroll.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/cpp-and-ei-taxes-not-stopping-at-yearly-maximum-in-canadian-payroll.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/edit-attendance-transaction-in-human-resources.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/a-pdf-hangs-when-sending-emails.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/documentation-for-workflow-2-0.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/pdf-attachement-is-sent-as-dat-file-or-missing-if-using-dexterity-custom-code-to-send-email.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/you-must-activate-email-functionality.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/how-to-enable-an-ingenico-i6550-device.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/cannot-use-payroll-clerk-security-to-calculate-payroll-checks.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/set-up-a-health-savings-account.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/aca-blog-links-dynamics-gp.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/information-that-management-reporter-client-diagnostic-collects.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/how-to-modify-pop-purchase-order-blank-to-include-information-from-extender.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/dex-procedure-to-create-hr-attendance-transactions.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/dynamics-gp-crashes-when-emailing-with-mapi-after-updating-office.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/error-dictionary-dynamics-reports-dic-needs-upgraded.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/fail-to-install-web-services-for-dynamics-gp.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/information-about-the-check-amount-to-words-tool.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/new-feature-documentation-for-microsoft-dynamics-gp.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/right-margin-cut-off-in-emails.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/user-cannot-tab-between-fields.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/you-do-not-have-security-privileges-to-open-this-window.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/benefit-setup-based-on-deductions-calculates-incorrectly.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/changes-occur-in-the-luxury-automobile-tax-limits-for-depreciation-schedules.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/fail-to-save-future-effective-record.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/human-resource-and-payroll-workflow-setup.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/management-reporter-2012-exception-call-stack-diagnostic.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/class-id-not-updated-between-human-resources-and-canadian-payroll.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/check-payroll-extensions-version.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/time-management-app-hr-payroll.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/a-few-employees-set-up-for-direct-deposit-receive-a-check.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/box-84-not-available-on-t4-in-canadian-payroll.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/description-of-management-reporter-base-collector-diagnostic.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/get-change-operation-on-table-mc-currency-account-mstr-failed-accessing-sql-data.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/correct-negative-fmla-hours.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/management-reporter-2012-wcf-diagnostic.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/new-feature-documentation.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/getchange-operation-on-table-cmtransactioneft-table-failed-accessing-sql-data.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/slow-performance-when-selecting-the-button.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/stop-audit-trail-triggers-in-the-test-company-from-updating-live-audit-database.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/unwanted-data-in-project-accounting-after-starting-over.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/use-the-new-retrieveglobals9-dot-dll-file.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/life-insurance-calculate-for-life-insurance-enrollment.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/7973-error-when-importing-items-from-headquarters.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/a-newer-version-of-the-hunman-resources-app-has-been-found-error-when-starting.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/reprinted-employee-id-appears-in-payroll-tables.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/credit-card-number-field-removed-smartlist-advanced-lookups.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/duplicate-entries-tracked-when-signing-out-of-gp.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/enable-email-functionality-on-all-formats.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/fail-to-view-home-page.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/human-resources-reports-for-osha-300-300a-301-are-wrong.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/management-reporter-2012-company-code-update-diagnostic.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/problems-integrate-blanket-purchase-order-transaction-type.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/pte-transactions-do-not-flow-pa-tables.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/the-table-is-not-updated-the-values.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/add-remove-features-window-blank.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/error-could-not-determine-scrolling-window.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/microsoft-dynamics-rms-diagnostic.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/performance-issue-with-checkbook-register-inquiry-window.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/no-option-to-email-rm-statement-templates.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/safepay-file-not-pick-up-reissued-check-from-payables-management-or-payroll.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/features-in-dynamics-gp-specific-to-argentina.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/modify-employer-number-on-releve-1-form-for-quebec.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/frequently-asked-questions-about-file-exchange-system.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/ax/frequently-asked-questions-about-file-exchange-system",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/maxitemsinobjectgraph-error-in-management-reporter-ax-2012-ddm-task.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/ax/maxitemsinobjectgraph-error-in-management-reporter-ax-2012-ddm-task",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/removal-of-dynamics-ax-2012-legacy-data-provider-for-management-reporter-2012.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/ax/removal-of-dynamics-ax-2012-legacy-data-provider-for-management-reporter-2012",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/management-reporter-2012-ax-2012-user-validation-diagnostic.md",
+      "redirect_url": "/previous-versions/troubleshoot/dynamics/ax/management-reporter-2012-ax-2012-user-validation-diagnostic",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/scsm/disable-diagnostics-connectivity-data.md",
+      "redirect_url": "/troubleshoot/system-center/scsm/welcome-scsm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/scsm/object-type-monitoringclass-not-found.md",
+      "redirect_url": "/troubleshoot/system-center/scsm/welcome-scsm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/scsm/could-not-load-type-error.md",
+      "redirect_url": "/troubleshoot/system-center/scsm/welcome-scsm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/scsm/cannot-impersonate-user-data-source.md",
+      "redirect_url": "/troubleshoot/system-center/scsm/welcome-scsm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/scsm/data-warehouse-base-library-mp-shows-failed-status.md",
+      "redirect_url": "/troubleshoot/system-center/scsm/welcome-scsm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/scsm/cannot-upgrade-to-system-center-2012-r2-service-manager.md",
+      "redirect_url": "/troubleshoot/system-center/scsm/welcome-scsm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/cannot-create-inventory-valuation-and-gmroi-and-inventory-turns-reports.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/guidelines-to-determine-when-support-case-becomes-consulting-engagement.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/dynamics/gp/must-use-sql-server-management-studio-error-when-connecting-to-store-database-server.md",
+      "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
+      "redirect_document_id": false
     }
   ]
 }

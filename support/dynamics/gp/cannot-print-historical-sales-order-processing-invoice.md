@@ -1,9 +1,9 @@
 ---
 title: You must be viewing by Functional or Originating currency to print a document error
 description: When you try to print a historical Sales Order Processing invoice in Microsoft Dynamics GP, you may receive an error message that states you must be viewing by Functional or Originating currency to print a document.
-ms.reviewer: lmuelle
+ms.reviewer: theley, lmuelle
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # "You must be viewing by Functional or Originating currency to print a document" error when printing a historical Sales Order Processing invoice
 
