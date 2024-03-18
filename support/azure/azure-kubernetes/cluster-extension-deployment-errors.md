@@ -40,7 +40,7 @@ If the cluster extension agent and manager pods are healthy, and you still encou
 
 To resolve this problem, make sure that you follow the networking prerequisites that are outlined in [Outbound network and FQDN rules for Azure Kubernetes Service (AKS) clusters](/azure/aks/outbound-rules-control-egress).
 
-### Error: Extension is stuck in creating state
+#### Cause 3: The traffic is not authorized 
 
 The extension agent unsuccessfully tries calling to `<region>.dp.kubernetesconfiguration.azure.com` data plane service endpoints. This failure generates an "Errorcode: 403, Message This traffic is not authorized" entry in the extension-agent pod logs.
 
@@ -49,8 +49,6 @@ kubectl logs -n kube-system extension-agent-<pod-guid>
 {  "Message": "2024/02/07 06:04:43 \"Errorcode: 403, Message This traffic is not authorized., Target /subscriptions/<subscription-id>/resourceGroups/<resource-group-name>/provider/managedclusters/clusters/<cluster-name>/configurations/getPendingConfigs\"",  "LogType": "ConfigAgentTrace",  "LogLevel": "Information",  "Environment": "prod",  "Role": "ClusterConfigAgent",  "Location": "eastus2euap",  "ArmId": "/subscriptions/<subscription-id>/resourceGroups/<resource-group-name>/providers/Microsoft.ContainerService/managedclusters/<cluster-name>",  "CorrelationId": "",  "AgentName": "ConfigAgent",  "AgentVersion": "1.14.5",  "AgentTimestamp": "2024/02/07 06:04:43.672"  }
 {  "Message": "2024/02/07 06:04:43 Failed to GET configurations with err : {\u003cnil\u003e}",  "LogType": "ConfigAgentTrace",  "LogLevel": "Information",  "Environment": "prod",  "Role": "ClusterConfigAgent",  "Location": "eastus2euap",  "ArmId": "/subscriptions/<subscription-id>/resourceGroups/<resource-group-name>/providers/Microsoft.ContainerService/managedclusters/<cluster-name>",  "CorrelationId": "",  "AgentName": "ConfigAgent",  "AgentVersion": "1.14.5",  "AgentTimestamp": "2024/02/07 06:04:43.672"  }
 ```
-
-#### Cause
 
 This error occurs if a preexisting PrivateLinkScope exists in an extension's data plane for Azure Arc-enabled Kubernetes, and the virtual network (or private DNS server) is shared between Azure Arc-enabled Kubernetes and the AKS-managed cluster. This networking configuration causes AKS outbound traffic from the extension data plane to also route through the same private IP address instead of through a public IP address.
 
@@ -66,11 +64,11 @@ Address: 10.224.1.184
 
 When you search for the private IP address in the Azure portal, the search results point to the exact resource: virtual network, private DNS zone, private DNS server, and so on. This resource has a private endpoint that's configured for the extension data plane for Azure Arc-enabled Kubernetes.
 
-##### Solution 1: (Recommended) Create separate virtual networks
+##### Solution 3.1: (Recommended) Create separate virtual networks
 
 To resolve this problem, we recommend that you create separate virtual networks for Azure Arc-enabled Kubernetes and AKS computes.
 
-##### Solution 2: Create a CoreDNS override
+##### Solution 3.2: Create a CoreDNS override
 
 If the recommended solution isn't possible in your situation, create a CoreDNS override for the extension data plane endpoint to go over the public network. For more information about how to customize CoreDNS, see the ["Hosts plugin"](/azure/aks/coredns-custom#hosts-plugin) section of "Customize CoreDNS with Azure Kubernetes Service."
 
