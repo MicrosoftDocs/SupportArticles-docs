@@ -46,7 +46,7 @@ If you're an administrator, you can use the following diagnostic tool to validat
 
 [!INCLUDE [Microsoft Support and Recovery Assistant note](../../includes/sara-note-new-teams.md)]
 
-If the policies are assigned correctly, but you're still unable to install the add-in, or if you're not an administrator, download and run Microsoft Support and Recovery Assistant by selecting the button below. The Assistant is the recommended solution to perform automated troubleshooting steps and make the required fixes.
+If the policies are assigned correctly, but you're still unable to install the add-in, or if you're not an administrator, download and run Microsoft Support and Recovery Assistant by selecting the following button. The Assistant is the recommended solution to perform automated troubleshooting steps and make the required fixes.
 
 > [!div class="nextstepaction"]
 > [Download the Assistant](https://aka.ms/SaRA-TeamsAddInScenario)
