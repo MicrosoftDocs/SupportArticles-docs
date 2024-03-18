@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 12 for SQL Server 2022 (KB5033663)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2022 cumulative update 12 (KB5033663).
-ms.date: 03/15/2024
+ms.date: 03/18/2024
 ms.custom: KB5033663
 ms.reviewer: v-qianli2
 appliesto:
@@ -16,7 +16,7 @@ _Version:_ &nbsp; 16.0.4115.5
 
 ## Summary
 
-This article describes Cumulative Update package 12 (CU12) for Microsoft SQL Server 2022. This update contains 50 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 11, and it updates components in the following builds:
+This article describes Cumulative Update package 12 (CU12) for Microsoft SQL Server 2022. This update contains 51 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 11, and it updates components in the following builds:
 
 - SQL Server - Product version: **16.0.4115.5**, file version: **2022.160.4115.5**
 - Analysis Services - Product version: **16.0.43.229**, file version: **2022.160.43.229**
