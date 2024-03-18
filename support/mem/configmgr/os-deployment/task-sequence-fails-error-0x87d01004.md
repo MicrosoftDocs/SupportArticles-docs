@@ -3,6 +3,7 @@ title: Task sequence fails with error 0x87d01004
 description: Fixes a problem in which task sequence execution fails when using a stand-alone media (USB flash drive or CD/DVD) in System Center 2012 Configuration Manager.
 ms.date: 12/05/2023
 ms.reviewer: kaushika, erinwi, adoyle, monsee
+ms.custom: sap:Operating Systems Deployment (OSD)\Task Sequence Media (all types)
 ---
 # Task sequence fails when using stand-alone media in Configuration Manager
 

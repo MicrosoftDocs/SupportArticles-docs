@@ -4,6 +4,7 @@ description: Get answers to common questions and troubleshooting guidance for de
 ms.date: 12/05/2023
 ms.reviewer: kaushika, coferro
 search.appverid: MET150
+ms.custom: sap:Device Actions\Advisory
 ---
 # Troubleshooting device actions in Intune
 

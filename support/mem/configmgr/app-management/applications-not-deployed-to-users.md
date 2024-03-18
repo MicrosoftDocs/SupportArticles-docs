@@ -2,7 +2,7 @@
 title: Applications aren't deployed to users who are logged on to domain controllers
 description: Describes an issue in which applications aren't deployed to users who are logged on to domain controllers because user policies aren't retrieved.
 ms.date: 12/05/2023
-ms.custom: sap:Client Operations
+ms.custom: sap:Application Management\Application Deployment (Users)
 ms.reviewer: kaushika
 ---
 # Applications aren't deployed to users who are logged on to domain controllers

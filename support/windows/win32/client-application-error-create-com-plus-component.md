@@ -4,7 +4,6 @@ description: This article describes a problem that might occur when a client app
 ms.date: 12/19/2023
 ms.custom: sap:Component Development\COM, DCOM, and COM+ Programming and Runtime
 ms.reviewer: wmascia
-ms.subservice: component-dev
 ---
 
 # A client application may intermittently receive an error message when it tries to create a COM+ component
