@@ -4,7 +4,6 @@ description: This article introduces why calling shell functions from a thread t
 ms.date: 12/19/2023
 ms.custom: sap:Desktop app UI development\Windows Shell API
 ms.reviewer: DAVEAN
-ms.subservice: desktop-app-ui-dev
 ---
 
 # Calling shell functions and interfaces from a multithreaded apartment
