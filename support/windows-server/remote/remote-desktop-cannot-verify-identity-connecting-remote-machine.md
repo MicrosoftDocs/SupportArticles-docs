@@ -76,4 +76,4 @@ Finally, when the issue occurs, stop the misbehaving process, and then sign in v
 
 ## Contact Microsoft Support
 
-If the misbehaving process is from Microsoft, or the preceding steps can't resolve the issue, contact Microsoft Support for further assistance.
+If the misbehaving process is from Microsoft, or the preceding steps can't resolve the issue, contact Microsoft Support for further assistance. Before contacting Microsoft support, you can [gather information by using TSS for user experience-related issues](../../windows-client/windows-tss/gather-information-using-tss-user-experience.md).
