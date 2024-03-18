@@ -4,6 +4,7 @@ description: Learn how to diagnose and troubleshoot some common issues and misco
 ms.date: 12/05/2023
 ms.reviewer: kaushika, roblane-msft
 search.appverid: MET150
+ms.custom: sap:Application Protection - Android\Data transfer to other apps
 ---
 # Common data transfer issues and scenarios
 

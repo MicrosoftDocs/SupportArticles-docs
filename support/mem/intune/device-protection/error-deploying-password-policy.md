@@ -3,7 +3,7 @@ title: Error -2016281112 deploying password policy in Intune
 description: Describes error -2016281112 when you deploy a password policy in Microsoft Intune.
 ms.date: 12/05/2023
 search.appverid: MET150
-ms.custom: sap:Device protection
+ms.custom: sap:Configure Devices - Windows\Device restrictions
 ms.reviewer: kaushika
 ---
 # Error -2016281112 when you deploy password policy in Microsoft Intune
