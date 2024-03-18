@@ -57,6 +57,6 @@ To determine whether another process is causing the error, follow these steps:
 
 1. Start Power Automate again.
 
-As a permanent fix, you can stop the process that is causing the issue from running. Alternatively, if the process is internal, you can configure it to use a more specific endpoint, such as **net.pipe://localhost/something**.
+To resolve the issue, stop the process that is causing the issue from running. Alternatively, if the process is internal, you can configure it to use a more specific endpoint, such as **net.pipe://localhost/something**.
 
-If none of these actions is possible, specify Power Automate executables to run in administrative mode. However, this solution might not resolve the issue in all cases. Additionally, this solution will cause a UAC prompt to appear every time that you run the app.
+If these actions are not possible, specify Power Automate executables to run in administrative mode. However, this solution might not resolve the issue in all cases. Additionally, this solution will cause a UAC prompt to appear every time that you run the app.
