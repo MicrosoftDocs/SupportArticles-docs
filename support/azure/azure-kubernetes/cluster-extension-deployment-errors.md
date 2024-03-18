@@ -32,6 +32,20 @@ To resolve this issue, make sure that the cluster extension agent and manager po
 
 When the cluster extension agent and manager pods are operational and healthy, they establish communication with Azure services to install and manage Kubernetes applications.
 
+Run the following command to check the pod description: 
+
+
+```console
+kubectl describe pod -n kube-system extension-operator-{id}
+```
+
+For arc connected clusters run the following command:
+
+
+```console
+kubectl describe pod -n azure-arc extension-manager-{id}
+```
+
 #### Cause 2: An issue affects the egress block or firewall
 
 If the cluster extension agent and manager pods are healthy, and you still encounter the "Unable to get a response from the agent in time" error, an egress block or firewall issue probably exists. This issue might block the cluster extension agent and manager pods from communicating with Azure.
