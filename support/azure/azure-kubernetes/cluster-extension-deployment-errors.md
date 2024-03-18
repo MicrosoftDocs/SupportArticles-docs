@@ -32,18 +32,45 @@ To resolve this issue, make sure that the cluster extension agent and manager po
 
 When the cluster extension agent and manager pods are operational and healthy, they establish communication with Azure services to install and manage Kubernetes applications.
 
-Run the following command to check the pod description: 
+Run the following command to check the pod description to receive more details about potential problems: 
 
 
 ```console
 kubectl describe pod -n kube-system extension-operator-{id}
 ```
 
-For arc connected clusters run the following command:
+A sample after this running this command is below: 
+
+
+```
+kube-system         extension-agent-55d4f4795f-sqx7q             2/2     Running   0          2d19h
+kube-system         extension-operator-56c8d5f96c-nvt7x          2/2     Running   0          2d19h
+```
+
+For arc connected clusters run the following command to check the pod description to receive more details about potential problems:
 
 
 ```console
 kubectl describe pod -n azure-arc extension-manager-{id}
+```
+
+A sample output after running this command is below:
+
+
+```
+NAMESPACE         NAME                                          READY   STATUS             RESTARTS        AGE
+azure-arc         cluster-metadata-operator-744f8bfbd4-7pssr    0/2     ImagePullBackOff   0               6d19h
+azure-arc         clusterconnect-agent-7557d99d5c-rtgqh         0/3     ImagePullBackOff   0               6d19h
+azure-arc         clusteridentityoperator-9b8b88f97-nr8hf       0/2     ImagePullBackOff   0               6d19h
+azure-arc         config-agent-6d5fd59b8b-khw2d                 0/2     ImagePullBackOff   0               6d19h
+azure-arc         controller-manager-5bc97f7db6-rt2zs           0/2     ImagePullBackOff   0               6d19h
+azure-arc         extension-events-collector-7596688867-sqzv2   0/2     ImagePullBackOff   0               6d19h
+azure-arc         extension-manager-86bbb949-6s59q              0/3     ImagePullBackOff   0               6d19h
+azure-arc         flux-logs-agent-5f55888db9-wnr4c              0/1     ImagePullBackOff   0               6d19h
+azure-arc         kube-aad-proxy-646c475dcc-92b86               0/2     ImagePullBackOff   0               6d19h
+azure-arc         logcollector-5cbc659bfb-9v96d                 0/1     ImagePullBackOff   0               6d19h
+azure-arc         metrics-agent-5794866b46-j9949                0/2     ImagePullBackOff   0               6d19h
+azure-arc         resource-sync-agent-6cf4cf7486-flgwc          0/2     ImagePullBackOff   0               6d19h
 ```
 
 #### Cause 2: An issue affects the egress block or firewall
