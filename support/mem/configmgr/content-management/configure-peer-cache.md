@@ -3,6 +3,7 @@ title: Set up peer cache for Configuration Manager clients
 description: Describes and illustrates through log file examples how to configure peer cache for Configuration Manager clients.
 ms.reviewer: kaushika, vinpa,brianhun
 ms.date: 12/05/2023
+ms.custom: sap:Content Management\BranchCache or Peer-Cache
 ---
 # Configure peer cache for Configuration Manager clients
 
