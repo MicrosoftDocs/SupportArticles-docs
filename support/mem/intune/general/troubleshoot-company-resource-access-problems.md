@@ -4,6 +4,7 @@ description: See a list of the errors, status code, descriptions, and resolution
 ms.date: 12/05/2023
 ms.reviewer: kaushika, tscott
 search.appverid: MET150
+ms.custom: sap:Third Party Integration\Sign in to Intune
 ---
 # Common error codes and descriptions in Microsoft Intune
 

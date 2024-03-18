@@ -3,7 +3,7 @@ title: "How to remove a disabled Microsoft Entra user's device from Intune"
 description: Fixes a problem in which a device becomes orphaned/unidentifiable if its owner is removed from Microsoft Entra ID before the device is removed from Microsoft Intune.
 ms.date: 12/05/2023
 search.appverid: MET150
-ms.custom: sap:Remove devices, has-azure-ad-ps-ref, azure-ad-ref-level-one-done
+ms.custom: sap:Device Actions.Android\Remove devices, has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ms.reviewer: patlewis
 ---
 

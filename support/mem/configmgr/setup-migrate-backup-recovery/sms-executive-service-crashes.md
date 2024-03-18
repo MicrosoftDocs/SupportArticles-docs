@@ -3,6 +3,7 @@ title: SMS_EXECUTIVE service crashes
 description: Fixes an issue in which the SMS_EXECUTIVE service crashes when a SQL Server certificate can't be found in the certificate store.
 ms.date: 12/05/2023
 ms.reviewer: kaushika
+ms.custom: sap:Site Server and Roles\SMS Executive Service crashes or does not start
 ---
 # SMS_EXECUTIVE service crashes when a SQL Server certificate can't be found
 
