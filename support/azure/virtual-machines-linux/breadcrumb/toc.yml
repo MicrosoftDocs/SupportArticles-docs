@@ -1,0 +1,17 @@
+- name: Docs
+  tocHref: /
+  topicHref: /index
+  items:
+
+  
+  - name: Troubleshoot
+    tocHref: /azure/
+    topicHref: /troubleshoot/index
+    items:
+    - name: Azure
+      tocHref: /azure/virtual-machines/
+      topicHref: /troubleshoot/azure/index
+      items:
+      - name: Linux Virtual Machines
+        tocHref: /azure/virtual-machines/
+        topicHref: /troubleshoot/azure/virtual-machines-linux/welcome-virtual-machines-linux
