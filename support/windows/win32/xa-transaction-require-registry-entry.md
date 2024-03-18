@@ -4,7 +4,6 @@ description: This article explains about how to create registry values for all X
 ms.date: 12/19/2023
 ms.custom: sap:Distributed Transactions\DTC programming and runtime
 ms.topic: article
-ms.subservice: distributed-transactions
 ---
 # Registry entries are required for XA transaction support
 

@@ -4,6 +4,7 @@ description: Troubleshoot when a user's Android device is missing a required cer
 ms.date: 12/05/2023
 search.appverid: MET150
 ms.reviewer: kaushika
+ms.custom: sap:Configure Devices - Android\Trusted Certificates
 ---
 
 # Android device is missing a required certificate
