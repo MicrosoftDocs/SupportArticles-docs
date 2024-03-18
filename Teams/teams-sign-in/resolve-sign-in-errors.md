@@ -16,7 +16,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 03/14/2024
+ms.date: 03/17/2024
 ---
 # Resolve sign-in errors in Teams
 
