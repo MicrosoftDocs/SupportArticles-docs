@@ -14,7 +14,8 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft Teams
-ms.custom: CI167102
+ms.custom: 
+  - CI167102
 ---
 # The HDMI ingest status is Unhealthy
 

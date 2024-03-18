@@ -14,7 +14,8 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft Teams
-ms.custom: CI167672
+ms.custom: 
+  - CI167672
 ---
 # Fix Teams Rooms resource account sign-in issues
 

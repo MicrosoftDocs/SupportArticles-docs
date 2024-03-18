@@ -7,7 +7,8 @@ localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - CSSTroubleshoot
 ms.reviewer: v-chblod, willfid
 search.appverid: 
   - MET150

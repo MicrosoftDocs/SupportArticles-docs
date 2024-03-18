@@ -10,7 +10,8 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: gregjo
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - CSSTroubleshoot
 appliesto: 
   - SharePoint Workspace 2010
   - SharePoint 2010 For Internet Sites Enterprise
