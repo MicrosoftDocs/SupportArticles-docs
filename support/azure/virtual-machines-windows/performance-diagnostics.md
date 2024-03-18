@@ -57,11 +57,11 @@ You can run performance diagnostics directly from the Azure portal, where you ca
     | Azure Linux                | 2.0                                                   |
 
 >[!Note]
->[`*`] Please refer to [Known issues](how-to-use-perfinsights-linux.md#known-issues)
+>[`*`] Please refer to [Known issues](../virtual-machines-linux/how-to-use-perfinsights-linux.md#known-issues)
 
 ## Install and run performance diagnostics on your VM
 
-Performance diagnostics installs a VM extension that runs a diagnostics tool that is named PerfInsights. PerfInsights is available for both [Windows](./how-to-use-perfinsights.md) and [Linux](./how-to-use-perfinsights-linux.md). To install and run performance diagnostics, follow these steps:
+Performance diagnostics installs a VM extension that runs a diagnostics tool that is named PerfInsights. PerfInsights is available for both [Windows](how-to-use-perfinsights.md) and [Linux](../virtual-machines-linux/how-to-use-perfinsights-linux.md). To install and run performance diagnostics, follow these steps:
 
 1. In the [Azure portal](https://portal.azure.com), select **Virtual machines**.
 1. From the list of VM names, select the VM that you want to run diagnostics on.
@@ -87,10 +87,10 @@ Performance diagnostics installs a VM extension that runs a diagnostics tool tha
 The following analysis scenarios are available from the Azure portal. Select an analysis, depending on the performance issue that you are having. Select the duration and trace options as necessary for the analysis.
 
 * **Quick performance analysis**  
-    Checks for known issues, analyzes best practices, and collects diagnostics data. This analysis takes several minutes to run. Learn more [Windows](./how-to-use-perfinsights.md) or [Linux](./how-to-use-perfinsights-linux.md)
+    Checks for known issues, analyzes best practices, and collects diagnostics data. This analysis takes several minutes to run. Learn more [Windows](how-to-use-perfinsights.md) or [Linux](../virtual-machines-linux/how-to-use-perfinsights-linux.md)
 
 * **Performance analysis**  
-    Includes all checks in the quick performance analysis and monitors high resource consumption. Use this version to troubleshoot general performance issues, such as high CPU, memory, and disk usage. This analysis takes 30 seconds to 15 minutes, depending on the selected duration. Learn more [Windows](./how-to-use-perfinsights.md) or [Linux](./how-to-use-perfinsights-linux.md)
+    Includes all checks in the quick performance analysis and monitors high resource consumption. Use this version to troubleshoot general performance issues, such as high CPU, memory, and disk usage. This analysis takes 30 seconds to 15 minutes, depending on the selected duration. Learn more [Windows](how-to-use-perfinsights.md) or [Linux](../virtual-machines-linux/how-to-use-perfinsights-linux.md)
 
 * **Advanced performance analysis** `*`  
     Includes all checks in the performance analysis, and collects one or more of the traces, as listed in the following sections. Use this scenario to troubleshoot complex issues that require additional traces. Running this scenario for longer periods will increase the overall size of diagnostics output, depending on the size of the VM and the trace options that are selected. This analysis takes 30 seconds to 15 minutes to run, depending on the selected duration. [Learn more](./how-to-use-perfinsights.md)
@@ -142,7 +142,7 @@ Use the **Settings** toolbar button to change the storage account where the diag
 
 ## Review insights and performance diagnostics report
 
-Each diagnostic run contains a list of insights and recommendations, affected resources, log files, and other rich diagnostics information that is collected, plus a report for offline viewing. For a complete list of all the collected diagnostics data, see **What kind of information is collected by PerfInsights?** on [Windows](how-to-use-perfinsights.md#what-kind-of-information-is-collected-by-perfinsights) or [Linux](how-to-use-perfinsights-linux.md#what-kind-of-information-is-collected-by-perfinsights).
+Each diagnostic run contains a list of insights and recommendations, affected resources, log files, and other rich diagnostics information that is collected, plus a report for offline viewing. For a complete list of all the collected diagnostics data, see **What kind of information is collected by PerfInsights?** on [Windows](how-to-use-perfinsights.md#what-kind-of-information-is-collected-by-perfinsights) or [Linux](../virtual-machines-linux/how-to-use-perfinsights-linux.md#what-kind-of-information-is-collected-by-perfinsights).
 
 ### Select a performance diagnostics report
 
