@@ -302,7 +302,7 @@ azure vm restart --resource-group myResourceGroup --name myVM
 
 ## Redeploy a VM
 
-You can redeploy a VM to another node within Azure, which may correct any underlying networking issues. For information about redeploying a VM, see [Redeploy virtual machine to new Azure node](./redeploy-to-new-node-windows.md?toc=/azure/virtual-machines/windows/toc.json).
+You can redeploy a VM to another node within Azure, which may correct any underlying networking issues. For information about redeploying a VM, see [Redeploy virtual machine to new Azure node](../virtual-machines-windows/redeploy-to-new-node-windows.md?toc=/azure/virtual-machines/windows/toc.json).
 
 > [!NOTE]
 > After this operation finishes, ephemeral disk data is lost and dynamic IP addresses that are associated with the virtual machine are updated.

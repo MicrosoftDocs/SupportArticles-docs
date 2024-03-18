@@ -29,7 +29,7 @@ NMI (Non-maskable Interrupt) | An interrupt command, which will be delivered to 
 
 ## Next steps
 
-* Learn more about the [Azure Serial Console for Linux VMs](./serial-console-linux.md)
+* Learn more about the [Azure Serial Console for Linux VMs](../virtual-machines-linux/serial-console-linux.md)
 * Learn more about the [Azure Serial Console for Windows VMs](./serial-console-windows.md)
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

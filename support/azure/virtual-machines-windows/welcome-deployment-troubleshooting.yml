@@ -69,8 +69,6 @@ landingContent:
             url: /azure/azure-resource-manager/templates/error-sku-not-available
           - text: Troubleshoot deploying Windows virtual machine issues in Azure
             url: troubleshoot-deployment-new-vm-windows.md
-          - text: Troubleshoot deploying Linux virtual machine issues in Azure
-            url: ../virtual-machines-linux/troubleshoot-deploy-vm-linux.md
           - text: Invalid template errors - Azure Resource Manager
             url: /azure/azure-resource-manager/templates/error-invalid-template
           - text: RequestDisallowedByPolicy error - Azure Resource Manager

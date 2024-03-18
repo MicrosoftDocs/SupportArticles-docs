@@ -86,7 +86,7 @@ PerfInsights is the recommended tool from Azure support for VM performance issue
 
 #### Run PerfInsights
 
-PerfInsights is available for both the [Windows](./how-to-use-perfinsights.md) and [Linux](./how-to-use-perfinsights-linux.md) OS. For Windows, here are the options.
+PerfInsights is available for both the [Windows](./how-to-use-perfinsights.md) and [Linux](../virtual-machines-linux/how-to-use-perfinsights-linux.md) OS. For Windows, here are the options.
 
 #### Run and analyze reports through Azure portal
 

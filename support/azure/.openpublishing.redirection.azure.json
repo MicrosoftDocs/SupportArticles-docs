@@ -259,6 +259,91 @@
         "source_path": "azure-storage/adls-gen2-sticky-bit-403-access-denied.md",
         "redirect_url": "/troubleshoot/azure/azure-storage/blobs/adls-gen2-sticky-bit-403-access-denied",
         "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/aad-connect-health-data-freshness.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/ad-dmn-services/aad-connect-health-data-freshness",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/azure-ad-hybrid-sync-agent-install-welcome.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/ad-dmn-services/azure-ad-hybrid-sync-agent-install-welcome",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/azure-ad-hybrid-sync-cannot-start-aadconnect-provisioning-agent.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/ad-dmn-services/azure-ad-hybrid-sync-cannot-start-aadconnect-provisioning-agent",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/azure-ad-hybrid-sync-gmsa-set-logon-service.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/ad-dmn-services/azure-ad-hybrid-sync-gmsa-set-logon-service",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/azure-ad-hybrid-sync-no-privileges-install-msi.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/ad-dmn-services/azure-ad-hybrid-sync-no-privileges-install-msi",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/azure-ad-hybrid-sync-no-such-object-on-server.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/ad-dmn-services/azure-ad-hybrid-sync-no-such-object-on-server",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/azure-ad-hybrid-sync-unable-create-gmsa-kds-domain-controller.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/ad-dmn-services/azure-ad-hybrid-sync-unable-create-gmsa-kds-domain-controller",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/azure-ad-ipv6-support.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/ad-dmn-services/azure-ad-ipv6-support",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/cant-connect-service-error-register-device.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/ad-dmn-services/cant-connect-service-error-register-device",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/enable-support-tls-environment.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/ad-dmn-services/enable-support-tls-environment",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/idfix-not-valid-win32-application.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/ad-dmn-services/idfix-not-valid-win32-application",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/maximum-number-of-devices-joined-workplace.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/ad-dmn-services/maximum-number-of-devices-joined-workplace",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/reference-connect-device-disappearance.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/ad-dmn-services/reference-connect-device-disappearance",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/security-context-not-associate-domian.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/ad-dmn-services/security-context-not-associate-domian",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/send-microsoft-authenticator-logs.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/ad-dmn-services/send-microsoft-authenticator-logs",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/support-data-collection-diagnostic-logs.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/ad-dmn-services/support-data-collection-diagnostic-logs",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/understand-ad-fs-sign-in-events-azure-ad-connect-health.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/ad-dmn-services/understand-ad-fs-sign-in-events-azure-ad-connect-health",
+        "redirect_document_id": true
       }
   ]
 }
