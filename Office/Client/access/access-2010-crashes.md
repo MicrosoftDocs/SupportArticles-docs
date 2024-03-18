@@ -4,7 +4,8 @@ description: Resolves a problem that Access 2010 databases randomly crash after 
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - CSSTroubleshoot
 search.appverid: 
   - MET150
 audience: ITPro

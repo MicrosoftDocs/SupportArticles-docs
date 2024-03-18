@@ -10,7 +10,9 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: randring
-ms.custom: sap:spsexperts, CSSTroubleshoot
+ms.custom: 
+  - sap:spsexperts
+  - CSSTroubleshoot
 appliesto: 
   - SharePoint Server 2016
 ms.date: 12/17/2023

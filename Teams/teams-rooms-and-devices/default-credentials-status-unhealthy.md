@@ -14,7 +14,8 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft Teams
-ms.custom: CI167104
+ms.custom: 
+  - CI167104
 ---
 # The Default Credentials status is Unhealthy
 

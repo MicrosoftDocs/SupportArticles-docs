@@ -10,7 +10,8 @@ search.appverid:
   - MET150
 audience: Admin
 ms.topic: troubleshooting
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - CSSTroubleshoot
 appliesto: 
   - SharePoint Server 2013
 ms.date: 12/17/2023

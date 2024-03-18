@@ -10,7 +10,9 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.custom: sap:spsexperts, CSSTroubleshoot
+ms.custom: 
+  - sap:spsexperts
+  - CSSTroubleshoot
 appliesto: 
   - Office Online Server
 ms.date: 12/17/2023

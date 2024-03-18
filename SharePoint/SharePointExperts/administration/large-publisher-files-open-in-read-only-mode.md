@@ -10,7 +10,9 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.custom: sap:spsexperts, CSSTroubleshoot
+ms.custom: 
+  - sap:spsexperts
+  - CSSTroubleshoot
 appliesto: 
   - SharePoint Online
   - SharePoint Server 2013

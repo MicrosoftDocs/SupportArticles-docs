@@ -7,7 +7,10 @@ localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
-ms.custom: sap:office-experts, CSSTroubleshoot, CI 125260
+ms.custom: 
+  - sap:office-experts
+  - CSSTroubleshoot
+  - CI 125260
 ms.topic: troubleshooting
 ms.author: luche
 ms.reviwer: zakirh
