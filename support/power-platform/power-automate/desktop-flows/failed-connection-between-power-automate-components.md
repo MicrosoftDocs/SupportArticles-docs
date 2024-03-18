@@ -24,7 +24,7 @@ This issue might occur if two different versions of Power Automate for desktop a
 
 ## Resolution
 
-Based on your [version of Power Automate for desktop](power-platform/released-versions/power-automate-desktop#all-power-automate-desktop-versions), follow the steps below to resolve the issue.
+Based on your [version of Power Automate for desktop](/power-platform/released-versions/power-automate-desktop#all-power-automate-desktop-versions), follow the steps below to resolve the issue.
 
 If the installer version of your Power Automate for desktop is **2.34.176.23181 or higher** (Microsoft Store version **10.0.7118.0 or higher**), follow these steps to uninstall one version of the app:
 
