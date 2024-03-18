@@ -1,6 +1,6 @@
 ---
 title: Failed connection between Power Automate components
-description: Provides various resolutions per product version to a Power Automate connection error that occurs on startup.
+description: Provides resolutions per product version to a Power Automate connection error that occurs on startup.
 ms.reviewer: kokapare, pefelesk, tapanm
 ms.date: 03/13/2024
 ms.custom: sap:Desktop flows\Cannot create desktop flow connection
@@ -20,17 +20,19 @@ When you try to start Power Automate, you receive the following error message:
 
 ## Cause
 
-This issue might occur if two different versions of Power Automate are installed on the computer. In this scenario, one version (Power Automate) is installed from the Microsoft Store and the other (Power Automate for desktop) is installed by using the MSI installer. This scenario is not supported because of conflicts that exist between the two kinds of installers.
+This issue might occur if two different versions of Power Automate for desktop are installed on the computer. In this scenario, one version is installed from the Microsoft Store and a different version is installed by using the MSI installer. This could result in conflicts between the two versions, and is an unsupported scenario.
 
 ## Resolution
 
-If your version of Power Automate (Microsoft Store) is **10.0.7118.0** or later, and your version of Power Automate for desktop (MSI) is **2.34.176.23181** or later, follow these steps to uninstall one version of the app:
+Based on your [version of Power Automate for desktop](power-platform/released-versions/power-automate-desktop#all-power-automate-desktop-versions), follow the steps below to resolve the issue.
+
+If the installer version of your Power Automate for desktop is **2.34.176.23181 or higher** (Microsoft Store version **10.0.7118.0 or higher**), follow these steps to uninstall one version of the app:
 
 1. Go to **Start** > **Settings** > **Apps** > **Installed apps**.
 1. Search for **Power Automate**.
 1. Uninstall either version of the app.
 
-If your version of Power Automate (Microsoft Store) **10.0.7118.0** or earlier, and your version of Power Automate for desktop is **2.34.176.23181** or earlier, then this error might occur if another process is running a named pipes server on the same computer. This process likely runs by having elevated rights and by using the localhost endpoint. Therefore, the process blocks other applications from using the endpoint.
+If the installer version of your Power Automate for desktop is **earlier than 2.34.176.23181** (Microsoft Store version **earlier than 10.0.7118.0**), then this error might occur if another process is running a named pipes server on the same computer. This process likely runs by having elevated rights and by using the localhost endpoint. Therefore, the process blocks other applications from using the endpoint.
 
 To determine whether another process is causing the error, follow these steps:
 
