@@ -4,6 +4,7 @@ description: Provides troubleshooting guidance for configuring Update ring polic
 ms.date: 12/05/2023
 ms.reviewer: v-cshields, luche, v-six
 search.appverid: MET150
+ms.custom: sap:Manage Software Updates\Windows 10 update rings
 ---
 # Troubleshoot Update rings for Windows 10 and Windows 11 in Microsoft Intune
 
