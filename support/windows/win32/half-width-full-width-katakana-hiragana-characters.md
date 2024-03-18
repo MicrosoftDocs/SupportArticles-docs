@@ -2,7 +2,7 @@
 title: Half-width and full-width Japanese characters are treated as different characters
 description: This article resolves a problem that prevents certain half-width and full-width Katakana and Hiragana characters that have a consonant mark from being compared correctly by .NET Framework 4.x applications.
 ms.date: 12/19/2023
-ms.custom: sap:localize-globalize-api
+ms.custom: sap:Desktop app UI development\Localization and Globalization API
 ms.reviewer: junyoshi, v-jayaramanp
 ms.subservice: desktop-app-ui-dev
 ---

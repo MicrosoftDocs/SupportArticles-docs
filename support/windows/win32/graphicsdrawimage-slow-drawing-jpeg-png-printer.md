@@ -4,7 +4,7 @@ description: Provides a resolution for an issue where Graphics::DrawImage appear
 ms.reviewer: ishimada, davean, aartigoyle, v-sidong
 ms.date: 12/19/2023
 ms.subservice: graphics-multimedia-dev
-ms.custom: sap:gdi-api
+ms.custom: sap:Graphics and Multimedia development\GDI+ API
 ---
 
 # Graphics::DrawImage with ImageAttributes is slow when drawing a PNG or JPEG image to a printer
