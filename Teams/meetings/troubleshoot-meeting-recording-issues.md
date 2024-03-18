@@ -15,7 +15,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 03/07/2024
+ms.date: 03/18/2024
 ---
 # Issues with meeting recordings
 
@@ -74,23 +74,7 @@ In high-volume chat sessions, a known issue prevents the meeting recording link 
 
 Try scrolling up to the top of the chat window and then scrolling back to the bottom. This action might trigger a chat service event and restore the meeting recording link.
 
-If the meeting recording link still isn't visible, use one of the following methods.
-
-#### Method 1: Run the Missing Recording Diagnostic
-
-> [!NOTE]
-> This feature isn't available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
-
-1. Select the **Run Tests** link. This will populate the diagnostic in the Microsoft 365 admin center.
-
-   > [!div class="nextstepaction"]
-   > [Run Tests: Missing Meeting Recording](https://aka.ms/MissingRecordingDiag)
-
-1. In the **Run diagnostic** pane, enter the URL of the meeting in the **URL of the meeting that was recorded** field (usually found in the meeting invitation) and the date of the meeting in the **When was the meeting recorded?** field, and then select **Run Tests**.
-
-The tests validate that the meeting recording completed successfully and it was uploaded to SharePoint or OneDrive.
-
-#### Method 2: Manually locate the meeting recording
+If the meeting recording link still isn't visible, manually locate the meeting recording:
 
 - For non-channel meetings, the recording is stored in the **Recordings** folder under **My files**.
 
@@ -111,4 +95,17 @@ The tests validate that the meeting recording completed successfully and it was 
   Example in SharePoint: <*SharePoint/Documents/Channel name*>/Recordings
   
   :::image type="content" source="media/troubleshoot-meeting-recording-issues/sharepoint-location.png" alt-text="Screenshot of the SharePoint location for storing meeting recordings.":::
-  
+
+If you still can't find the meeting recording, run the Missing Recording Diagnostic.
+
+> [!NOTE]
+> This feature isn't available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
+
+1. Select the **Run Tests** link. This will populate the diagnostic in the Microsoft 365 admin center.
+
+   > [!div class="nextstepaction"]
+   > [Run Tests: Missing Meeting Recording](https://aka.ms/MissingRecordingDiag)
+
+1. In the **Run diagnostic** pane, enter the URL of the meeting in the **URL of the meeting that was recorded** field (usually found in the meeting invitation) and the date of the meeting in the **When was the meeting recorded?** field, and then select **Run Tests**.
+
+The tests validate that the meeting recording completed successfully and it was uploaded to SharePoint or OneDrive.
