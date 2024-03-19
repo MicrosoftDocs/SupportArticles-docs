@@ -71,80 +71,81 @@ If this solution doesn't fix your problem, try restarting your device. Restartin
 
 ## Solution 5: Reset Windows Search
 
-Try resetting Windows Search by using the method that's appropriate for your version of Windows.
-
-To determine which version of Windows your device is running, follow these steps:
+Try resetting Windows Search by using the method that's appropriate for your version of Windows. To determine which version of Windows your device is running, follow these steps:
 
 1. Select **Start** > **Settings** > **System** > **About**.
-
 2. Under **Windows specifications**, check which version of Windows your device is running.
 
 > [!NOTE]  
 > Resetting Windows Search doesn't affect your files. However, it may temporarily affect the relevance of search results.
 
-### Windows 10, version 1809 and earlier
+### Reset Windows Search when using Windows 10, version 1809 or an earlier version
 
-If the Windows 10 October 2018 Update or an earlier update is installed, reset Cortana to reset Windows Search by following these steps:
+If the computer runs Windows 10 October 2018 Update or an earlier update, follow these steps to reset Windows Search by resetting Cortana:
 
 1. Select **Start**, right-click **Cortana**, and then select **More** > **App settings**.
 2. In the Cortana settings, select **Reset**.
 
-### Windows 11, Windows 10, version 1903, and later
+### Reset Windows Search when using Windows 11, Windows 10, version 1903, or a later version
 
-If Windows 11, Windows 10 May 2019 Update, or a later update is installed, use Windows PowerShell to reset Windows Search by following these steps:
-
-> [!IMPORTANT]  
-> You must have administrator permissions to run this script.
-
-1. Download the *ResetWindowsSearchBox.ps1* script from the [Reset Windows Search PowerShell script](https://www.microsoft.com/download/details.aspx?id=100295), and save the file to a local folder.
-
-2. Right-click the file that you saved and select **Run with PowerShell**.
-3. If you're asked the following question, select **Yes**.
-
-    > Do you want to allow this app to make changes to your device?
-
-4. The PowerShell script resets the Windows Search feature. When the word **Done** appears, close the PowerShell window.
-5. If you receive the "Cannot be loaded because running scripts is disabled on this system" error message, enter the following command on the command line of the PowerShell window, and then press Enter:
-
-    ```powershell
-    Get-ExecutionPolicy
-    ```
-
-    > [!NOTE]  
-    > The current policy appears in the window. For example, you might see **Restricted**. We recommend that you note this value because you'll have to use it later.
-
-6. Enter the following command on the command line of the PowerShell window, and then press Enter:
-
-    ```powershell
-    Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted
-    ```
-
-    > [!IMPORTANT]  
-    > You'll receive a warning message that explains the security risks of an execution policy change. Press Y, and then press Enter to accept the change.
-
-    To learn more about PowerShell execution policies, see [About Execution Policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies).
-
-7. After the policy change is completed, close the window, and then repeat steps 2-4. However, when the **Done** message appears this time, DON'T close the PowerShell window. Instead, press any key to continue.
-
-8. Revert to your previous PowerShell execution policy setting. Enter the following command on the command line of the PowerShell window, press the Spacebar, enter the policy value that you noted in step 5, and then press Enter:
-
-    ```powershell
-    Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy
-    ```
-
-    For example, if the policy that you noted in step 5 was **Restricted**, the command would resemble the following one:
-
-    ```powershell
-    Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Restricted
-    ```
-
-    > [!NOTE]  
-    > You'll receive a warning message that explains the security risks of an execution policy change. Press Y, and then press Enter to accept the change and revert to your previous policy setting.
-
-9. Close the PowerShell window.
+If the computer runs Windows 11, Windows 10 May 2019 Update, or a later update, you can use a Windows PowerShell script to reset Windows Search.
 
 > [!IMPORTANT]  
-> If your organization has disabled the ability to run scripts, contact your administrator for help.
+>
+> - You must have administrator permissions to run this script.
+> - If your organization has disabled the ability to run scripts, contact your administrator for help.
+
+To reset Windows Search by using PowerShell, follow these steps:
+
+1. Check the Windows PowerShell execution policy on the affected computer. To allow the script to run, the execution policy must be set to **Unrestricted**.  
+
+   1. To check the execution policy, open an elevates PowerShell window, and then run the following cmdlet:
+
+      ```powershell
+      Get-ExecutionPolicy
+      ```
+
+   1. If the execution policy is **Unrestricted**, continue to step 2. Otherwise, record the value for later use. Then run the following cmdlet:
+
+      ```powershell
+      Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted
+      ```
+
+      > [!IMPORTANT]  
+      > This cmdlet generates a warning message that explains the security risks of an execution policy change. To accept the change, press <kbd>Y</kbd>, and then press <kbd>Enter</kbd>.
+
+      To learn more about PowerShell execution policies, see [About Execution Policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies).
+
+   1. After the policy change finishes, close the PowerShell window.
+
+1. Download *ResetWindowsSearchBox.ps1* from [Reset Windows Search PowerShell script](https://www.microsoft.com/download/details.aspx?id=100295), and save the file to a local folder.
+
+1. Right-click the file that you saved, and then select **Run with PowerShell**.
+1. If you're asked the following question, select **Yes**.
+
+   > Do you want to allow this app to make changes to your device?
+
+   The PowerShell script resets the Windows Search feature.
+
+1. When the word **Done** appears, do one of the following:
+
+   - If you didn't change the execution policy to run the script, close the PowerShell window.
+   - If you changed the execution policy, keep the PowerShell window open and press any key to continue. Run the following command in the PowerShell window:
+
+      ```powershell
+      Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy <PreviousValue>
+      ```
+
+       In this command, <*PreviousValue*> represents the original execution policy. As you did previously, accept the policy change by pressing <kbd>Y</kbd> and then pressing <kbd>Enter</kbd>.
+
+1. Close the PowerShell Window.
+
+> [!NOTE]  
+> If you receive the following message when you run the script, the execution policy is not set correctly.  
+>
+     > Cannot be loaded because running scripts is disabled on this system.  
+>
+> Return to the earlier steps in this procedure to check the execution policy and change it if needed. Then run the script again.
 
 ## Solution 5: Regenerate the Microsoft.Windows.Search package AppData folder
 
