@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Administration\Lists and libraries
   - CSSTroubleshoot
 ms.reviewer: 
 appliesto: 

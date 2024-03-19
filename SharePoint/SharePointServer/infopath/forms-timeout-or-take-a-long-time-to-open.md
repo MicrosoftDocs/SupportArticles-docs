@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Administration\InfoPath Forms Service
   - CSSTroubleshoot
 ms.reviewer: TAPANM
 appliesto: 

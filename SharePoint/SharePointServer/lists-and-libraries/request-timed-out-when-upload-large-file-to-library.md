@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - sap:Administration\Files and Documents
   - CSSTroubleshoot
 appliesto: 
   - Windows SharePoint Services 3.0

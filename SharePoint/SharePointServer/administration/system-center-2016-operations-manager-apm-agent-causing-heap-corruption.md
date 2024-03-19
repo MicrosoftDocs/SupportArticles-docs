@@ -9,6 +9,7 @@ localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Administration\Other
   - CSSTroubleshoot
 ms.author: luche
 appliesto: 
