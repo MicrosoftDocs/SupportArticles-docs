@@ -33,7 +33,7 @@ _Original KB number:_ &nbsp; 3079872
 
 1. Access [Microsoft Office Home](https://login.microsoftonline.com/), and then enter the federated user's sign-in name (**someone**@**example**.**com**). After you press **Tab** to remove the focus from the login box, check whether the status of the page changes to **Redirecting** and then you're redirected to your Active Directory Federation Service (AD FS) for sign-in.
 
-[!INCLUDE [Azure AD PowerShell deprecation note](~/../support/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
+    [!INCLUDE [Azure AD PowerShell deprecation note](~/../support/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
 
     When redirection occurs, you see the following page:
 
