@@ -13,6 +13,7 @@ search.appverid:
 appliesto: 
   - SharePoint Online
 ms.custom: 
+  - sap:Files and Documents\Upload
   - CI 125085
   - CSSTroubleshoot
 ms.reviewer: shahna

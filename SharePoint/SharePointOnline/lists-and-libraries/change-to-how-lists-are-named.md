@@ -13,6 +13,7 @@ search.appverid:
 appliesto: 
   - SharePoint Online
 ms.custom: 
+  - sap:Lists and Libraries\Content Types
   - CI 124631
   - CSSTroubleshoot
 ms.reviewer: MS aliases for tech reviewers and CI requestor, without @microsoft.com.

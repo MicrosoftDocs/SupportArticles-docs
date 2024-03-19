@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - sap:Lists and Libraries\Add shortcut to OneDrive
   - CSSTroubleshoot
 appliesto: 
   - SharePoint Online

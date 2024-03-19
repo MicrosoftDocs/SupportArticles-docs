@@ -11,6 +11,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: prbalusu
 ms.custom: 
+  - sap:Storage\Tenant Storage
   - CSSTroubleshoot
   - CI 157728
 appliesto: 

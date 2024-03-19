@@ -13,6 +13,7 @@ search.appverid:
 appliesto: 
   - SharePoint Online
 ms.custom: 
+  - sap:Sites\Other
   - CI 113694
   - CSSTroubleshoot
 ms.reviewer: lucaband

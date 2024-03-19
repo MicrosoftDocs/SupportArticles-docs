@@ -4,6 +4,7 @@ description: This article provides information about usage and popularity report
 author: helenclu
 ms.author: luche
 ms.custom: 
+  - sap:Search\Site Usage Analytics
   - CI 109958
   - CSSTroubleshoot
 manager: dcscontentpm

@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - sap:Files and Documents\Upload
   - CSSTroubleshoot
 appliesto: 
   - SharePoint Online
