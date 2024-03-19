@@ -5,7 +5,7 @@ ms.date: 05/22/2020
 ms.reviewer: 
 ms.service: active-directory
 ms.subservice: authentication
-ms.custom: has-azure-ad-ps-ref
+ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ---
 # Federated users in Microsoft Entra ID may have to sign in two times before being prompted for MFA
 
@@ -38,6 +38,8 @@ To resolve this issue, you must configure Microsoft Entra ID to let AD FS native
 
 > [!IMPORTANT]
 > Your AD FS deployment must be running on Windows Server 2016 or Windows Server 2012 R2, and must have the July 2016 update [KB 3172614](https://support.microsoft.com/help/4009451/windows-8-1-windows-server-2012-r2-update-kb3172614) installed.
+
+[!INCLUDE [Azure AD PowerShell deprecation note](~/../support/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
 
 1. Run the following `Connect` command to sign in to your Microsoft Entra ID administrator account:
 

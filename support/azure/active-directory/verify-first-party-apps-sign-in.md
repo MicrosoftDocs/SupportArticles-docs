@@ -5,7 +5,7 @@ ms.date: 03/08/2024
 ms.reviewer: bernaw, domooney, grtaylor, v-six, v-weizhu
 ms.service: active-directory
 ms.subservice: compliance
-ms.custom: has-azure-ad-ps-ref
+ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ---
 # Verify first-party Microsoft applications in sign-in reports
 
@@ -57,6 +57,8 @@ Although the apps that are listed in sign-in reports are owned by Microsoft and 
    ```cmd
    Get-AzureADServicePrincipal -Filter "DisplayName eq '<display-name>'" | fl *
    ```
+
+   [!INCLUDE [Azure AD PowerShell deprecation note](~/../support/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
 
    Replace `<display name>` with the app's actual display name.
 

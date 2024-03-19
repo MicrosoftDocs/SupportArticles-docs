@@ -5,7 +5,7 @@ ms.date: 05/22/2020
 ms.reviewer: 
 ms.service: active-directory
 ms.subservice: enterprise-users
-ms.custom: has-azure-ad-ps-ref
+ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ---
 # Troubleshoot Microsoft Entra Certificate-Based Authentication issues
 
@@ -78,6 +78,8 @@ _Original KB number:_ &nbsp; 4032987
     ```powershell
      Get-MSOLDomainFederationSettings -DomainName contoso.com
     ```
+
+    [!INCLUDE [Azure AD PowerShell deprecation note](~/../support/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
 
     > [!NOTE]
     > This occurs because some modern apps send _prompt=login_ to Microsoft Entra ID in their request. Microsoft Entra ID translates this in the ADFS request to **wauth=usernamepassworduri** (this tells ADFS to do username/password authentication) and **wfresh=0** (tells ADFS to ignore the SSO state and do a fresh authentication). If users have to use Certificate Based Authentication, the **PromptLoginBehavior** must be set to **False**.

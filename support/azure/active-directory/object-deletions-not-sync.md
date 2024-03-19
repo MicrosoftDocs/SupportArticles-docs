@@ -5,7 +5,7 @@ ms.date: 10/19/2023
 ms.reviewer: 
 ms.service: active-directory
 ms.subservice: enterprise-users
-ms.custom: has-azure-ad-ps-ref
+ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ---
 # Object deletions aren't synchronized to Microsoft Entra ID when using the Azure AD Connect
 
@@ -51,6 +51,8 @@ To fix this issue, follow these steps:
     ```powershell
     Remove-MsolUser
     ```
+
+    [!INCLUDE [Azure AD PowerShell deprecation note](~/../support/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
 
     For example, to manually remove orphaned user ID `john.smith@contoso.com` that was originally created by using directory synchronization, you would run the following cmdlet:
 

@@ -5,7 +5,7 @@ ms.date: 05/22/2020
 ms.reviewer: willfid
 ms.service: active-directory
 ms.subservice: domain-services
-ms.custom: has-azure-ad-ps-ref
+ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ---
 # Can't delete a directory through the Azure Management Portal
 
@@ -91,6 +91,8 @@ If you have an Azure subscription, make sure that your Azure subscription is not
 ## Directory has one or more applications
 
 To learn how to remove applications from your directory, read [Adding, updating, and removing an application](/azure/active-directory/develop/quickstart-register-app)
+
+[!INCLUDE [Azure AD PowerShell deprecation note](~/../support/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
 
 You may also have to remove additional service principals. Use Azure Active Directory module for Windows PowerShell to remove all service principals. To do this, follow these steps:
 

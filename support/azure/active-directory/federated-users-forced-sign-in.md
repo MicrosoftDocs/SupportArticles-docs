@@ -5,7 +5,7 @@ ms.date: 05/11/2020
 ms.reviewer: 
 ms.service: active-directory
 ms.subservice: authentication
-ms.custom: has-azure-ad-ps-ref
+ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ---
 # Federated users in Microsoft Entra ID are forced to sign in frequently
 
@@ -36,6 +36,8 @@ This setting can be made on the user object by using PowerShell or through Micro
 ### PowerShell
 
 You can use the Azure AD PowerShell V1 (MSOnline) module to set the **StsRefreshTokensValidFrom** attribute for a user. This will inform the Microsoft Entra authentication flow to give the user a longer lasting Refresh Token or one based on your Microsoft Entra policies. To do this, follow these steps:
+
+[!INCLUDE [Azure AD PowerShell deprecation note](~/../support/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
 
 1. Download the latest Azure AD PowerShell V1 release.
 2. Run the **Connect** command to sign in to your Microsoft Entra admin account every time that you start a new session:

@@ -5,7 +5,7 @@ ms.date: 06/22/2020
 ms.reviewer: 
 ms.service: active-directory
 ms.subservice: authentication
-ms.custom: has-azure-ad-ps-ref
+ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ---
 # Error when you try to set up another federated domain in Office 365, Azure, or Intune: Federation service identifier specified in the AD FS 2.0 server is already in use
 
@@ -13,6 +13,8 @@ This article provides information about resolving an issue in which you receive 
 
 _Original product version:_ &nbsp; Cloud Services (Web roles/Worker roles), Microsoft Entra ID, Microsoft Intune, Azure Backup, Office 365 Identity Management  
 _Original KB number:_ &nbsp; 2618887
+
+[!INCLUDE [Azure AD PowerShell deprecation note](~/../support/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
 
 ## Symptoms
 

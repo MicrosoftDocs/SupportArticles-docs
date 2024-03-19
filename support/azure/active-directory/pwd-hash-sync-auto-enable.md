@@ -5,7 +5,7 @@ ms.date: 05/28/2020
 ms.reviewer: 
 ms.service: active-directory
 ms.subservice: enterprise-users
-ms.custom: has-azure-ad-ps-ref
+ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ---
 # Password Hash Sync is automatically enabled during Microsoft Entra Connect Pass-through Authentication
 
@@ -76,6 +76,8 @@ Optionally, if you want to clear password hashes that are already synchronized t
    3. On the **Optional features** page, clear the **Password writeback** feature check box.
    4. Complete the wizard.
 2. Use the [Set-MsolUserPassword](/powershell/module/msonline/set-msoluserpassword?view=azureadps-1.0&preserve-view=true) cmdlet to set random passwords on all affected users. You have to run this cmdlet five times for each user because Microsoft Entra ID stores the last four password hashes in the password hash history.
+
+[!INCLUDE [Azure AD PowerShell deprecation note](~/../support/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
 
 >[!NOTE]
 > The Set-MsolUserPassword cmdlet does not work if the user is using a federated domain. To clear password hashes for the user in the federated domain, you must change the UPN of the user to a non-federated domain, and then run the cmdlet to set the random password. After that, revert the UPN of the user to the original state.

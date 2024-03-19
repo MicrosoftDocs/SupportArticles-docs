@@ -5,7 +5,7 @@ ms.date: 05/11/2020
 ms.reviewer: willfid
 ms.service: active-directory
 ms.subservice: enterprise-users
-ms.custom: has-azure-ad-ps-ref
+ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ---
 # How to use UPN matching for identity synchronization in Office 365, Azure, or Intune
 
@@ -37,6 +37,8 @@ The UPN matching process has the following technical limitations:
     > Unable to update this object in Microsoft Online Services because the user principal name that is associated with this object in the local Active Directory is already associated with another object. To resolve this error, remove the associated object in your local Active Directory.
 
 ## How to use UPN matching to match an on-premises user to a cloud identity
+
+[!INCLUDE [Azure AD PowerShell deprecation note](~/../support/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
 
 To start the UPN matching process, follow these steps:
 

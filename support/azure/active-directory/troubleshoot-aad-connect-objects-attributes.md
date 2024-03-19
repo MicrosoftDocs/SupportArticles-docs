@@ -6,7 +6,7 @@ ms.reviewer: nualex
 editor: v-jesits
 ms.service: active-directory
 ms.subservice: enterprise-users
-ms.custom: has-azure-ad-ps-ref
+ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ---
 
 # End-to-end troubleshooting of Microsoft Entra Connect objects and attributes
@@ -41,6 +41,8 @@ We've seen many customers fall into the habit of disabling DirSync on the tenant
 ``` PowerShell
 Set-MsolDirSyncEnabled -EnableDirSync $false "Please DON'T and keep reading!"
 ```
+
+[!INCLUDE [Azure AD PowerShell deprecation note](~/../support/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
 
 However, this can be catastrophic because it triggers a complex and lengthy back-end operation to transfer SoA from local Active Directory to Microsoft Entra ID / Exchange Online for all the synced objects on the tenant. This operation is necessary to convert each object from DirSyncEnabled to cloud-only, and clean up all the shadow properties that are synced from on-premises AD (for example, ShadowUserPrincipalName and ShadowProxyAddresses). Depending on the size of the tenant, this operation can take more than 72 hours. Also, it's not possible to predict when the operation will finish. Never use this method to troubleshoot a sync issue because this will cause additional harm and won't fix the issue. You'll be blocked from enabling DirSync again until this disabling operation is complete. Also, after you re-enable DirSync, AADC must again match all the on-premises objects with existent Microsoft Entra objects. This process can be disruptive.
 

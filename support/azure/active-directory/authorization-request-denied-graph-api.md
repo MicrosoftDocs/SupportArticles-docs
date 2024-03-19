@@ -5,7 +5,7 @@ ms.date: 07/20/2020
 ms.reviewer: willfid, maxv, nmanis
 ms.service: active-directory
 ms.subservice: authentication
-ms.custom: has-azure-ad-ps-ref
+ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ---
 # Authorization_RequestDenied error when you try to change a password using Graph API
 
@@ -33,6 +33,8 @@ You can delegate a Microsoft Entra user as an administrator by changing the user
 This problem occurs because the users who have any of the **Administrator** organizational roles aren't members of **Company Administrator** or **User Account Administrator** in the Office 365 administrative roles.
 
 ## Resolution
+
+[!INCLUDE [Azure AD PowerShell deprecation note](~/../support/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
 
 To resolve this problem, add your application to **Company Administrator** in the Office 365 administrative roles. To do so, run all the following Azure AD module for Windows PowerShell (MSOL) cmdlets:
 

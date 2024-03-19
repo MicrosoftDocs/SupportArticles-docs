@@ -5,7 +5,7 @@ ms.date: 06/08/2020
 ms.reviewer: willfid
 ms.service: active-directory
 ms.subservice: domain-services
-ms.custom: has-azure-ad-ps-ref
+ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ---
 # Error when you try to remove a user from the recycle bin: Remove-MsolUser User Not Found
 
@@ -23,6 +23,8 @@ For example, you experience these symptoms when you run the following cmdlet:
 ```powershell
 Remove-MsolUser -RemoveFromRecyleBin
 ```
+
+[!INCLUDE [Azure AD PowerShell deprecation note](~/../support/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
 
 ## Cause
 

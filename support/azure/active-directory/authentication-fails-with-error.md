@@ -5,7 +5,7 @@ ms.date: 07/30/2021
 ms.reviewer: fszita
 ms.service: active-directory
 ms.subservice: hybrid
-ms.custom: has-azure-ad-ps-ref
+ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ---
 
 # Authentication fails with an error stating "The requested federation realm object '< Object ID >' does not exist"
@@ -25,6 +25,8 @@ Contact the support team for the third party identity provider and have them cor
 ## Resolution 2
 
 Use the command `Set-MsolDomainFederationSettings` to modify the IssuerURI of the federated domain to match the realm object listed in the error.
+
+[!INCLUDE [Azure AD PowerShell deprecation note](~/../support/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
 
 1. Connect to Microsoft Entra ID using the *MSONLINE* module. To check that the module is installed, open PowerShell and execute the `get-module MSONLINE -ListAvailable` command.
 

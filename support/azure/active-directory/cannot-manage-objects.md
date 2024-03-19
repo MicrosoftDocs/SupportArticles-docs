@@ -5,7 +5,7 @@ ms.date: 08/30/2021
 ms.reviewer: 
 ms.service: active-directory
 ms.subservice: enterprise-users
-ms.custom: has-azure-ad-ps-ref
+ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ---
 # Can't manage or remove objects that were synchronized through the Azure Active Directory Sync tool
 
@@ -34,6 +34,8 @@ This issue may occur if one or more of the following conditions are true:
 ### The on-premises AD DS is no longer available. Therefore, you can't manage or delete the object from the on-premises environment
 
 You want to manage objects in Office 365, Azure, or Intune and you no longer want to use directory synchronization.
+
+[!INCLUDE [Azure AD PowerShell deprecation note](~/../support/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
 
 1. If you're not running Windows 10, install the 64-bit version of the Microsoft Online Services Sign-in Assistant: [Microsoft Online Services Sign-in Assistant for IT Professionals RTW](https://download.microsoft.com/download/7/1/E/71EF1D05-A42C-4A1F-8162-96494B5E615C/msoidcli_32bit.msi).
 1. Install the Microsoft Azure Active Directory module for Windows PowerShell:

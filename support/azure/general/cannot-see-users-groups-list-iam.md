@@ -3,7 +3,7 @@ title: Can't see list of users/groups to add permissions in IAM in Azure portal
 description: Resolves an issue in which you can't see list of users or groups when adding permissions in Access Control (IAM) in the Azure portal.
 ms.date: 08/14/2020
 ms.service: azure-common-issues-support
-ms.custom: has-azure-ad-ps-ref
+ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ms.author: genli
 author: genlin
 ms.reviewer: 
@@ -36,6 +36,8 @@ To resolve this issue, use one of the following methods:
 5. Change the **Guest users permissions are limited**  setting to **No**, and then select **Save**.
 
 ### Method 2: To allow only the one guest user or configure on a per user basis
+
+[!INCLUDE [Azure AD PowerShell deprecation note](~/../support/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
 
 1. Open Windows PowerShell.
 2. Run the following cmdlet:
