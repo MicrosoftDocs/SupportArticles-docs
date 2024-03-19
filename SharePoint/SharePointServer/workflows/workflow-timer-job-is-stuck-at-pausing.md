@@ -8,6 +8,7 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.custom: 
+  - sap:Administration\Timer Service and jobs
   - CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: luche

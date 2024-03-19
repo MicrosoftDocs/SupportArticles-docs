@@ -7,6 +7,7 @@ localization_priority: Normal
 audience: Admin
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Administration\Workflows
   - CSSTroubleshoot
 search.appverid: 
   - SPO160

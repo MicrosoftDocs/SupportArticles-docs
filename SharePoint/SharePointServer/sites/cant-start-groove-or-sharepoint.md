@@ -11,6 +11,7 @@ ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: fselkirk
 ms.custom: 
+  - sap:User experience\Accessibility
   - CSSTroubleshoot
 appliesto: 
   - SharePoint Workspace 2010
