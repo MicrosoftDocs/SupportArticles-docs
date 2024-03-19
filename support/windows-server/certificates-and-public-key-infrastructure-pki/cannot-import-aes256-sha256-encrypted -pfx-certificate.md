@@ -1,5 +1,5 @@
 ---
-title: Can't import a AES256-SHA256-encrypted PFX certificate
+title: Can't import an AES256-SHA256-encrypted PFX certificate
 description: Provides a workaround for an issue where you can't import a certificate that uses AES256-SHA256 encryption into certain versions of Windows or Windows Server.
 ms.date: 03/14/2024
 author: Deland-Han
@@ -14,7 +14,7 @@ ms.custom: certificates-and-public-key-infrastructure-pki, csstroubleshoot
 keywords: 
 ---
 
-# Can't import a AES256-SHA256-encrypted PFX certificate
+# Can't import an AES256-SHA256-encrypted PFX certificate
 
 This article provides a workaround for an issue where you can't import a certificate that uses AES256-SHA256 encryption into certain versions of Windows or Windows Server.
 

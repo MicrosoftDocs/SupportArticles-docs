@@ -881,6 +881,8 @@ items:
       href: ./certificates-and-public-key-infrastructure-pki/microsoft-trusted-root-store-removal-of-us-federal-common-policy.md
   - name: Certificate enrollment
     items:
+    - name: Can't import an AES256-SHA256-encrypted PFX certificate
+      href: ./certificates-and-public-key-infrastructure-pki/cannot-import-aes256-sha256-encrypted-pfx-certificate.md
     - name: Clients can't authenticate with a server
       href: ./certificates-and-public-key-infrastructure-pki/clients-cant-authenticate-server.md
     - name: Remote Desktop server certificates are renewed two times daily
