@@ -25,7 +25,7 @@ Sometimes, you can resolve Windows Search issues by restarting Windows Font Cach
 1. In the search box on the taskbar, enter *services.msc* to start the Services console.
 2. In the right pane, right-click **Windows Font Cache Service** and then select **Stop**.
 3. Try to search again.
-4. In the Services console, right-click **Windows Font Cache Service** and then select **Stop**.
+4. In the Services console, right-click **Windows Font Cache Service** and then select **Start**.
 
 ## Solution 2: Check for updates
 
@@ -149,24 +149,27 @@ To reset Windows Search by using PowerShell, follow these steps:
 
 ## Solution 5: Regenerate the Microsoft.Windows.Search package AppData folder
 
+> [!NOTE]  
+> Use the Windows Recovery Environment, or sign out and sign in to another user account.
+
 [!INCLUDE [Registry warning](../../includes/registry-important-alert.md)]
 
 1. Make sure that Windows Search works for a newly created Windows account.
-2. Delete the *%USERPROFILE%\\AppData\\Local\\Packages\\Microsoft.Windows.Search_cw5n1h2txyewy* folder.
+1. Delete the *%USERPROFILE%\\AppData\\Local\\Packages\\Microsoft.Windows.Search_cw5n1h2txyewy* folder.
 
-     > [!NOTE]  
-     >
-     > - Use the Windows Recovery Environment, or sign out and sign in to another user account.
-     > - For an earlier version of Windows, *Microsoft.Windows.Search_cw5n1h2txyewy* should be replaced with *Microsoft.Windows.Cortana_cw5n1h2txyewy*.
+   > [!NOTE]  
+   > In some earlier versions of Windows, this folder is named *Microsoft.Windows.Cortana_cw5n1h2txyewy*.
 
-3. Delete the `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Search` registry key from the affected account.
-4. Run the following cmdlet from an elevated PowerShell command prompt:
+1. While signed in by using the affected account, in Registry Editor, navigate to the `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Search` subkey.
+1. Delete the `Search` registry key.
+1. Open an elevated PowerShell Window, and then run the following cmdlet:
 
-    ```PowerShell
-    Add-AppxPackage -Path "C:\Windows\SystemApps\Microsoft.Windows.Search_cw5n1h2txyewy\Appxmanifest.xml" -DisableDevelopmentMode -Register
-    ```
+   ```PowerShell
+   Add-AppxPackage -Path "C:\Windows\SystemApps\Microsoft.Windows.Search_cw5n1h2txyewy\Appxmanifest.xml" -DisableDevelopmentMode -Register
+   ```
 
-5. Restart the system and search for something for the system to initialize the indexing. The registry key and the *AppData* folder should be regenerated.
+1. Restart the computer.
+1. Try to search again. This action restarts search indexing, and regenerates the registry key and the *AppData* folder.
 
 ## Help us improve Search in Windows
 
