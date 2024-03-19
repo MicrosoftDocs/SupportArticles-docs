@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - sap:Administration\Setup, Upgrade, Migration and Patching
   - CI 109532
   - CSSTroubleshoot
 ms.reviewer: clake

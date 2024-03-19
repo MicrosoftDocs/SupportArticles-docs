@@ -11,6 +11,7 @@ ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: clake, fselkirk, patrigan, v-chsu
 ms.custom: 
+  - sap:Administration\Other
   - CSSTroubleshoot
   - CI 110761
 appliesto: 

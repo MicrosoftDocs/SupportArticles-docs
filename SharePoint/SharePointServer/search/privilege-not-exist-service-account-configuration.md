@@ -11,6 +11,7 @@ ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: dakova, clake, v-thomr
 ms.custom: 
+  - sap:Search\Search Administration (Setup, configuration, etc)
   - CSSTroubleshoot
   - CI 110752
 appliesto: 

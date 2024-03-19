@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Administration\Setup, Upgrade, Migration and Patching
   - CI 114542
   - CSSTroubleshoot
 ms.reviewer: troys

@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Search\Crawling
   - CSSTroubleshoot
 ms.reviewer: yvand
 appliesto: 
