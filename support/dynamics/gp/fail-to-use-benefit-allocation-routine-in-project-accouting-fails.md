@@ -1,9 +1,9 @@
 ---
 title: Error when you use Benefit Allocation routine in Project Accounting 
 description: Provides a solution to an error that occurs when you use the Benefit Allocation routine in Project Accounting in Microsoft Dynamics GP.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # Error when you use the Benefit Allocation routine in Project Accounting in Microsoft Dynamics GP: "You must create Miscellaneous ID BENEFIT ALLOC to process benefits"
 

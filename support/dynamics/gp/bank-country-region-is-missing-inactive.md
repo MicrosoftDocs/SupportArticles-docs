@@ -1,9 +1,9 @@
 ---
 title: Bank country or region is missing or inactive
 description: Provides a solution to an error that occurs when you generate an EFT file for Payables Management.
-ms.reviewer: Lmuelle
+ms.reviewer: theley, Lmuelle
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # "The bank country/region assigned to the vendor's remit-to address is missing or inactive" Error message when you generate an EFT file for Payables Management in Microsoft Dynamics GP
 

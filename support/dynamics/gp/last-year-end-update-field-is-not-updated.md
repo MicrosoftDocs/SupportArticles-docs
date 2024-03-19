@@ -1,9 +1,9 @@
 ---
 title: Last Year-End Update field isn't updated
 description: Provides a solution to an issue where the date in the Last Year-End Update field isn't updated after you install the Payroll Year-End Update for Microsoft Dynamics GP.
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # The date in the Last Year-End Update field isn't updated after you install the Payroll Year-End Update for Microsoft Dynamics GP
 

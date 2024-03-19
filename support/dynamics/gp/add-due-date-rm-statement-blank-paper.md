@@ -2,8 +2,8 @@
 title: Add the due date in the RM Statement on Blank Paper report
 description: This article describes how to add the due date information in the RM Statement on Blank Paper report for customers who belong to a National Account in Microsoft Dynamics GP 9.0, in Microsoft Great Plains 8.0, and in Microsoft Great Plains 7.5.
 ms.topic: how-to
-ms.reviewer: ryanklev
-ms.date: 03/31/2021
+ms.reviewer: theley, ryanklev
+ms.date: 03/13/2024
 ---
 # Add the due date information in the RM Statement on Blank Paper report for customers who belong to a National Account
 

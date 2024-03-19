@@ -3,6 +3,7 @@ title: Can't expand a stand-alone primary site
 description: Describes an issue in which a central administration site setup fails when you expand a stand-alone primary site. This issue occurs when the two-factor authentication is enabled in hierarchy settings.
 ms.date: 12/05/2023
 ms.reviewer: kaushika
+ms.custom: sap:Configuration Manager Setup, High Availability, Migration and Recovery\Site Installation or Prerequisites
 ---
 # Attaching a central administration site to a stand-alone primary site fails when two-factor authentication is enabled
 

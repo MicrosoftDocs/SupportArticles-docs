@@ -3,7 +3,7 @@ title: Troubleshoot Windows 10 Intune auto-enrollment error 80180002b
 description: Fixes an issue in which Windows 10 Group Policy-based auto-enrollment to Microsoft Intune fails with the error code 0x80180002b in Event Viewer.
 ms.date: 12/05/2023
 search.appverid: MET150
-ms.custom: sap:Windows enrollment
+ms.custom: sap:Enroll Device - Windows\AutoEnrollment
 ms.reviewer: kaushika, luche
 ---
 # 80180002b error during Windows 10 Group Policy-based auto-enrollment to Intune

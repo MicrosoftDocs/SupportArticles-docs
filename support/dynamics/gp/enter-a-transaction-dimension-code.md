@@ -1,9 +1,9 @@
 ---
 title: Enter a Transaction Dimension Code
 description: Provides a solution to an error that occurs when using Edit Analysis for Analytical Accounting in Microsoft Dynamics GP.
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # "Please enter a Transaction Dimension Code against Transaction Dimension XXXXXX." Error message when using Edit Analysis for Analytical Accounting in Microsoft Dynamics GP
 

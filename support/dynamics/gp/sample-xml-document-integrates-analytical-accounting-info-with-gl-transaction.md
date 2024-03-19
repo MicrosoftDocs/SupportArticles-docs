@@ -1,8 +1,8 @@
 ---
 title: XML document that integrates Analytical Accounting information
 description: Provides a sample XML document that displays the nodes and elements that are required for the Analytical Accounting information to be integrated successfully with a General Ledger transaction in Microsoft Dynamics GP.
-ms.reviewer: dclauson
-ms.date: 03/31/2021
+ms.reviewer: theley, dclauson
+ms.date: 03/13/2024
 ---
 # A sample XML document that integrates Analytical Accounting information with a General Ledger transaction when you use eConnect for Microsoft Dynamics GP
 
