@@ -1,5 +1,5 @@
 ---
-title: Network login issues in SQL Server
+title: Authentication problem with network logins being disallowed in SQL Server
 description: This article provides a resolution for the consistent authentication issue in SQL Server that affects network login.
 ms.date: 03/15/2024
 author: Malcolm-Stewart
@@ -8,7 +8,7 @@ ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 
-# "User account not allowed" error and remote network access denied
+# "User account not allowed" error - Authentication failure
 
 This article helps you resolve a consistent authentication issue that occurs when users don't have permissions to log in to a remote network.
 
