@@ -58,10 +58,9 @@ Although the apps that are listed in sign-in reports are owned by Microsoft and 
    Get-AzureADServicePrincipal -Filter "DisplayName eq '<display-name>'" | fl *
    ```
 
-   [!INCLUDE [Azure AD PowerShell deprecation note](~/../support/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
-
    Replace `<display name>` with the app's actual display name.
 
+   [!INCLUDE [Azure AD PowerShell deprecation note](~/../support/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
 3. Review the result's `AppOwnerTenantId`.
 
     :::image type="content" source="media/verify-first-party-apps-sign-in/review-the-app-owner-tenant-id.png" alt-text="Screenshot of the output of a request to show the Microsoft Entra service principal.":::
