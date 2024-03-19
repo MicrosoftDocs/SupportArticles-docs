@@ -1,7 +1,7 @@
 ---
-title: Named Pipes connection error in SQL Server
+title: Named Pipes connection failure to SQL Server
 description: This article provides a resolution for named pipes connection failures when authenticating to SQL Server.
-ms.date: 03/13/2024
+ms.date: 03/19/2024
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
