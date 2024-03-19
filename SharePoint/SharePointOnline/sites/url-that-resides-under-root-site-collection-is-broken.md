@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - sap:SharePoint Admin Center\Deleted Sites
   - CSSTroubleshoot
 appliesto: 
   - SharePoint Online

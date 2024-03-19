@@ -13,6 +13,7 @@ search.appverid:
 appliesto: 
   - SharePoint
 ms.custom: 
+  - sap:Lists and Libraries\Alerts
   - CI 119396
   - CSSTroubleshoot
 ms.reviewer: prbalusu

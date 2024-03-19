@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - sap:Workflows and Automation\Workflow 2013
   - CSSTroubleshoot
 appliesto: 
   - SharePoint Online

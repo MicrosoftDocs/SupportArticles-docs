@@ -13,6 +13,7 @@ search.appverid:
 appliesto: 
   - ADD PRODUCT
 ms.custom: 
+  - sap:Sites\Site Designs
   - CI 116548
   - CSSTroubleshoot
 ms.reviewer: prbalusu

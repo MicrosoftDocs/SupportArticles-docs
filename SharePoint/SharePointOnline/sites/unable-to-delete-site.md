@@ -13,6 +13,7 @@ search.appverid:
 appliesto: 
   - SharePoint
 ms.custom: 
+  - sap:Sites\Delete Site
   - CI 157730
   - CSSTroubleshoot
 ms.reviewer: prbalusu

@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Profiles and People\People Picker
   - CSSTroubleshoot
 ms.author: luche
 appliesto: 

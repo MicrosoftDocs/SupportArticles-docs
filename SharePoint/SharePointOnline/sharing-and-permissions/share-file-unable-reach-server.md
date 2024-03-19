@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - sap:Sharing\Sharing links
   - CSSTroubleshoot
   - CI 160069
 ms.reviewer: salarson

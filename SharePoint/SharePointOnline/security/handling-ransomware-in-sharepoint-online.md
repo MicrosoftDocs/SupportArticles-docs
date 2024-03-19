@@ -13,6 +13,7 @@ search.appverid:
 appliesto: 
   - SharePoint Online
 ms.custom: 
+  - sap:Backup and Restore\RansomWare
   - CI 113549
   - CSSTroubleshoot
 ms.reviewer: salarson
