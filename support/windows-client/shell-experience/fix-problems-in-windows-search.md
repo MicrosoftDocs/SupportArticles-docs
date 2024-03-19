@@ -33,22 +33,19 @@ When you use Windows 11 or Windows 10, you can choose when and how to get the la
 
 For more information, see [Update Windows](https://support.microsoft.com/help/4027667).
 
-## Solution 3: Search and Indexing troubleshooter
+## Solution 3: Run the Search and Indexing troubleshooter
 
 Windows automatically indexes content to deliver faster search results. If you're running Windows 10, version 1903 (May 2019 Update) or a later version and Windows detects a problem, Windows automatically runs the Search troubleshooter. This troubleshooter resets Windows Search to the default experience. To view your troubleshooter history, select **Start** > **Settings** > **Update & Security** > **Troubleshoot** > **View History**.
 
 Use the Windows Search and Indexing troubleshooter to try to fix any problems that might arise. To use the troubleshooter, follow these steps:
 
-1. Select **Start** > **Settings** > **Update & Security** > **Troubleshoot**.
-2. Under **Find and fix other problems**, select **Search and Indexing**.
-3. Run the troubleshooter and select any problems that apply. Windows tries to detect and solve those problems.
+1. Open a Command Prompt window, and then run the following command:
 
-> [!NOTE]  
-> You can use a Windows command prompt to open the Search and Indexing troubleshooter. To do this, open a Windows Command Prompt window, and then run the following command:
->
-> ```console
-> msdt.exe -ep WindowsHelp id SearchDiagnostic
-> ```
+   ```console
+   msdt.exe -ep WindowsHelp id SearchDiagnostic
+   ```
+
+1. Run the troubleshooter and select any problems that apply. Windows tries to detect and solve those problems.
 
 For more information about Search and Indexing, see the following articles:
 
