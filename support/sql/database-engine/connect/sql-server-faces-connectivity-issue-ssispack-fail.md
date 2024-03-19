@@ -1,7 +1,7 @@
 ---
-title: Troubleshooting SSIS packages that don't run
+title: Issues in connectivity when SQL Server Integration Services packages don't execute 
 description: This article helps you resolve errors that occur when you try to run SSIS packages by using SQL Server Agent.
-ms.date: 03/01/2024
+ms.date: 03/19/2024
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
@@ -33,7 +33,7 @@ To resolve this issue, follow these steps:
 1. In the **Steps** section, find the step that runs your SSIS package.
 1. Select the **Edit** button to open the **Job Step Properties**.
 1. In the **Job Step Properties** dialog box, navigate to **Configuration** > **Connection Managers**.
-1. Select the connection that is experiencing the issue.
+1. Select the connection that's experiencing the issue.
 1. Change the value of the **RetainSameConnection** property from **False** to **True**.
 1. Select **OK** to save your changes.
 
