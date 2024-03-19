@@ -48,7 +48,7 @@ Microsoft 365 administrators can run diagnostic tools within the tenant to verif
    > [Run Tests: Meeting Recording](https://aka.ms/MeetingRecordingDiag)
 1. In the **Run diagnostic** pane, enter the email address of the user who can't record meetings in the **Username or Email** field, and then select **Run Tests**.
 
-The tests will return suggested next steps to address any tenant or policy configurations in order to validate that the user is correctly configured to record a meeting in Teams.
+The tests will suggest next steps to address any tenant or policy configurations in order to validate that the user is correctly configured to record a meeting in Teams.
 
 ## Workaround
 
