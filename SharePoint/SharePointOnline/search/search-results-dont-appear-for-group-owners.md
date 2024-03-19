@@ -13,6 +13,7 @@ search.appverid:
 appliesto: 
   - SharePoint Online
 ms.custom: 
+  - sap:Search\Customize and Configure Results
   - CI 108412
   - SSTroubleshoot
 ms.reviewer: snarra, anundlie, knutb
