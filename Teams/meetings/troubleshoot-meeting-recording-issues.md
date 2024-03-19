@@ -1,6 +1,6 @@
 ---
 title: Issues with meeting recordings
-description: Provides guides to troubleshoot meeting recording issues. For example, the meeting recording button is missing, or the meeting recording link isn't included or visible in a chat.
+description: Provides guides to troubleshoot meeting recording issues, such as a missing recording button or recording link.
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -17,16 +17,16 @@ search.appverid:
   - MET150
 ms.date: 03/18/2024
 ---
-# Issues with meeting recordings
+# Issues that affect meeting recordings
 
 Users experience one of the following issues in Microsoft Teams:
 
 - The meeting recording button is missing.
 - The meeting recording link isn't included or visible in a chat window.
 
-To determine if there's a problem with the user account, run the [Teams Meeting Recording Test](https://aka.ms/MRCA-TMR). This diagnostic checks if the account meets all requirements to record a meeting in Teams. If the issue persists, continue with the following information.
+To determine whether these issues are caused by the user account, run the [Teams Meeting Recording Test](https://aka.ms/MRCA-TMR). This diagnostic checks whether the account meets all requirements to record a meeting in Teams. If the issue persists, try the following troubleshooting methods.
 
-To troubleshoot the issue, administrators can run the [Meeting Recording Support Diagnostic](https://techcommunity.microsoft.com/t5/microsoft-teams-support/new-diagnostic-for-teams-meeting-recording/ba-p/1918982) that's available in the Microsoft 365 admin center.
+Administrators can run the [Meeting Recording Support Diagnostic](https://techcommunity.microsoft.com/t5/microsoft-teams-support/new-diagnostic-for-teams-meeting-recording/ba-p/1918982) that's available in the Microsoft 365 admin center.
 
 The diagnostic can check the following prerequisites for Teams meeting recordings:
 
@@ -37,7 +37,7 @@ For more information about user requirements for Teams meeting recording, see [P
 
 ## Run the Meeting Recording Support Diagnostic
 
-Microsoft 365 admin users have access to diagnostic tools that they can run within the tenant to verify that the user is correctly configured to record a meeting in Teams.
+Microsoft 365 administrators can run diagnostic tools within the tenant to verify that the user is correctly configured to record a meeting in Teams.
 
 > [!NOTE]
 > This feature isn't available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
@@ -46,27 +46,27 @@ Microsoft 365 admin users have access to diagnostic tools that they can run with
 
    > [!div class="nextstepaction"]
    > [Run Tests: Meeting Recording](https://aka.ms/MeetingRecordingDiag)
-1. In the **Run diagnostic** pane, enter the email of the user who can't record meetings in the **Username or Email** field, and then select **Run Tests**.
+1. In the **Run diagnostic** pane, enter the email address of the user who can't record meetings in the **Username or Email** field, and then select **Run Tests**.
 
-The tests will return the best next steps to address any tenant or policy configurations to validate that the user is properly configured to record a meeting in Teams.
+The tests will return suggested next steps to address any tenant or policy configurations in order to validate that the user is correctly configured to record a meeting in Teams.
 
 ## Workaround
 
 Begin by making sure that the user has the [latest Teams updates](https://support.microsoft.com/office/update-microsoft-teams-535a8e4b-45f0-4f6c-8b3d-91bca7a51db1) installed.
 
-If the issue isn't resolved by an update, use the following workaround for the appropriate issue.
+If the issue isn't resolved by an update, review the following issues, and use the workaround for the appropriate issue.
 
 ### Issue 1: The Meeting recording button is missing
 
 - Leave and rejoin the meeting. This might restore the recording functionality.
 - Use the [Teams web client](https://teams.microsoft.com/) to join and record the meeting.
-- Make sure that the user is trying to record a meeting, and not a 1:1 call. Call recording is controlled by the `AllowCloudRecordingForCalls` parameter of Teams calling policies.
-- Run the 1:1 Call Recording Diagnostic for an impacted user:
+- Make sure that the user is trying to record a meeting, not a 1:1 call. Call recording is controlled by the `AllowCloudRecordingForCalls` parameter of Teams calling policies.
+- Run the 1:1 Call Recording Diagnostic for an affected user:
 
    1. Sign in to Microsoft 365 admin center, and type **Diag: Teams 1:1 Call Recording** in the **Need Help?** search box.
-   1. Enter the email of the impacted user in the **Username or Email** field, and then select **Run Tests**.
+   1. Enter the email address of the affected user in the **Username or Email** field, and then select **Run Tests**.
 
-Try again to record the meeting. If the issue still isn't resolved, open a support ticket with Microsoft.
+Try again to record the meeting. If the issue still isn't resolved, open a service request for Microsoft Support.
 
 ### Issue 2: The meeting recording link isn't visible in a chat window
 
@@ -90,7 +90,7 @@ If the meeting recording link still isn't visible, manually locate the meeting r
 
   :::image type="content" source="media/troubleshoot-meeting-recording-issues/teams-channel-location.png" alt-text="Screenshot of the Teams location for storing meeting recordings.":::
   
-  Administrators can also find the recording link for users directly in SharePoint from the **Recordings** folder under **Documents**.
+  Administrators can also find the recording link for users directly in SharePoint in the **Recordings** folder under **Documents**.
   
   Example in SharePoint: <*SharePoint/Documents/Channel name*>/Recordings
   
@@ -106,6 +106,6 @@ If you still can't find the meeting recording, run the Missing Recording Diagnos
    > [!div class="nextstepaction"]
    > [Run Tests: Missing Meeting Recording](https://aka.ms/MissingRecordingDiag)
 
-1. In the **Run diagnostic** pane, enter the URL of the meeting in the **URL of the meeting that was recorded** field (usually found in the meeting invitation) and the date of the meeting in the **When was the meeting recorded?** field, and then select **Run Tests**.
+1. In the **Run diagnostic** pane, enter the URL of the meeting in the **URL of the meeting that was recorded** field (usually located in the meeting invitation) and the date of the meeting in the **When was the meeting recorded?** field, and then select **Run Tests**.
 
-The tests validate that the meeting recording completed successfully and it was uploaded to SharePoint or OneDrive.
+The tests confirm that the meeting recording finished successfully and that it was uploaded to SharePoint or OneDrive.
