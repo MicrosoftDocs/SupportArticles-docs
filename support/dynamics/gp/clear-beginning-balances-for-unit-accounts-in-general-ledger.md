@@ -1,9 +1,9 @@
 ---
 title: Clear beginning balances for unit accounts in General Ledger in Microsoft Dynamics GP
 description: Discusses that the balances for all unit accounts roll forward after the General Ledger fiscal year has been closed in Microsoft Dynamics GP. Describes how to delete the beginning balances for the unit accounts.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/13/2024
 ---
 # How to clear beginning balances for unit accounts in General Ledger in Microsoft Dynamics GP
 

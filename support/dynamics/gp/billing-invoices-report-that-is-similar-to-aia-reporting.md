@@ -1,8 +1,8 @@
 ---
 title: Information about a billing invoices report that is similar to AIA reporting for construction billing for Microsoft Dynamics GP
 description: Information about a billing invoices report that is similar to AIA reporting for construction billing for Microsoft Dynamics GP.
-ms.reviewer: ppeterso
-ms.date: 03/31/2021
+ms.reviewer: theley, ppeterso
+ms.date: 03/13/2024
 ---
 # Information about a billing invoices report that is similar to AIA reporting for construction billing for Microsoft Dynamics GP
 

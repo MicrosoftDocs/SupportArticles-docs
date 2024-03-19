@@ -1,8 +1,8 @@
 ---
 title: Using Microsoft Management Reporter Migration Wizard
 description: Describes information on the Migration Wizard in Microsoft Management Reporter.
-ms.reviewer: kevogt
-ms.date: 03/31/2021
+ms.reviewer: theley, kevogt
+ms.date: 03/13/2024
 ---
 # Information on using the Microsoft Management Reporter Migration Wizard
 

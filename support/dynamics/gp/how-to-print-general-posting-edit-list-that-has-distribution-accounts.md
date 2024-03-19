@@ -1,9 +1,9 @@
 ---
 title: Print General Posting Edit List with distribution accounts
 description: Explains how to print the General Posting Edit List with distribution accounts for variable and fixed allocation accounts in Microsoft Dynamics GP 9.0 and in Microsoft Business Solutions - Great Plains 8.0.
-ms.reviewer: lmuelle
+ms.reviewer: theley, lmuelle
 ms.topic: how-to
-ms.date: 04/22/2021
+ms.date: 03/13/2024
 ---
 # How to print a General Posting Edit List that includes distribution accounts for variable and fixed allocation accounts in Microsoft Dynamics GP
 

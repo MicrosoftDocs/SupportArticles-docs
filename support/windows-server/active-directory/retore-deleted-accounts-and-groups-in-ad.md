@@ -937,10 +937,6 @@ Microsoft recommends that you take the following steps to prevent bulk deletions
 
     For more information about how to use Windows interface tools to prevent accidental bulk deletions, see [Guarding Against Accidental Bulk Deletions in Active Directory](/previous-versions/windows/it-pro/windows-server-2003/cc773347(v=ws.10)).
 
-    For more information about how to prevent accidental bulk deletions by using Dsacls.exe or a script, see the following article:
-
-    [Script to Protect Organizational Units (OUs) from Accidental Deletion](https://gallery.technet.microsoft.com/ScriptCenter/c307540f-bd91-485f-b27e-995ae5cea1e2).
-
 ## Tools and scripts that may help you recover from bulk deletions
 
 The Groupadd.exe command-line utility reads the `memberOf` attribute on a collection of users in an OU and builds a .ldf file that adds each restored user account to the security groups in each domain in the forest.
