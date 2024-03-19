@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - sap:Administration\Performance
   - CSSTroubleshoot
 appliesto: 
   - SharePoint Server 2013

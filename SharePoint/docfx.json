@@ -162,24 +162,7 @@
         "OneDrive/setup/**/*.md": "setup",
         "OneDrive/sharing-and-permissions/**/*.md": "sharing-and-permissions",
         "OneDrive/storage/**/*.md": "storage",
-        "OneDrive/sync/**/*.md": "synchronization",
-        "SharePointServer/sharing-and-permissions/**/*.md": "sharing-permissions",
-        "SharePointServer/designer/**/*.md": "designer",
-        "SharePointServer/records-management/**/*.md": "records-management",
-        "SharePointServer/search/**/*.md": "search",
-        "SharePointServer/sites/**/*.md": "sites",
-        "SharePointServer/security/**/*.md": "security",
-        "SharePointServer/web-parts/**/*.md": "web-parts",
-        "SharePointServer/apps/**/*.md": "apps",
-        "SharePointServer/powershell/**/*.md": "powershell",
-        "SharePointServer/performance/**/*.md": "performance",
-        "SharePointServer/workflows/**/*.md": "workflows",
-        "SharePointServer/sync/**/*.md": "synchronization",
-        "SharePointServer/migration-tool/**/*.md": "migration-tool",
-        "SharePointServer/administration/**/*.md": "administration",
-        "SharePointServer/lists-and-libraries/**/*.md": "lists-and-libraries",
-        "SharePointServer/installation-and-setup/**/*.md": "installation-and-setup",
-        "SharePointServer/infopath/**/*.md": "infopath"
+        "OneDrive/sync/**/*.md": "synchronization"
       },
       "author": {
         "**/*.md": "helenclu"
