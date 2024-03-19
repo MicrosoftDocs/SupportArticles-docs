@@ -143,5 +143,5 @@ If you need assistance from Microsoft support, we recommend you collect the info
 
 For more information, see the following articles:
 
-- [Introduction to credential roaming](https://social.technet.microsoft.com/wiki/contents/articles/11483.credential-roaming.aspx)
+- [Introduction to credential roaming](https://learn.microsoft.com/archive/technet-wiki/11483.windows-credential-roaming)
 - [Introduction to Read-Only DCs](https://technet.microsoft.com/library/dd734758%28v=ws.10%29.aspx)
