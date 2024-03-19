@@ -120,7 +120,7 @@ We do not recommend running any additional services or applications in the paren
 
     > [!IMPORTANT]
     > If you are moving your virtual machines to a CSV disk, follow the steps in the [Migrate a virtual machine from a non-CSV disk to a CSV disk](#migrate-a-virtual-machine-from-a-non-csv-disk-to-a-csv-disk) section.
-    1. If you used step 5a to export the virtual machines above, import the virtual machines back to the cluster nodes. To import the virtual machines, follow the steps in the [Export and import virtual machines in clustered environments](#export-and-import-virtual-machines-in-clustered-environments) section.
+    1. If you used step 5a to export the virtual machines above, import the virtual machines back to the cluster nodes.
     2. If you use step 5b to back up the virtual machines, use a backup application to restore the virtual machine to the clustered disk.
 
 9. For each of the virtual machines that are now in this Windows Server 2008 R2 cluster, update the Integration Services. To do this, turn on the virtual machine, open the Virtual Machine Connection window, and then click **Insert Integration Services Setup Disk** on the **Action** menu.
