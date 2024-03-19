@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Lists and Libraries\Add shortcut to OneDrive
   - CSSTroubleshoot
 ms.reviewer: 
 appliesto: 

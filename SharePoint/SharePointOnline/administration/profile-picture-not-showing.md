@@ -11,6 +11,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - sap:Profiles and People\Photo Sync
   - CSSTroubleshoot
   - CI 150415
 appliesto: 

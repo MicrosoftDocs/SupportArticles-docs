@@ -8,6 +8,7 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.custom: 
+  - sap:Lists and Libraries\Lists Offline sync
   - CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: luche
