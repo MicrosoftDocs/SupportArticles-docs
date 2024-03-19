@@ -14,7 +14,7 @@ The topics in this section provide solutions and scenario guides to help you tro
 
 ## System Management Components sub categories
 
-- Help and Support
+- Event Viewer
 - Microsoft Management Console (MMC)
 - PowerShell
 - Server Manager
