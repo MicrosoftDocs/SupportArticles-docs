@@ -47,11 +47,11 @@ To resolve this issue, get the operation that causes the failure and figure out 
 
 If a recently created or upgraded cluster is in a failed state, use the following methods to troubleshoot the failure:
 
-- Examine the [activity logs](troubleshoot-aks-cluster-creation-issues#view-error-details-in-the-azure-portal.md) to identify the root cause of the failure.
+- Examine the [activity logs](troubleshoot-aks-cluster-creation-issues.md#view-error-details-in-the-azure-portal) to identify the root cause of the failure.
 
     You can view the activity logs by using [the Azure portal](#view-the-activity-logs-for-a-failed-cluster-using-the-azure-portal), [Azure CLI](#view-the-activity-logs-for-a-failed-cluster-using-the-azure-cli), or Azure PowerShell.
  
-    The activity logs can show you the error code and message associated with the failure. For more information about specific errors, see the [Basic troubleshooting for common errors that cause a failed cluster](#basic-troubleshooting-for-common-errors) section.
+    The activity logs can show you the error code and message associated with the failure. For more information about specific errors, see the [Basic troubleshooting for common errors that cause a failed cluster/node](#basic-troubleshooting-for-common-errors-that-cause-a-failed-clusternode) section.
 
 - [Use the AKS Diagnose and Solve Problems feature](#use-aks-diagnose-and-solve-problems-feature-for-a-failed-cluster) to troubleshoot and resolve common issues.
 
@@ -67,7 +67,7 @@ To view the activity logs for a failed cluster from the Azure portal, follow the
 3. On the cluster page, select **Activity log** from the left menu.
 4. On the **Activity log** page, you can filter the events by **Status**, **Timespan**, **Event initiated by**, and **Event category**. For example, you can select **Failed** from the **Status** drop-down list to see only the failed events.
 
-    :::image type="content" source="media/cluster-node-virtual-machine-failed-state/filter-events.png" alt-text="Screenshot that shows how to filter the events on the 'Activity log' page." border="false":::
+    :::image type="content" source="media/cluster-node-virtual-machine-failed-state/filter-events.png" alt-text="Screenshot that shows how to filter the events on the 'Activity log' page.":::
 
 5. To check the details of an event, select the event name from the list. A new pane will open with the event summary, properties, and JSON data. You can also download the JSON data as a file.
 6. To check the error code and message associated with the event, scroll down to the **Status** section in the event summary. You can also find the error information in the properties and JSON data sections.
@@ -83,7 +83,7 @@ If you prefer to use Azure CLI to view the activity logs for a failed cluster, f
 5. Use the `az monitor activity-log show` command with the `--resource-group`, `--resource`, and `--event-id` parameters to show the details of a specific event. You can find the event ID from the output of the previous command. The output will include the event summary, properties, and JSON data. You can also use the `--output` parameter to change the format of the output.
 6. To see the error code and message associated with the event, look for the `statusMessage` field in the command output. You can also find the error information in the properties and JSON data sections.
 
-  :::image type="content" source="media/cluster-node-virtual-machine-failed-state/json-data.png" alt-text="Screenshot that shows JSON data." border="false":::
+      :::image type="content" source="media/cluster-node-virtual-machine-failed-state/json-data.png" alt-text="Screenshot that shows JSON data.":::
 
 ### Use AKS Diagnose and Solve Problems feature for a failed cluster 
 
@@ -93,7 +93,7 @@ In the Azure CLI, use the `az aks collect` command with the `--name` and `--reso
 
 In the **Diagnose and Solve Problems** portal, you can select **Cluster Issues** as the category. If any issues are detected, you will see a list of possible solutions that you can follow to fix them.
 
- :::image type="content" source="media/cluster-node-virtual-machine-failed-state/diagnose-and-solve-problems-solutions.png" alt-text="Screenshot that shows possible solutions in the 'Diagnose and Solve Problems' portal." border="false":::
+ :::image type="content" source="media/cluster-node-virtual-machine-failed-state/diagnose-and-solve-problems-solutions.png" alt-text="Screenshot that shows possible solutions in the 'Diagnose and Solve Problems' portal.":::
 
 ## Scenario 2: Node is in a failed state
 
@@ -113,7 +113,7 @@ To resolve this issue, manually update the VM status by using one of the followi
     az vmss update-instances --resource-group <resource-group-name> --name <scale-set-name> --instance-id <vm-or-scale-set-id>
     ``` 
 
-## Scenario 3: Nodepool is in failed state
+## Scenario 3: Nodepool is in a failed state
 
 When the VM scale set or availability set that backs the nodepool encounters an error during provisioning, scaling, or updating, this issue can happen. This issue can be due to insufficient capacity, quota limits, network issues, policy violations, resource locks, or other factors that prevent the VMs from being allocated or configured properly.
 
@@ -126,10 +126,6 @@ To troubleshoot this issue, follow these steps:
 5. Check the quota and capacity of the region and subscription where the nodepool is deployed. You can use the `az vm list-usage` command or the Azure portal to check the quota and capacity. If you are reaching the limit of your quota or capacity, you can request an increase or delete some unused resources.
 6. Check the policy and role assignments of the nodepool. You can use the `az policy` and `az role` commands or the Azure portal to check the policy definitions, assignments, compliance, and exemptions. You can also check the role assignments and permissions of the nodepool using the `az role assignment` command or the Azure portal.
 7. Check the resource locks of the nodepool. You can use the `az lock` command or the Azure portal to check the lock level, scope, and notes. You can also delete or update the lock if needed.
-
-### Check Provisioning State
-
-Show the provisioning state for the cluster and agent pool:
 
 ## Additional logs and diagnostics tools
 
