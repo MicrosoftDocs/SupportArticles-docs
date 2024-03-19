@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - sap:Authentication and Authorization\Conditional Access Policy
   - CSSTroubleshoot
 appliesto: 
   - SharePoint Online

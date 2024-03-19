@@ -17,6 +17,7 @@ appliesto:
   - SharePoint Server 2016
   - SharePoint Server 2013
 ms.custom: 
+  - sap:Search\Performance (such as crawl, query, indexing , and content processing)
   - CI 158351
   - CSSTroubleshoot
 ms.reviewer: holutz

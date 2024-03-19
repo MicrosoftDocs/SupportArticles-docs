@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - sap:Permissions\Permission Groups
   - CSSTroubleshoot
 appliesto: 
   - SharePoint Online

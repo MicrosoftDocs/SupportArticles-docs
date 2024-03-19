@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Administration\Timer Service and jobs
   - CSSTroubleshoot
 ms.author: luche
 appliesto: 

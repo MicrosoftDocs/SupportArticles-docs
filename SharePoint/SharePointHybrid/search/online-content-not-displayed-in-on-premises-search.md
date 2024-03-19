@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - sap:Search\Customize and Configure Results
   - CSSTroubleshoot
 appliesto: 
   - SharePoint Server 2013

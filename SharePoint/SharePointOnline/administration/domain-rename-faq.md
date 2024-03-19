@@ -10,6 +10,7 @@ ms.date: 12/17/2023
 audience: Admin
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Domain Rename\Other
   - CSSTroubleshoot
   - CI 158146
 search.appverid: 

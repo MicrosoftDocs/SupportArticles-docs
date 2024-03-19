@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - sap:Administration\Files and Documents
   - CSSTroubleshoot
 appliesto: 
   - Word for iPad, iPhone and iPod touch

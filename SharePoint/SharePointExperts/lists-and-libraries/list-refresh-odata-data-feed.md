@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
-  - sap:spsexperts
+  - sap:Administration\Hybrid with M365 (OneDrive,App launcher, Site following, PowerApps, Flow, etc.)
   - CSSTroubleshoot
 ms.author: luche
 ms.reviwer: zakirh
