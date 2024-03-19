@@ -11,6 +11,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: salarson
 ms.custom: 
+  - sap:Search\Index Correctness
   - CSSTroubleshoot
   - CI 151765
 appliesto: 
