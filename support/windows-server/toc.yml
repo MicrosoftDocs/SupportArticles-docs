@@ -335,6 +335,8 @@ items:
       href: ./active-directory/wizard-not-gain-access-to-domain.md
     - name: NETLOGON share isn't present after you install AD DS on a new full or read-only domain controller
       href: ./active-directory/netlogon-share-not-present-after-install-ad-ds-on-full-read-only-domain-controller.md
+    - name: Requirements for domain controller certificates from a third-party CA
+      href: ./active-directory/requirements-domain-controller.md
     - name: Newly promoted domain controller fails to advertise after DCpromo
       href: ./active-directory/newly-promoted-domain-controller-fail-advertise.md
   - name: Domain controller scalability or performance (including LDAP)
@@ -897,16 +899,12 @@ items:
       href: ./certificates-and-public-key-infrastructure-pki/decommission-enterprise-certification-authority-and-remove-objects.md
     - name: How to import third-party CAs into Enterprise NTAuth store
       href: ./certificates-and-public-key-infrastructure-pki/import-third-party-ca-to-enterprise-ntauth-store.md
+    - name: How to expand the maximum extension size limit at AD CS
+      href: ./certificates-and-public-key-infrastructure-pki/expand-maximum-extension-size-limit-ad-cs.md
     - name: CA doesn't publish certificates in trusted domain
       href: ./certificates-and-public-key-infrastructure-pki/cannot-publish-certificate-trusted-domain.md
     - name: Superseded Certificate Templates and impact on user’s AD store
       href: ./certificates-and-public-key-infrastructure-pki/superseded-certificate-templates-impact-user-ad-store.md
-  - name: Certificates and Public Key Infrastructure (PKI)
-    items:
-    - name: Support for Suite B cryptographic algorithms
-      href: ./certificates-and-public-key-infrastructure-pki/description-support-suite-b-cryptographic-ipsec.md
-    - name: Requirements for domain controller certificates from a third-party CA
-      href: ./certificates-and-public-key-infrastructure-pki/requirements-domain-controller.md
   - name: Network Device Enrollment Services (NDES) 
     items:
     - name: '"Http error 500.0" when getting the NDES enrollment challenge password'
@@ -3094,11 +3092,7 @@ items:
     - name: MBAM fails to take ownership of the TPM
       href: ./windows-security/error-mbam-take-ownership-tpm.md
     - name: MBAM setup fails if SSRS is not configured properly
-      href: ./windows-security/mbam-setup-fails.md
-  - name: Certificates and public key infrastructure (PKI)
-    items:
-    - name: How to expand the maximum extension size limit at AD CS
-      href: ./windows-security/expand-maximum-extension-size-limit-ad-cs.md
+      href: ./windows-security/mbam-setup-fails.md    
   - name: Domain and forest trusts
     items:
     - name: '"The server is not operational" error when adding a trusted domain user'
@@ -3115,6 +3109,10 @@ items:
       href: ./windows-security/trusted-domains-dont-appear.md
     - name: Users and groups can't be added to trusted forest
       href: ./windows-security/rpc-endpoint-mapper-prevents-users-added-to-trust-forest.md
+  - name: Internet Protocol security (IPSec)
+    items:
+    - name: Support for Suite B cryptographic algorithms
+      href: ./windows-security/description-support-suite-b-cryptographic-ipsec.md
   - name: Kerberos authentication
     items:
     - name: Active Directory authentication fails with klist error 0x8009030e
