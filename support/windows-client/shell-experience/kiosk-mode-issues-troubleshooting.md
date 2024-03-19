@@ -18,7 +18,7 @@ _Applies to:_ &nbsp; Windows 10, Windows 11
 ## Single-app kiosk issues
 
 > [!TIP]
-> We recommend that you [enable logging for kiosk issues](/windows/configuration/kiosk-prepare#enable-logging). For some failures, events are only captured once. If you enable logging after an issue occurs with your kiosk, the logs may not capture those one-time events. In that case, prepare a new kiosk environment (such as a [virtual machine (VM)](/windows/configuration/kiosk-prepare#testing-your-kiosk-in-a-virtual-machine-vm)), set up your kiosk account and configuration, and try to reproduce the problem.
+> We recommend that you [enable logging for kiosk issues](/windows/configuration/assigned-access/recommendations#troubleshooting-and-logs). For some failures, events are only captured once. If you enable logging after an issue occurs with your kiosk, the logs may not capture those one-time events.
 
 ### Sign-in issues
 
