@@ -269,6 +269,18 @@ Performance data like CPU and the I/O rate is available for the following enviro
 * In your firewall, you might have to [open some TCP ports](/azure/azure-monitor/app/ip-addresses).
 * If you have to use a proxy to send out of your corporate network, set the [\<defaultProxy>](/previous-versions/dotnet/netframework-1.1/aa903360(v=vs.71)) element in *web.config*.
 
+## Performance impact when Application Insights is enabled
+
+Enabling Application Insights SDK in your application can sometimes lead to performance issues, such as high CPU usage, memory leaks, thread leaks, or TCP port exhaustion. These issues often stem from the application leaking `Microsoft.ApplicationInsights.Extensibility.TelemetryConfiguration` objects. Each leaked instance creates two additional threads, which can lead to an increase in the process's thread count over time. If you notice a growing number of threads, it's crucial to check for leaks of [TelemetryConfiguration](https://learn.microsoft.com/dotnet/api/microsoft.applicationinsights.extensibility.telemetryconfiguration?view=azure-dotnet) objects. 
+
+### Common causes of TelemetryConfiguration leaks
+
+Leaking `TelemetryConfiguration` objects can happen in two primary ways:
+
+- **Explicit creation in code**: If you're creating `TelemetryConfiguration` objects within your code, ensure they're not being created per web request inadvertently. Instead, use a shared global instance. For .NET Framework applications, access the global instance with `TelemetryConfiguration.Active`. For .NET Core applications, use `TelemetryConfiguration.CreateDefault()` to obtain a default configuration.
+
+- **Improper service provider usage**: In .NET Core applications, avoid calling `services.BuildServiceProvider()` within `ConfigureServices`. BuildServiceProvider method creates a new service provider that initializes and reads the configuration, resulting in a new `TelemetryConfiguration` object each time. This pattern can lead to leaks and is advised against, as noted in the [Visual Studio warning](https://learn.microsoft.com/aspnet/core/diagnostics/asp0000?view=aspnetcore-8.0) against this coding pattern. 
+
 ## I used to see data, but it's stopped
 
 Have you hit your monthly quota of data points? Open **Settings** > **Quota and Pricing** to find out. If so, you can upgrade your plan or pay for more capacity. See the [pricing scheme](https://azure.microsoft.com/pricing/details/monitor/).
