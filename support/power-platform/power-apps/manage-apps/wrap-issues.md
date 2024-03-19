@@ -5,7 +5,7 @@ ms.reviewer: sitaramp
 ms.author: arijitba
 author: arijitba
 ms.date: 03/04/2024
-ms.custom: has-azure-ad-ps-ref
+ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ---
 # Troubleshoot issues with the wrap feature in Power Apps
 
@@ -88,6 +88,8 @@ The following Azure key vault errors might appear in wrap for Power Apps and can
 | Error code      | Description          |
 | ------------- |-------------|
 |1000118    | Default subscription not found, or missing access permissions|
+
+[!INCLUDE [Azure AD PowerShell deprecation note](~/../support/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
 
 1. Make sure that your Azure key vault is in your tenant's **Default subscription**.
 2. Run these commands in PowerShell as an admin:

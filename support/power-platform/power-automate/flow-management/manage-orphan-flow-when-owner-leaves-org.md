@@ -5,7 +5,7 @@ ms.reviewer: tomche
 ms.topic: how-to
 ms.date: 09/25/2023
 ms.subservice: flow-management
-ms.custom: has-azure-ad-ps-ref
+ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ---
 # How to manage orphan flows when the owner leaves the organization
 
@@ -56,6 +56,8 @@ Set-AdminFlowOwnerRole -EnvironmentName <env name> -FlowName <flow name> -Princi
 
 > [!NOTE]
 > You can get the Microsoft Entra principal object ID of a user by running the [Get-AzureADUser](/powershell/module/azuread/get-azureaduser) cmdlet (which is from AzureAD module). You need to call the `Connect-AzureAD` cmdlet before running the `Get-AzureADUser` cmdlet.
+
+[!INCLUDE [Azure AD PowerShell deprecation note](~/../support/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
 
 Run the `Get-AdminFlowOwnerRole` cmdlet again to verify the new owner is in the list.
 
