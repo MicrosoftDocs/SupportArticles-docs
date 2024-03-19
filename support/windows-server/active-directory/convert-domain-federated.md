@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:active-directory-federation-services-ad-fs, csstroubleshoot, has-azure-ad-ps-ref
+ms.custom: sap:active-directory-federation-services-ad-fs, csstroubleshoot, has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ---
 # Error when you run the Convert-MsolDomainToStandard cmdlet: Failed to connect to Active Directory Federation Services 2.0 on the local machine
 
@@ -17,6 +17,8 @@ This article provides a resolution to resolve an issue where you receive "Failed
 
 _Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012  
 _Original KB number:_ &nbsp; 3018485
+
+[!INCLUDE [Azure AD PowerShell deprecation note](~/../support/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
 
 ## Symptoms
 

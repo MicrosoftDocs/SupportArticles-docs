@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, brheld
-ms.custom: sap:active-directory-federation-services-ad-fs, csstroubleshoot, has-azure-ad-ps-ref
+ms.custom: sap:active-directory-federation-services-ad-fs, csstroubleshoot, has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ---
 # Error when you use the Set-MsolADFSContext command: The connection to \<ServerName> Active Directory Federation Services 2.0 server failed
 
@@ -19,6 +19,8 @@ _Original KB number:_ &nbsp; 2587730
 When you run the `Set-MsolADFSContext -Computer` command in the Microsoft Azure Active Directory module for Windows PowerShell, you receive the following error:
 
 > Set-MsolADFSContext : The connection to \<ServerName> Active Directory Federation Services 2.0 server failed due to invalid credentials.
+
+[!INCLUDE [Azure AD PowerShell deprecation note](~/../support/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
 
 ## Cause
 
