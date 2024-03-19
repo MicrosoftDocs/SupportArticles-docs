@@ -15,6 +15,7 @@ items:
   href: corrupt-user-profile.md
 - name: Existing connection forcibly closed
   href: tls-exist-connection-closed.md
+  items:
   - name: Connectivity issues occur when SQL agent SSIS packages don't run
     href: sql-server-faces-connectivity-issue-ssispack-fail.md
   - name: The SSL_PE_NO_CIPHER error occurs on endpoint 5022
