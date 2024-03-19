@@ -28,7 +28,7 @@ Itanium-based 64-bit drivers aren't compatible with x64-based versions of Window
 
 To obtain device drivers that aren't included on the installation CD for x64-based versions of Windows, use these methods in the following order:
 - Method 1 On the Microsoft Windows Update Web site, search for a driver that is certified by the Windows Hardware Quality Labs (WHQL). To search for a WHQL-certified driver, select **Start**, select **Windows Update**, and then follow the instructions on the Windows Update Web site. Alternatively, you can visit the following Microsoft Web site:  
-   [https://update.microsoft.com](https://update.microsoft.com) 
+   [Update Windows](https://support.microsoft.com/windows/3c5ae7fc-9fb6-9af1-1984-b5e0412c556a) 
 
 - Method 2 
 Obtain a WHQL-certified driver from the device manufacturer's Web site. For information about how to search for a WHQL-certified driver on the device manufacturer's Web site, contact your device manufacturer.

@@ -71,11 +71,7 @@ If you're redirecting the CN=Users and CN=Computers folders, be aware of the fol
 
     CN=USERS and CN=COMPUTERS containers are system-protected objects that can't, and mustn't, be removed for backward compatibility. But they can be renamed. Organizational units are subject to accidental tree deletions by administrators.
 
-    Windows Server 2003 versions of the Active Directory Users & Computers snap-in can follow the steps in [Protect an Organizational Unit from Accidental Deletion](https://gallery.technet.microsoft.com/scriptcenter/c307540f-bd91-485f-b27e-995ae5cea1e2).
-
     Windows Server 2008 and newer versions of the Active Directory Users and Computers snap-in feature a **Protect object against accidental deletion** check box that you can select when you create a new OU container. You can also select it on the **Object** tab of the **Properties** dialog box for an existing OU container.
-
-    A scripted option is documented in [Script to Protect Organizational Units (OUs) from Accidental Deletion](https://gallery.technet.microsoft.com/scriptcenter/c307540f-bd91-485f-b27e-995ae5cea1e2).
 
 - Redirecting CN=USERS affects the default location for new users, groups, and trust user accounts. Trust user accounts are hidden in most UI admin tools, but you can show and move them in tools like LDIFDE and LDP. The CN of the account is \<downlevel domain name>$, for example, "contoso$".
 
