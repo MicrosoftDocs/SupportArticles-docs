@@ -5,6 +5,7 @@ ms.date: 12/05/2023
 author: helenclu
 ms.author: vinpa
 ms.reviewer: kaushika, vinpa
+ms.custom: sap:Site Server and Roles\Certificates (PKI)
 ---
 
 # Connectivity issues if the DigiCert Global Root G2 root certificate is not installed

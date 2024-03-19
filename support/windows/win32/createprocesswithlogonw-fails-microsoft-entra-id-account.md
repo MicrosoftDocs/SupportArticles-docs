@@ -5,7 +5,6 @@ author: cts-davean
 ms.author: davean
 ms.reviewer: mihayash, v-sidong
 ms.custom: sap:System Services Development\Process, thread, and DLL APIs
-ms.subservice: system-services-dev
 ms.date: 12/19/2023
 ---
 
