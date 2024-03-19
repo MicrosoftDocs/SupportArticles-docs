@@ -26,11 +26,7 @@ You might receive the following error messages:
 
 > [Microsoft OLE DB Driver for SQL Server]: TCP Provider: An existing connection has been forced to be interrupted by the remote host.
 
-Here, the remote server receives the TLS messages when the server tries to connect to SQL Server:
-
-- An unrecoverable alert was generated and sent to the remote end. You might see this message when the connection is terminated. The defined unrecoverable error code of the TLS protocol is **40**. The status of the Windows SChannel error is **1205**.
-
-- An unrecoverable alert was generated and sent to the remote end. This error might terminate the connection. The TLS protocol defined fatal error code is **40**. The Windows SChannel error status is **1205**.
+Here, the remote server receives the TLS messages when the server tries to connect to SQL Server. An unrecoverable alert will be generated and sent to the remote end. This error might terminate the connection. The TLS protocol defined fatal error code is **40**. The Windows SChannel error status is **1205**.
 
 ## Resolution
 
