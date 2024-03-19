@@ -11,7 +11,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: randring
 ms.custom: 
-  - sap:spsexperts
+  - sap:User experience\Webpart infrastructure
   - CSSTroubleshoot
 appliesto: 
   - SharePoint Server 2016

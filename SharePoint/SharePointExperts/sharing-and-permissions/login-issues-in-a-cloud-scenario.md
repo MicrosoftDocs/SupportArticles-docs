@@ -11,7 +11,7 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
-  - sap:spsexperts
+  - sap:Administration\SharePoint Designer
   - CSSTroubleshoot
 appliesto: 
   - SharePoint Designer 2013
