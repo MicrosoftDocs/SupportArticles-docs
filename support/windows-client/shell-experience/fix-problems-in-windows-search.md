@@ -141,9 +141,9 @@ To reset Windows Search by using PowerShell, follow these steps:
 1. Close the PowerShell Window.
 
 > [!NOTE]  
-> If you receive the following message when you run the script, the execution policy is not set correctly.  
+> If the execution policy is not set correctly, you receive a message that resembles the following:  
 >
-     > Cannot be loaded because running scripts is disabled on this system.  
+> `Cannot be loaded because running scripts is disabled on this system.`  
 >
 > Return to the earlier steps in this procedure to check the execution policy and change it if needed. Then run the script again.
 
