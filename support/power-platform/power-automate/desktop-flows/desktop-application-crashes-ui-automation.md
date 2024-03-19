@@ -2,12 +2,12 @@
 title: Desktop application crashes due to the UI automation of Power Automate for desktop
 description: Provides a workaround for an issue where the execution of a UI automation action using Power Automate for desktop causes the desktop application being interacted with to crash.
 ms.reviewer: nimoutzo
-ms.date: 03/18/2024
+ms.date: 03/19/2024
 ms.subservice: power-automate-desktop-flows
 ---
 # A desktop application crashes due to the execution of UI automation of Power Automate for desktop
 
-This article provides a workaround for a crash issue in desktop applications that Power Automate for desktop interacts with using a UI automation action.
+This article provides a workaround for the issue that might cause certain desktop applications to crash during execution of a UI automation action using Power Automate for desktop.
 
 ## Prerequisites
 
@@ -15,7 +15,7 @@ This article provides a workaround for a crash issue in desktop applications tha
 
 ## Symptoms
 
-- When a user launches the Power Automate for desktop recorder or the UI element picker, and tries to hover over a UI element in a specific desktop application, the desktop application crashes.
+- When you launch the Power Automate for desktop recorder or the UI element picker, and try to hover over a UI element in a specific desktop application, the desktop application crashes.
 - When a UI automation action is being executed and interacting with a UI element in a specific desktop application, the desktop application crashes.
 
 ## Workaround
