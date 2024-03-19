@@ -1,7 +1,7 @@
 ---
-title: Resolving the SSL_PE_NO_CIPHER error
-description: This article provides the symptoms and resolution using which you will be able to resolve the SSL_PE_NO_CIPHER error.
-ms.date: 03/15/2024
+title: Resolving the SSL_PE_NO_CIPHER error in SQL Server
+description: This article provides the symptoms and resolution using which you will be able to resolve the SSL_PE_NO_CIPHER error in SQL Server.
+ms.date: 03/19/2024
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
@@ -14,7 +14,7 @@ This article helps you resolve the error related to the `SSL_PE_NO_CIPHER` that 
 
 ## Symptoms
 
-The Security Socket Layer (SSL) "SSL_PE_NO_CIPHER" error occurs on endpoint port 5022, and there is a time delay longer than 15 seconds, potentially leading to timeouts. It occurs when the SSL handshake fails due to a lack of compatible cipher suites between the client and server. This can happen if outdated or weak encryption algorithms are used.
+The Security Socket Layer (SSL) "SSL_PE_NO_CIPHER" error occurs on endpoint port 5022, and there's a time delay longer than 15 seconds, potentially leading to timeouts. It occurs when the SSL handshake fails due to a lack of compatible cipher suites between the client and server. This can happen if outdated or weak encryption algorithms are used.
 
 ## Resolution
 

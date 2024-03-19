@@ -1,7 +1,7 @@
 ---
 title: Intermittent connection errors occur when the SQLCMD tool is used
 description: This article provides a resolution for resolving intermittent connection errors that are generated when you use the SQLCMD tool.
-ms.date: 03/15/2024
+ms.date: 03/19/2024
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
