@@ -244,7 +244,7 @@ For more detailed information, choose the subject area you'd like to troubleshoo
 - [Performance issues (SMB/NFS)](files-troubleshoot-performance.md)
 - [General issues on Linux (SMB)](files-troubleshoot-linux-smb.md)
 - [General issues on Linux (NFS)](files-troubleshoot-linux-nfs.md)
-- [Azure File Sync issues](../file-sync-troubleshoot.md)
+- [Azure File Sync issues](file-sync-troubleshoot.md)
 
 Some issues can be related to more than one subject area (both connectivity and performance, for example).
 

@@ -30,15 +30,15 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Embedded application error when install Azure backup agent
-            url: ../general/unable-to-execute-the-embedded-application-error-backup-agent.md
+            url: blobs/unable-to-execute-the-embedded-application-error-backup-agent.md
           - text: Invalid blob or block content, or invalid block list
-            url: ../general/invalid-blob-or-block-content-or-invalid-block-list.md
+            url: blobs/invalid-blob-or-block-content-or-invalid-block-list.md
           - text: Optimize CreateFile function
-            url: ../general/optimize-createfile-function.md
+            url: files/optimize-createfile-function.md
           - text: Request body is too large error when write to file
-            url: ../general/request-body-large.md
+            url: files/request-body-large.md
           - text: Troubleshoot high CPU or disk usage issues
-            url: ../general/diagnose-high-cpu-disk-perfinsights.md
+            url: blobs/diagnose-high-cpu-disk-perfinsights.md
 
 # Card
   - title: Data migration
@@ -46,7 +46,7 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Troubleshoot AzCopy issues
-            url: storage-use-azcopy-troubleshoot.md
+            url: common/storage-use-azcopy-troubleshoot.md
 
 # Card
   - title: Monitoring, metrics and logs
@@ -54,15 +54,15 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Monitor, diagnose, and troubleshoot
-            url: storage-monitoring-diagnosing-troubleshooting.md
+            url: common/storage-monitoring-diagnosing-troubleshooting.md
           - text: Troubleshoot availability issues
-            url: troubleshoot-storage-availability.md
+            url: common/troubleshoot-storage-availability.md
           - text: Troubleshoot client application errors
-            url: troubleshoot-storage-client-application-errors.md
+            url: common/troubleshoot-storage-client-application-errors.md
           - text: Troubleshoot performance issues
-            url: troubleshoot-storage-performance.md
+            url: common/troubleshoot-storage-performance.md
           - text: Troubleshoot latency issues
-            url: troubleshoot-latency-storage-analytics-logs.md
+            url: common/troubleshoot-latency-storage-analytics-logs.md
 
 # Card
   - title: Storage Explorer
@@ -70,5 +70,5 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Troubleshoot Storage Explorer
-            url: storage-explorer-troubleshooting.md     
+            url: common/storage-explorer-troubleshooting.md     
 

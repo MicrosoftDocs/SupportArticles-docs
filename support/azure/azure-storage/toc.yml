@@ -3,6 +3,18 @@
 
 - name: Azure Files
   items:
+  - name: Azure File Sync
+    items:
+    - name: Troubleshoot Azure File Sync
+      href: files/file-sync-troubleshoot.md
+    - name: Troubleshoot agent installation and server registration
+      href: files/file-sync-troubleshoot-installation.md
+    - name: Troubleshoot cloud tiering issues
+      href: files/file-sync-troubleshoot-cloud-tiering.md
+    - name: Troubleshoot sync group management
+      href: files/file-sync-troubleshoot-sync-group-management.md
+    - name: Troubleshoot sync issues
+      href: files/file-sync-troubleshoot-sync-errors.md
   - name: Create file share throttling alerts
     href: files/files-troubleshoot-create-alerts.md
   - name: Troubleshoot Azure Files
@@ -21,18 +33,6 @@
     href: files/files-troubleshoot-linux-nfs.md
   - name: Troubleshoot ClientOtherErrors (SMB)
     href: files/files-client-other-errors.md
-- name: Azure File Sync
-  items:
-  - name: Troubleshoot Azure File Sync
-    href: file-sync-troubleshoot.md
-  - name: Troubleshoot agent installation and server registration
-    href: file-sync-troubleshoot-installation.md
-  - name: Troubleshoot cloud tiering issues
-    href: file-sync-troubleshoot-cloud-tiering.md
-  - name: Troubleshoot sync group management
-    href: file-sync-troubleshoot-sync-group-management.md
-  - name: Troubleshoot sync issues
-    href: file-sync-troubleshoot-sync-errors.md
 
 - name: Blob Storage and Azure Data Lake Store Gen2
   items:
@@ -41,46 +41,39 @@
   - name: Copy blobs between storage accounts with network restriction
     href: blobs/copy-blobs-between-storage-accounts-network-restriction.md
   - name: Embedded application error when install Azure backup agent
-    href: ../general/unable-to-execute-the-embedded-application-error-backup-agent.md
+    href: blobs/unable-to-execute-the-embedded-application-error-backup-agent.md
   - name: Invalid blob or block content, or invalid block list
-    href: ../general/invalid-blob-or-block-content-or-invalid-block-list.md
+    href: blobs/invalid-blob-or-block-content-or-invalid-block-list.md
   - name: Optimize CreateFile function
-    href: ../general/optimize-createfile-function.md
+    href: files/optimize-createfile-function.md
   - name: Request body is too large error when write to file
-    href: ../general/request-body-large.md
+    href: files/request-body-large.md
   - name: Sticky bit causes 403 authorization error
     href: blobs/adls-gen2-sticky-bit-403-access-denied.md
   - name: Troubleshoot high CPU or disk usage issues
-    href: ../general/diagnose-high-cpu-disk-perfinsights.md
+    href: blobs/diagnose-high-cpu-disk-perfinsights.md
 
-- name: Data migration
+- name: Storage Tools and Metrics
   items:
   - name: AzCopy
     items:
     - name: Troubleshoot AzCopy issues
-      href: storage-use-azcopy-troubleshoot.md
-
-- name: Monitoring, metrics and logs
-  items:
+      href: common/storage-use-azcopy-troubleshoot.md
   - name: Azure Monitor metrics and logs with Storage accounts
     items:
     - name: Troubleshoot availability issues
-      href: troubleshoot-storage-availability.md
+      href: common/troubleshoot-storage-availability.md
     - name: Troubleshoot client application errors
-      href: troubleshoot-storage-client-application-errors.md
+      href: common/troubleshoot-storage-client-application-errors.md
     - name: Troubleshoot performance issues
-      href: troubleshoot-storage-performance.md
+      href: common/troubleshoot-storage-performance.md
   - name: Storage Analytic metrics and logs (classic monitoring)
     items: 
     - name: Monitor, diagnose, and troubleshoot
-      href: storage-monitoring-diagnosing-troubleshooting.md
+      href: common/storage-monitoring-diagnosing-troubleshooting.md
     - name: Troubleshoot latency issues
-      href: troubleshoot-latency-storage-analytics-logs.md
-
-- name: Storage Explorer
-  items: 
-  - name: Troubleshoot Storage Explorer
-    href: storage-explorer-troubleshooting.md
-
-
-
+      href: common/troubleshoot-latency-storage-analytics-logs.md
+  - name: Storage Explorer
+    items: 
+    - name: Troubleshoot Storage Explorer
+      href: common/storage-explorer-troubleshooting.md
