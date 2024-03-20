@@ -17,12 +17,12 @@ metadata:
 landingContent:
 
  # Card
-  - title: Azure Storage common documentation
+  - title: Azure Storage documentation
     linkLists:
       - linkListType: overview
         links:
-          - text: Azure Storage common documentation
-            url: /azure/storage/common/
+          - text: Azure Storage documentation
+            url: /azure/storage/
 
 # Card
   - title: Storage Tools and Metrics
