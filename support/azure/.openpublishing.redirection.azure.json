@@ -259,6 +259,91 @@
         "source_path": "azure-storage/adls-gen2-sticky-bit-403-access-denied.md",
         "redirect_url": "/troubleshoot/azure/azure-storage/blobs/adls-gen2-sticky-bit-403-access-denied",
         "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/file-sync-troubleshoot.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/files/file-sync-troubleshoot",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/file-sync-troubleshoot-cloud-tiering.md.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/files/file-sync-troubleshoot-cloud-tiering",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/file-sync-troubleshoot-installation.md.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/files/file-sync-troubleshoot-installation",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/file-sync-troubleshoot-sync-errors.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/files/file-sync-troubleshoot-sync-errors",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/file-sync-troubleshoot-sync-group-management.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/files/file-sync-troubleshoot-sync-group-management",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/storage-explorer-troubleshooting.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/common/storage-explorer-troubleshooting",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/storage-monitoring-diagnosing-troubleshooting.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/common/storage-monitoring-diagnosing-troubleshooting",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/storage-use-azcopy-troubleshoot.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/common/storage-use-azcopy-troubleshoot",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/troubleshoot-latency-storage-analytics-logs.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/common/troubleshoot-latency-storage-analytics-logs",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "general/diagnose-high-cpu-disk-perfinsights.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/blobs/diagnose-high-cpu-disk-perfinsights",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "general/invalid-blob-or-block-content-or-invalid-block-list.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/blobs/invalid-blob-or-block-content-or-invalid-block-list",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/troubleshoot-storage-availability.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/common/troubleshoot-storage-availability",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/troubleshoot-storage-client-application-errors.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/common/troubleshoot-storage-client-application-errors",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/troubleshoot-storage-performance.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/common/troubleshoot-storage-performance",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "general/optimize-createfile-function.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/files/optimize-createfile-function",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "general/request-body-large.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/files/request-body-large",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "general/unable-to-execute-the-embedded-application-error-backup-agent.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/blobs/unable-to-execute-the-embedded-application-error-backup-agent",
+        "redirect_document_id": true
       }
   ]
 }
