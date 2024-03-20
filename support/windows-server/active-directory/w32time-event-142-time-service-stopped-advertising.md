@@ -1,7 +1,7 @@
 ---
 title: Event 142 time service stopped advertising
 description: Provides a resolution for event 142 that the time service has stopped advertising as a time source.
-ms.date: 12/26/2023
+ms.date: 03/20/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -115,6 +115,8 @@ The `contoso.com` domain contains two virtualized DCs, `\\DC1`and `\\DC2` runnin
 
 The system time on `\\workstation1` is reported as being seconds apart from the system time on `\\DC1`.
 The system time on `\\DC2.contoso.com` domain was reported as being 45 minutes from current time and the time that existed on `\\DC1`.
+
+For more information about how to troubleshoot the error, see ["Remote Desktop cannot verify the identity of the remote computer" when connecting to a remote machine](../remote/remote-desktop-cannot-verify-identity-connecting-remote-machine.md).
 
 A review of the SYSTEM event log to look for Kerberos and Time-related errors showed the following events.
 

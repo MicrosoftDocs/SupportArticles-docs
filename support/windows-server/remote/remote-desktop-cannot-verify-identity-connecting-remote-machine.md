@@ -1,7 +1,7 @@
 ---
 title: Remote Desktop cannot verify the identity of the remote computer
 description: Helps troubleshoot the Remote Desktop cannot verify the identity of the remote computer error when connecting to a domain-joined remote machine.
-ms.date: 03/15/2024
+ms.date: 03/20/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
