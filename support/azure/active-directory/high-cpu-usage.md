@@ -3,8 +3,8 @@ title: High CPU usage in Microsoft Entra Connect Health for Sync
 description: Resolves an issue in which high CPU usage occurs in Microsoft Entra Connect Health for Sync.
 ms.date: 05/11/2020
 ms.reviewer: 
-ms.service: active-directory
-ms.subservice: enterprise-users
+ms.service: entra-id
+ms.subservice: users
 ---
 # High CPU usage in Microsoft Entra Connect Health for Sync
 

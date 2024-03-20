@@ -3,7 +3,8 @@ title: Warning message when you click HITB IV Reset Tool in Microsoft Dynamics G
 description: Describes a problem that occurs when you click HITB IV Reset Tool in Microsoft Dynamics GP 10.0. Provides a resolution.
 ms.reviewer: theley, ppeterso
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Distribution - Inventory
 ---
 # "The HITB Reset Tool has already been completed in this company. Are you sure you want to continue?" warning when you click HITB IV Reset Tool in Microsoft Dynamics GP 10.0
 
