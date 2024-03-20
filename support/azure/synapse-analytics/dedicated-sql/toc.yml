@@ -1,5 +1,5 @@
 - name: Welcome
-  href: welcome-synapse-analytics-ded-sql-pool.yml
+  href: welcome-synapse-analytics-dedicated-sql.yml
 - name: Troubleshoot connectivity issues on a dedicated SQL pool
   href: dsql-conn-dropped-connections.md
 - name: Troubleshoot a slow query on a dedicated SQL pool

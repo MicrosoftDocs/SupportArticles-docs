@@ -81,9 +81,9 @@ productDirectory:
     links:
     - url: synapse-analytics/spark/welcome-synapse-analytics-spark.yml
       text: Troubleshooting articles for Azure Synapse Analytics Apache Spark Pool
-    - url: synapse-analytics/ded-sql-pool/welcome-synapse-analytics-ded-sql-pool.yml
+    - url: synapse-analytics/dedicated-sql/welcome-synapse-analytics-dedicated-sql.yml
       text: Troubleshooting articles for Azure Synapse Analytics Dedicated SQL Pool
-    - url: synapse-analytics/srvrless-sql-pool/welcome-synapse-analytics-srvrless-sql-pool.yml
+    - url: synapse-analytics/serverless-sql/welcome-synapse-analytics-serverless-sql.yml
       text: Troubleshooting articles for Azure Synapse Analytics Serverless SQL Pool
     - url: synapse-analytics/workspace/welcome-synapse-analytics-workspace.yml
       text: Troubleshooting articles for Azure Synapse Analytics Workspace

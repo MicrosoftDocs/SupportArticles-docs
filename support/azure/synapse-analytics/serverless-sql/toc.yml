@@ -1,5 +1,5 @@
 - name: Welcome
-  href: welcome-synapse-analytics-srvrless-sql-pool.yml
+  href: welcome-synapse-analytics-serverless-sql.yml
 - name: Performance tuning guidance for serverless SQL pool
   href: ssql-perf-optimize-querying.md
 - name: Troubleshoot issues with CREATE EXTERNAL TABLE AS SELECT serverless SQL pools

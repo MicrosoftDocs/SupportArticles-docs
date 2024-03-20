@@ -155,11 +155,11 @@ items:
         tocHref: /troubleshoot/azure/synapse-analytics-spark
         topicHref: /troubleshoot/azure/synapse-analytics-spark/welcome-synapse-analytics-spark
       - name: Azure Synapse Analytics Dedicated SQL Pool
-        tocHref: /troubleshoot/azure/synapse-analytics-ded-sql-pool
-        topicHref: /troubleshoot/azure/synapse-analytics-ded-sql-pool/welcome-synapse-analytics-ded-sql-pool
+        tocHref: /troubleshoot/azure/synapse-analytics-dedicated-sql
+        topicHref: /troubleshoot/azure/synapse-analytics-dedicated-sql/welcome-synapse-analytics-dedicated-sql
       - name: Azure Synapse Analytics Serverless SQL Pool
-        tocHref: /troubleshoot/azure/synapse-analytics-srvrless-sql-pool
-        topicHref: /troubleshoot/azure/synapse-analytics-srvrless-sql-pool/welcome-synapse-analytics-srvrless-sql-pool
+        tocHref: /troubleshoot/azure/synapse-analytics-serverless-sql
+        topicHref: /troubleshoot/azure/synapse-analytics-serverless-sql/welcome-synapse-analytics-serverless-sql
       - name: Azure Synapse Analytics Workspace
         tocHref: /troubleshoot/azure/synapse-analytics-workspace
         topicHref: /troubleshoot/azure/synapse-analytics-workspace/welcome-synapse-analytics-workspace
