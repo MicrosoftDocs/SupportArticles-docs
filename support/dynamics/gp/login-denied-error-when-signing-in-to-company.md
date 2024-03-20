@@ -3,7 +3,7 @@ title: Login denied error when signing in to a company
 description: Describes a problem that occurs when you try to sign in to a company in Microsoft Dynamics GP. Provides a resolution.
 ms.reviewer: theley, ryanklev
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:Financial - Analytical Accounting
 ---
 # "Login denied. An installation task of Analytical Accounting is running" error when signing to a company

@@ -2,7 +2,7 @@
 title: The year-end closing procedures
 description: Describes the year-end closing routine in Fixed Asset Management in Microsoft Dynamics GP.
 ms.reviewer: theley
-ms.date: 03/12/2024
+ms.date: 03/20/2024
 ms.custom: sap:Financial - Fixed Assets
 ---
 # The year-end closing procedures for the Fixed Asset Management module in Microsoft Dynamics GP

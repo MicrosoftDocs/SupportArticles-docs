@@ -3,7 +3,7 @@ title: Importing data into Human Resources module
 description: Introduces the options to import data in to the Human Resources module in Microsoft Dynamics GP.
 ms.reviewer: theley 
 ms.topic: how-to
-ms.date: 03/12/2024
+ms.date: 03/20/2024
 ms.custom: sap:Human Resources
 ---
 # Importing data into the Human Resources module in Microsoft Dynamics GP

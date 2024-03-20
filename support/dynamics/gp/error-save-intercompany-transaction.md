@@ -3,7 +3,7 @@ title: Can't save an intercompany transaction in Payables Management or in Gener
 description: Describes error At least one distribution amount for a company does not match the corresponding company when you save an intercompany transaction in Payables Management or in General Ledger.
 ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:Financial - Payables Management
 ---
 # "At least one distribution amount for a company does not match the corresponding company" error when you save an intercompany transaction in Payables Management or in General Ledger

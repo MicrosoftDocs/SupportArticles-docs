@@ -2,7 +2,7 @@
 title: Calculations for the Quarterly 941 report in US Payroll
 description: Introduces the calculations for the Quarterly 941 report in US Payroll in Microsoft Dynamics GP.
 ms.reviewer: theley, cwaswick
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:Payroll
 ---
 # Calculations for the Quarterly 941 report in US Payroll in Microsoft Dynamics GP

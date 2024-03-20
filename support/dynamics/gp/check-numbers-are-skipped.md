@@ -3,7 +3,7 @@ title: Check numbers are skipped
 description: Provides a solution to an issue where check numbers are skipped in Payables Management in Microsoft Dynamics GP.
 ms.reviewer: theley, deeptivu, cwaswick
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:Financial - Payables Management
 ---
 # Check numbers are skipped in Payables Management in Microsoft Dynamics GP

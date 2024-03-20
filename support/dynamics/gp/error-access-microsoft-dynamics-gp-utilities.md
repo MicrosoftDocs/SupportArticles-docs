@@ -3,7 +3,7 @@ title: Error message when you access Microsoft Dynamics GP Utilities
 description: This article provides a resolution for a problem that occurs when you access Microsoft Dynamics GP Utilities.
 ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 02/18/2024
+ms.date: 03/20/2024
 ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # Error message when you access Microsoft Dynamics GP Utilities (There was a problem ascertaining product version information. Microsoft Dynamics GP Utilities will now exit. Check DUinstall.log for more information)

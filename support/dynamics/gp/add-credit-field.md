@@ -3,7 +3,7 @@ title: Add unit account totals to the Trial Balance Detail report in General Led
 description: Describes steps to add unit account totals to the Trial Balance Detail report in General Ledger in Microsoft Dynamics GP.
 ms.reviewer: theley, kriszree
 ms.topic: how-to
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:Financial - General Ledger
 ---
 # How to add unit account totals to the Trial Balance Detail report in General Ledger in Microsoft Dynamics GP

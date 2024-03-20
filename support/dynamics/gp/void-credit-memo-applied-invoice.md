@@ -3,7 +3,7 @@ title: Void a credit memo is applied incorrectly to an invoice
 description: This article describes how to correct a situation where a credit memo is applied incorrectly to an invoice in Payables Management in Microsoft Dynamics GP.
 ms.reviewer: theley
 ms.topic: how-to
-ms.date: 02/19/2024
+ms.date: 03/20/2024
 ms.custom: sap:Financial - Payables Management
 ---
 # Void a credit memo that is applied incorrectly to an invoice in Payables Management in Microsoft Dynamics GP

@@ -2,7 +2,7 @@
 title: Enhancements made to the calculation of Average Cost
 description: Describes how to calculate average cost in Microsoft Dynamics GP. Also discusses some new enhancements in Microsoft Dynamics GP.
 ms.reviewer: theley, cwaswick
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:Financial - Receivables Management
 ---
 # Enhancements made to the calculation of Average Cost in Microsoft Dynamics GP

@@ -3,7 +3,7 @@ title: How to use determine whether specific module is registered
 description: Provides a table of module ID values and names that you can use in Microsoft Dexterity Sanscript code to determine whether a specific module is registered.
 ms.reviewer: theley
 ms.topic: how-to
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # How to use Microsoft Dexterity Sanscript code to determine whether a specific module is registered

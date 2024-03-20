@@ -3,7 +3,7 @@ title: Set up a 401 deduction that has a benefit
 description: Describes how to set up a 401(k) deduction that has a matching benefit in Payroll in Microsoft Dynamics GP.
 ms.reviewer: theley, lmuelle
 ms.topic: how-to
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:Payroll
 ---
 # How to set up a 401(k) deduction that has a matching benefit in Payroll in Microsoft Dynamics GP

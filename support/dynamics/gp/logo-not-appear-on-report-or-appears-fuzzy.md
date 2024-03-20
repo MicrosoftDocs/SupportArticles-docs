@@ -2,7 +2,7 @@
 title: Logo doesn't appear on report or appears fuzzy in Microsoft Dynamics GP
 description: Provides steps to review why user is unable to add a logo to a report writer report.
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.reviewer: theley
 ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---

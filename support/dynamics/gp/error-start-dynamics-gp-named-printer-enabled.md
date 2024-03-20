@@ -3,7 +3,7 @@ title: Fail to start Microsoft Dynamics GP on a computer on which named printers
 description: Describes a problem in which Microsoft Dynamics GP exits unexpectedly while you are trying to start it. This problem occurs when named printers are enabled. Describes how to resolve the problem.
 ms.topic: troubleshooting
 ms.reviewer: theley, kyouells
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # Error when you try to start Microsoft Dynamics GP on a computer on which named printers are enabled: Application must close

@@ -3,7 +3,7 @@ title: Report not found problem starting up report error when you try to print a
 description: Describes an error that occurs when you try to print a modified copy of a modified report.
 ms.reviewer: theley, kyouells
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # Error message when you try to print a modified copy of a modified report: "Report not found, problem starting up report"

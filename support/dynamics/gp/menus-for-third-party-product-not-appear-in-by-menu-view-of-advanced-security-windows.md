@@ -3,7 +3,7 @@ title: Menus for a third-party product don't appear in the by Menu view of the A
 description: Provides a Dexterity code example resolve the problem where menus for a third-party product appear in Microsoft Dynamics GP but do not appear in the by Menu view of the Advanced Security window.
 ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # Menus for a third-party product appear in Microsoft Dynamics GP but do not appear in the "by Menu" view of the Advanced Security window

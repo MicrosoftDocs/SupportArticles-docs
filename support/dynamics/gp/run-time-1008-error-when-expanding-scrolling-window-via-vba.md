@@ -3,7 +3,7 @@ title: Run-time error 1008 Unsafe Operation when expanding scrolling window via 
 description: Describes a problem in which you receive a Run-time error 1008 Unsafe Operation error when trying to expand a scrolling window by using VBA in Microsoft Dynamics GP. Provides a resolution.
 ms.reviewer: theley, kvogel
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # "Run-time error '1008': Unsafe Operation" error when you expand a scrolling window by using VBA

@@ -2,7 +2,7 @@
 title: Fields you must map when you set up a bank lockbox file
 description: Lists what fields are required to be mapped when you set up a bank lockbox file in Microsoft Dynamics GP.
 ms.reviewer: theley, lmuelle
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:Financial - Receivables Management
 ---
 # Fields you must map when you set up a bank lockbox file in Microsoft Dynamics GP

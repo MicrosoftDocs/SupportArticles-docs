@@ -3,7 +3,7 @@ title: How tax schedules work for the Australian GST in Microsoft Dynamics GP
 description: Contains detailed information about how tax schedules work for the Australian Goods and Services Tax in Microsoft Dynamics GP.
 ms.reviewer: theley, lmuelle
 ms.topic: how-to
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:Europe, Latin America, Africa, Asia, and Australia
 ---
 # How tax schedules work for the Australian GST in Microsoft Dynamics GP

@@ -3,7 +3,7 @@ title: Process and track an advance pay run
 description: Explains how to process and track an advance pay run in Payroll.
 ms.reviewer: theley, lmuelle
 ms.topic: how-to
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:Payroll
 ---
 # How to process and track an advance pay run in Payroll in Microsoft Dynamics GP

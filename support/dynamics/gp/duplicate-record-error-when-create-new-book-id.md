@@ -3,7 +3,7 @@ title: Error when creating new Book ID in Book Class Setup window in Fixed Asset
 description: When you try to set up a new Book ID in the Book Class, Setup window, you get an error. This article provides a solution to this issue.
 ms.topic: troubleshooting
 ms.reviewer: theley, cwaswick
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:Financial - Fixed Assets
 ---
 # Error (Duplicate Record) in the Book Class Setup window in Fixed Assets for Microsoft Dynamics GP

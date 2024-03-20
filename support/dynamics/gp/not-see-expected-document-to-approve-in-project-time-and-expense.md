@@ -2,7 +2,7 @@
 title: Can't see an expected document to approve in Project Time and Expense
 description: This article describes what to do when you are using Project Time and Expense for Business Portal and are approving timesheets or expenses and you do not see a document that you need to approve.
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.reviewer: theley
 ms.custom: sap:Project Accounting
 ---

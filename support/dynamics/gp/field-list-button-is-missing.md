@@ -3,7 +3,7 @@ title: Field List button is missing
 description: Provides a solution to an issue where the Field List button is missing on the Developer tab in Word Templates in Microsoft Dynamics GP 2010.
 ms.reviewer: theley, beckyber
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # Field List button is missing on the Developer tab in Word Templates in Microsoft Dynamics GP 2010

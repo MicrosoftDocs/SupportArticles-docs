@@ -3,7 +3,7 @@ title: Data mart integration error Index was out of range
 description: Describes an error message that occurs in the Management Reporter 2012 data mart integration with Microsoft Dynamics GP. Provides a resolution.
 ms.reviewer: theley, aeric, jopankow
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:Financial - Management Reporter
 ---
 # Management Reporter 2012 Data mart integration error "Index was out of range"

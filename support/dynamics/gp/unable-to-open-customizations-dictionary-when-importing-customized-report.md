@@ -2,7 +2,7 @@
 title: Unable to open customizations dictionary error when importing a customized report
 description: Describes an error that occurs when you try to import a customized report in Microsoft Dynamics GP.
 ms.reviewer: theley
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:Financial - Miscellaneous
 ---
 # "Unable to open customizations dictionary" error when importing a customized report in Microsoft Dynamics GP

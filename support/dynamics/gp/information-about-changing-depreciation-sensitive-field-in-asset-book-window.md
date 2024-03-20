@@ -2,7 +2,7 @@
 title: Changing depreciation-sensitive field in Asset Book
 description: This article contains information about changing a depreciation-sensitive field in the Asset Book window in Fixed Asset Management in Microsoft Dynamics GP and in Microsoft Business Solutions - Great Plains 8.0.
 ms.reviewer: theley, dbader
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:Financial - Fixed Assets
 ---
 # Information about changing a depreciation-sensitive field in the Asset Book window in Fixed Asset Management in Microsoft Dynamics GP

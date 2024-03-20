@@ -3,7 +3,7 @@ title: How to set up Multiple Bins in Dynamics GP
 description: Contains information on how to set up Multiple Bins in Microsoft Dynamics GP when the Inventory Control module is registered.
 ms.reviewer: theley
 ms.topic: how-to
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:Manufacturing Series
 ---
 # How to set up Multiple Bins in Microsoft Dynamics GP

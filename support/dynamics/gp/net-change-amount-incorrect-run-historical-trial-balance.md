@@ -3,7 +3,7 @@ title: Change amount is incorrect when you run the Historical Trial Balance repo
 description: This article provides a workaround for the problem that occurs when you run the Historical Trial Balance report in Microsoft.
 ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:Financial - Receivables Management
 ---
 # The net change amount is incorrect when you run the Historical Trial Balance report in Microsoft

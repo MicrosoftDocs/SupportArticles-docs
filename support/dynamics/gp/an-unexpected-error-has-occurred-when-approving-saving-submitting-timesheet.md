@@ -3,7 +3,7 @@ title: An unexpected error has occurred when approving saving or submitting a Ti
 description: Provides a resolution to solve the unexpected error that occurs when you try to approve, save, or submit a timesheet in Project Time and Expense in Business Portal.
 ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:Project Accounting
 ---
 # "An unexpected error has occurred" when approving, saving, or submitting a timesheet in Project Time and Expense

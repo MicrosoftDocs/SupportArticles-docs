@@ -3,7 +3,7 @@ title: The operation could not be completed due to a problem in the data provide
 description: Describes an error that occurs when you generate a report in Management Reporter that includes budget information from Microsoft Dynamics GP. Provides a resolution.
 ms.reviewer: theley, gbyer, kevogt
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:Financial - Management Reporter
 ---
 # "The operation could not be completed due to a problem in the data provider framework" error when you create a report

@@ -3,7 +3,7 @@ title: You do not have permission to open this file error when starting Microsof
 description: Describes various problems that occur if the Dynamics.set file is corrupted or contains an incorrect path of a dictionary file. Resolutions are provided.
 ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 02/19/2024
+ms.date: 03/20/2024
 ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # "You do not have permission to open this file" error when you try to start Microsoft Dynamics GP
@@ -83,4 +83,3 @@ A folder where a dictionary file is located may have incorrect permissions setti
     > - If you use Windows Server:
     >   1. Right-click the folder, select **Properties**, select the **Sharing** tab, and then select **Advanced Sharing**.
     >   2. Select **Permissions**, and then make sure that the user or the user group that is receiving the error message has full control.
-    

@@ -3,7 +3,7 @@ title: Project Status is out of range in script
 description: Provides a solution to an error that occurs when you look up a project number in Project Accounting in Microsoft Dynamics GP 9.0.
 ms.reviewer: theley, lmuelle, ppeterso
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:Project Accounting
 ---
 # "Index 0 of array '(R) Project Status' is out of range in script 'Project_Lookup_Scrolling_Window SCROLL_FILL'" Error message when you look up a project number in Project Accounting in Microsoft Dynamics GP 9.0

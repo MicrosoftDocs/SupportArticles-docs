@@ -2,7 +2,7 @@
 title: Purpose of the job-cost-related fields in the POP10110 (Purchase Order Line) table in Microsoft Dynamics GP
 description: Description of the purpose of the job-cost-related fields in the POP10110 (Purchase Order Line) table in Microsoft Dynamics GP.
 ms.reviewer: theley, lmuelle, aeckman
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:Distribution - Purchase Order Processing
 ---
 # Description of the purpose of the job-cost-related fields in the POP10110 (Purchase Order Line) table in Microsoft Dynamics GP

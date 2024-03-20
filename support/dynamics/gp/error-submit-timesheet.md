@@ -3,7 +3,7 @@ title: Error message when you submit a timesheet
 description: This article provides a resolution for the problem that occurs when you submit a timesheet in Microsoft Dynamics GP.
 ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:Project Accounting
 ---
 # Error message when you submit a timesheet in Microsoft Dynamics GP (Error: [Cause]Entity. Unit of Measure Detail, is not found or Error: [Cause]Entity. Unit of Measure Schedule, is not found)

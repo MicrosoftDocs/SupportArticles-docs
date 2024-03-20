@@ -3,7 +3,7 @@ title: How to find transactions that are posted to Inventory but not to General 
 description: Describes how to find transactions that are posted to Inventory, but that aren't posted to General Ledger.
 ms.reviewer: theley
 ms.topic: how-to
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:Financial - General Ledger
 ---
 # How to find transactions that are posted to Inventory but not to General Ledger in Microsoft Dynamics GP

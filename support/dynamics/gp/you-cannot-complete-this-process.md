@@ -3,7 +3,7 @@ title: You cannot complete this process
 description: Provides a solution to an error that occurs when you do the inventory reconcile procedure in the Reconcile Inventory Quantities window in Microsoft Dynamics GP.
 ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/12/2024
+ms.date: 03/20/2024
 ms.custom: sap:Distribution - Inventory
 ---
 # "You cannot complete this process while transactions are being edited" Error message displays when you do the inventory reconcile procedure in Microsoft Dynamics GP

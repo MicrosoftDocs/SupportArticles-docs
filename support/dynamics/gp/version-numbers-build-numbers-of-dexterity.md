@@ -2,7 +2,7 @@
 title: Version numbers and build numbers of Dexterity in Microsoft Dynamics GP
 description: Describes Dexterity version numbers and build numbers in Microsoft Dynamics GP. Also contains solutions for a related login problem if the version and the build numbers of Dexterity are not consistent.
 ms.reviewer: theley
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # Information about version numbers and build numbers of Dexterity in Microsoft Dynamics GP

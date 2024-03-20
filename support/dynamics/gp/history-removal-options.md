@@ -2,7 +2,7 @@
 title: History removal options
 description: Describes the history removal options in Microsoft Dynamics GP and in Microsoft Business Solutions - Great Plains.
 ms.reviewer: theley
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # History removal options in Microsoft Dynamics GP

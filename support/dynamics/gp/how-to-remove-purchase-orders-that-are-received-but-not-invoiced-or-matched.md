@@ -3,7 +3,7 @@ title: How to remove purchase orders that are received but not invoiced or match
 description: Describes how to remove purchase orders from the Received/Not Invoiced report in Purchase Order Processing in Microsoft Dynamics GP.
 ms.reviewer: theley
 ms.topic: how-to
-ms.date: 02/19/2024
+ms.date: 03/20/2024
 ms.custom: sap:Distribution - Purchase Order Processing
 ---
 # How to remove purchase orders that have been received but not invoiced or matched from the "Received/Not Invoiced" report in Purchase Order Processing

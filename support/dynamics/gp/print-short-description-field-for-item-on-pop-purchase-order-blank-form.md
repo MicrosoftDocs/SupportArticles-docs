@@ -2,7 +2,7 @@
 title: Print the Short Description field for an item on the POP Purchase Order Blank Form
 description: Describes how to print the Short Description field for an item on the POP Purchase Order Blank Form in Microsoft Dynamics GP.
 ms.topic: how-to
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.reviewer: theley
 ms.custom: sap:Distribution - Purchase Order Processing
 ---

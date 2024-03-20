@@ -3,7 +3,7 @@ title: Could not run file trigger script error when deleting or posting a transa
 description: You receive the Could not run file trigger script error message when you delete or post a transaction with an Extender window associated with the Microsoft Dynamics GP window, if you add a Work table as a Table Link to the Extender window. Provides a resolution.
 ms.reviewer: theley, dlanglie
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:Financial - General Ledger
 ---
 # "Could not run file trigger script" error when you delete or post a transaction that has an Extender window associated with the transaction

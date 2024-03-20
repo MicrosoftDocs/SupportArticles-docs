@@ -3,7 +3,7 @@ title: Cannot see Purchase Requisitions in Navigation list
 description: Users not able to see Purchase Requisitions in Navigation list in Microsoft Dynamics GP. Provides a resolution.
 ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:Distribution - Purchase Order Processing
 ---
 # Users not able to see Purchase Requisitions in Navigation list in Microsoft Dynamics GP

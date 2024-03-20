@@ -3,7 +3,7 @@ title: Unable to generate next payment number or Unable to generate next voucher
 description: Describes an error may occur when you enter a payables transaction in Microsoft Dynamics GP. Provides a resolution.
 ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/12/2024
+ms.date: 03/20/2024
 ms.custom: sap:Financial - Payables Management
 ---
 # "Unable to generate next payment number" or "Unable to generate next voucher number" error when entering a payables transaction

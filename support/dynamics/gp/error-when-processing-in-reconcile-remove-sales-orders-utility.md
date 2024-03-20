@@ -3,7 +3,7 @@ title: Violation of PRIMARY KEY constraint PKSOP30200 error when processing in R
 description: This information contains information on what to do if you have duplicate SOP documents numbers in your Sales Order Processing work and history tables or if you are getting errors that contain the words Duplicate key when performing sales order functions.
 ms.reviewer: theley, Beckyber
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:Distribution - Sales Order Processing
 ---
 # "Violation of PRIMARY KEY constraint 'PKSOP30200'..." error when processing in the Reconcile - Remove Sales Orders Utility in Sales Order Processing

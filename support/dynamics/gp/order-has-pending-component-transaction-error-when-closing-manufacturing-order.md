@@ -3,7 +3,7 @@ title: This Manufacturing Order has a Pending Component Transaction error when c
 description: Describes a problem in which you receive an error message when you try to close a complete manufacturing order in the Manufacturing Order Close window or the Edit Manufacturing Order Status window in Microsoft Dynamics GP.
 ms.reviewer: theley, beckyber
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:Manufacturing Series
 ---
 # "This Manufacturing Order has a Pending Component Transaction" error when closing a manufacturing order

@@ -3,7 +3,7 @@ title: Error when you select or clear a check box in the Employee Deduction Main
 description: Describes error messages that you receive when you click to select or click to clear a check box in the TSA Sheltered From area for a deduction in Microsoft Dynamics GP. A resolution is provided.
 ms.reviewer: theley, cwaswick, lmuelle
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:Payroll
 ---
 # "Activity exists for this code. The Tax Status cannot be changed" error when you click to select or clear a check box in the Employee Deduction Maintenance window in Microsoft Dynamics GP

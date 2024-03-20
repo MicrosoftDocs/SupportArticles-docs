@@ -3,7 +3,7 @@ title: Login failed for user
 description: This article gives steps on how to resolve this error on Windows XP and Windows Vista computers.
 ms.reviewer: theley, dlanglie
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # "Login failed for user" Error message when you try to run a Microsoft Dynamics eConnect Destination Adapter integration in Integration Manager for Microsoft Dynamics GP

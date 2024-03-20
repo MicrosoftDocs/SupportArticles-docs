@@ -3,7 +3,7 @@ title: How to integrate Project Accounting with Fixed Asset Management in Micros
 description: Describes how to integrate Project Accounting with Fixed Asset Management. This operation lets items that are associated with a Project Accounting purchase order available as assets in Fixed Asset Management in Microsoft Dynamics GP 9.0.
 ms.reviewer: theley, lmuelle
 ms.topic: how-to
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:Project Accounting
 ---
 # How to integrate Project Accounting with Fixed Asset Management in Microsoft Dynamics GP

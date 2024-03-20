@@ -3,7 +3,7 @@ title: Fatal error during installation error when installing Integration Manager
 description: This article gives steps on how to resolve the Integration Manger for Microsoft Dynamics GP error messages.
 ms.reviewer: theley, dlanglie
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # "Fatal error during installation" error when installing Integration Manager for Microsoft Dynamics GP 10.0

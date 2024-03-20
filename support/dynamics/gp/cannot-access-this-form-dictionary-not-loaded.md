@@ -3,7 +3,7 @@ title: Cannot access this form because the dictionary containing it is not loade
 description: Describes a problem in which you receive the Cannot access this form because the dictionary containing it is not loaded error when you open a window in Microsoft Dynamics GP. A resolution is provided.
 ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 02/19/2024
+ms.date: 03/20/2024
 ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # "Cannot access this form because the dictionary containing it is not loaded" error when you open a window in Microsoft Dynamics GP

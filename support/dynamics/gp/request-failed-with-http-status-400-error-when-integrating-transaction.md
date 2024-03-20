@@ -3,7 +3,7 @@ title: The request failed with HTTP status 400 error when integrating transactio
 description: Fixes an issue that occurs when you integrate lots of transactions that contain many distributions.
 ms.reviewer: theley, ttorgers, cwaswick, kyouells
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # "The request failed with HTTP status 400" error when you integrate transactions using Microsoft Dynamics GP Web Services

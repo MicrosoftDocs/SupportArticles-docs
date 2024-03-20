@@ -3,7 +3,7 @@ title: A transaction cannot fall in a fiscal year
 description: Provides a solution to an error that occurs when you select Year and Reconcile in the Reconcile Financial Information window.
 ms.reviewer: theley, LMuelle, cwaswick
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:Financial - Bank Reconciliation
 ---
 # "A transaction does not fall within an existing fiscal year" Error message when you select Year and Reconcile in the Reconcile Financial Information window

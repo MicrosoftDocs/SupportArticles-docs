@@ -3,7 +3,7 @@ title: A problem with this Chequebook's balances
 description: Provides a solution to an error that occurs when opening the Bank Statement Reconcile window.
 ms.reviewer: theley, cwaswick, jegrant 
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:Europe, Latin America, Africa, Asia, and Australia
 ---
 # Cashbook Management Reconciliation Error: "There is a problem with this Chequebook's balances"

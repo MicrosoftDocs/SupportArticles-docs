@@ -3,7 +3,7 @@ title: Payroll employee self service timecard approvals skip approver
 description: Provides a solution to an issue where payroll employee self service timecard approvals aren't going to correct approver in Microsoft Dynamics GP.
 ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/12/2024
+ms.date: 03/20/2024
 ms.custom: sap:Payroll
 ---
 # Payroll employee self service timecard approvals aren't going to correct approver in Microsoft Dynamics GP

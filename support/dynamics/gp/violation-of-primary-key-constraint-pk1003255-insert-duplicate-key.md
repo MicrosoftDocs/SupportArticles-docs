@@ -3,7 +3,7 @@ title: Error in Receivables Management Inquiry window
 description: Provides a solution to an error that may occur when you look up some customers in the Receivables Management Inquiry window.
 ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:Financial - Receivables Management
 ---
 # "Violation of PRIMARY KEY constraint 'PK1003255' attempt to insert a duplicate key" error message in Receivables Management Inquiry window in Microsoft Dynamics GP

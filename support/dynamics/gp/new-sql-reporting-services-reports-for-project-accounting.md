@@ -2,7 +2,7 @@
 title: New Microsoft SQL Reporting Services Reports for Project Accounting
 description: Introduce the new Microsoft SQL Reporting Services Reports for Project Accounting in Microsoft Dynamics GP.
 ms.reviewer: theley
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:Project Accounting
 ---
 # New Microsoft SQL Reporting Services Reports for Project Accounting

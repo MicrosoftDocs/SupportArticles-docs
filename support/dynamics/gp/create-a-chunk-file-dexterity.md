@@ -3,7 +3,7 @@ title: Create a chunk file in Dexterity
 description: Describes how to use Dexterity Utilities to create a self-extracting chunk (.cnk) file to distribute third-party Microsoft Dynamics GP customizations.
 ms.reviewer: theley
 ms.topic: how-to
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # How to create a chunk file in Dexterity in Microsoft Dynamics GP

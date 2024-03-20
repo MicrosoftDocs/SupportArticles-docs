@@ -2,7 +2,7 @@
 title: How payment amount for scheduled payment is calculated
 description: Describes how the system calculates the payment amount for a scheduled payment in Receivables Management in Microsoft Dynamics GP and in Microsoft Business Solutions - Great Plains 8.0.
 ms.reviewer: theley, cwaswick
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:Financial - Receivables Management
 ---
 # Information about how the payment amount for a scheduled payment is calculated in Receivables Management

@@ -3,7 +3,7 @@ title: Computer Check batch doesn't have correct posting status
 description: The Computer Check batch in the Payables Batch IDs window does not have the correct posting status in Microsoft Dynamics GP. This article provides a solution to this issue.
 ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:Financial - Payables Management
 ---
 # The Computer Check batch in the Payables Batch IDs window does not have the correct posting status in Microsoft Dynamics GP

@@ -2,7 +2,7 @@
 title: Changes in the purchasing functionality in Project Accounting for Microsoft Dynamics GP
 description: Describes changes in the Project Accounting purchasing functionality that result from the merging of Project Accounting purchasing with the Purchase Order Processing in Microsoft Dynamics GP.
 ms.reviewer: theley, jchrist, lmuelle
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:Project Accounting
 ---
 # Description of the changes in the purchasing functionality in Project Accounting for Microsoft Dynamics GP

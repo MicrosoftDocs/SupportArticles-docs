@@ -3,7 +3,7 @@ title: Billing documents show as applied
 description: Provides a solution to an issue where billing documents from Project Accounting show as being fully paid and applied.
 ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:Project Accounting
 ---
 # Billing documents from Project Accounting show as applied in Receivables Management but not in Project Accounting on Microsoft Dynamics GP

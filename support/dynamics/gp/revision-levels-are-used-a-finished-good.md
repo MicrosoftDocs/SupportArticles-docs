@@ -3,7 +3,7 @@ title: Revision levels are used in a finished good
 description: Describes how subassembly revision levels are used in a finished good bill of materials in Manufacturing Order Processing.
 ms.reviewer: theley, beckyber, lmuelle
 ms.topic: how-to
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:Manufacturing Series
 ---
 # How subassembly revision levels are used in a finished good bill of materials in Manufacturing Order Processing in Microsoft Dynamics GP

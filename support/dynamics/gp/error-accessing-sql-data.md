@@ -3,7 +3,7 @@ title: Error accessing SQL data
 description: Provides a solution to an error that occurs when you try to generate a large report in Microsoft Dynamics GP.
 ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # "Error accessing SQL data" Error message when you try to generate a large report in Microsoft Dynamics GP

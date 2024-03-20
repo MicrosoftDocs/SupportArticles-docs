@@ -3,7 +3,7 @@ title: Error when you perform the Inventory year-end close in Microsoft Dynamics
 description: Describes a problem that occurs if you have locked tables in the tempdb database or in the DYNAMICS database. Provides steps to resolve this problem.
 ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:Distribution - Inventory
 ---
 # Error when you perform the Inventory year-end close in Microsoft Dynamics GP: "You cannot complete this process while invoices are being posted"

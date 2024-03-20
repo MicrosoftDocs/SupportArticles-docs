@@ -3,7 +3,7 @@ title: Use Dexterity Script Debugger to trace bug
 description: Describes how to use the Dexterity Script Debugger to trace bugs and performance issues in Microsoft Dynamics GP and in Microsoft Business Solutions - Great Plains.
 ms.reviewer: theley
 ms.topic: how-to
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # How to use the Dexterity Script Debugger to trace bugs and performance issues in Microsoft Dynamics GP

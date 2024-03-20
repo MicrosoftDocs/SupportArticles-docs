@@ -3,7 +3,7 @@ title: Assign an employee and allocate the wages
 description: Describes how to allocate an employee's salary when an employee works in multiple departments in Microsoft Dynamics GP Payroll.
 ms.reviewer: theley, v-kimh
 ms.topic: how-to
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:Payroll
 ---
 # How to assign an employee and allocate the wages to different departments in Microsoft Dynamics GP Payroll

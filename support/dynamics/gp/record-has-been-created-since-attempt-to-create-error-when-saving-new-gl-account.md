@@ -3,7 +3,7 @@ title: This record has been created since your attempt to create it error when s
 description: Describes a problem that occurs when you try to save a new General Ledger account in Microsoft Dynamics GP. Provides two resolutions for this problem.
 ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:Financial - General Ledger
 ---
 # "This record has been created since your attempt to create it" error when saving a new General Ledger account

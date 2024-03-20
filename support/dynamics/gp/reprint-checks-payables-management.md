@@ -3,7 +3,7 @@ title: Reprint checks in Payables Management
 description: Describes how to reprint checks that have already been processed or posted in Payables Management in Microsoft Dynamics GP.
 ms.reviewer: theley
 ms.topic: how-to
-ms.date: 02/19/2024
+ms.date: 03/20/2024
 ms.custom: sap:Financial - Payables Management
 ---
 # How to reprint checks that have already been processed or posted in Payables Management in Microsoft Dynamics GP

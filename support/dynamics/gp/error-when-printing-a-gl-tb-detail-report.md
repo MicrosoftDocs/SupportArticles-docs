@@ -3,7 +3,7 @@ title: Error when printing a GL TB detail report
 description: Provides a solution to errors that occur when you print a General Ledger Trial Balance (TB) detailed report.
 ms.reviewer: theley, kyouells
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:Financial - General Ledger
 ---
 # "Divide by zero" Error message when you print a General Ledger Trial Balance detail report in Microsoft Dynamics GP

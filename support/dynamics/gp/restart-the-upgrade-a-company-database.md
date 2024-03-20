@@ -3,7 +3,7 @@ title: Restart the upgrade of a company database
 description: Describes the steps to restart the upgrade of a company database that was restored from a backup.
 ms.reviewer: theley
 ms.topic: how-to
-ms.date: 02/18/2024
+ms.date: 03/20/2024
 ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # How to restart the upgrade of a company database in Microsoft Dynamics GP

@@ -2,7 +2,7 @@
 title: Why transactions are missing from the BAS
 description: Explains why transactions aren't displayed on the Business Activity Statement (BAS) for Australian Goods and Services Tax (GST) in Microsoft Dynamics GP.
 ms.reviewer: theley
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:Europe, Latin America, Africa, Asia, and Australia
 ---
 # Information about why transactions are missing from the Business Activity Statement (BAS) for Australian GST in Microsoft Dynamics GP

@@ -3,7 +3,7 @@ title: Token StartElement in state EndRootElement would result in an invalid XML
 description: A GetByKey method on a sales document returns a system exception in Web Services for Microsoft Dynamics GP. Provides a resolution.
 ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # "Token StartElement in state EndRootElement would result in an invalid XML document" error in Web Services

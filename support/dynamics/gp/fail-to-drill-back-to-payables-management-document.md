@@ -3,7 +3,7 @@ title: Error when you drill back to Payables Management document
 description: Provides a solution to an error that occurs when you drill back to a Payables Management document in Microsoft Dynamics GP.
 ms.topic: troubleshooting
 ms.reviewer: theley, kriszree
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:Financial - Payables Management
 ---
 # Error when you drill back to a Payables Management document in Microsoft Dynamics GP: Unhandled script exception Index 0

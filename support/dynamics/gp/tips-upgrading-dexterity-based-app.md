@@ -2,7 +2,7 @@
 title: Tips for upgrading Dexterity-based app
 description: Provides tips to help you upgrade an existing Great Plains Dexterity-based project to Great Plains 8.0 Dexterity.
 ms.reviewer: theley
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # Tips and references for upgrading your Great Plains Dexterity-based application to Great Plains 8.0 Dexterity

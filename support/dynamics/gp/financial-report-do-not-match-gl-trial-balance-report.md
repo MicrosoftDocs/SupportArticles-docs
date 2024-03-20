@@ -3,7 +3,7 @@ title: Financial Reports from Management Reporter don't match the General Ledger
 description: Provides steps to solve the issue that financial reports from Management Reporter don't match the General Ledger Trial Balance reports in Microsoft Dynamics GP.
 ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:Financial - Analytical Accounting
 ---
 # Financial Reports from Management Reporter don't match the General Ledger Trial Balance Reports in Microsoft Dynamics GP

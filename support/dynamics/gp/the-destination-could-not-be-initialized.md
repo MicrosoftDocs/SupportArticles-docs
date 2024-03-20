@@ -3,7 +3,7 @@ title: The destination could not be initialized
 description: Provides a solution to an error that occurs when you try to run an integration in Integration Manager for Microsoft Dynamics GP in a Citrix environment as a published application.
 ms.reviewer: theley, dlanglie, grwill
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # You receive an error message when you try to run an integration in Integration Manager for Microsoft Dynamics GP in a Citrix environment as a published application

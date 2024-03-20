@@ -2,7 +2,7 @@
 title: Return transaction document types
 description: Discusses the four return transaction document types that are available in Purchase Order Processing.
 ms.reviewer: theley
-ms.date: 03/13/2024
+ms.date: 03/20/2024
 ms.custom: sap:Distribution - Purchase Order Processing
 ---
 # Information on the return transaction document types that are available in Purchase Order Processing in Microsoft Dynamics GP
