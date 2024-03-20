@@ -17,7 +17,8 @@ keywords: Windows failover cluster, SAN, shared LUNs, Validate a Configuration W
 
 This article describes how to resolve an issue where the Validate a Configuration Wizard doesn't discover all of the shared LUNs that a cluster uses.
 
-_Applies to:_ &nbsp; Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 Standard Windows Server 2012 Datacenter Windows Server 2012 R2 Standard Windows Server 2012 R2 Datacenter
+_Applies to:_&nbsp;Windows Server, all versions
+_Original KB number_:&nbsp;2914974
 
 ## Symptoms
 
