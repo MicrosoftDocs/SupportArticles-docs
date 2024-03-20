@@ -196,8 +196,8 @@ proxy_password=password
 > [!IMPORTANT]
 > If no proxy server exists between the RHEL VM and RHUI, search for and remove any proxy configuration settings that are in the */etc/yum.conf* or */etc/dnf.conf* files.
 
-[!INCLUDE [Third-party information disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Third-party contact information disclaimer](../../includes/third-party-contact-disclaimer.md)]
+[!INCLUDE [Third-party contact information disclaimer](../../../includes/third-party-contact-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
