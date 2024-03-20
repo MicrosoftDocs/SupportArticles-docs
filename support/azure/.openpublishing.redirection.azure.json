@@ -266,12 +266,12 @@
         "redirect_document_id": true
       },
       {
-        "source_path": "azure-storage/file-sync-troubleshoot-cloud-tiering.md.md",
+        "source_path": "azure-storage/file-sync-troubleshoot-cloud-tiering.md",
         "redirect_url": "/troubleshoot/azure/azure-storage/files/file-sync-troubleshoot-cloud-tiering",
         "redirect_document_id": true
       },
       {
-        "source_path": "azure-storage/file-sync-troubleshoot-installation.md.md",
+        "source_path": "azure-storage/file-sync-troubleshoot-installation.md",
         "redirect_url": "/troubleshoot/azure/azure-storage/files/file-sync-troubleshoot-installation",
         "redirect_document_id": true
       },
