@@ -1,0 +1,30 @@
+- name: Welcome
+  href: welcome-common-storage.yml
+
+- name: Storage Tools and Metrics
+  items:
+  - name: AzCopy
+    items:
+    - name: Troubleshoot AzCopy issues
+      href: storage-use-azcopy-troubleshoot.md
+  - name: Azure Monitor metrics and logs with Storage accounts
+    items:
+    - name: Troubleshoot availability issues
+      href: troubleshoot-storage-availability.md
+    - name: Troubleshoot client application errors
+      href: troubleshoot-storage-client-application-errors.md
+    - name: Troubleshoot performance issues
+      href: troubleshoot-storage-performance.md
+  - name: Storage Analytic metrics and logs (classic monitoring)
+    items: 
+    - name: Monitor, diagnose, and troubleshoot
+      href: storage-monitoring-diagnosing-troubleshooting.md
+    - name: Troubleshoot latency issues
+      href: troubleshoot-latency-storage-analytics-logs.md
+  - name: Storage Explorer
+    items: 
+    - name: Troubleshoot Storage Explorer
+      href: storage-explorer-troubleshooting.md
+
+
+

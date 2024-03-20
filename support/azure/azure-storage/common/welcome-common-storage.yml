@@ -1,0 +1,43 @@
+### YamlMime:Landing
+
+title: Azure Storage common troubleshooting documentation
+summary: Welcome to Azure Storage common troubleshooting. These articles explain how to determine, diagnose, and fix various issues that you might encounter when you use Azure Storage. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+
+metadata:
+  title: Troubleshoot Azure Storage common issues
+  description: Documentation for troubleshooting common issues with Azure Storage. # Required; article description that is displayed in search results. < 160 chars.
+  ms.service: azure-storage #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.topic: landing-page # Required
+  author: genlin  #Required; your GitHub user alias, with correct capitalization.
+  ms.author: genli #Required; microsoft alias of author; optional team alias.
+  ms.date: 03/11/2024
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+ # Card
+  - title: Azure Storage common documentation
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Azure Storage common documentation
+            url: /azure/storage/common/
+
+# Card
+  - title: Storage Tools and Metrics
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot AzCopy issues
+            url: storage-use-azcopy-troubleshoot.md
+          - text: Troubleshoot availability issues
+            url: troubleshoot-storage-availability.md
+          - text: Troubleshoot client application errors
+            url: troubleshoot-storage-client-application-errors.md
+          - text: Troubleshoot performance issues
+            url: troubleshoot-storage-performance.md
+          - text: Monitor, diagnose, and troubleshoot
+            url: storage-monitoring-diagnosing-troubleshooting.md
+          - text: Troubleshoot latency issues
+            url: troubleshoot-latency-storage-analytics-logs.md

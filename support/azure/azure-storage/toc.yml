@@ -17,6 +17,10 @@
       href: files/file-sync-troubleshoot-sync-errors.md
   - name: Create file share throttling alerts
     href: files/files-troubleshoot-create-alerts.md
+  - name: Optimize CreateFile function
+    href: files/optimize-createfile-function.md
+  - name: Request body is too large error when write to file
+    href: files/request-body-large.md
   - name: Troubleshoot Azure Files
     href: files/files-troubleshoot.md
   - name: Troubleshoot Azure Files connectivity (SMB)
@@ -44,10 +48,6 @@
     href: blobs/unable-to-execute-the-embedded-application-error-backup-agent.md
   - name: Invalid blob or block content, or invalid block list
     href: blobs/invalid-blob-or-block-content-or-invalid-block-list.md
-  - name: Optimize CreateFile function
-    href: files/optimize-createfile-function.md
-  - name: Request body is too large error when write to file
-    href: files/request-body-large.md
   - name: Sticky bit causes 403 authorization error
     href: blobs/adls-gen2-sticky-bit-403-access-denied.md
   - name: Troubleshoot high CPU or disk usage issues

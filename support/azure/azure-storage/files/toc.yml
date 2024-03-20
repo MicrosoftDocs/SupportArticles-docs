@@ -3,8 +3,24 @@
 
 - name: Azure Files
   items:
+  - name: Azure File Sync
+    items:
+    - name: Troubleshoot Azure File Sync
+      href: file-sync-troubleshoot.md
+    - name: Troubleshoot agent installation and server registration
+      href: file-sync-troubleshoot-installation.md
+    - name: Troubleshoot cloud tiering issues
+      href: file-sync-troubleshoot-cloud-tiering.md
+    - name: Troubleshoot sync group management
+      href: file-sync-troubleshoot-sync-group-management.md
+    - name: Troubleshoot sync issues
+      href: file-sync-troubleshoot-sync-errors.md
   - name: Create file share throttling alerts
     href: files-troubleshoot-create-alerts.md
+  - name: Optimize CreateFile function
+    href: optimize-createfile-function.md
+  - name: Request body is too large error when write to file
+    href: request-body-large.md
   - name: Troubleshoot Azure Files
     href: files-troubleshoot.md
   - name: Troubleshoot Azure Files connectivity (SMB)
