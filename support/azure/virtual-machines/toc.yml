@@ -1,0 +1,4 @@
+- name: Linux Virtual Machines
+  href: /linux/welcome-virtual-machines-linux.yml
+- name: Windows Virtual Machines
+  href: /windows/welcome-virtual-machines-windows.yml
