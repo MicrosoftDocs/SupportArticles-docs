@@ -15,7 +15,7 @@ This article helps you identify the reasons and apply mitigations for common per
 
 Follow the steps to troubleshoot the issue or execute the steps in the notebook via Azure Data Studio. The first three steps walk you through collecting telemetry, which describes the lifecycle of a query. The references at the end of the article help you analyze potential opportunities found in the data collected.
 
-[!INCLUDE [Install Azure Data Studio note](../../includes/azure/install-azure-data-studio-note.md)]
+[!INCLUDE [Install Azure Data Studio note](../../../includes/azure/install-azure-data-studio-note.md)]
 
 > [!div class="nextstepaction"]
 > [Open Notebook in Azure Data Studio](azuredatastudio://microsoft.notebook/open?url=https://raw.githubusercontent.com/microsoft/synapse-support/main/dedicated-sql-pool/dsql-tshoot-perf-slow-query.ipynb)
