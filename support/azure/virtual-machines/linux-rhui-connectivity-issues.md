@@ -69,7 +69,7 @@ Do you use a network configuration (custom firewall or UDR configurations) to fu
 
 ### Troubleshooting step 2: Run a validation script
 
-Azure makes available an RHUI repository validation script in GitHub. One of the many functions of the script is to validate the connectivity of the repository server and provide recommendations for a fix if it discovers a connectivity error. This script has the following features:
+Azure makes available an RHUI repository validation script in GitHub. One of the many functions of the script is to validate the connectivity of the repository server and provide recommendations for a fix if it discovers a connectivity error. This Python script has the following features:
 
 - Runs `yum clean all` and `yum check-update` commands
 
@@ -166,7 +166,7 @@ Make sure that the RHUI IP addresses are fully accessible by taking the followin
 
 1. Verify that RHUI IP addresses are allowed if Secure Sockets Layer (SSL) inspection is active.
 
-1. If an NSG is unused, make sure that RHUI IP addresses are added to the allow list of the outbound rule of the network interface NSG or subnet NSG. The priority should be higher than the `Block_Internet_Access_outbound` rule.
+1. If an NSG is used, make sure that RHUI IP addresses are added to the allow list of the outbound rule of the network interface NSG or subnet NSG. The priority should be higher than the `Block_Internet_Access_outbound` rule.
 
 ## Scenario 4: A checkpoint firewall runs an SSL inspection
 
