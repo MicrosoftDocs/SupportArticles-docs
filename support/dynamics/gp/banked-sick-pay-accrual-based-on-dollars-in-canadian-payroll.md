@@ -2,7 +2,8 @@
 title: Example of Banked Sick Pay Accrual based on Dollars in Canadian Payroll
 description: The article shows an example of a Banked Sick paycode accrual based on dollars in CPR.
 ms.reviewer: theley
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Payroll
 ---
 # Example of Banked Sick Pay Accrual based on Dollars in Canadian Payroll
 

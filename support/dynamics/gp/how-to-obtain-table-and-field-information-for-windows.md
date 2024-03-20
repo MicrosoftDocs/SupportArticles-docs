@@ -3,7 +3,8 @@ title: How to obtain table and field information for windows
 description: Discusses different methods that you can use to obtain the table and field information for windows in Microsoft Dynamics GP.
 ms.reviewer: theley
 ms.topic: how-to
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # How to obtain the table and field information for windows in Microsoft Dynamics GP
 
