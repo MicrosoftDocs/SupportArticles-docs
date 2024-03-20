@@ -64,4 +64,4 @@ Check if the VMs have the same CMID based on the source image and version:
     
     4. Trigger the activation again.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

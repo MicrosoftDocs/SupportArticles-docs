@@ -166,4 +166,4 @@ If you have a situation in which you cannot reach the VM by any method, Custom S
 
 11. Check whether the issue is resolved.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

@@ -11,7 +11,7 @@ ms.collection: windows
 
 This article can help you troubleshoot authentication errors that occur when you use Remote Desktop Protocol (RDP) connection to connect to an Azure virtual machine (VM).
 
-[!INCLUDE [Feedback](../../includes/feedback.md)]
+[!INCLUDE [Feedback](../../../includes/feedback.md)]
 
 ## Symptoms
 
@@ -242,4 +242,4 @@ Restart the VM so that the changes to the registry take effect.
 - [Configure Server Authentication and Encryption Levels](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc770833(v=ws.11))
 - [Win32_TSGeneralSetting class](/windows/desktop/termserv/win32-tsgeneralsetting)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

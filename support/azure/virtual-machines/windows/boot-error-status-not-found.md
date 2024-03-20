@@ -272,7 +272,7 @@ These errors occur because the registry hive is corrupted. A registry hive can b
 
 ### Solution 3: Fix the corrupted hive
 
-[!INCLUDE [Registry important alert](../../includes/registry-important-alert.md)]
+[!INCLUDE [Registry important alert](../../../includes/registry-important-alert.md)]
 
 Fix the corrupted hive by following these steps:
 
@@ -296,4 +296,4 @@ Fix the corrupted hive by following these steps:
 
 9. Detach the repaired OS disk from the troubleshooting VM. Then, create a new VM from the OS disk.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

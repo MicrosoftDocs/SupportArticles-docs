@@ -502,4 +502,4 @@ For more information about PerfInsights in the Linux OS, review [How to use Perf
 
 - [Performance diagnostics for Azure virtual machines](../virtual-machines-windows/performance-diagnostics.md)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

@@ -44,17 +44,17 @@ To resolve this problem, you first have to gather a dump file for the crash befo
 
 ### Step 1: Locate the dump file and submit a support ticket
 
-[!INCLUDE [Collect OS Memory Dump File](../../includes/azure/collect-os-memory-dump-file.md)]
+[!INCLUDE [Collect OS Memory Dump File](../../../includes/azure/collect-os-memory-dump-file.md)]
 
 If you can't find the dump file, go to the next steps to enable the dump log and the serial console, and then reproduce the issue.
 
 ### Step 2: Enable the dump log and the serial console
 
-[!INCLUDE [Registry important alert](../../includes/registry-important-alert.md)]
+[!INCLUDE [Registry important alert](../../../includes/registry-important-alert.md)]
 
 To enable the dump log and the serial console, follow these steps:
 
-[!INCLUDE [Enable Serial Console and Memory Dump Collection](../../includes/azure/enable-serial-console-memory-dump-collection.md)]
+[!INCLUDE [Enable Serial Console and Memory Dump Collection](../../../includes/azure/enable-serial-console-memory-dump-collection.md)]
 
 ### Step 3: Reproduce the issue
 
@@ -64,4 +64,4 @@ To enable the dump log and the serial console, follow these steps:
 
 1. Repeat the instructions in the [Step 1: Locate the dump file and submit a support ticket](#step-1-locate-the-dump-file-and-submit-a-support-ticket) section.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

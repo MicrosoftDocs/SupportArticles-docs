@@ -85,4 +85,4 @@ For more information about the list of permissions that are needed to run VM Ins
 
 - [Grant limited access to Azure Storage resources using SAS](/azure/storage/common/storage-sas-overview)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

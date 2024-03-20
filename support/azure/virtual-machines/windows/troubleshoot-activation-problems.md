@@ -16,7 +16,7 @@ ms.reviewer: cwhitley, jusilver, v-naqviadil, v-leedennis, v-weizhu
 ---
 # Troubleshoot Azure Windows virtual machine activation problems
 
-[!INCLUDE [Feedback](../../includes/feedback.md)]
+[!INCLUDE [Feedback](../../../includes/feedback.md)]
 
 This article helps you troubleshoot an activation issue that occurs when you create a Microsoft Azure Windows virtual machine (VM).
 
@@ -68,4 +68,4 @@ To troubleshoot a Windows activation issue, follow these steps:
 
 [Azure Windows virtual machine activation FAQ](./windows-virtual-machine-activation-faq.yml)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

@@ -40,4 +40,4 @@ You can extend these volumes from the Azure portal through the SQL Server config
 >
 > Extending the disk volume won't extend the existing disks. Therefore, it's important to add the disks carefully based on the VM size requirements so that you don't exceed the total number of disks that can be added. If you exhaust the total number of data disks, you'll have to upgrade the VM size to extend the volume and storage pool.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

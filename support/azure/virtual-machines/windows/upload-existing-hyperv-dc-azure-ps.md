@@ -145,4 +145,4 @@ Upload your on-premises virtual hard disks into your Azure Storage account, and 
 
 12. Start the virtual machine, move the system-managed page file to the Temporary volume, and then restart the virtual machine.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

@@ -168,4 +168,4 @@ For more information, see the following articles:
 - [Linux: What UUIDs can do for you](https://www.linux.com/news/what-uuids-can-do-you)
 - [Udev: Introduction to device management in a modern Linux system](https://www.linux.com/news/udev-introduction-device-management-modern-linux-system)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

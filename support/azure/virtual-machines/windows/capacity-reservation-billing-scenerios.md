@@ -40,4 +40,4 @@ The following screenshot is an example of such a billing:
 
 As show in this example, the VM Reserved Instance discount is applied to VM 0. For that VM, the customer is only being charged for other components such as disks and networking. The other unused instance is charged at the PAYG rate for the VM size reserved.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

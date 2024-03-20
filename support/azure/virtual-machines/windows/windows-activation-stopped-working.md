@@ -98,4 +98,4 @@ Change the network rule so that KMS IP addresses `20.118.99.224` and `40.83.235.
 
 - [Troubleshoot Azure Windows virtual machine activation problems](troubleshoot-activation-problems.md)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

@@ -155,6 +155,6 @@ This issue might occur if the Azure VM can't connect to the Azure Instance Metad
 
 - [Troubleshoot Azure Windows virtual machine activation problems](./troubleshoot-activation-problems.md)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
 
 [route-command]: /windows-server/administration/windows-commands/route_ws2008

@@ -19,9 +19,9 @@ ms.custom: H1Hack27Feb2017
 ---
 # Troubleshoot deployment issues when creating a new Windows VM in Azure
 
-[!INCLUDE [virtual-machines-troubleshoot-deployment-new-vm-opening](../../includes/azure/virtual-machines-troubleshoot-deployment-new-vm-opening-include.md)]
+[!INCLUDE [virtual-machines-troubleshoot-deployment-new-vm-opening](../../../includes/azure/virtual-machines-troubleshoot-deployment-new-vm-opening-include.md)]
 
-[!INCLUDE [support-disclaimer](../../includes/support-disclaimer.md)]
+[!INCLUDE [support-disclaimer](../../../includes/support-disclaimer.md)]
 
 ## Collect activity logs
 
@@ -31,9 +31,9 @@ To start troubleshooting, collect the activity logs to identify the error associ
 
 [View activity logs to manage Azure resources](/azure/azure-resource-manager/management/view-activity-logs)
 
-[!INCLUDE [virtual-machines-troubleshoot-deployment-new-vm-issue1](../../includes/azure/virtual-machines-troubleshoot-deployment-new-vm-issue1-include.md)]
+[!INCLUDE [virtual-machines-troubleshoot-deployment-new-vm-issue1](../../../includes/azure/virtual-machines-troubleshoot-deployment-new-vm-issue1-include.md)]
 
-[!INCLUDE [virtual-machines-windows-troubleshoot-deployment-new-vm-table](../../includes/azure/virtual-machines-windows-troubleshoot-deployment-new-vm-table.md)]
+[!INCLUDE [virtual-machines-windows-troubleshoot-deployment-new-vm-table](../../../includes/azure/virtual-machines-windows-troubleshoot-deployment-new-vm-table.md)]
 
 **Y:** If the OS is Windows generalized, and it is uploaded and/or captured with the generalized setting, then there won't be any errors. Similarly, if the OS is Windows specialized, and it is uploaded and/or captured with the specialized setting, then there won't be any errors.
 
@@ -83,7 +83,7 @@ This error arises in situations when the new VM request is pinned to a cluster t
 
 ## Top issues
 
-[!INCLUDE [support-disclaimer](../../includes/azure/virtual-machines-windows-troubleshoot-deploy-vm-top.md)]
+[!INCLUDE [support-disclaimer](../../../includes/azure/virtual-machines-windows-troubleshoot-deploy-vm-top.md)]
 
 ### The cluster cannot support the requested VM size
 
@@ -160,7 +160,7 @@ When a VM is running, it is deployed to a physical server. The physical servers 
 
 * VMs deployed in Classic deployment model, the cloud service deployment must be removed and redeployed to change the VMs to a size in another size family.
 
-[!INCLUDE [classic-vm-deprecation](../../includes/azure/classic-vm-deprecation.md)]
+[!INCLUDE [classic-vm-deprecation](../../../includes/azure/classic-vm-deprecation.md)]
 
 * VMs deployed in Resource Manager deployment model, you must stop all VMs in the availability set before changing the size of any VM in the availability set.
 
@@ -181,4 +181,4 @@ If you encounter issues when you start a stopped Windows VM or resize an existin
 * [Supportability of adding Azure VMs to an existing availability set](virtual-machines-availability-set-supportability.md)
 * [Redeploy Windows virtual machine to new Azure node](redeploy-to-new-node-windows.md)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

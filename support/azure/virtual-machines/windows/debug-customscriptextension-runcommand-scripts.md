@@ -513,6 +513,6 @@ Set-AzVMExtension @commandSettings
 - [Audit success process creation event](https://github.com/timip/splunk/blob/master/powershell_logging.ps1)
 - [Windows configuration - Set up a victim system](https://github.com/TonyPhipps/SIEM/blob/master/Lab/WindowsVictim.md)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
 
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-contact-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-contact-disclaimer.md)]

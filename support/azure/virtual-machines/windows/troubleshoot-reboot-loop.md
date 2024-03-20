@@ -118,4 +118,4 @@ Restore the VM to the last known good configuration, follow the steps in [How to
 
 5. [Create a new VM from the OS disk](/azure/virtual-machines/windows/create-vm-specialized).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

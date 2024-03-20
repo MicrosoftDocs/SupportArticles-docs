@@ -75,4 +75,4 @@ You can update to a more recent version of the VM agent so that the old certific
 
 - [Troubleshoot extension certificate issues on a Windows VM in Azure](./troubleshoot-extension-certificates-issues-windows-vm.md)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

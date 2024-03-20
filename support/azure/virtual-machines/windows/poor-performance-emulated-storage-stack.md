@@ -26,4 +26,4 @@ The driver remains uninstalled and isn't reinstalled during successive restarts
 
 This issue is resolved by update 4057903 that is available through Windows Update. For more information, see [Hyper-V integration components update for Windows virtual machines](https://support.microsoft.com/help/4057903).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

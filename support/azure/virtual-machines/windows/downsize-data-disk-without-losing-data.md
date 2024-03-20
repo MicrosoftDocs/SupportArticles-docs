@@ -113,6 +113,6 @@ To delete the old disk, review the instructions in [Find and delete unattached A
 
 By following these steps, you can successfully downsize a disk in Azure without losing any data. To avoid any loss of critical information, always make sure that you verify the data transfer before you delete the old disk.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
 
 [ap]: https://portal.azure.com

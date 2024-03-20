@@ -45,4 +45,4 @@ additionalContent: |
   - [Troubleshoot Windows virtual machine activation problems in Azure](./troubleshoot-activation-problems.md)
   - [Advanced troubleshooting - Microsoft Windows activation error codes](../../windows-server/deployment/troubleshoot-activation-error-codes.md)
   
-  [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+  [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

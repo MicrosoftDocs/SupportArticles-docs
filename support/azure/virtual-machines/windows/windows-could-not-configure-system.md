@@ -40,4 +40,4 @@ This error is caused when the operating system (OS) is unable to complete the [S
 
 To fix this issue, follow the [Azure guidance on preparing/capturing an image](/azure/virtual-machines/windows/upload-generalized-managed) and prepare a new generalized image.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

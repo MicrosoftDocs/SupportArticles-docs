@@ -21,4 +21,4 @@ Capacity Reservations can be deleted only when no Virtual Machines (VMs) or Virt
 
 Azure will only allow a Capacity Reservation Group to be deleted when all member Capacity Reservations are deleted.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

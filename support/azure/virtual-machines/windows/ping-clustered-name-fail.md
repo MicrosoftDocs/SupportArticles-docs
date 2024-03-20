@@ -31,4 +31,4 @@ The IP address for a client access point is an Azure Load Balancer address. It's
 
 For more information, see the following Server & Management Team Blog article: [Building Windows Server Failover Cluster on Azure IAAS VM - Part 2 (Network and Creation)](https://blogs.technet.microsoft.com/askcore/2015/06/24/building-windows-server-failover-cluster-on-azure-iaas-vm-part-2-network-and-creation/)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

@@ -284,4 +284,4 @@ Information about FreeBSD VMs will include the files listed below in addition to
 | /var/log |
 ||
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

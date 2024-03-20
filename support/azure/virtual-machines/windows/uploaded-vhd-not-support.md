@@ -50,4 +50,4 @@ If the problem continues to occur, this may indicate a corrupted VHD. In this si
 - [About Windows VHD](/azure/virtual-machines/windows/about-disks-and-vhds#about-vhds)
 - [About Linux VHD](/azure/virtual-machines/linux/about-disks-and-vhds#about-vhds)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

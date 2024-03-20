@@ -101,4 +101,4 @@ In the Serial Console Access instance, you can query the current status of the f
 
 3. If you are still in doubt about whether the firewall is blocking your access, refer to [Disable the guest OS Firewall in Azure VM](disable-guest-os-firewall-windows.md), and then re-enable the guest system firewall by using the correct rules.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

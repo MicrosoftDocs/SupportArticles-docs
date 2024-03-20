@@ -48,4 +48,4 @@ Azure Serial Console requests result in the error "Sorry, the serial console was
 * Learn more about the [Azure Serial Console for Linux VMs](../virtual-machines-linux/serial-console-linux.md)
 * Learn more about the [Azure Serial Console for Windows VMs](./serial-console-windows.md)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

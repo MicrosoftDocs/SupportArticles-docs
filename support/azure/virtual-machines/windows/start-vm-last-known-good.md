@@ -54,4 +54,4 @@ _Original KB number:_ &nbsp; 4016731
 6. Select `HKEY_USERS\ProblemSystem`, and then select **Unload Hive** on the **File** menu.
 7. Detach the repaired OS disk from the troubleshooting VM. Then, [create a new VM from the OS disk](/azure/virtual-machines/windows/create-vm-specialized-portal). You may have to wait about 10 minutes for Azure to release the disk.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

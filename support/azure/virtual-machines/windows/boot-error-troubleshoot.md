@@ -35,4 +35,4 @@ This article lists the common boot errors that you may receive when you start a 
 * [VM Serial Console](./serial-console-windows.md)
 * [Troubleshoot a Windows VM by attaching the OS disk to a recovery VM](./troubleshoot-recovery-disks-windows.md)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

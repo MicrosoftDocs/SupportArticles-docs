@@ -150,4 +150,4 @@ For more information on Linux kernel configurations, including `unknown_nmi_pani
 - The Serial Console is also available for [Windows](../virtual-machines-windows/serial-console-windows.md) VMs
 - Learn more about [boot diagnostics](../virtual-machines-windows/boot-diagnostics.md)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

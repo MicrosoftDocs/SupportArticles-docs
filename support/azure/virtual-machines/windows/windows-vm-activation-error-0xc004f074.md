@@ -189,4 +189,4 @@ We recommend that you use an Azure Virtual Network NAT configuration for outboun
 
 However, if there's a requirement to block all internet traffic, make sure that you deny outbound internet access by using a network security group (NSG) rule on the subnet of the VM that you have to activate. Notice that operating system activation traffic to the KMS IPs on port 1688 remains enabled because of platform internal rules.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

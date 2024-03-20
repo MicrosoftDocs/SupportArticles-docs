@@ -27,4 +27,4 @@ Cloud-init uses the SSH module to call the write-ssh-key-fingerprints helper scr
 
 Ignore 'ec2' logs during troubleshooting. You'll find more information in the [Bug description](https://bugs.launchpad.net/cloud-init/%2Bbug/1869277) article.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

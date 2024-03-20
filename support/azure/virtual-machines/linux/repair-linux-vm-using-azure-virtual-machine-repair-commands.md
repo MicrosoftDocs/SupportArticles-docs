@@ -124,4 +124,4 @@ az vm boot-diagnostics enable --name myVMDeployed --resource-group myResourceGro
 * For issues with accessing applications running on your VM, see [Troubleshoot application connectivity issues on virtual machines in Azure](../virtual-machines-windows/troubleshoot-app-connection.md).
 * For more information about using Resource Manager, see [Azure Resource Manager overview](/azure/azure-resource-manager/management/overview).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

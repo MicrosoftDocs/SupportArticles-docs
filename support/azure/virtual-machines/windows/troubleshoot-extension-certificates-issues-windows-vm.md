@@ -159,4 +159,4 @@ If this procedure doesn't work, you can try to run the `icacls` commands again (
 
 - [Multiple certificates on an Azure IaaS VM that uses extensions](./multiple-certificates-iaas-vm-extensions.md)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

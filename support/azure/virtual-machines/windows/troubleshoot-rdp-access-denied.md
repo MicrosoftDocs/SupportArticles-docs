@@ -83,4 +83,4 @@ After you connect to the VM by using PowerShell, follow these steps to troublesh
 
  1. Restart VM to make the registry changes take effect.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

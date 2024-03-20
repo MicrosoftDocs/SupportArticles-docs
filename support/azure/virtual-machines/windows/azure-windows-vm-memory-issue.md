@@ -309,4 +309,4 @@ Because the user operations and amount of data varies, always keep a buffer in t
 
 If you expect the workload to increase soon, move to a higher VM offering or type with more compute/memory/IO capability. If the workload is memory-intensive, carefully choose VM SKUs with [higher memory-to-CPU ratios](/azure/virtual-machines/sizes-memory).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

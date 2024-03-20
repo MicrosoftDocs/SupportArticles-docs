@@ -94,7 +94,7 @@ If you created the VM by using the Resource Manager deployment model, you're don
 
 ### Use the ProvisionGuestAgent property for classic VMs
 
-[!INCLUDE [classic-vm-deprecation](../../includes/azure/classic-vm-deprecation.md)]
+[!INCLUDE [classic-vm-deprecation](../../../includes/azure/classic-vm-deprecation.md)]
 
 If you created the VM by using the classic model, use the Azure PowerShell module to update the **ProvisionGuestAgent** property. The property informs Azure that the VM has the VM Agent installed.
 
@@ -118,4 +118,4 @@ Then run the `Get-AzureVM` command. Notice that the **GuestAgentStatus** propert
 - [Azure Virtual Machine Agent overview](/azure/virtual-machines/extensions/agent-windows)
 - [Virtual machine extensions and features for Windows](/azure/virtual-machines/extensions/features-windows)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

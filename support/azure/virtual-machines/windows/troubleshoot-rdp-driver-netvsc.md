@@ -111,4 +111,4 @@ Connect to [the Serial Console, open a PowerShell instance](serial-console-windo
 
 16. [Detach the system disk, and create the VM again](./troubleshoot-recovery-disks-portal-windows.md).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

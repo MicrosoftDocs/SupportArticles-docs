@@ -40,4 +40,4 @@ To fix the issue, follow these steps.
 5. On the OS disk you attached, copy the files in `\windows\system32\config\regback` and replace the files in `\windows\system32\config`.
 6. Detach the repaired OS disk from the troubleshooting VM. Then, create a new VM from the OS disk.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

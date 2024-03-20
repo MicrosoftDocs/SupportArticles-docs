@@ -20,7 +20,7 @@ ms.author: genli
 
 This article describes the "Getting ready" and "Getting Windows ready" screens that you may encounter when you start a Windows virtual machine (VM) in Microsoft Azure. It provides steps to help you collect data for a support ticket.
 
-[!INCLUDE [Feedback](../../includes/feedback.md)]
+[!INCLUDE [Feedback](../../../includes/feedback.md)]
 
 ## Symptoms
 
@@ -44,17 +44,17 @@ If restoring the VM from backup isn't possible or doesn't resolve the problem, y
 
 ### Step 1: Collect the dump file directly
 
-[!INCLUDE [Collect OS Memory Dump File](../../includes/azure/collect-os-memory-dump-file.md)]
+[!INCLUDE [Collect OS Memory Dump File](../../../includes/azure/collect-os-memory-dump-file.md)]
 
 If you can't find the dump file, go to the next steps to enable the dump log and the serial console, and then trigger the memory dump process.
 
 ### Step 2: Enable the dump log and the serial console
 
-[!INCLUDE [Registry important alert](../../includes/registry-important-alert.md)]
+[!INCLUDE [Registry important alert](../../../includes/registry-important-alert.md)]
 
 To enable the dump log and the serial console, run the following script:
 
-[!INCLUDE [Enable Serial Console and Memory Dump Collection](../../includes/azure/enable-serial-console-memory-dump-collection.md)]
+[!INCLUDE [Enable Serial Console and Memory Dump Collection](../../../includes/azure/enable-serial-console-memory-dump-collection.md)]
 
 Make sure that there's enough space on the disk to allocate as much memory as the RAM, which depends on the size that you're selecting for this VM. If there isn't enough space or this is a large size VM (G, GS or E series), you can change the location in which this file is created and refer that to any other data disk that's attached to the VM. To do this, you have to modify registry keys, as shown in the following code:
 
@@ -77,4 +77,4 @@ reg unload HKLM\BROKENSYSTEM
 
 4. Follow the instructions in [Step 1: Collect the dump file directly](#step-1-collect-the-dump-file-directly) again.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

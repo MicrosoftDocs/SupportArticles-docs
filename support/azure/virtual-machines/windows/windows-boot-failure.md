@@ -175,4 +175,4 @@ To fix the issue, stop (de-allocate) and start the VM then recheck to see if iss
 
 4. Detach the repaired OS disk from the troubleshooting VM. Then, create a new VM from the OS disk.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

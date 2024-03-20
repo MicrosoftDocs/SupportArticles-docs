@@ -754,4 +754,4 @@ Kernel panics might be related to any of the following items. For more informati
 
 If the specific boot error isn't a kernel related boot issue, see [Troubleshoot Azure Linux Virtual Machines boot errors](./boot-error-troubleshoot-linux.md) for further troubleshooting options.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

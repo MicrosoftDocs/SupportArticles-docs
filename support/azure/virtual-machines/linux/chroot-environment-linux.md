@@ -749,4 +749,4 @@ The following commands are to be executed on the recovery/rescue VM that's tempo
 
 - [Troubleshoot ssh connection](troubleshoot-ssh-connection.md)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

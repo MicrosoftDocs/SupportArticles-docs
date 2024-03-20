@@ -66,4 +66,4 @@ If you can't upgrade cloud-init to version 21.2 or a later version, you can edit
   sudo sed -i 's/maxwait=120/maxwait=2/g' $(locate DataSourceAzure.py)
   ```
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

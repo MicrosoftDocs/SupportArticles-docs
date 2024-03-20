@@ -38,4 +38,4 @@ Set-NetIPAddress -IPAddress $IPs.IPAddress -InterfaceAlias $netInterface -SkipAs
 
 For Linux VMs with multiple IP addresses, follow the steps in [Add IP addresses to a Linux VM operating system](/azure/virtual-network/ip-services/virtual-network-multiple-ip-addresses-portal#linux-ubuntu-1416).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

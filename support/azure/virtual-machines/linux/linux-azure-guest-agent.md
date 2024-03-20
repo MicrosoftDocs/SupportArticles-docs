@@ -16,7 +16,7 @@ ms.author: axelg
 ---
 # Troubleshoot the Azure Linux Agent
 
-[!INCLUDE [Feedback](../../includes/feedback.md)]
+[!INCLUDE [Feedback](../../../includes/feedback.md)]
 
 The [Azure Linux Agent](/azure/virtual-machines/extensions/agent-linux) enables a virtual machine (VM) to communicate with the Fabric Controller (the underlying physical server on which the VM is hosted) on IP address 168.63.129.16.
 
@@ -88,4 +88,4 @@ To resolve this issue:
 * Check for any issues that might be caused by a firewall, a proxy, or another source that might be blocking access to the IP address 168.63.129.16.
 * Check whether Linux IPTables or a third-party firewall is blocking access to ports 80, and 32526.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

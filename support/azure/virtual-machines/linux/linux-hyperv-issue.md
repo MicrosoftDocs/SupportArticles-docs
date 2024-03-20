@@ -254,4 +254,4 @@ If the issue is still not resolved, refer to [Azure Linux virtual machine fails 
 
 In case the specific boot error isn't a Hyper-V issue, see [Troubleshoot Azure Linux Virtual Machines boot errors](./boot-error-troubleshoot-linux.md) for further troubleshooting options.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

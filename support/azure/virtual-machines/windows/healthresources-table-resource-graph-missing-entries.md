@@ -35,4 +35,4 @@ Until a more permanent mitigation is available, we recommend that you select the
 
 - [Advancing Azure Virtual Machine availability monitoring (Project Flash)](https://azure.microsoft.com/blog/advancing-azure-virtual-machine-availability-monitoring-with-project-flash-update/)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

@@ -125,4 +125,4 @@ If this article doesn't resolve your issue, visit the Azure forums on [MSDN and 
 
 You also can submit an Azure support request. To submit a support request, go to the [Azure support page](https://azure.microsoft.com/support/options/), and select **Get support**.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

@@ -150,4 +150,4 @@ To enable dump log and Serial Console, run the following script.
 
 After you collect the dump file, contact Microsoft support to determine the root cause.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

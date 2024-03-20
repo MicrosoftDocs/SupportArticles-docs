@@ -134,4 +134,4 @@ Connect to the VM using [Serial Console](/azure/virtual-machines/troubleshooting
 4. IF the Netlogon service fails due to a dependency, you can try the above process on the dependency that was listed.
 Once the Netlogon service is running you can try accessing the VM via RDP.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

@@ -106,4 +106,4 @@ When an allocation request is pinned to a cluster, there's a higher chance of fa
 
 :::image type="content" source="media/virtual-machines-common-allocation-failure/allocation-failed-at-pinned-cluster.png" alt-text="Diagram 3 shows allocation failed at pinned cluster: No free resource available and Diagram 4 shows allocation failed at pinned cluster: Size not supported.":::
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

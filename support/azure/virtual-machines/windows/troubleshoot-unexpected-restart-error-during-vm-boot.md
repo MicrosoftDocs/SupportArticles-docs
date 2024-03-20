@@ -65,4 +65,4 @@ You may also use the **System Preparation tool GUI** to accomplish the same task
 
 :::image type="content" source="media/unexpected-restart-error-during-vm-boot/system-preparation-tool.png" alt-text="Screenshot of the System Preparation Tool window with O O B E, Generalize, and Shutdown options selected.":::
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

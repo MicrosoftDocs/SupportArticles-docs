@@ -107,6 +107,6 @@ For more information about these methods, see the following articles:
 
 - [Create a SWAP partition for an Azure Linux VM](../virtual-machines-linux/create-swap-file-linux-vm.md)
 
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

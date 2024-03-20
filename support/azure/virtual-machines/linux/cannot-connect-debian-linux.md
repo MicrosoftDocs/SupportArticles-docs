@@ -33,4 +33,4 @@ Debian now uses "ens33" (or "ens33p0") interface names instead of "eth0." To wo
 
 2. Manually update the `/etc/network/interfaces` file by removing the `ens33` entry and then adding `auto eth0` and `iface inet eth0 dhcp`.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

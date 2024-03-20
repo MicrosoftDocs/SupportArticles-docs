@@ -18,7 +18,7 @@ ms.author: genli
 ---
 # Troubleshoot Remote Desktop connections to an Azure virtual machine
 
-[!INCLUDE [Feedback](../../includes/feedback.md)]
+[!INCLUDE [Feedback](../../../includes/feedback.md)]
 
 The Remote Desktop Protocol (RDP) connection to your Windows-based Azure virtual machine (VM) can fail for various reasons, leaving you unable to access your VM. The issue can be with the Remote Desktop service on the VM, the network connection, or the Remote Desktop client on your host computer. This article guides you through some of the most common methods to resolve RDP connection issues.
 
@@ -192,7 +192,7 @@ If you are still encountering RDP issues, you can [open a support request](https
 
 ## Troubleshoot VMs created using the Classic deployment model
 
-[!INCLUDE [classic-vm-deprecation](../../includes/azure/classic-vm-deprecation.md)]
+[!INCLUDE [classic-vm-deprecation](../../../includes/azure/classic-vm-deprecation.md)]
 
 After each troubleshooting step, try reconnecting to the VM.
 
@@ -261,4 +261,4 @@ If none of these errors occurred and you still can't connect to the VM via Remot
 * For troubleshooting steps in accessing applications running on a VM, see [Troubleshoot access to an application running on an Azure VM](./troubleshoot-app-connection.md?toc=/azure/virtual-machines/linux/toc.json).
 * If you are having issues using Secure Shell (SSH) to connect to a Linux VM in Azure, see [Troubleshoot SSH connections to a Linux VM in Azure](../virtual-machines-linux/troubleshoot-ssh-connection.md?toc=/azure/virtual-machines/linux/toc.json).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

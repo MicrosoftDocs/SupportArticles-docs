@@ -114,4 +114,4 @@ If you're unable to access the VM using the Azure Serial Console, then the repai
 
 12. Start the VM. If more than one kernel is installed, you might need to select the modified entry from the GRUB menu.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

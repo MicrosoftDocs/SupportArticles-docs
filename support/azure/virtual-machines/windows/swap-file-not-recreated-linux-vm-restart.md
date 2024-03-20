@@ -167,4 +167,4 @@ For additional cloud-init examples of configuration changes, see the following:
 - [Change VM local hostname](/azure/virtual-machines/linux/cloudinit-update-vm-hostname)
 - [Install an application package, update configuration files and inject keys](/azure/virtual-machines/linux/tutorial-automate-vm-deployment)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

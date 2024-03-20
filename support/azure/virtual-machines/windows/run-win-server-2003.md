@@ -79,4 +79,4 @@ The maximum supported VM size is two virtual processors. 64-bit OS has been repo
 
 A: Windows Server 2003 32-bit has the same level of support as 64-bit, but both operating systems are past their end of support date. Microsoft does not support operating systems that are past their [End of Support date](https://support.microsoft.com/lifecycle/search) without a Custom Support Agreement (CSA). However, the Azure infrastructure is supported. See [Microsoft server software support for Microsoft Azure virtual machines](https://support.microsoft.com/help/2721672/microsoft-server-software-support-for-microsoft-azure-virtual-machines) for more information.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

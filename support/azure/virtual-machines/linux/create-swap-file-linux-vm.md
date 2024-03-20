@@ -159,4 +159,4 @@ You can create a SWAP partition by using one of the following options.
 
 </details>
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

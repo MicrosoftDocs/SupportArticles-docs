@@ -47,4 +47,4 @@ If you have an existing Capacity Reservations that you can't use with VMs or VMS
 
   To attach running VM/VMSS to Capacity Reservation, the VM/VMSS must first be de-allocated. At the time of reallocation, reference Capacity Reservation as a property of the VM/VMSS.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

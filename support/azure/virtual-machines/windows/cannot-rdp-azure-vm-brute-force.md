@@ -74,4 +74,4 @@ In this scenario the RDP TCP Port 3389 is exposed to the internet, please use on
 - [Azure best practices for network security](/azure/security/fundamentals/network-best-practices)
 - [The virtual datacenter: A network perspective](/azure/cloud-adoption-framework/reference/networking-vdc)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

@@ -58,7 +58,7 @@ Upload your script to a storage account, and generate its own container. Then, r
 
 ### For classic deployment model VMs
 
-[!INCLUDE [classic-vm-deprecation](../../includes/azure/classic-vm-deprecation.md)]
+[!INCLUDE [classic-vm-deprecation](../../../includes/azure/classic-vm-deprecation.md)]
 
 ```powershell
 #Set up the basic variables.
@@ -250,4 +250,4 @@ Invoke-Command -ComputerName "<<COMPUTERNAME>" -ScriptBlock {"<<SCRIPT BLOCK>>"}
 * PsExec is part of the [PSTools Suite](https://download.sysinternals.com/files/PSTools.zip).
 * For more information about the PSTools Suite, see [PSTools](/sysinternals/downloads/pstools).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

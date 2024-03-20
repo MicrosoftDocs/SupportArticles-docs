@@ -54,4 +54,4 @@ For more information about NSGs, see [network security group](/azure/virtual-net
 
 If the RDP port is already enabled in NSG, see [Troubleshoot an RDP general error in Azure VM](./troubleshoot-rdp-general-error.md).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

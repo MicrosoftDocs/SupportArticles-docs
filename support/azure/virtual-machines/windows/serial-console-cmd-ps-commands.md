@@ -698,4 +698,4 @@ For more information, see [Azure Instance Metadata service](/azure/virtual-machi
 * The serial console is also available for [Linux](../virtual-machines-linux/serial-console-linux.md) VMs.
 * Learn more about [boot diagnostics](boot-diagnostics.md).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

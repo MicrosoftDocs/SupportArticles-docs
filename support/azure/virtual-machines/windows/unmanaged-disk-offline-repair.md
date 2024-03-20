@@ -231,4 +231,4 @@ After you finish repairing the disk, follow these steps:
 To read an overview of ADE, see [Enable Azure Disk Encryption for Windows VMs](/azure/virtual-machines/windows/disk-encryption-overview).
 For more information about commands you can use to manage unmanaged disks, see [az vm unmanaged-disk](/cli/azure/vm/unmanaged-disk).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

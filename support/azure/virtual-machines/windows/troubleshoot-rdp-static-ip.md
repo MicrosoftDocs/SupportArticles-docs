@@ -77,4 +77,4 @@ To resolve this issue, use Serial control to enable DHCP or [reset network inter
 
 After that, if you want to configure the static IP for the VM, see [Configure static IP addresses for a VM](/azure/virtual-network/virtual-networks-static-private-ip-arm-pportal).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

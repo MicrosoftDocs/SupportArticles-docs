@@ -60,4 +60,4 @@ If you use a version of CustomScript that is earlier than 2.0.5, you can avoid 
 
 A fix to resolve to the issue with CSE has been resolved in CustomScript 2.0.6 as an extension auto update.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

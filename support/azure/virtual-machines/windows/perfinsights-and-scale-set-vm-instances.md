@@ -25,4 +25,4 @@ To get performance diagnostic data from your scale set, follow a two-part proces
 > [!NOTE]
 > If you install the Performance Diagnostics VM extension from the Azure portal instead, the PerfInsights tool is run on every VM instance in the scale set. You can then find the PerfInsights logs in the associated storage account.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

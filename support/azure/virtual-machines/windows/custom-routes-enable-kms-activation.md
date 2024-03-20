@@ -85,7 +85,7 @@ To add the custom route, follow these steps:
 
 ### For Classic VMs
 
-[!INCLUDE [classic-vm-deprecation](../../includes/azure/classic-vm-deprecation.md)]
+[!INCLUDE [classic-vm-deprecation](../../../includes/azure/classic-vm-deprecation.md)]
 
 1. Open Azure PowerShell, and then [sign in to your Azure subscription](/powershell/azure/authenticate-azureps).
 2. Run the following commands:
@@ -122,4 +122,4 @@ To add the custom route, follow these steps:
 - [KMS Client Setup Keys](/windows-server/get-started/kmsclientkeys)
 - [Review and Select Activation Methods](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134256(v=ws.11))
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

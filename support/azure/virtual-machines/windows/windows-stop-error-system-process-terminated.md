@@ -63,4 +63,4 @@ If restoring the backup doesn't solve the problem, you have to collect a memory 
 - For more information about using Resource Manager, see [Azure Resource Manager overview](/azure/azure-resource-manager/management/overview).
 - If you cannot connect to your VM, see [Troubleshoot RDP connections to an Azure VM](./troubleshoot-rdp-connection.md).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

@@ -337,4 +337,4 @@ xfs_repair -L /dev/rootvg/homelv /recovery
 
 If the `nofail` option is specified when mounting filesystems, the corruption of a non-critical filesystem may not prevent Linux from booting fully. For more information about `nofail`, see [Mount the disk](/azure/virtual-machines/linux/attach-disk-portal#mount-the-disk). Most mounts aside from the root (`/`), `/usr`, and `/var` can be done with `nofail`.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

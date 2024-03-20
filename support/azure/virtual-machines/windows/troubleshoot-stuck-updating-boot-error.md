@@ -82,4 +82,4 @@ Depending on the number of updates that are getting installed or rolled backing,
 
 7. [Detach the OS disk and recreate the VM](troubleshoot-recovery-disks-portal-windows.md#swap-the-failed-vms-os-disk-with-the-repaired-disk). Then check whether the issue is resolved.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

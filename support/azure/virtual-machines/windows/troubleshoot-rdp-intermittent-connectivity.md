@@ -178,4 +178,4 @@ To troubleshoot this issue, use Serial control or [repair the VM offline](#repai
 
 18. Restart the VM, and try again to connect to it by using RDP.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

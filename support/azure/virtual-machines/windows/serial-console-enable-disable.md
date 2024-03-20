@@ -156,4 +156,4 @@ For instructions on how to use the Azure portal to assign roles, read the follow
 * Learn more about the [Azure Serial Console for Windows VMs](./serial-console-windows.md)
 * Learn about [power management options within the Azure Serial Console](./serial-console-power-options.md)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

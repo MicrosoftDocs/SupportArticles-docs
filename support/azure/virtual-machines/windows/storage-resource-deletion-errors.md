@@ -105,4 +105,4 @@ If the VHD is a data disk, detach the VHD from the VM to remove the lease:
 
 [Storage deletion errors in Resource Manager deployment]: #storage-delete-errors-in-rm
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

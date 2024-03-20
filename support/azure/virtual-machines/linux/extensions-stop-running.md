@@ -35,4 +35,4 @@ Microsoft is taking steps to automatically resolve this issue for affected VMs. 
 
 To resolve this issue without waiting for the fix from Microsoft, you can remove all `*.manifest.xml` files in `/var/lib/waagent/`.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

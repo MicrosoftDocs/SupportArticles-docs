@@ -506,4 +506,4 @@ To delete one or more VM Inspector reports, select **Delete report**.
 
 If you need more help with any of the content in this article, or if you have any feedback regarding this feature, contact the Azure experts at <vminspector@microsoft.com>.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

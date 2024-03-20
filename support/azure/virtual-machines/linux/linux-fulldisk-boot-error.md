@@ -153,4 +153,4 @@ If no data can be cleared from the OS filesystem, we recommend expanding the dis
 
 In case the specific boot error isn't a Linux boot issue due to a full OS disk, see [Troubleshoot Azure Linux virtual machine boot errors](boot-error-troubleshoot-linux.md) for further troubleshooting.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

@@ -20,7 +20,7 @@ ms.author: genli
 
 This article helps you find and correct the problems that occur due to Secure Shell (SSH) errors, SSH connection failures, or SSH is refused when you try to connect to a Linux virtual machine (VM). You can use the Azure portal, Azure CLI, or VM Access Extension for Linux to troubleshoot and resolve connection problems.
 
-[!INCLUDE [Feedback](../../includes/feedback.md)]
+[!INCLUDE [Feedback](../../../includes/feedback.md)]
 
 ## Quick troubleshooting steps
 
@@ -292,7 +292,7 @@ az vm restart --resource-group myResourceGroup --name myVM
 
 ### Azure classic CLI
 
-[!INCLUDE [classic-vm-deprecation](../../includes/azure/classic-vm-deprecation.md)]
+[!INCLUDE [classic-vm-deprecation](../../../includes/azure/classic-vm-deprecation.md)]
 
 The following example restarts the VM named `myVM` in the resource group named `myResourceGroup`. Use your own values as follows:
 
@@ -333,7 +333,7 @@ azure vm redeploy --resource-group myResourceGroup --name myVM
 
 ## VMs created by using the Classic deployment model
 
-[!INCLUDE [classic-vm-deprecation](../../includes/azure/classic-vm-deprecation.md)]
+[!INCLUDE [classic-vm-deprecation](../../../includes/azure/classic-vm-deprecation.md)]
 
 Try these steps to resolve the most common SSH connection failures for VMs that were created by using the classic deployment model. After each step, try reconnecting to the VM.
 
@@ -357,4 +357,4 @@ Try these steps to resolve the most common SSH connection failures for VMs that 
 * For more information about troubleshooting application access, see [Troubleshoot access to an application running on an Azure virtual machine](../virtual-machines-windows/troubleshoot-app-connection.md?toc=/azure/virtual-machines/linux/toc.json)
 * For more information about troubleshooting virtual machines that were created by using the classic deployment model, see [How to reset a password or SSH for Linux-based virtual machines](/previous-versions/azure/virtual-machines/linux/classic/reset-access-classic).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

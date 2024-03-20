@@ -40,8 +40,8 @@ It can take up to 4 hours. If the deployment is still pending after 4 hours, ope
 
 XenApp Trial is not a formally supported product. Contact Citrix directly at [XenAppAzureTrial@citrix.com](mailto:XenAppAzureTrial@citrix.com) for best effort support directly from Citrix.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
 
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Third-party contact disclaimer](../../includes/third-party-contact-disclaimer.md)]
+[!INCLUDE [Third-party contact disclaimer](../../../includes/third-party-contact-disclaimer.md)]

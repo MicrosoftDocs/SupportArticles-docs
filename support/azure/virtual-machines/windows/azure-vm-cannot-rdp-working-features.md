@@ -119,4 +119,4 @@ Refresh the screenshot in boot diagnostics a few times to monitor if there's any
 
 Use [step 5 of the VM repair commands](repair-windows-vm-using-azure-virtual-machine-repair-commands.md#repair-process-example) to reassemble the VM.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

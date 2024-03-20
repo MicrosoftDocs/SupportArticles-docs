@@ -75,4 +75,4 @@ To fix the issue, follow these steps.
 
 3. Detach the repaired OS disk from the troubleshooting VM. Then, create a new VM from the OS disk.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

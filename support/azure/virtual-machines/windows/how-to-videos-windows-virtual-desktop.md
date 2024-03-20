@@ -47,4 +47,4 @@ Watch these short videos to get up and running with Azure Virtual Desktop:
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4vUnV]
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

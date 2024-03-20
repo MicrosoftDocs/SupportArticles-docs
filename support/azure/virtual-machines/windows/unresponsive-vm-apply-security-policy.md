@@ -144,4 +144,4 @@ To resolve this problem, you would need first to gather the memory dump file for
 
 If you have issues when you apply Local Users and Groups policy see [VM is unresponsive when applying Group Policy Local Users and Groups policy](unresponsive-vm-apply-group-policy.md).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

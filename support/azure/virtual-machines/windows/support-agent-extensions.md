@@ -73,8 +73,8 @@ An example of an error in starting the VMAccess extension is as follows:
 
 Use the table that is mentioned before to request support for the extension that is failing.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
 
-[!INCLUDE [Third-party information disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Third-party contact information disclaimer](../../includes/third-party-contact-disclaimer.md)]
+[!INCLUDE [Third-party contact information disclaimer](../../../includes/third-party-contact-disclaimer.md)]

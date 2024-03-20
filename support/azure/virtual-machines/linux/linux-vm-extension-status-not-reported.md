@@ -45,4 +45,4 @@ az vm extension delete --vm-name < vmName > -g <resGroupName> --name <extension 
 > [!NOTE]
 > In these commands, \<vmName>, \<resGroupName>, and \<extension name> represent the actual variable names.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

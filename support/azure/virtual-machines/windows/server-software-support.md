@@ -193,4 +193,4 @@ The following significant features are not supported:
   - Active Directory Domain Services: [Guidelines for deploying Windows Server Active Directory in Azure virtual machines](/windows-server/identity/ad-ds/introduction-to-active-directory-domain-services-ad-ds-virtualization-level-100?redirectedfrom=MSDN).
   - For information about Office activation on Azure virtual machines, see [Microsoft Office prompts for activation in Azure](https://support.microsoft.com/help/956893).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

@@ -27,4 +27,4 @@ Microsoft is investing in better platform health coordination and reporting. Thi
 
 For more information about Azure Resource Health, see [Resource Health overview](/azure/service-health/resource-health-overview).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

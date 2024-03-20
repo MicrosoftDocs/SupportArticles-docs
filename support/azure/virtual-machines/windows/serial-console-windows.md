@@ -18,7 +18,7 @@ ms.author: genli
 
 # Azure Serial Console for Windows
 
-[!INCLUDE [Feedback](../../includes/feedback.md)]
+[!INCLUDE [Feedback](../../../includes/feedback.md)]
 
 The Serial Console in the Azure portal provides access to a text-based console for Windows virtual machines (VMs) and virtual machine scale set instances. This serial connection connects to the COM1 serial port of the VM or virtual machine scale set instance, providing access to it independent of the network or operating system state. The serial console can only be accessed by using the Azure portal and is allowed only for those users who have an access role of Contributor or higher to the VM or virtual machine scale set.
 
@@ -310,4 +310,4 @@ A. Yes, it is! See [Get started with Serial Console](serial-console-overview.md#
 * The serial console is also available for [Linux](../virtual-machines-linux/serial-console-linux.md) VMs.
 * Learn more about [boot diagnostics](boot-diagnostics.md).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

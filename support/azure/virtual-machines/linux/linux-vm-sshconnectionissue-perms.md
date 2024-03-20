@@ -214,4 +214,4 @@ If both the serial console and ALAR approach don't apply to you or fail, the rep
 
 Once the OS disk is successfully attached to the recovery VM, follow the detailed [chroot instructions](chroot-environment-linux.md) to mount and chroot to the filesystems of the attached OS disk. Then, follow step 3 in the [Use Azure Linux Auto Repair (ALAR)](#offlinetroubleshooting-repairvm) section to resolve the permission and ownership issues.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

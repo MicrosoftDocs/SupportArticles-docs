@@ -220,4 +220,4 @@ To resolve this problem, use Serial control to enable DHCP or [reset network int
 
 4. [Detach the OS disk and recreate the VM](./troubleshoot-recovery-disks-portal-windows.md). Then check whether the problem is resolved.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

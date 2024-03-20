@@ -272,4 +272,4 @@ To resolve this issue, follow these steps from inside chroot in a repair/rescue 
 
 In case the specific boot error isn't a dracut or initramfs issue, see [Troubleshoot Azure Linux Virtual Machines boot errors](./boot-error-troubleshoot-linux.md) for further troubleshooting options.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

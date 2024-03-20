@@ -23,4 +23,4 @@ More than 64 vCPU's require one of the following supported guest operating syst
 
 For more information, see [Compute optimized virtual machine sizes](/azure/virtual-machines/windows/sizes-compute).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

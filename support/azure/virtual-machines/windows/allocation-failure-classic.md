@@ -15,7 +15,7 @@ ms.author: genli
 ---
 # Troubleshooting steps specific to allocation failure scenarios in the classic deployment model
 
-[!INCLUDE [classic-vm-deprecation](../../includes/azure/classic-vm-deprecation.md)]
+[!INCLUDE [classic-vm-deprecation](../../../includes/azure/classic-vm-deprecation.md)]
 
 The following are common allocation scenarios that cause an allocation request to be pinned. We'll dive into each scenario later in this article.
 
@@ -126,4 +126,4 @@ If you do not need an affinity group, create a new regional virtual network for 
 
 Alternatively, you can [Migrate a virtual network (classic) from an affinity group to a region](/previous-versions/azure/virtual-network/virtual-networks-migrate-to-regional-vnet), and then add the desired resources again.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

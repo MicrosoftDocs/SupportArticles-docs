@@ -21,7 +21,7 @@ This article shows how to reset the network interface for Azure Windows VM to re
 * You disable the default Network Interface (NIC).
 * You manually set a static IP for the NIC.
 
-[!INCLUDE [support-disclaimer](../../includes/support-disclaimer.md)]
+[!INCLUDE [support-disclaimer](../../../includes/support-disclaimer.md)]
 
 ## Reset network interface
 
@@ -84,7 +84,7 @@ This article shows how to reset the network interface for Azure Windows VM to re
 
 ### For Classic VMs
 
-[!INCLUDE [classic-vm-deprecation](../../includes/azure/classic-vm-deprecation.md)]
+[!INCLUDE [classic-vm-deprecation](../../../includes/azure/classic-vm-deprecation.md)]
 
 To reset network interface, follow these steps:
 
@@ -143,4 +143,4 @@ After you can remote desktop to the machine, you must delete the old NICs to avo
 
 6. Now all unavailable adapters should be cleared of your system.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

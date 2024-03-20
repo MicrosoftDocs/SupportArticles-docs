@@ -49,4 +49,4 @@ Q3. How can I tell if my image has been provisioned by cloud-init?  
 
 A3. Run `cloud-init status` to see if cloud-init has run.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

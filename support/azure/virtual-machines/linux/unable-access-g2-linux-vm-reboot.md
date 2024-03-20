@@ -65,4 +65,4 @@ sudo apt-get upgrade cloud-init
 **Q:** Could this happen on every reboot?  
  **A:** No. This will not happen on every reboot, it will occur once.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

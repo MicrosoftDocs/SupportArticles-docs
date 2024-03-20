@@ -15,7 +15,7 @@ ms.reviewer: v-leedennis, scotro
 ---
 # Troubleshoot Azure Windows VM Agent issues
 
-[!INCLUDE [Feedback](../../includes/feedback.md)]
+[!INCLUDE [Feedback](../../../includes/feedback.md)]
 
 Azure VM Agent is a virtual machine (VM) agent. It enables the VM to communicate with the Fabric Controller (the underlying physical server on which the VM is hosted) on IP address `168.63.129.16`. This address is a virtual public IP address that facilitates communication. For more information, see [What is IP address 168.63.129.16?](/azure/virtual-network/what-is-ip-address-168-63-129-16).
 
@@ -115,7 +115,7 @@ Running Sysprep on these VMs might cause the following errors:
 
 ### Solution 1: Reset the Sysprep state of the VM, and then upgrade the Azure VM Agent to a later version
 
-[!INCLUDE [Registry important alert](../../includes/registry-important-alert.md)]
+[!INCLUDE [Registry important alert](../../../includes/registry-important-alert.md)]
 
 First, reset the Sysprep state of the VM. The reset involves [modifying some registry keys](https://www.wintips.org/fix-sysprep-fatal-error-dwret-31-machine-invalid-state-couldnt-update-recorded-state/). Then, you can upgrade the Azure VM Agent to a later version. Because the issue occurs only in version 2.7.41491.1004, you can try upgrading the agent to the latest agent version.
 
@@ -307,7 +307,7 @@ A `BadImageFormatException` error occurs when a 64-bit application is loading a 
 
 ### Solution 8: Set the Enable64Bit registry entry for .NET Framework and restart the VM
 
-[!INCLUDE [Registry important alert](../../includes/registry-important-alert.md)]
+[!INCLUDE [Registry important alert](../../../includes/registry-important-alert.md)]
 
 Open the registry, locate the **HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\.NETFramework** registry subkey, and then view the **Enable64Bit** registry entry.
 
@@ -381,8 +381,8 @@ To resolve the issue, follow these steps:
 
 Other known issues that are associated with the Azure VM Agent are listed in its [GitHub repository](https://github.com/Azure/WindowsVMAgent/wiki/Known-Issues).
 
-[!INCLUDE [Third-party information disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Third-party contact information disclaimer](../../includes/third-party-contact-disclaimer.md)]
+[!INCLUDE [Third-party contact information disclaimer](../../../includes/third-party-contact-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

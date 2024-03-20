@@ -35,4 +35,4 @@ Microsoft confirms that this is a limitation in the Azure platform. The effect o
 > [!NOTE]
 > Although the computer name field is blank, the VM name that's provided during resource creation is still displayed. Also, the host name is present inside the guest OS and is unchanged after the existing or specialized disk is first configured.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

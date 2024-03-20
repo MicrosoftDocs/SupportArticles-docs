@@ -127,4 +127,4 @@ Common kernel panic scenarios with specific troubleshooting/recovering instructi
 |[An Azure Linux VM on a 3.10-based kernel panics after a host node upgrade](linux-kernel-panics-upgrade.md)| This article discusses a problem that occurs when an Azure Linux VM that's running the 3.10-based kernel crashes after a host node upgrade in Azure. |
 |[How to recover an Azure Linux virtual machine from kernel-related boot issues](kernel-related-boot-issues.md)|This article provides solutions to an issue in which a Linux virtual machine (VM) can't restart after applying kernel changes.|
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

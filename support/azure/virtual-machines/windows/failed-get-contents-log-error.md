@@ -64,4 +64,4 @@ If you suspect that an issue affects the serial port on the host, you can try to
 
 We are working on a resolution to this problem. Our goal is to improve the discovery of cases in which the SerialConsole.log file isn't produced, and to prevent this error from becoming too intrusive.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

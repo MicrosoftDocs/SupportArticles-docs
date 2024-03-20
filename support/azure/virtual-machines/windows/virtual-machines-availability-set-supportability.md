@@ -34,4 +34,4 @@ All other series could not be in the same availability set because they require 
 
 A8/A9 VM size can't be mixed due to requirement on dedicated RDMA backend network.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

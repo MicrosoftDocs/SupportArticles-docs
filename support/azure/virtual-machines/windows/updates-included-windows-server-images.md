@@ -30,4 +30,4 @@ Windows Update on Windows 8, Windows Server 2012, and later Windows operating s
 
 For more information, see [Allow configuration of Automatic Updates in Windows 8 and Windows Server 2012](https://support.microsoft.com/help/2885694/allow-configuration-of-automatic-updates-in-windows-8-and-windows-serv).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

@@ -35,4 +35,4 @@ For the images provided in Azure Marketplace, you can find the trial period info
 
 :::image type="content" source="media/error-code-0xc0000605/trial-period-information.png" alt-text="Screenshot shows the trial period information of SharePoint Server 2016 in Azure Marketplace." border="false":::
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

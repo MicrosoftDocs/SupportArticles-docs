@@ -19,7 +19,7 @@ ms.author: genli
 
 This article describes an error that you may experience when you try to connect to a virtual machine (VM) in Microsoft Azure.
 
-[!INCLUDE [Feedback](../../includes/feedback.md)]
+[!INCLUDE [Feedback](../../../includes/feedback.md)]
 
 ## Symptoms
 
@@ -294,4 +294,4 @@ To enable dump log and Serial Console, run the following script.
 
 5. [Detach the OS disk and recreate the VM](./troubleshoot-recovery-disks-portal-windows.md), and then check whether the issue is resolved.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

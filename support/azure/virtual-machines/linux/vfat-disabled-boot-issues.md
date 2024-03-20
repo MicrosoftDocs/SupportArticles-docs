@@ -376,4 +376,4 @@ If the [Azure serial console](serial-console-linux.md) doesn't work in the speci
 
 If the specific boot error isn't a VFAT disabled issue, see [Troubleshoot Azure Linux Virtual Machines boot errors](./boot-error-troubleshoot-linux.md) for further troubleshooting options.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

@@ -84,4 +84,4 @@ Perform the following steps to check network connectivity problems, and then ret
     > Activating Windows(R), ServerDatacenter edition (12345678-1234-1234-1234-12345678) …
     Product activated successfully.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

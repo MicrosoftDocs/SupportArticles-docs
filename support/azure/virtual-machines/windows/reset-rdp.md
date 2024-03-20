@@ -18,7 +18,7 @@ ms.author: genli
 ---
 # Reset Remote Desktop Services or its administrator password in a Windows VM
 
-[!INCLUDE [Feedback](../../includes/feedback.md)]
+[!INCLUDE [Feedback](../../../includes/feedback.md)]
 
 > [!NOTE]
 > The steps in this article don't apply to Windows domain controllers.
@@ -96,4 +96,4 @@ First, make sure that you have  the [latest PowerShell module installed and conf
 
 - [Troubleshoot Remote Desktop connections to a Windows-based Azure virtual machine](troubleshoot-rdp-connection.md?toc=%2fazure%2fvirtual-machines%2fwindows%2ftoc.json).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

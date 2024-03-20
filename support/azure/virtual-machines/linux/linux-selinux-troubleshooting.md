@@ -85,4 +85,4 @@ The SELinux configuration is managed by the system administrator. The system adm
 
 In case the issue isn't due to SELinux misconfiguration, see [Troubleshoot Azure Linux Virtual Machines boot errors](./boot-error-troubleshoot-linux.md) for further troubleshooting options.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

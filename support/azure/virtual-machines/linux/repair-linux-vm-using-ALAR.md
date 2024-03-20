@@ -128,4 +128,4 @@ If you experience a bug or want to request an enhancement to the ALAR tool, post
 
 You can also find the latest information about the ALAR tool on [GitHub](https://github.com/Azure/ALAR).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

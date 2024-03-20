@@ -173,4 +173,4 @@ Before you follow these steps, take a snapshot of the system disk of the affecte
 
 11. Check whether the issue is resolved.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

@@ -96,4 +96,4 @@ If the boot issue occurs after you installed software or services, try to disabl
 7. If SFC states that the corruption is fixed, detach the OS disk from the troubleshooting VM, and wait until Azure updates the disk lease (3 minutes at most).
 8. Recreate the VM.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

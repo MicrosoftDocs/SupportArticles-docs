@@ -152,4 +152,4 @@ To fix this problem, you need to perform the following steps:
 
    :::image type="content" source="media/cannot-extend-encrypted-os-volume/extend-volume-available.png" alt-text="Screenshot of the Extend Volume now available on the shortcut menu for the Windows volume in Disk Management.":::
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

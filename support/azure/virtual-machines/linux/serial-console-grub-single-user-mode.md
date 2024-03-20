@@ -276,4 +276,4 @@ To learn more about Serial Console, see:
 * [Serial Console for Windows VMs](../virtual-machines-windows/serial-console-windows.md)
 * [Boot diagnostics](../virtual-machines-windows/boot-diagnostics.md)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

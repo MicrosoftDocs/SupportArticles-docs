@@ -180,4 +180,4 @@ To analyze the dump logs yourself, follow these steps:
     bcdedit /store <OS DISK LETTER>:\boot\bcd /set {default} integrityservicesenable
     ```
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

@@ -127,4 +127,4 @@ To resolve this problem, [back up the OS disk](/azure/virtual-machines/windows/s
 
 4. If a Remote Desktop license server is configured and healthy, make sure that the Remote Desktop license server is activated with CALs.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

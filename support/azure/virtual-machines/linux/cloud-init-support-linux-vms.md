@@ -37,4 +37,4 @@ Microsoft support will assist you if you have issues provisioning a Virtual Mach
 
 If you pass in user-data, that pass modifies the configuration of the VM. If you find that it is not processed as expected, and need support, Microsoft support will assist on a best effort basis, you may be asked to raise an issue with the 'cloud-init' upstream maintainers [here](https://github.com/canonical/cloud-init#getting-help).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

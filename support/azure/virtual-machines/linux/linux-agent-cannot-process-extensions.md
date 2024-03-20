@@ -74,4 +74,4 @@ To work around this issue, restart the Azure Linux VM Agent service. This restor
 service walinuxagent restart
 ```
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

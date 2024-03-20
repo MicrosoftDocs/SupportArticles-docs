@@ -89,4 +89,4 @@ For more information about the Microsoft Automated Troubleshooting Services and 
 
 [2598970](https://support.microsoft.com/help/2598970) Information about Microsoft Automated Troubleshooting Services and Support Diagnostic Platform
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

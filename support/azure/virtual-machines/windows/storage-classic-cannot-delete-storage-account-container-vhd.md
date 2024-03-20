@@ -26,7 +26,7 @@ A "Disk" resource is used to mount a *.vhd page blob file to a virtual machine, 
 
 ## Steps while deleting a classic virtual machine
 
-[!INCLUDE [classic-vm-deprecation](../../includes/azure/classic-vm-deprecation.md)]
+[!INCLUDE [classic-vm-deprecation](../../../includes/azure/classic-vm-deprecation.md)]
 
 1. Delete the classic virtual machine.
 
@@ -136,4 +136,4 @@ Follow these steps on the Azure portal:
 4. Retry the Delete operation that previously failed.
 5. A storage account or container can't be deleted as long as it has a single Image.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

@@ -66,4 +66,4 @@ This article consolidates the most common Linux operating system boot errors you
 
     If you have an existing VM but you want to swap the disk for a backup disk or another OS disk, you can use the Azure CLI to swap the OS disks. You don't have to delete and recreate the VM. You can even use a managed disk in another resource group as long as it isn't already in use. This tool is used by the [Azure VM repair commands](repair-linux-vm-using-azure-virtual-machine-repair-commands.md) to exchange the OS disk of the VMs.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
