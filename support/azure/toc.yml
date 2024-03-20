@@ -16,9 +16,9 @@
   - name: Cloud Services (extended support)
     href: cloud-services-extended/welcome-cloud-services-extended.yml
   - name: Linux Virtual Machines
-    href: virtual-machines-linux/welcome-virtual-machines-linux.yml
+    href: virtual-machines/linux/welcome-virtual-machines-linux.yml
   - name: Windows Virtual Machines
-    href: virtual-machines-windows/welcome-virtual-machines-windows.yml
+    href: virtual-machines/windows/welcome-virtual-machines-windows.yml
   - name: Virtual Machine Scale Sets
     href: virtual-machine-scale-sets/welcome-virtual-machine-scale-sets.yml
   - name: Virtual Desktop
