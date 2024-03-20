@@ -3,7 +3,8 @@ title: How to print Check Date fields in MMDDYYYY in Payables Management reports
 description: Introduces how to print the Check Date fields in the Canadian date format of MMDDYYYY in Payables Management reports in Microsoft Dynamics GP.
 ms.reviewer: theley, cwaswick
 ms.topic: how-to
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # How to print the Check Date fields in the Canadian date format of MMDDYYYY in Payables Management reports
 
