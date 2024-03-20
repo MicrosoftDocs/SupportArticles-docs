@@ -8,7 +8,6 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.service: windows-client
-ms.subservice: networking
 localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate
 ms.custom: sap:Network Connectivity and File Sharing\Access to file shares (SMB), csstroubleshoot
