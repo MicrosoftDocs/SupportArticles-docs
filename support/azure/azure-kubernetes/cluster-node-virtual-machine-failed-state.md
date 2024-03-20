@@ -1,7 +1,7 @@
 ---
 title: Azure Kubernetes Service cluster/node is in a failed state
 description: Troubleshoot an issue where an Azure Kubernetes Service (AKS) cluster/node is in a failed state.
-ms.date: 03/19/2024
+ms.date: 03/20/2024
 ms.reviewer: chiragpa, nickoman, v-weizhu, v-six, aritraghosh
 ms.service: azure-kubernetes-service
 ms.subservice: common-issues
@@ -37,6 +37,13 @@ The following table outlines some common errors that can cause a cluster or node
 |PDB problems|Because a pod disruption budget (PDB) stopped the removal of one or more pods, the operation couldn't update the cluster. A PDB is a resource that limits how many pods can be voluntarily terminated in a certain time period. To fix this issue, remove the PDB temporarily, reconcile the cluster, and add the PDB again by using the kubectl command-line tool.|
 |Infrastructure issues|Because of an internal issue with the Azure Resource Manager (ARM) service that manages resources in Azure, the operation could not update the cluster. To fix this issue, do an agent pool reconcile for each node pool and a reconcile for the managed cluster by using the Azure CLI or Azure PowerShell.|
 |API server errors|The operation could not reach the cluster API server or the Kubernetes control plane because of an outage or a bug. To fix this issue, report it to the AKS support team and provide the relevant logs and diagnostics information. You can use the Azure portal, Azure CLI, or Azure PowerShell to get the logs and diagnostics information.|
+
+> [!NOTE]
+> In Kubernetes, there is a component within a controller. It ensures the actual state of the world, which includes the cluster state and potentially external states like running containers for Kubelet or load balancers for a cloud provider, and aligns with the desired state specified in an object. This alignment process is a key function of the controller. When it comes to AKS, this component ensures that the state of the AKS cluster aligns with the desired configuration. If there are any differences between the actual and desired states, it takes necessary actions to rectify these discrepancies.
+
+## Provisioning State Check
+
+To check the cluster status, select **Provisioning State Check**. The provisioning state of the cluster and agentpool will be shown.
 
 ## Scenario 1: Cluster is in a failed state
 
