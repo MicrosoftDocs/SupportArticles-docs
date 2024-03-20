@@ -125,7 +125,7 @@ If content doesn't exist for the error code, follow the general troubleshooting 
 | 0x80071128 | -2147020504 | ERROR_INVALID_REPARSE_DATA | The data is corrupted and unreadable. | Run `chkdsk` on the volume. [Learn more](/windows-server/administration/windows-commands/chkdsk?tabs=event-viewer). |
 | 0x8e5e0450 | -1906441136 | JET_errInvalidSesid | An unexpected error occurred. | No action required. This error should automatically resolve. If the error persists for several days, create a support request. |
 | 0x80092004 | -2146885628 | CRYPT_E_NOT_FOUND | Certificate required for Azure File Sync authentication is missing. | Run this PowerShell command on the server to reset the certificate:<br/>`Reset-AzStorageSyncServerCertificate -ResourceGroupName <string> -StorageSyncServiceName <string>`. |
-| 0x80c80020 | -2134376416 | ECS_E_CLUSTER_NOT_RUNNING | The Failover Cluster service is not running. | Verify the cluster service (clussvc) is running. [Learn more](../../windows-server/high-availability/troubleshoot-cluster-service-fails-to-start.md). |
+| 0x80c80020 | -2134376416 | ECS_E_CLUSTER_NOT_RUNNING | The Failover Cluster service is not running. | Verify the cluster service (clussvc) is running. [Learn more](../../../windows-server/high-availability/troubleshoot-cluster-service-fails-to-start.md). |
 | 0x80c83036 | -2134364106 | ECS_E_NOT_FOUND | An unexpected error occurred. | No action required. This error should automatically resolve. If the error persists for several days, create a support request. |
 | 0x801f0005 | -2145452027 | ERROR_FLT_INVALID_NAME_REQUEST | An unexpected error occurred. | No action required. This error should automatically resolve. If the error persists for several days, create a support request. |
 | 0x80071126 | -2147020506 | ERROR_NOT_A_REPARSE_POINT | An internal error occurred. | No action required. This error should automatically resolve. If the error persists for several days, create a support request. |
@@ -363,6 +363,6 @@ If you're using a proxy, consult your proxy's documentation and ensure it's conf
 - [Troubleshoot Azure File Sync sync group management](file-sync-troubleshoot-sync-group-management.md)
 - [Troubleshoot Azure File Sync sync errors](file-sync-troubleshoot-sync-errors.md)
 - [Monitor Azure File Sync](/azure/storage/file-sync/file-sync-monitoring)
-- [Troubleshoot Azure Files](files/files-troubleshoot.md)
+- [Troubleshoot Azure Files](files-troubleshoot.md)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

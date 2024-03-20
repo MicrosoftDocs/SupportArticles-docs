@@ -87,7 +87,7 @@ To run AFSDiag, perform the steps below:
 ## See also
 
 - [Monitor Azure File Sync](/azure/storage/file-sync/file-sync-monitoring)
-- [Troubleshoot Azure Files](files/files-troubleshoot.md)
-- [Troubleshoot Azure Files performance issues](files/files-troubleshoot-performance.md)
+- [Troubleshoot Azure Files](files-troubleshoot.md)
+- [Troubleshoot Azure Files performance issues](files-troubleshoot-performance.md)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

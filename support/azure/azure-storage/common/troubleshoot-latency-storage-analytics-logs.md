@@ -155,6 +155,6 @@ Recommendation:
 - Investigate the code in your client to understand why and when the client disconnects from the storage service.
 - Use Wireshark, Microsoft Message Analyzer, or Tcping to investigate network connectivity issues from the client.
 
-[!INCLUDE [Third-party information disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
