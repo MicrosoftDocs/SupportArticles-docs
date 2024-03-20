@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Administration\Timer Service and jobs
   - CSSTroubleshoot
 ms.reviewer: tehnoonr
 appliesto: 

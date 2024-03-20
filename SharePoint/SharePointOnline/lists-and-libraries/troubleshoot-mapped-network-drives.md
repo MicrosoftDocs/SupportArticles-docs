@@ -10,6 +10,7 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Lists and Libraries\Map a network drive
   - CSSTroubleshoot
   - CI 117634
 ms.author: luche

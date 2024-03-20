@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - sap:User experience\Other
   - CSSTroubleshoot
 appliesto: 
   - SharePoint Server 2010

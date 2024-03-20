@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - sap:Web Parts\Quick Links Web Part
   - CSSTroubleshoot
 appliesto: 
   - SharePoint Online

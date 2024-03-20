@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Reliability, Perf, and Throttling\429 or User throttle
   - CI113890
   - CSSTroubleshoot
 ms.reviewer: salarson, prbalusu

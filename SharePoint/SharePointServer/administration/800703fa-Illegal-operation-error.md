@@ -9,6 +9,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - sap:Administration\Farm Administration
   - CSSTroubleshoot
 appliesto: 
   - SharePoint Server 2013

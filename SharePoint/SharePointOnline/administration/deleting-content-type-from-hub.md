@@ -16,6 +16,7 @@ appliesto:
   - SharePoint 2016
   - SharePoint 2013
 ms.custom: 
+  - sap:SharePoint Admin Center\Content Type Gallery
   - CI 117077
   - CSSTroubleshoot
 ms.reviewer: paulpa

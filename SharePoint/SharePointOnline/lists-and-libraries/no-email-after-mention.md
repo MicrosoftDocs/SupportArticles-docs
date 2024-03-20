@@ -11,6 +11,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - sap:Files and Documents\Versioning
   - CSSTroubleshoot
   - CI 150095
 appliesto: 

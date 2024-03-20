@@ -14,6 +14,7 @@ appliesto:
   - SharePoint Server
   - SharePoint Online
 ms.custom: 
+  - sap:Administration\Sharing and permissions
   - CI 123888
   - CSSTroubleshoot
 ms.reviewer: pamgreen

@@ -10,6 +10,7 @@ search.appverid:
 audience: Admin
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:User experience\Webpart infrastructure
   - CSSTroubleshoot
 appliesto: 
   - SharePoint Online

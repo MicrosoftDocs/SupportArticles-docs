@@ -8,7 +8,7 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.custom: 
-  - sap:spsexperts
+  - sap:User experience\Accessibility
   - CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: luche

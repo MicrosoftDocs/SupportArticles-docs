@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - sap:OneDrive & SharePoint Apps\OneDrive Sync Client
   - CSSTroubleshoot
 appliesto: 
   - SharePoint Server 2013

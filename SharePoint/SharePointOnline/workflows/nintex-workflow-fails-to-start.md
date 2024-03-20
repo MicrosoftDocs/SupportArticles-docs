@@ -11,6 +11,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: prbalusu
 ms.custom: 
+  - sap:Workflows and Automation\Non-Microsoft (3rd party) Workflows
   - CSSTroubleshoot
   - CI 146979
 appliesto: 

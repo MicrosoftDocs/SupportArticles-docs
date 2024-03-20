@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - sap:Workflows\Classic Workflow Manager
   - CSSTroubleshoot
 appliesto: 
   - SharePoint Server 2013
