@@ -13,7 +13,7 @@
       items:
       - name: Windows Virtual Machines
         tocHref: /windows-server/get-started/
-        topicHref: /troubleshoot/azure/virtual-machines-windows/welcome-virtual-machines-windows
+        topicHref: /troubleshoot/azure/virtual-machines/windows/welcome-virtual-machines-windows
 
   - name: Troubleshoot
     tocHref: /azure/
@@ -26,7 +26,7 @@
       items:
       - name: Virtual Machines
         tocHref: /azure/automation/
-        topicHref: /troubleshoot/azure/virtual-machines-windows/welcome-virtual-machines-windows
+        topicHref: /troubleshoot/azure/virtual-machines/windows/welcome-virtual-machines-windows
 
     - name: Azure
       tocHref: /azure/azure-portal/
@@ -34,7 +34,7 @@
       items:
       - name: Windows Virtual Machines
         tocHref: /azure/azure-portal/
-        topicHref: /troubleshoot/azure/virtual-machines-windows/welcome-virtual-machines-windows
+        topicHref: /troubleshoot/azure/virtual-machines/windows/welcome-virtual-machines-windows
 
     - name: Azure
       tocHref: /azure/backup/
@@ -42,7 +42,7 @@
       items:
       - name: Windows Virtual Machines
         tocHref: /azure/backup/
-        topicHref: /troubleshoot/azure/virtual-machines-windows/welcome-virtual-machines-windows
+        topicHref: /troubleshoot/azure/virtual-machines/windows/welcome-virtual-machines-windows
  
   - name: Troubleshoot
     tocHref: /troubleshoot/
@@ -54,4 +54,4 @@
       items:
       - name: Windows Virtual Machines
         tocHref: /troubleshoot/windows-server/deployment/
-        topicHref: /troubleshoot/azure/virtual-machines-windows/welcome-virtual-machines-windows
+        topicHref: /troubleshoot/azure/virtual-machines/windows/welcome-virtual-machines-windows

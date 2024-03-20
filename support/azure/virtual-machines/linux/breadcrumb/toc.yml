@@ -14,4 +14,4 @@
       items:
       - name: Linux Virtual Machines
         tocHref: /azure/virtual-machines/
-        topicHref: /troubleshoot/azure/virtual-machines-linux/welcome-virtual-machines-linux
+        topicHref: /troubleshoot/azure/virtual-machines/linux/welcome-virtual-machines-linux
