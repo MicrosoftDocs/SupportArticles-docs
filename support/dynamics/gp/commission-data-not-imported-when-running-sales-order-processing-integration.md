@@ -3,7 +3,8 @@ title: Commission data not importing when running integration
 description: When you map sales commission data in Integration Manager together with Microsoft Dynamics GP or Microsoft Great Plains 8.0, the data is not imported into the program. A service pack is now available to resolve this problem.
 ms.reviewer: theley, lmuelle
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Distribution - Sales Order Processing
 ---
 # Commission data does not import when running a Sales Order Processing integration in Integration Manager with Microsoft Dynamics GP or Great Plains
 
