@@ -50,4 +50,4 @@ ERROR: Activation Context generation failed.
 
 To resolve this problem, you must install the Microsoft Visual C++ 2008 Redistributable Package (x64). Installing the latest version of the Visual C++ runtime does not fix this problem.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
