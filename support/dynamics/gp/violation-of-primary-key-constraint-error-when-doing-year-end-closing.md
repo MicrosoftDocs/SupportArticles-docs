@@ -3,7 +3,8 @@ title: Cannot do year-end closing routine in GL
 description: Describes a problem where you receive the error message Violation of PRIMARY KEY constraint PK##0671112. Provides a resolution.
 ms.reviewer: theley, bwick
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Financial - General Ledger
 ---
 # "Violation of PRIMARY KEY constraint 'PK##0671112'" error when doing year-end closing routine in General Ledger
 

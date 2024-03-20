@@ -3,7 +3,8 @@ title: The connection to the Microsoft Dynamics GP database failed error when si
 description: Describes an error that you may receive when you try to sign in to your company in Microsoft Management Reporter. Provides a resolution.
 ms.reviewer: theley, gbyer, kevogt
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Management Reporter
 ---
 # "The connection to the Microsoft Dynamics GP database failed" error when you sign in to a company
 

@@ -3,7 +3,8 @@ title: Set the location of the .imd or .mdb file
 description: Describes how to set the location of the .imd or .mdb file without opening Integration Manager.
 ms.reviewer: theley, kvogel
 ms.topic: how-to
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # How to set the location of the .imd or .mdb file by using the Microsoft.Dynamics.GP.IntegrationManager.ini file in Integration Manager in Microsoft Dynamics GP 10.0
 

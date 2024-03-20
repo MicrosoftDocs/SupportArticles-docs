@@ -3,7 +3,8 @@ title: .NET Framework 2.0 is not detected
 description: Provides a solution to an error that occurs when you try to install Dexterity or the Visual Studio Tools for Microsoft Dynamics GP 10.0 SDK.
 ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # ".NET Framework 2.0 is not detected. Fatal error during installation" Error message when you try to install Dexterity or the Visual Studio Tools for Microsoft Dynamics GP 10.0 SDK
 

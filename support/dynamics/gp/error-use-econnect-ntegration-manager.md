@@ -3,7 +3,8 @@ title: Error when you use eConnect in Integration Manager
 description: This article provides a resolution for a problem that occurs when you use eConnect for Dynamics GP 2010 or the eConnect destination adapter in Integration Manager.
 ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # Error message (There was an error writing to the pipe: The pipe is being closed) occurs on eConnect for Microsoft Dynamics GP 2010
 

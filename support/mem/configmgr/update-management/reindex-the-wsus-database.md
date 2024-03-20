@@ -5,7 +5,7 @@ author: helenclu
 ms.author: luche
 ms.reviewer: kaushika, vinpa
 ms.date: 12/05/2023
-ms.custom: sap:WSUS
+ms.custom: sap:Software Update Management (SUM)\WSUS Database Maintenance
 ---
 # Reindex the WSUS database
 

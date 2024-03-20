@@ -3,7 +3,8 @@ title: A fully applied document is in open status
 description: Provides a solution to an issue where a fully applied document is still in open status in Payables Management.
 ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # A fully applied document is still in open status in Payables Management
 
