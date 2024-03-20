@@ -5,7 +5,7 @@ ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.custom:sap: kerberos-authentication, csstroubleshoot
+ms.custom: sap:Windows Security Technologies\Kerberos authentication, csstroubleshoot
 localization_priority: medium
 ms.reviewer: kaushika, raviks, v-lianna
 ---

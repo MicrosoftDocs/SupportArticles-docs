@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, femila
-ms.custom: sap:remote-desktop-services-terminal-services-licensing
+ms.custom: sap:Remote Desktop Services and Terminal Services\Licensing for Remote Desktop Services (Terminal Services)
 ---
 
 # The first connection to a non-persistent VDI session fails when using per-user Remote Desktop licensing
