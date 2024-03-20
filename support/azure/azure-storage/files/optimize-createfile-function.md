@@ -28,4 +28,4 @@ This is because a Write-Only handle cannot cache small writes locally, even if i
 - [File Access Rights Constants](/windows/win32/fileio/file-access-rights-constants?redirectedfrom=MSDN)
 - [ACCESS_MASK](/windows/win32/secauthz/access-mask?redirectedfrom=MSDN)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
