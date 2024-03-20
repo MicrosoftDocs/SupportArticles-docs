@@ -51,6 +51,8 @@
           href: dataverse-cds/cds-user-cannot-access-power-automate-business-process-flows-on-demand-workflows.md
     - name: Desktop flows
       items:
+        - name: A desktop application crashes due to UI automation
+          href: desktop-flows/desktop-application-crashes-ui-automation.md
         - name: Agent-related errors when running attended or unattended desktop flows
           href: desktop-flows/agent-connectivity-issues-pad.md
         - name: Browser automation actions stop working after a browser update
