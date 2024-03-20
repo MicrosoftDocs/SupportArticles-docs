@@ -27,7 +27,7 @@ Users have rights to create AI models.
 
 You need to be Administrator of your organization ID to perform this action.
 
-1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/environments).
+1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/environments).
 1. On the left pane, select **Environments**.
 1. On the right pane, select your environment, and then select **Settings**.
 1. Select **Users + permissions** > **Security roles**.

@@ -3,8 +3,8 @@ title: Microsoft Entra Connect services don't start
 description: Describes an issue that prevents Microsoft Entra Connect services from starting. Provides a resolution.
 ms.date: 02/28/2024
 ms.reviewer: riantu, nualex, reviei, v-leedennis
-ms.service: active-directory
-ms.subservice: enterprise-users
+ms.service: entra-id
+ms.subservice: users
 ---
 # One or more Microsoft Entra Connect services don't start
 

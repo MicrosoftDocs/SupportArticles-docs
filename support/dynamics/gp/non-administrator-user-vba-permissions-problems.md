@@ -3,7 +3,8 @@ title: A user who is not an administrator experiences VBA permission problems in
 description: Describes a problem that occurs when Microsoft Dynamics GP does not link to VBA Editor, does not copy windows or fields, or does not run existing VBA code. Provides a resolution.
 ms.topic: troubleshooting
 ms.reviewer: theley, dclauson
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # A user who is not an administrator experiences VBA permission problems in Microsoft Dynamics GP
 

@@ -2,7 +2,8 @@
 title: The Developer Toolkit for Microsoft Dynamics GP
 description: This article describes the Developer Toolkit for Microsoft Dynamics GP.
 ms.reviewer: theley
-ms.date: 03/12/2024
+ms.date: 03/20/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # The Developer Toolkit for Microsoft Dynamics GP
 

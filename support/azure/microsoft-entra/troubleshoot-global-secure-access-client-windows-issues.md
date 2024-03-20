@@ -6,8 +6,8 @@ author: Abizerh
 ms.author: abizerh
 editor: v-jsitser
 ms.reviewer: tdetzner, pudwivedi, joflore, shacharrozin, azureidcic, v-leedennis
-ms.service: active-directory
-ms.subservice: enterprise-users
+ms.service: entra-id
+ms.subservice: users
 ---
 # Troubleshoot issues in the Global Secure Access client for Windows
 

@@ -3,7 +3,7 @@ title: Error (This user can't sign in because this account is currently disabled
 description: "Describes an issue in which (Event ID 6065:80070533 This user can't sign in because this account is currently disabled) is logged when Windows 10 settings fail to sync."
 ms.date: 06/08/2020
 ms.reviewer: cpuckett
-ms.service: active-directory
+ms.service: entra-id
 ms.subservice: authentication
 ms.custom: has-azure-ad-ps-ref
 ---
