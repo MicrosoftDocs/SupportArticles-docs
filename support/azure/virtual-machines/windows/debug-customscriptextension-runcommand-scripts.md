@@ -64,7 +64,7 @@ If the `StdErr` substatus doesn't show the cause of the problem, you can turn on
 To turn on different types of logging, follow the steps in the next several sections.
 
 > [!WARNING]
-> Some of the instructions involve changing the Windows registry. Serious problems might occur if you modify the registry incorrectly by using Registry Editor or by using another method. These problems might require that you reinstall the operating system. Microsoft can't guarantee that these problems can be solved. [Back up your existing registry entries](../../windows-server/performance/windows-registry-advanced-users.md#back-up-the-registry) first, and then modify the registry at your own risk.
+> Some of the instructions involve changing the Windows registry. Serious problems might occur if you modify the registry incorrectly by using Registry Editor or by using another method. These problems might require that you reinstall the operating system. Microsoft can't guarantee that these problems can be solved. [Back up your existing registry entries](../../../windows-server/performance/windows-registry-advanced-users.md#back-up-the-registry) first, and then modify the registry at your own risk.
 
 ### Increase the maximum size of the event logs
 

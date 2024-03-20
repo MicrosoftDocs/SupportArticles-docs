@@ -47,15 +47,15 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Access denied when executing Azure Batch jobs
-            url: ../hpc-batch/access-denied-execute-azure-batch-job.md
+            url: ../hpc/batch/access-denied-execute-azure-batch-job.md
           - text: AccountEncryptionKeyUnavailable error when you try to list pools in Azure Batch
-            url: ../hpc-batch/error-accountencryptionkeyunavailable.md
+            url: ../hpc/batch/error-accountencryptionkeyunavailable.md
           - text: Batch node creation delays when restarting or reimaging
-            url: ../hpc-batch/batch-node-creation-delay-restart-reimage.md
+            url: ../hpc/batch/batch-node-creation-delay-restart-reimage.md
           - text: Batch pool deletion failure
-            url: ../hpc-batch/azure-batch-pool-deletion-failure.md
+            url: ../hpc/batch/azure-batch-pool-deletion-failure.md
           - text: Use managed identities in a Batch account or a Batch pool
-            url: ../hpc-batch/use-managed-identities-azure-batch-account-pool.md
+            url: ../hpc/batch/use-managed-identities-azure-batch-account-pool.md
 
 # Card
   - title: Azure Information Protection
@@ -87,9 +87,9 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Error "Client secret key is expired"
-            url: ../hpc-cyclecloud/invalid-client-secret.md
+            url: ../hpc/cyclecloud/invalid-client-secret.md
           - text: Error "Invalid Azure credentials provided"
-            url: ../hpc-cyclecloud/error-invalid-azure-credentials-cycle-cloud.md
+            url: ../hpc/cyclecloud/error-invalid-azure-credentials-cycle-cloud.md
 
 # Card
   - title: General
@@ -109,23 +109,23 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Failed Linux compute node agent extension installation
-            url: ../hpc-pack/troubleshoot-install-failure-hpc-pack-linux-node-agent.md
+            url: ../hpc/pack/troubleshoot-install-failure-hpc-pack-linux-node-agent.md
           - text: HPC jobs are stuck in canceling mode, and new jobs don't start
-            url: ../hpc-pack/job-stuck-canceling-mode.md
+            url: ../hpc/pack/job-stuck-canceling-mode.md
           - text: HPC Management Service fails to start after restoring database
-            url: ../hpc-pack/hpc-management-service-not-start.md
+            url: ../hpc/pack/hpc-management-service-not-start.md
           - text: HPC compute nodes aren't shown or are in error state
-            url: ../hpc-pack/compute-node-not-shown-error-state.md
+            url: ../hpc/pack/compute-node-not-shown-error-state.md
           - text: HPC node manager service unreachable
-            url: ../hpc-pack/hpc-node-manager-service-unreachable-certificate.md
+            url: ../hpc/pack/hpc-node-manager-service-unreachable-certificate.md
           - text: HPC Pack Excel offloading job is stalled
-            url: ../hpc-pack/hpc-pack-excel-offloading-job-stalled.md
+            url: ../hpc/pack/hpc-pack-excel-offloading-job-stalled.md
           - text: HPC reporting database connection problem
-            url: ../hpc-pack/hpc-management-reporting-database-connection-issue.md
+            url: ../hpc/pack/hpc-management-reporting-database-connection-issue.md
           - text: HPC reporting database permission problem
-            url: ../hpc-pack/hpc-management-reporting-database-permission-problem.md
+            url: ../hpc/pack/hpc-management-reporting-database-permission-problem.md
           - text: Error "No virtual network found" when you enter the application ID
-            url: ../hpc-pack/error-no-virtual-network-found.md
+            url: ../hpc/pack/error-no-virtual-network-found.md
 
 
 # Card

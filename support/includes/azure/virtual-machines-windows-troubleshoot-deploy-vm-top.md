@@ -7,5 +7,5 @@ ms.author: cynthn
 ---
 The following top issues may help resolve your issue. To start troubleshooting, review these steps:
 
-- [The cluster cannot support the requested VM size](../../azure/virtual-machines-windows/troubleshoot-deployment-new-vm-windows.md#the-cluster-cannot-support-the-requested-vm-size)
-- [The cluster does not have free resources](../../azure/virtual-machines-windows/troubleshoot-deployment-new-vm-windows.md#the-cluster-does-not-have-free-resources)
+- [The cluster cannot support the requested VM size](../../azure/virtual-machines/windows/troubleshoot-deployment-new-vm-windows.md#the-cluster-cannot-support-the-requested-vm-size)
+- [The cluster does not have free resources](../../azure/virtual-machines/windows/troubleshoot-deployment-new-vm-windows.md#the-cluster-does-not-have-free-resources)

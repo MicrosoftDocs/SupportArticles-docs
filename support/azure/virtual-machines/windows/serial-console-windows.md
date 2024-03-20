@@ -26,7 +26,7 @@ Serial Console works in the same manner for VMs and virtual machine scale set in
 
 Serial Console is generally available in global Azure regions and in public preview in Azure Government. It is not yet available in the Azure China cloud.
 
-For serial console documentation for Linux, see [Azure Serial Console for Linux](../virtual-machines/linux/serial-console-linux.md).
+For serial console documentation for Linux, see [Azure Serial Console for Linux](../linux/serial-console-linux.md).
 
 > [!NOTE]
 > Serial Console is compatible with a managed boot diagnostics storage account.
@@ -307,7 +307,7 @@ A. Yes, it is! See [Get started with Serial Console](serial-console-overview.md#
 ## Next steps
 
 * For an in-depth guide to CMD and PowerShell commands you can use in the Windows SAC, see [Windows commands: CMD and PowerShell](serial-console-cmd-ps-commands.md).
-* The serial console is also available for [Linux](../virtual-machines/linux/serial-console-linux.md) VMs.
+* The serial console is also available for [Linux](../linux/serial-console-linux.md) VMs.
 * Learn more about [boot diagnostics](boot-diagnostics.md).
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

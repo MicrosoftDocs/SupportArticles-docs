@@ -25,7 +25,7 @@ Serial Console works in the same manner for VMs and virtual machine scale set in
 
 Serial Console is generally available in global Azure regions and in public preview in Azure Government. It is not yet available in the Azure China cloud.
 
-For Serial Console documentation for Windows, see [Serial Console for Windows](../virtual-machines/windows/serial-console-windows.md).
+For Serial Console documentation for Windows, see [Serial Console for Windows](../windows/serial-console-windows.md).
 
 > [!NOTE]
 > Serial Console is compatible with a managed boot diagnostics storage account.
@@ -34,11 +34,11 @@ For Serial Console documentation for Windows, see [Serial Console for Windows](.
 
 - Your VM or virtual machine scale set instance must use the resource management deployment model. Classic deployments aren't supported.
 
-- Your account that uses serial console must have the [Virtual Machine Contributor role](/azure/role-based-access-control/built-in-roles#virtual-machine-contributor) for the VM and the [boot diagnostics](../virtual-machines/windows/boot-diagnostics.md) storage account
+- Your account that uses serial console must have the [Virtual Machine Contributor role](/azure/role-based-access-control/built-in-roles#virtual-machine-contributor) for the VM and the [boot diagnostics](../windows/boot-diagnostics.md) storage account
 
 - Your VM or virtual machine scale set instance must have a password-based user. You can create one with the [reset password](/azure/virtual-machines/extensions/vmaccess#reset-password) function of the VM access extension. Select **Reset password** from the **Help** section.
 
-- Your VM or virtual machine scale set instance must have [boot diagnostics](../virtual-machines/windows/boot-diagnostics.md) enabled.
+- Your VM or virtual machine scale set instance must have [boot diagnostics](../windows/boot-diagnostics.md) enabled.
 
     :::image type="content" source="media/serial-console-linux/diagnostics-settings.png" alt-text="Screenshot of the Diagnostics settings page in Azure portal. The Boot diagnostics option is enabled.":::
 
@@ -87,7 +87,7 @@ Interacting with bootloader | Restart your VM from within the serial console bla
 
 ## Disable the Serial Console
 
-By default, all subscriptions have serial console access enabled. You can disable the serial console at either the subscription level or VM/virtual machine scale set level. For detailed instructions, visit [Enable and disable the Azure Serial Console](../virtual-machines/windows/serial-console-enable-disable.md).
+By default, all subscriptions have serial console access enabled. You can disable the serial console at either the subscription level or VM/virtual machine scale set level. For detailed instructions, visit [Enable and disable the Azure Serial Console](../windows/serial-console-enable-disable.md).
 
 ## Serial Console security
 
@@ -174,7 +174,7 @@ The Azure portal or [Azure CLI](/cli/azure/serial-console) act as remote termina
 
 ### Audit logs
 
-All access to the serial console is currently logged in the [boot diagnostics](../virtual-machines/windows/boot-diagnostics.md) logs of the virtual machine. Access to these logs is owned and controlled by the Azure virtual machine administrator.
+All access to the serial console is currently logged in the [boot diagnostics](../windows/boot-diagnostics.md) logs of the virtual machine. Access to these logs is owned and controlled by the Azure virtual machine administrator.
 
 > [!CAUTION]
 > No access passwords for the console are logged. However, if commands run within the console contain or output passwords, secrets, user names, or any other form of personally identifiable information (PII), those will be written to the VM boot diagnostics logs. They will be written along with all other visible text as part of the implementation of the serial console's scroll back function. These logs are circular, and only individuals with read permissions to the diagnostics storage account have access to them. If you are inputting any data or commands that contain secrets or PII, we would recommend using SSH unless the serial console is absolutely necessary.
@@ -200,7 +200,7 @@ The serial console has screen reader support built in. Navigating around with a 
 
 ## Known issues
 
-We're aware of some issues with the serial console and the VM's operating system. Here's a list of these issues and steps for mitigation for Linux VMs. These issues and mitigations apply to both VMs and virtual machine scale set instances. If these don't match the error you're seeing, see the common serial console service errors at [Common Serial Console errors](../virtual-machines/windows/serial-console-errors.md).
+We're aware of some issues with the serial console and the VM's operating system. Here's a list of these issues and steps for mitigation for Linux VMs. These issues and mitigations apply to both VMs and virtual machine scale set instances. If these don't match the error you're seeing, see the common serial console service errors at [Common Serial Console errors](../windows/serial-console-errors.md).
 
 Issue                           |   Mitigation
 :---------------------------------|:--------------------------------------------|
@@ -240,7 +240,7 @@ A. Your image is likely misconfigured for serial console access. For information
 
 **Q. Is the serial console available for virtual machine scale sets?**
 
-A. Yes, it is! See [Get started with Serial Console](../virtual-machines/windows/serial-console-overview.md#get-started-with-serial-console).
+A. Yes, it is! See [Get started with Serial Console](../windows/serial-console-overview.md#get-started-with-serial-console).
 
 **Q. If I set up my VM or virtual machine scale set by using only SSH key authentication, can I still use the serial console to connect to my VM/virtual machine scale set instance?**
 
@@ -251,7 +251,7 @@ A. Yes. Because the serial console doesn't require SSH keys, you only need to se
 - Use the serial console to [access GRUB and single user mode](serial-console-grub-single-user-mode.md).
 - Use the serial console for [NMI and SysRq calls](serial-console-nmi-sysrq.md).
 - Learn how to use the serial console to [enable GRUB in various distros](serial-console-grub-proactive-configuration.md)
-- The serial console is also available for [Windows VMs](../virtual-machines/windows/serial-console-windows.md).
-- Learn more about [boot diagnostics](../virtual-machines/windows/boot-diagnostics.md).
+- The serial console is also available for [Windows VMs](../windows/serial-console-windows.md).
+- Learn more about [boot diagnostics](../windows/boot-diagnostics.md).
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

@@ -12,7 +12,7 @@ ms.author: pagienge
 ---
 # Out of memory error occurs in Linux Azure virtual machine
 
-This article discusses a few scenarios in which a Microsoft Azure Virtual Machine (VM) that runs the Linux operating system (OS) runs out of memory (OOM). An OOM condition causes new memory allocation requests to fail, or it causes the [OOM Killer](https://linux-mm.org/OOM_Killer) process to be invoked. If it's configured to do this, the [kernel panics](../virtual-machines/linux/linux-kernel-panic-troubleshooting.md), and a memory dump file is created.
+This article discusses a few scenarios in which a Microsoft Azure Virtual Machine (VM) that runs the Linux operating system (OS) runs out of memory (OOM). An OOM condition causes new memory allocation requests to fail, or it causes the [OOM Killer](https://linux-mm.org/OOM_Killer) process to be invoked. If it's configured to do this, the [kernel panics](../linux/linux-kernel-panic-troubleshooting.md), and a memory dump file is created.
 
 *Original product version:* &nbsp; Virtual Machine running Linux  
 *Original KB number:* &nbsp; 4010058
@@ -105,7 +105,7 @@ For more information about these methods, see the following articles:
 
 - [Use cloud-init to configure a swap partition on a Linux VM](/azure/virtual-machines/linux/cloudinit-configure-swapfile)
 
-- [Create a SWAP partition for an Azure Linux VM](../virtual-machines/linux/create-swap-file-linux-vm.md)
+- [Create a SWAP partition for an Azure Linux VM](../linux/create-swap-file-linux-vm.md)
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 

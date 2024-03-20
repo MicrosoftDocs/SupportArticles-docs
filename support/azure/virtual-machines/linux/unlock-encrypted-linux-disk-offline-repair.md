@@ -89,7 +89,7 @@ If your disk uses ADE version 0 (dual-pass encryption), use the [Method 3](#meth
 
 ### Determine whether the OS disk is managed or unmanaged
 
-If you don't know whether the OS disk is managed or unmanaged, see [Determine if the OS disk is managed or unmanaged](../virtual-machines/windows/unmanaged-disk-offline-repair.md#determine-if-the-os-disk-is-managed-or-unmanaged).
+If you don't know whether the OS disk is managed or unmanaged, see [Determine if the OS disk is managed or unmanaged](../windows/unmanaged-disk-offline-repair.md#determine-if-the-os-disk-is-managed-or-unmanaged).
 
 If the OS disk is an unmanaged disk, follow the steps in [Method 3](#method3) to unlock the disk.
 
@@ -452,7 +452,7 @@ Import the newly unlocked partition into a new volume group. In this example, we
 1. Create the repair VM, and attach a copy of the locked disk to a repair VM:
 
      - For a managed disk, see [Troubleshoot a Linux VM by attaching the managed OS disk to a repair VM](troubleshoot-recovery-disks-portal-linux.md).
-     - For an unmanaged disk, use the Storage Explorer to create a copy of the affected VM's OS disk. For more information, see [Attach an unmanaged disk to a VM for offline repair](../virtual-machines/windows/unmanaged-disk-offline-repair.md).
+     - For an unmanaged disk, use the Storage Explorer to create a copy of the affected VM's OS disk. For more information, see [Attach an unmanaged disk to a VM for offline repair](../windows/unmanaged-disk-offline-repair.md).
 1. After you attach the encrypted disk as the data disk to the repair VM, use the Key Vault and Key Encrypted key (KEK) that used for the original VM to re-encrypt this data disk. This process will automatically generate and mount a BEK volume by using a BKE key file in the repair VM. You must not use the **EncryptFormatAll** option because the ADE extension could encrypt the boot sector on the data disk.
 
     - If the original VM is encrypted by **wrapped BEK**, run the following command.

@@ -83,7 +83,7 @@ To run the commands, you need a role that can create the following types of reso
    az extension update -n vm-repair
    ```
 
-3. Run `az vm repair create`. This command will create a copy of the OS disk for the non-functional VM, create a repair VM in a new Resource Group, and attach the copy of the OS disk. The repair VM will be the same size and region as the non-functional VM specified. The Resource Group and VM name used in all steps will be for the non-functional VM. If your VM is using Azure Disk Encryption, use `--unlock-encrypted-vm` to unlock the encrypted disk so that it is accessible when attached to the repair VM. For more information, see [confirm that ADE is enabled on the disk](../virtual-machines/windows/unlock-encrypted-disk-offline.md#confirm-that-ade-is-enabled-on-the-disk).
+3. Run `az vm repair create`. This command will create a copy of the OS disk for the non-functional VM, create a repair VM in a new Resource Group, and attach the copy of the OS disk. The repair VM will be the same size and region as the non-functional VM specified. The Resource Group and VM name used in all steps will be for the non-functional VM. If your VM is using Azure Disk Encryption, use `--unlock-encrypted-vm` to unlock the encrypted disk so that it is accessible when attached to the repair VM. For more information, see [confirm that ADE is enabled on the disk](../windows/unlock-encrypted-disk-offline.md#confirm-that-ade-is-enabled-on-the-disk).
 
 > [!IMPORTANT]
 > The run and restore commands will require all inputs to be entered using the same case as used in the create command, make note or refer to the tags on the repair VM to see what was used.
@@ -120,8 +120,8 @@ az vm boot-diagnostics enable --name myVMDeployed --resource-group myResourceGro
 
 ## Next steps
 
-* If you are having issues connecting to your VM, see [Troubleshoot RDP connections to an Azure Virtual Machine](../virtual-machines/windows/troubleshoot-rdp-connection.md).
-* For issues with accessing applications running on your VM, see [Troubleshoot application connectivity issues on virtual machines in Azure](../virtual-machines/windows/troubleshoot-app-connection.md).
+* If you are having issues connecting to your VM, see [Troubleshoot RDP connections to an Azure Virtual Machine](../windows/troubleshoot-rdp-connection.md).
+* For issues with accessing applications running on your VM, see [Troubleshoot application connectivity issues on virtual machines in Azure](../windows/troubleshoot-app-connection.md).
 * For more information about using Resource Manager, see [Azure Resource Manager overview](/azure/azure-resource-manager/management/overview).
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

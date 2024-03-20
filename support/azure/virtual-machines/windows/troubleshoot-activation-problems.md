@@ -57,10 +57,10 @@ To troubleshoot a Windows activation issue, follow these steps:
     |Error 0xC004F074|["No Key Management Service (KMS) could be contacted"](windows-vm-activation-error-0xc004f074.md)|
     |Error 0xC004FD01|["Windows isn't running on a supported Microsoft Hyper-V virtualization platform"](windows-vm-activation-error-0xc004fd01-0xc004fd02.md)|
     |Error 0xC004FD02|["Windows isn't activated on the host machine. Please contact your system administrator"](windows-vm-activation-error-0xc004fd01-0xc004fd02.md)|
-    |Error 0xC004F06C|["The Key Management Service (KMS) determined that the request timestamp is invalid"](../../windows-server/licensing-and-activation/error-0xc004f06c-activate-windows.md)|
-    |Error 0xC004E015|["On a computer running Microsoft Windows non-core edition, run 'slui.exe 0x2a 0xC004E015' to display the error text"](../../windows-server/installing-updates-features-roles/error-0xc004e015-sl-e-eul-consumption-failed-activate-windows.md)|
+    |Error 0xC004F06C|["The Key Management Service (KMS) determined that the request timestamp is invalid"](../../../windows-server/licensing-and-activation/error-0xc004f06c-activate-windows.md)|
+    |Error 0xC004E015|["On a computer running Microsoft Windows non-core edition, run 'slui.exe 0x2a 0xC004E015' to display the error text"](../../../windows-server/installing-updates-features-roles/error-0xc004e015-sl-e-eul-consumption-failed-activate-windows.md)|
     |Error 0x800705B4|["A problem occurred when Windows tried to activate. Error Code 0x800705B4"](windows-vm-activation-error-0x800705b4.md)|
-    |Error 0x80070005|["Access denied: the requested action requires elevated privileges"](../../windows-server/installing-updates-features-roles/error-0x80070005-access-denied.md)|
+    |Error 0x80070005|["Access denied: the requested action requires elevated privileges"](../../../windows-server/installing-updates-features-roles/error-0x80070005-access-denied.md)|
     |N/A|[Windows activation fails in forced tunneling scenario](custom-routes-enable-kms-activation.md)|
     |N/A|[Windows activation - duplicate Client Machine ID](windows-activation-duplicate-client-machine-id.md)|
 

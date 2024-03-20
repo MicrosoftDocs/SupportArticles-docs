@@ -114,6 +114,6 @@ Make sure that the account you're using to connect with has Remote Desktop sign-
 If none of these errors occurred and you have an unknown issue with connecting using RDP, see the [troubleshooting guide for Remote Desktop](troubleshoot-rdp-connection.md).
 
 * For troubleshooting steps in accessing applications running on a VM, see [Troubleshoot access to an application running on an Azure VM](./troubleshoot-app-connection.md?toc=/azure/virtual-machines/linux/toc.json).
-* If you are having issues using Secure Shell (SSH) to connect to a Linux VM in Azure, see [Troubleshoot SSH connections to a Linux VM in Azure](../virtual-machines/linux/troubleshoot-ssh-connection.md?toc=/azure/virtual-machines/linux/toc.json).
+* If you are having issues using Secure Shell (SSH) to connect to a Linux VM in Azure, see [Troubleshoot SSH connections to a Linux VM in Azure](../linux/troubleshoot-ssh-connection.md?toc=/azure/virtual-machines/linux/toc.json).
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

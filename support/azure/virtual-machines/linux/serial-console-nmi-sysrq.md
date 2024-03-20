@@ -147,7 +147,7 @@ For more information on Linux kernel configurations, including `unknown_nmi_pani
 
 - The main Serial Console Linux documentation page is located [here](serial-console-linux.md).
 - Use Serial Console to boot into [GRUB and enter single user mode](serial-console-grub-single-user-mode.md)
-- The Serial Console is also available for [Windows](../virtual-machines/windows/serial-console-windows.md) VMs
-- Learn more about [boot diagnostics](../virtual-machines/windows/boot-diagnostics.md)
+- The Serial Console is also available for [Windows](../windows/serial-console-windows.md) VMs
+- Learn more about [boot diagnostics](../windows/boot-diagnostics.md)
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

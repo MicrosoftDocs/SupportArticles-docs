@@ -23,7 +23,7 @@ When you deploy a generation 2 Linux VM in Azure, the boot fails, and the server
 
 ## Identify UEFI boot errors
 
-Check the current state of your VM by using the [Azure boot diagnostics](../virtual-machines/windows/boot-diagnostics.md).
+Check the current state of your VM by using the [Azure boot diagnostics](../windows/boot-diagnostics.md).
 
 The boot diagnostics screenshot shows the following error messages:
 

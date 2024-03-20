@@ -135,15 +135,15 @@ Serial Console uses TLS 1.2 end-to-end to secure all communication within the se
 
 Aside from console access to your VM, you can also use the Azure Serial Console for the following:
 
-- Sending a [system request command to your VM](../virtual-machines/linux/serial-console-nmi-sysrq.md)
-- Sending a [non-maskable interrupt to your VM](../virtual-machines/linux/serial-console-nmi-sysrq.md)
+- Sending a [system request command to your VM](../linux/serial-console-nmi-sysrq.md)
+- Sending a [non-maskable interrupt to your VM](../linux/serial-console-nmi-sysrq.md)
 - Gracefully [rebooting or forcefully power-cycling your VM](serial-console-power-options.md)
 
 ## Next steps
 
 Additional Serial Console documentation is available in the sidebar.
 
-- More information is available for [Serial Console for Linux VMs](../virtual-machines/linux/serial-console-linux.md).
+- More information is available for [Serial Console for Linux VMs](../linux/serial-console-linux.md).
 - More information is available for [Serial Console for Windows VMs](serial-console-windows.md).
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

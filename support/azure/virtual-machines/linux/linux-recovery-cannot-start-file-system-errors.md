@@ -23,7 +23,7 @@ This article provides guidance to troubleshoot Linux virtual machine (VM) boot i
 
 ## Symptoms
 
-You can't connect to an Azure Linux virtual machine (VM) by using the Secure Shell Protocol (SSH), or the VM Agent status in the [Azure portal](https://portal.azure.com/) isn't **Ready**. When you run the [Boot diagnostics](../virtual-machines/windows/boot-diagnostics.md) in the Azure portal or connect to the [Serial Console](serial-console-linux.md), you see log entries that resemble the following examples:
+You can't connect to an Azure Linux virtual machine (VM) by using the Secure Shell Protocol (SSH), or the VM Agent status in the [Azure portal](https://portal.azure.com/) isn't **Ready**. When you run the [Boot diagnostics](../windows/boot-diagnostics.md) in the Azure portal or connect to the [Serial Console](serial-console-linux.md), you see log entries that resemble the following examples:
 
 > [!NOTE]
 >

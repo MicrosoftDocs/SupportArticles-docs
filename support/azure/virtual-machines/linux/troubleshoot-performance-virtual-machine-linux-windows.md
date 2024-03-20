@@ -19,7 +19,7 @@ ms.author: genli
 
 # Troubleshoot Azure virtual machine performance on Linux or Windows
 
-This article describes virtual machine (VM) generic performance troubleshooting through monitoring and observing bottlenecks and provides possible remediation for issues that may occur. Besides monitoring, you can also use Perfinsights which can provide a report with best practices recommendations and key bottlenecks around IO/CPU/Memory. Perfinsights is available for both [Windows](../virtual-machines/windows/how-to-use-perfinsights.md) and [Linux](how-to-use-perfinsights-linux.md) VM's in Azure.
+This article describes virtual machine (VM) generic performance troubleshooting through monitoring and observing bottlenecks and provides possible remediation for issues that may occur. Besides monitoring, you can also use Perfinsights which can provide a report with best practices recommendations and key bottlenecks around IO/CPU/Memory. Perfinsights is available for both [Windows](../windows/how-to-use-perfinsights.md) and [Linux](how-to-use-perfinsights-linux.md) VM's in Azure.
 
 This article will walk through using monitoring to diagnose Performance bottlenecks.
 
@@ -117,7 +117,7 @@ If your application or process isn't running at the correct performance level, a
 
 If you have increased the VM, and the CPU is still running 95%, determine whether this setting is offering better performance or higher application throughput to an acceptable level. If not, troubleshoot that individual application\process.
 
-You can use Perfinsights for [Windows](../virtual-machines/windows/how-to-use-perfinsights.md) or [Linux](how-to-use-perfinsights-linux.md) to analyze which process is driving the CPU consumption.
+You can use Perfinsights for [Windows](../windows/how-to-use-perfinsights.md) or [Linux](how-to-use-perfinsights-linux.md) to analyze which process is driving the CPU consumption.
 
 ## Check for memory bottleneck
 
@@ -148,13 +148,13 @@ To resolve high memory utilization, perform any of the following tasks:
 
 If after upgrading to a larger VM, you discover that you still have a constant steady increase until 100%, identify the application/process and troubleshoot.
 
-You can use Perfinsights for [Windows](../virtual-machines/windows/how-to-use-perfinsights.md) or [Linux](how-to-use-perfinsights-linux.md) to analyze which process is driving the Memory consumption.
+You can use Perfinsights for [Windows](../windows/how-to-use-perfinsights.md) or [Linux](how-to-use-perfinsights-linux.md) to analyze which process is driving the Memory consumption.
 
 ## Check for disk bottleneck
 
 To check the storage subsystem for the VM, check the diagnostics at the Azure VM level by using the counters in VM Diagnostics and also the Storage Account Diagnostics.
 
-For within VM specific troubleshooting, you can use Perfinsights for [Windows](../virtual-machines/windows/how-to-use-perfinsights.md) or [Linux](how-to-use-perfinsights-linux.md), which could help to analyze which process is driving the IO's.
+For within VM specific troubleshooting, you can use Perfinsights for [Windows](../windows/how-to-use-perfinsights.md) or [Linux](how-to-use-perfinsights-linux.md), which could help to analyze which process is driving the IO's.
 
 Note that we don't have counters for Zone Redundant and Premium Storage Accounts. For issues related to these counters, raise a support case.
 

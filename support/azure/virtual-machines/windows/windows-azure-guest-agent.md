@@ -258,7 +258,7 @@ These error entries are probably caused by Remote Procedure Call (RPC) issues. F
 
 ### Solution 6: Start the CNG Key Isolation service
 
-Check whether the [Cryptography Next Generation (CNG) Key Isolation](/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server#cng-key-isolation) (`CNGKEYISO`) Windows service is in the list of RPC endpoints by running the following [portqry](../../windows-server/networking/portqry-command-line-port-scanner-v2.md) command:
+Check whether the [Cryptography Next Generation (CNG) Key Isolation](/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server#cng-key-isolation) (`CNGKEYISO`) Windows service is in the list of RPC endpoints by running the following [portqry](../../../windows-server/networking/portqry-command-line-port-scanner-v2.md) command:
 
 ```cmd
 portqry -n <VMName> -e 135

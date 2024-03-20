@@ -259,6 +259,6 @@ You may receive the following common errors when you try to RDP with Microsoft E
 If none of these errors occurred and you still can't connect to the VM via Remote Desktop, read the detailed [troubleshooting guide for Remote Desktop](detailed-troubleshoot-rdp.md).
 
 * For troubleshooting steps in accessing applications running on a VM, see [Troubleshoot access to an application running on an Azure VM](./troubleshoot-app-connection.md?toc=/azure/virtual-machines/linux/toc.json).
-* If you are having issues using Secure Shell (SSH) to connect to a Linux VM in Azure, see [Troubleshoot SSH connections to a Linux VM in Azure](../virtual-machines/linux/troubleshoot-ssh-connection.md?toc=/azure/virtual-machines/linux/toc.json).
+* If you are having issues using Secure Shell (SSH) to connect to a Linux VM in Azure, see [Troubleshoot SSH connections to a Linux VM in Azure](../linux/troubleshoot-ssh-connection.md?toc=/azure/virtual-machines/linux/toc.json).
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
