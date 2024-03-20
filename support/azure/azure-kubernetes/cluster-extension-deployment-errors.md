@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot errors when deploying extensions in an AKS cluster
 description: Learn how to troubleshoot errors that occur when you deploy cluster extensions in an Azure Kubernetes Service (AKS) cluster.
-ms.date: 02/28/2024
+ms.date: 03/20/2024
 author: maanasagovi
 ms.author: maanasagovi
 editor: v-jsitser
@@ -28,36 +28,27 @@ The cluster extension agent and manager are crucial system components that are r
 
 ##### Solution 1: Make sure that the cluster extension agent and manager pods work correctly
 
-To resolve this issue, make sure that the cluster extension agent and manager pods are correctly scheduled and can start. If the pods are stuck in a non-ready state, check the pod description by running the `kubectl describe pod` command to get more details about the underlying problems (for example, taints that are preventing scheduling, insufficient memory, or policy restrictions).
-
-When the cluster extension agent and manager pods are operational and healthy, they establish communication with Azure services to install and manage Kubernetes applications.
-
-Run the following command to check the pod description to receive more details about potential problems: 
-
+To resolve this issue, make sure that the cluster extension agent and manager pods are correctly scheduled and can start. If the pods are stuck in a non-ready state, check the pod description by running the following `kubectl describe pod` command to get more details about the underlying problems (for example, taints that are preventing scheduling, insufficient memory, or policy restrictions):
 
 ```console
 kubectl describe pod -n kube-system extension-operator-{id}
 ```
+Here's a command output sample:
 
-A sample after this running this command is below: 
-
-
-```
+```output
 kube-system         extension-agent-55d4f4795f-sqx7q             2/2     Running   0          2d19h
 kube-system         extension-operator-56c8d5f96c-nvt7x          2/2     Running   0          2d19h
 ```
 
-For arc connected clusters run the following command to check the pod description to receive more details about potential problems:
-
+For ARC-connected clusters, run the following command to check the pod description:
 
 ```console
 kubectl describe pod -n azure-arc extension-manager-{id}
 ```
 
-A sample output after running this command is below:
+Here's a command output sample:
 
-
-```
+```output
 NAMESPACE         NAME                                          READY   STATUS             RESTARTS        AGE
 azure-arc         cluster-metadata-operator-744f8bfbd4-7pssr    0/2     ImagePullBackOff   0               6d19h
 azure-arc         clusterconnect-agent-7557d99d5c-rtgqh         0/3     ImagePullBackOff   0               6d19h
@@ -72,6 +63,8 @@ azure-arc         logcollector-5cbc659bfb-9v96d                 0/1     ImagePul
 azure-arc         metrics-agent-5794866b46-j9949                0/2     ImagePullBackOff   0               6d19h
 azure-arc         resource-sync-agent-6cf4cf7486-flgwc          0/2     ImagePullBackOff   0               6d19h
 ```
+
+When the cluster extension agent and manager pods are operational and healthy, they establish communication with Azure services to install and manage Kubernetes applications.
 
 #### Cause 2: An issue affects the egress block or firewall
 
