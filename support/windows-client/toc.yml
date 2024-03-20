@@ -393,8 +393,6 @@ items:
       href: ./networking/dns-requests-random-network-properties-change.md
     - name: URI-encoding in UNC paths interpreted literally
       href: ./networking/url-encoding-unc-paths-not-url-decoded.md
-    - name: Support policy for DNS client-side caching
-      href: ./networking/support-policy-for-dns-client-side-caching.md
   - name: Dynamic Host Configuration Protocol (DHCP)
     items:
     - name: DHCP clients are blocked when DAI-enabled network device is used

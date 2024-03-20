@@ -16,11 +16,10 @@ The topics in this section provide solutions and scenario guides to help you tro
 
 - Account lockouts
 - Bitlocker
-- Certificates and public key infrastructure (PKI)
 - Domain and forest trusts
 - Kerberos authentication
 - Legacy authentication (NTLM)
 - Permissions, access control, and auditing
 - Secure channel issues
 - Security templates
-- Smart card logon
+- Windows LAPS

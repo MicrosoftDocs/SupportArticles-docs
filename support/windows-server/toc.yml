@@ -29,8 +29,6 @@ items:
       href: ./active-directory/syskey-exe-utility-is-no-longer-supported.md
     - name: SYSVOL folder isn't replicated between domain controllers
       href: ./active-directory/file-replication-service-event-13552-13555.md
-  - name: Active Directory Certificate Services
-    items: []
   - name: Active Directory database issues and domain controller boot failures
     items:
     - name: '"access is denied" error when replicating AD directory service'
@@ -337,6 +335,8 @@ items:
       href: ./active-directory/wizard-not-gain-access-to-domain.md
     - name: NETLOGON share isn't present after you install AD DS on a new full or read-only domain controller
       href: ./active-directory/netlogon-share-not-present-after-install-ad-ds-on-full-read-only-domain-controller.md
+    - name: Requirements for domain controller certificates from a third-party CA
+      href: ./active-directory/requirements-domain-controller.md
     - name: Newly promoted domain controller fails to advertise after DCpromo
       href: ./active-directory/newly-promoted-domain-controller-fail-advertise.md
   - name: Domain controller scalability or performance (including LDAP)
@@ -425,8 +425,6 @@ items:
       href: ./active-directory/delays-domain-members-dc-remote-domains.md
     - name: Error when you run AD Installation Wizard
       href: ./active-directory/error-when-you-run-ad-installation-wizard.md
-  - name: Transport Layer Security (TLS)
-    items: []
   - name: User, computer, group, and object management
     items:
     - name: '"This property is limited to 64 values" error'
@@ -873,6 +871,72 @@ items:
       href: ./backup-and-storage/vss-writers-report-failed-virtual-machine.md
 - name: Certificates and Public Key Infrastructure (PKI)
   items:
+  - name: Certificate Root Update Program
+    items:
+    - name: Crypt32 8 events continuously reported
+      href: ./certificates-and-public-key-infrastructure-pki/crypt32-event-8.md
+    - name: Event ID 4107 or Event ID 11 is logged
+      href: ./certificates-and-public-key-infrastructure-pki/event-id-4107-or-event-id-11-is-logged.md
+    - name: Removal of US Federal Common Policy from Microsoft Trusted Root Store
+      href: ./certificates-and-public-key-infrastructure-pki/microsoft-trusted-root-store-removal-of-us-federal-common-policy.md
+  - name: Certificate enrollment
+    items:
+    - name: Clients can't authenticate with a server
+      href: ./certificates-and-public-key-infrastructure-pki/clients-cant-authenticate-server.md
+    - name: Remote Desktop server certificates are renewed two times daily
+      href: ./certificates-and-public-key-infrastructure-pki/remote-desktop-server-certificates-renewed.md
+    - name: Add SAN to secure LDAP certificate
+      href: ./certificates-and-public-key-infrastructure-pki/add-san-to-secure-ldap-certificate.md
+    - name: How to install imported certificates on a Web server
+      href: ./certificates-and-public-key-infrastructure-pki/install-imported-certificates.md
+    - name: Certutil -view command doesn't return issued certificates
+      href: ./certificates-and-public-key-infrastructure-pki/certutil-view-not-return-issued-certificate.md
+    - name: Approval required for certificate renewals
+      href: ./certificates-and-public-key-infrastructure-pki/approval-required-certificate-renewals-autoenrollment.md
+  - name: Active Directory Certificate Services (ADCS)
+    items:
+    - name: How to decommission Windows enterprise CA and remove related objects
+      href: ./certificates-and-public-key-infrastructure-pki/decommission-enterprise-certification-authority-and-remove-objects.md
+    - name: How to import third-party CAs into Enterprise NTAuth store
+      href: ./certificates-and-public-key-infrastructure-pki/import-third-party-ca-to-enterprise-ntauth-store.md
+    - name: How to expand the maximum extension size limit at AD CS
+      href: ./certificates-and-public-key-infrastructure-pki/expand-maximum-extension-size-limit-ad-cs.md
+    - name: CA doesn't publish certificates in trusted domain
+      href: ./certificates-and-public-key-infrastructure-pki/cannot-publish-certificate-trusted-domain.md
+    - name: Superseded Certificate Templates and impact on user’s AD store
+      href: ./certificates-and-public-key-infrastructure-pki/superseded-certificate-templates-impact-user-ad-store.md
+  - name: Network Device Enrollment Services (NDES) 
+    items:
+    - name: '"Http error 500.0" when getting the NDES enrollment challenge password'
+      href: ./certificates-and-public-key-infrastructure-pki/http-error-500-internal-server-error.md
+    - name: Error 0x80090022 when CEP/CES autoenrollment using KBR fails
+      href: ./certificates-and-public-key-infrastructure-pki/error-0x80090022-nte-silent-context-cep-ces-autoenrollment-kbr-fails.md
+    - name: Renewal of Enrollment Agent certificate fails
+      href: ./certificates-and-public-key-infrastructure-pki/renewal-of-enrollment-agent-certificate-fail.md
+  - name: Kerberos authentication
+    items:
+    - name: KDC_ERR_C_PRINCIPAL_UNKNOWN in S4U2Self request
+      href: ./certificates-and-public-key-infrastructure-pki/kdc-err-c-principal-unknown-s4u2self-request.md
+  - name: Certificate-based authentication
+    items:
+    - name: Security certificate validation fails
+      href: ./certificates-and-public-key-infrastructure-pki/secured-website-certificate-validation-fails.md
+    - name: Root CA certificate doesn't appear
+      href: ./certificates-and-public-key-infrastructure-pki/root-ca-certificate-doesnt-appear.md
+    - name: Use and troubleshoot CryptAcquireContext function
+      href: ./certificates-and-public-key-infrastructure-pki/cryptacquirecontext-troubleshooting.md
+  - name: Certificate web enrollment pages (CWE)
+    items:
+    - name: Can't request certificate from web enrollment pages
+      href: ./certificates-and-public-key-infrastructure-pki/no-certificate-templates-be-found.md
+    - name: Can't request certificate using web enrollment
+      href: ./certificates-and-public-key-infrastructure-pki/cannot-request-certificate-with-web-enrollment.md
+  - name: Encrypting File System (EFS)
+    items:
+    - name: Client computers can't encrypt a file in a domain
+      href: ./certificates-and-public-key-infrastructure-pki/recovery-policy-contains-invalid-recovery-certificate.md
+    - name: Use Cipher.exe to overwrite deleted data
+      href: ./certificates-and-public-key-infrastructure-pki/use-cipher-to-overwrite-deleted-data.md
   - name: Smart card logon
     items:
     - name: Can't select CA-compatible certificate templates
@@ -921,84 +985,12 @@ items:
       href: ./certificates-and-public-key-infrastructure-pki/apps-forcibly-closed-tls-connection-errors.md
     - name: Disable TLS 1.0 and 1.1 and force the use of TLS 1.2
       href: ./certificates-and-public-key-infrastructure-pki/disable-tls-1-1dot1-mbam-servers.md
-  - name: Certificate Root Update Program
-    items:
-    - name: Crypt32 8 events continuously reported
-      href: ./certificates-and-public-key-infrastructure-pki/crypt32-event-8.md
-    - name: Event ID 4107 or Event ID 11 is logged
-      href: ./certificates-and-public-key-infrastructure-pki/event-id-4107-or-event-id-11-is-logged.md
-    - name: Removal of US Federal Common Policy from Microsoft Trusted Root Store
-      href: ./certificates-and-public-key-infrastructure-pki/microsoft-trusted-root-store-removal-of-us-federal-common-policy.md
-  - name: Certificate enrollment
-    items:
-    - name: Clients can't authenticate with a server
-      href: ./certificates-and-public-key-infrastructure-pki/clients-cant-authenticate-server.md
-    - name: Remote Desktop server certificates are renewed two times daily
-      href: ./certificates-and-public-key-infrastructure-pki/remote-desktop-server-certificates-renewed.md
-    - name: Add SAN to secure LDAP certificate
-      href: ./certificates-and-public-key-infrastructure-pki/add-san-to-secure-ldap-certificate.md
-    - name: How to install imported certificates on a Web server
-      href: ./certificates-and-public-key-infrastructure-pki/install-imported-certificates.md
-    - name: Certutil -view command doesn't return issued certificates
-      href: ./certificates-and-public-key-infrastructure-pki/certutil-view-not-return-issued-certificate.md
-    - name: Approval required for certificate renewals
-      href: ./certificates-and-public-key-infrastructure-pki/approval-required-certificate-renewals-autoenrollment.md
-  - name: Active Directory Certificate Services (ADCS)
-    items:
-    - name: How to decommission Windows enterprise CA and remove related objects
-      href: ./certificates-and-public-key-infrastructure-pki/decommission-enterprise-certification-authority-and-remove-objects.md
-    - name: How to import third-party CAs into Enterprise NTAuth store
-      href: ./certificates-and-public-key-infrastructure-pki/import-third-party-ca-to-enterprise-ntauth-store.md
-    - name: CA doesn't publish certificates in trusted domain
-      href: ./certificates-and-public-key-infrastructure-pki/cannot-publish-certificate-trusted-domain.md
-    - name: Superseded Certificate Templates and impact on user’s AD store
-      href: ./certificates-and-public-key-infrastructure-pki/superseded-certificate-templates-impact-user-ad-store.md
-  - name: Certificates and Public Key Infrastructure (PKI)
-    items:
-    - name: Support for Suite B cryptographic algorithms
-      href: ./certificates-and-public-key-infrastructure-pki/description-support-suite-b-cryptographic-ipsec.md
-    - name: Requirements for domain controller certificates from a third-party CA
-      href: ./certificates-and-public-key-infrastructure-pki/requirements-domain-controller.md
-  - name: Network Device Enrollment Services (NDES) 
-    items:
-    - name: '"Http error 500.0" when getting the NDES enrollment challenge password'
-      href: ./certificates-and-public-key-infrastructure-pki/http-error-500-internal-server-error.md
-    - name: Error 0x80090022 when CEP/CES autoenrollment using KBR fails
-      href: ./certificates-and-public-key-infrastructure-pki/error-0x80090022-nte-silent-context-cep-ces-autoenrollment-kbr-fails.md
-    - name: Renewal of Enrollment Agent certificate fails
-      href: ./certificates-and-public-key-infrastructure-pki/renewal-of-enrollment-agent-certificate-fail.md
-  - name: Kerberos authentication
-    items:
-    - name: KDC_ERR_C_PRINCIPAL_UNKNOWN in S4U2Self request
-      href: ./certificates-and-public-key-infrastructure-pki/kdc-err-c-principal-unknown-s4u2self-request.md
-  - name: Certificate-based authentication
-    items:
-    - name: Security certificate validation fails
-      href: ./certificates-and-public-key-infrastructure-pki/secured-website-certificate-validation-fails.md
-    - name: Root CA certificate doesn't appear
-      href: ./certificates-and-public-key-infrastructure-pki/root-ca-certificate-doesnt-appear.md
-    - name: Use and troubleshoot CryptAcquireContext function
-      href: ./certificates-and-public-key-infrastructure-pki/cryptacquirecontext-troubleshooting.md
-  - name: Certificate web enrollment pages (CWE)
-    items:
-    - name: Can't request certificate from web enrollment pages
-      href: ./certificates-and-public-key-infrastructure-pki/no-certificate-templates-be-found.md
-    - name: Can't request certificate using web enrollment
-      href: ./certificates-and-public-key-infrastructure-pki/cannot-request-certificate-with-web-enrollment.md
-  - name: Encrypting File System (EFS)
-    items:
-    - name: Client computers can't encrypt a file in a domain
-      href: ./certificates-and-public-key-infrastructure-pki/recovery-policy-contains-invalid-recovery-certificate.md
-    - name: Use Cipher.exe to overwrite deleted data
-      href: ./certificates-and-public-key-infrastructure-pki/use-cipher-to-overwrite-deleted-data.md
+    - name: Enabling smart card logon
+      href: ./certificates-and-public-key-infrastructure-pki/enabling-smart-card-logon-third-party-certification-authorities.md
   - name: SSL or TLS
     items:
     - name: Restrict cryptographic algorithms and protocols
       href: ./certificates-and-public-key-infrastructure-pki/restrict-cryptographic-algorithms-protocols-schannel.md
-  - name: Smart card logon
-    items:
-    - name: Enabling smart card logon
-      href: ./certificates-and-public-key-infrastructure-pki/enabling-smart-card-logon-third-party-certification-authorities.md
 - name: Containers
   items:
   - name: Management of Containers
@@ -1497,6 +1489,12 @@ items:
     items:
     - name: 'Troubleshooting guidance: SMB'
       href: ./networking/troubleshoot-smb-guidance.md
+    - name: Common SMB events
+      items:
+        - name: Troubleshoot event ID 1020 on a file server
+          href: ./networking/troubleshoot-event-id-1020-warnings-file-server.md
+        - name: Troubleshoot the Event ID 50 error message
+          href: ./networking/troubleshoot-event-id-50-error.md
     - name: 'Troubleshooting guidance: DFS Namespace'
       href: ./networking/troubleshoot-dfs-namespace-guidance.md
     - name: '"Delayed Write Failed" error'
@@ -1519,10 +1517,6 @@ items:
       href: ./networking/dns-cname-alias-cannot-access-smb-file-server-share.md
     - name: Error messages on SMB connections
       href: ./networking/error-messages-smb-connections.md
-    - name: Event 1 about SMB witness client initialization
-      href: ./networking/event-1-smb-witness-client-initialization.md
-    - name: Event 30818 when the RDMA connections fail back to TCP
-      href: ./networking/periodic-smbclient-event-id-30818.md
     - name: Fail to open file shares or Group Policy snap-ins
       href: ./networking/cannot-open-file-shares-group-policy-snap-ins.md
     - name: Guest access in SMB2 is disabled by default
@@ -1571,10 +1565,6 @@ items:
       href: ./networking/tcp-three-way-handshake-fails.md
     - name: Troubleshoot DFSN access failures
       href: ./networking/dfsn-access-failures.md
-    - name: Troubleshoot event ID 1020 on a file server
-      href: ./networking/troubleshoot-event-id-1020-warnings-file-server.md
-    - name: Troubleshoot the Event ID 50 error message
-      href: ./networking/troubleshoot-event-id-50-error.md
   - name: Background Intelligent Transfer Service (BITS)
     items:
     - name: '"Content file download failed" error when downloading a file by BITS'
@@ -1853,8 +1843,6 @@ items:
       href: ./networking/configure-proxy-server-settings.md
     - name: Configure SNMP Service
       href: ./networking/configure-snmp-service.md
-    - name: Delete all active connections from local computer
-      href: ./networking/delete-active-connections-from-local-computer.md
     - name: Direct host SMB over TCP/IP
       href: ./networking/direct-hosting-of-smb-over-tcpip.md
     - name: DirectAccess clients unable to connect when a static proxy is configured
@@ -2347,6 +2335,8 @@ items:
     items:
     - name: '"An internal error has occurred" when connecting to a remote machine'
       href: ./remote/internal-error-has-occurred-connecting-remote-machine.md
+    - name: 'Error "Remote Desktop cannot verify the identity of the remote computer"'
+      href: ./remote/remote-desktop-cannot-verify-identity-connecting-remote-machine.md      
     - name: Connect to and shadow console session with Terminal Services
       href: ./remote/connect-to-and-shadow-console-session.md
     - name: Error 0xc0000005 when you log on to Terminal Server client
@@ -3104,11 +3094,7 @@ items:
     - name: MBAM fails to take ownership of the TPM
       href: ./windows-security/error-mbam-take-ownership-tpm.md
     - name: MBAM setup fails if SSRS is not configured properly
-      href: ./windows-security/mbam-setup-fails.md
-  - name: Certificates and public key infrastructure (PKI)
-    items:
-    - name: How to expand the maximum extension size limit at AD CS
-      href: ./windows-security/expand-maximum-extension-size-limit-ad-cs.md
+      href: ./windows-security/mbam-setup-fails.md    
   - name: Domain and forest trusts
     items:
     - name: '"The server is not operational" error when adding a trusted domain user'
@@ -3125,6 +3111,10 @@ items:
       href: ./windows-security/trusted-domains-dont-appear.md
     - name: Users and groups can't be added to trusted forest
       href: ./windows-security/rpc-endpoint-mapper-prevents-users-added-to-trust-forest.md
+  - name: Internet Protocol security (IPSec)
+    items:
+    - name: Support for Suite B cryptographic algorithms
+      href: ./windows-security/description-support-suite-b-cryptographic-ipsec.md
   - name: Kerberos authentication
     items:
     - name: Active Directory authentication fails with klist error 0x8009030e
@@ -3247,8 +3237,6 @@ items:
     items:
     - name: Apply predefined security templates
       href: ./windows-security/apply-predefined-security-templates.md
-  - name: Smart card logon
-    items: []
   - name: Windows LAPS
     items:
     - name: 'Troubleshooting guidance: Windows LAPS'

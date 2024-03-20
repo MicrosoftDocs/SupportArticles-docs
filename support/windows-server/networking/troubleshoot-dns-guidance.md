@@ -1,12 +1,12 @@
 ---
 title: Guidance for troubleshooting DNS
 description: Introduces general guidance for troubleshooting scenarios related to DNS.
-ms.date: 12/26/2023
+ms.date: 03/13/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
-ms.reviewer: kaushika
+ms.reviewer: kaushika, v-tappelgate
 ms.custom: sap:dns, csstroubleshoot
 ---
 # DNS troubleshooting guidance
@@ -14,7 +14,7 @@ ms.custom: sap:dns, csstroubleshoot
 > [!div class="nextstepaction"]
 > <a href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=31806264" target='_blank'>Try our Virtual Agent</a> - It can help you quickly identify and fix common DNS issues.
 
-This solution is designed to help you troubleshoot Domain Name System (DNS) scenarios. You can break down DNS troubleshooting into server-side and client-side issues.
+This solution is designed to help you troubleshoot Domain Name System (DNS) scenarios. You can sort DNS troubleshooting issues into server-side and client-side categories.
 
 ## Troubleshooting checklist
 
@@ -24,7 +24,7 @@ This solution is designed to help you troubleshoot Domain Name System (DNS) scen
 - DNS server
 - Authoritative data
 - Recursion
-- Zone Transfer
+- Zone transfer
 
 ### Client-side issues
 
@@ -33,53 +33,63 @@ This solution is designed to help you troubleshoot Domain Name System (DNS) scen
 
 ## Common issues and solutions
 
+### Support policy for DNS client-side caching on DNS clients
+
+Windows contains a client-side DNS cache. We recommend that you don't disable DNS client-side caching on DNS clients. A configuration in which DNS client-side caching is disabled isn't supported.
+
+Microsoft doesn't guarantee that a resolution will be found for issues that involve unsupported devices or configurations. If no resolution is found, the cost of an investigation into the incident isn't refunded. If it's not agreed that a solution isn't guaranteed, Microsoft Support won't fix the issue and will refund the cost of investigating the incident.
+
 ### DNS records are missing in a DNS zone
 
 This issue can have any one of the following causes.
 
 #### DNS scavenging is misconfigured
 
-If DNS records go missing from DNS zones, scavenging is the most common cause. Even Windows-based computers that have statically-assigned servers register their records every 24 hours. Check whether the NoRefresh and Refresh intervals are too low. For example, if these values are both "less than 24 hours," you lose DNS records.
+If DNS records go missing from DNS zones, scavenging is the most common cause. Even Windows-based computers that have statically-assigned DNS servers register their records every 24 hours. Check whether the no-refresh and refresh intervals are too low. For example, if these values are both less than 24 hours, you lose DNS records.
 
-To troubleshoot this issue, see [Using DNS aging and scavenging](/previous-versions/windows/it-pro/windows-server-2003/cc757041%28v=ws.10%29).
+To troubleshoot this issue and to understand no-refresh and refresh intervals, see [Using DNS aging and scavenging](/previous-versions/windows/it-pro/windows-server-2003/cc757041%28v=ws.10%29).
 
 #### Host "A" record is deleted when the IP address is changed
 
-Sometimes, the host "A" record is deleted on the original DNS server after the host "A" record is registered on the newly configured DNS server IP address (Active Directory Integrated DNS). From a user perspective, anything that depends on name resolution is broken. When the DNS server IP address is changed on the client, the client sends an SOA update to delete its "A" record from the old DNS server. Then, it sends another update to register its "A" record to the new DNS server.
+Sometimes, the host "A" record is deleted on the original DNS server after the host "A" record is registered on the newly configured DNS server IP address (Active Directory Integrated DNS). From a user perspective, anything that depends on name resolution is broken. When the DNS server IP address is changed on the client, the client sends a Start of Authority (SOA) update to delete its "A" record from the previous DNS server. Then, it sends another update to register its "A" record to the new DNS server.
 
-The trouble occurs in Active Directory integrated zones. Issues occur when the DNS Server IP address is changed on the client. When the IP address changes, the client sends a registration request to the new server, and sends a deletion request to old server. Because both servers are already synced, the records aren't registered. However, the "A" record is deleted on the old server, and then it's deleted on both servers because of Active Directory replication.
+The trouble occurs in Active Directory-integrated zones. Issues occur when the DNS Server IP address is changed on the client. When the IP address changes, the client sends a registration request to the new server, and sends a deletion request to the previous server. Because both servers are already synced, the records aren't registered. On the previous server, the DNS service deletes the "A" record, and then the deletion replicates to the new server. As a result, the record is deleted on both servers.
 
-#### DHCP clients that have option 81 configured unregister host "A" records during host "AAAA" registration
+#### DHCP clients that use DHCP Option 81 unregister host "A" records during host "AAAA" registration
 
-This problem occurs if Option 81 is defined and ISATAP or 6to4 interfaces are present. The DNS Dynamic Update Protocol update incorrectly sets TTL to **0**. This triggers record deletion for IPv6 record registration.
+This issue occurs if DHCP client computers use ISATAP or 6to4 network adapters, and both the DNS clients and DNS servers are configured to dynamically update DNS records. Because of this configuration, DHCP Option 81 (also known as the *Client FQDN option*) is enabled on both the clients and the servers. In this situation, the DHCP server might create the client's DNS "A" record (IPv4). Then the client creates its "AAAA" (IPv6) record. However, as part of this operation, the client first sends an updated "A" record that has a time-to-live (TTL) of **0**. As a result, the DNS server deletes the client's "A" record while it registers the "AAAA" record.
 
-#### The DNS Dynamic Update Protocol update to existing records fails
+To work around this behavior, avoid configuring DHCP clients that use these adapters to dynamically update DNS records when the DHCP servers are already configured to do so.
 
-The DNS Dynamic Update Protocol update to existing records fails. Because of this, the scavenging process considers the records to be aged, and it deletes them.
+> [!NOTE]  
+> For more information about DHCP Option 81, see [Unexpected DNS record registration behavior if DHCP server uses "Always dynamically update DNS records"](dns-registration-behavior-when-dhcp-server-manages-dynamic-dns-updates.md). That article describes a different issue, but explains more about DHCP Option 81.
 
-NETLOGON "event 577X" events are logged for record registration failures of SRV records by the NETLOGON service. Other events are logged for registration failures of host "A" and PTR records. Check the system logs for these failures. Such events may be logged by a client that registers these records. Or they may be logged by the DHCP servers that register the records on the client's behalf.
+#### The DNS Dynamic Update Protocol update to existing DNS records fails
+
+The DNS Dynamic Update Protocol update to existing records fails. Because of this issue, the DNS scavenging process considers the records to be aged, and it deletes them.
+
+In the case of a service that requires a SRV record, the local Netlogon service logs "event ID 577*X*" events when it can't register SRV records. For example, if the Netlogon service of a domain controller triggers a dynamic update for its LDAP SRV record, and that update fails, the Netlogon service logs an event on the domain controller. Other events are logged for registration failures of host "A" and PTR records. Check the System event logs on the DNS servers and any other affected computers for these failures. The client that registers these records might log such events, or the DHCP servers that register the records on the client's behalf might log them. These additional events can provide insight into the cause of the failure.
 
 #### Converting an active dynamic lease to a reservation deletes the "A" and PTR records for that client
 
 This behavior is by design. The DNS records ("A" or PTR) are automatically updated during the next DHCP renewal request from the client.
 
-### Avoid registering unwanted network interface card in DNS
+### Avoid registering unwanted network adapters in DNS
 
-If the network adapter is configured to register the connection address in DNS, then the DHCP/DNS client service registers the record in DNS. Unwanted network cards should be configured not to register the connection address in DNS.
+If a network adapter is configured to register the connection address in DNS, then the DHCP/DNS client services register the record in DNS. If a computer has a network adapter that you don't want to register, follow these steps:
 
-To prevent this issue, make sure that the unwanted network adapter address isn't registered in DNS. Follow these steps:
-
-1. In **Network Connections**, open the properties for the unwanted network card, open TCP/IP properties, select **Advanced** > **DNS**, and then clear the **Register this connections Address in DNS** checkbox.
-2. In the left pane, open the DNS server console, highlight the server, and then select **Action** > **Properties**. On the **Interfaces** tab, select **listen on only the following IP addresses**. Remove the unwanted IP address from the list.
-3. On the **Zone** properties page, select the **Name server** tab. In addition to the FQDN of the domain controller, you'll see the IP address that's associated with the domain controller. Remove the unwanted IP address if it's listed.
-4. Delete the existing unwanted host "A" record of the domain controller.
+1. In **Network Connections**, open the properties for the unwanted network adapter, open TCP/IP properties, select **Advanced** > **DNS**, and then clear the **Register this connections Address in DNS** checkbox.
+2. In the left pane, open the DNS server console, highlight the server, and then select **Action** > **Properties**.
+3. On the **Interfaces** tab, select **listen on only the following IP addresses**. Remove the unwanted IP address from the list.
+4. On the **Zone** properties page, select the **Name server** tab. In addition to the FQDN of the domain controller, this tab lists the IP address that's associated with the domain controller. Remove the unwanted IP address if it's listed.
+5. Delete the existing unwanted host "A" record of the domain controller.
 
 ### DNS query response delays
 
-A DNS query request may time out if the DNS server forwards the query to unreachable forwarders or root hints. To troubleshoot this issue, follow these steps:
+A DNS query request might time out if the DNS server forwards the query to unreachable forwarders or root hints. To troubleshoot this issue, follow these steps:
 
-1. Open the DNS console on the DNS server, and check whether forwarders or conditional forwarders are reachable. If some of the forwarders are unreachable, remove them.
-2. If the DNS server doesn't have to use forwarders and root hints, open the DNS console on the DNS server, open the server **Properties** window, select **Advanced**, and then turn on **Disable recursion**. (This also disables forwarders.)
+1. Open the DNS console on the DNS server, and check whether forwarders or conditional forwarders are reachable. If any of the forwarders are unreachable, remove them.
+2. If the DNS server doesn't have to use forwarders and root hints, open the DNS console on the DNS server, open the server **Properties** window, select **Advanced**, and then turn on **Disable recursion**. (This setting also disables forwarders.)
 
 ### Event ID 4004 and event ID 4013
 
@@ -90,9 +100,13 @@ To troubleshoot this issue, see [Troubleshoot AD DS and restart the DNS Server s
 
 ### DNS Server geo-location policy doesn't work as expected
 
-You use an Active Directory integrated zone (default zone scope) that's named contoso.com, and geo-location zone scopes that are associated with specific subnets. You use the Windows PowerShell `Add-DnsServerQueryResolutionPolicy` cmdlets to configure DNS resolution policies. 
+Consider the following scenario:
 
-The desired outcome is that a client tries to locate a requested resource, first in the local zone scope and then in the default zone scope. However, after the organization configures these policies, clients from the defined subnets can't successfully resolve records that are hosted in the default zone scope (contoso.com). For example, clients can't resolve **hostA.contoso.com**. When the DNS server receives such requests, it returns a "Server Failure" message.
+- You use an Active Directory-integrated zone (default zone scope) that's named "contoso.com."
+- You use geo-location zone scopes that are associated with specific subnets.
+- You use the Windows PowerShell `Add-DnsServerQueryResolutionPolicy` cmdlet to configure DNS resolution policies.
+
+In this scenario, the desired outcome is that a client tries to locate a requested resource, first in the local zone scope and then in the default zone scope. However, after the organization configures these policies, clients from the defined subnets can't successfully resolve records that are hosted in the default zone scope (contoso.com). For example, clients can't resolve **hostA.contoso.com**. When the DNS server receives such requests, it returns a "Server Failure" message.
 
 To troubleshoot this issue, see [DNS server geo-location policy doesn't work as expected](dns-server-geo-location-policy-doesnt-work-as-expected.md).
 
@@ -122,9 +136,9 @@ When this change occurs, Windows logs Event ID 410 in the DNS server event log:
 
 To troubleshoot this issue, see [DNS server reverts to listening on all IP addresses instead of the configured NIC Teaming IP address](dns-server-loses-teaming-nic-configuration.md).
 
-### DNS record registration behavior when the DHCP server manages dynamic DNS updates
+### DNS record registration behavior if the DHCP server manages dynamic DNS updates
 
-You have an infrastructure that uses Windows Dynamic Host Configuration Protocol (DHCP) clients and Microsoft DHCP servers to assign and manage IP addresses. On the DHCP server, you select **Enable DNS dynamic updates according to the settings below** and **Always dynamically update DNS records**. In this configuration, you expect the DHCP server to manage dynamic DNS updates for A records and PTR records. However, you observe that both the client and the server create DNS records. Depending on your configuration, this behavior has the following effects:
+You have an infrastructure that uses Windows Dynamic Host Configuration Protocol (DHCP) clients and Microsoft DHCP servers to assign and manage IP addresses. On the DHCP server, you select **Enable DNS dynamic updates according to the settings below** and **Always dynamically update DNS records**. In this configuration, you expect the DHCP server to manage dynamic DNS updates for "A" records and "PTR" records. However, you observe that both the client and the server create DNS records. Depending on your configuration, this behavior has the following effects:
 
 - If you configure the DNS zones for **Nonsecure and secure** dynamic updates, you see that the DHCP server creates records, and then the DHCP client deletes and re-creates the same records.
 - If you configure the DNS zones for **Secure only** dynamic updates, DNS records might become inconsistent. Both the DHCP server and the DHCP client create records. However, the DHCP server can't update records that the DHCP client creates, and the DHCP client can't update records that the DHCP server creates.
@@ -133,53 +147,55 @@ To troubleshoot this issue, see [DNS record registration behavior when the DHCP 
 
 ## Data collection
 
-Before contacting Microsoft support, you can gather information about your issue.
+Before you contact Microsoft Support, you can gather information about your issue.
 
 ### Prerequisites
 
-- TSS must be run by accounts that have administrator privileges on the local system, and the EULA must be accepted. (After the EULA is accepted, TSS won't prompt again.)
-- We recommend the LocalMachine `RemoteSigned` PowerShell execution policy.
+- Run TSS in the security context of an account that has administrator privileges on the local system. The first time that you run TSS, accept the EULA. (After you accept the EULA, TSS won't prompt you again.)
+- We recommend that you use the `RemoteSigned` PowerShell execution policy, at the `LocalMachine` scope.
 
-> [!NOTE]
+> [!NOTE]  
 > If the current PowerShell execution policy doesn't allow running TSS, take the following actions:
 >
-> - Set the `RemoteSigned` execution policy for the process level by running the cmdlet, `PS C:\> Set-ExecutionPolicy -scope Process -ExecutionPolicy RemoteSigned`.
-> - To verify that the change takes effect, run the cmdlet, `PS C:\> Get-ExecutionPolicy -List`.
-> - Because the process level permissions apply to only the current PowerShell session, after the given PowerShell window in which TSS runs is closed, the assigned permission for the process level also reverts to the previously configured state.
+> 1. Set the `RemoteSigned` execution policy for the process level by running the cmdlet, `Set-ExecutionPolicy -scope Process -ExecutionPolicy RemoteSigned`.
+> 2. To verify that the change takes effect, run the `Get-ExecutionPolicy -List` cmdlet.  
+>
+> These process-level permissions apply to only the current PowerShell session. After you close the PowerShell window in which TSS runs, the assigned permission for the process level reverts to the previously-configured state.
 
 ### Gather key information before contacting Microsoft support
 
-1. Download [TSS](https://aka.ms/getTSS) on all nodes and unzip it in the *C:\\tss* folder.
-2. Open the *C:\\tss* folder at an elevated PowerShell command prompt.
-3. Start the traces on the client and the server by using the following cmdlets:
+1. Download [TSS](https://aka.ms/getTSS) on all nodes, and expand the file into the *C:\\tss* folder.
+2. Open the *C:\\tss* folder at an elevated PowerShell Command Prompt window.
+3. Start the traces on the client and server by running the following cmdlets:
 
-    - Client:  
+   - Client:  
 
-        ```powershell
-        TSS.ps1 -Scenario NET_DNScli
-        ```
+     ```powershell
+     TSS.ps1 -Scenario NET_DNScli
+     ```
 
-    - Server:  
+   - Server:  
 
-        ```powershell
-        TSS.ps1 -Scenario NET_DNSsrv
-        ```
+     ```powershell
+     TSS.ps1 -Scenario NET_DNSsrv
+     ```
 
 4. Accept the EULA if the traces are run for the first time on the server or the client.
 5. Allow recording (PSR or video).
-6. Reproduce the issue before entering *Y*.
 
-     > [!NOTE]
-     > If you collect logs on both the client and the server, wait for this message on both nodes before reproducing the issue.
+   > [!NOTE]
+   > If you collect logs on both the client and the server, wait for this message to appear on both nodes before you reproduce the issue.
 
-7. Enter *Y* to finish the log collection after the issue is reproduced.
+6. Reproduce the issue.
 
-The traces are stored in a compressed file in the *C:\\MS_DATA* folder. This can be uploaded to the workspace for analysis.
+7. After you reproduce the issue, enter *Y* to finish logging data.
+
+TSS stores the traces in a compressed file in the *C:\\MS_DATA* folder. You can upload the file to the workspace for analysis.
 
 ## References
 
 - [Troubleshooting DNS clients](/windows-server/networking/dns/troubleshoot/troubleshoot-dns-client)
-- [Troubleshooting DNS Servers](/windows-server/networking/dns/troubleshoot/troubleshoot-dns-server)
+- [Troubleshooting DNS servers](/windows-server/networking/dns/troubleshoot/troubleshoot-dns-server)
 - [DNS logging and diagnostics](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn800669%28v=ws.11%29)
 - [Understanding Aging and Scavenging](/previous-versions/windows/it-pro/windows-server-2003/cc759204%28v%3dws.10%29)
 - [Enable DNS dynamic updates for clients](/previous-versions/windows/it-pro/windows-server-2003/cc757445%28v%3dws.10%29)

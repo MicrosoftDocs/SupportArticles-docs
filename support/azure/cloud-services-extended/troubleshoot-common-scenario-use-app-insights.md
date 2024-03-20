@@ -1,13 +1,14 @@
 ---
 title: Troubleshoot common Cloud Service Application issues with Application Insights
 description: Describes common scenarios that use Application Insights to troubleshoot Cloud Service Application issues.
-ms.date: 07/22/2022
+ms.date: 03/15/2024
 ms.reviewer: patcatun
 author: JerryZhangMS
 ms.author: genli
 ms.service: cloud-services
 ms.subservice: troubleshoot-extended-support
 ---
+
 # Troubleshoot Cloud Service app with Application Insights - common scenarios
 
 When Azure Cloud Service is used to host a website or proceed with a data process, it's recommended to integrate a log system to collect more detailed information and log records. Application Insights is designed for this purpose. This document provides common scenarios where we can benefit from integrating  Application Insights with Cloud Service.  
@@ -56,7 +57,7 @@ The HeartBeatState metric data is always saved in Application Insights automatic
 
 The following table shows the mapping between the options in Diagnostic setting and table names in Application Insights logs:
 
-| Table in Application insights | logs in Diagnostic setting |
+| Table in Application Insights | Logs in Diagnostic setting |
 | ----------- | ----------- |
 | traces      | Application logs     |
 | traces   | ETW logs       |
@@ -66,7 +67,7 @@ The following table shows the mapping between the options in Diagnostic setting 
 
 ## Advanced way to use Application Insights with Cloud Service
 
-There are several common advanced ways to use Application Insights with Cloud Service. For example, you can use Azure Application Insights SDK in a Cloud Service project to generate or modify the data saved into Application Insights.
+There are several common advanced ways to use Application Insights with Cloud Service. For example, users can use Azure Application Insights SDK in a Cloud Service project to generate or modify the data saved into Application Insights.
 
 ### Add custom log
 
@@ -77,12 +78,38 @@ To add a custom log to your application, follow these steps:
 
     :::image type="content" source="./media/troubleshoot-common-scenario-use-app-insights/install-package.png" alt-text="Screenshot shows the installed Microsoft ApplicationInsights package.":::
 
-1. Add the following code in the startup function of your role. The startup function of Web Role can normally be `Application_Start()` in Global.asax. For Worker Role, it can be `OnStart()` in WorkerRoleName.cs.
+3. Add the Application Insights configuration into the *.cscfg* and *.csdef* files.
+
+    > [!NOTE]
+    > - Technical support for instrumentation key-based global ingestion will end on March 31, 2025. It's recommended to use the connection string instead of connecting to Application Insights before that date. For more information, see [Transition to using connection strings for data ingestion by 31 March 2025](https://azure.microsoft.com/updates/technical-support-for-instrumentation-key-based-global-ingestion-in-application-insights-will-end-on-31-march-2025/).
+    > - When Application Insights is linked with a Cloud Service project, `APPINSIGHTS_INSTRUMENTATIONKEY` is automatically added. For more information, see [Troubleshoot Cloud Services app with Application Insights - features overview](/troubleshoot/azure/cloud-services/troubleshoot-with-app-insights-features-overview).
+
+    Here's an example of the *.csdef* file:
+
+    ```xml
+    <ConfigurationSettings>
+      <Setting name="APPLICATIONINSIGHTS_CONNECTION_STRING" />
+      <Setting name="APPINSIGHTS_INSTRUMENTATIONKEY" />
+    </ConfigurationSettings>
+    ```
+
+   Here's an example of the *.cscfg* file:
+
+   ```xml
+   <ConfigurationSettings>
+        <Setting name="APPINSIGHTS_INSTRUMENTATIONKEY" value="{Instrumentation_key}" />
+        <Setting name="APPLICATIONINSIGHTS_CONNECTION_STRING" value="{Connection_String}" />
+    </ConfigurationSettings>
+    ```
+
+    The connection string can be found on the overview page of Application Insights. For more information, see [Migrate from Application Insights instrumentation keys to connection strings](/azure/azure-monitor/app/migrate-from-instrumentation-keys-to-connection-strings).
+
+4. Add the following code in the startup function of your role. The startup function of Web Role is `Application_Start()` in *Global.asax*. For Worker Role, it's `OnStart()` in *WorkerRoleName.cs*.
 
     ```csharp
-    TelemetryConfiguration.Active.InstrumentationKey = RoleEnvironment.GetConfigurationSettingValue("APPINSIGHTS_INSTRUMENTATIONKEY"); 
+    TelemetryConfiguration.Active.ConnectionString = RoleEnvironment.GetConfigurationSettingValue("APPLICATIONINSIGHTS_CONNECTION_STRING"); 
     ```
-4. Create a telemetry client and record the log context:
+5. Create a telemetry client and record the log context:
 
     ```csharp
     using Microsoft.ApplicationInsights; 
@@ -330,4 +357,4 @@ If the instances are having high CPU/Memory issues and the application is experi
  procdump.exe -accepteula -c 85 -s 3 -n 5 WaWorkerHost.exe c:\procdumps
 ```
 
-In the Diagnostic setting page of Cloud Service, you can also set the crash dump file auto-generation. For more details, review [this article](/visualstudio/azure/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines?toc=%2Fazure%2Fcloud-services%2Ftoc.json&view=vs-2022#crash-dumps&preserve-view=true).
+In the Diagnostic setting page of Cloud Service, you can also set the crash dump file auto-generation. For more information, see [Set up diagnostics for Azure Cloud Services and virtual machines](/visualstudio/azure/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines?toc=%2Fazure%2Fcloud-services%2Ftoc.json&view=vs-2022#crash-dumps&preserve-view=true).
