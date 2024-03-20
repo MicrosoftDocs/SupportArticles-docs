@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:folder-redirection-and-offline-files-and-folders-csc, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\Offline Files and Folders (CSC), csstroubleshoot
 ---
 # Folder Redirection fails to apply when redirected to mapped drive letter, instead of UNC path
 

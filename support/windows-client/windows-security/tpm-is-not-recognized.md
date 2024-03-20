@@ -7,7 +7,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, manojse, raverma, suhasm
-ms.custom: sap:secure-boot-and-uefi, csstroubleshoot
+ms.custom: sap:System Performance\Startup configuration (general, secure boot, UEFI), csstroubleshoot
 ---
 # A Trusted Platform Module (TPM) isn't recognized on some Windows 7 devices
 

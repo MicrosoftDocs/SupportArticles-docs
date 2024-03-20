@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, benarm, kledman
-ms.custom: sap:virtual-machine-creation, csstroubleshoot
+ms.custom: sap:Virtualization and Hyper-V\Virtual machine creation, csstroubleshoot
 ---
 # Supported Guest Operating Systems in Virtual PC
 

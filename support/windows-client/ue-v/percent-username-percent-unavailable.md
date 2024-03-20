@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, winciccore, Philip.Demaree
-ms.custom: sap:uev-2.1, csstroubleshoot
+ms.custom: sap:UEV\Agent\Other, csstroubleshoot
 ---
 # %username% is unavailable in Windows that has OneDrive for Business installed
 

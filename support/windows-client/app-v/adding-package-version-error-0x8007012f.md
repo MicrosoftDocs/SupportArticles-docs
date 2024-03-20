@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, pfreitas
-ms.custom: sap:package-conversion, csstroubleshoot
+ms.custom: sap:Application Virtualization\Sequencing\Package conversion, csstroubleshoot
 ---
 # Adding a package version in Microsoft Application Virtualization returns error 0x8007012F
 

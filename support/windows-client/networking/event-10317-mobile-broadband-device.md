@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:wireless-networking-and-802.1x-authentication, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\Wireless (802.1x, Bluetooth, Miracast, Mobile Broadband), csstroubleshoot
 ---
 # Event ID 10317 is logged when you turn on a mobile broadband device or resume it from sleep
 

@@ -7,7 +7,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, bobcombs, ajayps
-ms.custom: sap:hyper-v-network-virtualization-hnv, csstroubleshoot
+ms.custom: sap:Virtualization and Hyper-V\High availability virtual machines, csstroubleshoot
 ---
 # Can't create a Hyper-V virtual switch on 64-bit versions of Windows 10
 

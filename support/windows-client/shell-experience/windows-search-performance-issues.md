@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: winciccore, kaushika
-ms.custom: sap:cortana-and-search, csstroubleshoot
+ms.custom: sap:Windows Desktop and Shell Experience\Windows Search, csstroubleshoot
 adobe-target: true
 ---
 # Troubleshoot Windows Search performance

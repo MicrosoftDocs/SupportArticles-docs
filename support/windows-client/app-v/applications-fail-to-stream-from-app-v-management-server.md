@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, jeffpatt
-ms.custom: sap:management-server-issues, csstroubleshoot
+ms.custom: sap:Application Virtualization\Server issues\Management Server Issues , csstroubleshoot
 ---
 # How to troubleshoot applications failing to stream from an App-V management server
 

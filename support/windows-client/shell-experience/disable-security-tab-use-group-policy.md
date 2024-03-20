@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: timtho, kaushika
-ms.custom: sap:file-explorer/windows-explorer, csstroubleshoot
+ms.custom: sap:Windows Desktop and Shell Experience\File Explorer (app only, folders, Quick Access, File Explorer search), csstroubleshoot
 ---
 # How to remove the Security tab by using a group policy  
 

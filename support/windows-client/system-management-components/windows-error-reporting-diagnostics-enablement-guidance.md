@@ -5,7 +5,7 @@ ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.custom: sap:wer, csstroubleshoot
+ms.custom: sap:System Management Components\Windows Diagnostic Data Processor Configuration, csstroubleshoot
 localization_priority: medium
 ms.reviewer: kaushika, sangar, plingadevaru, v-lianna
 ---

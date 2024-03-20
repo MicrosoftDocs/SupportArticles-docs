@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: ksharma, kaushika
-ms.custom: sap:tpm, csstroubleshoot
+ms.custom: sap:Windows Security Technologies\BitLocker, csstroubleshoot
 ---
 # Event ID 14, 17 log for TPM command failure or non-recoverable error
 

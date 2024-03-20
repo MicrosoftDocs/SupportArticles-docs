@@ -9,7 +9,7 @@ audience: itpro
 localization_priority: medium
 manager: dcscontentpm
 ms.reviewer: kaushika
-ms.custom: sap:blue-screen/bugcheck, csstroubleshoot
+ms.custom: sap:System Performance\System Reliability (crash, errors, bug check or Blue Screen, unexpected reboot), csstroubleshoot
 ---
 
 # Advanced troubleshooting for Windows start-up issues

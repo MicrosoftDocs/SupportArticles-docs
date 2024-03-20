@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:wmi, csstroubleshoot
+ms.custom: sap:System Management Components\WMI management and troubleshooting, csstroubleshoot
 ---
 # Failed logon event generated when running remote WMI command
 

@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, warrenw, v-lianna
-ms.custom: sap:windows-tss-sha, csstroubleshoot
+ms.custom: sap:Support Tools\TSS SHA, csstroubleshoot
 ---
 # Gather information by using TSS for SQL cluster (AG/FCI) related issues
 

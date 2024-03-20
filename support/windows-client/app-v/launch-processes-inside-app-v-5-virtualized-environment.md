@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:administration, csstroubleshoot
+ms.custom: sap:Application Virtualization\Server issues\Administration, csstroubleshoot
 ---
 # How to launch processes inside the App-V 5.0 virtualized environment
 

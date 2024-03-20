@@ -6,7 +6,7 @@ manager: dcscontentpm
 author: lizgt2000
 ms.author: lizlong
 ms.topic: troubleshooting
-ms.custom: sap:kiosk-mode, csstroubleshoot
+ms.custom: sap:Windows Desktop and Shell Experience\Kiosk Mode , csstroubleshoot
 ms.reviewer: sybruckm, aaroncz
 audience: itpro
 localization_priority: medium

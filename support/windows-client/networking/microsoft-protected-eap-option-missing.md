@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, prachank
-ms.custom: sap:wireless-networking-and-802.1x-authentication, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\Wireless (802.1x, Bluetooth, Miracast, Mobile Broadband), csstroubleshoot
 ---
 # Microsoft: Protected EAP (PEAP) option is missing while creating the Wireless Profile
 

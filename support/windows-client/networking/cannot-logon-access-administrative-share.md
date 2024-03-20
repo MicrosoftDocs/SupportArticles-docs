@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:access-to-remote-file-shares-smb-or-dfs-namespace, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\Access to file shares (SMB), csstroubleshoot
 ---
 # Error when you try to access an administrative share on a Windows Vista-based computer from another Windows Vista-based computer that's a member of a workgroup: Logon unsuccessful: Windows is unable to log you on
 

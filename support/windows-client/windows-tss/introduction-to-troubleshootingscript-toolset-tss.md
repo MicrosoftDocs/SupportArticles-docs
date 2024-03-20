@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, muratka, waltere
-ms.custom: sap:windows-tss, csstroubleshoot
+ms.custom: sap:Support Tools\TSS, csstroubleshoot
 ---
 # Introduction to TroubleShootingScript toolset (TSS)
 

@@ -6,7 +6,7 @@ author: aczechowski
 ms.author: aaroncz
 manager: dcscontentpm
 ms.topic: troubleshooting
-ms.custom: sap:failure-to-install-windows-updates, csstroubleshoot
+ms.custom: sap:Installing Windows Updates, Features, or Roles\Failure to install Windows Updates, csstroubleshoot
 ms.collection: highpri
 ms.reviewer: dougeby
 audience: itpro

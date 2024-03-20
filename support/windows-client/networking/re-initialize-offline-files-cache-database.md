@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:folder-redirection-and-offline-files-and-folders-csc, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\Offline Files and Folders (CSC), csstroubleshoot
 ---
 # How to reinitialize the offline files cache and database in Windows XP
 

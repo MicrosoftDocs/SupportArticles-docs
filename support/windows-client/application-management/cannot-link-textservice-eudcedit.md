@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, shfuruka, v-jesits
-ms.custom: sap:multilingual-user-interface-mui-and-input-method-editor-ime, csstroubleshoot
+ms.custom: sap:Windows Desktop and Shell Experience\Language Packs, Multilingual User Interface (MUI) and Input (IME), csstroubleshoot
 ---
 # You cannot link TextService in Eudcedit.exe
 

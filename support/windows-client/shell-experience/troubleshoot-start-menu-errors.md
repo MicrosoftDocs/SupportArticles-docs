@@ -7,7 +7,7 @@ author: lizgt2000
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.collection: highpri
-ms.custom: sap:start-menu, csstroubleshoot
+ms.custom: sap:Windows Desktop and Shell Experience\Start Menu and Task Bar, csstroubleshoot
 ms.reviewer: kaushika
 audience: itpro
 localization_priority: medium

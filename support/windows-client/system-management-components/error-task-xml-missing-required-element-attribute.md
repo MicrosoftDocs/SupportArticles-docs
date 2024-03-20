@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:task-scheduler, csstroubleshoot
+ms.custom: sap:System Management Components\Task Scheduler, csstroubleshoot
 ---
 # Error when you use the /z switch together with the Schtasks command in Windows Vista: The task XML is missing a required element or attribute
 

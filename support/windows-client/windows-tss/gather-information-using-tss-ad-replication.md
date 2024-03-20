@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, warrenw, v-lianna
-ms.custom: sap:windows-tss-ds, csstroubleshoot
+ms.custom: sap:Support Tools\TSS DS, csstroubleshoot
 ---
 # Gather information by using TSS for Active Directory replication issues
 

@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:dst, csstroubleshoot
+ms.custom: sap:Windows Desktop and Shell Experience\DST and Timezones, csstroubleshoot
 adobe-target: true
 ---
 # Daylight saving time help and support

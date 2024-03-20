@@ -6,7 +6,7 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.reviewer: kaushika
-ms.custom: sap:servicing, csstroubleshoot
+ms.custom: sap:Windows Desktop and Shell Experience\Language Packs, Multilingual User Interface (MUI) and Input (IME), csstroubleshoot
 localization_priority: medium
 ---
 

@@ -7,7 +7,7 @@ ms.author: aaroncz
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.collection: highpri
-ms.custom: sap:no-boot-not-bugchecks, csstroubleshoot
+ms.custom: sap:System Performance\Startup or Pre-logon Reliability (crash, errors, bug check or Blue Screen), csstroubleshoot
 ms.reviewer: dougeby
 audience: itpro
 localization_priority: medium

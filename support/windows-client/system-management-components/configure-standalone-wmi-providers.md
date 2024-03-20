@@ -8,7 +8,7 @@ ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate
 keywords: WMI standalone, quota overflow, wmiprvse.exe
-ms.custom: sap:wmi, csstroubleshoot
+ms.custom: sap:System Management Components\WMI management and troubleshooting, csstroubleshoot
 ---
 
 # How to use registry entries to configure standalone WMI providers

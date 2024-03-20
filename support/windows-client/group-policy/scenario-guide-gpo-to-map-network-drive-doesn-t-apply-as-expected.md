@@ -3,7 +3,7 @@ title: "Scenario guide: GPO to map network drive doesn't apply as expected"
 description: This article introduces a troubleshooting scenario in which network drives can't be mapped by using GPOs.
 ms.topic: troubleshooting
 ms.date: 12/26/2023
-ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
+ms.custom: sap:Group Policy\Problems applying Group Policy, csstroubleshoot
 ---
 # Scenario guide: GPO to map a network drive doesn't apply as expected
 

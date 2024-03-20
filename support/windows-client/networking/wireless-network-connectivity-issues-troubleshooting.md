@@ -6,7 +6,7 @@ manager: dcscontentpm
 author: aczechowski
 ms.author: aaroncz
 ms.topic: troubleshooting
-ms.custom: sap:wireless-networking-and-802.1x-authentication, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\Wireless (802.1x, Bluetooth, Miracast, Mobile Broadband), csstroubleshoot
 ms.reviewer: dougeby
 audience: itpro
 localization_priority: medium

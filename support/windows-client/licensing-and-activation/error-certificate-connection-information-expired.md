@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, v-nehaborkar, jasone, v-lianna
-ms.custom: sap:windows-volume-activation, csstroubleshoot, ikb2lmc
+ms.custom: sap:Windows Activation\Windows activation issues, csstroubleshoot, ikb2lmc
 ---
 # Error "certificate in the connection information has expired" when accessing an AVD VM
 

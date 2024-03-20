@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:lock-screen-or-screensaver, csstroubleshoot
+ms.custom: sap:Windows Desktop and Shell Experience\Lock Screen or Screensaver, csstroubleshoot
 ---
 # Lock screen isn't displayed when you resume a Windows 10-based computer
 

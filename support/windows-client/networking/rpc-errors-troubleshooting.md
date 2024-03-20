@@ -5,7 +5,7 @@ ms.date: 12/26/2023
 ms.topic: troubleshooting
 manager: dcscontentpm
 ms.collection: highpri
-ms.custom: sap:tcp/ip-communications, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Protocol, NLA, WinHTTP), csstroubleshoot
 ms.reviewer: kaushika, v-tappelgate
 audience: itpro
 localization_priority: medium

@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:issues-with-scanning, csstroubleshoot
+ms.custom: sap:Print, Fax, and Scan\Windows Fax and Scan (Client), csstroubleshoot
 ---
 # Scanning using a scanner may cause a TWAIN aware application to hang
 

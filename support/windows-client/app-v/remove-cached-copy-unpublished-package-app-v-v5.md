@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, gautama
-ms.custom: sap:package-conversion, csstroubleshoot
+ms.custom: sap:Application Virtualization\Sequencing\Package conversion, csstroubleshoot
 ---
 # How to remove a cached copy of an unpublished package in Microsoft App-V v5
 

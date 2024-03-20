@@ -11,7 +11,7 @@ ms.service: windows-client
 ms.subservice: networking
 localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate
-ms.custom: sap:access to file shares (SMB), csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\Access to file shares (SMB), csstroubleshoot
 keywords: error 2250, service can't start, LanmanWorkstation service
 ---
 

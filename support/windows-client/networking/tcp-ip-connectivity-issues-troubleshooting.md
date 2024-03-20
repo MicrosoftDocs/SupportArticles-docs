@@ -7,7 +7,7 @@ author: dansimp
 ms.author: dansimp
 manager: dcscontentpm
 ms.collection: highpri
-ms.custom: sap:tcp/ip-communications, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\TCP/IP Connectivity (TCP Protocol, NLA, WinHTTP), csstroubleshoot
 ms.reviewer: dansimp
 audience: itpro
 localization_priority: medium

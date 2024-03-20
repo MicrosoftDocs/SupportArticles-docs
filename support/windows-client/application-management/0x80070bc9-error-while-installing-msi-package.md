@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:msi, csstroubleshoot
+ms.custom: sap:Application Technologies and Compatibility\MSI and MSIX, csstroubleshoot
 ---
 # "HRESULT: 0x80070BC9" error message while you're installing an MSI package during Windows setup or hotfix installation
 
