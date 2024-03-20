@@ -50,4 +50,4 @@ Update [dbo].[SettingValues] set value = '<new-connection-string>' where memberI
 
 If the error still occurs after you run the script, restart the HPC management service, and then try again to select that reporting database in HPC Cluster Manager.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

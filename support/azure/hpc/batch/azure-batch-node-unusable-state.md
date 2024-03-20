@@ -314,4 +314,4 @@ When you create the pool, you can specify multiple managed identities. If the ma
 
 To resolve this issue, re-create the pool to include the correct managed identity (configured in the auto-storage account) that's defined in the node identity reference. For more information about how to use Batch pool-managed identity, see [Set up managed identity in your batch pool](use-managed-identities-azure-batch-account-pool.md#set-up-managed-identity-in-your-batch-pool).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

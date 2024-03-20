@@ -9,7 +9,7 @@ ms.reviewer: hclvteam, v-weizhu
 
 This article provides a solution for a "Client secret key is expired" error that occurs when you deploy or terminate virtual machines (VMs).
 
-[!INCLUDE [Feedback](../../includes/feedback.md)]
+[!INCLUDE [Feedback](../../../includes/feedback.md)]
 
 ## Symptoms
 
@@ -46,4 +46,4 @@ To resolve this issue, reset the client secret keys in the Azure portal.
 
 - [Using Service Principal](/azure/cyclecloud/how-to/service-principals)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

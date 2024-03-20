@@ -207,4 +207,4 @@ If your Batch account is located in the following regions, to use the pool witho
 
 Once you enable the simplified compute node communication, [create a simplified compute node communication pool without public IP addresses](/azure/batch/simplified-node-communication-pool-no-public-ip). It will have the same functionalities as the pool without public IP addresses, but the simplified compute node communication can support more regions.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

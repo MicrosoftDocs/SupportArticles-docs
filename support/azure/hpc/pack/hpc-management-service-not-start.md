@@ -79,4 +79,4 @@ To resolve the issue, fix the instances in the wrong state. To do this, follow t
 
 4. Restart the HPC SDM Store Service and HPC Management Service.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

@@ -31,4 +31,4 @@ To identify the Batch resources that are linked to a specific network resource, 
 
 :::image type="content" source="media/azure-batch-creates-network-resources/batch-network-resources-tags.png" alt-text="Screenshot of Tags information that contains information about the batch account and pool." lightbox="media/azure-batch-creates-network-resources/batch-network-resources-tags.png"  border="true":::
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

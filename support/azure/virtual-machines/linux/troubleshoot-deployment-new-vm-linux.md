@@ -376,7 +376,7 @@ Yes. You can add an existing classic VM to a new or existing Availability Set. F
 
 ## Next steps
 
-- [Supportability of adding Azure VMs to an existing availability set](../virtual-machines-windows/virtual-machines-availability-set-supportability.md)
+- [Supportability of adding Azure VMs to an existing availability set](../virtual-machines/windows/virtual-machines-availability-set-supportability.md)
 - [Redeploy Linux virtual machine to new Azure node](redeploy-to-new-node-linux.md)
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

@@ -74,4 +74,4 @@ After you complete the configurations above, the Batch nodes in the pool can acc
 
 5. Run the Batch jobs with the newly created Batch pool.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

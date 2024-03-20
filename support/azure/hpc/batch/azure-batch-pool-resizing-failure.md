@@ -267,4 +267,4 @@ This error only happens in [user subscription pool allocation mode](/azure/batch
 
 For more information, see [Grant access to the key vault manually](/azure/batch/batch-account-create-portal#grant-access-to-the-key-vault-manually).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

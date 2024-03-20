@@ -154,7 +154,7 @@ landingContent:
           - text: Performance diagntroubleshoot-performance-virtual-machine-linux-windowsostics in the Azure Portal
             url: performance-diagnostics.md
           - text: Troubleshoot performance issues through Monitoring
-            url: ../virtual-machines-linux/troubleshoot-performance-virtual-machine-linux-windows.md
+            url: ../virtual-machines/linux/troubleshoot-performance-virtual-machine-linux-windows.md
           - text: Troubleshoot high-CPU issues on Azure Windows virtual machines
             url: troubleshoot-high-cpu-issues-azure-windows-vm.md 
           - text: Azure VM is unavailable for 15 minutes

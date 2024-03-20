@@ -695,7 +695,7 @@ For more information, see [Azure Instance Metadata service](/azure/virtual-machi
 ## Next steps
 
 * The main serial console Windows documentation page is located [here](serial-console-windows.md).
-* The serial console is also available for [Linux](../virtual-machines-linux/serial-console-linux.md) VMs.
+* The serial console is also available for [Linux](../virtual-machines/linux/serial-console-linux.md) VMs.
 * Learn more about [boot diagnostics](boot-diagnostics.md).
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

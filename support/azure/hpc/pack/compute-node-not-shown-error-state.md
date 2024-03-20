@@ -29,4 +29,4 @@ Correct certificate mismatches if there are any. For more information, see [Mana
 
 To resolve network issues with the error above, configure the Network Security Group rules and firewall rules. For more information, see the "Configure Network Security Group for Azure virtual network" section in [Burst to Azure IaaS VM from an HPC Pack Cluster](/powershell/high-performance-computing/hpcpack-burst-to-azure-iaas-nodes).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

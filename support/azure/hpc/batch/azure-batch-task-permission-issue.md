@@ -57,4 +57,4 @@ To resolve this issue, create a manual SAS with both "Read" and "List" permissio
 
 :::image type="content" source="media/azure-batch-task-permission-denied/resource-file-sas-url.png" alt-text="Screenshot that shows options to manually enter the SAS value." lightbox="media/azure-batch-task-permission-denied/resource-file-sas-url.png":::
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

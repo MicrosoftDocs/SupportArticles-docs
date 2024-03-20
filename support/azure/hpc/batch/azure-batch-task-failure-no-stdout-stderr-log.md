@@ -33,4 +33,4 @@ If it's hard to identify the cause based on the exit code, perform more debuggin
 
 1. Manually run the command or script used to run the failed task for debugging.  
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

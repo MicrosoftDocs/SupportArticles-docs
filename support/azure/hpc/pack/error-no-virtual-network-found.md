@@ -45,4 +45,4 @@ If you want to limit permissions to specific resource groups, you must grant the
 - [Access control for Azure resources in HPC Pack clusters](/powershell/high-performance-computing/hpcpack-azure-access-permissions)
 - [Configure the cluster to support deployments of Azure Iaas compute nodes](/powershell/high-performance-computing/hpcpack-burst-to-azure-iaas-nodes#step-1-configure-the-cluster-to-support-deployments-of-azure-iaas-compute-nodes)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

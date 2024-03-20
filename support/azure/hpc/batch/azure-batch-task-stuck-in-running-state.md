@@ -36,4 +36,4 @@ Since the task is being executed and there is no error, it's an application issu
     - Collect the [Batch node agent log files](/azure/batch/batch-pool-node-error-checking#node-agent-log-files) for the node and upload them via the Azure portal, Batch Explorer, or an [API](/rest/api/batchservice/compute-node/upload-batch-service-logs).
     - Keep the Batch node that runs the stuck task if you can.  
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

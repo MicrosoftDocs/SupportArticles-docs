@@ -50,6 +50,6 @@ azure vm redeploy --resource-group myResourceGroup --vm-name myVM
 
 ## Next steps
 
-If you are having issues connecting to your VM, you can find specific help on [troubleshooting SSH connections](troubleshoot-ssh-connection.md) or [detailed SSH troubleshooting steps](detailed-troubleshoot-ssh-connection.md). If you cannot access an application running on your VM, you can also read [application troubleshooting issues](../virtual-machines-windows/troubleshoot-app-connection.md).
+If you are having issues connecting to your VM, you can find specific help on [troubleshooting SSH connections](troubleshoot-ssh-connection.md) or [detailed SSH troubleshooting steps](detailed-troubleshoot-ssh-connection.md). If you cannot access an application running on your VM, you can also read [application troubleshooting issues](../virtual-machines/windows/troubleshoot-app-connection.md).
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

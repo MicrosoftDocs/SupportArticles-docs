@@ -229,4 +229,4 @@ After you create and start the VM, connect to the VM by using Secure Shell (SSH)
 
 - [Run your first batch job in the Azure portal](/azure/batch/quick-create-portal)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

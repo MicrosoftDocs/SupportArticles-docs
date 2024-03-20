@@ -30,4 +30,4 @@ The product team is working on a solution for this issue. We intend to deploy a 
 
 To handle a suspended subscription, see [Reactivate a disabled Azure subscription](/azure/cost-management-billing/manage/subscription-disabled).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

@@ -68,4 +68,4 @@ Follow these steps to add a Contributor role to the subscription:
 1. Select **Azure role assignments** > **Add role assignments**, and then select **Subscription** and **Contributor** on the menu.
 1. It might take one to two minutes for the new assignment to be created. After it's created, make sure to verify the credential in CycleCloud.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

@@ -68,4 +68,4 @@ To test locally how to burst to an IaaS VM, follow these steps:
 
 1. Follow the steps to [create a new job](/powershell/high-performance-computing/create-a-new-job) in the HPC Cluster Manager. When you reach the **Resource Selection** section, select **LinuxNodes** on the **Available node groups** list, and then select the **Add** button to move the item to the **Selected node groups** list. After you submit the new job, the Linux node will be provisioned correctly.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

@@ -80,6 +80,6 @@ Follow these steps to add the user account and apply the necessary permissions.
 
 In the HPC Cluster Manager, go to the HPC management console, and then select an item in the **Charts and Reports** pane. The dialog box error message about a denied EXECUTE permission shouldn't appear anymore.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
 
 [run-script]: /powershell/high-performance-computing/step-1-prepare-the-remote-database-servers#BKMK_Script

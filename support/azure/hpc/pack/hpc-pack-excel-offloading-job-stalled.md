@@ -64,7 +64,7 @@ Typically, there are two modes that you can use to run an Excel offloading job. 
 
 Job environment variables aren't set automatically. Therefore, you have to set them in the Excel service registration file. For more information about offload running modes, see [Job or task environment variables for console or remote desktop sessions][env-var-for-local-remote-console].
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
 
 [offload-to-cluster]: /powershell/high-performance-computing/excel-offloading-to-azure-cluster
 [env-var-for-local-remote-console]: /previous-versions/windows/it-pro/windows-hpc-server-2008R2/gg286970(v=ws.10)#job-or-task-environment-variables-for-console-or-remote-desktop-sessions

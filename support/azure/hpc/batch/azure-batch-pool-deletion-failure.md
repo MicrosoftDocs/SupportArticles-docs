@@ -81,6 +81,6 @@ The resources that you created have a dependency on a resource that was created 
 
 Remove the batch pool dependencies on the resources that are used outside the batch pool. For this example, you would [disassociate the NSG from the subnet](/azure/virtual-network/manage-network-security-group#associate-or-dissociate-a-network-security-group-to-or-from-a-subnet-or-network-interface). After you make this change, the batch service finishes deleting the batch pool after about 20 minutes.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
 
 [res-lock]: /azure/azure-resource-manager/management/lock-resources
