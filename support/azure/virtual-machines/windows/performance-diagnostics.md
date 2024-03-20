@@ -166,7 +166,7 @@ You can select an insight to view more details about the affected resources, sug
 
 ### Download and review the full performance diagnostics report
 
-You can use the **Download report** button to download an HTML report that contains additional rich diagnostics information, such as storage and network configuration, performance counters, traces, list of processes, and logs. The content depends on the selected analysis. For advanced troubleshooting, the report may contain additional information and interactive charts that are related to high CPU usage, high disk usage, and processes that consume excessive memory. For more information about the performance diagnostics report, see [Windows](how-to-use-perfinsights.md#review-the-diagnostics-report) or [Linux](how-to-use-perfinsights-linux.md#review-the-diagnostics-report).
+You can use the **Download report** button to download an HTML report that contains additional rich diagnostics information, such as storage and network configuration, performance counters, traces, list of processes, and logs. The content depends on the selected analysis. For advanced troubleshooting, the report may contain additional information and interactive charts that are related to high CPU usage, high disk usage, and processes that consume excessive memory. For more information about the performance diagnostics report, see [Windows](how-to-use-perfinsights.md#review-the-diagnostics-report) or [Linux](../linux/how-to-use-perfinsights-linux.md#review-the-diagnostics-report).
 
 > [!NOTE]
 > Performance diagnostics reports can be downloaded from the **Performance Diagnostics** blade within 30 days after they are created. After 30 days, you may get an error when you download a report from the **Performance Diagnostics** blade. To get a report after 30 days, go to the storage account and download it from a binary large object (BLOB) container that's named azdiagextnresults. You can view the storage account information by using the **Settings** button on the toolbar.
@@ -204,7 +204,7 @@ When you open a support ticket with Microsoft, it is important to share the perf
 You may share a link to the reports compressed file by using Shared Access Signatures. To do this, follow these steps:
 
 1. In the Azure portal, browse to the storage account in which the diagnostics data is stored.
-1. Select **Containers** under the **Data Storage** section.”.
+1. Select **Containers** under the **Data Storage** section.".
 1. Select the **azdiagextnresults** container.
 1. Select the Performance diagnostics output compressed file that you want to share.
 1. On the **Generate SAS** tab, select the criteria for sharing.
