@@ -1265,6 +1265,8 @@ items:
       href: ./high-availability/move-server-cluster-to-another-domain.md
     - name: Provider load failure
       href: ./high-availability/provider-load-failure.md
+    - name: Storage tests on a failover cluster might not discover all shared LUNs
+      href: ./high-availability/failover-cluster-storage-validation-tests-dont-discover-all-shared-luns.md
     - name: Troubleshooting for Guest Cluster nodes in Hyper-V not create or join
       href: ./high-availability/guest-cluster-nodes-in-hyper-v-not-create-or-join.md
     - name: Unable to join a node into a cluster
