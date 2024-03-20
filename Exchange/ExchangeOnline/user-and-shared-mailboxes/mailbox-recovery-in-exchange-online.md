@@ -12,6 +12,7 @@ ms.custom:
   - Exchange Online
   - CSSTroubleshoot
   - has-azure-ad-ps-ref
+  - azure-ad-ref-level-one-done
 ms.reviewer: v-six
 appliesto: 
   - Exchange Online
@@ -47,7 +48,9 @@ If Directory Synchronization is in place, you can search within **Active Directo
 
 ### Microsoft Entra user Account Status (Managed Account (No DirSync))
 
-Connect to Azure Active Directory PowerShell and verify the Online Account Status:
+Connect to Azure Active Directory PowerShell and verify the Online Account Status.
+
+[!INCLUDE [Azure AD PowerShell deprecation note](~/../Exchange/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
 
 1. Install [Azure AD module](/previous-versions/azure/jj151815(v=azure.100)).
 2. Open the Microsoft Online Services Module (shortcut from the desktop).

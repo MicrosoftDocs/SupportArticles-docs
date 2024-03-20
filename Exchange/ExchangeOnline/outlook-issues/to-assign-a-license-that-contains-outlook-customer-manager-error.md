@@ -11,6 +11,7 @@ ms.custom:
   - Exchange Online
   - CSSTroubleshoot
   - has-azure-ad-ps-ref
+  - azure-ad-ref-level-one-done
 ms.reviewer: tasitae, v-six
 appliesto: 
   - Outlook for Microsoft 365
@@ -36,7 +37,9 @@ This issue occurs because Outlook Customer Manager is enabled for the new user. 
 
 ## Workaround
 
-To work around this issue, disable Outlook Customer Manager and Exchange Online for the Microsoft 365 account. To do this, follow these steps:
+To work around this issue, disable Outlook Customer Manager and Exchange Online for the Microsoft 365 account. To do this, follow these steps.
+
+[!INCLUDE [Azure AD PowerShell deprecation note](~/../Exchange/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
 
 1. Connect to Exchange Online by using remote PowerShell. For more information, see [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps&preserve-view=true).
 2. Run the following command to retrieve the Microsoft 365 AccountSkuID:

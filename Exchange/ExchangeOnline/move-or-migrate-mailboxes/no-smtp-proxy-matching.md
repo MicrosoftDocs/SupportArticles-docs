@@ -10,6 +10,7 @@ ms.custom:
   - Exchange Online
   - CSSTroubleshoot
   - has-azure-ad-ps-ref
+  - azure-ad-ref-level-one-done
 localization_priority: Normal
 search.appverid: 
   - MET150
@@ -100,6 +101,8 @@ To see this error, you have to connect to [Microsoft 365 PowerShell](/office365/
 (Get-MsolUser -UserPrincipalName <AffectedUserUPN>).Errors.ErrorDetail.ObjectErrors.ErrorRecord.ErrorDescription
 (Get-AzureADUser -ObjectId <AffectedUserUPN>).Errors.ErrorDetail.ObjectErrors.ErrorRecord.ErrorDescription
 ```
+
+[!INCLUDE [Azure AD PowerShell deprecation note](~/../Exchange/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
 
 For more information, refer to [You see validation errors for users in the Microsoft 365 portal or in the Azure Active Directory module for Windows PowerShell](https://support.microsoft.com/help/2741233/you-see-validation-errors-for-users-in-the-office-365-portal-or-in-the).  
 

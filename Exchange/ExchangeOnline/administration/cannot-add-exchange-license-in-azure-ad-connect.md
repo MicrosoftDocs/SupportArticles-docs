@@ -11,6 +11,7 @@ ms.custom:
   - Exchange Online
   - CSSTroubleshoot
   - has-azure-ad-ps-ref
+  - azure-ad-ref-level-one-done
 ms.reviewer: kerbo, v-six
 appliesto: 
   - Exchange Online
@@ -37,6 +38,8 @@ There are two Windows Azure Active Directory modules to administer Microsoft Ent
 
   - [Install-Module AzureAD](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0&preserve-view=true)
   - [Connect-AzureAD](/powershell/module/Azuread/?view=azureadps-2.0&preserve-view=true)
+
+[!INCLUDE [Azure AD PowerShell deprecation note](~/../Exchange/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
 
 This issue can occur under different circumstances.
 

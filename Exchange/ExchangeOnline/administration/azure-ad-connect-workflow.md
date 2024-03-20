@@ -11,6 +11,7 @@ ms.custom:
   - Exchange Online
   - CSSTroubleshoot
   - has-azure-ad-ps-ref
+  - azure-ad-ref-level-one-done
 ms.reviewer: kerbo, v-six
 appliesto: 
   - Exchange Online
@@ -47,6 +48,8 @@ It's important to understand the flow of data from on-premises to the cloud in E
 3. If there are no issues, the change is populated into the Target Data Store and Microsoft Entra ID. At this point, you can use the [Get-MSOLUser](/powershell/module/msonline/get-msoluser) command and other Azure commands against the object to view them in Microsoft Entra ID.
 
     If a problem occurs between the Target Connector Space and Microsoft Entra ID, you may have to remove the object from Microsoft Entra ID by using the [Remove-MsolUser](/powershell/module/msonline/remove-msoluser) cmdlet. You can't force Microsoft Entra ID to reevaluate the object as you can in MMSSPP.
+
+    [!INCLUDE [Azure AD PowerShell deprecation note](~/../Exchange/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
 
 4. Finally, the data synchronizes to Exchange, where the object exists as a Mailbox, MailUser, Resource, and so on. It's known as **Forward Sync**. If there's a problem on an object between Microsoft Entra ID and Exchange Online (represented by validation errors), ask Microsoft to submit the object for a Forward Sync from Microsoft Entra ID to Exchange Online to force this action.
 

@@ -12,6 +12,7 @@ ms.custom:
   - Exchange Hybrid
   - CSSTroubleshoot
   - has-azure-ad-ps-ref
+  - azure-ad-ref-level-one-done
 ms.reviewer: haembab, ninob, meerak, v-trisshores
 appliesto:
   - Exchange Online
@@ -67,6 +68,8 @@ Choose one of the following options:
 - Assign a different internal URL to the existing enterprise app. For more information, see [Add an on-premises application](/azure/active-directory/app-proxy/application-proxy-add-on-premises-application) and [Set-AzureADApplicationProxyApplication](/powershell/module/azuread/set-azureadapplicationproxyapplication).
 
 - Remove the existing enterprise app. For more information, see [Remove-AzureADApplicationProxyApplication](/powershell/module/azuread/remove-azureadapplicationproxyapplication).
+
+[!INCLUDE [Azure AD PowerShell deprecation note](~/../Exchange/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
 
 ### Resolution for Cause 2
 
