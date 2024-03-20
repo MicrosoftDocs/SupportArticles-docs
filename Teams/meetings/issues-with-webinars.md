@@ -15,7 +15,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 03/15/2024
+ms.date: 03/19/2024
 ---
 # Issues that affect Teams webinars
 
