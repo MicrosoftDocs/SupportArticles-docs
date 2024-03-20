@@ -30,7 +30,7 @@ You use the Validate a Configuration Wizard to run a set of validation tests on 
 
 ## Cause
 
-The storage validation tests that the wizard runs select only shared LUNs. A LUN is determined to be shared if its disk signatures, device identification number (page 0x83), and storage array serial number are the same on all cluster nodes. When you use site-to-site mirroring, a LUN in one site (site A) has a mirrored LUN in another site (site B). These LUNs have the same disk signatures and device identification numbers (page 0x83). However, the storage array serial numbers are different. Because of the difference, the wizard doesn't recognize that the LUNs are shared.
+The storage validation tests that the wizard runs select only shared LUNs. For a shared LUN, the LUN's disk signatures, device identification number (page 0x83), and storage array serial number are the same on all cluster nodes. When you use site-to-site mirroring, a LUN in one site (site A) has a mirrored LUN in another site (site B). These LUNs have the same disk signatures and device identification numbers (page 0x83). However, the storage array serial numbers are different. Because of the difference, the wizard doesn't recognize that the LUNs are shared.
 
 ## Resolution
 
