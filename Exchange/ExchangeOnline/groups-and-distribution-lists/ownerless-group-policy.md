@@ -68,8 +68,6 @@ Yes. The user will receive notifications for all the ownerless groups of which t
 
 Yes. In the policy for an ownerless group, when you specify who can receive ownership notifications, a premium plan is required to create a security group that's used to allow or block the policy.
 
-:::image type="content" source="media/ownerless-group-policy/premium-plan-required.png" alt-text="Screenshot of a warning that requires you to upgrade to a premium plan when you specify who can receive ownership notifications.":::
-
 ## Issue: Actionable buttons (Yes or No) don't appear in a notification
 
 The issue occurs for the following reasons:
