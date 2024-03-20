@@ -15,7 +15,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 03/18/2024
+ms.date: 03/19/2024
 ---
 # Issues that affect meeting recordings
 
