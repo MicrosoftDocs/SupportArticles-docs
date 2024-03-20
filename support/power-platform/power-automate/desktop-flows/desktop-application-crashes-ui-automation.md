@@ -2,8 +2,8 @@
 title: Desktop application crashes due to the UI automation of Power Automate for desktop
 description: Provides a workaround for an issue where the execution of a UI automation action using Power Automate for desktop causes the desktop application being interacted with to crash.
 ms.reviewer: nimoutzo
-ms.date: 03/19/2024
-ms.subservice: power-automate-desktop-flows
+ms.date: 03/20/2024
+ms.custom: sap:Desktop flows\UI or Browser automation issues
 ---
 # A desktop application crashes due to the execution of UI automation of Power Automate for desktop
 
