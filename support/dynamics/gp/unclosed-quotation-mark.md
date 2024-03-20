@@ -3,7 +3,8 @@ title: Unclosed quotation mark
 description: Provides a solution to an error that occurs when you run the Historical Aged Trial Balance report for Payables Management.
 ms.reviewer: theley, kenhub, cwaswick
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # "Unclosed quotation mark after the character string" Error message when running the Historical Aged Trial Balance for Payables Management in Microsoft Dynamics GP
 

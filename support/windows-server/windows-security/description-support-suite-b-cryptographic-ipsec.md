@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, clayse
-ms.custom: sap:certificates-and-public-key-infrastructure-pki, csstroubleshoot
+ms.custom: sap:internet-protocol-security-ipsec, csstroubleshoot
 ---
 # Description of the support for Suite B cryptographic algorithms that was added to IPsec
 

@@ -3,7 +3,8 @@ title: Do you want to add this code error when saving Analytical Accounting Tran
 description: Describes a problem where the AAG00401 table is not updated when you save an Analytical Accounting transaction dimension code in Microsoft Dynamics GP. A resolution is provided.
 ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Analytical Accounting
 ---
 # "Do you want to add this code" error when saving an Analytical Accounting Transaction Dimension Code in Microsoft Dynamics GP
 

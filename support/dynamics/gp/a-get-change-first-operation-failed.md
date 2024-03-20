@@ -3,7 +3,8 @@ title: A Get/Change First Operation failed
 description: Provides a solution to an error that occurs when you sign into Microsoft Dynamics GP after you've migrated to Microsoft SQL Server 2005 from Microsoft SQL Server 2000 with a different server name.
 ms.reviewer: theley, v-jomcc
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # "A Get/Change First Operation on Table coProcess failed Accessing SQL Data" error message when you sign into Microsoft Dynamics GP after moving from one server to another
 
