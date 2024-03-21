@@ -94,7 +94,7 @@
   - name: Linux VM Agent
     items:
     - name: Azure Linux VM Agent overview
-      href: /azure/virtual-machines/extensions/agent-linux?context=/troubleshoot/azure/virtual-machines/context/context
+      href: /azure/virtual-machines/extensions/agent-linux?context=/troubleshoot/azure/virtual-machines/linux/context/context
     - name: Troubleshoot Linux VM agent
       href: linux-azure-guest-agent.md
     - name: Extension status isn't reported
@@ -114,16 +114,16 @@
   - name: General issues
     items:
     - name: Issues with Python 3-enabled Linux systems
-      href: /azure/virtual-machines/extensions/issues-using-vm-extensions-python-3?context=/troubleshoot/azure/virtual-machines/context/context
+      href: /azure/virtual-machines/extensions/issues-using-vm-extensions-python-3?context=/troubleshoot/azure/virtual-machines/linux/context/context
 
 - name: Azure disk encryption
   items:
   - name: Overview
-    href: /azure/virtual-machines/linux/disk-encryption-overview?context=/troubleshoot/azure/virtual-machines/context/context
+    href: /azure/virtual-machines/linux/disk-encryption-overview?context=/troubleshoot/azure/virtual-machines/linux/context/context
   - name: Troubleshoot
-    href: /azure/virtual-machines/linux/disk-encryption-troubleshooting?context=/troubleshoot/azure/virtual-machines/context/context
+    href: /azure/virtual-machines/linux/disk-encryption-troubleshooting?context=/troubleshoot/azure/virtual-machines/linux/context/context
   - name: FAQ
-    href: /azure/virtual-machines/linux/disk-encryption-faq?context=/troubleshoot/azure/virtual-machines/context/context
+    href: /azure/virtual-machines/linux/disk-encryption-faq?context=/troubleshoot/azure/virtual-machines/linux/context/context
 
 - name: Linux administration
   items:

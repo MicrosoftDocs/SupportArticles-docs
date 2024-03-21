@@ -19,7 +19,6 @@
     href: virtual-machines/linux/welcome-virtual-machines-linux.yml
   - name: Windows Virtual Machines
     href: virtual-machines/windows/welcome-virtual-machines-windows.yml
-    href: cloud-services/extended/welcome-cloud-services-extended.yml
   - name: Linux Virtual Machines
     href: virtual-machines/linux/welcome-virtual-machines-linux.yml
   - name: Windows Virtual Machines

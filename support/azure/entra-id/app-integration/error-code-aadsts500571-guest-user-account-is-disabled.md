@@ -5,8 +5,8 @@ author: custorod
 ms.author: custorod
 ms.reviewer: azureidcic, v-leedennis
 editor: v-jsitser
-ms.service: active-directory
-ms.subservice: app-mgmt
+ms.service: entra-id
+ms.subservice: enterprise-apps
 ms.topic: troubleshooting-problem-resolution
 ms.date: 11/02/2023
 ---

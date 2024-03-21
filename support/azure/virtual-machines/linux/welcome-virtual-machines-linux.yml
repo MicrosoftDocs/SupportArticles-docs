@@ -132,7 +132,7 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Azure Linux VM Agent overview
-            url: /azure/virtual-machines/extensions/agent-linux?context=/troubleshoot/azure/virtual-machines/context/context
+            url: /azure/virtual-machines/extensions/agent-linux?context=/troubleshoot/azure/virtual-machines/linux/context/context
           - text: Troubleshoot Linux VM agent
             url: linux-azure-guest-agent.md
           - text: Extension status isn't reported
