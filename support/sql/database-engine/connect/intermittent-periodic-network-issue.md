@@ -45,7 +45,39 @@ Some causes, such as antivirus, can be difficult to prove, but are still common.
 
 ### Collect network traces on the client and server
 
-[Collect network traces](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/Collect-a-Network-Trace) on the client and server.
+- On Windows machines, collect network traces using *SQLTrace.ps1*.
+
+  Select the download link on the [SQL Trace home page](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SQLTRACE) and unzip to a folder, such as *C:\MSDATA*.
+
+  Follow these steps to prepare and take the trace. Steps 1 and 2 only need to be done once.
+
+  1. Open the *SQLTrace.ini* file and turn off the following settings:
+
+     BIDTrace=no, AuthTrace=no, and EventViewer=no
+
+  1. Save the file.
+  1. Open PowerShell as an Administrator and change directory to the folder containing *SQLTrace.ps1*.
+
+     ```powershell
+     CD C:\MSDATA
+     ```
+
+  1. Start the trace collection.
+
+     ```powershell
+     .\SQLTrace.ps1 -start
+     ```
+
+  1. Reproduce the issue or wait for the error to occur.
+  1. Stop the trace.
+
+     ```powershell
+     .\SQLTrace.ps1 -stop
+     ```
+
+  1. Zip the output folder and upload to Microsoft.
+
+- On non-Windows computers, use TCPDUMP or WireShark to collect a packet capture.
 
 ### Run SQL Server Network Analyzer
 
@@ -74,28 +106,77 @@ View the end of the matched conversations. If one has many retransmitted packets
 
 You might also see the client report indicating that the server resets the conversation, and the server report indicating that the client resets the conversation. This is due to a bad switch or router closing the connection from the middle, and they can sometimes be configured to do so if they detect that the connection has been idle for a while - often ignoring Keep-Alive packets.
 
+For more information about dropped connections, see:
+
+- [Connection Dropped in both Directions](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/Connection-Dropped-in-both-Directions)
+- [Connection Dropped in one Direction](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/Connection-Dropped-in-one-Direction)
+- [Connection Dropped in one Direction One Sided Trace](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/Connection-Dropped-in-one-Direction-One-Sided-Trace)
+
 #### Both the server trace and the client trace agree the issue is on the client
 
 If both traces show a delay or no response on the client, or if the client issues an ACK+RESET after acknowledging a server response, or otherwise, closes the connection early during the login sequence, you need to take a BID trace and a NETSH trace on the client to look inside the TCP/IP stack and what the driver is thinking. This is common if the antivirus or other network filter drivers delay receiving the packet or sending the reply. Connection time-outs could also be due to a slow DNS response or slow security API that was called before the initial SYN packet was sent over the wire.
 
-Check the ephemeral ports report and make sure the client isn't running out of outbound ports.
+Check SQL Network Analyzer's ephemeral ports report and make sure the client isn't running out of outbound ports.
 
 If the client has a long delay before sending the SYN packet, you may see a pattern showing only the TCP 3-way opening handshake, followed immediately, or sometimes after sending the PreLogin packet, by an ACK+FIN originating from the client.
 
-The suggested `NETSH` command for second-level isolation:
+##### Collect a Network Trace and BID Trace to isolate client issues on Windows
 
-> [!NOTE]
-> It has a circular buffer, so it must be terminated immediately after an error occurs.
+1. Open the *SQLTrace.ini* file and turn the following settings back on:
 
-```cmd
-NETSH TRACE START SCENARIO=NETCONNECTION CAPTURE=YES TRACEFILE=c:\temp\mycap.etl FILEMODE=CIRCULAR MAXSIZE=2048 PACKETTRUNCATEBYTES=180
-```
+   BIDTrace=Yes, AuthTrace=Yes, and EventViewer=Yes
 
-Suggested BID trace commands can be found in the **Cookbook** section. Remember to run the `NETSH` trace and the `BID` trace at the same time.
+1. Configure the `BIDProviderList` in *SQLTrace.ini* to match the driver your application is using.
+
+   `.NET System.Data.SqlClient` is enabled by default. If that's not the driver you're using, disable `BIDProviderList` by adding # to the front of the line and remove it from the beginning of the ODBC or OLEDB list. This will capture all supported drivers of that type. For more information, see [INI Configuration](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SQLTRACE#ini-configuration)。
+1. Save the file.
+1. Open PowerShell as an Administrator and change directory to the folder containing *SQLTrace.ps1*.
+
+   ```powershell
+   CD C:\MSDATA
+   ```
+
+1. Initialize the BID Tracing registry, if collecting BID traces.
+
+   > [!NOTE]
+   > BID Tracing is enabled by default.
+
+   ```powershell
+   .\SQLTrace.ps1 -setup
+   ```
+
+1. Restart the service or application you're tracing.
+
+   For some applications, such as SSIS packages, a new instance of DTEXEC or ISServerExec are launched when the package is run, so a restart doesn't make sense.
+
+1. Start the trace collection.
+
+   ```powershell
+   .\SQLTrace.ps1 -start
+   ```
+
+1. Reproduce the issue or wait for the error to occur.
+1. Stop the trace.
+
+   ```powershell
+   .\SQLTrace.ps1 -stop
+   ```
+
+1. Zip the output folder and upload to Microsoft.
+
+For tracing other Microsoft SQL Server drivers, see the following articles. Perform with a network trace.
+
+- [Linux and Mac ODBC Driver BID Tracing](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/Collect-a-SQL-Driver-BID-Trace#linux-and-mac-odbc-driver-bid-tracing)
+- [Collect a .NET Core SQL Driver Trace](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/Collect-a-.NET-Core-SQL-Driver-Trace)
+- [Downloading PerfView](https://github.com/Microsoft/perfview/blob/main/documentation/Downloading.md)
+- [Use PerfView to collect trace log](/sql/connect/ado-net/enable-eventsource-tracing#use-perfview-to-collect-trace-log)
+- [Microsoft JDBC Driver](/sql/connect/jdbc/tracing-driver-operation)
+
+For tracing 3rd-party Microsoft SQL Server drivers, please consult the vendor documentation.
 
 #### Both the server trace and the client trace agree the issue is on the server
 
-If both traces show a delay or no response on the server, or if the server closes the connection at an unexpected point in the login sequence, or if the server closes many connections at the same time, this indicates there are some problems on the server. The most likely causes are poor server performance, high MAXDOP, and large parallel queries and blocking. These can cause thread starvation, preventing a login request from being handled promptly, especially if many connection time-outs end at the same time and the LoginAck column shows "Late." The SQL Server *ERRORLOG* file may show IO operations taking longer than 15 seconds, which is another indicator of performance issues. In the network trace, you might also see many conversations in the Reset report with six frames or fewer, indicating the TCP 3-way handshake may not have been completed. For more information, see [Collect the Connectivity Ring Buffer](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/Collect-the-Connectivity-Ring-Buffer).
+If both traces show a delay or no response on the server, or if the server closes the connection at an unexpected point in the login sequence, or if the server closes many connections at the same time, this indicates there are some problems on the server. The most likely causes are poor server performance, high MAXDOP, and large parallel queries and blocking. These can cause thread starvation, preventing a login request from being handled promptly, especially if many connection timeouts end at the same time and the LoginAck column shows "Late." The SQL Server *ERRORLOG* file may show IO operations taking longer than 15 seconds, which is another indicator of performance issues. In the network trace, you might also see many conversations in the Reset report with six frames or fewer, indicating the TCP 3-way handshake may not have been completed. For more information, see [Collect the Connectivity Ring Buffer](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/Collect-the-Connectivity-Ring-Buffer).
 
 Run the `RingBufferConnectivity` query and paste the results into Excel. Since this is a historical list, it can be run after the issue occurs. But for a busy server, it might end quickly. For a slow server, it might have data for a couple of days.
 
@@ -111,15 +192,17 @@ The ephemeral port report will show the number of new connections over the lifet
 
 #### RESET vs. ACK+RESET
 
-ACK+RESET is typically seen when the application aborts a connection. This is to inform the server to stop sending immediately. However, if the server is in the middle of transmitting, one or two packets may arrive at the client after the ACK+RESET is sent. Since the port is closed, the operating system sends a RESET packet. This also happens if packets arrive after the ACK+FIN packet that's not part of the normal closing handshake.
+ACK+RESET is typically seen when the application or Windows aborts a connection. This is generally due to a low-level TCP error. The packet informs the other computer to stop sending immediately. However, if the server is in the middle of transmitting, one or two packets may arrive at the client after the ACK+RESET is sent. Since the port is closed, the operating system sends a RESET packet. This also happens if packets arrive after the ACK+FIN packet that's not part of the normal closing handshake.
 
-Some third-party drivers also send a RESET packet to close the connection instead of an ACK+FIN. Some probe connections can also do this.
+Some third-party drivers also send a ACK+RESET packet to close the connection instead of an ACK+FIN. Some probe connections can also do this. If the ACK+RESET packet isn't preceded by Keep-Alive packets, Retransmitted packets, or Zero Windows packets, and it comes from the client when a normal closing ACK+FIN might be expected, it could be benign.
 
 ### NETSTAT
 
 Run `NETSTAT -abon > c:\ports.txt` in **Command Prompt** as an administrator.
 
 The *ports.txt* file will contain a list of all inbound and outbound ports, port numbers, process IDs, and names of applications owning the ports. You can use this to see the worst offenders and whether the port limit has been reached. Turn on **Status bar** in Notepad and turn off **Word wrap**. The status bar will give a line count. You can divide by two to get an approximate port usage.
+
+This is automatically collected when using *SQLTrace.ps1* for data collection.
 
 ### TcpTimedWaitDelay and MaxUserPort
 
@@ -197,3 +280,5 @@ For more information, see [Introduction to Receive Side Scaling](/windows-hardwa
 ## More information
 
 [Intermittent or periodic authentication issues in SQL Server](intermittent-periodic-authentication.md)
+
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
