@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:virtual-desktop-infrastructure-vdi, csstroubleshoot
+ms.custom: sap:Remote Desktop Services and Terminal Services\Virtual Desktop Infrastructure (VDI), csstroubleshoot
 ---
 # Server 2012 VDI collection require two-way trust when adding user group of external domain
 

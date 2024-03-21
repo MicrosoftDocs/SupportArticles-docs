@@ -3,7 +3,7 @@ title: Mitigation for AMD Family 17h Models 30h-3Fh/Rome Erratum 1474
 description: Introduces the Windows mitigation for AMD Family 17h Models 30h-3Fh/Rome Erratum 1474.
 ms.topic: troubleshooting
 ms.date: 12/26/2023
-ms.custom: sap:installing-or-upgrading-windows, csstroubleshoot
+ms.custom: sap:Windows Setup, Upgrade and Deployment\Installing or upgrading Windows, csstroubleshoot
 ROBOTS: NOINDEX
 ---
 # Mitigation for AMD Family 17h Models 30h-3Fh/Rome Erratum 1474: A CPU core may hang after about 1044 days

@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:cluster-service-fails-to-start, csstroubleshoot
+ms.custom: sap:Clustering and High Availability\Cluster service fails to start, csstroubleshoot
 ---
 # How to troubleshoot Cluster service startup issues in Windows Server 2003
 

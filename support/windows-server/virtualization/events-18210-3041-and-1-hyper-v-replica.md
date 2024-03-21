@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:hyper-v-replica, csstroubleshoot
+ms.custom: sap:Virtualization and Hyper-V\Hyper-V Replica (HVR), csstroubleshoot
 ---
 # Events 18210, 3041, and 1 are logged when Hyper-V Replica is configured
 

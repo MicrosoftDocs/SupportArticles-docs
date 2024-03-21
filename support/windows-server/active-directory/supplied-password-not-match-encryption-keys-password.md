@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, tonnyp
-ms.custom: sap:active-directory-migration-tool-admt, csstroubleshoot
+ms.custom: sap:Active Directory\Active Directory Migration Tool (ADMT), csstroubleshoot
 ---
 # ADMT 3.1 PES installation fails with error: The supplied password does not match this encryption key's password
 

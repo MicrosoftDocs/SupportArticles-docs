@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate
-ms.custom: sap:node-removed-from-the-cluster, csstroubleshoot
+ms.custom: sap:Clustering and High Availability\Node removed from the cluster, csstroubleshoot
 keywords: multi-site,multisite,cluster,disconnect,cross-subnet,stretched,vlan
 ---
 # Cluster IP address resources fail on both nodes of a two-node, two-site cluster when one node disconnects from the public VLAN

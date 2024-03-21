@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, ismael, v-lianna
-ms.custom: sap:failure-to-install-windows-updates, csstroubleshoot, ikb2lmc
+ms.custom: sap:Installing Windows Updates, Features, or Roles\Failure to install Windows Updates, csstroubleshoot, ikb2lmc
 ---
 # Error 0x800f0922 caused by corrupted scheduled task when installing Windows updates
 

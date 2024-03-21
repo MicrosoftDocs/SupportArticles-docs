@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:snapshots-checkpoints-and-differencing-disks, csstroubleshoot
+ms.custom: sap:Virtualization and Hyper-V\Snapshots, checkpoints, and differencing disks, csstroubleshoot
 ---
 # You can't delete a recovery checkpoint for a virtual machine in Data Protection Manager
 

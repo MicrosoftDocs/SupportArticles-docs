@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, stevenxu
-ms.custom: sap:virtual-machine-state, csstroubleshoot
+ms.custom: sap:Virtualization and Hyper-V\Virtual machine state, csstroubleshoot
 ---
 # Virtual machines enter the paused state due to low disk free space
 

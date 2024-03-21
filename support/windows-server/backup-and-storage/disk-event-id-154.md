@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: nbassett, kaushika
-ms.custom: sap:data-corruption-and-disk-errors, csstroubleshoot
+ms.custom: sap:Backup, Recovery, Disk, and Storage\Data corruption and disk errors, csstroubleshoot
 ---
 # Disk Event ID 154: The IO Operation failed due to a hardware error
 

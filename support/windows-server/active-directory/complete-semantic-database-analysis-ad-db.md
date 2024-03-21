@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:active-directory-database-issues-and-domain-controller-boot-failures, csstroubleshoot
+ms.custom: sap:Active Directory\Active Directory Domain Controller specific boot failures, csstroubleshoot
 ---
 # How to complete a semantic database analysis for the Active Directory database by using Ntdsutil.exe
 

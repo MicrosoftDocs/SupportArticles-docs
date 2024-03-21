@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:management-of-containers, csstroubleshoot
+ms.custom: sap:Containers\Management Of Containers , csstroubleshoot
 ---
 # Support policy for Windows Server containers in on-premises scenarios
 

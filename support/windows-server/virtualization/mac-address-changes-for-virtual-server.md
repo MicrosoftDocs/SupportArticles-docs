@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, stevemat, davidg, johnmar
-ms.custom: sap:high-availability-virtual-machines, csstroubleshoot
+ms.custom: sap:Virtualization and Hyper-V\High availability virtual machines, csstroubleshoot
 ---
 # MAC address changes for virtual server during a failover with clustering
 

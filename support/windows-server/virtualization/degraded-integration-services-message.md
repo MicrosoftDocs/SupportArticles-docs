@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, abgupta
-ms.custom: sap:integration-components, csstroubleshoot, linux-related-content
+ms.custom: sap:Virtualization and Hyper-V\Linux Integration Components, csstroubleshoot, linux-related-content
 ---
 # Degraded integration services message for non-Windows guests
 

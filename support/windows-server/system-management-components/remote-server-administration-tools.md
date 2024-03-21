@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, jtrox
-ms.custom: sap:server-manager, csstroubleshoot
+ms.custom: sap:System Management Components\Server Manager, csstroubleshoot
 adobe-target: true
 ---
 

@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:windows-nic-teaming-load-balance-failover, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\Network Load Balancing (NLB), csstroubleshoot
 ---
 # Poor network performance on virtual machines on a Windows Server 2012 Hyper-V host if VMQ is enabled
 

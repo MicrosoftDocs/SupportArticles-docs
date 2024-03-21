@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, tode, arrenc
-ms.custom: sap:secure-channel-issues, csstroubleshoot
+ms.custom: sap:Windows Security Technologies\Netlogon including Secure Channel and DC Locator issues, csstroubleshoot
 ---
 # SSL/TLS communication problems after you install KB 931125
 

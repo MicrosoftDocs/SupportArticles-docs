@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:background-intelligent-transfer-service-bits, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\Background Intelligent Transfer Service (BITS), csstroubleshoot
 ---
 # Error when you download a file by using the Background Intelligent Transfer Service: Content file download failed
 

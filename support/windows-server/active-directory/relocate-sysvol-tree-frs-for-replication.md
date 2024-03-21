@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:active-directory-backup-restore-or-disaster-recovery, csstroubleshoot
+ms.custom: sap:Active Directory\Active Directory backup, restore, or disaster recovery, csstroubleshoot
 ---
 # How to relocate a SYSVOL tree that uses FRS for replication
 

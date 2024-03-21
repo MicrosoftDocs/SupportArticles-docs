@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, stevemat, CTIMON
-ms.custom: sap:root-cause-of-an-unexpected-failover, csstroubleshoot
+ms.custom: sap:Clustering and High Availability\Root cause of an unexpected failover, csstroubleshoot
 ---
 # Run the chkdsk /f command on a shared cluster disk
 

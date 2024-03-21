@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:replacing-hardware-and-updating-the-operating-system, csstroubleshoot
+ms.custom: sap:Clustering and High Availability\Replacing hardware and updating the operating system, csstroubleshoot
 ---
 # How to update Windows Server failover clusters
 

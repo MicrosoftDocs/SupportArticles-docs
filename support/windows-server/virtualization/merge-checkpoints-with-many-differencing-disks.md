@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate
-ms.custom: sap:snapshots-checkpoints-and-differencing-disks, csstroubleshoot
+ms.custom: sap:Virtualization and Hyper-V\Snapshots, checkpoints, and differencing disks, csstroubleshoot
 keywords: differencing disks, avhdx, merge checkpoint, merge vhd
 ---
 

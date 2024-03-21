@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, randt
-ms.custom: sap:active-directory-topology-sites-subnets-and-connection-objects, csstroubleshoot
+ms.custom: sap:Active Directory\Active Directory replication and topology, csstroubleshoot
 ---
 # Error when you attempt to create a DFS namespace: The namespace cannot be queried. The RPC server is unavailable
 

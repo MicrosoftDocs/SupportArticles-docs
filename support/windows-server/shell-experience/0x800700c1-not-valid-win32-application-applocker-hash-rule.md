@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: danesc, kaushika
-ms.custom: sap:1st-party-applications, csstroubleshoot
+ms.custom: sap:Windows Desktop and Shell Experience\Modern, Inbox and Microsoft Store Apps, csstroubleshoot
 ---
 # Error when you create an AppLocker hash rule for a file in Windows: 0x800700C1: not a valid Win32 application
 

@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, v-jesits, arrenc, ajayps, sarathm
-ms.custom: sap:integration-components, csstroubleshoot
+ms.custom: sap:Virtualization and Hyper-V\Integration components, csstroubleshoot
 ---
 # VM Integration Services status reports protocol version mismatch on pre-Windows 10, Windows Server 2016, or Windows Server 2019 VM guests
 

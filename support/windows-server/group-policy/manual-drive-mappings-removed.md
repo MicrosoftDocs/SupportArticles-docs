@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:managing-drive-mappings-through-group-policy, csstroubleshoot
+ms.custom: sap:Group Policy\Managing network configuration (mapped drives, 802.1x) via group policy, csstroubleshoot
 ---
 # Group Policy Preferences removes manual drive mappings if the use first available setting is enabled
 

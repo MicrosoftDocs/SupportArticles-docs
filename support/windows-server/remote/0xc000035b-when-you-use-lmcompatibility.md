@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, Randym
-ms.custom: sap:authentication, csstroubleshoot
+ms.custom: sap:Remote Desktop Services and Terminal Services\Authentication, csstroubleshoot
 ---
 # Terminal Services client connection error 0xC000035B when you use LmCompatibility
 

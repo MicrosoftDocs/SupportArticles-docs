@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, tonyga, stevenxu, kishore
-ms.custom: sap:webwindows-client-and-webdav, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\WebClient and WebDAV, csstroubleshoot
 ---
 # Prompt for credentials when you access WebDav-based FQDN sites in Windows
 

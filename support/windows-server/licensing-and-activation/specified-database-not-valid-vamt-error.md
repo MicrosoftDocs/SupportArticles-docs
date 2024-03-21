@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, scottmca, luche
-ms.custom: sap:windows-volume-activation, csstroubleshoot
+ms.custom: sap:Windows Activation\Windows activation issues, csstroubleshoot
 ---
 # The specified database is not a valid VAMT database error message when you try to create a database by using VAMT 3.0 on a Windows 8 or Windows Server 2012-based computer
 

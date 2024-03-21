@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:iscsi, csstroubleshoot
+ms.custom: sap:Backup, Recovery, Disk, and Storage\ISCSI, csstroubleshoot
 ---
 # iSCSI virtual disk size limits in Server Manager GUI are incorrect
 

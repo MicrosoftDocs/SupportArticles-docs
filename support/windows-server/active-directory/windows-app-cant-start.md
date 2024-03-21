@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, arrenc
-ms.custom: sap:active-directory-migration-tool-admt, csstroubleshoot
+ms.custom: sap:Active Directory\Active Directory Migration Tool (ADMT), csstroubleshoot
 ---
 # Windows App cannot start after ADMT 3.2 security translation runs in Windows 8, Windows 8.1 and Windows 10
 

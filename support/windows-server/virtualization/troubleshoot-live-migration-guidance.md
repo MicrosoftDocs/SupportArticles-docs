@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:live-migration, csstroubleshoot
+ms.custom: sap:Virtualization and Hyper-V\Migration, csstroubleshoot
 ---
 # Virtual machine live migration troubleshooting guidance
 

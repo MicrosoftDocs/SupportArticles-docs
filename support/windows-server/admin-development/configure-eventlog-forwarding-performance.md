@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, gbrag, raackley, leofa
-ms.custom: sap:windows-management-instrumentation-wmi, csstroubleshoot
+ms.custom: sap:System Management Components\WMI management and troubleshooting, csstroubleshoot
 ---
 # Best practice for configuring EventLog forwarding in Windows Server 2012 R2
 

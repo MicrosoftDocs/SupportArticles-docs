@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, slight
-ms.custom: sap:smart-card-logon, csstroubleshoot
+ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Smart card logon, csstroubleshoot
 ---
 # Guidelines for enabling smart card logon with third-party certification authorities
 

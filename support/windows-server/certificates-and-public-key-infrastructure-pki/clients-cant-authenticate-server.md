@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:certificate-enrollment, csstroubleshoot
+ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Certificate Enrollment Using MMC or Certificate Requests, csstroubleshoot
 ---
 # Clients can't authenticate with a server after you obtain a new certificate to replace an expired certificate on the server
 

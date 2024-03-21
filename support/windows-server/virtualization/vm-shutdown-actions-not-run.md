@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, raackley
-ms.custom: sap:virtual-machine-state, csstroubleshoot
+ms.custom: sap:Virtualization and Hyper-V\Virtual machine state, csstroubleshoot
 ---
 # VM shutdown actions don't run when a host shuts down because of a low battery
 

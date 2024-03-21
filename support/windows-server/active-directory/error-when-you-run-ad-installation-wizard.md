@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, fszita, v-jomcc
-ms.custom: sap:schema-update-failure-or-conflict, csstroubleshoot
+ms.custom: sap:Active Directory\Schema Updates, csstroubleshoot
 ---
 # Error when you run the Active Directory Installation Wizard: The version of the Active Directory schema of the source forest is not compatible with the version of Active Directory on this computer
 

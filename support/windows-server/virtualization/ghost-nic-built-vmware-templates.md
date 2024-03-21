@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika,  johnfern
-ms.custom: sap:configuration-of-virtual-machine-settings, csstroubleshoot
+ms.custom: sap:Virtualization and Hyper-V\Configuration of virtual machine settings, csstroubleshoot
 ---
 # Ghost NIC seen on Windows 7/Windows 2008 R2 machines built from VMware Templates when the Template uses a Synthetic NIC (VMXNET3)
 
