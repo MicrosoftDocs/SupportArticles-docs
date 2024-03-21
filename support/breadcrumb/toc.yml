@@ -115,8 +115,8 @@ items:
         tocHref: /troubleshoot/azure/automation/
         topicHref: /troubleshoot/azure/automation/welcome-automation
       - name: Azure Batch
-        tocHref: /troubleshoot/azure/hpc-batch/
-        topicHref: /troubleshoot/azure/hpc-batch/welcome-hpc-batch
+        tocHref: /troubleshoot/azure/hpc/batch/
+        topicHref: /troubleshoot/azure/hpc/batch/welcome-hpc-batch
       - name: Azure Cosmos DB
         tocHref: /troubleshoot/azure/cosmos-db/
         topicHref: /troubleshoot/azure/cosmos-db/
@@ -124,14 +124,14 @@ items:
         tocHref: /troubleshoot/azure/azure-container-instances/
         topicHref: /troubleshoot/azure/azure-container-instances/welcome-container-instances
       - name: Azure CycleCloud
-        tocHref: /troubleshoot/azure/hpc-cyclecloud/
-        topicHref: /troubleshoot/azure/hpc-cyclecloud/welcome-hpc-cyclecloud
+        tocHref: /troubleshoot/azure/hpc/cyclecloud/
+        topicHref: /troubleshoot/azure/hpc/cyclecloud/welcome-hpc-cyclecloud
       - name: Azure Functions
         tocHref: /troubleshoot/azure/azure-functions
         topicHref: /troubleshoot/azure/azure-functions/welcome-azure-functions
       - name: Azure HPC Pack
-        tocHref: /troubleshoot/azure/hpc-pack/
-        topicHref: /troubleshoot/azure/hpc-pack/welcome-hpc-pack
+        tocHref: /troubleshoot/azure/hpc/pack/
+        topicHref: /troubleshoot/azure/hpc/pack/welcome-hpc-pack
       - name: Azure Kubernetes Service
         tocHref: /troubleshoot/azure/azure-kubernetes/
         topicHref: /troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes
@@ -152,17 +152,17 @@ items:
           tocHref: /troubleshoot/azure/azure-storage/files
           topicHref: /troubleshoot/azure/azure-storage/files/welcome-files-storage
       - name: Azure Synapse Analytics Apache Spark Pool
-        tocHref: /troubleshoot/azure/synapse-analytics-spark
-        topicHref: /troubleshoot/azure/synapse-analytics-spark/welcome-synapse-analytics-spark
+        tocHref: /troubleshoot/azure/synapse-analytics/spark
+        topicHref: /troubleshoot/azure/synapse-analytics/spark/welcome-synapse-analytics-spark
       - name: Azure Synapse Analytics Dedicated SQL Pool
-        tocHref: /troubleshoot/azure/synapse-analytics-dedicated-sql
-        topicHref: /troubleshoot/azure/synapse-analytics-dedicated-sql/welcome-synapse-analytics-dedicated-sql
+        tocHref: /troubleshoot/azure/synapse-analytics/dedicated-sql
+        topicHref: /troubleshoot/azure/synapse-analytics/dedicated-sql/welcome-synapse-analytics-dedicated-sql
       - name: Azure Synapse Analytics Serverless SQL Pool
-        tocHref: /troubleshoot/azure/synapse-analytics-serverless-sql
-        topicHref: /troubleshoot/azure/synapse-analytics-serverless-sql/welcome-synapse-analytics-serverless-sql
+        tocHref: /troubleshoot/azure/synapse-analytics/serverless-sql
+        topicHref: /troubleshoot/azure/synapse-analytics/serverless-sql/welcome-synapse-analytics-serverless-sql
       - name: Azure Synapse Analytics Workspace
-        tocHref: /troubleshoot/azure/synapse-analytics-workspace
-        topicHref: /troubleshoot/azure/synapse-analytics-workspace/welcome-synapse-analytics-workspace
+        tocHref: /troubleshoot/azure/synapse-analytics/workspace
+        topicHref: /troubleshoot/azure/synapse-analytics/workspace/welcome-synapse-analytics-workspace
       - name: Azure Virtual Network
         tocHref: /troubleshoot/azure/virtual-network/
         topicHref: /troubleshoot/azure/virtual-network/welcome-virtual-network
@@ -189,11 +189,11 @@ items:
         tocHref: /troubleshoot/azure/site-recovery/
         topicHref: /troubleshoot/azure/site-recovery/welcome-site-recovery
       - name: Linux Virtual Machines
-        tocHref: /troubleshoot/azure/virtual-machines-linux/
-        topicHref: /troubleshoot/azure/virtual-machines-linux/welcome-virtual-machines-linux
+        tocHref: /troubleshoot/azure/virtual-machines/linux/
+        topicHref: /troubleshoot/azure/virtual-machines/linux/welcome-virtual-machines-linux
       - name: Windows Virtual Machines
-        tocHref: /troubleshoot/azure/virtual-machines-windows/
-        topicHref: /troubleshoot/azure/virtual-machines-windows/welcome-virtual-machines-windows
+        tocHref: /troubleshoot/azure/virtual-machines/windows/
+        topicHref: /troubleshoot/azure/virtual-machines/windows/welcome-virtual-machines-windows
       - name: Virtual Machine Scale Sets
         tocHref: /troubleshoot/azure/virtual-machine-scale-sets/
         topicHref: /troubleshoot/azure/virtual-machine-scale-sets/welcome-virtual-machine-scale-sets
