@@ -117,8 +117,8 @@
     href: troubleshoot-rdp-too-many-admin-sessions-open.md
   - name: Can't sign into your account
     href: troubleshoot-rdp-cannot-sign-into-account.md
-- name: Application access issues
-  href: troubleshoot-app-connection.md
+  - name: Application access issues
+    href: troubleshoot-app-connection.md
 
 - name: VM password reset
   items:
@@ -355,7 +355,6 @@
       href: multiple-certificates-iaas-vm-extensions.md
     - name: Troubleshoot extension certificate issues on Windows VM
       href: troubleshoot-extension-certificates-issues-windows-vm.md
-
   - name: Azure Disk Encryption (ADE)
     items:
     - name: Can't enable Azure Disk Encryption
