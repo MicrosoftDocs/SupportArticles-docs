@@ -3,8 +3,8 @@ title: Fail to connect to Microsoft Azure Information Protection using Windows P
 description: Describes an issue in which you can't connect to the Azure Information Protection service by using Windows PowerShell in Office 365. Provides a resolution.
 ms.date: 10/25/2023
 ms.reviewer: willfid, v-weizhu
-ms.service: active-directory
-ms.subservice: enterprise-users
+ms.service: entra-id
+ms.subservice: users
 ms.custom:
 ---
 # Unable to connect to Azure Information Protection using Windows PowerShell

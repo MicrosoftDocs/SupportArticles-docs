@@ -3,8 +3,8 @@ title: Security group is still mail-enabled after it is disabled through a sync 
 description: Fixes an issue in which a security group is still mail-enabled after it is disabled through a sync in on-premises AD.
 ms.date: 05/28/2020
 ms.reviewer: 
-ms.service: active-directory
-ms.subservice: enterprise-users
+ms.service: entra-id
+ms.subservice: users
 ---
 # Security group is still mail-enabled after it is disabled through a sync in on-premises AD
 

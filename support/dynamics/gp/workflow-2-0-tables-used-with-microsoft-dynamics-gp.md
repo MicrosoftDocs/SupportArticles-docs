@@ -2,7 +2,8 @@
 title: Workflow tables used with Microsoft Dynamics GP
 description: Workflow tables used with Microsoft Dynamics GP.
 ms.reviewer: theley
-ms.date: 03/12/2024
+ms.date: 03/20/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # Workflow tables used with Microsoft Dynamics GP
 

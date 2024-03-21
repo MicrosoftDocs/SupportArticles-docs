@@ -3,7 +3,8 @@ title: How to verify that the tax tables are installed correctly in US Payroll i
 description: Provides steps to verify the tax tables are current and have the correct FICA Social Security limit.
 ms.reviewer: theley
 ms.topic: how-to
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Payroll
 ---
 # How to verify that the tax tables are installed correctly in US Payroll in Microsoft Dynamics GP
 
