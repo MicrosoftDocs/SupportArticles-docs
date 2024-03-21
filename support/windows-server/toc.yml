@@ -579,6 +579,10 @@ items:
   items:
   - name: Application Management
     href: ./application-management/application-management-overview.md
+  - name: 1st Party Applications
+    items:
+    - name: Dial-in is unavailable in MMC snap-in
+      href: ./application-management/dial-in-tab-unavailable-mmc-snap-in.md
   - name: Application Compatibility Toolkit (ACT)
     items:
     - name: DXDIAG reports low display adapters memory
@@ -633,10 +637,6 @@ items:
     items:
     - name: Services depending on ASP.NET State Service don't start
       href: ./application-management/services-not-start-upgrade-to-dotnet-framework-4.md
-  - name: 1st Party Applications
-    items:
-    - name: Dial-in is unavailable in MMC snap-in
-      href: ./application-management/dial-in-tab-unavailable-mmc-snap-in.md
   - name: Windows Script Host (CScript or WScript)
     items:
     - name: Run a logon script one time when a new user logs on
@@ -2645,6 +2645,10 @@ items:
   items:
   - name: Shell Experience
     href: ./shell-experience/shell-experience-overview.md
+  - name: 1st Party Applications
+    items:
+    - name: Can't create an AppLocker hash rule for a file
+      href: ./shell-experience/0x800700c1-not-valid-win32-application-applocker-hash-rule.md
   - name: Cortana and Search
     items:
     - name: Windows Search is disabled by default
@@ -2691,10 +2695,6 @@ items:
     items:
     - name: Start menu shortcuts aren't immediately accessible
       href: ./shell-experience/start-menu-shortcuts-arent-immediately-accessible.md
-  - name: 1st Party Applications
-    items:
-    - name: Can't create an AppLocker hash rule for a file
-      href: ./shell-experience/0x800700c1-not-valid-win32-application-applocker-hash-rule.md
   - name: Windows Media Player
     items:
     - name: How to enable the user experience features
