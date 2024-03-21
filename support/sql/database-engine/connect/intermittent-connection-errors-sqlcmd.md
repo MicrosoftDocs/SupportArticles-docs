@@ -30,7 +30,7 @@ Review the following scenarios to determine whether any match your issue:
 
 - You collect a network trace and learn that TLS 1.0 and 1.1 are disabled and TLS 1.2 is enabled. On the server that's running SQL Server, TLS 1.0, 1.1, and 1.2 are enabled on the application server.
 
-  :::image type="content" source="media/intermittent-connection-errors-with-sqlcmd/intermittent-connection-errors-occur-when-using-sqlcmdtool.png" alt-text="Screenshot that shows that TLS 1.0, 1.1, and 1.2 are enabled on the application server.":::
+  :::image type="content" source="media/intermittent-connection-errors-occur-when-using-sqlcmdtool/intermittent-connection-errors-occur-when-using-sqlcmdtool.png" alt-text="Screenshot that shows that TLS 1.0, 1.1, and 1.2 are enabled on the application server.":::
 
 - You run a [UDL test](test-oledb-connectivity-use-udl-file.md) on the application server by using both the Microsoft OLE DB Provider for SQL Server and the SNAC 11 provider. The connection fails. You also receive a message that states that the "Microsoft OLE DB Provider for SQL Server" driver is deprecated and doesn't support TLS 1.2.
 
