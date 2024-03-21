@@ -271,7 +271,7 @@ Performance data like CPU and the I/O rate is available for the following enviro
 
 ## Performance impact when Application Insights is enabled
 
-Enabling Application Insights SDK in your application can sometimes lead to performance issues, such as high CPU usage, memory leaks, thread leaks, or TCP port exhaustion. These issues often stem from the application leaking `Microsoft.ApplicationInsights.Extensibility.TelemetryConfiguration` objects. Each leaked instance creates two additional threads, which can lead to an increase in the process's thread count over time. If you notice a growing number of threads, it's crucial to check for leaks of [TelemetryConfiguration](https://learn.microsoft.com/dotnet/api/microsoft.applicationinsights.extensibility.telemetryconfiguration?view=azure-dotnet) objects. 
+Enabling Application Insights SDK in your application may occasionally lead to performance issues, such as high CPU usage, memory leaks, thread leaks, or TCP port exhaustion. These issues commonly originate from the application leaking `Microsoft.ApplicationInsights.Extensibility.TelemetryConfiguration` objects. Each leaked instance creates two additional threads, which leading to a continual increase in the process's thread count over time. If you observe a growing number of threads, it's crucial to check for leaks of [TelemetryConfiguration](https://learn.microsoft.com/dotnet/api/microsoft.applicationinsights.extensibility.telemetryconfiguration?view=azure-dotnet) objects. 
 
 ### Common causes of TelemetryConfiguration leaks
 
