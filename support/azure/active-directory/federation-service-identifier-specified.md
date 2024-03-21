@@ -3,7 +3,7 @@ title: Error (Federation service identifier specified in the AD FS 2.0 server is
 description: Discusses a scenario in Office 365, Azure, or Microsoft Intune  in which you receive an error message when you try to run the new-MSOLFederatedDomain command or the convert-MSOLDomainToFederated command to set up a second federated domain on an AD FS server. Provides a resolution and a workaround.
 ms.date: 06/22/2020
 ms.reviewer: 
-ms.service: active-directory
+ms.service: entra-id
 ms.subservice: authentication
 ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ---

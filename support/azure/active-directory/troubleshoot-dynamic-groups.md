@@ -2,7 +2,7 @@
 title: Troubleshoot dynamic groups
 description: This article helps you diagnose and resolve issues with dynamic groups.
 ms.date: 01/16/2024
-ms.service: active-directory
+ms.service: entra-id
 ms.subservice: domain-services
 ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ms.reviewer: mimart, v-weizhu

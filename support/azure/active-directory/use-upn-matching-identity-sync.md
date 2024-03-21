@@ -3,8 +3,8 @@ title: How to use UPN matching for identity synchronization in Office 365, Azure
 description: Describes how to use UPN matching for identity synchronization in Office 365, Azure, or Intune.
 ms.date: 05/11/2020
 ms.reviewer: willfid
-ms.service: active-directory
-ms.subservice: enterprise-users
+ms.service: entra-id
+ms.subservice: users
 ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ---
 # How to use UPN matching for identity synchronization in Office 365, Azure, or Intune

@@ -3,8 +3,8 @@ title: Troubleshoot Microsoft Entra Certificate-Based Authentication issues
 description: Provides information to help you troubleshoot Certificate-Based Authentication issues in Microsoft Entra ID.
 ms.date: 05/22/2020
 ms.reviewer: 
-ms.service: active-directory
-ms.subservice: enterprise-users
+ms.service: entra-id
+ms.subservice: users
 ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ---
 # Troubleshoot Microsoft Entra Certificate-Based Authentication issues

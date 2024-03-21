@@ -3,7 +3,7 @@ title: Authorization_RequestDenied error message when you try to change a passwo
 description: Discusses an Authorization_RequestDenied error message that you receive when you try to change a password if you use Graph API. Provides a resolution.
 ms.date: 07/20/2020
 ms.reviewer: willfid, maxv, nmanis
-ms.service: active-directory
+ms.service: entra-id
 ms.subservice: authentication
 ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ---

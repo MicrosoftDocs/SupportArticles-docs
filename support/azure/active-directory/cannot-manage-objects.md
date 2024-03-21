@@ -3,8 +3,8 @@ title: Can't manage or remove objects that were synchronized through the Azure A
 description: Resolves an issue that you can't manage or remove objects created through directory synchronization from Microsoft Entra ID.
 ms.date: 08/30/2021
 ms.reviewer: 
-ms.service: active-directory
-ms.subservice: enterprise-users
+ms.service: entra-id
+ms.subservice: users
 ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ---
 # Can't manage or remove objects that were synchronized through the Azure Active Directory Sync tool

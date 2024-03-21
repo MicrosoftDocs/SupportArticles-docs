@@ -3,8 +3,8 @@ title: Password Hash Synchronization is automatically enabled in Microsoft Entra
 description: Fixes a problem in which Password Hash Synchronization is automatically enabled in Microsoft Entra connector.
 ms.date: 05/28/2020
 ms.reviewer: 
-ms.service: active-directory
-ms.subservice: enterprise-users
+ms.service: entra-id
+ms.subservice: users
 ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ---
 # Password Hash Sync is automatically enabled during Microsoft Entra Connect Pass-through Authentication

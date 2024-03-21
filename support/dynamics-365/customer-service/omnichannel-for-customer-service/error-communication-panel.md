@@ -15,8 +15,6 @@ After you sign in to the Unified Service Desk client application, you see the fo
 
 > An error occurred in the Communication panel. Restart Unified Service Desk and try again. (Error Code - AAD_ID_MISMATCH - Azure ADID mismatched with logged-in user id)
 
-:::image type="content" source="media/error-communication-panel/communication-panel-error.png" alt-text="Screenshot that shows the details of the error that occurs when you sign in to Unified Service Desk.":::
-
 ## Cause
 
 When signing in to Unified Service Desk, you must enter the Customer Service app credentials to sign in, and then again, you're shown a dialog to enter credentials to connect to Dataverse server. If you enter different credentials, this issue occurs.
