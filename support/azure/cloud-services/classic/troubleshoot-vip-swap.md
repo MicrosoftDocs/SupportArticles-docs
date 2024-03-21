@@ -73,4 +73,4 @@ Service self-healing is in progress.
 
 If a VIP swap failed because a self-healing process is underway, contact [Azure support](https://azure.microsoft.com/support/options/) for further assistance.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

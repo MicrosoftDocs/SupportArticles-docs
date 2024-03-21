@@ -46,4 +46,4 @@ var client = new SecretClient(new Uri(keyVaultUrl), credential);
 
 - [Use certificates with Azure Cloud Services (extended support)](/azure/cloud-services-extended-support/certificates-and-key-vault).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

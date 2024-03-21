@@ -98,4 +98,4 @@ After you redeploy the cloud service (extended support) project, you can verify 
    - **Backend pools**
    - **Load balancing rules**
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

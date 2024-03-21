@@ -87,4 +87,4 @@ In Visual Studio, the **Copy to Output Directory** property for your startup bat
 
 :::image type="content" source="media/scenario-4-processorengine-role-stuck-busy-state/configurationxml-file.png" alt-text="Screenshot shows the configuration.xml file properties.":::
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

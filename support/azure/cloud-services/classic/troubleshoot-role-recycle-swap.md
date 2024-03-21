@@ -47,4 +47,4 @@ What if you don't want to lose the IP address that's associated with your existi
 
 1. Associate the required reserved IP address to this cloud service slot.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

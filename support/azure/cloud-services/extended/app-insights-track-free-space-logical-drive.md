@@ -121,4 +121,4 @@ For more information about this option, see [Apply the diagnostics extension in 
 - [System performance counters in Application Insights](/azure/azure-monitor/app/performance-counters)
 - [Send Cloud Service diagnostic data to Application Insights](/azure/azure-monitor/agents/diagnostics-extension-to-application-insights)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

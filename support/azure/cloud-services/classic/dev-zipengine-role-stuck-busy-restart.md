@@ -112,4 +112,4 @@ WorkerAssembly.WorkerAssembly workerAssembly = new WorkerAssembly.WorkerAssembly
 workerAssembly.DoWork();
 ```
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

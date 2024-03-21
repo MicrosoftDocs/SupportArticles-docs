@@ -38,4 +38,4 @@ You can run the Azure Log Collector Extension from your local development comput
 
 - [Windows Azure PaaS compute diagnostic data](windows-azure-paas-compute-diagnostic-data.md)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

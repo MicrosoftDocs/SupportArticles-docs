@@ -134,4 +134,4 @@ For more information, see [Migrate to Azure Cloud Services (extended support) us
 
 After you commit the migration, your classic cloud service is migrated to the corresponding extended-support cloud service. The classic cloud service is then deleted, and you can update the migrated, extended-support cloud service successfully.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

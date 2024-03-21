@@ -174,7 +174,7 @@ public class WebRole : RoleEntryPoint {
 
 - [Role instance restarts from Azure VM OS upgrades FAQ](./role-instance-restarts-faq.yml)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
 
 [architecture]: /azure/cloud-services/cloud-services-workflow-process
 [matrix]: /azure/cloud-services/cloud-services-guestos-update-matrix

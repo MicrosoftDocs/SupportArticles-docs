@@ -44,4 +44,4 @@ The following table shows the different virtual machine processes that might occ
 
 ** In this scenario, the application disk will switch from Drive E to F (or F to E). To detect the current application disk, applications should query the `%RoleRoot%` environment variable.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

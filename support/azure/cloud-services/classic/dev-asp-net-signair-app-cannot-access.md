@@ -94,4 +94,4 @@ Visitor Tracker is an ASP.NET SignalR application that tracks the number of visi
 
 4. Remove the ACL rule.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

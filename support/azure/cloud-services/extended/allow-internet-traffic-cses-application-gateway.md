@@ -121,4 +121,4 @@ In this article, you simultaneously implement two different load balancing servi
 
 If you use only an application gateway in the network traffic architecture, the application gateway has to add the private IP addresses of each Cloud Services (extended support) instance to the back-end pool. If the Cloud Services (extended support) instance is scaled out (increasing the number of instances), the new instances use new private IP addresses. You would then have to manually add those new instances to the back-end pool of the application gateway. If you also use a load balancer, you can eliminate that inconvenience.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

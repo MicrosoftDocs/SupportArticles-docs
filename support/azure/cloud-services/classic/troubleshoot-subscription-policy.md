@@ -67,4 +67,4 @@ If the usage quota is at 100% or about to exceed the limit, request a quota incr
 
 For more information, see [Understanding Azure limits and increases](https://azure.microsoft.com/blog/azure-limits-quotas-increase-requests/).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

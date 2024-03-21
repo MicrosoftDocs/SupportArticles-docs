@@ -94,4 +94,4 @@ And for `VirtualNetworkSite`, the path to it will be `ServiceConfiguration` > `N
 > [!NOTE]
 > It's possible that you have more than one role in your configuration. The expression to locate a role that isn't the first role will be `$xml.ServiceConfiguration.Role[1]`. The number "1" here means the second role in the configuration data because this counter starts from 0. If there are two roles in the same configuration data, the expression `$xml.ServiceConfiguration.Role[1].Instances.count` will be able to return the number of instances of the second role.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

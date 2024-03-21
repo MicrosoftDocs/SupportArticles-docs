@@ -228,4 +228,4 @@ For information about the initial configuration, execution, and examples of star
 * [How to configure and run startup tasks for an Azure Cloud Service (classic)](/azure/cloud-services/cloud-services-startup-tasks)
 * [Common Cloud Service (classic) startup tasks](/azure/cloud-services/cloud-services-startup-tasks-common)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

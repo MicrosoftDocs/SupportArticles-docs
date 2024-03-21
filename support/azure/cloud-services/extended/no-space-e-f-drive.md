@@ -29,6 +29,6 @@ For data that an application has to read from and write to, we recommend that yo
 
 If the location of the local data store is needed, make sure that the application code uses local storage resources. These are stored on the local drive C. For more information, see [Configure local storage resources](https://github.com/Huachao/azure-content/blob/master/articles/cloud-services/cloud-services-configure-local-storage-resources.md) and [Azure disk partitions](./disk-partition-preservation.md#azure-disk-partitions).
 
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

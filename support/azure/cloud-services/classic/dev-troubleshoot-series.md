@@ -33,4 +33,4 @@ Let's deep dive into the troubleshooting series on Azure Cloud Service:
 - [Scenario 7 : Can't access the website, although all role instances are in running state](https://support.microsoft.com/help/4464839).
 - [Scenario 8 : ASP.NET SignalR application is not working](https://support.microsoft.com/help/4464827).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

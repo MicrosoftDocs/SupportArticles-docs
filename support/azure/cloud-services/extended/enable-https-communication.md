@@ -313,6 +313,6 @@ In the Visual Studio **Solution Explorer** pane, right-click the project node, a
 
 After you make the configuration changes, customers will be able to communicate with your cloud services website by using the HTTPS protocol. If your certificate is self-signed, the browser might report a warning that the certificate isn't secure, but the browser won't block the connection.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
 
 [migrate]: https://techcommunity.microsoft.com/t5/azure-paas-blog/manual-migration-from-classic-cloud-service-to-cloud-service/ba-p/2263817

@@ -180,4 +180,4 @@ The *C:\\Logs* folder contains *RuntimeEvents_\<Iteration>.etl* and *WaAppAgent_
 
 - [Azure role architecture](/archive/blogs/kwill/windows-azure-role-architecture)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

@@ -67,4 +67,4 @@ ServiceDefinition.csdef is the place where you can configure the bindings for yo
 
 In real world scenario, in order to access your cloud service application over a custom hostname, you need to have a DNS configured for this host header corresponding to the cloud service VIP. For now, you can delete the **hostHeader** attribute from **Binding** element and redeploy your cloud service solution to resolve the issue.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

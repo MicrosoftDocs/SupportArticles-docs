@@ -318,4 +318,4 @@ For more information, see the [Instance-level public IP address](https://azure.m
 
 Although the two objects in the `value` array both have a `name` key value of `PubIP`, there are differences in the IP address and DNS settings within the respective `properties` keys. The `ipAddress` key has a value of `20.169.153.231` in the first array object and `20.231.68.190` in the second array object. The `dnsSettings` key has a value of `pip.0.cses-prod` in the first array object and `pip.1.cses-prod` in the second array object.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

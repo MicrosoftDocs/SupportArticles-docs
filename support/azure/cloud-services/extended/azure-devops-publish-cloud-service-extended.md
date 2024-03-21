@@ -163,4 +163,4 @@ The deployment label should be the same as the timestamp you defined.
 
 :::image type="content" source="media/azure-devops-publish-cloud-service-extended/deployment-label.png" alt-text="Screenshot of a deployment label example." lightbox="media/azure-devops-publish-cloud-service-extended/deployment-label.png":::
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

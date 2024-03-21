@@ -378,6 +378,6 @@ You can repeat steps 2 through 4 to configure the third version of the cloud ser
 
 For more information about the limitations of the VIP swap operation, see [Swap or switch deployments in Azure Cloud Services (extended support)](/azure/cloud-services-extended-support/swap-cloud-service).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
 
 [ap]: https://portal.azure.com

@@ -71,4 +71,4 @@ additionalContent: |
 
   - [Role instance restarts caused by Azure VM operating system upgrades](./role-instance-restarts-os-upgrade.md)
   
-  [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+  [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

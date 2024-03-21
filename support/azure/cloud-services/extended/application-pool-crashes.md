@@ -86,6 +86,6 @@ After you change or verify your symbol path settings, you can analyze the captur
 
 To also check for any unhandled exceptions that caused the **w3wp.exe** or **WaWorkerHost.exe** process to stop, see [Unhandled exceptions cause ASP.NET-based applications to quit unexpectedly in the .NET Framework](../../developer/webapps/aspnet/site-behavior-performance/exceptions-cause-apps-quit.md).
 
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

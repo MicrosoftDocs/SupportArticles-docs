@@ -73,4 +73,4 @@ The following table shows the updated list of sample NSG inbound rules. The list
 | 65001    | AllowAzureLoadBalancerInBound | Any            | Any      | AzureLoadBalancer | Any             | Allow     |
 | 65500    | DenyAllInBound                | Any            | Any      | Any               | Any             | Deny      |
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
