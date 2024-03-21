@@ -530,7 +530,7 @@ Follow these steps to review the license status of the user. If the license prop
 **Solution:**  
 Contact Microsoft Support
 
-This scenario shouldn'tt be possible because of the way Exchange Online Account provisioning in Microsoft 365 works. It would be best to contact Microsoft Support so we can help work out the best solution for this issue.
+This scenario shouldn't be possible because of the way Exchange Online Account provisioning in Microsoft 365 works. It would be best to contact Microsoft Support so we can help work out the best solution for this issue.
 
 - If your issue is resolved, congratulations! Your scenario is complete.
 - If your issue isn't resolved, see [Additional Resources](#additional-resources).
