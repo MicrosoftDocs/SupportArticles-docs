@@ -50,7 +50,7 @@ If Directory Synchronization is in place, you can search within **Active Directo
 
 Connect to Azure Active Directory PowerShell and verify the Online Account Status.
 
-[!INCLUDE [Azure AD PowerShell deprecation note](~/../Exchange/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
+[!INCLUDE [Azure AD PowerShell deprecation note](../../../includes/aad-powershell-deprecation-note.md)]
 
 1. Install [Azure AD module](/previous-versions/azure/jj151815(v=azure.100)).
 2. Open the Microsoft Online Services Module (shortcut from the desktop).

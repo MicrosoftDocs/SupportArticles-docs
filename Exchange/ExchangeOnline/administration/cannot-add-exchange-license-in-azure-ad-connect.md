@@ -39,7 +39,7 @@ There are two Windows Azure Active Directory modules to administer Microsoft Ent
   - [Install-Module AzureAD](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0&preserve-view=true)
   - [Connect-AzureAD](/powershell/module/Azuread/?view=azureadps-2.0&preserve-view=true)
 
-[!INCLUDE [Azure AD PowerShell deprecation note](~/../Exchange/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
+[!INCLUDE [Azure AD PowerShell deprecation note](../../../includes/aad-powershell-deprecation-note.md)]
 
 This issue can occur under different circumstances.
 

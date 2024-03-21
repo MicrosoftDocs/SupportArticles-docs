@@ -35,7 +35,7 @@ Currently, removing the license leaves the mailbox in a disabled state. Therefor
 Set-MSOLUserLicense -UserPrincipalName "<Account>" -RemoveLicenses
 ```
 
-[!INCLUDE [Azure AD PowerShell deprecation note](~/../Exchange/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
+[!INCLUDE [Azure AD PowerShell deprecation note](../../../includes/aad-powershell-deprecation-note.md)]
 
 This may leave the mailbox in a disabled state that prevents it from being displayed as either **Soft Deleted** or **Inactive**. In this situation, the following commands won't find the mailbox:
 

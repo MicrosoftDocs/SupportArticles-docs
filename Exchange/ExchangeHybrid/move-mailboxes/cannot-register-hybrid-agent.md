@@ -69,7 +69,7 @@ Choose one of the following options:
 
 - Remove the existing enterprise app. For more information, see [Remove-AzureADApplicationProxyApplication](/powershell/module/azuread/remove-azureadapplicationproxyapplication).
 
-[!INCLUDE [Azure AD PowerShell deprecation note](~/../Exchange/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
+[!INCLUDE [Azure AD PowerShell deprecation note](../../../includes/aad-powershell-deprecation-note.md)]
 
 ### Resolution for Cause 2
 

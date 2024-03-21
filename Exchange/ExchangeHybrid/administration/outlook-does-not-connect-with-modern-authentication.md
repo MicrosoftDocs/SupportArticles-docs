@@ -100,6 +100,6 @@ Add the missing Autodiscover resource principle to the SPN list in the Microsoft
    > Get-MsolServicePrincipal -AppPrincipalId 00000002-0000-0ff1-ce00-000000000000 | select -ExpandProperty ServicePrincipalNames
    > ```
 
-[!INCLUDE [Azure AD PowerShell deprecation note](~/../Exchange/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
+[!INCLUDE [Azure AD PowerShell deprecation note](../../../includes/aad-powershell-deprecation-note.md)]
 
 To verify that the on-premises Exchange Server and Exchange Online endpoints can [successfully authenticate requests](/exchange/configure-oauth-authentication-between-exchange-and-exchange-online-organizations-exchange-2013-help#how-do-you-know-this-worked) from each other, use the [Test-OAuthConnectivity](/powershell/module/exchange/Test-OAuthConnectivity) cmdlet.

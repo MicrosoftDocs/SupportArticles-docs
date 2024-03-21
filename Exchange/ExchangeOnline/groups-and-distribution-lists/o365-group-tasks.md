@@ -420,7 +420,7 @@ There is no native tool or method available to migrate Microsoft 365 groups betw
 
 Deleted Microsoft 365 groups and related services (such as Teams, SharePoint sites, and so on) are retained in a soft-deleted state for 30 days. If you are a tenant admin, you can permanently delete a Microsoft 365 group without waiting for 30 days.
 
-[!INCLUDE [Azure AD PowerShell deprecation note](~/../Exchange/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
+[!INCLUDE [Azure AD PowerShell deprecation note](../../../includes/aad-powershell-deprecation-note.md)]
 
 1. Connect to Azure AD PowerShell.
 2. Run the following command to get the ID of the deleted group:

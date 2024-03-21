@@ -76,7 +76,7 @@ Restore the content from the inactive mailbox to the newly provisioned mailbox b
     Set-MsolUser -UserPrincipalName <UPN> -ImmutableId <ImmutableId>
     ```
 
-    [!INCLUDE [Azure AD PowerShell deprecation note](~/../Exchange/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
+    [!INCLUDE [Azure AD PowerShell deprecation note](../../../includes/aad-powershell-deprecation-note.md)]
 
 6. Run a Microsoft Entra Connect delta sync. This brings the original Microsoft Entra account into the scope of Microsoft Entra Connect.
 

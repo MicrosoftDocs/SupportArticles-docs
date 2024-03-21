@@ -102,7 +102,7 @@ To see this error, you have to connect to [Microsoft 365 PowerShell](/office365/
 (Get-AzureADUser -ObjectId <AffectedUserUPN>).Errors.ErrorDetail.ObjectErrors.ErrorRecord.ErrorDescription
 ```
 
-[!INCLUDE [Azure AD PowerShell deprecation note](~/../Exchange/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
+[!INCLUDE [Azure AD PowerShell deprecation note](../../../includes/aad-powershell-deprecation-note.md)]
 
 For more information, refer to [You see validation errors for users in the Microsoft 365 portal or in the Azure Active Directory module for Windows PowerShell](https://support.microsoft.com/help/2741233/you-see-validation-errors-for-users-in-the-office-365-portal-or-in-the).  
 

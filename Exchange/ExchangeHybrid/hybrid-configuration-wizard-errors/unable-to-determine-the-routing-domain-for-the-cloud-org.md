@@ -37,7 +37,7 @@ at Microsoft.Exchange.Management.Hybrid.Engine.ExecuteTask(ITask taskBase, ITask
 
 Enable directory synchronization. When directory synchronization is enabled, the routing domain is created. To enable directory synchronization, follow these steps.
 
-[!INCLUDE [Azure AD PowerShell deprecation note](~/../Exchange/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
+[!INCLUDE [Azure AD PowerShell deprecation note](../../../includes/aad-powershell-deprecation-note.md)]
 
 1. Connect to Microsoft Entra ID by using Windows PowerShell. For more information about how to do so, see [Connect to Microsoft Entra ID](/powershell/azure/active-directory/overview?view=azureadps-1.0#connect-to-azure-ad&preserve-view=true).
 2. Run the following command:

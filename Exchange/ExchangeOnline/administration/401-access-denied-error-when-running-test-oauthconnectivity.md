@@ -43,7 +43,7 @@ To fix this issue, take one of the following actions, as appropriate for your si
 
 ### Scenario 1 - The SPN is missing
 
-[!INCLUDE [Azure AD PowerShell deprecation note](~/../Exchange/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
+[!INCLUDE [Azure AD PowerShell deprecation note](../../../includes/aad-powershell-deprecation-note.md)]
 
 1. Open the Exchange Management Shell.
 2. Run the following command:
