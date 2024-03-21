@@ -2474,7 +2474,21 @@
         "source_path": "active-directory/yellow-exclamation-mark-office2013.md",
         "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/yellow-exclamation-mark-office2013",
         "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/welcome-azure-ad.yml",
+        "redirect_url": "/troubleshoot/azure/",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "synapse-analytics/welcome-synapse-analytics.yml",
+        "redirect_url": "/troubleshoot/azure/",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "virtual-machines/welcome-virtual-machines.yml",
+        "redirect_url": "/troubleshoot/azure/",
+        "redirect_document_id": false
       }
-
   ]
 }
