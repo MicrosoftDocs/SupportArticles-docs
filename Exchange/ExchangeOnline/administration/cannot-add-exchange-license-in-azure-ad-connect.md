@@ -57,10 +57,10 @@ This issue can occur under different circumstances.
 
   > %userprofile%\appdata\local\microsoft\Office365\PowerShell
 
-- If DirSync errors are present on an object, you may receive an error message when you try to change the license for the object, including adding or removing features. Check for DirSync errors by using the following support articles:
+- If DirSync errors are present on an object, you may receive an error message when you try to change the license for the object, including adding or removing features. Check for these errors by using the following support articles:
 
   - [View directory synchronization errors in Microsoft 365](/microsoft-365/enterprise/identify-directory-synchronization-errors?view=o365-worldwide&preserve-view=true)
-  - [How to identify DirSync or Microsoft Entra Connect provisioning errors in Microsoft 365](https://support.microsoft.com/help/4040885)
+  - [How to identify `DirSync` or Microsoft Entra Connect provisioning errors in Microsoft 365](https://support.microsoft.com/help/4040885)
 
   For more information about how to troubleshoot, see the following articles:
 
