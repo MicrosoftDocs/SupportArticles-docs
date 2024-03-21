@@ -549,6 +549,1932 @@
         "source_path": "cloud-services-extended/welcome-cloud-services-extended.yml",
         "redirect_url": "/troubleshoot/azure/cloud-services/extended/welcome-cloud-services-extended",
         "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/aad-management-agent-hangs-during-import.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/aad-management-agent-hangs-during-import",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/aad-sync-services-config-wizard-error.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/aad-sync-services-config-wizard-error",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "hpc-batch/access-denied-execute-azure-batch-job.md",
+        "redirect_url": "/troubleshoot/azure/hpc/batch/access-denied-execute-azure-batch-job",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/account-lockout-adfs-window-server.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/mfa/account-lockout-adfs-window-server",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/activation-watermark-appears.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/activation-watermark-appears",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/adal-authenticate-android-devices-fail.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/mfa/adal-authenticate-android-devices-fail",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/admin-credentials-supplied-not-valid.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/admin-credentials-supplied-not-valid",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/allocation-failure.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/allocation-failure",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/allocation-failure-classic.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/allocation-failure-classic",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/app-doesnt-appear.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/app-integration/app-doesnt-appear",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/app-takes-long-time-appear.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/app-integration/app-takes-long-time-appear",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/authentication-fails-with-error.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/mfa/authentication-fails-with-error",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/authorization-request-denied-graph-api.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/mfa/authorization-request-denied-graph-api",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "hpc-batch/azure-batch-creates-network-resources.md",
+        "redirect_url": "/troubleshoot/azure/hpc/batch/azure-batch-creates-network-resources",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "hpc-batch/azure-batch-node-unusable-state.md",
+        "redirect_url": "/troubleshoot/azure/hpc/batch/azure-batch-node-unusable-state",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "hpc-batch/azure-batch-pool-creation-failure.md",
+        "redirect_url": "/troubleshoot/azure/hpc/batch/azure-batch-pool-creation-failure",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "hpc-batch/azure-batch-pool-deletion-failure.md",
+        "redirect_url": "/troubleshoot/azure/hpc/batch/azure-batch-pool-deletion-failure",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "hpc-batch/azure-batch-pool-resizing-failure.md",
+        "redirect_url": "/troubleshoot/azure/hpc/batch/azure-batch-pool-resizing-failure",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "hpc-batch/azure-batch-task-failure-no-stdout-stderr-log.md",
+        "redirect_url": "/troubleshoot/azure/hpc/batch/azure-batch-task-failure-no-stdout-stderr-log",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "hpc-batch/azure-batch-task-permission-issue.md",
+        "redirect_url": "/troubleshoot/azure/hpc/batch/azure-batch-task-permission-issue",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "hpc-batch/azure-batch-task-stuck-in-running-state.md",
+        "redirect_url": "/troubleshoot/azure/hpc/batch/azure-batch-task-stuck-in-running-state",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/azure-iaas-vm-disks-managed-unmanaged.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/azure-iaas-vm-disks-managed-unmanaged",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/azure-linux-vm-uefi-boot-failures.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/azure-linux-vm-uefi-boot-failures",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/azure-vm-cannot-rdp-driver-irql-not-less-equal.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/azure-vm-cannot-rdp-driver-irql-not-less-equal",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/azure-vm-cannot-rdp-working-features.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/azure-vm-cannot-rdp-working-features",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/azure-vm-netlogon-not-starting.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/azure-vm-netlogon-not-starting",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/azure-vm-nsi-not-starting.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/azure-vm-nsi-not-starting",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/azure-vm-unavailable.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/azure-vm-unavailable",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/azure-windows-vm-memory-issue.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/azure-windows-vm-memory-issue",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "hpc-batch/batch-node-creation-delay-restart-reimage.md",
+        "redirect_url": "/troubleshoot/azure/hpc/batch/batch-node-creation-delay-restart-reimage",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/boot-diagnostics.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/boot-diagnostics",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/boot-error-0xc000000f.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/boot-error-0xc000000f",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/boot-error-0xc0000011.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/boot-error-0xc0000011",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/boot-error-0xc0000034.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/boot-error-0xc0000034",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/boot-error-0xc0000098.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/boot-error-0xc0000098",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/boot-error-0xc00000ba.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/boot-error-0xc00000ba",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/boot-error-0xc000014c.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/boot-error-0xc000014c",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/boot-error-0xc0000221.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/boot-error-0xc0000221",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/boot-error-0xc0000359.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/boot-error-0xc0000359",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/boot-error-disk-read-error-occurred.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/boot-error-disk-read-error-occurred",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/boot-error-status-not-found.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/boot-error-status-not-found",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/boot-error-troubleshoot.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/boot-error-troubleshoot",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/boot-error-troubleshoot-linux.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/boot-error-troubleshoot-linux",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/boot-error-troubleshoot-windows.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/boot-error-troubleshoot-windows",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/cannot-connect-cloud-services-powershell.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/mfa/cannot-connect-cloud-services-powershell",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/cannot-connect-debian-linux.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/cannot-connect-debian-linux",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/cannot-connect-linux-network.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/cannot-connect-linux-network",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/cannot-connect-rdp-azure-vm.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/cannot-connect-rdp-azure-vm",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/cannot-delete-directory.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/b2c/cannot-delete-directory",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/cannot-delete-directory-azure-portal.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/dir-dmns-obj/cannot-delete-directory-azure-portal",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/cannot-enable-device-writeback.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/cannot-enable-device-writeback",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/cannot-extend-encrypted-os-volume.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/cannot-extend-encrypted-os-volume",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/cannot-extend-volume-sql-server.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/cannot-extend-volume-sql-server",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/cannot-manage-objects.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/cannot-manage-objects",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/cannot-rdp-azure-vm-brute-force.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/cannot-rdp-azure-vm-brute-force",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/cannot-run-scripts-powershell.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/cannot-run-scripts-powershell",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/cannot-signin-convert-domain-federated.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/cannot-signin-convert-domain-federated",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/cannot-use-mfa-signin-lose-phone.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/mfa/cannot-use-mfa-signin-lose-phone",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/cannot-verify-account-reset-pwd.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/mfa/cannot-verify-account-reset-pwd",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/cannot-work-automatic-upgrade.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/cannot-work-automatic-upgrade",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/cant-open-aad-module-powershell.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/dir-dmns-obj/cant-open-aad-module-powershell",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/cant-perform-workplace-join.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/dir-dmns-obj/cant-perform-workplace-join",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/cant-set-up-mfa-five-devices-registered.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/mfa/cant-set-up-mfa-five-devices-registered",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/capacity-reservation-billing-scenerios.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/capacity-reservation-billing-scenerios",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/capacity-reservation-cant-create-vm-vmss.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/capacity-reservation-cant-create-vm-vmss",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/capacity-reservation-cant-delete-group.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/capacity-reservation-cant-delete-group",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/capacity-reservation-cant-deploy-vm-vmss.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/capacity-reservation-cant-deploy-vm-vmss",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/capacity-reservation-failed-provisioning-state.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/capacity-reservation-failed-provisioning-state",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/certificate-based-authenticate-issue.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/certificate-based-authenticate-issue",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/chroot-environment-linux.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/chroot-environment-linux",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/chroot-logical-volume-manager.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/chroot-logical-volume-manager",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/cloud-init-deployment-delay.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/cloud-init-deployment-delay",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/cloud-init-support-linux-vms.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/cloud-init-support-linux-vms",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/cloud-init-writes-vm-host-keys-as-ec2.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/cloud-init-writes-vm-host-keys-as-ec2",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/code-403-azure-seamless-sso-win10.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/mfa/code-403-azure-seamless-sso-win10",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "hpc-pack/compute-node-not-shown-error-state.md",
+        "redirect_url": "/troubleshoot/azure/hpc/pack/compute-node-not-shown-error-state",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/computer-must-joined-domain.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/computer-must-joined-domain",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/computer-names-missing-blank.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/computer-names-missing-blank",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/computers-3-hour-delay-boot.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/computers-3-hour-delay-boot",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/confirm-signin-info-workplace-join.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/mfa/confirm-signin-info-workplace-join",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/could-not-verify-account-reset-pwd.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/could-not-verify-account-reset-pwd",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/create-swap-file-linux-vm.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/create-swap-file-linux-vm",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/credssp-encryption-oracle-remediation.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/credssp-encryption-oracle-remediation",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/custom-routes-enable-kms-activation.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/custom-routes-enable-kms-activation",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/customscript-reruns-previous-command.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/customscript-reruns-previous-command",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/debug-customscriptextension-runcommand-scripts.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/debug-customscriptextension-runcommand-scripts",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/detailed-troubleshoot-rdp.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/detailed-troubleshoot-rdp",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/detailed-troubleshoot-ssh-connection.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/detailed-troubleshoot-ssh-connection",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/directory-sync-stop-register.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/directory-sync-stop-register",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/disable-guest-os-firewall-windows.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/disable-guest-os-firewall-windows",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/domain-based-filtering-fail-sync.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/domain-based-filtering-fail-sync",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/downsize-data-disk-without-losing-data.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/downsize-data-disk-without-losing-data",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/ed25519-ssh-keys.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/ed25519-ssh-keys",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/email-addresses-not-sync.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/email-addresses-not-sync",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/enable-disable-firewall-rule-guest-os.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/enable-disable-firewall-rule-guest-os",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "hpc-batch/error-accountencryptionkeyunavailable.md",
+        "redirect_url": "/troubleshoot/azure/hpc/batch/error-accountencryptionkeyunavailable",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/error-code-0xc000000e.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/error-code-0xc000000e",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/error-code-0xC0000102-status-file-corrupt.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/error-code-0xC0000102-status-file-corrupt",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/error-code-0xc0000605.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/error-code-0xc0000605",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/error-code-1789-configuration-wizard.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/error-code-1789-configuration-wizard",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/error-code-AADSTS50003-cert-or-key-not-configured.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/app-integration/error-code-AADSTS50003-cert-or-key-not-configured",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/error-code-AADSTS50011-redirect-uri-mismatch.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/app-integration/error-code-AADSTS50011-redirect-uri-mismatch",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/error-code-AADSTS50011-reply-url-mismatch.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/app-integration/error-code-AADSTS50011-reply-url-mismatch",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/error-code-AADSTS50020-user-account-identity-provider-does-not-exist.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/app-integration/error-code-AADSTS50020-user-account-identity-provider-does-not-exist",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/error-code-aadsts500571-guest-user-account-is-disabled.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/app-integration/error-code-aadsts500571-guest-user-account-is-disabled",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/error-code-aadsts50057-user-account-is-disabled.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/app-integration/error-code-aadsts50057-user-account-is-disabled",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/error-code-AADSTS50105-user-not-assigned-role.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/app-integration/error-code-AADSTS50105-user-not-assigned-role",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/error-code-AADSTS650056-misconfigured-app.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/app-integration/error-code-AADSTS650056-misconfigured-app",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/error-code-aadsts7000110-request-is-ambiguous.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/app-integration/error-code-aadsts7000110-request-is-ambiguous",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/error-code-aadsts7000112-application-is-disabled.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/app-integration/error-code-aadsts7000112-application-is-disabled",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/error-code-AADSTS70001-app-not-found-in-directory.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/app-integration/error-code-AADSTS70001-app-not-found-in-directory",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/error-code-AADSTS750054-saml-request-not-present.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/app-integration/error-code-AADSTS750054-saml-request-not-present",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/error-code-AADSTS75005-not-a-valid-saml-request.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/app-integration/error-code-AADSTS75005-not-a-valid-saml-request",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/error-code-AADSTS75011-auth-method-mismatch.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/app-integration/error-code-AADSTS75011-auth-method-mismatch",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "hpc-cyclecloud/error-invalid-azure-credentials-cycle-cloud.md",
+        "redirect_url": "/troubleshoot/azure/hpc/cyclecloud/error-invalid-azure-credentials-cycle-cloud",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/error-messages.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/error-messages",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "hpc-pack/error-no-virtual-network-found.md",
+        "redirect_url": "/troubleshoot/azure/hpc/pack/error-no-virtual-network-found",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/error-sign-into-app.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/b2c/error-sign-into-app",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/esr-settings-not-sync-mfa-enabled.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/mfa/esr-settings-not-sync-mfa-enabled",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/event-id-6065-user-cant-sign.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/mfa/event-id-6065-user-cant-sign",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/event-id-troubleshoot-vm-rdp-connecton.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/event-id-troubleshoot-vm-rdp-connecton",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/exceed-number-objects-synced.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/exceed-number-objects-synced",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/exclude-user-primary-group.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/exclude-user-primary-group",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/extensions-stop-running.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/extensions-stop-running",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/extension-supported-os.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/extension-supported-os",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/extension-version-2.2-not-supported.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/extension-version-2.2-not-supported",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/fail-connect-azure-information-protection-powershell.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/fail-connect-azure-information-protection-powershell",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/failed-get-address-method.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/failed-get-address-method",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/failed-get-contents-log-error.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/failed-get-contents-log-error",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/faq-set-up-enterprise-work-remotely.yml",
+        "redirect_url": "/troubleshoot/azure/entra-id/dir-dmns-obj/faq-set-up-enterprise-work-remotely",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/faulty-split-brain-dns-configuration-prevent-sso.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/mfa/faulty-split-brain-dns-configuration-prevent-sso",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/federated-user-prompt-enter-credentials.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/mfa/federated-user-prompt-enter-credentials",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/federated-users-forced-sign-in.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/mfa/federated-users-forced-sign-in",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/federated-users-sign-in-two-times-mfa.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/mfa/federated-users-sign-in-two-times-mfa",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/federation-service-identifier-specified.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/mfa/federation-service-identifier-specified",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/gpu-disabled-upgrade-ubuntu.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/gpu-disabled-upgrade-ubuntu",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/guest-os-firewall-blocking-inbound-traffic.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/guest-os-firewall-blocking-inbound-traffic",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/guest-os-firewall-misconfigured.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/guest-os-firewall-misconfigured",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/healthresources-table-resource-graph-missing-entries.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/healthresources-table-resource-graph-missing-entries",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/high-cpu-usage.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/high-cpu-usage",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/how-to-use-perfInsights.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/how-to-use-perfInsights",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/how-to-use-perfInsights-linux.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/how-to-use-perfInsights-linux",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/how-to-videos-windows-virtual-desktop.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/how-to-videos-windows-virtual-desktop",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "hpc-pack/hpc-management-reporting-database-connection-issue.md",
+        "redirect_url": "/troubleshoot/azure/hpc/pack/hpc-management-reporting-database-connection-issue",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "hpc-pack/hpc-management-reporting-database-permission-problem.md",
+        "redirect_url": "/troubleshoot/azure/hpc/pack/hpc-management-reporting-database-permission-problem",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "hpc-pack/hpc-management-service-not-start.md",
+        "redirect_url": "/troubleshoot/azure/hpc/pack/hpc-management-service-not-start",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "hpc-pack/hpc-node-manager-service-unreachable-certificate.md",
+        "redirect_url": "/troubleshoot/azure/hpc/pack/hpc-node-manager-service-unreachable-certificate",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "hpc-pack/hpc-pack-excel-offloading-job-stalled.md",
+        "redirect_url": "/troubleshoot/azure/hpc/pack/hpc-pack-excel-offloading-job-stalled",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/iaas-logs.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/iaas-logs",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/inaccurate-vm-availability-during-vm-restart.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/inaccurate-vm-availability-during-vm-restart",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/in-place-system-upgrade.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/in-place-system-upgrade",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/installation-configuration-wizard-errors.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/installation-configuration-wizard-errors",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/install-vm-agent-offline.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/install-vm-agent-offline",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "hpc-cyclecloud/invalid-client-secret.md",
+        "redirect_url": "/troubleshoot/azure/hpc/cyclecloud/invalid-client-secret",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "hpc-pack/job-stuck-canceling-mode.md",
+        "redirect_url": "/troubleshoot/azure/hpc/pack/job-stuck-canceling-mode",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/kernel-related-boot-issues.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/kernel-related-boot-issues",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/linux-agent-cannot-process-extensions.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/linux-agent-cannot-process-extensions",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/linux-azure-guest-agent.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/linux-azure-guest-agent",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/linux-fulldisk-boot-error.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/linux-fulldisk-boot-error",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/linux-hyperv-issue.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/linux-hyperv-issue",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/linux-image-provisioning-agent-update-awareness.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/linux-image-provisioning-agent-update-awareness",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/linux-kernel-fails-restart-provision.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/linux-kernel-fails-restart-provision",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/linux-kernel-panics-upgrade.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/linux-kernel-panics-upgrade",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/linux-kernel-panic-troubleshooting.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/linux-kernel-panic-troubleshooting",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/linux-no-boot-dracut.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/linux-no-boot-dracut",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/linux-recovery-cannot-start-file-system-errors.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/linux-recovery-cannot-start-file-system-errors",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/linux-rhui-connectivity-issues.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/linux-rhui-connectivity-issues",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/linux-selinux-troubleshooting.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/linux-selinux-troubleshooting",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/linux-upgrade-suse-15sp1.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/linux-upgrade-suse-15sp1",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/linux-virtual-machine-cannot-start-fstab-errors.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/linux-virtual-machine-cannot-start-fstab-errors",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/linux-vm-extension-status-not-reported.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/linux-vm-extension-status-not-reported",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/linux-vm-multiple-virtual-network-interfaces-configuration.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/linux-vm-multiple-virtual-network-interfaces-configuration",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/linux-vm-not-start-kernel-lis.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/linux-vm-not-start-kernel-lis",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/linux-vm-sshconnectionissue-perms.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/linux-vm-sshconnectionissue-perms",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/load-file-or-assembly-error.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/load-file-or-assembly-error",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/max-linux-ram-limited-64-gb.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/max-linux-ram-limited-64-gb",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/method-invocation-failed-error.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/dir-dmns-obj/method-invocation-failed-error",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/multi-factor-auth-second-verification.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/mfa/multi-factor-auth-second-verification",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/multiple-certificates-iaas-vm-extensions.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/multiple-certificates-iaas-vm-extensions",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/must-change-password.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/must-change-password",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/new-msoldomain-cmdle-add-subdomain.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/new-msoldomain-cmdle-add-subdomain",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/no-internet-access-multi-ip.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/no-internet-access-multi-ip",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/no-local-admin-privileges-azure-ad-joined-device.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/dir-dmns-obj/no-local-admin-privileges-azure-ad-joined-device",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/number-add-username-email-address.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/number-add-username-email-address",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/object-deletions-not-sync.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/object-deletions-not-sync",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/objects-dont-sync-ad-sync-tool.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/objects-dont-sync-ad-sync-tool",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/oom-swap-file-linux-vm.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/oom-swap-file-linux-vm",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/os-bootmgr-missing.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/os-bootmgr-missing",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/os-bucket-boot-failure.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/os-bucket-boot-failure",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/os-not-found.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/os-not-found",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/outdate-information-displays.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/outdate-information-displays",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/password-writeback-access-rights-permissions.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/password-writeback-access-rights-permissions",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/password-writeback-error-code-8023062c.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/password-writeback-error-code-8023062c",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/password-writeback-error-code-sspr-0029.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/password-writeback-error-code-sspr-0029",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/password-writeback-error-code-sspr-009.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/password-writeback-error-code-sspr-009",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/password-writeback-general-troubleshooting-steps.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/password-writeback-general-troubleshooting-steps",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/password-writeback-microsoft-365-admin-center.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/password-writeback-microsoft-365-admin-center",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/password-writeback-not-compliant-on-premises-ad-pwd-policy.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/password-writeback-not-compliant-on-premises-ad-pwd-policy",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/password-writeback-servers-need-time-catch-up.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/password-writeback-servers-need-time-catch-up",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/pending-devices.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/dir-dmns-obj/pending-devices",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/perfinsights-and-scale-set-vm-instances.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/perfinsights-and-scale-set-vm-instances",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/performance-diagnostics.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/performance-diagnostics",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/performance-diagnostics-vm-extension.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/performance-diagnostics-vm-extension",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/ping-clustered-name-fail.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/ping-clustered-name-fail",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/poor-performance-emulated-storage-stack.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/poor-performance-emulated-storage-stack",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/proxyaddresses-attribute-populate.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/proxyaddresses-attribute-populate",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/pwd-change-not-save.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/dir-dmns-obj/pwd-change-not-save",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/pwd-hash-sync-auto-enable.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/pwd-hash-sync-auto-enable",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/pwd-hash-sync-stops-work.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/pwd-hash-sync-stops-work",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/pwd-hash-sync-stop-work-fim.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/pwd-hash-sync-stop-work-fim",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/pwd-not-sync.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/pwd-not-sync",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/redeploy-to-new-node-linux.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/redeploy-to-new-node-linux",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/redeploy-to-new-node-windows.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/redeploy-to-new-node-windows",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/remote-tools-troubleshoot-azure-vm-issues.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/remote-tools-troubleshoot-azure-vm-issues",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/remove-msoluser-user-not-found-recyclebin.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/dir-dmns-obj/remove-msoluser-user-not-found-recyclebin",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/repair-linux-vm-using-ALAR.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/repair-linux-vm-using-ALAR",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/repair-linux-vm-using-azure-virtual-machine-repair-commands.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/repair-linux-vm-using-azure-virtual-machine-repair-commands",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/repair-windows-vm-using-azure-virtual-machine-repair-commands.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/repair-windows-vm-using-azure-virtual-machine-repair-commands",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/reply-url-redirected-to-localhost.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/app-integration/reply-url-redirected-to-localhost",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/request-not-processed-reset-pwd.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/mfa/request-not-processed-reset-pwd",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/reset-local-password-without-agent.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/reset-local-password-without-agent",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/reset-network-interface.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/reset-network-interface",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/reset-network-interface-azure-linux-vm.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/reset-network-interface-azure-linux-vm",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/reset-password.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/reset-password",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/reset-rdp.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/reset-rdp",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/resolve-failed-start-switch-root-azure-linux-vm.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/resolve-failed-start-switch-root-azure-linux-vm",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/resolve-model-database-corruption-sqllocaldb.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/resolve-model-database-corruption-sqllocaldb",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/restart-resize-error-troubleshooting.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/restart-resize-error-troubleshooting",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/retirement-hybrid-use-benefit-images.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/retirement-hybrid-use-benefit-images",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/rpc-errors-affecting-aadconnect.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/rpc-errors-affecting-aadconnect",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/run-win-server-2003.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/run-win-server-2003",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/sdp352ef8720-e3ee-4a12-a37e-cc3b0870f359-windows-vm.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/sdp352ef8720-e3ee-4a12-a37e-cc3b0870f359-windows-vm",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/send-notification-details.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/app-integration/send-notification-details",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/separate-pwds-required-computer-work-account.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/separate-pwds-required-computer-work-account",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/serial-console-cmd-ps-commands.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/serial-console-cmd-ps-commands",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/serial-console-enable-disable.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/serial-console-enable-disable",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/serial-console-errors.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/serial-console-errors",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/serial-console-grub-proactive-configuration.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/serial-console-grub-proactive-configuration",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/serial-console-grub-single-user-mode.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/serial-console-grub-single-user-mode",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/serial-console-linux.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/serial-console-linux",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/serial-console-nmi-sysrq.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/serial-console-nmi-sysrq",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/serial-console-overview.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/serial-console-overview",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/serial-console-power-options.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/serial-console-power-options",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/serial-console-windows.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/serial-console-windows",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/server-error-application.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/b2c/server-error-application",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/server-error-application-exception.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/b2c/server-error-application-exception",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/server-software-support.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/server-software-support",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/services-sync-not-start.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/services-sync-not-start",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/sg-mail-enabled-sync.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/sg-mail-enabled-sync",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/size-limit-exceeded.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/size-limit-exceeded",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/slow-performance-high-cpu-usage.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/slow-performance-high-cpu-usage",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/start-vm-last-known-good.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/start-vm-last-known-good",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/storage-classic-cannot-delete-storage-account-container-vhd.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/storage-classic-cannot-delete-storage-account-container-vhd",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/storage-resource-deletion-errors.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/storage-resource-deletion-errors",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/support-32-bit-operating-systems-virtual-machines.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/support-32-bit-operating-systems-virtual-machines",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/support-agent-extensions.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/support-agent-extensions",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/support-extensions-agent-version.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/support-extensions-agent-version",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/support-policy-citrix-services.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/support-policy-citrix-services",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/suse-public-cloud-connectivity-registration-issues.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/suse-public-cloud-connectivity-registration-issues",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/swap-file-not-recreated-linux-vm-restart.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/swap-file-not-recreated-linux-vm-restart",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/term-cmdlet-name-not-recognized-aad-cmdlet.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/dir-dmns-obj/term-cmdlet-name-not-recognized-aad-cmdlet",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/text-voice-call-verification-code-mfa-not-send.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/mfa/text-voice-call-verification-code-mfa-not-send",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/troubleshoot-aad-connect-fails-to-install-upgraded-version.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/troubleshoot-aad-connect-fails-to-install-upgraded-version",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/troubleshoot-aad-connect-objects-attributes.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/troubleshoot-aad-connect-objects-attributes",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/troubleshoot-activation-problems.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/troubleshoot-activation-problems",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/troubleshoot-adding-apps.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/app-integration/troubleshoot-adding-apps",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/troubleshoot-app-connection.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/troubleshoot-app-connection",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/troubleshoot-azure-mfa-issue.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/mfa/troubleshoot-azure-mfa-issue",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/troubleshoot-bitlocker-boot-error.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/troubleshoot-bitlocker-boot-error",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/troubleshoot-broken-secure-channel.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/troubleshoot-broken-secure-channel",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/troubleshoot-check-disk-boot-error.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/troubleshoot-check-disk-boot-error",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/troubleshoot-common-blue-screen-error.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/troubleshoot-common-blue-screen-error",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/troubleshoot-critical-service-failed-boot-error.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/troubleshoot-critical-service-failed-boot-error",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/troubleshoot-deployment-new-vm-linux.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/troubleshoot-deployment-new-vm-linux",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/troubleshoot-deployment-new-vm-windows.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/troubleshoot-deployment-new-vm-windows",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/troubleshoot-device-names-problems.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/troubleshoot-device-names-problems",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/troubleshoot-directory-service-initialization-failure.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/troubleshoot-directory-service-initialization-failure",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/troubleshoot-dynamic-groups.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/dir-dmns-obj/troubleshoot-dynamic-groups",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/troubleshoot-extension-certificates-issues-windows-vm.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/troubleshoot-extension-certificates-issues-windows-vm",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/troubleshoot-guide-critical-process-died.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/troubleshoot-guide-critical-process-died",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/troubleshoot-guide-not-bootable-disk.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/troubleshoot-guide-not-bootable-disk",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/troubleshoot-guide-windows-boot-manager-menu.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/troubleshoot-guide-windows-boot-manager-menu",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/troubleshoot-high-cpu-issues-azure-windows-vm.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/troubleshoot-high-cpu-issues-azure-windows-vm",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/troubleshooting-throttling-errors.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/troubleshooting-throttling-errors",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "hpc-pack/troubleshoot-install-failure-hpc-pack-linux-node-agent.md",
+        "redirect_url": "/troubleshoot/azure/hpc/pack/troubleshoot-install-failure-hpc-pack-linux-node-agent",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/troubleshoot-linux-rhui-certificate-issues.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/troubleshoot-linux-rhui-certificate-issues",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/troubleshoot-performance-bottlenecks-linux.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/troubleshoot-performance-bottlenecks-linux",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/troubleshoot-performance-virtual-machine-linux-windows.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/troubleshoot-performance-virtual-machine-linux-windows",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/troubleshoot-permission-issue-sync-service-manager.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/troubleshoot-permission-issue-sync-service-manager",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/troubleshoot-pwd-sync.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/troubleshoot-pwd-sync",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/troubleshoot-rdp-access-denied.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/troubleshoot-rdp-access-denied",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/troubleshoot-rdp-cannot-sign-into-account.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/troubleshoot-rdp-cannot-sign-into-account",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/troubleshoot-rdp-connection.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/troubleshoot-rdp-connection",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/troubleshoot-rdp-dhcp-disabled.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/troubleshoot-rdp-dhcp-disabled",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/troubleshoot-rdp-driver-netvsc.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/troubleshoot-rdp-driver-netvsc",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/troubleshoot-rdp-general-error.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/troubleshoot-rdp-general-error",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/troubleshoot-rdp-intermittent-connectivity.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/troubleshoot-rdp-intermittent-connectivity",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/troubleshoot-rdp-internal-error.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/troubleshoot-rdp-internal-error",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/troubleshoot-rdp-nic-disabled.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/troubleshoot-rdp-nic-disabled",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/troubleshoot-rdp-no-license-server.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/troubleshoot-rdp-no-license-server",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/troubleshoot-rdp-nsg-problem.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/troubleshoot-rdp-nsg-problem",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/troubleshoot-rdp-safe-mode.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/troubleshoot-rdp-safe-mode",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/troubleshoot-rdp-static-ip.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/troubleshoot-rdp-static-ip",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/troubleshoot-rdp-too-many-admin-sessions-open.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/troubleshoot-rdp-too-many-admin-sessions-open",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/troubleshoot-reboot-loop.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/troubleshoot-reboot-loop",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/troubleshoot-recovery-disks-linux.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/troubleshoot-recovery-disks-linux",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/troubleshoot-recovery-disks-portal-linux.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/troubleshoot-recovery-disks-portal-linux",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/troubleshoot-recovery-disks-portal-windows.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/troubleshoot-recovery-disks-portal-windows",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/troubleshoot-recovery-disks-windows.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/troubleshoot-recovery-disks-windows",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/troubleshoot-remote-desktop-services-issues.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/troubleshoot-remote-desktop-services-issues",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/troubleshoot-sign-in-saml-based-apps.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/app-integration/troubleshoot-sign-in-saml-based-apps",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/troubleshoot-specific-rdp-errors.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/troubleshoot-specific-rdp-errors",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/troubleshoot-ssh-connection.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/troubleshoot-ssh-connection",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/troubleshoot-ssh-permissions-too-open.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/troubleshoot-ssh-permissions-too-open",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/troubleshoot-stuck-updating-boot-error.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/troubleshoot-stuck-updating-boot-error",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/troubleshoot-unexpected-restart-error-during-vm-boot.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/troubleshoot-unexpected-restart-error-during-vm-boot",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/troubleshoot-user-creation-deletion-issues.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/dir-dmns-obj/troubleshoot-user-creation-deletion-issues",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/troubleshoot-vm-boot-configure-update.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/troubleshoot-vm-boot-configure-update",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/troubleshoot-vm-boot-error.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/troubleshoot-vm-boot-error",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/troubleshoot-vm-by-use-nested-virtualization.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/troubleshoot-vm-by-use-nested-virtualization",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/troubleshoot-vm-deployment-detached.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/troubleshoot-vm-deployment-detached",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/troubleshoot-windows-stop-error.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/troubleshoot-windows-stop-error",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/tvp-errors-when-AADConnect-installed-on-Windows-Server-2019.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/tvp-errors-when-AADConnect-installed-on-Windows-Server-2019",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/unable-access-g2-linux-vm-reboot.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/unable-access-g2-linux-vm-reboot",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/unable-authenticate-credentials.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/unable-authenticate-credentials",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/unable-communicate-windows-service.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/unable-communicate-windows-service",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/unable-configure-pwd-writeback-error.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/unable-configure-pwd-writeback-error",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/unable-delete-app.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/app-integration/unable-delete-app",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/unable-install-aad-module-powershell.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/unable-install-aad-module-powershell",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/unable-reset-pwd-response-call.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/mfa/unable-reset-pwd-response-call",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/unable-sync-system-discovery-mailbox.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/mfa/unable-sync-system-discovery-mailbox",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/understand-vm-reboot.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/understand-vm-reboot",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/unexpected-error-reset-pwd.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/mfa/unexpected-error-reset-pwd",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/unexpected-reboots-attached-vhds.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/unexpected-reboots-attached-vhds",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/unexpected-vm-reboot-root-cause-analysis.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/unexpected-vm-reboot-root-cause-analysis",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/unknown-actors-in-audit-reports.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/governance/unknown-actors-in-audit-reports",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/unknown-error-0x80005000.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/unknown-error-0x80005000",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/unknown-error-occurred-sign-in-assistant.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/mfa/unknown-error-occurred-sign-in-assistant",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/unlock-encrypted-disk-offline.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/unlock-encrypted-disk-offline",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/unlock-encrypted-linux-disk-offline-repair.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/unlock-encrypted-linux-disk-offline-repair",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/unmanaged-disk-offline-repair.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/unmanaged-disk-offline-repair",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/unresponsive-vm-apply-group-policy.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/unresponsive-vm-apply-group-policy",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/unresponsive-vm-apply-security-policy.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/unresponsive-vm-apply-security-policy",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/unresponsive-vm-apply-windows-update.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/unresponsive-vm-apply-windows-update",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/updates-included-windows-server-images.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/updates-included-windows-server-images",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/upgrade-fails-error-code-1603.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/upgrade-fails-error-code-1603",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/uploaded-vhd-not-support.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/uploaded-vhd-not-support",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/upload-existing-hyperv-dc-azure-ps.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/upload-existing-hyperv-dc-azure-ps",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "hpc-batch/use-managed-identities-azure-batch-account-pool.md",
+        "redirect_url": "/troubleshoot/azure/hpc/batch/use-managed-identities-azure-batch-account-pool",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/user-displayed-disabled-or-enabled-mfa.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/mfa/user-displayed-disabled-or-enabled-mfa",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/user-name-pwd-incorrect.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/mfa/user-name-pwd-incorrect",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/user-object-missing-filtered.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/user-object-missing-filtered",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/use-upn-matching-identity-sync.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/use-upn-matching-identity-sync",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/verify-first-party-apps-sign-in.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/governance/verify-first-party-apps-sign-in",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/vfat-disabled-boot-issues.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/vfat-disabled-boot-issues",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/vhd-not-supported-vm-azure.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/vhd-not-supported-vm-azure",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/virtual-machines-availability-set-supportability.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/virtual-machines-availability-set-supportability",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/vm-cannot-upgrade-64-vcpu.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/vm-cannot-upgrade-64-vcpu",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/vm-inspector-azure-virtual-machines.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/vm-inspector-azure-virtual-machines",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/vm-inspector-error-messages.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/vm-inspector-error-messages",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/vm-stops-at-please-wait-for-group-policy-client.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/vm-stops-at-please-wait-for-group-policy-client",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/vm-stuck-in-failed-state.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/vm-stuck-in-failed-state",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/vm-unresponsive-applying-audit-configuration-policy.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/vm-unresponsive-applying-audit-configuration-policy",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/vm-unresponsive-domain-controllers-policy.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/vm-unresponsive-domain-controllers-policy",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/vm-unresponsive-wait-local-session-manager.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/vm-unresponsive-wait-local-session-manager",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/welcome-deployment-troubleshooting.yml",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/welcome-deployment-troubleshooting",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "hpc-batch/welcome-hpc-batch.yml",
+        "redirect_url": "/troubleshoot/azure/hpc/batch/welcome-hpc-batch",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "hpc-cyclecloud/welcome-hpc-cyclecloud.yml",
+        "redirect_url": "/troubleshoot/azure/hpc/cyclecloud/welcome-hpc-cyclecloud",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "hpc-pack/welcome-hpc-pack.yml",
+        "redirect_url": "/troubleshoot/azure/hpc/pack/welcome-hpc-pack",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/windows-activation-duplicate-client-machine-id.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/windows-activation-duplicate-client-machine-id",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/windows-activation-stopped-working.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/windows-activation-stopped-working",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/windows-azure-guest-agent.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/windows-azure-guest-agent",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/windows-boot-error-invalid-image-hash.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/windows-boot-error-invalid-image-hash",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/windows-boot-failure.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/windows-boot-failure",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/windows-could-not-configure-system.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/windows-could-not-configure-system",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/windows-stop-error-bad-system-config-info.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/windows-stop-error-bad-system-config-info",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/windows-stop-error-hardware-malfunction.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/windows-stop-error-hardware-malfunction",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/windows-stop-error-system-process-terminated.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/windows-stop-error-system-process-terminated",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/windows-stop-error-system-thread-exception-not-handled.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/windows-stop-error-system-thread-exception-not-handled",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/windows-update-installation-capacity.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/windows-update-installation-capacity",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/windows-virtual-machine-activation-faq.yml",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/windows-virtual-machine-activation-faq",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/windows-vm-activation-error-0x800705b4.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/windows-vm-activation-error-0x800705b4",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/windows-vm-activation-error-0xc004f074.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/windows-vm-activation-error-0xc004f074",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/windows-vm-activation-error-0xc004fd01-0xc004fd02.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/windows-vm-activation-error-0xc004fd01-0xc004fd02",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "active-directory/yellow-exclamation-mark-office2013.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/user-prov-sync/yellow-exclamation-mark-office2013",
+        "redirect_document_id": true
       }
+
   ]
 }
