@@ -172,7 +172,7 @@ For tracing other Microsoft SQL Server drivers, see the following articles. Perf
 - [Use PerfView to collect trace log](/sql/connect/ado-net/enable-eventsource-tracing#use-perfview-to-collect-trace-log)
 - [Microsoft JDBC Driver](/sql/connect/jdbc/tracing-driver-operation)
 
-For tracing 3rd-party Microsoft SQL Server drivers, please consult the vendor documentation.
+For tracing third-party Microsoft SQL Server drivers, please consult the vendor documentation.
 
 #### Both the server trace and the client trace agree the issue is on the server
 
