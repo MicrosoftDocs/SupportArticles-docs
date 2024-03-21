@@ -3,8 +3,8 @@ title: Microsoft Entra Connect Health shows old information about on-premises se
 description: Discusses an issue in which Microsoft Entra Connect Health shows outdated information about the on-premises Microsoft Entra Connect server. Provides a resolution.
 ms.date: 05/28/2020
 ms.reviewer: cychua, arrenc
-ms.service: active-directory
-ms.subservice: enterprise-users
+ms.service: entra-id
+ms.subservice: users
 ---
 # Microsoft Entra Connect Health shows old information about on-premises Microsoft Entra Connect server
 

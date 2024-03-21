@@ -3,8 +3,8 @@ title: Separate passwords required for the computer and work or school account w
 description: Describes that users have to use a separate password to sign in to Office 365 and to log on to their computer, even though password synchronization is enabled in Microsoft Entra ID. Provides a resolution.
 ms.date: 07/06/2020
 ms.reviewer: willfid
-ms.service: active-directory
-ms.subservice: enterprise-users
+ms.service: entra-id
+ms.subservice: users
 ---
 # Separate passwords required for the computer and work or school account when using password synchronization and the Azure Active Directory Sync tool
 

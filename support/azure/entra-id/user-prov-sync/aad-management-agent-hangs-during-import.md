@@ -2,11 +2,11 @@
 title: Microsoft Entra Management Agent hangs during Full Import or Delta Import
 description: Provides a resolution to an issue in which the Microsoft Entra Management Agent stops responding with error System.Collections.Generic.KeyNotFoundException.
 ms.date: 10/10/2020
-ms.service: active-directory
+ms.service: entra-id
 ms.author: genli
 author: genlin
 ms.reviewer: 
-ms.subservice: enterprise-users
+ms.subservice: users
 ---
 # Microsoft Entra Management Agent hangs during Full Import or Delta Import with error: System.Collections.Generic.KeyNotFoundException
 

@@ -167,11 +167,11 @@ items:
         tocHref: /troubleshoot/azure/virtual-network/
         topicHref: /troubleshoot/azure/virtual-network/welcome-virtual-network
       - name: Cloud Services (classic)
-        tocHref: /troubleshoot/azure/cloud-services-classic/
-        topicHref: /troubleshoot/azure/cloud-services-classic/welcome-cloud-services-classic
+        tocHref: /troubleshoot/azure/cloud-services/classic/
+        topicHref: /troubleshoot/azure/cloud-services/classic/welcome-cloud-services-classic
       - name: Cloud Services (extended support)
-        tocHref: /troubleshoot/azure/cloud-services-extended/
-        topicHref: /troubleshoot/azure/cloud-services-extended/welcome-cloud-services-extended
+        tocHref: /troubleshoot/azure/cloud-service/extended/
+        topicHref: /troubleshoot/azure/cloud-services/extended/welcome-cloud-services-extended
       - name: DevOps Services
         tocHref: /troubleshoot/azure/devops/
         topicHref: /troubleshoot/azure/devops/welcome-azure-devops

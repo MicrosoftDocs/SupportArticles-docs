@@ -3,8 +3,8 @@ title: Microsoft Entra Connect upgrade fails with error code 1603
 description: Error code 1603 and (Unable to install the synchronization service) error in event log when trying to upgrade Microsoft Entra Connect.
 ms.date: 07/20/2020
 ms.reviewer: 
-ms.service: active-directory
-ms.subservice: enterprise-users
+ms.service: entra-id
+ms.subservice: users
 ---
 # Error when upgrading Microsoft Entra Connect: Unable to install the synchronization service
 

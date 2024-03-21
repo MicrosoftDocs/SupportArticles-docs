@@ -3,8 +3,8 @@ title: Error (Unable to configure password writeback) when you run the Microsoft
 description: Describes an issue that triggers an error when you run the Microsoft Entra Connect wizard to set up password writeback. Provides a solution.
 ms.date: 05/22/2020
 ms.reviewer: vimals, willfid
-ms.service: active-directory
-ms.subservice: enterprise-users
+ms.service: entra-id
+ms.subservice: users
 ---
 # Error when you run the Microsoft Entra Connect wizard: Unable to configure password writeback
 

@@ -3,8 +3,8 @@ title: Troubleshoot password resets blocked by on-premises policy
 description: Troubleshoot scenarios in which a user or administrator can't reset or change a password because of the on-premises Active Directory password policy.
 ms.date: 02/11/2022
 ms.reviewer: jarrettr, nualex, v-leedennis
-ms.service: active-directory
-ms.subservice: enterprise-users
+ms.service: entra-id
+ms.subservice: users
 keywords:
 #Customer intent: As a Microsoft Entra administrator, I want to provide temporary passwords that meet the local Active Directory password policy so that users can successfully reset or change their password.
 ---

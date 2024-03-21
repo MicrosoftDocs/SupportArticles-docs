@@ -3,8 +3,8 @@ title: Problems signing in to SAML-based Single Sign-On configured apps
 description: Guidance for the specific errors when signing into an application you have configured for SAML-based federated Single Sign-On with Microsoft Entra ID.
 ms.date: 07/18/2023
 ms.reviewer: bernawy
-ms.service: active-directory
-ms.subservice: app-mgmt
+ms.service: entra-id
+ms.subservice: enterprise-apps
 ---
 
 # Problems signing in to SAML-based Single Sign-On configured apps

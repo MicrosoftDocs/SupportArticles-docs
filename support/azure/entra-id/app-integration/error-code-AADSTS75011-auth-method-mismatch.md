@@ -3,8 +3,8 @@ title: Error - AADSTS75011 Authentication method by which the user authenticated
 description: Describes a problem in which you receive an error message when signing in to SAML-based single sign-on configured app that has been configured to use Microsoft Entra ID as an Identity Provider (IdP). The error you receive is Error - AADSTS75011 Authentication method by which the user authenticated with the service doesn't match requested authentication method AuthnContextClassRef
 ms.date: 08/26/2022
 ms.reviewer: bernawy
-ms.service: active-directory
-ms.subservice: app-mgmt
+ms.service: entra-id
+ms.subservice: enterprise-apps
 ---
 # Error - AADSTS75011 Authentication method by which the user authenticated with the service doesn't match requested authentication method AuthnContextClassRef
 

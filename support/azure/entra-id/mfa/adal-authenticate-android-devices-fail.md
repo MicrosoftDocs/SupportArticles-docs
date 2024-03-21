@@ -3,7 +3,7 @@ title: Using ADAL to authenticate from Android devices fails if additional certi
 description: Describes an issue in which ADAL authentication from Android devices fails if additional certificate downloads are required. Provides a resolution.
 ms.date: 05/22/2020
 ms.reviewer: 
-ms.service: active-directory
+ms.service: entra-id
 ms.subservice: authentication
 ---
 # Using ADAL to authenticate from Android devices fails if additional certificate downloads are required

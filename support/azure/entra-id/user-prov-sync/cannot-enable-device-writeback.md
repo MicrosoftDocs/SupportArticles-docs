@@ -3,8 +3,8 @@ title: Can't enable the Device writeback option in Microsoft Entra Connect
 description: Describes an issue in which you can't enable the Device writeback option in Microsoft Entra Connect. Provides a resolution.
 ms.date: 07/06/2020
 ms.reviewer: willfid
-ms.service: active-directory
-ms.subservice: enterprise-users
+ms.service: entra-id
+ms.subservice: users
 ---
 # Can't enable the Device writeback option in Microsoft Entra Connect
 

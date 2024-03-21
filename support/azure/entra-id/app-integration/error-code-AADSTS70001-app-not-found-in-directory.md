@@ -3,8 +3,8 @@ title: Error AADSTS70001 - Application with Identifier was not found in the dire
 description: Describes a problem in which you receive the error AADSTS70001 when you sign in to SAML sign-on configured app with Microsoft Entra ID.
 ms.date: 10/12/2022
 ms.reviewer: bernawy
-ms.service: active-directory
-ms.subservice: app-mgmt
+ms.service: entra-id
+ms.subservice: enterprise-apps
 ---
 # Error AADSTS70001 - Application with Identifier was not found in the directory
 

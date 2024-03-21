@@ -6,8 +6,8 @@ author: bernawy
 ms.author: bernaw
 editor: v-jsitser
 ms.reviewer: v-leedennis, jarrettr
-ms.service: active-directory
-ms.subservice: app-mgmt
+ms.service: entra-id
+ms.subservice: enterprise-apps
 content_well_notification: AI-contribution
 ai-usage: ai-assisted
 ---

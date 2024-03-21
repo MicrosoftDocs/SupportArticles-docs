@@ -3,8 +3,8 @@ title: How the proxyAddresses attribute is populated in Microsoft Entra ID
 description: Describes how the proxyAddresses attribute is populated in Microsoft Entra ID. Provides example scenarios.
 ms.date: 11/06/2023
 ms.reviewer: "willfid,riantu,nualex,reviei"
-ms.service: active-directory
-ms.subservice: enterprise-users
+ms.service: entra-id
+ms.subservice: users
 ---
 
 # How the proxyAddresses attribute is populated in Microsoft Entra ID

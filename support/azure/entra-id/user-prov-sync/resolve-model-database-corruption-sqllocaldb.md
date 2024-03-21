@@ -4,8 +4,8 @@ description: This article describes how to resolve a known issue in SQLLocalDB t
 ms.date: 07/21/2022
 ms.reviewer: nualex, v-leedennis
 editor: v-jsitser
-ms.service: active-directory
-ms.subservice: enterprise-users
+ms.service: entra-id
+ms.subservice: users
 keywords:
 #Customer intent: As a Microsoft Entra user, I want to resolve Model database corruption in SQLLocalDB so that I can start and run the ADSync service.
 ---
