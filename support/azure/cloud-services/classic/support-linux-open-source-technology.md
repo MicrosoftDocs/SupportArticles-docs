@@ -22,7 +22,7 @@ This article describes the support policies for [Endorsed Linux distributions](/
 
 ## Linux in Azure
 
-The endorsed Linux distributions are created and published by Linux partners for use in Azure environments. We recommend that you use an [Endorsed Linux distribution](/azure/virtual-machines/linux/endorsed-distros) because they're maintained by some of the most well-known Linux vendors in the world. You're welcome to bring your distributions of Linux into Azure. All distributions are welcome, for example, Rocky, Alma, and Kali).
+The endorsed Linux distributions are created and published by Linux partners for use in Azure environments. We recommend that you use an [Endorsed Linux distribution](/azure/virtual-machines/linux/endorsed-distros) because they're maintained by some of the most well-known Linux vendors in the world. You're welcome to bring your distributions of Linux into Azure. All distributions, such as Rocky, Alma, and Kali, are welcome.
 
 ## Linux support matrix
 
