@@ -1,7 +1,7 @@
 ---
 title: Azure Kubernetes Service cluster/node is in a failed state
 description: Troubleshoot an issue where an Azure Kubernetes Service (AKS) cluster/node is in a failed state.
-ms.date: 03/20/2024
+ms.date: 03/21/2024
 ms.reviewer: chiragpa, nickoman, v-weizhu, v-six, aritraghosh
 ms.service: azure-kubernetes-service
 ms.subservice: common-issues
@@ -11,6 +11,26 @@ keywords:
 # Troubleshoot Azure Kubernetes Service cluster/node in a failed state
 
 This article discusses how to troubleshoot a Microsoft Azure Kubernetes Service (AKS) cluster/node that's entered a failed state.
+
+## Common causes
+
+Here are common causes for the failed cluster/nodepool:
+
+- Custom Script Extension (CSE) VM extension provisioning error
+- Key Azure resources unavailable
+  - LA Workspace not found which requires recreation of missing references 
+  - Cluster Load Balancer InvalidResourceReference which require recreation of missing references
+  - SubnetFull
+  - Private DNS Zone InternalOperationError
+- VM allocation failure due to zonal/regional capacity or core quota
+  - No capacity
+  - Quota exceeded
+- Customer imposed restriction
+  - Azure policies deny
+  - Resource Lock
+- Workload
+  - PodDisruptionBudget failed to drain pods
+  - The kube-system pods are not running.
 
 ## Basic troubleshooting for common errors that cause a failed cluster/node
 
@@ -44,6 +64,8 @@ The following table outlines some common errors that can cause a cluster or node
 ## Provisioning State Check
 
 To check the cluster status, select **Provisioning State Check**. The provisioning state of the cluster and agentpool will be shown.
+
+:::image type="content" source="media/cluster-node-virtual-machine-failed-state/provisioning-state-check.png" alt-text="Screenshot that shows the 'Provisioning State Check' option.":::
 
 ## Scenario 1: Cluster is in a failed state
 
