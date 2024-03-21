@@ -10,6 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
   - has-azure-ad-ps-ref
+  - azure-ad-ref-level-one-done
 ms.reviewer: 
 appliesto: 
   - Microsoft 365
@@ -35,6 +36,8 @@ New-MsolFederatedDomain -DomainName<domain>
 Update-MSOLFederatedDomain -DomainName <domain>
 Convert-MsolDomainToFederated -DomainName <domain>
 ```
+
+[!INCLUDE [Azure AD PowerShell deprecation note](../../../includes/aad-powershell-deprecation-note.md)]
 
 The RP trust created above came with two claims rules
 

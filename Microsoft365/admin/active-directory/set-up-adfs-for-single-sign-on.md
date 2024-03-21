@@ -11,6 +11,7 @@ ms.reviewer: abizerh, willfid, rkiran
 ms.custom: 
   - CSSTroubleshoot
   - has-azure-ad-ps-ref
+  - azure-ad-ref-level-one-done
 search.appverid: 
   - MET150
 appliesto: 
@@ -83,6 +84,8 @@ Connect-MsolService
 Set-MsolADFSContext –computer <the FQDN of the AD FS server>
 Convert-MsolDomainToFederated –domain <the custom domain name you added into Microsoft 365>
 ```
+
+[!INCLUDE [Azure AD PowerShell deprecation note](../../../includes/aad-powershell-deprecation-note.md)]
 
 If the commands run successfully, you should see the following:
 

@@ -10,6 +10,7 @@ audience: ITPro
 ms.custom: 
   - CSSTroubleshoot
   - has-azure-ad-ps-ref
+  - azure-ad-ref-level-one-done
 ms.topic: troubleshooting
 ms.author: luche
 appliesto: 
@@ -50,5 +51,7 @@ The following table contains the cause and the resolution for each error message
 | Sorry, we can't help troubleshoot right now. Try again later.|Microsoft 365 portal can't communicate with Microsoft Entra ID in which domain information for the company is stored.|To resolve this issue, try again later and wait up to 24 hours. 
 | Sorry, we can't complete this right now. Wait a little bit, and then try again.|Microsoft 365 portal can't communicate with Microsoft Entra ID in which domain information for the company is stored.|To resolve this issue, try again later and wait up to 24 hours. 
 | Sorry, we can't complete this right now. Try again later.|Microsoft 365 portal can't load the page.|To resolve this issue, try again later and wait up to 24 hours. |
+
+[!INCLUDE [Azure AD PowerShell deprecation note](../../../includes/aad-powershell-deprecation-note.md)]
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

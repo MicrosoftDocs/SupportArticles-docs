@@ -10,6 +10,7 @@ audience: ITPro
 ms.custom: 
   - CSSTroubleshoot
   - has-azure-ad-ps-ref
+  - azure-ad-ref-level-one-done
 ms.topic: troubleshooting
 ms.author: luche
 appliesto: 
@@ -33,6 +34,8 @@ When you try to remove a domain from Microsoft 365, you experience one of the fo
   + CategoryInfo : OperationStopped: (:) [Remove-MsolDomain], MicrosoftOnlineException
   + FullyQualifiedErrorId : Microsoft.Online.Administration.Automation.InitialDomainDeletionException,Microsoft.Online.Administration.Automation.RemoveDomain
   ```
+
+[!INCLUDE [Azure AD PowerShell deprecation note](../../../includes/aad-powershell-deprecation-note.md)]
 
 ## CAUSE
 

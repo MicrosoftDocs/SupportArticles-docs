@@ -9,6 +9,7 @@ search.appverid:
 ms.custom: 
   - CSSTroubleshoot
   - has-azure-ad-ps-ref
+  - azure-ad-ref-level-one-done
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
@@ -131,6 +132,8 @@ To determine attribute conflicts that are caused by user objects that were creat
       ```powershell
       Connect-MSOLService –credential $cred
       ```
+
+      [!INCLUDE [Azure AD PowerShell deprecation note](../../../includes/aad-powershell-deprecation-note.md)]
 
       Leave the console window open. You'll have to use it in the next step.
 

@@ -12,6 +12,7 @@ ms.author: luche
 ms.custom: 
   - CSSTroubleshoot
   - has-azure-ad-ps-ref
+  - azure-ad-ref-level-one-done
 appliesto: 
   - User and Domain Management
 ms.date: 03/31/2022
@@ -36,6 +37,8 @@ If you try to remove a domain from Microsoft 365, you experience one or both of 
       +FullyQualifiedErrorId : Microsoft.Online.Administration.Automation.DomainHasChildDomainException,Microsoft.Online.Administration.Automation. RemoveDomain  
 
 This issue occurs if the domain has associated subdomains.
+
+[!INCLUDE [Azure AD PowerShell deprecation note](../../../includes/aad-powershell-deprecation-note.md)]
 
 ## Solution
 

@@ -12,6 +12,7 @@ ms.author: luche
 ms.custom: 
   - CSSTroubleshoot
   - has-azure-ad-ps-ref
+  - azure-ad-ref-level-one-done
 appliesto: 
   - Cloud Services (Web roles/Worker roles)
   - Azure Active Directory
@@ -36,6 +37,8 @@ The configuration of the federated domain has to be updated in the scenarios tha
 - [2713898 ](https://support.microsoft.com/help/2713898) "There was a problem accessing the site" error from AD FS when a federated user signs in to Microsoft 365, Azure, or Intune    
 - [2535191 ](https://support.microsoft.com/help/2535191)""Sorry, but we're having trouble signing you in" and "80048163" error when a federated user tries to sign in to Microsoft 365, Azure, or Intune    
 - [2647020 ](https://support.microsoft.com/help/2647020)  "Sorry, but we're having trouble signing you in" and "80041317" or "80043431" error when a federated user tries to sign in to Microsoft 365, Azure, or Intune    
+
+[!INCLUDE [Azure AD PowerShell deprecation note](../../../includes/aad-powershell-deprecation-note.md)]
 
 To update the configuration of the federated domain on a domain-joined computer that has Azure Active Directory module for Windows PowerShell installed, follow these steps:
 

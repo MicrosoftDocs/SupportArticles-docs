@@ -12,6 +12,7 @@ ms.author: luche
 ms.custom: 
   - CSSTroubleshoot
   - has-azure-ad-ps-ref
+  - azure-ad-ref-level-one-done
 appliesto: 
   - Cloud Services (Web roles/Worker roles)
   - Azure Active Directory
@@ -34,6 +35,8 @@ When you try to use the connect-MSOLService cmdlet in the Microsoft Azure Active
 ## Cause 
 
 This issue may occur if the user name or password that you're using is incorrect or if there's a problem with the user account. 
+
+[!INCLUDE [Azure AD PowerShell deprecation note](../../../includes/aad-powershell-deprecation-note.md)]
 
 ## Solution 
 

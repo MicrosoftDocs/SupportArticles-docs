@@ -10,6 +10,7 @@ audience: ITPro
 ms.custom: 
   - CSSTroubleshoot
   - has-azure-ad-ps-ref
+  - azure-ad-ref-level-one-done
 ms.topic: troubleshooting
 ms.author: luche
 appliesto: 
@@ -84,6 +85,8 @@ To resolve time-valid issues, follow these steps.
    > These kinds of changes will cause an AD FS service outage. After the update, you must follow these steps to restore single sign-on (SSO) functionality:  
    > 1. Run the Update-MSOLFederatedDomain cmdlet on all federated namespaces.    
    > 2. Rerun the setup configuration wizard for any AD FS proxy servers in the environment.    
+
+[!INCLUDE [Azure AD PowerShell deprecation note](../../../includes/aad-powershell-deprecation-note.md)]
 
 ### Method 3: Issuing certification chain trust issues
 

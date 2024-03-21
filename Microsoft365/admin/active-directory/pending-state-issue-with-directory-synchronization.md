@@ -11,6 +11,7 @@ ms.topic: troubleshooting
 ms.custom: 
   - CSSTroubleshoot
   - has-azure-ad-ps-ref
+  - azure-ad-ref-level-one-done
 ms.author: luche
 ms.reviewer: ericta, andypunt, v-lanac
 appliesto: 
@@ -45,6 +46,8 @@ You experience one of the following symptoms in a Microsoft cloud service such a
 ## Cause
 
 This issue may occur if directory synchronization isn't completely activated or deactivated. It may take up to 72 hours for activation or deactivation to finish.
+
+[!INCLUDE [Azure AD PowerShell deprecation note](../../../includes/aad-powershell-deprecation-note.md)]
 
 To determine whether directory synchronization is activated or deactivated, follow these steps by using the Azure Active Directory module for Windows PowerShell:
 
