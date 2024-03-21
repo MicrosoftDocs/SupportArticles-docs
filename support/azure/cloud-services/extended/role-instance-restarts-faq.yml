@@ -1,0 +1,74 @@
+### YamlMime:FAQ
+metadata:
+  title: Role instance restarts from Azure VM OS upgrades FAQ
+  description: Get answers to frequently asked questions about role instance restarts that are caused by operating system upgrades on an Azure virtual machine.
+  ms.topic: faq
+  ms.date: 09/26/2022
+  editor: v-jsitser
+  ms.reviewer: v-maallu, v-leedennis
+  ms.service: cloud-services
+  ms.subservice: troubleshoot-extended-support
+
+title: Frequently asked questions about role instance restarts caused by VM OS upgrades
+summary: This article answers frequently asked questions (FAQ) about role instance restarts that are caused by upgrades to the Windows operating system (OS) on a Microsoft Azure platform as a service (PaaS) virtual machine (VM).
+sections:
+  - name: General
+    questions:
+      - question: |
+          How can I opt out of operating system updates?
+        answer: |
+          You can't opt out of Host OS updates. Microsoft must maintain up-to-date host operating systems within the datacenter. You can opt out of the Guest OS update by specifying a version of the Guest OS. However, if you do this, your service will no longer receive security updates and might be left vulnerable. For more information, see [Manage a Guest OS version](/azure/cloud-services/cloud-services-how-to-configure-portal#manage-guest-os-version).
+
+      - question: |
+          How do I force updates and restarts to be done only during non-business hours?
+        answer: |
+          You can't control when a single instance or service is upgraded for the Host OS. The upgrade is started on all Azure datacenters across the world at about the same time. The fabric works continuously on upgrading each datacenter. Because of the complexity of making sure that upgrade domain rules are followed for all cloud services, this process takes several days. There's no way to control or determine when a specific instance will be affected. To control the Guest OS update, you can specify a fixed Guest OS version, and then update it whenever you're ready.
+
+      - question: |
+          I installed something on the VM. But now, the VM has restarted, and the software I installed is gone! Why did the software disappear?
+        answer: |
+          There's no support for connecting to an Azure PaaS VM through Remote Desktop Protocol (RDP) and making changes or installing software. At any time, the VM may be rebuilt, and any changes you make will be lost. This scenario can occur if the hardware fails and we have to start a new VM on new hardware. It will also occur during the Guest OS update, when the Windows partition is rebuilt. If you have to install software or make changes to the VM, create a startup task and do the work from there. This process makes sure that when the VM is re-created, your configuration will be run again.
+
+      - question: |
+          Can one of the updates in the new Guest OS version break my service?
+        answer: |
+          The updates that are installed onto the new guest OS version are publicly available and thoroughly tested hotfixes. These hotfixes are also being deployed to servers around the world through Windows Update, and the chance of adverse effects on your service is small. As for your on-premises services, you should manage OS patches on Azure VMs by using a staging environment in which you test the updates first. 
+
+          If you want to set up a staging environment to test the updates before production, configure your production service to use a fixed version OS string in the .cscfg file. Then, when a new guest OS is available, you can deploy your service to the staging slot by using the newest guest OS version. After you verify that the service works correctly on the latest guest OS, you can do a VIP swap. Or, you can do an in-place upgrade of your production service to use the latest OS.
+
+      - question: |
+          How long will the upgrade take? How long will my VM be down?
+        answer: |
+          A common misconception is that the more updates that are being applied, the longer the process will take. This assumption is based on the belief that the upgrade works similarly to how a Windows Update upgrade occurs on your local desktop computer. In a Windows upgrade, many updates are copied to Windows and installed by including subsequent restarts. However, that process isn't how upgrading works in Azure.
+
+          When a new OS version is being released in Azure, the OS team takes the latest image, applies updates, and then creates a virtual hard disk (VHD) that contains this new base image. This base image is then copied to a repository in Azure. When the fabric is instructed to do an OS upgrade, it will first make a copy pass. In the datacenter that's going to be upgraded, the fabric copies this new base image VHD to the hard disk on each server. After this process is finished, the fabric begins the upgrade process, following the usual upgrade domain rules.
+
+          When a guest is going to be updated, the fabric does a graceful shutdown of the OS, and then it starts a new VM by using the new base image. The time that's required to upgrade a given VM for a Guest OS is roughly the same amount of time it takes to do a graceful Windows shutdown and restart.
+
+          The timing for a Host OS update is different. When a host is being upgraded, the following sequence occurs:
+
+          - The host sends the shutdown message to each Guest OS running on that host.
+
+          - Each Guest OS is given the standard `OnStop` event and Windows Shutdown time to finish shutting down.
+
+          - After every Guest OS is shut down, the Host OS does a graceful shutdown and goes through its normal shutdown procedure.
+
+          - After the Host OS is shut down, the host is restarted by using the new OS image.
+
+          - After the host is up and running, it starts each Guest OS.
+
+          This Host OS update process typically takes 15 to 20 minutes. The time can vary depending on how many other guests are on that host and how much time is necessary to process them. But there will always be exceptions if a failure occurs on a particular node and the Azure fabric determines that the guests on that node must be moved to another node.
+
+      - question: |
+          How do I handle the operating system shutdown?
+        answer: |
+          When the OS is being updated, the Azure Fabric does a graceful shutdown of your role instance. This practice means that your ASP.NET code will receive the `Application_End` event, and the Azure service runtime will raise the `Stopping` and `OnStop` events. Your code will have five minutes to finish cleanup work in `OnStop` before the process is shut down. After your Azure host process is shut down, Windows will go through a normal graceful shutdown, which includes raising the standard `OnStop` and related events for Windows Services. 
+
+          For more information about how to handle a shutdown of your instance, see [The right way to handle Azure OnStop events](https://azure.microsoft.com/blog/the-right-way-to-handle-azure-onstop-events/), [Customize the lifecycle of a Web or Worker role in .NET](/azure/cloud-services/cloud-services-role-lifecycle-dotnet), and [RoleEntryPoint.OnStop() Method](/previous-versions/azure/reference/ee772844(v=azure.100)).
+
+additionalContent: |
+  ## More information
+
+  - [Role instance restarts caused by Azure VM operating system upgrades](./role-instance-restarts-os-upgrade.md)
+  
+  [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
