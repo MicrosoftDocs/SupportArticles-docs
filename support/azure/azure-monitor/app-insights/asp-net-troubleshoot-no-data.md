@@ -279,7 +279,7 @@ There are two primary causes of leaking `TelemetryConfiguration` objects:
 
 - **Explicit creation in code**: If you create `TelemetryConfiguration` objects within your code, ensure that they are not inadvertently created per web request. Instead, use a shared global instance. For .NET Framework applications, access the global instance with `TelemetryConfiguration.Active`. For .NET Core applications, use `TelemetryConfiguration.CreateDefault()` to obtain a default configuration.
 
-- **Improper service provider usage**: In .NET Core applications, avoid calling `services.BuildServiceProvider()` within `ConfigureServices`. BuildServiceProvider method creates a new service provider that initializes and reads the configuration, resulting in a new `TelemetryConfiguration` object each time. Such a pattern can lead to leaks and is discouraged, as highlighted in the Visual Studio warning against this coding practice, as highlighted in the [Visual Studio warning](/aspnet/core/diagnostics/asp0000?view=aspnetcore-8.0&preserve-view=true) against this coding practice.
+- **Improper service provider usage**: In .NET Core applications, avoid calling `services.BuildServiceProvider()` within `ConfigureServices`. BuildServiceProvider method creates a new service provider that initializes and reads the configuration, resulting in a new `TelemetryConfiguration` object each time. Such a pattern can lead to leaks and is discouraged, as noted in the [Visual Studio warning](/aspnet/core/diagnostics/asp0000?view=aspnetcore-8.0&preserve-view=true) against this coding practice.
 
 ## I used to see data, but it's stopped
 
