@@ -10,6 +10,7 @@ audience: ITPro
 ms.custom: 
   - CSSTroubleshoot
   - has-azure-ad-ps-ref
+  - azure-ad-ref-level-one-done
 ms.topic: troubleshooting
 ms.author: luche
 appliesto: 
@@ -38,6 +39,8 @@ For example, this issue can occur if the following Windows PowerShell cmdlet was
 ```powershell
 convert-MSOLDomainToStandard –skipuserconversion:$true 
 ```
+
+[!INCLUDE [Azure AD PowerShell deprecation note](../../includes/aad-powershell-deprecation-note.md)]
 
 ## Solution
 

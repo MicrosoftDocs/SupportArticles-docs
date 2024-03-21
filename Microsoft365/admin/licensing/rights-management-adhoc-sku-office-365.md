@@ -12,6 +12,7 @@ ms.author: luche
 ms.custom: 
   - CSSTroubleshoot
   - has-azure-ad-ps-ref
+  - azure-ad-ref-level-one-done
 appliesto: 
   - Azure Active Directory
 ms.date: 03/31/2022
@@ -38,6 +39,8 @@ YourO365:RIGHTSMANAGEMENT_ADHOC 50000 0 1
 YourO365:ENTERPRISEPACK 25 0 7
 ------------------------------------------------------------- 
 ```
+
+[!INCLUDE [Azure AD PowerShell deprecation note](../../includes/aad-powershell-deprecation-note.md)]
 
 ## Cause 
 

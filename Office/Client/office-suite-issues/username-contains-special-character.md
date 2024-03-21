@@ -12,6 +12,7 @@ ms.custom:
   - CI 115151
   - CSSTroubleshoot
   - has-azure-ad-ps-ref
+  - azure-ad-ref-level-one-done
 ms.reviewer: timball
 search.appverid: 
   - MET150
@@ -45,6 +46,8 @@ Within Exchange Online Windows PowerShell
 ```adoc
 A Windows Live error occurred while provisioning for "user+invalid_characters@contoso.com". The e-mail name contains invalid characters.
 ```
+
+[!INCLUDE [Azure AD PowerShell deprecation note](../../includes/aad-powershell-deprecation-note.md)]
 
 ## Cause
 

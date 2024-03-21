@@ -10,6 +10,7 @@ audience: ITPro
 ms.custom: 
   - CSSTroubleshoot
   - has-azure-ad-ps-ref
+  - azure-ad-ref-level-one-done
 ms.topic: troubleshooting
 ms.author: luche
 appliesto: 
@@ -30,6 +31,8 @@ At line:1 char:18
 + CategoryInfo : OperationStopped: (:) [Remove-MsolDomain], MicrosoftOnlineException
 + FullyQualifiedErrorId : Microsoft.Online.Administration.Automation.DomainNotEmptyException,Microsoft.Online.Administration.Automation.RemoveDomain
 ```
+
+[!INCLUDE [Azure AD PowerShell deprecation note](../../includes/aad-powershell-deprecation-note.md)]
 
 ## Cause 
 

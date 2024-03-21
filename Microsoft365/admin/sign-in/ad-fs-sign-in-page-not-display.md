@@ -10,6 +10,7 @@ audience: ITPro
 ms.custom: 
   - CSSTroubleshoot
   - has-azure-ad-ps-ref
+  - azure-ad-ref-level-one-done
 ms.topic: troubleshooting
 ms.author: luche
 appliesto: 
@@ -70,6 +71,8 @@ To do this, follow these steps on a domain-connected computer that has Azure Act
    > The \<Federated Domain> placeholder represents the domain name that's federated with the cloud service.     
 
 In the output, examine the ActiveClientSignInUrlproperty. The domain part of the URL is the endpoint that can be used in the resolution that's described later in this article. 
+
+[!INCLUDE [Azure AD PowerShell deprecation note](../../includes/aad-powershell-deprecation-note.md)]
 
 ### Determine the server that's having problems
 

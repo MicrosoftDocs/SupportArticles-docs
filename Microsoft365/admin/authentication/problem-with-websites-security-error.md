@@ -11,6 +11,7 @@ ms.reviewer: willfid
 ms.custom: 
   - CSSTroubleshoot
   - has-azure-ad-ps-ref
+  - azure-ad-ref-level-one-done
 search.appverid: 
   - MET150
 appliesto: 
@@ -51,6 +52,8 @@ Set-MsolDomainFederationSettings -DomainName user.contoso.com -LogOffUri <LogOff
 ```
 
 **Note** In this command, \<LogOffUri\> represents your logout URL.
+
+[!INCLUDE [Azure AD PowerShell deprecation note](../../includes/aad-powershell-deprecation-note.md)]
 
 ### Method 2: Remove the HTTP URL that's specified in the LogOffUri parameter
 
