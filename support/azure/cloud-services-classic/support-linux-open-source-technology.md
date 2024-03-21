@@ -1,8 +1,8 @@
 ---
 title: Support for Linux and open-source technology in Azure
 description: Describes support for Linux images in Microsoft Azure.
-ms.date: 09/13/2023
-ms.reviewer: divargas, hokamath, genli, v-leedennis
+ms.date: 03/21/2024
+ms.reviewer: divargas, hokamath, genli, v-leedennis, v-weizhu
 author: patcatun
 ms.author: patcatun
 ms.service: cloud-services
@@ -22,7 +22,7 @@ This article describes the support policies for [Endorsed Linux distributions](/
 
 ## Linux in Azure
 
-The endorsed Linux distributions are created and published by Linux partners for use in Azure environments. We recommend that you use an [Endorsed Linux distribution](/azure/virtual-machines/linux/endorsed-distros) because they're maintained by some of the most well-known Linux vendors in the world. You're welcome to bring your distributions of Linux into Azure. All distributions are welcome (E.g. Rocky, Alma, Kali, etc.).
+The endorsed Linux distributions are created and published by Linux partners for use in Azure environments. We recommend that you use an [Endorsed Linux distribution](/azure/virtual-machines/linux/endorsed-distros) because they're maintained by some of the most well-known Linux vendors in the world. You're welcome to bring your distributions of Linux into Azure. All distributions are welcome, for example, Rocky, Alma, and Kali).
 
 ## Linux support matrix
 
