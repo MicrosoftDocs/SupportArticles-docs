@@ -44,7 +44,7 @@ To verify the object type for group members, run the following [Get-AzureADGro
 Get-AzureADGroupMember -ObjectId <ObjectID>| fl
 ```
 
-[!INCLUDE [Azure AD PowerShell deprecation note](../../includes/aad-powershell-deprecation-note.md)]
+[!INCLUDE [Azure AD PowerShell deprecation note](../../../includes/aad-powershell-deprecation-note.md)]
 
 **Note:** In this cmdlet, replace \<_ObjectID_> with the affected group ID. To obtain the group ID, open the group from the [Azure portal](https://portal.azure.com/). In the output, check whether the `ObjectType` attribute displays **User** or **Contact** for each group member.
 

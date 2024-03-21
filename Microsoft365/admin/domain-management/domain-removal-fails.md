@@ -34,7 +34,7 @@ You can retrieve a list of applications that refer to the domain by running the 
 > [!IMPORTANT]
 > The cmdlet requires that you install[Azure Active Directory PowerShell for Graph](/powershell/azure/active-directory/install-adv2).
 
-[!INCLUDE [Azure AD PowerShell deprecation note](../../includes/aad-powershell-deprecation-note.md)]
+[!INCLUDE [Azure AD PowerShell deprecation note](../../../includes/aad-powershell-deprecation-note.md)]
 
 ```pwoershell
 Get-AzureADApplication | Where-Object -Property identifieruris -Match '<domain to remove>' 

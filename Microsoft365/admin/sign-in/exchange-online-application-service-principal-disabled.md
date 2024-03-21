@@ -56,4 +56,4 @@ To resolve this issue, follow these steps:
    Get-MsolServicePrincipal -AppPrincipalId 00000002-0000-0ff1-ce00-000000000000 | Set-MsolServicePrincipal -AccountEnabled $true
    ```
 
-[!INCLUDE [Azure AD PowerShell deprecation note](../../includes/aad-powershell-deprecation-note.md)]
+[!INCLUDE [Azure AD PowerShell deprecation note](../../../includes/aad-powershell-deprecation-note.md)]

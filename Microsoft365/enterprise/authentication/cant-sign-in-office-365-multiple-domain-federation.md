@@ -38,7 +38,7 @@ This issue occurs when multiple top-level domains are federated to the same AD F
 
 ## SOLUTION
 
-[!INCLUDE [Azure AD PowerShell deprecation note](../../includes/aad-powershell-deprecation-note.md)]
+[!INCLUDE [Azure AD PowerShell deprecation note](../../../includes/aad-powershell-deprecation-note.md)]
 
 1. Go to [Microsoft Entra RPT Claim Rules](https://adfshelp.microsoft.com/AadTrustClaims/GenerateClaims), and then click **Next**.
 2. Specify the value for **Immutable ID** (sourceAnchor) -> **User Sign In** (for example, UPN or mail). If multiple top-level domains are federated, select **Yes** when you are prompted to respond to "**Does the Microsoft Entra ID trust with AD FS support multiple domains?**"

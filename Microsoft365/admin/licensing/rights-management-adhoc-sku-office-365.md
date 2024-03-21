@@ -40,7 +40,7 @@ YourO365:ENTERPRISEPACK 25 0 7
 ------------------------------------------------------------- 
 ```
 
-[!INCLUDE [Azure AD PowerShell deprecation note](../../includes/aad-powershell-deprecation-note.md)]
+[!INCLUDE [Azure AD PowerShell deprecation note](../../../includes/aad-powershell-deprecation-note.md)]
 
 ## Cause 
 

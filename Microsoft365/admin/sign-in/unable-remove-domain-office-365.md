@@ -32,7 +32,7 @@ At line:1 char:18
 + FullyQualifiedErrorId : Microsoft.Online.Administration.Automation.DomainNotEmptyException,Microsoft.Online.Administration.Automation.RemoveDomain
 ```
 
-[!INCLUDE [Azure AD PowerShell deprecation note](../../includes/aad-powershell-deprecation-note.md)]
+[!INCLUDE [Azure AD PowerShell deprecation note](../../../includes/aad-powershell-deprecation-note.md)]
 
 ## Cause 
 

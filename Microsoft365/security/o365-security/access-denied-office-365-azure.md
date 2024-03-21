@@ -34,7 +34,7 @@ When you try to use the connect-MSOLService cmdlet in the Microsoft Azure Active
 Connect-MsolService : Access Denied. You do not have permissions to call this cmdlet.
 ```
 
-[!INCLUDE [Azure AD PowerShell deprecation note](../../includes/aad-powershell-deprecation-note.md)]
+[!INCLUDE [Azure AD PowerShell deprecation note](../../../includes/aad-powershell-deprecation-note.md)]
 
 ## Resolution 
 

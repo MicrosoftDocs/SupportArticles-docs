@@ -40,7 +40,7 @@ For example, this issue can occur if the following Windows PowerShell cmdlet was
 convert-MSOLDomainToStandard –skipuserconversion:$true 
 ```
 
-[!INCLUDE [Azure AD PowerShell deprecation note](../../includes/aad-powershell-deprecation-note.md)]
+[!INCLUDE [Azure AD PowerShell deprecation note](../../../includes/aad-powershell-deprecation-note.md)]
 
 ## Solution
 
