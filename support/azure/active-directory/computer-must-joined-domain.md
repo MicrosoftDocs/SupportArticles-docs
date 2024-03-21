@@ -3,8 +3,8 @@ title: Error (The computer must be joined to a domain) when you try to install t
 description: Describes an error message that occurs when you try to install the Azure Active Directory Sync Tool. Provides a resolution.
 ms.date: 06/22/2020
 ms.reviewer: willfid
-ms.service: active-directory
-ms.subservice: enterprise-users
+ms.service: entra-id
+ms.subservice: users
 ---
 # Error when you try to install the Azure Active Directory Sync Tool: The computer must be joined to a domain
 

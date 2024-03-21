@@ -3,7 +3,8 @@ title: Error when you install Microsoft Dexterity Shared Components
 description: Describes a problem that may occur if the new version of the Microsoft Dexterity Shared Components is not installed successfully in the registry. Provides a resolution.
 ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # Error message when you try to install the Microsoft Dexterity Shared Components: "Another version of this product is already installed"
 
