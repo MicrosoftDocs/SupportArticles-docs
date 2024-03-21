@@ -34,7 +34,7 @@ To check or resolve the state of service role instances:
 
 1. If instances are stuck in a non-ready state, fix the problem before doing the swap. For more information, see the following articles:
 
-    - [Troubleshoot roles that fail to start](../cloud-services/extended/role-startup-failure.md)
+    - [Troubleshoot roles that fail to start](../extended/role-startup-failure.md)
 
     - [Common causes of Cloud Service (classic) roles recycling](/azure/cloud-services/cloud-services-troubleshoot-common-issues-which-cause-roles-recycle)
 

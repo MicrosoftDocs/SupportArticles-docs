@@ -454,6 +454,16 @@
         "source_path": "cloud-services-extended/role-instance-restarts-faq.yml",
         "redirect_url": "/troubleshoot/azure/cloud-services/extended/role-instance-restarts-faq",
         "redirect_document_id": true
+      },
+      {
+        "source_path": "cloud-services-classic/welcome-cloud-services-classic.yml",
+        "redirect_url": "/troubleshoot/azure/cloud-services/classic/welcome-cloud-services-classic",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "cloud-services-extended/welcome-cloud-services-extended.yml",
+        "redirect_url": "/troubleshoot/azure/cloud-services/extended/welcome-cloud-services-extended",
+        "redirect_document_id": true
       }
   ]
 }

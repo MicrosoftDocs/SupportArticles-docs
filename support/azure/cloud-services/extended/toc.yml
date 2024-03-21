@@ -15,7 +15,7 @@
   - name: Application pool is crashing
     href: application-pool-crashes.md
   - name: Configure instance-level public IP addresses (PIPs)
-    href: ../cloud-services/classic/instance-level-public-ip-address-configuration.md
+    href: ../classic/instance-level-public-ip-address-configuration.md
   - name: Disk partition preservation
     href: disk-partition-preservation.md
   - name: Enable HTTPS communication
@@ -41,7 +41,7 @@
   - name: Roles that fail to start
     href: role-startup-failure.md
   - name: Update failed during migration from classic to extended support
-    href: ../cloud-services/classic/failed-update-ongoing-migration-process.md
+    href: ../classic/failed-update-ongoing-migration-process.md
   - name: Update or change the certificate used
     href: update-or-change-certificate-used.md
   - name: Troubleshoot with App Insights-features overview
