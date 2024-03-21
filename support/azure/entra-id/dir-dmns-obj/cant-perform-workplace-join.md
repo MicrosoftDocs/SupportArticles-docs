@@ -118,7 +118,7 @@ Make sure that the host name (such as EnterpriseRegistration. **domain_name**. *
 
 ### Update the root certificates
 
-Run [Microsoft Update](https://update.microsoft.com/), and make sure that the [Updates for Root Certificates](https://support.microsoft.com/help/931125) are all installed
+Run [Windows Update](https://support.microsoft.com/windows/3c5ae7fc-9fb6-9af1-1984-b5e0412c556a), and make sure that the [Updates for Root Certificates](https://support.microsoft.com/help/931125) are all installed
 
 ### Verify that traffic is enabled if you're using a third-party proxy or firewall server
 
