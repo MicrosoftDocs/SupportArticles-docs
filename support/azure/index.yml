@@ -26,11 +26,15 @@ productDirectory:
     links:
     - url: automation/welcome-automation.yml
       text: Troubleshooting articles for Azure Automation
-  - title: Azure Blob Storage
+  - title: Azure Storage
     imageSrc: "https://static.docs.com/ui/media/product/azure/storage-accounts.svg"
     links:
     - url: azure-storage/blobs/welcome-blob-storage.yml
-      text: Troubleshooting articles for Azure Blob Storage
+      text: Troubleshooting articles for Blob Storage
+    - url: azure-storage/files/welcome-files-storage.yml
+      text: Troubleshooting articles for Files Storage
+    - url: azure-storage/common/welcome-storage-tool-metric.yml
+      text: Troubleshooting articles for Storage Tools and Metrics
   - title: Azure Cosmos DB
     imageSrc: "https://static.docs.com/ui/media/product/azure/cosmos-db.svg"
     links:
@@ -46,16 +50,6 @@ productDirectory:
     links:
     - url: devops/welcome-azure-devops.yml
       text: Troubleshooting articles for Azure DevOps
-  - title: Azure File Sync
-    imageSrc: https://static.docs.com/ui/media/product/azure/storage-sync-services.svg
-    links:
-    - url: azure-storage/files/file-sync-troubleshoot.md
-      text: Troubleshooting articles for Azure File Sync
-  - title: Azure Files
-    imageSrc: "https://static.docs.com/ui/media/product/azure/storage-azure-files.svg"
-    links:
-    - url: azure-storage/files/welcome-files-storage.yml
-      text: Troubleshooting articles for Azure Files
   - title: Azure Functions
     imageSrc: "https://static.docs.com/ui/media/product/azure/functions.svg"
     links:
