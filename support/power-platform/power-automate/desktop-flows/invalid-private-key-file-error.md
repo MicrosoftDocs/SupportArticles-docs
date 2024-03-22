@@ -3,7 +3,7 @@ title: Invalid Private key file error
 description: Provides a resolution to correct the private key file format in Power Automate for desktop.
 ms.reviewer: adija
 ms.date: 09/20/2022
-ms.subservice: power-automate-desktop-flows
+ms.custom: sap:Desktop flows\Working with Power Automate for desktop
 ---
 # "Invalid Private key file" error in Open secure FTP connection action
 

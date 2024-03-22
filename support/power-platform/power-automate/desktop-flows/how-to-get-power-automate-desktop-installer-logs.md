@@ -3,7 +3,7 @@ title: How to get Power Automate for desktop installer logs
 description: Introduces the locations that contain Power Automate for desktop installer logs.
 ms.reviewer: quseleba
 ms.date: 09/21/2022
-ms.subservice: power-automate-desktop-flows
+ms.custom: sap:Desktop flows\Working with Power Automate for desktop
 ---
 # How to get Power Automate for desktop installer logs
 

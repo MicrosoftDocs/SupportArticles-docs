@@ -3,7 +3,7 @@ title: Temporary profile error during machine registration
 description: Provides a resolution for an issue where you can't register a machine due to an error when using the Power Automate machine runtime application.
 ms.reviewer: fanedjad
 ms.date: 10/24/2023
-ms.subservice: power-automate-desktop-flows
+ms.custom: sap:Desktop flows\Power Automate for desktop errors
 ---
 # Temporary profile error during machine registration
 

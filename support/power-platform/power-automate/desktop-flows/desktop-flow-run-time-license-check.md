@@ -5,7 +5,7 @@ ms.reviewer: tapanm, gtrantzas, cponath
 ms.author: cvassallo
 author: V-Camille
 ms.date: 03/04/2024
-ms.subservice: power-automate-desktop-flows
+ms.custom: sap:Desktop flows\Administration and Licensing
 ---
 # A failed license check on a desktop flow run
 

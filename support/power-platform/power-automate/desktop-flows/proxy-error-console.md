@@ -3,7 +3,7 @@ title: Proxy server requires authentication or it is blocking access to cloud se
 description: Provides a resolution for the proxy-related errors that occur in Power Automate for desktop.
 ms.reviewer: pefelesk
 ms.date: 10/19/2023
-ms.subservice: power-automate-desktop-flows
+ms.custom: sap:Desktop flows\Cannot access Power Automate for desktop application
 ---
 # Proxy server related errors in Power Automate for desktop
 

@@ -5,7 +5,7 @@ author: quseleba
 ms.author: quseleba
 ms.reviewer: pefelesk, quseleba, kvivek, tapanm
 ms.date: 03/23/2023
-ms.subservice: power-automate-desktop-flows
+ms.custom: sap:Desktop flows\Working with Power Automate for desktop
 ---
 
 # Can't execute a shared desktop flow when a co-owner uses another connection

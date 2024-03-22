@@ -1,7 +1,7 @@
 ---
 title: Internet connection is interrupted after installing Power Automate for desktop
 description: Provides a resolution for an issue where some third-party software may interrupt the internet connectivity due to the certificates installed by Power Automate for desktop.
-ms.subservice: power-automate-desktop-flows
+ms.custom: sap:Desktop flows\Working with Power Automate for desktop
 ms.reviewer: johndund, guco
 ms.date: 07/17/2023
 ---

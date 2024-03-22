@@ -5,7 +5,7 @@ ms.reviewer:
 ms.author: cvassallo
 author: V-Camille
 ms.date: 05/23/2023
-ms.subservice: power-automate-desktop-flows
+ms.custom: sap:Desktop flows\Administration issues
 ---
 # A cloud flow is suspended because it is missing the unattended RPA capability
 

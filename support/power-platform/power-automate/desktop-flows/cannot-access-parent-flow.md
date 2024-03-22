@@ -3,7 +3,7 @@ title: Cannot access the parent flow
 description: Provides a resolution for the issue that the parent flow can't be accessed in Power Automate.
 ms.reviewer: pefelesk
 ms.date: 09/13/2022
-ms.subservice: power-automate-desktop-flows
+ms.custom: sap:Desktop flows\Working with Power Automate for desktop
 ---
 # Can't access the parent flow
 

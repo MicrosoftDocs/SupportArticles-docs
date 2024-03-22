@@ -3,7 +3,7 @@ title: Troubleshooting Flow Custom Connectors
 description: Provide a guide for errors with defining Custom Connectors.
 ms.reviewer: 
 ms.date: 03/31/2021
-ms.subservice: power-automate-connections
+ms.custom: sap:Connections\Custom connectors
 ---
 # Troubleshooting Flow Custom Connectors
 

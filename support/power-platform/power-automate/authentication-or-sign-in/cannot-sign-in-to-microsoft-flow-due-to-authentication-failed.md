@@ -3,7 +3,7 @@ title: Authentication failed when signing in to Microsoft Flow
 description: You receive the Authentication failed error when trying to sign in to Microsoft Flow.
 ms.reviewer: trbaratc
 ms.date: 03/31/2021
-ms.subservice: power-automate-authentication
+ms.custom: sap:Authentication or Sign-in\Licensing
 ---
 # You can't sign in to Microsoft Flow and you receive an "Authentication failed" error
 

@@ -3,7 +3,7 @@ title: Troubleshoot UI flow invalid credentials error using Microsoft Entra acco
 description: How to troubleshoot the errors of InvalidConnectionCredentials or WindowsIdentityIncorrect when running your UI flow.
 ms.reviewer: 
 ms.date: 03/31/2021
-ms.subservice: power-automate-authentication
+ms.custom: sap:Authentication or Sign-in\Desktop flows
 ---
 # Troubleshoot desktop flow invalid credentials error using Microsoft Entra account
 

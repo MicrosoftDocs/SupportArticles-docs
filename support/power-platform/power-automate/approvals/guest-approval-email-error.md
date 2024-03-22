@@ -3,7 +3,7 @@ title: Error when guest users interact with the Approval Adaptive Card email
 description: Provides a workaround for a common error that guest users receive when working with approvals.
 ms.reviewer: mansong, hamenon
 ms.date: 03/10/2023
-ms.subservice: power-automate-approvals
+ms.custom: sap:Approvals\Approval action failing
 ---
 # Error when guest users approve or reject a request in the Approval Adaptive Card email
 
