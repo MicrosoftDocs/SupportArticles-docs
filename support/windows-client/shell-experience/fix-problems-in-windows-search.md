@@ -144,7 +144,7 @@ To reset Windows Search by using PowerShell, follow these steps:
 >
 > Return to the earlier steps in this procedure to check the execution policy and change it if needed. Then, run the script again.
 
-## Solution 5: Regenerate the Microsoft.Windows.Search package AppData folder
+## Solution 6: Regenerate the Microsoft.Windows.Search package AppData folder
 
 > [!NOTE]  
 > Use the Windows Recovery Environment, or sign out and then sign in to another user account.
