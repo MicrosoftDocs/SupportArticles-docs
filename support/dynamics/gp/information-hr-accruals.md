@@ -2,7 +2,8 @@
 title: Information about HR Accruals in Microsoft Dynamics GP
 description: Information about HR Accruals in Microsoft Dynamics GP.
 ms.reviewer: theley, Cwaswick
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Human Resources
 ---
 # Information about HR Accrual Types in Microsoft Dynamics GP
 

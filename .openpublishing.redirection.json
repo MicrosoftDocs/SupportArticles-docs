@@ -9799,12 +9799,7 @@
       "source_path": "support/windows-server/windows-security/decommission-enterprise-certification-authority-and-remove-objects.md",
       "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/decommission-enterprise-certification-authority-and-remove-objects",
       "redirect_document_id": true
-    },
-    {
-      "source_path": "support/windows-server/windows-security/description-support-suite-b-cryptographic-ipsec.md",
-      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/description-support-suite-b-cryptographic-ipsec",
-      "redirect_document_id": true
-    },
+    },    
     {
       "source_path": "support/windows-server/windows-security/remote-desktop-server-certificates-renewed.md",
       "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/remote-desktop-server-certificates-renewed",
@@ -10764,6 +10759,16 @@
       "source_path": "support/dynamics/gp/must-use-sql-server-management-studio-error-when-connecting-to-store-database-server.md",
       "redirect_url": "/troubleshoot/dynamics/gp/welcome-gp",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/certificates-and-public-key-infrastructure-pki/requirements-domain-controller.md",
+      "redirect_url": "/troubleshoot/windows-server/active-directory/requirements-domain-controller",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/windows-security/expand-maximum-extension-size-limit-ad-cs.md",
+      "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/expand-maximum-extension-size-limit-ad-cs",
+      "redirect_document_id": true
     }
   ]
 }

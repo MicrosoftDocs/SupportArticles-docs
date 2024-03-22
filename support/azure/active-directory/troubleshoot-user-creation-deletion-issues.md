@@ -3,7 +3,7 @@ title: Fix user creation and deletion issues in Microsoft Entra ID
 description: Troubleshoot user creation and deletion issues in Microsoft Entra ID. Create and delete users in Azure portal, Microsoft Graph, PowerShell, and Azure CLI.
 ms.date: 12/15/2021
 ms.reviewer: tovascon, anhorta, v-leedennis
-ms.service: active-directory
+ms.service: entra-id
 ms.subservice: domain-services
 ms.custom: devx-track-azurecli, has-azure-ad-ps-ref
 keywords:

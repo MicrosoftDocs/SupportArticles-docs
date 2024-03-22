@@ -3,7 +3,8 @@ title: Modify the SOP Blank Picking Ticket Order Entered report
 description: This article describes how to print more than four lines of line item comments on the SOP Blank Picking Ticket Order Entered report in Microsoft Dynamics GP.
 ms.topic: how-to
 ms.reviewer: theley, ppeterso
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Distribution - Sales Order Processing
 ---
 # Print more than four lines of line item comments on the SOP Blank Picking Ticket Order Entered report in Microsoft Dynamics GP
 
