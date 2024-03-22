@@ -1243,6 +1243,8 @@ items:
       href: ./high-availability/duplicate-address-error-validate-failover-cluster.md
     - name: SCSI-3 Persistent Reservation test fails
       href: ./high-availability/scsi-3-persistent-reservation-test-fail.md
+    - name: Storage tests on a failover cluster might not discover all shared LUNs
+      href: ./high-availability/failover-cluster-storage-validation-tests-dont-discover-all-shared-luns.md
     - name: Validate Disk Failover test fails
       href: ./high-availability/validation-fails-run-disk-failover-test.md
     - name: You do not see the cluster disk in explorer or diskmgmt on Failover
