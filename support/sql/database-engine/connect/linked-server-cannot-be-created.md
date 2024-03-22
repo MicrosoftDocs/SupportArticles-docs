@@ -1,7 +1,7 @@
 ---
 title: Linked server couldn't be created after moving on-premises SQL Server to Azure
-description: This article provides a resolution to a problem in which a linked server can't be created after you migrate on-premises SQL Server to Azure.
-ms.date: 03/18/2024
+description: This article provides a resolution to a problem when a linked server can't be created after you migrate on-premises SQL Server to Azure.
+ms.date: 03/22/2024
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
