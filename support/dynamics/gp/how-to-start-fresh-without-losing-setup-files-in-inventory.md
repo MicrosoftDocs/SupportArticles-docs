@@ -3,7 +3,8 @@ title: How to start fresh without losing setup files in Inventory
 description: Discusses how to start over in Inventory with only the setup files in Microsoft Dynamics GP and in Microsoft Business Solutions - Great Plains.
 ms.reviewer: theley
 ms.topic: how-to
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Distribution - Inventory
 ---
 # How to start fresh without losing the setup files in Inventory in Microsoft Dynamics GP
 

@@ -2,7 +2,8 @@
 title: PAYG and BAS error messages in Microsoft Dynamics GP
 description: Describes the Pay As You Go (PAYG) error codes and the Business Activity Statement (BAS) error codes in Microsoft Great Plains 8.0. Lists the error or warning messages of the BAS and of the PAYG vendor summaries.
 ms.reviewer: theley
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Europe, Latin America, Africa, Asia, and Australia
 ---
 # Description of Pay As You Go error messages and Business Activity Statement error messages in Microsoft Dynamics GP
 

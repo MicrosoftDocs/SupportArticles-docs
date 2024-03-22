@@ -2,7 +2,8 @@
 title: Description of the Asset Financial Detail Summarize feature
 description: Introduces the Asset Financial Detail Summarize feature in Microsoft Great Plains Fixed Assets.
 ms.reviewer: theley
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Fixed Assets
 ---
 # Description of the Asset Financial Detail Summarize feature in Microsoft Great Plains Fixed Assets
 

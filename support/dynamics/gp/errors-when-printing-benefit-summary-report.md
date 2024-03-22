@@ -3,7 +3,8 @@ title: Errors occur when printing the Benefit Summary report
 description: Describes an issue that occurs when you print the Benefit Summary report in Payroll - US. To resolve this issue, make sure that the benefit code is consistently taxed between employee records.
 ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Payroll
 ---
 # You receive error messages when you print the Benefit Summary report in Microsoft Great Plains
 

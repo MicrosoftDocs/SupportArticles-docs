@@ -589,6 +589,8 @@
     items:
     - name: Red Hat RHUI certificate issues
       href: troubleshoot-linux-rhui-certificate-issues.md
+    - name: Red Hat RHUI connectivity issues
+      href: linux-rhui-connectivity-issues.md
 
 - name: Remote troubleshooting for VM tools
   href: remote-tools-troubleshoot-azure-vm-issues.md

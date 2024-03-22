@@ -3,7 +3,8 @@ title: Remove CEIP task from Dynamics GP
 description: Describes the steps to remove the Customer Experience Improvement Program (CEIP) task from the Reminders window in Microsoft Dynamics GP.
 ms.reviewer: theley, kyouells
 ms.topic: how-to
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # How to remove the Customer Experience Improvement Program (CEIP) task from Microsoft Dynamics GP
 
