@@ -11,6 +11,7 @@ ms.custom:
   - Exchange Online
   - CSSTroubleshoot
   - has-azure-ad-ps-ref
+  - azure-ad-ref-level-one-done
 ms.reviewer: benjak, kellybos, v-six
 appliesto: 
   - Exchange Online
@@ -33,6 +34,8 @@ Currently, removing the license leaves the mailbox in a disabled state. Therefor
 ```powershell
 Set-MSOLUserLicense -UserPrincipalName "<Account>" -RemoveLicenses
 ```
+
+[!INCLUDE [Azure AD PowerShell deprecation note](../../../includes/aad-powershell-deprecation-note.md)]
 
 This may leave the mailbox in a disabled state that prevents it from being displayed as either **Soft Deleted** or **Inactive**. In this situation, the following commands won't find the mailbox:
 
