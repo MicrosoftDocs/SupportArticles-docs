@@ -3,7 +3,7 @@
       {
         "source_path": "cloud-services/welcome-cloud-services.yml",
         "redirect_url": "/troubleshoot/azure/",
-        "redirect_document_id": true
+        "redirect_document_id": false
       },
       {
         "source_path": "cloud-services/dev-troubleshoot-series.md",
@@ -208,7 +208,7 @@
       {
         "source_path": "azure-storage/welcome-azure-storage.yml",
         "redirect_url": "/troubleshoot/azure/",
-        "redirect_document_id": true
+        "redirect_document_id": false
       },
       {
         "source_path": "azure-storage/files-troubleshoot.md",
