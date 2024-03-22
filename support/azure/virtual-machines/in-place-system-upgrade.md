@@ -1,19 +1,22 @@
 ---
 title: In-place upgrade for supported VMs running Windows in Azure
 description: Understand how to work around the unsupported in-place system upgrade on an Azure VM that runs Windows.
-ms.date: 03/12/2024
-ms.reviewer: joscon, scotro, azurevmcptcic
+ms.date: 03/15/2024
+ms.reviewer: joscon, scotro, azurevmcptcic, maulikshah, v-weizhu
 ms.service: virtual-machines
 ms.subservice: vm-common-errors-issues
 ms.collection: windows
 ---
 # In-place upgrade for supported VMs running Windows in Azure
 
-This article describes how to do an in-place system upgrade of supported Windows 10-based Azure virtual machines (Azure VMs). This article also describes workarounds for Azure VMs that aren't supported for in-place system upgrades. For Azure VMs running Windows Server, see [In-place upgrade for supported Windows Server VMs](/azure/virtual-machines/windows-in-place-upgrade).
+> [!CAUTION]
+> Following the process in this article will cause a disconnection between the data plane and the [control plane](/azure/architecture/guide/multitenant/considerations/control-planes#responsibilities-of-a-control-plane) of the virtual machine (VM). Azure capabilities such as [Auto guest patching](/azure/virtual-machines/automatic-vm-guest-patching#how-does-automatic-vm-guest-patching-work), [Auto OS image upgrades](/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-upgrade), [Hotpatching](/windows-server/get-started/hotpatch?toc=%2Fazure%2Fvirtual-machines%2Ftoc.json#supported-updates), and [Azure Update Manager](/azure/update-manager/overview) won't be available. To utilize these features, it's recommended to create a new VM using your preferred operating system instead of performing an in-place upgrade.
+
+This article describes how to do an in-place system upgrade of supported Windows 10-based Azure VMs. This article also describes workarounds for Azure VMs that aren't supported for in-place system upgrades. For Azure VMs running Windows Server, see [In-place upgrade for supported Windows Server VMs](/azure/virtual-machines/windows-in-place-upgrade).
 
 > [!NOTE]  
 > **Looking for Windows Server?**  
-> For the in-place system upgrade procedure for virtual machines that are running Windows Server, see [In-place upgrade for VMs running Windows Server in Azure](/azure/virtual-machines/windows-in-place-upgrade).
+> For the in-place system upgrade procedure for VMs that are running Windows Server, see [In-place upgrade for VMs running Windows Server in Azure](/azure/virtual-machines/windows-in-place-upgrade).
 
 _Original product version:_ &nbsp; Windows 10, version 1803, all editions, Windows 10, version 1709, all editions, Virtual Machine running Windows, Windows 10, Windows 8.1, Windows 7 Enterprise  
 _Original KB number:_ &nbsp; 4014997
@@ -22,7 +25,7 @@ _Original KB number:_ &nbsp; 4014997
 
 Consider the following scenario:
 
-- You have a virtual machine (VM) that's running Windows in a Microsoft Azure environment.
+- You have a VM that's running Windows in a Microsoft Azure environment.
 - You run an in-place upgrade of the VM to a newer version of the operating system.
 
  In this scenario, the upgrade may fail or become blocked and require direct console access.
@@ -37,8 +40,8 @@ In-place system upgrades are supported for specific versions of Azure Windows VM
 - Windows 10 Enterprise multi-session, all versions
 
    > [!NOTE]
-   > - It's not currently possible to upgrade an existing virtual machine that's running Windows 10 Professional or Enterprise to [Windows 10 Enterprise multi-session](/azure/virtual-desktop/windows-10-multisession-faq#can-i-upgrade-a-windows-10-vm-to-windows-10-enterprise-multi-session).
-   > - When migrating from Windows 10 to Windows 11, follow best practices by deploying new virtual machines. This approach avoids potential compatibility issues and ensures an optimized configuration.
+   > - It's not currently possible to upgrade an existing VM that's running Windows 10 Professional or Enterprise to [Windows 10 Enterprise multi-session](/azure/virtual-desktop/windows-10-multisession-faq#can-i-upgrade-a-windows-10-vm-to-windows-10-enterprise-multi-session).
+   > - When migrating from Windows 10 to Windows 11, follow best practices by deploying new VMs. This approach avoids potential compatibility issues and ensures an optimized configuration.
 
 ### Windows versions not yet supported for in-place system upgrades (consider using a workaround)
 

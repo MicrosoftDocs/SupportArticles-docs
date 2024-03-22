@@ -4,8 +4,8 @@ description: Review general steps to help you troubleshoot password writeback is
 ms.date: 11/03/2023
 ms.reviewer: jarrettr, nualex, v-leedennis
 editor: v-jsitser
-ms.service: active-directory
-ms.subservice: enterprise-users
+ms.service: entra-id
+ms.subservice: users
 ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 keywords:
 #Customer intent: As a Microsoft Entra administrator, I want to understand how to troubleshoot password writeback issues better so that I can more quickly resolve problems that affect password writeback.

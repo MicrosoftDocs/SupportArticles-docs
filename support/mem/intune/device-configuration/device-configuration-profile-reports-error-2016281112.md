@@ -3,7 +3,7 @@ title: Device configuration profile error 2016281112
 description: Fixes a problem that occurs in a custom VPN profile after you create and assign a device configuration profile in the Microsoft Intune portal.
 ms.date: 12/05/2023
 search.appverid: MET150
-ms.custom: sap:Configure VPN settings
+ms.custom: sap:Configure Devices - Windows\VPN settings
 ms.reviewer: kaushika, Joelste, intunecic, chhahn
 ---
 # 2016281112 (Remediation Failed) error in a custom VPN profile in the Intune admin portal
