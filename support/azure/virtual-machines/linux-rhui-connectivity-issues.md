@@ -152,7 +152,7 @@ Red Hat VMs in Azure must connect to the RHUI servers to use the RHUI repositori
 
 Create a UDR to route the traffic to the RHUI servers. The following screenshot shows the UDRs that you have to create in a route table on the Azure portal. The UDRs are based on the Azure Global regions and IP addresses listed in [Troubleshooting step 1: Update IP addresses for RHUI version 4](#troubleshooting-step-1-update-ip-addresses-for-rhui-version-4). For more information, see [Create, change, or delete a route table](/azure/virtual-network/manage-route-table).
 
-:::image type="content" source="media/linux-rhui-connectivity-issues/rhui-4-route.png" alt-text="Azure portal screenshot that shows an example of a route table for connecting to different Azure Global regions." lightbox="media/linux-rhui-connectivity-issues/rhui-4-route.png" border="false":::
+:::image type="content" source="media/linux-rhui-connectivity-issues/rhui-4-route.png" alt-text="Azure portal screenshot that shows an example of a route table for connecting to different Azure Global regions." lightbox="media/linux-rhui-connectivity-issues/rhui-4-route.png":::
 
 ## Scenario 3: An Azure firewall or virtual appliance is between your virtual network and the internet
 
