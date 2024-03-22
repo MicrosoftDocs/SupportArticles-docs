@@ -1197,6 +1197,8 @@ items:
       href: ./high-availability/physical-disk-resource-not-come-online.md
     - name: Recover computer object that supports Network Name resource
       href: ./high-availability/recover-deleted-computer-object-failover-cluster.md
+    - name: Can't import an AES256-SHA256-encrypted PFX certificate
+      href: ./high-availability/cannot-import-aes256-sha256-encrypted-pfx-certificate.md
     - name: '"The parameter is incorrect" error'
       href: ./high-availability/parameter-incorrect-error-cluster-validation-fails.md
     - name: 'Troubleshooting guidance: Cannot bring a resource online'
