@@ -5,7 +5,7 @@ author: Scott-Stabbert
 ms.author: sstabbert
 ms.date: 12/21/2023
 ms.reviewer: v-wendysmith, mhart
-ms.custom: bap-template
+ms.custom: sap:Data Unification\Business Unit Data Separation
 ---
 # Missing business unit in unification in Dynamics 365 Customer Insights - Data
 

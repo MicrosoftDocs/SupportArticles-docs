@@ -5,6 +5,7 @@ ms.date: 01/03/2024
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
+ms.custom: sap:Data Ingestion\Connect to a Power Query data source
 ---
 # "Data source credentials are missing or invalid" error
 
