@@ -56,7 +56,7 @@ For more information about Search and Indexing, see the following articles:
 
 Follow these steps to end the **SearchUI** process. Stopping this process stops Windows Search. The next time that you search, Windows Search automatically starts.
 
-1. Press <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Delete</kbd>, and then select **Task Manager**.
+1. Select <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Delete</kbd>, and then select **Task Manager**.
 2. In **Task Manager**, select **Details**.
 3. In the **Name** column, right-click **SearchUI.exe**, and then select **End task**.
 4. When you're prompted to end *SearchUI.exe*, select **End process**.
@@ -109,7 +109,7 @@ To reset Windows Search by using PowerShell, follow these steps:
       ```
 
       > [!IMPORTANT]  
-      > This cmdlet generates a warning message that explains the security risks of an execution policy change. To accept the change, press <kbd>Y</kbd>, and then press <kbd>Enter</kbd>.
+      > This cmdlet generates a warning message that explains the security risks of an execution policy change. To accept the change, select <kbd>Y</kbd>, and then select <kbd>Enter</kbd>.
 
       To learn more about PowerShell execution policies, see [About Execution Policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies).
 
@@ -127,13 +127,13 @@ To reset Windows Search by using PowerShell, follow these steps:
 1. When the word **Done** appears, do one of the following:
 
    - If you didn't change the execution policy to run the script, close the PowerShell window.
-   - If you changed the execution policy, keep the PowerShell window open and press any key to continue. Run the following command in the PowerShell window:
+   - If you changed the execution policy, keep the PowerShell window open and select any key to continue. Run the following command in the PowerShell window:
 
       ```powershell
       Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy <PreviousValue>
       ```
 
-       In this command, <*PreviousValue*> represents the original execution policy. As you did previously, accept the policy change by pressing <kbd>Y</kbd> and then pressing <kbd>Enter</kbd>.
+       In this command, <*PreviousValue*> represents the original execution policy. As you did previously, accept the policy change by selecting <kbd>Y</kbd> and then selecting <kbd>Enter</kbd>.
 
 1. Close the PowerShell Window.
 
