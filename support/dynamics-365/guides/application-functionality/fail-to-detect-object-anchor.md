@@ -5,7 +5,7 @@ author: alwinv
 ms.author: alwinv
 ms.date: 10/27/2023
 ms.reviewer: v-wendysmith, mhart
-ms.custom: bap-template
+ms.custom: sap:Application Functionality
 ---
 # Fail to detect an object anchor in the HoloLens app
 

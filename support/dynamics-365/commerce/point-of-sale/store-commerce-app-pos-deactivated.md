@@ -4,6 +4,7 @@ description: This article lists the causes and provides resolutions for the issu
 author: bstorie
 ms.author: brstor
 ms.date: 08/04/2023
+ms.custom: sap:Point of sale (POS)\Issues with device and register setup and configuration
 ---
 # Dynamics 365 Commerce Store Commerce app is suddenly deactivated
 

@@ -5,7 +5,7 @@ ms.author: davepinch
 author: davepinch
 ms.reviewer: v-wendysmith, mhart
 ms.date: 11/14/2023
-ms.custom: bap-template
+ms.custom: sap:Application Functionality
 ---
 # Can't delete a guide in the Guides model-driven app
 

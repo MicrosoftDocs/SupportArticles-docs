@@ -5,6 +5,7 @@ author: josaw1
 ms.author: josaw
 ms.reviewer: rassadi, brstor
 ms.date: 09/01/2023
+ms.custom: sap:Order management\Issues with cart and checkout in e-commerce storefront
 ---
 # A retail store doesn't appear in the list of stores to pick up from
 

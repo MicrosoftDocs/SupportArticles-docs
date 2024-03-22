@@ -4,6 +4,7 @@ description: Provides solutions to failures that occur during online store trans
 author: bstorie
 ms.author: brstor
 ms.date: 07/27/2023
+ms.custom: sap:Order management\Issues with order creation in e-commerce storefront
 ---
 # Troubleshoot issues with the online store transaction creation process
 

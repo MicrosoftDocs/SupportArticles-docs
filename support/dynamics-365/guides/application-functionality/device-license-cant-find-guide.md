@@ -5,7 +5,7 @@ author: davepinch
 ms.author: davepinch
 ms.reviewer: v-wendysmith, mhart
 ms.date: 10/27/2023
-ms.custom: bap-template
+ms.custom: sap:Application Functionality
 ---
 # Can't find a guide on a shared HoloLens device
 

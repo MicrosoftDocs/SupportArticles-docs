@@ -5,6 +5,7 @@ author: josaw1
 ms.author: josaw
 ms.reviewer: brstor
 ms.date: 09/01/2023
+ms.custom: sap:Ratings and reviews\Issues with e-commerce ratings and reviews
 ---
 # Ratings refiner appears on search results and category pages when the ratings and reviews solution isn't enabled
 

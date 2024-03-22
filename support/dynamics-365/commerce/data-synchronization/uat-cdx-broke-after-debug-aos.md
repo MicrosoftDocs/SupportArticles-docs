@@ -4,6 +4,7 @@ description: Provides a resolution for an issue where you can't download session
 author: bstorie
 ms.author: brstor
 ms.date: 07/20/2023 
+ms.custom: sap:Data synchronization\Issues with download sessions in CSU
 ---
 #  Commerce Data Exchange (CDX) download jobs can't be downloaded in a sandbox UAT environment
 

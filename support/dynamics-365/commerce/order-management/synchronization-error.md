@@ -5,6 +5,7 @@ author: josaw1
 ms.author: josaw
 ms.reviewer: shajain, brstor
 ms.date: 09/01/2023
+ms.custom: sap:Order management\Issues with order creation in point of sale (POS)
 ---
 # Asynchronous order synchronization issues
 

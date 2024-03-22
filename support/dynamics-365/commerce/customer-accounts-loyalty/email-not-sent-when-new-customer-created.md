@@ -4,6 +4,7 @@ description: This article provides troubleshooting guidance that can help if a w
 author: josaw1
 ms.author: josaw
 ms.date: 08/08/2023
+ms.custom: sap:Customer accounts and loyalty\Issues with customer account in e-commerce
 ---
 # Welcome email isn't sent when new customers are created
 

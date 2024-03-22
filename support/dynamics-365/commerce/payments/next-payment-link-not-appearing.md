@@ -5,6 +5,7 @@ author: josaw1
 ms.author: josaw
 ms.reviewer: rassadi, brstor
 ms.date: 09/08/2023
+ms.custom: sap:Payments\Issues with payment method or digital wallet configuration
 ---
 # "Save for my next payment" option doesn't appear
 

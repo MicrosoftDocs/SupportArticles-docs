@@ -5,7 +5,7 @@ ms.author: davepinch
 author: davepinch
 ms.reviewer: v-wendysmith, mhart
 ms.date: 10/27/2023
-ms.custom: bap-template
+ms.custom: sap:Application Functionality
 ---
 # Can't make a video call in the HoloLens app
 

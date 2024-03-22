@@ -5,6 +5,7 @@ author: josaw1
 ms.author: josaw
 ms.reviewer: rassadi, brstor
 ms.date: 12/22/2023
+ms.custom: sap:Order management\Issues with cart and checkout in e-commerce storefront
 ---
 # The "Pick this up" option doesn't appear on cart or product details pages 
 

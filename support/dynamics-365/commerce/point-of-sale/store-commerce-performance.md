@@ -5,6 +5,7 @@ author: josaw1
 ms.author: josaw
 ms.reviewer: brstor
 ms.date: 09/01/2023
+ms.custom: sap:Point of sale (POS)\Issues with Store Commerce app performance
 ---
 # Troubleshoot issues with Store Commerce performance 
 
