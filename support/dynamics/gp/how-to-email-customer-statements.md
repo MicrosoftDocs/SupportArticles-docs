@@ -3,7 +3,8 @@ title: Email Receivables Management customer statements
 description: Introduces the options for sending customer statements in Microsoft Dynamics GP.
 ms.reviewer: theley 
 ms.topic: how-to
-ms.date: 09/04/2023
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Receivables Management
 ---
 # How to email Receivables Management customer statements in Microsoft Dynamics GP
 

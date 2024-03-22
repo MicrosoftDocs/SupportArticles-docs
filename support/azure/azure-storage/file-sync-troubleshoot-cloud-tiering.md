@@ -236,6 +236,7 @@ If content doesn't exist for the error code, follow the general troubleshooting 
 | 0x800706be | -2147023170 | RPC_S_CALL_FAILED | An unknown error occurred. | If the error persists, use the `Test-StorageSyncNetworkConnectivity` cmdlet to check network connectivity to the service endpoints. [Learn more](/azure/storage/file-sync/file-sync-firewall-and-proxy#test-network-connectivity-to-service-endpoints). |
 | 0x80072747 | -2147014841 | WSAENOBUFS | An internal error occurred. | If the error persists, use the `Test-StorageSyncNetworkConnectivity` cmdlet to check network connectivity to the service endpoints. [Learn more](/azure/storage/file-sync/file-sync-firewall-and-proxy#test-network-connectivity-to-service-endpoints). |
 | 0x80C86093 | -2134351785 | ECS_E_STABLEVERSION_SVID_CHECK_FAILED | The file can't be recalled due to a known issue. | Copy the file manually from a different endpoint or the cloud share. If you can't copy the file manually, create a support ticket. |
+| 0x80C80362 | -2134375582 | ECS_E_ITEM_PATH_COMPONENT_HAS_TRAILING_DOT | The file tiering or download failed because of a trailing dot in the path. | Rename the trailing dot in the folder or file name. |
 
 ## Tiered files are not accessible on the server after deleting a server endpoint
 
@@ -362,6 +363,6 @@ If you're using a proxy, consult your proxy's documentation and ensure it's conf
 - [Troubleshoot Azure File Sync sync group management](file-sync-troubleshoot-sync-group-management.md)
 - [Troubleshoot Azure File Sync sync errors](file-sync-troubleshoot-sync-errors.md)
 - [Monitor Azure File Sync](/azure/storage/file-sync/file-sync-monitoring)
-- [Troubleshoot Azure Files](files-troubleshoot.md)
+- [Troubleshoot Azure Files](files/files-troubleshoot.md)
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

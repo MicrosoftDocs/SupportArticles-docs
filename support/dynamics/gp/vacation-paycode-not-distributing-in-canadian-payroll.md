@@ -2,8 +2,9 @@
 title: Vacation paycode not distributing in Canadian Payroll for Dynamics GP
 description: Department masks were set up to distribute, and it works for all paycodes except the Vacation type paycode. This article provides a solution to this issue.
 ms.topic: troubleshooting
-ms.reviewer: cwaswick
-ms.date: 03/31/2021
+ms.reviewer: theley, cwaswick
+ms.date: 03/20/2024
+ms.custom: sap:Payroll
 ---
 # Vacation paycode not distributing in Canadian Payroll for Microsoft Dynamics GP
 

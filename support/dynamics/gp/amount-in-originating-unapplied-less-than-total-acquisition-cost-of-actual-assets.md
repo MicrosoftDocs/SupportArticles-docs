@@ -1,9 +1,10 @@
 ---
 title: Amount in Originating Unapplied less than total acquisition cost
 description: The amount that appears in the Originating Unapplied box is less than the total acquisition cost of the actual assets that were saved by using this purchasing transaction. Provides a workaround.
-ms.reviewer: 
+ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Receivables Management
 ---
 # The amount in Originating Unapplied is less than the total acquisition cost of the actual assets in Fixed Assets Purchasing Transactions
 

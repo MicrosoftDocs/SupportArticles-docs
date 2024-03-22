@@ -1,9 +1,10 @@
 ---
 title: Management Reporter returns no data on Analytical Accounting reports
 description: Describes a problem with Analytical Accounting reports after you change to the GP DDM provider.
-ms.reviewer: kellybj, kevogt
+ms.reviewer: theley, kellybj, kevogt
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Analytical Accounting
 ---
 # Management Reporter 2012 may return no data on Analytical Accounting reports after changing to the GP DDM provider
 

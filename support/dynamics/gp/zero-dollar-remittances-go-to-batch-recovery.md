@@ -1,9 +1,10 @@
 ---
 title: Zero-dollar Remittances go to Batch Recovery
 description: When posting a computer check batch for Electronic Funds Transfers (EFT), the valid EFT's will post, but the zero-dollar remittances will not post and go to batch recovery. Provides a resolution.
-ms.reviewer: cwaswick, lmuelle
+ms.reviewer: theley, cwaswick, lmuelle
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # Zero-dollar Remittances go to Batch Recovery when processing EFT payments in Payables Management
 

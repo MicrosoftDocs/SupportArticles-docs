@@ -1,9 +1,10 @@
 ---
 title: Operation must use an updateable query error when running integration
 description: Describes how to resolve the updateable query error message in Integration Manager for Microsoft Dynamics GP.
-ms.reviewer: dlanglie
+ms.reviewer: theley, dlanglie
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # "Operation must use an updateable query" error when you run an integration in Integration Manager
 

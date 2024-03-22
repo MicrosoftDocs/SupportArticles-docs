@@ -1,8 +1,9 @@
 ---
 title: Purchase Order Commitments functionality
 description: Description of the Purchase Order Commitments functionality in Microsoft Dynamics GP 9.0.
-ms.reviewer:
-ms.date: 03/31/2021
+ms.reviewer: theley
+ms.date: 03/20/2024
+ms.custom: sap:Distribution - Purchase Order Processing
 ---
 # Description of the Purchase Order Commitments functionality in Microsoft Dynamics GP 9.0
 

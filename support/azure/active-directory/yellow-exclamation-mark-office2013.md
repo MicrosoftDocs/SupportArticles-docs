@@ -3,8 +3,8 @@ title: Users in a federated domain see a yellow exclamation mark in Office 2013 
 description: Describes an issue in which users in a federated domain who aren't synced to Microsoft Entra ID see a yellow exclamation mark in Office 2013 apps. Provides solutions.
 ms.date: 05/28/2020
 ms.reviewer: adrianp, willfid
-ms.service: active-directory
-ms.subservice: enterprise-users
+ms.service: entra-id
+ms.subservice: users
 ---
 # Users in a federated domain see a yellow exclamation mark in Office 2013 applications
 

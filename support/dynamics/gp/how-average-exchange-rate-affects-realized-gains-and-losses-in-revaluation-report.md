@@ -1,8 +1,9 @@
 ---
 title: How average exchange rate affects realized gains and losses
 description: Explains where the average exchange rate that appears on a revaluation report comes from and how that rate works with the formula in the revaluation report.
-ms.reviewer: lmuelle
-ms.date: 03/31/2021
+ms.reviewer: theley, lmuelle
+ms.date: 03/20/2024
+ms.custom: sap:Financial - General Ledger
 ---
 # How the average exchange rate affects the realized gains and the realized losses in a revaluation report in Multicurrency
 

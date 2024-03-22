@@ -2,7 +2,9 @@
 title: Add the Discount Available amount to the RM Statement Side Form report in Microsoft Dynamics GP
 description: Describes how to add the Discount Available amount to the RM Statement Side Form report in Microsoft Dynamics GP.
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.reviewer: theley
+ms.custom: sap:Financial - Receivables Management
 ---
 # How to add the Discount Available amount to the RM Statement Side Form report in Microsoft Dynamics GP
 

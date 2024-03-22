@@ -1,8 +1,9 @@
 ---
 title: Features of Analytical Accounting and Multidimensional Analysis
 description: Describes some differences and similarities in the features of Analytical Accounting and of Multidimensional Analysis.
-ms.reviewer: cwaswick, lmuelle
-ms.date: 03/31/2021
+ms.reviewer: theley, cwaswick, lmuelle
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Analytical Accounting
 ---
 # Comparison of the features of Analytical Accounting and of Multidimensional Analysis
 
@@ -35,4 +36,3 @@ _Original KB number:_ &nbsp; 935623
 |Budgeting is available.|Not available|
 |You can use Microsoft FRx together with Analytical Accounting.|You can use Microsoft FRx together with Multidimensional Analysis.|
 |You can restrict access by user.|Not available|
-  

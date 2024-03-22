@@ -3,7 +3,8 @@ title: An incorrect RECON batch is created
 description: Provides a solution to an issue where an incorrect RECON batch is created in Payroll when you reconcile attendance transactions in Human Resources in Microsoft Dynamics GP.
 ms.reviewer: lmuelle, theley
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Payroll
 ---
 # An incorrect RECON batch is created in Payroll when you reconcile attendance transactions in Human Resources in Microsoft Dynamics GP
 

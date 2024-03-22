@@ -2,8 +2,9 @@
 title: Error when you start Microsoft Dynamics GP
 description: Fixes an issue that occurs after you update to Microsoft Dynamics GP. In this situation, you receive an error message when you try to start the application.
 ms.topic: troubleshooting
-ms.reviewer: kyouells
-ms.date: 03/31/2021
+ms.reviewer: theley, kyouells
+ms.date: 03/20/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # Error message when you start Microsoft Dynamics GP: Database setup has not been completed for Microsoft Dynamics GP
 

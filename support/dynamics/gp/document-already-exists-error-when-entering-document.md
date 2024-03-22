@@ -1,9 +1,10 @@
 ---
 title: Document Already Exists error when entering document in Payables Transaction Entry
 description: When you try to enter a document in the Payables Transaction Entry window in Microsoft Dynamics GP, you receive a Document Already Exists error. Provides a resolution.
-ms.reviewer: lmuelle, cwaswick
+ms.reviewer: theley, lmuelle, cwaswick
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # "Document Already Exists" error when entering a document in the Payables Transaction Entry window
 

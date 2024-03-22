@@ -1,9 +1,10 @@
 ---
 title: Add document No. and document due date
 description: Describes how to add the document number and the document due date from the invoices to the Computer Checks Posting Journal report.
-ms.reviewer: ryanklev
+ms.reviewer: theley, ryanklev
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # How to add the document number and the document due date from invoices to the Computer Checks Posting Journal report in Microsoft Dynamics GP
 

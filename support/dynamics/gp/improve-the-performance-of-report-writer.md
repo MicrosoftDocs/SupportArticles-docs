@@ -1,9 +1,10 @@
 ---
 title: Improve the performance of Report Writer
 description: Describes how to improve the performance of a user-defined Report Writer function by setting the table to remain open when a report is being generated.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # How to improve the performance of user-defined Report Writer functions in Microsoft Dynamics GP 9.0 or in Microsoft Great Plains
 

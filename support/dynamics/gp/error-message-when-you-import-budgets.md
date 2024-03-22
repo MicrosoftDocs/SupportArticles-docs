@@ -1,9 +1,10 @@
 ---
 title: Error message when you import budgets
 description: Error message when you import budgets in Analytical Accounting in Microsoft Dynamics GP.
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Analytical Accounting
 ---
 # "The import failed because the spreadsheet is in an incorrect format" Error message when you import budgets in Analytical Accounting in Microsoft Dynamics GP
 

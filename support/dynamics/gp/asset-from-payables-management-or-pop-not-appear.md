@@ -2,7 +2,9 @@
 title: An asset from Payables Management or from Purchase Order Processing does not appear in Fixed Asset Management in Microsoft Dynamics GP
 description: Describes a problem that occurs if Microsoft Dynamics GP is not set up completely, or if Microsoft Dynamics GP is set up incorrectly. A resolution is provided.
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.reviewer: theley
+ms.custom: sap:Financial - Payables Management
 ---
 # An asset from Payables Management or from Purchase Order Processing does not appear in Fixed Asset Management in Microsoft Dynamics GP
 

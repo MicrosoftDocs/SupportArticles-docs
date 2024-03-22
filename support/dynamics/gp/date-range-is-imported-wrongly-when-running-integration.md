@@ -1,9 +1,10 @@
 ---
 title: All dates from the source data are imported when running integration
 description: When you run an Integration in Integration Manager it imports in all dates from the source data instead of just the date range that you want. Provides a resolution.
-ms.reviewer: dlanglie
+ms.reviewer: theley, dlanglie
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # All dates from source data are imported instead of wanted date range when running an integration in Integration Manager
 

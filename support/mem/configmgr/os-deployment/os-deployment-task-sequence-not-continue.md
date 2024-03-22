@@ -2,7 +2,7 @@
 title: An OS deployment task sequence doesn't continue
 description: Describes an issue in which a task sequence doesn't continue after Windows Setup or the in-place upgrade finishes if an OEM product key is used during Windows deployment.
 ms.date: 12/05/2023
-ms.custom: sap:Task sequence tasks
+ms.custom: sap:Operating Systems Deployment (OSD)\Operating System In-place Upgrade Deployments
 ms.reviewer: kaushika, frankroj, Jowiswel
 ---
 # An OSD task sequence doesn't continue after Windows Setup or an in-place upgrade finishes

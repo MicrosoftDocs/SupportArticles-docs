@@ -1,7 +1,7 @@
 ---
 title: Remove corrupted APM components
 description: Describes how to resolve issues that may affect IIS and SharePoint servers by removing possibly corrupted APM components in System Center 2016 Operations Manager.
-ms.date: 06/22/2020
+ms.date: 03/12/2024
 ms.reviewer: michjohn, jarrettr
 ---
 # Resolve issues by removing APM components in System Center 2016 Operations Manager
@@ -25,7 +25,7 @@ For more information about these issues, see the following blog articles:
 
 To resolve issues that may be caused by corrupted APM components, you can remove the components and then reinstall them. If you don't use the APM feature, you can completely remove the APM components.
 
-Typically, you can uninstall the Operations Manager agent and then reinstall it by using the `NOAPM=1` command-line parameter. This can be a challenging task if you have hundreds or thousands of deployed agents. However, you can easily remove the APM components from the deployed agents by using the agent management pack (SCOM.Management.10.19.10349.0). For more information about the agent management pack and how to get it, see [SCOM Management Properties and Tasks Pack for Agents and Server Roles](https://gallery.technet.microsoft.com/SCOM-Agent-Management-b96680d5).
+Typically, you can uninstall the Operations Manager agent and then reinstall it by using the `NOAPM=1` command-line parameter. This can be a challenging task if you have hundreds or thousands of deployed agents. However, you can easily remove the APM components from the deployed agents by using the agent management pack (SCOM.Management.10.19.10349.0).
 
 ## Determine which agents have APM installed
 
