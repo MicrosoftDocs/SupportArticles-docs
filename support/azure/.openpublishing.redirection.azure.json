@@ -206,6 +206,11 @@
         "redirect_document_id": true
       },
       {
+        "source_path": "azure-storage/welcome-azure-storage.yml",
+        "redirect_url": "/troubleshoot/azure/",
+        "redirect_document_id": true
+      },
+      {
         "source_path": "azure-storage/files-troubleshoot.md",
         "redirect_url": "/troubleshoot/azure/azure-storage/files/files-troubleshoot",
         "redirect_document_id": true
