@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot errors when deploying extensions in an AKS cluster
 description: Learn how to troubleshoot errors that occur when you deploy cluster extensions in an Azure Kubernetes Service (AKS) cluster.
-ms.date: 02/28/2024
+ms.date: 03/22/2024
 author: maanasagovi
 ms.author: maanasagovi
 editor: v-jsitser
@@ -28,7 +28,41 @@ The cluster extension agent and manager are crucial system components that are r
 
 ##### Solution 1: Make sure that the cluster extension agent and manager pods work correctly
 
-To resolve this issue, make sure that the cluster extension agent and manager pods are correctly scheduled and can start. If the pods are stuck in a non-ready state, check the pod description by running the `kubectl describe pod` command to get more details about the underlying problems (for example, taints that are preventing scheduling, insufficient memory, or policy restrictions).
+To resolve this issue, make sure that the cluster extension agent and manager pods are correctly scheduled and can start. If the pods are stuck in an unready state, check the pod description by running the following `kubectl describe pod` command to get more details about the underlying problems (for example, taints that prevent scheduling, insufficient memory, or policy restrictions):
+
+```console
+kubectl describe pod -n kube-system extension-operator-{id}
+```
+Here's a command output sample:
+
+```output
+kube-system         extension-agent-55d4f4795f-sqx7q             2/2     Running   0          2d19h
+kube-system         extension-operator-56c8d5f96c-nvt7x          2/2     Running   0          2d19h
+```
+
+For ARC-connected clusters, run the following command to check the pod description:
+
+```console
+kubectl describe pod -n azure-arc extension-manager-{id}
+```
+
+Here's a command output sample:
+
+```output
+NAMESPACE         NAME                                          READY   STATUS             RESTARTS        AGE
+azure-arc         cluster-metadata-operator-744f8bfbd4-7pssr    0/2     ImagePullBackOff   0               6d19h
+azure-arc         clusterconnect-agent-7557d99d5c-rtgqh         0/3     ImagePullBackOff   0               6d19h
+azure-arc         clusteridentityoperator-9b8b88f97-nr8hf       0/2     ImagePullBackOff   0               6d19h
+azure-arc         config-agent-6d5fd59b8b-khw2d                 0/2     ImagePullBackOff   0               6d19h
+azure-arc         controller-manager-5bc97f7db6-rt2zs           0/2     ImagePullBackOff   0               6d19h
+azure-arc         extension-events-collector-7596688867-sqzv2   0/2     ImagePullBackOff   0               6d19h
+azure-arc         extension-manager-86bbb949-6s59q              0/3     ImagePullBackOff   0               6d19h
+azure-arc         flux-logs-agent-5f55888db9-wnr4c              0/1     ImagePullBackOff   0               6d19h
+azure-arc         kube-aad-proxy-646c475dcc-92b86               0/2     ImagePullBackOff   0               6d19h
+azure-arc         logcollector-5cbc659bfb-9v96d                 0/1     ImagePullBackOff   0               6d19h
+azure-arc         metrics-agent-5794866b46-j9949                0/2     ImagePullBackOff   0               6d19h
+azure-arc         resource-sync-agent-6cf4cf7486-flgwc          0/2     ImagePullBackOff   0               6d19h
+```
 
 When the cluster extension agent and manager pods are operational and healthy, they establish communication with Azure services to install and manage Kubernetes applications.
 
@@ -40,7 +74,7 @@ If the cluster extension agent and manager pods are healthy, and you still encou
 
 To resolve this problem, make sure that you follow the networking prerequisites that are outlined in [Outbound network and FQDN rules for Azure Kubernetes Service (AKS) clusters](/azure/aks/outbound-rules-control-egress).
 
-### Error: Extension is stuck in creating state
+#### Cause 3: The traffic is not authorized 
 
 The extension agent unsuccessfully tries calling to `<region>.dp.kubernetesconfiguration.azure.com` data plane service endpoints. This failure generates an "Errorcode: 403, Message This traffic is not authorized" entry in the extension-agent pod logs.
 
@@ -49,8 +83,6 @@ kubectl logs -n kube-system extension-agent-<pod-guid>
 {  "Message": "2024/02/07 06:04:43 \"Errorcode: 403, Message This traffic is not authorized., Target /subscriptions/<subscription-id>/resourceGroups/<resource-group-name>/provider/managedclusters/clusters/<cluster-name>/configurations/getPendingConfigs\"",  "LogType": "ConfigAgentTrace",  "LogLevel": "Information",  "Environment": "prod",  "Role": "ClusterConfigAgent",  "Location": "eastus2euap",  "ArmId": "/subscriptions/<subscription-id>/resourceGroups/<resource-group-name>/providers/Microsoft.ContainerService/managedclusters/<cluster-name>",  "CorrelationId": "",  "AgentName": "ConfigAgent",  "AgentVersion": "1.14.5",  "AgentTimestamp": "2024/02/07 06:04:43.672"  }
 {  "Message": "2024/02/07 06:04:43 Failed to GET configurations with err : {\u003cnil\u003e}",  "LogType": "ConfigAgentTrace",  "LogLevel": "Information",  "Environment": "prod",  "Role": "ClusterConfigAgent",  "Location": "eastus2euap",  "ArmId": "/subscriptions/<subscription-id>/resourceGroups/<resource-group-name>/providers/Microsoft.ContainerService/managedclusters/<cluster-name>",  "CorrelationId": "",  "AgentName": "ConfigAgent",  "AgentVersion": "1.14.5",  "AgentTimestamp": "2024/02/07 06:04:43.672"  }
 ```
-
-#### Cause
 
 This error occurs if a preexisting PrivateLinkScope exists in an extension's data plane for Azure Arc-enabled Kubernetes, and the virtual network (or private DNS server) is shared between Azure Arc-enabled Kubernetes and the AKS-managed cluster. This networking configuration causes AKS outbound traffic from the extension data plane to also route through the same private IP address instead of through a public IP address.
 
@@ -66,11 +98,11 @@ Address: 10.224.1.184
 
 When you search for the private IP address in the Azure portal, the search results point to the exact resource: virtual network, private DNS zone, private DNS server, and so on. This resource has a private endpoint that's configured for the extension data plane for Azure Arc-enabled Kubernetes.
 
-##### Solution 1: (Recommended) Create separate virtual networks
+##### Solution 3.1: (Recommended) Create separate virtual networks
 
 To resolve this problem, we recommend that you create separate virtual networks for Azure Arc-enabled Kubernetes and AKS computes.
 
-##### Solution 2: Create a CoreDNS override
+##### Solution 3.2: Create a CoreDNS override
 
 If the recommended solution isn't possible in your situation, create a CoreDNS override for the extension data plane endpoint to go over the public network. For more information about how to customize CoreDNS, see the ["Hosts plugin"](/azure/aks/coredns-custom#hosts-plugin) section of "Customize CoreDNS with Azure Kubernetes Service."
 
