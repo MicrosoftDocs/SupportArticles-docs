@@ -3,8 +3,8 @@ title: Error (Unknown error (0x80005000)) message when you run the Azure Active 
 description: Describes an issue where you receive an error message when you run the Azure Active Directory Sync Tool Configuration Wizard. Provides a resolution.
 ms.date: 06/08/2020
 ms.reviewer: willfid
-ms.service: active-directory
-ms.subservice: enterprise-users
+ms.service: entra-id
+ms.subservice: users
 ---
 # Error when you run the Azure Active Directory Sync Tool Configuration Wizard: Unknown error (0x80005000)
 

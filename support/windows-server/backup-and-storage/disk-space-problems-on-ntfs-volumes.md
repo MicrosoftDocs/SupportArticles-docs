@@ -37,8 +37,6 @@ The following information can help you to optimize, repair, or gain a better und
 
 Only files and folders that include internal NTFS metafiles like the Master File Table (MFT), folder indexes, and others can consume disk space. These files and folders consume all the file space allocations by using multiples of a cluster. A cluster is a collection of contiguous sectors. The cluster size is determined by the partition size when the volume is formatted.
 
-For more information about clusters, see [Default cluster size for NTFS, FAT, and exFAT](https://support.microsoft.com/help/140365).
-
 When a file is created, it consumes a minimum of a single cluster of disk space, depending on the initial file size. When data is later added to a file, NTFS increases the file's allocation in multiples of the cluster size.
 
 To determine the current cluster size and volume statistics, run a read-only chkdsk command from a command prompt. To do so, follow these steps:

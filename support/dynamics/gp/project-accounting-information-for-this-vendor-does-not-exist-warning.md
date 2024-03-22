@@ -3,7 +3,8 @@ title: Project Accounting information for this vendor does not exist warning
 description: Project Accounting information for this vendor does not exist this warning occurs when you select a vendor record. Provides a resolution.
 ms.reviewer: theley, ppeterso
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # Project Accounting information for this vendor does not exist warning in Microsoft Dynamics GP purchasing
 

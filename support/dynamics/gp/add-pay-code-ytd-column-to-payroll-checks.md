@@ -3,7 +3,8 @@ title: How to add the Pay Code YTD column to payroll checks in Microsoft Dynamic
 description: Describes how to add the Pay Code YTD column to payroll checks in Microsoft Dynamics GP.
 ms.reviewer: theley, lmuelle
 ms.topic: how-to
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Payroll
 ---
 # How to add the "Pay Code YTD" column to payroll checks in Microsoft Dynamics GP
 

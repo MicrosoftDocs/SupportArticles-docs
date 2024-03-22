@@ -3,7 +3,8 @@ title: Enter and view the shipping history for inventory items in Microsoft Dyna
 description: Contains information about how to enter and view the shipping history including tracking numbers and BOL numbers for inventory items in Manufacturing of Microsoft Dynamics GP.
 ms.reviewer: theley, aeckman
 ms.topic: how-to
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Distribution - Inventory
 ---
 # How to enter and view the shipping history for inventory items in Microsoft Dynamics GP Manufacturing
 
