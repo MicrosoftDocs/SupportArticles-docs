@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot errors when deploying extensions in an AKS cluster
 description: Learn how to troubleshoot errors that occur when you deploy cluster extensions in an Azure Kubernetes Service (AKS) cluster.
-ms.date: 03/20/2024
+ms.date: 03/22/2024
 author: maanasagovi
 ms.author: maanasagovi
 editor: v-jsitser
