@@ -12,6 +12,7 @@ ms.custom:
   - Exchange Online
   - CSSTroubleshoot
   - has-azure-ad-ps-ref
+  - azure-ad-ref-level-one-done
 ms.reviewer: v-six
 appliesto: 
   - Exchange Online
@@ -27,7 +28,7 @@ A Tenant Administrator that is comfortable with executing PowerShell cmdlets.
 
 **How does it work?**
 
-We are going to ask you some specific questions to scope your situation. Then we take you through a series of steps tailored to your scenario.
+We're going to ask you some specific questions to scope your situation. Then we take you through a series of steps tailored to your scenario.
 
 **Estimated time of completion:**
 
@@ -35,7 +36,7 @@ We are going to ask you some specific questions to scope your situation. Then we
 
 ## Select the current state of the on-premises user account
 
-If there is no [Directory Synchronization](/microsoft-365/enterprise/microsoft-365-integration?view=o365-worldwide&preserve-view=true) in the environment, then the **Managed Account** option should be selected.
+If there's no [Directory Synchronization](/microsoft-365/enterprise/microsoft-365-integration?view=o365-worldwide&preserve-view=true) in the environment, then the **Managed Account** option should be selected.
 
 If Directory Synchronization is in place, you can search within **Active Directory Users and Computers** to see if the on-premises account is **Present** or **Deleted**.
 
@@ -47,7 +48,9 @@ If Directory Synchronization is in place, you can search within **Active Directo
 
 ### Microsoft Entra user Account Status (Managed Account (No DirSync))
 
-Connect to Azure Active Directory PowerShell and verify the Online Account Status:
+Connect to Azure Active Directory PowerShell and verify the Online Account Status.
+
+[!INCLUDE [Azure AD PowerShell deprecation note](../../../includes/aad-powershell-deprecation-note.md)]
 
 1. Install [Azure AD module](/previous-versions/azure/jj151815(v=azure.100)).
 2. Open the Microsoft Online Services Module (shortcut from the desktop).
@@ -60,7 +63,7 @@ Connect to Azure Active Directory PowerShell and verify the Online Account Statu
 5. Run `Get-MSOLUser -UserPrincipalName <UPN>`.
 
     Example: UserPrincipalName: user@contoso.com  
-    If the user information is returned the user is **PRESENT**. If the user information is not returned, proceed to step 6.
+    If the user information is returned the user is **PRESENT**. If the user information isn't returned, proceed to step 6.
 
 6. Run `Get-MSOLUser -UserPrincipalName <UPN>-ReturnDeletedUsers |SELECT-OBJECT`.  
    If the user information is returned, the user is **SOFT DELETED**.
@@ -156,7 +159,7 @@ Connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange
 **Solution:**  
 Contact Microsoft Support
 
-When an Active Directory User object is deleted from on-premises, the deletion is synchronized to Microsoft Entra ID. This synchronization process could take up to three hours. If the deletion has not synchronized yet, there may be an issue with the directory synchronization application.
+When an Active Directory User object is deleted from on-premises, the deletion is synchronized to Microsoft Entra ID. This synchronization process could take up to three hours. If the deletion hasn't synchronized yet, there may be an issue with the directory synchronization application.
 
 For more Directory Synchronization troubleshooting tips, see [Troubleshoot Azure Active Directory Sync tool installation and Configuration Wizard errors](/troubleshoot/azure/active-directory/installation-configuration-wizard-errors).
 
@@ -225,7 +228,7 @@ Recreate the user and restore the data from the original mailbox.
 **Solution:**  
 By Design
 
-This situation is expected behavior if the customer deleted the on-premises object 30+ days ago. The mailbox is not recoverable at this point.
+This situation is expected behavior if the customer deleted the on-premises object 30+ days ago. The mailbox isn't recoverable at this point.
 
 - If your issue is resolved, congratulations! Your scenario is complete.
 - If your issue isn't resolved, see [Additional Resources](#additional-resources).
@@ -242,12 +245,12 @@ Restore Inactive mailbox and perform a **soft match**.
 
 2. Connect the Soft Deleted Mailbox to a new Microsoft Entra account with the following steps:
 
-   1. If the tenant IS NOT using SSO (Single Sign-On), run the cmdlet:  
+   1. If the tenant isn't using SSO (Single Sign-On), run the cmdlet:  
       `New-Mailbox -Name "UserName" -InactiveMailbox -MicrosoftOnlineServicesID UserName@contoso.com -Password (ConvertTo-SecureString -String 'Pa$$word1' -AsPlainText –Force)`
-   2. If the tenant IS using ADFS (Identity Federation), run the cmdlet:  
+   2. If the tenant is using ADFS (Identity Federation), run the cmdlet:  
       `New-Mailbox -Name "UserName" -InactiveMailbox -MicrosoftOnlineServicesID UserName@contoso.onmicrosoft.com -Password (ConvertTo-SecureString -String 'Pa$$word1' -AsPlainText –Force)`
 
-3. [Restore](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd379481(v=ws.10)) or create a new On-premises AD user. Ensure that the on-premises account's Primary SMTP Address matches the Primary SMTP Address of the Microsoft 365 object. Change the on-premises object's address to match if it does not.
+3. [Restore](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd379481(v=ws.10)) or create a new On-premises AD user. Ensure that the on-premises account's Primary SMTP Address matches the Primary SMTP Address of the Microsoft 365 object. Change the on-premises object's address to match if it doesn't.
 
 4. Using [Microsoft Entra Connect](/azure/active-directory/hybrid/whatis-hybrid-identity) to run a Directory synchronization will soft match the on-premises account with the new Microsoft Entra account.
 
@@ -269,14 +272,14 @@ To identify duplicates, use the following steps:
 
 3. Run `Get-mailbox user@contoso.com |Select-Object ExternalDirectoryObjectID, UserPrincipalName`.
 
-    - If the Object IDs match from step 2 and 3, then follow continue to step 4.
-    - If the Objects ID's do not match from step 2 and 3, contact Microsoft support.
+    - If the Object IDs match from step 2 and 3, then continue to step 4.
+    - If the Objects ID's don't match from step 2 and 3, contact Microsoft support.
 
 4. Create a new On-premises AD user and ensure that the on-premises accounts Primary SMTP Address matches the Primary SMTP Address of the Microsoft 365 object.
 
 5. Ensure the UPN of the AD user object matches what was returned in step 3.
 6. Wait three hours for the account to replicate to the Online services.
-7. If the Mailbox did not reconnect, contact Microsoft Support.
+7. If the Mailbox didn't reconnect, contact Microsoft Support.
 
 - If your issue is resolved, congratulations! Your scenario is complete.
 - If your issue isn't resolved, see [Additional Resources](#additional-resources).
@@ -288,7 +291,7 @@ To identify duplicates, use the following steps:
 **Solution:**  
 Contact Microsoft Support
 
-Due to the way Microsoft Entra Connect and the Online Services work, this should not be a possible scenario. Contact Microsoft Support to get assistance with your issue.
+Due to the way Microsoft Entra Connect and the Online Services work, this scenario shouldn't be possible. Contact Microsoft Support to get assistance with your issue.
 
 - If your issue is resolved, congratulations! Your scenario is complete.
 - If your issue isn't resolved, see [Additional Resources](#additional-resources).
@@ -298,13 +301,13 @@ Due to the way Microsoft Entra Connect and the Online Services work, this should
 **Solution:**  
 Restore the on-premises Account.
 
-This best way to address the issue you are facing is to restore the original on-premises Active Directory User Account. After the restore, the exchange online mailbox will be accessible again.
+This best way to address the issue you're facing is to restore the original on-premises Active Directory User Account. After the restore, the exchange online mailbox will be accessible again.
 
 1. [Restore](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd379481(v=ws.10)) or create a new On-premises AD user and ensure that the on-premises accounts **Primary SMTP Address** matches the **Primary SMTP Address** of the Microsoft 365 object.
 
 2. Ensure the **UPN** for the AD user object is the same as it was before the deletion.
 3. Wait three hours for the account to replicate to the Online services.
-4. If the Mailbox did not reconnect, contact Microsoft Support.
+4. If the Mailbox didn't reconnect, contact Microsoft Support.
 
 - If your issue is resolved, congratulations! Your scenario is complete.
 - If your issue isn't resolved, see [Additional Resources](#additional-resources).
@@ -326,7 +329,7 @@ Connect to Azure Active Directory PowerShell and verify the Online Account Statu
 5. Run `Get-MSOLUser -UserPrincipalName <UPN>`.
 
     Example: UserPrincipalName: user@contoso.com  
-    If the user information is returned the user is **PRESENT**. If the user information is not returned, proceed to step 6.
+    If the user information is returned the user is **PRESENT**. If the user information isn't returned, proceed to step 6.
 
 6. Run `Get-MSOLUser -UserPrincipalName <UPN>-ReturnDeletedUsers |SELECT-OBJECT`.  
    If the user information is returned, the user is **SOFT DELETED**.
@@ -465,7 +468,7 @@ This issue is often caused by having an unlicensed user account.
 
 1. Log in to the Microsoft 365 portal at [https://portal.office.com](https://portal.office.com/) and check the user's [license status](/microsoft-365/admin/add-users/add-users).
 2. Check to see if the user has a valid license. If user doesn't have a valid license, [apply](/microsoft-365/admin/add-users/add-users) an Exchange Online License.
-3. If the mailbox isn't recoverable, you may have a blank mailbox connected. While it is unlikely that we can recover your data you can call into support.
+3. If the mailbox isn't recoverable, you may have a blank mailbox connected. While it's unlikely that we can recover your data you can call into support.
 
 - If your issue is resolved, congratulations! Your scenario is complete.
 - If your issue isn't resolved, see [Additional Resources](#additional-resources).
@@ -480,10 +483,10 @@ This behavior is by design, if the Microsoft Entra user is deleted, the mailbox 
 1. Connect to [Azure AD PowerShell](/previous-versions/azure/jj151815(v=azure.100)). In the same PowerShell window, connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 2. Run `get-mailbox -identity User@contoso.com |Select-Object ExternalDirectoryObjectID`.
 3. Run `get-msoluser -objectID < specify ExternalDirectoryObjectID from step 2> -returnDeletedUsers |select-object`.
-4. Confirm that the MSOLUser is returned from step 3 and then, simply restore the deleted MSOL user back to an Active user using the following steps:
+4. Confirm that the MSOLUser is returned from step 3 and then, restore the deleted MSOL user to an Active user using the following steps:
    - Run `$DelUser = Get-MsolUser -UserPrincipalName User@contoso.com -ReturnDeletedUsers`.
    - Run `Restore-MsolUser -ObjectId $DelUser.ObjectId`.
-5. Log in to the mailbox using the `UserPrincipalName` and verify you are able to access the mailbox.
+5. Log in to the mailbox using the `UserPrincipalName` and verify you can access the mailbox.
 
 > [!NOTE]
 > If step 2 & 3 don't yield any results, there may be a duplicate Microsoft Entra object or this mailbox is orphaned. Contact support to resolve the issue.
@@ -527,7 +530,7 @@ Follow these steps to review the license status of the user. If the license prop
 **Solution:**  
 Contact Microsoft Support
 
-This scenario should not be possible because of the way Exchange Online Account provisioning in Microsoft 365 works. It would be best to contact Microsoft Support so we can help work out the best solution for this issue.
+This scenario shouldn't be possible because of the way Exchange Online Account provisioning in Microsoft 365 works. It would be best to contact Microsoft Support so we can help work out the best solution for this issue.
 
 - If your issue is resolved, congratulations! Your scenario is complete.
 - If your issue isn't resolved, see [Additional Resources](#additional-resources).
@@ -576,7 +579,7 @@ Follow these steps to provision a new mailbox for the affected user:
    1. Provision an Exchange Online mailbox for the user by running `Enable-RemoteMailbox "UserName" -RemoteRoutingAddress "User@contoso.mail.onmicrosoft.com"`.
    2. [Assign an Exchange online license](/microsoft-365/admin/add-users/add-users) to the user through the Microsoft 365 portal.
 
-3. If not in an Exchange Hybrid environment, simply [assign the Exchange Online License](/microsoft-365/admin/add-users/add-users) for the user.
+3. If not in an Exchange Hybrid environment, [assign the Exchange Online License](/microsoft-365/admin/add-users/add-users) for the user.
 
 - If your issue is resolved, congratulations! Your scenario is complete.
 - If your issue isn't resolved, see [Additional Resources](#additional-resources).
@@ -615,7 +618,7 @@ This behavior is expected in the Exchange Online Services.
 
 **Solution:**
 
-The original mailbox is not recoverable. Assign a license to the user to create a new mailbox.
+The original mailbox isn't recoverable. Assign a license to the user to create a new mailbox.
 
 1. Log in to the [Microsoft 365 portal](https://portal.office.com/) as the tenant Administrator.
 2. [Assign the Exchange Online License](/microsoft-365/admin/add-users/add-users) for the user.
@@ -713,7 +716,7 @@ Follow these steps to recover the mailbox.
 ### Online Account hard deleted, Online Mailbox Not Present
 
 Solution:  
-Mailbox is not recoverable. Following these steps will ensure that a new user account and new mailbox are provisioned for the affected user.
+Mailbox isn't recoverable. Following these steps will ensure that a new user account and new mailbox are provisioned for the affected user.
 
 1. Log in to [Microsoft 365 portal](https://portal.office.com/).
 2. Create a new user account for the affected user.
@@ -749,7 +752,7 @@ Connect to Azure Active Directory PowerShell and verify the Online Account Statu
 5. Run `Get-MSOLUser -UserPrincipalName <UPN>`.
 
     Example: UserPrincipalName: user@contoso.com  
-    If the user information is returned the user is **PRESENT**. If the user information is not returned, proceed to step 6.
+    If the user information is returned the user is **PRESENT**. If the user information isn't returned, proceed to step 6.
 
 6. Run `Get-MSOLUser -UserPrincipalName <UPN>-ReturnDeletedUsers |SELECT-OBJECT`.  
    If the user information is returned, the user is **SOFT DELETED**.

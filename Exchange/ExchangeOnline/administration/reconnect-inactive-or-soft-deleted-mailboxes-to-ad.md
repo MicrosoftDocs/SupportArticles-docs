@@ -11,6 +11,7 @@ ms.custom:
   - Exchange Online
   - CSSTroubleshoot
   - has-azure-ad-ps-ref
+  - azure-ad-ref-level-one-done
 ms.reviewer: kellybos, Nino Bilic, v-six
 appliesto: 
   - Exchange Online
@@ -74,6 +75,8 @@ Restore the content from the inactive mailbox to the newly provisioned mailbox b
     ```powershell
     Set-MsolUser -UserPrincipalName <UPN> -ImmutableId <ImmutableId>
     ```
+
+    [!INCLUDE [Azure AD PowerShell deprecation note](../../../includes/aad-powershell-deprecation-note.md)]
 
 6. Run a Microsoft Entra Connect delta sync. This brings the original Microsoft Entra account into the scope of Microsoft Entra Connect.
 
