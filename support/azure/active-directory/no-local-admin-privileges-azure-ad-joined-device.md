@@ -6,8 +6,8 @@ author: ilyalushnikov
 ms.author: ilyal
 ms.editor: v-jsitser
 ms.reviewer: gudlapreethi, jafritts, shhada, v-leedennis
-ms.service: active-directory
-ms.subservice: enterprise-users
+ms.service: entra-id
+ms.subservice: users
 ---
 # No local administrator group privileges on Microsoft Entra joined device
 

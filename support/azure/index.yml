@@ -83,9 +83,9 @@ productDirectory:
   - title: Cloud Services
     imageSrc: "https://static.docs.com/ui/media/product/azure/cloud-services.svg"
     links:
-    - url: cloud-services-classic/welcome-cloud-services-classic.yml
+    - url: cloud-services/classic/welcome-cloud-services-classic.yml
       text: Troubleshooting articles for Cloud Services (classic)
-    - url: cloud-services-extended/welcome-cloud-services-extended.yml
+    - url: cloud-services/extended/welcome-cloud-services-extended.yml
       text: Troubleshooting articles for Cloud Services (extended support)
   - title: High Performance Computing
     imageSrc: "https://static.docs.com/ui/media/product/azure/container-registry.svg"

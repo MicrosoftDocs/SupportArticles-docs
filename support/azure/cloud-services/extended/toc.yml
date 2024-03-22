@@ -1,0 +1,54 @@
+- name: Welcome
+  href: welcome-cloud-services-extended.yml
+  
+- name: Troubleshooting series for developers
+  items:
+  - name: Use Azure DevOps to publish Cloud Services (extended support)
+    href: azure-devops-publish-cloud-service-extended.md
+
+- name: Troubleshooting Cloud Services (extended support)
+  items:
+  - name: Allocation failure
+    href: allocation-failure.md
+  - name: Allow internet traffic by using an application gateway
+    href: allow-internet-traffic-cses-application-gateway.md
+  - name: Application pool is crashing
+    href: application-pool-crashes.md
+  - name: Configure instance-level public IP addresses (PIPs)
+    href: ../classic/instance-level-public-ip-address-configuration.md
+  - name: Disk partition preservation
+    href: disk-partition-preservation.md
+  - name: Enable HTTPS communication
+    href: enable-https-communication.md
+  - name: FAQ about role instance restarts due to OS upgrades
+    href: role-instance-restarts-faq.yml
+  - name: Gather log files for offline analysis and preservation
+    href: gather-log-files-offline-analysis-preservation.md
+  - name: Grant a virtual network sole access to your cloud service
+    href: grant-virtual-network-sole-access.md
+  - name: Manage virtual IP address (VIP) swaps using PowerShell
+    href: manage-vip-swap-powershell.md
+  - name: No space on the E or F drive
+    href: no-space-e-f-drive.md
+  - name: RDP connections fail occasionally
+    href: intermittent-connection-failures-rdp.md
+  - name: Read key vault certificate secrets from an app
+    href: read-key-vault-certificate-secrets-from-cloud-service-app.md
+  - name: Retrieve Cloud Service (extended support) detail via PowerShell
+    href: retrieve-cloud-service-extended-support-detail-powershell.md
+  - name: Role instance restarts due to OS upgrades
+    href: role-instance-restarts-os-upgrade.md
+  - name: Roles that fail to start
+    href: role-startup-failure.md
+  - name: Update failed during migration from classic to extended support
+    href: ../classic/failed-update-ongoing-migration-process.md
+  - name: Update or change the certificate used
+    href: update-or-change-certificate-used.md
+  - name: Troubleshoot with App Insights-features overview
+    href: troubleshoot-with-app-insights-features-overview.md
+  - name: Troubleshoot with App Insights-common scenarios
+    href: troubleshoot-common-scenario-use-app-insights.md
+  - name: Use App Insights to track logical drive free space
+    href: app-insights-track-free-space-logical-drive.md
+  - name: Windows PaaS compute diagnostic data
+    href: windows-azure-paas-compute-diagnostic-data.md
