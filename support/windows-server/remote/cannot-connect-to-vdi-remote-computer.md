@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:performance-audio-and-video-and-remotefx, csstroubleshoot
+ms.custom: sap:Remote Desktop Services and Terminal Services\Performance (audio and video) and RemoteFX, csstroubleshoot
 ---
 # Remote Desktop cannot connect to the VDI-based remote computer after enabling Microsoft RemoteFX 3D Video Adapter
 

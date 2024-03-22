@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:cannot-bring-a-resource-online, csstroubleshoot
+ms.custom: sap:Clustering and High Availability\Cannot bring a resource online, csstroubleshoot
 ---
 # "Error 0x8000ffff: Catastrophic failure" when you try to change Shadow Copy settings for a drive in Windows Server 2008
 

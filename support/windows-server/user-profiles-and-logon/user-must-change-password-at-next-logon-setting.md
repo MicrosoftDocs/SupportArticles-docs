@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:user-profiles, csstroubleshoot
+ms.custom: sap:User Logon and Profiles\User profiles, csstroubleshoot
 ---
 # User may not be able to change their password if you configure the 'User must change password at next logon' setting
 

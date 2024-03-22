@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, v-lianna
-ms.custom: sap:windows-volume-activation, csstroubleshoot
+ms.custom: sap:Windows Activation\Windows activation issues, csstroubleshoot
 ---
 # Troubleshoot Windows activation error codes
 

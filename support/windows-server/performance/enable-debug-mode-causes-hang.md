@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, jdickson
-ms.custom: sap:system-hang, csstroubleshoot
+ms.custom: sap:System Performance\System Performance (slow, unresponsive, high CPU, resource leak), csstroubleshoot
 ---
 # Enabling Debug mode causes Windows to hang if no Debugger is connected
 

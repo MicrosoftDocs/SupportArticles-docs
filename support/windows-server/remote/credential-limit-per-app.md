@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, helohr, femila, v-lianna
-ms.custom: sap:remote-desktop-sessions, csstroubleshoot
+ms.custom: sap:Remote Desktop Services and Terminal Services\Session connectivity, csstroubleshoot
 ---
 # Credential limit per app
 

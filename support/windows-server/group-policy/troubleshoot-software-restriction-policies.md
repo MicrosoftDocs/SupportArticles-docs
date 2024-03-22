@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, jgerend, v-lianna
-ms.custom: sap:applocker-or-software-restriction-policies, csstroubleshoot
+ms.custom: sap:Group Policy\Applocker or software restriction policies , csstroubleshoot
 ---
 # Troubleshoot software restriction policies
 

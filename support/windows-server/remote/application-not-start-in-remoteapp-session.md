@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, mghazai
-ms.custom: sap:remoteapp-applications, csstroubleshoot
+ms.custom: sap:Remote Desktop Services and Terminal Services\RemoteApp applications, csstroubleshoot
 ---
 # An application does not start in a Windows Server Terminal Services RemoteApp session
 

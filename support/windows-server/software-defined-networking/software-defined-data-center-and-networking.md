@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, johnmar
-ms.custom: sap:internal-dns-server-for-sdn, csstroubleshoot
+ms.custom: sap:Software Defined Networking\Internal Name Resolution for SDN, csstroubleshoot
 ---
 # Software Defined Data Center and Software Defined Networking in Windows Server
 

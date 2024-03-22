@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, herbertm
-ms.custom: sap:kerberos-authentication, csstroubleshoot
+ms.custom: sap:Windows Security Technologies\Kerberos authentication, csstroubleshoot
 ---
 # KDC_ERR_C_PRINCIPAL_UNKNOWN Returned in S4U2Self Request
 

@@ -7,7 +7,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, ctimon, kledman
-ms.custom: sap:live-migration, csstroubleshoot
+ms.custom: sap:Virtualization and Hyper-V\Migration, csstroubleshoot
 ---
 # Starting or live migrating Hyper-V virtual machines may fail with error 0x80070569
 

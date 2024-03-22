@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:backup-and-restore-of-virtual-machines, csstroubleshoot
+ms.custom: sap:Virtualization and Hyper-V\Backup and restore of virtual machines, csstroubleshoot
 ---
 # Error when you try to export a virtual machine on a Windows Server 2008-based computer that uses Hyper-V: An error occurred while attempting to export the virtual machine
 

@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:encrypting-file-system-efs, csstroubleshoot
+ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Encrypting File System (EFS), csstroubleshoot
 ---
 # Use Cipher.exe to overwrite deleted data in Windows Server 2003
 

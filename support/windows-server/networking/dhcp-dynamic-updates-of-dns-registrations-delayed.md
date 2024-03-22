@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, v-jesits
-ms.custom: sap:dynamic-host-configuration-protocol-dhcp, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\Dynamic Host Configuration Protocol (DHCP), csstroubleshoot
 ---
 # DHCP dynamic updates of DNS registrations are delayed or not processed
 

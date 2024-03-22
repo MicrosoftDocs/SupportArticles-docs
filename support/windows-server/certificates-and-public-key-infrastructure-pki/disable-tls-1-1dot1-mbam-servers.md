@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:transport-layer-security-tls, csstroubleshoot
+ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Transport Layer Security (TLS) or Schannel (SSL), csstroubleshoot
 ---
 # Steps to disable TLS 1.0 and 1.1 on MBAM servers and force the use of TLS 1.2
 

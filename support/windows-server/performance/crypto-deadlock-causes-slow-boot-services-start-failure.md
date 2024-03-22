@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, tode
-ms.custom: sap:boot-is-slow, csstroubleshoot
+ms.custom: sap:System Performance\Startup or Pre-logon Performance (slow, unresponsive, spinning circle, blank screen), csstroubleshoot
 ---
 # Http <-> Crypto deadlock causes slow boot and service start failure on SSL-enabled
 

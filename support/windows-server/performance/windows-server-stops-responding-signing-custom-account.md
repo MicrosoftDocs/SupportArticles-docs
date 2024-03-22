@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, jasone, v-lianna
-ms.custom: sap:system-hang, csstroubleshoot, ikb2lmc
+ms.custom: sap:System Performance\System Performance (slow, unresponsive, high CPU, resource leak), csstroubleshoot, ikb2lmc
 ---
 # Windows Server stops responding during the sign-in process of a custom account
 

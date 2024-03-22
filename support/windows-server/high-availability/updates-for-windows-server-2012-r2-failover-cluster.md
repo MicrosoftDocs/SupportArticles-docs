@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: cpuckett, kaushika
-ms.custom: sap:root-cause-of-an-unexpected-failover, csstroubleshoot
+ms.custom: sap:Clustering and High Availability\Root cause of an unexpected failover, csstroubleshoot
 ---
 # Recommended hotfixes and updates for Windows Server 2012 R2-based failover clusters
 

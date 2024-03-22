@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, sandyar, cpuckett
-ms.custom: sap:driver-installation-or-driver-update, csstroubleshoot
+ms.custom: sap:Windows Device and Driver Management\Peripherals driver installation or update, csstroubleshoot
 ---
 # Support policy for third-party, kernel-level software that is signed using the attestation process in Windows
 

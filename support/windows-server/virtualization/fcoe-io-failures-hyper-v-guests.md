@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:storage-configuration, csstroubleshoot
+ms.custom: sap:Virtualization and Hyper-V\Storage configuration, csstroubleshoot
 ---
 # FCoE IO failures on Hyper-V guests for Windows Server 2016
 

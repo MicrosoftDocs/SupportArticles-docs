@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: chadbee, kaushika
-ms.custom: sap:partition-and-volume-management, csstroubleshoot
+ms.custom: sap:Backup, Recovery, Disk, and Storage\Partition and volume management , csstroubleshoot
 ---
 # Error message when you use the DiskPart break command to break a mirrored set
 

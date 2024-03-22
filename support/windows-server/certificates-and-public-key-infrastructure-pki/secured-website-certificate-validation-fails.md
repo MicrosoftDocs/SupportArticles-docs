@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:certificate-based-authentication, csstroubleshoot
+ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Credential Roaming and Certificate-based authentication, csstroubleshoot
 ---
 # Certificate validation fails when a certificate has multiple trusted certification paths to root CAs
 

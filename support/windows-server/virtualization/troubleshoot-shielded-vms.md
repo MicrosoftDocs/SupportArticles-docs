@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, dongill, inhenkel, v-lianna
-ms.custom: sap:shielded-virtual-machines, csstroubleshoot
+ms.custom: sap:Virtualization and Hyper-V\Shielded Virtual Machines, csstroubleshoot
 ---
 # Troubleshoot shielded VMs
 

@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: sureshka, arrenc, juburke, stacygr, jburchel, diassis, stefze, mastewa, ardenw, kaushika
-ms.custom: sap:transport-layer-security-tls, csstroubleshoot
+ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Transport Layer Security (TLS) or Schannel (SSL), csstroubleshoot
 ---
 # Applications experience forcibly closed TLS connection errors when connecting SQL Servers in Windows
 

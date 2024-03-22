@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:domain-join-issues, csstroubleshoot
+ms.custom: sap:Active Directory\On-premises Active Directory domain join, csstroubleshoot
 ---
 # Default limit to number of workstations a user can join to the domain
 

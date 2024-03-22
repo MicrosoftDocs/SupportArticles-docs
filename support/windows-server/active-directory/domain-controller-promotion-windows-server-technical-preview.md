@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, warrenw, arrenc
-ms.custom: sap:active-directory-domain-or-forest-functional-level-updates, csstroubleshoot
+ms.custom: sap:Active Directory\Domain or forest functional level updates, failures and Advisory, csstroubleshoot
 ---
 # Domain controller promotion process shows the Windows Server Technical Preview option in the Domain and Forest functional level list
 

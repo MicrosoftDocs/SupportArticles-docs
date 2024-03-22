@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, JAMIRC
-ms.custom: sap:lock-screen-or-screensaver, csstroubleshoot
+ms.custom: sap:Windows Desktop and Shell Experience\Desktop (Shell, Explorer.exe init, themes, colors, icons, recycle bin), csstroubleshoot
 ---
 # How to prevent the name of the last logged-on user from being displayed in the Log On to Windows dialog box in Windows Server 2003  
 

@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, arudell, christys
-ms.custom: sap:windows-nic-teaming-load-balance-failover, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\Windows NIC Teaming (Load Balance Failover), csstroubleshoot
 ---
 # LACP Timer is configured incorrectly when you create a new NIC Team for LBFO in Windows Server 2016
 

@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, annsheng, zhaling, aadake, v-lianna
-ms.custom: sap:no-boot-not-bugchecks, csstroubleshoot
+ms.custom: sap:System Performance\Startup or Pre-logon Reliability (crash, errors, bug check or Blue Screen), csstroubleshoot
 ---
 # Can't boot Windows from secondary mass storage bootable devices on UEFI-based computers
 

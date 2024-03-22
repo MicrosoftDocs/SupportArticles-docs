@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, jsimmons, sandeo, mimanans, sdabbiru, deverett, raviks, v-lianna
-ms.custom: sap:windows-laps, csstroubleshoot
+ms.custom: sap:Windows Local Admin Password Solution (LAPS), csstroubleshoot
 ---
 # Windows LAPS troubleshooting guidance
 

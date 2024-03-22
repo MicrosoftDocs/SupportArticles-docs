@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, davidg
-ms.custom: sap:deploying-software-through-group-policy, csstroubleshoot
+ms.custom: sap:Group Policy\Deploying software through Group Policy , csstroubleshoot
 ---
 # How to troubleshoot software installations by using Windows application management debug logging
 

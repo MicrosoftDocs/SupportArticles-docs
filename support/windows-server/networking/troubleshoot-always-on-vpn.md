@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, inhenkel, v-tappelgate, v-lianna
-ms.custom: sap:vpn, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\Remote access (VPN, RRAS, CMAK and AOVPN), csstroubleshoot
 ms.assetid: 4d08164e-3cc8-44e5-a319-9671e1ac294a
 ---
 # Troubleshoot Always On VPN

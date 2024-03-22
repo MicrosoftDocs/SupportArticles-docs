@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, lynnroe, jwojan
-ms.custom: sap:event-system, csstroubleshoot
+ms.custom: sap:System Management Components\WinRM, including event forwarding and collections, csstroubleshoot
 ---
 # How to delete corrupt Event Viewer Log files
 

@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, paulhut, nedpyle
-ms.custom: sap:user-logon-fails, csstroubleshoot
+ms.custom: sap:User Logon and Profiles\Service Account and Interactive User Logon Issues and Credential Providers, csstroubleshoot
 ---
 # Domain Controller doesn't allow interactive logon, shows an error: The security database on the server does not have a computer account for this workstation trust relationship
 

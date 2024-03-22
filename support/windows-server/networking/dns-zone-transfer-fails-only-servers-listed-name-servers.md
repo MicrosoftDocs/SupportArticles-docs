@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, ANRATH, brianoakes, v-lianna
-ms.custom: sap:dns, csstroubleshoot, ikb2lmc
+ms.custom: sap:Network Connectivity and File Sharing\DNS, csstroubleshoot, ikb2lmc
 ---
 # DNS zone transfer fails when using the "Only to servers listed in the Name servers tab" setting
 

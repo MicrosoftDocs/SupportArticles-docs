@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, scottmca
-ms.custom: sap:deduplication, csstroubleshoot
+ms.custom: sap:Backup, Recovery, Disk, and Storage\Deduplication , csstroubleshoot
 ---
 # The Microsoft policy for disk duplication of Windows installations
 

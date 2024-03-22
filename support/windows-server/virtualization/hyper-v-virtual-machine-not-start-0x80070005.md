@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:virtual-machine-will-not-boot, csstroubleshoot
+ms.custom: sap:Virtualization and Hyper-V\Virtual machine performance, csstroubleshoot
 ---
 # Hyper-V virtual machine may not start, and you receive an error 0x80070005: General access denied error
 

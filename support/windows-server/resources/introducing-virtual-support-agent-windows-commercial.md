@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:virtual-agent, csstroubleshoot
+ms.custom: sap:Support Tools, csstroubleshoot
 ---
 # Introducing Virtual Support Agent for Windows Commercial
 

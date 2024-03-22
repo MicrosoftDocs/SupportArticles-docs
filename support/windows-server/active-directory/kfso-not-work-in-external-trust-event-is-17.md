@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, jaml
-ms.custom: sap:active-directory-topology-sites-subnets-and-connection-objects, csstroubleshoot
+ms.custom: sap:Active Directory\Active Directory replication and topology, csstroubleshoot
 ---
 # Kerberos Forest Search Order may not work in an external trust and event ID 17 is returned
 

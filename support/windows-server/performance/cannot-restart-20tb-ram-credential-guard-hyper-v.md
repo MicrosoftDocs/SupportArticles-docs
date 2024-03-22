@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, winciccore, v-tappelgate
-ms.custom: sap:system-hang, csstroubleshoot
+ms.custom: sap:System Performance\System Performance (slow, unresponsive, high CPU, resource leak), csstroubleshoot
 ---
 
 # Cannot restart a Windows Server computer that uses Credential Guard, Hyper-V, and at least 20 TB RAM

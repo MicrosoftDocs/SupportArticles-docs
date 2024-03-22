@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: jeffpatt, kaushika
-ms.custom: sap:configuring-and-using-backup-software, csstroubleshoot
+ms.custom: sap:Backup, Recovery, Disk, and Storage\Configuring and using Windows Backup or other recovery, csstroubleshoot
 ---
 # No VSS writers are listed when you run the vssadmin list writers command in Windows Server
 

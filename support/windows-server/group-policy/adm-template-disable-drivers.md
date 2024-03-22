@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:managing-removable-devices-through-group-policy, csstroubleshoot
+ms.custom: sap:Group Policy\Managing removable devices (USB devices and flash drives) through Group Policy, csstroubleshoot
 ---
 # Use Group Policy to disable USB, CD-ROM, Floppy Disk, and LS-120 drivers
 

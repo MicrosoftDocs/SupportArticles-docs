@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:remote-desktop-sessions, csstroubleshoot
+ms.custom: sap:Remote Desktop Services and Terminal Services\Session connectivity, csstroubleshoot
 ---
 # You can't maximize a Remote Desktop Connection session window to full-screen when you use the /v parameter
 

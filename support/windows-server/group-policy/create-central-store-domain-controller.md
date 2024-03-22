@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, timtho
-ms.custom: sap:group-policy-management-gpmc-or-agpm, csstroubleshoot
+ms.custom: sap:Group Policy\Group Policy management (GPMC or GPedit), csstroubleshoot
 ---
 # How to create the Central Store for Group Policy Administrative Template files in Windows Vista
 

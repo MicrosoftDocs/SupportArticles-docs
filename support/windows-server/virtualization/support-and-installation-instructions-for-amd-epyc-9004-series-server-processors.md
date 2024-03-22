@@ -3,7 +3,7 @@ title: Support and installation instructions for AMD EPYC 9004 Series server pro
 description: Introduce the Windows Server operating system support statements and installation instructions for AMD EPYC 9004 series server processors.
 ms.topic: troubleshooting
 ms.date: 12/26/2023
-ms.custom: sap:installation-and-configuration-of-hyper-v, csstroubleshoot
+ms.custom: sap:Virtualization and Hyper-V\Installation and configuration of Hyper-V, csstroubleshoot
 ---
 # Windows Server support and installation instructions for the AMD EPYC 9004 Series server processors
 

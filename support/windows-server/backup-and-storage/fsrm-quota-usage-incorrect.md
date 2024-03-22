@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, daised
-ms.custom: sap:file-server-resource-manager-fsrm, csstroubleshoot
+ms.custom: sap:Backup, Recovery, Disk, and Storage\File Server Resource Manager (FSRM) , csstroubleshoot
 ---
 # The FSRM quota usage is incorrect when you change the size of the page file in Windows
 

@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:rdweb, csstroubleshoot
+ms.custom: sap:Remote Desktop Services and Terminal Services\Web access (includes RemoteApp and desktop connections), csstroubleshoot
 ---
 # The "Connected" icon doesn't appear in the notification area when you connect to a remote application by using Remote Desktop Web Access
 

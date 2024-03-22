@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, ntuttle
-ms.custom: sap:kerberos-authentication, csstroubleshoot
+ms.custom: sap:Windows Security Technologies\Kerberos authentication, csstroubleshoot
 ---
 # A TGS request for the krbtgt account fails with KDC_ERR_POLICY and an extended status of STATUS_AUTHENTICATION_FIREWALL_FAILED (0xC0000413)
 

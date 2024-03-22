@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, v-dgit
-ms.custom: sap:failure-to-install-windows-updates, csstroubleshoot
+ms.custom: sap:Installing Windows Updates, Features, or Roles\Failure to install Windows Updates, csstroubleshoot
 ---
 # Microsoft Product Support Reporting Tool for Microsoft Software Update Services v 5.2.2003.0  
 

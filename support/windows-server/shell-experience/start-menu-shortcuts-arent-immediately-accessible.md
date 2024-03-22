@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, v-jesits, v-six, robsim, cpuckett
-ms.custom: sap:start-menu, csstroubleshoot
+ms.custom: sap:Windows Desktop and Shell Experience\Start Menu and Task Bar, csstroubleshoot
 ---
 # Start menu shortcuts aren't immediately accessible in Windows Server 2016 and Windows Server 2019
 

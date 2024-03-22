@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, mikelan
-ms.custom: sap:dfsr, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\File Replication Technologies (FRS and DFSR), csstroubleshoot
 ---
 # Delegate DFS replication in Windows Server 2003 R2
 

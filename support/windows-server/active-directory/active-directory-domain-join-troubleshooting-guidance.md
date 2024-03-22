@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, v-lianna
-ms.custom: sap:domain-join-issues, csstroubleshoot
+ms.custom: sap:Active Directory\On-premises Active Directory domain join, csstroubleshoot
 ---
 # Active Directory domain join troubleshooting guidance
 

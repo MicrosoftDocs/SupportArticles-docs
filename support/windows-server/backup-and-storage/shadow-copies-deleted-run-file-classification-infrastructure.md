@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:volume-shadow-copy-service-vss, csstroubleshoot
+ms.custom: sap:Backup, Recovery, Disk, and Storage\Volume Shadow Copy Service (VSS) , csstroubleshoot
 ---
 # Shadow copies are deleted on Windows Server when you try to run an FCI classification job
 

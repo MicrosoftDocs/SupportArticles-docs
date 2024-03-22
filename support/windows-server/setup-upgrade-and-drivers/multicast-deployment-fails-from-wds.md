@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, scottmca
-ms.custom: sap:windows-adk-installation, csstroubleshoot
+ms.custom: sap:Windows Setup, Upgrade and Deployment\Sysprep and imaging (Windows PE, ADK, WDS), csstroubleshoot
 ---
 # Multicast Deployment Fails from Windows Deployment Services
 

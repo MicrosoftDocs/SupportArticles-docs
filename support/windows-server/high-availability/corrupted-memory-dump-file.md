@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:cluster-node-is-hanging, csstroubleshoot
+ms.custom: sap:Clustering and High Availability\Cannot bring a resource online, csstroubleshoot
 ---
 # Corrupted memory dump file when you try to obtain a full memory dump file from a virtual machine that is running in a cluster environment
 

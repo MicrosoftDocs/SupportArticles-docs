@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:sysvol-access-or-replication-issues, csstroubleshoot
+ms.custom: sap:Group Policy\Sysvol access or replication issues, csstroubleshoot
 ---
 # DFSR SYSVOL fails to migrate or replicate, SYSVOL not shared, Event IDs 8028 or 6016
 

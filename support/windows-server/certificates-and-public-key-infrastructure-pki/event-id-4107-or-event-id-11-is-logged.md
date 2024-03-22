@@ -7,7 +7,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, egomes
-ms.custom: sap:certificate-root-update-program, csstroubleshoot
+ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Microsoft Trusted Root Certificate Program, csstroubleshoot
 ---
 # Event ID 4107 or Event ID 11 is logged in the Application log
 

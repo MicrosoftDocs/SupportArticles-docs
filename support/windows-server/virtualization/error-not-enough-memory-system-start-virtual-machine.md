@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:virtual-machine-will-not-boot, csstroubleshoot
+ms.custom: sap:Virtualization and Hyper-V\Virtual machine performance, csstroubleshoot
 ---
 # Virtual machine that's running on Windows Server 2012 R2 doesn't start
 

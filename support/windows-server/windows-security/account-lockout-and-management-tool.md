@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:account-lockouts, csstroubleshoot
+ms.custom: sap:Windows Security Technologies\Account lockouts, csstroubleshoot
 ---
 # Introduction to Account Lockout and Management Tools
 

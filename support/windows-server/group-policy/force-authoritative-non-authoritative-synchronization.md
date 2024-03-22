@@ -7,7 +7,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, nedpyle
-ms.custom: sap:sysvol-access-or-replication-issues, csstroubleshoot
+ms.custom: sap:Group Policy\Sysvol access or replication issues, csstroubleshoot
 ---
 # How to force authoritative and non-authoritative synchronization for DFSR-replicated sysvol replication
 

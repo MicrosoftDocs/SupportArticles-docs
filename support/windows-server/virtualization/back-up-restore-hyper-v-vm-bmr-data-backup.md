@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:backup-and-restore-of-virtual-machines, csstroubleshoot
+ms.custom: sap:Virtualization and Hyper-V\Backup and restore of virtual machines, csstroubleshoot
 ---
 # Back up and restore a Hyper-V VM by using BMR and data backup
 

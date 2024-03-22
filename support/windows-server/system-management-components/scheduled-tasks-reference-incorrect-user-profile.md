@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, anwill
-ms.custom: sap:task-scheduler, csstroubleshoot
+ms.custom: sap:System Management Components\Task Scheduler, csstroubleshoot
 ---
 # Scheduled tasks reference incorrect user profile paths
 
