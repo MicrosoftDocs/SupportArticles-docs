@@ -897,6 +897,8 @@ items:
       href: ./certificates-and-public-key-infrastructure-pki/add-san-to-secure-ldap-certificate.md
     - name: Approval required for certificate renewals
       href: ./certificates-and-public-key-infrastructure-pki/approval-required-certificate-renewals-autoenrollment.md
+    - name: Can't import an AES256-SHA256-encrypted PFX certificate
+      href: ./certificates-and-public-key-infrastructure-pki/cannot-import-aes256-sha256-encrypted-pfx-certificate.md
     - name: Certutil -view command doesn't return issued certificates
       href: ./certificates-and-public-key-infrastructure-pki/certutil-view-not-return-issued-certificate.md
     - name: Clients can't authenticate with a server
@@ -1197,8 +1199,6 @@ items:
       href: ./high-availability/physical-disk-resource-not-come-online.md
     - name: Recover computer object that supports Network Name resource
       href: ./high-availability/recover-deleted-computer-object-failover-cluster.md
-    - name: Can't import an AES256-SHA256-encrypted PFX certificate
-      href: ./high-availability/cannot-import-aes256-sha256-encrypted-pfx-certificate.md
     - name: '"The parameter is incorrect" error'
       href: ./high-availability/parameter-incorrect-error-cluster-validation-fails.md
     - name: 'Troubleshooting guidance: Cannot bring a resource online'
