@@ -2,9 +2,9 @@
 
 title: Enable TLS 1.2 support as Microsoft Entra TLS 1.0/1.1 is deprecated
 description: This article describes how to enable support for TLS 1.2 in your environment, in preparation for upcoming Microsoft Entra TLS 1.0/1.1 deprecation.
-ms.date: 11/08/2023
+ms.date: 02/29/2024
 ms.reviewer: dahans, abizerh, v-leedennis, v-weizhu
-ms.service: active-directory
+ms.service: entra-id
 ms.subservice: authentication
 ms.custom: has-azure-ad-ps-ref
 ---
@@ -41,6 +41,10 @@ The **TLS 1.0**, **TLS 1.1**, and **3DES Cipher suite** services are being depre
 | U.S. government instances                        | March 31, 2021   | **COMPLETED** |
 | Public instances                                 | January 31, 2022 | **COMPLETED** |
 | Microsoft Entra instances operated by 21Vianet in China | June 2023        | **ONGOING**   |
+
+## TLS 1.3 support for Microsoft Entra services
+
+In addition to supporting TLS 1.2, Microsoft Entra is also rolling out support for TLS 1.3 for its endpoints to align with security best practices ([NIST - SP 800-52 Rev. 2](https://csrc.nist.gov/pubs/sp/800/52/r2/final)). With this change, Microsoft Entra endpoints will support both TLS 1.2 and TLS 1.3 protocols.
 
 ## Enable support for TLS 1.2 in your environment
 

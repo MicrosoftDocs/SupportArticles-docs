@@ -1,8 +1,9 @@
 ---
 title: Year-end closing procedures for GL
 description: Describes the recommended year-end closing procedures for General Ledger in Microsoft Dynamics GP.
-ms.reviewer: dbader, LMuelle
-ms.date: 03/31/2021
+ms.reviewer: theley
+ms.date: 03/20/2024
+ms.custom: sap:Financial - General Ledger
 ---
 # Year-end closing procedures for General Ledger in Microsoft Dynamics GP
 
@@ -57,19 +58,19 @@ Only follow this step if General Ledger is integrated with other modules. If Gen
 
     1. Inventory
 
-        For more information, see [KB -Year-End Closing procedures in Inventory Control in Microsoft Dynamics GP](https://support.microsoft.com/help/872713).
+        For more information, see [Year-End Closing procedures in Inventory Control in Microsoft Dynamics GP](year-end-closing-inventory-control.md).
 
     2. Receivables Management
 
-        For more information, see [KB -Year-end closing procedures for Receivables Management in Microsoft Dynamics GP](https://support.microsoft.com/help/857444).
+        For more information, see [Year-end closing procedures for Receivables Management in Microsoft Dynamics GP](year-end-closing-procedures-for-receivables-management.md).
 
     3. Payables Management
 
-        For more information, see [KB -Year-end closing procedures for the Payables Management module in Microsoft Dynamics GP](https://support.microsoft.com/help/875169).
+        For more information, see [Year-end closing procedures for the Payables Management module in Microsoft Dynamics GP](year-end-closing-payables-management.md).
 
     4. Fixed Asset Management
 
-        For more information, see [KB - The year-end closing procedures for the Fixed Asset Management module in Microsoft Dynamics GP](https://support.microsoft.com/help/865653).
+        For more information, see [The year-end closing procedures for the Fixed Asset Management module in Microsoft Dynamics GP](the-year-end-closing-procedures.md).
 
     5. Analytical Accounting
 
@@ -80,19 +81,13 @@ Only follow this step if General Ledger is integrated with other modules. If Gen
 
         For more information, see [The Year-end close procedures for Analytical Accounting in Microsoft Dynamics GP](https://support.microsoft.com/help/960356).
 
-        > [!IMPORTANT]
-        > If using AA with Microsoft Dynamics GP 2016, you should be 16.00.0675 or higher before closing the GL year! For more information, see Step 9 in [The Year-end close procedures for Analytical Accounting in Microsoft Dynamics GP](https://support.microsoft.com/help/960356).
-
-        > [!NOTE]
-        > Year-end procedures for Payroll are independent of the procedures in other modules. These procedures are always performed at the end of the calendar year. For more information, see [KB -Year-end closing procedures for Microsoft Dynamics GP Payroll](https://support.microsoft.com/help/850663).
-
 ### Step 2: Post the final adjusting entries in General Ledger
 
 The adjusting entries include all the entries that correct errors that were made when transactions were recorded. The adjusting entries also include journal entries that are used to assign revenues or expenses to the period in which the revenues were earned or in which the expenses were incurred.
 
 If you must make any adjusting entries to give revenue, expenses, or depreciation to the year that you're closing, use the Transaction Entry window or the Quick Journal Entry window to make adjusting entries in General Ledger.
 
-If you have to track initial adjusting entries or post audit entries separate from other fiscal periods, auditing periods can be set up in General Ledger. This feature enables separate tracking of the adjusting entries that are made after the year is closed. For more information about how to create auditing periods, see [How to set up an adjusting period in General Ledger in Microsoft Dynamics GP](https://support.microsoft.com/help/871679).
+If you have to track initial adjusting entries or post audit entries separate from other fiscal periods, auditing periods can be set up in General Ledger. This feature enables separate tracking of the adjusting entries that are made after the year is closed. For more information about how to create auditing periods, see [How to set up an adjusting period in General Ledger in Microsoft Dynamics GP](set-up-adjusting-period-general-ledger.md).
 
 > [!NOTE]
 > If you're using closing periods and you reconcile, the transactions all move to the first period with the start date.
@@ -188,9 +183,6 @@ If you're maintaining the account history, the year-end closing routine transfer
 
 When the year-end closing routine is complete, the Year-End Closing report is printed. This report lists the accounts that were closed and the transactions that were created to close those accounts. The Year-End Closing report is part of the audit trail. Save this report for the company's permanent records. The Year-End Closing report can't be reprinted.
 
-> [!NOTE]
-> If you use Microsoft SQL Server, and if database maintenance is not automated, we recommend that you perform database maintenance after you close the year.
-
 ### Step 12: (Optional) Close all the fiscal periods for all the series. (Tools | setup | company | Fiscal periods)
 
 After you complete the closing procedures for all the modules, use the Fiscal Periods Setup window to mark all the periods for all the series as closed. We recommend that you do it to prevent transactions from being posted from any module to any period that you closed. After a period is marked as closed, transactions can't be posted to the period unless you reopen the period. Later, if you must post a transaction to a closed period, return to the Fiscal Periods Setup window to reopen the period.
@@ -249,7 +241,7 @@ A3: The posting type that is specified in the Account Maintenance window for the
 
 METHOD 1: Restore from a backup, correct the posting type, and then run the Year End Closing routine again.
 
-METHOD 2: For more information about how to correct accounts that had an incorrect posting type without restoring to a backup, see [Changing the posting type on an account after you close the year in General Ledger for Microsoft Dynamics GP](https://support.microsoft.com/help/864913).
+METHOD 2: For more information about how to correct accounts that had an incorrect posting type without restoring to a backup, see [Changing the posting type on an account after you close the year in General Ledger for Microsoft Dynamics GP](changing-the-posting-type-an-account.md).
 
 METHOD 3: For Microsoft Dynamics GP 2013 R2 (12.00.1745) and later versions, you can go to the Year End Closing Routine window and select the button for Reverse Historical Year, verify the Year to Open displayed and select **Process**. The year will be reopened as if it was never closed in the first place, so you can change the posting type on the account and then run the Year End Closing routine again.
 
@@ -262,11 +254,11 @@ A4: Before the routine can continue, the year-end closing routine must validate 
 
 - [How to use divisional retained earnings accounts in General Ledger in Microsoft Dynamics GP](https://support.microsoft.com/help/850615)
 
-- [Error message when you try to perform the year-end closing process in General Ledger in Microsoft Dynamics GP: "Retained Earnings account not found"](https://support.microsoft.com/help/850741)
+- [Error message when you try to perform the year-end closing process in General Ledger in Microsoft Dynamics GP: "Retained Earnings account not found"](error-when-performing-year-end-closing-process-in-general-ledger.md)
 
 **Q5: What happens to unit accounts during the year-end closing routine**?
 
-A5: Unit accounts are treated as balance sheet accounts. Unit accounts have a balance that is brought forward when the year is closed. For more information about how to clear the beginning balances for unit accounts, see [How to clear beginning balances for unit accounts in General Ledger in Microsoft Dynamics GP](https://support.microsoft.com/help/857582).
+A5: Unit accounts are treated as balance sheet accounts. Unit accounts have a balance that is brought forward when the year is closed. For more information about how to clear the beginning balances for unit accounts, see [How to clear beginning balances for unit accounts in General Ledger in Microsoft Dynamics GP](clear-beginning-balances-for-unit-accounts-in-general-ledger.md).
 
 **Q6: I'm preparing to close the year in General Ledger. Must everyone exit Microsoft Dynamics GP before I do the year-end routine?**
 
@@ -308,7 +300,7 @@ A10: To resolve this issue, have all users close all transaction entry windows. 
 delete SY00800 where BACHNUMB = 'GL_Close'
 ```
 
-For more information, see [Error message when you try to post a transaction in General Ledger in Microsoft Dynamics GP after the year is closed: "Year End Close is still in process and batches can't be posted"](https://support.microsoft.com/help/856550).
+For more information, see ["Year End Close is still in process and batches cannot be posted" error when posting a transaction in General Ledger after the year is closed](year-end-close-is-still-in-process-and-batches-cannot-be-posted-error.md).
 
 **Q11: I receive the following message when I try to close the year in General Ledger:**
 > Sorry, another user is closing the year.
@@ -350,13 +342,13 @@ You receive this error message if an unposted single-use batch or an unposted qu
 **Q16: When I try to do the year-end closing routine in General Ledger, why do I receive the following error message:**
 > [Microsoft][ODBC SQL Server Driver][SQL Server]Violation of PRIMARY KEY constraint 'PK##0671112'. Cannot insert duplicate key in object '##0671112'
 
-A16:The year-end closing transactions contain a currency that isn't assigned to an account. For more information about how to resolve this issue, see [Error message when you try to perform the year-end closing routine in General Ledger in Microsoft Dynamics GP: "Violation of PRIMARY KEY constraint 'PK##0671112'"](https://support.microsoft.com/help/950019).
+A16:The year-end closing transactions contain a currency that isn't assigned to an account. For more information about how to resolve this issue, see ["Violation of PRIMARY KEY constraint 'PK##0671112'" error when doing year-end closing routine in General Ledger](violation-of-primary-key-constraint-error-when-doing-year-end-closing.md).
 
 **Q17: Why did the year-end closing process delete some GL accounts that may be tied to budgets?**
 
 A17: Functionality was added (in GP 2015 and higher versions) in the Year-End Closing window with a checkbox for Maintain Inactive Accounts. With this option marked, you get to choose if you wish to maintain All inactive accounts, or only those with Budget Amounts. If you don't mark this option, then all inactive accounts will be removed from the system during the year-end close process.
 
-For more information about inactive GL accounts and the year-end close process, see [Inactive GL accounts deleted during Year-End Close process for General Ledger in Microsoft Dynamics GP](https://support.microsoft.com/help/2452542).
+For more information about inactive GL accounts and the year-end close process, see [Inactive GL accounts deleted during Year-End Close process for General Ledger in Microsoft Dynamics GP](inactive-gl-accounts-deleted-during-year-end-close.md).
 
 **Q18:If I had a failed year end close, can I use theReverse Historical Year checkbox in the Year-End Closing window in Microsoft Dynamics GP 2013 R2 (and later versions), to try to fix it or un-do it?**
 

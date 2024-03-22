@@ -1,9 +1,10 @@
 ---
 title: This vendor has been assigned to a PO
 description: Provides a solution to an error that occurs when you try to inactivate a vendor in the Vendor Maintenance window.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # "This vendor has been assigned to a purchase order or unposted receipt. The status can't be changed to Inactive." Error message when you inactivate a vendor in Microsoft Dynamics GP
 

@@ -98,6 +98,6 @@ In this scenario, follow these steps:
 
 ## References
 
-For more information, see [Internet Explorer Enhanced Security Configuration changes the browsing experience](/troubleshoot/browsers/enhanced-security-configuration-faq).
+For more information, see [Internet Explorer Enhanced Security Configuration changes the browsing experience](enhanced-security-configuration-faq.yml).
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]

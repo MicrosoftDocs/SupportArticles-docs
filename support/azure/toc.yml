@@ -13,8 +13,10 @@
     href: azure-kubernetes/welcome-azure-kubernetes.yml
   - name: Azure Monitor
     href: azure-monitor/welcome-azure-monitor.yml
-  - name: Cloud Services
-    href: cloud-services/welcome-cloud-services.yml
+  - name: Cloud Services (classic)
+    href: cloud-services/classic/welcome-cloud-services-classic.yml
+  - name: Cloud Services (extended support)
+    href: cloud-services/extended/welcome-cloud-services-extended.yml
   - name: Virtual Machines
     href: virtual-machines/welcome-virtual-machines.yml
   - name: Virtual Machine Scale Sets

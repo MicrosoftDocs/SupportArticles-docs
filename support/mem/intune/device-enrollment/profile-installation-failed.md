@@ -1,9 +1,10 @@
 ---
 title: Intune Profile installation failed on iOS/iPadOS device in Intune
 description: Troubleshoot when an Intune profile fails to install on an iOS or iPadOS device.
-ms.date: 09/30/2021
+ms.date: 12/05/2023
 search.appverid: MET150
 ms.reviewer: kaushika
+ms.custom: sap:Enroll Devices - iOS\Advisory
 ---
 
 # Troubleshooting profile installation failed error on iOS or iPadOS devices

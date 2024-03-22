@@ -1,9 +1,10 @@
 ---
 title: Change currency/quantity decimal places
 description: Describes how to change the currency decimal places or the quantity decimal places in Microsoft Dynamics GP.
-ms.reviewer: aeckman, lmuelle
+ms.reviewer: theley, aeckman, lmuelle
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Manufacturing Series
 ---
 # How to change the currency decimal places or quantity decimal places in Manufacturing in Microsoft Dynamics GP
 

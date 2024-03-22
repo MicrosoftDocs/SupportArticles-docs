@@ -1,9 +1,7 @@
 ---
 title: Memory leak in remote registry service causes Windows to hang
 description: Describes a memory leak issue that causes Windows to hang. This memory leak involves the WnF tag, which consumes all available paged pool memory. A workaround is provided.
-ms.date: 08/01/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

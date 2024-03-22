@@ -1,8 +1,9 @@
 ---
 title: Multiple instances of the Unknown computers collection
 description: Describes a problem in which System Center 2012 Configuration Manager may show multiple instances of the Unknown computers collection when you reinstall a primary site.
-ms.date: 06/16/2020
+ms.date: 12/05/2023
 ms.reviewer: kaushika, ErinWi, prakask, keiththo, frankroj
+ms.custom: sap:Site Server and Roles\Site Server Performance
 ---
 # Multiple instances of the Unknown computers collection occur when you reinstall a primary site
 

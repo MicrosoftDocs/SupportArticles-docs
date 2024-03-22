@@ -4,9 +4,8 @@ description: Describes an error that may occur when an application calls CreateP
 author: cts-davean
 ms.author: davean
 ms.reviewer: mihayash, v-sidong
-ms.custom: sap:Desktop app UI development
-ms.subservice: desktop-app-ui-dev
-ms.date: 08/26/2023
+ms.custom: sap:System Services Development\Process, thread, and DLL APIs
+ms.date: 12/19/2023
 ---
 
 # CreateProcessWithLogonW fails when called on a Microsoft Entra account

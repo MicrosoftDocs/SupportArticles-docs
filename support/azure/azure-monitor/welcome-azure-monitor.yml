@@ -9,7 +9,7 @@ metadata:
   ms.topic: landing-page # Required
   author: genlin  #Required; your GitHub user alias, with correct capitalization.
   ms.author: genli #Required; microsoft alias of author; optional team alias.
-  ms.date: 04/18/2022
+  ms.date: 03/08/2024
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -22,7 +22,7 @@ landingContent:
         links:
           - text: Diagnose common problems that cause your ping tests to fail in availability monitoring
             url: ./app-insights/diagnose-ping-test-failure.md
-          - text: Error retrieving data in portal
+          - text: Portal connectivity issues
             url: ./app-insights/troubleshoot-portal-connectivity.md
           - text: Troubleshooting auto-instrumentation issues
             url: ./app-insights/auto-instrumentation-troubleshoot.md

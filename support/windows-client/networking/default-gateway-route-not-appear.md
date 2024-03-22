@@ -1,9 +1,7 @@
 ---
 title: Default gateway route doesn't appear in Routing Table
 description: Provides a solution to an issue where default gateway route doesn't appear in the Routing Table.
-ms.date: 09/23/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

@@ -1,9 +1,7 @@
 ---
 title: Windows updates add new NTLM pass-through authentication protections
 description: Describes the new NTLM pass-through authentication protections for CVE-2022-21857 introduced in Windows updates.
-ms.date: 03/31/2022
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

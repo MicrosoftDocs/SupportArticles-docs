@@ -1,8 +1,8 @@
 ---
 title: System Center vNext DPM error codes
 description: Lists error codes that may occur in System Center vNext Data Protection Manager.
-ms.date: 11/19/2020
-ms.reviewer: aaronmax, jchornbe, DPMTechReview
+ms.date: 02/27/2024
+ms.reviewer: aaronmax, jchornbe, DPMTechReview, sooryar
 ---
 # System Center vNext Data Protection Manager error codes
 
@@ -2394,7 +2394,7 @@ _Original KB number:_ &nbsp; 3041345
 |100173|Windows Server Backup failed to back up System State. Windows Server Backup error message: <_WSBMessage_>|To resolve the issue:<br/>1. Increase the amount of disk space or move the scratch folder to a larger volume and retry the backup. <br/>2. Run System File Checker to fix system issues and retry the backup.<br/><br/>For more information, see [Use the System File Checker tool to repair missing or corrupted system](https://support.microsoft.com/help/929833/use-the-system-file-checker-tool-to-repair-missing-or-corrupted-system).|
 |100174|Windows Server Backup failed to take system state backup. Windows Server Backup error message: <_WSBMessage_>|To resolve this issue:<br/>1. Apply the hotfix located in [2155347997 (0x8078001D) error code when you perform a system state backup operation in Windows 7 or in Windows Server 2008 R2](https://support.microsoft.com/help/2182466/2155347997-0x8078001d-error-code-when-you-perform-a-system-state-backu).<br/>2. Retry the backup.|
 |100175|System Writer not found for System State backup. Windows Server Backup error message: <_WSBMessage_>|To resolve this issue, follow the procedures in [System State backup using Windows Server Backup fails with error: System writer is not found in the backup](https://support.microsoft.com/help/2009272/system-state-backup-using-windows-server-backup-fails-with-error-syste).|
-|100176|This functionality is deprecated.|Use the Instant Recovery Option.|
+|100176|This functionality is deprecated.|To resolve this error, use the Instant Recovery option and upgrade your DPM and MABS installation to the [recommended version](https://support.microsoft.com/topic/b50af79f-5966-4fa4-8fd2-12b56d1e6e9a) before installing MARS 2.0.9266.0.<br/><br/>This error can occur if you use an older DPM or MABS version that doesn't support iSCSI-based item-level recoveries, and upgrade to MARS 2.0.9266.0 or later.|
 |100177|Backup failed because of system file errors. This could be due to one or more actions (such as a reboot) pending on this server.|Run System File Checker to repair system file errors, reboot as required and try the operation again. For more information, see [Use the System File Checker tool to repair missing or corrupted system](https://support.microsoft.com/help/929833/use-the-system-file-checker-tool-to-repair-missing-or-corrupted-system).|
 |100178|Backup failed because system file precheck timed out.|Retry the backup. For more information, see [Use the System File Checker tool to repair missing or corrupted system](https://support.microsoft.com/help/929833/use-the-system-file-checker-tool-to-repair-missing-or-corrupted-system).|
 |100179|System State backup cannot be done because there is a reboot pending on machine to apply latest Windows Updates.|Restart the computer and retry the backup.|

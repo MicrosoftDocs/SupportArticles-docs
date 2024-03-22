@@ -3,8 +3,8 @@ title: Microsoft Entra Connect excludes a user's primary group from its group me
 description: Describes an issue that causes Microsoft Entra Connect to exclude a user's primary group from its group membership.
 ms.date: 06/08/2020
 ms.reviewer: 
-ms.service: active-directory
-ms.subservice: enterprise-users
+ms.service: entra-id
+ms.subservice: users
 ---
 # Microsoft Entra Connect excludes a user's primary group from its group membership
 

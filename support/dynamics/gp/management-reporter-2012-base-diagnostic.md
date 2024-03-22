@@ -1,8 +1,9 @@
 ---
 title: Management Reporter 2012 Base diagnostic
 description: Describes the tasks that are performed by the Management Reporter 2012 Base diagnostic.
-ms.reviewer: kellybj, kevogt
-ms.date: 03/31/2021
+ms.reviewer: theley, kellybj, kevogt
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Management Reporter
 ---
 # [SDP 3][882c45ca-18ab-4e13-a1bf-8b23b96a8e4e] Management Reporter 2012 Base diagnostic
 

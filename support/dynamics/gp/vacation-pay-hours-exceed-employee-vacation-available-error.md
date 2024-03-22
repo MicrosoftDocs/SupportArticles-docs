@@ -1,9 +1,10 @@
 ---
 title: Vacation pay hours exceed employee vacation available warning on the Build Check File Report
 description: Describes a problem where the warning - Vacation pay hours exceed employee vacation available is displayed on the Build Check File Report in Payroll even though there are sufficient vacation hours in Human Resources in Microsoft Dynamics GP.
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Payroll
 ---
 # Warning "Vacation pay hours exceed employee vacation available" on the Build Check File Report when employee has sufficient vacation hours in Human Resources
 

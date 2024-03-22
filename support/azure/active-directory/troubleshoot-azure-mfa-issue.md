@@ -3,7 +3,7 @@ title: Troubleshoot Azure Multi-Factor Authentication issues
 description: Describes how to troubleshoot common issues that occur when you use the Windows Multi-Factor Authentication for Office 365 or Azure.
 ms.date: 07/21/2020
 ms.reviewer: willfid, rossa
-ms.service: active-directory
+ms.service: entra-id
 ms.subservice: authentication
 ---
 # Troubleshoot Azure Multi-Factor Authentication issues

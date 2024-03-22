@@ -5,7 +5,7 @@ ms.author: araghunath
 author: araghunath08
 ms.reviewer: nenellim 
 ms.collection: 
-ms.date: 09/13/2023
+ms.date: 03/03/2024
 ms.custom: bap-template
 ---
 # Use diagnostic messages to troubleshoot issues in voice calls
@@ -23,6 +23,7 @@ The following table lists the warning messages that appear when your agents have
 |  Your network is causing poor call quality. Try switching to a better network, or moving closer to a Wi-Fi access point.  | Appears when the network connection is lost and the system tries to reconnect to the network.  | `networkReconnect` |
 | Your network is causing poor call quality. Try switching to a better network, or moving closer to a Wi-Fi access point.  | Appears when the incoming streaming quality is poor.  | `networkReceiveQuality` |
 | Your network is causing poor call quality. Try switching to a better network, or moving closer to a Wi-Fi access point.  | Appears when the outgoing streaming quality is poor. | `networkSendQuality` |
+| There is a problem connecting to the network. Ensure firewall rules are correctly set up.  | Appears when there are problems with the network. | `networkRelaysNotReachable` |
 
 ## Troubleshoot device issues
 
@@ -34,6 +35,12 @@ The following table lists the messages that appear when your agents have issues 
 | You are muted.  | Appears when an agent is speaking while it's muted. | `speakingWhileMicrophoneIsMuted` |
 | No microphone detected. Try connecting one so that others can hear you. | Appears when no microphone is detected on the agent's system.  | `noMicrophoneDevicesEnumerated` |
 |Your microphone is not working. On the communication panel, select More -> Device settings to connect to a different device or try reconnecting this one. |Appears when the microphone is muted unexpectedly or is not functioning.| `microphoneMuteUnexpectedly` `microphoneNotFunctioning`|
+
+## Troubleshoot incoming call notification issues
+
+If you are using a [custom notification template](/dynamics365/customer-service/administer/notification-templates?tabs=customerserviceadmincenter#create-a-notification-template) and have set the countdown to more than 40 seconds, agents might receive call notifications for too long and encounter errors when they accept such calls. To avoid errors, set the **Countdown (seconds)** value to 40 seconds or less in the custom notification template that's attached to the voice workstream.
+
+:::image type="content" source="media/use-diagnostic-messages-in-call-issues/notification-template.png" alt-text="Screenshot of notification template settings that should be configured to avoid call notification issues.":::
 
 ## See also
 

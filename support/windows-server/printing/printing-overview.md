@@ -1,9 +1,7 @@
 ---
 title: Printing overview
 description: Overview of Printing troubleshooting articles for Windows Server.
-ms.date: 06/17/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -16,8 +14,9 @@ The topics in this section provide solutions and scenario guides to help you tro
 
 ## Printing sub categories
 
-- Management and Configuration of installing Print drivers
-- Errors and troubleshooting General issues
+- Troubleshooting guidance: Printing
+- Troubleshoot printing issues
+- Management and Configuration of installing print drivers
 - Errors and troubleshooting: General issues
 - Errors and troubleshooting: Print output or print failures
 - Errors and troubleshooting: Print spooler

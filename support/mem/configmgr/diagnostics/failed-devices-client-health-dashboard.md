@@ -1,8 +1,9 @@
 ---
 title: Client health dashboard displays some failed devices
 description: Work around an issue in which some devices are reported as failure on the Status Messages bar of the client health dashboard.
-ms.date: 09/03/2021
+ms.date: 12/05/2023
 ms.reviewer: kaushika, payur, v-six
+ms.custom: sap:Client Operations\Client Health
 ---
 # Some devices are reported as failed on the client health dashboard
 

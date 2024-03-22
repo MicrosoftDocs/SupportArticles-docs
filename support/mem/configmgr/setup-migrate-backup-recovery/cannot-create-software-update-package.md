@@ -1,8 +1,9 @@
 ---
 title: Can't create software update packages or applications
 description: Provides the steps to solve the issue that you can't create a software update package or application after Configuration Manager SQL Server site database is moved.
-ms.date: 06/09/2020
+ms.date: 12/05/2023
 ms.reviewer: kaushika, jchornbe, karanr
+ms.custom: sap:Configuration Manager Database\Site Database Move
 ---
 # Can't create a software update package or application after moving the site database
 

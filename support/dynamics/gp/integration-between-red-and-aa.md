@@ -1,9 +1,10 @@
 ---
 title: Integration between RED and AA
 description: Describes the integration between RED and AA in Microsoft Dynamics GP.
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Analytical Accounting
 ---
 # Integration between RED and AA in Microsoft Dynamics GP
 

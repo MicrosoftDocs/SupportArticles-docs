@@ -1,9 +1,7 @@
 ---
 title: How to use PortQry to troubleshoot Active Directory connectivity issues
 description: Describes how to use the PortQry command-line utility to troubleshoot TCP/IP connectivity used by Windows components and features.
-ms.date: 11/09/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

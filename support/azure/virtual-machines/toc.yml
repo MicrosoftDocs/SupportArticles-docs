@@ -507,6 +507,8 @@
     items:
     - name: Activation fails in forced tunneling scenario
       href: custom-routes-enable-kms-activation.md
+    - name: Activation watermark continues to be displayed
+      href: activation-watermark-appears.md
     - name: Duplicate Client Machine ID
       href: windows-activation-duplicate-client-machine-id.md
     - name: Error 0x80070005
@@ -519,6 +521,8 @@
       href: windows-vm-activation-error-0xc004fd01-0xc004fd02.md
     - name: Error 0xC004F06C
       href: ../../windows-server/deployment/error-0xc004f06c-activate-windows.md?context=/troubleshoot/azure/virtual-machines/context/context
+    - name: Error 0xC004F074
+      href: windows-vm-activation-error-0xc004f074.md
   - name: KMS endpoints - new endpoints
     href: windows-activation-stopped-working.md
 
@@ -585,6 +589,8 @@
     items:
     - name: Red Hat RHUI certificate issues
       href: troubleshoot-linux-rhui-certificate-issues.md
+    - name: Red Hat RHUI connectivity issues
+      href: linux-rhui-connectivity-issues.md
 
 - name: Remote troubleshooting for VM tools
   href: remote-tools-troubleshoot-azure-vm-issues.md

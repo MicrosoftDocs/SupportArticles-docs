@@ -1,8 +1,8 @@
 ---
 title: Can't create standalone or prestaged media
 description: Describes an issue in which you receive the Not enough memory resources error when you create Configuration Manager standalone or prestaged media.
-ms.date: 06/09/2020
-ms.custom: sap:Bootable, stand-alone, pre-staged, and WTG media
+ms.date: 12/05/2023
+ms.custom: sap:Operating Systems Deployment (OSD)\Task Sequence Media (all types), stand-alone, pre-staged, and WTG media
 ms.reviewer: kaushika
 ---
 # Not enough memory resources error when you create standalone or prestaged media in Configuration Manager

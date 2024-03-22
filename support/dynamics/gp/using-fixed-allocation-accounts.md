@@ -1,8 +1,9 @@
 ---
 title: Using fixed allocation accounts
 description: Describes how to use fixed allocation accounts or variable allocation accounts with Analytical Accounting in Microsoft Dynamics GP.
-ms.reviewer: cwaswick
-ms.date: 03/31/2021
+ms.reviewer: theley, cwaswick
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Analytical Accounting
 ---
 # Using fixed allocation accounts or variable allocation accounts with Analytical Accounting in Microsoft Dynamics GP
 

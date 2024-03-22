@@ -1,8 +1,9 @@
 ---
 title: Bad gateway error deploying software updates
 description: Describes a problem in which you receive a Bad gateway error message when you deploy software updates in System Center 2012 Configuration Manager.
-ms.date: 06/16/2020
+ms.date: 12/05/2023
 ms.reviewer: kaushika, ErinWi, prakask, keiththo, btoth, soalves
+ms.custom: sap:Software Update Management (SUM)\Software Update Groups or Deployments
 ---
 # Bad gateway error when deploying software updates in System Center 2012 Configuration Manager
 

@@ -1,11 +1,11 @@
 ---
 title: Applications don't print to XPS Document Writer
 description: This article describes a problem in which the Save As dialog box is hidden behind the app that's printing to an XPS Document Writer printer. This makes the application appear to hang. A workaround is provided.
-ms.date: 02/28/2020
+ms.date: 12/19/2023
 ms.reviewer: robcap, philipd
-ms.custom: sap:Graphics and multimedia development
-ms.subservice: graphics-multimedia-dev
+ms.custom: sap:Graphics and Multimedia development\Other
 ---
+
 # The Save As dialog box is displayed behind the application that's printing to the XPS Document Writer
 
 This article helps you resolve a problem where the **Save As** dialog box is hidden behind the app that's printing to an XPS Document Writer printer and the application stops responding.
@@ -18,7 +18,7 @@ _Original KB number:_ &nbsp; 2567869
 Consider the following scenario:
 
 - You run a 32-bit application on a 64-bit version of Windows 7.
-- You print from the application to a Microsoft XPS Document Writer (MXDW) printer. In this scenario, the **Save As** dialog box is displayed behind the application.
+- You print from the application to a Microsoft XPS Document Writer (MXDW) printer. In this scenario, the **Save As** dialog box is displayed behind the application.
 
 Additionally, you may experience the following symptoms:
 
@@ -26,7 +26,7 @@ Additionally, you may experience the following symptoms:
 - The application that's printing doesn't become the foreground (active) application when the **Save As** dialog box is closed.
 
 > [!NOTE]
-> This problem may also occur when you print to a different printer whose driver displays the **Save As** dialog box or another modal dialog box. The printer driver for the Adobe PDF printer is this type of driver.
+> This problem may also occur when you print to a different printer whose driver displays the **Save As** dialog box or another modal dialog box. The printer driver for the Adobe PDF printer is this type of driver.
 
 ## Cause
 

@@ -1,9 +1,10 @@
 ---
 title: Unposted data not showing for prior years
 description: Describes an issue in which unposted data is not displayed in Management Reporter for prior years.
-ms.reviewer: erikjohn, kevogt
+ms.reviewer: theley, erikjohn, kevogt
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Management Reporter
 ---
 # Unposted data does not show for prior years in Microsoft Management Reporter
 

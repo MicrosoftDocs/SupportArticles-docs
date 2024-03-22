@@ -1,9 +1,7 @@
 ---
 title: Windows Security overview
 description: Overview of Windows Security troubleshooting articles for Windows Server.
-ms.date: 06/17/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -18,11 +16,10 @@ The topics in this section provide solutions and scenario guides to help you tro
 
 - Account lockouts
 - Bitlocker
-- Certificates and public key infrastructure (PKI)
 - Domain and forest trusts
 - Kerberos authentication
 - Legacy authentication (NTLM)
 - Permissions, access control, and auditing
 - Secure channel issues
 - Security templates
-- Smart card logon
+- Windows LAPS

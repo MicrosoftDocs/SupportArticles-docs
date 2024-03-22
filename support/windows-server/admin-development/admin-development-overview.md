@@ -1,9 +1,7 @@
 ---
 title: Admin Development overview
 description: Overview of Admin Development troubleshooting articles for Windows Server.
-ms.date: 06/17/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -18,5 +16,4 @@ The topics in this section provide solutions and scenario guides to help you tro
 
 - Active Directory Services Interface (ADSI)
 - Windows Management Instrumentation (WMI)
-- Windows PowerShell
 - Windows Remote Management (WinRM)

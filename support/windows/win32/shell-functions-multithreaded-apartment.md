@@ -1,11 +1,11 @@
 ---
 title: Call shell functions from multithreaded apartment
 description: This article introduces why calling shell functions from a thread that has been initialized as a multithreaded apartment may cause the functions fail.
-ms.date: 03/10/2020
-ms.custom: sap:Desktop app UI development
+ms.date: 12/19/2023
+ms.custom: sap:Desktop app UI development\Windows Shell API
 ms.reviewer: DAVEAN
-ms.subservice: desktop-app-ui-dev
 ---
+
 # Calling shell functions and interfaces from a multithreaded apartment
 
 When you call or access a shell function or shell interface from a thread that has been initialized as a multithreaded apartment, the function or interface may have its functionality impaired or completely fail.

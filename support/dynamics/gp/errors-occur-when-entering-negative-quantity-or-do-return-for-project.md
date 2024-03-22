@@ -1,9 +1,10 @@
 ---
 title: Cannot enter a negative quantity or do a return for a project
 description: You receive an error when you attempt to enter a negative quantity or do a return transaction on a cost transaction in Project Accounting. Provides a resolution.
-ms.reviewer: 
+ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Project Accounting
 ---
 # You receive an error when you try to enter a negative quantity or do a return for a project in Microsoft Dynamics GP
 

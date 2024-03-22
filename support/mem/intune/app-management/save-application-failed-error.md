@@ -1,9 +1,9 @@
 ---
 title: Insufficient permissions to update an application in Intune
 description: Helps resolve an issue in which you can't save an application in Microsoft Intune when you have a custom Intune role assigned.
-ms.date: 10/20/2021
+ms.date: 12/05/2023
 search.appverid: MET150
-ms.custom: sap:Add apps
+ms.custom: sap:AppDeployment - Windows\Win32
 ms.reviewer: kaushika
 ---
 # Save application failed error in Intune

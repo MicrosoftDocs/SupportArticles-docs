@@ -46,7 +46,7 @@ To configure default document settings in IIS:
 
 ## Troubleshooting
 
-For more information about how to troubleshoot issues with document settings in IIS, see: [Common HTTP status codes and the causes](/troubleshoot/iis/http-status-code#common-http-status-codes-and-the-causes).
+For more information about how to troubleshoot issues with document settings in IIS, see: [Common HTTP status codes and the causes](http-status-code.md).
 
 ## References
 

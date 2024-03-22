@@ -1,9 +1,9 @@
 ---
 title: 403 Forbidden error for Intune objects in Graph Explorer
 description: Troubleshoot and resolve a 403 Forbidden error when running queries in Graph Explorer to inspect or modify Microsoft Intune objects. 
-ms.date: 12/22/2021
+ms.date: 12/05/2023
 search.appverid: MET150
-ms.custom: sap:Intune Graph API
+ms.custom: sap:Develop and Customize - Android\Intune Graph API
 ms.reviewer: kaushika
 ---
 # 403 Forbidden error when you query Intune objects in Graph Explorer

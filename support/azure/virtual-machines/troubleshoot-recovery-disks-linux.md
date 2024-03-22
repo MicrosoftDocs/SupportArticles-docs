@@ -9,7 +9,7 @@ ms.service: virtual-machines
 ms.subservice: vm-backup-restore
 ms.collection: windows
 ms.devlang: azurecli
-ms.custom: devx-track-azurecli
+ms.custom: devx-track-azurecli, linux-related-content
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-linux
 ms.workload: infrastructure

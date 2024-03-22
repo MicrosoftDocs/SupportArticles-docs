@@ -1,15 +1,16 @@
 ---
 title: Troubleshoot common problems adding or removing an application to Microsoft Entra ID
 description: Troubleshoot the common problems people face when adding or removing an app in Microsoft Entra ID.
-ms.date: 06/25/2023
+ms.date: 02/18/2024
 author: bernawy
 ms.author: bernaw
 editor: v-jsitser
 ms.reviewer: v-leedennis, jarrettr
-ms.service: active-directory
-ms.subservice: app-mgmt
-content_well_notification: 
-  - AI-contribution
+ms.service: entra-id
+ms.subservice: enterprise-apps
+ms.topic: overview
+content_well_notification: AI-contribution
+ai-usage: ai-assisted
 ---
 # Troubleshoot common problems adding or removing an application to Microsoft Entra ID
 

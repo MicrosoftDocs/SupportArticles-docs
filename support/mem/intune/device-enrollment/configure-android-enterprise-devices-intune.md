@@ -4,12 +4,10 @@ description: This guide describes how to configure Android enterprise devices in
 keywords:
 author: helenclu
 ms.author: luche
-ms.date: 03/04/2020
+ms.date: 12/05/2023
 ms.reviewer: kaushika, mandia
 search.appverid: MET150
-ms.custom: 
-- intune-azure
-- CI 114553
+ms.custom: sap:Enroll Devices - Android\Android  Enterprise - WorkProfile, intune-azure, CI 114553
 ---
 
 # End-to-end guide for configuring Android enterprise devices in Microsoft Intune 

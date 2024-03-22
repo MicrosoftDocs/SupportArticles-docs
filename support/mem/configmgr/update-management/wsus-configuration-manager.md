@@ -1,8 +1,9 @@
 ---
 title: WSUS Configuration Manager configures the WSUS server
 description: Describes how WSUS Configuration Manager configures the WSUS server with the settings that are defined for the software update point in the Configuration Manager console.
-ms.date: 09/17/2020
+ms.date: 12/05/2023
 ms.reviewer: kaushika
+ms.custom: sap:Software Update Management (SUM)\WSUS Installation or Configuration
 ---
 # WSUS Configuration Manager configures the WSUS server
 

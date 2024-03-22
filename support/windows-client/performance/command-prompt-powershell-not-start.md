@@ -1,9 +1,7 @@
 ---
 title: Command prompt and PowerShell don't start
 description: Command prompt and PowerShell don't start after in-place upgrade of Windows 10 S to Professional, Education, or Enterprise edition.
-ms.date: 05/16/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

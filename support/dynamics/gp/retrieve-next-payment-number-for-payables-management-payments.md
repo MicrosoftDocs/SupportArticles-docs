@@ -2,8 +2,9 @@
 title: Retrieve next payment number for Payables Management payments when you use the Miscellaneous Routines Assembly in eConnect
 description: Describes how to retrieve the next payment number for Payables Management payments when you use the Miscellaneous Routines Assembly in eConnect.
 ms.topic: how-to
-ms.reviewer: dclauson
-ms.date: 03/31/2021
+ms.reviewer: theley, dclauson
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # How to retrieve the next payment number for Payables Management payments when you use the Miscellaneous Routines Assembly in eConnect
 

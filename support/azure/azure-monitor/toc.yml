@@ -3,46 +3,48 @@ items:
   href: welcome-azure-monitor.yml
 - name: Application Insights
   items:
+  - name: OpenTelemetry troubleshooting
+    items:
+    - name: .NET
+      href: app-insights/opentelemetry-troubleshooting-dotnet.md
+    - name: Java
+      href: app-insights/opentelemetry-troubleshooting-java.md
+    - name: Node.js
+      href: app-insights/opentelemetry-troubleshooting-nodejs.md
+    - name: Python
+      href: app-insights/opentelemetry-troubleshooting-python.md
   - name: Application Insights telemetry
     items:
-    - name: OpenTelemetry troubleshooting
-      items:
-      - name: .NET
-        href: app-insights/opentelemetry-troubleshooting-dotnet.md
-      - name: Java
-        href: app-insights/opentelemetry-troubleshooting-java.md
-      - name: Node.js
-        href: app-insights/opentelemetry-troubleshooting-nodejs.md
-      - name: Python
-        href: app-insights/opentelemetry-troubleshooting-python.md
-    - name: JavaScript SDK troubleshooting
-      items:
-      - name: Troubleshoot Application Insights JavaScript SDK
-        href: app-insights/javascript-sdk-troubleshooting.md
-      - name: Troubleshoot Application Insights for webpages
-        items:
-        - name: Troubleshoot common issues
-          href: app-insights/troubleshoot-webpages-issues.md
-        - name: Duplicate telemetry data
-          href: app-insights/duplicate-telemetry-data.md
-        - name: Failed to get Request-Context correlation header
-          href: app-insights/webpages-not-get-request-context-header.md
-        - name: How to update third-party server configuration
-          href: app-insights/how-to-update-third-party-server-configuration.md
+    - name: Collect self-diagnostic logs for Application Insights SDKs
+      href: app-insights/enable-self-diagnostics.md
     - name: Troubleshoot missing telemetry in Application Insights
       href: app-insights/investigate-missing-telemetry.md
     - name: Troubleshoot auto-instrumentation issues
       href: app-insights/auto-instrumentation-troubleshoot.md
-    - name: Collect self-diagnostic logs for Application Insights SDKs
-      href: app-insights/enable-self-diagnostics.md
-    - name: Troubleshoot Azure Application Insights in a Java web project
-      href: app-insights/java-2x-troubleshoot.md
-    - name: Troubleshoot App Insights monitoring of Node.js apps and services
-      href: app-insights/troubleshoot-app-insights-nodejs.md
-    - name: Troubleshoot no data in Azure Application Insights for .NET and .NET Core
-      href: app-insights/asp-net-troubleshoot-no-data.md
-    - name: Troubleshoot Azure Monitor Application Insights for Java
-      href: app-insights/java-standalone-troubleshoot.md
+    - name: Application Insights classic SDK troubleshooting
+      items:
+      - name: .NET
+        href: app-insights/asp-net-troubleshoot-no-data.md
+      - name: Java 2.x
+        href: app-insights/java-2x-troubleshoot.md
+      - name: Java 3.x
+        href: app-insights/java-standalone-troubleshoot.md
+      - name: JavaScript
+        items:
+        - name: Troubleshoot Application Insights JavaScript SDK
+          href: app-insights/javascript-sdk-troubleshooting.md
+        - name: Troubleshoot Application Insights for webpages
+          items:
+          - name: Troubleshoot common issues
+            href: app-insights/troubleshoot-webpages-issues.md
+          - name: Duplicate telemetry data
+            href: app-insights/duplicate-telemetry-data.md
+          - name: Failed to get Request-Context correlation
+            href: app-insights/webpages-not-get-request-context-header.md
+          - name: How to update third-party server configuration
+            href: app-insights/how-to-update-third-party-server-configuration.md
+      - name: Node.js
+        href: app-insights/troubleshoot-app-insights-nodejs.md
   - name: Application Insights features
     items:    
     - name: Troubleshoot Azure Application Insights availability monitoring
@@ -57,10 +59,10 @@ items:
         href: app-insights/internal-server-availability-tests-firewall.md     
     - name: Daily cap unexpected behaviors
       href: app-insights/daily-cap-unexpected-behaviors.md              
-    - name: Error retrieving data in portal
-      href: app-insights/troubleshoot-portal-connectivity.md
     - name: Missing CPU Total and Committed Memory metrics
       href: app-insights/missing-cpu-total-committed-memory-metrics.md
+    - name: Portal connectivity issues
+      href: app-insights/troubleshoot-portal-connectivity.md
     - name: Troubleshoot Application Insights Profiler
       href: app-insights/profiler-troubleshooting.md
     - name: Troubleshoot Code Optimizations (Preview)

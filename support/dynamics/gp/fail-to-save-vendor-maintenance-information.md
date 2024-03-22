@@ -2,8 +2,9 @@
 title: Error when you save Vendor Maintenance information in Payables Management
 description: Provides a solution to an error message that occurs when saving Vendor Maintenance information in Payables Management using Microsoft Dynamics GP.
 ms.topic: troubleshooting
-ms.reviewer: cwaswick
-ms.date: 03/31/2021
+ms.reviewer: theley, cwaswick
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # Error message when you save Vendor Maintenance information in Payables Management using Microsoft Dynamics GP: "A save operation on table 'PM_Vendor_MSTR' (45)."
 

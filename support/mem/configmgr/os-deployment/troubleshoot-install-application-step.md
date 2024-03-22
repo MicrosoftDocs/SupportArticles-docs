@@ -1,8 +1,9 @@
 ---
 title: Troubleshoot the Install Application task sequence step
 description: Describes the Install Application task sequence step and how to troubleshoot common problems.
-ms.date: 01/13/2021
+ms.date: 12/05/2023
 ms.reviewer: kaushika
+ms.custom: sap:Operating Systems Deployment (OSD)\Task Sequence Step for Installing Applications
 ---
 # Troubleshoot the Install Application task sequence step in Configuration Manager
 

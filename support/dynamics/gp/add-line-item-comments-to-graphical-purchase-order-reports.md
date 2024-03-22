@@ -2,8 +2,9 @@
 title: Add line item comments to graphical purchase order reports without creating additional white space in Microsoft Dynamics GP
 description: Describes how to add line item comments to graphical purchase order reports without creating additional white space in Microsoft Dynamics GP. You must have access to Report Writer, and you may require the system password to complete these steps.
 ms.topic: how-to
-ms.reviewer: kfrankha
-ms.date: 03/31/2021
+ms.reviewer: theley, kfrankha
+ms.date: 03/20/2024
+ms.custom: sap:Distribution - Inventory
 ---
 # How to add line item comments to graphical purchase order reports without creating additional white space in Microsoft Dynamics GP
 

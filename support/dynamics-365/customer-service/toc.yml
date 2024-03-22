@@ -19,6 +19,8 @@
           href: entitlements/allocation-type-missing-options.md
         - name: Entitlement remaining terms don't decrement as expected
           href: entitlements/decrementing-entitlement-terms.md
+        - name: '"Select an active entitlement" error when creating a case'
+          href: entitlements/entitlement-with-associate-customer-contact.md
     - name: Knowledge Management
       items:  
         - name: Data isn't updated on Insights for integrated search providers
@@ -33,6 +35,8 @@
               href: service-level-agreements/slaitem-changes-missing-upgrade.md
             - name: Can't import solution with active SLAs and SLAs are deactivated when imported
               href: service-level-agreements/import-solution-active-slas.md
+            - name: '"The uninstall operation will delete the base layer for the component" error'
+              href: service-level-agreements/sla-item-delete-operation-encountered-some-errors.md
             - name: SLA's state changes from Active to Draft after importing an upgrade solution
               href: service-level-agreements/sla-draft-state-post-solution-import.md
         - name: SLA creation
@@ -47,6 +51,8 @@
               href: service-level-agreements/sla-migration-issues.md
             - name: Can't migrate a large number of SLAs
               href: service-level-agreements/migration-tool-issue-slas.md
+            - name: '"Calendar dates are corrupted" error when migrating SLAs from legacy to Unified Interface'
+              href: service-level-agreements/save-legacy-calendars-in-uci.md
             - name: GUID is shown instead of owner name in migrated SLA action flow
               href: service-level-agreements/guid-instead-name-in-flow-generated-email.md
             - name: Standard SLAs not showing in migration tool
@@ -67,7 +73,7 @@
               href: service-level-agreements/sla-deletion-error-messages.md
             - name: OnHold Time isn't populated for Case for Unified Interface SLA
               href: service-level-agreements/onhold-time-not-populated.md
-            - name: SLA KPI instance isn't Nearing Non-compliance or Non-compliant and timer runs
+            - name: SLA KPI instance isn't Nearing Non-compliance or Noncompliant and timer runs
               href: service-level-agreements/sla-kpi-instance-compliance-timer.md
             - name: SLA timer doesn't pause when state is changed to OnHold on a holiday
               href: service-level-agreements/sla-timer-pause-state-changed.md
@@ -103,8 +109,6 @@
               href: service-level-agreements/actions-run-multiple-times-client.md
             - name: SLA KPI instance isn't created on entity
               href: service-level-agreements/sla-kpi-instance-not-created-entity.md
-            - name: '"SLA KPI instance does not exist" error when updating a case'
-              href: service-level-agreements/slakpi-instance-not-existed-error.md
             - name: SLA isn't applied to a case
               href: service-level-agreements/sla-not-getting-applied.md
             - name: SLA instances associated with a case don't have SLA items

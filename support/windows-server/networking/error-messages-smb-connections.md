@@ -1,9 +1,7 @@
 ---
 title: Error messages on SMB connections
 description: Provides a solution to error messages that occur on SMB connections. Provides a workaround.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -76,4 +74,4 @@ To work around this problem, use either of the following methods:
 
 ## References
 
-For more information, see [New SMB 3.0 features in the Windows Server 2012 file server](/troubleshoot/windows-server/high-availability/smb-3-%20file-server-features)
+For more information, see [New SMB 3.0 features in the Windows Server 2012 file server](../high-availability/smb-3-file-server-features.md)

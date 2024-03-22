@@ -1,9 +1,7 @@
 ---
 title: Redirecting the user's Documents folder to their home directory fails when Grant the user exclusive rights to Documents is selected
 description: Fixes an issue where you can't redirect the user's Documents folder to their home directory.
-ms.date: 09/07/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

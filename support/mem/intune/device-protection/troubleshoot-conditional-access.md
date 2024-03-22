@@ -1,9 +1,10 @@
 ---
 title: Troubleshoot Intune Conditional Access
 description: What to do when your users fail to get access to resources through Intune Conditional Access.
-ms.date: 01/31/2022
+ms.date: 12/05/2023
 search.appverid: MET150
 ms.reviewer: kaushika
+ms.custom: sap:Set Up Conditional Access\Configure and monitor device compliance
 ---
 # Troubleshoot Conditional Access
 

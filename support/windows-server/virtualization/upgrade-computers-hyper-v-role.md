@@ -1,9 +1,7 @@
 ---
 title: Upgrade computers with Hyper-V role
 description: Describes the options available for upgrading or migrating from a Windows Server 2008 installation that has the Hyper-V role enabled to Windows Server 2008 R2.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -122,7 +120,7 @@ We do not recommend running any additional services or applications in the paren
 
     > [!IMPORTANT]
     > If you are moving your virtual machines to a CSV disk, follow the steps in the [Migrate a virtual machine from a non-CSV disk to a CSV disk](#migrate-a-virtual-machine-from-a-non-csv-disk-to-a-csv-disk) section.
-    1. If you used step 5a to export the virtual machines above, import the virtual machines back to the cluster nodes. To import the virtual machines, follow the steps in the [Export and import virtual machines in clustered environments](#export-and-import-virtual-machines-in-clustered-environments) section.
+    1. If you used step 5a to export the virtual machines above, import the virtual machines back to the cluster nodes.
     2. If you use step 5b to back up the virtual machines, use a backup application to restore the virtual machine to the clustered disk.
 
 9. For each of the virtual machines that are now in this Windows Server 2008 R2 cluster, update the Integration Services. To do this, turn on the virtual machine, open the Virtual Machine Connection window, and then click **Insert Integration Services Setup Disk** on the **Action** menu.
@@ -148,84 +146,4 @@ We do not recommend running any additional services or applications in the paren
 
 4. If you used step 1b to export your virtual machine, follow steps in the "Exporting and importing virtual machines in clustered environments" section. Otherwise, import the virtual machine by using the Import user interface in Hyper-V Manager.
 
-5. From Failover Cluster Manager, make the virtual machine highly available
-
-### Export and import virtual machines in clustered environments
-
-To export virtual machines, follow these steps:
-
-1. If you perform a configuration-only export of the virtual machines, run the [GetAssociatedVHDLocations.vbs](https://gallery.technet.microsoft.com/scriptcenter/ece86b35-3730-4c7e-8177-b52213d09fb7) script to get the list of snapshot .avhd files and the .vhd files that are associated with the virtual machine.
-
-    Use the following command to run the script:
-
-    ```console
-    cscript GetAssociatedVHDLocations.vbs /VMName: NameOfVM
-    ```
-
-    For example, run the following:
-
-    ```console
-    cscript GetAssociatedVHDLocations.vbs /VMName:VM3
-    ```
-
-    The output will be as follows:
-
-    > ##########  
-    ParentPath  
-    ##########  
-    K:\HarddiskTempStorage0\fixed.vhd  
-    >
-    > ##########  
-    ChildPaths  
-    ##########  
-    C:\ProgramData\Microsoft\Windows\Hyper-V\Snapshots\<Snapshot_GUID>\fixed_<snapshot_GUID>.avhd  
-    C:\ProgramData\Microsoft\Windows\Hyper-V\Snapshots\<Snaoshot_GUID>\fixed_<Snapshot_GUID>.avhd  
-    >
-    > Former Resource Path =  
-    "K:\HarddiskTempStorage0\fixed.vhd";  "K:\HarddiskTempStorage0\fixed_diff.vhd";  "K:\HarddiskTempStorage0\fixed1.vhd";  "K:\HarddiskTempStorage0\expanding.vhd"
-
-2. Copy the .avhd files that are listed under **ChildPaths** in the script output to the same folder as the .vhd folder that is specified under **ParentPath** in the output.
-
-To import virtual machines, follow these steps:
-
-1. Obtain the [ImportVM](https://gallery.technet.microsoft.com/scriptcenter/cca0fd27-8142-45f4-b4d7-21a92e278743) script.
-
-2. Import the virtual machine by passing the **Export Path** that is specified after you select **Export** on the **Action** menu. Specify the **Former Resource Path** output that is shown in step 1 of the export procedure as input parameters to the importVM script. For example, assume that the **Former Resource Path** output is:
-
-    > "K:\HarddiskTempStorage0\fixed.vhd";  
-    "K:\HarddiskTempStorage0\fixed_diff.vhd";  
-    "K:\HarddiskTempStorage0\fixed1.vhd";  
-    "K:\HarddiskTempStorage0\expanding.vhd"
-
-    If you are migrating from a non-CSV to a non-CSV environment, replace the **K** with the new drive letter assigned to the storage that is now mounted in the new cluster. If the volume was mounted as **K:** and now it is mounted as **Z:**, the Resource Path becomes:
-
-    > "Z:\HarddiskTempStorage0\fixed.vhd";"Z:\HarddiskTempStorage0\fixed_diff.vhd";"Z:\HarddiskTempStorage0\fixed1.vhd";"Z:\HarddiskTempStorage0\expanding.vhd"
-
-    If you are migrating from a non-CSV to a CSV environment, replace the `K:\` with *C:\ClusterStorage\Volume4* so that the Resource Paths become the following:
-
-    > "C:\ClusterStorage\Volume4\HarddiskTempStorage0\fixed.vhd";  
-    "C:\ClusterStorage\Volume4:\HarddiskTempStorage0\fixed_diff.vhd";  "C:\ClusterStorage\Volume4\HarddiskTempStorage0\fixed1.vhd"  
-"C:\ClusterStorage\Volume4\HarddiskTempStorage0\expanding.vhd"
-
-    In this example, after you run the script, you should see the following output:
-
-    > \>ImportVM.vbs /ImportDirectory:C:\ClusterStorage\Volume4\vm3Export\MyVM /ResourcePaths:  
-    "C:\ClusterStorage\Volume4\HarddiskTempStorage0\fixed.vhd";  
-    "C:\ClusterStorage\Volume4:\HarddiskTempStorage0\fixed_diff.vhd";  
-    "C:\ClusterStorage\Volume4\HarddiskTempStorage0\fixed1.vhd";  
-    " C:\ClusterStorage\Volume4\HarddiskTempStorage0\expanding.vhd"
-    >
-    > Microsoft (R) Windows Script Host Version 5.8
-    Copyright (C) Microsoft Corporation. All rights reserved.
-    >
-    > Resource Paths  
-    C:\ClusterStorage\Volume4\HarddiskTempStorage0\fixed.vhd  
-    C:\ClusterStorage\Volume4:\HarddiskTempStorage0\fixed_diff.vhd  
-    C:\ClusterStorage\Volume4\HarddiskTempStorage0\fixed1.vhd  
-    C:\ClusterStorage\Volume4\HarddiskTempStorage0\expanding.vhd
-    >
-    > In progress... 10% completed.  
-    Done
-
-    > [!NOTE]
-    > The **Former Resource Paths** must be enclosed in quotation marks. For example, use C:\ClusterStorage\Volume4\MyVM\MyVM.vhd.
+5. From Failover Cluster Manager, make the virtual machine highly available.

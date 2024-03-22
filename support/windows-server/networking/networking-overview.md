@@ -1,9 +1,7 @@
 ---
 title: Networking overview
 description: Overview of Windows Server networking troubleshooting articles.
-ms.date: 06/17/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -27,6 +25,7 @@ The topics in this section provide solutions and scenario guides to help you tro
 - RADIUS - Network Policy Server (NPS) or Internet Authentication Service (IAS)
 - Remote access
 - TCP/IP communications
+- Webwindows-client and WebDAV
 - Windows Firewall with Advanced Security (WFAS)
 - Windows NIC Teaming (Load Balance Failover)
 - WINS

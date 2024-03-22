@@ -1,8 +1,9 @@
 ---
 title: Client agent installation fails with error 80041002
 description: Describes an issue in which the Configuration Manager client installation fails on a management point that has Cumulative Update 3 for Configuration Manager 2012 SP1 installed.
-ms.date: 06/01/2020
+ms.date: 12/05/2023
 ms.reviewer: kaushika, buzb
+ms.custom: sap:Client Installation, Registration and Assignment\Client Installation
 ---
 # Installation of the Configuration Manager client agent fails with error code 80041002
 

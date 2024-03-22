@@ -1,11 +1,11 @@
 ---
 title: Three-finger and four-finger touch interactions don’t work in Windows apps
 description: In Windows 11, some three-finger and four-finger interactions are no longer usable by applications.
-ms.date: 10/08/2020
-ms.custom: sap:Desktop app UI development
+ms.date: 12/19/2023
+ms.custom: sap:Desktop app UI development\User interaction (keyboard, mouse, pen and touch)
 ms.reviewer: kybeck
-ms.subservice: desktop-app-ui-dev
 ---
+
 # Three-finger and four-finger touch interactions don’t work in Windows apps
 
 By default, Windows 11 uses three-finger and four-finger touch interactions for various operations, such as switching or minimizing windows, and changing virtual desktops. Because these interactions are handled at the system level, the functionality of various applications might be affected by this change.

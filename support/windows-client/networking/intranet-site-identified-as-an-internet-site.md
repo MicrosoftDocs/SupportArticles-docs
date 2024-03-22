@@ -1,9 +1,7 @@
 ---
 title: Intranet site is identified as Internet site
 description: Works around an issue where an Intranet site is identified as an Internet site.
-ms.date: 09/25/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -123,7 +121,7 @@ Administrators can deploy this setting by making the following changes to the re
 > [!NOTE]
 > Administrators can deploy settings in an Active Directory environment.
 
-For more information about how to do so, see [How to set advanced settings in Internet Explorer by using Group Policy objects](/troubleshoot/browsers/advanced-settings).
+For more information about how to do so, see [How to set advanced settings in Internet Explorer by using Group Policy objects](../../developer/browsers/administration/advanced-settings.md).
 
 > [!IMPORTANT]
 > This workaround does not work for UNC or file:// addresses that use an IP address. For example, Internet Explorer identifies \\\157.54.100.101\share, or file://157.54.100.101/share, as being in the Internet zone, even if you add the appropriate IP address range to the Local Intranet Sites list. In this case, you must use a file:// URL that has the NetBIOS name (for example, **\\\server\share**) for the site to be identified in the Local intranet zone. Also, some applications may not be able to open files by using an http:// address even if the Web site is on your LAN and you use the NetBIOS name (for example, `http://server`). For example, Access 2002 cannot open files from http:// addresses. If you try to open an Access database file (.mdb) on an intranet Web site by using either the IP address, FQDN, or NetBIOS name, Access 2002 will incorrectly report that the file is outside your intranet or on an untrusted site by displaying the error message in the [Symptoms](#symptoms) section of this article.

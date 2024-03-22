@@ -1,8 +1,9 @@
 ---
 title: Troubleshoot WSUS high CPU usage
 description: Discusses how to troubleshoot Windows Server Update Service high CPU usage issues.
-ms.date: 06/04/2020
+ms.date: 12/05/2023
 ms.reviewer: kaushika
+ms.custom: sap:Software Update Management (SUM)\WSUS Performance or Crashes
 ---
 # Troubleshoot high CPU usage on a WSUS server
 

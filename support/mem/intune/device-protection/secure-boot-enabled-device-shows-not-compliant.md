@@ -1,9 +1,9 @@
 ---
 title: Secure boot enabled Windows 10 device shows Not Compliant in Intune
 description: Describes a behavior that a Windows 10 device that has secure boot enabled is displayed as Not Compliant in Intune.
-ms.date: 12/20/2021
+ms.date: 12/05/2023
 search.appverid: MET150
-ms.custom: sap:Create Windows policy
+ms.custom: sap:Device Compliance\Compliance Issue - Windows
 ms.reviewer: kaushika
 ---
 # Windows 10 device with secure boot enabled shows as Not Compliant in Intune

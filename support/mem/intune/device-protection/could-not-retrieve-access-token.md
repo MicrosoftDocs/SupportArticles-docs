@@ -1,9 +1,9 @@
 ---
 title: Can't retrieve Graph API token when integrating Intune and Jamf Pro
 description: Troubleshoot Graph API access token error message during the configuration of Microsoft Intune Integration in Jamf Pro.
-ms.date: 12/13/2021
+ms.date: 12/05/2023
 search.appverid: MET150
-ms.custom: sap:Mac management Jamf
+ms.custom: sap:Set Up Intune\Integrate Jamf Pro with Intune for Compliance
 ms.reviewer: kaushika
 ---
 # Could not retrieve the access token for Microsoft Graph API when configuring Intune integration in Jamf Pro

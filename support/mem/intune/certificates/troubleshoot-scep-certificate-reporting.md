@@ -1,9 +1,10 @@
 ---
 title: Troubleshoot reporting for SCEP certificate deployment to devices with Microsoft Intune
 description: Troubleshoot the reporting by NDES and the Intune Certificate Connector about a successful deployment of certificates that were provisioned with SCEP certificate profiles. 
-ms.date: 09/10/2021
+ms.date: 12/05/2023
 ms.reviewer: kaushika, lacranda
 search.appverid: MET150
+ms.custom: sap:Configure Devices - iOS\SCEP Certificates
 ---
 # Troubleshooting NDES reporting of certificate deployments in Intune
 

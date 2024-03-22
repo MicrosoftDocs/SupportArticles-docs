@@ -1,9 +1,10 @@
 ---
 title: Troubleshooting Jamf Pro integration with Microsoft Intune
 description: Suggestions for troubleshooting some of the most common problems when you integrate Jamf Pro for Mac devices, with Microsoft Intune.
-ms.date: 09/04/2023
+ms.date: 12/05/2023
 ms.reviewer: kaushika, taveil
 search.appverid: MET150
+ms.custom: sap:Set Up Intune\Integrate Jamf Pro with Intune for Compliance
 ---
 
 # Troubleshooting integration of Jamf Pro with Microsoft Intune

@@ -1,9 +1,7 @@
 ---
 title: Virtualization overview
 description: Overview of Virtualization troubleshooting articles for Windows Server.
-ms.date: 06/17/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -27,6 +25,7 @@ The topics in this section provide solutions and scenario guides to help you tro
 - Live Migration
 - Snapshots, checkpoints, and differencing disks
 - Storage configuration
+- Shielded VMs
 - Virtual machine creation
 - Virtual machine state
 - Virtual machine will not boot

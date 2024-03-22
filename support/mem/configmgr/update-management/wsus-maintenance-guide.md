@@ -1,8 +1,8 @@
 ---
 title: Windows Server Update Services (WSUS) maintenance guide for Configuration Manager
 description: Describes the complete guide to WSUS maintenance for Configuration Manager environments.
-ms.date: 12/21/2020
-ms.custom: sap:Software update point configuration
+ms.date: 12/05/2023
+ms.custom: sap:Software Update Management (SUM)\WSUS Database Maintenance
 ms.reviewer: kaushika, mstewart, erice
 ---
 # The complete guide to WSUS and Configuration Manager SUP maintenance
@@ -515,4 +515,4 @@ The answer is that you probably could, but I wouldn't. If my coworker across the
 For more information about SUP maintenance in Configuration Manager, see the following articles:
 
 - [Software updates maintenance](/mem/configmgr/sum/deploy-use/software-updates-maintenance)
-- [Software updates maintenance in Configuration Manager](/troubleshoot/mem/configmgr/software-update-maintenance)
+- [Software updates maintenance in Configuration Manager](software-update-maintenance.md)

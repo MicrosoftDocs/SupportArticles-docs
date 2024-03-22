@@ -1,8 +1,9 @@
 ---
 title: Error 0x800f0831 when installing an update
 description: Describes an issue in which you receive the CBS called Error with 0x800f083 error when you install a cumulative update.
-ms.date: 12/30/2022
+ms.date: 12/05/2023
 ms.reviewer: kaushika
+ms.custom: sap:Software Update Management (SUM)\Software Update Installation
 ---
 # Error 0x800f0831 when you install an update
 

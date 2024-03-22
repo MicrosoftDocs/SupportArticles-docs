@@ -1,9 +1,7 @@
 ---
 title: Docked external monitor not working in Windows 10 version 1703
 description: Address an issue in which the second monitor connected to a docking station does not work in Windows 10 version 1703.
-ms.date: 12/07/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

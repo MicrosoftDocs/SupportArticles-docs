@@ -1,9 +1,7 @@
 ---
 title: Error 0x80041323 when you run Scheduled tasks
 description: Provides a solution to fix the error 0x80041323 that occurs when you run high number of Scheduled tasks.
-ms.date: 09/08/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

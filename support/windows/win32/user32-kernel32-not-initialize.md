@@ -1,12 +1,12 @@
 ---
 title: User32.dll or Kernel32.dll does not initialize
 description: This article describes an issue in which an application that is executed by CreateProcess or CreateProcessAsUser may fail.
-ms.date: 01/04/2021
-ms.custom: sap:System Services Development
+ms.date: 12/19/2023
+ms.custom: sap:System Services Development\Process, thread, and DLL APIs
 ms.reviewer: franki
 ms.topic: troubleshooting
-ms.subservice: system-services-dev
 ---
+
 # User32.dll or Kernel32.dll does not initialize
 
 This article describes an issue where an application that is executed by `CreateProcess` or `CreateProcessAsUser` may fail.

@@ -1,9 +1,7 @@
 ---
 title: Backup fails because of VSS writer
 description: Provides a solution to an issue where Windows Server backup fails because of the SQL Server VSS writer.
-ms.date: 09/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting

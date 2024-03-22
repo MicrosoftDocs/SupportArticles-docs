@@ -1,8 +1,9 @@
 ---
 title: DRS performance issue after installing hotfix 3125525
 description: Describes DRS performance issues that are experienced after you install hotfix 3125525 in Configuration Manager.
-ms.date: 06/16/2020
+ms.date: 12/05/2023
 ms.reviewer: kaushika
+ms.custom: sap:Configuration Manager Database\Database Replication Links
 ---
 # Configuration Manager DRS performance issue after you install hotfix 3125525
 

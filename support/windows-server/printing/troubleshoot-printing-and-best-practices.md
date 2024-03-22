@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot printing and best practices
 description: Overview of printing troubleshooting and best practices.
-ms.date: 10/12/2021
+ms.date: 12/26/2023
 author: kaushika-msft
 ms.author: kaushika
 manager: dcscontentpm

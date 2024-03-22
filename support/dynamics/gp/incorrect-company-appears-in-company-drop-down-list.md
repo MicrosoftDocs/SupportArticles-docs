@@ -2,8 +2,9 @@
 title: Incorrect company appears in the Company drop-down list
 description: Describes a problem in which an incorrect company appears in the Company drop-down list when you try to log on to Microsoft Dynamics GP. A resolution is provided.
 ms.topic: troubleshooting
-ms.reviewer: kyouells
-ms.date: 03/31/2021
+ms.reviewer: theley, kyouells
+ms.date: 03/20/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # An incorrect company appears in the Company drop-down list when you try to log on to Microsoft Dynamics GP
 

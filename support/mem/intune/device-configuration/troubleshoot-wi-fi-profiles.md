@@ -1,9 +1,10 @@
 ---
 title: Troubleshoot and review Wi-Fi device configuration profiles in Intune
 description: Understand and troubleshoot Wi-Fi device configuration profile issues on Android, iOS/iPadOS, and Windows devices in Microsoft Intune. Review logs, and see some common issues and possible resolutions.
-ms.date: 10/08/2021
+ms.date: 12/05/2023
 ms.reviewer: kaushika, tycast
 search.appverid: MET150
+ms.custom: sap:Configure Devices - iOS\Wi-Fi settings
 ---
 # Troubleshooting Wi-Fi device configuration profiles in Microsoft Intune
 

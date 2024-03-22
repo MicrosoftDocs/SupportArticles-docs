@@ -1,9 +1,10 @@
 ---
 title: Pass dates and times to SQL Server
 description: Explains that you must pass dates and times in formats that don't conflict with the computer's regional settings.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # How to pass dates and times to SQL Server from Dexterity in Microsoft Dynamics GP
 

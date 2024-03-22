@@ -1,8 +1,9 @@
 ---
 title: Changes to Deployment Type are deployed unexpectedly
 description: Describes a behavior that Deployment Type changes are deployed unexpectedly and can't be rolled back.
-ms.date: 06/16/2020
+ms.date: 12/05/2023
 ms.reviewer: kaushika, ErinWi, prakask, keiththo
+ms.custom: sap:Application Management\Application Evaluation
 ---
 # Changes to the Deployment Type are deployed unexpectedly and cannot be rolled back
 
