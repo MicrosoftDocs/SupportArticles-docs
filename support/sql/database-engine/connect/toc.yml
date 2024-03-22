@@ -18,6 +18,8 @@ items:
   items:
   - name: Intermittent connection errors occur when a new node is added to the Always On environment
     href: intermittent-connection-errors-when-a-new-node-is-added.md
+  - name: A linked server couldn't be created after migrating on-premises server to Azure
+    href: linked-server-cannot-be-created.md
   - name: Troubleshoot issues in connection after implementing cipher suite policies on a server
     href: issues-connection-after-implementing-cipher-suite-policies.md
   - name: The SSL_PE_NO_CIPHER error occurs on endpoint 5022
