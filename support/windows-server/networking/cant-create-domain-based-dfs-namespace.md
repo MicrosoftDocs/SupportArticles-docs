@@ -11,7 +11,6 @@ ms.service: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate
 ms.custom: sap:Network Connectivity and File Sharing\Access to file shares (SMB), csstroubleshoot
-ms.subservice: networking
 keywords: DFS namespace
 ---
 
