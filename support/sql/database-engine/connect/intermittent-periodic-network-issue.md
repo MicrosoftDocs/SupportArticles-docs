@@ -111,6 +111,7 @@ For more information about dropped connections, see:
 - [Connection Dropped in both Directions](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/Connection-Dropped-in-both-Directions)
 - [Connection Dropped in one Direction](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/Connection-Dropped-in-one-Direction)
 - [Connection Dropped in one Direction One Sided Trace](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/Connection-Dropped-in-one-Direction-One-Sided-Trace)
+- [Network Device Reset Connection](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/Network-Device-Reset-Connection)
 
 #### Both the server trace and the client trace agree the issue is on the client
 
