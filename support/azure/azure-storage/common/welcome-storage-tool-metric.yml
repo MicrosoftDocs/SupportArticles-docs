@@ -1,28 +1,20 @@
 ### YamlMime:Landing
 
-title: Azure Storage common troubleshooting documentation
-summary: Welcome to Azure Storage common troubleshooting. These articles explain how to determine, diagnose, and fix various issues that you might encounter when you use Azure Storage. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+title: Azure Storage Tools and Metrics troubleshooting documentation
+summary: Welcome to Azure Storage Tools and Metrics troubleshooting. These articles explain how to determine, diagnose, and fix various issues that you might encounter when you use Azure Storage Tools and Metrics. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
 
 metadata:
-  title: Troubleshoot Azure Storage common issues
-  description: Documentation for troubleshooting common issues with Azure Storage. # Required; article description that is displayed in search results. < 160 chars.
+  title: Troubleshoot Azure Storage Tools and Metrics issues
+  description: Documentation for troubleshooting common issues with Azure Storage Tools and Metrics. # Required; article description that is displayed in search results. < 160 chars.
   ms.service: azure-storage #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
   author: genlin  #Required; your GitHub user alias, with correct capitalization.
   ms.author: genli #Required; microsoft alias of author; optional team alias.
-  ms.date: 03/11/2024
+  ms.date: 03/22/2024
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
 landingContent:
-
- # Card
-  - title: Azure Storage documentation
-    linkLists:
-      - linkListType: overview
-        links:
-          - text: Azure Storage documentation
-            url: /azure/storage/
 
 # Card
   - title: Storage Tools and Metrics
