@@ -5,7 +5,7 @@ ms.author: andreo
 author: Andrea-Orimoto
 ms.reviewer: mhart
 ms.date: 12/21/2023
-ms.custom: sap:Mobile Application\Offline data sync - Other
+ms.custom: sap:Mobile application\Offline data sync - Other
 ---
 # "Incorrect or missing data in offline mode" error
 

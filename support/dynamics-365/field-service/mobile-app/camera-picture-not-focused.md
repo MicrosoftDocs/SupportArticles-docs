@@ -5,7 +5,7 @@ ms.author: andreo
 author: Andrea-Orimoto
 ms.reviewer: mhart
 ms.date: 12/21/2023
-ms.custom: sap:Mobile Application\Issues with performance
+ms.custom: sap:Mobile application\Issues with performance
 ---
 # Camera pictures are blurry or not focused in the Field Service mobile app
 

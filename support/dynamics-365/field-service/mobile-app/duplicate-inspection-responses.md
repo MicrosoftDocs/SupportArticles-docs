@@ -5,7 +5,7 @@ ms.author: andreo
 author: Andrea-Orimoto
 ms.reviewer: mhart
 ms.date: 12/21/2023
-ms.custom: sap:Mobile Application\Issues completing inspections
+ms.custom: sap:Mobile application\Issues completing inspections
 ---
 # Duplicated inspection responses in Dynamics 365 Field Service
 
