@@ -4,6 +4,7 @@ description: Resolves the Access needed error in Microsoft Copilot for Sales whe
 ms.date: 01/10/2024
 author: sbmjais
 ms.author: shjais
+ms.custom: sap:Setup, Installation and Sign-in\CRM Sign-In & Sign Out
 ---
 # "Access needed" error when signing in to Dynamics 365 
 

@@ -5,6 +5,7 @@ ms.date: 01/10/2024
 author: sbmjais
 ms.author: shjais
 manager: shujoshi
+ms.custom: sap:Teams Collaboration Spaces\Collaboration Space Creation and access from Outlook Side-Panel
 ---
 # "Couldn't add channel" error when creating a private channel in Microsoft Teams
 

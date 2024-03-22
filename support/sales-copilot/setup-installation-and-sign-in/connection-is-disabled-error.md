@@ -4,6 +4,7 @@ description: Resolves an error message in Microsoft Copilot for Sales when you c
 ms.date: 01/25/2024
 author: sbmjais
 ms.author: shjais
+ms.custom: sap:Setup, Installation and Sign-in\CRM Sign-In & Sign Out
 ---
 # Can't sign in to Salesforce due to disabled connections
 

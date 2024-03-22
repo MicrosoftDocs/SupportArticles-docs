@@ -5,6 +5,7 @@ ms.date: 01/10/2024
 author: sbmjais
 ms.author: shjais
 manager: shujoshi
+ms.custom: sap:CRM Permissions and Configurations\CRM Permissions
 ---
 # Missing privileges in Dynamics 365 when signing in to Copilot for Sales
 

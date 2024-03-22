@@ -5,11 +5,7 @@ ms.date: 01/10/2024
 ms.topic: troubleshooting-problem-resolution
 author: sbmjais
 ms.author: shjais
-ms.custom:
-  - ai-gen-docs-bap
-  - ai-gen-title
-  - ai-seo-date:11/21/2023
-  - ai-gen-desc
+ms.custom: sap:Teams Collaboration Spaces\Deal room template for CRM opportunities
 ---
 # Opportunity summary isn't displayed in deal rooms
 

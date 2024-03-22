@@ -5,6 +5,7 @@ ms.date: 01/10/2024
 author: sbmjais
 ms.author: shjais
 manager: shujoshi
+ms.custom: sap:Setup, Installation and Sign-in\CRM Sign-In & Sign Out
 ---
 # Authentication issues when connecting to Salesforce CRM
 

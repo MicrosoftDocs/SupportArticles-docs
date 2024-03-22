@@ -5,6 +5,7 @@ ms.date: 01/10/2024
 author: sbmjais
 ms.author: shjais
 manager: shujoshi
+ms.custom: sap:Outlook side panel
 ---
 # Sign-in issue when opening the Copilot for Sales pane in Outlook
 
