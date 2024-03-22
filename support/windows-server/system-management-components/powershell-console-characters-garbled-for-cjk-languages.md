@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: slee, kryalava
-ms.custom: ms.custom: sap:System Management Components\PowerShell, Fix, csstroubleshoot
+ms.custom: sap:System Management Components\PowerShell, Fix, csstroubleshoot
 ---
 # PowerShell console characters are garbled for Chinese, Japanese, and Korean languages on Windows Server 2022
 
