@@ -80,8 +80,8 @@ The extension agent unsuccessfully tries calling to `<region>.dp.kubernetesconfi
 
 ```console
 kubectl logs -n kube-system extension-agent-<pod-guid>
-{  "Message": "2024/02/07 06:04:43 \"Errorcode: 403, Message This traffic is not authorized., Target /subscriptions/<subscription-id>/resourceGroups/<resource-group-name>/provider/managedclusters/clusters/<cluster-name>/configurations/getPendingConfigs\"",  "LogType": "ConfigAgentTrace",  "LogLevel": "Information",  "Environment": "prod",  "Role": "ClusterConfigAgent",  "Location": "eastus2euap",  "ArmId": "/subscriptions/<subscription-id>/resourceGroups/<resource-group-name>/providers/Microsoft.ContainerService/managedclusters/<cluster-name>",  "CorrelationId": "",  "AgentName": "ConfigAgent",  "AgentVersion": "1.14.5",  "AgentTimestamp": "2024/02/07 06:04:43.672"  }
-{  "Message": "2024/02/07 06:04:43 Failed to GET configurations with err : {\u003cnil\u003e}",  "LogType": "ConfigAgentTrace",  "LogLevel": "Information",  "Environment": "prod",  "Role": "ClusterConfigAgent",  "Location": "eastus2euap",  "ArmId": "/subscriptions/<subscription-id>/resourceGroups/<resource-group-name>/providers/Microsoft.ContainerService/managedclusters/<cluster-name>",  "CorrelationId": "",  "AgentName": "ConfigAgent",  "AgentVersion": "1.14.5",  "AgentTimestamp": "2024/02/07 06:04:43.672"  }
+{  "Message": "2024/02/07 06:04:43 \"Errorcode: 403, Message This traffic is not authorized., Target /subscriptions/<subscription-id>/resourceGroups/<resource-group-name>/provider/managedclusters/clusters/<cluster-name>/configurations/getPendingConfigs\"",  "LogType": "ConfigAgentTrace",  "LogLevel": "Information",  "Environment": "prod",  "Role": "ClusterConfigAgent",  "Location": "<region>,  "ArmId": "/subscriptions/<subscription-id>/resourceGroups/<resource-group-name>/providers/Microsoft.ContainerService/managedclusters/<cluster-name>",  "CorrelationId": "",  "AgentName": "ConfigAgent",  "AgentVersion": "1.14.5",  "AgentTimestamp": "2024/02/07 06:04:43.672"  }
+{  "Message": "2024/02/07 06:04:43 Failed to GET configurations with err : {\u003cnil\u003e}",  "LogType": "ConfigAgentTrace",  "LogLevel": "Information",  "Environment": "prod",  "Role": "ClusterConfigAgent",  "Location": "<region>",  "ArmId": "/subscriptions/<subscription-id>/resourceGroups/<resource-group-name>/providers/Microsoft.ContainerService/managedclusters/<cluster-name>",  "CorrelationId": "",  "AgentName": "ConfigAgent",  "AgentVersion": "1.14.5",  "AgentTimestamp": "2024/02/07 06:04:43.672"  }
 ```
 
 This error occurs if a preexisting PrivateLinkScope exists in an extension's data plane for Azure Arc-enabled Kubernetes, and the virtual network (or private DNS server) is shared between Azure Arc-enabled Kubernetes and the AKS-managed cluster. This networking configuration causes AKS outbound traffic from the extension data plane to also route through the same private IP address instead of through a public IP address.
@@ -108,16 +108,16 @@ If the recommended solution isn't possible in your situation, create a CoreDNS o
 
 To create a CoreDNS override, follow these steps:
 
-1. Find the public IP address of the extension data plane endpoint by running the `nslookup` command. Make sure that you change the region (`eastus2euap`) based on the location of your AKS cluster:
+1. Find the public IP address of the extension data plane endpoint by running the `nslookup` command. Make sure that you change the region (i.e `eastus2euap`) based on the location of your AKS cluster:
 
    ```console
-   nslookup eastus2euap.dp.kubernetesconfiguration.azure.com
+   nslookup <region>.dp.kubernetesconfiguration.azure.com
    Non-authoritative answer:
-   Name:    clusterconfigeastus2euap.eastus2euap.cloudapp.azure.com
+   Name:    clusterconfigeastus2euap.<region>.cloudapp.azure.com
    Address:  20.39.12.229
-   Aliases:  eastus2euap.dp.kubernetesconfiguration.azure.com
-            eastus2euap.privatelink.dp.kubernetesconfiguration.azure.com
-            eastus2euap.dp.kubernetesconfiguration.trafficmanager.net
+   Aliases:  <region>.dp.kubernetesconfiguration.azure.com
+            <region>.privatelink.dp.kubernetesconfiguration.azure.com
+            <region>.dp.kubernetesconfiguration.trafficmanager.net
    ```
 
 1. Create a backup of the existing coreDNS configuration:
@@ -126,7 +126,7 @@ To create a CoreDNS override, follow these steps:
    kubectl get configmap -n kube-system coredns-custom -o yaml > coredns.backup.yaml
    ```
 
-1. Override the mapping for the regional (`eastus2euap`) data plane endpoint to the public IP address. To do this, create a YAML file that's named *corednsms.yaml*, and then copy the following example configuration into the new file. (Make sure that you update the address and the host name by using the values for your environment.)
+1. Override the mapping for the regional (i.e `eastus2euap`) data plane endpoint to the public IP address. To do this, create a YAML file that's named *corednsms.yaml*, and then copy the following example configuration into the new file. (Make sure that you update the address and the host name by using the values for your environment.)
 
    ```yaml
    apiVersion: v1
@@ -137,7 +137,7 @@ To create a CoreDNS override, follow these steps:
    data:
      extensionsdp.override: |  # You can select any name here, but it must have the .override file name extension.
        hosts {
-         20.39.12.229 eastus2euap.dp.kubernetesconfiguration.azure.com
+         20.39.12.229 <region>.dp.kubernetesconfiguration.azure.com
          fallthrough
        }
    ```
@@ -158,7 +158,7 @@ To create a CoreDNS override, follow these steps:
 
    ```console
    kubectl exec -it -n kube-system extension-agent-55d4f4795f-nld9q -- nslookup  [region].dp.kubernetesconfiguration.azure.com
-   Name:   eastus2euap.dp.kubernetesconfiguration.azure.com
+   Name:   <region>.dp.kubernetesconfiguration.azure.com
    Address: 20.39.12.229
    ```
 
@@ -166,7 +166,7 @@ The extension agent pod logs should no longer log "Errorcode: 403, Message This 
 
 ```console
 kubectl logs -n kube-system extension-agent-{id} 
-{  "Message": "GET configurations returned response code {200}",  "LogType": "ConfigAgentTrace",  "LogLevel": "Information",  "Environment": "prod",  "Role": "ClusterConfigAgent",  "Location": "eastus2euap",  "ArmId": "/subscriptions/<subscription-id>/resourceGroups/<resource-group-name>/providers/Microsoft.ContainerService/managedclusters/<cluster-name>",  "CorrelationId": "",  "AgentName": "ConfigAgent",  "AgentVersion": "1.14.5"  }
+{  "Message": "GET configurations returned response code {200}",  "LogType": "ConfigAgentTrace",  "LogLevel": "Information",  "Environment": "prod",  "Role": "ClusterConfigAgent",  "Location": "<region>",  "ArmId": "/subscriptions/<subscription-id>/resourceGroups/<resource-group-name>/providers/Microsoft.ContainerService/managedclusters/<cluster-name>",  "CorrelationId": "",  "AgentName": "ConfigAgent",  "AgentVersion": "1.14.5"  }
 ```
 
 ### Error: Extension pods can't be scheduled if all the node pools in the cluster are "CriticalAddonsOnly" tainted
