@@ -177,9 +177,9 @@ Verify that the domain you sign in to can communicate with the domain of the ser
 1. If your logon domain differs from the domain of the server that is running SQL Server, check the trust relationship between the domains.
 1. Check whether the domain that the server belongs to and the domain account that you use to connect are in the same forest. This step is required for SSPI to work.
 
-### Step 3: Verify SQL Server SPNs using SQLCheck and Setspn tools
+### Step 3: Verify SQL Server SPNs using SQLCHECK and Setspn tools
 
-If you can sign in locally to the SQL Server computer and have administrator access, use SQLCheck from the [Microsoft SQL Networking GitHub repository](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki). SQLCheck provides most of the information required for troubleshooting in one file. For more information on how to use the tool and what information it gathers, review the tool's home page. You can also check the recommended [prerequisites](resolve-connectivity-errors-checklist.md) and checklist page. Once you generate the output file, review SPN configuration for your SQL Server instance under the **SQL Server Information** section of the output file.
+If you can sign in locally to the SQL Server computer and have administrator access, use [SQLCHECK](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SQLCHECK). SQLCheck provides most of the information required for troubleshooting in one file. For more information on how to use the tool and what information it gathers, review the tool's home page. You can also check the recommended [prerequisites](resolve-connectivity-errors-checklist.md) and checklist page. Once you generate the output file, review SPN configuration for your SQL Server instance under the **SQL Server Information** section of the output file.
 
 Example output:
 
@@ -207,7 +207,7 @@ Use the output above to determine the next steps (see examples below) and use [S
   
 > [!NOTE]
 >
-> - You can review the **SQL Server Information** section of SQLCheck tool's output file to find the service account of your SQL Server instance.
+> - You can review the **SQL Server Information** section of SQLCHECK tool's output file to find the service account of your SQL Server instance.
 >
 > - Setspn is a built-in tool in newer versions of Windows that helps you read, add, modify, or delete SPNs in Active Directory. You can use this tool to verify that SQL Server SPNs are configured as per [Register a Service Principal Name for Kerberos Connections](/sql/database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections). For more information, see [Setspn tool](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731241(v=ws.11)) and examples on how to use it.
 >
