@@ -1,7 +1,7 @@
 ---
-title: SSL errors after upgrading to TLS 1.2
-description: This article provides information about the SSL errors that you might encounter after you upgrade to TLS 1.2.
-ms.date: 01/16/2024
+title: SSL errors after upgrading to TLS 1.2 in SQL Server
+description: This article provides information about the SSL errors that you might encounter after you upgrade to TLS 1.2 in SQL Server.
+ms.date: 03/22/2024
 ms.custom: sap:Connection issues
 author: Malcolm-Stewart
 ms.author: mastewa
@@ -10,7 +10,7 @@ ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
 
 # SSL errors are reported after upgrading to TLS 1.2
 
-This article provides information about the Secure Sockets Layer (SSL) errors that you might encounter after you upgrade to TLS 1.2. It also lists the methods by which you can retrieve the data manually. You can also run the SQLCHECK tool and review the information in the *SQLCHECK* log file.
+This article provides information about the Secure Sockets Layer (SSL) errors that you might encounter after you upgrade to TLS 1.2 in SQL Server. It also lists the methods by which you can retrieve the data manually. You can also run the SQLCHECK tool and review the information in the *SQLCHECK* log file.
 
 ## Symptoms
 
@@ -122,4 +122,4 @@ If a network trace isn't available, you can check the function value under the f
 
 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Cryptography\Configuration\Local\SSL\00010002`
 
-If you see no matching algorithms, contact Microsoft Support. To assist the support engineer, capture network traces or BID traces, as specified at Advanced SSL Data Capture.
+If you see no matching algorithms, contact Microsoft Support. To assist the support engineer, capture network traces or BID traces, as specified at [Advanced SSL Data Capture](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/0720-Advanced-SSL-Data-Capture).
