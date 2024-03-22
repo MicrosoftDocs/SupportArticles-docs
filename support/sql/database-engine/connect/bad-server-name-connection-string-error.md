@@ -1,7 +1,7 @@
 ---
-title: Troubleshooting incorrect server name in SQL Server
+title: Login failed error - Incorrect server name in SQL Server
 description: This article addresses the problem where a matching name isn't provided while logging in to SQL Server.
-ms.date: 02/28/2024
+ms.date: 03/22/2024
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
