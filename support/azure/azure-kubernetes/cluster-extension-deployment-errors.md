@@ -28,7 +28,7 @@ The cluster extension agent and manager are crucial system components that are r
 
 ##### Solution 1: Make sure that the cluster extension agent and manager pods work correctly
 
-To resolve this issue, make sure that the cluster extension agent and manager pods are correctly scheduled and can start. If the pods are stuck in a non-ready state, check the pod description by running the following `kubectl describe pod` command to get more details about the underlying problems (for example, taints that are preventing scheduling, insufficient memory, or policy restrictions):
+To resolve this issue, make sure that the cluster extension agent and manager pods are correctly scheduled and can start. If the pods are stuck in an unready state, check the pod description by running the following `kubectl describe pod` command to get more details about the underlying problems (for example, taints that prevent scheduling, insufficient memory, or policy restrictions):
 
 ```console
 kubectl describe pod -n kube-system extension-operator-{id}
