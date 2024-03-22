@@ -1,5 +1,5 @@
 - name: Welcome
-  href: welcome-common-storage.yml
+  href: welcome-storage-tool-metric.yml
 
 - name: Storage Tools and Metrics
   items:
