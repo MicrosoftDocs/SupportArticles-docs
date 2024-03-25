@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - sap:Search\Schema
   - CSSTroubleshoot
 appliesto: 
   - SharePoint Online

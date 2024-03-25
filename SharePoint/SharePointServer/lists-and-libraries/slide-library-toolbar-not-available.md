@@ -11,6 +11,7 @@ ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: adrianp, v-yilia
 ms.custom: 
+  - sap:Administration\Lists and libraries
   - CSSTroubleshoot
 appliesto: 
   - PowerPoint 2013

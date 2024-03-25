@@ -13,6 +13,7 @@ search.appverid:
 appliesto: 
   - SharePoint Online
 ms.custom: 
+  - sap:Permissions\Errors
   - CI 119405
   - CSSTroubleshoot
 ms.reviewer: prbalusu

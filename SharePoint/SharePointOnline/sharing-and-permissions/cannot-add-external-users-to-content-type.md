@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:SharePoint Admin Center\Content Type Gallery
   - CSSTroubleshoot
 ms.author: luche
 appliesto: 

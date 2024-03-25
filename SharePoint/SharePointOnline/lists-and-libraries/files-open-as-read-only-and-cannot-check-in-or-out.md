@@ -11,6 +11,7 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Files and Documents\Check in
   - CSSTroubleshoot
   - CI 113561
 appliesto: 

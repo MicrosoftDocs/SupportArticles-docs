@@ -9,7 +9,7 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
-  - sap:spsexperts
+  - sap:Administration\Farm Administration
   - CSSTroubleshoot
 ms.author: luche
 appliesto: 

@@ -7,6 +7,7 @@ ms.date: 12/17/2023
 audience: Admin
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Sharing\Grant or change access to an item
   - CSSTroubleshoot
   - CI 181471
 search.appverid: 

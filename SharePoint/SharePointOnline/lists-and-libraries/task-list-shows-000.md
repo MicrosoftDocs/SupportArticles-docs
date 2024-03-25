@@ -11,6 +11,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - sap:Lists and Libraries\Views
   - CSSTroubleshoot
   - CI 156281
 appliesto: 

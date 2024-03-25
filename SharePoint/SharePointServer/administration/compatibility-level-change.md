@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Administration\Setup, Upgrade, Migration and Patching
   - CSSTroubleshoot
 ms.author: luche
 appliesto: 

@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - sap:Administration\Timer Service and jobs
   - CSSTroubleshoot
 appliesto: 
   - SharePoint Foundation 2010

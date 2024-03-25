@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - sap:Lists and Libraries\List Designs
   - CSSTroubleshoot
 appliesto: 
   - Microsoft InfoPath 2013

@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - sap:Administration\Setup, Upgrade, Migration and Patching
   - CSSTroubleshoot
   - CI 152110
 appliesto: 

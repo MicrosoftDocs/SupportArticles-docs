@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - sap:Administration\InfoPath Forms Service
   - CSSTroubleshoot
 appliesto: 
   - SharePoint Foundation 2010

@@ -14,6 +14,7 @@ appliesto:
   - SharePoint Server
   - Windows Server 2019
 ms.custom: 
+  - sap:Search\Performance (such as crawl, query, indexing , and content processing)
   - CI 125656
   - CSSTroubleshoot
 ms.reviewer: cesart

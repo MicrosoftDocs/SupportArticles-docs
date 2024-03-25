@@ -11,6 +11,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: prbalusu; salarson
 ms.custom: 
+  - sap:Sites\Other
   - CSSTroubleshoot
   - CI 161041
   - CI 164597

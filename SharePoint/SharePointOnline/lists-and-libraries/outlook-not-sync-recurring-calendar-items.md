@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Lists and Libraries\Lists Offline sync
   - CSSTroubleshoot
 ms.reviewer: 
 appliesto: 

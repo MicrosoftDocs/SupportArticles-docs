@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Lists and Libraries\Managing list view threshold errors
   - CSSTroubleshoot
 ms.author: luche
 appliesto: 

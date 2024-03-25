@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Sharing\Sharing links
   - CI 105797
   - CSSTroubleshoot
 ms.reviewer: salarson, CLAKE

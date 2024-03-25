@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - sap:Authentication & User Profiles\Other
   - CSSTroubleshoot
 appliesto: 
   - Microsoft SharePoint

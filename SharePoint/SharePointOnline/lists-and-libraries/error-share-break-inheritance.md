@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Permissions\Inheritance
   - CI 114943
   - CSSTroubleshoot
 ms.reviewer: prbalusu, salarson, clake

@@ -11,7 +11,7 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
-  - sap:spsexperts
+  - sap:User experience\Other
   - CSSTroubleshoot
 appliesto: 
   - SharePoint Online

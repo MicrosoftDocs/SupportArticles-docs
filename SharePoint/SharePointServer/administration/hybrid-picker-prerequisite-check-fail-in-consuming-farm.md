@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - sap:Administration\Service Applications (except Search)
   - CSSTroubleshoot
 appliesto: 
   - SharePoint Server 2016

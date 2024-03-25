@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - sap:App Bar and Navigation\My Sites
   - CSSTroubleshoot
 appliesto: 
   - SharePoint Online

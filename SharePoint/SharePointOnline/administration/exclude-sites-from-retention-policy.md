@@ -10,6 +10,7 @@ ms.date: 12/17/2023
 audience: Admin
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Compliance and Auditing\Retention policies
   - CSSTroubleshoot
   - CI 149492
 search.appverid: 

@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Sites\Other
   - CI 166999
   - CSSTroubleshoot
 ms.reviewer: salarson

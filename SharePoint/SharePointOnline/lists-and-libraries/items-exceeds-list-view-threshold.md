@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - sap:Lists and Libraries\Managing list view threshold errors
   - CSSTroubleshoot
 appliesto: 
   - SharePoint Online

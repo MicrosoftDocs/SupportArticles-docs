@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:SharePoint Admin Center\API Access
   - CSSTroubleshoot
 ms.author: luche
 appliesto: 

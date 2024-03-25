@@ -11,6 +11,7 @@ ms.topic: troubleshooting
 ms.author: luche
 keyword: modern view
 ms.custom: 
+  - sap:Lists and Libraries\Views
   - CSSTroubleshoot
   - CI-158475
 appliesto: 

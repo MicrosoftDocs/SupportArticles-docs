@@ -7,6 +7,7 @@ ms.date: 12/17/2023
 audience: Admin
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Permissions\Customize permissions
   - CSSTroubleshoot
   - CI 181203
 search.appverid: 

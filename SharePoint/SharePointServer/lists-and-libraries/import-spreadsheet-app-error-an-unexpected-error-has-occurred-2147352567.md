@@ -11,6 +11,7 @@ search.appverid:
 audience: Admin
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Administration\Files and Documents
   - CSSTroubleshoot
 appliesto: 
   - Microsoft SharePoint

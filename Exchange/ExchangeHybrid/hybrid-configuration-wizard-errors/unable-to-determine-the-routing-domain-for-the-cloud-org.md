@@ -11,6 +11,7 @@ ms.custom:
   - Exchange Hybrid
   - CSSTroubleshoot
   - has-azure-ad-ps-ref
+  - azure-ad-ref-level-one-done
 ms.reviewer: scotro, v-six
 appliesto: 
   - Exchange Online
@@ -34,7 +35,9 @@ at Microsoft.Exchange.Management.Hybrid.Engine.ExecuteTask(ITask taskBase, ITask
 
 ## Resolution
 
-Enable directory synchronization. When directory synchronization is enabled, the routing domain is created. To enable directory synchronization, follow these steps:
+Enable directory synchronization. When directory synchronization is enabled, the routing domain is created. To enable directory synchronization, follow these steps.
+
+[!INCLUDE [Azure AD PowerShell deprecation note](../../../includes/aad-powershell-deprecation-note.md)]
 
 1. Connect to Microsoft Entra ID by using Windows PowerShell. For more information about how to do so, see [Connect to Microsoft Entra ID](/powershell/azure/active-directory/overview?view=azureadps-1.0#connect-to-azure-ad&preserve-view=true).
 2. Run the following command:

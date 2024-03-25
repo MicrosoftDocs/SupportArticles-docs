@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Files and Documents\Other
   - CSSTroubleshoot
 ms.author: luche
 appliesto: 

@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - sap:Lists and Libraries\Create
   - CSSTroubleshoot
   - CI 171872
 ms.reviewer: prbalusu
