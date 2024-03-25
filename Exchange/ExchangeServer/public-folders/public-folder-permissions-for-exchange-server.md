@@ -6,6 +6,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Collaboration and Public Folders\Issues with Public Folder Migration
   - CSSTroubleshoot
 appliesto: 
 - Exchange Server

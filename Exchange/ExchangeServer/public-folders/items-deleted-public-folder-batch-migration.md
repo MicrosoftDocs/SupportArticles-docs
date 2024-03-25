@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Migration\Issues with Public Folder Migration
   - CI 155655
   - Exchange Server
   - CSSTroubleshoot

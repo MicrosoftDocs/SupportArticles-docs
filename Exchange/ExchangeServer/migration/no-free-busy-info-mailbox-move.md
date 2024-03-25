@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Clients and Mobile\Issue with autodiscover
   - Exchange Server
   - CSSTroubleshoot
 ms.reviewer: jonrude, v-six
