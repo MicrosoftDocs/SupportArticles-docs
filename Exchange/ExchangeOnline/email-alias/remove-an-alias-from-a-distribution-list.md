@@ -6,6 +6,7 @@ manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Recipients management
   - Exchange Online
   - CSSTroubleshoot
 f1_keywords: 
