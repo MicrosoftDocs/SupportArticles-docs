@@ -60,7 +60,7 @@ The following table outlines some common errors that can cause a cluster or node
 
 > [!NOTE]
 > - The operation mentioned in the previous table refer to any update (`PUT`) operation triggered from customer side.
-> In Kubernetes, there is a component within a controller. It ensures the actual state of the world, which includes the cluster state and potentially external states like running containers for Kubelet or load balancers for a cloud provider, and aligns with the desired state specified in an object. This alignment process is a key function of the controller. When it comes to AKS, this component ensures that the state of the AKS cluster aligns with the desired configuration. If there are any differences between the actual and desired states, it takes necessary actions to rectify these discrepancies.
+> - In Kubernetes, there is a component within a controller. It ensures the actual state of the world, which includes the cluster state and potentially external states like running containers for Kubelet or load balancers for a cloud provider, and aligns with the desired state specified in an object. This alignment process is a key function of the controller. When it comes to AKS, this component ensures that the state of the AKS cluster aligns with the desired configuration. If there are any differences between the actual and desired states, it takes necessary actions to rectify these discrepancies.
 
 ## Provisioning State Check
 
