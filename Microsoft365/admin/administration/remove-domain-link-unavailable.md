@@ -1,6 +1,6 @@
 ---
-title: You cannot remove the initial domain when removing a domain
-description: Fixes an issue in which the Remove domain link is unavailable or you receive a You cannot remove the initial domain created for you in Microsoft 365 error message when you try to remove a domain from Microsoft 365.
+title: You can't remove the initial domain when removing a domain
+description: Fixes an issue in which the Remove domain link is unavailable or you receive a You can'tt remove the initial domain created for you in Microsoft 365 error message when you try to remove a domain from Microsoft 365.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
