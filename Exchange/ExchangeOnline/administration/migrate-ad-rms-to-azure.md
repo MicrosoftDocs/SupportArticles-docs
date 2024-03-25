@@ -7,6 +7,7 @@ ms.reviwer: samschan
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Administrator Tasks
   - Exchange Online
   - CSSTroubleshoot
 manager: dcscontentpm
