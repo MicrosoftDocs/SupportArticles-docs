@@ -7,6 +7,7 @@ audience: ITPro
 ms.topic: troubleshooting
 manager: dcscontentpm
 ms.custom: 
+  - sap:Mail Flow\Issues with Transport Rules
   - Exchange Server
   - CSSTroubleshoot
 localization_priority: Normal

@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Clients and Mobile\Unable to Search emails in Outlook, OWA, or Mobile
   - Exchange Server
   - CSSTroubleshoot
 ms.reviewer: aruiz, v-six

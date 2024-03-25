@@ -6,6 +6,7 @@ ms.author: meerak
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Clients and Mobile\Can't Connect to Mailbox with OWA
   - Exchange Server
   - CSSTroubleshoot
 manager: dcscontentpm

@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Permissions\Need help with Mailbox permissions (Send As, Send on Behalf, Full Access)
   - Exchange Server
   - CSSTroubleshoot
 ms.reviewer: charray, jupierr, junyli, a-rymats, erleixu, v-six

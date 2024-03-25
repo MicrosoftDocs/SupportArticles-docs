@@ -9,6 +9,7 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.reviewer: v-six, genli, christys, btalb, v-six
 ms.custom: 
+  - sap:Mail Flow\Need help configuring Transport High Availability
   - Exchange Server
   - CSSTroubleshoot
 search.appverid: 

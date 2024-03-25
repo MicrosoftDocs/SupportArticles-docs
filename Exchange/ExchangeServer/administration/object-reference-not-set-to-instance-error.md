@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Mail Flow\Need Help with Message Tracking, Transport server logs
   - Exchange Server
   - CSSTroubleshoot
 ms.reviewer: bilong, ninob, v-six

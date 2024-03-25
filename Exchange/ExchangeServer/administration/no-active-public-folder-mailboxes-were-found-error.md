@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Collaboration and Public Folders\Issues with Public Folder Migration
   - Exchange Server
   - CSSTroubleshoot
 ms.reviewer: russwill, batre，benwinz, v-six
