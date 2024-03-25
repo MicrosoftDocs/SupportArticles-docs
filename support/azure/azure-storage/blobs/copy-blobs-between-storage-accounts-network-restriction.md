@@ -61,7 +61,7 @@ The following image shows the process of copying blobs between storage accounts 
 Here's the full process of this mechanism for the two scenarios:
 
 1. The client sends a PutBlockfromURL request to the destination storage.
-2. The destination storage receives the requests, and it tries to get blocks from the given source URL. However, since the destination storage hasn't been allowed by the source firewall, it receive a "403 Forbidden" error.
+2. The destination storage receives the requests, and it tries to get blocks from the given source URL. However, since the destination storage hasn't been allowed by the source firewall, it receives a "403 Forbidden" error.
 3. After the destination storage receives the "403 Forbidden" error, it sends another GetBlob request on behalf of the client. If the client has access to the source storage, the destination will be able to get the blocks from the source and return a success response code to the client.
 4. The client sends PutBlockList to the destination storage to commit the blocks and finish the process after receiving a success response code from the request.
 
