@@ -13,7 +13,7 @@ ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Active Directory
 
 This article solves the issue where the issued certificate isn't published in Active Directory when users from a child domain as a certification authority (CA) request a certificate.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2016, Windows Server 2019, Windows Server 2022  
 _Original KB number:_ &nbsp; 281271
 
 ## Symptoms
