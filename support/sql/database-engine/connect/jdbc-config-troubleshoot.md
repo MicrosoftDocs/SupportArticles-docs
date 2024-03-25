@@ -1,7 +1,7 @@
 ---
 title: JDBC configuration and troubleshooting
 description: Describes Java database connectivity (JDBC) and the troubleshooting steps that occur during configuration.
-ms.date: 03/04/2024
+ms.date: 03/25/2024
 ms.reviewer: mastewa, prmadhes, jopilov, v-sidong
 ms.custom: sap:Connection issues
 ---
