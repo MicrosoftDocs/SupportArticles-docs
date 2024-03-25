@@ -4,8 +4,8 @@ description: Troubleshoot scenarios in which a guest user unsuccessfully tries t
 ms.date: 11/23/2023
 ms.editor: v-jsitser
 ms.reviewer: rrajan, haelshab, sungow, v-leedennis
-ms.service: active-directory
-ms.subservice: app-mgmt
+ms.service: entra-id
+ms.subservice: enterprise-apps
 ms.custom: has-azure-ad-ps-ref
 keywords:
 #Customer intent: As a Microsoft Entra administrator, I want to figure out why error code AADSTS50020 occurs so that I can make sure that my guest users from an identity provider can sign in to a resource tenant.

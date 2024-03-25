@@ -3,7 +3,7 @@ title: Federated users in Microsoft Entra ID may have to sign in two times befor
 description: Discusses an issue in which federated users in Microsoft Entra ID must sign in two times before they can run MFA.
 ms.date: 05/22/2020
 ms.reviewer: 
-ms.service: active-directory
+ms.service: entra-id
 ms.subservice: authentication
 ms.custom: has-azure-ad-ps-ref
 ---

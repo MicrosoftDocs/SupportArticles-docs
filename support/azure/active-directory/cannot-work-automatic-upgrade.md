@@ -3,8 +3,8 @@ title: Microsoft Entra Connect is not working correctly after an automatic upgra
 description: Discusses an issue in which Microsoft Entra Connect is only partially upgraded or the password synchronization and the password writeback features are disabled. Provides a workaround.
 ms.date: 05/09/2020
 ms.reviewer: 
-ms.service: active-directory
-ms.subservice: enterprise-users
+ms.service: entra-id
+ms.subservice: users
 ---
 # Microsoft Entra Connect is not working correctly after an automatic upgrade
 

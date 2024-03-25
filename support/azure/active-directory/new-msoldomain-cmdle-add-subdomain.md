@@ -3,8 +3,8 @@ title: Unable to use the New-MSOLDomain command to add a subdomain to an existin
 description: Discusses an error message that you receive in Office 365, Microsoft Intune, or Azure when you try to use the New-MSOLDomain command to add a subdomain to an existing domain that's set up for federated authentication. Provides a resolution.
 ms.date: 07/06/2020
 ms.reviewer: 
-ms.service: active-directory
-ms.subservice: enterprise-users
+ms.service: entra-id
+ms.subservice: users
 ms.custom: has-azure-ad-ps-ref
 ---
 # Error when you try to use the New-MSOLDomain command to add a subdomain to an existing domain: New-MsolDomain: Unable to add this domain

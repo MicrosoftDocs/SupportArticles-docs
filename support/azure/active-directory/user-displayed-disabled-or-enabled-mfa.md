@@ -2,7 +2,7 @@
 title: A user is displayed as disabled or enabled for Microsoft Azure Multi-Factor Authentication but behaves as the opposite
 description: Describes an issue in which a user is displayed as disabled or enabled for Microsoft Azure Multi-Factor Authentication but behaves as the opposite. This is expected behavior.
 ms.date: 10/10/2020
-ms.service: active-directory
+ms.service: entra-id
 ms.author: genli
 author: genlin
 ms.reviewer: willfid

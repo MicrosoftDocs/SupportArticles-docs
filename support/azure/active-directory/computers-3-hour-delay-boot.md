@@ -3,8 +3,8 @@ title: Microsoft Entra joined computers experience a three hours delay during bo
 description: This article describes the three hours delay during boot if the workgroup name is the same as the on-premises AD domain NetBIOS name.
 ms.date: 07/21/2020
 ms.reviewer: maweeras, ntuttle, arpadg, takondo, cleng, hiyazawa, genli
-ms.service: active-directory
-ms.subservice: enterprise-users
+ms.service: entra-id
+ms.subservice: users
 ---
 # Microsoft Entra joined computers experience a three hours delay during boot
 

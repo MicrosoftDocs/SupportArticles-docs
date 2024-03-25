@@ -3,8 +3,8 @@ title: Error AADSTS50011 - The reply URL specified in the request does not match
 description: Describes a problem in which you receive reply URL does not match error when signing in to SAML-based Single Sign-On configured app.
 ms.date: 06/08/2023
 ms.reviewer: bernawy
-ms.service: active-directory
-ms.subservice: app-mgmt
+ms.service: entra-id
+ms.subservice: enterprise-apps
 ---
 # Error AADSTS50011 with SAML authentication - The reply URL specified in the request does not match
 

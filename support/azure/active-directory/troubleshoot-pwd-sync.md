@@ -3,8 +3,8 @@ title: How to troubleshoot password synchronization when using an Azure AD Sync 
 description: Troubleshoots common issues when you're using an Azure Active Directory (Azure AD) sync appliance together with password synchronization.
 ms.date: 06/22/2020
 ms.reviewer: willfid
-ms.service: active-directory
-ms.subservice: enterprise-users
+ms.service: entra-id
+ms.subservice: users
 ---
 # How to troubleshoot password synchronization when using an Azure AD sync appliance
 

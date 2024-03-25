@@ -4,8 +4,8 @@ description: Describes how to determine why an object is not syncing in Microsof
 ms.date: 02/03/2021
 ms.reviewer: nualex
 editor: v-jesits
-ms.service: active-directory
-ms.subservice: enterprise-users
+ms.service: entra-id
+ms.subservice: users
 ms.custom: has-azure-ad-ps-ref
 ---
 
