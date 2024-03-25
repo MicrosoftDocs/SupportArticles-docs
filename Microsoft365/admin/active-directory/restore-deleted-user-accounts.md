@@ -11,6 +11,7 @@ ms.topic: troubleshooting
 ms.custom: 
   - CSSTroubleshoot
   - has-azure-ad-ps-ref
+  - azure-ad-ref-level-one-done
 ms.author: luche
 ms.reviewer: v-lanac
 appliesto: 
@@ -49,6 +50,8 @@ Use Microsoft 365 and the Azure Active Directory module for PowerShell as follow
         > When you're prompted, enter your Microsoft 365 credentials.
       - `Connect-MSOLService -credential:$cred`
       - `Get-MsolUser -ReturnDeletedUsers`
+
+[!INCLUDE [Azure AD PowerShell deprecation note](../../../includes/aad-powershell-deprecation-note.md)]
 
 ### Resolution 1: Recover manually deleted accounts by using Microsoft 365 portal or the Azure Active Directory module  
 

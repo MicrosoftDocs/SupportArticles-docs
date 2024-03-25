@@ -1,6 +1,6 @@
 ---
-title: You cannot remove a domain that has subdomains
-description: Describes an issue in which you receive the Domain has associated subdomains or You cannot remove a domain that has subdomains error. Provides a resolution.
+title: You can't remove a domain that has subdomains
+description: Describes an issue in which you receive the Domain has associated subdomains or You can't remove a domain that has subdomains error. Provides a resolution.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
@@ -12,6 +12,7 @@ ms.author: luche
 ms.custom: 
   - CSSTroubleshoot
   - has-azure-ad-ps-ref
+  - azure-ad-ref-level-one-done
 appliesto: 
   - User and Domain Management
 ms.date: 03/31/2022
@@ -37,6 +38,8 @@ If you try to remove a domain from Microsoft 365, you experience one or both of 
 
 This issue occurs if the domain has associated subdomains.
 
+[!INCLUDE [Azure AD PowerShell deprecation note](../../../includes/aad-powershell-deprecation-note.md)]
+
 ## Solution
 
 To fix this issue, remove all subdomains that contain the domain that you're trying to delete.
@@ -50,8 +53,6 @@ In this scenario, you must also remove the `http://www.contoso.com` subdomain to
 
 ## More information
 
-For more info, see the following Microsoft Knowledge Base article:
-
-[You get an error message when you try to remove a domain from Microsoft 365](https://support.microsoft.com/help/2284755)
+For more information, see [You get an error message when you try to remove a domain from Microsoft 365](https://support.microsoft.com/help/2284755).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

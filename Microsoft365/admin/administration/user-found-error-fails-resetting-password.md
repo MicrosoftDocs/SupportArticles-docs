@@ -12,6 +12,7 @@ ms.author: luche
 ms.custom: 
   - CSSTroubleshoot
   - has-azure-ad-ps-ref
+  - azure-ad-ref-level-one-done
 appliesto: 
   - Microsoft 365
 ms.date: 03/31/2022
@@ -58,5 +59,7 @@ To resolve this issue, use Microsoft Azure Active Directory module for Windows P
    Set-MsolUserPrincipalName -UserPrincipalName johnsmith@contoso.onmicrosoft.com -NewUserPrincipalName johnsmith@contoso.com
    ```
 1. Reset the password again.
+
+[!INCLUDE [Azure AD PowerShell deprecation note](../../../includes/aad-powershell-deprecation-note.md)]
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
