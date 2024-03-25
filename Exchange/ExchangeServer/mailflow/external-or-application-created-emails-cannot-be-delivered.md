@@ -9,6 +9,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Mail Flow\Not Able to Send or Receive Emails from Internet
   - Exchange Server
   - CSSTroubleshoot
 ms.reviewer: v-six

@@ -9,6 +9,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Migration\Issues with Move Mailbox within same organization
   - Exchange Server
   - CSSTroubleshoot
   - CI 123834

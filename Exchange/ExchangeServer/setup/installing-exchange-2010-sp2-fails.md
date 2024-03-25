@@ -9,6 +9,7 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.reviewer: patkling, v-six
 ms.custom: 
+  - sap:Plan and Deploy\Exchange Install Issues, Cumulative or Security updates
   - Exchange Server
   - CSSTroubleshoot
 search.appverid: 

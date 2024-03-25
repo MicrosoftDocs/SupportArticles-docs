@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Collaboration and Public Folders\Outlook\OWA Can't Connect to Public Folders
   - Exchange Server
   - CSSTroubleshoot
 ms.reviewer: bilong, charray, v-six
