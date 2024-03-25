@@ -70,7 +70,6 @@ A 403 Error occurs when using AzCopy to copy blobs between Storage accounts conn
 
 :::image type="content" source="media/copy-blobs-between-storage-accounts-network-restriction/hub-spoke-network-topology-architecture.png" alt-text="Diagram that shows the 403 error of copying blobs between storage accounts in a Hub & Spoke architecture using Private Endpoints.":::
 
-
 ### Workaround 1: Create a private endpoint for the destination storage account in the source VNET
 A Possible workaround is to create a private endpoint for the destination storage account in the source VNET. This configuration allows the VM to successfully copy the blobs between the storage accounts by using AzCopy. The following architecture diagram shows the process of copying blobs between storage accounts in the Workaround 1.
 
@@ -82,11 +81,11 @@ Another option is to place the VM within the same VNET as the source storage acc
 :::image type="content" source="media/copy-blobs-between-storage-accounts-network-restriction/hub-spoke-network-topology-architecture-mitigation-2.png" alt-text="Diagram that shows the process of copying blobs between storage accounts in Workaround 2.":::
 
 ### Workaround 3: Use a temporary staging account to copy the data.
-If you're unable to implement the previously mentioned workarounds or are restricted from changing the existing network configuration of an account or VNET, you can use a temporary staging account to copy the data:
+If you're unable to implement the previously mentioned workarounds or are restricted from changing the existing network configuration of the storage account or VNET, you can use a temporary staging account to copy the data:
 
 1. Create a temporary storage account in the same region as the source storage account and the destination storage account.
 2. Use AzCopy to copy the data from the source storage account to the temporary storage account.
-3. Copy the data from the temporary storage account to the destination storage account. Make sure that the temporary storage account has a private endpoint in the same VNET as the account before performing the data transfer.
+3. Copy the data from the temporary storage account to the destination storage account. Make sure that the temporary storage account has a private endpoint in the same VNET as the destination storage account before performing the data transfer.
 
 ### Workaround 4: Use a VM and download the data to the VM and then upload the data to the destination storage account
 Only use this workaround if other methods aren't feasible. Use a VM to download the data from the source storage account, and then upload it to the destination storage account. This can be done with AzCopy. Make sure that the VM's size and disk capacity are suitable for the data transfer process.
