@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Recipients management
   - Exchange Online
   - CSSTroubleshoot
 ms.reviewer: martinfu, v-six

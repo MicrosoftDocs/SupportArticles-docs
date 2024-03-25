@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Sensitivity Label Policies/Configuring Sensitivity/AIP Labels
   - Exchange Online
   - CSSTroubleshoot
 ms.reviewer: martinfu, v-six
