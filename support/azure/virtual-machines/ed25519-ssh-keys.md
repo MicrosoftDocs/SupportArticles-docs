@@ -5,6 +5,7 @@ ms.date: 07/21/2020
 ms.reviewer: 
 ms.service: virtual-machines
 ms.subservice: vm-deploy
+ms.custom: linux-related-content
 ms.collection: linux
 ---
 # Can't use Ed25519 SSH keys for Azure Linux VMs

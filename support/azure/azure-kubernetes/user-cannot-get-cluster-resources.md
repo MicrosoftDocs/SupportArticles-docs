@@ -1,7 +1,7 @@
 ---
 title: User can't get cluster resources
 description: Troubleshoot issues that are caused when a user can't list a resource within an API group in an Azure Kubernetes Service (AKS) cluster.
-ms.date: 12/10/2021
+ms.date: 03/07/2024
 ms.reviewer: rissing chiragpa, v-leedennis
 ms.service: azure-kubernetes-service
 ms.subservice: cannot-connect-to-cluster-through-api-server

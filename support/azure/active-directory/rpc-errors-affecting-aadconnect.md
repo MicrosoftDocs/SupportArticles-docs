@@ -2,8 +2,8 @@
 title: RPC errors affecting Microsoft Entra Connect
 description: This article describes common examples of Microsoft Entra Connect features affected by RPC errors.
 ms.date: 11/05/2020
-ms.service: active-directory
-ms.subservice: enterprise-users
+ms.service: entra-id
+ms.subservice: users
 ---
 
 # RPC errors affecting Microsoft Entra Connect

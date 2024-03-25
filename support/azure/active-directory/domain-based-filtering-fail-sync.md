@@ -3,8 +3,8 @@ title: Changes to domain-based filtering in Synchronization Service Manager fail
 description: Describes an issue in which changes to domain-based filtering in the Active Directory management agent or the Active Directory Connector fail to sync. Provides a resolution.
 ms.date: 05/22/2020
 ms.reviewer: willfid
-ms.service: active-directory
-ms.subservice: enterprise-users
+ms.service: entra-id
+ms.subservice: users
 ---
 # Changes to domain-based filtering in Synchronization Service Manager fail to sync
 

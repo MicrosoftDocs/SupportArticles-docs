@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:configuring-and-using-backup-software, csstroubleshoot
+ms.custom: sap:Backup, Recovery, Disk, and Storage\Configuring and using Windows Backup or other recovery, csstroubleshoot
 ---
 # "VSS Error XML document is too long. hr = 0x80070018" error when you perform a backup in Windows
 

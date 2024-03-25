@@ -2,7 +2,8 @@
 title: FAQ about printer issues
 description: Describes frequently asked questions about printer issues in Microsoft Dynamics GP
 ms.reviewer: theley
-ms.date: 02/16/2024
+ms.date: 03/20/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # Frequently asked questions about printer issues in Microsoft Dynamics GP
 This article describes frequently asked questions about printer issues in Microsoft Dynamics GP

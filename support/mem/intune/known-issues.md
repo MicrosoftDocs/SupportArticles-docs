@@ -4,6 +4,7 @@ description: Learn about known issues with Microsoft Intune, including workaroun
 ms.date: 12/05/2023
 search.appverid: MET150
 ms.reviewer: kaushika
+ms.custom: sap:Set Up Intune\Set up administrators and manage roles
 ---
 # Known issues
 

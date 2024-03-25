@@ -3,6 +3,7 @@ title: MBAM 2.0 Setup prerequisite checker fails
 description: Error retrieving Configuration Manager server role settings for Reporting Services Point role. This error occurs when running BitLocker Administration and Monitoring prerequisite checker in System Center 2012 Configuration Manager.
 ms.date: 12/05/2023
 ms.reviewer: kaushika, manojse, lacranda, kaushika
+ms.custom: sap:Site Server and Roles\Site System Role Installation (any role)
 ---
 # MBAM 2.0 Setup fails with Error retrieving Configuration Manager Server role settings
 

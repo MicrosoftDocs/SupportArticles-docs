@@ -1,6 +1,7 @@
 ---
 author: cynthn
 ms.service: virtual-machines-linux
+ms.custom: linux-related-content
 ms.topic: include
 ms.date: 10/26/2018
 ms.author: cynthn

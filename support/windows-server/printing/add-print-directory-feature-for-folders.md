@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, davidg, georgev
-ms.custom: sap:management-and-configuration:-general-issues, csstroubleshoot
+ms.custom: sap:Print, Fax, and Scan\Print Configuration or Management, csstroubleshoot
 ---
 # How to add the Print Directory feature for folders in Windows XP, in Windows Vista, in Windows 7
 

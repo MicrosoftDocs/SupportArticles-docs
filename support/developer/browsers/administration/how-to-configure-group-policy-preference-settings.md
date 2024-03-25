@@ -37,4 +37,4 @@ After installing the tools, you can use the following procedure to configure Int
 
 ## References
 
-For more information, see [How to set advanced settings in Internet Explorer by using Group Policy objects](/troubleshoot/browsers/advanced-settings).
+For more information, see [How to set advanced settings in Internet Explorer by using Group Policy objects](advanced-settings.md).

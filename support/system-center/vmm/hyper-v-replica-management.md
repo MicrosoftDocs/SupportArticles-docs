@@ -1,7 +1,7 @@
 ---
 title: Work with Hyper-V network virtualization and Hyper-V replicas
 description: Discusses how to work with Hyper-V network virtualization and Hyper-V replicas in Virtual Machine Manager 2012.
-ms.date: 07/17/2020
+ms.date: 03/13/2024
 ms.reviewer: jchornbe, markstan, aagrawal, ruturajd
 ---
 # How to work with Hyper-V network virtualization and Hyper-V replicas in VMM 2012
@@ -80,7 +80,7 @@ Before you perform a failover operation, follow these steps:
 
 ## Script to fail over a VM by using a Hyper-V replica
 
-Use the [PlannedFailOver.PS1](https://gallery.technet.microsoft.com/scriptcenter/planned-failover-in-hyper-1659d8cd) script to perform the failover. This script includes an option to complete a reverse replication together with the failover.
+Run the [planned failover script](/system-center/vmm/manage-vm-failover-virtual-networks#run-the-planned-failover-script) to perform the failover. This script includes an option to complete a reverse replication together with the failover.
 
 This script takes the following arguments:
 
@@ -94,7 +94,7 @@ This script takes the following arguments:
   - The primary VM should be in the **Prepared for planned failover** replication state.
   - The replica VM should be in the **Failover complete** replication state.
 
-  If **$false** is passed, the reverse replication is not performed. You can use the [ReverseRepORCancelFO.ps1](https://gallery.technet.microsoft.com/scriptcenter/reverse-replicate-in-hyper-5f201a55) script in the next section to either perform a reverse replication or cancel the failover. After this script is completed successfully by having `$ReverseRep` passed as **$false**, the following conditions are true:
+  If **$false** is passed, the reverse replication is not performed. You can run the [reverse replication/cancel script](/system-center/vmm/manage-vm-failover-virtual-networks#run-the-reverse-replicationcancel-script) in the next section to either perform a reverse replication or cancel the failover. After this script is completed successfully by having `$ReverseRep` passed as **$false**, the following conditions are true:
 
   - The primary VM should be in the **Prepared for planned failover** replication state.
   - The replica VM should be in the **Failover complete** replication state.
@@ -109,7 +109,7 @@ Watch for any errors, and manually complete the failed steps in the given order.
 
 ## Script to trigger reverse replication or cancel the failover
 
-Use the [ReverseRepORCancelFO.PS1](https://gallery.technet.microsoft.com/scriptcenter/reverse-replicate-in-hyper-5f201a55) script to either trigger reverse replication or cancel the failover. This script must be run if PlannedFailOver.PS1 was run by having `$ReverseRep` passed as $false.
+Run the [reverse replication/cancel script](/system-center/vmm/manage-vm-failover-virtual-networks#run-the-reverse-replicationcancel-script) to either trigger reverse replication or cancel the failover. This script must be run if PlannedFailOver.PS1 was run by having `$ReverseRep` passed as $false.
 
 This script takes the following arguments:
 
@@ -133,5 +133,5 @@ After this script is completed successfully, the **Replication State** value sho
 
 The following are the scripts for the procedures that are mentioned in the above sections:
 
-- [Planned Failover in Hyper-V Replica with single HNV network](https://gallery.technet.microsoft.com/scriptcenter/planned-failover-in-hyper-1659d8cd)
-- [Reverse replicate in Hyper-V Replica with Single HNV network](https://gallery.technet.microsoft.com/scriptcenter/reverse-replicate-in-hyper-5f201a55)
+- [Planned Failover in Hyper-V Replica with single HNV network](/system-center/vmm/manage-vm-failover-virtual-networks#run-the-planned-failover-script)
+- [Reverse replicate in Hyper-V Replica with Single HNV network](/system-center/vmm/manage-vm-failover-virtual-networks#run-the-reverse-replicationcancel-script)

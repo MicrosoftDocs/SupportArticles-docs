@@ -1,7 +1,8 @@
 ---
 title: Data warehouse jobs stuck or fail
 description: Describes issues that Service Manager data warehouse jobs, such as MPSyncJob and Transform.common, stuck or fail with error Incorrect syntax near.
-ms.date: 08/03/2020
+ms.date: 03/14/2024
+ms.reviewer: khusmeno
 ---
 # Data warehouse jobs stuck or fail with errors
 

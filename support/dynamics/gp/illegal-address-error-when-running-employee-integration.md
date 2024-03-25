@@ -1,9 +1,10 @@
 ---
 title: Illegal address error when you run employee integration
 description: Describes a problem that occurs because HRM Solution Series for Microsoft Dynamics GP is installed. A resolution is provided.
-ms.reviewer: kvogel
+ms.reviewer: theley, kvogel
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # "Illegal address" error when you run an employee integration in Integration Manager
 

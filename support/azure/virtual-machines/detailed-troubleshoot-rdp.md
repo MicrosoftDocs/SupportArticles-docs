@@ -8,14 +8,12 @@ author: genlin
 manager: dcscontentpm
 tags: top-support-issue,azure-service-management,azure-resource-manager
 keywords: cannot connect to remote desktop, troubleshoot remote desktop, remote desktop cannot connect, remote desktop errors, remote desktop troubleshooting, remote desktop problems
-
 ms.service: virtual-machines
 ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
-
 ms.topic: troubleshooting
-ms.date: 10/31/2018
+ms.date: 03/08/2024
 ms.author: genli
 
 ---
@@ -132,7 +130,7 @@ Try the connection from your computer again. If you are still not able to connec
 * Windows Firewall or another local firewall has an outbound rule that is preventing Remote Desktop traffic.
 * Intrusion detection or network monitoring software running on the Azure virtual machine is preventing Remote Desktop connections.
 
-For VMs created using the classic deployment model, you can use a remote Azure PowerShell session to the Azure virtual machine. First, you need to install a certificate for the virtual machine's hosting cloud service. Go to [Configure Secure Remote PowerShell Access to Azure Virtual Machines](https://gallery.technet.microsoft.com/scriptcenter/Configures-Secure-Remote-b137f2fe) and download the **InstallWinRMCertAzureVM.ps1** script file to your local computer.
+For VMs created using the classic deployment model, you can use a remote Azure PowerShell session to the Azure virtual machine. First, you need to install a certificate for the virtual machine's hosting cloud service. Go to [Configure Secure Remote PowerShell Access to Azure Virtual Machines](https://github.com/azureautomation/configures-secure-remote-powershell-access-to-windows-azure-virtual-machines) and download the **InstallWinRMCertAzureVM.ps1** script file to your local computer.
 
 Next, install Azure PowerShell if you haven't already. See [How to install and configure Azure PowerShell](/powershell/azure/).
 

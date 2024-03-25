@@ -1,7 +1,8 @@
 ---
 title: Data warehouse jobs fail with event 33502
 description: Discusses a problem in System Center 2012 Service Manager in which data warehouse jobs fail and event ID 33502 is logged.
-ms.date: 08/03/2020
+ms.date: 03/14/2024
+ms.reviewer: khusmeno
 ---
 # Data warehouse jobs fail and event ID 33502 is logged
 

@@ -52,6 +52,12 @@
       "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
       "branch": "main",
       "branch_mapping": {}
+    },
+    {
+      "path_to_root": "support/reusable-content",
+      "url": "https://github.com/MicrosoftDocs/reusable-content",
+      "branch": "main",
+      "branch_mapping": {}
     }
   ],
   "branch_target_mapping": {
@@ -71,7 +77,8 @@
   "contribution_branch_mappings": {},
   "redirection_files": [
     ".openpublishing.redirection.json",
-    ".openpublishing.redirection.developer.json"
+    ".openpublishing.redirection.developer.json",
+    "azure/.openpublishing.redirection.azure.json"
   ],
   "need_generate_pdf_url_template": true
 }

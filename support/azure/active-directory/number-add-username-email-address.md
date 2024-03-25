@@ -3,8 +3,8 @@ title: Number added to user names and email addresses when users are synced to M
 description: Provides information about troubleshooting an issue in which a number is added to user names and email addresses when users are synced to Microsoft Entra ID.
 ms.date: 05/11/2020
 ms.reviewer: willfid
-ms.service: active-directory
-ms.subservice: enterprise-users
+ms.service: entra-id
+ms.subservice: users
 ---
 # Number added to user names and email addresses when users are synced to Microsoft Entra ID
 

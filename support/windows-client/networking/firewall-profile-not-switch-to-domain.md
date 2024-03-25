@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: winciccore, heigen, kaushika
-ms.custom: sap:windows-firewall-with-advanced-security-wfas, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\Windows Firewall with Advanced Security (WFAS), csstroubleshoot
 ---
 # Windows Firewall profile doesn't always switch to Domain when you use a third-party VPN client
 

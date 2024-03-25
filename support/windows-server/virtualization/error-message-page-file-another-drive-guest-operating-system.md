@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, danma
-ms.custom: sap:storage-configuration, csstroubleshoot
+ms.custom: sap:Virtualization and Hyper-V\Storage configuration, csstroubleshoot
 ---
 # You receive an error message after you put the page file on another drive other than the drive C in a guest operating system
 

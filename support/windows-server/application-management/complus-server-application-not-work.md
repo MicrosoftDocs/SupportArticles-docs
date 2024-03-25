@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:com-and-com+-performance-and-stability, csstroubleshoot
+ms.custom: sap:Application Technologies and Compatibility\DCOM service startup and permissions, csstroubleshoot
 ---
 # A COM+ application may stop working in Windows when a user logs off
 

@@ -5,6 +5,7 @@ author: leshe
 ms.author: leshe
 ms.reviewer: josaw, brstor
 ms.date: 10/07/2023
+ms.custom: sap:Pricing, discounts, and taxes\Issue with price change tracking
 ---
 # Batch job issues with the price change tracking feature
 

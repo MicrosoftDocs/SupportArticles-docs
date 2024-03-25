@@ -7,7 +7,7 @@ ms.subservice: vm-cannot-connect
 author: genlin
 manager: dcscontentpm
 tags: top-support-issue,azure-service-management,azure-resource-manager
-ms.custom: devx-track-azurecli
+ms.custom: devx-track-azurecli, linux-related-content
 ms.service: virtual-machines
 ms.collection: linux
 ms.workload: infrastructure-services

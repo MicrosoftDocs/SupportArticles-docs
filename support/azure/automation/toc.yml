@@ -1,0 +1,13 @@
+- name: Welcome
+  href: welcome-automation.yml
+- name: Automation modifications aren't reflected in the portal
+  href: modifications-not-reflect-portal.md
+- name: Capture diagnostics information
+  href: automation-scripted-diagnostic-capture.md
+- name: Find-AzureRmResource returns error
+  href: find-azurermresource-fails.md
+- name: How to capture debug stream
+  href: capture-debug-stream-automation-runbook.md
+- name: Reinstall Operations Management Suite Agent
+  href: reinstall-oms-agent-linux.md
+

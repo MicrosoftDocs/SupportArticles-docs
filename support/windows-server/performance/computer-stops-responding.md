@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, cbutch, v-jomcc
-ms.custom: sap:system-hang, csstroubleshoot
+ms.custom: sap:System Performance\System Performance (slow, unresponsive, high CPU, resource leak), csstroubleshoot
 ---
 # When you restart a computer, the computer stops responding, or the "Applying computer settings" screen appears for longer than you expect
 

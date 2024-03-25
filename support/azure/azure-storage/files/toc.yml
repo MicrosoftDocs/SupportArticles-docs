@@ -1,0 +1,26 @@
+- name: Welcome
+  href: welcome-files-storage.yml
+
+- name: Azure Files
+  items:
+  - name: Create file share throttling alerts
+    href: files-troubleshoot-create-alerts.md
+  - name: Troubleshoot Azure Files
+    href: files-troubleshoot.md
+  - name: Troubleshoot Azure Files connectivity (SMB)
+    href: files-troubleshoot-smb-connectivity.md
+  - name: Troubleshoot Azure Files identity-based authentication (SMB)
+    href: files-troubleshoot-smb-authentication.md
+  - name: Troubleshoot Azure Files performance issues
+    href: files-troubleshoot-performance.md
+  - name: Troubleshoot backing up file shares
+    href: troubleshoot-azure-files.md
+  - name: Troubleshoot general SMB issues on Linux
+    href: files-troubleshoot-linux-smb.md
+  - name: Troubleshoot general NFS issues on Linux
+    href: files-troubleshoot-linux-nfs.md
+  - name: Troubleshoot ClientOtherErrors (SMB)
+    href: files-client-other-errors.md
+
+
+

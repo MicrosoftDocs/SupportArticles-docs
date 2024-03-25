@@ -1,0 +1,35 @@
+### YamlMime:Landing
+
+title: Azure Batch troubleshooting documentation
+summary: Welcome to Azure Batch troubleshooting. These articles explain how to determine, diagnose, and fix various issues that you might encounter when you use Azure Batch. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+
+metadata:
+  title: Troubleshoot common issues with Azure Batch
+  description: Documentation for troubleshooting common issues with Azure Batch. # Required; article description that is displayed in search results. < 160 chars.
+  services: azure
+  ms.service: azure-common-issues-support #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.topic: landing-page # Required
+  author: genlin  #Required; your GitHub user alias, with correct capitalization.
+  ms.author: genli #Required; microsoft alias of author; optional team alias.
+  ms.date: 03/04/2024
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+# Card
+  - title: Azure Batch
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Access denied when executing Azure Batch jobs
+            url: access-denied-execute-azure-batch-job.md
+          - text: AccountEncryptionKeyUnavailable error when you try to list pools in Azure Batch
+            url: error-accountencryptionkeyunavailable.md
+          - text: Batch node creation delays when restarting or reimaging
+            url: batch-node-creation-delay-restart-reimage.md
+          - text: Batch pool deletion failure
+            url: azure-batch-pool-deletion-failure.md
+          - text: Use managed identities in a Batch account or a Batch pool
+            url: use-managed-identities-azure-batch-account-pool.md
+                                                                                 

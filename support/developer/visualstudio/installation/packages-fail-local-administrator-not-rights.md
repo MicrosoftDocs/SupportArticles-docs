@@ -20,4 +20,4 @@ These errors may occur if the domain administrator removed certain rights from t
 
 ## More information
 
-For more information about how to diagnose and address these errors, see [SQL Server installation fails after default user rights are removed](/troubleshoot/sql/install/installation-fails-if-remove-user-right).
+For more information about how to diagnose and address these errors, see [SQL Server installation fails after default user rights are removed](../../../sql/database-engine/install/windows/installation-fails-if-remove-user-right.md).

@@ -3,8 +3,8 @@ title: Error AADSTS75005 - The request is not a valid Saml2 protocol message
 description: Describes a problem in which you receive AADSTS75005 error when signing in to SAML-based single sign-on configured app.
 ms.date: 08/26/2022
 ms.reviewer: bernawy
-ms.service: active-directory
-ms.subservice: app-mgmt
+ms.service: entra-id
+ms.subservice: enterprise-apps
 ---
 # Error AADSTS75005 - The request is not a valid Saml2 protocol message
 

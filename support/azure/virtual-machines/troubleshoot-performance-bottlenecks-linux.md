@@ -5,6 +5,7 @@ ms.date: 02/15/2024
 ms.reviewer: azurevmlnxcic, v-leedennis
 ms.service: virtual-machines
 ms.subservice: vm-performance
+ms.custom: linux-related-content
 author: msLinuxNinja
 ms.author: esflores
 ---

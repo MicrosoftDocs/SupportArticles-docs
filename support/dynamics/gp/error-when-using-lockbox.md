@@ -2,8 +2,9 @@
 title: Error when using Lockbox in Microsoft Dynamics GP
 description: Fixes a problem that occurs in Microsoft Dynamics GP 10.0 and GP 2010 when you click Reset Customer ID or double-click a payment in the Lockbox Transactions window.
 ms.topic: troubleshooting
-ms.reviewer: cwaswick
-ms.date: 03/31/2021
+ms.reviewer: theley, cwaswick
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Receivables Management
 ---
 # Error message when using Lockbox in Microsoft Dynamics GP: "This module isn't registered. To register this module, contact your Microsoft Dynamics GP Representative"
 

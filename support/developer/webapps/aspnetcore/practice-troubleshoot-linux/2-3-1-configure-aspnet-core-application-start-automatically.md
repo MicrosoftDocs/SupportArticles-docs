@@ -2,6 +2,7 @@
 title: Configure the ASP.NET Core application in Linux
 description: This article describes how to configure the ASP.NET Core application in Linux to start automatically under a different user.
 ms.date: 03/29/2021
+ms.custom: linux-related-content
 ms.reviewer: ramakoni, ahmetmb
 author: ahmetmithat
 ---

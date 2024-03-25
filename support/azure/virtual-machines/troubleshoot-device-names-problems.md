@@ -6,6 +6,7 @@ documentationcenter: ''
 author: genlin
 manager: dcscontentpm
 tags: ''
+ms.custom: linux-related-content
 ms.service: virtual-machines
 ms.subservice: vm-cannot-start-stop
 ms.collection: linux
@@ -15,7 +16,6 @@ ms.tgt_pltfrm: vm-linux
 ms.devlang: azurecli
 ms.date: 11/01/2018
 ms.author: genli
-
 ---
 
 # Troubleshoot Linux VM device name changes

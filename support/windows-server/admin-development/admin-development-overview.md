@@ -16,5 +16,4 @@ The topics in this section provide solutions and scenario guides to help you tro
 
 - Active Directory Services Interface (ADSI)
 - Windows Management Instrumentation (WMI)
-- Windows PowerShell
 - Windows Remote Management (WinRM)

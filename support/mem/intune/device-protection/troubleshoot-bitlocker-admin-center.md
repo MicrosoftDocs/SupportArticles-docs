@@ -4,6 +4,7 @@ description: How to troubleshoot encryption failures using the Intune encryption
 ms.reviewer: kaushika, luker
 ms.date: 12/05/2023
 search.appverid: MET150
+ms.custom: sap:Configure Devices - Windows\Endpoint Protection
 --- 
 # Troubleshooting BitLocker with the Intune encryption report
 

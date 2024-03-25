@@ -5,7 +5,7 @@ ms.author: araghunath
 author: araghunath08
 ms.reviewer: nenellim 
 ms.collection: 
-ms.date: 02/21/2024
+ms.date: 03/03/2024
 ms.custom: bap-template
 ---
 # Use diagnostic messages to troubleshoot issues in voice calls
@@ -23,6 +23,7 @@ The following table lists the warning messages that appear when your agents have
 |  Your network is causing poor call quality. Try switching to a better network, or moving closer to a Wi-Fi access point.  | Appears when the network connection is lost and the system tries to reconnect to the network.  | `networkReconnect` |
 | Your network is causing poor call quality. Try switching to a better network, or moving closer to a Wi-Fi access point.  | Appears when the incoming streaming quality is poor.  | `networkReceiveQuality` |
 | Your network is causing poor call quality. Try switching to a better network, or moving closer to a Wi-Fi access point.  | Appears when the outgoing streaming quality is poor. | `networkSendQuality` |
+| There is a problem connecting to the network. Ensure firewall rules are correctly set up.  | Appears when there are problems with the network. | `networkRelaysNotReachable` |
 
 ## Troubleshoot device issues
 

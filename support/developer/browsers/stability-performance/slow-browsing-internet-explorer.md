@@ -65,4 +65,4 @@ function FindProxyForURL(url, host)
 
 ## References
 
-For more information, see [Optimizing performance with automatic proxy-configuration scripts (PAC)](/troubleshoot/browsers/optimize-pac-performance).
+For more information, see [Optimizing performance with automatic proxy-configuration scripts (PAC)](../connectivity-navigation/optimize-pac-performance.md).

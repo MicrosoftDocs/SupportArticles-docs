@@ -2,6 +2,7 @@
 title: Get ready for troubleshooting
 description: This article helps you consider the troubleshooting process as a whole.
 ms.date: 03/18/2021
+ms.custom: linux-related-content
 ms.reviewer: ramakoni, ahmetmb
 author: ahmetmithat
 ---

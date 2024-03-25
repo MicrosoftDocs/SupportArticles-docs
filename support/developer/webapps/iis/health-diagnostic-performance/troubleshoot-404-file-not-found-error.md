@@ -54,7 +54,7 @@ IIS Dynamic Content: A 404.2 entry in the W3C Extended Log file is recorded when
 
 IIS Static Content: A 404.3 entry in the W3C Extended Log file is recorded when an extension is not mapped to a known extension in the MIME Map property. Use the IIS Microsoft Management Console (MMC) snap-in to configure the appropriate extension in the MIME Map. See the IIS Help file for more information.
 
-For more information about other, less common causes of this error message, see [IIS hidden static files return HTTP 404 or Access Denied errors](/troubleshoot/iis/hidden-static-files-http-404-access-denied).
+For more information about other, less common causes of this error message, see [IIS hidden static files return HTTP 404 or Access Denied errors](hidden-static-files-http-404-access-denied.md).
 
 ## More information
 

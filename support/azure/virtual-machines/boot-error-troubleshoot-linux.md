@@ -10,6 +10,7 @@ ms.subservice: vm-cannot-start-stop
 ms.collection: linux
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-linux
+ms.custom: linux-related-content
 ms.workload: infrastructure
 ms.date: 03/10/2023
 ms.author: divargas

@@ -6,6 +6,7 @@ author: genlin
 ms.author: genli
 ms.service: virtual-machines
 ms.subservice: vm-cannot-connect
+ms.custom: linux-related-content
 ms.collection: linux
 ms.reviewer: 
 ---

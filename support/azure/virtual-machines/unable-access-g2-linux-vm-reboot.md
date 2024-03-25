@@ -4,6 +4,7 @@ description: How to mitigate being locked out of Generation 2 Linux VM after a r
 ms.date: 10/10/2020
 ms.service: virtual-machines
 ms.subservice: vm-cannot-start-stop
+ms.custom: linux-related-content
 ms.collection: linux
 ms.author: genli
 author: genlin

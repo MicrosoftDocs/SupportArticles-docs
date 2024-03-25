@@ -1,9 +1,10 @@
 ---
 title: Transaction dimensions and transaction dimension codes not show
 description: Describes a problem where transaction dimensions and transaction dimension codes do not display in the Transaction Dimension lookup window in Analytical Accounting in Microsoft Dynamics GP. A resolution is provided.
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Analytical Accounting
 ---
 # Transaction dimensions and transaction dimension codes do not display in the Transaction Dimension lookup window in Analytical Accounting
 

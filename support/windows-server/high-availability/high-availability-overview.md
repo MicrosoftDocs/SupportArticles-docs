@@ -18,9 +18,11 @@ The topics in this section provide solutions and scenario guides to help you tro
 - Cannot failover a group
 - Cluster node is hanging
 - Cluster service fails to start
+- Cluster Shared Volume (CSV)
 - Cluster-Aware Updating (CAU)
 - Errors when running the Validation Wizard
 - Initial Cluster Creation or Adding node
+- Node removed from the cluster
 - Print clusters and High Availability Printing
 - Replacing hardware and updating the operating system
 - Root cause of an unexpected failover

@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, josefh
-ms.custom: sap:data-corruption-and-disk-errors, csstroubleshoot
+ms.custom: sap:Backup, Recovery, Disk, and Storage\Data corruption and disk errors, csstroubleshoot
 ---
 # Extending a CSV by using Diskpart or PowerShell isn't blocked from a non-coordinator node
 

@@ -6,6 +6,7 @@ documentationcenter: ''
 author: anandhms
 manager: dcscontentpm
 tags: ''
+ms.custom: linux-related-content
 ms.service: virtual-machines
 ms.collection: linux
 ms.workload: infrastructure-services
@@ -14,7 +15,6 @@ ms.tgt_pltfrm: vm-linux
 ms.topic: troubleshooting
 ms.date: 08/07/2023
 ms.author: genli
-
 ---
 # How to use PerfInsights
 

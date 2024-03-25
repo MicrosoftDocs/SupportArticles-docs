@@ -3,7 +3,7 @@ title: Unable to reset your password in Microsoft Azure, Office 365, or Microsof
 description: Describes a problem in which you receive an error message when you try to reset your password in Microsoft Azure, Office 365, or Microsoft Intune. To resolve this problem, work with your administrator to update your telephone number(s).
 ms.date: 05/22/2020
 ms.reviewer: 
-ms.service: active-directory
+ms.service: entra-id
 ms.subservice: authentication
 ---
 # Error when you try to reset your password in Azure, Office 365, or Intune: Oops! We encountered an unexpected error while contacting you

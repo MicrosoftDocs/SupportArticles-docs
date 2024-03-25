@@ -32,7 +32,7 @@ The default behavior for MIME types is to open the document in Microsoft Interne
 Content-disposition: attachment; filename=fname.ext
 ```
 
-For more information, see [How to raise a File Download dialog box for a known MIME type](/troubleshoot/browsers/raise-file-download-for-mime-types).
+For more information, see [How to raise a File Download dialog box for a known MIME type](../../../browsers/development-website/raise-file-download-for-mime-types.md).
 
 The following steps illustrate how to use `ServerXMLHTTP` to stream a .jpg file to the browser. `ServerXMLHTTP` retrieves an XML response from an ASP page over HTTP. By using GET, the example sends a request without transferring any data to the Web server. The example writes this response to the browser's output by first informing the browser that the response is an image (`image/jpg`) and then passing the response directly from the Response object to display it onscreen.
 

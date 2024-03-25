@@ -4,7 +4,7 @@ description: Troubleshoot common issues with installing the Azure File Sync agen
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 10/13/2023
+ms.date: 03/05/2024
 ms.author: kendownie
 ---
 # Troubleshoot Azure File Sync agent installation and server registration
@@ -85,6 +85,23 @@ To resolve this issue, install [KB2919355](https://support.microsoft.com/help/29
 
 ## Server registration
 
+<a id="server-registration-failed"></a>**Server Registration displays this error: "Failed to register the server"**
+
+If Azure File Sync Agent version 17 is installed, *ServerRegistration.exe* might fail to register the server with the following error message:
+
+> Failed to register the server
+
+In the *AfsSrvRegistration\*.log* file located under *%LocalAppData%\Temp*, the following error is logged:
+
+> ManagementCode: 'NoRegisteredProviderFound'
+
+Until a service-side fix is deployed in your region, you can work around this issue by using the following PowerShell commands to register the server:
+
+```powershell
+Connect-AzAccount -Subscription "<guid>" -Tenant "<guid>"
+Register-AzStorageSyncServer -ResourceGroupName "<your-resource-group-name>" -StorageSyncServiceName "<your-storage-sync-service-name>"
+```
+
 <a id="server-registration-missing-subscriptions"></a>**Server Registration does not list all Azure Subscriptions**
 
 When registering a server using *ServerRegistration.exe*, subscriptions are missing when you select the **Azure Subscription** drop-down.
@@ -133,6 +150,6 @@ If a server isn't listed under **Registered servers** for a Storage Sync Service
 - [Troubleshoot Azure File Sync sync errors](file-sync-troubleshoot-sync-errors.md)
 - [Troubleshoot Azure File Sync cloud tiering](file-sync-troubleshoot-cloud-tiering.md)
 - [Monitor Azure File Sync](/azure/storage/file-sync/file-sync-monitoring)
-- [Troubleshoot Azure Files problems](files-troubleshoot.md)
+- [Troubleshoot Azure Files problems](files/files-troubleshoot.md)
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, ryhayash
-ms.custom: sap:administration, csstroubleshoot
+ms.custom: sap:Remote Desktop Services and Terminal Services\Deployment, configuration, and management of Remote Desktop Services infrastructure, csstroubleshoot
 ---
 # You cannot create a session collection and an error occurs in Windows Server 2012
 

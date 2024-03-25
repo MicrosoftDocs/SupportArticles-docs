@@ -2,6 +2,7 @@
 title: Copy and extract files from development environment to Linux
 description: This article describes how to copy files from a Windows-based computer to a Linux virtual machine and extract files.
 ms.date: 03/29/2021
+ms.custom: linux-related-content
 ms.reviewer: ramakoni, ahmetmb
 author: ahmetmithat
 ---

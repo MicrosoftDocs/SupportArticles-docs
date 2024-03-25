@@ -27,7 +27,7 @@ _Original KB number:_ &nbsp; 2409098
 
    If you still can't install Internet Explorer 9, go to step 4.
 
-4. Manually install the [prerequisite components](/troubleshoot/browsers/prerequisites-for-installing-ie-9).
+4. Manually install the [prerequisite components](prerequisites-for-installing-ie-9.md).
 5. If you still have issues, contact [Microsoft Support](https://support.microsoft.com/contactus/?ws=support).
 
 ## More information

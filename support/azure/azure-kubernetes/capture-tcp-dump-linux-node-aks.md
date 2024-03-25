@@ -6,6 +6,7 @@ ms.topic: how-to
 ms.reviewer: erbookbi, amaljuna, v-leedennis
 ms.service: azure-kubernetes-service
 ms.subservice: data-collection-guide
+ms.custom: linux-related-content
 ---
 # Capture a TCP dump from a Linux node in an AKS cluster
 

@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot OMS onboarding issues
 description: Describes how to troubleshoot onboarding issues in integrated Operations Manager attach mode clients and Direct Agent access in Operations Management Suite (OMS).
-ms.date: 06/22/2020
+ms.date: 03/08/2024
 ---
 # Troubleshoot Operations Management Suite onboarding issues
 
@@ -241,11 +241,11 @@ You can see what anti-malware products are enabled by following [this thread](ht
 
 Most of the errors in the table above under [Step 4](#step-4-check-for-errors-in-the-management-server-or-direct-agent-event-logs) about management servers also apply to Direct Agent. In Direct Agent, each agent is responsible for talking to Operational Insights on its own, as opposed to when integrated with Operations Manager where it is the management server that sends data on behalf of the agents reporting to it, thus acting as a gateway.
 
-With Direct Agent, the most common issue is error code 403 that means **forbidden**. This is typically a mistyped workspaceId or key. You can get more information on this [here](https://social.msdn.microsoft.com/Forums/en-US/732bf3b2-f709-4067-830c-4bae214e3438/the-service-returned-http-status-code-403-in-response-to-a-query?forum=opinsights).
+With Direct Agent, the most common issue is error code 403 that means **forbidden**. This is typically a mistyped workspaceId or key.
 
 Other things that we are currently tracking for Direct Agent include the following:
 
-- The Capacity Management Intelligence Pack doesn't work with Direct Agent. It only works with Operations Manager and also needs Operations Manager to be integrated with Virtual Machine Manager. We are tracking ideas to generalize this solution [here](https://feedback.azure.com/forums/267889-azure-operational-insights/suggestions/6662146-open-up-the-capacity-management-pack-for-other-sys).
+- The Capacity Management Intelligence Pack doesn't work with Direct Agent. It only works with Operations Manager and also needs Operations Manager to be integrated with Virtual Machine Manager. For more information, see [Integrate VMM with Operations Manager for monitoring and reporting](/system-center/vmm/monitors-ops-manager).
 
 - The Alert Management Intelligence Pack does not work with Direct Agent. It requires Operations Manager to synchronize alerts to the cloud.
 

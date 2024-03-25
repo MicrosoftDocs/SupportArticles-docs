@@ -192,7 +192,7 @@ To impersonate a specific user for all requests on all pages of an ASP.NET appli
 <identity impersonate="true" userName="accountname" password="password" />
 ```
 
-To implement impersonation through ASP.NET code, see [Implement impersonation in an ASP.NET application](/troubleshoot/aspnet/implement-impersonation)
+To implement impersonation through ASP.NET code, see [Implement impersonation in an ASP.NET application](../../aspnet/development/implement-impersonation.md)
 
 Open the IIS worker process of a test website that is impersonating a `Test` local user, and check whether you can find the impersonation account under which the application code is run.
 

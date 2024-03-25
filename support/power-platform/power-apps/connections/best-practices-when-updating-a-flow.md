@@ -1,12 +1,12 @@
 ---
 title: Error codes on Flow run
-description: This article describes best practices for updating Microsoft Flows used by Power Apps.
+description: Describes best practices and steps to mitigate common errors when running Microsoft flows in Power Apps.
 ms.reviewer: mlalavat
-ms.date: 02/19/2024
+ms.date: 03/01/2024
 ---
 # Best practices when updating a flow used by a Power App
 
-This article describes best practices for updating Microsoft Flows used by Power Apps.
+This article describes best practices and steps to mitigate common errors when running Microsoft flows in Power Apps.
 
 _Applies to:_ &nbsp; Power Apps  
 _Original KB number:_ &nbsp; 4477072
@@ -78,6 +78,36 @@ This error means that the flow is turned off.
 > Make sure to perform the following steps in the source or development environment and update the solution. Once the solution is updated, import it to all the target or production environments.
 
 The mitigation is to [turn on the flow](/power-automate/disable-flow#turn-on-a-flow).
+
+## Inner error code "ResponseTimeout" on Flow run
+
+```output
+        {
+            "error": {
+            "code": 504,
+            "source": "<api hub source>",
+            "clientRequestId": "<GUID>",
+            "message": "BadGateway",
+            "innerError": {
+                "error": {
+                    "code": "ResponseTimeout",
+                    "message": "The server did not receive a timely response from the upstream server. Request tracking id '<some_tracking_id>'."
+                    }
+                }
+            }
+        } 
+```
+
+### Cause
+
+This error means that the synchronous flow takes longer than 120 seconds (2 minutes) to finish, causing it to time out. [Learn more about the timeout limit of an outbound synchronous request.](/power-automate/limits-and-config#request-limits)
+
+### Mitigation steps
+
+> [!NOTE]
+> Make sure to perform the following steps in the source or development environment and update the solution. Once the solution is updated, import it to all the target or production environments.
+
+The mitigation is to [find which flow run is taking too long](/power-automate/fix-flow-failures#identify-specific-flow-runs) and optimize it to run in two minutes using the resolutions provided in [Troubleshoot slow running flows](~/power-platform/power-automate/flow-run-issues/troubleshoot-slow-running-flows.md).
 
 ## Error code "0x80040265" or "0x80048d0b" on Flow run
 

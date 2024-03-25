@@ -3,9 +3,9 @@ title: Fix user creation and deletion issues in Microsoft Entra ID
 description: Troubleshoot user creation and deletion issues in Microsoft Entra ID. Create and delete users in Azure portal, Microsoft Graph, PowerShell, and Azure CLI.
 ms.date: 12/15/2021
 ms.reviewer: tovascon, anhorta, v-leedennis
-ms.service: active-directory
+ms.service: entra-id
 ms.subservice: domain-services
-ms.custom: devx-track-azurecli, has-azure-ad-ps-ref
+ms.custom: devx-track-azurecli, has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 keywords:
 #Customer intent: As a Microsoft Entra Global Administrator or User Administrator, I want create and delete users so that I can manage the current user list and let users access Azure services.
 ---
@@ -78,6 +78,8 @@ Content-type: application/json {
 ## [Azure PowerShell](#tab/azure-powershell)
 
 To add a user in Azure PowerShell, run the [New-AzureADUser](/powershell/module/azuread/new-azureaduser) cmdlet:
+
+[!INCLUDE [Azure AD PowerShell deprecation note](~/../support/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
 
 ```powershell-interactive
 $PasswordProfile = New-Object -TypeName Microsoft.Open.AzureAD.Model.PasswordProfile
