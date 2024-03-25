@@ -51,6 +51,8 @@
           href: dataverse-cds/cds-user-cannot-access-power-automate-business-process-flows-on-demand-workflows.md
     - name: Desktop flows
       items:
+        - name: A desktop application crashes due to UI automation
+          href: desktop-flows/desktop-application-crashes-ui-automation.md
         - name: Agent-related errors when running attended or unattended desktop flows
           href: desktop-flows/agent-connectivity-issues-pad.md
         - name: Browser automation actions stop working after a browser update
@@ -105,6 +107,8 @@
           href: desktop-flows/troubleshoot-excel-errors.md
         - name: Errors when running attended or unattended desktop flows
           href: desktop-flows/troubleshoot-errors-running-attended-or-unattended-desktop-flows.md
+        - name: Failed connection between Power Automate components
+          href: desktop-flows/failed-connection-between-power-automate-components.md
         - name: Failed license check on a desktop flow run
           href: desktop-flows/desktop-flow-run-time-license-check.md
         - name: Failed to get UI element

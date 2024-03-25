@@ -3,8 +3,8 @@ title: Server can't make an insecure setting of passwords or requires 128-bit TL
 description: 'Error: 8023062C: The password could not be set because the server is not configured for insecure setting of passwords, or a 128 bit TLS or SSL connection is required.'
 ms.date: 02/11/2022
 ms.reviewer: jarrettr, nualex, v-leedennis
-ms.service: active-directory
-ms.subservice: enterprise-users
+ms.service: entra-id
+ms.subservice: users
 keywords:
 #Customer intent: As a Microsoft Entra administrator, I want to configure the Microsoft Entra Connect Synchronization Service Manager so that users must have the appropriate encryption level to reset or change a password.
 ---

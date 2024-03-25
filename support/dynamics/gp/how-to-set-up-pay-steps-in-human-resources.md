@@ -3,7 +3,8 @@ title: How to set up Pay Steps in Human Resources
 description: This article explains the process of creating a pay step table, assigning employees, and processing the pay rates.
 ms.reviewer: theley, Kimberly Haisley
 ms.topic: how-to
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Human Resources
 ---
 # How to set up Pay Steps in Human Resources for Microsoft Dynamics GP
 

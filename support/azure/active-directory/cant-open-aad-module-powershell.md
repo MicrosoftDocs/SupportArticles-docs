@@ -3,7 +3,7 @@ title: You can't open the Azure Active Directory module for Windows PowerShell
 description: Discusses that you can't open the Azure Active Directory module for Windows PowerShell because the .NET Framework 3.51 is not enabled on the computer. A resolution is provided to enable the .NET Framework 3.51.
 ms.date: 06/22/2020
 ms.reviewer: 
-ms.service: active-directory
+ms.service: entra-id
 ms.subservice: domain-services
 ms.custom:
 ---

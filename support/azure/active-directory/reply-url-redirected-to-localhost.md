@@ -3,8 +3,8 @@ title: Microsoft Entra ID is sending the token to an incorrect reply URL endpoin
 description: Describes a problem in which Microsoft Entra ID is sending the token to an incorrect reply URL endpoint or localhost.
 ms.date: 08/26/2022
 ms.reviewer: bernawy
-ms.service: active-directory
-ms.subservice: app-mgmt
+ms.service: entra-id
+ms.subservice: enterprise-apps
 ---
 # Microsoft Entra ID is sending the token to an incorrect reply URL endpoint or localhost
 

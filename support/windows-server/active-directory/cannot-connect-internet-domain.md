@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: v-jomcc, kaushika, michvar, v-srisan
-ms.custom: sap:domain-join-issues, csstroubleshoot
+ms.custom: sap:Active Directory\On-premises Active Directory domain join, csstroubleshoot
 ---
 # You cannot connect to the Internet, and you cannot join or log on to the domain if Windows Server 2003 SP1 is installed on the authenticating domain controller
 

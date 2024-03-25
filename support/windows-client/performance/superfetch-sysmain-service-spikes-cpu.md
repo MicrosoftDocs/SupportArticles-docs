@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:applications, csstroubleshoot
+ms.custom: sap:System Performance\App, Process, Service Reliability (crash, errors), csstroubleshoot
 ---
 # SuperFetch(SysMain) service spikes the CPU for 1-2 minutes when a 64-bit application is running in Windows
 

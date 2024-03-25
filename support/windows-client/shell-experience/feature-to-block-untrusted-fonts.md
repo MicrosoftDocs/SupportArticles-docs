@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, payalr, jerrycif
-ms.custom: sap:dpi-and-display-issues, csstroubleshoot
+ms.custom: sap:Windows Desktop and Shell Experience\DPI and Display Issues, csstroubleshoot
 ---
 # Windows 10 Technical Preview adds a feature that blocks untrusted fonts
 

@@ -7,7 +7,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, herbertm
-ms.custom: sap:active-directory-fsmo, csstroubleshoot
+ms.custom: sap:Active Directory\Active Directory (FSMO), csstroubleshoot
 ---
 # Transfer or seize Operation Master roles in Active Directory Domain Services
 

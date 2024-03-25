@@ -3,9 +3,9 @@ title: Unable to authenticate your credentials error when you connect to Microso
 description: Describes an issue that triggers an Unable to authenticate your credentials. Make sure that your user name is in the format <username>@<domain> error. Occurs when you use the Azure Active Directory module for Windows PowerShell to connect to Microsoft Entra ID.
 ms.date: 05/11/2020
 ms.reviewer: willfid
-ms.service: active-directory
-ms.subservice: enterprise-users
-ms.custom: has-azure-ad-ps-ref
+ms.service: entra-id
+ms.subservice: users
+ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ---
 # "Unable to authenticate your credentials" error when you try to connect to Microsoft Entra ID
 
@@ -29,6 +29,8 @@ rosoftOnlineException
 + FullyQualifiedErrorId : 0x80048862,Microsoft.Online.Administration.Autom
 ation.ConnectMsolService
 ```
+
+[!INCLUDE [Azure AD PowerShell deprecation note](~/../support/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
 
 ## Cause
 

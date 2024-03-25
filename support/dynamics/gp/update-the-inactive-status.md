@@ -3,7 +3,8 @@ title: Update the Inactive status
 description: How to update the Inactive status for a Benefit/Deduction in mass in Human Resources.
 ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Human Resources
 ---
 # How to update the Inactive status for a Benefit/Deduction in mass in Human Resources
 

@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:secure-channel-issues, csstroubleshoot
+ms.custom: sap:Windows Security Technologies\Netlogon including Secure Channel and DC Locator issues, csstroubleshoot
 ---
 # Configure a preshared key for use with Layer 2 Tunneling Protocol Connections in Windows Server 2003
 

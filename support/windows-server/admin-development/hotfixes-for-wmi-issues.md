@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:windows-management-instrumentation-wmi, csstroubleshoot
+ms.custom: sap:System Management Components\WMI management and troubleshooting, csstroubleshoot
 ---
 # Suggested hotfixes for WMI related issue on Windows platforms
 

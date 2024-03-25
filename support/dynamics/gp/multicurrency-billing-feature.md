@@ -2,7 +2,8 @@
 title: Multicurrency billing feature in Project Accounting in Microsoft Dynamics GP 9.0
 description: Describes a new feature in Microsoft Dynamics GP 9.0 that lets you enter budget amounts in a currency other than the functional currency.
 ms.reviewer: theley, ppeterso, lmuelle
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Project Accounting
 ---
 # Description of the multicurrency billing feature in Project Accounting in Microsoft Dynamics GP 9.0
 

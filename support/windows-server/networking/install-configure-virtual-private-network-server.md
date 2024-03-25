@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: masoudh, kaushika
-ms.custom: sap:remote-access, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\Remote access (VPN, RRAS, CMAK and AOVPN), csstroubleshoot
 ---
 # How to install and configure a virtual private network server in Windows Server 2003  
 

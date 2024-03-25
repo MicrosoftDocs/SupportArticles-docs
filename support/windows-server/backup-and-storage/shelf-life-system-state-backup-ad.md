@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, arrenc
-ms.custom: sap:active-directory-backup-and-restore-or-disaster-recovery, csstroubleshoot
+ms.custom: sap:Backup, Recovery, Disk, and Storage\Active Directory backup and restore, or disaster recovery, csstroubleshoot
 ---
 # Useful shelf life of a system-state backup of Active Directory
 

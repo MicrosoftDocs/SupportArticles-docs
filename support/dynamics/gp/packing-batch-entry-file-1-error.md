@@ -3,7 +3,8 @@ title: Error packing batch entry file -1
 description: Provides a resolution for the Packing batch entry file -1 error in Canadian Payroll in Microsoft Dynamics GP.
 ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Payroll
 ---
 # Update Masters "Error packing batch entry file -1" in Canadian Payroll
 

@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, JAMIRC
-ms.custom: sap:ip-address-management-ipam, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\IP Address Management (IPAM), csstroubleshoot
 ---
 # Install and configure IP version 6 in Windows Server 2003 Enterprise Server
 

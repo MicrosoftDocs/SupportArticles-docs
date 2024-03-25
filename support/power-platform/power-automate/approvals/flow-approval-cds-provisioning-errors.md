@@ -4,7 +4,7 @@ description: Resolves errors that occur when Power Automate Approvals can't crea
 ms.reviewer: hamenon, mansong
 ms.date: 03/07/2023
 ms.subservice: power-automate-approvals
-ms.custom: has-azure-ad-ps-ref
+ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ---
 # Power Automate Approval Dataverse provisioning errors and recommendations
 
@@ -18,6 +18,8 @@ _Original KB number:_ &nbsp; 4513672
 > Failed to create the Dataverse database in this environment with status code 'ViralServicePlanRequired'
 
 This error occurs in organizations that have disabled self-service sign-ups. Self-service sign-ups are required to assign viral plans to users attempting to provision resources and interact with Dataverse. Tenants have multiple options to resolve it.
+
+[!INCLUDE [Azure AD PowerShell deprecation note](~/../support/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
 
 Option 1: Enable the `AllowAdHocSubscriptions` setting (tenant-level configuration) using PowerShell.
 

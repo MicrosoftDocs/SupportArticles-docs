@@ -3,7 +3,8 @@ title: Find what receipt layer was affected
 description: Describes how to find what Receipt Layer was affected by the Cost Adjustment in Microsoft Dynamics GP.
 ms.reviewer: theley, aganje
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Distribution - Inventory
 ---
 # How to find what Receipt Layer was affected by the Cost Adjustment in Microsoft Dynamics GP
 
