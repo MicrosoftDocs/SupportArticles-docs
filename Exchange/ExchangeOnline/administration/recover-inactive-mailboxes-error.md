@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Administrator Tasks
   - CI 166460
   - Exchange Online
   - CSSTroubleshoot

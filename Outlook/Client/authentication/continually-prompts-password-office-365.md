@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Product Stability, startup or Shutdown and perform\Network disconnects, password or credentials prompt
   - Outlook for Windows
   - CSSTroubleshoot
   - OutlookPwdPrompt

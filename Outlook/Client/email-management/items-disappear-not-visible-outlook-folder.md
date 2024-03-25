@@ -6,6 +6,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:User Interface features and Configuration\Folder views
   - CSSTroubleshoot
 appliesto:
 - Outlook 2016

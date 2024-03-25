@@ -9,6 +9,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Permissions\Need help with RBAC, Role Groups, Role Assignment policy
   - Exchange Server
   - CSSTroubleshoot
 ms.reviewer: ninob, v-six

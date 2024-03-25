@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Teams Identity and Auth\Client Sign-in (window, mac, linux, web)
   - CSSTroubleshoot
 ms.author: luche
 appliesto: 

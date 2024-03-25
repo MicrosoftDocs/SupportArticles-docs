@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Exchange Mailbox Accounts\.pst and .ost file management and administration
   - Outlook for Windows
   - CSSTroubleshoot
 ms.reviewer: gregmans

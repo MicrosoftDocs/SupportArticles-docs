@@ -8,6 +8,7 @@ ms.topic: troubleshooting
 manager: dcscontentpm
 localization_priority: Normal
 ms.custom: 
+  - sap:Sharing\Issue viewing Free Busy
   - Exchange Server
   - CSSTroubleshoot
 search.appverid: 

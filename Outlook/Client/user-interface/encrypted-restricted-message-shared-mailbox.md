@@ -11,6 +11,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: kellybos
 ms.custom: 
+  - sap:Data Protection and Security\Sensitivity Labels
   - Outlook for Windows
   - CSSTroubleshoot
   - CI 124859

@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Teams Chat (Messaging)\Federated chats
   - CI 121589
   - CSSTroubleshoot
 ms.reviewer: kellybos

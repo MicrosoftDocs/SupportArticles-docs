@@ -8,6 +8,7 @@ ms.topic: troubleshooting
 manager: dcscontentpm
 localization_priority: Normal
 ms.custom: 
+  - sap:Clients and Mobile\Can't Connect to Mailbox with OWA
   - Exchange Server
   - CSSTroubleshoot
 search.appverid: 

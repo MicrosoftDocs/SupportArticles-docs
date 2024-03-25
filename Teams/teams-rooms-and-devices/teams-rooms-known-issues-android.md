@@ -13,6 +13,7 @@ localization_priority: Normal
 ms.collection: 
   - M365-collaboration
 ms.custom: 
+  - sap:Msft Teams Rooms Windows (MTRW)\
   - seo-marvel-apr2020
   - CSSTroubleshoot
   - CI 121996

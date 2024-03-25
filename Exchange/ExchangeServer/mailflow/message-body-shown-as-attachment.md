@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Mail Flow\Need help with loss of email format, content conversion
   - Exchange Server
   - CSSTroubleshoot
 ms.reviewer: deedi, ppawar, v-six

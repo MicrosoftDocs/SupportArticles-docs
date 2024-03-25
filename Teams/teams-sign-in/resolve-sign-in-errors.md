@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Teams Identity and Auth\Client Sign-in (window, mac, linux, web)
   - CI 156289
   - CI 187814
   - CSSTroubleshoot

@@ -14,6 +14,7 @@ search.appverid:
 appliesto: 
   - Microsoft Teams
 ms.custom: 
+  - sap:Msft Teams Rooms Windows (MTRW)\
   - CI163362
 ms.reviewer: subansal, meerak, scapero
 ---

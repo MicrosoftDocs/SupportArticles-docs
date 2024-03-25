@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Groups, Lists, Contacts, Public Folders
   - CI 151235
   - Exchange Online
   - CSSTroubleshoot

@@ -15,6 +15,7 @@ search.appverid:
 appliesto: 
   - Exchange Online
 ms.custom: 
+  - sap:Mail Flow
   - Exchange Online
   - CI 123370
   - CSSTroubleshoot

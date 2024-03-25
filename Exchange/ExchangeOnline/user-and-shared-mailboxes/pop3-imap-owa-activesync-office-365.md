@@ -7,6 +7,7 @@ audience: ITPro
 ms.topic: troubleshooting
 manager: dcscontentpm
 ms.custom: 
+  - sap:Administrator Tasks
   - Exchange Online
   - CSSTroubleshoot
 localization_priority: Normal

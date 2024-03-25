@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Calendar\Working with meetings or appointments
   - Outlook for Windows
   - CSSTroubleshoot
 ms.reviewer: tasitae, aruiz, meshel

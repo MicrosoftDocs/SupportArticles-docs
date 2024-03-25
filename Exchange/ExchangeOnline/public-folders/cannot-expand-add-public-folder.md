@@ -10,6 +10,7 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Groups, Lists, Contacts, Public Folders
   - CSSTroubleshoot
   - CI 125428
   - Exchange Online

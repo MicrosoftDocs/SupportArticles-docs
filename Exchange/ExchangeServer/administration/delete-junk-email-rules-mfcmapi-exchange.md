@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Clients and Mobile\Can't Configure Outlook Profile
   - Exchange Server
   - CI 119623
   - CSSTroubleshoot

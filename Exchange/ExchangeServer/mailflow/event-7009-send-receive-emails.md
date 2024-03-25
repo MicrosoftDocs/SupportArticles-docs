@@ -9,6 +9,7 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.reviewer: stephgil, v-six
 ms.custom: 
+  - sap:Mail Flow\Not Able to Send or Receive Emails from Internet
   - Exchange Server
   - CSSTroubleshoot
 search.appverid: 

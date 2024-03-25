@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Teams Identity and Auth\
   - CI 116762
   - CI 187815
   - CSSTroubleshoot

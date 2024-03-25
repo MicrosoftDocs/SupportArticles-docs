@@ -9,6 +9,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: kellybos, ninob, v-six
 ms.custom: 
+  - sap:Administrator Tasks
   - Exchange Online
   - CSSTroubleshoot
 search.appverid: 

@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Calendar\Delegate configuration options
   - Outlook for Windows
   - CSSTroubleshoot
 ms.reviewer: 

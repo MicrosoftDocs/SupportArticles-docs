@@ -6,6 +6,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Teams Chat (Messaging)\Meeting Chats
   - CI 154689
   - CI 183376
   - CSSTroubleshoot

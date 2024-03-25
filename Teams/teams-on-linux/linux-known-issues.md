@@ -13,6 +13,7 @@ search.appverid:
 appliesto: 
   - Microsoft Teams
 ms.custom: 
+  - sap:Teams Clients\Linux
   - CI 120622
   - CSSTroubleshoot
 ms.reviewer: billw

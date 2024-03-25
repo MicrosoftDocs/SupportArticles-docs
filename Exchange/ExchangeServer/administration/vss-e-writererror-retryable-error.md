@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:High Availability, Health, Performance, Content Indexing\Need Help with Backup
   - Exchange Server
   - CSSTroubleshoot
 ms.reviewer: batre, genli, v-six

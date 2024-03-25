@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Teams Meetings\Meetings Other
   - CI 107235
   - CSSTroubleshoot
 ms.reviewer: sarvdon, SfB_Triage
