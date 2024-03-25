@@ -240,11 +240,6 @@
         "windows-server/**/**.*": "windows-server"
       },
       "ms.subservice": {
-        "dynamics-365/field-service/administration/**.*": "d365-fs-admin-settings",
-        "dynamics-365/field-service/customization/**.*": "d365-fs-customization",
-        "dynamics-365/field-service/iot/**.*": "d365-fs-iot-connected",
-        "dynamics-365/field-service/rso/**.*": "d365-fs-resource-scheduling-optimization",
-        "dynamics-365/field-service/scheduling/**.*": "d365-fs-scheduling",
         "dynamics-365/customer-service/customer-service-insights/**.*": "d365-cs-insights",
         "dynamics-365/customer-service/email/**.*": "d365-cs-email",
         "dynamics-365/customer-service/entitlements/**.*": "d365-cs-entitlements",
