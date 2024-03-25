@@ -15,7 +15,7 @@ keywords: group policy, group membership
 
 This article describes a situation in which VPN users might experience resource access or configuration problems after their group membership changes.
 
-_Applies to:_ &nbsp; Windows 10, all SACs
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows 11 - all editions
 
 ## Symptoms
 
