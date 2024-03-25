@@ -1,7 +1,7 @@
 ---
 title: Use AzCopy to copy blobs between storage accounts with access restriction
 description: Introduces how to copy blobs between storage accounts with AzCopy and how to implement this when network restrictions are set for the storage accounts.
-ms.date: 04/18/2023
+ms.date: 03/25/2024
 ms.topic: how-to
 ms.service: azure-storage
 ms.reviewer: jiajwu, jeromeliu, azurestocic, v-weizhu
