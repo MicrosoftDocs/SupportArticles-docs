@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: Fix, csstroubleshoot
+ms.custom: sap:System Performance\System Configuration (page file, startup or running apps, error handling), Fix, csstroubleshoot
 ---
 # Command prompt and PowerShell don't open after in-place upgrade of Windows 10 S
 

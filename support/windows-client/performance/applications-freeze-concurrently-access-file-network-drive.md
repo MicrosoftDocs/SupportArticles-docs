@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, v-jesits
-ms.custom: sap:applications, csstroubleshoot
+ms.custom: sap:System Performance\App, Process, Service Performance (slow, unresponsive), csstroubleshoot
 ---
 # Applications freeze when they concurrently try to access a file on a network drive in Windows
 

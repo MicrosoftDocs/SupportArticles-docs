@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:task-scheduler, csstroubleshoot
+ms.custom: sap:System Management Components\Task Scheduler, csstroubleshoot
 ---
 # How to run programs automatically when a user logs on
 

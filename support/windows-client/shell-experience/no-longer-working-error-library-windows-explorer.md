@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:file-explorer/windows-explorer, csstroubleshoot
+ms.custom: sap:Windows Desktop and Shell Experience\File Explorer (app only, folders, Quick Access, File Explorer search), csstroubleshoot
 ---
 # Opening a Library in Windows Explorer gives error that it is no longer working
 

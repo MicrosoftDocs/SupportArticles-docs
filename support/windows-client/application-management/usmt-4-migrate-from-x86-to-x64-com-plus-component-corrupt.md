@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: sgoad, nedpyle, tjung, kaushika
-ms.custom: sap:com-and-com+-performance-and-stability, csstroubleshoot
+ms.custom: sap:Application Technologies and Compatibility\DCOM service startup and permissions, csstroubleshoot
 ---
 # USMT 4.0 migration from x86 to x64 results in corrupted COM+ components
 

@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, memarti, chmorri, v-jesits
-ms.custom: sap:applications, csstroubleshoot
+ms.custom: sap:System Performance\App, Process, Service Reliability (crash, errors), csstroubleshoot
 ---
 # Windows 10 causes issues when it calls CreateWindowEx in some 32-bit applications
 
