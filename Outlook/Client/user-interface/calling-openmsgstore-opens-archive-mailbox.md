@@ -10,6 +10,7 @@ localization_priority: Normal
 search.appverid: 
   - MET150
 ms.custom: 
+  - sap:Developer Issues\Macros
   - Outlook for Windows
   - CI 106387
   - CSSTroubleshoot
