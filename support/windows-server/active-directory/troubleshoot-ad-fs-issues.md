@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, abizerh, fszita, meerak
-ms.custom: sap:active-directory-federation-services-ad-fs, csstroubleshoot, has-azure-ad-ps-ref
+ms.custom: sap:Windows Security Technologies\Active Directory Federation Services (AD FS) non-Azure-O365 issues, csstroubleshoot, has-azure-ad-ps-ref
 ---
 # Troubleshoot AD FS issues in Microsoft Entra ID and Office 365
 

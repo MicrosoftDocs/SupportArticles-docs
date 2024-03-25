@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: willgloy, kaushika
-ms.custom: sap:administration, csstroubleshoot
+ms.custom: sap:Remote Desktop Services and Terminal Services\Deployment, configuration, and management of Remote Desktop Services infrastructure, csstroubleshoot
 ---
 # Terminal Server error messages: 2200 to 2299
 

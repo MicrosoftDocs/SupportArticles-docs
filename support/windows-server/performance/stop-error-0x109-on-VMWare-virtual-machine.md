@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, v-jesits, scotto
-ms.custom: sap:blue-screen/bugcheck, csstroubleshoot
+ms.custom: sap:System Performance\System Reliability (crash, errors, bug check or Blue Screen, unexpected reboot), csstroubleshoot
 ---
 # Stop error 0x109: CRITICAL_STRUCTURE_CORRUPTION on a VMware virtual machine
 

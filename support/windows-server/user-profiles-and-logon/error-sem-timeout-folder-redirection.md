@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, tonnyp
-ms.custom: sap:folder-redirection, csstroubleshoot
+ms.custom: sap:User Logon and Profiles\Enterprise State Roaming (ESR) and Folder Redirection, csstroubleshoot
 ---
 # Folder Redirection fails with the error ERROR_SEM_TIMEOUT or the semaphore timeout period has expired
 

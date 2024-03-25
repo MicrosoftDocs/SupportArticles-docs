@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:load-balancing-and-connection-broker, csstroubleshoot
+ms.custom: sap:Remote Desktop Services and Terminal Services\Connection Broker and load balancing, csstroubleshoot
 ---
 # Remote Desktop Services role cannot coexist with AD DS role
 

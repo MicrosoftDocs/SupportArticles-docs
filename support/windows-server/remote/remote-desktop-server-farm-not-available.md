@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:load-balancing-and-connection-broker, csstroubleshoot
+ms.custom: sap:Remote Desktop Services and Terminal Services\Connection Broker and load balancing, csstroubleshoot
 ---
 # Remote Desktop Server farm is unavailable over DirectAccess (single/multisite)
 

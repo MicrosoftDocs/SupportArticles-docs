@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:blue-screen/bugcheck, csstroubleshoot
+ms.custom: sap:System Performance\System Reliability (crash, errors, bug check or Blue Screen, unexpected reboot), csstroubleshoot
 ---
 # Stop error (INACCESSIBLE_BOOT_DEVICE) after you reconfigure critical hardware devices
 

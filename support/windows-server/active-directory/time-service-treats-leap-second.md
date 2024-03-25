@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, RyukiY
-ms.custom: sap:windows-time-service, csstroubleshoot
+ms.custom: sap:Active Directory\Windows Time Service configuration, accuracy, and synchronization, csstroubleshoot
 ---
 # How the Windows Time service treats a leap second
 
