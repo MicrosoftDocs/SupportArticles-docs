@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Teams Meetings\Webinars
   - CI 150942
   - CSSTroubleshoot
 ms.reviewer: billkau; sherimehmood; musingh

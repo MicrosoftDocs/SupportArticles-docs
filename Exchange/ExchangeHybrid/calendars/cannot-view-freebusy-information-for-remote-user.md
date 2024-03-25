@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Calendaring
   - Exchange Hybrid
   - CSSTroubleshoot
 ms.reviewer: jmartin, rayfong, austinmc, wduff, jhayes, timothyh, v-six

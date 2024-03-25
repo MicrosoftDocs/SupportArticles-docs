@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Groups, Lists, Contacts, Public Folders
   - Exchange Online
   - CSSTroubleshoot
 ms.reviewer: willfid, v-six

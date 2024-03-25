@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Teams Meetings\Recording and Transcription
   - CI 125645
   - CSSTroubleshoot
 ms.reviewer: corbinm

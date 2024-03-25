@@ -14,6 +14,7 @@ search.appverid:
 appliesto: 
   - Microsoft Teams
 ms.custom: 
+  - sap:Teams Calling (PSTN)\Direct Routing
   - CSSTroubleshoot
 ms.reviewer: 
 ---

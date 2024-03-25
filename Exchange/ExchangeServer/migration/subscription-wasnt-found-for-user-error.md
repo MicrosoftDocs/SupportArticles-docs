@@ -15,6 +15,7 @@ appliesto:
   - Exchange Server 2019
   - Exchange Server 2016
 ms.custom: 
+  - sap:Collaboration and Public Folders\Issues with Public Folder Migration
   - Exchange Server
   - CI 123889
   - CSSTroubleshoot

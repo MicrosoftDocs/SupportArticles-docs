@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: article
 localization_priority: Normal
 ms.custom: 
+  - sap:Teams Device Management (TAC)\
   - CI 160238
   - CSSTroubleshoot
 ms.reviewer: miaitelh

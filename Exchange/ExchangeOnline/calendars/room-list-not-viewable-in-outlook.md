@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Calendaring
   - Exchange Online
   - CSSTroubleshoot
 ms.reviewer: rrajan, v-six

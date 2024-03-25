@@ -15,6 +15,7 @@ search.appverid:
 appliesto: 
   - Microsoft Teams
 ms.custom: 
+  - sap:Teams Compatible Devices and Peripherals\
   - CI168070
 ---
 # Fix Conditional Access-related issues for Teams Android devices

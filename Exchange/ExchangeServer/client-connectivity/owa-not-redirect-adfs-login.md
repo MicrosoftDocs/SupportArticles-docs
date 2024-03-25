@@ -9,6 +9,7 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.reviewer: tasitae, v-six
 ms.custom: 
+  - sap:Plan and Deploy\Need help to deploy Oauth, HMA, ADFS
   - Exchange Server
   - CSSTroubleshoot
 search.appverid: 

@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Hybrid
   - Exchange Online
   - CSSTroubleshoot
   - has-azure-ad-ps-ref

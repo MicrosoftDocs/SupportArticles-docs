@@ -13,6 +13,7 @@ search.appverid:
 appliesto: 
   - Microsoft Teams
 ms.custom: 
+  - sap:Teams Identity and Auth\
   - CI 113425
   - CI 187816
   - CSSTroubleshoot

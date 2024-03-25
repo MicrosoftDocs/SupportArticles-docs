@@ -6,6 +6,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Data Protection and Security\Actionable Messages
   - Outlook for Windows
   - CSSTroubleshoot
   - CI 174591

@@ -13,6 +13,7 @@ search.appverid:
 appliesto: 
   - Microsoft Teams
 ms.custom: 
+  - sap:Teams Admin\
   - CI113425
   - CI184322
   - CSSTroubleshoot

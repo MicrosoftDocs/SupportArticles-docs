@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Teams Meetings\Meeting Join
   - CI 169117
   - CSSTroubleshoot
 ms.reviewer: rbronisevsky,lehill

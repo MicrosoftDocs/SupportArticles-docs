@@ -6,6 +6,7 @@ ms.topic: troubleshooting
 author: cloud-writer
 ms.author: meerak
 ms.custom: 
+  - sap:Calendaring
   - CI 157711
   - Exchange Online
   - CSSTroubleshoot

@@ -8,6 +8,7 @@ localization_priority: Normal
 search.appverid: 
   - MET150
 ms.custom: 
+  - sap:Migration
   - Exchange Hybrid
   - CSSTroubleshoot
 audience: ITPro

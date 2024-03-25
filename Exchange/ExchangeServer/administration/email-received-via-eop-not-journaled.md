@@ -9,6 +9,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Mail Flow\Issues with Transport Rules
   - Exchange Server
   - CSSTroubleshoot
 ms.reviewer: genli, davidsan, v-six

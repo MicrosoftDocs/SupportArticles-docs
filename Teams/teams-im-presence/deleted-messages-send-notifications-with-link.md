@@ -13,6 +13,7 @@ search.appverid:
 appliesto: 
   - Microsoft Teams
 ms.custom: 
+  - sap:Teams People & Presence\@ Mentions
   - CI 113425
   - CSSTroubleshoot
 ms.reviewer: scapero

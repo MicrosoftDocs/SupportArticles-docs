@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:People or Contacts\Contact pictures
   - Outlook for Windows
   - CSSTroubleshoot
   - CI 142155

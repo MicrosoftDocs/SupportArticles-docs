@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Clients and Mobile\Need help with IMAP, POP Clients
   - Exchange Server
   - CI 113906
   - CSSTroubleshoot

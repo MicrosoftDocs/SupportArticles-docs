@@ -6,6 +6,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Install, Update, Activate, and Deploy\Errors during installation
   - CSSTroubleshoot
 appliesto:
 - Outlook for Microsoft 365

@@ -5,6 +5,7 @@ author: cloud-writer
 ms.author: meerak
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Administrator Tasks
   - Exchange Online
   - CSSTroubleshoot
 manager: dcscontentpm
