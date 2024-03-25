@@ -249,10 +249,11 @@ You may encounter a specific error message when trying to connect to your VM via
 
 You may receive the following common errors when you try to RDP with Microsoft Entra credentials: "no Azure roles assigned", "unauthorized client", or "two-factor authentication sign-in method required". Refer to the following articles to fix these issues:
 
-* [Your account is configured to prevent you from using this device. For more info, contact your system administrator](https://github.com/MicrosoftDocs/azure-docs/blob/main/articles/active-directory/devices/howto-vm-sign-in-azure-ad-windows.md#troubleshoot-sign-in-issues).
-* [Windows Security error: Your credentials did not work. Unauthorized client](https://github.com/MicrosoftDocs/azure-docs/blob/main/articles/active-directory/devices/howto-vm-sign-in-azure-ad-windows.md#unauthorized-client).
-* [Windows Security error: Your credentials did not work. Password change required](https://github.com/MicrosoftDocs/azure-docs/blob/main/articles/active-directory/devices/howto-vm-sign-in-azure-ad-windows.md#password-change-required).
-* [The sign-in method you're trying to use isn't allowed. Try a different sign-in method or contact your system administrator](https://github.com/MicrosoftDocs/azure-docs/blob/main/articles/active-directory/devices/howto-vm-sign-in-azure-ad-windows.md#mfa-sign-in-method-required).
+* [Your account is configured to prevent you from using this device. For more info, contact your system administrator](https://learn.microsoft.com/en-us/entra/identity/devices/howto-vm-sign-in-azure-ad-windows#azure-role-not-assigned).
+
+* [Windows Security error: Your credentials did not work. Unauthorized client](https://learn.microsoft.com/en-us/entra/identity/devices/howto-vm-sign-in-azure-ad-windows#unauthorized-client-or-password-change-required).
+* [Windows Security error: Your credentials did not work. Password change required](https://learn.microsoft.com/en-us/entra/identity/devices/howto-vm-sign-in-azure-ad-windows#unauthorized-client-or-password-change-required).
+* [The sign-in method you're trying to use isn't allowed. Try a different sign-in method or contact your system administrator](https://learn.microsoft.com/en-us/entra/identity/devices/howto-vm-sign-in-azure-ad-windows#mfa-sign-in-method-required).
 
 ## Additional resources
 
