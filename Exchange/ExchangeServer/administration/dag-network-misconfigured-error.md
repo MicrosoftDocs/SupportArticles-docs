@@ -9,6 +9,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:High Availability, Health, Performance, Content Indexing\Need Help Configuring DAG
   - Exchange Server
   - CSSTroubleshoot
 ms.reviewer: v-six

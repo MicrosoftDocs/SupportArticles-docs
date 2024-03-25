@@ -6,6 +6,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Clients and Mobile\Issue with autodiscover
   - CSSTroubleshoot
 appliesto:
 search.appverid: MET150

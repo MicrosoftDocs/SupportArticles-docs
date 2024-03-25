@@ -9,6 +9,7 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.reviewer: marcn, v-six
 ms.custom: 
+  - sap:OWA  And Exchange Admin Center\Need help in configuring EAC
   - Exchange Server
   - CSSTroubleshoot
 search.appverid: 

@@ -11,6 +11,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: dpaul, v-six
 ms.custom: 
+  - sap:High Availability, Health, Performance, Content Indexing\Need Help Configuring DAG
   - CSSTroubleshoot
   - CI 124887
   - Exchange Server
