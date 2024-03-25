@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, herbertm, v-lianna
-ms.custom: sap:active-directory-lightweight-directory-services-ad-lds-and-active-directory-application-mode-adam, csstroubleshoot
+ms.custom: sap:Active Directory\Active Directory Lightweight Directory Services (AD LDS), csstroubleshoot
 ---
 # Problems that can occur with many Domain Controllers in Active Directory integrated DNS zones
 

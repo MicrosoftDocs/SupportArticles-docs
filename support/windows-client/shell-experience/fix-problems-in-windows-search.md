@@ -7,7 +7,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: high
 ms.reviewer: kaushika, v-tappelgate
-ms.custom: sap:cortana-and-search, csstroubleshoot
+ms.custom: sap:Windows Desktop and Shell Experience\Windows Search, csstroubleshoot
 ---
 # Fix problems in Windows Search
 

@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, robsmi, v-srisan
-ms.custom: sap:performance-monitoring-tools, csstroubleshoot
+ms.custom: sap:System Performance\Performance tools (Task Manager, Perfmon, WSRM, and WPA), csstroubleshoot
 ---
 # Disk performance may be slower than expected when you use multiple disks
 

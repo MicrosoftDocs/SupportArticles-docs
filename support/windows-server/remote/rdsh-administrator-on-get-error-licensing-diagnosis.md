@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: klausu, kaushika
-ms.custom: sap:remote-desktop-services-terminal-services-licensing, csstroubleshoot
+ms.custom: sap:Remote Desktop Services and Terminal Services\Licensing for Remote Desktop Services (Terminal Services), csstroubleshoot
 ---
 # Windows Server 2008 R2: Administrator on RDSH gets an error in Licensing Diagnosis: Licenses are not available for this Remote Desktop Session Host server
 

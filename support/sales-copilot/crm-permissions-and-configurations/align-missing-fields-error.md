@@ -4,11 +4,7 @@ description: Resolves an error that occurs due to field mismatching between Micr
 ms.date: 01/16/2024
 author: sbmjais
 ms.author: shjais
-ms.custom:
-  - ai-gen-docs-bap
-  - ai-gen-title
-  - ai-seo-date:12/22/2023
-  - ai-gen-desc
+ms.custom: sap:CRM Permissions and Configurations\CRM Settings
 ---
 # "Align missing fields" error in Copilot for Sales
 

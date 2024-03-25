@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: Tode, kaushika
-ms.custom: sap:virtual-switch-manager-vmswitch, csstroubleshoot
+ms.custom: sap:Virtualization and Hyper-V\Virtual switch manager (Vmswitch), csstroubleshoot
 ---
 # VmSwitch Error 113 event is logged when you start or live migrate virtual machines
 

@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:active-directory-services-interface-adsi, csstroubleshoot
+ms.custom: sap:Admin Mgmt Development\Active Directory Services Interface Adsi , csstroubleshoot
 ---
 # Convert a String Formatted GUID to a Hexadecimal String Form For Use When Querying the Active Directory
 
