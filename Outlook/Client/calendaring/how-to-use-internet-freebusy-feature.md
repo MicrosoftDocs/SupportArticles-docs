@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Calendar\Free-busy information retrieval or publishing
   - Outlook for Windows
   - CSSTroubleshoot
 ms.reviewer: SCOTTGR

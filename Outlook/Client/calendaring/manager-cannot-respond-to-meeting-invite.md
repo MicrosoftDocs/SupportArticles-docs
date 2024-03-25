@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Connectivity\Cannot send or receive new email
   - Outlook for Windows
   - CSSTroubleshoot
 ms.reviewer: gregmans
