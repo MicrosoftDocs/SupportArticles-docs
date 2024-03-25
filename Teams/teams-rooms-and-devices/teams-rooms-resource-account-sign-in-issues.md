@@ -15,6 +15,7 @@ search.appverid:
 appliesto: 
   - Microsoft Teams
 ms.custom: 
+  - sap:MTR Pro\
   - CI167672
 ---
 # Fix Teams Rooms resource account sign-in issues
