@@ -25,9 +25,9 @@ ms.date: 03/31/2022
 
 ## Problem 
 
-In your Microsoft 365 subscription, you see that 50,000 seats are assigned to the RIGHTSMANAGEMENT_ADHOC SKU. For example, when you run the Get-MsolAccountSku Microsoft Azure Active Directory module for Windows PowerShell cmdlet, you receive output that resembles the following:
+In your Microsoft 365 subscription, you see that 50,000 seats are assigned to the RIGHTSMANAGEMENT_ADHOC SKU. For example, when you run the Get-MsolAccountSku Microsoft Azure Active Directory module for Windows PowerShell cmdlet, you receive output that resembles the following example:
 
-```asciidoc
+```output
 Windows PowerShell
 Copyright (C) 2013 Microsoft Corporation. All rights reserved.
 PS C:\> Connect-MsolService
@@ -44,17 +44,17 @@ YourO365:ENTERPRISEPACK 25 0 7
 
 ## Cause 
 
-The RIGHTSMANAGEMENT_ADHOC entry represents the "Rights Management for individuals" subscription. This is a free offering that anyone in an organization can use after they sign up.
+The RIGHTSMANAGEMENT_ADHOC entry represents the "Rights Management for individuals" subscription, which is a free offering that anyone in an organization can use after they sign up.
 
-When a person in your organization signs up for this offering, Microsoft allocates 50,000 seats of RIGHTSMANAGEMENT_ADHOC to your organization. Licenses will be assigned to users only if they sign up. 
+When a person in your organization signs up for this offering, Microsoft allocates 50,000 seats of RIGHTSMANAGEMENT_ADHOC to your organization. Licenses are assigned to users only if they sign up. 
 
-The existence of the RIGHTSMANAGEMENT_ADHOC SKU in your list of SKUs does not affect Microsoft Azure Rights Management functionality or any other Microsoft 365 functionality. Microsoft does not charge for this SKU.
+The existence of the RIGHTSMANAGEMENT_ADHOC SKU in your list of SKUs doesn't affect Microsoft Azure Rights Management functionality or any other Microsoft 365 functionality. Microsoft doesn't charge for this SKU.
 
 ## Solution 
 
 You can safely ignore the RIGHTSMANAGEMENT_ADHOC SKU entry. 
 
-If Azure Rights Management is disabled in your organization, Azure Rights Management functionality will remain disabled. An update will be available in the future to manage this SKU.
+If Azure Rights Management is disabled in your organization, Azure Rights Management functionality remains disabled. An update will be available in the future to manage this SKU.
 
 ## More information
 
