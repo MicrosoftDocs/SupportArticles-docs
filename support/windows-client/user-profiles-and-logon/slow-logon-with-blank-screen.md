@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:slow-logon, csstroubleshoot
+ms.custom: sap:System Performance\Slow logon, csstroubleshoot
 ---
 # Slow logon with a blank screen in Windows
 

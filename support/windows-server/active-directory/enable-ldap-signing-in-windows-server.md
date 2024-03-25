@@ -7,7 +7,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, hjerez, jarrettr, herbertm, wincicadsec
-ms.custom: sap:ldap-configuration-and-interoperability, csstroubleshoot
+ms.custom: sap:Active Directory\LDAP configuration and interoperability, csstroubleshoot
 ---
 # How to enable LDAP signing in Windows Server
 

@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, shawnrab, spat
-ms.custom: sap:certificate-web-enrollment-pages-cwe, csstroubleshoot
+ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Certificate Enrollment Technologies (Auto Enrollment, NDES, CWE, CEP, CES), csstroubleshoot
 ---
 # Error when a user requests certificate from CA web enrollment pages: No certificate templates could be found
 

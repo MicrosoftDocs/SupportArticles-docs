@@ -6,10 +6,7 @@ ms.topic: troubleshooting
 author: Teresa-Motiv
 ms.author: dougeby
 manager: dcscontentpm
-ms.custom:
-- CI 111437
-- csstroubleshooting
-- sap:blue-screen/bugcheck
+ms.custom: sap:System Performance\System Reliability (crash, errors, bug check or Blue Screen, unexpected reboot), errors, bug check or Blue Screen, unexpected reboot), csstroubleshooting, CI 111437
 ms.reviewer: kaushika
 audience: itpro
 localization_priority: medium
@@ -181,7 +178,7 @@ An event ID 41 is used to report that something unexpected happened that prevent
 - Message: The system has rebooted without cleanly shutting down first. This error could be caused if the system stopped responding, crashed, or lost power unexpectedly.
 
 > [!NOTE]
-> The time shown in the .evtx file is adjusted to your system’s time. Check the time zone of the server.
+> The time shown in the .evtx file is adjusted to your system's time. Check the time zone of the server.
 
 - Event ID 41: This event indicates that Windows restarted without a complete shutdown.
 - Event ID 1074: This event is logged when an application is responsible for the system shutdown or restart. It also indicates when a user restarted or shut down the system by using the **Start** menu or by pressing Ctrl+Alt+Del.

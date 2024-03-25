@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, v-lianna
-ms.custom: sap:connecting-to-a-session-or-desktop, csstroubleshoot
+ms.custom: sap:Remote Desktop Services and Terminal Services\Session connectivity, csstroubleshoot
 ---
 # "Remote Desktop cannot verify the identity of the remote computer" when connecting to a remote machine
 

@@ -3,7 +3,7 @@ title: "Scenario guide: Wallpaper GPO doesn't apply on some client computers"
 description: This article introduces a troubleshooting scenario in which the Wallpaper GPO doesn't apply on some client computers.
 ms.topic: troubleshooting
 ms.date: 12/26/2023
-ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot
+ms.custom: sap:Group Policy\Problems applying Group Policy, csstroubleshoot
 ---
 # Scenario guide: Wallpaper GPO doesn't apply on some client computers
 

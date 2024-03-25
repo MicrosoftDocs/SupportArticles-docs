@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, oweindl
-ms.custom: sap:permissions-access-control-and-auditing, csstroubleshoot
+ms.custom: sap:Windows Security Technologies\AD Object Permissions, access control, delegation, AdminSDHolder and auditing, csstroubleshoot
 ---
 # Inherited permissions are not automatically updated when you move folders
 
