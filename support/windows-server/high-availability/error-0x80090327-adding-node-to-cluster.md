@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, vlvasque, shasankp, ansol, v-lianna
-ms.custom: sap:initial-cluster-creation-or-adding-node, csstroubleshoot, ikb2lmc
+ms.custom: sap:Clustering and High Availability\Initial Cluster Creation or Adding node, csstroubleshoot, ikb2lmc
 ---
 # Error 0x80090327 when adding a node to a cluster
 

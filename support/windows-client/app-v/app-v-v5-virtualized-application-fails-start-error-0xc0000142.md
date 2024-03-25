@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, gautama
-ms.custom: sap:application-does-not-load-or-run, csstroubleshoot
+ms.custom: sap:Application Virtualization\Clients\Application does not load or run, csstroubleshoot
 ---
 # An App-V v5 virtualized application fails to start with error 0xc0000142
 

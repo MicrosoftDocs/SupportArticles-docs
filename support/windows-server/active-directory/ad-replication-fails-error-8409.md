@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, chrisrob, herbertm
-ms.custom: sap:active-directory-replication, csstroubleshoot
+ms.custom: sap:Active Directory\Active Directory replication and topology, csstroubleshoot
 ---
 # Error 8409 and AD replication fails after you restore or undelete AD objects in Windows Server 2016
 

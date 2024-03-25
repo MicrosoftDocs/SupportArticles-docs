@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, marcush
-ms.custom: sap:virtual-machine-will-not-boot, csstroubleshoot
+ms.custom: sap:System Performance\Startup or Pre-logon Reliability (crash, errors, bug check or Blue Screen), csstroubleshoot
 ---
 # Hyper-V virtual machine can't start when System Guard Secure Launch is enabled
 

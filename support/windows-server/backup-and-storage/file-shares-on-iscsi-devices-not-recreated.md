@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:iscsi, csstroubleshoot
+ms.custom: sap:Backup, Recovery, Disk, and Storage\ISCSI, csstroubleshoot
 ---
 # File shares on iSCSI devices may not be re-created when you restart the computer
 

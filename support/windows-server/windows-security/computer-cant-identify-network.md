@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, clandis, ioanc
-ms.custom: sap:secure-channel-issues, csstroubleshoot
+ms.custom: sap:Windows Security Technologies\Netlogon including Secure Channel and DC Locator issues, csstroubleshoot
 ---
 # A computer can't identify the network when the computer is running Windows Vista, Windows Server 2008, Windows 7, or Windows Server 2008 R2, and is a member of a child domain
 
