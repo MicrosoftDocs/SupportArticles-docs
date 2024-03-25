@@ -86,7 +86,7 @@ The configuration of the federated domain has to be repaired in the scenarios th
 - [2618887 ](https://support.microsoft.com/help/2618887)  "Federation service identifier specified in the AD FS 2.0 server is already in use." error when you try to set up another federated domain in Microsoft 365, Azure, or Intune    
 - [2713898 ](https://support.microsoft.com/help/2713898)  "There was a problem accessing the site" error from AD FS when a federated user signs in to Microsoft 365, Azure, or Intune     
 - [2647020 ](https://support.microsoft.com/help/2647020) "Your organization could not sign you in to this service" error and "80041317" or "80043431" error code when a federated user tries to sign in to Microsoft 365   
-- The Federation Service name in AD FS is changed. For more info, go to the following Microsoft website: [AD FS 2.0: How to Change the Federation Service Name](https://social.technet.microsoft.com/wiki/contents/articles/ad-fs-2-0-how-to-change-the-federation-service-name.aspx)   
+- The Federation Service name in AD FS is changed.
 
 To repair the federated domain configuration on a domain-joined computer that has Azure Active Directory module for Windows PowerShell installed, follow these steps.
 
