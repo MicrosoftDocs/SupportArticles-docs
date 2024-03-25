@@ -9,6 +9,7 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.reviewer: gregmans
 ms.custom: 
+  - sap:Sending, Receiving, Synchronizing, or viewing email\Email remains in the Outbox
   - Outlook for Windows
   - CSSTroubleshoot
 search.appverid: 

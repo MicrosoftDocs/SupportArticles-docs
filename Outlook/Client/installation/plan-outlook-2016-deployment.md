@@ -7,6 +7,7 @@ ms.reviewer:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:User Interface features and Configuration\Help
   - Outlook for Windows
   - CI 167136
   - CSSTroubleshoot

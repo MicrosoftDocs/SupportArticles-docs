@@ -6,6 +6,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Calendar\Reminders
   - Outlook for Windows
   - CSSTroubleshoot
 ms.reviewer: gbratton, hugopanao, laurentc, meerak, v-trisshores

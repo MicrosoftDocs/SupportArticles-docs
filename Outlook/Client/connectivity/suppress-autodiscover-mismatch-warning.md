@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Exchange Mailbox Accounts\Autodiscover
   - Outlook for Windows
   - CI 119623
   - CSSTroubleshoot

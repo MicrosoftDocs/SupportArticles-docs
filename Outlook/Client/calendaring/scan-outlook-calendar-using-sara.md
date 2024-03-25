@@ -6,6 +6,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Calendar\Other
   - Outlook for Windows
   - CSSTroubleshoot
   - CI 158167

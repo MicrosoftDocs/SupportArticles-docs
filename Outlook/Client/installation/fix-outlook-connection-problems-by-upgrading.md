@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Product Stability, startup or Shutdown and perform\Network disconnects, password or credentials prompt
   - Outlook for Windows
   - CSSTroubleshoot
 ms.reviewer: gbratton, nical, riguy, ronild, mhaque

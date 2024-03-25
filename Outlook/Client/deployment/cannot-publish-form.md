@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:User Interface features and Configuration\Group Policy
   - Outlook for Windows
   - CI 148498
   - CSSTroubleshoot
