@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Migration
   - CI 167780
   - Exchange Hybrid
   - CSSTroubleshoot
