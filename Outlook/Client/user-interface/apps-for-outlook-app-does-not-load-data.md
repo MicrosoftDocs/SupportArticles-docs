@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Data Protection and Security\Other
   - Outlook for Windows
   - CSSTroubleshoot
 ms.reviewer: TasitaE

@@ -9,6 +9,7 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.reviewer: aruiz
 ms.custom: 
+  - sap:Exchange Mailbox Accounts\Other
   - Outlook for Windows
   - CI 119623
   - CSSTroubleshoot

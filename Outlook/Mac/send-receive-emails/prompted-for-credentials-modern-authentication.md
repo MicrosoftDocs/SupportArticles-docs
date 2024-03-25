@@ -9,6 +9,7 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.reviewer: sercast, tasitae
 ms.custom: 
+  - sap:Connectivity\
   - Outlook for Mac
   - CSSTroubleshoot
 search.appverid: 

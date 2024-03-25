@@ -8,6 +8,7 @@ ms.topic: troubleshooting
 manager: dcscontentpm
 localization_priority: Normal
 ms.custom: 
+  - sap:Client Connectivity
   - Exchange Online
   - CSSTroubleshoot
   - SaRA-OutlookWontStart

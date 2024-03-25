@@ -8,6 +8,7 @@ localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Recipients management
   - Exchange Online
   - CSSTroubleshoot
 search.appverid: 

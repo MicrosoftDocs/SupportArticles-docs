@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:People or Contacts\Global Address List (GAL)
   - Outlook for Windows
   - CSSTroubleshoot
 ms.reviewer: pasharma, gregmans, randyto, adean, gbratton, jamesmi

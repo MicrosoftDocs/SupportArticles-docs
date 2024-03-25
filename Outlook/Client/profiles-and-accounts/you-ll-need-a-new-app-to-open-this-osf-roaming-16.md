@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Install, Update, Activate, and Deploy\Other
   - Outlook for Windows
   - CSSTroubleshoot
 ms.reviewer: tasitae

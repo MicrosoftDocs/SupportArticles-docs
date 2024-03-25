@@ -6,6 +6,7 @@ ms.author: meerak
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Groups, Lists, Contacts, Public Folders
   - Exchange Online
   - CSSTroubleshoot
 manager: dcscontentpm

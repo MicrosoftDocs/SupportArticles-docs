@@ -13,6 +13,7 @@ search.appverid:
 appliesto: 
   - Teams
 ms.custom: 
+  - sap:Teams Admin\TAC (Teams Admin Center)
   - CI 124054
   - CSSTroubleshoot
 ms.reviewer: salarson

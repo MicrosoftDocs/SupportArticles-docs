@@ -6,6 +6,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Calendar\Other
   - CSSTroubleshoot
 appliesto: 
 - Outlook 2013

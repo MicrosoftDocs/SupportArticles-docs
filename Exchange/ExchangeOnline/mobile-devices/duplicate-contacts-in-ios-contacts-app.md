@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Client Connectivity
   - CI 144749
   - Outlook for iOS
   - CSSTroubleshoot

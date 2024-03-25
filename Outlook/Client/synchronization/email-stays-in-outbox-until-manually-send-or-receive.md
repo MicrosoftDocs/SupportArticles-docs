@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Sending, Receiving, Synchronizing, or viewing email\Message format (HTML, Rich Text, Plain Text)
   - Outlook for Windows
   - CSSTroubleshoot
 ms.reviewer: gregmans

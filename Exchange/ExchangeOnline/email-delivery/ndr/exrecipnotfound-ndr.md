@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Mail Flow
   - Exchange Online
   - CSSTroubleshoot
   - 'Associated content asset: 4555312'

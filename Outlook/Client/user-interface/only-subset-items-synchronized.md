@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: meerak
 ms.custom: 
+  - sap:Exchange Mailbox Accounts\Cached mode synchronization
   - Outlook for Windows
   - CSSTroubleshoot
 appliesto: 

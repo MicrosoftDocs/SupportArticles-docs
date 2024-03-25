@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:People or Contacts\People Pane
   - Outlook for Windows
   - CSSTroubleshoot
 ms.reviewer: JEFFBE, TasitaE

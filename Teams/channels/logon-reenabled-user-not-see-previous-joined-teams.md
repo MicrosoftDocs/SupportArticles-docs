@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Teams and Channels\Managing Teams
   - CI 141869
   - CSSTroubleshoot
 ms.reviewer: 

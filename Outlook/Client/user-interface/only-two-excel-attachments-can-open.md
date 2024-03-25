@@ -11,6 +11,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: rschaffr
 ms.custom: 
+  - sap:Sending, Receiving, Synchronizing, or viewing email\Email attachments not visible
   - Outlook for Windows
   - CSSTroubleshoot
   - CI 124895

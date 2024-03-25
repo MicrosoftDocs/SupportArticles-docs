@@ -9,6 +9,7 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.reviewer: aruiz, doakm
 ms.custom: 
+  - sap:People or Contacts\Personal Distribution Lists
   - Outlook for Windows
   - CSSTroubleshoot
 search.appverid: 

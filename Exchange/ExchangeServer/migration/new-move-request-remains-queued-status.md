@@ -9,6 +9,7 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.reviewer: batre, robwhal, bradhugh, v-six
 ms.custom: 
+  - sap:High Availability, Health, Performance, Content Indexing\Server Performance Issue (high CPU, high Memory, Disk Utilization)
   - Exchange Server
   - CSSTroubleshoot
 search.appverid: 

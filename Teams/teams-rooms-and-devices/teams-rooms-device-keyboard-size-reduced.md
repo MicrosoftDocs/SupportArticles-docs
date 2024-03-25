@@ -15,6 +15,7 @@ search.appverid:
 appliesto: 
   - Microsoft Teams
 ms.custom: 
+  - sap:Msft Teams Rooms Windows (MTRW)\
   - CI176375
 ---
 # On-screen keyboard size is reduced on some Teams Rooms devices

@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Administrator Tasks
   - Exchange Online
   - CSSTroubleshoot
 ms.reviewer: rroddy, v-six

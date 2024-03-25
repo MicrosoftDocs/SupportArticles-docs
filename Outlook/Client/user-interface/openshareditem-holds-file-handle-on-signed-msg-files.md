@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Developer Issues\Macros
   - Outlook for Windows
   - CSSTroubleshoot
 ms.reviewer: 

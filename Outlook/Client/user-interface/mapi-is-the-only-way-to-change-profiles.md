@@ -9,6 +9,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Exchange Mailbox Accounts\Other
   - Outlook for Windows
   - CSSTroubleshoot
 ms.reviewer: danba, brijs, Andrei.Ghita, gbratton, dvespa

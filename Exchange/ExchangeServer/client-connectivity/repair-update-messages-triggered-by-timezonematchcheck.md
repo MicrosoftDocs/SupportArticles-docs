@@ -9,6 +9,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Sharing\Issue viewing Free Busy
   - Exchange Server
   - CSSTroubleshoot
 ms.reviewer: jmartin, v-six

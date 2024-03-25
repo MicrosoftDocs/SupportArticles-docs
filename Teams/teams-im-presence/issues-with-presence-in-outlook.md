@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Teams People & Presence\Presence from Outlook (Free-Busy)
   - CI 126269
   - CSSTroubleshoot
 ms.reviewer: sylviebo, premgan

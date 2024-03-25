@@ -11,6 +11,7 @@ ms.topic: troubleshooting
 ms.author: meerak
 ms.editor: v-jesits
 ms.custom: 
+  - sap:Sending, Receiving, Synchronizing, or viewing email\Other
   - Outlook for Windows
   - CSSTroubleshoot
 appliesto: 

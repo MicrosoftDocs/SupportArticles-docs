@@ -6,6 +6,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Exchange Mailbox Accounts\Public folders
   - Outlook for Windows
   - CSSTroubleshoot
   - CI 167385

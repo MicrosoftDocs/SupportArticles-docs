@@ -20,6 +20,7 @@ search.appverid:
   - MET150
 audience: Admin
 ms.custom: 
+  - sap:Mail Flow
   - MiniMaven
   - CSSTroubleshoot
   - SaRASetup

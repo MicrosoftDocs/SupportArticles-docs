@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Teams Clients\Web client
   - CI 122983
   - CSSTroubleshoot
 ms.reviewer: kellybos

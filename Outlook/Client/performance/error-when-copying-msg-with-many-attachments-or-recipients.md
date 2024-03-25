@@ -13,6 +13,7 @@ search.appverid:
 appliesto: 
   - All versions of Outlook
 ms.custom: 
+  - sap:Sending, Receiving, Synchronizing, or viewing email\Errors sending or receiving email
   - Outlook for Windows
   - CI 111840
   - CSSTroubleshoot

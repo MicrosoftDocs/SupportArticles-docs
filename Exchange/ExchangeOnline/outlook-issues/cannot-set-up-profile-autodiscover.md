@@ -7,6 +7,7 @@ audience: ITPro
 ms.topic: troubleshooting
 manager: dcscontentpm
 ms.custom: 
+  - sap:Client Connectivity
   - Exchange Online
   - CSSTroubleshoot
   - OutlookSetupProfile

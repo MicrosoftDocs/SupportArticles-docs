@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Mail Flow\Issues with Internal Mail Flow
   - Exchange Server
   - CSSTroubleshoot
 ms.reviewer: scottlan, deedi, v-six
