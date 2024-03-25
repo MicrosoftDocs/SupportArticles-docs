@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot errors when deploying extensions in an AKS cluster
 description: Learn how to troubleshoot errors that occur when you deploy cluster extensions in an Azure Kubernetes Service (AKS) cluster.
-ms.date: 03/22/2024
+ms.date: 03/25/2024
 author: maanasagovi
 ms.author: maanasagovi
 editor: v-jsitser
@@ -108,7 +108,7 @@ If the recommended solution isn't possible in your situation, create a CoreDNS o
 
 To create a CoreDNS override, follow these steps:
 
-1. Find the public IP address of the extension data plane endpoint by running the `nslookup` command. Make sure that you change the region (i.e `eastus2euap`) based on the location of your AKS cluster:
+1. Find the public IP address of the extension data plane endpoint by running the `nslookup` command. Make sure that you change the region (for example, `eastus2euap`) based on the location of your AKS cluster:
 
    ```console
    nslookup <region>.dp.kubernetesconfiguration.azure.com
@@ -126,7 +126,7 @@ To create a CoreDNS override, follow these steps:
    kubectl get configmap -n kube-system coredns-custom -o yaml > coredns.backup.yaml
    ```
 
-1. Override the mapping for the regional (i.e `eastus2euap`) data plane endpoint to the public IP address. To do this, create a YAML file that's named *corednsms.yaml*, and then copy the following example configuration into the new file. (Make sure that you update the address and the host name by using the values for your environment.)
+1. Override the mapping for the regional (for example, `eastus2euap`) data plane endpoint to the public IP address. To do this, create a YAML file that's named *corednsms.yaml*, and then copy the following example configuration into the new file. (Make sure that you update the address and the host name by using the values for your environment.)
 
    ```yaml
    apiVersion: v1
