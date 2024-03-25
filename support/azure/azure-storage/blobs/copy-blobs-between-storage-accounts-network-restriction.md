@@ -1,6 +1,6 @@
 ---
 title: Use AzCopy to copy blobs between storage accounts with access restriction
-description: Introduces how to copy blobs between storage accounts with AzCopy and how to implement this when network restrictions are set for the storage accounts.
+description: Introduces how to copy blobs between storage accounts with AzCopy and how to implement the copy operation when network restrictions are set for the storage accounts.
 ms.date: 03/25/2024
 ms.topic: how-to
 ms.service: azure-storage
@@ -8,11 +8,11 @@ ms.reviewer: jiajwu, jeromeliu, azurestocic, v-weizhu
 ---
 # Use AzCopy to copy blobs between Azure storage accounts with network restrictions
 
-This article introduces how to copy blobs between storage accounts by using the AzCopy command-line utility and how to implement the copy operation when network restrictions are configured for the storage accounts.
+This article introduces how to copy blobs between storage accounts by using the AzCopy command-line utility. It also explains how to implement the copy operation when network restrictions are configured for the storage accounts.
 
 ## Background
 
-Copying blob files between two storage accounts is a common requirement for many Azure users. There are several reasons for this, such as data backup, storage account migration, or meeting business requirements. Azure Storage supports directly copying blobs from one storage account to another, which can be implemented by using the AzCopy command-line utility. Users don't need to download files to local disks or buffers and then upload them again.
+Copying blob files between two storage accounts is a common requirement for many Azure users. Azure Storage supports directly copying blobs from one storage account to another, which can be implemented by using the AzCopy command-line utility. Users don't need to download files to local disks or buffers and then upload them again.
 
 Copying blobs between two storage accounts by using AzCopy doesn't rely on the network bandwidth of your local computer. This method can take advantage of the performance of storage accounts and Azure Virtual Network to achieve better throughput than downloading and uploading files. There are no bandwidth charges if both storage accounts are in the same region.
 
@@ -61,18 +61,18 @@ The following image shows the process of copying blobs between storage accounts 
 Here's the full process of this mechanism for the two scenarios:
 
 1. The client sends a PutBlockfromURL request to the destination storage.
-2. The destination storage receives the requests,and it tries to get blocks from the given source URL. However, since the destination storage hasn't been allowed by the source firewall, it will receive a "403 Forbidden" error.
-3. After the destination storage receives the "403 Forbidden" error, it sents another GetBlob request on behalf of the client. If the client has access to the source storage, the destination will be able to get the blocks from the source and return a success response code to the client.
+2. The destination storage receives the requests, and it tries to get blocks from the given source URL. However, since the destination storage hasn't been allowed by the source firewall, it receive a "403 Forbidden" error.
+3. After the destination storage receives the "403 Forbidden" error, it sends another GetBlob request on behalf of the client. If the client has access to the source storage, the destination will be able to get the blocks from the source and return a success response code to the client.
 4. The client sends PutBlockList to the destination storage to commit the blocks and finish the process after receiving a success response code from the request.
 
 ## Copy blobs between storage accounts in a Hub-spoke architecture using private endpoints
-A 403 Error occurs when using AzCopy to copy blobs between Storage accounts connected to private endpoints in different Spoke virtual networks(VNETs) from a VM in a Hub VNET. You can find a "403 This request is not authorized to perform this operation - CannotVerfiyCopySource" error in the AzCopy logs or in the Azure Storage logs. The following architecture diagram shows the scenario in which the error occurs.
+A 403 Error occurs when using AzCopy to copy blobs between Storage accounts connected to private endpoints in different Spoke virtual networks (VNETs) from a VM in a Hub VNET. You can find a "403 This request is not authorized to perform this operation - CannotVerfiyCopySource" error in the AzCopy logs or in the Azure Storage logs. The following architecture diagram shows the scenario in which the error occurs.
 
 :::image type="content" source="media/copy-blobs-between-storage-accounts-network-restriction/hub-spoke-network-topology-architecture.png" alt-text="Diagram that shows the 403 error of copying blobs between storage accounts in a Hub & Spoke architecture using Private Endpoints.":::
 
 
 ### Workaround 1: Create a private endpoint for the destination storage account in the source VNET
-A Possible workaround is to create a private endpoint for the destination storage account in the source VNET. This configuration will allow the VM to successfully copy the blobs between the storage accounts by using AzCopy. The following architecture diagram shows the process of copying blobs between storage accounts in the Workaround 1.
+A Possible workaround is to create a private endpoint for the destination storage account in the source VNET. This configuration allows the VM to successfully copy the blobs between the storage accounts by using AzCopy. The following architecture diagram shows the process of copying blobs between storage accounts in the Workaround 1.
 
 :::image type="content" source="media/copy-blobs-between-storage-accounts-network-restriction/hub-spoke-network-topology-architecture-mitigation-1.png" alt-text="Diagram that shows the process of copying blobs between storage accounts in Workaround 1.":::
 
@@ -86,7 +86,7 @@ If you're unable to implement the previously mentioned workarounds or are restri
 
 1. Create a temporary storage account in the same region as the source storage account and the destination storage account.
 2. Use AzCopy to copy the data from the source storage account to the temporary storage account.
-3. Copy the data from the temporary storage account to the destination storage account. Make sure that the temporary storage account has a private endpoint in the same VNET as the account before performing the data transfer.. 
+3. Copy the data from the temporary storage account to the destination storage account. Make sure that the temporary storage account has a private endpoint in the same VNET as the account before performing the data transfer.
 
 ### Workaround 4: Use a VM and download the data to the VM and then upload the data to the destination storage account
 Only use this workaround if other methods aren't feasible. Use a VM to download the data from the source storage account, and then upload it to the destination storage account. This can be done with AzCopy. Make sure that the VM's size and disk capacity are suitable for the data transfer process.
