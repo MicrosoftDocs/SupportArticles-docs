@@ -9,6 +9,7 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.reviewer: dpaul, cmcgurk, v-six
 ms.custom: 
+  - sap:High Availability, Health, Performance, Content Indexing\Database or Server Failed Over Unexpectedly
   - Exchange Server
   - CSSTroubleshoot
 search.appverid: 

@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Plan and Deploy\Need help with Active Directory\DNS\Network Exchange pre-requisites
   - Exchange Server
   - CSSTroubleshoot
 ms.reviewer: sschiem, v-six

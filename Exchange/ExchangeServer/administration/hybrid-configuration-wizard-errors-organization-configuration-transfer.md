@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Migration\Cross organization
   - Exchange Server
   - CSSTroubleshoot
 ms.reviewer: kchandra, v-six

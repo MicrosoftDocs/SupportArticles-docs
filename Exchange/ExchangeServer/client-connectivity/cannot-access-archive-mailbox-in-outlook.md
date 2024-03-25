@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Clients and Mobile\Can't Connect to Mailbox with Outlook
   - Outlook for Windows
   - CSSTroubleshoot
 ms.reviewer: robwhal, jmartin, excontent, v-six
