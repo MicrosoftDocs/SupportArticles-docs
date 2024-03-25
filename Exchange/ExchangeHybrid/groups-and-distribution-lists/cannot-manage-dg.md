@@ -7,6 +7,7 @@ audience: ITPro
 ms.topic: troubleshooting
 manager: dcscontentpm
 ms.custom: 
+  - sap:Groups, Lists, Contacts, Public Folders
   - Exchange Hybrid
   - CSSTroubleshoot
 localization_priority: Normal

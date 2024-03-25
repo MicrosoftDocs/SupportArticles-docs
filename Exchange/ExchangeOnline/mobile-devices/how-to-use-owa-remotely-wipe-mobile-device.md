@@ -6,6 +6,7 @@ audience: ITPro
 ms.topic: how-to
 localization_priority: Normal
 ms.custom: 
+  - sap:Client Connectivity
   - CSSTroubleshoot
 appliesto: 
 - Exchange Online
