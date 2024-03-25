@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: meerak
 ms.custom: 
+  - sap:Exchange Mailbox Accounts\Other
   - Outlook for Windows
   - CSSTroubleshoot
 appliesto: 

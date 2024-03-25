@@ -11,6 +11,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.reviwer: gabesl
 ms.custom: 
+  - sap:Sending, Receiving, Synchronizing, or viewing email\Blank or incorrectly displayed message body
   - Outlook for Windows
   - CSSTroubleshoot
   - CI 124779

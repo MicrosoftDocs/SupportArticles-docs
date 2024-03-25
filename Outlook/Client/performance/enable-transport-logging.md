@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: meerak
 ms.custom: 
+  - sap:Product Stability, startup or Shutdown and perform\Other
   - Outlook for Windows
   - CSSTroubleshoot
 appliesto: 
