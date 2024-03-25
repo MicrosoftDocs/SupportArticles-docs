@@ -29,7 +29,7 @@ When an SSO is enabled for Microsoft 365 via AD FS, you should see the Relying P
 
 :::image type="content" source="media/supportmultipledomain-switch-when-manage-sso/relying-party-trust-created-for-o365.png" alt-text="Screenshot shows the Relying Party trust created for Microsoft 365.":::
 
-### Commands that would create the RP trust for Microsoft 365 are below
+### Commands that would create the RP trust for Microsoft 365
 
 ```PowerShell
 New-MsolFederatedDomain -DomainName<domain>
@@ -55,7 +55,7 @@ Earlier before the AD FS [Rollup 1](https://support.microsoft.com/kb/2607496) an
 
 "Currently, Microsoft 365 customers who use single sign-on (SSO) through AD FS 2.0 and have multiple top-level domains for users' user principal name (UPN) suffixes within their organization (for example, @contoso.com or @fabrikam.com) are required to deploy a separate instance of AD FS 2.0 Federation Service for each suffix.  There's now a rollup for AD FS 2.0 ([https://support.microsoft.com/kb/2607496](https://support.microsoft.com/kb/2607496)) that works in conjunction with the "SupportMultipleDomain" switch to enable the AD FS server to support this scenario without requiring additional AD FS 2.0 servers."
 
-### Commands that would create the RP trust for Microsoft 365 are below
+### Commands that would create the RP trust for Microsoft 365
 
 ```powershell
 New-MsolFederatedDomain -DomainName<domain>-SupportMultiDomain
@@ -68,9 +68,9 @@ Convert-MsolDomainToFederated -DomainName <domain>-supportMultipleDomain
 `Get-MsolFederationProperty -DomainName <domain>` on the federated domains now shows that the "FederationServiceIdentifier" is different for AD FS and Microsoft 365. Every federated domain will have the "FederationServiceIdentifier" as
 `http://<domainname>/adfs/services/trust/`, whereas the AD FS configuration still has `http://STSname/adfs/Services/trust`.
 
-Due to this mismatch in configuration, we need to ensure that when a token is sent to Microsoft 365 the issuer mentioned in it, is the same as one configured for the Domain in Microsoft 365. Otherwise, you'll get the error below:
+Due to this mismatch in configuration, we need to ensure that when a token is sent to Microsoft 365 the issuer mentioned in it, is the same as one configured for the Domain in Microsoft 365. Otherwise, you'll get the error.
 
-So when adding or updating RP trust with SupportMultipleDomain switch, a third claim rule is automatically added to the RP trust for Microsoft 365.
+So when you add or update RP trust with SupportMultipleDomain switch, a third claim rule is automatically added to the RP trust for Microsoft 365.
 
 Default third rule:
 
