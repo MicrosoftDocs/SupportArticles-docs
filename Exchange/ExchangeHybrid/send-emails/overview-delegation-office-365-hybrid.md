@@ -7,6 +7,7 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Mail Flow
   - Exchange Hybrid
   - CSSTroubleshoot
 localization_priority: Normal

@@ -6,6 +6,7 @@ ms.author: meerak
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Mail Flow
   - Exchange Online
   - CSSTroubleshoot
   - CI 167832
