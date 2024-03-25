@@ -1,7 +1,7 @@
 ---
 title: Antivirus scanning exclusions
 description: This article describes the system processes that you should consider excluding from antivirus scanning on computers that are running Team Foundation Server.
-ms.date: 02/09/2022
+ms.date: 03/25/2024
 ms.custom: sap:Installation, Migration, and Move
 ms.reviewer: vimalt, manojm
 ms.topic: article
