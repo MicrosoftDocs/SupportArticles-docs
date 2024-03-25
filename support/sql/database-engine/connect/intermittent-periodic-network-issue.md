@@ -1,7 +1,7 @@
 ---
 title: Intermittent or periodic issues with connecting to SQL Server
 description: Troubleshoots intermittent or periodic network issues in SQL Server connectivity.
-ms.date: 03/08/2024
+ms.date: 03/25/2024
 ms.custom: sap:Connection issues
 ms.reviewer: mastewa, prmadhes, jopilov, v-sidong
 ---
@@ -47,16 +47,16 @@ Some causes, such as antivirus, can be difficult to prove, but are still common.
 
 - On Windows machines, collect network traces using *SQLTrace.ps1*.
 
-  Select the download link on the [SQL Trace home page](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SQLTRACE) and unzip to a folder, such as *C:\MSDATA*.
+  Select the download link on the [SQL Trace home page](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SQLTRACE) and unzip the downloaded file to a folder, such as *C:\MSDATA*.
 
   Follow these steps to prepare and take the trace. Steps 1 and 2 only need to be done once.
 
   1. Open the *SQLTrace.ini* file and turn off the following settings:
 
-     BIDTrace=no, AuthTrace=no, and EventViewer=no
+     `BIDTrace=no`, `AuthTrace=no`, and `EventViewer=no`
 
   1. Save the file.
-  1. Open PowerShell as an Administrator and change directory to the folder containing *SQLTrace.ps1*.
+  1. Open PowerShell as an administrator and change the directory to the folder containing *SQLTrace.ps1*.
 
      ```powershell
      CD C:\MSDATA
@@ -75,7 +75,7 @@ Some causes, such as antivirus, can be difficult to prove, but are still common.
      .\SQLTrace.ps1 -stop
      ```
 
-  1. Zip the output folder and upload to Microsoft.
+  1. Zip the output folder and upload it to Microsoft.
 
 - On non-Windows computers, use TCPDUMP or WireShark to collect a packet capture.
 
@@ -115,23 +115,23 @@ For more information about dropped connections, see:
 
 #### Both the server trace and the client trace agree the issue is on the client
 
-If both traces show a delay or no response on the client, or if the client issues an ACK+RESET after acknowledging a server response, or otherwise, closes the connection early during the login sequence, you need to take a BID trace and a NETSH trace on the client to look inside the TCP/IP stack and what the driver is thinking. This is common if the antivirus or other network filter drivers delay receiving the packet or sending the reply. Connection time-outs could also be due to a slow DNS response or slow security API that was called before the initial SYN packet was sent over the wire.
+If both traces show a delay or no response on the client, or if the client issues an ACK+RESET after acknowledging a server response, or otherwise, closes the connection early during the login sequence, you need to take a BID trace and a NETSH trace on the client to look inside the TCP/IP stack and what the driver is thinking. This is common if the antivirus or other network filter drivers delay receiving the packet or sending the reply. Connection timeouts could also be due to a slow DNS response or slow security API that was called before the initial SYN packet was sent over the wire.
 
 Check SQL Network Analyzer's ephemeral ports report and make sure the client isn't running out of outbound ports.
 
 If the client has a long delay before sending the SYN packet, you may see a pattern showing only the TCP 3-way opening handshake, followed immediately, or sometimes after sending the PreLogin packet, by an ACK+FIN originating from the client.
 
-##### Collect a Network Trace and BID Trace to isolate client issues on Windows
+##### Collect a network trace and BID trace to isolate client issues on Windows
 
 1. Open the *SQLTrace.ini* file and turn the following settings back on:
 
-   BIDTrace=Yes, AuthTrace=Yes, and EventViewer=Yes
+   `BIDTrace=Yes`, `AuthTrace=Yes`, and `EventViewer=Yes`
 
 1. Configure the `BIDProviderList` in *SQLTrace.ini* to match the driver your application is using.
 
-   `.NET System.Data.SqlClient` is enabled by default. If that's not the driver you're using, disable `BIDProviderList` by adding # to the front of the line and remove it from the beginning of the ODBC or OLEDB list. This will capture all supported drivers of that type. For more information, see [INI Configuration](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SQLTRACE#ini-configuration)。
+   `.NET System.Data.SqlClient` is enabled by default. If that's not the driver you're using, disable `BIDProviderList` by adding `#` to the front of the line and remove it from the beginning of the ODBC or OLEDB list. This will capture all supported drivers of that type. For more information, see [INI Configuration](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SQLTRACE#ini-configuration).
 1. Save the file.
-1. Open PowerShell as an Administrator and change directory to the folder containing *SQLTrace.ps1*.
+1. Open PowerShell as an administrator and change the directory to the folder containing *SQLTrace.ps1*.
 
    ```powershell
    CD C:\MSDATA
@@ -148,7 +148,7 @@ If the client has a long delay before sending the SYN packet, you may see a patt
 
 1. Restart the service or application you're tracing.
 
-   For some applications, such as SSIS packages, a new instance of DTEXEC or ISServerExec are launched when the package is run, so a restart doesn't make sense.
+   For some applications, such as SQL Server Integration Services (SIS) packages, a new instance of DTEXEC or ISServerExec is launched when the package is run, so a restart doesn't make sense.
 
 1. Start the trace collection.
 
@@ -163,9 +163,9 @@ If the client has a long delay before sending the SYN packet, you may see a patt
    .\SQLTrace.ps1 -stop
    ```
 
-1. Zip the output folder and upload to Microsoft.
+1. Zip the output folder and upload it to Microsoft.
 
-For tracing other Microsoft SQL Server drivers, see the following articles. Perform with a network trace.
+To trace other Microsoft SQL Server drivers, see the following articles. Perform using a network trace.
 
 - [Linux and Mac ODBC Driver BID Tracing](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/Collect-a-SQL-Driver-BID-Trace#linux-and-mac-odbc-driver-bid-tracing)
 - [Collect a .NET Core SQL Driver Trace](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/Collect-a-.NET-Core-SQL-Driver-Trace)
@@ -173,7 +173,7 @@ For tracing other Microsoft SQL Server drivers, see the following articles. Perf
 - [Use PerfView to collect trace log](/sql/connect/ado-net/enable-eventsource-tracing#use-perfview-to-collect-trace-log)
 - [Microsoft JDBC Driver](/sql/connect/jdbc/tracing-driver-operation)
 
-For tracing third-party Microsoft SQL Server drivers, please consult the vendor documentation.
+To tracing third-party Microsoft SQL Server drivers, see the vendor documentation.
 
 #### Both the server trace and the client trace agree the issue is on the server
 
@@ -185,7 +185,7 @@ If your application uses Multiple Active Result Sets (MARS), it ends with a RESE
 
 #### Connection pooling
 
-See [Connection pooling](intermittent-periodic-authentication.md#connection-pooling) for more details.
+For more information, see [Connection pooling](intermittent-periodic-authentication.md#connection-pooling).
 
 If connection pooling is used, conversations in the network trace will typically be quite long. You can use the CSV file generated by [SQL Server Network Analyzer](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SQLNA) to sort and filter by protocols and frames. You probably won't see the beginning or end frames if the network capture is less than half an hour. If many conversations are shorter than 30 frames from the SYN packet to the ACK+FIN packet, this indicates non-pooled connections. If these are mixed with a few longer conversations, suspect background non-pooled connections caused by executing commands on a non-MARS connection while reading a result set.
 
@@ -195,7 +195,7 @@ The ephemeral port report will show the number of new connections over the lifet
 
 ACK+RESET is typically seen when the application or Windows aborts a connection. This is generally due to a low-level TCP error. The packet informs the other computer to stop sending immediately. However, if the server is in the middle of transmitting, one or two packets may arrive at the client after the ACK+RESET is sent. Since the port is closed, the operating system sends a RESET packet. This also happens if packets arrive after the ACK+FIN packet that's not part of the normal closing handshake.
 
-Some third-party drivers also send a ACK+RESET packet to close the connection instead of an ACK+FIN. Some probe connections can also do this. If the ACK+RESET packet isn't preceded by Keep-Alive packets, Retransmitted packets, or Zero Windows packets, and it comes from the client when a normal closing ACK+FIN might be expected, it could be benign.
+Some third-party drivers also send an ACK+RESET packet to close the connection instead of an ACK+FIN. Some probe connections can also do this. If the ACK+RESET packet isn't preceded by Keep-Alive packets, Retransmitted packets, or Zero Windows packets, and it comes from the client when a normal closing of ACK+FIN is expected, it might be benign.
 
 ### NETSTAT
 
@@ -217,7 +217,7 @@ Almost all packets sent from the client to the server or the server to the clien
 
 However, when uploading or downloading a large amount of data, the ACK packets may come after a series of data packets to help with flow control.
 
-The antivirus and filter drivers are very difficult to prove as the culprit. An empirical test is almost always required. Create an exception for the application or SQL Server in the antivirus, and then monitor it for 48 hours to see if the behavior improves. If an exception can't be set, uninstall the anti-virus program and reboot. Disabling it typically doesn't help as the anti-virus filter driver will still load. Only do this as a last resort if your edge protection is in place.
+The antivirus and filter drivers are very difficult to prove as the culprit. An empirical test is almost always required. Create an exception for the application or SQL Server in the antivirus, and then monitor it for 48 hours to see if the behavior improves. If an exception can't be set, uninstall the antivirus program and reboot. Disabling it typically doesn't help as the antivirus filter driver will still load. Only do this as a last resort if your edge protection is in place.
 
 Consult your network security admins. If the situation improves, you may need to work with the antivirus vendor to mitigate the issue. If it doesn't, other network filter drivers might be the culprit. The Windows Networking team can help evaluate the network stack.
 
@@ -231,11 +231,11 @@ For SQL Server, this could be the client or server machine. The network trace wi
 
 ### Ephemeral ports
 
-Running out of ephemeral ports is a relatively common cause of intermittent connection time-outs, especially if you don't see the SYN packet on the wire.
+Running out of ephemeral ports is a relatively common cause of intermittent connection timeouts, especially if you don't see the SYN packet on the wire.
 
 For incoming requests on the server, ports, such as 80 or 1433, can take up to 64,000 incoming connections per client IP address and are generally "unlimited" for all practical purposes.
 
-For outbound connections, on the other hand, the number of ports is limited and shared among all server connections. For Windows Vista, Windows 2008, and later, the default range is from port 49,152 to 65,535 (2^16 = 16,384 ports).
+For outbound connections, on the other hand, the number of ports is limited and shared among all server connections. For Windows Vista, Windows 2008, and later, the default range is from port 49152 to 65535 (2^16 = 16,384 ports).
 
 Normally, ports are held for four minutes (240 seconds) by the operating system before they're recycled and allowed to be reused by applications. This is to prevent port spoofing by malicious software or accidental redirection of a new connection to the previous holder of that port. Because of this delay, on Windows 2003, a client application can make only 17 connections per second to SQL Server, and the outbound port range is exhausted in less than four minutes. For Windows Vista, that number rises to 68 connections per second.
 
@@ -243,7 +243,7 @@ For applications such as IIS, each HTTP client may have one outgoing port to SQL
 
 ### Low kernel memory
 
-See [Issues related to low kernel memory](intermittent-periodic-authentication.md#issues-related-to-low-kernel-memory) for more details.
+For more information, see [Issues related to low kernel memory](intermittent-periodic-authentication.md#issues-related-to-low-kernel-memory).
 
 ### Disable offloading
 
