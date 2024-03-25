@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:User Interface features and Configuration\New mail and Outlook icon in the Windows notification area
   - Outlook for Windows
   - CSSTroubleshoot
 ms.reviewer: tmoore, tasitae, gregmans

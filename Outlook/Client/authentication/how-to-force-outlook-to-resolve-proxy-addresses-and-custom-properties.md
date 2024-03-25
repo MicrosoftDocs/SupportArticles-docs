@@ -6,6 +6,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:People or Contacts\Resolving email addresses and ambiguous name resolution
   - CSSTroubleshoot
 appliesto:
 - Microsoft Outlook 2010

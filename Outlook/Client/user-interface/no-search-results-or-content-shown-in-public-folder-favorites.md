@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Rules, search and Printing\Search results
   - Outlook for Windows
   - CSSTroubleshoot
 ms.reviewer: tasitae
