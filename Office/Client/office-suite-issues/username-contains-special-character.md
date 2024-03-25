@@ -1,6 +1,6 @@
 ---
 title: Error when you create a user name that contains a special character
-description: Describes an issue in which you receive an Invalid user name error message when you try to create a user name that contains special characters in Microsoft 365.
+description: Resolve the Invalid user name error message when you try to create a user name that contains special characters in Microsoft 365.
 author: helenclu
 manager: dcscontentpm
 date: 3/16/2020
@@ -29,21 +29,21 @@ When you create a user name that contains a special character in Microsoft 365, 
 
 Within the Microsoft 365 portal
 
-```adoc
+```output
 Invalid user name
 Only letters and numbers are allowed. No spaces.
 ```
 
 Within Microsoft Azure Active Directory module for Windows PowerShell
 
-```adoc
+```output
 New-MsolUser : Invalid value for parameter. Parameter Name: UserPrincipalName.
 At line:1 char:13
 ```
 
 Within Exchange Online Windows PowerShell
 
-```adoc
+```output
 A Windows Live error occurred while provisioning for "user+invalid_characters@contoso.com". The e-mail name contains invalid characters.
 ```
 
@@ -62,7 +62,7 @@ This behavior occurs because certain special characters aren't permitted in user
 However, the following exceptions apply:
 
 - An underscore (_) is permitted anywhere in the user name, including at the beginning or end of the name.
-- When creating a group, the number sign (#) **can** be used as part of the group's name. However, the email address you create for a distribution group or shared mailbox **cannot** use the # sign.  
+- When you create a group, the number sign (#) can be used as part of the group's name. However, the email address you create for a distribution group or shared mailbox can't use the # sign.  
 
 ## Solution
 
