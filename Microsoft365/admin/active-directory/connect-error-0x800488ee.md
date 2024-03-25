@@ -11,6 +11,7 @@ ms.topic: troubleshooting
 ms.custom: 
   - CSSTroubleshoot
   - has-azure-ad-ps-ref
+  - azure-ad-ref-level-one-done
 ms.author: luche
 appliesto: 
   - Cloud Services (Web roles/Worker roles)
@@ -26,6 +27,8 @@ ms.date: 10/20/2023
 ## PROBLEM
 
 Assume that Azure Multi-Factor Authentication was disabled for your admin account because you want to use the Azure Active Directory module for Windows PowerShell. (Admins who are enabled for Azure Multi-Factor Authentication can't use the Azure Active Directory module for Windows PowerShell.)
+
+[!INCLUDE [Azure AD PowerShell deprecation note](../../../includes/aad-powershell-deprecation-note.md)]
 
 When you open the Azure Active Directory module for Windows PowerShell and then run the **Connect-MsolService** cmdlet to try to connect to Microsoft 365, Azure, or Microsoft Intune, the cmdlet doesn't run as expected. Instead, you receive the following error message:
 
