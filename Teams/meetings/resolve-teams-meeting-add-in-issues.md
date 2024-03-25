@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Teams Meetings\Meeting Scheduling
   - CSSTroubleshoot
   - CI 162959
   - CI 171788

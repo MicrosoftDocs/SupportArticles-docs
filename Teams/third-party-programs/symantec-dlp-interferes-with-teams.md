@@ -13,6 +13,7 @@ search.appverid:
 appliesto: 
   - Microsoft Teams
 ms.custom: 
+  - sap:Teams Security and Compliance (Retention, etc)\DLP
   - CI 113425
   - CSSTroubleshoot
 ms.reviewer: scapero
