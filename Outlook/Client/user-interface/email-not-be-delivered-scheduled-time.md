@@ -6,6 +6,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Sending, Receiving, Synchronizing, or viewing email\Errors sending or receiving email
   - CSSTroubleshoot
 appliesto:
 - Outlook

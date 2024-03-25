@@ -11,6 +11,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: gbratton
 ms.custom: 
+  - sap:Rules, search and Printing\Search folders
   - Outlook for Windows
   - CSSTroubleshoot
 appliesto: 

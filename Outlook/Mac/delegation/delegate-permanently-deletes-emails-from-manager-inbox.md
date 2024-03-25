@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Calendar\
   - Outlook for Mac
   - CSSTroubleshoot
 ms.reviewer: tasitae, tsimon

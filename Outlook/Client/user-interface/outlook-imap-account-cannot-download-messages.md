@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Product Stability, startup or Shutdown and perform\Internet email server (POP3, IMAP, or HTTP) connection error
   - Outlook for Windows
   - CSSTroubleshoot
 ms.reviewer: aruiz

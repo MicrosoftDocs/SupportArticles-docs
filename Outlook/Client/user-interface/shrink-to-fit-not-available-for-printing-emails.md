@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Rules, search and Printing\Printing error
   - Outlook for Windows
   - CSSTroubleshoot
 ms.reviewer: aruiz, lpen
