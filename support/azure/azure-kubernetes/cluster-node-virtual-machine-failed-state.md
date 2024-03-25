@@ -1,7 +1,7 @@
 ---
 title: Azure Kubernetes Service cluster/node is in a failed state
 description: Troubleshoot an issue where an Azure Kubernetes Service (AKS) cluster/node is in a failed state.
-ms.date: 03/21/2024
+ms.date: 03/25/2024
 ms.reviewer: chiragpa, nickoman, v-weizhu, v-six, aritraghosh
 ms.service: azure-kubernetes-service
 ms.subservice: common-issues
@@ -18,18 +18,18 @@ Here are common causes for the failed cluster/nodepool:
 
 - Custom Script Extension (CSE) VM extension provisioning error
 - Key Azure resources unavailable
-  - LA Workspace not found which requires recreation of missing references 
-  - Cluster Load Balancer InvalidResourceReference which require recreation of missing references
-  - SubnetFull
+  - "Log Analytics workspace not found" error. The recreation of missing references is required.
+  - Cluster Load Balancer InvalidResourceReference error. The recreation of missing references is required.
+  - "SubnetFull" error
   - Private DNS Zone InternalOperationError
-- VM allocation failure due to zonal/regional capacity or core quota
+- VM allocation failure due to zonal/regional capacity or core quota.
   - No capacity
   - Quota exceeded
-- Customer imposed restriction
+- Customer imposed restrictions
   - Azure policies deny
-  - Resource Lock
+  - Resource lock
 - Workload
-  - PodDisruptionBudget failed to drain pods
+  - A PodDisruptionBudget (PDB) failed to drain pods.
   - The kube-system pods are not running.
 
 ## Basic troubleshooting for common errors that cause a failed cluster/node
@@ -54,11 +54,12 @@ The following table outlines some common errors that can cause a cluster or node
 |---|---|
 |The subnet size is too small|Because the subnet doesn't have enough space for the needed number of nodes, the operation could not create or update the cluster. To fix this issue, delete the node pool and make a new one with a greater subnet size by using the Azure portal, Azure CLI, or Azure PowerShell.|
 |The virtual network is blocked|Because the firewall or a custom DNS setting blocks the outbound connections from the nodes, the operation couldn't communitcate with the cluster API server or the Kubernetes control plane. To fix this issue, allow the node's traffic on the firewall and set up the DNS resolution to Azure by using the Azure portal, Azure CLI, or Azure PowerShell.|
-|PDB problems|Because a pod disruption budget (PDB) stopped the removal of one or more pods, the operation couldn't update the cluster. A PDB is a resource that limits how many pods can be voluntarily terminated in a certain time period. To fix this issue, remove the PDB temporarily, reconcile the cluster, and add the PDB again by using the kubectl command-line tool.|
+|PDB problems|Because a PDB stopped the removal of one or more pods, the operation couldn't update the cluster. A PDB is a resource that limits how many pods can be voluntarily terminated in a certain time period. To fix this issue, remove the PDB temporarily, reconcile the cluster, and add the PDB again by using the kubectl command-line tool.|
 |Infrastructure issues|Because of an internal issue with the Azure Resource Manager (ARM) service that manages resources in Azure, the operation could not update the cluster. To fix this issue, do an agent pool reconcile for each node pool and a reconcile for the managed cluster by using the Azure CLI or Azure PowerShell.|
 |API server errors|The operation could not reach the cluster API server or the Kubernetes control plane because of an outage or a bug. To fix this issue, report it to the AKS support team and provide the relevant logs and diagnostics information. You can use the Azure portal, Azure CLI, or Azure PowerShell to get the logs and diagnostics information.|
 
 > [!NOTE]
+> - The operation mentioned in the previous table refer to any update (`PUT`) operation triggered from customer side.
 > In Kubernetes, there is a component within a controller. It ensures the actual state of the world, which includes the cluster state and potentially external states like running containers for Kubelet or load balancers for a cloud provider, and aligns with the desired state specified in an object. This alignment process is a key function of the controller. When it comes to AKS, this component ensures that the state of the AKS cluster aligns with the desired configuration. If there are any differences between the actual and desired states, it takes necessary actions to rectify these discrepancies.
 
 ## Provisioning State Check
