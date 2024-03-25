@@ -66,7 +66,7 @@ Here's the full process of this mechanism for the two scenarios:
 4. The client sends PutBlockList to the destination storage to commit the blocks and finish the process after receiving a success response code from the request.
 
 ## Copy blobs between storage accounts in a Hub-spoke architecture using private endpoints
-A 403 Error occurs when using AzCopy to copy blobs between Storage accounts connected to private endpoints in different Spoke virtual networks (VNETs) from a VM in a Hub VNET. You can find a "403 This request is not authorized to perform this operation - CannotVerfiyCopySource" error in the AzCopy logs or in the Azure Storage logs. The following architecture diagram shows the scenario in which the error occurs.
+A 403 Error occurs when using AzCopy to copy blobs between Storage accounts connected to private endpoints in different Spoke VNETs from a VM in a Hub VNET. You can find a "403 This request is not authorized to perform this operation - CannotVerfiyCopySource" error in the AzCopy logs or in the Azure Storage logs. The following architecture diagram shows the scenario in which the error occurs.
 
 :::image type="content" source="media/copy-blobs-between-storage-accounts-network-restriction/hub-spoke-network-topology-architecture.png" alt-text="Diagram that shows the 403 error of copying blobs between storage accounts in a Hub & Spoke architecture using Private Endpoints.":::
 
