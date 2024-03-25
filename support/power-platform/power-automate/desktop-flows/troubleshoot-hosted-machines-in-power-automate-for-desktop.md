@@ -2,12 +2,17 @@
 title: Troubleshoot hosted machines in Power Automate for desktop
 description: This article provides suggestions for how to troubleshoot hosted machine issues in Power Automate for desktop.
 ms.reviewer: kenseongtan, pefelesk, tapanm
-ms.date: 03/13/2024
-ms.custom: sap:Desktop flows\
+ms.date: 03/25/2024
+ms.custom: sap:Desktop flows\Installation issues
 ---
 # Troubleshoot hosted machines in Power Automate for desktop
 
-This article provides suggestions about how to troubleshoot issues that affect [hosted virtual machines (VMs)](/power-automate/desktop-flows/hosted-machines) in Power Automate for desktop.
+This article provides suggestions about how to troubleshoot issues that affect [hosted machines](/power-automate/desktop-flows/hosted-machines) in Power Automate for desktop.
+
+For information on errors related to a VM image or network connection, see:
+
+- [Errors related to a VM image](/graph/api/resources/cloudpcdeviceimage?#cloudpcdeviceimagestatusdetails-values) that's used in a hosted machine.
+- [Errors related to network connection](/graph/api/resources/cloudpconpremisesconnectionhealthcheck#cloudpconpremisesconnectionhealthcheckerrortype-values) that's used in a hosted machine.
 
 The following table provides information about hosted machine provisioning errors and the steps to mitigate such errors.
 
@@ -61,10 +66,5 @@ The following table provides information about hosted machine provisioning error
   If the "reuse session" option is disabled, no active user session should be running on the target VM. To resolve this issue, open Task Manager, select the **Users** tab, terminate all other user sessions except the current session, and then sign out from the VM.
 
   :::image type="content" source="media/troubleshoot-hosted-machines-in-power-automate-for-desktop/task-manager-sessions.png" alt-text="Screenshot of the Users tab in Task Manager.":::
-
-## More information
-
-- [Errors related to a VM image](/graph/api/resources/cloudpcdeviceimage?#cloudpcdeviceimagestatusdetails-values) that's used in a hosted virtual machine
-- [Errors related to network connection](/graph/api/resources/cloudpconpremisesconnectionhealthcheck#cloudpconpremisesconnectionhealthcheckerrortype-values) that's used in a hosted VM.
 
 <!--- End of original article markdown --->
