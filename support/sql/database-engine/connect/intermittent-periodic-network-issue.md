@@ -148,7 +148,7 @@ If the client has a long delay before sending the SYN packet, you may see a patt
 
 1. Restart the service or application you're tracing.
 
-   For some applications, such as SQL Server Integration Services (SIS) packages, a new instance of DTEXEC or ISServerExec is launched when the package is run, so a restart doesn't make sense.
+   For some applications, such as SQL Server Integration Services (SSIS) packages, a new instance of DTEXEC or ISServerExec is launched when the package is run, so a restart doesn't make sense.
 
 1. Start the trace collection.
 
@@ -173,7 +173,7 @@ To trace other Microsoft SQL Server drivers, see the following articles. Perform
 - [Use PerfView to collect trace log](/sql/connect/ado-net/enable-eventsource-tracing#use-perfview-to-collect-trace-log)
 - [Microsoft JDBC Driver](/sql/connect/jdbc/tracing-driver-operation)
 
-To tracing third-party Microsoft SQL Server drivers, see the vendor documentation.
+To trace third-party drivers, see the vendor documentation.
 
 #### Both the server trace and the client trace agree the issue is on the server
 
