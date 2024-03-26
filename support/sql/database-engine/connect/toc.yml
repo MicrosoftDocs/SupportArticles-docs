@@ -44,7 +44,7 @@ items:
   href: local-security-subsystem-errors.md
 - name: Connectivity issues with linked servers in SQL Server authentication
   href: linked-server-account-mapping-error.md
-- name: Named Pipes connections causes failure to SQL Server
+- name: Named Pipes connections cause failure to SQL Server
   href: named-pipes-connection-fail-no-windows-permission.md
 - name: Network-related or instance-specific error
   href: network-related-or-instance-specific-error-occurred-while-establishing-connection.md

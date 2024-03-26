@@ -8,7 +8,7 @@ ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 
-# Named Pipes connections causes failure to SQL Server
+# Named Pipes connections cause failure to SQL Server
 
 This article helps you to resolve a consistent authentication issue that causes a Named Pipes connections failure to SQL Server.
 
