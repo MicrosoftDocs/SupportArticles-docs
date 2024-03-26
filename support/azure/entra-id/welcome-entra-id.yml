@@ -5,12 +5,11 @@ summary: Welcome to Microsoft Entra ID troubleshooting. These articles explain h
 metadata:
   title: Troubleshoot Microsoft Entra ID issues
   description: Documentation for troubleshooting common issues with Microsoft Entra ID. # Required; article description that is displayed in search results. < 160 chars.
-  services: active-directory
-  ms.service: active-directory  #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.service: entra-id  #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
   author: genlin  #Required; your GitHub user alias, with correct capitalization.
   ms.author: genli #Required; microsoft alias of author; optional team alias.
-  ms.date: 03/13/2024
+  ms.date: 03/26/2024
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
