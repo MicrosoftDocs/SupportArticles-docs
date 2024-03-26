@@ -63,25 +63,27 @@ To add (or remove) one or more views or charts for a model-driven app, follow th
 
 If users intermittently don't see user views (personal views) in the grid selector, this could be because when a subgrid on a form is configured to show all views, it renders 'My Views' selections, which conflict with the homepage grid view (sample UI):
 
-![image](https://github.com/MicrosoftDocs/SupportArticles-docs-pr/assets/100440855/3a79bd6e-2211-41b1-90a9-b21bb2ef8705)
+:::image type="content" source="media/troubleshoot-model-driven-app-view-issues/user-view-missing.png" alt-text="User may see some user views missing in the view selector.":::
 
 To fix this issue, you can modify the default entity form such that none of the subgrids are using "show all views".
 
 The following image shows an example of the case form containing a subgrid with 'show all views' enabled:
-![image](https://github.com/MicrosoftDocs/SupportArticles-docs-pr/assets/100440855/12bef098-d551-4494-8331-8eaafc496597)
+
+:::image type="content" source="media/troubleshoot-model-driven-app-view-issues/subgrid-with-show-all-views-enabled.png" alt-text="Example of case form containing a subgrid with show all views enabled.":::
 
 If the subgrid configuration is changed to "off" or "show selected views" instead, then the issue with the missing views should no longer occur as shown in the following image:
 
-![image](https://github.com/MicrosoftDocs/SupportArticles-docs-pr/assets/100440855/4950382d-44d4-4055-a0db-a9e4b2e03ea5)
+:::image type="content" source="media/troubleshoot-model-driven-app-view-issues/sub-grid-view-selector-off.png" alt-text="Configuration changed to off.":::
 
 Or
 
-![image](https://github.com/MicrosoftDocs/SupportArticles-docs-pr/assets/100440855/17dd9ddd-1fc8-4d3e-9bde-bf034c656b4a)
+:::image type="content" source="media/troubleshoot-model-driven-app-view-issues/sub-grid-view-selector-show-selected-views.png" alt-text="Configuration changed to show selected views.":::
 
 ## Column doesn't appear in the column editor 'add columns' list
 
 Sometimes you might expect a certain column to appear in the column editor "add columns" list, but can't find it.
-![image](https://github.com/MicrosoftDocs/SupportArticles-docs-pr/assets/100440855/e0761099-c34c-4de0-8359-02b80ebbb3cd)
+
+:::image type="content" source="media/troubleshoot-model-driven-app-view-issues/column-missing-in-column-editor.png" alt-text="User may see column missing in the column editor.":::
 
 This issue usually happens because the attribute has 'isValidForGrid' set to false. You can look at the metadata for the attribute by adding this to the org url (replacing Account and address1_longitude with the desired entity and attribute name) /api/data/v9.2/EntityDefinitions(LogicalName='account')/Attributes(LogicalName='address1_longitude')?$select=SchemaName,IsValidForGrid
 
@@ -94,12 +96,14 @@ You might see specific users that aren't able to see personal views shared with 
 This behavior could be because the user doesn't have "Direct User (Basic)" access to the "Saved Views" entity. Access provided by an owner team that has the "Team privileges only" inheritance setting isn't sufficient.
 
 You should provide the impacted users with "Direct User (Basic)" access to the "Saved View" entity instead of just "Team privileges only" access.
-![image](https://github.com/MicrosoftDocs/SupportArticles-docs-pr/assets/100440855/07ed92b9-0ded-4e4e-86c9-9caf91f97519)
+
+:::image type="content" source="media/troubleshoot-model-driven-app-view-issues/direct-user-basic-access.png" alt-text="Must provide Direct User (Basic) access.":::
 
 ## Save changes to current view option is missing
 
 The "save changes to current view" option only shows in the command bar when modern advanced find is turned off; otherwise, it only shows in the view selector.
-![image](https://github.com/MicrosoftDocs/SupportArticles-docs-pr/assets/100440855/2deec3c7-aa6c-405c-95f2-032bb21378fb)
+
+:::image type="content" source="media/troubleshoot-model-driven-app-view-issues/save-changes-to-current-view.png" alt-text="User may see save changes to current view missing.":::
 
 Furthermore, this option is only shown for personal views. When a system view (that is, All Accounts, My Active Contacts, ...) is selected, the option - by design - isn't shown, as a system view can't be updated.
 
