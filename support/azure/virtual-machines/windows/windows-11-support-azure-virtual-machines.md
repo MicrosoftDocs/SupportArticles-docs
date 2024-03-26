@@ -158,19 +158,19 @@ Per these guidelines, the following section shows whether the requirements are m
 
 |CPU used in Windows Azure|Technology|Generation|Supported by Windows 11|
 |:----|:----|:----|:----|
-|Intel® Xeon® E5-2673 v3|Haswell|Intel 4th gen|No|
-|Intel® Xeon® E5-2690 v3|Haswell|Intel 4th gen|No|
-|Intel® Xeon® E5-2698 v3|Haswell|Intel 4th gen|No|
-|Intel® Xeon® E5-2698B v3|Haswell|Intel 4th gen|No|
-|Intel® Xeon® CPU E7-8890|Haswell|Intel 4th gen|No|
-|Intel® Xeon® E5-2673 v4|Broadwell|Intel 5th gen|No|
-|Intel® Xeon® E5-2690 v4|Broadwell|Intel 5th gen|No|
-|Intel® Xeon® Platinum 8168|Skylake|Intel 7th gen|Yes|
-|Intel® Xeon® Platinum 8171M|Skylake|Intel 7th gen|Yes|
-|Intel® Xeon E-2288G|Coffee Lake|Intel 8th gen|Yes|
-|Intel® Xeon® Gold 6246R|Cascade Lake|Intel 9th gen|Yes|
-|Intel® Xeon® Platinum 8272CL|Cascade Lake|Intel 9th gen|Yes|
-|Intel® Xeon® Platinum 8370C|Ice Lake|Intel 10th gen|Yes|
+|Intel&reg; Xeon&reg; E5-2673 v3|Haswell|Intel 4th gen|No|
+|Intel&reg; Xeon&reg; E5-2690 v3|Haswell|Intel 4th gen|No|
+|Intel&reg; Xeon&reg; E5-2698 v3|Haswell|Intel 4th gen|No|
+|Intel&reg; Xeon&reg; E5-2698B v3|Haswell|Intel 4th gen|No|
+|Intel&reg; Xeon&reg; CPU E7-8890|Haswell|Intel 4th gen|No|
+|Intel&reg; Xeon&reg; E5-2673 v4|Broadwell|Intel 5th gen|No|
+|Intel&reg; Xeon&reg; E5-2690 v4|Broadwell|Intel 5th gen|No|
+|Intel&reg; Xeon&reg; Platinum 8168|Skylake|Intel 7th gen|Yes|
+|Intel&reg; Xeon&reg; Platinum 8171M|Skylake|Intel 7th gen|Yes|
+|Intel&reg; Xeon E-2288G|Coffee Lake|Intel 8th gen|Yes|
+|Intel&reg; Xeon&reg; Gold 6246R|Cascade Lake|Intel 9th gen|Yes|
+|Intel&reg; Xeon&reg; Platinum 8272CL|Cascade Lake|Intel 9th gen|Yes|
+|Intel&reg; Xeon&reg; Platinum 8370C|Ice Lake|Intel 10th gen|Yes|
 |AMD EPYC 7551|Naples|AMD Zen 1|No|
 |AMD EPYC 7452|Rome|AMD Zen 2|Yes|
 |AMD EPYC 7V12|Rome|AMD Zen 2|Yes|
@@ -187,6 +187,6 @@ Per these guidelines, the following section shows whether the requirements are m
 
 In addition to the previous list of VM products, you can use the [PC Health Check app](https://www.microsoft.com/windows/windows-11-specifications) to assess the eligibility requirements for Windows 11.
 
-[!INCLUDE [Third-party information disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

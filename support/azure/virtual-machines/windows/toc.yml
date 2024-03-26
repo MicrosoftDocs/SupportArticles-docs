@@ -14,6 +14,8 @@
       href: server-software-support.md
     - name: What 32-bit operating systems are supported?
       href: support-32-bit-operating-systems-virtual-machines.md
+    - name: Windows 11 support on Azure Virtual Machines
+      href: windows-11-support-azure-virtual-machines.md
 
 - name: Windows Update, Guest Patching and OS Upgrades
   items:
