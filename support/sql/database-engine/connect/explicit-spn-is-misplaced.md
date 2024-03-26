@@ -1,7 +1,7 @@
 ---
-title: You encounter the explicit misplaced SPN issue in SQL Server
+title: Misplaced SPN error in SQL Server
 description: This article provides a workaround for the SQL Server consistent authentication problem where the explicit SPN is misplaced.
-ms.date: 03/13/2024
+ms.date: 03/26/2024
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
