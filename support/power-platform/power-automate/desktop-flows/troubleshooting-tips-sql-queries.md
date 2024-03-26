@@ -3,7 +3,7 @@ title: Tips on working with SQL queries
 description: Provides tips to solve the error message that you receive when working with a database in Power Automate.
 ms.reviewer: pefelesk
 ms.date: 09/21/2022
-ms.subservice: power-automate-desktop-flows
+ms.custom: sap:Desktop flows\Power Automate for desktop errors
 ---
 # Tips on working with SQL queries
 

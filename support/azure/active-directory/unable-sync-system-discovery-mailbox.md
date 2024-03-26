@@ -3,8 +3,8 @@ title: You can't sync the SystemMailbox or DiscoveryMailboxSearch accounts by us
 description: Describes an issue in which you receive errors when you try to use the Azure Active Directory Sync tool to synchronize the SystemMailbox and DiscoverySearchMailbox user accounts. Provides a resolution.
 ms.date: 07/06/2020
 ms.reviewer: roberg, jhayes
-ms.service: active-directory
-ms.subservice: enterprise-users
+ms.service: entra-id
+ms.subservice: users
 ---
 # Can't sync SystemMailbox or DiscoveryMailboxSearch accounts using Azure Active Directory Sync tool
 

@@ -3,8 +3,8 @@ title: Error AADSTS50105 - The signed in user is not assigned to a role for the 
 description: Describes a problem in which you receive the AADSTS50105 error when you sign in to a SAML-based configured app with Microsoft Entra SSO.
 ms.date: 07/19/2023
 ms.reviewer: bernawy
-ms.service: active-directory
-ms.subservice: app-mgmt
+ms.service: entra-id
+ms.subservice: enterprise-apps
 ---
 # Error AADSTS50105 - The signed in user is not assigned to a role for the application
 

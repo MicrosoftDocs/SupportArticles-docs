@@ -3,7 +3,8 @@ title: Error when you post Analytical Accounting transactions or save a Master r
 description: Describes a problem that occurs because the next value in the AAG00102 table has already been used in the applicable table that is causing the duplicate record.
 ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Analytical Accounting
 ---
 # Error when you try to post Analytical Accounting transactions or save a Master record in Microsoft Dynamics GP: Cannot insert duplicate key in object 'AAGXXXXX'
 

@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, leons, v-srisan
-ms.custom: sap:integration-components, csstroubleshoot
+ms.custom: sap:Virtualization and Hyper-V\Integration components, csstroubleshoot
 ---
 # The VMBus device doesn't load on a virtual machine that is running on a computer with Hyper-V installed
 

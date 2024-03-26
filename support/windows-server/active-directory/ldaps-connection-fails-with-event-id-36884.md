@@ -4,7 +4,7 @@ description: Introduce how to troubleshoot event ID 36884 that occurs during LDA
 ms.topic: troubleshooting
 ms.date: 12/26/2023
 ms.reviewer: garymu
-ms.custom: sap:ldap-configuration-and-interoperability, csstroubleshoot
+ms.custom: sap:Active Directory\LDAP configuration and interoperability, csstroubleshoot
 ---
 # Event ID 36884 when you try to connect to an LDAPS server
 

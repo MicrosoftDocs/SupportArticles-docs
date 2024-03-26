@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:com+-administration-configuration-and-security, csstroubleshoot
+ms.custom: sap:Application Technologies and Compatibility\DCOM service startup and permissions, csstroubleshoot
 ---
 # Error when you call many objects from one process to another by using COM+: Not enough storage is available to complete this operation (0x8007000e)
 

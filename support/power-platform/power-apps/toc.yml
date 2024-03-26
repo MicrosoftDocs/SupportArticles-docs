@@ -56,7 +56,6 @@ items:
           href: dataverse/dataverse-plug-ins-errors.md
         - name: Web API client errors
           href: dataverse/web-api-client-errors.md
-        
     - name: Isolate and troubleshoot common issues
       items:
         - name: Common issues and resolutions
@@ -87,6 +86,10 @@ items:
           href: manage-apps/dataverse-records-missing-required-fields.md
         - name: Troubleshoot wrap issues
           href: manage-apps/wrap-issues.md
+    - name: Mobile Apps
+      items:
+        - name: Troubleshoot offline sync errors in the Power Apps mobile app
+          href: mobile-apps/mobile-offline-troubleshooting.md
     - name: Solutions
       items:
         - name: Active unmanaged layer after importing a managed solution

@@ -5,6 +5,7 @@ author: josaw1
 ms.author: josaw
 ms.reviewer: rassadi, brstor
 ms.date: 09/08/2023
+ms.custom: sap:Development and SDKs\Issues with e-commerce module development
 ---
 # Errors when you debug against a Tier 1 Retail Server virtual machine in an e-commerce development environment
 

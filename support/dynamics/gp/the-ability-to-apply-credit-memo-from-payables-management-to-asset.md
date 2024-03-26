@@ -2,7 +2,8 @@
 title: Apply a credit memo from Payables Management to an asset
 description: Provides information about the ability to apply a credit memo from Payables Management to an asset in Fixed Asset Management in Microsoft Dynamics GP.
 ms.reviewer: theley, cwaswick
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Fixed Assets
 ---
 # Information about the ability to apply a credit memo from Payables Management to an asset in Fixed Asset Management
 

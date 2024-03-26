@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:cannot-failover-a-group, csstroubleshoot
+ms.custom: sap:Clustering and High Availability\Cannot failover a group, csstroubleshoot
 ---
 # New SMB 3.0 features in the Windows Server file server
 

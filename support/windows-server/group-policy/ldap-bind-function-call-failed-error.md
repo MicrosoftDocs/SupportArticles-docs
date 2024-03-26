@@ -7,7 +7,7 @@ ms.date: 12/26/2023
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, dennhu, pkalamkar, v-lianna
-ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot, ikb2lmc
+ms.custom: sap:Group Policy\Problems Applying Group Policy, csstroubleshoot, ikb2lmc
 ---
 # "LDAP Bind function call failed" error when updating Group Policy settings
 

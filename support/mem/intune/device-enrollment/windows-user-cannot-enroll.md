@@ -4,6 +4,7 @@ description: Troubleshooting guidance for when a user cannot enroll a Windows de
 ms.date: 12/05/2023
 ms.reviewer: kaushika, joelste
 search.appverid: MET150
+ms.custom: sap:Enroll Device - Windows\Advisory
 ---
 
 # Windows user is not authorized to enroll

@@ -3,8 +3,8 @@ title: Error (Unable to communicate with the Windows Azure Active Directory serv
 description: Provides information about troubleshooting a problem in which your identity sync client cannot authenticate to Microsoft Entra ID if there is an unauthenticated proxy server.
 ms.date: 05/11/2020
 ms.reviewer: 
-ms.service: active-directory
-ms.subservice: enterprise-users
+ms.service: entra-id
+ms.subservice: users
 ---
 # Error when Microsoft Entra Connect cannot authenticate to Microsoft Entra ID: Unable to communicate with the Windows Azure Active Directory service
 

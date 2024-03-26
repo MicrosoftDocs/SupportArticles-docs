@@ -5,7 +5,7 @@ author: amchern
 ms.author: amchern
 ms.reviewer: tapanm, mkaur, alaug
 ms.custom: canvas
-ms.date: 12/06/2023
+ms.date: 03/19/2024
 search.audienceType: 
   - maker
 search.app: 
@@ -13,15 +13,13 @@ search.app:
 ---
 # Troubleshooting startup or sign-in issues for Power Apps
 
-This article helps you resolve some of the common issues that may occur when starting up or signing in to [Power Apps](https://make.powerapps.com).
+This article helps you resolve some common issues or errors that might occur when starting up or signing in to [Power Apps](https://make.powerapps.com).
 
-## Common errors
+## Common issues or errors
 
-The following are some common errors that may appear when you start up or sign in to Power Apps.
+The following are some common issues or errors that might appear when you start up or sign in to Power Apps.
 
-- You're prompted to sign in every time an app is embedded in another client such as SharePoint and Microsoft Teams.
-
-  > The Power Apps open experience starts and halts until you sign-in
+- You're prompted to sign in every time an app is embedded in another client such as SharePoint and Microsoft Teams. The Power Apps opening experience starts and halts until you sign in.
 
 - Error message related to cookie settings.
 
@@ -73,16 +71,32 @@ The following are some common errors that may appear when you start up or sign i
 Try the following steps to resolve the issue:
 
 1. [Enable third-party cookies and local data in your browser or app](#enable-storage-of-third-party-cookies-and-local-data-in-your-browser-or-app).
-2. Cached data can sometimes prevent you from signing in. [Clear your browser's cache](#clear-your-browser-cache) and cookies and try again.
+2. [Clear your browser's cache](#clear-your-browser-cache) and cookies and try again. Cached data can sometimes prevent you from signing in.
 3. Try signing in with a different browser. For a list of supported browsers, see [system requirements](/power-apps/limits-and-config#supported-browsers-for-running-power-apps).
 4. Check your network connection to make sure it's stable.
 5. If you're getting Microsoft Entra errors, they're usually related to user authentication and authorization. The error page might contain additional information that can help diagnose and fix the problem. To resolve Microsoft Entra errors, you might need assistance from your IT department.
+6. [Check the "Third-party Storage Partitioning" setting in your browser](#check-the-third-party-storage-partitioning-setting-in-microsoft-edge-or-google-chrome) to make sure it's disabled.
+
+   > [!NOTE]
+   > Consider this resolution step only when you experience sign-in or sign-out issues under one of the following conditions:
+   >
+   > - You use a device that has multiple Microsoft Entra identity sign-ins to access different applications.
+   > - You access multiple applications using Microsoft Entra across more than one tab. When you sign out of one tab, you observe that you aren't signed out of the second tab.
+   > - You access Power Apps that are embedded [via an iframe](/power-apps/maker/canvas-apps/embed-apps-dev#embed-your-app-in-a-website) in a third-party website.
+   > - You access a canvas app that's embedded in a model-driven app form.
+
+### Check the "Third-party Storage Partitioning" setting in Microsoft Edge or Google Chrome
+
+- In Microsoft Edge, you can check the setting by navigating to `edge://flags/#third-party-storage-partitioning` using the address bar.
+- In Google Chrome, you can check the setting by navigating to `chrome://flags/#third-party-storage-partitioning` using the address bar.
+
+:::image type="content" source="media/troubleshooting-startup-issues/third-party-storage-partitioning.png" alt-text="Screenshot that shows the Third-party Storage Partitioning setting in Microsoft Edge.":::
 
 ## Enable storage of third-party cookies and local data in your browser or app
 
-Power Apps stores some data locally, such as user identity and preferences, leveraging your browser's capabilities. Problems occur if the browser blocks the storage of such local data, or third-party cookies set by Power Apps.
+Power Apps stores some data locally, such as user identity and preferences, using your browser's capabilities. Problems occur if the browser blocks the storage of such local data, or third-party cookies set by Power Apps.
 
-Most browsers allow settings to reflect the changes immediately. You may also need to close all the browser windows and reopen them instead.
+Most browsers allow settings to reflect the changes immediately. You might also need to close all the browser windows and reopen them instead.
 
 To enable this setting for the Power Apps and Dynamics 365 mobile apps for iOS, you need to work through the iOS settings linked to the app rather than through the browser settings for iOS.
 
@@ -181,7 +195,7 @@ To allow apps to use cookies when they're embedded in another client, such as Sh
 
 ## Clear your browser cache
 
-The browser cache is stored on your device's hard drive. When you visit a website, your browser downloads certain information that allows it to load faster when you revisit the same website in the future. Some Power Apps features use the browser cache to provide a faster user experience. In some cases, you may want to clear your browser cache. Here are the instructions for different browsers:
+The browser cache is stored on your device's hard drive. When you visit a website, your browser downloads certain information that allows it to load faster when you revisit the same website in the future. Some Power Apps features use the browser cache to provide a faster user experience. In some cases, you might want to clear your browser cache. Here are the instructions for different browsers:
 
 - [Microsoft Edge](https://www.microsoft.com/en-US/microsoft-365-life-hacks/privacy-and-safety/how-to-clear-cache)
 - [Google Chrome](https://support.google.com/accounts/answer/32050?hl=en&co=GENIE.Platform%3DDesktop)

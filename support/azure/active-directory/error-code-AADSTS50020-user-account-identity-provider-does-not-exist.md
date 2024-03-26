@@ -4,9 +4,9 @@ description: Troubleshoot scenarios in which a guest user unsuccessfully tries t
 ms.date: 11/23/2023
 ms.editor: v-jsitser
 ms.reviewer: rrajan, haelshab, sungow, v-leedennis
-ms.service: active-directory
-ms.subservice: app-mgmt
-ms.custom: has-azure-ad-ps-ref
+ms.service: entra-id
+ms.subservice: enterprise-apps
+ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 keywords:
 #Customer intent: As a Microsoft Entra administrator, I want to figure out why error code AADSTS50020 occurs so that I can make sure that my guest users from an identity provider can sign in to a resource tenant.
 ---
@@ -34,9 +34,9 @@ In the prior experience, a directory (for example: UserNamehotmail735.onmicrosof
 
 If you aim to have a directory, you must create an Azure account and a new tenant: 
 
-1.	Browse to [https://azure.microsoft.com/en-us/free/](https://azure.microsoft.com/free/), and then select **Start free** .
-2.	Follow the instructions to create an Azure account.
-3.	A tenant will be generated alongside the Azure account, and you will be automatically designated as the Global Administrator. This grants you full access to all options within this tenant.
+1.    Browse to [https://azure.microsoft.com/en-us/free/](https://azure.microsoft.com/free/), and then select **Start free** .
+2.    Follow the instructions to create an Azure account.
+3.    A tenant will be generated alongside the Azure account, and you will be automatically designated as the Global Administrator. This grants you full access to all options within this tenant.
 
 ## Cause 2: Used unsupported account type (multitenant and personal accounts)
 
@@ -169,6 +169,8 @@ Get-MsolUser -SearchString user@contoso.com | Format-List whenCreated
 ```
 
 Then, check the creation date of the guest user in the resource tenant against the creation date of the user account in the home tenant. The scenario is confirmed if the guest user was created before the home tenant's user account was created.
+
+[!INCLUDE [Azure AD PowerShell deprecation note](~/../support/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
 
 ### Verification option 2: Check whether the resource tenant's guest alternative security ID differs from the home tenant's user net ID
 

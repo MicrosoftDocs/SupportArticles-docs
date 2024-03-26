@@ -22,4 +22,5 @@ The topics in this section provide solutions and scenario guides to help you tro
 - File Explorer/Windows Explorer
 - Lock Screen or Screensaver
 - Remote Assistance
+- Start Menu
 - Windows Media Player

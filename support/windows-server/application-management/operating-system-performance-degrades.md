@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, raackley
-ms.custom: sap:com-and-dcom-programming, csstroubleshoot
+ms.custom: sap:Application Technologies and Compatibility\DCOM service startup and permissions, csstroubleshoot
 ---
 # Performance degrades when you access large files with FILE_FLAG_RANDOM_ACCESS
 

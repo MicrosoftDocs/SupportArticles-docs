@@ -3,7 +3,8 @@ title: Reverse a POP Return
 description: Provides a solution to an issue where a POP Return was entered and posted in error or was entered and posted with the incorrect quantities or price.
 ms.reviewer: theley, Beckyber
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Distribution - Purchase Order Processing
 ---
 # How to reverse a POP Return in Microsoft Dynamics GP
 
