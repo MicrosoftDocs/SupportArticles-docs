@@ -9,8 +9,8 @@ ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: warrenr, jhaak
 ms.custom: 
-- CSSTroubleshoot
-- CI 167550
+  - CSSTroubleshoot
+  - CI 167550
 search.appverid: 
   - MET150
 appliesto: 

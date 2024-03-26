@@ -14,7 +14,9 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft Teams
-ms.custom: CI171350
+ms.custom: 
+  - sap:MTR Pro\
+  - CI171350
 ---
 # The USB Selective Suspend status is Unhealthy
 

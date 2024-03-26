@@ -14,7 +14,9 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft Teams
-ms.custom: CI167310
+ms.custom: 
+  - sap:MTR Pro\
+  - CI167310
 ---
 
 # The microphone or speaker status is Unhealthy

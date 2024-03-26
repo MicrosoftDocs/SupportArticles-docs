@@ -13,6 +13,7 @@ search.appverid:
 appliesto: 
   - Microsoft Teams
 ms.custom: 
+  - sap:Teams Meetings\Meetings Other
   - CI 113425
   - CSSTroubleshoot
 ms.reviewer: scapero

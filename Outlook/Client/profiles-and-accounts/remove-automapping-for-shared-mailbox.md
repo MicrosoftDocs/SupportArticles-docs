@@ -9,6 +9,7 @@ ms.topic: troubleshooting
 ms.author: meerak
 ms.reviewer: eileenor, jhayes
 ms.custom: 
+  - sap:Exchange Mailbox Accounts\Shared mailboxes
   - Outlook for Windows
   - CSSTroubleshoot
 search.appverid: 

@@ -10,8 +10,8 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: thdesilv
 ms.custom: 
-- CSSTroubleshoot
-- CI 165888
+  - CSSTroubleshoot
+  - CI 165888
 ms.author: luche
 appliesto: 
   - Microsoft 365

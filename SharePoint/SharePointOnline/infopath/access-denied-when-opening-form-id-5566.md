@@ -9,7 +9,9 @@ search.appverid:
 audience: Admin|ITPro|Developer
 ms.topic: troubleshooting
 ms.author: v-tappelgate
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - sap:Permissions\Errors
+  - CSSTroubleshoot
 appliesto: 
   - SharePoint Online
 ms.date: 12/17/2023

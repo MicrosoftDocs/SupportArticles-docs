@@ -5,7 +5,9 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - sap:Product Stability, startup or Shutdown and perform\Add-in error
+  - CSSTroubleshoot
 appliesto:
 - Outlook
 search.appverid: MET150

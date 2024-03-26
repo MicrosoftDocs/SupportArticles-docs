@@ -7,7 +7,8 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
-ms.custom:
+ms.custom: 
+  - sap:Groups, Lists, Contacts, Public Folders
   - Exchange Online
   - CSSTroubleshoot
   - CI 180570

@@ -9,7 +9,9 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - sap:Administration\SharePoint Designer
+  - CSSTroubleshoot
 appliesto: 
   - SharePoint Foundation 2010
   - SharePoint Server 2010

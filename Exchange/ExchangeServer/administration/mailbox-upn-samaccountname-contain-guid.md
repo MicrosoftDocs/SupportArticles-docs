@@ -7,7 +7,8 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
-ms.custom:
+ms.custom: 
+  - sap:Recipients\Create and Manage Recipients (Mailbox, DG, Room, equipment etc.)
   - CI 178045
   - Exchange Server
   - CSSTroubleshoot

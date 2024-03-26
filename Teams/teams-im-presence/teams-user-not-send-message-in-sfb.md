@@ -10,7 +10,9 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: dahans, cbland
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - sap:Teams Chat (Messaging)\One:One Chats
+  - CSSTroubleshoot
 appliesto: 
   - Skype for Business Online
   - Teams

@@ -14,7 +14,9 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft Teams
-ms.custom: CI167275
+ms.custom: 
+  - sap:MTR Pro\
+  - CI167275
 ---
 # Resolve Windows Update issues on Teams Rooms Pro devices
 

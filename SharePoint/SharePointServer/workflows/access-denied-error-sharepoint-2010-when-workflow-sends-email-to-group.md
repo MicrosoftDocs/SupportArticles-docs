@@ -6,7 +6,9 @@ manager: dcscontentpm
 localization_priority: Normal
 audience: Admin
 ms.topic: troubleshooting
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - sap:Administration\Workflows
+  - CSSTroubleshoot
 search.appverid: 
   - SPO160
   - MET150

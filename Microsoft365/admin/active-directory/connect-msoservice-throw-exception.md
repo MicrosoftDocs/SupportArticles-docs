@@ -6,9 +6,10 @@ manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
-ms.custom:
+ms.custom: 
   - CSSTroubleshoot
   - has-azure-ad-ps-ref
+  - azure-ad-ref-level-one-done
 ms.author: luche
 search.appverid: 
   - MET150
@@ -30,6 +31,8 @@ When you try to use the connect-MSOLService cmdlet in the Microsoft Azure Active
 ```output
 Connect-MsolService: Exception of type 'Microsoft.Online.Administration.Automation.MicrosoftOnlineException' was thrown.
 ```
+
+[!INCLUDE [Azure AD PowerShell deprecation note](../../../includes/aad-powershell-deprecation-note.md)]
 
 ## Cause
 

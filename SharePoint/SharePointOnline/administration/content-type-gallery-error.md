@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Sites\Hub Site
   - CSSTroubleshoot
   - CI 158890
 ms.collection: SPO_Content

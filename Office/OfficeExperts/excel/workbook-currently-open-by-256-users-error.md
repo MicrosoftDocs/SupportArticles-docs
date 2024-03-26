@@ -7,7 +7,10 @@ ms.date: 09/11/2019
 audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
-ms.custom: sap:office-experts, CSSTroubleshoot, CI 106765
+ms.custom: 
+  - sap:office-experts
+  - CSSTroubleshoot
+  - CI 106765
 search.appverid: 
   - SPO160
   - MET150

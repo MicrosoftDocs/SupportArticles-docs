@@ -14,7 +14,9 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft Teams
-ms.custom: CI167670
+ms.custom: 
+  - sap:MTR Pro\
+  - CI167670
 ---
 # The OS Edition status is Unhealthy
 

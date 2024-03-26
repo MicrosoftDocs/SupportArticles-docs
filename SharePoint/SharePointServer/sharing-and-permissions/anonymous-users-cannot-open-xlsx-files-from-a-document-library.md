@@ -9,7 +9,9 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - sap:Administration\Sharing and permissions
+  - CSSTroubleshoot
 appliesto: 
   - Microsoft SharePoint
 ms.date: 12/17/2023

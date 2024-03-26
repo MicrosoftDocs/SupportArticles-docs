@@ -5,7 +5,9 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - sap:Administration\Lists and libraries
+  - CSSTroubleshoot
 appliesto:
 - Microsoft Office SharePoint Server 2010
 - Microsoft Office SharePoint Server 2007

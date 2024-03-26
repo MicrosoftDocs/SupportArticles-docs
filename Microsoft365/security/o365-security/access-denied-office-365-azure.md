@@ -9,10 +9,11 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.custom:
+ms.custom: 
   - CSSTroubleshoot
   - CI 109573
   - has-azure-ad-ps-ref
+  - azure-ad-ref-level-one-done
 ms.author: luche
 appliesto: 
   - Cloud Services (Web roles/Worker roles)
@@ -32,6 +33,8 @@ When you try to use the connect-MSOLService cmdlet in the Microsoft Azure Active
 ```asciidoc
 Connect-MsolService : Access Denied. You do not have permissions to call this cmdlet.
 ```
+
+[!INCLUDE [Azure AD PowerShell deprecation note](../../../includes/aad-powershell-deprecation-note.md)]
 
 ## Resolution 
 

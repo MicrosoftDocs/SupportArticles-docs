@@ -9,6 +9,7 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.reviewer: kartik
 ms.custom: 
+  - sap:Calendar\Sharing calendars
   - Outlook for Windows
   - CSSTroubleshoot
 search.appverid: 

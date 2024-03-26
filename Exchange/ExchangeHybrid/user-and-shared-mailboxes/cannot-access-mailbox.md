@@ -6,6 +6,7 @@ ms.author: meerak
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Hybrid
   - Exchange Hybrid
   - CSSTroubleshoot
 manager: dcscontentpm

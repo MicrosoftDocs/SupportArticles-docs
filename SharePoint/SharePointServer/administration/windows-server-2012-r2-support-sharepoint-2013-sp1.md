@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Administration\Setup, Upgrade, Migration and Patching
   - CSSTroubleshoot
 ms.reviewer: wbaer
 appliesto: 

@@ -8,8 +8,9 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- CI 178527
-- CSSTroubleshoot
+  - sap:Teams Meetings\Meetings Other
+  - CI 178527
+  - CSSTroubleshoot
 ms.reviewer: randyto, scapero
 appliesto: 
   - Microsoft Teams

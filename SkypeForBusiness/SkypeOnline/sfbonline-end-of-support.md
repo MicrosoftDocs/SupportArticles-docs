@@ -7,7 +7,8 @@ localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: meerak
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - CSSTroubleshoot
 appliesto: 
   - Skype for Business Online
 ms.date: 04/07/2023

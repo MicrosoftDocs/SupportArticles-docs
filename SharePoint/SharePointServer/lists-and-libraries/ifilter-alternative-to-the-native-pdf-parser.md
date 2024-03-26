@@ -9,7 +9,9 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - sap:Administration\Files and Documents
+  - CSSTroubleshoot
 appliesto: 
   - Microsoft SharePoint Server 2019
   - Microsoft SharePoint Server 2016

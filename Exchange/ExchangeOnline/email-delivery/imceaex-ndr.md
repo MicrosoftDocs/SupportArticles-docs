@@ -8,6 +8,7 @@ ms.topic: troubleshooting
 manager: dcscontentpm
 localization_priority: Normal
 ms.custom: 
+  - sap:Mail Flow
   - Exchange Online
   - CSSTroubleshoot
 search.appverid: 

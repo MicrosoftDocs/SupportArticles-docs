@@ -9,7 +9,9 @@ localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - sap:Sites\Hub Site
+  - CSSTroubleshoot
 ms.topic: troubleshooting
 appliesto: 
   - SharePoint Online

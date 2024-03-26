@@ -9,6 +9,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Retention
   - CI 161323
   - Exchange Online
   - CSSTroubleshoot

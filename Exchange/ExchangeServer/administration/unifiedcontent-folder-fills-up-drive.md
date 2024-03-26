@@ -7,7 +7,8 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
-ms.custom:
+ms.custom: 
+  - sap:Mail Flow\Need help with Transport Logs
   - CI 163530
   - Exchange Server
   - CSSTroubleshoot

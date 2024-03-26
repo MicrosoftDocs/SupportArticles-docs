@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - sap:Administration\Service Applications (except Search)
   - CI 109531
   - CSSTroubleshoot
 ms.reviewer: bpeterse, dhirmeht

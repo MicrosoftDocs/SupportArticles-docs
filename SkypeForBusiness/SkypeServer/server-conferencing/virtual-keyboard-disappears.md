@@ -10,7 +10,8 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: v-six
 ms.reviewer: chanh
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - CSSTroubleshoot
 appliesto: 
   - Skype Room System v2
 ms.date: 03/31/2022

@@ -7,7 +7,8 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
-ms.custom:
+ms.custom: 
+  - sap:Mail Flow\Not Able to Send or Receive Emails from Internet
   - CI 179711
   - Exchange Server
   - CSSTroubleshoot

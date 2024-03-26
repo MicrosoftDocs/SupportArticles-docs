@@ -10,7 +10,8 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: v-six
 ms.reviewer: miadkins
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - CSSTroubleshoot
 appliesto: 
   - Lync Server
 ms.date: 03/31/2022

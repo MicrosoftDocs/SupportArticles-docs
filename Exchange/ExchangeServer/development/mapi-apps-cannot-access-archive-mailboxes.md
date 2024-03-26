@@ -7,7 +7,8 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
-ms.custom:
+ms.custom: 
+  - sap:Clients and Mobile\Issue with autodiscover
   - Exchange Server
   - CSSTroubleshoot
   - CI 177580

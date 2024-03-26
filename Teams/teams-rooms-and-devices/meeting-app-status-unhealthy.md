@@ -14,7 +14,8 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft Teams
-ms.custom:
+ms.custom: 
+  - sap:MTR Pro\
   - CI167273
   - CI185119
 ---

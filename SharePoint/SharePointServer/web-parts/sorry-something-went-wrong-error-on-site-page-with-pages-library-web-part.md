@@ -9,7 +9,9 @@ search.appverid:
   - MET150
 audience: Admin
 ms.topic: troubleshooting
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - sap:User experience\Webpart infrastructure
+  - CSSTroubleshoot
 appliesto: 
   - SharePoint Online
   - SharePoint Designer

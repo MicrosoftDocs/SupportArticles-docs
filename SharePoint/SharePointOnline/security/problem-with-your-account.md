@@ -8,7 +8,9 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - sap:Authentication and Authorization\Conditional Access Policy
+  - CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - SharePoint Online

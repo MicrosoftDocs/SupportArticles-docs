@@ -9,7 +9,9 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
-ms.custom: sap:office-experts, CSSTroubleshoot
+ms.custom: 
+  - sap:office-experts
+  - CSSTroubleshoot
 appliesto: 
   - Excel for Microsoft 365
   - Excel 2019

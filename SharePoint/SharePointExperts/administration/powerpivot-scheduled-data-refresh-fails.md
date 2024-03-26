@@ -10,7 +10,9 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.custom: sap:spsexperts, CSSTroubleshoot
+ms.custom: 
+  - sap:Administration\Timer Service and jobs
+  - CSSTroubleshoot
 appliesto: 
   - SharePoint Server 2016
 ms.date: 12/17/2023

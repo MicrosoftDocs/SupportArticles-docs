@@ -5,7 +5,8 @@ author: helenclu
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - CSSTroubleshoot
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 

@@ -5,7 +5,9 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - sap:Product Stability, startup or Shutdown and perform\Missing data file (.pst or .ost) error
+  - CSSTroubleshoot
 appliesto:
 - Outlook 2019
 - Outlook 2016

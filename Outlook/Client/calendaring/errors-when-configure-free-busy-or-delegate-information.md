@@ -5,7 +5,9 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - sap:Calendar\Error configuring a delegate
+  - CSSTroubleshoot
 appliesto: 
 - Outlook 2016 Outlook 2013 
 - Microsoft Outlook 2010 

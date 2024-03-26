@@ -13,6 +13,7 @@ search.appverid:
 appliesto: 
   - SharePoint Online
 ms.custom: 
+  - sap:Customization and Formatting\SPFx Web Parts
   - CI 115576
   - CSSTroubleshoot
 ms.reviewer: lucaband

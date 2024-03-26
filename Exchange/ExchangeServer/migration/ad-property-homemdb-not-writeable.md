@@ -5,7 +5,9 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - sap:Migration\Issues with Move Mailbox within same organization
+  - CSSTroubleshoot
 appliesto: 
 - Exchange Server 2010 
 - Exchange Server 2013 

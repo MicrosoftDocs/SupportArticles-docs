@@ -5,7 +5,9 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - sap:Sending, Receiving, Synchronizing, or viewing email\Other
+  - CSSTroubleshoot
 appliesto:
 - Outlook
 search.appverid: MET150

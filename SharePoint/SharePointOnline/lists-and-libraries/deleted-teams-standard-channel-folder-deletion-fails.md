@@ -10,8 +10,9 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
-- CSSTroubleshoot
-- CI 171872
+  - sap:Lists and Libraries\Create
+  - CSSTroubleshoot
+  - CI 171872
 ms.reviewer: prbalusu
 appliesto: 
 - SharePoint Online

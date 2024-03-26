@@ -5,7 +5,9 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: how-to
 localization_priority: Normal
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - sap:Mail Flow
+  - CSSTroubleshoot
 appliesto: 
 - Exchange Online
 search.appverid: MET150

@@ -8,7 +8,9 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - sap:Pages\Other
+  - CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - SharePoint Online

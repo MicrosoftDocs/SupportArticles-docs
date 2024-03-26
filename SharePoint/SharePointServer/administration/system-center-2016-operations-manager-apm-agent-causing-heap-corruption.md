@@ -8,7 +8,9 @@ search.appverid:
 localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - sap:Administration\Other
+  - CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - SharePoint Server 2010

@@ -9,7 +9,9 @@ localization_priority: Normal
 search.appverid: 
   - MET150
 audience: Admin
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - sap:Administration\Workflows
+  - CSSTroubleshoot
 ms.topic: troubleshooting
 appliesto: 
   - SharePoint Server 2013

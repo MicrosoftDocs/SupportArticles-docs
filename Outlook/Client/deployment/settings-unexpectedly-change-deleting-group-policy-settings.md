@@ -5,7 +5,9 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - sap:User Interface features and Configuration\Group Policy
+  - CSSTroubleshoot
 appliesto:
 - Outlook
 search.appverid: MET150

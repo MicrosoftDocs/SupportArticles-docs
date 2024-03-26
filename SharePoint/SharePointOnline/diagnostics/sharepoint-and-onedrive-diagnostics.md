@@ -14,6 +14,7 @@ appliesto:
   - SharePoint Online
   - OneDrive
 ms.custom: 
+  - sap:Lists and Libraries\Other
   - CI 122279
   - CSSTroubleshoot
 ms.reviewer: salarson

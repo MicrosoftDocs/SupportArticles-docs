@@ -5,7 +5,9 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - sap:Clients and Mobile\Issue with autodiscover
+  - CSSTroubleshoot
 appliesto:
 search.appverid: MET150
 ms.reviewer: v-six

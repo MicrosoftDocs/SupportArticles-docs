@@ -13,6 +13,7 @@ search.appverid:
 appliesto: 
   - Microsoft Teams
 ms.custom: 
+  - sap:Teams External and Guest Access\Teams External Federation
   - CI 113425
   - CSSTroubleshoot
 ms.reviewer: scapero

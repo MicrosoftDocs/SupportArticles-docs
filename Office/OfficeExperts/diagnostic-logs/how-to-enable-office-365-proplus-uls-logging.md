@@ -10,7 +10,10 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.custom: sap:office-experts, CSSTroubleshoot, CI 113644
+ms.custom: 
+  - sap:office-experts
+  - CSSTroubleshoot
+  - CI 113644
 appliesto: 
   - Microsoft 365 Apps for enterprise
 ms.reviewer: ericspli

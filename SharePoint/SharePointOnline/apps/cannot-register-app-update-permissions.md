@@ -8,6 +8,7 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:App Bar and Navigation\SharePoint App Bar Configuration
   - CSSTroubleshoot
   - CI181229
 appliesto: 

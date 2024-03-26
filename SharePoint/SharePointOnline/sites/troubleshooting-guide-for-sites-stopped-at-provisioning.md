@@ -13,6 +13,7 @@ search.appverid:
 appliesto: 
   - OneDrive for Business
 ms.custom: 
+  - sap:SharePoint Admin Center\Other
   - CI 112027
   - CSSTroubleshoot
 ms.reviewer: prbalusu

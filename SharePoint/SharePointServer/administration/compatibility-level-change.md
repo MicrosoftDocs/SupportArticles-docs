@@ -8,7 +8,9 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - sap:Administration\Setup, Upgrade, Migration and Patching
+  - CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - SharePoint Server 2019

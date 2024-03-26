@@ -7,7 +7,9 @@ manager: dcscontentpm
 localization_priority: Normal
 audience: Admin
 ms.topic: troubleshooting
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - sap:Administration\SharePoint Designer
+  - CSSTroubleshoot
 search.appverid: 
   - MET150
 appliesto: 

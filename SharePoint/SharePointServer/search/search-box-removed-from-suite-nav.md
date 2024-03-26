@@ -12,6 +12,7 @@ search.appverid:
 appliesto: 
   - SharePoint
 ms.custom: 
+  - sap:Search\Search results, queries, and syntax
   - CI 122435
   - CSSTroubleshoot
 ms.reviewer: MS aliases for tech reviewers and CI requestor, without @microsoft.com.

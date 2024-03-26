@@ -6,7 +6,9 @@ ms.author: luche
 ms.reviewer: warrenr
 manager: dcscontentpm
 localization_priority: Normal
-ms.custom: sap:office-experts, CSSTroubleshoot
+ms.custom: 
+  - sap:office-experts
+  - CSSTroubleshoot
 search.appverid: 
   - MET150
 audience: ITPro

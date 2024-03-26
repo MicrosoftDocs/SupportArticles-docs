@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Data Protection and Security\Sensitivity Labels
   - CSSTroubleshoot
 ms.reviewer: michael.green, gbratton, meerak, v-trisshores
 appliesto: 

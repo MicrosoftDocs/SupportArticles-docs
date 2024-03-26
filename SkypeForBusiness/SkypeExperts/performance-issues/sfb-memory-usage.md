@@ -9,7 +9,9 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.custom: sap:sfbexperts, CSSTroubleshoot
+ms.custom: 
+  - sap:sfbexperts
+  - CSSTroubleshoot
 ms.reviewer: kenguil
 appliesto: 
   - Skype for Business

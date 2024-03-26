@@ -5,7 +5,9 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - sap:Developer Issues\Macros
+  - CSSTroubleshoot
 appliesto:
 search.appverid: MET150
 ms.reviewer: meshel, benjak, aruiz, v-six

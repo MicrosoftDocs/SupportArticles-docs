@@ -10,7 +10,9 @@ search.appverid:
   - MET150
 audience: Admin
 ms.topic: troubleshooting
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - sap:Administration\Files and Documents
+  - CSSTroubleshoot
 appliesto: 
   - Microsoft SharePoint
 ms.date: 12/17/2023

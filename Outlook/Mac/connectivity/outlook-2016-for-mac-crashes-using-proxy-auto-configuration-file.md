@@ -6,8 +6,9 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- CSSTroubleshoot
-- CI 162524
+  - sap:Connectivity\
+  - CSSTroubleshoot
+  - CI 162524
 appliesto:
 - Outlook 2016 for Mac
 search.appverid: MET150

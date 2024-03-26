@@ -1,15 +1,16 @@
 ---
-title: You cannot remove the initial domain when removing a domain
-description: Fixes an issue in which the Remove domain link is unavailable or you receive a You cannot remove the initial domain created for you in Microsoft 365 error message when you try to remove a domain from Microsoft 365.
+title: You can't remove the initial domain when removing a domain
+description: Fixes an issue in which you can't remove the initial domain created for you in Microsoft 365.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
-ms.custom:
+ms.custom: 
   - CSSTroubleshoot
   - has-azure-ad-ps-ref
+  - azure-ad-ref-level-one-done
 ms.topic: troubleshooting
 ms.author: luche
 appliesto: 
@@ -33,6 +34,8 @@ When you try to remove a domain from Microsoft 365, you experience one of the fo
   + CategoryInfo : OperationStopped: (:) [Remove-MsolDomain], MicrosoftOnlineException
   + FullyQualifiedErrorId : Microsoft.Online.Administration.Automation.InitialDomainDeletionException,Microsoft.Online.Administration.Automation.RemoveDomain
   ```
+
+[!INCLUDE [Azure AD PowerShell deprecation note](../../../includes/aad-powershell-deprecation-note.md)]
 
 ## CAUSE
 

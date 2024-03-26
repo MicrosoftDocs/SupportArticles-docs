@@ -13,7 +13,9 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft Teams
-ms.custom: CI163313
+ms.custom: 
+  - sap:Teams Compatible Devices and Peripherals\
+  - CI163313
 ms.reviewer: kponnus
 ---
 

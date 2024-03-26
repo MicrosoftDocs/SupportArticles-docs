@@ -15,12 +15,12 @@ ms.reviewer: gregmans; zebamehdi; meerak
 appliesto: 
   - Microsoft 365
 search.appverid: MET150
-ms.date: 02/22/2024
+ms.date: 03/14/2024
 ---
 # Enterprise version of Microsoft Support and Recovery Assistant
 
 > [!NOTE]  
-> This article is for Microsoft 365 administrators only. For help to diagnose and fix issues that affect Microsoft Office, Microsoft 365, or Microsoft Outlook on your computer, see [About the Microsoft Support and Recovery Assistant](https://aka.ms/SaRA_Home).
+> This article is for Microsoft 365 administrators only. For help to diagnose and fix issues that affect Microsoft Office, Microsoft 365, or Microsoft Outlook on your computer, see [About Microsoft Support and Recovery Assistant](https://aka.ms/SaRA_Home).
 
 The Enterprise version of Microsoft Support and Recovery Assistant is a self-contained, enterprise-ready diagnostic tool that you can use to troubleshoot specific client issues that affect Microsoft 365 apps, such as Microsoft Teams and Outlook. This version of the Assistant runs at a command line or through a script such as PowerShell. Administrators will find this version of the Assistant useful if they have to run it on computers in their organization remotely.
 
@@ -29,6 +29,9 @@ To resolve issues on a single computer, we recommend that you use the [full ve
 ## Supported scenarios
 
 You can use the Enterprise version of the Assistant to resolve issues for the following scenarios. Select a scenario for details about how to run it.
+
+> [!NOTE]
+> Microsoft Support and Recovery Assistant scenarios aren't available for new Outlook and new Teams.
 
 |Scenario|Description|\<Scenarioname\>|
 |---|---|---|

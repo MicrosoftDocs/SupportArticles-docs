@@ -8,6 +8,7 @@ ms.topic: troubleshooting
 ms.reviewer: rrajan, v-six
 manager: dcscontentpm
 ms.custom: 
+  - sap:Migration
   - Exchange Hybrid
   - CSSTroubleshoot
 localization_priority: Normal

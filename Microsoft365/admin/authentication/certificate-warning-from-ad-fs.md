@@ -7,9 +7,10 @@ localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
-ms.custom:
+ms.custom: 
   - CSSTroubleshoot
   - has-azure-ad-ps-ref
+  - azure-ad-ref-level-one-done
 ms.topic: troubleshooting
 ms.author: luche
 appliesto: 
@@ -77,13 +78,14 @@ To resolve time-valid issues, follow these steps.
    1. Verify that the certificate name is incorrect.
    1. Reissue the correct certificate. For more info about how to install and set up a new SSL certificate for AD FS, see [How to change the AD FS 2.0 service communications certificate after it expires](https://support.microsoft.com/help/2921805).    
 2. If the AD FS idP endpoint or smart links are leveraged for a customized sign-in experience, make sure that the server name that's used matches the certificate that's assigned to the AD FS service.  
-3. In rare cases, this condition can also be caused by incorrectly trying to change the AD FS service name after implementation. For more information about how to manually change the AD FS endpoint service name, see
-[AD FS 2.0: How to Change the Federation Service Name](https://social.technet.microsoft.com/wiki/contents/articles/ad-fs-2-0-how-to-change-the-federation-service-name.aspx). 
+3. In rare cases, this condition can also be caused by incorrectly trying to change the AD FS service name after implementation. 
  
    > [!IMPORTANT]
    > These kinds of changes will cause an AD FS service outage. After the update, you must follow these steps to restore single sign-on (SSO) functionality:  
    > 1. Run the Update-MSOLFederatedDomain cmdlet on all federated namespaces.    
    > 2. Rerun the setup configuration wizard for any AD FS proxy servers in the environment.    
+
+[!INCLUDE [Azure AD PowerShell deprecation note](../../../includes/aad-powershell-deprecation-note.md)]
 
 ### Method 3: Issuing certification chain trust issues
 

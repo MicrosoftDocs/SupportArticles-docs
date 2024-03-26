@@ -9,6 +9,7 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.reviewer: excontent, message, exuetr, jmartin, christys, genli, v-six
 ms.custom: 
+  - sap:Sharing\Issue viewing Free Busy
   - Exchange Server
   - CSSTroubleshoot
 search.appverid: 

@@ -6,6 +6,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:People or Contacts\SharePoint contacts
   - Outlook for Windows
   - CI 155669
   - CSSTroubleshoot

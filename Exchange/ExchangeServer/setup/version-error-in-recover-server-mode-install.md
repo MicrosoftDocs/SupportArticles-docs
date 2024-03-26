@@ -8,7 +8,8 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.reviewer: batre, ninob, meerak, v-trisshores
-ms.custom:
+ms.custom: 
+  - sap:Plan and Deploy\Exchange Install Issues, Cumulative or Security updates
   - CI 171721
   - Exchange Server
   - CSSTroubleshoot

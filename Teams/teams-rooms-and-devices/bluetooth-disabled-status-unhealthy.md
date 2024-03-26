@@ -14,7 +14,9 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft Teams
-ms.custom: CI174031
+ms.custom: 
+  - sap:MTR Pro\
+  - CI174031
 ---
 # The Bluetooth disabled status is Unhealthy
 

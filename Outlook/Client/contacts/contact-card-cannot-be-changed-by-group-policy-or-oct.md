@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:People or Contacts\Address book configuration and administration
   - Outlook for Windows
   - CSSTroubleshoot
 ms.reviewer: mchen, aruiz, gregmans, tsimon, laurentc, amkanade, doakm, randyto, gbratton, bobcool, AlonB, LianWang

@@ -8,7 +8,9 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - sap:Search\Search results, queries, and syntax
+  - CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - SharePoint Foundation 2013

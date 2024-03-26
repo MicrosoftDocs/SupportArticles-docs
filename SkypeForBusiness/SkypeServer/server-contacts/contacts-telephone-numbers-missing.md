@@ -10,7 +10,8 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: v-six
 ms.reviewer: premgan
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - CSSTroubleshoot
 appliesto: 
   - Microsoft Lync 2013
   - Lync Basic 2013

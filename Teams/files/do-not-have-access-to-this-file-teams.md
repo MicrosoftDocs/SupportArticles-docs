@@ -15,6 +15,7 @@ appliesto:
   - Microsoft OneDrive for Business
   - Microsoft Teams
 ms.custom: 
+  - sap:Teams Files\Access File
   - CI 125301
   - CSSTroubleshoot
 ms.reviewer: prbalusu

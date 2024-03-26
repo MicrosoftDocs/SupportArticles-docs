@@ -9,7 +9,8 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
-ms.custom:
+ms.custom: 
+  - sap:Sharing\Sharing with external
   - CSSTroubleshoot
   - has-azure-ad-ps-ref
 appliesto: 

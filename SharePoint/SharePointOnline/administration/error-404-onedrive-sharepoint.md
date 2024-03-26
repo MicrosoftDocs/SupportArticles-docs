@@ -14,6 +14,7 @@ search.appverid:
 appliesto: 
   - SharePoint Online
 ms.custom: 
+  - sap:Pages\Error 404: Page Unavailable
   - CI 153762
   - CI 154562
   - CSSTroubleshoot

@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:People or Contacts\Offline Address Book (OAB) synchronization
   - Outlook for Windows
   - CSSTroubleshoot
 ms.reviewer: tasitae, Gregmans

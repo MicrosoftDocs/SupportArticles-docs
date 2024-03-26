@@ -10,7 +10,9 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: adrianp, v-yilia
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - sap:Administration\Lists and libraries
+  - CSSTroubleshoot
 appliesto: 
   - PowerPoint 2013
   - Office Home and Business 2013

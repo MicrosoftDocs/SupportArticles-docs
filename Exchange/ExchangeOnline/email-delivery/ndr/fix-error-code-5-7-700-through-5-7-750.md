@@ -11,9 +11,10 @@ ms.localizationpriority: high
 f1.keywords:
 - CSH
 ms.custom: 
-- Exchange Online
-- CSSTroubleshoot
-- CI 167832
+  - sap:Mail Flow
+  - Exchange Online
+  - CSSTroubleshoot
+  - CI 167832
 search.appverid:
 - BCS160
 - MOE150

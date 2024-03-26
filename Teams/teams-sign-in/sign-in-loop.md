@@ -8,7 +8,9 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - sap:Teams Identity and Auth\Client Sign-in (window, mac, linux, web)
+  - CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - Microsoft Teams

@@ -7,7 +7,8 @@ localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - CSSTroubleshoot
 ms.topic: troubleshooting
 description: OData Connection to Project Online from SSIS is failing if TLS is not enabled.
 appliesto: 

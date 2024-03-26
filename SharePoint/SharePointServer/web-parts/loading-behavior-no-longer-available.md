@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:User experience\Webpart infrastructure
   - CSSTroubleshoot
 ms.reviewer: 
 appliesto: 

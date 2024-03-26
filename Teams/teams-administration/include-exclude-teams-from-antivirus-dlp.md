@@ -15,6 +15,7 @@ appliesto:
   - New Microsoft Teams
   - Classic Microsoft Teams
 ms.custom: 
+  - sap:Teams Clients\Windows Desktop
   - CI 106370
   - CSSTroubleshoot
 ms.reviewer: davidsle

@@ -9,7 +9,9 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - sap:Administration\Sharing and permissions
+  - CSSTroubleshoot
 appliesto: 
   - SharePoint Server 2013
   - SharePoint Designer 2013

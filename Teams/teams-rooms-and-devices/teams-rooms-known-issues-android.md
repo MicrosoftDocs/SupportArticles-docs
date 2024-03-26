@@ -13,16 +13,18 @@ localization_priority: Normal
 ms.collection: 
   - M365-collaboration
 ms.custom: 
+  - sap:Msft Teams Rooms Windows (MTRW)\
   - seo-marvel-apr2020
   - CSSTroubleshoot
   - CI 121996
   - CI 160661
   - CI 164223
+  - CI 187786
 appliesto: 
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 02/22/2024
+ms.date: 03/22/2024
 ---
 # Known issues with Teams Rooms on Android
 
@@ -43,6 +45,7 @@ ms.date: 02/22/2024
 |Laser pointer and drawing tools in PowerPoint Live don't display for in-room participants | In-room meeting participants in a Teams meeting who are using Teams Rooms on Android devices aren't able to see the following features during a PowerPoint Live presentation: Laser pointer, pen, highlighter, and eraser. | Join the meeting on your personal device to see the laser pointer and drawing tools in PowerPoint Live. |
 |Teams Admin Settings unavailable on Teams Rooms on Android devices with Teams Rooms Basic license. | The **Teams Admin Settings** option under **Device Settings** is unavailable on devices that have the Teams Rooms Basic license for Teams Rooms on Android CY22 U3 app (version 1449/1.0.96.2022120503). | Admins can either assign a Teams Rooms Pro license to the same device or downgrade the device to use Teams Rooms on Android CCY22 U2B app (version: 1449/1.0.96.2022090606) instead. |
 |Rotate 180 option doesn't work for all meeting participants|You select the **Rotate 180** option for a Content camera in your Teams Rooms on Android device. However, the rotation is applied only to the video feed for in-room participants. Remote participants still see an inverted video display.|If possible, mount the Content camera right side up instead of upside down.|
+|Whiteboard doesn't launch and displays an error message instead|You might see the following error message when you try to launch the Whiteboard during a Teams meeting:<br/><br/><i> Something went wrong </i><br/><br/>The issue might occur if you're using one of the following devices:<ul><li>Cisco Board Pro 55 & 75</li><li>Cisco Room Kit EQX</li><li>Neat Board</li><li>DTEN D7X</li><li>Yealink MeetingBoard 65</li><li>Poly X50</li></ul> | Make sure the following policy is enabled on the device:<br/><br/><i> AllowAnonymousMeetingParticipantsToAccessWhiteboards </i><br/><br/>You're required to enable this policy if you want to use the Whiteboard feature. See [Manage sharing for Microsoft Whiteboard](/microsoft-365/whiteboard/manage-sharing-organizations) for more information.|
 
 ## Issues with Direct Guest Join
 
@@ -57,15 +60,9 @@ ms.date: 02/22/2024
 |Sign in loops or fails for Teams on Android phones |You can't sign in or the sign-in continually loops when both the MFA and the Terms of Use (ToU) Conditional Access (CA) policies are used. |The combination of MFA CA and ToU CA isn't supported. You should exclude it from being used. <br><br> To avoid the sign-in error, ensure that only the MFA CA or only the MDM CA is used. When only the MFA CA is used, make sure that it's enabled in Device Registration Services (DRS). For more information, see [Conditional Access: Cloud apps, actions, and authentication context](/azure/active-directory/conditional-access/concept-conditional-access-cloud-apps#user-actions).|
 |Can't add, delete, or edit contacts on Android phones|You can't perform the add, delete, and edit operations on contacts from Teams on Android phones.|Use either the Teams desktop or the Teams web client to perform these actions.|
 |Signed out of Teams on Android devices | Teams Rooms on Android, Teams phone devices, Teams panels, and Teams displays are signed out of Teams automatically. | Follow the instructions provided in [Signed out of Teams on Android devices](./signed-out-of-teams-android-devices.md).|
-|an't resume a call after using **Consult first** option on Teams phones | After using the **Consult first** option in the **Transfer** menu when you select the **Resume** option to resume the call, the call fails. | End the call made by using the **Consult first** option and then resume the original call.|
+|Can't resume a call after using **Consult first** option on Teams phones | After using the **Consult first** option in the **Transfer** menu when you select the **Resume** option to resume the call, the call fails. | End the call made by using the **Consult first** option and then resume the original call.|
 |Calls on long hold in GCCH tenants drop intermittently|On GCCH tenants that are running 2022 update #4A (Teams app version 1449/1.0.94.2022110803), when a user puts a call on long hold the call drops in some instances. This issue doesn't occur on other clouds.|No workaround is available at this time.|
 |In Better together mode, the **Mute** setting on Teams phones doesn't seem to work during a screen share with audio|On Teams phones that use the Better together feature, when you share a screen and enable the **Include computer sound** option during a Teams meeting, the audio from the phones that are muted is still heard.<br/><br/>If you toggle the **Unmute** and **Mute** options a few times, the audio output that is coming from both from the desktop client and the Teams phones results in howling.|No workaround is available at this time.|
-
-## Issues with Teams panels
-
-| Issue  |  Description | Workaround |
-| --- | --- | --- |
-|Joining a meeting on a Teams Rooms device doesn't check you in for the meeting|You have a panel that shares a resource account with a Teams Room device. If you join a scheduled meeting on the Teams Rooms device, you might not be checked in for your reservation on the panel. This issue occurs intermittently.|If the issue is happening often, turn off the **Release room if no one checks in** setting in the Microsoft Teams admin center.|
 
 ## Limitations
 

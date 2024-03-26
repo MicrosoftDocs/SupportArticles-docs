@@ -10,6 +10,7 @@ localization_priority: Normal
 search.appverid: 
   - MET150
 ms.custom: 
+  - sap:User experience\Other
   - CI 147469
   - CSSTroubleshoot
 ms.date: 12/17/2023

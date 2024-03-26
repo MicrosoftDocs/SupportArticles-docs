@@ -10,7 +10,9 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.custom: sap:spsexperts, CSSTroubleshoot
+ms.custom: 
+  - sap:Administration\SharePoint Designer
+  - CSSTroubleshoot
 appliesto: 
   - SharePoint Designer 2013
   - SharePoint Online

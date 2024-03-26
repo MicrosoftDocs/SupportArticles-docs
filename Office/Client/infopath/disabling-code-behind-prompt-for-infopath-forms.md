@@ -6,7 +6,8 @@ ms.author: luche
 ms.reviewer: dmahugh
 manager: dcscontentpm
 localization_priority: Normal
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - CSSTroubleshoot
 search.appverid: 
   - MET150
 audience: Admin

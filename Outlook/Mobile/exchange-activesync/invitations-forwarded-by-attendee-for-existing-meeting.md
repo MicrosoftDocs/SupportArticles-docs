@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Programming Custom Solutions\Add-ins
   - Outlook for iOS and Android
   - CSSTroubleshoot
 ms.reviewer: jmartin

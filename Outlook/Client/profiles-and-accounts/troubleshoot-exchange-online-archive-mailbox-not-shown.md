@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Exchange Mailbox Accounts\Archive mailbox
   - Outlook for Windows
   - CSSTroubleshoot
 ms.reviewer: aruiz, vijayde
@@ -16,7 +17,7 @@ appliesto:
   - Outlook 2016
   - Outlook 2013
 search.appverid: MET150
-ms.date: 01/30/2024
+ms.date: 03/14/2024
 ---
 # How to troubleshoot an Exchange Online Archive mailbox that is not displayed in Outlook
 
@@ -72,6 +73,8 @@ To check the if **Automatically detect settings** is checked, refer the followin
 1. In Internet Explorer, go to **Internet Options**. If yes, clear it then restart Outlook.
 2. In Edge, go to **Settings** then **Advanced** icon on left pane. Select **Open proxy settings**, check whether **Automatically detect settings** is on. If it's checked, clear it then restart Outlook.
 
-## Resolution Method 6 - Scan Outlook by using the Microsoft Support and Recovery Assistant tool
+## Resolution Method 6 - Scan Outlook by using Microsoft Support and Recovery Assistant
 
-If the issue occurs for a user who is trying to access the Online Archive mailbox of another user, you can use the Support and Recovery Assistant (SaRA) tool to scan Outlook and review advanced diagnostics for known problems and details about the Microsoft Outlook configuration. For more information about how to use SaRA, see [How to scan Outlook by using the Microsoft Support and Recovery Assistant](https://support.microsoft.com/help/4098558/how-to-scan-outlook-by-using-the-sara-tool).
+[!INCLUDE [Microsoft Support and Recovery Assistant note](../../../includes/sara-note-new-outlook.md)]
+
+If the issue occurs for a user who is trying to access the Online Archive mailbox of another user, you can use the Support and Recovery Assistant (SaRA) tool to scan Outlook and review advanced diagnostics for known problems and details about the Microsoft Outlook configuration. For more information about how to use SaRA, see [How to scan Outlook by using Microsoft Support and Recovery Assistant](https://support.microsoft.com/help/4098558/how-to-scan-outlook-by-using-the-sara-tool).

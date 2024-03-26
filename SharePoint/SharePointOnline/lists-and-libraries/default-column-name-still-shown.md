@@ -11,6 +11,7 @@ ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: pejohn
 ms.custom: 
+  - sap:Lists and Libraries\Columns
   - CSSTroubleshoot
   - CI 150405
 appliesto: 

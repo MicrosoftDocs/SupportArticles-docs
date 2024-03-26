@@ -9,7 +9,9 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - sap:Search\Crawling
+  - CSSTroubleshoot
 appliesto: 
   - SharePoint Server 2016
   - SharePoint Server 2013

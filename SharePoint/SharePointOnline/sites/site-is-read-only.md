@@ -11,6 +11,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - sap:Sites\Other
   - CSSTroubleshoot
   - CI 158141
 appliesto: 

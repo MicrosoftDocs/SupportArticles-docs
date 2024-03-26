@@ -8,7 +8,9 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - sap:Authentication & User Profiles\Security Assertion Markup Language (SAML)-based claims
+  - CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - Microsoft SharePoint

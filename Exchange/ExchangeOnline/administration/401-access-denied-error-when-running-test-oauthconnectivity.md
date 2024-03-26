@@ -7,10 +7,12 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
-ms.custom:
+ms.custom: 
+  - sap:Hybrid
   - Exchange Online
   - CSSTroubleshoot
   - has-azure-ad-ps-ref
+  - azure-ad-ref-level-one-done
 ms.reviewer: timothyh, v-six
 appliesto: 
   - Exchange Online
@@ -41,6 +43,8 @@ This issue can occur if one of the following conditions is true:
 To fix this issue, take one of the following actions, as appropriate for your situation.
 
 ### Scenario 1 - The SPN is missing
+
+[!INCLUDE [Azure AD PowerShell deprecation note](../../../includes/aad-powershell-deprecation-note.md)]
 
 1. Open the Exchange Management Shell.
 2. Run the following command:

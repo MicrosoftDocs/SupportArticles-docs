@@ -8,7 +8,9 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - sap:Sharing\Sharing links
+  - CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - SharePoint Online

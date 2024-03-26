@@ -9,6 +9,7 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.reviewer: tmoore, gregmans
 ms.custom: 
+  - sap:Sending, Receiving, Synchronizing, or viewing email\Other
   - Outlook for Windows
   - CSSTroubleshoot
 search.appverid: 

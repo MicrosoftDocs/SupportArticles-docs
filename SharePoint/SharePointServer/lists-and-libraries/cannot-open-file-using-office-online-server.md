@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Administration\Files and Documents
   - CSSTroubleshoot
 ms.reviewer: nsimons
 appliesto: 

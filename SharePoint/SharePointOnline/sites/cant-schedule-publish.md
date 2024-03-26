@@ -10,6 +10,7 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Pages\Publish Page
   - CSSTroubleshoot
   - CI 162694
 ms.reviewer: paotten

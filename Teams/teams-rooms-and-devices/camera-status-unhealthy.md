@@ -14,7 +14,9 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft Teams
-ms.custom: CI167249
+ms.custom: 
+  - sap:MTR Pro\
+  - CI167249
 ---
 
 # The Camera status is Unhealthy

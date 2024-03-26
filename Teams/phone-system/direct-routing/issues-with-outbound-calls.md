@@ -13,7 +13,11 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft Teams
-ms.custom: CI-126689,CSSTroubleshoot,scenario:Direct-Routing-3
+ms.custom: 
+  - sap:Teams Calling (PSTN)\Direct Routing
+  - CI-126689
+  - CSSTroubleshoot
+  - scenario:Direct-Routing-3
 ms.reviewer: mikebis
 ---
 

@@ -10,7 +10,9 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.reviwer: zakirh
-ms.custom: sap:office-experts, CSSTroubleshoot
+ms.custom: 
+  - sap:office-experts
+  - CSSTroubleshoot
 appliesto: 
   - Microsoft Sway
 ms.date: 03/31/2022

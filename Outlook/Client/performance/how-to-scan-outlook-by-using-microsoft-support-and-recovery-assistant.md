@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Product Stability, startup or Shutdown and perform\Other
   - Outlook for Windows
   - CSSTroubleshoot
 ms.reviewer: tasitae; gregmans
@@ -17,11 +18,11 @@ appliesto:
   - Outlook 2010
   - Outlook for Microsoft 365
 search.appverid: MET150
-ms.date: 01/30/2024
+ms.date: 03/14/2024
 ---
 # Scan Outlook by using Microsoft Support and Recovery Assistant
 
-_Original KB number:_ &nbsp; 4098558
+[!INCLUDE [Microsoft Support and Recovery Assistant note](../../../includes/sara-note-new-outlook.md)]
 
 ## Overview
 
@@ -29,7 +30,7 @@ Microsoft Support and Recovery Assistant use advanced diagnostics to report know
 
 The scenario in the Assistant that is described in this article replaces the Outlook scanning functionality that was originally provided by the Office Configuration Analyzer Tool (OffCAT).
 
-For more information about the Assistant, see [About the Microsoft Support and Recovery Assistant](https://support.microsoft.com/office/about-the-microsoft-support-and-recovery-assistant-e90bb691-c2a7-4697-a94f-88836856c72f).
+For more information about the Assistant, see [About Microsoft Support and Recovery Assistant](https://support.microsoft.com/office/about-the-microsoft-support-and-recovery-assistant-e90bb691-c2a7-4697-a94f-88836856c72f).
 
 ## System requirements
 

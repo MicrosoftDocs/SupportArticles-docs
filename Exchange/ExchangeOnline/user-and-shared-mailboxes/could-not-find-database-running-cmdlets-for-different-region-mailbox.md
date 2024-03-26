@@ -5,7 +5,9 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - sap:Administrator Tasks
+  - CSSTroubleshoot
 appliesto:
 - Exchange Online
 - Exchange

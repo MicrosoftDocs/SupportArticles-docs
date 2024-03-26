@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Product Stability, startup or Shutdown and perform\Hang using Outlook
   - Outlook for Windows
   - CSSTroubleshoot
 ms.reviewer: sercast
@@ -19,11 +20,9 @@ appliesto:
   - Outlook 2010 with Business Contact Manager
   - Outlook for Microsoft 365
 search.appverid: MET150
-ms.date: 01/30/2024
+ms.date: 03/14/2024
 ---
 # Outlook not responding error or Outlook freezes when you open a file or send mail
-
-_Original KB number:_ &nbsp; 2652320
 
 ## Symptoms
 
@@ -50,10 +49,10 @@ This problem occurs for one or more of the following reasons:
 > [!NOTE]
 >
 > - This issue may occur for one or more of the reasons in this section. To fix this issue, you may have to follow the troubleshooting steps in the Resolution section.
-> - Many of these items can be automatically checked by the Microsoft Support and Recovery Assistant (SaRA). To start the automated checks, follow these steps:
+> - Many of these items can be automatically checked by Microsoft Support and Recovery Assistant. Note that Microsoft Support and Recovery Assistant scenarios aren't available for new Outlook for Windows. To start the automated checks, follow these steps:
 >    1. Install the [Outlook Advanced Diagnostics](https://aka.ms/SaRA-OutlookAdvDiagnostics) tool.
->    2. Select **Run** when you are prompted by your browser.
->    3. In the report that's generated, review the items on the **Issues found** tab. For configuration details about Outlook, Windows, and your computer, review the settings on the **Detailed View** tab.
+>    1. Select **Run** when you are prompted by your browser.
+>    1. In the report that's generated, review the items on the **Issues found** tab. For configuration details about Outlook, Windows, and your computer, review the settings on the **Detailed View** tab.
 
 ## Resolution
 

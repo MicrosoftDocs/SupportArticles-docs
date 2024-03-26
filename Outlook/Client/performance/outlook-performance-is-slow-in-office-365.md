@@ -5,7 +5,9 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - sap:Exchange Mailbox Accounts\Slow to connect or access mailbox
+  - CSSTroubleshoot
 appliesto:
 - Exchange Online
 - Outlook 2016

@@ -9,7 +9,9 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - sap:Pages\Other
+  - CSSTroubleshoot
 appliesto: 
   - SharePoint Server 2019
   - SharePoint Server 2016

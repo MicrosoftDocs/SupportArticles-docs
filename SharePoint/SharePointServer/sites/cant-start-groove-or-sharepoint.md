@@ -10,7 +10,9 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: fselkirk
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - sap:User experience\Accessibility
+  - CSSTroubleshoot
 appliesto: 
   - SharePoint Workspace 2010
 ms.date: 12/17/2023

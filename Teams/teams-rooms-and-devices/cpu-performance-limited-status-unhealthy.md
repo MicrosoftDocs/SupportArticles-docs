@@ -14,7 +14,9 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft Teams
-ms.custom: CI177322
+ms.custom: 
+  - sap:MTR Pro\
+  - CI177322
 ---
 # The CPU performance limited status is Unhealthy
 

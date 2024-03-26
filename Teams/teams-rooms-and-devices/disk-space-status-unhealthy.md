@@ -14,7 +14,9 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft Teams
-ms.custom: CI167274
+ms.custom: 
+  - sap:MTR Pro\
+  - CI167274
 ---
 # The Disk Space status is Unhealthy
 

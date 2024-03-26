@@ -10,6 +10,7 @@ localization_priority: Normal
 search.appverid: 
   - MET150
 ms.custom: 
+  - sap:Data Protection and Security\DLP
   - Outlook for Windows
   - CI 106436
   - CSSTroubleshoot

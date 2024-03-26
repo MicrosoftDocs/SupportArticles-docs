@@ -7,7 +7,8 @@ audience: Admin
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.collection: Adm_O365
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - CSSTroubleshoot
 search.appverid: 
   - BCS160
   - MET150

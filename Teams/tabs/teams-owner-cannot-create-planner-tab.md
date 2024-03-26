@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Teams Apps and Connectors\Planner
   - CI 120274
   - CSSTroubleshoot
 ms.reviewer: cowitkow

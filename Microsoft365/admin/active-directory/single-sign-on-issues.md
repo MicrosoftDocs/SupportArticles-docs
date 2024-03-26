@@ -6,7 +6,8 @@ manager: dcscontentpm
 localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - CSSTroubleshoot
 ms.author: luche
 ms.reviewer: v-jocomf
 search.appverid: 

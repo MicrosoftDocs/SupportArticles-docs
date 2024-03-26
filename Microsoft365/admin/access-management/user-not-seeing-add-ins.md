@@ -5,7 +5,8 @@ author: helenclu
 manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - CSSTroubleshoot
 localization_priority: Normal
 ms.collection: 
   - M365-subscription-management

@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Teams Admin\
   - CI124994
   - CI184321
   - CSSTroubleshoot

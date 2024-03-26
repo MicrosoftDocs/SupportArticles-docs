@@ -11,7 +11,9 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.custom: sap:spsexperts, CSSTroubleshoot
+ms.custom: 
+  - sap:Administration\InfoPath Forms Service
+  - CSSTroubleshoot
 appliesto: 
   - SharePoint Online
   - Microsoft Forms

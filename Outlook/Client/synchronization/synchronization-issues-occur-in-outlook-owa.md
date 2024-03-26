@@ -5,7 +5,9 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - sap:Sending, Receiving, Synchronizing, or viewing email\Errors sending or receiving email
+  - CSSTroubleshoot
 appliesto:
 - Outlook 2019
 - Outlook 2016

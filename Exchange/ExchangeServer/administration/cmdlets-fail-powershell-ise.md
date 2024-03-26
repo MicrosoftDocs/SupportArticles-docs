@@ -9,6 +9,7 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.reviewer: kartik, v-six
 ms.custom: 
+  - sap:OWA  And Exchange Admin Center\Issues connecting to Exchange Management Shell
   - Exchange Server
   - CSSTroubleshoot
 search.appverid: 

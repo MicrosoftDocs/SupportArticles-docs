@@ -10,7 +10,9 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: ericspli
-ms.custom: sap:office-experts, CSSTroubleshoot
+ms.custom: 
+  - sap:office-experts
+  - CSSTroubleshoot
 appliesto: 
   - Microsoft Office
 ms.date: 03/31/2022

@@ -5,7 +5,9 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - sap:Collaboration and Public Folders\Issues with Public Folder Migration
+  - CSSTroubleshoot
 appliesto: 
 - Exchange Server
 search.appverid: MET150

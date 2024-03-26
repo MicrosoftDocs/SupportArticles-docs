@@ -5,7 +5,9 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - sap:People or Contacts\SharePoint contacts
+  - CSSTroubleshoot
 appliesto:
 - Outlook
 search.appverid: MET150

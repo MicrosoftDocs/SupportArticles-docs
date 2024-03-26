@@ -9,7 +9,9 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - sap:Workflows and Automation\Other
+  - CSSTroubleshoot
 appliesto: 
   - SharePoint Online
   - SharePoint Server 2013

@@ -10,7 +10,8 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: v-six
 ms.reviewer: tyryan
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - CSSTroubleshoot
 appleisto: 
   - Lync 2010
   - Lync 2013

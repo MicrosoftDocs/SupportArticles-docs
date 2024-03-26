@@ -5,7 +5,9 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - sap:Clients and Mobile\Can't Connect to Mailbox with OWA
+  - CSSTroubleshoot
 appliesto:
 - Exchange Online
 - Microsoft Exchange Online Dedicated

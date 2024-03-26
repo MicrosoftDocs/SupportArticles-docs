@@ -8,10 +8,11 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
-ms.custom:
-- CI 158355
-- Exchange Server
-- CSSTroubleshoot
+ms.custom: 
+  - sap:Mail Flow\Not Able to Send or Receive Emails from Internet
+  - CI 158355
+  - Exchange Server
+  - CSSTroubleshoot
 ms.reviewer: nasira, lusassl, paulkwo, meerak, v-chazhang
 appliesto:
 - Exchange Server 2019

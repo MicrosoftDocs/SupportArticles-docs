@@ -9,7 +9,9 @@ search.appverid:
 localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
-ms.custom: sap:office-experts, CSSTroubleshoot
+ms.custom: 
+  - sap:office-experts
+  - CSSTroubleshoot
 ms.reviewer: jalalb
 appliesto: 
   - Office 2013
