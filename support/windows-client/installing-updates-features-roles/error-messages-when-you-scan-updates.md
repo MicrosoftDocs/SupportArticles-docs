@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:failure-to-install-windows-updates, csstroubleshoot
+ms.custom: sap:Installing Windows Updates, Features, or Roles\Failure to install Windows Updates, csstroubleshoot
 ---
 # "Error: 0x8004005" or "Error: 0x800C0005" error messages when you scan for updates
 

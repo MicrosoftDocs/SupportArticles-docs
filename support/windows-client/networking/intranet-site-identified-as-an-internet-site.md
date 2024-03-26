@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:ip-address-management-ipam, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\IP Address Management (IPAM), csstroubleshoot
 ---
 # Intranet site is identified as an Internet site when you use an FQDN or an IP address
 

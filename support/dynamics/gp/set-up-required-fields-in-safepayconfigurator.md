@@ -3,7 +3,8 @@ title: SafePay configuration for Canadian Banks in Microsoft Dynamics GP
 description: There are certain fields required by Canadian Banks in the SafePay file that customers need assistance to set up.
 ms.reviewer: theley, cwaswick, lmuelle
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Payroll
 ---
 # SafePay configuration for Canadian Banks in Microsoft Dynamics GP
 

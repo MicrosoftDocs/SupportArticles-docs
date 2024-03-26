@@ -3,7 +3,8 @@ title: Payables EFT Standard ACH format
 description: Introduces the Payables Management EFT Standard ACH format in Microsoft Dynamics GP.
 ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # Payables EFT Standard ACH format
 

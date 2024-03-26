@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:domain-and-forest-trusts, csstroubleshoot
+ms.custom: sap:Windows Security Technologies\Domain and forest trusts, csstroubleshoot
 ---
 # Error with a one-way trust in Windows Server 2012 R2: Security identifier could not be resolved
 

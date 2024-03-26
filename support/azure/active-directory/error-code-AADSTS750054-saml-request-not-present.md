@@ -3,8 +3,8 @@ title: Error AADSTS750054 - SAMLRequest or SAMLResponse must be present as query
 description: Describes a problem in which you receive an error message when signing in to SAML-based single sign-on configured app that has been configured to use Microsoft Entra ID as an Identity Provider (IdP). The error you receive is Error AADSTS750054 - SAMLRequest or SAMLResponse must be present as query string parameters in HTTP request for SAML Redirect binding.
 ms.date: 10/12/2022
 ms.reviewer: bernawy
-ms.service: active-directory
-ms.subservice: app-mgmt
+ms.service: entra-id
+ms.subservice: enterprise-apps
 ---
 # Error AADSTS750054 - SAMLRequest or SAMLResponse must be present as query string parameters in HTTP request for SAML Redirect binding
 

@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, grcusanz, anpaul, v-lianna
-ms.custom: sap:sdn, csstroubleshoot
+ms.custom: sap:Software Defined Networking\Internal Name Resolution for SDN, csstroubleshoot
 ms.assetid: 427048db-bab6-49b1-9611-099bb547ec0e
 ---
 # Troubleshoot Software Defined Networking (SDN)

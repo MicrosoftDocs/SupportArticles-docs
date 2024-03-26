@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, bburgin, garymu
-ms.custom: sap:domain-join-issues, csstroubleshoot
+ms.custom: sap:Active Directory\On-premises Active Directory domain join, csstroubleshoot
 ---
 # Sync Center: Slow syncing of offline files on some file servers
 

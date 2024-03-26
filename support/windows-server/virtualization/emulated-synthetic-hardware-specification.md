@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: samacha, kaushika
-ms.custom: sap:installation-and-configuration-of-hyper-v, csstroubleshoot
+ms.custom: sap:Virtualization and Hyper-V\Installation and configuration of Hyper-V, csstroubleshoot
 ---
 # Emulated and synthetic hardware specification for Windows Server 2012 Hyper-V
 

@@ -3,7 +3,8 @@ title: Cannot insert null in DISAVMT when you use eConnect to integrate Payables
 description: Cannot insert null in DISAVMT when you use eConnect to integrate Payables Transactions into Microsoft Dynamics GP.
 ms.topic: troubleshooting
 ms.reviewer: theley, dclauson
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # Cannot insert null in DISAVMT when you use eConnect to integrate Payables Transactions into Microsoft Dynamics GP
 

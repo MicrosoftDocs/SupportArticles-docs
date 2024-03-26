@@ -4,7 +4,7 @@ description: Describes the procedure to copy all the items of a SharePoint list 
 ms.reviewer: 
 ms.topic: how-to
 ms.date: 03/31/2021
-ms.subservice: power-automate-flow-creation
+ms.custom: sap:Flow creation\Other flow creation issues
 ---
 # How to use Flow to copy items between two data sources
 

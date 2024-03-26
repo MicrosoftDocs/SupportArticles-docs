@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:integration-components, csstroubleshoot
+ms.custom: sap:Virtualization and Hyper-V\Integration components, csstroubleshoot
 ---
 # The uptime value of the Hyper-V Management console changes to the resume time of the last pause
 

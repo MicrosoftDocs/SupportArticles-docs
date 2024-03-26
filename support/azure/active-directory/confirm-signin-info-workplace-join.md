@@ -3,7 +3,7 @@ title: Error (Confirm you are using the current sign-in info) when you perform a
 description: Describes a problem that returns a (Confirm you are using the current sign-in info, and that your workplace uses this feature) error. Provides a resolution.
 ms.date: 06/08/2020
 ms.reviewer: 
-ms.service: active-directory
+ms.service: entra-id
 ms.subservice: authentication
 ---
 # Error when you perform a Workplace Join: Confirm you are using the current sign-in info

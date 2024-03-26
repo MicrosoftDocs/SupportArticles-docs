@@ -3,7 +3,8 @@ title: Error when you perform the year-end closing process in General Ledger in 
 description: Discusses that you receive an error when you perform the year-end closing process in General Ledger in Microsoft Dynamics GP. Provides solutions.
 ms.topic: troubleshooting
 ms.reviewer: theley, cwaswick
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Financial - General Ledger
 ---
 # Error when you try to perform the year-end closing process in General Ledger in Microsoft Dynamics GP: Retained Earnings account not found
 

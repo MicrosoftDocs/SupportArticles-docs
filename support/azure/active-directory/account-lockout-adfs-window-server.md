@@ -3,7 +3,7 @@ title: Troubleshoot account lockout in AD FS on Windows Server
 description: Fixes the account lockout issue that occurs in Microsoft Active Directory Federation Services (AD FS) on Windows Server.
 ms.date: 06/08/2020
 ms.reviewer: 
-ms.service: active-directory
+ms.service: entra-id
 ms.subservice: authentication
 ---
 # Troubleshoot account lockout in AD FS on Windows Server

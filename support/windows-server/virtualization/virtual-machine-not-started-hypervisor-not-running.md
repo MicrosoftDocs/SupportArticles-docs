@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: stevenxu, kaushika
-ms.custom: sap:virtual-machine-will-not-boot, csstroubleshoot
+ms.custom: sap:System Performance\Startup or Pre-logon Reliability (crash, errors, bug check or Blue Screen), csstroubleshoot
 ---
 # Error in Windows Server: Virtual machine could not start because the hypervisor is not running
 

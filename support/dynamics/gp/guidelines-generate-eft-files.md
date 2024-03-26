@@ -2,7 +2,8 @@
 title: Guidelines to generate EFT files
 description: Describes troubleshooting tips to use when you generate Electronic Funds Transfer (EFT) files or EFT Prenote files.
 ms.reviewer: theley
-ms.date: 03/12/2024
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # Guidelines to follow when you generate EFT files or EFT prenote files in Electronic Funds Transfer for Payables Management or Receivables Management in Microsoft Dynamics GP
 

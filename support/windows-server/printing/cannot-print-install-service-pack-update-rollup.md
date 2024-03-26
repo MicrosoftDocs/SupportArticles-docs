@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: eldenc, kaushika
-ms.custom: sap:errors-and-troubleshooting-general-issues, csstroubleshoot
+ms.custom: sap:Print, Fax, and Scan\Print Performance - failures, crashes, not responsive, csstroubleshoot
 ---
 # Users can't print after you install a service pack, update rollup, or printer hotfix on a Windows-based server
 

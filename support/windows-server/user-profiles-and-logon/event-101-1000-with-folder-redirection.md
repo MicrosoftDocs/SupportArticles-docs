@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:folder-redirection, csstroubleshoot
+ms.custom: sap:User Logon and Profiles\Enterprise State Roaming (ESR) and Folder Redirection, csstroubleshoot
 ---
 # Event ID 101 and Event ID 1000 may be displayed when Folder Redirection is set up with Group Policy
 

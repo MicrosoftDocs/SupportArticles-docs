@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, dewitth
-ms.custom: sap:installation-and-configuration-of-hyper-v, csstroubleshoot
+ms.custom: sap:Virtualization and Hyper-V\Installation and configuration of Hyper-V, csstroubleshoot
 ---
 # You cannot import a virtual machine by using Hyper-V Manager or System Center Virtual Machine Manager (SCVMM) on a Hyper-V server
 
