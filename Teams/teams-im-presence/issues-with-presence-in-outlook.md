@@ -31,7 +31,7 @@ You see any of the following issues when you check the presence status for a use
 
 ## Resolution
 
-### Use the Microsoft Support and Recovery Assistant
+### Use Microsoft Support and Recovery Assistant
 
 [!INCLUDE [Microsoft Support and Recovery Assistant note](../../includes/sara-note-new-teams.md)]
 

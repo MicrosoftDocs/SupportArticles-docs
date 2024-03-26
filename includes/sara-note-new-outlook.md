@@ -1,2 +1,2 @@
 > [!NOTE]
-> The Microsoft Support and Recovery Assistant isn't applicable to new Outlook for Windows.
+> Microsoft Support and Recovery Assistant scenarios aren't available for new Outlook for Windows.

@@ -1,2 +1,2 @@
 > [!NOTE]
-> The Microsoft Support and Recovery Assistant isn't applicable to new Teams.
+> Microsoft Support and Recovery Assistant scenarios aren't available for new Teams.

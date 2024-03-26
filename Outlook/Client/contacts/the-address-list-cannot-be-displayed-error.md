@@ -40,7 +40,7 @@ In this situation, set the value to **0**, and then restart Outlook 2016, Outloo
 Additionally, this issue can occur if any of the Autodiscover endpoints is blocked or if Outlook 2016 can't find the Autodiscover information. You can use one of the following methods to test the Autodiscover connectivity:
 
 - **For on-premises users**: [Microsoft remote connectivity analyzer](https://testconnectivity.microsoft.com/tests/o365)
-- **For Microsoft 365 users**: [About the Microsoft Support and Recovery Assistant](https://support.microsoft.com/office/about-the-microsoft-support-and-recovery-assistant-e90bb691-c2a7-4697-a94f-88836856c72f)
+- **For Microsoft 365 users**: [About Microsoft Support and Recovery Assistant](https://support.microsoft.com/office/about-the-microsoft-support-and-recovery-assistant-e90bb691-c2a7-4697-a94f-88836856c72f)
 
 ## References
 

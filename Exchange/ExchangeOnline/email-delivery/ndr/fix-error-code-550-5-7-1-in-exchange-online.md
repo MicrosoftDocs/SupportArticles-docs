@@ -153,7 +153,7 @@ If your domain isn't fully enrolled in Microsoft 365 or Office 365, try the foll
 
 If you have an incorrect MX record, try the following steps:
 
-1. Check the sender and recipient domains for incorrect or stale MX records by using the **Advanced diagnostics** \> **Exchange Online** test in the Microsoft Support and Recovery Assistant. For more information about the Support and Recovery Assistant, see [About the Microsoft Support and Recovery Assistant](https://support.microsoft.com/office/e90bb691-c2a7-4697-a94f-88836856c72f).
+1. Check the sender and recipient domains for incorrect or stale MX records by using the **Advanced diagnostics** \> **Exchange Online** test in Microsoft Support and Recovery Assistant. For more information about the Support and Recovery Assistant, see [About Microsoft Support and Recovery Assistant](https://support.microsoft.com/office/e90bb691-c2a7-4697-a94f-88836856c72f).
 
 2. Check with your domain registrar or DNS hosting service to verify the MX record for your domain is correct. The MX record for a domain that's enrolled in Exchange Online uses the syntax  `_\<domain\ >_.mail.protection.outlook.com`.
 
