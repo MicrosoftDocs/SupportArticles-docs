@@ -176,16 +176,16 @@
   items:
   - name: Repair a VM with Nested Hyper-V
     href: troubleshoot-vm-by-use-nested-virtualization.md
-    - name: Troubleshoot on the Azure portal
-      href: troubleshoot-recovery-disks-portal-windows.md
-    - name: Troubleshoot using PowerShell
-      href: troubleshoot-recovery-disks-windows.md
-    - name: Azure Virtual Machine repair
-      href: repair-windows-vm-using-azure-virtual-machine-repair-commands.md
-    - name: Unlocking disks for offline repair
-      href: unlock-encrypted-disk-offline.md
-    - name: Repair unmanaged disks offline
-      href: unmanaged-disk-offline-repair.md
+  - name: Troubleshoot on the Azure portal
+    href: troubleshoot-recovery-disks-portal-windows.md
+  - name: Troubleshoot using PowerShell
+    href: troubleshoot-recovery-disks-windows.md
+  - name: Azure Virtual Machine repair
+    href: repair-windows-vm-using-azure-virtual-machine-repair-commands.md
+  - name: Unlocking disks for offline repair
+    href: unlock-encrypted-disk-offline.md
+  - name: Repair unmanaged disks offline
+    href: unmanaged-disk-offline-repair.md
 
 - name: Common Azure VM errors and issues
   items:
@@ -333,12 +333,12 @@
 
 - name: VM restarts or stops unexpectedly
   items:
-    - name: Understand a system reboot
-      href: understand-vm-reboot.md
-    - name: Unexpected reboots of VMs with attached VHDs
-      href: unexpected-reboots-attached-vhds.md
-    - name: Root Cause Analysis of unexpected VM reboot
-      href: unexpected-vm-reboot-root-cause-analysis.md
+  - name: Understand a system reboot
+    href: understand-vm-reboot.md
+  - name: Unexpected reboots of VMs with attached VHDs
+    href: unexpected-reboots-attached-vhds.md
+  - name: Root Cause Analysis of unexpected VM reboot
+    href: unexpected-vm-reboot-root-cause-analysis.md
 
 - name: VM extensions not operating correctly
   items:
@@ -364,31 +364,31 @@
       href: troubleshoot-extension-certificates-issues-windows-vm.md
 
 - name: Cannot activate my Windows VM
-    items:
-    - name: Troubleshoot Windows activation problems
-      href: troubleshoot-activation-problems.md
-    - name: Frequently asked questions (FAQ)
-      href: windows-virtual-machine-activation-faq.yml
-    - name: Understanding Generic Volume License Key (GVLK)
-      href: /windows-server/get-started/kms-client-activation-keys?context=/troubleshoot/azure/virtual-machines/windows/context/context
-    - name: Activation fails in forced tunneling scenario
-      href: custom-routes-enable-kms-activation.md
-    - name: Duplicate Client Machine ID
-      href: windows-activation-duplicate-client-machine-id.md
-    - name: Error 0x80070005
-      href: ../../../windows-server/deployment/error-0x80070005-access-denied.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
-    - name: Error 0x800705B4
-      href: windows-vm-activation-error-0x800705b4.md
-    - name: Error 0xC004E015 (SL_E_EUL_CONSUMPTION_FAILED)
-      href: ../../../windows-server/deployment/error-0xc004e015-sl-e-eul-consumption-failed-activate-windows.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
-    - name: Error 0xC004FD01 or 0xC004FD02
-      href: windows-vm-activation-error-0xc004fd01-0xc004fd02.md
-    - name: Error 0xC004F06C
-      href: ../../../windows-server/deployment/error-0xc004f06c-activate-windows.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
-    - name: Error 0xC004F074
-      href: windows-vm-activation-error-0xc004f074.md
-    - name: KMS endpoints - new endpoints
-      href: windows-activation-stopped-working.md
+  items:
+  - name: Troubleshoot Windows activation problems
+    href: troubleshoot-activation-problems.md
+  - name: Frequently asked questions (FAQ)
+    href: windows-virtual-machine-activation-faq.yml
+  - name: Understanding Generic Volume License Key (GVLK)
+    href: /windows-server/get-started/kms-client-activation-keys?context=/troubleshoot/azure/virtual-machines/windows/context/context
+  - name: Activation fails in forced tunneling scenario
+    href: custom-routes-enable-kms-activation.md
+  - name: Duplicate Client Machine ID
+    href: windows-activation-duplicate-client-machine-id.md
+  - name: Error 0x80070005
+    href: ../../../windows-server/deployment/error-0x80070005-access-denied.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
+  - name: Error 0x800705B4
+    href: windows-vm-activation-error-0x800705b4.md
+  - name: Error 0xC004E015 (SL_E_EUL_CONSUMPTION_FAILED)
+    href: ../../../windows-server/deployment/error-0xc004e015-sl-e-eul-consumption-failed-activate-windows.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
+  - name: Error 0xC004FD01 or 0xC004FD02
+    href: windows-vm-activation-error-0xc004fd01-0xc004fd02.md
+  - name: Error 0xC004F06C
+    href: ../../../windows-server/deployment/error-0xc004f06c-activate-windows.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
+  - name: Error 0xC004F074
+    href: windows-vm-activation-error-0xc004f074.md
+  - name: KMS endpoints - new endpoints
+    href: windows-activation-stopped-working.md
 
 - name: Configuration and Setup
   items:
