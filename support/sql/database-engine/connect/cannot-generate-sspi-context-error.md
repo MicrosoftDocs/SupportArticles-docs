@@ -207,7 +207,7 @@ Use the output above to determine the next steps (see examples below) and use [S
   
 > [!NOTE]
 >
-> - You can review the **SQL Server Information** section of SQLCHECK tool's output file to find the service account of your SQL Server instance.
+> - You can review the **SQL Server Information** section of the SQLCHECK tool's output file to find the service account of your SQL Server instance.
 >
 > - Setspn is a built-in tool in newer versions of Windows that helps you read, add, modify, or delete SPNs in Active Directory. You can use this tool to verify that SQL Server SPNs are configured as per [Register a Service Principal Name for Kerberos Connections](/sql/database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections). For more information, see [Setspn tool](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731241(v=ws.11)) and examples on how to use it.
 >
