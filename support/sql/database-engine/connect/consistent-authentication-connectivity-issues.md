@@ -243,7 +243,7 @@ This issue occurs if the SPN is associated with the wrong account in Active Dire
 
 ### Explicit SPN is duplicated
 
-This issue occurs if an SPN is duplicated that's registered more than one time. For more information, see ["Cannot generate SSPI context" error when using Windows authentication to connect SQL Server.](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended).
+This issue occurs if an SPN is duplicated because it's registered more than one time. For more information, see ["Cannot generate SSPI context" error when using Windows authentication to connect SQL Server.](cannot-generate-sspi-context-error.md#fix-the-error-with-kerberos-configuration-manager-recommended).
 
 ### Access is granted through local groups
 
