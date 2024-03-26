@@ -17,11 +17,11 @@ appliesto:
 search.appverid: MET150
 ms.date: 03/31/2022
 ---
-# How to deploy the Microsoft Support and Recovery Assistant (SaRA) using Microsoft Intune
+# How to deploy Microsoft Support and Recovery Assistant  using Microsoft Intune
 
 ## Summary
 
-The Support and Recovery Assistant (SaRA) tool can be manually installed on one computer at a time by using either the [internet download](https://aka.ms/SaRA_Home) or a [network installation](./install-sara-from-network-share.md). However, you can also get SaRA deployed to users more efficiently as a Win32 app by using Microsoft Intune. To deploy SaRA as a Win32 app by using Microsoft Intune, use the steps in the following sections.
+Microsoft Support and Recovery Assistant can be manually installed on one computer at a time by using either the [internet download](https://aka.ms/SaRA_Home) or a [network installation](./install-sara-from-network-share.md). However, you can also get SaRA deployed to users more efficiently as a Win32 app by using Microsoft Intune. To deploy SaRA as a Win32 app by using Microsoft Intune, use the steps in the following sections.
 
 For complete information about app deployment by using Microsoft Intune, see the following articles:
 
@@ -32,9 +32,9 @@ For complete information about app deployment by using Microsoft Intune, see the
 
 1. **Get a copy of SaraSetup.exe**
 
-   To download a copy of SaraSetup.exeby, follow these steps:
+   To download a copy of SaraSetup.exe, follow these steps:
 
-    1. Go to [About the Microsoft Support and Recovery Assistant](https://aka.ms/SaRA_Home).
+    1. Go to [About Microsoft Support and Recovery Assistant](https://aka.ms/SaRA_Home).
     2. Select **Download**.
     3. Save the file to your local hard disk.
 
