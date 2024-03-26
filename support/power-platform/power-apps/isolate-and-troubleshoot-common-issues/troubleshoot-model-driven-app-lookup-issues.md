@@ -46,6 +46,10 @@ If the [`addCustomView`](/power-apps/developer/model-driven-apps/clientapi/refer
 
 - Verify that the `viewId` isn't already used.
 
+If the [`lookupObjects`](/power-apps/developer/model-driven-apps/clientapi/reference/xrm-utility/lookupobjects) or [`setDefaultView`](/power-apps/developer/model-driven-apps/clientapi/reference/controls/setdefaultview) API is being applied, then:
+
+- Verify that the `viewId` belongs to a view that is included in the current app.
+
 ## Result fields are incorrect
 
 The Lookup control's search results are presented in the order that they're listed for that entity's Lookup view, with blank fields being replaced with the next nonblank field. A multi-entity Lookup can have results with different orders of fields if the entities' Lookup views have different field combinations.
