@@ -147,9 +147,9 @@ In most cases, you connect to the Database Engine on another computer by using t
 
 ## Step 1：Verify that the instance is running
 
-### Option 1: Use the output file from the SQLCHECK tool
+### Option 1: Use the SQLCHECK output file
 
-1. Search the output from SQLCHECK file for "SQL Server Information".
+1. Search the SQLCHECK output file for "SQL Server Information".
 1. In the section titled "Services of Interest", find your SQL Server instance under **Name** and **Instance** (for named instances) columns and check its status by using **Started** column. If the value is **True**, the services are started. Otherwise the service is currently not running.  
 1. If the service isn't running, [start the service](/sql/database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services) by using either SQL Server management studio, SQL Server Configuration manager, [PowerShell](/powershell/module/sqlserver/start-sqlinstance), or Services applet.
 
@@ -181,7 +181,7 @@ Get-ChildItem -Path "c:\program files\microsoft sql server\mssql*" -Recurse -Inc
 > [!NOTE]
 > This step is required only for troubleshooting connectivity issues with named instances.
 
-### Option 1: Use the output file from SQLCHECK tool
+### Option 1: Use the SQLCHECK output file
 
 1. Search the output from SQLCHECK file for "SQL Server Information".
 1. In the section titled "Services of Interest", search for SQLBrowser in the **Name** column and check its status using the **Started** column. If the value is True, the service is started. Otherwise, the service is currently not running, and you need to start it. For more information, see [Start, stop, pause, resume, restart SQL Server services](/sql/database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services).
@@ -214,7 +214,7 @@ Aliases are often used in client environments when you connect to SQL Server wit
 > [!NOTE]
 > The following options only apply to the applications that use [SQL Server Native Client](/sql/relational-databases/native-client/SQL-server-native-client) to connect to SQL Server.
 
-### Option 1: Use the output file from the SQLCHECK tool
+### Option 1: Use the SQLCHECK output file
 
 1. In the SQLCHECK output file, search for the string SQL Aliases. (This string will be inside the **Client Security and Driver Information** section of the file)
 1. Review the entries in the table. If there's none present, there are no aliases on the computer. If there's an entry, review the information to ensure the server name and port number are set to the correct values.
@@ -295,7 +295,7 @@ If your SQL instance is a named instance, it may be configured to use either dyn
 
 In some installations of SQL Server, connections to the Database Engine from another computer aren't enabled unless an administrator manually enables them. You can use one of the following options to check and enable the necessary protocols to allow remote connections to SQL Server Database Engine.
 
-### Option 1: Use the output file from SQLCHECK tool
+### Option 1: Use the SQLCHECK output file
 
 1. Search the SQLCHECK output file for "Details for SQL Server instance" section and locate the information section for your SQL Server instance.
 1. In the section, find the values listed in the following table to determine if the SQL Server protocols are enabled:
