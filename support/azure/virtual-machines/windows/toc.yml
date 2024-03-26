@@ -138,40 +138,40 @@
   - name: FAQ
     href: /azure/virtual-machines/windows/disk-encryption-faq?context=/troubleshoot/azure/virtual-machines/windows/context/context
  
- - name: What log files are collected during troubleshooting
+- name: What log files are collected during troubleshooting
+  items:
+  - name: Microsoft Azure IaaS VM logs and diagnostic information
+    href: iaas-logs.md
+  - name: Microsoft Azure PaaS VM logs
+    href: sdp352ef8720-e3ee-4a12-a37e-cc3b0870f359-windows-vm.md
+- name: Remote troubleshooting for VM tools
+  href: remote-tools-troubleshoot-azure-vm-issues.md
+  items:
+  - name: Custom Script Extension or Run Command
     items:
-    - name: Microsoft Azure IaaS VM logs and diagnostic information
-      href: iaas-logs.md
-    - name: Microsoft Azure PaaS VM logs
-      href: sdp352ef8720-e3ee-4a12-a37e-cc3b0870f359-windows-vm.md
-  - name: Remote troubleshooting for VM tools
-    href: remote-tools-troubleshoot-azure-vm-issues.md
+    - name: Debug scripts run by Custom Script Extension or Run Command
+      href: debug-customscriptextension-runcommand-scripts.md
+  - name: VM Inspector
     items:
-    - name: Custom Script Extension or Run Command
+    - name: VM Inspector for Azure Virtual Machines
+      href: vm-inspector-azure-virtual-machines.md
+    - name: VM Inspector error messages
+      href: vm-inspector-error-messages.md
+  - name: Serial Console
+    items:
+    - name: Overview
+      href: serial-console-overview.md
+    - name: Serial Console for Windows
+      href: serial-console-windows.md
       items:
-      - name: Debug scripts run by Custom Script Extension or Run Command
-        href: debug-customscriptextension-runcommand-scripts.md
-      - name: VM Inspector
-        items:
-        - name: VM Inspector for Azure Virtual Machines
-          href: vm-inspector-azure-virtual-machines.md
-        - name: VM Inspector error messages
-          href: vm-inspector-error-messages.md
-      - name: Serial Console
-        items:
-        - name: Overview
-          href: serial-console-overview.md
-        - name: Serial Console for Windows
-          href: serial-console-windows.md
-          items:
-          - name: CMD and PowerShell commands
-            href: serial-console-cmd-ps-commands.md
-        - name: Enabling and disabling Serial Console
-          href: serial-console-enable-disable.md
-        - name: Power options within Serial Console
-          href: serial-console-power-options.md
-        - name: Common Serial Console errors
-          href: serial-console-errors.md
+      - name: CMD and PowerShell commands
+        href: serial-console-cmd-ps-commands.md
+    - name: Enabling and disabling Serial Console
+      href: serial-console-enable-disable.md
+    - name: Power options within Serial Console
+      href: serial-console-power-options.md
+    - name: Common Serial Console errors
+      href: serial-console-errors.md
 - name: Repair a Windows VM
   items:
   - name: Repair a VM with Nested Hyper-V
