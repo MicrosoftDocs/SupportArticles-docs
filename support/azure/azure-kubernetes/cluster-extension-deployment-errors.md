@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot errors when deploying extensions in an AKS cluster
 description: Learn how to troubleshoot errors that occur when you deploy cluster extensions in an Azure Kubernetes Service (AKS) cluster.
-ms.date: 03/25/2024
+ms.date: 03/26/2024
 author: maanasagovi
 ms.author: maanasagovi
 editor: v-jsitser
@@ -113,7 +113,7 @@ To create a CoreDNS override, follow these steps:
    ```console
    nslookup <region>.dp.kubernetesconfiguration.azure.com
    Non-authoritative answer:
-   Name:    clusterconfigeastus2euap.<region>.cloudapp.azure.com
+   Name:    clusterconfig<region>.<region>.cloudapp.azure.com
    Address:  20.39.12.229
    Aliases:  <region>.dp.kubernetesconfiguration.azure.com
             <region>.privatelink.dp.kubernetesconfiguration.azure.com
