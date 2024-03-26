@@ -1,10 +1,10 @@
 ---
 title: Azure Kubernetes Service Cost Analysis add-on issues
 description: Learn how to resolve issues that occur when you try to enable the Azure Kubernetes Service (AKS) Cost Analysis add-on.
-ms.date: 11/14/2023
+ms.date: 03/26/2024
 author: kaysieyu
 ms.author: kaysieyu
-ms.reviewer: pram, chiragpa, joharder, cssakscic, v-leedennis
+ms.reviewer: pram, chiragpa, joharder, cssakscic, dafell, v-leedennis, v-weizhu
 editor: v-jsitser
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-extensions-add-ons
@@ -69,10 +69,10 @@ The Cost Analysis add-on isn't currently enabled in your region.
 > [!NOTE]  
 > The AKS Cost Analysis add-on is currently unavailable in the following regions:
 >
-> - usnateast
-> - usnatwest
-> - usseceast
-> - ussecwest
+> - `usnateast`
+> - `usnatwest`
+> - `usseceast`
+> - `ussecwest`
 
 
 ## Cause 4: The add-on is unavailable on the free pricing tier
