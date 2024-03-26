@@ -39,18 +39,17 @@ Some causes, such as antivirus, can be difficult to prove, but are still common.
 > [!NOTE]
 > This process is designed for SQL Server client and server connections. Other communications, such as SQL Server Mirroring, Always-On, and Service Broker synchronization traffic over port 5022, aren't addressed.
 
-### Collect SQLCHECK on each machine
+### Collect a report using SQLCHECK on each machine
 
-[Collect SQLCHECK](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SQLCHECK) on each machine.
+Run [SQLCHECK](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SQLCHECK) on each machine to produce a report. The report is intended mainly to illuminate issues that can result in consistent connection failures.
 
 ### Collect network traces on the client and server
 
-- On Windows machines, collect network traces using *SQLTrace.ps1*.
+- On Windows machines, collect network traces by running *SQLTrace.ps1*.
 
-  Select the download link on the [SQL Trace home page](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SQLTRACE) and unzip the downloaded file to a folder, such as *C:\MSDATA*.
+  Follow these steps to prepare and take the trace. Steps 2 and 3 only need to be done once.
 
-  Follow these steps to prepare and take the trace. Steps 1 and 2 only need to be done once.
-
+  1. Download [SQLTRACE version 1.0.0215.0](https://github.com/microsoft/CSS_SQL_Networking_Tools/files/14041956/SQL_TRACE.zip) and unzip it to a folder, such as *C:\MSDATA*.
   1. Open the *SQLTrace.ini* file and turn off the following settings:
 
      `BIDTrace=no`, `AuthTrace=no`, and `EventViewer=no`
@@ -75,14 +74,13 @@ Some causes, such as antivirus, can be difficult to prove, but are still common.
      .\SQLTrace.ps1 -stop
      ```
 
-  1. Zip the output folder and upload it to Microsoft.
+  An output folder is generated in the current directory and you can use it for further analysis.
 
 - On non-Windows computers, use TCPDUMP or WireShark to collect a packet capture.
 
 ### Run SQL Server Network Analyzer
 
-- [SQL Network Analyzer (SQLNA)](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SQLNA)
-- [SQL Network Analyzer UI (SQLNAUI)](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SQLNAUI)
+[SQL Network Analyzer UI (SQLNAUI)](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SQLNAUI) provides a graphical interface to select trace files for parsing and setting options. Download it from [SQL Network Analyzer (SQLNA)](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SQLNA).
 
 Process client and server traces separately. If you have chained traces, process them at the same time. The total size of these files shouldn't exceed 80% of your computer's memory. Ensure you have sufficient memory to process all related trace files.
 
@@ -163,7 +161,7 @@ If the client has a long delay before sending the SYN packet, you may see a patt
    .\SQLTrace.ps1 -stop
    ```
 
-1. Zip the output folder and upload it to Microsoft.
+An output folder is generated in the current directory and you can use it for further analysis.
 
 To trace other Microsoft SQL Server drivers, see the following articles. Perform using a network trace.
 
@@ -177,7 +175,9 @@ To trace third-party drivers, see the vendor documentation.
 
 #### Both the server trace and the client trace agree the issue is on the server
 
-If both traces show a delay or no response on the server, or if the server closes the connection at an unexpected point in the login sequence, or if the server closes many connections at the same time, this indicates there are some problems on the server. The most likely causes are poor server performance, high MAXDOP, and large parallel queries and blocking. These can cause thread starvation, preventing a login request from being handled promptly, especially if many connection timeouts end at the same time and the LoginAck column shows "Late." The SQL Server *ERRORLOG* file may show IO operations taking longer than 15 seconds, which is another indicator of performance issues. In the network trace, you might also see many conversations in the Reset report with six frames or fewer, indicating the TCP 3-way handshake may not have been completed. For more information, see [Collect the Connectivity Ring Buffer](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/Collect-the-Connectivity-Ring-Buffer).
+If both traces show a delay or no response on the server, or if the server closes the connection at an unexpected point in the login sequence, or if the server closes many connections at the same time, this indicates there are some problems on the server.
+
+The most likely causes are poor server performance, high MAXDOP, and large parallel queries and blocking. These can cause thread starvation, preventing a login request from being handled promptly, especially if many connection timeouts end at the same time and the LoginAck column shows "Late." The SQL Server *ERRORLOG* file may show IO operations taking longer than 15 seconds, which is another indicator of performance issues. In the network trace, you might also see many conversations in the Reset report with six frames or fewer, indicating the TCP 3-way handshake may not have been completed. For more information, see [Collect the Connectivity Ring Buffer](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/Collect-the-Connectivity-Ring-Buffer).
 
 Run the `RingBufferConnectivity` query and paste the results into Excel. Since this is a historical list, it can be run after the issue occurs. But for a busy server, it might end quickly. For a slow server, it might have data for a couple of days.
 
@@ -197,13 +197,13 @@ ACK+RESET is typically seen when the application or Windows aborts a connection.
 
 Some third-party drivers also send an ACK+RESET packet to close the connection instead of an ACK+FIN. Some probe connections can also do this. If the ACK+RESET packet isn't preceded by Keep-Alive packets, Retransmitted packets, or Zero Windows packets, and it comes from the client when a normal closing of ACK+FIN is expected, it might be benign.
 
-### NETSTAT
+### Use NETSTAT to analyze issues
 
-Run `NETSTAT -abon > c:\ports.txt` in **Command Prompt** as an administrator.
+NETSTAT is automatically collected when running *SQLTrace.ps1* for data collection.
+
+Or, you can run `NETSTAT -abon > c:\ports.txt` in **Command Prompt** as an administrator to collect information related to network issues.
 
 The *ports.txt* file will contain a list of all inbound and outbound ports, port numbers, process IDs, and names of applications owning the ports. You can use this to see the worst offenders and whether the port limit has been reached. Turn on **Status bar** in Notepad and turn off **Word wrap**. The status bar will give a line count. You can divide by two to get an approximate port usage.
-
-This is automatically collected when using *SQLTrace.ps1* for data collection.
 
 ### TcpTimedWaitDelay and MaxUserPort
 
@@ -223,7 +223,7 @@ Consult your network security admins. If the situation improves, you may need to
 
 ### Windows Firewall auditing
 
-The [Application side reset](/troubleshoot/windows-client/networking/tcp-ip-connectivity-issues-troubleshooting#application-side-reset) section in the article "Troubleshoot TCP/IP connectivity" describes how to turn on firewall auditing in Windows to determine whether the firewall has dropped any packets.
+[Application side reset](/troubleshoot/windows-client/networking/tcp-ip-connectivity-issues-troubleshooting#application-side-reset) describes how to turn on firewall auditing in Windows to determine whether the firewall has dropped any packets.
 
 For SQL Server, this could be the client or server machine. The network trace will show that the machine received a packet but didn't respond. The packet may then be retransmitted, again get no response, and eventually, the connection is reset.
 
