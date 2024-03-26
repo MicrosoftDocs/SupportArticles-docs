@@ -56,7 +56,7 @@ This section describes error types and related information.
 
 - Failed login errors
 
-  When you troubleshoot the "Login Failed" error message, the SQL Server error log can provide more information that's related to error code 18456, including the specific state value. The state value provides more context about the error. For more information, see the SQL Server error log file in the [SQL state value](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#additional-error-information) topic. You can try to fix the issue according to the description of the state value.
+  When you troubleshoot the "Login Failed" error message, the SQL Server error log can provide more information that's related to error code 18456, including the specific state value. The state value provides more context about the error. For more information, see the SQL Server error log file in [SQL state value](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#additional-error-information). You can try to fix the issue according to the description of the state value.
 
   This section lists some specific "Login Failed" error messages and their possible causes and solutions.
  
