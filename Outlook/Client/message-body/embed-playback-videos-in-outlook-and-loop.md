@@ -97,4 +97,4 @@ To report issues or provide feedback about the new feature, select the applicabl
 
 ## More information
 
-For information about how you can record a video that transforms into an embedded video player, see [Record videos in Loop](/outlook/troubleshoot/message-body/record-videos-in-outlook-and-loop).
+For information about how you can record a video that transforms into an embedded video player in a Loop page, see [Record videos in Loop](/outlook/troubleshoot/message-body/record-videos-in-outlook-and-loop).
