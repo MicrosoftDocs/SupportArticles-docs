@@ -94,3 +94,7 @@ To report issues or provide feedback about the new feature, select the applicabl
 - In non-mobile versions of Outlook, select **Feedback** from the **Help** menu.
 - In mobile versions of Outlook, see [Get in-app help for Outlook for iOS and Android](https://support.microsoft.com/office/get-in-app-help-for-outlook-for-ios-and-android-218a22d1-9fa5-4889-b689-de1c63493243).
 - In Loop, see [Want to give feedback?](https://support.microsoft.com/office/get-started-with-microsoft-loop-9f4d8d4f-dfc6-4518-9ef6-069408c21f0c#ID0EDR)
+
+## More information
+
+For information about how you can record a video that transforms into an embedded video player, see [Record videos in Loop](/outlook/troubleshoot/message-body/record-videos-in-outlook-and-loop).

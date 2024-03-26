@@ -26,7 +26,7 @@ Enterprise users can now record videos in [Microsoft Loop](https://support.micro
 
 Only enterprise users can use the new feature.
 
-If an enterprise user records a video in a Loop page, users within the organization can watch the video in the embedded video player. Loop doesn't currently support guest or external user access to Loop pages.
+If an enterprise user records a video in a Loop page, users within the organization can watch the video in the embedded video player that's embedded in the page. Loop doesn't currently support guest or external user access to Loop pages.
 
 ## Limiting who can use the feature
 
