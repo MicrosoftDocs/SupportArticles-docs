@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, yizhao
-ms.custom: sap:windows-time-service, csstroubleshoot
+ms.custom: sap:Active Directory\Windows Time Service configuration, accuracy, and synchronization, csstroubleshoot
 ---
 # How to configure the Windows Time service against a large time offset
 

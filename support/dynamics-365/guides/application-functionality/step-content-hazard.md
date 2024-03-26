@@ -5,7 +5,7 @@ ms.author: alwinv
 author: alwinv
 ms.date: 10/27/2023
 ms.reviewer: v-wendysmith, mhart
-ms.custom: bap-template
+ms.custom: sap:Application Functionality
 ---
 # A hazard sign appears when you load a step
 

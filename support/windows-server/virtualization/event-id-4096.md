@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, ryhayash, v-jesits
-ms.custom: sap:integration-components, csstroubleshoot
+ms.custom: sap:Virtualization and Hyper-V\Integration components, csstroubleshoot
 ---
 # Event ID 4096 (Microsoft-Windows-Hyper-V-Integration-KvpExchange) is logged
 

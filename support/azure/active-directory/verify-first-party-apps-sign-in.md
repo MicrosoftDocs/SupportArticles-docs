@@ -5,7 +5,7 @@ ms.date: 03/08/2024
 ms.reviewer: bernaw, domooney, grtaylor, v-six, v-weizhu
 ms.service: entra-id
 ms.subservice: monitoring-health
-ms.custom: has-azure-ad-ps-ref
+ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ---
 # Verify first-party Microsoft applications in sign-in reports
 
@@ -60,6 +60,7 @@ Although the apps that are listed in sign-in reports are owned by Microsoft and 
 
    Replace `<display name>` with the app's actual display name.
 
+   [!INCLUDE [Azure AD PowerShell deprecation note](~/../support/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
 3. Review the result's `AppOwnerTenantId`.
 
     :::image type="content" source="media/verify-first-party-apps-sign-in/review-the-app-owner-tenant-id.png" alt-text="Screenshot of the output of a request to show the Microsoft Entra service principal.":::

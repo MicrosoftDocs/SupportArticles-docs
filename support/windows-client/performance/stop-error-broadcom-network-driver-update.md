@@ -9,10 +9,7 @@ audience: itpro
 localization_priority: medium
 manager: dcscontentpm
 ms.reviewer: kaushika
-ms.custom:
-- CI 113175
-- csstroubleshooting
-- sap:blue-screen/bugcheck
+ms.custom: sap:System Performance\System Reliability (crash, errors, bug check or Blue Screen, unexpected reboot), csstroubleshooting, CI 113175
 ---
 # Stop error occurs when you update the in-box Broadcom network adapter driver
 

@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, shawnrab, v-jomcc
-ms.custom: sap:active-directory-certificate-services, csstroubleshoot
+ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Active Directory Certificate Services (ADCS), csstroubleshoot
 ---
 # Certificate Services may not start on a computer that is running Windows Server 2003 or Windows 2000
 

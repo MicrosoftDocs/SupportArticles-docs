@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, arrenc
-ms.custom: sap:group-policy-management-gpmc-or-agpm, csstroubleshoot
+ms.custom: sap:Group Policy\Group Policy management (GPMC or GPedit), csstroubleshoot
 ---
 # "Permissions for this GPO in the SYSVOL folder are inconsistent with those in Active Directory" message when you run GPMC
 
