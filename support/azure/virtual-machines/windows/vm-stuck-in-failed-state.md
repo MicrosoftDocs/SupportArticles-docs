@@ -8,7 +8,7 @@ tags: azure-resource-manager
 ms.service: virtual-machines
 ms.subservice: vm-common-errors-issues
 ms.topic: troubleshooting
-ms.date: 10/04/2021
+ms.date: 03/26/2024
 ms.author: mimckitt
 ---
 
@@ -54,7 +54,7 @@ Update the VM objects and properties by running the [Update-AzVM](/powershell/mo
 ```azurepowershell-interactive
 Get-AzVM -ResourceGroupName <ResourceGroup> -Name <VMName>
 Set-AzVM -ResourceGroupName <ResourceGroup> -Name <VMName> -Reapply
-Update-AzVM -VM <VMName> -ResourceGroupName <ResourceGroupName>
+Update-AzVM -VM <PSVirtualMachine> -ResourceGroupName <ResourceGroupName>
 
 ```
 
