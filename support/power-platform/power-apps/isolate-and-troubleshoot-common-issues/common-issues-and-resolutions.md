@@ -4,7 +4,7 @@ description: A list of common issues and resolutions within Power Apps.
 author: KumarVivek
 ms.custom: canvas
 ms.reviewer: tapanm, lanced, tahoon 
-ms.date: 02/06/2024
+ms.date: 03/26/2024
 ms.author: kvivek
 search.audienceType: 
   - maker
@@ -139,8 +139,9 @@ Refer to the introductory article [Power Apps troubleshooting strategies](isolat
 
 ## Integration
 
-1. **Power Automate Flows orphaned in Power Apps**
-   Power Automate flows that were added with an older version of the Power Apps panel may be orphaned and removed.  To fix this issue, re-add the flows manually.
+**Power Automate flows are orphaned in Power Apps.**
+
+Power Automate flows that are added using an older version of the Power Apps panel might be orphaned and removed. To fix this issue, re-add the flows manually.
 
 ## Power Fx
 
