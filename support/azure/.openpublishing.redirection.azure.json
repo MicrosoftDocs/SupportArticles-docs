@@ -2489,6 +2489,11 @@
         "source_path": "virtual-machines/welcome-virtual-machines.yml",
         "redirect_url": "/troubleshoot/azure/",
         "redirect_document_id": false
+      },
+      {
+        "source_path": "virtual-machines/windows-11-support-azure-virtual-machines.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/windows-11-support-azure-virtual-machines",
+        "redirect_document_id": true
       }
   ]
 }
