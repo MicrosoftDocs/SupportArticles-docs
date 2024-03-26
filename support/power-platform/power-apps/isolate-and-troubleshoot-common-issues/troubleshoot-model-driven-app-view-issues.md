@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot view issues in model-driven apps
 description: Helps troubleshoot view issues in Power Apps model-driven apps.
-author: gurosile
+author: grosiles3
 ms.date: 03/22/2024
 ms.author: gurosile
 search.audienceType: 
