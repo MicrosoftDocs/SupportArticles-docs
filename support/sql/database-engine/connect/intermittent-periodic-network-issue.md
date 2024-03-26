@@ -39,9 +39,11 @@ Some causes, such as antivirus, can be difficult to prove, but are still common.
 > [!NOTE]
 > This process is designed for SQL Server client and server connections. Other communications, such as SQL Server Mirroring, Always-On, and Service Broker synchronization traffic over port 5022, aren't addressed.
 
+In general, troubleshooting should be data driven, which may give way to empirical tests in a more focused context. If the issue is very intermittent and network traces will be difficult to capture, the [empirical methods](#empirical-and-other-actions) may be applied first.
+
 ### Collect a report using SQLCHECK on each machine
 
-Run [SQLCHECK](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SQLCHECK) on each machine to produce a report. The report is intended mainly to illuminate issues that can result in consistent connection failures.
+Run [SQLCHECK](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SQLCHECK) on each machine to produce a report. It's useful to determine why a connection may be failing.
 
 ### Collect network traces on the client and server
 
@@ -197,7 +199,7 @@ ACK+RESET is typically seen when the application or Windows aborts a connection.
 
 Some third-party drivers also send an ACK+RESET packet to close the connection instead of an ACK+FIN. Some probe connections can also do this. If the ACK+RESET packet isn't preceded by Keep-Alive packets, Retransmitted packets, or Zero Windows packets, and it comes from the client when a normal closing of ACK+FIN is expected, it might be benign.
 
-### Use NETSTAT to analyze issues
+### Use NETSTAT to analyze network issues
 
 NETSTAT is automatically collected when running *SQLTrace.ps1* for data collection.
 
@@ -205,13 +207,17 @@ Or, you can run `NETSTAT -abon > c:\ports.txt` in **Command Prompt** as an admin
 
 The *ports.txt* file will contain a list of all inbound and outbound ports, port numbers, process IDs, and names of applications owning the ports. You can use this to see the worst offenders and whether the port limit has been reached. Turn on **Status bar** in Notepad and turn off **Word wrap**. The status bar will give a line count. You can divide by two to get an approximate port usage.
 
-### TcpTimedWaitDelay and MaxUserPort
+### Adjust TcpTimedWaitDelay and MaxUserPort
 
-If an application is exhausting the outbound ports on the host machine and you can't make any immediate changes to the application, you can decrease `TcpTimedWaitDelay` from 240 to as low as 30 seconds, thus allowing outbound ports to be recycled faster. For windows 2003 and later, you can also increase the `MaxUserPort`. For Windows Vista and later, you set this via the `NETSH` command. This course of action doesn't eliminate the inefficiencies of non-pooled connections or non-pooled background connections, and the developer should be highly encouraged to change their applications to use connection pooling.
+If an application is exhausting the outbound ports on the host machine and you can't make any immediate changes to the application, you can decrease `TcpTimedWaitDelay` from 240 to as low as 30 seconds, thus allowing outbound ports to be recycled faster.
+
+For windows 2003 and later, you can also increase the `MaxUserPort`. For Windows Vista and later, you set this via the `NETSH` command. This course of action doesn't eliminate the inefficiencies of non-pooled connections or non-pooled background connections, and the developer should be highly encouraged to change their applications to use connection pooling.
 
 For Windows 2008 and later, the range has been increased from about 4,000 ephemeral ports to 16,000 ports, by default.
 
-### Antivirus or network filter driver
+For more information, see [Adjust the MaxUserPort and TcpTimedWaitDelay settings](/biztalk/technical-guides/settings-that-can-be-modified-to-improve-network-performance).
+
+### Issues related to antivirus or network filter driver
 
 Almost all packets sent from the client to the server or the server to the client are responded to with an ACK packet going in the opposite direction. The *TCP.SYS* layer generates the ACK. If a packet is received on the client, and the client trace shows it coming in but no ACK is returned to the server, this is a good indication that the antivirus or some other network filter driver has lost or dropped the packet or held on to it for a long time (past the end of the network trace collection). Likewise, if the server trace shows a packet coming in from a client but no ACK is sent back to the client, this indicates the server antivirus on the server may have an issue.
 
@@ -219,13 +225,13 @@ However, when uploading or downloading a large amount of data, the ACK packets m
 
 The antivirus and filter drivers are very difficult to prove as the culprit. An empirical test is almost always required. Create an exception for the application or SQL Server in the antivirus, and then monitor it for 48 hours to see if the behavior improves. If an exception can't be set, uninstall the antivirus program and reboot. Disabling it typically doesn't help as the antivirus filter driver will still load. Only do this as a last resort if your edge protection is in place.
 
-Consult your network security admins. If the situation improves, you may need to work with the antivirus vendor to mitigate the issue. If it doesn't, other network filter drivers might be the culprit. The Windows Networking team can help evaluate the network stack.
+Consult your network security admins. If the situation improves, you may need to work with the antivirus vendor to mitigate the issue. If it doesn't, other network filter drivers might be the culprit.
 
-### Windows Firewall auditing
+### Enable Windows Firewall auditing
 
-[Application side reset](/troubleshoot/windows-client/networking/tcp-ip-connectivity-issues-troubleshooting#application-side-reset) describes how to turn on firewall auditing in Windows to determine whether the firewall has dropped any packets.
+To determine whether the firewall has dropped any packets, [enable firewall auditing in Windows](/troubleshoot/windows-client/networking/tcp-ip-connectivity-issues-troubleshooting#application-side-reset).
 
-For SQL Server, this could be the client or server machine. The network trace will show that the machine received a packet but didn't respond. The packet may then be retransmitted, again get no response, and eventually, the connection is reset.
+For SQL Server, this issue could be related to the client or server machine. The network trace will show that the machine received a packet but didn't respond. The packet may then be retransmitted, again get no response, and eventually, the connection is reset.
 
 ## Empirical and other actions
 
@@ -241,9 +247,9 @@ Normally, ports are held for four minutes (240 seconds) by the operating system 
 
 For applications such as IIS, each HTTP client may have one outgoing port to SQL Server. For a busy web server, running out of outbound ports is a real possibility when the load is high. A web farm can mitigate this situation.
 
-### Low kernel memory
+### Adjust max server memory (MB)
 
-For more information, see [Issues related to low kernel memory](intermittent-periodic-authentication.md#issues-related-to-low-kernel-memory).
+To solve issues related to low kernel memory, [adjust the max server memory (MB)](intermittent-periodic-authentication.md#issues-related-to-low-kernel-memory).
 
 ### Disable offloading
 
