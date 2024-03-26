@@ -12,8 +12,8 @@ ms.collection: windows
 ms.topic: article
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure-services
-ms.date: 05/18/2023
-ms.author: genli
+ms.date: 03/22/2024
+ms.author: mbifeld
 ---
 
 # Azure Serial Console for Windows
@@ -197,6 +197,7 @@ Serial Console uses the storage account configured for boot diagnostics in its c
     |20.98.194.64 | Central US, East US 2, East US, North Central US, South Central US, West US 2, West US 3, West Central US, West US | UnitedStates|
     |20.69.5.162 | Central US, East US 2, East US, North Central US, South Central US, West US 2, West US 3, West Central US, West US | UnitedStates|
     |20.83.222.102 | Central US, East US 2, East US, North Central US, South Central US, West US 2, West US 3, West Central US, West US | United States|
+    |20.83.222.100 | Central US, East US 2, East US, North Central US, South Central US, West US 2, West US 3, West Central US, West US | United States|
     |20.141.10.130 | All US Government cloud regions | UsGov
     |52.127.55.131 | All US Government cloud regions | UsGov
 

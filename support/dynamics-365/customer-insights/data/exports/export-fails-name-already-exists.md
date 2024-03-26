@@ -5,6 +5,7 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 ms.date: 09/25/2023
+ms.custom: sap:Export destinations or Outbound connectors\Microsoft connectors
 ---
 # "the following name already exists" error occurs during exports
 
