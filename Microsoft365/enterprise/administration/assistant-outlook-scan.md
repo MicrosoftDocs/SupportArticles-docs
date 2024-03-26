@@ -21,7 +21,7 @@ ms.date: 03/14/2024
 
 The Outlook Scan scenario scans your device and creates a detailed report about Microsoft Outlook, Microsoft Office, Windows, and mailbox configurations.
 
-In the full version of the Microsoft Support and Recovery Assistant, the equivalent entry point for the scenario is *Advanced diagnostics \ Outlook \ Create a detailed report of my Outlook, Office, Windows, and mailbox configuration*.
+In the full version of Microsoft Support and Recovery Assistant, the equivalent entry point for the scenario is *Advanced diagnostics \ Outlook \ Create a detailed report of my Outlook, Office, Windows, and mailbox configuration*.
 
 **Note:** This scenario doesn't require that you use an elevated Command Prompt window.
 

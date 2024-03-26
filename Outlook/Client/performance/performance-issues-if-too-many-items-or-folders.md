@@ -139,7 +139,7 @@ To adjust the number of days of data that are synced for shared folders, add the
 
 [!INCLUDE [Microsoft Support and Recovery Assistant note](../../../includes/sara-note-new-outlook.md)]
 
-You can use Microsoft Support and Recovery Assistant to diagnose both Calendar and Mail issues that affect Outlook. To download and install the Assistant, see [About the Microsoft Support and Recovery Assistant](https://support.microsoft.com/office/about-the-microsoft-support-and-recovery-assistant-e90bb691-c2a7-4697-a94f-88836856c72f).
+You can use Microsoft Support and Recovery Assistant to diagnose both Calendar and Mail issues that affect Outlook. To download and install the Assistant, see [About Microsoft Support and Recovery Assistant](https://support.microsoft.com/office/about-the-microsoft-support-and-recovery-assistant-e90bb691-c2a7-4697-a94f-88836856c72f).
 
 To determine the cause of the performance issues, start the Assistant, and run the **Outlook Diagnostic** in the **Advanced Diagnostics** section.
 

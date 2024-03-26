@@ -47,7 +47,7 @@ If a user is receiving email in their Outlook on the web mailbox but not on the 
 
 [!INCLUDE [Microsoft Support and Recovery Assistant note](../../../includes/sara-note-new-outlook.md)]
 
-If a single user in your organization is having trouble receiving email, the cause could be a licensing issue, a profile problem, the wrong version of Outlook, or a mixture of other issues. Fortunately, the Microsoft Support and Recovery Assistant finds and helps you fix most issues that affect Outlook or Microsoft 365. As a first step in troubleshooting email delivery problems for Microsoft 365 for business, we recommend that you download and run Support and Recovery Assistant on the affected computer.
+If a single user in your organization is having trouble receiving email, the cause could be a licensing issue, a profile problem, the wrong version of Outlook, or a mixture of other issues. Fortunately, Microsoft Support and Recovery Assistant finds and helps you fix most issues that affect Outlook or Microsoft 365. As a first step in troubleshooting email delivery problems for Microsoft 365 for business, we recommend that you download and run Support and Recovery Assistant on the affected computer.
 
 Notice that if you're experiencing issues that affect Outlook for Mac or are having mobile access issues, you can use the app to check your account settings. However, you have to install the app on a PC. After you sign in to the affected account, the app will check for issues. Users can typically download and run Support and Recovery Assistant without help from their Microsoft 365 admin.
 

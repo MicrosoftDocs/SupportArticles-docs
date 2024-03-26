@@ -92,7 +92,7 @@ Run [the SaRA Office sign in issue troubleshooter](https://aka.ms/SaRA-OfficeSig
 <details>
 <summary><b>Reset Microsoft 365 activation state</b></summary>
 
-Run the [Microsoft Support and Recovery Assistant (SaRA) to reset the Microsoft 365 activation state](https://aka.ms/SaRA-OfficeActivation-Reset).
+Run [Microsoft Support and Recovery Assistant to reset the Microsoft 365 activation state](https://aka.ms/SaRA-OfficeActivation-Reset).
 
 For manual steps or more information, see [Reset Microsoft 365 Apps for enterprise activation state](/office/troubleshoot/activation/reset-office-365-proplus-activation-state).
 
