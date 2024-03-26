@@ -164,17 +164,11 @@ Refers to [Recover deleted storage accounts from the Azure portal](#recover-dele
 
   1. Go to the affected blob from the Azure portal.
 
-      :::image type="content" source="media/data-protection-backup-recovery/select-affected-blob.png" alt-text="Screenshot that shows the affected blob." lightbox="media/data-protection-backup-recovery/select-affected-blob.png":::
-
   1. Select the ellipses (...) for the blob you want to recover.
   1. Select **View versions**.
 
-      :::image type="content" source="media/data-protection-backup-recovery/view-previous-version.png" alt-text="Screenshot that shows the 'View versions' option." lightbox="media/data-protection-backup-recovery/view-previous-version.png":::
-
   1. Select the version that's required to restore from.
   1. Select **Make current version**.
-
-      :::image type="content" source="media/data-protection-backup-recovery/make-current-version.png" alt-text="Screenshot that shows the 'Make current version' option." lightbox="media/data-protection-backup-recovery/make-current-version.png":::
 
 - Recover blobs via blob soft delete.
 
@@ -203,17 +197,11 @@ Refers to [Recover deleted storage accounts from the Azure portal](#recover-dele
 
   1. Go to the affected blob from the Azure portal.
 
-      :::image type="content" source="media/data-protection-backup-recovery/select-affected-blob.png" alt-text="Screenshot that shows the affected blob." lightbox="media/data-protection-backup-recovery/select-affected-blob.png":::
-
   1. Select the ellipses (...) for the blob you want to recover.
   1. Select **View snapshots**.
 
-      :::image type="content" source="media/data-protection-backup-recovery/view-snapshots.png" alt-text="Screenshot that shows the 'View snapshots' option." lightbox="media/data-protection-backup-recovery/view-snapshots.png":::
-
   1. Select the snapshot that's required to restore from.
   1. Select **Promote**.
-
-      :::image type="content" source="media/data-protection-backup-recovery/promote.png" alt-text="Screenshot that shows the 'Promote' option." lightbox="media/data-protection-backup-recovery/promote.png":::
 
 ## Best practice for Azure RBAC
 
