@@ -180,7 +180,7 @@
   - name: FAQ
     href: /azure/virtual-machines/linux/disk-encryption-faq?context=/troubleshoot/azure/virtual-machines/linux/context/context
 
-- name: Custom script extenions (CSE)
+- name: Custom script extenions (CSE) for Linux
   items:
   - name: Previous command is re-run
     href: customscript-reruns-previous-command.md
