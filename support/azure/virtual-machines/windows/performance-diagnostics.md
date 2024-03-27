@@ -24,11 +24,14 @@ The performance diagnostics tool helps you troubleshoot performance issues that 
 You can run performance diagnostics directly from the Azure portal, where you can also review insights and a report on various logs, rich configuration, and diagnostics data. We recommend that you run performance diagnostics and review the insights and diagnostics data before you contact Microsoft Support.
 
 > [!NOTE]
-> For Windows, Performance diagnostics is currently supported on VMs that have .NET SDK version 4.5 or a later version installed. For the steps to run performance diagnostics on classic VMs, see [Azure Performance Diagnostics VM extension](performance-diagnostics-vm-extension.md).
+> For Windows, performance diagnostics is currently supported on VMs that have .NET SDK version 4.5 or a later version installed. For the steps to run performance diagnostics on classic VMs, see [Azure Performance Diagnostics VM extension](performance-diagnostics-vm-extension.md).
+> For Linux, continuous diagnostics is not currently supported.
 
 ## Supported operating systems
 
 ### Windows
+
+The following operating systems are currently supported for both on-demand and continuous diagnostics:
 
 * Windows server 2022
 * Windows Server 2019
@@ -40,7 +43,7 @@ You can run performance diagnostics directly from the Azure portal, where you ca
 
 ### Linux
 
-* The following distributions are currently supported:
+* The following distributions are currently supported for on-demand diagnostics:
 
   > [!NOTE]  
   > Microsoft has only tested the versions that are listed in the table. If a version isn't listed in the table, then it isn't explicitly tested by Microsoft, but the version might still work.
@@ -67,7 +70,32 @@ Performance diagnostics installs a VM extension that runs a diagnostics tool tha
 1. From the list of VM names, select the VM that you want to run diagnostics on.
 1. In the **Help** section, select **Performance diagnostics**.
 
-    :::image type="content" source="media/performance-diagnostics/open-performance-diag.png" alt-text="Screenshot of Azure portal, with Install performance diagnostics button highlighted.":::
+   :::image type="content" source="media/performance-diagnostics/open-performance-diag.png" alt-text="Screenshot of Azure portal, with Install performance diagnostics button highlighted.":::
+
+1. Select the **Install diagnostics** button to start the installation process for the tool.
+
+    :::image type="content" source="media/performance-diagnostics/install-diagnostics-button.png" alt-text="Screenshot of Install diagnostics button.":::
+
+1. Select the **Choose and install** button to choose options for and install the tool.
+
+   :::image type="content" source="media/performance-diagnostics/choose-and-install-button.png" alt-text="Screenshot of Choose and install button.":::
+
+1. Select the options to install and run for the tool. 
+
+   :::image type="content" source="media/performance-diagnostics/install-and-run-context-pane.png" alt-text="Screenshot of the Install and run Performance Diagnostics context pane. The Enable continuous diagostics and Run on-demand diagnostics options are checked.":::
+
+The following options are available:
+
+| Option | Description |
+| ------ | ----------- |
+| Enable continuous diagnostics | Select this option to collect continuous insights... |
+| Run on-demand diagnostics | Select this option to immediately run on-demand diagnostics immediately after installation is completed, depending on the performance issue that you are having. The following analysis types are available:
+
+<ul><li>**Performance analysis**<br/>Checks for known issues, analyzes best practices, and collects diagnostics data. This analysis takes several minutes to run. Learn more [Windows](how-to-use-perfinsights.md) or [Linux](../linux/how-to-use-perfinsights-linux.md)</li><li>**Performance analysis**<br/>Includes all checks in the quick performance analysis and monitors high resource consumption. Use this version to troubleshoot general performance issues, such as high CPU, memory, and disk usage. This analysis takes 30 seconds to 15 minutes, depending on the selected duration. Learn more [Windows](how-to-use-perfinsights.md) or [Linux](../linux/how-to-use-perfinsights-linux.md)</li><li>**Advanced performance analysis**<br/>Includes all checks in the performance analysis, and collects one or more of the traces, as listed in the following sections. Use this scenario to troubleshoot complex issues that require additional traces. Running this scenario for longer periods will increase the overall size of diagnostics output, depending on the size of the VM and the trace options that are selected. This analysis takes 30 seconds to 15 minutes to run, depending on the selected duration. [Learn more](./how-to-use-perfinsights.md)</li><li>**Azure Files analysis**<br/>Includes all checks in the performance analysis, and captures a network trace and SMB counters. Use this scenario to troubleshoot the performance of Azure files. This analysis takes 30 seconds to 15 minutes to run, depending on the selected duration. [Learn more](./how-to-use-perfinsights.md)</li></ul>
+
+>[!Note]
+>[`*`] These analysis scenarios are only supported on Windows. |
+| Storage account | (Optional)
 
 1. Select a storage account (optional)
 
@@ -77,7 +105,7 @@ Performance diagnostics installs a VM extension that runs a diagnostics tool tha
 
     If you do not specify a storage account, a new storage account will be created by default.
 
-1. Select the **Install performance diagnostics** button. If you want to run a diagnostic after the installation is completed, select the **Run diagnostics after the installation finishes** check box. If you make this selection, you will be able to choose the performance analysis scenario and related options.
+If you want to run a diagnostic after the installation is completed, select the **Run diagnostics after the installation finishes** check box. If you make this selection, you will be able to choose the performance analysis scenario and related options.
 
     :::image type="content" source="media/performance-diagnostics/install-diagnostics-button.png" alt-text="Screenshot of Performance diagnostics install button. The Run diagnostics after installation finishes option is checked.":::
 
