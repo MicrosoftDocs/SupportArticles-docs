@@ -971,11 +971,6 @@
         "redirect_document_id": true
       },
       {
-        "source_path": "virtual-machines/customscript-reruns-previous-command.md",
-        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/customscript-reruns-previous-command",
-        "redirect_document_id": true
-      },
-      {
         "source_path": "virtual-machines/debug-customscriptextension-runcommand-scripts.md",
         "redirect_url": "/troubleshoot/azure/virtual-machines/windows/debug-customscriptextension-runcommand-scripts",
         "redirect_document_id": true
@@ -2502,7 +2497,7 @@
       },
       {
         "source_path": "microsoft-entra/welcome-microsoft-entra.yml",
-        "redirect_url": "/troubleshoot/azure/welcome-entra-id",
+        "redirect_url": "/troubleshoot/azure/entra-id/welcome-entra-id",
         "redirect_document_id": true
       },
       {
