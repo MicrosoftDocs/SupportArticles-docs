@@ -15,8 +15,8 @@ ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
 ms.date: 08/07/2023
 ms.author: anandh
-
 ---
+
 # Performance diagnostics for Azure virtual machines
 
 The performance diagnostics tool helps you troubleshoot performance issues that can affect a Windows or Linux virtual machine (VM). Supported troubleshooting scenarios include quick checks on known issues and best practices, and complex problems that involve slow VM performance or high usage of CPU, disk space, or memory.
@@ -89,8 +89,8 @@ Performance diagnostics installs a VM extension that runs a diagnostics tool tha
     | Option | Description |
     | ------ | ----------- |
     | Enable continuous diagnostics | Select this option to collect continuous insights... |
-    | Run on-demand diagnostics | Select this option to immediately run on-demand diagnostics immediately after installation is completed, depending on the performance issue that you are having. The following performance analysis scenarios are available:<br/><ul><li>**Performance analysis**<br/>Checks for known issues, analyzes best practices, and collects diagnostics data. This analysis takes several minutes to run. Learn more [Windows](how-to-use-perfinsights.md) or [Linux](../linux/how-to-use-perfinsights-linux.md)</li><li>**Performance analysis**<br/>Includes all checks in the quick performance analysis and monitors high resource consumption. Use this version to troubleshoot general performance issues, such as high CPU, memory, and disk usage. This analysis takes 30 seconds to 15 minutes, depending on the selected duration. Learn more [Windows](how-to-use-perfinsights.md) or [Linux](../linux/how-to-use-perfinsights-linux.md)</li><li>**Advanced performance analysis**<br/>Includes all checks in the performance analysis, and collects one or more of the traces, as listed in the following sections. Use this scenario to troubleshoot complex issues that require additional traces. Running this scenario for longer periods will increase the overall size of diagnostics output, depending on the size of the VM and the trace options that are selected. This analysis takes 30 seconds to 15 minutes to run, depending on the selected duration. [Learn more](./how-to-use-perfinsights.md)</li><li>**Azure Files analysis**<br/>Includes all checks in the performance analysis, and captures a network trace and SMB counters. Use this scenario to troubleshoot the performance of Azure files. This analysis takes 30 seconds to 15 minutes to run, depending on the selected duration. [Learn more](./how-to-use-perfinsights.md)</li></ul> |
-    | Storage account | Optionally, if you want to use a single storage account to store the performance diagnostics results for multiple VMs, you can select a storage account from the dropdown. If you do not specify a storage account, a new storage account will be created by default. |
+    | Run on-demand diagnostics | Select this option to immediately run on-demand diagnostics immediately after installation is completed, depending on the performance issue that you are having. The following performance analysis scenarios are available:<br/><ul><li>**Performance analysis**<br/>Includes all checks in the **Quick analysis** scenario, and monitors high resource consumption. Use this version to troubleshoot general performance issues, such as high CPU, memory, and disk usage. This analysis takes 30 seconds to 15 minutes, depending on the selected duration. Learn more [Windows](how-to-use-perfinsights.md) or [Linux](../linux/how-to-use-perfinsights-linux.md)</li><li>**Quick analysis**<br/>Checks for known issues, analyzes best practices, and collects diagnostics data. This analysis takes several minutes to run. Learn more [Windows](how-to-use-perfinsights.md) or [Linux](../linux/how-to-use-perfinsights-linux.md)</li><li>**Advanced performance analysis** [`*`]<br/>Includes all checks in the **Performance analysis** scenario, and collects one or more of the traces, as listed in the following sections. Use this scenario to troubleshoot complex issues that require additional traces. Running this scenario for longer periods will increase the overall size of diagnostics output, depending on the size of the VM and the trace options that are selected. This analysis takes 30 seconds to 15 minutes to run, depending on the selected duration. [Learn more](./how-to-use-perfinsights.md)</li><li>**Azure file analysis** [`*`]<br/>Includes all checks in the **Performance analysis** scenario, and captures a network trace and SMB counters. Use this scenario to troubleshoot the performance of Azure files. This analysis takes 30 seconds to 15 minutes to run, depending on the selected duration. [Learn more](./how-to-use-perfinsights.md)</li></ul> |
+    | Storage account | Optionally, if you want to use a single storage account to store the performance diagnostics results for multiple VMs, you can select a storage account from the dropdown. If you do not specify a storage account, a new storage account is created by default. |
 
     > [!NOTE]
     > [`*`] These analysis scenarios are only supported on Windows.
@@ -105,17 +105,19 @@ Performance diagnostics installs a VM extension that runs a diagnostics tool tha
     If you are working with a Microsoft support engineer on an existing support ticket, provide the support ticket number.
     -->
 
-1. Review the legal terms and privacy policy, and select the check box to acknowledge (required)
+1. Review the legal terms and privacy policy, and select the corresponding checkbox to acknowledge (required).
 
     To install and run Performance Diagnostics, you must agree to the legal terms and accept the privacy policy.
 
-1. Agree to share di
+1. If you want to share diagnostics information with Microsoft, select **I agree to share diagnostics information with Microsoft.**
 
-### Select OK to run the diagnostics
+    If selected, diagnostics information is shared with Microsoft. This option must be selected if you want to share the diagnostics with the customer support engineer automatically. For a complete list of all the collected diagnostics data, see **What kind of information is collected by PerfInsights?** on [Windows](how-to-use-perfinsights.md#what-kind-of-information-is-collected-by-perfinsights) or [Linux](../linux/how-to-use-perfinsights-linux.md#what-kind-of-information-is-collected-by-perfinsights).
 
-A notification is displayed as performance diagnostics starts to install. After the installation is completed, you see a notification that indicates that the installation is successful. The selected analysis is then run for the specified duration. This would be a good time to reproduce the performance issue so that the diagnostics data can be captured at the correct time.
+1. Select **Apply** to apply the selected options and install the tool.
 
-After the analysis is complete, the following items are uploaded to Azure tables and a binary large object (BLOB) container in the specified storage account:
+A notification is displayed as performance diagnostics starts to install. After the installation is completed, you see a notification that indicates that the installation is successful. If the **Run on-demand diagnostics** option is selected, the selected performance analysis scenario is then run for the specified duration. This would be a good time to reproduce the performance issue so that the diagnostics data can be captured at the correct time.
+
+After the on-demand performance analysis is complete, the following items are uploaded to Azure tables and a binary large object (BLOB) container in the specified storage account:
 
 * All the insights and related information about the run
 * An output compressed (.zip) file (named **PerformanceDiagnostics_yyyy-MM-dd_hh-mm-ss-fff.zip** ) on Windows and a tar file (named **PerformanceDiagnostics_yyyy-MM-dd_hh-mm-ss-fff.tar.gz** ) on Linux that contains log files
@@ -136,13 +138,35 @@ Use the **Settings** toolbar button to change the storage account where the diag
 > 1. Create separate private endpoints for Table and BLOB.  
 > 1. Add DNS configuration to each separate private endpoint.
 
-## Review insights and performance diagnostics report
+## Review insights and reports
 
-Each diagnostic run contains a list of insights and recommendations, affected resources, log files, and other rich diagnostics information that is collected, plus a report for offline viewing. For a complete list of all the collected diagnostics data, see **What kind of information is collected by PerfInsights?** on [Windows](how-to-use-perfinsights.md#what-kind-of-information-is-collected-by-perfinsights) or [Linux](../linux/how-to-use-perfinsights-linux.md#what-kind-of-information-is-collected-by-perfinsights).
+Continuous diagnostics provides a list of regularly updated continuous insights into affected resources. On-demand diagnostics provides a report each time a diagnostic run is completed. Each diagnostic run contains a list of insights and recommendations, affected resources, log files, and other rich diagnostics information that is collected, plus a report for offline viewing.
+
+:::image type="content" source="media/performance-diagnostics/insights-list-enabled-no-grouping.png" alt-text="Screenshot of performance diagnostics, featuring the Insights list.":::
+
+You can disable continuous diagnostics, run on-demand diagnostics, uninstall performance diagnostics, and manage settings from the toolbar.
+
+For a complete list of all the collected diagnostics data, see **What kind of information is collected by PerfInsights?** on [Windows](how-to-use-perfinsights.md#what-kind-of-information-is-collected-by-perfinsights) or [Linux](../linux/how-to-use-perfinsights-linux.md#what-kind-of-information-is-collected-by-perfinsights).
+
+### Select an insight
+
+You can use the **Insights** list to find all the insights found by continuous and on-demand performance diagnostics. Each insight indicates an impact level of High, Medium, or Low. Each insight also contains recommendations to help lessen the concern. Insights are grouped for easy filtering. Select a row to view more details.
+
+:::image type="content" source="media/performance-diagnostics/insights-list-enabled-no-grouping.png" alt-text="Screenshot of performance diagnostics, featuring the Insights list.":::
+
+Use the grouping dropdown to group or ungroup insights. You can group on-demand and continuous insights by impact level, category, insight, or recommendation.
+
+:::image type="content" source="media/performance-diagnostics/insights-list-enabled-grouping-insight.png" alt-text="Screenshot of performance diagnostics, featuring the Insights list and highlighting the grouping dropdown.":::
+
+Select the link in **Insights** for an insight in the list to display details about the insight, including impact level, recommendations, reference links, and the impacted resources for the virtual machine. For more information, see [Reviewing performance diagnostics insights and recommendations](#reviewing-performance-diagnostics-insights-and-recommendations).
+
+:::image type="content" source="media/performance-diagnostics/insights-list-enabled-grouping-insight.png" alt-text="Screenshot of performance diagnostics, featuring the Insights list and highlighting the grouping dropdown.":::
+
+For insights found by on-demand diagnostics, you can view or download the corresponding performance diagnostics report for an insight in the list by selecting **View** or **Download**, respectively. For more information, see [Download and review the full performance diagnostics report](#download-and-review-the-full-performance-diagnostics-report).
 
 ### Select a performance diagnostics report
 
-You can use the diagnostics report list to find all the diagnostics reports that were run. The list includes details about the analysis that was used, insights that were found, and their impact levels. Select a row to view more details.
+You can use the **Reports** list to find all the on-demand diagnostics reports that were run. The list includes details about the analysis that was used, insights that were found, and their impact levels. Select a row to view more details.
 
 :::image type="content" source="media/performance-diagnostics/select-report.png" alt-text="Screenshot of selecting a diagnostics report from Performance diagnostics blade.":::
 
