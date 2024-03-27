@@ -9,7 +9,7 @@ metadata:
   ms.topic: landing-page # Required
   author: #Required; your GitHub user alias, with correct capitalization.
   ms.author: #Required; microsoft alias of author; optional team alias.
-  ms.date: 01/31/2024
+  ms.date: 03/27/2024
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -45,10 +45,10 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Check if the gateway is in the right region
-            url: connections/check-if-gateway-is-the-right-region.md
           - text: Client Request Aborted or Failed to fetch error
-            url: connections/client-request-aborted-failed-fetch.md        
+            url: connections/client-request-aborted-failed-fetch.md   
+          - text: Missing on-premises data gateway
+            url: connections/check-if-gateway-is-the-right-region.md     
 
   # Card
   - title: Desktop flows
