@@ -183,7 +183,7 @@ Get-ChildItem -Path "c:\program files\microsoft sql server\mssql*" -Recurse -Inc
 
 ### Option 1: Use the SQLCHECK output file
 
-1. Search the output from SQLCHECK file for "SQL Server Information".
+1. Search the SQLCHECK output file for "SQL Server Information".
 1. In the section titled "Services of Interest", search for SQLBrowser in the **Name** column and check its status using the **Started** column. If the value is True, the service is started. Otherwise, the service is currently not running, and you need to start it. For more information, see [Start, stop, pause, resume, restart SQL Server services](/sql/database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services).
 
 ### Option 2: Use SQL Server Configuration Manager
