@@ -8,7 +8,7 @@ ms.subservice: common-issues
 ---
 # Security best practices: avoid running as root in Containers
 
-It's not recommended to run as root user inside containers due security considerations. To run the container with nonroot user, specify the `securityContext`settings in the YAML file when you deploy pod or other Azure Kubernetes resources.
+It isn't recommended to run as root user inside containers due security considerations. To run the container with nonroot user, specify the `securityContext`settings in the YAML file when you deploy pod or other Azure Kubernetes resources.
 
 **SecurityContext**
 
@@ -17,7 +17,7 @@ It's not recommended to run as root user inside containers due security consider
     - runAsNonRoot (Optional): If it's true, the container operates without root privileges. Default is false.
     - runAsUser (Optional): If user number is anything other than 0 (root),  the container runs with that user ID, which is not root user. 
 
-By default, the `securityContext field` is `empty ({})`. To implement these fields in the YAML file, see [Configure a security context for a pod or container](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/). After adding these configurations, redeploy the pods to enforce the updates. If the field is omitted, the pod will run as root.
+By default, the `securityContext field` is `empty ({})`. To implement these fields in the YAML file, see [Configure a security context for a pod or container](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/). After adding these configurations, redeploy the pods to enforce the updates. If the field is omitted, the pod runs as root.
 
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
