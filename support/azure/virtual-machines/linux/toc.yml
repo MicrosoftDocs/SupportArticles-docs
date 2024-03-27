@@ -182,10 +182,5 @@
 
 - name: Custom script extenions (CSE) for Linux
   items:
-  - name: Previous command is re-run
-    href: customscript-reruns-previous-command.md
   - name: Linux - version 2
     href: /azure/virtual-machines/extensions/custom-script-linux#troubleshooting?context=/troubleshoot/azure/virtual-machines/context/context
-
-
-

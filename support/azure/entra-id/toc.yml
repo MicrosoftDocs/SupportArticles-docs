@@ -132,6 +132,8 @@
     href: dir-dmns-obj/term-cmdlet-name-not-recognized-aad-cmdlet.md
   - name: Troubleshoot dynamic groups
     href: dir-dmns-obj/troubleshoot-dynamic-groups.md
+  - name: Troubleshoot Global Secure Access client for Windows issues
+    href: troubleshoot-global-secure-access-client-windows-issues.md
   - name: Troubleshoot user creation and deletion issues
     href: dir-dmns-obj/troubleshoot-user-creation-deletion-issues.md
 

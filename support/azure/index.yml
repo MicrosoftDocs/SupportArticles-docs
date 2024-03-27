@@ -109,9 +109,9 @@ productDirectory:
     - url: hpc/pack/welcome-hpc-pack.yml
       text: Troubleshooting articles for Azure HPC Pack
   - title: Microsoft Entra
-    imageSrc: "./microsoft-entra/media/microsoft-entra.svg"
+    imageSrc: "../media/hub-landing/microsoft-entra.svg"
     links:
-    - url: microsoft-entra/welcome-microsoft-entra.yml
+    - url: entra-id/welcome-entra-id.yml
       text: Troubleshooting articles for Microsoft Entra
   - title: Site Recovery
     imageSrc: "https://static.docs.com/ui/media/product/azure/recovery-services-vaults.svg"
