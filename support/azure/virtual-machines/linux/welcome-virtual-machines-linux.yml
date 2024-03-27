@@ -69,7 +69,7 @@ landingContent:
           - text: Fail to access Generation 2 Linux VM
             url: unable-access-g2-linux-vm-reboot.md
           - text: Fail to restart or be provisioned
-            url: linux-kernel-fails-restart-provision
+            url: linux-kernel-fails-restart-provision.md
                     
    # Card
   - title: VM performance issues
