@@ -518,6 +518,29 @@ Under RS5, live migration through SMB of all the VMs to a specific node fails on
 
 Make sure there's a REG_SZ value ComputerName with the name of the computer in UPPERCASE.
 
+
+#### Failed to live migrate 'Virtual Machine VM1' at migration source 'Node1' with error codes 0x800705B4
+
+**Description**  
+After an unexpected shutdown of the Hyper-V node "Node2", live migration of the "VM1" from owner node "Node1" to the destination node "Node2" fails in a Windows 2019 (RS5) Hyper-V cluster. The Configuration version of "VM1" is 5.0.
+
+> "Live migration of ‘Virtual Machine VM’ failed. The virtual machine migration operation for ‘VM1’ failed at migration source ‘Node1’. Failed to receive data for a Virtual Machine migration: This operation  returned because the timeout period expired. (0x800705B4).  
+
+**Action**  
+Check if there are any symbolic links left on the destination node "Node2" where an unexpected shutdown occurred.
+If there are symbloc links of VM, need to delete the symbolic link left on the destination node.
+
+**Workaround**  
+To work around this issue, use one of the following solutions:
+- Quick migration will properly delete symbolic link on the destination node "Node2".
+1. Use a quick migration from the owner node "Node1" to the node "Node2".
+1. Use a quick migration from "Node2" to "Node1".
+1. Use a live migration from "Node1" to "Node2".
+
+- Upgrade the configuration version before live migration  
+To manage with vmcx instead of xml, upgrade the Virtual machine version.  
+See [Upgrade virtual machine version in Hyper-V on Windows or Windows Server](https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/deploy/upgrade-virtual-machine-version-in-hyper-v-on-windows-or-windows-server)
+
 ## Event ID 20413
 
 **Description**
