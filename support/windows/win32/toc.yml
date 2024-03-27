@@ -11,7 +11,7 @@
       href: coinitializeex-fails-after-calling-htmlhelp-same-thread.md
     - name: COM+ supports automatic collection of process dump file
       href: com-supports-collect-dump-file.md 
-    - name: Memory leak occurs when printing a Document
+    - name: Memory leak occurs when printing a document
       href: memory-leak-occurs-printing-document.md
   - name: Desktop app UI development
     items:

@@ -1,10 +1,11 @@
 ---
-title: Memory leak occurs when printing a document in Windows 10 and Windows 11
-description: Works around an issue where memory leak occurs when printing a document in Windows 10 and Windows 11.
-ms.date: 12/19/2023
-ms.reviewer: hirotoh, davean
+title: Memory leak occurs when printing a document in Windows 10 and 11
+description: Works around a memory leak issue that occurs when printing a document in Windows 10 and Windows 11.
+ms.date: 03/27/2024
+ms.reviewer: hirotoh, davean, v-sidong
 ms.custom: sap:Component Development\COM, DCOM, and COM+ Programming and Runtime
 ---
+
 # Memory leak occurs when printing a document in Windows 10 and Windows 11
 
 ## Symptoms
@@ -13,12 +14,12 @@ Applications that print documents using the [OpenPrinter](/windows/win32/printdo
 
 ## Cause
 
-`Print.PrintSupport.Source.dll` is a system printing component that might leak approximately 300 bytes for each document printed.
+`Print.PrintSupport.Source.dll` is a system printing component that might leak approximately 300 bytes for each  printed document.
 
 ## Workaround
 
 To mitigate this issue, use one of the following methods:
 
-- Restart long running processes that print a large number of documents periodically.
+- Periodically restart long-running processes that print a large number of documents.
 
-- Print each document in a separate process.
+- Print each document using a separate process.
