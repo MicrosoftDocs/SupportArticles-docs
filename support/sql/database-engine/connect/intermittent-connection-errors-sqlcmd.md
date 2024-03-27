@@ -8,7 +8,7 @@ ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 
-# Troubleshoot intermittent connection errors when you use SQLCMD
+# Intermittent connection errors when you use SQLCMD
 
 This article helps you resolve intermittent connection "OS error 10054" issues that occur when you use the SQLCMD command line tool.
 

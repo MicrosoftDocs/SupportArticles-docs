@@ -1,7 +1,7 @@
 ---
 title: Resolving the SSL_PE_NO_CIPHER error in SQL Server
 description: This article provides the symptoms and resolution using which you will be able to resolve the SSL_PE_NO_CIPHER error in SQL Server.
-ms.date: 03/19/2024
+ms.date: 03/27/2024
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
