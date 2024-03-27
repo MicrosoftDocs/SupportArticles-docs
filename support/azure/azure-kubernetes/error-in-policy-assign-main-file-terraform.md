@@ -1,6 +1,6 @@
 ---
 title: Error in policy-assignments main.tf file at Terraform.
-description: This article provide information about how to run as non-root user in containers by using the securityContext field.
+description: This article provides information about how to run as non-root user in containers by using the securityContext field.
 ms.date: 03/27/2024
 ms.reviewer: chiragpa, andbar, haitch, v-leedennis
 ms.service: azure-kubernetes-service
@@ -27,11 +27,11 @@ resource "azurerm_policy_assignment" "kubernetes" {
 
 ## Cause
 
-The error occurs when the policy assignment references the policy initiative definition winth in `policy_definition_id`. However, the `azurerm_policy_set_definition` module might be delayed or not found before the policy assignment creation.
+The error occurs when the policy assignment references the policy initiative definition  within `policy_definition_id`. However, the `azurerm_policy_set_definition` module might be delayed or not found before the policy assignment creation.
 
 ## Solution
 
-In your Terraform configuration, include a `depends_on' parameter within the policy assignment resource as the sample bewlow. This ensures the policy assignment is generated only subsequent to the creation of the policy set definition. 
+In your Terraform configuration, include a `depends_on' parameter within the policy assignment resource as the sample below. This ensures the policy assignment is generated only subsequent to the creation of the policy set definition. 
 
 ```
 resource "azurerm_policy_assignment" "kubernetes" {
