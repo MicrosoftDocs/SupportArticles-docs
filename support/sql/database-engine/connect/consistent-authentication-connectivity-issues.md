@@ -161,7 +161,7 @@ This section lists various causes and scenarios that are related to Kerberos aut
 - [Some legacy providers don't support Kerberos over Named Pipes](#some-legacy-providers-dont-support-kerberos-over-named-pipes)
 - [Kernel-mode authentication](#kernel-mode-authentication)
 - [Limit delegation rights to Access or Excel](#limit-delegation-rights-to-access-or-excel)
-- [Use HTTP host header](#use-http-host-header)
+- [Use website host header](#use-website-host-header)
 - [HOSTS file is incorrect](#hosts-file-is-incorrect)
 - [Delegating to a file share](#assign-permissions-to-a-file-share-without-proper-constraints)
 - [Enable HTTP ports on SPNs](#enable-http-ports-on-spns)
@@ -380,7 +380,7 @@ Refers to Kerberos tickets. Using expired Kerberos tickets can cause issues in a
 
 ### Clock skew is too high
 
-This is a scenario in which clocks on more than one device on a network aren't synchronized. For Kerberos service to work, the clocks between devices can't be turned off for more than five minutes. If they aren't turned off, it might lead to consistent authentication failures.
+This is a scenario in which clocks on more than one device on a network aren't synchronized. For the Kerberos authentication to work, the clocks between devices can't be turned off for more than five minutes. If they aren't turned off, it might lead to consistent authentication failures.
 
 ### Not a constrained target
 
@@ -410,7 +410,7 @@ The SPN on the App Pool account is typically required for web servers. However, 
 
 The Joint Engine Technology (JET) and Access Connectivity Engine (ACE) providers are similar to any of the file systems. You must use constrained delegation to enable SQL Server to read files that are located on another computer. In general, the ACE provider shouldn't be used in a linked server because this is explicitly not supported. The JET provider is deprecated and is available on 32-bit computers only.
 
-### Use HTTP host header
+### Use website host header
 
 If the website has a host header name, the HOSTS SPN can't be used. An explicit HTTP SPN must be used. If the website doesn't have a host header name, NTLM is used and it can't be delegated to a back-end SQL Server instance or other service.
 
