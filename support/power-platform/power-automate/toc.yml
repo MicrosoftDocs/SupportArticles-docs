@@ -37,7 +37,7 @@
           href: connections/unable-send-smtp-email.md
         - name: Client Request Aborted or Failed to fetch
           href: connections/client-request-aborted-failed-fetch.md
-        - name: Check if the gateway is in the right region
+        - name: Missing on-premises data gateway
           href: connections/check-if-gateway-is-the-right-region.md
         - name: Troubleshoot Flow Connections
           href: connections/troubleshooting-flow-connections.md
