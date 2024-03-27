@@ -379,9 +379,9 @@ The Global Secure Access client has detailed event log support. To view the logs
    - Detailed traffic flow handling
    - Traffic that is acquired or isn't acquired
 
-[!INCLUDE [Third-party information disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
 
 [limitations]: /entra/global-secure-access/how-to-install-windows-client#known-limitations
 [meac]: https://entra.microsoft.com
