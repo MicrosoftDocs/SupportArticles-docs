@@ -3,7 +3,7 @@ title: Memory leak occurs when printing a document in Windows 10 and 11
 description: Works around a memory leak issue that occurs when printing a document in Windows 10 and Windows 11.
 ms.date: 03/27/2024
 ms.reviewer: hirotoh, davean, v-sidong
-ms.custom: sap:Component Development\COM, DCOM, and COM+ Programming and Runtime
+ms.custom: sap:Component Development\Other
 ---
 
 # Memory leak occurs when printing a document in Windows 10 and Windows 11
