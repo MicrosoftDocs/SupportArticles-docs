@@ -109,7 +109,7 @@ Furthermore, this option is only shown for personal views. When a system view (t
 
 ## See also
 
-- [General Power Apps troubleshooting strategies](isolate-common-issues.md)
-- [Isolate issues in model-driven apps - Power Apps](isolate-model-app-issues.md)
+- [General Power Apps troubleshooting strategies](~/power-platform/power-apps/isolate-and-troubleshoot-common-issues/isolate-common-issues.md)
+- [Isolate issues in model-driven apps - Power Apps](~/power-platform/power-apps/isolate-and-troubleshoot-common-issues/isolate-model-app-issues.md)
 - [Work with views](/power-apps/maker/model-driven-apps/create-edit-views)
 - [FAQ for grid views](/power-apps/user/faq-for-grids-views)
