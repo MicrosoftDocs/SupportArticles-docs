@@ -1,6 +1,6 @@
 ---
 title: Known issues when you use Teams certified peripherals
-description: Lists known issues that occur when you use Teams certified peripherals and provides workarounds.
+description: Lists known issues that occur when you use Microsoft Teams certified peripherals and provides workarounds.
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -8,12 +8,12 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-  - sap: Teams Compatible Devices and Peripherals\
+  - sap:Teams Compatible Devices and Peripherals
   - CI 187023
   - CSSTroubleshoot
-ms.reviewer: billkau; sherimehmood; musingh
+ms.reviewer: elaineho
 appliesto: 
-  - Microsoft Teams
+  - New Microsoft Teams
 search.appverid: 
   - MET150
 ms.date: 03/26/2024
