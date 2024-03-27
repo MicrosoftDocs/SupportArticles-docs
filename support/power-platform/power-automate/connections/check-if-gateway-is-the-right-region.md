@@ -1,20 +1,20 @@
 ---
-title: Can't view gateways in Power Automate
-description: Provides a solution to an issue where you can't see your gateway in Power Automate.
+title: On-premises data gateways are missing in Power Automate portal
+description: Helps you resolve the issue when your on-premises data gateway isn't listed in Power Automate.
 ms.reviewer: quseleba, cgarty
-ms.date: 03/26/2024
+ms.date: 03/27/2024
 ms.custom: sap:Connections\Gateways
 ---
-# Can't view gateways in Power Automate
+# Data gateways are missing in Power Automate
 
-This article provides a solution to an issue where you can't see your gateway in Power Automate.
+If you can't see one or more of your on-premises data gateways in the Power Automate portal, follow the recommendations in this article to isolate and resolve the issue.
 
 _Applies to:_ &nbsp; Power Automate  
 _Original KB number:_ &nbsp; 4555609
 
 ## Symptoms
 
-You can't see one or more of your gateways on the **Gateways** page in the [Power Automate](https://make.powerautomate.com/) portal.
+You can't see one or more of your data gateways on the **Gateways** page in the [Power Automate](https://make.powerautomate.com/) portal.
 
 ## Cause
 
