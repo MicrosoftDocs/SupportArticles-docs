@@ -117,6 +117,8 @@
       href: ./meetings/troubleshoot-meeting-recording-issues.md
     - name: Issues with webinars
       href: ./meetings/issues-with-webinars.md
+    - name: Known issues when using Teams certified peripherals
+      href: ./meetings/known-issues-teams-certified-peripherals.md
     - name: New Teams desktop app fails to render video
       href: ./meetings/new-teams-desktop-app-fail-render-video.md
     - name: Resolve Teams Meeting add-in issues
