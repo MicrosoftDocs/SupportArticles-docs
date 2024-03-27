@@ -86,7 +86,7 @@ This section outlines the steps for installing Inspektor Gadget in your AKS clus
 
 ### One-Click Inspektor Gadget deployment
 
-The following button automates the creation of an AKS cluster and executes the steps described in this section to deploy Inspektor Gadget in the cluster. After the deployment is complete, you can explore all of Inspektor Gadget's features in the provided shell environment. 
+The following button automates the creation of an AKS cluster and executes the steps described in this section to deploy Inspektor Gadget in a cluster. After the deployment is complete, you can explore all of Inspektor Gadget's features in the provided shell environment. 
 
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://go.microsoft.com/fwlink/?linkid=2262757)
 
