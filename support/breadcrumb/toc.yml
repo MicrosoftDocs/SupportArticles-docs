@@ -141,19 +141,15 @@ items:
       - name: Azure Service Fabric
         tocHref: /troubleshoot/azure/service-fabric/
         topicHref: /troubleshoot/azure/service-fabric/welcome-service-fabric
-      - name: Azure Storage
-        tocHref: /troubleshoot/azure/azure-storage/
-        topicHref: /troubleshoot/azure/azure-storage/welcome-azure-storage
-        items:
-        - name: Blob Storage
-          tocHref: /troubleshoot/azure/azure-storage/blobs
-          topicHref: /troubleshoot/azure/azure-storage/blobs/welcome-blob-storage
-        - name: Files Storage
-          tocHref: /troubleshoot/azure/azure-storage/files
-          topicHref: /troubleshoot/azure/azure-storage/files/welcome-files-storage
-        - name: Storage Tools and Metrics
-          tocHref: /troubleshoot/azure/azure-storage/common
-          topicHref: /troubleshoot/azure/azure-storage/files/welcome-storage-tool-metric
+      - name: Blob Storage
+        tocHref: /troubleshoot/azure/azure-storage/blobs
+        topicHref: /troubleshoot/azure/azure-storage/blobs/welcome-blob-storage
+      - name: Files Storage
+        tocHref: /troubleshoot/azure/azure-storage/files
+        topicHref: /troubleshoot/azure/azure-storage/files/welcome-files-storage
+      - name: Storage Tools and Metrics
+        tocHref: /troubleshoot/azure/azure-storage/common
+        topicHref: /troubleshoot/azure/azure-storage/common/welcome-storage-tool-metric
       - name: Azure Synapse Analytics
         tocHref: /troubleshoot/azure/synapse-analytics
         topicHref: /troubleshoot/azure/synapse-analytics/welcome-synapse-analytics
