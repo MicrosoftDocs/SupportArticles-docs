@@ -23,6 +23,7 @@ The topics in this section provide solutions and scenario guides to help you tro
 - Active Directory Lightweight Directory Services (AD LDS) and Active Directory Application Mode (ADAM)
 - Active Directory Migration Tool (ADMT)
 - Active Directory replication
+- Active Directory Rights Management Services
 - Active Directory topology (sites, subnets, and connection objects)
 - DCPromo and the installation of domain controllers
 - Domain controller scalability or performance (including LDAP)

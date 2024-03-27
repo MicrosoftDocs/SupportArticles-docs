@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:power-management, csstroubleshoot
+ms.custom: sap:Windows Setup, Upgrade and Deployment\Power management, csstroubleshoot
 ---
 # Fast startup causes hibernation or shutdown to fail in Windows 10 or Windows 8.1
 

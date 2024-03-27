@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:administration, csstroubleshoot
+ms.custom: sap:Remote Desktop Services and Terminal Services\Deployment, configuration, and management of Remote Desktop Services infrastructure, csstroubleshoot
 ---
 # You notice that the check box "Deny this user permissions to logon to a Remote Desktop Session Host Server" behaves differently in Windows Server 2003 and Windows Server 2008
 

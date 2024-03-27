@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:com-and-com+-performance-and-stability, csstroubleshoot
+ms.custom: sap:Application Technologies and Compatibility\DCOM service startup and permissions, csstroubleshoot
 ---
 # Com port settings reset to default after making changes in Device Manager
 

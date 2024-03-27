@@ -115,8 +115,8 @@ items:
         tocHref: /troubleshoot/azure/automation/
         topicHref: /troubleshoot/azure/automation/welcome-automation
       - name: Azure Batch
-        tocHref: /troubleshoot/azure/hpc-batch/
-        topicHref: /troubleshoot/azure/hpc-batch/welcome-hpc-batch
+        tocHref: /troubleshoot/azure/hpc/batch/
+        topicHref: /troubleshoot/azure/hpc/batch/welcome-hpc-batch
       - name: Azure Cosmos DB
         tocHref: /troubleshoot/azure/cosmos-db/
         topicHref: /troubleshoot/azure/cosmos-db/
@@ -124,14 +124,14 @@ items:
         tocHref: /troubleshoot/azure/azure-container-instances/
         topicHref: /troubleshoot/azure/azure-container-instances/welcome-container-instances
       - name: Azure CycleCloud
-        tocHref: /troubleshoot/azure/hpc-cyclecloud/
-        topicHref: /troubleshoot/azure/hpc-cyclecloud/welcome-hpc-cyclecloud
+        tocHref: /troubleshoot/azure/hpc/cyclecloud/
+        topicHref: /troubleshoot/azure/hpc/cyclecloud/welcome-hpc-cyclecloud
       - name: Azure Functions
         tocHref: /troubleshoot/azure/azure-functions
         topicHref: /troubleshoot/azure/azure-functions/welcome-azure-functions
       - name: Azure HPC Pack
-        tocHref: /troubleshoot/azure/hpc-pack/
-        topicHref: /troubleshoot/azure/hpc-pack/welcome-hpc-pack
+        tocHref: /troubleshoot/azure/hpc/pack/
+        topicHref: /troubleshoot/azure/hpc/pack/welcome-hpc-pack
       - name: Azure Kubernetes Service
         tocHref: /troubleshoot/azure/azure-kubernetes/
         topicHref: /troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes
@@ -144,37 +144,52 @@ items:
       - name: Azure Storage
         tocHref: /troubleshoot/azure/azure-storage/
         topicHref: /troubleshoot/azure/azure-storage/welcome-azure-storage
-      - name: Azure Synapse Analytics
-        tocHref: /troubleshoot/azure/synapse-analytics
-        topicHref: /troubleshoot/azure/synapse-analytics/welcome-synapse-analytics
+        items:
+        - name: Blob Storage
+          tocHref: /troubleshoot/azure/azure-storage/blobs
+          topicHref: /troubleshoot/azure/azure-storage/blobs/welcome-blob-storage
+        - name: Files Storage
+          tocHref: /troubleshoot/azure/azure-storage/files
+          topicHref: /troubleshoot/azure/azure-storage/files/welcome-files-storage
+      - name: Azure Synapse Analytics Apache Spark Pool
+        tocHref: /troubleshoot/azure/synapse-analytics/spark
+        topicHref: /troubleshoot/azure/synapse-analytics/spark/welcome-synapse-analytics-spark
+      - name: Azure Synapse Analytics Dedicated SQL Pool
+        tocHref: /troubleshoot/azure/synapse-analytics/dedicated-sql
+        topicHref: /troubleshoot/azure/synapse-analytics/dedicated-sql/welcome-synapse-analytics-dedicated-sql
+      - name: Azure Synapse Analytics Serverless SQL Pool
+        tocHref: /troubleshoot/azure/synapse-analytics/serverless-sql
+        topicHref: /troubleshoot/azure/synapse-analytics/serverless-sql/welcome-synapse-analytics-serverless-sql
+      - name: Azure Synapse Analytics Workspace
+        tocHref: /troubleshoot/azure/synapse-analytics/workspace
+        topicHref: /troubleshoot/azure/synapse-analytics/workspace/welcome-synapse-analytics-workspace
       - name: Azure Virtual Network
         tocHref: /troubleshoot/azure/virtual-network/
         topicHref: /troubleshoot/azure/virtual-network/welcome-virtual-network
       - name: Cloud Services (classic)
-        tocHref: /troubleshoot/azure/cloud-services-classic/
-        topicHref: /troubleshoot/azure/cloud-services-classic/welcome-cloud-services-classic
+        tocHref: /troubleshoot/azure/cloud-services/classic/
+        topicHref: /troubleshoot/azure/cloud-services/classic/welcome-cloud-services-classic
       - name: Cloud Services (extended support)
-        tocHref: /troubleshoot/azure/cloud-services-extended/
-        topicHref: /troubleshoot/azure/cloud-services-extended/welcome-cloud-services-extended
+        tocHref: /troubleshoot/azure/cloud-service/extended/
+        topicHref: /troubleshoot/azure/cloud-services/extended/welcome-cloud-services-extended
       - name: DevOps Services
         tocHref: /troubleshoot/azure/devops/
         topicHref: /troubleshoot/azure/devops/welcome-azure-devops
       - name: General
         tocHref: /troubleshoot/azure/general/
         topicHref: /troubleshoot/azure/general/welcome-general
-      - name: Microsoft Entra
-        tocHref: /troubleshoot/azure/microsoft-entra/
-        topicHref: /troubleshoot/azure/microsoft-entra/welcome-microsoft-entra
-        items:
-        - name: Microsoft Entra ID
-          tocHref: /troubleshoot/azure/active-directory/
-          topicHref: /troubleshoot/azure/active-directory/welcome-azure-ad
+      - name: Microsoft Entra ID
+        tocHref: /troubleshoot/azure/entra-id/
+        topicHref: /troubleshoot/azure/entra-id/welcome-entra-id
       - name: Site Recovery
         tocHref: /troubleshoot/azure/site-recovery/
         topicHref: /troubleshoot/azure/site-recovery/welcome-site-recovery
-      - name: Virtual Machines
-        tocHref: /troubleshoot/azure/virtual-machines/
-        topicHref: /troubleshoot/azure/virtual-machines/welcome-virtual-machines
+      - name: Linux Virtual Machines
+        tocHref: /troubleshoot/azure/virtual-machines/linux/
+        topicHref: /troubleshoot/azure/virtual-machines/linux/welcome-virtual-machines-linux
+      - name: Windows Virtual Machines
+        tocHref: /troubleshoot/azure/virtual-machines/windows/
+        topicHref: /troubleshoot/azure/virtual-machines/windows/welcome-virtual-machines-windows
       - name: Virtual Machine Scale Sets
         tocHref: /troubleshoot/azure/virtual-machine-scale-sets/
         topicHref: /troubleshoot/azure/virtual-machine-scale-sets/welcome-virtual-machine-scale-sets

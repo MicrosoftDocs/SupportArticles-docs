@@ -1,9 +1,10 @@
 ---
 title: Add tax details to SOP Blank Invoice Form report in Microsoft Great Plains Report Writer
 description: Describes how to add tax details to the SOP Blank Invoice Form report in Microsoft Great Plains Report Writer.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Distribution - Sales Order Processing
 ---
 # How to add tax details to the SOP Blank Invoice Form report in Microsoft Great Plains Report Writer
 

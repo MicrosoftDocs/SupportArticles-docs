@@ -4,6 +4,7 @@ description: How to troubleshoot encryption failures using the Intune encryption
 ms.reviewer: kaushika, luker
 ms.date: 12/05/2023
 search.appverid: MET150
+ms.custom: sap:Configure Devices - Windows\Endpoint Protection
 --- 
 # Troubleshooting BitLocker with the Intune encryption report
 
@@ -113,8 +114,6 @@ The **Status details** page will display the following message if WinRE is not c
 > The user logged into the device does not have admin rights.
 
 Another reason could be administrative rights. If your BitLocker policy is targeting a user who does not have administrative rights and **Allow standard users to enable encryption during Autopilot** is not enabled, you will see the following encryption status details.
-
-:::image type="content" source="media\troubleshoot-bitlocker-admin-center\no-admin-rights.png" alt-text="Intune device encryption status details showing that the user does not have admin rights.":::
 
 **Encryption status explained:**
 

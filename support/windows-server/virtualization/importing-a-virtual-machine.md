@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, robtm, taylorb
-ms.custom: sap:configuration-of-virtual-machine-settings, csstroubleshoot
+ms.custom: sap:Virtualization and Hyper-V\Configuration of virtual machine settings, csstroubleshoot
 ---
 # Importing a VM that is exported from Windows Server 2012 R2 into Windows Server 2012 is not supported
 

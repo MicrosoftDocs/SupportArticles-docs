@@ -4,6 +4,7 @@ description: Suggestions for troubleshooting some of the most common enrollment 
 ms.reviewer: kaushika, mghadial, annovich
 ms.date: 03/08/2024
 search.appverid: MET150
+ms.custom: sap:Enroll Devices - iOS\ADE/ ABM
 ---
 
 # Troubleshooting iOS/iPadOS device enrollment errors in Microsoft Intune

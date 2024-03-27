@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, vimalsh
-ms.custom: sap:deduplication, csstroubleshoot
+ms.custom: sap:Backup, Recovery, Disk, and Storage\Deduplication , csstroubleshoot
 ---
 # Known issues after you enable data deduplication on CSV
 

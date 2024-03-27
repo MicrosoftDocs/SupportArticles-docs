@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, bobbiez, tonnyp
-ms.custom: sap:active-directory-replication, csstroubleshoot
+ms.custom: sap:Active Directory\Active Directory replication and topology, csstroubleshoot
 ---
 # NTDS replication warning with Event ID 1093
 

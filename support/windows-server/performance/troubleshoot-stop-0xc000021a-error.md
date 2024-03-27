@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:blue-screen/bugcheck, csstroubleshoot
+ms.custom: sap:System Performance\System Reliability (crash, errors, bug check or Blue Screen, unexpected reboot), csstroubleshoot
 ---
 # How to troubleshoot a STOP 0xC000021A error in Windows XP or Windows Server 2003
 

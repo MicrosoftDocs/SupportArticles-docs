@@ -5,6 +5,7 @@ ms.date: 01/10/2024
 author: sbmjais
 ms.author: shjais
 manager: shujoshi
+ms.custom: sap:CRM Permissions and Configurations\CRM Settings
 ---
 # Salesforce CRM users unable to see data in Copilot for Sales
 

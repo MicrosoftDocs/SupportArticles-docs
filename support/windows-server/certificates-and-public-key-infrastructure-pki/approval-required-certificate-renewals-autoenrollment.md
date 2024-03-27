@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, jories, milanmil, v-lianna
-ms.custom: sap:certificate-enrollment, csstroubleshoot
+ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Certificate Enrollment Technologies (Auto Enrollment, NDES, CWE, CEP, CES), csstroubleshoot
 ---
 # Approval required for certificate renewals when certificate autoenrollment configured
 

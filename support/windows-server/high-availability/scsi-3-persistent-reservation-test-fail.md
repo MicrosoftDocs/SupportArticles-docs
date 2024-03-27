@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: jburrage, kaushika
-ms.custom: sap:errors-when-running-the-validation-wizard, csstroubleshoot
+ms.custom: sap:Clustering and High Availability\Errors when running the Validation Wizard, csstroubleshoot
 ---
 # Cluster validation fails the SCSI-3 Persistent Reservation test in Windows Server
 

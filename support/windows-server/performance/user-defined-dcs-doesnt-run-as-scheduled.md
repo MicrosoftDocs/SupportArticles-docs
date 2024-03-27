@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate
-ms.custom: sap:kerberos-authentication, csstroubleshoot
+ms.custom: sap:System Performance\Startup or Pre-logon Performance (slow, unresponsive, spinning circle, blank screen), csstroubleshoot
 ---
 
 # User-defined data collector set doesn't run as scheduled

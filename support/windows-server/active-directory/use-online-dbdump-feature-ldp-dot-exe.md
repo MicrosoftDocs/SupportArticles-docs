@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, ROLANDW, oweindl
-ms.custom: sap:ldap-configuration-and-interoperability, csstroubleshoot
+ms.custom: sap:Active Directory\LDAP configuration and interoperability, csstroubleshoot
 ---
 # How to use the online dbdump feature of Active Directory
 

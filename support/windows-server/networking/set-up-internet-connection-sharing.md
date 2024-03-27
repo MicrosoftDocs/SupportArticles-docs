@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, JAMIRC
-ms.custom: sap:wireless-networking-and-802.1x-authentication, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\Wireless (802.1x, Bluetooth, Miracast, Mobile Broadband), csstroubleshoot
 ---
 # Set Up Internet Connection Sharing in Windows Server 2003
 

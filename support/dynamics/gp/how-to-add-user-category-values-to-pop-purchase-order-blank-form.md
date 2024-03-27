@@ -1,9 +1,10 @@
 ---
 title: How to add User Category Values to POP Purchase Order Blank Form
 description: Introduces how to add the add User Category Values field to the POP Purchase Order Blank Form report by using Report Writer in Purchase Order Processing in Microsoft Dynamics GP.
-ms.reviewer: dclauson
+ms.reviewer: theley, dclauson
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Distribution - Purchase Order Processing
 ---
 # How to add User Category Values to the "POP Purchase Order Blank Form" report by using Report Writer in Purchase Order Processing
 

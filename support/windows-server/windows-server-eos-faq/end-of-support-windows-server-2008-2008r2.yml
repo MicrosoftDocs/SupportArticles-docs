@@ -8,7 +8,7 @@ metadata:
   manager: dcscontentpm
   audience: itpro
   ms.topic: faq  
-  ms.custom: sap:general-information, csstroubleshoot
+  ms.custom: sap:Windows Eos\General Information, csstroubleshoot
   localization_priority: medium
   ms.reviewer: kaushika, squin, suehar, v-jeffbo  
 title: End of support for Windows Server 2008 and Windows Server 2008 R2

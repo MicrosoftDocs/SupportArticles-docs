@@ -1,9 +1,10 @@
 ---
 title: Modify the SOP Blank Invoice Form or the SOP Blank Order Form
 description: Describes how to add the Credit Card Number information from Sales Payment Entry to the SOP Blank Invoice Form or to the SOP Blank Order Form.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Distribution - Sales Order Processing
 ---
 # How to modify the SOP Blank Invoice Form or the SOP Blank Order Form in Report Writer to include the Credit Card Number information from the Sales Payment Entry window
 

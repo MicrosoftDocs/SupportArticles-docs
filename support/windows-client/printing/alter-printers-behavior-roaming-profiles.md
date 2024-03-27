@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, eugenev, austinm
-ms.custom: sap:management-and-configuration:-general-issues, csstroubleshoot
+ms.custom: sap:Print, Fax, and Scan\Print Configuration or Management, csstroubleshoot
 ---
 # How to Alter Behavior of Printers That Roam with Roaming Profiles
 

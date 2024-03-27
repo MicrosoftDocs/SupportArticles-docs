@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: Fix, csstroubleshoot
+ms.custom: sap:Backup, Recovery, Disk, and Storage\Partition and volume management, Fix, csstroubleshoot
 ---
 # How to set the Partmgr Attributes registry value by using PowerShell
 
