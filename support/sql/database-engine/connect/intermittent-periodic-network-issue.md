@@ -47,11 +47,11 @@ Run [SQLCHECK](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SQLCHE
 
 ### Collect network traces on the client and server
 
-- On Windows machines, collect network traces by running *SQLTrace.ps1*.
+- On Windows machines, collect network traces by using SQLTRACE.
 
   Follow these steps to prepare and take the trace. Steps 2 and 3 only need to be done once.
 
-  1. Download [SQLTRACE version 1.0.0215.0](https://github.com/microsoft/CSS_SQL_Networking_Tools/files/14041956/SQL_TRACE.zip) and unzip it to a folder, such as *C:\MSDATA*.
+  1. Download [SQLTRACE version 1.0.0215.0](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SQLTRACE) and unzip it to a folder, such as *C:\MSDATA*.
   1. Open the *SQLTrace.ini* file and turn off the following settings:
 
      `BIDTrace=no`, `AuthTrace=no`, and `EventViewer=no`
@@ -287,5 +287,7 @@ For more information, see [Introduction to Receive Side Scaling](/windows-hardwa
 ## More information
 
 [Intermittent or periodic authentication issues in SQL Server](intermittent-periodic-authentication.md)
+
+[Collect a Network Trace](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/Collect-a-Network-Trace)
 
 [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
