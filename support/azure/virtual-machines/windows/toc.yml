@@ -508,8 +508,3 @@
 
 - name: Issue with Azure Virtual Desktop
   href: how-to-videos-windows-virtual-desktop.md
-
-- name: Custom script extenions (CSE) for Linux
-  items:
-  - name: Previous command is re-run
-    href: customscript-reruns-previous-command.md
