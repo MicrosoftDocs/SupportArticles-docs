@@ -151,6 +151,9 @@ items:
         - name: Files Storage
           tocHref: /troubleshoot/azure/azure-storage/files
           topicHref: /troubleshoot/azure/azure-storage/files/welcome-files-storage
+        - name: Storage Tools and Metrics
+          tocHref: /troubleshoot/azure/azure-storage/common
+          topicHref: /troubleshoot/azure/azure-storage/files/welcome-storage-tool-metric
       - name: Azure Synapse Analytics
         tocHref: /troubleshoot/azure/synapse-analytics
         topicHref: /troubleshoot/azure/synapse-analytics/welcome-synapse-analytics
