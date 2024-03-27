@@ -10,7 +10,7 @@ ms.custom: sap:Component Development\COM, DCOM, and COM+ Programming and Runtime
 
 ## Symptoms
 
-Applications that print documents using the [OpenPrinter](/windows/win32/printdocs/openprinter), [StartDocPrinter](/windows/win32/printdocs/startdocprinter), [EndDocPrinter](/windows/win32/printdocs/enddocprinter), and [ClosePrinter](/windows/win32/printdocs/closeprinter) functions might experience a small memory leak on Windows 10 and Windows 11. Applications that print a large number of documents might see increased memory usage.
+Applications that print documents using the [OpenPrinter](/windows/win32/printdocs/openprinter), [StartDocPrinter](/windows/win32/printdocs/startdocprinter), [EndDocPrinter](/windows/win32/printdocs/enddocprinter), and [ClosePrinter](/windows/win32/printdocs/closeprinter) functions might experience a small memory leak on Windows 10 and Windows 11. Applications that print many documents might cause increased memory usage.
 
 ## Cause
 
@@ -20,6 +20,6 @@ Applications that print documents using the [OpenPrinter](/windows/win32/printdo
 
 To mitigate this issue, use one of the following methods:
 
-- Periodically restart long-running processes that print a large number of documents.
+- Periodically restart long-running processes that print many documents.
 
-- Print each document using a separate process.
+- Print each document in a separate process.
