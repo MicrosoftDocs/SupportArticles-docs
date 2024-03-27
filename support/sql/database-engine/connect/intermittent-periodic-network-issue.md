@@ -51,7 +51,7 @@ Run [SQLCHECK](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SQLCHE
 
   Follow these steps to prepare and take the trace. Steps 2 and 3 only need to be done once.
 
-  1. Download [SQLTRACE version 1.0.0215.0](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SQLTRACE) and unzip it to a folder, such as *C:\MSDATA*.
+  1. Download the latest version of [SQLTRACE](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/SQLTRACE) and unzip it to a folder, such as *C:\MSDATA*.
   1. Open the *SQLTrace.ini* file and turn off the following settings:
 
      `BIDTrace=no`, `AuthTrace=no`, and `EventViewer=no`
