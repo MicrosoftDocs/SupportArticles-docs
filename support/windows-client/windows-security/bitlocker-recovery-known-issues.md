@@ -8,7 +8,7 @@ ms.collection:
 - Windows Security Technologies\BitLocker
 - highpri
 ms.topic: troubleshooting
-ms.custom: sap:bitlocker, csstroubleshoot
+ms.custom: sap:Windows Security Technologies\BitLocker, csstroubleshoot
 audience: itpro
 localization_priority: medium
 ---

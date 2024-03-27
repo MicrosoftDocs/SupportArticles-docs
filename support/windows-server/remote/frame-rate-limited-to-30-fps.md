@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, shenry, yuqinwu
-ms.custom: sap:performance-audio-and-video-and-remotefx, csstroubleshoot
+ms.custom: sap:Remote Desktop Services and Terminal Services\Performance (audio and video) and RemoteFX, csstroubleshoot
 ---
 # Frame rate is limited to 30 FPS in Windows-based remote sessions
 

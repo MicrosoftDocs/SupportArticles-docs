@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, v-mafect
-ms.custom: sap:storage-spaces, csstroubleshoot
+ms.custom: sap:Backup, Recovery, Disk, and Storage\Storage spaces, csstroubleshoot
 ---
 # How to extend stand-alone tiered storage spaces
 

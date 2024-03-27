@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:application-compatibility-toolkit-act, csstroubleshoot
+ms.custom: sap:Application Technologies and Compatibility\Application Compatibility Toolkit (ACT), csstroubleshoot
 ---
 # Error "The Best Practices Analyzer scan has failed" when running Best Practice Analyzer 
 

@@ -4,7 +4,7 @@ description: Provides solutions to desktop flow queue-based error codes like NoC
 author: rpapostolis # GitHub alias
 ms.author: appapaio # Microsoft alias
 ms.reviewer: befrey, lulubran
-ms.subservice: power-automate-desktop-flows
+ms.custom: sap:Desktop flows\Power Automate for desktop errors
 ms.date: 11/15/2023
 ---
 # Troubleshoot desktop flow run queue errors

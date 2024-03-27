@@ -3,7 +3,7 @@ title: Troubleshoot slow running flows
 description: Describes possible reasons for slow running flows and suggestions for alleviating the issue.
 ms.reviewer: prkoduku, hinas
 ms.date: 09/08/2023
-ms.subservice: power-automate-flow-run
+ms.custom: sap:Flow run issues\Performance
 ---
 # Troubleshoot slow running flows
 

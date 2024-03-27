@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, squin, v-jesits
-ms.custom: sap:modern-inbox-and-microsoft-store-apps, csstroubleshoot
+ms.custom: sap:Windows Desktop and Shell Experience\Modern, Inbox and Microsoft Store Apps, csstroubleshoot
 ---
 # Modern apps are blocked by security software when you start the applications on Windows 10
 

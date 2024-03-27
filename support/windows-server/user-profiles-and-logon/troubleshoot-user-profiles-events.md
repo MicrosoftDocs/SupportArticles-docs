@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, jgerend, v-lianna
-ms.custom: sap:user-profiles, csstroubleshoot
+ms.custom: sap:User Logon and Profiles\User profiles, csstroubleshoot
 ---
 # Troubleshoot user profiles with events
 
