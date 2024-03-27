@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, jeffpatt
-ms.custom: sap:configuration-of-virtual-machine-settings, csstroubleshoot
+ms.custom: sap:Virtualization and Hyper-V\Configuration of virtual machine settings, csstroubleshoot
 ---
 # After a new Hyper-V VMMS certificate is generated, there are mouse and screen resolution issues when you manage a virtual machine using the Hyper-V Manager Console
 

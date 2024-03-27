@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: jamirc, kaushika
-ms.custom: sap:performance-monitoring-tools, csstroubleshoot
+ms.custom: sap:System Performance\Performance tools (Task Manager, Perfmon, WSRM, and WPA), csstroubleshoot
 ---
 # How to determine which program uses or blocks specific Transmission Control Protocol ports in Windows Server 2003
 

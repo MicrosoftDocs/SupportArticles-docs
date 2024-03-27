@@ -3,6 +3,7 @@ title: Can't distribute deployment packages
 description: Fixes an issue in which you receive the Source directory does not exist error when you distribute deployment packages.
 ms.date: 12/05/2023
 ms.reviewer: kaushika
+ms.custom: sap:Content Management\Content Library
 ---
 # Source directory does not exist error when deployment package distribution fails
 

@@ -132,10 +132,9 @@ For more information about VMWare VMs in VM clouds, see the following article:
 
 [Requirements for using VM Clouds](/previous-versions/azure/windows-server-azure-pack/dn457804(v=technet.10)?redirectedfrom=MSDN)
 
-For more information about third-party extensions for Windows Azure Pack, see the following websites:
+For more information about third-party extensions for Windows Azure Pack, see the following website:
 
 - [VConnect for Windows Azure Pack](http://www.cloudassert.com/Solutions/VConnect)
-- [Konube Integrator](http://www.konube.com/home)  
 
 [!INCLUDE [Third-party information disclaimer](../../includes/third-party-disclaimer.md)]
 

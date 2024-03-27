@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, imranu
-ms.custom: sap:blue-screen/bugcheck, csstroubleshoot
+ms.custom: sap:System Performance\System Reliability (crash, errors, bug check or Blue Screen, unexpected reboot), csstroubleshoot
 ---
 # You receive a "Stop error code 0x0000007F (UNEXPECTED_KERNEL_MODE_TRAP)" error message, or your computer unexpectedly restarts
 

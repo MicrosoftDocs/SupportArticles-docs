@@ -2,7 +2,8 @@
 title: Cannot add a Landed Cost to a Drop-Ship PO
 description: Provides an answer to the question that whether you can add a Landed Cost to a Drop-Ship PO in Microsoft Dynamics GP.
 ms.reviewer: theley
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Distribution - Inventory
 ---
 # Cannot add a Landed Cost to a Drop-Ship PO
 

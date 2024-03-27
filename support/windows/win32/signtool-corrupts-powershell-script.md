@@ -6,7 +6,6 @@ ms.custom: sap:Security Development\Certificate API
 ms.reviewer: mstanley
 author: HaiyingYu
 ms.author: haiyingyu
-ms.subservice: security-dev
 ---
 
 # PowerShell script files re-signed with SignTool may be corrupted

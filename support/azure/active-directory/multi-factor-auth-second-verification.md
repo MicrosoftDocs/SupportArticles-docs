@@ -3,7 +3,7 @@ title: Some users who are enabled for Azure Multi-Factor Authentication aren't p
 description: Describes a scenario in which users who are enabled for Azure Multi-Factor Authentication aren't prompted for a second verification factor when they sign in.
 ms.date: 05/22/2020
 ms.reviewer: willfid
-ms.service: active-directory
+ms.service: entra-id
 ms.subservice: authentication
 ---
 # Some users who are enabled for Azure Multi-Factor Authentication aren't prompted for a second verification method

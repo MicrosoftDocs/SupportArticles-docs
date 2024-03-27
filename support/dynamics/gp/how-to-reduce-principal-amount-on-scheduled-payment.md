@@ -3,7 +3,8 @@ title: Reduce Principal Amount on Scheduled Payment
 description: This article describes how to reduce the Principal amount on a Scheduled Payment in Receivables for Microsoft Dynamics GP.
 ms.reviewer: theley, cwaswick
 ms.topic: how-to
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Receivables Management
 ---
 # How to reduce the Principal Amount on a Scheduled Payment in Receivables Management
 

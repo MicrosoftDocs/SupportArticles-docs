@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, shijoy
-ms.custom: sap:user-profiles, csstroubleshoot
+ms.custom: sap:User Logon and Profiles\User profiles, csstroubleshoot
 ---
 # Error "Invalid store path" during the LoadState process when you use the User State Migration Tool
 

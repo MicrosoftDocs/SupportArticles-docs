@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:applications, csstroubleshoot
+ms.custom: sap:System Performance\App, Process, Service Reliability (crash, errors), csstroubleshoot
 ---
 # Error 1058 is displayed when a service suddenly stops
 

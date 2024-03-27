@@ -5,7 +5,6 @@ ms.date: 12/19/2023
 ms.custom: sap:System Services Development\Process, thread, and DLL APIs
 ms.reviewer: franki
 ms.topic: troubleshooting
-ms.subservice: system-services-dev
 ---
 
 # User32.dll or Kernel32.dll does not initialize

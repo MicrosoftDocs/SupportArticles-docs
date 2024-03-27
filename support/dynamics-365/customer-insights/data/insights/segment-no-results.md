@@ -5,6 +5,7 @@ author: ashwini-puranik
 ms.author: aspuranik
 ms.reviewer: mhart, jimsonc
 ms.date: 09/25/2023
+ms.custom: sap:Segments, measures, insights\Segments
 ---
 # Segments return no or zero members
 

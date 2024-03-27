@@ -2,7 +2,8 @@
 title: Example of PATimeSheetsType XML Schema in eConnect
 description: Provides an example of a PATimeSheetsType XML Schema in eConnect together with Microsoft Dynamics GP.
 ms.reviewer: theley, dclauson
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # Example of a PATimeSheetsType XML Schema in eConnect together with Microsoft Dynamics GP
 

@@ -3,6 +3,7 @@ title: Error 1603 installing the Configuration Manager client
 description: Fixes an issue in which you receive error code 1603 when installing the Configuration Manager client.
 ms.date: 12/05/2023
 ms.reviewer: kaushika
+ms.custom: sap:Client Installation, Registration and Assignment\Client Installation
 ---
 # MSI: Configuration Manager Client is not installed
 

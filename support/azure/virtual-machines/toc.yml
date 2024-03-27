@@ -20,6 +20,9 @@
       href: iaas-logs.md
     - name: Microsoft Azure PaaS VM logs
       href: sdp352ef8720-e3ee-4a12-a37e-cc3b0870f359-windows-vm.md
+  - name: Windows 11 support on Azure Virtual Machines
+    href: windows-11-support-azure-virtual-machines.md
+    displayName: trusted launch, secure boot, CPU, processor, ARM, ARM64, x64
   - name: Windows Server 2008 R2 Support statement
     items:
     - name: Upgrade Windows Server 2008 and Windows Server 2008 R2
@@ -507,6 +510,8 @@
     items:
     - name: Activation fails in forced tunneling scenario
       href: custom-routes-enable-kms-activation.md
+    - name: Activation watermark continues to be displayed
+      href: activation-watermark-appears.md
     - name: Duplicate Client Machine ID
       href: windows-activation-duplicate-client-machine-id.md
     - name: Error 0x80070005
@@ -587,6 +592,8 @@
     items:
     - name: Red Hat RHUI certificate issues
       href: troubleshoot-linux-rhui-certificate-issues.md
+    - name: Red Hat RHUI connectivity issues
+      href: linux-rhui-connectivity-issues.md
 
 - name: Remote troubleshooting for VM tools
   href: remote-tools-troubleshoot-azure-vm-issues.md

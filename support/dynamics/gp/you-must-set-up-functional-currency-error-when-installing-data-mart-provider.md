@@ -3,7 +3,8 @@ title: Error occurs when you install Dynamics GP Data Mart provider
 description: Describes an error message that you may receive when you install the Dynamics GP Data Mart if a functional currency is not set up in Dynamics GP. Provides a resolution.
 ms.reviewer: theley, kellybj, kevogt
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Management Reporter
 ---
 # "You must set up a functional currency for the following companies..." error when installing Dynamics GP Data Mart provider
 

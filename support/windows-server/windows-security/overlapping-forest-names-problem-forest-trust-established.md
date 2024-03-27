@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, herbertm
-ms.custom: sap:domain-and-forest-trusts, csstroubleshoot
+ms.custom: sap:Windows Security Technologies\Domain and forest trusts, csstroubleshoot
 ---
 # Overlapping Forest Names cause problems once Forest Trusts are established
 

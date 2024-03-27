@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, v-tappelgate
-ms.custom: sap:failure-to-install-windows-updates, csstroubleshoot
+ms.custom: sap:Installing Windows Updates, Features, or Roles\Failure to install Windows Updates, csstroubleshoot
 keywords: Windows Update for Business reports, WUBr, diagnostic data, telemetry
 ---
 

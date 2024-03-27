@@ -3,7 +3,8 @@ title: A file with the name already exists and can't be deleted error when expor
 description: Describes an error message that you receive in Management Reporter when you generate a report to Excel. Provides a resolution.
 ms.reviewer: theley, gbyer, kevogt
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Management Reporter
 ---
 # "A file with the name already exists and can't be deleted" error in Management Reporter when exporting a report to Excel
 

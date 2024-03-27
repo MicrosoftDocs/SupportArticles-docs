@@ -4,7 +4,6 @@ description: This article describes security-related changes to the Distributed 
 ms.date: 12/19/2023
 ms.custom: sap:Distributed Transactions\DTC programming and runtime
 ms.topic: article
-ms.subservice: distributed-transactions
 ---
 
 # New functionality in the Distributed Transaction Coordinator service in Windows

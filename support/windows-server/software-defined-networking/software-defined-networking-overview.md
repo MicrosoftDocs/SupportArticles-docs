@@ -14,4 +14,7 @@ The topics in this section provide solutions and scenario guides to help you tro
 
 ## Software Defined Networking sub category
 
+- Troubleshooting guidance: SDN
+- Troubleshoot SDN
+- Troubleshoot the Windows Server Software Defined Networking Stack
 - Internal DNS Server for SDN

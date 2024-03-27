@@ -3,7 +3,8 @@ title: Re-create the Account Index Master table (GL00105) in Microsoft Dynamics 
 description: Describes how to re-create the Account Index Master table (GL00105) in Microsoft Dynamics GP and Microsoft Business Solutions - Great Plains 8.0.
 ms.topic: how-to
 ms.reviewer: theley, v-ancar, cwaswick
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Financial - General Ledger
 ---
 # How to re-create the Account Index Master table (GL00105) in Microsoft Dynamics GP
 

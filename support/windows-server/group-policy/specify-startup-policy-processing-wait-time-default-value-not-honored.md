@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, teterenc, dennhu, v-lianna
-ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot, ikb2lmc
+ms.custom: sap:Group Policy\Problems Applying Group Policy, csstroubleshoot, ikb2lmc
 ---
 # Group Policy fails to apply if default value of "Specify startup policy processing wait time" isn't honored
 

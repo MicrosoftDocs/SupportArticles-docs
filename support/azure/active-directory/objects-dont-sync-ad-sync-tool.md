@@ -3,9 +3,9 @@ title: One or more objects don't sync when the Azure Active Directory Sync tool 
 description: Describes an issue in which one or more AD DS object attributes don't sync to Microsoft Entra ID through the Azure Active Directory Sync tool. Provides resolutions.
 ms.date: 03/12/2024
 ms.reviewer: 
-ms.service: active-directory
-ms.subservice: enterprise-users
-ms.custom: has-azure-ad-ps-ref
+ms.service: entra-id
+ms.subservice: users
+ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ---
 # One or more objects don't sync when using Azure Active Directory Sync tool
 
@@ -126,6 +126,8 @@ To determine attribute conflicts caused by user objects that were created by usi
     ```powershell
     Get-MSOLUser -UserPrincipalName $userUPN | where {$_.LastDirSyncTime -eq $null}
     ```
+
+    [!INCLUDE [Azure AD PowerShell deprecation note](~/../support/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
 
     Leave the console window open. You'll use it again in the next step.
 4. Check for duplicate proxyAddresses attributes. In the console connection that you opened in step 2, run the following command:

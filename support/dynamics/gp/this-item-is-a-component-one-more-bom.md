@@ -3,7 +3,8 @@ title: This item is a component on one or more BOM
 description: Provides a solution to an error that occurs when you try to delete an inventory item in Manufacturing in Microsoft Dynamics GP.
 ms.reviewer: theley, aeckman, lmuelle
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Manufacturing Series
 ---
 # "This item is a component on one or more bills of materials" Error message when you try to delete an inventory item in Manufacturing in Microsoft Dynamics GP
 

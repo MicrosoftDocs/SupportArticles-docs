@@ -3,8 +3,8 @@ title: Password isn't synced from Microsoft Entra ID to the local on-premises di
 description: This article describes an issue in which password isn't synced from Microsoft Entra ID to the local on-premises directory after the password is changed or reset. It provides a resolution.
 ms.date: 11/03/2023
 ms.reviewer: willfid
-ms.service: active-directory
-ms.subservice: enterprise-users
+ms.service: entra-id
+ms.subservice: users
 ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ---
 # Password isn't synced from Microsoft Entra ID to on-premises after the password is changed or reset

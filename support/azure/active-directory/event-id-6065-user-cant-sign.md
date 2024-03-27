@@ -3,9 +3,9 @@ title: Error (This user can't sign in because this account is currently disabled
 description: "Describes an issue in which (Event ID 6065:80070533 This user can't sign in because this account is currently disabled) is logged when Windows 10 settings fail to sync."
 ms.date: 06/08/2020
 ms.reviewer: cpuckett
-ms.service: active-directory
+ms.service: entra-id
 ms.subservice: authentication
-ms.custom: has-azure-ad-ps-ref
+ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ---
 # Error when Windows 10 devices settings fail to sync: This user can't sign in because this account is currently disabled
 
@@ -33,6 +33,8 @@ Description: shell\roaming\cloudsync\cloudsyncengine\cloudsyncengine.cpp(990)\Se
 ## Cause
 
 The tenant has not been provisioned with the RMSBASIC subscription. This happens automatically when **Enterprise State Roaming** is enabled in the Microsoft Entra admin center and is used to encrypt the synchronized data. If `AllowAdHocSubscriptions` is set to **False** on the tenant, this configuration can prevent the tenant from being provisioned with the RMSBASIC subscription.
+
+[!INCLUDE [Azure AD PowerShell deprecation note](~/../support/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
 
 ## Resolution
 

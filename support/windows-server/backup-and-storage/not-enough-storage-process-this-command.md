@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, nedpyle, kapilth, robhind, jgerend, kumud
-ms.custom: sap:file-server-resource-manager-fsrm, csstroubleshoot
+ms.custom: sap:Backup, Recovery, Disk, and Storage\File Server Resource Manager (FSRM) , csstroubleshoot
 ---
 # Error when you access file shares on a SOFS-configured server: Not enough server storage is available to process this command
 

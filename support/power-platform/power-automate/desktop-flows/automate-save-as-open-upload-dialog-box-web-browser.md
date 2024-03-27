@@ -3,7 +3,7 @@ title: Can't automate Save as or Open or Upload dialog box within a web browser
 description: Provides a workaround to automate the Save as, Open or Upload dialog boxes by using the Web recorder or the Web automation actions in Power Automate.
 ms.reviewer: pefelesk
 ms.date: 09/20/2022
-ms.subservice: power-automate-desktop-flows
+ms.custom: sap:Desktop flows\Working with Power Automate for desktop
 ---
 # Can't automate the Save as, Open or Upload dialog boxes within a web browser
 

@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:file-server-resource-manager-fsrm, csstroubleshoot
+ms.custom: sap:Backup, Recovery, Disk, and Storage\File Server Resource Manager (FSRM) , csstroubleshoot
 ---
 # File Server Resource Manager could not load WMI objects in Windows Server
 

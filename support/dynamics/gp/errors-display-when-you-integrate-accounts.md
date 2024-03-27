@@ -3,7 +3,8 @@ title: Errors display when you integrate accounts
 description: Provides a solution to errors that occur when you run an account integration by using Integration Manager together with Microsoft Dynamics GP.
 ms.reviewer: theley, kvogel
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # Error messages display when you integrate accounts by using Integration Manager and Microsoft Dynamics GP
 

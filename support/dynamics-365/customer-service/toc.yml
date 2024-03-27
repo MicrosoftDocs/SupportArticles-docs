@@ -109,8 +109,6 @@
               href: service-level-agreements/actions-run-multiple-times-client.md
             - name: SLA KPI instance isn't created on entity
               href: service-level-agreements/sla-kpi-instance-not-created-entity.md
-            - name: '"SLA KPI instance does not exist" error when updating a case'
-              href: service-level-agreements/slakpi-instance-not-existed-error.md
             - name: SLA isn't applied to a case
               href: service-level-agreements/sla-not-getting-applied.md
             - name: SLA instances associated with a case don't have SLA items

@@ -4,8 +4,8 @@ description: Learn how to resolve a scenario in which you can't set up multifact
 ms.date: 06/23/2023
 ms.editor: v-jsitser
 ms.reviewer: gudlapreethi, bemey, filuz, robgarcia, azureidcic, v-leedennis
-ms.service: active-directory
-ms.subservice: enterprise-users
+ms.service: entra-id
+ms.subservice: users
 ---
 # Can't set up MFA because five devices are already registered to use an authenticator app
 

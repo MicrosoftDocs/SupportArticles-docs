@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: justinha, kaushika
-ms.custom: sap:dcpromo-and-the-installation-of-domain-controllers, csstroubleshoot
+ms.custom: sap:Active Directory\DCPromo and the installation or removal of domain controllers, csstroubleshoot
 ---
 
 # DCPROMO answer file syntax for unattended promotion and demotion of domain controllers

@@ -3,8 +3,8 @@ title: Error AADSTS50003 - No signing key configured
 description: Describes a problem in which you receive the error AADSTS50003 when signing in to SAML SSO configured app with Microsoft Entra ID. 
 ms.date: 10/12/2022
 ms.reviewer: bernawy
-ms.service: active-directory
-ms.subservice: app-mgmt
+ms.service: entra-id
+ms.subservice: enterprise-apps
 ---
 # Error AADSTS50003 - No signing key configured
 

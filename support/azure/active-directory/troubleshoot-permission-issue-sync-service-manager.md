@@ -3,8 +3,8 @@ title: Permission-issue error 8344 in Synchronization Service Manager
 description: Learn how to diagnose and fix permission-issue error 8344 (insufficient access rights to perform the operation) in Synchronization Service Manager.
 ms.date: 06/14/2023
 ms.reviewer: calazlo, nualex, v-leedennis
-ms.service: active-directory
-ms.subservice: enterprise-users
+ms.service: entra-id
+ms.subservice: users
 ---
 # Permission-issue error 8344, "Insufficient access rights to perform the operation."
 

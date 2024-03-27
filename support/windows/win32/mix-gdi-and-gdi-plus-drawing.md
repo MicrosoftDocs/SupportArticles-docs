@@ -5,7 +5,6 @@ ms.date: 12/19/2023
 ms.custom: sap:Graphics and Multimedia development\GDI+ API
 ms.reviewer: V-JEFFBO, jhornick
 ms.topic: article
-ms.subservice: graphics-multimedia-dev
 ---
 # Interoperability between GDI and GDI+
 

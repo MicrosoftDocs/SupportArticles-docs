@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:deploying-software-through-group-policy, csstroubleshoot
+ms.custom: sap:Group Policy\Deploying software through Group Policy , csstroubleshoot
 ---
 # Use Group Policy to remotely install software
 
