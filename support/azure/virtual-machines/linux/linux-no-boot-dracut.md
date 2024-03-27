@@ -187,7 +187,7 @@ To resolve this issue, locate the swap path `rd.lvm.lv=VG/SwapVol` in the GRUB c
 * If you're in the Azure serial console:
     1. Follow step 3 in [Online troubleshooting](#online-troubleshooting).
     2. Go to the line starting with `linux`, locate the `rd.lvm.lv=VG/SwapVol` parameter and remove it.
-    3. Select `<kbd>Ctrl</kbd>+<kbd>X</kbd>` to boot the VM.
+    3. Select <kbd>Ctrl</kbd>+<kbd>X</kbd> to boot the VM.
     4. Once the VM successfully boots, modify the `/etc/default/grub` file, remove the `rd.lvm.lv=VG/SwapVol` parameter, and then update the GRUB configuration file, as instructed in [Reinstall GRUB and regenerate GRUB configuration file](troubleshoot-vm-boot-error.md#reinstall-grub-regenerate-grub-configuration-file) section.
 
 ### <a id="dracut-grub-misconf-dup-params"></a>Duplicated parameters in GRUB configuration file
