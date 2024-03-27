@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, jeffpatt
-ms.custom: sap:user-experience-virtualization-ue-v, csstroubleshoot
+ms.custom: sap:UEV\Agent\Other, csstroubleshoot
 ---
 # User Experience Virtualization (UE-V) registry settings
 

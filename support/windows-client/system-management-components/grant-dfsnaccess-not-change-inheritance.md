@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, huberts
-ms.custom: sap:powershell, csstroubleshoot
+ms.custom: sap:System Management Components\PowerShell, csstroubleshoot
 ---
 # Windows PowerShell cmdlet Grant-DfsnAccess doesn't change inheritance on DFS links
 

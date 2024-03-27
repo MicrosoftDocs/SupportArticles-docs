@@ -7,7 +7,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, arrenc, v-jomcc
-ms.custom: sap:active-directory-backup-restore-or-disaster-recovery, csstroubleshoot
+ms.custom: sap:Active Directory\Active Directory backup, restore, or disaster recovery, csstroubleshoot
 ---
 # How to restore deleted user accounts and their group memberships in Active Directory
 
@@ -936,10 +936,6 @@ Microsoft recommends that you take the following steps to prevent bulk deletions
 8. Most of the bulk deletions of user accounts, of computer accounts, and of security groups that Microsoft sees are accidental. Discuss this scenario with your IT staff, and develop an internal action plan. Focus on early detection. And return functionality to your domain users and business as quickly as possible. You can also take steps to prevent accidental bulk deletions from occurring by editing the access control lists (ACLs) of organizational units.
 
     For more information about how to use Windows interface tools to prevent accidental bulk deletions, see [Guarding Against Accidental Bulk Deletions in Active Directory](/previous-versions/windows/it-pro/windows-server-2003/cc773347(v=ws.10)).
-
-    For more information about how to prevent accidental bulk deletions by using Dsacls.exe or a script, see the following article:
-
-    [Script to Protect Organizational Units (OUs) from Accidental Deletion](https://gallery.technet.microsoft.com/ScriptCenter/c307540f-bd91-485f-b27e-995ae5cea1e2).
 
 ## Tools and scripts that may help you recover from bulk deletions
 

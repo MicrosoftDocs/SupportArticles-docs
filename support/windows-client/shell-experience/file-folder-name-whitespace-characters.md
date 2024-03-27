@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, arichard, kimnich
-ms.custom: sap:file-explorer/windows-explorer, csstroubleshoot
+ms.custom: sap:Windows Desktop and Shell Experience\File Explorer (app only, folders, Quick Access, File Explorer search), csstroubleshoot
 ---
 # Support for Whitespace characters in File and Folder names for Windows
 

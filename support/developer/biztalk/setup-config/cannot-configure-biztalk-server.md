@@ -73,7 +73,7 @@ To resolve this issue, configure the MSDTC service correctly both on the compute
 
 - [Ports for the Administration Server](https://go.microsoft.com/fwlink/p/?linkid=275568)
 
-- [Installing BizTalk Server 2010 in a Basic Multi-Computer Environment](https://social.technet.microsoft.com/wiki/contents/articles/6845.installing-biztalk-server-2010-in-a-basic-multi-computer-environment.aspx)
+- [How to Install BizTalk Server 2010 in a Basic Multi-Computer Environment](/archive/technet-wiki/6845.how-to-install-biztalk-server-2010-in-a-basic-multi-computer-environment)
 
 ## More information
 

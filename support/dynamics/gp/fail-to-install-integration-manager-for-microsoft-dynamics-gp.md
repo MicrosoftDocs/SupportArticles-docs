@@ -2,8 +2,9 @@
 title: Error when you install Integration Manager for Microsoft Dynamics GP
 description: This article provides steps to resolve the error message when you install Integration Manager for Microsoft Dynamics GP.
 ms.topic: troubleshooting
-ms.reviewer: dlanglie
-ms.date: 03/31/2021
+ms.reviewer: theley, dlanglie
+ms.date: 03/20/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # Error "Failed Registering Assemblies for Com+ Application" is received when Integration Manager for Microsoft Dynamics GP 10.0 is installed
 

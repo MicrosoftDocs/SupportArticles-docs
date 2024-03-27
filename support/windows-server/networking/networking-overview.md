@@ -25,6 +25,7 @@ The topics in this section provide solutions and scenario guides to help you tro
 - RADIUS - Network Policy Server (NPS) or Internet Authentication Service (IAS)
 - Remote access
 - TCP/IP communications
+- Webwindows-client and WebDAV
 - Windows Firewall with Advanced Security (WFAS)
 - Windows NIC Teaming (Load Balance Failover)
 - WINS

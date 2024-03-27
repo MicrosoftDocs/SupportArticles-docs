@@ -2,8 +2,9 @@
 title: Error when you run an integration that uses VBScript code after you upgrade to Integration Manager for Microsoft Dynamics GP 10.0
 description: This article gives an example VBScript code that is in the RetrieveGloblas format and describes what you have to change in the new GPConnection object code in Integration Manager for Microsoft Dynamics GP 10.0.
 ms.topic: troubleshooting
-ms.reviewer: grwill, dlanglie
-ms.date: 03/31/2021
+ms.reviewer: theley, grwill, dlanglie
+ms.date: 03/20/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # Error message when you run an integration that uses VBScript code after you upgrade to Integration Manager for Microsoft Dynamics GP 10.0: "DOC 1 ERROR: Object required"
 

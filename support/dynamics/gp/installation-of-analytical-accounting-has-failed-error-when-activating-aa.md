@@ -1,9 +1,10 @@
 ---
 title: Installation of analytical accounting has failed error when activating Analytical Accounting
 description: When trying to activate Analytical Accounting (AA), you receive an error message that states installation of analytical accounting has failed as there are other users logged into the system. Provides a resolution.
-ms.reviewer: 
+ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Analytical Accounting
 ---
 # "Installation of analytical accounting has failed..." error when activating Analytical Accounting (AA)
 

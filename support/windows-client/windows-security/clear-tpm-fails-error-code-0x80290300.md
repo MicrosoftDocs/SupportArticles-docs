@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:secure-boot-and-uefi, csstroubleshoot
+ms.custom: sap:System Performance\Startup configuration (general, secure boot, UEFI), csstroubleshoot
 ---
 # Clear TPM fails with error code: 0x80290300
 

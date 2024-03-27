@@ -14,8 +14,9 @@ The topics in this section provide solutions and scenario guides to help you tro
 
 ## Printing sub categories
 
-- Management and Configuration of installing Print drivers
-- Errors and troubleshooting General issues
+- Troubleshooting guidance: Printing
+- Troubleshoot printing issues
+- Management and Configuration of installing print drivers
 - Errors and troubleshooting: General issues
 - Errors and troubleshooting: Print output or print failures
 - Errors and troubleshooting: Print spooler
