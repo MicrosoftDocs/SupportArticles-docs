@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, khoffman
-ms.custom: sap:domain-join-issues, csstroubleshoot
+ms.custom: sap:Active Directory\On-premises Active Directory domain join, csstroubleshoot
 ---
 # Description of support boundaries for Active Directory over NAT
 

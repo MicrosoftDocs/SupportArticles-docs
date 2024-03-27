@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:errors-and-troubleshooting:-print-spooler, csstroubleshoot
+ms.custom: sap:Print, Fax, and Scan\Print Performance - failures, crashes, not responsive, csstroubleshoot
 ---
 # The size of the EMF spool file may become very large when you print a document that contains lots of raster data
 

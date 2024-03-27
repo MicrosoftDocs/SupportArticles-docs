@@ -881,7 +881,7 @@ items:
       href: ./certificates-and-public-key-infrastructure-pki/expand-maximum-extension-size-limit-ad-cs.md
     - name: How to import third-party CAs into Enterprise NTAuth store
       href: ./certificates-and-public-key-infrastructure-pki/import-third-party-ca-to-enterprise-ntauth-store.md
-    - name: Superseded Certificate Templates and impact on user’s AD store
+    - name: Superseded Certificate Templates and impact on user's AD store
       href: ./certificates-and-public-key-infrastructure-pki/superseded-certificate-templates-impact-user-ad-store.md
   - name: Certificate-based authentication
     items:
@@ -897,6 +897,8 @@ items:
       href: ./certificates-and-public-key-infrastructure-pki/add-san-to-secure-ldap-certificate.md
     - name: Approval required for certificate renewals
       href: ./certificates-and-public-key-infrastructure-pki/approval-required-certificate-renewals-autoenrollment.md
+    - name: Can't import an AES256-SHA256-encrypted PFX certificate
+      href: ./certificates-and-public-key-infrastructure-pki/cannot-import-aes256-sha256-encrypted-pfx-certificate.md
     - name: Certutil -view command doesn't return issued certificates
       href: ./certificates-and-public-key-infrastructure-pki/certutil-view-not-return-issued-certificate.md
     - name: Clients can't authenticate with a server
@@ -2336,13 +2338,13 @@ items:
   - name: Connecting to a session or desktop
     items:
     - name: '"An internal error has occurred" when connecting to a remote machine'
-      href: ./remote/internal-error-has-occurred-connecting-remote-machine.md
-    - name: 'Error "Remote Desktop cannot verify the identity of the remote computer"'
-      href: ./remote/remote-desktop-cannot-verify-identity-connecting-remote-machine.md      
+      href: ./remote/internal-error-has-occurred-connecting-remote-machine.md 
     - name: Connect to and shadow console session with Terminal Services
       href: ./remote/connect-to-and-shadow-console-session.md
     - name: Error 0xc0000005 when you log on to Terminal Server client
       href: ./remote/0xc0000005-terminal-server-client.md
+    - name: 'Error "Remote Desktop cannot verify the identity of the remote computer"'
+      href: ./remote/remote-desktop-cannot-verify-identity-connecting-remote-machine.md
     - name: Event ID 10000 when Terminal Server is enabled
       href: ./remote/event-10000-terminal-server-enabled.md
     - name: Fail to log on to a terminal server

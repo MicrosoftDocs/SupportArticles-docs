@@ -5,6 +5,7 @@ author: josaw1
 ms.author: josaw
 ms.reviewer: rassadi, brstor
 ms.date: 09/01/2023
+ms.custom: sap:Channel management\Issues with B2C channel configuration
 ---
 # Sign-in link redirects back to an e-commerce site
 

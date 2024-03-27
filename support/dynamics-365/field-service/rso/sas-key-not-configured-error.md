@@ -5,6 +5,7 @@ ms.author: feiqiu
 author: feifeiqiu
 ms.reviewer: mhart
 ms.date: 10/19/2023
+ms.custom: sap:Resource Scheduling Optimization
 ---
 # "SAS Key hasn't been configured" error in Resource Scheduling Optimization
 

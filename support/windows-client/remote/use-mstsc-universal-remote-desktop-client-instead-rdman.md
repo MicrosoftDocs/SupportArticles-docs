@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, jomukher, v-jesits
-ms.custom: sap:connecting-to-a-session-or-desktop, csstroubleshoot
+ms.custom: sap:Remote Desktop Services and Terminal Services\Web access (includes RemoteApp and desktop connections), csstroubleshoot
 ---
 # Use Remote Desktop Connection or universal Remote Desktop client instead of RDMan in Windows 10
 

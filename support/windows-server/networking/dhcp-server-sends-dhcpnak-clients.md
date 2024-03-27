@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, prasadk
-ms.custom: sap:dynamic-host-configuration-protocol-dhcp, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\Dynamic Host Configuration Protocol (DHCP), csstroubleshoot
 ---
 # DHCP Server with Deactivated Scope sends a DHCPNAK to clients
 

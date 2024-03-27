@@ -14,7 +14,7 @@ ms.topic: article
 ms.tgt_pltfrm: vm-linux
 ms.workload: infrastructure-services
 ms.date: 03/22/2024
-ms.author: genli
+ms.author: mbifeld
 ---
 
 # Azure Serial Console for Linux

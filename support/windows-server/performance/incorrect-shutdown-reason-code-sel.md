@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:shutdown-is-slow-or-hangs, csstroubleshoot
+ms.custom: sap:System Performance\Shutdown Performance (slow, unresponsive), csstroubleshoot
 ---
 # An incorrect shutdown reason code written to SEL on user initiated shutdown
 

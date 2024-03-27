@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:legacy-authentication-ntlm, csstroubleshoot
+ms.custom: sap:Windows Security Technologies\Legacy authentication (NTLM), csstroubleshoot
 ---
 # How to prevent Windows from storing a LAN manager hash of your password in Active Directory and local SAM databases
 

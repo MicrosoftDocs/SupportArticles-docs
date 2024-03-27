@@ -5,6 +5,7 @@ ms.date: 01/10/2024
 author: sbmjais
 ms.author: shjais
 manager: shujoshi
+ms.custom: sap:Setup, Installation and Sign-in\Sales Copilot Outlook Add-In Installation
 ---
 # Add-in update error in Copilot for Sales add-in for Microsoft Outlook
 

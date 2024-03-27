@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:ldap-configuration-and-interoperability, csstroubleshoot
+ms.custom: sap:Active Directory\LDAP configuration and interoperability, csstroubleshoot
 ---
 # Enable LDAP over SSL with a third-party certification authority
 

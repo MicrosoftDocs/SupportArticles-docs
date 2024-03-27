@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, v-nirmsh
-ms.custom: sap:volume-shadow-copy-service-vss, csstroubleshoot
+ms.custom: sap:Backup, Recovery, Disk, and Storage\Volume Shadow Copy Service (VSS) , csstroubleshoot
 ---
 # System state backup by using Windows Server Backup fails with error: System writer is not found in the backup
 
