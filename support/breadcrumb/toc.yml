@@ -108,7 +108,7 @@ items:
       - name: Azure App Service
         tocHref: /troubleshoot/azure/app-service/
         topicHref: /troubleshoot/azure/app-service/welcome-app-service
-      - name: Azure API Management
+      - name: API Management Service
         tocHref: /troubleshoot/azure/api-mgmt/
         topicHref: /troubleshoot/azure/api-mgmt/welcome-api-mgmt
       - name: Azure Automation
@@ -138,7 +138,7 @@ items:
       - name: Azure Monitor
         tocHref: /troubleshoot/azure/azure-monitor/
         topicHref: /troubleshoot/azure/azure-monitor/welcome-azure-monitor
-      - name: Azure Service Fabric
+      - name: Service Fabric
         tocHref: /troubleshoot/azure/service-fabric/
         topicHref: /troubleshoot/azure/service-fabric/welcome-service-fabric
       - name: Blob Storage
@@ -150,22 +150,19 @@ items:
       - name: Storage Tools and Metrics
         tocHref: /troubleshoot/azure/azure-storage/common
         topicHref: /troubleshoot/azure/azure-storage/common/welcome-storage-tool-metric
-      - name: Azure Synapse Analytics
-        tocHref: /troubleshoot/azure/synapse-analytics
-        topicHref: /troubleshoot/azure/synapse-analytics/welcome-synapse-analytics
-      - name: Azure Synapse Analytics Apache Spark Pool
+      - name: Synapse Analytics Apache Spark Pool
         tocHref: /troubleshoot/azure/synapse-analytics/spark
         topicHref: /troubleshoot/azure/synapse-analytics/spark/welcome-synapse-analytics-spark
-      - name: Azure Synapse Analytics Dedicated SQL Pool
+      - name: Synapse Analytics Dedicated SQL Pool
         tocHref: /troubleshoot/azure/synapse-analytics/dedicated-sql
         topicHref: /troubleshoot/azure/synapse-analytics/dedicated-sql/welcome-synapse-analytics-dedicated-sql
-      - name: Azure Synapse Analytics Serverless SQL Pool
+      - name: Synapse Analytics Serverless SQL Pool
         tocHref: /troubleshoot/azure/synapse-analytics/serverless-sql
         topicHref: /troubleshoot/azure/synapse-analytics/serverless-sql/welcome-synapse-analytics-serverless-sql
-      - name: Azure Synapse Analytics Workspace
+      - name: Synapse Analytics Workspace
         tocHref: /troubleshoot/azure/synapse-analytics/workspace
         topicHref: /troubleshoot/azure/synapse-analytics/workspace/welcome-synapse-analytics-workspace
-      - name: Azure Virtual Network
+      - name: Virtual Network
         tocHref: /troubleshoot/azure/virtual-network/
         topicHref: /troubleshoot/azure/virtual-network/welcome-virtual-network
       - name: Cloud Services (classic)
@@ -186,10 +183,10 @@ items:
       - name: Site Recovery
         tocHref: /troubleshoot/azure/site-recovery/
         topicHref: /troubleshoot/azure/site-recovery/welcome-site-recovery
-      - name: Linux Virtual Machines
+      - name: Virtual Machine running Linux
         tocHref: /troubleshoot/azure/virtual-machines/linux/
         topicHref: /troubleshoot/azure/virtual-machines/linux/welcome-virtual-machines-linux
-      - name: Windows Virtual Machines
+      - name: Virtual Machine running Windows
         tocHref: /troubleshoot/azure/virtual-machines/windows/
         topicHref: /troubleshoot/azure/virtual-machines/windows/welcome-virtual-machines-windows
       - name: Virtual Machine Scale Sets
