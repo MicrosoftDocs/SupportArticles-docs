@@ -140,6 +140,8 @@ These files typically have the *.sql* file name extension and contain Transact-S
 
 - No specific file extension for the files.
 - Files are present under the folder structure identified by the container type FILESTREAM from [sys.database_files](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql).
+- <drive\>:\RsFxName
+  - The `<drive>` refers to the root drive of the folder structure identified by the container type FILESTREAM from [sys.database_files](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql).
 
 #### Remote Blob Storage files
 
