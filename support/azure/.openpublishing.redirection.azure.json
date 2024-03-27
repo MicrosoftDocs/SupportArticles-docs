@@ -2500,12 +2500,12 @@
         "redirect_url": "/troubleshoot/azure/entra-id/dir-dmns-obj/troubleshoot-global-secure-access-client-windows-issues",
         "redirect_document_id": true
       },
-      }
+      {
         "source_path": "microsoft-entra/welcome-microsoft-entra.yml",
         "redirect_url": "/troubleshoot/azure/welcome-entra-id",
         "redirect_document_id": true
       },
-      }
+      {
         "source_path": "virtual-machines/customscript-reruns-previous-command.md",
         "redirect_url": "/troubleshoot/azure/virtual-machines/linux/customscript-reruns-previous-command",
         "redirect_document_id": true
