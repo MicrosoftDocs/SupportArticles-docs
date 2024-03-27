@@ -3,8 +3,8 @@ title: Email addresses aren't synced to Microsoft Entra ID
 description: Describes an issue in which users are synced to Microsoft Entra ID but one or more SMTP proxy addresses aren't synced.  This issue occurs if duplicate SMTP proxy addresses exist. Provides a resolution.
 ms.date: 05/11/2020
 ms.reviewer: willfid
-ms.service: active-directory
-ms.subservice: enterprise-users
+ms.service: entra-id
+ms.subservice: users
 ---
 # Email addresses aren't synced to Microsoft Entra ID
 

@@ -4,7 +4,7 @@ description: Explains why a device is in the pending state in Microsoft Entra ID
 author: genlin
 ms.author: genli
 ms.date: 10/10/2023
-ms.service: active-directory
+ms.service: entra-id
 ms.subservice: domain-services
 ---
 # Pending devices in Microsoft Entra ID

@@ -3,7 +3,7 @@ title: Error (We could not verify your account) when a new user tries to reset p
 description: Describes a scenario  in which a new user receives a (We could not verify your account) error when resetting password.
 ms.date: 06/22/2020
 ms.reviewer: willfid
-ms.service: active-directory
+ms.service: entra-id
 ms.subservice: authentication
 ---
 # Error when trying to reset password in Azure, Office 365, or Intune: We could not verify your account

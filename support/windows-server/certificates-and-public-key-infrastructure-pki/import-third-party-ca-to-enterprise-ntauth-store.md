@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, slight
-ms.custom: sap:active-directory-certificate-services-adcs, csstroubleshoot
+ms.custom: sap:Certificates and Public Key Infrastructure (PKI)\Active Directory Certificate Services (ADCS), csstroubleshoot
 ---
 # How to import third-party certification authority (CA) certificates into the Enterprise NTAuth store
 

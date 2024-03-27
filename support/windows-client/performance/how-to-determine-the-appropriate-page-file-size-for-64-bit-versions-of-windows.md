@@ -6,7 +6,7 @@ ms.topic: troubleshooting
 ms.reviewer: dansimp
 manager: dcscontentpm
 ms.collection: highpri
-ms.custom: sap:blue-screen/bugcheck, csstroubleshoot
+ms.custom: sap:System Performance\System Reliability (crash, errors, bug check or Blue Screen, unexpected reboot), csstroubleshoot
 audience: itpro
 localization_priority: medium
 ---

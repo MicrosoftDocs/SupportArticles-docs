@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:printing-includes-redirection, csstroubleshoot
+ms.custom: sap:Remote Desktop Services and Terminal Services\Printing (includes redirection), csstroubleshoot
 ---
 # Windows Server printer redirection isn't working
 

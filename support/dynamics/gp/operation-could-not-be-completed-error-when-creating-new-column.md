@@ -3,7 +3,8 @@ title: Operation could not be completed error when creating new column
 description: Describes an error you may receive in Management Reporter 2012 if the ISO codes are not set up for currencies in Microsoft Dynamics GP. Provides a resolution.
 ms.reviewer: theley, davidtre, kevogt
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Management Reporter
 ---
 # "The operation could not be completed due to a problem in the data provider framework" error when creating a new column
 

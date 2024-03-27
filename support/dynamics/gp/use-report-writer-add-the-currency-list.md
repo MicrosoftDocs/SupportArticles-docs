@@ -3,7 +3,8 @@ title: Use Report Writer to add the currency list
 description: Describes how to use Report Writer to add the functional currency list price to the SOP Blank Invoice Form in Microsoft Dynamics GP.
 ms.reviewer: theley, lmuelle
 ms.topic: how-to
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Distribution - Sales Order Processing
 ---
 # How to use Report Writer to add the functional currency list price to the SOP Blank Invoice Form in Microsoft Dynamics GP
 

@@ -5,8 +5,8 @@ ms.date: 03/10/2021
 author: genlin
 ms.author: genli
 ms.reviewer: riantu, nualex, wufrank
-ms.service: active-directory
-ms.subservice: enterprise-users
+ms.service: entra-id
+ms.subservice: users
 ---
 
 # Table-valued parameter errors after Microsoft Entra Connect is installed on Windows Server 2019

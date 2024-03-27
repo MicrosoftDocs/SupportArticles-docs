@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, jeffpatt
-ms.custom: sap:virtual-switch-manager-vmswitch, csstroubleshoot
+ms.custom: sap:Virtualization and Hyper-V\Configuration of virtual machine settings, csstroubleshoot
 ---
 # Network connectivity is lost on Hyper-V VMs if VMQ feature is enabled on HOST network cards
 
