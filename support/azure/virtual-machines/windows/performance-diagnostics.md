@@ -13,7 +13,7 @@ ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
-ms.date: 08/07/2023
+ms.date: 03/25/2024
 ms.author: anandh
 ---
 
@@ -24,7 +24,7 @@ The performance diagnostics tool helps you troubleshoot performance issues that 
 You can run performance diagnostics directly from the Azure portal, where you can also review insights and a report on various logs, rich configuration, and diagnostics data. We recommend that you run performance diagnostics and review the insights and diagnostics data before you contact Microsoft Support.
 
 > [!NOTE]
-> For Windows, performance diagnostics is currently supported on VMs that have .NET SDK version 4.5 or a later version installed. For the steps to run performance diagnostics on classic VMs, see [Azure Performance Diagnostics VM extension](performance-diagnostics-vm-extension.md).
+> For Windows, continuous and on-demand diagnostics are currently supported on VMs that have .NET SDK version 4.5 or a later version installed. For the steps to run performance diagnostics on classic VMs, see [Azure Performance Diagnostics VM extension](performance-diagnostics-vm-extension.md).
 > For Linux, continuous diagnostics is not currently supported.
 
 ## Supported operating systems
@@ -33,7 +33,7 @@ You can run performance diagnostics directly from the Azure portal, where you ca
 
 The following operating systems are currently supported for both on-demand and continuous diagnostics:
 
-* Windows server 2022
+* Windows Server 2022
 * Windows Server 2019
 * Windows Server 2016
 * Windows Server 2012 R2
@@ -125,7 +125,7 @@ After the on-demand performance analysis is complete, the following items are up
 
 After the upload, a new diagnostics report is listed in the Azure portal.
 
-:::image type="content" source="media/performance-diagnostics/diagnostics-report-list.png" alt-text="Screenshot of a list of diagnostics report in Performance diagnostics blade.":::
+:::image type="content" source="media/performance-diagnostics/diagnostics-report-list.png" alt-text="Screenshot of a list of diagnostics reports in the Performance diagnostics blade.":::
 
 ## How to change performance diagnostics settings
 
@@ -133,9 +133,10 @@ Use the **Settings** toolbar button to change the storage account where the diag
 
 > [!NOTE]
 > Performance diagnostics insights and reports are stored in your own storage account. Insights are stored in Azure Tables, and reports are stored as compressed files in a binary large object (BLOB) container that is named *azdiagextnresults*.
->    
+>
 > If your storage account uses [private endpoints](/azure/storage/common/storage-private-endpoints), to make sure that performance diagnostics can store insights and reports in the storage account, do the following two actions:
-> 1. Create separate private endpoints for Table and BLOB.  
+>
+> 1. Create separate private endpoints for Table and BLOB.
 > 1. Add DNS configuration to each separate private endpoint.
 
 ## Review insights and reports
@@ -159,8 +160,6 @@ Use the grouping dropdown to group or ungroup insights. You can group on-demand 
 :::image type="content" source="media/performance-diagnostics/insights-list-enabled-grouping-insight.png" alt-text="Screenshot of performance diagnostics, featuring the Insights list and highlighting the grouping dropdown.":::
 
 Select the link in **Insights** for an insight in the list to display details about the insight, including impact level, recommendations, reference links, and the impacted resources for the virtual machine. For more information, see [Reviewing performance diagnostics insights and recommendations](#reviewing-performance-diagnostics-insights-and-recommendations).
-
-:::image type="content" source="media/performance-diagnostics/insights-list-enabled-grouping-insight.png" alt-text="Screenshot of performance diagnostics, featuring the Insights list and highlighting the grouping dropdown.":::
 
 For insights found by on-demand diagnostics, you can view or download the corresponding performance diagnostics report for an insight in the list by selecting **View** or **Download**, respectively. For more information, see [Download and review the full performance diagnostics report](#download-and-review-the-full-performance-diagnostics-report).
 
@@ -189,7 +188,7 @@ You can select an insight to view more details about the affected resources, sug
 You can use the **Download report** button to download an HTML report that contains additional rich diagnostics information, such as storage and network configuration, performance counters, traces, list of processes, and logs. The content depends on the selected analysis. For advanced troubleshooting, the report may contain additional information and interactive charts that are related to high CPU usage, high disk usage, and processes that consume excessive memory. For more information about the performance diagnostics report, see [Windows](how-to-use-perfinsights.md#review-the-diagnostics-report) or [Linux](../linux/how-to-use-perfinsights-linux.md#review-the-diagnostics-report).
 
 > [!NOTE]
-> Performance diagnostics reports can be downloaded from the **Performance Diagnostics** blade within 30 days after they are created. After 30 days, you may get an error when you download a report from the **Performance Diagnostics** blade. To get a report after 30 days, go to the storage account and download it from a binary large object (BLOB) container that's named azdiagextnresults. You can view the storage account information by using the **Settings** button on the toolbar.
+> Performance diagnostics reports can be downloaded from the **Performance Diagnostics** blade within 30 days after they are created. After 30 days, you may get an error when you download a report from the **Performance Diagnostics** blade. To get a report after 30 days, go to the storage account and download it from a binary large object (BLOB) container that's named *azdiagextnresults*. You can view the storage account information by using the **Settings** button on the toolbar.
 
 ## Manage performance diagnostics reports
 
