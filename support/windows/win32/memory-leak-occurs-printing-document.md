@@ -14,7 +14,7 @@ Applications that print documents using the [OpenPrinter](/windows/win32/printdo
 
 ## Cause
 
-`Print.PrintSupport.Source.dll` is a system printing component that might leak approximately 300 bytes for each  printed document.
+`Print.PrintSupport.Source.dll` is a system printing component that might leak approximately 300 bytes for each printed document.
 
 ## Workaround
 
