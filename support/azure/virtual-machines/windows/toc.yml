@@ -494,13 +494,9 @@
       href: /azure/virtual-machines/extensions/overview?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Can't enable Azure Disk Encryption
       href: extension-version-2.2-not-supported.md
-  - name: Custom script extenions (CSE)
+  - name: Custom script extenions (CSE) for Windows
     items:
-    - name: Previous command is re-run
-      href: customscript-reruns-previous-command.md
-    - name: Troubleshoot - Linux
-      href: /azure/virtual-machines/extensions/custom-script-linux#troubleshooting?context=/troubleshoot/azure/virtual-machines/windows/context/context
-    - name: Troubleshoot - Windows
+    - name: Windows
       href: /azure/virtual-machines/extensions/custom-script-windows#troubleshoot-and-support?context=/troubleshoot/azure/virtual-machines/windows/context/context
 
 - name: Azure Compute Gallery
