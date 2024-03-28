@@ -417,8 +417,6 @@
       href: performance-diagnostics.md
     - name: PerfInsights in Windows
       href: how-to-use-perfinsights.md
-    - name: PerfInsights in Linux
-      href: ../linux/how-to-use-perfinsights-linux.md
     - name: Performance diagnostics VM extension
       items:
       - name: Performance diagnostics extension in Windows

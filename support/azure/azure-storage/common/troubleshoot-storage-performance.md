@@ -108,4 +108,4 @@ If you're experiencing a delay between the time an application adds a message to
 - [Troubleshoot availability issues](troubleshoot-storage-availability.md)
 - [Monitor, diagnose, and troubleshoot your Azure Storage](/training/modules/monitor-diagnose-and-troubleshoot-azure-storage/)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

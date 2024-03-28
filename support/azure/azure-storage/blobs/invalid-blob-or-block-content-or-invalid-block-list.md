@@ -151,4 +151,4 @@ Instead of using optimistic concurrency, try to implement pessimistic concurrenc
 
 If the error is caused by concurrency issues, you might also have to clean up the uncommitted blocks by following one of the solutions in [Cause 1](#cause-1-the-block-length-that-was-specified-in-the-put-block-call-isnt-valid).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

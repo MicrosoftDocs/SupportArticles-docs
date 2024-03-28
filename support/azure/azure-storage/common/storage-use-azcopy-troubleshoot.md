@@ -149,5 +149,5 @@ If you're copying data between accounts by using AzCopy, the quality and reliabi
 - [Get started with AzCopy](/azure/storage/common/storage-use-azcopy-v10)
 - [Find errors and resume jobs by using log and plan files in AzCopy](/azure/storage/common/storage-use-azcopy-configure)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
 
