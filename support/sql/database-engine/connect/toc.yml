@@ -12,7 +12,7 @@ items:
 - name: Existing connection forcibly closed
   href: tls-exist-connection-closed.md
   items:
-  - name: Connectivity issues occur when SQL agent SSIS packages don't run
+  - name: Connectivity issues arising from SQL Sever Agent SSIS failures
     href: sql-server-faces-connectivity-issue-ssispack-fail.md
   - name: Intermittent connection errors occur when a new node is added to the Always On environment
     href: intermittent-connection-errors-when-a-new-node-is-added.md
