@@ -11,8 +11,6 @@
       href: coinitializeex-fails-after-calling-htmlhelp-same-thread.md
     - name: COM+ supports automatic collection of process dump file
       href: com-supports-collect-dump-file.md 
-    - name: Memory leak occurs when printing a document
-      href: memory-leak-occurs-printing-document.md
   - name: Desktop app UI development
     items:
     - name: CreateProcessWithLogonW fails when called on a Microsoft Entra account
@@ -57,6 +55,8 @@
       href: graphicsdrawimage-slow-drawing-jpeg-png-printer.md
     - name: Interoperability between GDI and GDI+
       href: mix-gdi-and-gdi-plus-drawing.md
+    - name: Memory leak occurs when printing documents
+      href: memory-leak-occurs-printing-document.md
     - name: Modify printer settings with DocumentProperties
       href: modify-printer-settings-documentproperties.md
   - name: Networking development
