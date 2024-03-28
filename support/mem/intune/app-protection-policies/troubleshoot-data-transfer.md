@@ -4,6 +4,7 @@ description: General steps to help troubleshoot when Microsoft Intune app protec
 ms.date: 12/05/2023
 ms.reviewer: kaushika, roblane
 search.appverid: MET150
+ms.custom: sap:Application Protection - Android\Data transfer to other apps
 ---
 # Troubleshooting data transfer between apps
 

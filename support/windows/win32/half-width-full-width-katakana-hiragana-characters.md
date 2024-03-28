@@ -4,7 +4,6 @@ description: This article resolves a problem that prevents certain half-width an
 ms.date: 12/19/2023
 ms.custom: sap:Desktop app UI development\Localization and Globalization API
 ms.reviewer: junyoshi, v-jayaramanp
-ms.subservice: desktop-app-ui-dev
 ---
 
 # Half-width and Full-width Katakana and Hiragana characters with consonant marks are treated as different

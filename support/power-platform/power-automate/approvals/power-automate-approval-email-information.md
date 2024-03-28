@@ -3,7 +3,7 @@ title: Power Automate approval email information
 description: Describes the information about Power Automate approval emails.
 ms.reviewer: mansong, hamenon
 ms.date: 07/06/2023
-ms.subservice: power-automate-approvals
+ms.custom: sap:Approvals\Approval emails
 ---
 # Power Automate approval email delivery information
 

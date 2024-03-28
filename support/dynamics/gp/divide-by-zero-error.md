@@ -2,7 +2,8 @@
 title: Divide by zero error when printing the Historical Stock Status report
 description: Provides a solution to the error that occurs when you print the Historical Stock Status report in Microsoft Dynamics GP.
 ms.reviewer: cwaswick, Angela, theley
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Distribution - Inventory
 ---
 # "Divide by zero" error when you print the Historical Stock Status report in Microsoft Dynamics GP
 

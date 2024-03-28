@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:security-filtering-and-item-level-targeting, csstroubleshoot
+ms.custom: sap:Group Policy\Security filtering and item-level targeting, csstroubleshoot
 ---
 # How To Configure Group Policies to Set Security for System Services
 

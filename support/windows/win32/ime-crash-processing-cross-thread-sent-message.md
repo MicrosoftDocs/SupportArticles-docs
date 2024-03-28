@@ -4,7 +4,6 @@ description: Describes the scenario where an Input Method Editor (IME) may crash
 ms.date: 12/19/2023
 ms.reviewer: koichm, davean
 ms.custom: sap:Desktop app UI development\Windows management (User32) API and Windows messages
-ms.subservice: desktop-app-ui-dev
 ---
 
 # IME crashes when processing a window message sent from another thread

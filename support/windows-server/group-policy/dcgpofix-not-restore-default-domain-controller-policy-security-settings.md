@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: timtho, kaushika
-ms.custom: sap:group-policy-management-gpmc-or-agpm, csstroubleshoot
+ms.custom: sap:Group Policy\Group Policy management (GPMC or GPedit), csstroubleshoot
 ---
 # The Dcgpofix tool doesn't restore security settings in the Default Domain Controller Policy to their original state
 

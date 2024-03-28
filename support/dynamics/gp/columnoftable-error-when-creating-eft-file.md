@@ -3,7 +3,8 @@ title: COLUMNOFTABLE error when creating EFT file
 description: You receive the COLUMNOFTABLE error when trying to generate an EFT file in Microsoft Dynamics GP.
 ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # SCRIPT_CMD_COLUMNOFTABLE error when trying to create an EFT file in Microsoft Dynamics GP
 

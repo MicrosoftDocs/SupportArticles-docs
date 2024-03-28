@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, anrath, joshj, v-lianna
-ms.custom: sap:dns, csstroubleshoot, ikb2lmc
+ms.custom: sap:Network Connectivity and File Sharing\DNS, csstroubleshoot, ikb2lmc
 ---
 # DNS scavenging setup
 

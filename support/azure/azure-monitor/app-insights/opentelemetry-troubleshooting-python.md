@@ -70,14 +70,4 @@ get_logger_provider().shutdown()
 
 Azure Workbooks and Jupyter Notebooks may keep exporter processes running in the background. To prevent duplicate telemetry, clear the cache before you make more calls to `configure_azure_monitor`.
 
-## Known issues
-
-The following items are known issues for the Azure Monitor OpenTelemetry Exporters:
-
-- The operation name is missing from dependency telemetry. The missing operation name causes failures and adversely affects performance tab experience.
-
-- The device model is missing from request and dependency telemetry. The missing device model adversely affects device cohort analysis.
-
-- The database server name is missing from the dependency name. Because the database server name isn't included, OpenTelemetry Exporters incorrectly aggregate tables that have the same name onto different servers.
-
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

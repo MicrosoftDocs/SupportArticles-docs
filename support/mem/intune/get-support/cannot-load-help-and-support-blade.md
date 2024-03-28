@@ -4,6 +4,7 @@ description: Provides a solution for when the Intune Help and support blade does
 ms.date: 12/05/2023
 search.appverid: MET150
 ms.reviewer: kaushika
+ms.custom: sap:Set Up Intune\Set up administrators and manage roles
 ---
 # You cannot load the Microsoft Intune Help and support blade
 

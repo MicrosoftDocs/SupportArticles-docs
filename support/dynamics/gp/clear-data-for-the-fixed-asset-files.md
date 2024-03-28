@@ -3,7 +3,8 @@ title: Clear data for the Fixed Asset files
 description: Describes how to clear data for the Fixed Asset files to rerun an import in Fixed Assets in Microsoft Dynamics GP.
 ms.reviewer: theley, cwaswick
 ms.topic: how-to
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Fixed Assets
 ---
 # How to clear data for the Fixed Asset files to rerun an import in Fixed Assets in Microsoft Dynamics GP
 

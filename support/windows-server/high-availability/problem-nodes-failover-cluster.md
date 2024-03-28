@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, v-lianna
-ms.custom: sap:node-removed-from-the-cluster, csstroubleshoot
+ms.custom: sap:Clustering and High Availability\Node removed from the cluster, csstroubleshoot
 ---
 # Having a problem with nodes being removed from active failover cluster membership
 

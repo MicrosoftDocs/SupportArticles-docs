@@ -4,6 +4,7 @@ description: Troubleshoot common issues with Managed Google Play for Android Ent
 ms.date: 01/31/2024
 search.appverid: MET150
 ms.reviewer: kaushika, v-six, esalter
+ms.custom: sap:AppDeployment - Android\ManagedGooglePlay
 ---
 # Troubleshoot Managed Google Play apps on Intune-managed devices
 

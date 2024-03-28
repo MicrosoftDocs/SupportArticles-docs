@@ -3,7 +3,8 @@ title: Error when you use eConnect on a computer
 description: This article provides a resolution for a problem that occurs when you receive a try to use Microsoft Business Solutions-Great Plains eConnect on a computer that is running Microsoft Windows XP Service Pack 2.
 ms.reviewer: theley, kjohns
 ms.topic: troubleshooting
-ms.date: 03/13/2024
+ms.date: 03/20/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # You receive a (New transaction cannot enlist in the specified transaction coordinator) error message when you use eConnect on a computer that is running Windows XP SP2
 

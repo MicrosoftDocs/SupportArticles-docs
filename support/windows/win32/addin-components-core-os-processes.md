@@ -5,7 +5,6 @@ ms.date: 12/19/2023
 ms.custom: sap:Security Development\Other
 ms.reviewer: davean, v-jayaramanp
 ms.topic: troubleshooting
-ms.subservice: security-dev
 ---
 
 # Add-in component guidelines for core OS processes

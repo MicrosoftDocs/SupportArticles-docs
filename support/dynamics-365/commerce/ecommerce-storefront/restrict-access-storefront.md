@@ -5,6 +5,7 @@ author: josaw1
 ms.author: josaw
 ms.reviewer: rassadi, brstor
 ms.date: 09/01/2023
+ms.custom: sap:Deployment and provisioning\Issues with e-commerce custom domains and Azure Front Door
 ---
 # How to restrict access to a storefront during testing or development
 
