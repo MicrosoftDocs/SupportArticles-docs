@@ -1,18 +1,18 @@
 ---
 title: Error in policy-assignments main.tf file at Terraform.
-description: This article provides information about how to run as non-root user in containers by using the securityContext field.
+description: This article provides a solution to an error encountered during policy assignment.
 ms.date: 03/27/2024
 ms.reviewer: chiragpa, andbar, haitch, v-leedennis
 ms.service: azure-kubernetes-service
 ms.subservice: common-issues
 ---
-# Error in policy-assignments main.tf file at Terraform
+# Error in policy-assignments in main.tf file at Terraform
 
 This article provides a solution to an error encountered during policy assignment.
 
 ## Symptoms
 
-You are getting an error in the policy-assignments at terraform:
+You receive an error in the policy-assignments at terraform:
 
 ```
 resource "azurerm_policy_assignment" "kubernetes" {
@@ -31,7 +31,7 @@ The error occurs when the policy assignment references the policy initiative def
 
 ## Solution
 
-In your Terraform configuration, include a `depends_on' parameter within the policy assignment resource as the sample below. This ensures the policy assignment is generated only subsequent to the creation of the policy set definition. 
+In your Terraform configuration, include a `depends_on' parameter within the policy assignment resource as the following sample. This ensures the policy assignment is generated only subsequent to the creation of the policy set definition. 
 
 ```
 resource "azurerm_policy_assignment" "kubernetes" {

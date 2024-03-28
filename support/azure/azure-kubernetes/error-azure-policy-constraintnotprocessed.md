@@ -20,6 +20,6 @@ The issue could be related to the version or compatibility of your Azure Kuberne
 
 ## Solution
 
-To resolve the issue, go to the [Azure portal](Https://portal.azure.com) and then navigate to **Policy**. Check your subscription's compliance status, and review the details of the realted policy. If you don't have management control over the namespace, adjust the policy parameters to exclude that specific namespace.
+To resolve the issue, go to the [Azure portal](Https://portal.azure.com) and then navigate to **Policy**. Check your subscription's compliance status, and review the details of the related policy. If you don't have management control over the namespace, adjust the policy parameters to exclude that specific namespace.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
