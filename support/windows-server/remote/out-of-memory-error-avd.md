@@ -23,4 +23,4 @@ This issue may also be happening because you're using an N SKU without a media f
 
 ## Authentication issues when TLS 1.2 not enabled
 
-Authentication issues can also happen when your client hasn't enabled TLS 1.2. To learn how to enable TLS 1.2 on a compatible client, see [Enable TLS 1.2 on client or server operating systems](../../azure/active-directory/enable-support-tls-environment.md#enable-tls-12-on-client-or-server-operating-systems-).
+Authentication issues can also happen when your client hasn't enabled TLS 1.2. To learn how to enable TLS 1.2 on a compatible client, see [Enable TLS 1.2 on client or server operating systems](../../azure/entra-id/ad-dmn-services/enable-support-tls-environment.md#enable-tls-12-on-client-or-server-operating-systems-).
