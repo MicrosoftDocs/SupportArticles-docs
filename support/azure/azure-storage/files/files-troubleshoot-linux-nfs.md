@@ -176,11 +176,13 @@ sudo nc -zv <storageaccountnamehere>.file.core.windows.net 2049
 
 ## ls hangs for large directory enumeration on some kernels
 
-### Cause: A bug was introduced in Linux kernel v5.11 and was fixed in v5.12.5.
+### Cause: A bug was introduced in Linux kernel v5.11 and was fixed in v5.12.5
+
 Some kernel versions have a bug that causes directory listings to result in an endless READDIR sequence. Small directories where all entries can be shipped in one call don't have this problem.
 The bug was introduced in Linux kernel v5.11 and was fixed in v5.12.5. So anything in between has the bug. RHEL 8.4 has this kernel version.
 
 #### Workaround: Downgrade or upgrade the kernel
+
 Downgrading or upgrading the kernel to anything outside the affected kernel should resolve the issue.
 
 ## System commands fail with the "File not found" error
