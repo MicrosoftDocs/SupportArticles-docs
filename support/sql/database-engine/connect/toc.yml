@@ -24,7 +24,7 @@ items:
     href: ssl-pe-no-cipher-error-endpoint-5022.md
   - name: Intermittent connection errors with SQLCMD
     href: intermittent-connection-errors-sqlcmd.md
-- name: Explicit SPN is misplaced problem in SQL Server
+- name: Explicit misplaced SPN problem in SQL Server
   href: explicit-spn-is-misplaced.md
 - name: KRB_AP_ERR_TKT_EXPIRED error in Kerberos tickets
   href: expired-tickets-issue.md 
