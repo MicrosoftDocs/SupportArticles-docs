@@ -1,5 +1,5 @@
 ---
-title: SQL Server dump files are generated when a linked server query that references an LOB data type encounters exceptions
+title: SQL Server dump files are generated when a linked server query encounters exceptions
 description: This article discusses how to fix an assert dump-related SQL Server issue in which a linked server query references an LOB data type and raises an exception.
 author: JamesFerebee
 ms.author: jaferebe
@@ -54,7 +54,7 @@ EXEC ('---SELECT * FROM sys.databases where name = ?', @test) AT  [<server>\<ins
 ```
 
 > [!WARNING]
-> If you run this code in your environment, you are likely to encounter a dump file that will cause  an outage. Run at your own risk.
+> If you run this code in your environment, you are likely to encounter a dump file that will cause an outage. Run at your own risk.
 
 ## Status
 

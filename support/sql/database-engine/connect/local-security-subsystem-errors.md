@@ -1,14 +1,14 @@
 ---
-title: Troubleshoot LSASS errors with SQL Server authentication
+title: Errors in the local security subsystem in SQL Server
 description: This article addresses SQL Server consistent authentication issues related to the local security subsystem.
-ms.date: 02/28/2024
+ms.date: 03/26/2024
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 
-# Troubleshooting local security subsystem errors in SQL Server
+# Local security subsystem errors in SQL Server
 
 This article helps you resolve a consistent authentication issue when connecting to SQL Server that's related to an unresponsive Local Security Authority Subsystem Service ([LSASS](/windows-server/security/credentials-protection-and-management/credentials-protection-and-management)).
 
