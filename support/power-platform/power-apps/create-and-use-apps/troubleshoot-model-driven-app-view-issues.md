@@ -72,7 +72,7 @@ Or
 
 Sometimes you might expect a certain column to appear in the column editor **Add columns** list, but you can't find it.
 
-:::image type="content" source="media/troubleshoot-model-driven-app-view-issues/column-missing-in-column-editor.png" alt-text="Screenshot that shows an example of the "Add columns" list in the column editor.":::
+:::image type="content" source="media/troubleshoot-model-driven-app-view-issues/column-missing-in-column-editor.png" alt-text="Screenshot that shows an example of the Add columns list in the column editor.":::
 
 This issue usually happens because the attribute has `isValidForGrid` set to false. You can get the metadata for the attribute by adding the following path to the organization url (replacing `account` and `address1_longitude` with the desired entity and attribute name):
 
