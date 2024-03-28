@@ -1,6 +1,6 @@
 ---
-title: "No admin exists" error when opening Microsoft Copilot for Sales
-description: Resolves the "No admin exist" error in Microsoft Copilot for Sales when a user tries to open the app.
+title: No admin exists error when opening Microsoft Copilot for Sales
+description: Resolves the No admin exists error in Microsoft Copilot for Sales when a user tries to open the app.
 ms.date: 03/28/2024
 author: sbmjais
 ms.author: shjais
