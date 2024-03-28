@@ -45,6 +45,8 @@
           href: setup-installation-and-sign-in/first-user-cant-create-trial-environment.md
         - name: Incorrect custom domain in Salesforce
           href: setup-installation-and-sign-in/oauth2-authorization-flow-failed-for-service.md
+        - name: '"No admin exists" error when signing in to Copilot for Sales'
+          href: setup-installation-and-sign-in/no-admin-exists-error.md
         - name: '"No default BAP location found for this tenant" error'
           href: setup-installation-and-sign-in/no-default-bap-location-found-error.md
         - name: '"Request administrator permissions to access Salesforce using APIs" error'
