@@ -3,7 +3,7 @@ title: Troubleshoot NFS file shares - Azure Files
 description: Troubleshoot issues with NFS Azure file shares.
 ms.service: azure-file-storage
 ms.custom: linux-related-content
-ms.date: 03/26/2024
+ms.date: 03/28/2024
 ms.reviewer: kendownie
 ---
 
@@ -176,24 +176,27 @@ sudo nc -zv <storageaccountnamehere>.file.core.windows.net 2049
 
 ## ls hangs for large directory enumeration on some kernels
 
-### Cause: A bug was introduced in Linux kernel v5.11 and was fixed in v5.12.5.
+### Cause: A bug was introduced in Linux kernel v5.11 and was fixed in v5.12.5
+
 Some kernel versions have a bug that causes directory listings to result in an endless READDIR sequence. Small directories where all entries can be shipped in one call don't have this problem.
 The bug was introduced in Linux kernel v5.11 and was fixed in v5.12.5. So anything in between has the bug. RHEL 8.4 has this kernel version.
 
 #### Workaround: Downgrade or upgrade the kernel
+
 Downgrading or upgrading the kernel to anything outside the affected kernel should resolve the issue.
 
-## Command fails with "File not found" error
+## System commands fail with the "File not found" error
 
 ### Cause
 
-System calls such as `stat()` and `readdir()` might fail on some older 32-bit versions of Oracle E-Business suite that use 32-bit file I/O interfaces instead of 64-bit inode numbers.
+System calls such as `stat()` and `readdir()` might fail on some older 32-bit versions of Oracle E-Business Suite that use 32-bit file I/O interfaces instead of 64-bit inode numbers.
 
 ### Solution
 
-You can resolve this error by using the `nfs.enable_ino64=0 kernel` boot option to compress the 64-bit inode numbers to 32 bits. Refer to your distribution's documentation on how to turn on kernel boot options.
+To resolve this issue, compress the 64-bit inode numbers to 32 bits by using the `nfs.enable_ino64=0 kernel` boot option. For more information about how to turn on kernel boot options, refer to your distribution's documentation.
 
 ## Need help?
+
 If you still need help, [contact support](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade) to get your problem resolved quickly.
 
 ## See also

@@ -69,4 +69,4 @@ This article describes how to use PerfInsights to diagnose high CPU or disk usag
 
     - Top spike CPU consumers. This table shows the processes that had high spike usage but did not consume CPU for a long time.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
