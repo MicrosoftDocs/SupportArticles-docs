@@ -16,23 +16,14 @@ This article discusses how to troubleshoot a Microsoft Azure Kubernetes Service 
 
 Here are common causes for the failed cluster/nodepool:
 
-- [Custom Script Extension (CSE) VM extension provisioning error](node-not-ready-custom-script-extension-errors.md)
-- Key Azure resources unavailable
-  - ["Unable to get log analytics workspace info" error](aks-upgrade-scale-fail-log-analytics-workspace-missing.md)
-  - [Cluster Load Balancer InvalidResourceReference error](error-code-invalidresourcereference.md)
-  - [SubnetFull error](error-code-subnetisfull.md)
-  - [Private DNS Zone InternalOperationError](troubleshoot-private-endpoint-connectivity.md)
-- VM allocation failure due to zonal/regional capacity or core quota.
-  - No capacity
-    - [AllocationFailed or ZonalAllocationFailed error](../virtual-machine-scale-sets/allocationfailed-or-zonalallocationfailed.md)
-    - [Associate capacity reservation groups to node pools](/azure/aks/manage-node-pools#associate-capacity-reservation-groups-to-node-pools)
-  - [Quotaexceeded error](error-code-quotaexceeded.md)
-- Customer imposed restrictions
-  - [RequestDisallowedByPolicy error](error-code-requestdisallowedbypolicy.md)
-  - [Resource lock](https://github.com/Azure/AKS/issues/3291)
-- Workload
-  - [A PodDisruptionBudget (PDB) failed to drain pods](error-code-poddrainfailure.md)
-  - [The kube-system pods are not running](troubleshoot-aks-cluster-creation-issues.md#view-pods-in-the-system-namespace-kubectl-get-pods)
+|Causes|References|
+|---|---|
+|Custom Script Extension (CSE) VM extension provisioning error|[Troubleshoot node not ready failures caused by CSE errors](node-not-ready-custom-script-extension-errors.md)|
+|Key Azure resources unavailable|<ul><li>["Unable to get log analytics workspace info" error](aks-upgrade-scale-fail-log-analytics-workspace-missing.md)</li><li>[Cluster Load Balancer InvalidResourceReference error](error-code-invalidresourcereference.md)</li><li>[SubnetFull error](error-code-subnetisfull.md)</li><li>[Private DNS Zone InternalOperationError](troubleshoot-private-endpoint-connectivity.md)</li></ul>|
+|VM allocation failure due to no zonal/regional capacity|<ul><li>[AllocationFailed or ZonalAllocationFailed error](../virtual-machine-scale-sets/allocationfailed-or-zonalallocationfailed.md)</li><li>[Associate capacity reservation groups to node pools](/azure/aks/manage-node-pools#associate-capacity-reservation-groups-to-node-pools)</li></ul>|
+|VM allocation failure due to exceeded core quota|[Quotaexceeded error](error-code-quotaexceeded.md)|
+|Customer imposed restrictions|<ul><li>[RequestDisallowedByPolicy error](error-code-requestdisallowedbypolicy.md)</li><li>[Resource lock](https://github.com/Azure/AKS/issues/3291)</li></ul>|
+|Workload|<ul><li>[A PodDisruptionBudget (PDB) failed to drain pods](error-code-poddrainfailure.md)</li><li>[The kube-system pods are not running](troubleshoot-aks-cluster-creation-issues.md#view-pods-in-the-system-namespace-kubectl-get-pods)</li></ul>|
 
 ## Basic troubleshooting for common errors that cause a failed cluster/node
 
