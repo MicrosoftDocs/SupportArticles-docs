@@ -14,6 +14,8 @@ items:
   items:
   - name: Connectivity issues arising from SQL Sever Agent SSIS failures
     href: sql-server-faces-connectivity-issue-ssispack-fail.md
+  - name: SQL Server Agent fails to start due to TLS issues
+    href: unable-to-start-sql-agent.md
   - name: Intermittent connection errors occur when a new node is added to the Always On environment
     href: intermittent-connection-errors-when-a-new-node-is-added.md
   - name: A linked server couldn't be created after migrating on-premises server to Azure
