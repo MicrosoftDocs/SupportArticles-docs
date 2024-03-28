@@ -3,7 +3,7 @@ title: Azure Linux virtual machine boot enters dracut emergency shell
 description: Provides solutions to an issue in which a Linux virtual machine (VM) can't boot because the OS file system isn't accessible from RAMdisk.
 author: divargas-msft
 ms.author: divargas
-ms.date: 03/06/2023
+ms.date: 03/28/2024
 ms.reviewer: jofrance
 ms.service: virtual-machines
 ms.subservice: vm-cannot-start-stop
