@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, jeffwoo
-ms.custom: sap:virtual-machine-creation, csstroubleshoot
+ms.custom: sap:Virtualization and Hyper-V\Virtual machine creation, csstroubleshoot
 ---
 # Support partners for non-Microsoft hardware virtualization software
 

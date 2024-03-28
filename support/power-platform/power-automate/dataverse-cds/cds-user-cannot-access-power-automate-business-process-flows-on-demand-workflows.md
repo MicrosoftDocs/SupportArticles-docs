@@ -3,7 +3,7 @@ title: CDS User role can't access flows or workflows
 description: CDS User role can't access Power Automate flows, business process flows, or on-demand workflows. Provides a resolution.
 ms.reviewer: sudeepu
 ms.date: 03/31/2021
-ms.subservice: power-automate-dataverse
+ms.custom: sap:Dataverse (CDS)\Working with the flow menu
 ---
 # CDS User Role can't access Power Automate flows, business process flows, or on-demand workflows
 

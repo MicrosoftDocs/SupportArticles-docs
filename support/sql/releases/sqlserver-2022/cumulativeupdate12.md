@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 12 for SQL Server 2022 (KB5033663)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2022 cumulative update 12 (KB5033663).
-ms.date: 03/18/2024
+ms.date: 03/26/2024
 ms.custom: KB5033663
 ms.reviewer: v-qianli2
 appliesto:
@@ -16,7 +16,7 @@ _Version:_ &nbsp; 16.0.4115.5
 
 ## Summary
 
-This article describes Cumulative Update package 12 (CU12) for Microsoft SQL Server 2022. This update contains 51 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 11, and it updates components in the following builds:
+This article describes Cumulative Update package 12 (CU12) for Microsoft SQL Server 2022. This update contains 52 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 11, and it updates components in the following builds:
 
 - SQL Server - Product version: **16.0.4115.5**, file version: **2022.160.4115.5**
 - Analysis Services - Product version: **16.0.43.229**, file version: **2022.160.43.229**
@@ -50,6 +50,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id=2804318>[2804318](#2804318) </a> | Fixes an issue that might cause the database file to be associated with an incorrect filegroup in the clone database created by using `DBCC CLONEDATABASE`.| SQL Server Engine | DB Management| All|
 | <a id=2347023>[2347023](#2347023) </a> | Fixes an issue in which the automatic seeding operation for a database remains in `LIMIT_CONCURRENT_BACKUPS` after adding the database to a new availability group or an existing one created with automatic seeding, even though this SQL Server instance doesn't have any other active seeding, virtual device interface (VDI), or backup threads.| SQL Server Engine | High Availability and Disaster Recovery| All|
 | <a id=2824982>[2824982](#2824982) </a> | Prevents the creation of read-scale availability groups that have a large number of databases to avoid the subsequent assertion failure (Location: ucsconnectionsend.cpp:103; Expression: 'm_pcscBoxcar->GetMessageCount () > 0'). | SQL Server Engine | High Availability and Disaster Recovery| Windows|
+| <a id=2834436>[2834436](#2834436) </a> | Fixes an issue in which the database audit might not record the action when a database audit specification is initially created against the instance name (not the contained availability group listener), and future transactions are executed against the contained availability group listener. | SQL Server Engine | High Availability and Disaster Recovery | All|
 | <a id=2893030>[2893030](#2893030) </a> | Fixes an issue in which the global primary or forwarder in a distributed availability group can't connect to the listener of the other availability group for a while after the local availability group fails over between replicas in multi-subnet configurations. | SQL Server Engine | High Availability and Disaster Recovery| Windows|
 | <a id=2923126>[2923126](#2923126) </a> | Fixes an issue that you encounter in `sys.dm_hadr_database_replica_cluster_states` for read-scale availability groups after you install SQL Server 2022 CU10 or later versions, which causes the **Availability Databases** folder in SQL Server Management Studio (SSMS) not to show the databases in the availability group (AG).| SQL Server Engine | High Availability and Disaster Recovery| Windows|
 | <a id=2937584>[2937584](#2937584) </a> | Fixes an issue in which the `sp_server_diagnostics` stored procedure doesn't respond to the Always On availability group (AG) resource DLL within the `HealthCheckTimeout` when the I/O takes a long time, which causes unnecessary restart and failover. For example, when the `sp_server_diagnostics` stored procedure is waiting for the `PREEMPTIVE_OS_GETFINALFILEPATHBYHANDLE` wait type. </br></br>**Note**: To apply this fix, you need to turn on trace flag 16301, which is off by default. Tracing is added for this event regardless of the trace flag.| SQL Server Engine | High Availability and Disaster Recovery| All|

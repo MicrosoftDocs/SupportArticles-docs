@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, v-lianna
-ms.custom: sap:node-removed-from-the-cluster, csstroubleshoot
+ms.custom: sap:Clustering and High Availability\Node removed from the cluster, csstroubleshoot
 ---
 # Nodes being removed from failover cluster membership on VMware ESX
 

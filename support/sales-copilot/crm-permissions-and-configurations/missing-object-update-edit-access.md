@@ -5,6 +5,7 @@ ms.date: 01/10/2024
 author: sbmjais
 ms.author: shjais
 manager: shujoshi
+ms.custom: sap:CRM Permissions and Configurations\CRM Permissions
 ---
 # Can't update records because of missing object access in Salesforce CRM
 

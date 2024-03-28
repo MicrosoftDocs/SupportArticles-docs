@@ -34,13 +34,13 @@ landingContent:
           - text: Copy blobs between storage accounts with network restriction
             url: copy-blobs-between-storage-accounts-network-restriction.md
           - text: Embedded application error when install Azure backup agent
-            url: ../../general/unable-to-execute-the-embedded-application-error-backup-agent.md
+            url: unable-to-execute-the-embedded-application-error-backup-agent.md
           - text: Invalid blob or block content, or invalid block list
-            url: ../../general/invalid-blob-or-block-content-or-invalid-block-list.md
+            url: invalid-blob-or-block-content-or-invalid-block-list.md
           - text: Optimize CreateFile function
-            url: ../../general/optimize-createfile-function.md
+            url: ../files/optimize-createfile-function.md
           - text: Request body is too large error when write to file
-            url: ../../general/request-body-large.md
+            url: ../files/request-body-large.md
           - text: Troubleshoot high CPU or disk usage issues
-            url: ../../general/diagnose-high-cpu-disk-perfinsights.md  
+            url: diagnose-high-cpu-disk-perfinsights.md  
 

@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:application-compatibility, csstroubleshoot
+ms.custom: sap:Remote Desktop Services and Terminal Services\Application compatibility, csstroubleshoot
 ---
 # RDC client requirements for Terminal Services Web Access
 

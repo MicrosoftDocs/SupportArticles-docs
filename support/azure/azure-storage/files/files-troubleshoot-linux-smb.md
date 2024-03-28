@@ -127,7 +127,7 @@ You'll also see that the server FQDN now resolves to a different IP address than
 
 ### Cause
 
-For capacity load balancing purposes, storage accounts are sometimes live-migrated from one storage cluster to another. Account migration triggers Azure Files traffic to be redirected from the source cluster to the destination cluster by updating the DNS mappings to point to the destination cluster. This blocks all traffic to the source cluster from that account. It’s expected that the SMB client picks up the DNS updates and redirects further traffic to the destination cluster. However, due to a bug in the Linux SMB kernel client, this redirection doesn't take effect. As a result, the data traffic keeps going to the source cluster, which has stopped serving this account post migration.
+For capacity load balancing purposes, storage accounts are sometimes live-migrated from one storage cluster to another. Account migration triggers Azure Files traffic to be redirected from the source cluster to the destination cluster by updating the DNS mappings to point to the destination cluster. This blocks all traffic to the source cluster from that account. It's expected that the SMB client picks up the DNS updates and redirects further traffic to the destination cluster. However, due to a bug in the Linux SMB kernel client, this redirection doesn't take effect. As a result, the data traffic keeps going to the source cluster, which has stopped serving this account post migration.
 
 ### Workaround
 
@@ -197,7 +197,7 @@ kernel: CIFS: VFS: cifs_mount failed w/return code = -2
 
 ### Cause
 
-The client of SMB file share uses the NTLMSSP authentication, which requires the MD5 hashing algorithm. However, in FIPS mode, the MD5 algorithm is restricted because it’s not FIPS-compliant. MD5 is a widely used hash function that produces a 128-bit hash value. However, MD5 is considered insecure for cryptographic purposes.
+The client of SMB file share uses the NTLMSSP authentication, which requires the MD5 hashing algorithm. However, in FIPS mode, the MD5 algorithm is restricted because it's not FIPS-compliant. MD5 is a widely used hash function that produces a 128-bit hash value. However, MD5 is considered insecure for cryptographic purposes.
 
 **How to check if FIPS mode is enabled**
 
@@ -237,8 +237,8 @@ To mount a SMB file share on the Linux VM where FIPS is enabled, use Kerberos/Az
 
 For more information, see to the following documents from Linux distributors:
 
--	[RedHat: Why would enabling FIPS mode in the kernel break CIFS mounts](https://access.redhat.com/solutions/256053)
--	[SUSE: CIFS mount fails with error "mount error(2): No such file or directory"](https://www.suse.com/support/kb/doc/?id=000021162)
+-    [RedHat: Why would enabling FIPS mode in the kernel break CIFS mounts](https://access.redhat.com/solutions/256053)
+-    [SUSE: CIFS mount fails with error "mount error(2): No such file or directory"](https://www.suse.com/support/kb/doc/?id=000021162)
 
 ## Need help?
 
@@ -251,6 +251,6 @@ If you still need help, [contact support](https://portal.azure.com/?#blade/Micro
 - [Troubleshoot Azure Files connectivity (SMB)](files-troubleshoot-smb-connectivity.md)
 - [Troubleshoot Azure Files authentication and authorization (SMB)](files-troubleshoot-smb-authentication.md)
 - [Troubleshoot Azure Files general NFS issues on Linux](files-troubleshoot-linux-nfs.md)
-- [Troubleshoot Azure File Sync issues](../file-sync-troubleshoot.md)
+- [Troubleshoot Azure File Sync issues](file-sync-troubleshoot.md)
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

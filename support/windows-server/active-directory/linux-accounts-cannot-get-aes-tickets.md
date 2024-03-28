@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, v-lianna
-ms.custom: sap:user-computer-group-and-object-management, csstroubleshoot, linux-related-content
+ms.custom: sap:Active Directory\User, computer, group, and object management, csstroubleshoot, linux-related-content
 ---
 # Linux accounts can't get AES-encrypted tickets in AD DS
 

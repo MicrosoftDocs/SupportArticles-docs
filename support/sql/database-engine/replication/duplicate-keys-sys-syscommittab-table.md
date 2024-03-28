@@ -48,7 +48,7 @@ For more information about change tracking, see [Enable and disable change track
 1. Locate the `<AFFECTED_DB>` placeholder in the script, and replace it with the name of the affected database.
 1. Save the modified script to your hard disk as a .sql file. For example, `C:\temp\remove_duplicates.sql`.
 
-If you're running SQL Server 2014, you must grant the per-Service SID full control to the `mssqlsystemresource.ldf` and `mssqlsystemresource.mdf` files. To do this, follow these steps:
+If you're using SQL Server 2014 and later versions, you must grant the per-Service SID full control to the `mssqlsystemresource.ldf` and `mssqlsystemresource.mdf` files. To do this, follow these steps:
 
 1. Navigate to the Bin directory that corresponds to your Instance ID. For example:  
 `C:\Program Files\Microsoft SQL Server\<Instance ID>\MSSQL\Binn`
@@ -60,15 +60,18 @@ If you're running SQL Server 2014, you must grant the per-Service SID full contr
    - `*Read`
 
 1. Grant the SQL Server service per-Service SID Full Control, and then close the permissions dialog boxes.
-1. Start SQL Server in Single-User mode. For more information, see [Start SQL Server in Single-User mode](/sql/database-engine/configure-windows/start-sql-server-in-single-user-mode).
-1. Use a `sqlcmd` command line to connect to SQL Server under the Dedicated Administrator Connection (DAC). For example:
+1. Start SQL Server in single-user mode. For more information, see [Start SQL Server in single-user mode](/sql/database-engine/configure-windows/start-sql-server-in-single-user-mode).
+
+   > [!NOTE]
+   > Startup is skipped for databases that are part of an Always On availability group when SQL Server is started in single-user mode. If you need to troubleshoot issues with change tracking that require starting SQL Server in single-user mode, and the database with change tracking enabled is also part of an availability group, you must remove the database from the availability group before starting SQL Server in single-user mode so the database comes online. 
+
+1. Use a `sqlcmd` command line to connect to SQL Server under the Dedicated Administrator Connection (DAC) and  execute the modified Transact-SQL script. For example:
 
    ```console
    sqlcmd -S PRODSERV1\MSSQLSERVER -A -E -i c:\temp\remove_duplicates.sql
    ```
 
-   Then, execute the modified Transact-SQL script.
-
+   
 1. [Restart SQL Server in Multi-User mode](/sql/database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services), and then verify that backup and CHECKPOINT operations against the affected database complete successfully. If step 4 was used, revert the permissions to the default values.
 
 ### Transact-SQL script

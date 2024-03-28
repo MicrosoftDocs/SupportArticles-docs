@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, hamansoor, v-lianna
-ms.custom: sap:server-manager, csstroubleshoot, ikb2lmc
+ms.custom: sap:System Management Components\Server Manager, csstroubleshoot, ikb2lmc
 ---
 # Error 0x800f0805 when Server Manager and DISM fail to list the available features 
 
