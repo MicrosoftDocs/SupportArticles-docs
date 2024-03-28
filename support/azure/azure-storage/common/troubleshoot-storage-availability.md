@@ -77,4 +77,4 @@ The most common cause of this error is a client disconnecting before a timeout e
 - [Troubleshoot performance issues](troubleshoot-storage-performance.md)
 - [Monitor, diagnose, and troubleshoot your Azure Storage](/training/modules/monitor-diagnose-and-troubleshoot-azure-storage/)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

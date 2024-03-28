@@ -10,7 +10,7 @@ metadata:
   ms.topic: landing-page # Required
   author: genlin  #Required; your GitHub user alias, with correct capitalization.
   ms.author: genli #Required; microsoft alias of author; optional team alias.
-  ms.date: 03/11/2024
+  ms.date: 03/22/2024
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -40,3 +40,18 @@ landingContent:
           - text: Troubleshoot Azure Files performance issues
             url: files-troubleshoot-performance.md
 
+# Card
+  - title: Azure File Sync
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot Azure File Sync
+            url: file-sync-troubleshoot.md
+          - text: Troubleshoot agent installation and server registration
+            url: file-sync-troubleshoot-installation.md
+          - text: Troubleshoot cloud tiering issues
+            url: file-sync-troubleshoot-cloud-tiering.md
+          - text: Troubleshoot sync group management
+            url: file-sync-troubleshoot-sync-group-management.md
+          - text: Troubleshoot sync issues
+            url: file-sync-troubleshoot-sync-errors.md

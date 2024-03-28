@@ -12,6 +12,12 @@
   
 - name: VM Performance
   items:
+  - name: Performance diagnostics (PerfInsights)
+    items:
+    - name: Performance diagnostics in the Azure Portal
+      href: ../windows/performance-diagnostics.md
+    - name: PerfInsights in Linux
+      href: how-to-use-perfinsights-linux.md
   - name: Isolate bottlenecks in Linux
     href: troubleshoot-performance-bottlenecks-linux.md
   - name: Troubleshoot performance issues through monitoring
