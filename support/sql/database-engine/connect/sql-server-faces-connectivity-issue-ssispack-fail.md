@@ -1,16 +1,16 @@
 ---
-title: Issues in connectivity when SQL Server Integration Services packages don't execute
+title: Connectivity issues occur when SQL Server Integration Services packages fail to run
 description: This article helps you resolve errors that occur when you try to run SSIS packages by using SQL Server Agent.
-ms.date: 03/27/2024
+ms.date: 03/28/2024
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 
-# Connectivity issues occur when SQL agent SSIS packages don't run
+# Connectivity issues arising from SQL Sever Agent SSIS failures
 
-This article provides a resolution to a connectivity issue in which SQL Server Integration Services (SSIS) packages that use an SQL agent don't run.
+This article provides a resolution to a connectivity issue in which SQL Server Integration Services (SSIS) packages that use an SQL agent fail to run.
 
 ## Symptoms
 
