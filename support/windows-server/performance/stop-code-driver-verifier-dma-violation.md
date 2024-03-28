@@ -23,4 +23,6 @@ Arg1: 0000000000000026, IOMMU detected DMA violation.
 
 This issue occurs when legacy peripheral component interconnect (PCI) devices installed in an external chassis attempt Direct Memory Access. It's a known implementation issue with Kernel DMA Protection.
 
-You can work around this issue by disabling [Kernel DMA Protection](/windows/security/information-protection/kernel-dma-protection-for-thunderbolt) in BIOS. To resolve this issue in Windows Server 2019, you can upgrade to Windows Server 2022 that has the [October 10, 2023—KB5031364 (OS Build 20348.2031)](https://support.microsoft.com/en-us/topic/october-10-2023-kb5031364-os-build-20348-2031-7f1d69e7-c468-4566-887a-1902af791bbc) update installed.
+You can work around this issue by disabling [Kernel DMA Protection](/windows/security/information-protection/kernel-dma-protection-for-thunderbolt) in BIOS.
+
+To resolve this issue in Windows Server 2019, you can upgrade to Windows Server 2022 and install the [October 10, 2023—KB5031364 (OS Build 20348.2031)](https://support.microsoft.com/en-us/topic/october-10-2023-kb5031364-os-build-20348-2031-7f1d69e7-c468-4566-887a-1902af791bbc) update.
