@@ -84,6 +84,12 @@ This section outlines the steps for installing Inspektor Gadget in your AKS clus
   > [!WARNING]
   > Many mechanisms are available to deploy and use Inspektor Gadget. Each of these mechanisms is tailored to specific use cases and requirements. You can use the kubectl gadget plug-in to apply several of these mechanisms, but not all of them. For instance, deploying Inspektor Gadget by using the `kubectl gadget` plug-in depends on the availability of the Kubernetes API server. If you can’t depend on such a component because its availability might be occasionally compromised, we recommend that you avoid using the `kubectl gadget`deployment mechanism. For more information about this and other use cases, see the [Inspektor Gadget documentation](https://aka.ms/ig).
 
+### One-Click Inspektor Gadget deployment
+
+The following button automates the creation of an AKS cluster and executes the steps described in this section to deploy Inspektor Gadget in a cluster. After the deployment is complete, you can explore all of Inspektor Gadget's features in the provided shell environment. 
+
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://go.microsoft.com/fwlink/?linkid=2262757)
+
 ### Prerequisites
 
 - The Kubernetes [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/) command-line tool. If you have [Azure CLI](/cli/azure/install-azure-cli-linux), you can run the [az aks install-cli](/cli/azure/aks#az-aks-install-cli) command to install kubectl.
