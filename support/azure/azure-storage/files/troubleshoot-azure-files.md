@@ -123,7 +123,7 @@ Error Message: A backup job is already in progress for this file share.
 
 - File share backup doesn't support parallel snapshot requests against the same file share.
 
-- Wait for the existing backup job to finish and then try again. If you can’t find a backup job in the Recovery Services vault, check other Recovery Services vaults in the same subscription.
+- Wait for the existing backup job to finish and then try again. If you can't find a backup job in the Recovery Services vault, check other Recovery Services vaults in the same subscription.
 
 ### UserErrorStorageAccountInternetRoutingNotSupported- Storage accounts with Internet routing configuration are not supported by Azure Backup
 
@@ -202,7 +202,7 @@ Error Message: A recovery job is in process to the same destination.
 
 - File share backup doesn't support parallel recovery to the same target file share.
 
-- Wait for the existing recovery to finish and then try again. If you can’t find a recovery job in the Recovery Services vault, check other Recovery Services vaults in the same subscription.
+- Wait for the existing recovery to finish and then try again. If you can't find a recovery job in the Recovery Services vault, check other Recovery Services vaults in the same subscription.
 
 ### UserErrorTargetFileShareFull- Restore operation failed as target file share is full
 
@@ -283,8 +283,6 @@ Recommended Actions: Ensure that the following configurations in the storage acc
   :::image type="content" source="media/troubleshoot-azure-files/storage-account-network-configuration.png" alt-text="Screenshot that shows the required networking details in a storage account." lightbox="media/troubleshoot-azure-files/storage-account-network-configuration.png":::
 
 - Ensure that the target storage account has the following configuration: *Permitted scope for copy operations* is set to *From storage accounts in the same Microsoft Entra tenant*.
-
-  :::image type="content" source="media/troubleshoot-azure-files/target-storage-account-configuration.png" alt-text="Screenshot that shows the target storage account configuration." lightbox="media/troubleshoot-azure-files/target-storage-account-configuration.png":::
   
 ## Common modify policy errors
 
@@ -320,7 +318,7 @@ Error Code: UserErrorRestoreAFSInDeleteState
 
 Error Message: Listed restore points are not available as the associated file share containing the restore point snapshots has been deleted permanently.
 
-Check if the backed-up file share is deleted. If it was in soft deleted state, check if the soft delete retention period is over and it wasn't recovered back. In either of these cases, you'll lose all your snapshots permanently and won’t be able to recover the data.
+Check if the backed-up file share is deleted. If it was in soft deleted state, check if the soft delete retention period is over and it wasn't recovered back. In either of these cases, you'll lose all your snapshots permanently and won't be able to recover the data.
 
 > [!NOTE]
 > We recommend you don't delete the backed up file share, or if it's in soft deleted state, undelete before the soft delete retention period ends, to avoid losing all your restore points.

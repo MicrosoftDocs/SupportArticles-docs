@@ -232,9 +232,6 @@ After enabling Microsoft Entra Kerberos authentication, you'll need to explicitl
 1. Open **Microsoft Entra ID**.
 2. Select **App registrations** in the left pane.
 3. Select **All Applications** in the right pane.
-
-   :::image type="content" source="media/files-troubleshoot-smb-authentication/azure-portal-azure-ad-app-registrations.png" alt-text="Screenshot that shows all applications in the directory." lightbox="media/files-troubleshoot-smb-authentication/azure-portal-azure-ad-app-registrations.png":::
-
 4. Select the application with the name matching *[Storage Account] $storageAccountName.file.core.windows.net*.
 5. Select **API permissions** in the left pane.
 6. Select **Add permissions** at the bottom of the page.
@@ -371,7 +368,7 @@ If you set up "assignment required" for the corresponding enterprise application
 
 #### Solution
 
-Don't select **Assignment required for Microsoft Entra application** for the storage account because we don't populate entitlements in the Kerberos ticket that's returned back to the requestor. For more information, see [Error AADSTS50105 - The signed in user is not assigned to a role for the application](../../active-directory/error-code-aadsts50105-user-not-assigned-role.md).
+Don't select **Assignment required for Microsoft Entra application** for the storage account because we don't populate entitlements in the Kerberos ticket that's returned back to the requestor. For more information, see [Error AADSTS50105 - The signed in user is not assigned to a role for the application](../../entra-id/app-integration/error-code-AADSTS50105-user-not-assigned-role.md).
 
 ## See also
 
@@ -380,6 +377,6 @@ Don't select **Assignment required for Microsoft Entra application** for the sto
 - [Troubleshoot Azure Files connectivity (SMB)](files-troubleshoot-smb-connectivity.md)
 - [Troubleshoot Azure Files general SMB issues on Linux](files-troubleshoot-linux-smb.md)
 - [Troubleshoot Azure Files general NFS issues on Linux](files-troubleshoot-linux-nfs.md)
-- [Troubleshoot Azure File Sync issues](../file-sync-troubleshoot.md)
+- [Troubleshoot Azure File Sync issues](file-sync-troubleshoot.md)
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

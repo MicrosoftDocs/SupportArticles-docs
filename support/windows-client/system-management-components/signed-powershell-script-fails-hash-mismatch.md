@@ -5,7 +5,7 @@ ms.date: 12/26/2023
 ms.reviewer: v-sidong
 ms.author: milanmil
 author: mrmilanmm
-ms.custom: Fix, csstroubleshoot
+ms.custom: sap:System Management Components\PowerShell, Fix, csstroubleshoot
 audience: itpro
 localization_priority: medium
 ---

@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:multipath-i/o-mpio-and-storport, csstroubleshoot
+ms.custom: sap:Backup, Recovery, Disk, and Storage\Multipath IO (MPIO) and Storport, csstroubleshoot
 ---
 # Enabling MPIO with SAS Storage decreases performance
 

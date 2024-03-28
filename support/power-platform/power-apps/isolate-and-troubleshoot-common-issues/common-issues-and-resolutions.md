@@ -4,7 +4,7 @@ description: A list of common issues and resolutions within Power Apps.
 author: KumarVivek
 ms.custom: canvas
 ms.reviewer: tapanm, lanced, tahoon 
-ms.date: 02/06/2024
+ms.date: 03/26/2024
 ms.author: kvivek
 search.audienceType: 
   - maker
@@ -22,15 +22,19 @@ Refer to the introductory article [Power Apps troubleshooting strategies](isolat
 
 ## Common issue areas
 
-- [Connectors and delegation](#connectors-and-delegation)
-- [Controls](#controls)
-- [Integration](#integration)
-- [Power Fx](#power-fx)
-- [Region](#region)
-- [Studio and Forms](#studio-and-forms)
-- [Browser](#browser)
-- [Power Apps for Windows](#power-apps-for-windows)
-- [Next steps](#next-steps)
+- [Common issues and resolutions for Power Apps](#common-issues-and-resolutions-for-power-apps)
+  - [Common issue areas](#common-issue-areas)
+  - [Connectors and delegation](#connectors-and-delegation)
+    - [Common issues](#common-issues)
+  - [Controls](#controls)
+    - [Common issues](#common-issues-1)
+  - [Integration](#integration)
+  - [Power Fx](#power-fx)
+  - [Region](#region)
+  - [Studio and Forms](#studio-and-forms)
+  - [Browser](#browser)
+  - [Power Apps for Windows](#power-apps-for-windows)
+  - [Next steps](#next-steps)
   
 ## Connectors and delegation
 
@@ -134,6 +138,10 @@ Refer to the introductory article [Power Apps troubleshooting strategies](isolat
    Power Apps for Windows might crash if you open an app that uses a camera control. To avoid this problem, use the web player on the Windows platform. Also, multiple cameras aren't supported.
 
 ## Integration
+
+**Power Automate flows are orphaned in Power Apps.**
+
+Power Automate flows that are added using an older version of the Power Apps panel might be orphaned and removed. To fix this issue, re-add the flows manually.
 
 ## Power Fx
 

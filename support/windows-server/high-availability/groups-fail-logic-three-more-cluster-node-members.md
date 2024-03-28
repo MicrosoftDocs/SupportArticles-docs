@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: stevemat, jeffwade, kaushika
-ms.custom: sap:root-cause-of-an-unexpected-failover, csstroubleshoot
+ms.custom: sap:Clustering and High Availability\Root cause of an unexpected failover, csstroubleshoot
 ---
 # Failover behavior on clusters of three or more nodes
 

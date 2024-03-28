@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, joelch, waltere
-ms.custom: sap:application-compatibility-toolkit-act, csstroubleshoot
+ms.custom: sap:Application Technologies and Compatibility\Application Compatibility Toolkit (ACT), csstroubleshoot
 ---
 # Direct-X diagnostics tool may report an unexpected value for the display adapters memory
 
