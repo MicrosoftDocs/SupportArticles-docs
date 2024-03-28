@@ -12,6 +12,8 @@ items:
 - name: Existing connection forcibly closed
   href: tls-exist-connection-closed.md
   items:
+  - name: Connection to the linked server failed
+    href: connection-to-linked-server-failed.md
   - name: Connectivity issues arising from SQL Sever Agent SSIS failures
     href: sql-server-faces-connectivity-issue-ssispack-fail.md
   - name: SQL Server Agent fails to start due to TLS issues
