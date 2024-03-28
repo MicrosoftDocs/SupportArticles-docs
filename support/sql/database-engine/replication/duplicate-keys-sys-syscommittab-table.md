@@ -1,7 +1,7 @@
 ---
 title: Duplicate keys from sys.syscommittab table
 description: This article provides information about resolving a SQL Server Change Tracking issue that can result in duplicate rows in `sys.syscommittab` file.
-ms.date: 03/16/2020
+ms.date: 03/28/2024
 ---
 # Duplicate key rows from the sys.syscommittab table in SQL Server
 
@@ -63,7 +63,7 @@ If you're using SQL Server 2014 and later versions, you must grant the per-Servi
 1. Start SQL Server in single-user mode. For more information, see [Start SQL Server in single-user mode](/sql/database-engine/configure-windows/start-sql-server-in-single-user-mode).
 
    > [!NOTE]
-   > When SQL Server starts in single-user mode, it skips the startup process for databases that are part of an Always On availability group (AG). If you need to troubleshoot issues with change tracking that require starting SQL Server in single-user mode, and the database with change tracking enabled is also part of an AG, you must remove the database from the AG before starting SQL Server in single-user mode so that the database comes online. 
+   > When SQL Server starts in single-user mode, it skips the startup process for databases that are part of an Always On availability group (AG). If you need to troubleshoot issues with change tracking that requires starting SQL Server in single-user mode, and the database with change tracking enabled is also part of an AG, you must remove the database from the AG before starting SQL Server in single-user mode so that the database comes online. 
 
 1. Use a `sqlcmd` command line to connect to SQL Server under the Dedicated Administrator Connection (DAC) and execute the modified Transact-SQL script. For example:
 
