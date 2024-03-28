@@ -1,14 +1,14 @@
 ---
-title: Troubleshooting linked server connectivity errors in SQL Server
+title: Linked server connectivity errors in SQL Server
 description: This article provides a resolution for consistent authentication errors that are related to linked server connectivity in SQL Server.
-ms.date: 02/27/2024
+ms.date: 03/26/2024
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 
-# Troubleshoot linked server connectivity issues in SQL Server
+# Connectivity issues with linked servers in SQL Server authentication
 
 This article helps you to resolve the consistent authentication linked server connectivity issue.
 
