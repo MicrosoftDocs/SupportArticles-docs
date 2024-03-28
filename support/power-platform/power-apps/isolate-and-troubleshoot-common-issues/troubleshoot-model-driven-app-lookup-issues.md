@@ -2,7 +2,7 @@
 title: Troubleshoot Lookup issues in model-driven apps
 description: Helps troubleshoot Simple Lookup control issues in Power Apps model-driven apps.
 author: hwhong
-ms.date: 03/07/2024
+ms.date: 03/28/2024
 ms.author: hwhong
 search.audienceType: 
   - maker
@@ -48,7 +48,7 @@ If the [`addCustomView`](/power-apps/developer/model-driven-apps/clientapi/refer
 
 If the [`lookupObjects`](/power-apps/developer/model-driven-apps/clientapi/reference/xrm-utility/lookupobjects) or [`setDefaultView`](/power-apps/developer/model-driven-apps/clientapi/reference/controls/setdefaultview) API is being applied, then:
 
-- Verify that the `viewId` belongs to a view that is included in the current app.
+- Verify that the `viewId` belongs to a view that's included in the current app.
 
 ## Result fields are incorrect
 
