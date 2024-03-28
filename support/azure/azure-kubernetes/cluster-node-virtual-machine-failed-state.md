@@ -1,7 +1,7 @@
 ---
 title: Azure Kubernetes Service cluster/node is in a failed state
 description: Troubleshoot an issue where an Azure Kubernetes Service (AKS) cluster/node is in a failed state.
-ms.date: 03/25/2024
+ms.date: 03/28/2024
 ms.reviewer: chiragpa, nickoman, v-weizhu, v-six, aritraghosh
 ms.service: azure-kubernetes-service
 ms.subservice: common-issues
@@ -16,21 +16,23 @@ This article discusses how to troubleshoot a Microsoft Azure Kubernetes Service 
 
 Here are common causes for the failed cluster/nodepool:
 
-- Custom Script Extension (CSE) VM extension provisioning error
+- [Custom Script Extension (CSE) VM extension provisioning error](node-not-ready-custom-script-extension-errors.md)
 - Key Azure resources unavailable
-  - "Log Analytics workspace not found" error. The recreation of missing references is required.
-  - Cluster Load Balancer InvalidResourceReference error. The recreation of missing references is required.
-  - "SubnetFull" error
-  - Private DNS Zone InternalOperationError
+  - ["Unable to get log analytics workspace info" error](aks-upgrade-scale-fail-log-analytics-workspace-missing.md)
+  - [Cluster Load Balancer InvalidResourceReference error](error-code-invalidresourcereference.md)
+  - [SubnetFull error](error-code-subnetisfull.md)
+  - [Private DNS Zone InternalOperationError](troubleshoot-private-endpoint-connectivity.md)
 - VM allocation failure due to zonal/regional capacity or core quota.
   - No capacity
-  - Quota exceeded
+    - [AllocationFailed or ZonalAllocationFailed error](../virtual-machine-scale-sets/allocationfailed-or-zonalallocationfailed.md)
+    - [Associate capacity reservation groups to node pools](/azure/aks/manage-node-pools#associate-capacity-reservation-groups-to-node-pools)
+  - [Quotaexceeded error](error-code-quotaexceeded.md)
 - Customer imposed restrictions
-  - Azure policies deny
-  - Resource lock
+  - [RequestDisallowedByPolicy error](error-code-requestdisallowedbypolicy.md)
+  - [Resource lock](https://github.com/Azure/AKS/issues/3291)
 - Workload
-  - A PodDisruptionBudget (PDB) failed to drain pods.
-  - The kube-system pods are not running.
+  - [A PodDisruptionBudget (PDB) failed to drain pods](error-code-poddrainfailure.md)
+  - [The kube-system pods are not running](troubleshoot-aks-cluster-creation-issues.md#view-pods-in-the-system-namespace-kubectl-get-pods)
 
 ## Basic troubleshooting for common errors that cause a failed cluster/node
 
