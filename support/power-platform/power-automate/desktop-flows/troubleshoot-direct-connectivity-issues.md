@@ -3,7 +3,7 @@ title: Direct connectivity issues in Power Automate for desktop
 description: Provides more information about how to solve the direct connectivity issues in Power Automate for desktop.
 ms.reviewer: guco, madiazor, johndund
 ms.date: 07/06/2023
-ms.subservice: power-automate-desktop-flows
+ms.custom: sap:Desktop flows\Power Automate for desktop errors
 ---
 # Direct connectivity issues in Power Automate for desktop
 

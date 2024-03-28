@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:windows-firewall-with-advanced-security-wfas, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\Windows Firewall with Advanced Security (WFAS), csstroubleshoot
 ---
 # UDP communication is blocked by the Windows Firewall rule in WSFC when the network connection is interrupted and then restored
 

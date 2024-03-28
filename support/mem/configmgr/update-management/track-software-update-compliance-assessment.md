@@ -3,6 +3,7 @@ title: Track software update compliance assessment
 description: Describes how to track a software updates compliance assessment so that you can deploy only the updates that are required on the clients.
 ms.date: 12/05/2023
 ms.reviewer: kaushika
+ms.custom: sap:Software Update Management (SUM)\Software Update Compliance
 ---
 # Track software update compliance assessment
 

@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:configuration-of-virtual-machine-settings, csstroubleshoot
+ms.custom: sap:Virtualization and Hyper-V\Configuration of virtual machine settings, csstroubleshoot
 ---
 # "A connection will not be made because credentials may not be sent to the remote computer" when I use the Virtual Machine Connection tool to connect to a virtual machine on a Windows Server 2008 Hyper-V-based computer
 

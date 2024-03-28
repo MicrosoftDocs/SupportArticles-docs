@@ -1,8 +1,10 @@
 - name: Power Pages Troubleshooting
   href: welcome-power-pages.yml
   items:
-    - name: Missing filter label text in list components
-      href: filter-label-list-components.md
+    - name: Site customization or browsing
+      items:
+        - name: Missing filter label text in list components
+          href: filter-label-list-components.md
     - name: Support resources
       items:
         - name: Power Pages support

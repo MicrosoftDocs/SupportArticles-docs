@@ -3,6 +3,7 @@ title: Changes to an App-V application aren't included
 description: Describes a problem in which changes to an App-V application are not included when you use App-V Sequencer.
 ms.date: 12/05/2023
 ms.reviewer: kaushika, ErinWi, prakask, keiththo, alvinm
+ms.custom: sap:Application Management\Application Virtualization (App-V)
 ---
 # Changes to an App-V application are not included when you use App-V Sequencer
 

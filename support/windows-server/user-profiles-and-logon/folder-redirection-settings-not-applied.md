@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, lindakup
-ms.custom: sap:folder-redirection, csstroubleshoot
+ms.custom: sap:User Logon and Profiles\Enterprise State Roaming (ESR) and Folder Redirection, csstroubleshoot
 ---
 # Folder Redirection settings aren't applied
 

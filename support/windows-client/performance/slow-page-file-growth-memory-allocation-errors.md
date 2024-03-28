@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, davean, eddo, delhan
-ms.custom: sap:applications, csstroubleshoot
+ms.custom: sap:System Performance\System Configuration (page file, startup or running apps, error handling), csstroubleshoot
 ---
 # Memory allocation errors can be caused by slow page file growth
 

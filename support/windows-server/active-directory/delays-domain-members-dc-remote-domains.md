@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:schema-update-failure-or-conflict, csstroubleshoot
+ms.custom: sap:Active Directory\Schema Updates, csstroubleshoot
 ---
 # Delays when domain members are required to communicate to DCs on remote domains
 

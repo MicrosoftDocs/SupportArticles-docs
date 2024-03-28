@@ -2,7 +2,7 @@
 title: Error 403 when Configuration Manager communicates with CMG
 description: Describes an issue in which Configuration Manager clients can't communicate with CMG, and they return a 403 error.
 ms.date: 12/05/2023
-ms.custom: sap:Cloud Management Gateway (CMG)
+ms.custom: sap:Client Installation, Registration and Assignment\Client Certificate Issues
 ms.reviewer: kaushika
 ---
 # Error 403 when the Configuration Manager clients try to communicate with CMG

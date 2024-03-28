@@ -1,8 +1,9 @@
 ---
 title: Description of the variance account that is used in Bill
 description: Description of the variance account that is used in Microsoft Dynamics GP Bill.
-ms.reviewer: lmuelle
-ms.date: 03/31/2021
+ms.reviewer: theley, lmuelle
+ms.date: 03/20/2024
+ms.custom: sap:Distribution - Inventory
 ---
 # Description of the variance account that is used in Microsoft Dynamics GP Bill
 

@@ -5,6 +5,7 @@ author: helenclu
 ms.author: luche
 ms.reviewer: kaushika, lamosley
 ms.date: 12/05/2023
+ms.custom: sap:Software Update Management (SUM)\WSUS Performance or Crashes
 ---
 # Troubleshoot WSUS synchronization and import issues
 

@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, danma
-ms.custom: sap:ip-address-management-ipam, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\IP Address Management (IPAM), csstroubleshoot
 ---
 # An incorrect IP address is returned when you ping a server by using its NetBIOS name  
 
