@@ -1,12 +1,13 @@
 ---
 title: Configure antivirus software to work with SQL Server
-description: Provides guidance on how to use antivirus software with SQL Server.
+description: This article describes how to use antivirus software with SQL Server.
 author: pijocoder
 ms.author: jopilov
 ms.reviewer: jopilov
-ms.date: 06/25/2023
+ms.date: 03/28/2024
 ms.custom: sap:Security Issues
 ---
+
 # Configure antivirus software to work with SQL Server
 
 This article contains general guidelines to help you properly configure antivirus software on computers that are running SQL Server in your environment.
@@ -15,8 +16,7 @@ We strongly recommend that you individually assess the security risk for each co
 
 Additionally, we recommend that you test the entire system under a full load to measure any changes in stability and performance before you roll out any virus-protection software.
 
-Virus protection software requires some system resources to execute. You must perform testing before and after you install your antivirus
-software to determine whether there's any performance effect on the computer that's running SQL Server.
+Virus protection software requires some system resources to execute. You must perform testing before and after you install your antivirus software to determine whether there's any performance effect on the computer that's running SQL Server.
 
 ## Security risk factors
 
