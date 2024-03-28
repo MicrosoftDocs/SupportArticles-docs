@@ -1,7 +1,7 @@
 ---
 title: Windows updates add new NTLM pass-through authentication protections
 description: Describes the new NTLM pass-through authentication protections for CVE-2022-21857 introduced in Windows updates.
-ms.date: 12/26/2023
+ms.date: 03/28/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -219,9 +219,7 @@ The trust scanner may fail with the following reasons:
 
 ## Issue mitigations
 
-If authentications fail due to domain name collisions, misconfiguration, or unforeseen circumstances, use the following options to mitigate the issue:
-
-- Rename the colliding domain(s) to prevent collision.
+If authentications fail due to domain name collisions, misconfiguration, or unforeseen circumstances, rename the colliding domain(s) to prevent collision for mitigating the issue.
 
 If authentications over an RODC secure channel trust fail, contact Microsoft support for this issue because there are no mitigation methods.
 
@@ -235,7 +233,6 @@ If PDC trust scanner fails, the mitigation depends on specific context. For exam
 - Q2: Will the PDC trust scanner be automatically invoked upon creation of a new forest trust?
 
     A2: No. Administrators can invoke it manually if needed, otherwise the new forest will be scanned at the next regular interval.
-
 - Q3: Can the new Scanner records be modified by domain administrators?
 
     A3: Yes, but it isn't recommended or supported. If Scanner records are created, modified, or deleted unexpectedly, the PDC trust scanner will revert the changes the next time it runs.
