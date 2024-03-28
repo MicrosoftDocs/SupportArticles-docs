@@ -1,23 +1,12 @@
 ---
 title: Stop code DRIVER_VERIFIER_DMA_VIOLATION (0xE6)
 description: Helps to fix the stop error DRIVER_VERIFIER_DMA_VIOLATION (0xE6) when kernel Direct Memory Access (DMA) protection is enabled.
-ms.date: 12/26/2023
+ms.date: 03/28/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
-ms.reviewer: kaushika, fredjeng, ryanman, v-lianna
-ms.custom: sap:System Performance\System Reliability (crash, errors, bug check or Blue Screen, unexpected reboot), csstroubleshoot
----
----
-title: Stop code DRIVER_VERIFIER_DMA_VIOLATION (0xE6)
-description: Helps to fix the stop error DRIVER_VERIFIER_DMA_VIOLATION (0xE6) when kernel Direct Memory Access (DMA) protection is enabled.
-ms.date: 12/26/2023
-manager: dcscontentpm
-audience: itpro
-ms.topic: troubleshooting
-localization_priority: medium
-ms.reviewer: kaushika, fredjeng, ryanman, v-lianna
+ms.reviewer: kaushika, fredjeng, ryanman, v-lianna, junakaya
 ms.custom: sap:System Performance\System Reliability (crash, errors, bug check or Blue Screen, unexpected reboot), csstroubleshoot
 ---
 # Stop code DRIVER_VERIFIER_DMA_VIOLATION when Kernel DMA Protection is enabled
@@ -34,11 +23,4 @@ Arg1: 0000000000000026, IOMMU detected DMA violation.
 
 This issue occurs when legacy peripheral component interconnect (PCI) devices installed in an external chassis attempt Direct Memory Access. It's a known implementation issue with Kernel DMA Protection.
 
-To work around this issue, disable Kernel DMA Protection in BIOS.
-
-For more information, see [Kernel DMA Protection](/windows/security/information-protection/kernel-dma-protection-for-thunderbolt).
-
-## Resolution
- 
-Windows Server 2022 includes a fix in KB 5031364 (build 20348.2031) on October 10, 2023 to resolve this issue. Please make sure you have this update installed.
-[October 10, 2023—KB5031364 (OS Build 20348.2031)](https://support.microsoft.com/en-us/topic/october-10-2023-kb5031364-os-build-20348-2031-7f1d69e7-c468-4566-887a-1902af791bbc)
+You can work around this issue by disabling [Kernel DMA Protection](/windows/security/information-protection/kernel-dma-protection-for-thunderbolt) in BIOS, or resolve this issue by installing the [October 10, 2023—KB5031364 (OS Build 20348.2031)](https://support.microsoft.com/en-us/topic/october-10-2023-kb5031364-os-build-20348-2031-7f1d69e7-c468-4566-887a-1902af791bbc) update included in Windows Server 2022.
