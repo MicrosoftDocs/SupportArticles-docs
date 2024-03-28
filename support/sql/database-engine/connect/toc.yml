@@ -12,6 +12,8 @@ items:
 - name: Existing connection forcibly closed
   href: tls-exist-connection-closed.md
   items:
+  - name: Client machine can't connect to SQL Server by using SQL authentication
+    href: client-machine-cannot-connect-to-sqlserver.md
   - name: Connection to the linked server failed
     href: connection-to-linked-server-failed.md
   - name: Connectivity issues arising from SQL Sever Agent SSIS failures
