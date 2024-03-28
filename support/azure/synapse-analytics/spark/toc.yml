@@ -1,0 +1,5 @@
+- name: Welcome
+  href: welcome-synapse-analytics-spark.yml
+- name: Resolve Azure Synapse Analytics Apache Spark pool storage access issues 
+  href: spark-jobexec-storage-access.md
+
