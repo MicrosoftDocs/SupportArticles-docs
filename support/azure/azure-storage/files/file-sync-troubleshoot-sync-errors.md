@@ -1514,6 +1514,6 @@ if ($role -eq $null) {
 - [Troubleshoot Azure File Sync agent installation and server registration](file-sync-troubleshoot-installation.md)
 - [Troubleshoot Azure File Sync cloud tiering](file-sync-troubleshoot-cloud-tiering.md)
 - [Monitor Azure File Sync](/azure/storage/file-sync/file-sync-monitoring)
-- [Troubleshoot Azure Files problems](files/files-troubleshoot.md)
+- [Troubleshoot Azure Files problems](files-troubleshoot.md)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

@@ -816,7 +816,7 @@ For more information about analytics in Azure Storage, see these resources:
 - [Storage analytics logs](/azure/storage/common/storage-analytics-logging)
 - [Storage analytics log format](/rest/api/storageservices/storage-analytics-log-format)
 
-[!INCLUDE [Third-party information disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
 
