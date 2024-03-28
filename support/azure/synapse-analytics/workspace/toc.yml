@@ -1,0 +1,4 @@
+- name: Welcome
+  href: welcome-synapse-analytics-workspace.yml
+- name: Resolve Azure Synapse Studio connectivity issues
+  href: wrk-conn-synapse-studio.md
