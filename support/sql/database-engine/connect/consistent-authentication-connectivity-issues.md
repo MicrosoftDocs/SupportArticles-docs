@@ -1,14 +1,14 @@
 ---
 title: Introduction to consistent authentication issues
 description: This article discusses consistent authentication issues in SQL Server, related error messages, and workarounds to troubleshoot various issues.
-ms.date: 03/14/2024
+ms.date: 03/29/2024
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 
-# Troubleshoot consistent authentication issues
+# An overview of consistent authentication issues
 
 _Applies to:_ &nbsp; SQL Server
 
@@ -177,11 +177,11 @@ This section lists various miscellaneous authentication issues.
 
 ### Bad password
 
-Refers to a login-related issue. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user).
+Refers to a login-related issue. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-username-or-login-failed-for-user-domainusername).
 
 ### Invalid username
 
-Refers to a login-related issue. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user).
+Refers to a login-related issue. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-username-or-login-failed-for-user-domainusername).
 
 ### SQL Server logins are not enabled
 
@@ -193,11 +193,11 @@ Refers to a permissions issue in Windows. For more information, see [Troubleshoo
 
 ### Database is offline
 
-Refers to a scenario in which a SQL Server database tries to reconnect to a SQL Server instance that's configured for Windows Authentication mode. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user).
+Refers to a scenario in which a SQL Server database tries to reconnect to a SQL Server instance that's configured for Windows Authentication mode. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-username-or-login-failed-for-user-domainusername).
 
 ### Database permissions
 
-Refers to enabling or restricting access to SQL Server database. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user).
+Refers to enabling or restricting access to SQL Server database. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-username-or-login-failed-for-user-domainusername).
 
 ### User has not logged in
 
@@ -213,7 +213,7 @@ An SSIS job that's run by SQL Agent might need permissions other than those that
 
 ### Unable to log in to SQL Server database
 
-The inability to log in can cause failures in authentication. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-users-logon).
+The inability to log in can cause failures in authentication. For more information, see [MSSQLSERVER_18456](/sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error#login-failed-for-user-username-or-login-failed-for-user-domainusername).
 
 ### Metadata of the linked server is inconsistent
 
