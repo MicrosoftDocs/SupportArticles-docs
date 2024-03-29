@@ -31,14 +31,14 @@ The following table outlines some common errors that can cause a cluster or node
 
 |Error|Description|Troubleshooting method|
 |---|---|---|
-|OutboundConnFailVMExtensionError|This error indicates that the VM extension fails to install or update due to a lack of outbound connectivity. | To troubleshoot this error, check the network security group (NSG) rules and firewall settings of the VM or VM scale set. Make sure that the VM or VM scale set can access these endpoints: `https://aka.ms/aks/outbound`, `https://aka.ms/aks/ssh`, `https://aka.ms/aks/agent`, and `https://aka.ms/aks/containerinsights`.|
-|Drain error|This error indicates that the node fails to drain before the upgrade operation. To troubleshoot this error, check the pod status and events on the node using the kubectl commands: `kubectl get pods --all-namespaces -o wide` and `kubectl describe pod <pod-name> -n <namespace>`. Look for any pods stuck in a terminated or unknown state or with any errors or warnings in the events. You may need to force delete the pods or restart the kubelet service on the node.|
-|SubscriptionNotRegistered error|This error indicates that the subscription isn't registered to use the AKS resource provider. To troubleshoot this error, register the subscription using the `az provider register --namespace Microsoft.ContainerService` command.|
-|RequestDisallowedByPolicy error|This error indicates that the operation is blocked by a policy applied to the subscription or resource group. To troubleshoot this error, review the policy details and policy assignment scopes. To allow the operation, you may need to modify or exclude the policy.|
-|QuotaExceeded error|This error indicates that the operation exceeds the quota limit for a resource type or a region. To troubleshoot this error, check the current quota usage and quota limit for the resource type or region using the Azure portal, Azure CLI, or Azure PowerShell. You may need to delete some unused resources or request a quota increase.|
-|PublicIPCountLimitReached error| This error indicates that the operation reaches the maximum number of public IP addresses that can be created in a subscription or region. To troubleshoot this error, check the current public IP address usage and limit for the subscription or region using the Azure portal, Azure CLI, or Azure PowerShell. You may need to delete some unused public IP addresses or request an increase in the public IP address limit.|
-|OverconstrainedAllocationRequest error|This error indicates that the operation fails to allocate the requested VM size in a region. To troubleshoot this error, check the availability of the VM size in the region using the Azure portal, Azure CLI, or Azure PowerShell. You may need to choose a different VM size or a different region.|
-|ReadOnlyDisabledSubscription error|This error indicates that the subscription is currently disabled and set to read-only. To troubleshoot this error, review and adjust the subscription permissions, as the subscription may have been suspended due to billing issues, expired credit, or policy violations.|
+|OutboundConnFailVMExtensionError|This error indicates that the VM extension fails to install or update due to a lack of outbound connectivity. | Check the network security group (NSG) rules and firewall settings of the VM or VM scale set. Make sure that the VM or VM scale set can access these endpoints: `https://aka.ms/aks/outbound`, `https://aka.ms/aks/ssh`, `https://aka.ms/aks/agent`, and `https://aka.ms/aks/containerinsights`.|
+|Drain error|This error indicates that the node fails to drain before the upgrade operation. | Check the pod status and events on the node using the kubectl commands: `kubectl get pods --all-namespaces -o wide` and `kubectl describe pod <pod-name> -n <namespace>`. Look for any pods stuck in a terminated or unknown state or with any errors or warnings in the events. You may need to force delete the pods or restart the kubelet service on the node.|
+|SubscriptionNotRegistered error|This error indicates that the subscription isn't registered to use the AKS resource provider. | Register the subscription using the `az provider register --namespace Microsoft.ContainerService` command.|
+|RequestDisallowedByPolicy error|This error indicates that the operation is blocked by a policy applied to the subscription or resource group. | Review the policy details and policy assignment scopes. To allow the operation, you may need to modify or exclude the policy.|
+|QuotaExceeded error|This error indicates that the operation exceeds the quota limit for a resource type or a region. | Check the current quota usage and quota limit for the resource type or region using the Azure portal, Azure CLI, or Azure PowerShell. You may need to delete some unused resources or request a quota increase.|
+|PublicIPCountLimitReached error| This error indicates that the operation reaches the maximum number of public IP addresses that can be created in a subscription or region.  | Check the current public IP address usage and limit for the subscription or region using the Azure portal, Azure CLI, or Azure PowerShell. You may need to delete some unused public IP addresses or request an increase in the public IP address limit.|
+|OverconstrainedAllocationRequest error|This error indicates that the operation fails to allocate the requested VM size in a region.  | Check the availability of the VM size in the region using the Azure portal, Azure CLI, or Azure PowerShell. You may need to choose a different VM size or a different region.|
+|ReadOnlyDisabledSubscription error|This error indicates that the subscription is currently disabled and set to read-only. | Review and adjust the subscription permissions, as the subscription may have been suspended due to billing issues, expired credit, or policy violations.|
 
 
 ## Basic troubleshooting of other possible issues causing a cluster/node to fail
@@ -47,11 +47,11 @@ This table describes other possible issues that can cause a cluster or node to e
 
 |Issue|Description|Solution|
 |---|---|---|
-|The subnet size is too small|The operation can't create or update the cluster because the subnet doesn't have enough space accommodate the required number of nodes. | To fix this issue, delete the node pool and make a new one with a greater subnet size by using the Azure portal, Azure CLI, or Azure PowerShell.|
-|The virtual network is blocked|The operation can't communitcate with the cluster API server or Kubernetes control plane because the firewall or a custom Domain Name System (DNS) setting blocks the outbound connections from the nodes. To fix this issue, allow the node's traffic on the firewall and set up the DNS resolution to Azure using the Azure portal, Azure CLI, or Azure PowerShell.|
-|PDB problems|The operation can't update the cluster because a PDB stopped the removal of one or more pods. A PDB is a resource that limits how many pods can be voluntarily terminated during a specific period. To fix this issue, temporarily remove the PDB, reconcile the cluster, and then add the PDB again using the kubectl command-line tool.|
-|Infrastructure issues|The operation can't update the cluster because of an internal issue with the Azure Resource Manager (ARM) service that manages resources in Azure. To fix this issue, do an agent pool reconciliation for each node pool and a reconciliation for the managed cluster using the Azure CLI or Azure PowerShell.|
-|API server errors|The operation can't reach the cluster API server or Kubernetes control plane because of an outage or a bug. To fix this issue, report it to the AKS support team and provide the relevant logs and diagnostic information. You can get the logs and diagnostic information using the Azure portal, Azure CLI, or Azure PowerShell.|
+|The subnet size is too small|The operation can't create or update the cluster because the subnet doesn't have enough space accommodate the required number of nodes. | Delete the node pool and make a new one with a greater subnet size by using the Azure portal, Azure CLI, or Azure PowerShell.|
+|The virtual network is blocked|The operation can't communitcate with the cluster API server or Kubernetes control plane because the firewall or a custom Domain Name System (DNS) setting blocks the outbound connections from the nodes. | Allow the node's traffic on the firewall and set up the DNS resolution to Azure using the Azure portal, Azure CLI, or Azure PowerShell.|
+|PDB problems|The operation can't update the cluster because a PDB stopped the removal of one or more pods. A PDB is a resource that limits how many pods can be voluntarily terminated during a specific period. | Temporarily remove the PDB, reconcile the cluster, and then add the PDB again using the kubectl command-line tool.|
+|Infrastructure issues|The operation can't update the cluster because of an internal issue with the Azure Resource Manager (ARM) service that manages resources in Azure. | Do an agent pool reconciliation for each node pool and a reconciliation for the managed cluster using the Azure CLI or Azure PowerShell.|
+|API server errors|The operation can't reach the cluster API server or Kubernetes control plane because of an outage or a bug. | Report it to the AKS support team and provide the relevant logs and diagnostic information. You can get the logs and diagnostic information using the Azure portal, Azure CLI, or Azure PowerShell.|
 
 > [!NOTE]
 > - The operation mentioned in the previous table refers to any update (`PUT`) operation triggered from the customer side.
@@ -74,11 +74,11 @@ If a recently created or upgraded cluster is in a failed state, use the followin
 
 - Examine the [activity log](troubleshoot-aks-cluster-creation-issues.md#view-error-details-in-the-azure-portal) to identify the root cause of the failure.
 
-    You can view the activity log using [the Azure portal](#view-the-activity-logs-for-a-failed-cluster-using-the-azure-portal), [Azure CLI](#view-the-activity-logs-for-a-failed-cluster-using-the-azure-cli), or Azure PowerShell.
+    You can view the activity log using [the Azure portal](#view-the-activity-log-for-a-failed-cluster-using-the-azure-portal), [Azure CLI](#view-the-activity-log-for-a-failed-cluster-using-the-azure-cli), or Azure PowerShell.
  
-    The activity log can show you the error code and message associated with the failure. For more information about specific errors, see the [Basic troubleshooting for common errors that cause a failed cluster/node](#basic-troubleshooting-for-common-errors-that-cause-a-failed-clusternode) section.
+    The activity log can show you the error code and message associated with the failure. For more information about specific errors, see the [Basic troubleshooting of common errors causing a cluster/node to fail](#basic-troubleshooting-of-common-errors-causing-a-clusternode-to-fail) section.
 
-- [Use the AKS Diagnose and Solve Problems feature](#use-aks-diagnose-and-solve-problems-feature-for-a-failed-cluster) to troubleshoot and resolve common issues.
+- [Use the AKS Diagnose and Solve Problems feature](#use-the-aks-diagnose-and-solve-problems-feature-for-a-failed-cluster) to troubleshoot and resolve common issues.
 
     > [!NOTE]
     > This feature is only available in the Azure portal and the Azure CLI.
@@ -116,7 +116,7 @@ In the Azure portal, navigate to your AKS cluster resource and select **Diagnose
 
 In the Azure CLI, use the `az aks collect` command with the `--name` and `--resource-group` parameters to collect diagnostic data from your cluster nodes. You can also use the `--storage-account` and `--sas-token` parameters to specify an Azure Storage account where the data will be uploaded. The output will include a link to the **Diagnose and Solve Problems** blade where you can view the results and suggested actions.
 
-In the **Diagnose and Solve Problems** blase, you can select **Cluster Issues** as the category. If any issues are detected, you'll see a list of possible solutions that you can follow to fix them.
+In the **Diagnose and Solve Problems** blade, you can select **Cluster Issues** as the category. If any issues are detected, you'll see a list of possible solutions that you can follow to fix them.
 
  :::image type="content" source="media/cluster-node-virtual-machine-failed-state/diagnose-and-solve-problems-solutions.png" alt-text="Screenshot that shows possible solutions in the 'Diagnose and Solve Problems' portal." lightbox="media/cluster-node-virtual-machine-failed-state/diagnose-and-solve-problems-solutions.png":::
 
