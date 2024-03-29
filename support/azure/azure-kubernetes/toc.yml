@@ -47,6 +47,8 @@
     href: windows-cse-error-check-api-server-connectivity.md
   - name: ZonalAllocationFailed, AllocationFailed, or OverconstrainedAllocationRequest error
     href: error-code-zonalallocationfailed-allocationfailed.md
+  - name: Troubleshoot the AKSCapacityError
+    href: akscapacityerror.md
 
 - name: Troubleshoot upgrade operations
   items:
