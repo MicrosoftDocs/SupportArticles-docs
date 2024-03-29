@@ -47,7 +47,7 @@ This table describes other possible issues that can cause a cluster or node to e
 
 |Issue|Description|Solution|
 |---|---|---|
-|The subnet size is too small|The operation can't create or update the cluster because the subnet doesn't have enough space accommodate the required number of nodes. | Delete the node pool and make a new one with a greater subnet size by using the Azure portal, Azure CLI, or Azure PowerShell.|
+|The subnet size is too small|The operation can't create or update the cluster because the subnet doesn't have enough space accommodate the required number of nodes. | Delete the node pool and create a new one with a larger subnet size using the Azure portal, Azure CLI, or Azure PowerShell.|
 |The virtual network is blocked|The operation can't communitcate with the cluster API server or Kubernetes control plane because the firewall or a custom Domain Name System (DNS) setting blocks the outbound connections from the nodes. | Allow the node's traffic on the firewall and set up the DNS resolution to Azure using the Azure portal, Azure CLI, or Azure PowerShell.|
 |PDB problems|The operation can't update the cluster because a PDB stopped the removal of one or more pods. A PDB is a resource that limits how many pods can be voluntarily terminated during a specific period. | Temporarily remove the PDB, reconcile the cluster, and then add the PDB again using the kubectl command-line tool.|
 |Infrastructure issues|The operation can't update the cluster because of an internal issue with the Azure Resource Manager (ARM) service that manages resources in Azure. | Do an agent pool reconciliation for each node pool and a reconciliation for the managed cluster using the Azure CLI or Azure PowerShell.|
@@ -55,7 +55,7 @@ This table describes other possible issues that can cause a cluster or node to e
 
 > [!NOTE]
 > - The operation mentioned in the previous table refers to any update (`PUT`) operation triggered from the customer side.
-> - In Kubernetes, there's a component within a controller. It ensures the actual state of the world, including the cluster state and potentially external states like running containers for Kubelet or load balancers for a cloud provider. It aligns with the desired state specified in an object. This alignment process is a key function of the controller. For AKS, this component ensures that the state of the AKS cluster aligns with the desired configuration. To trigger it manually, run this command `az resource update --ids <AKS cluster id>`. You can get the AKS cluster ID by running this command `az aks show -n <cluster name> -g <cluster resource group>  -o json --query id`. If there are any differences between the actual and desired states, take necessary actions to correct these discrepancies.
+> - In Kubernetes, there's a component within a controller. It ensures the actual state of the world, including the cluster state and potentially external states like running containers for Kubelet or load balancers for a cloud provider. It aligns with the desired state specified in an object. This alignment process is a key function of the controller. For AKS, this component ensures that the state of the AKS cluster aligns with the desired configuration. To trigger it manually, run `az resource update --ids <AKS cluster id>`. You can get the AKS cluster ID by running `az aks show -n <cluster name> -g <cluster resource group>  -o json --query id`. If there are any differences between the actual and desired states, take necessary actions to correct these discrepancies.
 
 ## Provisioning State Check
 
@@ -81,7 +81,7 @@ If a recently created or upgraded cluster is in a failed state, use the followin
 - [Use the AKS Diagnose and Solve Problems feature](#use-the-aks-diagnose-and-solve-problems-feature-for-a-failed-cluster) to troubleshoot and resolve common issues.
 
     > [!NOTE]
-    > This feature is only available in the Azure portal and the Azure CLI.
+    > This feature is only available in the Azure portal and Azure CLI.
 
 ### View the activity log for a failed cluster using the Azure portal
 
@@ -102,10 +102,10 @@ To view the activity logs for a failed cluster from the Azure portal, follow the
 If you prefer to use Azure CLI to view the activity log for a failed cluster, follow these steps:
 
 1. Install Azure CLI on your machine and log in with your Azure account.
-2. Use the `az group list` command to list the resource groups in your subscription and find the name of the resource group that contains your cluster.
-3. Use the `az resource list` command with the `--resource-group` parameter to list the resources in the resource group and find the name of the cluster.
-4. Use the `az monitor activity-log list` command with the `--resource-group` and `--resource` parameters to list the cluster's activity log. You can also use the `--status`, `--start-time`, `--end-time`, `--caller`, and `--filter` parameters to filter events by different criteria. For example, you can use `--status Failed` to see only failed events.
-5. Use the `az monitor activity-log show` command with the `--resource-group`, `--resource`, and `--event-id` parameters to show the details of a specific event. You can find the event ID from the output of the previous command. The output will include the event summary, properties, and JSON data. You can also use the `--output` parameter to change the output format.
+2. List the resource groups in your subscription using the `az group list` command and find the name of the resource group that contains your cluster.
+3. List the resources in the resource group using the `az resource list` command with the `--resource-group` parameter and find the name of the cluster.
+4. List the cluster's activity log using the `az monitor activity-log list` command with the `--resource-group` and `--resource` parameters. You can also use the `--status`, `--start-time`, `--end-time`, `--caller`, and `--filter` parameters to filter events by different criteria. For example, you can use `--status Failed` to see only failed events.
+5. Show the details of a specific event using the `az monitor activity-log show` command with the `--resource-group`, `--resource`, and `--event-id` parameters. You can find the event ID from the output of the previous command. The output will include the event summary, properties, and JSON data. You can also use the `--output` parameter to change the output format.
 6. To see the error code and message associated with the event, look for the `statusMessage` field in the command output. You can also find the error information in the properties and JSON data sections.
 
       :::image type="content" source="media/cluster-node-virtual-machine-failed-state/json-data.png" alt-text="Screenshot that shows JSON data." lightbox="media/cluster-node-virtual-machine-failed-state/json-data.png":::
