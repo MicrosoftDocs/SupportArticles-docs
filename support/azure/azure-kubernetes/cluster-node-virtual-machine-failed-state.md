@@ -1,7 +1,7 @@
 ---
 title: Azure Kubernetes Service cluster/node is in a failed state
 description: Troubleshoot an issue where an Azure Kubernetes Service (AKS) cluster/node is in a failed state.
-ms.date: 03/28/2024
+ms.date: 03/29/2024
 ms.reviewer: chiragpa, nickoman, v-weizhu, v-six, aritraghosh
 ms.service: azure-kubernetes-service
 ms.subservice: common-issues
@@ -53,7 +53,7 @@ The following table outlines some common errors that can cause a cluster or node
 
 > [!NOTE]
 > - The operation mentioned in the previous table refer to any update (`PUT`) operation triggered from customer side.
-> - In Kubernetes, there is a component within a controller. It ensures the actual state of the world, which includes the cluster state and potentially external states like running containers for Kubelet or load balancers for a cloud provider, and aligns with the desired state specified in an object. This alignment process is a key function of the controller. When it comes to AKS, this component ensures that the state of the AKS cluster aligns with the desired configuration. If there are any differences between the actual and desired states, it takes necessary actions to rectify these discrepancies.
+> - In Kubernetes, there is a component within a controller. It ensures the actual state of the world, which includes the cluster state and potentially external states like running containers for Kubelet or load balancers for a cloud provider, and aligns with the desired state specified in an object. This alignment process is a key function of the controller. When it comes to AKS, this component ensures that the state of the AKS cluster aligns with the desired configuration. To trigger it manually, run this command `az resource update --ids <AKS cluster id>`. You can get the AKS cluster ID by running this command `az aks show -n <cluster name> -g <cluster resource group>  -o json --query id`. If there are any differences between the actual and desired states, it takes necessary actions to rectify these discrepancies.
 
 ## Provisioning State Check
 
