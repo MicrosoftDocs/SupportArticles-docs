@@ -10,6 +10,14 @@ items:
 - name: Existing connection forcibly closed
   href: tls-exist-connection-closed.md
   items:
+  - name: Client machine can't connect to SQL Server by using SQL authentication
+    href: client-machine-cannot-connect-to-sqlserver.md
+  - name: Connection to the linked server failed
+    href: connection-to-linked-server-failed.md
+  - name: Connectivity issues arising from SQL Sever Agent SSIS failures
+    href: sql-server-faces-connectivity-issue-ssispack-fail.md
+  - name: SQL Server Agent fails to start due to TLS issues
+    href: unable-to-start-sql-agent.md
   - name: Intermittent connection errors occur when a new node is added to the Always On environment
     href: intermittent-connection-errors-when-a-new-node-is-added.md
   - name: A linked server couldn't be created after migrating on-premises server to Azure
@@ -20,8 +28,10 @@ items:
     href: ssl-pe-no-cipher-error-endpoint-5022.md
   - name: Intermittent connection errors with SQLCMD
     href: intermittent-connection-errors-sqlcmd.md
-- name: Explicit SPN is misplaced problem in SQL Server
+- name: Explicit misplaced SPN problem in SQL Server
   href: explicit-spn-is-misplaced.md
+- name: KRB_AP_ERR_TKT_EXPIRED error in Kerberos tickets
+  href: expired-tickets-issue.md 
 - name: How to determine if the authentication type is Kerberos
   href: determine-the-authentication-type.md
 - name: Intermittent or periodic network issues
@@ -32,15 +42,15 @@ items:
   href: jdbc-config-troubleshoot.md
 - name: Login failed for user
   href: /sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error?context=/troubleshoot/sql/context/context
-- name: Troubleshooting KRB_AP_ERR_TKT_EXPIRED in Kerberos tickets
+- name: KRB_AP_ERR_TKT_EXPIRED error in Kerberos tickets
   href: expired-tickets-issue.md
-- name: Troubleshooting the network access issues in SQL Server
+- name: Network access issues in SQL Server
   href: network-login-disallowed.md
-- name: Troubleshooting local security subsystem errors in SQL Server
+- name: Local security subsystem errors in SQL Server
   href: local-security-subsystem-errors.md
-- name: Troubleshooting linked server account mapping error in SQL Server
+- name: Connectivity issues with linked servers in SQL Server authentication
   href: linked-server-account-mapping-error.md
-- name: Troubleshooting the Named Pipes connections issue
+- name: Named Pipes connections cause failure to SQL Server
   href: named-pipes-connection-fail-no-windows-permission.md
 - name: Network-related or instance-specific error
   href: network-related-or-instance-specific-error-occurred-while-establishing-connection.md

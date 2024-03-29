@@ -55,6 +55,8 @@
       href: graphicsdrawimage-slow-drawing-jpeg-png-printer.md
     - name: Interoperability between GDI and GDI+
       href: mix-gdi-and-gdi-plus-drawing.md
+    - name: Memory leak occurs when printing documents
+      href: memory-leak-occurs-printing-document.md
     - name: Modify printer settings with DocumentProperties
       href: modify-printer-settings-documentproperties.md
   - name: Networking development
