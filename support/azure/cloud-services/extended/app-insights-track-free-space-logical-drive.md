@@ -1,7 +1,7 @@
 ---
 title: Use Application Insights to track free space on a logical drive
 description: Learn how to use an Application Insights performance counter to track free space on a logical drive in Cloud Services.
-ms.date: 03/29/2024
+ms.date: 04/01/2024
 editor: v-jsitser
 ms.reviewer: maheshallu, wu.ping, prpillai, v-leedennis
 ms.topic: how-to
