@@ -256,7 +256,7 @@ For Analysis Services 2012 and later versions, temporary files during processing
 
 #### The backup files for Analysis Services
 
-In Analysis Services 2012 and later versions, the backup file location is the location that is specified by the `BackupDir` property. The following table shows the default backup path for the Analysis Service instance by default:
+In Analysis Services 2012 and later versions, the backup file location is the location that is specified by the `BackupDir` property. The following table shows the default backup path for the Analysis Service instance:
 
 |SSAS instance      | Backup files directory (default)|
 |---------          |---------                        |
