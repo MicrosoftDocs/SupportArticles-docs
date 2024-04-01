@@ -17,6 +17,7 @@ appliesto:
 ms.custom: 
   - sap:Teams Compatible Devices and Peripherals\
   - CI168070
+  - CI188847
 ---
 # Fix Conditional Access-related issues for Teams Android devices
 
@@ -88,6 +89,24 @@ To fix the issues that are caused by certain Conditional Access policies, use [d
 The following screenshot shows an example device filter.
 
 :::image type="content" source="media/teams-android-devices-conditional-access-issues/device-filter.png" alt-text="Screenshot of an example device filter.":::
+
+### Run the Microsoft Remote Connectivity Analyzer test
+
+This test verifies that the user account meets the requirements for a Microsoft Teams user to be able to sign in to the following Teams devices:
+
+- Microsoft Teams Room Android
+- Microsoft Teams Room Windows
+- Microsoft Teams Panel
+
+> [!NOTE]
+> Currently the Microsoft Remote Connectivity Analyzer tool doesn't support Microsoft 365 Government environments (GCC or GCC High).
+
+1. Open a web browser, and then go to the [Microsoft Teams Room Sign in](https://testconnectivity.microsoft.com/tests/TeamsMTRDeviceSignIn/input) test.
+1. Sign in by using the credentials of a Global Administrator account.
+1. Specify the affected user name.
+1. In the **Device Selection** field, select the affected device type.
+1. Enter the provided verification code.
+1. Select **Verify**.
 
 ## References
 
