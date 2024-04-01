@@ -4,11 +4,10 @@ description: This article provides steps on how to prevent users from creating A
 ms.reviewer: angieandrews
 ms.topic: troubleshooting
 ms.date: 07/21/2022
-ms.subservice: 
+ms.custom: sap:AI Builder\Administration and Licensing
 ms.author: angieandrews
 author: v-aangie
 ---
-
 # Prevent users from creating AI Builder custom models
 
 This article provides steps to restrict the creation of AI Builder custom models.
