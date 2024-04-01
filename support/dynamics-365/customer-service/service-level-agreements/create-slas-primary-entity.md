@@ -4,6 +4,7 @@ description: Provides a resolution for the issue where the primary entity isn't 
 ms.reviewer: sdas, ankugupta
 ms.author: sdas
 ms.date: 05/23/2023
+ms.custom: sap:Service Level Agreements\Unable to create a new SLA
 ---
 # Primary entity isn't available when creating SLAs
 

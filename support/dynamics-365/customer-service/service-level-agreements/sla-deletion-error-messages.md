@@ -4,6 +4,7 @@ description: Provides a resolution for the issue where the deletion of SLAs or S
 ms.reviewer: sdas, ankugupta
 ms.author: sdas
 ms.date: 05/23/2023
+ms.custom: sap:Service Level Agreements\Issue with importing or exporting or upgrading SLA
 ---
 # Deleting SLAs or SLA items shows an error in Unified Interface during a solution upgrade or manual deletion
 
