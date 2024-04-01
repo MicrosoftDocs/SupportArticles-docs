@@ -15,6 +15,7 @@ appliesto:
   - Microsoft Teams
 ms.custom: 
   - CI163313
+  - CI188846
 ms.reviewer: kponnus
 ---
 
@@ -38,6 +39,19 @@ You can also use the information in the sign-in logs to determine whether this i
 - In the **Resource** column: Device Registration Service
 
 These entries indicate that the issue is affecting your device.
+
+## Run the Microsoft Remote Connectivity Analyzer test
+
+If the issue affects Teams Android desk phones, you can run this test to verify that the user account meets the requirements for a Microsoft Teams user to be able to sign into a Teams Android desk phone.
+
+> [!NOTE]
+> Currently the Microsoft Remote Connectivity Analyzer tool doesn't support Microsoft 365 Government environments (GCC or GCC High).
+
+1. Open a web browser, and then go to the [Teams Android Desk Phone Sign in](https://testconnectivity.microsoft.com/tests/TeamsPhoneDeviceSignIn/input) test.
+1. Sign in by using the credentials of a Global Administrator account.
+1. Specify the end user that you want to test.
+1. Enter the provided verification code.
+1. Select **Verify**.
 
 To sign in to Teams on an affected device, use one of the following options.
 
