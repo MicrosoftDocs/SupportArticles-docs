@@ -633,12 +633,12 @@
       {
         "source_path": "cloud-services-classic/welcome-cloud-services-classic.yml",
         "redirect_url": "/troubleshoot/azure/cloud-services/classic/welcome-cloud-services-classic",
-        "redirect_document_id": true
+        "redirect_document_id": false
       },
       {
         "source_path": "cloud-services-extended/welcome-cloud-services-extended.yml",
         "redirect_url": "/troubleshoot/azure/cloud-services/extended/welcome-cloud-services-extended",
-        "redirect_document_id": true
+        "redirect_document_id": false
       },
       {
         "source_path": "active-directory/aad-management-agent-hangs-during-import.md",
@@ -2468,17 +2468,17 @@
       {
         "source_path": "hpc-batch/welcome-hpc-batch.yml",
         "redirect_url": "/troubleshoot/azure/hpc/batch/welcome-hpc-batch",
-        "redirect_document_id": true
+        "redirect_document_id": false
       },
       {
         "source_path": "hpc-cyclecloud/welcome-hpc-cyclecloud.yml",
         "redirect_url": "/troubleshoot/azure/hpc/cyclecloud/welcome-hpc-cyclecloud",
-        "redirect_document_id": true
+        "redirect_document_id": false
       },
       {
         "source_path": "hpc-pack/welcome-hpc-pack.yml",
         "redirect_url": "/troubleshoot/azure/hpc/pack/welcome-hpc-pack",
-        "redirect_document_id": true
+        "redirect_document_id": false
       },
       {
         "source_path": "virtual-machines/windows-activation-duplicate-client-machine-id.md",
@@ -2588,7 +2588,7 @@
       {
         "source_path": "microsoft-entra/welcome-microsoft-entra.yml",
         "redirect_url": "/troubleshoot/azure/entra-id/welcome-entra-id",
-        "redirect_document_id": true
+        "redirect_document_id": false
       },
       {
         "source_path": "virtual-machines/customscript-reruns-previous-command.md",
@@ -2613,21 +2613,6 @@
       {
         "source_path": "virtual-machines/linux/index.md",
         "redirect_url": "/troubleshoot/azure/virtual-machines/linux/welcome-virtual-machines-linux",
-        "redirect_document_id": true
-      },
-      {
-        "source_path": "virtual-machine-scale-sets/index.md",
-        "redirect_url": "/troubleshoot/azure/virtual-machine-scale-sets/welcome-virtual-machine-scale-sets",
-        "redirect_document_id": true
-      },
-      {
-        "source_path": "azure-monitor/app-insights/index.md",
-        "redirect_url": "/troubleshoot/azure/azure-monitor/app-insights/welcome-azure-monitor",
-        "redirect_document_id": true
-      },
-      {
-        "source_path": "azure-monitor/log-analytics/index.md",
-        "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/welcome-azure-monitor",
         "redirect_document_id": true
       },
       {
@@ -2718,7 +2703,7 @@
       {
         "source_path": "azure-functions/config-mgmt/index.md",
         "redirect_url": "/troubleshoot/azure/azure-functions/welcome-azure-functions",
-        "redirect_document_id": true
+        "redirect_document_id": false
       },
       {
         "source_path": "azure-functions/creation-deletion/index.md",
