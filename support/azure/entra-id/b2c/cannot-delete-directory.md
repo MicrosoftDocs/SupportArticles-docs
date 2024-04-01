@@ -3,7 +3,7 @@ title: Can't delete a B2C directory in Microsoft Entra ID
 description: Describes an issue in which an error occurs when you try to delete a B2C directory in Microsoft Entra ID. Provides a solution. 
 ms.date: 05/28/2020
 ms.reviewer: willfid, chricas
-ms.service: active-directory
+ms.service: entra-id
 ms.subservice: B2C
 ---
 # Error when you try to delete a B2C directory in Microsoft Entra ID: Cannot delete '\<contoso>'
