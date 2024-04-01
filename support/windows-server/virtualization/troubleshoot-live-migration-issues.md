@@ -518,7 +518,6 @@ Under RS5, live migration through SMB of all the VMs to a specific node fails on
 
 Make sure there's a REG_SZ value ComputerName with the name of the computer in UPPERCASE.
 
-
 #### Failed to live migrate "Virtual Machine VM1" at migration source "Node1" with error code 0x800705B4
 
 **Description**
