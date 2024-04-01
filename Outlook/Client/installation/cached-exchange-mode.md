@@ -7,6 +7,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:User Interface features and Configuration\Help
   - Outlook for Windows
   - CSSTroubleshoot
 ms.collection: Ent_Office_Outlook

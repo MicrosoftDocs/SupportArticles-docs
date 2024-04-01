@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Data Protection and Security\Programmatic access warnings
   - Outlook for Windows
   - CSSTroubleshoot
   - CI 160073

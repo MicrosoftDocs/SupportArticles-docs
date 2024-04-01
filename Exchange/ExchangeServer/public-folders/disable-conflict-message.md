@@ -6,6 +6,7 @@ ms.author: meerak
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Migration\Issues with Public Folder Migration
   - Exchange Server
   - CSSTroubleshoot
   - CI 163890

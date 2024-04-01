@@ -9,6 +9,7 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.reviewer: balinger, christys, wsvexse, v-zht, v-lmengy, Bilong, paololin, v-six
 ms.custom: 
+  - sap:Clients and Mobile\Can't Connect to Mailbox with Active Sync Device
   - Exchange Server
   - CSSTroubleshoot
 search.appverid: 

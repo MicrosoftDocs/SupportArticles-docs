@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Teams Security and Compliance (Retention, etc)\Retention
   - CI 164175
   - CSSTroubleshoot
 ms.reviewer: kyrachurney, cabailey, lifreda

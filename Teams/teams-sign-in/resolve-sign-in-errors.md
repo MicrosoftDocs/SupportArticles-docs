@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Teams Identity and Auth\Client Sign-in (window, mac, linux, web)
   - CI 156289
   - CI 187814
   - CSSTroubleshoot
@@ -45,11 +46,11 @@ If your users encounter errors when they try to sign in to Microsoft Teams, use 
 
 This test verifies that the user account meets the requirements to sign in to Teams.
 
-## Use the Microsoft Support and Recovery Assistant
+## Use Microsoft Support and Recovery Assistant
 
 [!INCLUDE [Microsoft Support and Recovery Assistant note](../../includes/sara-note-new-teams.md)]
 
-If the diagnostic doesn't detect any issue, but you still can't sign in to Teams, or you don't have a Microsoft 365 administrator account, select the following button to download the Assistant and automatically start the tests. For more information about the tool, see [About the Microsoft Support and Recovery Assistant](https://support.microsoft.com/office/about-the-microsoft-support-and-recovery-assistant-e90bb691-c2a7-4697-a94f-88836856c72f).
+If the diagnostic doesn't detect any issue, but you still can't sign in to Teams, or you don't have a Microsoft 365 administrator account, select the following button to download the Assistant and automatically start the tests. For more information about the tool, see [About Microsoft Support and Recovery Assistant](https://support.microsoft.com/office/about-the-microsoft-support-and-recovery-assistant-e90bb691-c2a7-4697-a94f-88836856c72f).
 
 > [!NOTE]
 > By downloading this app, you agree to the terms of the [Microsoft Services Agreement and Privacy Statement](https://www.microsoft.com/servicesagreement).

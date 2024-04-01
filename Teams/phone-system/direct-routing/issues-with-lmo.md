@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Teams Calling (PSTN)\Direct Routing
   - CI-126688
   - CSSTroubleshoot
   - scenario:Direct-Routing-2

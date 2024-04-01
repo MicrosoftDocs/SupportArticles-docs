@@ -11,6 +11,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.reviewer: gabesl
 ms.custom: 
+  - sap:User Interface features and Configuration\Quick Steps
   - Outlook for Windows
   - CSSTroubleshoot
 appliesto: 

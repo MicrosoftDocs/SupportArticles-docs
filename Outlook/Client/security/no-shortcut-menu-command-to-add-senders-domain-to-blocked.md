@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Data Protection and Security\Configuring or deploying Junk Email settings
   - Outlook for Windows
   - CSSTroubleshoot
 ms.reviewer: aruiz

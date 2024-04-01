@@ -6,6 +6,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Exchange Mailbox Accounts\Out of Office (00F)
   - CSSTroubleshoot
 appliesto:
 - Exchange Online

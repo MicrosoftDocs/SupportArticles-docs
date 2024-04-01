@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Teams Clients\Windows Desktop
   - CI 172429
   - CSSTroubleshoot
 ms.reviewer: greganth

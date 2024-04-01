@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:OWA  And Exchange Admin Center\Issues connecting to Exchange Management Shell
   - Exchange Server
   - CI 119623
   - CSSTroubleshoot

@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Rules, search and Printing\Online Search
   - Outlook for Windows
   - CI 114104
   - CSSTroubleshoot

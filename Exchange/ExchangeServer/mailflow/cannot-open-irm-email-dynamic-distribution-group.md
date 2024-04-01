@@ -9,6 +9,7 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.reviewer: aldoug, v-six
 ms.custom: 
+  - sap:Messaging Policy and Compliance\Information Rights Management
   - Exchange Server
   - CSSTroubleshoot
 search.appverid: 

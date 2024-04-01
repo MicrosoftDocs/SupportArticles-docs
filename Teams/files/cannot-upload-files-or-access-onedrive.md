@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Teams Files\Upload File
   - CI 125872
   - CI 147731
   - CSSTroubleshoot

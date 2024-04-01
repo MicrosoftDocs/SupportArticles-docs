@@ -9,6 +9,7 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.reviewer: aruiz, meerak
 ms.custom: 
+  - sap:Clients and Mobile\Can't Connect to Mailbox with Outlook
   - Exchange Server
   - CSSTroubleshoot
 search.appverid: 

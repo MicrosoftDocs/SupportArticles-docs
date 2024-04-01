@@ -6,6 +6,7 @@ audience: ITPro
 ms.topic: how-to
 localization_priority: Normal
 ms.custom: 
+  - sap:Mail Flow
   - CSSTroubleshoot
 appliesto: 
 - Exchange Online

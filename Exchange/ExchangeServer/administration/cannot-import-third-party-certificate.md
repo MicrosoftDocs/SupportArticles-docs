@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:OWA  And Exchange Admin Center\Virtual Directories configuration
   - Exchange Server
   - CSSTroubleshoot
 ms.reviewer: batre, skumarg, batre, v-six

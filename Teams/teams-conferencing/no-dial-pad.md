@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Teams Calling (PSTN)\PSTN Audio Conferencing Dial in-out
   - CI 112082, 120059
   - CSSTroubleshoot
 ms.reviewer: kellybos

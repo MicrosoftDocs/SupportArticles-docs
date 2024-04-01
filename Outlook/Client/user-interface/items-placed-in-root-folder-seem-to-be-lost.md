@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:User Interface features and Configuration\Other
   - Outlook for Windows
   - CSSTroubleshoot
 ms.reviewer: TasitaE, GregMans

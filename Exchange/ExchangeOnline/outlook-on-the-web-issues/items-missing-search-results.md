@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Outlook on the web / OWA
   - Exchange Online
   - CSSTroubleshoot
 ms.reviewer: alinastr, v-six

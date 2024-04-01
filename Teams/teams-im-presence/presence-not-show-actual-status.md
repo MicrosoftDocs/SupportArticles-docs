@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Teams People & Presence\Presence from Teams
   - CI 126266
   - CI 188840
   - CSSTroubleshoot
