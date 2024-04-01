@@ -5,6 +5,7 @@ author: tahoon
 ms.reviewer: tapanm, lanced
 ms.date: 02/06/2024
 ms.author: tahoon
+ms.custom: sap:App Creation (Canvas App)
 search.audienceType: 
   - maker
 search.app: 

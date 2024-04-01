@@ -4,6 +4,7 @@ description: Helps troubleshoot date and time issues in Power Apps model-driven 
 author: tahoon
 ms.date: 10/23/2023
 ms.author: tahoon
+ms.custom: sap:Running model-driven app controls\Date and time
 search.audienceType: 
   - maker
 search.app: 

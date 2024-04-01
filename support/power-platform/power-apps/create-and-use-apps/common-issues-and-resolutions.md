@@ -2,7 +2,7 @@
 title: Common issues and resolutions for Power Apps
 description: A list of common issues and resolutions within Power Apps.
 author: KumarVivek
-ms.custom: canvas
+ms.custom: sap:App Creation (Canvas App)
 ms.reviewer: tapanm, lanced, tahoon 
 ms.date: 03/26/2024
 ms.author: kvivek

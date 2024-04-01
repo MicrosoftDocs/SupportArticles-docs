@@ -4,6 +4,7 @@ description: Helps troubleshoot Simple Lookup control issues in Power Apps model
 author: hwhong
 ms.date: 03/28/2024
 ms.author: hwhong
+ms.custom: sap:Running model-driven app controls\Lookup, advanced lookup
 search.audienceType: 
   - maker
 search.app: 

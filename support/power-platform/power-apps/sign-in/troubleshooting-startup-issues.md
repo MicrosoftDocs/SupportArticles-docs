@@ -4,7 +4,7 @@ description: Provides resolutions for the common configuration issues that preve
 author: amchern
 ms.author: amchern
 ms.reviewer: tapanm, mkaur, alaug
-ms.custom: canvas
+ms.custom: sap:Sign-in Issues\Maker Portal Sign-in issues
 ms.date: 03/19/2024
 search.audienceType: 
   - maker

@@ -5,6 +5,7 @@ author: tahoon
 ms.reviewer: tapanm
 ms.date: 07/05/2023
 ms.author: tahoon
+ms.custom: sap:App Creation (Canvas App)\Creating a new app
 search.audienceType: 
   - maker
 search.app: 

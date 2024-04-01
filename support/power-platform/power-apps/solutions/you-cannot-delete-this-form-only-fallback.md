@@ -5,6 +5,7 @@ ms.reviewer: matp
 ms.date: 07/26/2023
 author: nhelgren
 ms.author: nhelgren
+ms.custom: sap:Working with Solutions\Update, upgrade and stage for upgrade of solutions
 ---
 # "You cannot delete this form because it is the only fallback form" error when updating or uninstalling a solution 
 
