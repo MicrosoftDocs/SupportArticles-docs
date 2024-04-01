@@ -11,6 +11,7 @@ search.appverid:
 audience: Admin
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Administration\Farm Administration
   - CSSTroubleshoot
 appliesto: 
   - SharePoint Server 2013

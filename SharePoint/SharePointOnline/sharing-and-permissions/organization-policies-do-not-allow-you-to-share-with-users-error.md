@@ -9,6 +9,7 @@ localization_priority: Normal
 audience: Admin
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:SharePoint Admin Center\Sharing Policies
   - CSSTroubleshoot
 search.appverid: 
   - SPO160

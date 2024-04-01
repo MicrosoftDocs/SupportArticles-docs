@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:OWA  And Exchange Admin Center\Need help in configuring EAC
   - Exchange Server
   - CI 119623
   - CSSTroubleshoot

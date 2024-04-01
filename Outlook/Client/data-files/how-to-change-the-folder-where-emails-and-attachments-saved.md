@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Exchange Mailbox Accounts\Personal folders backup add-in
   - Outlook for Windows
   - CSSTroubleshoot
 ms.reviewer: skipb

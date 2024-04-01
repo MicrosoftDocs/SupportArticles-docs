@@ -13,6 +13,7 @@ search.appverid:
 appliesto: 
   - SharePoint Online
 ms.custom: 
+  - sap:Lists and Libraries\Lists Offline sync
   - CI 157491
   - CSSTroubleshoot
 ms.reviewer: prbalusu, sharepoint_triage

@@ -12,6 +12,7 @@ ms.author: luche
 ms.custom: 
   - CSSTroubleshoot
   - has-azure-ad-ps-ref
+  - azure-ad-ref-level-one-done
 appliesto: 
   - Cloud Services (Web roles/Worker roles)
   - Azure Active Directory
@@ -59,6 +60,8 @@ Work with another admin to set your user location. Or, after you're able to sign
 3. Go to **settings**.   
 4. Under **Set user location**, select the region where you're located.    
 Or, you can use the Set-MsolUser Azure Active Directory module for Windows PowerShell cmdlet together with the UsageLocation parameter to set your user location.
+
+[!INCLUDE [Azure AD PowerShell deprecation note](../../../includes/aad-powershell-deprecation-note.md)]
 
 ## More information
 

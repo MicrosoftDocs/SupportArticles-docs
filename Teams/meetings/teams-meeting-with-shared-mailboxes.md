@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: conceptual
 localization_priority: Normal
 ms.custom: 
+  - sap:Teams Meetings\Meeting Options and Roles
   - CI 172564
 ms.reviewer: heiris
 appliesto: 

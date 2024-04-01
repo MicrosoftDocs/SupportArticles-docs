@@ -13,6 +13,7 @@ search.appverid:
 appliesto: 
   - SharePoint Online
 ms.custom: 
+  - sap:SharePoint Admin Center\API Access
   - CI 124612
   - CSSTroubleshoot
 ms.reviewer: najagdis

@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - sap:Sharing\Errors
   - CSSTroubleshoot
 appliesto: 
   - SharePoint Online

@@ -11,7 +11,7 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
-  - sap:spsexperts
+  - sap:Authentication & User Profiles\Windows Authentication
   - CSSTroubleshoot
 appliesto: 
   - SharePoint Server 2016

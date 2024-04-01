@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - sap:Backup and Restore\Site Recycle Bin
   - CSSTroubleshoot
 appliesto: 
   - SharePoint Online

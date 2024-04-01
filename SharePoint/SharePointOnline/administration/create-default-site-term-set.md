@@ -10,6 +10,7 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.custom: 
+  - sap:Sites\Hub Site
   - CSSTroubleshoot
 ms.topic: troubleshooting
 appliesto: 

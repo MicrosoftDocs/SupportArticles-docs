@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Mail Flow
   - Exchange Online
   - CI 119824
   - CSSTroubleshoot

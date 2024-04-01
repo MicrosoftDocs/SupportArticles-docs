@@ -13,6 +13,7 @@ search.appverid:
 appliesto: 
   - Microsoft Teams
 ms.custom: 
+  - sap:Teams Identity and Auth\Conditional Access
   - CI 113425
   - CSSTroubleshoot
 ms.reviewer: scapero

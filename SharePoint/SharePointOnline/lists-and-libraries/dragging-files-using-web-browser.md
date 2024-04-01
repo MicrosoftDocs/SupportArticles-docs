@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - sap:Files and Documents\Drag and Drop
   - CSSTroubleshoot
 appliesto: 
   - SharePoint Online

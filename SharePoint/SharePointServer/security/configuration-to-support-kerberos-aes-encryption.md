@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Authentication & User Profiles\Windows Authentication
   - CSSTroubleshoot
 ms.reviewer: levaznis
 appliesto: 

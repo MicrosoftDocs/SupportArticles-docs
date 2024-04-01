@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - sap:Administration\Files and Documents
   - CSSTroubleshoot
 ms.reviewer: erica, harikumh, markmead, russmax, sheyia, zsolti, rrogers, christwe, darinr, majoshi, sridhara, rrogers
 appliesto: 

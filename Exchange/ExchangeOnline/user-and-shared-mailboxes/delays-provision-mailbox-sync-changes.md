@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Recipients management
   - Exchange Online
   - CI 120630
   - CSSTroubleshoot

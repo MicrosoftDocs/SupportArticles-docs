@@ -6,6 +6,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Calendar\Other
   - CSSTroubleshoot
 appliesto: 
 - Outlook 2016
@@ -45,7 +46,7 @@ Because these calendar item fields may contain personal information or details, 
 
 To use CalCheck, the Outlook calendar must reside on a computer that is running Microsoft Exchange Server. The tool doesn't work with IMAP, POP3, or other non-Exchange email accounts.
 
-### Method 1: Use the Microsoft Support and Recovery Assistant
+### Method 1: Use Microsoft Support and Recovery Assistant
 
 [!INCLUDE [Microsoft Support and Recovery Assistant note](../../../includes/sara-note-new-outlook.md)]
 

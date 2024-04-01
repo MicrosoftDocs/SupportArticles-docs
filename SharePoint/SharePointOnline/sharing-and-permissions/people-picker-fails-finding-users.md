@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - sap:Profiles and People\People Picker
   - CSSTroubleshoot
 appliesto: 
   - SharePoint Online

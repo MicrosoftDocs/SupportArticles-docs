@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - sap:Permissions\Other
   - CSSTroubleshoot
 appliesto: 
   - SharePoint Online

@@ -16,6 +16,7 @@ appliesto:
   - SharePoint Server 2016
   - SharePoint Server 2013
 ms.custom: 
+  - sap:Administration\Lists and libraries
   - CI 108026
   - CSSTroubleshoot
 ms.reviewer: lvaznis

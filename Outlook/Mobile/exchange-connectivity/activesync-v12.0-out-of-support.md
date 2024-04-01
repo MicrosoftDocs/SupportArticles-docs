@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Connectivity\Intermittent connectivity or sync issues
   - Outlook for iOS and Android
   - CI 114951
   - CSSTroubleshoot

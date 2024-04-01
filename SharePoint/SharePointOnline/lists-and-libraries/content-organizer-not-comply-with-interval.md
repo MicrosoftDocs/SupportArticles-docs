@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - sap:Lists and Libraries\Rules
   - CSSTroubleshoot
 appliesto: 
   - SharePoint Online

@@ -10,6 +10,7 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Sites\Delete Site
   - CSSTroubleshoot
   - CI 149203
   - CI 150314

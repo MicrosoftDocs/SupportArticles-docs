@@ -8,6 +8,7 @@ ms.date: 12/17/2023
 audience: Admin
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:SharePoint Admin Center\Sharing Policies
   - CSSTroubleshoot
   - CI 125266
 search.appverid: 

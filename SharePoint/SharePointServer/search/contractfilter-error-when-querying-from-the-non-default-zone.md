@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Search\Search results, queries, and syntax
   - CSSTroubleshoot
 ms.author: luche
 appliesto: 

@@ -9,6 +9,7 @@ ms.date: 12/17/2023
 audience: Admin
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Sites\Delete Site
   - CSSTroubleshoot
   - CI 162476
 search.appverid: 

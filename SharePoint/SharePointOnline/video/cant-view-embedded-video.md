@@ -11,6 +11,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - sap:Video\Stream
   - CSSTroubleshoot
   - CI 149683
 appliesto: 

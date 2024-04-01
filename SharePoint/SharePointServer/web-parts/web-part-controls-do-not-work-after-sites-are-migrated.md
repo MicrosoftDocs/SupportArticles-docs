@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - sap:User experience\Webpart infrastructure
   - CSSTroubleshoot
 appliesto: 
   - SharePoint Server 2016

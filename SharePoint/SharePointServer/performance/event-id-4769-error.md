@@ -13,6 +13,7 @@ search.appverid:
 appliesto: 
   - SharePoint Server
 ms.custom: 
+  - sap:Administration\Performance
   - CI 122278
   - CSSTroubleshoot
 ms.reviewer: flaviuc

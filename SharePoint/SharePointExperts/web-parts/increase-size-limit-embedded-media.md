@@ -10,7 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
-  - sap:spsexperts
+  - sap:Administration\Farm Administration
   - CSSTroubleshoot
 appliesto: 
   - PowerPoint Web App

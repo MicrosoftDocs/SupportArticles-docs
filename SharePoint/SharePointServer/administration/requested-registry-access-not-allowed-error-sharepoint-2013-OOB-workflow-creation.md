@@ -10,6 +10,7 @@ search.appverid:
   - MET150
 audience: Admin
 ms.custom: 
+  - sap:Administration\Workflows
   - CSSTroubleshoot
 ms.topic: troubleshooting
 appliesto: 

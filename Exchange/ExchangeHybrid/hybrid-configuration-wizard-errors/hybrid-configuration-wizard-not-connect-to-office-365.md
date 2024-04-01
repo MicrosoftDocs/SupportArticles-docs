@@ -10,6 +10,7 @@ localization_priority: Normal
 ms.service: exchange-online
 ms.subservice: hybrid-configuration-wizard
 ms.custom: 
+  - sap:Hybrid
   - Exchange Hybrid
   - CSSTroubleshoot
   - CI 165936

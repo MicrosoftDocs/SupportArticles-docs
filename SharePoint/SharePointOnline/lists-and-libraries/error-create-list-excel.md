@@ -11,6 +11,7 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Lists and Libraries\Create
   - CSSTroubleshoot
 appliesto: 
   - SharePoint Online

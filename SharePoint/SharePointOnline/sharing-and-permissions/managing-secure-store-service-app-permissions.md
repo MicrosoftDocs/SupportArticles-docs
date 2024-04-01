@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - sap:Permissions\Customize permissions
   - CSSTroubleshoot
 appliesto: 
   - SharePoint Foundation 2013

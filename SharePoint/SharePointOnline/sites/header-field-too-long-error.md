@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Reliability, Perf, and Throttling\503 Error (Waiting Room)
   - CSSTroubleshoot
   - CI 168187
 ms.reviewer: hisakam

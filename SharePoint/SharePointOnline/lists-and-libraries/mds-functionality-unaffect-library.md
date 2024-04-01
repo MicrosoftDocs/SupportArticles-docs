@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - sap:Sites\Classic Publishing
   - CSSTroubleshoot
 appliesto: 
   - SharePoint Online

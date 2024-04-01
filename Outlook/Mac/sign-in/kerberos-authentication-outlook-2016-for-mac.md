@@ -8,6 +8,7 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.collection: Ent_Office_Outlook
 ms.custom: 
+  - sap:Connectivity\
   - Outlook for Mac
   - CSSTroubleshoot
 description: Provides information for IT Pros about using Kerberos authentication with Outlook 2016 for Mac

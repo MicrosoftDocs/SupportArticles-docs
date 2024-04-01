@@ -6,6 +6,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Administration\Lists and libraries
   - CSSTroubleshoot
 appliesto:
 - Microsoft Office SharePoint Server 2010

@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Install, Update, Activate, and Deploy\Update
   - Outlook for Windows
   - CI 116784
   - CSSTroubleshoot

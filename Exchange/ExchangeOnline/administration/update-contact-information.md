@@ -6,6 +6,7 @@ ms.author: meerak
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Administrator Tasks
   - Exchange Online
   - CSSTroubleshoot
 manager: dcscontentpm

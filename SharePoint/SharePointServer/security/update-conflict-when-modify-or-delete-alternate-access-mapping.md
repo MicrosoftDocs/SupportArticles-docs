@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - sap:Administration\Farm Administration
   - CSSTroubleshoot
 appliesto: 
   - Windows SharePoint Services 3.0

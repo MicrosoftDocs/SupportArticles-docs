@@ -13,6 +13,7 @@ ms.author: luche
 appliesto: 
   - SharePoint Online
 ms.custom: 
+  - sap:Lists and Libraries\View in File Explorer
   - CI 113862
   - CSSTroubleshoot
 ---

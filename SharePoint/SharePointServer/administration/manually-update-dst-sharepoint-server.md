@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Administration\Farm Administration
   - CI 176042
   - CSSTroubleshoot
 ms.reviewer: nirupme,stuartp

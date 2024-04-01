@@ -10,6 +10,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
 ms.custom: 
+  - sap:Pages\Other
   - CSSTroubleshoot
 appliesto: 
   - SharePoint Server 2019

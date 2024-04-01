@@ -19,6 +19,7 @@ search.appverid:
   - ZOL160
 audience: Admin
 ms.custom: 
+  - sap:Client Connectivity
   - MiniMaven
   - CSSTroubleshoot
 keywords: 

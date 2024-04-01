@@ -10,6 +10,7 @@ localization_priority: Normal
 search.appverid: 
   - MET150
 ms.custom: 
+  - sap:User Interface features and Configuration\Shared folders in the navigation pane
   - Outlook for Windows
   - CI 148804
   - CSSTroubleshoot

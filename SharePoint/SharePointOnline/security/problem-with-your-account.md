@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Authentication and Authorization\Conditional Access Policy
   - CSSTroubleshoot
 ms.author: luche
 appliesto: 

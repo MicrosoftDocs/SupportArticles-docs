@@ -6,6 +6,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Exchange Mailbox Accounts\Global Address List (GAL) and Offline Address Book (OAB)
   - CSSTroubleshoot
 appliesto:
 - Outlook

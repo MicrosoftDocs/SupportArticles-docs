@@ -14,6 +14,7 @@ search.appverid:
 appliesto: 
   - Microsoft Teams
 ms.custom: 
+  - sap:SIP Gateway\
   - CI159602
 ms.reviewer: scapero, chasing
 ---

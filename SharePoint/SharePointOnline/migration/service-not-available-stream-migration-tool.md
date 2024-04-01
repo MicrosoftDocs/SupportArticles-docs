@@ -11,6 +11,7 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Migration\Other
   - CSSTroubleshoot
   - CI172876
 appliesto: 

@@ -8,6 +8,7 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.custom: 
+  - sap:SharePoint Admin Center\Other
   - CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: luche

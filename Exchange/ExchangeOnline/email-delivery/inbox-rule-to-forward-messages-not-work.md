@@ -9,6 +9,7 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.reviewer: v-six, nocapo
 ms.custom: 
+  - sap:Mail Flow
   - CSSTroubleshoot
 search.appverid: 
   - MET150

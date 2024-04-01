@@ -8,6 +8,7 @@ ms.date: 12/17/2023
 audience: Admin
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Workflows\Classic Workflow Manager
   - CSSTroubleshoot
 search.appverid: 
   - SPO160

@@ -38,7 +38,7 @@ The authentication issue occurs because of missing package information about eit
 ## Resolution
 
 > [!TIP]
-> To diagnose and automatically fix several common Office sign-in issues, you can download and run the Microsoft Support and Recovery Assistant.
+> To diagnose and automatically fix several common Office sign-in issues, you can download and run Microsoft Support and Recovery Assistant.
 > 
 > [!div class="nextstepaction"]
 > [Download the Assistant](https://aka.ms/SaRA-OfficeSignInScenario)

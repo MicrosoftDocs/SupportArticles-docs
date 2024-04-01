@@ -11,6 +11,7 @@ ms.localizationpriority: medium
 f1.keywords:
 - CSH
 ms.custom: 
+  - sap:Mail Flow
   - Exchange Online
   - CSSTroubleshoot
   - CI 167832

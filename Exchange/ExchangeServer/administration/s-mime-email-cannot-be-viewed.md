@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Email Addresses and Address Books\Address Book Policies
   - Exchange Server
   - CSSTroubleshoot
 ms.reviewer: benwinz, wduff, bradhugh, v-six

@@ -6,6 +6,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Data protection and Security\
   - Outlook for iOS and Android
   - CSSTroubleshoot
   - CI 154609

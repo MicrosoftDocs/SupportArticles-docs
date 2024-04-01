@@ -9,6 +9,7 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
+  - sap:Teams Apps and Connectors\OneNote
   - CSSTroubleshoot
 ms.author: luche
 appliesto: 
