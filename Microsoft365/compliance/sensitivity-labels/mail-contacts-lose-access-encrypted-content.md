@@ -12,7 +12,6 @@ ms.custom:
   - CI 162121
   - CSSTroubleshoot
   - has-azure-ad-ps-ref
-  - azure-ad-ref-level-one-done
 ms.reviewer: cabailey
 appliesto: 
   - Microsoft 365 (Enterprise, Business, Government, Education)
