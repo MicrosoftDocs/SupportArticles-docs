@@ -10769,6 +10769,11 @@
       "source_path": "support/windows-server/windows-security/expand-maximum-extension-size-limit-ad-cs.md",
       "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/expand-maximum-extension-size-limit-ad-cs",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/customer-service/service-level-agreements/sla-deletion-error-messages.md",
+      "redirect_url": "/troubleshoot/dynamics-365/customer-service/import-export-or-upgrade/sla-deletion-error-messages",
+      "redirect_document_id": true
     }
   ]
 }
