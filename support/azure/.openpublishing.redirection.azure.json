@@ -2672,7 +2672,7 @@
       },
       {
         "source_path": "hpc-cyclecloud/index.md",
-        "redirect_url": "/troubleshoot/azure/hpc/batch/welcome-hpc-cyclecloud",
+        "redirect_url": "/troubleshoot/azure/hpc/cyclecloud/welcome-hpc-cyclecloud",
         "redirect_document_id": false
       },
       {
