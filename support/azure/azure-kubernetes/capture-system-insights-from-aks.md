@@ -8,7 +8,7 @@ ms.reviewer:   cssakscic, v-leedennis
 ms.service:    azure-kubernetes-service
 ms.subservice: data-collection-guide
 ms.topic:      how-to
-ms.date:       12/21/2023
+ms.date:       04/01/2024
 ---
 
 # Capture real-time system insights from an AKS cluster
@@ -86,9 +86,9 @@ This section outlines the steps for installing Inspektor Gadget in your AKS clus
 
 ### One-Click Inspektor Gadget deployment
 
-The following button automates the creation of an AKS cluster and executes the steps described in this section to deploy Inspektor Gadget in a cluster. After the deployment is complete, you can explore all of Inspektor Gadget's features in the provided shell environment. 
+By selecting the following button, an AKS cluster will be automatically created and Inspektor Gadget will be deployed within it following the steps outlined in this section. Once the deployment is finished, you'll be able to explore all the features of Inspektor Gadget in the provided shell environment.
 
-[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://go.microsoft.com/fwlink/?linkid=2262757)
+[![Deploy Inspektor Gadget in an AKS cluster](https://aka.ms/deploytoazurebutton)](https://go.microsoft.com/fwlink/?linkid=2262757)
 
 ### Prerequisites
 
