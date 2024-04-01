@@ -12,6 +12,7 @@ ms.custom:
   - CI 115151
   - CSSTroubleshoot
   - has-azure-ad-ps-ref
+  - azure-ad-ref-level-one-done
 ms.reviewer: timball
 search.appverid: 
   - MET150

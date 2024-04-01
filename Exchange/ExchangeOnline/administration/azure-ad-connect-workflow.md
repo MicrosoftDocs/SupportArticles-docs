@@ -12,6 +12,7 @@ ms.custom:
   - Exchange Online
   - CSSTroubleshoot
   - has-azure-ad-ps-ref
+  - azure-ad-ref-level-one-done
 ms.reviewer: kerbo, v-six
 appliesto: 
   - Exchange Online
