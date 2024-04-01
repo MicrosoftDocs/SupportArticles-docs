@@ -204,7 +204,7 @@
 
 - name: Troubleshoot AKS cluster performance issues
   items:
-  - name: AKS cluster/node is in failed state
+  - name: AKS cluster/node is in a failed state
     href: cluster-node-virtual-machine-failed-state.md
   - name: Identify nodes and containers consuming high CPU
     href: identify-high-cpu-consuming-containers-aks.md
