@@ -4,7 +4,7 @@ description: Describes and provides a resolution for an error that occurs when A
 ms.date: 07/30/2021
 ms.reviewer: fszita
 ms.service: active-directory
-ms.subservice: hybrid
+ms.subservice: hybrid-multicloud
 ms.custom: has-azure-ad-ps-ref
 ---
 
