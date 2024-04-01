@@ -165,7 +165,7 @@ The [Power Apps Studio](/power-apps/maker/canvas-apps/power-apps-studio) is home
 
 1. **Problems with startup**
 
-    If you have trouble accessing or starting Power Apps, see [troubleshooting startup issues](troubleshooting-startup-issues.md).
+    If you have trouble accessing or starting Power Apps, see [troubleshooting startup issues](~/power-platform/power-apps/sign-in/troubleshooting-startup-issues.md).
 
 1. **Problems changing dimensions or orientation of SharePoint forms**
 
