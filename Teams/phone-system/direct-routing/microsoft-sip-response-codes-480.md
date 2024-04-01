@@ -16,6 +16,7 @@ appliesto:
 ms.custom: 
   - sap:Teams Calling (PSTN)\Direct Routing
   - CI173631
+  - CI188844
   - CSSTroubleshoot
 ms.reviewer: teddygyabaah
 ---
@@ -23,6 +24,18 @@ ms.reviewer: teddygyabaah
 # SIP response code 480
 
 This article provides troubleshooting information for various combinations of the SIP 480 error and Microsoft response codes.
+
+## Run the Microsoft Remote Connectivity Analyzer test
+
+> [!NOTE]
+> Currently the Microsoft Remote Connectivity Analyzer tool doesn't support Microsoft 365 Government environments (GCC or GCC High).
+
+1. Open a web browser, and then go to the [Teams Voicemail](https://testconnectivity.microsoft.com/tests/TeamsVoicemail/input) test.
+1. Sign in by using the credentials of the user account that you want to test.
+1. Enter the provided verification code.
+1. Select **Verify**.
+
+This test verifies that the user account meets the requirements to access voicemail and that the Teams client can retrieve and display voicemail messages.
 
 ## 10037 480 No callee endpoints were found
 
