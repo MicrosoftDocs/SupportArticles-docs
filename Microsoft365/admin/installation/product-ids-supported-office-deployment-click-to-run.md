@@ -3,7 +3,7 @@ title: Product IDs that are supported by the Office Deployment Tool for Click-to
 description: Lists product IDs that the Office Deployment Tool for Click-to-Run supports.
 author: helenclu
 ms.author: luche
-ms.date: 10/23/2023
+ms.date: 03/31/2024
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -48,12 +48,12 @@ The following table lists Office 365 and Microsoft 365 plan names and the correc
 |Microsoft 365 Business Premium                   |`O365BusinessRetail`               |
 |Office 365 E3                                    |`O365ProPlusRetail`                |
 |Office 365 E5                                    |`O365ProPlusRetail`                |
-|Office 365 E3 EEA (no Teams)                     |`O365ProPlusEEANoTeamsRetail`      |
-|Office 365 E5 EEA (no Teams)                     |`O365ProPlusEEANoTeamsRetail`      |
-|Microsoft 365 E3 EEA (no Teams)                  |`O365ProPlusEEANoTeamsRetail`      |
-|Microsoft 365 E5 EEA (no Teams)                  |`O365ProPlusEEANoTeamsRetail`      |
-|Microsoft 365 Business Standard EEA (no Teams)   |`O365BusinessEEANoTeamsRetail`     |
-|Microsoft 365 Business Premium EEA (no Teams)    |`O365BusinessEEANoTeamsRetail`     |
+|Office 365 E3 (no Teams)                     |`O365ProPlusEEANoTeamsRetail`      |
+|Office 365 E5 (no Teams)                     |`O365ProPlusEEANoTeamsRetail`      |
+|Microsoft 365 E3 (no Teams)                  |`O365ProPlusEEANoTeamsRetail`      |
+|Microsoft 365 E5 (no Teams)                  |`O365ProPlusEEANoTeamsRetail`      |
+|Microsoft 365 Business Standard (no Teams)   |`O365BusinessEEANoTeamsRetail`     |
+|Microsoft 365 Business Premium (no Teams)    |`O365BusinessEEANoTeamsRetail`     |
 
 In addition to these product IDs, the following non-Microsoft 365 product IDs are supported by this tool:
 
