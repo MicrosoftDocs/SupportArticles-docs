@@ -9,6 +9,7 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
   - CI 126266
+  - CI 188840
   - CSSTroubleshoot
 ms.reviewer: sylviebo, premgan
 appliesto: 
@@ -58,17 +59,28 @@ If neither workaround fixes the issue, open a support ticket that contains the f
 - The desktop and debug logs. For more information about the logs, see [Use log files in troubleshooting Microsoft Teams](/microsoftteams/log-files).
 - The UTC time at which you might expect that the presence indicator shows the user's actual status. For the example that's described in the "Symptoms" section, this would be when you expect that the presence status would show **Available** instead of **Away**. Verify that the UTC time is captured in the collected logs.
 
-### Run a self-diagnostics tool
-
-Microsoft 365 admin users have access to diagnostic tools that they can run within the tenant to verify possible issues that affect user presence.
+### Run the Teams Presence diagnostic
 
 > [!NOTE]
-> This feature isn't available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
+> This feature requires a Microsoft 365 administrator account. This feature isn't available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
 
-Select the **Run Tests** link. This will populate the diagnostic in the Microsoft 365 admin center.
+1. Select the following button to populate the diagnostic in the Microsoft 365 admin center:
 
-> [!div class="nextstepaction"]
-> [Run Tests: Teams presence](https://aka.ms/TeamsPresenceDiag)
+   > [!div class="nextstepaction"]
+   > [Run Tests: Teams Presence](https://aka.ms/TeamsPresenceDiag)
+1. In the **Username or Email** field, enter the email address of the affected user, and then select **Run Tests**.
+
+### Run the Microsoft Remote Connectivity Analyzer test
+
+> [!NOTE]
+> Currently the Microsoft Remote Connectivity Analyzer tool doesn't support Microsoft 365 Government environments (GCC or GCC High).
+
+1. Open a web browser, and then go to the [Teams Presence Based on Calendar Events](https://testconnectivity.microsoft.com/tests/TeamsCalendarPresence/input) test.
+1. Sign in by using the credentials of the user account that you want to test.
+1. Enter the provided verification code.
+1. Select **Verify**.
+
+This test verifies that Teams presence can be updated based on calendar events set in Outlook.
 
 ## More information
 
