@@ -2594,6 +2594,176 @@
         "source_path": "virtual-machines/customscript-reruns-previous-command.md",
         "redirect_url": "/troubleshoot/azure/virtual-machines/linux/customscript-reruns-previous-command",
         "redirect_document_id": true
+      },
+      {
+        "source_path": "cloud-services/extended/index.md",
+        "redirect_url": "/troubleshoot/azure/cloud-services/extended/welcome-cloud-services-extended",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "cloud-services/classic/index.md",
+        "redirect_url": "/troubleshoot/azure/cloud-services/classic/welcome-cloud-services-classic",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/windows/index.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/windows/welcome-virtual-machines-windows",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machines/linux/index.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/welcome-virtual-machines-linux",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machine-scale-sets/index.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machine-scale-sets/welcome-virtual-machine-scale-sets",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-monitor/app-insights/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/app-insights/welcome-azure-monitor",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-monitor/log-analytics/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/welcome-azure-monitor",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/blobs/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/blobs/welcome-blob-storage",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/files/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/files/welcome-files-storage",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "synapse-analytics/spark/index.md",
+        "redirect_url": "/troubleshoot/azure/synapse-analytics/spark/welcome-synapse-analytics-spark",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "synapse-analytics/dedicated-sql/index.md",
+        "redirect_url": "/troubleshoot/azure/synapse-analytics/dedicated-sql/welcome-synapse-analytics-dedicated-sql",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "synapse-analytics/serverless-sql/index.md",
+        "redirect_url": "/troubleshoot/azure/synapse-analytics/serverless-sql/welcome-synapse-analytics-serverless-sql",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "synapse-analytics/workspace/index.md",
+        "redirect_url": "/troubleshoot/azure/synapse-analytics/workspace/welcome-synapse-analytics-workspace",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "api-mgmt/index.md",
+        "redirect_url": "/troubleshoot/azure/api-mgmt/welcome-api-mgmt",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "automation/index.md",
+        "redirect_url": "/troubleshoot/azure/automation/welcome-automation",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "hpc-batch/index.md",
+        "redirect_url": "/troubleshoot/azure/hpc/batch/welcome-hpc-batch",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "hpc/batch/index.md",
+        "redirect_url": "/troubleshoot/azure/hpc/batch/welcome-hpc-batch",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "hpc-cyclecloud/index.md",
+        "redirect_url": "/troubleshoot/azure/hpc/batch/welcome-hpc-cyclecloud",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "hpc/cyclecloud/index.md",
+        "redirect_url": "/troubleshoot/azure/hpc/cyclecloud/welcome-hpc-cyclecloud",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "hcp-pack/index.md",
+        "redirect_url": "/troubleshoot/azure/hpc/pack/welcome-hpc-pack",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "hpc/pack/index.md",
+        "redirect_url": "/troubleshoot/azure/hpc/pack/welcome-hpc-pack",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "service-fabric/index.md",
+        "redirect_url": "/troubleshoot/azure/service-fabric/welcome-service-fabric",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-network/index.md",
+        "redirect_url": "/troubleshoot/azure/virtual-network/welcome-virtual-network",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-functions/config-mgmt/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-functions/welcome-azure-functions",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-functions/creation-deletion/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-functions/welcome-azure-functions",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-functions/deployment/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-functions/welcome-azure-functions",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-functions/monitoring/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-functions/welcome-azure-functions",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "entra-id/app-integration/index.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/welcome-entra-id",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "entra-id/ad-dmn-services/index.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/welcome-entra-id",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "entra-id/b2c/index.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/welcome-entra-id",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "entra-id/dir-dmns-obj/index.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/welcome-entra-id",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "entra-id/governance/index.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/welcome-entra-id",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "entra-id/mfa/index.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/welcome-entra-id",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/index.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/welcome-entra-id",
+        "redirect_document_id": false
       }
   ]
 }
