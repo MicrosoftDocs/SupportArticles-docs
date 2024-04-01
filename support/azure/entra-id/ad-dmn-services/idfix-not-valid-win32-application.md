@@ -3,7 +3,7 @@ title: IdFix.exe is not a valid Win32 application error when running the IdFix t
 description: Provides a resolution to an issue in which you receive an error (IdFix.exe is not a valid Win32 application) when you run the IdFix DirSync Error Remediation Tool.
 ms.date: 07/06/2020
 ms.reviewer: willfid
-ms.service: active-directory
+ms.service: entra-id
 ms.subservice: aad-general
 ---
 # Error when you run the IdFix tool: IdFix.exe is not a valid Win32 application
