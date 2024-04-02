@@ -5,7 +5,7 @@ ms.date: 03/12/2024
 ms.reviewer: 
 ms.service: entra-id
 ms.subservice: users
-ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
+ms.custom: has-azure-ad-ps-ref
 ---
 # One or more objects don't sync when using Azure Active Directory Sync tool
 

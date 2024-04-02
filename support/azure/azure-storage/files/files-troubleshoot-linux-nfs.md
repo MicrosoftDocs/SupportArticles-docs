@@ -3,7 +3,7 @@ title: Troubleshoot NFS file shares - Azure Files
 description: Troubleshoot issues with NFS Azure file shares.
 ms.service: azure-file-storage
 ms.custom: linux-related-content
-ms.date: 03/28/2024
+ms.date: 04/01/2024
 ms.reviewer: kendownie
 ---
 
@@ -189,11 +189,13 @@ Downgrading or upgrading the kernel to anything outside the affected kernel shou
 
 ### Cause
 
-System calls such as `stat()` and `readdir()` might fail on some older 32-bit versions of Oracle E-Business Suite that use 32-bit file I/O interfaces instead of 64-bit inode numbers.
+Linux 32-bit applications that rely on inode numbers might not work as expected with Azure Files due to the formatting of the 64-bit inode numbers that the NFS service generates.
 
 ### Solution
 
-To resolve this issue, compress the 64-bit inode numbers to 32 bits by using the `nfs.enable_ino64=0 kernel` boot option. For more information about how to turn on kernel boot options, refer to your distribution's documentation.
+To resolve this issue, compress the 64-bit inode numbers to 32 bits by using the `nfs.enable_ino64=0` kernel boot option.
+
+Alternatively, you can set the module parameter by adding the following line to `/etc/modprobe.d/nfs.conf` and then rebooting the VM: `options nfs enable_ino64=0`.
 
 ## Need help?
 

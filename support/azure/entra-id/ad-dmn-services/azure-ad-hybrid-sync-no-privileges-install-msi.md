@@ -2,7 +2,7 @@
 title: Microsoft Entra Hybrid Sync Agent Installation Issues - No privileges to install MSI
 description: This troubleshooting guide focuses on when you have no privileges to install MSI. It helps unblock you to install the Microsoft Entra Connect Provisioning Agent.
 ms.date: 10/13/2021
-ms.service: active-directory
+ms.service: entra-id
 ms.subservice: hybrid
 ---
 

@@ -4,7 +4,7 @@ description: This document describes an issue that arises with version 1.4.xx.x 
 services: active-directory
 author: billmath
 manager: daveba
-ms.service: active-directory
+ms.service: entra-id
 ms.workload: identity
 ms.topic: reference
 ms.date: 06/30/2021
