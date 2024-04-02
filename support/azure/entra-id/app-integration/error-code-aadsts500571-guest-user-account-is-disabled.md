@@ -7,7 +7,6 @@ ms.reviewer: azureidcic, v-leedennis
 editor: v-jsitser
 ms.service: entra-id
 ms.subservice: enterprise-apps
-ms.topic: troubleshooting
 ms.date: 11/02/2023
 ---
 # Error AADSTS500571 - Guest user account is disabled

@@ -6,7 +6,6 @@ ms.author: custorod
 ms.editor: v-jsitser
 ms.reviewer: v-leedennis
 ms.service: entra-id
-ms.topic: troubleshooting-problem-resolution
 ms.date: 01/11/2024
 ---
 

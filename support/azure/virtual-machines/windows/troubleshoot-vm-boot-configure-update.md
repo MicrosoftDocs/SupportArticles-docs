@@ -9,7 +9,6 @@ ms.service: virtual-machines
 ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
-ms.topic: troubleshooting-problem-resolution
 ms.reviewer: jarrettr, v-leedennis
 ms.date: 12/18/2023
 ms.author: genli

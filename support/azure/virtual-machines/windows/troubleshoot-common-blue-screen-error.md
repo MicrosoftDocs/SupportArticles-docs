@@ -7,7 +7,6 @@ documentationCenter: ''
 author: genlin
 ms.service: virtual-machines
 ms.collection: windows
-ms.topic: troubleshooting-problem-resolution
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure
 ms.date: 12/18/2023
