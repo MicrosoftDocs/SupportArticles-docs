@@ -8,7 +8,6 @@ ms.collection: windows
 author: naqviadilmicrosoft
 ms.author: v-naqviadil
 editor: v-jsitser
-ms.topic: troubleshooting-problem-resolution
 ms.reviewer: cwhitley, v-leedennis
 ---
 # Error 0xC004F074 "No Key Management Service (KMS) could be contacted"
