@@ -97,8 +97,8 @@
     href: cannot-delete-load-balancer-private-link-service.md
   - name: PublicIPAddressCannotBeDeleted error
     href: cannot-delete-ip-subnet-nsg.md
-  - name: RequestDisallowedByPolicy error
-    href: error-code-requestdisallowedbypolicy-delete.md
+  - name: RequestDisallowedBy error
+    href: error-code-requestdisallowedby-delete.md
   - name: SubscriptionRequestsThrottled error
     href: error-code-toomanyrequestsreceived-subscriptionrequeststhrottled.md
   - name: TooManyRequestsReceived error
@@ -276,7 +276,7 @@
     href: node-count-is-not-in-autoscaler-min-max-range.md
   - name: Pod is stuck in CrashLoopBackOff mode
     href: pod-stuck-crashloopbackoff-mode.md
-  - name: '"policy definition not found" error during policy-assignments at Terraform'
+  - name: Policy definition not found error during policy-assignments at Terraform
     href: error-in-policy-assign-main-file-terraform.md
   - name: '"Quota exceeded" error during creation or upgrade'
     href: quota-exceeded-during-creation-upgrade.md
