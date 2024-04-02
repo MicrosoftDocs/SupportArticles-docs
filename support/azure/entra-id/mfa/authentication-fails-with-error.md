@@ -4,8 +4,7 @@ description: Describes and provides a resolution for an error that occurs when A
 ms.date: 07/30/2021
 ms.reviewer: fszita
 ms.service: active-directory
-ms.subservice: hybrid
-ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
+ms.custom: has-azure-ad-ps-ref
 ---
 
 # Authentication fails with an error stating "The requested federation realm object '< Object ID >' does not exist"
