@@ -104,7 +104,8 @@ There are several variables in the script that can be modified, including the do
 A new build of the Assistant is released every 90 days. The following table provides the versions that were made available on the specified dates.
 
 |Release date|Version of the Assistant|
-|--------|--------|
+|--------|--------||
+|March 12, 2024|17.01.1602.000|
 |February 20, 2024|17.01.1440.000|
 |June 6, 2023|17.01.0268.003|
 |April 21, 2023|17.01.0040.005|
