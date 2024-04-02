@@ -18,6 +18,8 @@ items:
           href: create-and-use-apps/lookup-does-not-filter-entity-records.md
         - name: Refresh All doesn't work after exporting app data to a dynamic worksheet
           href: create-and-use-apps/export-dynamic-worksheet-refresh-all.md
+        - name: Troubleshoot View issues in model-driven apps
+          href: create-and-use-apps/troubleshoot-model-driven-app-view-issues.md
         - name: Ribbons and Command bar
           items:
             - name: Ribbon issues
