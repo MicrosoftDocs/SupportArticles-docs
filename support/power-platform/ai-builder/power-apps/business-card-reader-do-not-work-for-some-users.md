@@ -2,9 +2,8 @@
 title: AI Builder business card reader doesn't work for some users
 description: Provides a resolution for the issue that AI Builder business card reader doesn't work for some users. 
 ms.reviewer: angieandrews
-ms.topic: troubleshooting
+ms.custom: sap:AI Builder\Business Card Reader
 ms.date: 03/31/2022
-ms.subservice: 
 ms.author: angieandrews
 author: v-aangie
 ---
