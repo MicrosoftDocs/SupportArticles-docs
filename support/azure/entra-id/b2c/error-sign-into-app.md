@@ -4,7 +4,6 @@ description: Describes an error that occurs when you try to sign in to an app th
 ms.date: 05/22/2020
 ms.reviewer: 
 ms.service: entra-id
-ms.subservice: B2C
 ---
 # Error occurs when you try to sign in to an app that's set up for Azure AD B2C
 
