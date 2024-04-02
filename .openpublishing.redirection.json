@@ -10771,6 +10771,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "support/dynamics-365/customer-service/service-level-agreements/sla-deletion-error-messages.md",
+      "redirect_url": "/troubleshoot/dynamics-365/customer-service/import-export-or-upgrade/sla-deletion-error-messages",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/power-platform/power-apps/isolate-and-troubleshoot-common-issues/common-issues-and-resolutions.md",
       "redirect_url": "/troubleshoot/power-platform/power-apps/create-and-use-apps/common-issues-and-resolutions",
       "redirect_document_id": false

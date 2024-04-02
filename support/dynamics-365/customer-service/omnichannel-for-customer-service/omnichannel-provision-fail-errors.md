@@ -4,6 +4,7 @@ description: Provides a resolution for the error that occurs when you provision 
 ms.reviewer: nenellim
 ms.author: nahadda
 ms.date: 05/23/2023
+ms.custom: sap:Licensing, provisioning, and installation\Unable to install or provision Omnichannel solutions on my environment
 ---
 # "Unable to perform the requested operation..." or "Request validation failed" error when provisioning Omnichannel
 

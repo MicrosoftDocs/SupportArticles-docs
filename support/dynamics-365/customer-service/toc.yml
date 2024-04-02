@@ -31,6 +31,8 @@
           items:
             - name: '"A managed solution cannot overwrite the SLAItem component" error'
               href: service-level-agreements/solution-contains-slakpi-butnot-slaitem.md
+            - name: Can't delete SLAs or SLA Items in upgrade or manual deletion
+              href: import-export-or-upgrade/sla-deletion-error-messages.md
             - name: Changes to SLAItem via upgrade solution don't appear
               href: service-level-agreements/slaitem-changes-missing-upgrade.md
             - name: Can't import solution with active SLAs and SLAs are deactivated when imported
@@ -69,8 +71,6 @@
               href: service-level-agreements/warning-failure-times-incorrect-sla.md
         - name: SLA timer
           items:
-            - name: Can't delete SLAs or SLA Items in upgrade or manual deletion
-              href: service-level-agreements/sla-deletion-error-messages.md
             - name: OnHold Time isn't populated for Case for Unified Interface SLA
               href: service-level-agreements/onhold-time-not-populated.md
             - name: SLA KPI instance isn't Nearing Non-compliance or Noncompliant and timer runs

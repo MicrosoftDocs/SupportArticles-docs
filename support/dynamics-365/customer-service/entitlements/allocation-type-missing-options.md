@@ -4,6 +4,7 @@ description: Provides a resolution for the issue where you can't create entitlem
 ms.reviewer: sdas, ankugupta
 ms.author: sdas
 ms.date: 05/23/2023
+ms.custom: sap:Entitlements\Unable to create or reactivate entitlements
 ---
 # Can't create entitlements because the Allocation Type dropdown doesn't show any options
 

@@ -4,6 +4,7 @@ description: Provides a resolution for the inability to delete a managed solutio
 ms.reviewer: sdas, ankugupta
 ms.author: sdas
 ms.date: 05/23/2023
+ms.custom: sap:Service Level Agreements
 ---
 # Can't delete a managed solution consisting of an SLA-enabled entity
 
