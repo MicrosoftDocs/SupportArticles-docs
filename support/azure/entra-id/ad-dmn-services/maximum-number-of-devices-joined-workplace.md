@@ -3,7 +3,7 @@ title: Error (The maximum number of devices that can be joined to the workplace 
 description: Describes a problem in which a (The maximum number of devices that can be joined to the workplace by the user has been reached) error occurs when you try to perform a Workplace Join operation. Provides a resolution.
 ms.date: 06/08/2020
 ms.reviewer: 
-ms.service: active-directory
+ms.service: entra-id
 ms.subservice: hybrid
 ---
 # Error (The maximum number of devices that can be joined to the workplace by the user has been reached) during a Workplace Join
