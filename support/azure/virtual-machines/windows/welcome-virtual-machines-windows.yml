@@ -1,0 +1,114 @@
+### YamlMime:Landing
+
+title: Azure Windows Virtual Machines troubleshooting documentation
+summary: Welcome to Azure Windows Virtual Machines troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Azure Windows Virtual Machines. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+
+metadata:
+  title: Troubleshoot common issues with Azure Windows Virtual Machines
+  description: Documentation for troubleshooting common issues with Azure Windows Virtual Machines. # Required; article description that is displayed in search results. < 160 chars.
+  services: virtual-machines
+  ms.service: virtual-machines #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.topic: landing-page # Required
+  author: genlin  #Required; your GitHub user alias, with correct capitalization.
+  ms.author: genli #Required; microsoft alias of author; optional team alias.
+  ms.date: 03/27/2024
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+# Cards and links should be based on top customer tasks or top subjects
+# Start card title with a verb
+
+  # Card
+  - title: Create and manage Virtual machines
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Documentation for creating and managing VMs
+            url: /azure/virtual-machines/
+  # Card
+  - title: Can't connect to my VM
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Quick steps to address common RDP connection issues
+            url: troubleshoot-rdp-connection.md
+          - text: Troubleshoot Azure VM RDP connection issues by Event ID
+            url: event-id-troubleshoot-vm-rdp-connecton.md
+          - text: Troubleshoot authentication errors when you use RDP to connect to Azure VM
+            url: cannot-connect-rdp-azure-vm.md
+          - text: VM guest network card is disabled
+            url: troubleshoot-rdp-nic-disabled.md
+          
+  # Card
+  - title: VM password reset
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Redeploy Windows virtual machine to new Azure node
+            url: redeploy-to-new-node-windows.md
+          - text: Reset local Windows password for Azure VM using offline method
+            url: reset-local-password-without-agent.md
+
+  # Card
+  - title: VM is not booting
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Check disk boot error
+            url: troubleshoot-check-disk-boot-error.md
+          - text: BitLocker boot error
+            url: troubleshoot-bitlocker-boot-error.md
+          - text: Boot configuration update error
+            url: troubleshoot-vm-boot-configure-update.md
+          - text: Common blue screen error
+            url: troubleshoot-common-blue-screen-error.md
+
+
+  # Card
+  - title: Virtual Disk Management issues
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Virtual Disks FAQ
+            url: /azure/virtual-machines/faq-for-disks
+          - text: Understanding the temporary drive on your VM
+            url: /azure/virtual-machines/managed-disks-overview#temporary-disk
+          - text: Overview of Azure Managed Disks
+            url: /azure/virtual-machines/managed-disks-overview
+
+  # Card
+  - title: Disk encryption issues
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Azure Disk Encryption for Windows VMs
+            url: /azure/virtual-machines/windows/disk-encryption-overview?context=%2Ftroubleshoot%2Fazure%2Fvirtual-machines%2Fcontext%2Fcontext
+          - text: Azure Disk Encryption troubleshooting guide
+            url: /azure/virtual-machines/windows/disk-encryption-troubleshooting?context=%2Ftroubleshoot%2Fazure%2Fvirtual-machines%2Fcontext%2Fcontext
+                    
+   # Card
+  - title: VM performance issues
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Performance diagnostics in the Azure Portal
+            url: performance-diagnostics.md
+          - text: Troubleshoot high-CPU issues on Azure Windows virtual machines
+            url: troubleshoot-high-cpu-issues-azure-windows-vm.md               
+       
+   # Card
+  - title: VM Extension issues
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: General troubleshooting steps for extensions
+            url: /azure/virtual-machines/extensions/troubleshoot
+          - text: Installing the extension in your VM
+            url: /azure/virtual-machines/extensions/diagnostics-windows
+          - text: Multiple certificates on IaaS VM that uses extensions
+            url: multiple-certificates-iaas-vm-extensions.md
+          - text: Troubleshoot extension certificate issues on Windows VM
+            url: troubleshoot-extension-certificates-issues-windows-vm.md
+          - text: Custom Script Extension for Windows
+            url: /azure/virtual-machines/extensions/custom-script-windows#tips-and-tricks

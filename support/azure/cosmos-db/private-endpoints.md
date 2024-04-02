@@ -6,7 +6,6 @@ editor: v-jsitser
 ms.author: sidandrews
 ms.reviewer: ouryba, v-jayaramanp
 ms.service: cosmos-db
-ms.topic: troubleshooting-problem-resolution
 ms.date: 01/18/2024
 ms.custom: devx-track-arm-template
 ---
