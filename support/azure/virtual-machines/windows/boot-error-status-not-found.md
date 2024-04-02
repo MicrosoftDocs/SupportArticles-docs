@@ -13,7 +13,6 @@ ms.tgt_pltfrm: vm-windows
 ms.date: 11/08/2023
 editor: v-jsitser
 ms.reviewer: azurevmcptcic, v-leedennis
-ms.topic: troubleshooting-general
 ---
 
 # Troubleshoot Windows Boot Manager error  - 0xC0000225 "Status not found"

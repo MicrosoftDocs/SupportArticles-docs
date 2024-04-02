@@ -6,7 +6,6 @@ ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-extensions-add-ons
 ms.date: 02/23/2024
 ms.reviewer: nickoman, cssakscic, v-ntjandra, v-leedennis
-ms.topic: troubleshooting-general
 ---
 
 # Troubleshoot Azure Key Vault Provider for Secrets Store CSI Driver

@@ -3,7 +3,7 @@ title: Error (Can't connect to the service) when you try to register a device
 description: Describes a problem that triggers an error when you try to register a device in a Windows 8.1 or Windows Server 2012 R2 environment.
 ms.date: 06/08/2020
 ms.reviewer: 
-ms.service: active-directory
+ms.service: entra-id
 ms.subservice: hybrid
 ---
 # Error when you try to register a device: Can't connect to the service

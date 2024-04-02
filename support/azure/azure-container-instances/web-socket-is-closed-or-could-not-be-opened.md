@@ -7,7 +7,6 @@ ms.author: tysonfreeman
 editor: v-jsitser
 ms.reviewer: v-leedennis
 ms.service: container-instances
-ms.topic: troubleshooting-problem-resolution
 #Customer intent: As an Azure administrator, I want to learn how to resolve the "Web socket is closed or could not be opened" error so that I can successfully deploy an image onto a container instance.
 ---
 # Error: "Web socket is closed or could not be opened"

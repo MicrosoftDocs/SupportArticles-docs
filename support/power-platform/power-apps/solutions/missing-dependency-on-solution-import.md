@@ -5,6 +5,7 @@ ms.reviewer: jdaly
 ms.date: 09/25/2023
 author: swatimadhukargit
 ms.author: swatim
+ms.custom: sap:Working with Solutions\Dependencies prevent a solution import
 ---
 # Missing dependencies error during solution import
 

@@ -8,7 +8,6 @@ ms.reviewer: ashisunnam, aaronmax, v-leedennis
 editor: v-jsitser
 ms.service: azure-monitor
 ms.subservice: application-insights
-ms.topic: troubleshooting-general
 ---
 # Troubleshoot Application Insights monitoring of Node.js apps and services
 

@@ -1,47 +1,41 @@
 - name: AI Builder Troubleshooting
   href: welcome-ai-builder.yml
   items:
-    - name: Administration and licensing
-      items:
-        - name: All AI Builder credits have been consumed
-          href: all-ai-builder-credits-have-been-consumed.md
-        - name: Actions are disabled or deactivated
-          href: aibuilder-actions-are-disabled-deactivated.md
-        - name: AI Builder trial license still displays after you've purchased an AI Builder license
-          href: aibuilder-show-trial-license-but-license-purchased.md
-        - name: Current environment doesn't meet the minimum requirements
-          href: the-current-environment-donot-meet-the-minimum-requirements-error-message.md
-        - name: Prevent users from creating AI Builder custom models
-          href: prevent-users-from-creating-ai-builder-custom-models.md
-    - name: Models
-      items:
-        - name: AI models fail to be imported in a new environment
-          href: aimodels-fail-to-be-imported-in-a-new-environment.md
-        - name: Fields couldn't be loaded for this document error
-          href: fields-could-not-be-loaded-for-this-document-error-in-form-processing.md
-        - name: Training document isn't displayed
-          href: the-training-document-is-not-displayed-on-the-form-processing-model-details-page.md
-        - name: Your model uses a preview functionality which has expired
-          href: your-model-uses-a-preview-functionality-which-has-expired.md
     - name: Use in Power Automate
       items:
+        - name: All AI Builder credits have been consumed
+          href: power-automate/all-ai-builder-credits-have-been-consumed.md
+        - name: Actions are disabled or deactivated
+          href: power-automate/aibuilder-actions-are-disabled-deactivated.md
+        - name: AI models fail to be imported in a new environment
+          href: power-automate/aimodels-fail-to-be-imported-in-a-new-environment.md
+        - name: Current environment doesn't meet the minimum requirements
+          href: power-automate/the-current-environment-donot-meet-the-minimum-requirements-error-message.md
         - name: Dependency timeout error
-          href: dependency-timeout-error-when-using-a-form-processing-model-in-power-automate.md
+          href: power-automate/dependency-timeout-error-when-using-a-form-processing-model-in-power-automate.md
+        - name: Fields couldn't be loaded for this document error
+          href: power-automate/fields-could-not-be-loaded-for-this-document-error-in-form-processing.md
         - name: Output of an action is empty or the next action returns an error
-          href: the-output-of-an-ai-builder-action-is-empty-in-power-automate-or-the-next-action-returns-an-error.md
+          href: power-automate/the-output-of-an-ai-builder-action-is-empty-in-power-automate-or-the-next-action-returns-an-error.md
         - name: Pages parameter generates an error
-          href: pages-parameter-generates-an-error-when-saving-a-form-processing-flow.md
+          href: power-automate/pages-parameter-generates-an-error-when-saving-a-form-processing-flow.md
+        - name: Prevent users from creating AI Builder custom models
+          href: power-automate/prevent-users-from-creating-ai-builder-custom-models.md
         - name: Training failed and the form can't be used in document processing
-          href: training-failed-and-the-model-cannot-be-used-error-in-form-processing.md
+          href: power-automate/training-failed-and-the-model-cannot-be-used-error-in-form-processing.md
+        - name: Training document isn't displayed
+          href: power-automate/the-training-document-is-not-displayed-on-the-form-processing-model-details-page.md
         - name: Too many requests error
-          href: too-many-requests-error-in-power-automate.md
+          href: power-automate/too-many-requests-error-in-power-automate.md
+        - name: Your model uses a preview functionality which has expired
+          href: power-automate/your-model-uses-a-preview-functionality-which-has-expired.md
     - name: Use in Power Apps
       items:
+        - name: AI Builder trial license still displays after you've purchased an AI Builder license
+          href: power-apps/aibuilder-show-trial-license-but-license-purchased.md
         - name: Business card reader doesn't work
-          href: business-card-reader-do-not-work-for-some-users.md
-        - name: Wrong output image rotation for scanned images
-          href: when-i-scan-images-using-aibuilder-components-in-powerapps-the-output-image-rotation-is-wrong.md
-    - name: Other
-      items:
+          href: power-apps/business-card-reader-do-not-work-for-some-users.md
         - name: Processes and plug-in steps are turned off
-          href: aibuilder-processes-and-plug-in-steps-are-turned-off-in-default-solution.md
+          href: power-apps/aibuilder-processes-and-plug-in-steps-are-turned-off-in-default-solution.md
+        - name: Wrong output image rotation for scanned images
+          href: power-apps/when-i-scan-images-using-aibuilder-components-in-powerapps-the-output-image-rotation-is-wrong.md
