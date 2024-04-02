@@ -10828,7 +10828,9 @@
     {
       "source_path": "support/power-platform/power-apps/manage-apps/dataverse-records-missing-required-fields.md",
       "redirect_url": "/troubleshoot/power-platform/power-apps/dataverse/dataverse-records-missing-required-fields",
-
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/power-platform/ai-builder/the-training-document-is-not-displayed-on-the-form-processing-model-details-page.md",
       "redirect_url": "/troubleshoot/power-platform/ai-builder/power-automate/the-training-document-is-not-displayed-on-the-form-processing-model-details-page",
       "redirect_document_id": false
