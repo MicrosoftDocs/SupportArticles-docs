@@ -42,6 +42,8 @@ items:
               href: create-and-use-apps/troubleshoot-model-driven-app-date-time-issues.md
             - name: Troubleshoot Lookup issues in model-driven apps
               href: create-and-use-apps/troubleshoot-model-driven-app-lookup-issues.md
+            - name: Troubleshoot View issues in model-driven apps
+              href: create-and-use-apps/troubleshoot-model-driven-app-view-issues.md
         - name: Ribbons and Command bar
           items:
             - name: Ribbon issues
