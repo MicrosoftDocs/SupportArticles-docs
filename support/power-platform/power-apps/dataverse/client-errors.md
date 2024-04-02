@@ -6,6 +6,7 @@ author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly
 manager: tasousa
+ms.custom: sap:User permissions\User unable to perform operations
 search.audienceType: 
   - developer
 search.app: 

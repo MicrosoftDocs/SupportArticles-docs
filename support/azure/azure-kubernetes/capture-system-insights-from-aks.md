@@ -8,7 +8,7 @@ ms.reviewer:   cssakscic, v-leedennis
 ms.service:    azure-kubernetes-service
 ms.subservice: data-collection-guide
 ms.topic:      how-to
-ms.date:       12/21/2023
+ms.date:       04/02/2024
 ---
 
 # Capture real-time system insights from an AKS cluster
@@ -75,6 +75,14 @@ To complement the demo that's presented at the beginning of this article, we com
 
 ## How to install Inspektor Gadget in an AKS cluster
 
+### One-Click Inspektor Gadget deployment
+
+By selecting the following button, an AKS cluster will be automatically created, and Inspektor Gadget will be deployed in the cluster. After the deployment is finished, you can explore all the features of Inspektor Gadget in the provided shell environment.
+
+[![Deploy Inspektor Gadget in an AKS cluster](https://aka.ms/deploytoazurebutton)](https://go.microsoft.com/fwlink/?linkid=2262757)
+
+### Install Inspektor Gadget by running the "kubectl gadget" plug-in
+
 This section outlines the steps for installing Inspektor Gadget in your AKS cluster by running the `kubectl gadget` plug-in. The installation consists of two parts:
 
 - Installing the `kubectl gadget` plug-in on your computer
@@ -84,13 +92,7 @@ This section outlines the steps for installing Inspektor Gadget in your AKS clus
   > [!WARNING]
   > Many mechanisms are available to deploy and use Inspektor Gadget. Each of these mechanisms is tailored to specific use cases and requirements. You can use the kubectl gadget plug-in to apply several of these mechanisms, but not all of them. For instance, deploying Inspektor Gadget by using the `kubectl gadget` plug-in depends on the availability of the Kubernetes API server. If you can’t depend on such a component because its availability might be occasionally compromised, we recommend that you avoid using the `kubectl gadget`deployment mechanism. For more information about this and other use cases, see the [Inspektor Gadget documentation](https://aka.ms/ig).
 
-### One-Click Inspektor Gadget deployment
-
-The following button automates the creation of an AKS cluster and executes the steps described in this section to deploy Inspektor Gadget in a cluster. After the deployment is complete, you can explore all of Inspektor Gadget's features in the provided shell environment. 
-
-[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://go.microsoft.com/fwlink/?linkid=2262757)
-
-### Prerequisites
+#### Prerequisites
 
 - The Kubernetes [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/) command-line tool. If you have [Azure CLI](/cli/azure/install-azure-cli-linux), you can run the [az aks install-cli](/cli/azure/aks#az-aks-install-cli) command to install kubectl.
 
@@ -98,7 +100,7 @@ The following button automates the creation of an AKS cluster and executes the s
 
 - The [krew](https://sigs.k8s.io/krew) package manager for plug-ins in kubectl. You can follow the [krew quickstart guide](https://krew.sigs.k8s.io/docs/user-guide/quickstart/) to install this package manager.
 
-### Part 1: Install the kubectl plug-in gadget on your computer
+#### Part 1: Install the kubectl plug-in gadget on your computer
 
 We recommend that you use `krew` to install the `kubectl gadget` plug-in.
 
@@ -122,7 +124,7 @@ Client version: vX.Y.Z
 Server version: not installed
 ```
 
-### Part 2: Install Inspektor Gadget in the cluster
+#### Part 2: Install Inspektor Gadget in the cluster
 
 The following command deploys the [DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/) controller.
 

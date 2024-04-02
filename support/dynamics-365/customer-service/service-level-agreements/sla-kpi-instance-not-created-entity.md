@@ -4,6 +4,7 @@ description: Provides a resolution for the issue where an SLA KPI instance isn't
 ms.reviewer: sdas, ankugupta, v-psuraty
 ms.author: mpanduranga
 ms.date: 03/05/2024
+ms.custom: sap:Service Level Agreements
 ---
 # An SLA KPI instance isn't created on the entity
 

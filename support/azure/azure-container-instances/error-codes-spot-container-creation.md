@@ -7,7 +7,6 @@ ms.author: tysonfreeman
 editor: v-jsitser
 ms.reviewer: v-weizhu, v-leedennis
 ms.service: container-instances
-ms.topic: troubleshooting-error-codes
 #customer intent: As a user of Azure Container Instances, I want find details and solutions to common user errors that involve Spot containers so that I can create Spot containers successfully.
 ---
 # Error codes for Spot container creation in Azure Container Instances

@@ -5,6 +5,7 @@ ms.reviewer: jdaly
 ms.date: 09/22/2023
 author: swatimadhukargit
 ms.author: swatim
+ms.custom: sap:Working with Solutions\Solution import - Other errors
 ---
 # Solution import or application installation failure due to missing privileges
 

@@ -4,6 +4,7 @@ description: Provides a resolution for the missing required variables and action
 ms.reviewer: nenellim
 ms.author: yangao
 ms.date: 05/23/2023
+ms.custom: sap:Power Virtual Agents (PVA)\Unable to configure agent transfer in PVA
 ---
 # Missing required variables and actions during agent transfers from Power Virtual Agents bots
 
