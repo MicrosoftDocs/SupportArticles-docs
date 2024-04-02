@@ -1,7 +1,7 @@
 ---
 title: AKS container CPU and memory limits aren't enforced
 description: Provide a solution to an issue where CPU and memory limits aren't enforced for AKS containers.
-ms.date: 04/01/2024
+ms.date: 04/02/2024
 ms.reviewer: momajed, cssakscic
 ms.service: azure-kubernetes-service
 ms.subservice: common-issues
@@ -18,15 +18,15 @@ CPU and memory limits aren't configured in the container specification.
 
 To resolve this issue, ensure that container CPU and memory limits are enforced by following these steps:
 
-1.	Run the following command to check the compliance of your cluster: 
+1. Run the following command to check the compliance of your cluster: 
 
-    ```kublet
+    ```console
     kubectl describe k8sazurecontainerlimits 
     ```
     
     This command provides information about the current CPU and memory limits that are configured for your containers. 
 
-2.	Configure the CPU and memory limits properly within the container specification for all your existing deployments.
+2. Configure the CPU and memory limits properly within the container specification for all your existing deployments.
 
   	Here's an example: 
 
@@ -50,6 +50,6 @@ To resolve this issue, ensure that container CPU and memory limits are enforced 
       > [!NOTE]
       > Adjust the CPU and memory values based on your specific requirements. 
 
-3.	After updating the container specification, trigger a rescan or on-demand scan to evaluate the compliance status. You can use the Azure CLI to perform an on-demand evaluation scan. For more information about triggering an on-demand scan, see [On-demand evaluation scan - Azure CLI](/azure/governance/policy/how-to/get-compliance-data#on-demand-evaluation-scan---azure-cli). 
+3. After updating the container specification, trigger a rescan or on-demand scan to evaluate the compliance status. You can use the Azure CLI to perform an on-demand evaluation scan. For more information about triggering an on-demand scan, see [On-demand evaluation scan - Azure CLI](/azure/governance/policy/how-to/get-compliance-data#on-demand-evaluation-scan---azure-cli). 
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
