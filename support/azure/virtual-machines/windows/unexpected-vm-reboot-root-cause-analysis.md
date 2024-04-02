@@ -8,6 +8,7 @@ ms.workload: infrastructure-services
 ms.topic: how-to
 ms.date: 11/17/2023
 ms.reviewer: tagangwa, macla, v-weizhu
+ms.custom: sap:VM restarted or stopped unexpectedly
 ---
 
 # How to check Root Cause Analysis of unexpected Azure virtual machine reboots

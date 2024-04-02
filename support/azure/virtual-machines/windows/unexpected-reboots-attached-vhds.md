@@ -11,6 +11,7 @@ ms.subservice: vm-cannot-start-stop
 ms.topic: article
 ms.date: 11/01/2018
 ms.author: genli
+ms.custom: sap:VM restarted or stopped unexpectedly
 ---
 
 # Troubleshoot unexpected reboots of VMs with attached VHDs
