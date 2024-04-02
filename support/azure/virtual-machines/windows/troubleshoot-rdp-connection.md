@@ -7,7 +7,7 @@ ms.subservice: vm-cannot-connect
 author: genlin
 manager: dcscontentpm
 tags: top-support-issue,azure-service-management,azure-resource-manager
-ms.custom: devx-track-azurepowershell
+ms.custom: sap:Cannot connect to my VM, devx-track-azurepowershell
 ms.service: virtual-machines
 ms.collection: windows
 ms.workload: infrastructure-services

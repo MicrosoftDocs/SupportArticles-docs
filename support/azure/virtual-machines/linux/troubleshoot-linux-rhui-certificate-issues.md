@@ -8,7 +8,7 @@ editor: v-jsitser
 ms.date: 03/13/2024
 ms.service: virtual-machines
 ms.subservice: redhat
-ms.custom: linux-related-content
+ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 ---
 
 # Troubleshoot RHUI certificate issues in Azure

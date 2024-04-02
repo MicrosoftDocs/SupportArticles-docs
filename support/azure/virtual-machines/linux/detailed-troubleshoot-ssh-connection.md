@@ -7,7 +7,7 @@ documentationcenter: ''
 author: genlin
 manager: dcscontentpm
 tags: top-support-issue,azure-service-management,azure-resource-manager
-ms.custom: linux-related-content
+ms.custom: sap:Cannot connect to my VM, linux-related-content
 ms.service: virtual-machines
 ms.subservice: vm-cannot-connect
 

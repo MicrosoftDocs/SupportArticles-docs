@@ -6,7 +6,7 @@ documentationcenter: ''
 author: anandhms
 manager: dcscontentpm
 tags: ''
-ms.custom: linux-related-content
+ms.custom: sap:VM Performance, linux-related-content
 ms.service: virtual-machines
 ms.collection: linux
 ms.workload: infrastructure-services

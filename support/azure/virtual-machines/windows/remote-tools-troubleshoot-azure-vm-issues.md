@@ -5,7 +5,7 @@ services: virtual-machines
 author: Deland-Han
 manager: dcscontentpm
 tags: ''
-ms.custom: devx-track-azurepowershell
+ms.custom: sap:VM Admin - Windows (Guest OS), devx-track-azurepowershell
 ms.collection: windows
 ms.topic: troubleshooting
 ms.workload: infrastructure-services

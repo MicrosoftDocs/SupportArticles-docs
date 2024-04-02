@@ -11,7 +11,7 @@ ms.collection: linux
 ms.topic: troubleshooting
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
-ms.custom: linux-related-content
+ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 ms.date: 04/23/2023
 ms.author: genli
 ---

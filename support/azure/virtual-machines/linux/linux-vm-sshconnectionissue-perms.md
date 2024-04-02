@@ -6,7 +6,7 @@ author: saimsh-msft
 ms.reviewer: divargas, adelgadohell
 ms.service: virtual-machines
 ms.subservice: vm-cannot-connect
-ms.custom: linux-related-content
+ms.custom: sap:Cannot connect to my VM, linux-related-content
 ms.collection: linux
 ---
 

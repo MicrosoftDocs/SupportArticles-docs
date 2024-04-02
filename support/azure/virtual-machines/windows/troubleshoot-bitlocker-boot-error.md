@@ -13,7 +13,7 @@ ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure
 ms.date: 04/16/2021
 ms.author: genli
-ms.custom: has-adal-ref, devx-track-azurepowershell
+ms.custom: sap:My VM is not booting, has-adal-ref, devx-track-azurepowershell
 ---
 # BitLocker boot errors on an Azure VM
 

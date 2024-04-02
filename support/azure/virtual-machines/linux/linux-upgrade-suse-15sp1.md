@@ -6,7 +6,7 @@ documentationcenter: ''
 author: amkarmak
 manager: dcscontentpm
 tags: virtual-machines
-ms.custom: linux-related-content
+ms.custom: sap:Kernel Upgrades, Package Management issue (Yum, Zypper, RPM, DPKG, APT), linux-related-content
 ms.service: virtual-machines
 ms.subservice: vm-deploy
 ms.collection: linux

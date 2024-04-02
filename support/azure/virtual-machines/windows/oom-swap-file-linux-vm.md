@@ -5,7 +5,7 @@ ms.date: 10/27/2023
 ms.reviewer: azurevmlnxcic, v-denlee
 ms.service: virtual-machines
 ms.subservice: vm-common-errors-issues
-ms.custom: linux-related-content
+ms.custom: sap:VM Admin - Windows (Guest OS), linux-related-content
 ms.collection: linux
 author: pagienge
 ms.author: pagienge

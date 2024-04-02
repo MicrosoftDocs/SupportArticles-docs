@@ -6,7 +6,7 @@ documentationcenter: ''
 author: mimckitt
 manager: dcscontentpm
 tags: azure-resource-manager
-ms.custom: linux-related-content
+ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 ms.service: virtual-machines
 ms.subservice: vm-troubleshooting-tools
 ms.collection: linux

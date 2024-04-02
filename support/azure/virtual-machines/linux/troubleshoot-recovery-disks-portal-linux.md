@@ -11,7 +11,7 @@ ms.subservice: vm-backup-restore
 ms.collection: linux
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-linux
-ms.custom: linux-related-content
+ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 ms.workload: infrastructure
 ms.date: 10/11/2021
 ms.author: genli

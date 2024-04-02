@@ -6,7 +6,7 @@ ms.reviewer: clandis, v-leedennis
 editor: v-jsitser
 ms.service: virtual-machines
 ms.subservice: vm-troubleshooting-tools
-ms.custom: devx-track-azurepowershell
+ms.custom: sap:VM Admin - Windows (Guest OS), devx-track-azurepowershell
 #Customer intent: As an Azure Virtual Machine customer, I want to find out why a PowerShell script that's run by using Custom Script Extension or Run Command has failed so I can debug it.
 ---
 # Debug PowerShell scripts run by Custom Script Extension or Run Command

@@ -4,7 +4,7 @@ description: Describes how to resolve the problem that prevents a swap file from
 ms.date: 03/08/2024
 ms.service: virtual-machines
 ms.subservice: vm-cannot-start-stop
-ms.custom: linux-related-content
+ms.custom: sap:Cannot start or stop my VM, linux-related-content
 ms.collection: linux
 ms.author: srijangupta
 author: srijang

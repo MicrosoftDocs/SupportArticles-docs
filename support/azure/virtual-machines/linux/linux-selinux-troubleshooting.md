@@ -8,7 +8,7 @@ ms.topic: troubleshooting
 ms.date: 01/31/2024
 ms.service: virtual-machines
 ms.subservice: vm-cannot-connect
-ms.custom: linux-related-content
+ms.custom: sap:Cannot connect to my VM, linux-related-content
 ms.collection: linux
 ---
 # SSH connection to Azure Linux virtual machines fails due to SELinux misconfiguration
