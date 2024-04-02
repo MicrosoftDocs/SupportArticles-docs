@@ -276,7 +276,7 @@
     href: node-count-is-not-in-autoscaler-min-max-range.md
   - name: Pod is stuck in CrashLoopBackOff mode
     href: pod-stuck-crashloopbackoff-mode.md
-  - name: "policy definition not found" error during policy-assignments at Terraform
+  - name: '"policy definition not found" error during policy-assignments at Terraform'
     href: error-in-policy-assign-main-file-terraform.md
   - name: '"Quota exceeded" error during creation or upgrade'
     href: quota-exceeded-during-creation-upgrade.md
@@ -286,7 +286,7 @@
     href: tcp-timeouts-dial-tcp-nodeip-10250-io-timeout.md
   - name: TCP times out when kubectl or other third-party tools connect
     href: tcp-timeouts-kubetctl-third-party-tools-connect-api-server.md
-  - name: "tls: client offered only unsupported versions" messages
+  - name: '"tls: client offered only unsupported versions" messages'
     href: tls-client-offered-unsupported-versions.md
   - name: Troubleshoot common Azure Linux container host for AKS issues
     href: troubleshoot-common-azure-linux-aks.md
