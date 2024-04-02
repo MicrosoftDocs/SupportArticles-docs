@@ -2,7 +2,6 @@
 title: IPv6 support in Microsoft Entra ID
 description: Learn about Internet Protocol version 6 (IPv6) support in Microsoft Entra ID. Review what your organization needs to do to accommodate IPv6.
 ms.service: entra-id
-ms.subservice: aad-general
 ms.date: 05/29/2023
 ms.reviewer: lhuangnorth, gautama, amycolannino, joflore, mariourrutia, v-leedennis
 ms.collection: M365-identity-device-management
