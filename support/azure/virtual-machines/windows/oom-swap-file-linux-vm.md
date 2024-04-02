@@ -4,7 +4,6 @@ description: This article helps you understand how to fix out of memory errors b
 ms.date: 10/27/2023
 ms.reviewer: azurevmlnxcic, v-denlee
 ms.service: virtual-machines
-ms.subservice: vm-common-errors-issues
 ms.custom: sap:VM Admin - Windows (Guest OS), linux-related-content
 ms.collection: linux
 author: pagienge

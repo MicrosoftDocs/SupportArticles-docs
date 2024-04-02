@@ -6,7 +6,6 @@ documentationCenter: ''
 author: divargas-msft
 manager: dcscontentpm
 ms.service: virtual-machines
-ms.subservice: vm-cannot-start-stop
 ms.collection: linux
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-linux

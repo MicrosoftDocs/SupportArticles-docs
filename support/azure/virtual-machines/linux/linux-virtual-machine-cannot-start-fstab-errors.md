@@ -8,7 +8,6 @@ manager: dcscontentpm
 tags: ''
 ms.custom: sap:My VM is not booting, linux-related-content
 ms.service: virtual-machines
-ms.subservice: vm-cannot-start-stop
 ms.collection: linux
 ms.topic: troubleshooting
 ms.workload: infrastructure-services

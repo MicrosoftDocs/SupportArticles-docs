@@ -7,7 +7,6 @@ author: genlin
 manager: dcscontentpm
 editor: v-jesits
 ms.service: virtual-machines
-ms.subservice: vm-cannot-start-stop
 ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows

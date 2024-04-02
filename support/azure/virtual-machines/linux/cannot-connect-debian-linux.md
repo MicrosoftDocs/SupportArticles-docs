@@ -4,7 +4,6 @@ description: Works around an issue in which you can't connect to a specialized D
 ms.date: 07/21/2020
 ms.reviewer: 
 ms.service: virtual-machines
-ms.subservice: vm-cannot-connect
 ms.custom: sap:Cannot connect to my VM, linux-related-content
 ms.collection: linux
 ---

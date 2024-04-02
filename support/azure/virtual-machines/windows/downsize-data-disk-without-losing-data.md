@@ -5,7 +5,6 @@ ms.date: 06/01/2023
 ms.reviewer: scotro, uarshadkhan, v-leedennis
 ms.topic: how-to
 ms.service: virtual-machines
-ms.subservice: vm-disk
 ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 # Decrease the size of an Azure data disk without losing data

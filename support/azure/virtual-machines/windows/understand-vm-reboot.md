@@ -7,7 +7,6 @@ author: genlin
 manager: dcscontentpm
 tags: ''
 ms.service: virtual-machines
-ms.subservice: vm-cannot-start-stop
 ms.topic: troubleshooting
 ms.tgt_pltfrm: na
 ms.workload: infrastructure-services

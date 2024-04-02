@@ -7,7 +7,6 @@ author: genlin
 manager: dcscontentpm
 tags: azure-resource-manager
 ms.service: virtual-machines
-ms.subservice: vm-troubleshooting-tools
 ms.collection: linux
 ms.topic: article
 ms.tgt_pltfrm: vm

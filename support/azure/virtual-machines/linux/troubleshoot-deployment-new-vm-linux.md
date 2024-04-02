@@ -9,7 +9,6 @@ manager: dcscontentpm
 tags: top-support-issue, azure-resource-manager
 ms.custom: sap:Cannot create a VM, linux-related-content
 ms.service: virtual-machines
-ms.subservice: vm-deploy
 ms.collection: linux
 ms.workload: na
 ms.tgt_pltfrm: vm-linux

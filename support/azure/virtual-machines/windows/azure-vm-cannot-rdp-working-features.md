@@ -4,7 +4,6 @@ description: Troubleshoot Azure VM cannot RDP - working on features.
 ms.date: 01/19/2024
 ms.reviewer: trmaier, v-weizhu
 ms.service: virtual-machines
-ms.subservice: vm-cannot-start-stop
 ms.collection: windows
 ms.custom: sap:My VM is not booting
 ---

@@ -4,7 +4,6 @@ description: Describes an issue with Ubuntu 16.04 kernel 4.4.0-75.
 ms.date: 07/21/2020
 ms.reviewer: 
 ms.service: virtual-machines
-ms.subservice: vm-common-errors-issues
 ms.custom: sap:VM Admin - Windows (Guest OS), linux-related-content
 ms.collection: linux
 ---

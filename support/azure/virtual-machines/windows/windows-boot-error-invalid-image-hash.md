@@ -8,7 +8,6 @@ manager: dcscontentpm
 tags: azure-resource-manager
 ms.custom: sap:My VM is not booting, devx-track-azurepowershell, devx-track-azurecli
 ms.service: virtual-machines
-ms.subservice: vm-cannot-start-stop
 ms.collection: windows
 ms.workload: na
 ms.tgt_pltfrm: vm-windows

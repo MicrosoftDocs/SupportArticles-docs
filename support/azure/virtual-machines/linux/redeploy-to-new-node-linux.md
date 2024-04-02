@@ -8,7 +8,6 @@ manager: dcscontentpm
 tags: azure-resource-manager,top-support-issue
 ms.custom: sap:VM Admin - Linux (Guest OS), devx-track-azurecli, linux-related-content
 ms.service: virtual-machines
-ms.subservice: vm-common-errors-issues
 ms.collection: linux
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-linux

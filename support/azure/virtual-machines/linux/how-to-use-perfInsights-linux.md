@@ -10,7 +10,6 @@ ms.custom: sap:VM Performance, linux-related-content
 ms.service: virtual-machines
 ms.collection: linux
 ms.workload: infrastructure-services
-ms.subservice: vm-performance
 ms.tgt_pltfrm: vm-linux
 ms.topic: troubleshooting
 ms.date: 08/07/2023

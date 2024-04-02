@@ -6,7 +6,6 @@ services: virtual-machines
 author: genlin
 manager: dcscontentpm
 ms.service: virtual-machines
-ms.subservice: vm-backup-restore
 ms.collection: windows
 ms.devlang: azurecli
 ms.custom: sap:VM Admin - Linux (Guest OS), devx-track-azurecli, linux-related-content

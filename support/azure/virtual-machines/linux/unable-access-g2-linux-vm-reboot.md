@@ -3,7 +3,6 @@ title: Unable to Access Generation 2 Linux VM after a reboot
 description: How to mitigate being locked out of Generation 2 Linux VM after a reboot.
 ms.date: 10/10/2020
 ms.service: virtual-machines
-ms.subservice: vm-cannot-start-stop
 ms.custom: sap:Cannot start or stop my VM, linux-related-content
 ms.collection: linux
 ms.author: genli

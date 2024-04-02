@@ -4,7 +4,6 @@ description: Review a reference table that describes the error codes for the VM 
 ms.date: 06/06/2022
 ms.reviewer: mimckitt, v-leedennis
 ms.service: virtual-machines
-ms.subservice: vm-troubleshooting-tools
 localization_priority: medium
 keywords:
 #Customer intent: As a customer, support agent, or third-party personnel with privileged access, I want to learn about VM Inspector error messages so that I can diagnose problems remotely on an Azure virtual machine.

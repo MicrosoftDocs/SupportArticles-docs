@@ -14,7 +14,6 @@ ms.devlang: azurecli
 ms.date: 01/11/2018
 ms.author: delhan
 ms.service: virtual-machines
-ms.subservice: vm-troubleshooting-tools
 ---
 
 # Use remote tools to troubleshoot Azure VM issues

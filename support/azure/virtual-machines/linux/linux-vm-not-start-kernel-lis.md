@@ -6,7 +6,6 @@ ms.author: genli
 author: genlin
 ms.reviewer: delhan, craigw
 ms.service: virtual-machines
-ms.subservice: vm-cannot-start-stop
 ms.custom: sap:My VM is not booting, linux-related-content
 ms.collection: linux
 ---

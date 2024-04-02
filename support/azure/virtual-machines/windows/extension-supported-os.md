@@ -4,7 +4,6 @@ description: Provides a list of operating systems that extensions can support.
 ms.date: 07/21/2020
 ms.reviewer: 
 ms.service: virtual-machines
-ms.subservice: vm-extensions-not-operating
 ms.custom: sap:VM Extensions not operating correctly
 ---
 # Azure Extension supported operating systems

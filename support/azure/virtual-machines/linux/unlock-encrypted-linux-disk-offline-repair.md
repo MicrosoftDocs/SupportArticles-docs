@@ -4,7 +4,6 @@ description: Describes how to repair a Linux VM that has an encrypted OS disk.
 services: virtual-machines
 ms.collection: linux
 ms.service: virtual-machines
-ms.subservice: vm-backup-restore
 author: genlin
 manager: dcscontentpm
 editor: v-jesits

@@ -4,7 +4,6 @@ description: Understand how to work around the unsupported in-place system upgra
 ms.date: 03/15/2024
 ms.reviewer: joscon, scotro, azurevmcptcic, maulikshah, v-weizhu
 ms.service: virtual-machines
-ms.subservice: vm-common-errors-issues
 ms.collection: windows
 ms.custom: sap:VM Admin - Windows (Guest OS)
 ---

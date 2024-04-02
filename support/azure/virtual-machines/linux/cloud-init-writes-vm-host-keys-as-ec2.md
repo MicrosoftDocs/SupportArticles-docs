@@ -4,7 +4,6 @@ description: This article describes an issue in which Cloud-init writes virtual 
 ms.date: 10/10/2020
 ms.custom: sap:VM Extensions not operating correctly
 ms.service: virtual-machines
-ms.subservice: vm-extensions-not-operating
 ms.collection: linux
 ms.author: genli
 author: genlin

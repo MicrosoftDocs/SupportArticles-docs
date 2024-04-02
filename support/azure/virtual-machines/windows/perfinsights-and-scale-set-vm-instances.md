@@ -4,7 +4,6 @@ description: Download, install, and run PerfInsights to troubleshoot problematic
 ms.date: 11/17/2021
 ms.reviewer: v-leedennis
 ms.service: virtual-machines
-ms.subservice: vm-performance
 ms.custom: sap:VM Performance, linux-related-content
 ---
 # PerfInsights and scale set VM instances

@@ -6,7 +6,6 @@ documentationCenter: ''
 author: genlin
 manager: dcscontentpm
 ms.service: virtual-machines
-ms.subservice: vm-disk
 ms.topic: troubleshooting
 ms.tgt_pltfrm: na
 ms.workload: infrastructure

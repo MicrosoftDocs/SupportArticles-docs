@@ -4,7 +4,6 @@ description: Troubleshoot RDP failures because of brute force attack in Microsof
 ms.date: 12/14/2020
 ms.reviewer: 
 ms.service: virtual-machines
-ms.subservice: vm-cannot-connect
 ms.collection: windows
 ms.custom: sap:Cannot connect to my VM
 ---

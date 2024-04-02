@@ -6,7 +6,6 @@ services: virtual-machines
 author: genlin
 manager: dcscontentpm
 ms.service: virtual-machines
-ms.subservice: vm-backup-restore
 ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows

@@ -5,7 +5,6 @@ services: virtual-machines, azure-resource-manager
 author: genlin
 tags: top-support-issue, azure-resource-manager
 ms.service: virtual-machines
-ms.subservice: vm-windows-activation
 ms.collection: windows
 ms.workload: na
 ms.tgt_pltfrm: vm-windows

@@ -8,7 +8,6 @@ manager: dcscontentpm
 tags: azure-resource-manager
 ms.custom: sap:Cannot connect to my VM, devx-track-azurepowershell
 ms.service: virtual-machines
-ms.subservice: vm-cannot-connect
 ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows

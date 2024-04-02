@@ -6,7 +6,6 @@ services: virtual-machines
 documentationCenter: ''
 author: genlin
 ms.service: virtual-machines
-ms.subservice: vm-cannot-start-stop
 ms.collection: windows
 ms.topic: troubleshooting-problem-resolution
 ms.tgt_pltfrm: vm-windows

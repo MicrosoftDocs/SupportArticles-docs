@@ -4,7 +4,6 @@ description: Discusses the support policy for Microsoft server software in a Mic
 ms.date: 04/03/2023
 ms.reviewer: drewm, coreysa
 ms.service: virtual-machines
-ms.subservice: vm-support-statements
 ms.collection: windows
 ms.custom: sap:VM Admin - Windows (Guest OS)
 ---

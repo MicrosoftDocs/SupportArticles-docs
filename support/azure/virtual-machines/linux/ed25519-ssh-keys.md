@@ -4,7 +4,6 @@ description: Describes an issue that prevents you from using Ed25519 SSH keys in
 ms.date: 07/21/2020
 ms.reviewer: 
 ms.service: virtual-machines
-ms.subservice: vm-deploy
 ms.custom: sap:Cannot create a VM, linux-related-content
 ms.collection: linux
 ---

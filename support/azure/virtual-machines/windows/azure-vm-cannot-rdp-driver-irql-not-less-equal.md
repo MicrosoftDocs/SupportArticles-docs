@@ -4,7 +4,6 @@ description: Troubleshoot Azure VM cannot RDP - driver IRQL not less or equal.
 ms.date: 12/16/2020
 ms.reviewer: 
 ms.service: virtual-machines
-ms.subservice: vm-cannot-start-stop
 ms.collection: windows
 ms.custom: sap:My VM is not booting
 ---

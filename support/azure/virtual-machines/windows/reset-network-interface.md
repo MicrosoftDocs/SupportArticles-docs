@@ -7,7 +7,6 @@ manager: dcscontentpm
 tags: top-support-issue, azure-resource-manager
 ms.custom: sap:Cannot connect to my VM, devx-track-azurepowershell
 ms.service: virtual-machines
-ms.subservice: vm-cannot-connect
 ms.collection: windows
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting

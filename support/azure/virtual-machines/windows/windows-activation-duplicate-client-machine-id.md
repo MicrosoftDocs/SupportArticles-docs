@@ -4,7 +4,6 @@ description: Provides a solution to a duplicate Client Machine ID issue that occ
 ms.date: 01/04/2024
 ms.reviewer: cwhitley, v-naqviadil, v-weizhu
 ms.service: virtual-machines
-ms.subservice: vm-windows-activation
 ms.custom: sap:Cannot activate my Windows VM
 ---
 # Windows activation - duplicate Client Machine ID

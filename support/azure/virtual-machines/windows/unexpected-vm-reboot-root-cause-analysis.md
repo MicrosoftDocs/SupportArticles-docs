@@ -3,7 +3,6 @@ title: Root Cause Analysis of unexpected Azure virtual machine reboots
 description: Describes how to determine root causes of unexpected Azure virtual machine reboots.
 services: virtual-machines
 ms.service: virtual-machines
-ms.subservice: vm-troubleshooting-tools
 ms.workload: infrastructure-services
 ms.topic: how-to
 ms.date: 11/17/2023

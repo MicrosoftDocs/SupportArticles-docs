@@ -4,7 +4,6 @@ description: Discusses a problem that occurs when an Azure Linux VM that's runni
 ms.date: 07/21/2020
 ms.reviewer: craigw, scotro, anandram, borisb
 ms.service: virtual-machines
-ms.subservice: vm-cannot-start-stop
 ms.custom: sap:My VM is not booting, linux-related-content
 ms.collection: linux
 ---

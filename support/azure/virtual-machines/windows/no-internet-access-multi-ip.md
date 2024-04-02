@@ -4,7 +4,6 @@ description: Fixes an issue in which Azure Windows virtual machines that have mu
 ms.date: 04/15/2022
 ms.reviewer: chadmat
 ms.service: virtual-machines
-ms.subservice: vm-cannot-connect
 ms.collection: windows
 ms.custom: sap:Cannot connect to my VM
 ---

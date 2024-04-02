@@ -9,7 +9,6 @@ manager: dcscontentpm
 tags: top-support-issue,azure-service-management,azure-resource-manager
 ms.custom: sap:Cannot connect to my VM, linux-related-content
 ms.service: virtual-machines
-ms.subservice: vm-cannot-connect
 
 ms.collection: linux
 ms.workload: infrastructure-services

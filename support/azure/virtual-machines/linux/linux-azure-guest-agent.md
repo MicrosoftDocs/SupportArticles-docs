@@ -4,7 +4,6 @@ description: Resolve issues with the Azure Linux Agent.
 services: virtual-machines
 ms.collection: linux
 ms.service: virtual-machines
-ms.subservice: vm-extensions-not-operating
 author: axelgMS
 manager: dcscontentpm
 ms.topic: troubleshooting

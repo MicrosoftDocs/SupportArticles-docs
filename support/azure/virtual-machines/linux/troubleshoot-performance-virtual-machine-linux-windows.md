@@ -8,7 +8,6 @@ manager: dcscontentpm
 tags: top-support-issue, azure-resource-manager
 ms.custom: sap:VM Performance, linux-related-content
 ms.service: virtual-machines
-ms.subservice: vm-performance
 ms.collection: windows
 ms.workload: na
 ms.tgt_pltfrm: vm-windows

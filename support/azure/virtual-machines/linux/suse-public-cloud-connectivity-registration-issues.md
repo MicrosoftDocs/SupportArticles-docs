@@ -7,7 +7,6 @@ ms.author: hokamath
 ms.reviewer: adelgadohell, mahuss, esanchezvela, scotro
 editor: v-jsitser
 ms.service: virtual-machines
-ms.subservice: vm-cannot-connect
 ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 keywords:
 #Customer intent: As a user who wants to set up an Azure virtual machine by using a SUSE Linux Enterprise Server image, I want establish an internet connection to the SUSE Subscription Management Tool repository so that I can successfully register the virtual machine.

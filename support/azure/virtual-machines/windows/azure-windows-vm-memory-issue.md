@@ -6,7 +6,6 @@ author: mukeshnandams
 ms.author: genli
 ms.reviewer: mnanda, mahuss
 ms.service: virtual-machines
-ms.subservice: vm-performance
 ms.collection: windows
 ms.custom: sap:VM Performance
 ---

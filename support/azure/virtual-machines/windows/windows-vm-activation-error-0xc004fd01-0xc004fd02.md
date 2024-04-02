@@ -2,7 +2,6 @@
 title: Windows VM activation error 0xC004FD01 or 0xC004FD02
 description: Provides a solution to the error 0xC004FD01 or 0xC004FD02 that occurs when you try to activate an Azure Windows virtual machine (VM).
 ms.service: virtual-machines
-ms.subservice: vm-windows-activation
 ms.collection: windows
 ms.date: 01/24/2024
 ms.reviewer: cwhitley, v-naqviadil, v-weizhu

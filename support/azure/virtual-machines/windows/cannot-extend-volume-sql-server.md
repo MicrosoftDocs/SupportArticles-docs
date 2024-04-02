@@ -4,7 +4,6 @@ description: Troubleshoot an issue that prevents you from extending the volume o
 ms.reviewer: kirangowda, shasankp, glimoli, clandis, tatec, v-leedennis
 ms.date: 12/12/2022
 ms.service: virtual-machines
-ms.subservice: vm-disk
 ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 
