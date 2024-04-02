@@ -5,6 +5,7 @@ author: tahoon
 ms.reviewer: tapanm
 ms.date: 06/24/2022
 ms.author: tahoon
+ms.custom: sap:Running Canvas App
 search.audienceType: 
   - maker
 search.app: 

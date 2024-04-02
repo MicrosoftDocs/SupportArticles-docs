@@ -10771,6 +10771,66 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "support/power-platform/power-apps/isolate-and-troubleshoot-common-issues/common-issues-and-resolutions.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/create-and-use-apps/common-issues-and-resolutions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-apps/isolate-and-troubleshoot-common-issues/isolate-canvas-app-issues.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/create-and-use-apps/isolate-canvas-app-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-apps/isolate-and-troubleshoot-common-issues/isolate-common-issues.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/create-and-use-apps/isolate-common-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-apps/isolate-and-troubleshoot-common-issues/isolate-model-app-issues.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/create-and-use-apps/isolate-model-app-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-apps/isolate-and-troubleshoot-common-issues/minimal-canvas-app-repro.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/create-and-use-apps/minimal-canvas-app-repro",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-apps/isolate-and-troubleshoot-common-issues/troubleshoot-canvas-app-date-time-issues.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/create-and-use-apps/troubleshoot-canvas-app-date-time-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-apps/isolate-and-troubleshoot-common-issues/troubleshooting-startup-issues.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/sign-in/troubleshooting-startup-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-apps/isolate-and-troubleshoot-common-issues/troubleshoot-model-driven-app-date-time-issues.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/create-and-use-apps/troubleshoot-model-driven-app-date-time-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-apps/isolate-and-troubleshoot-common-issues/troubleshoot-model-driven-app-lookup-issues.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/create-and-use-apps/troubleshoot-model-driven-app-lookup-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-apps/isolate-and-troubleshoot-common-issues/troubleshoot-power-query-issues.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/connections/troubleshoot-power-query-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-apps/isolate-and-troubleshoot-common-issues/vanilla-model-driven-app-repro.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/create-and-use-apps/vanilla-model-driven-app-repro",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-apps/manage-apps/dataverse-records-missing-required-fields.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/dataverse/dataverse-records-missing-required-fields",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/power-platform/ai-builder/the-training-document-is-not-displayed-on-the-form-processing-model-details-page.md",
       "redirect_url": "/troubleshoot/power-platform/ai-builder/power-automate/the-training-document-is-not-displayed-on-the-form-processing-model-details-page",
       "redirect_document_id": false

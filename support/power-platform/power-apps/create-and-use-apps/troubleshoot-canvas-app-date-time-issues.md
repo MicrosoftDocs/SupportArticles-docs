@@ -4,6 +4,7 @@ description: Helps troubleshoot date and time issues in Power Apps canvas apps.
 author: tahoon
 ms.date: 10/23/2023
 ms.author: tahoon
+ms.custom: sap:Running canvas app controls\Date picker
 search.audienceType: 
   - maker
 search.app: 

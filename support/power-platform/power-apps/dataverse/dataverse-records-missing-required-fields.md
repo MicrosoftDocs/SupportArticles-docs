@@ -2,7 +2,7 @@
 title: Required fields are missing in Dataverse records
 description: Describes an issue in which required fields are missing in Dataverse records that are created from third-party tools. Provide workarounds.
 ms.reviewer: squassina
-ms.topic: troubleshooting
+ms.custom: sap:Dataverse Web API and SDK
 ms.date: 06/18/2021
 author: squassina
 ms.author: risquass

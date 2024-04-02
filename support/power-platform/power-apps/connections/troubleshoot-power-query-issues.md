@@ -6,6 +6,7 @@ manager: kfile
 ms.component: cds
 ms.date: 05/16/2018
 ms.author: millopis
+ms.custom: sap:Connections\Dataflows
 search.audienceType: 
   - maker
 search.app: 
