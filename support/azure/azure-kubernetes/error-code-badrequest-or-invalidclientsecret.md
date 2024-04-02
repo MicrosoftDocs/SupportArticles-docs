@@ -8,7 +8,6 @@ editor: v-jsitser
 ms.reviewer: v-leedennis
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-create-operations
-ms.topic: troubleshooting-problem-resolution
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the BadRequest or InvalidClientSecret error code so that I can successfully create or upgrade an Azure Kubernetes Service (AKS) cluster.
 ---
 # AADSTS7000222 - BadRequest or InvalidClientSecret error

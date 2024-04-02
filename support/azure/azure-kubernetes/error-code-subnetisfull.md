@@ -8,7 +8,6 @@ editor: v-jsitser
 ms.reviewer: rissing, chiragpa, v-leedennis
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-scale-operations
-ms.topic: troubleshooting-problem-resolution
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the SubnetIsFull error code so that I can successfully scale an Azure Kubernetes Service (AKS) cluster.
 ---
 # Troubleshoot the SubnetIsFull error code

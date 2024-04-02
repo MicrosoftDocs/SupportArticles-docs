@@ -9,7 +9,6 @@ ms.subservice: vm-windows-activation
 ms.collection: windows
 ms.workload: na
 ms.tgt_pltfrm: vm-windows
-ms.topic: troubleshooting-problem-resolution
 ms.date: 03/14/2024
 ms.author: genli
 ms.reviewer: cwhitley, jusilver, v-naqviadil, v-leedennis, v-weizhu

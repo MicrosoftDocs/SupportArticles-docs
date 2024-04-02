@@ -5,6 +5,7 @@ ms.reviewer: jdaly
 ms.date: 08/21/2023
 author: swatimadhukargit
 ms.author: swatim
+ms.custom: sap:Working with Solutions\Solution import - Other errors
 ---
 # Concurrent solution operation failures
 
