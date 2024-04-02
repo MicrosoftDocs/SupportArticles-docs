@@ -14,6 +14,7 @@ ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
 ms.date: 05/05/2020
 ms.author: genli
+ms.custom: sap:My VM is not booting
 ---
 
 # Troubleshoot Windows stop error – directory service initialization failure

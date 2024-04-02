@@ -16,6 +16,7 @@ ms.devlang: azurecli
 ms.date: 11/22/2018
 ms.author: delhan
 
+ms.custom: sap:Cannot connect to my VM
 ---
 
 # Enable or disable a firewall rule on an Azure VM Guest OS

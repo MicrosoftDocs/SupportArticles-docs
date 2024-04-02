@@ -15,6 +15,7 @@ ms.topic: troubleshooting
 ms.date: 03/21/2022
 ms.author: genli
 
+ms.custom: sap:VM Performance
 ---
 # Azure Performance Diagnostics VM Extension for Windows
 

@@ -12,6 +12,7 @@ ms.workload: infrastructure-services
 ms.tgt_pltfrm: na
 ms.topic: troubleshooting
 ms.date: 11/04/2020
+ms.custom: sap:My VM is not booting
 ---
 
 # Windows stop error - 0x0000007E system thread exception not handled

@@ -6,6 +6,7 @@ ms.reviewer: jarrettr
 ms.service: virtual-machines
 ms.subservice: vm-cannot-start-stop
 ms.collection: windows
+ms.custom: sap:My VM is not booting
 ---
 # Boot error code 0xc0000011 on an Azure VM
 

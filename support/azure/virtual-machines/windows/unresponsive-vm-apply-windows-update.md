@@ -14,6 +14,7 @@ ms.tgt_pltfrm: na
 ms.topic: troubleshooting
 ms.date: 06/09/2023
 ms.author: genli
+ms.custom: sap:My VM is not booting
 ---
 
 # VM is unresponsive with "C01A001D" error after applying Windows Update

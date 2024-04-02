@@ -15,6 +15,7 @@ ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
 ms.date: 01/25/2021
 ms.author: genli
+ms.custom: sap:My VM is not booting
 ---
 
 # Azure VM stopped at "Please wait for the Group Policy Client" screen

@@ -13,6 +13,7 @@ ms.tgt_pltfrm: vm
 ms.workload: infrastructure-services
 ms.date: 08/20/2019
 ms.author: genli
+ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 
 # Enable and disable the Azure Serial Console

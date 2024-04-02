@@ -13,6 +13,7 @@ ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting-problem-resolution
 ms.date: 11/14/2023
 ms.author: genli
+ms.custom: sap:My VM is not booting
 ---
 
 # Troubleshoot boot error - disk read error occurred

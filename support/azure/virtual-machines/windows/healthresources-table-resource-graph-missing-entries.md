@@ -6,6 +6,7 @@ editor: v-jsitser
 ms.reviewer: macla, pudesira, v-leedennis
 ms.service: virtual-machines
 ms.subservice: vm-health
+ms.custom: sap:VM Performance
 ---
 # HealthResources table in Resource Graph has missing entries
 

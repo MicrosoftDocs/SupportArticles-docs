@@ -13,6 +13,7 @@ ms.date: 12/15/2023
 ms.author: genli
 ms.reviewer: clmendes
 
+ms.custom: sap:Received an Allocation Failure
 ---
 # Troubleshoot allocation failures when you create or resize VMs in Azure
 

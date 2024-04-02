@@ -6,6 +6,7 @@ ms.reviewer: mohak, genli, scotro, clandis, jamesca, nagag, rakkim
 ms.service: virtual-machines
 ms.subservice: vm-performance
 ms.collection: windows
+ms.custom: sap:VM Performance
 ---
 # Poor performance for VMs that run with an emulated mode storage stack on Windows Server 2012 R2
 

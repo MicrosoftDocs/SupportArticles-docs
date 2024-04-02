@@ -13,6 +13,7 @@ ms.workload: infrastructure-services
 ms.tgt_pltfrm: na
 ms.topic: troubleshooting
 ms.date: 06/15/2020
+ms.custom: sap:My VM is not booting
 ---
 
 # Azure VM is unresponsive while applying Security Policy to the system

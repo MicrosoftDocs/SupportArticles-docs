@@ -15,6 +15,7 @@ ms.tgt_pltfrm: vm-windows
 ms.devlang: azurecli
 ms.date: 07/29/2022
 ms.author: genli
+ms.custom: sap:Cannot connect to my VM
 ---
 
 # Azure virtual machine error: “You must change your password before logging on the first time”

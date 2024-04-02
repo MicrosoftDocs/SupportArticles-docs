@@ -15,6 +15,7 @@ ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
 ms.date: 09/24/2020
 ms.author: mnanda
+ms.custom: sap:VM Performance
 ---
 
 # Troubleshoot high-CPU issues on Azure Windows virtual machines

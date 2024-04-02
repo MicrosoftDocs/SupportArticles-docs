@@ -6,6 +6,7 @@ ms.service: virtual-machines
 ms.subservice: vm-windows-activation
 ms.collection: windows
 ms.reviewer: cwhitley, v-naqviadil, v-weizhu
+ms.custom: sap:Cannot activate my Windows VM
 ---
 # Error 0x800705B4 when you activate an Azure Windows virtual machine
 

@@ -14,6 +14,7 @@ ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
 ms.date: 08/01/2021
 ms.author: genli
+ms.custom: sap:My VM is not booting
 ---
 
 # Troubleshoot OS start up – Windows Update installation capacity

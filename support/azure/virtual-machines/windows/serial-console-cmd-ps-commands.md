@@ -14,6 +14,7 @@ ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure-services
 ms.date: 08/14/2018
 ms.author: genli
+ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 
 # Windows Commands - CMD and PowerShell

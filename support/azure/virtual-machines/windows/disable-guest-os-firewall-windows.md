@@ -16,6 +16,7 @@ ms.devlang: azurecli
 ms.date: 08/30/2021
 ms.author: genli
 
+ms.custom: sap:Cannot connect to my VM
 ---
 
 # Disable the guest OS Firewall in Azure VM

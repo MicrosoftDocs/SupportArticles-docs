@@ -14,6 +14,7 @@ ms.workload: infrastructure-services
 ms.date: 04/25/2019
 ms.author: genli
 
+ms.custom: sap:Cannot connect to my VM
 ---
 # Reset local Windows password for Azure VM offline
 

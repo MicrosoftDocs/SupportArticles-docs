@@ -6,6 +6,7 @@ ms.reviewer:
 ms.service: virtual-machines
 ms.subservice: vm-cannot-start-stop
 ms.collection: windows
+ms.custom: sap:Cannot start or stop my VM
 ---
 # How to start Azure Windows VM with Last Known Good Configuration
 

@@ -5,6 +5,7 @@ ms.date: 07/21/2020
 ms.reviewer: Ejarvi, devtiw, scotro
 ms.service: virtual-machines
 ms.subservice: vm-extensions-not-operating
+ms.custom: sap:Azure Disk Encryption (ADE) not operating correctly
 ---
 # Error when you try to enable Azure Disk Encryption: Extension version '2.2' is not supported
 

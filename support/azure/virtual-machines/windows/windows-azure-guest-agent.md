@@ -12,6 +12,7 @@ ms.date: 07/21/2023
 ms.author: kegregoi
 editor: v-jsitser
 ms.reviewer: v-leedennis, scotro
+ms.custom: sap:VM Extensions not operating correctly
 ---
 # Troubleshoot Azure Windows VM Agent issues
 

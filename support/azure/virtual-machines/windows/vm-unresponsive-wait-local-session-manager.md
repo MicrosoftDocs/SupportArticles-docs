@@ -12,6 +12,7 @@ ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
 ms.date: 10/22/2020
+ms.custom: sap:My VM is not booting
 ---
 
 # VM is unresponsive while waiting for the Local Session Manager service

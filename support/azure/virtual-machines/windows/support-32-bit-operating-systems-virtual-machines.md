@@ -14,6 +14,7 @@ ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
 ms.date: 04/25/2023
 ms.author: genli
+ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 
 # Support for 32-bit operating systems in Azure virtual machines

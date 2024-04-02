@@ -6,6 +6,7 @@ ms.reviewer: jarrettr, v-leedennis
 ms.service: virtual-machines
 ms.subservice: vm-cannot-start-stop
 ms.collection: windows
+ms.custom: sap:My VM is not booting
 ---
 # Boot error code 0xC000000F in an Azure VM
 

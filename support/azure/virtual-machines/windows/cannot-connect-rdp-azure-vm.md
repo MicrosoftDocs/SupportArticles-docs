@@ -6,6 +6,7 @@ ms.reviewer:
 ms.service: virtual-machines
 ms.subservice: vm-cannot-connect
 ms.collection: windows
+ms.custom: sap:Cannot connect to my VM
 ---
 # Troubleshoot authentication errors when you use RDP to connect to Azure VM
 

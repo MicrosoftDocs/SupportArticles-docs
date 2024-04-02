@@ -14,6 +14,7 @@ ms.tgt_pltfrm: vm
 ms.workload: infrastructure-services
 ms.date: 08/06/2019
 ms.author: genli
+ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 
 # Power Options available from the Azure Serial Console

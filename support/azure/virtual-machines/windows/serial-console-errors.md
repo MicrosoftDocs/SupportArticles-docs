@@ -13,6 +13,7 @@ ms.tgt_pltfrm: vm
 ms.workload: infrastructure-services
 ms.date: 07/26/2022
 ms.author: genli
+ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 
 # Common errors within the Azure Serial Console

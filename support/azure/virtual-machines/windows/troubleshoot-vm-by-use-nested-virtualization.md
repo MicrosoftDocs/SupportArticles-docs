@@ -15,6 +15,7 @@ ms.topic: article
 ms.date: 11/28/2023
 ms.author: glimoli
 ms.reviewer: v-weizhu, v-six, ekpathak, glimoli
+ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 # Troubleshoot a faulty Azure VM by using nested virtualization in Azure
 

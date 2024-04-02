@@ -6,6 +6,7 @@ ms.reviewer:
 ms.service: virtual-machines
 ms.subservice: vm-cannot-connect
 ms.collection: windows
+ms.custom: sap:Cannot connect to my VM
 ---
 
 # Cannot RDP into Azure VM because of a brute force attack

@@ -6,6 +6,7 @@ ms.reviewer: trmaier, v-weizhu
 ms.service: virtual-machines
 ms.subservice: vm-cannot-start-stop
 ms.collection: windows
+ms.custom: sap:My VM is not booting
 ---
 
 # Azure VM cannot RDP - working on features

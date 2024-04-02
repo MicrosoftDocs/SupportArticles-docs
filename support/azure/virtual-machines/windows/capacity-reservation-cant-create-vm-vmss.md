@@ -6,6 +6,7 @@ ms.reviewer:
 ms.service: virtual-machines
 ms.subservice: vm-capacity-reservation
 ms.collection: windows
+ms.custom: sap:Cannot create a VM
 ---
 
 # Can't create a Capacity Reservation

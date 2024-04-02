@@ -14,6 +14,7 @@ ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
 ms.date: 08/24/2020
 ms.author: genli
+ms.custom: sap:My VM is not booting
 ---
 
 # Windows stop error - 0x00000074 Bad System Config Info

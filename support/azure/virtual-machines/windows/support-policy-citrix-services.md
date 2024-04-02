@@ -5,6 +5,7 @@ ms.date: 07/21/2020
 ms.reviewer: 
 ms.service: virtual-machines
 ms.subservice: vm-support-statements
+ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 # Support policy for Citrix services on Azure
 

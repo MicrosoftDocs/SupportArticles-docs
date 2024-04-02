@@ -13,6 +13,7 @@ ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure
 ms.date: 12/12/2018
 ms.author: genli
+ms.custom: sap:My VM is not booting
 ---
 
 # Troubleshoot Azure Virtual Machines boot errors

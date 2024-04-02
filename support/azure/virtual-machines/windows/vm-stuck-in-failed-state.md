@@ -10,6 +10,7 @@ ms.subservice: vm-common-errors-issues
 ms.topic: troubleshooting
 ms.date: 03/26/2024
 ms.author: mimckitt
+ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 
 # Virtual machine stuck in a failed state

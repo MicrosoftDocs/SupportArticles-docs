@@ -7,6 +7,7 @@ ms.date: 07/16/2021
 ms.service: virtual-machines
 ms.subservice: vm-backup-restore
 ms.topic: troubleshooting
+ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 
 # Troubleshoot a Windows VM by attaching the OS disk to a repair VM through the Azure portal

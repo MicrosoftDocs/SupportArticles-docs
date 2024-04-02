@@ -13,6 +13,7 @@ ms.workload: na
 ms.tgt_pltfrm: vm-windows
 ms.reviewer: jarrettr, v-leedennis
 ms.date: 10/10/2023
+ms.custom: sap:My VM is not booting
 ---
 
 # Windows stop error - 0xC000021A Status System Process Terminated

@@ -16,6 +16,7 @@ ms.subservice: vm-cannot-connect
 ms.date: 10/31/2018
 ms.author: genli
 
+ms.custom: sap:Cannot connect to my VM
 ---
 # Troubleshoot application connectivity issues on virtual machines in Azure
 

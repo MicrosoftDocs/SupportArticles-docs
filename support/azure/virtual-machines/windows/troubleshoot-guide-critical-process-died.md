@@ -14,6 +14,7 @@ ms.workload: infrastructure-services
 ms.tgt_pltfrm: na
 ms.topic: troubleshooting
 ms.date: 11/01/2021
+ms.custom: sap:My VM is not booting
 ---
 
 # Windows Stop Error - #0x000000EF "Critical Process Died"

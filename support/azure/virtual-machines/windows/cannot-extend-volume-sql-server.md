@@ -5,6 +5,7 @@ ms.reviewer: kirangowda, shasankp, glimoli, clandis, tatec, v-leedennis
 ms.date: 12/12/2022
 ms.service: virtual-machines
 ms.subservice: vm-disk
+ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 
 # Can't extend the volume on a SQL Server-based standalone server virtual machine from Azure Marketplace

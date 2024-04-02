@@ -13,6 +13,7 @@ ms.workload: infrastructure-services
 ms.tgt_pltfrm: na
 ms.topic: troubleshooting
 ms.date: 07/26/2022
+ms.custom: sap:My VM is not booting
 ---
 
 # VM is unresponsive when applying Group Policy Local Users and Groups policy

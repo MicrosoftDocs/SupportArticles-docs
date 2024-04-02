@@ -14,6 +14,7 @@ ms.workload: infrastructure
 ms.date: 10/08/2023
 ms.author: genli
 ms.reviewer: v-weizhu
+ms.custom: sap:My VM is not booting
 ---
 
 # Windows reboot loop on an Azure VM

@@ -6,6 +6,7 @@ editor: v-jsitser
 ms.reviewer: kegregoi, axelg, scotro, v-leedennis
 ms.service: virtual-machines
 ms.subservice: vm-extensions-not-operating
+ms.custom: sap:VM Extensions not operating correctly
 ---
 # Multiple certificates on an Azure IaaS VM that uses extensions
 

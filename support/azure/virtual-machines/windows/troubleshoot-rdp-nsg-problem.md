@@ -14,6 +14,7 @@ ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure
 ms.date: 11/20/2018
 ms.author: genli
+ms.custom: sap:Cannot connect to my VM
 ---
 
 # Cannot connect remotely to a VM because RDP port is not enabled in NSG

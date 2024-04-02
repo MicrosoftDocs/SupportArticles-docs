@@ -13,6 +13,7 @@ ms.workload: infrastructure
 ms.date: 05/22/2017
 ms.author: xujing
 
+ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 # Understand common error messages when you manage virtual machines in Azure
 

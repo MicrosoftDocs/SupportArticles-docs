@@ -8,6 +8,7 @@ ms.service: virtual-machines
 ms.subservice: vm-common-errors-issues
 keywords:
 #Customer intent: As an Azure virtual machine (VM) user, I want to understand why my VM becomes unavailable so that the situation doesn't block me from working effectively.
+ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 # Azure virtual machine (VM) is unavailable for 15 minutes
 

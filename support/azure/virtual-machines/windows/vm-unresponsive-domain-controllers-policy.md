@@ -15,6 +15,7 @@ ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
 ms.date: 09/08/2020
 ms.author: genli
+ms.custom: sap:My VM is not booting
 ---
 
 # VM is unresponsive while applying default domain controllers policy

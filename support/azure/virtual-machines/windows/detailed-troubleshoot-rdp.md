@@ -16,6 +16,7 @@ ms.topic: troubleshooting
 ms.date: 03/08/2024
 ms.author: genli
 
+ms.custom: sap:Cannot connect to my VM
 ---
 # Detailed troubleshooting steps for remote desktop connection issues to Windows VMs in Azure
 

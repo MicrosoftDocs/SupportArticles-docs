@@ -13,6 +13,7 @@ ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure
 ms.date: 12/18/2023
 ms.author: genli
+ms.custom: sap:My VM is not booting
 ---
 
 # Windows shows blue screen error when booting an Azure VM

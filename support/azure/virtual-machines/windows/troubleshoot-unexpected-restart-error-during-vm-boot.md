@@ -13,6 +13,7 @@ ms.workload: na
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
 ms.date: 10/10/2023
+ms.custom: sap:My VM is not booting
 ---
 
 # OS start-up – Computer restarted unexpectedly or encountered an unexpected error

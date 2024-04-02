@@ -13,6 +13,7 @@ ms.topic: troubleshooting-problem-resolution
 ms.date: 03/14/2024
 ms.author: genli
 ms.reviewer: cwhitley, jusilver, v-naqviadil, v-leedennis, v-weizhu
+ms.custom: sap:Cannot activate my Windows VM
 ---
 # Troubleshoot Azure Windows virtual machine activation problems
 

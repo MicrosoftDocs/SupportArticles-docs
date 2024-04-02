@@ -13,6 +13,7 @@ ms.workload: infrastructure-services
 ms.tgt_pltfrm: na
 ms.topic: troubleshooting
 ms.date: 03/26/2020
+ms.custom: sap:My VM is not booting
 ---
 
 # Windows VM cannot boot due to Windows Boot Manager

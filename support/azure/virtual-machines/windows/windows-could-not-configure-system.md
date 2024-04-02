@@ -15,6 +15,7 @@ ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
 ms.date: 09/09/2020
 ms.author: genli
+ms.custom: sap:My VM is not booting
 ---
 
 # Troubleshoot Windows could not finish configuring the system

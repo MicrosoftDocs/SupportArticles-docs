@@ -14,6 +14,7 @@ ms.date: 11/08/2023
 editor: v-jsitser
 ms.reviewer: azurevmcptcic, v-leedennis
 ms.topic: troubleshooting-general
+ms.custom: sap:My VM is not booting
 ---
 
 # Troubleshoot Windows Boot Manager error  - 0xC0000225 "Status not found"

@@ -13,6 +13,7 @@ ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure
 ms.date: 11/12/2018
 ms.author: genli
+ms.custom: sap:Cannot connect to my VM
 ---
 
 # Cannot remote desktop to a VM because the network interface is disabled

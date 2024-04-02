@@ -16,6 +16,7 @@ ms.topic: troubleshooting
 ms.date: 08/07/2023
 ms.author: anandh
 
+ms.custom: sap:VM Performance
 ---
 # Performance diagnostics for Azure virtual machines
 

@@ -6,6 +6,7 @@ editor: v-jsitser
 ms.reviewer: meijin, danielli, scotro, v-leedennis
 ms.service: virtual-machines
 ms.subservice: vm-windows-activation
+ms.custom: sap:Cannot activate my Windows VM
 ---
 # Windows Virtual Machine activation no longer works in Azure
 

@@ -6,6 +6,7 @@ ms.reviewer: jarrettr
 ms.service: virtual-machines
 ms.subservice: vm-cannot-start-stop
 ms.collection: windows
+ms.custom: sap:My VM is not booting
 ---
 # Windows boot error 0xc0000359 in an Azure VM
 

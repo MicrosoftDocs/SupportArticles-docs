@@ -8,6 +8,7 @@ ms.subservice: vm-disk
 ms.collection: windows
 ms.topic: troubleshooting
 title: Cannot extend an encrypted OS volume in Windows
+ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 
 # Cannot extend an encrypted OS volume in Windows

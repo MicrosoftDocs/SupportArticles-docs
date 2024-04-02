@@ -6,6 +6,7 @@ ms.reviewer: chadmat
 ms.service: virtual-machines
 ms.subservice: vm-cannot-connect
 ms.collection: windows
+ms.custom: sap:Cannot connect to my VM
 ---
 # No Internet access from Azure Windows VM that has multiple IP addresses
 

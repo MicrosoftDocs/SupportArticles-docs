@@ -8,6 +8,7 @@ ms.reviewer: mnanda, mahuss
 ms.service: virtual-machines
 ms.subservice: vm-performance
 ms.collection: windows
+ms.custom: sap:VM Performance
 ---
 
 # Troubleshoot high memory issues on Azure Windows virtual machines

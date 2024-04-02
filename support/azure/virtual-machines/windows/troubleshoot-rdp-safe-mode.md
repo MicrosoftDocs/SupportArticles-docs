@@ -13,6 +13,7 @@ ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure
 ms.date: 11/13/2018
 ms.author: genli
+ms.custom: sap:Cannot connect to my VM
 ---
 
 # Cannot RDP to a VM because the VM boots into Safe Mode

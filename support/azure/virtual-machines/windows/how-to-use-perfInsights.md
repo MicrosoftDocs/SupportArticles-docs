@@ -15,6 +15,7 @@ ms.topic: troubleshooting
 ms.date: 11/10/2021
 ms.author: genli
 
+ms.custom: sap:VM Performance
 ---
 # How to use PerfInsights in Azure
 

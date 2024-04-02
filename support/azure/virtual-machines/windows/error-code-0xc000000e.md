@@ -6,6 +6,7 @@ ms.reviewer: jarrettr
 ms.service: virtual-machines
 ms.subservice: vm-cannot-start-stop
 ms.collection: windows
+ms.custom: sap:My VM is not booting
 ---
 # Winload.exe error code 0xc000000e on an Azure VM
 

@@ -14,6 +14,7 @@ ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure
 ms.date: 11/19/2018
 ms.author: genli
+ms.custom: sap:Cannot connect to my VM
 ---
 
 # Cannot connect remotely to a Windows 10 or Windows Server 2016 VM in Azure because of netvsc.sys

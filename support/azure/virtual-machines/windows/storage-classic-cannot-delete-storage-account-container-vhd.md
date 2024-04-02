@@ -9,6 +9,7 @@ ms.subservice: vm-disk
 ms.topic: troubleshooting
 ms.date: 01/11/2019
 ms.author: annayak
+ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 # Troubleshoot classic storage resource deletion errors
 

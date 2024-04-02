@@ -6,6 +6,7 @@ ms.reviewer:
 ms.service: virtual-machines
 ms.subservice: vm-common-errors-issues
 ms.collection: windows
+ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 # Computer names of specialized virtual machines are missing or blank in Azure
 

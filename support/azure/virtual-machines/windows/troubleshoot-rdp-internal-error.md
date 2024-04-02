@@ -13,6 +13,7 @@ ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure
 ms.date: 02/23/2020
 ms.author: genli
+ms.custom: sap:Cannot connect to my VM
 ---
 
 # An internal error occurs when you try to connect to an Azure VM through Remote Desktop

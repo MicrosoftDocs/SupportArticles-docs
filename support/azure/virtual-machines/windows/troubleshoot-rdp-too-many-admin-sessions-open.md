@@ -14,6 +14,7 @@ ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure
 ms.date: 09/16/2021
 ms.author: genli
+ms.custom: sap:Cannot connect to my VM
 ---
 
 # Too many admin sessions open error when you try to connect to an Azure Windows VM

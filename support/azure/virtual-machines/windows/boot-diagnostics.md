@@ -10,6 +10,7 @@ ms.subservice: vm-cannot-start-stop
 ms.topic: troubleshooting
 ms.date: 05/17/2022
 ms.author: genli
+ms.custom: sap:My VM is not booting
 ---
 
 # How to use boot diagnostics to troubleshoot virtual machines in Azure

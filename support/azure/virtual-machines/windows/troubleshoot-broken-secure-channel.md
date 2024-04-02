@@ -15,6 +15,7 @@ ms.topic: troubleshooting
 ms.date: 09/03/2021
 ms.author: tibasham
 
+ms.custom: sap:Cannot connect to my VM
 ---
 
 # Troubleshoot a failed trust relationship in an Azure Windows VM

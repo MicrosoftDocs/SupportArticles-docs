@@ -6,6 +6,7 @@ ms.reviewer: joscon, scotro, azurevmcptcic, maulikshah, v-weizhu
 ms.service: virtual-machines
 ms.subservice: vm-common-errors-issues
 ms.collection: windows
+ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 # In-place upgrade for supported VMs running Windows in Azure
 

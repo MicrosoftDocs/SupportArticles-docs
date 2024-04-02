@@ -7,6 +7,7 @@ ms.subservice: vm-support-statements
 ms.author: genli
 author: genlin
 ms.reviewer: 
+ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 # [SDP3][52ef8720-e3ee-4a12-a37e-cc3b0870f359] Microsoft Azure PaaS VM logs
 

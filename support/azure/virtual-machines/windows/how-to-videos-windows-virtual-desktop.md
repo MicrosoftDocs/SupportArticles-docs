@@ -7,6 +7,7 @@ ms.subservice: vm-support-statements
 ms.author: genli
 author: genlin
 ms.reviewer: 
+ms.custom: sap:Issue with Azure Virtual Desktop
 ---
 # How-to videos about Azure Virtual Desktop
 

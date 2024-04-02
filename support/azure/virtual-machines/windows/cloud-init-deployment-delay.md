@@ -6,6 +6,7 @@ ms.service: virtual-machines
 ms.subservice: vm-deploy
 ms.date: 02/03/2022
 ms.reviewer: srijangupta, v-leedennis
+ms.custom: sap:Cannot create a VM
 ---
 # Cloud–init-enabled VM takes a long time to start up
 
