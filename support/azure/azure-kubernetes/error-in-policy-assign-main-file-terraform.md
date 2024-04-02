@@ -6,13 +6,13 @@ ms.reviewer: chiragpa, andbar, haitch, v-leedennis
 ms.service: azure-kubernetes-service
 ms.subservice: common-issues
 ---
-# Error in policy-assignments in main.tf file at Terraform
+# "Policy definition not found" during policy-assignments at Terraform
 
-This article provides a solution to an error encountered during policy assignment.
+This article provides a solution to the "Policy definition not found" error encountered during policy assignment at Terraform.
 
 ## Symptoms
 
-You receive an error in the policy-assignments at terraform:
+You receive the "policy definition not found " error in the policy-assignments that configured in main.tf file at terraform:
 
 ```
 resource "azurerm_policy_assignment" "kubernetes" {
@@ -20,7 +20,7 @@ resource "azurerm_policy_assignment" "kubernetes" {
   scope                = var.cust_scope
   policy_definition_id = var.kubernetes_policyset_id
   description          = "Assignment of the Kubernetes to subscription."
-  display_name         = "Kubernetes-custom-Intiative-test01"
+  display_name         = "Kubernetes-custom-Initiative-test01"
 }
 
 ```
@@ -31,7 +31,7 @@ The error occurs when the policy assignment references the policy initiative def
 
 ## Solution
 
-In your Terraform configuration, include a `depends_on' parameter within the policy assignment resource as the following sample. This ensures the policy assignment is generated only subsequent to the creation of the policy set definition. 
+In your Terraform configuration, include a 'depends_on' parameter within the policy assignment resource as the following sample. This ensures the policy assignment is generated only subsequent to the creation of the policy set definition. 
 
 ```
 resource "azurerm_policy_assignment" "kubernetes" {
@@ -39,7 +39,7 @@ resource "azurerm_policy_assignment" "kubernetes" {
   scope                = var.cust_scope
   policy_definition_id = var.kubernetes_policyset_id
   description          = "Assignment of the Kubernetes to subscription."
-  display_name         = "Kubernetes-custom-Intiative-test01"
+  display_name         = "Kubernetes-custom-Initiative-test01"
   depends_on = [azurerm_policy_definition.policies]
 }
 ```
