@@ -3378,7 +3378,7 @@
     {
       "source_path": "support/azure/azure-monitor/index.yml",
       "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/azure/virtual-machines/rdp.md",

@@ -5,7 +5,7 @@ ms.date: 05/22/2020
 ms.reviewer: willfid
 ms.service: entra-id
 ms.subservice: domain-services
-ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
+ms.custom: has-azure-ad-ps-ref
 ---
 # Can't delete a directory through the Azure Management Portal
 
