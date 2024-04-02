@@ -197,6 +197,8 @@ To resolve this issue, compress the 64-bit inode numbers to 32 bits by using the
 
 Alternatively, you can set the module parameter by adding the following line to `/etc/modprobe.d/nfs.conf` and then rebooting the VM: `options nfs enable_ino64=0`.
 
+You can also persist this kernel boot option in the grub.conf file. Consult the documentation for your Linux distribution for more information.
+
 ## Need help?
 
 If you still need help, [contact support](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade) to get your problem resolved quickly.
