@@ -1,5 +1,5 @@
 ---
-title: Intermittent connection errors when adding a node in SQL Server
+title: Intermittent connection errors when adding a node
 description: This article helps you resolve the problem of intermittent connection errors in SQL Server when a new node is added to the Always On environment.
 ms.date: 04/01/2024
 author: prmadhes-msft

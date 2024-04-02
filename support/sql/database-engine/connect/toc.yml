@@ -12,7 +12,7 @@ items:
 - name: Existing connection forcibly closed
   href: tls-exist-connection-closed.md
   items:
-  - name: Client machine can't connect to SQL Server by using SQL authentication
+  - name: Client machine can't connect to SQL Server using SQL authentication
     href: client-machine-cannot-connect-to-sqlserver.md
   - name: Connection to the linked server failed
     href: connection-to-linked-server-failed.md
@@ -20,9 +20,9 @@ items:
     href: sql-server-faces-connectivity-issue-ssispack-fail.md
   - name: SQL Server Agent fails to start due to TLS issues
     href: unable-to-start-sql-agent.md
-  - name: Intermittent connection errors occur when a new node is added in SQL Server
+  - name: Intermittent connection errors occur when a new node is added
     href: intermittent-connection-errors-when-a-new-node-is-added.md
-  - name: A linked server couldn't be created after migrating on-premises server to Azure
+  - name: Linked server couldn't be created after migrating on-premises server to Azure
     href: linked-server-cannot-be-created.md
   - name: Issues in connection after implementing cipher suite policies on a server
     href: issues-connection-after-implementing-cipher-suite-policies.md
