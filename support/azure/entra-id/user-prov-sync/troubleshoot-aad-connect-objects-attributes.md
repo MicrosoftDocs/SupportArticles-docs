@@ -6,7 +6,7 @@ ms.reviewer: nualex
 editor: v-jesits
 ms.service: entra-id
 ms.subservice: users
-ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
+ms.custom: has-azure-ad-ps-ref
 ---
 
 # End-to-end troubleshooting of Microsoft Entra Connect objects and attributes
