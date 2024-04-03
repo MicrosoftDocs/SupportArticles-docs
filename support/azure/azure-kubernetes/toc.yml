@@ -49,7 +49,7 @@
       href: create-upgrade-delete/windows-cse-error-check-api-server-connectivity.md
     - name: ZonalAllocationFailed, AllocationFailed, or OverconstrainedAllocationRequest error
       href: create-upgrade-delete/error-code-zonalallocationfailed-allocationfailed.md
-    - name："Quota exceeded" error during creation or upgrade
+    - name: Quota exceeded error during creation or upgrade
       href: create-upgrade-delete/quota-exceeded-during-creation-upgrade.md
   - name: Upgrade operations
     items:
