@@ -4,8 +4,8 @@ description: Fixes an issue that triggers Boot or BCD error 0xc0000034 when you 
 ms.date: 10/20/2023
 ms.reviewer: jarrettr
 ms.service: virtual-machines
-ms.subservice: vm-cannot-start-stop
 ms.collection: windows
+ms.custom: sap:My VM is not booting
 ---
 # Windows boot error 0xc0000034 on an Azure VM
 

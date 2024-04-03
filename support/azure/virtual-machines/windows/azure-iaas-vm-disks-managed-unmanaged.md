@@ -4,8 +4,8 @@ description: This article answers some frequently asked questions about Azure Ma
 ms.date: 08/24/2021
 ms.reviewer: 
 ms.service: virtual-machines
-ms.subservice: vm-support-statements
 ms.collection: windows
+ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 
 # FAQs for Azure Disks

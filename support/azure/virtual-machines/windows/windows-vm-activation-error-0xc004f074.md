@@ -3,7 +3,7 @@ title: Error 0xC004F074 No Key Management Service (KMS) could be contacted
 description: Learn how to resolve the 0xC004F074 error scenario that occurs when you try to activate an Azure Windows virtual machine (VM).
 ms.date: 02/15/2024
 ms.service: virtual-machines
-ms.subservice: vm-windows-activation
+ms.custom: sap:Cannot activate my Windows VM
 ms.collection: windows
 author: naqviadilmicrosoft
 ms.author: v-naqviadil

@@ -7,9 +7,8 @@ author: malachma
 manager: noambi
 editor: v-jsitser
 tags: virtual-machines
-ms.custom: linux-related-content
+ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 ms.service: virtual-machines
-ms.subservice: vm-backup-restore
 ms.topic: troubleshooting
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux

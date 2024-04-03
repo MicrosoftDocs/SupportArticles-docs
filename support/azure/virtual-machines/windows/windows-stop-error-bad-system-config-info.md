@@ -7,13 +7,13 @@ author: genlin
 manager: dcscontentpm
 tags: azure-resource-manager
 ms.service: virtual-machines
-ms.subservice: vm-cannot-start-stop
 ms.collection: windows
 ms.workload: na
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
 ms.date: 08/24/2020
 ms.author: genli
+ms.custom: sap:My VM is not booting
 ---
 
 # Windows stop error - 0x00000074 Bad System Config Info

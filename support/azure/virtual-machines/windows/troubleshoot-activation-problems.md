@@ -5,13 +5,13 @@ services: virtual-machines, azure-resource-manager
 author: genlin
 tags: top-support-issue, azure-resource-manager
 ms.service: virtual-machines
-ms.subservice: vm-windows-activation
 ms.collection: windows
 ms.workload: na
 ms.tgt_pltfrm: vm-windows
 ms.date: 03/14/2024
 ms.author: genli
 ms.reviewer: cwhitley, jusilver, v-naqviadil, v-leedennis, v-weizhu
+ms.custom: sap:Cannot activate my Windows VM
 ---
 # Troubleshoot Azure Windows virtual machine activation problems
 
