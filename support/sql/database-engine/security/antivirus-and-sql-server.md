@@ -1,10 +1,10 @@
 ---
 title: Configure antivirus software to work with SQL Server
-description: This article describes how to use antivirus software with SQL Server.
+description: This article describes how to configure antivirus software on computers running SQL Server.
 author: pijocoder
 ms.author: jopilov
 ms.reviewer: jopilov
-ms.date: 04/01/2024
+ms.date: 04/03/2024
 ms.custom: sap:Security Issues
 ---
 
@@ -186,6 +186,8 @@ The DBCC CHECKDB files use the following format:
 These are temporary files. For more information, see [Internal database snapshot](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql#how-dbcc-checkdb-creates-an-internal-snapshot-database-beginning-with-sql-server-2014).
 
 #### Replication
+
+The following table contains the Replication executables and server-side COM objects. The `DBCC CHECKDB` command creates temporary files for the duration of the `DBCC` command after which they get removed automatically.
 
 - Replication executables and server-side COM objects
 
