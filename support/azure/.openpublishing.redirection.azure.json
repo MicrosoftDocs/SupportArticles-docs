@@ -2889,6 +2889,11 @@
         "source_path": "azure-storage/blobs/copy-blobs-between-storage-accounts-network-restriction.md",
         "redirect_url": "/troubleshoot/azure/blobs/connectivity/copy-blobs-between-storage-accounts-network-restriction",
         "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/blobs/welcome-blob-storage.yml",
+        "redirect_url": "/troubleshoot/azure/blobs/welcome-blob-storage",
+        "redirect_document_id": true
       }
   ]
 }

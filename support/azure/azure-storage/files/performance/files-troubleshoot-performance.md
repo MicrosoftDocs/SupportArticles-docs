@@ -384,4 +384,4 @@ To confirm, you can use Azure Metrics in the portal.
 - [Overview of alerts in Microsoft Azure](/azure/azure-monitor/alerts/alerts-overview)
 - [Azure Files FAQ](/azure/storage/files/storage-files-faq)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
