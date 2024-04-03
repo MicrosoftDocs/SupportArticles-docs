@@ -32,4 +32,4 @@ You tried to delete the AKS cluster while its associated route table was still i
 
 Remove the associated subnet in the route table. For instructions, see [Dissociate a route table from a subnet](/azure/virtual-network/manage-route-table#dissociate-a-route-table-from-a-subnet). Then, try again to delete the AKS cluster.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

@@ -142,6 +142,6 @@ If you feel that the application is configured correctly, and you do need more S
 
 1. [Increase the ports per node for your AKS worker nodes](/azure/aks/load-balancer-standard#configure-the-allocated-outbound-ports).
 
-[!INCLUDE [Third-party contact disclaimer](../../includes/third-party-contact-disclaimer.md)]
+[!INCLUDE [Third-party contact disclaimer](../../../includes/third-party-contact-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

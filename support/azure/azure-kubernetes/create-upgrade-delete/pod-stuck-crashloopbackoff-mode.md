@@ -70,6 +70,6 @@ If a pod has a `CrashLoopBackOff` status, then the pod probably failed or exited
 
 If you don't recognize the issue after you create more pods on the node, then run a pod on a single node to determine how many resources the pod actually uses.
 
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

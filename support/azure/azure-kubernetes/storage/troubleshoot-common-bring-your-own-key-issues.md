@@ -60,7 +60,7 @@ Update the security policy settings again by running the [az keyvault set-policy
 
 - [Bring your own keys (BYOK) with Azure disks in Azure Kubernetes Service (AKS)](/azure/aks/azure-disk-customer-managed-keys)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
 
 [az-keyvault-create]: /cli/azure/keyvault#az-keyvault-create
 [create-key-vault-instance]: /azure/aks/azure-disk-customer-managed-keys#create-an-azure-key-vault-instance

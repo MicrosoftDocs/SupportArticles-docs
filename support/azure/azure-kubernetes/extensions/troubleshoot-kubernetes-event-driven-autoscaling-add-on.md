@@ -125,9 +125,9 @@ If you're using [Microsoft Entra Workload ID](/azure/aks/workload-identity-overv
      ```
      If the variables have been successfully injected, you should see values for `AZURE_TENANT_ID`, `AZURE_FEDERATED_TOKEN_FILE`, and `AZURE_AUTHORITY_HOST` in the **Environment** section.
 
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
 
 [aks-firewall-requirements]: /azure/aks/limit-egress-traffic#azure-global-required-network-rules
 [keda-troubleshooting]: https://keda.sh/docs/latest/troubleshooting/

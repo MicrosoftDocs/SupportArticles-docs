@@ -138,4 +138,4 @@ You can also filter by operations to find out that the throttled operation is "N
 
 You can use the AKS preview feature [Node IP-based Load Balancer](/azure/aks/load-balancer-standard#change-the-inbound-pool-type-preview) to reduce this throttle.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

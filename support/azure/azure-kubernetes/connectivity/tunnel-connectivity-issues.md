@@ -249,6 +249,6 @@ If everything is OK within the application, you'll have to adjust the allocated 
 
 You can set up a new cluster to use a Managed Network Address Translation (NAT) Gateway for outbound connections. For more information, see [Create an AKS cluster with a Managed NAT Gateway](/azure/aks/nat-gateway#create-an-aks-cluster-with-a-managed-nat-gateway).
 
-[!INCLUDE [Third-party contact disclaimer](../../includes/third-party-contact-disclaimer.md)]
+[!INCLUDE [Third-party contact disclaimer](../../../includes/third-party-contact-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

@@ -57,4 +57,4 @@ Run `az --version` to verify the version. To install the latest version of the A
     kubectl cp azure-vote-front-848767080-tf34m:/capture.cap capture.cap
     ```
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

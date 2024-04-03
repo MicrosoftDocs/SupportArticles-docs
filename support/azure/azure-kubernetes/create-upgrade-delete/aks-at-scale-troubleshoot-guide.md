@@ -128,9 +128,9 @@ After your cluster is created, you can also provision an internal load balancer 
 
 SLB back-end pool updates are a known performance bottleneck. We're working on a new capability that will allow you to run load balanced services at scale with considerably faster performance for create, update, and delete operations. To send us your feedback, see [Azure Kubernetes support for load balancer with IP-based back-end pool][AK Support for Load balancer with IP-based back-end pool].
 
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
 
 [CNI plug-in]: /azure/aks/configure-azure-cni
 [regional compute quota]: /azure/quotas/regional-quota-requests

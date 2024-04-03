@@ -140,9 +140,9 @@ To accept the legal terms through PowerShell, run the cmdlets that are described
 
 [Troubleshoot errors when deploying AKS cluster extensions](cluster-extension-deployment-errors.md)
 
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
 
 [azure-portal]: https://portal.azure.com
 

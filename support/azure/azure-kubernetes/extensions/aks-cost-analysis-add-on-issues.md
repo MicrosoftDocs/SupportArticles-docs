@@ -89,6 +89,6 @@ az aks update --resource-group <my-resource-group> --name <my-aks-cluster> --tie
 
 For more information, see [Free and Standard pricing tiers for AKS cluster management](/azure/aks/free-standard-pricing-tiers).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
 
 [aks-update]: /cli/azure/aks#az-aks-update

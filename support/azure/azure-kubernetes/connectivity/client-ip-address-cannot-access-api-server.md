@@ -61,4 +61,4 @@ Look at the cluster's API server-authorized ranges, and add your client's IP add
         --api-server-authorized-ip-ranges <ip-ranges-that-include-your-client-ip-address>
     ```
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

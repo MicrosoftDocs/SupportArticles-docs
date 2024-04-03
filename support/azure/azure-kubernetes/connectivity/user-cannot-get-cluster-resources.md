@@ -43,4 +43,4 @@ If AKS manages integration with Microsoft Entra ID, the user might not have the 
 
 Make sure the security group's administrator has given your account an Active  or Conditional Access assignment. See [AKS-managed Microsoft Entra integration](/azure/aks/managed-aad). This article has instructions for setting either [Active assignment](/azure/aks/managed-aad#configure-just-in-time-cluster-access-with-azure-ad-and-aks) or [Conditional Access assignment](/azure/aks/managed-aad#use-conditional-access-with-azure-ad-and-aks).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

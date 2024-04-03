@@ -382,4 +382,4 @@ After you add the route, test the connectivity by using the `nc` or `telnet` com
 
 If the mounting operation succeeds, we recommend that you consult your networking team to make sure that the Virtual Appliance can allow traffic between the AKS cluster and the storage account on ports 111 and 2048.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

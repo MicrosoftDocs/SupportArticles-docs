@@ -10,7 +10,7 @@ ms.custom: sap:Extensions, Policies and Add-Ons, devx-track-azurecli
 ---
 # Fail to pull images from Azure Container Registry to Azure Kubernetes Service cluster
 
-[!INCLUDE [Feedback](../../includes/feedback.md)]
+[!INCLUDE [Feedback](../../../includes/feedback.md)]
 
 When you're using Microsoft Azure Container Registry together with Azure Kubernetes Service (AKS), an authentication mechanism must be established. You can set up the AKS to Container Registry integration by using a few simple Azure CLI or Azure PowerShell commands. This integration assigns the [AcrPull role](/azure/role-based-access-control/built-in-roles#acrpull) for the kubelet identity that's associated with the AKS cluster to pull images from a container registry.
 
@@ -332,9 +332,9 @@ If the troubleshooting guidance in this article doesn't help you resolve the iss
 
 - If a virtual appliance like a firewall controls the traffic between subnets, check the firewall and [Firewall access rules](/azure/container-registry/container-registry-firewall-access-rules).
 
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
 
 [cause1-solution1]: #solution-1-make-sure-acrpull-role-assignment-is-created-for-identity
 [cause1-solution2]: #solution-2-make-sure-service-principal-isnt-expired

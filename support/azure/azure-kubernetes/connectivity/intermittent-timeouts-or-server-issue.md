@@ -179,4 +179,4 @@ You can remove the memory limit and monitor the application to determine how muc
 
 For more information about how to plan resources for workloads in Azure Kubernetes Service, see [resource management best practices](/azure/aks/developer-best-practices-resource-management).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

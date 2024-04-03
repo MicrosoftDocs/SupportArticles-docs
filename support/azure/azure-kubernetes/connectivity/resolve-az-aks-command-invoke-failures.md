@@ -108,6 +108,6 @@ In Cloud Shell, run the [az login](/cli/azure/reference-index#az-login) command 
 
 Run the `az aks command invoke` command on a local computer or any virtual machine (VM) that has Azure CLI installed.
 
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

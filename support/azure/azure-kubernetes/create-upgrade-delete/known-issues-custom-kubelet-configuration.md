@@ -54,4 +54,4 @@ This issue occurs if you try to apply the custom OS configuration on a Windows n
 
 Apply the custom OS configuration at the cluster level or node pool level for a Linux node pool. To check whether the custom node configuration is in use, see [Confirm settings have been applied](/azure/aks/custom-node-configuration#confirm-settings-have-been-applied).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

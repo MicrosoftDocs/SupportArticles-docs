@@ -34,6 +34,6 @@ When you run the [kubectl get](https://kubernetes.io/docs/reference/generated/ku
 
 Force delete the non-running pod so that it restarts.
 
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

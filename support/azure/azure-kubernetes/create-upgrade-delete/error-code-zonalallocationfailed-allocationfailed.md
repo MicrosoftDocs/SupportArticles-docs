@@ -81,4 +81,4 @@ If you receive an `OverconstrainedAllocationRequest` error code, you can also tr
 
 - [Fix an AllocationFailed or ZonalAllocationFailed error when you create, restart, or resize Virtual Machine Scale Sets in Azure](../virtual-machine-scale-sets/allocationfailed-or-zonalallocationfailed.md)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

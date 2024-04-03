@@ -284,6 +284,6 @@ If you receive a `Connection Timed Out` error message, check the network securit
 
 For more information about how to troubleshoot ingress (such as Nginx Ingress), see [ingress-nginx troubleshooting](https://github.com/kubernetes/ingress-nginx/blob/main/docs/troubleshooting.md).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
 
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-contact-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-contact-disclaimer.md)]

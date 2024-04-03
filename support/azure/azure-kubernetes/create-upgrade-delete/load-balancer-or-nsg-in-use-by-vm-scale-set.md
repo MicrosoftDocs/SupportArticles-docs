@@ -46,4 +46,4 @@ You tried to delete an AKS cluster while the virtual machine scale set was still
 
 Remove all public IP addresses that are associated with the subnet, and remove the NSG that's used by the subnet. For more information, see [Delete the front-end IP configuration used by the virtual machine scale set](/azure/load-balancer/update-load-balancer-with-vm-scale-set#delete-the-front-end-ip-configuration-used-by-the-virtual-machine-scale-set).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

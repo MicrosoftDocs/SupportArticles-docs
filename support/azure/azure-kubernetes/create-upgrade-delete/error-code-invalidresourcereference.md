@@ -65,4 +65,4 @@ Rerun the `az aks update` command with the `load-balancer-outbound-ips` paramete
 
 [General troubleshooting of AKS cluster creation issues](troubleshoot-aks-cluster-creation-issues.md)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

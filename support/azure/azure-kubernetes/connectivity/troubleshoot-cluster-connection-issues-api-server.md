@@ -67,4 +67,4 @@ You can take these common troubleshooting steps to check the connectivity to the
 
 For other common troubleshooting steps, see [I'm receiving TCP timeouts when using kubectl or other third-party tools connecting to the API server](/azure/aks/troubleshooting#im-receiving-tcp-timeouts-when-using-kubectl-or-other-third-party-tools-connecting-to-the-api-server).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

@@ -350,8 +350,8 @@ The number of requests exceeds the stated maximum for the timeframe, as indicate
 
 Troubleshoot error code "429" by reviewing the ["HTTP 429: Too Many Requests"](/azure/key-vault/general/rest-error-codes#http-429-too-many-requests) section of the [Azure Key Vault REST API Error Codes][error-codes] reference article.
 
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
 
 [error-codes]: /azure/key-vault/general/rest-error-codes

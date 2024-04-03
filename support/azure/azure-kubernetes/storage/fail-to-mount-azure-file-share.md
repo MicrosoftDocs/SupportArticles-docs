@@ -444,4 +444,4 @@ Set-SmbClientConfiguration -EncryptionCiphers "AES_256_GCM" -Confirm:$false
 
 If you experience some other mount errors, see [Troubleshoot Azure Files problems in Linux](/azure/storage/files/storage-troubleshoot-linux-file-connection-problems).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

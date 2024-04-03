@@ -99,4 +99,4 @@ In the following example, a deletion was issued on the node pool \<agentpool> bu
 To resolve such issue, wait for the deletion to finish. If it's not finished after a few hours, retry that deletion later.
 
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

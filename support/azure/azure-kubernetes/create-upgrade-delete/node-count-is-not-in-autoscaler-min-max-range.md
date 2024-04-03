@@ -23,4 +23,4 @@ This behavior is expected. The cluster starts by setting the number of nodes tha
 
 Your cluster will eventually enter and remain in the desired range until you stop the cluster.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

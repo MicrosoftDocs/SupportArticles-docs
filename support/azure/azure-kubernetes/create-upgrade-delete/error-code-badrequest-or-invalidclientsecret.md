@@ -72,4 +72,4 @@ Alternatively, you can verify that the service principal name and secret are cor
 
 - [Use a service principal with Azure Kubernetes Service (AKS)](/azure/aks/kubernetes-service-principal) (especially the [Troubleshoot](/azure/aks/kubernetes-service-principal#troubleshoot) section)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

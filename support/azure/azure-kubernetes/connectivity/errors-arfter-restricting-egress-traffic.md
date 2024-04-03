@@ -29,6 +29,6 @@ Verify that your configuration doesn't conflict with any of the [required or opt
 - Fully qualified domain names (FQDNs)
 - Application rules
 
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

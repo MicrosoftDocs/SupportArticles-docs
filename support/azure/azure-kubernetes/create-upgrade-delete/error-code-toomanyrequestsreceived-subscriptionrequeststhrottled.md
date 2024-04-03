@@ -34,4 +34,4 @@ Every subscription-level and tenant-level operation is subject to throttling lim
 
 The HTTP response includes a `Retry-After` value. This specifies the number of seconds that your application should wait (or sleep) before it sends the next request. If you send a request before the retry value has elapsed, your request isn't processed, and a new retry value is returned. For more information about throttling limits, see [Throttling Resource Manager requests](/azure/azure-resource-manager/management/request-limits-and-throttling).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

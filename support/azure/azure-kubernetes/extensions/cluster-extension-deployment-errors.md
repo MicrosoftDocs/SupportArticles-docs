@@ -272,4 +272,4 @@ If the conflicting resource is essential and can't be replaced, you might not be
 
 This error occurs if there's an operation already in progress for a particular release. To resolve this problem, wait 10 minutes, and then retry the operation.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

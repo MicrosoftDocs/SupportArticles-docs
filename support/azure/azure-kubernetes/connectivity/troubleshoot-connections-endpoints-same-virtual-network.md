@@ -57,4 +57,4 @@ AKS doesn't modify the egress rules in an NSG. If AKS uses a custom NSG, verify 
 
 Custom NSGs can directly affect the egress traffic by blocking the outbound rules. They can also affect egress traffic indirectly. For more information, see [A custom network security group blocks traffic](./custom-nsg-blocks-traffic.md).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

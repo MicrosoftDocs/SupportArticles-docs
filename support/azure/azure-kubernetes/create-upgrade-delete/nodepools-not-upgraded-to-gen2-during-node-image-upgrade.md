@@ -67,4 +67,4 @@ Upgrade the cluster, and then create a new Windows Server nodepool that supports
 >
 > - Set the operating system SKU to **Windows Server 2022** to use together with your Gen2 VM.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

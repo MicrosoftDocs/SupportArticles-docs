@@ -119,4 +119,4 @@ Review the following table to learn how to implement best practices for avoiding
 - [Quality of Service](https://kubernetes.io/docs/tasks/configure-pod-container/quality-service-pod/)
 
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

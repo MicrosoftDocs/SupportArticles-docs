@@ -55,4 +55,4 @@ Then, use the following table to take the appropriate action based on the comman
 | Cluster upgrade failed        | Follow the steps that are outlined in [Cause 1](#cause-1-cluster-is-in-a-failed-state). |
 | Cluster upgrade succeeded     | Retry the scale or other previously failed operation.                                   |
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

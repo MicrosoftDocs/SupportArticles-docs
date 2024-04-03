@@ -36,4 +36,4 @@ The `RequestDisallowedByPolicy`error can have many policy-related causes. Only c
 
 Verify that you have permission to make any changes to policy services. If you don't have permission, find someone who has access so that they can make the necessary changes. Also, check the policy name that's causing the problem, and then temporarily deny that rule so that you (or someone who has permission) can do the delete operation.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

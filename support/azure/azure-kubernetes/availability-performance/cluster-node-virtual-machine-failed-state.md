@@ -168,4 +168,4 @@ If the previous troubleshooting methods don't resolve your issue, you can use th
 
     This tool runs a series of checks on AKS clusters and the nodes and provides recommendations and remediation steps for common issues. This tool can help you troubleshoot issues related to cluster creation, upgrade, scaling, networking, storage, and security. You can also use it to generate a support request with the diagnostic results attached. 
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

@@ -196,4 +196,4 @@ Using kubectl and cURL at the command line, follow these steps to check that eve
    > [!NOTE]
    > You can also use [Azure Monitor to get the usage data for the cluster](/azure/aks/monitor-aks).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

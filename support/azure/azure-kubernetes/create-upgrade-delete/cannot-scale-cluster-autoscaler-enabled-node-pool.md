@@ -63,4 +63,4 @@ To resolve this issue, you can run the following command to recover the deleted 
 az aks update --resource-group <resource-group-name> --name <aks-cluster-name>
 ```
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

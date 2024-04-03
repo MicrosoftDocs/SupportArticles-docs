@@ -29,4 +29,4 @@ This error is caused by an upstream cluster autoscaler race condition. In such a
 
 To get out of this state, disable and re-enable the [cluster autoscaler](/azure/aks/cluster-autoscaler).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)] 
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)] 

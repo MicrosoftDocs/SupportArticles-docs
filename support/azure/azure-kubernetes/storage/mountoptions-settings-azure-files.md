@@ -49,4 +49,4 @@ You might also find the following `mountOptions` settings useful:
 | `mfsymlinks` | This setting forces the Azure Files mount (Common Internet File System, or cifs) to support symbolic links. |
 | `nobrl` | This setting prevents sending byte range lock requests to the server. It's necessary for certain applications that break with cifs-style mandatory byte range locks. Most cifs servers don't yet support requesting advisory byte range locks. If an application doesn't use this setting and breaks with cifs-style mandatory byte range locks, error messages such as `Error: SQLITE_BUSY: database is locked` might occur. |
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

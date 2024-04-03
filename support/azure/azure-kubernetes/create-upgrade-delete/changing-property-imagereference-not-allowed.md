@@ -12,4 +12,4 @@ ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool
 
 When you try to upgrade or scale a Microsoft Azure Kubernetes Service (AKS) cluster, you might receive the "Changing property 'imageReference' is not allowed" error message if you modified the tags in the agent nodes within the cluster. Unexpected results might occur if you modify or delete tags and other properties of resources within the *MC_** resource group. Also, altering the resources within the *MC_** group in the AKS cluster will break the service-level objective (SLO).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

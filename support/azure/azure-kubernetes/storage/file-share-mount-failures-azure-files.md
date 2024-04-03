@@ -36,6 +36,6 @@ Manually update the `azurestorageaccountkey` field in an Azure file secret with 
 
 After a few minutes, the agent node will retry the Azure File mount with the updated storage key.
 
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

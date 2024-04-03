@@ -23,4 +23,4 @@ This issue can occur if you have long-lived TCP connections through the firewall
 
 Add a network rule instead of an application rule to the Microsoft Azure Kubernetes Service (AKS) API server IP address.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

@@ -31,4 +31,4 @@ To successfully create an AKS cluster that uses the required scale set features,
 | Cluster autoscaler  | [Automatically scale a cluster to meet application demands](/azure/aks/cluster-autoscaler#before-you-begin) |
 | Multiple node pools | [Create and manage multiple node pools for a cluster](/azure/aks/use-multiple-node-pools#before-you-begin)  |
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

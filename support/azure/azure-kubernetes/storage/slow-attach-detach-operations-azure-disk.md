@@ -29,4 +29,4 @@ The operations are done sequentially. This limitation is a known issue with the 
 
 Attach and detach Azure disks in batch operations by [using the Azure disk Container Storage Interface (CSI) driver](/azure/aks/azure-disk-csi).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

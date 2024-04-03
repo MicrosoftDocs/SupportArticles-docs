@@ -31,6 +31,6 @@ Use the Azure Disk plug-in instead, and [use the subPath property](https://kuber
 > [!NOTE]
 > For the ext3 or ext4 disk type, there's a *lost+found* directory after the disk is formatted.
 
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

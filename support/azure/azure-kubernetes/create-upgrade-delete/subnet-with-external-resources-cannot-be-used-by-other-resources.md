@@ -30,4 +30,4 @@ If you need to use the subnet for another resource, use one of the following met
 - Create a new subnet and associate it with the new resource.
 - Delete the external references, including service association links, subnet delegations, and so on.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

@@ -58,4 +58,4 @@ If the communication on TCP port 10250 is blocked, the connection to the Kubelet
 
 Check whether any NSG rules block node-to-node communication on TCP port 10250.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

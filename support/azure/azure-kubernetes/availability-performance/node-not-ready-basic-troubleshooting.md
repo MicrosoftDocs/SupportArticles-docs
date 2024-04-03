@@ -61,4 +61,4 @@ If your node is in the `MemoryPressure`, `DiskPressure`, or `PIDPressure` state,
 
 - Your cluster is running an [AKS-supported version of Kubernetes](/azure/aks/supported-kubernetes-versions).
 
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-contact-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-contact-disclaimer.md)]

@@ -86,4 +86,4 @@ The following HTTP status codes might indicate the listed issues.
 | `4xx` | <p>An issue affects the client request. For example, the requested page doesn't exist, or the client doesn't have permission to access the page.</p> <p>OR</p> <p>A network blocker exists between the client and the server. For example, traffic is being blocked by a network security group or a firewall.</p> |
 | `5xx` | An issue affects the server. For example, the application is down, or a gateway isn't working. |
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

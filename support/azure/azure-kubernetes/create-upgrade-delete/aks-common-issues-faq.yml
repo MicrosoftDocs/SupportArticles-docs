@@ -44,6 +44,6 @@ sections:
           - The *admin-username*, which sets the administrator user name for Linux nodes, must start with a letter. This user name may only contain letters, numbers, hyphens, and underscores. It has a maximum length of 32 characters.
 
 additionalContent: |
-  [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
+  [!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
   
-  [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+  [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
