@@ -4,6 +4,7 @@ description: Provides a resolution for an issue where the SLA Timer keeps runnin
 ms.reviewer: sdas, ankugupta
 ms.author: sdas
 ms.date: 07/18/2023
+ms.custom: sap:Service Level Agreements\SLA timer is running even if the case is resolved
 ---
 # Updating failure and warning times for SLA KPI instances in workflows isn't supported 
 

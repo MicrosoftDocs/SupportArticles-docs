@@ -1,0 +1,57 @@
+- name: Docs
+  tocHref: /
+  topicHref: /index
+  items:
+
+  - name: Troubleshoot
+    tocHref: /windows-server/
+    topicHref: /troubleshoot/index
+    items:
+    - name: Azure
+      tocHref: /windows-server/get-started/
+      topicHref: /troubleshoot/azure/index
+      items:
+      - name: Virtual Machine running Windows
+        tocHref: /windows-server/get-started/
+        topicHref: /troubleshoot/azure/virtual-machines/windows/welcome-virtual-machines-windows
+
+  - name: Troubleshoot
+    tocHref: /azure/
+    topicHref: /troubleshoot/index
+    items:
+
+    - name: Azure
+      tocHref: /azure/automation/
+      topicHref: /troubleshoot/azure/index
+      items:
+      - name: Virtual Machine running Windows
+        tocHref: /azure/automation/
+        topicHref: /troubleshoot/azure/virtual-machines/windows/welcome-virtual-machines-windows
+
+    - name: Azure
+      tocHref: /azure/azure-portal/
+      topicHref: /troubleshoot/azure/index
+      items:
+      - name: Virtual Machine running Windows
+        tocHref: /azure/azure-portal/
+        topicHref: /troubleshoot/azure/virtual-machines/windows/welcome-virtual-machines-windows
+
+    - name: Azure
+      tocHref: /azure/backup/
+      topicHref: /troubleshoot/azure/index
+      items:
+      - name: Virtual Machine running Windows
+        tocHref: /azure/backup/
+        topicHref: /troubleshoot/azure/virtual-machines/windows/welcome-virtual-machines-windows
+ 
+  - name: Troubleshoot
+    tocHref: /troubleshoot/
+    topicHref: /troubleshoot/index
+    items:
+    - name: Azure
+      tocHref: /troubleshoot/windows-server/
+      topicHref: /troubleshoot/azure/index
+      items:
+      - name: Virtual Machine running Windows
+        tocHref: /troubleshoot/windows-server/deployment/
+        topicHref: /troubleshoot/azure/virtual-machines/windows/welcome-virtual-machines-windows

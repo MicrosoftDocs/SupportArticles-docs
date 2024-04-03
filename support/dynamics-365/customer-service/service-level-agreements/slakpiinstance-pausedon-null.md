@@ -4,6 +4,7 @@ description: Provides a resolution for an issue where the SLA KPI instance's pau
 ms.reviewer: sdas, ankugupta
 ms.author: sdas
 ms.date: 07/18/2023
+ms.custom: sap:Service Level Agreements
 ---
 # The value of pausedon is null when the SLA KPI instance’s status is On-Hold (paused) 
 

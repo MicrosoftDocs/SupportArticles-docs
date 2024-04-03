@@ -8,34 +8,60 @@ items:
           href: connections/best-practices-when-updating-a-flow.md
         - name: Refresh URL isn't displayed for custom connectors
           href: connections/custom-connectors-not-show-refresh-url.md
+        - name: Troubleshoot Power Query
+          href: connections/troubleshoot-power-query-issues.md
     - name: Create and use apps
       items:
-        - name: Custom pages and SDK script don't load
-          href: create-and-use-apps/custom-pages-sdk-script-not-load.md
-        - name: Filter expression returns extra blank records in results
-          href: create-and-use-apps/filter-blank-records.md
-        - name: Lookup doesn't filter records for particular entity
-          href: create-and-use-apps/lookup-does-not-filter-entity-records.md
-        - name: Refresh All doesn't work after exporting app data to a dynamic worksheet
-          href: create-and-use-apps/export-dynamic-worksheet-refresh-all.md
-        - name: Ribbons and Command bar
+        - name: Common issues and resolutions
+          href: create-and-use-apps/common-issues-and-resolutions.md
+        - name: General Power Apps debugging strategies
+          href: create-and-use-apps/isolate-common-issues.md
+        - name: Canvas apps
           items:
-            - name: Ribbon issues
-              href: create-and-use-apps/ribbon-issues.md
-            - name: Button is hidden
-              href: create-and-use-apps/ribbon-issues-button-hidden.md
-            - name: Button is visible
-              href: create-and-use-apps/ribbon-issues-button-visible.md
-            - name: Button isn't working correctly
-              href: create-and-use-apps/ribbon-issues-button-not-working-correctly.md
-            - name: Button has the wrong label
-              href: create-and-use-apps/ribbon-issues-button-wrong-label.md
-            - name: Non-customizable buttons in ribbon
-              href: create-and-use-apps/ribbon-non-customizable-buttons.md
-            - name: Remove an active unmanaged layer of the ribbon
-              href: create-and-use-apps/remove-an-unmanaged-layer-for-ribbon.md
-            - name: Regenerate ribbon metadata
-              href: create-and-use-apps/regenerate-ribbon-metadata.md
+            - name: Custom pages and SDK script don't load
+              href: create-and-use-apps/custom-pages-sdk-script-not-load.md
+            - name: Filter expression returns extra blank records in results
+              href: create-and-use-apps/filter-blank-records.md
+            - name: How to create a minimal repro canvas app
+              href: create-and-use-apps/minimal-canvas-app-repro.md
+            - name: Isolate issues in canvas apps
+              href: create-and-use-apps/isolate-canvas-app-issues.md
+            - name: Troubleshoot date and time issues in canvas apps
+              href: create-and-use-apps/troubleshoot-canvas-app-date-time-issues.md
+        - name: Model-driven apps
+          items:
+            - name: How to create a vanilla repro model-driven app
+              href: create-and-use-apps/vanilla-model-driven-app-repro.md
+            - name: Isolate issues in model-driven apps
+              href: create-and-use-apps/isolate-model-app-issues.md
+            - name: Lookup doesn't filter records for particular entity
+              href: create-and-use-apps/lookup-does-not-filter-entity-records.md
+            - name: Refresh All doesn't work after exporting app data to a dynamic worksheet
+              href: create-and-use-apps/export-dynamic-worksheet-refresh-all.md
+            - name: Troubleshoot date and time issues in model-driven apps
+              href: create-and-use-apps/troubleshoot-model-driven-app-date-time-issues.md
+            - name: Troubleshoot Lookup issues in model-driven apps
+              href: create-and-use-apps/troubleshoot-model-driven-app-lookup-issues.md
+            - name: Troubleshoot View issues in model-driven apps
+              href: create-and-use-apps/troubleshoot-model-driven-app-view-issues.md
+            - name: Ribbons and Command bar
+              items:
+                - name: Ribbon issues
+                  href: create-and-use-apps/ribbon-issues.md
+                - name: Button is hidden
+                  href: create-and-use-apps/ribbon-issues-button-hidden.md
+                - name: Button is visible
+                  href: create-and-use-apps/ribbon-issues-button-visible.md
+                - name: Button isn't working correctly
+                  href: create-and-use-apps/ribbon-issues-button-not-working-correctly.md
+                - name: Button has the wrong label
+                  href: create-and-use-apps/ribbon-issues-button-wrong-label.md
+                - name: Non-customizable buttons in ribbon
+                  href: create-and-use-apps/ribbon-non-customizable-buttons.md
+                - name: Remove an active unmanaged layer of the ribbon
+                  href: create-and-use-apps/remove-an-unmanaged-layer-for-ribbon.md
+                - name: Regenerate ribbon metadata
+                  href: create-and-use-apps/regenerate-ribbon-metadata.md
         - name: Unified Interface
           items:
             - name: '"Blocked a frame with origin" error'
@@ -54,42 +80,22 @@ items:
           href: dataverse/client-errors.md
         - name: Dataverse plug-ins
           href: dataverse/dataverse-plug-ins-errors.md
+        - name: Required fields are missing in Dataverse records
+          href: Dataverse/dataverse-records-missing-required-fields.md
         - name: Web API client errors
           href: dataverse/web-api-client-errors.md
-    - name: Isolate and troubleshoot common issues
-      items:
-        - name: Common issues and resolutions
-          href: isolate-and-troubleshoot-common-issues/common-issues-and-resolutions.md
-        - name: General Power Apps debugging strategies
-          href: isolate-and-troubleshoot-common-issues/isolate-common-issues.md
-        - name: How to create a minimal repro canvas app
-          href: isolate-and-troubleshoot-common-issues/minimal-canvas-app-repro.md
-        - name: How to create a vanilla repro model-driven app
-          href: isolate-and-troubleshoot-common-issues/vanilla-model-driven-app-repro.md
-        - name: Isolate issues in canvas apps
-          href: isolate-and-troubleshoot-common-issues/isolate-canvas-app-issues.md
-        - name: Isolate issues in model-driven apps
-          href: isolate-and-troubleshoot-common-issues/isolate-model-app-issues.md
-        - name: Troubleshoot date and time issues in canvas apps
-          href: isolate-and-troubleshoot-common-issues/troubleshoot-canvas-app-date-time-issues.md
-        - name: Troubleshoot date and time issues in model-driven apps
-          href: isolate-and-troubleshoot-common-issues/troubleshoot-model-driven-app-date-time-issues.md
-        - name: Troubleshoot Lookup issues in model-driven apps
-          href: isolate-and-troubleshoot-common-issues/troubleshoot-model-driven-app-lookup-issues.md
-        - name: Troubleshoot Power Query
-          href: isolate-and-troubleshoot-common-issues/troubleshoot-power-query-issues.md
-        - name: Troubleshoot startup issues for Power Apps
-          href: isolate-and-troubleshoot-common-issues/troubleshooting-startup-issues.md
     - name: Manage apps
       items:
-        - name: Required fields are missing in Dataverse records
-          href: manage-apps/dataverse-records-missing-required-fields.md
         - name: Troubleshoot wrap issues
           href: manage-apps/wrap-issues.md
     - name: Mobile Apps
       items:
         - name: Troubleshoot offline sync errors in the Power Apps mobile app
           href: mobile-apps/mobile-offline-troubleshooting.md
+    - name: Sign-in Issues
+      items:
+        - name: Troubleshoot startup issues for Power Apps
+          href: sign-in/troubleshooting-startup-issues.md
     - name: Solutions
       items:
         - name: Active unmanaged layer after importing a managed solution

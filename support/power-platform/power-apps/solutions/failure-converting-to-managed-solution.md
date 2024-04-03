@@ -5,6 +5,7 @@ ms.reviewer: jdaly
 ms.date: 08/29/2023
 author: swatimadhukargit
 ms.author: swatim
+ms.custom: sap:Working with Solutions\Solution import - Other errors
 ---
 # Can't install a managed solution when it was previously deployed as unmanaged
 

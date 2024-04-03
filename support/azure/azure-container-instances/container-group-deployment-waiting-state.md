@@ -7,7 +7,6 @@ ms.author: tysonfreeman
 editor: v-jsitser
 ms.reviewer: v-leedennis
 ms.service: container-instances
-ms.topic: troubleshooting-problem-resolution
 #Customer intent: As an Azure administrator, I want to learn how to resolve a container group deployment that's stuck in the "Waiting" state so that I can successfully deploy an image onto a container instance.
 ---
 # Container group deployment remains in Waiting state
