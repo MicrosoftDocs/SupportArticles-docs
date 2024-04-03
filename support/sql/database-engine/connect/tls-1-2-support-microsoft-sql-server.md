@@ -104,6 +104,13 @@ You have to install the following .NET hotfix rollups to enable SQL Server featu
     - `[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Server] "DisabledByDefault"=dword:00000000 "Enabled"=dword:00000001`
 
     These settings are required for both server and client computers. The `DisabledByDefault` and `Enabled` settings are required to be created on Windows 7 clients and Windows Server 2008 R2 servers. On Windows 8 and later versions of the client operating systems or Windows Server 2012 server and later versions of the server operating systems, TLS 1.2 should already be enabled. If you're implementing a deployment policy for Windows Registry that needs to be independent of the OS release, then we recommend adding the mentioned registry keys to the policy.
+    In addition, if you are using [Database Mail](/sql/relational-databases/database-mail/database-mail) on your SQL Server, you also need to set the following .NET registry keys:
+
+    - `[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft.NETFramework\v2.0.50727]` "SystemDefaultTlsVersions"=dword:00000001 "SchUseStrongCrypto"=dword:00000001
+    - `[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft.NETFramework\v4.0.30319]` "SystemDefaultTlsVersions"=dword:00000001 "SchUseStrongCrypto"=dword:00000001
+    - `[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft.NETFramework\v2.0.50727]`             "SystemDefaultTlsVersions"=dword:00000001 "SchUseStrongCrypto"=dword:00000001
+    - `[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft.NETFramework\v4.0.30319]`              "SystemDefaultTlsVersions"=dword:00000001 "SchUseStrongCrypto"=dword:00000001
+
 
 ## Known issues
 
