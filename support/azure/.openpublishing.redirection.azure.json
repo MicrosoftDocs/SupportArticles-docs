@@ -2723,7 +2723,7 @@
       {
         "source_path": "entra-id/app-integration/index.md",
         "redirect_url": "/troubleshoot/azure/entra-id/welcome-entra-id",
-        "redirect_document_id": true
+        "redirect_document_id": false
       },
       {
         "source_path": "entra-id/ad-dmn-services/index.md",
@@ -2754,11 +2754,6 @@
         "source_path": "entra-id/user-prov-sync/index.md",
         "redirect_url": "/troubleshoot/azure/entra-id/welcome-entra-id",
         "redirect_document_id": false
-      },
-      {
-        "source_path": "entra-id/user-prov-sync/index.md",
-        "redirect_url": "/troubleshoot/azure/entra-id/welcome-entra-id",
-        "redirect_document_id": true
       },
       {
         "source_path": "azure-storage/files/file-sync-troubleshoot-sync-errors.md",
