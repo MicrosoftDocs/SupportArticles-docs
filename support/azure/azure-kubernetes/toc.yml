@@ -269,3 +269,5 @@
     href: extensions/troubleshoot-failed-kubernetes-deployment-offer.md
   - name: Troubleshoot the KEDA add-on
     href: extensions/troubleshoot-kubernetes-event-driven-autoscaling-add-on.md
+  - name: Can't pull images from container registry to cluster
+    href: extensions/cannot-pull-image-from-acr-to-aks-cluster.md
