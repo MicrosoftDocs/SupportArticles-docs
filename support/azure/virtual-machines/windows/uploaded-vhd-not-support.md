@@ -4,7 +4,7 @@ description: Resolves an issue in which you receive an error message (Disk is ex
 ms.date: 07/21/2020
 ms.reviewer: 
 ms.service: virtual-machines
-ms.subservice: vm-deploy
+ms.custom: sap:Cannot create a VM
 ---
 # Uploaded VHD is not supported when you create a VM in Azure
 

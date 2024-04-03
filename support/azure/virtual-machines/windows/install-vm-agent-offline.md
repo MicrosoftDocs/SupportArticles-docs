@@ -7,7 +7,6 @@ author: genlin
 manager: dcscontentpm
 tags: azure-resource-manager
 ms.service: virtual-machines
-ms.subservice: vm-extensions-not-operating
 ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
@@ -15,6 +14,7 @@ ms.topic: article
 ms.date: 01/30/2024
 ms.author: genli
 
+ms.custom: sap:VM Extensions not operating correctly
 ---
 # Install the Azure Virtual Machine Agent in offline mode
 

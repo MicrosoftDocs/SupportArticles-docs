@@ -5,11 +5,10 @@ services: virtual-machines
 documentationcenter: ''
 author: divargas
 ms.service: virtual-machines
-ms.subservice: vm-cannot-start-stop
 ms.collection: linux
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
-ms.custom: linux-related-content
+ms.custom: sap:My VM is not booting, linux-related-content
 ms.topic: troubleshooting
 ms.date: 11/27/2023
 ms.author: divargas

@@ -4,12 +4,11 @@ description: Resolve issues with the Azure Linux Agent.
 services: virtual-machines
 ms.collection: linux
 ms.service: virtual-machines
-ms.subservice: vm-extensions-not-operating
 author: axelgMS
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-linux
-ms.custom: linux-related-content
+ms.custom: sap:VM Extensions not operating correctly, linux-related-content
 ms.workload: infrastructure
 ms.date: 08/03/2022
 ms.author: axelg

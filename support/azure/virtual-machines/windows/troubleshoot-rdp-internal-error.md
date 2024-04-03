@@ -6,13 +6,13 @@ documentationCenter: ''
 author: genlin
 manager: dcscontentpm
 ms.service: virtual-machines
-ms.subservice: vm-cannot-connect
 ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure
 ms.date: 02/23/2020
 ms.author: genli
+ms.custom: sap:Cannot connect to my VM
 ---
 
 # An internal error occurs when you try to connect to an Azure VM through Remote Desktop
