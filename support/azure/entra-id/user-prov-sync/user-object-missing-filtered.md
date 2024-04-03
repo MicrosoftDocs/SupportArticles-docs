@@ -5,6 +5,7 @@ ms.date: 05/11/2020
 ms.reviewer: elvinf
 ms.service: entra-id
 ms.subservice: users
+ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # User object is missing or filtered from the Microsoft Entra connector in Azure Active Directory Sync
 

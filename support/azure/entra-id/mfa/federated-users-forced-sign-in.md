@@ -5,7 +5,7 @@ ms.date: 05/11/2020
 ms.reviewer: 
 ms.service: entra-id
 ms.subservice: authentication
-ms.custom: has-azure-ad-ps-ref
+ms.custom: sap:Passwords, has-azure-ad-ps-ref
 ---
 # Federated users in Microsoft Entra ID are forced to sign in frequently
 

@@ -7,6 +7,7 @@ ms.service: entra-id
 ms.subservice: authentication
 keywords:
 #Customer intent: As a Microsoft Entra user, I want to understand how to send Microsoft Authenticator logs to customer support and get the incident ID which must be included so I can submit my support request correctly.
+ms.custom: sap:Azure AD Domain Services
 ---
 
 # Send Microsoft Authenticator logs and get an incident ID

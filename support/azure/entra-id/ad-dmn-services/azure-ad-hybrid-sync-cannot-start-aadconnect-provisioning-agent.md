@@ -4,6 +4,7 @@ description: This troubleshooting guide focuses on when you can't start service 
 ms.date: 10/13/2021
 ms.service: entra-id
 ms.subservice: hybrid
+ms.custom: sap:Azure AD Domain Services
 ---
 
 # Microsoft Entra Hybrid Sync Agent Installation Issues - Cannot start service AADConnectProvisioningAgent

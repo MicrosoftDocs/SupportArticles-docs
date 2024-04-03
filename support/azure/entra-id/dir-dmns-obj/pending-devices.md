@@ -6,6 +6,7 @@ ms.author: genli
 ms.date: 10/10/2023
 ms.service: entra-id
 ms.subservice: domain-services
+ms.custom: sap:Devices
 ---
 # Pending devices in Microsoft Entra ID
 

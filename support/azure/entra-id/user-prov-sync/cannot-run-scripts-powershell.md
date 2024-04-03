@@ -5,7 +5,7 @@ ms.date: 10/26/2021
 ms.reviewer: willfid, willfid
 ms.service: entra-id
 ms.subservice: users
-ms.custom:
+ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # Can't run scripts in Azure Active Directory module for Windows PowerShell
 

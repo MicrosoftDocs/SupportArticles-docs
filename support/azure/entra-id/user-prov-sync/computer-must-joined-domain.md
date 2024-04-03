@@ -5,6 +5,7 @@ ms.date: 06/22/2020
 ms.reviewer: willfid
 ms.service: entra-id
 ms.subservice: users
+ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # Error when you try to install the Azure Active Directory Sync Tool: The computer must be joined to a domain
 

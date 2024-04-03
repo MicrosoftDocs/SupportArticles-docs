@@ -5,6 +5,7 @@ ms.date: 05/22/2020
 ms.reviewer: 
 ms.service: entra-id
 ms.subservice: domain-services
+ms.custom: sap:Users
 ---
 # Changes to your password are not saved in Azure, Office 365, or Intune
 

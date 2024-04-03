@@ -5,6 +5,7 @@ ms.date: 11/30/2023
 ms.reviewer: bernaw, v-six
 ms.service: entra-id
 ms.subservice: monitoring-health
+ms.custom: sap:Audit Logs
 ---
 
 # Unknown Actors in Audit Reports

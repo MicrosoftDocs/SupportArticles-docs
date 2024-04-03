@@ -4,6 +4,7 @@ description: Provides a resolution to an issue in which you receive an error (Id
 ms.date: 07/06/2020
 ms.reviewer: willfid
 ms.service: entra-id
+ms.custom: sap:Azure AD Domain Services
 ---
 # Error when you run the IdFix tool: IdFix.exe is not a valid Win32 application
 

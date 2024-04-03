@@ -10,6 +10,7 @@ ms.topic: reference
 ms.date: 06/30/2021
 ms.subservice: hybrid
 ms.author: billmath
+ms.custom: sap:Azure AD Domain Services
 ---
 
 # Understand Microsoft Entra Connect 1.4.xx.x and device disappearance

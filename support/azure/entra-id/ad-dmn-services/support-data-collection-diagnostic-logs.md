@@ -4,6 +4,7 @@ description: Describes the support data that will be collected for troubleshooti
 ms.date: 07/20/2020
 ms.reviewer: 
 ms.service: entra-id
+ms.custom: sap:Azure AD Domain Services
 ---
 # Microsoft Entra diagnostic logs
 

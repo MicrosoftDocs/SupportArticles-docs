@@ -5,6 +5,7 @@ ms.date: 06/14/2023
 ms.reviewer: calazlo, nualex, v-leedennis
 ms.service: entra-id
 ms.subservice: users
+ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # Permission-issue error 8344, "Insufficient access rights to perform the operation."
 

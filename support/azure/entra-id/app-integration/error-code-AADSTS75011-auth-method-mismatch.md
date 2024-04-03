@@ -5,6 +5,7 @@ ms.date: 08/26/2022
 ms.reviewer: bernawy
 ms.service: entra-id
 ms.subservice: enterprise-apps
+ms.custom: sap:Issues Signing In to Applications
 ---
 # Error - AADSTS75011 Authentication method by which the user authenticated with the service doesn't match requested authentication method AuthnContextClassRef
 

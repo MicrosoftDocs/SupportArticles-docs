@@ -5,6 +5,7 @@ ms.date: 07/06/2020
 ms.reviewer: roberg, jhayes
 ms.service: entra-id
 ms.subservice: users
+ms.custom: sap:AD FS (Active Directory Federation Services)
 ---
 # Can't sync SystemMailbox or DiscoveryMailboxSearch accounts using Azure Active Directory Sync tool
 

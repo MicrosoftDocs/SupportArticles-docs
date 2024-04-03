@@ -5,6 +5,7 @@ ms.date: 05/22/2020
 ms.reviewer: 
 ms.service: entra-id
 ms.subservice: authentication
+ms.custom: sap:Passwords
 ---
 # Error when trying to reset password in Azure, Office 365, or Intune: We did not receive your response in time, or you hung up the call
 

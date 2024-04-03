@@ -10,6 +10,7 @@ ms.service: entra-id
 ms.subservice: enterprise-apps
 content_well_notification: AI-contribution
 ai-usage: ai-assisted
+ms.custom: sap:Enterprise Applications
 ---
 # Unable to delete an application due to disabled Delete button
 

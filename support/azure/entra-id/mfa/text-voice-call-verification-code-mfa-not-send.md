@@ -5,6 +5,7 @@ ms.date: 07/06/2020
 ms.reviewer: willfid
 ms.service: entra-id
 ms.subservice: authentication
+ms.custom: sap:Multi-Factor Authentication (MFA)
 ---
 # You don't receive a text or voice call that contains the verification code for Microsoft Entra multifactor authentication
 

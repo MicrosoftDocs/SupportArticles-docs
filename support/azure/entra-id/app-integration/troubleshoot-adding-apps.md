@@ -11,6 +11,7 @@ ms.subservice: enterprise-apps
 ms.topic: overview
 content_well_notification: AI-contribution
 ai-usage: ai-assisted
+ms.custom: sap:Enterprise Applications
 ---
 # Troubleshoot common problems adding or removing an application to Microsoft Entra ID
 

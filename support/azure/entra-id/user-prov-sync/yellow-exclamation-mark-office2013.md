@@ -5,6 +5,7 @@ ms.date: 05/28/2020
 ms.reviewer: adrianp, willfid
 ms.service: entra-id
 ms.subservice: users
+ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # Users in a federated domain see a yellow exclamation mark in Office 2013 applications
 

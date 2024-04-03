@@ -7,6 +7,7 @@ ms.service: entra-id
 ms.subservice: users
 keywords:
 #Customer intent: As a Microsoft Entra administrator, I want to configure the Microsoft Entra Connect Synchronization Service Manager so that users must have the appropriate encryption level to reset or change a password.
+ms.custom: sap:User Sign-in or password Problems
 ---
 # Troubleshoot error code 8023062C: Insecure password reset or change
 

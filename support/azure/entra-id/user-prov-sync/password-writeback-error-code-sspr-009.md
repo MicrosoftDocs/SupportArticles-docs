@@ -5,7 +5,7 @@ ms.date: 02/11/2022
 ms.reviewer: jarrettr, nualex, v-leedennis
 ms.service: entra-id
 ms.subservice: users
-ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
+ms.custom: sap:User Sign-in or password Problems, has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 keywords:
 #Customer intent: As a user with a Microsoft Entra Administrator role, I want to avoid SSPR_009 errors so that I can reset my own password from the cloud.
 ---

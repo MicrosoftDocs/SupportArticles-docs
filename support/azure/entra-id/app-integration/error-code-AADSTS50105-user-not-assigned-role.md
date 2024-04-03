@@ -5,6 +5,7 @@ ms.date: 07/19/2023
 ms.reviewer: bernawy
 ms.service: entra-id
 ms.subservice: enterprise-apps
+ms.custom: sap:Issues Signing In to Applications
 ---
 # Error AADSTS50105 - The signed in user is not assigned to a role for the application
 

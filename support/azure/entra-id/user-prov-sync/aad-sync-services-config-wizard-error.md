@@ -5,6 +5,7 @@ ms.date: 11/09/2021
 ms.reviewer: willfid
 ms.service: entra-id
 ms.subservice: users
+ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # Error: 80070005 when you run the Azure Active Directory Sync Services config wizard
 

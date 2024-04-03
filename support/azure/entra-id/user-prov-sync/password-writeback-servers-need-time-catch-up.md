@@ -7,6 +7,7 @@ ms.service: entra-id
 ms.subservice: users
 keywords:
 #Customer intent: As a global administrator on Microsoft 365, I want to make sure that when I force a password reset on a user, they can change their temporary password in on-premises Active Directory so that they don't get frustrated and give up on the process.
+ms.custom: sap:User Sign-in or password Problems
 ---
 # Troubleshoot delays after the first sign-in following a forced password change
 

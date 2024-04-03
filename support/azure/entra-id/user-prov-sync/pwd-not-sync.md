@@ -5,7 +5,7 @@ ms.date: 11/03/2023
 ms.reviewer: willfid
 ms.service: entra-id
 ms.subservice: users
-ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
+ms.custom: sap:Microsoft Entra Connect Sync, has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ---
 # Password isn't synced from Microsoft Entra ID to on-premises after the password is changed or reset
 

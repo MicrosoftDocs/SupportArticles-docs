@@ -6,6 +6,7 @@ ms.reviewer: brheld, calazlo, v-leedennis
 ms.service: entra-id
 ms.subservice: hybrid
 #Customer intent: As a Microsoft Entra Connect Health Service user, I want to troubleshoot data freshness alerts so that I can fix issues with Active Directory Federation Services (AD FS).
+ms.custom: sap:Azure AD Domain Services
 ---
 # Troubleshoot data freshness alerts in Microsoft Entra Connect Health
 

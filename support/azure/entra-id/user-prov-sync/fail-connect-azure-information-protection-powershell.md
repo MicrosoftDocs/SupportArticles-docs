@@ -5,7 +5,7 @@ ms.date: 10/25/2023
 ms.reviewer: willfid, v-weizhu
 ms.service: entra-id
 ms.subservice: users
-ms.custom:
+ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # Unable to connect to Azure Information Protection using Windows PowerShell
 

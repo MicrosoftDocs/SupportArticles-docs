@@ -5,6 +5,7 @@ ms.date: 05/11/2020
 ms.reviewer: willfid
 ms.service: entra-id
 ms.subservice: users
+ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # Email addresses aren't synced to Microsoft Entra ID
 

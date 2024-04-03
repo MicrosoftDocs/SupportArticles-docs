@@ -6,6 +6,7 @@ ms.reviewer: brheld, v-leedennis
 ms.service: entra-id
 ms.subservice: hybrid
 #Customer intent: As a Microsoft Entra user, I want to know how sign-in events in AD FS security logs relate to a single Azure sign-in event so that I can parse sign-in data in Azure.
+ms.custom: sap:Azure AD Domain Services
 ---
 # Understand AD FS sign-in events in Microsoft Entra ID with Connect Health
 

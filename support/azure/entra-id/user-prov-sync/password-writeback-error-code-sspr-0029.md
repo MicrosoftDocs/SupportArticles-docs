@@ -7,6 +7,7 @@ ms.service: entra-id
 ms.subservice: users
 keywords:
 #Customer intent: As a Microsoft Entra administrator, I want to fix the on-premises configuration for password reset so that users can successfully reset or change their password.
+ms.custom: sap:User Sign-in or password Problems
 ---
 # Troubleshoot error SSPR_0029: Your organization hasn't properly set up the on-premises configuration for password reset
 

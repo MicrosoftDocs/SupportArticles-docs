@@ -7,6 +7,7 @@ ms.author: genli
 author: genlin
 ms.reviewer: willfid
 ms.subservice: authentication
+ms.custom: sap:Multi-Factor Authentication (MFA)
 ---
 # A user is displayed as disabled or enabled for Microsoft Azure Multi-Factor Authentication but behaves as the opposite
 

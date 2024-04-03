@@ -5,6 +5,7 @@ ms.date: 05/22/2020
 ms.reviewer: willfid
 ms.service: entra-id
 ms.subservice: users
+ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # Changes to domain-based filtering in Synchronization Service Manager fail to sync
 

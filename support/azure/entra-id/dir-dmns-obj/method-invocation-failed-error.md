@@ -5,7 +5,7 @@ ms.date: 05/22/2020
 ms.reviewer: 
 ms.service: entra-id
 ms.subservice: domain-services
-ms.custom: devx-track-azurepowershell
+ms.custom: sap:Directory Management, devx-track-azurepowershell
 ---
 # Error when you run Azure PowerShell cmdlets: Method invocation failed
 

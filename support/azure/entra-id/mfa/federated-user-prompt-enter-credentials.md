@@ -5,6 +5,7 @@ ms.date: 06/21/2022
 ms.reviewer: 
 ms.service: entra-id
 ms.subservice: authentication
+ms.custom: sap:AD FS (Active Directory Federation Services)
 ---
 # Federated user is prompted unexpectedly to enter account credentials
 

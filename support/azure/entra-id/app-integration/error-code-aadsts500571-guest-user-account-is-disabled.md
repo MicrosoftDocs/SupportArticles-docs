@@ -8,6 +8,7 @@ editor: v-jsitser
 ms.service: entra-id
 ms.subservice: enterprise-apps
 ms.date: 11/02/2023
+ms.custom: sap:Issues Signing In to Applications
 ---
 # Error AADSTS500571 - Guest user account is disabled
 

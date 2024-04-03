@@ -4,6 +4,7 @@ description: Describes an error that occurs when you try to sign in to an app th
 ms.date: 05/22/2020
 ms.reviewer: 
 ms.service: entra-id
+ms.custom: sap:Problem with app or API integration
 ---
 # Error when you try to sign in to an app that is set up for Azure AD B2C: Server Error in '/' Application
 

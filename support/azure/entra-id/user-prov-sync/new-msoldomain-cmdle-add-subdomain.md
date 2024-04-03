@@ -5,7 +5,7 @@ ms.date: 07/06/2020
 ms.reviewer: 
 ms.service: entra-id
 ms.subservice: users
-ms.custom: has-azure-ad-ps-ref
+ms.custom: sap:Microsoft Entra Connect Sync, has-azure-ad-ps-ref
 ---
 # Error when you try to use the New-MSOLDomain command to add a subdomain to an existing domain: New-MsolDomain: Unable to add this domain
 

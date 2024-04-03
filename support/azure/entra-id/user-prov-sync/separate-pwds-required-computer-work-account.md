@@ -5,6 +5,7 @@ ms.date: 07/06/2020
 ms.reviewer: willfid
 ms.service: entra-id
 ms.subservice: users
+ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # Separate passwords required for the computer and work or school account when using password synchronization and the Azure Active Directory Sync tool
 

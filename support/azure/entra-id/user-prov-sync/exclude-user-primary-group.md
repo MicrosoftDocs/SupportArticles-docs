@@ -5,6 +5,7 @@ ms.date: 06/08/2020
 ms.reviewer: 
 ms.service: entra-id
 ms.subservice: users
+ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # Microsoft Entra Connect excludes a user's primary group from its group membership
 

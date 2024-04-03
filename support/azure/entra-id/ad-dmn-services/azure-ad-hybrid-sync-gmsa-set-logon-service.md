@@ -4,6 +4,7 @@ description: This troubleshooting guide focuses on when the gMSA is set to log o
 ms.date: 10/13/2021
 ms.service: entra-id
 ms.subservice: hybrid
+ms.custom: sap:Azure AD Domain Services
 ---
 
 # Microsoft Entra Hybrid Sync Agent Installation Issues - The gMSA is set to log on as Service

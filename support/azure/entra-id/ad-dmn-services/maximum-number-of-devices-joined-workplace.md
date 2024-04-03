@@ -5,6 +5,7 @@ ms.date: 06/08/2020
 ms.reviewer: 
 ms.service: entra-id
 ms.subservice: hybrid
+ms.custom: sap:Azure AD Domain Services
 ---
 # Error (The maximum number of devices that can be joined to the workplace by the user has been reached) during a Workplace Join
 

@@ -5,6 +5,7 @@ ms.date: 07/06/2020
 ms.reviewer: willfid
 ms.service: entra-id
 ms.subservice: users
+ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # Can't enable the Device writeback option in Microsoft Entra Connect
 

@@ -5,6 +5,7 @@ ms.date: 11/06/2023
 ms.reviewer: "willfid,riantu,nualex,reviei"
 ms.service: entra-id
 ms.subservice: users
+ms.custom: sap:Microsoft Entra Connect Sync
 ---
 
 # How the proxyAddresses attribute is populated in Microsoft Entra ID
@@ -333,4 +334,3 @@ AAD:userPrincipalName : user6b@Contoso.com
 ```
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
-

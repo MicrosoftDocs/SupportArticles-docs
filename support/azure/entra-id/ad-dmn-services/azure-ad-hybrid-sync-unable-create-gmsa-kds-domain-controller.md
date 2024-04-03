@@ -4,6 +4,7 @@ description: This troubleshooting guide focuses on when you repeatedly can't ins
 ms.date: 10/13/2021
 ms.service: entra-id
 ms.subservice: hybrid
+ms.custom: sap:Azure AD Domain Services
 ---
 
 # Microsoft Entra Hybrid Sync Agent Installation Issues - Unable to create gMSA because KDS may not be running on domain controller

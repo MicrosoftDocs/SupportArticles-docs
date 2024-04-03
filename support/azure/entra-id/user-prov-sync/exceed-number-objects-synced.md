@@ -5,6 +5,7 @@ ms.date: 07/06/2020
 ms.reviewer: willfid
 ms.service: entra-id
 ms.subservice: users
+ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # An error displays in a directory synchronization report: This company has exceeded the number of objects that can be synchronized
 

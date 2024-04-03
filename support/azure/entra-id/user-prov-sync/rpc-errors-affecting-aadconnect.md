@@ -4,6 +4,7 @@ description: This article describes common examples of Microsoft Entra Connect f
 ms.date: 11/05/2020
 ms.service: entra-id
 ms.subservice: users
+ms.custom: sap:Microsoft Entra Connect Sync
 ---
 
 # RPC errors affecting Microsoft Entra Connect

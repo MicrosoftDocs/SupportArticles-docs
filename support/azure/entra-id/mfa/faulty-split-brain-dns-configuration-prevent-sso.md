@@ -5,6 +5,7 @@ ms.date: 06/08/2020
 ms.reviewer: 
 ms.service: entra-id
 ms.subservice: authentication
+ms.custom: sap:AD domain-joined Seamless SSO with PTA or PHS
 ---
 # A faulty split-brain DNS configuration can prevent a seamless SSO sign-in experience
 

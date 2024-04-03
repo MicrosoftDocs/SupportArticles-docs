@@ -8,6 +8,7 @@ ms.editor: v-jsitser
 ms.reviewer: gudlapreethi, jafritts, shhada, v-leedennis
 ms.service: entra-id
 ms.subservice: users
+ms.custom: sap:Devices
 ---
 # No local administrator group privileges on Microsoft Entra joined device
 

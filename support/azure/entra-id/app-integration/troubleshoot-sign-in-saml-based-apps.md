@@ -5,6 +5,7 @@ ms.date: 07/18/2023
 ms.reviewer: bernawy
 ms.service: entra-id
 ms.subservice: enterprise-apps
+ms.custom: sap:Issues Signing In to Applications
 ---
 
 # Problems signing in to SAML-based Single Sign-On configured apps

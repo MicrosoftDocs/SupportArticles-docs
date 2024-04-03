@@ -5,6 +5,7 @@ ms.date: 05/22/2020
 ms.reviewer: 
 ms.service: entra-id
 ms.subservice: authentication
+ms.custom: sap:AD domain-joined Seamless SSO with PTA or PHS
 ---
 # Code 403 (Forbidden) when you use Azure Seamless Single Sign-On on Windows 10
 

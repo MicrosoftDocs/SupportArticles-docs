@@ -5,6 +5,7 @@ ms.date: 10/12/2022
 ms.reviewer: bernawy
 ms.service: entra-id
 ms.subservice: enterprise-apps
+ms.custom: sap:Issues Signing In to Applications
 ---
 # Error AADSTS70001 - Application with Identifier was not found in the directory
 

@@ -7,6 +7,7 @@ ms.service: entra-id
 ms.subservice: users
 keywords:
 #Customer intent: As a Microsoft Entra administrator, I want to learn about the required access rights and permissions for password writeback so that I can troubleshoot password writeback issues more easily.
+ms.custom: sap:User Sign-in or password Problems
 ---
 # Troubleshoot password writeback access rights and permissions
 

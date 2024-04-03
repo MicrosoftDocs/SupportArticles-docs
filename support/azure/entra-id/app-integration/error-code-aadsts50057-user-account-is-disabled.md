@@ -4,6 +4,7 @@ description: Provides a solution to an issue where a user experiences the AADSTS
 ms.service: entra-id
 ms.date: 12/25/2023
 ms.reviewer: custorod, joaos, v-weizhu
+ms.custom: sap:Issues Signing In to Applications
 ---
 
 # Error AADSTS50057 - User account is disabled

@@ -5,6 +5,7 @@ ms.date: 05/28/2020
 ms.reviewer: 
 ms.service: entra-id
 ms.subservice: users
+ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # Slow performance and high CPU usage in Microsoft Entra Connect Health for Sync monitoring agent on a system that has installed .NET Framework
 

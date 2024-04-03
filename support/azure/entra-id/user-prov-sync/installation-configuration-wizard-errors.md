@@ -5,6 +5,7 @@ ms.date: 05/09/2022
 ms.reviewer: jhayes, willfid
 ms.service: entra-id
 ms.subservice: users
+ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # Troubleshoot Azure Active Directory Sync tool installation and Configuration Wizard errors
 

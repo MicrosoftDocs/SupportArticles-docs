@@ -5,6 +5,7 @@ ms.date: 05/22/2020
 ms.reviewer: arrenc, willfid
 ms.service: entra-id
 ms.subservice: users
+ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # Error when you run DirSyncConfigShell.psc1 in Windows Server 2008 R2: Could not load file or assembly
 

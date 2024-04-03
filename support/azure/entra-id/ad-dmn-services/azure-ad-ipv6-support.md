@@ -5,6 +5,7 @@ ms.service: entra-id
 ms.date: 05/29/2023
 ms.reviewer: lhuangnorth, gautama, amycolannino, joflore, mariourrutia, v-leedennis
 ms.collection: M365-identity-device-management
+ms.custom: sap:Azure AD Domain Services
 ---
 # IPv6 support in Microsoft Entra ID
 

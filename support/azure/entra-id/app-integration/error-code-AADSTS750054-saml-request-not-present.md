@@ -5,6 +5,7 @@ ms.date: 10/12/2022
 ms.reviewer: bernawy
 ms.service: entra-id
 ms.subservice: enterprise-apps
+ms.custom: sap:Issues Signing In to Applications
 ---
 # Error AADSTS750054 - SAMLRequest or SAMLResponse must be present as query string parameters in HTTP request for SAML Redirect binding
 

@@ -5,6 +5,7 @@ ms.date: 05/28/2020
 ms.reviewer: cychua, arrenc
 ms.service: entra-id
 ms.subservice: users
+ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # Microsoft Entra Connect Health shows old information about on-premises Microsoft Entra Connect server
 

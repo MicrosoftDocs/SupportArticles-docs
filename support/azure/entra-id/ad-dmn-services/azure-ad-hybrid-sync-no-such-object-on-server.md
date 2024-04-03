@@ -4,6 +4,7 @@ description: This troubleshooting guide covers when an object reference isn't se
 ms.date: 10/13/2021
 ms.service: entra-id
 ms.subservice: hybrid
+ms.custom: sap:Azure AD Domain Services
 ---
 
 # Microsoft Entra Hybrid Sync Agent Installation Issues - There is no such object on the server

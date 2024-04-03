@@ -7,6 +7,7 @@ ms.service: entra-id
 ms.subservice: users
 keywords:
 #Customer intent: As a global administrator in Microsoft 365, I want make sure that my password reset in the Microsoft 365 admin center is successful so that my users can sign in successfully.
+ms.custom: sap:User Sign-in or password Problems
 ---
 # Troubleshoot admin password resets in Microsoft 365 admin center
 

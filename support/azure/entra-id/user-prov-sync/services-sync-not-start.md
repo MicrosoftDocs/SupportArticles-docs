@@ -5,6 +5,7 @@ ms.date: 02/28/2024
 ms.reviewer: riantu, nualex, reviei, v-leedennis
 ms.service: entra-id
 ms.subservice: users
+ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # One or more Microsoft Entra Connect services don't start
 

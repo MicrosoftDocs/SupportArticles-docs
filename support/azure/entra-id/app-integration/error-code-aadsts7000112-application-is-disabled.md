@@ -7,6 +7,7 @@ ms.editor: v-jsitser
 ms.reviewer: v-leedennis
 ms.service: entra-id
 ms.date: 01/11/2024
+ms.custom: sap:Issues Signing In to Applications
 ---
 
 # Error AADSTS7000112 - Application is disabled

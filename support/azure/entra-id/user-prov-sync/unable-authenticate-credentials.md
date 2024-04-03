@@ -5,7 +5,7 @@ ms.date: 05/11/2020
 ms.reviewer: willfid
 ms.service: entra-id
 ms.subservice: users
-ms.custom: has-azure-ad-ps-ref
+ms.custom: sap:Microsoft Entra Connect Sync, has-azure-ad-ps-ref
 ---
 # "Unable to authenticate your credentials" error when you try to connect to Microsoft Entra ID
 
