@@ -30,7 +30,7 @@ landingContent:
           - text: Container group deployment remains in Waiting state
             url: configuration-setup/container-group-deployment-waiting-state.md
           - text: Container group remains in transitioning state
-            url: configuration-setup/container-group-transitioning-state.md
+            url: container-group-transitioning-state.md
           - text: Inaccessible image failure
             url: configuration-setup/inaccessible-image.md
           - text: Error codes for Spot container creation
@@ -59,7 +59,7 @@ landingContent:
           - text: Container group killing event interruptions
             url: management/container-group-restart-killing-event-interruption.md
           - text: Container group remains in transitioning state
-            url: management/container-group-transitioning-state.md
+            url: container-group-transitioning-state.md
           - text: Container group still runs after a stop or delete command 
             url: management/aci-still-running-after-stop-delete-command.md
           - text: Container Instances debugging tools
