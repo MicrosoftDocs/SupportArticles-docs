@@ -98,7 +98,7 @@
   - name: PublicIPAddressCannotBeDeleted error
     href: cannot-delete-ip-subnet-nsg.md
   - name: RequestDisallowedBy error
-    href: error-code-requestdisallowedby-delete.md
+    href: error-code-requestdisallowedbypolicy-delete.md
   - name: SubscriptionRequestsThrottled error
     href: error-code-toomanyrequestsreceived-subscriptionrequeststhrottled.md
   - name: TooManyRequestsReceived error
