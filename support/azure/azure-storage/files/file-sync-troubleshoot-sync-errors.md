@@ -606,6 +606,17 @@ No action required. This error should automatically resolve. If the error persis
 
 No action required. This error should automatically resolve. If the error persists for several days, create a support request.
 
+<a id="-2147020504"></a>**Sync failed because the data is corrupted and unreadable.**  
+
+| Error | Code |
+|-|-|
+| **HRESULT** | 0x80071128 |
+| **HRESULT (decimal)** | -2147020504 |
+| **Error string** | ERROR_INVALID_REPARSE_DATA |
+| **Remediation required** | Yes |
+
+This error can occur if there is file system corruption on the NTFS volume where the server endpoint is located. To resolve, run [chkdsk](/windows-server/administration/windows-commands/chkdsk?tabs=event-viewer) on the volume.
+
 <a id="-2146762487"></a>**The server failed to establish a secure connection. The cloud service received an unexpected certificate.**  
 
 | Error | Code |
