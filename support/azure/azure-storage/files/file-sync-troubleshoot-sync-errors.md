@@ -391,12 +391,20 @@ This error typically occurs when a backup application creates a VSS snapshot and
 | **Error string** | ECS_E_EXTERNAL_STORAGE_ACCOUNT_AUTHORIZATION_FAILED |
 | **Remediation required** | Yes |
 
+| Error | Code |
+|-|-|
+| **HRESULT** | 0x80c86053 |
+| **HRESULT (decimal)** | -2134351789 |
+| **Error string** | ECS_E_AZURE_FILE_SHARE_NOT_ACCESSIBLE |
+| **Remediation required** | Yes |
+
 This error occurs because the Azure File Sync agent can't access the Azure file share, which might be because the Azure file share or the storage account hosting it no longer exists. You can troubleshoot this error by working through the following steps:
 
 1. [Verify the storage account exists.](#troubleshoot-storage-account)
 2. [Ensure the Azure file share exists.](#troubleshoot-azure-file-share)
 3. [Ensure Azure File Sync has access to the storage account.](#troubleshoot-rbac)
-4. [Verify the firewall and virtual network settings on the storage account are configured properly (if enabled)](/azure/storage/file-sync/file-sync-deployment-guide?tabs=azure-portal#optional-configure-firewall-and-virtual-network-settings)
+4. Verify the **SMB security settings** on the storage account are allowing **SMB 3.1.1** protocol version, **NTLM v2** authentication and **AES-128-GCM** encryption. To check the SMB security settings on the storage account, see [SMB security settings](/azure/storage/files/files-smb-protocol#smb-security-settings).
+5. [Verify the firewall and virtual network settings on the storage account are configured properly (if enabled)](/azure/storage/file-sync/file-sync-deployment-guide?tabs=azure-portal#optional-configure-firewall-and-virtual-network-settings)
 
 <a id="-2134351804"></a>**Sync failed because the request isn't authorized to perform this operation.**  
 
