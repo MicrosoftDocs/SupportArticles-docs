@@ -3,7 +3,7 @@ title: Troubleshoot NFS file shares - Azure Files
 description: Troubleshoot issues with NFS Azure file shares.
 ms.service: azure-file-storage
 ms.custom: linux-related-content
-ms.date: 04/01/2024
+ms.date: 04/03/2024
 ms.reviewer: kendownie
 ---
 
@@ -199,7 +199,7 @@ To resolve this issue, use one of the following methods:
 
 - Set the module parameter by adding `options nfs enable_ino64=0` to  the */etc/modprobe.d/nfs.conf* file and then rebooting the VM.
 
-You can also persist this kernel boot option in the grub.conf file. Consult the documentation for your Linux distribution for more information.
+You can also persist this kernel boot option in the *grub.conf* file. For more information, refer to the documentation for your Linux distribution.
 
 ## Need help?
 
