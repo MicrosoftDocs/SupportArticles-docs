@@ -43,11 +43,11 @@ When you check each component, [get and analyze HTTP response codes](get-and-ana
 
 If other troubleshooting steps don't provide any conclusive outcome, take packet captures from the client and server. Packet captures are also useful when non-HTTP traffic is involved between the client and server. For more information about how to collect packet captures for AKS environment, see the following articles in the data collection guide:
 
-- [Capture a TCP dump from a Linux node in an AKS cluster](capture-tcp-dump-linux-node-aks.md)
+- [Capture a TCP dump from a Linux node in an AKS cluster](../logs/capture-tcp-dump-linux-node-aks.md)
 
-- [Capture a TCP dump from a Windows node in an AKS cluster](capture-tcp-dump-windows-node-aks.md)
+- [Capture a TCP dump from a Windows node in an AKS cluster](../logs/capture-tcp-dump-windows-node-aks.md)
 
-- [Capture TCP packets from a pod on an AKS cluster](packet-capture-pod-level.md)
+- [Capture TCP packets from a pod on an AKS cluster](../logs/packet-capture-pod-level.md)
 
 If you know how to get the HTTP response codes and take packet captures, it's easier to troubleshoot a network connectivity issue.
 
