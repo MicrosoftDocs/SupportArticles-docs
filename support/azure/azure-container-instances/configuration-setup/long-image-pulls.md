@@ -154,4 +154,4 @@ In this example, the `Pulling` image event begins at 16:30:51, and the successfu
 
 - [Azure Container Apps image pull with managed identity](/azure/container-apps/managed-identity-image-pull)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

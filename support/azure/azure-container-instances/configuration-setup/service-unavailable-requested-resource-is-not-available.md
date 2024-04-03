@@ -33,4 +33,4 @@ This issue might occur if a feature isn't available in certain regions or if the
 
 1. If you're deploying in an available region, and there's no feature limitation, retry the deployment.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

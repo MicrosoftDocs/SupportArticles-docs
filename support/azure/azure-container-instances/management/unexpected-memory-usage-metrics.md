@@ -36,6 +36,6 @@ You can add a dimension filter to view metrics on a per-container basis if your 
 
 - [Use dimension filters and splitting](/azure/azure-monitor/essentials/analyze-metrics#use-dimension-filters-and-splitting)
 
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

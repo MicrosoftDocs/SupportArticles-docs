@@ -33,4 +33,4 @@ You try to simultaneously deploy multiple container groups in different regions 
 
 To avoid this error, issue requests for container group deployments one at a time.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

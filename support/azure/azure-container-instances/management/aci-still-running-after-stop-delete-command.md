@@ -26,4 +26,4 @@ To resolve this issue, follow these steps:
 2. Verify that the container instance is still billed.
 3. Create a new container instance with the same resource ID in the same region. Upon successful creation, the old container instance will be deleted immediately.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

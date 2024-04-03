@@ -50,4 +50,4 @@ This article lists the debugging tools that you can use on Microsoft Azure Conta
 
 - [Container group updating](/azure/container-instances/container-instances-update)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

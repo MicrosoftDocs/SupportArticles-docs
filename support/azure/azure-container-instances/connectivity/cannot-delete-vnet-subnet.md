@@ -117,4 +117,4 @@ If deleting the network profile through the Azure portal and Azure CLI fails, up
     ```
 3. Delete the network profile and the subnet.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
