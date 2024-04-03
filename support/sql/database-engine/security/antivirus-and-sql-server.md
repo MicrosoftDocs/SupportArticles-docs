@@ -149,9 +149,8 @@ These files typically have the *.sql* file name extension and contain Transact-S
 
 #### Exception dump files
 
-The memory dump files typically use the *.mdmp* file name extension. These are system-generated files, which are saved in the *\\LOG* subfolder for that instance or in the folder that following registry key points to: HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\<instance name>\\CPE.
-For more information about memory dumps, see [Use the Sqldumper.exe tool to generate a dump file in SQL Server](\tools\use-sqldumper-generate-dump-file)
-
+The memory dump files typically use the *.mdmp* file name extension. These are system-generated files, which are saved in the *\\LOG* subfolder for that instance or in the folder that following registry key points to: HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\\<instance name\>\\CPE.
+For more information about memory dumps, see [Use the Sqldumper.exe tool to generate a dump file in SQL Server](../../tools/use-sqldumper-generate-dump-file.md).
 
 #### In-memory OLTP files
 
@@ -187,7 +186,7 @@ These are temporary files. For more information, see [Internal database snapshot
 
 #### Replication
 
-The following table contains the Replication executables and server-side COM objects. The `DBCC CHECKDB` command creates temporary files for the duration of the `DBCC` command after which they get removed automatically.
+The following table contains the Replication executables and server-side COM objects. DBCC CHECKDB creates temporary files for the duration of the `DBCC` command after which they get removed automatically.
 
 - Replication executables and server-side COM objects
 
