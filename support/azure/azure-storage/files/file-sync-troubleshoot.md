@@ -6,6 +6,7 @@ ms.service: azure-file-storage
 ms.topic: troubleshooting
 ms.date: 10/13/2023
 ms.author: kendownie
+ms.custom: sap:File Sync
 ---
 # Troubleshoot Azure File Sync
 

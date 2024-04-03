@@ -7,6 +7,7 @@ ms.subservice: storage-common-concepts
 ms.author: genli
 author: genlin
 ms.reviewer: 
+ms.custom: sap:Performance and Throughput
 ---
 # How to use PerfInsights to diagnose high CPU or disk usage issues
 

@@ -5,6 +5,7 @@ ms.service: azure-storage
 ms.subservice: storage-common-concepts
 ms.date: 10/30/2023
 ms.reviewer: normesta, azurestocic, jarrettr, v-weizhu
+ms.custom: sap:Connectivity
 ---
 
 # Troubleshoot problems with AzCopy v10
@@ -150,4 +151,3 @@ If you're copying data between accounts by using AzCopy, the quality and reliabi
 - [Find errors and resume jobs by using log and plan files in AzCopy](/azure/storage/common/storage-use-azcopy-configure)
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
-

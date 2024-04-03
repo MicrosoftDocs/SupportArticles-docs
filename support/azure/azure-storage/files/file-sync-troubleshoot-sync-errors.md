@@ -6,7 +6,7 @@ ms.service: azure-file-storage
 ms.topic: troubleshooting
 ms.date: 12/05/2023
 ms.author: kendownie
-ms.custom: devx-track-azurepowershell
+ms.custom: sap:File Sync, devx-track-azurepowershell
 ms.reviewer: v-weizhu
 ---
 

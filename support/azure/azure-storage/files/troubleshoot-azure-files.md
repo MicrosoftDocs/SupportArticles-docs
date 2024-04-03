@@ -4,6 +4,7 @@ description: This article is troubleshooting information about issues occurring 
 ms.date: 06/26/2023
 ms.reviewer: jsuri
 ms.service: azure-file-storage
+ms.custom: sap:Backup and Restore
 ---
 
 # Troubleshoot problems while backing up Azure file shares

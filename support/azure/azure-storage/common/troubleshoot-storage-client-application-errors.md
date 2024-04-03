@@ -4,6 +4,7 @@ description: Identifies and troubleshoots errors with client applications that c
 ms.reviewer: normesta, azurestocic, jarrettr, v-weizhu
 ms.date: 04/12/2023
 ms.service: azure-storage
+ms.custom: sap:Alerts, Metrics, Logging and Monitoring
 ---
 
 # Troubleshoot client application errors in Azure storage accounts

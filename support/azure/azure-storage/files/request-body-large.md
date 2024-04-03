@@ -6,6 +6,7 @@ author: genlin
 ms.author: genli
 ms.service: azure-file-storage
 ms.reviewer: 
+ms.custom: sap:Connectivity
 ---
 # Error when you write more than 4 MB of data to Azure Storage: Request body is too large
 

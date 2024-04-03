@@ -4,6 +4,7 @@ description: Troubleshoots ClientOtherErrors in SMB Azure file shares. ClientOth
 ms.service: azure-file-storage
 ms.date: 09/27/2023
 ms.reviewer: kendownie, v-weizhu
+ms.custom: sap:Security
 ---
 
 # Troubleshoot ClientOtherErrors in Azure Files

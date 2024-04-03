@@ -5,6 +5,7 @@ ms.service: azure-file-storage
 ms.date: 06/26/2023
 ms.reviewer: kendownie
 #Customer intent: As a system admin, I want to troubleshoot performance issues with Azure file shares to improve performance for applications and users.
+ms.custom: sap:Alerts, Metrics and Logging
 ---
 # Troubleshoot Azure Files by creating alerts
 

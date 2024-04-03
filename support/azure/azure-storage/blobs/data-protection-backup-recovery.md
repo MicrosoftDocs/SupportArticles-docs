@@ -5,6 +5,7 @@ ms.date: 04/17/2023
 ms.service: azure-storage
 ms.reviewer: jiajwu, ryanchen, azurestocic, v-weizhu
 ms.topic: how-to
+ms.custom: sap:Deletion and Recovery
 ---
 # Best practices for Azure Storage data protection, backup, and recovery
 

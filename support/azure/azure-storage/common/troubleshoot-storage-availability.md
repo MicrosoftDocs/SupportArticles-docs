@@ -4,6 +4,7 @@ description: Identifies and troubleshoots availability issues in Azure Storage a
 ms.date: 04/12/2023
 ms.reviewer: normesta, azurestocic, jarrettr, v-weizhu
 ms.service: azure-storage
+ms.custom: sap:Alerts, Metrics, Logging and Monitoring
 ---
 
 # Troubleshoot availability issues in Azure storage accounts

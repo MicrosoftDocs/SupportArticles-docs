@@ -3,7 +3,7 @@ title: The sticky bit causes a 403 Access Denied authorization error
 description: Helps you understand the sticky bit and describes how to check this setting when you configure it in Azure Data Lake Storage (ADLS) Gen2 and get the 403 Access Denied authorization error.
 ms.date: 04/17/2023
 ms.service: azure-storage
-ms.custom: devx-track-azurecli
+ms.custom: sap:Authentication and Authorization, devx-track-azurecli
 ms.reviewer: jiajwu, zhangjerry, azurestocic, v-weizhu
 ---
 # 403 Access Denied authorization error when the sticky bit is enabled in ADLS Gen2

@@ -4,6 +4,7 @@ description: Identifies and troubleshoots latency issues using Azure Storage Ana
 ms.date: 04/12/2023
 ms.service: azure-storage
 ms.reviewer: v-miegge, kartup, azurestocic, jarrettr, v-weizhu
+ms.custom: sap:Alerts, Metrics, Logging and Monitoring
 ---
 
 # Troubleshoot latency using Storage Analytics logs

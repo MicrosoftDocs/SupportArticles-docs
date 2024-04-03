@@ -4,6 +4,7 @@ description: Identifies and troubleshoots performance issues in Azure storage ac
 ms.reviewer: normesta, azurestocic, jarrettr, v-weizhu
 ms.date: 04/12/2023
 ms.service: azure-storage
+ms.custom: sap:Alerts, Metrics, Logging and Monitoring
 ---
 
 # Troubleshoot performance in Azure storage accounts

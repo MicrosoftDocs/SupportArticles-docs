@@ -7,6 +7,7 @@ ms.topic: troubleshooting
 ms.date: 11/02/2023
 ms.author: kendownie
 ms.reviewer: v-weizhu
+ms.custom: sap:File Sync
 ---
 # Troubleshoot Azure File Sync cloud tiering
 

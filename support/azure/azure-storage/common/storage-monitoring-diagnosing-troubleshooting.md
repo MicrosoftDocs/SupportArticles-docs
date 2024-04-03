@@ -4,6 +4,7 @@ description: Introduces how to use features like storage analytics, client-side 
 ms.service: azure-storage
 ms.date: 04/12/2023
 ms.reviewer: fryu, normesta, azurestocic, jarrettr, v-weizhu
+ms.custom: sap:Alerts, Metrics, Logging and Monitoring
 ---
 
 # Monitor, diagnose, and troubleshoot Microsoft Azure Storage (classic)
@@ -819,4 +820,3 @@ For more information about analytics in Azure Storage, see these resources:
 [!INCLUDE [Third-party information disclaimer](../../../includes/third-party-disclaimer.md)]
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
-

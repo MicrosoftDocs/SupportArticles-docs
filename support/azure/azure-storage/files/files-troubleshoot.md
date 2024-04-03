@@ -5,6 +5,7 @@ services: storage
 ms.service: azure-file-storage
 ms.date: 10/10/2023
 ms.reviewer: kendownie, jarrettr, v-weizhu
+ms.custom: sap:Connectivity
 ---
 # Troubleshoot Azure Files
 

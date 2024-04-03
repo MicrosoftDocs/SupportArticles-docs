@@ -6,6 +6,7 @@ editor: v-jsitser
 ms.reviewer: broder, anradha, v-leedennis
 ms.service: azure-storage
 #Customer intent: As an Azure Blob Storage user, I want to resolve BlockCountExceedsLimit, InvalidBlobOrBlock, InvalidBlock, or InvalidBlockList errors so that I can successfully upload large blobs or blocks of data in my applications.
+ms.custom: sap:Connectivity
 ---
 # Uploading blob or block content fails in Azure Blob Storage
 

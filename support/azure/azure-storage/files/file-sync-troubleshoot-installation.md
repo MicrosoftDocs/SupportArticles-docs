@@ -6,6 +6,7 @@ ms.service: azure-file-storage
 ms.topic: troubleshooting
 ms.date: 03/05/2024
 ms.author: kendownie
+ms.custom: sap:File Sync
 ---
 # Troubleshoot Azure File Sync agent installation and server registration
 

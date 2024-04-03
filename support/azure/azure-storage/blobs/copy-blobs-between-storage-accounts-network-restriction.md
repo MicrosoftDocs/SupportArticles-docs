@@ -5,6 +5,7 @@ ms.date: 03/25/2024
 ms.topic: how-to
 ms.service: azure-storage
 ms.reviewer: jiajwu, jeromeliu, azurestocic, v-weizhu
+ms.custom: sap:Connectivity
 ---
 # Use AzCopy to copy blobs between Azure storage accounts with network restrictions
 
