@@ -6,7 +6,7 @@ ms.reviewer: chiragpa, andbar, haitch, v-leedennis
 ms.service: azure-kubernetes-service
 ms.subservice: common-issues
 ---
-# Security best practices: don't run as root in containers
+# Security best practice: don't run as root in containers
 
 To improve security, we recommend that you don't run as a root user inside containers that are hosted on Azure Kubernetes Service. To run the container as a nonroot user, specify the following `securityContext`settings in the YAML file when you deploy a pod or other Azure Kubernetes resources.
 
