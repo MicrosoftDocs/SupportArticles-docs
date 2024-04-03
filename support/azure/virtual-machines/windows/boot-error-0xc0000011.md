@@ -4,8 +4,8 @@ description: Provides the resolution for the error code 0xc0000011 in the Azure 
 ms.date: 07/21/2020
 ms.reviewer: jarrettr
 ms.service: virtual-machines
-ms.subservice: vm-cannot-start-stop
 ms.collection: windows
+ms.custom: sap:My VM is not booting
 ---
 # Boot error code 0xc0000011 on an Azure VM
 

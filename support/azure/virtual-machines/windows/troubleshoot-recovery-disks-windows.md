@@ -6,11 +6,10 @@ services: virtual-machines
 author: genlin
 manager: dcscontentpm
 ms.service: virtual-machines
-ms.subservice: vm-backup-restore
 ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
-ms.custom: devx-track-azurepowershell
+ms.custom: sap:VM Admin - Windows (Guest OS), devx-track-azurepowershell
 ms.workload: infrastructure
 ms.date: 08/09/2018
 ms.author: genli
