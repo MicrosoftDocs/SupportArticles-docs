@@ -3,6 +3,7 @@ title: Non-customizable buttons in ribbon
 description: Provides more information about the buttons that aren't customizable in ribbon.
 ms.date: 01/10/2023
 ms.reviewer: brflood
+ms.custom: sap:Configuring model-driven app commands\Command is not shown or hidden as expected
 ---
 # Non-customizable buttons in ribbon
 

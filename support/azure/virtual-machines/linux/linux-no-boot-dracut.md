@@ -6,8 +6,7 @@ ms.author: divargas
 ms.date: 03/28/2024
 ms.reviewer: jofrance
 ms.service: virtual-machines
-ms.subservice: vm-cannot-start-stop
-ms.custom: linux-related-content
+ms.custom: sap:My VM is not booting, linux-related-content
 ms.collection: linux
 ms.topic: troubleshooting
 ---

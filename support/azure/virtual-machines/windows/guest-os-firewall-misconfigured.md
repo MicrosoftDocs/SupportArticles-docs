@@ -7,7 +7,6 @@ author: Deland-Han
 manager: dcscontentpm
 tags: ''
 ms.service: virtual-machines
-ms.subservice: vm-cannot-connect
 ms.collection: windows
 ms.topic: troubleshooting
 ms.workload: infrastructure-services
@@ -16,6 +15,7 @@ ms.devlang: azurecli
 ms.date: 11/22/2018
 ms.author: delhan
 
+ms.custom: sap:Cannot connect to my VM
 ---
 
 # Azure VM guest OS firewall is misconfigured

@@ -4,8 +4,8 @@ description: Explains when the Windows VM boot manager is missing, and how to so
 ms.date: 12/07/2020
 ms.reviewer: 
 ms.service: virtual-machines
-ms.subservice: vm-cannot-start-stop
 ms.collection: windows
+ms.custom: sap:My VM is not booting
 ---
 
 # Troubleshoot Windows VM OS with missing boot manager

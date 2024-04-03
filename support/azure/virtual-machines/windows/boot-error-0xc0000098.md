@@ -4,8 +4,8 @@ description: Provides the resolution for the error code 0xc0000098.
 ms.date: 11/15/2021
 ms.reviewer: 
 ms.service: virtual-machines
-ms.subservice: vm-cannot-start-stop
 ms.collection: windows
+ms.custom: sap:My VM is not booting
 ---
 # Windows boot error 0xc0000098 on an Azure VM
 
