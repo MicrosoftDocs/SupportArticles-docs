@@ -43,7 +43,7 @@ When you try to mount a file share, you might receive the following error:
 If end users are accessing the Azure file share using Active Directory Domain Services (AD DS) or Microsoft Entra Domain Services authentication, access to the file share fails with "Access is denied" error if share-level permissions are incorrect. 
 
 > [!NOTE]
-> This error might be caused by issues other than incorrect share-level permissions. For information on other possible causes and solutions, see [Troubleshoot Azure Files connectivity and access issues](files-troubleshoot-smb-connectivity.md#error5).
+> This error might be caused by issues other than incorrect share-level permissions. For information on other possible causes and solutions, see [Troubleshoot Azure Files connectivity and access issues](../connectivity/files-troubleshoot-smb-connectivity.md#error5).
 
 ### Solution
 
@@ -372,11 +372,11 @@ Don't select **Assignment required for Microsoft Entra application** for the sto
 
 ## See also
 
-- [Troubleshoot Azure Files](files-troubleshoot.md)
-- [Troubleshoot Azure Files performance](files-troubleshoot-performance.md)
-- [Troubleshoot Azure Files connectivity (SMB)](files-troubleshoot-smb-connectivity.md)
+- [Troubleshoot Azure Files](../connectivity/files-troubleshoot.md)
+- [Troubleshoot Azure Files performance](../performance/files-troubleshoot-performance.md)
+- [Troubleshoot Azure Files connectivity (SMB)](../connectivity/files-troubleshoot-smb-connectivity.md)
 - [Troubleshoot Azure Files general SMB issues on Linux](files-troubleshoot-linux-smb.md)
 - [Troubleshoot Azure Files general NFS issues on Linux](files-troubleshoot-linux-nfs.md)
-- [Troubleshoot Azure File Sync issues](file-sync-troubleshoot.md)
+- [Troubleshoot Azure File Sync issues](../file-sync/file-sync-troubleshoot.md)
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

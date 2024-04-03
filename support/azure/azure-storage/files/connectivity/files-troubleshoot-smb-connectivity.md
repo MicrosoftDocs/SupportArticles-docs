@@ -606,10 +606,10 @@ When a new file is uploaded, the **CacheControl** property by default is **no-ca
 ## See also
 
 - [Troubleshoot Azure Files](files-troubleshoot.md)
-- [Troubleshoot Azure Files performance](files-troubleshoot-performance.md)
-- [Troubleshoot Azure Files authentication and authorization (SMB)](files-troubleshoot-smb-authentication.md)
-- [Troubleshoot Azure Files general SMB issues on Linux](files-troubleshoot-linux-smb.md)
-- [Troubleshoot Azure Files general NFS issues on Linux](files-troubleshoot-linux-nfs.md)
-- [Troubleshoot Azure File Sync issues](file-sync-troubleshoot.md)
+- [Troubleshoot Azure Files performance](../performance/files-troubleshoot-performance.md)
+- [Troubleshoot Azure Files authentication and authorization (SMB)](../security/files-troubleshoot-smb-authentication.md)
+- [Troubleshoot Azure Files general SMB issues on Linux](../security/files-troubleshoot-linux-smb.md)
+- [Troubleshoot Azure Files general NFS issues on Linux](../security/files-troubleshoot-linux-nfs.md)
+- [Troubleshoot Azure File Sync issues](../file-sync/file-sync-troubleshoot.md)
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

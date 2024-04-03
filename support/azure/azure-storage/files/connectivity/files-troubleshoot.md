@@ -241,11 +241,11 @@ Both [Windows clients](https://github.com/Azure-Samples/azure-files-samples/tree
 For more detailed information, choose the subject area you'd like to troubleshoot.
 
 - [Connectivity and access issues (SMB)](files-troubleshoot-smb-connectivity.md)
-- [Identity-based authentication and authorization issues (SMB)](files-troubleshoot-smb-authentication.md)
-- [Performance issues (SMB/NFS)](files-troubleshoot-performance.md)
-- [General issues on Linux (SMB)](files-troubleshoot-linux-smb.md)
-- [General issues on Linux (NFS)](files-troubleshoot-linux-nfs.md)
-- [Azure File Sync issues](file-sync-troubleshoot.md)
+- [Identity-based authentication and authorization issues (SMB)](../security/files-troubleshoot-smb-authentication.md)
+- [Performance issues (SMB/NFS)](../performance/files-troubleshoot-performance.md)
+- [General issues on Linux (SMB)](../security/files-troubleshoot-linux-smb.md)
+- [General issues on Linux (NFS)](../security/files-troubleshoot-linux-nfs.md)
+- [Azure File Sync issues](../file-sync/file-sync-troubleshoot.md)
 
 Some issues can be related to more than one subject area (both connectivity and performance, for example).
 

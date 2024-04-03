@@ -378,7 +378,7 @@ To confirm, you can use Azure Metrics in the portal.
 
 ## See also
 
-- [Troubleshoot Azure Files](files-troubleshoot.md)
+- [Troubleshoot Azure Files](../connectivity/files-troubleshoot.md)
 - [Troubleshoot Azure Files by creating alerts](/azure/storage/files/files-troubleshoot-create-alerts)
 - [Understand Azure Files performance](/azure/storage/files/understand-performance)
 - [Overview of alerts in Microsoft Azure](/azure/azure-monitor/alerts/alerts-overview)

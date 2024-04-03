@@ -207,9 +207,9 @@ If you still need help, [contact support](https://portal.azure.com/?#blade/Micro
 
 ## See also
 
-- [Troubleshoot Azure Files](files-troubleshoot.md)
-- [Troubleshoot Azure Files performance](files-troubleshoot-performance.md)
-- [Troubleshoot Azure Files connectivity (SMB)](files-troubleshoot-smb-connectivity.md)
+- [Troubleshoot Azure Files](../connectivity/files-troubleshoot.md)
+- [Troubleshoot Azure Files performance](../performance/files-troubleshoot-performance.md)
+- [Troubleshoot Azure Files connectivity (SMB)](../connectivity/files-troubleshoot-smb-connectivity.md)
 - [Troubleshoot Azure Files authentication and authorization (SMB)](files-troubleshoot-linux-nfs.md)
 - [Troubleshoot Azure Files general SMB issues on Linux](files-troubleshoot-linux-smb.md)
 

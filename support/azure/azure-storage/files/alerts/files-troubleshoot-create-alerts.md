@@ -108,8 +108,8 @@ This article explains how to create and receive alerts if an Azure file share is
 
 ## See also
 
-- [Troubleshoot Azure Files](files-troubleshoot.md)
-- [Troubleshoot Azure Files Performance](files-troubleshoot-performance.md)
+- [Troubleshoot Azure Files](../connectivity/files-troubleshoot.md)
+- [Troubleshoot Azure Files Performance](../performance/files-troubleshoot-performance.md)
 - [Understand Azure Files performance](/azure/storage/files/understand-performance)
 - [Overview of alerts in Microsoft Azure](/azure/azure-monitor/alerts/alerts-overview)
 
