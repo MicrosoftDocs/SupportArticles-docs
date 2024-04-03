@@ -12,7 +12,6 @@ ms.author: luche
 ms.custom: 
   - CSSTroubleshoot
   - has-azure-ad-ps-ref
-  - azure-ad-ref-level-one-done
 appliesto: 
   - Azure Active Directory
 ms.date: 03/31/2022
