@@ -1,55 +1,65 @@
 ---
-title: Login failed error - Incorrect server name in SQL Server
-description: This article addresses the problem where a matching name isn't provided while logging in to SQL Server.
-ms.date: 03/22/2024
+title: Incorrect server name in a connection string
+description: This article provides a resolution for the consistent authentication issue where a specified server name isn't correct in a connection string.
+ms.date: 04/03/2024
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 
-# Login fails because of incorrect server name in connection string
+# Bad server name in SQL Server connection string
 
-This article helps you to resolve a consistent authentication issue that occurs if the specified login name isn't provided when you log in to a Microsoft SQL Server instance.
+This article helps you to resolve an authentication issue where the specified server name within a database connection string is incorrect.
 
 ## Symptoms
 
-The SQL OLE DB and SQLNCLI11 OLE DB providers that use the TCP or Named Pipes protocols show either of the following error messages:
+The error messages that you might experience are associated with login failures that occur when attempting to connect to a SQL Server database using different connection providers.
 
-```output
-Login failed for user 'userx' - This error message is shown when the providers use an SQL login.
-Login failed for user 'CONTOSO\user1' - This error message is shown when the providers use a Windows login.
-```
+- You might either of the following error messages associated with SQLOLEDB and SQLNCLI11 OLE DB Providers, which use either TCP or Named Pipes:
 
-The Microsoft ODBC Driver 13 for SQL Server shows the following error message:
+  - When using a SQL login, the "Login failed for user 'userx'" indicates that the provided credentials are incorrect. A possible reason could be that user name was not spelt correctly.
+
+  - When using a Windows login, the "Login failed for user 'CONTOSO\user1'" indicates that the server name "CONTOSO\user1" is not correct.
+
+   These messages indicate authentication issues when attempting to connect to a Microsoft SQL Server.
+
+- Following is an error message you might see when you connect to a database using the Microsoft ODBC Driver 13 for SQL Server:
 
 > Login failed for user 'CONTOSO\user1'
 
-The SqlClient .NET provider displays the following error message when you use the TCP protocol and a SQL Server login or a Windows login:
+- The SqlClient .NET provider displays the following error message when you use the TCP protocol and a SQL Server login or a Windows login:
 
 > Login failed for user ''.
 
-The SqlClient .NET provider displays the following error message when you use the Named Pipes protocol and a SQL Server login or a Windows login:
+  The empty user name might indicate that the connection string lacks the required login credentials.
+
+- The SqlClient .NET provider displays the following error message (which specifically mentions the user) when you use the Named Pipes protocol and a SQL Server login or a Windows login:
 
 > Login failed for user 'CONTOSO\user1'.
 
-You will likely also see either of the following error messages in the SQL Server error log:
+- You should see either of the following error message along with the reason in the SQL Server ERRORLOG. This can be a common issue if you deploy an application from a development (DEV) or quality assurance (QA) environment to production without updating the connection string:
 
-```output
-'Login failed for user'. Reason: Could not find a login matching the name provided.
-'Login failed for user 'CONTOSO\USER1'. Reason: Could not find a login matching the name provided.
-```
+  ```output
+    'Login failed for user'. Reason: Could not find a login matching the name provided.
+    'Login failed for user 'CONTOSO\USER1'. Reason: Could not find a login matching the name provided.
+  ```
 
 ## Cause
 
-You will encounter these errors if you deploy an application using a DEV or QA server in a production environment without updating the connection string.
+These errors occur due any of the following reasons:
+
+- The syntax of the connection string may not be correct.
+- The server name in the connection string may not be specified correctly.
+- The user credentials might be incorrect.
 
 ## Solution
 
-To resolve these errors, use one of the following methods:
+To resolve these errors, follow these steps:
 
-- If the targeted server isn't correct, update the connection string to point to the correct server.
-
-- If the connection string is correct, provide the login access to the database. To do this, create a user in the database, and then map to that login.
-
-- If you're using a Windows login, add it to a local group or domain group that's allowed to connect to the database server.
+1. Check the connection string format. A connection string format must contain the required parts such as server name, database name, user name, password and other parameters.
+1. Check the server name in the connection string.
+1. If you are using a named instance, include the instance name.
+1. If the targeted server isn't correct, update the connection string to point to the correct server.
+1. If the connection string is correct, provide the login access to the database. To do this, create a user in the database, and then map to that login.
+1. If you're using a Windows login, add it to a local group or domain group that's allowed to connect to the database server.
