@@ -1,14 +1,14 @@
 ---
-title: Resolving the SSL_PE_NO_CIPHER error in SQL Server
-description: This article provides the symptoms and resolution using which you will be able to resolve the SSL_PE_NO_CIPHER error in SQL Server.
-ms.date: 03/27/2024
+title: SSL_PE_NO_CIPHER error at endpoint 2022
+description: This article provides the symptoms and resolution using which you will be able to resolve the SSL_PE_NO_CIPHER error on endpoint 5022.
+ms.date: 04/03/2024
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 
-# The SSL_PE_NO_CIPHER error occurs on endpoint 5022
+# The SSL_PE_NO_CIPHER error occurs on endpoint 5022 in SQL Server
 
 This article helps you resolve the error related to the `SSL_PE_NO_CIPHER` that occurs on endpoint 5022. It also provides scripts for enforcing Transport Layer Security (TLS) on different versions of .NET Framework.
 

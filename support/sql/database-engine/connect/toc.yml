@@ -46,7 +46,7 @@ items:
   href: /sql/relational-databases/errors-events/mssqlserver-18456-database-engine-error?context=/troubleshoot/sql/context/context
 - name: KRB_AP_ERR_TKT_EXPIRED error in Kerberos tickets
   href: expired-tickets-issue.md
-- name: Network access issues in SQL Server
+- name: The user account is restricted from using the Network Login type
   href: network-login-disallowed.md
 - name: Local security subsystem errors in SQL Server
   href: local-security-subsystem-errors.md
