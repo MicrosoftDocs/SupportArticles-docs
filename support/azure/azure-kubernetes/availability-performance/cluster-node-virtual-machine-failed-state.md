@@ -19,11 +19,11 @@ Here are the common causes of a failed cluster or node pool:
 |Cause|Reference|
 |---|---|
 |Custom Script Extension (CSE) virtual machine (VM) extension provisioning error|[Troubleshoot node not ready failures caused by CSE errors](node-not-ready-custom-script-extension-errors.md)|
-|Key Azure resources unavailable|<ul><li>["Unable to get log analytics workspace info" error](aks-upgrade-scale-fail-log-analytics-workspace-missing.md)</li><li>[Cluster Load Balancer InvalidResourceReference error](error-code-invalidresourcereference.md)</li><li>[SubnetFull error](error-code-subnetisfull.md)</li><li>[Private DNS Zone InternalOperationError](/azure/private-link/troubleshoot-private-endpoint-connectivity)</li></ul>|
-|VM allocation failure due to no zonal/regional capacity|<ul><li>[AllocationFailed or ZonalAllocationFailed error](../virtual-machine-scale-sets/allocationfailed-or-zonalallocationfailed.md)</li><li>[Associate capacity reservation groups to node pools](/azure/aks/manage-node-pools#associate-capacity-reservation-groups-to-node-pools)</li></ul>|
-|VM allocation failure due to exceeded core quota|[Quotaexceeded error](error-code-quotaexceeded.md)|
-|Customer imposed restrictions|<ul><li>[RequestDisallowedByPolicy error](error-code-requestdisallowedbypolicy.md)</li><li>[Setting resource lock prevents nodepool from scaling down](https://github.com/Azure/AKS/issues/3291)</li></ul>|
-|Workload issues|<ul><li>[A PodDisruptionBudget (PDB) failed to drain pods](error-code-poddrainfailure.md)</li><li>[The kube-system pods are not running](troubleshoot-aks-cluster-creation-issues.md#view-pods-in-the-system-namespace-kubectl-get-pods)</li></ul>|
+|Key Azure resources unavailable|<ul><li>["Unable to get log analytics workspace info" error](../aks-upgrade-scale-fail-log-analytics-workspace-missing.md)</li><li>[Cluster Load Balancer InvalidResourceReference error](../create-upgrade-delete/error-code-invalidresourcereference.md)</li><li>[SubnetFull error](../create-upgrade-delete/error-code-subnetisfull.md)</li><li>[Private DNS Zone InternalOperationError](/azure/private-link/troubleshoot-private-endpoint-connectivity)</li></ul>|
+|VM allocation failure due to no zonal/regional capacity|<ul><li>[AllocationFailed or ZonalAllocationFailed error](../../virtual-machine-scale-sets/allocationfailed-or-zonalallocationfailed.md)</li><li>[Associate capacity reservation groups to node pools](/azure/aks/manage-node-pools#associate-capacity-reservation-groups-to-node-pools)</li></ul>|
+|VM allocation failure due to exceeded core quota|[Quotaexceeded error](../error-code-quotaexceeded.md)|
+|Customer imposed restrictions|<ul><li>[RequestDisallowedByPolicy error](../create-upgrade-delete/error-code-requestdisallowedbypolicy.md)</li><li>[Setting resource lock prevents nodepool from scaling down](https://github.com/Azure/AKS/issues/3291)</li></ul>|
+|Workload issues|<ul><li>[A PodDisruptionBudget (PDB) failed to drain pods](../error-code-poddrainfailure.md)</li><li>[The kube-system pods are not running](../create-upgrade-delete/troubleshoot-aks-cluster-creation-issues.md#view-pods-in-the-system-namespace-kubectl-get-pods)</li></ul>|
 
 ## Basic troubleshooting of common errors causing a cluster/node to fail
 
@@ -72,7 +72,7 @@ To resolve this issue, get the operation that causes the failure and figure out 
 
 If a recently created or upgraded cluster is in a failed state, use the following methods to troubleshoot the failure:
 
-- Examine the [activity log](troubleshoot-aks-cluster-creation-issues.md#view-error-details-in-the-azure-portal) to identify the root cause of the failure.
+- Examine the [activity log](../create-upgrade-delete/troubleshoot-aks-cluster-creation-issues.md#view-error-details-in-the-azure-portal) to identify the root cause of the failure.
 
     You can view the activity log using [the Azure portal](#view-the-activity-log-for-a-failed-cluster-using-the-azure-portal), [Azure CLI](#view-the-activity-log-for-a-failed-cluster-using-the-azure-cli), or Azure PowerShell.
  

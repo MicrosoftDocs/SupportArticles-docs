@@ -79,6 +79,6 @@ If you receive an `OverconstrainedAllocationRequest` error code, you can also tr
 
 - [Virtual Machine Scale Sets - What to expect when using proximity placement groups](/azure/virtual-machine-scale-sets/proximity-placement-groups#what-to-expect-when-using-proximity-placement-groups)
 
-- [Fix an AllocationFailed or ZonalAllocationFailed error when you create, restart, or resize Virtual Machine Scale Sets in Azure](../virtual-machine-scale-sets/allocationfailed-or-zonalallocationfailed.md)
+- [Fix an AllocationFailed or ZonalAllocationFailed error when you create, restart, or resize Virtual Machine Scale Sets in Azure](../../virtual-machine-scale-sets/allocationfailed-or-zonalallocationfailed.md)
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

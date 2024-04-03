@@ -37,15 +37,15 @@ In any networking scenario, administrators should consider the following importa
   - Network security group (NSG)
   - Network policy
 
-When you check each component, [get and analyze HTTP response codes](get-and-analyze-http-response-codes.md). These codes are useful to identify the nature of the issue, and are especially helpful in scenarios in which the application responds to HTTP requests.
+When you check each component, [get and analyze HTTP response codes](../connectivity/get-and-analyze-http-response-codes.md). These codes are useful to identify the nature of the issue, and are especially helpful in scenarios in which the application responds to HTTP requests.
 
 If other troubleshooting steps don't provide any conclusive outcome, take packet captures from the client and server. Packet captures are also useful when non-HTTP traffic is involved between the client and server. For more information about how to collect packet captures for AKS environment, see the following articles in the data collection guide:
 
-- [Capture a TCP dump from a Linux node in an AKS cluster](capture-tcp-dump-linux-node-aks.md).
+- [Capture a TCP dump from a Linux node in an AKS cluster](../logs/capture-tcp-dump-linux-node-aks.md).
 
-- [Capture a TCP dump from a Windows node in an AKS cluster](capture-tcp-dump-windows-node-aks.md).
+- [Capture a TCP dump from a Windows node in an AKS cluster](../logs/capture-tcp-dump-windows-node-aks.md).
 
-- [Capture TCP packets from a pod on an AKS cluster](packet-capture-pod-level.md).
+- [Capture TCP packets from a pod on an AKS cluster](../logs/packet-capture-pod-level.md).
 
 Knowing how to get the HTTP response codes and take packet captures makes it easier to troubleshoot a network connectivity issue.
 

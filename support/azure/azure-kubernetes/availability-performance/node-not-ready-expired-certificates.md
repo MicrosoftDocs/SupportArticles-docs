@@ -55,9 +55,9 @@ Check the expiration dates of certificates by invoking the [openssl-x509](https:
 
 You might receive certain error codes after you invoke these commands. For information about error codes 50, 51, and 52, see the following links, as necessary:
 
-- [Troubleshoot the OutboundConnFailVMExtensionError error code (50)](error-code-outboundconnfailvmextensionerror.md)
-- [Troubleshoot the K8SAPIServerConnFailVMExtensionError error code (51)](error-code-k8sapiserverconnfailvmextensionerror.md)
-- [Troubleshoot the K8SAPIServerDNSLookupFailVMExtensionError error code (52)](error-code-k8sapiserverdnslookupfailvmextensionerror.md)
+- [Troubleshoot the OutboundConnFailVMExtensionError error code (50)](../create-upgrade-delete/error-code-outboundconnfailvmextensionerror.md)
+- [Troubleshoot the K8SAPIServerConnFailVMExtensionError error code (51)](../create-upgrade-delete/error-code-k8sapiserverconnfailvmextensionerror.md)
+- [Troubleshoot the K8SAPIServerDNSLookupFailVMExtensionError error code (52)](../create-upgrade-delete/error-code-k8sapiserverdnslookupfailvmextensionerror.md)
 
 If you receive error code 99, this indicates that the [apt-get update](https://linux.die.net/man/8/apt-get) command is being blocked from accessing one or more of the following domains:
 

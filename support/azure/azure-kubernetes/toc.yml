@@ -243,11 +243,11 @@
   - name: Argument list too long
     href: create-upgrade-delete/application-fails-argument-list-too-long.md
   - name: Microsoft Entra Pod Identity NMI returns 500 Internal Server Error
-    href: create-upgrade-delete/stale-watch-azure-ad-pod-identity-nmi-status-500.md
+    href: connectivity/stale-watch-azure-ad-pod-identity-nmi-status-500.md
   - name: Can't access the cluster API server using authorized IP ranges
-    href: create-upgrade-delete/cannot-access-cluster-api-server-using-authorized-ip-ranges.md
+    href: connectivity/cannot-access-cluster-api-server-using-authorized-ip-ranges.md
   - name: Can't view resources in Kubernetes resource viewer on Azure portal
-    href: create-upgrade-delete/cannot-view-resources-kubernetes-resource-viewer-portal.md
+    href: connectivity/cannot-view-resources-kubernetes-resource-viewer-portal.md
   - name: "Changing property 'imageReference' is not allowed"
     href: create-upgrade-delete/changing-property-imagereference-not-allowed.md
   - name: Cluster upgrading and scaling errors
@@ -255,13 +255,13 @@
   - name: OperationNotAllowed errors
     href: create-upgrade-delete/operationnotallowed.md
   - name: '"Error from server: error dialing backend: dial tcp" messages'
-    href: create-upgrade-delete/error-from-server-error-dialing-backend-dial-tcp.md
+    href: connectivity/error-from-server-error-dialing-backend-dial-tcp.md
   - name: Error "CreateOrUpdateVirtualNetworkLinkFailed"
     href: createorupdatevirtualnetworklinkfailed-error.md
   - name: Errors using features that require virtual machine scale sets
     href: create-upgrade-delete/error-using-feature-requiring-virtual-machine-scale-set.md
   - name: InsufficientSubnetSize error
-    href: create-upgrade-delete/insufficientsubnetsize-error-advanced-networking.md
+    href: connectivity/insufficientsubnetsize-error-advanced-networking.md
   - name: Memory saturation occurs in pods after cluster upgrade
     href: create-upgrade-delete/aks-memory-saturation-after-upgrade.md
   - name: Increased memory usage reported in Kubernetes 1.25 or later versions
@@ -269,7 +269,7 @@
   - name: create-upgrade-delete/Missing or invalid service principal
     href: create-upgrade-delete/missing-or-invalid-service-principal.md
   - name: Network watch is stale after egress traffic restriction
-    href: create-upgrade-delete/stale-watch-azure-ad-pod-identity-nmi-status-500.md
+    href: connectivity/stale-watch-azure-ad-pod-identity-nmi-status-500.md
   - name: Node count isn't in autoscaler min and max range
     href: create-upgrade-delete/node-count-is-not-in-autoscaler-min-max-range.md
   - name: Pod is stuck in CrashLoopBackOff mode
@@ -277,11 +277,11 @@
   - name: '"Quota exceeded" error during creation or upgrade'
     href: create-upgrade-delete/quota-exceeded-during-creation-upgrade.md
   - name: Restricting egress traffic causes errors
-    href: create-upgrade-delete/errors-arfter-restricting-egress-traffic.md
+    href: connectivity/errors-arfter-restricting-egress-traffic.md
   - name: TCP time-outs such as 10250 I/O
-    href: create-upgrade-delete/tcp-timeouts-dial-tcp-nodeip-10250-io-timeout.md
+    href: connectivity/tcp-timeouts-dial-tcp-nodeip-10250-io-timeout.md
   - name: TCP times out when kubectl or other third-party tools connect
-    href: create-upgrade-delete/tcp-timeouts-kubetctl-third-party-tools-connect-api-server.md
+    href: connectivity/tcp-timeouts-kubetctl-third-party-tools-connect-api-server.md
   - name: '"tls: client offered only unsupported versions" messages'
     href: create-upgrade-delete/tls-client-offered-unsupported-versions.md
   - name: Troubleshoot common Azure Linux container host for AKS issues
