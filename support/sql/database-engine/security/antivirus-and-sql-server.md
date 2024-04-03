@@ -88,7 +88,7 @@ These files usually have one of the following file name extensions:
 - *.ldf*
 - *.ndf*
 
-By default, the data files are located in the following directories. However, they can be placed in any directory by the database administrators of the system.
+By default, the data files are located in the following directories. However, the database administrators of the system can place them in any directory.
 
 |SQL Server instance   | Default data directory|
 |-------               |---------              |
