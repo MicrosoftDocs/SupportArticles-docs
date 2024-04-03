@@ -17,7 +17,7 @@ Consider the following scenarios:
 
 In this scenario, you see that the **Look in** combo box is blank.
 
-:::image type="content" source="media/common-dialog-box-not-display-folder-names/look-in-combo-box.png" alt-text="Screenshot of the blank "Look in" combo box when using common file dialog box to navigate to a folder whose name is longer than 67 characters.":::
+:::image type="content" source="media/common-dialog-box-not-display-folder-names/look-in-combo-box.png" alt-text="Screenshot of the blank 'Look in' combo box when using common file dialog box to navigate to a folder whose name is longer than 67 characters.":::
 
 ## Cause
 
