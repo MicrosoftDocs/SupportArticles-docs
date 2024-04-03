@@ -4,7 +4,6 @@ description: Describes an issue that occurs when you try to remove a user from t
 ms.date: 06/08/2020
 ms.reviewer: willfid
 ms.service: entra-id
-ms.subservice: domain-services
 ms.custom: sap:Users, has-azure-ad-ps-ref
 ---
 # Error when you try to remove a user from the recycle bin: Remove-MsolUser User Not Found

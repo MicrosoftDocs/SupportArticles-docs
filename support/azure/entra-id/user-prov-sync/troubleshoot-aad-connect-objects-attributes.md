@@ -5,7 +5,6 @@ ms.date: 02/03/2021
 ms.reviewer: nualex
 editor: v-jesits
 ms.service: entra-id
-ms.subservice: users
 ms.custom: sap:Microsoft Entra Connect Sync, has-azure-ad-ps-ref
 ---
 

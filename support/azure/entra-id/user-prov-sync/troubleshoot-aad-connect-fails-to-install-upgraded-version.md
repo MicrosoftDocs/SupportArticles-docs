@@ -6,7 +6,6 @@ author: nualex
 ms.author: nualex
 ms.reviewer: DennisLee-DennisLee
 ms.service: entra-id
-ms.subservice: hybrid
 #Customer intent: As a Microsoft Entra administrator, I want to successfully upgrade to the latest version of Microsoft Entra Connect so that each Active Directory user can use a single identity in hybrid environments.
 ms.custom: sap:Microsoft Entra Connect Sync
 ---

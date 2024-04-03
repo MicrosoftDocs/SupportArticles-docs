@@ -4,7 +4,6 @@ description: Describes an issue in which password hash synchronization for Micro
 ms.date: 07/06/2020
 ms.reviewer: willfid
 ms.service: entra-id
-ms.subservice: users
 ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # Password hash synchronization for Microsoft Entra ID stops working and event ID 611 is logged

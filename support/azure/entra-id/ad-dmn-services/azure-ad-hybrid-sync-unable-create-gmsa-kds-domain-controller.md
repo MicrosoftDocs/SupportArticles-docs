@@ -3,7 +3,6 @@ title: Microsoft Entra Hybrid Sync Agent Installation Issues - Unable to create 
 description: This troubleshooting guide focuses on when you repeatedly can't install the service account. It unblocks you to install the Microsoft Entra Connect Provisioning Agent.
 ms.date: 10/13/2021
 ms.service: entra-id
-ms.subservice: hybrid
 ms.custom: sap:Azure AD Domain Services
 ---
 

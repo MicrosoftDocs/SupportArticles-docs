@@ -4,7 +4,6 @@ description: Describes an issue in which ADAL authentication from Android device
 ms.date: 05/22/2020
 ms.reviewer: 
 ms.service: entra-id
-ms.subservice: authentication
 ms.custom: sap:Multi-Factor Authentication (MFA)
 ---
 # Using ADAL to authenticate from Android devices fails if additional certificate downloads are required

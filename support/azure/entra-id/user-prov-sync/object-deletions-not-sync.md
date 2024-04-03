@@ -4,7 +4,6 @@ description: Describes an issue in which a deleted on-premises Active Directory 
 ms.date: 10/19/2023
 ms.reviewer: 
 ms.service: entra-id
-ms.subservice: users
 ms.custom: sap:Microsoft Entra Connect Sync, has-azure-ad-ps-ref
 ---
 # Object deletions aren't synchronized to Microsoft Entra ID when using the Azure AD Connect

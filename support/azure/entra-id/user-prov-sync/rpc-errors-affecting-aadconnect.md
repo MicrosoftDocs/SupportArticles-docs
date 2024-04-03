@@ -3,7 +3,6 @@ title: RPC errors affecting Microsoft Entra Connect
 description: This article describes common examples of Microsoft Entra Connect features affected by RPC errors.
 ms.date: 11/05/2020
 ms.service: entra-id
-ms.subservice: users
 ms.custom: sap:Microsoft Entra Connect Sync
 ---
 

@@ -4,7 +4,6 @@ description: Describes a scenario in which users who are enabled for Azure Multi
 ms.date: 05/22/2020
 ms.reviewer: willfid
 ms.service: entra-id
-ms.subservice: authentication
 ms.custom: sap:Conditional Access
 ---
 # Some users who are enabled for Azure Multi-Factor Authentication aren't prompted for a second verification method

@@ -4,7 +4,6 @@ description: Describes a problem in which you receive the error AADSTS50003 when
 ms.date: 10/12/2022
 ms.reviewer: bernawy
 ms.service: entra-id
-ms.subservice: enterprise-apps
 ms.custom: sap:Issues Signing In to Applications
 ---
 # Error AADSTS50003 - No signing key configured

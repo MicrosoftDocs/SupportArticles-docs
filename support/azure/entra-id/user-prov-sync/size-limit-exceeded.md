@@ -7,7 +7,6 @@ ms.author: tommasosacco
 editor: v-jsitser
 ms.reviewer: v-leedennis, nualex
 ms.service: entra-id
-ms.subservice: users
 ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # "Size Limit Exceeded - Error Code 0x4" error message during delta import in Microsoft Entra Connect

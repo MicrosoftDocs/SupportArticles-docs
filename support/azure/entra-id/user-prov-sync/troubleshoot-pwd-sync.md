@@ -4,7 +4,6 @@ description: Troubleshoots common issues when you're using an Azure Active Direc
 ms.date: 06/22/2020
 ms.reviewer: willfid
 ms.service: entra-id
-ms.subservice: users
 ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # How to troubleshoot password synchronization when using an Azure AD sync appliance

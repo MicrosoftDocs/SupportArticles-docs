@@ -4,7 +4,6 @@ description: Discusses an issue in which Microsoft Entra Connect is only partial
 ms.date: 05/09/2020
 ms.reviewer: 
 ms.service: entra-id
-ms.subservice: users
 ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # Microsoft Entra Connect is not working correctly after an automatic upgrade

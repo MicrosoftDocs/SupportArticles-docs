@@ -4,7 +4,6 @@ description: Describes how to troubleshoot common issues that occur when you use
 ms.date: 07/21/2020
 ms.reviewer: willfid, rossa
 ms.service: entra-id
-ms.subservice: authentication
 ms.custom: sap:Multi-Factor Authentication (MFA)
 ---
 # Troubleshoot Azure Multi-Factor Authentication issues

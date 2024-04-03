@@ -4,7 +4,6 @@ description: Describes a problem that prevents password hash synchronization fro
 ms.date: 05/28/2020
 ms.reviewer: willfid
 ms.service: entra-id
-ms.subservice: users
 ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # Password hash synchronization stops working after updating Microsoft Entra credentials in FIM

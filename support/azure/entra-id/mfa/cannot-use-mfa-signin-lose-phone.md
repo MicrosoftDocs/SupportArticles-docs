@@ -4,7 +4,6 @@ description: Describes an issue in which you don't receive the verification code
 ms.date: 07/06/2020
 ms.reviewer: willfid, willfid
 ms.service: entra-id
-ms.subservice: authentication
 ms.custom: sap:Multi-Factor Authentication (MFA)
 ---
 # Can't use Azure Multi-Factor Authentication to sign in to cloud services after you lose your phone or the phone number changes

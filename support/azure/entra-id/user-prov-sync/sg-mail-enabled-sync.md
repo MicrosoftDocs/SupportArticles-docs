@@ -4,7 +4,6 @@ description: Fixes an issue in which a security group is still mail-enabled afte
 ms.date: 05/28/2020
 ms.reviewer: 
 ms.service: entra-id
-ms.subservice: users
 ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # Security group is still mail-enabled after it is disabled through a sync in on-premises AD

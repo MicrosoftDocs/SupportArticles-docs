@@ -4,7 +4,6 @@ description: Describes an issue in which you can't install Azure Active Director
 ms.date: 05/22/2020
 ms.reviewer: willfid
 ms.service: entra-id
-ms.subservice: users
 ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # Error when you try to install Azure Active Directory module for Windows PowerShell: You must have Windows PowerShell 2.0 or greater installed

@@ -6,7 +6,6 @@ author: genlin
 ms.author: genli
 ms.reviewer: riantu, nualex, wufrank
 ms.service: entra-id
-ms.subservice: users
 ms.custom: sap:Microsoft Entra Connect Sync
 ---
 

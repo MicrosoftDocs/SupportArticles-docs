@@ -4,7 +4,6 @@ description: Resolves an issue that you can't manage or remove objects created t
 ms.date: 08/30/2021
 ms.reviewer: 
 ms.service: entra-id
-ms.subservice: users
 ms.custom: sap:Microsoft Entra Connect Sync, has-azure-ad-ps-ref
 ---
 # Can't manage or remove objects that were synchronized through the Azure Active Directory Sync tool

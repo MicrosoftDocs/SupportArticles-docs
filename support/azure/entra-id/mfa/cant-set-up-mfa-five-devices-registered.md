@@ -5,7 +5,6 @@ ms.date: 06/23/2023
 ms.editor: v-jsitser
 ms.reviewer: gudlapreethi, bemey, filuz, robgarcia, azureidcic, v-leedennis
 ms.service: entra-id
-ms.subservice: users
 ms.custom: sap:Multi-Factor Authentication (MFA)
 ---
 # Can't set up MFA because five devices are already registered to use an authenticator app

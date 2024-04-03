@@ -4,7 +4,6 @@ description: Fixes the account lockout issue that occurs in Microsoft Active Dir
 ms.date: 06/08/2020
 ms.reviewer: 
 ms.service: entra-id
-ms.subservice: authentication
 ms.custom: sap:AD FS (Active Directory Federation Services)
 ---
 # Troubleshoot account lockout in AD FS on Windows Server

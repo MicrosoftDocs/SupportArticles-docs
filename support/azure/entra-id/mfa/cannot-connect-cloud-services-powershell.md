@@ -4,7 +4,6 @@ description: Describes an issue in which you can't connect to a Microsoft cloud 
 ms.date: 05/11/2020
 ms.reviewer: willfid
 ms.service: entra-id
-ms.subservice: authentication
 ms.custom: sap:Multi-Factor Authentication (MFA), has-azure-ad-ps-ref
 ---
 # Can't connect to Office 365, Azure, or Intune using the Azure Active Directory module for Windows PowerShell

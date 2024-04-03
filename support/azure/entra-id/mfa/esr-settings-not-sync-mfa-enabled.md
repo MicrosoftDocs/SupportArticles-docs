@@ -4,7 +4,6 @@ description: Describes a problem in which settings configured to sync between de
 ms.date: 06/08/2020
 ms.reviewer: 
 ms.service: entra-id
-ms.subservice: authentication
 ms.custom: sap:AD FS (Active Directory Federation Services)
 ---
 # ESR settings don't sync with multi-factor authentication enabled

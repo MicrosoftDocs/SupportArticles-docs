@@ -4,7 +4,6 @@ description: Fixes a problem in which Password Hash Synchronization is automatic
 ms.date: 05/28/2020
 ms.reviewer: 
 ms.service: entra-id
-ms.subservice: users
 ms.custom: sap:Microsoft Entra Connect Sync, has-azure-ad-ps-ref
 ---
 # Password Hash Sync is automatically enabled during Microsoft Entra Connect Pass-through Authentication

@@ -4,7 +4,6 @@ description: Describes a problem in which Microsoft Entra ID is sending the toke
 ms.date: 08/26/2022
 ms.reviewer: bernawy
 ms.service: entra-id
-ms.subservice: enterprise-apps
 ms.custom: sap:Issues Signing In to Applications
 ---
 # Microsoft Entra ID is sending the token to an incorrect reply URL endpoint or localhost

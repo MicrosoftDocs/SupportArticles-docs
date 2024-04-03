@@ -7,7 +7,6 @@ ms.author: bernaw
 editor: v-jsitser
 ms.reviewer: v-leedennis, jarrettr
 ms.service: entra-id
-ms.subservice: enterprise-apps
 ms.topic: overview
 content_well_notification: AI-contribution
 ai-usage: ai-assisted

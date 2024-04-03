@@ -4,7 +4,6 @@ description: Understand how to correlate sign-in events in Active Directory Fede
 ms.date: 10/30/2023
 ms.reviewer: brheld, v-leedennis
 ms.service: entra-id
-ms.subservice: hybrid
 #Customer intent: As a Microsoft Entra user, I want to know how sign-in events in AD FS security logs relate to a single Azure sign-in event so that I can parse sign-in data in Azure.
 ms.custom: sap:Azure AD Domain Services
 ---

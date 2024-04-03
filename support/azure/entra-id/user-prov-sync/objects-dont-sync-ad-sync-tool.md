@@ -4,7 +4,6 @@ description: Describes an issue in which one or more AD DS object attributes don
 ms.date: 03/12/2024
 ms.reviewer: 
 ms.service: entra-id
-ms.subservice: users
 ms.custom: sap:Microsoft Entra Connect Sync, has-azure-ad-ps-ref
 ---
 # One or more objects don't sync when using Azure Active Directory Sync tool

@@ -4,7 +4,6 @@ description: Discusses an Authorization_RequestDenied error message that you rec
 ms.date: 07/20/2020
 ms.reviewer: willfid, maxv, nmanis
 ms.service: entra-id
-ms.subservice: authentication
 ms.custom: has-azure-ad-ps-ref
 ---
 # Authorization_RequestDenied error when you try to change a password using Graph API

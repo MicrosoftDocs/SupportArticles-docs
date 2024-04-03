@@ -3,7 +3,6 @@ title: Microsoft Entra Hybrid Sync Agent Installation Issues - The gMSA is set t
 description: This troubleshooting guide focuses on when the gMSA is set to log on as a service. It helps unblock you to install the Microsoft Entra Connect Provisioning Agent.
 ms.date: 10/13/2021
 ms.service: entra-id
-ms.subservice: hybrid
 ms.custom: sap:Azure AD Domain Services
 ---
 

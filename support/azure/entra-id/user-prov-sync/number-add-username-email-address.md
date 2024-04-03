@@ -4,7 +4,6 @@ description: Provides information about troubleshooting an issue in which a numb
 ms.date: 05/11/2020
 ms.reviewer: willfid
 ms.service: entra-id
-ms.subservice: users
 ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # Number added to user names and email addresses when users are synced to Microsoft Entra ID

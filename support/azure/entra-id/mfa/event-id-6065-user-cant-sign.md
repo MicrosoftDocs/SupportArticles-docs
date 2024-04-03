@@ -4,7 +4,6 @@ description: "Describes an issue in which (Event ID 6065:80070533 This user can'
 ms.date: 06/08/2020
 ms.reviewer: cpuckett
 ms.service: entra-id
-ms.subservice: authentication
 ms.custom: sap:Multi-Factor Authentication (MFA), has-azure-ad-ps-ref
 ---
 # Error when Windows 10 devices settings fail to sync: This user can't sign in because this account is currently disabled

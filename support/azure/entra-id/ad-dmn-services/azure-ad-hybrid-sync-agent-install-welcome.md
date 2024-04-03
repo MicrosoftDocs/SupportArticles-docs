@@ -3,7 +3,6 @@ title: Microsoft Entra Hybrid Sync Agent Installation Issues - Welcome page
 description: This welcome page focuses on situations where you can't start or complete the installation of the Microsoft Entra Hybrid Sync Agent.
 ms.date: 09/15/2021
 ms.service: entra-id
-ms.subservice: hybrid
 ms.custom: sap:Azure AD Domain Services
 ---
 

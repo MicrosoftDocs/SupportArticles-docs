@@ -4,7 +4,6 @@ description: Provides information to help you troubleshoot Certificate-Based Aut
 ms.date: 05/22/2020
 ms.reviewer: 
 ms.service: entra-id
-ms.subservice: users
 ms.custom: sap:Microsoft Entra Connect Sync, has-azure-ad-ps-ref
 ---
 # Troubleshoot Microsoft Entra Certificate-Based Authentication issues

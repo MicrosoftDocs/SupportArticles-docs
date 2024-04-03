@@ -4,7 +4,6 @@ description: Describes a problem that triggers an error when you try to register
 ms.date: 06/08/2020
 ms.reviewer: 
 ms.service: entra-id
-ms.subservice: hybrid
 ms.custom: sap:Azure AD Domain Services
 ---
 # Error when you try to register a device: Can't connect to the service

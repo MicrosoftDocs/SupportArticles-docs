@@ -4,7 +4,6 @@ description: Discusses that you receive an error message when you run Azure Powe
 ms.date: 05/22/2020
 ms.reviewer: 
 ms.service: entra-id
-ms.subservice: domain-services
 ms.custom: sap:Directory Management, devx-track-azurepowershell
 ---
 # Error when you run Azure PowerShell cmdlets: Method invocation failed

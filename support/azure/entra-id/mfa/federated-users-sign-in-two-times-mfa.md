@@ -4,7 +4,6 @@ description: Discusses an issue in which federated users in Microsoft Entra ID m
 ms.date: 05/22/2020
 ms.reviewer: 
 ms.service: entra-id
-ms.subservice: authentication
 ms.custom: sap:AD FS (Active Directory Federation Services), has-azure-ad-ps-ref
 ---
 # Federated users in Microsoft Entra ID may have to sign in two times before being prompted for MFA

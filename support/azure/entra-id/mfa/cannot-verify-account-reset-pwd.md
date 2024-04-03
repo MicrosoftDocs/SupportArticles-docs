@@ -4,7 +4,6 @@ description: Describes a scenario  in which a new user receives a (We could not 
 ms.date: 06/22/2020
 ms.reviewer: willfid
 ms.service: entra-id
-ms.subservice: authentication
 ms.custom: sap:Passwords
 ---
 # Error when trying to reset password in Azure, Office 365, or Intune: We could not verify your account

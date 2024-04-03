@@ -4,7 +4,6 @@ description: Discusses a scenario in Office 365, Azure, or Microsoft Intune  in 
 ms.date: 06/22/2020
 ms.reviewer: 
 ms.service: entra-id
-ms.subservice: authentication
 ms.custom: sap:AD FS (Active Directory Federation Services), has-azure-ad-ps-ref
 ---
 # Error when you try to set up another federated domain in Office 365, Azure, or Intune: Federation service identifier specified in the AD FS 2.0 server is already in use

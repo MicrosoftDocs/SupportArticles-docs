@@ -4,7 +4,6 @@ description: Discusses that you can't open the Azure Active Directory module for
 ms.date: 06/22/2020
 ms.reviewer: 
 ms.service: entra-id
-ms.subservice: domain-services
 ms.custom: sap:Directory Management
 ---
 # You can't open the Azure Active Directory module for Windows PowerShell

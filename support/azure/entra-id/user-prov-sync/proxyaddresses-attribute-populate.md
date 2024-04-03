@@ -4,7 +4,6 @@ description: Describes how the proxyAddresses attribute is populated in Microsof
 ms.date: 11/06/2023
 ms.reviewer: "willfid,riantu,nualex,reviei"
 ms.service: entra-id
-ms.subservice: users
 ms.custom: sap:Microsoft Entra Connect Sync
 ---
 

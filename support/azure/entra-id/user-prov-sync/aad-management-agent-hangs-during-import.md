@@ -6,7 +6,6 @@ ms.service: entra-id
 ms.author: genli
 author: genlin
 ms.reviewer: 
-ms.subservice: users
 ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # Microsoft Entra Management Agent hangs during Full Import or Delta Import with error: System.Collections.Generic.KeyNotFoundException

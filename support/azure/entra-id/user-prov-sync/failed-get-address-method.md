@@ -4,7 +4,6 @@ description: Describes an error message that you receive when you run the Azure 
 ms.date: 07/06/2020
 ms.reviewer: aconkle
 ms.service: entra-id
-ms.subservice: users
 ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # Error when you run the Azure Active Directory Sync tool configuration wizard: Failed to get address for method: CreateIdentityHandle2

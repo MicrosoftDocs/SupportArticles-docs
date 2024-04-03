@@ -4,7 +4,6 @@ description: Describes and provides a resolution for an error that occurs when y
 ms.date: 06/22/2020
 ms.reviewer: willfid
 ms.service: entra-id
-ms.subservice: users
 ms.custom: sap:Microsoft Entra Connect Sync
 ---
 # Error when you try to run the Azure Active Directory Sync Tool Configuration wizard: The Enterprise Administrator credentials that you supplied are not valid

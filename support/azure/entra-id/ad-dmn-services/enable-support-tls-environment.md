@@ -5,7 +5,6 @@ description: This article describes how to enable support for TLS 1.2 in your en
 ms.date: 02/29/2024
 ms.reviewer: dahans, abizerh, v-leedennis, v-weizhu
 ms.service: entra-id
-ms.subservice: authentication
 ms.custom: sap:AD FS (Active Directory Federation Services), has-azure-ad-ps-ref
 ---
 # Enable support for TLS 1.2 in your environment for Microsoft Entra TLS 1.1 and 1.0 deprecation

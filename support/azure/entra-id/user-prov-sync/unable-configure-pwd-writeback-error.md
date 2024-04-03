@@ -4,7 +4,6 @@ description: Describes an issue that triggers an error when you run the Microsof
 ms.date: 05/22/2020
 ms.reviewer: vimals, willfid
 ms.service: entra-id
-ms.subservice: users
 ms.custom: sap:User Sign-in or password Problems
 ---
 # Error when you run the Microsoft Entra Connect wizard: Unable to configure password writeback

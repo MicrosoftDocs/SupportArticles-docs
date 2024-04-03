@@ -4,7 +4,6 @@ description: Troubleshoot password writeback generic error code SSPR_0029 - Your
 ms.date: 08/17/2022
 ms.reviewer: jarrettr, nualex, v-leedennis
 ms.service: entra-id
-ms.subservice: users
 keywords:
 #Customer intent: As a Microsoft Entra administrator, I want to fix the on-premises configuration for password reset so that users can successfully reset or change their password.
 ms.custom: sap:User Sign-in or password Problems

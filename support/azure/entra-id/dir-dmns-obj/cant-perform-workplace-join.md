@@ -4,7 +4,6 @@ description: Resolves an error when a user can't join a device to a Workplace by
 ms.date: 06/08/2020
 ms.reviewer: 
 ms.service: entra-id
-ms.subservice: domain-services
 ms.custom: sap:Users
 ---
 # Can't perform a Workplace Join by using Device Registration Services

@@ -8,7 +8,6 @@ ms.service: entra-id
 ms.workload: identity
 ms.topic: reference
 ms.date: 06/30/2021
-ms.subservice: hybrid
 ms.author: billmath
 ms.custom: sap:Azure AD Domain Services
 ---

@@ -4,7 +4,6 @@ description: Troubleshoot scenarios in which a user or administrator can't reset
 ms.date: 02/11/2022
 ms.reviewer: jarrettr, nualex, v-leedennis
 ms.service: entra-id
-ms.subservice: users
 keywords:
 #Customer intent: As a Microsoft Entra administrator, I want to provide temporary passwords that meet the local Active Directory password policy so that users can successfully reset or change their password.
 ms.custom: sap:User Sign-in or password Problems

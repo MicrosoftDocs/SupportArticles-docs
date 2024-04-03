@@ -4,7 +4,6 @@ description: Describes a problem in which you receive an error message when you 
 ms.date: 05/22/2020
 ms.reviewer: 
 ms.service: entra-id
-ms.subservice: authentication
 ms.custom: sap:Passwords
 ---
 # Error when you try to reset your password in Azure, Office 365, or Intune: Oops! We encountered an unexpected error while contacting you

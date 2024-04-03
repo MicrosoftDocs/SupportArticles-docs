@@ -5,7 +5,6 @@ author: aricrowe57
 ms.date: 02/28/2024
 ms.reviewer: arcrowe
 ms.service: entra-id
-ms.subservice: enterprise-apps
 ms.custom: sap:Issues Signing In to Applications
 ---
 # Error AADSTS50011 with OpenID authentication: The redirect URI specified in the request does not match

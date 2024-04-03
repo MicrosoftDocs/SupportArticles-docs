@@ -4,7 +4,6 @@ description: Describes common examples of Microsoft first-party service principa
 ms.date: 11/30/2023
 ms.reviewer: bernaw, v-six
 ms.service: entra-id
-ms.subservice: monitoring-health
 ms.custom: sap:Audit Logs
 ---
 
