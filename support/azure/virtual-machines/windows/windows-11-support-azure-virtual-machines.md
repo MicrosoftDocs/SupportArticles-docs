@@ -4,7 +4,7 @@ description: Find details about Windows 11 support on Azure virtual machines. Le
 author: mohak006
 ms.author: mohak
 ms.service: virtual-machines
-ms.subservice: vm-support-statements
+ms.custom: sap:VM Admin - Windows (Guest OS)
 ms.reviewer: scotro, kageorge, jarrettr, v-leedennis
 editor: v-jsitser
 ms.topic: upgrade-and-migration-article

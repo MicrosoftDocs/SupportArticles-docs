@@ -6,7 +6,6 @@ documentationcenter: ''
 author: genlin
 manager: dcscontentpm
 ms.service: virtual-machines
-ms.subservice: vm-cannot-connect
 ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
@@ -14,6 +13,7 @@ ms.workload: infrastructure-services
 ms.date: 04/25/2019
 ms.author: genli
 
+ms.custom: sap:Cannot connect to my VM
 ---
 # Reset local Windows password for Azure VM offline
 

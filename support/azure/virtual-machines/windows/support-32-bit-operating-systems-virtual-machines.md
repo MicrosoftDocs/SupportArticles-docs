@@ -7,13 +7,13 @@ author: genlin
 manager: dcscontentpm
 tags: top-support-issue, azure-resource-manager
 ms.service: virtual-machines
-ms.subservice: vm-support-statements
 ms.collection: windows
 ms.workload: na
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
 ms.date: 04/25/2023
 ms.author: genli
+ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 
 # Support for 32-bit operating systems in Azure virtual machines

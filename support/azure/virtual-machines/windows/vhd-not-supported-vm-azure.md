@@ -6,12 +6,12 @@ documentationCenter: ''
 author: genlin
 manager: dcscontentpm
 ms.service: virtual-machines
-ms.subservice: vm-disk
 ms.topic: troubleshooting
 ms.tgt_pltfrm: na
 ms.workload: infrastructure
 ms.date: 06/29/2020
 ms.author: genli
+ms.custom: sap:VM Admin - Windows (Guest OS)
 ---
 
 # VHD is not supported when you create a virtual machine in Azure

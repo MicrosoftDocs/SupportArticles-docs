@@ -199,6 +199,8 @@ To resolve this issue, use one of the following methods:
 
 - Set the module parameter by adding `options nfs enable_ino64=0` to  the */etc/modprobe.d/nfs.conf* file and then rebooting the VM.
 
+You can also persist this kernel boot option in the grub.conf file. Consult the documentation for your Linux distribution for more information.
+
 ## Need help?
 
 If you still need help, [contact support](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade) to get your problem resolved quickly.

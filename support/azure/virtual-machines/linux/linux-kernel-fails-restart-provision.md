@@ -4,8 +4,7 @@ description: Discusses that an Azure virtual machine that is running an older Li
 ms.date: 07/21/2020
 ms.reviewer: 
 ms.service: virtual-machines
-ms.subservice: vm-cannot-start-stop
-ms.custom: linux-related-content
+ms.custom: sap:Cannot start or stop my VM, linux-related-content
 ms.collection: linux
 ---
 # An Azure virtual machine running an older Linux kernel fails to restart or be provisioned
