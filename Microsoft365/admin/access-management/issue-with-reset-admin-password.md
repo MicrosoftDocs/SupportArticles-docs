@@ -12,7 +12,6 @@ ms.author: luche
 ms.custom: 
   - CSSTroubleshoot
   - has-azure-ad-ps-ref
-  - azure-ad-ref-level-one-done
 appliesto: 
   - Cloud Services (Web roles/Worker roles)
   - Azure Active Directory
