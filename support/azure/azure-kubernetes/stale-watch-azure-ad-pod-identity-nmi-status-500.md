@@ -8,6 +8,7 @@ ms.service: azure-kubernetes-service
 ms.subservice: common-issues
 keywords:
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot why a stale watch or an HTTP status 500 error is returned by a Microsoft Entra Pod Identity Node Managed identity (NMI) so that I can successfully use my Azure Kubernetes Service (AKS) cluster.
+ms.custom: sap:Connectivity
 ---
 # Stale watch or HTTP status 500 error returned by a Microsoft Entra Pod Identity NMI
 

@@ -7,6 +7,7 @@ ms.author: maanasagovi
 editor: v-jsitser
 ms.reviewer: nickoman, v-weizhu, v-leedennis
 ms.service: azure-kubernetes-service
+ms.custom: sap:Extensions, Policies and Add-Ons
 ---
 # Troubleshoot errors when deploying AKS cluster extensions
 

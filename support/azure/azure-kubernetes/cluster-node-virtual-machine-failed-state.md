@@ -7,6 +7,7 @@ ms.service: azure-kubernetes-service
 ms.subservice: common-issues
 keywords:
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot why attach my node virtual machine is in a failed state so that I can successfully use my Azure Kubernetes Service (AKS) cluster.
+ms.custom: sap:Node/node pool availability and performance
 ---
 # Troubleshoot Azure Kubernetes Service clusters or nodes in a failed state
 

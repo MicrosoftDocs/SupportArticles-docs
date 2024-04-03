@@ -7,6 +7,7 @@ editor: v-jsitser
 ms.reviewer: nickoman, v-leedennis, v-weizhu
 ms.subservice: troubleshoot-extensions-add-ons
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot problems that involve the Kubernetes Event-driven Autoscaling (KEDA) add-on so that I can successfully use event-driven autoscaling on Azure Kubernetes Service (AKS).
+ms.custom: sap:Extensions, Policies and Add-Ons
 ---
 
 # Troubleshoot the Kubernetes Event-driven Autoscaling add-on

@@ -6,6 +6,7 @@ editor: v-jsitser
 ms.reviewer: aritraghosh, cssakscic, v-leedennis
 ms.service: azure-kubernetes-service
 ms.subservice: common-issues
+ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
 # Increased memory usage reported in Kubernetes 1.25 or later versions
 

@@ -7,6 +7,7 @@ ms.reviewer: chiragpa, aritraghosh, v-leedennis
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-cluster-performance
 #Customer intent: As an Azure Kubernetes user, I want to understand how to identify memory saturation in my Azure Kubernetes Service (AKS) clusters so that I don't experience service interruption or other memory saturation issues. 
+ms.custom: sap:Node/node pool availability and performance
 ---
 # Troubleshoot memory saturation in AKS clusters
 

@@ -8,6 +8,7 @@ editor: v-jsitser
 ms.reviewer: meolsen, chiragpa, joharder, pram, vijayrod, jamote, ramankum, xinyuyuan, aksstoragedev, cssakscic, v-leedennis
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-azure-storage-issues
+ms.custom: sap:Storage
 ---
 # Troubleshoot common Bring Your Own Key (BYOK) issues
 

@@ -6,6 +6,7 @@ ms.reviewer: rissing, chiragpa, momajed, v-leedennis
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-node-not-ready
 #Customer intent: As an Azure Kubernetes user, I want to prevent an Azure Kubernetes Service (AKS) cluster node from regressing to a Not Ready status so that I can continue to use the cluster node successfully.
+ms.custom: sap:Node/node pool availability and performance
 ---
 # Troubleshoot Not Ready status of a healthy node
 

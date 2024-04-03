@@ -7,6 +7,7 @@ ms.service: azure-kubernetes-service
 ms.subservice: common-issues
 keywords:
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the "Changing property 'imageReference' is not allowed" error message so that I can upgrade or scale my Azure Kubernetes Service (AKS) cluster successfully.
+ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
 # "Changing property 'imageReference' is not allowed" error message while upgrading or scaling an AKS cluster
 

@@ -6,6 +6,7 @@ ms.author: segule
 ms.date: 02/21/2024
 ms.service: azure-kubernetes-service
 ms.reviewer: mikerooney, v-weizhu, axelg, josebl, v-leedennis
+ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
 # Troubleshoot API server and etcd problems in Azure Kubernetes Services
 

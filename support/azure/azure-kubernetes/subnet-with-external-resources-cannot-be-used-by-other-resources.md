@@ -6,6 +6,7 @@ author: axelgMS
 ms.author: axelg
 ms.reviewer: chiragpa, eddie
 ms.service: azure-kubernetes-service
+ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
 # Troubleshoot the SubnetWithExternalResourcesCannotBeUsedByOtherResources error code
 

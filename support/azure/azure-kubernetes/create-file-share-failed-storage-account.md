@@ -6,6 +6,7 @@ ms.reviewer: chiragpa, nickoman, v-leedennis
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-azure-storage-issues
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot why I can't create a file share on a storage account so that I can do dynamic provisioning on my Azure Kubernetes Service (AKS) cluster.
+ms.custom: sap:Storage
 ---
 # Failed to create file share on storage account
 

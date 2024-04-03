@@ -7,6 +7,7 @@ ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-azure-storage-issues
 keywords:
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot why I receive a "could not change permissions" error when I use Azure Files so that I can successfully use my Azure Kubernetes Service (AKS) cluster.
+ms.custom: sap:Storage
 ---
 # "Could not change permissions" error while using Azure Files
 

@@ -8,6 +8,7 @@ ms.service: azure-kubernetes-service
 ms.subservice: common-issues
 keywords:
 #Customer intent: As an Azure Kubernetes Service customer, I want run large AKS clusters and troubleshoot edge cases and errors concerning throttling, networking limits, performance, and upgrades so that my application can run effectively on AKS.
+ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
 
 # Common issues when you run or scale large AKS clusters FAQ

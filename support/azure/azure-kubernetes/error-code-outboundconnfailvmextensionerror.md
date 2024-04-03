@@ -5,6 +5,7 @@ ms.date: 01/24/2024
 ms.reviewer: rissing, chiragpa, v-leedennis, jovieir
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-create-operations
+ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
 # Troubleshoot the OutboundConnFailVMExtensionError error code (50)
 

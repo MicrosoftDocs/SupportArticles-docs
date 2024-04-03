@@ -7,6 +7,7 @@ ms.reviewer: rissing, chiragpa, erbookbi, v-leedennis
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-create-operations
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the OperationNotAllowed or PublicIPCountLimitReached quota error code so that I can successfully create and deploy an Azure Kubernetes Service (AKS) cluster.
+ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
 # Troubleshoot the OperationNotAllowed or PublicIPCountLimitReached quota error
 

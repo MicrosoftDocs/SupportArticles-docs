@@ -5,6 +5,7 @@ ms.date: 05/31/2023
 ms.reviewer: chiragpa, v-weizhu
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-cluster-performance
+ms.custom: sap:Node/node pool availability and performance
 ---
 # Troubleshoot high CPU usage in AKS clusters
 

@@ -7,6 +7,7 @@ ms.reviewer: chiragpa, nickoman, v-leedennis
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-upgrade-operations
 #Customer intent: As an Azure Kubernetes Services (AKS) user, I want to troubleshoot the failed Kubernetes 1.16 upgrade when I'm using node labels with a kubernetes.io prefix so I can successfully upgrade to Kubernetes 1.16.
+ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
 
 # Upgrades to Kubernetes 1.16 fail when node labels have a kubernetes.io prefix

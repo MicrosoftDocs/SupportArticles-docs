@@ -8,7 +8,7 @@ ms.reviewer: pram, chiragpa, joharder, cssakscic, dafell, v-leedennis, v-weizhu
 editor: v-jsitser
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-extensions-add-ons
-ms.custom: references_regions
+ms.custom: sap:Extensions, Policies and Add-Ons, references_regions
 ---
 
 # AKS Cost Analysis add-on issues

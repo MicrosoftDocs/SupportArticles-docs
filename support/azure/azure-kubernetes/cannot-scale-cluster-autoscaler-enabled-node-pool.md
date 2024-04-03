@@ -7,6 +7,7 @@ ms.date: 10/17/2023
 ms.reviewer: aritraghosh, chiragpa
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-scale-operations
+ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
 # Cluster autoscaler fails to scale with "cannot scale cluster autoscaler enabled node pool" error
 

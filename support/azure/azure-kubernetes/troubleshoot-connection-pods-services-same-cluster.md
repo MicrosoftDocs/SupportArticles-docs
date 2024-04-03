@@ -7,6 +7,7 @@ editor: v-jsitser
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-outbound-connections
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot connections to pods and services so that I don't experience outbound connection issues from an Azure Kubernetes Service (AKS) cluster.
+ms.custom: sap:Connectivity
 ---
 # Troubleshoot connection issues to pods or services within an AKS cluster (internal traffic)
 

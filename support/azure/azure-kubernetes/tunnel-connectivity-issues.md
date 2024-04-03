@@ -7,6 +7,7 @@ ms.service: azure-kubernetes-service
 ms.subservice: cannot-connect-to-cluster-through-api-server
 keywords: Azure Kubernetes Service, AKS cluster, Kubernetes cluster, tunnels, connectivity, tunnel-front, aks-link
 #Customer intent: As an Azure Kubernetes user, I want to avoid tunnel connectivity issues so that I can use an Azure Kubernetes Service (AKS) cluster successfully.
+ms.custom: sap:Connectivity
 ---
 # Tunnel connectivity issues
 

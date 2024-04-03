@@ -7,6 +7,7 @@ editor: v-jsitser
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-extensions-add-ons
 #Customer intent: As an Azure Marketplace user, I want to troubleshoot the failed deployment of a Kubernetes application after I accept an offer on the Marketplace.
+ms.custom: sap:Extensions, Policies and Add-Ons
 ---
 
 # Troubleshoot the failed deployment of a Kubernetes application offer
@@ -155,4 +156,3 @@ To accept the legal terms through PowerShell, run the cmdlets that are described
 [azure-monitor-activity-log]: /azure/azure-monitor/essentials/activity-log
 
 [purchase-validation-checks]: /marketplace/azure-purchasing-invoicing#purchase-validation-checks
-

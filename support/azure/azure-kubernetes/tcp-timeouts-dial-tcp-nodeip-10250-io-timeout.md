@@ -7,6 +7,7 @@ ms.service: azure-kubernetes-service
 ms.subservice: common-issues
 keywords:
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot why I'm receiving TCP timeouts (such as 'dial tcp <Node_IP>:10250: i/o timeout') so that I can use my Azure Kubernetes Service (AKS) cluster successfully.
+ms.custom: sap:Connectivity
 ---
 # TCP timeouts such as "dial tcp <Node_IP>:10250: i/o timeout"
 

@@ -7,6 +7,7 @@ ms.reviewer: rissing, chiragpa, edneto, v-leedennis
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-delete-operations
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the InUseRouteTableCannotBeDeleted error code so that I can successfully delete an Azure Kubernetes Service (AKS) cluster.
+ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
 # Troubleshoot the InUseRouteTableCannotBeDeleted error code
 

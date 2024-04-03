@@ -8,6 +8,7 @@ ms.reviewer: chiragpa, nickoman, v-leedennis
 ms.service: azure-kubernetes-service
 ms.subservice: common-issues
 #Customer intent: As an Azure Kubernetes user, I want avoid an insufficient subnet size error so that I can deploy an Azure Kubernetes Service (AKS) cluster that uses advanced networking.
+ms.custom: sap:Connectivity
 ---
 # InsufficientSubnetSize error code
 

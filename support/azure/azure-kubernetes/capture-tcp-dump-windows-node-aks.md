@@ -5,6 +5,7 @@ ms.date: 11/15/2021
 ms.reviewer: erbookbi, v-leedennis
 ms.service: azure-kubernetes-service
 ms.subservice: data-collection-guide
+ms.custom: sap:Monitoring and Logging
 ---
 # Capture a TCP dump from a Windows node in an AKS cluster
 

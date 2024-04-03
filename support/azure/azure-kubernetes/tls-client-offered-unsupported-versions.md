@@ -8,6 +8,7 @@ ms.service: azure-kubernetes-service
 ms.subservice: common-issues
 keywords:
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot "tls: client offered only unsupported versions" error messages from my client computer or virtual machine so that I can connect successfully to the Azure Kubernetes Service (AKS) API server.
+ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
 # "TLS: client offered only unsupported versions" error on client when connecting to the AKS API server
 

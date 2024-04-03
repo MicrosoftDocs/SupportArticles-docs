@@ -9,6 +9,7 @@ ms.service:    azure-kubernetes-service
 ms.subservice: data-collection-guide
 ms.topic:      how-to
 ms.date:       04/02/2024
+ms.custom: sap:Monitoring and Logging
 ---
 
 # Capture real-time system insights from an AKS cluster

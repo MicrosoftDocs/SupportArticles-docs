@@ -8,6 +8,7 @@ editor: v-jsitser
 ms.reviewer: chiragpa, nickoman, cssakscic, v-leedennis
 ms.service: azure-kubernetes-service
 ms.subservice: common-issues
+ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
 # Pod is stuck in CrashLoopBackOff mode
 

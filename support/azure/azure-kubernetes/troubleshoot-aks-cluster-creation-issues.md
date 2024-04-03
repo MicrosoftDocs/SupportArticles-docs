@@ -6,7 +6,7 @@ editor: v-jsitser
 ms.reviewer: rissing, chiragpa, erbookbi, v-leedennis
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-create-operations
-ms.custom: devx-track-azurecli
+ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool), devx-track-azurecli
 #Customer intent: As an Azure Kubernetes user, I want to take basic troubleshooting measures to resolve issues that occur when I try to create or deploy an Azure Kubernetes Service (AKS) cluster.
 ---
 # Basic troubleshooting of AKS cluster creation issues
