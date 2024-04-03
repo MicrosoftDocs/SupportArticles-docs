@@ -53,4 +53,4 @@
 - name: Blob Storage and Azure Data Lake Store Gen2
   items:
   - name: Embedded application error when install Azure backup agent
-    href: unable-to-execute-the-embedded-application-error-backup-agent.md
+    href: ../azure-storage/blobs/unable-to-execute-the-embedded-application-error-backup-agent.md
