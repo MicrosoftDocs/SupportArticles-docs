@@ -4,7 +4,6 @@ description: Resolve az aks command invoke failures in Azure CLI when you try to
 ms.date: 10/25/2022
 ms.reviewer: chiragpa, andbar, haitch, v-leedennis
 ms.service: azure-kubernetes-service
-ms.subservice: common-issues
 ms.custom: sap:Connectivity, devx-track-azurecli
 #Customer intent: As an Azure Kubernetes user, I want to resolve az aks command invoke failures in Azure CLI so that I can successfully connect to my private Azure Kubernetes Service (AKS) cluster.
 ---

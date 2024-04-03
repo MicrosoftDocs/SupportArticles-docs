@@ -7,7 +7,6 @@ ms.author: kaysieyu
 ms.reviewer: pram, chiragpa, joharder, cssakscic, dafell, v-leedennis, v-weizhu
 editor: v-jsitser
 ms.service: azure-kubernetes-service
-ms.subservice: troubleshoot-extensions-add-ons
 ms.custom: sap:Extensions, Policies and Add-Ons, references_regions
 ---
 

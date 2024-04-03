@@ -7,7 +7,6 @@ ms.author: axelg
 editor: v-jsitser
 ms.reviewer: chiragpa, jpalma, v-leedennis, v-weizhu
 ms.service: azure-kubernetes-service
-ms.subservice: common-issues
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
 # Cluster pending operation (OperationNotAllowed) errors

@@ -5,7 +5,6 @@ ms.date: 11/04/2022
 ms.reviewer: chiragpa, rissing, v-leedennis
 editor: v-jsitser
 ms.service: azure-kubernetes-service
-ms.subservice: troubleshoot-outbound-connections
 #Customer intent: As an Azure Kubernetes user, I want to perform basic troubleshooting of outbound connections from an Azure Kubernetes Service (AKS) cluster so that I don't experience connection issues when I use AKS.
 ms.custom: sap:Connectivity
 ---

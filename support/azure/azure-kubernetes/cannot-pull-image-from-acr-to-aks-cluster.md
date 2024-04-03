@@ -6,7 +6,6 @@ author: genlin
 ms.author: genli
 ms.reviewer: chiragpa, andbar, v-weizhu, v-leedennis
 ms.service: azure-kubernetes-service
-ms.subservice: troubleshoot-cant-pull-images-from-acr-to-cluster
 ms.custom: sap:Extensions, Policies and Add-Ons, devx-track-azurecli
 ---
 # Fail to pull images from Azure Container Registry to Azure Kubernetes Service cluster

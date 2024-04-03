@@ -4,7 +4,6 @@ description: Troubleshoot issues that are caused when a user can't list a resour
 ms.date: 03/07/2024
 ms.reviewer: rissing chiragpa, v-leedennis
 ms.service: azure-kubernetes-service
-ms.subservice: cannot-connect-to-cluster-through-api-server
 #Customer intent: As an Azure Kubernetes administrator, I want fix RBAC or security group assignments so that users can access their cluster resources.
 ms.custom: sap:Connectivity
 ---

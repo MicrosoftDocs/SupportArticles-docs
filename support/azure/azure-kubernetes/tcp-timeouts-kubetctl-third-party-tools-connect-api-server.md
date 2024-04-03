@@ -4,7 +4,6 @@ description: Troubleshoot TCP time-outs that occur when kubectl or other third-p
 ms.date: 06/09/2022
 ms.reviewer: chiragpa, nickoman, v-leedennis
 ms.service: azure-kubernetes-service
-ms.subservice: common-issues
 keywords:
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot TCP connection time-outs that occur when kubectl or other third-party tools connect to the API server so that my Azure Kubernetes Service (AKS) cluster operates successfully.
 ms.custom: sap:Connectivity

@@ -4,7 +4,6 @@ description: Troubleshoot an argument list too long error message that causes an
 ms.date: 05/23/2023
 ms.reviewer: chiragpa, nickoman, v-leedennis
 ms.service: azure-kubernetes-service
-ms.subservice: common-issues
 keywords:
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot "argument list too long" error messages so that my application doesn't fail on Azure Kubernetes Service (AKS).
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)

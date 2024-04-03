@@ -4,7 +4,6 @@ description: Describes errors that cause the mounting of an Azure file share to 
 ms.date: 10/25/2023
 ms.reviewer: chiragpa, akscsscic, v-weizhu
 ms.service: azure-kubernetes-service
-ms.subservice: troubleshoot-azure-storage-issues
 ms.custom: sap:Storage
 ---
 # Errors when mounting an Azure file share

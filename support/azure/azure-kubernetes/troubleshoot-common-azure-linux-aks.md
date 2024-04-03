@@ -7,7 +7,6 @@ ms.author: suhuruli
 editor: v-jsitser
 ms.reviewer: v-leedennis
 ms.service: azure-kubernetes-service
-ms.subservice: common-issues
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool), linux-related-content
 ---
 

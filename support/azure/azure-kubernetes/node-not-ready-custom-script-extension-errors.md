@@ -4,7 +4,6 @@ description: Troubleshoot scenarios in which custom script extension (CSE) error
 ms.date: 04/15/2022
 ms.reviewer: rissing, chiragpa, momajed, v-leedennis
 ms.service: azure-kubernetes-service
-ms.subservice: troubleshoot-node-not-ready
 ms.custom: sap:Node/node pool availability and performance, devx-track-azurecli
 #Customer intent: As an Azure Kubernetes user, I want to prevent custom script extension (CSE) errors so that I can avoid a Node Not Ready state within a node pool,  and avoid a Cluster Not in Succeeded state within Azure Kubernetes Service (AKS).
 ---

@@ -5,7 +5,6 @@ ms.date: 07/28/2022
 editor: v-jsitser
 ms.reviewer: chiragpa, v-leedennis
 ms.service: azure-kubernetes-service
-ms.subservice: troubleshoot-upgrade-operations
 #Customer intent: As an Azure Kubernetes Services (AKS) user, I want to troubleshoot an AKS cluster upgrade that failed because of network security group (NSG) rules so that I can upgrade successfully.
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---

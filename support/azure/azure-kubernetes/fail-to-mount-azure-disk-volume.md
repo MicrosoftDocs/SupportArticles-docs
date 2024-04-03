@@ -6,7 +6,6 @@ author: genlin
 ms.author: genli
 ms.reviewer: chiragpa, akscsscic
 ms.service: azure-kubernetes-service
-ms.subservice: troubleshoot-azure-storage-issues
 ms.custom: sap:Storage
 ---
 # Errors when mounting Azure disk volumes

@@ -4,7 +4,6 @@ description: Troubleshoot errors that occur while installing the Distributed App
 editor: v-jsitser
 ms.reviewer: nigreenf, v-leedennis
 ms.service: azure-kubernetes-service
-ms.subservice: troubleshoot-extensions-add-ons
 ms.date: 06/16/2023
 ms.custom: sap:Extensions, Policies and Add-Ons
 ---

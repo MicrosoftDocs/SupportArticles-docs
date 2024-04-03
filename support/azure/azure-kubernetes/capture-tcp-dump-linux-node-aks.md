@@ -5,7 +5,6 @@ ms.date: 02/01/2023
 ms.topic: how-to
 ms.reviewer: erbookbi, amaljuna, v-leedennis
 ms.service: azure-kubernetes-service
-ms.subservice: data-collection-guide
 ms.custom: sap:Monitoring and Logging, linux-related-content
 ---
 # Capture a TCP dump from a Linux node in an AKS cluster

@@ -4,7 +4,6 @@ description: Learn about the useful and recommended mountOptions settings when y
 ms.date: 05/25/2022
 ms.reviewer: chiragpa, nickoman, v-leedennis
 ms.service: azure-kubernetes-service
-ms.subservice: troubleshoot-azure-storage-issues
 #Customer intent: As an Azure Kubernetes user, I want to learn about mount option settings so that I can set up my Azure Files storage class object optimally on my Azure Kubernetes Service (AKS) cluster.
 ms.custom: sap:Storage
 ---

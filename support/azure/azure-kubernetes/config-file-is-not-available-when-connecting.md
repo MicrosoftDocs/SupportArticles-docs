@@ -4,7 +4,6 @@ description: Troubleshoot issues caused by a missing config file when you attemp
 ms.date: 12/10/2021
 ms.reviewer: rissing, chiragpa, v-leedennis
 ms.service: azure-kubernetes-service
-ms.subservice: cannot-connect-to-cluster-through-api-server
 #Customer intent: As an Azure Kubernetes user, I want to fix or restore my config file so that I can successfully connect to my AKS cluster.
 ms.custom: sap:Connectivity
 ---

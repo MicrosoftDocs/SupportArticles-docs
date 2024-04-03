@@ -4,7 +4,6 @@ description: Troubleshoot issues that occur when you attempt to connect to the A
 ms.date: 12/06/2021
 ms.reviewer: rissing chiragpa, v-leedennis
 ms.service: azure-kubernetes-service
-ms.subservice: cannot-connect-to-cluster-through-api-server
 #Customer intent: As an Azure Kubernetes user, I want to take basic troubleshooting measures so that I can avoid cluster connectivity issues with the API server.
 ms.custom: sap:Connectivity
 ---

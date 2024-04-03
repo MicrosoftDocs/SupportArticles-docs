@@ -7,7 +7,6 @@ ms.author: jotavar
 editor: v-jsitser
 ms.reviewer: rissing, chiragpa, v-leedennis
 ms.service: azure-kubernetes-service
-ms.subservice: troubleshoot-scale-operations
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the SubnetIsFull error code so that I can successfully scale an Azure Kubernetes Service (AKS) cluster.
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---

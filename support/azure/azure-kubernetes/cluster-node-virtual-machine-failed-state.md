@@ -4,7 +4,6 @@ description: Helps troubleshoot an issue where an Azure Kubernetes Service (AKS)
 ms.date: 04/01/2024
 ms.reviewer: chiragpa, nickoman, v-weizhu, v-six, aritraghosh
 ms.service: azure-kubernetes-service
-ms.subservice: common-issues
 keywords:
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot why attach my node virtual machine is in a failed state so that I can successfully use my Azure Kubernetes Service (AKS) cluster.
 ms.custom: sap:Node/node pool availability and performance

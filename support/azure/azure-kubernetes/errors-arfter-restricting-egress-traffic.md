@@ -4,7 +4,6 @@ description: Troubleshoot errors that occur after you restrict egress traffic fr
 ms.date: 05/25/2022
 ms.reviewer: chiragpa, nickoman, v-leedennis
 ms.service: azure-kubernetes-service
-ms.subservice: common-issues
 keywords:
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot errors that occur after I restrict egress traffic so that I can access my Azure Kubernetes Service (AKS) cluster successfully.
 ms.custom: sap:Connectivity

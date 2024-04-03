@@ -4,7 +4,6 @@ description: Troubleshoot why you receive 429 Too Many Requests errors on your K
 ms.date: 08/29/2023
 ms.reviewer: chiragpa, nickoman, v-leedennis, v-weizhu
 ms.service: azure-kubernetes-service
-ms.subservice: common-issues
 keywords:
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the 429 Too Many Requests errors that I'm receiving so that I can successfully use my Kubernetes cluster configured without exceeding the assigned quota for my Azure subscription.
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)

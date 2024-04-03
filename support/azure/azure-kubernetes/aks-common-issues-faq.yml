@@ -6,7 +6,6 @@ metadata:
   ms.date: 11/14/2023
   ms.reviewer: chiragpa, nickoman, v-leedennis
   ms.service: azure-kubernetes-service
-  ms.subservice: common-issues
   ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 
 title: Azure Kubernetes Service (AKS) common issues FAQ

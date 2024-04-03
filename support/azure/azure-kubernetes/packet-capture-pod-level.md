@@ -5,7 +5,6 @@ ms.date: 02/27/2024
 ms.author: genli
 author: y2kdread
 ms.service: azure-kubernetes-service
-ms.subservice: data-collection-guide
 ms.custom: sap:Monitoring and Logging
 ---
 # Capture TCP packets from a pod on an AKS cluster

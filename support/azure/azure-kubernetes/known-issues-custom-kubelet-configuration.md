@@ -5,7 +5,6 @@ ms.date: 04/28/2023
 editor: v-jsitser
 ms.reviewer: allyford, abelch, jpalma, v-leedennis
 ms.service: azure-kubernetes-service
-ms.subservice: troubleshoot-create-operations
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
 # Known issues: Custom kubelet configuration on Windows nodes in AKS
