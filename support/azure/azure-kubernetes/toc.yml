@@ -4,49 +4,49 @@
 - name: Troubleshoot create operations
   items:
   - name: Basic troubleshooting
-    href: troubleshoot-aks-cluster-creation-issues.md
+    href: create-upgrade-delete/troubleshoot-aks-cluster-creation-issues.md
   - name: AADSTS7000222 - BadRequest or InvalidClientSecret error
-    href: error-code-badrequest-or-invalidclientsecret.md
+    href: create-upgrade-delete/error-code-badrequest-or-invalidclientsecret.md
   - name: CniDownloadTimeoutVMExtensionError error (41)
-    href: error-code-cnidownloadtimeoutvmextensionerror.md
+    href: create-upgrade-delete/error-code-cnidownloadtimeoutvmextensionerror.md
   - name: ERR_VHD_FILE_NOT_FOUND error (124)
-    href: error-code-vhdfilenotfound.md
+    href: create-upgrade-delete/error-code-vhdfilenotfound.md
   - name: InvalidParameter error
-    href: error-code-invalidparameter.md
+    href: create-upgrade-delete/error-code-invalidparameter.md
   - name: InvalidResourceReference error
-    href: error-code-invalidresourcereference.md
+    href: create-upgrade-delete/error-code-invalidresourcereference.md
   - name: Known issues - Custom kubelet configuration on Windows
-    href: known-issues-custom-kubelet-configuration.md
+    href: create-upgrade-delete/known-issues-custom-kubelet-configuration.md
   - name: K8SAPIServerConnFailVMExtensionError error (51)
-    href: error-code-k8sapiserverconnfailvmextensionerror.md
+    href: create-upgrade-delete/error-code-k8sapiserverconnfailvmextensionerror.md
   - name: K8SAPIServerDNSLookupFailVMExtensionError error (52)
-    href: error-code-k8sapiserverdnslookupfailvmextensionerror.md
+    href: create-upgrade-delete/error-code-k8sapiserverdnslookupfailvmextensionerror.md
   - name: LinkedAuthorizationFailed error
-    href: error-code-linkedauthorizationfailed.md
+    href: create-upgrade-delete/error-code-linkedauthorizationfailed.md
   - name: MissingSubscriptionRegistration error
-    href: error-code-missingsubscriptionregistration.md
+    href: create-upgrade-delete/error-code-missingsubscriptionregistration.md
   - name: OperationNotAllowed or PublicIPCountLimitReached error
-    href: error-code-operationnotallowed-publicipcountlimitreached.md
+    href: create-upgrade-delete/error-code-operationnotallowed-publicipcountlimitreached.md
   - name: OperationPreempted error
-    href: error-code-operationpreempted.md
+    href: create-upgrade-delete/error-code-operationpreempted.md
   - name: OutboundConnFailVMExtensionError error (50)
-    href: error-code-outboundconnfailvmextensionerror.md
+    href: create-upgrade-delete/error-code-outboundconnfailvmextensionerror.md
   - name: RequestDisallowedByPolicy error
-    href: error-code-requestdisallowedbypolicy.md
+    href: create-upgrade-delete/error-code-requestdisallowedbypolicy.md
   - name: ReservedResourceName error
-    href: error-code-reservedresourcename.md
+    href: create-upgrade-delete/error-code-reservedresourcename.md
   - name: ServicePrincipalValidationClientError error
-    href: error-code-serviceprincipalvalidationclienterror.md
+    href: create-upgrade-delete/error-code-serviceprincipalvalidationclienterror.md
   - name: SubscriptionRequestsThrottled error (429)
-    href: error-code-subscriptionrequeststhrottled.md
+    href: create-upgrade-delete/error-code-subscriptionrequeststhrottled.md
   - name: SubnetWithExternalResourcesCannotBeUsedByOtherResources error
-    href: subnet-with-external-resources-cannot-be-used-by-other-resources.md
+    href: create-upgrade-delete/subnet-with-external-resources-cannot-be-used-by-other-resources.md
   - name: VMExtensionProvisioningTimeout error
-    href: error-code-vmextensionprovisioningtimeout.md
+    href: create-upgrade-delete/error-code-vmextensionprovisioningtimeout.md
   - name: WINDOWS_CSE_ERROR_CHECK_API_SERVER_CONNECTIVITY error (5)
-    href: windows-cse-error-check-api-server-connectivity.md
+    href: create-upgrade-delete/windows-cse-error-check-api-server-connectivity.md
   - name: ZonalAllocationFailed, AllocationFailed, or OverconstrainedAllocationRequest error
-    href: error-code-zonalallocationfailed-allocationfailed.md
+    href: create-upgrade-delete/error-code-zonalallocationfailed-allocationfailed.md
   - name: Troubleshoot the AKSCapacityError
     href: akscapacityerror.md
 
@@ -55,7 +55,7 @@
   - name: Troubleshoot Azure Kubernetes Service (AKS) upgrade errors
     items:
     - name: AADSTS7000222 - BadRequest or InvalidClientSecret error
-      href: error-code-badrequest-or-invalidclientsecret.md
+      href: create-upgrade-delete/error-code-badrequest-or-invalidclientsecret.md
     - name: CustomPrivateDNSZoneMissingPermissionError error
       href: error-code-customprivatednszonemissingpermissionerror.md
     - name: NodePoolMcVersionIncompatible error
@@ -75,233 +75,233 @@
     - name: Unable to get log analytics workspace info error
       href: aks-upgrade-scale-fail-log-analytics-workspace-missing.md
   - name: Kubernetes 1.16 upgrades fail
-    href: upgrades-to-kubernetes-fail-using-node-labels.md  
+    href: create-upgrade-delete/upgrades-to-kubernetes-fail-using-node-labels.md  
   - name: Upgrade issues with Gen2 VMs on Windows AKS cluster
-    href: nodepools-not-upgraded-to-gen2-during-node-image-upgrade.md
+    href: create-upgrade-delete/nodepools-not-upgraded-to-gen2-during-node-image-upgrade.md
   - name: Upgrade fails because of NSG rules
-    href: upgrade-fails-because-of-nsg-rules.md
+    href: create-upgrade-delete/upgrade-fails-because-of-nsg-rules.md
 
 - name: Troubleshoot delete operations
   items:
   - name: CannotDeleteLoadBalancerWithPrivateLinkService error
-    href: cannot-delete-load-balancer-private-link-service.md
+    href: create-upgrade-delete/cannot-delete-load-balancer-private-link-service.md
   - name: InUseNetworkSecurityGroupCannotBeDeleted error
-    href: cannot-delete-ip-subnet-nsg.md
+    href: create-upgrade-delete/cannot-delete-ip-subnet-nsg.md
   - name: InUseRouteTableCannotBeDeleted error
-    href: error-code-inuseroutetablecannotbedeleted.md
+    href: create-upgrade-delete/error-code-inuseroutetablecannotbedeleted.md
   - name: InUseSubnetCannotBeDeleted error
-    href: cannot-delete-ip-subnet-nsg.md
+    href: create-upgrade-delete/cannot-delete-ip-subnet-nsg.md
   - name: LoadBalancerInUseByVirtualMachineScaleSet error
-    href: load-balancer-or-nsg-in-use-by-vm-scale-set.md
+    href: create-upgrade-delete/load-balancer-or-nsg-in-use-by-vm-scale-set.md
   - name: NetworkSecurityGroupInUseByVirtualMachineScaleSet error
-    href: load-balancer-or-nsg-in-use-by-vm-scale-set.md
+    href: create-upgrade-delete/load-balancer-or-nsg-in-use-by-vm-scale-set.md
   - name: PrivateLinkServiceWithPrivateEndpointConnectionsCannotBeDeleted error
-    href: cannot-delete-load-balancer-private-link-service.md
+    href: create-upgrade-delete/cannot-delete-load-balancer-private-link-service.md
   - name: PublicIPAddressCannotBeDeleted error
-    href: cannot-delete-ip-subnet-nsg.md
+    href: create-upgrade-delete/cannot-delete-ip-subnet-nsg.md
   - name: RequestDisallowedByPolicy error
-    href: error-code-requestdisallowedbypolicy-delete.md
+    href: create-upgrade-delete/error-code-requestdisallowedbypolicy-delete.md
   - name: SubscriptionRequestsThrottled error
-    href: error-code-toomanyrequestsreceived-subscriptionrequeststhrottled.md
+    href: create-upgrade-delete/error-code-toomanyrequestsreceived-subscriptionrequeststhrottled.md
   - name: TooManyRequestsReceived error
-    href: error-code-toomanyrequestsreceived-subscriptionrequeststhrottled.md
+    href: create-upgrade-delete/error-code-toomanyrequestsreceived-subscriptionrequeststhrottled.md
 
 - name: Troubleshoot scale operations
   items:
   - name: Cannot scale cluster autoscaler enabled node pool
-    href: cannot-scale-cluster-autoscaler-enabled-node-pool.md
+    href: create-upgrade-delete/cannot-scale-cluster-autoscaler-enabled-node-pool.md
   - name: Common issues with running or scaling large AKS clusters
-    href: aks-at-scale-troubleshoot-guide.md
+    href: create-upgrade-delete/aks-at-scale-troubleshoot-guide.md
   - name: Failed to fix node group sizes
-    href: cluster-autoscaler-fails-to-scale.md
+    href: create-upgrade-delete/cluster-autoscaler-fails-to-scale.md
   - name: SubnetIsFull error
-    href: error-code-subnetisfull.md
+    href: create-upgrade-delete/error-code-subnetisfull.md
 
 - name: Troubleshoot start operations
   items:
   - name: Basic troubleshooting
-    href: troubleshoot-aks-cluster-start-issues.md
+    href: create-upgrade-delete/troubleshoot-aks-cluster-start-issues.md
   - name: K8SAPIServerConnFailVMExtensionError error (51)
-    href: error-code-k8sapiserverconnfailvmextensionerror.md
+    href: create-upgrade-delete/error-code-k8sapiserverconnfailvmextensionerror.md
   - name: K8SAPIServerDNSLookupFailVMExtensionError error (52)
-    href: error-code-k8sapiserverdnslookupfailvmextensionerror.md
+    href: create-upgrade-delete/error-code-k8sapiserverdnslookupfailvmextensionerror.md
   - name: OutboundConnFailVMExtensionError error (50)
-    href: error-code-outboundconnfailvmextensionerror.md
+    href: create-upgrade-delete/error-code-outboundconnfailvmextensionerror.md
 
 - name: Troubleshoot Kubernetes control plane
   items:
   - name: Troubleshoot API server and etcd
-    href: troubleshoot-apiserver-etcd.md
+    href: create-upgrade-delete/troubleshoot-apiserver-etcd.md
 
 - name: Troubleshoot node not ready
   items:
   - name: Basic troubleshooting
-    href: node-not-ready-basic-troubleshooting.md
+    href: availability-performance/node-not-ready-basic-troubleshooting.md
   - name: Custom script extension errors
-    href: node-not-ready-custom-script-extension-errors.md
+    href: availability-performance/node-not-ready-custom-script-extension-errors.md
   - name: Expired certificates
-    href: node-not-ready-expired-certificates.md
+    href: availability-performance/node-not-ready-expired-certificates.md
   - name: Node not ready after being healthy
-    href: node-not-ready-after-being-healthy.md
+    href: availability-performance/node-not-ready-after-being-healthy.md
   - name: Node not ready but then recovers
-    href: node-not-ready-then-recovers.md
+    href: availability-performance/node-not-ready-then-recovers.md
 
 - name: Troubleshoot inbound connections
   items:
   - name: Cannot connect to application hosted on AKS cluster
     items:
     - name: Basic troubleshooting
-      href: connection-issues-application-hosted-aks-cluster.md
+      href: connectivity/connection-issues-application-hosted-aks-cluster.md
     - name: Custom NSG blocks traffic
-      href: custom-nsg-blocks-traffic.md
+      href: connectivity/custom-nsg-blocks-traffic.md
     - name: Failures in the "az aks command invoke" command
-      href: resolve-az-aks-command-invoke-failures.md
+      href: connectivity/resolve-az-aks-command-invoke-failures.md
     - name: Get and analyze HTTP response codes
-      href: get-and-analyze-http-response-codes.md
+      href: connectivity/get-and-analyze-http-response-codes.md
     - name: Intermittent timeouts or server issues
-      href: intermittent-timeouts-or-server-issue.md
+      href: connectivity/intermittent-timeouts-or-server-issue.md
   - name: Cannot connect to AKS cluster through API server
     items:
     - name: Basic troubleshooting
-      href: troubleshoot-cluster-connection-issues-api-server.md
+      href: connectivity/troubleshoot-cluster-connection-issues-api-server.md
     - name: Client IP address can't access API server
-      href: client-ip-address-cannot-access-api-server.md
+      href: connectivity/client-ip-address-cannot-access-api-server.md
     - name: Config file isn't available when connecting
-      href: config-file-is-not-available-when-connecting.md
+      href: connectivity/config-file-is-not-available-when-connecting.md
     - name: Tunnel connectivity issues
-      href: tunnel-connectivity-issues.md
+      href: connectivity/tunnel-connectivity-issues.md
     - name: User can't get cluster resources
-      href: user-cannot-get-cluster-resources.md
+      href: connectivity/user-cannot-get-cluster-resources.md
 
 - name: Troubleshoot outbound connections
   items:
   - name: Basic network flow and troubleshooting
-    href: basic-troubleshooting-outbound-connections.md
+    href: connectivity/basic-troubleshooting-outbound-connections.md
   - name: Scenario-based troubleshooting
     items:
     - name: Can't connect to pods and services in same cluster
-      href: troubleshoot-connection-pods-services-same-cluster.md
+      href: connectivity/troubleshoot-connection-pods-services-same-cluster.md
     - name: Can't connect to endpoints in same virtual network
-      href: troubleshoot-connections-endpoints-same-virtual-network.md
+      href: connectivity/troubleshoot-connections-endpoints-same-virtual-network.md
     - name: Can't connect to endpoints outside virtual network (public internet)
-      href: troubleshoot-connections-endpoints-outside-virtual-network.md
+      href: connectivity/troubleshoot-connections-endpoints-outside-virtual-network.md
     - name: DNS resolution failure from within pod but not from worker node
-      href: troubleshoot-dns-failure-from-pod-but-not-from-worker-node.md
+      href: connectivity/troubleshoot-dns-failure-from-pod-but-not-from-worker-node.md
     - name: Traffic between node pools is blocked by custom NSG
-      href: traffic-between-node-pools-is-blocked.md
+      href: connectivity/traffic-between-node-pools-is-blocked.md
 
 - name: Data collection guide
   items:
   - name: Capture real-time system insights from cluster
-    href: capture-system-insights-from-aks.md
+    href: logs/capture-system-insights-from-aks.md
     displayName: real-time, debugging, observability, inspektor-gadget, ig, ebpf
   - name: Capture TCP dump from Linux node
-    href: capture-tcp-dump-linux-node-aks.md
+    href: logs/capture-tcp-dump-linux-node-aks.md
   - name: Capture TCP dump from Windows node
-    href: capture-tcp-dump-windows-node-aks.md
+    href: logs/capture-tcp-dump-windows-node-aks.md
   - name: Capture TCP packets from pod
-    href: packet-capture-pod-level.md
+    href: logs/packet-capture-pod-level.md
 
 - name: Troubleshoot AKS cluster performance issues
   items:
   - name: AKS cluster/node is in a failed state
-    href: cluster-node-virtual-machine-failed-state.md
+    href: availability-performance/cluster-node-virtual-machine-failed-state.md
   - name: Identify nodes and containers consuming high CPU
-    href: identify-high-cpu-consuming-containers-aks.md
+    href: availability-performance/identify-high-cpu-consuming-containers-aks.md
   - name: Identify memory saturation in AKS clusters
-    href: identify-memory-saturation-aks.md
+    href: availability-performance/identify-memory-saturation-aks.md
 
 - name: Troubleshoot Azure Storage-related issues
   items:
   - name: Errors when mounting File share
-    href: fail-to-mount-azure-file-share.md
+    href: storage/fail-to-mount-azure-file-share.md
   - name: Errors when mounting Blob container
-    href: mounting-azure-blob-storage-container-fail.md 
+    href: storage/mounting-azure-blob-storage-container-fail.md 
   - name: Errors when mounting Disk volumes
-    href: fail-to-mount-azure-disk-volume.md
+    href: storage/fail-to-mount-azure-disk-volume.md
   - name: Can't set the uid and gid mounting options on an Azure Disk
-    href: failure-setting-azure-disk-mount-options-uid-gid.md
+    href: storage/failure-setting-azure-disk-mount-options-uid-gid.md
   - name: Could not change permissions using Azure Files
-    href: could-not-change-permissions-azure-files.md
+    href: storage/could-not-change-permissions-azure-files.md
   - name: Failed to create File share on storage account
-    href: create-file-share-failed-storage-account.md
+    href: storage/create-file-share-failed-storage-account.md
   - name: File share mounting failures for Azure Files
-    href: file-share-mount-failures-azure-files.md
+    href: storage/file-share-mount-failures-azure-files.md
   - name: Recommended and useful mountOptions settings
-    href: mountoptions-settings-azure-files.md
+    href: storage/mountoptions-settings-azure-files.md
   - name: Slow attach and detach operations for an Azure Disk
-    href: slow-attach-detach-operations-azure-disk.md
+    href: storage/slow-attach-detach-operations-azure-disk.md
   - name: Troubleshoot common Bring Your Own Key (BYOK) issues
-    href: troubleshoot-common-bring-your-own-key-issues.md
+    href: storage/troubleshoot-common-bring-your-own-key-issues.md
 
 - name: AKS common issues
   items:
   - name: AKS common issues FAQ
-    href: aks-common-issues-faq.yml
+    href: create-upgrade-delete/aks-common-issues-faq.yml
   - name: 429 Too Many Requests errors
-    href: 429-too-many-requests-errors.md
+    href: create-upgrade-delete/429-too-many-requests-errors.md
   - name: Argument list too long
-    href: application-fails-argument-list-too-long.md
+    href: create-upgrade-delete/application-fails-argument-list-too-long.md
   - name: Microsoft Entra Pod Identity NMI returns 500 Internal Server Error
-    href: stale-watch-azure-ad-pod-identity-nmi-status-500.md
+    href: create-upgrade-delete/stale-watch-azure-ad-pod-identity-nmi-status-500.md
   - name: Can't access the cluster API server using authorized IP ranges
-    href: cannot-access-cluster-api-server-using-authorized-ip-ranges.md
+    href: create-upgrade-delete/cannot-access-cluster-api-server-using-authorized-ip-ranges.md
   - name: Can't view resources in Kubernetes resource viewer on Azure portal
-    href: cannot-view-resources-kubernetes-resource-viewer-portal.md
+    href: create-upgrade-delete/cannot-view-resources-kubernetes-resource-viewer-portal.md
   - name: "Changing property 'imageReference' is not allowed"
-    href: changing-property-imagereference-not-allowed.md
+    href: create-upgrade-delete/changing-property-imagereference-not-allowed.md
   - name: Cluster upgrading and scaling errors
-    href: upgrading-or-scaling-does-not-succeed.md
+    href: create-upgrade-delete/upgrading-or-scaling-does-not-succeed.md
   - name: OperationNotAllowed errors
-    href: operationnotallowed.md
+    href: create-upgrade-delete/operationnotallowed.md
   - name: '"Error from server: error dialing backend: dial tcp" messages'
-    href: error-from-server-error-dialing-backend-dial-tcp.md
+    href: create-upgrade-delete/error-from-server-error-dialing-backend-dial-tcp.md
   - name: Error "CreateOrUpdateVirtualNetworkLinkFailed"
     href: createorupdatevirtualnetworklinkfailed-error.md
   - name: Errors using features that require virtual machine scale sets
-    href: error-using-feature-requiring-virtual-machine-scale-set.md
+    href: create-upgrade-delete/error-using-feature-requiring-virtual-machine-scale-set.md
   - name: InsufficientSubnetSize error
-    href: insufficientsubnetsize-error-advanced-networking.md
+    href: create-upgrade-delete/insufficientsubnetsize-error-advanced-networking.md
   - name: Memory saturation occurs in pods after cluster upgrade
-    href: aks-memory-saturation-after-upgrade.md
+    href: create-upgrade-delete/aks-memory-saturation-after-upgrade.md
   - name: Increased memory usage reported in Kubernetes 1.25 or later versions
-    href: aks-increased-memory-usage-cgroup-v2.md
-  - name: Missing or invalid service principal
-    href: missing-or-invalid-service-principal.md
+    href: create-upgrade-delete/aks-increased-memory-usage-cgroup-v2.md
+  - name: create-upgrade-delete/Missing or invalid service principal
+    href: create-upgrade-delete/missing-or-invalid-service-principal.md
   - name: Network watch is stale after egress traffic restriction
-    href: stale-watch-azure-ad-pod-identity-nmi-status-500.md
+    href: create-upgrade-delete/stale-watch-azure-ad-pod-identity-nmi-status-500.md
   - name: Node count isn't in autoscaler min and max range
-    href: node-count-is-not-in-autoscaler-min-max-range.md
+    href: create-upgrade-delete/node-count-is-not-in-autoscaler-min-max-range.md
   - name: Pod is stuck in CrashLoopBackOff mode
-    href: pod-stuck-crashloopbackoff-mode.md
+    href: create-upgrade-delete/pod-stuck-crashloopbackoff-mode.md
   - name: '"Quota exceeded" error during creation or upgrade'
-    href: quota-exceeded-during-creation-upgrade.md
+    href: create-upgrade-delete/quota-exceeded-during-creation-upgrade.md
   - name: Restricting egress traffic causes errors
-    href: errors-arfter-restricting-egress-traffic.md
+    href: create-upgrade-delete/errors-arfter-restricting-egress-traffic.md
   - name: TCP time-outs such as 10250 I/O
-    href: tcp-timeouts-dial-tcp-nodeip-10250-io-timeout.md
+    href: create-upgrade-delete/tcp-timeouts-dial-tcp-nodeip-10250-io-timeout.md
   - name: TCP times out when kubectl or other third-party tools connect
-    href: tcp-timeouts-kubetctl-third-party-tools-connect-api-server.md
+    href: create-upgrade-delete/tcp-timeouts-kubetctl-third-party-tools-connect-api-server.md
   - name: '"tls: client offered only unsupported versions" messages'
-    href: tls-client-offered-unsupported-versions.md
+    href: create-upgrade-delete/tls-client-offered-unsupported-versions.md
   - name: Troubleshoot common Azure Linux container host for AKS issues
     displayName: Mariner, MACH
-    href: troubleshoot-common-azure-linux-aks.md
+    href: create-upgrade-delete/troubleshoot-common-azure-linux-aks.md
 
 - name: Extensions and add-ons
   items:
   - name: AKS Cost Analysis add-on issues
-    href: aks-cost-analysis-add-on-issues.md
+    href: extensions/aks-cost-analysis-add-on-issues.md
   - name: Troubleshoot Azure Key Vault Provider for Secrets Store CSI Driver
-    href: troubleshoot-key-vault-csi-secrets-store-csi-driver.md
+    href: extensions/troubleshoot-key-vault-csi-secrets-store-csi-driver.md
   - name: Troubleshoot cluster extension deployment errors
-    href: cluster-extension-deployment-errors.md
+    href: extensions/cluster-extension-deployment-errors.md
   - name: Troubleshoot Dapr extension installation errors
-    href: troubleshoot-dapr-extension-installation-errors.md
+    href: extensions/troubleshoot-dapr-extension-installation-errors.md
   - name: Troubleshoot deployment failures of Azure Marketplace offers
-    href: troubleshoot-failed-kubernetes-deployment-offer.md
+    href: extensions/troubleshoot-failed-kubernetes-deployment-offer.md
   - name: Troubleshoot the KEDA add-on
-    href: troubleshoot-kubernetes-event-driven-autoscaling-add-on.md
+    href: extensions/troubleshoot-kubernetes-event-driven-autoscaling-add-on.md
 
 - name: Can't pull images from container registry to cluster
-  href: cannot-pull-image-from-acr-to-aks-cluster.md
+  href: extensions/cannot-pull-image-from-acr-to-aks-cluster.md
