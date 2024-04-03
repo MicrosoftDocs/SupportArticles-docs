@@ -12,15 +12,15 @@ This article provides a solution to the "Policy definition not found" error that
 
 ## Symptoms
 
-When you try to run policy assignments that are configured in the Main.tf file of the Terraform tool, you receive the following "Policy definition not found" error message:
+When you try to run the following policy assignments that are configured in the Main.tf file of the Terraform tool, you receive the "Policy definition not found" error message:
 
 ```
 resource "azurerm_policy_assignment" "kubernetes" {
   name                 = "kubernetes"
-  scope                = var.cust_scope
-  policy_definition_id = var.kubernetes_policyset_id
+  scope                = <scope>
+  policy_definition_id = <policy_definition_id>
   description          = "Assignment of the Kubernetes to subscription."
-  display_name         = "Kubernetes-custom-Initiative-test01"
+  display_name         = "Kubernetes-custom-initiative-test01"
 }
 ```
 
@@ -35,10 +35,10 @@ In your Terraform configuration, include a 'depends_on' parameter within the pol
 ```
 resource "azurerm_policy_assignment" "kubernetes" {
   name                 = "kubernetes"
-  scope                = var.cust_scope
-  policy_definition_id = var.kubernetes_policyset_id
+  scope                = <scope>
+  policy_definition_id = <policy_definition_id>
   description          = "Assignment of the Kubernetes to subscription."
-  display_name         = "Kubernetes-custom-Initiative-test01"
+  display_name         = "Kubernetes-custom-initiative-test01"
   depends_on = [azurerm_policy_definition.policies]
 }
 ```
