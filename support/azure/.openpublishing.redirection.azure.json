@@ -2819,6 +2819,21 @@
         "source_path": "azure-container-instances/unexpected-memory-usage-metrics.md",
         "redirect_url": "/troubleshoot/azure/azure-container-instances/management/unexpected-memory-usage-metrics",
         "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-container-instances/configuration-setup/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-container-instances/welcome-container-instances.yml",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-container-instances/management/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-container-instances/welcome-container-instances.yml",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-container-instances/connectivity/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-container-instances/welcome-container-instances.yml",
+        "redirect_document_id": false
       }
   ]
 }
