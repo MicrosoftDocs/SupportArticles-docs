@@ -1,5 +1,5 @@
 ---
-title: Error in policy assignments main.tf file in Terraform.
+title: Error in policy assignments Main.tf file of Terraform.
 description: This article provides a solution to an error that you encounter during policy assignments.
 ms.date: 03/27/2024
 ms.reviewer: chiragpa, andbar, haitch, v-leedennis
