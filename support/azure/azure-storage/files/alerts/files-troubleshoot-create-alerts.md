@@ -18,9 +18,9 @@ This article explains how to create and receive alerts if an Azure file share is
 
 | File share type | SMB | NFS |
 |-|:-:|:-:|
-| Standard file shares (GPv2), LRS/ZRS | :::image type="icon" source="media/files-troubleshoot-linux-nfs/yes-icon.png" border="false"::: | :::image type="icon" source="media/files-troubleshoot-linux-nfs/no-icon.png" border="false"::: |
-| Standard file shares (GPv2), GRS/GZRS | :::image type="icon" source="media/files-troubleshoot-linux-nfs/yes-icon.png" border="false"::: | :::image type="icon" source="media/files-troubleshoot-linux-nfs/no-icon.png" border="false"::: |
-| Premium file shares (FileStorage), LRS/ZRS | :::image type="icon" source="media/files-troubleshoot-linux-nfs/yes-icon.png" border="false"::: | :::image type="icon" source="media/files-troubleshoot-linux-nfs/yes-icon.png" border="false"::: |
+| Standard file shares (GPv2), LRS/ZRS | :::image type="icon" source="../security/media/files-troubleshoot-linux-nfs/yes-icon.png" border="false"::: | :::image type="icon" source="../security/media/files-troubleshoot-linux-nfs/no-icon.png" border="false"::: |
+| Standard file shares (GPv2), GRS/GZRS | :::image type="icon" source="../security/media/files-troubleshoot-linux-nfs/yes-icon.png" border="false"::: | :::image type="icon" source="../security/media/files-troubleshoot-linux-nfs/no-icon.png" border="false"::: |
+| Premium file shares (FileStorage), LRS/ZRS | :::image type="icon" source="../security/media/files-troubleshoot-linux-nfs/yes-icon.png" border="false"::: | :::image type="icon" source="../security/media/files-troubleshoot-linux-nfs/yes-icon.png" border="false"::: |
 
 ## Create an alert if a file share is being throttled
 
@@ -113,4 +113,4 @@ This article explains how to create and receive alerts if an Azure file share is
 - [Understand Azure Files performance](/azure/storage/files/understand-performance)
 - [Overview of alerts in Microsoft Azure](/azure/azure-monitor/alerts/alerts-overview)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]

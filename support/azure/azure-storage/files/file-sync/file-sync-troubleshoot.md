@@ -91,4 +91,4 @@ To run AFSDiag, perform the steps below:
 - [Troubleshoot Azure Files](../connectivity/files-troubleshoot.md)
 - [Troubleshoot Azure Files performance issues](../performance/files-troubleshoot-performance.md)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]

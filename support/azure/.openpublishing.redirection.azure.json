@@ -2754,6 +2754,146 @@
         "source_path": "entra-id/user-prov-sync/index.md",
         "redirect_url": "/troubleshoot/azure/entra-id/welcome-entra-id",
         "redirect_document_id": false
+      },
+      {
+        "source_path": "entra-id/user-prov-sync/index.md",
+        "redirect_url": "/troubleshoot/azure/entra-id/welcome-entra-id",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/files/file-sync-troubleshoot-sync-errors.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/files/file-sync/file-sync-troubleshoot-sync-errors",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/files/files-troubleshoot-smb-connectivity.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/files/connectivity/files-troubleshoot-smb-connectivity",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/files/files-troubleshoot-smb-authentication.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/files/security/files-troubleshoot-smb-authentication",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/files/files-troubleshoot-performance.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/files/performance/files-troubleshoot-performance",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/files/files-troubleshoot-linux-smb.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/files/security/files-troubleshoot-linux-smb",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/files/files-troubleshoot-linux-nfs.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/files/security/files-troubleshoot-linux-nfs",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/common/storage-explorer-troubleshooting.md",
+        "redirect_url": "/troubleshoot/azure/blobs/alerts/storage-explorer-troubleshooting",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/blobs/adls-gen2-sticky-bit-403-access-denied.md",
+        "redirect_url": "/troubleshoot/azure/blobs/authentication/adls-gen2-sticky-bit-403-access-denied",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/files/troubleshoot-azure-files.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/files/backup-restore/troubleshoot-azure-files",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/files/request-body-large.md",
+        "redirect_url": "/troubleshoot/azure/blobs/connectivity/request-body-large",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/files/file-sync-troubleshoot-sync-group-management.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/files/file-sync/file-sync-troubleshoot-sync-group-management",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/files/file-sync-troubleshoot-installation.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/files/file-sync/file-sync-troubleshoot-installation",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/files/file-sync-troubleshoot-cloud-tiering.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/files/file-sync/file-sync-troubleshoot-cloud-tiering",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/files/file-sync-troubleshoot.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/files/file-sync/file-sync-troubleshoot",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/files/files-troubleshoot-create-alerts.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/files/alerts/files-troubleshoot-create-alerts",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/files/files-troubleshoot.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/files/connectivity/files-troubleshoot",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/files/files-client-other-errors.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/files/security/files-client-other-errors",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/common/troubleshoot-storage-performance.md",
+        "redirect_url": "/troubleshoot/azure/blobs/alerts/troubleshoot-storage-performance",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/common/troubleshoot-storage-client-application-errors.md",
+        "redirect_url": "/troubleshoot/azure/blobs/alerts/troubleshoot-storage-client-application-errors",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/common/troubleshoot-storage-availability.md",
+        "redirect_url": "/troubleshoot/azure/blobs/alerts/troubleshoot-storage-availability",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/common/troubleshoot-latency-storage-analytics-logs.md",
+        "redirect_url": "/troubleshoot/azure/blobs/alerts/troubleshoot-latency-storage-analytics-logs",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/common/storage-use-azcopy-troubleshoot.md",
+        "redirect_url": "/troubleshoot/azure/blobs/connectivity/storage-use-azcopy-troubleshoot",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/common/storage-monitoring-diagnosing-troubleshooting.md",
+        "redirect_url": "/troubleshoot/azure/blobs/alerts/storage-monitoring-diagnosing-troubleshooting",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/blobs/invalid-blob-or-block-content-or-invalid-block-list.md",
+        "redirect_url": "/troubleshoot/azure/blobs/connectivity/invalid-blob-or-block-content-or-invalid-block-list",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/blobs/diagnose-high-cpu-disk-perfinsights.md",
+        "redirect_url": "/troubleshoot/azure/blobs/performance/diagnose-high-cpu-disk-perfinsights",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/blobs/data-protection-backup-recovery.md",
+        "redirect_url": "/troubleshoot/azure/blobs/recovery/data-protection-backup-recovery",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/blobs/copy-blobs-between-storage-accounts-network-restriction.md",
+        "redirect_url": "/troubleshoot/azure/blobs/connectivity/copy-blobs-between-storage-accounts-network-restriction",
+        "redirect_document_id": true
       }
   ]
 }

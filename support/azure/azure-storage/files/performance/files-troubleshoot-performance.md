@@ -15,9 +15,9 @@ This article lists common problems related to Azure file share performance, and 
 
 | File share type | SMB | NFS |
 |-|:-:|:-:|
-| Standard file shares (GPv2), LRS/ZRS | :::image type="icon" source="media/files-troubleshoot-smb-authentication/yes-icon.png" border="false"::: | :::image type="icon" source="media/files-troubleshoot-smb-authentication/no-icon.png" border="false"::: |
-| Standard file shares (GPv2), GRS/GZRS | :::image type="icon" source="media/files-troubleshoot-smb-authentication/yes-icon.png" border="false"::: | :::image type="icon" source="media/files-troubleshoot-smb-authentication/no-icon.png" border="false"::: |
-| Premium file shares (FileStorage), LRS/ZRS | :::image type="icon" source="media/files-troubleshoot-smb-authentication/yes-icon.png" border="false"::: | :::image type="icon" source="media/files-troubleshoot-smb-authentication/yes-icon.png" border="false"::: |
+| Standard file shares (GPv2), LRS/ZRS | :::image type="icon" source="../security/media/files-troubleshoot-smb-authentication/yes-icon.png" border="false"::: | :::image type="icon" source="../security/media/files-troubleshoot-smb-authentication/no-icon.png" border="false"::: |
+| Standard file shares (GPv2), GRS/GZRS | :::image type="icon" source="../security/media/files-troubleshoot-smb-authentication/yes-icon.png" border="false"::: | :::image type="icon" source="../security/media/files-troubleshoot-smb-authentication/no-icon.png" border="false"::: |
+| Premium file shares (FileStorage), LRS/ZRS | :::image type="icon" source="../security/media/files-troubleshoot-smb-authentication/yes-icon.png" border="false"::: | :::image type="icon" source="../security/media/files-troubleshoot-smb-authentication/yes-icon.png" border="false"::: |
 
 ## General performance troubleshooting
 
@@ -384,4 +384,4 @@ To confirm, you can use Azure Metrics in the portal.
 - [Overview of alerts in Microsoft Azure](/azure/azure-monitor/alerts/alerts-overview)
 - [Azure Files FAQ](/azure/storage/files/storage-files-faq)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]

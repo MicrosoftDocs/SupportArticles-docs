@@ -153,4 +153,4 @@ If a server isn't listed under **Registered servers** for a Storage Sync Service
 - [Monitor Azure File Sync](/azure/storage/file-sync/file-sync-monitoring)
 - [Troubleshoot Azure Files problems](../connectivity/files-troubleshoot.md)
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
