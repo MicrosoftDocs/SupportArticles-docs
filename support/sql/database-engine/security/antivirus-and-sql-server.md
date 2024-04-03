@@ -149,7 +149,9 @@ These files typically have the *.sql* file name extension and contain Transact-S
 
 #### Exception dump files
 
-The exception dump files typically use the *.mdmp* file name extension. These are system-generated files, which are saved in the *LOG* folder for that instance.
+The memory dump files typically use the *.mdmp* file name extension. These are system-generated files, which are saved in the *\\LOG* subfolder for that instance or in the folder that following registry key points to: HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\<instance name>\\CPE.
+For more information about memory dumps, see [Use the Sqldumper.exe tool to generate a dump file in SQL Server](\tools\use-sqldumper-generate-dump-file)
+
 
 #### In-memory OLTP files
 
