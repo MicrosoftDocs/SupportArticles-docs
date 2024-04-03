@@ -8,6 +8,7 @@ editor: v-jsitser
 ms.reviewer: chiragpa, v-rekhanain, v-leedennis
 ms.service: container-instances
 ms.topic: troubleshooting-problem-resolution
+ms.custom: sap:Management
 #Customer intent: As an Azure administrator, I want to learn how to fix a container group that's in a bad state so that I can successfully do operations on that container group.
 ---
 # Can't do operations or the container group is in a bad state

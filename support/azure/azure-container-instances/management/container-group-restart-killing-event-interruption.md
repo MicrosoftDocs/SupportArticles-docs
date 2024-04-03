@@ -4,6 +4,7 @@ description: Provides a solution to an issue where an Azure container group is u
 ms.date: 03/06/2024
 ms.reviewer: tysonfreeman, v-weizhu
 ms.service: container-instances
+ms.custom: sap:Management
 ---
 
 # Azure container group intermittently restarts due to killing event interruptions

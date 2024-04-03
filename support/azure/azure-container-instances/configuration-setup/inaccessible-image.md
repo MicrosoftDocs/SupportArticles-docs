@@ -7,6 +7,7 @@ ms.author: tysonfreeman
 editor: v-jsitser
 ms.reviewer: v-leedennis, v-weizhu
 ms.service: container-instances
+ms.custom: sap:Configuration and Setup
 #Customer intent: As an Azure administrator, I want to learn how to resolve the "InaccessibleImage" error so that I can successfully deploy an image onto a container instance.
 ---
 # DeploymentFailed - InaccessibleImage error code

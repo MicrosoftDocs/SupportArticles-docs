@@ -8,6 +8,7 @@ editor: v-jsitser
 ms.reviewer: tomcassidy, v-leedennis
 ms.topic: troubleshooting-problem-resolution
 ms.service: container-instances
+ms.custom: sap:Configuration and Setup
 #Customer intent: As an Azure administrator, I want to learn how to resolve a ServiceUnavailable (409) error ("requested resource is not available in the location") so that I can successfully deploy a resource in Azure Container Instances.
 ---
 # "ServiceUnavailable (409) - requested resource is not available in the location" error

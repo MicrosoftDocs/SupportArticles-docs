@@ -4,6 +4,7 @@ description: Provides a solution to an issue where an Azure container instance c
 ms.date: 01/25/2024
 ms.reviewer: tysonfreeman, v-weizhu
 ms.service: container-instances
+ms.custom: sap:Management
 ---
 # Azure container instance continues to run after the stop or delete command
 

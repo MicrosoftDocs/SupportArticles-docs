@@ -4,6 +4,7 @@ description: Describes how to troubleshoot image pull failures when you deploy t
 ms.date: 12/08/2023
 ms.service: container-instances
 ms.reviewer: tysonfreeman, v-weizhu 
+ms.custom: sap:Management
 ---
 
 # Fails to pull images from Azure Container Registry by using Managed Identity authentication
