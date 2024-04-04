@@ -16,7 +16,7 @@ This article helps you to resolve an authentication issue where the specified se
 
 The error messages that you might experience are associated with login failures that occur when attempting to connect to a SQL Server database using different connection providers.
 
-- You might see either of the following error messages associated with SQLOLEDB and SQLNCLI11 OLE DB Providers, which use either TCP or Named Pipes:
+- You might see either of the following error messages associated with the SQLOLEDB and SQLNCLI11 OLE DB Providers, which use either TCP or Named Pipes:
 
   - If you use a SQL login, the error message "Login failed for user 'userx'" indicates that the provided credentials are incorrect. A possible reason could be that user name wasn't spelt correctly.
 
@@ -49,8 +49,8 @@ The error messages that you might experience are associated with login failures 
 
 These errors might occur because of any of the following reasons:
 
-- The syntax of the connection string may not be correct.
-- The server name in the connection string may not be specified correctly.
+- The syntax of the connection string might not be correct.
+- The server name in the connection string might be incorrect.
 - The user credentials might be incorrect.
 
 ## Solution
