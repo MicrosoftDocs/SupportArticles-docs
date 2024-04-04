@@ -9,11 +9,22 @@ localization_priority: medium
 ms.reviewer: kaushika, justintu
 ms.custom: sap:Active Directory\Active Directory replication and topology, csstroubleshoot
 ---
+---
+title: Active Directory replication error 1256
+description: Describes how to Active Directory replication error 1256.
+ms.date: 12/26/2023
+manager: dcscontentpm
+audience: itpro
+ms.topic: troubleshooting
+localization_priority: medium
+ms.reviewer: kaushika, justintu
+ms.custom: sap:Active Directory\Active Directory replication and topology, csstroubleshoot
+---
 # Active Directory replication error 1256: The remote system is not available
 
 This article describes the symptoms, cause, and resolution steps for cases when Active Directory replication fails with error 1256: The remote system is not available.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2022, Windows Server 2019, Windows Server 2016  
 _Original KB number:_ &nbsp; 2200187
 
 ## Symptoms
