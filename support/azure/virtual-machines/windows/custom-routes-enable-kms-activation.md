@@ -5,9 +5,8 @@ services: virtual-machines, azure-resource-manager
 author: genlin
 manager: dcscontentpm
 tags: top-support-issue, azure-resource-manager
-ms.custom: devx-track-azurepowershell
+ms.custom: sap:Cannot activate my Windows VM, devx-track-azurepowershell
 ms.service: virtual-machines
-ms.subservice: vm-windows-activation
 ms.collection: windows
 ms.workload: na
 ms.tgt_pltfrm: vm-windows

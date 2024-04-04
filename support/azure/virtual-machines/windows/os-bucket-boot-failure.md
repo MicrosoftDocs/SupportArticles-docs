@@ -4,8 +4,8 @@ description: Explains why a Windows VM cannot boot and how to solve the problem.
 ms.date: 12/07/2020
 ms.reviewer: 
 ms.service: virtual-machines
-ms.subservice: vm-cannot-start-stop
 ms.collection: windows
+ms.custom: sap:My VM is not booting
 ---
 
 # Troubleshoot Windows VM OS boot failure

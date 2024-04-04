@@ -6,13 +6,13 @@ documentationCenter: ''
 author: genlin
 manager: dcscontentpm
 ms.service: virtual-machines
-ms.subservice: vm-cannot-connect
 ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure
 ms.date: 10/31/2018
 ms.author: genli
+ms.custom: sap:Cannot connect to my VM
 ---
 
 # Troubleshoot an RDP general error in Azure VM

@@ -4,8 +4,8 @@ description: Understand how to fix error 0xC0000102 (Status File Corrupt) that o
 ms.date: 10/09/2023
 ms.reviewer: jarrettr, v-leedennis
 ms.service: virtual-machines
-ms.subservice: vm-cannot-start-stop
 ms.collection: windows
+ms.custom: sap:My VM is not booting
 ---
 
 # Windows stop error 0xC0000102 Status File Corrupt

@@ -7,7 +7,6 @@ author: genlin
 manager: dcscontentpm
 tags: virtual-machines
 ms.service: virtual-machines
-ms.subservice: vm-cannot-connect
 ms.collection: windows
 ms.topic: troubleshooting
 ms.workload: infrastructure-services
@@ -15,6 +14,7 @@ ms.tgt_pltfrm: vm-windows
 ms.devlang: azurecli
 ms.date: 07/29/2022
 ms.author: genli
+ms.custom: sap:Cannot connect to my VM
 ---
 
 # Azure virtual machine error: “You must change your password before logging on the first time”
