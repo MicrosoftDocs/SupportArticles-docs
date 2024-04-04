@@ -12,19 +12,19 @@ items:
 - name: Existing connection forcibly closed
   href: tls-exist-connection-closed.md
   items:
-  - name: Client machine can't connect to SQL Server using SQL authentication
+  - name: Client unable to connect to SQL Server via SQL authentication
     href: client-machine-cannot-connect-to-sqlserver.md
   - name: Connection to the linked server failed
     href: connection-to-linked-server-failed.md
-  - name: Connectivity issues arising from SQL Sever Agent SSIS failures
+  - name: Connectivity problems due to SQL Server Agent SSIS failures
     href: sql-server-faces-connectivity-issue-ssispack-fail.md
   - name: SQL Server Agent fails to start due to TLS issues
     href: unable-to-start-sql-agent.md
-  - name: Intermittent connection errors occur when a new node is added
+  - name: Intermittent connection errors when adding node to Always On environment
     href: intermittent-connection-errors-when-a-new-node-is-added.md
-  - name: Linked server couldn't be created after migrating on-premises server to Azure
+  - name: Linked server creation fails after migrating to Windows 2022 OnPrem or Azure VM
     href: linked-server-cannot-be-created.md
-  - name: Issues in connection after implementing cipher suite policies on a server
+  - name: Connection error after applying cipher suite policies on SQL Server
     href: issues-connection-after-implementing-cipher-suite-policies.md
   - name: The SSL_PE_NO_CIPHER error occurs on endpoint 5022
     href: ssl-pe-no-cipher-error-endpoint-5022.md
