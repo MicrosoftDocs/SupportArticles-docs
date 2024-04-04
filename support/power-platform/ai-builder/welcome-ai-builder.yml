@@ -28,6 +28,8 @@ landingContent:
             url: power-automate/all-ai-builder-credits-have-been-consumed.md
           - text: Current environment doesn't meet the minimum requirements error
             url: power-automate/the-current-environment-donot-meet-the-minimum-requirements-error-message.md
+          - text: Prevent users from creating AI Builder custom models
+            url: power-automate/prevent-users-from-creating-ai-builder-custom-models.md
   # Card
   - title: Use in Power Automate
     linkLists:
