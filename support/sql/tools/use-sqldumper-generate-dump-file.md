@@ -192,7 +192,7 @@ Furthermore, the **size of the dump file** on disk should be planned for, especi
 
 The process is suspended temporarily during the dump generation. This might affect the SQL Server service availability and trigger resources failover in Always On contexts (both Failover cluster instance and Availability group). The dump generation of different processes impacts resources differently. Read the [Impact of dump generation](#impact-of-dump-generation) and [Dump types](#dump-types) sections carefully.
 
-When capturing a SQL Server process dump file (especially a filtered dump file or a full dump file) on a clustered SQL Server or a SQL Server hosting an Always On availability group (AG) instance, the clustered SQL Server or AG might fail over to another node if the dump file takes too long to be completed. To prevent failover, use the following settings before capturing the dump file. The change can be reverted after a dump file is taken:
+When capturing a SQL Server dump on a failover clustered instance or an availability group (AG) instance of SQL Server, the clustered SQL Server or AG might fail over to another node if the dump takes too long to complete. This may be especially problematic on systems that use very large amounts of RAM or if you are generating a filtered or a full memory dump. To prevent failover, use the following settings before capturing the dump file. The change can be reverted after a dump file is taken:
 
 - For failover clustered instance (FCI):
   - Right-click SQL Server resource in **Cluster Administrator**, select **If resource fails, do not restart** on the **Policies** tab.
