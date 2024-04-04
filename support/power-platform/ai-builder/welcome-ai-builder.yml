@@ -9,23 +9,30 @@ metadata:
   ms.topic: landing-page # Required
   author: #Required; your GitHub user alias, with correct capitalization.
   ms.author: #Required; microsoft alias of author; optional team alias.
-  ms.date: 04/01/2024
+  ms.date: 04/05/2024
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
 landingContent:
-            
+
+  # Card
+  - title: Administration and Licensing
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Actions are disabled or deactivated
+            url: power-automate/aibuilder-actions-are-disabled-deactivated.md
+          - text: AI Builder trial license displays after you've purchased an AI Builder license
+            url: power-apps/aibuilder-show-trial-license-but-license-purchased.md
+          - text: All AI Builder credits have been consumed
+            url: power-automate/all-ai-builder-credits-have-been-consumed.md
+          - text: Current environment doesn't meet the minimum requirements error
+            url: power-automate/the-current-environment-donot-meet-the-minimum-requirements-error-message.md
   # Card
   - title: Use in Power Automate
     linkLists:
       - linkListType: reference
         links:
-          - text: All AI Builder credits have been consumed
-            url: power-automate/all-ai-builder-credits-have-been-consumed.md
-          - text: Actions are disabled or deactivated
-            url: power-automate/aibuilder-actions-are-disabled-deactivated.md
-          - text: Current environment doesn't meet the minimum requirements error
-            url: power-automate/the-current-environment-donot-meet-the-minimum-requirements-error-message.md
           - text: '"408 - Dependency Timeout" error'
             url: power-automate/dependency-timeout-error-when-using-a-form-processing-model-in-power-automate.md
           - text: '"429 – TooManyRequests" error'
@@ -42,8 +49,6 @@ landingContent:
     linkLists:
       - linkListType: reference
         links:
-          - text: AI Builder trial license displays after you've purchased one
-            url: power-apps/aibuilder-show-trial-license-but-license-purchased.md
           - text: Business card reader doesn't work for some users
             url:  power-apps/business-card-reader-do-not-work-for-some-users.md
           - text: Image rotation is wrong when scanning images using AI Builder components
