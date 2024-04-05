@@ -1,16 +1,16 @@
 ---
 title: Network logins being disallowed in SQL Server
 description: This article provides a resolution for the consistent authentication issue in SQL Server that affects network login.
-ms.date: 04/03/2024
+ms.date: 04/05/2024
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 
-# User account is restricted from using the Network Login type
+# User account is restricted from using the network login type
 
-This article helps you resolve an authentication issue that occurs when users don't have permissions to log in to a remote network. Network login type refers to the method or protocol used to authenticate and grant access to a network resource.
+This article helps you resolve an authentication issue that might arise when users don't have permissions to log into a networked system because a policy or setting prevents access. Network login type refers to the method or protocol used to authenticate and grant access to a network resource or service.
 
 ## Symptoms
 
@@ -25,7 +25,12 @@ This means that the user doesn't have permissions to log in to the network.
 
 ## Cause
 
-This error occurs if any existing problems affect the Windows permissions or policy settings.
+This error might occur because of any one of the following reasons:
+
+- The user might not have the correct credentials.
+- The user's account might be restricted to access the network.
+- Misconfigured firewalls, routers, or ACLs might prevent the user from accessing the network.
+- The network might have policies restricting specific types of logins, like remote access.
 
 ## Resolution
 
