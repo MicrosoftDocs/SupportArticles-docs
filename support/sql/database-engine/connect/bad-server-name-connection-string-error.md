@@ -1,14 +1,14 @@
 ---
 title: Incorrect server name in a connection string
 description: This article provides a resolution for the consistent authentication issue where a specified server name isn't correct in a connection string.
-ms.date: 04/03/2024
+ms.date: 04/05/2024
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 
-# Bad server name in SQL Server connection string
+# Incorrect server name in SQL Server connection string
 
 This article helps you to resolve an authentication issue where the specified server name within a database connection string is incorrect.
 
