@@ -1,7 +1,7 @@
 ---
 title: TLS 1.2 support for Microsoft SQL Server
 description: This article provides information about the updates that Microsoft releases to enable TLS 1.2 support for SQL Server.
-ms.date: 10/18/2023
+ms.date: 04/05/2024
 ms.custom: sap:Connection issues
 author: PiJoCoder 
 ms.author: jopilov
@@ -106,11 +106,10 @@ You have to install the following .NET hotfix rollups to enable SQL Server featu
     These settings are required for both server and client computers. The `DisabledByDefault` and `Enabled` settings are required to be created on Windows 7 clients and Windows Server 2008 R2 servers. On Windows 8 and later versions of the client operating systems or Windows Server 2012 server and later versions of the server operating systems, TLS 1.2 should already be enabled. If you're implementing a deployment policy for Windows Registry that needs to be independent of the OS release, then we recommend adding the mentioned registry keys to the policy.
     In addition, if you are using [Database Mail](/sql/relational-databases/database-mail/database-mail) on your SQL Server, you also need to set the following .NET registry keys:
 
-    - `[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\.NETFramework\v2.0.50727]` "SystemDefaultTlsVersions"=dword:00000001 "SchUseStrongCrypto"=dword:00000001
-    - `[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\.NETFramework\v4.0.30319]` "SystemDefaultTlsVersions"=dword:00000001 "SchUseStrongCrypto"=dword:00000001
-    - `[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v2.0.50727]`             "SystemDefaultTlsVersions"=dword:00000001 "SchUseStrongCrypto"=dword:00000001
-    - `[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319]`              "SystemDefaultTlsVersions"=dword:00000001 "SchUseStrongCrypto"=dword:00000001
-
+    - `[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\.NETFramework\v2.0.50727] "SystemDefaultTlsVersions"=dword:00000001 "SchUseStrongCrypto"=dword:00000001`
+    - `[HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\.NETFramework\v4.0.30319] "SystemDefaultTlsVersions"=dword:00000001 "SchUseStrongCrypto"=dword:00000001`
+    - `[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v2.0.50727]             "SystemDefaultTlsVersions"=dword:00000001 "SchUseStrongCrypto"=dword:00000001`
+    - `[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319]              "SystemDefaultTlsVersions"=dword:00000001 "SchUseStrongCrypto"=dword:00000001`
 
 ## Known issues
 
@@ -228,7 +227,7 @@ System Center Configuration Manager (SCCM) can't connect to SQL Server after the
 
 > TCP Provider: An existing connection was forcibly closed by the remote host
 
-This issue might occur when SCCM uses a SQL Server Native Client driver that doesn't have a fix. To resolve this issue, download and install the Native client fix that's listed in the [Client component downloads](#client-component-downloads) section. For example, [Microsoft® SQL Server® 2012 Native Client - QFE](https://www.microsoft.com/download/details.aspx?id=50402).
+This issue might occur when SCCM uses a SQL Server Native Client driver that doesn't have a fix. To resolve this issue, download and install the client fix that's listed in the [Client component downloads](#client-component-downloads) section. For example, [Microsoft® SQL Server® 2012 Native Client - QFE](https://www.microsoft.com/download/details.aspx?id=50402).
 
 You can find out which driver SCCM is using to connect to SQL Server by viewing the SCCM log, as shown in the following example:
 
