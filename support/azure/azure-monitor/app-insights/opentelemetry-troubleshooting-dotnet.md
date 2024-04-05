@@ -31,6 +31,4 @@ The following items are known issues for the Azure Monitor OpenTelemetry Exporte
 
 - The device model is missing from request and dependency telemetry. The missing device model adversely affects device cohort analysis.
 
-- The database server name is missing from the dependency name. Because the database server name isn't included, OpenTelemetry Exporters incorrectly aggregate tables that have the same name onto different servers.
-
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
