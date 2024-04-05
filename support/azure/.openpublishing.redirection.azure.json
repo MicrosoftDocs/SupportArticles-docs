@@ -2754,6 +2754,11 @@
         "source_path": "entra-id/user-prov-sync/index.md",
         "redirect_url": "/troubleshoot/azure/entra-id/welcome-entra-id",
         "redirect_document_id": false
+      },
+      {
+        "source_path": "cloud-services/classic/support-linux-open-source-technology.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/support-linux-open-source-technology",
+        "redirect_document_id": true
       }
   ]
 }
