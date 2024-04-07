@@ -13,8 +13,6 @@ items:
     href: configuration-setup/inaccessible-image.md
   - name: Error codes for Spot container creation
     href: configuration-setup/error-codes-spot-container-creation.md
-  - name: Error - Web socket is closed or could not be opened
-    href: connectivity/web-socket-is-closed-or-could-not-be-opened.md
   - name: Image pull takes a long time to run
     href: configuration-setup/long-image-pulls.md
   - name: ServiceUnavailable - container group quota exceeded in region
@@ -38,8 +36,6 @@ items:
     href: management/container-group-restart-killing-event-interruption.md
   - name: Container group still runs after a stop or delete command 
     href: management/aci-still-running-after-stop-delete-command.md
-  - name: Spot Container Errors
-    href: configuration-setup/error-codes-spot-container-creation.md
 
 - name: Troubleshoot container group in virtual network
   items:
