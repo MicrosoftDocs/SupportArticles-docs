@@ -7,6 +7,7 @@ author: tysonfms
 editor: v-jsitser
 ms.reviewer: v-leedennis
 ms.service: container-instances
+ms.custom: sap:Management
 #customer intent: As a user of Azure Container Instances, I want to fix the display of memory usage metrics in the Azure portal so that it matches the memory usage values shown in the 'free' command for an individual container.
 ---
 # Azure Container Instances shows unexpected memory usage metrics
@@ -35,6 +36,6 @@ You can add a dimension filter to view metrics on a per-container basis if your 
 
 - [Use dimension filters and splitting](/azure/azure-monitor/essentials/analyze-metrics#use-dimension-filters-and-splitting)
 
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

@@ -7,6 +7,7 @@ ms.author: tysonfreeman
 editor: v-jsitser
 ms.reviewer: v-leedennis
 ms.service: container-instances
+ms.custom: sap:Configuration and Setup
 #Customer intent: As an Azure administrator, I want to learn how to resolve a container group deployment that's stuck in the "Waiting" state so that I can successfully deploy an image onto a container instance.
 ---
 # Container group deployment remains in Waiting state
@@ -34,4 +35,4 @@ Expand the Classless Inter-Domain Routing (CIDR) address range of the subnet by 
 
 - [Azure Container Instances states](/azure/container-instances/container-state)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

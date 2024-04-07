@@ -8,6 +8,7 @@ editor: v-jsitser
 ms.reviewer: cssakscic, tysonfms, v-rekhanain, v-weizhu, v-leedennis
 ms.service: container-instances
 ms.topic: best-practice
+ms.custom: sap:Management
 ---
 # Azure Container Instances debugging tools
 
@@ -49,4 +50,4 @@ This article lists the debugging tools that you can use on Microsoft Azure Conta
 
 - [Container group updating](/azure/container-instances/container-instances-update)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
