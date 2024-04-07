@@ -6,6 +6,7 @@ editor: v-jsitser
 ms.reviewer: chiragpa, v-leedennis
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-upgrade-operations
+ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 #Customer intent: As an Azure Kubernetes Services (AKS) user, I want to troubleshoot an Azure Kubernetes Service cluster upgrade that failed because of a PublicIPCountLimitReached error so that I can upgrade the cluster successfully.
 ---
 
@@ -37,4 +38,4 @@ After the quota change takes effect, try to upgrade the cluster to the same vers
 az aks upgrade --resource-group <ResourceGroupName> --name <AKSClusterName> --kubernetes-version <KUBERNETES_VERSION>
 ```
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

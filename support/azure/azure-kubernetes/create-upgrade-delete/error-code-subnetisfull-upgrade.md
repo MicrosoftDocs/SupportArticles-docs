@@ -6,6 +6,7 @@ editor: v-jsitser
 ms.reviewer: chiragpa, v-leedennis
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-upgrade-operations
+ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 #Customer intent: As an Azure Kubernetes Services (AKS) user, I want to troubleshoot an Azure Kubernetes Service cluster upgrade that failed because of a SubnetIsFull error so that I can upgrade the cluster successfully.
 ---
 
@@ -44,4 +45,4 @@ If scaling down isn't an option, and your virtual network CIDR has enough IP add
 1. Scale up the user node pool.
 1. Scale down the original node pool.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

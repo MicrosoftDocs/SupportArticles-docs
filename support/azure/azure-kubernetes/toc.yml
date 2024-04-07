@@ -7,8 +7,6 @@
     items:
     - name: Basic troubleshooting
       href: create-upgrade-delete/troubleshoot-aks-cluster-creation-issues.md
-    - name: AADSTS7000222 - BadRequest or InvalidClientSecret error
-      href: create-upgrade-delete/error-code-badrequest-or-invalidclientsecret.md
     - name: CniDownloadTimeoutVMExtensionError error (41)
       href: create-upgrade-delete/error-code-cnidownloadtimeoutvmextensionerror.md
     - name: ERR_VHD_FILE_NOT_FOUND error (124)
@@ -43,6 +41,8 @@
       href: create-upgrade-delete/error-code-subscriptionrequeststhrottled.md
     - name: SubnetWithExternalResourcesCannotBeUsedByOtherResources error
       href: create-upgrade-delete/subnet-with-external-resources-cannot-be-used-by-other-resources.md
+    - name: Troubleshoot the AKSCapacityError error code
+      href: create-upgrade-delete/akscapacityerror.md
     - name: VMExtensionProvisioningTimeout error
       href: create-upgrade-delete/error-code-vmextensionprovisioningtimeout.md
     - name: WINDOWS_CSE_ERROR_CHECK_API_SERVER_CONNECTIVITY error (5)
@@ -53,8 +53,28 @@
       href: create-upgrade-delete/quota-exceeded-during-creation-upgrade.md
   - name: Upgrade operations
     items:
+    - name: AADSTS7000222 - BadRequest or InvalidClientSecret error
+      href: create-upgrade-delete/error-code-badrequest-or-invalidclientsecret.md
+    - name: CustomPrivateDNSZoneMissingPermissionError error
+      href: create-upgrade-delete/error-code-customprivatednszonemissingpermissionerror.md
     - name: Kubernetes 1.16 upgrades fail
-      href: create-upgrade-delete/upgrades-to-kubernetes-fail-using-node-labels
+      href: create-upgrade-delete/upgrades-to-kubernetes-fail-using-node-labels.md
+    - name: NodePoolMcVersionIncompatible error
+      href: create-upgrade-delete/nodepoolmcversionincompatible-error.md
+    - name: PublicIPCountLimitReached error
+      href: create-upgrade-delete/error-code-publicipcountlimitreached.md
+    - name: QuotaExceeded error
+      href: create-upgrade-delete/error-code-quotaexceeded.md
+    - name: ServiceCidrOverlapExistingSubnetsCidr error
+      href: create-upgrade-delete/error-code-servicecidroverlapexistingsubnetscidr.md
+    - name: SubnetIsFull upgrade error
+      href: create-upgrade-delete/error-code-subnetisfull-upgrade.md
+    - name: Troubleshoot UpgradeFailed errors due to eviction failures caused by PDBs
+      href: create-upgrade-delete/error-code-poddrainfailure.md
+    - name: Unable to get log analytics workspace info error
+      href: create-upgrade-delete/aks-upgrade-scale-fail-log-analytics-workspace-missing.md
+    - name: UnsatisfiablePDB error
+      href: create-upgrade-delete/error-code-unsatisfiablepdb.md
     - name: Upgrade issues with Gen2 VMs on Windows AKS cluster
       href: create-upgrade-delete/nodepools-not-upgraded-to-gen2-during-node-image-upgrade.md
     - name: Upgrade fails because of NSG rules
@@ -123,6 +143,8 @@
       href: create-upgrade-delete/application-fails-argument-list-too-long.md
     - name: Changing property 'imageReference' is not allowed
       href: create-upgrade-delete/changing-property-imagereference-not-allowed.md
+    - name: Error "CreateOrUpdateVirtualNetworkLinkFailed"
+      href: create-upgrade-delete/createorupdatevirtualnetworklinkfailed-error.md
     - name: Increased memory usage reported in Kubernetes 1.25 or later versions
       href: create-upgrade-delete/aks-increased-memory-usage-cgroup-v2d.md
     - name: Missing or invalid service principal

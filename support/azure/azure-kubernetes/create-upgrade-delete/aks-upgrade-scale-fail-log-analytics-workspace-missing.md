@@ -4,6 +4,7 @@ description: Provides solutions to an error that occurs when you upgrade or scal
 ms.date: 02/20/2023
 ms.reviewer: chiragpa, cssakscic, v-weizhu
 ms.service: azure-kubernetes-service
+ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
 # Failed to upgrade or scale Azure Kubernetes Service cluster due to missing Log Analytics workspace
 
@@ -69,4 +70,4 @@ az aks disable-addons -a monitoring -g <clusterRG> -n <clusterName>
 
 If the same error occurs while disabling the monitoring add-on, recreate the missing Log Analytics workspace and then run the upgrade or scale operation again.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

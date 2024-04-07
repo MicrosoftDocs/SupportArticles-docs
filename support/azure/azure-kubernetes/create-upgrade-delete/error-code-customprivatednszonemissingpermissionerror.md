@@ -8,6 +8,7 @@ editor: v-jsitser
 ms.reviewer: cssakscic, v-leedennis
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-upgrade-operations
+ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 #Customer intent: As an Azure Kubernetes Services (AKS) user, I want to fix a CustomPrivateDNSZoneMissingPermissionError error so that I can create or update an AKS cluster successfully.
 ---
 
@@ -58,4 +59,4 @@ To create the missing role assignment, follow these steps:
 > [!NOTE]
 > It can take up to 60 minutes to finish granting permissions to your cluster's managed identity or service principal.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

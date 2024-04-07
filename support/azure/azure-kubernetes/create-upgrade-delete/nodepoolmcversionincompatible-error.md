@@ -6,6 +6,7 @@ editor: v-jsitser
 ms.reviewer: axelg, chiragpa, cssakscic, v-leedennis
 ms.service: azure-kubernetes-service
 ms.subservice: troubleshoot-upgrade-operations
+ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
 # Can't upgrade AKS cluster because of NodePoolMcVersionIncompatible error
 
@@ -103,4 +104,4 @@ For more information, see the [AKS validation rules for upgrade](/azure/aks/use-
         --no-wait
     ```
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

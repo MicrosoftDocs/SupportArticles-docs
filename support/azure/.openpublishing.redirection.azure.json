@@ -3279,6 +3279,61 @@
         "source_path": "azure-kubernetes/cannot-pull-image-from-acr-to-aks-cluster.md",
         "redirect_url": "/troubleshoot/azure/azure-kubernetes/extensions/cannot-pull-image-from-acr-to-aks-cluster",
         "redirect_document_id": true
+     },
+     {
+       "source_path": "azure-kubernetes/akscapacityerror.md",
+       "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/akscapacityerror",
+       "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/aks-upgrade-scale-fail-log-analytics-workspace-missing.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/aks-upgrade-scale-fail-log-analytics-workspace-missing",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/createorupdatevirtualnetworklinkfailed-error.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/createorupdatevirtualnetworklinkfailed-error",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/error-code-customprivatednszonemissingpermissionerror.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/error-code-customprivatednszonemissingpermissionerror",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/error-code-poddrainfailure.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/error-code-poddrainfailure",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/error-code-publicipcountlimitreached.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/error-code-publicipcountlimitreached",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/error-code-quotaexceeded.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/error-code-quotaexceeded",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/error-code-servicecidroverlapexistingsubnetscidr.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/error-code-servicecidroverlapexistingsubnetscidr",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/error-code-subnetisfull-upgrade.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/error-code-subnetisfull-upgrade",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/error-code-unsatisfiablepdb.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/error-code-unsatisfiablepdb",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/nodepoolmcversionincompatible-error.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/nodepoolmcversionincompatible-error",
+        "redirect_document_id": true
      }
 
   ]
