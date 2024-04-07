@@ -13,7 +13,7 @@ ms.custom: sap:Group Policy\Problems applying Group Policy, csstroubleshoot
 
 This article describes how to make screen saver password locks unavailable on systems in a site, domain, or organizational unit, by using the policies available.
 
-_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server (All supported versions), Windows Client (All supported versions)  
 _Original KB number:_ &nbsp; 272304
 
 ## Disable screen saver passwords
@@ -31,7 +31,7 @@ To make screen saver password locks unavailable, follow these steps:
 
 5. Click **Close**.
 6. Expand **User Configuration**, and then expand **Administrative Templates**.
-7. Expand **Control Panel**, and then click **Display**.
+1. Expand **Control Panel**, and then click **Personalization**.
 8. In the right pane, double-click **Password protect the screen saver**.
 9. Select Disable on the **Policy** tab. This prevents users from setting passwords on screen savers for this computer or domain.
 10. Click the **Explain** tab for information about how to use this policy.
