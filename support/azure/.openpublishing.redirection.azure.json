@@ -2893,6 +2893,16 @@
       {
         "source_path": "azure-storage/blobs/welcome-blob-storage.yml",
         "redirect_url": "/troubleshoot/azure/blobs/welcome-blob-storage",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-storage/common/welcome-storage-tool-metric.yml",
+        "redirect_url": "/troubleshoot/azure/index",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "cloud-services/classic/support-linux-open-source-technology.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/support-linux-open-source-technology",
         "redirect_document_id": true
       }
   ]

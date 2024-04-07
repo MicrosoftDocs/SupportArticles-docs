@@ -1,12 +1,13 @@
 ---
 title: Configure antivirus software to work with SQL Server
-description: Provides guidance on how to use antivirus software with SQL Server.
+description: This article describes how to configure antivirus software on computers running SQL Server.
 author: pijocoder
 ms.author: jopilov
 ms.reviewer: jopilov
-ms.date: 06/25/2023
+ms.date: 04/03/2024
 ms.custom: sap:Security Issues
 ---
+
 # Configure antivirus software to work with SQL Server
 
 This article contains general guidelines to help you properly configure antivirus software on computers that are running SQL Server in your environment.
@@ -15,8 +16,7 @@ We strongly recommend that you individually assess the security risk for each co
 
 Additionally, we recommend that you test the entire system under a full load to measure any changes in stability and performance before you roll out any virus-protection software.
 
-Virus protection software requires some system resources to execute. You must perform testing before and after you install your antivirus
-software to determine whether there's any performance effect on the computer that's running SQL Server.
+Virus protection software requires system resources to execute. You must perform testing before and after you install your antivirus software to determine whether there's any adverse performance effects on the computer that's running SQL Server and on SQL Server itself.
 
 ## Security risk factors
 
@@ -88,7 +88,7 @@ These files usually have one of the following file name extensions:
 - *.ldf*
 - *.ndf*
 
-By default, the data files are located in the following directories. However, they can be placed in any directory by the database administrators of the system.
+By default, the data files are located in the following directories. However, the database administrators of the system can place them in any directory.
 
 |SQL Server instance   | Default data directory|
 |-------               |---------              |
@@ -140,15 +140,17 @@ These files typically have the *.sql* file name extension and contain Transact-S
 
 - No specific file extension for the files.
 - Files are present under the folder structure identified by the container type FILESTREAM from [sys.database_files](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql).
+- <drive\>:\RsFxName
+  - The `<drive>` refers to the root drive of the folder structure identified by the container type FILESTREAM from [sys.database_files](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql).
 
 #### Remote Blob Storage files
 
-- The directory that holds Reporting Services temporary files and logs (*RSTempFiles* and *LogFiles*). For more information, see [Reporting Services Log Files and Sources - SQL Server Reporting Services (SSRS)](/sql/reporting-services/report-server/reporting-services-log-files-and-sources) and [RsReportServer.config Configuration File - SQL Server Reporting Services (SSRS)](/sql/reporting-services/report-server/rsreportserver-config-configuration-file).
+- Refers to the directory that stores Reporting Services temporary files and logs (*RSTempFiles* and *LogFiles*). For more information, see [Reporting Services Log Files and Sources - SQL Server Reporting Services (SSRS)](/sql/reporting-services/report-server/reporting-services-log-files-and-sources) and [RsReportServer.config Configuration File - SQL Server Reporting Services (SSRS)](/sql/reporting-services/report-server/rsreportserver-config-configuration-file).
 
 #### Exception dump files
 
-- Typically use the *.mdmp* file name extension.
-- System-generated files are saved in the *LOG* folder for that instance.
+The memory dump files typically use the *.mdmp* file name extension. These are system-generated files, which are saved in the *\\LOG* subfolder for that instance or in the folder that following registry key points to: HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Microsoft SQL Server\\\<instance name\>\\CPE.
+For more information about memory dumps, see [Use the Sqldumper.exe tool to generate a dump file in SQL Server](../../tools/use-sqldumper-generate-dump-file.md).
 
 #### In-memory OLTP files
 
@@ -176,14 +178,15 @@ In essence, the In-Memory OLTP technology has two sets of files:
 
 #### DBCC CHECKDB files
 
-- Files use the following format:
+The DBCC CHECKDB files use the following format:
 
   <Database_data_filename.extension\>\_MSSQL_DBCC\<database_id_of_snapshot\>
 
-- These are temporary files.
-- For more information, see [Internal database snapshot](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql#how-dbcc-checkdb-creates-an-internal-snapshot-database-beginning-with-sql-server-2014).
+These are temporary files. For more information, see [Internal database snapshot](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql#how-dbcc-checkdb-creates-an-internal-snapshot-database-beginning-with-sql-server-2014).
 
 #### Replication
+
+The following table contains the Replication executables and server-side COM objects. DBCC CHECKDB creates temporary files for the duration of the `DBCC` command after which they get removed automatically.
 
 - Replication executables and server-side COM objects
 
@@ -195,7 +198,7 @@ In essence, the In-Memory OLTP technology has two sets of files:
   > [!NOTE]
   > The `<NNN>` is a placeholder for version-specific information. To specify the correct value, check your installation or search for "Replication and server-side COM objects" in [Specifying File Paths](/sql/sql-server/install/file-locations-for-default-and-named-instances-of-sql-server#specifying-file-paths). For example, the full path for SQL Server 2022 would be *<drive\>:\\Program Files\\Microsoft SQL Server\\160\\COM\\*.
   
-- Starting with SQL Server 2017 CU22 (including SQL 2019 RTM and later versions), if using Transactional Replication and the Distribution Agent is utilizing OLEDB streaming profile, or you're using the `-UseOledbStreaming` parameter, the Distribution Agent creates temporary files (*\*.lob*) in the *AppData* folder of the account running the distribution agent where the job is being invoked. For example, *C:\\Users\\\<DistributionAgentAccount\>\\AppData\\Temp\\\*.lob*. For prior versions of SQL Server, the default *COM* folder (already listed) is used.
+- Starting with SQL Server 2017 CU22 (including SQL 2019 RTM and later versions), if you're using Transactional Replication and the Distribution Agent is using OLEDB streaming profile, or you're using the `-UseOledbStreaming` parameter, the Distribution Agent creates temporary files (*\*.lob*) in the *AppData* folder of the account running the distribution agent where the job is being invoked. For example, *C:\\Users\\\<DistributionAgentAccount\>\\AppData\\Temp\\\*.lob*. For prior versions of SQL Server, the default *COM* folder (already listed) is used.
 
   For more information, see ["The distribution agent failed to create temporary files" error message](../replication/error-run-distribution-agent.md).
 
@@ -238,7 +241,7 @@ When you configure your antivirus software settings, make sure that you exclude 
 
 #### Data directory for Analysis Services
 
-The directory that holds all Analysis Services data files is specified in the `DataDir` property of the instance of Analysis Services. By default, the path of this directory is:
+The directory that holds all Analysis Services data files is specified in the `DataDir` property of the instance of Analysis Services. The following table shows the default path of the SSAS instance:
 
 |SSAS instance      | Default data directory|
 |---------          |---------              |
@@ -256,7 +259,7 @@ For Analysis Services 2012 and later versions, temporary files during processing
 
 #### The backup files for Analysis Services
 
-In Analysis Services 2012 and later versions, the backup file location is the location that is specified by the `BackupDir` property. The following table shows the backup path for the Analysis Service instance by default:
+In Analysis Services 2012 and later versions, the backup file location is the location that is specified by the `BackupDir` property. The following table shows the default backup path for the Analysis Service instance:
 
 |SSAS instance      | Backup files directory (default)|
 |---------          |---------                        |
@@ -326,11 +329,11 @@ When you configure your antivirus software settings, make sure that you exclude 
 
 ## Configure antivirus software to work with Reporting Services (SSRS)
 
-The following processes and directories for the SQL Server Reporting Services (SSRS) are to be excluded from antivirus scanning.
+The following processes and directories for the SQL Server Reporting Services (SSRS) must be excluded from antivirus scanning.
 
 ### SSRS processes to exclude from virus scanning
 
-The executables to exclude have evolved across different versions of SSRS. The following table lists them according to the SSRS version.
+The executables that must be excluded have evolved across different versions of SSRS. The following table lists them according to the SSRS version.
 
 |SSRS version       | Process/Executable file|
 |---------          |---------               |
@@ -339,6 +342,8 @@ The executables to exclude have evolved across different versions of SSRS. The f
 |SSRS 2017 and later versions| *%ProgramFiles%\\Microsoft SQL Server Reporting Services\\SSRS\Management\\RSManagement.exe*</br> </br>  *%ProgramFiles%\\Microsoft SQL Server Reporting Services\\SSRS\\Portal\\RSPortal.exe* </br></br>  *%ProgramFiles%\\Microsoft SQL Server Reporting Services\\SSRS\\ReportServer\\bin\\ReportingServicesService.exe*  </br></br> *%ProgramFiles%\\Microsoft SQL Server Reporting Services\\SSRS\\RSHostingService\\RSHostingService.exe* |
 
 ### SSRS directories to exclude from virus scanning
+
+The following table lists the SSRS directories that must be excluded:
 
 |SSRS version   | Directories to exclude                                                               |
 |---------      |---------                                                                             |

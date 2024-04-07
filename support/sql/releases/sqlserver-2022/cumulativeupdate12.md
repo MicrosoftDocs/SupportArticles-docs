@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 12 for SQL Server 2022 (KB5033663)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2022 cumulative update 12 (KB5033663).
-ms.date: 03/26/2024
+ms.date: 04/07/2024
 ms.custom: KB5033663
 ms.reviewer: v-qianli2
 appliesto:
@@ -16,7 +16,7 @@ _Version:_ &nbsp; 16.0.4115.5
 
 ## Summary
 
-This article describes Cumulative Update package 12 (CU12) for Microsoft SQL Server 2022. This update contains 52 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 11, and it updates components in the following builds:
+This article describes Cumulative Update package 12 (CU12) for Microsoft SQL Server 2022. This update contains 50 [fixes](#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2022 Cumulative Update 11, and it updates components in the following builds:
 
 - SQL Server - Product version: **16.0.4115.5**, file version: **2022.160.4115.5**
 - Analysis Services - Product version: **16.0.43.229**, file version: **2022.160.43.229**
@@ -61,7 +61,6 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id=2837848>[2837848](#2837848) </a> | Fixes a deadlock issue that you encounter when creating or updating statistics by turning off the blocking Auto Stats feature. The blocking Auto Stats feature is turned on when you use PolyBase. Turning off the blocking Auto Stats feature might cause a different query plan and execution time because query compilation isn't blocked by statistics collection. | SQL Server Engine | PolyBase | All|
 | <a id=2870726>[2870726](#2870726) </a> | Fixes an issue in which the exported delimited text file created by using `CREATE EXTERNAL TABLE AS SELECT (CETAS)` is incorrect if the `FIELD_TERMINATOR` character is `'\t'`. | SQL Server Engine | PolyBase | All|
 | <a id=2937200>[2937200](#2937200) </a> | Fixes an issue in which running Delta table queries requires the **sysadmin** server role. For more information, see [Delta table query may fail with errors 2571 and 16513](/sql/relational-databases/polybase/polybase-errors-and-possible-solutions#delta-table-query-may-fail-with-errors-2571-and-16513). | SQL Server Engine | PolyBase | All|
-| <a id=2918853>[2918853](#2918853) </a> </br><a id=2955111>[2955111](#2955111) </a> | [Improvement: Add new collations that comply with the GB18030-2022 standard (KB5036707)](add-collations-comply-gb18030-2022-standard.md) | SQL Server Engine | Programmability| All|
 | <a id=2936186>[2936186](#2936186) </a> </br><a id=2936204>[2936204](#2936204) </a> </br><a id=2938811>[2938811](#2938811) </a> </br><a id=2941532>[2941532](#2941532) </a> | [FIX: Scalar UDF Inlining issues in SQL Server 2022 and 2019 (KB4538581)](https://support.microsoft.com/help/4538581)| SQL Server Engine | Programmability| All|
 | <a id=2961007>[2961007](#2961007) </a> | Fixes an out-of-memory (OOM) issue that's caused by spikes in `CACHESTORE_PHDR` usage. | SQL Server Engine | Programmability| Windows|
 | <a id=2833605>[2833605](#2833605) </a> | Adds mitigation to avoid an assertion failure (Location: lobss.cpp:707; Expression: 'FALSE' Lob not found for read) that you might encounter when you run a complex query that uses large value data types such as **varchar(max)**. </br></br>**Note**: The mitigation doesn't apply in all situations. | SQL Server Engine | Query Execution| All|
