@@ -13,7 +13,7 @@ ms.custom: sap:Group Policy\Problems applying Group Policy, csstroubleshoot
 
 This article provides some information for the issue where Group Policy is not applied to a user account for RunAs.exe or "Run as different user".
 
-_Applies to:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Client (All supported versions)  
 _Original KB number:_ &nbsp; 4569309
 
 ## Summary
