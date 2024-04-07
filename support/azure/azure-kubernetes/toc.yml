@@ -129,7 +129,7 @@
       href: create-upgrade-delete/missing-or-invalid-service-principal.md
     - name: Pod is stuck in CrashLoopBackOff mode
       href: create-upgrade-delete/pod-stuck-crashloopbackoff-mode.md
-    - name: "tls: client offered only unsupported versions" messages
+    - name: '"tls: client offered only unsupported versions" messages'
       href: create-upgrade-delete/tls-client-offered-unsupported-versions.md
     - name: Troubleshoot common Azure Linux container host for AKS issues
       href: create-upgrade-delete/troubleshoot-common-azure-linux-aks.md
@@ -173,28 +173,28 @@
       href: connectivity/get-and-analyze-http-response-codes.md
     - name: Intermittent timeouts or server issues
       href: connectivity/intermittent-timeouts-or-server-issue.md
-   - name: Cannot connect to AKS cluster through API server
-     items:
-     - name: Basic troubleshooting
-       href: connectivity/troubleshoot-cluster-connection-issues-api-server.md
-     - name: Client IP address can't access API server
-       href: connectivity/client-ip-address-cannot-access-api-server.md
-     - name: Config file isn't available when connecting
-       href: connectivity/config-file-is-not-available-when-connecting.md
-     - name: Tunnel connectivity issues
-       href: connectivity/tunnel-connectivity-issues.md
-     - name: User can't get cluster resources
-       href: connectivity/user-cannot-get-cluster-resources.md
-     - name: Can't access the cluster API server using authorized IP ranges
-       href: connectivity/cannot-access-cluster-api-server-using-authorized-ip-ranges.md
-   - name: Troubleshoot outbound connections
-     items:
-     - name: Basic network flow and troubleshooting
-       href: connectivity/basic-troubleshooting-outbound-connections.md
-     - name: Network watch is stale after egress traffic restriction
-       href: connectivity/stale-watch-azure-ad-pod-identity-nmi-status-500.md
-     - name: Restricting egress traffic causes errors
-       href: connectivity/errors-arfter-restricting-egress-traffic.md
+  - name: Cannot connect to AKS cluster through API server
+    items:
+    - name: Basic troubleshooting
+      href: connectivity/troubleshoot-cluster-connection-issues-api-server.md
+    - name: Client IP address can't access API server
+      href: connectivity/client-ip-address-cannot-access-api-server.md
+    - name: Config file isn't available when connecting
+      href: connectivity/config-file-is-not-available-when-connecting.md
+    - name: Tunnel connectivity issues
+      href: connectivity/tunnel-connectivity-issues.md
+    - name: User can't get cluster resources
+      href: connectivity/user-cannot-get-cluster-resources.md
+    - name: Can't access the cluster API server using authorized IP ranges
+      href: connectivity/cannot-access-cluster-api-server-using-authorized-ip-ranges.md
+  - name: Troubleshoot outbound connections
+    items:
+    - name: Basic network flow and troubleshooting
+      href: connectivity/basic-troubleshooting-outbound-connections.md
+    - name: Network watch is stale after egress traffic restriction
+      href: connectivity/stale-watch-azure-ad-pod-identity-nmi-status-500.md
+    - name: Restricting egress traffic causes errors
+      href: connectivity/errors-arfter-restricting-egress-traffic.md
     - name: Connectivity common issues
       items:
       - name: Can't connect to pods and services in same cluster
