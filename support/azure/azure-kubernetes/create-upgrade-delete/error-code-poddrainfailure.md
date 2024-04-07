@@ -5,7 +5,6 @@ ms.date: 12/21/2023
 editor: v-jsitser
 ms.reviewer: chiragpa, v-leedennis, v-weizhu
 ms.service: azure-kubernetes-service
-ms.subservice: troubleshoot-upgrade-operations
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 #Customer intent: As an Azure Kubernetes Services (AKS) user, I want to troubleshoot an Azure Kubernetes Service cluster upgrade that failed because of eviction failures caused by Pod Disruption Budgets so that I can upgrade the cluster successfully.
 ---

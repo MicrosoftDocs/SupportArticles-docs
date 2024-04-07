@@ -4,7 +4,6 @@ description: Provides a solution to the CreateOrUpdateVirtualNetworkLinkFailed e
 ms.date: 03/13/2024
 ms.reviewer: axelg, chiragpa, jpalma, v-weizhu
 ms.service: azure-kubernetes-service
-ms.subservice: common-issues
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 ---
 # "CreateOrUpdateVirtualNetworkLinkFailed" error when updating or upgrading an AKS cluster

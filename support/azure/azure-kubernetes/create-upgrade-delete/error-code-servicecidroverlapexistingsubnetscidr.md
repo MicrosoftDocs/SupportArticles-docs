@@ -7,7 +7,6 @@ ms.author: jotavar
 editor: v-jsitser
 ms.reviewer: cssakscic, v-leedennis
 ms.service: azure-kubernetes-service
-ms.subservice: troubleshoot-upgrade-operations
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 #Customer intent: As an Azure Kubernetes Services (AKS) user, I want to troubleshoot a ServiceCidrOverlapExistingSubnetsCidr error so that I can upgrade the cluster successfully.
 ---

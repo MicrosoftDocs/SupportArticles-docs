@@ -4,7 +4,6 @@ description: Describes how to troubleshoot the UnsatisfiablePDB error that might
 ms.date: 10/27/2023
 ms.reviewer: chiragpa, v-weizhu
 ms.service: azure-kubernetes-service
-ms.subservice: troubleshoot-upgrade-operations
 ms.custom: sap:Create, Upgrade, Scale and Delete operations (cluster or nodepool)
 #Customer intent: As an Azure Kubernetes Services (AKS) user, I want to troubleshoot an Azure Kubernetes Service cluster upgrade that failed because of a UnsatisfiablePDB error so that I can upgrade the cluster successfully.
 ---
