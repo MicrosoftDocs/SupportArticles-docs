@@ -4,7 +4,7 @@ description: A list of common issues and resolutions within Power Apps.
 author: KumarVivek
 ms.custom: sap:App Creation (Canvas App)
 ms.reviewer: tapanm, lanced, tahoon 
-ms.date: 03/26/2024
+ms.date: 04/04/2024
 ms.author: kvivek
 search.audienceType: 
   - maker
@@ -26,8 +26,6 @@ Refer to the introductory article [Power Apps troubleshooting strategies](isolat
   - [Common issue areas](#common-issue-areas)
   - [Connectors and delegation](#connectors-and-delegation)
     - [Common issues](#common-issues)
-  - [Controls](#controls)
-    - [Common issues](#common-issues-1)
   - [Integration](#integration)
   - [Power Fx](#power-fx)
   - [Region](#region)
@@ -85,57 +83,6 @@ Refer to the introductory article [Power Apps troubleshooting strategies](isolat
     In certain devices and scenarios, you might experience sign-in failures when using an authenticator. This is due to the OEM limiting this functionality. For more information, see [ADALError: BROKER_AUTHENTICATOR_NOT_RESPONDING](https://github.com/AzureAD/azure-activedirectory-library-for-android/wiki/ADALError:-BROKER_AUTHENTICATOR_NOT_RESPONDING).
 
 1. **Office 365 Video connector isn't supported.**
-
-## Controls
-
-### Common issues
-
-1. **Can't copy and paste forms into data cards.**
-
-    You can't copy and paste forms into data cards. This is to prevent certain combinations of controls from being created that risk the stability and performance of the app. To learn how to configure forms that allow scrolling, see [scrolling screen for forms](/power-apps/maker/canvas-apps/add-scrolling-screen#scrolling-screen-for-forms).
-
-1. **Camera images don't contain meta-data information.**
-
-    When you use the camera control, the image doesn't contain meta-data information. This is due to a limitation of how we take images with the camera. To mitigate this issue, use the [Add picture control](/power-apps/maker/canvas-apps/controls/control-add-picture).
-
-1. **Images added from iOS don't contain meta-data information.**
-
-    When using the **Add Picture** control on iOS, images imported by using the camera or gallery don't contain meta-data like orientation, location information, or camera settings.
-
-1. **Combo box controls in galleries**
-
-    When you use a **Combo box** control inside a gallery, its selections aren't maintained when the user scrolls the gallery. This isn't an issue if you use a **Combo box** control inside a gallery that doesn't scroll. A workaround isn't currently available.
-
-1. **"Data Table" control**
-
-    If you copy and paste a **Data Table** control for which the **Items** property is set to a formula that contains a **Filter** function, the formula for the **Items** property on the new **Data Table** control ends up with field names that contain a **_1** suffix. This makes the field names invalid and results in no data showing up in the data table. To work around this issue, before you copy the control, confirm that the **Filter** function doesn't reference any field in the data source that has the same name as a column in the **Data Table** control. If it does, rename the column in the **Data Table** control. Alternatively, remove the **_1** suffix from the invalid field names so that they match the names in the table.
-
-1. **"Empty" gallery when opening an app**
-
-    If you generate an app automatically from data, save the app, and then reopen it, the browse gallery might not immediately show any data. To resolve this issue, type at least one character in the search box, and then delete the text that you typed. The gallery will then show the data as expected.
-
-1. **Scanning a barcode**
-
-    For more information about limitations and best practices when you use a **Barcode** control, see [Barcode scanner control in Power Apps](/power-apps/maker/canvas-apps/controls/control-new-barcode-scanner).
-
-1. **Camera usage might be temporarily disabled if memory is low.**
-
-    If your mobile device is low on memory, the camera is temporarily disabled to avoid crashing the device.
-
-1. **Multiple media controls in Power Apps Mobile**
-
-    Power Apps Mobile runs on various types of devices, and some of them have limitations that are specific to that platform:
-
-    - You can play videos in multiple **Video** controls at the same time on all platforms except iPhone devices.
-    - You can record audio with multiple **Microphone** controls at the same time on all platforms except the web player.
-
-1. **Drawing with mouse or touch input isn't smooth in Power Apps for Windows.**
-
-    The pen control only has partial support for drawing using a mouse or touch input in the Windows app. Strokes might be intermittent. For smooth drawing, use a pen or run the app in a browser.
-
-1. **Camera controls in Power Apps for Windows**
-
-   Power Apps for Windows might crash if you open an app that uses a camera control. To avoid this problem, use the web player on the Windows platform. Also, multiple cameras aren't supported.
 
 ## Integration
 
