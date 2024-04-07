@@ -3,7 +3,7 @@ title: General Power Apps troubleshooting strategies
 description: Learn about general strategies to narrow down the cause of app errors.
 author: tahoon
 ms.reviewer: tapanm, lanced
-ms.date: 02/06/2024
+ms.date: 04/04/2024
 ms.author: tahoon
 ms.custom: sap:App Creation (Canvas App)
 search.audienceType: 
@@ -38,7 +38,6 @@ For model-driven apps:
 After you have isolated the issue to a specific functionality area, use the following sections to help you work around or address the issue.
 
 - [Connectors and delegation](common-issues-and-resolutions.md#connectors-and-delegation)
-- [Controls](common-issues-and-resolutions.md#controls)
 - [Integration](common-issues-and-resolutions.md#integration)
 - [Power Fx](common-issues-and-resolutions.md#power-fx)
 - [Region](common-issues-and-resolutions.md#region)

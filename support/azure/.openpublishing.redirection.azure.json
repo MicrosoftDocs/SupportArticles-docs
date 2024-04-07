@@ -2834,6 +2834,11 @@
         "source_path": "azure-container-instances/connectivity/index.md",
         "redirect_url": "/troubleshoot/azure/azure-container-instances/welcome-container-instances.yml",
         "redirect_document_id": false
+      },
+      {
+        "source_path": "cloud-services/classic/support-linux-open-source-technology.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/support-linux-open-source-technology",
+        "redirect_document_id": true
       }
   ]
 }
