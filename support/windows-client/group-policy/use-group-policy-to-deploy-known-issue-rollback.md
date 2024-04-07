@@ -15,7 +15,7 @@ keywords: Windows Update, known issue, kir, group policy, rollback
 
 This article describes how to configure Group Policy to use a Known Issue Rollback (KIR) policy definition that activates a KIR on managed devices.
 
-_Applies to:_ &nbsp; Windows Server 2019, version 1809 and later versions; Windows 10, version 1809 and later versions
+_Applies to:_ &nbsp; Windows Server (All supported versions), Windows Client (All supported versions)
 
 ## Summary
 
