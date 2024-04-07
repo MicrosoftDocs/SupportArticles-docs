@@ -5,7 +5,7 @@ ms.date: 07/30/2021
 ms.reviewer: fszita
 ms.service: entra-id
 ms.subservice: hybrid
-ms.custom: sap:old, has-azure-ad-ps-ref, azure-ad-ref-level-one-done
+ms.custom: sap:Multi-Factor Authentication (MFA), has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ---
 
 # Authentication fails with an error stating "The requested federation realm object '< Object ID >' does not exist"
