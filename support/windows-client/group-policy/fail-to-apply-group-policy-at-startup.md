@@ -13,7 +13,7 @@ ms.custom: sap:Group Policy\Problems applying Group Policy, csstroubleshoot
 
 This article provides a solution to an issue where Windows 7 Clients intermittently fail to apply group policy at startup.
 
-_Applies to:_ &nbsp; Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows Client (All supported versions)  
 _Original KB number:_ &nbsp; 2421599
 
 ## Symptoms
