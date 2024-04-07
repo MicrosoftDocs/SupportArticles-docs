@@ -4,7 +4,7 @@ description: Troubleshoot common issues with monitoring sync health and resolvin
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 12/05/2023
+ms.date: 04/07/2024
 ms.author: kendownie
 ms.custom: devx-track-azurepowershell
 ms.reviewer: v-weizhu
@@ -623,7 +623,7 @@ No action required. This error should automatically resolve. If the error persis
 | **Error string** | ERROR_INVALID_REPARSE_DATA |
 | **Remediation required** | Yes |
 
-This error can occur if there is file system corruption on the NTFS volume where the server endpoint is located. To resolve, run [chkdsk](/windows-server/administration/windows-commands/chkdsk?tabs=event-viewer) on the volume.
+This error can occur if there is a file system corruption on the NTFS volume where the server endpoint is located. To resolve this error, run [chkdsk](/windows-server/administration/windows-commands/chkdsk?tabs=event-viewer) on the volume.
 
 <a id="-2146762487"></a>**The server failed to establish a secure connection. The cloud service received an unexpected certificate.**  
 
