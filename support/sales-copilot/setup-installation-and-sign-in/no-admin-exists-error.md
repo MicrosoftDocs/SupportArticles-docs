@@ -1,14 +1,14 @@
 ---
-title: No admin exists error when opening Microsoft Copilot for Sales
-description: Resolves the No admin exists error in Microsoft Copilot for Sales when a user tries to open the app.
-ms.date: 03/28/2024
+title: Ask your admin to create an environment for you error when opening Microsoft Copilot for Sales
+description: Resolves the Ask your admin to create an environment for you error in Microsoft Copilot for Sales when a user tries to open the app.
+ms.date: 04/07/2024
 author: sbmjais
 ms.author: shjais
 ---
 
-# "No admin exists" error when opening Microsoft Copilot for Sales
+# "Ask your admin to create an environment for you" error when opening Microsoft Copilot for Sales
 
-This article helps you troubleshoot and resolve the "No admin exists" error in Microsoft Copilot for Sales when a user tries to open the app.
+This article helps you troubleshoot and resolve the "Ask your admin to create an environment for you" error in Microsoft Copilot for Sales when a user tries to open the app.
 
 ## Who is affected?
 
@@ -23,9 +23,9 @@ This article helps you troubleshoot and resolve the "No admin exists" error in M
 
 ## Symptoms
 
-When a user tries to open Microsoft Copilot for Sales, the following error message is displayed:
+When a user tries to open Microsoft Copilot for Sales, the following error is displayed:
 
-> No administrator exists to create your environment.
+> Ask your admin to create an environment for you.
 
 ## Cause
 
