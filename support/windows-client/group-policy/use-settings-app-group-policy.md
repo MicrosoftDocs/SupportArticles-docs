@@ -11,7 +11,7 @@ ms.custom: sap:Group Policy\Group Policy management (GPMC or GPedit), csstrouble
 ---
 # Use the Settings app Group Policy in Windows 10
 
-_Applies to:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Client (All supported versions)  
 _Original KB number:_ &nbsp; 4019502
 
 ## Overview
