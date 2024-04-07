@@ -7,6 +7,7 @@ ms.author: tysonfreeman
 editor: v-jsitser
 ms.reviewer: v-leedennis
 ms.service: container-instances
+ms.custom: sap:Connectivity
 #Customer intent: As an Azure administrator, I want to learn how to resolve the "Web socket is closed or could not be opened" error so that I can successfully deploy an image onto a container instance.
 ---
 # Error: "Web socket is closed or could not be opened"
@@ -27,4 +28,4 @@ Your firewall blocks access to port 19390. This port is required to connect to C
 
 Allow ingress to TCP port 19390 in your firewall. At a minimum, make sure that your firewall gives access to that port for all public client IP addresses that the Azure portal has to connect to.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

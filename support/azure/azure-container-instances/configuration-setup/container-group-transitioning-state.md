@@ -8,6 +8,7 @@ editor: v-jsitser
 ms.reviewer: v-leedennis
 ms.service: container-instances
 ms.topic: troubleshooting-problem-resolution
+ms.custom: sap:Configuration and Setup
 #Customer intent: As an Azure administrator, I want to learn how to resume a container group that's stuck in a transitioning state so that I can successfully perform a container group operation (such as create, start, restart, stop, or delete).
 ---
 # Container group remains in transitioning state
@@ -59,4 +60,4 @@ If the previous solutions don't fix the problem, and you still encounter the err
 
 - [Update containers in Azure Container Instances](/azure/container-instances/container-instances-update)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
