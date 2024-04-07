@@ -13,7 +13,7 @@ ms.custom: sap:Group Policy\Group Policy management (GPMC or GPedit), csstrouble
 
 On a computer that is running Windows Server 2016 or Windows Server 2019 Core edition and has the Group Policy Management Console (GPMC) feature installed, you can't use the `Backup-GPO` PowerShell CmdLet to back up a group policy that contains folder redirection settings.
 
-_Applies to:_ &nbsp; Windows Server 2016 Core edition, Windows Server 2019 Core edition
+_Applies to:_ &nbsp; Windows Server (All supported versions)
 
 ## PowerShell output example
 
