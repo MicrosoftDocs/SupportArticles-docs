@@ -371,10 +371,10 @@
     href: windows-virtual-machine-activation-faq.yml
   - name: Understanding Generic Volume License Key (GVLK)
     href: /windows-server/get-started/kms-client-activation-keys?context=/troubleshoot/azure/virtual-machines/windows/context/context
-  - name: Activation fails in forced tunneling scenario
-    href: custom-routes-enable-kms-activation.md
   - name: Know errors and issues
     items:
+    - name: Activation fails in forced tunneling scenario
+      href: custom-routes-enable-kms-activation.md
     - name: Duplicate Client Machine ID
       href: windows-activation-duplicate-client-machine-id.md
     - name: Error 0x80070005
@@ -389,10 +389,10 @@
       href: ../../../windows-server/deployment/error-0xc004f06c-activate-windows.md?context=/troubleshoot/azure/virtual-machines/windows/context/context
     - name: Error 0xC004F074
       href: windows-vm-activation-error-0xc004f074.md
+    - name: Windows activation watermark continues to be displayed
+      href: activation-watermark-appears.md
   - name: KMS endpoints - new endpoints
     href: windows-activation-stopped-working.md
-  - name: Windows activation watermark continues to be displayed
-    href: activation-watermark-appears.md
 
 - name: Configuration and Setup
   items:
