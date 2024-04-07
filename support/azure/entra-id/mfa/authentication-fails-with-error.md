@@ -4,7 +4,6 @@ description: Describes and provides a resolution for an error that occurs when A
 ms.date: 07/30/2021
 ms.reviewer: fszita
 ms.service: entra-id
-ms.subservice: hybrid
 ms.custom: sap:Multi-Factor Authentication (MFA), has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ---
 
