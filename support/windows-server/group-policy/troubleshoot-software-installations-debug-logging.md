@@ -16,7 +16,7 @@ This article describes how you can troubleshoot software installations by using 
 > [!IMPORTANT]
 > This article contains information about how to modify the registry. Make sure to back up the registry before you modify it. Make sure that you know how to restore the registry if a problem occurs. For more information about how to back up, restore, and modify the registry, click the following article number to view the article in the Microsoft Knowledge Base: [256986](https://support.microsoft.com/help/256986) Description of the Microsoft Windows registry  
 
-_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server (All supported versions), Windows Client (All supported versions)  
 _Original KB number:_ &nbsp; 249621
 
 ## Summary
