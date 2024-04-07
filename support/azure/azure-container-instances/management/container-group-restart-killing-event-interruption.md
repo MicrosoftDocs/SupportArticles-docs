@@ -4,6 +4,7 @@ description: Provides a solution to an issue where an Azure container group is u
 ms.date: 03/06/2024
 ms.reviewer: tysonfreeman, v-weizhu
 ms.service: container-instances
+ms.custom: sap:Management
 ---
 
 # Azure container group intermittently restarts due to killing event interruptions
@@ -29,4 +30,4 @@ Exit codes 7147 and 7148 indicate that the container group is stopped due to pla
 
 Exit code 0 means that an error occurs in the user's application and the container group is stopped. To resolve this error, the user needs to fix the application.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
