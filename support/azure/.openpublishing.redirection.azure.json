@@ -3334,7 +3334,11 @@
         "source_path": "azure-kubernetes/nodepoolmcversionincompatible-error.md",
         "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/nodepoolmcversionincompatible-error",
         "redirect_document_id": true
-     }
-
+      },
+      {
+        "source_path": "cloud-services/classic/support-linux-open-source-technology.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/support-linux-open-source-technology",
+        "redirect_document_id": true
+      }
   ]
 }

@@ -155,6 +155,12 @@
       href: create-upgrade-delete/tls-client-offered-unsupported-versions.md
     - name: Troubleshoot common Azure Linux container host for AKS issues
       href: create-upgrade-delete/troubleshoot-common-azure-linux-aks.md
+    - name: Avoid running as root in AKS Container
+      href: avoid-running-as-root-in-containers.md
+    - name: Azure policy reports 'ConstraintNotProcessed' for container
+      href: error-azure-policy-constraintnotprocessed.md
+    - name: Policy definition not found error during policy-assignments at Terraform
+      href: error-in-policy-assign-main-file-terraform.md
 
 - name: Troubleshoot Kubernetes control plane
   items:

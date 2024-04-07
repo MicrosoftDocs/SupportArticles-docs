@@ -4193,7 +4193,7 @@
     {
       "source_path": "support/developer/visualstudio/installation/issues-workarounds-visual-studio-2012-setup.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/installation/issues-workarounds-visual-studio-setup",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/developer/webapps/index.md",
