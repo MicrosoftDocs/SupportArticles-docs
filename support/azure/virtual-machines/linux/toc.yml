@@ -48,16 +48,12 @@
     
 - name: Cannot connect to my VM
   items:
-  - name: Serial Console for Linux
-    href: serial-console-linux.md
   - name: Debian Linux VM
     href: cannot-connect-debian-linux.md
   - name: Detailed SSH troubleshooting
     href: detailed-troubleshoot-ssh-connection.md
   - name: Fail to connect to VM through SSH due to SELinux misconfiguration
     href: linux-selinux-troubleshooting.md
-  - name: Troubleshoot Linux VM UEFI boot failures
-    href: azure-linux-vm-uefi-boot-failures.md
   - name: Network issues
     href: cannot-connect-linux-network.md
   - name: SSH connection fails due to permission and ownership issues
