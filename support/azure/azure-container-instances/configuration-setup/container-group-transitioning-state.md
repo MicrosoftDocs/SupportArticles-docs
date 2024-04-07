@@ -60,4 +60,4 @@ If the previous solutions don't fix the problem, and you still encounter the err
 
 - [Update containers in Azure Container Instances](/azure/container-instances/container-instances-update)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

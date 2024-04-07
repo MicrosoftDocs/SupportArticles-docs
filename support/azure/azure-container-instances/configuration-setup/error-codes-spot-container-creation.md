@@ -27,4 +27,4 @@ This article provides solutions to common errors that occur when you try to crea
 
 - [FAQ - Spot containers on Azure Container Instances (Preview)](/azure/container-instances/container-instances-faq#spot-containers-on-azure-container-instances--preview)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
