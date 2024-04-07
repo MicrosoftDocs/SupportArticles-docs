@@ -13,7 +13,7 @@ ms.custom: sap:Group Policy\Group Policy management (GPMC or GPedit), csstrouble
 
 This article describes an issue that prevents you from using Group Policy to disable the Windows Store app on a computer that's running Windows 10 Pro.
 
-_Applies to:_ &nbsp; Windows 10, version 1903, Windows 10, version 1809  
+_Applies to:_ &nbsp; Windows Client (All supported versions)  
 _Original KB number:_ &nbsp; 3135657
 
 ## Symptoms
