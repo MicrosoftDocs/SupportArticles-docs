@@ -40,9 +40,9 @@
       href: schedule-email-report-error.md
 - name: Setup, installation, and secondary DPM server protection
   items:
-    - name: Error 4323 installing DPM 2012 R2
+    - name: Error 4323 when installing DPM
       href: error-4323-install-dpm-2012-r2.md
-    - name: Error 832 installing DPM 2016
+    - name: Error 832 installing DPM 2016 or later
       href: installation-error-832.md
 - name: SharePoint farm protection
   items:

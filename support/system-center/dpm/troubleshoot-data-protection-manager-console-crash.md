@@ -5,9 +5,9 @@ ms.date: 08/22/2020
 ---
 # Troubleshoot Data Protection Manager console crashes
 
-This guide helps you diagnose and resolve crash-related issues with the admin console in System Center 2016 Data Protection Manager (DPM 2016) and System Center 2012 Data Protection Manager (DPM 2012 or DPM 2012 R2). Common crash error IDs include 917, 999, 948 and 1069.
+This guide helps you diagnose and resolve crash-related issues with the admin console in System Center 2016 Data Protection Manager (DPM 2016) and later. Common crash error IDs include 917, 999, 948 and 1069.
 
-_Original product version:_ &nbsp; System Center 2016 Data Protection Manager, System Center 2012 Data Protection Manager, System Center 2012 R2 Data Protection Manager  
+_Original product version:_ &nbsp; System Center 2016 Data Protection Manager and later  
 _Original KB number:_ &nbsp; 10057
 
 Before you start troubleshooting, make sure that you have the latest update rollup package for System Center Data Protection Manager installed. For the latest version, see [System Center - Data Protection Manager build versions](/system-center/dpm/release-build-versions).
@@ -31,6 +31,9 @@ If the crash occurs when you launch the console, verify that all of the DPM serv
 - SQL Server (for DPM instance)
 - Virtual Disk Service
 - Volume Shadow Copy Service
+
+> [!NOTE]
+> When DPM is installed in Windows Server 2016 or later versions, the Hyper-V Virtual Machine Management service is also required to be running.
 
 If one of the services isn't running, try starting it and then reopen the DPM console.
 
@@ -57,8 +60,8 @@ The only services that might be running with an account other than SYSTEM are th
 |---|---|---|---|
 |MSDPM|SYSTEM|Manual|Yes|
 |DPMRA|SYSTEM|Automatic|No|
-|SQL Server Agent (for DPM instance)|Domain account (must be local admin)|Automatic|Yes|
-|SQL Server (for DPM instance)|Domain account (must be local admin)|Automatic|Yes|
+|*SQL Server Agent (for DPM instance)|SYSTEM|Automatic|Yes|
+|*SQL Server (for DPM instance)|SYSTEM|Automatic|Yes|
 |Virtual Disk Service|SYSTEM|Manual|Yes|
 |Volume Shadow Copy Service|SYSTEM|Manual|Yes|
 |DPM Access Manager|SYSTEM|Automatic|Yes|
@@ -67,10 +70,12 @@ The only services that might be running with an account other than SYSTEM are th
 |DPM Writer|SYSTEM|Automatic|Yes|
 |DPMLA|SYSTEM|Manual|No|
 |DPM VMM Helper Service|SYSTEM|Manual|No|
-  
+
+\* If library sharing is enabled, SQL Server services will be using a domain account (must be local admin).
+
 ## Check if the database is in recovery mode
 
-If the database is in recovery mode, it can cause problems when services attempt to connect to it. The database is put into recovery mode due to a DPMSync failure or crash. To check whether this is the case, run the following SQL query against the DPMDB:
+If the database is in recovery mode, it can cause problems when services attempt to connect to it. The database is put into recovery mode due to a DPMSync - Sync failure or crash. To check whether this is the case, run the following SQL query against the DPMDB:
 
 ```sql
 select * from tbl_DLS_GlobalSetting
@@ -122,7 +127,7 @@ In this example, the **Problem Details** section shows that it failed with the e
 
 > The class is configured to run as a security id different from the caller
 
-Then we can start investigating the issue as a user account issue. Since it was the MSDPM service that crashed, the next step is to take a look at the corresponding DPM error log. The default location for these DPM error logs is similar to `C:\Program Files\Microsoft System Center 2012\DPM\DPM\Temp\`.
+Then we can start investigating the issue as a user account issue. Since it was the MSDPM service that crashed, the next step is to take a look at the corresponding DPM error log. The default location for these DPM error logs is similar to `C:\Program Files\Microsoft System Center\DPM\DPM\Temp\`.
 
 The error logs are named for the service they log, and the current log file for each service is named as *\<service>curr.errlog*.
 
@@ -132,7 +137,7 @@ If the service has crashed, the system also creates a .crash file similar to tho
 
 The crash event is recorded at the very end of the file and shows you more details.
 
-When troubleshooting the various services crashes, their causes and resolutions are beyond the scope of this guide. The Event Logs, error logs and .crash files should provide you enough information to troubleshoot the most common errors via the [DPM support forum](https://social.technet.microsoft.com/Forums/en-us/home?category=dpm).
+When troubleshooting the various services crashes, their causes and resolutions are beyond the scope of this guide. The Event Logs, error logs and .crash files should provide you enough information to troubleshoot the most common errors.
 
 ## Error 948: Unable to connect to DPM Server
 

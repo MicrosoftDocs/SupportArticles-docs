@@ -8,7 +8,7 @@ ms.reviewer: msadoff
 
 This article describes an unsupported scenario in which you receive **Invalid Pointer (0x80004003)** error when restoring a SharePoint default.aspx file in Data Protection Manager (DPM).
 
-_Original product version:_ &nbsp; System Center 2016 Data Protection Manager, System Center 2012 R2 Data Protection Manager, System Center 2012 Data Protection Manager, System Center Data Protection Manager 2010  
+_Original product version:_ &nbsp; System Center Data Protection Manager  
 _Original KB number:_ &nbsp; 2851583
 
 ## Summary

@@ -27,13 +27,41 @@ You receive one or more of the following error messages about failed jobs for va
 
 > The DPM service was unable to communicate with the protection agent on ProtectedServer.Contoso.local. (ID 52 Details: An existing connection was forcibly closed by the remote host (0x80072746))
 
+> The DPM service was unable to communicate with the protection agent on ProtectedServer.Contoso.local. (ID 52 Details: The semaphore timeout period has expired (0x80070079))
+
+> DPM failed to communicate with the protection agent on ProtectedServer.Contoso.local because the agent is not responding. (ID 43 Details: Internal error code: 0x8099090E)
+
+> DPM failed to communicate with ProtectedServer.Contoso.local because the computer is unreachable. (ID 41 Details: No connection could be made because the target machine actively refused it (0x8007274D))
+
 ## Cause
 
 This problem occurs if the network is experiencing high latency, or if the network is saturated with data transfers. When these conditions are true, DCOM traffic is delayed. This causes the agents to time out intermittently.
 
 ## Workaround
 
-To work around this problem, enable DPM throttling of 85 through 90 percent to make sure that bandwidth is available for DCOM calls. You can enable bandwidth throttling for each protected server on the **Agents** tab under the **Management** tab.
+To work around this problem, use the following steps to add some registry entries on the DPM Server and the protected server.
+
+1. In Notepad, paste the following entries into the file, and then save the file as *DPMAgentTimeout.reg*.
+
+    ```console
+    Windows Registry Editor Version 5.00
+
+    [HKEY_LOCAL_MACHINE\Software\Microsoft\Microsoft Data Protection Manager\Agent]
+    "ConnectionNoActivityTimeoutForNonCCJobs"=dword:00001c20
+    "ConnectionNoActivityTimeout"=dword:00001c20
+    "AbortAgentOnLockTimeout"=dword:00000001
+    "CommandTimeout"=dword:1b7740
+
+    [HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Tcpip\Parameters]
+    "TcpMaxDataRetransmissions"=dword:00000010
+    ```
+
+1. Right-click the *DPMAgentTimeout.reg* file, and then select **Merge**.
+1. Restart the DPMRA service or the server for the changes to take affect.
+
+If the problem persists, enable DPM throttling of 85 through 90 percent to make sure that bandwidth is available for DCOM calls. You can enable bandwidth throttling for each protected server on the **Agents** tab under the **Management** tab.
+
+For more information about the `TcpMaxDataRetransmissions` value, see [How to modify the TCP/IP maximum retransmission time-out](https://support.microsoft.com/topic/7ae0982a-4963-fa7e-ee79-ff6d0da73db8). Additionally, [run antivirus software on the DPM server](/system-center/dpm/run-antivirus-server).
 
 ## More information
 

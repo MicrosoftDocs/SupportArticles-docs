@@ -53,6 +53,11 @@ To resolve this problem, find the process that is using the required TCP ports. 
 
 To change the ports that are used by the DPM agent, follow these steps on the protected computer that is experiencing the problem. Make sure that the ports that you reassign will not be used by any other applications.
 
+> [!NOTE]
+> To list the DPM installation path, run the following command:
+> 
+> `Reg query "HKLM\SOFTWARE\Microsoft\Microsoft Data Protection Manager\Setup" /v installpath`
+
 1. Locate the SetAgentcfg.exe file from the DPM server. By default, the file is located at `%PROGRAMFILES%\Microsoft DPM\DPM\Setup\SetAgentCfg.exe`.
 
 2. Copy the file to the protected computer that is experiencing the problem. Copy the file to the agent DPM\Bin directory. By default, the file is located at `%PROGRAMFILES%\Microsoft Data Protection Manager\DPM\bin`.
