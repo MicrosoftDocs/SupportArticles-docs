@@ -1,5 +1,5 @@
 ---
-title: Support for Linux and open-source technology in Azure
+title: Linux and open-source technology support
 description: Describes support for Linux distributions and open-source technology support in Microsoft Azure.
 ms.service: virtual-machines
 ms.custom: sap:VM Admin - Linux (Guest OS)
