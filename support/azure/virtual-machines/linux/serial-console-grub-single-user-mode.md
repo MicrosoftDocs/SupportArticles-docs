@@ -98,8 +98,8 @@ The root user is disabled by default. Single-user mode in RHEL requires the root
 1. Enable the password for the root user by doing the following:
     * Run `passwd root` (set a strong root password).
 1. Ensure that the root user can sign in only via ttyS0 by doing the following:
-    a. Run `edit /etc/ssh/sshd_config`, and ensure that PermitRootLogIn is set to `no`.
-    b. Run `edit /etc/securetty file` to allow sign-in only via ttyS0.
+    a. Run `vi /etc/ssh/sshd_config`, and ensure that PermitRootLogIn is set to `no`.
+    b. Run `vi /etc/securetty file` to allow sign-in only via ttyS0.
 
 Now, if the system boots into single-user mode, you can sign in with the root password.
 
