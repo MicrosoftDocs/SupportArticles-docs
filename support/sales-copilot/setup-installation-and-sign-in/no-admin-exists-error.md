@@ -36,7 +36,7 @@ When the first user in the tenant tries to open Microsoft Copilot for Sales, no 
 To resolve this issue, tenant should have at least one administator.
 
 1. Open one of the following URLs as per your tenant type:
-    - Production: [https://admin.powerplatform.microsoft.com/](https://admin.prod.powerplatform.microsoft.com/)
+    - Production: [https://admin.powerplatform.microsoft.com/](https://admin.powerplatform.microsoft.com/)
     - Non-production: [https://admin.preprod.powerplatform.microsoft.com/](https://admin.preprod.powerplatform.microsoft.com/)
 1. In the left pane, select **Admin centers** > **Microsoft Entra ID**.
 1. In the left pane, select **Roles & admins** > **Roles & admins**.
