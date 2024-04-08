@@ -4,6 +4,7 @@ description: Resolves the Ask your admin to create an environment for you error 
 ms.date: 04/07/2024
 author: sbmjais
 ms.author: shjais
+ms.custom: sap:CRM Permissions and Configurations\CRM Settings
 ---
 
 # "Ask your admin to create an environment for you" error when opening Microsoft Copilot for Sales
