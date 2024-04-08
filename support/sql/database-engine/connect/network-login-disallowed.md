@@ -1,7 +1,7 @@
 ---
-title: Network logins being disallowed in SQL Server
+title: Problem with the user account's access to the network login
 description: This article provides a resolution for the consistent authentication issue in SQL Server that affects network login.
-ms.date: 04/05/2024
+ms.date: 04/08/2024
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
