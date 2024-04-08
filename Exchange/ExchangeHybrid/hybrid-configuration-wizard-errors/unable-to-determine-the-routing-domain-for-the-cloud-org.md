@@ -12,7 +12,6 @@ ms.custom:
   - Exchange Hybrid
   - CSSTroubleshoot
   - has-azure-ad-ps-ref
-  - azure-ad-ref-level-one-done
 ms.reviewer: scotro, v-six
 appliesto: 
   - Exchange Online
