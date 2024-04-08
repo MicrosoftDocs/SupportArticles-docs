@@ -10921,7 +10921,7 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "troubleshoot/sql/general/information-mats-sdp.md",
+      "source_path": "support/sql/general/information-mats-sdp.md",
       "redirect_url": "/troubleshoot/sql/tools/sql-support-troubleshooting-diagnostic-tools",
       "redirect_document_id": true
     }
