@@ -13,7 +13,6 @@ ms.custom:
   - CI 115161
   - CSSTroubleshoot
   - has-azure-ad-ps-ref
-  - azure-ad-ref-level-one-done
 ms.reviewer: batre
 appliesto: 
   - Exchange Online
