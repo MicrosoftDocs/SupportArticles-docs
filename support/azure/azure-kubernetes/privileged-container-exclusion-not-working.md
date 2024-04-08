@@ -1,6 +1,6 @@
 ---
-title: Excluding privileged containers fails
-description: Provides a workaround to an issue where excluding privileged containers fails.
+title: Azure Policy fails to exclude privileged containers from AKS
+description: Provides a workaround to an issue where Azure Policy fails to exclude privileged containers from Azure Kubernetes Service (AKS).
 ms.date: 04/02/2024
 ms.reviewer: momajed, cssakscic 
 ms.service: azure-kubernetes-service
@@ -12,7 +12,7 @@ This article provides a solution to an issue where Azure Policy can't exclude pr
 
 ## Symptoms
 
-AKS clusters shouldn't allow privileged containers, but excluding privileged containers fails.
+When you use Azure Policy in an AKS clsuter, excluding privileged containers fails.
 
 ## Cause
 
