@@ -42,7 +42,7 @@ To work around this problem, follow these steps to make correct configuration ch
 
     :::image type="content" source="media/schedule-email-report-error/properties-window.png" alt-text="Add the new local user to the local group that you created in step 1.":::
 
-4. Start SQL Server Management Studio by using administrative permissions, and then connect to the SQL Server instance that's used by DPM. Under **Security**, right-click **Logins**, and then select **New login** > **Search...**. Under Object Types, check the **Groups** object type, and then select **OK**. Add the local group **DPMDBReaders$\<*DPMServerName*>**, and then select **OK**. After the group is added, it will be listed under **Logins**.
+4. Start SQL Server Management Studio by using administrative permissions, and then connect to the SQL Server instance that's used by DPM. Under **Security**, right-click **Logins**, and then select **New login** > **Search...**. Under Object Types, select the **Groups** object type, and then select **OK**. Add the local group **DPMDBReaders$\<*DPMServerName*>**, and then select **OK**. After the group is added, it will be listed under **Logins**.
 
     :::image type="content" source="media/schedule-email-report-error/object-explorer.png" alt-text="Select New login to add the local group.":::
 
@@ -63,7 +63,7 @@ To work around this problem, follow these steps to make correct configuration ch
 
 9. Exit SQL Server Management Studio.
 
-10. Start the SQL Reporting Services Configuration Manager and connect to the SQL Server instance hosting the DPM reports.
+10. Start the SQL Server Reporting Services Configuration Manager and connect to the SQL Server instance hosting the DPM reports.
 
 11. Select **Web Portal URL**, and then select the URL.
 
@@ -73,7 +73,7 @@ To work around this problem, follow these steps to make correct configuration ch
 
     :::image type="content" source="media/schedule-email-report-error/click-url-link.png" alt-text="Select the URL link that is shown in the step 11." border="false":::
 
-13. Click the `DPMReports_<GUID>` link to open the DPM reports page, as shown in the following screenshot.
+13. Select the `DPMReports_<GUID>` link to open the DPM reports page, as shown in the following screenshot.
 
     :::image type="content" source="media/schedule-email-report-error/open-dpm-report-page.png" alt-text="Open the DPM reports page by selecting the DPMReports." border="false":::
 

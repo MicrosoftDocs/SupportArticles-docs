@@ -34,7 +34,7 @@ If the crash occurs when you launch the console, verify that all of the DPM serv
 - Volume Shadow Copy Service
 
 > [!NOTE]
-> When DPM is installed in Windows Server 2016 or later versions, the Hyper-V Virtual Machine Management service is also required to be running.
+> When DPM is installed in Windows Server 2016 or later versions, the Hyper-V Virtual Machine Management service must be running.
 
 If one of the services isn't running, try starting it and then reopen the DPM console.
 
@@ -72,11 +72,11 @@ The only services that might be running with an account other than SYSTEM are th
 |DPMLA|SYSTEM|Manual|No|
 |DPM VMM Helper Service|SYSTEM|Manual|No|
 
-\* If library sharing is enabled, SQL Server services will be using a domain account (must be local admin).
+\* If library sharing is enabled, SQL Server services will use a domain account (must be a local admin).
 
 ## Check if the database is in recovery mode
 
-If the database is in recovery mode, it can cause problems when services attempt to connect to it. The database is put into recovery mode due to a DPMSync - Sync failure or crash. To check whether this is the case, run the following SQL query against the DPMDB:
+If the database is in recovery mode, it can cause problems when services attempt to connect to it. The database is put into recovery mode due to a DPMSync -Sync failure or crash. To check whether this is the case, run the following SQL query against the DPMDB:
 
 ```sql
 select * from tbl_DLS_GlobalSetting
@@ -138,7 +138,7 @@ If the service has crashed, the system also creates a .crash file similar to tho
 
 The crash event is recorded at the very end of the file and shows you more details.
 
-When troubleshooting the various services crashes, their causes and resolutions are beyond the scope of this guide. The Event Logs, error logs and .crash files should provide you enough information to troubleshoot the most common errors.
+When troubleshooting the various services crashes, their causes and resolutions are beyond the scope of this guide. The Event logs, error logs, and .crash files should provide you enough information to troubleshoot the most common errors.
 
 ## Error 948: Unable to connect to DPM Server
 

@@ -42,7 +42,7 @@
   items:
     - name: Error 4323 when installing DPM
       href: error-4323-install-dpm-2012-r2.md
-    - name: Error 832 installing DPM 2016 or later
+    - name: Error 832 when installing DPM 2016 or later
       href: installation-error-832.md
 - name: SharePoint farm protection
   items:

@@ -39,7 +39,7 @@ This problem occurs if the network is experiencing high latency, or if the netwo
 
 ## Workaround
 
-To work around this problem, use the following steps to add some registry entries on the DPM Server and the protected server.
+To work around this problem, follow these steps to add some registry entries on the DPM server and the protected server.
 
 1. In Notepad, paste the following entries into the file, and then save the file as *DPMAgentTimeout.reg*.
 
@@ -57,7 +57,7 @@ To work around this problem, use the following steps to add some registry entrie
     ```
 
 1. Right-click the *DPMAgentTimeout.reg* file, and then select **Merge**.
-1. Restart the DPMRA service or the server for the changes to take affect.
+1. Restart the DPMRA service or the server for the changes to take effect.
 
 If the problem persists, enable DPM throttling of 85 through 90 percent to make sure that bandwidth is available for DCOM calls. You can enable bandwidth throttling for each protected server on the **Agents** tab under the **Management** tab.
 
