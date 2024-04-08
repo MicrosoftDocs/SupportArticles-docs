@@ -1,8 +1,8 @@
 ---
 title: DPM protection jobs fail with errors
 description: Fixes error messages about failed job details for various protected servers occur in Data Protection Manager. 
-ms.date: 07/24/2020
-ms.reviewer: dewitth, jeffpatt
+ms.date: 04/08/2024
+ms.reviewer: Mjacquet, dewitth, jeffpatt
 ---
 # Protection jobs for various protected servers fail with errors
 

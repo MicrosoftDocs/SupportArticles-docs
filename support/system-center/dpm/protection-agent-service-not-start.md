@@ -1,7 +1,8 @@
 ---
 title: DPM protection agent service can't start
 description: Describes a problem that occurs when event ID 7024 is logged in the System log on protected servers. You also receive The DPMRA service terminated with service-specific error 10048 (0x2740) error.
-ms.date: 07/24/2020
+ms.date: 04/08/2024
+ms.reviewer: Mjacquet
 ---
 # The DPM protection agent service can't start
 

@@ -1,8 +1,8 @@
 ---
 title: Can't restore a SharePoint default.aspx file
 description: Describes a behavior in which you can't restore a SharePoint default.aspx file by using Data Protection Manager.
-ms.date: 07/27/2020
-ms.reviewer: msadoff
+ms.date: 04/08/2024
+ms.reviewer: Mjacquet, msadoff
 ---
 # Restoring a SharePoint default.aspx file fails with Invalid Pointer (0x80004003) error
 
