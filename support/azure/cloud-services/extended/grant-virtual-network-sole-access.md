@@ -5,7 +5,6 @@ ms.date: 04/01/2024
 editor: v-jsitser
 ms.reviewer: v-maallu, zhangjerry, v-leedennis
 ms.service: cloud-services-extended-support
-ms.subservice: troubleshoot-extended-support
 ms.topic: how-to
 #Customer intent: As an Azure Cloud Services (extended support) user, I want to restrict cloud service to only a specified virtual network so that I can make my cloud service more secure.
 ---

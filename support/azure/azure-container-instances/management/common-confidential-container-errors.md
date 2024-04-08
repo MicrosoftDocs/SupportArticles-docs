@@ -4,6 +4,7 @@ description: Provides solutions to common issues with confidential containers.
 ms.date: 02/01/2024
 ms.reviewer: tysonfreeman, v-weizhu
 ms.service: container-instances
+ms.custom: sap:Management
 ---
 # Troubleshoot common issues with confidential containers
 
@@ -110,4 +111,4 @@ In most cases, these issues occur due to the CCE policy.
 
   To clean the cache, run the `docker rmi <image_name>:<tag>` command. To clean all images in the cache, run the `docker rmi $(docker images -a -q)` command. To inspect the missing hash, run the `docker inspect <image_name>:<tag>` command.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

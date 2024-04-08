@@ -5,7 +5,6 @@ ms.date: 04/01/2024
 editor: v-jsitser
 ms.reviewer: v-maallu, v-leedennis
 ms.service: cloud-services-extended-support
-ms.subservice: troubleshoot-extended-support
 #Customer intent: As an Azure virtual machine user, I want to know what kinds of compute diagnostic data can be extracted from a platform as a service (PaaS) Windows virtual machine (VM) so that I can use this data to help troubleshoot various problems.
 ---
 
