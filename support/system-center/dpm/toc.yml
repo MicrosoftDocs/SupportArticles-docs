@@ -6,12 +6,6 @@
   items:
     - name: Agent communication issues
       href: agent-communication-errors.md
-    - name: Agent installation fails with error 319
-      href: agent-installation-error-319.md
-    - name: Error 347 installing the DPM agent
-      href: agent-installation-error-347.md
-    - name: The protection agent crashes
-      href: protection-agent-crashes.md
     - name: The protection agent service can't start
       href: protection-agent-service-not-start.md
     - name: Troubleshoot protection agent installation issues
@@ -20,28 +14,12 @@
   items:
     - name: Troubleshoot application protection
       href: troubleshoot-application-protection.md
-- name: Disk, replica, or recovery point volume issues
-  items:
-    - name: Can't restore the DPMDB.bak file
-      href: error-restore-dpmdb-bak-file.md
-    - name: Error 470 when restoring a DPM database
-      href: restore-database-error-470.md
-    - name: Some disks aren't enumerated
-      href: disks-not-enumeratd-fail-to-add.md
 - name: DPM console issues
   items:
-    - name: DPM service crashes with Event ID 917
-      href: dpm-service-crashes-event-917.md
-    - name: Sub menu items appear more than once
-      href: sub-menu-items-show-more-than-once.md
     - name: Troubleshoot console crashes
       href: troubleshoot-data-protection-manager-console-crash.md
     - name: Troubleshoot slow console performance
       href: troubleshoot-console-slow-performance.md
-- name: End user recovery
-  items:
-    - name: Troubleshoot end-user recovery issues
-      href: troubleshoot-end-user-recovery-issues.md
 - name: Exchange protection
   items:
     - name: Troubleshoot Exchange protection and recovery issues
@@ -54,12 +32,6 @@
       href: job-status-failure-messages.md
 - name: Hyper-V protection
   items:
-    - name: A host level backup fails with error 0x8007173D
-      href: host-level-backup-error-0x8007173d.md
-    - name: Configure cluster networks for CSV redirected access
-      href: configure-cluster-networks.md
-    - name: Hyper-V backup fails with error 30112
-      href: hyper-v-backup-fails-error-30112.md
     - name: VM guest can't be modified or removed from protection group
       href: vm-guest-cannot-be-modified-removed-from-protection-group.md
 - name: Reports
@@ -68,36 +40,18 @@
       href: schedule-email-report-error.md
 - name: Setup, installation, and secondary DPM server protection
   items:
-    - name: Backup of deduplicated volumes fails on a secondary DPM server
-      href: deduplicated-volumes-backup-fails.md
-    - name: Can't upgrade to DPM 2012
-      href: cannot-run-sql-instance-to-upgrade-dpm.md
-    - name: DPM 2010 consistency check fails
-      href: consistency-check-error-0x80070005.md
-    - name: DPM 2012 SP1 error codes
-      href: list-dpm-2012-sp1-error-codes.md
-    - name: Error 2013 configuring SMTP server information
-      href: configure-smtp-server-information-error-2013.md
     - name: Error 4323 installing DPM 2012 R2
       href: error-4323-install-dpm-2012-r2.md
     - name: Error 832 installing DPM 2016
       href: installation-error-832.md
-    - name: Upgrade to DPM 2016 with VMware protection
-      href: upgrade-dpm-vmware-vm-protection.md
 - name: SharePoint farm protection
   items:
     - name: Can't protect a SharePoint farm
       href: cannot-protect-sharepoint-farm.md
-    - name: DPM 2010 can't restore a renamed SharePoint site
-      href: cannot-restore-renamed-sharepoint-site.md
     - name: Restoring a SharePoint default.aspx file is unsupported
       href: restore-sharepoint-default-aspx-file-unsupported.md
 - name: SQL Server protection
   items:
-    - name: DPM 2010 is unable to enumerate SqlServerWriter
-      href: cannot-protect-sql-database.md
-    - name: Error 30111 restoring databases with multiple backslashes
-      href: databases-with-multiple-backslash-characters-fail-restore.md
     - name: New databases from a secondary DPM server aren't automatically added
       href: new-databases-not-automatically-added.md
     - name: Protection jobs fail with errors
@@ -114,8 +68,6 @@
   items:
     - name: Tape is labeled as Unrecognized
       href: tape-labeled-as-unrecognized.md
-    - name: DPM fails to inventory IBM 35XX Tape Library
-      href: fail-to-inventory-ibm-35xx-tape-library.md
 - name: VMware protection
   items:
     - name: Option isn't available to reprotect VMware VMs
