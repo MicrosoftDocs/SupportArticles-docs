@@ -1,14 +1,16 @@
 ---
 title: AKS container CPU and memory limits aren't enforced
 description: Provide a solution to an issue where CPU and memory limits aren't enforced for AKS containers.
-ms.date: 04/02/2024
+ms.date: 04/08/2024
 ms.reviewer: momajed, cssakscic
 ms.service: azure-kubernetes-service
 ms.subservice: common-issues
 ---
 # AKS container CPU and memory limits aren't enforced
 
-This article provides a solution to an issue where CPU and memory limits aren't enforced for containers in an Azure Kubernetes Service (AKS) cluster.
+This article provides a solution to an issue where CPU and memory limits aren't enforced for containers when you use Azure Policy Add-on for Azure Kubernetes Service (AKS).
+
+## Symptoms
 
 ## Cause
 
