@@ -82,12 +82,6 @@
     href: remove-service-account-db-owner-role-causes-login-failure.md
   - name: Setup fails when server NetBIOS name exceeds 15 characters
     href: setup-crashes-when-server-name-exceeds-15-characters.md
-- name: Site recovery
-  items:
-  - name: A protected VM in a resync state
-    href: protected-vm-resync-state.md
-  - name: Can't create a protection group
-    href: creating-protection-group-fails.md
 - name: Virtual machine creation and management
   items:
   - name: A new VM doesn't point to the assigned VLAN

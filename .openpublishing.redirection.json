@@ -11039,6 +11039,16 @@
       "source_path": "support/system-center/vmm/third-party-applications-support-policy.md",
       "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/vmm/protected-vm-resync-state.md",
+      "redirect_url": "/troubleshoot/azure/site-recovery/protected-vm-resync-state",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/system-center/vmm/creating-protection-group-fails.md",
+      "redirect_url": "/troubleshoot/azure/site-recovery/creating-protection-group-fails",
+      "redirect_document_id": true
     }
   ]
 }

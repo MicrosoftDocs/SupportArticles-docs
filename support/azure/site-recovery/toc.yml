@@ -1,5 +1,7 @@
 - name: Welcome
   href: welcome-site-recovery.yml
+- name: A protected VM in a resync state
+  href: protected-vm-resync-state.md
 - name: Azure Backup offline seeding is stuck
   href: backup-offline-seeding-stuck.md
 - name: Azure protection network bandwidth usage management
@@ -12,6 +14,8 @@
   href: blank-storage-account-setting-asr.md
 - name: Enable debug logging
   href: asr-enable-debug-logging.md
+- name: Can't create a protection group
+  href: creating-protection-group-fails.md
 - name: Can't install or register Azure Site Recovery Provider
   href: cannot-install-asr-registered-internal-error.md
 - name: Disable TLS 1.0 for PCI compliance
