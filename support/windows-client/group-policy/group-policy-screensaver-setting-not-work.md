@@ -1,7 +1,7 @@
 ---
 title: Group Policy Screensaver setting isn't working in Windows
 description: Fixes an issue where the Screensaver doesn't start after a Group Policy is configured to enable it in Windows.
-ms.date: 04/09/2023
+ms.date: 04/09/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
