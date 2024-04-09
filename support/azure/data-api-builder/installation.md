@@ -51,8 +51,8 @@ echo $PATH | tr ":" "\n"
 
 ## References
 
-- [Troubleshoot usage](usage.md)
-- [Known issues](https://github.com/azure/data-api-builder/labels/known-issue)
+- [Troubleshoot usage in Data API builder for Azure databases](usage.md)
+- [Known issues in Azure/data-api-builder](https://github.com/azure/data-api-builder/labels/known-issue)
 
 ## Next step
 
