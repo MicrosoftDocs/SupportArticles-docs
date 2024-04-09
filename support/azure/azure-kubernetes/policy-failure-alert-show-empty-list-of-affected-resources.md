@@ -1,10 +1,10 @@
 ---
 title: Azure policy failure alert shows an empty list of affected resources
 description: Provide a solution to an issue where Azure policy failure alert shows an empty list of affected resources.
-ms.date: 04/08/2024
+ms.date: 04/09/2024
 ms.reviewer: momajed, cssakscic
 ms.service: azure-kubernetes-service
-ms.subservice: common-issues
+ms.custom: sap:Extensions, Policies and Add-Ons
 ---
 # Azure policy failure alert shows an empty list of affected resources
 
