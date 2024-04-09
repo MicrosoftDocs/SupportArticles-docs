@@ -135,12 +135,14 @@
       href: create-upgrade-delete/operationnotallowed.md
   - name: Common issues
     items:
-    - name: AKS common issues FAQ
-      href: create-upgrade-delete/aks-common-issues-faq.yml
     - name: 429 Too Many Requests errors
       href: create-upgrade-delete/429-too-many-requests-errors.md
+    - name: AKS common issues FAQ
+      href: create-upgrade-delete/aks-common-issues-faq.yml
     - name: Argument list too long
       href: create-upgrade-delete/application-fails-argument-list-too-long.md
+    - name: Avoid running as root in AKS Container
+      href: create-upgrade-delete/avoid-running-as-root-in-containers.md
     - name: Changing property 'imageReference' is not allowed
       href: create-upgrade-delete/changing-property-imagereference-not-allowed.md
     - name: Error "CreateOrUpdateVirtualNetworkLinkFailed"
@@ -155,12 +157,6 @@
       href: create-upgrade-delete/tls-client-offered-unsupported-versions.md
     - name: Troubleshoot common Azure Linux container host for AKS issues
       href: create-upgrade-delete/troubleshoot-common-azure-linux-aks.md
-    - name: Avoid running as root in AKS Container
-      href: avoid-running-as-root-in-containers.md
-    - name: Azure policy reports 'ConstraintNotProcessed' for container
-      href: error-azure-policy-constraintnotprocessed.md
-    - name: Policy definition not found error during policy-assignments at Terraform
-      href: error-in-policy-assign-main-file-terraform.md
 
 - name: Troubleshoot Kubernetes control plane
   items:
@@ -287,6 +283,12 @@
   items:
   - name: AKS Cost Analysis add-on issues
     href: extensions/aks-cost-analysis-add-on-issues.md
+  - name: Azure policy reports 'ConstraintNotProcessed' for container
+    href: extensions/error-azure-policy-constraintnotprocessed.md
+  - name: Can't pull images from container registry to cluster
+    href: extensions/cannot-pull-image-from-acr-to-aks-cluster.md
+  - name: Policy definition not found error during policy-assignments at Terraform
+    href: extensions/error-in-policy-assign-main-file-terraform.md
   - name: Troubleshoot Azure Key Vault Provider for Secrets Store CSI Driver
     href: extensions/troubleshoot-key-vault-csi-secrets-store-csi-driver.md
   - name: Troubleshoot cluster extension deployment errors
@@ -297,5 +299,3 @@
     href: extensions/troubleshoot-failed-kubernetes-deployment-offer.md
   - name: Troubleshoot the KEDA add-on
     href: extensions/troubleshoot-kubernetes-event-driven-autoscaling-add-on.md
-  - name: Can't pull images from container registry to cluster
-    href: extensions/cannot-pull-image-from-acr-to-aks-cluster.md

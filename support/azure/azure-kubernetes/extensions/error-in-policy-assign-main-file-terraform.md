@@ -4,7 +4,7 @@ description: This article provides a solution to an error that you encounter dur
 ms.date: 03/27/2024
 ms.reviewer: chiragpa, andbar, haitch, v-leedennis
 ms.service: azure-kubernetes-service
-ms.subservice: common-issues
+ms.custom: sap:Extensions, Policies and Add-Ons
 ---
 # "Policy definition not found" during policy assignments in Terraform
 
@@ -45,6 +45,6 @@ resource "azurerm_policy_assignment" "kubernetes" {
 
 For more information, see [the depends_on Meta-Argument](https://developer.hashicorp.com/terraform/language/meta-arguments/depends_on).
 
-[!INCLUDE [third-party-disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [third-party-disclaimer](../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

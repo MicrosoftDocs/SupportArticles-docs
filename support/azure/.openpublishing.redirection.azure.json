@@ -3336,6 +3336,21 @@
         "redirect_document_id": true
       },
       {
+        "source_path": "azure-kubernetes/avoid-running-as-root-in-containers.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/avoid-running-as-root-in-containers",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/error-azure-policy-constraintnotprocessed.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/extensions/error-azure-policy-constraintnotprocessed",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/error-in-policy-assign-main-file-terraform.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/extensions/error-in-policy-assign-main-file-terraform",
+        "redirect_document_id": true
+      },
+      {
         "source_path": "cloud-services/classic/support-linux-open-source-technology.md",
         "redirect_url": "/troubleshoot/azure/virtual-machines/linux/support-linux-open-source-technology",
         "redirect_document_id": true

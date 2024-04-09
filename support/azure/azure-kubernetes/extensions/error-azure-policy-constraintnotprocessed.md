@@ -4,9 +4,9 @@ description: This article provides a solution to an issue in which Azure Policy 
 ms.date: 03/27/2024
 ms.reviewer: Mosbah.Majed
 ms.service: azure-kubernetes-service
-ms.subservice: common-issues
+ms.custom: sap:Extensions, Policies and Add-Ons
 ---
-#  Azure policy reports 'ConstraintNotProcessed' for running container
+# Azure policy reports 'ConstraintNotProcessed' for running container
 
 This article provides a solution to the error that you encounter when Azure Policy reports a running container as **ConstraintNotProcessed**.
 
@@ -16,10 +16,10 @@ A container such as Gatekeeper is running. However, Azure Policy reports the con
 
 ## Cause
 
-The issue could be related to the version or compatibility of your Azure Kubernetes Service (AKS). 
+The issue could be related to the version or compatibility of your Azure Kubernetes Service (AKS).
 
 ## Solution
 
 To resolve the issue, upgrade the AKS cluster to a newer or supported version that offers additional features, security enhancements, and updates to prevent issues such as this one.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
