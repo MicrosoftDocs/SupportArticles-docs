@@ -18,20 +18,23 @@ _Original KB number:_ &nbsp; 3087759
 
 ## Links to download the Administrative Templates files based on the operating system version
 
-- [Administrative Templates (.admx) for Windows 11 2023 Update (23H2)](https://www.microsoft.com/en-pk/download/details.aspx?id=105667)
-
 - [Administrative Templates (.admx) for Windows 11 2022 Update (22H2) - v3.0](https://www.microsoft.com/download/details.aspx?id=105390)
-
 - [Administrative Templates (.admx) for Windows 11 2022 Update (22H2)](https://www.microsoft.com/download/details.aspx?id=104593)
 - [Administrative Templates (.admx) for Windows 11 October 2021 Update (21H2)](https://www.microsoft.com/download/details.aspx?id=103507)
 - [Administrative Templates (.admx) for Windows 10 2022 Update (22H2)](https://www.microsoft.com/download/details.aspx?id=104677) 
 - [Administrative Templates (.admx) for Windows 10 November 2021 Update (21H2) - v2.0](https://www.microsoft.com/download/details.aspx?id=104042)
 - [Administrative Templates (.admx) for Windows 10 November 2021 Update (21H2)](https://www.microsoft.com/download/details.aspx?id=103667)
-
+- [Administrative Templates (.admx) for Windows 10 May 2021 Update (21H1)](https://www.microsoft.com/download/details.aspx?id=103124)
 - [Administrative Templates (.admx) for Windows 10 October 2020 Update (20H2) - v2.0](https://www.microsoft.com/download/details.aspx?id=103060)
-
+- [Administrative Templates (.admx) for Windows 10 May 2020 Update (2004)](https://www.microsoft.com/download/details.aspx?id=101445)
+- [Administrative Templates (.admx) for Windows 10 November 2019 Update (1909)](https://www.microsoft.com/download/details.aspx?id=100591)
+- [Administrative Templates (.admx) for Windows 10 May 2019 Update (1903)](https://www.microsoft.com/download/details.aspx?id=58495)
+- [Administrative Templates (.admx) for Windows 10 October 2018 Update (1809)](https://www.microsoft.com/download/details.aspx?id=57576)
+- [Administrative Templates (.admx) for Windows 10, version 1803 (April 2018 Update)](https://www.microsoft.com/download/details.aspx?id=56880)
+- [Administrative Templates (.admx) for Windows 10, version 1709 (Fall Creators Update)](https://www.microsoft.com/download/details.aspx?id=56121)  
+- [Administrative Templates (.admx) for Windows 10, version 1703 (Creators Update)](https://www.microsoft.com/download/details.aspx?id=55080)
 - [Administrative Templates (.admx) for Windows 10, version 1607 and Windows Server 2016](https://www.microsoft.com/download/details.aspx?id=53430)
-
+- [Administrative Templates (.admx) for Windows 10 and Windows 10, version 1511](https://www.microsoft.com/download/details.aspx?id=48257)
 - [Administrative Templates (.admx) for Windows 8.1 Update and Windows Server 2012 R2 Update](https://www.microsoft.com/download/details.aspx?id=43413)
 - [Administrative Templates (.admx) for Windows 8.1 and Windows Server 2012 R2](https://www.microsoft.com/download/details.aspx?id=41193)
 
