@@ -4,20 +4,8 @@
   items:
   - name: Authentication and authorization problems
     href: authentication-authorization-problems.md
-- name: App Controller
-  items:
-  - name: App Controller basic troubleshooter
-    href: app-controller-basic-troubleshooter.md
-  - name: Can't upgrade an evaluation version to a licensed version
-    href: cannot-upgrade-to-licensed-version.md
-  - name: Self-service users can't view a service
-    href: self-service-user-cannot-view-service.md
-  - name: VM network displays Not connected
-    href: network-properties-show-not-connected.md
 - name: Host, cluster, library management
   items:
-  - name: All hosts receive a zero rating
-    href: all-hosts-receive-zero-rating.md
   - name: Cluster overcommit algorithm approaches
     href: cluster-overcommit-algorithm-details.md
   - name: Cluster refresh fails in maintenance mode
@@ -36,8 +24,6 @@
     href: add-citrix-xenserver-as-host-error-2901.md
   - name: Error 2910 readding a library server
     href: readding-library-server-error-2910.md
-  - name: Error 2911 managing a host
-    href: manage-host-fails-error-2911.md
   - name: Error 2912 adding a cluster
     href: adding-cluster-error-2912.md
   - name: Error 2927 adding a Hyper-V server or cluster node
@@ -48,18 +34,12 @@
     href: error-10434-put-host-maintenance-mode.md
   - name: Error 25310 creating a cluster
     href: creating-cluster-error-25310.md
-  - name: Error 0x8033803b managing Hyper-V hosts
-    href: manage-hyper-v-hosts-error-0x8033803b.md
-  - name: Incorrect status in VMM library share
-    href: incorrect-agent-status.md
   - name: IP Address page is missing in the cluster creation wizard
     href: ip-address-page-missing.md
   - name: Needs Attention host status
     href: report-needs-attention-host-status.md
   - name: Recommended antivirus exclusions
     href: antivirus-exclusions-for-managed-hosts.md
-  - name: Reinstall a VMM agent on a host
-    href: reinstall-vmm-agent.md
   - name: Troubleshoot Needs Attention, Not Responding and Access Denied hosts
     href: troubleshoot-host-status-errors.md
   - name: Troubleshoot issues when adding a Hyper-V host
@@ -68,8 +48,6 @@
     href: reserved-characters-cause-vmm-crash.md
 - name: Networking issues
   items:
-  - name: Can't enable MAC spoofing
-    href: cannot-enable-mac-spoofing.md
   - name: Create logical switches on Nano Servers
     href: create-nano-server-logical-switches.md
   - name: Recover gateways deployed through VMM
@@ -92,26 +70,10 @@
     href: delete-wap-users-subscriptions-errors.md
   - name: VM templates list is missing on the WAP tenant site
     href: vm-templates-list-missing.md
-- name: Server Application Virtualization
-  items:
-  - name: Server App-V Agent custom actions
-    href: server-app-v-agent-custom-actions.md
-  - name: Server App-V Sequencer custom actions
-    href: server-app-v-sequencer-custom-actions.md
-  - name: Support policy for Microsoft applications
-    href: microsoft-application-support-policy.md
-  - name: Support policy for third-party applications
-    href: third-party-applications-support-policy.md
 - name: Setup
   items:
-  - name: Deserializing the object of type Microsoft.VirtualManager.Utils.ErrorInfo
-    href: reinstallation-deserialize-object-error.md
-  - name: Determine versions and update rollups
-    href: determine-version-update-rollups.md
   - name: Errors when using SoFS shares
     href: errors-using-scale-out-file-server-shares.md
-  - name: Fails to upgrade SCVMM
-    href: database-error-upgrading-scvmm.md
   - name: HostAgentBadSharePathname error installing VMM
     href: vmm-installation-hostagentbadsharepathname-error.md
   - name: Install and configure SQL Analysis Server
@@ -144,8 +106,6 @@
     href: guest-services-installation-error-13206.md
   - name: Error 22528 deploying a DAC pack
     href: deploying-dac-pack-error-22528.md
-  - name: Error 25035 enabling VM protection
-    href: enable-vm-protection-error-25035.md
   - name: Error 2912 deploying a VM
     href: deploying-vm-error-2912.md
   - name: Error 2931 deploying VMs
@@ -170,32 +130,20 @@
     href: vmm-activity-hostagentfail-2912.md
 - name: Virtual machine migration and conversion
   items:
-  - name: A live migration fails with error 0x8007274D
-    href: shared-nothing-live-migration-error-0x8007274d.md
-  - name: A P2V conversion fails with error 0x809933BB or 0x80070539
-    href: p2v-conversion-stops-at-40-percent.md
-  - name: A P2V conversion fails with GPT partitions
-    href: p2v-conversion-fails-with-gpt-partitions.md
   - name: Collect VMM storage traces
     href: collect-vmm-traces.md
-  - name: Convert between VHD and VHDX formats
-    href: convert-between-vhd-vhdx-formats.md
   - name: Error 11028 migrating a VM
     href: migrating-vm-error-11028.md
   - name: Increase timeout for migration jobs
     href: increase-migration-jobs-timeout.md
   - name: Networking errors when migrating VMs
     href: migrate-virtual-machine-networking-errors.md
-  - name: No enough disk space to run a V2V conversion
-    href: not-enough-disk-space-run-v2v-conversion.md
   - name: Storage migration error 12711
     href: storage-migration-error-12711.md
   - name: VM migration between two standalone hosts fails
     href: cannot-migrate-vm-between-two-stand-alone-hosts.md
 - name: VMM service and console failures
   items:
-  - name: Apostrophe causes VMM console to crash
-    href: apostrophe-causes-vmm-crash.md
   - name: Error 2606 when starting a new job 
     href: start-new-job-error-2606.md
   - name: Error ID 1602 when starting the VMM console
