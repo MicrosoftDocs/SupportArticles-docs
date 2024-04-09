@@ -3351,9 +3351,104 @@
         "redirect_document_id": true
       },
       {
+        "source_path": "azure-container-instances/container-group-deployment-waiting-state.md",
+        "redirect_url": "/troubleshoot/azure/azure-container-instances/configuration-setup/container-group-deployment-waiting-state",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-container-instances/inaccessible-image.md",
+        "redirect_url": "/troubleshoot/azure/azure-container-instances/configuration-setup/inaccessible-image",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-container-instances/long-image-pulls.md",
+        "redirect_url": "/troubleshoot/azure/azure-container-instances/configuration-setup/long-image-pulls",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-container-instances/service-unavailable-container-group-quota-exceeded.md",
+        "redirect_url": "/troubleshoot/azure/azure-container-instances/configuration-setup/service-unavailable-container-group-quota-exceeded",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-container-instances/service-unavailable-requested-resource-is-not-available.md",
+        "redirect_url": "/troubleshoot/azure/azure-container-instances/configuration-setup/service-unavailable-requested-resource-is-not-available",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-container-instances/cannot-delete-vnet-subnet.md",
+        "redirect_url": "/troubleshoot/azure/azure-container-instances/connectivity/cannot-delete-vnet-subnet",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-container-instances/aci-debug-tools.md",
+        "redirect_url": "/troubleshoot/azure/azure-container-instances/management/aci-debug-tools",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-container-instances/aci-still-running-after-stop-delete-command.md",
+        "redirect_url": "/troubleshoot/azure/azure-container-instances/management/aci-still-running-after-stop-delete-command",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-container-instances/acr-image-pull-failures-managed-identity.md",
+        "redirect_url": "/troubleshoot/azure/azure-container-instances/management/acr-image-pull-failures-managed-identity",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-container-instances/cannot-do-container-group-operations.md",
+        "redirect_url": "/troubleshoot/azure/azure-container-instances/management/cannot-do-container-group-operations",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-container-instances/common-confidential-container-errors.md",
+        "redirect_url": "/troubleshoot/azure/azure-container-instances/management/common-confidential-container-errors",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-container-instances/container-group-restart-killing-event-interruption.md",
+        "redirect_url": "/troubleshoot/azure/azure-container-instances/management/container-group-restart-killing-event-interruption",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-container-instances/unexpected-memory-usage-metrics.md",
+        "redirect_url": "/troubleshoot/azure/azure-container-instances/management/unexpected-memory-usage-metrics",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-container-instances/configuration-setup/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-container-instances/welcome-container-instances.yml",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-container-instances/management/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-container-instances/welcome-container-instances.yml",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-container-instances/connectivity/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-container-instances/welcome-container-instances.yml",
+        "redirect_document_id": false
+      },
+      {
         "source_path": "cloud-services/classic/support-linux-open-source-technology.md",
         "redirect_url": "/troubleshoot/azure/virtual-machines/linux/support-linux-open-source-technology",
         "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-container-instances/container-group-transitioning-state.md",
+        "redirect_url": "/troubleshoot/azure/azure-container-instances/configuration-setup/container-group-transitioning-state",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-container-instances/error-codes-spot-container-creation.md",
+        "redirect_url": "/troubleshoot/azure/azure-container-instances/configuration-setup/error-codes-spot-container-creation",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-container-instances/web-socket-is-closed-or-could-not-be-opened.md",
+        "redirect_url": "/troubleshoot/azure/azure-container-instances/connectivity/web-socket-is-closed-or-could-not-be-opened",
+        "redirect_document_id": false
       }
   ]
 }
