@@ -5,6 +5,7 @@ ms.date: 09/08/2023
 author: paulliew
 ms.author: paulliew
 ms.reviewer: jdaly
+ms.custom: sap:User permissions\User able to access record when not expected
 search.audienceType: 
   - developer
 search.app: 

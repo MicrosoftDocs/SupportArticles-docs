@@ -2,7 +2,7 @@
 title: Microsoft Entra Hybrid Sync Agent Installation Issues - Unable to create gMSA because KDS may not be running on domain controller
 description: This troubleshooting guide focuses on when you repeatedly can't install the service account. It unblocks you to install the Microsoft Entra Connect Provisioning Agent.
 ms.date: 10/13/2021
-ms.service: active-directory
+ms.service: entra-id
 ms.subservice: hybrid
 ---
 

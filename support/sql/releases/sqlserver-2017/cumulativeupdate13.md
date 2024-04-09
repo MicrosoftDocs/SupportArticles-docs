@@ -1,7 +1,7 @@
 ---
 title: Cumulative update 13 for SQL Server 2017 (KB4466404)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2017 cumulative update 13 (KB4466404).
-ms.date: 08/04/2023
+ms.date: 04/02/2024
 ms.custom: KB4466404, linux-related-content
 appliesto:
 - SQL Server 2017 on Windows
@@ -48,7 +48,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id="12536280">[12536280](#12536280)</a> | Improvement: Performance issue when you create or modify entities, attributes, users, or groups when page load permissions are used in SQL Server (KB4480643) | Master Data Services | Server | Windows |
 | <a id="12516851">[12516851](#12516851)</a> | [FIX: DCExec crashes when you collect data in SQL Server 2017 (KB4480631)](https://support.microsoft.com/help/4480631) | SQL Server Client Tools | Database Performance Tools | Windows |
 | <a id="12431333">[12431333](#12431333)</a> | [FIX: Assertion error occurs during restore of compressed backups in SQL Server 2014, 2016 and 2017 (KB4469554)](https://support.microsoft.com/help/4469554) | SQL Server Engine | Backup Restore | Windows |
-| <a id="12466221">[12466221](#12466221)</a> | [FIX: "9003 error, sev 20, state 1" error when a backup operation fails on a secondary replica that is running under asynchronous-commit mode (KB4458880)](https://support.microsoft.com/help/4458880) | SQL Server Engine | Backup Restore | Windows |
+| <a id="12466221">[12466221](#12466221)</a> | [FIX: "9003 error, sev 20, state 1" error when a backup operation fails on a secondary replica that is running under asynchronous-commit mode (KB4458880)](https://support.microsoft.com/help/4458880) | SQL Server Engine | Backup Restore | All |
 | <a id="12487676">[12487676](#12487676)</a> | [FIX: Restore or Restore Verifyonly of a TDE-compressed backup fails with errors 33111 and 3013 in SQL Server 2017 (KB4481148)](https://support.microsoft.com/help/4481148) | SQL Server Engine | Backup Restore | Windows |
 | <a id="12491210">[12491210](#12491210)</a> | [FIX: Intermittent failures when you back up to Azure storage from SQL Server (KB4463320)](https://support.microsoft.com/help/4463320) | SQL Server Engine | Backup Restore | Windows |
 | <a id="12542123">[12542123](#12542123)</a> | [Improvement: Merge operation will consider the number of deleted rows in the rowgroup in SQL Server 2017 (KB4480651)](https://support.microsoft.com/help/4480651) | SQL Server Engine | Column Stores | All |

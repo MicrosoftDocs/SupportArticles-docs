@@ -5,7 +5,7 @@ ms.date: 07/06/2020
 ms.reviewer: dahans
 ms.service: entra-id
 ms.subservice: users
-ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
+ms.custom: has-azure-ad-ps-ref
 ---
 # Users can no longer sign in after you run the Convert-MSOLDomaintoFederated command to convert an existing domain
 

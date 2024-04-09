@@ -3,8 +3,7 @@ title: Support data collection for troubleshooting Microsoft Entra ID issues
 description: Describes the support data that will be collected for troubleshooting your support incidents related to Microsoft Entra ID.
 ms.date: 07/20/2020
 ms.reviewer: 
-ms.service: active-directory
-ms.subservice: aad-general
+ms.service: entra-id
 ---
 # Microsoft Entra diagnostic logs
 

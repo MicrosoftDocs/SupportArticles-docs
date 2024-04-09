@@ -5,6 +5,7 @@ ms.reviewer: matp
 ms.date: 07/26/2023
 author: nhelgren
 ms.author: nhelgren
+ms.custom: sap:Working with Solutions\Solution import - Changes don't take effect
 ---
 # Newly added components don't appear in the app after you import an update
 

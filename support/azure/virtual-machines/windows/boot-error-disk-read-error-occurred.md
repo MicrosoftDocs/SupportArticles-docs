@@ -6,13 +6,12 @@ documentationcenter: ''
 author: genlin
 tags: azure-resource-manager
 ms.service: virtual-machines
-ms.subservice: vm-cannot-start-stop
 ms.collection: windows
 ms.workload: na
 ms.tgt_pltfrm: vm-windows
-ms.topic: troubleshooting-problem-resolution
 ms.date: 11/14/2023
 ms.author: genli
+ms.custom: sap:My VM is not booting
 ---
 
 # Troubleshoot boot error - disk read error occurred

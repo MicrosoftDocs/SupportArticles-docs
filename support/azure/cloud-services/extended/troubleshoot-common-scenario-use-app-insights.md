@@ -6,7 +6,6 @@ ms.reviewer: patcatun
 author: JerryZhangMS
 ms.author: genli
 ms.service: cloud-services-extended-support
-ms.subservice: troubleshoot-extended-support
 ---
 
 # Troubleshoot Cloud Service app with Application Insights - common scenarios

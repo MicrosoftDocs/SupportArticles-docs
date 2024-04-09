@@ -4,7 +4,7 @@ description: Troubleshoot common issues with monitoring sync health and resolvin
 author: khdownie
 ms.service: azure-file-storage
 ms.topic: troubleshooting
-ms.date: 12/05/2023
+ms.date: 04/07/2024
 ms.author: kendownie
 ms.custom: devx-track-azurepowershell
 ms.reviewer: v-weizhu
@@ -391,12 +391,20 @@ This error typically occurs when a backup application creates a VSS snapshot and
 | **Error string** | ECS_E_EXTERNAL_STORAGE_ACCOUNT_AUTHORIZATION_FAILED |
 | **Remediation required** | Yes |
 
+| Error | Code |
+|-|-|
+| **HRESULT** | 0x80c86053 |
+| **HRESULT (decimal)** | -2134351789 |
+| **Error string** | ECS_E_AZURE_FILE_SHARE_NOT_ACCESSIBLE |
+| **Remediation required** | Yes |
+
 This error occurs because the Azure File Sync agent can't access the Azure file share, which might be because the Azure file share or the storage account hosting it no longer exists. You can troubleshoot this error by working through the following steps:
 
 1. [Verify the storage account exists.](#troubleshoot-storage-account)
 2. [Ensure the Azure file share exists.](#troubleshoot-azure-file-share)
 3. [Ensure Azure File Sync has access to the storage account.](#troubleshoot-rbac)
-4. [Verify the firewall and virtual network settings on the storage account are configured properly (if enabled)](/azure/storage/file-sync/file-sync-deployment-guide?tabs=azure-portal#optional-configure-firewall-and-virtual-network-settings)
+4. Verify the **SMB security settings** on the storage account are allowing **SMB 3.1.1** protocol version, **NTLM v2** authentication and **AES-128-GCM** encryption. To check the SMB security settings on the storage account, see [SMB security settings](/azure/storage/files/files-smb-protocol#smb-security-settings).
+5. [Verify the firewall and virtual network settings on the storage account are configured properly (if enabled)](/azure/storage/file-sync/file-sync-deployment-guide?tabs=azure-portal#optional-configure-firewall-and-virtual-network-settings)
 
 <a id="-2134351804"></a>**Sync failed because the request isn't authorized to perform this operation.**  
 
@@ -605,6 +613,17 @@ No action required. This error should automatically resolve. If the error persis
 | **Remediation required** | No |
 
 No action required. This error should automatically resolve. If the error persists for several days, create a support request.
+
+<a id="-2147020504"></a>**Sync failed because the data is corrupted and unreadable.**  
+
+| Error | Code |
+|-|-|
+| **HRESULT** | 0x80071128 |
+| **HRESULT (decimal)** | -2147020504 |
+| **Error string** | ERROR_INVALID_REPARSE_DATA |
+| **Remediation required** | Yes |
+
+This error can occur if there is a file system corruption on the NTFS volume where the server endpoint is located. To resolve this error, run [chkdsk](/windows-server/administration/windows-commands/chkdsk?tabs=event-viewer) on the volume.
 
 <a id="-2146762487"></a>**The server failed to establish a secure connection. The cloud service received an unexpected certificate.**  
 

@@ -6,7 +6,6 @@ documentationCenter: ''
 author: genlin
 manager: dcscontentpm
 ms.service: virtual-machines
-ms.subservice: vm-cannot-start-stop
 ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
@@ -14,6 +13,7 @@ ms.workload: infrastructure
 ms.date: 10/08/2023
 ms.author: genli
 ms.reviewer: v-weizhu
+ms.custom: sap:My VM is not booting
 ---
 
 # Windows reboot loop on an Azure VM
