@@ -10921,6 +10921,116 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/system-center/dpm/agent-installation-error-319.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/agent-installation-error-347.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/protection-agent-crashes.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/error-restore-dpmdb-bak-file.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/restore-database-error-470.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/disks-not-enumeratd-fail-to-add.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/dpm-service-crashes-event-917.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/sub-menu-items-show-more-than-once.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/troubleshoot-end-user-recovery-issues.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/host-level-backup-error-0x8007173d.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/configure-cluster-networks.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/hyper-v-backup-fails-error-30112.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/deduplicated-volumes-backup-fails.md",
+      "redirect_url": "/system-center/dpm/dpm-support-issues#the-dedup-file-system-cant-be-protected-to-a-secondary-dpm-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/cannot-run-sql-instance-to-upgrade-dpm.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/consistency-check-error-0x80070005.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/list-dpm-2012-sp1-error-codes.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/configure-smtp-server-information-error-2013.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/upgrade-dpm-vmware-vm-protection.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/cannot-restore-renamed-sharepoint-site.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/cannot-protect-sql-database.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/databases-with-multiple-backslash-characters-fail-restore.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/fail-to-inventory-ibm-35xx-tape-library.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/system-center/vmm/all-hosts-receive-zero-rating.md",
       "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
       "redirect_document_id": false
