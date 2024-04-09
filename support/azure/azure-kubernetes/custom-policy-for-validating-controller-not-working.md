@@ -1,10 +1,10 @@
 ---
 title: Custom Azure Policy for validating controllers doesn't work
 description: Provide a solution to an issue where a custom Azure Policy for validating controllers doesn't work.
-ms.date: 04/08/2024
+ms.date: 04/09/2024
 ms.reviewer: momajed, cssakscic
 ms.service: azure-kubernetes-service
-ms.subservice: common-issues
+ms.custom: sap:Extensions, Policies and Add-Ons
 ---
 # Custom Azure Policy for validating controllers doesn't work
 
