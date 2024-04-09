@@ -1,14 +1,14 @@
 ---
-title: Connection error occurs in SQL Server after a program upgrade
+title: Connection error 10054 occurs in SQL Server
 description: This article provides a resolution for an error that you experience after you upgrade SQL Server.
-ms.date: 03/11/2024
+ms.date: 04/09/2024
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 
-# Error 10054 after a SQL Server upgrade
+# Error 10054 occurs after a SQL Server upgrade
 
 After a Microsoft SQL Server upgrade, you experience a connection error. The error might continue even after you use the local system account for the SQL Server Agent service.
 
