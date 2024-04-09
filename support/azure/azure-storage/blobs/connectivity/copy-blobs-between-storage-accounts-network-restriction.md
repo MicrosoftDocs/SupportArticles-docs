@@ -91,4 +91,4 @@ If you're unable to implement the previously mentioned workarounds or are restri
 ### Workaround 4: Use a VM and download the data to the VM and then upload the data to the destination storage account
 Only use this workaround if other methods aren't feasible. Use a VM to download the data from the source storage account, and then upload it to the destination storage account. This can be done with AzCopy. Make sure that the VM's size and disk capacity are suitable for the data transfer process.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]

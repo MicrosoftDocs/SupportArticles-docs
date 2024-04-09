@@ -33,12 +33,10 @@ landingContent:
             url: recovery/data-protection-backup-recovery.md
           - text: Copy blobs between storage accounts with network restriction
             url: connectivity/copy-blobs-between-storage-accounts-network-restriction.md
-          - text: Embedded application error when install Azure backup agent
-            url: ../azure-storage/blobs/unable-to-execute-the-embedded-application-error-backup-agent.md
           - text: Invalid blob or block content, or invalid block list
             url: connectivity/invalid-blob-or-block-content-or-invalid-block-list.md
           - text: Optimize CreateFile function
-            url: ../azure-storage/files/optimize-createfile-function.md
+            url: ../azure-storage/blobs/performance/optimize-createfile-function.md
           - text: Request body is too large error when write to file
             url: connectivity/request-body-large.md
           - text: Troubleshoot high CPU or disk usage issues

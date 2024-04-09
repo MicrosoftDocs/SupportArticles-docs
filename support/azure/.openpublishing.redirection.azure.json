@@ -2842,58 +2842,63 @@
       },
       {
         "source_path": "azure-storage/common/troubleshoot-storage-performance.md",
-        "redirect_url": "/troubleshoot/azure/blobs/alerts/troubleshoot-storage-performance",
+        "redirect_url": "/troubleshoot/azure/azure-storage/blobs/alerts/troubleshoot-storage-performance",
         "redirect_document_id": true
       },
       {
         "source_path": "azure-storage/common/troubleshoot-storage-client-application-errors.md",
-        "redirect_url": "/troubleshoot/azure/blobs/alerts/troubleshoot-storage-client-application-errors",
+        "redirect_url": "/troubleshoot/azure/azure-storage/blobs/alerts/troubleshoot-storage-client-application-errors",
         "redirect_document_id": true
       },
       {
         "source_path": "azure-storage/common/troubleshoot-storage-availability.md",
-        "redirect_url": "/troubleshoot/azure/blobs/alerts/troubleshoot-storage-availability",
+        "redirect_url": "/troubleshoot/azure/azure-storage/blobs/alerts/troubleshoot-storage-availability",
         "redirect_document_id": true
       },
       {
         "source_path": "azure-storage/common/troubleshoot-latency-storage-analytics-logs.md",
-        "redirect_url": "/troubleshoot/azure/blobs/alerts/troubleshoot-latency-storage-analytics-logs",
+        "redirect_url": "/troubleshoot/azure/azure-storage/blobs/alerts/troubleshoot-latency-storage-analytics-logs",
         "redirect_document_id": true
       },
       {
         "source_path": "azure-storage/common/storage-use-azcopy-troubleshoot.md",
-        "redirect_url": "/troubleshoot/azure/blobs/connectivity/storage-use-azcopy-troubleshoot",
+        "redirect_url": "/troubleshoot/azure/azure-storage/blobs/connectivity/storage-use-azcopy-troubleshoot",
         "redirect_document_id": true
       },
       {
         "source_path": "azure-storage/common/storage-monitoring-diagnosing-troubleshooting.md",
-        "redirect_url": "/troubleshoot/azure/blobs/alerts/storage-monitoring-diagnosing-troubleshooting",
+        "redirect_url": "/troubleshoot/azure/azure-storage/blobs/alerts/storage-monitoring-diagnosing-troubleshooting",
         "redirect_document_id": true
       },
       {
         "source_path": "azure-storage/blobs/invalid-blob-or-block-content-or-invalid-block-list.md",
-        "redirect_url": "/troubleshoot/azure/blobs/connectivity/invalid-blob-or-block-content-or-invalid-block-list",
+        "redirect_url": "/troubleshoot/azure/azure-storage/blobs/connectivity/invalid-blob-or-block-content-or-invalid-block-list",
         "redirect_document_id": true
       },
       {
         "source_path": "azure-storage/blobs/diagnose-high-cpu-disk-perfinsights.md",
-        "redirect_url": "/troubleshoot/azure/blobs/performance/diagnose-high-cpu-disk-perfinsights",
+        "redirect_url": "/troubleshoot/azure/azure-storage/blobs/performance/diagnose-high-cpu-disk-perfinsights",
         "redirect_document_id": true
       },
       {
         "source_path": "azure-storage/blobs/data-protection-backup-recovery.md",
-        "redirect_url": "/troubleshoot/azure/blobs/recovery/data-protection-backup-recovery",
+        "redirect_url": "/troubleshoot/azure/azure-storage/blobs/recovery/data-protection-backup-recovery",
         "redirect_document_id": true
       },
       {
         "source_path": "azure-storage/blobs/copy-blobs-between-storage-accounts-network-restriction.md",
-        "redirect_url": "/troubleshoot/azure/blobs/connectivity/copy-blobs-between-storage-accounts-network-restriction",
+        "redirect_url": "/troubleshoot/azure/azure-storage/blobs/connectivity/copy-blobs-between-storage-accounts-network-restriction",
         "redirect_document_id": true
       },
       {
         "source_path": "azure-storage/blobs/welcome-blob-storage.yml",
-        "redirect_url": "/troubleshoot/azure/blobs/welcome-blob-storage",
+        "redirect_url": "/troubleshoot/azure/azure-storage/blobs/welcome-blob-storage",
         "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-storage/files/optimize-createfile-function.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/blobs/performance/optimize-createfile-function",
+        "redirect_document_id": true
       },
       {
         "source_path": "azure-storage/common/welcome-storage-tool-metric.yml",
