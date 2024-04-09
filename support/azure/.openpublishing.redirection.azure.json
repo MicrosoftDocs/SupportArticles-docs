@@ -2951,11 +2951,6 @@
         "redirect_document_id": false
       },
       {
-        "source_path": "azure-storage/files/performance/index.md",
-        "redirect_url": "/troubleshoot/azure/azure-storage/files/welcome-files-storage",
-        "redirect_document_id": false
-      },
-      {
         "source_path": "azure-storage/files/security/index.md",
         "redirect_url": "/troubleshoot/azure/azure-storage/files/welcome-files-storage",
         "redirect_document_id": false
