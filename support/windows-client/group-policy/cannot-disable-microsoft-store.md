@@ -1,7 +1,7 @@
 ---
 title: Can't disable Microsoft Store via Group Policy
 description: Describes an issue that prevents you from using Group Policy to disable the Windows Store app on a computer that's running Windows 10 Pro.
-ms.date: 12/26/2023
+ms.date: 04/09/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -13,7 +13,7 @@ ms.custom: sap:Group Policy\Group Policy management (GPMC or GPedit), csstrouble
 
 This article describes an issue that prevents you from using Group Policy to disable the Windows Store app on a computer that's running Windows 10 Pro.
 
-_Applies to:_ &nbsp; Windows Client (All supported versions)  
+_Applies to:_ &nbsp; Windows client (All supported versions)  
 _Original KB number:_ &nbsp; 3135657
 
 ## Symptoms
