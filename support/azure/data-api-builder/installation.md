@@ -52,7 +52,7 @@ echo $PATH | tr ":" "\n"
 ## References
 
 - [Troubleshoot usage in Data API builder for Azure databases](usage.md)
-- [Known issues in Azure/data-api-builder](https://github.com/azure/data-api-builder/labels/known-issue)
+- [Known issues in Azure/data-api-builder GitHub repository](https://github.com/azure/data-api-builder/labels/known-issue)
 
 ## Next step
 
