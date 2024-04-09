@@ -4,8 +4,8 @@ description: The following article discusses the reasons why you are not able to
 ms.date: 08/26/2021
 ms.reviewer: 
 ms.service: virtual-machines
-ms.subservice: vm-capacity-reservation
 ms.collection: windows
+ms.custom: sap:Cannot create a VM
 ---
 
 # Can't create a Capacity Reservation

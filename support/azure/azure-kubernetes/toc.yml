@@ -99,7 +99,7 @@
     href: cannot-delete-load-balancer-private-link-service.md
   - name: PublicIPAddressCannotBeDeleted error
     href: cannot-delete-ip-subnet-nsg.md
-  - name: RequestDisallowedByPolicy error
+  - name: RequestDisallowedBy error
     href: error-code-requestdisallowedbypolicy-delete.md
   - name: SubscriptionRequestsThrottled error
     href: error-code-toomanyrequestsreceived-subscriptionrequeststhrottled.md
@@ -204,7 +204,7 @@
 
 - name: Troubleshoot AKS cluster performance issues
   items:
-  - name: AKS cluster/node is in failed state
+  - name: AKS cluster/node is in a failed state
     href: cluster-node-virtual-machine-failed-state.md
   - name: Identify nodes and containers consuming high CPU
     href: identify-high-cpu-consuming-containers-aks.md
@@ -242,6 +242,10 @@
     href: 429-too-many-requests-errors.md
   - name: Argument list too long
     href: application-fails-argument-list-too-long.md
+  - name: Avoid running as root in AKS Container
+    href: avoid-running-as-root-in-containers.md
+  - name: Azure policy reports 'ConstraintNotProcessed' for container
+    href: error-azure-policy-constraintnotprocessed.md
   - name: Microsoft Entra Pod Identity NMI returns 500 Internal Server Error
     href: stale-watch-azure-ad-pod-identity-nmi-status-500.md
   - name: Can't access the cluster API server using authorized IP ranges
@@ -274,6 +278,8 @@
     href: node-count-is-not-in-autoscaler-min-max-range.md
   - name: Pod is stuck in CrashLoopBackOff mode
     href: pod-stuck-crashloopbackoff-mode.md
+  - name: Policy definition not found error during policy-assignments at Terraform
+    href: error-in-policy-assign-main-file-terraform.md
   - name: '"Quota exceeded" error during creation or upgrade'
     href: quota-exceeded-during-creation-upgrade.md
   - name: Restricting egress traffic causes errors
@@ -285,7 +291,6 @@
   - name: '"tls: client offered only unsupported versions" messages'
     href: tls-client-offered-unsupported-versions.md
   - name: Troubleshoot common Azure Linux container host for AKS issues
-    displayName: Mariner, MACH
     href: troubleshoot-common-azure-linux-aks.md
 
 - name: Extensions and add-ons
@@ -302,6 +307,7 @@
     href: troubleshoot-failed-kubernetes-deployment-offer.md
   - name: Troubleshoot the KEDA add-on
     href: troubleshoot-kubernetes-event-driven-autoscaling-add-on.md
+
 
 - name: Can't pull images from container registry to cluster
   href: cannot-pull-image-from-acr-to-aks-cluster.md

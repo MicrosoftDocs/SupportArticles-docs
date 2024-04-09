@@ -2,7 +2,7 @@
 title: Microsoft Entra Hybrid Sync Agent Installation Issues - Cannot start service AADConnectProvisioningAgent
 description: This troubleshooting guide focuses on when you can't start service AADConnectProvisioningAgent. It unblocks you to install Microsoft Entra Connect Provisioning Agent.
 ms.date: 10/13/2021
-ms.service: active-directory
+ms.service: entra-id
 ms.subservice: hybrid
 ---
 

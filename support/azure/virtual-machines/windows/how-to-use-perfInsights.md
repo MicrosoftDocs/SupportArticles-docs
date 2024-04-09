@@ -7,7 +7,6 @@ author: anandhms
 manager: dcscontentpm
 tags: ''
 ms.service: virtual-machines
-ms.subservice: vm-performance
 ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
@@ -15,6 +14,7 @@ ms.topic: troubleshooting
 ms.date: 11/10/2021
 ms.author: genli
 
+ms.custom: sap:VM Performance
 ---
 # How to use PerfInsights in Azure
 

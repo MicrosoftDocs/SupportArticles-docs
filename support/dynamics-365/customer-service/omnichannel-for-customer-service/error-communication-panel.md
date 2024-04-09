@@ -4,6 +4,7 @@ description: Provides a resolution for the error that occurs when you sign in to
 ms.reviewer: nenellim
 ms.author: askuma
 ms.date: 05/23/2023
+ms.custom: sap:Omnichannel dashboards\Agent dashboard isn't loading due to insufficient privileges
 ---
 # "An error occurred in the communication panel" error in Unified Service Desk
 

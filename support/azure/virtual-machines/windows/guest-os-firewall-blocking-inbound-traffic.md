@@ -1,4 +1,4 @@
-ï»¿---
+---
 title: Azure VM Guest OS firewall is blocking inbound traffic
 description: Learn how to fix the Remote Desktop Portal (RDP) connection issue that the guest operating system firewall is blocking inbound traffic.
 services: virtual-machines
@@ -7,7 +7,6 @@ author: genlin
 manager: dcscontentpm
 tags: ''
 ms.service: virtual-machines
-ms.subservice: vm-cannot-connect
 ms.collection: windows
 ms.topic: troubleshooting
 ms.workload: infrastructure-services
@@ -16,6 +15,7 @@ ms.devlang: azurecli
 ms.date: 11/04/2021
 ms.author: genli
 
+ms.custom: sap:Cannot connect to my VM
 ---
 
 # Azure VM Guest OS firewall is blocking inbound traffic
@@ -40,13 +40,13 @@ The guest system firewall profiles are set up to block all inbound connections, 
 
 ## Solution
 
-Before you follow these steps, take a snapshot of the system disk of the affected VM as a backup. For more information, seeÂ [Snapshot a disk](/azure/virtual-machines/windows/snapshot-copy-managed-disk).
+Before you follow these steps, take a snapshot of the system disk of the affected VM as a backup. For more information, see [Snapshot a disk](/azure/virtual-machines/windows/snapshot-copy-managed-disk).
 
 To fix the issue, use one of the methods in [How to use remote tools to troubleshoot Azure VM issues](remote-tools-troubleshoot-azure-vm-issues.md) to connect to the VM remotely, and then edit the guest operating system firewall rules to **Allow** RDP traffic.
 
 ### Online troubleshooting
 
-Connect toÂ the [Serial Console, and then open a PowerShell instance](serial-console-windows.md#use-cmd-or-powershell-in-serial-console). If the Serial Console is not enabled on the VM, go to "[Repair the VM Offline](troubleshoot-rdp-internal-error.md#repair-the-vm-offline).
+Connect to the [Serial Console, and then open a PowerShell instance](serial-console-windows.md#use-cmd-or-powershell-in-serial-console). If the Serial Console is not enabled on the VM, go to "[Repair the VM Offline](troubleshoot-rdp-internal-error.md#repair-the-vm-offline).
 
 #### Mitigation 1
 
@@ -54,13 +54,13 @@ Connect toÂ the [Serial Console, and then open a PowerShell instance](serial-con
 
 2. Running this recovery option does the following:
 
-    * Enables an RDP component if itâ€™s disabled.
+    * Enables an RDP component if it’s disabled.
 
     * Enables all Windows firewall profiles.
 
     * Make sure that the RDP rule is turned on in Windows Firewall.
 
-    * If the previous steps donâ€™t work, manually reset the firewall rule. To do this, query all the rules that contain the nameÂ "Remote Desktop" by running the following command:
+    * If the previous steps don’t work, manually reset the firewall rule. To do this, query all the rules that contain the name "Remote Desktop" by running the following command:
 
         ```powershell
         netsh advfirewall firewall show rule dir=in name=all | select-string -pattern "(Name.*Remote Desktop)" -context 9,4 | more
@@ -78,7 +78,7 @@ Connect toÂ the [Serial Console, and then open a PowerShell instance](serial-con
     netsh advfirewall firewall set rule group="Remote Desktop" new enable=yes
     ```
 
-    Otherwise, to open the specific Remote Desktop (TCP-In)Â rule, run the following command:
+    Otherwise, to open the specific Remote Desktop (TCP-In) rule, run the following command:
 
     ```powershell
     netsh advfirewall firewall set rule name="<CUSTOM RULE NAME>" new enable=yes
@@ -108,7 +108,7 @@ Connect toÂ the [Serial Console, and then open a PowerShell instance](serial-con
     :::image type="content" source="media/guest-os-firewall-blocking-inbound-traffic/firewall-profiles.png" alt-text="Screenshot of the query result of the inbound firewall profiles which contains BlockInboundAlways." border="false":::
 
     > [!Note]
-    > The following guidelines apply to the firewall policy, depending on how itâ€™s set up:
+    > The following guidelines apply to the firewall policy, depending on how it’s set up:
     >
     >    * *BlockInbound*: All inbound traffic will be blocked unless you have a rule in effect to allow that traffic.
     >    * *BlockInboundAlways*: All firewall rules will be ignored and all traffic will be blocked.
@@ -141,7 +141,7 @@ Connect toÂ the [Serial Console, and then open a PowerShell instance](serial-con
 
 #### Mitigation 1
 
-SeeÂ [How to Enable-Disable a Firewall rule on a Guest OS](enable-disable-firewall-rule-guest-os.md).
+See [How to Enable-Disable a Firewall rule on a Guest OS](enable-disable-firewall-rule-guest-os.md).
 
 #### Mitigation 2
 

@@ -7,14 +7,13 @@ author: genlin
 manager: dcscontentpm
 tags: top-support-issue, azure-resource-manager
 ms.service: virtual-machines
-ms.subservice: vm-deploy
 ms.collection: windows
 ms.workload: na
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
 ms.date: 06/15/2018
 ms.author: genli
-ms.custom: H1Hack27Feb2017
+ms.custom: sap:Cannot create a VM, H1Hack27Feb2017
 
 ---
 # Troubleshoot deployment issues when creating a new Windows VM in Azure

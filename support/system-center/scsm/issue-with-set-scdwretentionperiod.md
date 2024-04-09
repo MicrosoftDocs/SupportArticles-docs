@@ -4,7 +4,7 @@ description: Discusses that the Set-SCDWRetentionPeriod cmdlet doesn't set the d
 author: helenclu
 ms.author: luche
 ms.reviewer: aakashb
-ms.date: 05/13/2021
+ms.date: 04/08/2024
 ---
 # Set-SCDWRetentionPeriod doesn't set the data retention period correctly
 

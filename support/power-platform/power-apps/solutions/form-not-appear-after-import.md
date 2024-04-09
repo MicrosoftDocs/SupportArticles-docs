@@ -5,6 +5,7 @@ ms.reviewer: matp
 ms.date: 07/26/2023
 author: Mattp123
 ms.author: nhelgren
+ms.custom: sap:Working with Solutions\Solution import - Changes don't take effect
 ---
 # A form doesn't appear in the target environment after importing an unmanaged solution
 

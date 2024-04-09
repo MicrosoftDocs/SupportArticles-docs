@@ -1,11 +1,10 @@
 ---
 title: "No space available on drive E or F"
 description: "Learn how to resolve a scenario in which there's zero free space on drive E or F in Azure Cloud Services."
-ms.date: 09/26/2022
+ms.date: 04/01/2024
 editor: v-jsitser
 ms.reviewer: piw, v-leedennis
-ms.service: cloud-services
-ms.subservice: troubleshoot-extended-support
+ms.service: cloud-services-extended-support
 #Customer intent: As an Azure Cloud Services user, I want to know what to do if my drive E or F runs out of free space so that I can continue to use this data to help troubleshoot various problems.
 ---
 
