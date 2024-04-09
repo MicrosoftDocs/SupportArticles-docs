@@ -86,6 +86,24 @@ If any of the following aren't working, try re-creating them. It can be a simpli
 - Form
 - Custom script
 
+## Ensure all required components are added to an app
+
+App components include tables, and their related tables, forms, columns, views, charts, dashboards, and business process flows. For performance reasons, only components added to an app will be downloaded.
+
+If a component isn't showing up or is behaving inconsistently, check if it's added to the app. For example, if the _Teams_ table isn't showing up in a lookup control in a form but other tables are, the table might not have been added to the app.
+
+Adding these components to an app can be done in the modern app designer.
+- Tables and related tables: [create a Dataverse table page](/power-apps/maker/model-driven-apps/create-remove-pages#create-a-page)
+- Forms: [add forms to an app](/power-apps/maker/model-driven-apps/create-add-remove-forms-views-dashboards#add-or-remove-forms-from-an-app)
+- Columns (form fields): [add columns to a form](/power-apps/maker/model-driven-apps/add-move-or-delete-fields-on-form#add-columns-to-a-form)
+- Views and charts: [manage views and charts on a Dataverse table page](/power-apps/maker/model-driven-apps/create-add-remove-forms-views-dashboards#manage-views-and-charts)
+- Dashboards: [create a Dashboard page](/power-apps/maker/model-driven-apps/create-remove-pages#create-a-page)
+- Business process flows: [add a business process flow in the Automation pane](/power-apps/maker/model-driven-apps/app-designer-overview)
+
+You can also [add these components using the classic app designer](/power-apps/maker/model-driven-apps/add-edit-app-components).
+
+For tables to be used offline, they have to be [added to an offline profile](/power-apps/mobile/setup-mobile-offline#add-a-table-to-an-offline-profile-and-apply-filters). Learn more about [mobile offline guidelines](/power-apps/mobile/mobile-offline-guidelines#dont-miss-the-data-your-users-need).
+
 ## Find out if the issue occurs when getting data or showing data
 
 When data isn't showing correctly in an app, it could either be a server issue in providing the data, or an app issue in processing and displaying it. To narrow down the cause, you can try [general methods for isolating the problematic layer](isolate-common-issues.md#find-out-which-layer-has-data-issues).
