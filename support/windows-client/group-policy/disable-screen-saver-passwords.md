@@ -1,7 +1,7 @@
 ---
 title: Disable screen saver passwords by using policies
 description: Describes how to disable screen saver passwords by using policies.
-ms.date: 12/26/2023
+ms.date: 04/09/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -13,7 +13,7 @@ ms.custom: sap:Group Policy\Problems applying Group Policy, csstroubleshoot
 
 This article describes how to make screen saver password locks unavailable on systems in a site, domain, or organizational unit, by using the policies available.
 
-_Applies to:_ &nbsp; Windows Server (All supported versions), Windows Client (All supported versions)  
+_Applies to:_ &nbsp; Windows Server (All supported versions), Windows client (All supported versions)  
 _Original KB number:_ &nbsp; 272304
 
 ## Disable screen saver passwords
