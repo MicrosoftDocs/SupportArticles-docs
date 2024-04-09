@@ -1,7 +1,7 @@
 ---
 title: Cannot generate SSPI context when connecting to SQL Server
 description: Troubleshoots the cannot generate SSPI context error when you connect to SQL Server. Provides frequently asked questions and steps to fix the error.
-ms.date: 12/20/2023
+ms.date: 04/09/2024
 ms.custom: sap:Connection issues
 author: HaiyingYu
 ms.author: haiyingyu
@@ -74,7 +74,7 @@ FROM sys.dm_exec_connections
 WHERE session_id = @@SPID;  
 ```
 
-For more information, see [Determine If I Am Connected to SQL Server using Kerberos Authentication](https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/Determine-If-I-Am-Connected-to-SQL-Server-using-Kerberos-Authentication).
+For more information, see [How to determine if the authentication type is Kerberos](determine-the-authentication-type.md).
 
 ### How to create SPNs for SQL Server?
 
@@ -101,7 +101,6 @@ Follow these steps to fix the error using KCM.
     |TCP must be enabled to use Kerberos configuration     | This occurs when TCP isn't enabled on the client computer.   | To enable TCP/IP protocol for the SQL Server instance, follow these steps:<br/>1. In SQL Server Configuration Manager, in the **console** pane, expand **SQL Server Network Configuration**.<br/>2. In the **console** pane, select **Protocols** for \<instance name\>.<br/>3. In the **details** pane, right-click **TCP/IP**, and then select **Enable**.<br/>4. In the **console** pane, select **SQL Server Services**.<br/>5. In the **details** pane, right-click SQL Server (\<instance name\>), and then select **Restart** to stop and restart the SQL Server service.<br/>For more information, see [Enable or Disable a Server Network Protocol](/sql/database-engine/configure-windows/enable-or-disable-a-server-network-protocol).        |
     |Dynamic Port     | This message shows up for named instances that use dynamic ports (default configuration). In environments where you need to use Kerberos to connect to SQL Server, you should set your named instance to a static port and use that port when registering SPN.         | To configure your SQL Server instance to use a static port, follow these steps:<br/>1. In SQL Server Configuration Manager, in the **console** pane, expand **SQL Server Network Configuration**, expand Protocols for \<instance name\>, and then double-click **TCP/IP**.<br/>2. In the **TCP/IP Properties** dialog box, review the **Listen All** setting on the **Protocol** tab.<br/>3. If the **Listen All** setting is set to **Yes**, switch to the **IP Addresses** tab and scroll to the bottom of the Windows to find the **IPAll** setting.  Delete the current value that is contained in the **TCP Dynamic Ports** and set the desired value in the **TCP Port** field. Select **OK** and restart the SQL Server instance for the settings to take effect.<br/>4. If the **Listen All** setting is set to **No**, switch to the **IP Addresses** tab and check each of the IP addresses that appear in the IP1, IP2. For enabled IP addresses, remove the current value contained in the **TCP Dynamic Ports** field and set the desired value in the **TCP Port** field. Select **OK** and restart the SQL Server instance for the settings to take effect.<br/>For more information, see [Configure a Server to Listen on a Specific TCP Port](/sql/database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port).    |
     |Duplicate SPN     |You can encounter the situation when the same SPN is registered under different accounts in Active Directory.        | 1. Select the **Fix** button, view the information in the **Warning** dialog box, and select **Yes** if you can add the missing SPN to Active Directory.<br/>2. If your domain account has the necessary permissions to update Active Directory, the incorrect SPN will be deleted.<br/>3. If your domain account doesn't have necessary permissions to update Active Directory, use the **Generate** or **Generate All** button to generate the necessary script that you can hand over to your Active Directory administrator to remove the duplicate SPNs. Once the SPNs are removed, rerun the KCM to verify that the SPN issues are resolved.|
-    |Incorrect SPN is registered| ||
 
     > [!NOTE]
     > If the domain account that starts KCM doesn't have privileges to manipulate SPNs in Active Directory, you can use the corresponding **Generate** or **Generate All** button under the **SPN script** column to generate the required commands and work with your Active Directory administrator to fix the issues that are identified by KCM.
@@ -205,6 +204,7 @@ Use the output above to determine the next steps (see examples below) and use [S
 |SPN doesn't exist |Add the required SPN(s) for your SQL Server service account. |
 |Duplicate SPNs |Delete the SPN that is registered for your SQL Service under the incorrect account. |
 |SPN under incorrect account |Delete the registered SPN for your SQL Service under the incorrect account, and then register the SPN under the correct service account. |
+|Incorrect SPN is registered| Delete the incorrect SPN and register the correct SPN.|
   
 > [!NOTE]
 >
