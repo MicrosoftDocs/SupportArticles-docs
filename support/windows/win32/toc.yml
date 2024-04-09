@@ -21,6 +21,8 @@
       href: finger3or4-touch-interaction-no-longer-works.md
     - name: Call Shell APIs from a multithreaded apartment
       href: shell-functions-multithreaded-apartment.md
+    - name: Common file dialog box doesn't display folder names
+      href: common-dialog-box-not-display-folder-names.md
     - name: East Asian first character isn't recognized
       href: east-asian-first-character-not-recognized.md
     - name: Half-width and full-width Japanese characters are treated as different characters

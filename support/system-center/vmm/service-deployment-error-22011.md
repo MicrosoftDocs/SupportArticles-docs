@@ -1,7 +1,8 @@
 ---
 title: Service deployment fails with error 22011
 description: System Center 2012 Virtual Machine Manager SP1 isn't able to deploy services from the service templates that are configured to enable Windows Server Roles and Features that require a double reboot.
-ms.date: 07/17/2020
+ms.date: 04/09/2024
+ms.reviewer: wenca
 ---
 # System Center 2012 Virtual Machine Manager SP1 service deployment fails with error 22011
 

@@ -1,7 +1,7 @@
 ---
 title: Resource domain is changed after installing January 2022 Windows updates
 description: Troubleshoot an issue in which domain of discovered resources changes after installing January 2022 Windows updates if the NetBIOS domain is different than FQDN.
-ms.date: 12/05/2023
+ms.date: 04/09/2024
 ms.reviewer: kaushika, jarrettr, brianhun, payur
 ms.custom: sap:Boundary Groups, Discovery and Collections\Active Directory Discovery (all types)
 ---
@@ -30,9 +30,10 @@ January 2022 Windows updates introduced an NTLM fallback that may [block NTLM au
 
 This issue is fixed in [Configuration Manager current branch, version 2203](/mem/configmgr/core/plan-design/changes/whats-new-in-version-2203).
 
-If the issue still occurs after upgrading to version 2203 and later versions, make sure that you meet the requirements for establishing the Kerberos connection from the site server to the controllers of the target domain. For example:
+If the issue still occurs after upgrading to version 2203 and later versions, make sure that you meet the requirements for establishing the Kerberos connection from the site server to the domain controllers of the target domain. For example:
 
-- TCP port 88 (Kerberos) is accessible.
+- TCP traffic on port 88 (Kerberos) is allowed.
+- TCP and UDP traffic on port 389 (LDAP and CLDAP) is allowed.
 - The site server can resolve service location (SRV) records for Kerberos services. For example:
 
     ```output
