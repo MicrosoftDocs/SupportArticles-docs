@@ -1,14 +1,14 @@
 ---
 title: Problem with the user account's access to the network login
 description: This article provides a resolution for the consistent authentication issue in SQL Server that affects network login.
-ms.date: 04/08/2024
+ms.date: 04/09/2024
 author: Malcolm-Stewart
 ms.author: mastewa
 ms.reviewer: jopilov, haiyingyu, prmadhes, v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 
-# User account is restricted from using the network login type
+# User doesn't have permissions to log in to the network
 
 This article helps you resolve an authentication issue that might arise when users don't have permissions to log into a networked system because a policy or setting prevents access. Network login type refers to the method or protocol used to authenticate and grant access to a network resource or service.
 
