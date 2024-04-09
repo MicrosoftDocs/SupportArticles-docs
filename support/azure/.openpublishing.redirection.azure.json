@@ -2787,12 +2787,12 @@
       },
       {
         "source_path": "azure-storage/common/storage-explorer-troubleshooting.md",
-        "redirect_url": "/troubleshoot/azure/blobs/alerts/storage-explorer-troubleshooting",
+        "redirect_url": "/troubleshoot/azure/azure-storage/blobs/alerts/storage-explorer-troubleshooting",
         "redirect_document_id": true
       },
       {
         "source_path": "azure-storage/blobs/adls-gen2-sticky-bit-403-access-denied.md",
-        "redirect_url": "/troubleshoot/azure/blobs/authentication/adls-gen2-sticky-bit-403-access-denied",
+        "redirect_url": "/troubleshoot/azure/azure-storage/blobs/authentication/adls-gen2-sticky-bit-403-access-denied",
         "redirect_document_id": true
       },
       {
@@ -2802,7 +2802,7 @@
       },
       {
         "source_path": "azure-storage/files/request-body-large.md",
-        "redirect_url": "/troubleshoot/azure/blobs/connectivity/request-body-large",
+        "redirect_url": "/troubleshoot/azure/azure-storage/blobs/connectivity/request-body-large",
         "redirect_document_id": true
       },
       {
@@ -2891,13 +2891,13 @@
         "redirect_document_id": true
       },
       {
-        "source_path": "azure-storage/blobs/welcome-blob-storage.yml",
-        "redirect_url": "/troubleshoot/azure/azure-storage/blobs/welcome-blob-storage",
-        "redirect_document_id": false
-      },
-      {
         "source_path": "azure-storage/files/optimize-createfile-function.md",
         "redirect_url": "/troubleshoot/azure/azure-storage/blobs/performance/optimize-createfile-function",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/blobs/unable-to-execute-the-embedded-application-error-backup-agent.md",
+        "redirect_url": "/troubleshoot/azure/site-recovery/unable-to-execute-the-embedded-application-error-backup-agent",
         "redirect_document_id": true
       },
       {
