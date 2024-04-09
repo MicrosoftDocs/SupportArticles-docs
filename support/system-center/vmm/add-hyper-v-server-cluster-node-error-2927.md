@@ -1,8 +1,8 @@
 ---
 title: Error 2927 adding a Hyper-V server or cluster node
 description: Fixes an issue in which you receive error 2927 when you add a Hyper-V server or a Hyper-V cluster node on a Virtual Machine Manager server.
-ms.date: 09/11/2020
-ms.reviewer: jchornbe
+ms.date: 04/09/2024
+ms.reviewer: wenca, jchornbe
 ---
 # Error 2927 when you add a Hyper-V server or a Hyper-V cluster node in VMM
 

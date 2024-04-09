@@ -36,7 +36,7 @@ Most large-scale deletions are accidental. Microsoft recommends that you take se
 > [!NOTE]
 > To prevent the accidental deletion or movement of objects (especially organizational units), two Deny access control entries (ACEs) can be added to the security descriptor of each object (DENY **DELETE** & **DELETE TREE**) and one Deny access control entries (ACEs) can be added to the security descriptor of the PARENT of each object (DENY **DELETE CHILD**). To do it, use Active Directory Users and Computers, ADSIEdit, LDP, or the DSACLS command-line tool. You can also change the default permissions in the AD schema for organizational units so that these ACEs are included by default.
 
-For example, to protect the organization unit that is called. Users in the AD domain that is called `CONTOSO.COM` from accidentally being moved or deleted out of its parent organizational unit that is called _MyCompany_, make the following configuration:
+For example, to protect the organization unit that is called `CONTOSO.COM` from accidentally being moved or deleted out of its parent organizational unit that is called _MyCompany_, make the following configuration:
 
 For the _MyCompany_ organizational unit, add DENY ACE for **Everyone** to **DELETE CHILD** with **This object only** scope:
 

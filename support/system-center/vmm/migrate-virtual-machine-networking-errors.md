@@ -1,18 +1,19 @@
 ---
 title: Errors 23801 and 23753 when migrating a virtual machine
-description: Describes networking errors when you use System Center 2012 R2 Virtual Machine Manager to migrate a virtual machine.
-ms.date: 07/17/2020
+description: Describes networking errors when you use System Center Virtual Machine Manager to migrate a virtual machine.
+ms.date: 04/09/2024
+ms.reviewer: wenca
 ---
-# Networking errors (23801, 23753) when a virtual machine is assigned a static IPv4 address through System Center 2012 R2 Virtual Machine Manager
+# Networking errors (23801, 23753) when a virtual machine is assigned a static IPv4 address through System Center Virtual Machine Manager
 
-This article helps you fix networking errors when you use System Center 2012 R2 Virtual Machine Manager to migrate a virtual machine.
+This article helps you fix networking errors when you use System Center Virtual Machine Manager to migrate a virtual machine.
 
-_Original product version:_ &nbsp; Microsoft System Center 2012 R2 Virtual Machine Manager  
+_Original product version:_ &nbsp; Microsoft System Center Virtual Machine Manager  
 _Original KB number:_ &nbsp; 2915463
 
 ## Symptoms
 
-When you use System Center 2012 R2 Virtual Machine Manager to migrate a virtual machine, the job is completed successfully, but one or both of the following errors are returned in the job result information:
+When you use System Center Virtual Machine Manager to migrate a virtual machine, the job is completed successfully, but one or both of the following errors are returned in the job result information:
 
 > Error (23801)
 >
