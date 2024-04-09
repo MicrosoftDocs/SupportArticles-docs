@@ -3,9 +3,9 @@ title: Cloud-init-enabled VM takes a long time to start up
 description: Troubleshoot a cloud-init-enabled Azure Virtual Machine deployment that takes more than 120 seconds to start up.
 editor: v-jsitser
 ms.service: virtual-machines
-ms.subservice: vm-deploy
 ms.date: 02/03/2022
 ms.reviewer: srijangupta, v-leedennis
+ms.custom: sap:Cannot create a VM
 ---
 # Cloud–init-enabled VM takes a long time to start up
 

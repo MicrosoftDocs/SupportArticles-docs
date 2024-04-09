@@ -5,7 +5,6 @@ ms.date: 04/01/2024
 editor: v-jsitser
 ms.reviewer: piw, v-leedennis
 ms.service: cloud-services-extended-support
-ms.subservice: troubleshoot-extended-support
 #Customer intent: As an Azure Cloud Services user, I want to resolve issues that cause application pool crashes on my virtual machine so that I can avoid downtime on my Cloud Services application.
 ---
 

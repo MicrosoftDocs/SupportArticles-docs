@@ -6,13 +6,13 @@ author: genlin
 manager: dcscontentpm
 tags: azure-resource-manager
 ms.service: virtual-machines
-ms.subservice: vm-cannot-start-stop
 ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
 ms.reviewer: jarrettr, v-leedennis
 ms.date: 12/18/2023
 ms.author: genli
+ms.custom: sap:My VM is not booting
 ---
 
 # VM startup is stuck on "Getting Windows ready. Don't turn off your computer" in Azure
