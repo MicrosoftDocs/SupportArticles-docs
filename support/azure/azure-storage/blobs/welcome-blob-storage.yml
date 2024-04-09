@@ -36,7 +36,7 @@ landingContent:
           - text: Invalid blob or block content, or invalid block list
             url: connectivity/invalid-blob-or-block-content-or-invalid-block-list.md
           - text: Optimize CreateFile function
-            url: ../azure-storage/blobs/performance/optimize-createfile-function.md
+            url: performance/optimize-createfile-function.md
           - text: Request body is too large error when write to file
             url: connectivity/request-body-large.md
           - text: Troubleshoot high CPU or disk usage issues
