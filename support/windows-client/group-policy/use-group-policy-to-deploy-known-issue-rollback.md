@@ -1,7 +1,7 @@
 ---
 title: Use Group Policy to deploy a Known Issue Rollback
 description: describes how to configure Group Policy to use a Known Issue Rollback (KIR) policy definition that activates a KIR on managed devices.
-ms.date: 12/26/2023
+ms.date: 04/09/2024
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
@@ -15,7 +15,7 @@ keywords: Windows Update, known issue, kir, group policy, rollback
 
 This article describes how to configure Group Policy to use a Known Issue Rollback (KIR) policy definition that activates a KIR on managed devices.
 
-_Applies to:_ &nbsp; Windows Server 2019, version 1809 and later versions; Windows 10, version 1809 and later versions
+_Applies to:_ &nbsp; Windows Server (All supported versions), Windows client (All supported versions)
 
 ## Summary
 
