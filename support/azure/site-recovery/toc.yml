@@ -16,6 +16,8 @@
   href: cannot-install-asr-registered-internal-error.md
 - name: Disable TLS 1.0 for PCI compliance
   href: asr-agent-disable-tls-pci-compliance.md
+- name: Embedded application error when install Azure backup agent
+  href: backup/unable-to-execute-the-embedded-application-error-backup-agent.md
 - name: Fail to back up using Azure Recovery Services Agent
   href: mars-agent-system-state-backup-failure.md
 - name: Recommended antivirus exclusions

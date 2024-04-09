@@ -2897,8 +2897,73 @@
       },
       {
         "source_path": "azure-storage/blobs/unable-to-execute-the-embedded-application-error-backup-agent.md",
-        "redirect_url": "/troubleshoot/azure/site-recovery/unable-to-execute-the-embedded-application-error-backup-agent",
+        "redirect_url": "/troubleshoot/azure/site-recovery/backup/unable-to-execute-the-embedded-application-error-backup-agent",
         "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/blobs/recovery/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/blobs/welcome-blob-storage",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "site-recovery/backup/index.md",
+        "redirect_url": "/troubleshoot/azure/site-recovery/welcome-site-recovery",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-storage/blobs/connectivity/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/blobs/welcome-blob-storage",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-storage/blobs/authentication/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/blobs/welcome-blob-storage",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-storage/blobs/performance/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/blobs/welcome-blob-storage",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-storage/blobs/alerts/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/blobs/welcome-blob-storage",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-storage/files/alerts/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/files/welcome-files-storage",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-storage/files/backup-restore/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/files/welcome-files-storage",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-storage/files/connectivity/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/files/welcome-files-storage",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-storage/files/performance/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/files/welcome-files-storage",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-storage/files/performance/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/files/welcome-files-storage",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-storage/files/security/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/files/welcome-files-storage",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-storage/files/file-sync/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/files/welcome-files-storage",
+        "redirect_document_id": false
       },
       {
         "source_path": "azure-storage/common/welcome-storage-tool-metric.yml",
