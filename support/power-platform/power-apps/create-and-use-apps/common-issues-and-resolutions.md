@@ -22,17 +22,15 @@ Refer to the introductory article [Power Apps troubleshooting strategies](isolat
 
 ## Common issue areas
 
-- [Common issues and resolutions for Power Apps](#common-issues-and-resolutions-for-power-apps)
-  - [Common issue areas](#common-issue-areas)
-  - [Connectors and delegation](#connectors-and-delegation)
-    - [Common issues](#common-issues)
-  - [Integration](#integration)
-  - [Power Fx](#power-fx)
-  - [Region](#region)
-  - [Studio and Forms](#studio-and-forms)
-  - [Browser](#browser)
-  - [Power Apps for Windows](#power-apps-for-windows)
-  - [Next steps](#next-steps)
+- [Connectors and delegation](#connectors-and-delegation)
+  - [Common issues](#common-issues)
+- [Integration](#integration)
+- [Power Fx](#power-fx)
+- [Region](#region)
+- [Studio and Forms](#studio-and-forms)
+- [Browser](#browser)
+- [Power Apps for Windows](#power-apps-for-windows)
+- [Next steps](#next-steps)
   
 ## Connectors and delegation
 
