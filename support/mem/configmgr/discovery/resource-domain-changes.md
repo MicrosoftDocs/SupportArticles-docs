@@ -1,7 +1,7 @@
 ---
 title: Resource domain is changed after installing January 2022 Windows updates
 description: Troubleshoot an issue in which domain of discovered resources changes after installing January 2022 Windows updates if the NetBIOS domain is different than FQDN.
-ms.date: 04/19/2024
+ms.date: 04/09/2024
 ms.reviewer: kaushika, jarrettr, brianhun, payur
 ms.custom: sap:Boundary Groups, Discovery and Collections\Active Directory Discovery (all types)
 ---
