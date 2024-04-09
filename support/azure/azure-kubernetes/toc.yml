@@ -297,6 +297,14 @@
   items:
   - name: AKS Cost Analysis add-on issues
     href: aks-cost-analysis-add-on-issues.md
+  - name: Azure policy failure alert shows an empty list of affected resources
+    href: policy-failure-alert-show-empty-list-of-affected-resources.md
+  - name: Azure Policy fails to exclude privileged containers from AKS
+    href: privileged-container-exclusion-not-working.md
+  - name: Custom Azure Policy for validating controllers doesn't work
+    href: custom-policy-for-validating-controller-not-working.md
+  - name: Container CPU and memory limits aren't enforced
+    href: enforce-container-cpu-memory-limits.md
   - name: Troubleshoot Azure Key Vault Provider for Secrets Store CSI Driver
     href: troubleshoot-key-vault-csi-secrets-store-csi-driver.md
   - name: Troubleshoot cluster extension deployment errors
