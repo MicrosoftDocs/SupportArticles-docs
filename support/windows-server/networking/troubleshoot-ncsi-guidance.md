@@ -46,12 +46,12 @@ It relies on network statistics such as recently sent or received packets, the T
 
 The network status taskbar icon is a fundamental indication of the network connectivity. It informs the user whether the network is fully available or if there's some degree of network problem.
 
-- Full internet access over Wi-Fi: :::image type="icon" source="media/troubleshoot-ncsi-guidance/full-internet-access-wi-fi.png"
-- Full internet access over Ethernet: :::image type="icon" source="media/troubleshoot-ncsi-guidance/full-internet-access-ethernet-10.png" or :::image type="icon" source="media/troubleshoot-ncsi-guidance/full-internet-access-ethernet-11.png"
+- Full internet access over Wi-Fi: :::image type="icon" source="media/troubleshoot-ncsi-guidance/full-internet-access-wi-fi.png":::
+- Full internet access over Ethernet: :::image type="icon" source="media/troubleshoot-ncsi-guidance/full-internet-access-ethernet-10.png"::: or :::image type="icon" source="media/troubleshoot-ncsi-guidance/full-internet-access-ethernet-11.png":::
 - Some degree of network outage:
 
-  - **Not connected - Connections are available**: :::image type="icon" source="media/troubleshoot-ncsi-guidance/not-connected.png"
-  - **Identifying… No Internet access**: :::image type="icon" source="media/troubleshoot-ncsi-guidance/no-internet-access-a.png", :::image type="icon" source="media/troubleshoot-ncsi-guidance/no-internet-access-b.png", or :::image type="icon" source="media/troubleshoot-ncsi-guidance/no-internet-access-c.png"
+  - **Not connected - Connections are available**: :::image type="icon" source="media/troubleshoot-ncsi-guidance/not-connected.png":::
+  - **Identifying… No Internet access**: :::image type="icon" source="media/troubleshoot-ncsi-guidance/no-internet-access-a.png":::, :::image type="icon" source="media/troubleshoot-ncsi-guidance/no-internet-access-b.png":::, or :::image type="icon" source="media/troubleshoot-ncsi-guidance/no-internet-access-c.png":::
 
 > [!NOTE]
 > It's beneficial not to solely depend on the indicator. The inability of NCSI to complete a probe doesn't necessarily imply that the client machine can't access the internet.
@@ -75,7 +75,7 @@ Sometimes, a manual test on the browser succeeds while NCSI fails, as it bypasse
 
 Check NCSI event logs in the path *Applications and Services Logs\\Microsoft\\Windows\\NCSI\\Operational*. For example:
 
-:::image type="content" source="./media/troubleshoot-ncsi-guidance/event-4042-ncsi.png" alt-text="Screenshot of an example of Event 4042, NCSI showing the general information.:::
+:::image type="content" source="./media/troubleshoot-ncsi-guidance/event-4042-ncsi.png" alt-text="Screenshot of an example of Event 4042, NCSI showing the general information.":::
 
 ### 4. Check the registry location for any changes
 
@@ -170,7 +170,7 @@ By default, this key doesn't exist (or is set to *0*). This indicates the number
 
 ### 8. Check DNS resolution
 
-For DNS probes, perform [nslookup](https://learn.microsoft.com/windows-server/administration/windows-commands/nslookup) or [Resolve-DnsName](https://learn.microsoft.com/powershell/module/dnsclient/resolve-dnsname) to `dns.msftncsi.com` to ensure that the endpoint is resolvable from the machine.
+For DNS probes, perform [nslookup](/windows-server/administration/windows-commands/nslookup) or [Resolve-DnsName](/powershell/module/dnsclient/resolve-dnsname) to `dns.msftncsi.com` to ensure that the endpoint is resolvable from the machine.
 
 ### 9. Passive probe related settings
 
