@@ -3674,6 +3674,36 @@
         "source_path": "azure-container-instances/management/index.md",
         "redirect_url": "/troubleshoot/azure/azure-container-instances/welcome-container-instances",
         "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-kubernetes/availability-performance/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-kubernetes/connectivity/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-kubernetes/create-upgrade-delete/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-kubernetes/extensions/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-kubernetes/logs/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-kubernetes/storage/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
+        "redirect_document_id": false
       }
   ]
 }
