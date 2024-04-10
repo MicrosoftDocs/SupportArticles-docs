@@ -8,6 +8,7 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.service: virtual-machine-scale-sets
+ms.custom: sap:Scaling issue with my scale set
 ---
 
 # QuotaExceeded error when scaling virtual machine scale sets

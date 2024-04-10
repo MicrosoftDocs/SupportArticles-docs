@@ -4,6 +4,7 @@ description: Learn how to resolve the OperationNotAllowed error when you deploy 
 ms.date: 01/31/2023
 ms.service: virtual-machine-scale-sets
 ms.reviewer: mimckitt, v-leedennis
+ms.custom: sap:Cannot delete my scaleset or instances
 ---
 # "OperationNotAllowed. Deletion of Virtual Machine Scale Set isn't allowed"
 

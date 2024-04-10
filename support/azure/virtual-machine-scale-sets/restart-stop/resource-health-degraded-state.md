@@ -6,6 +6,7 @@ author: genlin
 ms.author: genli
 ms.service: virtual-machine-scale-sets
 ms.reviewer: macla, pudesira
+ms.custom: sap:My instance was restarted or stopped unexpectedly
 ---
 # Resource health state is "Degraded" in Azure Virtual Machine Scale Set
 

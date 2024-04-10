@@ -4,6 +4,7 @@ description: Learn how to resolve the InvalidParameter (Fault Domain error) when
 ms.date: 01/31/2023
 ms.service: virtual-machine-scale-sets
 ms.reviewer: mimckitt, v-leedennis
+ms.custom: sap:Cannot create new scale set
 ---
 # "InvalidParameter. The specified fault domain count 3 must fall in the range 1 to 2"
 

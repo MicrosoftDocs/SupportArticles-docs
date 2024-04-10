@@ -4,6 +4,7 @@ description: Learn how to resolve the OutboundConnectivityNotEnabledOnVM error w
 ms.date: 01/31/2023
 ms.service: virtual-machine-scale-sets
 ms.reviewer: mimckitt, v-leedennis
+ms.custom: sap:Cannot create new scale set
 ---
 # "OutboundConnectivityNotEnabledOnVM. No outbound connectivity configured for virtual machine"
 
