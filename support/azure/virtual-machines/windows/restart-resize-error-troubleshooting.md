@@ -7,11 +7,10 @@ author: genlin
 manager: dcscontentpm
 tags: top-support-issue
 ms.service: virtual-machines
-ms.subservice: vm-cannot-start-stop
 ms.topic: troubleshooting
 ms.date: 11/16/2021
 ms.author: genli
-ms.custom: H1Hack27Feb2017
+ms.custom: sap:Cannot start or stop my VM, H1Hack27Feb2017
 
 ---
 # Troubleshoot deployment issues with restarting or resizing an existing Windows VM in Azure
@@ -65,7 +64,7 @@ The request to resize the VM has to be attempted at the original cluster that ho
   
 ## Error when you stop, start, restart, or redeploy an existing VM
 
-When you try to stop, start, restart, or redeploy an existing VM, the process fails, and you receive an “An unexpected error occurred while processing the network profile of the VM. Please retry later” error message. When this error occurs, the VM is put into a failed state.
+When you try to stop, start, restart, or redeploy an existing VM, the process fails, and you receive an "An unexpected error occurred while processing the network profile of the VM. Please retry later" error message. When this error occurs, the VM is put into a failed state.
 
 ### Cause  
 

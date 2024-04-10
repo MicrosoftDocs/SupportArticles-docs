@@ -4,8 +4,7 @@ description: Describes how to upload existing on-premises Hyper-V domain control
 ms.date: 05/22/2020
 ms.reviewer: 
 ms.service: virtual-machines
-ms.subservice: vm-deploy
-ms.custom: devx-track-azurepowershell
+ms.custom: sap:Cannot create a VM, devx-track-azurepowershell
 ---
 # How to upload existing on-premises Hyper-V domain controllers to Azure by using Azure PowerShell
 

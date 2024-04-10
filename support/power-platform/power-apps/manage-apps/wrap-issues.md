@@ -5,7 +5,7 @@ ms.reviewer: sitaramp
 ms.author: arijitba
 author: arijitba
 ms.date: 03/04/2024
-ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
+ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done, sap:App Management\Wrap an app
 ---
 # Troubleshoot issues with the wrap feature in Power Apps
 

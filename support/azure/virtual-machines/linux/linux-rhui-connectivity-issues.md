@@ -6,6 +6,7 @@ ms.author: msaenzbo
 editor: v-jsitser
 ms.reviewer: azurevmlnxcic, divargas, v-leedennis
 ms.service: virtual-machines
+ms.custom: sap:Cannot connect to my VM
 ms.collection: linux
 ms.topic: troubleshooting-general
 ms.workload: infrastructure-services

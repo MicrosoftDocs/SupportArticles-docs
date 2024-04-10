@@ -4,6 +4,7 @@ description: Provides a resolution for the issue that occurs when importing a so
 ms.reviewer: sdas, ankugupta
 ms.author: sdas
 ms.date: 06/09/2023
+ms.custom: sap:Service Level Agreements\Issue with importing or exporting or upgrading SLA
 ---
 # "A managed solution cannot overwrite the SLAItem component" error
 

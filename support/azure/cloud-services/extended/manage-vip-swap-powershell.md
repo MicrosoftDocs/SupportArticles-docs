@@ -1,10 +1,9 @@
 ---
 title: Use PowerShell to manage VIP swaps in Azure Cloud Services (extended support)
 description: Learn how to manage VIP swaps in Azure Cloud Services (extended support) by using PowerShell.
-ms.service: cloud-services
-ms.subservice: troubleshoot-extended-support
+ms.service: cloud-services-extended-support
 ms.custom: devx-track-azurepowershell
-ms.date: 02/08/2023
+ms.date: 04/01/2024
 editor: v-jsitser
 ms.reviewer: maheshallu, piw, v-frpan, v-leedennis
 ms.topic: how-to

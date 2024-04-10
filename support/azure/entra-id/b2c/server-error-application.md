@@ -3,8 +3,7 @@ title: Error (Server Error in '/' Application) when you try to sign in to an app
 description: Describes an error that occurs when you try to sign in to an app that is set up for Azure AD B2C.
 ms.date: 05/22/2020
 ms.reviewer: 
-ms.service: active-directory
-ms.subservice: B2C
+ms.service: entra-id
 ---
 # Error when you try to sign in to an app that is set up for Azure AD B2C: Server Error in '/' Application
 

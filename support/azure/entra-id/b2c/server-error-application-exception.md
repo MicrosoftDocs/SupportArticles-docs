@@ -3,8 +3,7 @@ title: Error (Server Error in '/' Application) when you sign in to an app that i
 description: Describes an error that occurs when you try to sign up for or sign in to an app that's set up for Microsoft Azure B2C. This occurs if the policy name is missing or incorrect in the app's web.config file. A resolution is provided.
 ms.date: 06/08/2020
 ms.reviewer: 
-ms.service: active-directory
-ms.subservice: B2C
+ms.service: entra-id
 ---
 # An exception occurs when you sign in to an app that's set up for Azure B2C
 

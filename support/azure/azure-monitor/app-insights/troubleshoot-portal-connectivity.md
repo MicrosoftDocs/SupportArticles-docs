@@ -8,7 +8,6 @@ editor: v-jsitser
 ms.service: azure-monitor
 ms.subservice: application-insights
 ms.reviewer: vitalyg, v-leedennis
-ms.topic: troubleshooting-problem-resolution
 #Customer intent: As an Azure user, I want to learn how to resolve connectivity errors in the Application Insights portal so that I can use Application Insights successfully.
 ---
 # Application Insights portal connectivity issues

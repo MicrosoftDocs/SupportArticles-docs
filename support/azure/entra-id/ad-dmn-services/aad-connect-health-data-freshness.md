@@ -3,7 +3,7 @@ title: Troubleshoot data freshness alerts in Microsoft Entra Connect Health
 description: Troubleshoot data freshness alerts in Microsoft Entra Connect Health. Use agents for Sync, Microsoft Entra Domain Services, and AD Federation Services.
 ms.date: 11/09/2023
 ms.reviewer: brheld, calazlo, v-leedennis
-ms.service: active-directory
+ms.service: entra-id
 ms.subservice: hybrid
 #Customer intent: As a Microsoft Entra Connect Health Service user, I want to troubleshoot data freshness alerts so that I can fix issues with Active Directory Federation Services (AD FS).
 ---

@@ -4,8 +4,8 @@ description: Fixes an issue that you receive a CredSSP encryption oracle remedia
 ms.date: 08/25/2023
 ms.reviewer: 
 ms.service: virtual-machines
-ms.subservice: vm-cannot-connect
 ms.collection: windows
+ms.custom: sap:Cannot connect to my VM
 ---
 
 <!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "christys" for triage before making the further changes to the screenshots.

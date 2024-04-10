@@ -4,8 +4,8 @@ description: The following article discusses how to resolve the situation of a C
 ms.date: 08/26/2021
 ms.reviewer: 
 ms.service: virtual-machines
-ms.subservice: vm-capacity-reservation
 ms.collection: windows
+ms.custom: sap:Cannot create a VM
 ---
 
 # A Capacity Reservation is in a "Failed" provisioning state

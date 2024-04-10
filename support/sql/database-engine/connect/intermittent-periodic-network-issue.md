@@ -229,7 +229,7 @@ Consult your network security admins. If the situation improves, you may need to
 
 ### Enable Windows Firewall auditing
 
-To determine whether the firewall has dropped any packets, [enable firewall auditing in Windows](/troubleshoot/windows-client/networking/tcp-ip-connectivity-issues-troubleshooting#application-side-reset).
+To determine whether the firewall has dropped any packets, [enable firewall auditing in Windows](../../../windows-client/networking/tcp-ip-connectivity-issues-troubleshooting.md#application-side-reset).
 
 For SQL Server, this issue could be related to the client or server machine. The network trace will show that the machine received a packet but didn't respond. The packet may then be retransmitted, again get no response, and eventually, the connection is reset.
 

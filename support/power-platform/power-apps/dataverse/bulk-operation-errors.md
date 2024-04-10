@@ -2,6 +2,7 @@
 title: Troubleshoot Dataverse bulk operation errors
 description: Provides resolutions for system errors that might occur while using bulk operations with Microsoft Dataverse.
 ms.date: 11/09/2023
+ms.custom: sap:Bulk deleting data\Bulk delete job reporting failures
 author: divkamath
 ms.author: dikamath
 ms.reviewer: jdaly

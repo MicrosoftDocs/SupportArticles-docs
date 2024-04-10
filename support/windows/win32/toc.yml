@@ -21,6 +21,8 @@
       href: finger3or4-touch-interaction-no-longer-works.md
     - name: Call Shell APIs from a multithreaded apartment
       href: shell-functions-multithreaded-apartment.md
+    - name: Common file dialog box doesn't display folder names
+      href: common-dialog-box-not-display-folder-names.md
     - name: East Asian first character isn't recognized
       href: east-asian-first-character-not-recognized.md
     - name: Half-width and full-width Japanese characters are treated as different characters
@@ -55,6 +57,8 @@
       href: graphicsdrawimage-slow-drawing-jpeg-png-printer.md
     - name: Interoperability between GDI and GDI+
       href: mix-gdi-and-gdi-plus-drawing.md
+    - name: Memory leak occurs when printing documents
+      href: memory-leak-occurs-printing-document.md
     - name: Modify printer settings with DocumentProperties
       href: modify-printer-settings-documentproperties.md
   - name: Networking development
