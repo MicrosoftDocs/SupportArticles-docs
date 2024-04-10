@@ -81,6 +81,7 @@ Check NCSI event logs in the path *Applications and Services Logs\\Microsoft\\Wi
 > Active probing must be enabled.
 
 The HTTP web probe server, path, expected probe content, and the DNS probe host and content are predefined under the registry path:
+
 `HKLM\SYSTEM\CurrentControlSet\Services\NlaSvc\Parameters\Internet`
 
 The default value in Windows 10, version 1607 and later versions:
@@ -258,6 +259,7 @@ Active probes are triggered by certain events. NCSI monitors or is registered to
 The passive probe will only run when these conditions are met:
 
 - The following setting is allowed by Group Policy.
+
     **Computer Configuration**\\**Administrative Templates**\\**Network**\\**Network Connectivity Status Indicator**\\**Specify passive polling**
 
     > [!NOTE]
