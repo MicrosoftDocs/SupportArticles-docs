@@ -7,7 +7,7 @@ author: JerryZhangMS
 ms.author: genli
 ms.reviewer: Maheshallu;Wu.Ping;prpillai
 ms.date: 04/01/2024
-ms.custom: 
+ms.custom: sap:Service Availability and Performance
 ---
 
 # Troubleshoot Cloud Services app with Application Insights - features overview

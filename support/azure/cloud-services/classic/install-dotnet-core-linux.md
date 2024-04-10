@@ -7,7 +7,7 @@ author: genlin
 ms.author: genli
 ms.service: cloud-services
 ms.subservice: reference
-ms.custom: linux-related-content
+ms.custom: sap:Problems Deploying Cloud Services, linux-related-content
 ---
 # Install .NET Core on Linux by using an Azure Batch start task
 

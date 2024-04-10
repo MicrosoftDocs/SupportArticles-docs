@@ -5,7 +5,7 @@ ms.date: 04/01/2024
 editor: v-jsitser
 ms.reviewer: v-maallu, zhangjerry, v-leedennis
 ms.service: cloud-services-extended-support
-ms.custom: devx-track-azurepowershell
+ms.custom: sap:Service Availability and Performance, devx-track-azurepowershell
 ms.topic: how-to
 #Customer intent: As an Azure Cloud Services (extended support) user, I want to get instructions about how to update or change the certificate that's used so that my cloud application is available to customers with zero or minimal downtime.
 ---

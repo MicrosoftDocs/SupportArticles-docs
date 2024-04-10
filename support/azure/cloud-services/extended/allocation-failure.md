@@ -7,7 +7,7 @@ author: surbhijain16
 ms.author: surbhijain
 ms.reviewer: surbhijain16
 ms.date: 04/01/2024
-ms.custom: 
+ms.custom: sap:Service Availability and Performance
 ---
 
 # Troubleshoot allocation failure in Azure Cloud Services (extended support)
