@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Connectivity
   - Outlook for Mac
   - CI 186045
   - CSSTroubleshoot

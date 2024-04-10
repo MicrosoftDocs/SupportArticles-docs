@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:High Availability, Health, Performance, Content Indexing\Database or Server Failed Over Unexpectedly
   - CI 183142
   - Exchange Server
   - CSSTroubleshoot
