@@ -3691,11 +3691,6 @@
         "redirect_document_id": false
       },
       {
-        "source_path": "azure-monitor/index.md",
-        "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor",
-        "redirect_document_id": false
-      },
-      {
         "source_path": "azure-monitor/app-insights/agent/index.md",
         "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor",
         "redirect_document_id": false

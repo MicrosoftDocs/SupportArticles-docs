@@ -3376,7 +3376,7 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "support/azure/azure-monitor/index.md",
+      "source_path": "support/azure/azure-monitor/index.yml",
       "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor",
       "redirect_document_id": false
     },
