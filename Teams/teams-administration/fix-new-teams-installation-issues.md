@@ -6,6 +6,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  -sap:Teams Admin
   - CI 187488
   - CSSTroubleshoot
 ms.reviewer: dansteve, heidip

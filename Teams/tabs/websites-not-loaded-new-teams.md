@@ -10,6 +10,7 @@ search.appverid:
   - SPO160
   - MET150
 appliesto: 
+  - sap:Teams Apps and Connectors
   - New Microsoft Teams
 ms.custom: 
   - CI 186119
