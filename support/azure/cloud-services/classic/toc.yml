@@ -43,5 +43,3 @@
   items:
   - name: Install .NET Core with Azure Batch start task
     href: install-dotnet-core-linux.md
-  - name: Support for Linux and open-source technology in Azure
-    href: support-linux-open-source-technology.md
