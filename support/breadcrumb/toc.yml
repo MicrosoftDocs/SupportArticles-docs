@@ -246,3 +246,7 @@ items:
       - name: Microsoft Dynamics GP
         tocHref: /troubleshoot/dynamics/gp/
         topicHref: /troubleshoot/dynamics/gp/welcome-gp
+
+    - name: Microsoft Copilot for Sales
+      tocHref: /troubleshoot/sales-copilot/
+      topicHref: /troubleshoot/sales-copilot/
