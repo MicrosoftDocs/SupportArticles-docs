@@ -11,7 +11,7 @@ ms.custom: sap:Network Connectivity and File Sharing\NCSI, csstroubleshoot
 ---
 # Network Connection Status Indicator (NCSI) troubleshooting guidance
 
-This guidance is designed to help troubleshoot NCSI issues.
+This guidance is designed to help troubleshoot Network Connection Status Indicator (NCSI) issues.
 
 ## Basics of NCSI
 
@@ -42,7 +42,7 @@ It relies on network statistics such as recently sent or received packets, the T
 
 ### 1. The network status taskbar icon
 
-The network status taskbar icon is a fundamental indication of the network connectivity. It informs the user whether the network is fully available or if there's some degree of network problem.
+The network status taskbar icon is a fundamental indication of network connectivity. It informs the user whether the network is fully available or if there's some degree of network problem.
 
 - Full internet access over Wi-Fi: :::image type="icon" source="media/troubleshoot-ncsi-guidance/full-internet-access-wi-fi.png":::
 - Full internet access over Ethernet: :::image type="icon" source="media/troubleshoot-ncsi-guidance/full-internet-access-ethernet-10.png"::: or :::image type="icon" source="media/troubleshoot-ncsi-guidance/full-internet-access-ethernet-11.png":::
@@ -71,7 +71,7 @@ Sometimes, a manual test on the browser succeeds while NCSI fails, as it bypasse
 
 ### 3. Check NCSI event logs
 
-Check NCSI event logs in the path *Applications and Services Logs\\Microsoft\\Windows\\NCSI\\Operational*. For example:
+Check NCSI event logs in the path: *Applications and Services Logs\\Microsoft\\Windows\\NCSI\\Operational*. For example:
 
 :::image type="content" source="./media/troubleshoot-ncsi-guidance/event-4042-ncsi.png" alt-text="Screenshot of an example of Event 4042, NCSI showing the general information.":::
 
