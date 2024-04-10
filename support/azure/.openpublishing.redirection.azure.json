@@ -3689,6 +3689,81 @@
         "source_path": "azure-kubernetes/storage/index.md",
         "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
         "redirect_document_id": false
+      },
+      {
+        "source_path": "virtual-machine-scale-sets/delete/index.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machine-scale-sets/welcome-virtual-machine-scale-sets",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "virtual-machine-scale-sets/deploy/index.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machine-scale-sets/welcome-virtual-machine-scale-sets",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "virtual-machine-scale-sets/extensions/index.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machine-scale-sets/welcome-virtual-machine-scale-sets",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "virtual-machine-scale-sets/restart-stop/index.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machine-scale-sets/welcome-virtual-machine-scale-sets",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "virtual-machine-scale-sets/scaling/index.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machine-scale-sets/welcome-virtual-machine-scale-sets",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "virtual-machine-scale-sets/allocationfailed-or-zonalallocationfailed.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machine-scale-sets/deploy/allocationfailed-or-zonalallocationfailed",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machine-scale-sets/vmss-public-ip-count-limit-exceeded.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machine-scale-sets/deploy/vmss-public-ip-count-limit-exceeded",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machine-scale-sets/vmss-invalid-parameter-fault-domain-count.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machine-scale-sets/deploy/vmss-invalid-parameter-fault-domain-count",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machine-scale-sets/vmss-invalid-parameter-single-placement-group.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machine-scale-sets/deploy/vmss-invalid-parameter-single-placement-group",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machine-scale-sets/vmss-outbound-connectivity-not-enabled.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machine-scale-sets/deploy/vmss-outbound-connectivity-not-enabled",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machine-scale-sets/instances-not-repaired.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machine-scale-sets/restart-stop/instances-not-repaired",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machine-scale-sets/resource-health-degraded-state.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machine-scale-sets/restart-stop/resource-health-degraded-state",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machine-scale-sets/virtual-machine-scale-sets-quota-exceeded.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machine-scale-sets/scaling/virtual-machine-scale-sets-quota-exceeded",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machine-scale-sets/vmss-operation-not-allowed.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machine-scale-sets/delete/vmss-operation-not-allowed",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machine-scale-sets/vm-extension-provisioning-errors.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machine-scale-sets/extensions/vm-extension-provisioning-errors",
+        "redirect_document_id": true
       }
   ]
 }

@@ -18,7 +18,7 @@ In this article, get information about:
 - The causes of the allocation failures.
 - How to troubleshoot allocation failures when they arise.
 
-To troubleshoot allocation failures for standard virtual machines (VMs), see [Troubleshoot allocation failures when you create, restart, or resize VMs in Azure](../virtual-machines/windows/allocation-failure.md).
+To troubleshoot allocation failures for standard virtual machines (VMs), see [Troubleshoot allocation failures when you create, restart, or resize VMs in Azure](../../virtual-machines/windows/allocation-failure.md).
 
 ## Symptom
 
@@ -134,7 +134,7 @@ If you use availability zones, try another zone within the region that may have 
 
 If your allocation request is large (more than 500 cores), see the following sections to break up the request into smaller deployments.
 
-Try [redeploying the VM instance](../virtual-machines/windows/redeploy-to-new-node-windows.md), which allocates the VM instance to a new cluster within the region.
+Try [redeploying the VM instance](../../virtual-machines/windows/redeploy-to-new-node-windows.md), which allocates the VM instance to a new cluster within the region.
 
 ## Allocation failures for older VM sizes
 
@@ -163,4 +163,4 @@ If an allocation request is pinned to a cluster, there's a higher chance of fail
 
 :::image type="content" source="media/allocationfailed-or-zonalallocationfailed/pinned-cluster-allocation-failure-no-free-resource-or-unsupported-size.png" alt-text="Diagrams of allocation failures are pinned clusters. Diagram 3 shows no free resources are available. Diagram 4 shows the size isn't supported.":::
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

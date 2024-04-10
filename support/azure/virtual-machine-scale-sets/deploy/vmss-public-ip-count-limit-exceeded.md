@@ -4,7 +4,6 @@ description: Describes how to file a support ticket for a Public IP quota increa
 ms.date: 09/03/2021
 ms.reviewer: 
 ms.service: virtual-machine-scale-sets
-ms.subservice: troubleshoot-deployment-errors
 ---
 # PublicIPCountLimitExceededByVMScaleSet error when you create virtual machine scale set
 
@@ -26,4 +25,4 @@ To raise the limit or quota for your subscription, go to the [Azure portal]( htt
 
 For more information, see [How to file a support ticket for a quota increase](/azure/azure-resource-manager/templates/error-resource-quota#solution).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
