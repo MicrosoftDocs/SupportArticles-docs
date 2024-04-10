@@ -7,6 +7,8 @@
     items:
     - name: Basic troubleshooting
       href: create-upgrade-delete/troubleshoot-aks-cluster-creation-issues.md
+    - name: Avoid running as root in AKS Container
+      href: create-upgrade-delete/avoid-running-as-root-in-containers.md
     - name: CniDownloadTimeoutVMExtensionError error (41)
       href: create-upgrade-delete/error-code-cnidownloadtimeoutvmextensionerror.md
     - name: ERR_VHD_FILE_NOT_FOUND error (124)
@@ -141,8 +143,6 @@
       href: create-upgrade-delete/aks-common-issues-faq.yml
     - name: Argument list too long
       href: create-upgrade-delete/application-fails-argument-list-too-long.md
-    - name: Avoid running as root in AKS Container
-      href: create-upgrade-delete/avoid-running-as-root-in-containers.md
     - name: Changing property 'imageReference' is not allowed
       href: create-upgrade-delete/changing-property-imagereference-not-allowed.md
     - name: Error "CreateOrUpdateVirtualNetworkLinkFailed"
