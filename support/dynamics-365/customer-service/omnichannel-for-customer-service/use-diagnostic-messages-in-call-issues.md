@@ -6,7 +6,7 @@ author: araghunath08
 ms.reviewer: nenellim 
 ms.collection: 
 ms.date: 03/03/2024
-ms.custom: bap-template
+ms.custom: sap:Voice channel
 ---
 # Use diagnostic messages to troubleshoot issues in voice calls
 

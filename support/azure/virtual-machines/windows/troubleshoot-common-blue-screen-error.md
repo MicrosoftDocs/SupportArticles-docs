@@ -6,13 +6,12 @@ services: virtual-machines
 documentationCenter: ''
 author: genlin
 ms.service: virtual-machines
-ms.subservice: vm-cannot-start-stop
 ms.collection: windows
-ms.topic: troubleshooting-problem-resolution
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure
 ms.date: 12/18/2023
 ms.author: genli
+ms.custom: sap:My VM is not booting
 ---
 
 # Windows shows blue screen error when booting an Azure VM

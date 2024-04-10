@@ -6,9 +6,8 @@ documentationcenter: ''
 author: genlin
 manager: dcscontentpm
 tags: virtual-machines
-ms.custom: linux-related-content
+ms.custom: sap:VM Admin - Linux (Guest OS), linux-related-content
 ms.service: virtual-machines
-ms.subservice: vm-backup-restore
 ms.collection: linux
 ms.topic: troubleshooting
 ms.workload: infrastructure-services

@@ -7,7 +7,6 @@ author: genlin
 manager: dcscontentpm
 tags: top-support-issue, azure-resource-manager
 ms.service: virtual-machines
-ms.subservice: vm-cannot-connect
 ms.collection: windows
 ms.workload: na
 ms.tgt_pltfrm: vm-windows
@@ -15,6 +14,7 @@ ms.topic: troubleshooting
 ms.date: 09/03/2021
 ms.author: tibasham
 
+ms.custom: sap:Cannot connect to my VM
 ---
 
 # Troubleshoot a failed trust relationship in an Azure Windows VM

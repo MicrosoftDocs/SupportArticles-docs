@@ -8,13 +8,13 @@ manager: dcscontentpm
 tags: azure-resource-manager
 ms.assetid: 3f6383b5-81fa-49ea-9434-2fe475e4cbef
 ms.service: virtual-machines
-ms.subservice: vm-cannot-start-stop
 ms.collection: windows
 ms.workload: na
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
 ms.date: 01/25/2021
 ms.author: genli
+ms.custom: sap:My VM is not booting
 ---
 
 # Azure VM stopped at "Please wait for the Group Policy Client" screen

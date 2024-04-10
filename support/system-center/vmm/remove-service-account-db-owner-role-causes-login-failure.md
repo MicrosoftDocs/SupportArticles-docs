@@ -1,7 +1,8 @@
 ---
 title: Removing VMM service account from the db_owner role causes login failures for end users
 description: This article describes an issue that removing the VMM service account from the db_owner role in the VMM database causes login failures for end users.
-ms.date: 07/15/2020
+ms.date: 04/09/2024
+ms.reviewer: wenca
 ---
 # Removing VMM service account from the db_owner role triggers login failures for end users
 

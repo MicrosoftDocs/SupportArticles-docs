@@ -3378,7 +3378,7 @@
     {
       "source_path": "support/azure/azure-monitor/index.yml",
       "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/azure/virtual-machines/rdp.md",
@@ -10768,6 +10768,401 @@
     {
       "source_path": "support/windows-server/windows-security/expand-maximum-extension-size-limit-ad-cs.md",
       "redirect_url": "/troubleshoot/windows-server/certificates-and-public-key-infrastructure-pki/expand-maximum-extension-size-limit-ad-cs",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/dynamics-365/customer-service/service-level-agreements/sla-deletion-error-messages.md",
+      "redirect_url": "/troubleshoot/dynamics-365/customer-service/import-export-or-upgrade/sla-deletion-error-messages",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-apps/isolate-and-troubleshoot-common-issues/common-issues-and-resolutions.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/create-and-use-apps/common-issues-and-resolutions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-apps/isolate-and-troubleshoot-common-issues/isolate-canvas-app-issues.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/create-and-use-apps/isolate-canvas-app-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-apps/isolate-and-troubleshoot-common-issues/isolate-common-issues.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/create-and-use-apps/isolate-common-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-apps/isolate-and-troubleshoot-common-issues/isolate-model-app-issues.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/create-and-use-apps/isolate-model-app-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-apps/isolate-and-troubleshoot-common-issues/minimal-canvas-app-repro.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/create-and-use-apps/minimal-canvas-app-repro",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-apps/isolate-and-troubleshoot-common-issues/troubleshoot-canvas-app-date-time-issues.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/create-and-use-apps/troubleshoot-canvas-app-date-time-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-apps/isolate-and-troubleshoot-common-issues/troubleshooting-startup-issues.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/sign-in/troubleshooting-startup-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-apps/isolate-and-troubleshoot-common-issues/troubleshoot-model-driven-app-date-time-issues.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/create-and-use-apps/troubleshoot-model-driven-app-date-time-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-apps/isolate-and-troubleshoot-common-issues/troubleshoot-model-driven-app-lookup-issues.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/create-and-use-apps/troubleshoot-model-driven-app-lookup-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-apps/isolate-and-troubleshoot-common-issues/troubleshoot-power-query-issues.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/connections/troubleshoot-power-query-issues",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-apps/isolate-and-troubleshoot-common-issues/vanilla-model-driven-app-repro.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/create-and-use-apps/vanilla-model-driven-app-repro",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/power-apps/manage-apps/dataverse-records-missing-required-fields.md",
+      "redirect_url": "/troubleshoot/power-platform/power-apps/dataverse/dataverse-records-missing-required-fields",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/ai-builder/the-training-document-is-not-displayed-on-the-form-processing-model-details-page.md",
+      "redirect_url": "/troubleshoot/power-platform/ai-builder/power-automate/the-training-document-is-not-displayed-on-the-form-processing-model-details-page",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/ai-builder/aibuilder-actions-are-disabled-deactivated.md",
+      "redirect_url": "/troubleshoot/power-platform/ai-builder/power-automate/aibuilder-actions-are-disabled-deactivated",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/ai-builder/aibuilder-processes-and-plug-in-steps-are-turned-off-in-default-solution.md",
+      "redirect_url": "/troubleshoot/power-platform/ai-builder/power-apps/aibuilder-processes-and-plug-in-steps-are-turned-off-in-default-solution",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/ai-builder/aibuilder-show-trial-license-but-license-purchased.md",
+      "redirect_url": "/troubleshoot/power-platform/ai-builder/power-apps/aibuilder-show-trial-license-but-license-purchased",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/ai-builder/aimodels-fail-to-be-imported-in-a-new-environment.md",
+      "redirect_url": "/troubleshoot/power-platform/ai-builder/power-automate/aimodels-fail-to-be-imported-in-a-new-environment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/ai-builder/all-ai-builder-credits-have-been-consumed.md",
+      "redirect_url": "/troubleshoot/power-platform/ai-builder/power-automate/all-ai-builder-credits-have-been-consumed",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/ai-builder/business-card-reader-do-not-work-for-some-users.md",
+      "redirect_url": "/troubleshoot/power-platform/ai-builder/power-apps/business-card-reader-do-not-work-for-some-users",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/ai-builder/dependency-timeout-error-when-using-a-form-processing-model-in-power-automate.md",
+      "redirect_url": "/troubleshoot/power-platform/ai-builder/power-automate/dependency-timeout-error-when-using-a-form-processing-model-in-power-automate",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/ai-builder/fields-could-not-be-loaded-for-this-document-error-in-form-processing.md",
+      "redirect_url": "/troubleshoot/power-platform/ai-builder/power-automate/fields-could-not-be-loaded-for-this-document-error-in-form-processing",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/ai-builder/pages-parameter-generates-an-error-when-saving-a-form-processing-flow.md",
+      "redirect_url": "/troubleshoot/power-platform/ai-builder/power-automate/pages-parameter-generates-an-error-when-saving-a-form-processing-flow",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/ai-builder/prevent-users-from-creating-ai-builder-custom-models.md",
+      "redirect_url": "/troubleshoot/power-platform/ai-builder/power-automate/prevent-users-from-creating-ai-builder-custom-models",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/ai-builder/the-current-environment-donot-meet-the-minimum-requirements-error-message.md",
+      "redirect_url": "/troubleshoot/power-platform/ai-builder/power-automate/the-current-environment-donot-meet-the-minimum-requirements-error-message",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/ai-builder/the-output-of-an-ai-builder-action-is-empty-in-power-automate-or-the-next-action-returns-an-error.md",
+      "redirect_url": "/troubleshoot/power-platform/ai-builder/power-automate/the-output-of-an-ai-builder-action-is-empty-in-power-automate-or-the-next-action-returns-an-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/ai-builder/too-many-requests-error-in-power-automate.md",
+      "redirect_url": "/troubleshoot/power-platform/ai-builder/power-automate/too-many-requests-error-in-power-automate",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/ai-builder/training-failed-and-the-model-cannot-be-used-error-in-form-processing.md",
+      "redirect_url": "/troubleshoot/power-platform/ai-builder/power-automate/training-failed-and-the-model-cannot-be-used-error-in-form-processing",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/ai-builder/when-i-scan-images-using-aibuilder-components-in-powerapps-the-output-image-rotation-is-wrong.md",
+      "redirect_url": "/troubleshoot/power-platform/ai-builder/power-apps/when-i-scan-images-using-aibuilder-components-in-powerapps-the-output-image-rotation-is-wrong",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/power-platform/ai-builder/your-model-uses-a-preview-functionality-which-has-expired.md",
+      "redirect_url": "/troubleshoot/power-platform/ai-builder/power-automate/your-model-uses-a-preview-functionality-which-has-expired",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/agent-installation-error-319.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/agent-installation-error-347.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/protection-agent-crashes.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/error-restore-dpmdb-bak-file.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/restore-database-error-470.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/disks-not-enumeratd-fail-to-add.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/dpm-service-crashes-event-917.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/sub-menu-items-show-more-than-once.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/troubleshoot-end-user-recovery-issues.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/host-level-backup-error-0x8007173d.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/configure-cluster-networks.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/hyper-v-backup-fails-error-30112.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/deduplicated-volumes-backup-fails.md",
+      "redirect_url": "/system-center/dpm/dpm-support-issues#the-dedup-file-system-cant-be-protected-to-a-secondary-dpm-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/cannot-run-sql-instance-to-upgrade-dpm.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/consistency-check-error-0x80070005.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/list-dpm-2012-sp1-error-codes.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/configure-smtp-server-information-error-2013.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/upgrade-dpm-vmware-vm-protection.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/cannot-restore-renamed-sharepoint-site.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/cannot-protect-sql-database.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/databases-with-multiple-backslash-characters-fail-restore.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/dpm/fail-to-inventory-ibm-35xx-tape-library.md",
+      "redirect_url": "/troubleshoot/system-center/dpm/welcome-dpm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/vmm/all-hosts-receive-zero-rating.md",
+      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/vmm/apostrophe-causes-vmm-crash.md",
+      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/vmm/app-controller-basic-troubleshooter.md",
+      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/vmm/cannot-enable-mac-spoofing.md",
+      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/vmm/cannot-upgrade-to-licensed-version.md",
+      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/vmm/convert-between-vhd-vhdx-formats.md",
+      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/vmm/database-error-upgrading-scvmm.md",
+      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/vmm/determine-version-update-rollups.md",
+      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/vmm/enable-vm-protection-error-25035.md",
+      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/vmm/incorrect-agent-status.md",
+      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/vmm/manage-host-fails-error-2911.md",
+      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/vmm/manage-hyper-v-hosts-error-0x8033803b.md",
+      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/vmm/microsoft-application-support-policy.md",
+      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/vmm/network-properties-show-not-connected.md",
+      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/vmm/not-enough-disk-space-run-v2v-conversion.md",
+      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/vmm/p2v-conversion-fails-with-gpt-partitions.md",
+      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/vmm/p2v-conversion-stops-at-40-percent.md",
+      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/vmm/reinstallation-deserialize-object-error.md",
+      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/vmm/reinstall-vmm-agent.md",
+      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/vmm/self-service-user-cannot-view-service.md",
+      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/vmm/server-app-v-agent-custom-actions.md",
+      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/vmm/server-app-v-sequencer-custom-actions.md",
+      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/vmm/shared-nothing-live-migration-error-0x8007274d.md",
+      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/vmm/third-party-applications-support-policy.md",
+      "redirect_url": "/troubleshoot/system-center/vmm/welcome-vmm",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/system-center/vmm/protected-vm-resync-state.md",
+      "redirect_url": "/troubleshoot/azure/site-recovery/protected-vm-resync-state",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/system-center/vmm/creating-protection-group-fails.md",
+      "redirect_url": "/troubleshoot/azure/site-recovery/creating-protection-group-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/general/information-mats-sdp.md",
+      "redirect_url": "/troubleshoot/sql/tools/sql-support-troubleshooting-diagnostic-tools",
       "redirect_document_id": true
     }
   ]

@@ -6,9 +6,8 @@ documentationcenter: ''
 manager: dcscontentpm
 editor: 'v-jesits'
 tags: ''
-ms.custom: linux-related-content
+ms.custom: sap:Cannot connect to my VM, linux-related-content
 ms.service: virtual-machines
-ms.subservice: vm-cannot-connect
 ms.collection: linux
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux

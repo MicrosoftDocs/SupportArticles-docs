@@ -1,11 +1,10 @@
 ---
 title: Troubleshoot application pool crashes on Cloud Services
 description: Learn how to resolve issues that cause an application pool to crash on a virtual machine in Azure Cloud Services.
-ms.date: 09/26/2022
+ms.date: 04/01/2024
 editor: v-jsitser
 ms.reviewer: piw, v-leedennis
-ms.service: cloud-services
-ms.subservice: troubleshoot-extended-support
+ms.service: cloud-services-extended-support
 #Customer intent: As an Azure Cloud Services user, I want to resolve issues that cause application pool crashes on my virtual machine so that I can avoid downtime on my Cloud Services application.
 ---
 

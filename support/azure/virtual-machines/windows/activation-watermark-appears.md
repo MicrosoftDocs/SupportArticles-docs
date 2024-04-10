@@ -6,7 +6,7 @@ ms.author: cwhitley
 ms.reviewer: scotro, scottmca, kimberj, jdickson, shache, v-naqviadil, v-leedennis
 ms.date: 03/18/2024
 ms.service: virtual-machines
-ms.subservice: vm-windows-activation
+ms.custom: sap:Cannot activate my Windows VM
 ms.topic: troubleshooting-problem-resolution
 #Customer intent: As an Azure administrator, I want to learn how to resolve the appearance of an "Activate Windows" watermark so that I can successfully use Windows on my Azure virtual machine.
 ---

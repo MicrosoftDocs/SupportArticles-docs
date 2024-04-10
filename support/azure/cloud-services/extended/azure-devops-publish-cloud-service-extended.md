@@ -1,10 +1,9 @@
 ---
 title: Publish Cloud Services (extended support) via Azure DevOps
 description: Describes how to publish Cloud Services (extended support) by using Azure DevOps.
-ms.date: 12/16/2022
+ms.date: 04/01/2024
 ms.reviewer: piw, maheshallu, v-weizhu
-ms.service: cloud-services
-ms.subservice: troubleshoot-dev
+ms.service: cloud-services-extended-support
 ms.topic: how-to
 ---
 # How to use Azure DevOps to publish Cloud Services (extended support)

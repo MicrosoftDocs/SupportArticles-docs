@@ -7,11 +7,11 @@ author: genlin
 manager: dcscontentpm
 tags: top-support-issue,azure-resource-manager,azure-service-management
 ms.service: virtual-machines
-ms.subservice: vm-cannot-start-stop
 ms.topic: troubleshooting
 ms.date: 08/28/2023
 ms.author: genli
 
+ms.custom: sap:Received an Allocation Failure
 ---
 # Troubleshooting steps specific to allocation failure scenarios in the classic deployment model
 

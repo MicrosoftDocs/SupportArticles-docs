@@ -4,8 +4,7 @@ description: Discusses an issue in which the last command in the Azure Linux Cus
 ms.date: 07/21/2020
 ms.reviewer: 
 ms.service: virtual-machines
-ms.subservice: vm-extensions-not-operating
-ms.custom: linux-related-content
+ms.custom: sap:VM Extensions not operating correctly, linux-related-content
 ms.collection: linux
 ---
 # The CustomScript extension reruns a command in Azure Linux

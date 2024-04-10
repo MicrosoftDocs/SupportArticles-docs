@@ -5,6 +5,7 @@ ms.reviewer: jdaly
 ms.date: 10/16/2023
 author: swatimadhukargit
 ms.author: swatim
+ms.custom: sap:Working with Solutions\Dependencies prevent a solution uninstall
 ---
 # "Failed deleting solution" error occurs due to circular dependencies between two solutions
 

@@ -1,7 +1,8 @@
 ---
 title: Troubleshoot Exchange protection and recovery issues
 description: Describes how to troubleshoot Exchange protection and recovery issues in Data Protection Manager.
-ms.date: 08/22/2020
+ms.date: 04/08/2024
+ms.reviewer: Mjacquet
 ---
 # Troubleshoot Exchange protection and recovery issues in Data Protection Manager
 
