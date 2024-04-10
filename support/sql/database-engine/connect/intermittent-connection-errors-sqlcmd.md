@@ -1,14 +1,14 @@
 ---
-title: Intermittent connection errors when using SQLCMD utility
-description: This article provides a resolution for resolving intermittent connection errors that are generated when you use the SQLCMD tool.
-ms.date: 04/03/2024
+title: Intermittent connection errors occurs with SQLCMD utility
+description: This article provides a resolution for intermittent connection errors that are generated when you use the SQLCMD tool.
+ms.date: 04/10/2024
 author: prmadhes-msft
 ms.author: prmadhes
 ms.reviewer: jopilov, haiyingyu, mastewa, v-jayaramanp
 ms.custom: sap:Connection issues
 ---
 
-# Intermittent connection errors when you use SQLCMD
+# Intermittent connection errors when using SQLCMD utility
 
 This article helps you resolve intermittent connection "OS error 10054" issues that occur when you use the SQLCMD command line tool.
 
