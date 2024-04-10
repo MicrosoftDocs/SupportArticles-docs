@@ -5,6 +5,7 @@ ms.date: 05/30/2023
 ms.service: azure-monitor
 ms.subservice: application-insights
 ms.reviewer: toddfous, v-kainawroth, v-weizhu
+ms.custom: sap:Missing or Incorrect data after enabling Application Insights in Azure Portal
 ---
 # How to update third-party server configuration
 

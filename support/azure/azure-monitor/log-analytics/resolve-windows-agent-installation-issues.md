@@ -8,6 +8,7 @@ ms.service: azure-monitor
 ms.subservice: logs-troubleshoot
 keywords: 
 #Customer intent: As a Windows Log Analytics Agent (Windows Agent) user, I want to resolve Windows Agent installation errors so I can complete my installation successfully. 
+ms.custom: sap:azure-monitor
 ---
 
 # Resolve Windows Log Analytics Agent installation issues

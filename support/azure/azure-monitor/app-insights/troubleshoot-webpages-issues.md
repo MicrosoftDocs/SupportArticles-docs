@@ -5,7 +5,7 @@ ms.date: 06/07/2023
 ms.service: azure-monitor
 ms.subservice: application-insights
 ms.devlang: javascript
-ms.custom: devx-track-js
+ms.custom: sap:Missing or Incorrect data after enabling Application Insights in Azure Portal, devx-track-js
 ms.reviewer: mmcc, toddfous, aaronmax, v-weizhu
 ---
 # Troubleshoot Application Insights JavaScript SDK for webpages

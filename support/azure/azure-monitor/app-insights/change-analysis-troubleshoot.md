@@ -6,6 +6,7 @@ ms.reviewer: cawa, aaronmax, hannahhunter, v-leedennis, v-jsitser, v-weizhu
 ms.service: azure-monitor
 ms.subservice: change-analysis
 #Customer intent: As an Azure Monitor Change Analysis user, I want to know how to troubleshoot common resource provider problems so I can use the service effectively.
+ms.custom: sap:Manual Instrumentation using SDK, Open Telemetry or by installing Agent
 ---
 # Troubleshoot Azure Monitor's Change Analysis
 

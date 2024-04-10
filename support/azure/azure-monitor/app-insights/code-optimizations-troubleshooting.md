@@ -9,6 +9,7 @@ ms.service: azure-monitor
 ms.subservice: optimization-insights
 ms.topic: troubleshooting
 ms.date: 02/09/2024
+ms.custom: sap:Availability Tests
 ---
 
 # Troubleshoot Code Optimizations (Preview)

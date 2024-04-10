@@ -6,6 +6,7 @@ editor: v-jsitser
 ms.reviewer: aaronmax, v-leedennis
 ms.service: azure-monitor
 ms.subservice: application-insights
+ms.custom: sap:Availability Tests
 ---
 
 # Diagnose ping test failure in Application Insights availability monitoring

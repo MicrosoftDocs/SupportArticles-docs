@@ -8,6 +8,7 @@ ms.reviewer: ashisunnam, aaronmax, v-leedennis
 editor: v-jsitser
 ms.service: azure-monitor
 ms.subservice: application-insights
+ms.custom: sap:Missing or Incorrect data after enabling Application Insights in Azure Portal
 ---
 # Troubleshoot Application Insights monitoring of Node.js apps and services
 

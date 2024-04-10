@@ -7,6 +7,7 @@ ms.author: hannahhunter
 ms.reviewer: cweining
 ms.service: azure-monitor
 ms.subservice: application-insights
+ms.custom: sap:Profiler or Snapshot Debugger
 ---
 # <a id="troubleshooting"></a> Troubleshoot problems enabling Application Insights Snapshot Debugger or viewing snapshots
 

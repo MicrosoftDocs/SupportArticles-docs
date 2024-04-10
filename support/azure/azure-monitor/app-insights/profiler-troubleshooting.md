@@ -6,6 +6,7 @@ ms.reviewer: v-leedennis, aaronmax, cweining, v-jsitser, hannahhunter, ryankahng
 ms.service: azure-monitor
 ms.subservice: application-insights
 #Customer intent: As an Azure Application Insights user, I want to know how to troubleshoot various problems enabling or viewing Application Insights Profiler so I can use it effectively.  
+ms.custom: sap:Availability Tests
 ---
 # Troubleshoot Application Insights Profiler
 

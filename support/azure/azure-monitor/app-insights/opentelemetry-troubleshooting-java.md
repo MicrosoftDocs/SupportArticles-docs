@@ -7,6 +7,7 @@ ms.service: azure-monitor
 ms.subservice: application-insights
 ms.devlang: java
 ms.reviewer: mmcc, lechen, aaronmax, v-leedennis
+ms.custom: sap:Missing or Incorrect data after enabling Application Insights in Azure Portal
 ---
 
 # Troubleshoot OpenTelemetry issues in Java
