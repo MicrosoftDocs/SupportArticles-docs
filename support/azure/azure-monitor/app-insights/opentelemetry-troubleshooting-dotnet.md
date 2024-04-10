@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot OpenTelemetry issues in .NET
 description: Learn how to troubleshoot OpenTelemetry issues in .NET. View known issues that involve Azure Monitor OpenTelemetry Exporters.
-ms.date: 04/07/2023
+ms.date: 04/10/2024
 editor: v-jsitser
 ms.service: azure-monitor
 ms.subservice: application-insights
@@ -30,7 +30,5 @@ The following items are known issues for the Azure Monitor OpenTelemetry Exporte
 - The operation name is missing from dependency telemetry. The missing operation name causes failures and adversely affects performance tab experience.
 
 - The device model is missing from request and dependency telemetry. The missing device model adversely affects device cohort analysis.
-
-- The database server name is missing from the dependency name. Because the database server name isn't included, OpenTelemetry Exporters incorrectly aggregate tables that have the same name onto different servers.
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

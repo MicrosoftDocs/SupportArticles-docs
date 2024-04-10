@@ -1,7 +1,7 @@
 ---
 title: Service Manager connector doesn't remove an uninstalled software relationship
 description: Fixes an issue in which the Service Manager connector to Configuration Manager doesn't remove a software-installed relationship even though the software is uninstalled.
-ms.date: 03/14/2024
+ms.date: 04/08/2024
 ms.reviewer: khusmeno
 ---
 # The Service Manager connector to Configuration Manager doesn't transfer uninstalled software information

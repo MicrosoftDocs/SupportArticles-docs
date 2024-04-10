@@ -2723,7 +2723,7 @@
       {
         "source_path": "entra-id/app-integration/index.md",
         "redirect_url": "/troubleshoot/azure/entra-id/welcome-entra-id",
-        "redirect_document_id": true
+        "redirect_document_id": false
       },
       {
         "source_path": "entra-id/ad-dmn-services/index.md",
@@ -2754,6 +2754,1016 @@
         "source_path": "entra-id/user-prov-sync/index.md",
         "redirect_url": "/troubleshoot/azure/entra-id/welcome-entra-id",
         "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-kubernetes/troubleshoot-aks-cluster-creation-issues.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/troubleshoot-aks-cluster-creation-issues",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/error-code-badrequest-or-invalidclientsecret.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/error-code-badrequest-or-invalidclientsecret",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/error-code-cnidownloadtimeoutvmextensionerror.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/error-code-cnidownloadtimeoutvmextensionerror",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/error-code-vhdfilenotfound.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/error-code-vhdfilenotfound",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/error-code-invalidparameter.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/error-code-invalidparameter",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/error-code-invalidresourcereference.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/error-code-invalidresourcereference",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/known-issues-custom-kubelet-configuration.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/known-issues-custom-kubelet-configuration",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/error-code-k8sapiserverconnfailvmextensionerror.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/error-code-k8sapiserverconnfailvmextensionerror",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/error-code-k8sapiserverdnslookupfailvmextensionerror.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/error-code-k8sapiserverdnslookupfailvmextensionerror",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/error-code-linkedauthorizationfailed.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/error-code-linkedauthorizationfailed",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/error-code-missingsubscriptionregistration.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/error-code-missingsubscriptionregistration",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/error-code-operationnotallowed-publicipcountlimitreached.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/error-code-operationnotallowed-publicipcountlimitreached",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/error-code-operationpreempted.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/error-code-operationpreempted",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/error-code-outboundconnfailvmextensionerror.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/error-code-outboundconnfailvmextensionerror",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/error-code-requestdisallowedbypolicy.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/error-code-requestdisallowedbypolicy",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/error-code-reservedresourcename.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/error-code-reservedresourcename",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/error-code-serviceprincipalvalidationclienterror.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/error-code-serviceprincipalvalidationclienterror",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/error-code-subscriptionrequeststhrottled.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/error-code-subscriptionrequeststhrottled",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/subnet-with-external-resources-cannot-be-used-by-other-resources.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/subnet-with-external-resources-cannot-be-used-by-other-resources",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/error-code-vmextensionprovisioningtimeout.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/error-code-vmextensionprovisioningtimeout",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/windows-cse-error-check-api-server-connectivity.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/windows-cse-error-check-api-server-connectivity",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/error-code-zonalallocationfailed-allocationfailed.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/error-code-zonalallocationfailed-allocationfailed",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/quota-exceeded-during-creation-upgrade.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/quota-exceeded-during-creation-upgrade",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/upgrades-to-kubernetes-fail-using-node-labels.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/upgrades-to-kubernetes-fail-using-node-labels",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/nodepools-not-upgraded-to-gen2-during-node-image-upgrade.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/nodepools-not-upgraded-to-gen2-during-node-image-upgrade",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/upgrade-fails-because-of-nsg-rules.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/upgrade-fails-because-of-nsg-rules",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/aks-memory-saturation-after-upgrade.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/aks-memory-saturation-after-upgrade",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/cannot-delete-load-balancer-private-link-service.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/cannot-delete-load-balancer-private-link-service",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/cannot-delete-ip-subnet-nsg.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/cannot-delete-ip-subnet-nsg",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/error-code-inuseroutetablecannotbedeleted.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/error-code-inuseroutetablecannotbedeleted",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/load-balancer-or-nsg-in-use-by-vm-scale-set.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/load-balancer-or-nsg-in-use-by-vm-scale-set",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/error-code-requestdisallowedbypolicy-delete.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/error-code-requestdisallowedbypolicy-delete",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/error-code-toomanyrequestsreceived-subscriptionrequeststhrottled.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/error-code-toomanyrequestsreceived-subscriptionrequeststhrottled",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/cannot-scale-cluster-autoscaler-enabled-node-pool.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/cannot-scale-cluster-autoscaler-enabled-node-pool",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/aks-at-scale-troubleshoot-guide.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/aks-at-scale-troubleshoot-guide",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/cluster-autoscaler-fails-to-scale.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/cluster-autoscaler-fails-to-scale",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/error-code-subnetisfull.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/error-code-subnetisfull",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/upgrading-or-scaling-does-not-succeed.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/upgrading-or-scaling-does-not-succeed",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/error-using-feature-requiring-virtual-machine-scale-set.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/error-using-feature-requiring-virtual-machine-scale-set",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/node-count-is-not-in-autoscaler-min-max-range.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/node-count-is-not-in-autoscaler-min-max-range",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/troubleshoot-aks-cluster-start-issues.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/troubleshoot-aks-cluster-start-issues",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/operationnotallowed.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/operationnotallowed",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/aks-common-issues-faq.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/aks-common-issues-faq",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/429-too-many-requests-errors.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/429-too-many-requests-errors",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/application-fails-argument-list-too-long.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/application-fails-argument-list-too-long",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/changing-property-imagereference-not-allowed.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/changing-property-imagereference-not-allowed",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/aks-increased-memory-usage-cgroup-v2.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/aks-increased-memory-usage-cgroup-v2",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/missing-or-invalid-service-principal.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/missing-or-invalid-service-principal",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/pod-stuck-crashloopbackoff-mode.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/pod-stuck-crashloopbackoff-mode",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/tls-client-offered-unsupported-versions.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/tls-client-offered-unsupported-versions",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/troubleshoot-common-azure-linux-aks.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/troubleshoot-common-azure-linux-aks",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/troubleshoot-apiserver-etcd.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/troubleshoot-apiserver-etcd",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/cluster-node-virtual-machine-failed-state.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/availability-performance/cluster-node-virtual-machine-failed-state",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/identify-high-cpu-consuming-containers-aks.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/availability-performance/identify-high-cpu-consuming-containers-aks",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/identify-memory-saturation-aks.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/availability-performance/identify-memory-saturation-aks",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/node-not-ready-basic-troubleshooting.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/availability-performance/node-not-ready-basic-troubleshooting",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/node-not-ready-custom-script-extension-errors.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/availability-performance/node-not-ready-custom-script-extension-errors",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/node-not-ready-expired-certificates.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/availability-performance/node-not-ready-expired-certificates",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/node-not-ready-after-being-healthy.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/availability-performance/node-not-ready-after-being-healthy",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/node-not-ready-then-recovers.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/availability-performance/node-not-ready-then-recovers",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/connection-issues-application-hosted-aks-cluster.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/connectivity/connection-issues-application-hosted-aks-cluster",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/custom-nsg-blocks-traffic.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/connectivity/custom-nsg-blocks-traffic",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/resolve-az-aks-command-invoke-failures.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/connectivity/resolve-az-aks-command-invoke-failures",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/get-and-analyze-http-response-codes.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/connectivity/get-and-analyze-http-response-codes",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/intermittent-timeouts-or-server-issue.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/connectivity/intermittent-timeouts-or-server-issue",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/troubleshoot-cluster-connection-issues-api-server.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/connectivity/troubleshoot-cluster-connection-issues-api-server",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/client-ip-address-cannot-access-api-server.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/connectivity/client-ip-address-cannot-access-api-server",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/config-file-is-not-available-when-connecting.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/connectivity/config-file-is-not-available-when-connecting",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/tunnel-connectivity-issues.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/connectivity/tunnel-connectivity-issues",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/user-cannot-get-cluster-resources.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/connectivity/user-cannot-get-cluster-resources",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/cannot-access-cluster-api-server-using-authorized-ip-ranges.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/connectivity/cannot-access-cluster-api-server-using-authorized-ip-ranges",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/basic-troubleshooting-outbound-connections.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/connectivity/basic-troubleshooting-outbound-connections",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/stale-watch-azure-ad-pod-identity-nmi-status-500.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/connectivity/stale-watch-azure-ad-pod-identity-nmi-status-500",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/errors-arfter-restricting-egress-traffic.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/connectivity/errors-arfter-restricting-egress-traffic",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/troubleshoot-connection-pods-services-same-cluster.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/connectivity/troubleshoot-connection-pods-services-same-cluster",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/troubleshoot-connections-endpoints-same-virtual-network.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/connectivity/troubleshoot-connections-endpoints-same-virtual-network",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/troubleshoot-connections-endpoints-outside-virtual-network.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/connectivity/troubleshoot-connections-endpoints-outside-virtual-network",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/troubleshoot-dns-failure-from-pod-but-not-from-worker-node.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/connectivity/troubleshoot-dns-failure-from-pod-but-not-from-worker-node",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/traffic-between-node-pools-is-blocked.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/connectivity/traffic-between-node-pools-is-blocked",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/cannot-view-resources-kubernetes-resource-viewer-portal.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/connectivity/cannot-view-resources-kubernetes-resource-viewer-portal",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/error-from-server-error-dialing-backend-dial-tcp.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/connectivity/error-from-server-error-dialing-backend-dial-tcp",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/insufficientsubnetsize-error-advanced-networking.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/connectivity/insufficientsubnetsize-error-advanced-networking",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/tcp-timeouts-dial-tcp-nodeip-10250-io-timeout.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/connectivity/tcp-timeouts-dial-tcp-nodeip-10250-io-timeout",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/tcp-timeouts-kubetctl-third-party-tools-connect-api-server.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/connectivity/tcp-timeouts-kubetctl-third-party-tools-connect-api-server",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/capture-system-insights-from-aks.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/logs/capture-system-insights-from-aks",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/capture-tcp-dump-linux-node-aks.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/logs/capture-tcp-dump-linux-node-aks",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/capture-tcp-dump-windows-node-aks.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/logs/capture-tcp-dump-windows-node-aks",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/packet-capture-pod-level.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/logs/packet-capture-pod-level",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/fail-to-mount-azure-file-share.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/storage/fail-to-mount-azure-file-share",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/mounting-azure-blob-storage-container-fail.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/storage/mounting-azure-blob-storage-container-fail",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/fail-to-mount-azure-disk-volume.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/storage/fail-to-mount-azure-disk-volume",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/failure-setting-azure-disk-mount-options-uid-gid.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/storage/failure-setting-azure-disk-mount-options-uid-gid",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/could-not-change-permissions-azure-files.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/storage/could-not-change-permissions-azure-files",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/create-file-share-failed-storage-account.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/storage/create-file-share-failed-storage-account",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/file-share-mount-failures-azure-files.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/storage/file-share-mount-failures-azure-files",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/mountoptions-settings-azure-files.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/storage/mountoptions-settings-azure-files",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/slow-attach-detach-operations-azure-disk.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/storage/slow-attach-detach-operations-azure-disk",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/troubleshoot-common-bring-your-own-key-issues.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/storage/troubleshoot-common-bring-your-own-key-issues",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/aks-cost-analysis-add-on-issues.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/extensions/aks-cost-analysis-add-on-issues",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/troubleshoot-key-vault-csi-secrets-store-csi-driver.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/extensions/troubleshoot-key-vault-csi-secrets-store-csi-driver",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/cluster-extension-deployment-errors.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/extensions/cluster-extension-deployment-errors",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/troubleshoot-dapr-extension-installation-errors.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/extensions/troubleshoot-dapr-extension-installation-errors",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/troubleshoot-failed-kubernetes-deployment-offer.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/extensions/troubleshoot-failed-kubernetes-deployment-offer",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/troubleshoot-kubernetes-event-driven-autoscaling-add-on.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/extensions/troubleshoot-kubernetes-event-driven-autoscaling-add-on",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/cannot-pull-image-from-acr-to-aks-cluster.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/extensions/cannot-pull-image-from-acr-to-aks-cluster",
+        "redirect_document_id": true
+     },
+     {
+       "source_path": "azure-kubernetes/akscapacityerror.md",
+       "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/akscapacityerror",
+       "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/aks-upgrade-scale-fail-log-analytics-workspace-missing.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/aks-upgrade-scale-fail-log-analytics-workspace-missing",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/createorupdatevirtualnetworklinkfailed-error.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/createorupdatevirtualnetworklinkfailed-error",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/error-code-customprivatednszonemissingpermissionerror.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/error-code-customprivatednszonemissingpermissionerror",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/error-code-poddrainfailure.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/error-code-poddrainfailure",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/error-code-publicipcountlimitreached.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/error-code-publicipcountlimitreached",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/error-code-quotaexceeded.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/error-code-quotaexceeded",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/error-code-servicecidroverlapexistingsubnetscidr.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/error-code-servicecidroverlapexistingsubnetscidr",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/error-code-subnetisfull-upgrade.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/error-code-subnetisfull-upgrade",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/error-code-unsatisfiablepdb.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/error-code-unsatisfiablepdb",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/nodepoolmcversionincompatible-error.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/nodepoolmcversionincompatible-error",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/avoid-running-as-root-in-containers.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/create-upgrade-delete/avoid-running-as-root-in-containers",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/error-azure-policy-constraintnotprocessed.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/extensions/error-azure-policy-constraintnotprocessed",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/error-in-policy-assign-main-file-terraform.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/extensions/error-in-policy-assign-main-file-terraform",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/files/file-sync-troubleshoot-sync-errors.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/files/file-sync/file-sync-troubleshoot-sync-errors",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/files/files-troubleshoot-smb-connectivity.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/files/connectivity/files-troubleshoot-smb-connectivity",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/files/files-troubleshoot-smb-authentication.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/files/security/files-troubleshoot-smb-authentication",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/files/files-troubleshoot-performance.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/files/performance/files-troubleshoot-performance",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/files/files-troubleshoot-linux-smb.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/files/security/files-troubleshoot-linux-smb",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/files/files-troubleshoot-linux-nfs.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/files/security/files-troubleshoot-linux-nfs",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/common/storage-explorer-troubleshooting.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/blobs/alerts/storage-explorer-troubleshooting",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/blobs/adls-gen2-sticky-bit-403-access-denied.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/blobs/authentication/adls-gen2-sticky-bit-403-access-denied",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/files/troubleshoot-azure-files.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/files/backup-restore/troubleshoot-azure-files",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/files/request-body-large.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/blobs/connectivity/request-body-large",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/files/file-sync-troubleshoot-sync-group-management.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/files/file-sync/file-sync-troubleshoot-sync-group-management",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/files/file-sync-troubleshoot-installation.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/files/file-sync/file-sync-troubleshoot-installation",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/files/file-sync-troubleshoot-cloud-tiering.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/files/file-sync/file-sync-troubleshoot-cloud-tiering",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/files/file-sync-troubleshoot.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/files/file-sync/file-sync-troubleshoot",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/files/files-troubleshoot-create-alerts.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/files/alerts/files-troubleshoot-create-alerts",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/files/files-troubleshoot.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/files/connectivity/files-troubleshoot",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/files/files-client-other-errors.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/files/security/files-client-other-errors",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/common/troubleshoot-storage-performance.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/blobs/alerts/troubleshoot-storage-performance",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/common/troubleshoot-storage-client-application-errors.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/blobs/alerts/troubleshoot-storage-client-application-errors",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/common/troubleshoot-storage-availability.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/blobs/alerts/troubleshoot-storage-availability",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/common/troubleshoot-latency-storage-analytics-logs.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/blobs/alerts/troubleshoot-latency-storage-analytics-logs",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/common/storage-use-azcopy-troubleshoot.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/blobs/connectivity/storage-use-azcopy-troubleshoot",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/common/storage-monitoring-diagnosing-troubleshooting.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/blobs/alerts/storage-monitoring-diagnosing-troubleshooting",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/blobs/invalid-blob-or-block-content-or-invalid-block-list.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/blobs/connectivity/invalid-blob-or-block-content-or-invalid-block-list",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/blobs/diagnose-high-cpu-disk-perfinsights.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/blobs/performance/diagnose-high-cpu-disk-perfinsights",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/blobs/data-protection-backup-recovery.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/blobs/recovery/data-protection-backup-recovery",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/blobs/copy-blobs-between-storage-accounts-network-restriction.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/blobs/connectivity/copy-blobs-between-storage-accounts-network-restriction",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/files/optimize-createfile-function.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/blobs/performance/optimize-createfile-function",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/blobs/unable-to-execute-the-embedded-application-error-backup-agent.md",
+        "redirect_url": "/troubleshoot/azure/site-recovery/backup/unable-to-execute-the-embedded-application-error-backup-agent",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-storage/blobs/recovery/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/blobs/welcome-blob-storage",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "site-recovery/backup/index.md",
+        "redirect_url": "/troubleshoot/azure/site-recovery/welcome-site-recovery",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-storage/blobs/connectivity/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/blobs/welcome-blob-storage",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-storage/blobs/authentication/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/blobs/welcome-blob-storage",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-storage/blobs/performance/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/blobs/welcome-blob-storage",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-storage/blobs/alerts/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/blobs/welcome-blob-storage",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-storage/files/alerts/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/files/welcome-files-storage",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-storage/files/backup-restore/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/files/welcome-files-storage",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-storage/files/connectivity/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/files/welcome-files-storage",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-storage/files/performance/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/files/welcome-files-storage",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-storage/files/security/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/files/welcome-files-storage",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-storage/files/file-sync/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-storage/files/welcome-files-storage",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-storage/common/welcome-storage-tool-metric.yml",
+        "redirect_url": "/troubleshoot/azure/index",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-container-instances/container-group-deployment-waiting-state.md",
+        "redirect_url": "/troubleshoot/azure/azure-container-instances/configuration-setup/container-group-deployment-waiting-state",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-container-instances/inaccessible-image.md",
+        "redirect_url": "/troubleshoot/azure/azure-container-instances/configuration-setup/inaccessible-image",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-container-instances/long-image-pulls.md",
+        "redirect_url": "/troubleshoot/azure/azure-container-instances/configuration-setup/long-image-pulls",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-container-instances/service-unavailable-container-group-quota-exceeded.md",
+        "redirect_url": "/troubleshoot/azure/azure-container-instances/configuration-setup/service-unavailable-container-group-quota-exceeded",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-container-instances/service-unavailable-requested-resource-is-not-available.md",
+        "redirect_url": "/troubleshoot/azure/azure-container-instances/configuration-setup/service-unavailable-requested-resource-is-not-available",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-container-instances/cannot-delete-vnet-subnet.md",
+        "redirect_url": "/troubleshoot/azure/azure-container-instances/connectivity/cannot-delete-vnet-subnet",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-container-instances/aci-debug-tools.md",
+        "redirect_url": "/troubleshoot/azure/azure-container-instances/management/aci-debug-tools",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-container-instances/aci-still-running-after-stop-delete-command.md",
+        "redirect_url": "/troubleshoot/azure/azure-container-instances/management/aci-still-running-after-stop-delete-command",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-container-instances/acr-image-pull-failures-managed-identity.md",
+        "redirect_url": "/troubleshoot/azure/azure-container-instances/management/acr-image-pull-failures-managed-identity",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-container-instances/cannot-do-container-group-operations.md",
+        "redirect_url": "/troubleshoot/azure/azure-container-instances/management/cannot-do-container-group-operations",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-container-instances/common-confidential-container-errors.md",
+        "redirect_url": "/troubleshoot/azure/azure-container-instances/management/common-confidential-container-errors",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-container-instances/container-group-restart-killing-event-interruption.md",
+        "redirect_url": "/troubleshoot/azure/azure-container-instances/management/container-group-restart-killing-event-interruption",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-container-instances/unexpected-memory-usage-metrics.md",
+        "redirect_url": "/troubleshoot/azure/azure-container-instances/management/unexpected-memory-usage-metrics",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-container-instances/configuration-setup/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-container-instances/welcome-container-instances.yml",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-container-instances/management/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-container-instances/welcome-container-instances.yml",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-container-instances/connectivity/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-container-instances/welcome-container-instances.yml",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "cloud-services/classic/support-linux-open-source-technology.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machines/linux/support-linux-open-source-technology",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-container-instances/container-group-transitioning-state.md",
+        "redirect_url": "/troubleshoot/azure/azure-container-instances/configuration-setup/container-group-transitioning-state",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-container-instances/error-codes-spot-container-creation.md",
+        "redirect_url": "/troubleshoot/azure/azure-container-instances/configuration-setup/error-codes-spot-container-creation",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-container-instances/web-socket-is-closed-or-could-not-be-opened.md",
+        "redirect_url": "/troubleshoot/azure/azure-container-instances/connectivity/web-socket-is-closed-or-could-not-be-opened",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/availability-performance/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-kubernetes/connectivity/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-kubernetes/create-upgrade-delete/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-kubernetes/extensions/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-kubernetes/logs/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-kubernetes/storage/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "virtual-machine-scale-sets/delete/index.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machine-scale-sets/welcome-virtual-machine-scale-sets",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "virtual-machine-scale-sets/deploy/index.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machine-scale-sets/welcome-virtual-machine-scale-sets",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "virtual-machine-scale-sets/extensions/index.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machine-scale-sets/welcome-virtual-machine-scale-sets",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "virtual-machine-scale-sets/restart-stop/index.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machine-scale-sets/welcome-virtual-machine-scale-sets",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "virtual-machine-scale-sets/scaling/index.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machine-scale-sets/welcome-virtual-machine-scale-sets",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "virtual-machine-scale-sets/allocationfailed-or-zonalallocationfailed.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machine-scale-sets/deploy/allocationfailed-or-zonalallocationfailed",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machine-scale-sets/vmss-public-ip-count-limit-exceeded.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machine-scale-sets/deploy/vmss-public-ip-count-limit-exceeded",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machine-scale-sets/vmss-invalid-parameter-fault-domain-count.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machine-scale-sets/deploy/vmss-invalid-parameter-fault-domain-count",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machine-scale-sets/vmss-invalid-parameter-single-placement-group.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machine-scale-sets/deploy/vmss-invalid-parameter-single-placement-group",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machine-scale-sets/vmss-outbound-connectivity-not-enabled.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machine-scale-sets/deploy/vmss-outbound-connectivity-not-enabled",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machine-scale-sets/instances-not-repaired.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machine-scale-sets/restart-stop/instances-not-repaired",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machine-scale-sets/resource-health-degraded-state.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machine-scale-sets/restart-stop/resource-health-degraded-state",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machine-scale-sets/virtual-machine-scale-sets-quota-exceeded.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machine-scale-sets/scaling/virtual-machine-scale-sets-quota-exceeded",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machine-scale-sets/vmss-operation-not-allowed.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machine-scale-sets/delete/vmss-operation-not-allowed",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "virtual-machine-scale-sets/vm-extension-provisioning-errors.md",
+        "redirect_url": "/troubleshoot/azure/virtual-machine-scale-sets/extensions/vm-extension-provisioning-errors",
+        "redirect_document_id": true
       }
   ]
 }
