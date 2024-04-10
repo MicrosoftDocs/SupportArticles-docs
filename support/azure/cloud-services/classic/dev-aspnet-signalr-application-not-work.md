@@ -6,7 +6,6 @@ ms.reviewer:
 author: genlin
 ms.author: genli
 ms.service: cloud-services
-ms.subservice: troubleshoot-dev
 ms.custom: sap:Development
 ---
 # ASP.NET SignalR application is not working in Azure cloud service

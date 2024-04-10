@@ -7,7 +7,6 @@ metadata:
   editor: v-jsitser
   ms.reviewer: v-maallu, v-leedennis
   ms.service: cloud-services-extended-support
-  ms.subservice: troubleshoot-extended-support
   ms.custom: sap:Problems Deploying Cloud Services
 
 title: Frequently asked questions about role instance restarts caused by VM OS upgrades

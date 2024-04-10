@@ -6,7 +6,6 @@ ms.reviewer:
 author: genlin
 ms.author: genli
 ms.service: cloud-services
-ms.subservice: troubleshoot-connections
 ms.custom: sap:Development
 ---
 # Remote Desktop Protocol not working for classic cloud service resource

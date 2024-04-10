@@ -2,7 +2,6 @@
 title: Troubleshoot Cloud Service role recycle threshold exceptions
 description: Troubleshoot UpdateDeploymentRoleRecycleThresholdReached (role recycle threshold) exceptions in Azure Cloud Service (classic).
 ms.service: cloud-services
-ms.subservice: troubleshoot-deployment-classic
 ms.date: 09/26/2022
 ms.reviewer: chiragpa, v-leedennis
 ms.custom: sap:Deployment

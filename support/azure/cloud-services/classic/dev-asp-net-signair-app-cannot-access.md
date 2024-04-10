@@ -6,7 +6,6 @@ ms.reviewer:
 author: genlin
 ms.author: genli
 ms.service: cloud-services
-ms.subservice: troubleshoot-dev
 ms.custom: sap:Development
 ---
 # ASP.NET SignalR application cannot be accessed although all role instances are in running state
