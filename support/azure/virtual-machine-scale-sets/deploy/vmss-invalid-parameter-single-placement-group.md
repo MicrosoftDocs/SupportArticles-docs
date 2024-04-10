@@ -3,8 +3,8 @@ title: The value True of parameter singlePlacementGroup is not allowed
 description: Learn how to resolve the InvalidParameter (SinglePlacementGroup error) when you deploy a Virtual Machine Scale Set by using Flexible orchestration mode.
 ms.date: 01/31/2023
 ms.service: virtual-machine-scale-sets
-ms.subservice: troubleshoot-deployment-errors
 ms.reviewer: mimckitt, v-leedennis
+ms.custom: sap:Cannot create new scale set
 ---
 # "InvalidParameter. The value 'True' of parameter 'singlePlacementGroup' is not allowed. Allowed values are: False"
 
@@ -24,4 +24,4 @@ The `singlePlacementGroup` parameter is set to `True`.
 
 Set the `singlePlacementGroup` parameter to `False`.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

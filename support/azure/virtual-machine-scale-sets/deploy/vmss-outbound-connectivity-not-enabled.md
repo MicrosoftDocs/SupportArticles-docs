@@ -3,8 +3,8 @@ title: No outbound connectivity configured for virtual machine
 description: Learn how to resolve the OutboundConnectivityNotEnabledOnVM error when you deploy a Virtual Machine Scale Set by using Flexible orchestration mode.
 ms.date: 01/31/2023
 ms.service: virtual-machine-scale-sets
-ms.subservice: troubleshoot-deployment-errors
 ms.reviewer: mimckitt, v-leedennis
+ms.custom: sap:Cannot create new scale set
 ---
 # "OutboundConnectivityNotEnabledOnVM. No outbound connectivity configured for virtual machine"
 
@@ -32,4 +32,4 @@ Enable secure outbound access for your Virtual Machine Scale Set by using a meth
 
 For highly secure applications, you can specify custom [user-defined routes](/azure/virtual-network/virtual-networks-udr-overview#user-defined) through your firewall or virtual network applications. For more information, see [Default outbound access in Azure](/azure/virtual-network/ip-services/default-outbound-access).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
