@@ -6,17 +6,17 @@ items:
   - name: OpenTelemetry troubleshooting
     items:
     - name: .NET
-      href: app-insights/opentelemetry-troubleshooting-dotnet.md
+      href: app-insights/telemetry/opentelemetry-troubleshooting-dotnet.md
     - name: Java
-      href: app-insights/opentelemetry-troubleshooting-java.md
+      href: app-insights/telemetry/opentelemetry-troubleshooting-java.md
     - name: Node.js
-      href: app-insights/opentelemetry-troubleshooting-nodejs.md
+      href: app-insights/telemetry/opentelemetry-troubleshooting-nodejs.md
     - name: Python
-      href: app-insights/opentelemetry-troubleshooting-python.md
+      href: app-insights/telemetry/opentelemetry-troubleshooting-python.md
   - name: Application Insights telemetry
     items:
     - name: Collect self-diagnostic logs for Application Insights SDKs
-      href: app-insights/enable-self-diagnostics.md
+      href: app-insights/telemetry/enable-self-diagnostics.md
     - name: Troubleshoot missing telemetry in Application Insights
       href: app-insights/investigate-missing-telemetry.md
     - name: Troubleshoot auto-instrumentation issues
@@ -24,79 +24,93 @@ items:
     - name: Application Insights classic SDK troubleshooting
       items:
       - name: .NET
-        href: app-insights/asp-net-troubleshoot-no-data.md
+        href: app-insights/telemetry/asp-net-troubleshoot-no-data.md
       - name: Java 2.x
-        href: app-insights/java-2x-troubleshoot.md
+        href: app-insights/telemetry/java-2x-troubleshoot.md
       - name: Java 3.x
-        href: app-insights/java-standalone-troubleshoot.md
+        href: app-insights/telemetry/java-standalone-troubleshoot.md
       - name: JavaScript
         items:
         - name: Troubleshoot Application Insights JavaScript SDK
-          href: app-insights/javascript-sdk-troubleshooting.md
+          href: app-insights/telemetry/javascript-sdk-troubleshooting.md
         - name: Troubleshoot Application Insights for webpages
           items:
           - name: Troubleshoot common issues
-            href: app-insights/troubleshoot-webpages-issues.md
+            href: app-insights/telemetry/troubleshoot-webpages-issues.md
           - name: Duplicate telemetry data
-            href: app-insights/duplicate-telemetry-data.md
+            href: app-insights/telemetry/duplicate-telemetry-data.md
           - name: Failed to get Request-Context correlation
-            href: app-insights/webpages-not-get-request-context-header.md
+            href: app-insights/telemetry/webpages-not-get-request-context-header.md
           - name: How to update third-party server configuration
             href: app-insights/how-to-update-third-party-server-configuration.md
-      - name: Node.js
-        href: app-insights/troubleshoot-app-insights-nodejs.md
+          - name: Troubleshoot missing telemetry in Application Insights
+            href: app-insights/investigate-missing-telemetry.md
+          - name: Troubleshoot auto-instrumentation issues
+            href: app-insights/auto-instrumentation-troubleshoot.md
+          - name: Node.js
+            href: app-insights/telemetry/troubleshoot-app-insights-nodejs.md
   - name: Application Insights features
-    items:    
+    items:
     - name: Troubleshoot Azure Application Insights availability monitoring
       items:
       - name: Availability monitoring common issues FAQ
-        href: app-insights/availability-monitoring-common-issues-faq.yml  
+        href: app-insights/availability/availability-monitoring-common-issues-faq.yml  
       - name: Diagnose ping test failures
-        href: app-insights/diagnose-ping-test-failure.md              
+        href: app-insights/availability/diagnose-ping-test-failure.md              
       - name: Intermittent test failure and protocol violation error
-        href: app-insights/intermittent-test-failure-protocol-error.md
+        href: app-insights/availability/intermittent-test-failure-protocol-error.md
       - name: Use availability tests on an internal server behind a firewall
-        href: app-insights/internal-server-availability-tests-firewall.md     
-    - name: Daily cap unexpected behaviors
-      href: app-insights/daily-cap-unexpected-behaviors.md              
-    - name: Missing CPU Total and Committed Memory metrics
-      href: app-insights/missing-cpu-total-committed-memory-metrics.md
-    - name: Portal connectivity issues
-      href: app-insights/troubleshoot-portal-connectivity.md
-    - name: Troubleshoot Application Insights Profiler
-      href: app-insights/profiler-troubleshooting.md
-    - name: Troubleshoot Code Optimizations (Preview)
-      href: ./app-insights/code-optimizations-troubleshooting.md
-    - name: Troubleshoot Azure Application Insights availability monitoring
-      href: app-insights/troubleshoot-availability.md
-    - name: Troubleshoot user behavior analytics tools in Azure Application Insights
-      href: app-insights/usage-troubleshoot.md
+        href: app-insights/availability/internal-server-availability-tests-firewall.md     
+      - name: Daily cap unexpected behaviors
+        href: app-insights/availability/daily-cap-unexpected-behaviors.md              
+      - name: Missing CPU Total and Committed Memory metrics
+        href: app-insights/availability/missing-cpu-total-committed-memory-metrics.md
+      - name: Portal connectivity issues
+        href: app-insights/availability/troubleshoot-portal-connectivity.md
+      - name: Troubleshoot Application Insights Profiler
+        href: app-insights/availability/profiler-troubleshooting.md
+      - name: Troubleshoot Code Optimizations (Preview)
+        href: app-insights/availability/code-optimizations-troubleshooting.md
+      - name: Troubleshoot Azure Application Insights availability monitoring
+        href: app-insights/availability/troubleshoot-availability.md
+      - name: Troubleshoot user behavior analytics tools in Azure Application Insights
+        href: app-insights/availability/usage-troubleshoot.md
   - name: Status Monitor and Change Analysis
-    items:   
+    items:
     - name: Troubleshoot Azure Application Insights Agent (formerly Status Monitor v2)
-      href: app-insights/status-monitor-v2-troubleshoot.md
+      href: app-insights/agent/status-monitor-v2-troubleshoot.md
     - name: Troubleshoot Azure Monitor's Change Analysis
-      href: app-insights/change-analysis-troubleshoot.md 
-  - name: Snapshot Debugger troubleshooting
-    href: app-insights/snapshot-debugger-troubleshoot.md
+      href: app-insights/agent/change-analysis-troubleshoot.md 
+  - name: Profiler or Snapshot Debugger
+    items:
+    - name: Snapshot Debugger troubleshooting
+      href: app-insights/debug/snapshot-debugger-troubleshoot.md
 
 - name: Log Analytics
   items:
-  - name: Basic troubleshooting of Microsoft Monitoring Agent
-    href: log-analytics/mma-troubleshoot-basics.md
-  - name: Check SSL connectivity for Microsoft Monitoring Agent
-    href: log-analytics/ssl-connectivity-mma-windows-powershell.md
-  - name: Error code 0x80090016 - keyset doesn't exist
-    href: log-analytics/error-code-0x80090016-keyset-does-not-exist.md
-  - name: Microsoft Monitoring Agent couldn't start
-    href: log-analytics/windows-could-not-start-mma.md
-  - name: Missing heartbeats in the Linux agent
-    href: log-analytics/linux-agent-missing-heartbeats.md
-  - name: Missing Linux performance counters
-    href: log-analytics/linux-agent-performance-counter-missing.md
-  - name: Resolve Windows Agent installation issues
-    href: log-analytics/resolve-windows-agent-installation-issues.md
-  - name: Troubleshoot erased proxy settings
-    href: log-analytics/erased-proxy-settings-microsoft-monitoring-agent.md
-  - name: Workspace data export FAQ
-    href: log-analytics/workspace-data-export-faq.yml
+  - name: Log Analytics workspaces
+    items:
+    - name: Error code 0x80090016 - keyset doesn't exist
+      href: log-analytics/workspaces/error-code-0x80090016-keyset-does-not-exist.md
+    - name: Workspace data export FAQ
+      href: log-analytics/workspaces/workspace-data-export-faq.yml
+
+  - name: Linux Agents
+    items:
+    - name: Missing heartbeats in the Linux agent
+      href: log-analytics/linux-agents/linux-agent-missing-heartbeats.md
+    - name: Missing Linux performance counters
+      href: log-analytics/linux-agents/linux-agent-performance-counter-missing.md
+
+  - name: Windows Agents
+    items:
+    - name: Basic troubleshooting of Microsoft Monitoring Agent
+      href: log-analytics/windows-agents/mma-troubleshoot-basics.md
+    - name: Check SSL connectivity for Microsoft Monitoring Agent
+      href: log-analytics/windows-agents/ssl-connectivity-mma-windows-powershell.md
+    - name: Microsoft Monitoring Agent couldn't start
+      href: log-analytics/windows-agents/windows-could-not-start-mma.md
+    - name: Resolve Windows Agent installation issues
+      href: log-analytics/windows-agents/resolve-windows-agent-installation-issues.md
+    - name: Troubleshoot erased proxy settings
+      href: log-analytics/windows-agents/erased-proxy-settings-microsoft-monitoring-agent.md
