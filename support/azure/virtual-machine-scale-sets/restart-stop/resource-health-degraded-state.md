@@ -5,8 +5,8 @@ ms.date: 04/07/2022
 author: genlin
 ms.author: genli
 ms.service: virtual-machine-scale-sets
-ms.subservice: troubleshoot-compute-health
 ms.reviewer: macla, pudesira
+ms.custom: sap:My instance was restarted or stopped unexpectedly
 ---
 # Resource health state is "Degraded" in Azure Virtual Machine Scale Set
 
@@ -31,4 +31,4 @@ To eliminate this transient state, destroyed VMs will be prevented from sending 
 
 Microsoft is investing in better coordinating and reporting of platform health. The investment is part of [Project Flash](https://azure.microsoft.com/blog/advancing-azure-virtual-machine-availability-monitoring-with-project-flash/), which aims to display highly accurate and actionable VM availability information.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
