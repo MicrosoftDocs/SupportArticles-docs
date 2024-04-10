@@ -4,10 +4,10 @@
 - name: Global Secure Access
   items:
   - name: Troubleshoot Global Secure Access client for Windows issues
-    href: troubleshoot-global-secure-access-client-windows-issues.md
+    href: ../entra-id/dir-dmns-obj/troubleshoot-global-secure-access-client-windows-issues.md
 - name: Get support
   items:
   - name: Send Microsoft Authenticator logs and get an incident ID
-    href: ../ad-dmn-services/send-microsoft-authenticator-logs.md
+    href: ../entra-id/ad-dmn-services/send-microsoft-authenticator-logs.md
   - name: Support data collection
     href: ../entra-id/ad-dmn-services/support-data-collection-diagnostic-logs.md
