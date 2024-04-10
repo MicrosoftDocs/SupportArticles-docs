@@ -3749,11 +3749,6 @@
         "source_path": "site-recovery/getting-started/index.md",
         "redirect_url": "/troubleshoot/azure/site-recovery/welcome-site-recovery",
         "redirect_document_id": false
-      },
-      {
-        "source_path": "site-recovery/backup/index.md",
-        "redirect_url": "/troubleshoot/azure/site-recovery/welcome-site-recovery",
-        "redirect_document_id": false
       }
   ]
 }
