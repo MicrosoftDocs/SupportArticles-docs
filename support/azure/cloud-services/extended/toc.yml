@@ -35,7 +35,7 @@
   - name: Support for Linux and open-source technology in Azure
     href: ../../virtual-machines/linux/support-linux-open-source-technology.md
   - name: Configure instance-level public IP addresses (PIPs)
-    href: deploy/instance-level-public-ip-address-configuration.md
+    href: ../classic/instance-level-public-ip-address-configuration.md
   - name: Disk partition preservation
     href: deploy/disk-partition-preservation.md
   - name: Enable HTTPS communication
@@ -43,7 +43,7 @@
   - name: FAQ about role instance restarts due to OS upgrades
     href: deploy/role-instance-restarts-faq.yml
   - name: Update failed during migration from classic to extended support
-    href: deploy/failed-update-ongoing-migration-process.md
+    href: ../classic/failed-update-ongoing-migration-process.md
 
 - name: Configuration and Setup Related Issue
   items:

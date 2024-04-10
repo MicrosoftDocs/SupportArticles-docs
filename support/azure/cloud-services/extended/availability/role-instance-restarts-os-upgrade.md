@@ -172,7 +172,7 @@ public class WebRole : RoleEntryPoint {
 
 ## More information
 
-- [Role instance restarts from Azure VM OS upgrades FAQ](./role-instance-restarts-faq.yml)
+- [Role instance restarts from Azure VM OS upgrades FAQ](../deploy/role-instance-restarts-faq.yml)
 
 [!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
 

@@ -174,7 +174,7 @@ The *C:\\Logs* folder contains *RuntimeEvents_\<Iteration>.etl* and *WaAppAgent_
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Gather log files for offline analysis and preservation](gather-log-files-offline-analysis-preservation.md)
+> [Gather log files for offline analysis and preservation](../config-setup/gather-log-files-offline-analysis-preservation.md)
 
 ## More information
 

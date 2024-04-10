@@ -26,7 +26,7 @@ The easiest option for gathering logs is to use Remote Desktop Protocol (RDP) to
 | PaaS VM              | *D:\\Packages\\GuestAgent\\CollectGuestLogs.exe*   |
 | IaaS VM              | *C:\\WindowsAzure\\Packages\\CollectGuestLogs.exe* |
 
-By default, the CollectGuestLogs executable collects [Internet Information Services (IIS) logs](windows-azure-paas-compute-diagnostic-data.md#internet-information-services-logs). These logs can be large for long-running web roles. To prevent IIS log collection, run `CollectGuestLogs.exe -Mode:ga`. For more information, run `CollectGuestLogs.exe -?`.
+By default, the CollectGuestLogs executable collects [Internet Information Services (IIS) logs](../availability/windows-azure-paas-compute-diagnostic-data.md#internet-information-services-logs). These logs can be large for long-running web roles. To prevent IIS log collection, run `CollectGuestLogs.exe -Mode:ga`. For more information, run `CollectGuestLogs.exe -?`.
 
 ## Option 2: Run the Azure Log Collector Extension
 
@@ -36,6 +36,6 @@ You can run the Azure Log Collector Extension from your local development comput
 
 ## More information
 
-- [Windows Azure PaaS compute diagnostic data](windows-azure-paas-compute-diagnostic-data.md)
+- [Windows Azure PaaS compute diagnostic data](../availability/windows-azure-paas-compute-diagnostic-data.md)
 
 [!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]

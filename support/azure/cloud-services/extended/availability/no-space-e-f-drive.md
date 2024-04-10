@@ -27,7 +27,7 @@ The storage space that's used shouldn't affect the operation of the application.
 
 For data that an application has to read from and write to, we recommend that you use an external storage service, such as [Azure Storage](/azure/storage/common/storage-introduction) or [Azure SQL Server](https://azure.microsoft.com/services/sql-database/campaign/).
 
-If the location of the local data store is needed, make sure that the application code uses local storage resources. These are stored on the local drive C. For more information, see [Configure local storage resources](https://github.com/Huachao/azure-content/blob/master/articles/cloud-services/cloud-services-configure-local-storage-resources.md) and [Azure disk partitions](./disk-partition-preservation.md#azure-disk-partitions).
+If the location of the local data store is needed, make sure that the application code uses local storage resources. These are stored on the local drive C. For more information, see [Configure local storage resources](https://github.com/Huachao/azure-content/blob/master/articles/cloud-services/cloud-services-configure-local-storage-resources.md) and [Azure disk partitions](../deploy/disk-partition-preservation.md#azure-disk-partitions).
 
 [!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]
 
