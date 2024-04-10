@@ -6,6 +6,7 @@ ms.service: site-recovery
 ms.author: genli
 author: genlin
 ms.reviewer: manayar, anoopkv
+ms.custom: sap:I need help getting started with Site Recovery
 ---
 # How to resolve Azure Site Recovery agent issues after disabling TLS 1.0 for PCI compliance
 
@@ -76,4 +77,4 @@ To fix these issues, make sure that the .NET Framework 4.6 or a later version is
 
 After you complete these steps, you should be able to install and use Azure Site Recovery as expected.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

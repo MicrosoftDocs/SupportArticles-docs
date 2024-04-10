@@ -1,44 +1,53 @@
 - name: Welcome
   href: welcome-site-recovery.yml
-- name: A protected VM in a resync state
-  href: protected-vm-resync-state.md
-- name: Azure Backup offline seeding is stuck
-  href: backup-offline-seeding-stuck.md
-- name: Azure protection network bandwidth usage management
-  href: manage-protection-network-bandwidth-usage.md
-- name: Azure Recovery Services Agent is outdated
-  href: backup-service-mars-agent-versions-not-match.md
-- name: Azure Recovery Services Agent update failed
-  href: upgrade-mars-agent.md
-- name: Azure storage account setting is blank
-  href: blank-storage-account-setting-asr.md
-- name: Enable debug logging
-  href: asr-enable-debug-logging.md
-- name: Can't create a protection group
-  href: creating-protection-group-fails.md
-- name: Can't install or register Azure Site Recovery Provider
-  href: cannot-install-asr-registered-internal-error.md
-- name: Disable TLS 1.0 for PCI compliance
-  href: asr-agent-disable-tls-pci-compliance.md
-- name: Embedded application error when install Azure backup agent
-  href: backup/unable-to-execute-the-embedded-application-error-backup-agent.md
-- name: Fail to back up using Azure Recovery Services Agent
-  href: mars-agent-system-state-backup-failure.md
-- name: Recommended antivirus exclusions
-  href: asr-recommended-antivirus-exclusions.md
-- name: Unsupported Features and Platforms in Recovery Services Scout 8.0.1
-  href: unsupported-features-and-platforms-post-upgrade.md
+
+- name: Troubleshoot Azure Backup
+  items:
+  - name: Azure Backup offline seeding is stuck
+    href: backup/backup-offline-seeding-stuck.md
+  - name: Azure protection network bandwidth usage management
+    href: backup/manage-protection-network-bandwidth-usage.md
+  - name: Azure Recovery Services Agent is outdated
+    href: backup/backup-service-mars-agent-versions-not-match.md
+  - name: Fail to back up using Azure Recovery Services Agent
+    href: backup/mars-agent-system-state-backup-failure.md
+  - name: Azure Recovery Services Agent update failed
+    href: backup/upgrade-mars-agent.md
+  - name: Azure storage account setting is blank
+    href: backup/blank-storage-account-setting-asr.md
+  - name: Enable debug logging
+    href: backup/asr-enable-debug-logging.md
+
+- name: Getting started with Site Recovery
+  items:
+  - name: Recommended antivirus exclusions
+    href: getting-started/asr-recommended-antivirus-exclusions.md
+  - name: Can't install or register Azure Site Recovery Provider
+    href: getting-started/cannot-install-asr-registered-internal-error.md
+  - name: Disable TLS 1.0 for PCI compliance
+    href: getting-started/asr-agent-disable-tls-pci-compliance.md
+  - name: Unsupported Features and Platforms in Recovery Services Scout 8.0.1
+    href: getting-started/unsupported-features-and-platforms-post-upgrade.md
+  - name: Troubleshoot Azure Recovery Services issues
+    href: getting-started/troubleshoot-azure-recovery-services.md
+  - name: Vault registration fails
+    href: getting-started/vault-registration-fails.md
+  - name: Recovery Services troubleshooter
+    href: getting-started/sdp-321382d70-df1d-4c0c-bdc6-9ba62752e851-asr.md
+
 - name: Site Recovery Services Agent updates
   items:
-    - name: Novermber 2017 update v2.0.9099.0
-      href: ars-agent-update-november-2017.md
-    - name: April 2018 update v2.0.9118.0
-      href: ars-agent-update-april-2018.md
-    - name: September 2019 update v2.0.9169.0
-      href: ars-agent-update-september-2019.md
-- name: Troubleshoot Azure Recovery Services issues
-  href: troubleshoot-azure-recovery-services.md
-- name: Vault registration fails
-  href: vault-registration-fails.md
-- name: Recovery Services troubleshooter
-  href: sdp-321382d70-df1d-4c0c-bdc6-9ba62752e851-asr.md
+  - name: Novermber 2017 update v2.0.9099.0
+    href: getting-started/ars-agent-update-november-2017.md
+  - name: April 2018 update v2.0.9118.0
+    href: getting-started/ars-agent-update-april-2018.md
+  - name: September 2019 update v2.0.9169.0
+    href: getting-started/ars-agent-update-september-2019.md
+
+- name: A protected VM in a resync state
+  href: protected-vm-resync-state.md
+- name: Can't create a protection group
+  href: creating-protection-group-fails.md
+- name: Embedded application error when install Azure backup agent
+  href: backup/unable-to-execute-the-embedded-application-error-backup-agent.md
+

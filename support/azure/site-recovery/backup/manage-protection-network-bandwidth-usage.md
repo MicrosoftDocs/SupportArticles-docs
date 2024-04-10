@@ -6,6 +6,7 @@ ms.service: site-recovery
 ms.author: genli
 author: genlin
 ms.reviewer: anbacker, markstan
+ms.custom: sap:I need help with Azure Backup
 ---
 # How to manage on-premises to Azure protection network bandwidth usage
 
@@ -86,4 +87,4 @@ The following cmdlet specifies that network bandwidth throttling will not be use
 Set-OBMachineSetting -NoThrottle
 ```
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

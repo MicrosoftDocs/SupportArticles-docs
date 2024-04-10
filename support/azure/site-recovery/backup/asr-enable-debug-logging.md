@@ -6,6 +6,7 @@ ms.service: site-recovery
 ms.author: genli
 author: genlin
 ms.reviewer: markstan
+ms.custom: sap:I need help with Azure Backup
 ---
 # How to enable debug logging for the Azure Site Recovery in Hyper-V Site Protection
 
@@ -85,4 +86,4 @@ To enable debug logging for the ASR Provider, use the following steps:
 
 For additional troubleshooting steps and help in interpreting error messages, see [this article](/azure/site-recovery/site-recovery-monitor-and-troubleshoot#reaching-out-for-microsoft-support).
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

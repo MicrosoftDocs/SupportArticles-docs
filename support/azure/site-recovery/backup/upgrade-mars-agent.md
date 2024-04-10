@@ -6,6 +6,7 @@ author: genlin
 ms.author: genli
 ms.service: site-recovery
 ms.reviewer: saurse
+ms.custom: sap:I need help with Azure Backup
 ---
 # Error when you try to upgrade the MARS Agent: The Microsoft Azure Recovery Services Agent update failed
 
@@ -47,4 +48,4 @@ To fix this issue, make sure that the source installer exists in the Windows Ins
 11. Close the MARS Agent Upgrade Wizard.
 12. Run the upgrade installer to install the upgrade. If the issue persists, contact Microsoft Support.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

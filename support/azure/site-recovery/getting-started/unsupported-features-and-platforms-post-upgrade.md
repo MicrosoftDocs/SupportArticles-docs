@@ -6,6 +6,7 @@ ms.author: genli
 ms.service: site-recovery
 ms.date: 08/14/2020
 ms.reviewer: mabisth
+ms.custom: sap:I need help getting started with Site Recovery
 ---
 # Unsupported Features and Platforms post upgrade to Azure Recovery Services Scout 8.0.1
 
@@ -21,42 +22,42 @@ EOL of Support from previous releases:
 
 ### Deprecated Solutions (Not Supported)
 
-• Any Application aware features (MSSQL, File Server, MS Exchange, Oracle, Oracle RAC, DB2, MySQL, SharePoint, BES) protection/failover/failback
+* Any Application aware features (MSSQL, File Server, MS Exchange, Oracle, Oracle RAC, DB2, MySQL, SharePoint, BES) protection/failover/failback
 
-• Backup features (Virtual Snapshot, backup validation, volpack, long-term retention, Scout Mail Recovery)
+* Backup features (Virtual Snapshot, backup validation, volpack, long-term retention, Scout Mail Recovery)
 
-• Fx and any Fx based solutions
+* Fx and any Fx based solutions
 
 ### Deprecated Deployment and Configuration (Not Supported)
 
-• 1 to many replications
+* 1 to many replications
 
-• CX HA
+* CX HA
 
-• Standby CX
+* Standby CX
 
 ### Deprecated Platforms (Not Supported)
 
-• Linux CX (Configuration Server and Process Server)
+* Linux CX (Configuration Server and Process Server)
 
-• Ubuntu
+* Ubuntu
 
-• RHEL4
+* RHEL4
 
-• Debian
+* Debian
 
-• AIX
+* AIX
 
-• Solaris
+* Solaris
 
 ### Deprecated Hypervisors (Not Supported)
 
-• All virtual to virtual scenarios are deprecated (except VMware 5.1 and 5.5)
+* All virtual to virtual scenarios are deprecated (except VMware 5.1 and 5.5)
 
-• For Physical to Virtual, target has to be VMware 5.1 or 5.5. For source details, refer to the Azure Recovery Services Scout 8.0.1 compatibility matrix
+* For Physical to Virtual, target has to be VMware 5.1 or 5.5. For source details, refer to the Azure Recovery Services Scout 8.0.1 compatibility matrix
 
 Maximum supported retention size is up to 15 days  
 
 Appliances using InMage Scout products are no longer supported
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

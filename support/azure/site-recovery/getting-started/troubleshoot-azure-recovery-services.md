@@ -6,6 +6,7 @@ ms.service: site-recovery
 ms.author: genli
 author: genlin
 ms.reviewer: markstan
+ms.custom: sap:I need help getting started with Site Recovery
 ---
 # How to troubleshoot Azure Recovery Services
 
@@ -31,7 +32,7 @@ For best results, collect a VMM debug trace when you reproduce this issue, and t
 
 ### How to troubleshoot on VMM server
 
-- Collect the VMM debug logs (event trace log) and SRS logs that are additional information to this channel. See the [detail of how to enable debug logging in Virtual Machine Manager](../../system-center/vmm/enable-debug-logging.md). For Branch to Azure ASR installations, refer to [KB 3033922](https://support.microsoft.com/help/3033922) instead.
+- Collect the VMM debug logs (event trace log) and SRS logs that are additional information to this channel. See the [detail of how to enable debug logging in Virtual Machine Manager](../../../system-center/vmm/enable-debug-logging.md). For Branch to Azure ASR installations, refer to [KB 3033922](https://support.microsoft.com/help/3033922) instead.
 - Run the following Windows PowerShell commands to filter and therefore narrow the scope of the investigation:
 
     Get-SCVirtualMachine  
@@ -78,4 +79,4 @@ _C:\Program Files\Microsoft Azure Recovery Services Agent\Temp_
 > [!NOTE]
 > These files may be opened in any plain Text Editor.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
