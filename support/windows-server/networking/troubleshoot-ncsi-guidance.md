@@ -7,7 +7,7 @@ audience: itpro
 ms.topic: troubleshooting
 localization_priority: medium
 ms.reviewer: kaushika, anupamk, asvaidya, hichauhan, v-lianna
-ms.custom: sap: Network Connectivity and File Sharing\NCSI, csstroubleshoot
+ms.custom: sap:Network Connectivity and File Sharing\NCSI, csstroubleshoot
 ---
 # Network Connection Status Indicator (NCSI) troubleshooting guidance
 
