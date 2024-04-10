@@ -34,3 +34,5 @@
   href: power-platform/index.yml
 - name: Welcome
   href: dynamics/index.yml
+- name: Welcome
+  href: sales-copilot/welcome-sales-copilot.yml
