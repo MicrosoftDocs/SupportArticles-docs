@@ -1,9 +1,10 @@
 ---
 title: A To or CC or Bcc Address could not be found error when sending EFT emails
 description: An error that states a A or CC or Bcc address could not be found when sending EFT emails in Microsoft Dynamics.
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Payables Management
 ---
 # "A To, CC, or Bcc Address could not be found" error when sending EFT emails in Microsoft Dynamics GP
 
@@ -59,5 +60,5 @@ Resolve the message by following these steps:
 
 Refer to the below blog articles for more information on general setup and modifying Word Templates. It is recommended to test with the original GP Word Template to get it working, before you introduce a modified Word Template into the picture.
 
-- [Quick Step Guide to E-mail PM EFT Remittances in Microsoft Dynamics GP 2013](https://community.dynamics.com/gp/b/dynamicsgp/posts/quick-step-guide-to-e-mail-pm-eft-remittances-in-microsoft-dynamics-gp-2013)
-- [Quick Step Guide to E-mail PM EFT Remittances in Microsoft Dynamics GP 2010](https://community.dynamics.com/gp/b/dynamicsgp/posts/quick-step-guide-to-e-mail-eft-remittances-in-payables-management-for-microsoft-dynamics-gp-2010)
+- [Quick Step Guide to E-mail PM EFT Remittances in Microsoft Dynamics GP 2013](https://community.dynamics.com/blogs/post/?postid=abb4eb99-17a3-416b-be4a-c7925a5727cf)
+- [Quick Step Guide to E-mail PM EFT Remittances in Microsoft Dynamics GP 2010](https://community.dynamics.com/blogs/post/?postid=11e9fb89-af60-4af7-82ab-1455def05a16)

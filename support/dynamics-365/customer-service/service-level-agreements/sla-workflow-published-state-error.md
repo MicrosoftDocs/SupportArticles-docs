@@ -1,9 +1,10 @@
 ---
 title: SLA workflow must be in Published state error
 description: Provides a resolution for an issue where a case update fails with the Workflow must be in published state error.
-ms.reviewer: sdas
-ms.author: ravimanne
+ms.reviewer: sdas, ankugupta
+ms.author: sdas
 ms.date: 06/25/2023
+ms.custom: sap:Service Level Agreements\Issue related to SLA flow
 ---
 # "Workflow must be in Published state" error
 

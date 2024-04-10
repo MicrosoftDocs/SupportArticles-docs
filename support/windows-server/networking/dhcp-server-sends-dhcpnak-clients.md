@@ -1,17 +1,13 @@
 ---
 title: DHCP Server sends a DHCPNAK to clients
 description: Provides a solution to an issue when you start a Dynamic Host Configuration Protocol (DHCP) client.
-ms.date: 9/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, prasadk
-ms.custom: sap:dynamic-host-configuration-protocol-dhcp, csstroubleshoot
-ms.technology: networking
+ms.custom: sap:Network Connectivity and File Sharing\Dynamic Host Configuration Protocol (DHCP), csstroubleshoot
 ---
 # DHCP Server with Deactivated Scope sends a DHCPNAK to clients
 

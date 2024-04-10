@@ -2,7 +2,6 @@
 title: Error when WCF service use net.tcp activation
 description: This article provides resolutions for the error that occurs when Windows Communication Foundation service use net.tcp activation.
 ms.date: 08/25/2020
-ms.technology: dotnet-wcf
 ---
 # Error when Windows Communication Foundation service use net.tcp activation
 

@@ -1,9 +1,10 @@
 ---
 title: Nothing happens when using Copy and Paste from Excel to GL
 description: Nothing happens when using Copy and Paste from Excel to GL in Microsoft Dynamics GP. Provides a resolution.
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # Nothing happens when using Copy and Paste from Excel to GL in Microsoft Dynamics GP
 
@@ -41,4 +42,4 @@ UseCOMForExcelExport=FALSE
 
 The above information was taken from this blog article:
 
-[GP 2013 R2 - Copy and Paste from Excel to GL – Nothing Happens](https://community.dynamics.com/gp/b/dynamicsgp/posts/gp-2013-r2-copy-and-paste-from-excel-to-gl-nothing-happens)
+[GP 2013 R2 - Copy and Paste from Excel to GL – Nothing Happens](https://community.dynamics.com/blogs/post/?postid=025fef3d-71ca-4629-bbb0-c69ef31a7883)

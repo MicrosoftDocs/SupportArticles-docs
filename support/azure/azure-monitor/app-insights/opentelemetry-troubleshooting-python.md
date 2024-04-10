@@ -1,14 +1,12 @@
 ---
 title: Troubleshoot OpenTelemetry issues in Python
 description: Learn how to troubleshoot OpenTelemetry issues in Python. View known issues that involve Azure Monitor OpenTelemetry Exporters.
-ms.date: 5/22/2023
-ms.author: v-dele
-author: DennisLee-DennisLee
+ms.date: 05/22/2023
 editor: v-jsitser
 ms.service: azure-monitor
 ms.subservice: application-insights
 ms.devlang: python
-ms.reviewer: mmcc, lechen, aaronmax
+ms.reviewer: mmcc, lechen, aaronmax, v-leedennis
 ---
 
 # Troubleshoot OpenTelemetry issues in Python
@@ -71,15 +69,5 @@ get_logger_provider().shutdown()
 #### Azure Workbooks and Jupyter Notebooks
 
 Azure Workbooks and Jupyter Notebooks may keep exporter processes running in the background. To prevent duplicate telemetry, clear the cache before you make more calls to `configure_azure_monitor`.
-
-## Known issues
-
-The following items are known issues for the Azure Monitor OpenTelemetry Exporters:
-
-- The operation name is missing from dependency telemetry. The missing operation name causes failures and adversely affects performance tab experience.
-
-- The device model is missing from request and dependency telemetry. The missing device model adversely affects device cohort analysis.
-
-- The database server name is missing from the dependency name. Because the database server name isn't included, OpenTelemetry Exporters incorrectly aggregate tables that have the same name onto different servers.
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

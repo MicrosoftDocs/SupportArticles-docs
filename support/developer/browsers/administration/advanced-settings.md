@@ -3,7 +3,6 @@ title: How to use Group Policy Objects to set advanced settings
 description: This article provides the steps to set advanced settings by using Group Policy objects (GPOs) in Microsoft Internet Explorer.
 ms.date: 02/28/2020
 ms.reviewer: cgilbert
-ms.technology: internet-explorer-administration
 ---
 # How to set advanced settings in Internet Explorer by using Group Policy objects
 

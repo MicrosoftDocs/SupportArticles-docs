@@ -2,8 +2,9 @@
 title: Troubleshooting BitLocker policies from the client side
 description: How to troubleshoot BitLocker encryption issues on the client side for Windows devices you manage with Microsoft Intune.
 ms.reviewer: kaushika, luker
-ms.date: 12/07/2021
+ms.date: 12/05/2023
 search.appverid: MET150
+ms.custom: sap:Configure Devices - Windows\Endpoint Protection
 --- 
 # Troubleshooting BitLocker policies from the client side
 
@@ -229,7 +230,7 @@ You can use manage-bde to discover the following information about a device:
 
 - Is it encrypted? If reporting in the Microsoft Intune admin center indicates a device is not encrypted, this command-line tool can identify the encryption status.
 - Which encryption method has been used? You can compare information from the tool to the encryption method in the policy to make sure they match. For example, if the Intune policy is configured to XTS-AES 256-bit and the device is encrypted using XTS-AES 128-bit, this will result in errors in Microsoft Intune admin center policy reporting.
-- What specific protectors are being used? There are several [combinations of protectors](/windows/security/information-protection/bitlocker/prepare-your-organization-for-bitlocker-planning-and-policies). Knowing which protector is used on a device will help you understand if the policy has been applied correctly.
+- What specific protectors are being used? There are several [combinations of protectors](/windows/security/operating-system-security/data-protection/bitlocker/planning-guide). Knowing which protector is used on a device will help you understand if the policy has been applied correctly.
 
 In the following example, the device is not encrypted:
 

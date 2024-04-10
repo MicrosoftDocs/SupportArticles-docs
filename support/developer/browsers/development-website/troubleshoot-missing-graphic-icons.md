@@ -3,7 +3,6 @@ title: Graphic icons missing on webpages
 description: Describes some scenarios where web fonts' icons are missing.
 ms.date: 07/14/2020
 ms.reviewer: ramakoni
-ms.technology: internet-explorer-development-website
 ---
 # Troubleshooting missing graphic icons on Internet Explorer webpages
 

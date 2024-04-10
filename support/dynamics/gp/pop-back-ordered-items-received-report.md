@@ -1,8 +1,9 @@
 ---
 title: POP Back Ordered Items Received report
 description: Describes the Back Ordered Items Received report in Microsoft Dynamics GP.
-ms.reviewer:
-ms.date: 03/31/2021
+ms.reviewer: theley
+ms.date: 03/20/2024
+ms.custom: sap:Distribution - Purchase Order Processing
 ---
 # POP Back Ordered Items Received report in Microsoft Dynamics GP
 

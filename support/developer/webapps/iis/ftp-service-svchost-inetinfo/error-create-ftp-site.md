@@ -4,7 +4,7 @@ description: This article provides help to solve an issue where an error occurs 
 ms.date: 07/17/2020
 ms.custom: sap:FTP Service and Svchost or Inetinfo Process Operation
 ms.reviewer: kaorif, mlaing
-ms.technology: iis-ftp-service-svchost-inetinfo
+ms.subservice: ftp-service-svchost-inetinfo
 ---
 # Error occurs when you create an FTP site in Internet Information Services
 

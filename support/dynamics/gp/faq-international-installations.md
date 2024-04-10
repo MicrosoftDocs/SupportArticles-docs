@@ -1,8 +1,9 @@
 ---
 title: FAQ about international installations
 description: Contains answers to frequently asked questions about international installations of Microsoft Great Plains.
-ms.reviewer: kyouells
-ms.date: 03/31/2021
+ms.reviewer: theley, kyouells
+ms.date: 03/20/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # Answers to frequently asked questions about international installations of Microsoft Dynamics GP
 
@@ -13,7 +14,7 @@ _Original KB number:_ &nbsp; 887108
 
 ## Introduction
 
-To access the latest information on multilingual installations, see [Multilingual installs in Microsoft Dynamics GP - What you need to know!!](https://community.dynamics.com/gp/b/dynamicsgp/posts/what-you-should-know-about-multilingual-environments-in-microsoft-dynamics-gp).
+To access the latest information on multilingual installations, see [Multilingual installs in Microsoft Dynamics GP - What you need to know!!](https://community.dynamics.com/blogs/post/?postid=a3fe78ae-d265-4672-8282-a10600329784).
 
 A Multilingual Installation is an environment in which multiple language release installations (unique language code folders) share the same DYNAMICS database, and potentially the same company databases.  Each unique release contains specific words and phrases to match the language of that country/region. As an example, the United Kingdom installation uses "cheque" and a U.S. installation uses the word "check". There are 27 unique languages to choose from when you install Microsoft Dynamics GP.
 
@@ -128,7 +129,7 @@ In a multilingual install audit trail, codes across companies will be identical 
 > [!NOTE]
 > If this steps aren't followed, there can be differences between the audit trail codes from various Dynamics.dic files, from Dynamics..Messages table, and from \<CompanyDB>..SY01000 table which could lead to various issues.
 
-If the secondary language folder was installed before the first real company was created, then it doesn't synchronize correctly and audit trail codes may be incorrect. You can synchronize the audit trail codes in the secondary language code folder by doing the following steps: (Refer to [Multilingual Installs in Microsoft Dynamics GP - What You Need To Know!!](https://community.dynamics.com/gp/b/dynamicsgp/archive/2018/05/01/what-you-should-know-about-multilingual-environments-in-microsoft-dynamics-gp) to see the below steps in more detail in 'Answer 4' section of the blog.)
+If the secondary language folder was installed before the first real company was created, then it doesn't synchronize correctly and audit trail codes may be incorrect. You can synchronize the audit trail codes in the secondary language code folder by doing the following steps: (Refer to [Multilingual Installs in Microsoft Dynamics GP - What You Need To Know!!](https://community.dynamics.com/blogs/post/?postid=a3fe78ae-d265-4672-8282-a10600329784) to see the below steps in more detail in 'Answer 4' section of the blog.)
 
 1. Make a current backup of the company and Dynamics databases.
 2. Delete the Dynamics..MESSAGES table to clear it out.  

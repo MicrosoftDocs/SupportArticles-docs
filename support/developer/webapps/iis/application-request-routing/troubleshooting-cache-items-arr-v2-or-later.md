@@ -2,9 +2,7 @@
 title: Troubleshooting cache items in ARR version 2.0 or later
 description: This article provides resolutions for troubleshooting cache items ARR version 2.0 or later.
 ms.date: 04/09/2012
-author: padmajayaraman
-ms.author: v-jayaramanp
-ms.reviewer: apurvajo, chihshen
+ms.reviewer: apurvajo, chihshen, v-jayaramanp
 ms.topic: troubleshooting
 ---
 
@@ -21,7 +19,7 @@ In this walkthrough, you can learn how to trace a request as it passes through A
 - ARR Helper
 - [Failed Request Tracing (FREB)](/iis/troubleshoot/using-failed-request-tracing/troubleshooting-failed-requests-using-tracing-in-iis-85)
 - IIS Advanced Logging
-- [Network Monitor](/troubleshoot/windows-server/networking/network-monitor-3)
+- [Network Monitor](../../../../windows-server/networking/network-monitor-3.md)
 
 ## Understand the architecture of the farm
 
@@ -166,7 +164,7 @@ If the server parent node `W2K8WEBSERVER2` is set up with ARR and caching featur
 
 This step can be treated as a normal HTTPS request and can be tracked with the following tools:
 
-- [Network Monitor](/troubleshoot/windows-server/networking/network-monitor-3) - Captures traces on the Origin server to verify receipt of the request.
+- [Network Monitor](../../../../windows-server/networking/network-monitor-3.md) - Captures traces on the Origin server to verify receipt of the request.
 - IIS Logs - Checks IIS logs for HTTP Response codes for the content you are tracing.
 - [IIS FREB Logs](/iis/troubleshoot/using-failed-request-tracing/troubleshooting-failed-requests-using-tracing-in-iis-85) - If the request was found in the Network trace and the HTTP response code wasn't a 200, you might want to use FREB again to troubleshoot the issue.
 

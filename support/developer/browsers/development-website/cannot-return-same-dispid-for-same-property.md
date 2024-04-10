@@ -3,7 +3,6 @@ title: Internet Explorer cannot always return the same DISPID
 description: Internet Explorer does not always return the same DISPID for every GetIDsOfNames call when running in Internet Explorer 9 Standards Mode or above.
 ms.date: 04/20/2020
 ms.reviewer: bachoang
-ms.technology: internet-explorer-development-website
 ---
 # Internet Explorer may not return the same DISPID for the same property
 

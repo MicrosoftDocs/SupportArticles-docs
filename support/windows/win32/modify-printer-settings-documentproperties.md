@@ -1,10 +1,10 @@
 ---
 title: Modify printer settings with the DocumentProperties
 description: This article describes how to modify printer settings with the DocumentProperties function.
-ms.date: 09/24/2020
-ms.custom: sap:Graphics and Multimedia development
-ms.technology: windows-dev-apps-graphics-multimedia-dev
+ms.date: 12/19/2023
+ms.custom: sap:Graphics and Multimedia development\Printing and the Print Spooler API
 ---
+
 # Modify printer settings with the DocumentProperties() Function
 
 This article shows how to modify printer settings with the `DocumentProperties()` function.
@@ -49,7 +49,7 @@ To reliably use a DEVMODE with a device driver, create and modify it by followin
 
 In this article, the first two steps of allocating the correct size of buffer and initializing that buffer is performed with `DocumentProperties()`. You can also follow these steps by using `GetPrinter()`.
 
-For more information and an example of this, see [Modify printer settings by using the SetPrinter function](/troubleshoot/windows/win32/modify-printer-settings-setprinter-api).
+For more information and an example of this, see [Modify printer settings by using the SetPrinter function](modify-printer-settings-setprinter-api.md).
 
 ### Sample Code
 

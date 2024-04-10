@@ -4,9 +4,7 @@ description: This article helps you troubleshoot a problem in which the text tha
 ms.date: 04/17/2023
 ms.custom: sap:Tools and utilities
 ms.topic: troubleshooting
-author: padmajayaraman
-ms.author: v-jayaramanp
-ms.reviewer: mihayash, davean
+ms.reviewer: mihayash, davean, v-jayaramanp
 ---
 
 # Old text persists in a TextBlock that's a child of a Viewbox

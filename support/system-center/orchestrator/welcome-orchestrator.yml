@@ -5,7 +5,7 @@ summary: Welcome to Orchestrator troubleshooting. These articles explain how to 
 metadata:
   title: System Center Orchestrator troubleshooting
   description: Landing page for System Center Orchestrator troubleshooting articles.
-  ms.prod: system-center
+  ms.service: system-center
   ms.topic: landing-page
   author: helenclu
   ms.author: luche

@@ -1,10 +1,8 @@
 ---
 title: Resolve Microsoft Monitoring Agent startup failure
 description: Troubleshoot the error message "The Microsoft Monitoring Agent service terminated with service-specific error Access is denied."
-ms.date: 1/31/2022
-author: DennisLee-DennisLee
-ms.author: v-dele
-ms.reviewer: irfanr
+ms.date: 01/31/2022
+ms.reviewer: irfanr, v-leedennis
 editor: v-jsitser
 ms.service: azure-monitor
 ms.subservice: logs-troubleshoot
@@ -77,7 +75,7 @@ Restore full control to the **SecureStorageManager** parameter for the system us
 > [!WARNING]
 > Serious problems might occur if you modify the registry incorrectly by using Registry Editor or by using another method. These problems might require that you reinstall the operating system. Microsoft can't guarantee that these problems can be solved. Modify the registry at your own risk.
 
-1. (Recommended) [Back up the registry](/troubleshoot/windows-server/performance/windows-registry-advanced-users#back-up-the-registry).
+1. (Recommended) [Back up the registry](../../../windows-server/performance/windows-registry-advanced-users.md#back-up-the-registry).
 
 1. Return to or reopen the Registry Editor.
 

@@ -2,16 +2,13 @@
 title: PXE boot fails on a Surface Laptop
 description: Provides a workaround to the issue in which PXE boot fails on a Surface Laptop.
 ms.date: 05/31/2023
-author: v-lianna
-ms.author: v-lianna
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: surface
 localization_priority: medium
-ms.reviewer: v-six
+ms.reviewer: v-six, v-lianna
 ms.custom: csstroubleshoot
-ms.technology: windows
+ms.subservice: windows
 ---
 # PXE boot fails on a Surface Laptop
 
@@ -33,8 +30,8 @@ To work around this issue, follow these steps:
 3. Select the PXE Network, and then swipe to the left.
 4. You should receive the "Boot this device immediately" message. Select **OK** to exit and perform the PXE Network boot.
 
-	> [!NOTE]
-	> As an alternative to this workaround, you change the boot order so that “PXE Network” is at the top of the list.
+    > [!NOTE]
+    > As an alternative to this workaround, you change the boot order so that "PXE Network" is at the top of the list.
 
 ## Status
 

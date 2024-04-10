@@ -1,13 +1,11 @@
 ---
 title: The owner window gets activated when taskbar buttons are created
 description: Provides resolution for an issue where the owner window of a modal dialog can get activated when taskbar buttons are created for both windows.
-ms.date: 09/22/2022
-ms.custom: sap:Desktop app UI development
-ms.reviewer: hihayak, davean
-ms.technology: windows-dev-apps-desktop-app-ui-dev
-author: sevend2
-ms.author: v-sidong
+ms.date: 12/19/2023
+ms.custom: sap:Desktop app UI development\Windows Shell API
+ms.reviewer: hihayak, davean, v-sidong
 ---
+
 # The owner window of a modal dialog can get activated when taskbar buttons are created for both windows
 
 ## Symptoms

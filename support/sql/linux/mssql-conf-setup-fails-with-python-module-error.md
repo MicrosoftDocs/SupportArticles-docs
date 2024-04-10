@@ -2,10 +2,10 @@
 title: mssql-conf setup fails with Python module error
 description: This article helps you resolve the mssql-conf setup fails with Python module error. 
 ms.date: 03/14/2022
-ms.custom: sap:SQL Server 2019 on Linux 
+ms.custom: sap:SQL Server 2019 on Linux, linux-related-content
 author: ronking-zhu
-ms.author: v-jayaramanp
-ms.reviewer: rl-msft
+ms.author: roz
+ms.reviewer: rl-msft, v-jayaramanp
 ms.topic: troubleshooting
 ---
 

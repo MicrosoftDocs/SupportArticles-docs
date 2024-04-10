@@ -1,16 +1,12 @@
 ---
 title: UserProfiles and Logon overview
 description: Overview of UserProfiles and Logon troubleshooting articles for Windows clients.
-ms.date: 11/09/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.technology: windows-client-user-profiles
 ---
 # UserProfiles and Logon troubleshooting documentation for Windows clients
 

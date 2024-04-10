@@ -20,7 +20,6 @@
     }
   ],
   "notification_subscribers": [
-    "christys@microsoft.com",
     "luche@microsoft.com",
     "haiyingyu@microsoft.com",
     "delhan@microsoft.com",
@@ -34,7 +33,6 @@
   "branches_to_filter": [],
   "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/SupportArticles-docs",
   "git_repository_branch_open_to_public_contributors": "main",
-  "skip_source_output_uploading": false,
   "need_preview_pull_request": true,
   "dependent_repositories": [
     {
@@ -54,6 +52,12 @@
       "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
       "branch": "main",
       "branch_mapping": {}
+    },
+    {
+      "path_to_root": "support/reusable-content",
+      "url": "https://github.com/MicrosoftDocs/reusable-content",
+      "branch": "main",
+      "branch_mapping": {}
     }
   ],
   "branch_target_mapping": {
@@ -69,10 +73,12 @@
     }
   },
   "docs_build_engine": {},
+  "skip_source_output_uploading": false,
   "contribution_branch_mappings": {},
   "redirection_files": [
     ".openpublishing.redirection.json",
-    ".openpublishing.redirection.developer.json"
+    ".openpublishing.redirection.developer.json",
+    "azure/.openpublishing.redirection.azure.json"
   ],
   "need_generate_pdf_url_template": true
 }

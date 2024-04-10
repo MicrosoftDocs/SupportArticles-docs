@@ -1,8 +1,8 @@
 ---
 title: A task sequence debug deployment isn't displayed
 description: Describes a behavior in which the debug deployment for a task sequence isn't displayed in Configuration Manager.
-ms.date: 06/15/2020
-ms.custom: sap:Deployments and deployment operations
+ms.date: 12/05/2023
+ms.custom: sap:Operating Systems Deployment (OSD)\Task Sequence Step for Other Operations
 ms.reviewer: kaushika, frankroj, sccmcsscontent
 ---
 # Debug deployment for a task sequence isn't displayed in Configuration Manager

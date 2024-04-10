@@ -1,9 +1,10 @@
 ---
 title: Can't delete a managed solution consisting of an SLA-enabled entity
 description: Provides a resolution for the inability to delete a managed solution consisting of an SLA-enabled entity in Dynamics 365 Customer Service.
-ms.reviewer: sdas
-ms.author: ravimanne
+ms.reviewer: sdas, ankugupta
+ms.author: sdas
 ms.date: 05/23/2023
+ms.custom: sap:Service Level Agreements
 ---
 # Can't delete a managed solution consisting of an SLA-enabled entity
 

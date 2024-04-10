@@ -2,9 +2,7 @@
 title: Diagnosing failures with remote administration
 description: This article lists the failure messages you see while using RemoteMgr. 
 ms.date: 02/14/2008
-author: padmajayaraman
-ms.author: v-jayaramanp
-ms.reviewer: nitashv, sudixi
+ms.reviewer: nitashv, sudixi, v-jayaramanp
 ---
 
 # Diagnosing failures with remote administration

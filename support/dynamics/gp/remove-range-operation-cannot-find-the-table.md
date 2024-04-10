@@ -2,8 +2,9 @@
 title: Error when you process in Microsoft Dynamics GP
 description: Provides a solution to an error that occurs when you process in Microsoft Dynamics GP.
 ms.topic: troubleshooting
-ms.reviewer: cwaswick
-ms.date: 03/31/2021
+ms.reviewer: theley, cwaswick
+ms.date: 03/20/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # Error when processing in Microsoft Dynamics GP: A remove range operation on table 'syContentPageXMLCache' cannot find the table
 
@@ -72,6 +73,6 @@ We have ways to help test a network disconnect, but it would be up to you to res
 
 9. Disable TCP Chimney on server and workstations. Refer to these articles for more information:
 
-    - [Information about the TCP Chimney Offload, Receive Side Scaling, and Network Direct Memory Access features in Windows Server 2008](/troubleshoot/windows-server/networking/information-about-tcp-chimney-offload-rss-netdma-feature)
+    - [Information about the TCP Chimney Offload, Receive Side Scaling, and Network Direct Memory Access features in Windows Server 2008](../../windows-server/networking/information-about-tcp-chimney-offload-rss-netdma-feature.md)
 
     - [Solving Connectivity errors to SQL Server](https://support.microsoft.com/sbs/topic/solving-connectivity-errors-to-sql-server-ae23c94b-b64b-5056-8b62-22e1694bb889)

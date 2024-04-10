@@ -1,9 +1,10 @@
 ---
 title: Reconcile to GL routine for bank reconciliation
 description: Provides more information about the Reconcile to GL routine for Bank Reconciliation in Microsoft Dynamics GP.
-ms.reviewer: 
+ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 06/22/2022
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Bank Reconciliation
 ---
 # Reconcile to GL routine for Bank Reconciliation in Microsoft Dynamics GP
 
@@ -29,4 +30,4 @@ _Original KB number:_ &nbsp; 5003901
 ## References
 
 - [Information about differences when you reconcile General Ledger to Payables Management or to Receivables Management in Microsoft Dynamics GP](https://support.microsoft.com/topic/information-about-differences-when-you-reconcile-general-ledger-to-payables-management-or-to-receivables-management-in-microsoft-dynamics-gp-cbb2dacf-86e0-367b-86b9-99fa65347104).
-- [Information about the balances in the Reconcile to GL window in Microsoft Dynamics GP](/troubleshoot/dynamics/gp/information-about-balances-in-reconcile-to-gl-window)
+- [Information about the balances in the Reconcile to GL window in Microsoft Dynamics GP](information-about-balances-in-reconcile-to-gl-window.md)

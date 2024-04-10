@@ -1,17 +1,13 @@
 ---
 title: Support policy for Windows containers and Docker in on-premises scenarios
 description: Summary of the configurations that Microsoft supports for Windows containers when you use them in an on-premises Windows deployment.
-ms.date: 05/11/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:management-of-containers, csstroubleshoot
-ms.technology: windows-server-containers
+ms.custom: sap:Containers\Management Of Containers , csstroubleshoot
 ---
 # Support policy for Windows Server containers in on-premises scenarios
 
@@ -33,7 +29,7 @@ Microsoft supports Windows Server containers for the following Windows versions 
 Refer to [Overview - Product end of support](/lifecycle/overview/product-end-of-support-overview) public doc for more information on the end of support.
 
 > [!NOTE]
-> For similar information about Microsoft's support policy for containers in Azure, see [Support policy for containers and related services on Azure](/troubleshoot/azure/general/support-policy-containers).
+> For similar information about Microsoft's support policy for containers in Azure, see [Support policy for containers and related services on Azure](../../azure/general/support-policy-containers.md).
 
 ## Supported configurations for container hosts
 
@@ -52,7 +48,7 @@ Microsoft defines the supported host configurations in the following terms:
 ## Host component support
 
 Windows Server containers on [supported Windows Server versions](/virtualization/windowscontainers/deploy-containers/system-requirements) running on physical hardware or virtual machines (VM) on Hyper-V receive full support for issues that are related to the operating system, base container images and/or container feature.
-Running Windows Server containers on a Windows Server 2016 and higher VM hosted on a [SVVP validated hypervisor](/troubleshoot/windows-server/virtualization/microsoft-server-software-support-policy) receive full support for issues that are related to the operating system, base container images and/or container feature.
+Running Windows Server containers on a Windows Server 2016 and higher VM hosted on a [SVVP validated hypervisor](../virtualization/microsoft-server-software-support-policy.md) receive full support for issues that are related to the operating system, base container images and/or container feature.
 
 ## Supported configurations for Windows Server container hosts
 

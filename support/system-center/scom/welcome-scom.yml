@@ -3,9 +3,9 @@
 title: System Center Operations Manager troubleshooting
 summary: Welcome to Operations Manager troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use System Center Operations Manager. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
 metadata:
-  title: System Center Operations Manager troubleshooting troubleshooting
+  title: System Center Operations Manager troubleshooting
   description: Landing page for System Center Operations Manager troubleshooting troubleshooting articles.
-  ms.prod: system-center
+  ms.service: system-center
   ms.topic: landing-page
   author: helenclu
   ms.author: luche

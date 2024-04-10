@@ -3,9 +3,7 @@ title: Use AGDiag to diagnose availability group health events
 description: This article describes how to use AGDiag to diagnose availability group health events.
 ms.date: 05/15/2023
 ms.custom: sap:Availability Groups
-author: sevend2
-ms.author: v-sidong
-ms.reviewer: cmathews
+ms.reviewer: cmathews, v-sidong
 ---
 # Use AGDiag to diagnose availability group health events
 

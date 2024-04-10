@@ -4,7 +4,6 @@ description: This article provides a guide to enable customers to use an X509Cer
 ms.date: 04/17/2020
 ms.reviewer: piyushjo, fabianm
 ms.topic: how-to
-ms.technology: dotnet-wcf
 ---
 # Use a custom X509CertificateValidator with an IIS hosted WCF service and self-signed client certificate
 

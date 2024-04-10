@@ -1,23 +1,45 @@
 - name: Dynamics 365 Customer Insights
   href: welcome-customer-insights.yml
   items:
-    - name: Data ingestion
-      items:
-        - name: Power Query data source refresh issues
-          href: data-ingestion/power-query-data-source-refresh-issues-dataflows.md
-    - name: Exports
-      items:
-        - name: Controls from Customer Card Add-in if they don't find data
-          href: exports/controls-customer-card-add-in.md
-        - name: Customer Insights environment doesn't show in Power BI
-          href: exports/environment-not-showing-in-power-bi.md
-        - name: Errors on date fields when loading Customer Insights entities in Power BI Desktop
-          href: exports/error-date-fields-power-bi-connector.md
-        - name: Exports fail with error stating that the following name already exists
-          href: exports/export-fails-name-already-exists.md
-        - name: Troubleshoot segment not eligible for export
-          href: exports/ineligible-segments-b-to-b.md
-    - name: Insights
-      items:
-        - name: Segments return no members
-          href: insights/segment-no-results.md
+    - name: Customer Insights - Data
+      items: 
+      - name: Data ingestion
+        items:
+          - name: Data refresh fails and dataflow refresh is skipped
+            href: data/data-ingestion/data-refresh-failed-skipped.md
+          - name: '"Data source credentials are missing or invalid" error'
+            href: data/data-ingestion/power-query-multi-factor-authentication.md
+          - name: Power Query Text/CSV connector authentication fails
+            href: data/data-ingestion/power-query-text-csv-connector-auth.md
+          - name: Power Query data source refresh issues
+            href: data/data-ingestion/power-query-data-source-refresh-issues-dataflows.md
+          - name: Troubleshoot ingestion errors or corrupt data
+            href: data/data-ingestion/common-data-ingestion-errors.md
+      - name: Data unification
+        items:
+          - name: Match failed error occurs on the Deduplication or Matching rules
+            href: data/profile-unification/match-failed.md
+          - name: Merge failed error occurs on the Unified data view
+            href: data/profile-unification/merge-failed.md
+          - name: Missing business unit values in unification
+            href: data/profile-unification/missing-business-unit.md
+      - name: Environment management
+        items: 
+          - name: '"The service principal for resource is disabled" error when signing in'
+            href: data/environment-management/service-principal-disabled.md
+      - name: Exports
+        items:
+          - name: Controls from Customer Card Add-in if they don't find data
+            href: data/exports/controls-customer-card-add-in.md
+          - name: Environment doesn't show in Power BI
+            href: data/exports/environment-not-showing-in-power-bi.md
+          - name: Errors on date fields when loading entities in Power BI Desktop
+            href: data/exports/error-date-fields-power-bi-connector.md
+          - name: Exports fail with error stating that the following name already exists
+            href: data/exports/export-fails-name-already-exists.md
+          - name: Troubleshoot segment not eligible for export
+            href: data/exports/ineligible-segments-b-to-b.md
+      - name: Insights
+        items:
+          - name: Segments return no members
+            href: data/insights/segment-no-results.md

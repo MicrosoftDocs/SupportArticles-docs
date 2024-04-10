@@ -3,7 +3,6 @@ title: SmartScreen cause Internet Explorer no responding
 description: This article describes the situation that Internet Explorer no responding when browsing the website with the Smart Screen Selector enabled.
 ms.date: 06/09/2020
 ms.reviewer: sansom
-ms.technology: internet-explorer-stability-performance
 ---
 # Internet Explorer may stop responding when access to the SmartScreen Filter Service is blocked
 

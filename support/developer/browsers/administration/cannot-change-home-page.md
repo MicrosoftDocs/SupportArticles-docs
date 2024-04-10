@@ -2,7 +2,6 @@
 title: Cannot change home page in Internet Explorer
 description: Provides a manual fix for home page problems in Internet Explorer.
 ms.date: 03/17/2020
-ms.technology: internet-explorer-administration
 ---
 # Cannot change your home page in Internet Explorer
 

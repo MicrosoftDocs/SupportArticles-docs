@@ -1,17 +1,13 @@
 ---
 title: (Server Busy) error message when you try to scan a document
 description: Provides a resolution for fixing (Server Busy) error when you try to scan a document
-ms.date: 05/16/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, philipd, match
-ms.custom: sap:issues-with-scanning, csstroubleshoot
-ms.technology: windows-client-printing
+ms.custom: sap:Print, Fax, and Scan\Windows Fax and Scan (Client), csstroubleshoot
 ---
 # "Server Busy" error message when you try to scan a document  
 
@@ -48,4 +44,4 @@ When you call the AfxOleInit(); function, the *m_nTimeout*  parameter is set to 
 
 ## Data collection
 
-If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for User Experience issues](../windows-troubleshooters/gather-information-using-tssv2-user-experience.md#printing).
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for User Experience issues](../windows-troubleshooters/gather-information-using-tss-user-experience.md#printing).

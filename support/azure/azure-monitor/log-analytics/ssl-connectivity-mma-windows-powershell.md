@@ -1,14 +1,12 @@
 ---
 title: Check SSL connectivity for Microsoft Monitoring Agent on Windows
 description: "Learn how to check SSL connectivity for Microsoft Monitoring Agent on Windows by using PowerShell cmdlets."
-ms.date: 6/29/2022
-author: DennisLee-DennisLee
-ms.author: v-dele
-ms.reviewer: irfanr, arboisse
+ms.date: 06/29/2022
+ms.reviewer: irfanr, arboisse, v-leedennis
 editor: v-jsitser
 ms.service: azure-monitor
 ms.subservice: logs-troubleshoot
-ms.custom: devx-track-azurepowershell
+ms.custom:
 keywords:
 #Customer intent: As an Azure Monitor user, I want to check the connectivity of Secure Sockets Layer (SSL) for the Microsoft Monitoring Agent so that the agent can successfully communicate over the network on a Windows computer.
 ---

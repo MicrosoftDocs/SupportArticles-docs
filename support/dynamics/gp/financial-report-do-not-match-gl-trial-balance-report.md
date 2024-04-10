@@ -1,9 +1,10 @@
 ---
 title: Financial Reports from Management Reporter don't match the General Ledger Trial Balance Reports
 description: Provides steps to solve the issue that financial reports from Management Reporter don't match the General Ledger Trial Balance reports in Microsoft Dynamics GP.
-ms.reviewer: 
+ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 06/22/2022
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Analytical Accounting
 ---
 # Financial Reports from Management Reporter don't match the General Ledger Trial Balance Reports in Microsoft Dynamics GP
 
@@ -51,7 +52,7 @@ If you need assistance to correct any of the results returned from the scripts b
   > [!IMPORTANT]
   > Make a current backup of the company database before running any scripts that will update data.
 
-- For more information, see [Set up a test company that has a copy of live company data for Microsoft Dynamics GP by using Microsoft SQL Server](/troubleshoot/dynamics/gp/set-up-a-test-company).
+- For more information, see [Set up a test company that has a copy of live company data for Microsoft Dynamics GP by using Microsoft SQL Server](set-up-a-test-company.md).
 
 > [!NOTE]
 > To view the results of each script in Text, you can press ALT - T (or select **Query** in the top menubar, point to **Results To**, and select **Results to Text**) and then execute the script again. This will provide more details for each section of results returned.

@@ -2,7 +2,7 @@
 title: Flushing principle settings on BOM lines aren't respected
 description: Provides a resolution for the issue that flushing principle settings on bill of materials (BOM) lines aren't respected.
 author: johanhoffmann
-ms.date: 4/11/2021
+ms.date: 04/11/2021
 ms.topic: troubleshooting
 ms.search.form: PurchTable,ProdParameters
 audience: Application User

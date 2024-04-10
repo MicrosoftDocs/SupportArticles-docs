@@ -3,7 +3,6 @@ title: BHOs or toolbars break in third-party products in Internet Explorer 11
 description: Describes an issue in which Browser Helper Objects (BHOs) and toolbars do not work correctly in third-party products in Internet Explorer 11.
 ms.date: 03/23/2020
 ms.reviewer: pierrelc
-ms.technology: internet-explorer-development-website
 ---
 # Third-party products that rely on BHOs or toolbars break in Internet Explorer 11
 

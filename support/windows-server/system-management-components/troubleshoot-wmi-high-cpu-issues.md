@@ -1,17 +1,13 @@
 ---
 title: Troubleshoot WMI high CPU usage issues
 description: Describes how to diagnose Windows Management Instrumentation (WMI) high CPU issues on any Windows operating system.
-ms.date: 06/01/2023
-author: v-lianna
-ms.author: v-lianna
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
-ms.reviewer: kaushika, krpg, warrenw, anleito, mistoyan
-ms.custom: sap:wmi, csstroubleshoot
-ms.technology: windows-client-system-management-components
+ms.reviewer: kaushika, krpg, warrenw, anleito, mistoyan, v-lianna
+ms.custom: sap:System Management Components\WMI management and troubleshooting, csstroubleshoot
 ---
 # Troubleshoot WMI high CPU usage issues
 
@@ -144,8 +140,6 @@ Here's an example:
 ```PowerShell
 tasklist /m ntevt.dll 
 ```
-
-Currently, the output shows that the *CIMWin32.dll* provider is loaded in two different *WmiPrvse.exe* instances and their PIDs.
 
 :::image type="content" source="media/troubleshoot-wmi-high-cpu-issues/tasklist-output.png" alt-text="Screenshot shows the tasklist output of the ntevt.dll file.":::
 
@@ -424,7 +418,7 @@ Here are some scenarios where disabling it can validate your observations.
 
 ## Data collection
 
-If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for User Experience issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-user-experience.md#wmi).
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for User Experience issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-user-experience.md#wmi).
 
 You can also gather information by using the WMI-Collect tool. Here are the steps:
 

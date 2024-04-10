@@ -3,7 +3,6 @@ title: WPF apps don't receive touch input events
 description: Full-screen WPF applications might not receive touch input events on the right or bottom edges of the window.
 ms.date: 05/11/2020
 ms.reviewer: davean
-ms.technology: dotnet-general
 ---
 # Full-screen WPF applications may not receive touch input events
 

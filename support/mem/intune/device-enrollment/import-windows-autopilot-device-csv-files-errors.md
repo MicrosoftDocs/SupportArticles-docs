@@ -1,9 +1,9 @@
 ---
 title: Troubleshoot error 806 or 808 when importing Windows Autopilot CSV files
 description: Describes an issue in which you receive the ZtdDeviceAlreadyAssigned (806) or ZtdDeviceAssignedToOtherTenant (808) error message when you import Windows Autopilot device CSV files in Microsoft Intune.
-ms.date: 12/23/2021
+ms.date: 12/05/2023
 search.appverid: MET150
-ms.custom: sap:Windows enrollment
+ms.custom: sap:Autopilot\Advisory
 ms.reviewer: kaushika
 ---
 # Error 806 or 808 when you import Windows Autopilot device CSV files in Intune
@@ -47,11 +47,13 @@ If the device record doesn't exist in Microsoft Store for Business or Intune, yo
 - **Proof of ownership**: Typically, this is a bill of sale or an invoice in PDF format.
 
   > [!IMPORTANT]
-  > Microsoft Support must verify ownership of the device before the device record can be removed. Therefore, the following requirements must be met:
+  > Microsoft Support needs to verify ownership of the device before the device record can be removed. Therefore, the following requirements must be met:
   >
-  > - The document must be in its original form. Screenshots are not accepted.
-  > - The serial number, chassis ID, or other unique identifier must be present in the document. For some vendors, you may have to request additional details about the purchased device to see this information.
-  > - Your company name must appear in the document.
+  > - The document that proves ownership of the device must be in its original form. Screenshots are not accepted.
+  > - The serial number, chassis ID, or other unique identifier of the device must be present in the document. If it isn't, you need to request the vendor for an updated document of ownership which includes these details about the device.
+  > - Your company's name must appear in the document.
+  > 
+  > Customers who use Microsoft Premier Support don't need to provide proof of ownership to deregister a device. However, they still need to prove that the device is in their possession. 
 
 - **Diagnostic logs**:
 

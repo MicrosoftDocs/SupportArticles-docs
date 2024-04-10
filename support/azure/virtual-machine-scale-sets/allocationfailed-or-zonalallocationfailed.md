@@ -2,9 +2,7 @@
 title: "Troubleshoot allocation failures on virtual machine scale sets."
 description: Troubleshoot an AllocationFailed or ZonalAllocationFailed error message when you create, restart, or resize Virtual Machine Scale Sets in Azure.
 ms.date: 12/06/2021
-author: DennisLee-DennisLee
-ms.author: v-dele
-ms.reviewer: "saraic,nameier,shache,emanders"
+ms.reviewer: saraic, nameier, shache, emanders, v-leedennis
 ms.service: virtual-machine-scale-sets
 #Customer intent: As an Azure Virtual Machine Scale Set user, I want to troubleshoot an AllocationFailed or ZonalAllocationFailed error so that I can successfully create, restart, or resize a scale set instance.
 ---
@@ -20,7 +18,7 @@ In this article, get information about:
 - The causes of the allocation failures.
 - How to troubleshoot allocation failures when they arise.
 
-To troubleshoot allocation failures for standard virtual machines (VMs), see [Troubleshoot allocation failures when you create, restart, or resize VMs in Azure](../virtual-machines/allocation-failure.md).
+To troubleshoot allocation failures for standard virtual machines (VMs), see [Troubleshoot allocation failures when you create, restart, or resize VMs in Azure](../virtual-machines/windows/allocation-failure.md).
 
 ## Symptom
 
@@ -136,7 +134,7 @@ If you use availability zones, try another zone within the region that may have 
 
 If your allocation request is large (more than 500 cores), see the following sections to break up the request into smaller deployments.
 
-Try [redeploying the VM instance](../virtual-machines/redeploy-to-new-node-windows.md), which allocates the VM instance to a new cluster within the region.
+Try [redeploying the VM instance](../virtual-machines/windows/redeploy-to-new-node-windows.md), which allocates the VM instance to a new cluster within the region.
 
 ## Allocation failures for older VM sizes
 

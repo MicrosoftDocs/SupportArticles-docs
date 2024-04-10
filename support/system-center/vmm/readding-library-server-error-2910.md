@@ -1,8 +1,8 @@
 ---
 title: Error 2910 re-adding a library server
 description: Fixes an issue in which you receive error 2910 when re-adding a library server to System Center 2012 Virtual Machine Manager.
-ms.date: 04/29/2020
-ms.reviewer: alvinm
+ms.date: 04/09/2024
+ms.reviewer: wenca, alvinm
 ---
 # Error 2910 re-adding a library server to System Center 2012 Virtual Machine Manager
 

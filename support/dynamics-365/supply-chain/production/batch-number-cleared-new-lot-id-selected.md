@@ -2,7 +2,7 @@
 title: Batch number is cleared when a new lot ID is selected
 description: Introduces a by-design behavior where the value in the Batch number field is cleared if you select a new value in the Lot ID field when reviewing a picking list journal line.
 author: johanhoffmann
-ms.date: 4/11/2021
+ms.date: 04/11/2021
 ms.topic: troubleshooting
 ms.search.form: ProdJournalTransBOM
 audience: Application User

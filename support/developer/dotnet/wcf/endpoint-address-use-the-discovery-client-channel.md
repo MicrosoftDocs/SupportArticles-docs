@@ -2,7 +2,6 @@
 title: Endpoint.Address value problem when you use the channel
 description: This article provides resolutions for the problem that when you use the discovery client channel in Windows Communication Foundation, the Endpoint.Address property is always set to http://schemas.microsoft.com/dynamic.
 ms.date: 12/11/2020
-ms.technology: dotnet-wcf
 ---
 # When you use the discovery client channel in Windows Communication Foundation, the Endpoint.Address property is always set to `http://schemas.microsoft.com/dynamic`
 

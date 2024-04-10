@@ -1,11 +1,9 @@
 ---
 title: Troubleshooting SSL related issues (Server Certificate)
 description: This article provides various troubleshooting scenarios and resolutions related to SSL server certificates.
-author: padmajayaraman
-ms.author: v-jayaramanp
 ms.topic: troubleshooting 
 ms.date: 04/09/2012
-ms.reviewer: kaushalp, johnhart
+ms.reviewer: kaushalp, johnhart, v-jayaramanp
 ---
 
 # Troubleshooting SSL related issues (Server Certificate)

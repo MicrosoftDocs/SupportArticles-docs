@@ -1,17 +1,13 @@
 ---
 title: A computer can't identify the network
 description: Provides a solution to an issue that a computer can't identify the network when this computer is a member of a child domain.
-ms.date: 9/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, clandis, ioanc
-ms.custom: sap:secure-channel-issues, csstroubleshoot
-ms.technology: windows-server-security
+ms.custom: sap:Windows Security Technologies\Netlogon including Secure Channel and DC Locator issues, csstroubleshoot
 ---
 # A computer can't identify the network when the computer is running Windows Vista, Windows Server 2008, Windows 7, or Windows Server 2008 R2, and is a member of a child domain
 
@@ -42,7 +38,7 @@ To resolve this issue, use one of the following methods.
 
 ### Method 1
 
-Configure the firewall devices not to block communications on UDP/TCP port 389. For more information about how to do it, see [Service overview and network port requirements for Windows](/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements).  
+Configure the firewall devices not to block communications on UDP/TCP port 389. For more information about how to do it, see [Service overview and network port requirements for Windows](../networking/service-overview-and-network-port-requirements.md).  
 
 ### Method 2
 

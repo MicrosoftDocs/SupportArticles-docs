@@ -10,8 +10,8 @@ metadata:
   ms.service: virtual-desktop #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
   author: genlin  #Required; your GitHub user alias, with correct capitalization.
-  ms.author: v-genli #Required; microsoft alias of author; optional team alias.
-  ms.date: 02/09/2021
+  ms.author: genli #Required; microsoft alias of author; optional team alias.
+  ms.date: 07/24/2023
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 

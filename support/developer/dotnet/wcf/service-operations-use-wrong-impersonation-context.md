@@ -2,7 +2,6 @@
 title: WCF Service uses wrong impersonation context
 description: This article provides resolutions for the problem that WCF Service operations invoked asynchronously via shared client proxies using impersonation may use the wrong impersonation context.
 ms.date: 08/24/2020
-ms.technology: dotnet-wcf
 ---
 # WCF Service operations invoked asynchronously via shared client proxies using impersonation may use the wrong impersonation context
 

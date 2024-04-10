@@ -2,7 +2,6 @@
 title: Internet Explorer 9 cannot load VBD documents
 description: Provides the resolution to allow VBD documents to load in Internet Explorer 9.
 ms.date: 03/23/2020
-ms.technology: internet-explorer-development-website
 ---
 # Internet Explorer 9 fails to load VBD documents
 

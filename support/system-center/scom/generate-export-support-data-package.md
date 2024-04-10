@@ -2,6 +2,7 @@
 title: Generate and export a Support Data package
 description: Describes how to generate and export a Support Data package to the BlueStripe support team.
 ms.date: 08/13/2020
+ms.custom: linux-related-content
 ---
 # How to generate and export a Support Data package to the BlueStripe support team
 

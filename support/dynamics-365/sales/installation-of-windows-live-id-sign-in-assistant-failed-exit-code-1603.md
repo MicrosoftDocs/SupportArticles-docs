@@ -3,7 +3,7 @@ title: Installation of Windows Live ID Sign-in Assistant failed error when insta
 description: This article describes how to troubleshoot an installation issue with the Windows Live ID Sign-In Assistant that is a pre-requisite of the Microsoft Dynamics CRM 2011 client for Outlook.
 ms.reviewer: chanson
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: d365-sales-email-office-integration
 ---
 # Installation of Windows Live ID Sign-in Assistant failed Exit code 1603 when installing Microsoft Dynamics CRM 2011 client for Outlook

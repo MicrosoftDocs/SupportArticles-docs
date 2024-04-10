@@ -1,8 +1,9 @@
 ---
 title: Regenerate Taxes Utility in Dynamics GP
 description: Regenerate Taxes Utility in Microsoft Dynamics GP.
-ms.reviewer:
-ms.date: 03/31/2021
+ms.reviewer: theley
+ms.date: 03/20/2024
+ms.custom: sap:Financial - Receivables Management
 ---
 # Regenerate Taxes Utility in Microsoft Dynamics GP
 
@@ -49,4 +50,4 @@ You can use this feature on the following modules:
 
 ## More information
 
-Click [HERE](https://community.dynamics.com/gp/b/dynamicsgp/archive/2017/06/06/update-your-work-transactions-taxes-with-the-regenerate-tax-utility) to view the Microsoft Dynamics GP blog article containing the information above, as well as a Word Document with a SOP example.
+Click [HERE](https://community.dynamics.com/blogs/) to view the Microsoft Dynamics GP blog article containing the information above, as well as a Word Document with a SOP example.

@@ -3,8 +3,7 @@ title: Cumulative Update 1 for SQL Server 2019 (KB4527376)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 1 (KB4527376).
 ms.date: 06/30/2023
 ms.custom: KB4527376
-author: Elena068
-ms.author: v-qianli2
+ms.reviewer: v-qianli2
 appliesto:
 - SQL Server 2019 on Windows
 - SQL Server 2019 on Linux
@@ -102,7 +101,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 ## How to obtain or download this or the latest cumulative update package
 
 <details>
-<summary><b>How to obtain or download the latest cumulative update package for Windows (recommended)</b></summary>
+<summary><b>How to obtain or download the latest cumulative update package for Windows (recommended)</b></summary>
 
 The following update is available from the Microsoft Download Center:
 
@@ -116,7 +115,7 @@ The following update is available from the Microsoft Download Center:
 </details>
 
 <details>
-<summary><b>How to obtain or download this cumulative update package for Windows from Microsoft Update Catalog</b></summary>
+<summary><b>How to obtain or download this cumulative update package for Windows from Microsoft Update Catalog</b></summary>
 
 The following update is available from the Microsoft Update Catalog:
 
@@ -140,7 +139,7 @@ For installation instructions and direct links to the CU package downloads, see 
 </details>
 
 <details>
-<summary><b>How to obtain or download the latest cumulative update for Big Data Clusters (BDC)</b></summary>
+<summary><b>How to obtain or download the latest cumulative update for Big Data Clusters (BDC)</b></summary>
 
 To upgrade Microsoft SQL Server 2019 Big Data Clusters (BDC) on Linux to the latest CU, see the [Big Data Clusters Deployment Guidance](/sql/big-data-cluster/deployment-guidance).
 
@@ -155,7 +154,7 @@ For more information, see the [Big Data Clusters release notes](/sql/big-data-cl
 <details>
 <summary><b>File hash information</b></summary>
 
-You can verify the download by computing the hash of the *SQLServer2019-KB4527376-x64.exe* file by using the following command:
+You can verify the download by computing the hash of the *SQLServer2019-KB4527376-x64.exe* file by using the following command:
 
 `certutil -hashfile SQLServer2019-KB4527376-x64.exe SHA256`
 
@@ -656,7 +655,7 @@ To uninstall this CU on Linux, you must roll back the package to the previous ve
 
 ## References
 
-- [Announcing updates to the SQL Server Incremental Servicing Model (ISM)](https://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism/)
+- [Announcing updates to the SQL Server Incremental Servicing Model (ISM)](/archive/blogs/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism)
 - [SQL Server Service Packs are no longer supported starting from SQL Server 2017](https://support.microsoft.com/topic/fd405dee-cae7-b40f-db14-01e3e4951169)
 - [Determine which version and edition of SQL Server Database Engine is running](../find-my-sql-version.md)
 - [Servicing models for SQL Server](../../general/servicing-models-sql-server.md)

@@ -3,7 +3,6 @@ title: RSS20FeedFormatter throws exception
 description: This article describes that you might receive an error message when you use the SyndicationFeed.Load method to read from an RSS source.
 ms.date: 05/06/2020
 ms.reviewer: hongmeig, vinelap, pradnyad, tvish
-ms.technology: dotnet-general
 ---
 # RSS20FeedFormatter throws exception when trying to read some DateTime formats
 

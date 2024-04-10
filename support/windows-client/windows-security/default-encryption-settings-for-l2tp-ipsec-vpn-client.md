@@ -1,17 +1,13 @@
 ---
 title: Default encryption settings for the Microsoft L2TP/IPSec VPN client
 description: Describes the default encryption settings for the Microsoft L2TP/IPSec virtual private network (VPN) client.
-ms.date: 12/07/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, MASOUDH
-ms.custom: sap:internet-protocol-security-ipsec, csstroubleshoot
-ms.technology: windows-client-security
+ms.custom: sap:Windows Security Technologies\Internet Protocol security (IPSec), csstroubleshoot
 ---
 # Default encryption settings for the Microsoft L2TP/IPSec VPN Client
 
@@ -72,4 +68,4 @@ There are two modes of operation for IPSec:
 
 ## References
 
-[How to troubleshoot a Microsoft L2TP/IPSec virtual private network client connection](/troubleshoot/windows-client/networking/l2tp-ipsec-vpn-client-connection-issue)
+[How to troubleshoot a Microsoft L2TP/IPSec virtual private network client connection](../networking/l2tp-ipsec-vpn-client-connection-issue.md)

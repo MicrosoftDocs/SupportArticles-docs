@@ -3,7 +3,6 @@ title: Manually install prerequisites of Internet Explorer 9
 description: Describes the software and components that are bundled with Internet Explorer when you install Internet Explorer 9. These items are prerequisites for installing and running Internet Explorer 9.
 ms.date: 06/09/2020
 ms.reviewer: jmann
-ms.technology: internet-explorer-installation
 ---
 # Prerequisites for installing Internet Explorer 9
 

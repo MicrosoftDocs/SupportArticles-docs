@@ -1,8 +1,9 @@
 ---
 title: Guidelines that support professionals use
 description: Describes the guidelines we use to determine when a support case becomes a consulting engagement.
-ms.reviewer: kyouells
-ms.date: 03/31/2021
+ms.reviewer: theley, kyouells
+ms.date: 03/20/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # Guidelines that Microsoft support professionals use to determine when a support case becomes a consulting engagement
 
@@ -130,7 +131,7 @@ In a support case, we can provide information about the following attributes so 
 However, if you need help with writing the SQL script, view or Business Alert, the support case becomes a consulting engagement. A request that takes more than 30 minutes to test and explain is considered a consulting engagement.
 
 > [!NOTE]
-> A blog article is available with sample SQL Views for various modules and could save you a lot of time: [Microsoft Dynamics GP SQL Views for Smartlist Designer to Enhance Reporting](https://community.dynamics.com/gp/b/dynamicsgp/posts/microsoft-dynamics-gp-sql-views-for-smartlist-designer-to-enhance-reporting)
+> A blog article is available with sample SQL Views for various modules and could save you a lot of time: [Microsoft Dynamics GP SQL Views for Smartlist Designer to Enhance Reporting](https://community.dynamics.com/blogs/post/?postid=fe83b706-7a65-489a-86de-cfbf19587ad2)
 
 ## Integration Manager VB Script customizations  
 
@@ -186,10 +187,10 @@ We offer the following assistance within a support case:
 
 ### Workflow
 
-If you would like to create a condition for your workflow that isn't in Microsoft Dynamics GP by default, you can use the [Joining in Additional Tables for Workflow Conditions](https://community.dynamics.com/gp/b/dynamicsgpengineeringteamblog/posts/joining-in-additional-tables-for-workflow-conditions) tool to help with the development of new workflow types or modifications of existing workflow types. This tool is supported in Microsoft Dynamics GP 2015 (14.00.0817) and later versions. Support will be limited to creating one single line in a condition. If your customization for workflow takes more than 30 minutes to test and explain, it's considered a consulting service at the discretion of the Microsoft Engineer.
+If you would like to create a condition for your workflow that isn't in Microsoft Dynamics GP by default, you can use the [Joining in Additional Tables for Workflow Conditions](https://community.dynamics.com/blogs/post/?postid=878cf128-45ad-497d-b586-c7b57df6251c) tool to help with the development of new workflow types or modifications of existing workflow types. This tool is supported in Microsoft Dynamics GP 2015 (14.00.0817) and later versions. Support will be limited to creating one single line in a condition. If your customization for workflow takes more than 30 minutes to test and explain, it's considered a consulting service at the discretion of the Microsoft Engineer.
 
 > [!NOTE]
-> Review [Microsoft Dynamics GP Workflow 2.0 AND & OR conditions when setting up approval steps.](https://community.dynamics.com/gp/b/dynamicsgp/posts/microsoft-dynamics-gp-workflow-2-0-and-amp-or-conditions-when-setting-up-approval-steps) to help with `And/Or` statements in workflow conditions.
+> Review [Microsoft Dynamics GP Workflow 2.0 AND & OR conditions when setting up approval steps.](https://community.dynamics.com/blogs/post/?postid=a487f20b-e595-4ecd-b51b-81aae053a1e0) to help with `And/Or` statements in workflow conditions.
 
 ## Additional information
 

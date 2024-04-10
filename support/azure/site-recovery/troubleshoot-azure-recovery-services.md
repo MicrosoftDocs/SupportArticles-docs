@@ -1,7 +1,7 @@
 ---
 title: How to troubleshoot Azure Recovery Services
 description: Describes how to troubleshoot Azure Recovery Services (ASR).
-ms.date: 03/05/2021
+ms.date: 11/01/2023
 ms.service: site-recovery
 ms.author: genli
 author: genlin
@@ -31,7 +31,7 @@ For best results, collect a VMM debug trace when you reproduce this issue, and t
 
 ### How to troubleshoot on VMM server
 
-- Collect the VMM debug logs (event trace log) and SRS logs that are additional information to this channel. See the [detail of how to enable debug logging in Virtual Machine Manager](https://support2.microsoft.com/help/2913445). For Branch to Azure ASR installations, refer to [KB 3033922](https://support.microsoft.com/help/3033922) instead.
+- Collect the VMM debug logs (event trace log) and SRS logs that are additional information to this channel. See the [detail of how to enable debug logging in Virtual Machine Manager](../../system-center/vmm/enable-debug-logging.md). For Branch to Azure ASR installations, refer to [KB 3033922](https://support.microsoft.com/help/3033922) instead.
 - Run the following Windows PowerShell commands to filter and therefore narrow the scope of the investigation:
 
     Get-SCVirtualMachine  

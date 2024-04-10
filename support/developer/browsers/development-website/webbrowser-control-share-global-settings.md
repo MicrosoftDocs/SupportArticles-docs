@@ -3,7 +3,6 @@ title: Global settings of WebBrowser controls
 description: This article describes certain download options of WebBrowser can be set to be global and overwritten and shared on each client.
 ms.date: 06/03/2020
 ms.reviewer: scotrobe
-ms.technology: internet-explorer-development-website
 ---
 # WebBrowser control clients share global settings
 

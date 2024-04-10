@@ -3,7 +3,7 @@ title: IIS events are not displayed remotely
 description: This article provides workarounds for the problem where IIS 8.0 events from a Windows Server 2012 Server Core machine are not displayed remotely in Server Manager.
 ms.date: 12/11/2020
 ms.custom: sap:WWW Administration and Management
-ms.technology: iis-www-administration-management
+ms.subservice: www-administration-management
 ---
 # IIS 8.0 events from a Windows Server 2012 Server Core machine are not displayed remotely in Server Manager
 

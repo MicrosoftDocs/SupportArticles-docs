@@ -2,7 +2,6 @@
 title: COMException occurs in WPF applications
 description: This article describes how WPF applications fail and generate a System.Runtime.InteropServices.COMException error, and provides workarounds for this problem.
 ms.date: 05/06/2020
-ms.technology: dotnet-general
 ---
 # COMException from WPF applications after .NET Framework 4.7 is installed on Windows 7 or Windows Server 2008 R2
 

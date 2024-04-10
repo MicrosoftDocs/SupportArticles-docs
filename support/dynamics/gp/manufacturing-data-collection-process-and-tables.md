@@ -1,8 +1,9 @@
 ---
 title: Manufacturing Data Collection Process and Tables
 description: Manufacturing Data Collection Process and Tables in Microsoft Dynamics GP.
-ms.reviewer: 
-ms.date: 03/31/2021
+ms.reviewer: theley
+ms.date: 03/20/2024
+ms.custom: sap:Manufacturing Series
 ---
 # Manufacturing Data Collection Process and Tables in Microsoft Dynamics GP
 
@@ -13,7 +14,7 @@ _Original KB number:_ &nbsp; 4054354
 
 The below information can be viewed in this blog article:
 
-[Manufacturing Data Collection Process and Tables](https://community.dynamics.com/gp/b/dynamicsgp/posts/manufacturing-data-collection-process-and-tables)
+[Manufacturing Data Collection Process and Tables](https://community.dynamics.com/blogs/post/?postid=7085e1b9-81cf-40a1-8115-9298f9b87223)
 
 ## More information
 

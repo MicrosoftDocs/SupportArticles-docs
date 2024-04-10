@@ -4,7 +4,7 @@ description: This article provides resolutions for the problem that Worker Proce
 ms.date: 04/07/2020
 ms.custom: sap:Site behavior and performance
 ms.reviewer: robmcm, romanf
-ms.technology: iis-site-behavior-performance
+ms.subservice: site-behavior-performance
 ---
 # Worker Process may allocate a large amount of memory when you have a complex directory structure on IIS
 

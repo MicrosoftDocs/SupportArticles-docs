@@ -1,17 +1,13 @@
 ---
 title: Recommended updates for Windows Server 2008 R2-based server clusters
 description: Discusses the recommended hotfixes and updates for Windows Server 2008 R2-based server clusters, and describes these hotfixes and updates.
-ms.date: 3/24/2022
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:replacing-hardware-and-updating-the-operating-system, csstroubleshoot
-ms.technology: windows-server-high-availability
+ms.custom: sap:Clustering and High Availability\Replacing hardware and updating the operating system, csstroubleshoot
 ---
 # Recommended hotfixes and updates for Windows Server 2008 R2-based server clusters
 
@@ -31,7 +27,7 @@ Use the information in the [More information](#more-information) section to help
 
 ## More information
 
-We recommend that you install Windows Server 2008 R2 Service Pack 1 (SP1), as it has many fixes for problems with Windows Clustering. We also recommend installing the hotfixes that are referenced in [Recommended hotfixes and updates for Windows Server 2008 R2 SP1 Failover Clusters](/troubleshoot/windows-server/high-availability/updates-for-windows-server-2008-r2-sp1-failover-cluster). If for any reason you cannot immediately apply SP1, we recommend that you install the following Windows Server 2008 R2 hotfixes, depending on your environment.
+We recommend that you install Windows Server 2008 R2 Service Pack 1 (SP1), as it has many fixes for problems with Windows Clustering. We also recommend installing the hotfixes that are referenced in [Recommended hotfixes and updates for Windows Server 2008 R2 SP1 Failover Clusters](updates-for-windows-server-2008-r2-sp1-failover-cluster.md). If for any reason you cannot immediately apply SP1, we recommend that you install the following Windows Server 2008 R2 hotfixes, depending on your environment.
 
 ### General hotfixes
 

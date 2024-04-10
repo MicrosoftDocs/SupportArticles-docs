@@ -3,7 +3,7 @@ title: Email can't be received because the license is invalid for the mailbox er
 description: You may receive an error that states email can't be received because the license is invalid for the mailbox. This error occurs when you select the Test & Enable Mailbox button in Microsoft Dynamics 365. Provides a resolution.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: d365-sales-email-office-integration
 ---
 # Email can't be received because the license is invalid for the mailbox error occurs in Microsoft Dynamics 365

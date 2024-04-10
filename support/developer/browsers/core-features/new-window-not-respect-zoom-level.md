@@ -2,7 +2,6 @@
 title: Reset zoom level not respected if using script
 description: Provides resolution to solve the issue that new windows that are created by using script do not honor the zoom level that is set by the Reset zoom level for new windows and tabs option in Internet Explorer 9 and later versions.
 ms.date: 04/21/2020
-ms.technology: internet-explorer-core-features
 ---
 # New Internet Explorer windows do not respect reset zoom level when using script
 

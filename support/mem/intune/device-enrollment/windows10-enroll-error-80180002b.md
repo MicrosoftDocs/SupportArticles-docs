@@ -1,9 +1,9 @@
 ---
 title: Troubleshoot Windows 10 Intune auto-enrollment error 80180002b
 description: Fixes an issue in which Windows 10 Group Policy-based auto-enrollment to Microsoft Intune fails with the error code 0x80180002b in Event Viewer.
-ms.date: 10/06/2021
+ms.date: 12/05/2023
 search.appverid: MET150
-ms.custom: sap:Windows enrollment
+ms.custom: sap:Enroll Device - Windows\AutoEnrollment
 ms.reviewer: kaushika, luche
 ---
 # 80180002b error during Windows 10 Group Policy-based auto-enrollment to Intune
@@ -24,7 +24,7 @@ When you try to [enroll a Windows 10 device automatically by using Group Policy]
   Description: Auto MDM Enroll: Failed (Unknown Win32 Error code: 0x80180002b)
   ```
 
-- When you run the `dsregcmd /status` command on the affected device, the value of `AzureAdPrt` is **NO**. This indicates that the user isn't authenticated to Azure Active Directory (Azure AD) when signing in to the device.
+- When you run the `dsregcmd /status` command on the affected device, the value of `AzureAdPrt` is **NO**. This indicates that the user isn't authenticated to Microsoft Entra ID when signing in to the device.
 
   Additionally, the values of `TenantId` and `AuthCodeUrl` are incorrect.
 
@@ -41,7 +41,7 @@ The `AuthCodeUrl` and `AccessTokenUrl` values in those registry keys are used to
 Use the following steps to fix the issue.
 
 1. On the affected device, open an elevated Command Prompt window, and then run the `dsregcmd /leave` command.
-1. Delete the device in Azure AD.
+1. Delete the device in Microsoft Entra ID.
 1. Unjoin the device from your on-premises Active Directory domain. Then, delete the device object from the domain controller.
 1. Rejoin the device to your on-premises Active Directory domain. Then, manually initiate a sync cycle by running the following PowerShell cmdlet:
 

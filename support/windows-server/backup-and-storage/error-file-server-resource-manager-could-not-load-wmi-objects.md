@@ -1,17 +1,13 @@
 ---
 title: File Server Resource Manager could not load WMI objects in Windows Server
 description: Fixes an error that occurs when starting the File Server Resource Manager on Windows Server.
-ms.date: 05/16/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:file-server-resource-manager-fsrm, csstroubleshoot
-ms.technology: windows-server-backup-and-storage
+ms.custom: sap:Backup, Recovery, Disk, and Storage\File Server Resource Manager (FSRM) , csstroubleshoot
 ---
 # File Server Resource Manager could not load WMI objects in Windows Server
 
@@ -58,8 +54,8 @@ In a particular case, the Windows Management Instrumentation is restarted as par
 
 If you're running SCCM 2012, ensure that you're not running in the behavior described in the following article:
 
-[Configuration Manager management points fail after the Client Health Evaluation task runs](/troubleshoot/mem/configmgr/management-points-fail-http-500-errors)
+[Configuration Manager management points fail after the Client Health Evaluation task runs](../../mem/configmgr/setup-migrate-backup-recovery/management-points-fail-http-500-errors.md)
 
 ## Data collection
 
-If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for User Experience issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-user-experience.md#wmi).
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for User Experience issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-user-experience.md#wmi).

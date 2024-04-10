@@ -3,7 +3,6 @@ title: Ports run out when using ConnectionGroupName
 description: When you use a unique ConnectionGroup property of the System.Net.HttpWebRequest class of the .NET Framework 2.0 or 4.0, you may run out of available ports. Provides a resolution for this problem.
 ms.date: 05/08/2020
 ms.reviewer: pphadke, chrross
-ms.technology: dotnet-general
 ---
 # You may run out of available ports when using the ConnectionGroupName property of the System.Net.HttpWebRequest class of the .NET Framework 2.0 or 4.0
 

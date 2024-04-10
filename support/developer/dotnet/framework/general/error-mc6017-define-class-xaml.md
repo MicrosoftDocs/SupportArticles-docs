@@ -3,7 +3,6 @@ title: Build error MC6017 when you define a class
 description: This article provides resolutions to solve the build error MC6017 when you try to define a class that derives from a XAML-generated class.
 ms.date: 05/06/2020
 ms.reviewer: shimada, davean
-ms.technology: dotnet-general
 ---
 # Build error MC6017 when you define a class that derives from a XAML-generated class
 

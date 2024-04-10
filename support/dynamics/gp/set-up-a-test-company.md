@@ -1,8 +1,9 @@
 ---
 title: Set up a test company
 description: Describes how to set up a test company that has a copy of your live production company data by using Microsoft SQL Server.
-ms.reviewer:
-ms.date: 03/31/2021
+ms.reviewer: theley
+ms.date: 03/20/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # Set up a test company that has a copy of live company data for Microsoft Dynamics GP by using Microsoft SQL Server
 
@@ -19,8 +20,6 @@ To test certain issues, a troubleshooting technique may be to copy the Live Comp
 
 Notes:
 
-- If you use **Record Level Notes** in your existing live company and plan to use them in the test company, you must run the NoteFix utility. For more information, contact the Microsoft Business Solutions System Technical Support team by telephone at (888) 477-7877.
-
 - If you're using **Human Resources** for Microsoft Dynamics GP, the Attendance Setup information appears to haven't been copied over. To open this window, select **Tools**, point to **Setup**, point to **Human Resources**, point to **Attendance**, and then select **Setup**. This table (TAST0130) is copied over, but it contains a field that still references the Live Company database. To correct this issue, you can reenter the data in the Attendance Setup window in the new Test company database to contain the same information as before and Save it. Or, you may choose to update the COMPANYCODE_I field in the TAST0130 table to change the company code reference to Test database instead (which can be found in the INTERID column value for the Test company in the Dynamics..SY01500 table).  
 
 - If you're using **Fixed Assets** for Microsoft Dynamics GP, the Fixed Assets Company Setup information won't be brought over to the Test Company. To correct this issue, open the Fixed Assets Company Setup window in the Live Company and note the settings. Open the Fixed Assets Company Setup window in the Test Company and enter the same settings as the Live Company. To open the window, use the following one:
@@ -29,7 +28,7 @@ Notes:
 
 - If you're using **Audit Trails** for Microsoft Dynamics GP, you must delete the audit triggers from the test company using SQL and not from the front-end. Audit Trails is just triggers that are copied over and still point to the same live audit database. However, don't delete, stop, or remove the audit in the Audit Trail Maintenance window in the test company, or it will clear out the history in the audit table and/or remove the trigger on the live company. To remove the audit trail triggers from the test company, refer to the steps outlined in [How to stop Audit Trail triggers in the test company from updating the live audit database using Audit Trails in Microsoft Dynamics GP](https://support.microsoft.com/help/2847491).
 
-- If you're using **Analytical Accounting** (AA), you must first activate AA in the Test company before you copy over the live database (that has AA active). Follow the steps in [How to create a test company with Analytical Accounting installed using Microsoft Dynamics GP](https://community.dynamics.com/gp/b/dynamicsgp/posts/how-to-create-a-test-company-with-analytical-accounting-installed-using-microsoft-dynamics-gp).
+- If you're using **Analytical Accounting** (AA), you must first activate AA in the Test company before you copy over the live database (that has AA active). Follow the steps in [How to create a test company with Analytical Accounting installed using Microsoft Dynamics GP](https://community.dynamics.com/blogs/post/?postid=30001b50-2b30-4856-8ae7-2d2c12fff83d).
 
     > [!NOTE]
     > After the restore, don't forget to run the two scripts mentioned in the blog: The first to update the INTERID (from step 6 below in this article, and also the script to update the next available numbers stored in the AAG00102 table (to prevent Duplicate Key errors when keying new transactions).

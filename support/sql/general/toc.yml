@@ -9,6 +9,8 @@ items:
   href: end-support-sql-server-2008.md
 - name: Information about MATS and SDP
   href: information-mats-sdp.md
+- name: Issues when upgrading to SQL Server 2022
+  href: issues-upgrading-sql-server-2022.md
 - name: RS Diagnostics Collector collects information
   href: rs-diagnostics-collector-information.md
 - name: Setup data collection diagnostic tool

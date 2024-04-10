@@ -4,7 +4,6 @@ description: An error appears when you install or remove the .NET Framework. Thi
 ms.date: 05/06/2020
 ms.custom: sap:Installation
 ms.reviewer: CWOJA
-ms.technology: dotnet-installation
 ---
 # Error when you install or remove .NET Framework: You must enable rollback to continue with setup
 

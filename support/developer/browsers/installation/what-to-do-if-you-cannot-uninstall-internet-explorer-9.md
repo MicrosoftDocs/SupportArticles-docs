@@ -3,7 +3,6 @@ title: Cannot uninstall Internet Explorer 9
 description: Describes how to uninstall Internet Explorer 9 when the standard program removal methods aren't working for you.
 ms.date: 10/15/2020
 ms.reviewer: ramakoni
-ms.technology: internet-explorer-installation
 ---
 # What to do if you can't uninstall Internet Explorer 9
 

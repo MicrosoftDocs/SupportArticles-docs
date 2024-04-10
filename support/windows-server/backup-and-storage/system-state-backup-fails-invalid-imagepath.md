@@ -1,17 +1,13 @@
 ---
 title: System State Backup fails when an invalid ImagePath is specified for services
 description: Describes an issue in which System State Backup fails when an invalid ImagePath is specified for services.
-ms.date: 9/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:configuring-and-using-backup-software, csstroubleshoot
-ms.technology: windows-server-backup-and-storage
+ms.custom: sap:Backup, Recovery, Disk, and Storage\Configuring and using Windows Backup or other recovery, csstroubleshoot
 ---
 # System State Backup fails when an invalid ImagePath is specified for services
 

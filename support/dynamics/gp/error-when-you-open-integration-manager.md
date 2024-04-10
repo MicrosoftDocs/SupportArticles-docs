@@ -1,9 +1,10 @@
 ---
 title: Error when you open Integration Manager
 description: Provides a solution to an error that occurs when you open Integration Manager or when you run an integration in Integration Manager.
-ms.reviewer: kvogel
+ms.reviewer: theley, kvogel
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # Error message displays when you open Integration Manager or when you run an integration in Integration Manager
 
@@ -15,7 +16,7 @@ _Original KB number:_ &nbsp; 915463
 ## Symptoms
 
 > [!IMPORTANT]
-> This article contains information about how to modify the registry. Make sure to back up the registry before you modify it. Make sure that you know how to restore the registry if a problem occurs. For more information about how to back up, restore, and modify the registry, see [Windows registry information for advanced users](/troubleshoot/windows-server/performance/windows-registry-advanced-users)
+> This article contains information about how to modify the registry. Make sure to back up the registry before you modify it. Make sure that you know how to restore the registry if a problem occurs. For more information about how to back up, restore, and modify the registry, see [Windows registry information for advanced users](../../windows-server/performance/windows-registry-advanced-users.md)
 
 After you install Integration Manager for Microsoft Dynamics GP or Integration Manager for Microsoft Business Solutions - Great Plains, Automation errors are returned as follows.
 

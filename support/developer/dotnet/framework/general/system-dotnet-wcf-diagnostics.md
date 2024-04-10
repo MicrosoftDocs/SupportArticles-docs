@@ -3,7 +3,6 @@ title: System.Net or WCF diagnostics
 description: This article describes SDP for WCF and `System.Net` trace and the manual steps to disable the trace feature that is enabled through SDP package.
 ms.date: 05/14/2020
 ms.reviewer: huizhu, mimran
-ms.technology: dotnet-general
 ---
 # System.Net and WCF diagnostics
 

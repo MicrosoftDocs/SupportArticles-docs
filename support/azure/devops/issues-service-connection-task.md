@@ -3,20 +3,18 @@ title: Issues with the service connection in Azure Web App tasks
 description: Provides solutions for issues related to the service connection in Azure Web App tasks.
 ms.date: 05/10/2023
 ms.custom: sap:Pipelines
-ms.reviewer: dmittal, cathmill
-ms.author: v-sidong
-author: sevend2
+ms.reviewer: dmittal, cathmill, v-sidong
 ms.service: azure-devops
 ms.subservice: ts-pipelines
 ---
 # Issues with the service connection in Azure Web App tasks
 
-This article provides troubleshooting steps and solutions for common issues you may encounter with Azure Resource Manager (ARM) service connections when working with Azure services deployment.
+This article provides troubleshooting steps and solutions for common issues you may encounter with Azure Resource Manager (Azure RM) service connections when working with Azure services deployment.
 
 ## Common issues and solutions
 
 > [!NOTE]
-> For more common issues and solutions, see [Troubleshoot ARM service connections](/azure/devops/pipelines/release/azure-rm-endpoint). You can also explore [Service connection APIs](/rest/api/azure/devops/serviceendpoint/endpoints) to get, create, and update endpoints.
+> For more common issues and solutions, see [Troubleshoot Azure RM service connections](/azure/devops/pipelines/release/azure-rm-endpoint) and [Troubleshoot common Azure RM service connection issues](overview-of-azure-resource-manager-service-connections.md). You can also explore [Service connection APIs](/rest/api/azure/devops/serviceendpoint/endpoints) to get, create, and update endpoints.
 
 #### Unable to renew the client secret for a service connection created through the automatic method
 
@@ -28,11 +26,13 @@ To generate a client secret for a service connection created via the "automatic"
 
 This method generates a new client secret for the service principal backing the service connection. For more information, see [Service principal's token expired](/azure/devops/pipelines/release/azure-rm-endpoint#service-principals-token-expired).
 
-When performing the operation, ensure you have the proper permission on the Azure subscription and Azure Active Directory (Azure AD), as it updates the secret for the app registered for the service principal. For more information, see [Troubleshoot ARM service connections](/azure/devops/pipelines/release/azure-rm-endpoint#what-happens-when-you-create-a-resource-manager-service-connection) and [Create an Azure Resource Manager service connection using automated security](/azure/devops/pipelines/library/connect-to-azure#create-an-azure-resource-manager-service-connection-using-automated-security).
+When performing the operation, ensure you have the proper permission on the Azure subscription and Microsoft Entra ID, as it updates the secret for the app registered for the service principal. For more information, see [Troubleshoot ARM service connections](/azure/devops/pipelines/release/azure-rm-endpoint#what-happens-when-you-create-a-resource-manager-service-connection) and [Create an Azure Resource Manager service connection using automated security](/azure/devops/pipelines/library/connect-to-azure#create-an-azure-resource-manager-service-connection-using-automated-security).
 
-#### How to create the service principal to be used in Azure DevOps without the permission on the Azure subscription and Azure AD?
+<a name='how-to-create-the-service-principal-to-be-used-in-azure-devops-without-the-permission-on-the-azure-subscription-and-azure-ad'></a>
 
-You can use a service principal created manually by a user who has permission on the Azure subscription and Azure AD and then add the service principal details manually in Azure DevOps. For more information, see [Create an Azure Resource Manager service connection with an existing service principal](/azure/devops/pipelines/library/connect-to-azure#create-an-azure-resource-manager-service-connection-with-an-existing-service-principal).
+#### How to create the service principal to be used in Azure DevOps without the permission on the Azure subscription and Microsoft Entra ID?
+
+You can use a service principal created manually by a user who has permission on the Azure subscription and Microsoft Entra ID and then add the service principal details manually in Azure DevOps. For more information, see [Create an Azure Resource Manager service connection with an existing service principal](/azure/devops/pipelines/library/connect-to-azure#create-an-azure-resource-manager-service-connection-with-an-existing-service-principal).
 
 #### The pipeline tasks are failing with an error like: "AuthorizationFailed: The client '\<ClientName\>' with object id '\<ObjectId\>' does not have authorization to perform action '\<ActionName\>' over scope …"
 
@@ -52,7 +52,7 @@ At this time, service connections can only be scoped to a single Azure subscript
 
 #### Unable to authenticate the service principal in CI/CD pipelines
 
-Check your [Azure AD permissions](/azure/active-directory/develop/howto-create-service-principal-portal#check-azure-ad-permissions) and [assign the appropriate roles](/azure/active-directory/fundamentals/active-directory-users-assign-role-azure-portal).  
+Check your [Microsoft Entra permissions](/azure/active-directory/develop/howto-create-service-principal-portal#check-azure-ad-permissions) and [assign the appropriate roles](/azure/active-directory/fundamentals/active-directory-users-assign-role-azure-portal).  
 
 #### Can an Azure RM service connection of managed service identity (MSI) type be used on Microsoft-hosted agents?
 

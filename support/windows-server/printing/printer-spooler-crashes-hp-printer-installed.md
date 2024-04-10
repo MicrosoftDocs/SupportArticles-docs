@@ -1,17 +1,13 @@
 ---
 title: Printer spooler crashes randomly
 description: Describes a problem in which the printer spooler may crash randomly on a Windows Server computer that has an HP printer installed.
-ms.date: 9/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:errors-and-troubleshooting:-print-spooler, csstroubleshoot
-ms.technology: windows-server-printing
+ms.custom: sap:Print, Fax, and Scan\Print Performance - failures, crashes, not responsive, csstroubleshoot
 ---
 # Printer spooler may crash randomly on a Windows Server computer that has an HP printer installed
 

@@ -5,7 +5,6 @@ ms.date: 01/21/2021
 ms.custom: sap:Stability and Performance
 ms.reviewer: ramakoni
 ms.topic: how-to
-ms.technology: internet-explorer-stability-performance
 ---
 # Preparing for support calls for browser crashes
 

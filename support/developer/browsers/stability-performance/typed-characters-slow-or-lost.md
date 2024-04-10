@@ -3,7 +3,6 @@ title: Typed characters are slow or lost in Internet Explorer
 description: Due to changes in the use of the navigator.online DOM property in Internet Explorer, web site code may cause the browser to display typed input slowly or cause characters to be omitted intermittently.
 ms.date: 06/08/2020
 ms.reviewer: joelba
-ms.technology: internet-explorer-stability-performance
 ---
 # Typed characters are slow or fail to appear in Internet Explorer
 

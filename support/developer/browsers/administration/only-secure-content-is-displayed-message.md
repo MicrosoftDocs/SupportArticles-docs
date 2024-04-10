@@ -3,7 +3,6 @@ title: Display non-secure content in Internet Explorer
 description: When you access a website that contains non-secure content or mixed content, you receive only secure content is displayed.
 ms.date: 06/09/2020
 ms.reviewer: 
-ms.technology: internet-explorer-administration
 ---
 # Only secure content is displayed notification in Internet Explorer 9 or later versions
 

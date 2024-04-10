@@ -3,7 +3,6 @@ title: UpdatePanel async postbacks slow in Internet Explorer
 description: Provides the method to solve the delay that occurs when you click a page element in Internet Explorer.
 ms.date: 03/16/2020
 ms.reviewer: jamesche
-ms.technology: internet-explorer-development-website
 ---
 # UpdatePanel async postbacks slow in Internet Explorer
 

@@ -2,7 +2,7 @@
 title: Troubleshooting solution import errors in Dynamics 365
 description: This article introduces how to troubleshoot solution import errors in Microsoft Dynamics 365.
 ms.reviewer: 
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: d365-sales-custom-solutions
 ---
 # Troubleshoot solution import errors in Microsoft Dynamics 365
@@ -30,4 +30,4 @@ The following are general recommendations for troubleshooting solution import er
 
 - Community and support
 
-  You can also use the information in the error message to search for potential solutions in the [Microsoft Dynamics 365 Community Forums](https://community.dynamics.com/f). If the error persists and you are not able to resolve the issue using the details available in the error, you can contact Microsoft Support for assistance.
+  You can also use the information in the error message to search for potential solutions in the [Microsoft Dynamics 365 Community Forums](https://community.dynamics.com/forums/thread/). If the error persists and you are not able to resolve the issue using the details available in the error, you can contact Microsoft Support for assistance.

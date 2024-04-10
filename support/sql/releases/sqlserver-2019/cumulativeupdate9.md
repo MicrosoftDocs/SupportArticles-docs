@@ -3,8 +3,7 @@ title: Cumulative update 9 for SQL Server 2019 (KB5000642)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 9 (KB5000642).
 ms.date: 06/30/2023
 ms.custom: KB5000642
-author: MonicaChenc
-ms.author: v-cuichen
+ms.reviewer: v-cuichen
 appliesto:
 - SQL Server 2019 on Windows
 - SQL Server 2019 on Linux
@@ -46,7 +45,7 @@ For examples of disabling Scalar UDF inlining, see [Disable Scalar UDF Inlining 
 A downloadable Excel workbook that contains a summary list of builds, together with their current support lifecycle, is available. The Excel file also contains detailed fix lists for SQL Server 2019 and SQL Server 2017. [Select to download this Excel file now](https://aka.ms/sqlserverbuilds).
 
 > [!NOTE]
-> Individual entries in the following table can be referenced directly through a bookmark. If you select any bug reference ID in the table, a bookmark tag is added to the URL by using the "#NNNNNNN" format. You can then share this URL with others so that they can jump directly to the desired fix in the table.
+> Individual entries in the following table can be referenced directly through a bookmark. If you select any bug reference ID in the table, a bookmark tag is added to the URL by using the "#NNNNNNNN" format. You can then share this URL with others so that they can jump directly to the desired fix in the table.
 
 For more information about the bugs that are fixed and enhancements that are included in this cumulative update, see the following Microsoft Knowledge Base articles.
 
@@ -61,7 +60,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id="13888649">[13888649](#13888649)</a> | FIX: When the master SSIS package calls multiple child packages and their connection managers are parameterized, the SSIS package execution fails with UNEXPECTED TERMINATION or INVALID CONNECTION STRING ATTRIBUTE error while updating connection strings. | Integration Services | Tasks_Components | Windows |
 | <a id="13745362">[13745362](#13745362)</a> | [FIX: ISDBUpgradeWizard.exe throws error when you try to upgrade SSISDB after restoring from earlier versions in SQL Server (KB4547890)](https://support.microsoft.com/help/4547890) | Integration Services | Tools | Windows |
 | <a id="13723579">[13723579](#13723579)</a> | Fixes Recursive hierarchy in **explore** page that's not working properly in MDS version 2019. | Master Data Services | Master Data Services | Windows |
-| <a id="13770149">[13770149](#13770149)</a> | [FIX: SQL Server crashes when Afd!DbCreateSocketOperation process fails (KB4588977)](https://support.microsoft.com/help/4588977) | SQL Server Connectivity | Protocols | Linux |
+| <a id="13770149">[13770149](#13770149)</a> | [FIX: SQL Server crashes when Afd!DbCreateSocketOperation process fails (KB4588977)](https://support.microsoft.com/topic/60ac7c2a-7904-4c3b-8bb7-5233cd5c9d85) | SQL Server Connectivity | Protocols | Linux |
 | <a id="13757446">[13757446](#13757446)</a> | Fixes the issue of sending done token before sending the session kill state when session got killed. This fixes the issue of incorrect session state that occurs when a session is killed on SQL Server external data source instance. | SQL Server Connectivity | SQL Connectivity | Windows |
 | <a id="13746925">[13746925](#13746925)</a> | When running a `RESTORE HEADERONLY` of a SQL Server 2016 backup you may notice [error 3285](/sql/relational-databases/errors-events/database-engine-events-and-errors-3000-to-3999) even if the correct block size has been specified. If the error persists after applying this fix, specify the proper block size or contact Microsoft Support for assistance. | SQL Server Engine | Backup Restore | Windows |
 | <a id="13746927">[13746927](#13746927)</a> | FIX: When you try to restore from a compressed or encrypted backup over an existing TDE enabled database, you may notice that the restore operation may take longer time than expected. | SQL Server Engine | Backup Restore | Windows |
@@ -989,8 +988,8 @@ Beginning in Microsoft SQL Server 2017, the Analysis Services build version numb
 - Each new CU contains all the fixes that were included with the previous CU for the installed version of SQL Server.
 - SQL Server CUs are certified to the same levels as service packs, and should be installed at the same level of confidence.
 - We recommend ongoing, proactive installation of CUs as they become available according to these guidelines:
-- Historical data shows that a significant number of support cases involve an issue that has already been addressed in a released CU.
-- CUs may contain added value over and above hotfixes. This includes supportability, manageability, and reliability updates.
+  - Historical data shows that a significant number of support cases involve an issue that has already been addressed in a released CU.
+  - CUs may contain added value over and above hotfixes. This includes supportability, manageability, and reliability updates.
 - We recommend that you test SQL Server CUs before you deploy them to production environments.
 
 </details>
@@ -1060,7 +1059,7 @@ To uninstall this CU on Linux, you must roll back the package to the previous ve
 
 ## References
 
-- [Announcing updates to the SQL Server Incremental Servicing Model (ISM)](https://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism/)
+- [Announcing updates to the SQL Server Incremental Servicing Model (ISM)](/archive/blogs/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism)
 - [SQL Server Service Packs are no longer supported starting from SQL Server 2017](https://support.microsoft.com/topic/fd405dee-cae7-b40f-db14-01e3e4951169)
 - [Determine which version and edition of SQL Server Database Engine is running](../find-my-sql-version.md)
 - [Servicing models for SQL Server](../../general/servicing-models-sql-server.md)

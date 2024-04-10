@@ -5,7 +5,7 @@ ms.date: 03/24/2020
 ms.custom: sap:WWW authentication and authorization
 ms.reviewer: cirvin
 ms.topic: how-to
-ms.technology: iis-www-authentication-authorization
+ms.subservice: www-authentication-authorization
 ---
 # Read and analyze a client certificate
 

@@ -1,8 +1,9 @@
 ---
 title: Can't download content from a CMG
 description: Describes an issue in which content can't be downloaded from a CMG that functions as a cloud DP, and you receive an WINHTTP_CALLBACK_STATUS_FLAG_CERT_CN_INVALID error message.
-ms.date: 06/09/2020
+ms.date: 12/05/2023
 ms.reviewer: kaushika
+ms.custom: sap:Cloud Services\Cloud Management Gateway (CMG) as DP
 ---
 # WINHTTP_CALLBACK_STATUS_FLAG_CERT_CN_INVALID using a CMG as a cloud DP with a third-party certificate
 

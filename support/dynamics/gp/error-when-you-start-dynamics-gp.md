@@ -1,16 +1,17 @@
 ---
 title: You are attempting to log in from a data source when you try to start Dynamics GP
 description: Discusses that you receive an error message after you install SQL Server Desktop Engine (also known as MSDE 2000), and then you try to start Microsoft Dynamics GP. Provides a resolution.
-ms.reviewer:
+ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # Error message when you try to start Microsoft Dynamics GP: "You are attempting to log in from a data source using a trusted connection"
 
 This article provides a solution to an error that occurs when you try to start Microsoft Dynamics GP.
 
 > [!IMPORTANT]
-> This article contains information about how to modify the registry. Make sure that you back up the registry before you modify it. Make sure that you know how to restore the registry if a problem occurs. For more information about how to back up, restore, and modify the registry, see [Windows registry information for advanced users](/troubleshoot/windows-server/performance/windows-registry-advanced-users).
+> This article contains information about how to modify the registry. Make sure that you back up the registry before you modify it. Make sure that you know how to restore the registry if a problem occurs. For more information about how to back up, restore, and modify the registry, see [Windows registry information for advanced users](../../windows-server/performance/windows-registry-advanced-users.md).
 
 _Applies to:_ &nbsp; Microsoft Dynamics GP  
 _Original KB number:_ &nbsp; 869956

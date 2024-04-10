@@ -2,7 +2,7 @@
 title: An error occurs when the location is selected during picking list registration
 description: Introduces a by-design behavior where an error occurs when you select the location for a picking list registration line.
 author: Mirzaab
-ms.date: 4/11/2021
+ms.date: 04/11/2021
 ms.topic: troubleshooting
 ms.search.form: WMSPickingRegistration
 audience: Application User

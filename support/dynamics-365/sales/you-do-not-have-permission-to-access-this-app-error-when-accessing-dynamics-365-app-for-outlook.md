@@ -3,7 +3,7 @@ title: You don't have permission to access this app when accessing Dynamics CRM 
 description: Provides a resolution for the issue that an error may occur when using the Microsoft Dynamics 365 App for Outlook.
 ms.reviewer: dmartens
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: d365-sales-email-office-integration
 ---
 # You don't have permission to access this app occurs when accessing the Microsoft Dynamics 365 App for Outlook

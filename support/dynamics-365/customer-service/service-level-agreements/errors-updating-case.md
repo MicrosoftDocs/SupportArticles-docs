@@ -1,9 +1,10 @@
 ---
 title: Errors occur when updating a case
 description: Provides a resolution for the errors that occur on the SLA form when updating a case in Dynamics 365 Customer Service.
-ms.reviewer: sdas
-ms.author: ravimanne
+ms.reviewer: sdas, ankugupta
+ms.author: sdas
 ms.date: 05/23/2023
+ms.custom: sap:Service Level Agreements\Issue related to SLA flow
 ---
 # Errors occur on the SLA form when you update a case
 

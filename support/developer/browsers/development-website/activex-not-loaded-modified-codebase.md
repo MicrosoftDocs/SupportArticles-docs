@@ -3,7 +3,6 @@ title: Modified CODEBASE isn't loaded into ActiveX
 description: This article describes the error message you receive when you view a webpage that attempts to load an ActiveX control, and provides a solution.
 ms.date: 06/08/2020
 ms.reviewer: mmcgough
-ms.technology: internet-explorer-development-website
 ---
 # ActiveX control is not loaded with modified CODEBASE value in the registry
 

@@ -2,9 +2,7 @@
 title: Troubleshoot Azure Synapse Link for serverless SQL pool
 description: Provides solutions for common issues experienced on Azure Synapse Link for Azure Synapse Analytics serverless SQL pool.
 ms.date: 02/21/2023
-author: sevend2
-ms.author: goventur
-ms.reviewer: scepperl
+ms.reviewer: scepperl, v-sidong, goventur
 ---
 
 # Troubleshoot Azure Synapse Link for Azure Synapse Analytics serverless SQL pool
@@ -20,7 +18,7 @@ This article provides solutions for common issues experienced on Azure Synapse L
 Learn how to transition from Data Export Service to Azure Synapse Link for Dataverse with the following articles:
 
 - [DES deprecation playbook](/shows/dynamics-365-fasttrack-architecture-insights/best-practice-des-deprecation-playbook)
-- [Data Export Services (DES) - Deprecation note](https://community.dynamics.com/365/f/dynamics-365-general-forum/442397/data-export-services-des---deprecation---metadata-information)
+- [Data Export Services (DES) - Deprecation note](https://community.dynamics.com/forums/thread/details/?threadid=47795f6f-fa49-4f55-bb9d-6d6ab3f5e7f5)
 - [From Data Export Service to Azure Synapse Link for Dataverse](https://powerapps.microsoft.com/blog/do-more-with-data-from-data-export-service-to-azure-synapse-link-for-dataverse)
 
 ### Near real-time data and read-only snapshot data
@@ -87,3 +85,4 @@ All transactional operations are propagated, including deletes. The analytical s
 - [Analytical store Time-to-Live (TTL) overview](/azure/cosmos-db/analytical-store-introduction#analytical-ttl)
 - [Frequently asked questions about Azure Synapse Link for Azure Cosmos DB](/azure/cosmos-db/synapse-link-frequently-asked-questions)
 - [Schema representation](/azure/cosmos-db/analytical-store-introduction#schema-representation)
+

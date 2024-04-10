@@ -4,7 +4,7 @@ description: Provides symptoms and various steps you can take to solve them, dep
 ms.date: 07/13/2020
 ms.custom: sap:Internet Explorer
 ms.reviewer: ramakoni, paulboc, dili
-ms.technology: iis-www-authentication-authorization
+ms.subservice: www-authentication-authorization
 ---
 # Troubleshoot Kerberos failures in Internet Explorer
 
@@ -276,7 +276,7 @@ Kernel mode authentication is a feature that was introduced in IIS 7. It provide
 > If an SPN has been declared for a specific user account (also used as application pool identity), kernel mode authentication can't decrypt the Kerberos ticket because it uses the machine account. This problem is typical in web farm scenarios. This scenario usually declares an SPN for the (virtual) NLB hostname. To prevent this problem, use one of the following methods:
 >
 > - Disable Kernel mode authentication. (Not recommended from a performance standpoint.)
-> - Set **useAppPoolCredentials** to **true**. Doing so retains the performance benefit of kernel mode authentication, while allowing the Kerberos ticket to be decoded under the application pool identity. For more information, see [New in IIS 7 - Kernel Mode Authentication](http://www.adopenstatic.com/cs/blogs/ken/archive/2008/02/12/16189.aspx).
+> - Set **useAppPoolCredentials** to **true**. Doing so retains the performance benefit of kernel mode authentication, while allowing the Kerberos ticket to be decoded under the application pool identity. For more information, see [Security Authentication \<authentication\>](/iis/configuration/system.webserver/security/authentication).
 
 ### Why does delegation fail although Kerberos authentication works
 
@@ -327,3 +327,7 @@ These keys should be created under the respective path. Inside the key, a DWORD 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Internet Explorer\Main\FeatureControl\FEATURE_INCLUDE_PORT_IN_SPN_KB908209]
 "iexplore.exe"=dword:00000001
 ```
+
+## More information
+
+[Diagnostic pages for Windows Integrated Authentication troubleshooting](diagnostics-pages-windows-integrated-authentication.md)

@@ -1,9 +1,9 @@
 ---
 title: 403 Forbidden error for Intune objects in Graph Explorer
 description: Troubleshoot and resolve a 403 Forbidden error when running queries in Graph Explorer to inspect or modify Microsoft Intune objects. 
-ms.date: 12/22/2021
+ms.date: 12/05/2023
 search.appverid: MET150
-ms.custom: sap:Intune Graph API
+ms.custom: sap:Develop and Customize - Android\Intune Graph API
 ms.reviewer: kaushika
 ---
 # 403 Forbidden error when you query Intune objects in Graph Explorer
@@ -74,7 +74,7 @@ If you still cannot resolve this issue, you can reset your tenant to its default
 > [!IMPORTANT]
 > To avoid issues that affect browser caching, browse in **InPrivate** or **Incognito** mode when you troubleshoot access permissions.
 
-1. Sign in to the Azure portal, go to **Azure Active Directory** > **Enterprise Applications**, and then select **Graph explorer** from the list of applications.
+1. Sign in to the Azure portal, go to **Microsoft Entra ID** > **Enterprise Applications**, and then select **Graph explorer** from the list of applications.
 1. In the Graph explorer settings, select **Manage** > **Properties**.
 1. Select **Delete**, and acknowledge the warning dialog box.
 1. Wait for the **Application Graph explorer was deleted successfully** message from the Azure portal.
@@ -89,7 +89,7 @@ The first time that you log on to Graph Explorer, you are prompted by a **Permis
 
 :::image type="content" source="media/403-error-graph-explorer-query/permissions-requested-2.png" alt-text="Screenshot of the Permissions requested dialog box.":::
 
-By selecting **Accept**, you grant the app permissions to your sign-in account. By selecting **Consent on behalf of your organization**, you allow other accounts to also use Graph Explorer to query Intune management objects. This creates an Enterprise application in Azure AD that has the following settings:
+By selecting **Accept**, you grant the app permissions to your sign-in account. By selecting **Consent on behalf of your organization**, you allow other accounts to also use Graph Explorer to query Intune management objects. This creates an Enterprise application in Microsoft Entra ID that has the following settings:
 
 - Name: Graph explorer
 - Application ID: de8bc8b5-d9f9-48b1-a8ad-b748da725064
@@ -103,7 +103,7 @@ The following are the default user permissions that are set after you grant acce
 
 > [!NOTE]
 > You can view the permissions in the Azure portal in the following path:  
-> **Azure Active Directory** > **Enterprise applications** > **All applications** > **Graph explorer** > **Users and groups** > **\<*Account Name*>** > **Applications** > **Assignment Detail** > **Permissions & Consent**
+> **Microsoft Entra ID** > **Enterprise applications** > **All applications** > **Graph explorer** > **Users and groups** > **\<*Account Name*>** > **Applications** > **Assignment Detail** > **Permissions & Consent**
 
 |API Name|Type|Permission|Granted through|
 |---|---|---|---|

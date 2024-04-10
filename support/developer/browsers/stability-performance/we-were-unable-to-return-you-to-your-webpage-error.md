@@ -3,7 +3,6 @@ title: We were unable to return you to your webpage error
 description: Provides a resolution for the issue that you may receive a We were unable to return you to your webpage error when trying to visit a website.
 ms.date: 10/13/2020
 ms.reviewer: ramakoni
-ms.technology: internet-explorer-stability-performance
 ---
 # We were unable to return you to your webpage error occurs in Internet Explorer 9
 

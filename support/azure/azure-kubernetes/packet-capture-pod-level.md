@@ -1,7 +1,7 @@
 ---
 title: How to capture a TCP dump from a pod running on an AKS cluster
 description: Describes how to capture TCP traffic at a POD running on an AKS cluster
-ms.date: 07/08/2021
+ms.date: 02/27/2024
 ms.author: genli
 author: y2kdread
 ms.service: azure-kubernetes-service

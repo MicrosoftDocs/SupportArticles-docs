@@ -1,10 +1,8 @@
 ---
 title: Fix erased proxy settings in the Microsoft Monitoring Agent
 description: Learn how to troubleshoot proxy settings that were erased for the Microsoft Monitoring Agent because of System Center Operations Manager integration.
-ms.date: 1/31/2022
-author: DennisLee-DennisLee
-ms.author: v-dele
-ms.reviewer: irfanr
+ms.date: 01/31/2022
+ms.reviewer: irfanr, v-leedennis
 editor: v-jsitser
 ms.service: azure-monitor
 ms.subservice: logs-troubleshoot

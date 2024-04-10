@@ -1,17 +1,13 @@
 ---
 title: Troubleshoot DC and Kerberos for DirectAccess troubleshooting
 description: This article discusses how to troubleshoot DC and Kerberos for DirectAccess server troubleshooting.
-ms.date: 1/19/2022
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:remote-access, csstroubleshoot
-ms.technology: networking
+ms.custom: sap:Network Connectivity and File Sharing\Remote access (DirectAccess), csstroubleshoot
 ---
 # Troubleshoot DirectAccess Server console: domain controller and Kerberos
 

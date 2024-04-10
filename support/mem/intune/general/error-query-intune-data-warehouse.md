@@ -1,9 +1,9 @@
 ---
 title: Can't query the Intune Data Warehouse
 description: Fixes an issue in which you receive error 'The reply url specified in the request does not match the reply urls configured for the application' when you query the Intune Data Warehouse.
-ms.date: 12/10/2021
+ms.date: 12/05/2023
 search.appverid: MET150
-ms.custom: sap:Intune Data Warehouse
+ms.custom: sap:Reporting\Intune Data Warehouse
 ms.reviewer: kaushika
 ---
 # Error AADSTS50011 when you query the Intune Data Warehouse
@@ -35,7 +35,7 @@ To fix the issue, do the following:
 - If you use a custom application, follow these steps:
 
   1. Sign in to the [Azure portal](https://portal.azure.com/).
-  2. Select **Azure Active Directory** > **App registrations**.
+  2. Select **Microsoft Entra ID** > **App registrations**.
   3. In the search box, enter the application ID in the error message to find the app.
   4. Select the app, and then select **Authentication** under **Manage**.
   5. Under **Redirect URIs**, add the following URI:

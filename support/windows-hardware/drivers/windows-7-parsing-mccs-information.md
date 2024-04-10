@@ -3,7 +3,7 @@ title: Windows 7 parsing MCCS information
 description: This article provides resolutions for the problem that occurs when you parse MCCS information in Windows 7.
 ms.date: 09/04/2020
 ms.custom: sap:Windows 7 Enterprise
-ms.technology: windows-hardware-display-driver
+ms.subservice: display-driver
 ---
 # Problems with Windows 7 parsing MCCS information
 

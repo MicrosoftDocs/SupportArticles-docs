@@ -3,7 +3,6 @@ title: Cursor style remains when mouse is pressed
 description: Provides a resolution to a by design behavior that the cursor style not changing when the mouse button remains pressed in Internet Explorer 9 and later versions.
 ms.date: 04/21/2020
 ms.reviewer: jeanr
-ms.technology: internet-explorer-core-features
 ---
 # Cursor style does not change when the mouse button gets pressed in Internet Explorer 9 and later versions
 

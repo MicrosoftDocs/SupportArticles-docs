@@ -4,7 +4,7 @@ description: This article provides resolutions for the problem where server exec
 ms.date: 03/24/2020
 ms.custom: sap:Site behavior and performance
 ms.reviewer: jmeier
-ms.technology: iis-site-behavior-performance
+ms.subservice: site-behavior-performance
 ---
 # Server execution failed when calling MTS COM component from ASP
 

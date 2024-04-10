@@ -210,7 +210,7 @@ For performance-related issues, search SQL Server Books Online for the **Optimiz
   Verify that the OCI versions are registered correctly as described earlier in this article.
 
     > [!NOTE]
-    > If the registry entries are all correct, the MtxOCI.dll file is loaded. If the MtxOCI.dll file is not loaded, you cannot perform distributed transactions against Oracle by using Microsoft OLE DB Provider for Oracle or by using Microsoft ODBC Driver for Oracle. If you are using a third-party provider and you receive Error 7391, verify that the OLE DB provider that you are using supports distributed transactions. If the OLE DB provider does support distributed transactions, verify that the Microsoft Distributed Transaction Coordinator (MSDTC) is running and has [network access enabled](/troubleshoot/windows-server/application-management/enable-network-dtc-access).
+    > If the registry entries are all correct, the MtxOCI.dll file is loaded. If the MtxOCI.dll file is not loaded, you cannot perform distributed transactions against Oracle by using Microsoft OLE DB Provider for Oracle or by using Microsoft ODBC Driver for Oracle. If you are using a third-party provider and you receive Error 7391, verify that the OLE DB provider that you are using supports distributed transactions. If the OLE DB provider does support distributed transactions, verify that the Microsoft Distributed Transaction Coordinator (MSDTC) is running and has [network access enabled](../../../windows-server/application-management/enable-network-dtc-access.md).
 
 - Message 8
 

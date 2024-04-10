@@ -4,7 +4,6 @@ description: This article provides a resolution for the problem where IE11 can't
 ms.date: 01/04/2021
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.technology: internet-explorer-administration
 ---
 # Can't check for new Enterprise Mode site list XML file in Internet Explorer 11
 

@@ -14,8 +14,6 @@
   href: ./resource-editor-cannot-save-file.md
 - name: Subscriptions administrator migration
   href: ./subscription-administrator-migration.md
-- name: Use AssemblyVersion and AssemblyFileVersion
-  href: ./assembly-version-assembly-file-version.md
 - name: VBScript runtime error when you do a numeric comparison
   href: ./vbs-type-mismatch-error.md
 - name: Workarounds for Visual Studio 2022 on unsupported operating systems

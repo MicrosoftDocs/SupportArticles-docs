@@ -3,7 +3,6 @@ title: Compatibility View is used for Trusted sites
 description: Provides options for you to make sure the standards mode will be used for Trusted sites in Internet Explorer.
 ms.date: 03/23/2020
 ms.reviewer: heikom
-ms.technology: internet-explorer-development-website
 ---
 # Compatibility View is used for Trusted sites in Internet Explorer
 

@@ -1,10 +1,8 @@
 ---
 title: Tunnel connectivity issues
 description: Resolve communication issues that are related to tunnel connectivity in an Azure Kubernetes Service (AKS) cluster.
-ms.date: 7/14/2022
-author: DennisLee-DennisLee
-ms.author: v-dele
-ms.reviewer: chiragpa, andbar
+ms.date: 07/14/2022
+ms.reviewer: chiragpa, andbar, v-leedennis
 ms.service: azure-kubernetes-service
 ms.subservice: cannot-connect-to-cluster-through-api-server
 keywords: Azure Kubernetes Service, AKS cluster, Kubernetes cluster, tunnels, connectivity, tunnel-front, aks-link
@@ -82,7 +80,7 @@ If you want to be more restrictive, you can allow access to port 10250 at the su
 
 [Uncomplicated Firewall](https://wiki.ubuntu.com/UncomplicatedFirewall) (UFW) is a command-line program for managing a [netfilter](https://www.netfilter.org/) firewall. AKS nodes use Ubuntu. Therefore, UFW is installed on AKS nodes by default, but UFW is disabled.
 
-By default, if UFW is enabled, it will block access to all ports, including port 10250. In this case, it's unlikely that you can use Secure Shell (SSH) to [connect to AKS cluster nodes for troubleshooting](/azure/aks/node-access). This is because UFW might also be blocking port 22. To troubleshoot, you can run the [az vmss run-command invoke](/cli/azure/vmss/run-command#az-vmss-run-command-invoke) command to invoke a [ufw command](https://manpages.ubuntu.com/manpages/bionic/man8/ufw.8.html) that checks whether UFW is enabled:
+By default, if UFW is enabled, it will block access to all ports, including port 10250. In this case, it's unlikely that you can use Secure Shell (SSH) to [connect to AKS cluster nodes for troubleshooting](/azure/aks/node-access). This is because UFW might also be blocking port 22. To troubleshoot, you can run the [az vmss run-command invoke](/cli/azure/vmss/run-command#az-vmss-run-command-invoke) command to invoke a [ufw command](https://manpages.ubuntu.com/manpages/lunar/en/man8/ufw.8.html) that checks whether UFW is enabled:
 
 ```azurecli
 az vmss run-command invoke --resource-group <infra-or-MC-resource-group> \

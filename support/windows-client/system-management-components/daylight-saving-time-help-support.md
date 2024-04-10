@@ -1,17 +1,13 @@
 ---
 title: Daylight saving time help and support
 description: Describes the Microsoft policy in response to DST and time zone changes.
-ms.date: 01/19/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:dst, csstroubleshoot
-ms.technology: windows-client-system-management-components
+ms.custom: sap:Windows Desktop and Shell Experience\DST and Timezones, csstroubleshoot
 adobe-target: true
 ---
 # Daylight saving time help and support
@@ -42,7 +38,7 @@ In order for Microsoft to provide an update at the earliest and ensure a seamles
 
 ### Standalone DST updates
 
-[KB 914387](https://support.microsoft.com/kb/914387) provides a list of DST updates that have been released. It also includes a short summary of the content that's included in each update. This allows a consistent means for customers and partners to be informed whenever such an update is made available.
+Standalone DST updates are no longer available. Please use the current monthly rollup for your version of Windows.
 
 ### Monthly rollups
 

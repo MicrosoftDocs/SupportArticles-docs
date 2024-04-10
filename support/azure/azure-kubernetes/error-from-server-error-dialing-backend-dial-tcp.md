@@ -1,11 +1,9 @@
 ---
 title: 'Error from server: error dialing backend: dial tcp'
 description: 'Troubleshoot the Error from server: error dialing backend: dial tcp error that blocks you from using kubectl logs or connecting to the API server.'
-ms.date: 9/7/2022
-author: DennisLee-DennisLee
-ms.author: v-dele
+ms.date: 09/07/2022
 editor: v-jsitser
-ms.reviewer: chiragpa, nickoman
+ms.reviewer: chiragpa, nickoman, v-leedennis
 ms.service: azure-kubernetes-service
 ms.subservice: common-issues
 keywords:

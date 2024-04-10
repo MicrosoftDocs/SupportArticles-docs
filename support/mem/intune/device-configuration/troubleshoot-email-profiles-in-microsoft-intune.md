@@ -1,9 +1,10 @@
 ---
 title: Troubleshoot common issues with email profiles in Microsoft Intune
 description: See common issues and solutions to issues with email profiles in Microsoft Intune, including duplicate email profiles and errors on Samsung KNOX Standard Android devices.
-ms.date: 10/07/2021
+ms.date: 12/05/2023
 ms.reviewer: kaushika, tscott
 search.appverid: MET150
+ms.custom: sap:Configure Devices - iOS\Device features
 ---
 # Troubleshooting common issues with email profiles in Microsoft Intune
 
@@ -25,7 +26,7 @@ Email profiles are typically assigned to user groups. There may be some cases wh
 
   To get compliant, the user signs in to the device, and syncs with Intune to receive the policies. Users can resync manually, or wait for the next sync.
 
-- For example, you're using dynamic groups. If Azure AD doesn't update the dynamic groups immediately, then these devices may show as uncompliant.
+- For example, you're using dynamic groups. If Microsoft Entra ID doesn't update the dynamic groups immediately, then these devices may show as uncompliant.
 
 In these scenarios, you decide if it's more important to use device groups, or more important to show all policies as compliant.
 

@@ -1,15 +1,13 @@
 ---
 title: Stop error, bug check, or blue screen error troubleshooting
 description: Learn advanced options for troubleshooting stop errors, also known as blue screen errors or bug check errors.
-ms.date: 05/11/2023
-ms.prod: windows-client
-ms.technology: windows-client-performance
+ms.date: 12/26/2023
 ms.topic: troubleshooting
 author: aczechowski
 ms.author: aaroncz
 manager: dcscontentpm
 ms.collection: highpri
-ms.custom: sap:blue-screen/bugcheck, csstroubleshoot
+ms.custom: sap:System Performance\System Reliability (crash, errors, bug check or Blue Screen, unexpected reboot), csstroubleshoot
 ms.reviewer: kaushika
 audience: itpro
 localization_priority: medium
@@ -218,7 +216,7 @@ For more information, see [Driver Verifier](/windows-hardware/drivers/devtest/dr
 
 ## Common Windows stop errors
 
-This section doesn't contain a list of all error codes, but since many error codes have the same potential resolutions, your best bet is to follow the steps below to troubleshoot your error.
+This section doesn't contain a list of all error codes, but since many error codes have the same potential resolutions, your best bet is to follow the steps below to troubleshoot your error. For a complete list of stop error codes, see [Bug Check Code Reference](/windows-hardware/drivers/debugger/bug-check-code-reference2).
 
 The following sections list general troubleshooting procedures for common stop error codes.
 

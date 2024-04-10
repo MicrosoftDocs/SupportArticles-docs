@@ -2,7 +2,7 @@
 title: The quantity can't be reduced when a sales order is canceled
 description: Provides a resolution for the quantity can't be reduced issue when a sales order is canceled.
 author: Henrikan
-ms.date: 5/17/2021
+ms.date: 05/17/2021
 ms.topic: troubleshooting
 ms.search.form: SalesTable_SalesCancelOrder, SalesTableListPage_SalesCancelOrder
 audience: Application User

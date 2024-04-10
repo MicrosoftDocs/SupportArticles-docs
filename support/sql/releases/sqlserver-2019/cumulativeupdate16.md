@@ -3,8 +3,7 @@ title: Cumulative update 16 for SQL Server 2019 (KB5011644)
 description: This article contains the summary, known issues, improvements, fixes and other information for SQL Server 2019 cumulative update 16 (KB5011644).
 ms.date: 06/30/2023
 ms.custom: KB5011644
-author: MonicaChenc
-ms.author: v-cuichen
+ms.reviewer: v-cuichen
 appliesto:
 - SQL Server 2019 on Windows
 - SQL Server 2019 on Linux
@@ -23,6 +22,8 @@ This article describes Cumulative Update package 16 (CU16) for Microsoft SQL Ser
 - Analysis Services - Product version: **15.0.35.23**, file version: **2018.150.35.23**
 
 ## Known issues in this update
+
+### Access violation when session is reset
 
 SQL Server 2019 CU14 introduced a [fix to address wrong results in parallel plans returned by the built-in SESSION_CONTEXT](https://support.microsoft.com/help/5008114). However, this fix might create access violation dump files when the `SESSION` is reset for reuse. To mitigate this issue and avoid incorrect results, you can disable the original fix, and also disable the parallelism for the built-in `SESSION_CONTEXT`. To do this, use the following trace flags:
 
@@ -44,7 +45,7 @@ Microsoft is working on a fix for this issue and it will be available in a futur
 A downloadable Excel workbook that contains a summary list of builds, together with their current support lifecycle, is available. The Excel file also contains detailed fix lists for SQL Server 2019 and SQL Server 2017. [Select to download this Excel file now](https://aka.ms/sqlserverbuilds).
 
 > [!NOTE]
-> Individual entries in the following table can be referenced directly through a bookmark. If you select any bug reference ID in the table, a bookmark tag is added to the URL by using the "#NNNNNNN" format. You can then share this URL with others so that they can jump directly to the desired fix in the table.
+> Individual entries in the following table can be referenced directly through a bookmark. If you select any bug reference ID in the table, a bookmark tag is added to the URL by using the "#NNNNNNNN" format. You can then share this URL with others so that they can jump directly to the desired fix in the table.
 
 For more information about the bugs that are fixed and enhancements that are included in this cumulative update, see the following Microsoft Knowledge Base articles.
 
@@ -86,7 +87,7 @@ For more information about the bugs that are fixed and enhancements that are inc
 | <a id="14507662">[14507662](#14507662)</a> | The query processor can't produce a query plan if the `USE PLAN` hint specifies a query plan that has a left outer join and an inner join. | SQL Server Engine | Query Optimizer | Windows |
 | <a id="14670801">[14670801](#14670801)</a> | Executing a query where the plan contains an adaptive join may fail together with the following error: </br></br>Msg 8624, Level 16, State 21, Procedure \<ProcedureName>, Line \<LineNumber> [Batch Start Line \<LineNumber>] </br>Internal Query Processor Error: The query processor could not produce a query plan. For more information, contact Customer Support Services. | SQL Server Engine | Query Optimizer | Windows |
 | <a id="14541295">[14541295](#14541295)</a> | [Improvement: Add an XEvent for tracking manual user plan forcing and unforcing (KB5012964)](https://support.microsoft.com/help/5012964) | SQL Server Engine | Query Store | All |
-| <a id="14576382">[14576382](#14576382)</a> | [Improvement: Make the change tracking table lock escalation policy be the same as the base table's (KB5014047)](https://support.microsoft.com/help/5014047) | SQL Server Engine | Replication | Windows |
+| <a id="14576382">[14576382](#14576382)</a> | [Improvement: Make the change tracking table lock escalation policy be the same as the base table's (KB5014047)](https://support.microsoft.com/topic/4987b431-5d71-4030-84de-d514802151fb) | SQL Server Engine | Replication | Windows |
 | <a id="14579161">[14579161](#14579161)</a> | Assume that you have tables with data on the peers and then you set a peer-to-peer publication by using a last-writer conflict detection policy. The distribution agent occurs the following conflict if you delete a row that was present before the publication was created: </br></br>A conflict of type 'Delete-Update' was detected at peer 1 between peer 100 (incoming), transaction id \<TransactionID> and peer (null) (on disk), transaction id (null) for Table \<TableName> with Primary Key(s): PK values, Current Version '(null)', Pre-Version '(null)' and Post-Version \<VersionNumber>. | SQL Server Engine | Replication | Windows |
 | <a id="14487676">[14487676](#14487676)</a> | [FIX: Severe spinlock contention occurs in SQL Server 2019 (KB4538688)](https://support.microsoft.com/help/4538688) | SQL Server Engine | SQL OS | All |
 | <a id="14558430">[14558430](#14558430)</a> | Running `DBCC CHECKDB` will report "corruption" errors when you use SQL Server graph databases that have edge constraints. | SQL Server Engine | SQL Server Engine | All |
@@ -1023,8 +1024,8 @@ Beginning in Microsoft SQL Server 2017, the Analysis Services build version numb
 - Each new CU contains all the fixes that were included with the previous CU for the installed version of SQL Server.
 - SQL Server CUs are certified to the same levels as service packs, and should be installed at the same level of confidence.
 - We recommend ongoing, proactive installation of CUs as they become available according to these guidelines:
-- Historical data shows that a significant number of support cases involve an issue that has already been addressed in a released CU.
-- CUs may contain added value over and above hotfixes. This includes supportability, manageability, and reliability updates.
+  - Historical data shows that a significant number of support cases involve an issue that has already been addressed in a released CU.
+  - CUs may contain added value over and above hotfixes. This includes supportability, manageability, and reliability updates.
 - We recommend that you test SQL Server CUs before you deploy them to production environments.
 
 </details>
@@ -1094,7 +1095,7 @@ To uninstall this CU on Linux, you must roll back the package to the previous ve
 
 ## References
 
-- [Announcing updates to the SQL Server Incremental Servicing Model (ISM)](https://blogs.msdn.microsoft.com/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism/)
+- [Announcing updates to the SQL Server Incremental Servicing Model (ISM)](/archive/blogs/sqlreleaseservices/announcing-updates-to-the-sql-server-incremental-servicing-model-ism)
 - [SQL Server Service Packs are no longer supported starting from SQL Server 2017](https://support.microsoft.com/topic/fd405dee-cae7-b40f-db14-01e3e4951169)
 - [Determine which version and edition of SQL Server Database Engine is running](../find-my-sql-version.md)
 - [Servicing models for SQL Server](../../general/servicing-models-sql-server.md)

@@ -3,7 +3,6 @@ title: How to solve Internet Explorer 9 installation issues
 description: This article helps solve the error messages such as 0x800F081E that may occur during the installation of Internet Explorer 9.
 ms.date: 12/10/2020
 ms.reviewer: mlaing
-ms.technology: internet-explorer-installation
 ---
 # How to troubleshoot Internet Explorer 9 installation problems
 
@@ -28,7 +27,7 @@ _Original KB number:_ &nbsp; 2409098
 
    If you still can't install Internet Explorer 9, go to step 4.
 
-4. Manually install the [prerequisite components](/troubleshoot/browsers/prerequisites-for-installing-ie-9).
+4. Manually install the [prerequisite components](prerequisites-for-installing-ie-9.md).
 5. If you still have issues, contact [Microsoft Support](https://support.microsoft.com/contactus/?ws=support).
 
 ## More information

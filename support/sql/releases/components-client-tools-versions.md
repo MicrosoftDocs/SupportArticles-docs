@@ -4,8 +4,7 @@ description: This article describe the procedures to determine the version infor
 ms.date: 10/15/2022
 ms.custom: sap:Installation, Patching and Upgrade
 ms.topic: how-to
-author: simonxjx
-ms.author: v-six
+ms.reviewer: v-six
 ---
 
 <!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "christys" for triage before making the further changes to the screenshots.
@@ -38,7 +37,7 @@ The version of SQL Server Reporting Services (SSRS) is displayed on the Reportin
 
 ## SQL Server Integration Services
 
-The version of SQL Server Integration Services aligns with the version of SQL server that you had installed.
+The version of SQL Server Integration Services aligns with the version of SQL Server that you had installed.
 
 ## SQL Server Analysis Services
 
@@ -174,7 +173,7 @@ To determine the version of SQL Server Writer, check the following registry subk
 
 ## Microsoft .NET Framework
 
-To determine the version of .NET Framework on your system, see [Determine which versions and service pack levels of .NET Framework are installed](/troubleshoot/dotnet/framework/determine-dotnet-versions-service-pack-levels).
+To determine the version of .NET Framework on your system, see [Determine which versions and service pack levels of .NET Framework are installed](../../developer/dotnet/framework/general/determine-dotnet-versions-service-pack-levels.md).
 
 For more information, see [Understanding the .NET Framework requirements for various versions of SQL Server](https://support.microsoft.com/help/2027770).
 

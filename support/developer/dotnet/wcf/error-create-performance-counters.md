@@ -3,7 +3,6 @@ title: Error when you create performance counters
 description: This article provides resolutions for the error that occurs when you configure the WCF service to publish performance counters.
 ms.date: 08/24/2020
 ms.reviewer: amymcel
-ms.technology: dotnet-wcf
 ---
 # Error when you create performance counters by using WCF service
 

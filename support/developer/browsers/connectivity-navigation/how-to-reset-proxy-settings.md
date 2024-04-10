@@ -3,7 +3,6 @@ title: Reset Internet Explorer proxy settings
 description: This article describes the situation that the user must reset Internet Explorer's proxy settings.
 ms.date: 06/09/2020
 ms.reviewer: 
-ms.technology: internet-explorer-connectivity-navigation
 ---
 # How to reset your Internet Explorer proxy settings
 

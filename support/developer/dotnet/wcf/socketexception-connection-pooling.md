@@ -4,7 +4,6 @@ description: This article describes you receive a SocketException when Windows C
 ms.date: 08/24/2020
 ms.reviewer: broder, jasonpa
 ms.topic: article
-ms.technology: dotnet-wcf
 ---
 # You receive a SocketException when using WCF connection pooling
 

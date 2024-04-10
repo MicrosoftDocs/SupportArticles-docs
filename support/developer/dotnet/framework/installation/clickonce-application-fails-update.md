@@ -4,7 +4,6 @@ description: ClickOnce depends on a file and registry cache to keep track of the
 ms.date: 05/06/2020
 ms.custom: sap:Installation
 ms.reviewer: nikolam
-ms.technology: dotnet-installation
 ---
 # ClickOnce applications fail to update
 

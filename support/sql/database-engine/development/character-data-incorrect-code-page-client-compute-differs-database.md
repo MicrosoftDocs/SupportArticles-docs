@@ -3,9 +3,7 @@ title: Character data is incorrect when the code page differs
 description: Provides workarounds for problems that character data is represented incorrectly when the code page of the client computer differs from the code page of the database.
 ms.date: 07/07/2023
 ms.custom: sap:Database Design and Development
-author: sevend2
-ms.author: v-sidong
-ms.reviewer: aartigoyle, jopilov
+ms.reviewer: aartigoyle, jopilov, v-sidong
 ---
 # Character data is represented incorrectly when the client computer's code page differs from the database's
 
@@ -126,7 +124,7 @@ A                    NA         Comment
 
 ## References
 
-- [You can't correctly translate character data from a client to a server by using the SQL Server ODBC driver if the client code page differs from the server code page](/troubleshoot/sql/connect/cannot-correctly-translate-character-data)
+- [You can't correctly translate character data from a client to a server by using the SQL Server ODBC driver if the client code page differs from the server code page](../../connect/cannot-correctly-translate-character-data.md)
 
 - [SQL Native Client Auto Translate](/sql/relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client)
 

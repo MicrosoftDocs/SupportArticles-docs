@@ -1,9 +1,10 @@
 ---
 title: Beginning balances don't show on Balance Sheet
 description: Provides a resolution for the issue that beginning balances don't display on the Advanced Financial Analysis Balance Sheet report in Microsoft Dynamics GP.
-ms.reviewer: 
+ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 06/22/2022
+ms.date: 03/20/2024
+ms.custom: sap:Financial - General Ledger
 ---
 # Beginning Balances don't appear correctly on the Balance Sheet
 
@@ -16,4 +17,4 @@ Beginning Balances for the current year don't show on the **Advanced Financial A
 
 ## Resolution
 
-You'll need to close the previous fiscal year (**Routines** > **Financial** > **Year End Closing**), using the steps that are outlined in [Year-end closing procedures for General Ledger in Microsoft Dynamics GP](/troubleshoot/dynamics/gp/year-end-closing-procedures-gl). If you don't close the fiscal year, your Balance Sheet Accounts won't have a beginning balance created for them. Your Profit and Loss accounts will still hold a balance, as this amount hasn't yet passed through the Retained Earnings account. Both of the above procedures will occur when you run through a successful year end close.
+You'll need to close the previous fiscal year (**Routines** > **Financial** > **Year End Closing**), using the steps that are outlined in [Year-end closing procedures for General Ledger in Microsoft Dynamics GP](year-end-closing-procedures-gl.md). If you don't close the fiscal year, your Balance Sheet Accounts won't have a beginning balance created for them. Your Profit and Loss accounts will still hold a balance, as this amount hasn't yet passed through the Retained Earnings account. Both of the above procedures will occur when you run through a successful year end close.

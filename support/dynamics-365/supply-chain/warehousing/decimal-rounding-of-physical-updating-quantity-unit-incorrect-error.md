@@ -2,7 +2,7 @@
 title: Decimal rounding of the physical updating quantity is incorrect
 description: Provides a resolution for the issue that you can't create a packing slip if the outbound load contains a quantity that doesn't match the decimal precision that is defined in the unit.
 author: Mirzaab
-ms.date: 5/31/2021
+ms.date: 05/31/2021
 ms.topic: troubleshooting
 ms.search.form: WHSLoadPlanningListPage_WHSSalesPackingSlipPost, WHSLoadTable_WHSSalesPackingSlipPost
 audience: Application User

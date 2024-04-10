@@ -1,14 +1,15 @@
 ---
 title: DRS performance issue after installing hotfix 3125525
 description: Describes DRS performance issues that are experienced after you install hotfix 3125525 in Configuration Manager.
-ms.date: 06/16/2020
+ms.date: 12/05/2023
 ms.reviewer: kaushika
+ms.custom: sap:Configuration Manager Database\Database Replication Links
 ---
 # Configuration Manager DRS performance issue after you install hotfix 3125525
 
 This article provides a solution for the Configuration Manager Database Replication Service (DRS) performance issues that occur after you install hotfix [3125525](https://support.microsoft.com/help/3125525).
 
-_Original product version:_ &nbsp; Configuration Manager (current branch), Microsoft System Center 2012 R2 Configuration Manager， Microsoft System Center 2012 Configuration Manager  
+_Original product version:_ &nbsp; Configuration Manager (current branch), Microsoft System Center 2012 R2 Configuration Manager,  Microsoft System Center 2012 Configuration Manager  
 _Original KB number:_ &nbsp; 4024301
 
 ## Symptom

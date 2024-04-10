@@ -2,11 +2,9 @@
 title: The specified fault domain count 3 must fall in the range 1 to 2
 description: Learn how to resolve the InvalidParameter (Fault Domain error) when deploying a scale set by using Flexible orchestration mode.
 ms.date: 01/31/2023
-author: DennisLee-DennisLee
-ms.author: v-dele
 ms.service: virtual-machine-scale-sets
 ms.subservice: troubleshoot-deployment-errors
-ms.reviewer: mimckitt
+ms.reviewer: mimckitt, v-leedennis
 ---
 # "InvalidParameter. The specified fault domain count 3 must fall in the range 1 to 2"
 

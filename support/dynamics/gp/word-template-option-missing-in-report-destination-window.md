@@ -1,9 +1,10 @@
 ---
 title: Word template option missing in Report destination window
 description: Word template option missing in Report destination window when printing in Microsoft Dynamics GP. Provides a resolution.
-ms.reviewer: cwaswick
+ms.reviewer: theley, cwaswick
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # Word template option missing in Report destination window when printing in Microsoft Dynamics GP
 
@@ -18,7 +19,7 @@ When printing, the **Template** option is missing in the Report destination wind
 
 ## Cause
 
-They can be several causes. See below troubleshooting steps in Resolution section. Refer to the original [Blog article](https://community.dynamics.com/gp/b/dynamicsgp/posts/template-option-in-report-destination-window-when-printing-documents) for same information with screen prints.
+They can be several causes. See below troubleshooting steps in Resolution section. Refer to the original [Blog article](https://community.dynamics.com/blogs/post/?postid=65ce8906-8d71-481c-9318-96e5bdd7f838) for same information with screen prints.
 
 ## Resolution
 

@@ -1,9 +1,10 @@
 ---
 title: Fatal Error During Installation when installing Web Services
 description: Describes how to avoid or resolve error messages that may occur during the installation of Web Services for Microsoft Dynamics GP.
-ms.reviewer: jplesuk, kyouells
+ms.reviewer: theley, jplesuk, kyouells
 ms.topic: troubleshooting
-ms.date: 04/22/2021
+ms.date: 03/20/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # Fatal Error During Installation when you install Web Services for Microsoft Dynamics GP
 
@@ -26,7 +27,7 @@ To avoid or resolve installation errors, follow these steps:
 
     Windows Server 2003
 
-    For more information about how to enable network DTC access in Windows Server 2003, see [How to enable network DTC access](/troubleshoot/windows-server/application-management/enable-network-dtc-access).
+    For more information about how to enable network DTC access in Windows Server 2003, see [How to enable network DTC access](../../windows-server/application-management/enable-network-dtc-access.md).
 
     Windows Server 2008
 

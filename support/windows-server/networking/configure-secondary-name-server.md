@@ -1,17 +1,13 @@
 ---
 title: Configure a secondary name server
 description: Describes how to configure a secondary DNS server.
-ms.date: 12/2/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:dns, csstroubleshoot
-ms.technology: networking
+ms.custom: sap:Network Connectivity and File Sharing\DNS, csstroubleshoot
 ---
 # Configure a secondary name server in Windows Server 2003  
 
@@ -91,7 +87,7 @@ To configure the reverse lookup zone on the secondary name server, follow these 
     > [!NOTE]
     > The network ID is that portion of the TCP/IP address that pertains to the network.
 
-    For more information about TCP/IP networks, see [Understand TCP/IP Addressing and Subnetting Basics](/troubleshoot/windows-client/networking/tcpip-addressing-and-subnetting).
+    For more information about TCP/IP networks, see [Understand TCP/IP Addressing and Subnetting Basics](../../windows-client/networking/tcpip-addressing-and-subnetting.md).
 
 8. On the **Zone File** page, click **Next**, and then click **Finish**.
 

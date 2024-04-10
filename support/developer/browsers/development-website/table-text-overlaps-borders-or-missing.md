@@ -3,7 +3,6 @@ title: Table text overlaps borders in Internet Explorer
 description: Discusses an issue in which table text overlaps table borders or is missing in Internet Explorer. Provides a resolution.
 ms.date: 06/09/2020
 ms.reviewer: jeanr
-ms.technology: internet-explorer-development-website
 ---
 # Table text overlaps table borders or is missing in Internet Explorer
 

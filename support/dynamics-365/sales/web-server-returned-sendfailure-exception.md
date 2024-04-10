@@ -3,7 +3,7 @@ title: Web server returned SendFailure exception
 description: Provides a solution to an error that occurs in Microsoft Dynamics 365.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: d365-sales-server
 ---
 # Web server returned SendFailure exception warning appears in Microsoft Dynamics 365

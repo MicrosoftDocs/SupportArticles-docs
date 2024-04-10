@@ -2,9 +2,7 @@
 title: Troubleshoot service connections for Azure RM service principal (manual)
 description: This article explains about how to create service principals by using the Azure RM service principal (manual) option and also troubleshoot an error that occurs while verifying manual Azure RM service connection.
 ms.date: 05/19/2023
-author: padmajayaraman
-ms.author: v-jayaramanp
-ms.reviewer: cathmill, kirthishkt
+ms.reviewer: cathmill, kirthishkt, v-jayaramanp
 ms.custom: sap:Pipelines
 ms.service: azure-devops
 ms.subservice: ts-pipelines
@@ -16,11 +14,11 @@ ms.subservice: ts-pipelines
 
 Per company policy and security protocols, some Azure DevOps admins don't have permissions to manage Azure subscriptions. To create service principal names (SPNs), these admins can use the manual Azure RM service principal option.
 
-To create SPNs, users who have permissions for Azure subscriptions and Azure Active Directory (Azure AD) can follow these steps:
+To create SPNs, users who have permissions for Azure subscriptions and Microsoft Entra ID can follow these steps:
 
 1. Sign in to the [Azure portal](https://ms.portal.azure.com/#home).
 
-1. Select **Azure Active Directory > App registrations**.
+1. Select **Microsoft Entra ID > App registrations**.
 
 1. Select your application on the list, and then select **Client secrets > New client secret**.
 

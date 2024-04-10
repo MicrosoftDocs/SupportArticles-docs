@@ -3,7 +3,7 @@ title: A general mailbox access error occurred while receiving email error
 description: A general mailbox access error occurred while receiving email through the mailbox warning alert is logged in Microsoft Dynamics 365. Provides a resolution.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: d365-sales-email-office-integration
 ---
 # A general mailbox access error occurred while receiving email through the mailbox warning occurs in Microsoft Dynamics 365

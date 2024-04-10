@@ -4,9 +4,7 @@ description: Offers strategies to help fix an issue where you receive duplicate 
 ms.date: 05/30/2023
 ms.service: azure-monitor
 ms.subservice: application-insights
-ms.reviewer: toddfous, v-kainawroth
-author: AmandaAZ
-ms.author: v-weizhu
+ms.reviewer: toddfous, v-kainawroth, v-weizhu
 ---
 # Receive duplicate telemetry data from Application Insights JavaScript SDK
 

@@ -3,7 +3,7 @@ title: An internal Microsoft Dynamics 365 error
 description: Provides a solution to an error that occurs after selecting Test & Enable Mailbox on a mailbox record in Dynamics 365.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: d365-sales-email-office-integration
 ---
 # An internal Microsoft Dynamics 365 error occurred while synchronizing appointments, contacts, and tasks

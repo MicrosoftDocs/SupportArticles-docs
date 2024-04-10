@@ -3,7 +3,6 @@ title: Behind dialog box appears SmartCard PIN
 description: This article introduces the problem that the interface of the modal dialog box and the SmartCard PIN prompt in the web page can't interact.
 ms.date: 06/09/2020
 ms.reviewer: apinho
-ms.technology: internet-explorer-security-privacy
 ---
 # SmartCard PIN prompt appears behind modal dialog box in Internet Explorer 9 and later versions
 

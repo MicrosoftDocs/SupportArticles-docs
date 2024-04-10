@@ -2,7 +2,6 @@
 title: OutOfMemoryException in .NET Framework 4.6.1
 description: This article describes a problem that causes a managed application that targets the .NET Framework 4.6.1 to throw an out-of-memory exception from the CLR.
 ms.date: 05/06/2020
-ms.technology: dotnet-general
 ---
 # An out-of-memory exception in a managed application that's running on the 64-bit .NET Framework
 

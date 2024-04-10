@@ -2,7 +2,6 @@
 title: InvokeMember throws AmbigousMatchException
 description: An AmbigousMatchException may be thrown when you call System.Type.InvokeMember
 ms.date: 05/11/2020
-ms.technology: dotnet-general
 ---
 # InvokeMember throws an AmbigousMatchException
 

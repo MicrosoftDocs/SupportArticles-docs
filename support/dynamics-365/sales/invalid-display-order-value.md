@@ -3,7 +3,7 @@ title: Invalid display order value
 description: Provides a solution to an error that occurs when importing a solution in Microsoft Dynamics 365.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: d365-sales-custom-solutions
 ---
 # "Invalid display order value. The display order must be greater or equal to 10000." error occurs when importing a solution in Microsoft Dynamics 365

@@ -2,7 +2,6 @@
 title: WCF net.tcp service stops responding
 description: This article describes a problem that occurs when you run a .NET Framework 4-based WCF service that uses the net.tcp Port Sharing Service (Smsvchost.exe), and provides a resolution.
 ms.date: 05/06/2020
-ms.technology: dotnet-general
 ---
 # WCF net.tcp service stops responding because of a race condition
 

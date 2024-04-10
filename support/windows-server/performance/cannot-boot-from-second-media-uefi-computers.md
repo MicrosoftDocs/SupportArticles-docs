@@ -1,17 +1,13 @@
 ---
 title: Can't boot Windows from secondary bootable devices on UEFI computers
 description: Describes a problem in which a Unified Extensible Firmware Interface (UEFI) based computer can't boot Windows from the second bootable media.
-ms.date: 9/24/2021
-author: v-lianna
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika, annsheng, zhaling, aadake
-ms.custom: sap:no-boot-not-bugchecks, csstroubleshoot
-ms.technology: windows-server-performance
+ms.reviewer: kaushika, annsheng, zhaling, aadake, v-lianna
+ms.custom: sap:System Performance\Startup or Pre-logon Reliability (crash, errors, bug check or Blue Screen), csstroubleshoot
 ---
 # Can't boot Windows from secondary mass storage bootable devices on UEFI-based computers
 

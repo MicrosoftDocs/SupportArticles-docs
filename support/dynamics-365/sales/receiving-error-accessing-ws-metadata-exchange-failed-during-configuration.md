@@ -3,7 +3,7 @@ title: Receiving error accessing_ws_metadata_exchange_failed when configuring th
 description: You may receive the error - accessing_ws_metadata_exchange_failed when configuring the Microsoft Dynamics 365 Outlook client. Provides a resolution.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: d365-sales-email-office-integration
 ---
 # Receiving error accessing_ws_metadata_exchange_failed when configuring the Microsoft Dynamics 365 Outlook client

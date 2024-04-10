@@ -3,7 +3,6 @@ title: Confusing description for DefaultValueAttribute
 description: This article explains the confusing DefaultValueAttribute class documentation.
 ms.date: 05/06/2020
 ms.reviewer: sedwards
-ms.technology: dotnet-general
 ---
 # Documentation for the DefaultValueAttribute class is confusing
 

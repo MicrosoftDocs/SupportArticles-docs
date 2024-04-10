@@ -1,8 +1,8 @@
 ---
 title: VMM setup crashes when the server name exceeds 15 characters
 description: System Center Virtual Machine Manager 2012 setup crashes when the VMM server name exceeds 15 characters.
-ms.date: 07/17/2020
-ms.reviewer: jeffpatt
+ms.date: 04/09/2024
+ms.reviewer: wenca, jeffpatt
 ---
 # Setup for System Center 2012 Virtual Machine Manager crashes when the server name exceeds 15 characters
 

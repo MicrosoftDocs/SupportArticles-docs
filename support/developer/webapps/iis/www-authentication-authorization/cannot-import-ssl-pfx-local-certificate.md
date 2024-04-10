@@ -4,7 +4,7 @@ description: An error may occur when you try to import an SSL private key certif
 ms.date: 03/26/2020
 ms.custom: sap:WWW authentication and authorization
 ms.reviewer: v-jomcc
-ms.technology: iis-www-authentication-authorization
+ms.subservice: www-authentication-authorization
 ---
 # Error when you import an SSL .pfx file into the local computer personal certificate store by using IIS Manager
 

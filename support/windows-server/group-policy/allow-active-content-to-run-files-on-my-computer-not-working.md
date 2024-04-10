@@ -1,17 +1,13 @@
 ---
 title: Can't allow active content to run files
 description: Helps solve an issue where the Allow active content to run files on My Computer Group Policy setting doesn't work.
-ms.date: 04/28/2023
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, fmu
 ms.custom: sap:managing-internet-explorer-settings-through-group-policy, csstroubleshoot
-ms.technology: windows-server-group-policy
 ---
 # "Allow active content to run files on My Computer" Group Policy setting does not work as expected
 
@@ -54,4 +50,4 @@ As a workaround you can disable the **Allow active content to run files on My Co
 
 ## Data collection
 
-If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSSv2 for Group Policy issues](../../windows-client/windows-troubleshooters/gather-information-using-tssv2-group-policy.md).
+If you need assistance from Microsoft support, we recommend you collect the information by following the steps mentioned in [Gather information by using TSS for Group Policy issues](../../windows-client/windows-troubleshooters/gather-information-using-tss-group-policy.md).

@@ -2,16 +2,13 @@
 title: Prompted for BitLocker recovery key after installing updates to Surface UEFI or TPM firmware
 description: Provides workarounds to the issue in which you're prompted for BitLocker recovery key after installing updates to Surface UEFI or TPM firmware on Surface device.
 ms.date: 05/31/2023
-author: v-lianna
-ms.author: v-lianna
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: surface
 localization_priority: medium
-ms.reviewer: jarrettr
+ms.reviewer: jarrettr, v-lianna
 ms.custom: csstroubleshoot
-ms.technology: windows
+ms.subservice: windows
 ---
 # Prompted for BitLocker recovery key after installing updates to Surface UEFI or TPM firmware on Surface device
 
@@ -54,7 +51,7 @@ This behavior can occur in the following scenario:
 ## Workaround
 
 > [!WARNING]
-> BitLocker Drive Encryption helps you protect your organization’s sensitive information by encrypting the data. This workaround to temporarily disable BitLocker may put the data at risk. We do not recommend this workaround but are providing this information so that you can implement this workaround at your own discretion. Use this workaround at your own risk.
+> BitLocker Drive Encryption helps you protect your organization's sensitive information by encrypting the data. This workaround to temporarily disable BitLocker may put the data at risk. We do not recommend this workaround but are providing this information so that you can implement this workaround at your own discretion. Use this workaround at your own risk.
 
 ### Method 1: Suspend BitLocker during TPM or UEFI firmware updates
 
@@ -68,17 +65,17 @@ To suspend BitLocker for installation of TPM or UEFI firmware updates:
 1. Open an administrative PowerShell session.
 2. Enter the following cmdlet and press <kbd>Enter</kbd>:
 
-	```PowerShell
-	Suspend-BitLocker -MountPoint "C:" -RebootCount 0
-	```
+    ```PowerShell
+    Suspend-BitLocker -MountPoint "C:" -RebootCount 0
+    ```
 
-	where C: is the drive assigned to your disk.
+    where C: is the drive assigned to your disk.
 3. Install Surface device driver and firmware updates.
 4. Following successful installation of the firmware updates, resume BitLocker by using the [Resume-BitLocker](/powershell/module/bitlocker/resume-bitlocker) cmdlet as follows:
 
-	```PowerShell
-	Resume-BitLocker -MountPoint "C:"
-	```
+    ```PowerShell
+    Resume-BitLocker -MountPoint "C:"
+    ```
 
 ### Method 2: Enable Secure Boot and restore default PCR values
 
@@ -114,15 +111,15 @@ To remove the protectors from the boot drive by using your BitLocker recovery ke
 6. Select **Troubleshoot** > **Advanced Options** > **Command Prompt**.
 7. Run the following commands:
 
-	```console
-	manage-bde -unlock -recoverypassword <password>C:
-	manage-bde -protectors -disable C:
-	```
+    ```console
+    manage-bde -unlock -recoverypassword <password>C:
+    manage-bde -protectors -disable C:
+    ```
 
-	where C: is the drive assigned to your disk and \<password\> is your BitLocker recovery key as obtained in step 1.
+    where C: is the drive assigned to your disk and \<password\> is your BitLocker recovery key as obtained in step 1.
 
-	> [!NOTE]
-	> For more information about using this command, see [Manage-bde: unlock](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/ff829854(v=ws.11)).
+    > [!NOTE]
+    > For more information about using this command, see [Manage-bde: unlock](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/ff829854(v=ws.11)).
 
 8. Reboot the computer.
 9. When you are prompted, enter your BitLocker recovery key as obtained in step 1.
@@ -142,14 +139,14 @@ To recover data from your Surface device if you are unable to boot into Windows:
 6. Select **Troubleshoot** > **Advanced Options** > **Command Prompt**.
 7. Run the following command:
 
-	```console
-	manage-bde -unlock -recoverypassword <password> C:
-	```
+    ```console
+    manage-bde -unlock -recoverypassword <password> C:
+    ```
 
-	where C: is the drive assigned to your disk and \<password\> is your BitLocker recovery key as obtained in step 1.
+    where C: is the drive assigned to your disk and \<password\> is your BitLocker recovery key as obtained in step 1.
 8. After the drive is unlocked, use `copy` or `xcopy` commands to copy the user data to another drive.
 
-	> [!NOTE]
-	> For more information about the these commands, see the [Windows Command Line Reference](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc771254(v=ws.11)).
+    > [!NOTE]
+    > For more information about the these commands, see the [Windows Command Line Reference](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc771254(v=ws.11)).
 
 To reset your device by using a Surface recovery image, follow the instructions in "How to reset your Surface using your USB recovery drive" at [Creating and using a USB recovery drive](https://support.microsoft.com/surface/creating-and-using-a-usb-recovery-drive-for-surface-677852e2-ed34-45cb-40ef-398fc7d62c07).

@@ -3,10 +3,8 @@ metadata:
   title: Azure Kubernetes Service (AKS) common issues FAQ
   description: Review a list of frequently asked questions (FAQ) about common issues when you're working with an Azure Kubernetes Service (AKS) cluster.
   ms.topic: faq
-  ms.date: 5/27/2022
-  author: DennisLee-DennisLee
-  ms.author: v-dele
-  ms.reviewer: chiragpa, nickoman
+  ms.date: 11/14/2023
+  ms.reviewer: chiragpa, nickoman, v-leedennis
   ms.service: azure-kubernetes-service
   ms.subservice: common-issues
 
@@ -41,9 +39,9 @@ sections:
 
           - The Domain Name System (DNS) prefix must start and end with alphanumeric values and must be between 1-54 characters in length. Valid characters include alphanumeric values and hyphens ("-"). The DNS prefix can't include special characters, such as periods (".").
 
-          - AKS node pool names must be all lowercase. The names must be 1-11 characters in length for Linux node pools and 1-6 characters for Windows node pools. A name must start with a letter, and the only allowed characters are letters and numbers.
+          - AKS node pool names must be all lowercase. The names must be 1-12 characters in length for Linux node pools and 1-6 characters for Windows node pools. A name must start with a letter, and the only allowed characters are letters and numbers.
 
-          - The *admin-username*, which sets the administrator user name for Linux nodes, must start with a letter. This user name may only contain letters, numbers, hyphens, and underscores. It has a maximum length of 64 characters.
+          - The *admin-username*, which sets the administrator user name for Linux nodes, must start with a letter. This user name may only contain letters, numbers, hyphens, and underscores. It has a maximum length of 32 characters.
 
 additionalContent: |
   [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]

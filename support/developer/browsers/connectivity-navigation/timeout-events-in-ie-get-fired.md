@@ -3,7 +3,6 @@ title: The Internet Explorer timeout event is triggered
 description: This article describes the operating uptime of the operating system exceeding the tickCount value, a time-out event will be triggered.
 ms.date: 06/03/2020
 ms.reviewer: heikom
-ms.technology: internet-explorer-connectivity-navigation
 ---
 # Time-out events in Internet Explorer get fired multiple times when the system uptime is near 49.7 days
 

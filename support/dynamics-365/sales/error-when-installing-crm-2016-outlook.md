@@ -3,7 +3,7 @@ title: Error when installing CRM 2016 for Outlook
 description: Provides a solution to an error that occurs when you try to install Microsoft Dynamics CRM 2016 for Outlook.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: d365-sales-client-outlook
 ---
 # Your version of Microsoft Dynamics CRM for Outlook isn't supported for upgrading to CRM 2016 for Outlook

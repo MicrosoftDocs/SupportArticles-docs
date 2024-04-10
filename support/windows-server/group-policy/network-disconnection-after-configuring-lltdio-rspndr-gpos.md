@@ -1,17 +1,13 @@
 ---
 title: Network disconnection after configuring the LLTDIO and RSPNDR group policy objects
 description: Helps resolve the issue in which the network disconnects after configuring the LLTDIO and RSPNDR group policy objects.
-ms.date: 05/09/2023
-author: v-lianna
-ms.author: v-lianna
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika, nitilton, brianoakes
-ms.custom: sap:problems-applying-group-policy-objects-to-users-or-computers, csstroubleshoot, ikb2lmc
-ms.technology: windows-server-group-policy
+ms.reviewer: kaushika, nitilton, brianoakes, v-lianna
+ms.custom: sap:Group Policy\Problems Applying Group Policy, csstroubleshoot, ikb2lmc
 ---
 # Network disconnection after configuring the LLTDIO and RSPNDR group policy objects
 

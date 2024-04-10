@@ -2,9 +2,7 @@
 title: Web Deploy error codes
 description: For some common error codes, Web Deploy shows an error message. This article helps you to diagnose these issues and provides workarounds to avoid the errors.
 ms.date: 04/12/2011
-author: padmajayaraman
-ms.author: v-jayaramanp
-ms.reviewer: chihshen, bilalaslam
+ms.reviewer: chihshen, bilalaslam, v-jayaramanp
 ms.topic: troubleshooting
 ---
 

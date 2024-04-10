@@ -2,7 +2,7 @@
 title: Bug check 0x7E occurs when Device Guard is active
 description: This article describes a problem that causes some Windows 10 drivers may to crash with bug check 0x7E if Device Guard is active. This problem affects the way in which different builds of Windows 10 handle allocations that straddle two pages.
 ms.date: 09/04/2020
-ms.technology: windows-hardware-general
+ms.subservice: general
 ---
 # Bug check 0x7E occurs in Windows 10 when Device Guard is active
 

@@ -2,7 +2,6 @@
 title: Serialization on OnAssemblyResolve causes recursion
 description: OnAssemblyResolve event is re-entrant by nature and if caution isn't taken unsuspected actions as serialization can force undesired recurrences issues and stack overflow.
 ms.date: 05/11/2020
-ms.technology: dotnet-general
 ---
 # Serialization on an OnAssemblyResolve handler may cause recursion
 

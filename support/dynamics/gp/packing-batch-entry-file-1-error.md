@@ -1,9 +1,10 @@
 ---
 title: Error packing batch entry file -1
 description: Provides a resolution for the Packing batch entry file -1 error in Canadian Payroll in Microsoft Dynamics GP.
-ms.reviewer: 
+ms.reviewer: theley
 ms.topic: troubleshooting
-ms.date: 06/22/2022
+ms.date: 03/20/2024
+ms.custom: sap:Payroll
 ---
 # Update Masters "Error packing batch entry file -1" in Canadian Payroll
 
@@ -28,4 +29,4 @@ To solve this issue, you've to:
 2. Under **Transactions** > **Payroll Batches**, select the affected batch and select **RESET**.
 3. Now you can run Update Masters again.
 
-Another option (unsupported) would be to see [Order that Canadian Payroll is updated during Update Masters for Microsoft Dynamics GP](/troubleshoot/dynamics/gp/order-that-canadian-payroll-is-updated-during-update-masters) to review the list of tables that are updated during the Update Masters process. Determine in the list of tables what transactions were successfully updated and which weren't. Then you can either recreate the batch for the missing items, or regenerate payments or update the tables manually in SQL on your own (as that isn't supported). If everything appears correct, then it should be okay.
+Another option (unsupported) would be to see [Order that Canadian Payroll is updated during Update Masters for Microsoft Dynamics GP](order-that-canadian-payroll-is-updated-during-update-masters.md) to review the list of tables that are updated during the Update Masters process. Determine in the list of tables what transactions were successfully updated and which weren't. Then you can either recreate the batch for the missing items, or regenerate payments or update the tables manually in SQL on your own (as that isn't supported). If everything appears correct, then it should be okay.

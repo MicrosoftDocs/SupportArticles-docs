@@ -3,7 +3,7 @@ title: Something went wrong during sign-in
 description: Fixes an issue in which you get the Something went wrong during sign-in error when using Microsoft Dynamics 365 App for Outlook.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 3/31/2021
+ms.date: 03/31/2021
 ms.subservice: d365-sales-client-outlook
 ---
 # "Something went wrong during sign-in" error using Microsoft Dynamics 365 App for Outlook

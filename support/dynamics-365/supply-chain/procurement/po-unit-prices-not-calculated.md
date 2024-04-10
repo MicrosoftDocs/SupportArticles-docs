@@ -1,18 +1,16 @@
 ---
 title: Unit prices on purchase orders aren't calculated based on the unit conversion
 description: Provides a workaround for the issue that unit prices on purchase orders aren't calculated based on the unit conversion.
-author: GalynaFedorova
+author: Henrikan
 ms.date: 05/31/2021
-ms.topic: troubleshooting
 ms.search.form: PurchTable, PurchTablePart, PurchRFQTable
 audience: Application User
 ms.reviewer: kamaybac
 ms.search.region: Global
-ms.author: gfedorova
+ms.author: henrikan
 ms.search.validFrom: 2021-05-31
 ms.dyn365.ops.version: 10.0.13
 ---
-
 # Unit prices on purchase orders aren't calculated based on the unit conversion
 
 ## Symptoms

@@ -2,7 +2,6 @@
 title: Add-ons intercept WM_CLOSE fail
 description: This issue affects Internet Explorer add-ons attempting to hook into the WM_CLOSE message to prevent a tab from closing. In Internet Explorer 9 and later versions, this action may fail, which results in the tab closing before the add-on wishes.
 ms.date: 04/21/2020
-ms.technology: internet-explorer-development-website
 ---
 # Add-ons that intercept the WM_CLOSE message may fail in Internet Explorer 9 later versions
 

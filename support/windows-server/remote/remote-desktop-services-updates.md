@@ -1,17 +1,13 @@
 ---
 title: Available updates for RDS
 description: Summarizes the available hotfixes and updates for issues that occur in Remote Desktop Services (Terminal Services) for Windows Server 2008 R2 environments.
-ms.date: 9/24/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:administration, csstroubleshoot
-ms.technology: windows-server-rds
+ms.custom: sap:Remote Desktop Services and Terminal Services\Deployment, configuration, and management of Remote Desktop Services infrastructure, csstroubleshoot
 ---
 # Available updates for Remote Desktop Services (Terminal Services) in Windows Server 2008 R2 SP1
 
@@ -24,7 +20,7 @@ _Original KB number:_ &nbsp; 2601888
 
 This article summarizes the available hotfixes and updates for issues that can occur in Remote Desktop Services (Terminal Services) for Windows Server 2008 R2 environments.
 
-For Windows Server 2012 Remote Desktop Services updates, see [Available updates for Remote Desktop Services in Windows Server 2012](/troubleshoot/windows-server/remote/windows-server-2012-rds-updates).
+For Windows Server 2012 Remote Desktop Services updates, see [Available updates for Remote Desktop Services in Windows Server 2012](windows-server-2012-rds-updates.md).
 
 For Windows Server 2012 R2 Remote Desktop Services updates, see [KB2933664](https://support.microsoft.com/help/2933664).
 

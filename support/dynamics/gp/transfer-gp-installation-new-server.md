@@ -1,9 +1,10 @@
 ---
 title: Transfer GP installation to a new server
 description: Discusses how to transfer your existing financial application to a new server that is running Microsoft SQL Server. Also discusses how to maintain the user logins and databases.
-ms.reviewer: kyouells, 
+ms.reviewer: theley, kyouells, 
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:System and Security Setup, Installation, Upgrade, and Migrations
 ---
 # How to transfer an existing Microsoft Dynamics GP, Small Business Financials, or Small Business Manager installation to a new server that is running SQL Server
 
@@ -30,7 +31,7 @@ _Original KB number:_ &nbsp; 878449
 
 On the old server, copy the following Capture_Logins.sql script to the local hard disk. To obtain the Capture_Logins.sql script, see:
 
-- **For SQL Server 2014 and later versions**: [Transfer logins and passwords between instances of SQL Server](/troubleshoot/sql/security/transfer-logins-passwords-between-instances)
+- **For SQL Server 2014 and later versions**: [Transfer logins and passwords between instances of SQL Server](../../sql/database-engine/security/transfer-logins-passwords-between-instances.md)
 
 > [!NOTE]
 > If link doesn't work, copy and paste it to a new browser and try it again.
@@ -243,6 +244,6 @@ On the old server, copy the following Capture_Logins.sql script to the local har
     > [!NOTE]
     > For more information and links to step by instructions and resources to help, visit this blog article:
     >
-    > [Important changes coming to Technical Support workflow and how you create a support case](https://community.dynamics.com/gp/b/dynamicsgp/posts/important-change-coming-to-technical-support-workflow-and-how-you-create-a-support-case)
+    > [Important changes coming to Technical Support workflow and how you create a support case](https://community.dynamics.com/blogs/post/?postid=dbb8351c-fac5-464a-8c37-c8984b0cd39d)
 
 - Contact Microsoft Dynamics GP Technical Support by telephone by calling 888-477-7877. Be sure to have your authorized number for your Microsoft Dynamics GP Support plan ready to give to the agent to helping you to create the case.

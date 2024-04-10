@@ -9,6 +9,16 @@ items:
   href: description-update-cache-folder.md
 - name: Different errors when installing SQL Server 2008 R2
   href: error-install-sql-server-2008-r2.md
+- name: Driver installation check
+  items:
+  - name: Driver installation check
+    href: driver-install-checking.md
+  - name: .NET driver installation check
+    href: net-driver-install-check.md
+  - name: ODBC driver installation check
+    href: odbc-driver-install-checking.md
+  - name: OLE DB driver installation check
+    href: oledb-driver-install-check.md
 - name: Error code 1642 though update is applied
   href: error-code-1642-update-applied.md
 - name: Error if you change shared component directory
@@ -25,7 +35,7 @@ items:
   href: user-data-log-directory-invalid.md
 - name: Permission error when you use a volume mount point
   href: permission-error-use-volume-mount-point.md
-- name: Remove a partial installation of SQL server
+- name: Remove a partial installation of SQL Server
   href: remove-partial-installation.md
 - name: Restore the missing Windows Installer cache files
   href: restore-missing-windows-installer-cache-files.md
@@ -58,16 +68,24 @@ items:
   - name: MSSQLSERVER_912
     href: /sql/relational-databases/errors-events/mssqlserver-912-database-engine-error?context=/troubleshoot/sql/context/context
   - name: SQL Server upgrade fails with error 574
-    href: upgrade-fails-error-code-574.md
+    href: sql-server-upgrade-failed-error-574.md
+  - name: SQL Server upgrade fails with error 945
+    href: sql-server-upgrade-failed-error-945.md
   - name: SQL Server upgrade fails with error 1712
-    href: sql-server-upgrade-failed-error-1712-upgrade-script.md
+    href: sql-server-upgrade-failed-error-1712.md
   - name: SQL Server upgrade fails with error 2714
-    href: upgrade-fails-error-code-2714.md
+    href: sql-server-upgrade-failed-error-2714.md
   - name: SQL Server upgrade fails with error 4860
-    href: sql-server-upgrade-failed-error-4860-upgrade-script.md
+    href: sql-server-upgrade-failed-error-4860.md
   - name: SQL Server upgrade fails with error 5133
-    href: upgrade-fails-error-5133.md
+    href: sql-server-upgrade-failed-error-5133.md
+  - name: SQL Server upgrade fails with error 6528
+    href: sql-server-upgrade-failed-error-6528.md
+  - name: SQL Server upgrade fails with error 15151
+    href: sql-server-upgrade-failed-error-15151.md  
   - name: SQL Server upgrade fails with error 15173
-    href: sql-server-upgrade-failed-error-15173-upgrade-script.md
+    href: sql-server-upgrade-failed-error-15173.md
   - name: SQL Server upgrade fails with error 17182
-    href: sql-server-upgrade-failed-error-17182-upgrade-script.md
+    href: sql-server-upgrade-failed-error-17182.md
+  - name: SQL Server upgrade fails when principals own user objects
+    href: sql-server-upgrade-failed-error-cert-principals-own-object.md

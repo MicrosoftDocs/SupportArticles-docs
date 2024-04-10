@@ -3,7 +3,7 @@ title: Interrupt and DPC time streaming Isoch data
 description: This article provides workarounds for the problem where a significant increase in Processor utilization (Interrupt & DPC time) while streaming Isochronous data to or from an IEEE 1394 device with Windows 7 IEEE 1394 bus driver, as compared with previous versions of the Windows IEEE 1394 bus driver.
 ms.date: 09/01/2020
 ms.custom: sap:Windows 7 Ultimate
-ms.technology: windows-hardware-bus-driver
+ms.subservice: bus-driver
 ---
 # Increased Interrupt & DPC time streaming Isoch data to or from an IEEE 1394 device
 

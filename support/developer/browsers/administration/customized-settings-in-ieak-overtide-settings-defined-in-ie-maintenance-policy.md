@@ -4,7 +4,6 @@ description: This article introduces a by design issue that customized settings 
 ms.date: 01/04/2021
 ms.reviewer: heikom, yechen, axelr, aanders
 ms.topic: article
-ms.technology: internet-explorer-administration
 ---
 # Customized settings in an IEAK installation package override setting defined in Internet Explorer Maintenance Policy
 

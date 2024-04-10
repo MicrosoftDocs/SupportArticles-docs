@@ -3,7 +3,6 @@ title: Slow rendering for document modes from before Internet Explorer 9
 description: Describes an issue that causes slow rendering in Internet Explorer 11. Occurs when websites are displayed in document mode from Internet Explorer 8 and earlier. A resolution is provided.
 ms.date: 04/26/2020
 ms.reviewer: jeanr
-ms.technology: internet-explorer-stability-performance
 ---
 # Slow rendering in Internet Explorer 11 for document modes from before Internet Explorer 9
 

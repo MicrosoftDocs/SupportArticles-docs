@@ -3,7 +3,6 @@ title: Repeatedly prompted for credentials to use proxy server
 description: Discusses a problem with Internet Explorer where Internet Explorer repeatedly prompts you for credentials to use a proxy server to view a Web site.
 ms.date: 10/13/2020
 ms.reviewer: ramakoni
-ms.technology: internet-explorer-connectivity-navigation
 ---
 # You are repeatedly prompted for credentials to use a proxy server in Internet Explorer Service Pack 1
 

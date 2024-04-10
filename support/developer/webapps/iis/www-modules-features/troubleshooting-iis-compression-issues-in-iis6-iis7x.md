@@ -2,9 +2,7 @@
 title: Troubleshooting IIS Compression issues in IIS 6 or IIS 7.x
 description: This article explains how to configure compression and lists frequent reasons why IIS compression in IIS 6 and IIS 7.x might not function.
 ms.date: 04/09/2012
-author: padmajayaraman
-ms.author: v-jayaramanp
-ms.reviewer: riande, johnhart, sudixi
+ms.reviewer: riande, johnhart, sudixi, v-jayaramanp
 ms.topic: troubleshooting
 ---
 
@@ -163,26 +161,26 @@ Perform the following steps to troubleshoot compression issues:
 
     ```xml
     <httpCompression directory="%SystemDrive%\inetpub\temp\IIS Temporary Compressed Files" minFileSizeForComp="1000">
-	<scheme name="gzip" dll="%Windir%\system32\inetsrv\gzip.dll" />
-	<staticTypes>
-		<add mimeType="text/*" enabled="true" />
-		<add mimeType="message/*" enabled="true" />
-		<add mimeType="application/x-javascript" enabled="true" />
-		<add mimeType="application/atom+xml" enabled="true" />
-		<add mimeType="application/xaml+xml" enabled="true" />
-		<add mimeType="*/*" enabled="false" />
-	</staticTypes>
-	<dynamicTypes>
-		<add mimeType="text/*" enabled="true" />
-		<add mimeType="message/*" enabled="true" />
-		<add mimeType="application/x-javascript" enabled="true" />
-		<add mimeType="*/*" enabled="false" />
-	</dynamicTypes>
+    <scheme name="gzip" dll="%Windir%\system32\inetsrv\gzip.dll" />
+    <staticTypes>
+        <add mimeType="text/*" enabled="true" />
+        <add mimeType="message/*" enabled="true" />
+        <add mimeType="application/x-javascript" enabled="true" />
+        <add mimeType="application/atom+xml" enabled="true" />
+        <add mimeType="application/xaml+xml" enabled="true" />
+        <add mimeType="*/*" enabled="false" />
+    </staticTypes>
+    <dynamicTypes>
+        <add mimeType="text/*" enabled="true" />
+        <add mimeType="message/*" enabled="true" />
+        <add mimeType="application/x-javascript" enabled="true" />
+        <add mimeType="*/*" enabled="false" />
+    </dynamicTypes>
     </httpCompression>
     <system.web.extensions>
-	<scripting>
-		<scriptResourceHandler enableCompression="false" />
-	</scripting>
+    <scripting>
+        <scriptResourceHandler enableCompression="false" />
+    </scripting>
     </system.web.extensions>
     ```
 

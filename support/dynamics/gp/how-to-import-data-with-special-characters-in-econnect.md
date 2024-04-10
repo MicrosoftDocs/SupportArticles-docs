@@ -1,9 +1,10 @@
 ---
 title: How to import data with special characters in eConnect
 description: This article gives an XML code example of how to use CDATA in the eConnect schema for Microsoft Dynamics GP to integrate special characters.
-ms.reviewer: dclauson
+ms.reviewer: theley, dclauson
 ms.topic: how-to
-ms.date: 03/31/2021
+ms.date: 03/20/2024
+ms.custom: sap:Developer - Customization and Integration Tools
 ---
 # How to import data with special characters in eConnect for Microsoft Dynamics GP
 

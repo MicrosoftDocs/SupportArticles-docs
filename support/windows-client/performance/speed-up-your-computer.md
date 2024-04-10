@@ -1,17 +1,13 @@
 ---
 title: How to speed up a Windows 8.1 computer
 description: Describes ways to help speed up your computers when it tend to slow down after time, without upgrading your hardware.
-ms.date: 05/25/2021
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, meerak
-ms.custom: sap:slow-performance, csstroubleshoot
-ms.technology: windows-client-performance
+ms.custom: sap:System Performance\System Performance (slow, unresponsive, high CPU, resource leak), csstroubleshoot
 ---
 # Speed up a Windows 8.1 computer
 

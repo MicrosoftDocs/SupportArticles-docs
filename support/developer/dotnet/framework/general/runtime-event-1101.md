@@ -3,7 +3,6 @@ title: .NET Runtime Optimization Service Event 1101
 description: This article describes that after Domain Controller promotion, .NET Runtime Optimization Service event 1101 error occurs.
 ms.date: 05/06/2020
 ms.reviewer: sabinn
-ms.technology: dotnet-general
 ---
 # .NET Runtime Optimization Service event 1101 errors after Domain Controller promotion
 

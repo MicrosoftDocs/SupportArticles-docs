@@ -3,7 +3,7 @@ title: SQL Server is not supported on a Windows operating system on which case s
 description: This article describes the issue on Windows OS where case sensitivity is enabled.
 ms.date: 09/21/2022
 ms.custom: sap:Database Design and Development
-ms.author: v-jayaramanp 
+ms.reviewer: v-jayaramanp 
 ms.topic: troubleshooting 
 ---
 

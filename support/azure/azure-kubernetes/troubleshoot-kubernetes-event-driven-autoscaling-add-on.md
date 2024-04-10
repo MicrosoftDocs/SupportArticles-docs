@@ -2,11 +2,9 @@
 title: Troubleshoot the Kubernetes Event-driven Autoscaling (KEDA) add-on
 description: Learn how to troubleshoot the Kubernetes Event-driven Autoscaling (KEDA) add-on to the Azure Kubernetes Service (AKS).
 ms.service: azure-kubernetes-service
-ms.date: 12/22/2022
-author: DennisLee-DennisLee
-ms.author: v-dele
+ms.date: 11/09/2023
 editor: v-jsitser
-ms.reviewer: nickoman
+ms.reviewer: nickoman, v-leedennis, v-weizhu
 ms.subservice: troubleshoot-extensions-add-ons
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot problems that involve the Kubernetes Event-driven Autoscaling (KEDA) add-on so that I can successfully use event-driven autoscaling on Azure Kubernetes Service (AKS).
 ---
@@ -18,6 +16,10 @@ This article discusses how to troubleshoot the Kubernetes Event-driven Autoscali
 ## Prerequisites
 
 - The Kubernetes [kubectl](https://kubernetes.io/docs/reference/kubectl/overview/) tool. To install kubectl by using the [Azure CLI](/cli/azure/install-azure-cli), run the [az aks install-cli](/cli/azure/aks#az-aks-install-cli) command.
+
+## KEDA add-on support
+
+The KEDA add-on follows a similar support model to other [AKS add-ons](/azure/aks/integrations). All [Azure KEDA scalers](https://keda.sh/docs/scalers/) are supported, but AKS doesn't support third-party scalers. If you encounter issues with third-party scalers, open an issue in the official [KEDA GitHub repository](https://github.com/kedacore/keda).
 
 ## Troubleshooting checklist
 
@@ -99,6 +101,29 @@ keda-operator-metrics-apiserver   kube-system
 
 > [!WARNING]
 > If the namespace isn't `kube-system`, the AKS add-on is being ignored, and another metric server is being used.
+
+### How to restart KEDA operator pods when workload identity isn't injected properly
+
+If you're using [Microsoft Entra Workload ID](/azure/aks/workload-identity-overview) and you enable KEDA before the Workload ID is used, you must restart the KEDA operator pods. This ensures the correct environment variables are injected. To do this, follow these steps:
+
+1. Restart the pods by running the following command:
+
+     ```bash
+     kubectl rollout restart deployment keda-operator -n kube-system
+     ```
+
+2. Obtain KEDA operator pods by running the following command, and then locate pods with names starting with 'keda-operator'.
+
+     ```bash
+    kubectl get pod -n kube-system
+     ```
+
+3. To verify that the environment variables have been successfully injected, run the following command:
+
+     ```bash
+    kubectl describe pod <keda-operator-pod-name> -n kube-system
+     ```
+     If the variables have been successfully injected, you should see values for `AZURE_TENANT_ID`, `AZURE_FEDERATED_TOKEN_FILE`, and `AZURE_AUTHORITY_HOST` in the **Environment** section.
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
 

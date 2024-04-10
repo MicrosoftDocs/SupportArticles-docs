@@ -5,7 +5,6 @@ ms.date: 03/09/2022
 ms.custom: sap:installation
 ms.reviewer: heikom
 ms.topic: how-to
-ms.technology: internet-explorer-installation
 ---
 # Disable and enable Internet Explorer on Windows
 

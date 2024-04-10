@@ -5,7 +5,6 @@ ms.date: 04/23/2021
 ms.reviewer: traceytu;DEV_Triage
 author: HaiyingYu
 ms.author: haiyingyu
-ms.technology: internet-explorer-general
 ---
 
 # Edge icon is incorrectly shown for URL shortcut on Start menu in Windows 10

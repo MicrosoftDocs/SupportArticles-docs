@@ -1,17 +1,13 @@
 ---
 title: Fail to use PXE to boot clients from WDS
 description: Provides a solution to fix an error that occurs when you use PXE to boot a client computer from a Windows Deployment Services (WDS) server.
-ms.date: 09/08/2020
-author: Deland-Han
-ms.author: delhan
+ms.date: 12/26/2023
 manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
-ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, scottmca
-ms.custom: sap:no-boot-not-bugchecks, csstroubleshoot
-ms.technology: windows-client-performance
+ms.custom: sap:System Performance\Startup or Pre-logon Reliability (crash, errors, bug check or Blue Screen), csstroubleshoot
 ---
 # Invalid Boot File Received Error Message When PXE booting from WDS
 
@@ -41,8 +37,4 @@ If you have a mix of UEFI and Legacy BIOS machines, you cannot use DHCP Scope Op
 
 ## More information
 
-The WDS Boot Program's for each type of machine are:  
-
-- Legacy BIOS computers: [Wdsnbp Website](http://wdsnbp.com/)
-- UEFI computers: wdsmgfw.efi
- [Managing Network Boot Programs](https://technet.microsoft.com/library/cc732351%28ws.10%29.aspx)
+For more information about he WDS Boot Program's for UEFI computers wdsmgfw.efi, see [Managing Network Boot Programs](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732351%28v=ws.10%29).

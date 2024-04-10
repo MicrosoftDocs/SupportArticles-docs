@@ -1,13 +1,14 @@
 ---
 title: Troubleshoot common issues for Azure Linux Container Host for AKS
 description: Troubleshoot commonly reported issues for Azure Linux container hosts on Azure Kubernetes Service (AKS). 
-ms.date: 03/03/2023
-author: DennisLee-DennisLee
-ms.author: v-dele
+ms.date: 09/08/2023
+author: suhuruli
+ms.author: suhuruli
 editor: v-jsitser
-ms.reviewer: suhuruli
+ms.reviewer: v-leedennis
 ms.service: azure-kubernetes-service
 ms.subservice: common-issues
+ms.custom: linux-related-content
 ---
 
 # Troubleshoot common issues for Azure Linux Container Host for AKS
@@ -93,6 +94,22 @@ Although this command might not address the issue that you're experiencing, vers
 Azure Linux (and other RPM distributions) store certificates differently from Ubuntu.
 
 On Azure Linux, the */etc/ssl/certs* path is a symbolic link to */etc/pki/tls/certs*. If a container expects to map */etc/ssl/certs* to use the *ca-certificates.crt* certificate file on Azure Linux, the container instead gets a symbolic link that points to nowhere. This behavior causes certificate-related errors in the container. The container also has to map */etc/pki* so that the container can follow the symbolic link chain. If the container has to work on both Ubuntu and Azure Linux hosts, you can map */etc/pki* by using the `DirectoryOrCreate` type in a [hostPath volume](https://kubernetes.io/docs/concepts/storage/volumes/#hostpath).
+
+### Step 4: Update Azure CLI and the AKS preview extension
+
+If you try to deploy an Azure Linux AKS cluster by using Azure CLI, you might receive an error message that states that the `AzureLinux` option isn't supported for the `OSSku` parameter. This message means that you might be using an outdated version of the Azure CLI or the AKS preview extension. To fix this issue, take one or both of the following two actions:
+
+- If Azure CLI isn't up to date, install the latest version. To upgrade Azure CLI, run the following [az upgrade](/cli/azure/reference-index#az-upgrade) command:
+
+  ```azurecli
+  az upgrade
+  ```
+
+- If you have an older version of the `aks-preview` extension installed, install a newer version so that the `OSSku` parameter has a value of `AzureLinux`. To upgrade the extension, run the following [az extension update](/cli/azure/extension#az-extension-update) command:
+
+  ```azurecli
+  az extension update --name aks-preview
+  ```
 
 [!INCLUDE [Third-party information disclaimer](../../includes/third-party-disclaimer.md)]
 

@@ -5,7 +5,7 @@ summary: Welcome to Service Manager troubleshooting. These articles explain how 
 metadata:
   title: System Center Service Manager troubleshooting
   description: Landing page for System Center Service Manager troubleshooting articles.
-  ms.prod: system-center
+  ms.service: system-center
   ms.topic: landing-page
   author: helenclu
   ms.author: luche
