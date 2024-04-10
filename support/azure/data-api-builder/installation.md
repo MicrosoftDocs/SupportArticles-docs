@@ -3,7 +3,7 @@ title: Troubleshooting Data API builder installation
 description: Troubleshoot common problems that might occur when you install the Data API builder for Azure databases.
 ms.reviewer: jerrynixon, sidandrews
 ms.service: data-api-builder
-ms.date: 04/09/2024
+ms.date: 04/10/2024
 ---
 # Troubleshoot the installation of Data API builder for Azure databases
 
@@ -21,7 +21,7 @@ For example, when you execute the `dotnet` command on Linux, you might receive a
 
 > A fatal error occurred. The folder [/usr/share/dotnet/host/fxr] does not exist.
 
-To ensure you can install .NET 6 on Ubuntu sucessfully, review the installation instructions in [Overview of .NET on Ubuntu](/dotnet/core/install/linux-ubuntu#im-using-ubuntu-2204-or-later-and-i-only-need-net).
+To ensure you can install .NET 6 on Ubuntu successfully, review the installation instructions in [Overview of .NET on Ubuntu](/dotnet/core/install/linux-ubuntu#im-using-ubuntu-2204-or-later-and-i-only-need-net).
 
 ## Issue when installing Data API builder using .NET tool
 
