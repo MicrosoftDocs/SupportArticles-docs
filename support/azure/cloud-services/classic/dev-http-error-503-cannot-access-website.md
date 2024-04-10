@@ -7,6 +7,7 @@ author: genlin
 ms.author: genli
 ms.service: cloud-services
 ms.subservice: troubleshoot-dev
+ms.custom: sap:Development
 ---
 # Error when browsing your website over the default cloud service domain url: HTTP Error 503. The service is unavailable
 

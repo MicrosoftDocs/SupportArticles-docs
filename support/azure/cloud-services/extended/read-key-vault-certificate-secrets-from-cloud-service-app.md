@@ -7,6 +7,7 @@ editor: v-jsitser
 ms.reviewer: v-maallu, prpillai, piw, v-leedennis
 ms.service: cloud-services-extended-support
 #Customer intent: As an Azure Cloud Services (extended support) user, I want to know how an application that's hosted on a cloud service can read certificate secrets that are stored in Azure Key Vault so that I can authenticate customers without the use of managed identities.
+ms.custom: sap:Service Availability and Performance
 ---
 
 # Read key vault certificate secrets on Azure Cloud Services (extended support)

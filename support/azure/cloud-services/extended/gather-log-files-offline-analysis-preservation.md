@@ -6,6 +6,7 @@ editor: v-jsitser
 ms.reviewer: v-maallu, piw, prpillai, v-leedennis
 ms.service: cloud-services-extended-support
 #Customer intent: As an Azure virtual machine user, I want to know how to gather log files for the offline analysis and preservation of diagnostic data from a platform as a service (PaaS) Windows virtual machine (VM) so that I can use this data to help troubleshoot various problems.
+ms.custom: sap:Configuration and Setup Related Issue
 ---
 
 # Gather log files for offline analysis and preservation

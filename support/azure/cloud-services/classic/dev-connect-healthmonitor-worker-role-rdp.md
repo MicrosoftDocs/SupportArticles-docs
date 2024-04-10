@@ -7,6 +7,7 @@ author: genlin
 ms.author: genli
 ms.service: cloud-services
 ms.subservice: troubleshoot-dev
+ms.custom: sap:Development
 ---
 # Cannot connect to 'HealthMonitor' worker role instance using RDP
 

@@ -7,6 +7,7 @@ author: genlin
 ms.author: genli
 ms.service: cloud-services
 ms.subservice: troubleshoot-dev
+ms.custom: sap:Development
 ---
 # ProcessorEngine role is stuck in Busy state stating: Preparing to start role... System is initializing
 

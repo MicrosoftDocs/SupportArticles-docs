@@ -6,6 +6,7 @@ ms.subservice: troubleshoot-deployment-classic
 ms.date: 09/26/2022
 ms.reviewer: chiragpa, v-leedennis
 articleID: 85d6aaad-fed9-48c4-88e2-8d93e8eecedd
+ms.custom: sap:Deployment
 ---
 # Troubleshoot Azure Cloud Service (classic) cloud service VIP swap failures
 

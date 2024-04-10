@@ -7,6 +7,7 @@ author: genlin
 ms.author: genli
 ms.service: cloud-services
 ms.subservice: troubleshoot-dev
+ms.custom: sap:Development
 ---
 # AssemblyBinder role instance is throwing System.IO.IOException exception
 

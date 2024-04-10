@@ -6,6 +6,7 @@ ms.subservice: troubleshoot-deployment-classic
 ms.date: 09/26/2022
 ms.reviewer: chiragpa, v-leedennis
 articleID: cab2e0b3-d753-4461-8a1e-38fc7629304e 
+ms.custom: sap:Deployment
 ---
 # Troubleshooting Cloud Service (classic) InvalidModel exception
 

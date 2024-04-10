@@ -6,6 +6,7 @@ ms.reviewer: patcatun
 author: JerryZhangMS
 ms.author: genli
 ms.service: cloud-services-extended-support
+ms.custom: sap:Service Availability and Performance
 ---
 
 # Troubleshoot Cloud Service app with Application Insights - common scenarios

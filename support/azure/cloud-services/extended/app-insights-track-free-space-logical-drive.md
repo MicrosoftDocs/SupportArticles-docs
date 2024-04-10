@@ -6,6 +6,7 @@ editor: v-jsitser
 ms.reviewer: maheshallu, wu.ping, prpillai, v-leedennis
 ms.topic: how-to
 ms.service: cloud-services-extended-support
+ms.custom: sap:Service Availability and Performance
 ---
 # Use an Application Insights performance counter to track free space on a logical drive
 

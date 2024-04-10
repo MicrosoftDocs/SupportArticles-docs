@@ -5,6 +5,7 @@ ms.service: cloud-services
 ms.subservice: troubleshoot-deployment-classic
 ms.date: 09/26/2022
 ms.reviewer: chiragpa, v-leedennis
+ms.custom: sap:Deployment
 ---
 # Troubleshoot Cloud Service (Classic) role recycle threshold exceptions
 

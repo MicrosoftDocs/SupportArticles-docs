@@ -7,6 +7,7 @@ author: genlin
 ms.author: genli
 ms.service: cloud-services
 ms.subservice: troubleshoot-dev
+ms.custom: sap:Development
 ---
 # ZipEngine role is stuck between Restarting and Busy state
 

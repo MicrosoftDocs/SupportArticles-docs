@@ -5,6 +5,7 @@ ms.service: cloud-services-extended-support
 ms.reviewer: jaygong, v-leedennis
 ms.date: 04/01/2024
 keywords: role instance, startup task, startup task script, Startup.cmd, RoleEntryPoint class
+ms.custom: sap:Service Availability and Performance
 ---
 
 # Troubleshoot Azure Cloud Services (extended support) role instances that don't start

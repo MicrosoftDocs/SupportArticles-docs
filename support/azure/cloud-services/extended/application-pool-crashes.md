@@ -6,6 +6,7 @@ editor: v-jsitser
 ms.reviewer: piw, v-leedennis
 ms.service: cloud-services-extended-support
 #Customer intent: As an Azure Cloud Services user, I want to resolve issues that cause application pool crashes on my virtual machine so that I can avoid downtime on my Cloud Services application.
+ms.custom: sap:Service Availability and Performance
 ---
 
 # Troubleshoot application pool crashes on a Cloud Services virtual machine

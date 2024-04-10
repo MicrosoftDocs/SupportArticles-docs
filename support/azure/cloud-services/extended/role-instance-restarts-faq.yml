@@ -8,6 +8,7 @@ metadata:
   ms.reviewer: v-maallu, v-leedennis
   ms.service: cloud-services-extended-support
   ms.subservice: troubleshoot-extended-support
+  ms.custom: sap:Problems Deploying Cloud Services
 
 title: Frequently asked questions about role instance restarts caused by VM OS upgrades
 summary: This article answers frequently asked questions (FAQ) about role instance restarts that are caused by upgrades to the Windows operating system (OS) on a Microsoft Azure platform as a service (PaaS) virtual machine (VM).

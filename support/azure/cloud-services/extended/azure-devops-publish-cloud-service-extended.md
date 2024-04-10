@@ -5,6 +5,7 @@ ms.date: 04/01/2024
 ms.reviewer: piw, maheshallu, v-weizhu
 ms.service: cloud-services-extended-support
 ms.topic: how-to
+ms.custom: sap:Development
 ---
 # How to use Azure DevOps to publish Cloud Services (extended support)
 

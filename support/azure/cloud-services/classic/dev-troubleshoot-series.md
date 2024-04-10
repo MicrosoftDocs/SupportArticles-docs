@@ -6,6 +6,7 @@ ms.reviewer:
 ms.service: cloud-services
 ms.subservice: troubleshoot-dev
 ms.topic: overview
+ms.custom: sap:Development
 ---
 # Azure Cloud Service Troubleshooting Series
 
