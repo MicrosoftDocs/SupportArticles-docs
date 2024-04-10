@@ -13,8 +13,6 @@ ms.custom: sap: Network Connectivity and File Sharing\NCSI, csstroubleshoot
 
 This guidance is designed to help troubleshoot NCSI issues.
 
-Network Connection Status Indicator (NCSI) troubleshooting guidance
-
 ## Basics of NCSI
 
 The Network Location Awareness (NLA) service determines what type of network connectivity Windows has.
