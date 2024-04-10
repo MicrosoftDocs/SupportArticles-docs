@@ -28,4 +28,4 @@ To resolve this issue, exclude containers from Azure Policy enforcement within y
 
 2. Create a new policy assignment that excludes the desired pods or containers. This will override the default policy behavior and exclude the specified pods or containers from policy enforcement. 
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

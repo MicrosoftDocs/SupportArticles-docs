@@ -24,4 +24,4 @@ If you suspect that the alert is erroneous and the policy violation has been mit
 
 However, if the alert persists for more than a week or you believe it to be inaccurate, we recommend openning a support case with Azure Support. Provide details about the specific policy, the alert in question, error messages, or any relevant information. The Azure Support team will assist in investigating and resolving the issue.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

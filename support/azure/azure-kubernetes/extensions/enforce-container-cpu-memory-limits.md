@@ -14,7 +14,7 @@ This article provides a solution to an issue where CPU and memory limits aren't 
 
 When you deploy an application to an AKS cluster, you receive an error like the following sample:
 
-> "validation.gatekeeper.sh" denied the request: [container-must-have-limits] container <name> has no resource/memory limit
+> "validation.gatekeeper.sh" denied the request: [container-must-have-limits] container \<name> has no resource/memory limit
 
 ## Cause
 
@@ -58,4 +58,4 @@ To resolve this issue, ensure that container CPU and memory limits are enforced 
 
 3. After updating the container specification, trigger a rescan or on-demand scan to evaluate the compliance status. You can use the Azure CLI to perform an on-demand evaluation scan. For more information about triggering an on-demand scan, see [On-demand evaluation scan - Azure CLI](/azure/governance/policy/how-to/get-compliance-data#on-demand-evaluation-scan---azure-cli). 
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
