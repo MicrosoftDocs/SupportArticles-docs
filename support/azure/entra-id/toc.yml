@@ -5,6 +5,8 @@
   items:
   - name: Maximum number of devices is reached
     href: ad-dmn-services/maximum-number-of-devices-joined-workplace.md
+  - name: Microsoft Graph PowerShell overview
+    href: /powershell/microsoftgraph/overview?context=/troubleshoot/azure/entra-id/context/context
   - name: Troubleshoot data freshness alerts in Microsoft Entra Connect Health
     href: ad-dmn-services/aad-connect-health-data-freshness.md
   - name: Unable to register a device
