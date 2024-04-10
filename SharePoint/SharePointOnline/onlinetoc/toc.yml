@@ -91,7 +91,7 @@
       href: ../apps/msn-weather-service-api-retired.md
     - name: Site collection admins can't register apps or update permissions
       href: ../apps/cannot-register-app-update-permissions.md
-    - name: This content cannot be displayed in a frame
+    - name: This content can't be displayed in a frame
       href: ../apps/view-owa-page-viewer-web-part.md
   - name: InfoPath
     items:
@@ -151,7 +151,7 @@
       href: ../lists-and-libraries/error-when-view-or-edit-in-browser.md
     - name: Excel survey doesn't have full functionality
       href: ../lists-and-libraries/excel-survey-does-not-have-full-functionality-when-click-new.md
-    - name: File post-processing may take up to 24 hours
+    - name: File post-processing takes up to 24 hours
       href: ../lists-and-libraries/file-post-processing-takes-up-to-24-hours.md
     - name: Filtering doesn't work for Managed Metadata in SharePoint
       href: ../lists-and-libraries/managed-metadata-column-fails-filtering.md
@@ -249,7 +249,7 @@
       href: ../security/cross-domain-iframe-requests-are-blocked.md
     - name: '"Session has expired" when opening a document'
       href: ../Security/session-has-expired.md
-    - name: There is a problem with your account when opening documents
+    - name: There's a problem with your account when opening documents
       href: ../Security/problem-with-your-account.md
   - name: Sharing and Permissions
     items:
@@ -291,7 +291,7 @@
       href: ../sharing-and-permissions/fix-site-user-id-mismatch.md
     - name: Issue after accepting a resource invite
       href: ../sharing-and-permissions/unable-to-complete-request.md
-    - name: Issue when external users click links to shared resource
+    - name: Issue when external users select links to shared resource
       href: ../sharing-and-permissions/external-user-fails-accessing-shared-resource.md
     - name: Issue when processing a pending request
       href: ../sharing-and-permissions/request-approval-failed.md
@@ -311,7 +311,7 @@
       href: ../sharing-and-permissions/ssl-certificate-authentication.md    
     - name: Unable to reach the server when sharing files
       href: ../sharing-and-permissions/share-file-unable-reach-server.md
-    - name: You are not allowed to create team sites
+    - name: You aren't allowed to create team sites
       href: ../sharing-and-permissions/issue-when-you-click-new-site-on-followed-sites-page.md
   - name: Sites
     items:
@@ -335,7 +335,7 @@
       href: ../Sites/cannot-permanently-delete-site.md    
     - name: Customizations of the top navigation bar are reverted
       href: ../Sites/customizations-revert-to-default-settings.md
-    - name: Error when trying to change site logo on O365 group SharePoint site
+    - name: Error when trying to change site logo on Microsoft 365 group SharePoint site
       href: ../sites/error-when-changing-o365-site-logo.md
     - name: Error when trying to delete a SharePoint site
       href: ../sites/compliance-policy-blocking-site-deletion.md    
@@ -349,7 +349,7 @@
       href: ../Sites/save-site-as-template.md
     - name: Issue with "New Navigation Link" or "Save site as template" option
       href: ../Sites/new-navigation-link-save-site-as-template.md
-    - name: Modified dates on the SharePoint site contents page are not accurate
+    - name: Modified dates on the SharePoint site contents page aren't accurate
       href: ../../SharePointServer/lists-and-libraries/modified-date-site-contents-not-accurate.md?toc=/SharePoint/troubleshoot/onlinetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: Notifications not received by group connected to SharePoint site
       href: ../sites/notification-email-not-received.md
