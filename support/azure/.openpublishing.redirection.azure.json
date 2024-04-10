@@ -3648,16 +3648,46 @@
       {
         "source_path": "azure-container-instances/container-group-transitioning-state.md",
         "redirect_url": "/troubleshoot/azure/azure-container-instances/configuration-setup/container-group-transitioning-state",
-        "redirect_document_id": false
+        "redirect_document_id": true
       },
       {
         "source_path": "azure-container-instances/error-codes-spot-container-creation.md",
         "redirect_url": "/troubleshoot/azure/azure-container-instances/configuration-setup/error-codes-spot-container-creation",
-        "redirect_document_id": false
+        "redirect_document_id": true
       },
       {
         "source_path": "azure-container-instances/web-socket-is-closed-or-could-not-be-opened.md",
         "redirect_url": "/troubleshoot/azure/azure-container-instances/connectivity/web-socket-is-closed-or-could-not-be-opened",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "azure-kubernetes/availability-performance/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-kubernetes/connectivity/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-kubernetes/create-upgrade-delete/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-kubernetes/extensions/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-kubernetes/logs/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "azure-kubernetes/storage/index.md",
+        "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
         "redirect_document_id": false
       }
   ]
