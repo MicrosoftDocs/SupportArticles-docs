@@ -4,6 +4,7 @@ description: Provides solutions for an issue where Azure Virtual Machine Scale S
 ms.date: 12/05/2022
 ms.reviewer: hilarywang, azurevmlnxcic, azurevmcptcic, v-weizhu
 ms.service: virtual-machine-scale-sets
+ms.custom: sap:My instance was restarted or stopped unexpectedly
 ---
 # Azure Virtual Machine Scale Set instances aren't repaired even when the automatic repairs policy is enabled
 
