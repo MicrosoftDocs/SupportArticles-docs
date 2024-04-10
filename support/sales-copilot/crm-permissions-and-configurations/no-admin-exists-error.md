@@ -1,12 +1,11 @@
 ---
 title: Ask your admin to create an environment for you error when opening Microsoft Copilot for Sales
-description: Resolves the Ask your admin to create an environment for you error in Microsoft Copilot for Sales when a user tries to open the app.
-ms.date: 04/07/2024
+description: Resolves the Ask your admin to create an environment for you error that occurs in Microsoft Copilot for Sales when a user tries to open the app.
+ms.date: 04/10/2024
 author: sbmjais
 ms.author: shjais
 ms.custom: sap:CRM Permissions and Configurations\CRM Settings
 ---
-
 # "Ask your admin to create an environment for you" error when opening Microsoft Copilot for Sales
 
 This article helps you troubleshoot and resolve the "Ask your admin to create an environment for you" error in Microsoft Copilot for Sales when a user tries to open the app.
@@ -34,14 +33,16 @@ When the first user in the tenant tries to open Microsoft Copilot for Sales, no 
 
 ## Resolution
 
-To resolve this issue, tenant should have at least one administator.
+To resolve this issue, the tenant should have at least one administrator.
 
 1. Open one of the following URLs as per your tenant type:
+
     - Production: [https://admin.powerplatform.microsoft.com/](https://admin.powerplatform.microsoft.com/)
     - Non-production: [https://admin.preprod.powerplatform.microsoft.com/](https://admin.preprod.powerplatform.microsoft.com/)
+
 1. In the left pane, select **Admin centers** > **Microsoft Entra ID**.
 1. In the left pane, select **Roles & admins** > **Roles & admins**.
-1. Find **Global Administrator** and **Power Platform Administrator** roles, and assign the right users to the roles.
+1. Find the **Global Administrator** and **Power Platform Administrator** roles, and assign the right users to the roles.
 
 ## More information
 
