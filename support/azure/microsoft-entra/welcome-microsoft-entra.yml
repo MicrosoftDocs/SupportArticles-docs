@@ -38,6 +38,6 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Send Microsoft Authenticator logs and get an incident ID
-            url: ../ad-dmn-services/send-microsoft-authenticator-logs.md
+            url: ../entra-id/ad-dmn-services/send-microsoft-authenticator-logs.md
           - text: Support data collection
             url: ../entra-id/ad-dmn-services/support-data-collection-diagnostic-logs.md
