@@ -163,14 +163,6 @@ All the following commands should be run by using root privileges or by specifyi
    sudo yum repolist all
    ```
 
-> [!NOTE]  
-> If you are using a proxy in `/etc/yum.conf` or `/etc/dnf.conf`, the `yum --config='https://rhelimage.blob.core.windows.net/repositories/rhui-x-x-x-x install rhui-azure-rhel-X-X-X` command is not going to work because it doesn't include your proxy settings, in this case you can use the following process:
-
-```bash
-sudo wget https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhelX-X-X-X.config
-sudo mv rhui-microsoft-azure-rhelX-X-X-X.config /etc/yum.repos.d
-sudo yum install rhui-azure-rhel-X-X-X
-```
    
 #### [RHEL 8._x_ - EUS](#tab/rhel8-eus)
 
@@ -192,14 +184,7 @@ sudo yum install rhui-azure-rhel-X-X-X
    sudo dnf repolist all
    ```
 
-> [!NOTE]  
-> If you are using a proxy in `/etc/yum.conf` or `/etc/dnf.conf`, the `yum --config='https://rhelimage.blob.core.windows.net/repositories/rhui-x-x-x-x install rhui-azure-rhel-X-X-X` command is not going to work because it doesn't include your proxy settings, in this case you can use the following process:
-> 
-```bash
-sudo wget https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhelX-X-X-X.config
-sudo mv rhui-microsoft-azure-rhelX-X-X-X.config /etc/yum.repos.d
-sudo yum install rhui-azure-rhel-X-X-X
-```
+
 
 
 #### [RHEL 9._x_ - EUS](#tab/rhel9-eus)
@@ -229,12 +214,10 @@ sudo yum install rhui-azure-rhel-X-X-X
 
 > [!NOTE]  
 > If you are using a proxy in `/etc/yum.conf` or `/etc/dnf.conf`, the `yum --config='https://rhelimage.blob.core.windows.net/repositories/rhui-x-x-x-x install rhui-azure-rhel-X-X-X` command is not going to work because it doesn't include your proxy settings, in this case you can use the following process:
-> 
-```bash
-sudo wget https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhelX-X-X-X.config
-sudo mv rhui-microsoft-azure-rhelX-X-X-X.config /etc/yum.repos.d
-sudo yum install rhui-azure-rhel-X-X-X
-```
+> sudo wget https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhelX-X-X-X.config
+> sudo mv rhui-microsoft-azure-rhelX-X-X-X.config /etc/yum.repos.d
+> sudo yum install rhui-azure-rhel-X-X-X
+> Replace "rhui-microsoft-azure-rhelX-X-X-X" accordingly
 
 ---
 
@@ -254,14 +237,6 @@ sudo yum install rhui-azure-rhel-X-X-X
    sudo yum repolist all
    ```
 
-> [!NOTE]  
-> If you are using a proxy in `/etc/yum.conf` or `/etc/dnf.conf`, the `yum --config='https://rhelimage.blob.core.windows.net/repositories/rhui-x-x-x-x install rhui-azure-rhel-X-X-X` command is not going to work because it doesn't include your proxy settings, in this case you can use the following process:
-> 
-```bash
-sudo wget https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhelX-X-X-X.config
-sudo mv rhui-microsoft-azure-rhelX-X-X-X.config /etc/yum.repos.d
-sudo yum install rhui-azure-rhel-X-X-X
-```
 
 #### [RHEL 8._x_ - non-EUS](#tab/rhel8-noneus)
 
@@ -277,14 +252,7 @@ sudo yum install rhui-azure-rhel-X-X-X
    sudo dnf repolist all
    ```
 
-> [!NOTE]  
-> If you are using a proxy in `/etc/yum.conf` or `/etc/dnf.conf`, the `yum --config='https://rhelimage.blob.core.windows.net/repositories/rhui-x-x-x-x install rhui-azure-rhel-X-X-X` command is not going to work because it doesn't include your proxy settings, in this case you can use the following process:
-> 
-```bash
-sudo wget https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhelX-X-X-X.config
-sudo mv rhui-microsoft-azure-rhelX-X-X-X.config /etc/yum.repos.d
-sudo yum install rhui-azure-rhel-X-X-X
-```
+
 
 #### [RHEL 9._x_ - non-EUS](#tab/rhel9-noneus)
 
@@ -300,16 +268,15 @@ sudo yum install rhui-azure-rhel-X-X-X
    sudo dnf repolist all
    ```
 
-> [!NOTE]  
-> If you are using a proxy in `/etc/yum.conf` or `/etc/dnf.conf`, the `yum --config='https://rhelimage.blob.core.windows.net/repositories/rhui-x-x-x-x install rhui-azure-rhel-X-X-X` command is not going to work because it doesn't include your proxy settings, in this case you can use the following process:
-> 
-```bash
-sudo wget https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhelX-X-X-X.config
-sudo mv rhui-microsoft-azure-rhelX-X-X-X.config /etc/yum.repos.d
-sudo yum install rhui-azure-rhel-X-X-X
-```
 
 ---
+
+> [!NOTE]  
+> If you are using a proxy in `/etc/yum.conf` or `/etc/dnf.conf`, the `yum --config='https://rhelimage.blob.core.windows.net/repositories/rhui-x-x-x-x install rhui-azure-rhel-X-X-X` command is not going to work because it doesn't include your proxy settings, in this case you can use the following process:
+> sudo wget https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhelX-X-X-X.config
+> sudo mv rhui-microsoft-azure-rhelX-X-X-X.config /etc/yum.repos.d
+> sudo yum install rhui-azure-rhel-X-X-X
+> Replace "rhui-microsoft-azure-rhelX-X-X-X" accordingly
 
 #### RHEL 7 SAP/E4S/HANA RHUI package installation
 
@@ -337,14 +304,6 @@ The following steps apply if the OS version is *earlier than RHEL 7.9* and the V
    sudo yum repolist all
    ```
 
-> [!NOTE]  
-> If you are using a proxy in `/etc/yum.conf` or `/etc/dnf.conf`, the `yum --config='https://rhelimage.blob.core.windows.net/repositories/rhui-x-x-x-x install rhui-azure-rhel-X-X-X` command is not going to work because it doesn't include your proxy settings, in this case you can use the following process:
-> 
-```bash
-sudo wget https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhelX-X-X-X.config
-sudo mv rhui-microsoft-azure-rhelX-X-X-X.config /etc/yum.repos.d
-sudo yum install rhui-azure-rhel-X-X-X
-```
 
 #### [RHEL 7.9 - RHEL-SAP-APPS](#tab/rhel79-rhel-sap-apps)
 
@@ -362,14 +321,6 @@ The following steps apply if the OS version is *RHEL 7.9* and the VM was created
    sudo yum repolist all
    ```
 
-> [!NOTE]  
-> If you are using a proxy in `/etc/yum.conf` or `/etc/dnf.conf`, the `yum --config='https://rhelimage.blob.core.windows.net/repositories/rhui-x-x-x-x install rhui-azure-rhel-X-X-X` command is not going to work because it doesn't include your proxy settings, in this case you can use the following process:
-> 
-```bash
-sudo wget https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhelX-X-X-X.config
-sudo mv rhui-microsoft-azure-rhelX-X-X-X.config /etc/yum.repos.d
-sudo yum install rhui-azure-rhel-X-X-X
-```
 
 #### [RHEL 7._x_ - RHEL-SAP (old offer)](#tab/rhel7-RHEL-SAP-old-offer)
 
@@ -397,14 +348,6 @@ To install the `SAP-HANA` repositories in this specific scenario, install the `E
    sudo yum repolist all
    ```
 
-> [!NOTE]  
-> If you are using a proxy in `/etc/yum.conf` or `/etc/dnf.conf`, the `yum --config='https://rhelimage.blob.core.windows.net/repositories/rhui-x-x-x-x install rhui-azure-rhel-X-X-X` command is not going to work because it doesn't include your proxy settings, in this case you can use the following process:
-> 
-```bash
-sudo wget https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhelX-X-X-X.config
-sudo mv rhui-microsoft-azure-rhelX-X-X-X.config /etc/yum.repos.d
-sudo yum install rhui-azure-rhel-X-X-X
-```
 
 
 #### [RHEL 7._x_ - RHEL-SAP-HA (E4S)](#tab/rhel7-rhel-sap-ha-e4s)
@@ -434,14 +377,6 @@ The images from the following offers that were created *after* December 2019 are
    sudo yum repolist all
    ```
    
-> [!NOTE]  
-> If you are using a proxy in `/etc/yum.conf` or `/etc/dnf.conf`, the `yum --config='https://rhelimage.blob.core.windows.net/repositories/rhui-x-x-x-x install rhui-azure-rhel-X-X-X` command is not going to work because it doesn't include your proxy settings, in this case you can use the following process:
-> 
-```bash
-sudo wget https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhelX-X-X-X.config
-sudo mv rhui-microsoft-azure-rhelX-X-X-X.config /etc/yum.repos.d
-sudo yum install rhui-azure-rhel-X-X-X
-```
 
 #### [RHEL 7.9 - RHEL-SAP-HA](#tab/rhe79-rhel-sap-ha)
 
@@ -458,16 +393,15 @@ The following steps apply if the OS version is *RHEL 7.9* and the VM was created
    ```bash
    sudo yum repolist all
    ```
-> [!NOTE]  
-> If you are using a proxy in `/etc/yum.conf` or `/etc/dnf.conf`, the `yum --config='https://rhelimage.blob.core.windows.net/repositories/rhui-x-x-x-x install rhui-azure-rhel-X-X-X` command is not going to work because it doesn't include your proxy settings, in this case you can use the following process:
-> 
-```bash
-sudo wget https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhelX-X-X-X.config
-sudo mv rhui-microsoft-azure-rhelX-X-X-X.config /etc/yum.repos.d
-sudo yum install rhui-azure-rhel-X-X-X
-```
 
 ---
+
+> [!NOTE]  
+> If you are using a proxy in `/etc/yum.conf` or `/etc/dnf.conf`, the `yum --config='https://rhelimage.blob.core.windows.net/repositories/rhui-x-x-x-x install rhui-azure-rhel-X-X-X` command is not going to work because it doesn't include your proxy settings, in this case you can use the following process:
+> sudo wget https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhelX-X-X-X.config
+> sudo mv rhui-microsoft-azure-rhelX-X-X-X.config /etc/yum.repos.d
+> sudo yum install rhui-azure-rhel-X-X-X
+> Replace "rhui-microsoft-azure-rhelX-X-X-X" accordingly
 
 #### RHEL 8 SAP/E4S/HANA RHUI package installation
 
@@ -495,14 +429,6 @@ The following steps apply if the OS version is *earlier than the latest version 
    sudo dnf repolist all
    ```
 
-> [!NOTE]  
-> If you are using a proxy in `/etc/yum.conf` or `/etc/dnf.conf`, the `yum --config='https://rhelimage.blob.core.windows.net/repositories/rhui-x-x-x-x install rhui-azure-rhel-X-X-X` command is not going to work because it doesn't include your proxy settings, in this case you can use the following process:
-> 
-```bash
-sudo wget https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhelX-X-X-X.config
-sudo mv rhui-microsoft-azure-rhelX-X-X-X.config /etc/yum.repos.d
-sudo yum install rhui-azure-rhel-X-X-X
-```
 
 #### [RHEL 8._x_ - RHEL-SAP-HA (E4S)](#tab/rhel8-rhel-sap-ha-e4s)
 
@@ -526,14 +452,6 @@ The following steps apply if the OS version is *earlier than the latest version 
    sudo dnf repolist all
    ```
 
-> [!NOTE]  
-> If you are using a proxy in `/etc/yum.conf` or `/etc/dnf.conf`, the `yum --config='https://rhelimage.blob.core.windows.net/repositories/rhui-x-x-x-x install rhui-azure-rhel-X-X-X` command is not going to work because it doesn't include your proxy settings, in this case you can use the following process:
-> 
-```bash
-sudo wget https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhelX-X-X-X.config
-sudo mv rhui-microsoft-azure-rhelX-X-X-X.config /etc/yum.repos.d
-sudo yum install rhui-azure-rhel-X-X-X
-```
 
 #### [RHEL 8._x_ - RHEL-HA (E4S)](#tab/rhel8-rhel-ha-e4s)
 
@@ -555,16 +473,15 @@ sudo yum install rhui-azure-rhel-X-X-X
    sudo dnf repolist all
    ```
 
-> [!NOTE]  
-> If you are using a proxy in `/etc/yum.conf` or `/etc/dnf.conf`, the `yum --config='https://rhelimage.blob.core.windows.net/repositories/rhui-x-x-x-x install rhui-azure-rhel-X-X-X` command is not going to work because it doesn't include your proxy settings, in this case you can use the following process:
-> 
-```bash
-sudo wget https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhelX-X-X-X.config
-sudo mv rhui-microsoft-azure-rhelX-X-X-X.config /etc/yum.repos.d
-sudo yum install rhui-azure-rhel-X-X-X
-```
 
 ---
+
+> [!NOTE]  
+> If you are using a proxy in `/etc/yum.conf` or `/etc/dnf.conf`, the `yum --config='https://rhelimage.blob.core.windows.net/repositories/rhui-x-x-x-x install rhui-azure-rhel-X-X-X` command is not going to work because it doesn't include your proxy settings, in this case you can use the following process:
+> sudo wget https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhelX-X-X-X.config
+> sudo mv rhui-microsoft-azure-rhelX-X-X-X.config /etc/yum.repos.d
+> sudo yum install rhui-azure-rhel-X-X-X
+> Replace "rhui-microsoft-azure-rhelX-X-X-X" accordingly
 
 #### RHEL 9 SAP/HANA RHUI package installation
 
@@ -592,14 +509,6 @@ The following steps apply if the OS version is *earlier than the latest version 
    sudo dnf repolist all
    ```
 
-> [!NOTE]  
-> If you are using a proxy in `/etc/yum.conf` or `/etc/dnf.conf`, the `yum --config='https://rhelimage.blob.core.windows.net/repositories/rhui-x-x-x-x install rhui-azure-rhel-X-X-X` command is not going to work because it doesn't include your proxy settings, in this case you can use the following process:
-> 
-```bash
-sudo wget https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhelX-X-X-X.config
-sudo mv rhui-microsoft-azure-rhelX-X-X-X.config /etc/yum.repos.d
-sudo yum install rhui-azure-rhel-X-X-X
-```
 
 #### [RHEL 9._x_ - RHEL-SAP-HA (E4S)](#tab/rhel9-rhel-sap-ha-e4s)
 
@@ -623,16 +532,15 @@ The following steps apply if the OS version is *earlier than the latest version 
    sudo dnf repolist all
    ```
 
-> [!NOTE]  
-> If you are using a proxy in `/etc/yum.conf` or `/etc/dnf.conf`, the `yum --config='https://rhelimage.blob.core.windows.net/repositories/rhui-x-x-x-x install rhui-azure-rhel-X-X-X` command is not going to work because it doesn't include your proxy settings, in this case you can use the following process:
-> 
-```bash
-sudo wget https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhelX-X-X-X.config
-sudo mv rhui-microsoft-azure-rhelX-X-X-X.config /etc/yum.repos.d
-sudo yum install rhui-azure-rhel-X-X-X
-```
 
 ---
+
+> [!NOTE]  
+> If you are using a proxy in `/etc/yum.conf` or `/etc/dnf.conf`, the `yum --config='https://rhelimage.blob.core.windows.net/repositories/rhui-x-x-x-x install rhui-azure-rhel-X-X-X` command is not going to work because it doesn't include your proxy settings, in this case you can use the following process:
+> sudo wget https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhelX-X-X-X.config
+> sudo mv rhui-microsoft-azure-rhelX-X-X-X.config /etc/yum.repos.d
+> sudo yum install rhui-azure-rhel-X-X-X
+> Replace "rhui-microsoft-azure-rhelX-X-X-X" accordingly
 
 ## Cause 4: SSL CA certificate is missing
 
