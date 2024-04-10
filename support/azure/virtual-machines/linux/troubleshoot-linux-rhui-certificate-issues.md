@@ -227,13 +227,19 @@ All the following commands should be run by using root privileges or by specifyi
 
 #### [RHEL 7._x_ - non-EUS](#tab/rhel7-noneus)
 
-1. Run the `yum install` command to install the `rhui-azure-rhel7` package:
+1. Remove the releasever file if exist.
+
+   ```bash
+   sudo rm /etc/yum/vars/releasever
+   ```
+
+2. Run the `yum install` command to install the `rhui-azure-rhel7` package:
 
    ```bash
    sudo yum --config='https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhel7.config' install 'rhui-azure-rhel7'
    ```
 
-2. Verify that the corresponding repositories are available and show no errors by running the `yum repolist` command:
+3. Verify that the corresponding repositories are available and show no errors by running the `yum repolist` command:
 
    ```bash
    sudo yum repolist all
@@ -242,13 +248,19 @@ All the following commands should be run by using root privileges or by specifyi
 
 #### [RHEL 8._x_ - non-EUS](#tab/rhel8-noneus)
 
-1. Install the `rhui-azure-rhel8` package by running the `dnf install` command:
+1. Remove the releasever file if exist.
+
+   ```bash
+   sudo rm /etc/dnf/vars/releasever
+   ```
+
+2. Install the `rhui-azure-rhel8` package by running the `dnf install` command:
 
    ```bash
    sudo dnf --config='https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhel8.config' install rhui-azure-rhel8
    ```
 
-2. Verify that the corresponding repositories are available and show no errors by running the `dnf repolist` command:
+3. Verify that the corresponding repositories are available and show no errors by running the `dnf repolist` command:
 
    ```bash
    sudo dnf repolist all
@@ -258,13 +270,19 @@ All the following commands should be run by using root privileges or by specifyi
 
 #### [RHEL 9._x_ - non-EUS](#tab/rhel9-noneus)
 
-1. Install the `rhui-azure-rhel9` package by running the `dnf install` command:
+1. Remove the releasever file if exist.
+
+   ```bash
+   sudo rm /etc/dnf/vars/releasever
+   ```
+
+2. Install the `rhui-azure-rhel9` package by running the `dnf install` command:
 
    ```bash
    sudo dnf --config='https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhel9.config' install rhui-azure-rhel9
    ```
 
-2. Verify that the corresponding repositories are available and show no errors by running the `dnf repolist` command:
+3. Verify that the corresponding repositories are available and show no errors by running the `dnf repolist` command:
 
    ```bash
    sudo dnf repolist all
@@ -313,13 +331,19 @@ The following steps apply if the OS version is *earlier than RHEL 7.9* and the V
 
 The following steps apply if the OS version is *RHEL 7.9* and the VM was created by using the `RHEL-SAP-APPS` offer image.
 
-1. Run the `yum install` command to install the `rhui-azure-rhel7-base-sap-apps` package:
+1. Remove the releasever file if exist.
+
+   ```bash
+   sudo rm /etc/dnf/vars/releasever
+   ```
+
+2. Run the `yum install` command to install the `rhui-azure-rhel7-base-sap-apps` package:
 
    ```bash
    sudo yum --config='https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhel7-base-sapapps.config' install rhui-azure-rhel7-base-sap-apps'
    ```
 
-2. Verify that the corresponding repositories are available and show no errors by running the `yum repolist` command:
+3. Verify that the corresponding repositories are available and show no errors by running the `yum repolist` command:
 
    ```bash
    sudo yum repolist all
@@ -386,13 +410,19 @@ The images from the following offers that were created *after* December 2019 are
 
 The following steps apply if the OS version is *RHEL 7.9* and the VM was created by using the `RHEL-SAP-HA` offer image.
 
-1. Run the `yum install` command to install the `rhui-azure-rhel7-base-sap-ha` package:
+1. Remove the releasever file if exist.
+
+   ```bash
+   sudo rm /etc/dnf/vars/releasever
+   ```
+
+2. Run the `yum install` command to install the `rhui-azure-rhel7-base-sap-ha` package:
 
    ```bash
    sudo yum --config='https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhel7-base-sap-ha.config' install rhui-azure-rhel7-base-sap-ha'
    ```
 
-2. Verify that the corresponding repositories are available and show no errors by running the `yum repolist` command:
+3. Verify that the corresponding repositories are available and show no errors by running the `yum repolist` command:
 
    ```bash
    sudo yum repolist all
@@ -461,24 +491,29 @@ The following steps apply if the OS version is *earlier than the latest version 
 
 #### [RHEL 8._x_ - RHEL-HA (E4S)](#tab/rhel8-rhel-ha-e4s)
 
-1. Install the `rhui-azure-rhel8-ha` package by running the [dnf](https://dnf.readthedocs.io/en/latest/command_ref.html) installation command:
+1. Remove the releasever file if exist.
+
+   ```bash
+   sudo rm /etc/dnf/vars/releasever
+   ```
+
+2. Install the `rhui-azure-rhel8-ha` package by running the [dnf](https://dnf.readthedocs.io/en/latest/command_ref.html) installation command:
 
    ```bash
    sudo dnf --config='https://rhelimage.blob.core.windows.net/repositories/rhui-microsoft-azure-rhel8-ha.config' install rhui-azure-rhel8-ha
    ```
 
-2. Lock the `releasever` variable:
+3. Lock the `releasever` variable:
 
    ```bash
    sudo echo $(. /etc/os-release && echo $VERSION_ID) > /etc/dnf/vars/releasever
    ```
 
-3. Verify that the corresponding repositories are available and show no errors by running the `dnf repolist` command:
+4. Verify that the corresponding repositories are available and show no errors by running the `dnf repolist` command:
 
    ```bash
    sudo dnf repolist all
    ```
-
 
 ---
 
