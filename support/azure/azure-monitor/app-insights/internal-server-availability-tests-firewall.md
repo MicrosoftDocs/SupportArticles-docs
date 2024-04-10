@@ -5,7 +5,6 @@ ms.date: 08/15/2022
 editor: v-jsitser
 ms.reviewer: aaronmax, v-leedennis
 ms.service: azure-monitor
-ms.subservice: application-insights
 #Customer intent: As an Azure Application Insights user, I want to understand how to use Application Insights availability tests on an internal server that runs behind a firewall so that I can effectively monitor Azure applications while my firewall is enabled.  
 ms.custom: sap:Availability Tests
 ---

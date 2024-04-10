@@ -4,7 +4,6 @@ description: Learn how to troubleshoot OpenTelemetry issues in .NET. View known 
 ms.date: 04/10/2024
 editor: v-jsitser
 ms.service: azure-monitor
-ms.subservice: application-insights
 ms.devlang: csharp
 ms.reviewer: mmcc, lechen, aaronmax, v-leedennis
 ms.custom: sap:Missing or Incorrect data after enabling Application Insights in Azure Portal

@@ -6,7 +6,6 @@ author: genlin
 ms.author: genli
 ms.reviewer: irfanr
 ms.service: azure-monitor
-ms.subservice: logs-troubleshoot
 ms.custom: sap:azure-monitor, linux-related-content
 ---
 # Linux performance counters are missing in Log Analytics workspace

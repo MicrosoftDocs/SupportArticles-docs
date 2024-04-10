@@ -6,7 +6,6 @@ ms.date: 03/08/2024
 editor: v-jsitser
 ms.reviewer: aaronmax, v-leedennis
 ms.service: azure-monitor
-ms.subservice: application-insights
 #Customer intent: As an Application Insights user I want to understand known issues for the Application Insights Agent and how to troubleshoot common issues so I can use Application Insights and the Agent effectively.
 ms.custom: sap:Manual Instrumentation using SDK, Open Telemetry or by installing Agent
 ---

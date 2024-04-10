@@ -6,7 +6,6 @@ ms.date: 04/28/2023
 editor: v-jsitser
 ms.reviewer: aaronmax, jeanbisutti, trstalna, toddfous, heya, v-leedennis
 ms.service: azure-monitor
-ms.subservice: application-insights
 ms.devlang: java
 ms.custom: sap:Missing or Incorrect data after enabling Application Insights in Azure Portal, devx-track-java
 #Customer intent: As an Application Insights for Java user, I want to understand how to troubleshoot common issues so I can use it effectively.

@@ -6,7 +6,6 @@ author: toddfoust
 ms.author: toddfous
 editor: v-jsitser
 ms.service: azure-monitor
-ms.subservice: application-insights
 ms.reviewer: vitalyg, v-leedennis
 #Customer intent: As an Azure user, I want to learn how to resolve connectivity errors in the Application Insights portal so that I can use Application Insights successfully.
 ms.custom: sap:Availability Tests

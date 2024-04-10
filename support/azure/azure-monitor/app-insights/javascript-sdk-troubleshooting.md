@@ -4,7 +4,6 @@ description: Learn how to troubleshoot SDK load failure for JavaScript web appli
 ms.date: 08/31/2023
 editor: v-jsitser
 ms.service: azure-monitor
-ms.subservice: application-insights
 ms.devlang: javascript
 ms.custom: sap:Missing or Incorrect data after enabling Application Insights in Azure Portal, devx-track-js
 ms.reviewer: mmcc, toddfous, aaronmax, v-leedennis

@@ -4,7 +4,6 @@ description: Learn how to troubleshoot OpenTelemetry issues in Python. View know
 ms.date: 05/22/2023
 editor: v-jsitser
 ms.service: azure-monitor
-ms.subservice: application-insights
 ms.devlang: python
 ms.reviewer: mmcc, lechen, aaronmax, v-leedennis
 ms.custom: sap:Missing or Incorrect data after enabling Application Insights in Azure Portal

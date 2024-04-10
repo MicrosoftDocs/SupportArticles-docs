@@ -5,7 +5,6 @@ ms.date: 01/31/2022
 ms.reviewer: irfanr, v-leedennis
 editor: v-jsitser
 ms.service: azure-monitor
-ms.subservice: logs-troubleshoot
 keywords:
 #Customer intent: As an Azure Monitor user, I want to troubleshoot why the proxy settings for my Microsoft Monitoring Agent have disappeared so that I can connect to my Azure Log Analytics workspace to interact with System Center Operations Manager data.
 ms.custom: sap:azure-monitor

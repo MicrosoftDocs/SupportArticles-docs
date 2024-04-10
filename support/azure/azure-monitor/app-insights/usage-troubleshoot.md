@@ -5,7 +5,6 @@ ms.date: 06/22/2022
 editor: v-jsitser
 ms.reviewer: aaronmax, v-leedennis
 ms.service: azure-monitor
-ms.subservice: application-insights
 #Customer intent: As an Azure Application Insights user, I want to understand how to use the user behavior analytics tools in Application Insights and how to troubleshoot problems I might encounter so I can use it effectively.  
 ms.custom: sap:Availability Tests
 ---

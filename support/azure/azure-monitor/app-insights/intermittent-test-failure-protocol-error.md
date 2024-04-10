@@ -5,7 +5,6 @@ ms.date: 09/12/2022
 editor: v-jsitser
 ms.reviewer: aaronmax, v-leedennis
 ms.service: azure-monitor
-ms.subservice: application-insights
 #Customer intent: As an Azure Application Insights user, I want to understand how to resolve an intermittent test failure and protocol violation error in Application Insights availability monitoring so I can effectively monitor Azure applications.  
 ms.custom: sap:Availability Tests
 ---

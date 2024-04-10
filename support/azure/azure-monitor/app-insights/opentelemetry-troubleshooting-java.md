@@ -4,7 +4,6 @@ description: Learn how to troubleshoot OpenTelemetry issues in Java. Test connec
 ms.date: 04/22/2023
 editor: v-jsitser
 ms.service: azure-monitor
-ms.subservice: application-insights
 ms.devlang: java
 ms.reviewer: mmcc, lechen, aaronmax, v-leedennis
 ms.custom: sap:Missing or Incorrect data after enabling Application Insights in Azure Portal

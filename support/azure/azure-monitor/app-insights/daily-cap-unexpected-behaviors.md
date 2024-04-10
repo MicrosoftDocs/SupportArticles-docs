@@ -5,7 +5,6 @@ ms.date: 05/18/2023
 editor: v-jsitser
 ms.reviewer: toddfous, v-leedennis
 ms.service: azure-monitor
-ms.subservice: application-insights
 ms.custom: sap:Availability Tests
 ---
 # Daily cap unexpected behaviors in Application Insights

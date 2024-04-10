@@ -7,7 +7,6 @@ ms.author: arboisse
 ms.reviewer: arboisse
 editor: v-jsitser
 ms.service: azure-monitor
-ms.subservice: logs-troubleshoot
 ms.custom: sap:azure-monitor
 ---
 

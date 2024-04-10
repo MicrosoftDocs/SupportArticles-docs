@@ -4,7 +4,6 @@ description: Troubleshoot missing CPU Total and Committed Memory metrics when yo
 ms.date: 02/20/2024
 ms.reviewer: vitalyg, toddfous, v-leedennis
 ms.service: azure-monitor
-ms.subservice: application-insights
 #Customer intent: As an Application Insights user, I want to troubleshoot missing "CPU Total" and "Committed Memory" metrics so that I can view their respective live metric charts.
 ms.custom: sap:Availability Tests
 ---

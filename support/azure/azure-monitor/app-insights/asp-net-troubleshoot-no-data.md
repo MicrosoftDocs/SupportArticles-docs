@@ -5,7 +5,6 @@ ms.date: 03/10/2023
 editor: v-jsitser
 ms.reviewer: aaronmax, v-leedennis
 ms.service: azure-monitor
-ms.subservice: application-insights
 ms.devlang: csharp
 ms.custom: sap:Missing or Incorrect data after enabling Application Insights in Azure Portal, devx-track-csharp
 #Customer intent: As an Application Insights user, I want to know how to troubleshoot issues when I can't see data in Application Insights for .NET or .NET Core so that I can use it effectively.
