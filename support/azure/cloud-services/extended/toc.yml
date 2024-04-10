@@ -33,7 +33,7 @@
   - name: Install .NET Core with Azure Batch start task
     href: deploy/install-dotnet-core-linux.md
   - name: Support for Linux and open-source technology in Azure
-    href: ../../virtual-machines/linux/support-linux-open-source-technology.md
+    href: ../../virtual-machines/linux/support-linux-open-source-technology.md?context=/troubleshoot/azure/cloud-services/extended/context/context
   - name: Configure instance-level public IP addresses (PIPs)
     href: ../classic/instance-level-public-ip-address-configuration.md
   - name: Disk partition preservation
