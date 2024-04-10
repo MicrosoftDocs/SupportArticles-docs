@@ -3764,6 +3764,31 @@
         "source_path": "virtual-machine-scale-sets/vm-extension-provisioning-errors.md",
         "redirect_url": "/troubleshoot/azure/virtual-machine-scale-sets/extensions/vm-extension-provisioning-errors",
         "redirect_document_id": true
+      },
+      {
+        "source_path": "cosmos-db/tools-connectors/index.md",
+        "redirect_url": "/troubleshoot/azure/cosmos-db/index",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "cosmos-db/account-admin/index.md",
+        "redirect_url": "/troubleshoot/azure/cosmos-db/index",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "cosmos-db/data-explorer.md",
+        "redirect_url": "/troubleshoot/azure/cosmos-db/account-admin/data-explorer",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "cosmos-db/private-endpoints.md",
+        "redirect_url": "/troubleshoot/azure/cosmos-db/account-admin/private-endpoints",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "cosmos-db/emulator.md",
+        "redirect_url": "/troubleshoot/azure/cosmos-db/tools-connectors/emulator",
+        "redirect_document_id": true
       }
   ]
 }

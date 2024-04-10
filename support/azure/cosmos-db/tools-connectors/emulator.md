@@ -8,6 +8,7 @@ ms.reviewer: ouryba, v-jayaramanp
 ms.service: cosmos-db
 ms.topic: troubleshooting
 ms.date: 01/18/2024
+ms.custom: sap:Tools and Connectors
 ---
 
 # Troubleshoot the Azure Cosmos DB emulator

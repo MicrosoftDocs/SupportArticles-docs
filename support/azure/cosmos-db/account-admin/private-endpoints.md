@@ -7,7 +7,7 @@ ms.author: sidandrews
 ms.reviewer: ouryba, v-jayaramanp
 ms.service: cosmos-db
 ms.date: 01/18/2024
-ms.custom: devx-track-arm-template
+ms.custom: sap:Account Administration, devx-track-arm-template
 ---
 
 # Deployment of private endpoints for Azure Cosmos DB fails

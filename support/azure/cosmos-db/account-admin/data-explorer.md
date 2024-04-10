@@ -6,6 +6,7 @@ ms.author: sidandrews
 ms.reviewer: ouryba, v-sidong
 ms.service: cosmos-db
 ms.date: 02/14/2024
+ms.custom: sap:Account Administration
 ---
 
 # Azure Cosmos DB Data Explorer fails to connect
