@@ -6,6 +6,7 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - sap:Issues with product features
   - Outlook for Windows
   - Outlook for iOS and Android
   - CSSTroubleshoot
