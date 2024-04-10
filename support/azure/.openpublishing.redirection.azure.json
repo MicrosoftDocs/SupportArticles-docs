@@ -3721,16 +3721,6 @@
         "redirect_document_id": false
       },
       {
-        "source_path": "azure-monitor/app-insights/index.md",
-        "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor",
-        "redirect_document_id": false
-      },
-      {
-        "source_path": "azure-monitor/log-analytics/index.md",
-        "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor",
-        "redirect_document_id": false
-      },
-      {
         "source_path": "azure-monitor/log-analytics/linux-agents/index.md",
         "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor",
         "redirect_document_id": false
