@@ -8,16 +8,15 @@ manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.service: virtual-machine-scale-sets
-ms.subservice: troubleshoot-scaling-errors
 ---
 
 # QuotaExceeded error when scaling virtual machine scale sets
 
-This article provides guidance on resolving “QuotaExceeded” errors during the deployment, migration, or scaling of Azure Virtual Machine Scale Sets.
+This article provides guidance on resolving "QuotaExceeded" errors during the deployment, migration, or scaling of Azure Virtual Machine Scale Sets.
 
 ## Symptom
 
-You receive a “QuotaExceeded” error when a virtual machine scale set is deployed, scaled, migrated between subscriptions, or migrated from the classic deployment model to the Azure Resource Manager (ARM) deployment model.
+You receive a "QuotaExceeded" error when a virtual machine scale set is deployed, scaled, migrated between subscriptions, or migrated from the classic deployment model to the Azure Resource Manager (ARM) deployment model.
 For example, you might see an error such as the following example:
 
 ```output
@@ -38,4 +37,4 @@ The Azure resources that are available to each virtual machine scale set, such a
 
 Consult the following article for steps to confirm that quota limitations are causing the error message, and for information about opening a support request to increase your quota: [Resolve errors for resource quotas](/azure/azure-resource-manager/templates/error-resource-quota)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

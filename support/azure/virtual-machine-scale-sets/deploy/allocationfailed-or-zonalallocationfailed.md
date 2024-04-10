@@ -163,4 +163,4 @@ If an allocation request is pinned to a cluster, there's a higher chance of fail
 
 :::image type="content" source="media/allocationfailed-or-zonalallocationfailed/pinned-cluster-allocation-failure-no-free-resource-or-unsupported-size.png" alt-text="Diagrams of allocation failures are pinned clusters. Diagram 3 shows no free resources are available. Diagram 4 shows the size isn't supported.":::
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
