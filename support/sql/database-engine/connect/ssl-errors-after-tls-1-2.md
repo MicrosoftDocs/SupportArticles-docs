@@ -1,7 +1,7 @@
 ---
 title: SSL errors after upgrading to TLS 1.2 in SQL Server
 description: This article provides information about the SSL errors that you might encounter after you upgrade to TLS 1.2 in SQL Server.
-ms.date: 03/22/2024
+ms.date: 04/10/2024
 ms.custom: sap:Connection issues
 author: Malcolm-Stewart
 ms.author: mastewa
@@ -18,7 +18,7 @@ Consider the following scenario where you might see the following issues after y
 
 - Microsoft SQL Server uses a certificate that's signed by a weak hash algorithm. Such certificates include MD5, SHA224, and SHA512.
 
-- TLS 1.2 upgrades were applied to only the client or the server but not both.
+- TLS 1.2 upgrades were applied only to the client or the server but not both.
 
 - TLS 1.0 is disabled.
 
