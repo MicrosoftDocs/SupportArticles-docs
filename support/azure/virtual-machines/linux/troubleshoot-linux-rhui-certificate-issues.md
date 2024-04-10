@@ -175,7 +175,7 @@ All the following commands should be run by using root privileges or by specifyi
 2. Lock the `releasever` variable:
 
    ```bash
-   sudo echo $(. /etc/os-release && echo $VERSION_ID) > /etc/yum/vars/releasever
+   sudo echo $(. /etc/os-release && echo $VERSION_ID) > /etc/dnf/vars/releasever
    ```
 
 3. Verify that the corresponding repositories are available and show no errors by running the `dnf repolist` command:
@@ -204,7 +204,7 @@ All the following commands should be run by using root privileges or by specifyi
    If there are permission issues to access the `releasever`, you can edit the file using a text editor, add the image version details, and save the file.  
 
    > [!NOTE]
-   > This command locks the RHEL minor release to the current minor release. If you want to upgrade and lock to a later minor release that is not the latest, enter a specific minor release. For example, `echo 9.2 > /etc/yum/vars/releasever` locks your RHEL version to RHEL 9.2.
+   > This command locks the RHEL minor release to the current minor release. If you want to upgrade and lock to a later minor release that is not the latest, enter a specific minor release. For example, `echo 9.2 > /etc/dnf/vars/releasever` locks your RHEL version to RHEL 9.2.
 
 3. Verify that the corresponding repositories are available and show no errors by running the `dnf repolist` command:
 
@@ -334,7 +334,7 @@ The following steps apply if the OS version is *RHEL 7.9* and the VM was created
 1. Remove the releasever file if exist.
 
    ```bash
-   sudo rm /etc/dnf/vars/releasever
+   sudo rm /etc/yum/vars/releasever
    ```
 
 2. Run the `yum install` command to install the `rhui-azure-rhel7-base-sap-apps` package:
@@ -413,7 +413,7 @@ The following steps apply if the OS version is *RHEL 7.9* and the VM was created
 1. Remove the releasever file if exist.
 
    ```bash
-   sudo rm /etc/dnf/vars/releasever
+   sudo rm /etc/yum/vars/releasever
    ```
 
 2. Run the `yum install` command to install the `rhui-azure-rhel7-base-sap-ha` package:
@@ -456,7 +456,7 @@ The following steps apply if the OS version is *earlier than the latest version 
 2. Lock the `releasever` variable:
 
    ```bash
-   sudo echo $(. /etc/os-release && echo $VERSION_ID) > /etc/yum/vars/releasever
+   sudo echo $(. /etc/os-release && echo $VERSION_ID) > /etc/dnf/vars/releasever
    ```
 
 3. Verify that the corresponding repositories are available and show no errors by running the `dnf repolist` command:
