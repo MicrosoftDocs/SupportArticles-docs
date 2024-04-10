@@ -3,7 +3,7 @@
 
 - name: Microsoft Entra ID
   items:
-  - name: Microsoft Entra ID
+  - name: Microsoft Entra ID troubleshooting documentation
     href: ../entra-id/welcome-entra-id.yml
 - name: Global Secure Access
   items:
