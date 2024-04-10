@@ -1,8 +1,8 @@
 ---
 title: Error 2912 adding a cluster to SCVMM 
 description: Fixes an issue in which you can't add a cluster to System Center Virtual Machine Manager and receive error 2912 (unknown error (0x800007d0)).
-ms.date: 04/26/2020
-ms.reviewer: markstan
+ms.date: 04/09/2024
+ms.reviewer: wenca, markstan
 ---
 # Adding a cluster to SCVMM fails with error 2912 (unknown error (0x800007d0))
 
