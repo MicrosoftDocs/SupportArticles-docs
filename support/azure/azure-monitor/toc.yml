@@ -42,13 +42,13 @@ items:
           - name: Failed to get Request-Context correlation
             href: app-insights/telemetry/webpages-not-get-request-context-header.md
           - name: How to update third-party server configuration
-            href: app-insights/how-to-update-third-party-server-configuration.md
+            href: app-insights/data/how-to-update-third-party-server-configuration.md
           - name: Troubleshoot missing telemetry in Application Insights
             href: app-insights/investigate-missing-telemetry.md
           - name: Troubleshoot auto-instrumentation issues
             href: app-insights/auto-instrumentation-troubleshoot.md
           - name: Node.js
-            href: app-insights/telemetry/troubleshoot-app-insights-nodejs.md
+            href: app-insights/data/troubleshoot-app-insights-nodejs.md
   - name: Application Insights features
     items:
     - name: Troubleshoot Azure Application Insights availability monitoring
@@ -71,8 +71,6 @@ items:
         href: app-insights/availability/profiler-troubleshooting.md
       - name: Troubleshoot Code Optimizations (Preview)
         href: app-insights/availability/code-optimizations-troubleshooting.md
-      - name: Troubleshoot Azure Application Insights availability monitoring
-        href: app-insights/availability/troubleshoot-availability.md
       - name: Troubleshoot user behavior analytics tools in Azure Application Insights
         href: app-insights/availability/usage-troubleshoot.md
   - name: Status Monitor and Change Analysis

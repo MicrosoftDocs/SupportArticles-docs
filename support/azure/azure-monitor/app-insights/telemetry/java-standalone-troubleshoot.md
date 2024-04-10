@@ -30,7 +30,7 @@ should log any errors that would prevent it from logging to its usual location i
 
 ## Troubleshoot connectivity issues
 
-Application Insights SDKs and agents send telemetry to be ingested as REST calls at our ingestion endpoints. To test connectivity from your web server or application host computer to the ingestion service endpoints, use raw REST clients from PowerShell or run [curl commands](https://curl.se/). See [Troubleshoot missing application telemetry in Azure Monitor Application Insights](investigate-missing-telemetry.md).
+Application Insights SDKs and agents send telemetry to be ingested as REST calls at our ingestion endpoints. To test connectivity from your web server or application host computer to the ingestion service endpoints, use raw REST clients from PowerShell or run [curl commands](https://curl.se/). See [Troubleshoot missing application telemetry in Azure Monitor Application Insights](../investigate-missing-telemetry.md).
 
 If the Application Insights Java agent causes the connectivity issue, consider the following options:
 

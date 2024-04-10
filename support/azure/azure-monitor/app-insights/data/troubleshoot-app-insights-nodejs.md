@@ -17,7 +17,7 @@ This article discusses troubleshooting steps to fix general problems that are re
 
 ### Troubleshooting step 1: Test connectivity between your application host and the ingestion service
 
-Application Insights SDKs and agents send telemetry to be ingested as REST calls to our ingestion endpoints. To test connectivity from your web server or application host computer to the ingestion service endpoints, use raw REST clients from PowerShell or run [curl](https://curl.se) commands. For more information, see [Troubleshoot missing application telemetry in Azure Monitor Application Insights](./investigate-missing-telemetry.md).
+Application Insights SDKs and agents send telemetry to be ingested as REST calls to our ingestion endpoints. To test connectivity from your web server or application host computer to the ingestion service endpoints, use raw REST clients from PowerShell or run [curl](https://curl.se) commands. For more information, see [Troubleshoot missing application telemetry in Azure Monitor Application Insights](../investigate-missing-telemetry.md).
 
 ### Troubleshooting step 2: Set up self-diagnostics
 
