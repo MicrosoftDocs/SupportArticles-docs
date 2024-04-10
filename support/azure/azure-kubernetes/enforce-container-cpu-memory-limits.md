@@ -1,7 +1,7 @@
 ---
 title: AKS container CPU and memory limits aren't enforced
 description: Provide a solution to an issue where CPU and memory limits aren't enforced for AKS containers.
-ms.date: 04/09/2024
+ms.date: 04/10/2024
 ms.reviewer: momajed, cssakscic
 ms.service: azure-kubernetes-service
 ms.custom: sap:Extensions, Policies and Add-Ons
@@ -12,9 +12,9 @@ This article provides a solution to an issue where CPU and memory limits aren't 
 
 ## Symptoms
 
-You see the the following error:
+When you deploy an application to an AKS cluster, you receive an error like the following sample:
 
-> "validation.gatekeeper.sh" denied the request: [denied by container-must-have-limits] resources for the \<name> container
+> "validation.gatekeeper.sh" denied the request: [container-must-have-limits] container <name> has no resource/memory limit
 
 ## Cause
 
