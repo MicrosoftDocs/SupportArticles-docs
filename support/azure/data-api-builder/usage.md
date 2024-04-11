@@ -7,9 +7,9 @@ ms.date: 04/10/2024
 ---
 # Troubleshoot the usage of Data API builder for Azure databases
 
-This article provides solutions to common issues that might occur when you use Data API builder for Azure databases.
+This article provides solutions to common errors that might occur when you use Data API builder for Azure databases.
 
-## Generic endpoints: HTTP 400 "Bad Request" error
+## Generic endpoint: HTTP 400 "Bad Request" error
 
 The following sections describe causes and solutions of the HTTP 400 "Bad Request" error.
 
@@ -66,9 +66,9 @@ To resolve this issue, follow these steps:
 
 If you still encounter the error, ensure that you select **"Allow Azure services and resources to access this server"** for the **Exceptions** in the networking page of your Azure Database resource. This option configures the firewall to allow connections from IP addresses allocated to any Azure service or asset, including connections from the subscriptions of other customers.
 
- :::image type="content" source="media/usage/allow-azure-resources-to-access-server.png" alt-text="Screenshot that shows the 'Allow Azure services and resources to access this server' checkbox.":::
+ :::image type="content" source="media/usage/allow-azure-resources-to-access-server.png" alt-text="Screenshot that shows the 'Allow Azure services and resources to access this server' checkbox." lightbox="media/usage/allow-azure-resources-to-access-server.png":::
 
-## REST endpoints: HTTP 404 "Not Found" error
+## REST endpoint: HTTP 404 "Not Found" error
 
 If the requested URL points to a route that's not associated with any entity, an HTTP 404 error is returned. By default, the name of the entity is also the route name. For example, if you configured the sample `Todo` entity in the configuration file like the following sample:
 
@@ -103,17 +103,17 @@ Then the URL route for the `Todo` entity is `todo` with all lower case character
 /<rest-route>/todo
 ```
 
-## GraphQL endpoints: HTTP 400 "Bad Request" error
+## GraphQL endpoint: HTTP 400 "Bad Request" error
 
 GraphQL requests result in an HTTP 400 "Bad Request" error every time the GraphQL request is improperly constructed. It could be due to a nonexisting entity field or the misspelled entity name. Data API builder returns a descriptive error and error details in the response payload.
 
 When you send a `GET` request to the GraphQL endpoint, the response body of the returned error states *"Either the parameter query or the parameter ID has to be set."*. Make sure you're sending your GraphQL requests using HTTP `POST`.
 
-## GraphQL endpoints: HTTP 404 "Not Found" error
+## GraphQL endpoint: HTTP 404 "Not Found" error
 
 Make sure the GraphQL request is sent to the configured GraphQL endpoint by using the HTTP `POST` method. By default, the GraphQL endpoint route is `/graphql`.
 
-## GraphQL endpoints: "The object type Query has to at least define one field in order to be valid" error
+## GraphQL endpoint: "The object type Query has to at least define one field in order to be valid" error
 
 When Data API builder startup fails to generate a GraphQL schema based on your runtime configuration, you receive the error message:
 
@@ -126,7 +126,7 @@ The GraphQL specification requires at least one `Query` object be defined in a G
   
     You must have at least one stored procedure, which only reads and doesn't modify data. Otherwise, GraphQL schema generation fails due to an empty `query` field in the schema.
 
-## GraphQL endpoints: Introspection doesn't work with GraphQL endpoint
+## GraphQL endpoint: Introspection doesn't work with GraphQL endpoint
 
 Tooling that supports GraphQL normally utilizes GraphQL schema introspection without extra setup. Make sure you set the runtime configuration property `allow-introspection` to `true` in the `runtime.graphql` configuration section. For example:
 
@@ -142,11 +142,11 @@ Tooling that supports GraphQL normally utilizes GraphQL schema introspection wit
 }
 ```
 
-## GraphQL endpoints: "The mutation operation \<operation_name> was successful but the current user is unauthorized to view the response due to lack of read permissions" error
+## GraphQL endpoint: "The mutation operation \<operation_name> was successful but the current user is unauthorized to view the response due to lack of read permissions" error
 
 For a graphQL mutation operation to receive a valid response, read permission should be configured in addition to the respective mutation operation type -  create/update/delete. As the error suggests, the mutation operation(create/update/delete) was successful at the database layer but the lack of read permission caused Data API builder to return an error message. So, make sure to configure read permission either in the Anonymous role or the role with which you would like to execute the mutation operation.
 
-## General errors: HTTP 500 error returned by requests
+## General error: HTTP 500 error returned by requests
 
 HTTP 500 errors indicate that Data API builder can't properly operate on the backend database. Make sure the following:
 
@@ -211,16 +211,17 @@ If you send an authenticated request using Static Web Apps integration or Micros
 
 This error occurs in the following circumstances: 
 
-1. You don't supply an `X-MS-API-ROLE` HTTP header specifying a role name.
+- You don't supply an `X-MS-API-ROLE` HTTP header specifying a role name.
 
-    Because by default, **authenticated** requests execute in the context of the system role `authenticated`, this scenario only applies when you use a nonsystem role (not `authenticated` nor `anonymous`).
-1. The role you define in the `X-MS-API-ROLE` isn't configured in Data API builder's runtime configuration file.
-1. The role you define in the `X-MS-API-ROLE` header doesn't match a role in your access token.
+    Because **authenticated** requests execute in the context of the system role `authenticated` by default, this scenario only applies when you use a nonsystem role (not `authenticated` nor `anonymous`).
+- The role you define in the `X-MS-API-ROLE` header isn't configured in Data API builder's runtime configuration file.
+- The role you define in the `X-MS-API-ROLE` header doesn't match a role in your access token.
 
 For example, in the following runtime configuration file, the role `role1` is defined, so you must supply a `X-MS-API-ROLE` HTTP header with the value `role1`.
 
-> [!CAUTION]
-> Roles name matching is case-sensitive
+> [!NOTE]
+> Roles name matching is case-sensitive.
+
 ```json
 "Todo": {
     "role": "role1",
