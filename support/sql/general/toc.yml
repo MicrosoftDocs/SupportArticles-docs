@@ -1,6 +1,4 @@
 items:
-- name: Answers questions about the MSDT
-  href: answers-questions-msdt.md
 - name: Connectivity Diagnostics Collector
   href: connectivity-diagnostics-collector.md
 - name: Detours or similar techniques cause issues
