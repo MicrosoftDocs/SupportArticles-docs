@@ -4663,7 +4663,7 @@
     {
       "source_path": "support/sql/general/answers-questions-msdt.md",
       "redirect_url": "/troubleshoot/windows-client/windows-tss/introduction-to-troubleshootingscript-toolset-tss",
-      "redirect_document_id": true
+      "redirect_document_id": false
     }
   ]
 }
