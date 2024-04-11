@@ -4909,6 +4909,11 @@
         "source_path": "entra/entra-id/index.md",
         "redirect_url": "/troubleshoot/azure/entra/entra-id/welcome-entra-id",
         "redirect_document_id": false
+      },
+      {
+        "source_path": "entra/global-secure-access/index.md",
+        "redirect_url": "/troubleshoot/azure/entra/global-secure-access/welcome-global-secure-access",
+        "redirect_document_id": true
       }
   ]
 }
