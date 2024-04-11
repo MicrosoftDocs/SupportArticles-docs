@@ -29,7 +29,7 @@
 - name: Troubleshooting deployment failures in Cloud Services (classic)
   items:
   - name: Configure instance-level public IP addresses (PIPs)
-    href: instance-level-public-ip-address-configuration.md
+    href: deploy/instance-level-public-ip-address-configuration.md
   - name: InvalidModel exception
     href: deploy/troubleshoot-mismatched-config.md
   - name: Role recycle threshold exceptions
@@ -37,6 +37,6 @@
   - name: SubscriptionPolicyCountExceeded exception
     href: deploy/troubleshoot-subscription-policy.md
   - name: Update failed during migration from classic to extended support
-    href: failed-update-ongoing-migration-process.md
+    href: deploy/failed-update-ongoing-migration-process.md
   - name: Virtual IP address (VIP) swap failures
     href: deploy/troubleshoot-vip-swap.md

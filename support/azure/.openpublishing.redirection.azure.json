@@ -3836,6 +3836,16 @@
         "redirect_document_id": true
       },
       {
+        "source_path": "cloud-services/classic/failed-update-ongoing-migration-process.md",
+        "redirect_url": "/troubleshoot/azure/cloud-services/classic/deploy/failed-update-ongoing-migration-process",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "cloud-services/classic/instance-level-public-ip-address-configuration.md",
+        "redirect_url": "/troubleshoot/azure/cloud-services/classic/deploy/instance-level-public-ip-address-configuration",
+        "redirect_document_id": true
+      },
+      {
         "source_path": "cloud-services/classic/deploy/index.md",
         "redirect_url": "/troubleshoot/azure/cloud-services/classic/welcome-cloud-services-classic",
         "redirect_document_id": false
@@ -3857,6 +3867,11 @@
       },
       {
         "source_path": "cloud-services/extended/connectivity/index.md",
+        "redirect_url": "/troubleshoot/azure/cloud-services/extended/welcome-cloud-services-extended",
+        "redirect_document_id": false
+      },
+      {
+        "source_path": "cloud-services/extended/deploy/index.md",
         "redirect_url": "/troubleshoot/azure/cloud-services/extended/welcome-cloud-services-extended",
         "redirect_document_id": false
       },

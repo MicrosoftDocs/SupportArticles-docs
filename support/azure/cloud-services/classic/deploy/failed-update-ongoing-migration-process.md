@@ -5,7 +5,7 @@ ms.date: 09/26/2022
 editor: v-jsitser
 ms.reviewer: v-maallu, piw, prpillai, v-leedennis
 ms.service: cloud-services
-ms.subservice: troubleshoot-deployment-classic
+ms.custom: sap:Deployment
 #Customer intent: As a cloud service user, I want to resolve a cloud service update failure that occurs when I migrate from Azure Cloud Services (classic) to Azure Cloud Services (extended support) so that I can avoid or reduce downtime.
 ---
 
@@ -134,4 +134,4 @@ For more information, see [Migrate to Azure Cloud Services (extended support) us
 
 After you commit the migration, your classic cloud service is migrated to the corresponding extended-support cloud service. The classic cloud service is then deleted, and you can update the migrated, extended-support cloud service successfully.
 
-[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../../includes/azure-help-support.md)]
