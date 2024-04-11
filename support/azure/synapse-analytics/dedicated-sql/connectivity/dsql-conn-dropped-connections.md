@@ -5,6 +5,7 @@ ms.date: 02/21/2023
 author: scott-epperly
 ms.author: goventur
 ms.reviewer: scepperl
+ms.service: synapse-analytics
 ms.custom: sap:Connectivity:Troubleshoot Availability and Connection Errors
 ---
 
