@@ -5,6 +5,7 @@ ms.date: 12/23/2022
 author: scott-epperly
 ms.author: scepperl
 ms.reviewer: scepperl
+ms.custom: sap:Query Execution and Performance
 ---
 
 # Troubleshoot tempdb errors on a dedicated SQL pool

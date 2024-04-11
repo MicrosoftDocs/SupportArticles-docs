@@ -3,6 +3,7 @@ title: Troubleshoot issues with CETAS on Azure Synapse serverless SQL pools
 description: FAQs about CREATE EXTERNAL TABLE AS SELECT (CETAS) on Azure Synapse serverless SQL pools.
 ms.date: 02/21/2023
 ms.reviewer: scepperl, goventur, v-sidong
+ms.custom: sap:Query Execution and Performance
 ---
 
 # Troubleshoot issues with CREATE EXTERNAL TABLE AS SELECT (CETAS) on Azure Synapse serverless SQL pools

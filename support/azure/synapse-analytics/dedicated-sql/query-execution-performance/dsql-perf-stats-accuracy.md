@@ -3,6 +3,7 @@ title: Check statistics accuracy on a dedicated SQL pool
 description: Provides methods of assessing statistics accuracy on a dedicated SQL pool.
 ms.date: 12/16/2022
 ms.reviewer: scepperl, v-sidong
+ms.custom: sap:Query Execution and Performance
 ---
 
 # Check statistics accuracy on a dedicated SQL pool
@@ -61,7 +62,7 @@ LEFT JOIN (
         AND rg.distribution_id = nt.distribution_id
     INNER JOIN sys.indexes ind on tb.object_id = ind.object_id
     WHERE rg.index_id < 2 -- In case this condition removed the number of rows will gets duplicated based on the number of index.
-	AND ind.type_desc IN ('CLUSTERED COLUMNSTORE', 'HEAP') -- Switch between the CCI (Column store) and HEAP, You should at least keep one value or else the total number of rows will gets duplicated based on the number of indexes.
+    AND ind.type_desc IN ('CLUSTERED COLUMNSTORE', 'HEAP') -- Switch between the CCI (Column store) and HEAP, You should at least keep one value or else the total number of rows will gets duplicated based on the number of indexes.
     GROUP BY sm.name
         ,tb.name
         ,tb.object_id

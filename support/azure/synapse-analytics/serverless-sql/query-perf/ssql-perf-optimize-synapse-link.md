@@ -3,6 +3,7 @@ title: Troubleshoot Azure Synapse Link for serverless SQL pool
 description: Provides solutions for common issues experienced on Azure Synapse Link for Azure Synapse Analytics serverless SQL pool.
 ms.date: 02/21/2023
 ms.reviewer: scepperl, v-sidong, goventur
+ms.custom: sap:Query Execution and Performance
 ---
 
 # Troubleshoot Azure Synapse Link for Azure Synapse Analytics serverless SQL pool

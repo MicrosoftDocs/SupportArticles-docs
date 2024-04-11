@@ -5,6 +5,7 @@ ms.date: 02/21/2023
 author: scott-epperly
 ms.author: goventur
 ms.reviewer: scepperl
+ms.custom: sap:Connectivity:Troubleshoot Availability and Connection Errors
 ---
 
 # Troubleshoot connectivity issues on a dedicated SQL pool

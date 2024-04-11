@@ -5,6 +5,7 @@ ms.date: 07/04/2023
 author: scott-epperly
 ms.author: scepperl
 ms.reviewer: goventur
+ms.custom: sap:Query Execution and Performance
 ---
 
 # Troubleshoot common query errors

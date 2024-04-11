@@ -5,6 +5,7 @@ ms.date: 02/21/2023
 author: scott-epperly
 ms.author: goventur
 ms.reviewer: scepperl
+ms.custom: sap:Job Execution and Performance
 ---
 
 # Resolve Azure Synapse Analytics Apache Spark pool storage access issues

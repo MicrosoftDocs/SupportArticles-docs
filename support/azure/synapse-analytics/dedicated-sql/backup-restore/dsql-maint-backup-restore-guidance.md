@@ -3,6 +3,7 @@ title: Backup, restore, and recovery guidance for Azure Synapse dedicated SQL po
 description: FAQs and solutions to common issues on Azure Synapse dedicated SQL pools.
 ms.date: 02/21/2023
 ms.reviewer: scepperl, dialmoth, v-sidong
+ms.custom: sap:Maintenance Schedules, Backup and Restore
 ---
 
 # Backup, restore, and recovery guidance for Azure Synapse dedicated SQL pools
