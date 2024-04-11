@@ -22,6 +22,10 @@
 
 - name: Getting started with Site Recovery
   items:
+  - name: A protected VM in a resync state
+    href: getting-started/protected-vm-resync-state.md
+  - name: Can't create a protection group
+    href: getting-started/creating-protection-group-fails.md
   - name: Recommended antivirus exclusions
     href: getting-started/asr-recommended-antivirus-exclusions.md
   - name: Can't install or register Azure Site Recovery Provider
@@ -46,8 +50,4 @@
   - name: September 2019 update v2.0.9169.0
     href: getting-started/ars-agent-update-september-2019.md
 
-- name: A protected VM in a resync state
-  href: protected-vm-resync-state.md
-- name: Can't create a protection group
-  href: creating-protection-group-fails.md
 

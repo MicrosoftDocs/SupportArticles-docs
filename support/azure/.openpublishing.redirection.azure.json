@@ -3796,6 +3796,16 @@
         "redirect_document_id": true
       },
       {
+        "source_path": "site-recovery/creating-protection-group-fails.md",
+        "redirect_url": "/troubleshoot/azure/site-recovery/getting-started/creating-protection-group-fails",
+        "redirect_document_id": true
+      },
+      {
+        "source_path": "site-recovery/protected-vm-resync-state.md",
+        "redirect_url": "/troubleshoot/azure/site-recovery/getting-started/protected-vm-resync-state",
+        "redirect_document_id": true
+      },
+      {
         "source_path": "site-recovery/getting-started/index.md",
         "redirect_url": "/troubleshoot/azure/site-recovery/welcome-site-recovery",
         "redirect_document_id": false
