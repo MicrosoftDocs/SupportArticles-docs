@@ -4412,32 +4412,32 @@
       },
       {
         "source_path": "synapse-analytics/dedicated-sql/dsql-maint-backup-restore-guidance.md",
-        "redirect_url": "/troubleshoot/azure/synapse-analytics/backup-restore/backup-restore/dsql-maint-backup-restore-guidance",
+        "redirect_url": "/troubleshoot/azure/synapse-analytics/dedicated-sql/backup-restore/dsql-maint-backup-restore-guidance",
         "redirect_document_id": true
       },
       {
         "source_path": "synapse-analytics/dedicated-sql/troubleshoot-dsql-perf-slow-query.md",
-        "redirect_url": "/troubleshoot/azure/synapse-analytics/backup-restore/query-execution-performance/troubleshoot-dsql-perf-slow-query",
+        "redirect_url": "/troubleshoot/azure/synapse-analytics/dedicated-sql/query-execution-performance/troubleshoot-dsql-perf-slow-query",
         "redirect_document_id": true
       },
       {
         "source_path": "synapse-analytics/dedicated-sql/dsql-perf-common-query-errors.md",
-        "redirect_url": "/troubleshoot/azure/synapse-analytics/backup-restore/query-execution-performance/dsql-perf-common-query-errors",
+        "redirect_url": "/troubleshoot/azure/synapse-analytics/dedicated-sql/query-execution-performance/dsql-perf-common-query-errors",
         "redirect_document_id": true
       },
       {
         "source_path": "synapse-analytics/dedicated-sql/dsql-perf-cci-health.md",
-        "redirect_url": "/troubleshoot/azure/synapse-analytics/backup-restore/query-execution-performance/dsql-perf-cci-health",
+        "redirect_url": "/troubleshoot/azure/synapse-analytics/dedicated-sql/query-execution-performance/dsql-perf-cci-health",
         "redirect_document_id": true
       },
       {
         "source_path": "synapse-analytics/dedicated-sql/dsql-perf-stats-accuracy.md",
-        "redirect_url": "/troubleshoot/azure/synapse-analytics/backup-restore/query-execution-performance/dsql-perf-stats-accuracy",
+        "redirect_url": "/troubleshoot/azure/synapse-analytics/dedicated-sql/query-execution-performance/dsql-perf-stats-accuracy",
         "redirect_document_id": true
       },
       {
         "source_path": "synapse-analytics/dedicated-sql/dsql-perf-tempdb-errors.md",
-        "redirect_url": "/troubleshoot/azure/synapse-analytics/backup-restore/query-execution-performance/dsql-perf-tempdb-errors",
+        "redirect_url": "/troubleshoot/azure/synapse-analytics/dedicated-sql/query-execution-performance/dsql-perf-tempdb-errors",
         "redirect_document_id": true
       },
       {
