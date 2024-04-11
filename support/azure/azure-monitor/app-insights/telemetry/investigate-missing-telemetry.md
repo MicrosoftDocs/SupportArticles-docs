@@ -4,7 +4,7 @@ description: Describes how to test connectivity and telemetry ingestion by using
 ms.date: 02/21/2024
 ms.reviewer: aaronmax, toddfous, v-weizhu
 ms.service: azure-monitor
-ms.subservice: application-insights
+ms.custom: sap:Missing or Incorrect data after enabling Application Insights in Azure Portal
 #Customer intent: As an Application Insights user I want to know where in the processing pipeline telemetry goes missing so I know where to troubleshoot.
 ---
 # Troubleshoot missing application telemetry in Azure Monitor Application Insights
