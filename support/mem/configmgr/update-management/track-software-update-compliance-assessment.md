@@ -99,7 +99,9 @@ The following are logged in ScanAgent.log on the client:
 
 ## WSUS server location
 
-After the client receives the UpdateSource policy, it's ready to run a scan for software updates compliance. At this point, the client locates the WSUS computer with the content version specified in the policy. This process is very similar to the way that the client finds the location of a distribution point for a specific package and version.
+After the client receives the UpdateSource policy, it has the configuration needed to perform a scan either manually (using the Configuration Manager control panel) or at the next scheduled time. At this point, the client locates the WSUS computer with the content version specified in the policy. This process is very similar to the way that the client finds the location of a distribution point for a specific package and version. 
+ 
+Scans will only be performed on the schedule that is set, or when run manually from the Configuration Manager control panel. Policy changes and updates do not cause scans to happen immediately. 
 
 ### Step 1: Scan Agent creates a scan request based on the available policy
 
