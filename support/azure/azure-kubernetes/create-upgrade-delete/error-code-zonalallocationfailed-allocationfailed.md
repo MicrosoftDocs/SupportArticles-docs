@@ -43,6 +43,13 @@ Or, when you try to upgrade or scale up a cluster, you receive the following err
 >
 > Message="**Allocation failed. VM(s) with the following constraints cannot be allocated, because the condition is too restrictive.** Please remove some constraints and try again."
 
+Or, if you're using Dedicated Hosts and try to create or scale up a node pool, you receive the following error message:
+
+> Code="AllocationFailed"
+>
+> Message="**Allocation failed. VM allocation to the dedicated host failed. Please ensure that the dedicated host has enough capacity or try allocating elsewhere.**"
+
+
 ## Cause 1: Limited zone availability in a SKU
 
 You're trying to deploy a cluster in a zone that has limited availability for the specific SKU.
@@ -58,6 +65,10 @@ If you receive an `OverconstrainedAllocationRequest` error code, the Azure Compu
 - Ephemeral disk
 - Proximity placement group (PPG)
 
+## Cause 3: Not enough dedicated hosts, or not enough fault domains
+
+You're trying to deploy a node pool in a Dedicated Host group that has limited capacity and/or that is not satisfying the fault domain constraint.
+
 ## Solution 1: Use a different SKU, zone, or region
 
 Try one or more of the following methods:
@@ -72,6 +83,12 @@ For more information about how to fix this error, see [Resolve errors for SKU no
 ## Solution 2: Don't associate a proximity placement group with the node pool
 
 If you receive an `OverconstrainedAllocationRequest` error code, you can also try to create a new node pool that isn't associated with a proximity placement group.
+
+## Solution 3: Ensure you have enough Dedicated Hosts for your AKS nodes/VMSS
+
+As per [Planning for ADH Capacity on AKS](/azure/aks/use-azure-dedicated-hosts#planning-for-adh-capacity-on-aks), you're responsible for planning enough dedicated hosts to span as many fault domains as your AKS VMSS require.
+
+For example: if the AKS VMSS was created with *FaultDomainCount=2*, then you will need at least 2 dedicated hosts in different fault domains (*FaultDomain 0* and *FaultDomain 1*).
 
 ## More information
 
